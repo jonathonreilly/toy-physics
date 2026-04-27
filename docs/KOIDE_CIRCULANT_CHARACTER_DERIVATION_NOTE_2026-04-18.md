@@ -148,7 +148,7 @@ reproduces observed charged-lepton masses to sub-percent precision at
 `δ = 2/9 rad` (see §"Verification"). An alternative identification `λ_k = m_k`
 would NOT give Koide `Q = 2/3`.
 
-**Status:** This identification is not retained today, but it is no longer a
+**Status:** This identification is outside audit-ratified tier today, but it is no longer a
 free phenomenological guess. The new
 `KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md` narrows it to a concrete
 internal route: derive a positive quadratic parent operator `M` on the Koide

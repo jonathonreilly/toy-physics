@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained NLO CKM-structure corollary on the promoted atlas/axiom
+**Status:** proposed_retained NLO CKM-structure corollary on the proposed_promoted atlas/axiom
 surface. This note derives:
 
 1. a structural invariant of the NLO barred-apex map: the apex-from-origin

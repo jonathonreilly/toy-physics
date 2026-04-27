@@ -1,7 +1,7 @@
 # NN Lattice Distance-Law Note
 
 **Date:** 2026-04-03  
-**Status:** retained distance-law signal on the refinement path inherited from the
+**Status:** proposed_retained distance-law signal on the refinement path inherited from the
 Born-clean NN branch, with a sign caveat
 
 This note freezes the nearest-neighbor lattice distance-law probe.

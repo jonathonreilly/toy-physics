@@ -1,7 +1,7 @@
 # Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant
 
 **Date:** 2026-04-15  
-**Status:** retained evaluation theorem (no free parameter), with exact bridge-support stack
+**Status:** proposed_retained evaluation theorem (no free parameter), with exact bridge-support stack
 **Script:** `scripts/frontier_plaquette_self_consistency.py`
 
 ## Framework-point context

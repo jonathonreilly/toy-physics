@@ -1,7 +1,7 @@
 # Higher-Symmetry Joint Validation Note
 
 **Date:** 2026-04-03  
-**Status:** bounded positive for `Z2 x Z2`, retained through `N = 120` on a
+**Status:** bounded positive for `Z2 x Z2`, proposed_retained through `N = 120` on a
 denser narrow probe
 
 This note records the first joint Born + gravity + decoherence validation for

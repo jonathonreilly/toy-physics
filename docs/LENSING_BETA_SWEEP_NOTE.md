@@ -1,6 +1,6 @@
 ## Lane M — BETA sweep of the lensing slope
 
-**Status:** retained negative. The apparent coarse-grid `beta=5` recovery of
+**Status:** proposed_retained negative. The apparent coarse-grid `beta=5` recovery of
 canonical `1/b` lensing is **not** a stable narrow-beam limit. It is an isolated
 coarse-resolution spike. Nearby large-`beta` values (`7`, `10`) already leave
 that point, and the `beta=5` refinement check at `H=0.35` flips sign and moves

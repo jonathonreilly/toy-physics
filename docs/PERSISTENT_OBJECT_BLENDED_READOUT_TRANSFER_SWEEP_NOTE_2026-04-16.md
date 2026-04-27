@@ -1,7 +1,7 @@
 # Persistent Object Blended Readout Transfer Sweep
 
 **Date:** 2026-04-16  
-**Status:** bounded compact-object response transfer positive with one retained readout on the nearby exact-family neighborhood; still not a persistent inertial-mass closure
+**Status:** bounded compact-object response transfer positive with one proposed_retained readout on the nearby exact-family neighborhood; still not a persistent inertial-mass closure
 
 ## Artifact chain
 

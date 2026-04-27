@@ -1,7 +1,7 @@
 # Architecture Portability Audit
 
 **Date:** 2026-04-11  
-**Status:** retained bounded companion
+**Status:** proposed_retained bounded companion
 
 ## Verdict
 

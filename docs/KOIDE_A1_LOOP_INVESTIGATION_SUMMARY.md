@@ -56,7 +56,7 @@ unique minimum at A1. The 4th-order trace structure is OUTSIDE
 HIGHER_ORDER_STRUCTURAL_THEOREMS Theorem 6 (4th-order Clifford
 cancellation), so no no-go. Open: derive V from Cl(3)/Z³ EW-scalar lane.
 
-**Status:** structurally compatible, but V not yet derived from retained
+**Status:** structurally compatible, but V not yet derived from proposed_retained
 axioms. Requires framework extension.
 
 ### Route B: Clifford torus / 45° latitude
@@ -103,7 +103,7 @@ The retained CL3_SM_EMBEDDING_THEOREM provides:
 The retained `C_τ = T(T+1) + Y² = 1` (gives `y_τ`) is the SUM. The
 candidate A1 is the DIFFERENCE. Both come from same retained data.
 
-**Status:** strongest axiom-native A1 candidate. NO new retained
+**Status:** strongest axiom-native A1 candidate. NO new proposed_retained
 primitives required. Requires structural lemma:
 
   `|b|²/a² = T(T+1) − Y²` for Yukawa doublet participants

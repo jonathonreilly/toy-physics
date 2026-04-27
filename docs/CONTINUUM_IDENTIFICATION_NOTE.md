@@ -1,7 +1,7 @@
 # Continuum Identification: Gravity and Gauge
 
 **Date:** 2026-04-15
-**Status:** retained exact on the chosen gravity target; retained structural +
+**Status:** proposed_retained exact on the chosen gravity target; proposed_retained structural +
 bounded EFT bridge (gauge)
 **Script:** `scripts/frontier_continuum_identification_audit.py`
 

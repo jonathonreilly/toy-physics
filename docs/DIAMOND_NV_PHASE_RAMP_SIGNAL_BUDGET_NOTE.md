@@ -1,7 +1,7 @@
 # Diamond / NV Phase-Ramp Signal Budget Note
 
 **Date:** 2026-04-05  
-**Status:** narrow experiment-facing prediction note for the retained phase-sensitive lane
+**Status:** narrow experiment-facing prediction note for the proposed_retained phase-sensitive lane
 
 ## One-line read
 

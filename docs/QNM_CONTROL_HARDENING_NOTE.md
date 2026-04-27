@@ -1,7 +1,7 @@
 # QNM Control Hardening Note
 
 **Date:** 2026-04-05  
-**Status:** bounded control program only; no retained spectral claim yet
+**Status:** bounded control program only; no proposed_retained spectral claim yet
 
 This note is the narrowest review-safe way to keep the QNM lane alive on
 `main` without overclaiming.

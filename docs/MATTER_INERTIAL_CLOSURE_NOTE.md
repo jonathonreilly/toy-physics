@@ -1,7 +1,7 @@
 # Matter / Inertial Closure — NEGATIVE (Equivalence Principle Fails)
 
 **Date:** 2026-04-07
-**Status:** retained negative — Gaussian persistent packets on the grown-DAG propagator under a uniform linear force give Newton-linear delta_z per packet (R² > 0.96) but equivalence-principle slopes differ by **123%** across packets. The "fields but no matter" critique stands: the model does not exhibit generator-invariant inertial mass at the persistent-object level.
+**Status:** proposed_retained negative — Gaussian persistent packets on the grown-DAG propagator under a uniform linear force give Newton-linear delta_z per packet (R² > 0.96) but equivalence-principle slopes differ by **123%** across packets. The "fields but no matter" critique stands: the model does not exhibit generator-invariant inertial mass at the persistent-object level.
 
 ## Artifact chain
 

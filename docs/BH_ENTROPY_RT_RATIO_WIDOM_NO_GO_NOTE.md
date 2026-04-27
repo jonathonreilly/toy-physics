@@ -1,7 +1,7 @@
 # BH Entropy RT-Ratio Widom No-Go Theorem
 
 **Date:** 2026-04-17
-**Status:** retained no-go theorem for the bounded BH entropy companion lane
+**Status:** proposed_retained no-go theorem for the bounded BH entropy companion lane
 **Runner:** `scripts/frontier_bh_entropy_rt_ratio_widom.py`
 **Authority role:** canonical closure of the "is RT ratio = 1/4 exact?" question
 for the existing BH entropy bounded companion ([BH_ENTROPY_DERIVED_NOTE.md](./BH_ENTROPY_DERIVED_NOTE.md))

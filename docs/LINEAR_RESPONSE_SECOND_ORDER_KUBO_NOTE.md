@@ -1,7 +1,7 @@
 # Second-Order Kubo Extension — NEGATIVE (Boundary of Taylor-Expansion Approach)
 
 **Date:** 2026-04-07
-**Status:** retained negative — adding the second-order term `½·kubo₂·s²` to the first-order Kubo prediction does NOT explain the failing-family pathology. The linearity-regime subset stays at 15/44 families, residual sums actually grow slightly, and the documented failing families (`G2_asym_z`, `H1_ring`, `L1_longrange`, `OF9_stretched`, `K3_NL5`) either get worse, stay the same, or improve only marginally. This delineates the boundary of the Taylor-expansion line of attack: the first-order Kubo derivation is the dominant term in the linear regime but cannot be extended to the failing families by adding higher Taylor orders.
+**Status:** proposed_retained negative — adding the second-order term `½·kubo₂·s²` to the first-order Kubo prediction does NOT explain the failing-family pathology. The linearity-regime subset stays at 15/44 families, residual sums actually grow slightly, and the documented failing families (`G2_asym_z`, `H1_ring`, `L1_longrange`, `OF9_stretched`, `K3_NL5`) either get worse, stay the same, or improve only marginally. This delineates the boundary of the Taylor-expansion line of attack: the first-order Kubo derivation is the dominant term in the linear regime but cannot be extended to the failing families by adding higher Taylor orders.
 
 ## Artifact chain
 

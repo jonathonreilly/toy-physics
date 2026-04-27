@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained atlas-leading structural theorem on `main`. This
+**Status:** proposed_retained atlas-leading structural theorem on `main`. This
 establishes a cross-sector consistency identity: the canonical coupling
 `alpha_s(v)`, retained from the gauge-vacuum plaquette/CMT surface, is
 also encoded by the framework in the product of two independently

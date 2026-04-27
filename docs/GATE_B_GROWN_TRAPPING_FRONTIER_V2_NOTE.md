@@ -1,7 +1,7 @@
 # Gate B Grown Trapping Frontier V2 Note
 
 **Date:** 2026-04-05  
-**Status:** retained-grown-family frontier probe, frozen as a bounded positive on the moderate-drift row
+**Status:** proposed_retained-grown-family frontier probe, frozen as a bounded positive on the moderate-drift row
 
 ## Artifact chain
 

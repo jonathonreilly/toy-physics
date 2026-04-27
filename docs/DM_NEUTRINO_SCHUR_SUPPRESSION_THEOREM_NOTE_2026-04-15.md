@@ -1,7 +1,7 @@
 # DM Neutrino Schur Suppression Theorem
 
-**Date:** 2026-04-15  
-**Status:** exact second-order suppression theorem on the retained local lane  
+**Date:** 2026-04-15
+**Status:** exact second-order suppression theorem on the proposed_retained local lane
 **Script:** `scripts/frontier_dm_neutrino_schur_suppression_theorem.py`
 
 ---

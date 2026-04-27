@@ -1,7 +1,7 @@
 # Retained Cross-Lane Numerical Consistency Support
 
 **Date:** 2026-04-22
-**Status:** single-file support harness. Does NOT derive anything new; it cross-checks 26 retained numerical and algebraic identities across eight separately retained lanes in a single executable.
+**Status:** single-file support harness. Does NOT derive anything new; it cross-checks 26 proposed_retained numerical and algebraic identities across eight separately proposed_retained lanes in a single executable.
 **Primary runner:** `scripts/frontier_retained_cross_lane_consistency.py`
 
 ## 0. Scope

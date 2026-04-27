@@ -1,7 +1,7 @@
 # Non-Label Grown Basin Note
 
 **Date:** 2026-04-06
-**Status:** bounded positive basin around the retained grown-row signed-source transfer
+**Status:** bounded positive basin around the proposed_retained grown-row signed-source transfer
 
 ## Artifact chain
 

@@ -1,7 +1,7 @@
 # Fourth Family Quadrant Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow signed-source basin on the quadrant-reflection family
+**Status:** proposed_retained narrow signed-source basin on the quadrant-reflection family
 
 ## Artifact Chain
 

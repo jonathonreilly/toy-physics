@@ -1,7 +1,7 @@
 # Wave Amplification Near Horizon
 
 **Date:** 2026-04-05  
-**Status:** bounded negative against the stronger near-horizon amplification claim on the retained exact-lattice harness
+**Status:** bounded negative against the stronger near-horizon amplification claim on the proposed_retained exact-lattice harness
 
 ## Artifact chain
 

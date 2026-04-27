@@ -1,7 +1,7 @@
 # Electrostatics Superposition Proxy Note
 
 **Date:** 2026-04-05  
-**Status:** first retained multi-source electrostatics proxy on the retained ordered lattice family
+**Status:** first proposed_retained multi-source electrostatics proxy on the proposed_retained ordered lattice family
 
 ## One-line read
 

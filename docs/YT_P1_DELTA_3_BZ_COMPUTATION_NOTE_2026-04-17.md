@@ -1,7 +1,7 @@
 # P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)
 
 **Date:** 2026-04-17
-**Status:** Retained citation-and-bound computation of the T_F n_f
+**Status:** proposed_retained citation-and-bound computation of the T_F n_f
 channel coefficient Delta_3 appearing in the Rep-A vs Rep-B
 cancellation theorem. This note computes (by citation bracket) the
 lattice-PT fermion-loop BZ integral `I_SE^{fermion-loop}` and

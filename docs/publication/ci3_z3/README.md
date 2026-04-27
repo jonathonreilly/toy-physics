@@ -9,6 +9,13 @@ Use it if you want:
 - the domain map of the science already in the repo
 - the canonical validation and reproduction path
 
+**Audit status note:** this package is now under the repo audit lane. Source
+notes self-declare only `proposed_retained` / `proposed_promoted`; only
+[../../audit/AUDIT_LEDGER.md](../../audit/AUDIT_LEDGER.md) can ratify a row as
+`retained` / `promoted` through `effective_status`. Tables in this directory
+remain the manuscript-capture surface, but until the audit ledger marks a row
+clean, read legacy `retained` / `promoted` wording as proposed package status.
+
 ## Read In This Order
 
 1. [Public arXiv draft](./ARXIV_DRAFT.md)

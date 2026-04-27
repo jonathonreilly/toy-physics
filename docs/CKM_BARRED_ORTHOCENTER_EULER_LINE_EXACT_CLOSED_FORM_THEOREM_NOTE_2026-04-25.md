@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained CKM-structure corollary on the promoted CKM atlas
+**Status:** proposed_retained CKM-structure corollary on the proposed_promoted CKM atlas
 + NLO Wolfenstein protected-γ̄ surfaces. This note derives **EXACT
 all-orders-in-α_s closed forms** for the **orthocenter** `H`, the
 **centroid** `G`, and the **Euler line** of the barred unitarity

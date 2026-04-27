@@ -1,7 +1,7 @@
 # Causal Field Reconciliation Note
 
 **Date:** 2026-04-06  
-**Status:** diagnosed harness boundary for the fixed-anchor cross-family replay; retained center-family causal-field result remains valid
+**Status:** diagnosed harness boundary for the fixed-anchor cross-family replay; proposed_retained center-family causal-field result remains valid
 
 ## Artifact Chain
 

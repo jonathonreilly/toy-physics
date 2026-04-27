@@ -1,7 +1,7 @@
 # Newtonian Mass Scaling from Four Principles (bounded family-law note)
 
 **Date:** 2026-04-04
-**Status:** hold. Additivity now strengthens Principle 3 on the retained ordered-lattice family, but persistent-pattern inertia remains open.
+**Status:** hold. Additivity now strengthens Principle 3 on the proposed_retained ordered-lattice family, but persistent-pattern inertia remains open.
 
 ## The Claim
 

@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 
-**Status:** retained structural-identity subtheorem of the promoted CKM
+**Status:** proposed_retained structural-identity subtheorem of the proposed_promoted CKM
 atlas/axiom package.  This note packages the exact right-angle geometry of the
 rescaled atlas/Wolfenstein triangle carried by
 [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md).

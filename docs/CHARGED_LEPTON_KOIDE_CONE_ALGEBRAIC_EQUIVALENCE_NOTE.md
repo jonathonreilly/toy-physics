@@ -1,7 +1,7 @@
 # Charged-Lepton Koide-Cone Algebraic Equivalence
 
 **Date:** 2026-04-17
-**Status:** exact algebraic identity on the retained `hw=1` triplet
+**Status:** exact algebraic identity on the proposed_retained `hw=1` triplet
 **Runners:** `scripts/frontier_charged_lepton_observable_curvature.py` (28 PASS, 0 FAIL)
 
 ## Safe statement

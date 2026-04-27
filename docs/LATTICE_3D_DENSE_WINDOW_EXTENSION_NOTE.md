@@ -1,7 +1,7 @@
 # 3D Dense Spent-Delay Window Extension Note
 
 **Date:** 2026-04-04  
-**Status:** bounded extension retained on the ordered 3D dense spent-delay family
+**Status:** bounded extension proposed_retained on the ordered 3D dense spent-delay family
 
 ## Purpose
 

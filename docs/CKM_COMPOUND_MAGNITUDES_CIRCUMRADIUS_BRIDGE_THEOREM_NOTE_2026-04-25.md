@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained CKM-structure corollary on the promoted CKM atlas
+**Status:** proposed_retained CKM-structure corollary on the proposed_promoted CKM atlas
 + NLO Wolfenstein protected-γ̄ surfaces. This note derives **NEW
 retained compound-CKM-magnitude bridges** to the unitarity-triangle
 **circumradius `R̄²`**, connecting THREE CKM magnitudes

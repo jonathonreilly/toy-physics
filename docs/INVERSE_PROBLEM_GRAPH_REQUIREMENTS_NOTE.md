@@ -1,7 +1,7 @@
 # Inverse Problem Graph Requirements Note
 
 **Date:** 2026-04-04  
-**Status:** bounded graph-requirements harness on the retained 3D valley-linear family
+**Status:** bounded graph-requirements harness on the proposed_retained 3D valley-linear family
 
 ## Artifact chain
 

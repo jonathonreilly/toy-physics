@@ -1,6 +1,6 @@
 # Staggered Graph Gauge Closure Results
 
-**Status:** retained gauge/current closure result
+**Status:** proposed_retained gauge/current closure result
 
 This note freezes the first dedicated native gauge/current closure run for the
 staggered graph lane.

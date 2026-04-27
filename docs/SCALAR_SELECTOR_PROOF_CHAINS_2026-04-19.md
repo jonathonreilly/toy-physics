@@ -125,7 +125,7 @@ Step 9  — [Steps 7–8] => operator-side kappa = 2 via spectrum route, or
           All three converge.
 ```
 
-**Status:** three independent converging retained theorems for `kappa = 2`.
+**Status:** three independent converging proposed_retained theorems for `kappa = 2`.
 Single named residue: physical selection of the block-total Frobenius
 measure (Step 6) over the `(1,2)` determinant measure. Both measures are
 algebraically available; the missing step is a retained physics principle

@@ -1,7 +1,7 @@
 # Wave Direct-dM Transfer Diagnostic Note
 
 **Date:** 2026-04-09
-**Status:** retained narrow transfer diagnostic on the controlled `Fam1`/`Fam2` fine-`H` surface
+**Status:** proposed_retained narrow transfer diagnostic on the controlled `Fam1`/`Fam2` fine-`H` surface
 
 This note freezes the retained runtime read that was still missing as a
 repo-facing artifact:

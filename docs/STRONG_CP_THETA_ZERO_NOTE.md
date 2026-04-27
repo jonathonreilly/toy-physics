@@ -1,7 +1,7 @@
 # Strong CP / θ = 0 Retained Action-Surface Closure
 
 **Date:** 2026-04-16
-**Status:** retained action-surface `θ_eff = 0` closure on the retained
+**Status:** proposed_retained action-surface `θ_eff = 0` closure on the proposed_retained
 axiom-determined action surface
 **Script:** `scripts/frontier_strong_cp_theta_zero.py`
 

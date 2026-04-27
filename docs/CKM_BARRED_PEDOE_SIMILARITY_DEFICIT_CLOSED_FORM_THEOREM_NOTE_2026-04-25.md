@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained CKM-structure corollary on the promoted CKM atlas
+**Status:** proposed_retained CKM-structure corollary on the proposed_promoted CKM atlas
 + NLO Wolfenstein protected-γ̄ surfaces. This note derives the
 **EXACT closed form for the Pedoe similarity deficit** between any
 two retained NLO Wolfenstein protected-γ̄ unitarity triangles

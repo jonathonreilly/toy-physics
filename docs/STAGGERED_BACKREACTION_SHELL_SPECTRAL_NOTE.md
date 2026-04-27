@@ -1,7 +1,7 @@
 # Staggered Backreaction Shell / Spectral Note
 
 **Date:** 2026-04-10  
-**Status:** retained structural diagnostic
+**Status:** proposed_retained structural diagnostic
 
 ## Question
 

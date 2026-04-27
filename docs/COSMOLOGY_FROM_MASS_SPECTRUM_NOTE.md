@@ -1,7 +1,7 @@
 # Cosmology Cascade from Mass Spectrum (Phase 5 of mass spectrum)
 
 **Date:** 2026-04-17
-**Status:** bounded/conditional cascade; retained pieces consolidated; open
+**Status:** bounded/conditional cascade; proposed_retained pieces consolidated; open
 lane is promotion of `eta` from DM-gate support to retained theorem.
 **Primary runner:** `scripts/frontier_cosmology_from_mass_spectrum.py`
 **Depends on:** `NEUTRINO_MASS_DERIVED_NOTE.md` (Phase 4),

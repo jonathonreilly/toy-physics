@@ -1,7 +1,7 @@
 # Wave Static Fixed-Beam Boundary Sensitivity
 
 **Date:** 2026-04-08
-**Status:** retained boundary probe
+**Status:** proposed_retained boundary probe
 
 This probe isolates the boundary question more carefully than the
 previous field-box test:

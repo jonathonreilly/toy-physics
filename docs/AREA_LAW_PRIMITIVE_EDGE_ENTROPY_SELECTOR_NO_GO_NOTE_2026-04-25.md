@@ -1,7 +1,7 @@
 # Area-Law Primitive-Edge Entropy Selector No-Go Note
 
 **Date:** 2026-04-25
-**Status:** retained residual no-go for Planck Target 2
+**Status:** proposed_retained residual no-go for Planck Target 2
 **Runner:** `scripts/frontier_area_law_primitive_edge_entropy_selector_no_go.py`
 
 ## Purpose

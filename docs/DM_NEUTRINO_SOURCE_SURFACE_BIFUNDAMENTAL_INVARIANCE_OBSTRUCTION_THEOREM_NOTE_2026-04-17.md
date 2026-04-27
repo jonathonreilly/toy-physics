@@ -1,7 +1,7 @@
 # Bifundamental Invariance U(2)_L × U(2)_R on the Active Doublet Block — Obstruction Theorem
 
 **Date:** 2026-04-17
-**Status:** **OBSTRUCTION THEOREM** (CASE 3). Five independent sole-axiom derivations converge: the retained atlas does **not** support independent `U(2)_L × U(2)_R` bifundamental invariance on the active-sheet doublet block `K_doublet`. The conditional closure gate that the U(2)-invariance+quartic-isotropy obstruction identified is therefore **not available**.
+**Status:** **OBSTRUCTION THEOREM** (CASE 3). Five independent sole-axiom derivations converge: the proposed_retained atlas does **not** support independent `U(2)_L × U(2)_R` bifundamental invariance on the active-sheet doublet block `K_doublet`. The conditional closure gate that the U(2)-invariance+quartic-isotropy obstruction identified is therefore **not available**.
 **Script:** `scripts/frontier_dm_neutrino_source_surface_bifundamental_invariance_obstruction_theorem.py`
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
 

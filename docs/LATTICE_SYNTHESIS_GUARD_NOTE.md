@@ -1,7 +1,7 @@
 # Lattice Synthesis Guard Note
 
 **Date:** 2026-04-03  
-**Status:** synthesis narrow; NN refinement is a bounded bridge, not a promoted continuum theorem
+**Status:** synthesis narrow; NN refinement is a bounded bridge, not a proposed_promoted continuum theorem
 
 This note records the integration guard for the ordered-lattice branch after the
 weak-field reopening.

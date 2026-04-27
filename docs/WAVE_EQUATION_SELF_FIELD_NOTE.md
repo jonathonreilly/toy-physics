@@ -1,7 +1,7 @@
 # Wave-Equation Self-Field: Time-Dependent Field from One Local Equation
 
 **Date:** 2026-04-07
-**Status:** retained positive — full dynamical field from single PDE; F~M=0.998, Born=1.08e-15, retardation observed
+**Status:** proposed_retained positive — full dynamical field from single PDE; F~M=0.998, Born=1.08e-15, retardation observed
 
 ## Artifact chain
 

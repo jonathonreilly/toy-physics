@@ -1,7 +1,7 @@
 # Wave-Equation Radiation: Oscillating Source Emits Propagating Field
 
 **Date:** 2026-04-07
-**Status:** retained positive (narrow) — log-log slope −0.47 matches (2+1)D scalar radiation prediction (−0.5); drive frequency dominates DFT at every distance; exact null at S0=0; Born preserved. Family portability section measures F~M of the radiating field across grown geometries (the slope itself is a PDE invariant)
+**Status:** proposed_retained positive (narrow) — log-log slope −0.47 matches (2+1)D scalar radiation prediction (−0.5); drive frequency dominates DFT at every distance; exact null at S0=0; Born preserved. Family portability section measures F~M of the radiating field across grown geometries (the slope itself is a PDE invariant)
 
 ## Artifact chain
 

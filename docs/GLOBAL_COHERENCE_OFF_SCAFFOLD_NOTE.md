@@ -1,7 +1,7 @@
 # Off-Scaffold Held-Out Test of `free_coh` — DECISIVE NEGATIVE
 
 **Date:** 2026-04-07
-**Status:** retained negative — the frozen rule `free_coh ≥ 7.96e-04` generalizes to only 5/9 = 55.6% on off-scaffold generators, matching the old node-level rule exactly. The grid scaffold was doing work the classifier was attributing to `free_coh`. The simple-classifier line of attack is now exhausted. A pre-committed structural pass/fail intuition hits 8/9 = 88.9%, suggesting the underlying physics is predictable — but not with a single node-level or single-global scalar metric.
+**Status:** proposed_retained negative — the frozen rule `free_coh ≥ 7.96e-04` generalizes to only 5/9 = 55.6% on off-scaffold generators, matching the old node-level rule exactly. The grid scaffold was doing work the classifier was attributing to `free_coh`. The simple-classifier line of attack is now exhausted. A pre-committed structural pass/fail intuition hits 8/9 = 88.9%, suggesting the underlying physics is predictable — but not with a single node-level or single-global scalar metric.
 
 ## Artifact chain
 

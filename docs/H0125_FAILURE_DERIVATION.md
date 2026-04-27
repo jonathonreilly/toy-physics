@@ -1,7 +1,7 @@
 # Why h=0.125 Fails: Retained Derivation
 
 **Date:** 2026-04-06
-**Status:** retained negative — h=0.125 failure is diagnosed and quantified
+**Status:** proposed_retained negative — h=0.125 failure is diagnosed and quantified
 
 ## Root cause
 

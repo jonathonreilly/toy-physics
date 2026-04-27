@@ -1,7 +1,7 @@
 # Matter Self-Focusing Attempt — Partial Improvement, Not Closure
 
 **Date:** 2026-04-07
-**Status:** retained negative (partial) — two-pass self-focusing propagator reduces equivalence-principle rel dev from 123% (matter_inertial_closure) to **44.05%** at best λ=1, but does not restore equivalence. Family portability collapses (R² drops to 0.09–0.18). Not a matter closure.
+**Status:** proposed_retained negative (partial) — two-pass self-focusing propagator reduces equivalence-principle rel dev from 123% (matter_inertial_closure) to **44.05%** at best λ=1, but does not restore equivalence. Family portability collapses (R² drops to 0.09–0.18). Not a matter closure.
 
 ## Artifact chain
 

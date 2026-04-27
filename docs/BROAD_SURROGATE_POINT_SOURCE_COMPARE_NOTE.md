@@ -1,7 +1,7 @@
 # Broad Surrogate Point Source Compare Note
 
 **Date:** 2026-04-04  
-**Status:** bounded interpretive diagnostic on the retained 3D ordered-lattice family
+**Status:** bounded interpretive diagnostic on the proposed_retained 3D ordered-lattice family
 
 ## Artifact chain
 

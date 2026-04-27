@@ -1,7 +1,7 @@
 # Symmetry Head-To-Head Note
 
 **Date:** 2026-04-03  
-**Status:** review-safe apples-to-apples comparison between the retained exact
+**Status:** review-safe apples-to-apples comparison between the proposed_retained exact
 mirror chokepoint lane and the retained dense `Z2 x Z2` lane
 
 This note freezes the comparison requested after the exact mirror and

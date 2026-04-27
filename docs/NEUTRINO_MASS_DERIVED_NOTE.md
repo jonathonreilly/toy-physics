@@ -1,7 +1,7 @@
 # Neutrino Sector Closure (Phase 4 of mass spectrum)
 
 **Date:** 2026-04-17
-**Status:** retained atmospheric scale + rho + eta_break + k_B; bounded solar gap;
+**Status:** proposed_retained atmospheric scale + rho + eta_break + k_B; bounded solar gap;
 conditional/support `theta_23` upper-octant lane.
 **Primary runner:** `scripts/frontier_neutrino_mass_derived.py`
 **Depends on:** retained atmospheric-scale + adjacent-placement + residual-sharing

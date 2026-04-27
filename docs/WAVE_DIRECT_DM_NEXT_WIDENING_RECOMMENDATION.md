@@ -1,7 +1,7 @@
 # Wave Direct-dM Next Widening Recommendation
 
 **Date:** 2026-04-08  
-**Status:** updated recommendation note after closing both retained family pairs
+**Status:** updated recommendation note after closing both proposed_retained family pairs
 
 This note records the honest next move after the current `Fam1`/`Fam2`
 fine-`H` control ladders.

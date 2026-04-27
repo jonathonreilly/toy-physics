@@ -1,7 +1,7 @@
 # Wave Direct-dM H=0.25 Seed0 Cross-Family Compression Note
 
 **Date:** 2026-04-08  
-**Status:** retained same-seed cross-family compression on the controlled seed-`0` fine-`H` surface
+**Status:** proposed_retained same-seed cross-family compression on the controlled seed-`0` fine-`H` surface
 
 This note compresses the retained `H = 0.25` seed-`0` evidence across the
 two families that currently have it:

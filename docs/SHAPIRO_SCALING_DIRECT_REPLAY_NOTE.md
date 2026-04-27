@@ -1,7 +1,7 @@
 # Shapiro Scaling Direct Replay Note
 
 **Date:** 2026-04-08  
-**Status:** direct data-bearing replay of the retained Shapiro scaling laws
+**Status:** direct data-bearing replay of the proposed_retained Shapiro scaling laws
 
 ## Artifact Chain
 

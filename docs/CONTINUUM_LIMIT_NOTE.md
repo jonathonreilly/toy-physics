@@ -1,7 +1,7 @@
 # Continuum Limit via h^2 Measure
 
 **Date:** 2026-04-05
-**Status:** retained positive — weak-field deflection converges (3% change h=0.25 to h=0.125), F~M brackets 1.000
+**Status:** proposed_retained positive — weak-field deflection converges (3% change h=0.25 to h=0.125), F~M brackets 1.000
 
 ## Artifact chain
 

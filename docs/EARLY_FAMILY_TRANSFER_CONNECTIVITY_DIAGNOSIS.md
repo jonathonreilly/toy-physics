@@ -1,7 +1,7 @@
 # Early Family Transfer Connectivity Diagnosis
 
 **Date:** 2026-04-06  
-**Status:** retained narrow diagnosis of the origin architecture
+**Status:** proposed_retained narrow diagnosis of the origin architecture
 
 ## Artifact chain
 

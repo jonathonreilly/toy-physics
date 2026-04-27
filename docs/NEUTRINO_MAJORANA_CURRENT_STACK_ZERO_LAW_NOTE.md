@@ -1,7 +1,7 @@
 # Majorana Current-Stack Zero Law for `mu`
 
 **Date:** 2026-04-15
-**Status:** exact current-stack theorem on the retained one-generation
+**Status:** exact current-stack theorem on the proposed_retained one-generation
 Majorana lane; not a negative theorem for all future extensions
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`

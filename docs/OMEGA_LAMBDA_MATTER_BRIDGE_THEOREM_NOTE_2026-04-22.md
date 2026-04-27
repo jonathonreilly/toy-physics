@@ -1,7 +1,7 @@
 # Ω_Λ Matter-Bridge Theorem: `Ω_Λ = (H_inf / H_0)²` under the Retained Spectral-Gap Identity
 
 **Date:** 2026-04-22
-**Status:** retained structural-identity theorem on `main`-compatible surface. Reduces the present-day `Ω_Λ` to an exact function of the retained de Sitter Hubble scale `H_inf` and the observationally-pinned current Hubble rate `H_0`, which then under flat FRW collapses to the matter-content bridge `Ω_m`.
+**Status:** proposed_retained structural-identity theorem on `main`-compatible surface. Reduces the present-day `Ω_Λ` to an exact function of the proposed_retained de Sitter Hubble scale `H_inf` and the observationally-pinned current Hubble rate `H_0`, which then under flat FRW collapses to the matter-content bridge `Ω_m`.
 **Primary runner:** `scripts/frontier_omega_lambda_matter_bridge.py`
 
 ---

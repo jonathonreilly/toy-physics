@@ -1,7 +1,7 @@
 # `U_e = I` via `Z_3` Trichotomy (Charged-Lepton Lane)
 
 **Date:** 2026-04-17
-**Status:** Retained-grade replacement citation chain for the "`U_e = I` on
+**Status:** proposed_retained-grade replacement citation chain for the "`U_e = I` on
 `H_hw=1`" step used in the PMNS-as-f(H) closure theorem.
 **Script:** `scripts/frontier_charged_lepton_ue_identity_via_z3_trichotomy.py`
 **Runner:** `PASS = 40, FAIL = 0`

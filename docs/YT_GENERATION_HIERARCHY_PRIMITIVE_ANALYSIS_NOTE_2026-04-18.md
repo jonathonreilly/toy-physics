@@ -1,7 +1,7 @@
 # Generation-Hierarchy Primitive Retention Analysis Note
 
 **Date:** 2026-04-18 (amended 2026-04-18 with Fourier-basis spectrum correction)
-**Status:** framework-native retention analysis. **Outcome D refined (retained
+**Status:** framework-native retention analysis. **Outcome D refined (proposed_retained
 narrow no-go + retained positive Fourier-basis circulant mechanism flagged):**
 the original Outcome D is narrow-technically correct about the POSITION-BASIS
 diagonal content of C_3-commuting operators (every diagonal entry is equal by

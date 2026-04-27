@@ -1,7 +1,7 @@
 # Evolving Network Prototype V3 Note
 
 **Date:** 2026-04-04  
-**Status:** public Gate B control audit, not a promoted dynamics result
+**Status:** public Gate B control audit, not a proposed_promoted dynamics result
 
 ## One-line read
 

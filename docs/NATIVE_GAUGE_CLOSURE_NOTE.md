@@ -1,7 +1,7 @@
 # Native Gauge Closure Note: Graph-First Gauge Closure on Z^3
 
 **Date:** 2026-04-12
-**Status:** retained exact native `SU(2)` + retained structural `SU(3)`; bounded abelian factor (`+1/3`, `-1` on the left-handed surface)
+**Status:** proposed_retained exact native `SU(2)` + proposed_retained structural `SU(3)`; bounded abelian factor (`+1/3`, `-1` on the left-handed surface)
 **Claim boundary authority:** this note
 **Scripts:** `scripts/frontier_non_abelian_gauge.py`, `scripts/frontier_graph_first_selector_derivation.py`, `scripts/frontier_graph_first_su3_integration.py`
 

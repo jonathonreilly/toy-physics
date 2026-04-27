@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19
 **Lane:** Quark up-amplitude LO-balance.
-**Status:** **SUPERSEDED.** This note records the earlier "retained
+**Status:** **SUPERSEDED.** This note records the earlier "proposed_retained
 observable principle" framing of STRC-LO. STRC-LO is now derived as a
 theorem from the exact one-dimensional 5-channel residue on the retained
 `1⊕5` carrier; see

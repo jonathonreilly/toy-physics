@@ -1,7 +1,7 @@
 # Fifth Family Complex Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow anchor-row positive on the radial-shell fifth-family slice
+**Status:** proposed_retained narrow anchor-row positive on the radial-shell fifth-family slice
 
 ## Artifact Chain
 

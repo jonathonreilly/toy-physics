@@ -1,7 +1,7 @@
 # P3 MSbar-to-Pole K_1 Framework-Native Derivation Note (1-loop Casimir)
 
 **Date:** 2026-04-17
-**Status:** retained **framework-native** structural sub-theorem — the
+**Status:** proposed_retained **framework-native** structural sub-theorem — the
 1-loop coefficient of the MSbar-to-pole mass conversion is
 `K_1 = C_F = (N_c² − 1)/(2 N_c) = 4/3` at SU(3). Exact rational;
 follows directly from the retained SU(3) fundamental Casimir. Fully

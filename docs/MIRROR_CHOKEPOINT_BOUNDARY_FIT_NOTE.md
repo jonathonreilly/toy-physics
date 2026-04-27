@@ -1,7 +1,7 @@
 # Mirror Chokepoint Boundary Fit Note
 
 **Date:** 2026-04-03  
-**Status:** canonical fit for the retained dense boundary mirror pocket
+**Status:** canonical fit for the proposed_retained dense boundary mirror pocket
 
 This note freezes the strongest retained mirror boundary family on `main`.
 The fit is intentionally cautious: it summarizes the retained window, but it

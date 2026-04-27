@@ -105,7 +105,7 @@ Derive the axioms from a complexity-minimization principle.
 
 ### 11. User's Breakthrough Target
 One canonical endogenous two-field on cycle + DAG. All 9 rows.
-**Status:** STRUCTURALLY CLOSED on the retained cycle-bearing families
+**Status:** STRUCTURALLY CLOSED on the proposed_retained cycle-bearing families
 (`9/9`, `9/9`, `9/9`) and `8/9` on the DAG operating point, but not yet a
 directional-gravity closure because the irregular same-surface probe failed
 and the sign rows are not sign-selective.

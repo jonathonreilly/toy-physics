@@ -1,7 +1,7 @@
 # Wave Direct-dM H=0.25 Two-Point Synthesis Note
 
 **Date:** 2026-04-08
-**Status:** retained narrow synthesis on the controlled first fine-`H` `Fam1` pair
+**Status:** proposed_retained narrow synthesis on the controlled first fine-`H` `Fam1` pair
 
 This note freezes the first honest fine-`H` claim surface for the
 direct-`dM` matched-schedule lane:

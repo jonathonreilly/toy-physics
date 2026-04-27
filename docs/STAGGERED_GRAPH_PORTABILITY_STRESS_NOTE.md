@@ -1,6 +1,6 @@
 # Staggered Graph Portability Stress Note
 
-**Status:** retained stress checkpoint
+**Status:** proposed_retained stress checkpoint
 
 This note freezes the first larger-size / more irregular stress run for the
 staggered / Kahler-Dirac portability probe.

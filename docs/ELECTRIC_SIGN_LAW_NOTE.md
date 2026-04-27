@@ -1,7 +1,7 @@
 # Electric Sign-Law Note
 
 **Date:** 2026-04-04  
-**Status:** bounded electric-like sign-law probe on the retained 3D ordered-lattice family
+**Status:** bounded electric-like sign-law probe on the proposed_retained 3D ordered-lattice family
 
 ## Artifact chain
 

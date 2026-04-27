@@ -1,7 +1,7 @@
 # Yukawa SSB Matching-Gap Analysis Note
 
 **Date:** 2026-04-18
-**Status:** **MATCHING GAP CLOSED** on the retained tree-level canonical
+**Status:** **MATCHING GAP CLOSED** on the proposed_retained tree-level canonical
 surface via two independent algebraic paths: (i) the retained Clifford
 chirality decomposition already captured in §0 of
 `docs/YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md`, and (ii) a

@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-20
 **Lane:** Dark-matter A-BCC basin-selector — closing open import I4.
-**Status:** **retained local theorem** — the chamber bound is derived inline
+**Status:** **proposed_retained local theorem** — the chamber bound is derived inline
 from retained Cl(3)/Z_3 doublet-block geometry on the PMNS source surface,
 and can be cited self-containedly by the A-BCC closure note.
 **Dedicated runner:**

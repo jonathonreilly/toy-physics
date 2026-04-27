@@ -1,7 +1,7 @@
 # Three Independent Grown Families: 9/9 Properties Match
 
 **Date:** 2026-04-06
-**Status:** retained positive — three families match to <5% on all properties
+**Status:** proposed_retained positive — three families match to <5% on all properties
 
 ## Families
 

@@ -1,7 +1,7 @@
 # Planck-Scale Conditional Completion Note
 
 **Date:** 2026-04-24
-**Status:** retained support / conditional completion packet, not an
+**Status:** proposed_retained support / conditional completion packet, not an
 unqualified minimal-stack derivation
 **Runner:** `scripts/frontier_planck_conditional_completion_audit.py`
 **Companion support runner:**

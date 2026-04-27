@@ -1,7 +1,7 @@
 # Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)
 
 **Date:** 2026-04-14
-**Status:** SUPERSEDED by `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`; retained as a support scan
+**Status:** SUPERSEDED by `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`; proposed_retained as a support scan
 **Script:** `scripts/frontier_yt_ew_coupling_derivation.py`
 
 ---

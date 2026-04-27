@@ -1,7 +1,7 @@
 # Non-Label Grown Drift Basin Note
 
 **Date:** 2026-04-06  
-**Status:** retained bounded positive drift basin around the grown-row non-label signed-source transfer
+**Status:** proposed_retained bounded positive drift basin around the grown-row non-label signed-source transfer
 
 ## Artifact chain
 

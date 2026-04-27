@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained CKM-structure corollary on the promoted CKM atlas
+**Status:** proposed_retained CKM-structure corollary on the proposed_promoted CKM atlas
 + NLO Wolfenstein protected-γ̄ surfaces. This note expresses the
 **Brocard polynomial `P(α_s)`** — the universal equilateral-excess
 polynomial that has emerged as the fundamental quartic of the

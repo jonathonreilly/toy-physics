@@ -1,7 +1,7 @@
 # Causal Propagating Field
 
 **Date:** 2026-04-06
-**Status:** retained positive — dynamic causal cone produces distinct observable
+**Status:** proposed_retained positive — dynamic causal cone produces distinct observable
 
 ## Artifact chain
 

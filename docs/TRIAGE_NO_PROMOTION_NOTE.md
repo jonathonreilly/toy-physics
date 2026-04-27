@@ -1,7 +1,7 @@
 # Triage No-Promotion Note
 
 **Date:** 2026-04-06  
-**Status:** no additional science result clears the retained bar from the current dirty stack
+**Status:** no additional science result clears the proposed_retained bar from the current dirty stack
 
 ## Scope
 

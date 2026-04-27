@@ -1,7 +1,7 @@
 # P1 Δ_R Master Assembly Theorem Note (Three-Channel Ratio Correction Roll-Up)
 
 **Date:** 2026-04-18 (amended 2026-04-18 with canonical-central supersession notice)
-**Status:** retained **literature-cited master assembly theorem** on the P1
+**Status:** proposed_retained **literature-cited master assembly theorem** on the P1
 ratio correction. The literature-cited central `Δ_R = −3.27 %` recorded below
 remains a defensible three-channel roll-up of the cited Δ_1/Δ_2/Δ_3
 sub-theorems, **but it is SUPERSEDED as the canonical retained central by the

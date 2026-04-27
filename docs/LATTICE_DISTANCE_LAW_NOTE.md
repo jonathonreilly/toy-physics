@@ -1,7 +1,7 @@
 # Lattice Distance-Law Note
 
 **Date:** 2026-04-03  
-**Status:** retained ordered-lattice distance-law branch
+**Status:** proposed_retained ordered-lattice distance-law branch
 
 This note freezes the ordered-lattice distance-law result that reopens the
 gravity-distance question outside the current random-connected symmetry

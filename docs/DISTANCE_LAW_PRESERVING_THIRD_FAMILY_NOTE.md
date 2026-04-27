@@ -1,7 +1,7 @@
 # Distance Law Preserving Third Family Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow positive on the high-drift/high-restore third family
+**Status:** proposed_retained narrow positive on the high-drift/high-restore third family
 
 ## Artifact Chain
 

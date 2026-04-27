@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** exact CKM-structure support corollary on retained main inputs,
+**Status:** exact CKM-structure support corollary on proposed_retained main inputs,
 plus explicit cross-sector SUPPORT commentary. The CKM section derives the
 rational identity `2/9` through four algebraically distinct CKM readouts using
 only retained inputs from `main`. The support section reads these CKM identities

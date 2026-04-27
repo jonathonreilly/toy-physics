@@ -1,7 +1,7 @@
 # Linear-Response Derivation-Adjacent Analysis — Partial Positive
 
 **Date:** 2026-04-07
-**Status:** retained partial positive — a derivation-adjacent heuristic (detector reweighting of |amp|² by 1/|z−z_src|, no parameter fit) gives **r = 0.56 overall and r = 0.72 off-scaffold correlation** with the measured first-order response and **81.8% sign agreement** across a combined 44-family set. Off-scaffold correlation is stronger than scaffolded (0.72 vs 0.40), the opposite of `free_coh`. The separately reported 79.5% "best threshold" number is in-sample tuned on the same dataset and should not be cited as a no-fit result. This is a heuristic, NOT yet the literal first-order Kubo expression `<z·δH>_0` (that is the subject of a follow-on lane).
+**Status:** proposed_retained partial positive — a derivation-adjacent heuristic (detector reweighting of |amp|² by 1/|z−z_src|, no parameter fit) gives **r = 0.56 overall and r = 0.72 off-scaffold correlation** with the measured first-order response and **81.8% sign agreement** across a combined 44-family set. Off-scaffold correlation is stronger than scaffolded (0.72 vs 0.40), the opposite of `free_coh`. The separately reported 79.5% "best threshold" number is in-sample tuned on the same dataset and should not be cited as a no-fit result. This is a heuristic, NOT yet the literal first-order Kubo expression `<z·δH>_0` (that is the subject of a follow-on lane).
 
 ## Artifact chain
 

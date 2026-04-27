@@ -1,7 +1,7 @@
 # Gate B Grown Propagating Field V3 Note
 
 **Date:** 2026-04-05  
-**Status:** bounded no-go for the frontier-echo self-consistent propagating-field architecture on the retained grown row
+**Status:** bounded no-go for the frontier-echo self-consistent propagating-field architecture on the proposed_retained grown row
 
 ## Artifact chain
 

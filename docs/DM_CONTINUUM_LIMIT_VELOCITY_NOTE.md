@@ -1,7 +1,7 @@
 # dM Continuum Limit Across Multiple v/c — Downgraded (3-Refinement Negative)
 
 **Date:** 2026-04-07 (revised with H=0.25 data)
-**Status:** retained negative — earlier "weak positive" framing from a 2-refinement sweep is **downgraded**. At 3 refinements H ∈ {0.5, 0.35, 0.25} on 3 velocities, **none** of the dM values converge at the 5% threshold. Last-step drifts are 16.4% (v=−0.15), 9.3% (v=−0.25), 13.5% (v=−0.35). The monotone-in-v pattern seen at H=0.35 also breaks at H=0.25 — v=−0.25 becomes a local peak. What survives: dM values at H=0.25 sit in a narrow band [+0.0068, +0.0077] (12% spread across the v range), and each velocity individually shows monotone decrease with H, suggesting dM is approaching a smaller limit ~0.006 as H → 0 but has not reached it.
+**Status:** proposed_retained negative — earlier "weak positive" framing from a 2-refinement sweep is **downgraded**. At 3 refinements H ∈ {0.5, 0.35, 0.25} on 3 velocities, **none** of the dM values converge at the 5% threshold. Last-step drifts are 16.4% (v=−0.15), 9.3% (v=−0.25), 13.5% (v=−0.35). The monotone-in-v pattern seen at H=0.35 also breaks at H=0.25 — v=−0.25 becomes a local peak. What survives: dM values at H=0.25 sit in a narrow band [+0.0068, +0.0077] (12% spread across the v range), and each velocity individually shows monotone decrease with H, suggesting dM is approaching a smaller limit ~0.006 as H → 0 but has not reached it.
 
 ## Artifact chain
 

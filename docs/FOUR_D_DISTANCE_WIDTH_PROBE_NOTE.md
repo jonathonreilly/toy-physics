@@ -1,7 +1,7 @@
 # 4D Distance Width Probe Note
 
 **Date:** 2026-04-04  
-**Status:** bounded support chain for the retained 4D valley-linear family; not an asymptotic closure claim
+**Status:** bounded support chain for the proposed_retained 4D valley-linear family; not an asymptotic closure claim
 
 ## Purpose
 

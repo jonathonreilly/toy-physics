@@ -1,7 +1,7 @@
 # Electrostatics Grown Sign-Law Note
 
 **Date:** 2026-04-05  
-**Status:** retained narrow grown-geometry sign-law companion
+**Status:** proposed_retained narrow grown-geometry sign-law companion
 
 ## Artifact chain
 

@@ -1,7 +1,7 @@
 # Mesoscopic Surrogate Annular / Tapered Sweep Note
 
 **Date:** 2026-04-04  
-**Status:** bounded localization sweep on the retained 3D mesoscopic surrogate
+**Status:** bounded localization sweep on the proposed_retained 3D mesoscopic surrogate
 family
 
 ## Artifact chain

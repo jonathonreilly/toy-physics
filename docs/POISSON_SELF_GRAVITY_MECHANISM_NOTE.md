@@ -1,7 +1,7 @@
 # Poisson Self-Gravity Mechanism Note
 
 **Date:** 2026-04-05
-**Status:** frozen as a control-only family, not a retained self-gravity mechanism
+**Status:** frozen as a control-only family, not a proposed_retained self-gravity mechanism
 
 ## Purpose
 

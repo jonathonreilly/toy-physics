@@ -1,7 +1,7 @@
 # (3+1)D Promotions of Lane 5 (Lightcone) and Lane 6 (Retarded vs Instantaneous)
 
 **Date:** 2026-04-07
-**Status:** retained positive — strict (3+1)D lightcone certified to r=8 via delta pulse; retarded ≠ instantaneous on (3+1)D wave equation by 26–31% on three families
+**Status:** proposed_retained positive — strict (3+1)D lightcone certified to r=8 via delta pulse; retarded ≠ instantaneous on (3+1)D wave equation by 26–31% on three families
 
 ## Artifact chain
 

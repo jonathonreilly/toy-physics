@@ -1,7 +1,7 @@
 # Bell Inequality (CHSH) Violation with Explicit Cl(3) Taste Measurements
 
 **Date:** 2026-04-16
-**Status:** RETAINED
+**Status:** proposed_retained
 **Script:** `scripts/frontier_bell_inequality.py`
 **Runtime:** ~2-5 minutes (dominated by 3D 4x4x4 eigenvalue decomposition)
 

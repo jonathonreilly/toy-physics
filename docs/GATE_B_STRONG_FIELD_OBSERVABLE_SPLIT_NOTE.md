@@ -1,7 +1,7 @@
 # Gate B Strong-Field Observable Split Note
 
 **Date:** 2026-04-05  
-**Status:** failure-audit synthesis on two retained grown-row probes
+**Status:** failure-audit synthesis on two proposed_retained grown-row probes
 
 ## Artifact chain
 

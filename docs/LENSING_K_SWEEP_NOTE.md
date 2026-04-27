@@ -1,7 +1,7 @@
 # Lensing Slope vs k (Phase Coupling): Strongly k-Dependent
 
 **Date:** 2026-04-09
-**Status:** retained STRONG DIAGNOSTIC — the lensing slope oscillates between +0.58 and −1.43 across k·H ∈ {0.5, ..., 5.0}. The −1.40 at k·H=2.5 is NOT a geometric invariant — it is one point on a k-dependent interference curve. At k·H=0.5 the deflection reverses sign (repulsive). At k·H=5.0 all seeds are repulsive. The eikonal gap oscillates in sign with k, confirming it is a wave-coupling effect.
+**Status:** proposed_retained STRONG DIAGNOSTIC — the lensing slope oscillates between +0.58 and −1.43 across k·H ∈ {0.5, ..., 5.0}. The −1.40 at k·H=2.5 is NOT a geometric invariant — it is one point on a k-dependent interference curve. At k·H=0.5 the deflection reverses sign (repulsive). At k·H=5.0 all seeds are repulsive. The eikonal gap oscillates in sign with k, confirming it is a wave-coupling effect.
 
 ## Setup
 

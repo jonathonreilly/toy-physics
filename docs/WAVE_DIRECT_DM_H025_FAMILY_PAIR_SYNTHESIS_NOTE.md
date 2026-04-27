@@ -1,7 +1,7 @@
 # Wave Direct-dM H=0.25 Family-Pair Synthesis Note
 
 **Date:** 2026-04-08
-**Status:** retained narrow synthesis on the current `Fam1`/`Fam2` fine-`H` evidence
+**Status:** proposed_retained narrow synthesis on the current `Fam1`/`Fam2` fine-`H` evidence
 
 This note compresses the two existing fine-`H` threads into one answer to the
 current question:

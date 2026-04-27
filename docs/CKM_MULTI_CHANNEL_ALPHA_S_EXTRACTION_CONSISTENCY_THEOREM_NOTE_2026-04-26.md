@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-26
 
-**Status:** retained CKM-structure corollary on the promoted CKM atlas
+**Status:** proposed_retained CKM-structure corollary on the proposed_promoted CKM atlas
 + NLO Wolfenstein protected-γ̄ surfaces. This note derives the
 **framework's multi-channel α_s extraction consistency** — the
 retained CKM magnitude identities allow α_s to be extracted

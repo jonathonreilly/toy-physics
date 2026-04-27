@@ -1,7 +1,7 @@
 # Gate B Grown-Geometry Distance-Law Note
 
 **Date:** 2026-04-05  
-**Status:** bounded distance-law transfer replay on the retained grown-geometry family
+**Status:** bounded distance-law transfer replay on the proposed_retained grown-geometry family
 
 ## Artifact chain
 

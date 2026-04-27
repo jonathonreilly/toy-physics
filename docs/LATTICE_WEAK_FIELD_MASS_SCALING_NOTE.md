@@ -1,7 +1,7 @@
 # Lattice Weak-Field Mass-Scaling Note
 
 **Date:** 2026-04-03  
-**Status:** retained sub-linear mass-response on the weak-field ordered-lattice pocket
+**Status:** proposed_retained sub-linear mass-response on the weak-field ordered-lattice pocket
 
 This note freezes the weak-field mass-scaling follow-up on the ordered lattice.
 It answers a narrow question:

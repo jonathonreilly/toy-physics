@@ -1,7 +1,7 @@
 # Conditional Basin-Uniqueness via an Imposed Branch-Choice Admissibility Rule
 
 **Date:** 2026-04-17 (Option-A demotion applied after 2026-04-17 review pass)
-**Status:** **CONDITIONAL / SUPPORT — NOT a retained theorem.** The
+**Status:** **CONDITIONAL / SUPPORT — NOT a proposed_retained theorem.** The
 "inertia-preservation selector" is an **IMPOSED branch-choice
 admissibility rule**, not a derived retained-theorem consequence. Under
 this imposed rule — restrict the live sheet to the connected component

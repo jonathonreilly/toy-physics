@@ -1,7 +1,7 @@
 # Staggered Backreaction Nonlocal Closure Note
 
 **Date:** 2026-04-10
-**Status:** retained negative for the force-scale blocker; useful structural improvement over the local screened-Poisson baseline, but not a material win over the best calibrated linear source map
+**Status:** proposed_retained negative for the force-scale blocker; useful structural improvement over the local screened-Poisson baseline, but not a material win over the best calibrated linear source map
 
 ## Question
 

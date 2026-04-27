@@ -1,7 +1,7 @@
 # Graph Phase-Diagram Scout Note
 
 **Date:** 2026-04-05  
-**Status:** bounded phase-diagram scout on the retained 3D valley-linear family
+**Status:** bounded phase-diagram scout on the proposed_retained 3D valley-linear family
 
 ## Artifact chain
 

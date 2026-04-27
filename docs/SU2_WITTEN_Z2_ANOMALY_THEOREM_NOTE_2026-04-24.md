@@ -2,7 +2,7 @@
 
 Date: 2026-04-24
 
-Status: retained structural-anomaly theorem on the accepted matter/gauge
+Status: proposed_retained structural-anomaly theorem on the accepted matter/gauge
 surface.
 
 ## Statement

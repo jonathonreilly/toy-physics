@@ -1,7 +1,7 @@
 # `alpha_s(M_Z)` Retained Same-Surface-Derived Authority
 
 **Date:** 2026-04-15
-**Status:** retained quantitative lane on `main`
+**Status:** proposed_retained quantitative lane on `main`
 **Primary derivation runner:** `scripts/frontier_yt_zero_import_chain.py`
 **Current package carrier:** `scripts/frontier_complete_prediction_chain.py`
 **Historical support runner:** `scripts/frontier_alpha_s_determination.py`

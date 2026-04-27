@@ -1,7 +1,7 @@
 # P1 Δ_2 (C_A Channel) BZ Computation Note
 
 **Date:** 2026-04-17
-**Status:** retained **citation-and-bound** computation of the C_A
+**Status:** proposed_retained **citation-and-bound** computation of the C_A
 channel coefficient `Δ_2` of the retained Rep-A/Rep-B 1-loop ratio
 decomposition. Pins the central value and literature-bounded range
 for `Δ_2 = I_v_gauge − (5/3) · I_SE` at SU(3) on the canonical

@@ -1,7 +1,7 @@
 # Growing Graph Static Control Audit Note
 
 **Date:** 2026-04-06  
-**Status:** retained graph-distance proxy; dynamic-propagation no-go
+**Status:** proposed_retained graph-distance proxy; dynamic-propagation no-go
 
 ## Artifact chain
 

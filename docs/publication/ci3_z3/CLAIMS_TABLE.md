@@ -10,14 +10,26 @@ For broader inventory and companion lanes, use:
 - [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
 - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 
+## Audit Transition Notice
+
+This table is the manuscript-capture surface, not the canonical audit ledger.
+The repo is migrating to the audit-lane vocabulary:
+
+- source notes may self-declare `proposed_retained` or `proposed_promoted`;
+- `retained` and `promoted` are audit-ratified `effective_status` values only;
+- until a row is ratified in [AUDIT_LEDGER.md](../../audit/AUDIT_LEDGER.md),
+  legacy table labels such as `retained`, `retained companion`, or
+  `promoted quantitative` should be read as proposed manuscript placement.
+
 ## Status Legend
 
-- `retained`: safe as a core paper claim on the current package surface
-- `retained companion`: exact or structural companion that belongs in Extended
+- `retained`: proposed core paper claim; audit-ratified only when
+  `AUDIT_LEDGER.md` gives `effective_status = retained`
+- `retained companion`: proposed exact or structural companion that belongs in Extended
   Data, theorem boxes, or discussion rather than as a headline claim
-- `promoted quantitative`: quantitative row the package is prepared to present
+- `promoted quantitative`: proposed quantitative row the package is prepared to present
   explicitly
-- `flagship closed package`: major package-level closeout on the manuscript
+- `flagship closed package`: proposed major package-level closeout on the manuscript
   surface
 - `open flagship lane`: scientifically central lane still open
 - `bounded companion`: useful package result kept outside the manuscript core

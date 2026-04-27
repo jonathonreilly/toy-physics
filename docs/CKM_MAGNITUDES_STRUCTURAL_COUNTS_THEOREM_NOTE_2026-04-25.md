@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained structural-identity subtheorem of the promoted CKM
+**Status:** proposed_retained structural-identity subtheorem of the proposed_promoted CKM
 atlas/axiom package. This note packages the five atlas-leading **off-diagonal**
 CKM magnitude identities into one structural-counts surface on top of the
 already-retained Wolfenstein and CP-plane identities. It does not change the

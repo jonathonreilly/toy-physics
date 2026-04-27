@@ -1,7 +1,7 @@
 # Left-Handed Charge Matching on the Selected-Axis Surface
 
 **Date:** 2026-04-14
-**Status:** retained corollary on the current paper surface
+**Status:** proposed_retained corollary on the current paper surface
 **Script:** `scripts/frontier_graph_first_su3_integration.py`
 **Authority role:** canonical main-branch note for the left-handed charge-matching row
 

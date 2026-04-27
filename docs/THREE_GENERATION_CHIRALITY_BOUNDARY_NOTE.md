@@ -1,7 +1,7 @@
 # Three-Generation / Chirality Boundary Note
 
 **Date:** 2026-04-15
-**Status:** retained support note on `main`
+**Status:** proposed_retained support note on `main`
 **Scripts:** `scripts/frontier_generation_fermi_point.py`,
 `scripts/frontier_generation_rooting_undefined.py`,
 `scripts/frontier_three_generation_observable_theorem.py`,

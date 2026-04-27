@@ -1,7 +1,7 @@
 # Quick Third Vs Sixth Distance Law Note
 
 **Date:** 2026-04-06  
-**Status:** targeted contrast on one retained row per family
+**Status:** targeted contrast on one proposed_retained row per family
 
 ## Artifact chain
 

@@ -1,7 +1,7 @@
 # Mirror vs Lattice Program Note
 
 **Date:** 2026-04-04
-**Status:** canonical comparison note for the retained mirror flagship and the
+**Status:** canonical comparison note for the proposed_retained mirror flagship and the
 ordered-lattice / nearest-neighbor secondary frontier
 
 This note compares the retained program lanes using only artifact-backed claims.

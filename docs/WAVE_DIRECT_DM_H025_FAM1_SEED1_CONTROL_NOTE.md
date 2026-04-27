@@ -1,7 +1,7 @@
 # Wave Direct-dM H=0.25 Fam1 Seed1 Control Note
 
 **Date:** 2026-04-08
-**Status:** retained control-ladder hardening on the Fam1/seed1 fine-H continuation
+**Status:** proposed_retained control-ladder hardening on the Fam1/seed1 fine-H continuation
 
 This note upgrades the earlier one-strength `Fam1`, seed `1`,
 `H = 0.25` continuation by adding the same-resolution control stack:

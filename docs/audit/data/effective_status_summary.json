@@ -1,0 +1,63 @@
+{
+  "computed_at": "2026-04-27T02:00:04.976779+00:00",
+  "cycle_examples": [
+    [
+      "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
+      "ai_methodology.canonical_framing_paragraph_2026-04-25"
+    ],
+    [
+      "ckm_atlas_axiom_closure_note",
+      "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
+    ],
+    [
+      "ckm_atlas_axiom_closure_note",
+      "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+      "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
+    ],
+    [
+      "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+      "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
+    ],
+    [
+      "left_handed_charge_matching_note",
+      "one_generation_matter_closure_note"
+    ]
+  ],
+  "cycles_detected": 283,
+  "effective_status_counts": {
+    "bounded": 185,
+    "open": 11,
+    "proposed_promoted": 6,
+    "proposed_retained": 312,
+    "support": 102,
+    "unknown": 985
+  },
+  "proposed_demoted_by_upstream_count": 124,
+  "proposed_demoted_by_upstream_examples": [
+    "alpha_s_derived_note",
+    "area_law_quarter_broader_no_go_note_2026-04-25",
+    "atomic_hydrogen_helium_probe_note",
+    "bh_entropy_rt_ratio_widom_no_go_note",
+    "bminusl_anomaly_freedom_theorem_note_2026-04-24",
+    "causal_impact_parameter_note",
+    "charged_lepton_koide_cone_algebraic_equivalence_note",
+    "charged_lepton_mass_hierarchy_review_note_2026-04-17",
+    "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
+    "chiral_walk_synthesis_2026-04-10_addendum",
+    "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
+    "ckm_atlas_axiom_closure_note",
+    "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
+    "ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25",
+    "ckm_barred_circumradius_exact_closed_form_theorem_note_2026-04-25",
+    "ckm_barred_napoleon_triangles_exact_closed_form_theorem_note_2026-04-25",
+    "ckm_barred_orthocenter_euler_line_exact_closed_form_theorem_note_2026-04-25",
+    "ckm_barred_pedoe_similarity_deficit_closed_form_theorem_note_2026-04-25",
+    "ckm_barred_triangle_pythagorean_rho_lambda_sum_rule_theorem_note_2026-04-25",
+    "ckm_barred_weitzenbock_brocard_polynomial_closed_form_theorem_note_2026-04-25",
+    "ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25",
+    "ckm_brocard_polynomial_vieta_structural_integers_theorem_note_2026-04-25",
+    "ckm_brocard_q_polynomial_perfect_square_decomposition_theorem_note_2026-04-25",
+    "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25",
+    "ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25"
+  ]
+}

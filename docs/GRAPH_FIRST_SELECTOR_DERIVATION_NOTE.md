@@ -1,7 +1,7 @@
 # Graph-First Weak-Axis Selector Derivation
 
-**Status:** BOUNDED-RETAINED SUPPORTING THEOREM -- the weak-axis selector is derived on the canonical graph-shift surface  
-**Script:** `scripts/frontier_graph_first_selector_derivation.py`  
+**Status:** BOUNDED-proposed_retained SUPPORTING THEOREM -- the weak-axis selector is derived on the canonical graph-shift surface
+**Script:** `scripts/frontier_graph_first_selector_derivation.py`
 **Date:** 2026-04-12
 
 ## Claim under test

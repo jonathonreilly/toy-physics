@@ -1,7 +1,7 @@
 # Third Grown Family Sign Note
 
 **Date:** 2026-04-06  
-**Status:** retained bounded positive third grown-family signed-source basin
+**Status:** proposed_retained bounded positive third grown-family signed-source basin
 
 ## Artifact chain
 

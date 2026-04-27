@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained structural-arithmetic subtheorem on the retained
+**Status:** proposed_retained structural-arithmetic subtheorem on the proposed_retained
 left-handed matter surface. Catalogues, names, and regression-tests the
 five specific anomaly-trace identities on the retained left-handed
 content `Q_L + L_L` already used in the body of

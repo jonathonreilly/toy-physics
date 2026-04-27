@@ -1,7 +1,7 @@
 # Lorentz Kernel Positive Closure Note
 
 **Date:** 2026-04-25
-**Status:** retained derived corollary on the boost-covariance lane
+**Status:** proposed_retained derived corollary on the boost-covariance lane
 **Runner:** `scripts/frontier_lorentz_kernel_positive_closure.py` (PASS=41, FAIL=0)
 **Inputs:** [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md),
 [LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md),

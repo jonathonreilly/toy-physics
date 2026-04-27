@@ -1,7 +1,7 @@
 # Grown Transfer Basin Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow grown-row basin positive, but selective rather than family-wide
+**Status:** proposed_retained narrow grown-row basin positive, but selective rather than family-wide
 
 ## Artifact chain
 

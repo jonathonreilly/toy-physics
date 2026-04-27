@@ -1,7 +1,7 @@
 # (3+1)D Wave-Equation Radiation: Full Spatial Laplacian
 
 **Date:** 2026-04-07
-**Status:** retained positive — radiation slope −1.14 matches (3+1)D scalar radiation prediction (−1.0); strict lightcone certified to r=8; drive-frequency dominance at every detector; exact null at S0=0
+**Status:** proposed_retained positive — radiation slope −1.14 matches (3+1)D scalar radiation prediction (−1.0); strict lightcone certified to r=8; drive-frequency dominance at every detector; exact null at S0=0
 
 ## Artifact chain
 

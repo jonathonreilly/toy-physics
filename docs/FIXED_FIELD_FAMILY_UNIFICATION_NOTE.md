@@ -1,7 +1,7 @@
 # Fixed-Field Family Unification Note
 
 **Date:** 2026-04-06  
-**Status:** compact retained same-row comparison, not a geometry-generic theorem
+**Status:** compact proposed_retained same-row comparison, not a geometry-generic theorem
 
 ## Artifact chain
 

@@ -1,7 +1,7 @@
 # YT Class #6 — C_{3[111]}-Breaking Operator Retention Analysis Note
 
 **Date:** 2026-04-18 (amended 2026-04-18 with Fourier-basis spectrum correction)
-**Status:** framework-native retention analysis. **Outcome B refined (retained
+**Status:** framework-native retention analysis. **Outcome B refined (proposed_retained
 narrow no-go + retained positive mechanism flagged):** no retained framework
 operator on H_hw=1 explicitly breaks C_{3[111]} as an OPERATOR-ALGEBRA
 symmetry, AND the retained circulant family that COMMUTES with C_{3[111]}

@@ -1,7 +1,7 @@
 # Planck Boundary-Density Extension Theorem
 
 **Date:** 2026-04-24
-**Status:** retained positive support theorem for the conditional Planck lane
+**Status:** proposed_retained positive support theorem for the conditional Planck lane
 **Runner:** `scripts/frontier_planck_boundary_density_extension.py`
 
 ## Purpose

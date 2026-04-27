@@ -1,7 +1,7 @@
 # Shapiro Diamond Bridge Note
 
 **Date:** 2026-04-06  
-**Status:** proxy-level bridge note for the retained c-dependent phase lag
+**Status:** proxy-level bridge note for the proposed_retained c-dependent phase lag
 
 ## Artifact Chain
 

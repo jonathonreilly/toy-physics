@@ -1,7 +1,7 @@
 # DM Neutrino `Z_3` Phase-Lift Mixed Bridge
 
-**Date:** 2026-04-15  
-**Status:** invented axiom-native candidate bridge family beyond the retained local bank  
+**Date:** 2026-04-15
+**Status:** invented axiom-native candidate bridge family beyond the proposed_retained local bank
 **Script:** `scripts/frontier_dm_neutrino_z3_phase_lift_bridge.py`
 
 ## Purpose

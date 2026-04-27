@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 **Runner:** `scripts/frontier_koide_q_delta_readout_retention_split_no_go.py`
-**Status:** conditional support; neither Q nor the full lane closes retained-only
+**Status:** conditional support; neither Q nor the full lane closes proposed_retained-only
 
 ## Theorem Attempt
 

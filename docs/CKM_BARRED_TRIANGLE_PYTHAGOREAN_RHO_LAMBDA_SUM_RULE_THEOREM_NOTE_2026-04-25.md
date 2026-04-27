@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained CKM-structure corollary on the promoted CKM atlas
+**Status:** proposed_retained CKM-structure corollary on the proposed_promoted CKM atlas
 + NLO-protected-γ̄ surfaces. This note derives **a NEW EXACT
 polynomial sum rule** for the barred unitarity triangle on the NLO
 Wolfenstein protected-γ̄ surface:

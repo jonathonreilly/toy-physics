@@ -1,7 +1,7 @@
 # Gauge-Vacuum Plaquette First-Sector Truncated Environment Packet
 
-**Date:** 2026-04-19  
-**Status:** exact retained-sector theorem on the plaquette/Wilson first-sector reopening; the completed first-sector triple already determines one explicit truncated diagonal/environment packet on the retained first-symmetric sector  
+**Date:** 2026-04-19
+**Status:** exact proposed_retained-sector theorem on the plaquette/Wilson first-sector reopening; the completed first-sector triple already determines one explicit truncated diagonal/environment packet on the proposed_retained first-symmetric sector
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_first_sector_truncated_environment_packet_theorem_2026_04_19.py`
 
 ## Question

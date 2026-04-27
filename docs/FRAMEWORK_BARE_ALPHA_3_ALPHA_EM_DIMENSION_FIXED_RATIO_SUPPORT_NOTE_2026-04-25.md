@@ -2,7 +2,7 @@
 
 Date: 2026-04-25
 
-Status: exact algebraic support corollary on the retained EW-normalization
+Status: exact algebraic support corollary on the proposed_retained EW-normalization
 surface. This note does not promote the reviewed `Cl(3) -> SM` algebraic
 support packet into the accepted minimal-input stack.
 

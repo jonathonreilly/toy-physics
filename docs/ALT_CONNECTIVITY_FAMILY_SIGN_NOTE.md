@@ -1,7 +1,7 @@
 # ALT Connectivity Family Sign Note
 
 **Date:** 2026-04-06  
-**Status:** retained bounded positive alternative connectivity family
+**Status:** proposed_retained bounded positive alternative connectivity family
 
 ## Artifact Chain
 

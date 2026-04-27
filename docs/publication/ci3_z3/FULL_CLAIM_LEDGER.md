@@ -11,6 +11,12 @@ explicitly cover the same science inventory.
 If the matrix and this ledger ever disagree, the matrix wins until this ledger
 is updated.
 
+Audit-transition note: this ledger is narrative package bookkeeping. The
+canonical ratification surface is [AUDIT_LEDGER.md](../../audit/AUDIT_LEDGER.md).
+Legacy wording such as `retained core` or `promoted` in this file describes
+intended manuscript placement unless the audit ledger gives the row a clean
+`effective_status`.
+
 Use this file together with:
 
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)

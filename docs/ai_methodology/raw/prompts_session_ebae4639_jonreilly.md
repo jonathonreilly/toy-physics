@@ -148,7 +148,7 @@ Summary:
    The most recent action was reading the first few lines of `docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md` which begins:
    ```
    # STRC-LO Collinearity Theorem
-   Status: RETAINED theorem. STRC-LO is derived from retained collinearity r = p/sqrt(7) plus the Frobenius imaginary cross-residual definition of a_u...
+   Status: proposed_retained theorem. STRC-LO is derived from proposed_retained collinearity r = p/sqrt(7) plus the Frobenius imaginary cross-residual definition of a_u...
    ```
    This is the status that needs to be corrected.
 

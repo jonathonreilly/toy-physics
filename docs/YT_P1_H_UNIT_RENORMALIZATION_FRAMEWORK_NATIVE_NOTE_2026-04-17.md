@@ -1,7 +1,7 @@
 # P1 H_unit 1-Loop Renormalization: Framework-Native Symbolic Reduction
 
 **Date:** 2026-04-17
-**Status:** retained framework-native **symbolic reduction** of the 1-loop
+**Status:** proposed_retained framework-native **symbolic reduction** of the 1-loop
 renormalization of the composite-Higgs scalar bilinear `H_unit =
 (1/√6) Σ ψ̄ ψ` on the `Cl(3) × Z^3` Wilson-plaquette + 1-link
 staggered-Dirac tadpole-improved canonical surface. This is **not** a

@@ -1,7 +1,7 @@
 # Wave Direct-dM H=0.25 Low-Band Retention Note
 
 **Date:** 2026-04-08
-**Status:** retained one-strength validation on the Fam1/seed1 branch replay, later hardened by control ladder
+**Status:** proposed_retained one-strength validation on the Fam1/seed1 branch replay, later hardened by control ladder
 
 This note records the complementary direct `H = 0.25` replay for the
 direct-`dM` amplitude-band story:

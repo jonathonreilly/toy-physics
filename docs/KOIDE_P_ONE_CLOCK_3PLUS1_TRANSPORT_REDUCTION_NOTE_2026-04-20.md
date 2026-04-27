@@ -3,7 +3,7 @@
 **Date:** 2026-04-20  
 **Lane:** Scalar-selector cycle 1 - sharpened reduction of the residual
 radian-bridge postulate `P`.  
-**Status:** **Reduction theorem.** The retained same-branch inputs now reduce
+**Status:** **Reduction theorem.** The proposed_retained same-branch inputs now reduce
 the remaining native closure content of `P` to a one-clock ambient `3+1`
 continuation / endpoint / transport law, or to extra retained Wilson/lattice
 phase data on that ambient.  

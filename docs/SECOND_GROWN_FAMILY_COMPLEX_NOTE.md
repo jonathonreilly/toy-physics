@@ -1,7 +1,7 @@
 # Second Grown Family Complex Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow anchor-row positive on the no-restore geometry-sector slice
+**Status:** proposed_retained narrow anchor-row positive on the no-restore geometry-sector slice
 
 ## Artifact chain
 

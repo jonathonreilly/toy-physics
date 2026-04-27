@@ -1,7 +1,7 @@
 # Three-Generation Matter Structure Note
 
 **Date:** 2026-04-15
-**Status:** retained
+**Status:** proposed_retained
 **Scripts:** `scripts/frontier_generation_fermi_point.py`, `scripts/frontier_generation_rooting_undefined.py`, `scripts/frontier_generation_axiom_boundary.py`, `scripts/frontier_three_generation_observable_theorem.py`
 **Authority role:** canonical main-branch note for the retained three-generation matter-structure row
 

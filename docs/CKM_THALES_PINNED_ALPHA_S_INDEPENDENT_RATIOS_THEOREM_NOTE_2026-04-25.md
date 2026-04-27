@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** Retained CKM structural subtheorem on the promoted
+**Status:** proposed_retained CKM structural subtheorem on the proposed_promoted
 atlas/axiom surface. It derives a structural classification of the framework's
 atlas-LO CKM predictions: each CKM-magnitude ratio is either
 **α_s-DEPENDENT** (probes the canonical coupling) or

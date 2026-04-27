@@ -1,7 +1,7 @@
 # Source-Resolved Generated Support Recovery Basin Note
 
 **Date:** 2026-04-05  
-**Status:** tiny basin probe around the retained generated-family support recovery
+**Status:** tiny basin probe around the proposed_retained generated-family support recovery
 
 ## Artifact chain
 

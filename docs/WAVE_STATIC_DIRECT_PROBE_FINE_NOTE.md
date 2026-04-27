@@ -1,7 +1,7 @@
 # Wave Static Direct-Comparator Fine Check
 
 **Date:** 2026-04-08
-**Status:** retained fine-point negative — on the moving-source Lane 6 setup at `H = 0.25`, the exact direct discrete static solve gives `dS = +0.011563` with residual `2.000e-10`, but it does **not** improve on the best existing comparator. Its mismatch to the retarded field is `rel_MS = 37.62%`, worse than the equilibrated cached-static comparator's `rel_MIeq = 23.16%`. So the simple "exact direct static solve at the same beam box rescues the moving-source magnitude" story does not land at the fine point.
+**Status:** proposed_retained fine-point negative — on the moving-source Lane 6 setup at `H = 0.25`, the exact direct discrete static solve gives `dS = +0.011563` with residual `2.000e-10`, but it does **not** improve on the best existing comparator. Its mismatch to the retarded field is `rel_MS = 37.62%`, worse than the equilibrated cached-static comparator's `rel_MIeq = 23.16%`. So the simple "exact direct static solve at the same beam box rescues the moving-source magnitude" story does not land at the fine point.
 
 ## Artifact chain
 

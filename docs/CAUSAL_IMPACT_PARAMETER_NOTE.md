@@ -1,7 +1,7 @@
 # Causal Impact-Parameter Note
 
 **Date:** 2026-04-06  
-**Status:** bounded causal-field impact-parameter probe on the retained center grown family
+**Status:** bounded causal-field impact-parameter probe on the proposed_retained center grown family
 
 ## Artifact Chain
 

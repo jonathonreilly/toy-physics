@@ -1,7 +1,7 @@
 # Distance Law Breakpoint Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow breakpoint diagnosis
+**Status:** proposed_retained narrow breakpoint diagnosis
 
 ## Artifact Chain
 

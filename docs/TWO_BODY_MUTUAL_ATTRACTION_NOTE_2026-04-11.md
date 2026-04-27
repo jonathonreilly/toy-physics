@@ -1,10 +1,10 @@
 # Two-Body Mutual Attraction Note
 
-**Date:** 2026-04-11  
-**Status:** exploratory, not retained  
-**Scripts:**  
-- `frontier_two_body_mutual_attraction.py`  
-- `frontier_two_orbital_mutual_attraction.py`  
+**Date:** 2026-04-11
+**Status:** exploratory, outside audit-ratified tier
+**Scripts:**
+- `frontier_two_body_mutual_attraction.py`
+- `frontier_two_orbital_mutual_attraction.py`
 - `frontier_two_body_acceleration.py`
 - `frontier_two_body_partner_kick.py`
 - `frontier_two_body_partner_kick_size_scan.py`

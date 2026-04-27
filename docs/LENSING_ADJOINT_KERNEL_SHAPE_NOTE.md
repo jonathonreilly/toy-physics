@@ -1,7 +1,7 @@
 # Lensing Adjoint Kernel Shape Compare
 
 **Date:** 2026-04-09
-**Status:** retained partial positive — on the retained reference setup
+**Status:** proposed_retained partial positive — on the proposed_retained reference setup
 (`T_phys = 15`, `H = 0.25`, `BETA = 0.8`, Fam1, `b ∈ {3,4,5,6}`), the
 normalized absolute adjoint kernel `|K_l|` changes only modestly across
 impact parameter. Raw pairwise total-variation distances stay in

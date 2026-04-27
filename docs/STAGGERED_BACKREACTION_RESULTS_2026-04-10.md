@@ -1,7 +1,7 @@
 # Staggered Backreaction Prototype Results
 
 **Date:** 2026-04-10  
-**Status:** retained prototype
+**Status:** proposed_retained prototype
 
 ## Question
 

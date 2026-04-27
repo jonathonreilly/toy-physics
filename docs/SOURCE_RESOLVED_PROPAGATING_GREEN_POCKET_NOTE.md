@@ -1,7 +1,7 @@
 # Source-Resolved Propagating Green Pocket
 
 **Date:** 2026-04-05  
-**Status:** retained exact-lattice same-site-memory positive
+**Status:** proposed_retained exact-lattice same-site-memory positive
 
 This note freezes the smallest exact-lattice same-site-memory harness that
 could still be compared directly against the retained static Green control and

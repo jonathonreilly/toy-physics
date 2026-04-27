@@ -2,7 +2,7 @@
 
 Date: 2026-04-24
 
-Status: retained structural-anomaly theorem on the accepted one-generation
+Status: proposed_retained structural-anomaly theorem on the accepted one-generation
 matter/gauge surface.
 
 ## Statement

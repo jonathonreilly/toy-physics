@@ -1,8 +1,8 @@
 # Critical Open Science Lanes
 
 **Date:** 2026-04-26
-**Status:** ACCEPTED OPEN SCIENCE LANE PACKAGE on `main`. Not retained,
-not bounded, and not on the manuscript surface. This package records five
+**Status:** open science lane package on `main`; outside audit-ratified tier,
+not bounded, and not on the manuscript surface. This package records six
 missing science lanes that need active work.
 
 ## Why this package exists

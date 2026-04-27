@@ -1,7 +1,7 @@
 # Planck Finite-Response No-Go Note
 
 **Date:** 2026-04-24
-**Status:** retained no-go / blocker closeout for the Planck-scale lane
+**Status:** proposed_retained no-go / blocker closeout for the Planck-scale lane
 **Runner:** `scripts/frontier_planck_finite_response_nogo.py`
 
 ## Purpose

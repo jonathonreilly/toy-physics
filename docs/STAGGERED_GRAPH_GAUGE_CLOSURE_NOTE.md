@@ -1,6 +1,6 @@
 # Staggered Graph Gauge Closure Note
 
-**Status:** retained gauge/current closure probe
+**Status:** proposed_retained gauge/current closure probe
 
 This note freezes the first dedicated native gauge/current closure run for the
 staggered graph lane.

@@ -1,7 +1,7 @@
 # P1 Δ_R SM-RGE Cross-Validation Note
 
 **Date:** 2026-04-18 (amended 2026-04-18 with canonical-central cross-reference)
-**Status:** Cross-validation of the retained `Δ_R` at `M_Pl` against a SECOND
+**Status:** Cross-validation of the proposed_retained `Δ_R` at `M_Pl` against a SECOND
 independent derivation: numerical backward integration of the SM MSbar
 2-loop RGE for `(g_1, g_2, g_s, y_t)` from `v` up to `M_Pl`, starting from
 the framework primary-chain boundary conditions at `v`. The cross-check was

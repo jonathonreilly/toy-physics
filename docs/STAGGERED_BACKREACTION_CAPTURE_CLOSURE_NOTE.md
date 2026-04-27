@@ -1,7 +1,7 @@
 # Staggered Backreaction Capture-Closure Note
 
 **Date:** 2026-04-10  
-**Status:** retained positive closure on the cycle-bearing battery, with one layered holdout check
+**Status:** proposed_retained positive closure on the cycle-bearing battery, with one layered holdout check
 
 ## Objective
 

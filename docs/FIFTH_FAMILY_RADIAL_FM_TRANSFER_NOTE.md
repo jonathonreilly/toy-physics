@@ -1,7 +1,7 @@
 # Fifth Family Radial F~M Transfer Note
 
 **Date:** 2026-04-06  
-**Status:** retained weak-field transfer on the radial-shell fifth-family basin
+**Status:** proposed_retained weak-field transfer on the radial-shell fifth-family basin
 
 ## Artifact Chain
 

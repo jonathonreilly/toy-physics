@@ -1,7 +1,7 @@
 # Gravitomagnetic Effect: Velocity-Dependent Shapiro Correction
 
 **Date:** 2026-04-06
-**Status:** retained positive — antisymmetric in v, portable across 3 families
+**Status:** proposed_retained positive — antisymmetric in v, portable across 3 families
 
 ## Artifact chain
 

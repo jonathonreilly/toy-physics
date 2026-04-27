@@ -1,7 +1,7 @@
 # Graviton-Mass Spectral-Gap Identity Theorem
 
 **Date:** 2026-04-18
-**Status:** **retained structural identity theorem** +
+**Status:** **proposed_retained structural identity theorem** +
 **bounded quantitative continuation**. Packages the already-exact-on-the-
 retained-internal-surface relation `m_g^2 = 2 hbar^2 Lambda_vac / c^2` from
 the graviton-mass companion into a standalone retained identity theorem,

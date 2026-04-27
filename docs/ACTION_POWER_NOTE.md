@@ -1,7 +1,7 @@
 # Action Power Branch: Honest Status
 
 **Date:** 2026-04-04
-**Status:** bounded axiom-fork branch with a retained 3D barrier card, a retained 3D no-barrier law companion, and a bounded negative on 3D barrier attraction for the current ordered family
+**Status:** bounded axiom-fork branch with a proposed_retained 3D barrier card, a proposed_retained 3D no-barrier law companion, and a bounded negative on 3D barrier attraction for the current ordered family
 
 ## What this is
 

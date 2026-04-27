@@ -1,7 +1,7 @@
 # Critical Exponents vs Topology
 
-**Date:** 2026-04-10  
-**Status:** retained finite-size scout  
+**Date:** 2026-04-10
+**Status:** proposed_retained finite-size scout
 **Script:** `frontier_critical_exponents.py`
 
 ## Question

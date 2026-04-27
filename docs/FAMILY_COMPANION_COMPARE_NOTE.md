@@ -1,7 +1,7 @@
 # Family Companion Compare Note
 
 **Date:** 2026-04-06  
-**Status:** narrow cross-family comparison card for the retained fixed-companion weak-field law
+**Status:** narrow cross-family comparison card for the proposed_retained fixed-companion weak-field law
 
 ## Artifact Chain
 

@@ -1,8 +1,8 @@
 # Koide Higgs-Dressed Resolvent Root Theorem
 
-**Date:** 2026-04-20  
-**Lane:** charged-lepton Koide, constructive transport avenue  
-**Status:** exact scalar reduction of the retained Higgs-dressed intermediate-propagator route. This does **not** finish a retained Koide derivation, but it turns the old broad transport ambiguity into one scalar root law on the most natural missing-axis lift.  
+**Date:** 2026-04-20
+**Lane:** charged-lepton Koide, constructive transport avenue
+**Status:** exact scalar reduction of the proposed_retained Higgs-dressed intermediate-propagator route. This does **not** finish a proposed_retained Koide derivation, but it turns the old broad transport ambiguity into one scalar root law on the most natural missing-axis lift.
 **Runner:** `scripts/frontier_koide_higgs_dressed_resolvent_root_theorem.py`
 
 ## Question

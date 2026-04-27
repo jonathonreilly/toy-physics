@@ -1,7 +1,7 @@
 # Mirror + Grown Combined Note
 
 **Date:** 2026-04-03  
-**Status:** exploratory only; does not approximate the retained higher-symmetry benefit
+**Status:** exploratory only; does not approximate the proposed_retained higher-symmetry benefit
 
 This note records the grown-symmetry scout in:
 

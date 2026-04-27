@@ -1,7 +1,7 @@
 # P3 MSbar-to-Pole K_2 Two-Loop Integral Citation Note
 
 **Date:** 2026-04-17
-**Status:** retained structural cite-and-verify of the four 2-loop on-shell QCD integrals `{I_FF, I_FA, I_Fl, I_Fh}` that enter the K_2 color-tensor decomposition; citation-and-verification layer on top of the prior K_2 color-factor retention.
+**Status:** proposed_retained structural cite-and-verify of the four 2-loop on-shell QCD integrals `{I_FF, I_FA, I_Fl, I_Fh}` that enter the K_2 color-tensor decomposition; citation-and-verification layer on top of the prior K_2 color-factor retention.
 **Runner:** `scripts/frontier_yt_p3_k2_integrals.py`
 
 ## Authority notice

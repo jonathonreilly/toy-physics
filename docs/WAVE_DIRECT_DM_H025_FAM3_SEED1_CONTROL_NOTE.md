@@ -1,7 +1,7 @@
 # Wave Direct-dM H=0.25 Fam3 Seed1 Control Note
 
 **Date:** 2026-04-09
-**Status:** retained control-ladder hardening on the Fam3/seed1 fine-H control
+**Status:** proposed_retained control-ladder hardening on the Fam3/seed1 fine-H control
 
 This note freezes the next predeclared direct-`dM` widening point after the
 two-family transfer diagnostic:

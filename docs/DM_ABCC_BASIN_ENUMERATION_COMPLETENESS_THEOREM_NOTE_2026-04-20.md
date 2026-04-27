@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-20
 **Lane:** Dark-matter A-BCC basin-selector (enumeration completeness).
-**Status:** **RETAINED computational-certificate theorem.** Exhaustiveness
+**Status:** **proposed_retained computational-certificate theorem.** Exhaustiveness
 of the retained chi²=0 basin chart on the DM source surface is certified
 by a bounded-enclosure dense grid + multistart Nelder–Mead scan under
 every retained σ-permutation, with explicit Lipschitz + basin-of-attraction

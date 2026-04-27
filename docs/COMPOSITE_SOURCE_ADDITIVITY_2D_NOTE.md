@@ -1,7 +1,7 @@
 # Composite-Source Additivity Cross-Family Note
 
 **Date:** 2026-04-04  
-**Status:** bounded second-family additivity probe on the retained 2D ordered lattice
+**Status:** bounded second-family additivity probe on the proposed_retained 2D ordered lattice
 
 ## Artifact chain
 

@@ -1,7 +1,7 @@
 # Source-Resolved Wavefield Green Pocket
 
 **Date:** 2026-04-05  
-**Status:** exact-lattice finite-speed wavefield pocket, frozen on the retained compact family
+**Status:** exact-lattice finite-speed wavefield pocket, frozen on the proposed_retained compact family
 
 ## Artifact chain
 

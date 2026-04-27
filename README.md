@@ -14,6 +14,14 @@ questions:
 
 ## Read First
 
+**Audit status note:** the repo is migrating from author-declared
+`retained` / `promoted` language to the audit-lane propose / ratify
+vocabulary. Source-note Status lines now use `proposed_retained` /
+`proposed_promoted`; the canonical audit-ratified surface is
+[docs/audit/AUDIT_LEDGER.md](docs/audit/AUDIT_LEDGER.md). Legacy
+publication summaries may still use manuscript shorthand, but those rows
+should be read as proposed until the audit ledger marks them clean.
+
 1. [Public arXiv draft](docs/publication/ci3_z3/ARXIV_DRAFT.md)
 2. [Writing voice guide](docs/WRITING_VOICE_GUIDE_2026-04-25.md)
 3. [Prediction surface](docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)

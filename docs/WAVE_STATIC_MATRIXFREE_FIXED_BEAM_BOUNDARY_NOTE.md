@@ -1,7 +1,7 @@
 # Wave Static Matrix-Free Fixed-Beam Boundary Probe
 
 **Date:** 2026-04-08
-**Status:** retained side probe
+**Status:** proposed_retained side probe
 
 This probe is the next narrow rescue attempt for the exact discrete
 static comparator lane.

@@ -1,7 +1,7 @@
 # Confinement and String Tension Theorem
 
 **Date:** 2026-04-15
-**Status:** retained structural theorem + bounded quantitative prediction
+**Status:** proposed_retained structural theorem + bounded quantitative prediction
 **Script:** `scripts/frontier_confinement_string_tension.py`
 
 ## Theorem

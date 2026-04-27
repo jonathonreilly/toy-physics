@@ -1,7 +1,7 @@
 # Mesoscopic Surrogate Threshold 2D Note
 
 **Date:** 2026-04-04  
-**Status:** bounded control note; retained 2D support sweep found no sharp
+**Status:** bounded control note; proposed_retained 2D support sweep found no sharp
 threshold in two-stage sourced-response stability
 
 ## Question

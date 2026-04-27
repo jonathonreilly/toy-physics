@@ -1,7 +1,7 @@
 # Moving Source Cross-Family Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow extension positive across two portable grown families
+**Status:** proposed_retained narrow extension positive across two portable grown families
 
 ## Artifact Chain
 

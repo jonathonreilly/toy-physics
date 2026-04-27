@@ -1,7 +1,7 @@
 # ALT Connectivity Family F~M Transfer Note
 
 **Date:** 2026-04-06  
-**Status:** retained weak-field linearity on the alternative connectivity family
+**Status:** proposed_retained weak-field linearity on the alternative connectivity family
 
 ## Artifact Chain
 

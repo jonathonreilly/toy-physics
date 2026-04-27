@@ -1,7 +1,7 @@
 # PMNS as `f(H(m, delta, q_+))` — Bounded P3 Package
 
 **Date:** 2026-04-17 (2026-04-18 P3 Sylvester update applied)
-**Status:** **BOUNDED P3 package — NOT a retained live-sheet closure
+**Status:** **BOUNDED P3 package — NOT a proposed_retained live-sheet closure
 theorem.** The positive content this note retains: an explicit
 map `(m, δ, q_+) → (θ_12, θ_13, θ_23, δ_CP)` by direct
 diagonalisation of the retained affine Hermitian `H` on the live sheet,

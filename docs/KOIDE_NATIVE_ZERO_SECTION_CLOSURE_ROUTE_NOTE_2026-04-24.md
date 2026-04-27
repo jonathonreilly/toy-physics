@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 **Runner:** `scripts/frontier_koide_native_zero_section_closure_route.py`
-**Status:** exact conditional native route; not yet retained-only closure
+**Status:** exact conditional native route; not yet proposed_retained-only closure
 
 ## Purpose
 

@@ -1,7 +1,7 @@
 # Continuum Limit of the True First-Order Kubo Coefficient — POSITIVE
 
 **Date:** 2026-04-07
-**Status:** retained positive — the true first-order Kubo coefficient `kubo_true = d(cz)/ds` at s=0, computed by the parallel perturbation propagator on a static grown-DAG lattice with the imposed 1/r field, converges cleanly under lattice refinement. At H ∈ {0.5, 0.35, 0.25} with physical parameters held approximately constant, kubo_true goes 7.062 → 5.973 → **5.986** — the last refinement changes the coefficient by **only 0.2%**. This is the first continuum-stable physics result the program has produced on any refinement sweep. **Continuum-limit value: kubo_true ≈ +5.986**.
+**Status:** proposed_retained positive — the true first-order Kubo coefficient `kubo_true = d(cz)/ds` at s=0, computed by the parallel perturbation propagator on a static grown-DAG lattice with the imposed 1/r field, converges cleanly under lattice refinement. At H ∈ {0.5, 0.35, 0.25} with physical parameters held approximately constant, kubo_true goes 7.062 → 5.973 → **5.986** — the last refinement changes the coefficient by **only 0.2%**. This is the first continuum-stable physics result the program has produced on any refinement sweep. **Continuum-limit value: kubo_true ≈ +5.986**.
 
 ## Artifact chain
 

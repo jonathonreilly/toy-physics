@@ -1,7 +1,7 @@
 # Graph-First `SU(3)` Integration Theorem
 
-**Status:** BOUNDED-RETAINED STRUCTURAL GAUGE THEOREM -- selected graph axis integrates canonically into the bounded commutant theorem  
-**Script:** `scripts/frontier_graph_first_su3_integration.py`  
+**Status:** BOUNDED-proposed_retained STRUCTURAL GAUGE THEOREM -- selected graph axis integrates canonically into the bounded commutant theorem
+**Script:** `scripts/frontier_graph_first_su3_integration.py`
 **Date:** 2026-04-12
 
 ## Claim under test

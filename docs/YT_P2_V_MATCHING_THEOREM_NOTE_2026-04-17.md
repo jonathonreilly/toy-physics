@@ -1,7 +1,7 @@
 # P2 v-Matching Theorem: Framework-Native Decomposition of M
 
 **Date:** 2026-04-17
-**Status:** PARTIAL closure via Path C (color projection * 1-loop SM RGE on y_t * CMT endpoint). The matching coefficient `M = 1.9734` decomposes framework-natively into three retained factors. The 1-loop evaluation gives `M = 1.926`, within 2.4% of the target, bounded by the retained QFP Insensitivity 3% envelope. The residual 2.4% is accounted for by the retained 1-loop vs. 2-loop SM RGE truncation shift explicitly quantified in `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`.
+**Status:** PARTIAL closure via Path C (color projection * 1-loop SM RGE on y_t * CMT endpoint). The matching coefficient `M = 1.9734` decomposes framework-natively into three proposed_retained factors. The 1-loop evaluation gives `M = 1.926`, within 2.4% of the target, bounded by the proposed_retained QFP Insensitivity 3% envelope. The residual 2.4% is accounted for by the proposed_retained 1-loop vs. 2-loop SM RGE truncation shift explicitly quantified in `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`.
 **Runner:** `scripts/frontier_yt_p2_v_matching.py`
 
 ---

@@ -1,8 +1,7 @@
 # Koide Q Onsite Source-Domain No-Go Synthesis
 
 **Date:** 2026-04-25
-**Status:** conditional support / retained no-go synthesis; not retained
-native Koide closure
+**Status:** conditional support / no-go synthesis; outside audit-ratified tier for native Koide closure
 **Primary runner:**
 `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py`
 

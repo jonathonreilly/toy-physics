@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained CKM × Cl(3) closure theorem on retained-tier authorities.
+**Status:** proposed_retained CKM × Cl(3) closure theorem on proposed_retained-tier authorities.
 
 This note CLOSES `A² = N_pair/N_color = 2/3` BELOW W2 via a single
 **Identification Source Theorem (S1)** that derives BOTH `N_pair = 2` and

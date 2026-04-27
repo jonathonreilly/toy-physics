@@ -2,7 +2,7 @@
 
 Date: 2026-04-24
 
-Status: retained structural identity on the accepted coupling chain.
+Status: proposed_retained structural identity on the accepted coupling chain.
 
 ## Statement
 

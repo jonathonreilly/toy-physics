@@ -1,7 +1,7 @@
 # Evolving Network Prototype V2 Note
 
 **Date:** 2026-04-04  
-**Status:** bounded Gate B prototype note, not a promoted dynamics theorem
+**Status:** bounded Gate B prototype note, not a proposed_promoted dynamics theorem
 
 ## One-line read
 

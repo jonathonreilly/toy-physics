@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 
-**Status:** Retained structural-identity subtheorem of the promoted CKM
+**Status:** proposed_retained structural-identity subtheorem of the proposed_promoted CKM
 atlas/axiom package. This note names and regression-tests the `lambda` and `A`
 identities already present inside
 [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md). It is a

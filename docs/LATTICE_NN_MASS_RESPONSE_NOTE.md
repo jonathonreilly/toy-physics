@@ -1,7 +1,7 @@
 # NN Lattice Mass-Response Note
 
 **Date:** 2026-04-03  
-**Status:** retained positive mass response under the Born-safe refinement path;
+**Status:** proposed_retained positive mass response under the Born-safe refinement path;
 narrow alpha-scaled law is promising but still bounded
 
 This note freezes the nearest-neighbor lattice mass-response follow-up.

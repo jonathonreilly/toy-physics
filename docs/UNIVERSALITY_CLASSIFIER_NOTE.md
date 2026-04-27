@@ -14,7 +14,7 @@
 > another metric search.
 
 **Date:** 2026-04-07 (revised, dynamic-augmented battery)
-**Status:** retained empirical (within-family only) — 2-property classifier on a 26-family sweep with **5-condition battery (4 static + 1 dynamic Lane 6 gap)**. In-sample 92.3%, leave-one-out 84.6%, in-family held-out (8 families): 7/8 rule, 8/8 pre-committed. **Cross-generator held-out (9 independent generators): 6/9 rule, 4/9 pre-committed — the rule is a within-family fit and does NOT generalize across generator families.** See [`INDEPENDENT_GENERATORS_HELDOUT_NOTE.md`](INDEPENDENT_GENERATORS_HELDOUT_NOTE.md). NOT a derived universality theorem.
+**Status:** proposed_retained empirical (within-family only) — 2-property classifier on a 26-family sweep with **5-condition battery (4 static + 1 dynamic Lane 6 gap)**. In-sample 92.3%, leave-one-out 84.6%, in-family held-out (8 families): 7/8 rule, 8/8 pre-committed. **Cross-generator held-out (9 independent generators): 6/9 rule, 4/9 pre-committed — the rule is a within-family fit and does NOT generalize across generator families.** See [`INDEPENDENT_GENERATORS_HELDOUT_NOTE.md`](INDEPENDENT_GENERATORS_HELDOUT_NOTE.md). NOT a derived universality theorem.
 
 ## Artifact chain
 

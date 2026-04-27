@@ -1,7 +1,7 @@
 # Physical-Lattice Necessity / Fixed-Surface No-Regulator-Reinterpretation Note
 
 **Date:** 2026-04-16
-**Status:** exact support theorem on the framework boundary; retained
+**Status:** exact support theorem on the framework boundary; proposed_retained
 no-same-stack / no-same-surface regulator reinterpretation closure, exact
 retained observable-species semantics on the accepted Hilbert surface,
 retained-package conditional necessity, and accepted one-axiom substrate

@@ -10,7 +10,7 @@
 > headline is now the off-scaffold negative.
 
 **Date:** 2026-04-07
-**Status:** retained positive — frozen rule `free_coh ≥ 7.96e-04` (fitted on the 26-family swept set ONLY) applied without refit to 12 brand-new generators achieves **10/12 = 83.3%**, beating the old node-level 2-property rule (6/12 = 50%) by **+33 points**. Combined with the first batch: **17/21 = 81.0%** cross-generator on two independent held-out sets.
+**Status:** proposed_retained positive — frozen rule `free_coh ≥ 7.96e-04` (fitted on the 26-family swept set ONLY) applied without refit to 12 brand-new generators achieves **10/12 = 83.3%**, beating the old node-level 2-property rule (6/12 = 50%) by **+33 points**. Combined with the first batch: **17/21 = 81.0%** cross-generator on two independent held-out sets.
 
 ## Artifact chain
 

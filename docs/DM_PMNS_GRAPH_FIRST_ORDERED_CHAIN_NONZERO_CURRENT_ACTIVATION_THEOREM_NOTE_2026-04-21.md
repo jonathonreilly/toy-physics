@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-21
 **Lane:** native/source DM last-mile current activation
-**Status:** exact positive current-activation theorem on the retained `hw=1`
+**Status:** exact positive current-activation theorem on the proposed_retained `hw=1`
 response family; historical precursor to the later same-day graded-current
 delta closure theorem on the physical affine/source family
 **Primary runner:**

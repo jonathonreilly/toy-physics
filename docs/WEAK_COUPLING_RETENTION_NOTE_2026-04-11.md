@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-11  
 **Script:** `frontier_weak_coupling_retained.py`  
-**Status:** retained sign-sensitive regime, narrowly and explicitly
+**Status:** proposed_retained sign-sensitive regime, narrowly and explicitly
 
 ## Question
 

@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained CKM-structure prediction with a standard B_s-mixing
+**Status:** proposed_retained CKM-structure prediction with a standard B_s-mixing
 phase-convention bridge. This note derives a new leading CKM prediction by
 combining three retained inputs --
 `alpha_s(v)` (canonical plaquette/CMT surface),

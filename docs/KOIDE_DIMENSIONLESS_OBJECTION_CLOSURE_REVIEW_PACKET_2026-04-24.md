@@ -1,7 +1,7 @@
 # Koide Dimensionless Objection-Closure Review Packet
 
 **Date:** 2026-04-24
-**Status:** retained support / no-go packet. This packet does **not** close the
+**Status:** proposed_retained support / no-go packet. This packet does **not** close the
 dimensionless charged-lepton Koide lane.
 **Runner:** `scripts/frontier_koide_dimensionless_objection_closure_review.py`
 

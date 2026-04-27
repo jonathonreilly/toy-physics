@@ -1,7 +1,7 @@
 # Mirror Mutual Information Chokepoint Note
 
 **Date:** 2026-04-03  
-**Status:** canonical exact-mirror MI artifact chain on the retained dense chokepoint family
+**Status:** canonical exact-mirror MI artifact chain on the proposed_retained dense chokepoint family
 
 This note freezes the mirror-specific mutual-information question on the
 retained exact mirror chokepoint family, using the same linear propagator and

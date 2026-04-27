@@ -1,7 +1,7 @@
 # P3 MSbar-to-Pole K_3 Color-Tensor Retention Theorem (3-loop structural skeleton)
 
 **Date:** 2026-04-17
-**Status:** retained structural sub-theorem — the three-loop color-tensor skeleton of the MSbar-to-pole mass conversion coefficient `K_3` is retained as exact SU(3) Casimir algebra; individual three-loop integral primitives (`K_FFF`, `K_FFA`, ..., `K_Fhh`) remain outside the retention scope by design.
+**Status:** proposed_retained structural sub-theorem — the three-loop color-tensor skeleton of the MSbar-to-pole mass conversion coefficient `K_3` is proposed_retained as exact SU(3) Casimir algebra; individual three-loop integral primitives (`K_FFF`, `K_FFA`, ..., `K_Fhh`) remain outside the retention scope by design.
 **Primary runner:** `scripts/frontier_yt_p3_msbar_to_pole_k3.py` — 18 PASS / 0 FAIL.
 **Log:** `logs/retained/yt_p3_msbar_to_pole_k3_2026-04-17.log`.
 

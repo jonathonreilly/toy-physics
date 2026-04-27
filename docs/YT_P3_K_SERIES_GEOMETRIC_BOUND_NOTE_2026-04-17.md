@@ -1,7 +1,7 @@
 # P3 K-Series Geometric Tail Bound on the MSbar-to-Pole Conversion
 
 **Date:** 2026-04-17
-**Status:** retained structural sub-theorem — a framework-native geometric upper bound on the K_n tail of the MSbar-to-pole mass conversion series at `alpha_s(m_t) = 0.1079`, using only retained SU(3) Casimir quantities and the retained running-coupling anchor. No literature value of K_4 is imported as a derivation input.
+**Status:** proposed_retained structural sub-theorem — a framework-native geometric upper bound on the K_n tail of the MSbar-to-pole mass conversion series at `alpha_s(m_t) = 0.1079`, using only proposed_retained SU(3) Casimir quantities and the proposed_retained running-coupling anchor. No literature value of K_4 is imported as a derivation input.
 **Primary runner:** `scripts/frontier_yt_p3_k_series_geometric_bound.py`
 **Log:** `logs/retained/yt_p3_k_series_geometric_bound_2026-04-17.log`.
 

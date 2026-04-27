@@ -1,7 +1,7 @@
 # Gauge-Vacuum Plaquette First-Sector Tail Underdetermination Theorem
 
-**Date:** 2026-04-19  
-**Status:** exact underdetermination theorem after the reduced existence seams are closed; the retained first-sector packet does not determine the higher-weight tail of the full environment data  
+**Date:** 2026-04-19
+**Status:** exact underdetermination theorem after the reduced existence seams are closed; the proposed_retained first-sector packet does not determine the higher-weight tail of the full environment data
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_2026_04_19.py`
 
 ## Question

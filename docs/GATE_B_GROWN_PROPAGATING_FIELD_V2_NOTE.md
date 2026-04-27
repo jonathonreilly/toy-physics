@@ -1,7 +1,7 @@
 # Gate B Grown Propagating Field v2 Note
 
 **Date:** 2026-04-05  
-**Status:** bounded no-go for a stronger retained-grown propagating-field
+**Status:** bounded no-go for a stronger proposed_retained-grown propagating-field
 architecture on the moderate-drift row
 
 ## Artifact chain

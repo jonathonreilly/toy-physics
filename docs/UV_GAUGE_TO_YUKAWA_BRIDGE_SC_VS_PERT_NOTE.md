@@ -1,7 +1,7 @@
 # UV Gauge-to-Yukawa Bridge: Subordinate Support Note
 
 **Date:** 2026-04-16
-**Status:** subordinate support for the retained Ward-identity theorem
+**Status:** subordinate support for the proposed_retained Ward-identity theorem
 [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](YT_WARD_IDENTITY_DERIVATION_THEOREM.md).
 This note compares the perturbative and strong-coupling leading-order
 4-fermion coefficients and documents why the perturbative coefficient

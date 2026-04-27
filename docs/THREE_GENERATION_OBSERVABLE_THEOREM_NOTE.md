@@ -1,7 +1,7 @@
 # Three-Generation Observable Theorem Note
 
 **Date:** 2026-04-15
-**Status:** exact support theorem on the retained three-generation surface
+**Status:** exact support theorem on the proposed_retained three-generation surface
 **Script:** `scripts/frontier_three_generation_observable_theorem.py`
 **Authority role:** theorem-facing support note showing that the retained
 `hw=1` triplet already carries an exact irreducible generation algebra, so no

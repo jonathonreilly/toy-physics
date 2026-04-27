@@ -1,7 +1,7 @@
 # Higgs `Z_3` Charge Gauge-Redundancy Theorem for PMNS
 
 **Date:** 2026-04-17
-**Status:** RETAINED — closes the `q_H = 0` conditional in the DM-flagship
+**Status:** proposed_retained — closes the `q_H = 0` conditional in the DM-flagship
 PMNS-as-`f(H)` closure citation chain (one of three conditionals → one
 removed).
 **Script:** `scripts/frontier_higgs_z3_charge_pmns_gauge_redundancy_theorem.py`

@@ -1,7 +1,7 @@
 # Staggered Backreaction Scale-Closure Note
 
 **Date:** 2026-04-10  
-**Status:** retained scale-closure probe
+**Status:** proposed_retained scale-closure probe
 
 ## Question
 

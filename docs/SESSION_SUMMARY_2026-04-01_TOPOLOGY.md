@@ -1,6 +1,6 @@
 # Session Summary: Topology Pivot
 **Date:** 2026-04-01
-**Status:** architecture result retained; metrics wording tightened; soft-pruning emergence lane closed asymptotically.
+**Status:** architecture result proposed_retained; metrics wording tightened; soft-pruning emergence lane closed asymptotically.
 
 This is the topology-pivot session note. Later higher-dimensional results are
 tracked separately in

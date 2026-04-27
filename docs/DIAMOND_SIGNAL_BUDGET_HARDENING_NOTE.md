@@ -1,7 +1,7 @@
 # Diamond Signal Budget Hardening Note
 
 **Date:** 2026-04-06  
-**Status:** retained proxy-budget card for the diamond/NV phase-sensitive lane
+**Status:** proposed_retained proxy-budget card for the diamond/NV phase-sensitive lane
 
 ## Artifact Chain
 

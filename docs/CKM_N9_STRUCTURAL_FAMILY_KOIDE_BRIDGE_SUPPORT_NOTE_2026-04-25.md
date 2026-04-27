@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** exact CKM-side support corollary on retained `main` inputs, plus
+**Status:** exact CKM-side support corollary on proposed_retained `main` inputs, plus
 explicit cross-sector SUPPORT commentary. This is not a retained Koide theorem
 and not a retained cross-sector identification.
 

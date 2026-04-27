@@ -1,7 +1,7 @@
 # Color-Singlet Projection Theorem for EW Couplings
 
 **Date:** 2026-04-14
-**Status:** DERIVED -- standalone retained EW normalization lane on `main`
+**Status:** DERIVED -- standalone proposed_retained EW normalization lane on `main`
 **Primary package carrier:** `scripts/frontier_complete_prediction_chain.py`
 **Supporting derivation inputs:** `scripts/frontier_yt_zero_import_chain.py`,
 `scripts/frontier_color_projection_mc.py`

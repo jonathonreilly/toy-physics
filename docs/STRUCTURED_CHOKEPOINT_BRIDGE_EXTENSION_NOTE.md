@@ -1,7 +1,7 @@
 # Structured Chokepoint Bridge Extension Note
 
 **Date:** 2026-04-04  
-**Status:** bounded extension of the retained structured bridge pocket
+**Status:** bounded extension of the proposed_retained structured bridge pocket
 
 This note records the narrow follow-up to the retained structured chokepoint
 bridge.

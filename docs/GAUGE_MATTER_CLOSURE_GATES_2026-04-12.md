@@ -1,7 +1,7 @@
 # Gauge/Matter Closure Gates
 
 **Date:** 2026-04-12  
-**Status:** superseded route memo; no longer the canonical main-branch authority for retained matter claims
+**Status:** superseded route memo; no longer the canonical main-branch authority for proposed_retained matter claims
 **Scope:** full-framework matter closure and physical generation closure
 
 **Canonical main-branch matter authorities now live in:**

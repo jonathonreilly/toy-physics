@@ -1,7 +1,7 @@
 # CKM Down-Type Mass-Ratio Scale-Convention Support Note
 
 **Date:** 2026-04-22
-**Status:** **support-level strengthening**, not a theorem-grade closure. Consolidates the retained bounded lane's numerical scale-convention coincidence into a single cross-checked identity with explicit scope. The `5/6` bridge itself remains open; what this note closes is the SIZE of the bounded lane's live numerical evidence.
+**Status:** **support-level strengthening**, not a theorem-grade closure. Consolidates the proposed_retained bounded lane's numerical scale-convention coincidence into a single cross-checked identity with explicit scope. The `5/6` bridge itself remains open; what this note closes is the SIZE of the bounded lane's live numerical evidence.
 **Primary runner:** `scripts/frontier_ckm_down_type_scale_convention_support.py`
 
 ## 0. What this note does

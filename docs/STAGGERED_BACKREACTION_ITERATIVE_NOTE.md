@@ -1,7 +1,7 @@
 # Staggered Backreaction Iterative Source-Mapping Note
 
 **Date:** 2026-04-10  
-**Status:** retained negative result
+**Status:** proposed_retained negative result
 
 ## Objective
 

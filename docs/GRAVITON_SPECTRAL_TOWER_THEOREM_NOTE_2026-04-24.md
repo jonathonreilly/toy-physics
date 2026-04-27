@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 
-**Status:** **retained structural-identity extension theorem** on `main`.
+**Status:** **proposed_retained structural-identity extension theorem** on `main`.
 Extends the retained graviton-mass theorem
 ([`GRAVITON_MASS_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](GRAVITON_MASS_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md))
 from the lowest Lichnerowicz TT mode (`l = 2`) to the full transverse-traceless

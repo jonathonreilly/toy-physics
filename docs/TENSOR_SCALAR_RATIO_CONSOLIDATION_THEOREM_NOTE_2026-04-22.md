@@ -1,7 +1,7 @@
 # Tensor-to-Scalar Ratio Consolidation Theorem
 
 **Date:** 2026-04-22
-**Status:** retained-in-d, bounded-in-N_e consolidation theorem. Upgrades the primordial-spectrum `r = d²/N_e²` formula to "retained structural form" because d=3 is forced by `ANOMALY_FORCES_TIME`. The N_e dependence remains bounded-observational.
+**Status:** proposed_retained-in-d, bounded-in-N_e consolidation theorem. Upgrades the primordial-spectrum `r = d²/N_e²` formula to "proposed_retained structural form" because d=3 is forced by `ANOMALY_FORCES_TIME`. The N_e dependence remains bounded-observational.
 **Primary runner:** `scripts/frontier_tensor_scalar_ratio_consolidation.py`
 
 ## 0. Statement

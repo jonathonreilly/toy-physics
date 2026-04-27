@@ -1,7 +1,7 @@
 # Lensing Long-Path Test — Falsifies the Finite-Path Explanation
 
 **Date:** 2026-04-07
-**Status:** retained negative for the previous "finite-path explains the slope" claim, but a NEW positive finding: the measured slope of `kubo_true(b)` on b ∈ {3..6} at H=0.25 fine refinement is **≈ −1.43 independent of T_phys** in the tested range (T=7.5, 15). The analytical Fermat finite-path formula predicts very different slopes at the two T values (−1.73 and −1.42), so it does NOT explain the measurement. The previous "1.5% match at T=15" was a single-point coincidence. The actual finding — an L-independent slope ≈ −1.43 — is a different and unexplained physics fact that warrants its own investigation.
+**Status:** proposed_retained negative for the previous "finite-path explains the slope" claim, but a NEW positive finding: the measured slope of `kubo_true(b)` on b ∈ {3..6} at H=0.25 fine refinement is **≈ −1.43 independent of T_phys** in the tested range (T=7.5, 15). The analytical Fermat finite-path formula predicts very different slopes at the two T values (−1.73 and −1.42), so it does NOT explain the measurement. The previous "1.5% match at T=15" was a single-point coincidence. The actual finding — an L-independent slope ≈ −1.43 — is a different and unexplained physics fact that warrants its own investigation.
 
 ## Artifact chain
 

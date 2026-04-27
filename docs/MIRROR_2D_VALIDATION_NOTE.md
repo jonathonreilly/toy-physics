@@ -1,7 +1,7 @@
 # Exact 2D Mirror Validation Note
 
 **Date:** 2026-04-03  
-**Status:** review-safe exact 2D mirror pocket retained; no clean gravity law yet
+**Status:** review-safe exact 2D mirror pocket proposed_retained; no clean gravity law yet
 
 This note freezes the exact 2D mirror validation lane built from the retained
 exact generator in:

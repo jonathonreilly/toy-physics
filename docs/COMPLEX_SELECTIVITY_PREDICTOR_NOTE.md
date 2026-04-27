@@ -1,7 +1,7 @@
 # Complex Selectivity Predictor Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow predictor card for complex-action survival on structured families
+**Status:** proposed_retained narrow predictor card for complex-action survival on structured families
 
 ## Artifact Chain
 

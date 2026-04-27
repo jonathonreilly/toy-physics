@@ -1,7 +1,7 @@
 # Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework
 
 **Date:** 2026-04-17
-**Status:** bounded review note — the retained framework does not derive Koide on the current surface; the charged-lepton hierarchy is accommodated only through an explicit observational pin.
+**Status:** bounded review note — the proposed_retained framework does not derive Koide on the current surface; the charged-lepton hierarchy is accommodated only through an explicit observational pin.
 **Runners:** 19 runners, 518 PASS / 0 FAIL, independently verified on `origin/main`.
 
 **Repo addendum (2026-04-18):** a reviewed follow-on support stack now lives on

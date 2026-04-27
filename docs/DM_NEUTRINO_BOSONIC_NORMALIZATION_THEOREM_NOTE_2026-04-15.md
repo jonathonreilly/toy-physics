@@ -1,7 +1,7 @@
 # DM Neutrino Bosonic Normalization Theorem
 
-**Date:** 2026-04-15  
-**Status:** EXACT normalization selector on the retained local Higgs family  
+**Date:** 2026-04-15
+**Status:** EXACT normalization selector on the proposed_retained local Higgs family
 **Script:** `scripts/frontier_dm_neutrino_bosonic_normalization_theorem.py`
 
 ---

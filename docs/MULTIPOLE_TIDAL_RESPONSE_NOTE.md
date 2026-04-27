@@ -1,7 +1,7 @@
 # Multipole Tidal Response Note
 
 **Date:** 2026-04-06  
-**Status:** retained quadrupole-like tidal response on the ordered 3D family
+**Status:** proposed_retained quadrupole-like tidal response on the ordered 3D family
 
 ## Artifact chain
 

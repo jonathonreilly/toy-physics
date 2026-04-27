@@ -1,7 +1,7 @@
 # CKM Neutron-EDM Corollary and Bounded Prediction
 
 **Date:** 2026-04-15
-**Status:** retained structural corollary + bounded quantitative prediction on `main`
+**Status:** proposed_retained structural corollary + bounded quantitative prediction on `main`
 **Script:** `scripts/frontier_ckm_neutron_edm_bound.py`
 
 ## Role

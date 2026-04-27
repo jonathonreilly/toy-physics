@@ -1,7 +1,7 @@
 # Moonshot Other Testables Note
 
 **Date:** 2026-04-05  
-**Status:** dedicated shortlist of non-diamond testables grounded in retained
+**Status:** dedicated shortlist of non-diamond testables grounded in proposed_retained
 science
 
 This note is the non-NV companion to the diamond work.

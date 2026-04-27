@@ -1,7 +1,7 @@
 # Gravitomagnetic Portability Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow positive - the odd-in-v phase correction is portable across the three retained grown families
+**Status:** proposed_retained narrow positive - the odd-in-v phase correction is portable across the three proposed_retained grown families
 
 ## Artifact Chain
 

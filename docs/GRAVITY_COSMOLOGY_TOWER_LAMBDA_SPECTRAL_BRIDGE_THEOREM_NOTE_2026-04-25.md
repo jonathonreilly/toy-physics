@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** Retained structural bridge. This note re-expresses the
+**Status:** proposed_retained structural bridge. This note re-expresses the
 retained spin-2, spin-1, and spin-0 spectral towers on the retained
 `S^3` geometry in pure cosmological-constant units using the retained
 identity `Lambda = 3/R^2`.

@@ -1,6 +1,6 @@
 # Session Synthesis: Graph Laplacian Axioms (2026-04-10)
 
-**Status:** historical synthesis note. The current retained staggered status is
+**Status:** historical synthesis note. The current proposed_retained staggered status is
 tracked by the force-based card and corrected full-suite baseline, not by the
 older `frontier_staggered_fermion.py` successor framing alone.
 

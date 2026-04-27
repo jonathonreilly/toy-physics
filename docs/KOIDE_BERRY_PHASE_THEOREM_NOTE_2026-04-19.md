@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19
 **Lane:** Charged-lepton Koide phase `delta = 2/9`
-**Status:** historical actual-route Berry note retained for provenance. The
+**Status:** historical actual-route Berry note proposed_retained for provenance. The
 original ambient-`S^2` / monopole closure theorem fails, and this selected-line
 Berry analysis remains mathematically useful, but the current package does not
 treat it as full physical closure of the Brannen phase because the physical

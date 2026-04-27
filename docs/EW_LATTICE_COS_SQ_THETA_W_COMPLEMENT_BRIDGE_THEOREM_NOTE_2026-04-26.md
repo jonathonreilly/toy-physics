@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-26
 
-**Status:** retained EW-CKM lattice-scale identity theorem; NEW
+**Status:** proposed_retained EW-CKM lattice-scale identity theorem; NEW
 COMPLEMENT to the retained `sin²(θ_W)|_lattice = A^4 = 4/9` bridge.
 This note derives a **NEW retained FOUR-way equality at lattice scale
 plus a SUPPORT-TIER F5 COMPANION reading**, plus a NEW closed form

@@ -1,7 +1,7 @@
 # Replay Environment Note
 
 **Date:** 2026-04-05
-**Status:** narrow reproducibility note for retained numpy replay lanes
+**Status:** narrow reproducibility note for proposed_retained numpy replay lanes
 
 This note exists to keep the retained numpy replays from depending on an
 accidental interpreter choice.

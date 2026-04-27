@@ -1,7 +1,7 @@
 # Fixed Field Grown Transfer Scout Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow grown-geometry signed-source positive
+**Status:** proposed_retained narrow grown-geometry signed-source positive
 
 ## Artifact chain
 

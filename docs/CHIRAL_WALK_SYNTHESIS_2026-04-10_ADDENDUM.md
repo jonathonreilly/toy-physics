@@ -1,7 +1,7 @@
 # Chiral Walk Synthesis Addendum
 
 **Date:** 2026-04-10
-**Status:** Overnight results retained in 1+1D and 2+1D, and retained at a specific 3+1D operating point, but the global 3+1D gravity claim is narrower than the 2026-04-09 synthesis stated.
+**Status:** Overnight results proposed_retained in 1+1D and 2+1D, and proposed_retained at a specific 3+1D operating point, but the global 3+1D gravity claim is narrower than the 2026-04-09 synthesis stated.
 
 This addendum folds the overnight `frontier/final-moonshots` work into the newer
 3+1D recurrence and decoherence checks. It does not replace the overnight note.

@@ -1,7 +1,7 @@
 # Shapiro Five-Family Portability Note
 
 **Date:** 2026-04-06  
-**Status:** retained positive - the c-dependent phase lag extends beyond the three-family core onto the additional structured families sampled here
+**Status:** proposed_retained positive - the c-dependent phase lag extends beyond the three-family core onto the additional structured families sampled here
 
 ## Artifact Chain
 

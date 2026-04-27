@@ -1,7 +1,7 @@
 # Localized Source-Response Sweep Note
 
 **Date:** 2026-04-05  
-**Status:** bounded source-response sweep on the retained 3D `h=0.25` family
+**Status:** bounded source-response sweep on the proposed_retained 3D `h=0.25` family
 
 ## Artifact chain
 

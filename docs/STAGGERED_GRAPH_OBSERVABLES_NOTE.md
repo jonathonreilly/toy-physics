@@ -1,6 +1,6 @@
 # Staggered Graph Observables Note
 
-**Status:** retained observables probe
+**Status:** proposed_retained observables probe
 
 This note freezes the graph-native observable split for the staggered /
 Kahler-Dirac lane.

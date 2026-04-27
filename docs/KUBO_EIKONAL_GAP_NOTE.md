@@ -1,7 +1,7 @@
 # Kubo-Eikonal Gap Analysis
 
 **Date:** 2026-04-09 (revised same day after review)
-**Status:** retained DIAGNOSTIC (bounded) — comparing the plane-wave eikonal prediction (slope −1.275) against existing Fam1/seed0 Kubo slopes at three H values shows a gap that is small at coarse H and larger at H=0.25. However, all three Kubo points are Fam1-only on the LENSING_DEFLECTION_NOTE's single-seed configuration, and the cross-family note reports per-seed slope σ ≈ 0.16–0.23 at H=0.5. The coarse-H "agreement" (±0.006) is well below this noise floor, so the note cannot claim the eikonal is "exact" at coarse H — only that the three available points are suggestive of a widening gap under refinement.
+**Status:** proposed_retained DIAGNOSTIC (bounded) — comparing the plane-wave eikonal prediction (slope −1.275) against existing Fam1/seed0 Kubo slopes at three H values shows a gap that is small at coarse H and larger at H=0.25. However, all three Kubo points are Fam1-only on the LENSING_DEFLECTION_NOTE's single-seed configuration, and the cross-family note reports per-seed slope σ ≈ 0.16–0.23 at H=0.5. The coarse-H "agreement" (±0.006) is well below this noise floor, so the note cannot claim the eikonal is "exact" at coarse H — only that the three available points are suggestive of a widening gap under refinement.
 
 ## Data (from existing Fam1 measurements, b ∈ {3..6})
 

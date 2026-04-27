@@ -1,7 +1,7 @@
 # Koide Selected-Line Provenance: Derivation of `H_sel(m) = H(m, √6/3, √6/3)`
 
 **Date:** 2026-04-20
-**Status:** complete derivation from retained-on-`main` theorems; closes
+**Status:** complete derivation from proposed_retained-on-`main` theorems; closes
 scalar-selector cycle 1 open import **I3**.
 **Scope:** names the exact theorem that fixes the slot values `(δ, q_+) =
 (√6/3, √6/3)` in the Koide selected-line reduction cited throughout the

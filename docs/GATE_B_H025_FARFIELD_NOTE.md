@@ -1,7 +1,7 @@
 # Gate B h=0.25 Far-Field Note
 
 **Date:** 2026-04-05  
-**Status:** bounded h=0.25 far-field replay on the retained generated-geometry family
+**Status:** bounded h=0.25 far-field replay on the proposed_retained generated-geometry family
 
 ## Artifact chain
 

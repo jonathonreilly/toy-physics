@@ -1,7 +1,7 @@
 # Persistent Inertial Object Probe Note
 
 **Date:** 2026-04-06  
-**Status:** diagnosed closure; the retained ordered family still reduces to broad-surrogate steering, not a persistent-mass object
+**Status:** diagnosed closure; the proposed_retained ordered family still reduces to broad-surrogate steering, not a persistent-mass object
 
 ## Artifact chain
 

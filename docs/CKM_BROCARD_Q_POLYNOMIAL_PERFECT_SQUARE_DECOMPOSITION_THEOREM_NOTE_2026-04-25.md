@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained CKM-structure corollary on the promoted CKM atlas
+**Status:** proposed_retained CKM-structure corollary on the proposed_promoted CKM atlas
 + NLO Wolfenstein protected-γ̄ surfaces. This note derives the
 **EXACT algebraic decomposition** of the polynomial pair
 `(P(α_s), Q(α_s))` — the two fundamental quartic polynomials of the

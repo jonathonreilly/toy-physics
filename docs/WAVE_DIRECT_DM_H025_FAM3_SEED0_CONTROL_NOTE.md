@@ -1,7 +1,7 @@
 # Wave Direct-dM H=0.25 Fam3 Seed0 Control Note
 
 **Date:** 2026-04-12
-**Status:** retained control-ladder hardening on the Fam3/seed0 fine-H control
+**Status:** proposed_retained control-ladder hardening on the Fam3/seed0 fine-H control
 
 This note freezes the complementary predeclared direct-`dM` widening point
 after the retained `Fam3`, seed `1` control row:

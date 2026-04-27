@@ -1,7 +1,7 @@
 # Portable Card Extension Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow extension positive with a distance-law measurement holdout
+**Status:** proposed_retained narrow extension positive with a distance-law measurement holdout
 
 ## Artifact Chain
 

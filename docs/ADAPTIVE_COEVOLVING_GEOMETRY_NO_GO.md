@@ -1,7 +1,7 @@
 # Adaptive / Coevolving Geometry Scout No-Go
 
 **Date:** 2026-04-05  
-**Status:** compact no-go / not retained
+**Status:** compact no-go / outside audit-ratified tier
 
 ## One-line read
 

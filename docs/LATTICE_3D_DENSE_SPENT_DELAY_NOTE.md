@@ -1,7 +1,7 @@
 # 3D Dense Spent-Delay Lattice Note
 
 **Date:** 2026-04-04  
-**Status:** retained bounded 3D dense spent-delay branch on the ordered-lattice family
+**Status:** proposed_retained bounded 3D dense spent-delay branch on the ordered-lattice family
 
 ## Purpose
 

@@ -1,7 +1,7 @@
 # Source-Resolved Wavefield V2 Note
 
 **Date:** 2026-04-05  
-**Status:** retained exact-lattice phase-ramp law on the larger exact family
+**Status:** proposed_retained exact-lattice phase-ramp law on the larger exact family
 
 ## Artifact chain
 

@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 
-**Status:** Retained structural corollary on the matter/gauge surface. This
+**Status:** proposed_retained structural corollary on the matter/gauge surface. This
 packages the exact relation between the left-handed color multiplicity `N_c`
 and the denominator of quark electric charge. It is implicit in
 [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md)

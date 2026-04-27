@@ -1,7 +1,7 @@
 # Independent-Generator Held-Out Test of the Universality Classifier — NEGATIVE RESULT
 
 **Date:** 2026-04-07
-**Status:** retained negative — the classifier rule from `universality_classifier.py` generalizes to only 2/9 genuinely different generator families. Pre-committed predictions: 4/9 = 44.4%. In-sample rule applied without refit: 6/9 = 66.7%. The rule is brittle to truly independent generators.
+**Status:** proposed_retained negative — the classifier rule from `universality_classifier.py` generalizes to only 2/9 genuinely different generator families. Pre-committed predictions: 4/9 = 44.4%. In-sample rule applied without refit: 6/9 = 66.7%. The rule is brittle to truly independent generators.
 
 ## Artifact chain
 

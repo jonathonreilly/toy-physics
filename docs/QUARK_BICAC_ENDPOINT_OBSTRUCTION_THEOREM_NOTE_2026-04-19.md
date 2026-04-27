@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19  
 **Lane:** Quark up-amplitude.  
-**Status:** **Retained obstruction theorem on the ray/support-only packet.**
+**Status:** **proposed_retained obstruction theorem on the ray/support-only packet.**
 That narrower packet does **not** derive BICAC. It supports a positive-width
 bridge interval of exact candidate amplitudes, and BICAC is only one endpoint
 of that interval. Later same-day shell-normalization work adds exact carrier

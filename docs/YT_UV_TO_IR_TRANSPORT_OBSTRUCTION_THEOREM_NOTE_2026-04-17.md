@@ -1,7 +1,7 @@
 # YT UV-to-IR Transport Master Obstruction Theorem Note
 
 **Date:** 2026-04-17
-**Status:** retained **master obstruction theorem** on the YT
+**Status:** proposed_retained **master obstruction theorem** on the YT
 (Yukawa/top) UV-to-IR transport lane. Names the three missing primitives
 P1, P2, P3 that stand between the retained tree-level Ward identity
 `y_t²/g_s² = 1/(2 N_c) = 1/6` at M_Pl and a theorem-grade retained

@@ -1,7 +1,7 @@
 # Exact 2D Mirror Gravity-Law Cleanup Note
 
 **Date:** 2026-04-03  
-**Status:** gravity-law cleanup complete; no clean 2D mirror law promoted
+**Status:** gravity-law cleanup complete; no clean 2D mirror law proposed_promoted
 
 This note freezes the exact 2D mirror gravity-law cleanup lane.
 

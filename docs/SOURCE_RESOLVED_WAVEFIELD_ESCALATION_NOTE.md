@@ -1,7 +1,7 @@
 # Source-Resolved Wavefield Escalation
 
 **Date:** 2026-04-05  
-**Status:** larger exact-lattice wavefield escalation, frozen on the retained family
+**Status:** larger exact-lattice wavefield escalation, frozen on the proposed_retained family
 
 ## Artifact chain
 

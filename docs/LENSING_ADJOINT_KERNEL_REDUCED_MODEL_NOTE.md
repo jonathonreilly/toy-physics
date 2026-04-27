@@ -1,7 +1,7 @@
 # Lensing Adjoint Kernel Reduced Model
 
 **Date:** 2026-04-09
-**Status:** retained NEGATIVE (bounded) - the exact edge-level first-order observable is real, but a one-term-per-layer surrogate is far too lossy to explain the retained lensing fingerprint.
+**Status:** proposed_retained NEGATIVE (bounded) - the exact edge-level first-order observable is real, but a one-term-per-layer surrogate is far too lossy to explain the proposed_retained lensing fingerprint.
 
 ## Setup
 

@@ -92,7 +92,7 @@ the eigenvalue distribution:
 **Physical claim**: CV = 1 is the max-entropy CV for an EXPONENTIAL
 distribution on positive reals with fixed mean.
 
-**Status**: the retained framework has 3 DISCRETE eigenvalues, not a
+**Status**: the proposed_retained framework has 3 DISCRETE eigenvalues, not a
 continuous distribution. The continuous max-entropy argument (exponential
 has CV = 1) doesn't directly apply to 3-point support.
 

@@ -1,7 +1,7 @@
 # Wave Static Boundary Sensitivity
 
 **Date:** 2026-04-08
-**Status:** retained boundary probe
+**Status:** proposed_retained boundary probe
 
 This probe asks a narrow question:
 

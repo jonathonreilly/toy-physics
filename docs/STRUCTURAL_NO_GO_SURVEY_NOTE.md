@@ -1,7 +1,7 @@
 # Structural No-Go Survey on the Charged-Lepton Mass Hierarchy
 
 **Date:** 2026-04-17
-**Status:** six rigorous structural no-go theorems on the retained `Cl(3)/Z^3` surface
+**Status:** six rigorous structural no-go theorems on the proposed_retained `Cl(3)/Z^3` surface
 **Runners (6):**
 - `scripts/frontier_charged_lepton_z3_source_response_crosscheck.py` (41 PASS)
 - `scripts/frontier_charged_lepton_curvature_apbc_extension.py` (44 PASS)

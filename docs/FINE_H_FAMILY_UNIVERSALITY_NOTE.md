@@ -1,7 +1,7 @@
 # Fine-H (H=0.25) Lensing: Three-Family Portability
 
 **Date:** 2026-04-09 (revised same day after review)
-**Status:** retained POSITIVE (bounded) — all three DAG families produce lensing slopes in the −1.38 to −1.43 band at H=0.25, closing the earlier Fam1-only gap. However, a proper family-mean significance test shows Fam2 vs Fam3 at t=2.37 (~p≈0.05), so a small residual family offset cannot be ruled out. The claim is **three-family portability**, not universality or kernel-independence.
+**Status:** proposed_retained POSITIVE (bounded) — all three DAG families produce lensing slopes in the −1.38 to −1.43 band at H=0.25, closing the earlier Fam1-only gap. However, a proper family-mean significance test shows Fam2 vs Fam3 at t=2.37 (~p≈0.05), so a small residual family offset cannot be ruled out. The claim is **three-family portability**, not universality or kernel-independence.
 
 ## Data
 

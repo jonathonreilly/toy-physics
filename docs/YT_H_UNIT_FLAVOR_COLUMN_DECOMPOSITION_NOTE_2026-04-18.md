@@ -1,7 +1,7 @@
 # H_unit Flavor-Column Decomposition Retention Analysis Note
 
 **Date:** 2026-04-18
-**Status:** retained retention-analysis **no-go** note. This note investigates
+**Status:** proposed_retained retention-analysis **no-go** note. This note investigates
 candidate class #1 from the b-quark retention analysis note
 (`YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`, §5.1): whether the
 composite Higgs `H_unit = (1/√6) Σ_{α,a} ψ̄_{α,a} ψ_{α,a}` admits a

@@ -1,7 +1,7 @@
 # Complex Action: Gravity + Horizons Unification
 
 **Date:** 2026-04-05
-**Status:** retained positive — complex action unifies gravity and horizons while preserving Born rule
+**Status:** proposed_retained positive — complex action unifies gravity and horizons while preserving Born rule
 
 ## Artifact chain
 

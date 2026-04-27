@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained CKM-structure theorem on current `main`. This note
+**Status:** proposed_retained CKM-structure theorem on current `main`. This note
 generalizes the Bernoulli-form ratios `(N-1)/N` and `(N-1)/N²` from a single
 N-level to a **multi-projection family** evaluated at all three
 structural-integer levels of the framework: `N_pair = 2`, `N_color = 3`,

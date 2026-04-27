@@ -1,7 +1,7 @@
 # P3 Sylvester Linear-Path Signature Theorem on the DM Neutrino Source Surface
 
 **Date:** 2026-04-18
-**Status:** **RETAINED local theorem at the P3 observational pin**
+**Status:** **proposed_retained local theorem at the P3 observational pin**
 **Scope:** proves the pointwise signature continuation
 `signature(H_base + J_*) = signature(H_base) = (2, 0, 1)` along the linear
 Path-A segment from `H_base` to the retained P3 pin

@@ -1,7 +1,7 @@
 # Shapiro Delay Note
 
 **Date:** 2026-04-06  
-**Status:** retained canonical replay of the discrete Shapiro-style phase lag
+**Status:** proposed_retained canonical replay of the discrete Shapiro-style phase lag
 
 ## Artifact Chain
 

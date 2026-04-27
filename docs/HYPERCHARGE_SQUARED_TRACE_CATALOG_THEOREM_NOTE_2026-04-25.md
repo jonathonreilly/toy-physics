@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** Retained structural-identity subtheorem of the promoted
+**Status:** proposed_retained structural-identity subtheorem of the proposed_promoted
 [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md)
 and
 [`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md).

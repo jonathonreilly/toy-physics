@@ -1,7 +1,7 @@
 # Lattice Weak-Field Purity Scaling Note
 
 **Date:** 2026-04-03  
-**Status:** retained bounded scaling law on the weak-field ordered-lattice pocket
+**Status:** proposed_retained bounded scaling law on the weak-field ordered-lattice pocket
 
 This note freezes the purity-scaling follow-up on the reopened ordered-lattice
 family.

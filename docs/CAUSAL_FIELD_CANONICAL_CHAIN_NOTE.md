@@ -1,7 +1,7 @@
 # Causal Field: Canonical Retained Chain
 
 **Date:** 2026-04-06 (updated)
-**Status:** retained package — hierarchy explicit, lab bridge primary
+**Status:** proposed_retained package — hierarchy explicit, lab bridge primary
 
 ## Observable hierarchy
 

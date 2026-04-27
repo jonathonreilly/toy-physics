@@ -1,7 +1,7 @@
 # Self-Consistent Back-Reaction: Horizons from Geometry
 
 **Date:** 2026-04-05
-**Status:** retained positive — Poisson self-gravity produces absorption threshold
+**Status:** proposed_retained positive — Poisson self-gravity produces absorption threshold
 
 ## Artifact chain
 

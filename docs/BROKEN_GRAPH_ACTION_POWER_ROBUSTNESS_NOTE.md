@@ -1,7 +1,7 @@
 # Broken-Graph Action-Power Robustness Note
 
 **Date:** 2026-04-04  
-**Status:** bounded graph-damage replay on the retained 3D ordered-lattice
+**Status:** bounded graph-damage replay on the proposed_retained 3D ordered-lattice
 family
 
 ## Artifact chain

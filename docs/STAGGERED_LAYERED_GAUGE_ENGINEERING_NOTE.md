@@ -1,7 +1,7 @@
 # Staggered Layered Gauge Engineering Note
 
 **Date:** 2026-04-10  
-**Status:** retained layered-cycle engineering probe
+**Status:** proposed_retained layered-cycle engineering probe
 
 This note freezes the first explicit layered-cycle geometry probe for the
 staggered graph lane.

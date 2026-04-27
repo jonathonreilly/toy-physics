@@ -1,7 +1,7 @@
 # YT EW Δ_R Retention Analysis Note (Lattice-to-MSbar Matching for g_1(v), g_2(v))
 
 **Date:** 2026-04-18
-**Status:** retained **analysis-only** note applying the YT P1 three-channel
+**Status:** proposed_retained **analysis-only** note applying the YT P1 three-channel
 Rep-A/Rep-B methodology to the electroweak gauge couplings `g_1(v)` and
 `g_2(v)`. Produces a framework-native-analog `Δ_R^{EW}` estimate for each
 coupling and propagates it to `sin²θ_W` and `1/α_EM`. Verdict on the

@@ -1,7 +1,7 @@
 # Discrete Evanescent-Barrier Amplitude Suppression on `Cl(3)/Z^3`
 
 **Date:** 2026-04-17 (review-blocker revision 2026-04-17)
-**Status:** retained lattice transfer-matrix bound + retained geometric
+**Status:** proposed_retained lattice transfer-matrix bound + proposed_retained geometric
 tortoise-length identity; the Planck-unit astrophysical exponent
 `exp[-(R_S/l_P) ln(R_S/l_P)]` is explicitly CONDITIONAL on a per-site
 rate lower bound that is NOT on the retained surface

@@ -1,7 +1,7 @@
 # R_base = 31/9 Group-Theory Derivation Theorem
 
 **Date:** 2026-04-24
-**Status:** retained exact support identity on the bounded dark-matter /
+**Status:** proposed_retained exact support identity on the bounded dark-matter /
 cosmology cascade surface. This note packages the exact rational identity
 `R_base = 31/9` that was previously inline in
 [`COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`](COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md)

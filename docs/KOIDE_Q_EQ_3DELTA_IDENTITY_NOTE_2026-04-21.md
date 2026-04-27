@@ -1,7 +1,7 @@
 # Q = p·δ Arithmetic Identity on the Current Koide Support-Route Values
 
 **Date:** 2026-04-21
-**Status:** Retained arithmetic identity.
+**Status:** proposed_retained arithmetic identity.
 **Runner:** `scripts/frontier_koide_Q_eq_3delta_identity.py` — 16/16 PASS.
 
 ---

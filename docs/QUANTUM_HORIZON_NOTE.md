@@ -1,7 +1,7 @@
 # Quantum Horizon k-Sweep
 
 **Date:** 2026-04-05  
-**Status:** bounded no-go against the stronger wavelength-dependent horizon claim on the retained absorbing family
+**Status:** bounded no-go against the stronger wavelength-dependent horizon claim on the proposed_retained absorbing family
 
 ## Artifact chain
 

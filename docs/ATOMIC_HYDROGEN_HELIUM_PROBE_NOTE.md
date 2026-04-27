@@ -1,7 +1,7 @@
 # Atomic Hydrogen and Helium Probe --- Standard-QM Scaffold Lane
 
 **Date:** 2026-04-19
-**Status:** **bounded exploratory scaffold lane.** This is **not** a retained
+**Status:** **bounded exploratory scaffold lane.** This is **not** a proposed_retained
 framework derivation. The script uses standard non-relativistic quantum
 mechanics with textbook inputs (`m_e`, `e`, `hbar`, `4 pi epsilon_0`, `Z = 1`
 for hydrogen and `Z = 2` for helium). No `Cl(3)` on `Z^3` framework input is

@@ -1,7 +1,7 @@
 # P1 Δ_R 2-Loop Structural Extension Theorem Note (Color-Tensor Retention + Loop-Geometric Bound)
 
 **Date:** 2026-04-18 (amended 2026-04-18 with canonical-central cross-reference)
-**Status:** retained **2-loop structural extension** of the P1 ratio
+**Status:** proposed_retained **2-loop structural extension** of the P1 ratio
 correction `Δ_R`, built on the **literature-cited 1-loop central**
 `Δ_R^{1-loop, lit} = −3.27 %`. Catalogs the 2-loop color-tensor decomposition
 of the lattice-to-MSbar matching of the Yukawa/gauge ratio `y_t²/g_s²` at

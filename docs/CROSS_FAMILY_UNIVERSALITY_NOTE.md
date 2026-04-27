@@ -1,7 +1,7 @@
 # Cross-Family Consistency: Dispersion + Lensing at H=0.5
 
 **Date:** 2026-04-08 (revised 2026-04-09 after review)
-**Status:** retained POSITIVE (bounded) — at H=0.5, the family-mean dispersion and lensing observables are consistent across all three tested DAG families. The Schrödinger/KG near-tie persists in every family. However, per-seed variance is large (slope σ ≈ 0.16–0.23), so the supported claim is "no detectable family effect at H=0.5," not "the physics is family-independent." Fine-H (H=0.25) universality is **untested** for Fam2 and Fam3.
+**Status:** proposed_retained POSITIVE (bounded) — at H=0.5, the family-mean dispersion and lensing observables are consistent across all three tested DAG families. The Schrödinger/KG near-tie persists in every family. However, per-seed variance is large (slope σ ≈ 0.16–0.23), so the supported claim is "no detectable family effect at H=0.5," not "the physics is family-independent." Fine-H (H=0.25) universality is **untested** for Fam2 and Fam3.
 
 ## What was tested
 

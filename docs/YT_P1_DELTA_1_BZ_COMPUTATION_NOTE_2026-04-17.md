@@ -1,7 +1,7 @@
 # P1 Δ_1 BZ-Computation Note (C_F Channel of the Ward-Ratio 1-Loop Correction)
 
 **Date:** 2026-04-17
-**Status:** retained citation-and-bound computation of the `C_F`
+**Status:** proposed_retained citation-and-bound computation of the `C_F`
 channel coefficient `Δ_1` in the Rep-A/Rep-B partial-cancellation
 decomposition of the 1-loop ratio correction
 `Δ_R^ratio = (α_LM/(4π)) · [C_F · Δ_1 + C_A · Δ_2 + T_F n_f · Δ_3]`

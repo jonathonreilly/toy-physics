@@ -1,7 +1,7 @@
 # Shapiro Diamond Frequency Bridge Note
 
 **Date:** 2026-04-06  
-**Status:** proxy-level frequency bridge note for the retained Shapiro delay
+**Status:** proxy-level frequency bridge note for the proposed_retained Shapiro delay
 
 ## Artifact Chain
 

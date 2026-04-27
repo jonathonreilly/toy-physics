@@ -1,7 +1,7 @@
 # Second Independent Grown Family
 
 **Date:** 2026-04-06
-**Status:** retained positive — second family at drift=0.05, restore=0.30
+**Status:** proposed_retained positive — second family at drift=0.05, restore=0.30
 
 ## Artifact chain
 

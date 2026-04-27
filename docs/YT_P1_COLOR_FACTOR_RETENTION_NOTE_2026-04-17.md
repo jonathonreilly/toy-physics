@@ -1,7 +1,7 @@
 # P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)
 
 **Date:** 2026-04-17
-**Status:** retained structural sub-theorem — the 1-loop lattice-to-MSbar
+**Status:** proposed_retained structural sub-theorem — the 1-loop lattice-to-MSbar
 scheme conversion of the Ward ratio `y_t/g_s` at M_Pl has a retained
 three-channel color-tensor decomposition
 `Δ_R = C_F · Δ_1 + C_A · Δ_2 + T_F · n_f · Δ_3` with exact SU(3)

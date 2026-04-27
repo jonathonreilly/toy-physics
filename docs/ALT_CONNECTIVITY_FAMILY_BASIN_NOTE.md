@@ -1,7 +1,7 @@
 # ALT Connectivity Family Basin Note
 
 **Date:** 2026-04-06  
-**Status:** retained bounded basin for the alternative connectivity family
+**Status:** proposed_retained bounded basin for the alternative connectivity family
 
 ## Artifact Chain
 

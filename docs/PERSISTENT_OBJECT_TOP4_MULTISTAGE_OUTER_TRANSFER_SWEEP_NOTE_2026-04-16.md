@@ -1,7 +1,7 @@
 # Persistent Object Top4 Multistage Outer Transfer Sweep
 
 **Date:** 2026-04-16  
-**Status:** bounded beyond-pocket multistage positive; the retained exact-lattice
+**Status:** bounded beyond-pocket multistage positive; the proposed_retained exact-lattice
 `top4` floor survives on `4/5` one-ring-farther cases, with only the deeper
 inward-source row still closed
 

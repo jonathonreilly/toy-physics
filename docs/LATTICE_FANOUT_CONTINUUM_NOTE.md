@@ -1,7 +1,7 @@
 # Fan-Out Normalized Kernel Continuum Limit — FALSIFIED
 
 **Date:** 2026-04-08
-**Status:** retained NEGATIVE — replacing the default `spacing²` kernel factor with fan-out normalization (each edge carries amplitude/√fan_out) does NOT give a continuum limit. Probability is not preserved across refinements, h=0.5 fails outright, and h=0.25 overflows by 10¹¹ in amplitude. This was Approach 3 from [`humble-puzzling-spring.md`](../.claude/plans/humble-puzzling-spring.md); it is now removed from the candidate pool.
+**Status:** proposed_retained NEGATIVE — replacing the default `spacing²` kernel factor with fan-out normalization (each edge carries amplitude/√fan_out) does NOT give a continuum limit. Probability is not preserved across refinements, h=0.5 fails outright, and h=0.25 overflows by 10¹¹ in amplitude. This was Approach 3 from [`humble-puzzling-spring.md`](../.claude/plans/humble-puzzling-spring.md); it is now removed from the candidate pool.
 
 ## Artifact chain
 

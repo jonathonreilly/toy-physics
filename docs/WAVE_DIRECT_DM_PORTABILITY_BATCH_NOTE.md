@@ -1,7 +1,7 @@
 # Wave Direct-dM Portability Batch
 
 **Date:** 2026-04-08
-**Status:** retained bounded portability batch
+**Status:** proposed_retained bounded portability batch
 
 This note records the first real portability batch on the direct-`dM`
 matched-schedule lane:

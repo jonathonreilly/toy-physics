@@ -1,7 +1,7 @@
 # Majorana Nambu Source Principle
 
 **Date:** 2026-04-15
-**Status:** exact beyond-retained-stack source-principle theorem on the
+**Status:** exact beyond-proposed_retained-stack source-principle theorem on the
 main-derived neutrino lane
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`

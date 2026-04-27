@@ -1,7 +1,7 @@
 # Poisson 3D Self-Field: Full Field from One Local Equation
 
 **Date:** 2026-04-07
-**Status:** retained positive — full 3D field derived from single PDE; F~M=0.9999, Born=1.1e-15, gravity TOWARD all families
+**Status:** proposed_retained positive — full 3D field derived from single PDE; F~M=0.9999, Born=1.1e-15, gravity TOWARD all families
 
 ## Artifact chain
 

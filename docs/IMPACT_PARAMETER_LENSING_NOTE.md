@@ -1,7 +1,7 @@
 # Impact-Parameter Lensing Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow positive on the strongest portable grown row
+**Status:** proposed_retained narrow positive on the strongest portable grown row
 
 ## Artifact Chain
 

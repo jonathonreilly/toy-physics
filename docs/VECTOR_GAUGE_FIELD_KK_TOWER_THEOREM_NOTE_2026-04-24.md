@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 
-**Status:** **retained structural-identity extension theorem** on `main`.
+**Status:** **proposed_retained structural-identity extension theorem** on `main`.
 Packages the transverse spin-1 / gauge-connection compactness spectrum on the
 same retained round `S^3` surface used by the spectral-gap cosmology and
 graviton compactness towers.

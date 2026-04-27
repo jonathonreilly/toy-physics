@@ -1,7 +1,7 @@
 # Unified Program Note
 
 **Date:** 2026-04-04  
-**Status:** canonical project-state and backlog note for the retained symmetry program
+**Status:** canonical project-state and backlog note for the proposed_retained symmetry program
 
 ## One-line read
 

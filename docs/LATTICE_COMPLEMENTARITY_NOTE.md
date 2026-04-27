@@ -1,7 +1,7 @@
 # Lattice Complementarity Note
 
 **Date:** 2026-04-03  
-**Status:** retained bounded tradeoff curve with a sweet spot
+**Status:** proposed_retained bounded tradeoff curve with a sweet spot
 
 This note freezes the ordered-lattice complementarity result as a canonical
 artifact chain. It does **not** promote the ordered lattice to a one-card

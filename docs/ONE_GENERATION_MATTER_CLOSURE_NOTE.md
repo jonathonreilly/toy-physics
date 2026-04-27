@@ -1,7 +1,7 @@
 # One-Generation Matter Closure Note
 
 **Date:** 2026-04-14
-**Status:** retained
+**Status:** proposed_retained
 **Scripts:** `scripts/frontier_right_handed_sector.py`, `scripts/frontier_anomaly_forces_time.py`
 **Authority role:** canonical main-branch note for the retained one-generation matter-closure row
 

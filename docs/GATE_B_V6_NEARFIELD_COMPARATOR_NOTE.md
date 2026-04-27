@@ -1,7 +1,7 @@
 # Gate B V6 Near-Field Comparator Note
 
 **Date:** 2026-04-05  
-**Status:** bounded exact-vs-grown control for the retained mixed near-field row
+**Status:** bounded exact-vs-grown control for the proposed_retained mixed near-field row
 
 ## Artifact chain
 

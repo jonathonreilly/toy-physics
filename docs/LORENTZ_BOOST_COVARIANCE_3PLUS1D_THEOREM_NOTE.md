@@ -1,7 +1,7 @@
 # 3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function
 
 **Date:** 2026-04-25
-**Status:** retained exact theorem on the continuum-limit free-scalar
+**Status:** proposed_retained exact theorem on the continuum-limit free-scalar
 Hamiltonian-lattice surface, with explicit dim-6 cubic-harmonic LV bound
 at finite `a`
 **Script:** `scripts/frontier_lorentz_boost_3plus1d.py` (PASS=55, FAIL=0)

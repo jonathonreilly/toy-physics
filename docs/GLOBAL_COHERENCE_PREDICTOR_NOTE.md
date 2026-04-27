@@ -8,7 +8,7 @@
 > closed; this note is kept for the record.
 
 **Date:** 2026-04-07
-**Status:** retained partial — single-property `free_coh ≥ 7.96e-04` improves cross-generator accuracy from 6/9 = 66.7% to **7/9 = 77.8%** while keeping in-sample at 92.3%. The classifier program is alive but still empirical and the cross-generator gap is not closed.
+**Status:** proposed_retained partial — single-property `free_coh ≥ 7.96e-04` improves cross-generator accuracy from 6/9 = 66.7% to **7/9 = 77.8%** while keeping in-sample at 92.3%. The classifier program is alive but still empirical and the cross-generator gap is not closed.
 
 ## Artifact chain
 

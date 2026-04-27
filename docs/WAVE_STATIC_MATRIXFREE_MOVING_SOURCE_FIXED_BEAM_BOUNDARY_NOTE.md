@@ -1,7 +1,7 @@
 # Wave Static Matrix-Free Moving-Source Fixed-Beam Boundary Probe
 
 **Date:** 2026-04-08
-**Status:** retained boundary probe — mixed, with a bounded rescue signal
+**Status:** proposed_retained boundary probe — mixed, with a bounded rescue signal
 
 This probe is the moving-source analogue of the frozen-source
 fixed-beam boundary test.

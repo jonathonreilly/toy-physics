@@ -1,7 +1,7 @@
 # Grown Wavefield Failure Diagnosis Note
 
 **Date:** 2026-04-06  
-**Status:** diagnosed closure for detector-line phase-ramp transfer on the retained grown row
+**Status:** diagnosed closure for detector-line phase-ramp transfer on the proposed_retained grown row
 
 ## Artifact Chain
 

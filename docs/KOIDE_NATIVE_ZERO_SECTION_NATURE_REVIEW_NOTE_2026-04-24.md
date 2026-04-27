@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 **Runner:** `scripts/frontier_koide_native_zero_section_nature_review.py`
-**Status:** passes as the next native route; fails as completed retained/native
+**Status:** passes as the next native route; fails as completed proposed_retained/native
 closure
 
 ## Review Question

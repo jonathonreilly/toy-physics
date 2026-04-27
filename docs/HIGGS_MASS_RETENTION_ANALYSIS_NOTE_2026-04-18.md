@@ -1,7 +1,7 @@
 # Higgs Mass Retention Analysis Note (Δ_R Propagation + m_H-Specific Retention Gaps)
 
 **Date:** 2026-04-18
-**Status:** retained **Higgs mass retention analysis**. Propagates the
+**Status:** proposed_retained **Higgs mass retention analysis**. Propagates the
 retained YT Δ_R uncertainty through the full `y_t(v) → β_λ → λ(v) →
 m_H` Coleman-Weinberg + RGE chain and identifies the m_H-specific
 retention gaps beyond the inherited YT systematic. Produces a retained

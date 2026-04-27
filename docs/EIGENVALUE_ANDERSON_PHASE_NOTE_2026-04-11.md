@@ -1,7 +1,7 @@
 # Eigenvalue Statistics and Anderson Phase Note
 
 **Date:** 2026-04-11  
-**Status:** bounded companion on the current `main` surface; not promoted to flagship core
+**Status:** bounded companion on the current `main` surface; outside flagship core
 **Script:** `frontier_eigenvalue_stats_and_anderson_phase.py`
 
 ## Scope

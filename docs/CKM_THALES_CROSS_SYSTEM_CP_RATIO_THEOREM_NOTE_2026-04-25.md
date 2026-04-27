@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** Retained atlas-leading CKM structural-ratio theorem. It derives
+**Status:** proposed_retained atlas-leading CKM structural-ratio theorem. It derives
 a framework-side relation between the B_d and B_s CP-phase readouts:
 
 ```text

@@ -14,6 +14,12 @@ branches should appear here exactly once with one of five dispositions:
 - `open`
 - `frozen-out`
 
+Audit-transition rule: these are manuscript-capture dispositions. The audit
+lane's [AUDIT_LEDGER.md](../../audit/AUDIT_LEDGER.md) is the canonical source
+for ratified `effective_status`. Until a row is `audited_clean`, read
+`retained` / `promoted` capture labels in this matrix as proposed package
+placement rather than audit-ratified status.
+
 Use this file together with:
 
 - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)

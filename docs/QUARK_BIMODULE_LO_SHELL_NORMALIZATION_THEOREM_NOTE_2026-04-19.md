@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19  
 **Lane:** Quark up-amplitude / bimodule LO closure  
-**Status:** same-day retained follow-on theorem. This note gives an
+**Status:** same-day proposed_retained follow-on theorem. This note gives an
 independent support-side corroboration of the physical-point BICAC / STRC-LO
 law from exact carrier normalization already on the branch. The earlier
 `kappa` obstruction remains valid on the narrower ray/support-only packet;

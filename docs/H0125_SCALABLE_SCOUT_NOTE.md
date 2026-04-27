@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-06
 
-**Status:** bounded no-go on the observed full-window rows; not retained.
+**Status:** bounded no-go on the observed full-window rows; outside audit-ratified tier.
 
 This note records the shorter-axial-scale scout for the widened `h = 0.125`
 dense `1/L^2 + h^2` bridge lane. It is narrower than the already-closed

@@ -1,7 +1,7 @@
 # PMNS HW1 Source-Transfer Boundary
 
-**Date:** 2026-04-16  
-**Status:** theorem-grade boundary for the retained `hw=1` source/transfer attack on the PMNS blocker  
+**Date:** 2026-04-16
+**Status:** theorem-grade boundary for the proposed_retained `hw=1` source/transfer attack on the PMNS blocker
 **Script:** `scripts/frontier_pmns_hw1_source_transfer_boundary.py`
 
 ## Question

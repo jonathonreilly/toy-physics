@@ -1,7 +1,7 @@
 # Shapiro Family Portability Note
 
 **Date:** 2026-04-06  
-**Status:** retained positive - the c-dependent phase lag reproduces cleanly across the three portable grown families
+**Status:** proposed_retained positive - the c-dependent phase lag reproduces cleanly across the three portable grown families
 
 ## Artifact Chain
 

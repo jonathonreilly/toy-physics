@@ -1,7 +1,7 @@
 # P1 BZ Quadrature Numerical Note (4D Grid Evaluation of the Four Lattice-PT Integrals)
 
 **Date:** 2026-04-18
-**Status:** retained **numerical 4D BZ quadrature** of the four
+**Status:** proposed_retained **numerical 4D BZ quadrature** of the four
 canonical-surface lattice-PT integrals that feed the Rep-A/Rep-B
 three-channel ratio decomposition
 `Δ_R^ratio = (α_LM/(4π)) · [C_F · Δ_1 + C_A · Δ_2 + T_F n_f · Δ_3]` on

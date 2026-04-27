@@ -1,7 +1,7 @@
 # Complex Action: Kernel-Generic vs Gravity-Specific
 
 **Date:** 2026-04-06
-**Status:** retained — clean separation of two distinct effects
+**Status:** proposed_retained — clean separation of two distinct effects
 
 ## Artifact chain
 

@@ -1,7 +1,7 @@
 # Planck Target 3 Phase-Unit / Edge-Statistics Boundary Note
 
 **Date:** 2026-04-25
-**Status:** retained Target 3 boundary theorem; positive dimensionless phase
+**Status:** proposed_retained Target 3 boundary theorem; positive dimensionless phase
 unit, negative absolute-action/CAR derivation on the current one-axiom surface
 **Runner:** `scripts/frontier_planck_target3_phase_unit_edge_statistics.py`
 

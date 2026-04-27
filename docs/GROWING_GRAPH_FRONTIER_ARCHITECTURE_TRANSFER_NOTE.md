@@ -1,7 +1,7 @@
 # Growing Graph Frontier Architecture Transfer Note
 
 **Date:** 2026-04-06  
-**Status:** retained architecture lesson for the current graph-growth cleanup lane
+**Status:** proposed_retained architecture lesson for the current graph-growth cleanup lane
 
 ## Artifact Chain
 

@@ -1,7 +1,7 @@
 # Staggered Graph Failure Map Note
 
 **Date:** 2026-04-10  
-**Status:** retained adversarial boundary map
+**Status:** proposed_retained adversarial boundary map
 
 This note freezes the first adversarial failure map for the retained staggered /
 Kahler-Dirac force lane.

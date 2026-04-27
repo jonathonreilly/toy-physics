@@ -1,7 +1,7 @@
 # Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note
 
 **Date:** 2026-04-08
-**Status:** retained narrow family-pair follow-up on the second-family seed-`1` replay
+**Status:** proposed_retained narrow family-pair follow-up on the second-family seed-`1` replay
 
 This note records the complementary second-family follow-up after the first
 extra-family `Fam2`, seed-`0` boundary on the direct-`dM` matched-history

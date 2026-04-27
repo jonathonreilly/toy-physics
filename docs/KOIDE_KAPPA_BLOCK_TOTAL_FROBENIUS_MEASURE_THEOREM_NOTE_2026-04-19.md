@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19
 **Lane:** Charged-lepton Koide / MRU
-**Status:** retained positive theorem on the operator-side 1:1
+**Status:** proposed_retained positive theorem on the operator-side 1:1
 real-isotype measure. The block-total Frobenius-squared functional
 `E_I := || pi_I(H) ||_F^2` on `Herm_circ(d)` assigns one scalar slot per
 real isotype independent of block real dimension. At `d = 3` this

@@ -1,7 +1,7 @@
 # Source-Resolved Transverse Propagating Green
 
 **Date:** 2026-04-05  
-**Status:** exact-lattice transverse-transport pocket, frozen on the retained compact family
+**Status:** exact-lattice transverse-transport pocket, frozen on the proposed_retained compact family
 
 ## Artifact chain
 

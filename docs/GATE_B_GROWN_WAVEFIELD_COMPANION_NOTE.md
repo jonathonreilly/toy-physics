@@ -1,7 +1,7 @@
 # Gate B Grown Wavefield Companion Note
 
 **Date:** 2026-04-05  
-**Status:** bounded no-go for detector-line phase-ramp transfer on the retained
+**Status:** bounded no-go for detector-line phase-ramp transfer on the proposed_retained
 grown row
 
 ## Artifact chain

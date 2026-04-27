@@ -1,7 +1,7 @@
 # Universal Theta-Induced EDM Response Vanishing Theorem
 
 **Date:** 2026-04-24
-**Status:** retained structural corollary on the retained strong-CP action
+**Status:** proposed_retained structural corollary on the proposed_retained strong-CP action
 surface
 **Script:** `scripts/frontier_universal_theta_induced_edm_vanishing.py`
 

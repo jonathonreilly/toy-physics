@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 
-**Status:** retained structural-identity subtheorem of the promoted CKM
+**Status:** proposed_retained structural-identity subtheorem of the proposed_promoted CKM
 atlas/axiom package. This note packages the third-row atlas-leading magnitude
 identities carried by the same Wolfenstein and CP-plane surface named in
 [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md)

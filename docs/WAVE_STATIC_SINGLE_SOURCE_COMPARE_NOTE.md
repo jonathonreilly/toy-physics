@@ -1,7 +1,7 @@
 # Wave Static Single-Source Compare
 
 **Date:** 2026-04-08
-**Status:** retained comparison probe
+**Status:** proposed_retained comparison probe
 
 This focused probe removes the moving-source sweep and asks a narrower
 question:

@@ -1,7 +1,7 @@
 # Wave Direct-dM Matched-History
 
 **Date:** 2026-04-08
-**Status:** retained single-family direct-response probe
+**Status:** proposed_retained single-family direct-response probe
 
 This probe is the smallest clean fallback if the exact static comparator
 route does not stabilize:

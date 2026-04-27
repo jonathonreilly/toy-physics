@@ -1,7 +1,7 @@
 # Retardation Discriminator: Oscillating Source
 
 **Date:** 2026-04-06
-**Status:** retained positive — retardation changes the frequency response of an oscillating source, portable across 3 families
+**Status:** proposed_retained positive — retardation changes the frequency response of an oscillating source, portable across 3 families
 
 ## Artifact chain
 

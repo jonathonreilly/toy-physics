@@ -1,7 +1,7 @@
 # P2 F_yt Loop-Expansion Geometric Tail Bound on the v-Matching Coefficient M
 
 **Date:** 2026-04-17
-**Status:** retained structural sub-theorem — a framework-native geometric upper bound on the loop-expansion tail of the integrated SM-RGE transport of `y_t` from `M_Pl` to `v` (`F_yt`), hence on the v-matching coefficient `M = √u_0 · F_yt · √(8/9)` that closes the P2 taste-staircase residual. Uses only retained SU(3) Casimir quantities, the retained SM light-flavor count, and the retained canonical-surface coupling `α_LM`. No literature value of the 3-loop or higher SM RGE integrated contribution is imported as a derivation input.
+**Status:** proposed_retained structural sub-theorem — a framework-native geometric upper bound on the loop-expansion tail of the integrated SM-RGE transport of `y_t` from `M_Pl` to `v` (`F_yt`), hence on the v-matching coefficient `M = √u_0 · F_yt · √(8/9)` that closes the P2 taste-staircase residual. Uses only proposed_retained SU(3) Casimir quantities, the proposed_retained SM light-flavor count, and the proposed_retained canonical-surface coupling `α_LM`. No literature value of the 3-loop or higher SM RGE integrated contribution is imported as a derivation input.
 **Primary runner:** `scripts/frontier_yt_p2_f_yt_loop_geometric_bound.py`
 **Log:** `logs/retained/yt_p2_f_yt_loop_geometric_bound_2026-04-17.log`.
 

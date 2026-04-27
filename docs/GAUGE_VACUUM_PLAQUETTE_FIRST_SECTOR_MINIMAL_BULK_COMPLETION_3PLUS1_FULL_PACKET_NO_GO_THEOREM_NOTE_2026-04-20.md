@@ -1,7 +1,7 @@
 # Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion `3d+1` Full-Packet No-Go Theorem
 
 **Date:** 2026-04-20  
-**Status:** exact retained-ambient no-go theorem on the selected
+**Status:** exact proposed_retained-ambient no-go theorem on the selected
 minimally-positive Wilson branch  
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_2026_04_20.py`
 

@@ -1,7 +1,7 @@
 # Staggered Backreaction Green-Closure Note
 
 **Date:** 2026-04-10  
-**Status:** retained narrow positive
+**Status:** proposed_retained narrow positive
 
 ## Question
 

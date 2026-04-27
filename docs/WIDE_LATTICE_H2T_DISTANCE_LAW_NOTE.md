@@ -1,7 +1,7 @@
 # Wide-Lattice h^2+T Distance-Law Note
 
 **Date:** 2026-04-05  
-**Status:** retained frontier on an independent wide-lattice replay of the
+**Status:** proposed_retained frontier on an independent wide-lattice replay of the
 ordered 3D `1/L^2` family
 
 ## Artifact chain

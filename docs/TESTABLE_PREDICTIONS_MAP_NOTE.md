@@ -1,7 +1,7 @@
 # Testable Predictions Map
 
 **Date:** 2026-04-05  
-**Status:** ranked catalog of the current retained testables on `main`
+**Status:** ranked catalog of the current proposed_retained testables on `main`
 
 ## Purpose
 

@@ -1,7 +1,7 @@
 # Structured Mirror Born-Safe Scan Note
 
 **Date:** 2026-04-03  
-**Status:** no retained Born-safe structured-mirror pocket found in the scanned linear family
+**Status:** no proposed_retained Born-safe structured-mirror pocket found in the scanned linear family
 
 This note freezes the bounded search for a review-safe structured-mirror
 variant using the strictly linear propagator.

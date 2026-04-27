@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19  
 **Lane:** Quark up-amplitude / bimodule LO closure  
-**Status:** retained existence theorem on the current branch; this does not
+**Status:** proposed_retained existence theorem on the current branch; this does not
 yet select the physical law uniquely, but it resolves the binary residue
 "does an LO split law exist on the bimodule?" with a clean **yes**  
 **Primary runner:** `scripts/frontier_quark_bimodule_norm_existence_theorem.py`

@@ -1,7 +1,7 @@
 # Moving Source Cross-Family Replay Note
 
 **Date:** 2026-04-06  
-**Status:** diagnosed duplicate / closure, not retained
+**Status:** diagnosed duplicate / closure, outside audit-ratified tier
 
 ## Artifact Chain
 

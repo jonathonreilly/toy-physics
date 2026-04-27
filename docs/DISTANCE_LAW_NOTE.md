@@ -1,7 +1,7 @@
 # Distance Law: Steeper Than Newtonian
 
 **Date:** 2026-04-05
-**Status:** retained — alpha ~ -1.5 in far field, steepening at larger b
+**Status:** proposed_retained — alpha ~ -1.5 in far field, steepening at larger b
 
 ## Artifact chain
 

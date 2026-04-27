@@ -1,7 +1,7 @@
 # Source-Resolved Wavefield Mechanism Note
 
 **Date:** 2026-04-05  
-**Status:** retained exact-lattice wavefield mechanism probe on the larger exact family
+**Status:** proposed_retained exact-lattice wavefield mechanism probe on the larger exact family
 
 ## Artifact chain
 

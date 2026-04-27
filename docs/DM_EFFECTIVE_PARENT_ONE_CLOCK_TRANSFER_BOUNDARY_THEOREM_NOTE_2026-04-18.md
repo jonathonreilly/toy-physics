@@ -1,7 +1,7 @@
 # DM Effective Parent One-Clock Transfer Boundary Theorem Note
 
 **Date:** 2026-04-18  
-**Status:** exact retained one-clock transfer law on the enlarged slice space;
+**Status:** exact proposed_retained one-clock transfer law on the enlarged slice space;
 exact positive-ready boundary for a genuine gauge-only effective parent; the
 script includes a toy witness showing why determinant positivity and temporal
 nearest-neighbor locality do not by themselves force scalar edge factorization  

@@ -1,7 +1,7 @@
 # P1 Loop-Expansion Geometric Tail Bound on the Lattice-to-MSbar Matching at M_Pl
 
 **Date:** 2026-04-17
-**Status:** retained structural sub-theorem — a framework-native geometric upper bound on the loop-expansion tail of the lattice-to-MSbar matching `Δ_R^{total}` for the Yukawa/gauge ratio at `M_Pl`, using only retained SU(3) Casimir quantities and the retained canonical coupling `α_LM`. No literature value of the 2-loop matching coefficient is imported as a derivation input.
+**Status:** proposed_retained structural sub-theorem — a framework-native geometric upper bound on the loop-expansion tail of the lattice-to-MSbar matching `Δ_R^{total}` for the Yukawa/gauge ratio at `M_Pl`, using only proposed_retained SU(3) Casimir quantities and the proposed_retained canonical coupling `α_LM`. No literature value of the 2-loop matching coefficient is imported as a derivation input.
 **Primary runner:** `scripts/frontier_yt_p1_loop_geometric_bound.py`
 **Log:** `logs/retained/yt_p1_loop_geometric_bound_2026-04-17.log`.
 

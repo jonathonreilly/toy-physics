@@ -1,7 +1,7 @@
 # Koide A1 radian-bridge irreducibility audit
 
 **Date:** 2026-04-24
-**Status:** retained support / no-go audit. This audit does **not** close the
+**Status:** proposed_retained support / no-go audit. This audit does **not** close the
 charged-lepton Koide lane.
 **Runner:** `scripts/frontier_koide_a1_radian_bridge_irreducibility_audit.py`
 

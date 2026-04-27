@@ -1,7 +1,7 @@
 # FRW Late-Time Kinematic Reduction Theorem
 
 **Date:** 2026-04-24
-**Status:** retained/admitted-surface structural identity theorem on `main`.
+**Status:** proposed_retained/admitted-surface structural identity theorem on `main`.
 Extends the retained Ω_Λ matter-bridge theorem
 (`OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md`) by showing that
 **four additional late-time FRW kinematic observables** (deceleration

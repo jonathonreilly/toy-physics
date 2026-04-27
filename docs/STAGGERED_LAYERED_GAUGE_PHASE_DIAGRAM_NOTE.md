@@ -1,7 +1,7 @@
 # Staggered Layered Gauge Phase Diagram Note
 
 **Date:** 2026-04-10  
-**Status:** retained phase-diagram probe
+**Status:** proposed_retained phase-diagram probe
 
 This note freezes the geometry sweep that turns the layered gauge holdout into
 an explicit criterion on the same graph-native staggered transport law.

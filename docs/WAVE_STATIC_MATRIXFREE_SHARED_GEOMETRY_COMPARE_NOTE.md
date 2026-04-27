@@ -1,7 +1,7 @@
 # Wave Static Matrix-Free Shared Geometry Compare
 
 **Date:** 2026-04-08
-**Status:** retained engine-equivalence probe
+**Status:** proposed_retained engine-equivalence probe
 
 This probe compares the existing direct static solver against the
 matrix-free static solver on one shared geometry and the same beam setup.

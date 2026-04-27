@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 **Runner:** `scripts/frontier_koide_q_delta_residual_cohomology_obstruction_no_go.py`
-**Status:** no-go; retained exactness names the kernels but does not choose the
+**Status:** no-go; proposed_retained exactness names the kernels but does not choose the
 zero section/basepoint
 
 ## Theorem Attempt

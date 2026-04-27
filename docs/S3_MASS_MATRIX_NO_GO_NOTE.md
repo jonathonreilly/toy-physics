@@ -1,7 +1,7 @@
 # S_3 Mass-Matrix No-Go Note
 
 **Date:** 2026-04-17
-**Status:** exact support theorem on the retained `hw=1` carrier
+**Status:** exact support theorem on the proposed_retained `hw=1` carrier
 **Script:** `scripts/frontier_s3_mass_matrix_no_go.py`
 **Authority role:** canonical symmetry constraint for mass-like Hermitian
 operators on the `hw=1` triplet

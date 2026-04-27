@@ -1,7 +1,7 @@
 # Wave Direct-dM Seed-Band Diagnosis
 
 **Date:** 2026-04-08
-**Status:** retained narrow diagnostic on the bounded portability batch
+**Status:** proposed_retained narrow diagnostic on the bounded portability batch
 
 This note explains the main unresolved nuance from the retained
 direct-`dM` portability batch:

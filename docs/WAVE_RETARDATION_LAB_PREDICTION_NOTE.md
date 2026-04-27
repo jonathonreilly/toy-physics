@@ -1,7 +1,7 @@
 # Wave-Retardation Lab Prediction — NEGATIVE (No Clean v/c Scaling)
 
 **Date:** 2026-04-07
-**Status:** retained negative — two sweeps on the wave-retardation lane (varying v/c with trajectory-range coupled, then with trajectory-range fixed) show that the M − I gap is **configuration-dependent and non-monotonic in v/c**, not a clean power law. The original Lane 6 / Lane 8b 25-30% gap was a single-point result that does not extrapolate to lab v/c via any simple scaling. The lab prediction card is **blocked** until the configuration dependence is disentangled. The flagship wave-equation physics (Lanes 4–8b) is unaffected; only the lab translation is blocked.
+**Status:** proposed_retained negative — two sweeps on the wave-retardation lane (varying v/c with trajectory-range coupled, then with trajectory-range fixed) show that the M − I gap is **configuration-dependent and non-monotonic in v/c**, not a clean power law. The original Lane 6 / Lane 8b 25-30% gap was a single-point result that does not extrapolate to lab v/c via any simple scaling. The lab prediction card is **blocked** until the configuration dependence is disentangled. The flagship wave-equation physics (Lanes 4–8b) is unaffected; only the lab translation is blocked.
 
 ## Artifact chain
 

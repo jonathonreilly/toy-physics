@@ -1,7 +1,7 @@
 # 3D Tapered Refinement Note
 
 **Date:** 2026-04-04  
-**Status:** retained bounded negative on a new 3D topology branch
+**Status:** proposed_retained bounded negative on a new 3D topology branch
 
 ## Purpose
 

@@ -1,7 +1,7 @@
 # Propagator Family Unification Note
 
 **Date:** 2026-04-05  
-**Status:** narrow review-safe unification note for the retained wavefield,
+**Status:** narrow review-safe unification note for the proposed_retained wavefield,
 complex-action, and electrostatics scalar-sign-law lanes
 
 ## Artifact chain

@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained generation/color cross-sector numeric CLOSURE theorem
+**Status:** proposed_retained generation/color cross-sector numeric CLOSURE theorem
 grounded in **retained-tier** authorities on `main`. This note CLOSES the
 cross-sector identification `N_gen = N_color = 3` directly via two
 **retained-status** authorities (no support-tier promotion and no

@@ -1,7 +1,7 @@
 # PMNS Selector Three-Identity Support Note
 
 **Date:** 2026-04-21
-**Status:** Support proposal on the affine Hermitian PMNS chart. Not a retained
+**Status:** Support proposal on the affine Hermitian PMNS chart. Not a proposed_retained
 closure theorem.
 
 ## Statement

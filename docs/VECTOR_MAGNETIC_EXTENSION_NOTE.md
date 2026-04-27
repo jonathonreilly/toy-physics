@@ -1,7 +1,7 @@
 # Vector / Magnetic Extension Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow extension positive, bounded to a moving-source signed response with null circulation candidate
+**Status:** proposed_retained narrow extension positive, bounded to a moving-source signed response with null circulation candidate
 
 ## Artifact Chain
 

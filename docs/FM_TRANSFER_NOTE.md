@@ -1,7 +1,7 @@
 # F~M Transfer: Grown vs Fixed Lattice
 
 **Date:** 2026-04-06
-**Status:** retained positive — mass-law transfer agrees within uncertainty
+**Status:** proposed_retained positive — mass-law transfer agrees within uncertainty
 
 ## Artifact chain
 

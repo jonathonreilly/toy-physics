@@ -1,7 +1,7 @@
 # Wave Retarded Gravity: Retarded ≠ Instantaneous on the Wave Field
 
 **Date:** 2026-04-07 (revised)
-**Status:** retained positive — retarded moving-source field differs from instantaneous (c=∞) comparator by 23–26% on 3 families; F~M and Born preserved
+**Status:** proposed_retained positive — retarded moving-source field differs from instantaneous (c=∞) comparator by 23–26% on 3 families; F~M and Born preserved
 
 ## Artifact chain
 

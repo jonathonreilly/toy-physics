@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-26
 
-**Status:** retained CKM-structure corollary on current `main`
+**Status:** proposed_retained CKM-structure corollary on current `main`
 
 **Primary runner:** `scripts/frontier_ckm_wolfenstein_eta_inverse_square_gap.py`
 

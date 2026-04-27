@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained EW-CKM lattice-scale identity theorem; companion
+**Status:** proposed_retained EW-CKM lattice-scale identity theorem; companion
 corollary to the retained below-`W2` `A^2` source theorem.
 
 **Primary runner:** `scripts/frontier_ckm_ew_lattice_a4_bridge.py`

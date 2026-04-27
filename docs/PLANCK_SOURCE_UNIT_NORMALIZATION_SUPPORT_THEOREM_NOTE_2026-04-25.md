@@ -1,7 +1,7 @@
 # Planck Source-Unit Normalization Support Theorem
 
 **Date:** 2026-04-25
-**Status:** retained support theorem on the conditional Planck packet;
+**Status:** proposed_retained support theorem on the conditional Planck packet;
 not a standalone minimal-stack closure of `a^(-1) = M_Pl`
 **Runner:**
 `scripts/frontier_planck_source_unit_normalization_support_theorem.py`

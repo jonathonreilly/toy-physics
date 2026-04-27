@@ -1,7 +1,7 @@
 # Fifth Family Radial Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow basin on the radial-shell no-restore grown slice
+**Status:** proposed_retained narrow basin on the radial-shell no-restore grown slice
 
 ## Artifact Chain
 

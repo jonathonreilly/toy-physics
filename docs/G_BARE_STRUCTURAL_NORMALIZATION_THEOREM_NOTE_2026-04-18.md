@@ -3,7 +3,7 @@
 **Date:** 2026-04-18
 **Branch:** `claude/quizzical-shockley-537438`
 **Script:** `scripts/frontier_g_bare_structural_normalization.py`
-**Status:** CONDITIONAL CLOSURE (Claims 1, 2 retained; Claim 3 honestly partial)
+**Status:** CONDITIONAL CLOSURE (Claims 1, 2 proposed_retained; Claim 3 honestly partial)
 
 ---
 

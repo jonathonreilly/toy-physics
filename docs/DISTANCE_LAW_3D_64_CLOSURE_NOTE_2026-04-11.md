@@ -1,7 +1,7 @@
 # 3D Path-Sum Distance Continuation Note
 
 **Date:** 2026-04-11  
-**Status:** retained narrowly as a bounded continuation note; not full Newton closure
+**Status:** proposed_retained narrowly as a bounded continuation note; not full Newton closure
 
 ## Artifact chain
 

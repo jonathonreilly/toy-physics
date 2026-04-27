@@ -1,7 +1,7 @@
 # Fam2 Single-Family Refinement — Strong Negative on the Tested Ladder
 
 **Date:** 2026-04-07
-**Status:** retained negative on the tested ladder — Fam2 kubo_true at H=0.20 gives **+4.5082**, a 36.4% crash from H=0.25's +7.0883 and 24.5% below the Fam1/Fam3 converged value of ~5.97. The oscillation amplitude grows rather than shrinks across the tested H sequence. This strongly weakens the simple "Fam2 just needs one more refinement to settle near ~5.97" rescue story, but it does **not** prove literal divergence or rule out later settling at much finer H. The lane supports a genuinely different observed refinement behavior on Fam2 relative to Fam1/Fam3. A weaker lattice-pull story is a plausible interpretation, but the current data do **not** isolate `restore` alone because drift and restore vary together across families.
+**Status:** proposed_retained negative on the tested ladder — Fam2 kubo_true at H=0.20 gives **+4.5082**, a 36.4% crash from H=0.25's +7.0883 and 24.5% below the Fam1/Fam3 converged value of ~5.97. The oscillation amplitude grows rather than shrinks across the tested H sequence. This strongly weakens the simple "Fam2 just needs one more refinement to settle near ~5.97" rescue story, but it does **not** prove literal divergence or rule out later settling at much finer H. The lane supports a genuinely different observed refinement behavior on Fam2 relative to Fam1/Fam3. A weaker lattice-pull story is a plausible interpretation, but the current data do **not** isolate `restore` alone because drift and restore vary together across families.
 
 ## Artifact chain
 

@@ -1,7 +1,7 @@
 # CKM CP-Phase Structural Identity Theorem
 
 **Date:** 2026-04-24
-**Status:** retained standalone structural-identity theorem on `main`.
+**Status:** proposed_retained standalone structural-identity theorem on `main`.
 This note extracts, names, and regression-tests the CKM CP-phase identities
 already present inside
 [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md). It does

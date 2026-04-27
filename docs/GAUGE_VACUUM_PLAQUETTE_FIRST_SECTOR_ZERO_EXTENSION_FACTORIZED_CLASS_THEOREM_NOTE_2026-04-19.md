@@ -1,7 +1,7 @@
 # Gauge-Vacuum Plaquette First-Sector Zero-Extension Factorized-Class Theorem
 
-**Date:** 2026-04-19  
-**Status:** exact constructive existence theorem on the plaquette/Wilson first-sector reopening; the retained first-sector environment packet already admits one explicit full extension inside the canonical Wilson factorized class  
+**Date:** 2026-04-19
+**Status:** exact constructive existence theorem on the plaquette/Wilson first-sector reopening; the proposed_retained first-sector environment packet already admits one explicit full extension inside the canonical Wilson factorized class
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_2026_04_19.py`
 
 ## Question

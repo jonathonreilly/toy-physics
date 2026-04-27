@@ -1,7 +1,7 @@
 # Composite-Source Additivity Note
 
 **Date:** 2026-04-04  
-**Status:** bounded test-particle additivity probe on the retained 3D ordered-lattice family
+**Status:** bounded test-particle additivity probe on the proposed_retained 3D ordered-lattice family
 
 ## Artifact chain
 

@@ -1,7 +1,7 @@
 # Structured Chokepoint Bridge Note
 
 **Date:** 2026-04-04  
-**Status:** retained bounded structured bridge pocket; narrow canonical readout only
+**Status:** proposed_retained bounded structured bridge pocket; narrow canonical readout only
 
 This note freezes the bridge between the structured-placement lane and the
 canonical mirror chokepoint readout.

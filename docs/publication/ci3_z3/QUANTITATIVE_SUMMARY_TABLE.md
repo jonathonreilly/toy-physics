@@ -9,6 +9,12 @@ prediction/comparator surface. For the broader falsification surface, open
 bridges, and delayed-observability rows, pair it with
 [PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md).
 
+Audit-transition note: `Claim-strength status` is the package-facing
+quantitative classification. Ratified claim strength is controlled by
+[AUDIT_LEDGER.md](../../audit/AUDIT_LEDGER.md); until an audit row is clean,
+legacy `retained` / `promoted` wording here should be read as proposed
+package status.
+
 In this table:
 
 - `Claim-strength status` says what kind of quantitative row this is

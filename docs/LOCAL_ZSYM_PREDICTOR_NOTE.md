@@ -1,7 +1,7 @@
 # Local Z-Asymmetry 3rd Predictor — NEGATIVE (Hypothesis Rejected)
 
 **Date:** 2026-04-07
-**Status:** retained negative — local per-node Z2 asymmetry is NOT the missing predictor. The 3-property classifier search rejected `local_z_asym` and reproduced the original 2-property rule. Cross-generator accuracy stays at 6/9 = 66.7%. Combined with the previous independent-generators lane, this closes the simple-classifier line of attack on this generator family.
+**Status:** proposed_retained negative — local per-node Z2 asymmetry is NOT the missing predictor. The 3-property classifier search rejected `local_z_asym` and reproduced the original 2-property rule. Cross-generator accuracy stays at 6/9 = 66.7%. Combined with the previous independent-generators lane, this closes the simple-classifier line of attack on this generator family.
 
 ## Artifact chain
 

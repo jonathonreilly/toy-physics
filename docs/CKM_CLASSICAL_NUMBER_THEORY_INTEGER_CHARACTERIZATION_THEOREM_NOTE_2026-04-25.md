@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained CKM-structure theorem on current `main`.
+**Status:** proposed_retained CKM-structure theorem on current `main`.
 
 This note packages classical number-theoretic identities obeyed by the retained
 CKM structural integers

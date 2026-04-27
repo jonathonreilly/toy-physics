@@ -1,7 +1,7 @@
 # Cosmology Single-Ratio Inverse Reconstruction Theorem
 
 **Date:** 2026-04-25
-**Status:** exact retained/admitted-surface structural-support theorem on
+**Status:** exact proposed_retained/admitted-surface structural-support theorem on
 `main`. On the retained/admitted flat-FRW, `w_Lambda = -1` cosmology surface,
 the single open late-time number `H_inf / H_0` is uniquely reconstructible
 from several independent FRW observables and supplies exact consistency

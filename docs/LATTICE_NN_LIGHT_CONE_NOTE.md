@@ -1,7 +1,7 @@
 # NN Light-Cone Note
 
 **Date:** 2026-04-03  
-**Status:** retired as an emergent-relativity claim; only a topological causal-bound reading is retained
+**Status:** retired as an emergent-relativity claim; only a topological causal-bound reading is proposed_retained
 
 This note freezes the nearest-neighbor light-cone branch.
 It is intentionally narrow and should be treated as the canonical wording for this checkout.

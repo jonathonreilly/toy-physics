@@ -1,7 +1,7 @@
 # Wilson Two-Body Open-Lattice Note
 
 **Date:** 2026-04-11  
-**Status:** bounded companion on the current `main` surface; not promoted to flagship core
+**Status:** bounded companion on the current `main` surface; outside flagship core
 **Scripts:**  
 - `frontier_wilson_two_body.py`  
 - `frontier_wilson_two_body_open.py`  

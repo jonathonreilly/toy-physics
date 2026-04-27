@@ -1,7 +1,7 @@
 # `I_3 = 0` Exact Theorem
 
-**Date:** 2026-04-12  
-**Status:** exact theorem note for the retained Hilbert-surface interference result  
+**Date:** 2026-04-12
+**Status:** exact theorem note for the proposed_retained Hilbert-surface interference result
 **Runner:** `scripts/frontier_born_rule_derived.py` (historical filename)
 
 ## Claim

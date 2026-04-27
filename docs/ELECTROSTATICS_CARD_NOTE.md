@@ -1,7 +1,7 @@
 # Electrostatics Card Note
 
 **Date:** 2026-04-05  
-**Status:** retained scalar electrostatic-like sign law on the ordered 3D family
+**Status:** proposed_retained scalar electrostatic-like sign law on the ordered 3D family
 
 ## Artifact chain
 

@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 **Runner:** `scripts/frontier_koide_delta_marked_relative_cobordism_no_go.py`
-**Status:** no-go; a derived relative mark is scalar on the retained multiplicity space
+**Status:** no-go; a derived relative mark is scalar on the proposed_retained multiplicity space
 
 ## Theorem Attempt
 

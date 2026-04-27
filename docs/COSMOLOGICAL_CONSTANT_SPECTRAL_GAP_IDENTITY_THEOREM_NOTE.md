@@ -1,7 +1,7 @@
 # Spectral-Gap Cosmological-Constant Identity Theorem
 
 **Date:** 2026-04-18
-**Status:** **retained structural identity theorem** on `main`. Separates the
+**Status:** **proposed_retained structural identity theorem** on `main`. Separates the
 exact identity `Lambda = lambda_1(S^3_R)` from the still-bounded numerical
 value of `R` / `Lambda`.
 **Script:** `scripts/frontier_cosmological_constant_spectral_gap_identity.py`

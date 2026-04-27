@@ -1,7 +1,7 @@
 # Emergent Lorentz Invariance from the Cubic Z³ Lattice
 
 **Date:** 2026-04-15
-**Status:** retained exact structural theorem with retained hierarchy-scale
+**Status:** proposed_retained exact structural theorem with proposed_retained hierarchy-scale
 interpretation; experimental comparison is companion context
 **Script:** `scripts/frontier_emergent_lorentz_invariance.py`
 

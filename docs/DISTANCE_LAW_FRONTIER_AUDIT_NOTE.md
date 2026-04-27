@@ -1,7 +1,7 @@
 # Distance Law Frontier Audit
 
 **Date:** 2026-04-05  
-**Status:** retained frontier note, now superseded upward by the independently replayed wide-lattice `h^2+T` result on `main`
+**Status:** proposed_retained frontier note, now superseded upward by the independently replayed wide-lattice `h^2+T` result on `main`
 
 ## Question
 

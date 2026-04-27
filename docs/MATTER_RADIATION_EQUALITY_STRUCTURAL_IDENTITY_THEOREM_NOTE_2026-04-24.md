@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 
-**Status:** retained/admitted structural-identity theorem on the cosmology
+**Status:** proposed_retained/admitted structural-identity theorem on the cosmology
 support surface. This is the early-time companion to
 [`COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md`](COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md).
 The identity itself is exact once flat FRW and standard matter/radiation

@@ -1,7 +1,7 @@
 # Gate B Grown Propagating Field Note
 
 **Date:** 2026-04-05  
-**Status:** retained-grown-family causal-field probe, frozen as a bounded no-go on the moderate-drift row
+**Status:** proposed_retained-grown-family causal-field probe, frozen as a bounded no-go on the moderate-drift row
 
 ## Artifact chain
 

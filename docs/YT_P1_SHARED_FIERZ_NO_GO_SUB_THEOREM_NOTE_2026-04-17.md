@@ -1,7 +1,7 @@
 # P1 Shared-Fierz Shortcut No-Go Sub-Theorem Note
 
 **Date:** 2026-04-17
-**Status:** retained structural sub-theorem — **definitive no-go
+**Status:** proposed_retained structural sub-theorem — **definitive no-go
 verdict** on reducing the 1-loop ratio correction
 `Δ_R ≡ Δ_y − Δ_g` on the Ward ratio `y_t²/g_s²` at M_Pl to an
 algebraic shortcut via a shared Fierz identity combining the

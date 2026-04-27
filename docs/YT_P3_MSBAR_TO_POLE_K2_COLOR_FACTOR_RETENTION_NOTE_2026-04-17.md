@@ -1,7 +1,7 @@
 # P3 MSbar-to-Pole K_2 Color-Tensor Retention Theorem (2-loop structural skeleton)
 
 **Date:** 2026-04-17
-**Status:** retained structural sub-theorem — the two-loop color-tensor
+**Status:** proposed_retained structural sub-theorem — the two-loop color-tensor
 skeleton of the MSbar-to-pole mass conversion coefficient `K_2` is
 retained as exact SU(3) Casimir algebra; the four 2-loop integral
 primitives (`J_FF`, `J_FA`, `J_Fl`, `J_Fh`) remain outside the

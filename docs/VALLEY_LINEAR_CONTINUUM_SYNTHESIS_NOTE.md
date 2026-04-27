@@ -1,7 +1,7 @@
 # Valley-Linear Continuum Synthesis Note
 
 **Date:** 2026-04-04  
-**Status:** bounded synthesis of derived and retained valley-linear results; not a theorem promotion
+**Status:** bounded synthesis of derived and proposed_retained valley-linear results; not a theorem promotion
 
 ## Purpose
 

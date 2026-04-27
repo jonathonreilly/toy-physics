@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained CKM-structure corollary on the promoted CKM atlas
+**Status:** proposed_retained CKM-structure corollary on the proposed_promoted CKM atlas
 + NLO-protected-γ̄ surfaces. This note derives **a NEW α_s-INDEPENDENT
 multiplicative NLO ratio** for the framework's `sin(2 beta_bar)` CP
 asymmetry,

@@ -1,7 +1,7 @@
 # Gate B Complex-Action Falsifier Note
 
 **Date:** 2026-04-05  
-**Status:** tiny falsification-first complex-action probe on the retained Gate B grown row
+**Status:** tiny falsification-first complex-action probe on the proposed_retained Gate B grown row
 
 ## Artifact chain
 

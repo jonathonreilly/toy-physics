@@ -1,7 +1,7 @@
 # Poisson Self-Field: Transverse Profile from a Local Equation
 
 **Date:** 2026-04-06
-**Status:** retained positive (partial derivation) — transverse profile derived from 2D Poisson; longitudinal falloff still imposed; F~M=0.9997, Born=7.07e-16 on Poisson branch
+**Status:** proposed_retained positive (partial derivation) — transverse profile derived from 2D Poisson; longitudinal falloff still imposed; F~M=0.9997, Born=7.07e-16 on Poisson branch
 
 ## Artifact chain
 

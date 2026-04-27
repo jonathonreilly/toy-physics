@@ -1,7 +1,7 @@
 # First-Order Kubo Range of Validity — F~M ≈ 1 Derived on Linearity-Regime Subset
 
 **Date:** 2026-04-07
-**Status:** retained positive — first-order Kubo linear response predicts `delta_z(s) ≈ kubo_true · s`, implying F~M = 1 exactly. On a **linearity-regime subset of 15/41 families selected by a linearity criterion that does NOT reference the F~M label** (`|measured / (kubo_true · s) − 1| < 0.10` at all four battery strengths), measured F~M = **1.0048 ± 0.0069**, max |F~M − 1| = **0.0156**, and all 15 families satisfy the 0.10 F~M band. This is non-tautological evidence that linearity → F~M = 1. Of those 15 families, 13 are battery PASS and 2 are battery FAIL (they satisfy linearity but fail another battery condition). Selecting on battery PASS itself is circular because PASS already includes |F~M − 1| < 0.10; that result is reported as a sanity check only.
+**Status:** proposed_retained positive — first-order Kubo linear response predicts `delta_z(s) ≈ kubo_true · s`, implying F~M = 1 exactly. On a **linearity-regime subset of 15/41 families selected by a linearity criterion that does NOT reference the F~M label** (`|measured / (kubo_true · s) − 1| < 0.10` at all four battery strengths), measured F~M = **1.0048 ± 0.0069**, max |F~M − 1| = **0.0156**, and all 15 families satisfy the 0.10 F~M band. This is non-tautological evidence that linearity → F~M = 1. Of those 15 families, 13 are battery PASS and 2 are battery FAIL (they satisfy linearity but fail another battery condition). Selecting on battery PASS itself is circular because PASS already includes |F~M − 1| < 0.10; that result is reported as a sanity check only.
 
 ## Artifact chain
 

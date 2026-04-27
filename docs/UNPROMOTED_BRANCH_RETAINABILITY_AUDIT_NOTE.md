@@ -1,7 +1,7 @@
 # Unpromoted Branch Retainability Audit Note
 
 **Date:** 2026-04-06  
-**Status:** review-safe audit of retained branch claims; no promotion beyond bounded comparisons
+**Status:** review-safe audit of proposed_retained branch claims; no promotion beyond bounded comparisons
 
 This audit checks the recent claim surface for mistaken closure or overreach on
 three lanes:

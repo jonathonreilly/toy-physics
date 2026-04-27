@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-26
 
-**Status:** retained SU(2)_L-running structural corollary on the recently-landed
+**Status:** proposed_retained SU(2)_L-running structural corollary on the recently-landed
 S1 Identification Source Theorem, the retained three-generation matter
 structure (`N_gen = 3`), and retained 1-Higgs-doublet EW content. This note
 derives a NEW retained structural closed form for the SU(2)_L 1-loop

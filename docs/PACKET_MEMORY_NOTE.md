@@ -1,7 +1,7 @@
 # Packet Memory: Initial Conditions Survive to Detector
 
 **Date:** 2026-04-06
-**Status:** retained positive for Tier A (memory), partial for Tier B (shape), Tier C open
+**Status:** proposed_retained positive for Tier A (memory), partial for Tier B (shape), Tier C open
 
 ## Artifact chain
 

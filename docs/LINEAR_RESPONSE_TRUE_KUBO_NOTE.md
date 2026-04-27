@@ -1,7 +1,7 @@
 # True First-Order Kubo — Closed-Form Analytic Derivation
 
 **Date:** 2026-04-07
-**Status:** retained positive — literal first-order d(cz)/ds computed symbolically from the propagator via a parallel perturbation recurrence matches the measured finite-difference response at **r = 0.9716 overall and r = 0.9995 off-scaffold** across 44 families. Sign agreement **42/44 = 95.5%**. The three residual sign misses from the previous heuristic lane are all correctly captured. This is the analytic first-order derivation that the "compact underlying principle" row has been asking for.
+**Status:** proposed_retained positive — literal first-order d(cz)/ds computed symbolically from the propagator via a parallel perturbation recurrence matches the measured finite-difference response at **r = 0.9716 overall and r = 0.9995 off-scaffold** across 44 families. Sign agreement **42/44 = 95.5%**. The three residual sign misses from the previous heuristic lane are all correctly captured. This is the analytic first-order derivation that the "compact underlying principle" row has been asking for.
 
 ## Artifact chain
 

@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained CKM-structure corollary on the promoted CKM atlas
+**Status:** proposed_retained CKM-structure corollary on the proposed_promoted CKM atlas
 + NLO Wolfenstein protected-γ̄ surfaces. This note derives an
 **exact algebraic closed form in `α_s` on that retained NLO surface** for the
 **circumradius** `R̄` of the barred unitarity triangle, plus the

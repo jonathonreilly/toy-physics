@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-21
 **Lane:** Dark-matter PMNS branch choice / A-BCC basin selection
-**Status:** RETAINED-MEASUREMENT CLOSURE ON THE CURRENT PACKAGE SURFACE. On
+**Status:** proposed_retained-MEASUREMENT CLOSURE ON THE CURRENT PACKAGE SURFACE. On
 the retained measurement framework already carried in the package, the
 physical basin choice is no longer open: the sigma-chain fixes `J_phys = Basin 1`, the retained P3
 Sylvester theorem gives PMNS Non-Singularity on that physical path, and the

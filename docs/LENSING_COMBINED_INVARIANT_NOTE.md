@@ -1,7 +1,7 @@
 # Lensing Combined Invariant — Phenomenological Fingerprint (Look Deeper)
 
 **Date:** 2026-04-08
-**Status:** retained POSITIVE (phenomenological) — combining all detected signals across the lensing lanes gives one coherent, continuum-stable, reproducible empirical power law at the reference configuration. It is NOT canonical 1/b lensing and NOT derivable from any ray-optics formula tried, but it IS the cleanest single characterization of the program's first-order gravitational response. Flagged **"look deeper at this"** — the mechanism is unknown and every attempt to derive it has been falsified, but the observable itself is sharp and stable.
+**Status:** proposed_retained POSITIVE (phenomenological) — combining all detected signals across the lensing lanes gives one coherent, continuum-stable, reproducible empirical power law at the reference configuration. It is NOT canonical 1/b lensing and NOT derivable from any ray-optics formula tried, but it IS the cleanest single characterization of the program's first-order gravitational response. Flagged **"look deeper at this"** — the mechanism is unknown and every attempt to derive it has been falsified, but the observable itself is sharp and stable.
 
 ## The combined invariant
 

@@ -1,7 +1,7 @@
 # Claude Complex-Action Carryover Note
 
 **Date:** 2026-04-05  
-**Status:** retained narrow carryover of the branch exact-lattice complex-action
+**Status:** proposed_retained narrow carryover of the branch exact-lattice complex-action
 harness
 
 ## Artifact chain

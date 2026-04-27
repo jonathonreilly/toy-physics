@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-20
 **Lane:** Scalar-selector cycle 1 — closure attempt on the residual radian-bridge postulate P.
-**Status:** **No-go.** Postulate P cannot be closed from retained Cl(3)/Z³ + d=3 on
+**Status:** **No-go.** Postulate P cannot be closed from proposed_retained Cl(3)/Z³ + d=3 on
 the physical selected-line CP¹ base. The precise obstruction and the minimal
 additional structural input are named.
 **Primary runner:** `scripts/frontier_koide_z3_qubit_radian_bridge_no_go.py` (PASS=23 FAIL=0)

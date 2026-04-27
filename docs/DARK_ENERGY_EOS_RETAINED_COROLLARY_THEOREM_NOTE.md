@@ -1,7 +1,7 @@
 # Dark-Energy EOS Retained Structural Corollary
 
 **Date:** 2026-04-18
-**Status:** **retained structural corollary** on `main`, on the retained
+**Status:** **proposed_retained structural corollary** on `main`, on the proposed_retained
 spectral-gap cosmological-constant identity + retained direct-universal GR
 de Sitter stationary vacuum. Following an earlier review that flagged the
 previous version as still resting on a companion-lane premise, the load-

@@ -1,7 +1,7 @@
 # Gauge-Vacuum Plaquette First-Sector Rank-One / Factorized-Class Boundary
 
-**Date:** 2026-04-19  
-**Status:** exact retained-sector boundary on the plaquette/Wilson framework-point seam; the explicit positive rank-one first-sector transfer witness does **not** itself lie in the canonical Wilson factorized class, and the best audited retained diagonal fit still misses the completed triple  
+**Date:** 2026-04-19
+**Status:** exact proposed_retained-sector boundary on the plaquette/Wilson framework-point seam; the explicit positive rank-one first-sector transfer witness does **not** itself lie in the canonical Wilson factorized class, and the best audited proposed_retained diagonal fit still misses the completed triple
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_2026_04_19.py`
 
 ## Question

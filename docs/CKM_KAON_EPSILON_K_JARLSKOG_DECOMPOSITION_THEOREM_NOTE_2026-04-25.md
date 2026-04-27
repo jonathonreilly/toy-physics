@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained atlas-leading CKM-structure corollary on the promoted
+**Status:** proposed_retained atlas-leading CKM-structure corollary on the proposed_promoted
 atlas/axiom surface. This note derives how the three CKM combinations
 entering the Standard Model expression for the kaon CP-violation parameter
 `epsilon_K` factor through the framework's atlas Jarlskog-area factor

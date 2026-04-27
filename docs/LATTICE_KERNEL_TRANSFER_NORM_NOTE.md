@@ -1,7 +1,7 @@
 # 3D Kernel Transfer-Norm Probe
 
 **Date:** 2026-04-04  
-**Status:** bounded discrimination probe, not a promoted branch claim
+**Status:** bounded discrimination probe, not a proposed_promoted branch claim
 
 This note freezes a small local probe of the exploratory 3D kernel lane.
 It is intentionally narrower than the heavy `h=0.25` / 4D work Claude is

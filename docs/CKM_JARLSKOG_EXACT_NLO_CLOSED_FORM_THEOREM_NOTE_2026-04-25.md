@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained CKM-structure corollary on the promoted CKM atlas
+**Status:** proposed_retained CKM-structure corollary on the proposed_promoted CKM atlas
 and NLO Wolfenstein protected-γ̄ surface. This note derives an
 **EXACT NLO closed form** for the **Jarlskog invariant** `J̄` on the
 retained NLO Wolfenstein protected-γ̄ surface, plus its structural-

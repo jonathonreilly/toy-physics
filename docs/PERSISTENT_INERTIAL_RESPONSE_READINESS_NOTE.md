@@ -1,7 +1,7 @@
 # Persistent Inertial-Response Readiness Note
 
 **Date:** 2026-04-04  
-**Status:** bounded readiness audit; packet re-identification control now exists, and quasi-persistent relaunch/compression probes are now retained, but no persistent-mass theorem yet
+**Status:** bounded readiness audit; packet re-identification control now exists, and quasi-persistent relaunch/compression probes are now proposed_retained, but no persistent-mass theorem yet
 
 ## Purpose
 

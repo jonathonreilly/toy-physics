@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 
-**Status:** retained/admitted structural support theorem on the cosmology
+**Status:** proposed_retained/admitted structural support theorem on the cosmology
 surface. The retained framework fixes the number of light active neutrino
 flavours to three. The standard cosmology correction from non-instantaneous
 decoupling and finite-temperature QED, and the photon-temperature input used to

@@ -1,7 +1,7 @@
 # Vector Sector: Circular Orbit Handedness
 
 **Date:** 2026-04-06
-**Status:** retained positive — phase-locked handedness (1H amplitude 0.018), not universal DC
+**Status:** proposed_retained positive — phase-locked handedness (1H amplitude 0.018), not universal DC
 
 ## Artifact chain
 

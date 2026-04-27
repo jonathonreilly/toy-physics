@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-25
 
-**Status:** retained structural-identity subtheorem of the promoted CKM
+**Status:** proposed_retained structural-identity subtheorem of the proposed_promoted CKM
 atlas/axiom package. Companion to the mainline
 [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
 [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)

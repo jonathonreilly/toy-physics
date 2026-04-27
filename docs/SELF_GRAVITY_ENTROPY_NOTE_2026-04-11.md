@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-11  
 **Script:** `scripts/frontier_self_gravity_entropy.py`  
-**Status:** retained exploratory negative / inconclusive for area-law claims
+**Status:** proposed_retained exploratory negative / inconclusive for area-law claims
 
 ## Question
 

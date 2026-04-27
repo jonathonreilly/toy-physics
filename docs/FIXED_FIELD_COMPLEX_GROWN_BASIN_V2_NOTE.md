@@ -1,7 +1,7 @@
 # Fixed-Field Complex Grown Basin V2 Note
 
 **Date:** 2026-04-06  
-**Status:** retained tiny basin positive, but selective rather than family-wide
+**Status:** proposed_retained tiny basin positive, but selective rather than family-wide
 
 ## Artifact chain
 

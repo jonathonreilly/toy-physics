@@ -1,7 +1,7 @@
 # Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion `3d+1` Reduced-Packet Complex-Givens Selector Theorem
 
 **Date:** 2026-04-20  
-**Status:** exact retained-ambient theorem on the selected minimally-positive
+**Status:** exact proposed_retained-ambient theorem on the selected minimally-positive
 Wilson branch  
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_2026_04_20.py`
 

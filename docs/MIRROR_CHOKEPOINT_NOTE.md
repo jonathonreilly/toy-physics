@@ -1,7 +1,7 @@
 # Mirror Chokepoint Note
 
 **Date:** 2026-04-03
-**Status:** retained bounded mirror pocket through `N = 100`; `N = 120` loses gravity
+**Status:** proposed_retained bounded mirror pocket through `N = 100`; `N = 120` loses gravity
 
 This note freezes the current review-safe mirror result on the strict
 chokepoint family in:

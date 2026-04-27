@@ -1,7 +1,7 @@
 # P1 Rep-A vs Rep-B 1-Loop Cancellation Sub-Theorem Note (Ward-Identity Ratio Stability)
 
 **Date:** 2026-04-17
-**Status:** retained structural sub-theorem. **Definitive verdict:
+**Status:** proposed_retained structural sub-theorem. **Definitive verdict:
 PARTIAL CANCELLATION.** The two representations of the Ward
 tree-level identity `y_t²/g_s² = 1/(2 N_c) = 1/6` do NOT renormalize
 identically at 1-loop on the lattice-PT canonical surface. External

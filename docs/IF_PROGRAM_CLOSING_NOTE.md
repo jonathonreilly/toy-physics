@@ -1,7 +1,7 @@
 # IF Decoherence Program: Uniform-DAG Closure and Topology Outcome
 
 **Date:** 2026-04-01
-**Status:** uniform-architecture search closed; IF / CL route retained on gap-controlled topology
+**Status:** uniform-architecture search closed; IF / CL route proposed_retained on gap-controlled topology
 
 ## What was retained
 

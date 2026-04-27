@@ -1,7 +1,7 @@
 # Shapiro Static Discriminator
 
 **Date:** 2026-04-06  
-**Status:** boundary result - static cone shape can mimic the retained c-dependent phase lag exactly; static scheduling cannot
+**Status:** boundary result - static cone shape can mimic the proposed_retained c-dependent phase lag exactly; static scheduling cannot
 
 ## Artifact Chain
 

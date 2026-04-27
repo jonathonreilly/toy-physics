@@ -1,7 +1,7 @@
 # Equivalence Principle
 
 **Date:** 2026-04-05
-**Status:** retained positive — m_inertial = m_gravitational to 0.8%
+**Status:** proposed_retained positive — m_inertial = m_gravitational to 0.8%
 
 ## Result
 

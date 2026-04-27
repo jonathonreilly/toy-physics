@@ -1,7 +1,7 @@
 # Claude Complex-Action Grown Companion Note
 
 **Date:** 2026-04-05  
-**Status:** retained narrow grown-geometry companion of the exact-lattice
+**Status:** proposed_retained narrow grown-geometry companion of the exact-lattice
 complex-action carryover
 
 ## Artifact chain

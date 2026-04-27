@@ -1,7 +1,7 @@
 # Unified Basin Freeze: Both Basins Pass Zero/Neutral Controls
 
 **Date:** 2026-04-06
-**Status:** retained narrow claim — one grown connectivity family supports both signed-source and complex-action couplings across a small nearby basin
+**Status:** proposed_retained narrow claim — one grown connectivity family supports both signed-source and complex-action couplings across a small nearby basin
 
 ## Control gate results
 

@@ -1,7 +1,7 @@
 # Koide native dimensionless review packet
 
 **Date:** 2026-04-24
-**Status:** retained support / no-go packet.  This packet does **not** close the
+**Status:** proposed_retained support / no-go packet.  This packet does **not** close the
 dimensionless charged-lepton Koide lane.
 
 ## Decision

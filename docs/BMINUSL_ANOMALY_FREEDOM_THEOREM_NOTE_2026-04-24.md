@@ -1,7 +1,7 @@
 # B-L Anomaly-Freedom Theorem With Retained nu_R
 
 **Date:** 2026-04-24
-**Status:** retained standalone structural theorem on `main`. This note
+**Status:** proposed_retained standalone structural theorem on `main`. This note
 replaces the partial linear-only B-L remark in
 [`PROTON_LIFETIME_DERIVED_NOTE.md`](PROTON_LIFETIME_DERIVED_NOTE.md) with the
 full anomaly packet needed to gauge `U(1)_{B-L}` alongside the retained

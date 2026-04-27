@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 **Runner:** `scripts/frontier_koide_pointed_origin_exhaustion_theorem.py`
-**Status:** retained support/no-go theorem. This note does **not** close the
+**Status:** proposed_retained support/no-go theorem. This note does **not** close the
 dimensionless charged-lepton Koide lane.
 
 ## Decision

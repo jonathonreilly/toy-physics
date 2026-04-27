@@ -1,7 +1,7 @@
 # CKM Atlas/Axiom Closure Note
 
 **Date:** 2026-04-15  
-**Status:** promoted no-import quantitative package on the canonical tensor/projector surface
+**Status:** proposed_promoted no-import quantitative package on the canonical tensor/projector surface
 **Script:** `scripts/frontier_ckm_atlas_axiom_closure.py`
 **Named subtheorems:** [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md),
 [`CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md`](CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md),

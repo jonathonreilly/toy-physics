@@ -1,7 +1,7 @@
 # Gravity Observable Hierarchy
 
 **Date:** 2026-04-04  
-**Status:** canonical sign-interpretation note for retained lattice branches
+**Status:** canonical sign-interpretation note for proposed_retained lattice branches
 
 ## Purpose
 

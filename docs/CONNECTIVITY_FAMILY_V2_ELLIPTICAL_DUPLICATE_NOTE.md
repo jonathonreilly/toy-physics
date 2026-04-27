@@ -1,7 +1,7 @@
 # Connectivity Family V2 Elliptical Duplicate Note
 
 **Date:** 2026-04-06  
-**Status:** diagnostic duplicate of the portable sign-law fixed point; not a new retained family
+**Status:** diagnostic duplicate of the portable sign-law fixed point; not a new proposed_retained family
 
 ## Artifact Chain
 

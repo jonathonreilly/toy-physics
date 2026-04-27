@@ -1,7 +1,7 @@
 # Sign Portability Invariant Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow comparison positive
+**Status:** proposed_retained narrow comparison positive
 
 ## Artifact Chain
 

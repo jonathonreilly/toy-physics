@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19
 **Lane:** Charged-lepton Koide / MRU
-**Status:** retained positive theorem. Spectrum-side Koide `Q = 2/3`
+**Status:** proposed_retained positive theorem. Spectrum-side Koide `Q = 2/3`
 implies operator-side `kappa = 2` via an exact symbolic identity on the
 retained cyclic-compression bridge, with zero new axiom cost. The
 operator-side `kappa = 2` content is a corollary, not an independent

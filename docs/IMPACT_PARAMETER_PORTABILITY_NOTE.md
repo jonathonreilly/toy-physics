@@ -1,7 +1,7 @@
 # Impact-Parameter Portability Note
 
 **Date:** 2026-04-06  
-**Status:** retained positive across two portable grown families
+**Status:** proposed_retained positive across two portable grown families
 
 ## Artifact Chain
 

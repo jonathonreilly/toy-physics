@@ -1,7 +1,7 @@
 # Growing Graph Dynamic Propagation Replacement Note
 
 **Date:** 2026-04-05  
-**Status:** bounded replacement / dynamic propagator not retained
+**Status:** bounded replacement / dynamic propagator outside audit-ratified tier
 
 ## One-line read
 

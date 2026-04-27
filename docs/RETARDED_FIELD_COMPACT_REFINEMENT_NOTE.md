@@ -1,7 +1,7 @@
 # Retarded Field Compact Refinement Probe
 
 **Date:** 2026-04-05  
-**Status:** bounded retarded-vs-instantaneous smoke probe on two retained DAG families
+**Status:** bounded retarded-vs-instantaneous smoke probe on two proposed_retained DAG families
 
 ## Artifact chain
 

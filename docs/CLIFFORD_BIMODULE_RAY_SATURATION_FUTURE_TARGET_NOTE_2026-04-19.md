@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19
 **Lane:** Quark up-amplitude.
-**Status:** **Future mathematical target.** Explicitly NOT a retained
+**Status:** **Future mathematical target.** Explicitly NOT a proposed_retained
 theorem. Named and scoped as the concrete math target that, if proven,
 would derive STRC
 (`docs/QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md`) from

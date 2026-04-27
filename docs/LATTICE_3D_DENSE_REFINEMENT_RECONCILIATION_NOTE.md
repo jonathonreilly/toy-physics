@@ -1,7 +1,7 @@
 # 3D Dense Spent-Delay Refinement Reconciliation
 
 **Date:** 2026-04-04  
-**Status:** retained negative refinement reconciliation for the ordered 3D dense spent-delay family
+**Status:** proposed_retained negative refinement reconciliation for the ordered 3D dense spent-delay family
 
 ## Purpose
 

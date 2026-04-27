@@ -1,7 +1,7 @@
 # Retained-Package Neutrino Observable Bounds Theorem
 
 **Date:** 2026-04-24
-**Status:** retained bounded-support theorem package on `main`'s retained
+**Status:** proposed_retained bounded-support theorem package on `main`'s proposed_retained
 atmospheric-scale and normal-ordering surface. This is not a full neutrino
 closure and not a pure minimal-axiom derivation of the atmospheric input.
 No observed neutrino mass, solar splitting, or PMNS angle is used as a

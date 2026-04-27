@@ -1,7 +1,7 @@
 # Shapiro Complex Interaction Note
 
 **Date:** 2026-04-06  
-**Status:** retained narrow interaction note; the c-dependent phase lag survives the complex-action crossover as a broad causal observable
+**Status:** proposed_retained narrow interaction note; the c-dependent phase lag survives the complex-action crossover as a broad causal observable
 
 ## Artifact Chain
 

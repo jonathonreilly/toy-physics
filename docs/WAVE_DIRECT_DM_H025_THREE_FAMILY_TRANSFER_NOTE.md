@@ -1,7 +1,7 @@
 # Wave Direct-dM H=0.25 Three-Family Transfer Note
 
 **Date:** 2026-04-12
-**Status:** retained narrow transfer/compression freeze on the controlled
+**Status:** proposed_retained narrow transfer/compression freeze on the controlled
 `Fam1`/`Fam2`/`Fam3` fine-`H` surface
 
 This note freezes the next direct-`dM` widening step after the retained

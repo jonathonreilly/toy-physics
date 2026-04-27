@@ -1,7 +1,7 @@
 # Generation Axiom Boundary Note
 
 **Date:** 2026-04-16
-**Status:** exact support theorem on the retained three-generation surface and
+**Status:** exact support theorem on the proposed_retained three-generation surface and
 legacy reduced-stack witness for the old explicit-substrate boundary
 **Script:** `scripts/frontier_generation_axiom_boundary.py`
 **Authority role:** canonical main-branch tool note for the physical-lattice / taste-artifact boundary
