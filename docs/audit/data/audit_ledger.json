@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:31:54.763708+00:00",
-  "generated_at": "2026-04-27T04:31:52.863474+00:00",
-  "invalidation_run_at": "2026-04-27T04:31:54.700479+00:00",
+  "effective_status_computed_at": "2026-04-27T04:34:42.602808+00:00",
+  "generated_at": "2026-04-27T04:34:40.799000+00:00",
+  "invalidation_run_at": "2026-04-27T04:34:42.527399+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:31:54.579535+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:34:42.405570+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -16049,14 +16049,21 @@
       "verdict_rationale": null
     },
     "dm_abcc_retained_measurement_closure_theorem_note_2026-04-21": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 10.883,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The primary runner passes 15/15 checks: seven dependency runners return rc=0/FAIL=0, direct determinant checks put Basin 1 in C_base and Basin 2/X in C_neg, and the captured dependency outputs contain the expected PNS and A-BCC implication strings. However, the audit row has no registered one-hop dependencies even though the proof explicitly rests on chamber completeness, upper-octant/source-cubic selection, sigma-hier selection, P3 Sylvester, PMNS non-singularity, Sylvester signature forcing, and the sigma-chain attack cascade. Without those dependencies registered and audited clean, this is a conditional integration result on the retained measurement surface, not a closed theorem-grade audit.",
       "claim_id": "dm_abcc_retained_measurement_closure_theorem_note_2026-04-21",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -16064,18 +16071,29 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 8,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 10.883,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The integration theorem claims A-BCC is closed on the retained measurement framework because the retained dependency stack selects J_phys=Basin 1, the P3 Sylvester/non-singularity path puts Basin 1 in C_base, Basin 2 and Basin X are in C_neg, and the signature-forcing/PNS implications then identify the physical endpoint with C_base.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "70b86566aecdb91e7d4779fcf754c53c995eb9b47f9718f819f73f56316e8632",
       "note_path": "docs/DM_ABCC_RETAINED_MEASUREMENT_CLOSURE_THEOREM_NOTE_2026-04-21.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "active_chamber_chi2_zero_completeness_theorem_not_registered_one_hop_dependency",
+        "exact_upper_octant_source_cubic_selector_theorem_not_registered_one_hop_dependency",
+        "sigma_hier_upper_octant_selector_theorem_not_registered_one_hop_dependency",
+        "P3_Sylvester_linear_path_physical_basin_theorem_not_registered_one_hop_dependency",
+        "PMNS_non_singularity_reduction_theorem_not_registered_one_hop_dependency",
+        "Sylvester_signature_forcing_theorem_not_registered_one_hop_dependency",
+        "sigma_chain_attack_cascade_runner_not_registered_one_hop_dependency",
+        "retained_affine_Hermitian_source_family_and_H_base_J_basin_coordinates_not_registered",
+        "five_route_assumptions_audit_boundary_for_pure_algebraic_A_BCC_not_registered_here",
+        "right_sensitive_microscopic_selector_law_later_same_day_stack_not_audited_in_this_claim"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368064+00:00",
@@ -16105,15 +16123,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 11,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 15
       },
       "runner_path": "scripts/frontier_dm_abcc_retained_measurement_closure_2026_04_21.py",
       "title": "DM A-BCC Retained Measurement Closure Theorem",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "The runner successfully verifies the integration theorem under its supplied retained-measurement stack: all seven nested runners pass, the hard-coded Basin 1 point satisfies the chamber bound and has positive endpoint determinant, Basin 2 and Basin X have negative endpoint determinants, and the captured dependency logs expose the asserted PNS/A-BCC reduction phrases. The conditional blocker is exact: the source note says it adds no new scientific input, yet the ledger records no one-hop dependency list for the input stack. A hostile audit therefore cannot independently promote the closure, because the active-chamber completeness theorem, sigma-chain selector, P3 Sylvester linear-path theorem, PMNS Non-Singularity theorem, signature-forcing theorem, and basin coordinate/source-family authorities are imported rather than audited here. It also remains explicitly outside an axiom-native Cl(3)/Z^3 derivation and leaves the microscopic right-sensitive selector outside this note's closure grade. To repair the claim, register every theorem/runner in the integration chain as one-hop dependencies with audited-clean status or include their theorem statements and hashes in the ledger snapshot; separately certify the full linear-path determinant minimum and the source-family/basin coordinates, not just endpoint signs, and register the microscopic selector stack if the current-package flagship closure is being claimed. What can still be safely claimed is conditional: on the retained measurement framework, if the seven dependency theorems are accepted, the integration runner verifies that A-BCC is no longer the live branch-choice blocker and that the remaining burden at this stage is the microscopic selector law. It does not prove a pure algebraic A-BCC theorem from Cl(3)/Z^3 alone."
     },
     "dm_abcc_signature_forcing_theorem_note_2026-04-19": {
       "audit_date": null,
