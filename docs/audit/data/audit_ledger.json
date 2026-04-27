@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:01:55.049848+00:00",
-  "generated_at": "2026-04-27T04:01:53.272396+00:00",
-  "invalidation_run_at": "2026-04-27T04:01:54.992354+00:00",
+  "effective_status_computed_at": "2026-04-27T04:07:34.507718+00:00",
+  "generated_at": "2026-04-27T04:07:32.736255+00:00",
+  "invalidation_run_at": "2026-04-27T04:07:34.454608+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:01:54.863347+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:07:34.328954+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -80897,14 +80897,21 @@
       "verdict_rationale": null
     },
     "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 12.883,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner recomputes the N=32/48/64 quadrature and assembles the stated number, but the registered audit row has no one-hop dependencies for the retained Feynman rules, canonical surface, MSbar subtraction, taste normalizations, prior brackets, or 5% systematic model. Those premises are imported or hard-coded rather than closed inside the audit packet.",
       "claim_id": "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -80912,18 +80919,30 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 12,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 12.883,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The full Kawamoto-Smit staggered-PT 4D BZ quadrature with MSbar subtraction yields Delta_R = -3.77% +/- 0.45% and moves Delta_R from literature-cited status to framework-native retained status with sub-half-percent precision.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "3fe6cbaa2611f51cddae06ac3e9134678d85d7a8049878469c7e25a8bc69c01e",
       "note_path": "docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md_not_registered_one_hop_dependency",
+        "docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md_not_registered_one_hop_dependency",
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md_not_registered_one_hop_dependency",
+        "docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md_not_registered_one_hop_dependency",
+        "docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md_not_registered_one_hop_dependency",
+        "docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency",
+        "docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency",
+        "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency",
+        "scripts/canonical_plaquette_surface.py_not_registered_one_hop_dependency",
+        "MSbar_continuum_subtraction_and_N_TASTE_normalization_theorem_not_registered",
+        "five_percent_full_PT_systematic_model_not_registered"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370288+00:00",
@@ -80952,16 +80971,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "A": 7,
+        "B": 22,
+        "C": 10,
+        "D": 6,
+        "total_pass": 45
       },
       "runner_path": "scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py",
       "title": "P1 BZ Quadrature Full Staggered-PT Note (4D Kawamoto\u2013Smit Quadrature)",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the retained-status upgrade from a full staggered-PT quadrature rests on unregistered upstream authorities and physical-normalization choices: the Ward identity, Rep-A/Rep-B three-channel formula, H_unit Feynman rules, Delta_1/Delta_2/Delta_3 ranges, prior schematic and master Delta_R notes, canonical plaquette constants, MSbar subtraction prescription, N_TASTE normalization, and the asserted 5% full-PT systematic are all used but the ledger row lists no one-hop dependencies. Why this blocks: the runner verifies the quadrature arithmetic once those rules and constants are supplied, but it does not derive the Kawamoto-Smit/taste-normalized integrands from retained CL3 primitives, prove the continuum-subtraction prescription, justify the n_f=6 matching surface, or substantiate the 5% systematic/covariance model; it also compares to prior/literature brackets that are absent from the audit packet. Repair target: register the cited notes and canonical-surface script as one-hop dependencies, add or cite a retained theorem deriving the full staggered Feynman rules, MSbar subtraction, taste averaging, and systematic budget, and update the runner to fail if those dependencies or uncertainty inputs change rather than hard-coding them. Claim boundary until fixed: it is safe to claim a reproducible conditional quadrature calculation which, given the supplied staggered-PT rules, canonical constants, and 5% per-channel systematic, produces I_v_scalar=3.902, I_v_gauge=0, I_SE_gluonic=2.323, I_SE_fermion=0.996, and Delta_R=-3.769% +/-0.452%; it is not yet an audited retained first-principles framework-native precision theorem."
     },
     "yt_p1_bz_quadrature_numerical_note_2026-04-18": {
       "audit_date": null,
