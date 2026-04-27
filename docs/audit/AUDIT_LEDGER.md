@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T22:21:00.768731+00:00
+**Generated:** 2026-04-27T22:23:15.038714+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 14 |
+| _proposed_retained_ | 13 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 168 |
+| ~~audited_conditional~~ | 169 |
 | ~~audited_failed~~ | 329 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 138 |
+| `audited_conditional` | 139 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 75 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1317 |
+| `unaudited` | 1316 |
 
 | criticality | count |
 |---|---:|
@@ -310,6 +310,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `yt_p1_loop_geometric_bound_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
@@ -4933,6 +4934,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
   - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+- **auditor confidence:** high
+
+### `yt_p1_loop_geometric_bound_note_2026-04-17`
+
+- **Note:** [`YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](../../docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note asserts the geometric ratio bound |Delta_{n+1}| <= r_R |Delta_n| for all n >= 1 with r_R = (alpha_LM/pi) b_0 = 0.22126, then sums it to bound the P1 loop-expansion tail by Delta_1 r_R/(1-r_R).  _(class `B`)_
+- **chain closes:** False — The runner verifies retained inputs, indicative two-loop color-prefactor ratios, and the geometric-sum arithmetic, but it does not prove the all-orders ratio bound for the actual lattice-to-MSbar coefficients. The source itself states that the geometric decay assumption would need further structural input to be strict for all n.
+- **rationale:** Issue: the claimed retained tail bound depends on the unproved global assumption |Delta_{n+1}| <= r_R |Delta_n| for all higher loops; the runner only shows that r_R envelopes indicative two-loop color-prefactor ratios and then performs the geometric-sum arithmetic. Why this blocks: closing the P1 loop-expansion axis requires a theorem or computation controlling the actual two-loop and higher lattice-to-MSbar BZ coefficients, not just a beta0-motivated envelope over color prefactors with |J_X| ~ O(1). Repair target: supply a framework-native renormalon/geometric-growth theorem for the retained action or compute/bound the relevant two-loop and higher BZ primitives sufficiently to establish the ratio inequality, then re-run a runner that fails if the inequality is not proven. Claim boundary until fixed: safe to claim that, if the geometric ratio r_R = 0.22126 is assumed, the tail factor is 0.2841 and the displayed 0.547%/1.640% tail numbers follow; not safe to claim an audited retained all-orders loop-tail bound or closure of the P1 loop-expansion axis.
+- **open / conditional deps cited:**
+  - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  - `YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`
+  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
 - **auditor confidence:** high
 
 ### `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17`

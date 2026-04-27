@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 91,
-    "high": 521,
+    "high": 520,
     "leaf": 626,
     "medium": 82
   },
-  "generated_at": "2026-04-27T22:21:00.598716+00:00",
+  "generated_at": "2026-04-27T22:23:14.883801+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -6879,23 +6879,6 @@
       "note_path": "docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md",
       "ready": true,
       "runner_path": "scripts/frontier_yt_p1_i_s_revision_verification.py",
-      "transitive_descendants": 121
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "yt_p1_loop_geometric_bound_note_2026-04-17",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 7.431,
-      "note_path": "docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_yt_p1_loop_geometric_bound.py",
       "transitive_descendants": 121
     },
     {
@@ -27297,6 +27280,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 902,
-  "total_pending": 1320
+  "ready_count": 901,
+  "total_pending": 1319
 }
