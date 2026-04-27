@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T08:10:24.088032+00:00
+**Generated:** 2026-04-27T08:19:33.034845+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 14 |
-| _proposed_retained_ | 210 |
+| _proposed_retained_ | 209 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 274 |
+| ~~audited_conditional~~ | 275 |
 | ~~audited_failed~~ | 75 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 14 |
-| `audited_conditional` | 62 |
+| `audited_conditional` | 63 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 9 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1505 |
+| `unaudited` | 1504 |
 
 | criticality | count |
 |---|---:|
@@ -146,6 +146,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_k_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_true_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `local_zsym_predictor_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_chokepoint_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_mutual_information_chokepoint_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1095,6 +1096,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `runner_not_registered_for_linear_response_true_kubo_note`
   - `logs/2026-04-07-linear-response-true-kubo.txt_not_registered_primary_output`
+- **auditor confidence:** high
+
+### `local_zsym_predictor_note`
+
+- **Note:** [`LOCAL_ZSYM_PREDICTOR_NOTE.md`](../../docs/LOCAL_ZSYM_PREDICTOR_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Adding local_z_asym to the 3-property classifier search is rejected on the swept set and leaves cross-generator accuracy unchanged at 6/9, so the note concludes that the simple node-level classifier line is exhausted.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the finite local_z_asym negative exactly, but it tests one added node-level metric inside a fixed 3-property AND search; that does not prove the broader exhaustion of simple classifiers or all node-level metrics.
+- **rationale:** Issue: the runner supports rejecting local_z_asym as the missing third predictor, but the source promotes that finite rejection to closure of the simple-classifier line of attack. Why this blocks: a hostile physicist can verify the distributions, the vacuous z_sym >= 0 third clause, and unchanged 6/9 cross-generator accuracy, but cannot infer an exhaustive no-go over other node-level metrics, thresholds, Boolean forms, multi-metric rules, or global path/spectral summaries from this one 3-property AND search. Repair target: either narrow the note to the local_z_asym negative, or add an exhaustive classifier-search theorem/computation specifying the metric universe, Boolean grammar, train/held-out protocol, and multiple-testing control that rules out the claimed simple-classifier class. Claim boundary until fixed: it is safe to claim that local_z_asym fails to improve the frozen classifier program on the 26-family swept set and nine independent generators; it is not safe to claim theorem-grade exhaustion of simple classifiers.
+- **open / conditional deps cited:**
+  - `simple_classifier_exhaustion_theorem_missing`
+  - `metric_universe_for_node_level_classifier_search_not_defined`
+  - `only_local_z_asym_added_to_fixed_3_property_AND_search`
+  - `no_multiple_testing_or_global_search_certificate`
 - **auditor confidence:** high
 
 ### `matter_inertial_closure_note`
