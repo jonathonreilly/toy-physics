@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 641,
+    "leaf": 640,
     "medium": 82
   },
-  "generated_at": "2026-04-27T19:57:09.857759+00:00",
+  "generated_at": "2026-04-27T19:58:37.783419+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -25168,23 +25168,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_yt_p1_delta_3_bz.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -27259,6 +27242,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 907,
-  "total_pending": 1320
+  "ready_count": 906,
+  "total_pending": 1319
 }

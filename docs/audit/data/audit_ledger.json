@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T19:57:09.808504+00:00",
-  "generated_at": "2026-04-27T19:57:08.198654+00:00",
-  "invalidation_run_at": "2026-04-27T19:57:09.760472+00:00",
+  "effective_status_computed_at": "2026-04-27T19:58:37.733816+00:00",
+  "generated_at": "2026-04-27T19:58:36.108028+00:00",
+  "invalidation_run_at": "2026-04-27T19:58:37.686015+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T19:57:09.660915+00:00",
+  "load_bearing_computed_at": "2026-04-27T19:58:37.586917+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -85156,14 +85156,21 @@
       "verdict_rationale": "Issue: the note is a citation-and-bound calculation, and its non-positive Delta_2 range depends on retaining the conserved-current surface or clipping away the runner's local-current endpoint Delta_2=+4/3. Why this blocks: without a clean retained current-selection theorem and a native BZ computation of I_SE and I_v_gauge, the claimed negative C_A-channel value is a conditional scenario, not a clean retained lattice-PT result across the stated current-definition sensitivity. Repair target: derive and audit the conserved point-split current as the unique P1 current used in the ratio, perform the framework-native 4D BZ quadrature for I_SE^{gluonic+ghost} and I_v_gauge on that retained action/current, and cleanly audit the Rep-A/Rep-B and canonical-surface parents. Claim boundary until fixed: safe to claim that under the conserved-current assumption with cited I_SE in [1,3], Delta_2 lies in [-5,-5/3] with central -10/3 and C_A contribution about -7.215%; if local-current sensitivity is included, the runner-supported outer envelope is [-5,+4/3], not strictly non-positive."
     },
     "yt_p1_delta_3_bz_computation_note_2026-04-17": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The arithmetic closes over the cited fermion-loop bracket and the chosen MSbar n_f=6 convention. It does not close as a clean retained result because the framework-native fermion-loop BZ integral is explicitly not performed and the n_f versus n_taste matching convention is imported rather than derived from clean retained parents.",
       "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -85171,18 +85178,21 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "With cited I_SE^{fermion-loop} = 0.7 in the bracket [0.5,1.5] and the adopted MSbar n_f=6 convention, Delta_3 = (4/3) I_SE = 0.933 and T_F n_f Delta_3 alpha_LM/(4 pi) = +2.020% with bracket [+1.443%, +4.329%].",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "d5c60c43566b777ce865aabbdc7fdc1fcc297ba4636e2a69f070fd11d758c7b5",
       "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md",
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370308+00:00",
@@ -85211,16 +85221,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 30,
+        "B": 21,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 51
       },
       "runner_path": "scripts/frontier_yt_p1_delta_3_bz.py",
       "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the positive Delta_3 bracket and +2.020% central contribution rely on a cited staggered-PT fermion-loop bracket and on selecting the MSbar n_f=6 convention over the lattice n_taste=16 contrast; the runner explicitly leaves the framework-native I_SE^{fermion-loop} evaluation open. Why this blocks: a citation bracket plus convention choice can bound a scenario, but it cannot promote a clean retained T_F n_f channel value without deriving the loop-count/matching convention and computing the BZ integral on the retained action. Repair target: add a native 4D BZ quadrature for I_SE^{fermion-loop}, prove the MSbar n_f=6 versus n_taste=16 matching rule from retained taste/rooting inputs, and cleanly audit the Rep-A/Rep-B and taste-staircase parents. Claim boundary until fixed: safe to claim that under the cited bracket and adopted MSbar n_f=6 convention, Delta_3 lies in [0.667,2.000] and the channel contribution is [+1.443%,+4.329%] with positive sign; not safe to claim an unconditional retained central +2.020% lattice-PT result."
     },
     "yt_p1_delta_r_2_loop_extension_note_2026-04-18": {
       "audit_date": "2026-04-26",

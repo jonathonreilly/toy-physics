@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T19:57:10.000888+00:00
+**Generated:** 2026-04-27T19:58:37.930273+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 18 |
+| _proposed_retained_ | 17 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 6 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 353 |
+| ~~audited_conditional~~ | 354 |
 | ~~audited_failed~~ | 137 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 140 |
+| `audited_conditional` | 141 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 6 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1317 |
+| `unaudited` | 1316 |
 
 | criticality | count |
 |---|---:|
@@ -308,6 +308,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_bz_quadrature_numerical_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_p1_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_2_bz_computation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `yt_p1_delta_3_bz_computation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -4846,6 +4847,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md`
   - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
   - `YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+- **auditor confidence:** high
+
+### `yt_p1_delta_3_bz_computation_note_2026-04-17`
+
+- **Note:** [`YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`](../../docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** With cited I_SE^{fermion-loop} = 0.7 in the bracket [0.5,1.5] and the adopted MSbar n_f=6 convention, Delta_3 = (4/3) I_SE = 0.933 and T_F n_f Delta_3 alpha_LM/(4 pi) = +2.020% with bracket [+1.443%, +4.329%].  _(class `B`)_
+- **chain closes:** False — The arithmetic closes over the cited fermion-loop bracket and the chosen MSbar n_f=6 convention. It does not close as a clean retained result because the framework-native fermion-loop BZ integral is explicitly not performed and the n_f versus n_taste matching convention is imported rather than derived from clean retained parents.
+- **rationale:** Issue: the positive Delta_3 bracket and +2.020% central contribution rely on a cited staggered-PT fermion-loop bracket and on selecting the MSbar n_f=6 convention over the lattice n_taste=16 contrast; the runner explicitly leaves the framework-native I_SE^{fermion-loop} evaluation open. Why this blocks: a citation bracket plus convention choice can bound a scenario, but it cannot promote a clean retained T_F n_f channel value without deriving the loop-count/matching convention and computing the BZ integral on the retained action. Repair target: add a native 4D BZ quadrature for I_SE^{fermion-loop}, prove the MSbar n_f=6 versus n_taste=16 matching rule from retained taste/rooting inputs, and cleanly audit the Rep-A/Rep-B and taste-staircase parents. Claim boundary until fixed: safe to claim that under the cited bracket and adopted MSbar n_f=6 convention, Delta_3 lies in [0.667,2.000] and the channel contribution is [+1.443%,+4.329%] with positive sign; not safe to claim an unconditional retained central +2.020% lattice-PT result.
+- **open / conditional deps cited:**
+  - `YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md`
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
 - **auditor confidence:** high
 
