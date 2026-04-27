@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T17:47:31.530871+00:00
+**Generated:** 2026-04-27T17:52:23.659629+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 63 |
+| _proposed_retained_ | 62 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 329 |
+| ~~audited_conditional~~ | 330 |
 | ~~audited_failed~~ | 126 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 63 |
-| `audited_conditional` | 116 |
+| `audited_conditional` | 117 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1362 |
+| `unaudited` | 1361 |
 
 | criticality | count |
 |---|---:|
@@ -259,6 +259,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sixth_family_distance_law_third_vs_sixth_quick_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `source_resolved_generated_support_recovery_basin_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3770,6 +3771,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `SIXTH_FAMILY_SHEARED_NOTE.md`
   - `SIXTH_FAMILY_SHEARED_BOUNDARY_NOTE.md`
   - `DISTANCE_LAW_BREAKPOINT_NOTE.md`
+- **auditor confidence:** high
+
+### `source_resolved_generated_support_recovery_basin_note`
+
+- **Note:** [`SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_BASIN_NOTE.md`](../../docs/SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_BASIN_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The tiny k_nearest/min_edges grid around the generated-family kNN-floor tweak remains positive in mean centroid shift and keeps detector support fraction above the generated-family baseline, so the support recovery is not a one-point fluke.  _(class `C`)_
+- **chain closes:** False — The current runner reproduces the basin table, but the upstream generated-family support recovery is bounded/unaudited and several grid points are not seed-unanimous despite the stronger retained-basin framing.
+- **rationale:** Issue: The executable basin probe verifies a tiny grid of kNN-floor tweaks, but the parent generated-family support recovery is only bounded/unaudited and the source's 'every point remains TOWARD' wording is mean-positive per grid row, not all-seed TOWARD for every row. Why this blocks: a nine-point neighborhood with 2/4 or 3/4 seed sign counts at several points cannot promote retained generated-family recovery unless the parent recovery and the basin acceptance criterion are independently closed. Repair target: audit the generated-family recovery and generated-family probe notes, then add assertion thresholds specifying whether basin stability means positive mean delta, minimum seed count, support fraction above baseline, or all of these. Claim boundary until fixed: it is safe to claim that the current runner finds all nine grid rows have positive mean centroid shift, support_frac 0.427-0.458 above baseline 0.311, and zero-source shift 0; it is not safe to claim retained generated-family recovery beyond this conditional basin probe.
+- **open / conditional deps cited:**
+  - `SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_NOTE.md`
+  - `SOURCE_RESOLVED_GENERATED_FAMILY_PROBE_NOTE.md`
+  - `SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md`
 - **auditor confidence:** high
 
 ### `staggered_backreaction_green_closure_note`

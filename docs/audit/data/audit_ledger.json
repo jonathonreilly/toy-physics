@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T17:47:31.338255+00:00",
-  "generated_at": "2026-04-27T17:47:29.748029+00:00",
-  "invalidation_run_at": "2026-04-27T17:47:31.292157+00:00",
+  "effective_status_computed_at": "2026-04-27T17:52:23.473254+00:00",
+  "generated_at": "2026-04-27T17:52:21.881176+00:00",
+  "invalidation_run_at": "2026-04-27T17:52:23.427054+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T17:47:31.197799+00:00",
+  "load_bearing_computed_at": "2026-04-27T17:52:23.327350+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -69651,14 +69651,21 @@
       "verdict_rationale": null
     },
     "source_resolved_generated_support_recovery_basin_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The current runner reproduces the basin table, but the upstream generated-family support recovery is bounded/unaudited and several grid points are not seed-unanimous despite the stronger retained-basin framing.",
       "claim_id": "source_resolved_generated_support_recovery_basin_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -69666,18 +69673,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The tiny k_nearest/min_edges grid around the generated-family kNN-floor tweak remains positive in mean centroid shift and keeps detector support fraction above the generated-family baseline, so the support recovery is not a one-point fluke.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "4ba373b9c12c94ab81d6386c72825ac702d259d19e9c449c6b901713049aa6bc",
       "note_path": "docs/SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_BASIN_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_NOTE.md",
+        "docs/SOURCE_RESOLVED_GENERATED_FAMILY_PROBE_NOTE.md",
+        "docs/SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369675+00:00",
@@ -69715,7 +69726,7 @@
       "runner_path": null,
       "title": "Source-Resolved Generated Support Recovery Basin Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The executable basin probe verifies a tiny grid of kNN-floor tweaks, but the parent generated-family support recovery is only bounded/unaudited and the source's 'every point remains TOWARD' wording is mean-positive per grid row, not all-seed TOWARD for every row. Why this blocks: a nine-point neighborhood with 2/4 or 3/4 seed sign counts at several points cannot promote retained generated-family recovery unless the parent recovery and the basin acceptance criterion are independently closed. Repair target: audit the generated-family recovery and generated-family probe notes, then add assertion thresholds specifying whether basin stability means positive mean delta, minimum seed count, support fraction above baseline, or all of these. Claim boundary until fixed: it is safe to claim that the current runner finds all nine grid rows have positive mean centroid shift, support_frac 0.427-0.458 above baseline 0.311, and zero-source shift 0; it is not safe to claim retained generated-family recovery beyond this conditional basin probe."
     },
     "source_resolved_generated_support_recovery_note": {
       "audit_date": null,
