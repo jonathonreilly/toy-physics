@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:32:11.622529+00:00
+**Generated:** 2026-04-27T16:33:50.013059+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 60 |
-| _proposed_retained_ | 89 |
+| _proposed_retained_ | 88 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 320 |
-| ~~audited_failed~~ | 112 |
+| ~~audited_failed~~ | 113 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 60 |
 | `audited_conditional` | 107 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 45 |
+| `audited_failed` | 46 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1388 |
+| `unaudited` | 1387 |
 
 | criticality | count |
 |---|---:|
@@ -312,6 +312,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_vs_lattice_program_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `persistent_inertial_response_readiness_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `poisson_self_gravity_mechanism_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -3295,6 +3296,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The note presents the transverse profile as derived from a local equation, but the local 2D Poisson equation, source normalization, boundary conditions, iteration budget, and the longitudinal 1/(dx+0.1) factor are still chosen inputs. Why this blocks: the live runner verifies a finite Poisson-branch computation after those premises are supplied, but it does not derive the field law or source carrier from retained framework structure, so the retained derivation claim is conditional. Repair target: derive or cite a retained theorem for the Poisson equation and source/boundary normalization, remove the explicit longitudinal factor or prove its retained origin, and add convergence/residual checks for the solver. Claim boundary until fixed: it is safe to claim that the tested runner replaces the transverse imposed profile with a chosen 2D Poisson stencil while preserving TOWARD response, near-linear F versus M, Born behavior, and the s=0 null; it is not safe to claim the gravitational field is retained as an axiom-derived consequence.
 - **open / conditional deps cited:**
   - `GATE_B_POISSON_SELF_GRAVITY_NOTE.md`
+- **auditor confidence:** high
+
+### `poisson_self_gravity_mechanism_note`
+
+- **Note:** [`POISSON_SELF_GRAVITY_MECHANISM_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_MECHANISM_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The exact-lattice Poisson-like backreaction loop is a useful sanity check and an honest audit target, but it does not yet beat the bounded-control status.  _(class `B`)_
+- **chain closes:** False — The note is a cross-note mechanism summary over unaudited or unknown support rows, and the only mechanism script is a hard-coded report rather than a runner that recomputes the controls.
+- **rationale:** Issue: The queued proposed-retained row is not a retained mechanism claim on its own terms: the source status says control-only and not a proposed_retained self-gravity mechanism, the evidence notes it cites are unaudited or unknown, and the companion script only prints a hard-coded verdict. Why this blocks: the audit cannot ratify a proposed-retained mechanism or even a retained synthesis from unaudited support rows and a non-computational report script. Repair target: demote the source status to bounded/control-only or rebuild it as a ledger-generated synthesis after auditing POISSON_SELF_GRAVITY_LOOP_NOTE, POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE, and POISSON_SELF_GRAVITY_LOOP_V3_NOTE; remove the embedded patch text from the markdown and make the runner recompute the controls. Claim boundary until fixed: it is safe to use this as an editorial control-only handoff saying no retained self-gravity mechanism has closed; it is not safe to treat it as an audit-retained self-gravity mechanism or retained mechanism synthesis.
+- **open / conditional deps cited:**
+  - `POISSON_SELF_GRAVITY_LOOP_NOTE.md`
+  - `POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE.md`
+  - `POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md`
 - **auditor confidence:** high
 
 ### `retained_cross_lane_consistency_support_note_2026-04-22`

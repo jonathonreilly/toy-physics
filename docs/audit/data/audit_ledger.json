@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T16:32:11.432625+00:00",
-  "generated_at": "2026-04-27T16:32:09.840324+00:00",
-  "invalidation_run_at": "2026-04-27T16:32:11.384097+00:00",
+  "effective_status_computed_at": "2026-04-27T16:33:49.825277+00:00",
+  "generated_at": "2026-04-27T16:33:48.225758+00:00",
+  "invalidation_run_at": "2026-04-27T16:33:49.777059+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T16:32:11.286683+00:00",
+  "load_bearing_computed_at": "2026-04-27T16:33:49.678756+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -58663,14 +58663,21 @@
       "verdict_rationale": null
     },
     "poisson_self_gravity_mechanism_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note is a cross-note mechanism summary over unaudited or unknown support rows, and the only mechanism script is a hard-coded report rather than a runner that recomputes the controls.",
       "claim_id": "poisson_self_gravity_mechanism_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -58678,18 +58685,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The exact-lattice Poisson-like backreaction loop is a useful sanity check and an honest audit target, but it does not yet beat the bounded-control status.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "93c345a2b1a3ab3d574cc4383d4a3a13eca2895f7d0ceb009d8347135215d97d",
       "note_path": "docs/POISSON_SELF_GRAVITY_MECHANISM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/POISSON_SELF_GRAVITY_LOOP_NOTE.md",
+        "docs/POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE.md",
+        "docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369413+00:00",
@@ -58727,7 +58738,7 @@
       "runner_path": null,
       "title": "Poisson Self-Gravity Mechanism Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The queued proposed-retained row is not a retained mechanism claim on its own terms: the source status says control-only and not a proposed_retained self-gravity mechanism, the evidence notes it cites are unaudited or unknown, and the companion script only prints a hard-coded verdict. Why this blocks: the audit cannot ratify a proposed-retained mechanism or even a retained synthesis from unaudited support rows and a non-computational report script. Repair target: demote the source status to bounded/control-only or rebuild it as a ledger-generated synthesis after auditing POISSON_SELF_GRAVITY_LOOP_NOTE, POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE, and POISSON_SELF_GRAVITY_LOOP_V3_NOTE; remove the embedded patch text from the markdown and make the runner recompute the controls. Claim boundary until fixed: it is safe to use this as an editorial control-only handoff saying no retained self-gravity mechanism has closed; it is not safe to treat it as an audit-retained self-gravity mechanism or retained mechanism synthesis."
     },
     "portable_card_extension_note": {
       "audit_date": null,
