@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T14:41:52.186905+00:00
+**Generated:** 2026-04-27T14:48:32.383568+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 47 |
-| _proposed_retained_ | 126 |
+| _proposed_retained_ | 125 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 308 |
+| ~~audited_conditional~~ | 309 |
 | ~~audited_failed~~ | 100 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 47 |
-| `audited_conditional` | 95 |
+| `audited_conditional` | 96 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 33 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1426 |
+| `unaudited` | 1425 |
 
 | criticality | count |
 |---|---:|
@@ -198,6 +198,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_berry_phase_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_native_dimensionless_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_zero_section_closure_route_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_native_zero_section_nature_review_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -2165,6 +2166,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `lambda_star_transport_law_from_Cl3_Z3_open`
   - `chamber_slack_to_resolvent_scalar_theorem_open`
   - `PDG_sqrt_mass_direction_comparator_not_registered_one_hop_dependency`
+- **auditor confidence:** high
+
+### `koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19`
+
+- **Note:** [`KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The block-total Frobenius-squared functional E_I(H) = ||pi_I(H)||_F^2 is claimed to be the retained 1:1 real-isotype measure that discharges the MRU measure-choice residue and supplies an independent operator-side kappa = 2 closure route.  _(class `C`)_
+- **chain closes:** False — The runner closes the exact Herm_circ(3) block-total algebra and the finite d scan, but the retained closure claim depends on unaudited MRU/bridge notes and on a canonical choice between block-total and determinant log-laws that the source itself still lists as a residue.
+- **rationale:** Issue: the live runner verifies the block-total Frobenius formulas, kappa = 2 equal-weight extremum, d = 3 multiplicity pattern, and PDG consistency, but the note promotes this to a no-residue retained closure while citing MRU/bridge authorities that are not audit-clean and while later admitting a remaining choice between block-total and det log-laws. Why this blocks: existence of a natural (1,1) Frobenius functional does not by itself select that functional as the canonical physical extremal principle, discharge the determinant-law alternative, or close the spectrum-side Koide input. Repair target: audit-retain the MRU quotient/weight-class and spectrum-operator bridge inputs, and add a theorem plus runner that selects block-total over the determinant/rank law without importing the target kappa. Claim boundary until fixed: safely claim the runner-verified exact algebra on Herm_circ(3): E_+ = 3a^2, E_perp = 6|b|^2, equal-weight block-total extremum gives kappa = 2, d = 3 has the checked one-trivial-plus-one-doublet pattern, and PDG masses are consistent; do not claim the measure-choice residue is discharged or that the operator-side closure is retained.
+- **open / conditional deps cited:**
+  - `KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
+  - `KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md`
+  - `KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19.md`
+  - `KOIDE_CYCLIC_PROJECTOR_BLOCK_DEMOCRACY_NOTE_2026-04-18.md`
+  - `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `koide_native_dimensionless_review_packet_2026-04-24`

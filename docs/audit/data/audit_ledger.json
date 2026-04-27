@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T14:41:51.988511+00:00",
-  "generated_at": "2026-04-27T14:41:50.377188+00:00",
-  "invalidation_run_at": "2026-04-27T14:41:51.940728+00:00",
+  "effective_status_computed_at": "2026-04-27T14:48:32.189742+00:00",
+  "generated_at": "2026-04-27T14:48:30.589641+00:00",
+  "invalidation_run_at": "2026-04-27T14:48:32.143796+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T14:41:51.846367+00:00",
+  "load_bearing_computed_at": "2026-04-27T14:48:32.046901+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -40349,14 +40349,21 @@
       "verdict_rationale": null
     },
     "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner closes the exact Herm_circ(3) block-total algebra and the finite d scan, but the retained closure claim depends on unaudited MRU/bridge notes and on a canonical choice between block-total and determinant log-laws that the source itself still lists as a residue.",
       "claim_id": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -40364,18 +40371,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The block-total Frobenius-squared functional E_I(H) = ||pi_I(H)||_F^2 is claimed to be the retained 1:1 real-isotype measure that discharges the MRU measure-choice residue and supplies an independent operator-side kappa = 2 closure route.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "6ca19fd47d8bce0e65833cb5c8884d13c9deaefb56c60e6b976f6d8b515eb202",
       "note_path": "docs/KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
+        "docs/KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md",
+        "docs/KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19.md",
+        "docs/KOIDE_CYCLIC_PROJECTOR_BLOCK_DEMOCRACY_NOTE_2026-04-18.md",
+        "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368805+00:00",
@@ -40406,14 +40419,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "C": 13,
+        "D": 3,
+        "total_pass": 16
       },
       "runner_path": "scripts/frontier_koide_kappa_block_total_frobenius_measure_theorem.py",
       "title": "Koide kappa Block-Total Frobenius Measure Theorem",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the live runner verifies the block-total Frobenius formulas, kappa = 2 equal-weight extremum, d = 3 multiplicity pattern, and PDG consistency, but the note promotes this to a no-residue retained closure while citing MRU/bridge authorities that are not audit-clean and while later admitting a remaining choice between block-total and det log-laws. Why this blocks: existence of a natural (1,1) Frobenius functional does not by itself select that functional as the canonical physical extremal principle, discharge the determinant-law alternative, or close the spectrum-side Koide input. Repair target: audit-retain the MRU quotient/weight-class and spectrum-operator bridge inputs, and add a theorem plus runner that selects block-total over the determinant/rank law without importing the target kappa. Claim boundary until fixed: safely claim the runner-verified exact algebra on Herm_circ(3): E_+ = 3a^2, E_perp = 6|b|^2, equal-weight block-total extremum gives kappa = 2, d = 3 has the checked one-trivial-plus-one-doublet pattern, and PDG masses are consistent; do not claim the measure-choice residue is discharged or that the operator-side closure is retained."
     },
     "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19": {
       "audit_date": null,
