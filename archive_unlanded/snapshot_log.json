@@ -1,0 +1,873 @@
+{
+  "branch_count": 56,
+  "branches": [
+    {
+      "branch": "ckm-a-rho-multiplicative-koide-bridge",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 42.77,
+      "last_commit_iso": "2026-04-25T13:19:58-04:00",
+      "last_commit_subject": "ckm: land multiplicative A^2-rho-eta^2 identities and 5th 2/9 path",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_A_RHO_MULTIPLICATIVE_KOIDE_BRIDGE_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_a_rho_multiplicative_koide_bridge.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-a-rho-multiplicative-koide-bridge/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-a-squared-below-w2-y-quantum-closure",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 24.66,
+      "last_commit_iso": "2026-04-26T07:26:31-04:00",
+      "last_commit_subject": "ckm: CLOSE A^2 below W2 via Identification Source Theorem (S1)",
+      "novel_file_count": 1,
+      "novel_files_snapshotted": [
+        "review.md"
+      ],
+      "pair_classification": "unreviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-a-squared-below-w2-y-quantum-closure/",
+      "unmerged_commits": 3
+    },
+    {
+      "branch": "ckm-alpha-ew-lattice-adjoint-dim-closed-form",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 39.12,
+      "last_commit_iso": "2026-04-25T16:58:46-04:00",
+      "last_commit_subject": "ckm: land alpha_EW physical lattice-scale closed form via adjoint dim",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_ALPHA_EW_LATTICE_ADJOINT_DIM_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_alpha_ew_lattice_adjoint_dim_closed_form.py"
+      ],
+      "pair_classification": "unreviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-alpha-ew-lattice-adjoint-dim-closed-form/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-alpha-s-independent-structural-prophecy",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 25.18,
+      "last_commit_iso": "2026-04-26T06:55:28-04:00",
+      "last_commit_subject": "ckm: land alpha_s-independent structural-integer prophecy",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_ALPHA_S_INDEPENDENT_STRUCTURAL_PROPHECY_THEOREM_NOTE_2026-04-26.md",
+        "scripts/frontier_ckm_alpha_s_independent_structural_prophecy.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-alpha-s-independent-structural-prophecy/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-bare-ew-color-square-identity",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 39.24,
+      "last_commit_iso": "2026-04-25T16:51:54-04:00",
+      "last_commit_subject": "ckm: land bare EW gauge-coupling color-square identity theorem",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_BARE_EW_COLOR_SQUARE_IDENTITY_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_bare_ew_color_square_identity.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-bare-ew-color-square-identity/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-barred-brocard-angle-exact-closed-form",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 38.6,
+      "last_commit_iso": "2026-04-25T17:30:09-04:00",
+      "last_commit_subject": "ckm: land barred unitarity-triangle Brocard angle exact closed form",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_BARRED_BROCARD_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_barred_brocard_angle_exact_closed_form.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-barred-brocard-angle-exact-closed-form/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-barred-brocard-points-exact-closed-form",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 35.87,
+      "last_commit_iso": "2026-04-25T20:13:39-04:00",
+      "last_commit_subject": "ckm: land Brocard points exact closed form",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_BARRED_BROCARD_POINTS_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_barred_brocard_points_exact_closed_form.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-barred-brocard-points-exact-closed-form/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-barred-nine-point-circle-protected-pencil",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 35.37,
+      "last_commit_iso": "2026-04-25T20:43:43-04:00",
+      "last_commit_subject": "ckm: land nine-point circle + protected coaxial pencil",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_BARRED_NINE_POINT_CIRCLE_PROTECTED_PENCIL_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_barred_nine_point_circle_protected_pencil.py"
+      ],
+      "pair_classification": "unreviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-barred-nine-point-circle-protected-pencil/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-barred-orthic-triangle-exact-closed-form",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 34.98,
+      "last_commit_iso": "2026-04-25T21:07:21-04:00",
+      "last_commit_subject": "ckm: land orthic triangle exact closed form",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_BARRED_ORTHIC_TRIANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_barred_orthic_triangle_exact_closed_form.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-barred-orthic-triangle-exact-closed-form/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-barred-steiner-inellipse-marden-closed-form",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 37.98,
+      "last_commit_iso": "2026-04-25T18:07:21-04:00",
+      "last_commit_subject": "ckm: land Steiner inellipse + Marden's theorem exact closed form",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_BARRED_STEINER_INELLIPSE_MARDEN_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_barred_steiner_inellipse_marden_closed_form.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-barred-steiner-inellipse-marden-closed-form/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-barred-symmedian-brocard-circle-closed-form",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 38.27,
+      "last_commit_iso": "2026-04-25T17:49:51-04:00",
+      "last_commit_subject": "ckm: land Symmedian point + Brocard circle exact closed form",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_BARRED_SYMMEDIAN_BROCARD_CIRCLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_barred_symmedian_brocard_circle_closed_form.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-barred-symmedian-brocard-circle-closed-form/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-bernoulli-two-ninths-koide-bridge",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 43.01,
+      "last_commit_iso": "2026-04-25T13:05:25-04:00",
+      "last_commit_subject": "ckm: land Bernoulli-variance 2/9 identities supporting Koide bridge",
+      "novel_file_count": 1,
+      "novel_files_snapshotted": [
+        "docs/CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_THEOREM_NOTE_2026-04-25.md"
+      ],
+      "pair_classification": "unreviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-bernoulli-two-ninths-koide-bridge/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-bs-phi-s-nlo-jarlskog-bridge",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 40.16,
+      "last_commit_iso": "2026-04-25T15:56:35-04:00",
+      "last_commit_subject": "ckm: land B_s mixing phase phi_s NLO closed form and Jarlskog bridge theorem",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_BS_PHI_S_NLO_JARLSKOG_BRIDGE_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_bs_phi_s_nlo_jarlskog_bridge.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-bs-phi-s-nlo-jarlskog-bridge/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-consecutive-primes-s3-koide-bridge",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 40.32,
+      "last_commit_iso": "2026-04-25T15:46:51-04:00",
+      "last_commit_subject": "ckm: land consecutive primes, S_3 group-theoretic Koide-bridge theorem",
+      "novel_file_count": 1,
+      "novel_files_snapshotted": [
+        "docs/CKM_CONSECUTIVE_PRIMES_S3_KOIDE_BRIDGE_THEOREM_NOTE_2026-04-25.md"
+      ],
+      "pair_classification": "unreviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-consecutive-primes-s3-koide-bridge/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-cubic-bernoulli-koide-bridge",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 42.23,
+      "last_commit_iso": "2026-04-25T13:52:35-04:00",
+      "last_commit_subject": "ckm: land cubic Bernoulli W(N) and triple-level factorization theorem",
+      "novel_file_count": 1,
+      "novel_files_snapshotted": [
+        "docs/CKM_CUBIC_BERNOULLI_KOIDE_BRIDGE_THEOREM_NOTE_2026-04-25.md"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-cubic-bernoulli-koide-bridge/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-egyptian-bernoulli-closures-koide-bridge",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 41.91,
+      "last_commit_iso": "2026-04-25T14:11:22-04:00",
+      "last_commit_subject": "ckm: land Egyptian fraction unitarity and Bernoulli sum closures Koide-bridge theorem",
+      "novel_file_count": 1,
+      "novel_files_snapshotted": [
+        "docs/CKM_EGYPTIAN_BERNOULLI_CLOSURES_KOIDE_BRIDGE_THEOREM_NOTE_2026-04-25.md"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-egyptian-bernoulli-closures-koide-bridge/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-magnitudes-vus-power-tower-bridge",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 34.4,
+      "last_commit_iso": "2026-04-25T21:41:53-04:00",
+      "last_commit_subject": "ckm: land |V_us|-power tower magnitude bridge",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_MAGNITUDES_VUS_POWER_TOWER_BRIDGE_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_magnitudes_vus_power_tower_bridge.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-magnitudes-vus-power-tower-bridge/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-multi-projection-bernoulli-koide-bridge",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 42.44,
+      "last_commit_iso": "2026-04-25T13:39:46-04:00",
+      "last_commit_subject": "ckm: land multi-projection Bernoulli family at three structural N-levels",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_MULTI_PROJECTION_BERNOULLI_KOIDE_BRIDGE_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_multi_projection_bernoulli_koide_bridge.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-multi-projection-bernoulli-koide-bridge/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-n9-structural-family-koide-bridge",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 42.62,
+      "last_commit_iso": "2026-04-25T13:28:46-04:00",
+      "last_commit_subject": "ckm: land complete n/N_color^2 structural family Koide-bridge theorem",
+      "novel_file_count": 1,
+      "novel_files_snapshotted": [
+        "docs/CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_THEOREM_NOTE_2026-04-25.md"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-n9-structural-family-koide-bridge/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-perfect-number-triangular-koide-bridge",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 40.46,
+      "last_commit_iso": "2026-04-25T15:38:25-04:00",
+      "last_commit_subject": "ckm: land perfect-number, triangular, Lie-dimensional, Mersenne Koide-bridge theorem",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_PERFECT_NUMBER_TRIANGULAR_KOIDE_BRIDGE_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_perfect_number_triangular_koide_bridge.py"
+      ],
+      "pair_classification": "unreviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-perfect-number-triangular-koide-bridge/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "ckm-physical-ratios-circumradius-bridge",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 34.65,
+      "last_commit_iso": "2026-04-25T21:27:01-04:00",
+      "last_commit_subject": "ckm: land physical ratios circumradius bridge",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_PHYSICAL_RATIOS_CIRCUMRADIUS_BRIDGE_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_physical_ratios_circumradius_bridge.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/ckm-physical-ratios-circumradius-bridge/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "claude/flamboyant-hodgkin-e16786",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 42.27,
+      "last_commit_iso": "2026-04-25T13:49:50-04:00",
+      "last_commit_subject": "koide-a1: downgrade Brannen Plancherel note from claimed closure to support per review",
+      "novel_file_count": 3,
+      "novel_files_snapshotted": [
+        "docs/KOIDE_A1_BRANNEN_PLANCHEREL_IDENTITY_SUPPORT_NOTE_2026-04-25.md",
+        "review.md",
+        "scripts/frontier_koide_a1_brannen_plancherel_identity_support.py"
+      ],
+      "pair_classification": "unreviewed_unlanded",
+      "snapshot_path": "archive_unlanded/claude__flamboyant-hodgkin-e16786/",
+      "unmerged_commits": 3
+    },
+    {
+      "branch": "codex/gauge-perron-variational-proof-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 38.48,
+      "last_commit_iso": "2026-04-25T17:37:32-04:00",
+      "last_commit_subject": "gauge: prove Perron variational envelope",
+      "novel_file_count": 1,
+      "novel_files_snapshotted": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_PERRON_VARIATIONAL_ENVELOPE_THEOREM_NOTE_2026-04-25.md"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__gauge-perron-variational-proof-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/land-chronology-boundary-classifier-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 39.43,
+      "last_commit_iso": "2026-04-25T16:40:23-04:00",
+      "last_commit_subject": "chronology: land boundary classifier packet",
+      "novel_file_count": 23,
+      "novel_files_snapshotted": [
+        "docs/CHRONOLOGY_IMPORT_BUDGET_NOTE.md",
+        "docs/CHRONOLOGY_IMPORT_CLASSIFICATION_NOTE.md",
+        "docs/CHRONOLOGY_OPERATOR_ALGEBRA_BOUNDARY_NOTE.md",
+        "docs/CHRONOLOGY_PROTECTION_BOUNDARY_REVIEW_PACKET.md",
+        "docs/CTC_FIXED_POINT_TAXONOMY_NOTE.md",
+        "docs/DURABLE_RECORD_FORMATION_BOUNDARY_NOTE.md",
+        "docs/MULTI_TIME_SUPPORT_CONSTRAINT_NOTE.md",
+        "docs/POSTSELECTION_NO_SIGNALING_AUDIT.md",
+        "docs/U_MINUS_T_VS_PAST_SIGNALING_NOTE.md",
+        "scripts/advanced_vs_retarded_field_probe.py",
+        "scripts/causal_cycle_fixed_point_dimension_probe.py",
+        "scripts/chronology_cycle_insertion_probe.py",
+        "scripts/chronology_import_budget.py",
+        "scripts/chronology_operator_algebra_no_past_signal_probe.py",
+        "scripts/chronology_protection_suite.py",
+        "scripts/ctc_fixed_point_taxonomy_probe.py",
+        "scripts/durable_record_formation_boundary_probe.py",
+        "scripts/future_boundary_import_index.py",
+        "scripts/loschmidt_echo_record_probe.py",
+        "scripts/multi_time_support_constraint_probe.py",
+        "scripts/partial_loschmidt_record_lower_bound.py",
+        "scripts/postselection_ctc_nonlinearity_probe.py",
+        "scripts/postselection_no_signaling_audit.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-chronology-boundary-classifier-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/land-ckm-a-rho-multiplicative-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 42.54,
+      "last_commit_iso": "2026-04-25T13:33:54-04:00",
+      "last_commit_subject": "ckm: land A-rho multiplicative identities",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_A_RHO_MULTIPLICATIVE_IDENTITIES_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_a_rho_multiplicative_identities.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-ckm-a-rho-multiplicative-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/land-ckm-barred-brocard-points-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 35.27,
+      "last_commit_iso": "2026-04-25T20:50:15-04:00",
+      "last_commit_subject": "ckm: land Brocard points exact closed form",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_BARRED_BROCARD_POINTS_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_barred_brocard_points_exact_closed_form.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-ckm-barred-brocard-points-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/land-ckm-brocard-closed-form-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 38.46,
+      "last_commit_iso": "2026-04-25T17:38:19-04:00",
+      "last_commit_subject": "ckm: index barred Brocard corollary",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_BARRED_BROCARD_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_barred_brocard_angle_exact_closed_form.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-ckm-brocard-closed-form-2026-04-25/",
+      "unmerged_commits": 2
+    },
+    {
+      "branch": "codex/land-ckm-ew-color-square-support-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 39.09,
+      "last_commit_iso": "2026-04-25T17:00:35-04:00",
+      "last_commit_subject": "ckm: land bare EW color-square support",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_BARE_EW_COLOR_SQUARE_IDENTITY_SUPPORT_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_bare_ew_color_square_support.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-ckm-ew-color-square-support-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/land-ckm-orthic-triangle-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 34.8,
+      "last_commit_iso": "2026-04-25T21:18:17-04:00",
+      "last_commit_subject": "ckm: land orthic triangle closed forms",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_BARRED_ORTHIC_TRIANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_barred_orthic_triangle_exact_closed_form.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-ckm-orthic-triangle-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/land-ckm-physical-ratios-circumradius-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 34.39,
+      "last_commit_iso": "2026-04-25T21:42:41-04:00",
+      "last_commit_subject": "ckm: land physical-ratio circumradius bridge",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_PHYSICAL_RATIOS_CIRCUMRADIUS_BRIDGE_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_physical_ratios_circumradius_bridge.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-ckm-physical-ratios-circumradius-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/land-ckm-steiner-marden-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 36.68,
+      "last_commit_iso": "2026-04-25T19:25:07-04:00",
+      "last_commit_subject": "ckm: land barred Steiner Marden corollary",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_BARRED_STEINER_INELLIPSE_MARDEN_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_barred_steiner_inellipse_marden_closed_form.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-ckm-steiner-marden-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/land-ckm-symmedian-brocard-circle-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 38.01,
+      "last_commit_iso": "2026-04-25T18:05:23-04:00",
+      "last_commit_subject": "ckm: land barred symmedian Brocard circle corollary",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_BARRED_SYMMEDIAN_BROCARD_CIRCLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_barred_symmedian_brocard_circle_closed_form.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-ckm-symmedian-brocard-circle-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/land-ew-alpha-adjoint-support-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 38.94,
+      "last_commit_iso": "2026-04-25T17:09:43-04:00",
+      "last_commit_subject": "ew: land alpha adjoint-dimension support",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/EW_ALPHA_LATTICE_ADJOINT_DIM_SUPPORT_NOTE_2026-04-25.md",
+        "scripts/frontier_ew_alpha_lattice_adjoint_dim_support.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-ew-alpha-adjoint-support-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/land-gauge-perron-variational-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 38.26,
+      "last_commit_iso": "2026-04-25T17:50:19-04:00",
+      "last_commit_subject": "gauge: index Perron variational envelope",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_PERRON_VARIATIONAL_ENVELOPE_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_gauge_vacuum_plaquette_perron_variational_envelope.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-gauge-perron-variational-2026-04-25/",
+      "unmerged_commits": 2
+    },
+    {
+      "branch": "codex/land-koide-closure-targets-ab-v2-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 36.21,
+      "last_commit_iso": "2026-04-25T19:53:17-04:00",
+      "last_commit_subject": "koide: land OP local-descent boundary support",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/KOIDE_Q_OP_LOCAL_DESCENT_PROTOCOL_BOUNDARY_NOTE_2026-04-25.md",
+        "scripts/frontier_koide_q_op_local_descent_protocol_boundary.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-koide-closure-targets-ab-v2-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/land-neutrino-seesaw-boundary-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 35.08,
+      "last_commit_iso": "2026-04-25T21:01:13-04:00",
+      "last_commit_subject": "neutrino: land seesaw Schur boundary theorem",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/NEUTRINO_MAJORANA_SEESAW_SCHUR_BOUNDARY_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_neutrino_majorana_seesaw_schur_boundary.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-neutrino-seesaw-boundary-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/land-phase-valley-distance-law-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 43.43,
+      "last_commit_iso": "2026-04-25T12:40:28-04:00",
+      "last_commit_subject": "gravity: land phase-valley distance-law universality",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/PHASE_VALLEY_DISTANCE_LAW_UNIVERSALITY_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_phase_valley_distance_law_universality.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-phase-valley-distance-law-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/land-target3-coframe-derivation-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 42.77,
+      "last_commit_iso": "2026-04-25T13:20:02-04:00",
+      "last_commit_subject": "planck: land target3 coframe support theorem",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_planck_target3_coframe_response_derivation.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__land-target3-coframe-derivation-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/neutrino-seesaw-boundary-proof-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 35.68,
+      "last_commit_iso": "2026-04-25T20:25:10-04:00",
+      "last_commit_subject": "neutrino: prove seesaw Schur boundary theorem",
+      "novel_file_count": 1,
+      "novel_files_snapshotted": [
+        "docs/NEUTRINO_MAJORANA_SEESAW_SCHUR_BOUNDARY_THEOREM_NOTE_2026-04-25.md"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__neutrino-seesaw-boundary-proof-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/review-ckm-alpha-prophecy-2026-04-26",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 25.0,
+      "last_commit_iso": "2026-04-26T07:06:12-04:00",
+      "last_commit_subject": "ckm: land alpha-s independent structural ratios",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_ALPHA_S_INDEPENDENT_STRUCTURAL_RATIOS_THEOREM_NOTE_2026-04-26.md",
+        "scripts/frontier_ckm_alpha_s_independent_structural_ratios.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__review-ckm-alpha-prophecy-2026-04-26/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/review-ckm-vus-power-tower-2026-04-26",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 25.2,
+      "last_commit_iso": "2026-04-26T06:54:03-04:00",
+      "last_commit_subject": "ckm: land Cabibbo power-tower magnitude bridge",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/CKM_MAGNITUDES_VUS_POWER_TOWER_BRIDGE_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_ckm_magnitudes_vus_power_tower_bridge.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__review-ckm-vus-power-tower-2026-04-26/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/review-saturday-koide-2026-04-25",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 34.23,
+      "last_commit_iso": "2026-04-25T21:52:17-04:00",
+      "last_commit_subject": "koide: land Frobenius measure-selection support",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/KOIDE_Q_FROBENIUS_RECIPROCITY_MEASURE_SELECTION_SUPPORT_NOTE_2026-04-25.md",
+        "scripts/frontier_koide_q_frobenius_reciprocity_measure_selection_support.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__review-saturday-koide-2026-04-25/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/review-sm-accidental-bl-proof-2026-04-26",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 24.56,
+      "last_commit_iso": "2026-04-26T07:32:34-04:00",
+      "last_commit_subject": "sm: land renormalizable accidental B/L conservation",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/SM_RENORMALIZABLE_ACCIDENTAL_B_L_CONSERVATION_THEOREM_NOTE_2026-04-26.md",
+        "scripts/frontier_sm_renormalizable_accidental_b_l_conservation.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__review-sm-accidental-bl-proof-2026-04-26/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/review-sm-gim-neutral-current-proof-2026-04-26",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 24.44,
+      "last_commit_iso": "2026-04-26T07:39:52-04:00",
+      "last_commit_subject": "sm: prove GIM neutral-current projector theorem",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/SM_GIM_NEUTRAL_CURRENT_CKM_UNITARITY_THEOREM_NOTE_2026-04-26.md",
+        "scripts/frontier_sm_gim_neutral_current_ckm_unitarity.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__review-sm-gim-neutral-current-proof-2026-04-26/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/review-sm-weinberg-operator-proof-2026-04-26",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 24.79,
+      "last_commit_iso": "2026-04-26T07:18:44-04:00",
+      "last_commit_subject": "sm: land active Weinberg operator uniqueness",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/SM_ACTIVE_WEINBERG_OPERATOR_UNIQUENESS_THEOREM_NOTE_2026-04-26.md",
+        "scripts/frontier_sm_active_weinberg_operator_uniqueness.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__review-sm-weinberg-operator-proof-2026-04-26/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/sm-accidental-bl-proof-2026-04-26",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 24.68,
+      "last_commit_iso": "2026-04-26T07:25:13-04:00",
+      "last_commit_subject": "sm: prove renormalizable accidental B/L conservation",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/SM_RENORMALIZABLE_ACCIDENTAL_B_L_CONSERVATION_THEOREM_NOTE_2026-04-26.md",
+        "scripts/frontier_sm_renormalizable_accidental_b_l_conservation.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__sm-accidental-bl-proof-2026-04-26/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/sm-gim-neutral-current-proof-2026-04-26",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 24.57,
+      "last_commit_iso": "2026-04-26T07:32:13-04:00",
+      "last_commit_subject": "sm: prove GIM neutral-current projector theorem",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/SM_GIM_NEUTRAL_CURRENT_CKM_UNITARITY_THEOREM_NOTE_2026-04-26.md",
+        "scripts/frontier_sm_gim_neutral_current_ckm_unitarity.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__sm-gim-neutral-current-proof-2026-04-26/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/sm-quark-flavor-count-proof-2026-04-26",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 24.24,
+      "last_commit_iso": "2026-04-26T07:51:45-04:00",
+      "last_commit_subject": "docs: wire SM quark flavor count theorem",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/SM_QUARK_FLAVOR_PARAMETER_COUNT_THEOREM_NOTE_2026-04-26.md",
+        "scripts/frontier_sm_quark_flavor_parameter_count.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__sm-quark-flavor-count-proof-2026-04-26/",
+      "unmerged_commits": 2
+    },
+    {
+      "branch": "codex/sm-weinberg-operator-proof-2026-04-26",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 25.07,
+      "last_commit_iso": "2026-04-26T07:02:01-04:00",
+      "last_commit_subject": "sm: prove active Weinberg operator uniqueness",
+      "novel_file_count": 1,
+      "novel_files_snapshotted": [
+        "docs/SM_ACTIVE_WEINBERG_OPERATOR_UNIQUENESS_THEOREM_NOTE_2026-04-26.md"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__sm-weinberg-operator-proof-2026-04-26/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "codex/target3-coframe-derivation",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 43.08,
+      "last_commit_iso": "2026-04-25T13:01:12-04:00",
+      "last_commit_subject": "planck: derive target3 coframe response",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_planck_target3_coframe_response_derivation.py"
+      ],
+      "pair_classification": "is_codex_review_or_land",
+      "snapshot_path": "archive_unlanded/codex__target3-coframe-derivation/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "koide-closure-targets-AB",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 38.57,
+      "last_commit_iso": "2026-04-25T17:32:10-04:00",
+      "last_commit_subject": "koide: address review #3 documentation cleanups + record APPROVED verdict",
+      "novel_file_count": 14,
+      "novel_files_snapshotted": [
+        "REVIEW_HOSTILE_FINDINGS_2026-04-25.md",
+        "REVIEW_HOSTILE_FINDINGS_REVIEW_3_2026-04-25.md",
+        "docs/CL3_N_COLOR_EQUALS_N_GEN_SHARED_D3_ORIGIN_THEOREM_NOTE_2026-04-25.md",
+        "docs/CL3_YUKAWA_CASIMIR_DIFFERENCE_BRIDGE_CANDIDATE_NOTE_2026-04-25.md",
+        "docs/KOIDE_DELTA_2_OVER_9_CHAIN_AUDIT_NOTE_2026-04-25.md",
+        "docs/KOIDE_DELTA_2_OVER_9_RAD_FINAL_CLOSURE_NOTE_2026-04-25.md",
+        "docs/KOIDE_DELTA_2_OVER_9_RAD_REVIEW_RESPONSE_NOTE_2026-04-25.md",
+        "docs/KOIDE_Q_CLOSURE_VIA_OBSERVABLE_PRINCIPLE_LOCALITY_THEOREM_NOTE_2026-04-25.md",
+        "docs/KOIDE_Q_UNCONDITIONAL_CLOSURE_VIA_Q_SO2_INVARIANCE_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_cl3_n_color_equals_n_gen_shared_d3_origin.py",
+        "scripts/frontier_cl3_yukawa_casimir_difference_bridge_candidate.py",
+        "scripts/frontier_koide_delta_2_over_9_rad_final_closure.py",
+        "scripts/frontier_koide_q_closure_via_observable_principle_locality.py",
+        "scripts/frontier_koide_q_unconditional_closure_via_q_so2_invariance.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/koide-closure-targets-AB/",
+      "unmerged_commits": 7
+    },
+    {
+      "branch": "koide-closure-targets-AB-v2",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 37.97,
+      "last_commit_iso": "2026-04-25T18:07:59-04:00",
+      "last_commit_subject": "koide: close Q_l = 2/3 via OP local-source protocol + canonical descent (post-Codex-landings)",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/KOIDE_Q_CLOSURE_VIA_OP_LOCAL_DESCENT_PROTOCOL_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_koide_q_closure_via_op_local_descent_protocol.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/koide-closure-targets-AB-v2/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "koide-q-closure-via-op-uniqueness",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 35.13,
+      "last_commit_iso": "2026-04-25T20:58:16-04:00",
+      "last_commit_subject": "Add Codex review for Koide Q OP closure",
+      "novel_file_count": 3,
+      "novel_files_snapshotted": [
+        "docs/KOIDE_Q_CLOSURE_VIA_OP_UNIQUE_GENERATOR_DOMAIN_THEOREM_NOTE_2026-04-25.md",
+        "review.md",
+        "scripts/frontier_koide_q_closure_via_op_unique_generator_domain.py"
+      ],
+      "pair_classification": "unreviewed_unlanded",
+      "snapshot_path": "archive_unlanded/koide-q-closure-via-op-uniqueness/",
+      "unmerged_commits": 2
+    },
+    {
+      "branch": "koide-q-op-uniqueness-support-v4",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 34.97,
+      "last_commit_iso": "2026-04-25T21:08:18-04:00",
+      "last_commit_subject": "koide: V4 honest support, addressing all 3 Codex V3 review findings",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/KOIDE_Q_OP_UNIQUENESS_SOURCE_DOMAIN_SUPPORT_NOTE_2026-04-25.md",
+        "scripts/frontier_koide_q_op_uniqueness_source_domain_support.py"
+      ],
+      "pair_classification": "unreviewed_unlanded",
+      "snapshot_path": "archive_unlanded/koide-q-op-uniqueness-support-v4/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "saturday-koide",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 34.77,
+      "last_commit_iso": "2026-04-25T21:20:17-04:00",
+      "last_commit_subject": "koide: V5 substantive proof advance via Frobenius reciprocity canonicality",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/KOIDE_Q_CLOSURE_VIA_FROBENIUS_RECIPROCITY_CANONICAL_MEASURE_THEOREM_NOTE_2026-04-25.md",
+        "scripts/frontier_koide_q_closure_via_frobenius_reciprocity_canonical_measure.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/saturday-koide/",
+      "unmerged_commits": 1
+    },
+    {
+      "branch": "sunday-koide",
+      "category": "has_novel_paths",
+      "last_commit_age_hours": 24.0,
+      "last_commit_iso": "2026-04-26T08:06:13-04:00",
+      "last_commit_subject": "koide: V6 substantive proof advance via lepton-side analog of CKM A\u00b2 closure",
+      "novel_file_count": 2,
+      "novel_files_snapshotted": [
+        "docs/KOIDE_Q_CLOSURE_VIA_LEPTON_ANALOG_OF_A_SQUARED_BELOW_W2_THEOREM_NOTE_2026-04-26.md",
+        "scripts/frontier_koide_q_closure_via_lepton_analog_of_a_squared_below_w2.py"
+      ],
+      "pair_classification": "reviewed_unlanded",
+      "snapshot_path": "archive_unlanded/sunday-koide/",
+      "unmerged_commits": 1
+    }
+  ],
+  "files_written": 138,
+  "generated_at": "2026-04-27T12:12:59.878422+00:00"
+}
