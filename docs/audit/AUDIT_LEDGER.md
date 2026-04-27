@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T22:14:59.296806+00:00
+**Generated:** 2026-04-27T22:19:00.351233+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 16 |
+| _proposed_retained_ | 15 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 167 |
-| ~~audited_failed~~ | 328 |
+| ~~audited_failed~~ | 329 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 72 |
 | `audited_conditional` | 137 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 74 |
+| `audited_failed` | 75 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1319 |
+| `unaudited` | 1318 |
 
 | criticality | count |
 |---|---:|
@@ -384,6 +384,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p1_delta_2_bz_computation_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p1_delta_r_master_assembly_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `yt_p1_h_unit_renormalization_framework_native_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -4896,6 +4897,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
   - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md_not_registered_one_hop_dependency`
   - `color_projection_and_CMT_endpoint_factorization_theorem_not_registered`
+- **auditor confidence:** high
+
+### `yt_p1_h_unit_renormalization_framework_native_note_2026-04-17`
+
+- **Note:** [`YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`](../../docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims a retained envelope bound |I_S^{framework}| <= 16 * |1 - 1/<P>|^{-1} = 23.35, so the cited I_S in [4,10] is structurally compatible with the framework-native H_unit reduction.  _(class `B`)_
+- **chain closes:** False — The runner verifies symbolic diagram bookkeeping and evaluates the proposed envelope formula, but it does not derive an inequality bounding the tadpole-subtracted BZ integral. The note also leaves the actual I_S^{taste}, I_S^{Wilson}, and I_S^{mix} quadrature open.
+- **rationale:** Issue: the load-bearing retained envelope |I_S^{framework}| <= 23.35 is asserted from u_0 and <P>, but neither the note nor the runner proves that this formula bounds the singular tadpole-subtracted Brillouin-zone integral; the runner only computes the proposed closed form and checks that the cited [4,10] interval lies inside it. Why this blocks: a framework-native retained bound on I_S requires either an analytic bound after the D14 tadpole subtraction and MSbar subtraction, or an explicit 4D quadrature of I_S^{taste}, I_S^{Wilson}, and I_S^{mix}; interval containment under an assumed envelope is not a derivation. Repair target: prove the regulator-subtracted BZ-integrand inequality from the retained propagators, tadpole split, and canonical plaquette input, or replace the envelope with a runner that performs the framework-native quadrature and uncertainty control; also audit the cited action, plaquette, tadpole, and Ward parents. Claim boundary until fixed: safe to claim symbolic diagram/Feynman-rule bookkeeping and the arithmetic fact that the proposed formula evaluates to 23.3507 and contains [4,10]; not safe to claim a retained framework-native bound or closed H_unit 1-loop renormalization.
+- **open / conditional deps cited:**
+  - `MINIMAL_AXIOMS_2026-04-11.md`
+  - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md`
+  - `YT_VERTEX_POWER_DERIVATION.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
 - **auditor confidence:** high
 
 ### `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17`

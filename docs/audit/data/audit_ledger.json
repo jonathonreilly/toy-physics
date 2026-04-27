@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T22:14:59.085330+00:00",
-  "generated_at": "2026-04-27T22:14:57.381786+00:00",
-  "invalidation_run_at": "2026-04-27T22:14:59.025450+00:00",
+  "effective_status_computed_at": "2026-04-27T22:19:00.139333+00:00",
+  "generated_at": "2026-04-27T22:18:58.444050+00:00",
+  "invalidation_run_at": "2026-04-27T22:19:00.086633+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T22:14:58.917242+00:00",
+  "load_bearing_computed_at": "2026-04-27T22:18:59.975622+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -85905,15 +85905,21 @@
       "verdict_rationale": "Issue: the registered runner is a valid deterministic SM-RGE arithmetic check, but the retained cross-validation conclusion is conditional on a large set of unregistered authorities and on the interpretive claim that the 95.6% direct-comparison gap is orthogonal to the M_Pl scheme-conversion Delta_R rather than a failed comparator. Why this blocks: from the audit packet alone, a hostile auditor can verify that backward SM RGE gives y_t/g_s(M_Pl)=0.78510 and that it does not equal Ward*(1+Delta_R)=0.3949; the packet cannot independently validate the v-scale color projection, CMT endpoint, P2 M decomposition, QFP envelope, Delta_i inputs, or the orthogonality theorem that turns that failed direct comparison into support for Delta_R. Repair target: register the Ward, Delta_i/Delta_R, zero-import boundary, P2 v-matching, QFP-envelope, color-projection, CMT endpoint, and canonical -3.77% BZ-quadrature authorities as one-hop dependencies, and update the runner to consume their outputs, test both -3.27% and canonical -3.77% surfaces explicitly, and assert a derived factorization theorem explaining why the direct M_Pl ratio comparison is not the relevant observable. Claim boundary until fixed: it is safe to claim a conditional numerical cross-check: given the framework primary-chain v-boundaries and accepted v-scale matching factorization, the SM 2-loop backward integration is reproducible and does not by itself falsify the chosen Delta_R scheme-conversion interpretation; it is not an audited retained independent validation of Delta_R or of the full lattice-to-SM translation."
     },
     "yt_p1_h_unit_renormalization_framework_native_note_2026-04-17": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.431,
+        "transitive_descendants": 121
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies symbolic diagram bookkeeping and evaluates the proposed envelope formula, but it does not derive an inequality bounding the tadpole-subtracted BZ integral. The note also leaves the actual I_S^{taste}, I_S^{Wilson}, and I_S^{mix} quadrature open.",
       "claim_id": "yt_p1_h_unit_renormalization_framework_native_note_2026-04-17",
       "criticality": "high",
       "cross_confirmation": null,
@@ -85922,18 +85928,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 7.431,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note claims a retained envelope bound |I_S^{framework}| <= 16 * |1 - 1/<P>|^{-1} = 23.35, so the cited I_S in [4,10] is structurally compatible with the framework-native H_unit reduction.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "350905578df4d760221fc8a142278b3e3bba22d19ff802908b2e2f1fd3831a09",
       "note_path": "docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/MINIMAL_AXIOMS_2026-04-11.md",
+        "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
+        "docs/YT_VERTEX_POWER_DERIVATION.md",
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370325+00:00",
@@ -86000,16 +86011,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 36,
+        "B": 12,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 48
       },
       "runner_path": "scripts/frontier_yt_p1_h_unit_renormalization.py",
       "title": "P1 H_unit 1-Loop Renormalization: Framework-Native Symbolic Reduction",
       "transitive_descendants": 121,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the load-bearing retained envelope |I_S^{framework}| <= 23.35 is asserted from u_0 and <P>, but neither the note nor the runner proves that this formula bounds the singular tadpole-subtracted Brillouin-zone integral; the runner only computes the proposed closed form and checks that the cited [4,10] interval lies inside it. Why this blocks: a framework-native retained bound on I_S requires either an analytic bound after the D14 tadpole subtraction and MSbar subtraction, or an explicit 4D quadrature of I_S^{taste}, I_S^{Wilson}, and I_S^{mix}; interval containment under an assumed envelope is not a derivation. Repair target: prove the regulator-subtracted BZ-integrand inequality from the retained propagators, tadpole split, and canonical plaquette input, or replace the envelope with a runner that performs the framework-native quadrature and uncertainty control; also audit the cited action, plaquette, tadpole, and Ward parents. Claim boundary until fixed: safe to claim symbolic diagram/Feynman-rule bookkeeping and the arithmetic fact that the proposed formula evaluates to 23.3507 and contains [4,10]; not safe to claim a retained framework-native bound or closed H_unit 1-loop renormalization."
     },
     "yt_p1_i_s_lattice_pt_citation_note_2026-04-17": {
       "audit_date": null,
