@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T17:36:11.579251+00:00
+**Generated:** 2026-04-27T17:38:24.078128+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 62 |
-| _proposed_retained_ | 66 |
+| _proposed_retained_ | 65 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 328 |
-| ~~audited_failed~~ | 125 |
+| ~~audited_failed~~ | 126 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 62 |
 | `audited_conditional` | 115 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 58 |
+| `audited_failed` | 59 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1365 |
+| `unaudited` | 1364 |
 
 | criticality | count |
 |---|---:|
@@ -335,6 +335,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_diamond_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | F | - |
 | `shapiro_diamond_frequency_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | F | - |
 | `shapiro_five_family_portability_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `shapiro_scaling_direct_replay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -3706,6 +3707,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `SIGN_PORTABILITY_INVARIANT_NOTE.md`
   - `FOURTH_FAMILY_QUADRANT_NOTE.md`
   - `FIFTH_FAMILY_RADIAL_NOTE.md`
+- **auditor confidence:** high
+
+### `shapiro_scaling_direct_replay_note`
+
+- **Note:** [`SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`](../../docs/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The Shapiro scaling lane can close as a direct data-bearing replay: the retained s, b, and k laws are frozen from repo data, and exact zero controls remain explicit.  _(class `B`)_
+- **chain closes:** False — The replay script renders embedded rows rather than recomputing the scaling laws, while the experimental card source is unaudited/unknown and the frequency bridge dependency is audited failed.
+- **rationale:** Issue: The direct replay script is a static data renderer whose s, b, and k laws are imported from SHAPIRO_EXPERIMENTAL_CARD.md, which is unaudited/unknown, and it also cites the failed Shapiro diamond frequency bridge. Why this blocks: freezing unaudited table entries is not a retained replay unless the source card is audit-clean or the runner recomputes the laws from raw inputs with zero-control checks. Repair target: audit SHAPIRO_EXPERIMENTAL_CARD.md or replace this with a runner that directly recomputes the s, b, and k scaling sweeps and asserts the source-off and instantaneous-field controls. Claim boundary until fixed: it is safe to say the script renders the stored scaling and portable-delay tables; it is not safe to claim retained Shapiro scaling-law closure from this row.
+- **open / conditional deps cited:**
+  - `SHAPIRO_EXPERIMENTAL_CARD.md`
+  - `SHAPIRO_DIAMOND_FREQUENCY_BRIDGE_NOTE.md`
 - **auditor confidence:** high
 
 ### `sign_portability_invariant_note`

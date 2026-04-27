@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T17:36:11.393338+00:00",
-  "generated_at": "2026-04-27T17:36:09.790763+00:00",
-  "invalidation_run_at": "2026-04-27T17:36:11.345859+00:00",
+  "effective_status_computed_at": "2026-04-27T17:38:23.892148+00:00",
+  "generated_at": "2026-04-27T17:38:22.291202+00:00",
+  "invalidation_run_at": "2026-04-27T17:38:23.845436+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T17:36:11.238527+00:00",
+  "load_bearing_computed_at": "2026-04-27T17:38:23.749836+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -68356,14 +68356,21 @@
       "verdict_rationale": null
     },
     "shapiro_scaling_direct_replay_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The replay script renders embedded rows rather than recomputing the scaling laws, while the experimental card source is unaudited/unknown and the frequency bridge dependency is audited failed.",
       "claim_id": "shapiro_scaling_direct_replay_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -68371,18 +68378,21 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The Shapiro scaling lane can close as a direct data-bearing replay: the retained s, b, and k laws are frozen from repo data, and exact zero controls remain explicit.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "d25f316ad821184d6e20fd64107a7afecc870103efe739f1f7d062409ad1639a",
       "note_path": "docs/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/SHAPIRO_EXPERIMENTAL_CARD.md",
+        "docs/SHAPIRO_DIAMOND_FREQUENCY_BRIDGE_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369645+00:00",
@@ -68420,7 +68430,7 @@
       "runner_path": null,
       "title": "Shapiro Scaling Direct Replay Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The direct replay script is a static data renderer whose s, b, and k laws are imported from SHAPIRO_EXPERIMENTAL_CARD.md, which is unaudited/unknown, and it also cites the failed Shapiro diamond frequency bridge. Why this blocks: freezing unaudited table entries is not a retained replay unless the source card is audit-clean or the runner recomputes the laws from raw inputs with zero-control checks. Repair target: audit SHAPIRO_EXPERIMENTAL_CARD.md or replace this with a runner that directly recomputes the s, b, and k scaling sweeps and asserts the source-off and instantaneous-field controls. Claim boundary until fixed: it is safe to say the script renders the stored scaling and portable-delay tables; it is not safe to claim retained Shapiro scaling-law closure from this row."
     },
     "shapiro_scaling_note": {
       "audit_date": null,
