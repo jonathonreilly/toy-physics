@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T19:35:31.063381+00:00",
-  "generated_at": "2026-04-27T19:35:29.462361+00:00",
-  "invalidation_run_at": "2026-04-27T19:35:31.013222+00:00",
+  "effective_status_computed_at": "2026-04-27T19:37:02.671244+00:00",
+  "generated_at": "2026-04-27T19:37:01.076904+00:00",
+  "invalidation_run_at": "2026-04-27T19:37:02.624203+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T19:35:30.916184+00:00",
+  "load_bearing_computed_at": "2026-04-27T19:37:02.527653+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -80726,14 +80726,21 @@
       "verdict_rationale": "Issue: the note promotes the matrix-free solver as a strong drop-in replacement, but the runner only demonstrates small finite mismatches at two geometries and explicitly reports that identity is not proven. Why this blocks: without a stated tolerance or convergence/equivalence theorem, the audit can certify numerical closeness but cannot certify replacement status as a retained engine equivalence. Repair target: add an audited acceptance criterion for drop-in replacement, such as field and propagated-response tolerances tied to solver residuals, or prove both algorithms converge to the same finite-grid Poisson solution with a runner pass/fail threshold. Claim boundary until fixed: safe to claim that at H = 0.35 and H = 0.25 the direct and matrix-free fields agree to roughly 1e-5 relative field mismatch and propagated dS agrees to roughly 1e-6; not safe to claim unconditional retained drop-in replacement beyond those numerical tests."
     },
     "wave_static_single_source_compare_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live runner reproduces both retained frozen-source tables, including all comparator shifts, relative mismatches, and static residuals. The note scopes the result as a smoke test rather than a continuum or all-source-position claim.",
       "claim_id": "wave_static_single_source_compare_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -80741,13 +80748,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "At coarse H = 0.5, frozen-source comparator quality is source-position dependent: off-center z_phys = 3.0 already shows poor cached comparator agreement while on-axis z_phys = 0.0 is much better for dIeq.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "e0caa202151dc7217bc7f967413327336819b70c13bcaec57287b067c661abc2",
@@ -80783,14 +80790,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 20,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 20
       },
       "runner_path": null,
       "title": "Wave Static Single-Source Compare",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The runner supports the note's narrow diagnostic. For z_phys = 3.0, dS tracks dM closely while cached and Newton-style comparators are poor; for z_phys = 0.0, dIeq nearly matches dM while dN remains poor. This cleanly supports the bounded conclusion that the mismatch is not purely a moving-source artifact and that comparator quality depends on source position."
     },
     "weak_coupling_retention_note_2026-04-11": {
       "audit_date": "2026-04-26",
