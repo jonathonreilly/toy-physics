@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T06:12:07.546145+00:00",
-  "generated_at": "2026-04-27T06:12:05.726943+00:00",
-  "invalidation_run_at": "2026-04-27T06:12:07.484239+00:00",
+  "effective_status_computed_at": "2026-04-27T06:14:29.867595+00:00",
+  "generated_at": "2026-04-27T06:14:28.062968+00:00",
+  "invalidation_run_at": "2026-04-27T06:14:29.804589+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T06:12:07.358452+00:00",
+  "load_bearing_computed_at": "2026-04-27T06:14:29.680508+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -6148,8 +6148,8 @@
       "load_bearing_score": 10.87,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
-      "max_descendant_status": "bounded",
-      "max_descendant_status_rank": 60,
+      "max_descendant_status": "unknown",
+      "max_descendant_status_rank": 30,
       "note_hash": "950f699e10921f2d0ac100b2d1b53886c5f99e284578dd6b9778ddc7ef02496b",
       "note_path": "docs/BH_ENTROPY_DERIVED_NOTE.md",
       "open_dependency_paths": [],
@@ -36400,8 +36400,8 @@
         "weak_coupling_retention_note_2026-04-11"
       ],
       "direct_in_degree": 3,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:weak_coupling_retention_note_2026-04-11",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 5.5,
@@ -36445,7 +36445,7 @@
         "gravity_sign_audit_2026-04-10"
       ],
       "direct_in_degree": 2,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "inherited_from:irregular_directional_observable_note_2026-04-11",
       "independence": null,
       "intrinsic_status": "bounded",
@@ -77520,14 +77520,21 @@
       "verdict_rationale": null
     },
     "weak_coupling_retention_note_2026-04-11": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "medium",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 5.587,
+        "transitive_descendants": 16
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner supports the finite shell-margin and norm claims, but the registered runner path is stale and the retained wording still depends on a finite selected graph/seed/coupling surface and graph-native shell-force proxy rather than a theorem for admissible irregular graphs.",
       "claim_id": "weak_coupling_retention_note_2026-04-11",
       "criticality": "medium",
       "current_status": "proposed_retained",
@@ -77535,18 +77542,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 3,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 5.587,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "At weak coupling (G=5,10), attractive parity coupling produces a uniformly larger shell-force TOWARD count than repulsive parity coupling across the audited irregular graph surface (60/60 runs), with a minimum separation of 10/40 steps and exact norm conservation.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "cb8dbaed5e9a546f96a4eae1233ece494eced80f15e69aaa296ef44a6626cce5",
       "note_path": "docs/WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "frontier_weak_coupling_retained.py_registered_runner_path_missing_expected_scripts_prefix",
+        "finite_graph_seed_coupling_surface_no_admissible_graph_theorem",
+        "shell_force_proxy_to_coordinate_force_or_gravity_closure_not_derived",
+        "spectral_gap_secondary_count_live_stale_relative_to_note"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370194+00:00",
@@ -77584,7 +77596,7 @@
       "runner_path": "frontier_weak_coupling_retained.py",
       "title": "Weak-Coupling Retention Note",
       "transitive_descendants": 16,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the finite runner verifies shell ordered 60/60, shell margin >=10 on 60/60, and norm conservation 60/60, but the note promotes this selected audit surface to a retained weak-coupling sign-sensitive regime while the registered runner path is wrong and the secondary gap count is live-stale at 54/60. Why this blocks: a hostile auditor can accept the finite shell-margin table but cannot infer a theorem for admissible irregular bipartite graphs, a coordinate-force closure, or a stable secondary spectral-gap row from the current packet. Repair target: fix the registered runner path, add explicit runner assertions for the retained shell-margin/norm gates, archive deterministic output, and derive or register an admissible-graph/shell-force theorem explaining why the selected families, seeds, G values, and threshold margin define a retained regime rather than a finite audit panel. Claim boundary until fixed: it is safe to claim that on the frozen 60-run surface (three graph families, two sizes, seeds 42-46, G=5 and 10), attractive parity coupling has larger TOWARD shell count than repulsive coupling with margin >=10/40 in every run and exact norm conservation; width and spectral-gap observables remain supporting only."
     },
     "weak_coupling_sign_sensitivity_note_2026-04-11": {
       "audit_date": null,
@@ -78978,8 +78990,8 @@
         "irregular_directional_observable_note_2026-04-11"
       ],
       "direct_in_degree": 0,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:irregular_directional_observable_note_2026-04-11",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 0.0,

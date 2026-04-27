@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T06:12:07.812394+00:00
+**Generated:** 2026-04-27T06:14:30.123302+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,28 +20,28 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 240 |
+| _proposed_retained_ | 239 |
 | _proposed_promoted_ | 6 |
 | bounded | 184 |
 | support | 101 |
 | open | 11 |
-| unknown | 734 |
+| unknown | 731 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 252 |
+| ~~audited_conditional~~ | 256 |
 | ~~audited_failed~~ | 59 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
-| `audited_conditional` | 50 |
+| `audited_conditional` | 51 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 2 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1532 |
+| `unaudited` | 1531 |
 
 | criticality | count |
 |---|---:|
@@ -151,6 +151,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_radiation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_retardation_continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_retarded_gravity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `weak_coupling_retention_note_2026-04-11` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `yt_ew_delta_r_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1225,6 +1226,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `c_infinity_instantaneous_comparator_theorem_not_registered`
   - `single_velocity_and_single_translation_path_only`
   - `Born_residual_headline_stale_relative_to_live_runner`
+- **auditor confidence:** high
+
+### `weak_coupling_retention_note_2026-04-11`
+
+- **Note:** [`WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md`](../../docs/WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** At weak coupling (G=5,10), attractive parity coupling produces a uniformly larger shell-force TOWARD count than repulsive parity coupling across the audited irregular graph surface (60/60 runs), with a minimum separation of 10/40 steps and exact norm conservation.  _(class `C`)_
+- **chain closes:** False — The live runner supports the finite shell-margin and norm claims, but the registered runner path is stale and the retained wording still depends on a finite selected graph/seed/coupling surface and graph-native shell-force proxy rather than a theorem for admissible irregular graphs.
+- **rationale:** Issue: the finite runner verifies shell ordered 60/60, shell margin >=10 on 60/60, and norm conservation 60/60, but the note promotes this selected audit surface to a retained weak-coupling sign-sensitive regime while the registered runner path is wrong and the secondary gap count is live-stale at 54/60. Why this blocks: a hostile auditor can accept the finite shell-margin table but cannot infer a theorem for admissible irregular bipartite graphs, a coordinate-force closure, or a stable secondary spectral-gap row from the current packet. Repair target: fix the registered runner path, add explicit runner assertions for the retained shell-margin/norm gates, archive deterministic output, and derive or register an admissible-graph/shell-force theorem explaining why the selected families, seeds, G values, and threshold margin define a retained regime rather than a finite audit panel. Claim boundary until fixed: it is safe to claim that on the frozen 60-run surface (three graph families, two sizes, seeds 42-46, G=5 and 10), attractive parity coupling has larger TOWARD shell count than repulsive coupling with margin >=10/40 in every run and exact norm conservation; width and spectral-gap observables remain supporting only.
+- **open / conditional deps cited:**
+  - `frontier_weak_coupling_retained.py_registered_runner_path_missing_expected_scripts_prefix`
+  - `finite_graph_seed_coupling_surface_no_admissible_graph_theorem`
+  - `shell_force_proxy_to_coordinate_force_or_gravity_closure_not_derived`
+  - `spectral_gap_secondary_count_live_stale_relative_to_note`
 - **auditor confidence:** high
 
 ### `yt_ew_color_projection_theorem`
