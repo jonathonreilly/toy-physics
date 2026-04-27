@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T02:46:40.501470+00:00",
-  "generated_at": "2026-04-27T02:46:38.655867+00:00",
-  "invalidation_run_at": "2026-04-27T02:46:40.448258+00:00",
+  "effective_status_computed_at": "2026-04-27T02:49:22.390103+00:00",
+  "generated_at": "2026-04-27T02:49:20.625704+00:00",
+  "invalidation_run_at": "2026-04-27T02:49:22.335691+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T02:46:40.235947+00:00",
+  "load_bearing_computed_at": "2026-04-27T02:49:22.217115+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -18351,7 +18351,7 @@
       ],
       "direct_in_degree": 4,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_z3_texture_factor_theorem_note_2026-04-15",
+      "effective_status_reason": "inherited_from:dm_neutrino_schur_suppression_theorem_note_2026-04-15",
       "independence": null,
       "intrinsic_status": "support",
       "load_bearing_score": 9.14,
@@ -18479,7 +18479,7 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:neutrino_majorana_endpoint_exchange_midpoint_theorem_note",
+      "effective_status_reason": "inherited_from:dm_neutrino_schur_suppression_theorem_note_2026-04-15",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 9.65,
@@ -19589,14 +19589,21 @@
       "verdict_rationale": null
     },
     "dm_neutrino_schur_suppression_theorem_note_2026-04-15": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27T02:49:08.455539+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 8.16,
+        "transitive_descendants": 142
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the local Schur complement algebra for the specified matrices, but the retained conclusion imports unregistered assumptions about the weak-axis local lane, Gamma_1 bridge, bosonic normalization, and DM staircase mapping.",
       "claim_id": "dm_neutrino_schur_suppression_theorem_note_2026-04-15",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -19604,18 +19611,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 2,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 8.16,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Assume the retained weak-axis local Higgs family, exact selector potential, direct Gamma_1 bridge, and bosonic-normalization theorem selecting j = g_weak/sqrt(2); then y_nu^eff = j^2 / 32 = g_weak^2 / 64.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "b403233e43aa76736efe859b7b797d4917bea240119b19a00111d5414389c0c9",
       "note_path": "docs/DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "weak_axis_local_higgs_family_dependency_not_registered",
+        "gamma_1_direct_bridge_dependency_not_registered",
+        "bosonic_normalization_dependency_not_registered",
+        "dm_staircase_relation_dependency_not_registered"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368129+00:00",
@@ -19669,16 +19681,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 13,
+        "B": 3,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 16
       },
       "runner_path": "scripts/frontier_dm_neutrino_schur_suppression_theorem.py",
       "title": "DM Neutrino Schur Suppression Theorem",
       "transitive_descendants": 142,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The exact Schur identity is proved for the chosen local block, but the theorem's retained claim depends on unregistered upstream inputs: the retained weak-axis Higgs family, the direct post-EWSB Gamma_1 bridge, the bosonic-normalization result j = g_weak/sqrt(2), and the staircase conversion from y_eff to k_eff. Why this blocks: Without those dependencies in the audit packet and clean in the ledger, the result is conditional algebra on selected inputs rather than an independently retained local neutrino suppression theorem. Repair target: Register clean dependency notes for the selector curvature, Gamma_1 bridge, bosonic normalization, and DM staircase relation, and make the runner read or compute those declared inputs while separating the exact Schur complement theorem from the downstream k_eff comparison. Claim boundary until fixed: It is safe to claim that for the specified projectors and block M(m,j), the Schur return gives j^2/m and therefore gives g_weak^2/64 if m = 32 and j = g_weak/sqrt(2); it is not audit-retained as a closed DM denominator result."
     },
     "dm_neutrino_singlet_doublet_cp_slot_tool_note_2026-04-15": {
       "audit_date": null,
