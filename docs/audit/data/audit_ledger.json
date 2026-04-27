@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T10:54:03.577376+00:00",
-  "generated_at": "2026-04-27T10:54:01.546077+00:00",
-  "invalidation_run_at": "2026-04-27T10:54:03.497188+00:00",
+  "effective_status_computed_at": "2026-04-27T10:55:50.441210+00:00",
+  "generated_at": "2026-04-27T10:55:48.254915+00:00",
+  "invalidation_run_at": "2026-04-27T10:55:50.372139+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T10:54:03.359343+00:00",
+  "load_bearing_computed_at": "2026-04-27T10:55:50.206869+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -26008,14 +26008,21 @@
       "verdict_rationale": "The source note's retained statement is bounded to a representability test under an explicitly sign-flipped scalar phase coupling on one fixed ordered-lattice family. The live runner output matches the frozen qualitative replay: like-charge cases have negative centroid shifts, unlike-charge cases have positive centroid shifts, and neutral cases are zero to printed precision. The note's referenced frozen log is absent from this worktree, which should be repaired as an archival artifact, but the live finite computation is enough to close the narrow sign-law claim audited here."
     },
     "electrostatics_card_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The frozen log is present and the live named runner reproduces the note's numerical surface exactly to the printed precision for all five target observables. The closure is only for the finite scalar electrostatic-like card, with Maxwell, gauge, magnetic, and radiation claims explicitly excluded.",
       "claim_id": "electrostatics_card_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -26023,13 +26030,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the fixed ordered 3D lattice, the scalar sign-coupled source field produces sign antisymmetry, exact same-node opposite-charge cancellation, dipole orientation sign flip, near-linear charge scaling, and strong symmetric-shell screening attenuation.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "dab2944b2b5dc6a4280ec3c3869f6083a5eb2afc25a080a944ea9f77710b8103",
@@ -26065,14 +26072,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 5,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 5
       },
       "runner_path": null,
       "title": "Electrostatics Card Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The source note makes a bounded scalar sign-law claim and keeps the physical scope explicit: it does not assert a vector field, Maxwell equations, magnetic effects, or radiation. The live runner recomputes the stated ordered-lattice card and matches the frozen result: like/unlike signs are antisymmetric, the same-node +1/-1 source cancels to zero, the dipole orientation reverses the response sign, the fitted charge exponent is 1.000, and the screening ratio is 0.018. Residual risk is only the stated finite-probe scope, not a break in the presented chain."
     },
     "electrostatics_grown_sign_law_note": {
       "audit_date": "2026-04-26",
