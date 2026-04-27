@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:53:36.066322+00:00",
-  "generated_at": "2026-04-27T04:53:34.105810+00:00",
-  "invalidation_run_at": "2026-04-27T04:53:35.999533+00:00",
+  "effective_status_computed_at": "2026-04-27T04:55:48.245956+00:00",
+  "generated_at": "2026-04-27T04:55:46.448771+00:00",
+  "invalidation_run_at": "2026-04-27T04:55:48.186881+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:53:35.864220+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:55:48.063780+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -37719,14 +37719,21 @@
       "verdict_rationale": null
     },
     "koide_delta_marked_relative_cobordism_no_go_note_2026-04-24": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 8.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner proves the linear-algebra consequence of a scalar mark: lambda I cannot select a unique rank-one line, and endpoint shifts leave c unfixed. It does not derive from registered one-hop retained Wilson/APS data that the only available derived boundary mark is scalar on the relevant multiplicity space.",
       "claim_id": "koide_delta_marked_relative_cobordism_no_go_note_2026-04-24",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -37734,18 +37741,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 3,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 8.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the relevant rank-two zero-mode character multiplicity space, the retained Wilson/APS data act as lambda I, so the derived mark commutes with every candidate rank-one selector and has the same expectation on every line.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "5efc6429e7daf0bd4054880761a95c1f72625cc6454c78ca738f9123b5aaea97",
       "note_path": "docs/KOIDE_DELTA_MARKED_RELATIVE_COBORDISM_NO_GO_NOTE_2026-04-24.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "retained_Wilson_APS_scalar_action_on_rank_two_zero_mode_multiplicity_theorem_not_registered",
+        "rank_two_zero_mode_character_multiplicity_space_construction_not_registered",
+        "derived_boundary_mark_exhaustion_theorem_not_registered",
+        "based_endpoint_section_no_go_theorem_or_boundary_section_theorem_not_registered",
+        "frontier_koide_lane_regression.py_rc_1_due_to_frontier_koide_q_so2_phase_erasure_support_22_of_23"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368783+00:00",
@@ -37774,16 +37787,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 14,
+        "B": 1,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 15
       },
       "runner_path": "scripts/frontier_koide_delta_marked_relative_cobordism_no_go.py",
       "title": "Koide delta marked-relative-cobordism no-go",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the no-go's decisive premise is that the derived retained Wilson/APS boundary mark restricts to lambda I on the rank-two zero-mode character multiplicity space. Why this blocks: the primary runner hard-codes retained_mark = lambda I and then checks the downstream commutator, expectation-value, endpoint-shift, and countermodel algebra; it does not construct the Wilson/APS operators, prove the multiplicity-space representation, or exhaust retained boundary marks from registered authorities. Repair target: register and run a theorem deriving the rank-two zero-mode multiplicity space and proving that every retained Wilson/APS-derived mark acts scalar there, or else exhibit a retained non-scalar mark and revise the no-go. Claim boundary until fixed: it is safe to claim the conditional obstruction that a scalar derived mark plus unbased endpoint section cannot select the Brannen line or force c=0; it is not yet an audited retained theorem that retained Wilson/APS data alone force that scalar-mark situation."
     },
     "koide_dimensionless_objection_closure_review_packet_2026-04-24": {
       "audit_date": "2026-04-26",

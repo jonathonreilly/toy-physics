@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T04:53:36.348527+00:00
+**Generated:** 2026-04-27T04:55:48.576596+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 259 |
+| _proposed_retained_ | 258 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -28,18 +28,18 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 734 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 3 |
-| ~~audited_conditional~~ | 237 |
+| ~~audited_conditional~~ | 238 |
 | ~~audited_failed~~ | 58 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
-| `audited_conditional` | 35 |
+| `audited_conditional` | 36 |
 | `audited_decoration` | 1 |
 | `audited_failed` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1552 |
+| `unaudited` | 1551 |
 
 | criticality | count |
 |---|---:|
@@ -117,6 +117,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higgs_mass_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_dimensionless_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_zero_section_nature_review_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -485,6 +486,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `fractional_topology_no_go_probe_bundle_not_registered`
   - `equivariant_index_A1_no_go_authority_not_registered`
   - `minimal_heat_kernel_multitrace_no_go_authority_not_registered`
+- **auditor confidence:** high
+
+### `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24`
+
+- **Note:** [`KOIDE_DELTA_MARKED_RELATIVE_COBORDISM_NO_GO_NOTE_2026-04-24.md`](../../docs/KOIDE_DELTA_MARKED_RELATIVE_COBORDISM_NO_GO_NOTE_2026-04-24.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the relevant rank-two zero-mode character multiplicity space, the retained Wilson/APS data act as lambda I, so the derived mark commutes with every candidate rank-one selector and has the same expectation on every line.  _(class `B`)_
+- **chain closes:** False — The runner proves the linear-algebra consequence of a scalar mark: lambda I cannot select a unique rank-one line, and endpoint shifts leave c unfixed. It does not derive from registered one-hop retained Wilson/APS data that the only available derived boundary mark is scalar on the relevant multiplicity space.
+- **rationale:** Issue: the no-go's decisive premise is that the derived retained Wilson/APS boundary mark restricts to lambda I on the rank-two zero-mode character multiplicity space. Why this blocks: the primary runner hard-codes retained_mark = lambda I and then checks the downstream commutator, expectation-value, endpoint-shift, and countermodel algebra; it does not construct the Wilson/APS operators, prove the multiplicity-space representation, or exhaust retained boundary marks from registered authorities. Repair target: register and run a theorem deriving the rank-two zero-mode multiplicity space and proving that every retained Wilson/APS-derived mark acts scalar there, or else exhibit a retained non-scalar mark and revise the no-go. Claim boundary until fixed: it is safe to claim the conditional obstruction that a scalar derived mark plus unbased endpoint section cannot select the Brannen line or force c=0; it is not yet an audited retained theorem that retained Wilson/APS data alone force that scalar-mark situation.
+- **open / conditional deps cited:**
+  - `retained_Wilson_APS_scalar_action_on_rank_two_zero_mode_multiplicity_theorem_not_registered`
+  - `rank_two_zero_mode_character_multiplicity_space_construction_not_registered`
+  - `derived_boundary_mark_exhaustion_theorem_not_registered`
+  - `based_endpoint_section_no_go_theorem_or_boundary_section_theorem_not_registered`
+  - `frontier_koide_lane_regression.py_rc_1_due_to_frontier_koide_q_so2_phase_erasure_support_22_of_23`
 - **auditor confidence:** high
 
 ### `koide_dimensionless_objection_closure_review_packet_2026-04-24`
