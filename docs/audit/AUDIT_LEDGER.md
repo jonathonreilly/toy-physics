@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T04:28:50.600693+00:00
+**Generated:** 2026-04-27T04:31:55.039430+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 3 |
-| _proposed_retained_ | 269 |
+| _proposed_retained_ | 268 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -28,16 +28,16 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 734 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 3 |
-| ~~audited_conditional~~ | 288 |
+| ~~audited_conditional~~ | 289 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 3 |
-| `audited_conditional` | 29 |
+| `audited_conditional` | 30 |
 | `audited_decoration` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1562 |
+| `unaudited` | 1561 |
 
 | criticality | count |
 |---|---:|
@@ -125,6 +125,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `wave_retardation_continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
+| `yt_ew_delta_r_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
@@ -685,6 +686,33 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The failed step is the assertion that the physical EW coupling extraction should replace the total color trace N_c by the connected color trace N_c(N_c^2-1)/N_c^2; no one-hop retained theorem or registered runner derives that matching/readout rule, and the source note's R_conn input is stated as leading-order 1/N_c with O(1/N_c^4) corrections. Why this blocks: A proposed_retained universal 9/8 correction to physical EW couplings cannot follow from an asserted normalization convention or from a leading-order corrected quantity; the exact Fierz and CMT algebra leave the connected-trace value and the physical readout selection as independent premises. Repair target: Add a retained theorem deriving the lattice-to-continuum EW current matching from Cl(3)/Z^3 primitives, register the R_conn authority as a one-hop dependency if it remains load-bearing, and provide a runner that computes the connected two-vertex observable/matching factor rather than applying 8/9. Claim boundary until fixed: It is safe to claim that CMT alone cannot produce 9/8, that 8/9 is a motivated connected-color-trace/large-N_c matching ansatz with controlled corrections, and that applying it improves the quoted g_1 and g_2 numerics.
 - **open / conditional deps cited:**
   - `RCONN_DERIVED_NOTE.md`
+- **auditor confidence:** high
+
+### `yt_ew_delta_r_retention_analysis_note_2026-04-18`
+
+- **Note:** [`YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md`](../../docs/YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note preserves the EW lane's retained-quantitative status by applying the YT P1 Rep-A/Rep-B three-channel method to absolute electroweak gauge couplings, using Ward Z1=Z2 structure plus literature-analog BZ integrals to compute Delta_R(g2)=-2.863% and Delta_R(g1)=-0.713%, then interpreting those values as uncertainty bands around the packaged EW outputs whose PDG deviations are inside the bands rather than as additional shifts.  _(class `D`)_
+- **chain closes:** False — The runner passes 69 checks and reproduces the arithmetic for the stated EW matching-band analysis, including SU(2)/U(1) factors, alpha_i(v), literature-analog channel constants, Delta_R(g2), Delta_R(g1), propagated bands, and PDG containment. The proof chain does not close because the load-bearing inputs are not registered as clean one-hop authorities: the EW color projection/zero-import chain, Rep-A/Rep-B methodology, Ward absolute-coupling matching formula and sign convention, EW-sector BZ integrals, matching-scale choice, and the 'packaged values already include matching' no-double-counting premise. The note also contains unresolved internal numerical inconsistencies, especially sin^2(theta_W) uncertainty appearing as about 0.0038 in the checked propagation but about 0.0005/0.0006 in other text/output, and an obsolete safe-boundary pair of Delta_R values inconsistent with the runner centrals.
+- **rationale:** The computation is a valid arithmetic audit of the note's own model: with the supplied Casimirs, hypercharge sum, packaged couplings, literature BZ analogs I_SE^{gg}=2 and I_SE^{ff}=0.7, and the runner's Ward-absolute-coupling formula, the stated central values Delta_R(g2)=-2.863% and Delta_R(g1)=-0.713% and the broad retained bands follow. What blocks a retained theorem-grade claim is that those BZ integrals are not framework-native EW quadratures, the Ward/sign/scale prescription is argued in prose rather than registered as an audited input, the upstream EW package and YT P1 dependencies are unregistered in the audit row, and the use of PDG observed values makes the lane-status survival check an external comparator test. Most importantly, the note's survival conclusion requires treating Delta_R^{EW} as an uncertainty on already-matched packaged values; if the same Delta_R is applied as a shift, the note itself finds a large sin^2(theta_W) tension. Repair requires registering and auditing the upstream EW color-projection and zero-import authorities, deriving the absolute-gauge Ward matching/sign convention on the CL3 lattice, running framework-native EW-sector BZ quadrature for the relevant vertex/self-energy integrals with a documented matching scale, and proving whether the packaged g_i(v) already include that matching. The text/runner must also reconcile the sin^2(theta_W) uncertainty (0.0038 versus 0.0005/0.0006) and remove the inconsistent older Delta_R safe-boundary numbers. What can still be safely claimed is conditional: given the note's formulae and literature analog inputs, the runner arithmetic yields percent-level EW matching bands that contain the listed PDG deviations; this is not an audited sub-percent EW precision theorem and not a framework-native computation of Delta_R^{EW}.
+- **open / conditional deps cited:**
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md_not_registered_one_hop_dependency_and_prior_audited_conditional`
+  - `RCONN_DERIVED_NOTE.md_not_registered_one_hop_dependency`
+  - `YT_ZERO_IMPORT_CHAIN_NOTE.md_not_registered_one_hop_dependency`
+  - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
+  - `YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
+  - `YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md_not_registered_or_audited_conditional`
+  - `scripts/canonical_plaquette_surface.py_not_registered_one_hop_dependency`
+  - `EW_sector_vertex_and_self_energy_BZ_integrals_not_framework_native_computed`
+  - `Ward_Z1_equals_Z2_absolute_gauge_matching_formula_and_sign_convention_not_registered_as_CL3_theorem`
+  - `matching_scale_choice_alpha_i_v_vs_alpha_LM_not_closed`
+  - `packaged_EW_values_already_MSbar_matched_no_double_counting_premise_not_registered`
+  - `PDG_observed_g1_g2_sin2thetaW_alphaEM_comparators_external_inputs`
+  - `internal_sin2thetaW_uncertainty_inconsistency_0_0038_vs_0_0005_or_0_0006`
+  - `obsolete_safe_boundary_Delta_R_values_minus_0_45_percent_and_minus_0_25_percent_inconsistent_with_runner`
 - **auditor confidence:** high
 
 ### `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18`
