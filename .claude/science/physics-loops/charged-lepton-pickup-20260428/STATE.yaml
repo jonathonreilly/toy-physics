@@ -1,0 +1,44 @@
+slug: charged-lepton-pickup-20260428
+goal: "retire 3-real PDG charged-lepton mass observational pin via y_tau Ward identity (analog of retained y_t(M_Pl)/g_s(M_Pl) = 1/sqrt(6)) + Koide ratios closure (Q=2/3, delta=2/9 in flight). Phase-1 priority: y_tau Ward identity construction → absolute lepton scale V_0 retention."
+target_status: best-honest-status
+mode: run
+runtime: 6h
+deep_block: 90m
+start_time_utc: "2026-04-28T11:30:00Z"
+checkpoint_interval: 30m
+branch: frontier/charged-lepton-pickup-20260428
+base: origin/main
+base_commit_at_start: "394bf242 (current origin/main)"
+lock_status: unavailable
+lock_note: "scripts/automation_lock.py hardcodes /Users/jonreilly paths; this worktree is on /Users/jonBridger. Skipping per skill optionality."
+current_phase: grounding
+cycles_completed: 0
+audit_grade_cycles_in_a_row: 0
+last_stretch_attempt_cycle: null
+last_stuck_fanout_cycle: null
+active_route: null
+active_hard_residual: "y_tau Ward identity (analog of y_t/g_s = 1/sqrt(6)) — pins absolute lepton scale V_0; structural construction TBD"
+files_touched:
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/STATE.yaml
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/GOAL.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/ASSUMPTIONS_AND_IMPORTS.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/NO_GO_LEDGER.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/ROUTE_PORTFOLIO.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/ARTIFACT_PLAN.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/LITERATURE_BRIDGES.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/REVIEW_HISTORY.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/HANDOFF.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/PR_BACKLOG.md
+open_imports:
+  - "PDG charged-lepton masses (m_e, m_mu, m_tau) — 3-real observational pin, primary retirement target"
+  - "Y_e Yukawa structure — currently open; needs structural derivation analogous to retained y_t Ward identity"
+  - "Koide ratio structure — Q=2/3, delta=2/9 in flight; addresses ratios but not absolute scale"
+no_go_routes_inherited:
+  - "Multiple recent charged-lepton no-go notes (2026-04-26/27): typeb_radian_readout_generation_selector_no_go, op_local_source_selected_line_selector_no_go, selected_line_generation_selector_no_go, koide_ratio_source_selector_firewall, radiative_tau_selector_firewall, direct_ward_free_yukawa_no_go (2026-04-26 audited_clean)"
+  - "Older Koide cluster no-gos: A1_FRACTIONAL_TOPOLOGY_NO_GO, A1_O13_CHEEGER_SIMONS_RZ_NO_GO, DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO, DELTA_MARKED_RELATIVE_COBORDISM_NO_GO, Q_DELTA_READOUT_RETENTION_SPLIT_NO_GO, Q_DELTA_RESIDUAL_COHOMOLOGY_OBSTRUCTION_NO_GO, Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS, Q23_OH_COVARIANCE_NOGO, SELECTED_LINE_LOCAL_RADIAN_BRIDGE_NO_GO, etc."
+no_go_routes_proven_in_workstream: []
+review_findings: []
+artifacts_landed: []
+claim_state_movement: []
+next_exact_action: "Execute Cycle 1 = Lane 6 dependency audit + theorem plan. Mirror Lane 1 / Lane 4 Cycle 1 pattern. Identify y_tau Ward identity as Phase-1 target; map Koide flagship lane progress (Q, delta retentions) as Phase-1 parallel work; identify the V_0 absolute scale as the load-bearing single open number; cross-reference closed no-go cluster (extensive 2026-04-15 through 2026-04-27 series); enumerate stretch-attempt candidates for Deep Work Rules."
+stop_condition: "runtime budget reached, max cycles, blocker requiring human science judgment, honest claim-state closure achieved, OR no route passes dramatic-step gate after Deep Work Rules satisfied"
