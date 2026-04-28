@@ -1,6 +1,6 @@
 # Lane 3 Route Portfolio
 
-**Updated:** 2026-04-28T07:59:31Z
+**Updated:** 2026-04-28T08:14:45Z
 
 Scores use the physics-loop dramatic-step rubric: claim-state upgrade,
 import retirement, review-blocker closure, artifactability, novelty, hard
@@ -123,3 +123,36 @@ If no route passes after 3C-Q, emulate these frames sequentially before stop:
 Block 02 satisfied the endpoint/readout frame and partially satisfied the
 atlas-reuse/source-domain frame by checking the retained `R_conn` coincidence
 without promoting it.
+
+## Completed Route 4: 3B-R2-Source
+
+Question:
+
+```text
+Does the current exact/retained support bank already contain a typed
+source-domain bridge from R_conn to the Route-2 E/T center endpoint ratio?
+```
+
+Minimal premise set `A_min`:
+
+1. exact Route-2 support carrier `K_R`;
+2. exact restricted endpoint columns and endpoint algebra;
+3. conditional T-side candidates `rho_T = -1` and `alpha_T/alpha_E = -2`;
+4. retained `N_c = 3` and `R_conn = 8/9`;
+5. finite typed-edge inventory over the current Route-2 and SU(3) support
+   bank.
+
+Result:
+
+```text
+No current typed edge connects su3_R_conn_8_9 to route2_rho_E_21_4.
+Adding exactly the missing source-domain bridge creates the path and forces
+rho_E = 21/4. Therefore the bridge is new theorem content, not latent
+support in the current bank. Runner TOTAL PASS=33 FAIL=0.
+```
+
+Honest target status:
+
+This is an exact current-bank no-go / exact negative boundary. It sharpens
+the next 3B route to a genuinely new source-domain theorem or an alternate
+up-type scalar/readout primitive. It does not retain `m_u` or `m_c`.

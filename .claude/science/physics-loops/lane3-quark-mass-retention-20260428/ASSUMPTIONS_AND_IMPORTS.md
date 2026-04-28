@@ -1,8 +1,8 @@
 # Lane 3 Assumptions And Imports
 
-**Updated:** 2026-04-28T07:59:31Z
-**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block02-20260428`
-**Head:** block-02 working checkpoint; see `git log`
+**Updated:** 2026-04-28T08:14:45Z
+**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block03-20260428`
+**Head:** block-03 working checkpoint; see `git log`
 
 This ledger uses the physics-loop schema. It separates retained framework
 inputs, support-only bridges, comparator values, and hidden selectors that
@@ -24,6 +24,7 @@ block retained five-mass closure.
 | Up-type scalar amplitude shortlist (`7/9`, `sqrt(3/5)`, native projector laws) | Candidate law for `m_u/m_c` and related up-sector ratios | support-only / bounded candidate grammar | `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`, native-expression and affine no-go notes | yes for 3B | yes | first-principles scalar-law theorem or no-go narrowing | open |
 | Route-2 endpoint readout map entry `beta_E / alpha_E = 21/4` | Reduced missing readout primitive for up-sector endpoint law | exact boundary plus unresolved map entry | `QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`, `QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md`, `QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md` | yes for route-2 scalar law | yes if route used | derive E-center ratio `gamma_T(center)/gamma_E(center) = -8/9` or supply a new readout/source primitive | minimal naturality route closed negatively; open hard residual remains |
 | `R_conn = (N_c^2 - 1)/N_c^2 = 8/9` | Conditional source-domain bridge candidate for `gamma_T(center)/gamma_E(center) = -8/9` | retained support / conditional bridge | `RCONN_DERIVED_NOTE.md`, `QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md` | yes if used to select the E-center ratio | yes for this 3B route | prove a typed bridge from SU(3) connected color projection to the Route-2 E/T center endpoint ratio | conditional exact bridge only; source-domain identification remains open |
+| Typed current-bank edge `R_conn -> gamma_T(center)/gamma_E(center)` | Would promote the Rconn conditional bridge into an actual Route-2 source-domain theorem | missing theorem / exact current-bank no-go | `QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md` | yes for this 3B route | yes | add a new cross-domain source theorem or find an alternate readout primitive | current support bank has no typed edge; direct promotion closed negatively |
 | Species-differentiated Yukawa Ward primitive | Needed to avoid species-uniform `m_b` failure and set absolute non-top scales | unsupported import / missing theorem | `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`, Lane 3 stub | yes | yes | 3C theorem or exact no-go/demotion | open hard residual |
 | PDG quark masses | Used only to compare bounded matches and expose failure modes | observational comparator | existing quark runners and notes | no as derivation input | no for proof, yes for review context | keep comparator-only; do not import into theorem | firewall |
 | Literature QCD/RGE corrections | Standard correction context when scale/running is discussed | standard correction / literature theorem if used | down-type and YT notes | no unless a route requires it | not for zero-input closure | record in `LITERATURE_BRIDGES.md` if used | none added in this block so far |
@@ -38,6 +39,8 @@ The highest-leverage unresolved imports for this block are:
 
 1. species-differentiated Yukawa Ward primitive for 3C;
 2. up-type scalar/readout law for 3B;
-3. typed source-domain bridge for `gamma_T(center)/gamma_E(center) = -R_conn`;
+3. a new typed source-domain bridge theorem for
+   `gamma_T(center)/gamma_E(center) = -R_conn`, because the current bank lacks
+   this edge;
 4. non-perturbative `5/6` bridge plus threshold-local scale-selection theorem
    for 3A.

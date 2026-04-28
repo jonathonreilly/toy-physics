@@ -1,6 +1,6 @@
 # Lane 3 Artifact Plan
 
-**Updated:** 2026-04-28T07:59:31Z
+**Updated:** 2026-04-28T08:14:45Z
 
 ## Block 01 Artifact Set
 
@@ -54,6 +54,34 @@
    - commit coherent block artifacts;
    - push branch to `origin`;
    - create a stacked PR against block 01, or write `PR_BACKLOG.md`.
+
+## Block 03 Artifact Set
+
+1. Continue from block 02 on stacked branch
+   `physics-loop/lane3-quark-mass-retention-20260428-block03-20260428`.
+2. Execute the 3B Route-2 typed source-domain bridge stretch/no-go:
+   - note:
+     `docs/QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md`;
+   - runner:
+     `scripts/frontier_quark_route2_source_domain_bridge_no_go.py`;
+   - log:
+     `logs/2026-04-28-quark-route2-source-domain-bridge-no-go.txt`.
+3. Run focused checks:
+   - `PYTHONPATH=scripts python3 scripts/frontier_quark_route2_source_domain_bridge_no_go.py`;
+   - `python3 -m py_compile scripts/frontier_quark_route2_source_domain_bridge_no_go.py`;
+   - inherited Route-2 Rconn, naturality, exact readout, endpoint-chain runners;
+   - inherited Lane 3 firewall and quark mass-ratio review packet.
+4. Emulate review-loop:
+   - classify the result as an exact current-bank no-go / exact negative
+     boundary;
+   - verify that `R_conn` remains a conditional bridge target, not a retained
+     derivation;
+   - verify no observed quark masses, fitted Yukawa entries, or live endpoint
+     nearest-rational selections are proof inputs.
+5. Package:
+   - commit coherent block artifacts;
+   - push branch to `origin`;
+   - create a stacked PR against block 02, or write `PR_BACKLOG.md`.
 
 ## Non-Goals
 
