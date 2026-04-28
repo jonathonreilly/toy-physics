@@ -1,7 +1,7 @@
 # Family Companion Compare Note
 
-**Date:** 2026-04-06  
-**Status:** narrow cross-family comparison card for the proposed_retained fixed-companion weak-field law
+**Date:** 2026-04-06 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** support / cross-family comparison card pointing to other notes for the fixed-companion weak-field law; static summary only, no audit-registered dependency chain, no runner that recomputes controls and `F~M` values.
 
 ## Artifact Chain
 
@@ -39,3 +39,33 @@ Do the retained grown-family, alternative connectivity family, and second-family
 ## Final Verdict
 
 **retained narrow comparison positive: shared weak-field linearity, with control-surface mismatch isolated rather than averaged away**
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, leaf criticality):
+
+> Issue: the retained cross-family comparison rests on a static
+> summary of source notes, not on an audit-registered dependency
+> chain or a runner that recomputes the controls and F~M values.
+> Why this blocks: a hostile referee cannot accept a retained
+> shared-law claim while two cited families are still unaudited
+> proposed_retained and the second-family complex branch is
+> compared by gamma=0/crossover rather than the same zero/neutral
+> signed-source observable.
+
+The note has been re-tiered to `support` (cross-family comparison
+card).
+
+## What this note does NOT claim
+
+- A retained shared-law theorem.
+- That the cited families are audit-clean dependencies.
+- That the second-family complex branch was compared on the same
+  zero/neutral signed-source observable.
+
+## What would close this lane (Path A future work)
+
+A retained shared-law theorem would require auditing or registering
+the cited grown-transfer / second-family / connected-family
+authorities, plus a runner that recomputes controls and `F~M`
+values on the same signed-source observable.
