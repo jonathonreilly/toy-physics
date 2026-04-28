@@ -1,6 +1,6 @@
 # Lane 3 Review History
 
-**Updated:** 2026-04-28T08:46:53Z
+**Updated:** 2026-04-28T09:00:43Z
 
 ## Preflight Review
 
@@ -393,3 +393,59 @@ Disposition:
 - next 3C progress requires a physical source law for `c` and the remaining
   Ward coefficients, or a readout theorem mapping the cyclic Fourier strata
   to quark Yukawa channels.
+
+## Artifact Review: 3C `C3` Circulant Source-Law Boundary
+
+**Time:** 2026-04-28T09:00:43Z
+
+Artifact reviewed:
+
+- `docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_c3_circulant_source_law_boundary.py`
+- `logs/2026-04-28-quark-c3-circulant-source-law-boundary.txt`
+
+Verification:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_quark_c3_circulant_source_law_boundary.py
+TOTAL: PASS=43, FAIL=0
+
+python3 -m py_compile scripts/frontier_quark_c3_circulant_source_law_boundary.py
+PASS
+
+PYTHONPATH=scripts python3 scripts/frontier_yt_generation_hierarchy_primitive.py
+RESULT: PASS=51, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_yt_class_6_c3_breaking.py
+RESULT: PASS=43, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_koide_circulant_character_bridge.py
+PASS=9 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_koide_sqrtm_amplitude_principle.py
+PASS=11 FAIL=0
+```
+
+Review-loop emulation:
+
+1. Claim wording is bounded to exact support/boundary for a future 3C
+   source-law theorem. It does not claim retained non-top quark masses.
+2. The runner proves the Hermitian `C3` circulant family can represent any
+   real generation spectrum, so carrier status alone is not predictive.
+3. A1/P1 are kept as inherited support/open primitives: A1 gives `Q=2/3` for
+   amplitude triples, while P1 still requires a positive parent/readout
+   theorem for the physical quark Yukawa amplitudes.
+4. Species phases, relative scales, and the amplitude-vs-Yukawa dictionary
+   remain open quark-specific theorem content.
+5. Observed quark masses, fitted Yukawa entries, CKM mass inputs,
+   charged-lepton phase import, and hidden species selectors are excluded
+   from the proof.
+
+Disposition:
+
+- keep artifact;
+- claim status remains `open`;
+- next exact Lane 3 action requires deriving A1/equivalent source ratio, a
+  P1-style quark positive parent/readout theorem, sector-specific phases and
+  scales, a genuine 3A exponent/scale theorem, or a new 3B scalar/readout
+  primitive.

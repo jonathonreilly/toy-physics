@@ -1,8 +1,8 @@
 # Lane 3 Quark Mass Retention Physics Loop
 
 **Loop slug:** `lane3-quark-mass-retention-20260428`
-**Science block:** `06`
-**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block06-20260428`
+**Science block:** `07`
+**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block07-20260428`
 **Target:** best-honest-status; retained closure only if fully justified
 **Started:** 2026-04-28T07:27:25Z
 **Hard deadline:** 2026-04-28T11:27:25Z
@@ -41,14 +41,19 @@ the branch supplies decisive theorem/support artifacts and review-loop
 backpressure. Bounded companion matches, CKM closure, or species-uniform reuse
 of the top Ward identity are not enough.
 
-## Block 06 Focus
+## Block 07 Focus
 
-Blocks 01-05 packaged exact boundaries/support and opened review PRs #100,
-#101, #102, #103, and #104. Block 06 is a stacked continuation from block 05.
-Its active hard residual is the 3C source/readout primitive named by the
-generation-equivariant Ward obstruction:
+Blocks 01-06 packaged exact boundaries/support and opened review PRs #100,
+#101, #102, #103, #104, and #105. Block 07 is a stacked continuation from
+block 06. Its active hard residual is whether the inherited `C3` circulant
+generation-hierarchy mechanism can be promoted into a retained quark Ward
+source law:
 
 ```text
-oriented C3[111] Ward normal form on hw=1 and whether it can split the
-S_3 E doublet without importing quark masses.
+C3 Hermitian circulant carrier + A1/P1 support
+=> retained generation-stratified quark Yukawa Ward identities?
 ```
+
+The target is an honest source-law boundary: keep A1/P1, species phases,
+relative scales, and amplitude-vs-Yukawa readout classified as open theorem
+content unless derived from retained Lane 3 primitives.

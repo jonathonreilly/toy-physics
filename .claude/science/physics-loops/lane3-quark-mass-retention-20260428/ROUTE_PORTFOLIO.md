@@ -1,6 +1,6 @@
 # Lane 3 Route Portfolio
 
-**Updated:** 2026-04-28T08:46:53Z
+**Updated:** 2026-04-28T09:00:43Z
 
 Scores use the physics-loop dramatic-step rubric: claim-state upgrade,
 import retirement, review-blocker closure, artifactability, novelty, hard
@@ -11,6 +11,7 @@ residual pressure, and overclaim risk.
 | 3C-Q: quark direct Ward-free generation-matrix boundary | exact no-go / boundary theorem | 2 | 2 | 3 | 2 | low | execute first |
 | 3C-S3: generation-equivariant Ward degeneracy boundary | exact no-go / representation theorem | 2 | 3 | 3 | 3 | low | executed in block 05 |
 | 3C-C3: oriented cycle Ward splitter normal form | exact support/boundary theorem | 2 | 2 | 3 | 3 | low | executed in block 06 |
+| 3C-Circulant: inherited `C3` hierarchy source-law boundary | exact support/boundary theorem | 2 | 2 | 3 | 3 | low | executed in block 07 |
 | 3B-R2: route-2 endpoint readout `beta_E/alpha_E = 21/4` stretch | constructive theorem / exact runner | 3 | 3 | 2 | 3 | medium | next if time remains |
 | 3B-scalar shortlist provenance tightening | import-retirement audit / no-go | 1 | 2 | 3 | 1 | low | only after stretch |
 | 3A local `5/6` scale-selection boundary | exact negative boundary / theorem target isolation | 2 | 3 | 3 | 3 | low | executed in block 04 |
@@ -262,3 +263,39 @@ Honest target status:
 This is exact support/boundary for the missing 3C source/readout primitive.
 It retires direct promotion of oriented `C3` as mass closure: the coefficients
 `a,b,c` and the physical readout theorem remain open.
+
+## Completed Route 8: 3C-Circulant
+
+Question:
+
+```text
+Can the inherited C3 circulant hierarchy mechanism, together with A1/P1
+support from the Koide lane, be imported as retained quark Ward source law?
+```
+
+Minimal premise set `A_min`:
+
+1. retained `hw=1` generation triplet;
+2. exact induced `C3[111]` cycle;
+3. exact Hermitian circulant family `H(a,q) = a I + q C + conjugate(q) C^2`;
+4. inherited `C3` hierarchy and Koide-circulant support with A1/P1 classified
+   as open support, not retained Lane 3 inputs;
+5. no observed quark masses, fitted Yukawa entries, CKM mass inputs, charged
+   lepton phase import, or hidden species selectors.
+
+Result:
+
+```text
+The C3 Hermitian circulant family is a valid Fourier-basis hierarchy carrier.
+Without A1/P1 or an equivalent source/readout theorem it is
+three-real-dimensional and can fit any real generation spectrum. With A1/P1
+it supplies Q=2/3 for an amplitude triple but still leaves scale, phase,
+species assignment, and quark Yukawa readout open. Runner TOTAL PASS=43
+FAIL=0.
+```
+
+Honest target status:
+
+This is exact support/boundary for a future 3C source-law theorem. It retires
+direct promotion of inherited `C3` circulant hierarchy support into retained
+non-top quark masses.

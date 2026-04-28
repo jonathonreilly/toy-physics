@@ -1,6 +1,6 @@
 # Lane 3 Artifact Plan
 
-**Updated:** 2026-04-28T08:46:53Z
+**Updated:** 2026-04-28T09:00:43Z
 
 ## Block 01 Artifact Set
 
@@ -167,6 +167,34 @@
    - commit coherent block artifacts;
    - push branch to `origin`;
    - create a stacked PR against block 05, or write `PR_BACKLOG.md`.
+
+## Block 07 Artifact Set
+
+1. Continue from block 06 on stacked branch
+   `physics-loop/lane3-quark-mass-retention-20260428-block07-20260428`.
+2. Execute the 3C inherited `C3` circulant source-law boundary:
+   - note:
+     `docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md`;
+   - runner:
+     `scripts/frontier_quark_c3_circulant_source_law_boundary.py`;
+   - log:
+     `logs/2026-04-28-quark-c3-circulant-source-law-boundary.txt`.
+3. Run focused checks:
+   - `PYTHONPATH=scripts python3 scripts/frontier_quark_c3_circulant_source_law_boundary.py`;
+   - `python3 -m py_compile scripts/frontier_quark_c3_circulant_source_law_boundary.py`;
+   - inherited `YT` generation hierarchy and class-6 `C3` breaking runners;
+   - inherited Koide circulant character and square-root amplitude runners.
+4. Emulate review-loop:
+   - classify the result as exact support/boundary for a 3C source-law
+     theorem, not retained quark-mass closure;
+   - verify A1/P1 remain open imports rather than Lane 3 retained inputs;
+   - verify no observed quark masses, fitted Yukawa entries, CKM mass inputs,
+     charged-lepton phase imports, or hidden species selectors enter as proof
+     inputs.
+5. Package:
+   - commit coherent block artifacts;
+   - push branch to `origin`;
+   - create a stacked PR against block 06, or write `PR_BACKLOG.md`.
 
 ## Non-Goals
 

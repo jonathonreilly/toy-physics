@@ -1,66 +1,58 @@
 slug: lane3-quark-mass-retention-20260428
 mode: run/resume
 target: best-honest-status
-science_block: 6
-branch: physics-loop/lane3-quark-mass-retention-20260428-block06-20260428
-base_branch: physics-loop/lane3-quark-mass-retention-20260428-block05-20260428
-head: "3aaeb004 plus PR-status bookkeeping; see git log"
+science_block: 7
+branch: physics-loop/lane3-quark-mass-retention-20260428-block07-20260428
+base_branch: physics-loop/lane3-quark-mass-retention-20260428-block06-20260428
+head: "block-07 working checkpoint; see git log"
 started_at_utc: "2026-04-28T07:27:25Z"
-last_checkpoint_utc: "2026-04-28T08:52:18Z"
+last_checkpoint_utc: "2026-04-28T09:00:43Z"
 hard_deadline_utc: "2026-04-28T11:27:25Z"
 checkpoint_interval_minutes: 30
-current_status: "block-06 PR opened"
+current_status: "block-07 artifact verified; packaging for stacked PR"
 claim_status: open
 active_lane: "Lane 3 quark mass retention"
-active_route: "3C oriented C3 Ward splitter support/boundary"
-hard_residual: "physical source law for the oriented C3 coefficient c and a readout theorem mapping cyclic Fourier strata to quark Yukawa channels"
+active_route: "3C C3 circulant source-law boundary"
+hard_residual: "derive A1 or equivalent quark Ward source ratio, P1-style positive parent/readout for quark Yukawa amplitudes, and sector-specific phases/scales"
 a_min:
   - retained hw=1 generation triplet
   - exact induced C3[111] cycle on the retained generation triplet
-  - Hermitian Ward endomorphism on the generation triplet
-  - standard finite cyclic spectral algebra
+  - Hermitian C3 circulant algebra H(a,q) = a I + q C + conjugate(q) C^2
+  - inherited C3 hierarchy and Koide-circulant support with A1/P1 classified as open support
 forbidden_imports:
   - observed quark masses as proof inputs
-  - fitted Yukawa entries or hidden generation selectors
+  - fitted Yukawa entries or hidden generation/species selectors
+  - CKM mixing data treated as mass-eigenvalue input
+  - charged-lepton Koide phase/scale/readout imported as quark theorem
+  - treating A1 or P1 as already retained for Lane 3
   - species-uniform top Ward physical reuse for non-top masses
-  - CKM mixing closure treated as mass closure
   - nearest-rational selection from live endpoint data treated as derivation
-  - untyped color-projection to Route-2 endpoint identification
-  - choosing the threshold-local scale surface because it matches best
-  - breaking S_3 without naming the source/readout primitive
-  - treating the oriented C3 coefficient c as derived without a source law
-  - treating cyclic Fourier strata as physical quark Yukawa channels without a readout theorem
+  - breaking S_3 or orienting C3 without naming the source/readout primitive
 files_touched:
+  - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/GOAL.md
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/ASSUMPTIONS_AND_IMPORTS.md
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/NO_GO_LEDGER.md
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/ROUTE_PORTFOLIO.md
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/ARTIFACT_PLAN.md
-  - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/STATE.yaml
+  - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/LITERATURE_BRIDGES.md
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/REVIEW_HISTORY.md
+  - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/STATE.yaml
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/HANDOFF.md
-  - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK03.md
-  - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK04.md
-  - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK05.md
-  - docs/QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md
-  - scripts/frontier_quark_route2_source_domain_bridge_no_go.py
-  - logs/2026-04-28-quark-route2-source-domain-bridge-no-go.txt
-  - docs/QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md
-  - scripts/frontier_quark_five_sixths_scale_selection_boundary.py
-  - logs/2026-04-28-quark-five-sixths-scale-selection-boundary.txt
-  - docs/QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md
-  - scripts/frontier_quark_generation_equivariant_ward_degeneracy_no_go.py
-  - logs/2026-04-28-quark-generation-equivariant-ward-degeneracy-no-go.txt
-  - docs/QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md
-  - scripts/frontier_quark_c3_oriented_ward_splitter_support.py
-  - logs/2026-04-28-quark-c3-oriented-ward-splitter-support.txt
+  - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK07.md
+  - docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md
+  - scripts/frontier_quark_c3_circulant_source_law_boundary.py
+  - logs/2026-04-28-quark-c3-circulant-source-law-boundary.txt
 open_imports:
   - down-type GST/NNI retained theorem
   - non-perturbative 5/6 bridge and scale-selection theorem
   - up-type scalar/readout law
   - new typed Route-2 source-domain theorem for gamma_T(center)/gamma_E(center) = -R_conn
   - species-differentiated non-top Yukawa Ward primitive
-  - physical source law for the oriented C3 Ward coefficient c and coefficients b/a
+  - physical source law for oriented C3 Ward coefficients
   - readout theorem mapping cyclic Fourier strata to quark Yukawa channels
+  - A1 or equivalent quark Ward source ratio for the C3 circulant carrier
+  - P1-style positive parent/readout theorem for quark Yukawa amplitudes
+  - sector-specific phases and relative scales for up/down quarks
 no_go_routes:
   - CKM closure as five-mass closure
   - bounded down-type ratio match as retained absolute masses
@@ -72,89 +64,29 @@ no_go_routes:
   - exact C_F - T_F plus threshold-local match as retained 5/6 bridge
   - retained S_3 generation carrier as generation-stratified Ward eigenvalues
   - oriented C3 normal form alone as retained non-top quark mass closure
+  - inherited C3 circulant hierarchy support plus A1/P1 as direct quark Ward closure
 review_findings:
-  - "3C-Q runner passes with TOTAL PASS=42 FAIL=0."
-  - "Inherited Lane 3 firewall runner passes PASS=17 FAIL=0."
-  - "Inherited quark mass-ratio review packet passes TOTAL PASS=46 FAIL=0."
-  - "Review-loop emulation found the 3C artifact honest as an exact negative boundary, not retained mass closure."
-  - "3B-R2 naturality runner passes with TOTAL PASS=28 FAIL=0."
-  - "Inherited Route-2 readout map passes PASS=11 FAIL=0."
-  - "Inherited Route-2 time-coupling passes PASS=8 FAIL=0."
-  - "Inherited endpoint ratio-chain runner passes PASS=14 FAIL=0."
-  - "3B-R2-Rconn runner passes with TOTAL PASS=26 FAIL=0."
-  - "Review-loop emulation found R_conn usable only as a conditional bridge target; the source-domain identification remains open."
-  - "3B-R2-Source runner passes with TOTAL PASS=33 FAIL=0."
-  - "Review-loop emulation found the source-domain bridge no-go honest as an exact current-bank negative boundary; claim status remains open."
-  - "3A-Scale runner passes with TOTAL PASS=34 FAIL=0."
-  - "Inherited five-sixths bridge support runner passes EXACT PASS=5 BOUNDED PASS=7 FAIL=0."
-  - "Inherited taste-staircase support runner passes TOTAL PASS=55 FAIL=0."
-  - "Review-loop emulation found the 3A scale-selection artifact honest as an exact negative boundary / theorem-target isolation; claim status remains open."
-  - "3C-S3 runner passes with TOTAL PASS=44 FAIL=0."
-  - "Inherited S3 taste-cube decomposition runner passes TOTAL PASS=57 FAIL=0."
-  - "Inherited direct 3C free-matrix no-go runner passes TOTAL PASS=42 FAIL=0."
-  - "Inherited three-generation observable theorem runner passes TOTAL PASS=47 FAIL=0."
-  - "Review-loop emulation found the generation-equivariant Ward artifact honest as an exact negative boundary; claim status remains open."
-  - "3C-C3 runner passes with TOTAL PASS=51 FAIL=0."
-  - "Inherited S3 generation-equivariant Ward runner passes TOTAL PASS=44 FAIL=0."
-  - "Inherited three-generation observable theorem runner passes TOTAL PASS=47 FAIL=0."
-  - "Inherited Z2 hw=1 normal-form runner passes TOTAL PASS=10 FAIL=0."
-  - "Inherited S3 mass-matrix no-go runner passes TOTAL PASS=13 FAIL=0."
-  - "Inherited S3 taste-cube decomposition runner passes TOTAL PASS=57 FAIL=0."
-  - "Review-loop emulation found the oriented C3 artifact honest as exact support/boundary, not retained mass closure."
+  - "3C-Circulant runner passes with TOTAL PASS=43 FAIL=0."
+  - "py_compile passes for frontier_quark_c3_circulant_source_law_boundary.py."
+  - "Inherited YT generation hierarchy runner passes RESULT PASS=51 FAIL=0."
+  - "Inherited YT class-6 C3 breaking runner passes RESULT PASS=43 FAIL=0."
+  - "Inherited Koide circulant character bridge passes PASS=9 FAIL=0."
+  - "Inherited Koide square-root amplitude principle passes PASS=11 FAIL=0."
+  - "Review-loop emulation found the block-07 artifact honest as exact support/boundary, not retained quark-mass closure."
 commands_run:
-  - "git switch -c physics-loop/lane3-quark-mass-retention-20260428-block03-20260428"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_route2_source_domain_bridge_no_go.py"
-  - "python3 -m py_compile scripts/frontier_quark_route2_source_domain_bridge_no_go.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_route2_source_domain_bridge_no_go.py | tee logs/2026-04-28-quark-route2-source-domain-bridge-no-go.txt"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_route2_rconn_center_ratio_bridge_obstruction.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_route2_e_channel_readout_naturality_no_go.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_route2_exact_readout_map.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_endpoint_ratio_chain_law.py"
-  - "python3 scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py"
-  - "python3 scripts/frontier_quark_mass_ratio_review.py"
+  - "git switch -c physics-loop/lane3-quark-mass-retention-20260428-block07-20260428"
+  - "PYTHONPATH=scripts python3 scripts/frontier_quark_c3_circulant_source_law_boundary.py"
+  - "python3 -m py_compile scripts/frontier_quark_c3_circulant_source_law_boundary.py"
+  - "PYTHONPATH=scripts python3 scripts/frontier_quark_c3_circulant_source_law_boundary.py | tee logs/2026-04-28-quark-c3-circulant-source-law-boundary.txt"
+  - "PYTHONPATH=scripts python3 scripts/frontier_yt_generation_hierarchy_primitive.py"
+  - "PYTHONPATH=scripts python3 scripts/frontier_yt_class_6_c3_breaking.py"
+  - "PYTHONPATH=scripts python3 scripts/frontier_koide_circulant_character_bridge.py"
+  - "PYTHONPATH=scripts python3 scripts/frontier_koide_sqrtm_amplitude_principle.py"
   - "python3 scripts/automation_lock.py --lock-path /Users/jonBridger/.codex/memories/physics_worker_lock.json --meta-lock-path /Users/jonBridger/.codex/memories/.physics_worker_lock.guard refresh --owner physics-loop --holder-id physics-loop-lane3-20260428 --purpose lane3-quark-mass-retention-20260428 --ttl-hours 5"
-  - "git commit -m \"physics-loop lane3 block03 source bridge\""
-  - "git push origin HEAD:physics-loop/lane3-quark-mass-retention-20260428-block03-20260428"
-  - "gh pr create --base physics-loop/lane3-quark-mass-retention-20260428-block02-20260428 --head physics-loop/lane3-quark-mass-retention-20260428-block03-20260428 --title \"[physics-loop] lane3-quark-mass-retention block03: open source bridge\" --body-file .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK03.md"
-  - "git switch -c physics-loop/lane3-quark-mass-retention-20260428-block04-20260428"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_five_sixths_scale_selection_boundary.py"
-  - "python3 -m py_compile scripts/frontier_quark_five_sixths_scale_selection_boundary.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_five_sixths_scale_selection_boundary.py | tee logs/2026-04-28-quark-five-sixths-scale-selection-boundary.txt"
-  - "PYTHONPATH=scripts python3 scripts/frontier_ckm_five_sixths_bridge_support.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_mass_ratios_taste_staircase_support.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py"
-  - "python3 scripts/automation_lock.py --lock-path /Users/jonBridger/.codex/memories/physics_worker_lock.json --meta-lock-path /Users/jonBridger/.codex/memories/.physics_worker_lock.guard refresh --owner physics-loop --holder-id physics-loop-lane3-20260428 --purpose lane3-quark-mass-retention-20260428 --ttl-hours 5"
-  - "git commit -m \"physics-loop lane3 block04 scale boundary\""
-  - "git push origin HEAD:physics-loop/lane3-quark-mass-retention-20260428-block04-20260428"
-  - "gh pr create --base physics-loop/lane3-quark-mass-retention-20260428-block03-20260428 --head physics-loop/lane3-quark-mass-retention-20260428-block04-20260428 --title \"[physics-loop] lane3-quark-mass-retention block04: open scale boundary\" --body-file .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK04.md"
-  - "git switch -c physics-loop/lane3-quark-mass-retention-20260428-block05-20260428"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_generation_equivariant_ward_degeneracy_no_go.py"
-  - "python3 -m py_compile scripts/frontier_quark_generation_equivariant_ward_degeneracy_no_go.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_generation_equivariant_ward_degeneracy_no_go.py | tee logs/2026-04-28-quark-generation-equivariant-ward-degeneracy-no-go.txt"
-  - "PYTHONPATH=scripts python3 scripts/frontier_s3_action_taste_cube_decomposition.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_generation_stratified_ward_free_matrix_no_go.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_three_generation_observable_theorem.py"
-  - "python3 scripts/automation_lock.py --lock-path /Users/jonBridger/.codex/memories/physics_worker_lock.json --meta-lock-path /Users/jonBridger/.codex/memories/.physics_worker_lock.guard refresh --owner physics-loop --holder-id physics-loop-lane3-20260428 --purpose lane3-quark-mass-retention-20260428 --ttl-hours 5"
-  - "git commit -m \"physics-loop lane3 block05 ward degeneracy\""
-  - "git push origin HEAD:physics-loop/lane3-quark-mass-retention-20260428-block05-20260428"
-  - "gh pr create --base physics-loop/lane3-quark-mass-retention-20260428-block04-20260428 --head physics-loop/lane3-quark-mass-retention-20260428-block05-20260428 --title \"[physics-loop] lane3-quark-mass-retention block05: open 3C Ward boundary\" --body-file .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK05.md"
-  - "git switch -c physics-loop/lane3-quark-mass-retention-20260428-block06-20260428"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_c3_oriented_ward_splitter_support.py"
-  - "python3 -m py_compile scripts/frontier_quark_c3_oriented_ward_splitter_support.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_c3_oriented_ward_splitter_support.py | tee logs/2026-04-28-quark-c3-oriented-ward-splitter-support.txt"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_generation_equivariant_ward_degeneracy_no_go.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_three_generation_observable_theorem.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_z2_hw1_mass_matrix_parametrization.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_s3_mass_matrix_no_go.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_s3_action_taste_cube_decomposition.py"
-  - "python3 scripts/automation_lock.py --lock-path /Users/jonBridger/.codex/memories/physics_worker_lock.json --meta-lock-path /Users/jonBridger/.codex/memories/.physics_worker_lock.guard refresh --owner physics-loop --holder-id physics-loop-lane3-20260428 --purpose lane3-quark-mass-retention-20260428 --ttl-hours 5"
-  - "git commit -m \"physics-loop lane3 block06 c3 splitter\""
-  - "git push origin HEAD:physics-loop/lane3-quark-mass-retention-20260428-block06-20260428"
-  - "gh pr create --base physics-loop/lane3-quark-mass-retention-20260428-block05-20260428 --head physics-loop/lane3-quark-mass-retention-20260428-block06-20260428 --title \"[physics-loop] lane3-quark-mass-retention block06: open C3 Ward splitter\" --body-file .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK06.md"
 lock_status:
   default_automation_lock: "unavailable for this SSH user: permission denied at /Users/jonreilly"
-  local_lock: "/Users/jonBridger/.codex/memories/physics_worker_lock.json held by physics-loop-lane3-20260428; refreshed to 2026-04-28T13:50:29Z"
+  local_lock: "/Users/jonBridger/.codex/memories/physics_worker_lock.json held by physics-loop-lane3-20260428; refreshed to 2026-04-28T14:00:43Z"
   supervisor_flock: ".claude/science/physics-loops/lane3-quark-mass-retention-20260428/supervisor.lock held by active supervisor process"
-pr_status: "block-01 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/100; block-02 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/101; block-03 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/102; block-04 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/103; block-05 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/104; block-06 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/105"
-next_exact_action: "Continue Lane 3 only from a physical source law for the C3 coefficient c/readout map, a genuine 3A NP exponentiation/scale-selection theorem, or a new 3B source/readout primitive."
+pr_status: "block-01 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/100; block-02 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/101; block-03 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/102; block-04 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/103; block-05 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/104; block-06 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/105; block-07 pending packaging"
+next_exact_action: "Commit/push block-07 and open stacked PR against block-06; then continue Lane 3 only from A1/P1/source-readout derivation, sector phase/scale theorem, 3A NP scale theorem, or a new 3B scalar/readout primitive."
 stop_condition: null
