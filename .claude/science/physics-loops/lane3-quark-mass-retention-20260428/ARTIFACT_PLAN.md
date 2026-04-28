@@ -1,6 +1,6 @@
 # Lane 3 Artifact Plan
 
-**Updated:** 2026-04-28T08:26:17Z
+**Updated:** 2026-04-28T08:35:11Z
 
 ## Block 01 Artifact Set
 
@@ -110,6 +110,34 @@
    - commit coherent block artifacts;
    - push branch to `origin`;
    - create a stacked PR against block 03, or write `PR_BACKLOG.md`.
+
+## Block 05 Artifact Set
+
+1. Continue from block 04 on stacked branch
+   `physics-loop/lane3-quark-mass-retention-20260428-block05-20260428`.
+2. Execute the 3C generation-equivariant Ward degeneracy no-go:
+   - note:
+     `docs/QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md`;
+   - runner:
+     `scripts/frontier_quark_generation_equivariant_ward_degeneracy_no_go.py`;
+   - log:
+     `logs/2026-04-28-quark-generation-equivariant-ward-degeneracy-no-go.txt`.
+3. Run focused checks:
+   - `PYTHONPATH=scripts python3 scripts/frontier_quark_generation_equivariant_ward_degeneracy_no_go.py`;
+   - `python3 -m py_compile scripts/frontier_quark_generation_equivariant_ward_degeneracy_no_go.py`;
+   - inherited `S_3` taste-cube decomposition runner;
+   - inherited direct free-matrix 3C no-go runner;
+   - inherited three-generation observable theorem runner.
+4. Emulate review-loop:
+   - classify the result as an exact negative boundary for carrier-only 3C;
+   - verify it does not claim no future source/readout primitive can close
+     3C;
+   - verify no observed masses, fitted Yukawa entries, or hidden generation
+     projectors enter as proof inputs.
+5. Package:
+   - commit coherent block artifacts;
+   - push branch to `origin`;
+   - create a stacked PR against block 04, or write `PR_BACKLOG.md`.
 
 ## Non-Goals
 

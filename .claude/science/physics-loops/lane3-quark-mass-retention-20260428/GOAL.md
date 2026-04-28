@@ -1,8 +1,8 @@
 # Lane 3 Quark Mass Retention Physics Loop
 
 **Loop slug:** `lane3-quark-mass-retention-20260428`
-**Science block:** `04`
-**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block04-20260428`
+**Science block:** `05`
+**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block05-20260428`
 **Target:** best-honest-status; retained closure only if fully justified
 **Started:** 2026-04-28T07:27:25Z
 **Hard deadline:** 2026-04-28T11:27:25Z
@@ -41,13 +41,13 @@ the branch supplies decisive theorem/support artifacts and review-loop
 backpressure. Bounded companion matches, CKM closure, or species-uniform reuse
 of the top Ward identity are not enough.
 
-## Block 04 Focus
+## Block 05 Focus
 
-Blocks 01-03 packaged exact negative boundaries and opened review PRs #100,
-#101, and #102. Block 04 is a stacked continuation from block 03. Its active
-hard residual is the down-type `5/6` bridge scale-selection wall:
+Blocks 01-04 packaged exact negative boundaries and opened review PRs #100,
+#101, #102, and #103. Block 05 is a stacked continuation from block 04. Its
+active hard residual is the 3C generation-equivariant Ward obstruction:
 
 ```text
-exact C_F - T_F = 5/6
-does not by itself derive the threshold-local scale surface.
+S_3-equivariant Ward endomorphisms on hw=1 ~= A_1 + E
+cannot split three generation Yukawa eigenvalues.
 ```

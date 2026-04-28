@@ -1,6 +1,6 @@
 # Lane 3 Route Portfolio
 
-**Updated:** 2026-04-28T08:26:17Z
+**Updated:** 2026-04-28T08:35:11Z
 
 Scores use the physics-loop dramatic-step rubric: claim-state upgrade,
 import retirement, review-blocker closure, artifactability, novelty, hard
@@ -9,6 +9,7 @@ residual pressure, and overclaim risk.
 | Route | Type | Claim-state potential | Import-retirement potential | Artifactability in block 01 | Hard-residual pressure | Risk | Decision |
 |---|---|---:|---:|---:|---:|---:|---|
 | 3C-Q: quark direct Ward-free generation-matrix boundary | exact no-go / boundary theorem | 2 | 2 | 3 | 2 | low | execute first |
+| 3C-S3: generation-equivariant Ward degeneracy boundary | exact no-go / representation theorem | 2 | 3 | 3 | 3 | low | executed in block 05 |
 | 3B-R2: route-2 endpoint readout `beta_E/alpha_E = 21/4` stretch | constructive theorem / exact runner | 3 | 3 | 2 | 3 | medium | next if time remains |
 | 3B-scalar shortlist provenance tightening | import-retirement audit / no-go | 1 | 2 | 3 | 1 | low | only after stretch |
 | 3A local `5/6` scale-selection boundary | exact negative boundary / theorem target isolation | 2 | 3 | 3 | 3 | low | executed in block 04 |
@@ -191,3 +192,37 @@ Honest target status:
 This is an exact negative boundary / theorem-target isolation for 3A. It
 preserves the down-type bridge as strong bounded support and blocks direct
 promotion to retained down-type mass ratios.
+
+## Completed Route 6: 3C-S3
+
+Question:
+
+```text
+Can the retained S_3 generation carrier itself stratify quark Ward
+eigenvalues if the Ward operator is S_3-equivariant?
+```
+
+Minimal premise set `A_min`:
+
+1. retained `hw=1` generation triplet;
+2. exact `S_3` action and `hw=1 ~= A_1 + E` support theorem;
+3. Hermitian Ward endomorphism on the generation triplet;
+4. no observed quark masses, fitted Yukawa entries, hidden generation labels,
+   or unannounced symmetry breaking.
+
+Result:
+
+```text
+The S_3 commutant on the generation triplet has dimension 2 and form
+W = a I + b J. Its eigenvalues are a+3b on A_1 and a on E with multiplicity
+2. If the readout is diagonal in the generation basis, S_3 equivariance makes
+it scalar. A C3-oriented example can split three eigenvalues, but only by
+breaking reflection, which is exactly a new premise.
+Runner TOTAL PASS=44 FAIL=0.
+```
+
+Honest target status:
+
+This is an exact negative boundary for the carrier-only 3C route. It does not
+preclude a future source/readout primitive; it proves that such a primitive is
+load-bearing.

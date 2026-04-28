@@ -1,6 +1,6 @@
 # Lane 3 No-Go Ledger
 
-**Updated:** 2026-04-28T08:26:17Z
+**Updated:** 2026-04-28T08:35:11Z
 
 | Route / claim | Blocked conclusion | Blocking result | Source | Status for this loop |
 |---|---|---|---|---|
@@ -17,6 +17,7 @@
 | `R_conn = 8/9` numeric match alone derives the Route-2 E-center law | Retained `beta_E/alpha_E = 21/4` and retained up-type scalar law | `-R_conn` conditionally implies `rho_E=21/4`, but only after adding the unproved source-domain bridge `gamma_T(center)/gamma_E(center) = -R_conn`; current Route-2 carrier has no typed color-projection map | `QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md` | closed for direct promotion; open as a sharp bridge theorem target |
 | Current support bank already contains the typed `R_conn -> Route-2 center ratio` bridge | Retained Route-2 up-type scalar law from existing SU(3) and endpoint primitives | Finite typed-edge inventory has no path from `su3_R_conn_8_9` to `route2_rho_E_21_4`; adding exactly the missing bridge creates the path, so the bridge is new theorem content rather than latent support | `QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md` | closed for current-bank promotion; next target requires a genuinely new source-domain theorem or alternate primitive |
 | Exact `C_F - T_F = 5/6` plus good threshold-local match promotes the down-type bridge | Retained `m_s/m_b` and down-type mass-ratio closure | The same fixed exponent is not scale-blind: inherited one-loop transport gives `R_self/R_same = 1.147466...`, `p_self = 0.832890...`, `p_same = 0.803802...`, and the same-scale comparator misses by `+14.98%`; a scale-selection or RG-covariant theorem is still load-bearing | `QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md` | closed for direct promotion; 3A now requires NP exponentiation plus scale selection/transport |
+| Retained `S_3` generation carrier derives generation-stratified quark Ward eigenvalues | Retained 3C Ward identities for `u,c,t` or `d,s,b` | On `hw=1 ~= A_1 + E`, every `S_3`-equivariant Hermitian Ward operator has form `a I + b J`, giving one singlet eigenvalue and a doubly degenerate `E` eigenvalue; diagonal equivariant readouts are scalar | `QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md` | closed for equivariant carrier-only route; 3C needs a source/readout/symmetry-breaking primitive |
 
 ## Reopen Rule
 

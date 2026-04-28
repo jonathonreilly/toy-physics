@@ -1,23 +1,25 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T08:31:06Z
-**Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block04-20260428`
-**Current head:** `b629405c` plus PR-status bookkeeping; see `git log`
+**Updated:** 2026-04-28T08:35:11Z
+**Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block05-20260428`
+**Current head:** block-05 working checkpoint; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
 **Block 02 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/101
 **Block 03 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/102
 **Block 04 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/103
+**Block 05 review PR:** pending package
 
 ## Current State
 
-Blocks 01, 02, and 03 are packaged and PR'd. Block 04 is a stacked
-continuation from block 03. It attacks the 3A down-type `5/6` residual:
+Blocks 01 through 04 are packaged and PR'd. Block 05 is a stacked
+continuation from block 04. It attacks the 3C generation-equivariant Ward
+residual:
 
 ```text
-does exact C_F - T_F = 5/6 plus the threshold-local match promote the
-down-type bridge without an independent scale-selection theorem?
+can the retained S_3 generation carrier itself stratify quark Ward
+eigenvalues if the Ward operator is S_3-equivariant?
 ```
 
 The answer from this checkpoint is no: the result is an exact negative
@@ -33,65 +35,67 @@ with permission denied at `/Users/jonreilly`. This run uses the local lock:
 ```
 
 plus the active supervisor flock under this loop pack. The local lock was
-refreshed during block 04 to expire after the loop deadline.
+refreshed during block 05 to expire after the loop deadline.
 
 ## Completed In This Checkpoint
 
-Created and verified the 3A five-sixths scale-selection boundary:
+Created and verified the 3C generation-equivariant Ward degeneracy no-go:
 
-- `docs/QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md`
-- `scripts/frontier_quark_five_sixths_scale_selection_boundary.py`
-- `logs/2026-04-28-quark-five-sixths-scale-selection-boundary.txt`
+- `docs/QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_generation_equivariant_ward_degeneracy_no_go.py`
+- `logs/2026-04-28-quark-generation-equivariant-ward-degeneracy-no-go.txt`
 
 Checks:
 
 ```text
-3A-Scale runner: TOTAL PASS=34 FAIL=0
+3C-S3 runner: TOTAL PASS=44 FAIL=0
 py_compile: PASS
-Five-sixths support runner: EXACT PASS=5 BOUNDED PASS=7 FAIL=0
-Taste-staircase support runner: TOTAL PASS=55 FAIL=0
-Lane 3 firewall: PASS=17 FAIL=0
+S3 taste-cube decomposition: TOTAL PASS=57 FAIL=0
+Direct 3C free-matrix no-go: TOTAL PASS=42 FAIL=0
+Three-generation observable theorem: TOTAL PASS=47 FAIL=0
 ```
 
 Claim movement:
 
 ```text
-The threshold-local comparator gives p_self = 0.832890..., close to 5/6.
-The common-scale comparator gives p_same = 0.803802..., and the same fixed
-5/6 prediction misses that surface by +14.98%.
+On hw=1 ~= A_1 + E, every S_3-equivariant Hermitian Ward endomorphism has
+form W = a I + b J. It has one singlet eigenvalue and an E double
+degeneracy. A diagonal S_3-equivariant readout is scalar.
 
-Therefore exact C_F - T_F = 5/6 is not a scale-selection theorem. Retained
-3A still requires NP exponentiation plus scale selection or RG-covariant
-transport.
+Therefore the retained S_3 carrier alone cannot derive generation-stratified
+quark Ward eigenvalues. 3C requires a source/readout/symmetry-breaking
+primitive.
 ```
 
 ## Active Route
 
-Block 04 has been packaged:
+Block 05 is ready to package:
 
 ```text
-commit b629405c: physics-loop lane3 block04 scale boundary
-pushed branch physics-loop/lane3-quark-mass-retention-20260428-block04-20260428
-stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/103
+branch physics-loop/lane3-quark-mass-retention-20260428-block05-20260428
+base physics-loop/lane3-quark-mass-retention-20260428-block04-20260428
+PR body .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK05.md
 ```
 
 ## Next Exact Action
 
-Continue Lane 3 only from one of:
+Package block 05, then continue Lane 3 only from one of:
 
-1. a genuine 3A non-perturbative `5/6` exponentiation plus scale-selection
+1. a named 3C source/readout/symmetry-breaking primitive that orients or
+   splits the retained generation triplet;
+2. a genuine 3A non-perturbative `5/6` exponentiation plus scale-selection
    / RG-covariant transport theorem;
-2. a genuinely new typed source-domain theorem deriving
+3. a genuinely new typed source-domain theorem deriving
    `gamma_T(center)/gamma_E(center) = -R_conn`;
-3. an alternate 3B scalar/readout primitive outside the current endpoint bank;
-4. a new 3C species-differentiated Ward primitive.
+4. an alternate 3B scalar/readout primitive outside the current endpoint bank.
 
 Do not re-open direct `R_conn` promotion, minimal Route-2 naturality, CKM
 closure as mass closure, bounded down-type promotion from `C_F - T_F = 5/6`
-alone, or species-uniform top Ward reuse without a new premise.
+alone, S_3-equivariant carrier-only generation stratification, or
+species-uniform top Ward reuse without a new premise.
 
 ## Stop Reason
 
-No stop requested. Lane 3 remains open; block 04 is an exact negative
-boundary that sharpens the 3A scale-selection theorem target without claiming
+No stop requested. Lane 3 remains open; block 05 is an exact negative
+boundary that sharpens the 3C source/readout theorem target without claiming
 retained non-top quark masses.
