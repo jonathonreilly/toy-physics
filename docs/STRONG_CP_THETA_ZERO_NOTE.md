@@ -1,8 +1,7 @@
-# Strong CP / θ = 0 Retained Action-Surface Closure
+# Strong CP / θ = 0 Conditional Action-Surface Closure
 
-**Date:** 2026-04-16
-**Status:** proposed_retained action-surface `θ_eff = 0` closure on the proposed_retained
-axiom-determined action surface
+**Date:** 2026-04-16 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded conditional `θ_eff = 0` closure on the **explicitly θ-free Wilson-plus-staggered scalar-mass surface** that the runner restricts to. The decisive step is action-surface selection (no bare θ slot, real positive mass orientation), not a derived dynamical θ = 0 result. Not a tier-ratifiable strong-CP solution beyond that selected surface.
 **Script:** `scripts/frontier_strong_cp_theta_zero.py`
 
 ## Theorem
@@ -358,3 +357,50 @@ python3 scripts/frontier_strong_cp_theta_zero.py
 # RETAINED-SURFACE COMPUTE PASS=30  FAIL=0
 # SUPPORT=4
 ```
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, high criticality, 124 transitive
+descendants):
+
+> Issue: the decisive step is not a computed strong-CP cancellation
+> but the retained-action-surface selection: the runner/support text
+> takes 'no bare θ slot' and `θ_bare = 0` from the action-class
+> definition, and it uses an explicit positive real quark-mass
+> surface for `arg det(M_u M_d) = 0`. Why this blocks: the 13
+> theorem and 30 retained-surface compute passes show internal
+> consistency of that restricted θ-free Wilson-plus-staggered
+> scalar-mass surface, but they do not derive from the provided
+> audit packet that the physical Cl(3)/Z^3 action forbids an
+> allowed CP-odd F̃F term, fixes the real-mass orientation, or
+> dynamically selects θ = 0 rather than merely evaluating the
+> θ-free surface.
+
+> Claim boundary until fixed: it is safe to claim that on the
+> explicitly θ-free Wilson-plus-staggered scalar-mass surface, the
+> implemented determinant, axial-grid, effective-action, and sampled
+> positive-weight checks find no generated strong-sector phase; it
+> is not yet an audited solution of strong CP beyond that selected
+> action surface.
+
+## What this note does NOT claim
+
+- A derivation that the Cl(3)/Z^3 action forbids the CP-odd `F̃F`
+  term.
+- A derivation of the positive real quark-mass orientation
+  (`arg det(M_u M_d) = 0`) from the framework primitives.
+- A dynamical selection of θ = 0; the runner evaluates a θ-free
+  surface and finds no generated phase, but does not derive the
+  surface's exclusion of CP-odd terms.
+
+## What would close this lane (Path A future work)
+
+Promoting from bounded conditional to retained would require:
+
+1. A retained operator-basis / action-surface theorem deriving from
+   Cl(3)/Z^3 primitives and canonical normalization that no
+   gauge-invariant CP-odd θ term is an admissible slot.
+2. A registered positive real quark-mass orientation /
+   `arg det(M_u M_d) = 0` theorem as a dependency.
+3. An updated runner that constructs the allowed action basis and
+   fails if an `F̃F` term or complex mass phase is admitted.
