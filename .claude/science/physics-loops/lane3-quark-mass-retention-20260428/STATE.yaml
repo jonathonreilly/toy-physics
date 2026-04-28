@@ -4,12 +4,12 @@ target: best-honest-status
 science_block: 4
 branch: physics-loop/lane3-quark-mass-retention-20260428-block04-20260428
 base_branch: physics-loop/lane3-quark-mass-retention-20260428-block03-20260428
-head: "block-04 working checkpoint; see git log"
+head: "b629405c plus PR-status bookkeeping; see git log"
 started_at_utc: "2026-04-28T07:27:25Z"
-last_checkpoint_utc: "2026-04-28T08:26:17Z"
+last_checkpoint_utc: "2026-04-28T08:31:06Z"
 hard_deadline_utc: "2026-04-28T11:27:25Z"
 checkpoint_interval_minutes: 30
-current_status: "block-04 artifact verified; packaging pending"
+current_status: "block-04 PR opened"
 claim_status: open
 active_lane: "Lane 3 quark mass retention"
 active_route: "3A five-sixths scale-selection boundary"
@@ -98,10 +98,13 @@ commands_run:
   - "PYTHONPATH=scripts python3 scripts/frontier_quark_mass_ratios_taste_staircase_support.py"
   - "PYTHONPATH=scripts python3 scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py"
   - "python3 scripts/automation_lock.py --lock-path /Users/jonBridger/.codex/memories/physics_worker_lock.json --meta-lock-path /Users/jonBridger/.codex/memories/.physics_worker_lock.guard refresh --owner physics-loop --holder-id physics-loop-lane3-20260428 --purpose lane3-quark-mass-retention-20260428 --ttl-hours 5"
+  - "git commit -m \"physics-loop lane3 block04 scale boundary\""
+  - "git push origin HEAD:physics-loop/lane3-quark-mass-retention-20260428-block04-20260428"
+  - "gh pr create --base physics-loop/lane3-quark-mass-retention-20260428-block03-20260428 --head physics-loop/lane3-quark-mass-retention-20260428-block04-20260428 --title \"[physics-loop] lane3-quark-mass-retention block04: open scale boundary\" --body-file .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK04.md"
 lock_status:
   default_automation_lock: "unavailable for this SSH user: permission denied at /Users/jonreilly"
   local_lock: "/Users/jonBridger/.codex/memories/physics_worker_lock.json held by physics-loop-lane3-20260428; refreshed to 2026-04-28T13:26:17Z"
   supervisor_flock: ".claude/science/physics-loops/lane3-quark-mass-retention-20260428/supervisor.lock held by active supervisor process"
-pr_status: "block-01 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/100; block-02 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/101; block-03 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/102"
-next_exact_action: "Package block 04, then continue Lane 3 only from a genuine 3A NP exponentiation/scale-selection theorem, a new 3B source/readout primitive, or a new 3C species-differentiated Ward primitive."
+pr_status: "block-01 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/100; block-02 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/101; block-03 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/102; block-04 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/103"
+next_exact_action: "Continue Lane 3 only from a genuine 3A NP exponentiation/scale-selection theorem, a new 3B source/readout primitive, or a new 3C species-differentiated Ward primitive."
 stop_condition: null

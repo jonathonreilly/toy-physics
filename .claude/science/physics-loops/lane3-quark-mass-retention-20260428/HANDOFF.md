@@ -1,14 +1,14 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T08:26:17Z
+**Updated:** 2026-04-28T08:31:06Z
 **Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block04-20260428`
-**Current head:** block-04 working checkpoint; see `git log`
+**Current head:** `b629405c` plus PR-status bookkeeping; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
 **Block 02 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/101
 **Block 03 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/102
-**Block 04 review PR:** pending package
+**Block 04 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/103
 
 ## Current State
 
@@ -67,17 +67,17 @@ transport.
 
 ## Active Route
 
-Block 04 is ready to package:
+Block 04 has been packaged:
 
 ```text
-branch physics-loop/lane3-quark-mass-retention-20260428-block04-20260428
-base physics-loop/lane3-quark-mass-retention-20260428-block03-20260428
-PR body .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK04.md
+commit b629405c: physics-loop lane3 block04 scale boundary
+pushed branch physics-loop/lane3-quark-mass-retention-20260428-block04-20260428
+stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/103
 ```
 
 ## Next Exact Action
 
-Package block 04, then continue Lane 3 only from one of:
+Continue Lane 3 only from one of:
 
 1. a genuine 3A non-perturbative `5/6` exponentiation plus scale-selection
    / RG-covariant transport theorem;
