@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-28T11:53:30.455803+00:00",
-  "generated_at": "2026-04-28T11:53:28.454798+00:00",
-  "invalidation_run_at": "2026-04-28T11:53:30.385257+00:00",
+  "effective_status_computed_at": "2026-04-28T11:55:46.978751+00:00",
+  "generated_at": "2026-04-28T11:55:44.816143+00:00",
+  "invalidation_run_at": "2026-04-28T11:55:46.908375+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-28T11:53:30.246826+00:00",
+  "load_bearing_computed_at": "2026-04-28T11:55:46.727448+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -5849,14 +5849,21 @@
       "verdict_rationale": null
     },
     "atomic_rydberg_dependency_firewall_note_2026-04-27": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-28",
+      "audit_state_snapshot": {
+        "criticality": "medium",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 5.907,
+        "transitive_descendants": 14
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop:fresh-2026-04-28-atomic_rydberg_dependency_firewall_note_2026-04-27",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The claim is a negative boundary: the note does not derive the Rydberg scale, but shows that direct use of the retained electroweak-scale alpha with textbook m_e gives the wrong atomic energy and that m_e, alpha(0), and the nonrelativistic physical-unit limit remain required inputs. The live runner verifies the dependency sensitivity and current scaffold-only state with PASS=12 FAIL=0.",
       "claim_id": "atomic_rydberg_dependency_firewall_note_2026-04-27",
       "criticality": "medium",
       "current_status": "proposed_retained",
@@ -5864,13 +5871,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 4,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "fresh_context",
+      "intrinsic_status": "retained",
       "load_bearing_score": 5.907,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Without these, the existing hydrogen/helium harness remains scaffold-only.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "audited_conditional",
       "max_descendant_status_rank": 10,
       "note_hash": "1a8c4a51b5a0f7b26532084ae4fc1760d97e8bb06a7d058728c7672962c193c5",
@@ -5878,16 +5885,16 @@
       "open_dependency_paths": [],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 5,
+        "B": 4,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 3,
+        "total_pass": 12
       },
       "runner_path": "scripts/frontier_atomic_rydberg_dependency_firewall.py",
       "title": "Atomic Rydberg Dependency Firewall",
       "transitive_descendants": 14,
-      "verdict_rationale": null
+      "verdict_rationale": "The retained content is the dependency firewall, not a Rydberg derivation. The note's load-bearing step closes because the standard formula is explicitly input-sensitive and direct substitution of alpha_EM(M_Z) gives -15.675 eV rather than the textbook -13.6057 eV, so the low-energy Coulomb coupling bridge is not a notation change. The live runner also confirms the current atomic scaffold imports textbook m_e and lacks an alpha(0) closure. Residual risk is downstream misuse: this audit does not ratify hydrogen, Lamb-shift, fine-structure, hyperfine, helium, or larger-atom predictions."
     },
     "audited_symmetry_synthesis_note": {
       "audit_date": null,
