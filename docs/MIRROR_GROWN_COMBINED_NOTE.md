@@ -1,7 +1,7 @@
 # Mirror + Grown Combined Note
 
-**Date:** 2026-04-03  
-**Status:** exploratory only; does not approximate the proposed_retained higher-symmetry benefit
+**Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** bounded exploratory negative control; the grown-symmetry scout does not approximate the higher-symmetry mirror / Z2 x Z2 benefit and is not a successor lane.
 
 This note records the grown-symmetry scout in:
 
@@ -69,3 +69,34 @@ The safe statement is:
 If the emergence-facing symmetry story is to become a live successor lane, it
 needs a new generator that preserves the symmetry benefit more directly than
 this grown mirror scaffold does.
+
+## Audit boundary (2026-04-28)
+
+The earlier Status line read "exploratory only; does not approximate the
+`proposed_retained` higher-symmetry benefit". The audit-lane parser
+classified the row as `proposed_retained` because the literal token
+appeared in the Status string — but the sentence and the note both say
+this is an exploratory negative control, not a retained successor lane.
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: The queue records this as `proposed_retained` because the
+> Status line mentions the `proposed_retained` higher-symmetry benefit,
+> but the source explicitly states 'exploratory only' and concludes
+> this grown mirror scaffold is not the successor lane. Why this
+> blocks: an exploratory negative control cannot be ratified as
+> retained; doing so would invert the source's conclusion.
+
+## What this note does NOT claim
+
+- A successor lane to the mirror or `Z2 x Z2` higher-symmetry families.
+- Any approximation to the higher-symmetry benefit on the grown
+  scaffold.
+- That the grown mirror scaffold should be retained at any tier.
+
+## What would close this lane (Path A future work)
+
+A future worker pursuing reinstatement of a grown-symmetry successor
+lane would need to author a separate retained note with a runner that
+actually reproduces the mirror / `Z2 x Z2` higher-symmetry benefit on a
+generated scaffold.
