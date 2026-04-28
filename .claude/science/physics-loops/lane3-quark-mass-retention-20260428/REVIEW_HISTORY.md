@@ -1,6 +1,6 @@
 # Lane 3 Review History
 
-**Updated:** 2026-04-28T08:35:11Z
+**Updated:** 2026-04-28T08:46:53Z
 
 ## Preflight Review
 
@@ -333,3 +333,62 @@ Disposition:
 - claim status remains `open`;
 - next 3C progress requires a named source/readout/symmetry-breaking primitive
   that orients or splits the retained generation triplet.
+
+## Artifact Review: 3C Oriented `C3` Ward Splitter
+
+**Time:** 2026-04-28T08:46:53Z
+
+Artifact reviewed:
+
+- `docs/QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_c3_oriented_ward_splitter_support.py`
+- `logs/2026-04-28-quark-c3-oriented-ward-splitter-support.txt`
+
+Verification:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_quark_c3_oriented_ward_splitter_support.py
+TOTAL: PASS=51, FAIL=0
+
+python3 -m py_compile scripts/frontier_quark_c3_oriented_ward_splitter_support.py
+PASS
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_generation_equivariant_ward_degeneracy_no_go.py
+TOTAL: PASS=44, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_three_generation_observable_theorem.py
+TOTAL: PASS=47, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_z2_hw1_mass_matrix_parametrization.py
+TOTAL: PASS=10, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_s3_mass_matrix_no_go.py
+TOTAL: PASS=13, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_s3_action_taste_cube_decomposition.py
+TOTAL: PASS=57, FAIL=0
+```
+
+Review-loop emulation:
+
+1. Claim wording is bounded to exact support/boundary for the missing 3C
+   source/readout primitive. It does not claim retained non-top quark masses.
+2. The runner proves the complete `C3`-equivariant Hermitian normal form
+   `W(a,b,c) = a I + b(C+C^2) + c(C-C^2)/(i sqrt(3))`.
+3. The reflection-odd coefficient `c` generically splits the block-05
+   `S_3` doublet, but `a,b,c` remain free and the physical quark-Yukawa
+   readout is not derived.
+4. The runner checks the generation-basis diagonal boundary: a diagonal
+   `C3`-equivariant readout is scalar, so the split is in cyclic Fourier
+   channels unless a future readout theorem says otherwise.
+5. Observed quark masses, fitted Yukawa entries, CKM eigenvalue input,
+   endpoint nearest-rational selectors, and hidden generation projectors are
+   excluded from the proof.
+
+Disposition:
+
+- keep artifact;
+- claim status remains `open`;
+- next 3C progress requires a physical source law for `c` and the remaining
+  Ward coefficients, or a readout theorem mapping the cyclic Fourier strata
+  to quark Yukawa channels.

@@ -1,8 +1,8 @@
 # Lane 3 Assumptions And Imports
 
-**Updated:** 2026-04-28T08:35:11Z
-**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block05-20260428`
-**Head:** block-05 working checkpoint; see `git log`
+**Updated:** 2026-04-28T08:46:53Z
+**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block06-20260428`
+**Head:** block-06 working checkpoint; see `git log`
 
 This ledger uses the physics-loop schema. It separates retained framework
 inputs, support-only bridges, comparator values, and hidden selectors that
@@ -17,6 +17,7 @@ block retained five-mass closure.
 | `m_t` and `y_t(M_Pl)/g_s(M_Pl) = 1/sqrt(6)` | Top-channel retained mass/Ward anchor | retained / exact support theorem | `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`, Lane 3 open-lane stub | yes | yes for absolute-scale chain | already retained for top only | top-channel scoped; not species-uniform |
 | Three `hw=1` generation structure | Supplies physical three-generation sectors | retained structural theorem | `THREE_GENERATION_STRUCTURE_NOTE.md` | yes | yes | atlas reuse plus new flavor/source primitive | retained structure, but no hierarchy |
 | `S_3` action on `hw=1` generation triplet, `A_1 + E` | Tests whether retained generation symmetry can itself stratify quark Ward eigenvalues | exact support theorem | `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`, `THREE_GENERATION_STRUCTURE_NOTE.md`, `QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md` | yes for 3C equivariant route | yes if claiming generation-stratified Ward values | add a source/readout/symmetry-breaking primitive that orients or splits the `E` doublet | equivariant route closed negatively; carrier alone gives at most singlet/doublet split |
+| Oriented `C3[111]` Ward splitter on `hw=1` | Smallest exact local primitive tested for splitting the `S_3` `E` doublet | exact support/boundary theorem | `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`, `QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md` | yes for the 3C source/readout route | yes only if promoted with a source/readout law | derive a physical source law for `c` and `b/a`, or a readout theorem mapping cyclic Fourier strata to quark Yukawa channels | exact splitter support only; coefficients remain free and mass closure remains open |
 | One-Higgs Yukawa gauge selection | Gives allowed SM Dirac operator skeleton | exact support theorem | `SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md` | yes | yes | combine with new Ward/source theorem | usable boundary; leaves Yukawa matrices free |
 | Down-type GST / NNI relation `|V_us|^2 = m_d/m_s` | Converts CKM `V_us` to `m_d/m_s` | support-only / structural bridge | `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`, `CKM_FROM_MASS_HIERARCHY_NOTE.md` | yes for down route | yes for retained down ratios | theorem route deriving GST on retained framework surface | open load-bearing bridge |
 | `5/6 = C_F - T_F` bridge `|V_cb| = (m_s/m_b)^(5/6)` | Converts CKM `V_cb` to `m_s/m_b` | bounded support | `CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md`, `QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md` | yes for down route | yes for retained down ratios | non-perturbative theorem at lattice scale | open Nature-grade blocker |
@@ -52,4 +53,8 @@ The highest-leverage unresolved imports for this block are:
 5. a generation source/readout/symmetry-breaking primitive for 3C. Block 05
    sharpened the equivariant obstruction: any `S_3`-equivariant Hermitian Ward
    endomorphism on `hw=1 ~= A_1 + E` has an `E` double degeneracy, and any
-   diagonal `S_3`-equivariant readout is scalar.
+   diagonal `S_3`-equivariant readout is scalar. Block 06 supplies the exact
+   oriented `C3[111]` normal form
+   `W(a,b,c) = a I + b(C+C^2) + c(C-C^2)/(i sqrt(3))`; generic nonzero `c`
+   splits the doublet, but `a,b,c` and the physical readout remain new
+   source/readout theorem content rather than derived quark masses.

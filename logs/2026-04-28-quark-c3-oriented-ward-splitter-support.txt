@@ -1,0 +1,78 @@
+========================================================================================
+LANE 3 C3-ORIENTED WARD SPLITTER SUPPORT
+========================================================================================
+
+A. Authority surfaces
+------------------------------------------------------------------------
+PASS: QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md exists -- docs/QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md
+PASS: QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md exists -- docs/QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md
+PASS: THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md exists -- docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md
+PASS: S3_TASTE_CUBE_DECOMPOSITION_NOTE.md exists -- docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md
+PASS: Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md exists -- docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md
+PASS: block05 names source/readout primitive as load-bearing
+PASS: observable theorem supplies induced C3[111]
+PASS: Z2 support note confirms symmetry-reduced families are support tools
+PASS: new note forbids retained mass closure
+PASS: new note forbids observed quark masses as proof inputs
+
+B. Retained C3 cycle and reflection action
+------------------------------------------------------------------------
+PASS: C is unitary
+PASS: C has order 3
+PASS: C maps X1 to X2
+PASS: C maps X2 to X3
+PASS: C maps X3 to X1
+PASS: reflection squares to identity
+PASS: reflection conjugates C to C^2
+PASS: symmetric C+C^2 is reflection-even
+PASS: oriented splitter K_C3 is reflection-odd
+PASS: oriented splitter is Hermitian
+
+C. C3-invariant Hermitian normal form
+------------------------------------------------------------------------
+PASS: Hermitian C3-invariant space has real dimension 3 -- dim=3
+PASS: Hermitian S3-invariant subspace has real dimension 2 -- dim=2
+PASS: I commutes with C
+PASS: C+C^2 commutes with C
+PASS: K_C3 commutes with C
+PASS: W(a,b,c) sample is Hermitian
+PASS: W(a,b,c) sample commutes with C
+PASS: normal-form coefficient recovery is exact -- [ 1.7  -0.4   0.25]
+PASS: distinct generation-basis diagonal matrix is not C3-equivariant
+PASS: generic C3 sample is not diagonal in generation basis
+
+D. Fourier spectrum and splitting conditions
+------------------------------------------------------------------------
+PASS: Fourier basis diagonalizes C
+PASS: Fourier basis is unitary
+PASS: closed-form C3 eigenvalues match numerical spectrum -- got=[0.8999999999999988, 1.8500000000000003, 2.3499999999999996]
+PASS: generic nonzero c splits three channels
+PASS: c=0 collapses to S3 two-value spectrum
+PASS: c=0 sample commutes with reflection
+PASS: c nonzero sample breaks reflection
+PASS: c=+3b gives an accidental two-value spectrum
+PASS: c=-3b gives an accidental two-value spectrum
+
+E. Generation-basis readout boundary
+------------------------------------------------------------------------
+PASS: scalar diagonal readout commutes with C
+PASS: non-scalar diagonal readout fails C3 equivariance
+PASS: C3 sample fails to commute with Tx
+PASS: C3 sample fails to commute with Ty
+PASS: C3 sample fails to commute with Tz
+PASS: only scalar tested diagonal readout is C3-equivariant -- [True, False, False]
+
+F. Import firewall
+------------------------------------------------------------------------
+PASS: proof inputs are disjoint from forbidden imports -- ['Hermitian_Ward_endomorphism', 'finite_cyclic_spectral_algebra', 'retained_C3_111_cycle', 'retained_hw1_triplet']
+PASS: new note keeps C3 as support only
+PASS: new note names remaining source/readout theorem
+PASS: new note does not claim numerical Yukawa ratios
+PASS: runner carries no PDG mass constants
+PASS: Lane 3 remains open in note
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=51, FAIL=0
+VERDICT: oriented C3 supplies an exact local splitter primitive, but leaves
+the Lane 3 quark-mass Ward source/readout law open.

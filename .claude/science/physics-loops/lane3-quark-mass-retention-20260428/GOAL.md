@@ -1,8 +1,8 @@
 # Lane 3 Quark Mass Retention Physics Loop
 
 **Loop slug:** `lane3-quark-mass-retention-20260428`
-**Science block:** `05`
-**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block05-20260428`
+**Science block:** `06`
+**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block06-20260428`
 **Target:** best-honest-status; retained closure only if fully justified
 **Started:** 2026-04-28T07:27:25Z
 **Hard deadline:** 2026-04-28T11:27:25Z
@@ -41,13 +41,14 @@ the branch supplies decisive theorem/support artifacts and review-loop
 backpressure. Bounded companion matches, CKM closure, or species-uniform reuse
 of the top Ward identity are not enough.
 
-## Block 05 Focus
+## Block 06 Focus
 
-Blocks 01-04 packaged exact negative boundaries and opened review PRs #100,
-#101, #102, and #103. Block 05 is a stacked continuation from block 04. Its
-active hard residual is the 3C generation-equivariant Ward obstruction:
+Blocks 01-05 packaged exact boundaries/support and opened review PRs #100,
+#101, #102, #103, and #104. Block 06 is a stacked continuation from block 05.
+Its active hard residual is the 3C source/readout primitive named by the
+generation-equivariant Ward obstruction:
 
 ```text
-S_3-equivariant Ward endomorphisms on hw=1 ~= A_1 + E
-cannot split three generation Yukawa eigenvalues.
+oriented C3[111] Ward normal form on hw=1 and whether it can split the
+S_3 E doublet without importing quark masses.
 ```

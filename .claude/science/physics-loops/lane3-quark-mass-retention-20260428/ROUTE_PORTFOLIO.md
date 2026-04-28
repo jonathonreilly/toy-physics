@@ -1,6 +1,6 @@
 # Lane 3 Route Portfolio
 
-**Updated:** 2026-04-28T08:35:11Z
+**Updated:** 2026-04-28T08:46:53Z
 
 Scores use the physics-loop dramatic-step rubric: claim-state upgrade,
 import retirement, review-blocker closure, artifactability, novelty, hard
@@ -10,6 +10,7 @@ residual pressure, and overclaim risk.
 |---|---|---:|---:|---:|---:|---:|---|
 | 3C-Q: quark direct Ward-free generation-matrix boundary | exact no-go / boundary theorem | 2 | 2 | 3 | 2 | low | execute first |
 | 3C-S3: generation-equivariant Ward degeneracy boundary | exact no-go / representation theorem | 2 | 3 | 3 | 3 | low | executed in block 05 |
+| 3C-C3: oriented cycle Ward splitter normal form | exact support/boundary theorem | 2 | 2 | 3 | 3 | low | executed in block 06 |
 | 3B-R2: route-2 endpoint readout `beta_E/alpha_E = 21/4` stretch | constructive theorem / exact runner | 3 | 3 | 2 | 3 | medium | next if time remains |
 | 3B-scalar shortlist provenance tightening | import-retirement audit / no-go | 1 | 2 | 3 | 1 | low | only after stretch |
 | 3A local `5/6` scale-selection boundary | exact negative boundary / theorem target isolation | 2 | 3 | 3 | 3 | low | executed in block 04 |
@@ -226,3 +227,38 @@ Honest target status:
 This is an exact negative boundary for the carrier-only 3C route. It does not
 preclude a future source/readout primitive; it proves that such a primitive is
 load-bearing.
+
+## Completed Route 7: 3C-C3
+
+Question:
+
+```text
+What exact Ward normal form is available if the retained C3[111] cycle is
+allowed as an oriented source/readout primitive on the hw=1 triplet?
+```
+
+Minimal premise set `A_min`:
+
+1. retained `hw=1` generation triplet;
+2. exact induced `C3[111]` cycle from the retained three-generation observable
+   theorem;
+3. Hermitian Ward endomorphism on the generation triplet;
+4. no observed quark masses, fitted Yukawa entries, hidden endpoint selectors,
+   or CKM mixing data treated as mass eigenvalues.
+
+Result:
+
+```text
+The Hermitian C3-equivariant Ward normal form is
+W(a,b,c) = a I + b(C+C^2) + c(C-C^2)/(i sqrt(3)).
+The c coefficient is reflection-odd. Generic nonzero c splits the S3 E
+doublet into cyclic Fourier channels, while c=0 collapses back to the S3
+two-value spectrum. A C3-equivariant readout diagonal in the generation basis
+is scalar. Runner TOTAL PASS=51 FAIL=0.
+```
+
+Honest target status:
+
+This is exact support/boundary for the missing 3C source/readout primitive.
+It retires direct promotion of oriented `C3` as mass closure: the coefficients
+`a,b,c` and the physical readout theorem remain open.

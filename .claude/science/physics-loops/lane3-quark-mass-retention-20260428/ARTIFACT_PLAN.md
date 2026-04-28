@@ -1,6 +1,6 @@
 # Lane 3 Artifact Plan
 
-**Updated:** 2026-04-28T08:35:11Z
+**Updated:** 2026-04-28T08:46:53Z
 
 ## Block 01 Artifact Set
 
@@ -138,6 +138,35 @@
    - commit coherent block artifacts;
    - push branch to `origin`;
    - create a stacked PR against block 04, or write `PR_BACKLOG.md`.
+
+## Block 06 Artifact Set
+
+1. Continue from block 05 on stacked branch
+   `physics-loop/lane3-quark-mass-retention-20260428-block06-20260428`.
+2. Execute the 3C oriented `C3[111]` Ward splitter support/boundary theorem:
+   - note:
+     `docs/QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md`;
+   - runner:
+     `scripts/frontier_quark_c3_oriented_ward_splitter_support.py`;
+   - log:
+     `logs/2026-04-28-quark-c3-oriented-ward-splitter-support.txt`.
+3. Run focused checks:
+   - `PYTHONPATH=scripts python3 scripts/frontier_quark_c3_oriented_ward_splitter_support.py`;
+   - `python3 -m py_compile scripts/frontier_quark_c3_oriented_ward_splitter_support.py`;
+   - inherited `S_3` generation-equivariant Ward degeneracy runner;
+   - inherited three-generation observable theorem runner;
+   - inherited `S_3` mass-matrix no-go and `Z_2` normal-form runners.
+4. Emulate review-loop:
+   - classify the result as exact support/boundary for a source/readout
+     primitive, not retained quark-mass closure;
+   - verify the reflection-odd coefficient `c` and remaining coefficients
+     are still open Ward/source data;
+   - verify no observed masses, fitted Yukawa entries, CKM mass inputs, or
+     endpoint nearest-rational selectors enter as proof inputs.
+5. Package:
+   - commit coherent block artifacts;
+   - push branch to `origin`;
+   - create a stacked PR against block 05, or write `PR_BACKLOG.md`.
 
 ## Non-Goals
 

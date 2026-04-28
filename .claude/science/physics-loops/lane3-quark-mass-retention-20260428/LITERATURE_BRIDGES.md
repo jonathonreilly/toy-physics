@@ -1,11 +1,13 @@
 # Lane 3 Literature Bridges
 
-**Updated:** 2026-04-28T08:26:17Z
+**Updated:** 2026-04-28T08:46:53Z
 
 No new external literature bridge has been introduced in this science block.
-Block 04 reuses inherited comparator and one-loop transport context already
-carried by the repo's `5/6` support note. Those values are recorded here as
-comparator/admitted-convention context, not as derivation inputs.
+Block 06 uses only finite cyclic representation theory and retained repo
+generation surfaces. Block 04 reuses inherited comparator and one-loop
+transport context already carried by the repo's `5/6` support note. Those
+values are recorded here as comparator/admitted-convention context, not as
+derivation inputs.
 
 | Source | Exact item used | Role | Import class | Affected claim | Derivation impact |
 |---|---|---|---|---|---|
