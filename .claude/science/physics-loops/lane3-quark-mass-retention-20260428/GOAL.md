@@ -1,8 +1,8 @@
 # Lane 3 Quark Mass Retention Physics Loop
 
 **Loop slug:** `lane3-quark-mass-retention-20260428`
-**Science block:** `09`
-**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block09-20260428`
+**Science block:** `10`
+**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block10-20260428`
 **Target:** best-honest-status; retained closure only if fully justified
 **Started:** 2026-04-28T07:27:25Z
 **Hard deadline:** 2026-04-28T11:27:25Z
@@ -41,18 +41,17 @@ the branch supplies decisive theorem/support artifacts and review-loop
 backpressure. Bounded companion matches, CKM closure, or species-uniform reuse
 of the top Ward identity are not enough.
 
-## Block 09 Focus
+## Block 10 Focus
 
-Blocks 01-08 packaged exact boundaries/support and opened review PRs #100,
-#101, #102, #103, #104, #105, #106, and #107. Block 09 is a stacked
-continuation from block 08. Its active hard residual is whether the repo's
-positive-parent square-root dictionary supplies the quark P1 readout theorem:
+Blocks 01-09 packaged exact boundaries/support and opened review PRs #100,
+#101, #102, #103, #104, #105, #106, #107, and #108. Block 10 is a stacked
+continuation from block 09. Its active hard residual is the 3B up-amplitude
+support boundary:
 
 ```text
-positive C3 parent M
-=> eig(M^(1/2)) are physical quark Yukawa amplitudes?
+exact STRC/RPSR reduced amplitude support
+=> retained up-type mass ratios?
 ```
 
-The target is an honest parent/readout inventory: square-root algebra is exact
-support, but it is not quark mass retention without a physical quark parent
-and a retained readout theorem.
+The target is constructive but bounded: retain the exact RPSR amplitude
+support while keeping the amplitude-to-Yukawa readout theorem load-bearing.

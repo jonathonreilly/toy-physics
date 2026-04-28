@@ -1,8 +1,8 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T09:22:17Z
-**Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block09-20260428`
-**Current head:** `2929699a` plus PR-status bookkeeping; see `git log`
+**Updated:** 2026-04-28T09:26:03Z
+**Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block10-20260428`
+**Current head:** block-10 working checkpoint; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
@@ -14,22 +14,25 @@
 **Block 07 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/106
 **Block 08 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/107
 **Block 09 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/108
+**Block 10 review PR:** pending packaging
 
 ## Current State
 
-Blocks 01 through 08 are packaged and PR'd. Block 09 is a stacked
-continuation from block 08. It attacks the P1 parent/readout residual:
+Blocks 01 through 09 are packaged and PR'd. Block 10 is a stacked
+continuation from block 09. It records a constructive 3B support boundary:
 
 ```text
-Does the positive-parent square-root dictionary already identify
-eig(M_quark^(1/2)) with physical quark Yukawa amplitudes?
+STRC/RPSR supplies exact reduced up-amplitude support, but no retained
+amplitude-to-Yukawa readout theorem is present yet.
 ```
 
-The answer from this checkpoint is an exact current-bank no-go. The
-square-root algebra is exact and preserves `C3` covariance, but it is
-representational unless a physical quark parent and readout theorem are
-supplied. For every positive amplitude triple there is a positive `C3` parent
-with that square-root spectrum.
+The exact support value is:
+
+```text
+a_u = sqrt(5/6) * (1 - 48/(49 sqrt(42))) = 0.7748865611...
+```
+
+This is not retained `m_u/m_c`, `m_c/m_t`, or absolute non-top mass closure.
 
 ## Lock And Supervisor Note
 
@@ -41,64 +44,60 @@ with permission denied at `/Users/jonreilly`. This run uses the local lock:
 ```
 
 plus the active supervisor flock under this loop pack. The local lock was
-refreshed during block 09 to expire at `2026-04-28T14:16:23Z`, after the loop
+refreshed during block 10 to expire at `2026-04-28T14:26:03Z`, after the loop
 deadline.
 
 ## Completed In This Checkpoint
 
-Created and verified the 3C P1 positive-parent readout no-go:
+Created and verified the 3B RPSR mass-retention boundary:
 
-- `docs/QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md`
-- `scripts/frontier_quark_c3_p1_positive_parent_readout_no_go.py`
-- `logs/2026-04-28-quark-c3-p1-positive-parent-readout-no-go.txt`
+- `docs/QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py`
+- `logs/2026-04-28-quark-up-amplitude-rpsr-mass-retention-boundary.txt`
 
 Checks:
 
 ```text
-3C-P1-Readout runner: TOTAL PASS=54 FAIL=0
+3B-RPSR boundary runner: TOTAL PASS=50 FAIL=0
 py_compile: PASS
-Inherited Koide square-root amplitude principle: PASS=11 FAIL=0
-Inherited block-07 C3 circulant boundary runner: TOTAL PASS=43 FAIL=0
-Inherited block-08 A1 source-domain no-go runner: TOTAL PASS=50 FAIL=0
-Inherited one-Higgs gauge-selection runner: TOTAL PASS=43 FAIL=0
-Inherited Koide circulant character bridge: PASS=9 FAIL=0
+Inherited STRC LO collinearity runner: PASS=12 FAIL=0
+Inherited RPSR runner: PASS=9 FAIL=0
+Inherited projector parameter audit: TOTAL PASS=6 FAIL=0
+Inherited BICAC endpoint obstruction runner: PASS=12 FAIL=0
+Inherited Lane 3 firewall runner: PASS=17 FAIL=0
 ```
 
 Claim movement:
 
 ```text
-The positive-parent square-root dictionary is exact support, but the current
-bank lacks both a physical quark positive C3 parent and a readout theorem from
-the square-root spectrum to physical quark Yukawa amplitudes.
+RPSR is exact retained reduced-amplitude support. The missing theorem is the
+typed readout from that amplitude to physical up-type Yukawa eigenvalue ratios
+and a top-compatible sector/scale bridge.
 ```
 
 ## Active Route
 
-Block 09 has been packaged:
+Block 10 is verified and ready for packaging:
 
 ```text
-commit 2929699a: physics-loop lane3 block09 p1 readout boundary
-pushed branch physics-loop/lane3-quark-mass-retention-20260428-block09-20260428
-stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/108
+commit: pending
+push: pending
+stacked review PR against block 09: pending
 ```
 
 ## Next Exact Action
 
-Continue Lane 3 only from one of:
+Commit/push block 10 and open a stacked review PR against block 09. After
+that, continue Lane 3 only from one of:
 
-1. physical quark positive parent/readout theorem;
-2. sector-specific phase and scale laws;
-3. alternate source/readout route that bypasses A1/P1;
+1. amplitude-to-Yukawa readout theorem for RPSR;
+2. sector/scale bridge to the top Ward anchor;
+3. 3C source/readout theorem;
 4. genuine 3A non-perturbative `5/6` exponentiation plus scale selection or
    RG-covariant transport;
 5. new 3B source-domain theorem or alternate scalar/readout primitive.
 
-Do not promote square-root algebra, inherited `C3` circulant support, scalar
-equality `1/2`, or charged-lepton P1 support into retained non-top quark masses
-without the missing theorem.
-
 ## Stop Reason
 
-No stop requested. Lane 3 remains open; block 09 is exact current-bank no-go /
-support boundary for the P1 parent/readout theorem target without claiming
-retained non-top quark masses.
+No stop requested. Lane 3 remains open; block 10 is exact 3B support/boundary
+without claiming retained non-top quark masses.

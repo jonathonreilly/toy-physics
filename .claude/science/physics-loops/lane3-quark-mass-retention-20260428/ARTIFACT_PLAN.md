@@ -1,6 +1,6 @@
 # Lane 3 Artifact Plan
 
-**Updated:** 2026-04-28T09:16:23Z
+**Updated:** 2026-04-28T09:26:03Z
 
 ## Block 01 Artifact Set
 
@@ -253,6 +253,33 @@
    - commit coherent block artifacts;
    - push branch to `origin`;
    - create a stacked PR against block 08, or write `PR_BACKLOG.md`.
+
+## Block 10 Artifact Set
+
+1. Continue from block 09 on stacked branch
+   `physics-loop/lane3-quark-mass-retention-20260428-block10-20260428`.
+2. Execute the 3B RPSR mass-retention boundary:
+   - note:
+     `docs/QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md`;
+   - runner:
+     `scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py`;
+   - log:
+     `logs/2026-04-28-quark-up-amplitude-rpsr-mass-retention-boundary.txt`.
+3. Run focused checks:
+   - `PYTHONPATH=scripts python3 scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py`;
+   - `python3 -m py_compile scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py`;
+   - inherited STRC/RPSR/projector audit runners;
+   - inherited BICAC endpoint obstruction and Lane 3 firewall runners.
+4. Emulate review-loop:
+   - classify the result as exact up-amplitude support/boundary, not mass
+     retention;
+   - verify no observed quark masses, fitted Yukawa entries, CKM mass inputs,
+     amplitude-as-mass shortcut, or species-uniform top Ward import enter as
+     proof inputs.
+5. Package:
+   - commit coherent block artifacts;
+   - push branch to `origin`;
+   - create a stacked PR against block 09, or write `PR_BACKLOG.md`.
 
 ## Non-Goals
 

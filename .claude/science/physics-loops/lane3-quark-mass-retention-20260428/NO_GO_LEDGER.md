@@ -1,6 +1,6 @@
 # Lane 3 No-Go Ledger
 
-**Updated:** 2026-04-28T09:16:23Z
+**Updated:** 2026-04-28T09:26:03Z
 
 | Route / claim | Blocked conclusion | Blocking result | Source | Status for this loop |
 |---|---|---|---|---|
@@ -22,6 +22,7 @@
 | Existing `C3` circulant hierarchy support plus A1/P1 directly gives retained quark Ward identities | Retained generation-stratified quark Yukawa ratios for `u,c` and `d,s,b` | The Hermitian `C3` circulant family is a three-real-dimensional carrier and can fit any real generation spectrum unless A1/P1 or an equivalent source/readout theorem is added. With A1/P1 it gives a Koide-style amplitude relation but still leaves phase, scale, species assignment, and quark Yukawa readout open | `QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md` | closed for direct promotion; usable support only if a quark-specific source/readout theorem is supplied |
 | Koide A1 support scalar `1/2` directly sets the quark `C3` source ratio | Retained quark A1 source law `|q_quark|^2/a_quark^2 = 1/2` and resulting Ward hierarchy | Current A1 support faces collapse to the exact scalar `1/2`, and the quark `C3` target ratio is exact if granted, but the current support bank has no typed edge from the A1 scalar to the physical quark Ward source domain | `QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md` | closed for direct promotion; reopen only with a typed quark source-domain theorem |
 | Positive-parent square-root dictionary directly gives quark P1 readout | Retained identification of `eig(M_quark^(1/2))` with physical quark Yukawa amplitudes | The square-root theorem is exact once a positive parent is supplied, but the current support bank derives neither a physical positive quark `C3` parent nor a readout theorem mapping the square-root spectrum to quark Yukawa amplitudes. The dictionary can represent arbitrary positive triples | `QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md` | closed for direct promotion; reopen only with parent and readout theorem content |
+| RPSR reduced up-amplitude directly gives up-type quark mass ratios | Retained `m_u/m_c`, `m_c/m_t`, or absolute non-top up-type masses | STRC/RPSR derives an exact dimensionless reduced amplitude on the `1(+)5` projector carrier, but the current bank has no typed readout edge from that amplitude to physical up-type Yukawa eigenvalue ratios or a top-compatible sector/scale bridge | `QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md` | closed for direct promotion; usable constructive 3B support |
 
 ## Reopen Rule
 

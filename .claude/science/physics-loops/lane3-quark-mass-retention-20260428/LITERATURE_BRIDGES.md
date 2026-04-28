@@ -1,9 +1,11 @@
 # Lane 3 Literature Bridges
 
-**Updated:** 2026-04-28T09:16:23Z
+**Updated:** 2026-04-28T09:26:03Z
 
 No new external literature bridge has been introduced in this science block.
-Block 09 uses inherited repo Koide P1 square-root support only as an internal
+Block 10 uses inherited repo STRC/RPSR up-amplitude theorems only as internal
+support surfaces; it does not introduce new literature values or observed
+mass inputs. Block 09 uses inherited repo Koide P1 square-root support only as an internal
 support surface; it records that the dictionary does not supply a typed quark
 parent/readout theorem. Block 08 uses inherited repo Koide A1 support notes
 only as internal support surfaces; it records that those support scalars do

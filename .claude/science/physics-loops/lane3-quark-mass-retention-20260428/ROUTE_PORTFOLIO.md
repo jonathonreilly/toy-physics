@@ -1,6 +1,6 @@
 # Lane 3 Route Portfolio
 
-**Updated:** 2026-04-28T09:16:23Z
+**Updated:** 2026-04-28T09:26:03Z
 
 Scores use the physics-loop dramatic-step rubric: claim-state upgrade,
 import retirement, review-blocker closure, artifactability, novelty, hard
@@ -14,6 +14,7 @@ residual pressure, and overclaim risk.
 | 3C-Circulant: inherited `C3` hierarchy source-law boundary | exact support/boundary theorem | 2 | 2 | 3 | 3 | low | executed in block 07 |
 | 3C-A1-Source: A1 scalar to quark source-domain bridge inventory | exact current-bank no-go | 2 | 3 | 3 | 3 | low | executed in block 08 |
 | 3C-P1-Readout: positive-parent square-root quark readout boundary | exact current-bank no-go | 2 | 3 | 3 | 3 | low | executed in block 09 |
+| 3B-RPSR-MassBoundary: retained up-amplitude support vs mass readout | exact support/boundary theorem | 2 | 3 | 3 | 3 | low | executed in block 10 |
 | 3B-R2: route-2 endpoint readout `beta_E/alpha_E = 21/4` stretch | constructive theorem / exact runner | 3 | 3 | 2 | 3 | medium | next if time remains |
 | 3B-scalar shortlist provenance tightening | import-retirement audit / no-go | 1 | 2 | 3 | 1 | low | only after stretch |
 | 3A local `5/6` scale-selection boundary | exact negative boundary / theorem target isolation | 2 | 3 | 3 | 3 | low | executed in block 04 |
@@ -375,3 +376,26 @@ Honest target status:
 This is an exact current-bank no-go / support boundary. It sharpens P1 to a
 physical quark parent theorem plus readout theorem, or an alternate readout
 route that bypasses P1.
+
+## Completed Route 11: 3B-RPSR-MassBoundary
+
+Question:
+
+```text
+What exactly does the existing STRC/RPSR up-amplitude package retain, and
+what remains missing before it becomes retained up-type mass-ratio closure?
+```
+
+Result:
+
+```text
+STRC/RPSR supplies exact retained support for a reduced up-sector amplitude:
+a_u = sqrt(5/6) * (1 - 48/(49 sqrt(42))). The current bank has no typed
+readout edge from this reduced amplitude to physical up-type Yukawa eigenvalue
+ratios or absolute non-top masses. Runner TOTAL PASS=50 FAIL=0.
+```
+
+Honest target status:
+
+This is constructive 3B support/boundary. It upgrades the loop's map of the
+up-amplitude route while blocking direct promotion to retained `m_u` or `m_c`.

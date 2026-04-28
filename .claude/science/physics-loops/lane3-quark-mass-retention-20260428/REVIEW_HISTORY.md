@@ -1,6 +1,6 @@
 # Lane 3 Review History
 
-**Updated:** 2026-04-28T09:16:23Z
+**Updated:** 2026-04-28T09:26:03Z
 
 ## Preflight Review
 
@@ -565,3 +565,57 @@ Disposition:
 - next exact Lane 3 action requires a physical quark parent/readout theorem,
   sector phase/scale law, alternate source/readout route, genuine 3A scale
   theorem, or new 3B scalar/readout primitive.
+
+## Artifact Review: 3B RPSR Up-Amplitude Mass-Retention Boundary
+
+**Time:** 2026-04-28T09:26:03Z
+
+Artifact reviewed:
+
+- `docs/QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py`
+- `logs/2026-04-28-quark-up-amplitude-rpsr-mass-retention-boundary.txt`
+
+Verification:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py
+TOTAL: PASS=50, FAIL=0
+
+python3 -m py_compile scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py
+PASS
+
+PYTHONPATH=scripts python3 scripts/frontier_strc_lo_collinearity_theorem.py
+PASS=12 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_up_amplitude_rpsr_conditional.py
+PASS=9 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_projector_parameter_audit.py
+TOTAL: PASS=6, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_bicac_endpoint_obstruction_theorem.py
+PASS=12 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py
+PASS=17 FAIL=0
+```
+
+Review-loop emulation:
+
+1. Claim wording is bounded to exact 3B up-amplitude support/boundary.
+2. The runner verifies exact STRC/RPSR algebra and the reduced amplitude
+   `a_u = 0.7748865611...`.
+3. The runner blocks direct promotion from `a_u` to `m_u/m_c`, `m_c/m_t`, or
+   non-top masses without a typed amplitude-to-Yukawa readout theorem.
+4. Observed quark masses, fitted Yukawa entries, CKM mass input,
+   amplitude-as-mass shortcut, and species-uniform top Ward import are
+   excluded from the proof.
+
+Disposition:
+
+- keep artifact;
+- claim status remains `open`;
+- next exact Lane 3 action requires an amplitude-to-Yukawa readout theorem,
+  sector/scale bridge, 3C source/readout theorem, 3A scale theorem, or new 3B
+  scalar/readout primitive.
