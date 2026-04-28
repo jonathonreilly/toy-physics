@@ -1,15 +1,14 @@
 # Normal-Grammar `U(1)` Rigidity Stretch Attempt — First-Principles Work From `A_min`
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **stretch-attempt** note on
-`frontier/neutrino-quantitative-20260428`. First-principles attempt to
-retain `(C2-X)` (charge-2 primitive class exhaustion) via route
-`(R-X3)` finite-normal-grammar `U(1)` rigidity globalization. Per the
-new physics-loop skill's Deep Work Rules audit-quota threshold (Cycles
-1, 2 both audit-grade), this cycle is mandatory. Output: **partial
-structure** + **sharper obstruction** identified at substrate-class
-admissibility, plus a worked failed derivation with the load-bearing
-wall named.
+**Status:** open stretch-attempt note for Lane 4; no `(C2-X)` closure.
+First-principles attempt to close `(C2-X)` (charge-2 primitive class
+exhaustion) via route `(R-X3)` finite-normal-grammar `U(1)` rigidity
+globalization. Per the new physics-loop skill's Deep Work Rules audit-quota
+threshold (Cycles 1, 2 both audit-grade), this cycle is mandatory. Output:
+**partial structure** + **sharper obstruction** identified at substrate-class
+admissibility, plus a worked failed derivation with the load-bearing wall
+named.
 **Lane:** 4 — Neutrino quantitative closure (route 4D / R-X3)
 **Loop:** `neutrino-quantitative-20260428`
 

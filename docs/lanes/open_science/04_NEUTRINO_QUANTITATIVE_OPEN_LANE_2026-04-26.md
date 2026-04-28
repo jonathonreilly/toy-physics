@@ -28,6 +28,30 @@ absolute-mass closure. A positive branch must supply either an admitted
 nonzero Majorana/seesaw activation law or a separate tiny Dirac `Y_nu`
 activation law.
 
+## 2026-04-28 Quantitative Workstream Packet
+
+The [Lane 4 theorem-plan note](../../NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md)
+turns this lane into an explicit phase-ordered roadmap. Its first-phase focus
+is 4D Dirac/Majorana global status and 4E mass-mechanism closure; it does not
+derive masses or promote the lane.
+
+The [Dirac global lift partial theorem](../../NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md)
+records the current 4D progress: current-stack Dirac behavior globalizes only
+under the open `(C2-X)` charge-2 primitive exhaustion premise. Without
+`(C2-X)`, the result remains a support conditional theorem, not unconditional
+Dirac closure.
+
+The [normal-grammar U(1) rigidity stretch attempt](../../NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md)
+falsifies `(R-X1)` anomaly-cancellation exhaustion as a closure route and
+shows why strict-vs-permissive reading of `A_min` axiom 3 is load-bearing.
+The [stuck fan-out note](../../NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md)
+then revises the strict-reading shortcut: the current framework posture is
+permissive, so `(C2-X)` remains research-level.
+
+The [workstream close-out](../../NEUTRINO_LANE4_WORKSTREAM_CLOSEOUT_NOTE_2026-04-28.md)
+hands off `(SR-2)` continuum-limit scalar two-point incompatibility with
+Pfaffian extensions as the recommended next single-cycle attack.
+
 ## 1. Missing-science framing
 
 The framework still needs direct answers to:
@@ -151,6 +175,10 @@ already-retained δ_CP ≈ -81° and θ_23 upper octant predictions.
 - [N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md](../../N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md)
 - The DM closed package (δ_CP, θ_23 forecast)
 - [NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md](../../NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md)
+- [NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md](../../NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md)
+- [NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md](../../NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md)
+- [NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md](../../NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md)
+- [NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md](../../NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md)
 
 ## 5. Recommended attack approach
 

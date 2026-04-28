@@ -1,12 +1,11 @@
 # Lane 4 Neutrino Theorem Plan: Closure Roadmap with Phase Ordering
 
 **Date:** 2026-04-28
-**Status:** retained branch-local theorem-plan note on
-`frontier/neutrino-quantitative-20260428`. Reduces Lane 4 (neutrino
-quantitative closure) to a sharp closure roadmap using current
-retained PMNS/Majorana/Dirac content + retained `N_eff` + the
-DM-closed-package `delta_CP`/`theta_23` forecast. Identifies Phase-1
-priorities and the cleanest stretch-attempt entry.
+**Status:** open Lane 4 theorem-plan note; roadmap only, no claim promotion.
+Reduces Lane 4 (neutrino quantitative closure) to a sharp closure roadmap
+using current PMNS/Majorana/Dirac content, `N_eff`, and the DM-closed-package
+`delta_CP`/`theta_23` forecast. Identifies Phase-1 priorities and the cleanest
+stretch-attempt entry.
 **Lane:** 4 — Neutrino quantitative closure
 **Loop:** `neutrino-quantitative-20260428`
 

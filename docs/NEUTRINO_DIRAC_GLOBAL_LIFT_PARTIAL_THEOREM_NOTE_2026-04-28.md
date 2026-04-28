@@ -1,14 +1,14 @@
 # Neutrino Dirac Global Lift — Partial Theorem with Named Obstruction
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **partial-lift** theorem on
-`frontier/neutrino-quantitative-20260428`. Lifts the current-stack
-Majorana zero law (`mu_current = 0`) to a conditional global statement
-on the framework's retained content. Identifies the **single
-load-bearing premise** that would make the lift unconditional: a
-**charge-2 primitive class exhaustion theorem** showing that no
-admissible framework extension can introduce a fermionic charge-`±2`
-carrier outside the retained class.
+**Status:** support conditional theorem for Lane 4 gate isolation; no
+unconditional Dirac closure and no numerical neutrino-mass claim. Lifts the
+current-stack Majorana zero law (`mu_current = 0`) to a conditional global
+statement on the current framework content and identifies the **single
+load-bearing premise** that would make the lift unconditional: a **charge-2
+primitive class exhaustion theorem** showing that no admissible framework
+extension can introduce a fermionic charge-`±2` carrier outside the current
+class.
 **Lane:** 4 — Neutrino quantitative closure (route 4D)
 **Loop:** `neutrino-quantitative-20260428`
 
@@ -145,7 +145,7 @@ constrains admissible matter content via anomaly cancellation.
 A direct proof that adding any charge-`±2` fermionic primitive to
 the retained content breaks anomaly cancellation would close (C2-X).
 
-**Status:** the retained anomaly-cancellation work focuses on the
+**Route state:** the anomaly-cancellation work focuses on the
 SM matter content as already retained. An exhaustion direction
 ("no admissible additional matter content has charge-`±2`") has
 not been articulated as a separate theorem. **Open structural
@@ -159,7 +159,7 @@ to charge-0 or charge-`±1`. A direct rep-theory argument that
 charge-`±2` representations are not realizable as primitives on
 this substrate would close (C2-X).
 
-**Status:** not currently articulated. Would require an explicit
+**Route state:** not currently articulated. Would require an explicit
 representation classification on `Cl(3)/Z^3`'s admissible carrier
 class.
 
@@ -170,7 +170,7 @@ grammar. A rigidity theorem showing that any normal-grammar
 extension consistent with `Cl(3)` algebra **must preserve**
 fermion-number `U(1)` would extend (P3) globally and close (C2-X).
 
-**Status:** the current normal-grammar finite-normal-grammar no-go
+**Route state:** the current normal-grammar finite-normal-grammar no-go
 gives the local result. A rigidity-style globalization is the
 natural extension. **Most direct candidate path.**
 
@@ -181,7 +181,7 @@ LEGEND, nEXO) progressively tightens the empirical bound on
 admissible Majorana mass. While not a structural proof of (C2-X),
 it sharpens the conditional theorem's empirical falsifier.
 
-**Status:** experimental program; not a Lane-4-internal closure
+**Route state:** experimental program; not a Lane-4-internal closure
 route.
 
 ## 5. What this theorem closes and does not close
@@ -229,7 +229,7 @@ Before this cycle, Lane 4 was framed with seven derivation targets
 After this cycle, target 4D reduces to a single open premise (C2-X)
 plus four candidate retention routes. The cycle output is:
 
-- the conditional theorem (retained-with-budget structure;
+- the conditional theorem (support structure;
   unconditional under (C2-X));
 - the named obstruction (C2-X);
 - the candidate routes (R-X1, R-X2, R-X3, R-X4).
@@ -261,8 +261,8 @@ the most direct attack.
 
 ## 9. Boundary
 
-This is a **conditional structural theorem**, retained branch-locally.
-It does not promote any input to retired status, does not retain any
+This is a **conditional structural theorem** on a support/open Lane 4
+surface. It does not promote any input to retired status, does not retain any
 neutrino mass numerically, and does not unconditionally close 4D.
 It produces the conditional lift + the named obstruction (C2-X) +
 candidate routes for retaining (C2-X).

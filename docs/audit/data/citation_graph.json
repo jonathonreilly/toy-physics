@@ -1253,6 +1253,26 @@
       "to": "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27"
     },
     {
+      "from": "canonical_harness_index",
+      "to": "neutrino_lane4_theorem_plan_note_2026-04-28"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "neutrino_lane4_workstream_closeout_note_2026-04-28"
+    },
+    {
       "from": "causal_distance_tail_note",
       "to": "causal_propagating_field_note"
     },
@@ -8586,6 +8606,14 @@
     },
     {
       "from": "lanes.active_working_lanes_2026-04-26",
+      "to": "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28"
+    },
+    {
+      "from": "lanes.active_working_lanes_2026-04-26",
+      "to": "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28"
+    },
+    {
+      "from": "lanes.active_working_lanes_2026-04-26",
       "to": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26"
     },
     {
@@ -8779,6 +8807,26 @@
     {
       "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
       "to": "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27"
+    },
+    {
+      "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
+      "to": "neutrino_lane4_theorem_plan_note_2026-04-28"
+    },
+    {
+      "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
+      "to": "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28"
+    },
+    {
+      "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
+      "to": "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28"
+    },
+    {
+      "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
+      "to": "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28"
+    },
+    {
+      "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
+      "to": "neutrino_lane4_workstream_closeout_note_2026-04-28"
     },
     {
       "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
@@ -17793,7 +17841,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-28T07:36:36.802744+00:00",
+  "generated_at": "2026-04-28T11:27:33.785863+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19795,9 +19843,14 @@
         "atomic_rydberg_dependency_firewall_note_2026-04-27",
         "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
         "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
-        "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27"
+        "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
+        "neutrino_lane4_theorem_plan_note_2026-04-28",
+        "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28",
+        "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
+        "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
+        "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "1a95fb0b5969e5d49eccbc2cb500b4ba10e6e14fa73d0e9b6f61da85b65f5768",
+      "note_hash": "c895f516601e699aae6dece28efb5e0942584c22359622b21742057257046548",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -27829,6 +27882,8 @@
         "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
         "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
         "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+        "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28",
+        "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
         "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
         "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26",
@@ -27838,7 +27893,7 @@
         "ai_methodology.raw.readme",
         "lanes.open_science.readme"
       ],
-      "note_hash": "162a685fdee70e6782c3ea17e9a5ee281dd94bf64b9d5d212ac1d786224e995f",
+      "note_hash": "b3196969c36cc43c89ae380c29b4ef266afebfd16bc22a50b1a1c84aeb765f8d",
       "path": "docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md",
       "runner_path": null,
       "title": "Active Working Lanes"
@@ -27964,6 +28019,11 @@
       "current_status_raw": "ACCEPTED CRITICAL OPEN SCIENCE LANE on `main`; no theorem or claim",
       "deps": [
         "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+        "neutrino_lane4_theorem_plan_note_2026-04-28",
+        "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28",
+        "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
+        "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
+        "neutrino_lane4_workstream_closeout_note_2026-04-28",
         "charged_lepton_koide_review_packet_2026-04-18",
         "neutrino_retained_status_note_2026-04-16",
         "neutrino_retained_observable_bounds_theorem_note_2026-04-24",
@@ -27974,7 +28034,7 @@
         "n_eff_from_three_generations_theorem_note_2026-04-24",
         "neutrino_two_amplitude_last_mile_reduction_note"
       ],
-      "note_hash": "4539984e0e947333e7577a60d8cd7f63a1eaf3d9afc8cb3dd4dacafdf7dae29c",
+      "note_hash": "f93ead541b9170af0174f4a748d72af66b13e9d355ec09759cd4cd449bc8cb93",
       "path": "docs/lanes/open_science/04_NEUTRINO_QUANTITATIVE_OPEN_LANE_2026-04-26.md",
       "runner_path": null,
       "title": "Lane 4 \u2014 Neutrino Quantitative Closure"
@@ -29318,6 +29378,26 @@
       "runner_path": null,
       "title": "Nature-Level Discovery \u2014 Ranked Directions After Full Synthesis"
     },
+    "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28": {
+      "claim_id": "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open stuck-fan-out note for Lane 4; synthesis and route triage",
+      "deps": [],
+      "note_hash": "4ae38d4fc2efd910d4f0a69fdc6ca8488bd0a733b6d56d30f8c9a8e770d0828e",
+      "path": "docs/NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "Stuck Fan-Out: Strict vs Permissive Reading of `A_min` Axiom 3"
+    },
+    "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28": {
+      "claim_id": "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "support conditional theorem for Lane 4 gate isolation; no",
+      "deps": [],
+      "note_hash": "e17820a36fad4f55b77146576afc8435eb51a0b975a35c3ff206a04f0fb16332",
+      "path": "docs/NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "Neutrino Dirac Global Lift \u2014 Partial Theorem with Named Obstruction"
+    },
     "neutrino_dirac_pmns_retained_lane_packet_2026-04-16": {
       "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
       "current_status": "unknown",
@@ -29375,6 +29455,26 @@
       "path": "docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py",
       "title": "Lane 4 Neutrino Dirac/Seesaw Fork No-Go"
+    },
+    "neutrino_lane4_theorem_plan_note_2026-04-28": {
+      "claim_id": "neutrino_lane4_theorem_plan_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open Lane 4 theorem-plan note; roadmap only, no claim promotion.",
+      "deps": [],
+      "note_hash": "0311c840028fb83cce9e38645d1de1f6cae44b42811b3deca9f151550adf5dd2",
+      "path": "docs/NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "Lane 4 Neutrino Theorem Plan: Closure Roadmap with Phase Ordering"
+    },
+    "neutrino_lane4_workstream_closeout_note_2026-04-28": {
+      "claim_id": "neutrino_lane4_workstream_closeout_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open workstream close-out note for Lane 4; no claim promotion.",
+      "deps": [],
+      "note_hash": "183fa3f85b7d4657f9b29b84e03b1c942c7636225bd7d7971805f8b910cc6d39",
+      "path": "docs/NEUTRINO_LANE4_WORKSTREAM_CLOSEOUT_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "Lane 4 Loop Close-Out: Honest Stop + Final Report"
     },
     "neutrino_majorana_adjacent_singlet_placement_theorem_note": {
       "claim_id": "neutrino_majorana_adjacent_singlet_placement_theorem_note",
@@ -30018,6 +30118,16 @@
       "path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_mass_reduction_to_dirac.py",
       "title": "Neutrino Mass Reduction To The Dirac Lane"
+    },
+    "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28": {
+      "claim_id": "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open stretch-attempt note for Lane 4; no `(C2-X)` closure.",
+      "deps": [],
+      "note_hash": "d6aef50a39266949659832add106bd224531d1b283b6164e3c5fd97c6bbb14cd",
+      "path": "docs/NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "Normal-Grammar `U(1)` Rigidity Stretch Attempt \u2014 First-Principles Work From `A_min`"
     },
     "neutrino_retained_lanes_review_packet_2026-04-16": {
       "claim_id": "neutrino_retained_lanes_review_packet_2026-04-16",
@@ -39637,13 +39747,18 @@
     "multipole_tidal_response_note",
     "nature_discovery_directions_2026-04-11",
     "nature_ranked_directions_2026-04-11",
+    "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
+    "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28",
     "neutrino_dirac_two_higgs_canonical_reduction_note",
     "neutrino_dirac_z3_support_trichotomy_note",
     "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+    "neutrino_lane4_theorem_plan_note_2026-04-28",
+    "neutrino_lane4_workstream_closeout_note_2026-04-28",
     "neutrino_majorana_current_stack_exhaustion_note",
     "neutrino_majorana_lower_level_pairing_nogo_note",
     "neutrino_majorana_nur_character_boundary_note",
     "neutrino_majorana_nur_charge2_primitive_reduction_note",
+    "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
     "neutrino_sole_axiom_full_closure_boundary_note",
     "neutrino_two_amplitude_last_mile_reduction_note",
     "newton_derivation_note",
@@ -40101,17 +40216,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4448,
+    "edge_count": 4460,
     "leaf_count": 732,
-    "node_count": 1623,
-    "root_count": 1179,
+    "node_count": 1628,
+    "root_count": 1184,
     "runners_with_path": 710,
     "status_counts": {
       "bounded": 212,
-      "open": 26,
+      "open": 30,
       "proposed_promoted": 6,
       "proposed_retained": 447,
-      "support": 136,
+      "support": 137,
       "unknown": 796
     }
   }

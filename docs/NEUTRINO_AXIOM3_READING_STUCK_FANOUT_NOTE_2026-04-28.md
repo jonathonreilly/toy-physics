@@ -1,14 +1,13 @@
 # Stuck Fan-Out: Strict vs Permissive Reading of `A_min` Axiom 3
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **stuck fan-out** note on
-`frontier/neutrino-quantitative-20260428`. Per the new physics-loop
-skill's Deep Work Rules requirement to record a stuck fan-out before
-any honest stop. Generates five framework-internal arguments for each
-reading of `A_min` axiom 3 ("finite local Grassmann / staggered-Dirac
-partition"), synthesizes which reading the framework actually
-intends, and identifies the best remaining attack on `(C2-X)` under
-the framework's intended reading.
+**Status:** open stuck-fan-out note for Lane 4; synthesis and route triage
+only, no claim promotion. Per the new physics-loop skill's Deep Work Rules
+requirement to record a stuck fan-out before any honest stop. Generates five
+framework-internal arguments for each reading of `A_min` axiom 3 ("finite
+local Grassmann / staggered-Dirac partition"), synthesizes the workstream's
+best reading of the current framework posture, and identifies the best
+remaining attack on `(C2-X)` under that reading.
 **Lane:** 4 — Neutrino quantitative closure
 **Loop:** `neutrino-quantitative-20260428`
 
@@ -159,12 +158,12 @@ question.
 `NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md` and
 `NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md` are framework
 notes that *consider* Pfaffian extensions as objects of study. Their
-existence as part of the retained content means the framework
-admits Pfaffian extensions as **valid framework objects**, even if
-not currently *retained* as physically realized.
+existence as exact construction/no-forcing artifacts means the framework
+treats Pfaffian extensions as **valid objects to analyze**, even though
+the physical Pfaffian sector is not currently retained as realized.
 
-**Strength:** the framework's own corpus treats Pfaffian extensions
-as discussable, not as inadmissible.
+**Strength:** the framework's own corpus treats Pfaffian extensions as
+discussable framework objects, not as already-forbidden syntax.
 
 ### P3 — Phenomenological openness to Majorana neutrinos
 

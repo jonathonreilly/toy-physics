@@ -1,11 +1,10 @@
 # Lane 4 Loop Close-Out: Honest Stop + Final Report
 
 **Date:** 2026-04-28
-**Status:** retained branch-local close-out note on
-`frontier/neutrino-quantitative-20260428`. Per new physics-loop skill
-stop-condition: both Deep Work Rules requirements satisfied (≥1
-stretch attempt in Cycle 3, ≥1 stuck fan-out in Cycle 4). Honest stop
-with workstream close-out + PR opening.
+**Status:** open workstream close-out note for Lane 4; no claim promotion.
+Per new physics-loop skill stop-condition: both Deep Work Rules requirements
+satisfied (≥1 stretch attempt in Cycle 3, ≥1 stuck fan-out in Cycle 4).
+Honest stop with workstream close-out + PR opening.
 **Lane:** 4 — Neutrino quantitative closure
 **Loop:** `neutrino-quantitative-20260428`
 
@@ -145,26 +144,25 @@ candidates:
 - **Honest re-stop** if no fresh upstream development supplies new
   ammunition.
 
-## 4. Repo-wide weaving (NOT applied — for post-loop integration)
+## 4. Repo-wide weaving
 
-For the post-loop review-and-integration step:
+Review-loop integration applied the public discovery wiring:
 
 - `docs/lanes/open_science/04_NEUTRINO_QUANTITATIVE_OPEN_LANE_2026-04-26.md`
-  §4 scaffolding list: add the four branch-local artifacts.
+  now points to the roadmap, conditional lift, stretch attempt, fan-out, and
+  close-out artifacts.
+- `docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md` now records the conditional
+  4D gate isolation, the falsified `(R-X1)` route, and `(SR-2)` as the next
+  recommended attack.
+- `docs/CANONICAL_HARNESS_INDEX.md` now lists the Lane 4 workstream packet
+  under open frontier lanes.
+
+Remaining future integration item:
+
 - `docs/MINIMAL_AXIOMS_2026-04-11.md`: consider explicitly stating
   whether axiom 3 is read as permissive (which the framework's
   authorial intent suggests). The Cycle 4 fan-out provides the
   argument.
-- `docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md` Lane 4 status
-  line: update from "critical open science lane" to "critical open
-  science lane; Phase-1 4D conditional theorem landed; (C2-X)
-  reduces to (SR-1)/(SR-2)/(SR-3) under permissive axiom-3
-  reading".
-- Falsified-route registry: add `(R-X1)` anomaly-cancellation
-  exhaustion as a closed route for Lane 4.
-
-NOT applied on this branch per skill science-only delivery. The
-review-PR-driven integration pipeline picks them up.
 
 ## 5. Cross-references
 
