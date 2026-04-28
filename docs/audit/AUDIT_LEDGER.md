@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T12:30:31.731484+00:00
+**Generated:** 2026-04-28T12:32:07.255613+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -25,22 +25,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 184 |
 | support | 100 |
 | open | 15 |
-| unknown | 696 |
+| unknown | 693 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 393 |
+| ~~audited_conditional~~ | 396 |
 | ~~audited_failed~~ | 148 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 79 |
-| `audited_conditional` | 155 |
+| `audited_conditional` | 156 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1309 |
+| `unaudited` | 1308 |
 
 | criticality | count |
 |---|---:|
@@ -181,6 +181,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `broken_graph_action_power_robustness_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `causal_escape_window_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `causal_field_canonical_chain_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `chiral_3plus1d_mixing_period_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `complex_action_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `composite_source_additivity_2d_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -757,6 +758,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The no-go closes because the stronger scalar readout premise remains label-free. The runner shows based endpoint-to-label maps exist only after choosing extra physical basepoint data.
 - **rationale:** The runner grants the scalar Type-B-to-radian readout and z=0 support, then checks that cyclic relabeling preserves scalar data while moving the heaviest slot and leaving no invariant singleton. PDG masses are comparator-only. This clean audit ratifies the scalar-readout generation-selector no-go, not delta/radian closure or mass retention.
 - **auditor confidence:** high
+
+### `chiral_3plus1d_mixing_period_note`
+
+- **Note:** [`CHIRAL_3PLUS1D_MIXING_PERIOD_NOTE.md`](../../docs/CHIRAL_3PLUS1D_MIXING_PERIOD_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-28-chiral_3plus1d_mixing_period_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The bad sign windows move with lattice size and survive in classical and phase-kill limits, so they are geometry-shifted local mixing resonances rather than a universal pi/theta0 rule.  _(class `C`)_
+- **chain closes:** False — The source note supports a diagnostic boundary: periodic chiral sign windows persist and are size-dependent, so they are not explained by a universal pi/theta0 alias. The ledger has no runner_path for live verification, and the note does not derive a universal recurrence law.
+- **rationale:** Issue: the note diagnoses size-dependent chiral sign windows, but it does not provide a live runner in the ledger or a universal recurrence law.
+Why this blocks: downstream proposed-retained chiral synthesis cannot cite this as a closed period theorem; the source only supports a geometry-dependent resonance boundary.
+Repair target: add a live runner reproducing the n/L decoherence sweep and derive a predictive recurrence/phase-offset law across lattice sizes.
+Claim boundary until fixed: safe to claim the periodic chiral sign windows are not fixed by pi/theta0 alone and survive classicalization, not a universal chiral mixing-period closure.
+- **open / conditional deps cited:**
+  - `no_ledger_runner_for_live_chiral_mixing_period_sweep`
+  - `universal_chiral_recurrence_law_not_derived`
+- **auditor confidence:** medium
 
 ### `ckm_down_type_scale_convention_support_note_2026-04-22`
 
