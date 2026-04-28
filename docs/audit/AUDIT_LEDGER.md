@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T12:25:22.397258+00:00
+**Generated:** 2026-04-28T12:26:45.679995+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 3 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
-| support | 101 |
+| support | 100 |
 | open | 15 |
 | unknown | 703 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 385 |
+| ~~audited_conditional~~ | 386 |
 | ~~audited_failed~~ | 148 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 79 |
-| `audited_conditional` | 152 |
+| `audited_conditional` | 153 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1312 |
+| `unaudited` | 1311 |
 
 | criticality | count |
 |---|---:|
@@ -327,6 +327,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p2_f_yt_loop_geometric_bound_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p2_v_matching_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p3_k_series_geometric_bound_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `z2_hw1_mass_matrix_parametrization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
@@ -5349,4 +5350,22 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md`
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
   - `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `z2_hw1_mass_matrix_parametrization_note`
+
+- **Note:** [`Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`](../../docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-28-z2_hw1_mass_matrix_parametrization_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Every Z2-invariant Hermitian operator on the ordered hw=1 triplet has the five-real-parameter form M(a,b,c,d), with a sign eigenvector and a closed 2x2 trivial block.  _(class `C`)_
+- **chain closes:** False — The residual Z2 Hermitian normal-form theorem closes on the stated hw=1 carrier, and the live runner reports PASS=10 FAIL=0. The note explicitly limits the result to a support normal form and does not derive a flavor hierarchy or identify physical masses.
+- **rationale:** Issue: the residual Z2 normal form is exact, but it leaves a five-real-parameter Hermitian family and the note says it does not claim a derived flavor hierarchy.
+Why this blocks: downstream proposed-retained/promoted claims cannot use this row as a mass or mixing prediction unless they also derive the physical parameter selection inside that five-parameter family.
+Repair target: add and audit a selection theorem or runner that fixes a,b,c,d from accepted inputs and maps the resulting spectrum to a physical flavor observable.
+Claim boundary until fixed: safe to claim the exact Z2-invariant hw=1 Hermitian parametrization, sign eigenvector, and S3-locus collapse, not any standalone flavor hierarchy or mass prediction.
+- **open / conditional deps cited:**
+  - `physical_selection_rule_for_Z2_mass_matrix_parameters_missing`
+  - `flavor_hierarchy_identification_not_derived_from_normal_form`
 - **auditor confidence:** high

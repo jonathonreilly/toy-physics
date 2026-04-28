@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-28T12:25:22.174257+00:00",
-  "generated_at": "2026-04-28T12:25:20.534864+00:00",
-  "invalidation_run_at": "2026-04-28T12:25:22.124332+00:00",
+  "effective_status_computed_at": "2026-04-28T12:26:45.491776+00:00",
+  "generated_at": "2026-04-28T12:26:43.866357+00:00",
+  "invalidation_run_at": "2026-04-28T12:26:45.444064+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-28T12:25:22.019328+00:00",
+  "load_bearing_computed_at": "2026-04-28T12:26:45.347832+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -89425,14 +89425,21 @@
       "verdict_rationale": null
     },
     "z2_hw1_mass_matrix_parametrization_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-28",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 16.129,
+        "transitive_descendants": 279
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop:fresh-2026-04-28-z2_hw1_mass_matrix_parametrization_note",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The residual Z2 Hermitian normal-form theorem closes on the stated hw=1 carrier, and the live runner reports PASS=10 FAIL=0. The note explicitly limits the result to a support normal form and does not derive a flavor hierarchy or identify physical masses.",
       "claim_id": "z2_hw1_mass_matrix_parametrization_note",
       "criticality": "critical",
       "current_status": "support",
@@ -89440,30 +89447,33 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 8,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 16.129,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Every Z2-invariant Hermitian operator on the ordered hw=1 triplet has the five-real-parameter form M(a,b,c,d), with a sign eigenvector and a closed 2x2 trivial block.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "476c1b38cbf81d48275a8ed12afabb5e4534144c03dee3569eed07e5ab9eff64",
       "note_path": "docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "physical_selection_rule_for_Z2_mass_matrix_parameters_missing",
+        "flavor_hierarchy_identification_not_derived_from_normal_form"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 10,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 10
       },
       "runner_path": "scripts/frontier_z2_hw1_mass_matrix_parametrization.py",
       "title": "Z_2 `hw=1` Mass-Matrix Parametrization Note",
       "transitive_descendants": 279,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the residual Z2 normal form is exact, but it leaves a five-real-parameter Hermitian family and the note says it does not claim a derived flavor hierarchy.\nWhy this blocks: downstream proposed-retained/promoted claims cannot use this row as a mass or mixing prediction unless they also derive the physical parameter selection inside that five-parameter family.\nRepair target: add and audit a selection theorem or runner that fixes a,b,c,d from accepted inputs and maps the resulting spectrum to a physical flavor observable.\nClaim boundary until fixed: safe to claim the exact Z2-invariant hw=1 Hermitian parametrization, sign eigenvector, and S3-locus collapse, not any standalone flavor hierarchy or mass prediction."
     }
   },
   "schema_version": 1,
