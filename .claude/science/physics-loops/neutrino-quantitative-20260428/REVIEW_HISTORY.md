@@ -128,22 +128,57 @@ RepoGovernanceReviewer, MethodologySkillReviewer). Full multi-agent
   `(C2-X)` now sharper. `(R-X1)` falsified. Cycle 4 candidates
   enumerated.
 
-## Cycle 4+ — pending evaluation
+## Cycle 4 — STUCK FAN-OUT on A_min axiom 3 reading
 
-Per stretch-note §8 recommendations:
+- **Date:** 2026-04-28
+- **Artifact:**
+  `docs/NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md`
+  (5+5 framework-internal argument fan-out + synthesis; no runner).
+- **Review mode:** branch-local 6-criterion self-review.
+- **Findings:**
+  1. **CodeRunnerReviewer (PASS).** No runner; structural fan-out.
+  2. **PhysicsClaimReviewer (PASS).** All 10 arguments are
+     framework-internal and accurately attributed to source notes
+     (P1 cites three retained notes verbatim; P5 directly quotes
+     `MINIMAL_AXIOMS_2026-04-11.md`; S2-S5 cite the relevant
+     integration constraints accurately). The synthesis correctly
+     identifies the framework's intended reading as **permissive**
+     based on **explicit authorial intent** evidence (P1 + P2 + P5).
+  3. **ImportSupportReviewer (PASS).** No new imports; entirely
+     internal to the framework's existing axiom + Majorana cluster
+     content.
+  4. **NatureRetentionReviewer (PASS, important).** The fan-out
+     **revises** Cycle 3's decision-level reformulation rather than
+     rubber-stamping it. This is exactly the Deep Work Rules' stuck
+     fan-out functioning as designed — catching a Cycle-3 over-
+     claim before it propagates further. Output is honestly framed
+     as "fan-out revises Cycle 3's conclusion" rather than hiding
+     the disagreement.
+  5. **RepoGovernanceReviewer (PASS).** Naming convention
+     `*_STUCK_FANOUT_NOTE_*` is novel but matches the new skill's
+     stuck-fan-out artifact category.
+  6. **MethodologySkillReviewer (PASS, exemplary).** This cycle:
+     - generated 5+5 (≥3+3) orthogonal arguments per Stuck Fan-Out
+       rule;
+     - synthesized agreements, contradictions, best remaining
+       attack;
+     - revised a prior cycle's conclusion when warranted;
+     - identified SR-2 as cleanest single-cycle continuation.
+     Audit-grade (synthesis); audit_grade_cycles_in_a_row advances
+     to 1. `last_stuck_fanout_cycle = 4`. Both Deep Work Rules
+     requirements (≥1 stretch + ≥1 fan-out) now satisfied; loop
+     may stop honestly.
+- **Disposition:** Cycle 4 accepted. (C2-X) framework reading
+  determined to be permissive; Cycle 3's decision-level
+  reformulation revised; SR-2 identified as best remaining attack.
 
-- **Cycle 4 candidate A — stuck fan-out on strict-vs-permissive
-  axiom-3 reading.** Per Deep Work Rules, stuck fan-out is required
-  before any honest stop. Generate 3-5 framework-internal arguments
-  for each reading + synthesis. **RECOMMENDED.**
-- **Cycle 4 candidate B — retained framework content search**
-  (anomaly cluster, recent SM proofs, axiom history) for evidence
-  pointing to one reading.
-- **Cycle 4 candidate C — pivot to Lane-4-internal work that
-  doesn't depend on `(C2-X)`** — e.g., 4F `Sigma m_nu` cosmology
-  bridge via the recently integrated hubble-h0 retained surface.
+## Cycle 5 — HONEST STOP
 
-Audit-quota counter is at 0 after the stretch; no immediate
-mandatory stretch for Cycle 4. But stuck fan-out is the
-right next move per Deep Work Rules' "stuck fan-out before any
-honest stop" requirement.
+Per Deep Work Rules requirements both met (≥1 stretch in Cycle 3,
+≥1 fan-out in Cycle 4) and runtime budget approaching exhaustion
+(~3-3.5h consumed of 4h), Cycle 5 = honest stop with workstream
+close-out and review PR opening per new skill's PR policy.
+
+Hand off (SR-2) continuum-limit scalar 2-point incompatibility with
+Pfaffian extensions as the recommended single-cycle continuation
+for a future session.
