@@ -8038,7 +8038,7 @@
     },
     {
       "from": "ai_methodology.llm_skill_pack_2026-04-25",
-      "to": "ai_methodology.skills.frontier-workstream.skill"
+      "to": "ai_methodology.skills.physics-loop.skill"
     },
     {
       "from": "ai_methodology.llm_skill_pack_2026-04-25",
@@ -8182,7 +8182,7 @@
     },
     {
       "from": "ai_methodology.readme",
-      "to": "ai_methodology.skills.frontier-workstream.skill"
+      "to": "ai_methodology.skills.physics-loop.skill"
     },
     {
       "from": "ai_methodology.readme",
@@ -8493,20 +8493,20 @@
       "to": "down_type_mass_ratio_ckm_dual_note"
     },
     {
-      "from": "ai_methodology.skills.frontier-workstream.skill",
-      "to": "ai_methodology.skills.frontier-workstream.references.assumption-import-audit"
+      "from": "ai_methodology.skills.physics-loop.skill",
+      "to": "ai_methodology.skills.physics-loop.references.assumption-import-audit"
     },
     {
-      "from": "ai_methodology.skills.frontier-workstream.skill",
-      "to": "ai_methodology.skills.frontier-workstream.references.route-patterns"
+      "from": "ai_methodology.skills.physics-loop.skill",
+      "to": "ai_methodology.skills.physics-loop.references.route-patterns"
     },
     {
-      "from": "ai_methodology.skills.frontier-workstream.skill",
-      "to": "ai_methodology.skills.frontier-workstream.references.literature-bridge-protocol"
+      "from": "ai_methodology.skills.physics-loop.skill",
+      "to": "ai_methodology.skills.physics-loop.references.literature-bridge-protocol"
     },
     {
-      "from": "ai_methodology.skills.frontier-workstream.skill",
-      "to": "ai_methodology.skills.frontier-workstream.references.long-running-execution"
+      "from": "ai_methodology.skills.physics-loop.skill",
+      "to": "ai_methodology.skills.physics-loop.references.long-running-execution"
     },
     {
       "from": "lanes.active_working_lanes_2026-04-26",
@@ -17753,7 +17753,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-28T07:24:34.671325+00:00",
+  "generated_at": "2026-04-28T07:26:45.125787+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -17924,13 +17924,13 @@
         "ai_methodology.methodology_case_studies_2026-04-25",
         "ai_methodology.raw.claude_project_commands",
         "ai_methodology.skills.ai-physics-lane-builder.skill",
-        "ai_methodology.skills.frontier-workstream.skill",
+        "ai_methodology.skills.physics-loop.skill",
         "ai_methodology.skills.physics-claim-reviewer.skill",
         "ai_methodology.skills.review-loop.skill",
         "ai_methodology.skills.reviewer-backpressure-integrator.skill",
         "ai_methodology.skills.methodology-paper-synthesizer.skill"
       ],
-      "note_hash": "6c33f2a25eae20154bc4ea09fd7bf0bbc0e0bb9eed188907cf7813c8ef5a77c5",
+      "note_hash": "8c0302b031f3c6c22f7a58be92d7c0b057b772a077aeb8a889d463c261228ac1",
       "path": "docs/ai_methodology/LLM_SKILL_PACK_2026-04-25.md",
       "runner_path": null,
       "title": "AI Physics Methodology LLM Skill Pack"
@@ -18727,13 +18727,13 @@
         "claude_branch_retainability_note",
         "unpromoted_branch_retainability_audit_note",
         "ai_methodology.skills.ai-physics-lane-builder.skill",
-        "ai_methodology.skills.frontier-workstream.skill",
+        "ai_methodology.skills.physics-loop.skill",
         "ai_methodology.skills.physics-claim-reviewer.skill",
         "ai_methodology.skills.review-loop.skill",
         "ai_methodology.skills.reviewer-backpressure-integrator.skill",
         "ai_methodology.skills.methodology-paper-synthesizer.skill"
       ],
-      "note_hash": "9079a18109042be6e02aa055a9645b4d3099f2065d1491fdc658d2f46ad54e94",
+      "note_hash": "a2ce609fbb3db3f9f2b88abfc77e5b678a95333b1bf788375d4d1aece9c17096",
       "path": "docs/ai_methodology/README.md",
       "runner_path": null,
       "title": "AI Methodology Lane"
@@ -18758,61 +18758,6 @@
       "runner_path": null,
       "title": "AI Physics Lane Builder"
     },
-    "ai_methodology.skills.frontier-workstream.references.assumption-import-audit": {
-      "claim_id": "ai_methodology.skills.frontier-workstream.references.assumption-import-audit",
-      "current_status": "unknown",
-      "current_status_raw": null,
-      "deps": [],
-      "note_hash": "3039d18709f066b15dadfd8817940a1f3d592275863333153027615013cc9d84",
-      "path": "docs/ai_methodology/skills/frontier-workstream/references/assumption-import-audit.md",
-      "runner_path": null,
-      "title": "Assumption And Import Audit"
-    },
-    "ai_methodology.skills.frontier-workstream.references.literature-bridge-protocol": {
-      "claim_id": "ai_methodology.skills.frontier-workstream.references.literature-bridge-protocol",
-      "current_status": "unknown",
-      "current_status_raw": null,
-      "deps": [],
-      "note_hash": "12ecc9b9f41e68a8c33f9e4a0d5731d69a57e7da58bbb8e0f5b060eec658f332",
-      "path": "docs/ai_methodology/skills/frontier-workstream/references/literature-bridge-protocol.md",
-      "runner_path": null,
-      "title": "Literature Bridge Protocol"
-    },
-    "ai_methodology.skills.frontier-workstream.references.long-running-execution": {
-      "claim_id": "ai_methodology.skills.frontier-workstream.references.long-running-execution",
-      "current_status": "unknown",
-      "current_status_raw": null,
-      "deps": [],
-      "note_hash": "d488e3a62e598797c01109f24b65be9036f9281f1280b602eae47deaec9d5b07",
-      "path": "docs/ai_methodology/skills/frontier-workstream/references/long-running-execution.md",
-      "runner_path": null,
-      "title": "Long-Running Execution"
-    },
-    "ai_methodology.skills.frontier-workstream.references.route-patterns": {
-      "claim_id": "ai_methodology.skills.frontier-workstream.references.route-patterns",
-      "current_status": "unknown",
-      "current_status_raw": null,
-      "deps": [],
-      "note_hash": "5e3928749261c513b437af26f8a413af45d6eafdb0c9bf455ed62673fde03e14",
-      "path": "docs/ai_methodology/skills/frontier-workstream/references/route-patterns.md",
-      "runner_path": null,
-      "title": "Route Patterns"
-    },
-    "ai_methodology.skills.frontier-workstream.skill": {
-      "claim_id": "ai_methodology.skills.frontier-workstream.skill",
-      "current_status": "unknown",
-      "current_status_raw": null,
-      "deps": [
-        "ai_methodology.skills.frontier-workstream.references.assumption-import-audit",
-        "ai_methodology.skills.frontier-workstream.references.route-patterns",
-        "ai_methodology.skills.frontier-workstream.references.literature-bridge-protocol",
-        "ai_methodology.skills.frontier-workstream.references.long-running-execution"
-      ],
-      "note_hash": "c6bd7b2bd2baf48a038b3a95dde3c8efab53edda182fb85cde16625fa6ae24bd",
-      "path": "docs/ai_methodology/skills/frontier-workstream/SKILL.md",
-      "runner_path": null,
-      "title": "Frontier Workstream"
-    },
     "ai_methodology.skills.methodology-paper-synthesizer.skill": {
       "claim_id": "ai_methodology.skills.methodology-paper-synthesizer.skill",
       "current_status": "unknown",
@@ -18832,6 +18777,61 @@
       "path": "docs/ai_methodology/skills/physics-claim-reviewer/SKILL.md",
       "runner_path": null,
       "title": "Physics Claim Reviewer"
+    },
+    "ai_methodology.skills.physics-loop.references.assumption-import-audit": {
+      "claim_id": "ai_methodology.skills.physics-loop.references.assumption-import-audit",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "3039d18709f066b15dadfd8817940a1f3d592275863333153027615013cc9d84",
+      "path": "docs/ai_methodology/skills/physics-loop/references/assumption-import-audit.md",
+      "runner_path": null,
+      "title": "Assumption And Import Audit"
+    },
+    "ai_methodology.skills.physics-loop.references.literature-bridge-protocol": {
+      "claim_id": "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "29edda5688fa04cb742ee524522b35dcf41d790d5c49fc46c5b4b1517f0ff5dd",
+      "path": "docs/ai_methodology/skills/physics-loop/references/literature-bridge-protocol.md",
+      "runner_path": null,
+      "title": "Literature Bridge Protocol"
+    },
+    "ai_methodology.skills.physics-loop.references.long-running-execution": {
+      "claim_id": "ai_methodology.skills.physics-loop.references.long-running-execution",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "bb58df516b36c7e507f658a6a3f87c5728e3f159f6224464827f55454910dc34",
+      "path": "docs/ai_methodology/skills/physics-loop/references/long-running-execution.md",
+      "runner_path": null,
+      "title": "Long-Running Execution"
+    },
+    "ai_methodology.skills.physics-loop.references.route-patterns": {
+      "claim_id": "ai_methodology.skills.physics-loop.references.route-patterns",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "753f52a10707d2c5b8b1b4d9da7baa93f872c0cfca746869e3216b01ffce7b47",
+      "path": "docs/ai_methodology/skills/physics-loop/references/route-patterns.md",
+      "runner_path": null,
+      "title": "Route Patterns"
+    },
+    "ai_methodology.skills.physics-loop.skill": {
+      "claim_id": "ai_methodology.skills.physics-loop.skill",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [
+        "ai_methodology.skills.physics-loop.references.assumption-import-audit",
+        "ai_methodology.skills.physics-loop.references.route-patterns",
+        "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
+        "ai_methodology.skills.physics-loop.references.long-running-execution"
+      ],
+      "note_hash": "87e13ceec5176137cd7f48ae3fe60d02a85aa2147ba0d155d6063a6ee6524bd9",
+      "path": "docs/ai_methodology/skills/physics-loop/SKILL.md",
+      "runner_path": null,
+      "title": "Physics Loop"
     },
     "ai_methodology.skills.review-loop.skill": {
       "claim_id": "ai_methodology.skills.review-loop.skill",
@@ -38918,12 +38918,12 @@
     "ai_methodology.raw.workflow_tooling",
     "ai_methodology.repo_trajectory_and_governance_evidence_2026-04-25",
     "ai_methodology.skills.ai-physics-lane-builder.skill",
-    "ai_methodology.skills.frontier-workstream.references.assumption-import-audit",
-    "ai_methodology.skills.frontier-workstream.references.literature-bridge-protocol",
-    "ai_methodology.skills.frontier-workstream.references.long-running-execution",
-    "ai_methodology.skills.frontier-workstream.references.route-patterns",
     "ai_methodology.skills.methodology-paper-synthesizer.skill",
     "ai_methodology.skills.physics-claim-reviewer.skill",
+    "ai_methodology.skills.physics-loop.references.assumption-import-audit",
+    "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
+    "ai_methodology.skills.physics-loop.references.long-running-execution",
+    "ai_methodology.skills.physics-loop.references.route-patterns",
     "ai_methodology.skills.review-loop.skill",
     "ai_methodology.skills.reviewer-backpressure-integrator.skill",
     "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
