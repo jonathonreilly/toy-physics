@@ -83,21 +83,20 @@ endpoint-distance evidence as a bounded selector.
 Stable checkpoint packaging:
 
 ```text
-Commit and push the coherent block-01 artifacts. Do not open the review PR yet
-unless this supervisor loop is ending; runtime remains and Lane 3 has further
-open routes.
+Commit and push the coherent block-01 artifacts, then open or prepare the
+review PR because this coherent science block is reviewable.
 ```
 
 Expected output:
 
 - checkpoint commit on `physics-loop/lane3-quark-mass-retention-block01-20260428`;
 - pushed branch on `origin`;
-- PR backlog only if PR creation becomes required at final loop end.
+- PR body at `PR_BODY_BLOCK01.md`;
+- review PR if `gh pr create` succeeds, otherwise `PR_BACKLOG.md`.
 
 ## Next Exact Action
 
-Commit and push this stable checkpoint, then continue Lane 3 from the
-E-center source/readout primitive or a broader 3A/3B fan-out.
+Commit and push PR body/status, then create the block-01 review PR.
 
 ## Stop Reason
 
