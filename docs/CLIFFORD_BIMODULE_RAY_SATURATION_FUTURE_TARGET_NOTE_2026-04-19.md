@@ -2,8 +2,7 @@
 
 **Date:** 2026-04-19
 **Lane:** Quark up-amplitude.
-**Status:** **Future mathematical target.** Explicitly NOT a proposed_retained
-theorem. Named and scoped as the concrete math target that, if proven,
+**Status:** open / future mathematical target (status line rephrased 2026-04-28 per audit-lane verdict). This is a named research target; it is not a theorem, has no runner, has no proof, and is not part of the current publishable claim surface. Named and scoped as the concrete math target that, if proven,
 would derive STRC
 (`docs/QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md`) from
 retained structure alone and reduce the full scalar-selector axiom
@@ -249,3 +248,34 @@ precisely the content of this target.
 
 No portion of the current publishable claim rests on this target
 being proven.
+
+## Audit boundary (2026-04-28)
+
+The earlier Status line read "Explicitly NOT a `proposed_retained`
+theorem". The audit-lane parser caught the literal token despite the
+explicit negation.
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: the queue presents this row as `proposed_retained`, but the
+> source note repeatedly states it is a future target, not a theorem,
+> not `proposed_retained`, and not part of the current publishable
+> claim. Why this blocks: a hostile physicist cannot audit or retain a
+> theorem that the source explicitly says has not been proven and is
+> only a named research target for possibly deriving STRC later.
+
+The note has been re-tiered to `open` per the verdict's repair target
+("demote this row to open/future-target/support metadata").
+
+## What this note does NOT claim
+
+- A proven theorem.
+- A registered runner that derives STRC-LO from Clifford bimodule
+  inputs.
+- A retained or `proposed_retained` claim of any kind.
+
+## What would close this lane (Path A future work)
+
+A theorem note replacing this future-target note would require a proof
+or a runner that derives STRC-LO from the stated Clifford bimodule
+inputs. Until then, this note remains open / future-target metadata.
