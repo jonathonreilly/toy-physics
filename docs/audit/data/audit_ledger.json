@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-28T11:59:58.393449+00:00",
-  "generated_at": "2026-04-28T11:59:56.129604+00:00",
-  "invalidation_run_at": "2026-04-28T11:59:58.325409+00:00",
+  "effective_status_computed_at": "2026-04-28T12:02:07.891895+00:00",
+  "generated_at": "2026-04-28T12:02:06.029730+00:00",
+  "invalidation_run_at": "2026-04-28T12:02:07.827569+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-28T11:59:58.190258+00:00",
+  "load_bearing_computed_at": "2026-04-28T12:02:07.695566+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -64791,14 +64791,21 @@
       "verdict_rationale": null
     },
     "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-28",
+      "audit_state_snapshot": {
+        "criticality": "medium",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 5.907,
+        "transitive_descendants": 14
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop:fresh-2026-04-28-quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The claim is a negative boundary: the note does not derive non-top quark masses, but shows that the current package supplies bounded ratio/support surfaces, not absolute five-mass retention. The live runner verifies repo status guardrails, arbitrary bottom-anchor freedom for down-type ratios, up-type partition dependence, species-uniform Ward failure for m_b, and the safe open endpoint with PASS=17 FAIL=0.",
       "claim_id": "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
       "criticality": "medium",
       "current_status": "proposed_retained",
@@ -64806,13 +64813,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 4,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "fresh_context",
+      "intrinsic_status": "retained",
       "load_bearing_score": 5.907,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Absent those premises, the existing packet remains bounded companion support.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "audited_conditional",
       "max_descendant_status_rank": 10,
       "note_hash": "49747844f67230e67ba7ccb86608f3af2485533153259179b90fda65322af95f",
@@ -64820,16 +64827,16 @@
       "open_dependency_paths": [],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 5,
+        "B": 8,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 4,
+        "total_pass": 17
       },
       "runner_path": "scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py",
       "title": "Quark Lane 3 Bounded-Companion Retention Firewall",
       "transitive_descendants": 14,
-      "verdict_rationale": null
+      "verdict_rationale": "The retained content is the Lane 3 firewall, not five-mass retention. The note's load-bearing step closes because the down-type formulas are ratios that preserve an arbitrary bottom anchor, the up-type branch remains partition/scalar-law selected, and the top Ward identity cannot be reused species-uniformly because the b reading overshoots by about 34.7x. The live runner confirms the relevant repo guardrails and comparator-only use of observed masses. Residual risk is downstream misuse: this audit does not ratify m_u, m_d, m_s, m_c, m_b, the 5/6 bridge, up-sector amplitude selection, or non-top Yukawa Ward identities."
     },
     "quark_mass_ratio_full_solve_note_2026-04-18": {
       "audit_date": null,
