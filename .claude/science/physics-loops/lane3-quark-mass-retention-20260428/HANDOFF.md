@@ -1,8 +1,8 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T09:16:23Z
+**Updated:** 2026-04-28T09:22:17Z
 **Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block09-20260428`
-**Current head:** block-09 working checkpoint; see `git log`
+**Current head:** `2929699a` plus PR-status bookkeeping; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
@@ -13,7 +13,7 @@
 **Block 06 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/105
 **Block 07 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/106
 **Block 08 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/107
-**Block 09 review PR:** pending packaging
+**Block 09 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/108
 
 ## Current State
 
@@ -74,18 +74,17 @@ the square-root spectrum to physical quark Yukawa amplitudes.
 
 ## Active Route
 
-Block 09 is verified and ready for packaging:
+Block 09 has been packaged:
 
 ```text
-commit: pending
-push: pending
-stacked review PR against block 08: pending
+commit 2929699a: physics-loop lane3 block09 p1 readout boundary
+pushed branch physics-loop/lane3-quark-mass-retention-20260428-block09-20260428
+stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/108
 ```
 
 ## Next Exact Action
 
-Commit/push block 09 and open a stacked review PR against block 08. After
-that, continue Lane 3 only from one of:
+Continue Lane 3 only from one of:
 
 1. physical quark positive parent/readout theorem;
 2. sector-specific phase and scale laws;
