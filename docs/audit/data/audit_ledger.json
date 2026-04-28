@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T22:39:11.563488+00:00",
-  "generated_at": "2026-04-27T22:39:09.867371+00:00",
-  "invalidation_run_at": "2026-04-27T22:39:11.510197+00:00",
+  "effective_status_computed_at": "2026-04-28T03:27:07.626515+00:00",
+  "generated_at": "2026-04-28T03:27:05.900554+00:00",
+  "invalidation_run_at": "2026-04-28T03:27:07.574255+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T22:39:11.401251+00:00",
+  "load_bearing_computed_at": "2026-04-28T03:27:07.465795+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -33899,14 +33899,21 @@
       "verdict_rationale": null
     },
     "graph_first_su3_integration_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 23.634,
+        "transitive_descendants": 280
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop:fresh-2026-04-27-graph_first_su3_integration_note",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
+      "blocker": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The note states the selected-axis cube projection, constructs the fiber Pauli generators and complementary-axis swap, and the runner independently verifies the resulting joint commutant and embedded su(3) closure for all three selected axes. No one-hop dependencies are required for this bounded structural claim.",
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -33917,21 +33924,28 @@
           "load_bearing_step_class": "C",
           "verdict": "audited_clean"
         },
-        "second_audit": null,
-        "status": "awaiting_second"
+        "second_audit": {
+          "audit_date": "2026-04-27",
+          "auditor": "codex-audit-loop:fresh-2026-04-27-graph_first_su3_integration_note",
+          "auditor_family": "codex-current",
+          "independence": "fresh_context",
+          "load_bearing_step_class": "C",
+          "verdict": "audited_clean"
+        },
+        "status": "confirmed"
       },
       "current_status": "proposed_retained",
       "current_status_raw": "BOUNDED-proposed_retained STRUCTURAL GAUGE THEOREM -- selected graph axis integrates canonically into the bounded commutant theorem",
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 23,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "fresh_context",
+      "intrinsic_status": "retained",
       "load_bearing_score": 23.634,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Imposing the residual swap restricts the weak-su(2) commutant to operators preserving the 3 \\oplus 1 base split, so Comm(su(2)_weak, tau) is gl(3) \\oplus gl(1) and its compact semisimple part is su(3).",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "c37bff23f3452c42245d4f310a2a593d4c88d0cfd4d361e45068d2d64c5a97ed",
@@ -33992,14 +34006,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 11,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 11
       },
       "runner_path": "scripts/frontier_graph_first_su3_integration.py",
       "title": "Graph-First `SU(3)` Integration Theorem",
       "transitive_descendants": 280,
-      "verdict_rationale": null
+      "verdict_rationale": "The load-bearing construction is not a symbol rename or tuned numerical comparator: it builds graph-native shift, parity, projection, residual swap, commutant dimension, block ranks, and explicit su(3) generators directly from the 3-cube with a selected axis. The live runner reports PASS=111 FAIL=0, and the classified runner checks are first-principles structural computations. Residual risk is limited to the upstream existence/selection of the weak axis, which this note explicitly treats as an input boundary rather than deriving here."
     },
     "graph_laplacian_core_card_note": {
       "audit_date": null,

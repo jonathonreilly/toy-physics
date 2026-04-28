@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T22:39:11.774406+00:00
+**Generated:** 2026-04-28T03:27:07.872606+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 72 |
-| _proposed_retained_ | 6 |
+| **retained** | 73 |
+| _proposed_retained_ | 5 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -34,8 +34,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 3 |
-| `audited_clean` | 72 |
+| `audit_in_progress` | 2 |
+| `audited_clean` | 73 |
 | `audited_conditional` | 143 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 77 |
@@ -78,7 +78,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 10 | `three_generation_observable_theorem_note` | critical | 277 | 24.62 | `unaudited` | ~~audited_failed~~ |
 | 11 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 174 | 24.45 | `unaudited` | ~~audited_failed~~ |
 | 12 | `yt_ew_color_projection_theorem` | critical | 282 | 24.14 | `audited_conditional` | ~~audited_conditional~~ |
-| 13 | `graph_first_su3_integration_note` | critical | 280 | 23.63 | `audit_in_progress` | _proposed_retained_ |
+| 13 | `graph_first_su3_integration_note` | critical | 280 | 23.63 | `audited_clean` | **retained** |
 | 14 | `yt_ward_identity_derivation_theorem` | critical | 277 | 23.62 | `unaudited` | ~~audited_failed~~ |
 | 15 | `anomaly_forces_time_theorem` | critical | 277 | 22.62 | `unaudited` | ~~audited_failed~~ |
 | 16 | `minimal_axioms_2026-04-11` | critical | 277 | 22.12 | `unaudited` | ~~audited_failed~~ |
@@ -98,7 +98,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `graph_first_selector_derivation_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
-| `graph_first_su3_integration_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -135,6 +134,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_grown_wavefield_companion_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gate_b_v6_nearfield_comparator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `graph_first_su3_integration_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `growing_graph_static_control_audit_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -1806,6 +1806,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `scripts/global_coherence_off_scaffold.py_not_registered_as_primary_runner`
   - `runner_prints_partial_verdict_and_diagnostics_without_hard_assertions`
   - `simple_classifier_exhaustion_no_go_theorem_or_exhaustive_metric_search_missing`
+- **auditor confidence:** high
+
+### `graph_first_su3_integration_note`
+
+- **Note:** [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](../../docs/GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-27-graph_first_su3_integration_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Imposing the residual swap restricts the weak-su(2) commutant to operators preserving the 3 \oplus 1 base split, so Comm(su(2)_weak, tau) is gl(3) \oplus gl(1) and its compact semisimple part is su(3).  _(class `C`)_
+- **chain closes:** True — The note states the selected-axis cube projection, constructs the fiber Pauli generators and complementary-axis swap, and the runner independently verifies the resulting joint commutant and embedded su(3) closure for all three selected axes. No one-hop dependencies are required for this bounded structural claim.
+- **rationale:** The load-bearing construction is not a symbol rename or tuned numerical comparator: it builds graph-native shift, parity, projection, residual swap, commutant dimension, block ranks, and explicit su(3) generators directly from the 3-cube with a selected axis. The live runner reports PASS=111 FAIL=0, and the classified runner checks are first-principles structural computations. Residual risk is limited to the upstream existence/selection of the weak axis, which this note explicitly treats as an input boundary rather than deriving here.
 - **auditor confidence:** high
 
 ### `graph_phase_diagram_scout_note`
