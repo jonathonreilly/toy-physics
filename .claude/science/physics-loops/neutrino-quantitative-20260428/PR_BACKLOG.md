@@ -1,23 +1,34 @@
 # Lane 4 Loop — PR Backlog
 
-**Workstream:** `neutrino-quantitative-20260428`
-**Status:** at loop end, this file lists all PRs to open. Per new
-`physics-loop` skill: one review PR per science block, with title
-`[physics-loop] <slug> <status>` and body linking the block's
-`HANDOFF.md`, notes, runners, verification commands, review findings,
-imports retired/exposed, remaining blockers.
+**Loop:** `neutrino-quantitative-20260428`
+**Status:** PR opened at loop end per new physics-loop skill PR
+policy.
 
 ## Pending PRs
 
-(populated at loop end)
+(none — single-block loop, single PR opened below)
+
+## Opened PRs
+
+- **PR #113** — `[physics-loop] neutrino-quantitative-20260428 —
+  open (Phase-1 conditional, (C2-X) reduces to SR-1/SR-2/SR-3)`
+  - URL:
+    https://github.com/jonathonreilly/cl3-lattice-framework/pull/113
+  - Base: `main`
+  - Head: `frontier/neutrino-quantitative-20260428`
+  - Status at open: **open** (Phase-1 4D conditional theorem
+    landed; `(C2-X)` reduces to research-level under permissive
+    `A_min` axiom 3 reading; recommended single-cycle continuation
+    `(SR-2)`)
+  - Linked in PR body: 4 cycle artifacts + close-out note + this
+    pack.
 
 ## Cycles → blocks mapping
 
-(populated as cycles land)
+This loop is one science block. All 4 substantive cycles + close-out
+land on a single branch and are reviewed in PR #113.
 
-## PR creation method
+## PR creation method used
 
-If `gh` CLI authenticated: `gh pr create --base main --head <branch>`.
-
-If `gh` not authenticated, this file becomes the manual-creation
-backlog with exact commands and reasons.
+`gh pr create` with `gh` authenticated as `JONbridgerapps`. Single
+invocation; no manual recovery needed.
