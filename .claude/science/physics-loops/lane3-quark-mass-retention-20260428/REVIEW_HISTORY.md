@@ -677,3 +677,66 @@ Disposition:
 - next exact Lane 3 action requires a derived two-ratio readout law,
   generation/source assignment, sector/scale bridge, 3C source/readout
   theorem, 3A scale theorem, or new 3B scalar/readout primitive.
+
+## Artifact Review: 3B/3C RPSR-C3 Joint Readout Rank Boundary
+
+**Time:** 2026-04-28T09:44:28Z
+
+Artifact reviewed:
+
+- `docs/QUARK_RPSR_C3_JOINT_READOUT_RANK_BOUNDARY_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py`
+- `logs/2026-04-28-quark-rpsr-c3-joint-readout-rank-boundary.txt`
+
+Verification:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py
+TOTAL: PASS=87, FAIL=0
+
+python3 -m py_compile scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py
+PASS
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py
+TOTAL: PASS=80, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py
+TOTAL: PASS=50, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_c3_oriented_ward_splitter_support.py
+TOTAL: PASS=51, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_c3_circulant_source_law_boundary.py
+TOTAL: PASS=43, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py
+PASS=17 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py
+TOTAL: PASS=43, FAIL=0
+```
+
+Review-loop emulation:
+
+1. Claim wording is bounded to exact joint 3B/3C rank-boundary support/no-go,
+   not retained up-type mass closure.
+2. The runner verifies the exact C3 coefficient inverse map for arbitrary
+   ordered ratio triples and verifies the exact RPSR scalar identity.
+3. Product and middle-gap one-scalar identifications each leave a continuum
+   of C3-representable ratio pairs, so the joint route still needs source
+   data.
+4. The typed-edge inventory has no path from RPSR+C3 support to physical
+   up-type ratio pair without a C3 coefficient source law, Fourier-channel
+   assignment, and sector/scale bridge.
+5. Observed quark masses, fitted Yukawa entries, CKM singular values, hidden
+   C3 source law, hidden generation-gap assignment, and one-scalar-as-two
+   coordinate readout are excluded from the proof.
+
+Disposition:
+
+- keep artifact;
+- claim status remains `open`;
+- stacked review PR pending packaging;
+- next exact Lane 3 action requires a derived C3 coefficient source law,
+  physical channel assignment, two-ratio readout, sector/scale bridge, 3A
+  scale theorem, or new 3B source primitive.

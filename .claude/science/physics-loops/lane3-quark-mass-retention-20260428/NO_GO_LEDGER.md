@@ -1,6 +1,6 @@
 # Lane 3 No-Go Ledger
 
-**Updated:** 2026-04-28T09:35:38Z
+**Updated:** 2026-04-28T09:44:28Z
 
 | Route / claim | Blocked conclusion | Blocking result | Source | Status for this loop |
 |---|---|---|---|---|
@@ -24,6 +24,7 @@
 | Positive-parent square-root dictionary directly gives quark P1 readout | Retained identification of `eig(M_quark^(1/2))` with physical quark Yukawa amplitudes | The square-root theorem is exact once a positive parent is supplied, but the current support bank derives neither a physical positive quark `C3` parent nor a readout theorem mapping the square-root spectrum to quark Yukawa amplitudes. The dictionary can represent arbitrary positive triples | `QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md` | closed for direct promotion; reopen only with parent and readout theorem content |
 | RPSR reduced up-amplitude directly gives up-type quark mass ratios | Retained `m_u/m_c`, `m_c/m_t`, or absolute non-top up-type masses | STRC/RPSR derives an exact dimensionless reduced amplitude on the `1(+)5` projector carrier, but the current bank has no typed readout edge from that amplitude to physical up-type Yukawa eigenvalue ratios or a top-compatible sector/scale bridge | `QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md` | closed for direct promotion; usable constructive 3B support |
 | RPSR scalar plus top-scale normalization determines both up-type ratios | Retained `m_u/m_c` and `m_c/m_t` from the single RPSR scalar | In the admissible scale-covariant power readout class, the same exact `a_u` supports a continuum of ordered ratio pairs `(a_u^p, a_u^q)`. The exponents/readout functions and generation-gap assignment are extra theorem content, not consequences of the scalar itself | `QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md` | closed for single-scalar readout promotion; reopen only with a derived readout law and sector/scale bridge |
+| Exact RPSR scalar plus exact `C3[111]` Fourier carrier determines the up-type ratio pair | Retained `m_u/m_c` and `m_c/m_t` from joint 3B/3C support | The C3 normal form represents the two-ratio surface, while RPSR contributes one scalar. Product and middle-gap one-scalar identifications each leave a continuum of C3-representable ordered ratio pairs. A C3 coefficient law, physical Fourier-channel assignment, and sector/scale bridge remain new theorem content | `QUARK_RPSR_C3_JOINT_READOUT_RANK_BOUNDARY_NOTE_2026-04-28.md` | closed for joint carrier promotion; reopen only with a derived source/readout law |
 
 ## Reopen Rule
 

@@ -1,6 +1,6 @@
 # Lane 3 Route Portfolio
 
-**Updated:** 2026-04-28T09:35:38Z
+**Updated:** 2026-04-28T09:44:28Z
 
 Scores use the physics-loop dramatic-step rubric: claim-state upgrade,
 import retirement, review-blocker closure, artifactability, novelty, hard
@@ -16,6 +16,7 @@ residual pressure, and overclaim risk.
 | 3C-P1-Readout: positive-parent square-root quark readout boundary | exact current-bank no-go | 2 | 3 | 3 | 3 | low | executed in block 09 |
 | 3B-RPSR-MassBoundary: retained up-amplitude support vs mass readout | exact support/boundary theorem | 2 | 3 | 3 | 3 | low | executed in block 10 |
 | 3B-RPSR-SingleScalarReadout: one scalar vs two up-type ratios | exact readout underdetermination theorem | 2 | 3 | 3 | 3 | low | executed in block 11 |
+| 3B/3C-RPSR-C3-JointRank: RPSR scalar plus C3 carrier readout | exact joint rank-boundary theorem | 2 | 3 | 3 | 3 | low | executed in block 12 |
 | 3B-R2: route-2 endpoint readout `beta_E/alpha_E = 21/4` stretch | constructive theorem / exact runner | 3 | 3 | 2 | 3 | medium | next if time remains |
 | 3B-scalar shortlist provenance tightening | import-retirement audit / no-go | 1 | 2 | 3 | 1 | low | only after stretch |
 | 3A local `5/6` scale-selection boundary | exact negative boundary / theorem target isolation | 2 | 3 | 3 | 3 | low | executed in block 04 |
@@ -426,3 +427,28 @@ Honest target status:
 This is an exact readout underdetermination theorem. It does not weaken the
 RPSR amplitude support; it sharpens the load-bearing residual to a derived
 two-ratio readout law and top-compatible sector/scale bridge.
+
+## Completed Route 13: 3B/3C-RPSR-C3-JointRank
+
+Question:
+
+```text
+Does exact RPSR + exact C3 close the two-ratio up-type Yukawa readout without
+adding a new source law for the C3 coefficients?
+```
+
+Result:
+
+```text
+No. The C3 normal form exactly represents the two-ratio surface, while RPSR
+contributes one scalar. Product and middle-gap one-scalar identifications
+each leave a continuum of C3-representable ordered ratio pairs. Runner
+TOTAL PASS=87 FAIL=0.
+```
+
+Honest target status:
+
+This is an exact joint rank-boundary theorem. It closes direct promotion of
+RPSR+C3 carrier support into retained up-type ratios and sharpens the residual
+to a C3 coefficient source law, physical Fourier-channel assignment,
+two-ratio readout, and sector/scale bridge.

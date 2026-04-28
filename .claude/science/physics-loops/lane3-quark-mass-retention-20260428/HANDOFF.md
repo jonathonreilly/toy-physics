@@ -1,8 +1,8 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T09:39:48Z
-**Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block11-20260428`
-**Current head:** `1cbc2dbc` plus PR-status bookkeeping; see `git log`
+**Updated:** 2026-04-28T09:44:28Z
+**Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block12-20260428`
+**Current head:** block-12 working checkpoint; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
@@ -16,33 +16,34 @@
 **Block 09 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/108
 **Block 10 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/109
 **Block 11 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/110
+**Block 12 review PR:** pending packaging
 
 ## Current State
 
-Blocks 01 through 11 are packaged and PR'd. Block 11 is a stacked
-continuation from block 10. It records an exact 3B readout boundary:
+Blocks 01 through 11 are packaged and PR'd. Block 12 is a stacked
+continuation from block 11. It records an exact joint 3B/3C rank boundary:
 
 ```text
-The exact RPSR scalar is one dimensionless amplitude. It does not determine
-both y_u/y_c and y_c/y_t without a new readout law.
+Exact RPSR plus exact C3 is carrier support, not retained up-type two-ratio
+readout closure without a new source/readout theorem.
 ```
 
-The exact support value remains:
+The exact RPSR support value remains:
 
 ```text
 a_u = sqrt(5/6) * (1 - 48/(49 sqrt(42))) = 0.7748865611...
 ```
 
-The block-11 readout test class is:
+The exact C3 carrier represents normalized up-type triples:
 
 ```text
-R_{p,q}(a_u; y_t) = y_t * (a_u^(p+q), a_u^q, 1)
-y_u/y_c = a_u^p
-y_c/y_t = a_u^q
+(y_u/y_t, y_c/y_t, 1) = (r_uc r_ct, r_ct, 1).
 ```
 
-The same `a_u` supports a continuum of ordered ratio pairs unless `p` and
-`q`, or an equivalent pair of readout functions, are derived.
+Product and middle-gap one-scalar identifications each leave a continuum of
+C3-representable ordered ratio pairs. The missing theorem is now sharpened to
+a C3 coefficient source law, Fourier-channel assignment, two-ratio readout,
+and top-compatible sector/scale bridge.
 
 ## Lock And Supervisor Note
 
@@ -59,19 +60,21 @@ deadline.
 
 ## Completed In This Checkpoint
 
-Created and verified the 3B RPSR single-scalar readout underdetermination:
+Created and verified the 3B/3C RPSR-C3 joint readout rank boundary:
 
-- `docs/QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md`
-- `scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py`
-- `logs/2026-04-28-quark-rpsr-single-scalar-readout-underdetermination.txt`
+- `docs/QUARK_RPSR_C3_JOINT_READOUT_RANK_BOUNDARY_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py`
+- `logs/2026-04-28-quark-rpsr-c3-joint-readout-rank-boundary.txt`
 
 Checks:
 
 ```text
-3B-RPSR single-scalar readout runner: TOTAL PASS=80 FAIL=0
+3B/3C RPSR-C3 joint rank-boundary runner: TOTAL PASS=87 FAIL=0
 py_compile: PASS
+Inherited RPSR single-scalar runner: TOTAL PASS=80 FAIL=0
 Inherited RPSR mass-boundary runner: TOTAL PASS=50 FAIL=0
-Inherited RPSR conditional runner: PASS=9 FAIL=0
+Inherited C3 splitter runner: TOTAL PASS=51 FAIL=0
+Inherited C3 circulant runner: TOTAL PASS=43 FAIL=0
 Inherited Lane 3 firewall runner: PASS=17 FAIL=0
 Inherited one-Higgs gauge-selection runner: TOTAL PASS=43 FAIL=0
 ```
@@ -79,35 +82,35 @@ Inherited one-Higgs gauge-selection runner: TOTAL PASS=43 FAIL=0
 Claim movement:
 
 ```text
-RPSR remains exact reduced-amplitude support. The single-scalar shortcut to a
-two-ratio up-type Yukawa readout is closed negatively. The missing theorem is
-now sharpened to readout functions/exponents, generation-gap assignment, and
-a top-compatible sector/scale bridge.
+The joint RPSR+C3 shortcut is closed negatively. C3 supplies a valid carrier
+for the two-ratio surface, but RPSR supplies only one scalar, and no current
+typed edge supplies C3 coefficients or physical channel assignment.
 ```
 
 ## Active Route
 
-Block 11 has been packaged:
+Block 12 needs packaging:
 
 ```text
-commit 1cbc2dbc: physics-loop lane3 block11 rpsr readout underdetermination
-pushed branch physics-loop/lane3-quark-mass-retention-20260428-block11-20260428
-stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/110
+branch physics-loop/lane3-quark-mass-retention-20260428-block12-20260428
+base physics-loop/lane3-quark-mass-retention-20260428-block11-20260428
+PR body .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK12.md
 ```
 
 ## Next Exact Action
 
-Continue Lane 3 only from one of:
+Package block 12, push it, and open a stacked PR against block 11. Then
+continue Lane 3 only from one of:
 
-1. derived two-ratio RPSR readout law;
-2. generation/source assignment for up-type singular-value gaps;
-3. sector/scale bridge to the top Ward anchor;
-4. 3C source/readout theorem;
+1. C3 coefficient source law;
+2. physical Fourier-channel assignment for `u,c,t`;
+3. two-ratio RPSR/C3 readout theorem;
+4. sector/scale bridge to the top Ward anchor;
 5. genuine 3A non-perturbative `5/6` exponentiation plus scale selection or
    RG-covariant transport;
 6. new 3B source-domain theorem or alternate scalar/readout primitive.
 
 ## Stop Reason
 
-No stop requested. Lane 3 remains open; block 11 is exact readout
-underdetermination without claiming retained non-top quark masses.
+No stop requested. Lane 3 remains open; block 12 is exact joint rank-boundary
+support/no-go without claiming retained non-top quark masses.

@@ -308,6 +308,34 @@
    - push branch to `origin`;
    - create a stacked PR against block 10, or write `PR_BACKLOG.md`.
 
+## Block 12 Artifact Set
+
+1. Continue from block 11 on stacked branch
+   `physics-loop/lane3-quark-mass-retention-20260428-block12-20260428`.
+2. Execute the joint 3B/3C RPSR-C3 readout rank boundary:
+   - note:
+     `docs/QUARK_RPSR_C3_JOINT_READOUT_RANK_BOUNDARY_NOTE_2026-04-28.md`;
+   - runner:
+     `scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py`;
+   - log:
+     `logs/2026-04-28-quark-rpsr-c3-joint-readout-rank-boundary.txt`.
+3. Run focused checks:
+   - `PYTHONPATH=scripts python3 scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py`;
+   - `python3 -m py_compile scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py`;
+   - inherited RPSR block10/block11 runners;
+   - inherited C3 splitter and C3 circulant boundary runners;
+   - inherited Lane 3 firewall and one-Higgs gauge-selection runners.
+4. Emulate review-loop:
+   - classify the result as exact joint rank-boundary support/no-go, not mass
+     retention;
+   - verify no observed quark masses, fitted Yukawa entries, CKM singular
+     values, hidden C3 coefficient source law, hidden channel assignment, or
+     one-scalar-as-two-coordinate readout enters as a proof input.
+5. Package:
+   - commit coherent block artifacts;
+   - push branch to `origin`;
+   - create a stacked PR against block 11, or write `PR_BACKLOG.md`.
+
 ## Non-Goals
 
 - Do not modify repo-wide authority surfaces during this science run.

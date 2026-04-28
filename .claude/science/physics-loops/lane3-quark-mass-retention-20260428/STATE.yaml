@@ -1,30 +1,30 @@
 slug: lane3-quark-mass-retention-20260428
 mode: run/resume
 target: best-honest-status
-science_block: 11
-branch: physics-loop/lane3-quark-mass-retention-20260428-block11-20260428
-base_branch: physics-loop/lane3-quark-mass-retention-20260428-block10-20260428
-head: "1cbc2dbc plus PR-status bookkeeping; see git log"
+science_block: 12
+branch: physics-loop/lane3-quark-mass-retention-20260428-block12-20260428
+base_branch: physics-loop/lane3-quark-mass-retention-20260428-block11-20260428
+head: "block-12 working checkpoint; see git log"
 started_at_utc: "2026-04-28T07:27:25Z"
-last_checkpoint_utc: "2026-04-28T09:39:48Z"
+last_checkpoint_utc: "2026-04-28T09:44:28Z"
 hard_deadline_utc: "2026-04-28T11:27:25Z"
 checkpoint_interval_minutes: 30
-current_status: "block-11 PR opened"
+current_status: "block-12 verification complete; packaging pending"
 claim_status: open
 active_lane: "Lane 3 quark mass retention"
-active_route: "3B RPSR single-scalar readout underdetermination"
-hard_residual: "derived two-ratio readout law, generation-gap assignment, and sector/scale bridge from exact RPSR reduced amplitude to physical up-type ratios"
+active_route: "3B/3C RPSR-C3 joint readout rank boundary"
+hard_residual: "derived C3 coefficient source law, Fourier-channel assignment, two-ratio readout law, and sector/scale bridge"
 a_min:
   - exact RPSR reduced amplitude a_u=sqrt(5/6)*(1-48/(49*sqrt(42)))
-  - positivity and ordering for the normalized up-type Yukawa triple
-  - scale covariance under the top-scale anchor
-  - top Ward anchor used only as a scale boundary, not species-uniform non-top closure
+  - exact C3[111] Hermitian Ward carrier W(A,B,C)
+  - top-scale normalization of a positive ordered up-type triple
+  - scale covariance and finite-dimensional spectral algebra
   - no observed quark masses, fitted Yukawa entries, or CKM singular values as proof inputs
 forbidden_imports:
-  - hidden exponent or functional readout law selected from observed ratios
-  - hidden generation-gap assignment for u/c/t singular-value gaps
+  - hidden C3 source law for A,B,C
+  - hidden Fourier-channel assignment to physical u,c,t singular-value gaps
   - CKM mixing data treated as mass-eigenvalue input
-  - reduced amplitude a_u treated as either y_u/y_c or y_c/y_t without readout theorem
+  - one scalar constraint treated as a two-coordinate readout
   - species-uniform top Ward physical reuse for non-top masses
 files_touched:
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/ASSUMPTIONS_AND_IMPORTS.md
@@ -34,17 +34,19 @@ files_touched:
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/REVIEW_HISTORY.md
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/STATE.yaml
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/HANDOFF.md
-  - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK11.md
-  - docs/QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md
-  - scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py
-  - logs/2026-04-28-quark-rpsr-single-scalar-readout-underdetermination.txt
+  - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK12.md
+  - docs/QUARK_RPSR_C3_JOINT_READOUT_RANK_BOUNDARY_NOTE_2026-04-28.md
+  - scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py
+  - logs/2026-04-28-quark-rpsr-c3-joint-readout-rank-boundary.txt
 open_imports:
   - down-type GST/NNI retained theorem
   - non-perturbative 5/6 bridge and scale-selection theorem
   - amplitude-to-Yukawa readout theorem for RPSR up-amplitude
   - two-ratio RPSR readout functions or equivalent exponents
+  - C3 coefficient source law for the up-type Ward carrier
+  - physical Fourier-channel assignment tying C3 strata to u,c,t gaps
   - generation-gap assignment tying readout functions to u/c/t singular-value gaps
-  - sector/scale bridge tying RPSR readout to the top Ward anchor
+  - sector/scale bridge tying RPSR/C3 readout to the top Ward anchor
   - new typed Route-2 source-domain theorem for gamma_T(center)/gamma_E(center) = -R_conn
   - species-differentiated non-top Yukawa Ward primitive
   - physical quark positive C3 parent and readout theorem
@@ -65,20 +67,25 @@ no_go_routes:
   - positive-parent square-root dictionary as direct quark P1 readout theorem
   - RPSR reduced up-amplitude as direct up-type mass-ratio theorem
   - RPSR scalar plus top-scale normalization as direct two-ratio up-type readout
+  - RPSR scalar plus C3 carrier as direct up-type two-ratio readout
 review_findings:
-  - "3B-RPSR single-scalar readout runner passes with TOTAL PASS=80 FAIL=0."
-  - "py_compile passes for frontier_quark_rpsr_single_scalar_readout_underdetermination.py."
+  - "3B/3C RPSR-C3 joint rank-boundary runner passes with TOTAL PASS=87 FAIL=0."
+  - "py_compile passes for frontier_quark_rpsr_c3_joint_readout_rank_boundary.py."
+  - "Inherited RPSR single-scalar runner passes TOTAL PASS=80 FAIL=0."
   - "Inherited RPSR mass-boundary runner passes TOTAL PASS=50 FAIL=0."
-  - "Inherited RPSR conditional runner passes PASS=9 FAIL=0."
+  - "Inherited C3 splitter runner passes TOTAL PASS=51 FAIL=0."
+  - "Inherited C3 circulant runner passes TOTAL PASS=43 FAIL=0."
   - "Inherited Lane 3 firewall runner passes PASS=17 FAIL=0."
   - "Inherited one-Higgs gauge-selection runner passes TOTAL PASS=43 FAIL=0."
-  - "Review-loop emulation found block-11 honest as exact readout underdetermination, not retained up-type mass closure."
+  - "Review-loop emulation found block-12 honest as exact joint rank-boundary support/no-go, not retained up-type mass closure."
 commands_run:
-  - "git switch -c physics-loop/lane3-quark-mass-retention-20260428-block11-20260428"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py | tee logs/2026-04-28-quark-rpsr-single-scalar-readout-underdetermination.txt"
-  - "python3 -m py_compile scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py"
+  - "git switch -c physics-loop/lane3-quark-mass-retention-20260428-block12-20260428"
+  - "PYTHONPATH=scripts python3 scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py | tee logs/2026-04-28-quark-rpsr-c3-joint-readout-rank-boundary.txt"
+  - "python3 -m py_compile scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py"
+  - "PYTHONPATH=scripts python3 scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py"
   - "PYTHONPATH=scripts python3 scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_up_amplitude_rpsr_conditional.py"
+  - "PYTHONPATH=scripts python3 scripts/frontier_quark_c3_oriented_ward_splitter_support.py"
+  - "PYTHONPATH=scripts python3 scripts/frontier_quark_c3_circulant_source_law_boundary.py"
   - "PYTHONPATH=scripts python3 scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py"
   - "PYTHONPATH=scripts python3 scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py"
 lock_status:
@@ -86,5 +93,5 @@ lock_status:
   local_lock: "/Users/jonBridger/.codex/memories/physics_worker_lock.json held by physics-loop-lane3-20260428; refreshed to 2026-04-28T14:26:03Z"
   supervisor_flock: ".claude/science/physics-loops/lane3-quark-mass-retention-20260428/supervisor.lock held by active supervisor process"
 pr_status: "block-01 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/100; block-02 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/101; block-03 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/102; block-04 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/103; block-05 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/104; block-06 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/105; block-07 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/106; block-08 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/107; block-09 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/108; block-10 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/109; block-11 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/110"
-next_exact_action: "Continue Lane 3 only from a derived two-ratio RPSR readout law, sector/scale bridge, 3C source/readout theorem, 3A scale theorem, or new 3B scalar/readout primitive."
+next_exact_action: "Package block 12, open stacked PR against block 11, then continue Lane 3 only from a derived C3 coefficient source law, channel assignment, two-ratio readout, sector/scale bridge, 3A scale theorem, or new 3B source primitive."
 stop_condition: null
