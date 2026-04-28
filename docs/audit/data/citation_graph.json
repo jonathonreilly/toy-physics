@@ -4481,38 +4481,6 @@
       "to": "gravity_sign_audit_2026-04-10"
     },
     {
-      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
-      "to": "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24"
-    },
-    {
-      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
-      "to": "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24"
-    },
-    {
-      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
-      "to": "koide_berry_phase_theorem_note_2026-04-19"
-    },
-    {
-      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
-      "to": "koide_brannen_geometry_dirac_support_note_2026-04-22"
-    },
-    {
-      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
-      "to": "koide_brannen_callan_harvey_candidate_note_2026-04-22"
-    },
-    {
-      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
-      "to": "koide_brannen_phase_reduction_theorem_note_2026-04-20"
-    },
-    {
-      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
-      "to": "koide_q_delta_linking_relation_theorem_note_2026-04-20"
-    },
-    {
-      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
-      "to": "koide_circulant_character_derivation_note_2026-04-18"
-    },
-    {
       "from": "koide_c3_constant_singlet_reparameterization_theorem_note_2026-04-20",
       "to": "koide_z3_scalar_potential_support_note_2026-04-19"
     },
@@ -4795,26 +4763,6 @@
     {
       "from": "koide_positive_paths_first_principles_note_2026-04-18",
       "to": "koide_circulant_character_bridge_note_2026-04-18"
-    },
-    {
-      "from": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
-      "to": "observable_principle_from_axiom_note"
-    },
-    {
-      "from": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
-      "to": "koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25"
-    },
-    {
-      "from": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
-      "to": "koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25"
-    },
-    {
-      "from": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
-      "to": "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25"
-    },
-    {
-      "from": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
-      "to": "koide_q_so2_phase_erasure_support_note_2026-04-25"
     },
     {
       "from": "koide_selected_slice_frozen_bank_decomposition_note_2026-04-18",
@@ -17893,7 +17841,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-28T12:09:05.828161+00:00",
+  "generated_at": "2026-04-28T12:07:24.320882+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -26806,25 +26754,6 @@
       "runner_path": null,
       "title": "Complex Action: Kernel-Generic vs Gravity-Specific"
     },
-    "koide_a1_brannen_plancherel_identity_support_note_2026-04-25": {
-      "claim_id": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
-      "current_status": "support",
-      "current_status_raw": "support-grade algebraic identity inside the Brannen",
-      "deps": [
-        "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24",
-        "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
-        "koide_berry_phase_theorem_note_2026-04-19",
-        "koide_brannen_geometry_dirac_support_note_2026-04-22",
-        "koide_brannen_callan_harvey_candidate_note_2026-04-22",
-        "koide_brannen_phase_reduction_theorem_note_2026-04-20",
-        "koide_q_delta_linking_relation_theorem_note_2026-04-20",
-        "koide_circulant_character_derivation_note_2026-04-18"
-      ],
-      "note_hash": "274769b021b1febacd5318ec23666dc6b340c01d8d2f93ba37a2e9fb06bc941b",
-      "path": "docs/KOIDE_A1_BRANNEN_PLANCHEREL_IDENTITY_SUPPORT_NOTE_2026-04-25.md",
-      "runner_path": "scripts/frontier_koide_a1_brannen_plancherel_identity_support.py",
-      "title": "Koide A1 \u2014 Brannen `\u03b4 = arg(b)` Plancherel Identity Support Note"
-    },
     "koide_a1_closure_recommendation_2026-04-22": {
       "claim_id": "koide_a1_closure_recommendation_2026-04-22",
       "current_status": "unknown",
@@ -27602,22 +27531,6 @@
       "path": "docs/KOIDE_Q_OP_LOCALITY_C3_FIXED_SOURCE_SUPPORT_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_koide_q_op_locality_c3_fixed_source_support.py",
       "title": "Koide Q OP-Locality / C3-Fixed Source Support Note"
-    },
-    "koide_q_op_uniqueness_source_domain_support_note_2026-04-25": {
-      "claim_id": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
-      "current_status": "support",
-      "current_status_raw": "**support-grade** \u2014 this note does **not** close `Q_l = 2/3`.",
-      "deps": [
-        "observable_principle_from_axiom_note",
-        "koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25",
-        "koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25",
-        "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25",
-        "koide_q_so2_phase_erasure_support_note_2026-04-25"
-      ],
-      "note_hash": "4f39562866bf0dc4380712154a8830f98d78994307f964974502ac46c3e8fb21",
-      "path": "docs/KOIDE_Q_OP_UNIQUENESS_SOURCE_DOMAIN_SUPPORT_NOTE_2026-04-25.md",
-      "runner_path": "scripts/frontier_koide_q_op_uniqueness_source_domain_support.py",
-      "title": "Koide Q OP-Uniqueness Source-Domain Support Note (V4)"
     },
     "koide_q_readout_factorization_theorem_2026-04-22": {
       "claim_id": "koide_q_readout_factorization_theorem_2026-04-22",
@@ -40303,17 +40216,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4473,
-    "leaf_count": 731,
-    "node_count": 1630,
+    "edge_count": 4460,
+    "leaf_count": 732,
+    "node_count": 1628,
     "root_count": 1184,
-    "runners_with_path": 712,
+    "runners_with_path": 710,
     "status_counts": {
       "bounded": 212,
       "open": 30,
       "proposed_promoted": 6,
       "proposed_retained": 447,
-      "support": 139,
+      "support": 137,
       "unknown": 796
     }
   }
