@@ -228,6 +228,6 @@ Disposition:
 
 - keep artifact;
 - claim status remains `open`;
-- block 03 should be packaged as a stacked PR against block 02;
+- stacked review PR opened: https://github.com/jonathonreilly/cl3-lattice-framework/pull/102;
 - next exact Lane 3 action requires genuinely new source-domain theorem
   content, an alternate 3B readout primitive, or a sharp 3A local theorem.

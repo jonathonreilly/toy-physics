@@ -1,13 +1,13 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T08:14:45Z
+**Updated:** 2026-04-28T08:18:36Z
 **Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block03-20260428`
-**Current head:** block-03 working checkpoint; see `git log`
+**Current head:** `209346ac` plus PR-status bookkeeping; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
 **Block 02 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/101
-**Block 03 review PR:** pending package
+**Block 03 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/102
 
 ## Current State
 
@@ -68,10 +68,12 @@ not latent retained support in the current Route-2/SU(3) bank.
 
 ## Active Route
 
-Block 03 is ready for package:
+Block 03 has been packaged:
 
 ```text
-Commit, push, and open a stacked review PR against block 02.
+commit 209346ac: physics-loop lane3 block03 source bridge
+pushed branch physics-loop/lane3-quark-mass-retention-20260428-block03-20260428
+stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/102
 ```
 
 ## Next Exact Action
