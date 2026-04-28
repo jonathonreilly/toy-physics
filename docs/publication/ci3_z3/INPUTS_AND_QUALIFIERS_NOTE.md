@@ -183,6 +183,11 @@ bridge layer beyond the exact structural core.
   - same-surface derived framework values plus the retained running bridge
 - bounded string tension readout:
   - exact confinement theorem plus low-energy EFT bridge
+  - current hadron-lane support isolates the remaining `sqrt(sigma)` budget:
+    `(B2)` quenched-to-dynamical screening is the dominant numerical residual,
+    and `(B5)` framework `SU(3)` to standard `SU(3)` Yang-Mills identification
+    remains an explicit structural bridge until large-volume Wilson-loop /
+    Creutz-ratio validation closes it.
 - CKM-only neutron-EDM corollary + bounded continuation:
   - retained strong-CP closure package + promoted CKM package
   - exact corollary `d_n(QCD) = 0` on the retained surface; EFT bridge only

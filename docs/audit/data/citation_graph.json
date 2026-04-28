@@ -8558,6 +8558,10 @@
     },
     {
       "from": "lanes.active_working_lanes_2026-04-26",
+      "to": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27"
+    },
+    {
+      "from": "lanes.active_working_lanes_2026-04-26",
       "to": "lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26"
     },
     {
@@ -8711,6 +8715,18 @@
     {
       "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
       "to": "confinement_string_tension_note"
+    },
+    {
+      "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
+      "to": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27"
+    },
+    {
+      "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
+      "to": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27"
+    },
+    {
+      "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
+      "to": "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27"
     },
     {
       "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
@@ -11275,6 +11291,18 @@
     {
       "from": "publication.ci3_z3.derivation_atlas",
       "to": "monopole_derived_note"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27"
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
@@ -14294,6 +14322,10 @@
     },
     {
       "from": "publication.ci3_z3.publication_matrix",
+      "to": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27"
+    },
+    {
+      "from": "publication.ci3_z3.publication_matrix",
       "to": "left_handed_charge_matching_note"
     },
     {
@@ -15406,6 +15438,10 @@
     },
     {
       "from": "publication.ci3_z3.readme",
+      "to": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.readme",
       "to": "planck_scale_lane_status_note_2026-04-23"
     },
     {
@@ -15647,6 +15683,10 @@
     {
       "from": "publication.ci3_z3.results_index",
       "to": "confinement_string_tension_note"
+    },
+    {
+      "from": "publication.ci3_z3.results_index",
+      "to": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27"
     },
     {
       "from": "publication.ci3_z3.results_index",
@@ -17753,7 +17793,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-28T07:26:45.125787+00:00",
+  "generated_at": "2026-04-28T07:36:36.802744+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -26134,6 +26174,16 @@
       "runner_path": null,
       "title": "3D `1/L^2 + h^2` Narrow `h=0.125` Bridge Note"
     },
+    "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27": {
+      "claim_id": "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27",
+      "current_status": "support",
+      "current_status_raw": "support / open-lane scoping no-go on `main`; no theorem or",
+      "deps": [],
+      "note_hash": "65e15699ded1556c9f6480a652230b2c902a1f0533c9daad8cd44ed652d0b42c",
+      "path": "docs/HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING_SUPPORT_NOTE_2026-04-27.md",
+      "runner_path": null,
+      "title": "Lane 1 Chiral Condensate `Sigma` via Banks-Casher: Scoping Audit"
+    },
     "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27": {
       "claim_id": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
       "current_status": "proposed_retained",
@@ -26143,6 +26193,26 @@
       "path": "docs/HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py",
       "title": "Hadron Lane 1 Confinement-To-Mass Firewall"
+    },
+    "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27": {
+      "claim_id": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
+      "current_status": "support",
+      "current_status_raw": "support / open-lane gate-audit note on `main`; no theorem or",
+      "deps": [],
+      "note_hash": "8ac862619b9b970e8c9125f5923b49b2ea1b28996d972d1d8fd60427033e6031",
+      "path": "docs/HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md",
+      "runner_path": null,
+      "title": "Lane 1 `sqrt(sigma)` Retention Gate Audit: EFT-Bridge Decomposition of the 5.6% Gap"
+    },
+    "hadron_mass_lane1_theorem_plan_support_note_2026-04-27": {
+      "claim_id": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
+      "current_status": "support",
+      "current_status_raw": "support / open-lane planning note on `main`; no theorem or",
+      "deps": [],
+      "note_hash": "9596fab15319190fde188f6faadfd398c7f0fd5ca1002ab9d9b55d29ce449eb9",
+      "path": "docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md",
+      "runner_path": null,
+      "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap"
     },
     "hard_geometry_gravity_window_note": {
       "claim_id": "hard_geometry_gravity_window_note",
@@ -27752,6 +27822,7 @@
         "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
         "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
         "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
+        "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
         "lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26",
         "atomic_rydberg_dependency_firewall_note_2026-04-27",
         "lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26",
@@ -27767,7 +27838,7 @@
         "ai_methodology.raw.readme",
         "lanes.open_science.readme"
       ],
-      "note_hash": "0a9eee8a55c817ea23c33740c8574df92b8fada3ec0fb1672be9e118b6f96a3d",
+      "note_hash": "162a685fdee70e6782c3ea17e9a5ee281dd94bf64b9d5d212ac1d786224e995f",
       "path": "docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md",
       "runner_path": null,
       "title": "Active Working Lanes"
@@ -27844,11 +27915,14 @@
       "deps": [
         "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
         "confinement_string_tension_note",
+        "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
+        "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
+        "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27",
         "graph_first_su3_integration_note",
         "alpha_s_derived_note",
         "quark_mass_ratio_review_packet_2026-04-18"
       ],
-      "note_hash": "615167a70db27c6df582c7b5cc32f19dcdc399fb1838a7ef21d0ddc65295f06a",
+      "note_hash": "194ef27b3219c47bc963c2322ca513e46471721661f1f4f548785a8b57b83eb7",
       "path": "docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md",
       "runner_path": null,
       "title": "Lane 1 \u2014 Hadron Mass Program"
@@ -27879,7 +27953,7 @@
         "down_type_mass_ratio_ckm_dual_note",
         "yt_ward_identity_derivation_theorem"
       ],
-      "note_hash": "4c88a90df69cbcd170a98894b232ffd871685f7cc720d1a1040712e56b8fa87c",
+      "note_hash": "79a3a4a13e73ed4c5f5b97290da8ef164e52497400c09130d00ab81ceac4aa61",
       "path": "docs/lanes/open_science/03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md",
       "runner_path": null,
       "title": "Lane 3 \u2014 Quark Masses Retention"
@@ -31867,6 +31941,9 @@
         "proton_lifetime_derived_note",
         "vacuum_critical_stability_note",
         "monopole_derived_note",
+        "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
+        "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
+        "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27",
         "pmns_lower_level_end_to_end_closure_note",
         "pmns_active_four_real_source_from_transport_note",
         "pmns_uniform_scalar_deformation_boundary_note",
@@ -31926,7 +32003,7 @@
         "lattice_complementarity_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "430757207bec00b834c8d02019a046561037c21d2ac22c6d45051fa173249405",
+      "note_hash": "e8f5a60f4392fdd45ddb9710b3f4d0b377fce02d4ccb4d392e6fff4632d23408",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -32619,7 +32696,7 @@
         "publication.ci3_z3.publication_matrix",
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
-      "note_hash": "fd43a021e94af270729258723c83f7d869785d0f9e0e531920b1da882a49c9f2",
+      "note_hash": "594f801d1cc034833b34c5d21105f258bde7f5db67013bbc955ad1727386692a",
       "path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
       "runner_path": null,
       "title": "Inputs And Qualifiers"
@@ -32688,7 +32765,7 @@
         "dark_energy_eos_note",
         "graviton_mass_derived_note"
       ],
-      "note_hash": "4c023924d9da09d4f2765f1bb7e37dcbdaf81633eea9cbde092a95267f38244b",
+      "note_hash": "862d317ab0a073a846a3afb5651c58c472594cb63c5f12bafcb2ea328237a1fe",
       "path": "docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md",
       "runner_path": null,
       "title": "Prediction Surface"
@@ -32731,6 +32808,7 @@
         "native_gauge_closure_note",
         "graph_first_su3_integration_note",
         "confinement_string_tension_note",
+        "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
         "left_handed_charge_matching_note",
         "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
         "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
@@ -32924,7 +33002,7 @@
         "gw_echo_null_result_note",
         "koide_reviewer_stress_test_note_2026-04-21"
       ],
-      "note_hash": "1f063fc084134d90c7ec5a6357944be87cd9ef508b8d044b841188e185168280",
+      "note_hash": "f54cdfbf3a779928c93342b37e5f3e265e4e190f00a47cef9a31f7c94ff72c0c",
       "path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
       "runner_path": null,
       "title": "Publication Matrix"
@@ -33031,6 +33109,7 @@
         "cosmology_open_number_reduction_theorem_note_2026-04-26",
         "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
         "publication.ci3_z3.usable_derived_values_index",
+        "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
         "planck_scale_lane_status_note_2026-04-23",
         "planck_scale_conditional_completion_note_2026-04-24",
         "planck_source_unit_normalization_support_theorem_note_2026-04-25",
@@ -33045,7 +33124,7 @@
         "single_axiom_information_note",
         "single_axiom_hilbert_note"
       ],
-      "note_hash": "0a8f5bd3d25997e60d92b41a5535da34bd13b38b4dd537fd8aafab95edd677a3",
+      "note_hash": "e3e3c9047c1779bcc36ab9dc9b9afe89e94c2880882af16662c33081a5c00144",
       "path": "docs/publication/ci3_z3/README.md",
       "runner_path": null,
       "title": "Cl(3) / Z^3 Publication Package"
@@ -33135,6 +33214,7 @@
         "g_bare_rigidity_theorem_note",
         "physical_lattice_necessity_note",
         "confinement_string_tension_note",
+        "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
         "anomaly_forces_time_theorem",
         "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
         "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
@@ -33429,7 +33509,7 @@
         "ckm_atlas_axiom_closure_note",
         "ckm_thales_pinned_alpha_s_independent_ratios_theorem_note_2026-04-25"
       ],
-      "note_hash": "7dce308317faf7675e013a1f935b1de5c03d8b30815bdbef7b6e9f02733dc6d8",
+      "note_hash": "488e750df94252d72389226ed4a26b4bf11429a77444b6c6bffdb0d0597ceea9",
       "path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
       "runner_path": null,
       "title": "Results Index"
@@ -33496,7 +33576,7 @@
         "publication.ci3_z3.release_environment",
         "publication.ci3_z3.derivation_atlas"
       ],
-      "note_hash": "8576f1d27c9f2bea645635a52fdc22f28644ed80ab9c65b2b9a77b5a0376455f",
+      "note_hash": "dbd839de644c8b3bf7625cbe92f12d0a4bdafcdb6cb877b3805548838b6fef65",
       "path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
       "runner_path": null,
       "title": "Science Map"
@@ -39354,7 +39434,10 @@
     "h0125_wider_w4_note",
     "h0125_wider_w4_probe_note",
     "h2t_h0125_narrow_bridge_note",
+    "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27",
     "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
+    "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
+    "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
     "hard_geometry_gravity_window_note",
     "hard_geometry_head_to_head_note",
     "hard_geometry_local_note",
@@ -40018,17 +40101,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4438,
+    "edge_count": 4448,
     "leaf_count": 732,
-    "node_count": 1620,
-    "root_count": 1176,
+    "node_count": 1623,
+    "root_count": 1179,
     "runners_with_path": 710,
     "status_counts": {
       "bounded": 212,
       "open": 26,
       "proposed_promoted": 6,
       "proposed_retained": 447,
-      "support": 133,
+      "support": 136,
       "unknown": 796
     }
   }

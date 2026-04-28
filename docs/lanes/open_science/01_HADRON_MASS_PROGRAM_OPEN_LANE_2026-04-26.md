@@ -8,9 +8,13 @@ satisfy hadron-mass retention.
 **Approachability:** Tier B-C (1–6 months for first results; full closure 6–18 months)
 **Primary closure targets:** retained `m_p`, `m_n`, `m_pi`, hadron spectroscopy,
 and form-factor derivation paths.
-**First parallel-worker target:** reduce the lane to a retained pion/proton
-mass theorem plan using current confinement, α_s running, and Lane 3 quark-mass
-dependencies.
+**First parallel-worker target:** complete. The lane now has a support
+roadmap, a `sqrt(sigma)` retention-gate audit, and a Banks-Casher `Sigma`
+scoping no-go.
+**Current highest-leverage targets:** (i) close the `(B2)` quenched-to-dynamical
+screening budget for `sqrt(sigma)` at `beta=6.0`, `N_f=2+1`; (ii) have Lane 3
+retain the combined `m_u + m_d` light-quark sum, which is the shortest unblocker
+for the GMOR pion route once `Sigma` and `f_pi` are addressed.
 **Non-claim boundary:** this file opens the lane only; it does not derive any
 hadron mass.
 
@@ -66,6 +70,22 @@ observables have to be retained or the QCD sector remains incomplete.
 - Kaon, ρ, B-meson masses — no derivations
 - Hadron form factors — no derivations
 - Hadron spectroscopy — no quantitative results
+
+### Support landed 2026-04-28
+
+- [HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md](../../HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md)
+  maps the lane into phase-ordered dependencies: `sqrt(sigma)` gate work
+  can proceed in parallel; `m_pi` via GMOR needs Lane 3 `m_u + m_d` plus
+  `Sigma` and `f_pi`; proton/spectroscopy/form factors wait on broader
+  quark-mass and lattice-QCD bridges.
+- [HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md](../../HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md)
+  decomposes the bounded `sqrt(sigma)` readout into the `(B1)`-`(B5)`
+  residual budget and isolates `(B2)` quenched-to-dynamical screening as
+  the dominant numerical gate.
+- [HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING_SUPPORT_NOTE_2026-04-27.md](../../HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING_SUPPORT_NOTE_2026-04-27.md)
+  records the Banks-Casher `Sigma` no-active-route result on current
+  framework content: existing `L=4,6` data is finite-volume/lattice-free,
+  and no structural identity currently pins `rho_Dirac(0)`.
 
 ## 3. Derivation targets
 
@@ -142,22 +162,29 @@ budget like the YT/top transport lane has).
 
 ## 5. Recommended attack approach
 
-**Phase 1 (after Lane 3 lands quark masses):**
+**Phase 1 (now, in parallel with Lane 3):**
 
-1. **Pion mass via GMOR** — close 3A first; this is the lightest hadron and
+1. **`sqrt(sigma)` retained-with-budget gate (3E)** — close `(B2)` with a
+   proper `N_f=2+1` dynamical screening calculation at `beta=6.0`, and keep
+   `(B5)` framework-to-standard-YM identification as an explicit residual until
+   large-volume Wilson-loop/Creutz-ratio checks close it.
+2. **`Sigma` / `f_pi` support work** — Banks-Casher is currently a no-active
+   route without large-volume lattice data or a new structural identity; `f_pi`
+   remains a companion chiral-SB normalization target.
+3. **Lane 3 coordination** — prioritize retained `m_u + m_d` as the combined
+   quark-mass sum that first unlocks 3A.
+
+**Phase 2 (after Lane 3 retains `m_u + m_d` and `Sigma`, `f_pi` are addressed):**
+
+4. **Pion mass via GMOR** — close 3A first; this is the lightest hadron and
    has the cleanest chiral-SB structure.
-2. **√σ retained promotion (3E)** — incremental tightening; can run in parallel.
 
-**Phase 2 (after Phase 1):**
+**Phase 3 (after Lane 3 full quark-mass closure + lattice-QCD bridge):**
 
-3. **Proton mass ab initio** — close 3B. This is the highest-visibility hadron
-   observable.
-4. **Kaon, ρ, ω masses** — extend 3A methodology.
-
-**Phase 3 (after Phase 2):**
-
-5. **Baryon octet / decuplet** — systematic extension.
-6. **Hadron form factors** — phenomenology lane.
+5. **Proton/neutron mass ab initio** — close 3B. This is the highest-visibility
+   hadron observable.
+6. **Kaon, ρ, ω masses and broader spectroscopy** — extend 3A/3B methodology.
+7. **Hadron form factors** — phenomenology lane.
 
 ## 6. Out of scope / will not claim
 

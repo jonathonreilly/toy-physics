@@ -185,7 +185,9 @@ already-retained CKM atlas/axiom structural identities.
 
 - Depends on: Koide closure (for the Q-side of the cross-sector V_cb bridge,
   which provides additional constraint on quark masses via Q_ℓ · α_s² = 4|V_cb|²)
-- Enables: Lane 1 (hadron masses depend on quark masses)
+- Enables: Lane 1 (hadron masses depend on quark masses; Lane 1 now
+  identifies combined `m_u + m_d` retention as the shortest quark-mass
+  dependency for the GMOR pion route)
 - Enables: Lane 4 (neutrino sector consistency checks via flavor-universal
   Yukawa structure)
 - Cross-validates: existing CKM atlas/axiom package (CKM was closed without

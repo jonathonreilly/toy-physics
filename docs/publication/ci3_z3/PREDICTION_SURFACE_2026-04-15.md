@@ -99,6 +99,9 @@ closes.
   - `sqrt(sigma) ≈ 465 MeV`
   - authority:
     [CONFINEMENT_STRING_TENSION_NOTE.md](../../CONFINEMENT_STRING_TENSION_NOTE.md)
+  - status boundary: bounded; the hadron-lane support audit isolates
+    `(B2)` quenched-to-dynamical screening and `(B5)` framework-to-standard-YM
+    validation as the remaining promotion gates.
 
 These rows belong in the main manuscript quantitative section because they are
 already part of the live paper surface.
