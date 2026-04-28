@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T12:11:34.428022+00:00
+**Generated:** 2026-04-28T12:14:36.942770+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 3 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
-| support | 105 |
+| support | 104 |
 | open | 15 |
-| unknown | 710 |
+| unknown | 709 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 373 |
+| ~~audited_conditional~~ | 375 |
 | ~~audited_failed~~ | 148 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 79 |
-| `audited_conditional` | 147 |
+| `audited_conditional` | 148 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1317 |
+| `unaudited` | 1316 |
 
 | criticality | count |
 |---|---:|
@@ -213,6 +213,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `global_coherence_off_scaffold_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `graph_first_selector_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1845,6 +1846,23 @@ Repair target: derive and audit the full beta-dependent reduction law and its no
 Claim boundary until fixed: safe to claim the exact first nonlocal coefficient and beta_eff onset, not full plaquette observable closure.
 - **open / conditional deps cited:**
   - `nonperturbative_beta6_continuation_of_beta_eff_missing`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-28-gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The theorem above is structural and exact. The linked runner is intentionally a finite support packet only.  _(class `A`)_
+- **chain closes:** False — The explicit positive tensor-transfer class closes structurally on the truncated audited support packet, and the live runner reports THEOREM PASS=4 SUPPORT=3 FAIL=0. It does not evaluate the full beta=6 tensor-transfer matrix elements, Perron state, boundary coefficients rho_(p,q)(6), or canonical P(6).
+- **rationale:** Issue: the note sharpens the remaining spatial-environment problem to an explicit positive tensor-transfer class, but it does not evaluate the full beta=6 tensor-transfer matrix elements, Perron state, or rho_(p,q)(6) boundary data.
+Why this blocks: downstream plaquette or alpha_s claims need the actual framework-point environment readout; a truncated support packet cannot promote analytic P(6) closure.
+Repair target: compute and audit the full beta=6 tensor-transfer operator/Perron state and resulting boundary coefficients, with a runner that evaluates the canonical plaquette observable.
+Claim boundary until fixed: safe to claim explicit positive tensor-transfer structure for the spatial environment, not full beta=6 plaquette closure.
+- **open / conditional deps cited:**
+  - `full_beta6_tensor_transfer_perron_state_missing`
 - **auditor confidence:** high
 
 ### `geometry_superposition_dag_ensemble_note_2026-04-11`

@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-28T12:11:34.239052+00:00",
-  "generated_at": "2026-04-28T12:11:32.599273+00:00",
-  "invalidation_run_at": "2026-04-28T12:11:34.191714+00:00",
+  "effective_status_computed_at": "2026-04-28T12:14:36.749014+00:00",
+  "generated_at": "2026-04-28T12:14:35.067986+00:00",
+  "invalidation_run_at": "2026-04-28T12:14:36.685716+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-28T12:11:34.095318+00:00",
+  "load_bearing_computed_at": "2026-04-28T12:14:36.578474+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -6325,8 +6325,8 @@
       "load_bearing_score": 10.931,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
-      "max_descendant_status": "support",
-      "max_descendant_status_rank": 50,
+      "max_descendant_status": "unknown",
+      "max_descendant_status_rank": 30,
       "note_hash": "950f699e10921f2d0ac100b2d1b53886c5f99e284578dd6b9778ddc7ef02496b",
       "note_path": "docs/BH_ENTROPY_DERIVED_NOTE.md",
       "open_dependency_paths": [],
@@ -33244,14 +33244,21 @@
       "verdict_rationale": null
     },
     "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-28",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 15.155,
+        "transitive_descendants": 284
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop:fresh-2026-04-28-gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The explicit positive tensor-transfer class closes structurally on the truncated audited support packet, and the live runner reports THEOREM PASS=4 SUPPORT=3 FAIL=0. It does not evaluate the full beta=6 tensor-transfer matrix elements, Perron state, boundary coefficients rho_(p,q)(6), or canonical P(6).",
       "claim_id": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
       "criticality": "critical",
       "current_status": "support",
@@ -33259,30 +33266,32 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 6,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 15.155,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The theorem above is structural and exact. The linked runner is intentionally a finite support packet only.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "cd32df125009c73ccaf60a461f913086d2974efd48b74e825b4f2e8d9e3a3881",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "full_beta6_tensor_transfer_perron_state_missing"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 4,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Tensor-Transfer Theorem",
       "transitive_descendants": 284,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note sharpens the remaining spatial-environment problem to an explicit positive tensor-transfer class, but it does not evaluate the full beta=6 tensor-transfer matrix elements, Perron state, or rho_(p,q)(6) boundary data.\nWhy this blocks: downstream plaquette or alpha_s claims need the actual framework-point environment readout; a truncated support packet cannot promote analytic P(6) closure.\nRepair target: compute and audit the full beta=6 tensor-transfer operator/Perron state and resulting boundary coefficients, with a runner that evaluates the canonical plaquette observable.\nClaim boundary until fixed: safe to claim explicit positive tensor-transfer structure for the spatial environment, not full beta=6 plaquette closure."
     },
     "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note": {
       "audit_date": null,
@@ -33302,8 +33311,8 @@
         "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
       ],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 14.65,
@@ -39467,8 +39476,8 @@
       "load_bearing_score": 1.5,
       "load_bearing_step": "On the exact charged-lepton selected line, the physical phase offset delta(m) is the tautological CP^1 Berry holonomy of the projective C3 doublet ray from the unique unphased point, so solving delta = 2/9 fixes the first-branch point and kappa_sel.",
       "load_bearing_step_class": "C",
-      "max_descendant_status": "support",
-      "max_descendant_status_rank": 50,
+      "max_descendant_status": "audited_conditional",
+      "max_descendant_status_rank": 10,
       "note_hash": "55bad816c93e3ee41a082e92dd015374b986c713b9a3e72af4689e6a78a83092",
       "note_path": "docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md",
       "open_dependency_paths": [],
@@ -39616,8 +39625,8 @@
       "load_bearing_score": 1.5,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
-      "max_descendant_status": "support",
-      "max_descendant_status_rank": 50,
+      "max_descendant_status": "audited_conditional",
+      "max_descendant_status_rank": 10,
       "note_hash": "9cb9f7b9ba3b2ebbc1894e53b5ad6b1d2931866dd02d04069469c90364fd49d4",
       "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
       "open_dependency_paths": [],
@@ -42058,8 +42067,8 @@
       "load_bearing_score": 1.5,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
-      "max_descendant_status": "support",
-      "max_descendant_status_rank": 50,
+      "max_descendant_status": "audited_conditional",
+      "max_descendant_status_rank": 10,
       "note_hash": "fecda138158319faa082487fc381496a2b953ae804d5e7215a85590392fb0181",
       "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
       "open_dependency_paths": [],
@@ -89419,9 +89428,9 @@
   "schema_version": 1,
   "stats": {
     "dropped_missing_notes": 0,
-    "preserved_existing": 1628,
+    "preserved_existing": 1630,
     "re_audit_required": 0,
     "row_count": 1630,
-    "seeded_new": 2
+    "seeded_new": 0
   }
 }
