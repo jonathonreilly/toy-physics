@@ -1,101 +1,111 @@
-# Science Worker Queue
+# Science Worker Queue — First Pass Retrospective + Next Tier
 
-**Status:** open queue, accepting workers.
-**Generated:** 2026-04-27 from the audit-lane ledger after the first
-~10% of audits landed.
+**Status:** first audit pass complete. Second-pass queue derived from current ledger state.
+**Last updated:** 2026-04-27 (post first review-loop)
 
-This is the priority-ordered list of audit-surfaced science problems
-that need dedicated workers. Each lane has a structured handoff doc
-under `worker_lanes/` with the audit verdict, the load-bearing failure,
-the repair target, and suggested approach. A worker (Claude / Codex
-session) should be able to pick up a lane cold from its handoff doc
-without further context.
+This document supersedes the original 5-lane queue. The original lane
+handoff docs are preserved under `worker_lanes/` as context for future
+re-promotion attempts.
 
-## How this queue is generated
+---
 
-The audit lane (`docs/audit/`) ratifies claims from
-`current_status: proposed_retained` to `effective_status: retained`
-only when an independent auditor (Codex GPT-5.5 by default) confirms
-the derivation closes from cited inputs. After the first 164 audits
-landed on `main`, the ledger surfaced the failure modes summarized
-below. Lanes are ordered by **load-bearing impact** — transitive
-descendants the lane unblocks plus criticality tier.
+## First pass: outcome table
 
-## Lanes
+| # | Lane | Canonical PR | Plan B PR | Outcome | Reading |
+|---|---|---|---|---|---|
+| 1 | RCONN derivation → unblock EW color projection | **#92 merged (salvaged)** | — | OZI matching theorem registered as **bounded support** (not retained); 9/8 coefficient kept on the existing reading | structural OZI argument is real but **does not by itself ratify** the matching coefficient |
+| 2 | Native gauge runners — registration + cross-confirm | **#91 merged** | — | Hygiene wires landed; underlying claim subsequently re-audited by Codex and **flipped to `audited_failed`** | registration alone doesn't carry; the gauge-closure aggregator's chain doesn't close even with deps visible |
+| 3 | Equivalence principle chain repair | #93 closed | **#96 merged** | Plan B honest downgrade landed; EP narrowed to "near-unity exponents" | structural chain-rule derivation didn't close on its own terms; the action-form selector remains open |
+| 4 | YT UV-to-IR transport — first principles | **#94 merged** | #97 closed | 27 sub-theorem deps wired; master assembly subsequently **flipped to `audited_failed`** when each sub-theorem was individually audited | dep-registration exposed the chain; many P1/P2/P3 sub-theorems individually fail audit |
+| 5 | DM neutrino Z3 phase lift — derive or downgrade | #95 closed | **#98 merged** | Plan B bounded reading landed; bridge family kept as candidate algebraic family | character-transfer derivation overclaimed exact physical closure; bounded reading was the safe landing |
 
-| # | Lane | verdict | crit | desc | unblocks | handoff |
-|---|---|---|---|---:|---|---|
-| 1 | RCONN derivation → unblock EW color projection | `audited_conditional` | critical | 278 | EW couplings, sin²θ_W, 1/α_EM | [`worker_lanes/01_rconn_derivation.md`](worker_lanes/01_rconn_derivation.md) |
-| 2 | Native gauge runners — registration + cross-confirm | `audited_conditional` | critical | 276 | SU(2)/SU(3) gauge structure backbone | [`worker_lanes/02_native_gauge_runners.md`](worker_lanes/02_native_gauge_runners.md) |
-| 3 | Equivalence principle chain repair | `audited_failed` | high | 119 | gravity/GR program | [`worker_lanes/03_equivalence_principle.md`](worker_lanes/03_equivalence_principle.md) |
-| 4 | YT UV-to-IR transport — first principles | `audited_numerical_match` | high | 120 | top mass m_t, Higgs vacuum stability | [`worker_lanes/04_yt_uv_to_ir_first_principles.md`](worker_lanes/04_yt_uv_to_ir_first_principles.md) |
-| 5 | DM neutrino Z3 phase lift — derive or downgrade | `audited_renaming` | high | 119 | DM "flagship closed" package | [`worker_lanes/05_dm_neutrino_z3_phase_lift.md`](worker_lanes/05_dm_neutrino_z3_phase_lift.md) |
+**Pattern surfaced by the first pass:**
 
-Total downstream impact: each lane closes a different region of the
-package. Lanes 1 and 2 alone unblock ~554 descendants by inheritance
-once they ratify.
+- Pure registration / hygiene PRs (#91, #94) **land procedurally but expose underlying audit failures** in the chain they make visible. This is exactly what the audit lane was built to do.
+- Substantive new derivations attempted from inside an LLM session (#92, #93, #95) **were caught as overclaims** and either salvaged to bounded support (#92) or replaced by the Plan B downgrade (#96, #98). Two-of-three caught is a strong signal that fresh-look audits work.
+- Honest downgrade was the right move on **all three lanes where it was prepared as Plan B**.
 
-## Workflow per lane
+---
 
-1. **Pick a lane** from the table above. Read the handoff doc end-to-end.
-2. **Open a proposal branch** using the naming convention in the handoff
-   doc (`claude/<lane-slug>-2026-04-27` or Codex equivalent).
-3. **Do the science.** Each handoff doc gives a "suggested approach"
-   section. Multiple paths may be open per lane (e.g., Path A: derive,
-   Path B: structural, Path C: honest downgrade). Pick one.
-4. **Land the work** as a focused PR. The audit lane will detect the
-   note hash drift and reset affected rows to `unaudited`.
-5. **Codex re-audits** under the standard rubric. Critical claims need
-   cross-confirmation by a second independent auditor.
-6. **Outcome:** `audited_clean` → ratifies to `retained`. Other verdict
-   → re-iterate, or accept the narrower claim boundary.
+## Current ledger state (post first pass)
 
-## Scope rules
+After 305 audits applied (up from 164 at the time of the first queue):
 
-- These are **dedicated** science worker lanes, not general autopilot
-  exploration. Stay scoped to the lane's repair target.
-- **Honest downgrade is a valid outcome** for every lane. The audit
-  lane's job is to surface unratified claims; turning a renaming into
-  a support-tier observation is a real win.
-- **Do not expand claim surface** while closing these lanes. Each
-  lane either closes an existing claim or honestly narrows it; none
-  is an opportunity to add new retained-tier claims.
-- **No self-audit.** A worker that produces a lane's proposal cannot
-  also audit it. Per `FRESH_LOOK_REQUIREMENTS.md`, the auditor must
-  be in a different model family or a different human.
+| audit_status | count | delta vs. first-pass snapshot |
+|---|---:|---:|
+| `unaudited` | 1,309 | −141 |
+| `audited_conditional` | 143 | +59 |
+| **`audited_clean`** | **72** | **+27** |
+| **`audited_failed`** | **77** | **+55** |
+| `audited_numerical_match` | 5 | 0 |
+| `audited_decoration` | 3 | 0 |
+| `audited_renaming` | 3 | +1 |
+| `audit_in_progress` | 3 | 0 |
 
-## What this queue does NOT include
+The ratio of `audited_failed` to `audited_clean` rose substantially (was 22/45, now 77/72). This reflects the second-order effect of dep-registration PRs (#91, #94) making chains visible to Codex; many sub-claims individually fail when actually audited.
 
-- The 84 `audited_conditional` rows that are blocked only on
-  unregistered runners or unregistered one-hop dependencies. Most of
-  those are hygiene fixes, not science. They will resolve as the
-  graph dependencies get registered through normal repo flow; no
-  dedicated worker needed.
-- The 22 leaf-level `audited_failed` rows. Those are isolated and
-  can be triaged by individual contributors as they touch the affected
-  notes.
-- The 3 `audited_decoration` rows. Per `ALGEBRAIC_DECORATION_POLICY.md`,
-  these get boxed under their parent claims rather than worked on as
-  separate science problems.
+---
 
-## Re-running this queue
+## Second-pass queue: highest-leverage open work
 
-The queue is regenerated whenever the audit lane completes another
-batch. The current snapshot reflects the audit state at ~10% coverage
-(164 of 1614 claims audited). As more audits land, new high-leverage
-lanes may appear; closed lanes drop off. Refresh by re-running the
-audit pipeline and re-querying the ledger for `audited_failed`,
-`audited_renaming`, `audited_conditional` (high+ criticality), and
-`audited_numerical_match` rows.
+Derived from current ledger by `(descendants × adverse-verdict-weight × criticality)`. Top targets:
+
+### Tier A — substantive failed claims with high reach
+
+| Rank | Claim | Audit | Desc | Notes |
+|---:|---|---|---:|---|
+| 1 | `native_gauge_closure_note` | `audited_failed` | 278 | Lane 2 aggregator re-failed after the hygiene PR. Needs **substantive science work** on the gauge-closure aggregator itself (not just dep registration). |
+| 2 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | `audited_failed` | 121 | Bare α_3/α_EM = 9 dimension-ratio card. Re-audit this lane's chain. |
+| 3 | YT P1/P2/P3 sub-theorem cluster (8 notes at desc=121, `audited_failed`) | `audited_failed` | 121 each | The 27-dep chain registered by #94 surfaced individual sub-theorem failures. Each needs targeted attention. |
+
+### Tier B — decoration cluster (boxing, not science)
+
+| Rank | Claim | Audit | Desc | Action |
+|---:|---|---|---:|---|
+| B1 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | `audited_decoration` | 175 | Box per `ALGEBRAIC_DECORATION_POLICY.md`. |
+| B2 | `retained_cross_lane_consistency_support_note_2026-04-22` | `audited_decoration` | 121 | Same. |
+| B3 | `koide_q_eq_3delta_identity_note_2026-04-21` | `audited_decoration` | 119 | Same. |
+
+These don't need science workers; they need **publication-side hygiene** to roll up under their parent claims and stop appearing as separately-retained rows on `CLAIMS_TABLE.md`.
+
+### Tier C — numerical-match dependencies
+
+| Rank | Claim | Audit | Desc | Notes |
+|---:|---|---|---:|---|
+| C1 | `ckm_down_type_scale_convention_support_note_2026-04-22` | `audited_numerical_match` | 130 | Tuned input dependence; either derive or honest downgrade. |
+| C2 | `bell_inequality_derived_note` | `audited_numerical_match` | 123 | Bell/CHSH support depends on tuned input rather than the axiom. |
+| C3 | `yt_p1_delta_1_bz_computation_note_2026-04-17` | `audited_numerical_match` | 121 | Inside the YT P1 chain unblocked by #94. |
+| C4 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | `audited_numerical_match` | 121 | Charged-lepton Koide approach depends on tuned input. |
+
+---
+
+## What changed since the first queue
+
+**Closed in first pass:** Lanes 1, 3, 5 are closed (2 via Plan B downgrade, 1 via salvage). They no longer appear in this queue.
+
+**Re-opened by audit:** Lane 2 (gauge closure) and Lane 4 (YT UV-to-IR) had their hygiene PRs land but then re-failed under audit. They appear in Tier A of the second-pass queue with substantive science requirements.
+
+**New surfaces:** the Tier B decoration cluster (3 high-reach decorations to box) and the Tier C numerical-match cluster (4 high-reach tuned-input claims).
+
+---
+
+## Recommended dispatch for second pass
+
+1. **Tier A is hard.** `native_gauge_closure_note` re-failed even with deps registered, which suggests the gauge-closure aggregator has a load-bearing step that doesn't close from the cited authorities. This is real science work that may or may not be tractable from an LLM session.
+
+2. **Tier B is easy and high-leverage.** Boxing decoration claims is mechanical and addresses 175+121+119 = ~415 descendants worth of inheritance noise. Could be done as a single "decoration boxing" PR.
+
+3. **Tier C requires per-lane judgment.** Each numerical-match claim has the same shape as the original Lane 4 — either derive (hard) or honest downgrade (cheap). Plan B → Plan A dichotomy applies.
+
+The first pass demonstrated that **honest downgrade is the highest-yield move** when an LLM session attempts derivation. Second-pass workers should default to Plan B framing and only attempt Plan A when the structural argument is genuinely independent of the audit's specific complaint.
+
+---
 
 ## Cross-references
 
-- Audit lane policy: [`README.md`](README.md)
-- Auditor independence rules: [`FRESH_LOOK_REQUIREMENTS.md`](FRESH_LOOK_REQUIREMENTS.md)
-- Decoration handling: [`ALGEBRAIC_DECORATION_POLICY.md`](ALGEBRAIC_DECORATION_POLICY.md)
-- Audit prompt template: [`AUDIT_AGENT_PROMPT_TEMPLATE.md`](AUDIT_AGENT_PROMPT_TEMPLATE.md)
-- Active audit ledger: [`AUDIT_LEDGER.md`](AUDIT_LEDGER.md)
-- Pending audit queue (mechanical): [`AUDIT_QUEUE.md`](AUDIT_QUEUE.md) —
-  this is different from the science worker queue: it lists claims
-  awaiting a fresh-look audit, not science problems surfaced by
-  completed audits.
+- Lane handoff docs from the first pass: `worker_lanes/01_*.md` … `worker_lanes/05_*.md`
+  (preserved as context; kept for re-audit if any of the closed lanes needs re-promotion)
+- Audit lane policy: [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md)
+- Mechanical pipeline: `scripts/run_pipeline.sh`
+- Current rendered ledger: [AUDIT_LEDGER.md](AUDIT_LEDGER.md)
+- Pending audit queue (mechanical): [AUDIT_QUEUE.md](AUDIT_QUEUE.md)
