@@ -1,8 +1,8 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T09:08:58Z
+**Updated:** 2026-04-28T09:12:32Z
 **Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block08-20260428`
-**Current head:** block-08 working checkpoint; see `git log`
+**Current head:** `bb1703c6` plus PR-status bookkeeping; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
@@ -12,7 +12,7 @@
 **Block 05 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/104
 **Block 06 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/105
 **Block 07 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/106
-**Block 08 review PR:** pending packaging
+**Block 08 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/107
 
 ## Current State
 
@@ -74,18 +74,17 @@ new theorem content.
 
 ## Active Route
 
-Block 08 is verified and ready for packaging:
+Block 08 has been packaged:
 
 ```text
-commit: pending
-push: pending
-stacked review PR against block 07: pending
+commit bb1703c6: physics-loop lane3 block08 a1 source bridge
+pushed branch physics-loop/lane3-quark-mass-retention-20260428-block08-20260428
+stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/107
 ```
 
 ## Next Exact Action
 
-Commit/push block 08 and open a stacked review PR against block 07. After
-that, continue Lane 3 only from one of:
+Continue Lane 3 only from one of:
 
 1. typed quark source-domain theorem for A1;
 2. alternate source ratio replacing A1;

@@ -503,6 +503,7 @@ Disposition:
 
 - keep artifact;
 - claim status remains `open`;
+- stacked review PR opened: https://github.com/jonathonreilly/cl3-lattice-framework/pull/107;
 - next exact Lane 3 action requires a typed quark source-domain theorem for
   A1, an alternate source ratio, a P1/readout theorem plus sector phase/scale
   laws, a genuine 3A scale theorem, or a new 3B scalar/readout primitive.
