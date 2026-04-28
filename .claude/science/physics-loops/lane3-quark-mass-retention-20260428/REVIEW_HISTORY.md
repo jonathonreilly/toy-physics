@@ -1,6 +1,6 @@
 # Lane 3 Review History
 
-**Updated:** 2026-04-28T09:08:58Z
+**Updated:** 2026-04-28T09:16:23Z
 
 ## Preflight Review
 
@@ -507,3 +507,60 @@ Disposition:
 - next exact Lane 3 action requires a typed quark source-domain theorem for
   A1, an alternate source ratio, a P1/readout theorem plus sector phase/scale
   laws, a genuine 3A scale theorem, or a new 3B scalar/readout primitive.
+
+## Artifact Review: 3C P1 Positive-Parent Readout No-Go
+
+**Time:** 2026-04-28T09:16:23Z
+
+Artifact reviewed:
+
+- `docs/QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_c3_p1_positive_parent_readout_no_go.py`
+- `logs/2026-04-28-quark-c3-p1-positive-parent-readout-no-go.txt`
+
+Verification:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_quark_c3_p1_positive_parent_readout_no_go.py
+TOTAL: PASS=54, FAIL=0
+
+python3 -m py_compile scripts/frontier_quark_c3_p1_positive_parent_readout_no_go.py
+PASS
+
+PYTHONPATH=scripts python3 scripts/frontier_koide_sqrtm_amplitude_principle.py
+PASS=11 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_c3_circulant_source_law_boundary.py
+TOTAL: PASS=43, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_c3_a1_source_domain_bridge_no_go.py
+TOTAL: PASS=50, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py
+TOTAL: PASS=43, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_koide_circulant_character_bridge.py
+PASS=9 FAIL=0
+```
+
+Review-loop emulation:
+
+1. Claim wording is bounded to an exact current-bank no-go / support boundary.
+   It does not claim retained non-top quark masses.
+2. The runner proves the positive-parent square-root algebra is exact and
+   `C3` covariance is preserved by the square root.
+3. The runner also proves the dictionary can represent arbitrary positive
+   triples once a parent is supplied, so it is not predictive by itself.
+4. The typed-edge inventory lacks both a physical quark positive parent and a
+   readout theorem from square-root spectrum to quark Yukawa amplitudes.
+5. Observed quark masses, fitted Yukawa entries, CKM mass input,
+   charged-lepton parent import, and hidden quark parent/readout assumptions
+   are excluded from the proof.
+
+Disposition:
+
+- keep artifact;
+- claim status remains `open`;
+- next exact Lane 3 action requires a physical quark parent/readout theorem,
+  sector phase/scale law, alternate source/readout route, genuine 3A scale
+  theorem, or new 3B scalar/readout primitive.

@@ -1,8 +1,8 @@
 # Lane 3 Assumptions And Imports
 
-**Updated:** 2026-04-28T09:08:58Z
-**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block08-20260428`
-**Head:** block-08 working checkpoint; see `git log`
+**Updated:** 2026-04-28T09:16:23Z
+**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block09-20260428`
+**Head:** block-09 working checkpoint; see `git log`
 
 This ledger uses the physics-loop schema. It separates retained framework
 inputs, support-only bridges, comparator values, and hidden selectors that
@@ -20,6 +20,7 @@ block retained five-mass closure.
 | Oriented `C3[111]` Ward splitter on `hw=1` | Smallest exact local primitive tested for splitting the `S_3` `E` doublet | exact support/boundary theorem | `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`, `QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md` | yes for the 3C source/readout route | yes only if promoted with a source/readout law | derive a physical source law for `c` and `b/a`, or a readout theorem mapping cyclic Fourier strata to quark Yukawa channels | exact splitter support only; coefficients remain free and mass closure remains open |
 | `C3` Hermitian circulant hierarchy carrier plus A1/P1 | Tests whether inherited circulant hierarchy support can become quark Ward source law | exact support/boundary theorem; A1/P1 remain open primitives | `YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`, `YT_CLASS_6_C3_BREAKING_OPERATOR_NOTE_2026-04-18.md`, `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`, `KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md`, `QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md` | yes for 3C source-law route | yes if claiming quark generation-stratified Ward identities | derive A1 or equivalent from quark Ward source, derive P1/readout for quark Yukawa amplitudes, and derive sector phases/scales | exact carrier support only; without those imports it can fit arbitrary real triples and does not predict quark masses |
 | Koide A1 support scalar `1/2` to quark `C3` source ratio | Tests whether existing A1 support faces already type the quark source ratio `|q_quark|^2/a_quark^2 = 1/2` | exact current-bank no-go / support boundary | `KOIDE_Q_BRIDGE_SINGLE_PRIMITIVE_NOTE_2026-04-22.md`, `KOIDE_A1_CLOSURE_RECOMMENDATION_2026-04-22.md`, `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`, `QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md` | yes for A1 source-law route | yes if claiming A1-derived quark Ward identities | prove a typed source-domain bridge from A1 support scalar to the physical quark Ward source ratio | no existing typed edge; adding it is new theorem content |
+| Positive-parent square-root dictionary to quark P1 readout | Tests whether exact `M -> M^(1/2)` algebra already identifies quark Yukawa amplitudes | exact current-bank no-go / support boundary | `KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md`, `QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md`, `SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md` | yes for P1 readout route | yes if claiming quark `C3` source eigenvalues are physical Yukawa amplitudes | derive a retained positive quark `C3` parent and a physical readout theorem for `eig(M^(1/2))` | exact dictionary only; parent and readout edges remain new theorem content |
 | One-Higgs Yukawa gauge selection | Gives allowed SM Dirac operator skeleton | exact support theorem | `SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md` | yes | yes | combine with new Ward/source theorem | usable boundary; leaves Yukawa matrices free |
 | Down-type GST / NNI relation `|V_us|^2 = m_d/m_s` | Converts CKM `V_us` to `m_d/m_s` | support-only / structural bridge | `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`, `CKM_FROM_MASS_HIERARCHY_NOTE.md` | yes for down route | yes for retained down ratios | theorem route deriving GST on retained framework surface | open load-bearing bridge |
 | `5/6 = C_F - T_F` bridge `|V_cb| = (m_s/m_b)^(5/6)` | Converts CKM `V_cb` to `m_s/m_b` | bounded support | `CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md`, `QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md` | yes for down route | yes for retained down ratios | non-perturbative theorem at lattice scale | open Nature-grade blocker |
@@ -66,4 +67,7 @@ The highest-leverage unresolved imports for this block are:
    species assignment, and amplitude-vs-Yukawa readout open. Block 08 closes
    direct A1 support promotion negatively: existing Koide A1 faces all hit
    `1/2`, but no current typed edge maps that scalar to the quark `C3` Ward
-   source ratio.
+   source ratio. Block 09 closes direct P1 promotion negatively: the
+   positive-parent square-root dictionary is exact support, but the current
+   bank supplies neither a physical quark `C3` parent nor a readout theorem
+   identifying its square-root eigenvalues with quark Yukawa amplitudes.

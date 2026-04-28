@@ -1,6 +1,6 @@
 # Lane 3 Route Portfolio
 
-**Updated:** 2026-04-28T09:08:58Z
+**Updated:** 2026-04-28T09:16:23Z
 
 Scores use the physics-loop dramatic-step rubric: claim-state upgrade,
 import retirement, review-blocker closure, artifactability, novelty, hard
@@ -13,6 +13,7 @@ residual pressure, and overclaim risk.
 | 3C-C3: oriented cycle Ward splitter normal form | exact support/boundary theorem | 2 | 2 | 3 | 3 | low | executed in block 06 |
 | 3C-Circulant: inherited `C3` hierarchy source-law boundary | exact support/boundary theorem | 2 | 2 | 3 | 3 | low | executed in block 07 |
 | 3C-A1-Source: A1 scalar to quark source-domain bridge inventory | exact current-bank no-go | 2 | 3 | 3 | 3 | low | executed in block 08 |
+| 3C-P1-Readout: positive-parent square-root quark readout boundary | exact current-bank no-go | 2 | 3 | 3 | 3 | low | executed in block 09 |
 | 3B-R2: route-2 endpoint readout `beta_E/alpha_E = 21/4` stretch | constructive theorem / exact runner | 3 | 3 | 2 | 3 | medium | next if time remains |
 | 3B-scalar shortlist provenance tightening | import-retirement audit / no-go | 1 | 2 | 3 | 1 | low | only after stretch |
 | 3A local `5/6` scale-selection boundary | exact negative boundary / theorem target isolation | 2 | 3 | 3 | 3 | low | executed in block 04 |
@@ -338,3 +339,39 @@ Honest target status:
 This is an exact current-bank no-go / support boundary. It sharpens the 3C A1
 residual to a typed quark source-domain theorem, alternate source ratio, or a
 P1/readout route that makes A1 unnecessary.
+
+## Completed Route 10: 3C-P1-Readout
+
+Question:
+
+```text
+Does the repo's exact positive-parent square-root dictionary already supply a
+retained quark P1 readout theorem for eig(M_quark^(1/2))?
+```
+
+Minimal premise set `A_min`:
+
+1. retained `hw=1` generation triplet;
+2. exact induced `C3[111]` cycle and Hermitian circulant algebra;
+3. exact finite-dimensional positive square-root theorem;
+4. inherited Koide P1 square-root dictionary as support;
+5. one-Higgs Yukawa gauge selection as a boundary;
+6. no observed quark masses, fitted Yukawa entries, CKM mass inputs, charged
+   lepton positive-parent import, or hidden quark parent/readout assumption.
+
+Result:
+
+```text
+If a positive C3 parent M is supplied, M^(1/2) is positive, C3-covariant, and
+has square-root eigenvalues. But for every positive amplitude triple there is
+such a parent, so the dictionary is representational rather than predictive.
+The current typed-edge inventory lacks both a physical quark positive parent
+and a readout theorem identifying the square-root spectrum with quark Yukawa
+amplitudes. Runner TOTAL PASS=54 FAIL=0.
+```
+
+Honest target status:
+
+This is an exact current-bank no-go / support boundary. It sharpens P1 to a
+physical quark parent theorem plus readout theorem, or an alternate readout
+route that bypasses P1.

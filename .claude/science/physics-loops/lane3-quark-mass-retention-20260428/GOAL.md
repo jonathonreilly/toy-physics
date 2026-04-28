@@ -1,8 +1,8 @@
 # Lane 3 Quark Mass Retention Physics Loop
 
 **Loop slug:** `lane3-quark-mass-retention-20260428`
-**Science block:** `08`
-**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block08-20260428`
+**Science block:** `09`
+**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block09-20260428`
 **Target:** best-honest-status; retained closure only if fully justified
 **Started:** 2026-04-28T07:27:25Z
 **Hard deadline:** 2026-04-28T11:27:25Z
@@ -41,18 +41,18 @@ the branch supplies decisive theorem/support artifacts and review-loop
 backpressure. Bounded companion matches, CKM closure, or species-uniform reuse
 of the top Ward identity are not enough.
 
-## Block 08 Focus
+## Block 09 Focus
 
-Blocks 01-07 packaged exact boundaries/support and opened review PRs #100,
-#101, #102, #103, #104, #105, and #106. Block 08 is a stacked continuation
-from block 07. Its active hard residual is whether the repo's existing Koide
-A1 support scalar can be typed into the quark `C3` source ratio:
+Blocks 01-08 packaged exact boundaries/support and opened review PRs #100,
+#101, #102, #103, #104, #105, #106, and #107. Block 09 is a stacked
+continuation from block 08. Its active hard residual is whether the repo's
+positive-parent square-root dictionary supplies the quark P1 readout theorem:
 
 ```text
-Koide A1 support scalar 1/2
-=> quark C3 source ratio |q_quark|^2/a_quark^2 = 1/2?
+positive C3 parent M
+=> eig(M^(1/2)) are physical quark Yukawa amplitudes?
 ```
 
-The target is an honest source-domain inventory/no-go: scalar equality alone
-is not a quark source theorem unless a typed bridge identifies the physical
-Lane 3 source domain.
+The target is an honest parent/readout inventory: square-root algebra is exact
+support, but it is not quark mass retention without a physical quark parent
+and a retained readout theorem.

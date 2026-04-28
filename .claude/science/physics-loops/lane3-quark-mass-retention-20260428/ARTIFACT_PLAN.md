@@ -1,6 +1,6 @@
 # Lane 3 Artifact Plan
 
-**Updated:** 2026-04-28T09:08:58Z
+**Updated:** 2026-04-28T09:16:23Z
 
 ## Block 01 Artifact Set
 
@@ -224,6 +224,35 @@
    - commit coherent block artifacts;
    - push branch to `origin`;
    - create a stacked PR against block 07, or write `PR_BACKLOG.md`.
+
+## Block 09 Artifact Set
+
+1. Continue from block 08 on stacked branch
+   `physics-loop/lane3-quark-mass-retention-20260428-block09-20260428`.
+2. Execute the 3C P1 positive-parent/readout boundary:
+   - note:
+     `docs/QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md`;
+   - runner:
+     `scripts/frontier_quark_c3_p1_positive_parent_readout_no_go.py`;
+   - log:
+     `logs/2026-04-28-quark-c3-p1-positive-parent-readout-no-go.txt`.
+3. Run focused checks:
+   - `PYTHONPATH=scripts python3 scripts/frontier_quark_c3_p1_positive_parent_readout_no_go.py`;
+   - `python3 -m py_compile scripts/frontier_quark_c3_p1_positive_parent_readout_no_go.py`;
+   - inherited Koide square-root amplitude and circulant character runners;
+   - inherited block07/block08 source-boundary runners;
+   - inherited one-Higgs gauge-selection runner.
+4. Emulate review-loop:
+   - classify the result as exact current-bank no-go / support boundary;
+   - verify square-root algebra is not treated as a physical quark parent or
+     readout theorem;
+   - verify no observed quark masses, fitted Yukawa entries, CKM mass inputs,
+     charged-lepton parent imports, or hidden parent/readout assumptions enter
+     as proof inputs.
+5. Package:
+   - commit coherent block artifacts;
+   - push branch to `origin`;
+   - create a stacked PR against block 08, or write `PR_BACKLOG.md`.
 
 ## Non-Goals
 
