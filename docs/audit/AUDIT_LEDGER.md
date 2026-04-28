@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T12:21:50.660349+00:00
+**Generated:** 2026-04-28T12:23:24.351635+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 3 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
-| support | 104 |
+| support | 103 |
 | open | 15 |
 | unknown | 703 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 382 |
+| ~~audited_conditional~~ | 383 |
 | ~~audited_failed~~ | 148 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 79 |
-| `audited_conditional` | 150 |
+| `audited_conditional` | 151 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1314 |
+| `unaudited` | 1313 |
 
 | criticality | count |
 |---|---:|
@@ -271,6 +271,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `retardation_discriminator_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `retarded_field_compact_refinement_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `s3_taste_cube_decomposition_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3726,6 +3727,24 @@ Claim boundary until fixed: safe to claim finite-block log|det| curvature and th
 - **load-bearing step:** Since V ~= A_1 + E for the natural S_3 action on the hw=1 triplet, every S_3-invariant Hermitian operator has the form M = alpha I_3 + beta P_(A_1), hence spectrum {alpha, alpha, alpha + beta}.  _(class `A`)_
 - **chain closes:** True — The source note states a conditional representation-theory theorem on the hw=1 triplet, and the runner constructs the S_3 action, invariant algebra, two-value spectrum, and Z_2 dimension jump directly. The claim does not require a phenomenological mass identification beyond its explicit carrier boundary.
 - **rationale:** The retained content is an exact, bounded no-go theorem: on the stated hw=1 S_3 permutation carrier, Schur decomposition and direct invariant-algebra computation force only a singlet projector plus identity and therefore at most two spectral values. The live runner reports PASS=13 FAIL=0, including the S_3 invariant dimension, projector form, spectrum checks, and residual Z_2 dimension 5. Residual risk is only misuse downstream: this audit does not ratify that hw=1 is the physical generation carrier or any numerical flavor fit.
+- **auditor confidence:** high
+
+### `s3_taste_cube_decomposition_note`
+
+- **Note:** [`S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`](../../docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-28-s3_taste_cube_decomposition_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The exact S3 character calculation on the full taste cube gives C^8 ~= 4 A_1 + 2 E, with no A_2 component.  _(class `C`)_
+- **chain closes:** False — The S3 axis-permutation representation calculation on C^8 closes exactly, and the live runner reports PASS=57 FAIL=0. The note explicitly limits the result to canonical carrier-content support and does not close any downstream flavor or generation claim.
+- **rationale:** Issue: the full-cube S3 decomposition is exact, but the note itself says it does not prove any flavor claim and only fixes the carrier content later tools may use.
+Why this blocks: downstream proposed-retained/promoted claims cannot treat this row as a physical generation/flavor derivation; it supplies representation support, not an observable bridge.
+Repair target: add and audit the missing theorem that maps the S3 carrier decomposition to the claimed physical flavor or generation observable, with a runner checking that bridge.
+Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under axis permutations on the taste cube, not any standalone flavor, CKM, or generation closure.
+- **open / conditional deps cited:**
+  - `downstream_flavor_generation_claim_not_closed_by_carrier_decomposition`
+  - `physical_observable_mapping_from_s3_carrier_content_missing`
 - **auditor confidence:** high
 
 ### `second_grown_family_complex_note`

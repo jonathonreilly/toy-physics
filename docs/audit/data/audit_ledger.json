@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-28T12:21:50.455548+00:00",
-  "generated_at": "2026-04-28T12:21:48.791323+00:00",
-  "invalidation_run_at": "2026-04-28T12:21:50.407091+00:00",
+  "effective_status_computed_at": "2026-04-28T12:23:24.161066+00:00",
+  "generated_at": "2026-04-28T12:23:22.533033+00:00",
+  "invalidation_run_at": "2026-04-28T12:23:24.112590+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-28T12:21:50.311613+00:00",
+  "load_bearing_computed_at": "2026-04-28T12:23:24.014188+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -67207,14 +67207,21 @@
       "verdict_rationale": "The retained content is an exact, bounded no-go theorem: on the stated hw=1 S_3 permutation carrier, Schur decomposition and direct invariant-algebra computation force only a singlet projector plus identity and therefore at most two spectral values. The live runner reports PASS=13 FAIL=0, including the S_3 invariant dimension, projector form, spectrum checks, and residual Z_2 dimension 5. Residual risk is only misuse downstream: this audit does not ratify that hw=1 is the physical generation carrier or any numerical flavor fit."
     },
     "s3_taste_cube_decomposition_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-28",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 16.129,
+        "transitive_descendants": 279
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop:fresh-2026-04-28-s3_taste_cube_decomposition_note",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The S3 axis-permutation representation calculation on C^8 closes exactly, and the live runner reports PASS=57 FAIL=0. The note explicitly limits the result to canonical carrier-content support and does not close any downstream flavor or generation claim.",
       "claim_id": "s3_taste_cube_decomposition_note",
       "criticality": "critical",
       "current_status": "support",
@@ -67222,30 +67229,33 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 8,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 16.129,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The exact S3 character calculation on the full taste cube gives C^8 ~= 4 A_1 + 2 E, with no A_2 component.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "c52d97c3fb5ae3f42dc502f0f260ac510df11a577e782a54bf5a1f03bd08ba10",
       "note_path": "docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "downstream_flavor_generation_claim_not_closed_by_carrier_decomposition",
+        "physical_observable_mapping_from_s3_carrier_content_missing"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 57,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 57
       },
       "runner_path": "scripts/frontier_s3_action_taste_cube_decomposition.py",
       "title": "S_3 Taste-Cube Decomposition Note",
       "transitive_descendants": 279,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the full-cube S3 decomposition is exact, but the note itself says it does not prove any flavor claim and only fixes the carrier content later tools may use.\nWhy this blocks: downstream proposed-retained/promoted claims cannot treat this row as a physical generation/flavor derivation; it supplies representation support, not an observable bridge.\nRepair target: add and audit the missing theorem that maps the S3 carrier decomposition to the claimed physical flavor or generation observable, with a runner checking that bridge.\nClaim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under axis permutations on the taste cube, not any standalone flavor, CKM, or generation closure."
     },
     "s3_time_bilinear_tensor_action_note": {
       "audit_date": null,
@@ -76055,7 +76065,7 @@
       ],
       "direct_in_degree": 25,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:generation_axiom_boundary_note",
+      "effective_status_reason": "inherited_from:s3_taste_cube_decomposition_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 24.624,
