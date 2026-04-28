@@ -1,8 +1,7 @@
-# Emergent Lorentz Invariance from the Cubic Z³ Lattice
+# Emergent Lorentz Invariance from the Cubic Z³ Lattice (Conditional)
 
-**Date:** 2026-04-15
-**Status:** proposed_retained exact structural theorem with proposed_retained hierarchy-scale
-interpretation; experimental comparison is companion context
+**Date:** 2026-04-15 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded conditional structural-dispersion theorem on the cubic Z³ lattice — IF exact CPT, exact/tree-level parity protection against odd-dimension LV, and the hierarchy-scale identification `a ~ 1/M_Planck` are supplied as bridge premises, THEN the registered structural-dispersion / cubic-harmonic results imply Lorentz invariance to the reported precision. The IF-conditions are not registered as audit-clean dependencies. Not a tier-ratifiable Lorentz-invariance theorem on its own.
 **Script:** `scripts/frontier_emergent_lorentz_invariance.py`
 
 ## Theorem
@@ -183,3 +182,43 @@ python3 scripts/frontier_emergent_lorentz_invariance.py
 # Exit code: 0
 # PASS=37  FAIL=0
 ```
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, high criticality, 122 transitive
+descendants):
+
+> Issue: the source note's structural dispersion and cubic-harmonic
+> checks are reproduced by the registered runner, but the retained
+> conclusion that Lorentz invariance holds to all accessible
+> precision depends on unregistered bridge premises: exact CPT,
+> exact/tree-level parity protection against odd-dimension LV, and
+> the hierarchy-scale identification `a ~ 1/M_Planck`. Why this
+> blocks: without ledger one-hop dependencies and a runner that
+> constructs or verifies those bridges, a hostile auditor cannot
+> distinguish a theorem from a calculation performed on an assumed
+> symmetry/scale surface.
+
+The Status line has been narrowed to make the bridge premises
+explicit IF-conditions rather than retained inputs.
+
+## What this note does NOT claim
+
+- An unconditional theorem of Lorentz invariance from the lattice
+  alone.
+- Audit-clean upstream registration of CPT exactness, tree-level
+  parity protection, or the `a ~ 1/M_Planck` identification.
+- That experimental-comparison precision is a derived consequence
+  rather than a calculation on the assumed symmetry/scale surface.
+
+## What would close this lane (Path A future work)
+
+Promoting from bounded conditional to retained would require:
+
+1. Audit-clean dependency notes for exact CPT.
+2. Audit-clean dependency notes for exact / tree-level parity
+   protection against odd-dimension Lorentz-violating operators.
+3. Audit-clean dependency notes for the hierarchy-scale
+   identification `a ~ 1/M_Planck`.
+4. A runner that constructs or verifies those bridges rather than
+   evaluating the assumed surface.
