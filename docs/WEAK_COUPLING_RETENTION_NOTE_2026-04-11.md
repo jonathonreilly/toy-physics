@@ -1,8 +1,8 @@
 # Weak-Coupling Retention Note
 
-**Date:** 2026-04-11  
-**Script:** `frontier_weak_coupling_retained.py`  
-**Status:** proposed_retained sign-sensitive regime, narrowly and explicitly
+**Date:** 2026-04-11 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Script:** `frontier_weak_coupling_retained.py`
+**Status:** bounded conditional sign-sensitive weak-coupling regime on the selected finite audit surface — the runner verifies shell-ordering 60/60 and shell margin 60/60, but the registered runner path is wrong, the secondary gap count is live-stale at 54/60, and the note's broader inference (theorem for admissible irregular bipartite graphs, coordinate-force closure, stable secondary spectral-gap row) is not closed by the current packet.
 
 ## Question
 
@@ -151,3 +151,38 @@ Use this result when the scientific claim is specifically about:
 
 Do **not** use it to replace the exact-force cubic card or to overstate the
 status of the broader irregular directional-observable blocker.
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, medium criticality, 16 transitive
+descendants):
+
+> Issue: the finite runner verifies shell ordered 60/60, shell margin
+> >=10 on 60/60, and norm conservation 60/60, but the note promotes
+> this selected audit surface to a retained weak-coupling sign-
+> sensitive regime while the registered runner path is wrong and the
+> secondary gap count is live-stale at 54/60. Why this blocks: a
+> hostile auditor can accept the finite shell-margin table but cannot
+> infer a theorem for admissible irregular bipartite graphs, a
+> coordinate-force closure, or a stable secondary spectral-gap row
+> from the current packet.
+
+## What this note does NOT claim
+
+- A theorem for admissible irregular bipartite graphs.
+- A coordinate-force closure.
+- A stable secondary spectral-gap row (current count is 54/60,
+  live-stale).
+- A correctly registered runner path; the registered path is wrong.
+
+## What would close this lane (Path A future work)
+
+Promoting from bounded conditional to retained would require:
+
+1. Fixing the registered runner path.
+2. Adding explicit hard PASS thresholds for shell-ordering, shell
+   margin, secondary spectral-gap stability, and norm conservation.
+3. Refreshing the secondary gap count to 60/60 (currently 54/60).
+4. Either narrowing the claim to the finite shell-margin diagnostic
+   or registering separate audit-clean theorems for the broader
+   inferences.
