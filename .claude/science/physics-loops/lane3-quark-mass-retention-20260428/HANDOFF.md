@@ -1,15 +1,15 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T08:35:11Z
+**Updated:** 2026-04-28T08:38:29Z
 **Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block05-20260428`
-**Current head:** block-05 working checkpoint; see `git log`
+**Current head:** `18417455` plus PR-status bookkeeping; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
 **Block 02 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/101
 **Block 03 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/102
 **Block 04 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/103
-**Block 05 review PR:** pending package
+**Block 05 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/104
 
 ## Current State
 
@@ -69,17 +69,17 @@ primitive.
 
 ## Active Route
 
-Block 05 is ready to package:
+Block 05 has been packaged:
 
 ```text
-branch physics-loop/lane3-quark-mass-retention-20260428-block05-20260428
-base physics-loop/lane3-quark-mass-retention-20260428-block04-20260428
-PR body .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK05.md
+commit 18417455: physics-loop lane3 block05 ward degeneracy
+pushed branch physics-loop/lane3-quark-mass-retention-20260428-block05-20260428
+stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/104
 ```
 
 ## Next Exact Action
 
-Package block 05, then continue Lane 3 only from one of:
+Continue Lane 3 only from one of:
 
 1. a named 3C source/readout/symmetry-breaking primitive that orients or
    splits the retained generation triplet;
