@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-28T12:04:48.443362+00:00",
-  "generated_at": "2026-04-28T12:04:46.641283+00:00",
-  "invalidation_run_at": "2026-04-28T12:04:48.380329+00:00",
+  "effective_status_computed_at": "2026-04-28T12:07:26.052374+00:00",
+  "generated_at": "2026-04-28T12:07:24.366378+00:00",
+  "invalidation_run_at": "2026-04-28T12:07:26.001979+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-28T12:04:48.250834+00:00",
+  "load_bearing_computed_at": "2026-04-28T12:07:25.905322+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -31838,14 +31838,21 @@
       "verdict_rationale": null
     },
     "gauge_vacuum_plaquette_constant_lift_obstruction_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-28",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 15.15,
+        "transitive_descendants": 283
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop:fresh-2026-04-28-gauge_vacuum_plaquette_constant_lift_obstruction_note",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The exact obstruction to the constant-lift ansatz closes, and the live runner reports THEOREM PASS=6 SUPPORT=1 FAIL=0. It does not close the remaining beta-dependent full-vacuum plaquette reduction law, which the note explicitly leaves as the open target.",
       "claim_id": "gauge_vacuum_plaquette_constant_lift_obstruction_note",
       "criticality": "critical",
       "current_status": "unknown",
@@ -31853,30 +31860,32 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 6,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 15.15,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "This obstruction does not rule out analytic plaquette closure entirely. It rules out only the simplest constant-lift ansatz.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "4d8892d0a9cfa4c2415459907e3e5660252fa502f0d600caf09617e1a12cd074",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "beta_dependent_full_vacuum_plaquette_reduction_law_missing"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 6,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py",
       "title": "Gauge-Vacuum Plaquette Constant-Lift Obstruction",
       "transitive_descendants": 283,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note proves an exact no-go only for the constant-lift ansatz P(beta)=P_1plaq(Gamma beta); it explicitly leaves the nontrivial beta-dependent reduction law and its beta=6 continuation open.\nWhy this blocks: downstream plaquette or alpha_s claims cannot cite this row as positive analytic plaquette closure; it only removes one false closure route.\nRepair target: derive and audit the beta-dependent full-vacuum reduction law beta_eff(beta), including its nonperturbative continuation/evaluation at beta=6 with a runner that computes that law.\nClaim boundary until fixed: safe to claim the constant-lift obstruction Gamma_cand != 1 from the strong-coupling slope, not full plaquette observable closure."
     },
     "gauge_vacuum_plaquette_distinct_shell_theorem_note": {
       "audit_date": null,
