@@ -16,8 +16,9 @@ Checks (all hard rules from FRESH_LOOK_REQUIREMENTS.md and README.md):
        {proposed_retained, proposed_promoted} is illegal.
      - effective_status = retained requires audit_status = audited_clean
        AND every dep's effective_status = retained.
-     - independence = 'weak' is forbidden as the only audit for a critical
-       claim (criticality computed from transitive descendants only).
+     - independence = 'weak' cannot land audited_clean. Critical clean
+       confirmations must be cross-family, strong/external, or same-family
+       fresh_context from a distinct restricted-input session.
      - note_hash on row must equal current note hash on disk.
 
   3. Graph health:
@@ -59,7 +60,7 @@ ALLOWED_CURRENT_STATUSES = {
     "unknown",
 }
 RATIFIED_BY_AUDIT_ONLY = {"retained", "promoted"}
-ALLOWED_INDEPENDENCE = {"weak", "cross_family", "strong", "external", None}
+ALLOWED_INDEPENDENCE = {"weak", "fresh_context", "cross_family", "strong", "external", None}
 
 # After relabel, the raw Status: text on a source note must not contain
 # the bare ratified-tier words; only the audit lane may grant them.
@@ -162,6 +163,23 @@ def main() -> int:
                         f"{cid}: critical claim requires cross_confirmation.status='confirmed'; "
                         f"got {xc.get('status')!r}"
                     )
+                else:
+                    first = xc.get("first_audit") or {}
+                    second = xc.get("second_audit") or {}
+                    if first.get("auditor") and first.get("auditor") == second.get("auditor"):
+                        errors.append(
+                            f"{cid}: critical cross-confirmation reused auditor identity/session "
+                            f"{second.get('auditor')!r}"
+                        )
+                    if (
+                        first.get("auditor_family")
+                        and first.get("auditor_family") == second.get("auditor_family")
+                        and second.get("independence") != "fresh_context"
+                    ):
+                        errors.append(
+                            f"{cid}: same-family critical cross-confirmation requires "
+                            "second_audit.independence='fresh_context'"
+                        )
 
         # Criticality bump after audit (warn that re-audit may be needed).
         snap = row.get("audit_state_snapshot")
