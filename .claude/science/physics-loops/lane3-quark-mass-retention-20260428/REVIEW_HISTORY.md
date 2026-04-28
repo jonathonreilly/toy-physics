@@ -389,6 +389,7 @@ Disposition:
 
 - keep artifact;
 - claim status remains `open`;
+- stacked review PR opened: https://github.com/jonathonreilly/cl3-lattice-framework/pull/105;
 - next 3C progress requires a physical source law for `c` and the remaining
   Ward coefficients, or a readout theorem mapping the cyclic Fourier strata
   to quark Yukawa channels.

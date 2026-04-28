@@ -1,8 +1,8 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T08:46:53Z
+**Updated:** 2026-04-28T08:52:18Z
 **Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block06-20260428`
-**Current head:** block-06 working checkpoint; see `git log`
+**Current head:** `3aaeb004` plus PR-status bookkeeping; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
@@ -10,7 +10,7 @@
 **Block 03 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/102
 **Block 04 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/103
 **Block 05 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/104
-**Block 06 review PR:** pending
+**Block 06 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/105
 
 ## Current State
 
@@ -77,17 +77,17 @@ generation basis is scalar.
 
 ## Active Route
 
-Block 06 is verified and ready to package:
+Block 06 has been packaged:
 
 ```text
-branch physics-loop/lane3-quark-mass-retention-20260428-block06-20260428
-base physics-loop/lane3-quark-mass-retention-20260428-block05-20260428
-PR pending
+commit 3aaeb004: physics-loop lane3 block06 c3 splitter
+pushed branch physics-loop/lane3-quark-mass-retention-20260428-block06-20260428
+stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/105
 ```
 
 ## Next Exact Action
 
-Package block 06, then continue Lane 3 only from one of:
+Continue Lane 3 only from one of:
 
 1. a physical source law for the oriented `C3` coefficient `c` and remaining
    Ward coefficients, or a readout theorem mapping cyclic Fourier strata to
