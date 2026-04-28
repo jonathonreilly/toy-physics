@@ -166,6 +166,7 @@ Disposition:
 
 - keep artifact;
 - claim status remains `open`;
+- stacked review PR opened: https://github.com/jonathonreilly/cl3-lattice-framework/pull/101;
 - next exact Lane 3 target is a typed source-domain theorem deriving
   `gamma_T(center)/gamma_E(center) = -R_conn`, or an orthogonal 3A down-type
   local theorem target if the next fan-out route shifts away from 3B.

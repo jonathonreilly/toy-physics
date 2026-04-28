@@ -1,11 +1,12 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T07:59:31Z
+**Updated:** 2026-04-28T08:02:53Z
 **Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block02-20260428`
-**Current head:** block-02 working checkpoint; see `git log`
+**Current head:** latest pushed branch head; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
+**Block 02 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/101
 
 ## Current State
 
@@ -65,17 +66,19 @@ retained up-type scalar-law derivation.
 Stable checkpoint packaging:
 
 ```text
-Block 02 needs commit, push, and a stacked PR against block 01.
+Block 02 artifacts were committed, pushed, and opened for stacked review.
 ```
+
+Output:
+
+- commit `c019815d`: `physics-loop lane3 block02 rconn bridge`;
+- pushed branch `physics-loop/lane3-quark-mass-retention-20260428-block02-20260428`;
+- stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/101,
+  based on block 01.
 
 ## Next Exact Action
 
-Commit block-02 artifacts, force-add the ignored log, push
-`physics-loop/lane3-quark-mass-retention-20260428-block02-20260428`, and open
-a stacked PR based on
-`physics-loop/lane3-quark-mass-retention-block01-20260428`.
-
-After packaging, continue Lane 3 from one of:
+Continue Lane 3 from one of:
 
 1. typed source-domain theorem for
    `gamma_T(center)/gamma_E(center) = -R_conn`;
