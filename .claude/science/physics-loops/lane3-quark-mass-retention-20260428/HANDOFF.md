@@ -1,8 +1,8 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T09:04:37Z
-**Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block07-20260428`
-**Current head:** `b127b337` plus PR-status bookkeeping; see `git log`
+**Updated:** 2026-04-28T09:08:58Z
+**Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block08-20260428`
+**Current head:** block-08 working checkpoint; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
@@ -12,24 +12,24 @@
 **Block 05 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/104
 **Block 06 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/105
 **Block 07 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/106
+**Block 08 review PR:** pending packaging
 
 ## Current State
 
-Blocks 01 through 06 are packaged and PR'd. Block 07 is a stacked
-continuation from block 06. It attacks the 3C source-law residual exposed by
-the oriented `C3` Ward splitter:
+Blocks 01 through 07 are packaged and PR'd. Block 08 is a stacked
+continuation from block 07. It attacks the A1 half of the 3C source-law
+residual:
 
 ```text
-Can the inherited C3 circulant hierarchy carrier plus A1/P1 support be
-promoted into retained quark generation-stratified Ward identities?
+Does existing Koide A1 support scalar 1/2 already type the physical quark C3
+Ward source ratio |q_quark|^2/a_quark^2 = 1/2?
 ```
 
-The answer from this checkpoint is negative for direct promotion and positive
-only as support. The exact `C3` circulant family is a real Fourier-basis
-hierarchy carrier, but without A1/P1 or an equivalent quark source/readout
-theorem it can fit any real generation spectrum. With A1/P1 it gives a
-Koide-style amplitude relation, but phase, scale, species assignment, and
-amplitude-vs-Yukawa readout remain open.
+The answer from this checkpoint is an exact current-bank no-go. A1 algebra is
+exact on the `C3` carrier, and existing Koide support faces all hit `1/2`.
+But the current typed-edge inventory has no path from those support faces to
+the physical quark Ward source ratio. Adding that edge would create the path,
+so it is new theorem content rather than latent support.
 
 ## Lock And Supervisor Note
 
@@ -41,65 +41,65 @@ with permission denied at `/Users/jonreilly`. This run uses the local lock:
 ```
 
 plus the active supervisor flock under this loop pack. The local lock was
-refreshed during block 07 to expire at `2026-04-28T14:00:43Z`, after the loop
+refreshed during block 08 to expire at `2026-04-28T14:08:58Z`, after the loop
 deadline.
 
 ## Completed In This Checkpoint
 
-Created and verified the 3C inherited `C3` circulant source-law boundary:
+Created and verified the 3C A1 source-domain bridge no-go:
 
-- `docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md`
-- `scripts/frontier_quark_c3_circulant_source_law_boundary.py`
-- `logs/2026-04-28-quark-c3-circulant-source-law-boundary.txt`
+- `docs/QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_c3_a1_source_domain_bridge_no_go.py`
+- `logs/2026-04-28-quark-c3-a1-source-domain-bridge-no-go.txt`
 
 Checks:
 
 ```text
-3C-Circulant runner: TOTAL PASS=43 FAIL=0
+3C-A1-Source runner: TOTAL PASS=50 FAIL=0
 py_compile: PASS
-Inherited YT generation hierarchy runner: RESULT PASS=51 FAIL=0
-Inherited YT class-6 C3 breaking runner: RESULT PASS=43 FAIL=0
+Inherited Koide Q single-primitive runner: PASSED=10/10
+Inherited Koide A1 Lie-theoretic triple match runner: PASSED=10/10
 Inherited Koide circulant character bridge: PASS=9 FAIL=0
-Inherited Koide square-root amplitude principle: PASS=11 FAIL=0
+Inherited block-07 C3 circulant boundary runner: TOTAL PASS=43 FAIL=0
+Inherited one-Higgs gauge-selection runner: TOTAL PASS=43 FAIL=0
 ```
 
 Claim movement:
 
 ```text
-The C3 Hermitian circulant family H(a,q) = aI + qC + conjugate(q)C^2 is a
-valid Fourier-basis hierarchy carrier. Without A1/P1 or an equivalent
-source/readout theorem it is three-real-dimensional and can fit any real
-generation spectrum. With A1/P1 it supplies Q=2/3 for an amplitude triple but
-still leaves scale, phase, species assignment, and quark Yukawa readout open.
+Existing A1 support faces do not directly promote to quark C3 source law.
+The missing typed bridge from scalar 1/2 to |q_quark|^2/a_quark^2 = 1/2 is
+new theorem content.
 ```
 
 ## Active Route
 
-Block 07 has been packaged:
+Block 08 is verified and ready for packaging:
 
 ```text
-commit b127b337: physics-loop lane3 block07 c3 source boundary
-pushed branch physics-loop/lane3-quark-mass-retention-20260428-block07-20260428
-stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/106
+commit: pending
+push: pending
+stacked review PR against block 07: pending
 ```
 
 ## Next Exact Action
 
-Continue Lane 3 only from one of:
+Commit/push block 08 and open a stacked review PR against block 07. After
+that, continue Lane 3 only from one of:
 
-1. A1 or an equivalent quark Ward source ratio for the `C3` carrier;
-2. P1-style positive parent/readout theorem for quark Yukawa amplitudes;
-3. sector-specific phases and relative scales for up/down quarks;
+1. typed quark source-domain theorem for A1;
+2. alternate source ratio replacing A1;
+3. P1-style positive parent/readout theorem plus sector phase and scale laws;
 4. genuine 3A non-perturbative `5/6` exponentiation plus scale selection or
    RG-covariant transport;
 5. new 3B source-domain theorem or alternate scalar/readout primitive.
 
-Do not promote inherited `C3` circulant support, A1/P1 support, oriented `C3`
-normal form, CKM closure, bounded down-type support, or Route-2 numeric
-coincidences into retained non-top quark masses without the missing theorem.
+Do not promote scalar equality `1/2`, inherited `C3` circulant support,
+or charged-lepton A1 support into retained non-top quark masses without the
+missing theorem.
 
 ## Stop Reason
 
-No stop requested. Lane 3 remains open; block 07 is exact support/boundary for
-the 3C source-law theorem target without claiming retained non-top quark
-masses.
+No stop requested. Lane 3 remains open; block 08 is exact current-bank no-go /
+support boundary for the A1 source-domain theorem target without claiming
+retained non-top quark masses.

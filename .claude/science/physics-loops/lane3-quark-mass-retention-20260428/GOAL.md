@@ -1,8 +1,8 @@
 # Lane 3 Quark Mass Retention Physics Loop
 
 **Loop slug:** `lane3-quark-mass-retention-20260428`
-**Science block:** `07`
-**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block07-20260428`
+**Science block:** `08`
+**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block08-20260428`
 **Target:** best-honest-status; retained closure only if fully justified
 **Started:** 2026-04-28T07:27:25Z
 **Hard deadline:** 2026-04-28T11:27:25Z
@@ -41,19 +41,18 @@ the branch supplies decisive theorem/support artifacts and review-loop
 backpressure. Bounded companion matches, CKM closure, or species-uniform reuse
 of the top Ward identity are not enough.
 
-## Block 07 Focus
+## Block 08 Focus
 
-Blocks 01-06 packaged exact boundaries/support and opened review PRs #100,
-#101, #102, #103, #104, and #105. Block 07 is a stacked continuation from
-block 06. Its active hard residual is whether the inherited `C3` circulant
-generation-hierarchy mechanism can be promoted into a retained quark Ward
-source law:
+Blocks 01-07 packaged exact boundaries/support and opened review PRs #100,
+#101, #102, #103, #104, #105, and #106. Block 08 is a stacked continuation
+from block 07. Its active hard residual is whether the repo's existing Koide
+A1 support scalar can be typed into the quark `C3` source ratio:
 
 ```text
-C3 Hermitian circulant carrier + A1/P1 support
-=> retained generation-stratified quark Yukawa Ward identities?
+Koide A1 support scalar 1/2
+=> quark C3 source ratio |q_quark|^2/a_quark^2 = 1/2?
 ```
 
-The target is an honest source-law boundary: keep A1/P1, species phases,
-relative scales, and amplitude-vs-Yukawa readout classified as open theorem
-content unless derived from retained Lane 3 primitives.
+The target is an honest source-domain inventory/no-go: scalar equality alone
+is not a quark source theorem unless a typed bridge identifies the physical
+Lane 3 source domain.

@@ -1,6 +1,6 @@
 # Lane 3 Route Portfolio
 
-**Updated:** 2026-04-28T09:00:43Z
+**Updated:** 2026-04-28T09:08:58Z
 
 Scores use the physics-loop dramatic-step rubric: claim-state upgrade,
 import retirement, review-blocker closure, artifactability, novelty, hard
@@ -12,6 +12,7 @@ residual pressure, and overclaim risk.
 | 3C-S3: generation-equivariant Ward degeneracy boundary | exact no-go / representation theorem | 2 | 3 | 3 | 3 | low | executed in block 05 |
 | 3C-C3: oriented cycle Ward splitter normal form | exact support/boundary theorem | 2 | 2 | 3 | 3 | low | executed in block 06 |
 | 3C-Circulant: inherited `C3` hierarchy source-law boundary | exact support/boundary theorem | 2 | 2 | 3 | 3 | low | executed in block 07 |
+| 3C-A1-Source: A1 scalar to quark source-domain bridge inventory | exact current-bank no-go | 2 | 3 | 3 | 3 | low | executed in block 08 |
 | 3B-R2: route-2 endpoint readout `beta_E/alpha_E = 21/4` stretch | constructive theorem / exact runner | 3 | 3 | 2 | 3 | medium | next if time remains |
 | 3B-scalar shortlist provenance tightening | import-retirement audit / no-go | 1 | 2 | 3 | 1 | low | only after stretch |
 | 3A local `5/6` scale-selection boundary | exact negative boundary / theorem target isolation | 2 | 3 | 3 | 3 | low | executed in block 04 |
@@ -299,3 +300,41 @@ Honest target status:
 This is exact support/boundary for a future 3C source-law theorem. It retires
 direct promotion of inherited `C3` circulant hierarchy support into retained
 non-top quark masses.
+
+## Completed Route 9: 3C-A1-Source
+
+Question:
+
+```text
+Does the current repo support bank already contain a typed bridge from the
+Koide A1 support scalar 1/2 to the physical quark C3 Ward source ratio
+|q_quark|^2/a_quark^2 = 1/2?
+```
+
+Minimal premise set `A_min`:
+
+1. retained `hw=1` generation triplet;
+2. exact induced `C3[111]` cycle and Hermitian circulant algebra;
+3. exact Koide/A1 support faces, including equal block power,
+   `dim(spinor)/dim(Cl^+(3)) = 1/2`, and the `SU(2)_L` fundamental-weight
+   match;
+4. one-Higgs Yukawa gauge selection as a boundary;
+5. no observed quark masses, fitted Yukawa entries, CKM mass inputs, or
+   charged-lepton A1 physical bridge imported as species-universal.
+
+Result:
+
+```text
+The A1 algebra is exact: |q|^2/a^2 = 1/2 is equivalent to Q=2/3 and
+E_plus=E_perp on a C3 circulant carrier. Existing Koide support faces all hit
+the scalar 1/2. But the current typed-edge inventory has no path from those
+support faces to the physical quark C3 Ward source ratio. Adding exactly that
+edge creates the desired path, so the edge is new theorem content rather than
+latent support. Runner TOTAL PASS=50 FAIL=0.
+```
+
+Honest target status:
+
+This is an exact current-bank no-go / support boundary. It sharpens the 3C A1
+residual to a typed quark source-domain theorem, alternate source ratio, or a
+P1/readout route that makes A1 unnecessary.

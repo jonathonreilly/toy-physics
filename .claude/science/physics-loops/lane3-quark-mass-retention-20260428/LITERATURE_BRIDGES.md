@@ -1,15 +1,17 @@
 # Lane 3 Literature Bridges
 
-**Updated:** 2026-04-28T09:00:43Z
+**Updated:** 2026-04-28T09:08:58Z
 
 No new external literature bridge has been introduced in this science block.
-Block 07 uses inherited repo `C3` circulant and Koide support notes only as
-internal support surfaces, with A1/P1 still classified as open source/readout
-imports. Block 06 uses only finite cyclic representation theory and retained
-repo generation surfaces. Block 04 reuses inherited comparator and one-loop
-transport context already carried by the repo's `5/6` support note. Those
-values are recorded here as comparator/admitted-convention context, not as
-derivation inputs.
+Block 08 uses inherited repo Koide A1 support notes only as internal support
+surfaces; it records that those support scalars do not supply a typed quark
+source-domain theorem. Block 07 uses inherited repo `C3` circulant and Koide
+support notes only as internal support surfaces, with A1/P1 still classified
+as open source/readout imports. Block 06 uses only finite cyclic
+representation theory and retained repo generation surfaces. Block 04 reuses
+inherited comparator and one-loop transport context already carried by the
+repo's `5/6` support note. Those values are recorded here as
+comparator/admitted-convention context, not as derivation inputs.
 
 | Source | Exact item used | Role | Import class | Affected claim | Derivation impact |
 |---|---|---|---|---|---|

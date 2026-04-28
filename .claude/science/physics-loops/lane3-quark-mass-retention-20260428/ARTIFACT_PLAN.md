@@ -1,6 +1,6 @@
 # Lane 3 Artifact Plan
 
-**Updated:** 2026-04-28T09:00:43Z
+**Updated:** 2026-04-28T09:08:58Z
 
 ## Block 01 Artifact Set
 
@@ -195,6 +195,35 @@
    - commit coherent block artifacts;
    - push branch to `origin`;
    - create a stacked PR against block 06, or write `PR_BACKLOG.md`.
+
+## Block 08 Artifact Set
+
+1. Continue from block 07 on stacked branch
+   `physics-loop/lane3-quark-mass-retention-20260428-block08-20260428`.
+2. Execute the 3C A1 source-domain bridge inventory/no-go:
+   - note:
+     `docs/QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md`;
+   - runner:
+     `scripts/frontier_quark_c3_a1_source_domain_bridge_no_go.py`;
+   - log:
+     `logs/2026-04-28-quark-c3-a1-source-domain-bridge-no-go.txt`.
+3. Run focused checks:
+   - `PYTHONPATH=scripts python3 scripts/frontier_quark_c3_a1_source_domain_bridge_no_go.py`;
+   - `python3 -m py_compile scripts/frontier_quark_c3_a1_source_domain_bridge_no_go.py`;
+   - inherited Koide Q single-primitive and A1 Lie-theoretic runners;
+   - inherited Koide circulant character bridge;
+   - inherited block07 C3 circulant boundary and one-Higgs gauge-selection
+     runners.
+4. Emulate review-loop:
+   - classify the result as exact current-bank no-go / support boundary;
+   - verify A1 support scalar equality is not treated as a quark source law;
+   - verify no observed quark masses, fitted Yukawa entries, CKM mass inputs,
+     charged-lepton A1 physical bridge imports, or hidden block-extremum
+     assumptions enter as proof inputs.
+5. Package:
+   - commit coherent block artifacts;
+   - push branch to `origin`;
+   - create a stacked PR against block 07, or write `PR_BACKLOG.md`.
 
 ## Non-Goals
 

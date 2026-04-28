@@ -1,33 +1,32 @@
 slug: lane3-quark-mass-retention-20260428
 mode: run/resume
 target: best-honest-status
-science_block: 7
-branch: physics-loop/lane3-quark-mass-retention-20260428-block07-20260428
-base_branch: physics-loop/lane3-quark-mass-retention-20260428-block06-20260428
-head: "b127b337 plus PR-status bookkeeping; see git log"
+science_block: 8
+branch: physics-loop/lane3-quark-mass-retention-20260428-block08-20260428
+base_branch: physics-loop/lane3-quark-mass-retention-20260428-block07-20260428
+head: "block-08 working checkpoint; see git log"
 started_at_utc: "2026-04-28T07:27:25Z"
-last_checkpoint_utc: "2026-04-28T09:04:37Z"
+last_checkpoint_utc: "2026-04-28T09:08:58Z"
 hard_deadline_utc: "2026-04-28T11:27:25Z"
 checkpoint_interval_minutes: 30
-current_status: "block-07 PR opened"
+current_status: "block-08 artifact verified; packaging for stacked PR"
 claim_status: open
 active_lane: "Lane 3 quark mass retention"
-active_route: "3C C3 circulant source-law boundary"
-hard_residual: "derive A1 or equivalent quark Ward source ratio, P1-style positive parent/readout for quark Yukawa amplitudes, and sector-specific phases/scales"
+active_route: "3C A1 source-domain bridge inventory/no-go"
+hard_residual: "typed quark source-domain theorem mapping A1 support scalar 1/2 to the physical quark C3 Ward source ratio, or an alternate source/readout route"
 a_min:
   - retained hw=1 generation triplet
   - exact induced C3[111] cycle on the retained generation triplet
-  - Hermitian C3 circulant algebra H(a,q) = a I + q C + conjugate(q) C^2
-  - inherited C3 hierarchy and Koide-circulant support with A1/P1 classified as open support
+  - Hermitian C3 circulant algebra
+  - exact Koide/A1 support faces classified as support, not quark source law
+  - one-Higgs Yukawa gauge-selection boundary
 forbidden_imports:
   - observed quark masses as proof inputs
   - fitted Yukawa entries or hidden generation/species selectors
   - CKM mixing data treated as mass-eigenvalue input
-  - charged-lepton Koide phase/scale/readout imported as quark theorem
-  - treating A1 or P1 as already retained for Lane 3
-  - species-uniform top Ward physical reuse for non-top masses
-  - nearest-rational selection from live endpoint data treated as derivation
-  - breaking S_3 or orienting C3 without naming the source/readout primitive
+  - charged-lepton A1 physical bridge imported as species-universal
+  - hidden assertion that the quark Ward source extremizes the charged-lepton block-total Frobenius functional
+  - treating scalar equality 1/2 as a typed source-domain bridge
 files_touched:
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/GOAL.md
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/ASSUMPTIONS_AND_IMPORTS.md
@@ -38,10 +37,10 @@ files_touched:
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/REVIEW_HISTORY.md
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/STATE.yaml
   - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/HANDOFF.md
-  - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK07.md
-  - docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md
-  - scripts/frontier_quark_c3_circulant_source_law_boundary.py
-  - logs/2026-04-28-quark-c3-circulant-source-law-boundary.txt
+  - .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK08.md
+  - docs/QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md
+  - scripts/frontier_quark_c3_a1_source_domain_bridge_no_go.py
+  - logs/2026-04-28-quark-c3-a1-source-domain-bridge-no-go.txt
 open_imports:
   - down-type GST/NNI retained theorem
   - non-perturbative 5/6 bridge and scale-selection theorem
@@ -50,7 +49,7 @@ open_imports:
   - species-differentiated non-top Yukawa Ward primitive
   - physical source law for oriented C3 Ward coefficients
   - readout theorem mapping cyclic Fourier strata to quark Yukawa channels
-  - A1 or equivalent quark Ward source ratio for the C3 circulant carrier
+  - typed A1 source-domain theorem for the quark C3 circulant carrier
   - P1-style positive parent/readout theorem for quark Yukawa amplitudes
   - sector-specific phases and relative scales for up/down quarks
 no_go_routes:
@@ -65,28 +64,30 @@ no_go_routes:
   - retained S_3 generation carrier as generation-stratified Ward eigenvalues
   - oriented C3 normal form alone as retained non-top quark mass closure
   - inherited C3 circulant hierarchy support plus A1/P1 as direct quark Ward closure
+  - Koide A1 support scalar 1/2 as direct quark C3 source ratio theorem
 review_findings:
-  - "3C-Circulant runner passes with TOTAL PASS=43 FAIL=0."
-  - "py_compile passes for frontier_quark_c3_circulant_source_law_boundary.py."
-  - "Inherited YT generation hierarchy runner passes RESULT PASS=51 FAIL=0."
-  - "Inherited YT class-6 C3 breaking runner passes RESULT PASS=43 FAIL=0."
+  - "3C-A1-Source runner passes with TOTAL PASS=50 FAIL=0."
+  - "py_compile passes for frontier_quark_c3_a1_source_domain_bridge_no_go.py."
+  - "Inherited Koide Q single-primitive runner passes PASSED=10/10."
+  - "Inherited Koide A1 Lie-theoretic triple match runner passes PASSED=10/10."
   - "Inherited Koide circulant character bridge passes PASS=9 FAIL=0."
-  - "Inherited Koide square-root amplitude principle passes PASS=11 FAIL=0."
-  - "Review-loop emulation found the block-07 artifact honest as exact support/boundary, not retained quark-mass closure."
+  - "Inherited block-07 C3 circulant boundary runner passes TOTAL PASS=43 FAIL=0."
+  - "Inherited one-Higgs gauge-selection runner passes TOTAL PASS=43 FAIL=0."
+  - "Review-loop emulation found block-08 honest as exact current-bank no-go / support boundary, not retained quark-mass closure."
 commands_run:
-  - "git switch -c physics-loop/lane3-quark-mass-retention-20260428-block07-20260428"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_c3_circulant_source_law_boundary.py"
-  - "python3 -m py_compile scripts/frontier_quark_c3_circulant_source_law_boundary.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_quark_c3_circulant_source_law_boundary.py | tee logs/2026-04-28-quark-c3-circulant-source-law-boundary.txt"
-  - "PYTHONPATH=scripts python3 scripts/frontier_yt_generation_hierarchy_primitive.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_yt_class_6_c3_breaking.py"
+  - "git switch -c physics-loop/lane3-quark-mass-retention-20260428-block08-20260428"
+  - "PYTHONPATH=scripts python3 scripts/frontier_quark_c3_a1_source_domain_bridge_no_go.py | tee logs/2026-04-28-quark-c3-a1-source-domain-bridge-no-go.txt"
+  - "python3 -m py_compile scripts/frontier_quark_c3_a1_source_domain_bridge_no_go.py"
+  - "PYTHONPATH=scripts python3 scripts/frontier_koide_q_bridge_single_primitive.py"
+  - "PYTHONPATH=scripts python3 scripts/frontier_koide_a1_lie_theoretic_triple_match.py"
   - "PYTHONPATH=scripts python3 scripts/frontier_koide_circulant_character_bridge.py"
-  - "PYTHONPATH=scripts python3 scripts/frontier_koide_sqrtm_amplitude_principle.py"
+  - "PYTHONPATH=scripts python3 scripts/frontier_quark_c3_circulant_source_law_boundary.py"
+  - "PYTHONPATH=scripts python3 scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py"
   - "python3 scripts/automation_lock.py --lock-path /Users/jonBridger/.codex/memories/physics_worker_lock.json --meta-lock-path /Users/jonBridger/.codex/memories/.physics_worker_lock.guard refresh --owner physics-loop --holder-id physics-loop-lane3-20260428 --purpose lane3-quark-mass-retention-20260428 --ttl-hours 5"
 lock_status:
   default_automation_lock: "unavailable for this SSH user: permission denied at /Users/jonreilly"
-  local_lock: "/Users/jonBridger/.codex/memories/physics_worker_lock.json held by physics-loop-lane3-20260428; refreshed to 2026-04-28T14:00:43Z"
+  local_lock: "/Users/jonBridger/.codex/memories/physics_worker_lock.json held by physics-loop-lane3-20260428; refreshed to 2026-04-28T14:08:58Z"
   supervisor_flock: ".claude/science/physics-loops/lane3-quark-mass-retention-20260428/supervisor.lock held by active supervisor process"
-pr_status: "block-01 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/100; block-02 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/101; block-03 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/102; block-04 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/103; block-05 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/104; block-06 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/105; block-07 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/106"
-next_exact_action: "Continue Lane 3 only from A1/P1/source-readout derivation, sector phase/scale theorem, 3A NP scale theorem, or a new 3B scalar/readout primitive."
+pr_status: "block-01 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/100; block-02 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/101; block-03 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/102; block-04 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/103; block-05 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/104; block-06 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/105; block-07 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/106; block-08 pending packaging"
+next_exact_action: "Commit/push block-08 and open stacked PR against block-07; then continue Lane 3 only from typed A1 source-domain derivation, alternate source ratio, P1/readout theorem, sector phase/scale theorem, 3A NP scale theorem, or a new 3B scalar/readout primitive."
 stop_condition: null

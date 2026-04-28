@@ -1,6 +1,6 @@
 # Lane 3 No-Go Ledger
 
-**Updated:** 2026-04-28T09:00:43Z
+**Updated:** 2026-04-28T09:08:58Z
 
 | Route / claim | Blocked conclusion | Blocking result | Source | Status for this loop |
 |---|---|---|---|---|
@@ -20,6 +20,7 @@
 | Retained `S_3` generation carrier derives generation-stratified quark Ward eigenvalues | Retained 3C Ward identities for `u,c,t` or `d,s,b` | On `hw=1 ~= A_1 + E`, every `S_3`-equivariant Hermitian Ward operator has form `a I + b J`, giving one singlet eigenvalue and a doubly degenerate `E` eigenvalue; diagonal equivariant readouts are scalar | `QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md` | closed for equivariant carrier-only route; 3C needs a source/readout/symmetry-breaking primitive |
 | Oriented `C3[111]` normal form alone derives non-top quark Yukawa ratios | Retained 3C Ward identities or numerical `m_u,m_c,m_d,m_s,m_b` ratios | The exact `C3` normal form splits the doublet only after adding a reflection-odd coefficient `c`; the three real coefficients `a,b,c` remain free, and the split lives in cyclic Fourier channels rather than a derived physical quark-Yukawa readout | `QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md` | closed for direct promotion; usable exact support for a future source/readout theorem |
 | Existing `C3` circulant hierarchy support plus A1/P1 directly gives retained quark Ward identities | Retained generation-stratified quark Yukawa ratios for `u,c` and `d,s,b` | The Hermitian `C3` circulant family is a three-real-dimensional carrier and can fit any real generation spectrum unless A1/P1 or an equivalent source/readout theorem is added. With A1/P1 it gives a Koide-style amplitude relation but still leaves phase, scale, species assignment, and quark Yukawa readout open | `QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md` | closed for direct promotion; usable support only if a quark-specific source/readout theorem is supplied |
+| Koide A1 support scalar `1/2` directly sets the quark `C3` source ratio | Retained quark A1 source law `|q_quark|^2/a_quark^2 = 1/2` and resulting Ward hierarchy | Current A1 support faces collapse to the exact scalar `1/2`, and the quark `C3` target ratio is exact if granted, but the current support bank has no typed edge from the A1 scalar to the physical quark Ward source domain | `QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md` | closed for direct promotion; reopen only with a typed quark source-domain theorem |
 
 ## Reopen Rule
 

@@ -1,6 +1,6 @@
 # Lane 3 Review History
 
-**Updated:** 2026-04-28T09:00:43Z
+**Updated:** 2026-04-28T09:08:58Z
 
 ## Preflight Review
 
@@ -450,3 +450,59 @@ Disposition:
   P1-style quark positive parent/readout theorem, sector-specific phases and
   scales, a genuine 3A exponent/scale theorem, or a new 3B scalar/readout
   primitive.
+
+## Artifact Review: 3C A1 Source-Domain Bridge No-Go
+
+**Time:** 2026-04-28T09:08:58Z
+
+Artifact reviewed:
+
+- `docs/QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_c3_a1_source_domain_bridge_no_go.py`
+- `logs/2026-04-28-quark-c3-a1-source-domain-bridge-no-go.txt`
+
+Verification:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_quark_c3_a1_source_domain_bridge_no_go.py
+TOTAL: PASS=50, FAIL=0
+
+python3 -m py_compile scripts/frontier_quark_c3_a1_source_domain_bridge_no_go.py
+PASS
+
+PYTHONPATH=scripts python3 scripts/frontier_koide_q_bridge_single_primitive.py
+PASSED: 10/10
+
+PYTHONPATH=scripts python3 scripts/frontier_koide_a1_lie_theoretic_triple_match.py
+PASSED: 10/10
+
+PYTHONPATH=scripts python3 scripts/frontier_koide_circulant_character_bridge.py
+PASS=9 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_c3_circulant_source_law_boundary.py
+TOTAL: PASS=43, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py
+TOTAL: PASS=43, FAIL=0
+```
+
+Review-loop emulation:
+
+1. Claim wording is bounded to an exact current-bank no-go / support boundary.
+   It does not claim retained non-top quark masses.
+2. The runner proves A1 algebra is exact on a `C3` circulant carrier and that
+   existing Koide support faces all hit `1/2`.
+3. The typed-edge inventory has no path from A1 support faces to the physical
+   quark `C3` Ward source ratio; adding exactly that edge creates the path.
+4. The missing edge is therefore new theorem content, not latent support.
+5. Observed quark masses, fitted Yukawa entries, CKM mass input,
+   charged-lepton A1 physical bridge import, and hidden quark block-extremum
+   assumptions are excluded from the proof.
+
+Disposition:
+
+- keep artifact;
+- claim status remains `open`;
+- next exact Lane 3 action requires a typed quark source-domain theorem for
+  A1, an alternate source ratio, a P1/readout theorem plus sector phase/scale
+  laws, a genuine 3A scale theorem, or a new 3B scalar/readout primitive.

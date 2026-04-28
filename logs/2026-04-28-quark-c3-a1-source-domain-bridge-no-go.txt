@@ -1,0 +1,76 @@
+========================================================================================
+LANE 3 C3 A1 SOURCE-DOMAIN BRIDGE NO-GO
+========================================================================================
+
+A. Authority surfaces
+------------------------------------------------------------------------
+PASS: QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md exists -- docs/QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md
+PASS: QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md exists -- docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md
+PASS: KOIDE_Q_BRIDGE_SINGLE_PRIMITIVE_NOTE_2026-04-22.md exists -- docs/KOIDE_Q_BRIDGE_SINGLE_PRIMITIVE_NOTE_2026-04-22.md
+PASS: KOIDE_A1_CLOSURE_RECOMMENDATION_2026-04-22.md exists -- docs/KOIDE_A1_CLOSURE_RECOMMENDATION_2026-04-22.md
+PASS: KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md exists -- docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md
+PASS: KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md exists -- docs/KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md
+PASS: SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md exists -- docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md
+PASS: frontier_koide_a1_lie_theoretic_triple_match.py exists -- scripts/frontier_koide_a1_lie_theoretic_triple_match.py
+PASS: new note names source-domain bridge no-go
+PASS: block07 leaves A1/P1 open
+PASS: Koide Q bridge collapses to one primitive
+PASS: A1 recommendation says physical bridge remains open
+PASS: Koide character bridge records exact A1 equality
+PASS: sqrtm note keeps parent/readout open
+PASS: one-Higgs note is gauge selection, not eigenvalue selection
+PASS: A1 Lie runner marks an open closure lemma
+
+B. Exact A1 algebra
+------------------------------------------------------------------------
+PASS: A1 ratio is |q|^2/a^2 = 1/2
+PASS: A1 equals cyclic block energy equality -- E_plus=12.000000, E_perp=12.000000
+PASS: A1 gives Q=2/3 for all tested phases -- [0.66666667 0.66666667 0.66666667 0.66666667]
+PASS: off-A1 ratio does not give Q=2/3 -- Q=0.341400
+PASS: Q formula matches 1/3 + 2r^2/(3a^2)
+PASS: A1 is one scalar constraint, not phase selection
+PASS: A1 is one scalar constraint, not scale selection
+
+C. Existing support-face inventory
+------------------------------------------------------------------------
+PASS: all support faces equal 1/2 -- {'cyclic_block_power': 0.5, 'spinor_even_clifford_dim_ratio': 0.5, 'su2_fundamental_weight_sq': 0.5, 'ew_casimir_difference': 0.5, 'charged_lepton_PQ': 0.5}
+PASS: Koide Q bridge records dim(spinor)/dim(Cl+) = 1/2
+PASS: Koide Q bridge records T(T+1)-Y^2 = 1/2
+PASS: A1 recommendation records SU(2)_L fundamental-weight evidence
+PASS: A1 recommendation records one new retained primitive cost
+PASS: A1 Lie runner fundamental match is support, not closure
+
+D. Typed-edge graph
+------------------------------------------------------------------------
+PASS: current graph has no A1-support path to quark source ratio -- {'cyclic_block_power_1_2': True, 'spinor_even_clifford_dim_ratio_1_2': True, 'su2_fund_weight_sq_1_2': True, 'ew_casimir_difference_1_2': True, 'koide_A1_support_scalar': True, 'charged_lepton_PQ_1_2': True}
+PASS: quark carrier names the target but does not fill it
+PASS: named target is distinct from derived source ratio
+PASS: one-Higgs gauge selection does not reach quark source ratio
+PASS: support scalar reaches charged-lepton Q only
+PASS: quark source ratio would imply quark C3 Q if granted
+PASS: adding exactly the missing bridge creates the desired path
+PASS: missing bridge is therefore new theorem content
+
+E. Import firewall
+------------------------------------------------------------------------
+PASS: allowed and forbidden input sets are disjoint -- ['Hermitian_C3_circulant_algebra', 'Koide_A1_support_faces', 'one_Higgs_gauge_selection_boundary', 'retained_C3_cycle', 'retained_hw1_triplet']
+PASS: new note forbids observed quark masses
+PASS: new note forbids fitted Yukawa entries
+PASS: new note forbids CKM mass input
+PASS: new note forbids charged-lepton A1 species-universal import
+PASS: new note keeps retained masses unclaimed
+PASS: runner defines no observed quark mass constants
+
+F. Boundary classification
+------------------------------------------------------------------------
+PASS: direct A1 promotion is explicitly retired
+PASS: future reopen route requires a physical theorem
+PASS: future reopen route allows a quark-specific source-domain map
+PASS: future reopen route allows alternate source ratio
+PASS: future reopen route allows P1/readout alternative
+PASS: Lane 3 remains open
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=50, FAIL=0
+VERDICT: current A1 support has no typed bridge to the quark C3 source ratio.

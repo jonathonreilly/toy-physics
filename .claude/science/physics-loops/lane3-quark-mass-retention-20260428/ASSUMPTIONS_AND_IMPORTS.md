@@ -1,8 +1,8 @@
 # Lane 3 Assumptions And Imports
 
-**Updated:** 2026-04-28T09:00:43Z
-**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block07-20260428`
-**Head:** block-07 working checkpoint; see `git log`
+**Updated:** 2026-04-28T09:08:58Z
+**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block08-20260428`
+**Head:** block-08 working checkpoint; see `git log`
 
 This ledger uses the physics-loop schema. It separates retained framework
 inputs, support-only bridges, comparator values, and hidden selectors that
@@ -19,6 +19,7 @@ block retained five-mass closure.
 | `S_3` action on `hw=1` generation triplet, `A_1 + E` | Tests whether retained generation symmetry can itself stratify quark Ward eigenvalues | exact support theorem | `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`, `THREE_GENERATION_STRUCTURE_NOTE.md`, `QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md` | yes for 3C equivariant route | yes if claiming generation-stratified Ward values | add a source/readout/symmetry-breaking primitive that orients or splits the `E` doublet | equivariant route closed negatively; carrier alone gives at most singlet/doublet split |
 | Oriented `C3[111]` Ward splitter on `hw=1` | Smallest exact local primitive tested for splitting the `S_3` `E` doublet | exact support/boundary theorem | `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`, `QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md` | yes for the 3C source/readout route | yes only if promoted with a source/readout law | derive a physical source law for `c` and `b/a`, or a readout theorem mapping cyclic Fourier strata to quark Yukawa channels | exact splitter support only; coefficients remain free and mass closure remains open |
 | `C3` Hermitian circulant hierarchy carrier plus A1/P1 | Tests whether inherited circulant hierarchy support can become quark Ward source law | exact support/boundary theorem; A1/P1 remain open primitives | `YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`, `YT_CLASS_6_C3_BREAKING_OPERATOR_NOTE_2026-04-18.md`, `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`, `KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md`, `QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md` | yes for 3C source-law route | yes if claiming quark generation-stratified Ward identities | derive A1 or equivalent from quark Ward source, derive P1/readout for quark Yukawa amplitudes, and derive sector phases/scales | exact carrier support only; without those imports it can fit arbitrary real triples and does not predict quark masses |
+| Koide A1 support scalar `1/2` to quark `C3` source ratio | Tests whether existing A1 support faces already type the quark source ratio `|q_quark|^2/a_quark^2 = 1/2` | exact current-bank no-go / support boundary | `KOIDE_Q_BRIDGE_SINGLE_PRIMITIVE_NOTE_2026-04-22.md`, `KOIDE_A1_CLOSURE_RECOMMENDATION_2026-04-22.md`, `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`, `QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md` | yes for A1 source-law route | yes if claiming A1-derived quark Ward identities | prove a typed source-domain bridge from A1 support scalar to the physical quark Ward source ratio | no existing typed edge; adding it is new theorem content |
 | One-Higgs Yukawa gauge selection | Gives allowed SM Dirac operator skeleton | exact support theorem | `SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md` | yes | yes | combine with new Ward/source theorem | usable boundary; leaves Yukawa matrices free |
 | Down-type GST / NNI relation `|V_us|^2 = m_d/m_s` | Converts CKM `V_us` to `m_d/m_s` | support-only / structural bridge | `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`, `CKM_FROM_MASS_HIERARCHY_NOTE.md` | yes for down route | yes for retained down ratios | theorem route deriving GST on retained framework surface | open load-bearing bridge |
 | `5/6 = C_F - T_F` bridge `|V_cb| = (m_s/m_b)^(5/6)` | Converts CKM `V_cb` to `m_s/m_b` | bounded support | `CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md`, `QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md` | yes for down route | yes for retained down ratios | non-perturbative theorem at lattice scale | open Nature-grade blocker |
@@ -62,4 +63,7 @@ The highest-leverage unresolved imports for this block are:
    adds the inherited `C3` circulant hierarchy carrier boundary: without A1/P1
    or an equivalent quark source/readout theorem the carrier can represent any
    real generation spectrum, while with A1/P1 it still leaves phase, scale,
-   species assignment, and amplitude-vs-Yukawa readout open.
+   species assignment, and amplitude-vs-Yukawa readout open. Block 08 closes
+   direct A1 support promotion negatively: existing Koide A1 faces all hit
+   `1/2`, but no current typed edge maps that scalar to the quark `C3` Ward
+   source ratio.
