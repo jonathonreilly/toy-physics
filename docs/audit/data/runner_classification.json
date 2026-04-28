@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T03:33:05.045940+00:00",
+  "generated_at": "2026-04-28T07:24:36.127567+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -228,6 +228,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_atomic_hydrogen_helium_probe.py"
+    },
+    "atomic_rydberg_dependency_firewall_note_2026-04-27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_atomic_rydberg_dependency_firewall.py"
     },
     "bell_inequality_derived_note": {
       "assert_count": 2,
@@ -4213,6 +4225,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_echo_null_result.py"
     },
+    "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py"
+    },
     "hierarchy_bosonic_bilinear_selector_note": {
       "assert_count": 0,
       "counts": {
@@ -4332,6 +4356,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_koide_cone_variational_principle_survey.py"
+    },
+    "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py"
     },
     "hubble_tension_structural_lock_theorem_note_2026-04-26": {
       "assert_count": 1,
@@ -5436,6 +5472,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_neutrino_dirac_z3_support_trichotomy.py"
+    },
+    "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py"
     },
     "neutrino_majorana_adjacent_singlet_placement_theorem_note": {
       "assert_count": 1,
@@ -6696,6 +6744,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/frontier_quark_jts_physical_point_closure_theorem.py"
+    },
+    "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 15
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py"
     },
     "quark_mass_ratio_full_solve_note_2026-04-18": {
       "assert_count": 2,
@@ -9076,6 +9136,21 @@
         "B": 0,
         "C": 0,
         "D": 11
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_atomic_rydberg_dependency_firewall.py": {
+      "assert_count": 1,
+      "claims": [
+        "atomic_rydberg_dependency_firewall_note_2026-04-27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 4
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -13871,6 +13946,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py": {
+      "assert_count": 1,
+      "claims": [
+        "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_hierarchy_bosonic_bilinear_selector.py": {
       "assert_count": 0,
       "claims": [
@@ -14005,6 +14095,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py": {
+      "assert_count": 1,
+      "claims": [
+        "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_hubble_tension_structural_lock.py": {
@@ -15356,6 +15461,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
       "exists": true
     },
     "scripts/frontier_neutrino_majorana_adjacent_singlet_placement_theorem.py": {
@@ -16918,6 +17038,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 15
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_quark_mass_ratio_full_solve.py": {
@@ -18806,13 +18941,13 @@
     "decoration_candidates": 71,
     "dominant_class_distribution": {
       "A": 6,
-      "B": 102,
+      "B": 103,
       "C": 334,
-      "D": 106,
-      "none": 140
+      "D": 109,
+      "none": 141
     },
-    "runners_classified": 688,
-    "runners_with_C": 411,
-    "runners_with_D": 181
+    "runners_classified": 693,
+    "runners_with_C": 412,
+    "runners_with_D": 185
   }
 }

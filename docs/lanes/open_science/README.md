@@ -50,6 +50,21 @@ metadata block names the primary closure targets, the first worker target, and
 the non-claim boundary. The body preserves the current retained/bounded/scaffold
 state, derivation targets, scaffolding, and recommended attack path.
 
+## 2026-04-27 Dependency-Firewall Packet
+
+The first Lane 4 cascade pass landed exact negative-boundary artifacts for
+five active lanes. These are not positive closures. They make the current
+dependency gates explicit so future workers do not promote bounded/scaffold
+content into retained science prematurely.
+
+| Lane | Firewall artifact | Blocked upgrade |
+|---|---|---|
+| 1 | [Hadron confinement-to-mass firewall](../../HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md) | `T = 0` confinement plus bounded `sqrt(sigma)` does not derive `m_pi`, `m_p`, `m_n`, or spectroscopy. |
+| 2 | [Atomic Rydberg dependency firewall](../../ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md) | `alpha_EM(M_Z)` plus textbook hydrogen does not derive the Rydberg scale without `m_e`, `alpha(0)`, and the physical-unit nonrelativistic limit. |
+| 3 | [Quark bounded-companion retention firewall](../../QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md) | CKM closure and bounded mass-ratio support do not retain the five non-top quark masses. |
+| 4 | [Neutrino Dirac/seesaw fork no-go](../../NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md) | Current-stack `mu_current = 0`, a nonzero seesaw benchmark, and `y_nu^eff` cannot be treated as one global mass closure. |
+| 5 | [Hubble two-gate dependency firewall](../../HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md) | The late-time structural lock does not produce numerical `H_0` without both the absolute-scale gate and a cosmic-history/`L` gate. |
+
 Lane 6 (charged-lepton mass retention) was added 2026-04-26 to close the gap
 where Tier 1 missing-science item #2 had no dedicated active lane. The Koide
 flagship lane (in `ACTIVE_WORKING_LANES_2026-04-26.md`) covers the ratios

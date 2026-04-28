@@ -3,9 +3,9 @@
     "critical": 89,
     "high": 514,
     "leaf": 625,
-    "medium": 82
+    "medium": 87
   },
-  "generated_at": "2026-04-28T03:33:05.378827+00:00",
+  "generated_at": "2026-04-28T07:24:36.408554+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -14274,6 +14274,91 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "atomic_rydberg_dependency_firewall_note_2026-04-27",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [],
+      "direct_in_degree": 4,
+      "load_bearing_score": 5.907,
+      "note_path": "docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_atomic_rydberg_dependency_firewall.py",
+      "transitive_descendants": 14
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [],
+      "direct_in_degree": 4,
+      "load_bearing_score": 5.907,
+      "note_path": "docs/HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py",
+      "transitive_descendants": 14
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [],
+      "direct_in_degree": 4,
+      "load_bearing_score": 5.907,
+      "note_path": "docs/HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py",
+      "transitive_descendants": 14
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [],
+      "direct_in_degree": 4,
+      "load_bearing_score": 5.907,
+      "note_path": "docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py",
+      "transitive_descendants": 14
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [],
+      "direct_in_degree": 4,
+      "load_bearing_score": 5.907,
+      "note_path": "docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py",
+      "transitive_descendants": 14
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "ai_methodology.skills.ai-physics-lane-builder.skill",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -15046,6 +15131,7 @@
       "cross_confirmation_status": null,
       "current_status": "open",
       "deps": [
+        "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
         "confinement_string_tension_note",
         "graph_first_su3_integration_note",
         "alpha_s_derived_note",
@@ -15068,6 +15154,7 @@
       "cross_confirmation_status": null,
       "current_status": "open",
       "deps": [
+        "atomic_rydberg_dependency_firewall_note_2026-04-27",
         "atomic_hydrogen_helium_probe_note",
         "bound_state_selection_note"
       ],
@@ -15088,6 +15175,7 @@
       "cross_confirmation_status": null,
       "current_status": "open",
       "deps": [
+        "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
         "quark_mass_ratio_review_packet_2026-04-18",
         "quark_mass_ratio_full_solve_note_2026-04-18",
         "quark_mass_ratios_taste_staircase_support_note_2026-04-25",
@@ -15111,6 +15199,7 @@
       "cross_confirmation_status": null,
       "current_status": "open",
       "deps": [
+        "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
         "charged_lepton_koide_review_packet_2026-04-18",
         "neutrino_retained_status_note_2026-04-16",
         "neutrino_retained_observable_bounds_theorem_note_2026-04-24",
@@ -15138,6 +15227,7 @@
       "cross_confirmation_status": null,
       "current_status": "open",
       "deps": [
+        "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
         "publication.ci3_z3.inputs_and_qualifiers_note",
         "hubble_tension_structural_lock_theorem_note_2026-04-26",
         "primordial_spectrum_note",
@@ -15460,7 +15550,12 @@
         "lanes.active_working_lanes_2026-04-26",
         "frontier_extension_lane_opening_note_2026-04-25",
         "chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25",
-        "lanes.open_science.readme"
+        "lanes.open_science.readme",
+        "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
+        "atomic_rydberg_dependency_firewall_note_2026-04-27",
+        "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
+        "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+        "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27"
       ],
       "direct_in_degree": 4,
       "load_bearing_score": 5.7,
@@ -15551,10 +15646,15 @@
         "planck_scale_conditional_completion_note_2026-04-24",
         "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
         "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
+        "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
         "lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26",
+        "atomic_rydberg_dependency_firewall_note_2026-04-27",
         "lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26",
+        "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
         "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
+        "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
         "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+        "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
         "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26",
         "frontier_extension_lane_opening_note_2026-04-25",
         "ai_methodology.readme",
@@ -15586,6 +15686,11 @@
         "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
         "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
         "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26",
+        "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
+        "atomic_rydberg_dependency_firewall_note_2026-04-27",
+        "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
+        "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+        "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
         "publication.ci3_z3.what_this_paper_does_not_claim",
         "publication.ci3_z3.inputs_and_qualifiers_note"
       ],
@@ -27128,6 +27233,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 891,
-  "total_pending": 1310
+  "ready_count": 896,
+  "total_pending": 1315
 }

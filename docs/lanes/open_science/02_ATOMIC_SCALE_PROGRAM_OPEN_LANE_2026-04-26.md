@@ -13,6 +13,19 @@ energy, fine-structure corrections, and Lamb/hyperfine follow-ons.
 **Non-claim boundary:** current atomic content remains scaffold-only until
 those dependencies are retained.
 
+## 2026-04-27 Dependency Firewall
+
+The [Atomic Rydberg dependency firewall](../../ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md)
+records the current no-go boundary for this lane. Substituting the retained
+electroweak-scale `alpha_EM(M_Z)` into the nonrelativistic hydrogen formula
+with textbook `m_e` gives `E_1 = -15.68 eV`, not the Rydberg value
+`-13.6057 eV`.
+
+The firewall requires a retained electron mass, a retained low-energy Coulomb
+coupling `alpha(0)` or QED running bridge, and a retained nonrelativistic
+Schrodinger/Coulomb limit in physical units before the existing hydrogen
+solver can be promoted beyond scaffold status.
+
 ## 1. Missing-science framing
 
 The framework still needs direct answers to:

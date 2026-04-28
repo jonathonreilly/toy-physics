@@ -14,6 +14,20 @@ separate direct quantitative targets from bounded or phenomenological forecasts.
 **Non-claim boundary:** δ_CP and θ_23 support do not close absolute masses or
 mass splittings.
 
+## 2026-04-27 Dependency Firewall
+
+The [Lane 4 Dirac/seesaw fork no-go](../../NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md)
+records the current no-go boundary for this lane. The current-stack Majorana
+zero law, the diagonal seesaw atmospheric-scale benchmark, and the retained
+local coefficient `y_nu^eff = g_weak^2/64` live on a forked claim surface.
+
+This firewall blocks any single global quantitative neutrino-mass closure that
+simultaneously keeps `mu_current = 0`, uses an invertible type-I seesaw
+matrix, reuses `y_nu^eff` as a direct Dirac mass eigenvalue, and claims Lane 4
+absolute-mass closure. A positive branch must supply either an admitted
+nonzero Majorana/seesaw activation law or a separate tiny Dirac `Y_nu`
+activation law.
+
 ## 1. Missing-science framing
 
 The framework still needs direct answers to:

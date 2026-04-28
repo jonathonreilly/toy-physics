@@ -24,7 +24,6 @@ Boundary:
 
 from __future__ import annotations
 
-import re
 import sys
 from pathlib import Path
 
@@ -193,9 +192,22 @@ def test_current_atlas_has_no_extra_charge_two_source() -> None:
     atlas = read("docs/publication/ci3_z3/DERIVATION_ATLAS.md")
     obs = read("docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md")
     rhs = read("scripts/frontier_right_handed_sector.py")
+    atlas_nonrealization = read("docs/NEUTRINO_MAJORANA_CURRENT_ATLAS_NONREALIZATION_NOTE.md")
 
     has_det_row = "| Observable principle | `log|det(D+J)|`" in atlas
-    pfaffian_rows = re.findall(r"\|\s*([^|]*Pfaffian[^|]*)\|", atlas, flags=re.IGNORECASE)
+    has_pfaffian_no_forcing_row = (
+        "| Pfaffian no-forcing theorem |" in atlas
+        and "no exact principle built only from the current retained normal grammar" in atlas
+    )
+    has_beyond_stack_nambu_row = (
+        "| Majorana Nambu source principle |" in atlas
+        and "beyond the retained stack" in atlas
+    )
+    atlas_nonrealization_flat = " ".join(atlas_nonrealization.split())
+    atlas_nonrealization_boundary = (
+        "does not already contain the missing charge-`2` Majorana primitive" in atlas_nonrealization_flat
+        and "not yet realized fermionic `Delta L = 2` carriers" in atlas_nonrealization_flat
+    )
     has_boundary_row = (
         "| One-generation Majorana current-stack zero law |" in atlas
         or "| Three-generation Majorana current-stack zero matrix |" in atlas
@@ -204,8 +216,10 @@ def test_current_atlas_has_no_extra_charge_two_source() -> None:
     misses_zero_slot = "MISSING from wedge^2 singlets: {Fraction(0, 1), Fraction(4, 3)}" in rhs or "Fraction(0)" in rhs
 
     check("Atlas still retains the determinant observable backbone", has_det_row)
-    check("Current atlas has no Pfaffian row for a retained source primitive", len(pfaffian_rows) == 0,
-          f"pfaffian rows={pfaffian_rows}")
+    check(
+        "Atlas Pfaffian/Nambu rows are scoped as no-forcing or beyond-stack, not current retained source",
+        has_pfaffian_no_forcing_row and has_beyond_stack_nambu_row and atlas_nonrealization_boundary,
+    )
     check("Atlas carries the retained Majorana zero-law boundary row", has_boundary_row)
     check("Observable-principle note stays scalar rather than fermionic-pairing based", obs_scalar)
     check("Current right-handed composite route still misses the Y=0 nu_R singlet slot", misses_zero_slot)

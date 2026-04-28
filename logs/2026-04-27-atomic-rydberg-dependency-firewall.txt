@@ -1,0 +1,63 @@
+========================================================================================
+LANE 2 ATOMIC RYDBERG DEPENDENCY FIREWALL
+========================================================================================
+
+Question:
+  Can the current repo honestly claim a framework-derived hydrogen
+  Rydberg scale by substituting retained high-energy quantities into
+  the standard formula?
+
+Answer:
+  No. m_e and alpha(0) remain load-bearing imports.
+
+----------------------------------------------------------------------------------------
+Part 1: standard Rydberg formula and dependency sensitivity
+----------------------------------------------------------------------------------------
+  m_e textbook comparator       = 510998.95000 eV
+  alpha(0) textbook comparator  = 1/137.035999084
+  E_1 = -m_e alpha(0)^2 / 2     = -13.605693123009 eV
+  [PASS] standard formula reproduces the textbook Rydberg scale  (|E1|=13.605693123009 eV)
+  [PASS] Rydberg scale is linear in m_e  (doubling m_e doubles |E1|)
+  [PASS] Rydberg scale is quadratic in alpha  (doubling alpha quadruples |E1|)
+
+----------------------------------------------------------------------------------------
+Part 2: alpha_EM(M_Z) direct substitution firewall
+----------------------------------------------------------------------------------------
+  repo alpha_EM(M_Z)            = 1/127.67
+  direct E_1 with alpha(M_Z)    = -15.675171 eV
+  textbook E_1 with alpha(0)    = -13.605693 eV
+  relative direct-substitution shift = +15.21%
+  m_e required if alpha(M_Z) were used = 443535.50 eV
+  [PASS] direct alpha_EM(M_Z) substitution misses the Rydberg scale by > 10%  (shift=+15.21%)
+  [PASS] alpha(0) transport is load-bearing, not notation  (would require m_e shift=-13.20%)
+  [PASS] repo alpha_EM(M_Z) remains useful only after a low-energy bridge  (running direction gives stronger alpha at M_Z than alpha(0))
+
+----------------------------------------------------------------------------------------
+Part 3: electron-mass activation gate
+----------------------------------------------------------------------------------------
+  v_EW retained scale           = 246.282818290129 GeV
+  textbook m_e comparator       = 0.510998950 MeV
+  y_e required by m = y v/sqrt(2) = 2.934275523017e-06
+  [PASS] Lane 2 open stub explicitly marks framework m_e as absent
+  [PASS] current atomic scaffold imports textbook m_e
+  [PASS] atomic closure therefore requires a tiny charged-lepton activation law  (y_e=2.934e-06)
+
+----------------------------------------------------------------------------------------
+Part 4: Lane 2 claim-state consequence
+----------------------------------------------------------------------------------------
+  [PASS] repo has a reusable alpha_EM(M_Z) value, not an atomic alpha(0) closure
+  [PASS] Lane 2 is explicitly scaffold-only before retained dependencies land
+  [PASS] honest Lane 2 status after this artifact is open, not retained closure  (m_e and alpha(0) bridge remain load-bearing)
+
+  Exact dependency firewall:
+    Hydrogen Rydberg closure requires at least:
+      1. retained electron mass or y_e activation law;
+      2. low-energy Coulomb alpha(0), or a QED-running bridge from alpha(M_Z);
+      3. retained nonrelativistic Schrodinger/Coulomb limit in physical units.
+
+  The existing scaffold is useful, but it is not a framework-derived
+  atomic prediction until those gates are closed.
+
+========================================================================================
+PASS=12 FAIL=0
+========================================================================================

@@ -14,6 +14,19 @@ dependencies.
 **Non-claim boundary:** this file opens the lane only; it does not derive any
 hadron mass.
 
+## 2026-04-27 Dependency Firewall
+
+The [Hadron Lane 1 confinement-to-mass firewall](../../HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md)
+records the current no-go boundary for this lane. Retained `T = 0`
+confinement and the bounded `sqrt(sigma)` readout are prerequisites for
+hadron physics, not retained mass-spectrum closure.
+
+The firewall blocks any upgrade of `sqrt(sigma)` into `m_pi`, `m_p`, `m_n`, or
+hadron spectroscopy unless a branch also supplies the missing light-quark
+masses, chiral inputs such as GMOR data, hadronic running/matching, and
+dimensionless spectral coefficients or an ab-initio lattice-QCD-equivalent
+computation.
+
 ## 1. Missing-science framing
 
 The framework still needs direct answers to:
