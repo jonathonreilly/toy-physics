@@ -1,7 +1,7 @@
 # Composite-Source Additivity Cross-Family Note
 
-**Date:** 2026-04-04  
-**Status:** bounded second-family additivity probe on the proposed_retained 2D ordered lattice
+**Date:** 2026-04-04 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** bounded second-family additivity probe on the upstream 2D ordered lattice; not a standalone tier-ratifiable theorem and depends on unregistered upstream 2D ordered-lattice / continuum lane and 3D additivity note dependencies. Persistent-pattern inertia is explicitly left open.
 
 ## Artifact chain
 
@@ -101,3 +101,27 @@ The next step should be one of:
 - a third-family additivity cross-check if a cheap reusable family already exists
 - a bounded note saying the additivity lane is now supported on two families
   but still not a persistent-mass theorem
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, leaf criticality):
+
+> Issue: the runner verifies the finite 2D additivity comparison, but
+> the source row is a bounded support probe, not a standalone retained
+> theorem; it depends on an unregistered proposed_retained 2D
+> ordered-lattice/continuum lane and the 3D additivity note, and it
+> explicitly leaves persistent-pattern inertia open.
+
+## What this note does NOT claim
+
+- A standalone 2D additivity theorem.
+- Audit-clean upstream registration of the 2D ordered-lattice /
+  continuum lane or the 3D additivity note.
+- A persistent-pattern inertia theorem.
+
+## What would close this lane (Path A future work)
+
+A retained 2D additivity theorem would require audit-clean upstream
+ordered-lattice / continuum and 3D additivity dependencies, plus a
+runner that asserts hard thresholds for the relative errors and the
+spent-delay deviations.
