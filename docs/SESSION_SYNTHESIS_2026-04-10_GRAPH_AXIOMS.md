@@ -1,8 +1,6 @@
 # Session Synthesis: Graph Laplacian Axioms (2026-04-10)
 
-**Status:** historical synthesis note. The current proposed_retained staggered status is
-tracked by the force-based card and corrected full-suite baseline, not by the
-older `frontier_staggered_fermion.py` successor framing alone.
+**Status:** support / historical synthesis note (downgraded 2026-04-28 per audit-lane verdict). The current staggered status is tracked by the force-based card and corrected full-suite baseline, not by the older `frontier_staggered_fermion.py` successor framing alone. The runner declared in this note is a legacy proxy harness and does not function as a current-main evidence surface.
 
 ## What happened
 
@@ -214,3 +212,43 @@ A resolution might require:
 - Test on actual DAGs from the axiom growth rules.
 - Develop a genuine gauge coupling (not slit-phase proxy).
 - Write up the graph Laplacian axioms as a separate, self-contained result.
+
+## Audit boundary (2026-04-28)
+
+The earlier Status line read "historical synthesis note. The current
+`proposed_retained` staggered status is..." which the audit-lane parser
+classified as `proposed_retained` because the literal token appeared in
+the Status string.
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: The row is a historical synthesis note whose declared runner
+> is explicitly labeled a legacy proxy harness and prints 'Do not use
+> this script as a current-main evidence surface.' Why this blocks: a
+> 16/16 legacy proxy run cannot ratify the broad graph-axiom or
+> current staggered `proposed_retained` claim, especially when the
+> note says current status is tracked by successor cards with
+> different semantics. Repair target: demote this file to historical
+> synthesis/support and audit the current force-based staggered card,
+> corrected graph-KG card, and any portability cards as separate
+> runner-backed claims.
+
+The note has been re-tiered to `support` per the verdict's repair
+target.
+
+## What this note does NOT claim
+
+- A current staggered status assertion — the live status is on the
+  force-based staggered card and corrected full-suite baseline, not
+  here.
+- That the legacy proxy harness is a current-main evidence surface
+  (the script itself prints the opposite).
+- A graph-axiom result strong enough to ratify a successor-card
+  staggered claim by itself.
+
+## What would close this lane (Path A future work)
+
+If the broader graph-axiom synthesis is to be re-promoted, it would
+require auditing the current force-based staggered card, the corrected
+graph-KG card, and any portability cards as separate runner-backed
+claims, with this note left as historical context.
