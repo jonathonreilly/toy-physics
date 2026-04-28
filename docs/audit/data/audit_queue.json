@@ -1,29 +1,12 @@
 {
   "by_criticality": {
-    "critical": 87,
+    "critical": 86,
     "high": 518,
     "leaf": 625,
     "medium": 86
   },
-  "generated_at": "2026-04-28T12:07:26.103042+00:00",
+  "generated_at": "2026-04-28T12:09:55.543502+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "gauge_vacuum_plaquette_mixed_cumulant_audit_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 6,
-      "load_bearing_score": 15.15,
-      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py",
-      "transitive_descendants": 283
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -141,25 +124,6 @@
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md",
       "ready": true,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py",
-      "transitive_descendants": 282
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "gauge_vacuum_plaquette_distinct_shell_theorem_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "gauge_vacuum_plaquette_mixed_cumulant_audit_note"
-      ],
-      "direct_in_degree": 5,
-      "load_bearing_score": 14.645,
-      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py",
       "transitive_descendants": 282
     },
     {
@@ -544,6 +508,25 @@
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md",
       "ready": false,
       "runner_path": null,
+      "transitive_descendants": 282
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_distinct_shell_theorem_note",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [
+        "gauge_vacuum_plaquette_mixed_cumulant_audit_note"
+      ],
+      "direct_in_degree": 5,
+      "load_bearing_score": 14.645,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py",
       "transitive_descendants": 282
     },
     {
@@ -27272,6 +27255,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 897,
-  "total_pending": 1316
+  "ready_count": 895,
+  "total_pending": 1315
 }
