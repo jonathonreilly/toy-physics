@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T12:23:24.351635+00:00
+**Generated:** 2026-04-28T12:25:22.397258+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 3 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
-| support | 103 |
+| support | 101 |
 | open | 15 |
 | unknown | 703 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 383 |
+| ~~audited_conditional~~ | 385 |
 | ~~audited_failed~~ | 148 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 79 |
-| `audited_conditional` | 151 |
+| `audited_conditional` | 152 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1313 |
+| `unaudited` | 1312 |
 
 | criticality | count |
 |---|---:|
@@ -310,6 +310,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_matrixfree_shared_geometry_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `weak_coupling_retention_note_2026-04-11` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_class_6_c3_breaking_operator_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `yt_color_projection_correction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_ew_delta_r_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_generation_hierarchy_primitive_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -4858,6 +4859,25 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`
   - `NATIVE_GAUGE_CLOSURE_NOTE.md`
   - `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `yt_color_projection_correction_note`
+
+- **Note:** [`YT_COLOR_PROJECTION_CORRECTION_NOTE.md`](../../docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-28-yt_color_projection_correction_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The physical Yukawa readout is y_t(physical) = y_t(Ward) * sqrt(R_conn) with R_conn = (N_c^2 - 1)/N_c^2 = 8/9 applied to the scalar channel.  _(class `C`)_
+- **chain closes:** False — The numerical support packet is internally consistent and the live runner reports 7/7 PASS, including the top-mass, Higgs-direction, double-counting, SM cross-check, and alpha_s checks. The source note itself states that the R_conn = 8/9 bridge remains physically motivated and numerically validated but not derivable from the CMT partition-function identity alone.
+- **rationale:** Issue: the sqrt(8/9) Yukawa correction produces a strong numerical support packet, but the note explicitly says the required R_conn = 8/9 bridge is not yet derived from the CMT partition-function identity alone and needs the same lattice measurement that would close the EW color-projection correction.
+Why this blocks: downstream proposed-retained/promoted rows cannot cite this as a theorem-grade zero-import y_t or top-mass derivation; the load-bearing scalar-channel projection remains conditional on the unclosed R_conn bridge and standard matching/running caveats.
+Repair target: compute and audit R_conn on the SU(3) beta=6 lattice in the scalar channel, then rerun the full Yukawa/pole-mass chain with that measured bridge and explicit matching-order uncertainty.
+Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) improves the live y_t/top/Higgs readout and is not double-counted with Ward matching, not a closed theorem-grade Yukawa prediction.
+- **open / conditional deps cited:**
+  - `R_conn_8_9_not_derived_from_CMT_partition_identity`
+  - `SU3_beta6_scalar_channel_R_conn_measurement_missing`
+  - `standard_lattice_matching_and_SM_running_precision_caveat`
 - **auditor confidence:** high
 
 ### `yt_ew_color_projection_theorem`

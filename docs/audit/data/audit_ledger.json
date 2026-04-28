@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-28T12:23:24.161066+00:00",
-  "generated_at": "2026-04-28T12:23:22.533033+00:00",
-  "invalidation_run_at": "2026-04-28T12:23:24.112590+00:00",
+  "effective_status_computed_at": "2026-04-28T12:25:22.174257+00:00",
+  "generated_at": "2026-04-28T12:25:20.534864+00:00",
+  "invalidation_run_at": "2026-04-28T12:25:22.124332+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-28T12:23:24.014188+00:00",
+  "load_bearing_computed_at": "2026-04-28T12:25:22.019328+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -84703,7 +84703,7 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:minimal_axioms_2026-04-11",
+      "effective_status_reason": "inherited_from:yt_color_projection_correction_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 7.443,
@@ -85428,14 +85428,21 @@
       "verdict_rationale": null
     },
     "yt_color_projection_correction_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-28",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 16.129,
+        "transitive_descendants": 279
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop:fresh-2026-04-28-yt_color_projection_correction_note",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The numerical support packet is internally consistent and the live runner reports 7/7 PASS, including the top-mass, Higgs-direction, double-counting, SM cross-check, and alpha_s checks. The source note itself states that the R_conn = 8/9 bridge remains physically motivated and numerically validated but not derivable from the CMT partition-function identity alone.",
       "claim_id": "yt_color_projection_correction_note",
       "criticality": "critical",
       "current_status": "support",
@@ -85443,30 +85450,34 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 8,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 16.129,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The physical Yukawa readout is y_t(physical) = y_t(Ward) * sqrt(R_conn) with R_conn = (N_c^2 - 1)/N_c^2 = 8/9 applied to the scalar channel.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "9dc31ddb23288df333ae80890b605d7c74fff6f16392abe67ecde5d1d3348fc5",
       "note_path": "docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "R_conn_8_9_not_derived_from_CMT_partition_identity",
+        "SU3_beta6_scalar_channel_R_conn_measurement_missing",
+        "standard_lattice_matching_and_SM_running_precision_caveat"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "C": 2,
+        "D": 5,
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_yt_color_projection_correction.py",
       "title": "Color-Singlet Projection Correction to y_t",
       "transitive_descendants": 279,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the sqrt(8/9) Yukawa correction produces a strong numerical support packet, but the note explicitly says the required R_conn = 8/9 bridge is not yet derived from the CMT partition-function identity alone and needs the same lattice measurement that would close the EW color-projection correction.\nWhy this blocks: downstream proposed-retained/promoted rows cannot cite this as a theorem-grade zero-import y_t or top-mass derivation; the load-bearing scalar-channel projection remains conditional on the unclosed R_conn bridge and standard matching/running caveats.\nRepair target: compute and audit R_conn on the SU(3) beta=6 lattice in the scalar channel, then rerun the full Yukawa/pole-mass chain with that measured bridge and explicit matching-order uncertainty.\nClaim boundary until fixed: safe to claim quantitative support that sqrt(8/9) improves the live y_t/top/Higgs readout and is not double-counted with Ward matching, not a closed theorem-grade Yukawa prediction."
     },
     "yt_constructive_uv_bridge_note": {
       "audit_date": null,
@@ -86028,8 +86039,8 @@
         "yt_explicit_systematic_budget_note"
       ],
       "direct_in_degree": 2,
-      "effective_status": "support",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:yt_color_projection_correction_note",
       "independence": null,
       "intrinsic_status": "support",
       "load_bearing_score": 13.124,
