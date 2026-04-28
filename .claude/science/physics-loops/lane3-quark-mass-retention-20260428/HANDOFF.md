@@ -1,22 +1,21 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T07:49:17Z
-**Current branch:** `physics-loop/lane3-quark-mass-retention-block01-20260428`
-**Current head:** latest pushed branch head; see `git log`
+**Updated:** 2026-04-28T07:59:31Z
+**Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block02-20260428`
+**Current head:** block-02 working checkpoint; see `git log`
 **Loop status:** running
 **Claim status:** open
-**Review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
+**Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
 
 ## Current State
 
-The run is grounded and route-selected. The branch was fast-forwarded to
-current `origin/main`, bringing in the 2026-04-27 Lane 3 bounded-companion
-retention firewall. That firewall is now controlling for this block:
+Block 01 is packaged and PR'd. It landed two Lane 3 boundary artifacts:
 
-```text
-CKM closure + bounded down-type ratios + bounded up-type extension
-do not retain m_u, m_d, m_s, m_c, or m_b.
-```
+- direct 3C generation-stratified quark Ward route closes negatively;
+- minimal 3B Route-2 naturality does not derive `beta_E/alpha_E = 21/4`.
+
+Block 02 is a stacked continuation from block 01. It attacks the exact
+Route-2 E-center/source readout residual.
 
 ## Lock And Supervisor Note
 
@@ -31,52 +30,34 @@ plus the active supervisor flock under this loop pack.
 
 ## Completed In This Checkpoint
 
-Created and verified the 3C-Q direct generation-stratified quark Ward boundary:
+Created and verified the 3B Route-2 `R_conn` center-ratio bridge obstruction:
 
-- `docs/QUARK_GENERATION_STRATIFIED_WARD_FREE_MATRIX_NO_GO_NOTE_2026-04-28.md`
-- `scripts/frontier_quark_generation_stratified_ward_free_matrix_no_go.py`
-- `logs/2026-04-28-quark-generation-stratified-ward-free-matrix-no-go.txt`
-
-Checks:
-
-```text
-new 3C-Q runner: TOTAL PASS=42 FAIL=0
-py_compile: PASS
-Lane 3 firewall: PASS=17 FAIL=0
-quark mass-ratio review packet: TOTAL PASS=46 FAIL=0
-```
-
-Claim movement:
-
-```text
-Direct 3C route from one-Higgs gauge selection + top Ward + retained
-three-generation structure + CKM is closed negatively. It leaves Y_u and Y_d
-singular values free and does not retain non-top quark masses.
-```
-
-Also created and verified the 3B-R2 Route-2 E-channel naturality boundary:
-
-- `docs/QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md`
-- `scripts/frontier_quark_route2_e_channel_readout_naturality_no_go.py`
-- `logs/2026-04-28-quark-route2-e-channel-readout-naturality-no-go.txt`
+- `docs/QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_route2_rconn_center_ratio_bridge_obstruction.py`
+- `logs/2026-04-28-quark-route2-rconn-center-ratio-bridge-obstruction.txt`
 
 Checks:
 
 ```text
-3B-R2 naturality runner: TOTAL PASS=28 FAIL=0
+3B-R2-Rconn runner: TOTAL PASS=26 FAIL=0
 py_compile: PASS
 Route-2 exact readout map: PASS=11 FAIL=0
-Route-2 exact time coupling: PASS=8 FAIL=0
+Route-2 naturality no-go: TOTAL PASS=28 FAIL=0
 Endpoint ratio-chain law: PASS=14 FAIL=0
 ```
 
 Claim movement:
 
 ```text
-Minimal Route-2 carrier naturality plus the T-side candidates does not derive
-beta_E/alpha_E = 21/4. The target is equivalent to the still-unproved
-E-center ratio gamma_T(center)/gamma_E(center) = -8/9, or to using live
-endpoint-distance evidence as a bounded selector.
+The conditional algebra is exact:
+gamma_T(center)/gamma_E(center) = -R_conn = -8/9
+=> q_E = 15/8
+=> beta_E/alpha_E = 21/4.
+
+But current Route-2 carrier columns do not type a source-domain map from the
+retained SU(3) connected color projection to the E/T center endpoint ratio.
+So R_conn is a sharp conditional bridge target and import boundary, not a
+retained up-type scalar-law derivation.
 ```
 
 ## Active Route
@@ -84,22 +65,25 @@ endpoint-distance evidence as a bounded selector.
 Stable checkpoint packaging:
 
 ```text
-Block-01 artifacts were committed, pushed, and opened for review.
+Block 02 needs commit, push, and a stacked PR against block 01.
 ```
-
-Output:
-
-- commit `ddbb8ff7`: boundary artifacts;
-- commit `55d36bcd`: PR body/status;
-- pushed branch `physics-loop/lane3-quark-mass-retention-block01-20260428`;
-- review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/100.
 
 ## Next Exact Action
 
-Continue Lane 3 from the E-center source/readout primitive or broader 3A/3B
-fan-out. Do not claim retained non-top quark masses.
+Commit block-02 artifacts, force-add the ignored log, push
+`physics-loop/lane3-quark-mass-retention-20260428-block02-20260428`, and open
+a stacked PR based on
+`physics-loop/lane3-quark-mass-retention-block01-20260428`.
+
+After packaging, continue Lane 3 from one of:
+
+1. typed source-domain theorem for
+   `gamma_T(center)/gamma_E(center) = -R_conn`;
+2. a broader 3B endpoint/readout no-go showing no current exact support
+   functor can type that bridge;
+3. a sharp 3A down-type local theorem target if one appears.
 
 ## Stop Reason
 
-No stop requested. Lane 3 has not hit a human-judgment stop; it has an active
-hard-route boundary target.
+No stop requested. Lane 3 has not hit a human-judgment stop; block 02 exposes
+a new exact conditional bridge target while keeping the claim status open.

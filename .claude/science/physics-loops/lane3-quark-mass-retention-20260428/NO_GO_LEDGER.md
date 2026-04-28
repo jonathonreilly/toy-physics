@@ -1,6 +1,6 @@
 # Lane 3 No-Go Ledger
 
-**Updated:** 2026-04-28T07:30:44Z
+**Updated:** 2026-04-28T07:59:31Z
 
 | Route / claim | Blocked conclusion | Blocking result | Source | Status for this loop |
 |---|---|---|---|---|
@@ -14,6 +14,7 @@
 | Old Phase 2 interior up-sector partition | Retained interior partition law | Retained Phase 1 exactness forces CP-orthogonal interior partition back to edge; phase-deformed edge remains bounded replacement | `UP_SECTOR_PARTITION_REVISIT_NOTE_2026-04-19.md` | closed for old interior theorem |
 | Minimal Schur-NNI full-solve closes full quark CKM+CP package | Full retained quark CP/mass closure | Magnitudes invert well, but intrinsic Jarlskog area remains far below atlas value on same minimal surface | `QUARK_MASS_RATIO_FULL_SOLVE_NOTE_2026-04-18.md` | support only |
 | Route-2 carrier naturality plus T-side candidates derives `beta_E/alpha_E = 21/4` | Retained up-type E-channel scalar/readout law | Exact restricted carrier and T-side candidates leave `rho_E` free; `21/4` follows only if the equivalent `-8/9` E-center ratio or live endpoint distance is granted | `QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md` | closed for minimal naturality; next target is E-center source/readout primitive |
+| `R_conn = 8/9` numeric match alone derives the Route-2 E-center law | Retained `beta_E/alpha_E = 21/4` and retained up-type scalar law | `-R_conn` conditionally implies `rho_E=21/4`, but only after adding the unproved source-domain bridge `gamma_T(center)/gamma_E(center) = -R_conn`; current Route-2 carrier has no typed color-projection map | `QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md` | closed for direct promotion; open as a sharp bridge theorem target |
 
 ## Reopen Rule
 

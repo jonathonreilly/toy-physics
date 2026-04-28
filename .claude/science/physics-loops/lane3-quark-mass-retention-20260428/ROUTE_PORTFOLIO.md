@@ -1,6 +1,6 @@
 # Lane 3 Route Portfolio
 
-**Updated:** 2026-04-28T07:30:44Z
+**Updated:** 2026-04-28T07:59:31Z
 
 Scores use the physics-loop dramatic-step rubric: claim-state upgrade,
 import retirement, review-blocker closure, artifactability, novelty, hard
@@ -78,6 +78,33 @@ the E-center ratio gamma_T(center)/gamma_E(center) = -8/9, or to using live
 endpoint-distance evidence as a bounded selector. Runner TOTAL PASS=28 FAIL=0.
 ```
 
+## Completed Route 3: 3B-R2-Rconn
+
+Question:
+
+```text
+Can the retained SU(3) color projection R_conn = 8/9 supply the missing
+Route-2 E-center ratio gamma_T(center)/gamma_E(center) = -8/9?
+```
+
+Minimal premise set `A_min`:
+
+1. exact Route-2 restricted carrier columns and endpoint algebra;
+2. conditional T-side candidates `rho_T = -1` and `alpha_T/alpha_E = -2`;
+3. retained `N_c=3` and `R_conn = (N_c^2 - 1)/N_c^2 = 8/9`;
+4. no observed quark masses, fitted Yukawa entries, CKM/J target fitting, or
+   nearest-live-endpoint selector.
+
+Result:
+
+```text
+The conditional algebra is exact: imposing gamma_T(center)/gamma_E(center)
+= -R_conn gives q_E=15/8 and rho_E=21/4. The source-domain identification is
+not present in the current Route-2 carrier, so the result is a conditional
+bridge target and import boundary, not retained up-type scalar closure.
+Runner TOTAL PASS=26 FAIL=0.
+```
+
 ## Stuck Fan-Out Frames
 
 If no route passes after 3C-Q, emulate these frames sequentially before stop:
@@ -92,3 +119,7 @@ If no route passes after 3C-Q, emulate these frames sequentially before stop:
    generation/source scalar law rather than another comparator fit;
 5. down-type NP frame: isolate whether `5/6` has a local non-perturbative
    theorem target within existing retained primitives.
+
+Block 02 satisfied the endpoint/readout frame and partially satisfied the
+atlas-reuse/source-domain frame by checking the retained `R_conn` coincidence
+without promoting it.

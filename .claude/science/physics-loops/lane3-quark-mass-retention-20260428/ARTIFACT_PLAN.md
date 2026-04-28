@@ -1,6 +1,6 @@
 # Lane 3 Artifact Plan
 
-**Updated:** 2026-04-28T07:30:44Z
+**Updated:** 2026-04-28T07:59:31Z
 
 ## Block 01 Artifact Set
 
@@ -30,6 +30,30 @@
    - commit coherent block artifacts;
    - push branch to `origin`;
    - create PR with `gh pr create`, or write `PR_BACKLOG.md`.
+
+## Block 02 Artifact Set
+
+1. Continue from block 01 on stacked branch
+   `physics-loop/lane3-quark-mass-retention-20260428-block02-20260428`.
+2. Execute the 3B Route-2 `R_conn` center-ratio bridge stretch:
+   - note:
+     `docs/QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md`;
+   - runner:
+     `scripts/frontier_quark_route2_rconn_center_ratio_bridge_obstruction.py`;
+   - log:
+     `logs/2026-04-28-quark-route2-rconn-center-ratio-bridge-obstruction.txt`.
+3. Run focused checks:
+   - `PYTHONPATH=scripts python3 scripts/frontier_quark_route2_rconn_center_ratio_bridge_obstruction.py`;
+   - `python3 -m py_compile scripts/frontier_quark_route2_rconn_center_ratio_bridge_obstruction.py`;
+   - inherited Route-2 readout/naturality/ratio-chain runners.
+4. Emulate review-loop:
+   - classify `R_conn` as retained support/conditional bridge, not derivation;
+   - verify no observed masses or fitted Yukawa entries are proof inputs;
+   - verify the missing source-domain identification is explicit.
+5. Package:
+   - commit coherent block artifacts;
+   - push branch to `origin`;
+   - create a stacked PR against block 01, or write `PR_BACKLOG.md`.
 
 ## Non-Goals
 

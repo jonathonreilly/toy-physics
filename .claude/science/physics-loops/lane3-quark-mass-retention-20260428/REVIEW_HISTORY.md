@@ -1,6 +1,6 @@
 # Lane 3 Review History
 
-**Updated:** 2026-04-28T07:30:44Z
+**Updated:** 2026-04-28T07:59:31Z
 
 ## Preflight Review
 
@@ -120,3 +120,52 @@ Disposition:
 - next exact Lane 3 target is the E-center source/readout primitive, especially
   a theorem for `gamma_T(center)/gamma_E(center) = -8/9`, or a broader no-go
   showing endpoint-only naturality cannot select it.
+
+## Artifact Review: 3B-R2-Rconn Center-Ratio Bridge
+
+**Time:** 2026-04-28T07:59:31Z
+
+Artifact reviewed:
+
+- `docs/QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_route2_rconn_center_ratio_bridge_obstruction.py`
+- `logs/2026-04-28-quark-route2-rconn-center-ratio-bridge-obstruction.txt`
+
+Verification:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_quark_route2_rconn_center_ratio_bridge_obstruction.py
+TOTAL: PASS=26, FAIL=0
+
+python3 -m py_compile scripts/frontier_quark_route2_rconn_center_ratio_bridge_obstruction.py
+PASS
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_route2_exact_readout_map.py
+PASS=11 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_route2_e_channel_readout_naturality_no_go.py
+TOTAL: PASS=28, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_endpoint_ratio_chain_law.py
+PASS=14 FAIL=0
+```
+
+Review-loop emulation:
+
+1. The note uses `R_conn=8/9` only as a retained-support conditional bridge
+   candidate; it does not treat the numeric coincidence as a derivation.
+2. The runner proves the exact implication
+   `c_TE=-R_conn => q_E=15/8 => rho_E=21/4`.
+3. The runner also proves the import boundary: current Route-2 carrier columns
+   do not type a color-projection/source-domain map to the E/T center endpoint
+   ratio.
+4. No observed quark masses, fitted Yukawa values, or CKM/J target errors are
+   proof inputs.
+
+Disposition:
+
+- keep artifact;
+- claim status remains `open`;
+- next exact Lane 3 target is a typed source-domain theorem deriving
+  `gamma_T(center)/gamma_E(center) = -R_conn`, or an orthogonal 3A down-type
+  local theorem target if the next fan-out route shifts away from 3B.
