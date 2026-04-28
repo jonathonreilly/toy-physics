@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T11:57:54.965438+00:00
+**Generated:** 2026-04-28T11:59:58.814697+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 77 |
-| _proposed_retained_ | 5 |
+| **retained** | 78 |
+| _proposed_retained_ | 4 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 108 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 77 |
+| `audited_clean` | 78 |
 | `audited_conditional` | 144 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1320 |
+| `unaudited` | 1319 |
 
 | criticality | count |
 |---|---:|
@@ -152,6 +152,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_chokepoint_boundary_fit_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `multipole_tidal_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `nonlabel_grown_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `nonlabel_grown_drift_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `packet_memory_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -3109,6 +3110,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `three_generation_matter_structure_dependency_not_registered`
   - `neutrino_dirac_lane_reduction_dependency_not_registered`
   - `single_higgs_z3_charge_condition_not_derived`
+- **auditor confidence:** high
+
+### `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27`
+
+- **Note:** [`NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md`](../../docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-28-neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27`  (codex-current; independence=fresh_context)
+- **load-bearing step:** At least one additional positive premise is required: a nonzero charge-2 Majorana primitive or equivalent admitted Majorana/seesaw extension, or a separate tiny Dirac `Y_nu` activation law on the surviving Dirac lane.  _(class `A`)_
+- **chain closes:** True — The claim is a negative boundary: the note does not close neutrino masses, but separates the current-stack mu_current=0 surface from the nonzero invertible seesaw benchmark and from a direct one-Higgs Dirac reading of y_nu^eff. The live runner verifies the non-invertibility, direct-Dirac overshoot, benchmark status, and remaining fork with PASS=10 FAIL=0.
+- **rationale:** The retained content is the fork no-go, not full neutrino quantitative closure. The note's load-bearing algebra closes because the current-stack Majorana zero law has det(M_R)=0 while the type-I seesaw benchmark uses a nonzero invertible M_R, so the two surfaces cannot be silently identified. The direct Dirac route also fails on its own terms: y_nu^eff v/sqrt(2) gives about 1.16e9 eV, while the benchmark meV scale would require a separate Yukawa of about 2.9e-13. Residual risk is downstream misuse: this audit does not ratify a final no-go against Majorana or Dirac neutrinos, the solar gap, PMNS quantities, or full Lane 4 mass closure.
 - **auditor confidence:** high
 
 ### `newton_derivation_note`

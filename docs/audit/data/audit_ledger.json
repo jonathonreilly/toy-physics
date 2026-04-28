@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-28T11:57:54.662180+00:00",
-  "generated_at": "2026-04-28T11:57:52.697900+00:00",
-  "invalidation_run_at": "2026-04-28T11:57:54.598450+00:00",
+  "effective_status_computed_at": "2026-04-28T11:59:58.393449+00:00",
+  "generated_at": "2026-04-28T11:59:56.129604+00:00",
+  "invalidation_run_at": "2026-04-28T11:59:58.325409+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-28T11:57:54.469024+00:00",
+  "load_bearing_computed_at": "2026-04-28T11:59:58.190258+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -52001,14 +52001,21 @@
       "verdict_rationale": "Issue: The exact support classification depends on unregistered upstream inputs: one-generation matter closure, three-generation matter structure, reduction to the Dirac neutrino lane, and the explicit single-Higgs definite-Z_3-charge condition. Why this blocks: The matrix-support trichotomy is valid algebra after those charges are supplied, but the audit packet does not establish the charges, the Dirac-lane reduction, or the Higgs charge bridge as clean retained dependencies, so the proposed-retained lane cannot close from this row alone. Repair target: Register clean dependency notes for the generation charges and Dirac-lane reduction, and either derive or keep explicitly bounded the single-Higgs q_H assumption; make the runner read those declared charges rather than hard-coding them as retained. Claim boundary until fixed: It is safe to claim the conditional theorem that given q_L=(0,+1,-1), q_R=(0,-1,+1), and one definite q_H, Y_nu support reduces from nine entries to one of three three-entry permutation patterns."
     },
     "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-28",
+      "audit_state_snapshot": {
+        "criticality": "medium",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 5.907,
+        "transitive_descendants": 14
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop:fresh-2026-04-28-neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The claim is a negative boundary: the note does not close neutrino masses, but separates the current-stack mu_current=0 surface from the nonzero invertible seesaw benchmark and from a direct one-Higgs Dirac reading of y_nu^eff. The live runner verifies the non-invertibility, direct-Dirac overshoot, benchmark status, and remaining fork with PASS=10 FAIL=0.",
       "claim_id": "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
       "criticality": "medium",
       "current_status": "proposed_retained",
@@ -52016,13 +52023,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 4,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "fresh_context",
+      "intrinsic_status": "retained",
       "load_bearing_score": 5.907,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "At least one additional positive premise is required: a nonzero charge-2 Majorana primitive or equivalent admitted Majorana/seesaw extension, or a separate tiny Dirac `Y_nu` activation law on the surviving Dirac lane.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "audited_conditional",
       "max_descendant_status_rank": 10,
       "note_hash": "3013eab6814007da2c698f302fb60b1e43ef111e985e379c315619f3de935d04",
@@ -52030,16 +52037,16 @@
       "open_dependency_paths": [],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 8,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 2,
+        "total_pass": 10
       },
       "runner_path": "scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py",
       "title": "Lane 4 Neutrino Dirac/Seesaw Fork No-Go",
       "transitive_descendants": 14,
-      "verdict_rationale": null
+      "verdict_rationale": "The retained content is the fork no-go, not full neutrino quantitative closure. The note's load-bearing algebra closes because the current-stack Majorana zero law has det(M_R)=0 while the type-I seesaw benchmark uses a nonzero invertible M_R, so the two surfaces cannot be silently identified. The direct Dirac route also fails on its own terms: y_nu^eff v/sqrt(2) gives about 1.16e9 eV, while the benchmark meV scale would require a separate Yukawa of about 2.9e-13. Residual risk is downstream misuse: this audit does not ratify a final no-go against Majorana or Dirac neutrinos, the solar gap, PMNS quantities, or full Lane 4 mass closure."
     },
     "neutrino_lane4_theorem_plan_note_2026-04-28": {
       "audit_date": null,
