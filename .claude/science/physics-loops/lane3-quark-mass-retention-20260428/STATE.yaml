@@ -4,7 +4,7 @@ target: best-honest-status
 science_block: 1
 branch: physics-loop/lane3-quark-mass-retention-block01-20260428
 base_branch: main
-head: 404f0a1b
+head: "latest pushed branch head; see git log"
 started_at_utc: "2026-04-28T07:27:25Z"
 last_checkpoint_utc: "2026-04-28T07:49:17Z"
 hard_deadline_utc: "2026-04-28T11:27:25Z"

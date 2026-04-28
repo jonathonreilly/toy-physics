@@ -2,7 +2,7 @@
 
 **Updated:** 2026-04-28T07:49:17Z
 **Current branch:** `physics-loop/lane3-quark-mass-retention-block01-20260428`
-**Current head:** `404f0a1b`
+**Current head:** latest pushed branch head; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
