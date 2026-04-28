@@ -1,10 +1,6 @@
 ## Lane M — BETA sweep of the lensing slope
 
-**Status:** proposed_retained negative. The apparent coarse-grid `beta=5` recovery of
-canonical `1/b` lensing is **not** a stable narrow-beam limit. It is an isolated
-coarse-resolution spike. Nearby large-`beta` values (`7`, `10`) already leave
-that point, and the `beta=5` refinement check at `H=0.35` flips sign and moves
-to slope `-0.7930`.
+**Status:** bounded conditional negative (status line narrowed 2026-04-28 per audit-lane verdict). The reported coarse-grid `beta = 5` recovery of canonical `1/b` lensing is described in this note as an isolated coarse-resolution spike that is unstable under nearby `beta = 7, 10` and under H-refinement at `H = 0.35`. The runner is not registered in the audit ledger; the result is scoped to Fam1 `b = {3, 4, 5, 6}`; the adjoint-kernel authority used for interpretation is not registered. Not a tier-ratifiable negative theorem.
 
 ### Artifact chain
 
@@ -124,3 +120,39 @@ The next high-value mechanism test is no longer "push beta larger." It is:
 > isolated coarse-grid spike. Nearby large-`beta` values already leave it, and
 > the `H=0.35` refinement check flips sign and lands at slope `-0.7930`. The
 > lensing mechanism is still open, but the simple ray-optics rescue is closed."
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, high criticality, 124 transitive
+descendants):
+
+> Issue: the proposed_retained negative rests on a beta sweep and
+> H-refinement numerical battery, but the audit ledger registers no
+> primary runner/output, and the source note's artifacts are
+> absolute local paths outside the audit packet. Why this blocks: a
+> hostile auditor cannot reproduce the key `beta = 5` coarse slope,
+> the `beta = 7 / 10` sign/shape departures, or the `H = 0.35` sign
+> flip / slope `-0.7930` from registered evidence; the result is
+> also scoped to Fam1 `b = {3, 4, 5, 6}` and does not register the
+> adjoint-kernel authority it uses for interpretation.
+
+## What this note does NOT claim
+
+- A framework-level negative theorem about narrow-beam recovery
+  beyond the single Fam1 sweep.
+- That the adjoint-kernel interpretation is supported by registered
+  authority; that authority is not registered as a one-hop
+  dependency.
+- Reproducibility from the audit packet alone; the runner and log
+  use absolute local paths.
+
+## What would close this lane (Path A future work)
+
+Promoting from bounded conditional to retained would require:
+
+1. Registering `scripts/lensing_beta_sweep.py` and its deterministic
+   output as the primary runner with PASS thresholds.
+2. Registering the adjoint-kernel authority used for interpretation.
+3. Replacing absolute-path artifact links with relative paths inside
+   the audit packet.
+4. Extending or explicitly bounding the family / `b` coverage.
