@@ -1,7 +1,7 @@
 # Poisson Self-Gravity Mechanism Note
 
-**Date:** 2026-04-05
-**Status:** frozen as a control-only family, not a proposed_retained self-gravity mechanism
+**Date:** 2026-04-05 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** bounded control-only family; the exact-lattice Poisson self-gravity mechanism does not close on the four hard-bar criteria and is not a tier-ratified self-gravity mechanism.
 
 ## Purpose
 
@@ -133,3 +133,44 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+## Audit boundary (2026-04-28)
+
+The earlier Status line read "frozen as a control-only family, not a
+`proposed_retained` self-gravity mechanism". The audit-lane parser
+caught the literal token even though the sentence asserts the opposite.
+The Status line has been rephrased.
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: The queued proposed-retained row is not a retained mechanism
+> claim on its own terms: the source status says control-only and not
+> a `proposed_retained` self-gravity mechanism, the evidence notes it
+> cites are unaudited or unknown, and the companion script only prints
+> a hard-coded verdict.
+
+The companion script's `MechanismVerdict` dataclass embeds the verdict
+"control-only family" as a hard-coded constant; it does not run a
+mechanism check, only prints what was decided when the dataclass was
+written. That keeps the note legible as a frozen control verdict but
+does not function as a runner that re-derives the verdict.
+
+## What this note does NOT claim
+
+- A retained self-gravity mechanism on the exact-lattice family.
+- Closure on any of the four hard-bar criteria (exact-zero identity,
+  matched-null stability, end-to-end Born, stronger-than-escape
+  observable).
+- That the printed verdict is the result of a runner check; it is a
+  hard-coded conclusion.
+
+## What would close this lane (Path A future work)
+
+Reinstating a self-gravity mechanism claim would require:
+
+1. A registered runner that re-derives each of the four hard-bar
+   criteria (exact identity at `epsilon = 0`, matched-null stability,
+   step-local AND end-to-end Born, stronger-than-escape observable)
+   rather than printing a hard-coded `MechanismVerdict`.
+2. Audit-clean upstream evidence notes (currently unaudited / unknown).
+3. A stable converged loop with a non-tiny effect.
