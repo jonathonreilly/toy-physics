@@ -21,7 +21,8 @@ existing geometry-support runner.
 
 This runner does NOT certify closure of the audit's P_A1 residual on the
 live authority surface. The prior `chain_uses_RZ_lift = False` PASS was
-withdrawn (review.md) because it was tautological by construction.
+withdrawn because the integrated review findings identify it as
+tautological by construction.
 
 What an actual closure would additionally require is recorded in §6 of
 the support note (promote KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19 to
@@ -284,7 +285,7 @@ def main() -> int:
     print("  (2) deriving the value 2/9 analytically (either as an H_sel(m)")
     print("      selection theorem or via a Callan-Harvey-style ambient bridge).")
     print()
-    print("Neither (1) nor (2) is supplied here. Per review.md.")
+    print("Neither (1) nor (2) is supplied here; see the support note's integrated review findings.")
 
     # ------------------------------------------------------------------------
     # Summary

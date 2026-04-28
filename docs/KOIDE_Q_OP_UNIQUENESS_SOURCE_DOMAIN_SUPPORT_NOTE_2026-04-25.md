@@ -310,8 +310,8 @@ Recovery-tag history (not on `main`, recoverable via the listed tags):
 - V3 closure note (the framing this V4 supersedes) and the V3 Codex
   review record: `archive/koide-q-closure-via-op-uniqueness-2026-04-28`.
   Original commit `9df758bc` on the now-archived
-  `koide-q-closure-via-op-uniqueness` branch; review.md was on that
-  branch at commit `85ff7920`.
+  `koide-q-closure-via-op-uniqueness` branch; the review record was
+  captured on that branch at commit `85ff7920`.
 - Codex's V2 boundary note (`KOIDE_Q_OP_LOCAL_DESCENT_PROTOCOL_BOUNDARY_NOTE_2026-04-25.md`,
   named the same residual class): on the now-archived
   `codex/land-koide-closure-targets-ab-v2-2026-04-25` branch, recoverable
@@ -319,5 +319,5 @@ Recovery-tag history (not on `main`, recoverable via the listed tags):
 
 The §0 review-driven status correction integrates the V3 review's three
 findings (P1×2 + P2) directly into the body of this V4 note rather than
-carrying review.md as a separate file.
+carrying a separate branch-local review companion.
 - `docs/KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE_2026-04-25.md` — SO2 (accepted V1 Q-SO(2) algebra as support)

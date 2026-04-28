@@ -5,7 +5,7 @@ Koide Q OP-Uniqueness Source-Domain Support runner (V4).
 Verifies the support-grade content of
 docs/KOIDE_Q_OP_UNIQUENESS_SOURCE_DOMAIN_SUPPORT_NOTE_2026-04-25.md.
 
-Per Codex's V3 review (review.md on origin/koide-q-closure-via-op-uniqueness),
+Per the V3 review findings integrated into the V4 support note,
 the V3 runner was flagged P1 because it asserted the load-bearing source-
 domain exclusion (`z_in_framework_source_domain = False`) instead of
 certifying it from disk-level checks of retained authorities.
@@ -243,7 +243,7 @@ def main() -> int:
         closure_status_v4 == "support-grade conditional, not retained closure",
         f"V4 status: {closure_status_v4}\n"
         f"Reason: the OP-uniqueness Path (a) interpretation is interpretive,\n"
-        f"not theorem-grade per Codex's V3 review (review.md commit 85ff7920).",
+        f"not theorem-grade per the V3 review findings integrated into the support note.",
     )
 
     # ------------------------------------------------------------------------
