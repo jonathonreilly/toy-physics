@@ -1,7 +1,7 @@
 # DM Neutrino Schur Suppression Theorem
 
-**Date:** 2026-04-15
-**Status:** exact second-order suppression theorem on the proposed_retained local lane
+**Date:** 2026-04-15 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded conditional theorem — IF the projectors and block `M(m, j)` are supplied as inputs, THEN the Schur return gives `j^2 / m`, and therefore `g_weak^2 / 64` IF additionally `m = 32` and `j = g_weak / sqrt(2)`. The IF-conditions (selector curvature, Gamma_1 bridge, bosonic normalization, DM staircase relation) are not registered as audit-clean dependencies; this is conditional algebra on selected inputs, not an independently audit-clean DM denominator result.
 **Script:** `scripts/frontier_dm_neutrino_schur_suppression_theorem.py`
 
 ---
@@ -183,3 +183,50 @@ That updated boundary is consistent with the new external branch work:
 
 Those notes tighten the Majorana lane to one local source slot, but do not yet
 force its activation.
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, high criticality, 147 transitive
+descendants):
+
+> Issue: The exact Schur identity is proved for the chosen local
+> block, but the theorem's retained claim depends on unregistered
+> upstream inputs: the retained weak-axis Higgs family, the direct
+> post-EWSB Gamma_1 bridge, the bosonic-normalization result
+> `j = g_weak / sqrt(2)`, and the staircase conversion from `y_eff`
+> to `k_eff`. Why this blocks: Without those dependencies in the
+> audit packet and clean in the ledger, the result is conditional
+> algebra on selected inputs rather than an independently retained
+> local neutrino suppression theorem.
+
+> Claim boundary until fixed: It is safe to claim that for the
+> specified projectors and block `M(m, j)`, the Schur return gives
+> `j^2 / m` and therefore gives `g_weak^2 / 64` if `m = 32` and
+> `j = g_weak / sqrt(2)`; it is not audit-retained as a closed DM
+> denominator result.
+
+The Status line has been narrowed to make the IF-conditions explicit.
+
+## What this note does NOT claim
+
+- A closed DM denominator result on the local lane.
+- Audit-clean upstream inputs for: the retained weak-axis Higgs
+  family, the post-EWSB `Gamma_1` bridge, the bosonic normalization
+  `j = g_weak / sqrt(2)`, or the staircase conversion `y_eff -> k_eff`.
+- That `m = 32` and `j = g_weak / sqrt(2)` are derived; they are
+  inputs.
+
+## What would close this lane (Path A future work)
+
+Promoting from bounded conditional to retained would require:
+
+1. Audit-clean dependency notes for the selector curvature giving
+   `m = 32`.
+2. Audit-clean dependency notes for the post-EWSB `Gamma_1` bridge.
+3. Audit-clean dependency notes for the bosonic normalization
+   `j = g_weak / sqrt(2)`.
+4. Audit-clean dependency notes for the DM staircase relation
+   converting `y_eff` to `k_eff`.
+5. A runner that reads or computes those declared inputs rather than
+   hard-coding them, and that separates the exact Schur complement
+   theorem from the downstream `k_eff` comparison.
