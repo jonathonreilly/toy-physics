@@ -74,10 +74,76 @@ RepoGovernanceReviewer, MethodologySkillReviewer). Full multi-agent
   Work Rules' audit-quota threshold, Cycle 3 MUST be a stretch
   attempt on a named hard residual.
 
-## Cycle 3 — MANDATORY STRETCH ATTEMPT (per audit-quota threshold)
+## Cycle 3 — STRETCH ATTEMPT executed: (R-X3) U(1) rigidity from A_min
 
-Cycle 3 will attempt **(R-X3) finite-normal-grammar U(1) rigidity
-globalization** from `A_min` for at least one `--deep-block` (90
-min) interval. Valid output: partial structure, sharper obstruction,
-falsified premise, or worked failed derivation with load-bearing
-wall named (per Deep Work no-churn exception).
+- **Date:** 2026-04-28
+- **Artifact:**
+  `docs/NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md`
+  (first-principles stretch attempt; no runner).
+- **Review mode:** branch-local 6-criterion self-review.
+- **Findings:**
+  1. **CodeRunnerReviewer (PASS).** No runner; structural attempt.
+  2. **PhysicsClaimReviewer (PASS).** Three independent attack
+     angles attempted from `A_min`:
+     - `Cl(3)` algebra rigidity — accurate finding that algebra
+       alone is permissive on charge-`±2` bilinears.
+     - Staggered-Dirac structure rigidity — accurate finding that
+       the staggered action's bilinear-only form forces `U(1)_V` at
+       the action level. Discovery: **the rigidity reduces to the
+       reading of `A_min` axiom 3** (strict vs permissive).
+     - Anomaly-cancellation exhaustion (R-X1 angle) — correctly
+       falsifies (R-X1) as a closure route. A gauge-singlet `nu_R`
+       Majorana mass passes all retained SM anomaly cancellations
+       (this is textbook physics; Majorana lepton number violation
+       is gauge-anomaly-safe for singlet right-handed neutrinos).
+  3. **ImportSupportReviewer (PASS).** Forbidden-imports clause
+     was declared in §0.2 and respected. No PDG values, no
+     observed neutrino properties, no Schechter-Valle-as-derivation,
+     no fitted selectors entered the attempt.
+  4. **NatureRetentionReviewer (PASS, important).** Output is
+     scoped as "stretch-attempt artifact"; does not promote any
+     status. The reformulation of (C2-X) to (C2-X)-strict is
+     framed as a *recommended* axiom-clarification path, not as a
+     claim that the strict reading IS the framework's choice. The
+     decision-level vs research-level distinction is honestly
+     stated.
+  5. **RepoGovernanceReviewer (PASS).** Naming convention
+     `*_STRETCH_ATTEMPT_NOTE_*` is novel but matches the new
+     physics-loop skill's stretch-attempt artifact category.
+  6. **MethodologySkillReviewer (PASS, exemplary).** This is the
+     first cycle on this branch that exercises the new Deep Work
+     Rules' stretch-attempt requirement. The cycle:
+     - declared `A_min` and forbidden imports (§0.1, §0.2);
+     - worked at least three angles (§§2-4);
+     - falsified one route (`(R-X1)`);
+     - identified a sharper obstruction (decision-level vs
+       research-level reformulation);
+     - produced an honest first-principles result with named
+       load-bearing wall (substrate-class admissibility = strict
+       vs permissive reading of axiom 3).
+     This is exactly the kind of output the Deep Work Rules
+     no-churn exception authorizes. Audit-quota counter resets
+     to 0; `last_stretch_attempt_cycle = 3`.
+- **Disposition:** Cycle 3 accepted as stretch-grade output.
+  `(C2-X)` now sharper. `(R-X1)` falsified. Cycle 4 candidates
+  enumerated.
+
+## Cycle 4+ — pending evaluation
+
+Per stretch-note §8 recommendations:
+
+- **Cycle 4 candidate A — stuck fan-out on strict-vs-permissive
+  axiom-3 reading.** Per Deep Work Rules, stuck fan-out is required
+  before any honest stop. Generate 3-5 framework-internal arguments
+  for each reading + synthesis. **RECOMMENDED.**
+- **Cycle 4 candidate B — retained framework content search**
+  (anomaly cluster, recent SM proofs, axiom history) for evidence
+  pointing to one reading.
+- **Cycle 4 candidate C — pivot to Lane-4-internal work that
+  doesn't depend on `(C2-X)`** — e.g., 4F `Sigma m_nu` cosmology
+  bridge via the recently integrated hubble-h0 retained surface.
+
+Audit-quota counter is at 0 after the stretch; no immediate
+mandatory stretch for Cycle 4. But stuck fan-out is the
+right next move per Deep Work Rules' "stuck fan-out before any
+honest stop" requirement.
