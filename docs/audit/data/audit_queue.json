@@ -3,9 +3,9 @@
     "critical": 80,
     "high": 517,
     "leaf": 627,
-    "medium": 86
+    "medium": 85
   },
-  "generated_at": "2026-04-28T12:28:48.495736+00:00",
+  "generated_at": "2026-04-28T12:30:31.570305+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -14697,23 +14697,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dispersion_relation_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 2,
-      "load_bearing_score": 3.585,
-      "note_path": "docs/DISPERSION_RELATION_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 5
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "bmv_entanglement_note_2026-04-11",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -27185,6 +27168,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 887,
-  "total_pending": 1310
+  "ready_count": 886,
+  "total_pending": 1309
 }

@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-28T12:28:48.446283+00:00",
-  "generated_at": "2026-04-28T12:28:46.809735+00:00",
-  "invalidation_run_at": "2026-04-28T12:28:48.398545+00:00",
+  "effective_status_computed_at": "2026-04-28T12:30:31.509154+00:00",
+  "generated_at": "2026-04-28T12:30:29.747973+00:00",
+  "invalidation_run_at": "2026-04-28T12:30:31.455460+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-28T12:28:48.297744+00:00",
+  "load_bearing_computed_at": "2026-04-28T12:30:31.333523+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -25,8 +25,8 @@
         "lensing_combined_invariant_note"
       ],
       "direct_in_degree": 0,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:dispersion_relation_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 0.0,
@@ -6709,8 +6709,8 @@
         "dispersion_relation_note"
       ],
       "direct_in_degree": 3,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:dispersion_relation_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 3.822,
@@ -16225,14 +16225,21 @@
       "verdict_rationale": null
     },
     "dispersion_relation_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-28",
+      "audit_state_snapshot": {
+        "criticality": "medium",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 3.585,
+        "transitive_descendants": 5
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop:fresh-2026-04-28-dispersion_relation_note",
+      "auditor_confidence": "medium",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source note supports the narrowed boundary that the grown-DAG dispersion is currently undetermined, with Schr\u00f6dinger and Klein-Gordon fits too close to distinguish. The ledger has no runner_path for live verification, and the note itself leaves finer-H and broader-form discrimination open.",
       "claim_id": "dispersion_relation_note",
       "criticality": "medium",
       "current_status": "unknown",
@@ -16240,18 +16247,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 2,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 3.585,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the actual Fam1 grown DAG, Schr\u00f6dinger R^2=0.994 and Klein-Gordon R^2=0.992 are too close to distinguish, so neither relativistic nor non-relativistic dispersion is ruled out.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "f53482d4b81b802380748c535504268e361bf99ace24a7292e0fa9d6f4a76ba1",
       "note_path": "docs/DISPERSION_RELATION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "no_ledger_runner_for_live_dispersion_artifact_chain",
+        "grown_DAG_Schrodinger_KG_discrimination_unresolved",
+        "continuum_limit_m_eff_not_converged"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
@@ -16263,7 +16274,7 @@
       "runner_path": null,
       "title": "Dispersion Relation: Geometry-Dependent, Not Decisively Relativistic or Non-Relativistic",
       "transitive_descendants": 5,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note correctly retracts the decisive 2D non-relativistic claim, but the grown-DAG evidence is non-decisive and there is no ledger runner for a live audit of the artifact chain.\nWhy this blocks: downstream lensing proposed-retained/promoted rows cannot use this as a settled dispersion law; both relativistic and non-relativistic comparisons remain possible on the actual geometry.\nRepair target: provide a live runner for the 3D grown-DAG dispersion tests with finer H, more p-values, and explicit model-selection thresholds that decisively separate candidate dispersion forms.\nClaim boundary until fixed: safe to claim the dispersion type is currently undetermined on the grown DAG, not a Schr\u00f6dinger, Klein-Gordon, or lensing-explanation theorem."
     },
     "distance_law_3d_64_closure_note_2026-04-11": {
       "audit_date": "2026-04-26",
@@ -47409,7 +47420,7 @@
         "born_scattering_comparison_note"
       ],
       "direct_in_degree": 2,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "inherited_from:born_scattering_comparison_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",

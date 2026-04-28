@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T12:28:48.637561+00:00
+**Generated:** 2026-04-28T12:30:31.731484+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -25,22 +25,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 184 |
 | support | 100 |
 | open | 15 |
-| unknown | 700 |
+| unknown | 696 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 389 |
+| ~~audited_conditional~~ | 393 |
 | ~~audited_failed~~ | 148 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 79 |
-| `audited_conditional` | 154 |
+| `audited_conditional` | 155 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1310 |
+| `unaudited` | 1309 |
 
 | criticality | count |
 |---|---:|
@@ -189,6 +189,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cross_family_universality_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `diamond_nv_phase_ramp_signal_budget_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `diamond_signal_budget_hardening_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dispersion_relation_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `distance_law_breakpoint_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `distance_law_frontier_audit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_chamber_bound_derivation_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1014,6 +1015,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md`
 - **auditor confidence:** high
+
+### `dispersion_relation_note`
+
+- **Note:** [`DISPERSION_RELATION_NOTE.md`](../../docs/DISPERSION_RELATION_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-28-dispersion_relation_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the actual Fam1 grown DAG, Schrödinger R^2=0.994 and Klein-Gordon R^2=0.992 are too close to distinguish, so neither relativistic nor non-relativistic dispersion is ruled out.  _(class `C`)_
+- **chain closes:** False — The source note supports the narrowed boundary that the grown-DAG dispersion is currently undetermined, with Schrödinger and Klein-Gordon fits too close to distinguish. The ledger has no runner_path for live verification, and the note itself leaves finer-H and broader-form discrimination open.
+- **rationale:** Issue: the note correctly retracts the decisive 2D non-relativistic claim, but the grown-DAG evidence is non-decisive and there is no ledger runner for a live audit of the artifact chain.
+Why this blocks: downstream lensing proposed-retained/promoted rows cannot use this as a settled dispersion law; both relativistic and non-relativistic comparisons remain possible on the actual geometry.
+Repair target: provide a live runner for the 3D grown-DAG dispersion tests with finer H, more p-values, and explicit model-selection thresholds that decisively separate candidate dispersion forms.
+Claim boundary until fixed: safe to claim the dispersion type is currently undetermined on the grown DAG, not a Schrödinger, Klein-Gordon, or lensing-explanation theorem.
+- **open / conditional deps cited:**
+  - `no_ledger_runner_for_live_dispersion_artifact_chain`
+  - `grown_DAG_Schrodinger_KG_discrimination_unresolved`
+  - `continuum_limit_m_eff_not_converged`
+- **auditor confidence:** medium
 
 ### `distance_law_3d_64_closure_note_2026-04-11`
 
