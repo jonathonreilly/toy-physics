@@ -1,8 +1,8 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T09:44:28Z
+**Updated:** 2026-04-28T09:48:21Z
 **Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block12-20260428`
-**Current head:** block-12 working checkpoint; see `git log`
+**Current head:** `86bb3ead` plus PR-status bookkeeping; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
@@ -16,11 +16,11 @@
 **Block 09 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/108
 **Block 10 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/109
 **Block 11 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/110
-**Block 12 review PR:** pending packaging
+**Block 12 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/111
 
 ## Current State
 
-Blocks 01 through 11 are packaged and PR'd. Block 12 is a stacked
+Blocks 01 through 12 are packaged and PR'd. Block 12 is a stacked
 continuation from block 11. It records an exact joint 3B/3C rank boundary:
 
 ```text
@@ -89,18 +89,17 @@ typed edge supplies C3 coefficients or physical channel assignment.
 
 ## Active Route
 
-Block 12 needs packaging:
+Block 12 has been packaged:
 
 ```text
-branch physics-loop/lane3-quark-mass-retention-20260428-block12-20260428
-base physics-loop/lane3-quark-mass-retention-20260428-block11-20260428
-PR body .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK12.md
+commit 86bb3ead: physics-loop lane3 block12 rpsr c3 rank boundary
+pushed branch physics-loop/lane3-quark-mass-retention-20260428-block12-20260428
+stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/111
 ```
 
 ## Next Exact Action
 
-Package block 12, push it, and open a stacked PR against block 11. Then
-continue Lane 3 only from one of:
+Continue Lane 3 only from one of:
 
 1. C3 coefficient source law;
 2. physical Fourier-channel assignment for `u,c,t`;

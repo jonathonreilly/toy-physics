@@ -736,7 +736,7 @@ Disposition:
 
 - keep artifact;
 - claim status remains `open`;
-- stacked review PR pending packaging;
+- stacked review PR opened: https://github.com/jonathonreilly/cl3-lattice-framework/pull/111;
 - next exact Lane 3 action requires a derived C3 coefficient source law,
   physical channel assignment, two-ratio readout, sector/scale bridge, 3A
   scale theorem, or new 3B source primitive.
