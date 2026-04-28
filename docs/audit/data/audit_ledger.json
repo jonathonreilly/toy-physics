@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-28T12:33:46.667929+00:00",
-  "generated_at": "2026-04-28T12:33:45.031494+00:00",
-  "invalidation_run_at": "2026-04-28T12:33:46.619630+00:00",
+  "effective_status_computed_at": "2026-04-28T12:35:16.794399+00:00",
+  "generated_at": "2026-04-28T12:35:15.157154+00:00",
+  "invalidation_run_at": "2026-04-28T12:35:16.746940+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-28T12:33:46.523084+00:00",
+  "load_bearing_computed_at": "2026-04-28T12:35:16.650354+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -46457,8 +46457,8 @@
       "load_bearing_score": 1.5,
       "load_bearing_step": "The h=0.125 continuation did not complete in a practical runtime window, so h=0.25 remains the last Born-clean raw refinement point and no canonical h=0.125 extension is promotable.",
       "load_bearing_step_class": "C",
-      "max_descendant_status": "unknown",
-      "max_descendant_status_rank": 30,
+      "max_descendant_status": "audited_conditional",
+      "max_descendant_status_rank": 10,
       "note_hash": "4ffe8bf89d532d31369a57f75ae12fabcb6138a012cc38cb5155509b227bf81b",
       "note_path": "docs/LATTICE_NN_HIGH_PRECISION_NOTE.md",
       "open_dependency_paths": [
@@ -79884,14 +79884,21 @@
       "verdict_rationale": "The claim is not a broad physical amplification theorem; it is a bounded negative result on one exact-lattice replay. The runner computes the static and oscillating retarded-source deflections for the five stated absorber strengths and reproduces the frozen table, including the largest ratio of 1.012 at alpha = 0.50. Because the note keeps the conclusion within that harness and reports the raw denominator, the chain closes on its own terms."
     },
     "wave_direct_dm_family_scout_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-28",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 1.5,
+        "transitive_descendants": 1
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop:fresh-2026-04-28-wave_direct_dm_family_scout_note",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source note supports only an exploratory one-seed, one-strength scout across Fam1/Fam2/Fam3. The ledger has no runner_path for live verification, and the note explicitly says it is not a portability, multi-seed, control-stack, or continuum-stability claim.",
       "claim_id": "wave_direct_dm_family_scout_note",
       "criticality": "leaf",
       "current_status": "unknown",
@@ -79899,18 +79906,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 1.5,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "All three canonical families keep the same negative sign and material normalized effect at one seed and one strength, but a portability claim still requires the full null/linearity stack and multiple seeds per family.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "2b7057bd2def5a0f0646ad38db3b24666fd31c05900bbe89bbee8908ca5307ba",
       "note_path": "docs/WAVE_DIRECT_DM_FAMILY_SCOUT_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "no_ledger_runner_for_live_wave_direct_dm_family_scout",
+        "multi_seed_family_portability_batch_missing",
+        "null_linearity_and_continuum_control_stack_missing"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
@@ -79922,7 +79933,7 @@
       "runner_path": null,
       "title": "Wave Direct-dM Family Scout",
       "transitive_descendants": 1,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note reports a directionally consistent one-seed, one-strength family scout, but explicitly disclaims portability, multi-seed coverage, full controls, and continuum stability.\nWhy this blocks: downstream wave direct-dM proposed-retained/promoted rows cannot use this as cross-family validation; it is only a scout that justifies a larger batch.\nRepair target: run and audit a full Fam1/Fam2/Fam3 portability batch with multiple seeds, S=0 nulls, weak-strength sweeps, and both retained H values.\nClaim boundary until fixed: safe to claim the reference-strength effect is not obviously Fam1-local in this scout, not a portability or matched-history validation theorem."
     },
     "wave_direct_dm_h025_fam1_seed0_control_note": {
       "audit_date": null,
@@ -81089,7 +81100,7 @@
         "wave_direct_dm_h025_feasibility_note"
       ],
       "direct_in_degree": 0,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "inherited_from:wave_direct_dm_family_scout_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",

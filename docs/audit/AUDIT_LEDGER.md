@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T12:33:46.868884+00:00
+**Generated:** 2026-04-28T12:35:16.997139+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -25,22 +25,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 184 |
 | support | 100 |
 | open | 15 |
-| unknown | 691 |
+| unknown | 689 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 398 |
+| ~~audited_conditional~~ | 400 |
 | ~~audited_failed~~ | 148 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 79 |
-| `audited_conditional` | 157 |
+| `audited_conditional` | 158 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1307 |
+| `unaudited` | 1306 |
 
 | criticality | count |
 |---|---:|
@@ -307,6 +307,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `vector_sector_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_3plus1d_promotions_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `wave_direct_dm_family_scout_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `wave_equation_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_radiation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_retardation_continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4707,6 +4708,25 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** On the retained exact-lattice harness, the oscillating-source/static-source ratio stays close to 1x, with largest ratio 1.012 at alpha = 0.50.  _(class `C`)_
 - **chain closes:** True — The live runner reproduces every frozen alpha row and the best-ratio summary. The source note limits the conclusion to this exact-lattice absorber sweep and explicitly rejects the broader near-horizon amplification headline.
 - **rationale:** The claim is not a broad physical amplification theorem; it is a bounded negative result on one exact-lattice replay. The runner computes the static and oscillating retarded-source deflections for the five stated absorber strengths and reproduces the frozen table, including the largest ratio of 1.012 at alpha = 0.50. Because the note keeps the conclusion within that harness and reports the raw denominator, the chain closes on its own terms.
+- **auditor confidence:** high
+
+### `wave_direct_dm_family_scout_note`
+
+- **Note:** [`WAVE_DIRECT_DM_FAMILY_SCOUT_NOTE.md`](../../docs/WAVE_DIRECT_DM_FAMILY_SCOUT_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-28-wave_direct_dm_family_scout_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** All three canonical families keep the same negative sign and material normalized effect at one seed and one strength, but a portability claim still requires the full null/linearity stack and multiple seeds per family.  _(class `C`)_
+- **chain closes:** False — The source note supports only an exploratory one-seed, one-strength scout across Fam1/Fam2/Fam3. The ledger has no runner_path for live verification, and the note explicitly says it is not a portability, multi-seed, control-stack, or continuum-stability claim.
+- **rationale:** Issue: the note reports a directionally consistent one-seed, one-strength family scout, but explicitly disclaims portability, multi-seed coverage, full controls, and continuum stability.
+Why this blocks: downstream wave direct-dM proposed-retained/promoted rows cannot use this as cross-family validation; it is only a scout that justifies a larger batch.
+Repair target: run and audit a full Fam1/Fam2/Fam3 portability batch with multiple seeds, S=0 nulls, weak-strength sweeps, and both retained H values.
+Claim boundary until fixed: safe to claim the reference-strength effect is not obviously Fam1-local in this scout, not a portability or matched-history validation theorem.
+- **open / conditional deps cited:**
+  - `no_ledger_runner_for_live_wave_direct_dm_family_scout`
+  - `multi_seed_family_portability_batch_missing`
+  - `null_linearity_and_continuum_control_stack_missing`
 - **auditor confidence:** high
 
 ### `wave_equation_self_field_note`
