@@ -1,7 +1,7 @@
-# Wave-Retardation Continuum Limit — NEGATIVE (Comparator-Dominated, Not Retardation-Dominated)
+# Wave-Retardation Continuum Limit — Conditional Negative (Comparator-Dominated)
 
-**Date:** 2026-04-07
-**Status:** proposed_retained negative — refining the lattice spacing H from 0.5 to 0.35 to 0.25 (with physical parameters held approximately constant; v/c drifts 3% at medium due to integer rounding) does NOT give a converged value for the retardation magnitude under any of **three** tested c=∞ comparators: cached static slices at NL_dyn (`dI`), equilibrated static slices at 3×NL_dyn (`dIeq`), or the corrected radial imposed-Newton field (`dN`). dM (retarded wave field) is fairly stable across the refinement (14% monotone drift) — the instability is in the comparator construction, not in the retarded field. After correcting the imposed-Newton comparator to include the transverse `y` term, `dN` no longer provides a cleaner magnitude story: `rel_MN` runs `25.60% → 1.26% → 31.24%`, while `rel_MIeq` runs `74.11% → 29.44% → 23.16%`. `dIeq` is the least unstable comparator on the last refinement step, but it still does **not** converge to `dN` (`rel_IeqN` runs `80.74% → 30.33% → 47.17%`) and does not itself converge. The "M ≠ I" existence is logically valid, but the magnitude does not survive lattice refinement under any tested comparator. The retarded field dM itself is continuum-stable and remains a well-defined physical quantity; the issue is the reference it's compared against.
+**Date:** 2026-04-07 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded conditional negative — the reported numerical battery says that refining lattice spacing `H = 0.5 / 0.35 / 0.25` does NOT give a converged retardation magnitude under any of three tested `c=∞` comparators, but the runner is not registered in the audit ledger as the primary runner. The `M ≠ I` existence is logically valid; the magnitude statement is conditional on the unregistered computation and on the absence of a discrete static comparator theorem. The retarded field `dM` itself is continuum-stable on the reported runs.
 
 ## Artifact chain
 
@@ -488,3 +488,51 @@ that difference is not a robust physical number.
 > unaffected. The retarded-vs-instantaneous magnitude claim of
 > Lanes 6 and 8b is downgraded from 'quantitative prediction' to
 > 'existence only at fixed H'."
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, high criticality, 125 transitive
+descendants):
+
+> Issue: the retained negative is load-bearing on a numerical
+> H-refinement and three-comparator sweep, but the audit ledger
+> registers no primary runner or runner output for
+> `wave_retardation_continuum_limit_note`, and the note itself says
+> the correct exact discrete static comparator is still the
+> bottleneck. Why this blocks: without a registered deterministic
+> computation, a hostile auditor cannot verify the rel_MI, rel_MN,
+> rel_MIeq, rel_IeqN, dM-drift, integer-rounding, or
+> corrected-radial-distance numbers; and without the exact static
+> comparator theorem/solve, the broad statement about a continuum
+> retardation magnitude is limited to the particular tested
+> comparators.
+
+> Claim boundary until fixed: it is safe to say that the source note
+> reports a conditional negative for the tested cached-static,
+> equilibrated-static, and imposed-Newton comparators, and that the
+> reported tables would downgrade the Lane 6/8b magnitude if
+> reproduced; it is not yet an audited continuum theorem about
+> retardation magnitude.
+
+## What this note does NOT claim
+
+- A continuum retardation-magnitude theorem audited beyond the three
+  tested comparators.
+- That the reported numerical tables (`rel_MI`, `rel_MN`, `rel_MIeq`,
+  `rel_IeqN`, `dM` drift) are independently verifiable from a
+  registered runner; the runner is currently not registered.
+- An exact discrete static comparator theorem; the note explicitly
+  says this is still the bottleneck.
+
+## What would close this lane (Path A future work)
+
+Promoting from bounded conditional to retained would require:
+
+1. Registering `scripts/wave_retardation_continuum_limit.py` as the
+   primary runner.
+2. Including deterministic output for the `H = 0.50 / 0.35 / 0.25`
+   battery.
+3. Making the runner assert the reported tables and corrected `dN`
+   geometry.
+4. Adding a direct discrete static solve or an analytic discrete
+   Green-function comparator for the implemented lattice operator.
