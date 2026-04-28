@@ -1,8 +1,8 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T09:35:38Z
+**Updated:** 2026-04-28T09:39:48Z
 **Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block11-20260428`
-**Current head:** block-11 working checkpoint; see `git log`
+**Current head:** `1cbc2dbc` plus PR-status bookkeeping; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
@@ -15,11 +15,11 @@
 **Block 08 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/107
 **Block 09 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/108
 **Block 10 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/109
-**Block 11 review PR:** pending packaging
+**Block 11 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/110
 
 ## Current State
 
-Blocks 01 through 10 are packaged and PR'd. Block 11 is a stacked
+Blocks 01 through 11 are packaged and PR'd. Block 11 is a stacked
 continuation from block 10. It records an exact 3B readout boundary:
 
 ```text
@@ -87,18 +87,17 @@ a top-compatible sector/scale bridge.
 
 ## Active Route
 
-Block 11 needs packaging:
+Block 11 has been packaged:
 
 ```text
-branch physics-loop/lane3-quark-mass-retention-20260428-block11-20260428
-base physics-loop/lane3-quark-mass-retention-20260428-block10-20260428
-PR body .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK11.md
+commit 1cbc2dbc: physics-loop lane3 block11 rpsr readout underdetermination
+pushed branch physics-loop/lane3-quark-mass-retention-20260428-block11-20260428
+stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/110
 ```
 
 ## Next Exact Action
 
-Package block 11, push it, and open a stacked PR against block 10. Then
-continue Lane 3 only from one of:
+Continue Lane 3 only from one of:
 
 1. derived two-ratio RPSR readout law;
 2. generation/source assignment for up-type singular-value gaps;
