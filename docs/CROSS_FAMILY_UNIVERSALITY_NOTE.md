@@ -1,7 +1,7 @@
-# Cross-Family Consistency: Dispersion + Lensing at H=0.5
+# Cross-Family Consistency: Dispersion + Lensing at H=0.5 (Conditional)
 
-**Date:** 2026-04-08 (revised 2026-04-09 after review)
-**Status:** proposed_retained POSITIVE (bounded) — at H=0.5, the family-mean dispersion and lensing observables are consistent across all three tested DAG families. The Schrödinger/KG near-tie persists in every family. However, per-seed variance is large (slope σ ≈ 0.16–0.23), so the supported claim is "no detectable family effect at H=0.5," not "the physics is family-independent." Fine-H (H=0.25) universality is **untested** for Fam2 and Fam3.
+**Date:** 2026-04-08 (status line narrowed 2026-04-28 per audit-lane verdict; revised 2026-04-09 after earlier review)
+**Status:** bounded conditional finite-runner consistency at `H = 0.5` — family-mean dispersion and lensing observables agree across the three tested DAG families on the registered seed-mean output, with the Schrödinger/KG near-tie holding in each family. Per-seed variance and statistical power are not reported by the runner, so the "no detectable family effect" wording is unsupported; fine-H (`H = 0.25`) universality is untested on Fam2 / Fam3. Not a tier-ratifiable universality theorem.
 
 ## What was tested
 
@@ -75,3 +75,31 @@ So the dispersion IS geometry-dependent at the lattice-type level. What this not
 > Fine-H (H=0.25) universality is untested for Fam2/Fam3. The claim
 > scope is limited to the grown-DAG generator's parameter space, not
 > geometry in general."
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, leaf criticality):
+
+> Issue: the live scripts reproduce the H=0.5 seed-mean values, but
+> the proposed-retained wording says there is no detectable family
+> effect; that detection/noise statement relies on per-seed variance
+> and statistical power that the current runners do not report or
+> test. Why this blocks: close seed-mean fits across five seeds show
+> finite-runner consistency, not a closed exclusion of family effects
+> at the sampled size, and not universality beyond the three chosen
+> grown-DAG parameter sets.
+
+## What this note does NOT claim
+
+- A tier-ratifiable cross-family universality theorem.
+- A statistically-powered exclusion of family effects (per-seed
+  variance and power are not reported by the runner).
+- Fine-H (`H = 0.25`) universality on Fam2 / Fam3 (untested).
+
+## What would close this lane (Path A future work)
+
+A retained universality theorem would require:
+
+1. A runner that reports per-seed variance and statistical power.
+2. Fine-H (`H = 0.25`) tests on Fam2 / Fam3.
+3. Hard PASS thresholds for cross-family agreement.
