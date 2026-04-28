@@ -11,12 +11,13 @@ base: origin/main
 base_commit_at_start: "7a85d151 methodology: rename frontier workstream to physics loop"
 lock_status: unavailable
 lock_note: "scripts/automation_lock.py hardcodes /Users/jonreilly paths; this worktree is on /Users/jonBridger. Skipping cooperative lock per skill optionality."
-current_phase: cycle-3-complete
-cycles_completed: 3
-audit_grade_cycles_in_a_row: 0
+current_phase: cycle-4-complete
+cycles_completed: 4
+audit_grade_cycles_in_a_row: 1
 last_stretch_attempt_cycle: 3
+last_stuck_fanout_cycle: 4
 active_route: null
-active_hard_residual: "(C2-X)-strict: a clarification of A_min axiom 3 to read 'staggered-Dirac partition exclusively, no Pfaffian/pairing extensions'. Decision-level obstruction (axiom interpretation), not research-level. If adopted, unconditionally lifts the Cycle-2 conditional Dirac global theorem."
+active_hard_residual: "(C2-X) under permissive reading: research-level obstruction. Best remaining attack identified as (SR-2) continuum-limit scalar 2-point incompatibility with Pfaffian extensions — a single-cycle structural attempt to show retained continuum-limit boost-covariant free-scalar 2-point closure constrains admissible Pfaffian pairings to trivial. (SR-1) Lorentz-onset incompatibility and (SR-3) stronger SM anomaly cluster are alternates."
 files_touched:
   - .claude/science/physics-loops/neutrino-quantitative-20260428/STATE.yaml
   - .claude/science/physics-loops/neutrino-quantitative-20260428/GOAL.md
@@ -31,6 +32,7 @@ files_touched:
   - docs/NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md
   - docs/NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md
   - docs/NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md
+  - docs/NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md
 open_imports:
   - "absolute neutrino mass m_lightest — primary retirement target (Lane 4A)"
   - "Delta m^2_21 (solar mass-squared difference) — observational; Lane 4B retirement target"
@@ -44,10 +46,12 @@ review_findings:
   - "Cycle 1 review (branch-local 6-criterion self-review): all PASS. Theorem-plan accurately maps the seven Lane-4 derivation targets and their cross-lane dependencies. 4D Dirac global lift identified as cleanest Phase-1 Tier-B target. Stretch-attempt candidates (SA1 m_lightest from A_min, SA2 4D globalization isolated, SA3 neutrino Yukawa structural identity) inventoried for Deep Work Rules compliance."
   - "Cycle 2 review (branch-local 6-criterion self-review): all PASS. Honest reading of source notes (current-stack zero law and mass-reduction-to-Dirac both explicitly state they do NOT prove no future extension can generate Majorana mass) led to a CONDITIONAL global lift theorem rather than over-claiming an unconditional one. Cycle output: partial-lift theorem with single named obstruction (C2-X) and four candidate routes (R-X1 anomaly-cancellation exhaustion, R-X2 rep-theory constraint, R-X3 normal-grammar U(1) rigidity, R-X4 0νββ empirical sharpener). Counts as audit-grade/blocker-isolation per quota; audit_grade_cycles_in_a_row now 2 (at threshold). Per Deep Work Rules, Cycle 3 MUST be a stretch attempt."
   - "Cycle 3 review (branch-local 6-criterion self-review): all PASS. STRETCH ATTEMPT executed per Deep Work Rules. First-principles work from A_min on (R-X3) finite-normal-grammar U(1) rigidity. Three angles attacked: (1) Cl(3) algebra rigidity — failed (algebra is permissive on charge-±2 bilinears); (2) staggered-Dirac structure rigidity — succeeds under STRICT reading of A_min axiom 3, fails under permissive reading; (3) anomaly-cancellation exhaustion (R-X1 angle) — FALSIFIED (gauge-singlet nu_R Majorana mass passes all retained anomaly cancellations; R-X1 is dead). Result: (C2-X) reformulated from research-level to DECISION-LEVEL obstruction (axiom 3 strict-vs-permissive reading). Audit-quota counter resets to 0 (this was a stretch cycle, not audit-grade). last_stretch_attempt_cycle = 3."
+  - "Cycle 4 review (branch-local 6-criterion self-review): all PASS. STUCK FAN-OUT executed per Deep Work Rules requirement (stuck fan-out before any honest stop). 5+5 framework-internal arguments generated (S1-S5 strict reading; P1-P5 permissive reading). Synthesis: framework's INTENDED reading is permissive (P1 directly quotes three retained notes that preserve openness; P2 establishes Pfaffian extensions as framework-discussable; P5 cites MINIMAL_AXIOMS note's own permissive-posture statement). Cycle 4 REVISES Cycle 3's decision-level reformulation: (C2-X)-strict is rejected. (C2-X) returns to a research-level obstruction with sharpened attack frames (SR-1 Lorentz-onset incompatibility, SR-2 continuum-limit scalar 2-point incompatibility, SR-3 stronger SM anomaly cluster). SR-2 identified as cleanest single-cycle continuation. Counts as audit-grade (synthesis/blocker-isolation); audit_grade_cycles_in_a_row advances to 1. last_stuck_fanout_cycle = 4. Per Deep Work Rules requirements: ≥1 stretch + ≥1 fan-out now both satisfied; loop may stop honestly."
 artifacts_landed:
   - "docs/NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md (Lane 4 closure roadmap with phase ordering; no runner — structural plan note; audit-grade)"
   - "docs/NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md (conditional Dirac global lift + named obstruction (C2-X) + four candidate retention routes; no runner — structural case-analysis; audit-grade/blocker-isolation)"
   - "docs/NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md (first-principles stretch attempt from A_min; 3-angle work + 1 falsified angle (R-X1 dead) + sharper obstruction reformulation (decision-level vs research-level); no runner — structural; STRETCH-grade)"
+  - "docs/NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md (stuck fan-out on strict-vs-permissive A_min axiom 3 reading; 5+5 framework-internal arguments + synthesis; identifies framework's intended reading as PERMISSIVE; revises Cycle-3 decision-level reformulation; sharpens (C2-X) attack frames into SR-1/SR-2/SR-3; no runner — structural; FAN-OUT-grade)"
 claim_state_movement:
   - "Lane 4 closure roadmap landed: Phase 1 (4D Dirac global lift + 4E seesaw); Phase 2 (4B/4C splittings + 4F cosmology bridge); Phase 3 (4A absolute scale + 4G cross-validation). Cleanest Phase-1 single-cycle target identified as 4D (existing scaffolding: current-stack Majorana zero law + mass reduction to Dirac + Majorana no-go cluster). 4D outcome controls 4E direction (seesaw retained ⇔ Majorana; Dirac alternative needs new mass mechanism)."
   - "4D Dirac global lift partially landed (Cycle 2): conditional theorem on retained content + (C2-X) charge-2 primitive class exhaustion. (P1)-(P6) jointly establish current-stack Dirac exactness; the open globalization step reduces to (C2-X). Four candidate retention routes named: (R-X1) anomaly-cancellation exhaustion via SM gauge-anomaly cluster; (R-X2) representation-theory classification on Cl(3)/Z^3 admissible carriers; (R-X3) finite-normal-grammar U(1) rigidity globalization (most direct candidate); (R-X4) 0νββ empirical sharpener (experimental, not internal). Mirrors hubble-h0 (C1)/(C2) gate-isolation pattern."
