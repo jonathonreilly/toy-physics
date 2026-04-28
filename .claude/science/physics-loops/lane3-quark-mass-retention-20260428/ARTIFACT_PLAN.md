@@ -281,6 +281,33 @@
    - push branch to `origin`;
    - create a stacked PR against block 09, or write `PR_BACKLOG.md`.
 
+## Block 11 Artifact Set
+
+1. Continue from block 10 on stacked branch
+   `physics-loop/lane3-quark-mass-retention-20260428-block11-20260428`.
+2. Execute the 3B RPSR single-scalar readout underdetermination theorem:
+   - note:
+     `docs/QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md`;
+   - runner:
+     `scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py`;
+   - log:
+     `logs/2026-04-28-quark-rpsr-single-scalar-readout-underdetermination.txt`.
+3. Run focused checks:
+   - `PYTHONPATH=scripts python3 scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py`;
+   - `python3 -m py_compile scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py`;
+   - inherited RPSR mass-boundary and RPSR conditional runners;
+   - inherited Lane 3 firewall and one-Higgs gauge-selection runners.
+4. Emulate review-loop:
+   - classify the result as exact readout underdetermination, not mass
+     retention;
+   - verify no observed quark masses, fitted Yukawa entries, CKM singular
+     values, hidden exponent selector, hidden generation-gap assignment, or
+     species-uniform top Ward import enter as proof inputs.
+5. Package:
+   - commit coherent block artifacts;
+   - push branch to `origin`;
+   - create a stacked PR against block 10, or write `PR_BACKLOG.md`.
+
 ## Non-Goals
 
 - Do not modify repo-wide authority surfaces during this science run.

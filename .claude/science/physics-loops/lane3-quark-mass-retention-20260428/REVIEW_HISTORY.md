@@ -620,3 +620,60 @@ Disposition:
 - next exact Lane 3 action requires an amplitude-to-Yukawa readout theorem,
   sector/scale bridge, 3C source/readout theorem, 3A scale theorem, or new 3B
   scalar/readout primitive.
+
+## Artifact Review: 3B RPSR Single-Scalar Readout Underdetermination
+
+**Time:** 2026-04-28T09:35:38Z
+
+Artifact reviewed:
+
+- `docs/QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py`
+- `logs/2026-04-28-quark-rpsr-single-scalar-readout-underdetermination.txt`
+
+Verification:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py
+TOTAL: PASS=80, FAIL=0
+
+python3 -m py_compile scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py
+PASS
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py
+TOTAL: PASS=50, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_up_amplitude_rpsr_conditional.py
+PASS=9 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py
+PASS=17 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py
+TOTAL: PASS=43, FAIL=0
+```
+
+Review-loop emulation:
+
+1. Claim wording is bounded to exact readout underdetermination, not retained
+   up-type mass closure.
+2. The runner verifies the exact block-10 RPSR scalar and shows that a
+   scale-covariant power readout `R_{p,q}(a_u)` admits a continuum of ordered
+   ratio pairs for the same scalar.
+3. Synthetic ratio-pair reconstruction demonstrates fit-capacity, not
+   prediction: choosing `p` and `q` is an additional readout theorem.
+4. The typed-edge inventory has no path from the RPSR scalar to physical
+   up-type ratio pair without readout functions, generation-gap assignment,
+   and sector/scale bridge.
+5. Observed quark masses, fitted Yukawa entries, CKM singular values, hidden
+   exponent selectors, hidden generation-gap assignment, and species-uniform
+   top Ward import are excluded from the proof.
+
+Disposition:
+
+- keep artifact;
+- claim status remains `open`;
+- stacked review PR pending packaging;
+- next exact Lane 3 action requires a derived two-ratio readout law,
+  generation/source assignment, sector/scale bridge, 3C source/readout
+  theorem, 3A scale theorem, or new 3B scalar/readout primitive.

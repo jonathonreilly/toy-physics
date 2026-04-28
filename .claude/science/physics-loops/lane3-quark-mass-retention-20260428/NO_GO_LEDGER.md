@@ -1,6 +1,6 @@
 # Lane 3 No-Go Ledger
 
-**Updated:** 2026-04-28T09:26:03Z
+**Updated:** 2026-04-28T09:35:38Z
 
 | Route / claim | Blocked conclusion | Blocking result | Source | Status for this loop |
 |---|---|---|---|---|
@@ -23,6 +23,7 @@
 | Koide A1 support scalar `1/2` directly sets the quark `C3` source ratio | Retained quark A1 source law `|q_quark|^2/a_quark^2 = 1/2` and resulting Ward hierarchy | Current A1 support faces collapse to the exact scalar `1/2`, and the quark `C3` target ratio is exact if granted, but the current support bank has no typed edge from the A1 scalar to the physical quark Ward source domain | `QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md` | closed for direct promotion; reopen only with a typed quark source-domain theorem |
 | Positive-parent square-root dictionary directly gives quark P1 readout | Retained identification of `eig(M_quark^(1/2))` with physical quark Yukawa amplitudes | The square-root theorem is exact once a positive parent is supplied, but the current support bank derives neither a physical positive quark `C3` parent nor a readout theorem mapping the square-root spectrum to quark Yukawa amplitudes. The dictionary can represent arbitrary positive triples | `QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md` | closed for direct promotion; reopen only with parent and readout theorem content |
 | RPSR reduced up-amplitude directly gives up-type quark mass ratios | Retained `m_u/m_c`, `m_c/m_t`, or absolute non-top up-type masses | STRC/RPSR derives an exact dimensionless reduced amplitude on the `1(+)5` projector carrier, but the current bank has no typed readout edge from that amplitude to physical up-type Yukawa eigenvalue ratios or a top-compatible sector/scale bridge | `QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md` | closed for direct promotion; usable constructive 3B support |
+| RPSR scalar plus top-scale normalization determines both up-type ratios | Retained `m_u/m_c` and `m_c/m_t` from the single RPSR scalar | In the admissible scale-covariant power readout class, the same exact `a_u` supports a continuum of ordered ratio pairs `(a_u^p, a_u^q)`. The exponents/readout functions and generation-gap assignment are extra theorem content, not consequences of the scalar itself | `QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md` | closed for single-scalar readout promotion; reopen only with a derived readout law and sector/scale bridge |
 
 ## Reopen Rule
 

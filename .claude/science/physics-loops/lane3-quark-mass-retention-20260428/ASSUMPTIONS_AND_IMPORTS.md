@@ -1,8 +1,8 @@
 # Lane 3 Assumptions And Imports
 
-**Updated:** 2026-04-28T09:26:03Z
-**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block10-20260428`
-**Head:** block-10 working checkpoint; see `git log`
+**Updated:** 2026-04-28T09:35:38Z
+**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block11-20260428`
+**Head:** block-11 working checkpoint; see `git log`
 
 This ledger uses the physics-loop schema. It separates retained framework
 inputs, support-only bridges, comparator values, and hidden selectors that
@@ -29,6 +29,7 @@ block retained five-mass closure.
 | Up-type interior partition `(f_12, f_23)` | Bounded up-sector extension | fitted input / support-only | `UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md`, review packet | yes for up route | yes | derive partition from retained source law or retire route | not retained |
 | Up-type scalar amplitude shortlist (`7/9`, `sqrt(3/5)`, native projector laws) | Candidate law for `m_u/m_c` and related up-sector ratios | support-only / bounded candidate grammar | `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`, native-expression and affine no-go notes | yes for 3B | yes | first-principles scalar-law theorem or no-go narrowing | open |
 | STRC/RPSR reduced up-amplitude theorem | Exact retained support for a dimensionless up-sector reduced amplitude on the `1(+)5` projector carrier | exact support/boundary theorem | `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`, `QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`, `QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md` | yes for 3B support | yes if claiming up-type mass ratios | derive an amplitude-to-Yukawa readout theorem and sector/scale bridge to the top Ward anchor | exact amplitude support only; not retained `m_u/m_c` or `m_c/m_t` closure |
+| RPSR single-scalar readout functions/exponents | Tests whether the exact RPSR scalar plus top scale can determine both independent up-type ratios | exact no-go / boundary theorem | `QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md` | yes for 3B readout | yes if claiming up-type ratio pair | derive the two readout functions, equivalent exponents, generation-gap assignment, and sector/scale bridge | a single scalar supports a continuum of scale-covariant ordered ratio pairs; readout law is new theorem content |
 | Route-2 endpoint readout map entry `beta_E / alpha_E = 21/4` | Reduced missing readout primitive for up-sector endpoint law | exact boundary plus unresolved map entry | `QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`, `QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md`, `QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md` | yes for route-2 scalar law | yes if route used | derive E-center ratio `gamma_T(center)/gamma_E(center) = -8/9` or supply a new readout/source primitive | minimal naturality route closed negatively; open hard residual remains |
 | `R_conn = (N_c^2 - 1)/N_c^2 = 8/9` | Conditional source-domain bridge candidate for `gamma_T(center)/gamma_E(center) = -8/9` | retained support / conditional bridge | `RCONN_DERIVED_NOTE.md`, `QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md` | yes if used to select the E-center ratio | yes for this 3B route | prove a typed bridge from SU(3) connected color projection to the Route-2 E/T center endpoint ratio | conditional exact bridge only; source-domain identification remains open |
 | Typed current-bank edge `R_conn -> gamma_T(center)/gamma_E(center)` | Would promote the Rconn conditional bridge into an actual Route-2 source-domain theorem | missing theorem / exact current-bank no-go | `QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md` | yes for this 3B route | yes | add a new cross-domain source theorem or find an alternate readout primitive | current support bank has no typed edge; direct promotion closed negatively |
@@ -75,4 +76,7 @@ The highest-leverage unresolved imports for this block are:
    Block 10 records the constructive 3B support boundary: STRC/RPSR supplies
    an exact reduced up-amplitude law, but the current bank lacks the
    amplitude-to-Yukawa readout and sector/scale bridge needed for retained
-   `m_u/m_c` or `m_c/m_t` closure.
+   `m_u/m_c` or `m_c/m_t` closure. Block 11 sharpens that residual: even
+   within the minimal scale-covariant power readout class, the same exact
+   RPSR scalar supports a continuum of ordered ratio pairs, so the two
+   readout functions or equivalent exponents are new theorem content.
