@@ -1,0 +1,33 @@
+name: branch-cleanup
+on:
+  schedule:
+    - cron: "0 6 * * *"   # daily 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: |
+          # Refresh PROTECTED with current open-PR branches
+          gh pr list --state open --json headRefName --jq '.[].headRefName' > /tmp/protected_extra.txt
+          python3 - <<'PY'
+          from pathlib import Path
+          extra = [b.strip() for b in open('/tmp/protected_extra.txt') if b.strip()]
+          s = Path('docs/audit/scripts/archive_and_delete_branches.py')
+          t = s.read_text()
+          old = 'PROTECTED = {"main", "audit-lane", "HEAD", "cleanup-consolidation-2026-04-27"}'
+          new = 'PROTECTED = {"main", "audit-lane", "HEAD", "cleanup-consolidation-2026-04-27", ' + ', '.join(repr(b) for b in extra) + '}'
+          s.write_text(t.replace(old, new))
+          PY
+          git fetch --all --prune
+          python3 docs/audit/scripts/inventory_remote_branches.py
+          python3 docs/audit/scripts/archive_and_delete_branches.py --execute
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
