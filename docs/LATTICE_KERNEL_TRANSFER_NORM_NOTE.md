@@ -1,7 +1,7 @@
 # 3D Kernel Transfer-Norm Probe
 
-**Date:** 2026-04-04  
-**Status:** bounded discrimination probe, not a proposed_promoted branch claim
+**Date:** 2026-04-04 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** bounded local discrimination probe; not a branch-promotion claim and not a continuum-limit theorem.
 
 This note freezes a small local probe of the exploratory 3D kernel lane.
 It is intentionally narrower than the heavy `h=0.25` / 4D work Claude is
@@ -73,3 +73,47 @@ blurred together:
 Only the third question is tested here, and only in a local kernel-only way.
 The full 3D branch still needs same-harness propagation and artifact-chain
 closure before any promotion.
+
+## Audit boundary (2026-04-28)
+
+The earlier Status line ("bounded discrimination probe, not a
+`proposed_promoted` branch claim") tripped the audit-lane parser, which
+classified the row as `proposed_promoted` solely because the literal
+token appeared in the Status string — even though the note's intent was
+the negation. The Status line has been rephrased to remove the parser
+collision while keeping the same intent.
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: the audit target is classified as `proposed_promoted`, but the
+> source note states that this is a bounded discrimination probe and not
+> a `proposed_promoted` branch claim. Why this blocks: a local outgoing
+> transfer norm over four `h` values can warn that `p=2.0` is not
+> singled out, but it does not establish a promoted 3D kernel branch, a
+> continuum limit, or same-harness propagation behavior; treating this
+> note as a promoted branch would contradict the note's own scope.
+
+> Claim boundary until fixed: it is safe to claim only the finite local
+> discriminator: with `h^2` normalization and `h = {1.0, 0.5, 0.25,
+> 0.125}`, `p = 1.5` has measured slope `+0.102`, `p = 2.0` has
+> `−0.204`, `p = 2.5` has `−0.598`, and `p = 3.0` has `−1.046`; this is
+> a warning signal, not a promoted law.
+
+## What this note does NOT claim
+
+- A promoted 3D kernel branch.
+- A continuum-limit theorem on the lattice kernel.
+- Same-harness propagation behavior of any selected `p`.
+- A first-principles selection of the kernel power.
+
+## What would close this lane (Path A future work)
+
+A future worker pursuing branch promotion would need a separate note
+with a registered primary runner that establishes:
+
+1. The selected kernel power on same-harness propagation across the
+   four `h` values.
+2. Born/controls passing on the selected kernel power.
+3. Refinement-stable behavior across at least three `h` values.
+4. A continuum-limit argument tying the lattice probe to a target
+   3D-kernel theorem.
