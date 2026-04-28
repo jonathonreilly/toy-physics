@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 85,
+    "critical": 84,
     "high": 518,
     "leaf": 627,
     "medium": 86
   },
-  "generated_at": "2026-04-28T12:14:36.800730+00:00",
+  "generated_at": "2026-04-28T12:19:31.537041+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -261,23 +261,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py",
       "transitive_descendants": 283
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "observable_principle_from_axiom_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 34,
-      "load_bearing_score": 29.145,
-      "note_path": "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_hierarchy_observable_principle_from_axiom.py",
-      "transitive_descendants": 282
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -27287,6 +27270,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 893,
-  "total_pending": 1316
+  "ready_count": 892,
+  "total_pending": 1315
 }

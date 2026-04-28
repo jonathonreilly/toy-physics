@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T12:14:36.942770+00:00
+**Generated:** 2026-04-28T12:19:31.680289+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -25,22 +25,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 185 |
 | support | 104 |
 | open | 15 |
-| unknown | 709 |
+| unknown | 706 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 375 |
+| ~~audited_conditional~~ | 378 |
 | ~~audited_failed~~ | 148 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 79 |
-| `audited_conditional` | 148 |
+| `audited_conditional` | 149 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1316 |
+| `unaudited` | 1315 |
 
 | criticality | count |
 |---|---:|
@@ -68,7 +68,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 1 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 175 | 33.96 | `unaudited` | ~~audited_conditional~~ |
 | 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 175 | 33.46 | `unaudited` | ~~audited_conditional~~ |
 | 3 | `alpha_s_derived_note` | critical | 280 | 32.63 | `unaudited` | ~~audited_conditional~~ |
-| 4 | `observable_principle_from_axiom_note` | critical | 282 | 29.14 | `unaudited` | unknown |
+| 4 | `observable_principle_from_axiom_note` | critical | 282 | 29.14 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 175 | 28.46 | `unaudited` | ~~audited_conditional~~ |
 | 6 | `ckm_atlas_axiom_closure_note` | critical | 175 | 25.96 | `unaudited` | ~~audited_conditional~~ |
 | 7 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 175 | 25.46 | `unaudited` | _proposed_promoted_ |
@@ -255,6 +255,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_mutual_information_chokepoint_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `newton_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `observable_principle_from_axiom_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3235,6 +3236,24 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** All checked rows across seeds 0, 1, 2 pass, so the geometry-sector / non-label architecture survives the nearest drift neighborhood at fixed restore = 0.7.  _(class `C`)_
 - **chain closes:** True — The live full sweep reproduces the 3 by 3 drift/seed table: every row has zero baseline, neutral cancellation, opposite signed response, double-charge response, and exponent near 1.0. The source keeps the conclusion to a narrow local drift basin and cites the now-clean restore-basin anchor.
 - **rationale:** The load-bearing claim is finite and runner-backed: at restore = 0.7, drifts 0.15, 0.20, and 0.25 pass for seeds 0, 1, and 2 under the stated zero, neutral, sign, and charge-scaling checks. The live sweep reproduces all nine rows, and the directly named restore-basin anchor is already audited_clean for its own fixed neighborhood. Residual risk is only the declared local-sweep scope; this does not retain a family-wide transfer theorem, multi-restore/multi-drift basin, or architecture-independent non-label law.
+- **auditor confidence:** high
+
+### `observable_principle_from_axiom_note`
+
+- **Note:** [`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](../../docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-28-observable_principle_from_axiom_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Under continuity, additivity on independent subsystems and CPT-even phase blindness force W = c log|Z| + const, normalized to W[J] = log|det(D+J)| - log|det D|.  _(class `A`)_
+- **chain closes:** False — The finite Grassmann/log-det response chain closes under the note's stated scalar-observable assumptions, and the live runner reports 13 pass and 0 fail. It does not derive scalar additivity, CPT-even phase blindness, continuity, normalization, or the downstream hierarchy baseline from the bare lattice axiom alone.
+- **rationale:** Issue: the note proves the log|det(D+J)| source-response result only after adding scalar additivity, CPT-even phase blindness, continuity, and normalization assumptions, and its electroweak-scale consequence imports the current hierarchy baseline rather than deriving that normalization here.
+Why this blocks: downstream proposed-retained/promoted claims need a bare-axiom observable bridge; this row supplies a conditional scalar-source rule, not a standalone derivation of the physical scalar observable principle.
+Repair target: either derive the scalar-observable selection assumptions and hierarchy normalization chain from the accepted axiom package with a runner that excludes competing generators, or narrow the claim to an explicit conditional source-response theorem.
+Claim boundary until fixed: safe to claim finite-block log|det| curvature and the Lt=4 selector under the stated scalar-observable assumptions, not axiom-only observable closure or electroweak-scale derivation.
+- **open / conditional deps cited:**
+  - `scalar_observable_selection_assumptions_not_derived_from_bare_axiom`
+  - `canonical_hierarchy_baseline_and_plaquette_normalization_chain_imported`
 - **auditor confidence:** high
 
 ### `omega_lambda_matter_bridge_theorem_note_2026-04-22`
