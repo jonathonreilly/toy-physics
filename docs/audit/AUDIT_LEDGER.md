@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T12:32:07.255613+00:00
+**Generated:** 2026-04-28T12:33:46.868884+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -25,22 +25,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 184 |
 | support | 100 |
 | open | 15 |
-| unknown | 693 |
+| unknown | 691 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 396 |
+| ~~audited_conditional~~ | 398 |
 | ~~audited_failed~~ | 148 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 79 |
-| `audited_conditional` | 156 |
+| `audited_conditional` | 157 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1308 |
+| `unaudited` | 1307 |
 
 | criticality | count |
 |---|---:|
@@ -245,6 +245,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_complementarity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_nn_distance_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `lattice_nn_high_precision_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `lensing_beta_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_k_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -2775,6 +2776,25 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** Issue: the source's live distance-law numbers reproduce, but the retained claim is explicitly on a refinement path inherited from an upstream Born-clean NN branch whose note is not audit-clean; the archived logs named by the source are also absent from this worktree, and the distance runner does not check Born or k=0. Why this blocks: a meaningful far-field distance-law fit cannot be promoted as a retained Born-safe refinement-path result until the upstream refinement controls are independently retained or included in the same runner. Repair target: audit-retain LATTICE_NN_CONTINUUM_NOTE.md or extend this runner to recompute the Born/k=0/MI/decoherence controls for the same h values and restore/register the archived logs if they remain part of the artifact chain. Claim boundary until fixed: safely claim the live runner's finite barrier-harness table: fixed strength has positive far-field signal at h=0.5 and h=0.25 with slopes near -1, alpha=1.5 keeps the far-field sign but flattens the exponent, and near-field/coarse-sign behavior remains mixed.
 - **open / conditional deps cited:**
   - `LATTICE_NN_CONTINUUM_NOTE.md`
+- **auditor confidence:** high
+
+### `lattice_nn_high_precision_note`
+
+- **Note:** [`LATTICE_NN_HIGH_PRECISION_NOTE.md`](../../docs/LATTICE_NN_HIGH_PRECISION_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-28-lattice_nn_high_precision_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The h=0.125 continuation did not complete in a practical runtime window, so h=0.25 remains the last Born-clean raw refinement point and no canonical h=0.125 extension is promotable.  _(class `C`)_
+- **chain closes:** False — The source note closes only a negative/open boundary: the h=0.125 nearest-neighbor high-precision continuation did not complete and produced no retained numerical result. The ledger has no runner_path for live verification, and the continuum extension remains explicitly open.
+- **rationale:** Issue: the note documents that the h=0.125 high-precision nearest-neighbor continuation was attempted but did not complete, leaving no canonical numerical extension beyond h=0.25.
+Why this blocks: downstream lattice-fanout or continuum proposed-retained rows cannot cite this as a completed continuum refinement theorem; it is only an open computational boundary.
+Repair target: provide a practical runner or exact-arithmetic implementation that completes the h=0.125 Born-clean check under the same raw kernel and observables.
+Claim boundary until fixed: safe to claim finite-resolution support through h=0.25 and an open h=0.125 runtime blocker, not a completed nearest-neighbor continuum extension.
+- **open / conditional deps cited:**
+  - `no_ledger_runner_for_live_h0125_high_precision_continuation`
+  - `h0125_Born_clean_extension_not_completed`
+  - `nearest_neighbor_continuum_theorem_not_closed`
 - **auditor confidence:** high
 
 ### `lattice_nn_light_cone_note`
