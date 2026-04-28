@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-28T12:19:31.489356+00:00",
-  "generated_at": "2026-04-28T12:19:29.872707+00:00",
-  "invalidation_run_at": "2026-04-28T12:19:31.441873+00:00",
+  "effective_status_computed_at": "2026-04-28T12:21:50.455548+00:00",
+  "generated_at": "2026-04-28T12:21:48.791323+00:00",
+  "invalidation_run_at": "2026-04-28T12:21:50.407091+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-28T12:19:31.346187+00:00",
+  "load_bearing_computed_at": "2026-04-28T12:21:50.311613+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -36954,8 +36954,8 @@
         "higgs_from_lattice_note"
       ],
       "direct_in_degree": 16,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:taste_scalar_isotropy_theorem_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 20.14,
@@ -37209,8 +37209,8 @@
         "yt_flagship_boundary_note"
       ],
       "direct_in_degree": 14,
-      "effective_status": "unknown",
-      "effective_status_reason": "inherited_from:higgs_mass_derived_note",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:taste_scalar_isotropy_theorem_note",
       "independence": null,
       "intrinsic_status": "support",
       "load_bearing_score": 19.124,
@@ -75265,14 +75265,21 @@
       "verdict_rationale": null
     },
     "taste_scalar_isotropy_theorem_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-28",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 17.645,
+        "transitive_descendants": 282
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop:fresh-2026-04-28-taste_scalar_isotropy_theorem_note",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The exact fermion-CW Hessian isotropy theorem closes on the stated Cl(3)/Z^3 commuting-involution taste block, and the live runner reports THEOREM PASS=30 BOUNDED PASS=6 FAIL=0. The scalar-spectrum split, near-degenerate taste-pair readout, and thermal-transition estimate are explicitly bounded model consequences rather than theorem-grade closures.",
       "claim_id": "taste_scalar_isotropy_theorem_note",
       "criticality": "critical",
       "current_status": "bounded",
@@ -75280,30 +75287,33 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 11,
-      "effective_status": "bounded",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 17.645,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "At phi=(v,0,0), the Hessian reduces to the binary orthogonality sum sum_s (-1)^{s_i}(-1)^{s_j}=8 delta_ij, so the fermion Coleman-Weinberg curvature is isotropic.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "40ee2b4315d597ea412e376d4bf3ebdb660255a65eeb5a13d84d2e828ba28790",
       "note_path": "docs/TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "bounded_gauge_only_taste_scalar_split_model",
+        "bounded_scalar_only_thermal_cubic_estimate"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 30,
+        "B": 6,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 36
       },
       "runner_path": "scripts/frontier_taste_scalar_isotropy.py",
       "title": "Taste-Scalar Coleman-Weinberg Isotropy Theorem",
       "transitive_descendants": 282,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the exact isotropy theorem closes for the fermion Coleman-Weinberg block, but the note's scalar-spectrum and electroweak-transition consequences depend on a gauge-only leading split and a scalar-only thermal-cubic estimate that the note explicitly labels bounded.\nWhy this blocks: downstream proposed-retained/promoted claims cannot use this row as a theorem-grade Higgs/taste spectrum, y_b, generation-splitting, or electroweak-transition closure; they only inherit the no-fermion-CW-splitting boundary.\nRepair target: supply and audit a full scalar-sector theorem, including gauge/taste-breaking and thermal dynamics, with a runner that derives the spectrum or transition result rather than checking the bounded companion model.\nClaim boundary until fixed: safe to claim exact fermion-CW isotropy and the resulting exclusion of scalar-CW-only splitting on the stated taste block, not full scalar-spectrum or finite-temperature electroweak closure."
     },
     "tensor_block_closure_test_note": {
       "audit_date": null,
@@ -78979,7 +78989,7 @@
         "yt_color_projection_correction_note"
       ],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "inherited_from:higgs_vacuum_explicit_systematic_note",
       "independence": null,
       "intrinsic_status": "bounded",

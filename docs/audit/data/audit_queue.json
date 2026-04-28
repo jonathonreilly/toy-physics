@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 84,
+    "critical": 83,
     "high": 518,
     "leaf": 627,
     "medium": 86
   },
-  "generated_at": "2026-04-28T12:19:31.537041+00:00",
+  "generated_at": "2026-04-28T12:21:50.503129+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -261,23 +261,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py",
       "transitive_descendants": 283
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "taste_scalar_isotropy_theorem_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 11,
-      "load_bearing_score": 17.645,
-      "note_path": "docs/TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_taste_scalar_isotropy.py",
-      "transitive_descendants": 282
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -27270,6 +27253,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 892,
-  "total_pending": 1315
+  "ready_count": 891,
+  "total_pending": 1314
 }

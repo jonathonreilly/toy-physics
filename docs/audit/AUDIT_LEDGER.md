@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T12:19:31.680289+00:00
+**Generated:** 2026-04-28T12:21:50.660349+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,25 +22,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 79 |
 | _proposed_retained_ | 3 |
 | _proposed_promoted_ | 1 |
-| bounded | 185 |
+| bounded | 184 |
 | support | 104 |
 | open | 15 |
-| unknown | 706 |
+| unknown | 703 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 378 |
+| ~~audited_conditional~~ | 382 |
 | ~~audited_failed~~ | 148 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 79 |
-| `audited_conditional` | 149 |
+| `audited_conditional` | 150 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1315 |
+| `unaudited` | 1314 |
 
 | criticality | count |
 |---|---:|
@@ -84,7 +84,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 17 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 175 | 21.96 | `unaudited` | ~~audited_conditional~~ |
 | 18 | `left_handed_charge_matching_note` | critical | 278 | 21.12 | `unaudited` | ~~audited_conditional~~ |
 | 19 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | critical | 278 | 20.62 | `unaudited` | ~~audited_conditional~~ |
-| 20 | `higgs_mass_derived_note` | critical | 281 | 20.14 | `unaudited` | unknown |
+| 20 | `higgs_mass_derived_note` | critical | 281 | 20.14 | `unaudited` | ~~audited_conditional~~ |
 | 21 | `physical_lattice_necessity_note` | critical | 278 | 20.12 | `unaudited` | ~~audited_conditional~~ |
 | 22 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 124 | 19.97 | `audited_clean` | **retained** |
 | 23 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | critical | 175 | 19.96 | `unaudited` | ~~audited_conditional~~ |
@@ -295,6 +295,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_chokepoint_bridge_extension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `taste_scalar_isotropy_theorem_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `unpromoted_branch_retainability_audit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -4401,6 +4402,24 @@ Claim boundary until fixed: safe to claim finite-block log|det| curvature and th
   - `HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md_bounded_unaudited`
   - `logs/2026-04-03-higher-symmetry-joint-validation-z2z2-dense-n80-n120.txt_missing`
   - `scripts/symmetry_head_to_head.py_hardcoded_table_no_source_trace_assertions`
+- **auditor confidence:** high
+
+### `taste_scalar_isotropy_theorem_note`
+
+- **Note:** [`TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`](../../docs/TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-28-taste_scalar_isotropy_theorem_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** At phi=(v,0,0), the Hessian reduces to the binary orthogonality sum sum_s (-1)^{s_i}(-1)^{s_j}=8 delta_ij, so the fermion Coleman-Weinberg curvature is isotropic.  _(class `A`)_
+- **chain closes:** False — The exact fermion-CW Hessian isotropy theorem closes on the stated Cl(3)/Z^3 commuting-involution taste block, and the live runner reports THEOREM PASS=30 BOUNDED PASS=6 FAIL=0. The scalar-spectrum split, near-degenerate taste-pair readout, and thermal-transition estimate are explicitly bounded model consequences rather than theorem-grade closures.
+- **rationale:** Issue: the exact isotropy theorem closes for the fermion Coleman-Weinberg block, but the note's scalar-spectrum and electroweak-transition consequences depend on a gauge-only leading split and a scalar-only thermal-cubic estimate that the note explicitly labels bounded.
+Why this blocks: downstream proposed-retained/promoted claims cannot use this row as a theorem-grade Higgs/taste spectrum, y_b, generation-splitting, or electroweak-transition closure; they only inherit the no-fermion-CW-splitting boundary.
+Repair target: supply and audit a full scalar-sector theorem, including gauge/taste-breaking and thermal dynamics, with a runner that derives the spectrum or transition result rather than checking the bounded companion model.
+Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resulting exclusion of scalar-CW-only splitting on the stated taste block, not full scalar-spectrum or finite-temperature electroweak closure.
+- **open / conditional deps cited:**
+  - `bounded_gauge_only_taste_scalar_split_model`
+  - `bounded_scalar_only_thermal_cubic_estimate`
 - **auditor confidence:** high
 
 ### `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22`
