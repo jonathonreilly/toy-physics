@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-28T11:27:35.505015+00:00",
-  "generated_at": "2026-04-28T11:27:33.834168+00:00",
-  "invalidation_run_at": "2026-04-28T11:27:35.452531+00:00",
+  "effective_status_computed_at": "2026-04-28T11:53:30.455803+00:00",
+  "generated_at": "2026-04-28T11:53:28.454798+00:00",
+  "invalidation_run_at": "2026-04-28T11:53:30.385257+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-28T11:27:35.342019+00:00",
+  "load_bearing_computed_at": "2026-04-28T11:53:30.246826+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -36391,14 +36391,21 @@
       "verdict_rationale": null
     },
     "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-28",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 8.943,
+        "transitive_descendants": 122
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop:fresh-2026-04-28-hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The claim is a negative boundary: the note does not derive hadron masses, but shows that confinement plus one bounded string-tension scale leaves channel-dependent coefficients and the GMOR/nucleon inputs unretained. The live runner verifies the repo guardrails, the coefficient separation, the GMOR dependencies, and the safe open endpoint with PASS=16 FAIL=0.",
       "claim_id": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -36406,13 +36413,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 4,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "fresh_context",
+      "intrinsic_status": "retained",
       "load_bearing_score": 8.943,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Absent those premises, `sqrt(sigma)` can be used only as a bounded scale comparator or support input.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "cd246d1683df46595e89ee4fdd0a2f865fffb30af0399524b48469aa87a1bfed",
@@ -36420,16 +36427,16 @@
       "open_dependency_paths": [],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 5,
+        "B": 8,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 3,
+        "total_pass": 16
       },
       "runner_path": "scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py",
       "title": "Hadron Lane 1 Confinement-To-Mass Firewall",
       "transitive_descendants": 122,
-      "verdict_rationale": null
+      "verdict_rationale": "The retained content is the firewall itself, not a hadron-mass derivation. The note's load-bearing step is the exact underdetermination that a single bounded scale leaves independent dimensionless spectral coefficients and cannot supply the GMOR or nucleon-correlator inputs. The live runner confirms the current repository boundary and uses observed hadron masses only to expose coefficient freedom. Residual risk is downstream misuse: this audit does not ratify any pion, proton, neutron, or spectrum mass prediction."
     },
     "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27": {
       "audit_date": null,
@@ -89260,9 +89267,9 @@
   "schema_version": 1,
   "stats": {
     "dropped_missing_notes": 0,
-    "preserved_existing": 1620,
-    "re_audit_required": 3,
+    "preserved_existing": 1628,
+    "re_audit_required": 0,
     "row_count": 1628,
-    "seeded_new": 5
+    "seeded_new": 0
   }
 }
