@@ -1,6 +1,6 @@
 # Lane 3 Artifact Plan
 
-**Updated:** 2026-04-28T08:14:45Z
+**Updated:** 2026-04-28T08:26:17Z
 
 ## Block 01 Artifact Set
 
@@ -82,6 +82,34 @@
    - commit coherent block artifacts;
    - push branch to `origin`;
    - create a stacked PR against block 02, or write `PR_BACKLOG.md`.
+
+## Block 04 Artifact Set
+
+1. Continue from block 03 on stacked branch
+   `physics-loop/lane3-quark-mass-retention-20260428-block04-20260428`.
+2. Execute the 3A five-sixths scale-selection boundary stretch:
+   - note:
+     `docs/QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md`;
+   - runner:
+     `scripts/frontier_quark_five_sixths_scale_selection_boundary.py`;
+   - log:
+     `logs/2026-04-28-quark-five-sixths-scale-selection-boundary.txt`.
+3. Run focused checks:
+   - `PYTHONPATH=scripts python3 scripts/frontier_quark_five_sixths_scale_selection_boundary.py`;
+   - `python3 -m py_compile scripts/frontier_quark_five_sixths_scale_selection_boundary.py`;
+   - inherited `5/6` bridge support runner;
+   - inherited taste-staircase support runner;
+   - inherited Lane 3 firewall runner.
+4. Emulate review-loop:
+   - classify the result as an exact negative boundary / theorem-target
+     isolation, not retained down-type mass-ratio closure;
+   - verify comparator values remain comparator/admitted scale context;
+   - verify no observed masses, fitted Yukawa entries, or hidden scale
+     selectors enter as proof inputs.
+5. Package:
+   - commit coherent block artifacts;
+   - push branch to `origin`;
+   - create a stacked PR against block 03, or write `PR_BACKLOG.md`.
 
 ## Non-Goals
 

@@ -1,6 +1,6 @@
 # Lane 3 Route Portfolio
 
-**Updated:** 2026-04-28T08:14:45Z
+**Updated:** 2026-04-28T08:26:17Z
 
 Scores use the physics-loop dramatic-step rubric: claim-state upgrade,
 import retirement, review-blocker closure, artifactability, novelty, hard
@@ -11,7 +11,7 @@ residual pressure, and overclaim risk.
 | 3C-Q: quark direct Ward-free generation-matrix boundary | exact no-go / boundary theorem | 2 | 2 | 3 | 2 | low | execute first |
 | 3B-R2: route-2 endpoint readout `beta_E/alpha_E = 21/4` stretch | constructive theorem / exact runner | 3 | 3 | 2 | 3 | medium | next if time remains |
 | 3B-scalar shortlist provenance tightening | import-retirement audit / no-go | 1 | 2 | 3 | 1 | low | only after stretch |
-| 3A local `5/6` NP proof framing | theorem target isolation | 2 | 3 | 1 | 2 | high | defer unless a sharp local theorem emerges |
+| 3A local `5/6` scale-selection boundary | exact negative boundary / theorem target isolation | 2 | 3 | 3 | 3 | low | executed in block 04 |
 | 3D absolute scale chain | downstream corollary | 3 | 2 | 1 | 0 | high | blocked until 3A/3B/3C move |
 | Lane 1 pivot | handoff route | 1 | 1 | 2 | 0 | medium | only if Lane 3 produces actionable quark-mass handoff |
 
@@ -156,3 +156,38 @@ Honest target status:
 This is an exact current-bank no-go / exact negative boundary. It sharpens
 the next 3B route to a genuinely new source-domain theorem or an alternate
 up-type scalar/readout primitive. It does not retain `m_u` or `m_c`.
+
+## Completed Route 5: 3A-Scale
+
+Question:
+
+```text
+Can exact C_F - T_F = 5/6 plus the strong threshold-local match promote the
+down-type 5/6 bridge without an independent scale-selection theorem?
+```
+
+Minimal premise set `A_min`:
+
+1. exact `SU(3)` group theory `C_F = 4/3`, `T_F = 1/2`;
+2. retained CKM atlas value `|V_cb| = alpha_s(v)/sqrt(6)`;
+3. inherited comparator values and one-loop transport from the existing
+   `5/6` support note;
+4. no observed masses as derivation inputs, no fitted Yukawa entries, and no
+   hidden scale selector.
+
+Result:
+
+```text
+The threshold-local comparator gives p_self = 0.832890..., close to 5/6.
+The common-scale comparator gives p_same = 0.803802..., and the same
+prediction misses that surface by +14.98%. Therefore exact C_F - T_F = 5/6
+is not a scale-selection theorem. Retained 3A still requires NP
+exponentiation plus scale selection or RG-covariant transport.
+Runner TOTAL PASS=34 FAIL=0.
+```
+
+Honest target status:
+
+This is an exact negative boundary / theorem-target isolation for 3A. It
+preserves the down-type bridge as strong bounded support and blocks direct
+promotion to retained down-type mass ratios.

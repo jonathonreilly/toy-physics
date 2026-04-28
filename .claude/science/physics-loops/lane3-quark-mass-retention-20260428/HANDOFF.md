@@ -1,25 +1,27 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T08:18:36Z
-**Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block03-20260428`
-**Current head:** `209346ac` plus PR-status bookkeeping; see `git log`
+**Updated:** 2026-04-28T08:26:17Z
+**Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block04-20260428`
+**Current head:** block-04 working checkpoint; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
 **Block 02 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/101
 **Block 03 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/102
+**Block 04 review PR:** pending package
 
 ## Current State
 
-Blocks 01 and 02 are packaged and PR'd. Block 03 is a stacked continuation
-from block 02. It attacks the hard Route-2 3B residual:
+Blocks 01, 02, and 03 are packaged and PR'd. Block 04 is a stacked
+continuation from block 03. It attacks the 3A down-type `5/6` residual:
 
 ```text
-derive gamma_T(center)/gamma_E(center) = -R_conn
+does exact C_F - T_F = 5/6 plus the threshold-local match promote the
+down-type bridge without an independent scale-selection theorem?
 ```
 
-from a typed source-domain bridge between the retained SU(3) color-projection
-surface and the Route-2 E/T endpoint readout.
+The answer from this checkpoint is no: the result is an exact negative
+boundary / theorem-target isolation, not retained mass closure.
 
 ## Lock And Supervisor Note
 
@@ -31,66 +33,65 @@ with permission denied at `/Users/jonreilly`. This run uses the local lock:
 ```
 
 plus the active supervisor flock under this loop pack. The local lock was
-refreshed during block 03 to expire after the loop deadline.
+refreshed during block 04 to expire after the loop deadline.
 
 ## Completed In This Checkpoint
 
-Created and verified the 3B Route-2 source-domain bridge no-go:
+Created and verified the 3A five-sixths scale-selection boundary:
 
-- `docs/QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md`
-- `scripts/frontier_quark_route2_source_domain_bridge_no_go.py`
-- `logs/2026-04-28-quark-route2-source-domain-bridge-no-go.txt`
+- `docs/QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_five_sixths_scale_selection_boundary.py`
+- `logs/2026-04-28-quark-five-sixths-scale-selection-boundary.txt`
 
 Checks:
 
 ```text
-3B-R2-Source runner: TOTAL PASS=33 FAIL=0
+3A-Scale runner: TOTAL PASS=34 FAIL=0
 py_compile: PASS
-3B-R2-Rconn runner: TOTAL PASS=26 FAIL=0
-3B-R2 naturality runner: TOTAL PASS=28 FAIL=0
-Route-2 exact readout map: PASS=11 FAIL=0
-Endpoint ratio-chain law: PASS=14 FAIL=0
+Five-sixths support runner: EXACT PASS=5 BOUNDED PASS=7 FAIL=0
+Taste-staircase support runner: TOTAL PASS=55 FAIL=0
 Lane 3 firewall: PASS=17 FAIL=0
-Quark mass-ratio review packet: TOTAL PASS=46 FAIL=0
 ```
 
 Claim movement:
 
 ```text
-Adding the missing bridge
-gamma_T(center)/gamma_E(center) = -R_conn
-forces beta_E/alpha_E = 21/4 exactly.
+The threshold-local comparator gives p_self = 0.832890..., close to 5/6.
+The common-scale comparator gives p_same = 0.803802..., and the same fixed
+5/6 prediction misses that surface by +14.98%.
 
-But the current typed support bank has no path from su3_R_conn_8_9 to
-route2_rho_E_21_4. The source-domain bridge is therefore new theorem content,
-not latent retained support in the current Route-2/SU(3) bank.
+Therefore exact C_F - T_F = 5/6 is not a scale-selection theorem. Retained
+3A still requires NP exponentiation plus scale selection or RG-covariant
+transport.
 ```
 
 ## Active Route
 
-Block 03 has been packaged:
+Block 04 is ready to package:
 
 ```text
-commit 209346ac: physics-loop lane3 block03 source bridge
-pushed branch physics-loop/lane3-quark-mass-retention-20260428-block03-20260428
-stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/102
+branch physics-loop/lane3-quark-mass-retention-20260428-block04-20260428
+base physics-loop/lane3-quark-mass-retention-20260428-block03-20260428
+PR body .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK04.md
 ```
 
 ## Next Exact Action
 
-After packaging block 03, continue Lane 3 only from one of:
+Package block 04, then continue Lane 3 only from one of:
 
-1. a genuinely new typed source-domain theorem deriving
+1. a genuine 3A non-perturbative `5/6` exponentiation plus scale-selection
+   / RG-covariant transport theorem;
+2. a genuinely new typed source-domain theorem deriving
    `gamma_T(center)/gamma_E(center) = -R_conn`;
-2. an alternate 3B scalar/readout primitive outside the current endpoint bank;
-3. a sharp 3A down-type local theorem target if one appears.
+3. an alternate 3B scalar/readout primitive outside the current endpoint bank;
+4. a new 3C species-differentiated Ward primitive.
 
 Do not re-open direct `R_conn` promotion, minimal Route-2 naturality, CKM
-closure as mass closure, bounded down-type promotion, or species-uniform top
-Ward reuse without a new premise.
+closure as mass closure, bounded down-type promotion from `C_F - T_F = 5/6`
+alone, or species-uniform top Ward reuse without a new premise.
 
 ## Stop Reason
 
-No stop requested. Lane 3 remains open; block 03 is an exact current-bank
-negative boundary that sharpens the next theorem target without claiming
+No stop requested. Lane 3 remains open; block 04 is an exact negative
+boundary that sharpens the 3A scale-selection theorem target without claiming
 retained non-top quark masses.

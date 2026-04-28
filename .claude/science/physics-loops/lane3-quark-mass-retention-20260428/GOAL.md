@@ -1,8 +1,8 @@
 # Lane 3 Quark Mass Retention Physics Loop
 
 **Loop slug:** `lane3-quark-mass-retention-20260428`
-**Science block:** `02`
-**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block02-20260428`
+**Science block:** `04`
+**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block04-20260428`
 **Target:** best-honest-status; retained closure only if fully justified
 **Started:** 2026-04-28T07:27:25Z
 **Hard deadline:** 2026-04-28T11:27:25Z
@@ -41,13 +41,13 @@ the branch supplies decisive theorem/support artifacts and review-loop
 backpressure. Bounded companion matches, CKM closure, or species-uniform reuse
 of the top Ward identity are not enough.
 
-## Block 02 Focus
+## Block 04 Focus
 
-Block 01 packaged two exact negative boundaries and opened review PR #100.
-Block 02 is a stacked continuation from block 01. Its active hard residual is
-the Route-2 E-center/source readout primitive, especially the conditional
-bridge target
+Blocks 01-03 packaged exact negative boundaries and opened review PRs #100,
+#101, and #102. Block 04 is a stacked continuation from block 03. Its active
+hard residual is the down-type `5/6` bridge scale-selection wall:
 
 ```text
-gamma_T(center) / gamma_E(center) = -R_conn = -8/9.
+exact C_F - T_F = 5/6
+does not by itself derive the threshold-local scale surface.
 ```

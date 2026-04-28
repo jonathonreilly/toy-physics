@@ -1,6 +1,6 @@
 # Lane 3 Review History
 
-**Updated:** 2026-04-28T08:14:45Z
+**Updated:** 2026-04-28T08:26:17Z
 
 ## Preflight Review
 
@@ -231,3 +231,55 @@ Disposition:
 - stacked review PR opened: https://github.com/jonathonreilly/cl3-lattice-framework/pull/102;
 - next exact Lane 3 action requires genuinely new source-domain theorem
   content, an alternate 3B readout primitive, or a sharp 3A local theorem.
+
+## Artifact Review: 3A Five-Sixths Scale-Selection Boundary
+
+**Time:** 2026-04-28T08:26:17Z
+
+Artifact reviewed:
+
+- `docs/QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md`
+- `scripts/frontier_quark_five_sixths_scale_selection_boundary.py`
+- `logs/2026-04-28-quark-five-sixths-scale-selection-boundary.txt`
+
+Verification:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_quark_five_sixths_scale_selection_boundary.py
+TOTAL: PASS=34, FAIL=0
+
+python3 -m py_compile scripts/frontier_quark_five_sixths_scale_selection_boundary.py
+PASS
+
+PYTHONPATH=scripts python3 scripts/frontier_ckm_five_sixths_bridge_support.py
+EXACT PASS=5, BOUNDED PASS=7, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_mass_ratios_taste_staircase_support.py
+TOTAL: PASS=55, FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py
+PASS=17 FAIL=0
+```
+
+Review-loop emulation:
+
+1. Claim wording is correctly bounded to an exact negative boundary /
+   theorem-target isolation for 3A. It does not claim retained `m_d`, `m_s`,
+   or `m_b`.
+2. The runner keeps PDG masses and one-loop `alpha_s` values in the inherited
+   comparator/transport context; they are not derivation inputs.
+3. The theorem distinguishes the exact Casimir rational `C_F - T_F = 5/6`
+   from the missing non-perturbative exponentiation and scale-selection
+   theorems.
+4. The decisive obstruction is numerical and structural: `p_self =
+   0.832890...` is close to `5/6`, but `p_same = 0.803802...`; the same fixed
+   exponent cannot be exact on both scale surfaces because the inherited
+   transport factor is nontrivial.
+
+Disposition:
+
+- keep artifact;
+- claim status remains `open`;
+- next exact Lane 3 action requires either a genuine 3A NP exponentiation plus
+  scale-selection theorem, a new 3B source/readout primitive, or a new 3C
+  species-differentiated Ward primitive.

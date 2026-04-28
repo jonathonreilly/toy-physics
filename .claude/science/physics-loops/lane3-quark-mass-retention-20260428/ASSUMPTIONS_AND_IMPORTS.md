@@ -1,8 +1,8 @@
 # Lane 3 Assumptions And Imports
 
-**Updated:** 2026-04-28T08:14:45Z
-**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block03-20260428`
-**Head:** block-03 working checkpoint; see `git log`
+**Updated:** 2026-04-28T08:26:17Z
+**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block04-20260428`
+**Head:** block-04 working checkpoint; see `git log`
 
 This ledger uses the physics-loop schema. It separates retained framework
 inputs, support-only bridges, comparator values, and hidden selectors that
@@ -20,6 +20,7 @@ block retained five-mass closure.
 | Down-type GST / NNI relation `|V_us|^2 = m_d/m_s` | Converts CKM `V_us` to `m_d/m_s` | support-only / structural bridge | `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`, `CKM_FROM_MASS_HIERARCHY_NOTE.md` | yes for down route | yes for retained down ratios | theorem route deriving GST on retained framework surface | open load-bearing bridge |
 | `5/6 = C_F - T_F` bridge `|V_cb| = (m_s/m_b)^(5/6)` | Converts CKM `V_cb` to `m_s/m_b` | bounded support | `CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md`, `QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md` | yes for down route | yes for retained down ratios | non-perturbative theorem at lattice scale | open Nature-grade blocker |
 | Threshold-local self-scale convention | Comparator scale for strong down-type numerical match | admitted normalization / observational comparator convention | `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md` | yes for match statement | yes if claiming precision | exact scale-selection theorem or demote to bounded comparator | open scale-selection blocker |
+| One-loop transport between `m_s(2 GeV)/m_b(m_b)` and `m_s(m_b)/m_b(m_b)` | Exposes whether the `5/6` bridge is scale-blind or scale-selected | inherited comparator / admitted convention | `CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md`, `QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md` | yes for 3A scale audit | yes for retained down ratios | derive threshold-local scale selection or an RG-covariant transport theorem from framework primitives | inherited values only; not a derivation input |
 | Up-type interior partition `(f_12, f_23)` | Bounded up-sector extension | fitted input / support-only | `UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md`, review packet | yes for up route | yes | derive partition from retained source law or retire route | not retained |
 | Up-type scalar amplitude shortlist (`7/9`, `sqrt(3/5)`, native projector laws) | Candidate law for `m_u/m_c` and related up-sector ratios | support-only / bounded candidate grammar | `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`, native-expression and affine no-go notes | yes for 3B | yes | first-principles scalar-law theorem or no-go narrowing | open |
 | Route-2 endpoint readout map entry `beta_E / alpha_E = 21/4` | Reduced missing readout primitive for up-sector endpoint law | exact boundary plus unresolved map entry | `QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`, `QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md`, `QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md` | yes for route-2 scalar law | yes if route used | derive E-center ratio `gamma_T(center)/gamma_E(center) = -8/9` or supply a new readout/source primitive | minimal naturality route closed negatively; open hard residual remains |
@@ -42,5 +43,8 @@ The highest-leverage unresolved imports for this block are:
 3. a new typed source-domain bridge theorem for
    `gamma_T(center)/gamma_E(center) = -R_conn`, because the current bank lacks
    this edge;
-4. non-perturbative `5/6` bridge plus threshold-local scale-selection theorem
-   for 3A.
+4. non-perturbative `5/6` bridge plus threshold-local scale-selection or
+   RG-covariant transport theorem for 3A. Block 04 sharpened this into a
+   scale-selection boundary: the threshold-local surface gives `p_self =
+   0.832890...`, close to `5/6`, while the common-scale surface gives
+   `p_same = 0.803802...`; exact `C_F - T_F` alone is not a scale theorem.
