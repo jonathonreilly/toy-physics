@@ -1,10 +1,11 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T09:48:21Z
-**Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block12-20260428`
-**Current head:** `86bb3ead` plus PR-status bookkeeping; see `git log`
-**Loop status:** running
+**Updated:** 2026-04-28T09:53:38Z
+**Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block13-20260428`
+**Current head:** block-13 working checkpoint; see `git log`
+**Loop status:** stopping after packaging
 **Claim status:** open
+**Stop requested:** yes
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
 **Block 02 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/101
 **Block 03 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/102
@@ -17,33 +18,20 @@
 **Block 10 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/109
 **Block 11 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/110
 **Block 12 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/111
+**Block 13 review PR:** pending packaging
 
 ## Current State
 
-Blocks 01 through 12 are packaged and PR'd. Block 12 is a stacked
-continuation from block 11. It records an exact joint 3B/3C rank boundary:
+Blocks 01 through 12 are packaged and PR'd. Block 13 is the required stuck
+fan-out synthesis after the deep RPSR/C3 work.
 
 ```text
-Exact RPSR plus exact C3 is carrier support, not retained up-type two-ratio
-readout closure without a new source/readout theorem.
+No current-bank Lane 3 route reaches retained non-top quark masses.
+Every successful proposed path requires new theorem content.
 ```
 
-The exact RPSR support value remains:
-
-```text
-a_u = sqrt(5/6) * (1 - 48/(49 sqrt(42))) = 0.7748865611...
-```
-
-The exact C3 carrier represents normalized up-type triples:
-
-```text
-(y_u/y_t, y_c/y_t, 1) = (r_uc r_ct, r_ct, 1).
-```
-
-Product and middle-gap one-scalar identifications each leave a continuum of
-C3-representable ordered ratio pairs. The missing theorem is now sharpened to
-a C3 coefficient source law, Fourier-channel assignment, two-ratio readout,
-and top-compatible sector/scale bridge.
+This does not claim future Lane 3 closure is impossible. It records that
+retained closure is not latent in the current artifacts.
 
 ## Lock And Supervisor Note
 
@@ -60,56 +48,50 @@ deadline.
 
 ## Completed In This Checkpoint
 
-Created and verified the 3B/3C RPSR-C3 joint readout rank boundary:
+Created and verified the Lane 3 stuck fan-out synthesis:
 
-- `docs/QUARK_RPSR_C3_JOINT_READOUT_RANK_BOUNDARY_NOTE_2026-04-28.md`
-- `scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py`
-- `logs/2026-04-28-quark-rpsr-c3-joint-readout-rank-boundary.txt`
+- `docs/QUARK_LANE3_STUCK_FANOUT_SYNTHESIS_2026-04-28.md`
+- `scripts/frontier_quark_lane3_stuck_fanout_synthesis.py`
+- `logs/2026-04-28-quark-lane3-stuck-fanout-synthesis.txt`
+- `.claude/science/physics-loops/lane3-quark-mass-retention-20260428/STOP_REQUESTED`
 
 Checks:
 
 ```text
-3B/3C RPSR-C3 joint rank-boundary runner: TOTAL PASS=87 FAIL=0
+Lane 3 stuck fan-out runner: TOTAL PASS=68 FAIL=0
 py_compile: PASS
+Inherited RPSR-C3 joint rank runner: TOTAL PASS=87 FAIL=0
 Inherited RPSR single-scalar runner: TOTAL PASS=80 FAIL=0
-Inherited RPSR mass-boundary runner: TOTAL PASS=50 FAIL=0
-Inherited C3 splitter runner: TOTAL PASS=51 FAIL=0
-Inherited C3 circulant runner: TOTAL PASS=43 FAIL=0
+Inherited five-sixths scale-selection runner: TOTAL PASS=34 FAIL=0
+Inherited Route-2 source-domain runner: TOTAL PASS=33 FAIL=0
 Inherited Lane 3 firewall runner: PASS=17 FAIL=0
-Inherited one-Higgs gauge-selection runner: TOTAL PASS=43 FAIL=0
 ```
 
 Claim movement:
 
 ```text
-The joint RPSR+C3 shortcut is closed negatively. C3 supplies a valid carrier
-for the two-ratio surface, but RPSR supplies only one scalar, and no current
-typed edge supplies C3 coefficients or physical channel assignment.
+Best honest status remains open. Retained non-top quark mass closure is
+withheld. Current-bank routes are exhausted after deep-work and fan-out.
 ```
 
 ## Active Route
 
-Block 12 has been packaged:
+Block 13 needs packaging:
 
 ```text
-commit 86bb3ead: physics-loop lane3 block12 rpsr c3 rank boundary
-pushed branch physics-loop/lane3-quark-mass-retention-20260428-block12-20260428
-stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/111
+branch physics-loop/lane3-quark-mass-retention-20260428-block13-20260428
+base physics-loop/lane3-quark-mass-retention-20260428-block12-20260428
+PR body .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK13.md
 ```
-
-## Next Exact Action
-
-Continue Lane 3 only from one of:
-
-1. C3 coefficient source law;
-2. physical Fourier-channel assignment for `u,c,t`;
-3. two-ratio RPSR/C3 readout theorem;
-4. sector/scale bridge to the top Ward anchor;
-5. genuine 3A non-perturbative `5/6` exponentiation plus scale selection or
-   RG-covariant transport;
-6. new 3B source-domain theorem or alternate scalar/readout primitive.
 
 ## Stop Reason
 
-No stop requested. Lane 3 remains open; block 12 is exact joint rank-boundary
-support/no-go without claiming retained non-top quark masses.
+`STOP_REQUESTED` has been created.
+
+```text
+All current-bank Lane 3 routes are blocked after deep-work and six-frame
+fan-out. Further progress requires human science judgment or new theorem
+content: a C3 coefficient source law, physical channel assignment, two-ratio
+readout, five-sixths NP/scale theorem, Route-2 source-domain bridge, or
+species-differentiated non-top Ward primitive.
+```

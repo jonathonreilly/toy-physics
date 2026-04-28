@@ -1,0 +1,92 @@
+========================================================================================
+LANE 3 STUCK FAN-OUT SYNTHESIS
+========================================================================================
+
+A. Authority surfaces
+------------------------------------------------------------------------
+PASS: new_note exists -- docs/QUARK_LANE3_STUCK_FANOUT_SYNTHESIS_2026-04-28.md
+PASS: one_higgs exists -- docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md
+PASS: firewall exists -- docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md
+PASS: route2_naturality exists -- docs/QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md
+PASS: route2_rconn exists -- docs/QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md
+PASS: route2_source exists -- docs/QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md
+PASS: five_sixths exists -- docs/QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md
+PASS: s3_ward exists -- docs/QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md
+PASS: c3_splitter exists -- docs/QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md
+PASS: c3_circulant exists -- docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md
+PASS: a1_source exists -- docs/QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md
+PASS: p1_readout exists -- docs/QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md
+PASS: rpsr_boundary exists -- docs/QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md
+PASS: rpsr_single exists -- docs/QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md
+PASS: rpsr_c3 exists -- docs/QUARK_RPSR_C3_JOINT_READOUT_RANK_BOUNDARY_NOTE_2026-04-28.md
+PASS: assumptions exists -- .claude/science/physics-loops/lane3-quark-mass-retention-20260428/ASSUMPTIONS_AND_IMPORTS.md
+PASS: no_go exists -- .claude/science/physics-loops/lane3-quark-mass-retention-20260428/NO_GO_LEDGER.md
+PASS: route_portfolio exists -- .claude/science/physics-loops/lane3-quark-mass-retention-20260428/ROUTE_PORTFOLIO.md
+PASS: new note states current-bank synthesis
+PASS: new note explicitly withholds retained closure
+PASS: new note does not rule out future theorem
+PASS: assumptions ledger includes block12 joint route
+PASS: no-go ledger includes RPSR+C3 promotion block
+PASS: route portfolio includes completed joint rank route
+
+B. Six orthogonal fan-out frames
+------------------------------------------------------------------------
+PASS: gauge/operator frame has source marker -- generation matrices
+PASS: gauge/operator frame has reopen condition -- species-differentiated Ward/source theorem
+PASS: Ward-normalization frame has source marker -- top-channel
+PASS: Ward-normalization frame has reopen condition -- non-top Ward primitive or sector bridge
+PASS: CKM/singular-value frame has source marker -- mixing theorem
+PASS: CKM/singular-value frame has reopen condition -- retained mass-basis bridge
+PASS: endpoint/source frame has source marker -- typed edge
+PASS: endpoint/source frame has reopen condition -- typed Route-2 source theorem
+PASS: C3/RPSR readout frame has source marker -- source law
+PASS: C3/RPSR readout frame has reopen condition -- C3 coefficient law and channel assignment
+PASS: down-type NP/scale frame has source marker -- scale-selection theorem
+PASS: down-type NP/scale frame has reopen condition -- NP exponentiation plus scale-selection/RG transport
+PASS: six fan-out frames are distinct -- ['C3/RPSR readout', 'CKM/singular-value', 'Ward-normalization', 'down-type NP/scale', 'endpoint/source', 'gauge/operator']
+PASS: new note lists all six frames
+
+C. Deep-work prerequisites
+------------------------------------------------------------------------
+PASS: block10 RPSR prior artifact is present
+PASS: block11 single-scalar prior artifact is present -- single-scalar readout underdetermination
+PASS: block12 joint rank prior artifact is present -- joint readout rank boundary
+PASS: block04 3A scale prior artifact is present -- five-sixths scale-selection boundary
+PASS: block06 C3 splitter prior artifact is present -- C3`-oriented Ward splitter
+PASS: block07 C3 circulant prior artifact is present -- C3 circulants are exact hierarchy carriers
+PASS: Route-2 naturality route closed
+PASS: Route-2 Rconn route is conditional only
+PASS: A1 source route has missing typed edge
+PASS: P1 readout route lacks parent/readout
+
+D. Current typed-edge graph
+------------------------------------------------------------------------
+PASS: A1_support_scalar has no path to retained masses
+PASS: C3_Fourier_carrier has no path to retained masses
+PASS: CKM_atlas has no path to retained masses
+PASS: P1_square_root_dictionary has no path to retained masses
+PASS: RPSR_reduced_amplitude has no path to retained masses
+PASS: R_conn_8_9 has no path to retained masses
+PASS: Route2_endpoint_support has no path to retained masses
+PASS: five_sixths_Casimir has no path to retained masses
+PASS: one_Higgs_gauge_selection has no path to retained masses
+PASS: top_Ward_anchor has no path to retained masses
+PASS: adding C3/RPSR source-readout edges would create up path
+PASS: adding 3A NP/scale theorem would create down path
+PASS: adding Route-2 source theorem would create up path
+PASS: adding non-top Ward primitive would create absolute-scale path
+
+E. Stop implication and claim firewall
+------------------------------------------------------------------------
+PASS: all missing edges are theorem-content edges
+PASS: new note names stop implication
+PASS: new note says remaining progress requires new theorem content
+PASS: new note keeps claim status open
+PASS: new note does not claim retained five-mass closure
+PASS: runner contains no observed mass constants
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=68, FAIL=0
+VERDICT: no current-bank Lane 3 route reaches retained non-top masses;
+new source/readout theorem content is required.

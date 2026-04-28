@@ -1,8 +1,8 @@
 # Lane 3 Assumptions And Imports
 
-**Updated:** 2026-04-28T09:44:28Z
-**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block12-20260428`
-**Head:** block-12 working checkpoint; see `git log`
+**Updated:** 2026-04-28T09:53:38Z
+**Branch:** `physics-loop/lane3-quark-mass-retention-20260428-block13-20260428`
+**Head:** block-13 working checkpoint; see `git log`
 
 This ledger uses the physics-loop schema. It separates retained framework
 inputs, support-only bridges, comparator values, and hidden selectors that
@@ -31,6 +31,7 @@ block retained five-mass closure.
 | STRC/RPSR reduced up-amplitude theorem | Exact retained support for a dimensionless up-sector reduced amplitude on the `1(+)5` projector carrier | exact support/boundary theorem | `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`, `QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`, `QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md` | yes for 3B support | yes if claiming up-type mass ratios | derive an amplitude-to-Yukawa readout theorem and sector/scale bridge to the top Ward anchor | exact amplitude support only; not retained `m_u/m_c` or `m_c/m_t` closure |
 | RPSR single-scalar readout functions/exponents | Tests whether the exact RPSR scalar plus top scale can determine both independent up-type ratios | exact no-go / boundary theorem | `QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md` | yes for 3B readout | yes if claiming up-type ratio pair | derive the two readout functions, equivalent exponents, generation-gap assignment, and sector/scale bridge | a single scalar supports a continuum of scale-covariant ordered ratio pairs; readout law is new theorem content |
 | RPSR plus `C3[111]` joint readout | Tests whether exact RPSR scalar plus exact C3 Fourier carrier closes the up-type two-ratio readout | exact no-go / rank-boundary theorem | `QUARK_RPSR_C3_JOINT_READOUT_RANK_BOUNDARY_NOTE_2026-04-28.md` | yes for joint 3B/3C route | yes if claiming retained up-type ratio pair | derive a C3 coefficient source law, physical Fourier-channel assignment, two-ratio readout, and sector/scale bridge | C3 represents the two-ratio surface, while RPSR supplies one scalar; their combination remains carrier support without a new source/readout theorem |
+| Lane 3 stuck fan-out synthesis | Tests whether any current-bank route reaches retained non-top masses after the deep-work blocks | exact current-bank synthesis / no-route-passes boundary | `QUARK_LANE3_STUCK_FANOUT_SYNTHESIS_2026-04-28.md` | yes for supervisor stop decision | yes for retained closure claim-state discipline | add new theorem content in one of the named missing edges | all six orthogonal frames terminate at missing theorem edges; current run stops for human science judgment |
 | Route-2 endpoint readout map entry `beta_E / alpha_E = 21/4` | Reduced missing readout primitive for up-sector endpoint law | exact boundary plus unresolved map entry | `QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`, `QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md`, `QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md` | yes for route-2 scalar law | yes if route used | derive E-center ratio `gamma_T(center)/gamma_E(center) = -8/9` or supply a new readout/source primitive | minimal naturality route closed negatively; open hard residual remains |
 | `R_conn = (N_c^2 - 1)/N_c^2 = 8/9` | Conditional source-domain bridge candidate for `gamma_T(center)/gamma_E(center) = -8/9` | retained support / conditional bridge | `RCONN_DERIVED_NOTE.md`, `QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md` | yes if used to select the E-center ratio | yes for this 3B route | prove a typed bridge from SU(3) connected color projection to the Route-2 E/T center endpoint ratio | conditional exact bridge only; source-domain identification remains open |
 | Typed current-bank edge `R_conn -> gamma_T(center)/gamma_E(center)` | Would promote the Rconn conditional bridge into an actual Route-2 source-domain theorem | missing theorem / exact current-bank no-go | `QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md` | yes for this 3B route | yes | add a new cross-domain source theorem or find an alternate readout primitive | current support bank has no typed edge; direct promotion closed negatively |
@@ -83,4 +84,8 @@ The highest-leverage unresolved imports for this block are:
    readout functions or equivalent exponents are new theorem content. Block
    12 tests the joint 3B/3C rescue route: exact C3 is a valid carrier for the
    two-ratio surface, but exact RPSR plus exact C3 still lacks a coefficient
-   source law, Fourier-channel assignment, and sector/scale bridge.
+   source law, Fourier-channel assignment, and sector/scale bridge. Block 13
+   completes the required stuck fan-out across gauge/operator, Ward
+   normalization, CKM/singular-value, endpoint/source, C3/RPSR readout, and
+   down-type NP/scale frames. No current-bank route reaches retained non-top
+   masses without new theorem content.

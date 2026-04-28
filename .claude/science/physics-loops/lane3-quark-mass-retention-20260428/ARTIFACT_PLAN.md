@@ -336,6 +336,35 @@
    - push branch to `origin`;
    - create a stacked PR against block 11, or write `PR_BACKLOG.md`.
 
+## Block 13 Artifact Set
+
+1. Continue from block 12 on stacked branch
+   `physics-loop/lane3-quark-mass-retention-20260428-block13-20260428`.
+2. Execute the stuck fan-out synthesis:
+   - note:
+     `docs/QUARK_LANE3_STUCK_FANOUT_SYNTHESIS_2026-04-28.md`;
+   - runner:
+     `scripts/frontier_quark_lane3_stuck_fanout_synthesis.py`;
+   - log:
+     `logs/2026-04-28-quark-lane3-stuck-fanout-synthesis.txt`.
+3. Run focused checks:
+   - `PYTHONPATH=scripts python3 scripts/frontier_quark_lane3_stuck_fanout_synthesis.py`;
+   - `python3 -m py_compile scripts/frontier_quark_lane3_stuck_fanout_synthesis.py`;
+   - inherited block12, block11, 3A scale-selection, Route-2 source-domain,
+     and Lane 3 firewall runners.
+4. Emulate review-loop:
+   - classify the result as current-bank synthesis / no-route-passes boundary,
+     not retained mass closure;
+   - verify no observed masses, hidden source laws, or fitted readout entries
+     enter as proof inputs.
+5. Package:
+   - commit coherent block artifacts;
+   - push branch to `origin`;
+   - create a stacked PR against block 12, or write `PR_BACKLOG.md`;
+   - record `STOP_REQUESTED` because all current-bank routes are blocked
+     after deep-work and fan-out and the next step requires human science
+     judgment or new theorem content.
+
 ## Non-Goals
 
 - Do not modify repo-wide authority surfaces during this science run.
