@@ -1,7 +1,7 @@
-# Complex Action: Gravity + Horizons Unification
+# Complex Action: Gravity + Horizons Unification (Conditional Model)
 
-**Date:** 2026-04-05
-**Status:** proposed_retained positive — complex action unifies gravity and horizons while preserving Born rule
+**Date:** 2026-04-05 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded conditional one-parameter complex-kernel model — `gamma = 0` reduces to the real-action propagator, linearity keeps `I_3` near machine zero, and positive `gamma` produces absorption-biased escape/centroid behavior in the listed setup. The free `gamma` is not derived from Cl(3)/Z^3 or the gravity chain, and absorption-biased AWAY centroid shifts are not horizon physics without photon-sphere / Schwarzschild / Hawking / causal-horizon tests. Not a tier-ratifiable gravity-horizon unification theorem.
 
 ## Artifact chain
 
@@ -135,3 +135,44 @@ Born rule holds throughout because linearity is preserved.
 - Test on generated geometry (not just regular lattice)
 - Look for photon sphere / light ring signature at intermediate gamma
 - Check whether negative gamma (superradiance) has physical interpretation
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, high criticality, 123 transitive
+descendants):
+
+> Issue: the load-bearing step is an introduced complex-action ansatz
+> with a free `gamma` parameter, not a retained derivation of a
+> horizon term from Cl(3)/Z^3 or from the gravity chain; the
+> registered audit packet also has no primary runner/output even
+> though the note names a script and log.
+
+> Claim boundary until fixed: it is safe to claim a conditional
+> one-parameter complex-kernel model where `gamma = 0` reduces to
+> the real-action propagator, linearity keeps `I_3` near machine
+> zero, and positive `gamma` produces absorption-biased
+> escape/centroid behavior in the listed setup.
+
+## What this note does NOT claim
+
+- A unified gravity + horizons theorem.
+- A derivation of `gamma` from Cl(3)/Z^3 primitives or from the
+  gravity chain.
+- That an absorption-biased AWAY centroid shift is horizon physics
+  without photon-sphere / Schwarzschild / Hawking / causal-horizon
+  observable tests.
+- A registered primary runner; the note names a script but the
+  ledger has no `runner_path` entry.
+
+## What would close this lane (Path A future work)
+
+Promoting from bounded conditional to retained would require:
+
+1. Registering `scripts/complex_action_harness.py` as the primary
+   runner with deterministic output.
+2. Deriving `gamma` (or the imaginary action term) from retained
+   primitives.
+3. Resolution/geometry checks around the exceptional point.
+4. Horizon-specific observables (photon sphere, Schwarzschild radius,
+   Hawking spectrum, causal-horizon test) rather than centroid-shift
+   proxies.
