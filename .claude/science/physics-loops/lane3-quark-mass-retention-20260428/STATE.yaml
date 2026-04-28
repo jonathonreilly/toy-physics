@@ -4,12 +4,12 @@ target: best-honest-status
 science_block: 10
 branch: physics-loop/lane3-quark-mass-retention-20260428-block10-20260428
 base_branch: physics-loop/lane3-quark-mass-retention-20260428-block09-20260428
-head: "block-10 working checkpoint; see git log"
+head: "5d29f0fa plus PR-status bookkeeping; see git log"
 started_at_utc: "2026-04-28T07:27:25Z"
-last_checkpoint_utc: "2026-04-28T09:26:03Z"
+last_checkpoint_utc: "2026-04-28T09:29:31Z"
 hard_deadline_utc: "2026-04-28T11:27:25Z"
 checkpoint_interval_minutes: 30
-current_status: "block-10 artifact verified; packaging for stacked PR"
+current_status: "block-10 PR opened"
 claim_status: open
 active_lane: "Lane 3 quark mass retention"
 active_route: "3B RPSR up-amplitude mass-retention boundary"
@@ -87,6 +87,6 @@ lock_status:
   default_automation_lock: "unavailable for this SSH user: permission denied at /Users/jonreilly"
   local_lock: "/Users/jonBridger/.codex/memories/physics_worker_lock.json held by physics-loop-lane3-20260428; refreshed to 2026-04-28T14:26:03Z"
   supervisor_flock: ".claude/science/physics-loops/lane3-quark-mass-retention-20260428/supervisor.lock held by active supervisor process"
-pr_status: "block-01 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/100; block-02 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/101; block-03 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/102; block-04 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/103; block-05 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/104; block-06 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/105; block-07 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/106; block-08 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/107; block-09 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/108; block-10 pending packaging"
-next_exact_action: "Commit/push block-10 and open stacked PR against block-09; then continue Lane 3 only from amplitude-to-Yukawa readout theorem, sector/scale bridge, 3C source/readout theorem, 3A scale theorem, or new 3B scalar/readout primitive."
+pr_status: "block-01 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/100; block-02 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/101; block-03 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/102; block-04 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/103; block-05 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/104; block-06 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/105; block-07 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/106; block-08 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/107; block-09 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/108; block-10 opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/109"
+next_exact_action: "Continue Lane 3 only from amplitude-to-Yukawa readout theorem, sector/scale bridge, 3C source/readout theorem, 3A scale theorem, or new 3B scalar/readout primitive."
 stop_condition: null

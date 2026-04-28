@@ -1,8 +1,8 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T09:26:03Z
+**Updated:** 2026-04-28T09:29:31Z
 **Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block10-20260428`
-**Current head:** block-10 working checkpoint; see `git log`
+**Current head:** `5d29f0fa` plus PR-status bookkeeping; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
@@ -14,7 +14,7 @@
 **Block 07 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/106
 **Block 08 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/107
 **Block 09 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/108
-**Block 10 review PR:** pending packaging
+**Block 10 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/109
 
 ## Current State
 
@@ -77,18 +77,17 @@ and a top-compatible sector/scale bridge.
 
 ## Active Route
 
-Block 10 is verified and ready for packaging:
+Block 10 has been packaged:
 
 ```text
-commit: pending
-push: pending
-stacked review PR against block 09: pending
+commit 5d29f0fa: physics-loop lane3 block10 rpsr boundary
+pushed branch physics-loop/lane3-quark-mass-retention-20260428-block10-20260428
+stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/109
 ```
 
 ## Next Exact Action
 
-Commit/push block 10 and open a stacked review PR against block 09. After
-that, continue Lane 3 only from one of:
+Continue Lane 3 only from one of:
 
 1. amplitude-to-Yukawa readout theorem for RPSR;
 2. sector/scale bridge to the top Ward anchor;
