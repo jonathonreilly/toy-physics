@@ -1,0 +1,7 @@
+interface:
+  display_name: "Physics Loop"
+  short_description: "Run deep long-form physics lane loops"
+  default_prompt: "Use $physics-loop to run a repo-grounded physics loop with deep stretch attempts and review PRs."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,6 +1,6 @@
 # Literature Bridge Protocol
 
-Use literature to sharpen a workstream, not to smuggle external physics into a
+Use literature to sharpen a physics loop, not to smuggle external physics into a
 derivation.
 
 ## When To Use
@@ -36,7 +36,7 @@ Every literature item must enter `ASSUMPTIONS_AND_IMPORTS.md` as one of:
 
 If a literature item supplies a load-bearing physical value or selector, the
 repo claim must be marked derived-with-import, bounded support, or open unless
-the workstream retires that import.
+the loop retires that import.
 
 ## Output
 

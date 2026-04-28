@@ -30,6 +30,7 @@ Score each route from 0 to 3 on:
 - ability to close a review blocker;
 - artifactability within the runtime;
 - novelty or creative leverage when closure needs new structure;
+- suitability for a deep stretch attempt from minimal premises;
 - risk of overclaim or hidden input, scored negatively.
 
 Prefer routes that can produce one durable output:
@@ -39,6 +40,35 @@ Prefer routes that can produce one durable output:
 - no-go theorem;
 - decisive runner/log;
 - bounded demotion that stabilizes the public claim boundary.
+
+## Hard-Problem Pressure
+
+The dramatic-step gate should not reward only easy exits. When a lane has
+named residuals, assign a separate **hard-residual pressure** score:
+
+- `0`: restates a known dependency or no-go without trying a new premise.
+- `1`: audits a blocker and tightens the import ledger.
+- `2`: makes a real first-principles attempt on one named residual and records
+  the exact obstruction.
+- `3`: introduces a new structure, derivation path, or falsifier that could
+  plausibly retire the blocker.
+
+After two cycles scoring `0-1`, the next cycle must target a `2-3` route even
+if the expected deliverable is partial progress rather than closure.
+
+Before declaring no route viable, run stuck fan-out across 3-5 orthogonal
+attack frames. Examples:
+
+- derive from the smallest algebraic surface, with all phenomenological values
+  forbidden;
+- search retained atlas/tool surfaces for an already-present semantic bridge;
+- attempt a variational, index, Ward, symmetry-breaking, or source-domain
+  route;
+- prove the strongest impossibility theorem for a full route family;
+- build a falsifier that distinguishes two live interpretations.
+
+Record the fan-out in `ROUTE_PORTFOLIO.md` and synthesize why the selected
+next route is best.
 
 ## Successful Patterns From This Repo
 
@@ -65,3 +95,7 @@ Reject or reframe routes that only:
 - review arithmetic while ignoring symbol-to-physics identification;
 - weaken wording repeatedly without deciding the claim status;
 - chase literature similarities without classifying their import role.
+
+Do not reject a hard stretch attempt merely because it lacks a polished theorem
+at checkpoint time. Reject it only if it lacks a named residual, explicit
+premise set, falsifiable obstruction, or verification surface.
