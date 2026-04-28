@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-28T11:27:35.505015+00:00",
-  "generated_at": "2026-04-28T11:27:33.834168+00:00",
-  "invalidation_run_at": "2026-04-28T11:27:35.452531+00:00",
+  "effective_status_computed_at": "2026-04-28T11:51:18.107176+00:00",
+  "generated_at": "2026-04-28T11:51:15.457027+00:00",
+  "invalidation_run_at": "2026-04-28T11:51:18.024683+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-28T11:27:35.342019+00:00",
+  "load_bearing_computed_at": "2026-04-28T11:51:17.781397+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -41829,12 +41829,12 @@
       "current_status_raw": "exact support / criterion theorem on the second-order `Q` route;",
       "decoration_parent_claim_id": null,
       "deps": [],
-      "direct_in_degree": 11,
+      "direct_in_degree": 12,
       "effective_status": "support",
       "effective_status_reason": "self",
       "independence": null,
       "intrinsic_status": "support",
-      "load_bearing_score": 12.466,
+      "load_bearing_score": 12.977,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
       "max_descendant_status": "bounded",
@@ -41852,7 +41852,7 @@
       },
       "runner_path": "scripts/frontier_koide_q_background_zero_z_erasure_criterion.py",
       "title": "Koide Q Background-Zero / Z-Erasure Criterion Theorem",
-      "transitive_descendants": 124,
+      "transitive_descendants": 125,
       "verdict_rationale": null
     },
     "koide_q_bridge_single_primitive_note_2026-04-22": {
@@ -42347,12 +42347,12 @@
       "current_status_raw": "conditional support / no-go synthesis; outside audit-ratified tier for native Koide closure",
       "decoration_parent_claim_id": null,
       "deps": [],
-      "direct_in_degree": 9,
+      "direct_in_degree": 10,
       "effective_status": "support",
       "effective_status_reason": "self",
       "independence": null,
       "intrinsic_status": "support",
-      "load_bearing_score": 11.466,
+      "load_bearing_score": 11.977,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
       "max_descendant_status": "bounded",
@@ -42396,7 +42396,7 @@
       },
       "runner_path": "scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py",
       "title": "Koide Q Onsite Source-Domain No-Go Synthesis",
-      "transitive_descendants": 124,
+      "transitive_descendants": 125,
       "verdict_rationale": null
     },
     "koide_q_op_locality_c3_fixed_source_support_note_2026-04-27": {
@@ -42438,6 +42438,79 @@
       "runner_path": "scripts/frontier_koide_q_op_locality_c3_fixed_source_support.py",
       "title": "Koide Q OP-Locality / C3-Fixed Source Support Note",
       "transitive_descendants": 13,
+      "verdict_rationale": null
+    },
+    "koide_q_op_uniqueness_source_domain_support_note_2026-04-25": {
+      "audit_date": null,
+      "audit_status": "unaudited",
+      "auditor": null,
+      "auditor_confidence": null,
+      "auditor_family": null,
+      "blocker": null,
+      "chain_closes": null,
+      "chain_closure_explanation": null,
+      "claim_id": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
+      "criticality": "leaf",
+      "current_status": "support",
+      "current_status_raw": "**support-grade** \u2014 this note does **not** close `Q_l = 2/3`.",
+      "decoration_parent_claim_id": null,
+      "deps": [
+        "observable_principle_from_axiom_note",
+        "koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25",
+        "koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25",
+        "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25",
+        "koide_q_so2_phase_erasure_support_note_2026-04-25"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unknown",
+      "effective_status_reason": "inherited_from:observable_principle_from_axiom_note",
+      "independence": null,
+      "intrinsic_status": "support",
+      "load_bearing_score": 0.0,
+      "load_bearing_step": null,
+      "load_bearing_step_class": null,
+      "max_descendant_status": "unknown",
+      "max_descendant_status_rank": 30,
+      "note_hash": "8ef424c191d32e2f6c1189b67e81568b0dc0fdd27b2c601cc0c3291e2cfc4585",
+      "note_path": "docs/KOIDE_Q_OP_UNIQUENESS_SOURCE_DOMAIN_SUPPORT_NOTE_2026-04-25.md",
+      "open_dependency_paths": [],
+      "previous_audits": [
+        {
+          "archived_at": "2026-04-28T11:51:15.455693+00:00",
+          "archived_for_note_hash": "b35840b3b8578f0258d93fa7093d24d0d86cbfa62323c9d5001348b8be52863e",
+          "audit_date": null,
+          "audit_status": "unaudited",
+          "auditor": null,
+          "auditor_confidence": null,
+          "auditor_family": null,
+          "blocker": null,
+          "chain_closes": null,
+          "chain_closure_explanation": null,
+          "decoration_parent_claim_id": null,
+          "independence": null,
+          "load_bearing_step": null,
+          "load_bearing_step_class": null,
+          "open_dependency_paths": [],
+          "runner_check_breakdown": {
+            "A": 0,
+            "B": 0,
+            "C": 0,
+            "D": 0,
+            "total_pass": 0
+          },
+          "verdict_rationale": null
+        }
+      ],
+      "runner_check_breakdown": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "total_pass": 0
+      },
+      "runner_path": "scripts/frontier_koide_q_op_uniqueness_source_domain_support.py",
+      "title": "Koide Q OP-Uniqueness Source-Domain Support Note (V4)",
+      "transitive_descendants": 0,
       "verdict_rationale": null
     },
     "koide_q_readout_factorization_theorem_2026-04-22": {
@@ -42619,12 +42692,12 @@
       "current_status_raw": "exact support theorem on the Brannen-parameterized `Q` route;",
       "decoration_parent_claim_id": null,
       "deps": [],
-      "direct_in_degree": 8,
+      "direct_in_degree": 9,
       "effective_status": "support",
       "effective_status_reason": "self",
       "independence": null,
       "intrinsic_status": "support",
-      "load_bearing_score": 10.931,
+      "load_bearing_score": 11.443,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
       "max_descendant_status": "bounded",
@@ -42642,7 +42715,7 @@
       },
       "runner_path": "scripts/frontier_koide_q_so2_phase_erasure_support.py",
       "title": "Koide Q SO(2) Phase-Erasure Support Note",
-      "transitive_descendants": 121,
+      "transitive_descendants": 122,
       "verdict_rationale": null
     },
     "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25": {
@@ -42660,12 +42733,12 @@
       "current_status_raw": "exact support / criterion theorem for the charged-lepton `Q`",
       "decoration_parent_claim_id": null,
       "deps": [],
-      "direct_in_degree": 8,
+      "direct_in_degree": 9,
       "effective_status": "support",
       "effective_status_reason": "self",
       "independence": null,
       "intrinsic_status": "support",
-      "load_bearing_score": 10.931,
+      "load_bearing_score": 11.443,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
       "max_descendant_status": "bounded",
@@ -42683,7 +42756,7 @@
       },
       "runner_path": "scripts/frontier_koide_q_source_domain_canonical_descent.py",
       "title": "Koide Q Source-Domain Canonical Descent Theorem",
-      "transitive_descendants": 121,
+      "transitive_descendants": 122,
       "verdict_rationale": null
     },
     "koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20": {
@@ -55028,12 +55101,12 @@
       "current_status_raw": null,
       "decoration_parent_claim_id": null,
       "deps": [],
-      "direct_in_degree": 33,
+      "direct_in_degree": 34,
       "effective_status": "unknown",
       "effective_status_reason": "self",
       "independence": null,
       "intrinsic_status": "unknown",
-      "load_bearing_score": 28.634,
+      "load_bearing_score": 29.14,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
       "max_descendant_status": "proposed_retained",
@@ -55051,7 +55124,7 @@
       },
       "runner_path": "scripts/frontier_hierarchy_observable_principle_from_axiom.py",
       "title": "Observable Principle From Axiom Note",
-      "transitive_descendants": 280,
+      "transitive_descendants": 281,
       "verdict_rationale": null
     },
     "oh_schur_boundary_action_note": {
@@ -89260,9 +89333,9 @@
   "schema_version": 1,
   "stats": {
     "dropped_missing_notes": 0,
-    "preserved_existing": 1620,
-    "re_audit_required": 3,
-    "row_count": 1628,
-    "seeded_new": 5
+    "preserved_existing": 1628,
+    "re_audit_required": 1,
+    "row_count": 1629,
+    "seeded_new": 0
   }
 }

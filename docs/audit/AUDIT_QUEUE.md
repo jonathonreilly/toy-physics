@@ -1,14 +1,14 @@
 # Audit Queue
 
-**Generated:** 2026-04-28T11:27:35.556265+00:00
-**Total pending:** 1323
+**Generated:** 2026-04-28T11:51:18.173736+00:00
+**Total pending:** 1324
 **Ready (all deps already at a stable tier):** 904
 
 By criticality:
 - `critical`: 89
 - `high`: 519
 - `medium`: 90
-- `leaf`: 625
+- `leaf`: 626
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -37,8 +37,8 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 19 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | critical | 282 | 14.64 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py` |
 | 20 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | critical | 282 | 14.64 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py` |
 | 21 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | critical | 282 | 14.64 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py` |
-| 22 | `taste_scalar_isotropy_theorem_note` | critical | 281 | 17.64 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_taste_scalar_isotropy.py` |
-| 23 | `observable_principle_from_axiom_note` | critical | 280 | 28.63 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hierarchy_observable_principle_from_axiom.py` |
+| 22 | `observable_principle_from_axiom_note` | critical | 281 | 29.14 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hierarchy_observable_principle_from_axiom.py` |
+| 23 | `taste_scalar_isotropy_theorem_note` | critical | 281 | 17.64 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_taste_scalar_isotropy.py` |
 | 24 | `g_bare_derivation_note` | critical | 279 | 13.63 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_derivation.py` |
 | 25 | `s3_taste_cube_decomposition_note` | critical | 278 | 16.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_action_taste_cube_decomposition.py` |
 | 26 | `yt_color_projection_correction_note` | critical | 278 | 16.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_color_projection_correction.py` |

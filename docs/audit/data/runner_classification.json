@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T11:27:35.255106+00:00",
+  "generated_at": "2026-04-28T11:51:17.646868+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -5064,6 +5064,18 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_koide_q_op_locality_c3_fixed_source_support.py"
+    },
+    "koide_q_op_uniqueness_source_domain_support_note_2026-04-25": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_koide_q_op_uniqueness_source_domain_support.py"
     },
     "koide_q_readout_factorization_theorem_2026-04-22": {
       "assert_count": 0,
@@ -14953,6 +14965,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_koide_q_op_uniqueness_source_domain_support.py": {
+      "assert_count": 0,
+      "claims": [
+        "koide_q_op_uniqueness_source_domain_support_note_2026-04-25"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_koide_q_readout_factorization_theorem.py": {
       "assert_count": 0,
       "claims": [
@@ -18942,12 +18969,12 @@
     "dominant_class_distribution": {
       "A": 6,
       "B": 103,
-      "C": 334,
+      "C": 335,
       "D": 109,
       "none": 141
     },
-    "runners_classified": 693,
-    "runners_with_C": 412,
+    "runners_classified": 694,
+    "runners_with_C": 413,
     "runners_with_D": 185
   }
 }

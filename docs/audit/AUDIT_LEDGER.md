@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T11:27:35.700727+00:00
+**Generated:** 2026-04-28T11:51:18.581659+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -25,7 +25,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 185 |
 | support | 108 |
 | open | 15 |
-| unknown | 721 |
+| unknown | 722 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
@@ -40,22 +40,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1323 |
+| `unaudited` | 1324 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 94 |
 | `high` | 595 |
 | `medium` | 97 |
-| `leaf` | 842 |
+| `leaf` | 843 |
 
 - **Proposed claims demoted by upstream:** 140
 - **Citation cycles detected:** 288
 
 ### Runner classification (static heuristic)
 
-- runners classified: 693
-- runners with (C) first-principles compute hits: 412
+- runners classified: 694
+- runners with (C) first-principles compute hits: 413
 - runners with (D) external comparator hits: 185
 - decoration candidates (no C, no D): 71
 
@@ -68,7 +68,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 1 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 174 | 33.95 | `unaudited` | ~~audited_conditional~~ |
 | 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 174 | 33.45 | `unaudited` | ~~audited_conditional~~ |
 | 3 | `alpha_s_derived_note` | critical | 279 | 32.63 | `unaudited` | unknown |
-| 4 | `observable_principle_from_axiom_note` | critical | 280 | 28.63 | `unaudited` | unknown |
+| 4 | `observable_principle_from_axiom_note` | critical | 281 | 29.14 | `unaudited` | unknown |
 | 5 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 174 | 28.45 | `unaudited` | ~~audited_conditional~~ |
 | 6 | `ckm_atlas_axiom_closure_note` | critical | 174 | 25.95 | `unaudited` | ~~audited_conditional~~ |
 | 7 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 174 | 25.45 | `unaudited` | _proposed_promoted_ |
