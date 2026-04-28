@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 80,
-    "high": 518,
+    "high": 517,
     "leaf": 627,
     "medium": 86
   },
-  "generated_at": "2026-04-28T12:26:45.538263+00:00",
+  "generated_at": "2026-04-28T12:28:48.495736+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -2600,23 +2600,6 @@
       "note_path": "docs/QUARK_UP_AMPLITUDE_TENSOR_ENDPOINT_RESOLUTION_NOTE_2026-04-19.md",
       "ready": true,
       "runner_path": "scripts/frontier_quark_up_amplitude_tensor_endpoint_resolution.py",
-      "transitive_descendants": 127
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "oh_schur_boundary_action_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 4,
-      "load_bearing_score": 9.0,
-      "note_path": "docs/OH_SCHUR_BOUNDARY_ACTION_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_oh_schur_boundary_action.py",
       "transitive_descendants": 127
     },
     {
@@ -27202,6 +27185,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 888,
-  "total_pending": 1311
+  "ready_count": 887,
+  "total_pending": 1310
 }

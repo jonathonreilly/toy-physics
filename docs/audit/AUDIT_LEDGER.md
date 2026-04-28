@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T12:26:45.679995+00:00
+**Generated:** 2026-04-28T12:28:48.637561+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -25,22 +25,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 184 |
 | support | 100 |
 | open | 15 |
-| unknown | 703 |
+| unknown | 700 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 386 |
+| ~~audited_conditional~~ | 389 |
 | ~~audited_failed~~ | 148 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 79 |
-| `audited_conditional` | 153 |
+| `audited_conditional` | 154 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1311 |
+| `unaudited` | 1310 |
 
 | criticality | count |
 |---|---:|
@@ -256,6 +256,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_dirac_z3_support_trichotomy_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `newton_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `observable_principle_from_axiom_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `oh_schur_boundary_action_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3258,6 +3259,25 @@ Claim boundary until fixed: safe to claim finite-block log|det| curvature and th
 - **open / conditional deps cited:**
   - `scalar_observable_selection_assumptions_not_derived_from_bare_axiom`
   - `canonical_hierarchy_baseline_and_plaquette_normalization_chain_imported`
+- **auditor confidence:** high
+
+### `oh_schur_boundary_action_note`
+
+- **Note:** [`OH_SCHUR_BOUNDARY_ACTION_NOTE.md`](../../docs/OH_SCHUR_BOUNDARY_ACTION_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-28-oh_schur_boundary_action_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Eliminating the harmonic exterior bulk by exact Schur complement gives Lambda_R = H_tt - H_tb H_bb^{-1} H_bt and E_R(f)=1/2 f^T Lambda_R f, whose gradient is the microscopic trace flux.  _(class `C`)_
+- **chain closes:** False — The Schur-complement boundary action closes exactly on the current O_h and finite-rank strong-field source classes, and the live runner reports PASS=6 FAIL=0. The note explicitly does not close a fully general Einstein/Regge theorem, non-O_h strong-field closure, or nonlinear GR.
+- **rationale:** Issue: the microscopic Schur boundary action is exact for the current O_h and finite-rank shell source classes, but the note explicitly leaves the extension to general Einstein/Regge, non-O_h strong-field closure, and nonlinear GR open.
+Why this blocks: downstream proposed-retained/promoted strong-field or evanescent-barrier claims cannot cite this as a general gravity theorem; it only supplies a restricted shell-boundary action on the current bridge surface.
+Repair target: derive and audit the extension from the exact Schur-boundary-plus-static-bridge closure to the broader pointwise Einstein/Regge or nonlinear strong-field law.
+Claim boundary until fixed: safe to claim exact microscopic Schur-complement stationarity on the current source classes, not general strong-field gravity closure.
+- **open / conditional deps cited:**
+  - `general_Einstein_Regge_extension_beyond_current_static_conformal_bridge_missing`
+  - `non_Oh_strong_field_closure_missing`
+  - `fully_nonlinear_GR_closure_missing`
 - **auditor confidence:** high
 
 ### `omega_lambda_matter_bridge_theorem_note_2026-04-22`
