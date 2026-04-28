@@ -34,9 +34,50 @@ RepoGovernanceReviewer, MethodologySkillReviewer). Full multi-agent
 - **Disposition:** Cycle 1 accepted. Audit-grade; counts toward
   audit-quota (1 of 2 max consecutive).
 
-## Cycle 2+ — pending
+## Cycle 2 — R2 4D Dirac global lift attempt → partial-lift theorem with named obstruction
 
-Cycle 2 = R2 (4D Dirac global lift attempt). Stretch-eligible per
-Route Portfolio. If Cycle 2 lands cleanly as full-lift, audit-quota
-counter resets. If Cycle 2 lands as partial-lift + named obstruction,
-the obstruction itself becomes the active hard residual for Cycle 3.
+- **Date:** 2026-04-28
+- **Artifact:**
+  `docs/NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md`
+  (conditional theorem + named obstruction; no runner).
+- **Review mode:** branch-local 6-criterion self-review.
+- **Findings:**
+  1. **CodeRunnerReviewer (PASS).** No runner; structural case-
+     analysis.
+  2. **PhysicsClaimReviewer (PASS).** Honest reading of source
+     notes prevented over-claim. Both `NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE`
+     §6 and `NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE` §10 explicitly
+     preserve openness ("does NOT prove no future extension can
+     generate `mu != 0`"; "Cannot claim... framework has chosen
+     Dirac over Majorana in nature"). Cycle output is therefore a
+     **conditional theorem** under (C2-X) rather than an
+     unconditional global lift. Theorem statement structure
+     (P1-P6 + (C2-X)) → conditional global Dirac is sound.
+  3. **ImportSupportReviewer (PASS).** All cited identities are
+     retained on `main` or admitted convention (Schechter-Valle).
+     No silent imports.
+  4. **NatureRetentionReviewer (PASS, important).** The cycle
+     resisted the temptation to over-promote: the lift is scoped as
+     conditional under (C2-X), not unconditional. This is exactly
+     the new physics-loop skill's "no-churn exception" applied
+     correctly: an honest first-principles attempt with named
+     obstruction is valid progress even without closure.
+  5. **RepoGovernanceReviewer (PASS).** Naming convention
+     `*_PARTIAL_THEOREM_NOTE_*` matches conditional-theorem pattern.
+  6. **MethodologySkillReviewer (PASS).** Cycle 2 mirrors hubble-h0
+     `(C1)`/`(C2)` gate-isolation pattern: a single residual premise
+     named on a primitive algebraic block. Counts as
+     audit-grade/blocker-isolation per Deep Work Rules; audit-quota
+     counter advances to 2 (at threshold).
+- **Disposition:** Cycle 2 accepted. (C2-X) named as load-bearing
+  open obstruction with four candidate retention routes. Per Deep
+  Work Rules' audit-quota threshold, Cycle 3 MUST be a stretch
+  attempt on a named hard residual.
+
+## Cycle 3 — MANDATORY STRETCH ATTEMPT (per audit-quota threshold)
+
+Cycle 3 will attempt **(R-X3) finite-normal-grammar U(1) rigidity
+globalization** from `A_min` for at least one `--deep-block` (90
+min) interval. Valid output: partial structure, sharper obstruction,
+falsified premise, or worked failed derivation with load-bearing
+wall named (per Deep Work no-churn exception).
