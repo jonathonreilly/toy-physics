@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T03:27:07.872606+00:00
+**Generated:** 2026-04-28T03:29:52.247823+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 73 |
-| _proposed_retained_ | 5 |
+| _proposed_retained_ | 4 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 173 |
-| ~~audited_failed~~ | 331 |
+| ~~audited_conditional~~ | 357 |
+| ~~audited_failed~~ | 148 |
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
+| `audit_in_progress` | 1 |
 | `audited_clean` | 73 |
-| `audited_conditional` | 143 |
+| `audited_conditional` | 144 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 77 |
+| `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1309 |
+| `unaudited` | 1310 |
 
 | criticality | count |
 |---|---:|
@@ -50,7 +50,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 89 |
 | `leaf` | 842 |
 
-- **Proposed claims demoted by upstream:** 139
+- **Proposed claims demoted by upstream:** 140
 - **Citation cycles detected:** 288
 
 ### Runner classification (static heuristic)
@@ -66,38 +66,37 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | criticality | desc | score | audit_status | effective |
 |---:|---|---|---:|---:|---|---|
-| 1 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 174 | 33.95 | `unaudited` | ~~audited_failed~~ |
-| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 174 | 33.45 | `unaudited` | ~~audited_failed~~ |
+| 1 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 174 | 33.95 | `unaudited` | ~~audited_conditional~~ |
+| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 174 | 33.45 | `unaudited` | ~~audited_conditional~~ |
 | 3 | `alpha_s_derived_note` | critical | 279 | 32.63 | `unaudited` | unknown |
 | 4 | `observable_principle_from_axiom_note` | critical | 280 | 28.63 | `unaudited` | unknown |
-| 5 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 174 | 28.45 | `unaudited` | ~~audited_failed~~ |
-| 6 | `ckm_atlas_axiom_closure_note` | critical | 174 | 25.95 | `unaudited` | ~~audited_failed~~ |
+| 5 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 174 | 28.45 | `unaudited` | ~~audited_conditional~~ |
+| 6 | `ckm_atlas_axiom_closure_note` | critical | 174 | 25.95 | `unaudited` | ~~audited_conditional~~ |
 | 7 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 174 | 25.45 | `unaudited` | _proposed_promoted_ |
-| 8 | `three_generation_structure_note` | critical | 277 | 25.12 | `unaudited` | ~~audited_failed~~ |
-| 9 | `one_generation_matter_closure_note` | critical | 277 | 24.62 | `unaudited` | ~~audited_failed~~ |
-| 10 | `three_generation_observable_theorem_note` | critical | 277 | 24.62 | `unaudited` | ~~audited_failed~~ |
-| 11 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 174 | 24.45 | `unaudited` | ~~audited_failed~~ |
+| 8 | `three_generation_structure_note` | critical | 277 | 25.12 | `unaudited` | ~~audited_conditional~~ |
+| 9 | `one_generation_matter_closure_note` | critical | 277 | 24.62 | `unaudited` | ~~audited_conditional~~ |
+| 10 | `three_generation_observable_theorem_note` | critical | 277 | 24.62 | `unaudited` | ~~audited_conditional~~ |
+| 11 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 174 | 24.45 | `unaudited` | ~~audited_conditional~~ |
 | 12 | `yt_ew_color_projection_theorem` | critical | 282 | 24.14 | `audited_conditional` | ~~audited_conditional~~ |
 | 13 | `graph_first_su3_integration_note` | critical | 280 | 23.63 | `audited_clean` | **retained** |
-| 14 | `yt_ward_identity_derivation_theorem` | critical | 277 | 23.62 | `unaudited` | ~~audited_failed~~ |
-| 15 | `anomaly_forces_time_theorem` | critical | 277 | 22.62 | `unaudited` | ~~audited_failed~~ |
-| 16 | `minimal_axioms_2026-04-11` | critical | 277 | 22.12 | `unaudited` | ~~audited_failed~~ |
+| 14 | `yt_ward_identity_derivation_theorem` | critical | 277 | 23.62 | `unaudited` | ~~audited_conditional~~ |
+| 15 | `anomaly_forces_time_theorem` | critical | 277 | 22.62 | `unaudited` | ~~audited_conditional~~ |
+| 16 | `minimal_axioms_2026-04-11` | critical | 277 | 22.12 | `unaudited` | ~~audited_conditional~~ |
 | 17 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 174 | 21.95 | `unaudited` | unknown |
-| 18 | `left_handed_charge_matching_note` | critical | 277 | 21.12 | `unaudited` | ~~audited_failed~~ |
-| 19 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | critical | 277 | 20.62 | `unaudited` | ~~audited_failed~~ |
+| 18 | `left_handed_charge_matching_note` | critical | 277 | 21.12 | `unaudited` | ~~audited_conditional~~ |
+| 19 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | critical | 277 | 20.62 | `unaudited` | ~~audited_conditional~~ |
 | 20 | `higgs_mass_derived_note` | critical | 280 | 20.13 | `unaudited` | unknown |
-| 21 | `physical_lattice_necessity_note` | critical | 277 | 20.12 | `unaudited` | ~~audited_failed~~ |
+| 21 | `physical_lattice_necessity_note` | critical | 277 | 20.12 | `unaudited` | ~~audited_conditional~~ |
 | 22 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 123 | 19.95 | `audited_clean` | **retained** |
-| 23 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | critical | 174 | 19.95 | `unaudited` | ~~audited_failed~~ |
+| 23 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | critical | 174 | 19.95 | `unaudited` | ~~audited_conditional~~ |
 | 24 | `ckm_first_row_magnitudes_theorem_note_2026-04-24` | critical | 174 | 19.95 | `unaudited` | unknown |
-| 25 | `native_gauge_closure_note` | critical | 278 | 19.62 | `audited_failed` | ~~audited_failed~~ |
+| 25 | `native_gauge_closure_note` | critical | 278 | 19.62 | `unaudited` | ~~audited_conditional~~ |
 
 
 ## Applied audits
 
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `graph_first_selector_derivation_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -208,6 +207,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `global_coherence_off_scaffold_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `graph_first_selector_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
@@ -358,7 +358,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_grown_combined_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_vs_lattice_program_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `native_gauge_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `persistent_inertial_response_readiness_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `poisson_self_gravity_mechanism_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -1808,6 +1807,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `simple_classifier_exhaustion_no_go_theorem_or_exhaustive_metric_search_missing`
 - **auditor confidence:** high
 
+### `graph_first_selector_derivation_note`
+
+- **Note:** [`GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md`](../../docs/GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-27-graph_first_selector_derivation_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The first nontrivial even invariant V_sel(phi) = Tr H(phi)^4 - (1/8)(Tr H(phi)^2)^2 is treated as a selector potential whose normalized form F(p) has the three axis vertices as minima.  _(class `A`)_
+- **chain closes:** False — The finite graph algebra closes for the displayed invariant and its axis minima, but the note does not derive a source law or variational principle that selects this invariant with the positive sign as the physical selector potential.
+- **rationale:** Issue: The algebraic trace invariant is real and has axis minima, but the step from invariant to derived weak-axis selector assumes that this particular positive quartic is the potential/source law to minimize. Why this blocks: Without a retained theorem forcing that variational choice, the graph supplies an admissible axis-favoring invariant rather than a derived selector. Repair target: Derive the selector functional, coefficient sign, and normalization from the graph/taste axiom or an audited action principle, and update the runner so it constructs the selected variational functional rather than checking consequences after V_sel is chosen. Claim boundary until fixed: The note may claim that the canonical cube shifts admit an S3-symmetric quartic invariant whose normalized form has exactly the three axis minima with residual Z2 stabilizer.
+- **auditor confidence:** high
+
 ### `graph_first_su3_integration_note`
 
 - **Note:** [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](../../docs/GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
@@ -3044,24 +3055,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The live probe reproduces the frozen controls and finite quadrupole rows: same-site and neutral controls are zero, the dipole mainly shifts centroid, and the centered quadrupoles give near-zero centroid change with positive width response at a = 1.0 and a = 2.0. The source explicitly excludes full tensor gravity and a general multipole theory.
 - **rationale:** The retained content is a narrow finite-runner claim, not a physical tidal-field theorem: the current runner recomputes the same-site cancellation, q_test = 0 inert control, dipole baseline, and two centered quadrupole width responses. The quadrupole rows support the stated shape-sensitive width channel while the note explicitly disclaims full tensor gravity, relativistic tidal fields, and a general multipole expansion. Residual risk is only finite-configuration scope, plus a harmless rounded-ratio mismatch where the prose says 1.969 and the live runner prints +1.968; the audit does not retain anything beyond the tested ordered-lattice configuration.
 - **auditor confidence:** high
-
-### `native_gauge_closure_note`
-
-- **Note:** [`NATIVE_GAUGE_CLOSURE_NOTE.md`](../../docs/NATIVE_GAUGE_CLOSURE_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Aggregate exact native SU(2) from the primary non-Abelian runner with graph-first selector/SU(3) integration dependencies, then claim the gauge-structure backbone is closed with structural graph-first SU(3).  _(class `B`)_
-- **chain closes:** False — The primary runner attached to this note does not verify the graph-first SU(3) closure claimed by the source; its grand summary says SU(3) does not emerge from the cubic lattice alone and requires extra structure. The graph-first dependencies have first clean Codex-family audits only and are awaiting independent cross-confirmation.
-- **rationale:** Issue: the publication-facing aggregator claims retained graph-first SU(3) closure, but its primary runner frontier_non_abelian_gauge.py is an older/native-gauge runner whose live output concludes that SU(3) does not emerge from the cubic lattice alone and must be put in via triangulated/internal structure. Why this blocks: a retained gauge-structure closure note cannot cite a primary runner that contradicts the claimed SU(3) closure, and the alternative graph-first selector/integration route is still audit_in_progress awaiting independent cross-confirmation. Repair target: either change the claim boundary to native SU(2) plus conditional graph-first SU(3) support, or replace/extend the primary runner so it directly executes and verifies the graph-first selector and SU(3) integration chain; then complete non-Codex cross-confirmation for both graph-first dependencies. Claim boundary until fixed: safe to claim exact native cubic Cl(3)/SU(2) algebra from the primary runner and conditional graph-first selector/integration evidence; not safe to claim the gauge backbone is retained/closed with structural SU(3).
-- **open / conditional deps cited:**
-  - `GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md`
-  - `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`
-  - `scripts/frontier_graph_first_selector_derivation.py`
-  - `scripts/frontier_graph_first_su3_integration.py`
-  - `scripts/frontier_non_abelian_gauge.py`
-- **auditor confidence:** 0.95
 
 ### `neutrino_dirac_z3_support_trichotomy_note`
 

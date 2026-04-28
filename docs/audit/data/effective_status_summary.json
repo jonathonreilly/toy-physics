@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-28T03:27:07.654457+00:00",
+  "computed_at": "2026-04-28T03:29:52.052991+00:00",
   "cycle_examples": [
     [
       "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
@@ -25,20 +25,20 @@
   ],
   "cycles_detected": 288,
   "effective_status_counts": {
-    "audited_conditional": 173,
+    "audited_conditional": 357,
     "audited_decoration": 3,
-    "audited_failed": 331,
+    "audited_failed": 148,
     "audited_numerical_match": 5,
     "audited_renaming": 3,
     "bounded": 185,
     "open": 11,
     "proposed_promoted": 1,
-    "proposed_retained": 5,
+    "proposed_retained": 4,
     "retained": 73,
     "support": 104,
     "unknown": 721
   },
-  "proposed_demoted_by_upstream_count": 139,
+  "proposed_demoted_by_upstream_count": 140,
   "proposed_demoted_by_upstream_examples": [
     "alpha_s_derived_note",
     "atomic_hydrogen_helium_probe_note",

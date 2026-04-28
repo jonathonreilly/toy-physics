@@ -1,8 +1,8 @@
 # Audit Queue
 
-**Generated:** 2026-04-28T03:27:07.693206+00:00
+**Generated:** 2026-04-28T03:29:52.089462+00:00
 **Total pending:** 1311
-**Ready (all deps already at a stable tier):** 893
+**Ready (all deps already at a stable tier):** 892
 
 By criticality:
 - `critical`: 90
@@ -39,24 +39,24 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 21 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | critical | 282 | 14.64 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py` |
 | 22 | `taste_scalar_isotropy_theorem_note` | critical | 281 | 17.64 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_taste_scalar_isotropy.py` |
 | 23 | `observable_principle_from_axiom_note` | critical | 280 | 28.63 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hierarchy_observable_principle_from_axiom.py` |
-| 24 | `graph_first_selector_derivation_note` | critical | 279 | 14.13 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_selector_derivation.py` |
-| 25 | `g_bare_derivation_note` | critical | 279 | 13.63 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_derivation.py` |
-| 26 | `s3_mass_matrix_no_go_note` | critical | 278 | 16.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_mass_matrix_no_go.py` |
-| 27 | `s3_taste_cube_decomposition_note` | critical | 278 | 16.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_action_taste_cube_decomposition.py` |
-| 28 | `yt_color_projection_correction_note` | critical | 278 | 16.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_color_projection_correction.py` |
-| 29 | `z2_hw1_mass_matrix_parametrization_note` | critical | 278 | 16.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_z2_hw1_mass_matrix_parametrization.py` |
-| 30 | `g_bare_rigidity_theorem_note` | critical | 278 | 15.62 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_rigidity_theorem.py` |
-| 31 | `yt_qfp_insensitivity_support_note` | critical | 278 | 14.62 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_qfp_insensitivity.py` |
-| 32 | `yt_explicit_systematic_budget_note` | critical | 278 | 14.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_explicit_systematic_budget.py` |
-| 33 | `higgs_mass_from_axiom_note` | critical | 278 | 13.12 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
-| 34 | `rconn_derived_note` | critical | 282 | 19.14 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_color_projection_mc.py` |
-| 35 | `gauge_vacuum_plaquette_bridge_support_note` | critical | 282 | 14.64 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 36 | `ew_current_matching_ozi_suppression_theorem_note_2026-04-27` | critical | 282 | 13.14 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_color_projection_mc.py` |
-| 37 | `plaquette_self_consistency_note` | critical | 281 | 16.14 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_plaquette_self_consistency.py` |
-| 38 | `higgs_mass_derived_note` | critical | 280 | 20.13 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 39 | `higgs_mechanism_note` | critical | 280 | 13.13 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_derived.py` |
-| 40 | `higgs_from_lattice_note` | critical | 280 | 12.63 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_derived.py` |
-| 41 | `alpha_s_derived_note` | critical | 279 | 32.63 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 24 | `g_bare_derivation_note` | critical | 279 | 13.63 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_derivation.py` |
+| 25 | `s3_mass_matrix_no_go_note` | critical | 278 | 16.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_mass_matrix_no_go.py` |
+| 26 | `s3_taste_cube_decomposition_note` | critical | 278 | 16.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_action_taste_cube_decomposition.py` |
+| 27 | `yt_color_projection_correction_note` | critical | 278 | 16.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_color_projection_correction.py` |
+| 28 | `z2_hw1_mass_matrix_parametrization_note` | critical | 278 | 16.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_z2_hw1_mass_matrix_parametrization.py` |
+| 29 | `g_bare_rigidity_theorem_note` | critical | 278 | 15.62 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_rigidity_theorem.py` |
+| 30 | `yt_qfp_insensitivity_support_note` | critical | 278 | 14.62 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_qfp_insensitivity.py` |
+| 31 | `yt_explicit_systematic_budget_note` | critical | 278 | 14.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_explicit_systematic_budget.py` |
+| 32 | `higgs_mass_from_axiom_note` | critical | 278 | 13.12 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 33 | `rconn_derived_note` | critical | 282 | 19.14 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_color_projection_mc.py` |
+| 34 | `gauge_vacuum_plaquette_bridge_support_note` | critical | 282 | 14.64 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 35 | `ew_current_matching_ozi_suppression_theorem_note_2026-04-27` | critical | 282 | 13.14 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_color_projection_mc.py` |
+| 36 | `plaquette_self_consistency_note` | critical | 281 | 16.14 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_plaquette_self_consistency.py` |
+| 37 | `higgs_mass_derived_note` | critical | 280 | 20.13 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 38 | `higgs_mechanism_note` | critical | 280 | 13.13 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_derived.py` |
+| 39 | `higgs_from_lattice_note` | critical | 280 | 12.63 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_derived.py` |
+| 40 | `alpha_s_derived_note` | critical | 279 | 32.63 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 41 | `native_gauge_closure_note` | critical | 278 | 19.62 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_non_abelian_gauge.py` |
 | 42 | `g_bare_dynamical_fixation_obstruction_note_2026-04-18` | critical | 278 | 14.12 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_critical_feature_scan.py` |
 | 43 | `three_generation_structure_note` | critical | 277 | 25.12 |  | fresh_context_or_stronger_with_cross_confirmation | - |
 | 44 | `one_generation_matter_closure_note` | critical | 277 | 24.62 |  | fresh_context_or_stronger_with_cross_confirmation | - |
