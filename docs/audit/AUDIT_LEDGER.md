@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T12:10:20.376830+00:00
+**Generated:** 2026-04-28T12:09:55.686922+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -23,40 +23,40 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 3 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
-| support | 107 |
+| support | 105 |
 | open | 15 |
-| unknown | 710 |
+| unknown | 709 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 371 |
+| ~~audited_conditional~~ | 372 |
 | ~~audited_failed~~ | 148 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 79 |
-| `audited_conditional` | 146 |
+| `audited_conditional` | 147 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1318 |
+| `unaudited` | 1315 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 94 |
 | `high` | 595 |
 | `medium` | 97 |
-| `leaf` | 844 |
+| `leaf` | 842 |
 
 - **Proposed claims demoted by upstream:** 140
 - **Citation cycles detected:** 288
 
 ### Runner classification (static heuristic)
 
-- runners classified: 695
-- runners with (C) first-principles compute hits: 414
-- runners with (D) external comparator hits: 186
+- runners classified: 693
+- runners with (C) first-principles compute hits: 412
+- runners with (D) external comparator hits: 185
 - decoration candidates (no C, no D): 71
 
 ## Top 25 by load-bearing score (topology only)
@@ -65,31 +65,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | criticality | desc | score | audit_status | effective |
 |---:|---|---|---:|---:|---|---|
-| 1 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 175 | 33.96 | `unaudited` | ~~audited_conditional~~ |
-| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 175 | 33.46 | `unaudited` | ~~audited_conditional~~ |
-| 3 | `alpha_s_derived_note` | critical | 280 | 32.63 | `unaudited` | ~~audited_conditional~~ |
-| 4 | `observable_principle_from_axiom_note` | critical | 282 | 29.14 | `unaudited` | unknown |
-| 5 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 175 | 28.46 | `unaudited` | ~~audited_conditional~~ |
-| 6 | `ckm_atlas_axiom_closure_note` | critical | 175 | 25.96 | `unaudited` | ~~audited_conditional~~ |
-| 7 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 175 | 25.46 | `unaudited` | _proposed_promoted_ |
-| 8 | `three_generation_structure_note` | critical | 278 | 25.12 | `unaudited` | ~~audited_conditional~~ |
-| 9 | `one_generation_matter_closure_note` | critical | 278 | 24.62 | `unaudited` | ~~audited_conditional~~ |
-| 10 | `three_generation_observable_theorem_note` | critical | 278 | 24.62 | `unaudited` | ~~audited_conditional~~ |
-| 11 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 175 | 24.46 | `unaudited` | ~~audited_conditional~~ |
-| 12 | `yt_ew_color_projection_theorem` | critical | 283 | 24.15 | `audited_conditional` | ~~audited_conditional~~ |
-| 13 | `graph_first_su3_integration_note` | critical | 281 | 23.64 | `audited_clean` | **retained** |
-| 14 | `yt_ward_identity_derivation_theorem` | critical | 278 | 23.62 | `unaudited` | ~~audited_conditional~~ |
-| 15 | `anomaly_forces_time_theorem` | critical | 278 | 22.62 | `unaudited` | ~~audited_conditional~~ |
-| 16 | `minimal_axioms_2026-04-11` | critical | 278 | 22.12 | `unaudited` | ~~audited_conditional~~ |
-| 17 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 175 | 21.96 | `unaudited` | ~~audited_conditional~~ |
-| 18 | `left_handed_charge_matching_note` | critical | 278 | 21.12 | `unaudited` | ~~audited_conditional~~ |
-| 19 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | critical | 278 | 20.62 | `unaudited` | ~~audited_conditional~~ |
-| 20 | `higgs_mass_derived_note` | critical | 281 | 20.14 | `unaudited` | unknown |
-| 21 | `physical_lattice_necessity_note` | critical | 278 | 20.12 | `unaudited` | ~~audited_conditional~~ |
-| 22 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 124 | 19.97 | `audited_clean` | **retained** |
-| 23 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | critical | 175 | 19.96 | `unaudited` | ~~audited_conditional~~ |
-| 24 | `ckm_first_row_magnitudes_theorem_note_2026-04-24` | critical | 175 | 19.96 | `unaudited` | ~~audited_conditional~~ |
-| 25 | `native_gauge_closure_note` | critical | 279 | 19.63 | `unaudited` | ~~audited_conditional~~ |
+| 1 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 174 | 33.95 | `unaudited` | ~~audited_conditional~~ |
+| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 174 | 33.45 | `unaudited` | ~~audited_conditional~~ |
+| 3 | `alpha_s_derived_note` | critical | 279 | 32.63 | `unaudited` | ~~audited_conditional~~ |
+| 4 | `observable_principle_from_axiom_note` | critical | 280 | 28.63 | `unaudited` | unknown |
+| 5 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 174 | 28.45 | `unaudited` | ~~audited_conditional~~ |
+| 6 | `ckm_atlas_axiom_closure_note` | critical | 174 | 25.95 | `unaudited` | ~~audited_conditional~~ |
+| 7 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 174 | 25.45 | `unaudited` | _proposed_promoted_ |
+| 8 | `three_generation_structure_note` | critical | 277 | 25.12 | `unaudited` | ~~audited_conditional~~ |
+| 9 | `one_generation_matter_closure_note` | critical | 277 | 24.62 | `unaudited` | ~~audited_conditional~~ |
+| 10 | `three_generation_observable_theorem_note` | critical | 277 | 24.62 | `unaudited` | ~~audited_conditional~~ |
+| 11 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 174 | 24.45 | `unaudited` | ~~audited_conditional~~ |
+| 12 | `yt_ew_color_projection_theorem` | critical | 282 | 24.14 | `audited_conditional` | ~~audited_conditional~~ |
+| 13 | `graph_first_su3_integration_note` | critical | 280 | 23.63 | `audited_clean` | **retained** |
+| 14 | `yt_ward_identity_derivation_theorem` | critical | 277 | 23.62 | `unaudited` | ~~audited_conditional~~ |
+| 15 | `anomaly_forces_time_theorem` | critical | 277 | 22.62 | `unaudited` | ~~audited_conditional~~ |
+| 16 | `minimal_axioms_2026-04-11` | critical | 277 | 22.12 | `unaudited` | ~~audited_conditional~~ |
+| 17 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 174 | 21.95 | `unaudited` | ~~audited_conditional~~ |
+| 18 | `left_handed_charge_matching_note` | critical | 277 | 21.12 | `unaudited` | ~~audited_conditional~~ |
+| 19 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | critical | 277 | 20.62 | `unaudited` | ~~audited_conditional~~ |
+| 20 | `higgs_mass_derived_note` | critical | 280 | 20.13 | `unaudited` | unknown |
+| 21 | `physical_lattice_necessity_note` | critical | 277 | 20.12 | `unaudited` | ~~audited_conditional~~ |
+| 22 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 123 | 19.95 | `audited_clean` | **retained** |
+| 23 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | critical | 174 | 19.95 | `unaudited` | ~~audited_conditional~~ |
+| 24 | `ckm_first_row_magnitudes_theorem_note_2026-04-24` | critical | 174 | 19.95 | `unaudited` | ~~audited_conditional~~ |
+| 25 | `native_gauge_closure_note` | critical | 278 | 19.62 | `unaudited` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -212,6 +212,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `global_coherence_off_scaffold_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `graph_first_selector_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1827,6 +1828,23 @@ Claim boundary until fixed: safe to claim the constant-lift obstruction Gamma_ca
   - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`
   - `GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md`
   - `GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_mixed_cumulant_audit_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-28-gauge_vacuum_plaquette_mixed_cumulant_audit_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The onset of the full-vacuum reduction law is now exact, but the nonperturbative continuation to the framework point `beta = 6` is still open.  _(class `A`)_
+- **chain closes:** False — The exact small-beta onset coefficient closes, and the live runner reports THEOREM PASS=6 SUPPORT=1 FAIL=0. It does not close the full nonperturbative beta-dependent reduction law or its beta=6 evaluation, which the note explicitly leaves open.
+- **rationale:** Issue: the note closes the first nonlinear small-beta coefficient beta_eff(beta)=beta+beta^5/26244+O(beta^6), but explicitly does not close the full nonperturbative beta_eff(beta) or its beta=6 value.
+Why this blocks: downstream plaquette or alpha_s claims need the framework-point reduction, not only the onset coefficient, so this support theorem cannot promote analytic plaquette closure.
+Repair target: derive and audit the full beta-dependent reduction law and its nonperturbative continuation/evaluation at beta=6 with a runner that computes the framework-point plaquette readout.
+Claim boundary until fixed: safe to claim the exact first nonlocal coefficient and beta_eff onset, not full plaquette observable closure.
+- **open / conditional deps cited:**
+  - `nonperturbative_beta6_continuation_of_beta_eff_missing`
 - **auditor confidence:** high
 
 ### `geometry_superposition_dag_ensemble_note_2026-04-11`
