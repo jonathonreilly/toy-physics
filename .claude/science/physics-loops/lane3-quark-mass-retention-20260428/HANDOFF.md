@@ -1,9 +1,9 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T09:53:38Z
+**Updated:** 2026-04-28T09:57:22Z
 **Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block13-20260428`
-**Current head:** block-13 working checkpoint; see `git log`
-**Loop status:** stopping after packaging
+**Current head:** `3c059018` plus PR-status bookkeeping; see `git log`
+**Loop status:** stopped
 **Claim status:** open
 **Stop requested:** yes
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
@@ -18,11 +18,11 @@
 **Block 10 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/109
 **Block 11 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/110
 **Block 12 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/111
-**Block 13 review PR:** pending packaging
+**Block 13 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/112
 
 ## Current State
 
-Blocks 01 through 12 are packaged and PR'd. Block 13 is the required stuck
+Blocks 01 through 13 are packaged and PR'd. Block 13 is the required stuck
 fan-out synthesis after the deep RPSR/C3 work.
 
 ```text
@@ -74,14 +74,14 @@ Best honest status remains open. Retained non-top quark mass closure is
 withheld. Current-bank routes are exhausted after deep-work and fan-out.
 ```
 
-## Active Route
+## Packaged Route
 
-Block 13 needs packaging:
+Block 13 has been packaged:
 
 ```text
-branch physics-loop/lane3-quark-mass-retention-20260428-block13-20260428
-base physics-loop/lane3-quark-mass-retention-20260428-block12-20260428
-PR body .claude/science/physics-loops/lane3-quark-mass-retention-20260428/PR_BODY_BLOCK13.md
+commit 3c059018: physics-loop lane3 block13 stuck fanout synthesis
+pushed branch physics-loop/lane3-quark-mass-retention-20260428-block13-20260428
+stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/112
 ```
 
 ## Stop Reason

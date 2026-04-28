@@ -794,7 +794,7 @@ Disposition:
 
 - keep artifact;
 - claim status remains `open`;
-- stacked review PR pending packaging;
+- stacked review PR opened: https://github.com/jonathonreilly/cl3-lattice-framework/pull/112;
 - `STOP_REQUESTED` created because all current-bank routes are blocked after
   deep-work and fan-out; next progress requires human science judgment or new
   theorem content.
