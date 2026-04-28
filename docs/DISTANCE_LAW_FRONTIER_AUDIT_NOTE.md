@@ -1,7 +1,7 @@
 # Distance Law Frontier Audit
 
-**Date:** 2026-04-05  
-**Status:** proposed_retained frontier note, now superseded upward by the independently replayed wide-lattice `h^2+T` result on `main`
+**Date:** 2026-04-05 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** support / frontier-summary note, no runner registered, depends on three unaudited upstream distance-law notes; not a tier-ratifiable summary on its own.
 
 ## Question
 
@@ -71,3 +71,30 @@ The right near-term move is still not to broaden into a full continuum theory.
 It is to keep both retained frontier pieces in view and only promote the
 distance-law lane further if a stronger asymptotic statement earns its own
 artifact chain on `main`.
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, leaf criticality):
+
+> Issue: the note claims the compact grown-geometry and wide-lattice
+> distance-law pieces are the retained current frontier, but it
+> provides no runner and depends entirely on three unaudited
+> proposed-retained source notes. Why this blocks: an audit-lane
+> retained summary cannot outrank its inputs; until the cited
+> distance-law notes are audited clean, this note can only summarize
+> proposed frontier candidates.
+
+The note has been re-tiered to `support`.
+
+## What this note does NOT claim
+
+- A tier-ratifiable retained-frontier summary.
+- That the cited Gate B grown, Gate B `h = 0.25`, and wide-lattice
+  `h^2 + T` notes are audit-clean dependencies.
+- A registered runner output for the summary.
+
+## What would close this lane (Path A future work)
+
+A retained frontier summary would require auditing the three cited
+upstream distance-law notes to clean status, and registering a
+runner that reproduces the frontier-ranking criteria.
