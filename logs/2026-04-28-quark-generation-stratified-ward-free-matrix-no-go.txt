@@ -1,0 +1,70 @@
+========================================================================================
+LANE 3 DIRECT GENERATION-STRATIFIED QUARK WARD NO-GO
+========================================================================================
+
+A. Authority surfaces
+------------------------------------------------------------------------
+PASS: QUARK_GENERATION_STRATIFIED_WARD_FREE_MATRIX_NO_GO_NOTE_2026-04-28.md exists -- docs/QUARK_GENERATION_STRATIFIED_WARD_FREE_MATRIX_NO_GO_NOTE_2026-04-28.md
+PASS: SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md exists -- docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md
+PASS: YT_WARD_IDENTITY_DERIVATION_THEOREM.md exists -- docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md
+PASS: THREE_GENERATION_STRUCTURE_NOTE.md exists -- docs/THREE_GENERATION_STRUCTURE_NOTE.md
+PASS: CKM_ATLAS_AXIOM_CLOSURE_NOTE.md exists -- docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md
+PASS: QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md exists -- docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md
+PASS: YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md exists -- docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md
+PASS: one-Higgs theorem says quark generation matrices are arbitrary
+PASS: top Ward theorem states Q_L block normalization
+PASS: three-generation note states hierarchy remains open
+PASS: Lane 3 firewall keeps non-top masses open
+PASS: bottom analysis closes species-uniform physical reuse
+
+B. Exact quark one-Higgs gauge bookkeeping
+------------------------------------------------------------------------
+PASS: bar Q_L tilde H u_R is hypercharge neutral -- 0
+PASS: bar Q_L H d_R is hypercharge neutral -- 0
+PASS: bar Q_L H u_R wrong-Higgs residual is +2 -- 2
+PASS: bar Q_L tilde H d_R wrong-Higgs residual is -2 -- -2
+PASS: up-type monomial is color allowed -- 3bar x 3
+PASS: down-type monomial is color allowed -- 3bar x 3
+PASS: up-type selected monomial is gauge allowed
+PASS: down-type selected monomial is gauge allowed
+
+C. Generation matrices remain free
+------------------------------------------------------------------------
+PASS: all nine Y_u entries multiply the same gauge-allowed monomial
+PASS: all nine Y_d entries multiply the same gauge-allowed monomial
+PASS: wrong-Higgs Y_u entries are rejected
+PASS: wrong-Higgs Y_d entries are rejected
+PASS: gauge selection leaves nine complex entries per quark sector -- 9
+PASS: nine matrix entries exceed three eigenvalue slots -- gauge skeleton is not a spectrum
+
+D. Top Ward normalization is not a generation selector
+------------------------------------------------------------------------
+PASS: top Ward Q_L normalization square is N_c*N_iso = 6 -- 6
+PASS: top Ward coefficient is 1/sqrt(6)
+PASS: adding generation averaging changes the normalization square -- 18
+PASS: generation x weak dimension 6 would be a new source primitive -- same number, different object
+PASS: one-Higgs theorem does not select top/charm/up generation
+
+E. CKM mixing does not determine singular values
+------------------------------------------------------------------------
+PASS: witness CKM matrices are identical
+PASS: witness CKM matrix is nontrivial -- V_12=0.225056
+PASS: first up-sector singular values match its chosen diagonal spectrum
+PASS: second up-sector singular values differ from first -- A=[1.e-05 6.e-03 1.e+00], B=[3.e-04 3.e-02 8.e-01]
+PASS: first down-sector singular values match its chosen diagonal spectrum
+PASS: second down-sector singular values differ from first -- A=[2.0e-05 4.0e-04 2.4e-02], B=[0.0007 0.006  0.06  ]
+PASS: same left mixing admits two different quark spectra
+
+F. Firewall and scope checks
+------------------------------------------------------------------------
+PASS: forbidden proof inputs are absent -- ['field_charges', 'generation_blind_gauge_action', 'higgs_choice', 'same_ckm_svd_witness', 'source_note_scope_strings', 'top_ward_block_dimension']
+PASS: note says it does not claim non-top retained masses
+PASS: note keeps future source/readout primitive open
+PASS: note states CKM is not eigenvalue closure
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=42, FAIL=0
+VERDICT: direct generation-stratified quark Ward route remains open.
+The current retained bank selects quark Yukawa operator skeletons and
+top-channel normalization, but not non-top singular values.
