@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-28T03:29:52.247823+00:00
+**Generated:** 2026-04-28T03:33:05.533418+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 73 |
-| _proposed_retained_ | 4 |
+| **retained** | 74 |
+| _proposed_retained_ | 3 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -34,8 +34,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 73 |
+| `audited_clean` | 74 |
 | `audited_conditional` | 144 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
@@ -97,7 +96,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `s3_mass_matrix_no_go_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -159,6 +157,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -3558,6 +3557,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The retarded field does not collapse to the instantaneous row on refinement, but the split is not uniformly one-directional across the compact and refined rows.  _(class `C`)_
 - **chain closes:** False — The runner reproduces a bounded two-family smoke-probe readout, but the proposed-retained surface is stronger than the evidence because the result is partial, row-sign-dependent, and not attached as an assertion runner in the ledger.
 - **rationale:** Issue: The script and frozen log support only partial survival of a retarded-vs-instantaneous centroid-shift split on two retained DAG-family parameter choices, with nonuniform row signs and sizable standard errors, while the audit queue exposes the row as proposed_retained. Why this blocks: a two-family smoke probe without assertion tolerances or a stated statistical/refinement theorem cannot establish a retained retarded-field law or a robust universal discriminator. Repair target: change the source status to bounded/support, or add a ledger-attached assertion runner plus a refinement theorem/statistical criterion showing noncollapse over a specified family class with tolerances. Claim boundary until fixed: it is safe to claim that the current script reproduces nonzero mean splits for the compact and refined families and that the refined split is not uniformly one-directional; it is not safe to claim retained universal retarded-field behavior from this probe.
+- **auditor confidence:** high
+
+### `s3_mass_matrix_no_go_note`
+
+- **Note:** [`S3_MASS_MATRIX_NO_GO_NOTE.md`](../../docs/S3_MASS_MATRIX_NO_GO_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-04-27-s3_mass_matrix_no_go_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Since V ~= A_1 + E for the natural S_3 action on the hw=1 triplet, every S_3-invariant Hermitian operator has the form M = alpha I_3 + beta P_(A_1), hence spectrum {alpha, alpha, alpha + beta}.  _(class `A`)_
+- **chain closes:** True — The source note states a conditional representation-theory theorem on the hw=1 triplet, and the runner constructs the S_3 action, invariant algebra, two-value spectrum, and Z_2 dimension jump directly. The claim does not require a phenomenological mass identification beyond its explicit carrier boundary.
+- **rationale:** The retained content is an exact, bounded no-go theorem: on the stated hw=1 S_3 permutation carrier, Schur decomposition and direct invariant-algebra computation force only a singlet projector plus identity and therefore at most two spectral values. The live runner reports PASS=13 FAIL=0, including the S_3 invariant dimension, projector form, spectrum checks, and residual Z_2 dimension 5. Residual risk is only misuse downstream: this audit does not ratify that hw=1 is the physical generation carrier or any numerical flavor fit.
 - **auditor confidence:** high
 
 ### `second_grown_family_complex_note`
