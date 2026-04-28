@@ -1,8 +1,8 @@
 # Lane 3 Physics Loop Handoff
 
-**Updated:** 2026-04-28T09:00:43Z
+**Updated:** 2026-04-28T09:04:37Z
 **Current branch:** `physics-loop/lane3-quark-mass-retention-20260428-block07-20260428`
-**Current head:** block-07 working checkpoint; see `git log`
+**Current head:** `b127b337` plus PR-status bookkeeping; see `git log`
 **Loop status:** running
 **Claim status:** open
 **Block 01 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/100
@@ -11,7 +11,7 @@
 **Block 04 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/103
 **Block 05 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/104
 **Block 06 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/105
-**Block 07 review PR:** pending packaging
+**Block 07 review PR:** https://github.com/jonathonreilly/cl3-lattice-framework/pull/106
 
 ## Current State
 
@@ -75,18 +75,17 @@ still leaves scale, phase, species assignment, and quark Yukawa readout open.
 
 ## Active Route
 
-Block 07 is verified and ready for packaging:
+Block 07 has been packaged:
 
 ```text
-commit: pending
-push: pending
-stacked review PR against block 06: pending
+commit b127b337: physics-loop lane3 block07 c3 source boundary
+pushed branch physics-loop/lane3-quark-mass-retention-20260428-block07-20260428
+stacked review PR https://github.com/jonathonreilly/cl3-lattice-framework/pull/106
 ```
 
 ## Next Exact Action
 
-Commit/push block 07 and open a stacked review PR against block 06. After that,
-continue Lane 3 only from one of:
+Continue Lane 3 only from one of:
 
 1. A1 or an equivalent quark Ward source ratio for the `C3` carrier;
 2. P1-style positive parent/readout theorem for quark Yukawa amplitudes;
