@@ -1,0 +1,43 @@
+slug: neutrino-quantitative-20260428
+goal: "close Lane 4 (neutrino quantitative closure) at the strongest honest claim-state. Phase-1 priorities: 4D Dirac vs Majorana global lift; 4E seesaw quantitative spectrum closure"
+target_status: best-honest-status
+mode: run
+runtime: 4h
+deep_block: 90m
+start_time_utc: "2026-04-28T08:30:00Z"
+checkpoint_interval: 30m
+branch: frontier/neutrino-quantitative-20260428
+base: origin/main
+base_commit_at_start: "7a85d151 methodology: rename frontier workstream to physics loop"
+lock_status: unavailable
+lock_note: "scripts/automation_lock.py hardcodes /Users/jonreilly paths; this worktree is on /Users/jonBridger. Skipping cooperative lock per skill optionality."
+current_phase: grounding
+cycles_completed: 0
+audit_grade_cycles_in_a_row: 0
+active_route: null
+active_hard_residual: null
+files_touched:
+  - .claude/science/physics-loops/neutrino-quantitative-20260428/STATE.yaml
+  - .claude/science/physics-loops/neutrino-quantitative-20260428/GOAL.md
+  - .claude/science/physics-loops/neutrino-quantitative-20260428/ASSUMPTIONS_AND_IMPORTS.md
+  - .claude/science/physics-loops/neutrino-quantitative-20260428/NO_GO_LEDGER.md
+  - .claude/science/physics-loops/neutrino-quantitative-20260428/ROUTE_PORTFOLIO.md
+  - .claude/science/physics-loops/neutrino-quantitative-20260428/ARTIFACT_PLAN.md
+  - .claude/science/physics-loops/neutrino-quantitative-20260428/LITERATURE_BRIDGES.md
+  - .claude/science/physics-loops/neutrino-quantitative-20260428/REVIEW_HISTORY.md
+  - .claude/science/physics-loops/neutrino-quantitative-20260428/HANDOFF.md
+  - .claude/science/physics-loops/neutrino-quantitative-20260428/PR_BACKLOG.md
+open_imports:
+  - "absolute neutrino mass m_lightest — primary retirement target (Lane 4A)"
+  - "Delta m^2_21 (solar mass-squared difference) — observational; Lane 4B retirement target"
+  - "Delta m^2_31 (atmospheric mass-squared difference) — observational; Lane 4C retirement target"
+  - "alpha_21, alpha_31 Majorana phases — only relevant if Majorana globally; Lane 4D will resolve"
+  - "right-handed neutrino mass spectrum (M_R1, M_R2, M_R3) — Lane 4E"
+  - "PDG / global-fit oscillation values as comparators only"
+no_go_routes_inherited: []
+no_go_routes_proven_in_workstream: []
+review_findings: []
+artifacts_landed: []
+claim_state_movement: []
+next_exact_action: "Execute Cycle 1 on Route R1 (lane-file's first parallel-worker target): inventory retained neutrino/DM inputs and separate direct quantitative targets (4A m_lightest, 4B Delta m^2_21, 4C Delta m^2_31, 4D Dirac vs Majorana, 4E seesaw spectrum, 4F Sigma m_nu, 4G cross-validation) from bounded or phenomenological forecasts. This is Tier A and produces the workstream's grounding."
+stop_condition: "runtime budget (4h) reached, max cycles, blocker requiring human science judgment, honest claim-state closure achieved, OR (per new physics-loop skill Deep Work Rules) at least one stretch attempt and one stuck fan-out synthesis recorded before any 'no route' stop"
