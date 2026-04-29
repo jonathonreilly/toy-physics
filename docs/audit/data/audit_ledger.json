@@ -1,9 +1,6 @@
 {
-  "effective_status_computed_at": "2026-04-29T11:05:59.073501+00:00",
-  "generated_at": "2026-04-29T11:05:57.225316+00:00",
-  "invalidation_run_at": "2026-04-29T11:05:59.015696+00:00",
-  "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-29T11:05:58.890817+00:00",
+  "effective_status_computed_at": "2026-04-29T11:44:27.216736+00:00",
+  "generated_at": "2026-04-29T11:35:42.558285+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -4390,14 +4387,25 @@
       "verdict_rationale": "Issue: The load-bearing step is exact algebra from the definitions alpha_LM = alpha_bare/u_0 and alpha_s(v) = alpha_bare/u_0^2, but the row presents this bookkeeping corollary as a separate proposed-retained theorem and registers no parent dependency or primary runner. Why this blocks: A definition-level geometric-mean identity adds no independent observable, comparator, falsifiability, or new physical bridge beyond the upstream plaquette/coupling surface, so it should not inflate the retained claim surface as a standalone theorem. Repair target: Box this identity under the retained plaquette/coupling-chain parent, or re-promote only if it is shown to be genuine compression used load-bearing by downstream claims with an explicit parent dependency. Claim boundary until fixed: It is safe to state the exact identity as a bookkeeping corollary of the accepted coupling definitions and to use it to avoid double-counting alpha_LM and alpha_s(v) as independent knobs."
     },
     "alpha_s_derived_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-29T11:37:57.604972+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {
+          "plaquette_self_consistency_note": "audited_conditional"
+        },
+        "deps": [
+          "plaquette_self_consistency_note"
+        ],
+        "load_bearing_score": 32.634,
+        "transitive_descendants": 280
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+      "auditor_confidence": 0.86,
+      "auditor_family": "codex-gpt-5.5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "No. The chain reads the canonical plaquette value from the one-hop dependency and then invokes a retained v-to-M_Z running bridge/threshold infrastructure that is not supplied as a one-hop authority.",
       "claim_id": "alpha_s_derived_note",
       "criticality": "critical",
       "current_status": "proposed_retained",
@@ -4408,17 +4416,20 @@
       ],
       "direct_in_degree": 41,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:plaquette_self_consistency_note",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "effective_status_reason": "self",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 32.634,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "alpha_s(v) = alpha_bare / u_0^2 = 0.1033, followed by the one-decade low-energy transfer alpha_s(M_Z) = 0.1181.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "35b06d051d7e2e6c0c3da975a30d7da02b62b27865e7d0ba3e58fcf9230b0e29",
       "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md: proposed plaquette evaluation with explicit remaining analytic insertion gap",
+        "missing one-hop dependency: retained low-energy running bridge from v to M_Z"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367597+00:00",
@@ -4447,16 +4458,17 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "A": 5,
+        "B": 1,
+        "C": 2,
+        "D": 6,
+        "PASS lines classified": "B: plaquette constant read; A: R_conn identity, u0 algebra, alpha_s(v) algebra, taste_weight, zero-import self-check; C: backward Ward scan and Ward boundary verification; D: v, EW, top, alpha_s(M_Z), and sin^2 comparator checks. No runner classification entry was present for this runner.",
+        "total_pass": 14
       },
       "runner_path": null,
       "title": "`alpha_s(M_Z)` Retained Same-Surface-Derived Authority",
       "transitive_descendants": 280,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the restricted inputs do not include the retained low-energy running bridge needed to turn alpha_s(v) into alpha_s(M_Z), and the plaquette dependency itself says the exact analytic beta=6 insertion is not closed. Why this blocks: the note's 0.1181 result is reproducible by the runner, but in the fresh-look context it rests on an unsupplied bridge plus a proposed plaquette evaluation rather than a closed retained derivation. Repair target: cite and audit the running-bridge theorem/threshold map and close or explicitly scope the plaquette beta=6 insertion status. Claim boundary until fixed: alpha_s(M_Z)=0.1181 may be treated as a conditional same-surface numerical lane given the canonical plaquette and runner bridge, not as independently audited clean closure."
     },
     "alt_connectivity_family_basin_note": {
       "audit_date": "2026-04-26",
@@ -13244,7 +13256,7 @@
         "cl3_taste_generation_theorem"
       ],
       "direct_in_degree": 7,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "inherited_from:cl3_sm_embedding_theorem",
       "independence": null,
       "intrinsic_status": "support",
@@ -13287,7 +13299,7 @@
         "minimal_axioms_2026-04-11"
       ],
       "direct_in_degree": 9,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "inherited_from:minimal_axioms_2026-04-11",
       "independence": null,
       "intrinsic_status": "support",
@@ -32643,15 +32655,27 @@
     },
     "gauge_vacuum_plaquette_connected_hierarchy_theorem_note": {
       "audit_date": null,
-      "audit_status": "unaudited",
+      "audit_status": "audit_in_progress",
       "auditor": null,
       "auditor_confidence": null,
       "auditor_family": null,
-      "blocker": null,
+      "blocker": "awaiting_cross_confirmation",
       "chain_closes": null,
       "chain_closure_explanation": null,
       "claim_id": "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
       "criticality": "critical",
+      "cross_confirmation": {
+        "first_audit": {
+          "audit_date": "2026-04-29T11:42:43.733732+00:00",
+          "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+          "auditor_family": "codex-gpt-5.5",
+          "independence": "cross_family",
+          "load_bearing_step_class": "A",
+          "verdict": "audited_clean"
+        },
+        "second_audit": null,
+        "status": "awaiting_second"
+      },
       "current_status": "unknown",
       "current_status_raw": "exact connected-cumulant hierarchy theorem for the Wilson",
       "decoration_parent_claim_id": null,
@@ -33671,15 +33695,27 @@
     },
     "gauge_vacuum_plaquette_framework_point_underdetermination_note": {
       "audit_date": null,
-      "audit_status": "unaudited",
+      "audit_status": "audit_in_progress",
       "auditor": null,
       "auditor_confidence": null,
       "auditor_family": null,
-      "blocker": null,
+      "blocker": "awaiting_cross_confirmation",
       "chain_closes": null,
       "chain_closure_explanation": null,
       "claim_id": "gauge_vacuum_plaquette_framework_point_underdetermination_note",
       "criticality": "critical",
+      "cross_confirmation": {
+        "first_audit": {
+          "audit_date": "2026-04-29T11:43:07.092052+00:00",
+          "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+          "auditor_family": "codex-gpt-5.5",
+          "independence": "cross_family",
+          "load_bearing_step_class": "A",
+          "verdict": "audited_clean"
+        },
+        "second_audit": null,
+        "status": "awaiting_second"
+      },
       "current_status": "support",
       "current_status_raw": "exact obstruction theorem on the current plaquette support stack;",
       "decoration_parent_claim_id": null,
@@ -33712,15 +33748,27 @@
     },
     "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note": {
       "audit_date": null,
-      "audit_status": "unaudited",
+      "audit_status": "audit_in_progress",
       "auditor": null,
       "auditor_confidence": null,
       "auditor_family": null,
-      "blocker": null,
+      "blocker": "awaiting_cross_confirmation",
       "chain_closes": null,
       "chain_closure_explanation": null,
       "claim_id": "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note",
       "criticality": "critical",
+      "cross_confirmation": {
+        "first_audit": {
+          "audit_date": "2026-04-29T11:43:28.674724+00:00",
+          "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+          "auditor_family": "codex-gpt-5.5",
+          "independence": "cross_family",
+          "load_bearing_step_class": "A",
+          "verdict": "audited_clean"
+        },
+        "second_audit": null,
+        "status": "awaiting_second"
+      },
       "current_status": "unknown",
       "current_status_raw": "exact obstruction theorem on the finite Wilson source surface;",
       "decoration_parent_claim_id": null,
@@ -33753,15 +33801,27 @@
     },
     "gauge_vacuum_plaquette_local_environment_factorization_theorem_note": {
       "audit_date": null,
-      "audit_status": "unaudited",
+      "audit_status": "audit_in_progress",
       "auditor": null,
       "auditor_confidence": null,
       "auditor_family": null,
-      "blocker": null,
+      "blocker": "awaiting_cross_confirmation",
       "chain_closes": null,
       "chain_closure_explanation": null,
       "claim_id": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
       "criticality": "critical",
+      "cross_confirmation": {
+        "first_audit": {
+          "audit_date": "2026-04-29T11:43:56.151183+00:00",
+          "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+          "auditor_family": "codex-gpt-5.5",
+          "independence": "cross_family",
+          "load_bearing_step_class": "A",
+          "verdict": "audited_clean"
+        },
+        "second_audit": null,
+        "status": "awaiting_second"
+      },
       "current_status": "open",
       "current_status_raw": "exact mixed-kernel locality theorem on the accepted Wilson `3 spatial + 1 derived-time` source surface; after trivial-channel normalization the mixed-kernel source-sector action is exactly the local Wilson marked-link factor, so the remaining open object is residual source-sector environment data outside that normalized mixed kernel",
       "decoration_parent_claim_id": null,
@@ -33844,15 +33904,27 @@
     },
     "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note": {
       "audit_date": null,
-      "audit_status": "unaudited",
+      "audit_status": "audit_in_progress",
       "auditor": null,
       "auditor_confidence": null,
       "auditor_family": null,
-      "blocker": null,
+      "blocker": "awaiting_cross_confirmation",
       "chain_closes": null,
       "chain_closure_explanation": null,
       "claim_id": "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
       "criticality": "critical",
+      "cross_confirmation": {
+        "first_audit": {
+          "audit_date": "2026-04-29T11:41:39.102359+00:00",
+          "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+          "auditor_family": "codex-gpt-5.5",
+          "independence": "cross_family",
+          "load_bearing_step_class": "A",
+          "verdict": "audited_clean"
+        },
+        "second_audit": null,
+        "status": "awaiting_second"
+      },
       "current_status": "unknown",
       "current_status_raw": "exact obstruction theorem inside the now-explicit factorized",
       "decoration_parent_claim_id": null,
@@ -33885,15 +33957,27 @@
     },
     "gauge_vacuum_plaquette_perron_reduction_theorem_note": {
       "audit_date": null,
-      "audit_status": "unaudited",
+      "audit_status": "audit_in_progress",
       "auditor": null,
       "auditor_confidence": null,
       "auditor_family": null,
-      "blocker": null,
+      "blocker": "awaiting_cross_confirmation",
       "chain_closes": null,
       "chain_closure_explanation": null,
       "claim_id": "gauge_vacuum_plaquette_perron_reduction_theorem_note",
       "criticality": "critical",
+      "cross_confirmation": {
+        "first_audit": {
+          "audit_date": "2026-04-29T11:44:20.089529+00:00",
+          "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+          "auditor_family": "codex-gpt-5.5",
+          "independence": "cross_family",
+          "load_bearing_step_class": "A",
+          "verdict": "audited_clean"
+        },
+        "second_audit": null,
+        "status": "awaiting_second"
+      },
       "current_status": "support",
       "current_status_raw": "exact transfer-state reduction theorem on the finite Wilson `3 spatial + 1 derived-time`",
       "decoration_parent_claim_id": null,
@@ -34008,15 +34092,27 @@
     },
     "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note": {
       "audit_date": null,
-      "audit_status": "unaudited",
+      "audit_status": "audit_in_progress",
       "auditor": null,
       "auditor_confidence": null,
       "auditor_family": null,
-      "blocker": null,
+      "blocker": "awaiting_cross_confirmation",
       "chain_closes": null,
       "chain_closure_explanation": null,
       "claim_id": "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
       "criticality": "critical",
+      "cross_confirmation": {
+        "first_audit": {
+          "audit_date": "2026-04-29T11:42:07.893843+00:00",
+          "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+          "auditor_family": "codex-gpt-5.5",
+          "independence": "cross_family",
+          "load_bearing_step_class": "A",
+          "verdict": "audited_clean"
+        },
+        "second_audit": null,
+        "status": "awaiting_second"
+      },
       "current_status": "support",
       "current_status_raw": "exact source-sector factorization theorem on the finite Wilson `3 spatial + 1 derived-time` source surface; the exact factorized operator class at `beta = 6` is explicit, and the mixed-kernel part is now known to localize to the exact marked-link factor after trivial-channel normalization; the linked script is a generic positive-diagonal witness, not an explicit Wilson `D_6` evaluation",
       "decoration_parent_claim_id": null,
@@ -34265,15 +34361,27 @@
     },
     "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note": {
       "audit_date": null,
-      "audit_status": "unaudited",
+      "audit_status": "audit_in_progress",
       "auditor": null,
       "auditor_confidence": null,
       "auditor_family": null,
-      "blocker": null,
+      "blocker": "awaiting_cross_confirmation",
       "chain_closes": null,
       "chain_closure_explanation": null,
       "claim_id": "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
       "criticality": "critical",
+      "cross_confirmation": {
+        "first_audit": {
+          "audit_date": "2026-04-29T11:41:11.168740+00:00",
+          "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+          "auditor_family": "codex-gpt-5.5",
+          "independence": "cross_family",
+          "load_bearing_step_class": "A",
+          "verdict": "audited_clean"
+        },
+        "second_audit": null,
+        "status": "awaiting_second"
+      },
       "current_status": "support",
       "current_status_raw": "exact operator-realization theorem on the finite Wilson `3 spatial + 1 derived-time`",
       "decoration_parent_claim_id": null,
@@ -39004,7 +39112,7 @@
         "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25"
       ],
       "direct_in_degree": 12,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "inherited_from:minimal_axioms_2026-04-11",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -51225,14 +51333,59 @@
       "verdict_rationale": "Issue: The source is explicitly a bounded moonshot trapping probe on a proposed_retained generated-geometry family, but its branch verdict says it produces a retained threshold. The live runner inserts an absorptive parameter alpha and measures escape fraction; it does not derive an absorbing horizon law or black-hole observable from retained inputs. Why this blocks: a hand-added absorption proxy with one finite family, four seeds, and three source positions cannot be ratified as a retained horizon/trapping theorem. Repair target: either correct the Status/current_status to bounded/proposed_bounded, or derive the absorption law from retained dynamics and show the threshold is a framework-native strong-field observable with clean weak-field reduction and audited dependencies. Claim boundary until fixed: it is safe to claim the live artifact reproduces alpha=0 weak-field recovery and a proxy escape threshold below 50% at alpha ~= 0.10 on this setup; it is not safe to call this a retained horizon theorem or full black-hole mechanism."
     },
     "minimal_axioms_2026-04-11": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-29T11:39:58.943718+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {
+          "alpha_s_derived_note": "audited_conditional",
+          "g_bare_dynamical_fixation_obstruction_note_2026-04-18": "audited_conditional",
+          "g_bare_rigidity_theorem_note": "unknown",
+          "g_bare_structural_normalization_theorem_note_2026-04-18": "audited_conditional",
+          "g_bare_two_ward_closure_note_2026-04-18": "audited_conditional",
+          "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19": "audited_conditional",
+          "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19": "support",
+          "generation_axiom_boundary_note": "audited_conditional",
+          "higgs_vacuum_explicit_systematic_note": "audited_conditional",
+          "observable_principle_from_axiom_note": "audited_conditional",
+          "physical_lattice_necessity_note": "audited_conditional",
+          "rconn_derived_note": "audited_conditional",
+          "yt_color_projection_correction_note": "audited_conditional",
+          "yt_ew_color_projection_theorem": "audited_conditional",
+          "yt_explicit_systematic_budget_note": "support",
+          "yt_qfp_insensitivity_support_note": "bounded",
+          "yt_ward_identity_derivation_theorem": "audited_conditional",
+          "yt_zero_import_authority_note": "audited_conditional"
+        },
+        "deps": [
+          "alpha_s_derived_note",
+          "g_bare_dynamical_fixation_obstruction_note_2026-04-18",
+          "g_bare_rigidity_theorem_note",
+          "g_bare_structural_normalization_theorem_note_2026-04-18",
+          "g_bare_two_ward_closure_note_2026-04-18",
+          "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
+          "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
+          "generation_axiom_boundary_note",
+          "higgs_vacuum_explicit_systematic_note",
+          "observable_principle_from_axiom_note",
+          "physical_lattice_necessity_note",
+          "rconn_derived_note",
+          "yt_color_projection_correction_note",
+          "yt_ew_color_projection_theorem",
+          "yt_explicit_systematic_budget_note",
+          "yt_qfp_insensitivity_support_note",
+          "yt_ward_identity_derivation_theorem",
+          "yt_zero_import_authority_note"
+        ],
+        "load_bearing_score": 22.124,
+        "transitive_descendants": 278
+      },
+      "audit_status": "audited_renaming",
+      "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+      "auditor_confidence": 0.91,
+      "auditor_family": "codex-gpt-5.5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "No. The note declares the package input boundary but does not prove minimality, and its one-hop support stack contains support, bounded, unknown, and already conditional authorities.",
       "claim_id": "minimal_axioms_2026-04-11",
       "criticality": "critical",
       "current_status": "unknown",
@@ -51259,30 +51412,45 @@
         "higgs_vacuum_explicit_systematic_note"
       ],
       "direct_in_degree": 20,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:g_bare_structural_normalization_theorem_note_2026-04-18",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "self",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_renaming",
       "load_bearing_score": 22.124,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "This file records the smallest input stack the current package actually uses: Cl(3), Z^3, finite local Grassmann/staggered-Dirac dynamics, and the canonical g_bare/plaquette/u0/APBC evaluation surface.",
+      "load_bearing_step_class": "E",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "b3af3af78cb351f23f54e09336a28431f84f581490a62d66347f54b0b9846473",
       "note_path": "docs/MINIMAL_AXIOMS_2026-04-11.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/G_BARE_RIGIDITY_THEOREM_NOTE.md: current_status unknown",
+        "docs/G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md: current_status support",
+        "docs/G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md: current_status support",
+        "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md: current_status support",
+        "docs/G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md: current_status bounded",
+        "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md: current_status unknown and audited_conditional",
+        "docs/ALPHA_S_DERIVED_NOTE.md: audited_conditional",
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md: current_status support",
+        "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md: current_status support",
+        "docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md: current_status support and audited_conditional",
+        "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md: current_status support",
+        "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md: current_status bounded",
+        "docs/HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md: current_status support"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
         "C": 0,
         "D": 0,
+        "PASS lines classified": "No primary runner is listed for this claim.",
         "total_pass": 0
       },
       "runner_path": null,
       "title": "Minimal Framework Inputs",
       "transitive_descendants": 278,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the minimality claim is load-bearingly an inventory/definition of what the current package uses, not a derivation that no smaller input stack suffices. Why this blocks: several cited authorities are support, bounded, unknown, or conditional, so the asserted minimal package boundary cannot be audit-ratified as a closed theorem from the restricted inputs. Repair target: provide a dedicated minimality theorem showing necessity and independence of each listed input, with all load-bearing g_bare, physical-lattice, plaquette, EW/YT, and Higgs authorities audited clean or explicitly scoped. Claim boundary until fixed: the note may safely serve as a current package-input inventory, not as an audited proof of minimality of the input stack."
     },
     "minimal_bidirectional_trapping_probe_note": {
       "audit_date": "2026-04-27",

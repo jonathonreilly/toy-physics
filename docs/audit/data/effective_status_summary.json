@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-29T11:05:59.093611+00:00",
+  "computed_at": "2026-04-29T11:44:27.231920+00:00",
   "cycle_examples": [
     [
       "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
@@ -25,11 +25,11 @@
   ],
   "cycles_detected": 288,
   "effective_status_counts": {
-    "audited_conditional": 354,
+    "audited_conditional": 350,
     "audited_decoration": 3,
     "audited_failed": 129,
     "audited_numerical_match": 4,
-    "audited_renaming": 3,
+    "audited_renaming": 7,
     "bounded": 232,
     "open": 28,
     "proposed_promoted": 1,
@@ -38,9 +38,8 @@
     "support": 123,
     "unknown": 698
   },
-  "proposed_demoted_by_upstream_count": 140,
+  "proposed_demoted_by_upstream_count": 139,
   "proposed_demoted_by_upstream_examples": [
-    "alpha_s_derived_note",
     "atomic_hydrogen_helium_probe_note",
     "bh_entropy_rt_ratio_widom_no_go_note",
     "bminusl_anomaly_freedom_theorem_note_2026-04-24",
@@ -64,6 +63,7 @@
     "ckm_brocard_q_polynomial_perfect_square_decomposition_theorem_note_2026-04-25",
     "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25",
     "ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25",
-    "ckm_compound_magnitudes_circumradius_bridge_theorem_note_2026-04-25"
+    "ckm_compound_magnitudes_circumradius_bridge_theorem_note_2026-04-25",
+    "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
   ]
 }
