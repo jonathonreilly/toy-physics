@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-29T11:40:12.954234+00:00
+**Generated:** 2026-04-29T23:14:58.230203+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,42 +20,42 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 78 |
-| _proposed_retained_ | 10 |
+| _proposed_retained_ | 12 |
 | bounded | 234 |
-| support | 129 |
-| open | 28 |
-| unknown | 696 |
+| support | 126 |
+| open | 26 |
+| unknown | 682 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 4 |
+| ~~audited_numerical_match~~ | 3 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 375 |
-| ~~audited_failed~~ | 102 |
+| ~~audited_conditional~~ | 406 |
+| ~~audited_failed~~ | 89 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 78 |
-| `audited_conditional` | 128 |
+| `audited_conditional` | 111 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 57 |
-| `audited_numerical_match` | 4 |
+| `audited_failed` | 50 |
+| `audited_numerical_match` | 3 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1389 |
+| `unaudited` | 1414 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 56 |
-| `high` | 357 |
-| `medium` | 375 |
-| `leaf` | 874 |
+| `critical` | 78 |
+| `high` | 363 |
+| `medium` | 371 |
+| `leaf` | 850 |
 
-- **Proposed claims demoted by upstream:** 139
-- **Citation cycles detected:** 132
+- **Proposed claims demoted by upstream:** 162
+- **Citation cycles detected:** 151
 
 ### Runner classification (static heuristic)
 
-- runners classified: 718
-- runners with (C) first-principles compute hits: 427
-- runners with (D) external comparator hits: 203
+- runners classified: 727
+- runners with (C) first-principles compute hits: 433
+- runners with (D) external comparator hits: 208
 - decoration candidates (no C, no D): 71
 
 ## Top 25 by load-bearing score (topology only)
@@ -64,31 +64,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | criticality | desc | score | audit_status | effective |
 |---:|---|---|---:|---:|---|---|
-| 1 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 106 | 32.74 | `unaudited` | ~~audited_conditional~~ |
-| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 107 | 32.26 | `unaudited` | ~~audited_conditional~~ |
-| 3 | `alpha_s_derived_note` | critical | 211 | 32.23 | `unaudited` | ~~audited_conditional~~ |
-| 4 | `observable_principle_from_axiom_note` | critical | 197 | 28.63 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 94 | 27.57 | `unaudited` | ~~audited_conditional~~ |
-| 6 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 105 | 24.73 | `unaudited` | ~~audited_conditional~~ |
-| 7 | `three_generation_structure_note` | critical | 233 | 23.87 | `unaudited` | ~~audited_conditional~~ |
-| 8 | `yt_ward_identity_derivation_theorem` | critical | 256 | 23.51 | `unaudited` | support |
-| 9 | `graph_first_su3_integration_note` | critical | 252 | 23.48 | `audited_clean` | **retained** |
-| 10 | `three_generation_observable_theorem_note` | critical | 247 | 23.45 | `unaudited` | ~~audited_conditional~~ |
-| 11 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 86 | 23.44 | `unaudited` | ~~audited_conditional~~ |
-| 12 | `one_generation_matter_closure_note` | critical | 227 | 22.33 | `unaudited` | ~~audited_conditional~~ |
-| 13 | `yt_ew_color_projection_theorem` | critical | 84 | 21.41 | `audited_conditional` | ~~audited_conditional~~ |
-| 14 | `left_handed_charge_matching_note` | critical | 234 | 20.88 | `unaudited` | ~~audited_conditional~~ |
-| 15 | `ckm_atlas_axiom_closure_note` | critical | 67 | 20.59 | `unaudited` | ~~audited_conditional~~ |
-| 16 | `anomaly_forces_time_theorem` | critical | 230 | 20.35 | `unaudited` | ~~audited_conditional~~ |
-| 17 | `minimal_axioms_2026-04-11` | critical | 78 | 20.30 | `unaudited` | ~~audited_conditional~~ |
-| 18 | `native_gauge_closure_note` | critical | 248 | 19.46 | `unaudited` | ~~audited_conditional~~ |
-| 19 | `physical_lattice_necessity_note` | high | 244 | 18.94 | `unaudited` | ~~audited_conditional~~ |
-| 20 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | high | 232 | 18.86 | `unaudited` | ~~audited_conditional~~ |
-| 21 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 42 | 18.43 | `audited_clean` | **retained** |
-| 22 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | high | 232 | 18.36 | `unaudited` | ~~audited_conditional~~ |
-| 23 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 76 | 18.27 | `unaudited` | ~~audited_conditional~~ |
-| 24 | `ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25` | critical | 75 | 18.25 | `unaudited` | ~~audited_conditional~~ |
-| 25 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | critical | 75 | 18.25 | `unaudited` | ~~audited_conditional~~ |
+| 1 | `alpha_s_derived_note` | critical | 253 | 32.99 | `unaudited` | ~~audited_conditional~~ |
+| 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 32.84 | `unaudited` | ~~audited_conditional~~ |
+| 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 32.36 | `unaudited` | ~~audited_conditional~~ |
+| 4 | `yt_ward_identity_derivation_theorem` | critical | 297 | 31.72 | `unaudited` | support |
+| 5 | `observable_principle_from_axiom_note` | critical | 238 | 29.40 | `audited_conditional` | ~~audited_conditional~~ |
+| 6 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 102 | 27.69 | `unaudited` | ~~audited_conditional~~ |
+| 7 | `yt_ew_color_projection_theorem` | critical | 113 | 26.33 | `audited_conditional` | ~~audited_conditional~~ |
+| 8 | `three_generation_observable_theorem_note` | critical | 288 | 25.68 | `unaudited` | ~~audited_conditional~~ |
+| 9 | `three_generation_structure_note` | critical | 271 | 25.09 | `unaudited` | ~~audited_conditional~~ |
+| 10 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 24.83 | `unaudited` | ~~audited_conditional~~ |
+| 11 | `one_generation_matter_closure_note` | critical | 265 | 24.55 | `unaudited` | ~~audited_conditional~~ |
+| 12 | `graph_first_su3_integration_note` | critical | 293 | 23.70 | `audited_clean` | **retained** |
+| 13 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 94 | 23.57 | `unaudited` | ~~audited_conditional~~ |
+| 14 | `left_handed_charge_matching_note` | critical | 272 | 21.59 | `unaudited` | ~~audited_conditional~~ |
+| 15 | `anomaly_forces_time_theorem` | critical | 268 | 21.57 | `unaudited` | ~~audited_conditional~~ |
+| 16 | `minimal_axioms_2026-04-11` | critical | 109 | 21.28 | `unaudited` | ~~audited_conditional~~ |
+| 17 | `ckm_atlas_axiom_closure_note` | critical | 75 | 21.25 | `unaudited` | ~~audited_conditional~~ |
+| 18 | `native_gauge_closure_note` | critical | 289 | 20.68 | `unaudited` | ~~audited_conditional~~ |
+| 19 | `plaquette_self_consistency_note` | critical | 301 | 20.24 | `unaudited` | ~~audited_conditional~~ |
+| 20 | `site_phase_cube_shift_intertwiner_note` | critical | 291 | 19.19 | `unaudited` | support |
+| 21 | `physical_lattice_necessity_note` | critical | 285 | 19.16 | `unaudited` | ~~audited_conditional~~ |
+| 22 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | critical | 270 | 19.08 | `unaudited` | ~~audited_conditional~~ |
+| 23 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | critical | 270 | 18.58 | `unaudited` | ~~audited_conditional~~ |
+| 24 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 42 | 18.43 | `audited_clean` | **retained** |
+| 25 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 84 | 18.41 | `unaudited` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -183,7 +183,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `diamond_nv_phase_ramp_signal_budget_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `diamond_signal_budget_hardening_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dispersion_relation_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
-| `dm_abcc_chamber_bound_derivation_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `early_family_transfer_connectivity_diagnosis` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -204,7 +203,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `growing_graph_frontier_architecture_transfer_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `grown_wavefield_failure_diagnosis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `higgs_mass_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `impact_parameter_lensing_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -222,7 +220,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_p_one_clock_3plus1_transport_reduction_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_q_delta_readout_retention_split_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `koide_selected_line_provenance_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_complementarity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_nn_high_precision_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -282,24 +279,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_radiation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_retarded_gravity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_static_matrixfree_shared_geometry_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `yt_class_6_c3_breaking_operator_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_color_projection_correction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `yt_ew_delta_r_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
-| `yt_generation_hierarchy_primitive_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
-| `yt_h_unit_flavor_column_decomposition_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
-| `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `yt_p1_bz_quadrature_numerical_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `yt_p1_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `yt_p1_delta_3_bz_computation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
-| `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `yt_p1_loop_geometric_bound_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `yt_p2_f_yt_loop_geometric_bound_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p2_v_matching_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `yt_p3_k_series_geometric_bound_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `z2_hw1_mass_matrix_parametrization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
@@ -354,17 +337,9 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `yt_p1_delta_2_bz_computation_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `yt_p1_delta_r_master_assembly_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `yt_p1_h_unit_renormalization_framework_native_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
-| `yt_p1_delta_1_bz_computation_note_2026-04-17` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
@@ -888,24 +863,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md`
   - `SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md`
   - `DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md`
-- **auditor confidence:** high
-
-### `dm_abcc_chamber_bound_derivation_note_2026-04-20`
-
-- **Note:** [`DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`](../../docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The source-oriented-sheet branch of the carrier normal form fixes s = +sqrt(r31^2 - 1/4) >= 0, hence q_+ + delta >= sqrt(8/3).  _(class `B`)_
-- **chain closes:** False — The algebraic implication from s >= 0 to the chamber bound is correct and the runner reproduces PASS=15/FAIL=0, but the sign/branch selection s >= 0 is imported from unaudited or already-conditional source-surface/carrier-normal-form notes.
-- **rationale:** Issue: the proof's algebra is fine after the live branch is assumed, but the load-bearing choice of the positive branch s = +sqrt(r31^2 - 1/4) is delegated to source-oriented-sheet and carrier-normal-form authorities that are not audit-retained. Why this blocks: without an audited theorem fixing that branch orientation and excluding the mirror branch, the modulus identity r31^2 = s^2 + 1/4 only gives |s|, not q_+ + delta >= sqrt(8/3). Repair target: audit-clean the active affine/source-surface, active half-plane, Z3 doublet-block, intrinsic-slot, and slot-torsion boundary inputs, or reproduce the branch-selection proof fully here from retained primitives. Claim boundary until fixed: it is safe to claim the runner verifies the constants, chamber arithmetic on the listed basins, and the algebraic consequence s >= 0 => q_+ + delta >= sqrt(8/3); the structural chamber bound remains conditional on the branch-selection theorem.
-- **open / conditional deps cited:**
-  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
-  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md`
-  - `DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md`
-  - `DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md`
-  - `DM_NEUTRINO_SOURCE_SURFACE_SLOT_TORSION_BOUNDARY_THEOREM_NOTE_2026-04-16.md`
 - **auditor confidence:** high
 
 ### `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`
@@ -1704,27 +1661,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** The retained content is the firewall itself, not a hadron-mass derivation. The note's load-bearing step is the exact underdetermination that a single bounded scale leaves independent dimensionless spectral coefficients and cannot supply the GMOR or nucleon-correlator inputs. The live runner confirms the current repository boundary and uses observed hadron masses only to expose coefficient freedom. Residual risk is downstream misuse: this audit does not ratify any pion, proton, neutron, or spectrum mass prediction.
 - **auditor confidence:** high
 
-### `higgs_mass_retention_analysis_note_2026-04-18`
-
-- **Note:** [`HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md`](../../docs/HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The retained band m_H = 125.04 GeV +/- 3.17 GeV is obtained by propagating the inherited YT through-2-loop Delta_R uncertainty with A_MH=2.67 and combining it in quadrature with loop-transport, classicality-BC, and threshold-matching retention gaps.  _(class `D`)_
-- **chain closes:** False — The runner reproduces the stated budget arithmetic and an RGE sensitivity probe, but it consumes many unregistered inherited authorities as constants and uses a local 2-loop RGE replica while the note's central claim is the canonical 3-loop route. The audit packet therefore does not independently close the retained Higgs-band derivation or the observed-mass comparator claim.
-- **rationale:** Issue: the Higgs retention band is a propagated budget built from inherited YT Delta_R bands, canonical Higgs authority centrals, hierarchy/canonical-surface constants, loop-geometric assumptions, quadrature independence, and the observed Higgs comparator, but none of these authorities are registered as one-hop dependencies for this row. Why this blocks: the runner can verify arithmetic after those inputs are supplied, but it does not derive the YT +/-0.70% band, the 125.1/119.8 GeV Higgs authority centrals, the 3-loop canonical RGE route, the loop-tail/geometric-gap model, the lambda(M_Pl)=0 classicality correction, or the independence assumptions behind the 3.17 GeV quadrature band; moreover its local compute_mh probe is documented as a 2-loop replica, not the canonical 3-loop runner that the note cites as authority. Repair target: register the YT Delta_R stack, canonical Higgs 3-loop runner/output, 2-loop authority, canonical plaquette/hierarchy constants, loop-geometric bound, classicality-BC theorem, threshold-matching source, and observed-mass comparator as dependencies; update the primary runner to call or reproduce the canonical 3-loop implementation and assert the 3.17 GeV band from registered outputs with explicit covariance/quadrature assumptions. Claim boundary until fixed: it is safe to claim a conditional retention-budget calculation: given the supplied inherited inputs and quadrature model, the script reproduces m_H about 125.04 GeV with a roughly 3.17 GeV 1-sigma budget and includes the observed 125.25 GeV value; it is not yet an audited retained first-principles Higgs-mass precision theorem or an independent validation of the YT/Higgs authority chain.
-- **open / conditional deps cited:**
-  - `YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
-  - `YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
-  - `YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
-  - `HIGGS_MASS_DERIVED_NOTE.md_not_registered_one_hop_dependency`
-  - `HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md_not_registered_one_hop_dependency`
-  - `scripts/frontier_higgs_mass_full_3loop.py_not_registered_dependency_output`
-  - `quadrature_independence_model_for_retention_gaps_not_registered`
-  - `observed_higgs_mass_comparator_not_registered`
-- **auditor confidence:** high
-
 ### `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17`
 
 - **Note:** [`HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md`](../../docs/HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md)
@@ -2173,26 +2109,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `Koide_Q_support_route_value_Q_2_over_3_not_registered_one_hop_dependency`
   - `Koide_delta_APS_support_route_value_delta_2_over_9_not_registered_one_hop_dependency`
   - `same_Z3_p_equals_d_structural_bridge_not_registered_one_hop_dependency`
-- **auditor confidence:** high
-
-### `koide_selected_line_provenance_note_2026-04-20`
-
-- **Note:** [`KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md`](../../docs/KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The retained parity-compatible observable-selector theorem is used to minimize delta^2 + q_+^2 on q_+ = sqrt(8/3) - delta, yielding delta_* = q_+* = sqrt(6)/3 and therefore H_sel(m) = H(m, sqrt(6)/3, sqrt(6)/3).  _(class `C`)_
-- **chain closes:** False — The source runner derives the slot values from the stated chart and selector assumptions, but the claimed retained provenance depends on observable-principle, active-affine, half-plane, parity-baseline, selector, and frozen-bank notes that are unknown or effective-conditional rather than audit-clean.
-- **rationale:** Issue: the live runner reproduces the selected-line slot derivation, but it hard-codes the atlas constants and only checks provenance-file presence instead of importing audited theorem outputs; the one-hop provenance stack is mostly unknown or effective-conditional. Why this blocks: the note claims a complete retained-on-main provenance for the numeric slots, but retained status cannot propagate through unaudited/conditional selector, half-plane, parity-baseline, observable-principle, and frozen-bank inputs. Repair target: audit-retain the cited source-surface and observable-principle theorems, and update the provenance runner to consume their runner outputs or generated constants rather than restating them. Claim boundary until fixed: safely claim that, given the stated active-affine chart, parity-compatible baseline family, active half-plane, and quadratic selector law, the minimizer is delta_* = q_+* = sqrt(6)/3 and reconstructs H_sel(m); do not claim I3 is closed by retained provenance.
-- **open / conditional deps cited:**
-  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
-  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
-  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md`
-  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_PARITY_COMPATIBLE_DIAGONAL_BASELINE_THEOREM_NOTE_2026-04-17.md`
-  - `DM_NEUTRINO_SOURCE_SURFACE_PARITY_COMPATIBLE_OBSERVABLE_SELECTOR_THEOREM_NOTE_2026-04-17.md`
-  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_CURVATURE_23_SYMMETRIC_BASELINE_BOUNDARY_THEOREM_NOTE_2026-04-17.md`
-  - `KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20`
@@ -4049,26 +3965,6 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `2D_random_geometric_control_row_artifact_not_registered`
 - **auditor confidence:** high
 
-### `yt_class_6_c3_breaking_operator_note_2026-04-18`
-
-- **Note:** [`YT_CLASS_6_C3_BREAKING_OPERATOR_NOTE_2026-04-18.md`](../../docs/YT_CLASS_6_C3_BREAKING_OPERATOR_NOTE_2026-04-18.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** No retained C3-breaking operator on H_hw=1 produces generation-asymmetric position-basis content, while the C3-commuting circulant family gives distinct Fourier-basis eigenvalues but still needs A1 equipartition and P1 sqrt(m) identification for the hierarchy claim.  _(class `A`)_
-- **chain closes:** False — The runner passes all 43 algebraic/comparator checks, but the note imports support/conditional one-hop authorities and its amended positive mechanism explicitly depends on two non-retained ingredients. The narrow algebraic no-go is supported; the retained positive generation-hierarchy mechanism does not fully close on the current retained surface.
-- **rationale:** Issue: the note's refined outcome combines a runner-supported narrow C3-breaking no-go with a positive circulant-spectrum mechanism that the source itself marks conditional on non-retained A1 equipartition and P1 sqrt(m) identification, while multiple cited authorities remain support or conditional. Why this blocks: a passed M3(C)/commutant/circulant algebra runner cannot promote the full hierarchy mechanism to retained when its physical inputs and several upstream surfaces are not retained. Repair target: audit/promote the one-hop foundation notes used as retained authorities, and add retained derivations or acceptance runners for A1 equipartition, P1 sqrt(m), and the delta/unit bridge used by the Koide circulant branch. Claim boundary until fixed: safe to claim the 43/43 runner supports the narrow operator-algebra no-go and the existence of distinct Fourier-basis circulant eigenvalues; not safe to claim a clean retained generation-hierarchy mechanism or a fully retained C3-breaking-class closure beyond those conditional inputs.
-- **open / conditional deps cited:**
-  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
-  - `THREE_GENERATION_STRUCTURE_NOTE.md`
-  - `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`
-  - `Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`
-  - `SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`
-  - `NATIVE_GAUGE_CLOSURE_NOTE.md`
-  - `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
-- **auditor confidence:** high
-
 ### `yt_color_projection_correction_note`
 
 - **Note:** [`YT_COLOR_PROJECTION_CORRECTION_NOTE.md`](../../docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
@@ -4105,264 +4001,6 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `missing direct EW-current matching coefficient computation`
 - **auditor confidence:** 0.94
 
-### `yt_ew_delta_r_retention_analysis_note_2026-04-18`
-
-- **Note:** [`YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md`](../../docs/YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note preserves the EW lane's retained-quantitative status by applying the YT P1 Rep-A/Rep-B three-channel method to absolute electroweak gauge couplings, using Ward Z1=Z2 structure plus literature-analog BZ integrals to compute Delta_R(g2)=-2.863% and Delta_R(g1)=-0.713%, then interpreting those values as uncertainty bands around the packaged EW outputs whose PDG deviations are inside the bands rather than as additional shifts.  _(class `D`)_
-- **chain closes:** False — The runner passes 69 checks and reproduces the arithmetic for the stated EW matching-band analysis, including SU(2)/U(1) factors, alpha_i(v), literature-analog channel constants, Delta_R(g2), Delta_R(g1), propagated bands, and PDG containment. The proof chain does not close because the load-bearing inputs are not registered as clean one-hop authorities: the EW color projection/zero-import chain, Rep-A/Rep-B methodology, Ward absolute-coupling matching formula and sign convention, EW-sector BZ integrals, matching-scale choice, and the 'packaged values already include matching' no-double-counting premise. The note also contains unresolved internal numerical inconsistencies, especially sin^2(theta_W) uncertainty appearing as about 0.0038 in the checked propagation but about 0.0005/0.0006 in other text/output, and an obsolete safe-boundary pair of Delta_R values inconsistent with the runner centrals.
-- **rationale:** The computation is a valid arithmetic audit of the note's own model: with the supplied Casimirs, hypercharge sum, packaged couplings, literature BZ analogs I_SE^{gg}=2 and I_SE^{ff}=0.7, and the runner's Ward-absolute-coupling formula, the stated central values Delta_R(g2)=-2.863% and Delta_R(g1)=-0.713% and the broad retained bands follow. What blocks a retained theorem-grade claim is that those BZ integrals are not framework-native EW quadratures, the Ward/sign/scale prescription is argued in prose rather than registered as an audited input, the upstream EW package and YT P1 dependencies are unregistered in the audit row, and the use of PDG observed values makes the lane-status survival check an external comparator test. Most importantly, the note's survival conclusion requires treating Delta_R^{EW} as an uncertainty on already-matched packaged values; if the same Delta_R is applied as a shift, the note itself finds a large sin^2(theta_W) tension. Repair requires registering and auditing the upstream EW color-projection and zero-import authorities, deriving the absolute-gauge Ward matching/sign convention on the CL3 lattice, running framework-native EW-sector BZ quadrature for the relevant vertex/self-energy integrals with a documented matching scale, and proving whether the packaged g_i(v) already include that matching. The text/runner must also reconcile the sin^2(theta_W) uncertainty (0.0038 versus 0.0005/0.0006) and remove the inconsistent older Delta_R safe-boundary numbers. What can still be safely claimed is conditional: given the note's formulae and literature analog inputs, the runner arithmetic yields percent-level EW matching bands that contain the listed PDG deviations; this is not an audited sub-percent EW precision theorem and not a framework-native computation of Delta_R^{EW}.
-- **open / conditional deps cited:**
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md_not_registered_one_hop_dependency_and_prior_audited_conditional`
-  - `RCONN_DERIVED_NOTE.md_not_registered_one_hop_dependency`
-  - `YT_ZERO_IMPORT_CHAIN_NOTE.md_not_registered_one_hop_dependency`
-  - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
-  - `YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
-  - `YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md_not_registered_or_audited_conditional`
-  - `scripts/canonical_plaquette_surface.py_not_registered_one_hop_dependency`
-  - `EW_sector_vertex_and_self_energy_BZ_integrals_not_framework_native_computed`
-  - `Ward_Z1_equals_Z2_absolute_gauge_matching_formula_and_sign_convention_not_registered_as_CL3_theorem`
-  - `matching_scale_choice_alpha_i_v_vs_alpha_LM_not_closed`
-  - `packaged_EW_values_already_MSbar_matched_no_double_counting_premise_not_registered`
-  - `PDG_observed_g1_g2_sin2thetaW_alphaEM_comparators_external_inputs`
-  - `internal_sin2thetaW_uncertainty_inconsistency_0_0038_vs_0_0005_or_0_0006`
-  - `obsolete_safe_boundary_Delta_R_values_minus_0_45_percent_and_minus_0_25_percent_inconsistent_with_runner`
-- **auditor confidence:** high
-
-### `yt_generation_hierarchy_primitive_analysis_note_2026-04-18`
-
-- **Note:** [`YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`](../../docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The retained surface gives a narrow position-basis no-go for generation-asymmetric diagonal content, while the amended positive Fourier-basis circulant spectrum still requires non-retained A1 equipartition and P1 sqrt(m) identification for the hierarchy claim.  _(class `A`)_
-- **chain closes:** False — The runner passes all 51 checks, but the note imports support/conditional/unknown one-hop authorities and explicitly leaves A1 and P1 non-retained. The narrow algebraic no-go and Fourier-spectrum correction close as computations; the retained generation-hierarchy primitive does not close on the current retained surface.
-- **rationale:** Issue: the refined note combines a passed narrow position-basis no-go with a positive circulant-spectrum mechanism whose physical hierarchy bridge depends on non-retained A1 equipartition, P1 sqrt(m) identification, and multiple one-hop authorities that are support, conditional, or unknown. Why this blocks: the runner establishes algebraic facts and comparator failures, but it does not derive the missing hierarchy primitives or promote the imported foundation stack. Repair target: split the retained algebraic no-go from the candidate extension, audit/promote the one-hop authorities, and add retained derivations or pass/fail runners for A1, P1, the overall scale, and the delta/unit bridge. Claim boundary until fixed: safe to claim the 51/51 runner supports the position-basis no-go, the failure of the tested retained-surface candidates, and the existence of distinct Fourier-basis circulant eigenvalues; not safe to claim a clean retained generation-hierarchy primitive or a retained Koide/fermion-mass mechanism beyond those conditional inputs.
-- **open / conditional deps cited:**
-  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
-  - `THREE_GENERATION_STRUCTURE_NOTE.md`
-  - `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`
-  - `SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`
-  - `Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`
-  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
-  - `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`
-  - `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`
-  - `STRUCTURAL_NO_GO_SURVEY_NOTE.md`
-  - `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
-- **auditor confidence:** high
-
-### `yt_h_unit_flavor_column_decomposition_note_2026-04-18`
-
-- **Note:** [`YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md`](../../docs/YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Flavor-column decompositions of H_unit fail because up/down sub-block projectors are impure (1,1)+(3,1) mixtures with Z^2 = 3 != 6, generation-indexed projectors remain uniform with Z^2 = 6, and SU(2)_L forbids (1,1)-(3,1) mixing at M_Pl.  _(class `A`)_
-- **chain closes:** False — The live runner passes all 79 checks for the class #1 no-go, but the result imports Ward/D17, b-quark, gauge, and generation authorities whose current ledger statuses are support, conditional, or unknown. The no-go is therefore supported as a conditional retention analysis rather than a clean retained theorem.
-- **rationale:** Issue: the runner-supported class #1 no-go depends on D17/Block 6 Ward uniqueness, the b-quark Outcome A setup, exact SU(2)_L/gauge inputs, and three-generation inputs that are not all retained in the current audit ledger. Why this blocks: an algebraic decomposition of P_up/P_down can close only relative to those imported authority surfaces; if D17, N_iso/N_c, or the b-quark setup remains support/conditional/unknown, the retained no-go cannot propagate cleanly. Repair target: audit/promote the Ward-identity theorem, bottom-Yukawa retention analysis, native gauge closure, one-generation/three-generation inputs, and Z2/site-phase companion notes, or rewrite this note as a strictly conditional class #1 exclusion over named assumptions. Claim boundary until fixed: safe to claim the 79/79 runner shows H_unit flavor-column decomposition is excluded under the stated Ward/D17 and SU(2)_L assumptions; not safe to claim an unconditional retained no-go for class #1 on the fully retained surface.
-- **open / conditional deps cited:**
-  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
-  - `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`
-  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
-  - `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`
-  - `Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`
-  - `SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`
-  - `NATIVE_GAUGE_CLOSURE_NOTE.md`
-- **auditor confidence:** high
-
-### `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18`
-
-- **Note:** [`YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`](../../docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The full Kawamoto-Smit staggered-PT 4D BZ quadrature with MSbar subtraction yields Delta_R = -3.77% +/- 0.45% and moves Delta_R from literature-cited status to framework-native retained status with sub-half-percent precision.  _(class `C`)_
-- **chain closes:** False — The runner recomputes the N=32/48/64 quadrature and assembles the stated number, but the registered audit row has no one-hop dependencies for the retained Feynman rules, canonical surface, MSbar subtraction, taste normalizations, prior brackets, or 5% systematic model. Those premises are imported or hard-coded rather than closed inside the audit packet.
-- **rationale:** Issue: the retained-status upgrade from a full staggered-PT quadrature rests on unregistered upstream authorities and physical-normalization choices: the Ward identity, Rep-A/Rep-B three-channel formula, H_unit Feynman rules, Delta_1/Delta_2/Delta_3 ranges, prior schematic and master Delta_R notes, canonical plaquette constants, MSbar subtraction prescription, N_TASTE normalization, and the asserted 5% full-PT systematic are all used but the ledger row lists no one-hop dependencies. Why this blocks: the runner verifies the quadrature arithmetic once those rules and constants are supplied, but it does not derive the Kawamoto-Smit/taste-normalized integrands from retained CL3 primitives, prove the continuum-subtraction prescription, justify the n_f=6 matching surface, or substantiate the 5% systematic/covariance model; it also compares to prior/literature brackets that are absent from the audit packet. Repair target: register the cited notes and canonical-surface script as one-hop dependencies, add or cite a retained theorem deriving the full staggered Feynman rules, MSbar subtraction, taste averaging, and systematic budget, and update the runner to fail if those dependencies or uncertainty inputs change rather than hard-coding them. Claim boundary until fixed: it is safe to claim a reproducible conditional quadrature calculation which, given the supplied staggered-PT rules, canonical constants, and 5% per-channel systematic, produces I_v_scalar=3.902, I_v_gauge=0, I_SE_gluonic=2.323, I_SE_fermion=0.996, and Delta_R=-3.769% +/-0.452%; it is not yet an audited retained first-principles framework-native precision theorem.
-- **open / conditional deps cited:**
-  - `YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
-  - `YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
-  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md_not_registered_one_hop_dependency`
-  - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
-  - `YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
-  - `YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
-  - `YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
-  - `YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
-  - `scripts/canonical_plaquette_surface.py_not_registered_one_hop_dependency`
-  - `MSbar_continuum_subtraction_and_N_TASTE_normalization_theorem_not_registered`
-  - `five_percent_full_PT_systematic_model_not_registered`
-- **auditor confidence:** high
-
-### `yt_p1_bz_quadrature_numerical_note_2026-04-18`
-
-- **Note:** [`YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md`](../../docs/YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** At N = 48 offset-grid, the schematic 4D BZ quadrature yields I_v_scalar = 3.965765, I_v_gauge = 0, I_SE_gluonic = 2.321326, I_SE_fermion = 1.118792 and assembles these into Delta_R = -3.287% +/- 2.312% with a tightened [-5.60%, -0.97%] bracket.  _(class `C`)_
-- **chain closes:** False — The runner reproduces the stated schematic quadrature and algebraic Delta_R assembly, but the source explicitly does not implement the full staggered taste-diagonal Dirac-trace lattice-PT algebra. The retained/full-P1 inference also rests on one-hop authorities that are support, conditional, or still unaudited proposed parents.
-- **rationale:** Issue: the live runner evaluates a schematic 4D BZ quadrature and the source explicitly says the full staggered taste/Dirac-trace lattice-PT algebra is not implemented, while cited Ward/bridge authorities are not clean retained and the three-channel parent stack remains unaudited proposed input. Why this blocks: a schematic central value with a 25% assigned systematic can support a bounded numerical estimate, but it cannot promote a retained full lattice-PT correction or replace the prior P1 bracket as a theorem. Repair target: implement the full staggered-PT quadrature with taste matrices, Dirac traces, scheme-matched continuum subtraction/counterterms, and audited clean or retained status for the Rep-A/Rep-B, H_unit, and Delta_1/Delta_2/Delta_3 parent notes. Claim boundary until fixed: safe to claim the current runner gives an N=48 schematic BZ quadrature estimate I_v_scalar=3.966, I_v_gauge≈0, I_SE_gluonic=2.321, I_SE_fermion=1.119 and Delta_R=-3.287% +/- 2.312% under its stated schematic assumptions; not safe to claim a clean retained full lattice-PT P1 value beyond those assumptions.
-- **open / conditional deps cited:**
-  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
-  - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
-- **auditor confidence:** high
-
-### `yt_p1_color_factor_retention_note_2026-04-17`
-
-- **Note:** [`YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](../../docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The three-channel decomposition is the unique assembly of the Rep-A/Rep-B one-loop diagrammatic catalog after exact cancellation of the external quark Z_psi term.  _(class `B`)_
-- **chain closes:** False — The runner exactly checks the algebra after the Rep-A and Rep-B formulas are supplied, but it does not derive the diagrammatic catalog, the equal external-leg term, or the SU(3)/n_f inputs. The ledger row has no registered one-hop deps, so the upstream catalog status cannot propagate into this retained claim.
-- **rationale:** Issue: the retained three-channel color decomposition depends on the Rep-A/Rep-B one-loop diagrammatic catalog and exact 2 C_F I_leg cancellation, but this audit row has no registered dependencies and the runner hard-codes the Rep-A and Rep-B formulae before checking the subtraction. Why this blocks: the algebraic residual being zero proves only that the claimed assembly follows from the supplied catalog; it does not prove that the catalog, H_unit/scalar-bilinear normalization, flavor count, or external-leg equality are retained framework-native inputs. Repair target: register and close the Rep-A/Rep-B cancellation theorem and SU(3)/n_f authorities as one-hop dependencies, or extend the runner to enumerate the one-loop diagrams and derive the channel coefficients and Z_psi cancellation from the framework Feynman rules. Claim boundary until fixed: safe to claim that, given the stated Rep-A/Rep-B formulas plus C_F=4/3, C_A=3, T_F=1/2, and n_f=6, the three-channel assembly and external-leg cancellation are exact; not safe to claim an independently retained framework-native P1 color-factor decomposition.
-- **open / conditional deps cited:**
-  - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`
-  - `scripts/frontier_yt_p1_color_factor_retention.py`
-- **auditor confidence:** 0.93
-
-### `yt_p1_delta_1_bz_computation_note_2026-04-17`
-
-- **Note:** [`YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`](../../docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_numerical_match~~
-- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** At the literature-cluster central I_v_scalar = 4 and retained I_v_gauge = 0, Delta_1 = 2 and C_F Delta_1 alpha_LM/(4 pi) reproduces the packaged 1.92 percent value.  _(class `G`)_
-- **chain closes:** False — The runner gives correct arithmetic once the cited bracket and selected central are supplied, but it does not perform the framework-native BZ quadrature or derive the central value. Its own back-solved midpoint is I_v_scalar=4.5, which gives Delta_1=3, while the retained central uses I_v_scalar=4 because that literature-cluster choice reproduces the packaged 1.92 percent number.
-- **rationale:** Issue: the headline retained central Delta_1=+2 and 1.924% contribution depend on selecting I_v_scalar=4 from a cited O(1) literature bracket, even though the runner's back-solved midpoint is 4.5 and would give Delta_1=+3 and 2.886%. Why this blocks: the central/package agreement is a chosen numerical match inside an external bracket, not a framework-native computation of the Brillouin-zone integral or a theorem fixing the central value. Repair target: perform a retained 4D BZ quadrature for I_v_scalar on the stated Cl(3) x Z^3 Wilson-plaquette/staggered/tadpole-improved action, with the conserved-current I_v_gauge and scalar-bilinear normalization derived from registered one-hop inputs; alternatively demote the note to an explicit citation-bound support result with no retained central. Claim boundary until fixed: safe to claim the conditional arithmetic map Delta_1=2(I_v_scalar-I_v_gauge)-6 and, if I_v_scalar in [3,7] and I_v_gauge=0 are supplied, the range Delta_1 in [0,8] and C_F-channel contribution [0%,7.70%]; not safe to claim retained Delta_1=+2 or the 1.92% match as derived.
-- **open / conditional deps cited:**
-  - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
-  - `YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`
-  - `YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`
-  - `scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py`
-  - `scripts/frontier_yt_p1_delta_1_bz.py`
-- **auditor confidence:** 0.96
-
-### `yt_p1_delta_2_bz_computation_note_2026-04-17`
-
-- **Note:** [`YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`](../../docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Under the cited I_SE and I_v_gauge ranges, Delta_2 has retained central value about -3.333 and safe negative-dominant range [-5,0], so the C_A contribution is non-positive across the retained range.  _(class `B`)_
-- **chain closes:** False — The runner's own scenario table gives the combined outer envelope Delta_2 in [-5,+4/3] from the stated local-current endpoint I_v_gauge=3, I_SE=1. The advertised safe range [-5,0] is a clipped subrange that covers the central conserved-current case but not all cited current-definition sensitivity included by the note.
-- **rationale:** Issue: the note claims a retained safe Delta_2 range [-5,0] and non-positive C_A contribution, but the source and live runner also include the local-current cited endpoint I_v_gauge=3, I_SE=1, which gives Delta_2=+4/3 and C_A Delta_2 alpha_LM/(4pi)=+2.886%. Why this blocks: a retained citation-bound range cannot omit a value generated by its own stated cited ranges and still claim sign control across current-definition sensitivity; additionally the headline -6.5% central corresponds to a noncanonical alternative scenario, while the canonical conserved central is -10/3 and -7.215%. Repair target: either restrict the claim strictly to the conserved point-split current and state Delta_2 in [-5,-5/3] with central -10/3, or include the local-current sensitivity honestly as the full envelope [-5,+4/3] and drop the non-positive sign claim; a framework-native BZ quadrature would be needed to choose between current definitions or narrow the range. Claim boundary until fixed: safe to claim the formula Delta_2=I_v_gauge-(5/3)I_SE and the scenario arithmetic printed by the runner; safe to claim the conserved-current C_A channel is negative for I_SE in [1,3]; not safe to claim the combined citation-bound range is [-5,0] or that the C_A channel is non-positive across all cited scenarios.
-- **open / conditional deps cited:**
-  - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
-  - `YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`
-  - `scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py`
-  - `scripts/frontier_yt_p1_delta_2_bz.py`
-- **auditor confidence:** 0.97
-
-### `yt_p1_delta_3_bz_computation_note_2026-04-17`
-
-- **Note:** [`YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`](../../docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Using the cited positive bracket I_SE^{fermion-loop} in [0.5,1.5] and the MSbar matching convention n_f=6, Delta_3=(4/3)I_SE is positive with central 0.933 and T_F n_f channel contribution about +2.02%.  _(class `B`)_
-- **chain closes:** False — The runner verifies the arithmetic and sign after the fermion-loop BZ bracket, central value, Rep-A/Rep-B formula, and n_f=6 matching convention are supplied. It does not compute I_SE^{fermion-loop} on the retained lattice action or derive the matching-convention choice from retained inputs.
-- **rationale:** Issue: the Delta_3 numerical bracket and central value are imported as a cited literature range I_SE^{fermion-loop} in [0.5,1.5] with central 0.7, and the runner hard-codes the MSbar n_f=6 convention while treating n_taste=16 only as contrast. Why this blocks: the arithmetic Delta_3=(4/3)I_SE and positive sign are exact conditional consequences of those supplied inputs, but a proposed_retained BZ-computation claim needs either a retained framework-native quadrature or registered retained dependencies that establish the integral bracket and matching convention. Repair target: perform the 4D BZ evaluation of the staggered fermion-loop self-energy on the canonical Cl(3) x Z^3/Wilson-plaquette/tadpole-improved action, and add a retained matching-convention theorem fixing whether the loop count is MSbar n_f=6 or lattice-side n_taste=16 for this coefficient. Claim boundary until fixed: safe to claim that if I_SE^{fermion-loop}>0 and the MSbar n_f=6 convention are supplied, Delta_3 is positive and the contribution is [+1.44%,+4.33%] for the cited bracket; not safe to claim a retained framework-native Delta_3 central or bracket.
-- **open / conditional deps cited:**
-  - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
-  - `YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md`
-  - `scripts/frontier_yt_p1_delta_3_bz.py`
-- **auditor confidence:** 0.94
-
-### `yt_p1_delta_r_2_loop_extension_note_2026-04-18`
-
-- **Note:** [`YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md`](../../docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Applying the retained loop-geometric bound r_R=0.22126 to the retained 1-loop central Delta_R=-3.27% and assuming same-sign bound saturation gives Delta_R^{through-2-loop}=Delta_R^{1-loop}(1+r_R)=-3.99% with P1 in [3.3%, 4.7%].  _(class `A`)_
-- **chain closes:** False — The runner verifies the algebra of the color-tensor enumeration and envelope propagation, but the 1-loop central, loop-geometric bound, canonical constants, P3 analogy, m_t comparator, and same-sign/bound-saturation interpretation are imported without registered one-hop dependencies. The eight 2-loop BZ integrals are explicitly open, so the through-2-loop central is an assumed envelope scenario rather than a derived 2-loop correction.
-- **rationale:** Issue: the proposed-retained 2-loop extension turns an inherited 1-loop central and inherited loop-geometric bound into a retained through-2-loop central by assuming the unknown 2-loop term saturates the bound and has the same sign, while all eight 2-loop BZ integrals remain open and the row registers no one-hop dependencies for the 1-loop master, loop-geometric theorem, canonical surface, P3 color-template notes, or observed m_t comparator. Why this blocks: the runner confirms exact Casimir arithmetic and envelope propagation after those inputs are supplied, but it does not compute any J_X integral, derive the 2-loop sign, justify saturation as a central estimate, or reconcile authority between the older literature-cited -3.27% base and the later full-staggered -3.77% canonical cross-reference. Repair target: register and audit the 1-loop master, full-staggered 1-loop update, loop-geometric bound, Rep-A/Rep-B, Delta_i notes, P3 color-factor templates, canonical constants, and comparator sources; either compute the eight J_X BZ integrals with a runner or demote the -3.99% value to a named envelope scenario with no retained central status. Claim boundary until fixed: it is safe to claim a conditional structural envelope: given Delta_R^{1-loop}=-3.27085% and r_R=0.221264, the 2-loop magnitude is bounded by 0.7237%, the geometric tail by 0.9294%, the bound-saturated same-sign scenario gives -3.9946%, and the broad m_t lane contains 172.69 GeV; it is not yet an audited retained 2-loop Delta_R computation or first-principles P1 precision closure.
-- **open / conditional deps cited:**
-  - `YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
-  - `YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
-  - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
-  - `YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
-  - `YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
-  - `YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
-  - `YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md_not_registered_and_audited_conditional`
-  - `YT_P1_BZ_QUADRATURE_2_LOOP_FULL_STAGGERED_PT_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
-  - `YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
-  - `scripts/canonical_plaquette_surface.py_not_registered_one_hop_dependency`
-  - `eight_two_loop_BZ_integrals_J_FF_J_FA_J_AA_J_Fl_J_Al_J_ll_J_FFh_J_Fh_open`
-  - `same_sign_bound_saturation_central_assumption_not_derived`
-  - `observed_m_t_PDG_comparator_not_registered`
-- **auditor confidence:** high
-
-### `yt_p1_delta_r_master_assembly_theorem_note_2026-04-18`
-
-- **Note:** [`YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`](../../docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note preserves the literature-cited three-channel assembly Delta_R=-3.27% but declares the canonical retained central superseded by the full-staggered-PT value Delta_R=-3.77% +/- 0.45%.  _(class `B`)_
-- **chain closes:** False — The source note's current canonical claim is not what the primary runner verifies: the live runner still declares the older literature-cited -3.2709% assembly as the definitive result and says the framework-native BZ quadratures remain open. The source's superseding full-staggered-PT central is delegated to another note/runner and is not checked by this primary runner or registered as a dependency in this row.
-- **rationale:** Issue: the audited source has a canonical-central supersession notice, but the attached runner validates only the old literature-cited -3.27% roll-up and ends with that value as the definitive result; it does not verify the claimed canonical -3.77% +/- 0.45% full-staggered-PT central and even prints that framework-native BZ quadratures remain open. Why this blocks: a proposed_retained master assembly cannot simultaneously claim canonical retained supersession while its primary runner checks the superseded calculation, and the old roll-up inherits cited/channel inputs and ranges rather than independently retained canonical values. Repair target: either split this row into a conditional literature-cited assembly with no canonical retained language, or update the primary runner and registered one-hop dependencies so this claim directly verifies the full-staggered-PT integrals, the -3.77% +/- 0.45% assembly, and the supersession relationship. Claim boundary until fixed: safe to claim the arithmetic old roll-up -3.2709% from the supplied per-channel central values (+2, -10/3, +0.933); not safe to claim this row establishes the canonical retained Delta_R central, P1 band, or m_t lane.
-- **open / conditional deps cited:**
-  - `YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`
-  - `YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`
-  - `YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`
-  - `YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`
-  - `scripts/frontier_yt_p1_delta_r_master_assembly.py`
-- **auditor confidence:** 0.96
-
-### `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18`
-
-- **Note:** [`YT_P1_DELTA_R_SM_RGE_CROSSCHECK_NOTE_2026-04-18.md`](../../docs/YT_P1_DELTA_R_SM_RGE_CROSSCHECK_NOTE_2026-04-18.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The backward 2-loop SM RGE gives y_t/g_s(M_Pl)=0.78510, whose naive comparison to Ward*(1+Delta_R)=0.3949 fails by +95.6%, and the note classifies this as consistent only after invoking an orthogonal v-scale matching decomposition M = sqrt(8/9)*F_yt*sqrt(u_0).  _(class `D`)_
-- **chain closes:** False — The runner verifies the SM-RGE integration and several arithmetic checks, but the consistency verdict depends on unregistered Ward, Delta_R, v-boundary, color-projection, CMT, P2 matching, and QFP-envelope authorities. The runner also tests the older -3.27% Delta_R central, while the note says the canonical retained central has been superseded to -3.77% +/- 0.45%.
-- **rationale:** Issue: the registered runner is a valid deterministic SM-RGE arithmetic check, but the retained cross-validation conclusion is conditional on a large set of unregistered authorities and on the interpretive claim that the 95.6% direct-comparison gap is orthogonal to the M_Pl scheme-conversion Delta_R rather than a failed comparator. Why this blocks: from the audit packet alone, a hostile auditor can verify that backward SM RGE gives y_t/g_s(M_Pl)=0.78510 and that it does not equal Ward*(1+Delta_R)=0.3949; the packet cannot independently validate the v-scale color projection, CMT endpoint, P2 M decomposition, QFP envelope, Delta_i inputs, or the orthogonality theorem that turns that failed direct comparison into support for Delta_R. Repair target: register the Ward, Delta_i/Delta_R, zero-import boundary, P2 v-matching, QFP-envelope, color-projection, CMT endpoint, and canonical -3.77% BZ-quadrature authorities as one-hop dependencies, and update the runner to consume their outputs, test both -3.27% and canonical -3.77% surfaces explicitly, and assert a derived factorization theorem explaining why the direct M_Pl ratio comparison is not the relevant observable. Claim boundary until fixed: it is safe to claim a conditional numerical cross-check: given the framework primary-chain v-boundaries and accepted v-scale matching factorization, the SM 2-loop backward integration is reproducible and does not by itself falsify the chosen Delta_R scheme-conversion interpretation; it is not an audited retained independent validation of Delta_R or of the full lattice-to-SM translation.
-- **open / conditional deps cited:**
-  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md_not_registered_one_hop_dependency`
-  - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
-  - `YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
-  - `YT_ZERO_IMPORT_CHAIN_NOTE.md_not_registered_one_hop_dependency`
-  - `YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
-  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md_not_registered_one_hop_dependency`
-  - `color_projection_and_CMT_endpoint_factorization_theorem_not_registered`
-- **auditor confidence:** high
-
-### `yt_p1_h_unit_renormalization_framework_native_note_2026-04-17`
-
-- **Note:** [`YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`](../../docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note claims a retained envelope bound |I_S^{framework}| <= 16 * |1 - 1/<P>|^{-1} = 23.35, so the cited I_S in [4,10] is structurally compatible with the framework-native H_unit reduction.  _(class `B`)_
-- **chain closes:** False — The runner verifies symbolic diagram bookkeeping and evaluates the proposed envelope formula, but it does not derive an inequality bounding the tadpole-subtracted BZ integral. The note also leaves the actual I_S^{taste}, I_S^{Wilson}, and I_S^{mix} quadrature open.
-- **rationale:** Issue: the load-bearing retained envelope |I_S^{framework}| <= 23.35 is asserted from u_0 and <P>, but neither the note nor the runner proves that this formula bounds the singular tadpole-subtracted Brillouin-zone integral; the runner only computes the proposed closed form and checks that the cited [4,10] interval lies inside it. Why this blocks: a framework-native retained bound on I_S requires either an analytic bound after the D14 tadpole subtraction and MSbar subtraction, or an explicit 4D quadrature of I_S^{taste}, I_S^{Wilson}, and I_S^{mix}; interval containment under an assumed envelope is not a derivation. Repair target: prove the regulator-subtracted BZ-integrand inequality from the retained propagators, tadpole split, and canonical plaquette input, or replace the envelope with a runner that performs the framework-native quadrature and uncertainty control; also audit the cited action, plaquette, tadpole, and Ward parents. Claim boundary until fixed: safe to claim symbolic diagram/Feynman-rule bookkeeping and the arithmetic fact that the proposed formula evaluates to 23.3507 and contains [4,10]; not safe to claim a retained framework-native bound or closed H_unit 1-loop renormalization.
-- **open / conditional deps cited:**
-  - `MINIMAL_AXIOMS_2026-04-11.md`
-  - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md`
-  - `YT_VERTEX_POWER_DERIVATION.md`
-  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
-- **auditor confidence:** high
-
 ### `yt_p1_i_s_lattice_pt_citation_note_2026-04-17`
 
 - **Note:** [`YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`](../../docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md)
@@ -4379,80 +4017,6 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
   - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
-- **auditor confidence:** high
-
-### `yt_p1_loop_geometric_bound_note_2026-04-17`
-
-- **Note:** [`YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](../../docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note asserts the geometric ratio bound |Delta_{n+1}| <= r_R |Delta_n| for all n >= 1 with r_R = (alpha_LM/pi) b_0 = 0.22126, then sums it to bound the P1 loop-expansion tail by Delta_1 r_R/(1-r_R).  _(class `B`)_
-- **chain closes:** False — The runner verifies retained inputs, indicative two-loop color-prefactor ratios, and the geometric-sum arithmetic, but it does not prove the all-orders ratio bound for the actual lattice-to-MSbar coefficients. The source itself states that the geometric decay assumption would need further structural input to be strict for all n.
-- **rationale:** Issue: the claimed retained tail bound depends on the unproved global assumption |Delta_{n+1}| <= r_R |Delta_n| for all higher loops; the runner only shows that r_R envelopes indicative two-loop color-prefactor ratios and then performs the geometric-sum arithmetic. Why this blocks: closing the P1 loop-expansion axis requires a theorem or computation controlling the actual two-loop and higher lattice-to-MSbar BZ coefficients, not just a beta0-motivated envelope over color prefactors with |J_X| ~ O(1). Repair target: supply a framework-native renormalon/geometric-growth theorem for the retained action or compute/bound the relevant two-loop and higher BZ primitives sufficiently to establish the ratio inequality, then re-run a runner that fails if the inequality is not proven. Claim boundary until fixed: safe to claim that, if the geometric ratio r_R = 0.22126 is assumed, the tail factor is 0.2841 and the displayed 0.547%/1.640% tail numbers follow; not safe to claim an audited retained all-orders loop-tail bound or closure of the P1 loop-expansion axis.
-- **open / conditional deps cited:**
-  - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
-  - `YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`
-  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
-- **auditor confidence:** high
-
-### `yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17`
-
-- **Note:** [`YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](../../docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note claims a definitive PARTIAL CANCELLATION verdict: external Z_psi cancels exactly, full cancellation is rejected, and the ratio retains generically nonzero C_F, C_A, and T_F n_f channel coefficients so the cited P1 bracket remains operational.  _(class `B`)_
-- **chain closes:** False — The runner establishes symbolic cancellation of the shared external-leg term, but it does not compute or bound the actual BZ integrals I_v_scalar, I_v_gauge, and I_SE. Its rejection of full cancellation uses representative scenarios, not the retained-surface integral values needed to rule out accidental channel or total cancellation.
-- **rationale:** Issue: the exact external Z_psi cancellation is shown, but the load-bearing claim that full cancellation is definitively rejected and that the P1 bracket remains operational is supported only by symbolic channel formulas plus hand-picked representative BZ scenarios; the actual retained-surface values of I_v_scalar, I_v_gauge, and I_SE are not computed or bounded. Why this blocks: whether the Ward ratio has nonzero channel coefficients or a nonzero total correction is decided by those BZ integrals, and a generic/scenario argument cannot close a Nature-grade cancellation theorem. Repair target: perform the framework-native 1-loop BZ evaluation, or prove identities/inequalities for I_v_scalar - I_v_gauge and I_SE that rule out full channel cancellation and quantify the ratio correction; then make the runner consume those computed/bounded integrals. Claim boundary until fixed: safe to claim exact cancellation of the common external-quark Z_psi term and the displayed symbolic difference formula conditional on the contribution catalog; not safe to claim a definitive partial-cancellation theorem, nonzero ratio correction, or retained operational P1 bracket from this note alone.
-- **open / conditional deps cited:**
-  - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
-  - `YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`
-  - `YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md`
-  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
-- **auditor confidence:** high
-
-### `yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17`
-
-- **Note:** [`YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md`](../../docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note claims there is no algebraic rearrangement of the Ward-theorem color Fierz D12 with the Lorentz Clifford Fierz S2 that maps the Rep-A 1-loop structure to the Rep-B 1-loop structure, so Delta_R must be computed channel by channel.  _(class `B`)_
-- **chain closes:** False — The runner checks hard-coded Rep-A and Rep-B one-loop piece lists and confirms only external Z_psi is exactly shared. It does not derive the piece lists from the retained action/Feynman rules or prove a formal theorem that the relevant Fierz identities cannot act beyond fixed-diagram color/Dirac algebra.
-- **rationale:** Issue: the shared-Fierz no-go is valid only conditional on the supplied Rep-A/Rep-B one-loop diagram catalogs and on the premise that D12/S2 Fierz operations cannot change diagram topology or renormalization type; the runner encodes those catalogs rather than deriving them from the retained lattice action. Why this blocks: a definitive retained no-go must rule out the shortcut from retained inputs, not from a pre-labeled dictionary of what Fierz is allowed to touch. Repair target: derive the complete Rep-A and Rep-B 1-loop piece lists from the canonical action/Feynman rules, prove the allowed action of D12 and S2 on those fixed diagrams, and make the runner construct the catalogs rather than hard-code them. Claim boundary until fixed: safe to claim that, given the supplied catalogs, only external Z_psi is shared and the remaining listed pieces require channel-by-channel BZ evaluation; not safe to claim an audited retained definitive shared-Fierz no-go from this note alone.
-- **open / conditional deps cited:**
-  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
-  - `YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
-  - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
-  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
-  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
-- **auditor confidence:** high
-
-### `yt_p2_f_yt_loop_geometric_bound_note_2026-04-17`
-
-- **Note:** [`YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](../../docs/YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note assumes |delta_M_{n+1}| <= r_M |delta_M_n| for all n >= 2 with r_M = (alpha_LM/pi) b_0 = 0.22126, then sums the geometric tail to claim |tail(N=2)| <= 0.01335 and a 0.677% fractional m_t residual.  _(class `B`)_
-- **chain closes:** False — The runner verifies retained constants, carried M values, the observed 1-to-2 loop ratio, and the geometric-sum arithmetic. It does not derive or compute the higher-loop integrated SM-RGE shifts needed to establish the ratio bound for n >= 2.
-- **rationale:** Issue: the retained P2 tail bound rests on an unproved geometric-decay assumption for the integrated coupled SM-RGE shifts, |delta_M_{n+1}| <= r_M |delta_M_n| for all n >= 2; the runner only checks that r_M exceeds the observed 1-to-2 ratio and then performs the geometric sum. Why this blocks: closing the P2 loop-expansion axis requires a theorem or computation controlling the actual 3-loop and higher integrated contributions to M, not just a b_0-motivated analogy to P1 plus carried 1-loop/2-loop values. Repair target: prove a renormalon/geometric-growth bound for the integrated SM RGE on the retained canonical surface, or compute enough higher-loop integrated shifts to establish the ratio inequality; make the runner consume those derived shifts or proof certificates. Claim boundary until fixed: safe to claim that, if r_M = 0.22126 bounds all higher loop-shift ratios, the tail arithmetic gives |tail(N=2)| = 0.01335 and 0.677%; not safe to claim an audited retained framework-native P2 loop-tail closure from this note alone.
-- **open / conditional deps cited:**
-  - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`
-  - `YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md`
-  - `YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md`
-  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
 - **auditor confidence:** high
 
 ### `yt_p2_v_matching_theorem_note_2026-04-17`
@@ -4472,73 +4036,6 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
   - `YT_ZERO_IMPORT_CHAIN_NOTE.md`
-- **auditor confidence:** high
-
-### `yt_p3_k_series_geometric_bound_note_2026-04-17`
-
-- **Note:** [`YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](../../docs/YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Assuming the geometric ratio bound |delta_{n+1}| <= r_bound * |delta_n| holds for all n >= 3, the residual tail after retained truncation index N = 3 is upper-bounded by delta_3 * r_bound / (1 - r_bound) = 0.001458.  _(class `B`)_
-- **chain closes:** False — The runner verifies the imported K1-K3 values, the first two observed ratios, and the finite geometric-sum arithmetic, but it does not prove the all-higher-order ratio bound for K4 and beyond. The claimed tail control therefore depends on the note's explicit geometric-decay assumption and on non-clean upstream K-series/coupling authorities.
-- **rationale:** Issue: the retained tail bound rests on the unproved assumption that |delta_{n+1}| <= r_bound * |delta_n| with r_bound = (alpha_s/pi) * C_A^2 for every n >= 3, while the runner only checks n = 1,2 ratios and then sums a geometric series. Why this blocks: a retained bound on the full MSbar-to-pole K_n tail requires a theorem or computation controlling K4 and higher terms, not an envelope selected because it covers the first two ratios. Repair target: prove a framework-native renormalon/asymptotic coefficient bound on the retained action, or extend the runner to compute/bound K4+ from retained inputs and show the ratio inequality uniformly from some n0. Claim boundary until fixed: safe to claim conditional arithmetic: given K1-K3, alpha_s(m_t)=0.1079, and the geometric-decay premise, the tail bound is 0.001457 and about 0.137% of m_t; not safe to claim audited retained closure of the P3 K-series tail or P3 coverage budget.
-- **open / conditional deps cited:**
-  - `ALPHA_S_DERIVED_NOTE.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md`
-  - `YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
-  - `YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md`
-  - `YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
-  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
-- **auditor confidence:** high
-
-### `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17`
-
-- **Note:** [`YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md`](../../docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The remaining kinematic + Dirac-trace integral contributes a factor of 1 on shell in the alpha_s/pi convention, so K_1 = C_F.  _(class `B`)_
-- **chain closes:** False — The source note and runner verify the SU(3) Casimir arithmetic, but they do not derive or cite a retained theorem for the on-shell MSbar one-loop self-energy finite coefficient. The runner assigns K_1 = C_F before checking it, so the contested physics bridge is not computed.
-- **rationale:** Issue: the framework-native claim depends on the assertion that the non-color one-loop heavy-quark self-energy integral equals +1 in the alpha_s/pi MSbar-to-pole convention, but the note supplies no retained theorem or computation for that integral and the runner hard-codes K_1 = C_F. Why this blocks: C_F = 4/3 is only the color factor; the physical coefficient K_1 also requires the on-shell Dirac/kinematic integral, scheme convention, mass-renormalization subtraction, and sign normalization. Repair target: add a retained one-loop on-shell MSbar self-energy theorem or runner computation deriving the finite coefficient from the Feynman rules and renormalization convention, then multiply by the independently retained SU(3) Casimir. Claim boundary until fixed: safe to claim the exact SU(3) fundamental Casimir C_F = 4/3 and the arithmetic shift (4/3)(0.108/pi) = 4.58% if alpha_s(m_t)=0.108 is supplied; not safe to claim a framework-native derivation of the MSbar-to-pole K_1 coefficient.
-- **open / conditional deps cited:**
-  - `scripts/frontier_yt_p3_msbar_to_pole_k1.py`
-- **auditor confidence:** 0.94
-
-### `yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17`
-
-- **Note:** [`YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](../../docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The four color tensors {C_F^2, C_F C_A, C_F T_F n_l, C_F T_F} are linearly independent and form the complete 2-loop on-shell heavy-quark color-tensor subspace, so K_2 decomposes into exactly those four channels.  _(class `B`)_
-- **chain closes:** False — The note and runner verify arithmetic after assuming the four-channel color basis; they do not derive the two-loop topology/color-basis completeness from retained inputs. The numerical reconstruction is also circular: the runner constructs the n_l-independent constant from the literature target K_2(5) and then reproduces that target exactly.
-- **rationale:** Issue: the retained K_2 skeleton rests on an asserted complete two-loop color-basis theorem, but the source note provides no retained derivation of the on-shell two-loop topology classification and the runner defines K_2_sym to be the claimed four-term expression before checking it. Why this blocks: exact SU(3) prefactor arithmetic does not prove that these are all and only the allowed two-loop mass-conversion color channels, and the advertised K_2(5)=10.9405 reconstruction is not independent because C_0 is back-solved from the target. Repair target: add a retained two-loop Feynman-topology/color-reduction theorem or runner that enumerates the contributing diagrams, reduces their color factors to the four tensors, proves absence of other tensors at two loops, and reconstructs K_2 from independently supplied J_FF, J_FA, J_Fl, and J_Fh values rather than from the final target. Claim boundary until fixed: safe to claim arithmetic prefactors {16/9, 4, 10/3, 2/3} if C_F=4/3, C_A=3, T_F=1/2, and n_l=5 are supplied; not safe to claim a retained complete K_2 color-tensor skeleton or an independent K_2 numerical reconstruction.
-- **open / conditional deps cited:**
-  - `YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md`
-  - `scripts/frontier_yt_p3_msbar_to_pole_k2.py`
-- **auditor confidence:** 0.95
-
-### `yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17`
-
-- **Note:** [`YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](../../docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Because all ten prefactors are non-zero rationals, the functional maps surjectively onto R: for any real target T there exist real vectors K such that the sum equals T; in particular K_3(n_l = 5) = 80.405 is structurally admissible.  _(class `B`)_
-- **chain closes:** False — The runner verifies SU(3) tensor arithmetic and then constructs an accommodation witness after importing the target K_3 value. It does not derive the complete three-loop topology/color basis, the primitive integral values, or an independent reconstruction of K_3.
-- **rationale:** Issue: the claimed retained K_3 color-tensor skeleton is supported by exact Casimir arithmetic plus a vacuous accommodation argument: since the ten coefficients are nonzero, a back-filled vector can reproduce any supplied target, including the imported K_3(n_l=5)=80.405. Why this blocks: retention of a physical three-loop MSbar-to-pole coefficient skeleton requires proving that these are all and only the contributing color structures and reconstructing K_3 from independently specified primitive integrals; an underconstrained witness does not establish the skeleton or the 98.69% coverage claim. Repair target: add a retained three-loop Feynman-topology/color-reduction theorem and a runner that enumerates the diagrams, reduces their color factors to the ten tensors, proves absence of missing tensors, and reconstructs K_3 from independent K_FFF...K_Fhh inputs rather than from the final target. Claim boundary until fixed: safe to claim the listed SU(3) tensor-product arithmetic and that the displayed linear form can be made to equal 80.405 if unconstrained primitive coefficients are chosen; not safe to claim a retained complete K_3 color-tensor skeleton or retained cumulative K-series coverage through three loops.
-- **open / conditional deps cited:**
-  - `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md`
-  - `YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
-  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
 - **auditor confidence:** high
 
 ### `yt_ssb_matching_gap_analysis_note_2026-04-18`
