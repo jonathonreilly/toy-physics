@@ -1,14 +1,14 @@
-# `Σm_ν` Structural Functional Form on Retained Cosmology Bounded Surface — Theorem (4F-α)
+# `Σm_ν` Structural Functional Form on Cosmology Bounded Surface — Support Note (4F-α)
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **stretch-attempt theorem** note on
+**Status:** support / branch-local **stretch-attempt** note on
 `frontier/neutrino-sigma-mnu-cosmology-20260428`. Cycle 2 of the
 neutrino-sigma-mnu-cosmology loop. **Result: structural functional
-form `Σm_ν = (1 - L - R - Ω_b - Ω_DM) × C_ν × h²` retained as an
-exact algebraic identity on the retained cosmology bounded surface,
+form `Σm_ν = (1 - L - R - Ω_b - Ω_DM) × C_ν × h²` recorded as a
+support-level exact algebraic identity on the cosmology bounded surface,
 where `C_ν` is the standard 93.14 eV admitted CMB-neutrino-relic
-convention.** This is a **structural retention**, not a numerical
-retention; numerical `Σm_ν` requires `(h, Ω_b, Ω_DM)` to move from
+convention.** This is a **support-level structural form**, not a numerical
+closure; numerical `Σm_ν` requires `(h, Ω_b, Ω_DM)` to move from
 admitted to retained or bounded.
 **Lane:** 4 — Neutrino quantitative closure (sub-target 4F-α)
 **Loop:** `neutrino-sigma-mnu-cosmology-20260428`
@@ -120,11 +120,11 @@ Solving for `Σm_ν`:
 Σm_ν  =  (1 - L - R - Ω_b - Ω_DM) × C_ν × h²                       (T-4F-α-2)
 ```
 
-This is an **exact algebraic identity** on the retained cosmology
-bounded surface. The retained-tier validity is:
+This is an **exact algebraic identity** on the cosmology bounded
+surface. The review status is:
 
-- The algebraic structure (T-4F-α-2) is **retained as a structural
-  identity** under (P1)-(P3).
+- The algebraic structure (T-4F-α-2) is a **support-level structural
+  identity** under admitted premises (P1)-(P3).
 - Numerical evaluation requires admitted/open inputs `(h, Ω_b, Ω_DM)`.
 - The 93.14 eV figure is admitted convention (depends on admitted
   `T_CMB`).
@@ -157,19 +157,19 @@ combinations are the standard CMB/cosmology bookkeeping form.
 | `C_ν = 93.14 eV` | admitted convention (depends on T_CMB) | standard cosmology |
 | `Σm_ν` | **target** (this theorem) | — |
 
-The structural identity (T-4F-α-2) **is** retained on the bounded
+The structural identity (T-4F-α-2) is support-level on the bounded
 surface in the sense that:
 - The functional form is exact on flat FRW + standard matter/radiation
   EOS + retained `N_eff` + admitted `T_CMB`.
-- It is jointly retained with `Ω_m,0 = 1 - L - R` and the open-number
+- It is compatible with `Ω_m,0 = 1 - L - R` and the open-number
   reduction theorem.
 
 The numerical retention of `Σm_ν` requires `(h, Ω_b, Ω_DM)` to be
 retained or bounded.
 
-## 3. What this theorem retains
+## 3. What this note establishes
 
-**Retained as algebraic identity (this theorem):**
+**Support-level algebraic identity (this note):**
 
 - `Σm_ν = (1 - L - R - Ω_b - Ω_DM) × C_ν × h²` exactly, on retained
   cosmology bounded surface plus admitted matter-budget split.
@@ -195,7 +195,7 @@ z_mΛ, H(a)}` as exact closed-form functions of `(H_0, L)` at fixed
 admitted `R`. That theorem reduced the late-time bounded surface
 from 9 nominal variables to 2 structural dof.
 
-This theorem (4F-α) extends that reduction to the matter-budget
+This note (4F-α) extends that reduction to the matter-budget
 split. Adding `(Σm_ν, Ω_b, Ω_DM, h, T_CMB, N_eff)` gives 6 new
 nominal variables; (T-4F-α-1) gives 1 algebraic constraint; retained
 `N_eff` and admitted `T_CMB` reduce by 2; so the matter-budget
@@ -211,7 +211,7 @@ The full late-time + matter-budget bounded surface has
 at fixed admitted `R, T_CMB` and retained `N_eff`. `Σm_ν` is determined
 algebraically once these 5 are fixed.
 
-This is honest structural progress: it does not retain `Σm_ν`
+This is honest structural progress: it does not close `Σm_ν`
 numerically, but **identifies the minimal admitted-input set**
 required to pin `Σm_ν` exactly.
 
@@ -237,9 +237,9 @@ The theorem is falsified by:
 
 **Closes:**
 
-- 4F-α (structural functional-form retention): `Σm_ν` is retained
+- 4F-α (structural functional-form support): `Σm_ν` is recorded
   as an exact algebraic function `(1 - L - R - Ω_b - Ω_DM) × C_ν ×
-  h²` on the retained cosmology bounded surface plus admitted
+  h²` on the cosmology bounded surface plus admitted
   matter-budget split.
 - Identification that the matter-budget extension to the
   open-number-reduction surface adds 3 structural dof
@@ -274,11 +274,11 @@ The theorem is falsified by:
 
 ## 8. Boundary
 
-This theorem retains the **structural functional form** of `Σm_ν`
-on the retained cosmology bounded surface. It does **not** retain
+This note records the **structural functional form** of `Σm_ν`
+on the cosmology bounded surface. It does **not** close
 `Σm_ν` numerically and does not promote `(h, Ω_b, Ω_DM)` from their
 current admitted/open status. The 93.14 eV conversion `C_ν` is
-retained as standard CMB-neutrino-relic convention dependent on
+used as the standard CMB-neutrino-relic convention dependent on
 admitted `T_CMB` and retained `N_eff`.
 
 A small algebraic-consistency runner is authored as

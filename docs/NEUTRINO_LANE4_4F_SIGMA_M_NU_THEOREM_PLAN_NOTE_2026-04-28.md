@@ -1,7 +1,7 @@
-# Lane 4F `Σm_ν` Theorem Plan: Cosmology-Bridge Closure Roadmap
+# Lane 4F `Σm_ν` Theorem Plan: Cosmology-Bridge Support Roadmap
 
 **Date:** 2026-04-28
-**Status:** retained branch-local theorem-plan note on
+**Status:** open branch-local theorem-plan note on
 `frontier/neutrino-sigma-mnu-cosmology-20260428`. Reduces Lane 4 sub-
 target 4F (`Σm_ν` cosmological constraint) to a sharp structural-
 functional-form identity over the retained cosmology open-number
@@ -14,12 +14,12 @@ audit and Phase-1/Phase-2 ordering.
 
 ## 0. Statement
 
-Lane 4F closure (retained `Σm_ν` consistent with retained cosmology
-bounded surface) decomposes into:
+Lane 4F work toward `Σm_ν` on the retained cosmology bounded surface
+decomposes into:
 
-- **4F-α** Structural functional-form retention:
-  `Σm_ν = (1 - L - R - Ω_b - Ω_DM) × 93.14 eV × h²` retained as an
-  **exact algebraic identity** on the retained cosmology bounded
+- **4F-α** Structural functional-form support:
+  `Σm_ν = (1 - L - R - Ω_b - Ω_DM) × 93.14 eV × h²` recorded as a
+  **support-level exact algebraic identity** on the retained cosmology bounded
   surface. **Phase-1 priority of this loop.**
 - **4F-β** Numerical retention via parallel-lane closures:
   retain `Σm_ν` as a number once `(h, Ω_b, Ω_DM)` move from admitted
@@ -34,7 +34,7 @@ target `Σm_ν`, related by one algebraic constraint (4F-α). So at
 fixed `(L, R)`, the matter-budget closure adds one admitted dof per
 input plus one constraint.
 
-This plan does not numerically retain `Σm_ν`. It produces the
+This plan does not numerically close `Σm_ν`. It produces the
 structural plan and identifies the load-bearing dependencies.
 
 ## 1. Retained framework structure used
@@ -111,8 +111,8 @@ fixes `Σm_ν` exactly via (4F-α-3).
 | `Σm_ν` | **target** | this loop |
 | 93.14 eV neutrino-relic conversion | admitted convention | derived from `T_CMB` + retained `N_eff` |
 
-The structural functional form (4F-α-3) is **retained as an
-algebraic identity**. The numerical retention of `Σm_ν` requires
+The structural functional form (4F-α-3) is recorded as a
+**support-level algebraic identity**. The numerical retention of `Σm_ν` requires
 all of `(h, Ω_b, Ω_DM)` to be retained or bounded.
 
 ## 3. Why this is structurally analogous to Lane 5's open-number reduction
@@ -127,14 +127,14 @@ as **exact closed-form functions of (H_0, L)** at fixed admitted R.
 This was a STRUCTURAL retention, not a numerical retention. The
 numerical retention required retaining `H_0` independently.
 
-Lane 4F (this plan) retains:
+Lane 4F (this plan) records:
 
 ```text
 Σm_ν  =  (1 - L - R - Ω_b - Ω_DM) × 93.14 eV × h²
 ```
 
 as an **exact closed-form function of (L, R, Ω_b, Ω_DM, h)**. Same
-posture: a structural retention of the functional form, with
+posture: a support-level structural record of the functional form, with
 numerical retention deferred until parallel-lane (Lane 5 +
 admitted-input audit) closures land.
 
@@ -146,10 +146,10 @@ but **structurally isolates the load-bearing dependencies** for the
 
 ### Phase 1 (this loop)
 
-1. **4F-α structural functional form** — single-cycle theorem
+1. **4F-α structural functional form** — single-cycle support note
    (Cycle 2 of this loop after the present Cycle 1 plan).
 2. **4F audit:** which admitted observational layer numbers
-   could be promoted to retained via existing framework structure?
+   could be upgraded by existing framework structure?
 
 ### Phase 2 (parallel-lane prerequisites)
 
@@ -162,7 +162,7 @@ but **structurally isolates the load-bearing dependencies** for the
 
 ### Phase 3 (after Phase 2)
 
-6. **Numerical 4F-β retention:** `Σm_ν` retained as bounded interval
+6. **Numerical 4F-β closure:** `Σm_ν` closed as bounded interval
    under bounded `(h, Ω_b, Ω_DM)`.
 7. **Cross-validation:** consistency with neutrino retained
    observable bounds + retained `δ_CP`/`θ_23` structure.
@@ -170,14 +170,14 @@ but **structurally isolates the load-bearing dependencies** for the
 ## 5. Stretch-attempt candidates (per Deep Work Rules)
 
 If audit-quota threshold hits:
-- **(SA-A) Functional-form theorem retention** — Phase-1 primary
+- **(SA-A) Functional-form support note** — Phase-1 primary
   attempt (Cycle 2). Algebraically straightforward; honest output.
 - **(SA-B) Bounded-envelope retention** — under bounded admitted
   inputs, retain `Σm_ν` interval. Depends on Lane 5 audit.
 - **(SA-C) N_eff lower-bound** — using retained `N_eff = 3.046` plus
   retained mass-splitting bounds, derive a structural lower bound on
   `Σm_ν`. Depends on Lane 4 4B/4C status.
-- **(SA-D) Ω_DM structural retention probe** — explore whether DM
+- **(SA-D) Ω_DM structural closure probe** — explore whether DM
   Schur-suppression retained content gives a structural `Ω_DM`
   identity. Pivot probe.
 
@@ -198,7 +198,7 @@ If audit-quota threshold hits:
 
 **Closes (claim-state movement):**
 
-- 4F decomposition into 4F-α (structural functional form) and 4F-β
+- 4F decomposition into 4F-α (structural functional form support) and 4F-β
   (numerical retention).
 - Phase ordering with explicit dependency map.
 - Identification of `(h, Ω_b, Ω_DM)` as the load-bearing admitted

@@ -17937,7 +17937,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-29T03:57:46.589780+00:00",
+  "generated_at": "2026-04-29T04:00:51.826164+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -29646,6 +29646,36 @@
       "runner_path": "scripts/frontier_neutrino_dirac_z3_support_trichotomy.py",
       "title": "Neutrino Dirac `Z_3` Support Trichotomy"
     },
+    "neutrino_lane4_4f_phase2_attack_frame_fanout_note_2026-04-28": {
+      "claim_id": "neutrino_lane4_4f_phase2_attack_frame_fanout_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open branch-local **stuck fan-out** note on",
+      "deps": [],
+      "note_hash": "ad3465ee4f63e6b790711fee8529c5a256f081a9ff7f58ee24224ec587b0ec98",
+      "path": "docs/NEUTRINO_LANE4_4F_PHASE2_ATTACK_FRAME_FANOUT_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "Lane 4F Phase-2 Attack Frame \u2014 Stuck Fan-Out"
+    },
+    "neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28": {
+      "claim_id": "neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "support / branch-local **stretch-attempt** note on",
+      "deps": [],
+      "note_hash": "c4d8caf90d2aa5ac9fc8ea90fd1574c2b9ffb5df50531d1f0dea326765ceb087",
+      "path": "docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_FUNCTIONAL_FORM_THEOREM_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "`\u03a3m_\u03bd` Structural Functional Form on Cosmology Bounded Surface \u2014 Support Note (4F-\u03b1)"
+    },
+    "neutrino_lane4_4f_sigma_m_nu_theorem_plan_note_2026-04-28": {
+      "claim_id": "neutrino_lane4_4f_sigma_m_nu_theorem_plan_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open branch-local theorem-plan note on",
+      "deps": [],
+      "note_hash": "2f31e9d5372052c81f7f0c944d41d41b82eadce62187c07e8fbe069b43d4f932",
+      "path": "docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_THEOREM_PLAN_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "Lane 4F `\u03a3m_\u03bd` Theorem Plan: Cosmology-Bridge Support Roadmap"
+    },
     "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27": {
       "claim_id": "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
       "current_status": "proposed_retained",
@@ -40109,6 +40139,9 @@
     "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28",
     "neutrino_dirac_two_higgs_canonical_reduction_note",
     "neutrino_dirac_z3_support_trichotomy_note",
+    "neutrino_lane4_4f_phase2_attack_frame_fanout_note_2026-04-28",
+    "neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28",
+    "neutrino_lane4_4f_sigma_m_nu_theorem_plan_note_2026-04-28",
     "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
     "neutrino_lane4_theorem_plan_note_2026-04-28",
     "neutrino_lane4_workstream_closeout_note_2026-04-28",
@@ -40590,16 +40623,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4484,
-    "leaf_count": 750,
-    "node_count": 1651,
-    "root_count": 1203,
+    "leaf_count": 753,
+    "node_count": 1654,
+    "root_count": 1206,
     "runners_with_path": 727,
     "status_counts": {
       "bounded": 253,
-      "open": 37,
+      "open": 39,
       "proposed_promoted": 1,
       "proposed_retained": 404,
-      "support": 160,
+      "support": 161,
       "unknown": 796
     }
   }

@@ -1,9 +1,9 @@
 # Lane 4F Phase-2 Attack Frame — Stuck Fan-Out
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **stuck fan-out** note on
+**Status:** open branch-local **stuck fan-out** note on
 `frontier/neutrino-sigma-mnu-cosmology-20260428`. Cycle 3 of the 4F
-loop. With 4F-α (structural functional form) RETAINED in Cycle 2,
+loop. With 4F-α (structural functional form) recorded as support in Cycle 2,
 Phase-2 (numerical `Σm_ν` retention) is the next target. Per Deep
 Work Rules, before honest stop on the 4F block (or before another
 stretch attempt), generate 4-6 orthogonal Phase-2 attack frames,
@@ -19,8 +19,8 @@ research-level distant.**
 
 ## 0. Context
 
-Cycle 1 produced the theorem plan; Cycle 2 retained 4F-α (structural
-functional form). Both Deep Work Rules requirements (audit + stretch)
+Cycle 1 produced the theorem plan; Cycle 2 recorded 4F-α (structural
+functional form) as support. Both Deep Work Rules requirements (audit + stretch)
 are satisfied. Phase-2 is numerical `Σm_ν` retention, which the
 Cycle 2 audit identified as conditional on:
 
@@ -64,7 +64,7 @@ identity plus admitted photon density gives `Ω_b` directly.
 content exists; per `ASSUMPTIONS_AND_IMPORTS.md`, `η` is admitted
 observational layer per cosmology open-number reduction §1.
 
-**Status:** speculative; no retained baryogenesis structural
+**Status:** speculative; no framework baryogenesis structural
 identity currently known to deliver `Ω_b h²` numerically.
 
 ### F3 — DM relic abundance retained-content cross-bound
@@ -141,7 +141,7 @@ without the matter-budget split.
 **Mechanism:** speculative — would require a retained primitive
 relating Cl(3) three-generation structure to neutrino-relic density.
 
-**Status:** highly speculative; no retained content currently
+**Status:** highly speculative; no framework content currently
 connects three-generation structure to relic density numerically.
 
 ## 2. Synthesis
@@ -193,7 +193,7 @@ as bounded interval. Closes 4F-β.
 ## 4. Recommended next action
 
 **Honest stop on this 4F loop after Cycle 3.** Both Phase-1 targets
-retained (4F-α structural functional form + theorem plan +
+recorded (4F-α structural functional form + theorem plan +
 fan-out). Phase-2 closure requires a dedicated fresh physics-loop
 on Lane 5 (C1) gate (F1) — that's a different science block and
 should get its own loop.
