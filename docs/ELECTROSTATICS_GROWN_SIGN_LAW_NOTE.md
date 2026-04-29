@@ -1,7 +1,7 @@
 # Electrostatics Grown Sign-Law Note
 
-**Date:** 2026-04-05  
-**Status:** proposed_retained narrow grown-geometry sign-law companion
+**Date:** 2026-04-05 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded narrow grown-geometry sign-law companion — frozen numerical results for one fixed grown geometry row; the runner is not registered in the audit ledger and the artifact links use absolute local paths outside the audit packet.
 
 ## Artifact chain
 
@@ -60,3 +60,42 @@ The narrow, review-safe statement is:
 ## Final Verdict
 
 **retained narrow grown-geometry sign-law companion**
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, high criticality, 123 transitive
+descendants):
+
+> Issue: the retained sign-law companion rests on frozen numerical
+> results for one fixed grown geometry row, but the audit ledger
+> registers no primary runner or output, and the note's artifact
+> links are absolute local paths outside the audit packet. Why this
+> blocks: a hostile auditor cannot reproduce the printed `delta_z`
+> signs, neutral cancellation, dipole partial cancellation, or
+> +1/+2 linearity threshold from registered evidence; moreover the
+> note explicitly limits the result to fixed-field, no graph update,
+> one source layer, and one final-layer centroid on a single grown
+> row.
+
+## What this note does NOT claim
+
+- A grown-geometry sign-law theorem beyond the one fixed grown row.
+- That the printed `delta_z` signs, neutral cancellation, dipole
+  partial cancellation, or +1/+2 linearity threshold are
+  reproducible from registered evidence; the runner is not
+  registered.
+- Coverage beyond fixed-field, no graph update, one source layer, and
+  one final-layer centroid.
+
+## What would close this lane (Path A future work)
+
+Promoting from bounded conditional to retained would require:
+
+1. Registering `scripts/ELECTROSTATICS_GROWN_SIGN_LAW.py` as the
+   claim runner with deterministic output and explicit PASS
+   thresholds for sign, cancellation, and charge-linearity.
+2. Replacing the absolute-path artifact links with proper relative
+   paths inside the audit packet.
+3. Either keeping the note scoped to the single grown row (current
+   stance) or extending the runner to a family of grown geometries
+   with hard PASS gates.
