@@ -1,8 +1,7 @@
 # Mesoscopic Surrogate Threshold 2D Note
 
-**Date:** 2026-04-04  
-**Status:** bounded control note; proposed_retained 2D support sweep found no sharp
-threshold in two-stage sourced-response stability
+**Date:** 2026-04-04 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** bounded control note; finite 2D support sweep found no sharp threshold in two-stage sourced-response stability and is not a persistent-mass or inertial-response theorem.
 
 ## Question
 
@@ -64,3 +63,33 @@ The cheapest future move is therefore:
   if it preserves the same multistage sourced-response stability
 - otherwise stop treating support shrinkage as the main bottleneck and move on
   to a genuinely different family or mechanism
+
+## Audit boundary (2026-04-28)
+
+The earlier Status line started with "bounded control note" but
+included "`proposed_retained` 2D support sweep" in the same sentence,
+which the audit-lane parser classified as `proposed_retained`. Status
+line rephrased.
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: The source Status begins with 'bounded control note' and
+> later states the test remains a bounded control, not a persistent-
+> mass theorem, but the audit queue records it as `proposed_retained`
+> because the Status line also mentions a `proposed_retained` 2D
+> support sweep. Why this blocks: the live runner verifies a finite
+> support sweep, not a retained theorem about localized persistent
+> mass or inertial response.
+
+## What this note does NOT claim
+
+- A persistent-mass theorem.
+- An inertial-response theorem.
+- A sharp support-shrinking threshold (the sweep does not find one).
+
+## What would close this lane (Path A future work)
+
+A separate retained theorem deriving a persistent-mass object from the
+sweep would require a registered runner with explicit pass thresholds
+for what counts as "persistent mass" and "inertial response", with
+assertion-gated support-shrinking criteria.
