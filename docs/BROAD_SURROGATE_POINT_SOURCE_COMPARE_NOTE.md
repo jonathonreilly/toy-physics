@@ -1,7 +1,7 @@
 # Broad Surrogate Point Source Compare Note
 
-**Date:** 2026-04-04  
-**Status:** bounded interpretive diagnostic on the proposed_retained 3D ordered-lattice family
+**Date:** 2026-04-04 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** bounded interpretive diagnostic comparing broad-source and point-source representations on the upstream 3D ordered-lattice surrogate lane; not a tier-ratifiable persistent-mass, inertial-response, or geometry-generic theorem.
 
 ## Artifact chain
 
@@ -69,3 +69,37 @@ Together they now say:
 If we want to push the inertial-response lane further, the next honest step is
 to ask whether this soft-point-source surrogate can survive another relaunch
 stage without collapsing into an ordinary broad packet.
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, leaf criticality):
+
+> Issue: the runner cleanly verifies the five-probe broad-source
+> versus point-source diagnostic, but the source row is only a
+> bounded interpretive diagnostic on an upstream proposed/bounded
+> ordered-lattice surrogate lane and has no registered dependencies
+> for those carrier and relaunch controls. Why this blocks: a
+> hostile physicist can accept max TV distance 0.000051 for the
+> scripted probes without accepting a retained persistent-mass,
+> inertial-response, or geometry-generic theorem, because the source
+> itself says it compares two source representations rather than
+> producing a self-maintaining object.
+
+The Status line removes the parser-tripping `proposed_retained` token
+and explicitly disclaims the persistent-mass / inertial-response /
+geometry-generic interpretation.
+
+## What this note does NOT claim
+
+- A persistent-mass theorem.
+- An inertial-response theorem.
+- A geometry-generic theorem on broad-source / point-source
+  equivalence.
+- Audit-clean upstream registration of the carrier and relaunch
+  controls.
+
+## What would close this lane (Path A future work)
+
+A retained persistent-mass / inertial-response result would require
+a separate registered runner that produces a self-maintaining object,
+not a comparison of two source representations.
