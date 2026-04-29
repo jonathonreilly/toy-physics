@@ -25,6 +25,14 @@ identity; it remains ledgered as a convention, not a framework derivation.
 Cycle 7 used no new literature. The A1 obstruction is finite algebra over CAR
 matrices and rank-four projections, with no observational comparator.
 
+Cycle 8 used no new literature. The A2 obstruction is a dimensionless
+normalization and action-unit rescaling witness over repo-local lattice
+inputs.
+
+Cycle 9 used no new literature. The A4 boundary is finite algebra plus the
+repo-local primitive parity-gate/CAR/coframe packet, with no observational
+comparator.
+
 If later cycles need external bridge material, enter each imported theorem,
 experimental number, or convention here with role `bridge`, `comparator`,
 `admitted convention`, or `non-derivation context`.

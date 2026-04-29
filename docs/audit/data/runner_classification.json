@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T04:11:35.021725+00:00",
+  "generated_at": "2026-04-29T04:22:25.341115+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -4380,6 +4380,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_hubble_lane5_c1_a2_action_unit_metrology_obstruction.py"
+    },
+    "hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29": {
+      "assert_count": 1,
+      "counts": {
+        "A": 4,
+        "B": 0,
+        "C": 8,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_hubble_lane5_c1_a4_parity_gate_car_boundary.py"
     },
     "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27": {
       "assert_count": 1,
@@ -14175,6 +14187,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_hubble_lane5_c1_a4_parity_gate_car_boundary.py": {
+      "assert_count": 1,
+      "claims": [
+        "hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29"
+      ],
+      "counts": {
+        "A": 4,
+        "B": 0,
+        "C": 8,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py": {
       "assert_count": 1,
       "claims": [
@@ -19050,12 +19077,12 @@
     "dominant_class_distribution": {
       "A": 6,
       "B": 103,
-      "C": 337,
+      "C": 338,
       "D": 110,
       "none": 141
     },
-    "runners_classified": 697,
-    "runners_with_C": 416,
+    "runners_classified": 698,
+    "runners_with_C": 417,
     "runners_with_D": 186
   }
 }

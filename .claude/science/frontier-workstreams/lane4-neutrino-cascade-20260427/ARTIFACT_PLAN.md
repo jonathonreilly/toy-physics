@@ -224,3 +224,36 @@ Expected claim movement:
   the dimensionless lattice action and `P_A` carrier to a particular
   dimensional `kappa`;
 - next route becomes A4 parity-gate-to-CAR or a direct metrology theorem.
+
+## Cycle 9: Lane 5 C1 A4 Parity-Gate-To-CAR Boundary
+
+Deliverables:
+
+- `docs/HUBBLE_LANE5_C1_A4_PARITY_GATE_CAR_BOUNDARY_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_a4_parity_gate_car_boundary.py`
+- `logs/2026-04-29-hubble-lane5-c1-a4-parity-gate-car-boundary.txt`
+
+Verification:
+
+- run and compile the new runner;
+- rerun nearby parity/CAR/coframe authority runners:
+  - `frontier_area_law_primitive_parity_gate_carrier.py`
+  - `frontier_area_law_primitive_car_edge_identification.py`
+  - `frontier_area_law_native_car_semantics_tightening.py`
+  - `frontier_planck_target3_clifford_phase_bridge.py`
+  - `frontier_planck_target3_phase_unit_edge_statistics.py`
+- run audit pipeline and strict lint;
+- run `git diff --check`;
+- record review-loop emulation.
+
+Expected claim movement:
+
+- no `(C1)` closure;
+- exact support/boundary theorem preserving the conditional parity-gate
+  positive chain;
+- exact negative boundary against the direct A4 shortcut;
+- newly exposed import: an orientation/statistics lift from the even `Z_2`
+  parity gate to odd metric-compatible Clifford/CAR coframe generators;
+- next route is either a direct `P_A` module-morphism/coframe theorem or a
+  minimal carrier/metrology axiom audit that records the human-judgment
+  boundary.

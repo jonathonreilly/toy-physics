@@ -1,5 +1,92 @@
 # Handoff
 
+## Loop 3 Checkpoint 2026-04-29T04:20Z
+
+Supervisor loop 3 continued Lane 5 `(C1)` after the A2 action-unit
+metrology obstruction. The selected route was the A4 parity-gate-to-CAR
+stretch attempt.
+
+### Claim-State Movement This Loop
+
+Added a new exact support/boundary theorem:
+
+- `docs/HUBBLE_LANE5_C1_A4_PARITY_GATE_CAR_BOUNDARY_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_a4_parity_gate_car_boundary.py`
+- `logs/2026-04-29-hubble-lane5-c1-a4-parity-gate-car-boundary.txt`
+
+Verified result: the primitive residual `Z_2` parity gate supplies the exact
+self-dual half-zone selector and preserves the conditional positive chain
+
+```text
+primitive Clifford/CAR coframe response
+  => primitive-CAR edge carrier
+  + parity gate
+  => c_Widom = c_cell = 1/4.
+```
+
+But the gate does **not** derive that CAR/coframe response. Its finite gate
+algebra is only `span{I, Q_+}` and remains compatible with non-CAR rank-four
+semantics. A4 therefore blocks the shortcut:
+
+```text
+primitive parity gate + rank(P_A)=4
+  => metric-compatible Clifford/CAR coframe response on P_A H_cell.
+```
+
+This does not demote the primitive parity-gate carrier theorem, the
+primitive-CAR edge theorem, the native-CAR tightening theorem, or the Target 3
+Clifford bridge. It only exposes the missing orientation/statistics lift from
+the even parity gate to odd Clifford/CAR coframe generators.
+
+### Verification
+
+- `PYTHONPATH=scripts python3 scripts/frontier_hubble_lane5_c1_a4_parity_gate_car_boundary.py`
+  -> `PASS=13 FAIL=0`
+- `python3 -m py_compile scripts/frontier_hubble_lane5_c1_a4_parity_gate_car_boundary.py`
+  -> pass
+- `PYTHONPATH=scripts python3 scripts/frontier_area_law_primitive_parity_gate_carrier.py`
+  -> `PASS=40 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_area_law_primitive_car_edge_identification.py`
+  -> `PASS=36 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_area_law_native_car_semantics_tightening.py`
+  -> `PASS=23 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_planck_target3_clifford_phase_bridge.py`
+  -> `PASS=34 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_planck_target3_phase_unit_edge_statistics.py`
+  -> `27/27 checks passed`
+- `bash docs/audit/scripts/run_pipeline.sh`
+  -> complete
+- `python3 docs/audit/scripts/audit_lint.py --strict`
+  -> OK, known graph-cycle warning only
+- `git diff --check`
+  -> pass
+- Audit row:
+  `hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29`
+  seeded as `proposed_retained` / `unaudited`.
+
+### Review-Loop Emulation
+
+- Code/runner: PASS. The runner tests the load-bearing A4 shortcut and not
+  only the already-known parity-gate coefficient.
+- Physics boundary: exact support/boundary. Conditional positive parity-gate
+  support is preserved; no `(C1)` or `H_0` closure is claimed.
+- Imports: disclosed in `ASSUMPTIONS_AND_IMPORTS.md`; no observed or SI
+  action value is used.
+- Repo governance: no repo-wide authority weaving performed. Audit generated
+  surfaces were refreshed for parseability only.
+
+### Next Exact Action
+
+Continue Lane 5 `(C1)` with a direct `P_A` module-morphism / metric-compatible
+coframe theorem attempt, or write the minimal carrier/metrology axiom audit
+that records the remaining human-judgment boundary. A4 does not justify
+`STOP_ALL_LANES_REQUESTED` by itself.
+
+Fetch note: `origin/main` remains ahead with a broad review batch at
+`207760ce`. This loop did not merge it because A4 only needed local Planck /
+area-law authorities already present on the cascade branch, and merging would
+pull broad unrelated audit-review changes into the science branch.
+
 ## Loop 2 Checkpoint 2026-04-29T04:08Z
 
 Supervisor loop 2 continued Lane 5 `(C1)` after the A1 obstruction from loop

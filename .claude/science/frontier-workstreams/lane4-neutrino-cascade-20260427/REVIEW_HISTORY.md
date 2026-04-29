@@ -1,5 +1,55 @@
 # Review History
 
+## 2026-04-29 Cycle 9 Review Results
+
+Artifact under review:
+
+- `docs/HUBBLE_LANE5_C1_A4_PARITY_GATE_CAR_BOUNDARY_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_a4_parity_gate_car_boundary.py`
+
+### Code / Runner: PASS
+
+- New A4 boundary runner passes: `PASS=13 FAIL=0`.
+- New runner compiles with `py_compile`.
+- Nearby authority runners still pass:
+  - `frontier_area_law_primitive_parity_gate_carrier.py`: `PASS=40 FAIL=0`
+  - `frontier_area_law_primitive_car_edge_identification.py`: `PASS=36 FAIL=0`
+  - `frontier_area_law_native_car_semantics_tightening.py`: `PASS=23 FAIL=0`
+  - `frontier_planck_target3_clifford_phase_bridge.py`: `PASS=34 FAIL=0`
+  - `frontier_planck_target3_phase_unit_edge_statistics.py`: `27/27 checks passed`
+
+### Physics Claim Boundary: EXACT SUPPORT/BOUNDARY
+
+- The note preserves the conditional positive parity-gate chain: with the
+  primitive Clifford/CAR coframe response supplied, the parity gate fixes the
+  half-zone selector and gives `c_Widom = c_cell = 1/4`.
+- It blocks the direct A4 shortcut: the even `Z_2` parity-gate algebra is too
+  small to force odd Clifford/CAR coframe generators on `P_A H_cell`.
+- No `(C1)` closure, `H_0` closure, or `hbar`/absolute action-unit derivation
+  is claimed.
+
+### Imports / Support: DISCLOSED
+
+- No measured Planck, Hubble, cosmological, or SI action value is used.
+- Newly exposed import: an orientation/statistics lift from the primitive
+  parity gate to metric-compatible Clifford/CAR edge generators.
+
+### Nature Retention: NO-GO FOR A4 DIRECT SHORTCUT, NOT FOR LANE 5
+
+- A4 is closed negatively as a direct route.
+- The broader `(C1)` gate remains open through a direct `P_A`
+  module-morphism/coframe theorem, an orientation/statistics lift theorem, a
+  metrology theorem, or an explicitly conditional carrier/metrology axiom.
+
+### Audit Compatibility: PASS
+
+- `bash docs/audit/scripts/run_pipeline.sh`: complete.
+- `python3 docs/audit/scripts/audit_lint.py --strict`: OK, with known
+  graph-cycle warning only.
+- `git diff --check`: OK.
+- Audit row seeded as `proposed_retained` / `unaudited`:
+  `hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29`.
+
 ## 2026-04-29 Cycle 8 Review Results
 
 Artifact under review:

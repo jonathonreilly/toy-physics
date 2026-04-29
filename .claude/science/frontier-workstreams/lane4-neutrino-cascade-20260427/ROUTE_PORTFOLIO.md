@@ -19,7 +19,9 @@ Scores use the frontier-workstream dramatic-step scale: `0` low value,
 | Lane 2 fresh-premise scan after current-main merge | route assessment | 0 | 0 | 1 | -0 | 1 | Completed; no fresh premise found |
 | Lane 5 C1 A1 Grassmann-to-boundary CAR descent | stretch attempt / no-go | 2 | 2 | 3 | -0 | 7 | Executed cycle 7; direct A1 shortcut blocked |
 | Lane 5 C1 A2 action-unit metrology from g_bare=1 | stretch attempt / no-go | 3 | 3 | 3 | -0 | 9 | Executed cycle 8; direct A2 shortcut blocked |
-| Lane 5 C1 A4 parity-gate-to-CAR route | theorem/audit | 2 | 2 | 2 | -1 | 5 | Next route |
+| Lane 5 C1 A4 parity-gate-to-CAR route | support/boundary theorem | 2 | 2 | 3 | -0 | 7 | Executed cycle 9; direct gate-to-CAR lift blocked |
+| Lane 5 C1 direct module-morphism/coframe theorem | stretch attempt | 3 | 3 | 1 | -2 | 5 | Candidate next route; high risk |
+| Lane 5 C1 minimal carrier/metrology axiom audit | conditional closeout / human-judgment boundary | 1 | 1 | 2 | -0 | 4 | Use only if theorem routes fail |
 
 ## Selected Cycle 1 Route
 
@@ -124,3 +126,20 @@ Dimensionless lattice normalizations do not choose the dimensional action
 quantum. The next live `(C1)` route is A4 parity-gate-to-CAR, or a direct
 metrology theorem that couples the lattice action to the primitive
 boundary/action carrier.
+
+## Cycle 9 Route
+
+Execute the Lane 5 `(C1)` A4 parity-gate-to-CAR route because A1 left the
+native CAR/coframe response open and A2 left action-unit metrology open:
+
+- test whether the primitive residual `Z_2` half-zone gate can do more than
+  select the tangent channel inside an already-CAR carrier;
+- preserve the conditional positive area-law chain if the CAR/coframe premise
+  is supplied;
+- produce a finite-algebra witness that the same gate data remain compatible
+  with non-CAR rank-four semantics.
+
+Outcome: A4 is now an exact support/boundary result. The parity gate supplies
+the exact half-zone selector and gives `c_Widom = c_cell = 1/4` inside the
+primitive-CAR carrier class, but it does not force the metric-compatible
+Clifford/CAR coframe response on `P_A H_cell`.
