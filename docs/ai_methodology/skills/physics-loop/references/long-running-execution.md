@@ -92,8 +92,8 @@ Avoid mid-run questions. When a decision is needed:
   3-5 orthogonal premises and synthesize the result;
 - skip ambiguous fixes that need human physics judgment for the current lane,
   then checkpoint and pivot;
-- treat review `demote`/`block`, failed retained certification, and optional
-  route tooling failure as block-level outcomes, not campaign stops;
+- treat review `demote`/`block`, failed retained-proposal certification, and
+  optional route tooling failure as block-level outcomes, not campaign stops;
 - leave clear handoff notes for decisions that require the user.
 
 ## Campaign Continuation
@@ -103,7 +103,9 @@ finished or blocked.
 
 When a block reaches a local stop:
 
-1. update `CLAIM_STATUS_CERTIFICATE.md` and demote any unsafe wording;
+1. update `CLAIM_STATUS_CERTIFICATE.md` and demote any unsafe wording, using
+   `proposed_retained` / `proposed_promoted` only for audit-ready author
+   proposals and never as audit-ratified status;
 2. run the smallest relevant checks;
 3. commit, push, and open a PR, or write a complete `PR_BACKLOG.md`;
 4. refresh `OPPORTUNITY_QUEUE.md`;

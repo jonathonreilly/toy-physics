@@ -45,10 +45,12 @@ execution requests even when the user says only `run`.
    `OPPORTUNITY_QUEUE.md` and keep selecting the next ranked retained-positive
    opportunity until runtime/max cycles expires or the refreshed queue is
    globally exhausted.
-9. Write `CLAIM_STATUS_CERTIFICATE.md` for each science block. Do not use
-   retained language unless the certificate explicitly allows it; demote
-   branch-local, conditional, same-surface, admitted-observation, or Axiom*
-   consequences to the narrowest honest status.
+9. Write `CLAIM_STATUS_CERTIFICATE.md` for each science block. Do not use bare
+   `retained` / `promoted` status language in branch-local source notes. Use
+   `proposed_retained` / `proposed_promoted` only when the certificate supports
+   a theorem-grade proposal and marks the later independent audit requirement;
+   otherwise demote branch-local, conditional, same-surface,
+   admitted-observation, or Axiom* consequences to the narrowest honest status.
 10. Checkpoint `STATE.yaml` and `HANDOFF.md` throughout unattended work.
 11. After two audit/no-go/blocker cycles in a row, run a stretch attempt before
    declaring a route blocked. If stuck, fan out 3-5 orthogonal premises before
@@ -67,7 +69,7 @@ execution requests even when the user says only `run`.
 
 If the user asks for a 12-hour unattended run, do not exit early just because a
 lane hits a no-go, support-only boundary, human-judgment blocker, failed
-retained certificate, dirty PR, or missing GitHub auth. Checkpoint/demote or
+retained-proposal certificate, dirty PR, or missing GitHub auth. Checkpoint/demote or
 backlog the current block, refresh the opportunity queue, and continue on the
 next science target. Stop early only for runtime/max-cycle exhaustion, unsafe
 worktree/lock conflict, or documented global queue exhaustion.
@@ -76,13 +78,16 @@ worktree/lock conflict, or documented global queue exhaustion.
 
 - No hidden fitted values, selectors, observations, normalizations, or
   literature imports.
-- No Nature-grade or retained closure language without decisive artifact
-  support, a passing retained certificate, and review-loop backpressure.
+- No Nature-grade or retained-grade proposal language without decisive artifact
+  support, a passing retained-proposal certificate, review-loop backpressure,
+  and explicit independent-audit handoff.
 - Do not re-open prior no-go routes unless a new premise is named.
 - Do not run low-value churn: more prose, nearby scripts, or repeated wording
   passes are not major loop progress.
-- Do not write `retained branch-local`, `proposed_retained`, or
+- Do not write bare `retained` / `promoted`, `retained branch-local`, or
   hypothetical/Axiom* consequences as retained on the actual current surface.
+  `proposed_retained` / `proposed_promoted` are allowed only as audit-ready
+  author proposals, never as audit-ratified retained status.
 - Push only dedicated science block branches. Do not push science work to
   `main`, merge PRs, or open PRs without enough review surface for
   `review-loop`.
