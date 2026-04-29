@@ -1,7 +1,7 @@
 # Connectivity Family V2 Elliptical Duplicate Note
 
-**Date:** 2026-04-06  
-**Status:** diagnostic duplicate of the portable sign-law fixed point; not a new proposed_retained family
+**Date:** 2026-04-06 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** support / diagnostic duplicate of the portable sign-law fixed point; the elliptical-shell slice sits inside the existing sign-portability invariant and is not a new tier-ratifiable family.
 
 ## Artifact Chain
 
@@ -78,3 +78,32 @@ selectivity. It does not add a new order parameter.
 **diagnosed duplicate boundary: the parity-tapered elliptical-shell family
 reproduces the portable sign-law fixed point on a narrow slice, but it does not
 produce a new independent retained family**
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: the queued `proposed_retained` status contradicts the source
+> note, which states this is a diagnostic duplicate and not a new
+> retained family; the live runner likewise says the elliptical-shell
+> slice sits inside the portable sign-law invariant and is not counted
+> as a new retained family. Why this blocks: a hostile physicist can
+> accept the finite controls and 12/18 passing rows without accepting
+> independent retained-family status, because the result is explicitly
+> downstream of the already retained/conditional sign-portability
+> invariant and adds no new order parameter.
+
+The note has been re-tiered to `support` (diagnostic duplicate).
+
+## What this note does NOT claim
+
+- A new tier-ratifiable connectivity family.
+- A new order parameter independent of the sign-portability invariant.
+- That the 12/18 passing rows constitute an independent retained
+  family; they sit inside the existing sign-portability invariant.
+
+## What would close this lane (Path A future work)
+
+If a separate connectivity family is desired, it would require a runner
+or theorem that exposes a new order parameter not already covered by
+the sign-portability invariant.
