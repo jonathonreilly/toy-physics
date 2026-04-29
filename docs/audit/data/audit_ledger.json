@@ -1,5 +1,5 @@
 {
-  "effective_status_computed_at": "2026-04-29T12:03:07.492382+00:00",
+  "effective_status_computed_at": "2026-04-29T12:04:51.635537+00:00",
   "generated_at": "2026-04-29T11:35:42.558285+00:00",
   "rows": {
     "3d_correction_master_note": {
@@ -38089,14 +38089,21 @@
       "verdict_rationale": null
     },
     "higgs_mass_from_axiom_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-29T12:04:45.066641+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 13.129,
+        "transitive_descendants": 279
+      },
+      "audit_status": "audited_renaming",
+      "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+      "auditor_confidence": 0.91,
+      "auditor_family": "codex-gpt-5.5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note identifies a taste-channel curvature with the physical Higgs mass-to-VEV ratio, but the required curvature-to-pole-mass/VEV bridge and the listed upstream dependencies are not available as ledger one-hop deps.",
       "claim_id": "higgs_mass_from_axiom_note",
       "criticality": "critical",
       "current_status": "support",
@@ -38104,30 +38111,38 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 2,
-      "effective_status": "support",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_renaming",
       "load_bearing_score": 13.129,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "This curvature is the dimensionless ratio (m_H / v)^2 in lattice units, so m_H / v = 1 / (2 u_0).",
+      "load_bearing_step_class": "F",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "6be076d91a8f79af6895637075b4249a1bb6b1d840fcca4b0679bcdef176e6ed",
       "note_path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/TASTE_POLYNOMIAL_NOTE.md: listed dependency missing from ledger deps",
+        "docs/DM_AMGM_SATURATION_NOTE.md: listed dependency missing from ledger deps",
+        "docs/HIERARCHY_THEOREM.md: listed dependency missing from ledger deps",
+        "docs/YT_EW_COLOR_PROJECTION_THEOREM.md: listed dependency missing from ledger deps",
+        "docs/HIGGS_MASS_DERIVED_NOTE.md: listed dependency missing from ledger deps",
+        "missing theorem: scalar curvature-to-physical Higgs mass/VEV normalization"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
         "C": 0,
         "D": 0,
+        "runner_status": "no runner_path recorded in ledger",
         "total_pass": 0
       },
       "runner_path": null,
       "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking",
       "transitive_descendants": 279,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the decisive step equates a dimensionless per-taste curvature from the mean-field determinant with the physical ratio (m_H/v)^2, then reads off m_H = v/(2 u_0). Why this blocks: that is a physical observable identification, not an algebraic consequence of the restricted inputs; the note's own susceptibility discussion shows an alternate mapping gives a different scale unless an additional hierarchy/normalization bridge is assumed. Repair target: add audited one-hop dependencies for the determinant, degeneracy, hierarchy, color-projection, and CW mass-readout authorities, plus a theorem deriving the scalar curvature-to-Higgs-mass normalization. Claim boundary until fixed: the note remains a support-route accounting argument for N_c cancellation and a 140.3 GeV auxiliary estimate, not a closed derivation of the Higgs mass from the axiom."
     },
     "higgs_mass_hierarchy_correction_note": {
       "audit_date": null,
@@ -38318,8 +38333,8 @@
         "yt_flagship_boundary_note"
       ],
       "direct_in_degree": 14,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:taste_scalar_isotropy_theorem_note",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "inherited_from:higgs_mass_from_axiom_note",
       "independence": null,
       "intrinsic_status": "support",
       "load_bearing_score": 19.124,
@@ -82289,7 +82304,7 @@
         "yt_color_projection_correction_note"
       ],
       "direct_in_degree": 5,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "inherited_from:higgs_vacuum_explicit_systematic_note",
       "independence": null,
       "intrinsic_status": "bounded",
@@ -89329,14 +89344,21 @@
       "verdict_rationale": null
     },
     "yt_explicit_systematic_budget_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-29T12:04:09.408814+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.129,
+        "transitive_descendants": 279
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+      "auditor_confidence": 0.9,
+      "auditor_family": "codex-gpt-5.5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The arithmetic budget closes for the hard-coded bridge-tail inputs, but the note supplies no one-hop authority deriving those residual-tail numbers or the closed structural-class residual.",
       "claim_id": "yt_explicit_systematic_budget_note",
       "criticality": "critical",
       "current_status": "support",
@@ -89344,30 +89366,34 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 4,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.129,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The exact-bridge tail accounting remains valid and should now be read as the residual budget of the independent Schur-bridge cross-check path.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "efbed8a9f082b1578f64ea94e027e107016869f4f932a991b85be6fd28b9f92d",
       "note_path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "missing authority: derivation of higher-order local exact-bridge tail",
+        "missing authority: derivation of nonlocal exact-bridge tail",
+        "missing authority: structural bridge ambiguity closed on tested Schur-bridge scale"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 5,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 5
       },
       "runner_path": "scripts/frontier_yt_explicit_systematic_budget.py",
       "title": "`y_t` Residual-Budget and Bridge Cross-Check Note",
       "transitive_descendants": 279,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the runner verifies budget arithmetic and nonnegativity for named bridge-path residual inputs, but those inputs are taken as hard-coded route quantities rather than derived from listed one-hop dependencies. Why this blocks: the audit can confirm internal residual-budget accounting, not the validity of the exact-bridge tails or the claim that structural bridge ambiguity is closed. Repair target: add audited dependencies or a runner section deriving the higher-order local tail, nonlocal tail, and structural-class residual from the bridge theorem inputs. Claim boundary until fixed: this is a controlled support-note budget ledger for the Schur-bridge cross-check path, not an independently closed YT authority claim."
     },
     "yt_flagship_boundary_note": {
       "audit_date": null,
