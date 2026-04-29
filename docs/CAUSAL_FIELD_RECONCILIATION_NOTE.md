@@ -1,7 +1,7 @@
 # Causal Field Reconciliation Note
 
-**Date:** 2026-04-06  
-**Status:** diagnosed harness boundary for the fixed-anchor cross-family replay; proposed_retained center-family causal-field result remains valid
+**Date:** 2026-04-06 (status line rephrased + claim narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded harness-boundary diagnostic for the fixed-anchor cross-family replay; the upstream center-family causal-field result is **not** asserted as valid by this note (the cited runner emits no executable verification and the cited diagnostic logs are missing).
 
 ## Artifact Chain
 
@@ -85,3 +85,43 @@ either:
 
 That would tell us whether the family boundary is fundamental or just an
 artifact of the fixed-anchor replay geometry.
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: the reconciliation note preserves a proposed-retained
+> center-family causal-field result while the cited causal-field
+> runner emits no executable verification, and the cited
+> reconciliation diagnostic logs for source-node shifts and
+> field-strength scans are missing from the audit packet. Why this
+> blocks: a hostile physicist can replay the portability runner and
+> accept the exact-null control plus fixed-anchor family-boundary
+> table, but cannot verify the original 0.45 center-family
+> dynamic-cone observable, its claimed seed/strength stability, or
+> the diagnosis that source placement rather than family choice is
+> the load-bearing variable.
+
+The Status line has been narrowed: the upstream center-family
+causal-field result is no longer asserted as valid by this note. The
+note retains the bounded harness-boundary diagnostic only.
+
+## What this note does NOT claim
+
+- The 0.45 center-family dynamic-cone observable (the cited runner
+  emits no executable verification).
+- Seed or field-strength stability for that observable (the cited
+  diagnostic logs are missing).
+- That source placement rather than family choice is load-bearing
+  (this diagnosis depends on the missing diagnostic logs).
+
+## What would close this lane (Path A future work)
+
+A reinstated center-family causal-field result would require:
+
+1. A registered causal-field runner that emits executable
+   verification of the 0.45 dynamic-cone observable.
+2. Archived diagnostic logs for the source-node-shift and
+   field-strength scans cited by this note.
+3. A reconciliation theorem that derives the source-placement
+   diagnosis from the registered runners.
