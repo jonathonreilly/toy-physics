@@ -1,7 +1,7 @@
 # Gate B Complex-Action Falsifier Note
 
-**Date:** 2026-04-05  
-**Status:** tiny falsification-first complex-action probe on the proposed_retained Gate B grown row
+**Date:** 2026-04-05 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** bounded tiny falsification-first complex-action probe — local detector-attenuation effect is verified on the named row, but the inherited Gate B / Born guardrail comes from an upstream bounded / unaudited note; not a tier-ratifiable complex-action branch claim.
 
 ## Artifact chain
 
@@ -73,3 +73,30 @@ It can.
 
 The next question is whether any geometry-aware version of the same idea can
 survive the generated-family bridge without becoming a pure support artifact.
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, leaf criticality):
+
+> Issue: the runner verifies a finite detector-effect sweep, but the
+> proposed_retained queue status is stronger than the source note's
+> own bounded-falsifier scope, and the retained Gate B/Born
+> guardrail is imported from `docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md`,
+> which is bounded and unaudited. Why this blocks: the audit can
+> retain the local fact that gamma attenuates detector escape on
+> this row, but it cannot ratify a retained complex-action branch
+> or inherited retained-row guardrail through a bounded upstream.
+
+## What this note does NOT claim
+
+- A tier-ratifiable complex-action branch.
+- An audit-clean upstream Gate B / Born guardrail.
+- A theorem beyond the local detector-attenuation effect on the
+  named row.
+
+## What would close this lane (Path A future work)
+
+A retained complex-action branch would require auditing the upstream
+`GATE_B_GROWN_JOINT_PACKAGE_NOTE.md` and registering its retained
+guardrails as audit-clean dependencies, plus extending the runner
+beyond the single detector-attenuation row.
