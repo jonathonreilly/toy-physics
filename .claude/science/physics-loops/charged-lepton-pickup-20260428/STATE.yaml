@@ -1,0 +1,65 @@
+slug: charged-lepton-pickup-20260428
+goal: "retire 3-real PDG charged-lepton mass observational pin via y_tau Ward identity (analog of retained y_t(M_Pl)/g_s(M_Pl) = 1/sqrt(6)) + Koide ratios closure (Q=2/3, delta=2/9 in flight). Phase-1 priority: y_tau Ward identity construction → absolute lepton scale V_0 retention."
+target_status: best-honest-status
+mode: run
+runtime: 6h
+deep_block: 90m
+start_time_utc: "2026-04-28T11:30:00Z"
+checkpoint_interval: 30m
+branch: frontier/charged-lepton-pickup-20260428
+base: origin/main
+base_commit_at_start: "394bf242 (current origin/main)"
+lock_status: unavailable
+lock_note: "scripts/automation_lock.py hardcodes /Users/jonreilly paths; this worktree is on /Users/jonBridger. Skipping per skill optionality."
+current_phase: cycle-5-complete
+cycles_completed: 5
+audit_grade_cycles_in_a_row: 2
+last_stretch_attempt_cycle: 3
+last_stuck_fanout_cycle: 4
+active_route: null
+active_hard_residual: "y_tau Ward identity research-level distant on current retained surface (Cycles 2-5 combined no-go through gauge-anchor + Cycle-4 fan-out + M3 false-premise + M5 closed); requires parallel-lane progress (Koide flagship Q+delta closure unlocks M1/M5-c) or new structural content (D17-prime on (2,1) block)"
+files_touched:
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/STATE.yaml
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/GOAL.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/ASSUMPTIONS_AND_IMPORTS.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/NO_GO_LEDGER.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/ROUTE_PORTFOLIO.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/ARTIFACT_PLAN.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/LITERATURE_BRIDGES.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/REVIEW_HISTORY.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/HANDOFF.md
+  - .claude/science/physics-loops/charged-lepton-pickup-20260428/PR_BACKLOG.md
+  - docs/CHARGED_LEPTON_LANE6_THEOREM_PLAN_NOTE_2026-04-28.md
+  - docs/CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_SU2_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md
+  - docs/CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_U1_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md
+  - docs/CHARGED_LEPTON_Y_TAU_MECHANISM_STUCK_FANOUT_NOTE_2026-04-28.md
+  - docs/CHARGED_LEPTON_Y_TAU_M3_PREMISE_SELF_CORRECTION_NOTE_2026-04-28.md
+open_imports:
+  - "PDG charged-lepton masses (m_e, m_mu, m_tau) — 3-real observational pin, primary retirement target"
+  - "Y_e Yukawa structure — currently open; needs structural derivation analogous to retained y_t Ward identity"
+  - "Koide ratio structure — Q=2/3, delta=2/9 in flight; addresses ratios but not absolute scale"
+no_go_routes_inherited:
+  - "Multiple recent charged-lepton no-go notes (2026-04-26/27): typeb_radian_readout_generation_selector_no_go, op_local_source_selected_line_selector_no_go, selected_line_generation_selector_no_go, koide_ratio_source_selector_firewall, radiative_tau_selector_firewall, direct_ward_free_yukawa_no_go (2026-04-26 audited_clean)"
+  - "Older Koide cluster no-gos: A1_FRACTIONAL_TOPOLOGY_NO_GO, A1_O13_CHEEGER_SIMONS_RZ_NO_GO, DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO, DELTA_MARKED_RELATIVE_COBORDISM_NO_GO, Q_DELTA_READOUT_RETENTION_SPLIT_NO_GO, Q_DELTA_RESIDUAL_COHOMOLOGY_OBSTRUCTION_NO_GO, Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS, Q23_OH_COVARIANCE_NOGO, SELECTED_LINE_LOCAL_RADIAN_BRIDGE_NO_GO, etc."
+no_go_routes_proven_in_workstream: []
+review_findings:
+  - "Cycle 1 review (branch-local 6-criterion self-review): all PASS. Theorem-plan accurately maps Lane 6 closure: 6A Koide ratios (in flight on flagship), 6B y_τ Ward identity (Phase-1 priority of this loop), 6C V_0 = automatic chain once 6A+6B land, 6D cross-lane impact. Closed-route inventory cross-referenced (~15+ closed routes from 2026-04-15 through 2026-04-27 cluster). Stretch-attempt candidates (SA-A through SA-D) inventoried. Audit-grade; counts 1 of 2 max consecutive."
+  - "Cycle 2 review (branch-local 6-criterion self-review): all PASS. STRETCH ATTEMPT on SA-A y_tau Ward identity from SU(2) g_2 anchor. EXCLUDED: YT-lane derivation rests on color Fierz factor sqrt(2 N_c) = sqrt(6) (D12 SU(N_c) Fierz on Q_L=(2,3) block, D17 composite-Higgs scalar uniqueness verified for that specific block). The (2,1) lepton-doublet block lacks the color-trace structure; D17 not verified there. Naive SU(2)-Fierz substitution to give y_tau / g_2 = 1/2 fails because the YT factor is color (SU(3)), not weak (SU(2)). Recommendation: Cycle 3 SA-B hypercharge g_1 anchor. STRETCH-grade; audit_grade_cycles_in_a_row resets to 0; last_stretch_attempt_cycle = 2."
+  - "Cycle 3 review (branch-local 6-criterion self-review): all PASS. STRETCH ATTEMPT on SA-B y_tau Ward identity from U(1)_Y hypercharge g_1 anchor. EXCLUDED for a stronger reason: U(1) is abelian; Fierz reorganization does not yield a sqrt(N) factor; YT-lane load-bearing primitive (SU(N_c) Fierz factor sqrt(2 N_c)) has no abelian analog. Combined with Cycle 2 SA-A exclusion, proves stronger combined no-go: no direct gauge-anchor YT-analog works for the colorless charged-lepton sector. Surviving routes (SA-C Koide-structural, SA-D combined doublet, fundamentally-different-mechanism) all need either Koide flagship closure or new structural content. STRETCH-grade; last_stretch_attempt_cycle = 3. Recommend Cycle 4 = stuck fan-out per Deep Work Rules."
+  - "Cycle 4 stuck fan-out: identified M3 EW A4 flavor-symmetry anchor as cleanest single-cycle continuation for y_tau Ward identity, using recent 2026-04-25 EW A4 bridge retentions. Different anchor mechanism than the closed gauge anchors (M3 is flavor symmetry, not gauge). Six candidate mechanisms surveyed; M5 cross-sector y_tau/y_t ratio identified as strong backup using retained y_t. SUPERSEDED by Cycle 5 self-correction."
+  - "Cycle 5 self-correction: caught Cycle 4 stuck fan-out misreading. EW A4 bridge content audit confirmed sin^2(theta_W)|_lattice = A^4 = 4/9 (Wolfenstein, gauge-coupling normalization), NOT alternating group A_4 flavor symmetry. M3 closed on false premise. M5 audit: cross-sector y_tau/y_t ratio reduces to same closed gauge-anchor obstruction. Combined no-go now extends to all six Cycle 4 candidates: no single-cycle attemptable y_tau Ward identity route remains on current retained surface. Lane 6 6B y_tau Ward identity is research-level distant; surviving conditional routes (M1 Koide-structural, M5-c Koide-anchored cross-sector, M5-a D17-prime) all require parallel-lane progress. Honest stop on charged-lepton block warranted; Deep Work Rules satisfied (Cycles 2,3 stretch + Cycle 4 fan-out + Cycle 5 self-correction)."
+  - "Cycle 4 review (branch-local 6-criterion self-review): all PASS. STUCK FAN-OUT executed per Deep Work Rules requirement. Six orthogonal candidate non-gauge-anchor mechanisms generated (M1 Koide-structural, M2 combined SU(2)xU(1), M3 EW A4 flavor-symmetry, M4 anomaly-cancellation, M5 cross-sector y_tau/y_t, M6 direct Cl(3) three-gen rep-theoretic). Synthesis: M3 strongest (uses retained 2026-04-25 EW A4 bridge content; single-cycle attemptable; flavor-symmetry mechanism distinct from closed gauge anchors). M5 strong backup (uses retained y_t). M4, M6 too speculative; M1, M2 depend on unestablished primitives. Both Deep Work Rules requirements (stretch + fan-out) now satisfied. Audit-grade; counts 1 of 2 max consecutive. SUPERSEDED by Cycle 5 self-correction: M3 premise was a misreading of EW A4 bridge content."
+  - "Cycle 5 review (branch-local 6-criterion self-review): all PASS. SELF-CORRECTION executed catching Cycle 4 fan-out misreading. Read CKM_EW_LATTICE_A4_BRIDGE_RETAINED_IDENTITY_NOTE_2026-04-25.md and confirmed EW A4 bridge content is sin^2(theta_W)|_lattice = A^4 = 4/9 (Wolfenstein A^4), NOT alternating group A_4 flavor symmetry. Read CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md and confirmed Generation-color bridge is N_gen=N_color=3 integer counting equality, NOT charged-lepton Koide theorem (note explicitly disclaims). M3 closed on false premise. M5 backup audited: cross-sector y_tau/y_t ratio reduces to same closed gauge-anchor obstruction (no Fierz-analog on (2,1) block from Cycle 2; no abelian Fierz from Cycle 3; no D17-prime). Combined no-go now extends through M3 + M5: no single-cycle attemptable y_tau Ward identity route remains on current retained surface. Lane 6 6B research-level distant. Surviving routes (M1, M5-c, M5-a) all require parallel-lane progress. Honest stop justified. AUDIT-grade self-correction; counts 2 of 2 max consecutive."
+artifacts_landed:
+  - "docs/CHARGED_LEPTON_LANE6_THEOREM_PLAN_NOTE_2026-04-28.md (Lane 6 closure roadmap with phase ordering and dependency map; no runner — structural plan; audit-grade)"
+  - "docs/CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_SU2_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md (Cycle 2 SA-A stretch; YT-analog g_2 anchor EXCLUDED by color-Fierz mismatch on colorless lepton sector; SA-B/SA-C/SA-D alternatives named; STRETCH-grade)"
+  - "docs/CHARGED_LEPTON_Y_TAU_MECHANISM_STUCK_FANOUT_NOTE_2026-04-28.md (Cycle 4 stuck fan-out; 6 candidate mechanisms generated, M3 EW A4 flavor-symmetry identified as strongest single-cycle continuation; M5 cross-sector y_tau/y_t backup; FAN-OUT-grade)"
+  - "docs/CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_U1_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md (Cycle 3 SA-B stretch; U(1) hypercharge anchor EXCLUDED via abelian Fierz absence; combined with Cycle 2 proves stronger no-go: no direct gauge-anchor YT-analog works for colorless lepton sector; STRETCH-grade)"
+  - "docs/CHARGED_LEPTON_Y_TAU_M3_PREMISE_SELF_CORRECTION_NOTE_2026-04-28.md (Cycle 5 self-correction; M3 false-premise caught — EW A4 = A^4 = 4/9 Wolfenstein/EW gauge identity, not alternating group A_4 flavor symmetry; M5 audited and reduces to closed gauge-anchor obstruction; combined no-go extends to all single-cycle attemptable y_tau routes; honest stop justified; AUDIT-grade)"
+claim_state_movement:
+  - "Lane 6 closure roadmap landed: Phase 1 (6A Koide flagship in flight + 6B y_τ Ward identity); Phase 2 (6C V_0 chain once 6A+6B land); Phase 3 (manuscript consolidation + atlas integration). Single load-bearing open number identified: V_0 (equivalent to retained y_τ or m_τ). Cycle 2 candidate: SA-A y_τ Ward identity from g_2 anchor (R6)."
+  - "Cycle 2 SA-A excluded: direct SU(2)-anchor y_tau Ward identity FAILS. The YT-lane chain rests on color Fierz D12 (sqrt(2 N_c) factor) on the (2,3) block; the (2,1) lepton-doublet block lacks the color structure and D17 composite-Higgs scalar uniqueness is not verified there. SA-A is a closed route. Remaining candidates: SA-B hypercharge g_1 anchor (U(1) structure, no Fierz; recommended Cycle 3); SA-C Koide-structural anchor (depends on flagship Q closure); SA-D combined SU(2) x U(1)."
+  - "Cycle 3 SA-B excluded; combined no-go proven: no direct gauge-anchor YT-analog works for charged-lepton sector. Both SU(2) (Cycle 2) and U(1)_Y (Cycle 3) anchor candidates fail because YT-lane load-bearing primitive is SU(N_c) Fierz factor sqrt(2 N_c) which has no analog on the colorless (2,1) block (Cycle 2 finding) and no abelian analog (Cycle 3 finding). Surviving y_tau routes must use non-gauge-anchor mechanism: SA-C Koide-structural (depends on flagship Q closure), SA-D combined doublet, or fundamentally-different. Cycle 4 = stuck fan-out per Deep Work Rules."
+  - "Cycle 4 stuck fan-out: identified M3 EW A4 flavor-symmetry anchor as cleanest single-cycle continuation for y_tau Ward identity, using recent 2026-04-25 EW A4 bridge retentions. Different anchor mechanism than the closed gauge anchors (M3 is flavor symmetry, not gauge). Six candidate mechanisms surveyed; M5 cross-sector y_tau/y_t ratio identified as strong backup using retained y_t."
+next_exact_action: "Cycle 6 = honest stop assessment. Cycle 5 caught Cycle 4 fan-out misreading: EW A4 bridge is A^4=4/9 Wolfenstein/sin^2(theta_W) gauge identity (NOT alternating group A_4 flavor symmetry); Z_3 closure is N_gen=N_color=3 integer counting (NOT charged-lepton Koide theorem). M3 closed on false premise. M5 audit: reduces to same closed gauge-anchor obstruction (no Fierz-analog on (2,1) block, no D17-prime). All single-cycle attemptable y_tau Ward identity routes CLOSED on current retained surface. Lane 6 6B research-level distant; surviving routes (M1 Koide-structural, M5-c Koide-anchored cross-sector, M5-a D17-prime) all require parallel-lane progress (Koide flagship). Both Deep Work Rules requirements satisfied (stretch + fan-out). Honest stop charged-lepton block. Cycle 6 = open PR for charged-lepton work, then pivot to next productive lane (4F Sigma m_nu cosmology bridge or fresh lane)."
+stop_condition: "runtime budget reached, max cycles, blocker requiring human science judgment, honest claim-state closure achieved, OR no route passes dramatic-step gate after Deep Work Rules satisfied"
