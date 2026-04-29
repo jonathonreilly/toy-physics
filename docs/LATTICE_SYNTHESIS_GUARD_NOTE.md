@@ -1,7 +1,7 @@
 # Lattice Synthesis Guard Note
 
-**Date:** 2026-04-03  
-**Status:** synthesis narrow; NN refinement is a bounded bridge, not a proposed_promoted continuum theorem
+**Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** support / narrow synthesis guard note; NN refinement is a bounded bridge, not a continuum theorem and not a tier-ratifiable continuum claim.
 
 This note records the integration guard for the ordered-lattice branch after the
 weak-field reopening.
@@ -68,3 +68,34 @@ Further promotion beyond that bounded bridge now requires all of the following:
 
 Until then, keep the synthesis conservative: the NN branch is a retained
 refinement bridge, not a finished continuum theorem.
+
+## Audit boundary (2026-04-28)
+
+The earlier Status line read "NN refinement is a bounded bridge, not a
+`proposed_promoted` continuum theorem". The audit-lane parser caught
+the literal token even though the sentence asserts the opposite.
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: the source explicitly disclaims the promoted-continuum claim
+> that caused it to enter the `proposed_promoted` queue, and it
+> provides no independent runner or artifact chain for a project-level
+> promotion. Why this blocks: an audit cannot ratify a promoted claim
+> that the source itself says is not being made, especially when the
+> cited synthesis note is effective `audited_failed` and the
+> underlying lattice/NN branches remain bounded or conditional.
+
+The note has been re-tiered to `support`.
+
+## What this note does NOT claim
+
+- A continuum theorem on the NN refinement branch.
+- A project-level promotion of any lattice / NN claim.
+- That the cited synthesis note is audit-clean (it is currently
+  effective `audited_failed`).
+
+## What would close this lane (Path A future work)
+
+A continuum theorem would require auditing the cited synthesis note,
+auditing the underlying lattice/NN branches, and registering an
+independent runner / artifact chain for a project-level promotion.
