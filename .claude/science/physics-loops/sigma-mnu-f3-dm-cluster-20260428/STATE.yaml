@@ -1,0 +1,58 @@
+slug: sigma-mnu-f3-dm-cluster-20260428
+goal: "Lane 4F (Σm_ν) F3 DM-cluster cross-bound audit: identify the strength of the retained Ω_DM bound (from DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md, conditional on same-surface admitted family) when combined with the retained (T-4F-α-2) identity Σm_ν = (1 - L - R - Ω_b - Ω_DM) × C_ν × h². Identify resulting Σm_ν bound interval and structural gap before numerical retention."
+target_status: best-honest-status
+mode: run
+runtime: 12h
+deep_block: 90m
+start_time_utc: "2026-04-29T04:25:00Z"
+hard_deadline_utc: "2026-04-29T16:25:00Z"
+checkpoint_interval: 30m
+branch: physics-loop/sigma-mnu-f3-dm-cluster-20260428
+base: origin/main
+base_commit_at_start: "207760ce (origin/main)"
+lock_status: unavailable
+lock_note: "automation_lock.py hardcodes /Users/jonreilly paths; this worktree is on /Users/jonBridger. Skipping per skill optionality."
+current_phase: cycle-2-complete-stuck-fanout
+cycles_completed: 2
+audit_grade_cycles_in_a_row: 2
+last_stretch_attempt_cycle: null
+last_stuck_fanout_cycle: 2
+active_route: null
+active_hard_residual: "numerical Σm_ν retention. Structural tension residue centered on framework Ω_DM bound vs. observation; ~0.003 eV consistent admission window. Loop ready for honest stop."
+files_touched:
+  - .claude/science/physics-loops/sigma-mnu-f3-dm-cluster-20260428/STATE.yaml
+  - .claude/science/physics-loops/sigma-mnu-f3-dm-cluster-20260428/GOAL.md
+  - .claude/science/physics-loops/sigma-mnu-f3-dm-cluster-20260428/HANDOFF.md
+  - docs/SIGMA_MNU_F3_DM_CROSS_BOUND_AUDIT_NOTE_2026-04-28.md
+  - scripts/frontier_sigma_mnu_f3_dm_cross_bound_audit.py
+  - outputs/frontier_sigma_mnu_f3_dm_cross_bound_audit_2026-04-28.txt
+  - docs/SIGMA_MNU_F3_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md
+  - scripts/frontier_sigma_mnu_f3_stuck_fanout_synthesis.py
+  - outputs/frontier_sigma_mnu_f3_stuck_fanout_synthesis_2026-04-28.txt
+open_imports:
+  - "Ω_DM bound conditional on same-surface admitted family α(σ) (one-scalar DM-family root)"
+  - "h = H_0/100 (open per Lane 5 two-gate dep)"
+  - "Ω_b admitted observational layer (eta_obs cross-bound via DM thermal theorem)"
+  - "C_ν = 93.14 eV admitted convention (T_CMB + N_eff)"
+  - "L = Ω_Λ,0 retained (open-number reduction theorem)"
+  - "R = Ω_r,0 admitted (CMB-T + retained N_eff)"
+no_go_routes_inherited:
+  - "DM flagship lane open (DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md): A-BCC remains open"
+  - "current-bank selector closure: still no (per DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md)"
+  - "Lane 5 (C1) absolute-scale gate open after exhaustive audit + fan-out (Cycles 1-6 of hubble-c1-absolute-scale-gate-20260428 loop)"
+no_go_routes_proven_in_workstream: []
+review_findings:
+  - "Cycle 1 review (branch-local 6-criterion self-review pending). F3 cross-bound chain structurally identified; structural tension at Planck admission identified; favorable admission sub-region mapped (42.9% of grid yields Σm_ν > 0). Audit-grade. Runner verifies 14/14 PASS."
+  - "Cycle 2 review (branch-local 6-criterion self-review pending). Stuck fan-out across 5 routes generated and synthesized; structural-tension residue centered on framework Ω_DM bound vs. observation; ~0.003 eV consistent window. Audit-grade. Runner verifies 20/20 PASS. Audit-quota at 2 (threshold)."
+artifacts_landed:
+  - "docs/SIGMA_MNU_F3_DM_CROSS_BOUND_AUDIT_NOTE_2026-04-28.md (Cycle 1 audit)"
+  - "scripts/frontier_sigma_mnu_f3_dm_cross_bound_audit.py (Cycle 1 runner; PASS=14 FAIL=0)"
+  - "outputs/frontier_sigma_mnu_f3_dm_cross_bound_audit_2026-04-28.txt"
+  - "docs/SIGMA_MNU_F3_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md (Cycle 2 stuck fan-out synthesis)"
+  - "scripts/frontier_sigma_mnu_f3_stuck_fanout_synthesis.py (Cycle 2 runner; PASS=20 FAIL=0)"
+  - "outputs/frontier_sigma_mnu_f3_stuck_fanout_synthesis_2026-04-28.txt"
+claim_state_movement:
+  - "Cycle 1: F3 cross-bound chain structurally identified; structural tension between framework Ω_DM bound and Planck-style admissions identified at Σm_ν level."
+  - "Cycle 2: stuck fan-out across 5 routes confirms the tension's structural source is the framework Ω_DM bound vs. observation, not (T-4F-α-2). Best alt route F3-γ (CMB Ω_DM h² admission) gives Σm_ν ~0.056 eV, just below NO osc floor by ~0.003 eV. ~0.003 eV consistent window either way; numerical Σm_ν retention requires research-level pivot."
+next_exact_action: "Honest stop or pivot. F3 loop has executed audit + fan-out per Deep Work Rules. Recommended pivot options: (a) review-loop pressure on F3 cycles + open PR; (b) pivot to Lane 6 M1/M5-c Koide-flagship-conditional; (c) cross-lane integration with C1 loop (PR #169) noting that F1 (C1 retention) and F3 (DM cross-bound) both fail to retain Σm_ν on current A_min."
+stop_condition: "runtime budget reached, max cycles, blocker requiring human science judgment, honest claim-state closure achieved, OR no route passes dramatic-step gate after Deep Work Rules satisfied"
