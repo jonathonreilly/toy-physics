@@ -1,7 +1,7 @@
 # Mirror Chokepoint Note
 
-**Date:** 2026-04-03
-**Status:** proposed_retained bounded mirror pocket through `N = 100`; `N = 120` loses gravity
+**Date:** 2026-04-03 (downgraded 2026-04-28 per audit-lane verdict)
+**Status:** bounded finite mirror chokepoint diagnostic across stitched parameter surfaces; not a single-surface family theorem and not an asymptotic claim.
 
 This note freezes the current review-safe mirror result on the strict
 chokepoint family in:
@@ -126,7 +126,73 @@ The next step is to test whether even denser `NPL`, larger radius, or sparse
 same-side layer-2 links can extend the mirror pocket beyond `N=60` without
 breaking the chokepoint Born check.
 
-For the canonical fixed-family decoherence fit on the retained dense boundary
+For the canonical fixed-family decoherence fit on the bounded dense boundary
 mirror pocket, see:
 
-[`docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md)
+[`docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md)
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, leaf criticality):
+
+> Issue: the finite mirror-chokepoint pocket is partly reproducible, but
+> the proposed-retained packet depends on a stitched table whose `N=40`/
+> `N=60` values are not recovered by the strict `NPL_HALF=25` `radius=4.0`
+> baseline or by `NPL_HALF=25` `radius=5.0`, and several cited log files
+> for the joint, scaling, sparse-rescue, and boundary scans are missing.
+
+> Why this blocks: a hostile auditor can verify `N=15`/`N=25` on the
+> strict baseline and the dense `NPL_HALF=60` `radius=5.0`
+> `N=40/60/80/100` positive-gravity window with `N=120` collapse, but
+> cannot certify the exact retained table or the through-`N=100`
+> retention story as a single closed claim without knowing which archived
+> parameter surface supports each row and without assertion-gated
+> retention criteria.
+
+The honest claim, per the audit verdict's "Claim boundary until fixed"
+line, is:
+
+> safe to claim a finite diagnostic pocket: strict `NPL_HALF=25`
+> `radius=4.0` reproduces retained `N=15`/`N=25`, dense `NPL_HALF=60`
+> `radius=5.0` reproduces positive-gravity Born-clean `k=0`-clean mirror
+> rows through `N=100` and zero-gravity collapse at `N=120`; it is not
+> yet a clean retained asymptotic or single-surface mirror-chokepoint
+> theorem.
+
+The Status line and "Interpretation" framing have been narrowed to match.
+
+## What this note does NOT claim
+
+- A single-parameter-surface mirror chokepoint family theorem.
+- A clean asymptotic retention law — the through-`N=100` retention is on
+  a specific dense parameter card, not a family-wide statement.
+- That the canonical retained table is recoverable from a single
+  registered runner invocation — the table is stitched across multiple
+  surfaces (`NPL_HALF=25` `radius=4.0`, `NPL_HALF=25` `radius=5.0`,
+  `NPL_HALF=50` scaling, `NPL_HALF=55/60` boundary scans, sparse layer-2
+  rescue), and several of the cited log files are not present in the
+  repo.
+- That the sparse layer-2 rescue is closed — its `N=80` row is reported
+  as "Born not certified (`nan`)" and `N=100` is FAIL.
+
+## What would close this lane (Path A future work)
+
+A future worker pursuing reinstatement of a clean mirror chokepoint
+family claim would need to land all of the following:
+
+1. A single registered runner invocation (or a per-row parameter-card
+   table) that reproduces every retained row from one canonical command
+   line, with the canonical command line registered in the note.
+2. Archived versions of the cited log files that are currently missing
+   from the repo: `2026-04-03-mirror-chokepoint-joint.txt`,
+   `2026-04-03-mirror-chokepoint-scale-r5p0-n50.txt`,
+   `2026-04-03-mirror-chokepoint-scale-r5p0-p2p02-n50.txt`, and the
+   six `2026-04-03-mirror-chokepoint-boundary-*.txt` files.
+3. Hard runner-side pass/fail gates for seed counts, `NPL_HALF`,
+   `connect_radius`, `layer2_prob`, Born tolerance, `k=0`,
+   gravity positivity/significance, decoherence ceiling, and the
+   `N=120` failure boundary.
+4. A reconciliation of the strict `NPL_HALF=25` baseline (where
+   `N=40`/`N=60` do not match the retained table) with the dense
+   `NPL_HALF=60` boundary (where they do) — either as a separate
+   diagnostic or as a single-surface theorem.
