@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-29T11:40:12.670141+00:00",
+  "computed_at": "2026-04-29T12:23:53.825919+00:00",
   "cycle_examples": [
     [
       "ckm_neutron_edm_bound_note",
@@ -20,11 +20,11 @@
       "up_type_mass_ratio_ckm_inversion_note"
     ],
     [
-      "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
-      "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
+      "lorentz_boost_covariance_2d_theorem_note",
+      "lorentz_boost_covariance_3plus1d_theorem_note"
     ]
   ],
-  "cycles_detected": 132,
+  "cycles_detected": 122,
   "effective_status_counts": {
     "audited_conditional": 375,
     "audited_decoration": 3,

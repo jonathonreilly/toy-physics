@@ -10,8 +10,8 @@
 
 ## Adversarial finding this note resolves
 
-The [PMNS-as-`f(H)` closure
-theorem](./PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md)
+The PMNS-as-`f(H)` closure theorem
+(`PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md`)
 uses as load-bearing input
 
 > `U_e = I` in the generation axis basis on `H_hw=1`

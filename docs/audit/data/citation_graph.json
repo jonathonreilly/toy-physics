@@ -1490,10 +1490,6 @@
     },
     {
       "from": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
-      "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
-    },
-    {
-      "from": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
       "to": "dm_neutrino_dirac_bridge_theorem_note_2026-04-15"
     },
     {
@@ -2626,10 +2622,6 @@
     },
     {
       "from": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-      "to": "cosmology_from_mass_spectrum_note"
-    },
-    {
-      "from": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
       "to": "higgs_mass_from_axiom_note"
     },
     {
@@ -2643,10 +2635,6 @@
     {
       "from": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
       "to": "dm_candidate_mass_window_theorem_note_2026-04-19"
-    },
-    {
-      "from": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-      "to": "dm_flagship_closure_review_note_2026-04-17"
     },
     {
       "from": "dm_flagship_closure_review_note_2026-04-17",
@@ -3327,10 +3315,6 @@
     {
       "from": "dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
       "to": "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16"
-    },
-    {
-      "from": "dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
-      "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
     },
     {
       "from": "dm_neutrino_source_surface_slot_torsion_boundary_theorem_note_2026-04-16",
@@ -6118,10 +6102,6 @@
     },
     {
       "from": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-      "to": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17"
-    },
-    {
-      "from": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
       "to": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17"
     },
     {
@@ -6491,14 +6471,6 @@
     {
       "from": "restricted_strong_field_closure_note",
       "to": "evanescent_barrier_amplitude_suppression_theorem_note"
-    },
-    {
-      "from": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-      "to": "cosmology_from_mass_spectrum_note"
-    },
-    {
-      "from": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-      "to": "omega_lambda_derivation_note"
     },
     {
       "from": "r_base_group_theory_derivation_theorem_note_2026-04-24",
@@ -17545,7 +17517,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-29T11:40:10.218475+00:00",
+  "generated_at": "2026-04-29T12:23:48.360131+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -18594,7 +18566,7 @@
       "current_status": "unknown",
       "current_status_raw": null,
       "deps": [],
-      "note_hash": "bb58df516b36c7e507f658a6a3f87c5728e3f159f6224464827f55454910dc34",
+      "note_hash": "16e40df8e5080bc4414e903fbb99eb41eac79aeb3cacb4e59511f2ef7bcf9e21",
       "path": "docs/ai_methodology/skills/physics-loop/references/long-running-execution.md",
       "runner_path": null,
       "title": "Long-Running Execution"
@@ -18619,7 +18591,7 @@
         "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
         "ai_methodology.skills.physics-loop.references.long-running-execution"
       ],
-      "note_hash": "87e13ceec5176137cd7f48ae3fe60d02a85aa2147ba0d155d6063a6ee6524bd9",
+      "note_hash": "b61912730ca57d8e5f04c921c336b76ad59b95ef7dfc62215ecb5c16393aca1b",
       "path": "docs/ai_methodology/skills/physics-loop/SKILL.md",
       "runner_path": null,
       "title": "Physics Loop"
@@ -19932,7 +19904,6 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained-grade replacement citation chain for the \"`U_e = I` on",
       "deps": [
-        "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
         "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
         "three_generation_observable_theorem_note",
         "neutrino_dirac_z3_support_trichotomy_note",
@@ -19941,7 +19912,7 @@
         "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
         "neutrino_mass_reduction_to_dirac_note"
       ],
-      "note_hash": "1c1b2b6f7de213b2743cc51e679ae16392d2430650ad0176d92286bfcc17742d",
+      "note_hash": "ad1c777074f8c3d1811e8ab55f17aaf8746b578ff35d4d1becd26a770299c18b",
       "path": "docs/CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_charged_lepton_ue_identity_via_z3_trichotomy.py",
       "title": "`U_e = I` via `Z_3` Trichotomy (Charged-Lepton Lane)"
@@ -21754,14 +21725,12 @@
       "current_status": "bounded",
       "current_status_raw": "**bounded quantitative support theorem** for the open DM-gate",
       "deps": [
-        "cosmology_from_mass_spectrum_note",
         "higgs_mass_from_axiom_note",
         "r_base_group_theory_derivation_theorem_note_2026-04-24",
         "observable_principle_from_axiom_note",
-        "dm_candidate_mass_window_theorem_note_2026-04-19",
-        "dm_flagship_closure_review_note_2026-04-17"
+        "dm_candidate_mass_window_theorem_note_2026-04-19"
       ],
-      "note_hash": "a0f194a502852c0d603bf013a37f1af20129e7efd498ae1e3afd7ce02d7d11ee",
+      "note_hash": "4fb18ce0b58e1fab1a8ffbacd026bfc9f5b29a0f51fff24af8dda6468140225a",
       "path": "docs/DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_dm_eta_freezeout_bypass_quantitative_theorem.py",
       "title": "DM eta Freezeout-Bypass Quantitative Theorem"
@@ -22992,10 +22961,9 @@
         "three_generation_observable_theorem_note",
         "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
         "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
-        "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
-        "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
+        "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16"
       ],
-      "note_hash": "73602f5dfe3ecd7adb5d553462d5bcb4703a129dd120d56f29336eb5e2f77432",
+      "note_hash": "e7ac2b0e721c42c8261b91d283127c237cba3a2c25eedabbb0d82c5980c59cd8",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SCHUR_SCALAR_BASELINE_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_schur_scalar_baseline_theorem.py",
       "title": "Commutant-Class Structural Lemma (Schur Scalar Baseline) \u2014 CONDITIONAL ONLY"
@@ -30786,7 +30754,6 @@
         "dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18",
         "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
         "dm_neutrino_source_surface_perturbative_uniqueness_theorem_note_2026-04-17",
-        "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
         "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
         "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
         "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
@@ -30800,7 +30767,7 @@
         "neutrino_majorana_retained_lane_packet_2026-04-16",
         "dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16"
       ],
-      "note_hash": "f063312ad6fb00395bc4feca22c2122abdf7cacf4f808873a553368b09534c39",
+      "note_hash": "c1480f48e9fcaa2bdf902c31be9a752ece5be7b938ac644921fe1ee2d59d0c79",
       "path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py",
       "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package"
@@ -34241,13 +34208,11 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained exact support identity on the bounded dark-matter /",
       "deps": [
-        "cosmology_from_mass_spectrum_note",
-        "omega_lambda_derivation_note",
         "hypercharge_identification_note",
         "graph_first_su3_integration_note",
         "native_gauge_closure_note"
       ],
-      "note_hash": "9f436585ce927888e4aa45c0a3089df89b47e3d8528df4ea7e24b20e74331297",
+      "note_hash": "dcd6b70ca6cca2e031801c0921a748a5d34cc8f916287f237589396589b72279",
       "path": "docs/R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_r_base_group_theory_derivation.py",
       "title": "R_base = 31/9 Group-Theory Derivation Theorem"
@@ -40220,7 +40185,7 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4386,
+    "edge_count": 4379,
     "leaf_count": 762,
     "node_count": 1662,
     "root_count": 1222,
