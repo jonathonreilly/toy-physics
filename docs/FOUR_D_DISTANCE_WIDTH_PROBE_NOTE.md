@@ -1,7 +1,7 @@
 # 4D Distance Width Probe Note
 
-**Date:** 2026-04-04  
-**Status:** bounded support chain for the proposed_retained 4D valley-linear family; not an asymptotic closure claim
+**Date:** 2026-04-04 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** bounded width-limited support chain on the upstream 4D valley-linear family with `W = 5..7` reproduced live and `W = 8` present only as a frozen companion log; dimensional-table relation is unaudited / unknown; not a tier-ratifiable 4D family theorem and not an asymptotic distance-law closure.
 
 ## Purpose
 
@@ -93,3 +93,31 @@ The strongest honest summary is:
 - the far tail strengthens as width increases, but the measured exponent still
   moves enough that the law is not yet width-stable
 - the width ladder is still too small to close the asymptotic law
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, leaf criticality):
+
+> Issue: the source note is queued as proposed_retained, but its own
+> load-bearing result is a bounded width-limited support chain, with
+> W=5..7 reproduced live, W=8 present only as a frozen companion
+> log, and the dimensional-table relation still unaudited/unknown.
+
+## What this note does NOT claim
+
+- A tier-ratifiable 4D valley-linear family theorem.
+- An asymptotic distance-law closure.
+- That `W = 8` is reproducible from a registered runner; it is only
+  present as a frozen companion log.
+- Audit-clean upstream registration of the dimensional-table
+  relation.
+
+## What would close this lane (Path A future work)
+
+A retained 4D valley-linear family would require:
+
+1. Live reproduction of `W = 8` in the registered runner (not just
+   a frozen companion log).
+2. Audit-clean upstream registration of the dimensional-table
+   relation.
+3. Hard PASS thresholds in the runner for the support chain.
