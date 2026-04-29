@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-29T04:00:53.968034+00:00",
-  "generated_at": "2026-04-29T04:00:51.902188+00:00",
-  "invalidation_run_at": "2026-04-29T04:00:53.903180+00:00",
+  "effective_status_computed_at": "2026-04-29T04:02:08.945534+00:00",
+  "generated_at": "2026-04-29T04:02:07.144686+00:00",
+  "invalidation_run_at": "2026-04-29T04:02:08.886654+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-29T04:00:53.765732+00:00",
+  "load_bearing_computed_at": "2026-04-29T04:02:08.762230+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -72798,7 +72798,7 @@
       "load_bearing_step_class": null,
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
-      "note_hash": "f4342698c12f45d7e64192f8c73ef3c5383c5878591694519f2d682fc056cfbf",
+      "note_hash": "c03409f79768b8f59b8a07b4a2571a1ea554d4cb40fd16bcbee4b14b02fd4d69",
       "note_path": "docs/SIGNED_GRAVITY_RESPONSE_LANE_STATUS_NOTE_2026-04-26.md",
       "open_dependency_paths": [],
       "previous_audits": [
@@ -72830,6 +72830,31 @@
         {
           "archived_at": "2026-04-29T03:51:31.823993+00:00",
           "archived_for_note_hash": "7ee560fba230f1c4171963e0a0406b3773c2c3e4330d044a688d93fa59b052f8",
+          "audit_date": null,
+          "audit_status": "unaudited",
+          "auditor": null,
+          "auditor_confidence": null,
+          "auditor_family": null,
+          "blocker": null,
+          "chain_closes": null,
+          "chain_closure_explanation": null,
+          "decoration_parent_claim_id": null,
+          "independence": null,
+          "load_bearing_step": null,
+          "load_bearing_step_class": null,
+          "open_dependency_paths": [],
+          "runner_check_breakdown": {
+            "A": 0,
+            "B": 0,
+            "C": 0,
+            "D": 0,
+            "total_pass": 0
+          },
+          "verdict_rationale": null
+        },
+        {
+          "archived_at": "2026-04-29T04:02:07.143756+00:00",
+          "archived_for_note_hash": "f4342698c12f45d7e64192f8c73ef3c5383c5878591694519f2d682fc056cfbf",
           "audit_date": null,
           "audit_status": "unaudited",
           "auditor": null,
@@ -92216,9 +92241,9 @@
   "schema_version": 1,
   "stats": {
     "dropped_missing_notes": 0,
-    "preserved_existing": 1651,
-    "re_audit_required": 0,
+    "preserved_existing": 1653,
+    "re_audit_required": 1,
     "row_count": 1654,
-    "seeded_new": 3
+    "seeded_new": 0
   }
 }
