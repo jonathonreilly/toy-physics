@@ -1,8 +1,7 @@
 # Neutrino Dirac `Z_3` Support Trichotomy
 
-**Date:** 2026-04-15
-**Status:** exact support theorem on the proposed_retained Dirac-neutrino lane,
-conditioned on a single Higgs doublet with definite `Z_3` charge
+**Date:** 2026-04-15 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded conditional theorem — IF generation charges `q_L = (0, +1, -1)`, `q_R = (0, -1, +1)`, and a single Higgs doublet with one definite `Z_3` charge `q_H` are supplied as inputs, THEN `Y_nu` support reduces to one of three three-entry permutation patterns. The IF-conditions are not currently registered as audit-clean dependencies; this note is therefore not yet a tier-ratifiable derivation.
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_dirac_z3_support_trichotomy.py`
@@ -185,3 +184,47 @@ It is an exact support theorem only.
 ```bash
 python3 scripts/frontier_neutrino_dirac_z3_support_trichotomy.py
 ```
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, high criticality, 128 transitive
+descendants):
+
+> Issue: The exact support classification depends on unregistered
+> upstream inputs: one-generation matter closure, three-generation
+> matter structure, reduction to the Dirac neutrino lane, and the
+> explicit single-Higgs definite-Z_3-charge condition. Why this
+> blocks: The matrix-support trichotomy is valid algebra after those
+> charges are supplied, but the audit packet does not establish the
+> charges, the Dirac-lane reduction, or the Higgs charge bridge as
+> clean retained dependencies.
+
+> Claim boundary until fixed: It is safe to claim the conditional
+> theorem that given `q_L = (0, +1, -1)`, `q_R = (0, -1, +1)`, and one
+> definite `q_H`, `Y_nu` support reduces from nine entries to one of
+> three three-entry permutation patterns.
+
+The Status line has been narrowed to make the IF-conditions explicit.
+
+## What this note does NOT claim
+
+- An unconditional support trichotomy theorem.
+- Audit-clean upstream inputs for the generation charges, the
+  Dirac-lane reduction, or the single-Higgs definite-`Z_3` charge
+  bridge.
+- That the runner reads the assumed charges from declared
+  dependencies; it currently hard-codes them as retained.
+
+## What would close this lane (Path A future work)
+
+Promoting from bounded conditional to a tier-ratifiable theorem would
+require:
+
+1. Audit-clean dependency notes for the generation charges
+   `q_L = (0, +1, -1)` and `q_R = (0, -1, +1)`.
+2. Audit-clean dependency notes for the reduction to the Dirac
+   neutrino lane.
+3. Either a derivation or an explicit bounded statement of the
+   single-Higgs `q_H` definite-`Z_3` charge condition.
+4. A runner that reads declared charges from the registered
+   dependencies rather than hard-coding them.
