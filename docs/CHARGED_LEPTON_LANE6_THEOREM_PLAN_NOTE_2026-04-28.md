@@ -1,7 +1,7 @@
 # Lane 6 Charged-Lepton Theorem Plan: Closure Roadmap with Phase Ordering
 
 **Date:** 2026-04-28
-**Status:** retained branch-local theorem-plan note on
+**Status:** open branch-local theorem-plan note on
 `frontier/charged-lepton-pickup-20260428`. Reduces Lane 6 (charged-
 lepton mass retirement) to a sharp `m_e, m_μ, m_τ` closure roadmap
 using retained gauge content + retained electroweak hierarchy `v` +

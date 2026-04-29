@@ -1,7 +1,7 @@
 # `y_τ` Ward Identity from `SU(2)` Anchor — Stretch Attempt (SA-A)
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **stretch-attempt** note on
+**Status:** open branch-local **stretch-attempt** note on
 `frontier/charged-lepton-pickup-20260428`. Cycle 2 of the charged-
 lepton loop: attempts SA-A `y_τ` Ward identity construction anchored
 on `SU(2)` weak coupling `g_2`, as direct analog of the retained YT-
@@ -149,7 +149,7 @@ relations like `y_τ / g_1 = Y_τR / sqrt(?)`. Whether such an
 identity is structural (analogous to retained YT) or fitted is the
 open question.
 
-**Status:** unattempted on retained surface; would be the SA-B
+**Status:** unattempted on current framework surface; would be the SA-B
 stretch attempt for a future cycle.
 
 ### SA-C — Koide-structural anchor
@@ -180,7 +180,7 @@ A combined gauge-doublet structural anchor uses both `g_2` and
 of SU(N_c) color + SU(2) electroweak structure but with SU(2) +
 U(1) for the colorless lepton.
 
-**Status:** plausible single-cycle stretch target after SA-B
+**Status:** open / plausible single-cycle stretch target after SA-B
 failure analysis.
 
 ## 5. Synthesis

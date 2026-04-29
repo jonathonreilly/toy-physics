@@ -1,14 +1,14 @@
 # `y_τ` Identity Mechanism — Stuck Fan-Out
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **stuck fan-out** note on
+**Status:** open branch-local **stuck fan-out** note on
 `frontier/charged-lepton-pickup-20260428`. Cycle 4 of the charged-
 lepton loop: required stuck fan-out per Deep Work Rules before any
 honest stop. After Cycles 2 + 3 closed both gauge-anchor candidates
 (SA-A SU(2), SA-B U(1)_Y), generates 5 orthogonal non-gauge-anchor
 mechanism candidates, synthesizes, identifies best remaining
 attack frame. **Result: SA-C-prime (generation-flavor-symmetry
-anchor via retained EW A4 bridges) emerges as cleanest single-
+anchor via landed EW A^4 bridges) emerges as cleanest single-
 cycle continuation; cross-sector lepton-quark ratio (M5) is the
 strongest backup.**
 **Lane:** 6 — Charged-lepton mass retention (Phase-1 6B)
@@ -60,9 +60,9 @@ might give a closed identity.
 **Constraint count:** depends on whether D17-prime exists for the
 (2, 1) block; not currently retained.
 
-**Status:** **speculative** — relies on unestablished D17-prime.
+**Status:** open / speculative — relies on unestablished D17-prime.
 
-### M3 — Generation-flavor-symmetry anchor (using retained EW A4 bridges)
+### M3 — Generation-flavor-symmetry anchor (using landed EW A^4 bridges)
 
 **Premise:** the recent (2026-04-25) retained "Generation-color and
 EW A4 bridges" landings may provide a generation-flavor-symmetry
@@ -73,7 +73,7 @@ A_4 (the standard three-generation flavor symmetry candidate).
 generation triplet `L_L = (L_L^e, L_L^μ, L_L^τ)` plus retained
 gauge content might give a structural identity for the τ-Yukawa.
 A_4 has a 3-dimensional irreducible representation; if the
-retained EW A4 bridge places L_L generations in this rep, the
+landed EW A^4 bridge places L_L generations in this rep, the
 A_4 Clebsch-Gordan structure constrains the Yukawa coefficient
 ratios.
 
@@ -82,7 +82,7 @@ allowed Yukawa contractions on the (1, 3, 1) branch have specific
 structural coefficients (analog of color Fierz, but for flavor
 structure).
 
-**Status:** depends on detailed structure of the retained EW A4
+**Status:** depends on detailed structure of the landed EW A^4
 bridge — whether it places `L_L` generations in the 3-dim irrep
 and whether the Higgs is in a flavor-singlet or flavor-triplet rep.
 The bridge is recent (2026-04-25); plausible single-cycle
@@ -102,7 +102,7 @@ anomaly) might give a `y_τ` constraint.
 
 **Constraint count:** unclear without specific construction.
 
-**Status:** **speculative**; standard SM Yukawas are not anomaly-
+**Status:** open / speculative; standard SM Yukawas are not anomaly-
 constrained beyond gauge invariance.
 
 ### M5 — Cross-sector lepton-quark ratio (y_τ / y_t)
@@ -126,7 +126,7 @@ representation differences. Then `y_τ / y_t = (g_2 / g_s) ×
 = y_t × const'` identity is derivable. Currently no retained
 identity of this form.
 
-**Status:** plausible; would require a new structural derivation
+**Status:** open / plausible; would require a new structural derivation
 chain different from YT-lane's D1-D17.
 
 ### M6 — Direct Cl(3) three-generation rep-theoretic identity
@@ -141,7 +141,7 @@ structure is hw=1 (highest-weight=1). The hw=1 structure may
 constrain which Yukawa contractions are admissible, giving a
 direct rep-theoretic anchor.
 
-**Status:** speculative; no current retained content connects
+**Status:** open / speculative; no current framework content connects
 hw=1 generation structure to Yukawa coefficients quantitatively.
 
 ## 2. Synthesis
@@ -150,7 +150,7 @@ hw=1 generation structure to Yukawa coefficients quantitatively.
 |---|---|---|---|
 | M1 Koide-structural | medium | conditional on flagship | Q + δ closure |
 | M2 SU(2)×U(1) combined | medium | needs D17-prime | unestablished primitive |
-| **M3 EW A4 flavor-symmetry** | **high** | **yes — recent retention** | retained EW A4 bridge |
+| **M3 EW A4 flavor-symmetry** | **high** | **yes — recent retention** | landed EW A^4 bridge |
 | M4 Anomaly-cancellation | low | speculative | not gauge-Yukawa coupling |
 | **M5 Cross-sector y_τ/y_t** | **medium-high** | yes | new derivation chain |
 | M6 Direct Cl(3) three-gen | low | speculative | no current connection |

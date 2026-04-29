@@ -1,7 +1,7 @@
 # `y_τ` Ward Identity from `U(1)_Y` Anchor — Stretch Attempt (SA-B)
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **stretch-attempt** note on
+**Status:** open branch-local **stretch-attempt** note on
 `frontier/charged-lepton-pickup-20260428`. Cycle 3 of the charged-
 lepton loop: attempts SA-B `y_τ` Ward identity construction
 anchored on `U(1)_Y` hypercharge `g_1`, after Cycle 2 excluded the
@@ -154,7 +154,7 @@ An identity involving Koide-direction needs to break the rotational
 symmetry that Q preserves to fix `y_τ` absolutely.
 
 **Status:** Koide flagship in flight. Q closure is **not yet
-landed**. SA-C is unattemptable on the current retained surface
+landed**. SA-C is unattemptable on the current framework surface
 without first closing Q (or assuming it conditionally).
 
 ### SA-D — Combined SU(2) × U(1) doublet anchor

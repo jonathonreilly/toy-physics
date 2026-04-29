@@ -1,14 +1,14 @@
 # Lane 5 `(C1)` Absolute-Scale Gate — Residual-Premise Attack Audit
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **audit** note on
+**Status:** open branch-local **attack-audit** note on
 `frontier/hubble-c1-absolute-scale-gate-20260428`. Cycle 1 of the
 (C1) gate loop. Builds on the 2026-04-26 `(C1)` gate audit which
 isolated the single residual premise (metric-compatible primitive
 Clifford/CAR coframe response on `P_A H_cell`, decomposing as
 coupled (G1 edge-statistics principle + G2 action-unit metrology)).
 This audit enumerates surviving research-level attack candidates
-on (G1+G2) on the current `A_min` retained surface and identifies
+on (G1+G2) on the current `A_min` framework surface and identifies
 which would be single-cycle attemptable vs. research-level distant.
 **Lane:** 5 — Hubble constant `H_0` derivation
 **Loop:** `hubble-c1-absolute-scale-gate-20260428`
@@ -36,9 +36,9 @@ The 2026-04-26 `(C1)` gate audit
   + adopting natural phase/action units gives both `c_Widom = 1/4`
   and `G_Newton,lat = 1`, yielding `a/l_P = 1`.
 
-**Result of (C1) closure (per 2026-04-26 audit):** retained `a/l_P
+**Result of (C1) closure (per 2026-04-26 audit):** closed-gate `a/l_P
 = 1`, hence `a^{-1} = M_Pl` derived numerically; conditional Clifford
-phase bridge promoted from conditional to retained; `R_Λ` numerical
+phase bridge marked closed in that audit; `R_Λ` numerical
 retention chain unlocked; (C1) half of two-gate Hubble dependency
 closed.
 
@@ -124,13 +124,13 @@ or the methodology of single-axiom retention.
 
 **Mechanism:** enumerate carrier-axiom candidates (minimal CAR
 posit, minimal action-unit posit, minimal Clifford coframe posit),
-audit each for compatibility with the existing retained surface.
+audit each for compatibility with the existing framework surface.
 
 **Status:** **fallback** route; would represent "honest stop on
 A_min closure of (C1); minimal-carrier-axiom extension required".
 Audit-grade Phase-2.
 
-### A6 — Cross-lane impact via retained spectral-gap identity
+### A6 — Cross-lane impact via landed spectral-gap identity
 
 **Premise:** retained `Λ = 3/R_Λ²` plus retained `H_inf = c/R_Λ`
 plus closed (C1) gate ⟹ retained absolute `R_Λ` ⟹ retained `H_inf`.
@@ -180,7 +180,7 @@ derive action-unit metrology on `P_A H_cell` from axiom 4
 
 5. **Conditional Clifford phase bridge promotion** to retained.
 6. **Targets 1, 2, 3 closure** per 2026-04-26 (C1) audit §3.
-7. **Hubble two-gate dependency** half-closure: (C1) retained;
+7. **Hubble two-gate dependency** half-closure: (C1) closed;
    (C2)/(C3) gate becomes the remaining bottleneck.
 8. **Lane 4F-β follow-on:** with bounded `h` (still requires
    (C2)/(C3) closure for full retention), Σm_ν bounded interval

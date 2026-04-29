@@ -1,7 +1,7 @@
 # `y_τ` Cycle 4 Fan-out M3 Premise — Self-Correction
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **self-correction** note on
+**Status:** open branch-local **self-correction** note on
 `frontier/charged-lepton-pickup-20260428`. Cycle 5 of the charged-
 lepton loop: the Cycle 4 stuck-fan-out (M3 candidate, "EW A_4 flavor-
 symmetry anchor") rests on a **misreading of the lane file's
@@ -29,14 +29,14 @@ exist. **Result: M3 closed (false premise). Reassess M5 backup.**
 
 ### 0.1 Cycle 4 M3 framing (mistaken)
 
-> M3 — Generation-flavor-symmetry anchor (using retained EW A4 bridges).
+> M3 — Generation-flavor-symmetry anchor (using landed EW A^4 bridges).
 > Premise: the recent (2026-04-25) retained "Generation-color and EW
 > A4 bridges" landings may provide a generation-flavor-symmetry
 > constraint that anchors the τ-Yukawa via the alternating group
 > A_4 (the standard three-generation flavor symmetry candidate).
 > Mechanism: A_4 representation theory on the lepton-doublet
 > generation triplet… A_4 has a 3-dimensional irreducible
-> representation; if the retained EW A4 bridge places L_L
+> representation; if the landed EW A^4 bridge places L_L
 > generations in this rep, the A_4 Clebsch-Gordan structure
 > constrains the Yukawa coefficient ratios.
 
@@ -181,7 +181,7 @@ same load-bearing structural primitives that Cycles 2 + 3
 excluded**: the cross-sector ratio doesn't add a new derivation
 chain, it inherits the closed gauge-anchor obstruction.
 
-**Status:** M5 closed on current retained surface. Same root
+**Status:** support / M5 blocked on current framework surface. Same root
 cause as SA-A and SA-B: no Fierz-analog for the colorless lepton
 block, no D17-analog verified for the (2, 1) block.
 
@@ -205,7 +205,7 @@ as new structural content:
   closing first.**
 
 None of (M5-a), (M5-b), (M5-c) are single-cycle attemptable on the
-current retained surface.
+current framework surface.
 
 ## 3. Combined no-go: extends through M3 + M5
 
@@ -213,7 +213,7 @@ Cycles 2, 3, and now Cycle 5 (M3 false-premise + M5 audit) together
 extend the combined no-go:
 
 **Theorem (charged-lepton structural y_τ Ward identity, current
-retained surface).** On the retained `Cl(3)/Z^3` framework with:
+current framework surface).** On the retained `Cl(3)/Z^3` framework with:
 - YT-lane chain D1-D17 retained for the (2, 3) Q_L block,
 - Cycle 2 finding (no SU(2) Fierz analog on the (2, 1) lepton block),
 - Cycle 3 finding (no abelian Fierz analog for U(1)_Y),
@@ -223,7 +223,7 @@ retained surface).** On the retained `Cl(3)/Z^3` framework with:
 
 no `y_τ` Ward identity of the form `y_τ_bare = (retained content) ×
 (structural sqrt-rational constant)` is constructible on the
-current retained surface.
+current framework surface.
 
 **Surviving research-level routes (not single-cycle attemptable):**
 
@@ -240,8 +240,8 @@ current retained surface.
 After Cycle 5:
 
 - **All single-cycle attemptable y_τ Ward identity routes on the
-  current retained surface are CLOSED.** Six candidate mechanisms
-  audited; none have a single-cycle path on the retained surface.
+  current framework surface are CLOSED.** Six candidate mechanisms
+  audited; none have a single-cycle path on the current framework surface.
 - **Lane 6 6B is research-level distant.** Closure within the loop
   budget is not feasible without parallel-lane progress (Koide
   flagship Q + δ closure, then M1 or M5-c attemptable).
@@ -283,10 +283,10 @@ loop's audit trail with this self-correction supersedence-note.
 - M3 candidate (false premise — no A_4 alternating-group flavor
   symmetry in framework's retained content; "EW A4" = `A^4 = 4/9`
   Wolfenstein gauge-coupling identity, unrelated).
-- M5 candidate on current retained surface (reduces to closed
+- M5 candidate on current framework surface (reduces to closed
   gauge-anchor obstruction from Cycles 2 + 3).
 - The combined no-go extension: no single-cycle y_τ Ward identity
-  route remains on the current retained surface.
+  route remains on the current framework surface.
 - Honest stop justification for Lane 6 charged-lepton block within
   this loop's runtime budget.
 
@@ -342,7 +342,7 @@ Cycle 4's stuck-fan-out (M3 candidate fabricated an A_4 flavor
 symmetry not present in retained content), audits the M5 backup,
 and extends the combined no-go through both. The honest finding
 is that **all single-cycle attemptable y_τ Ward identity routes on
-the current retained surface are closed**; Lane 6 6B is research-
+the current framework surface are closed**; Lane 6 6B is research-
 level distant and requires parallel-lane progress (Koide flagship
 or new structural content).
 

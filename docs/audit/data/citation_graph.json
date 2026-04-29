@@ -17937,7 +17937,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-29T03:54:03.037256+00:00",
+  "generated_at": "2026-04-29T03:57:46.589780+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -20242,6 +20242,16 @@
       "runner_path": null,
       "title": "Charged-Lepton Koide Support Packet (2026-04-18)"
     },
+    "charged_lepton_lane6_theorem_plan_note_2026-04-28": {
+      "claim_id": "charged_lepton_lane6_theorem_plan_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open branch-local theorem-plan note on",
+      "deps": [],
+      "note_hash": "bf5be9cf6401b12aeec047343d87f566b948ee6ab6e5cd88313c90b362a1e563",
+      "path": "docs/CHARGED_LEPTON_LANE6_THEOREM_PLAN_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "Lane 6 Charged-Lepton Theorem Plan: Closure Roadmap with Phase Ordering"
+    },
     "charged_lepton_mass_hierarchy_review_note_2026-04-17": {
       "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
       "current_status": "proposed_retained",
@@ -20331,6 +20341,46 @@
       "path": "docs/CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_charged_lepton_ue_identity_via_z3_trichotomy.py",
       "title": "`U_e = I` via `Z_3` Trichotomy (Charged-Lepton Lane)"
+    },
+    "charged_lepton_y_tau_m3_premise_self_correction_note_2026-04-28": {
+      "claim_id": "charged_lepton_y_tau_m3_premise_self_correction_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open branch-local **self-correction** note on",
+      "deps": [],
+      "note_hash": "49b109050d3253f5f24c70982a21eb27d5c0c571521bae302c2f23ad6f2fd8e4",
+      "path": "docs/CHARGED_LEPTON_Y_TAU_M3_PREMISE_SELF_CORRECTION_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "`y_\u03c4` Cycle 4 Fan-out M3 Premise \u2014 Self-Correction"
+    },
+    "charged_lepton_y_tau_mechanism_stuck_fanout_note_2026-04-28": {
+      "claim_id": "charged_lepton_y_tau_mechanism_stuck_fanout_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open branch-local **stuck fan-out** note on",
+      "deps": [],
+      "note_hash": "19f38c079ad01217376c731bfd347218234f4776116dc37cf91192c87ff9bd6a",
+      "path": "docs/CHARGED_LEPTON_Y_TAU_MECHANISM_STUCK_FANOUT_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "`y_\u03c4` Identity Mechanism \u2014 Stuck Fan-Out"
+    },
+    "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28": {
+      "claim_id": "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open branch-local **stretch-attempt** note on",
+      "deps": [],
+      "note_hash": "655e84a6564cab34c3dafa04a324c0a99d25bb23655d1dac5cdafd62d28ef138",
+      "path": "docs/CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_SU2_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "`y_\u03c4` Ward Identity from `SU(2)` Anchor \u2014 Stretch Attempt (SA-A)"
+    },
+    "charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28": {
+      "claim_id": "charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open branch-local **stretch-attempt** note on",
+      "deps": [],
+      "note_hash": "f41095b87c0f43297f4eabb9e7dbbe1509a5b6fbeaa71e9c67865f6ee12ba2a3",
+      "path": "docs/CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_U1_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "`y_\u03c4` Ward Identity from `U(1)_Y` Anchor \u2014 Stretch Attempt (SA-B)"
     },
     "chiral_3plus1d_boundary_phase_note": {
       "claim_id": "chiral_3plus1d_boundary_phase_note",
@@ -26590,6 +26640,16 @@
       "path": "docs/HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md",
       "runner_path": null,
       "title": "Holographic Boundary-Law Probe (Bounded Companion Note)"
+    },
+    "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28": {
+      "claim_id": "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open branch-local **attack-audit** note on",
+      "deps": [],
+      "note_hash": "cf8afdfd2da66283d6d3ee44515e4790304853d3c42e9f93793824d4f5499165",
+      "path": "docs/HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "Lane 5 `(C1)` Absolute-Scale Gate \u2014 Residual-Premise Attack Audit"
     },
     "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27": {
       "claim_id": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
@@ -39469,11 +39529,16 @@
     "central_band_mass_window_note",
     "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
     "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27",
+    "charged_lepton_lane6_theorem_plan_note_2026-04-28",
     "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27",
     "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26",
     "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27",
     "charged_lepton_two_higgs_canonical_reduction_note",
     "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27",
+    "charged_lepton_y_tau_m3_premise_self_correction_note_2026-04-28",
+    "charged_lepton_y_tau_mechanism_stuck_fanout_note_2026-04-28",
+    "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28",
+    "charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28",
     "chiral_3plus1d_boundary_phase_note",
     "chiral_3plus1d_coupled_coin_note",
     "chiral_3plus1d_mixing_period_note",
@@ -39858,6 +39923,7 @@
     "higher_symmetry_gravity_probe_note",
     "higher_symmetry_joint_validation_note",
     "holographic_probe_note_2026-04-11",
+    "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28",
     "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
     "hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26",
     "hubble_lane5_eta_retirement_gate_audit_note_2026-04-26",
@@ -40524,13 +40590,13 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4484,
-    "leaf_count": 744,
-    "node_count": 1645,
-    "root_count": 1197,
+    "leaf_count": 750,
+    "node_count": 1651,
+    "root_count": 1203,
     "runners_with_path": 727,
     "status_counts": {
       "bounded": 253,
-      "open": 31,
+      "open": 37,
       "proposed_promoted": 1,
       "proposed_retained": 404,
       "support": 160,
