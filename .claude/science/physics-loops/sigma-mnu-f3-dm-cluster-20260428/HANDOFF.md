@@ -12,6 +12,7 @@ mild tension with observation at standard Planck admissions
 | # | Type | Outcome |
 |---|---|---|
 | 1 | Audit | F3 DM cross-bound — structural tension identified |
+| 2 | Fan-out | 5 orthogonal routes — structural tension confirmed |
 
 ## Cycle 1 result (2026-04-29)
 
