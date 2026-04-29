@@ -17545,7 +17545,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-29T11:40:10.218475+00:00",
+  "generated_at": "2026-04-29T12:24:47.805946+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -18594,7 +18594,7 @@
       "current_status": "unknown",
       "current_status_raw": null,
       "deps": [],
-      "note_hash": "bb58df516b36c7e507f658a6a3f87c5728e3f159f6224464827f55454910dc34",
+      "note_hash": "16e40df8e5080bc4414e903fbb99eb41eac79aeb3cacb4e59511f2ef7bcf9e21",
       "path": "docs/ai_methodology/skills/physics-loop/references/long-running-execution.md",
       "runner_path": null,
       "title": "Long-Running Execution"
@@ -18619,7 +18619,7 @@
         "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
         "ai_methodology.skills.physics-loop.references.long-running-execution"
       ],
-      "note_hash": "87e13ceec5176137cd7f48ae3fe60d02a85aa2147ba0d155d6063a6ee6524bd9",
+      "note_hash": "b61912730ca57d8e5f04c921c336b76ad59b95ef7dfc62215ecb5c16393aca1b",
       "path": "docs/ai_methodology/skills/physics-loop/SKILL.md",
       "runner_path": null,
       "title": "Physics Loop"

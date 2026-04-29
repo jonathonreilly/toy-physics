@@ -14,12 +14,38 @@ from __future__ import annotations
 
 import json
 from datetime import datetime, timezone
+from fnmatch import fnmatchcase
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = REPO_ROOT / "docs" / "audit" / "data"
 GRAPH_PATH = DATA_DIR / "citation_graph.json"
 LEDGER_PATH = DATA_DIR / "audit_ledger.json"
+
+# Source paths that are documentation or agent infrastructure, not
+# auditable claim notes. These are candidates for exclusion; rows are
+# only dropped when the safety checks below confirm they are unaudited
+# unknowns.
+EXCLUDED_SOURCE_PATTERNS = (
+    "docs/ai_methodology/*.md",
+    "docs/ai_methodology/raw/**",
+    "docs/ai_methodology/skills/**",
+    ".claude/**",
+)
+
+# Exact source paths that must remain in the ledger even if they match a
+# broad infrastructure pattern. This protects rows that already have a
+# real audit verdict or a retained/proposed tier.
+NEVER_GATE_SOURCE_PATHS = {
+    "docs/ai_methodology/raw/prompts_session_ebae4639_jonreilly.md",
+}
+
+PROTECTED_CURRENT_STATUSES = {
+    "retained",
+    "promoted",
+    "proposed_retained",
+    "proposed_promoted",
+}
 
 # Default empty audit fields applied to a freshly seeded row.
 EMPTY_AUDIT = {
@@ -43,6 +69,37 @@ EMPTY_AUDIT = {
 # Audit fields that are preserved across re-seeds when the note hash is
 # unchanged. If the hash changes, these are archived and reset.
 AUDIT_FIELDS = list(EMPTY_AUDIT.keys())
+
+
+def is_excluded_source_path(path: str) -> bool:
+    return any(fnmatchcase(path, pattern) for pattern in EXCLUDED_SOURCE_PATTERNS)
+
+
+def should_gate_node(node: dict, prior: dict | None) -> bool:
+    """Return True when a graph node should not become a ledger row."""
+    path = node["path"]
+    if not is_excluded_source_path(path):
+        return False
+    if path in NEVER_GATE_SOURCE_PATHS:
+        return False
+
+    current_statuses = {node.get("current_status")}
+    if prior is not None:
+        current_statuses.add(prior.get("current_status"))
+    if current_statuses & PROTECTED_CURRENT_STATUSES:
+        return False
+
+    if prior is not None:
+        audit_status = prior.get("audit_status")
+        if audit_status and audit_status != "unaudited":
+            return False
+        # This cleanup targets unknown infra rows; keep rows that already
+        # contribute to a different effective-status bucket.
+        effective_status = prior.get("effective_status")
+        if effective_status and effective_status != "unknown":
+            return False
+
+    return node.get("current_status") == "unknown"
 
 
 def load_json(path: Path, default):
@@ -80,7 +137,18 @@ def seed() -> dict:
     preserved = 0
     re_audit_required = 0
 
+    included_cids = {
+        cid
+        for cid, node in graph["nodes"].items()
+        if not should_gate_node(node, existing_rows.get(cid))
+    }
+    gated = [cid for cid in graph["nodes"] if cid not in included_cids]
+
     for cid, node in graph["nodes"].items():
+        if cid not in included_cids:
+            continue
+
+        deps = [dep for dep in node["deps"] if dep in included_cids]
         prior = existing_rows.get(cid)
         if prior is None:
             row = {
@@ -90,7 +158,7 @@ def seed() -> dict:
                 "current_status": node["current_status"],
                 "current_status_raw": node["current_status_raw"],
                 "runner_path": node["runner_path"],
-                "deps": list(node["deps"]),
+                "deps": deps,
                 "note_hash": node["note_hash"],
                 "previous_audits": [],
             }
@@ -105,7 +173,7 @@ def seed() -> dict:
             row["current_status"] = node["current_status"]
             row["current_status_raw"] = node["current_status_raw"]
             row["runner_path"] = node["runner_path"]
-            row["deps"] = list(node["deps"])
+            row["deps"] = deps
             if prior.get("note_hash") != node["note_hash"]:
                 row = archive_prior_audit(row)
                 row["note_hash"] = node["note_hash"]
@@ -114,8 +182,10 @@ def seed() -> dict:
                 preserved += 1
         out_rows[cid] = row
 
-    # Drop ledger rows whose source note no longer exists.
-    dropped = [cid for cid in existing_rows if cid not in graph["nodes"]]
+    # Drop ledger rows whose source note no longer exists, plus rows
+    # intentionally gated out as non-claim infrastructure.
+    dropped = [cid for cid in existing_rows if cid not in included_cids]
+    missing = [cid for cid in existing_rows if cid not in graph["nodes"]]
 
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -125,7 +195,9 @@ def seed() -> dict:
             "seeded_new": seeded,
             "preserved_existing": preserved,
             "re_audit_required": re_audit_required,
-            "dropped_missing_notes": len(dropped),
+            "dropped_missing_notes": len(missing),
+            "dropped_gated_sources": len(gated),
+            "dropped_total": len(dropped),
         },
         "rows": out_rows,
     }
@@ -142,6 +214,7 @@ def main() -> int:
     print(f"  preserved (audit kept): {s['preserved_existing']}")
     print(f"  re-audit required (hash changed): {s['re_audit_required']}")
     print(f"  dropped (note removed): {s['dropped_missing_notes']}")
+    print(f"  dropped (gated source): {s['dropped_gated_sources']}")
     return 0
 
 

@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-29T11:40:12.670141+00:00",
+  "computed_at": "2026-04-29T12:24:57.329035+00:00",
   "cycle_examples": [
     [
       "ckm_neutron_edm_bound_note",
@@ -24,7 +24,7 @@
       "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
     ]
   ],
-  "cycles_detected": 132,
+  "cycles_detected": 130,
   "effective_status_counts": {
     "audited_conditional": 375,
     "audited_decoration": 3,
@@ -36,7 +36,7 @@
     "proposed_retained": 10,
     "retained": 78,
     "support": 129,
-    "unknown": 696
+    "unknown": 622
   },
   "proposed_demoted_by_upstream_count": 139,
   "proposed_demoted_by_upstream_examples": [
