@@ -1,23 +1,25 @@
 slug: hubble-c1-absolute-scale-gate-20260428
-goal: "Lane 5 (C1) absolute-scale gate: structurally retire the residual premise (metric-compatible primitive Clifford/CAR coframe response on P_A H_cell rank-four block; equivalently, native edge-statistics principle G1 + action-unit metrology G2 coupled into a single coupled residual premise) from the minimal accepted axiom stack A_min. Phase-1: branch-local audit/survey theorem identifying surviving single-cycle attack frames + status of the coupled (G1+G2) residual premise; flagged by 4F loop's Phase-2 stuck fan-out as F1 strongest follow-on for Sigma m_nu numerical retention pathway."
+goal: "Lane 5 (C1) absolute-scale gate: structurally retire the residual premise (metric-compatible primitive Clifford/CAR coframe response on P_A H_cell rank-four block; equivalently, native edge-statistics principle G1 + action-unit metrology G2 coupled into a single coupled residual premise) from the minimal accepted axiom stack A_min."
 target_status: best-honest-status
 mode: run
-runtime: 90m
-deep_block: 60m
+runtime: 12h
+deep_block: 90m
 start_time_utc: "2026-04-28T20:00:00Z"
+resume_time_utc: "2026-04-29T03:50:00Z"
+hard_deadline_utc: "2026-04-29T15:50:00Z"
 checkpoint_interval: 30m
 branch: frontier/hubble-c1-absolute-scale-gate-20260428
 base: origin/main
-base_commit_at_start: "394bf242 (current origin/main)"
+base_commit_at_start: "394bf242 (origin/main)"
 lock_status: unavailable
 lock_note: "scripts/automation_lock.py hardcodes /Users/jonreilly paths; this worktree is on /Users/jonBridger. Skipping per skill optionality."
-current_phase: cycle-1-complete
-cycles_completed: 1
-audit_grade_cycles_in_a_row: 1
-last_stretch_attempt_cycle: null
+current_phase: cycle-2-complete-A1-no-go
+cycles_completed: 2
+audit_grade_cycles_in_a_row: 0
+last_stretch_attempt_cycle: 2
 last_stuck_fanout_cycle: null
 active_route: null
-active_hard_residual: "(C1) absolute-scale gate single residual premise: metric-compatible primitive Clifford/CAR coframe response on P_A H_cell (rank-four block), decomposing as coupled (G1 edge-statistics principle + G2 action-unit metrology) per existing 2026-04-26 audit. Closure would retain a/l_P = 1 → a^{-1} = M_Pl as derived numerical statement on A_min, supplying (C1) half of two-gate Hubble dependency."
+active_hard_residual: "(G2) action-unit metrology — break the (S, kappa) rescaling degeneracy on the source-unit surface from axiom 4 (g_bare = 1) of A_min. This is the next stretch target (Cycle 3 = A2 attempt). Note: A1 (G1 closure via bulk Grassmann projection) was falsified in Cycle 2; A3 consolidation is removed from the plan."
 files_touched:
   - .claude/science/physics-loops/hubble-c1-absolute-scale-gate-20260428/STATE.yaml
   - .claude/science/physics-loops/hubble-c1-absolute-scale-gate-20260428/GOAL.md
@@ -30,20 +32,29 @@ files_touched:
   - .claude/science/physics-loops/hubble-c1-absolute-scale-gate-20260428/PR_BACKLOG.md
   - .claude/science/physics-loops/hubble-c1-absolute-scale-gate-20260428/LITERATURE_BRIDGES.md
   - docs/HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md
+  - docs/HUBBLE_LANE5_C1_A1_GRASSMANN_NO_GO_NOTE_2026-04-28.md
+  - scripts/frontier_hubble_c1_a1_grassmann_no_go.py
+  - outputs/frontier_hubble_c1_a1_grassmann_no_go_2026-04-28.txt
 open_imports:
-  - "(G1) native edge-statistics principle on P_A H_cell — retains CAR semantics rather than ququart/two-qubit; currently open"
-  - "(G2) action-unit metrology — breaks (S, kappa) rescaling degeneracy; currently open"
-  - "Conditional Clifford phase bridge theorem — currently conditional; promoted to retained iff (G1) closes"
+  - "(G1) native edge-statistics principle on P_A H_cell — open after A1 falsification; A4 parity-gate route remains primary direct-derivation candidate; A5 fallback indicated"
+  - "(G2) action-unit metrology — open; Cycle 3 A2 stretch attempt is next"
+  - "Conditional Clifford phase bridge theorem — currently conditional; promoted to retained iff (G1) closes via A4 or A5"
 no_go_routes_inherited:
   - "Cosmic-history-ratio necessity no-go (Cycle 3 hubble lane): no closure of (C1) via FRW kinematic content alone"
   - "Cycle 4 (C3) vacuum-topology no-active-route: vacuum-topology lane (C3) does not provide a single-cycle attack on (C1)"
   - "4F loop Phase-2 stuck fan-out: F1 (this loop) identified as strongest follow-on for numerical Sigma m_nu retention"
-no_go_routes_proven_in_workstream: []
+no_go_routes_proven_in_workstream:
+  - "A1 Grassmann-from-axiom-3 ⇒ CAR on P_A H_cell: bulk Cl_4(C) action shifts Hamming-weight grading by ±1; compressed generators vanish on P_A; bilinears span so(4) not Cl(4); P_A is not a Clifford-module morphism for any bulk axiom-3 action"
 review_findings:
-  - "Cycle 1 review (branch-local 6-criterion self-review): all PASS. (C1) gate residual-premise attack audit landed. Six candidate attack frames A1-A6 enumerated; A1 (Grassmann-from-axiom-3 ==> CAR on P_A boundary, closes G1), A2 (g_bare=1 ==> action-unit metrology on P_A, closes G2), A3 (A1+A2 combined ==> A_min-only closure of (G1+G2)) identified as highest-leverage Phase-1 attack pathway. A4 parity-gate carrier route as alternative to A1; A5 minimal-carrier-axiom audit as fallback; A6 spectral-gap chain as outcome (not attack). Phase ordering Cycles 2-4 set: Cycle 2 = A1 stretch, Cycle 3 = A2 stretch, Cycle 4 = A3 consolidation if both land. Audit-grade; counts 1 of 2 max consecutive."
+  - "Cycle 1 review (branch-local 6-criterion self-review): all PASS. (C1) gate residual-premise attack audit landed; six attack frames A1-A6 enumerated; A3 (A1+A2 combined) flagged highest leverage if A1+A2 land. Audit-grade; counts 1 of 2 max consecutive."
+  - "Cycle 2 review (branch-local 6-criterion self-review pending). Cycle 2 stretch attempt produced theorem-grade no-go on A1; runner verifies 29/29 PASS via two natural bulk Cl_4(C) constructions on H_cell; Hamming-weight ±1 shift obstruction makes P_A not a Clifford submodule. Counts as stretch attempt; resets audit_grade counter to 0; last_stretch_attempt_cycle = 2."
 artifacts_landed:
-  - "docs/HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md (Cycle 1 audit; six candidate attack frames A1-A6 on (G1+G2) coupled residual premise; A1+A2 combined into A3 identified as highest-leverage A_min-only single-cycle attack pathway; AUDIT-grade)"
+  - "docs/HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md (Cycle 1 audit)"
+  - "docs/HUBBLE_LANE5_C1_A1_GRASSMANN_NO_GO_NOTE_2026-04-28.md (Cycle 2 stretch-attempt no-go)"
+  - "scripts/frontier_hubble_c1_a1_grassmann_no_go.py (Cycle 2 runner; PASS=29 FAIL=0)"
+  - "outputs/frontier_hubble_c1_a1_grassmann_no_go_2026-04-28.txt"
 claim_state_movement:
-  - "Lane 5 (C1) absolute-scale gate residual-premise attack audit landed: six candidate attack frames A1-A6 on (G1 edge-statistics + G2 action-unit metrology) coupled residual premise; A1 Grassmann-from-axiom-3 ==> CAR (high promise, single-cycle attemptable), A2 g_bare=1 ==> action-unit (medium-high promise, single-cycle attemptable), A3 A1+A2 combined ==> direct A_min-only (C1) closure (highest leverage if A1+A2 both land); A4 parity-gate alternative; A5 minimal-carrier-axiom fallback; A6 spectral-gap outcome chain. Cross-lane motivation: F1 from 4F-loop Cycle 3 fan-out flagged this gate as strongest single-cycle Phase-2 follow-on for numerical Sigma m_nu retention pathway."
-next_exact_action: "Cycle 2 = A1 STRETCH ATTEMPT. Derive CAR semantics on P_A H_cell rank-four primitive boundary block from axiom 3 (finite local Grassmann/staggered-Dirac partition) of A_min. Show the Grassmann anticommutation on bulk inherits to P_A boundary block via Clifford-module morphism property of the projection P_A. Output: theorem-grade derivation if A1 lands, OR honest partial result + named obstruction if A1 hits. STRETCH-grade attempt. Per Deep Work Rules no-churn exception, partial output with named obstruction is valid stretch output."
+  - "Cycle 1: residual-premise attack audit landed; six attack frames A1-A6 enumerated."
+  - "Cycle 2: A1 attack frame falsified; bulk axiom-3 Cl_4(C) action does not preserve P_A as a Clifford submodule. Refines residual-premise structural obligation. A3 consolidation cycle removed from plan. A4 parity-gate elevated to primary remaining direct-derivation route. A5 minimal-carrier-axiom fallback strongly indicated."
+next_exact_action: "Cycle 3 = A2 STRETCH ATTEMPT. Investigate whether retained g_bare = 1 (axiom 4 of A_min) plus retained Cl(3) bivector ⇒ SU(2) gauge structure plus admitted lattice unit a fixes action-unit scale on P_A H_cell, breaking the (S, kappa) rescaling degeneracy. Output: theorem-grade derivation if A2 lands, OR honest partial result + named obstruction if A2 hits. Per Deep Work Rules no-churn exception, partial output with named obstruction is valid stretch output."
 stop_condition: "runtime budget reached, max cycles, blocker requiring human science judgment, honest claim-state closure achieved, OR no route passes dramatic-step gate after Deep Work Rules satisfied"
