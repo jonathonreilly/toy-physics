@@ -227,35 +227,35 @@ BC) is unaffected and remains at -1.84% deviation.
 ### Foundational retained theorems (directly inherited)
 
 - **Ward-identity tree-level theorem (Q_L block, species-uniform):**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` —
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) —
   `y_bare² = g_bare²/(2 N_c) = g_bare²/6`; Block 6 of the runner
   verifies all six basis Clebsch-Gordan overlaps on the unit-norm (1,1)
   singlet equal 1/√6.
 - **P1 Δ_R master assembly (three-channel color decomposition):**
-  `docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md` —
+  [`docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`](YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md) —
   `Δ_R^ratio = (α_LM/(4π)) · [C_F Δ_1 + C_A Δ_2 + T_F n_f Δ_3]`;
   literature-cited central value `Δ_R = −3.27%`, 1σ band `(−3.27 ± 2.3)%`.
   (Superseded as canonical by the full-staggered-PT `−3.77 % ± 0.45 %`.)
 - **P1 Δ_R full-staggered-PT BZ quadrature (canonical retained central):**
-  `docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md` —
+  [`docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`](YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md) —
   `Δ_R = −3.77 % ± 0.45 %` from framework-native 4D BZ quadrature of the
   four canonical lattice-PT integrals.
 - **Color-singlet projection (scalar wave-function):**
-  `docs/YUKAWA_COLOR_PROJECTION_THEOREM.md` — `√(8/9)` multiplicative
+  [`docs/YUKAWA_COLOR_PROJECTION_THEOREM.md`](YUKAWA_COLOR_PROJECTION_THEOREM.md) — `√(8/9)` multiplicative
   factor on the physical Yukawa from the composite-Higgs scalar propagator.
 - **Canonical-surface anchors:**
-  `docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md` — `α_LM = 0.09067`,
+  [`docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](PLAQUETTE_SELF_CONSISTENCY_NOTE.md) — `α_LM = 0.09067`,
   `α_s(v) = 0.1033` via CMT.
 
 ### Context
 
 - **Master UV→IR obstruction (unchanged):**
-  `docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
+  [`docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)
 - **Down-type mass-ratio CKM-dual (bounded lane):**
-  `docs/DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md` — bounded
+  [`docs/DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`](DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md) — bounded
   `m_s/m_b = [α_s(v)/√6]^(6/5)` from |V_cb| = (m_s/m_b)^(5/6) bridge.
 - **2-loop y_t chain (reused RGE skeleton):**
-  `scripts/frontier_yt_2loop_chain.py` — this note's runner extends the
+  [`scripts/frontier_yt_2loop_chain.py`](../scripts/frontier_yt_2loop_chain.py) — this note's runner extends the
   same 2-loop SM RGE to include the y_b channel.
 
 ---

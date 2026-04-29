@@ -5,8 +5,7 @@
 **Status:** **proposed_retained local theorem** — the chamber bound is derived inline
 from retained Cl(3)/Z_3 doublet-block geometry on the PMNS source surface,
 and can be cited self-containedly by the A-BCC closure note.
-**Dedicated runner:**
-`scripts/frontier_dm_abcc_chamber_bound_derivation.py`
+**Runner:** `scripts/frontier_dm_abcc_chamber_bound_derivation.py` ([scripts/frontier_dm_abcc_chamber_bound_derivation.py](../scripts/frontier_dm_abcc_chamber_bound_derivation.py))
 **Runner result on land:** `PASS = 15, FAIL = 0`
 
 ---

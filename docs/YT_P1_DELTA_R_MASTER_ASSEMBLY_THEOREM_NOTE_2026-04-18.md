@@ -172,24 +172,24 @@ citation-and-bound channel evaluations.
 ### Foundational sub-theorems (directly inherited)
 
 - **Three-channel structural decomposition (parent theorem):**
-  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md) —
   `Δ_R^ratio = (α_LM/(4π)) · [C_F Δ_1 + C_A Δ_2 + T_F n_f Δ_3]` with
   partial-cancellation verdict (external Z_ψ cancels exactly; all
   three channels generically nonzero).
 - **Δ_1 channel (C_F):**
-  `docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md) —
   `Δ_1 = 2 (I_v_scalar − I_v_gauge) − 6`, retained
   `I_v_gauge = 0` (conserved point-split current, 21/21 PASS
   symbolic reduction), literature-central `I_v_scalar ≃ 4`, giving
   `Δ_1 ≃ +2` central with range `[0, +8]`.
 - **Δ_2 channel (C_A):**
-  `docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md) —
   `Δ_2 = I_v_gauge − (5/3) I_SE^{gluonic+ghost}`, with
   `I_v_gauge = 0` (retained conserved current) and literature-central
   `I_SE^{gluonic+ghost} ≃ 2`, giving `Δ_2 ≃ −10/3` central with
   range `[−5, 0]`.
 - **Δ_3 channel (T_F n_f):**
-  `docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md) —
   `Δ_3 = (4/3) I_SE^{fermion-loop}`, with literature-central
   `I_SE^{fermion-loop} ≃ 0.7` (per flavor, `α/(4π)` convention,
   Sharpe–Bhattacharya 1998 bracket), giving `Δ_3 ≃ +0.933` central
@@ -201,17 +201,17 @@ citation-and-bound channel evaluations.
   three-primitive P1/P2/P3 decomposition and the ~1.95 % total
   residual systematic.
 - **Retained Ward identity (tree level):**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` — `y_t_bare² =
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) — `y_t_bare² =
   g_bare²/(2 N_c) = g_bare²/6` at tree level.
 - **Canonical-surface anchors:**
-  `docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md` — `⟨P⟩ = 0.5934`,
+  [`docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](PLAQUETTE_SELF_CONSISTENCY_NOTE.md) — `⟨P⟩ = 0.5934`,
   `u_0 = 0.87768`, `α_LM = 0.09067`, `α_LM/(4π) = 0.00721`.
 - **Packaged delta_PT support (reinterpreted):**
-  `docs/UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md` — packaged
+  [`docs/UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`](UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md) — packaged
   `delta_PT = α_LM · C_F / (2π) = 1.92 %`, reinterpreted in §5.1 as
   the single-channel (C_F only) approximation to Δ_R.
 - **Cited I_S literature (reinterpreted):**
-  `docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md` — cited
+  [`docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`](YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md) — cited
   `I_S ∈ [4, 10]` bracket, reinterpreted in §5.2 as a
   cited-literature C_F-channel central without external-Z_ψ
   cancellation accounting.

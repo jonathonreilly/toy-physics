@@ -67,38 +67,38 @@ gaps.
 ### Inherited retention authorities (not modified)
 
 - **YT Δ_R master assembly (1-loop literature):**
-  `docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`
+  [`docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`](YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md)
   — `Δ_R^{1-loop, lit} = −3.27 % ± 2.32 %` covariance-reduced band.
 - **YT Δ_R full-staggered-PT quadrature (1-loop framework-native):**
-  `docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`
+  [`docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`](YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md)
   — `Δ_R^{1-loop, fsPT} = −3.77 % ± 0.45 %`.
 - **YT Δ_R through-2-loop extension:**
-  `docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md`
+  [`docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md`](YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md)
   — `Δ_R^{through-2-loop} = −3.99 % ± 0.70 %` (loop-geometric bound
   saturation).
 - **Master UV→IR transport obstruction:**
-  `docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`.
+  [`docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md).
 - **P1 loop-geometric bound:**
-  `docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`
+  [`docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md)
   — `r_R = (α_LM/π) · b_0 = 0.22126`.
 
 ### Higgs canonical authorities (not modified)
 
-- `docs/HIGGS_MASS_DERIVED_NOTE.md` — derived 3-loop route
+- [`docs/HIGGS_MASS_DERIVED_NOTE.md`](HIGGS_MASS_DERIVED_NOTE.md) — derived 3-loop route
   `m_H = 125.1 GeV`.
-- `docs/HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md` — derived-with-inherited-
+- [`docs/HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md`](HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md) — derived-with-inherited-
   YT-systematic Higgs/vacuum lane.
-- `docs/HIGGS_MASS_FROM_AXIOM_NOTE.md` — auxiliary taste-sector route
+- [`docs/HIGGS_MASS_FROM_AXIOM_NOTE.md`](HIGGS_MASS_FROM_AXIOM_NOTE.md) — auxiliary taste-sector route
   `m_H = v/(2 u_0) = 140.3 GeV`.
-- `docs/TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md` — exact taste-block CW
+- [`docs/TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`](TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md) — exact taste-block CW
   isotropy theorem supporting the Higgs/taste splitting structure.
 
 ### Canonical surface
 
-- `docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md` —
+- [`docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](PLAQUETTE_SELF_CONSISTENCY_NOTE.md) —
   `⟨P⟩ = 0.5934`, `u_0 = 0.87768`, `α_LM = 0.09067`,
   `α_LM / (4π) = 0.00721`.
-- `scripts/canonical_plaquette_surface.py`.
+- [`scripts/canonical_plaquette_surface.py`](../scripts/canonical_plaquette_surface.py).
 
 ---
 

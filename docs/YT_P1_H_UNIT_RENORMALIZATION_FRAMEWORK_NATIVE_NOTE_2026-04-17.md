@@ -67,7 +67,7 @@ document the remaining quadrature as the single open reduction step
     color-tensor decomposition `Δ_R = C_F · I_1 + C_A · I_2 + T_F n_f · I_3`.
   - `YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md` — no
     algebraic shortcut between `I_1`, `I_2`, `I_3`.
-  - `scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py` — retained
+  - [`scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py`](../scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py) — retained
     `I_V = 0` conserved-current reduction giving `I_1 = I_S`.
   - `YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md` — cited
     range `I_S ∈ [4, 10]` (central `~6`) for the closest analogue.
@@ -76,15 +76,15 @@ document the remaining quadrature as the single open reduction step
   - `YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md` — retained
     geometric tail bound on the loop-expansion axis.
 - **Canonical surface authority:**
-  - `docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md` — `⟨P⟩ = 0.5934`,
+  - [`docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](PLAQUETTE_SELF_CONSISTENCY_NOTE.md) — `⟨P⟩ = 0.5934`,
     `u_0 = 0.87768`, `α_LM = 0.0907`.
-  - `docs/YT_VERTEX_POWER_DERIVATION.md` — `n_link = 1` per single
+  - [`docs/YT_VERTEX_POWER_DERIVATION.md`](YT_VERTEX_POWER_DERIVATION.md) — `n_link = 1` per single
     vertex (D15).
-  - `scripts/canonical_plaquette_surface.py` — retained evaluation.
+  - [`scripts/canonical_plaquette_surface.py`](../scripts/canonical_plaquette_surface.py) — retained evaluation.
 - **Ward/action authorities:**
-  - `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` — `H_unit =
+  - [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) — `H_unit =
     (1/√6) Σ ψ̄ ψ` on `Q_L`.
-  - `docs/MINIMAL_AXIOMS_2026-04-11.md` — canonical Wilson-plaquette
+  - [`docs/MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md) — canonical Wilson-plaquette
     + staggered-Dirac action.
 
 ## Abstract

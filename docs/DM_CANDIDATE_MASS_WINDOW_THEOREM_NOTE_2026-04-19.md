@@ -5,8 +5,7 @@
 is in the leptogenesis-viable window; the current one-flavor transport gap
 corresponds to a non-integer `ALPHA_LM` power shift not closeable by a single
 power-law step
-**Dedicated runner:**
-`scripts/frontier_dm_candidate_mass_window_theorem.py`
+**Runner:** `scripts/frontier_dm_candidate_mass_window_theorem.py` ([scripts/frontier_dm_candidate_mass_window_theorem.py](../scripts/frontier_dm_candidate_mass_window_theorem.py))
 **Runner result:** `PASS = 15, FAIL = 0`
 
 ## What this theorem establishes

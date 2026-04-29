@@ -79,7 +79,7 @@ correction, with explicit uncertainty propagation from the cited
   P1 line was the motivating target for this computation chain;
   unchanged by this note).
 - **Rep-A/Rep-B cancellation (derives the Δ_1 formula):**
-  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
+  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md)
   (`Δ_1 = 2 · (I_v_scalar − I_v_gauge) − 6`, eq. R4-Δ_1). Partial
   cancellation, three-channel structure retained.
 - **Scalar anomalous dim authority:** the `−6 C_F` constant in `Δ_1`
@@ -87,25 +87,25 @@ correction, with explicit uncertainty propagation from the cited
   standard MSbar 1-loop scalar-bilinear anomalous dimension, retained
   from SU(3) Casimir × 1-loop mass-dimension counting.
 - **Conserved vector current Z_V = 1 authority:**
-  `scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py` (21/21 PASS) —
+  [`scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py`](../scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py) (21/21 PASS) —
   `I_V = 0` at 1-loop on the retained point-split staggered conserved
   vector current surface. Directly implies `I_v_gauge = 0` on the
   conserved-current formulation used in the ratio.
 - **H_unit symbolic reduction:**
-  `docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`
+  [`docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`](YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md)
   — retained envelope `|I_S^{framework}| ≤ 23.35`; three-piece
   decomposition `I_S = I_S^{tadpole} + I_S^{log} + I_S^{fin}`; this
   note uses the same tadpole-improved staggered scalar-density
   literature bracket for `I_v_scalar`.
 - **I_S citation note (literature source):**
-  `docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md` — cited
+  [`docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`](YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md) — cited
   range `I_S ∈ [4, 10]` from Sharpe 1994, Ishizuka–Shizawa 1994,
   Bhattacharya–Sharpe 1998, Bhattacharya–Gupta–Kilcup–Sharpe 1999,
   Kilcup–Sharpe 1987. The `I_v_scalar` component of `I_S` is
   extracted here under the decomposition `I_S = 2·I_v_scalar − 6 +
   2·I_leg` of the Rep-A/Rep-B note §5.4.
 - **I_S revision verification:**
-  `docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md` — verdict
+  [`docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md`](YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md) — verdict
   A (magnitude) + C (semantics) on the 3× upward revision. Preserved.
 
 ---

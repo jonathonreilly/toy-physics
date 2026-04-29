@@ -34,35 +34,35 @@ This note does NOT modify:
 ## Cross-references
 
 - **Master obstruction (parent):**
-  `docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md` —
+  [`docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md) —
   names P1 as the 1-loop lattice-to-MSbar matching primitive on the
   Ward ratio.
 - **Rep-A/Rep-B partial-cancellation sub-theorem:**
-  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md) —
   derives the three-channel structure from the diagrammatic subtraction
   of δ_g (Rep-A, OGE extraction of g_s²) and δ_y (Rep-B, H_unit
   extraction of y_t²). This note packages the resulting color-tensor
   decomposition.
 - **Shared-Fierz shortcut no-go:**
-  `docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md` — the
+  [`docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md`](YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md) — the
   three-channel structure is NOT reducible to a single channel by any
   shared Ward-Fierz shortcut.
 - **Δ_1 BZ computation:**
-  `docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md` — C_F channel,
+  [`docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md) — C_F channel,
   central `Δ_1 ≃ +2`.
 - **Δ_2 BZ computation:**
-  `docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md` — C_A channel,
+  [`docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md) — C_A channel,
   central `Δ_2 ≃ −10/3`.
 - **Δ_3 BZ computation:**
-  `docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md` — T_F n_f
+  [`docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md) — T_F n_f
   channel, central `Δ_3 ≃ +0.933`.
 - **Δ_R master assembly:**
-  `docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md` —
+  [`docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`](YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md) —
   consumes this color-factor retention note as the structural
   decomposition on which the per-channel BZ centrals are assembled.
 - **SU(3) Casimir authorities:**
-  `docs/YT_EW_COLOR_PROJECTION_THEOREM.md` (D7 — `C_F`, `C_A`, `T_F`);
-  `docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md` (S1 — gauge-group
+  [`docs/YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md) (D7 — `C_F`, `C_A`, `T_F`);
+  [`docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`](YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md) (S1 — gauge-group
   uniqueness).
 
 ## Abstract

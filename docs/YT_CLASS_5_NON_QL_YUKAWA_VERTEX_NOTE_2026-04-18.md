@@ -319,7 +319,7 @@ differentiation. The answer is **no**. Class #5 closes.
 ### Foundational retained theorems (directly inherited)
 
 - **Ward-identity tree-level theorem (Q_L × Q_L* 4-fermion 1PI):**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` —
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) —
   `Γ⁽⁴⁾(q²) = -c_S · g_bare² / (2 N_c · q²) · O_S` on the
   scalar-singlet channel `O_S = (ψ̄ψ)_{(1,1)}(ψ̄ψ)_{(1,1)}`, with
   y_t_bare = 1/√6 defined as the matrix element
@@ -329,27 +329,27 @@ differentiation. The answer is **no**. Class #5 closes.
   is the unique unit-normalized (Z² = 6) color-singlet ×
   iso-singlet × Dirac-scalar composite on Q_L = (2, 3).
 - **One-generation matter closure (RH blocks):**
-  `docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md` — u_R : (1, 3)_{+4/3},
+  [`docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md) — u_R : (1, 3)_{+4/3},
   d_R : (1, 3)_{-2/3} on C^8_R, distinct from Q_L's C^8_L embedding.
 - **Right-handed species-dependence note (Class #4 Outcome C):**
-  `docs/YT_RIGHT_HANDED_SPECIES_DEPENDENCE_NOTE_2026-04-18.md` —
+  [`docs/YT_RIGHT_HANDED_SPECIES_DEPENDENCE_NOTE_2026-04-18.md`](YT_RIGHT_HANDED_SPECIES_DEPENDENCE_NOTE_2026-04-18.md) —
   CG[Q̄_L × H × u_R] = CG[Q̄_L × H × d_R] = 1/√6 on the retained
   SU(3)_c × SU(2)_L × U(1)_Y irrep structure.
 - **Bottom-Yukawa retention analysis (Outcome A, falsified):**
-  `docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`.
+  [`docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`](YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md).
 - **H_unit flavor-column no-go (Class #1 Outcome C):**
-  `docs/YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md`.
+  [`docs/YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md`](YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md).
 - **Generation-hierarchy primitive no-go (Class #2 Outcome D):**
-  `docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`.
+  [`docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`](YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md).
 
 ### Context
 
 - **Anomaly-forced time + 4D chirality:**
-  `docs/ANOMALY_FORCES_TIME_THEOREM.md` — Cl(4) γ_5 = Γ_0 Γ_1 Γ_2 Γ_3
+  [`docs/ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md) — Cl(4) γ_5 = Γ_0 Γ_1 Γ_2 Γ_3
   splits C^16 = C^8_L ⊕ C^8_R, giving LH (Q_L, L_L) vs RH
   (u_R, d_R, e_R, ν_R) blocks on orthogonal chirality eigenspaces.
 - **Yukawa color-singlet projection theorem:**
-  `docs/YUKAWA_COLOR_PROJECTION_THEOREM.md` — `√(8/9)` wave-function
+  [`docs/YUKAWA_COLOR_PROJECTION_THEOREM.md`](YUKAWA_COLOR_PROJECTION_THEOREM.md) — `√(8/9)` wave-function
   renormalization on the composite Higgs propagator; inherited
   unchanged.
 

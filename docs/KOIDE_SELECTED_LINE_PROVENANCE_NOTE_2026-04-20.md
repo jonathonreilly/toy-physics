@@ -6,8 +6,7 @@ scalar-selector cycle 1 open import **I3**.
 **Scope:** names the exact theorem that fixes the slot values `(δ, q_+) =
 (√6/3, √6/3)` in the Koide selected-line reduction cited throughout the
 Brannen–Zenczykowski phase / θ-hierarchy chain.
-**Primary verification runner:**
-`scripts/frontier_koide_selected_line_provenance.py`
+**Primary runner:** `scripts/frontier_koide_selected_line_provenance.py` ([scripts/frontier_koide_selected_line_provenance.py](../scripts/frontier_koide_selected_line_provenance.py))
 
 ---
 

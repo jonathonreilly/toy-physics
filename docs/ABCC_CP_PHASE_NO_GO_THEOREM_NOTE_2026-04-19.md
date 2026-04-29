@@ -4,8 +4,7 @@
 **Status:** **conditional support theorem on the open DM gate** — under `σ_hier = (2,1,0)` and the
 T2K CP-phase measurement, all known C_neg chi²=0 PMNS solutions are
 observationally excluded  
-**Dedicated runner:**
-`scripts/frontier_abcc_cp_phase_no_go_theorem.py`  
+**Runner:** `scripts/frontier_abcc_cp_phase_no_go_theorem.py` ([scripts/frontier_abcc_cp_phase_no_go_theorem.py](../scripts/frontier_abcc_cp_phase_no_go_theorem.py))
 **Runner result:** `PASS = 20, FAIL = 0`
 
 ## What this theorem establishes

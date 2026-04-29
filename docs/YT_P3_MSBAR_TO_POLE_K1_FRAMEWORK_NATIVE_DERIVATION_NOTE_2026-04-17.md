@@ -31,19 +31,19 @@ This note does NOT modify:
 ## Cross-references
 
 - **Master obstruction:**
-  `docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md` —
+  [`docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md) —
   names the MSbar-to-pole mass conversion series as a P3 sub-primitive;
   this note closes the K_1 step framework-native.
 - **K-series continuation:**
-  - `docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  - [`docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
     — 4-tensor K_2 color-tensor retention.
-  - `docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  - [`docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
     — 10-tensor K_3 color-tensor retention.
-  - `docs/YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md` — geometric
+  - [`docs/YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md) — geometric
     tail bound on higher-order K_n.
 - **SU(3) Casimir authorities:**
-  - `docs/YT_EW_COLOR_PROJECTION_THEOREM.md` (D7 — `C_F = (N_c²−1)/(2 N_c)`).
-  - `docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md` (S1 — gauge-group
+  - [`docs/YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md) (D7 — `C_F = (N_c²−1)/(2 N_c)`).
+  - [`docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`](YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md) (S1 — gauge-group
     uniqueness).
 
 ## Abstract

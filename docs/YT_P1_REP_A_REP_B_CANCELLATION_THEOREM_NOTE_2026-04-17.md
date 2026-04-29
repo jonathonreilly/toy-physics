@@ -65,29 +65,29 @@ cited `I_S` overcounts the ratio correction.
 ## Cross-references
 
 - **Retained Ward identity (tree level):**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` — exact algebraic
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) — exact algebraic
   identity `y_t_bare² = g_bare²/(2 N_c)` at tree level from D16 + D17
   + D12 (SU(N_c) Fierz) + S2 (Lorentz Clifford). No NLO claim.
 - **P1 caveat this note closes:**
-  `docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md` §4.4 —
+  [`docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md`](YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md) §4.4 —
   "the net effect on the Ward ratio `y_t(M_Pl)/g_s(M_Pl)` at 1-loop
   depends on whether the Representation-A correction partially
   cancels it. This cancellation structure is not established." THIS
   NOTE ESTABLISHES IT: partial cancellation, structure given below.
 - **Color-tensor decomposition:**
-  `docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md) —
   `Δ_R = C_F · I_1 + C_A · I_2 + T_F n_f · I_3`. Retained.
 - **No algebraic shortcut:**
-  `docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md`](YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md) —
   `I_1` not reducible to `I_2`, `I_3` via shared Fierz.
 - **Conserved-current reduction:**
-  `scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py` +
+  [`scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py`](../scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py) +
   `logs/retained/yt_p1_i1_lattice_pt_symbolic_2026-04-17.log` —
   `I_V = 0`, hence `I_1 = I_S` on the retained surface.
 - **Composite-Higgs Yukawa:**
-  `docs/YT_EW_COLOR_PROJECTION_THEOREM.md` (D9: composite Higgs, no
+  [`docs/YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md) (D9: composite Higgs, no
   independent fundamental Yukawa parameter) —
-  `docs/YUKAWA_COLOR_PROJECTION_THEOREM.md`.
+  [`docs/YUKAWA_COLOR_PROJECTION_THEOREM.md`](YUKAWA_COLOR_PROJECTION_THEOREM.md).
 
 ---
 

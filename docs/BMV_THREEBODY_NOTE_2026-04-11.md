@@ -8,8 +8,7 @@
 
 - `/Users/jonreilly/Projects/Physics/scripts/frontier_branch_entanglement_robustness.py`
 
-Historical standalone runner:
-- `/Users/jonreilly/Projects/Physics/scripts/frontier_bmv_threebody.py`
+**Runner:** `scripts/frontier_bmv_threebody.py` ([scripts/frontier_bmv_threebody.py](../scripts/frontier_bmv_threebody.py)) (historical standalone runner)
 
 The standalone runner is no longer the canonical interpretation surface. The
 later robustness harness is.

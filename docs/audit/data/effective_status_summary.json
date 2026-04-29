@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-29T11:40:12.670141+00:00",
+  "computed_at": "2026-04-29T12:20:34.796820+00:00",
   "cycle_examples": [
     [
       "ckm_neutron_edm_bound_note",
@@ -24,21 +24,21 @@
       "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
     ]
   ],
-  "cycles_detected": 132,
+  "cycles_detected": 151,
   "effective_status_counts": {
-    "audited_conditional": 375,
+    "audited_conditional": 406,
     "audited_decoration": 3,
-    "audited_failed": 102,
-    "audited_numerical_match": 4,
+    "audited_failed": 89,
+    "audited_numerical_match": 3,
     "audited_renaming": 3,
     "bounded": 234,
-    "open": 28,
-    "proposed_retained": 10,
+    "open": 26,
+    "proposed_retained": 12,
     "retained": 78,
-    "support": 129,
-    "unknown": 696
+    "support": 126,
+    "unknown": 682
   },
-  "proposed_demoted_by_upstream_count": 139,
+  "proposed_demoted_by_upstream_count": 162,
   "proposed_demoted_by_upstream_examples": [
     "alpha_s_derived_note",
     "atomic_hydrogen_helium_probe_note",

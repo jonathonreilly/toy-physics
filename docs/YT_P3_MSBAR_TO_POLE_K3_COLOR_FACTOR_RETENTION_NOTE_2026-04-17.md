@@ -25,9 +25,9 @@ skeleton and the cumulative numerical coverage at three-loop.
   - `YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md` — `K_1 = C_F = 4/3` retained framework-native.
   - `YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md` — 4-tensor `K_2` color-tensor retention.
 - **SU(3) Casimir authorities:**
-  - `docs/YT_EW_COLOR_PROJECTION_THEOREM.md` — retained `C_F`, `C_A`, `T_F`.
-  - `docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md` — gauge-group uniqueness.
-- **SM matter-content retention:** `docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md` and the complete-prediction-chain runners carry five light flavors at the top-mass scale.
+  - [`docs/YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md) — retained `C_F`, `C_A`, `T_F`.
+  - [`docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`](YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md) — gauge-group uniqueness.
+- **SM matter-content retention:** [`docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`](CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md) and the complete-prediction-chain runners carry five light flavors at the top-mass scale.
 
 ## Abstract
 

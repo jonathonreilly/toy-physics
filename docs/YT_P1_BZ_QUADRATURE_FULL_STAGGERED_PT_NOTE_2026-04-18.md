@@ -77,34 +77,34 @@ tightening of the total Δ_R band.
 ## Cross-references
 
 - **Prior schematic BZ quadrature:**
-  `docs/YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md` — schematic
+  [`docs/YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md`](YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md) — schematic
   integrand central −3.29% ± 2.31% (grid + 25% schematic systematic).
 - **Master Δ_R assembly:**
-  `docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md` —
+  [`docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`](YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md) —
   literature-cited central −3.27% with covariance-reduced 1σ band
   (−3.27 ± 2.32)% and operational P1 band [2.3%, 4.3%].
 - **Rep-A/Rep-B cancellation:**
-  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md) —
   three-channel decomposition `Δ_R = (α/(4π))[C_F Δ_1 + C_A Δ_2 + T_F n_f Δ_3]`.
 - **Δ_1 citation:**
-  `docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md` — cited
+  [`docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md) — cited
   `I_v_scalar ∈ [3, 7]`.
 - **Δ_2 citation:**
-  `docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md` — cited
+  [`docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md) — cited
   `I_SE_gluonic ∈ [1, 3]`.
 - **Δ_3 citation:**
-  `docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md` — cited
+  [`docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md) — cited
   `I_SE_fermion ∈ [0.5, 1.5]`.
 - **H_unit symbolic reduction:**
-  `docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`
+  [`docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`](YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md)
   — Feynman rules (FR1, FR2), kernel structure, envelope
   `|I_S^{framework}| ≤ 23.35`.
 - **Ward identity tree level:**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`.
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md).
 - **Conserved point-split staggered vector current (Z_V = 1):**
-  `scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py` (21/21-PASS
+  [`scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py`](../scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py) (21/21-PASS
   symbolic reduction).
-- **Canonical surface:** `scripts/canonical_plaquette_surface.py` —
+- **Canonical surface:** [`scripts/canonical_plaquette_surface.py`](../scripts/canonical_plaquette_surface.py) —
   `⟨P⟩ = 0.5934`, `u_0 = 0.87768`, `α_LM = 0.09067`,
   `α_LM/(4π) = 0.00721`.
 

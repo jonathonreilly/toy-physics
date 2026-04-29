@@ -32,9 +32,9 @@ the framework surface.
   - `YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md` — two-loop integral citation layer with `I_Fl` pinned.
   - `YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md` — 10-tensor `K_3` color-tensor retention.
 - **SU(3) Casimir authorities:**
-  - `docs/YT_EW_COLOR_PROJECTION_THEOREM.md` — retained `C_F`, `C_A`, `T_F`.
-  - `docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md` — gauge-group uniqueness.
-- **Running-coupling authority:** `docs/ALPHA_S_DERIVED_NOTE.md` — retained plaquette-derived `α_s` run to `m_t`.
+  - [`docs/YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md) — retained `C_F`, `C_A`, `T_F`.
+  - [`docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`](YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md) — gauge-group uniqueness.
+- **Running-coupling authority:** [`docs/ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md) — retained plaquette-derived `α_s` run to `m_t`.
 
 ## Abstract
 

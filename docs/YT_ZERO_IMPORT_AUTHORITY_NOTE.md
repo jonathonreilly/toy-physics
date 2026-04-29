@@ -2,8 +2,8 @@
 
 **Date:** 2026-04-17
 **Status:** DERIVED quantitative authority surface (zero external observables)
-**Primary runners:** `scripts/frontier_yt_ward_identity_derivation.py`,
-`scripts/frontier_yt_color_projection_correction.py`
+**Primary runner:** `scripts/frontier_yt_ward_identity_derivation.py` ([scripts/frontier_yt_ward_identity_derivation.py](../scripts/frontier_yt_ward_identity_derivation.py))
+**Additional primary runner:** `scripts/frontier_yt_color_projection_correction.py`
 **Supporting runners:** `scripts/frontier_yt_explicit_systematic_budget.py`,
 `scripts/frontier_yt_exact_interacting_bridge_transport.py`,
 `scripts/frontier_yt_boundary_consistency.py`,
