@@ -1,7 +1,7 @@
 # Unpromoted Branch Retainability Audit Note
 
-**Date:** 2026-04-06  
-**Status:** review-safe audit of proposed_retained branch claims; no promotion beyond bounded comparisons
+**Date:** 2026-04-06 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** support / review-safe summary of branch-claim promotion boundaries across wider-family, grown-transfer, graph-frontier, and persistent-object lanes; no one-hop dependencies registered, no runner output, and no machine-checkable status/output inventory. Not a tier-ratifiable summary on its own.
 
 This audit checks the recent claim surface for mistaken closure or overreach on
 three lanes:
@@ -101,3 +101,32 @@ independently retained.
 - [`docs/GROWING_GRAPH_DYNAMIC_LIMIT_DIAGNOSTIC_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GROWING_GRAPH_DYNAMIC_LIMIT_DIAGNOSTIC_NOTE.md)
 - [`scripts/persistent_object_localization_escalation.py`](/Users/jonreilly/Projects/Physics/scripts/persistent_object_localization_escalation.py)
 - [`logs/2026-04-05-persistent-object-localization-escalation.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-persistent-object-localization-escalation.txt)
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, medium criticality, 13 transitive
+descendants):
+
+> Issue: the proposed-retained row summarizes promotion boundaries
+> across wider-family, grown-transfer, graph-frontier, and
+> persistent-object lanes, but registers no one-hop dependencies and
+> provides no runner or machine-checkable status/output inventory.
+> Why this blocks: a hostile auditor cannot verify from the source
+> note alone that the referenced rows, logs, statuses, and boundary
+> claims are current or correctly characterized, even though the
+> conservative no-overpromotion advice is plausible and safe.
+
+The note has been re-tiered to `support` (review-safe summary).
+
+## What this note does NOT claim
+
+- A tier-ratifiable summary on its own.
+- That the cited rows, logs, statuses, and boundary claims are
+  audit-clean dependencies.
+- A registered runner output for the summary.
+
+## What would close this lane (Path A future work)
+
+A retained version would require registering the cited notes /
+scripts / logs as explicit dependencies, plus a runner that produces
+a machine-checkable status/output inventory.
