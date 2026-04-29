@@ -1,13 +1,14 @@
 # Signed Gravitational Response Lane Status Note
 
 **Date:** 2026-04-26  
-**Status:** open support/no-go lane status; not a retained theorem and not a
-manuscript claim  
+**Status:** open support/no-go lane status; support/open only
 **Runner:** `scripts/frontier_signed_gravity_response_lane_status.py`
 
 This note lands the useful science from the signed-gravity review branch
 without merging that stale branch wholesale. The safe public name is **signed
 gravitational response**, not antigravity.
+
+This is not a manuscript claim or theorem-grade closure.
 
 The lane remains open. The current package does not derive a physical
 repulsive gravity sector.

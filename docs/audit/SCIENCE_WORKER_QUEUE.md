@@ -1,7 +1,10 @@
 # Science Worker Queue — First Pass Retrospective + Next Tier
 
-**Status:** first audit pass complete. Second-pass queue derived from current ledger state.
-**Last updated:** 2026-04-27 (post first review-loop)
+**Status:** first audit pass retrospective plus second-pass worker snapshot
+from the 2026-04-27 ledger state. This is a planning handoff, not the
+live audit queue.
+**Last updated:** 2026-04-27 (post first review-loop; snapshot retained on
+main 2026-04-28)
 
 This document supersedes the original 5-lane queue. The original lane
 handoff docs are preserved under `worker_lanes/` as context for future
@@ -27,7 +30,7 @@ re-promotion attempts.
 
 ---
 
-## Current ledger state (post first pass)
+## Snapshot ledger state (post first pass, 2026-04-27)
 
 After 305 audits applied (up from 164 at the time of the first queue):
 
@@ -46,9 +49,12 @@ The ratio of `audited_failed` to `audited_clean` rose substantially (was 22/45, 
 
 ---
 
-## Second-pass queue: highest-leverage open work
+## Snapshot second-pass queue: highest-leverage open work
 
-Derived from current ledger by `(descendants × adverse-verdict-weight × criticality)`. Top targets:
+Derived from the 2026-04-27 ledger snapshot by
+`(descendants × adverse-verdict-weight × criticality)`. For the live
+mechanical queue, use `AUDIT_QUEUE.md`; this section records the worker
+handoff state from the first-pass retrospective.
 
 ### Tier A — substantive failed claims with high reach
 

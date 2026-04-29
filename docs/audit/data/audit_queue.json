@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 80,
-    "high": 530,
+    "high": 531,
     "leaf": 656,
     "medium": 91
   },
-  "generated_at": "2026-04-29T03:48:11.105588+00:00",
+  "generated_at": "2026-04-29T03:51:33.814826+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1694,6 +1694,7 @@
         "i3_zero_exact_theorem_note",
         "cpt_exact_note",
         "chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25",
+        "signed_gravity_response_lane_status_note_2026-04-26",
         "bell_inequality_derived_note",
         "emergent_lorentz_invariance_note",
         "lorentz_boost_covariance_2d_theorem_note",
@@ -2995,6 +2996,23 @@
       "note_path": "docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md",
       "ready": true,
       "runner_path": null,
+      "transitive_descendants": 125
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "signed_gravity_response_lane_status_note_2026-04-26",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 8,
+      "load_bearing_score": 10.977,
+      "note_path": "docs/SIGNED_GRAVITY_RESPONSE_LANE_STATUS_NOTE_2026-04-26.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_signed_gravity_response_lane_status.py",
       "transitive_descendants": 125
     },
     {
@@ -9233,7 +9251,8 @@
         "lensing_k_sweep_note",
         "complex_action_note",
         "electrostatics_grown_sign_law_note",
-        "sign_portability_invariant_note"
+        "sign_portability_invariant_note",
+        "signed_gravity_response_lane_status_note_2026-04-26"
       ],
       "direct_in_degree": 4,
       "load_bearing_score": 8.954,
@@ -9518,6 +9537,31 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [
+        "anomaly_forces_time_theorem",
+        "single_axiom_hilbert_note",
+        "single_axiom_information_note",
+        "light_cone_framing_note",
+        "causal_field_canonical_chain_note",
+        "cpt_exact_note",
+        "frontier_extension_lane_opening_note_2026-04-25"
+      ],
+      "direct_in_degree": 9,
+      "load_bearing_score": 11.443,
+      "note_path": "docs/CHRONOLOGY_PROTECTION_OPERATIONAL_NO_PAST_SIGNALING_THEOREM_NOTE_2026-04-25.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_chronology_operational_no_past_signaling.py",
+      "transitive_descendants": 122
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "ckm_barred_pedoe_similarity_deficit_closed_form_theorem_note_2026-04-25",
       "criticality": "high",
       "criticality_rank": 2,
@@ -9680,31 +9724,6 @@
       "note_path": "docs/SU2_WEAK_BETA_COEFFICIENT_STRUCTURAL_CLOSED_FORM_THEOREM_NOTE_2026-04-26.md",
       "ready": false,
       "runner_path": "scripts/frontier_su2_weak_beta_coefficient_structural_closed_form.py",
-      "transitive_descendants": 122
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "anomaly_forces_time_theorem",
-        "single_axiom_hilbert_note",
-        "single_axiom_information_note",
-        "light_cone_framing_note",
-        "causal_field_canonical_chain_note",
-        "cpt_exact_note",
-        "frontier_extension_lane_opening_note_2026-04-25"
-      ],
-      "direct_in_degree": 8,
-      "load_bearing_score": 10.943,
-      "note_path": "docs/CHRONOLOGY_PROTECTION_OPERATIONAL_NO_PAST_SIGNALING_THEOREM_NOTE_2026-04-25.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_chronology_operational_no_past_signaling.py",
       "transitive_descendants": 122
     },
     {
@@ -10283,6 +10302,7 @@
         "anomaly_forces_time_theorem",
         "chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25",
         "frontier_extension_lane_opening_note_2026-04-25",
+        "signed_gravity_response_lane_status_note_2026-04-26",
         "background_independence_note",
         "generation_axiom_boundary_note",
         "physical_lattice_necessity_note",
@@ -12637,6 +12657,7 @@
         "higgs_mass_derived_note",
         "higgs_mass_retention_analysis_note_2026-04-18",
         "taste_scalar_isotropy_theorem_note",
+        "signed_gravity_response_lane_status_note_2026-04-26",
         "charged_lepton_mass_hierarchy_review_note_2026-04-17",
         "charged_lepton_koide_cone_algebraic_equivalence_note",
         "hw1_second_order_return_shape_theorem_note",
@@ -13900,6 +13921,7 @@
         "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25",
         "koide_q_so2_phase_erasure_support_note_2026-04-25",
         "chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25",
+        "signed_gravity_response_lane_status_note_2026-04-26",
         "w_mass_derived_note",
         "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
         "neutrino_retained_status_note_2026-04-16",
@@ -15753,6 +15775,7 @@
         "lanes.active_working_lanes_2026-04-26",
         "frontier_extension_lane_opening_note_2026-04-25",
         "chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25",
+        "signed_gravity_response_lane_status_note_2026-04-26",
         "lanes.open_science.readme",
         "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
         "atomic_rydberg_dependency_firewall_note_2026-04-27",
@@ -15868,6 +15891,8 @@
         "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
         "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26",
         "frontier_extension_lane_opening_note_2026-04-25",
+        "chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25",
+        "signed_gravity_response_lane_status_note_2026-04-26",
         "ai_methodology.readme",
         "ai_methodology.methodology_paper_draft_2026-04-25",
         "ai_methodology.raw.readme",
@@ -26443,7 +26468,8 @@
       "current_status": "unknown",
       "deps": [
         "work_history.repo.backlog.nature_backlog_2026-04-10",
-        "moonshot_frontier_portfolio_note"
+        "moonshot_frontier_portfolio_note",
+        "signed_gravity_response_lane_status_note_2026-04-26"
       ],
       "direct_in_degree": 1,
       "load_bearing_score": 2.085,
@@ -27988,6 +28014,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 942,
-  "total_pending": 1357
+  "ready_count": 943,
+  "total_pending": 1358
 }

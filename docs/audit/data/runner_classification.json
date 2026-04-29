@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T03:48:10.742988+00:00",
+  "generated_at": "2026-04-29T03:51:33.430897+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -7176,6 +7176,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "frontier_axioms_16card.py"
+    },
+    "signed_gravity_response_lane_status_note_2026-04-26": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_signed_gravity_response_lane_status.py"
     },
     "single_axiom_hilbert_note": {
       "assert_count": 0,
@@ -17529,6 +17541,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_signed_gravity_response_lane_status.py": {
+      "assert_count": 1,
+      "claims": [
+        "signed_gravity_response_lane_status_note_2026-04-26"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_single_axiom_hilbert.py": {
       "assert_count": 0,
       "claims": [
@@ -18996,12 +19023,12 @@
     "dominant_class_distribution": {
       "A": 6,
       "B": 103,
-      "C": 335,
+      "C": 336,
       "D": 110,
       "none": 141
     },
-    "runners_classified": 695,
-    "runners_with_C": 414,
+    "runners_classified": 696,
+    "runners_with_C": 415,
     "runners_with_D": 186
   }
 }
