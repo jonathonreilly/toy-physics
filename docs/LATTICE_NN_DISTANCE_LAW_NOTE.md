@@ -1,8 +1,7 @@
 # NN Lattice Distance-Law Note
 
-**Date:** 2026-04-03  
-**Status:** proposed_retained distance-law signal on the refinement path inherited from the
-Born-clean NN branch, with a sign caveat
+**Date:** 2026-04-03 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded conditional distance-law signal on the refinement path — live distance-law numbers reproduce in the runner, but the path is inherited from an upstream Born-clean NN branch whose note is not audit-clean; archived logs named by the source are absent from this worktree; the distance runner does not check Born or `k = 0`. Not a tier-ratifiable Born-safe refinement-path theorem.
 
 This note freezes the nearest-neighbor lattice distance-law probe.
 It answers a narrow question:
@@ -110,3 +109,30 @@ Use this wording:
 
 Do **not** overstate this as a full continuum theorem or as a universal
 attraction law across all `b`.
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, leaf criticality):
+
+> Issue: the source's live distance-law numbers reproduce, but the
+> retained claim is explicitly on a refinement path inherited from
+> an upstream Born-clean NN branch whose note is not audit-clean;
+> the archived logs named by the source are also absent from this
+> worktree, and the distance runner does not check Born or k=0.
+
+## What this note does NOT claim
+
+- A tier-ratifiable Born-safe refinement-path theorem.
+- That the upstream Born-clean NN branch is audit-clean.
+- That the runner checks Born or `k = 0` (it does not).
+- That the cited archived logs are present in the worktree (they
+  are absent).
+
+## What would close this lane (Path A future work)
+
+A retained Born-safe refinement-path result would require:
+
+1. Independently audit-clean upstream NN branch refinement controls.
+2. Archived logs registered in `logs/`.
+3. A runner that checks Born and `k = 0` alongside the distance-law
+   fit.
