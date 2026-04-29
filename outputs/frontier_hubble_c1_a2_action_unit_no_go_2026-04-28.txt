@@ -1,0 +1,41 @@
+==============================================================================
+LANE 5 (C1) GATE — A2 g_bare=1 ACTION-UNIT NO-GO RUNNER
+==============================================================================
+
+Question: does retained g_bare = 1 (axiom 4 of A_min) plus
+retained Cl(3) -> SU(2) gauge structure plus the lattice unit
+`a` fix an absolute action quantum kappa on P_A H_cell, breaking
+the (S, kappa) rescaling degeneracy?
+
+[PASS] baseline amplitude is well-defined on P_A H_cell: |<psi1|U|psi0>| = 0.538286
+[PASS] amplitudes are invariant under (S, kappa) -> (lambda S, lambda kappa): max |amp - base| = 5.12e-16
+[PASS] amplitudes are invariant under (H, t) -> (lambda H, t / lambda): max |amp - base| = 6.47e-16
+[PASS] scalar action shift acts only as a global U(1) phase on amplitudes: |amp_shifted - exp(-i a t/kappa) base| = 5.93e-16
+[PASS] trace of any finite-rank commutator vanishes: |Tr [X, P]| = 4.44e-16
+[PASS] finite Hilbert block cannot realise [X, P] = i kappa I_4 for kappa != 0: Tr (i kappa I_4) = 4 i kappa != 0 for kappa != 0
+[PASS] absolute kappa is not fixed by H alone: amplitude varies with kappa: varying kappa with (H, t) fixed produces distinct amplitudes
+[PASS] g_bare = 1 alone does not constrain absolute kappa on P_A H_cell: g_bare is a dimensionless gauge-coupling normalization; not coupled to kappa in finite Hilbert flow
+[PASS] primitive trace on P_A reproduces c_cell = 1/4: c_cell = Tr (rho_cell P_A) = 0.250000
+[PASS] Gauss-flux source-unit identification pins lambda = 1: lambda = 4 c_cell = 1.000000
+[PASS] Gauss-flux identification is conditional on Clifford phase bridge: c_cell = 1/(4 G_lambda) reads c_cell as physical Newton coefficient -- requires the conditional Clifford phase bridge
+[PASS] Clifford phase bridge requires (G1) edge-statistics on P_A H_cell: PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md conditions the bridge on metric-compatible Cl/CAR coframe response
+[PASS] (G1) was shown in Cycle 2 not to follow from axiom 3 alone: HUBBLE_LANE5_C1_A1_GRASSMANN_NO_GO_NOTE_2026-04-28.md (A1 no-go)
+[PASS] axiom 4 alone does not break (S, kappa) rescaling on P_A H_cell: g_bare = 1 fixes dimensionless gauge coupling but not absolute action quantum
+[PASS] the only on-package route to break (S, kappa) is conditional on (G1): Gauss-flux source-unit theorem requires Clifford phase bridge requires (G1)
+[PASS] A2 attack frame is structurally falsified on A_min alone: (G2) cannot be closed by axiom 4 without (G1); A1 (G1) no-go from Cycle 2 propagates to A2
+
+==============================================================================
+SUMMARY: PASS=16  FAIL=0
+==============================================================================
+
+Verdict: A2 g_bare=1-action-unit attack frame cannot close (G2)
+on A_min alone.  Axiom 4 fixes a dimensionless gauge coupling but
+not the absolute action quantum kappa on P_A H_cell.  The only
+on-package route to break the (S, kappa) rescaling degeneracy is
+the Gauss-flux source-unit identification c_cell = 1/(4 G_lambda),
+which is conditional on the Clifford phase bridge -- conditional
+on (G1), shown in Cycle 2 not to follow from axiom 3 alone.
+
+Implication: (G1) and (G2) are coupled.  No independent A2 closure
+on A_min.  Cycle 4 must turn to A4 (parity-gate) on (G1); if A4
+fails, A5 (minimal-carrier-axiom audit) is the honest closeout.

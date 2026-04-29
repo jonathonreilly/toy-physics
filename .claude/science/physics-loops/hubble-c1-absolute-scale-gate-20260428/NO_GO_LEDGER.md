@@ -35,6 +35,20 @@
   closes a Clifford-Majorana algebra on the rank-four block. `P_A` is
   not a Clifford-module morphism for any bulk-axiom-3 action.
 
+- **A2 g_bare=1 ⇒ action-unit on `P_A H_cell`** — Cycle 3,
+  `HUBBLE_LANE5_C1_A2_ACTION_UNIT_NO_GO_NOTE_2026-04-28.md`. Amplitudes
+  on `V = P_A H_cell` are invariant under `(S, κ) → (λ S, λ κ)` for
+  every Hermitian `H` and every `λ > 0`. Setting `g_bare = 1` (axiom
+  4 of `A_min`) is a dimensionless gauge-coupling normalization that
+  does not couple to the absolute action quantum `κ` in finite
+  Hilbert/unitary flow. The only on-package route to break the `(S,
+  κ)` rescaling degeneracy is the Gauss-flux source-unit identification
+  `c_cell = 1/(4 G_λ)` of
+  `PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md`,
+  which is conditional on the Clifford phase bridge — conditional on
+  `(G1)`. The Cycle-2 `A1` no-go therefore propagates to `A2`. `(G1)`
+  and `(G2)` are coupled.
+
 ## Implications
 
 - `A3` (combined `A1`+`A2` consolidation) is removed from the plan.
@@ -47,3 +61,6 @@
   Clifford-Majorana algebra on the 4-dim `P_A H_cell` block
   intrinsically — i.e., via a structural mechanism that is not
   bulk-projection.
+- `(G1)` and `(G2)` are coupled via the Gauss-flux source-unit
+  identification. Closing `(G2)` requires closing `(G1)` first.
+  Direct attacks on `(G2)` independent of `(G1)` are blocked.
