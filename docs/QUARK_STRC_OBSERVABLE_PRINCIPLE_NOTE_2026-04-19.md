@@ -2,12 +2,8 @@
 
 **Date:** 2026-04-19
 **Lane:** Quark up-amplitude LO-balance.
-**Status:** **SUPERSEDED.** This note records the earlier "proposed_retained
-observable principle" framing of STRC-LO. STRC-LO is now derived as a
-theorem from the exact one-dimensional 5-channel residue on the retained
-`1⊕5` carrier; see
-`docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md` for the derivation.
-This note is retained as route-history only and should not be cited as
+**Status:** support / route-history note (status line rephrased 2026-04-28 per audit-lane verdict). **SUPERSEDED** by the explicit derivation in `docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`. This note records the earlier observable-principle framing of STRC-LO and should not be cited as the primary source for the STRC-LO relation.
+This note is kept as route-history only and should not be cited as
 the primary STRC source.
 **Primary runner:** `scripts/frontier_quark_strc_observable_principle.py`
 (PASS=19 FAIL=0) — verifies the STRC identity and its implications,
@@ -342,3 +338,34 @@ theorem.
 - No retained no-go regression.
 
 Expected: PASS=19 FAIL=0.
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: The proposed-retained claim is a superseded route-history
+> observable-principle framing, and its runner hard-codes
+> `a_u_LO = sin_d * (1 - rho)` before verifying STRC and RPSR
+> identities. Why this blocks: finite rule-outs of several candidate
+> sources plus algebraic consequences of an assumed relation do not
+> derive the STRC relation or justify retaining this note as the
+> primary source, and the note itself directs readers to a separate
+> collinearity theorem for derivation.
+
+The note has been re-tiered to `support` (route-history). Readers
+should cite `docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
+for the STRC-LO derivation.
+
+## What this note does NOT claim
+
+- A derivation of STRC-LO. The runner assumes
+  `a_u_LO = sin_d * (1 - rho)` rather than deriving it; the genuine
+  derivation is in the separate collinearity theorem note.
+- A primary-source role for the STRC-LO relation.
+- A retained observable-principle status — that framing is superseded.
+
+## What would close this lane (Path A future work)
+
+Not applicable: the derived theorem already exists in
+`docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`. This note is
+preserved only as route-history support.
