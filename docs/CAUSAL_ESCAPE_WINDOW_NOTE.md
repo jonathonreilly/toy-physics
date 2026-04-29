@@ -1,7 +1,7 @@
-# Causal-Escape Window: Qualitative Regime
+# Causal-Escape Window: Qualitative Regime (Conditional)
 
-**Date:** 2026-04-06
-**Status:** proposed_retained positive — escape regime exists but mechanism is exposure reduction, not irreducible cone geometry
+**Date:** 2026-04-06 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded conditional finite-window diagnostic at `eta = 20` on the listed seeds — escape regime exists in the registered runner output, but the broader mechanism / boundary package (exposure-matched static escape, `c_crit` / `eta_max` / s-dependence tables, four-seed robustness gate) is not computed by the runner. Not a tier-ratifiable causal-escape theorem.
 
 ## Artifact chain
 
@@ -125,3 +125,30 @@ This does NOT claim:
 - Equivalence to black hole escape physics
 - A specific physical trap geometry
 - Self-consistency of the field (the cone is imposed)
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, leaf criticality):
+
+> Issue: the headline causal escape window replays, but the retained
+> mechanism and boundary package goes beyond the current runner:
+> exposure-matched static escape is printed as a note rather than
+> computed, the `c_crit` / `eta_max` / s-dependence tables are not
+> replayed, and the listed four-seed robustness gate is not present
+> in the live script.
+
+## What this note does NOT claim
+
+- A tier-ratifiable causal-escape window theorem.
+- That exposure-matched static escape, `c_crit` / `eta_max` / s
+  tables, or the four-seed robustness gate are computed by the
+  registered runner.
+- An audit-clean determination of mechanism (exposure reduction vs
+  cone geometry).
+
+## What would close this lane (Path A future work)
+
+A retained causal-escape window theorem would require a runner that
+computes exposure-matched static escape, the `c_crit` / `eta_max` /
+s-dependence tables, and the four-seed robustness gate, with
+mechanism distinguishing assertions wired in.
