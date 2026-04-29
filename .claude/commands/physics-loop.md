@@ -7,7 +7,7 @@ Run the repo-native physics loop skill from:
 ## Invocation
 
 ```text
-/physics-loop "<science goal>" [--mode plan|run|resume|status] [--runtime DURATION] [--target STATUS] [--literature] [--max-cycles N] [--deep-block DURATION] [--no-pr]
+/physics-loop "<science goal>" [--mode plan|run|resume|status|campaign] [--runtime DURATION] [--target STATUS] [--literature] [--max-cycles N] [--deep-block DURATION] [--no-pr]
 ```
 
 Examples:
@@ -15,8 +15,12 @@ Examples:
 ```text
 /physics-loop "retire the DM/leptogenesis 16v support import" --mode plan
 /physics-loop "close the Koide Q bridge or prove the next no-go" --mode run --literature --runtime 12h
+/physics-loop "work the best open science opportunities" --mode campaign --runtime 12h --target best-honest-status
 /physics-loop --mode resume --loop dm-leptogenesis-16v
 ```
+
+Infer `--mode campaign` for overnight, unattended, long-running, or 12-hour
+execution requests even when the user says only `run`.
 
 ## Required Behavior
 
@@ -37,25 +41,48 @@ Examples:
    claim state, retire an import, close a blocker, prove a no-go, create a
    decisive artifact, or make a recorded first-principles stretch attempt on a
    named hard residual.
-8. Checkpoint `STATE.yaml` and `HANDOFF.md` throughout unattended work.
-9. After two audit/no-go/blocker cycles in a row, run a stretch attempt before
-   declaring stop. If stuck, fan out 3-5 orthogonal premises before stopping.
-10. Run `review-loop` after each major artifact unless explicitly disabled.
-11. At loop end, open or prepare one review PR per coherent science block
-    unless `--no-pr` was supplied.
-12. Keep science runs science-only. Record proposed repo weaving in
+8. For unattended runs longer than one major cycle, build
+   `OPPORTUNITY_QUEUE.md` and keep selecting the next ranked retained-positive
+   opportunity until runtime/max cycles expires or the refreshed queue is
+   globally exhausted.
+9. Write `CLAIM_STATUS_CERTIFICATE.md` for each science block. Do not use
+   retained language unless the certificate explicitly allows it; demote
+   branch-local, conditional, same-surface, admitted-observation, or Axiom*
+   consequences to the narrowest honest status.
+10. Checkpoint `STATE.yaml` and `HANDOFF.md` throughout unattended work.
+11. After two audit/no-go/blocker cycles in a row, run a stretch attempt before
+   declaring a route blocked. If stuck, fan out 3-5 orthogonal premises before
+   declaring global queue exhaustion.
+12. Run `review-loop` after each major artifact unless explicitly disabled.
+   Treat review demotions/blockers as block-level demotion/pivot events, not
+   campaign stops.
+13. At each coherent science-block closure, open or prepare one review PR
+    unless `--no-pr` was supplied; do not wait until the 12-hour campaign ends
+    if the block is already coherent.
+14. Keep science runs science-only. Record proposed repo weaving in
    `HANDOFF.md`; do not update repo-wide authority surfaces until later review
    and backpressure integration.
+
+## Campaign Rule
+
+If the user asks for a 12-hour unattended run, do not exit early just because a
+lane hits a no-go, support-only boundary, human-judgment blocker, failed
+retained certificate, dirty PR, or missing GitHub auth. Checkpoint/demote or
+backlog the current block, refresh the opportunity queue, and continue on the
+next science target. Stop early only for runtime/max-cycle exhaustion, unsafe
+worktree/lock conflict, or documented global queue exhaustion.
 
 ## Non-Negotiables
 
 - No hidden fitted values, selectors, observations, normalizations, or
   literature imports.
 - No Nature-grade or retained closure language without decisive artifact
-  support and review-loop backpressure.
+  support, a passing retained certificate, and review-loop backpressure.
 - Do not re-open prior no-go routes unless a new premise is named.
 - Do not run low-value churn: more prose, nearby scripts, or repeated wording
   passes are not major loop progress.
+- Do not write `retained branch-local`, `proposed_retained`, or
+  hypothetical/Axiom* consequences as retained on the actual current surface.
 - Push only dedicated science block branches. Do not push science work to
   `main`, merge PRs, or open PRs without enough review surface for
   `review-loop`.

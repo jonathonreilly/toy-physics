@@ -11,15 +11,31 @@ no-go, add a decisive artifact, or isolate the remaining Nature-grade blocker.
 
 This skill is not a bigger `/autopilot` and not a factory for easy audit
 artifacts. It is a claim-state machine for hard physics. It must spend real
-time on named hard residuals before stopping, and it must leave reviewable PRs
-for the backlog.
+time on named hard residuals before a route can be declared blocked or the
+campaign can end, and it must leave reviewable PRs for the backlog.
+
+When launched for a long unattended run, the default posture is a **campaign**:
+keep working until the runtime or max-cycle budget is exhausted. If one route
+or lane hits an honest stop, checkpoint it, select the next ranked science
+opportunity from the repo, and continue. Do not stop the whole campaign merely
+because the first target ends in a no-go, support-only boundary, or
+human-judgment blocker.
+
+For a request like "run for 12 hours unattended", treat the runtime as a work
+budget, not a maximum that can be abandoned after the first clean stop. The
+agent should spend the allotted time unless a global safety/tooling condition
+makes safe continuation impossible. Per-route blockers, review demotions,
+dirty PRs, missing retained proof, unavailable optional literature, or failed
+PR creation are not global stop conditions; they trigger demotion/backlog,
+checkpoint, and pivot.
 
 ## Arguments
 
 Parse:
 
 - goal/problem text: required unless running `status` or `resume`;
-- `--mode plan|run|resume|status`: optional, infer from the user request;
+- `--mode plan|run|resume|status|campaign`: optional, infer from the user
+  request;
 - `--runtime DURATION`: optional unattended runtime such as `45m`, `2h`, or
   `6h`;
 - `--target retained|exact-support|bounded-support|no-go|best-honest-status`:
@@ -31,7 +47,7 @@ Parse:
 - `--checkpoint-interval DURATION`: optional, default `30m`;
 - `--deep-block DURATION`: optional sustained hard-problem block, default
   `90m`;
-- `--no-pr`: do not open end-of-loop review PRs;
+- `--no-pr`: do not open review PRs;
 - `--no-review-loop`: skip milestone `/review-loop` only if the user asked;
 - `--no-commit`: do not create commits.
 
@@ -39,10 +55,18 @@ If `--runtime` is absent and the user wants execution, ask how long to run
 before launching unattended work. Do not assume a fixed default. If the user
 only asks for planning, produce the plan without asking for runtime.
 
+Infer `--mode campaign` when the user asks for an overnight, unattended,
+long-running, or 12-hour run, even if the user says only `run`. A campaign
+keeps selecting science blocks until the runtime/max-cycle budget or global
+queue exhaustion condition is reached.
+
 ## Science Delivery And PR Policy
 
-For science loops, execute on clean remote branches and open review PRs at the
-end. Do not merge those PRs and do not push science work directly to `main`.
+For science loops, execute on clean remote branches and open review PRs for
+each coherent block. Do not merge those PRs and do not push science work
+directly to `main`.
+No supervisor prompt may override this by telling the worker not to open PRs
+unless the user explicitly supplied `--no-pr`.
 
 - Start science execution from current `origin/main` after `git fetch origin`.
 - Use a dedicated branch namespace such as `physics-loop/<slug>-YYYYMMDD`.
@@ -55,9 +79,16 @@ end. Do not merge those PRs and do not push science work directly to `main`.
   base is the prior block branch. If independent, base it on `main`.
 - Commit coherent science artifacts to the block branch and push it to
   `origin`.
-- At the end of the loop, unless `--no-pr` was supplied, open one review PR per
-  science block. Use `gh pr create` when authenticated; otherwise write
-  `PR_BACKLOG.md` with exact commands and reasons PR creation failed.
+- At each science-block closure, unless `--no-pr` was supplied, open one review
+  PR for that block before pivoting to the next opportunity. Use
+  `gh pr create` when authenticated; otherwise write `PR_BACKLOG.md` with
+  exact commands and reasons PR creation failed.
+- After opening a PR, verify it with `gh pr view` or `gh pr list`. If the PR is
+  dirty against its intended base, update the branch or explicitly mark it as
+  stacked in the PR body and `HANDOFF.md`.
+- If PR creation or verification fails for network/auth reasons, write a
+  complete `PR_BACKLOG.md` and continue the campaign if runtime remains.
+  Missing GitHub access is a delivery degradation, not a science stop.
 - PR titles must include `[physics-loop]`, the lane/block slug, and the honest
   status (`retained`, `exact-support`, `bounded-support`, `no-go`, `open`, or
   `demotion`).
@@ -90,9 +121,11 @@ Create or update a durable pack under:
   GOAL.md
   ASSUMPTIONS_AND_IMPORTS.md
   ROUTE_PORTFOLIO.md
+  OPPORTUNITY_QUEUE.md
   NO_GO_LEDGER.md
   LITERATURE_BRIDGES.md
   ARTIFACT_PLAN.md
+  CLAIM_STATUS_CERTIFICATE.md
   REVIEW_HISTORY.md
   HANDOFF.md
   PR_BACKLOG.md
@@ -105,6 +138,112 @@ Use `STATE.yaml` as the resume surface: current goal, target status, runtime,
 cycle/block count, active route, hard residual being attacked, files touched,
 open imports, no-go routes, review findings, PR status, next exact action, and
 stop condition.
+
+Use `OPPORTUNITY_QUEUE.md` in campaign mode. It must rank candidate science
+targets by:
+
+- retained-positive probability;
+- missing-import count;
+- runner/test availability;
+- review landability;
+- blast radius and branch size;
+- whether the target is independent of the just-blocked lane.
+
+Use `CLAIM_STATUS_CERTIFICATE.md` for every science block. It must record the
+actual current-surface status, any conditional/hypothetical status, dependency
+classes, open imports, review-loop disposition, and whether `retained` wording
+is allowed in the PR title/body/status lines.
+
+## Claim-Status Firewalls
+
+The loop must separate actual current-surface status from conditional or
+hypothetical status.
+
+Every theorem/support/no-go note and every loop `STATE.yaml` checkpoint must
+state the narrowest status using the controlled vocabulary. When a result
+depends on a new axiom, same-surface family, observational admission, fitted
+selector, admitted unit convention, or human judgment, the actual current
+surface status is **not** `retained`.
+
+Required status fields for major artifacts:
+
+```yaml
+actual_current_surface_status: open|no-go|exact-support|bounded-support|conditional-support|demotion|retained
+conditional_surface_status: null|...
+hypothetical_axiom_status: null|...
+admitted_observation_status: null|...
+retained_allowed: true|false
+retained_allowed_reason: "..."
+```
+
+Hard wording bans unless the retained certificate explicitly allows them:
+
+- `retained branch-local`
+- `proposed_retained`
+- `would become retained`
+- `promoted to retained`
+- `retained on the actual surface` when a required premise is conditional,
+  hypothetical, admitted, fitted, or human-judgment-only.
+
+Allowed replacements include `exact negative boundary`, `exact support`,
+`bounded support`, `conditional / support`, `open`, `demotion`, and
+`hypothetical consequence map`. If the artifact maps what would follow from an
+unadopted axiom, every table and runner summary must say "conditional on
+accepted new axiom; not retained on the actual current surface."
+
+## Retained Closure Certificate
+
+`retained` is a protected status. A PR, note, runner, or status line may use it
+only after all of these are true:
+
+1. `CLAIM_STATUS_CERTIFICATE.md` says `retained_allowed: true`.
+2. No open imports remain for the claimed target.
+3. No observed target values, fitted selectors, admitted unit conventions, or
+   literature values are load-bearing proof inputs.
+4. Every dependency is retained, a retained corollary, or explicitly allowed
+   exact support on the current authority surface.
+5. A runner or proof artifact checks dependency classes, not only numerical
+   output.
+6. Review-loop disposition is `pass`; `pending`, `passed_with_notes`,
+   `demote`, or `block` cannot certify retained closure.
+
+If any item fails, use `open`, `exact-support`, `bounded-support`,
+`conditional-support`, `no-go`, or `demotion` instead.
+
+## Campaign Continuation Policy
+
+Long unattended runs must continue through local stops.
+
+Nonfatal events that must **not** end a campaign while runtime remains:
+
+- a route produces a no-go, exact negative boundary, demotion, or blocker;
+- review-loop returns `demote` or `block` for the current artifact;
+- retained certification fails;
+- a PR is dirty, stacked, or cannot be opened because of GitHub/network auth;
+- a lane reaches a human-judgment premise;
+- optional literature access is unavailable for one route;
+- the repo automation lock is unavailable but a branch-local supervisor lock
+  can still prevent duplicate work.
+
+Required response to a nonfatal event:
+
+1. demote or archive the current artifact honestly;
+2. checkpoint `STATE.yaml`, `HANDOFF.md`, `REVIEW_HISTORY.md`, and
+   `CLAIM_STATUS_CERTIFICATE.md`;
+3. commit/push/open PR or write `PR_BACKLOG.md` for the coherent block;
+4. refresh `OPPORTUNITY_QUEUE.md`;
+5. choose the next highest-ranked retained-positive opportunity and continue.
+
+Global stop is allowed only when:
+
+- runtime or max cycles is exhausted;
+- the worktree/repo changes externally in a way that makes safe continuation
+  impossible;
+- required core tooling for all viable routes is unavailable;
+- a lock conflict means another active worker owns the same repo/task and no
+  clean independent worktree can be created;
+- the refreshed opportunity queue proves every viable target is blocked and no
+  independent retained-positive candidate remains.
 
 ## Required Grounding
 
@@ -138,31 +277,52 @@ For publication-facing or quantitative work, also inspect
 5. **Generate route portfolio.** Produce several independent routes and score
    them by likely claim-state movement. See
    [`references/route-patterns.md`](references/route-patterns.md).
-6. **Apply the dramatic-step gate.** Execute only routes that can change the
+6. **Build the opportunity queue.** In campaign mode or unattended runs longer
+   than one major cycle, create `OPPORTUNITY_QUEUE.md` and keep at least three
+   ranked science opportunities unless the repo has fewer viable open targets.
+   Prefer retained-positive opportunities over more audit churn after one or
+   two no-go/support-only cycles.
+7. **Apply the dramatic-step gate.** Execute only routes that can change the
    lane state: import retired, exact support added, no-go proven, major blocker
    isolated, or novel structure introduced with a falsifier.
-7. **Execute one major cycle.** Produce a theorem note, runner/log pair,
+8. **Execute one major cycle.** Produce a theorem note, runner/log pair,
    import-retirement audit, literature bridge, no-go packet, or demotion
    packet. Keep edits scoped to the chosen route.
-8. **Run deep-work pressure when stuck.** If the last two cycles were
+9. **Run deep-work pressure when stuck.** If the last two cycles were
    audit/no-go/blocker-isolation outputs, or if no easy route passes the gate,
-   run a stretch-attempt cycle before any stop. See **Deep Work Rules** below.
-9. **Checkpoint.** Update `STATE.yaml` and `HANDOFF.md` at least every
+   run a stretch-attempt cycle before declaring the active route blocked. See
+   **Deep Work Rules** below.
+10. **Certify status.** Before committing a block, write or update
+    `CLAIM_STATUS_CERTIFICATE.md`. Demote any title, status line, table row,
+    runner printout, or handoff sentence that fails the retained certificate.
+11. **Checkpoint.** Update `STATE.yaml` and `HANDOFF.md` at least every
    checkpoint interval, before long scripts, after long scripts, and before
-   stopping.
-10. **Review at milestones.** After each major artifact, run the `review-loop`
+   any authorized campaign stop.
+12. **Review at milestones.** After each major artifact, run the `review-loop`
    skill unless disabled. In science-run mode, record findings in branch-local
    `REVIEW_HISTORY.md` and `HANDOFF.md`; do not update the live active review
    queue or other repo-wide authority surfaces before the later review and
-   integration process. Either fix locally, demote locally, archive locally, or
-   select a new route.
-11. **Close the cycle honestly.** Use the narrowest honest status inside the
+   integration process. The local disposition must be one of `pass`, `demote`,
+   or `block`; `self-review pending` is not enough to push a PR. Either fix
+   locally, demote locally, archive locally, or select a new route.
+13. **Close the cycle honestly.** Use the narrowest honest status inside the
     branch artifacts: retained, exact support, bounded support, open, no-go,
     reject, or historical. Do not patch a missing theorem step with prose. Put
     any proposed repo-wide weaving in `HANDOFF.md` for later review and
     backpressure integration.
-12. **Open review PRs.** At loop end, open or prepare one PR per science block
-    unless `--no-pr` was supplied.
+14. **Open review PRs.** At each block closure, open or prepare one PR for the
+    coherent science block unless `--no-pr` was supplied. In campaign mode,
+    a missing PR must become `PR_BACKLOG.md` and the campaign must continue if
+    runtime remains.
+15. **Continue the campaign or stop.** After PR/backlog handling, if runtime
+    remains and the current lane is blocked or closed, pick the next
+    `OPPORTUNITY_QUEUE.md` item and continue. Stop the whole campaign only
+    when runtime/max cycles expires, the target status is genuinely achieved
+    and no further campaign target was requested, or the queue has been freshly
+    scanned and every viable opportunity is blocked by human judgment/tooling.
+    In campaign mode, even successful retained closure of one target is a
+    checkpoint, not a stop, unless no further target was requested or no viable
+    next opportunity exists.
 
 ## Deep Work Rules
 
@@ -172,6 +332,10 @@ routes are risky.
 - **Audit quota:** after two consecutive cycles whose main output is a no-go,
   demotion, dependency firewall, or blocker-isolation artifact, the next cycle
   must be a stretch attempt on a named hard residual.
+- **Positive-retention pivot:** after a stretch attempt and one no-go/support
+  cycle on the same lane, campaign mode must check the opportunity queue and
+  prefer a different retained-positive candidate unless the current lane has a
+  concrete next route with higher retained-positive probability.
 - **Stretch attempt:** choose one blocker from `STATE.yaml` or `HANDOFF.md` and
   work it from minimal repo primitives for at least one `--deep-block`
   interval when runtime allows. A valid output may be partial structure,
@@ -191,7 +355,12 @@ routes are risky.
   attempts are preferred over several shallow audit cycles.
 - **No shallow stop:** after the most recent blocker, do not stop until at
   least one stretch attempt and one stuck fan-out synthesis have been recorded,
-  unless runtime is exhausted or tooling fails.
+  unless runtime is exhausted or required core tooling fails for every viable
+  queued route.
+- **No all-lane stop without queue evidence:** do not create a global stop
+  marker such as `STOP_ALL_LANES_REQUESTED` unless `OPPORTUNITY_QUEUE.md` was
+  refreshed in the same checkpoint and records why each viable next target is
+  blocked.
 - **No-churn exception:** an honest first-principles attempt with named
   obstructions is valid progress even without closure. This exception does not
   allow vague prose, unverified algebra, or unsupported status promotion.
@@ -215,10 +384,12 @@ In short:
 - avoid mid-run questions;
 - checkpoint enough state that another agent can resume;
 - refresh the lock before it expires;
-- stop cleanly when runtime, max cycles, review blockers, or claim closure
-  dictate;
+- continue to the next ranked opportunity when one lane blocks and runtime
+  remains;
+- stop cleanly only when runtime, max cycles, global queue exhaustion, or a
+  global safety/tooling condition dictates;
 - push only dedicated science block branches;
-- open or prepare one review PR per science block at the end;
+- open or prepare one review PR per science block at block closure;
 - never push science work to `main`.
 
 ## Stop Conditions
@@ -226,12 +397,16 @@ In short:
 Stop and write a clear `HANDOFF.md` when:
 
 - runtime or max cycles is reached;
-- no route passes the dramatic-step gate **after** the Deep Work Rules have
-  been satisfied;
-- review-loop finds a blocker that requires human science judgment;
+- no route in the refreshed opportunity queue passes the dramatic-step gate
+  **after** the Deep Work Rules have been satisfied for the active target;
 - the worktree changes externally in a way that affects the route;
-- the target status is honestly achieved;
-- required network/literature/tool access is unavailable.
+- the requested target status is honestly achieved and the user did not ask for
+  a continuing campaign;
+- required core tooling for every viable queued route is unavailable.
+
+Do not stop solely because review-loop finds a blocker, retained certification
+fails, PR creation fails, or one lane needs human science judgment. Demote or
+backlog that block and pivot.
 
 ## Final Report
 
