@@ -1,7 +1,7 @@
-# Off-Scaffold Held-Out Test of `free_coh` — DECISIVE NEGATIVE
+# Off-Scaffold Held-Out Test of `free_coh` — Bounded Conditional Negative
 
-**Date:** 2026-04-07
-**Status:** proposed_retained negative — the frozen rule `free_coh ≥ 7.96e-04` generalizes to only 5/9 = 55.6% on off-scaffold generators, matching the old node-level rule exactly. The grid scaffold was doing work the classifier was attributing to `free_coh`. The simple-classifier line of attack is now exhausted. A pre-committed structural pass/fail intuition hits 8/9 = 88.9%, suggesting the underlying physics is predictable — but not with a single node-level or single-global scalar metric.
+**Date:** 2026-04-07 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded conditional finite off-scaffold negative — the frozen rule `free_coh ≥ 7.96e-04` generalizes to only 5/9 on the nine hand-specified off-scaffold generators tested by the registered runner. The broader claim that no single node-level or global scalar metric carries the weight off-scaffold is not closed by the runner; it tests one frozen threshold against one two-property rule on a small held-out set. Not a tier-ratifiable simple-classifier exhaustion theorem.
 
 ## Artifact chain
 
@@ -177,3 +177,37 @@ It is either:
 > simple-classifier line of attack is exhausted. The next attack
 > target is matter/inertial closure or a direct analytic derivation
 > from the path-sum + S = L(1−f), not another metric search."
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, leaf criticality):
+
+> Issue: the runner and archived log support the finite off-scaffold
+> negative for the frozen `free_coh` threshold, but the source note
+> promotes that finite card to a decisive closure of the simple-
+> classifier line and a statement that no single node-level or global
+> scalar metric carries the weight off-scaffold. Why this blocks: the
+> allowed evidence tests one frozen `free_coh` threshold against one
+> old two-property rule on 9 hand-specified off-scaffold generators;
+> it does not constitute a theorem or exhaustive simple-classifier
+> exclusion.
+
+## What this note does NOT claim
+
+- A simple-classifier exhaustion theorem.
+- That no single node-level or global scalar metric carries the
+  weight off-scaffold (this requires testing more than one frozen
+  threshold against more than one rule).
+- That the 8/9 pre-committed structural pass/fail intuition is
+  itself a tier-ratifiable result.
+
+## What would close this lane (Path A future work)
+
+A retained simple-classifier exclusion theorem would require:
+
+1. A registered metric universe enumerating the candidate scalar
+   metrics being excluded.
+2. Tests against multiple frozen thresholds and multiple two-property
+   rules, not just one of each.
+3. A larger held-out generator set with declared sampling
+   methodology.
