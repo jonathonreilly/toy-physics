@@ -1,0 +1,90 @@
+==============================================================================
+Cl_4(C) CARRIER-AXIOM CONSEQUENCE MAP (CROSS-LANE)
+==============================================================================
+
+Conditional on adopting the irreducible Cl_4(C) module axiom on
+P_A H_cell (A5 option (i)), trace downstream consequences across
+lanes.
+
+------------------------------------------------------------------------------
+Lane 5: (C1) gate retention chain
+------------------------------------------------------------------------------
+[PASS] Axiom* ⇒ Clifford phase bridge promoted to retained: PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md conditional discharged
+[PASS] Clifford phase bridge + Gauss-flux ⇒ c_Widom = 1/4 retained: c_Widom = 0.25
+[PASS] Clifford phase bridge + Gauss-flux ⇒ G_Newton,lat = 1 retained: G_Newton,lat = 1.0
+[PASS] G_Newton,lat = 1 + c_cell = 1/4 ⇒ a/l_P = 1 retained: a/l_P = 1.0 ⇒ a^{-1} = M_Pl as derived numerical statement
+[PASS] a^{-1} = M_Pl + Λ = 3/R_Λ^2 ⇒ R_Λ becomes numerically retainable: R_Λ = c/H_inf with H_inf = c·sqrt(Λ/3); needs admitted Λ input (observational; ~ 1.1e-52 m^-2)
+[PASS] R_Λ retained ⇒ H_inf = c/R_Λ retained: structural identity inherited from retained surface
+[PASS] (C1) retention supplies one half of Lane 5 two-gate dependency: per HUBBLE_LANE5_COSMIC_HISTORY_RATIO_NECESSITY_NO_GO_NOTE_2026-04-26.md Lane 5 closure requires (C1) AND one of {(C2), (C3)}
+[PASS] (C1) + (C2) ⇒ H_0 retained (conditional on (C2) closure): (C2) eta-retirement gate is the parallel residual on Lane 5; not closed by Axiom*
+
+------------------------------------------------------------------------------
+Lane 4F: (T-4F-alpha-2) numerical retention chain
+------------------------------------------------------------------------------
+[PASS] H_0 retained (via Lane 5 (C1) + (C2)) ⇒ h = H_0/100 retained: h becomes numerically retainable; (T-4F-alpha-2) right-hand side becomes numerical at fixed (L, R, Omega_b, Omega_DM)
+[PASS] (T-4F-α-2) at retained h gives Sigma m_nu numerical conditional on admitted (L, R, Omega_b, Omega_DM): Sigma m_nu = (1 - L - R - Omega_b - Omega_DM) C_nu h^2 with h retained; uncertainty inherited from admitted-input ranges
+[PASS] framework Omega_DM bound vs. observation tension persists under Axiom*: Axiom* closes (G1) edge-statistics; does not affect DM thermal bound or its source-surface admitted-family conditional
+[PASS] Axiom* moves Sigma m_nu from full-open to h-retained-conditional: tension residue is now on (Omega_b, Omega_DM, L) admissions observational layer
+
+------------------------------------------------------------------------------
+Lane 1: gravity / area-law Target 2 retention chain
+------------------------------------------------------------------------------
+[PASS] Axiom* ⇒ parity-gate carrier theorem (Assumption 1 = Cl_4(C)/CAR) promoted to retained: AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md Assumption 1 satisfied by Axiom*
+[PASS] parity-gate carrier ⇒ c_Widom = 3/12 = 1/4 retained entanglement coefficient: <N_x> = 3 average crossing count + Widom-Gioev-Klich integral
+[PASS] Target 2 horizon-entropy carrier (c = 1/4) closed under Axiom*: structurally identical to step 2 above; consolidates Target 2
+
+------------------------------------------------------------------------------
+Planck lane retention chain
+------------------------------------------------------------------------------
+[PASS] Axiom* ⇒ all three Planck-lane targets retained: Target 1 (gravity/action unit-map), Target 2 (c=1/4 horizon entropy), Target 3 (information/action bridge) all collapsed to the conditional Clifford coframe response premise (PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md); Axiom* discharges the conditional
+
+------------------------------------------------------------------------------
+Lane 4D: Dirac global lift -- independent of Axiom*
+------------------------------------------------------------------------------
+[PASS] Lane 4D Dirac global lift is independent of Axiom*: NEUTRINO_DIRAC_GLOBAL_LIFT_CURRENT_AXIOM_SET_THEOREM_NOTE_2026-04-28.md uses Cl(3) bulk + leptogenesis cascade; not P_A H_cell-specific
+
+==============================================================================
+CROSS-LANE SYNTHESIS
+==============================================================================
+
+Consequences map (conditional on Axiom* adoption):
+  Lane 5 (C1): RETAINED (a/l_P = 1, a^-1 = M_Pl)
+  Lane 5 H_0: conditional on (C2) eta-retirement gate
+  Lane 4F Sigma m_nu numerical: h retained; conditional on observational (L, Omega_b, Omega_DM)
+  Lane 1 / Planck Targets 1-3: RETAINED (c_Widom = 1/4, G_Newton,lat = 1)
+  Lane 4D Dirac global lift: independent (already retained)
+  DM thermal bound vs observation: tension persists (~0.003 Omega_DM)
+
+[PASS] Axiom* adoption supplies major retention cascade across multiple lanes: Lane 5 (C1), Lane 1 / Planck Targets 1-3 retained; Sigma m_nu moves from full-open to h-retained-conditional
+[PASS] Axiom* does NOT close all open questions: (C2) eta-retirement, DM thermal bound vs observation, and observational (L, Omega_b) admissions remain open
+[PASS] Axiom* and (C2) are structurally INDEPENDENT residuals: (C2) eta-retirement gate concerns the right-sensitive 2-real Z_3 doublet-block point-selection law on dW_e^H = Schur_{E_e}(D_-); not P_A H_cell-related; not closed by Axiom*
+[PASS] minimal-axiom-extension closure for cosmology requires BOTH Axiom* AND (C2): Axiom* alone closes (C1) but not (C2); the framework's two-gate Hubble dependency requires both extensions
+
+==============================================================================
+SUMMARY: PASS=21  FAIL=0
+==============================================================================
+
+Verdict: Adopting the irreducible Cl_4(C) module axiom on P_A H_cell
+(Axiom*) discharges the metric-compatible Clifford coframe response
+conditional and supplies retention cascade across:
+
+  - Lane 5 (C1) absolute-scale gate (a/l_P = 1, a^-1 = M_Pl)
+  - Lane 1 / Planck Targets 1-3 (c_Widom = 1/4, G_Newton = 1)
+
+It moves Lane 4F Sigma m_nu from full-open to h-retained-conditional
+on observational (L, Omega_b, Omega_DM) admissions.
+
+It does NOT close:
+  - Lane 5 (C2) eta-retirement gate (independent residual)
+  - DM thermal bound vs observation tension (~0.003 Omega_DM)
+  - Lane 4F Sigma m_nu numerical retention (still observational)
+
+Implication: minimal-axiom-extension cosmology closure requires BOTH
+Axiom* (P_A H_cell Cl_4(C) carrier) AND a separate Lane 5 (C2) closure.
+These are structurally orthogonal residuals; Axiom* alone closes
+only the (C1) half of the two-gate Hubble dependency.
+
+The user's option (i) of the A5 audit's honest closure status is
+now mapped: adopting Axiom* would unlock substantial cosmology /
+Planck retention but does not eliminate all open Hubble-tier
+residuals.
