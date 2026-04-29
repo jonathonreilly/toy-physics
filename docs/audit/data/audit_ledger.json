@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-29T04:02:08.945534+00:00",
-  "generated_at": "2026-04-29T04:02:07.144686+00:00",
-  "invalidation_run_at": "2026-04-29T04:02:08.886654+00:00",
+  "effective_status_computed_at": "2026-04-29T04:02:42.160402+00:00",
+  "generated_at": "2026-04-29T04:02:40.252065+00:00",
+  "invalidation_run_at": "2026-04-29T04:02:42.102805+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-29T04:02:08.762230+00:00",
+  "load_bearing_computed_at": "2026-04-29T04:02:41.971730+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -92241,8 +92241,8 @@
   "schema_version": 1,
   "stats": {
     "dropped_missing_notes": 0,
-    "preserved_existing": 1653,
-    "re_audit_required": 1,
+    "preserved_existing": 1654,
+    "re_audit_required": 0,
     "row_count": 1654,
     "seeded_new": 0
   }
