@@ -315,3 +315,30 @@ Expected claim movement:
   metric/orientation/phase basis or dimensional action unit;
 - next route is a minimal carrier/metrology axiom audit unless a new selector
   theorem is found.
+
+## Cycle 12: Lane 5 C1 Carrier/Metrology Axiom Audit And Cascade Stop
+
+Deliverables:
+
+- `docs/HUBBLE_LANE5_C1_CARRIER_METROLOGY_AXIOM_AUDIT_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py`
+- `logs/2026-04-29-hubble-lane5-c1-carrier-metrology-axiom-audit.txt`
+- `STOP_ALL_LANES_REQUESTED` marker in this workstream pack
+
+Verification:
+
+- run and compile the new audit runner;
+- rerun the Lane 5 two-gate firewall;
+- rerun the A6 bilinear support/boundary runner;
+- scan queued lanes for fresh premises before stopping;
+- run audit pipeline and strict lint;
+- run `git diff --check`;
+- record review-loop emulation.
+
+Expected claim movement:
+
+- no `(C1)`, `H_0`, or numerical neutrino-mass closure;
+- explicit minimal conditional premise for `(C1)`: active-block
+  selector plus action-unit metrology;
+- all viable queued lanes now checkpointed at exact dependency or
+  human-judgment boundaries, so the all-lane stop marker is justified.

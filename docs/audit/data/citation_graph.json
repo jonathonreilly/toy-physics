@@ -17893,7 +17893,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-29T04:34:46.693757+00:00",
+  "generated_at": "2026-04-29T04:41:53.225654+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -26594,6 +26594,16 @@
       "path": "docs/HUBBLE_LANE5_C1_A6_BILINEAR_ACTIVE_BLOCK_SUPPORT_BOUNDARY_NOTE_2026-04-29.md",
       "runner_path": "scripts/frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py",
       "title": "Lane 5 `(C1)` A6 Bilinear Active-Block Support/Boundary Note"
+    },
+    "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29": {
+      "claim_id": "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support / open boundary audit on",
+      "deps": [],
+      "note_hash": "cc413251ce783b48b208ac6fa4defaf29cd33ccbe8427c7f70c54132977a4068",
+      "path": "docs/HUBBLE_LANE5_C1_CARRIER_METROLOGY_AXIOM_AUDIT_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py",
+      "title": "Lane 5 `(C1)` Carrier/Metrology Axiom Audit Note"
     },
     "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27": {
       "claim_id": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
@@ -39736,6 +39746,7 @@
     "hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29",
     "hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29",
     "hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29",
+    "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29",
     "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
     "hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26",
     "hubble_lane5_eta_retirement_gate_audit_note_2026-04-26",
@@ -40392,16 +40403,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4473,
-    "leaf_count": 739,
-    "node_count": 1638,
-    "root_count": 1192,
-    "runners_with_path": 717,
+    "leaf_count": 740,
+    "node_count": 1639,
+    "root_count": 1193,
+    "runners_with_path": 718,
     "status_counts": {
       "bounded": 212,
       "open": 30,
       "proposed_promoted": 6,
       "proposed_retained": 454,
-      "support": 139,
+      "support": 140,
       "unknown": 797
     }
   }

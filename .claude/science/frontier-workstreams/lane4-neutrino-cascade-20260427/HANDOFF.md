@@ -1,5 +1,86 @@
 # Handoff
 
+## Loop 3 Stop Checkpoint 2026-04-29T04:40Z
+
+Supervisor loop 3 completed the Lane 5 `(C1)` carrier/metrology audit after
+A1/A2/A4/A5/A6 and then checked the remaining cascade queue for fresh viable
+premises. No fresh route was found, so this checkpoint creates
+`STOP_ALL_LANES_REQUESTED`.
+
+### Claim-State Movement This Checkpoint
+
+Added the explicit `(C1)` human-judgment boundary:
+
+- `docs/HUBBLE_LANE5_C1_CARRIER_METROLOGY_AXIOM_AUDIT_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py`
+- `logs/2026-04-29-hubble-lane5-c1-carrier-metrology-axiom-audit.txt`
+
+Verified result:
+
+```text
+C1 derived from current stack: false
+C1 conditional route explicitly stated: true
+remaining decision: human science judgment or new selector/metrology theorem
+```
+
+The minimal conditional premise is now exactly stated: a primitive
+metric/orientation/phase selector for the active `Cl_4` coframe response on
+`P_A H_cell`, plus a non-rescaling-invariant action-unit metrology map. That
+is not a derivation and does not close `(C1)` or numerical `H_0`.
+
+### Cascade Stop Reason
+
+The stop marker is justified by the whole queue state:
+
+- Lane 4 remains structurally supported but not retained numerically:
+  activation law, full texture, PMNS selector, and cosmology inputs remain
+  open.
+- Lane 2 remains blocked on retained `m_e`, `alpha(0)` or QED running, and a
+  physical-unit NR limit.
+- Lane 5 remains blocked on `(C1)` selector/metrology human judgment or new
+  theorem, plus `(C2)` right-sensitive selector or a fresh `(C3)` route.
+- Lane 3 remains blocked on `5/6` bridge/scale selection, up-type
+  partition/scalar law, and species-differentiated Ward identities.
+- Lane 1 remains blocked on light-quark masses, chiral inputs, hadronic
+  matching, and lattice-QCD-equivalent correlator extraction.
+- Lane 6 has no new premise beyond the recently exhausted charged-lepton
+  retirement boundary.
+
+### Verification
+
+- `PYTHONPATH=scripts python3 scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py`
+  -> `PASS=7 FAIL=0`
+- `python3 -m py_compile scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py`
+  -> pass
+- `PYTHONPATH=scripts python3 scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py`
+  -> `PASS=18 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py`
+  -> `PASS=9 FAIL=0`
+- queued-lane premise scan -> no fresh premise found
+- `bash docs/audit/scripts/run_pipeline.sh`
+  -> complete
+- `python3 docs/audit/scripts/audit_lint.py --strict`
+  -> OK, known graph-cycle warning only
+- `git diff --check`
+  -> pass
+
+### Review-Loop Emulation
+
+- Code/runner: PASS. The audit runner checks that direct `(C1)` shortcuts are
+  blocked, A6 is support-only, and the two conditional premises are explicit.
+- Physics boundary: human-judgment boundary. The conditional route is stated,
+  not accepted as retained.
+- Imports: disclosed in `ASSUMPTIONS_AND_IMPORTS.md`; no new literature or
+  observed value is imported.
+- Repo governance: no PR, no push to `main`, and no repo-wide authority
+  weaving beyond audit generated surfaces.
+
+### Resume Condition
+
+Resume the cascade only if a fresh selector/metrology theorem, accepted new
+physical premise, or new viable premise in Lane 2/3/1/6 changes one of the
+recorded blockers.
+
 ## Loop 3 Checkpoint 2026-04-29T04:32Z
 
 Supervisor loop 3 continued Lane 5 `(C1)` after the A5 direct-restriction

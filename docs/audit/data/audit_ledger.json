@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-29T04:34:48.290713+00:00",
-  "generated_at": "2026-04-29T04:34:46.744791+00:00",
-  "invalidation_run_at": "2026-04-29T04:34:48.227524+00:00",
+  "effective_status_computed_at": "2026-04-29T04:41:54.806286+00:00",
+  "generated_at": "2026-04-29T04:41:53.276803+00:00",
+  "invalidation_run_at": "2026-04-29T04:41:54.742655+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-29T04:34:48.100115+00:00",
+  "load_bearing_computed_at": "2026-04-29T04:41:54.616279+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -37810,6 +37810,47 @@
       },
       "runner_path": "scripts/frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py",
       "title": "Lane 5 `(C1)` A6 Bilinear Active-Block Support/Boundary Note",
+      "transitive_descendants": 0,
+      "verdict_rationale": null
+    },
+    "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29": {
+      "audit_date": null,
+      "audit_status": "unaudited",
+      "auditor": null,
+      "auditor_confidence": null,
+      "auditor_family": null,
+      "blocker": null,
+      "chain_closes": null,
+      "chain_closure_explanation": null,
+      "claim_id": "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29",
+      "criticality": "leaf",
+      "current_status": "support",
+      "current_status_raw": "support / open boundary audit on",
+      "decoration_parent_claim_id": null,
+      "deps": [],
+      "direct_in_degree": 0,
+      "effective_status": "support",
+      "effective_status_reason": "self",
+      "independence": null,
+      "intrinsic_status": "support",
+      "load_bearing_score": 0.0,
+      "load_bearing_step": null,
+      "load_bearing_step_class": null,
+      "max_descendant_status": "unknown",
+      "max_descendant_status_rank": 30,
+      "note_hash": "cc413251ce783b48b208ac6fa4defaf29cd33ccbe8427c7f70c54132977a4068",
+      "note_path": "docs/HUBBLE_LANE5_C1_CARRIER_METROLOGY_AXIOM_AUDIT_NOTE_2026-04-29.md",
+      "open_dependency_paths": [],
+      "previous_audits": [],
+      "runner_check_breakdown": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "total_pass": 0
+      },
+      "runner_path": "scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py",
+      "title": "Lane 5 `(C1)` Carrier/Metrology Axiom Audit Note",
       "transitive_descendants": 0,
       "verdict_rationale": null
     },
@@ -89965,9 +90006,9 @@
   "schema_version": 1,
   "stats": {
     "dropped_missing_notes": 0,
-    "preserved_existing": 1637,
+    "preserved_existing": 1638,
     "re_audit_required": 0,
-    "row_count": 1638,
+    "row_count": 1639,
     "seeded_new": 1
   }
 }

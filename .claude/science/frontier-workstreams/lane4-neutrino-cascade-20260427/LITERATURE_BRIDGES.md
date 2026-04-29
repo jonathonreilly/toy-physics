@@ -41,6 +41,11 @@ Cycle 11 used no new literature. The A6 support/boundary theorem is finite
 algebra over the repo-local one-particle `P_A` sector and number-preserving
 bilinears.
 
+Cycle 12 used no new literature. The carrier/metrology axiom audit is a
+repo-local route audit over the A1/A2/A4/A5/A6 artifacts and existing
+conditional Planck/CAR support packet. No observed Planck, Hubble,
+cosmological, or SI action value was imported.
+
 If later cycles need external bridge material, enter each imported theorem,
 experimental number, or convention here with role `bridge`, `comparator`,
 `admitted convention`, or `non-derivation context`.

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T04:34:48.028205+00:00",
+  "generated_at": "2026-04-29T04:41:54.546469+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -4416,6 +4416,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py"
+    },
+    "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py"
     },
     "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27": {
       "assert_count": 1,
@@ -14256,6 +14268,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py": {
       "assert_count": 1,
       "claims": [
@@ -19133,9 +19160,9 @@
       "B": 103,
       "C": 340,
       "D": 110,
-      "none": 141
+      "none": 142
     },
-    "runners_classified": 700,
+    "runners_classified": 701,
     "runners_with_C": 419,
     "runners_with_D": 186
   }

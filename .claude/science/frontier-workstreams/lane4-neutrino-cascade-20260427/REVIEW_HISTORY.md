@@ -1,5 +1,55 @@
 # Review History
 
+## 2026-04-29 Cycle 12 Review Results
+
+Artifact under review:
+
+- `docs/HUBBLE_LANE5_C1_CARRIER_METROLOGY_AXIOM_AUDIT_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py`
+
+### Code / Runner: PASS
+
+- New C1 carrier/metrology axiom-audit runner passes: `PASS=7 FAIL=0`.
+- New runner compiles with `py_compile`.
+- Nearby boundary runners still pass:
+  - `frontier_hubble_lane5_two_gate_dependency_firewall.py`: `PASS=18 FAIL=0`
+  - `frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py`: `PASS=9 FAIL=0`
+
+### Physics Claim Boundary: HUMAN-JUDGMENT BOUNDARY
+
+- The audit does not claim `(C1)`, `H_0`, `H_inf`, `a/l_P`, or SI action-unit
+  closure.
+- It records the minimal conditional route: an active-block
+  metric/orientation/phase selector on `P_A H_cell` plus a
+  non-rescaling-invariant action-unit metrology map.
+- Accepting that route is a human science-judgment decision unless a later
+  theorem derives both premises from `A_min`.
+
+### Cascade Boundary: ALL VIABLE LANES BLOCKED
+
+- Remaining queue scan found no fresh Lane 2, Lane 3, Lane 1, or Lane 6
+  premise.
+- Lane 5 remains blocked on `(C1)` human judgment/new theorem plus `(C2)` or
+  `(C3)`.
+- `STOP_ALL_LANES_REQUESTED` is justified by the whole queue state, not by
+  Lane 4 alone.
+
+### Imports / Support: DISCLOSED
+
+- No new literature, comparator, Planck, Hubble, cosmological, or SI action
+  value is used.
+- The active-block selector and action-unit metrology premises are ledgered as
+  open load-bearing imports.
+
+### Audit Compatibility: PASS
+
+- `bash docs/audit/scripts/run_pipeline.sh`: complete.
+- `python3 docs/audit/scripts/audit_lint.py --strict`: OK, with known
+  graph-cycle warning only.
+- `git diff --check`: OK.
+- Audit row seeded as `proposed_retained` / `unaudited`:
+  `hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29`.
+
 ## 2026-04-29 Cycle 11 Review Results
 
 Artifact under review:

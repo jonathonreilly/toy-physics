@@ -1,0 +1,29 @@
+# Stop All Lanes Requested
+
+Date: 2026-04-29T04:38:51Z
+
+This marker is not created because Lane 4 alone closed. It is created after
+the loop-3 cascade checked the viable queue and found no fresh non-human
+blocked route.
+
+Stop reason:
+
+- Lane 4 neutrino quantitative closure remains structurally supported but not
+  retained numerically; activation law, full texture, PMNS selector, and
+  cosmology inputs remain open.
+- Lane 2 atomic-scale prediction remains blocked on retained `m_e`,
+  `alpha(0)` or QED running, and a physical-unit nonrelativistic
+  Schrodinger/Coulomb limit.
+- Lane 5 Hubble `(C1)` is narrowed to an active-block selector plus
+  action-unit metrology premise; `(C2)` right-sensitive selector and `(C3)`
+  direct cosmic-`L` route remain open.
+- Lane 3 quark retention remains blocked on the `5/6` bridge/scale selector,
+  up-type partition or scalar law, and species-differentiated Yukawa Ward
+  identities.
+- Lane 1 hadron masses remain blocked on retained light-quark masses, chiral
+  inputs, hadronic matching, and lattice-QCD-equivalent correlator extraction.
+- Lane 6 charged-lepton mass retention has no new premise beyond the recently
+  exhausted retirement boundary.
+
+Resume only if a fresh theorem or accepted premise changes one of those
+boundaries.

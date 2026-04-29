@@ -23,7 +23,7 @@ Scores use the frontier-workstream dramatic-step scale: `0` low value,
 | Lane 5 C1 A5 Boolean coframe restriction | stretch attempt / no-go | 2 | 2 | 3 | -0 | 7 | Executed cycle 10; direct full-cell odd coframe restriction blocked |
 | Lane 5 C1 intrinsic active-block coframe theorem | stretch attempt | 3 | 3 | 1 | -2 | 5 | Candidate next route; high risk |
 | Lane 5 C1 A6 number-preserving bilinear / quotient route | support/boundary theorem | 2 | 2 | 3 | -0 | 7 | Executed cycle 11; capacity positive, selector/metrology open |
-| Lane 5 C1 minimal carrier/metrology axiom audit | conditional closeout / human-judgment boundary | 1 | 1 | 2 | -0 | 4 | Next route if no selector theorem is available |
+| Lane 5 C1 minimal carrier/metrology axiom audit | conditional closeout / human-judgment boundary | 1 | 1 | 2 | -0 | 4 | Executed cycle 12; C1 blocked by human judgment/new theorem |
 
 ## Selected Cycle 1 Route
 
@@ -183,3 +183,21 @@ algebraically possible. But the same algebra admits distinct Clifford bases
 and phase conventions, and the `(S,kappa)` rescaling degeneracy remains. The
 remaining route is a primitive selector/metrology theorem or an explicit
 conditional carrier/metrology axiom.
+
+## Cycle 12 Route
+
+Execute the Lane 5 `(C1)` carrier/metrology axiom audit because A1/A2/A4/A5
+blocked direct shortcuts and A6 showed capacity without selector/metrology
+closure:
+
+- state the minimal active-block selector premise precisely;
+- state the minimal action-unit metrology premise precisely;
+- verify that the current stack still does not derive `(C1)` without those
+  premises;
+- scan the remaining cascade queue before deciding whether all-lane stop is
+  justified.
+
+Outcome: the `(C1)` route is now a human science-judgment boundary unless a
+new selector/metrology theorem appears. The remaining queued lanes were
+checked and no fresh premise was found, so `STOP_ALL_LANES_REQUESTED` is
+justified for this unattended cascade.

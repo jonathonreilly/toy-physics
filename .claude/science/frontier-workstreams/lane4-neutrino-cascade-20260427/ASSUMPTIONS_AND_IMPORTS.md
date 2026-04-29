@@ -117,3 +117,11 @@
 | Number-preserving bilinears `a_i^dagger a_j` on the one-particle `P_A` sector | Candidate quotient/intrinsic active-block route after A5 | exact support/boundary theorem | `HUBBLE_LANE5_C1_A6_BILINEAR_ACTIVE_BLOCK_SUPPORT_BOUNDARY_NOTE_2026-04-29.md` | Yes | Not sufficient for `(C1)` | Add primitive metric/orientation/phase selector and metrology theorem | Support only |
 | Primitive metric/orientation/phase selector on the active `M_4(C)` algebra | Newly exposed missing selector for the bilinear route | open import | A6 note and runner | Yes | Yes for `(C1)` G1 | Derive which active bilinear combinations are the coframe axes and oriented CAR pairings | Open |
 | Dimensional action-unit map on the bilinear active-block route | Newly exposed metrology dependency remains after A6 | open import | A2 and A6 notes | Yes | Yes for `(C1)` G2 | Derive non-rescaling-invariant clock/source/action metrology | Open |
+
+## Lane 5 C1 Carrier/Metrology Audit Imports Added In Cycle 12
+
+| Item | Role in claim | Current class | Source surface | Load-bearing? | Needed for target status? | Retirement path | Disposition |
+|---|---|---|---|---|---|---|---|
+| Minimal active-block selector premise | Conditional carrier premise: active `Cl_4` plus metric/orientation/phase basis and oriented CAR pairings on `P_A H_cell` | human-judgment boundary / open theorem target | `HUBBLE_LANE5_C1_CARRIER_METROLOGY_AXIOM_AUDIT_NOTE_2026-04-29.md` | Yes | Yes for `(C1)` G1 | Derive from `A_min`, a primitive selector theorem, or explicit review acceptance as a new axiom | Open |
+| Minimal action-unit metrology premise | Conditional physical-unit premise selecting dimensional `kappa` from dimensionless lattice action and primitive boundary/action carrier | human-judgment boundary / open theorem target | `HUBBLE_LANE5_C1_CARRIER_METROLOGY_AXIOM_AUDIT_NOTE_2026-04-29.md` | Yes | Yes for `(C1)` G2 | Derive a non-rescaling-invariant clock/source/action map, or explicit review acceptance as a new axiom | Open |
+| Conditional `(C1)` consequence | Would feed the existing Planck Target 3/source-unit chain if both premises are accepted | conditional route only | C1 axiom audit runner | Yes only under the two premises | Not a current-stack derivation | Keep separate from retained status until premises are derived or accepted | Conditional |
