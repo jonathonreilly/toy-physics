@@ -66,7 +66,7 @@ of demotion:
  Basin 1 at `σ = (2, 1, 0)` is admissible UNDER the imposed rule.
 - θ_23 upper-octant conditionality (SERIOUS 3): formalized as a
  falsifiable CONDITIONAL structural prediction in
- [PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md](./PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md).
+ `PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md`.
  Chamber closure under the imposed branch-choice rule and `q_H = 0`
  exists only if `s_23^2` is above a specific threshold; this is a
  conditional falsifiable prediction resolvable at DUNE / JUNO / Hyper-K.

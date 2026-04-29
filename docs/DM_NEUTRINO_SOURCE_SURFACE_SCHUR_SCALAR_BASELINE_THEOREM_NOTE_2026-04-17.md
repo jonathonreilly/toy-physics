@@ -326,7 +326,7 @@ Appropriate placement:
  "commutant-class reference (conditional; NOT a live-sheet
  promotion)"
 - the downstream PMNS-as-f(H) "closure" note
- ([PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md](./PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md))
+ (`PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md`)
  is itself conditional / support (see its Option-A demotion); it does
  NOT consume the scalar-baseline curvature `Q` from this note as a
  live-sheet input

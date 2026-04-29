@@ -38,7 +38,7 @@ its independent derivation is also an open lane.
 ## What this theorem establishes
 
 The retained DM cosmology cascade (see
-[`COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`](COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md))
+`COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`)
 imports `eta = 6.12e-10` from Planck on the live surface, with R = 5.48 from
 the retained `R_base = 31/9` group-theory identity plus a bounded Sommerfeld
 continuation. The standard leptogenesis route to `eta` is structurally
@@ -365,7 +365,7 @@ A successful G1 closure would:
 - remove the structural mass-selection hypothesis from the freeze-out-bypass
   route,
 - close the only remaining IMPORTED input on the
-  [`COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`](COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md)
+  `COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`
   cascade,
 - leave the route still quantitatively bounded by the existing
   Sommerfeld/`alpha_GUT` continuation (G2), the dark-sector coupling choice
@@ -419,7 +419,7 @@ Expected: `PASS = 14, FAIL = 0`.
 ## Cross-references
 
 - Retained DM cosmology cascade and current `eta` import status:
-  [`COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`](COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md)
+  `COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`
 - `R_base = 31/9` retained group-theory identity:
   [`R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md`](R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md)
 - Wilson-action eigenvalue degeneracy and `N_sites = 16`:
@@ -429,4 +429,4 @@ Expected: `PASS = 14, FAIL = 0`.
 - DM candidate mass-window theorem (M_1 RHN scale):
   [`DM_CANDIDATE_MASS_WINDOW_THEOREM_NOTE_2026-04-19.md`](DM_CANDIDATE_MASS_WINDOW_THEOREM_NOTE_2026-04-19.md)
 - DM flagship closure status:
-  [`DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md`](DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md)
+  `DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md`

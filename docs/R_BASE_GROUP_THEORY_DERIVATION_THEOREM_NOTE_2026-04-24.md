@@ -4,8 +4,8 @@
 **Status:** proposed_retained exact support identity on the bounded dark-matter /
 cosmology cascade surface. This note packages the exact rational identity
 `R_base = 31/9` that was previously inline in
-[`COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`](COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md)
-and [`OMEGA_LAMBDA_DERIVATION_NOTE.md`](OMEGA_LAMBDA_DERIVATION_NOTE.md).
+`COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`
+and `OMEGA_LAMBDA_DERIVATION_NOTE.md`.
 It does not promote the full dark-matter-to-baryon ratio or the numerical
 `Omega_Lambda` chain to retained closure.
 
@@ -115,8 +115,8 @@ boundary checks using exact rational arithmetic.
 
 ## Cross-References
 
-- [`COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`](COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md)
-- [`OMEGA_LAMBDA_DERIVATION_NOTE.md`](OMEGA_LAMBDA_DERIVATION_NOTE.md)
+- `COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`
+- `OMEGA_LAMBDA_DERIVATION_NOTE.md`
 - [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md)
 - [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
 - [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md)

@@ -1,664 +1,8 @@
 {
-  "cycle_count": 132,
+  "cycle_count": 122,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
-      "decision": null,
-      "edges": [
-        {
-          "from": "cosmology_from_mass_spectrum_note",
-          "to": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
-        },
-        {
-          "from": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-          "to": "cosmology_from_mass_spectrum_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 112,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "cosmology_from_mass_spectrum_note",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md",
-          "title": "Cosmology Cascade from Mass Spectrum (Phase 5 of mass spectrum)",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-          "current_status": "bounded",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md",
-          "title": "DM eta Freezeout-Bypass Quantitative Theorem",
-          "transitive_descendants": 112
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0002",
-      "decision": null,
-      "edges": [
-        {
-          "from": "omega_lambda_derivation_note",
-          "to": "r_base_group_theory_derivation_theorem_note_2026-04-24"
-        },
-        {
-          "from": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-          "to": "omega_lambda_derivation_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 112,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "omega_lambda_derivation_note",
-          "current_status": "unknown",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/OMEGA_LAMBDA_DERIVATION_NOTE.md",
-          "title": "Omega_Lambda Derivation: The Cosmological Pie Chart",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md",
-          "title": "R_base = 31/9 Group-Theory Derivation Theorem",
-          "transitive_descendants": 112
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0003",
-      "decision": null,
-      "edges": [
-        {
-          "from": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "to": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17"
-        },
-        {
-          "from": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
-          "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 112,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
-          "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md",
-          "title": "`U_e = I` via `Z_3` Trichotomy (Charged-Lepton Lane)",
-          "transitive_descendants": 112
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0004",
-      "decision": null,
-      "edges": [
-        {
-          "from": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
-          "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
-        },
-        {
-          "from": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "to": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 112,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
-          "current_status": "support",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md",
-          "title": "\u03b8_23 Upper-Octant Chamber-Closure Prediction",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
-          "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
-          "transitive_descendants": 112
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0005",
-      "decision": null,
-      "edges": [
-        {
-          "from": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-          "to": "cosmology_from_mass_spectrum_note"
-        },
-        {
-          "from": "cosmology_from_mass_spectrum_note",
-          "to": "r_base_group_theory_derivation_theorem_note_2026-04-24"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 112,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md",
-          "title": "R_base = 31/9 Group-Theory Derivation Theorem",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "cosmology_from_mass_spectrum_note",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md",
-          "title": "Cosmology Cascade from Mass Spectrum (Phase 5 of mass spectrum)",
-          "transitive_descendants": 112
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0006",
-      "decision": null,
-      "edges": [
-        {
-          "from": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-          "to": "cosmology_from_mass_spectrum_note"
-        },
-        {
-          "from": "cosmology_from_mass_spectrum_note",
-          "to": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
-        },
-        {
-          "from": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-          "to": "r_base_group_theory_derivation_theorem_note_2026-04-24"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 112,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md",
-          "title": "R_base = 31/9 Group-Theory Derivation Theorem",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "cosmology_from_mass_spectrum_note",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md",
-          "title": "Cosmology Cascade from Mass Spectrum (Phase 5 of mass spectrum)",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-          "current_status": "bounded",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md",
-          "title": "DM eta Freezeout-Bypass Quantitative Theorem",
-          "transitive_descendants": 112
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0007",
-      "decision": null,
-      "edges": [
-        {
-          "from": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "to": "omega_lambda_derivation_note"
-        },
-        {
-          "from": "omega_lambda_derivation_note",
-          "to": "r_base_group_theory_derivation_theorem_note_2026-04-24"
-        },
-        {
-          "from": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-          "to": "cosmology_from_mass_spectrum_note"
-        },
-        {
-          "from": "cosmology_from_mass_spectrum_note",
-          "to": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
-        },
-        {
-          "from": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-          "to": "dm_flagship_closure_review_note_2026-04-17"
-        },
-        {
-          "from": "dm_flagship_closure_review_note_2026-04-17",
-          "to": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 112,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "current_status": "unknown",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
-          "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "omega_lambda_derivation_note",
-          "current_status": "unknown",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/OMEGA_LAMBDA_DERIVATION_NOTE.md",
-          "title": "Omega_Lambda Derivation: The Cosmological Pie Chart",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md",
-          "title": "R_base = 31/9 Group-Theory Derivation Theorem",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "cosmology_from_mass_spectrum_note",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md",
-          "title": "Cosmology Cascade from Mass Spectrum (Phase 5 of mass spectrum)",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-          "current_status": "bounded",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md",
-          "title": "DM eta Freezeout-Bypass Quantitative Theorem",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_flagship_closure_review_note_2026-04-17",
-          "current_status": "open",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md",
-          "title": "DM Flagship Gate \u2014 Open-Gate Review",
-          "transitive_descendants": 112
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0008",
-      "decision": null,
-      "edges": [
-        {
-          "from": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "to": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17"
-        },
-        {
-          "from": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "to": "omega_lambda_derivation_note"
-        },
-        {
-          "from": "omega_lambda_derivation_note",
-          "to": "r_base_group_theory_derivation_theorem_note_2026-04-24"
-        },
-        {
-          "from": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-          "to": "cosmology_from_mass_spectrum_note"
-        },
-        {
-          "from": "cosmology_from_mass_spectrum_note",
-          "to": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
-        },
-        {
-          "from": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-          "to": "dm_flagship_closure_review_note_2026-04-17"
-        },
-        {
-          "from": "dm_flagship_closure_review_note_2026-04-17",
-          "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
-        }
-      ],
-      "length": 7,
-      "max_transitive_descendants": 112,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
-          "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "current_status": "unknown",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
-          "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "omega_lambda_derivation_note",
-          "current_status": "unknown",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/OMEGA_LAMBDA_DERIVATION_NOTE.md",
-          "title": "Omega_Lambda Derivation: The Cosmological Pie Chart",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md",
-          "title": "R_base = 31/9 Group-Theory Derivation Theorem",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "cosmology_from_mass_spectrum_note",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md",
-          "title": "Cosmology Cascade from Mass Spectrum (Phase 5 of mass spectrum)",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-          "current_status": "bounded",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md",
-          "title": "DM eta Freezeout-Bypass Quantitative Theorem",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_flagship_closure_review_note_2026-04-17",
-          "current_status": "open",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md",
-          "title": "DM Flagship Gate \u2014 Open-Gate Review",
-          "transitive_descendants": 112
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0009",
-      "decision": null,
-      "edges": [
-        {
-          "from": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "to": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17"
-        },
-        {
-          "from": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "to": "omega_lambda_derivation_note"
-        },
-        {
-          "from": "omega_lambda_derivation_note",
-          "to": "r_base_group_theory_derivation_theorem_note_2026-04-24"
-        },
-        {
-          "from": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-          "to": "cosmology_from_mass_spectrum_note"
-        },
-        {
-          "from": "cosmology_from_mass_spectrum_note",
-          "to": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
-        },
-        {
-          "from": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-          "to": "dm_flagship_closure_review_note_2026-04-17"
-        },
-        {
-          "from": "dm_flagship_closure_review_note_2026-04-17",
-          "to": "dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17"
-        },
-        {
-          "from": "dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
-          "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
-        }
-      ],
-      "length": 8,
-      "max_transitive_descendants": 112,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
-          "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "current_status": "unknown",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
-          "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "omega_lambda_derivation_note",
-          "current_status": "unknown",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/OMEGA_LAMBDA_DERIVATION_NOTE.md",
-          "title": "Omega_Lambda Derivation: The Cosmological Pie Chart",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md",
-          "title": "R_base = 31/9 Group-Theory Derivation Theorem",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "cosmology_from_mass_spectrum_note",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md",
-          "title": "Cosmology Cascade from Mass Spectrum (Phase 5 of mass spectrum)",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-          "current_status": "bounded",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md",
-          "title": "DM eta Freezeout-Bypass Quantitative Theorem",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_flagship_closure_review_note_2026-04-17",
-          "current_status": "open",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md",
-          "title": "DM Flagship Gate \u2014 Open-Gate Review",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
-          "current_status": "unknown",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SCHUR_SCALAR_BASELINE_THEOREM_NOTE_2026-04-17.md",
-          "title": "Commutant-Class Structural Lemma (Schur Scalar Baseline) \u2014 CONDITIONAL ONLY",
-          "transitive_descendants": 112
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0010",
-      "decision": null,
-      "edges": [
-        {
-          "from": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
-          "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
-        },
-        {
-          "from": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "to": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17"
-        },
-        {
-          "from": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "to": "omega_lambda_derivation_note"
-        },
-        {
-          "from": "omega_lambda_derivation_note",
-          "to": "r_base_group_theory_derivation_theorem_note_2026-04-24"
-        },
-        {
-          "from": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-          "to": "cosmology_from_mass_spectrum_note"
-        },
-        {
-          "from": "cosmology_from_mass_spectrum_note",
-          "to": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
-        },
-        {
-          "from": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-          "to": "dm_flagship_closure_review_note_2026-04-17"
-        },
-        {
-          "from": "dm_flagship_closure_review_note_2026-04-17",
-          "to": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17"
-        }
-      ],
-      "length": 8,
-      "max_transitive_descendants": 112,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
-          "current_status": "support",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md",
-          "title": "\u03b8_23 Upper-Octant Chamber-Closure Prediction",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
-          "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "current_status": "unknown",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
-          "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "omega_lambda_derivation_note",
-          "current_status": "unknown",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/OMEGA_LAMBDA_DERIVATION_NOTE.md",
-          "title": "Omega_Lambda Derivation: The Cosmological Pie Chart",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md",
-          "title": "R_base = 31/9 Group-Theory Derivation Theorem",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "cosmology_from_mass_spectrum_note",
-          "current_status": "proposed_retained",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md",
-          "title": "Cosmology Cascade from Mass Spectrum (Phase 5 of mass spectrum)",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-          "current_status": "bounded",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md",
-          "title": "DM eta Freezeout-Bypass Quantitative Theorem",
-          "transitive_descendants": 112
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_flagship_closure_review_note_2026-04-17",
-          "current_status": "open",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md",
-          "title": "DM Flagship Gate \u2014 Open-Gate Review",
-          "transitive_descendants": 112
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0011",
       "decision": null,
       "edges": [
         {
@@ -695,7 +39,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0012",
+      "cycle_id": "cycle-0002",
       "decision": null,
       "edges": [
         {
@@ -732,7 +76,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0013",
+      "cycle_id": "cycle-0003",
       "decision": null,
       "edges": [
         {
@@ -769,7 +113,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0014",
+      "cycle_id": "cycle-0004",
       "decision": null,
       "edges": [
         {
@@ -806,7 +150,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0015",
+      "cycle_id": "cycle-0005",
       "decision": null,
       "edges": [
         {
@@ -843,7 +187,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0016",
+      "cycle_id": "cycle-0006",
       "decision": null,
       "edges": [
         {
@@ -893,7 +237,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0017",
+      "cycle_id": "cycle-0007",
       "decision": null,
       "edges": [
         {
@@ -943,7 +287,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0018",
+      "cycle_id": "cycle-0008",
       "decision": null,
       "edges": [
         {
@@ -1006,7 +350,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0019",
+      "cycle_id": "cycle-0009",
       "decision": null,
       "edges": [
         {
@@ -1043,7 +387,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0020",
+      "cycle_id": "cycle-0010",
       "decision": null,
       "edges": [
         {
@@ -1080,7 +424,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0021",
+      "cycle_id": "cycle-0011",
       "decision": null,
       "edges": [
         {
@@ -1117,7 +461,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0022",
+      "cycle_id": "cycle-0012",
       "decision": null,
       "edges": [
         {
@@ -1167,7 +511,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0023",
+      "cycle_id": "cycle-0013",
       "decision": null,
       "edges": [
         {
@@ -1217,7 +561,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0024",
+      "cycle_id": "cycle-0014",
       "decision": null,
       "edges": [
         {
@@ -1293,7 +637,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0025",
+      "cycle_id": "cycle-0015",
       "decision": null,
       "edges": [
         {
@@ -1369,7 +713,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0026",
+      "cycle_id": "cycle-0016",
       "decision": null,
       "edges": [
         {
@@ -1458,7 +802,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0027",
+      "cycle_id": "cycle-0017",
       "decision": null,
       "edges": [
         {
@@ -1495,7 +839,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0028",
+      "cycle_id": "cycle-0018",
       "decision": null,
       "edges": [
         {
@@ -1545,7 +889,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0029",
+      "cycle_id": "cycle-0019",
       "decision": null,
       "edges": [
         {
@@ -1595,7 +939,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0030",
+      "cycle_id": "cycle-0020",
       "decision": null,
       "edges": [
         {
@@ -1632,7 +976,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0031",
+      "cycle_id": "cycle-0021",
       "decision": null,
       "edges": [
         {
@@ -1669,7 +1013,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0032",
+      "cycle_id": "cycle-0022",
       "decision": null,
       "edges": [
         {
@@ -1706,7 +1050,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0033",
+      "cycle_id": "cycle-0023",
       "decision": null,
       "edges": [
         {
@@ -1743,7 +1087,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0034",
+      "cycle_id": "cycle-0024",
       "decision": null,
       "edges": [
         {
@@ -1793,7 +1137,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0035",
+      "cycle_id": "cycle-0025",
       "decision": null,
       "edges": [
         {
@@ -1830,7 +1174,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0036",
+      "cycle_id": "cycle-0026",
       "decision": null,
       "edges": [
         {
@@ -1867,7 +1211,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0037",
+      "cycle_id": "cycle-0027",
       "decision": null,
       "edges": [
         {
@@ -1904,7 +1248,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0038",
+      "cycle_id": "cycle-0028",
       "decision": null,
       "edges": [
         {
@@ -1941,7 +1285,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0039",
+      "cycle_id": "cycle-0029",
       "decision": null,
       "edges": [
         {
@@ -1978,7 +1322,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0040",
+      "cycle_id": "cycle-0030",
       "decision": null,
       "edges": [
         {
@@ -2015,7 +1359,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0041",
+      "cycle_id": "cycle-0031",
       "decision": null,
       "edges": [
         {
@@ -2065,7 +1409,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0042",
+      "cycle_id": "cycle-0032",
       "decision": null,
       "edges": [
         {
@@ -2102,7 +1446,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0043",
+      "cycle_id": "cycle-0033",
       "decision": null,
       "edges": [
         {
@@ -2139,7 +1483,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0044",
+      "cycle_id": "cycle-0034",
       "decision": null,
       "edges": [
         {
@@ -2176,7 +1520,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0045",
+      "cycle_id": "cycle-0035",
       "decision": null,
       "edges": [
         {
@@ -2213,7 +1557,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0046",
+      "cycle_id": "cycle-0036",
       "decision": null,
       "edges": [
         {
@@ -2250,7 +1594,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0047",
+      "cycle_id": "cycle-0037",
       "decision": null,
       "edges": [
         {
@@ -2287,7 +1631,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0048",
+      "cycle_id": "cycle-0038",
       "decision": null,
       "edges": [
         {
@@ -2324,7 +1668,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0049",
+      "cycle_id": "cycle-0039",
       "decision": null,
       "edges": [
         {
@@ -2361,7 +1705,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0050",
+      "cycle_id": "cycle-0040",
       "decision": null,
       "edges": [
         {
@@ -2398,7 +1742,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0051",
+      "cycle_id": "cycle-0041",
       "decision": null,
       "edges": [
         {
@@ -2435,7 +1779,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0052",
+      "cycle_id": "cycle-0042",
       "decision": null,
       "edges": [
         {
@@ -2472,7 +1816,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0053",
+      "cycle_id": "cycle-0043",
       "decision": null,
       "edges": [
         {
@@ -2509,7 +1853,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0054",
+      "cycle_id": "cycle-0044",
       "decision": null,
       "edges": [
         {
@@ -2546,7 +1890,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0055",
+      "cycle_id": "cycle-0045",
       "decision": null,
       "edges": [
         {
@@ -2583,7 +1927,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0056",
+      "cycle_id": "cycle-0046",
       "decision": null,
       "edges": [
         {
@@ -2620,7 +1964,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0057",
+      "cycle_id": "cycle-0047",
       "decision": null,
       "edges": [
         {
@@ -2670,7 +2014,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0058",
+      "cycle_id": "cycle-0048",
       "decision": null,
       "edges": [
         {
@@ -2720,7 +2064,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0059",
+      "cycle_id": "cycle-0049",
       "decision": null,
       "edges": [
         {
@@ -2770,7 +2114,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0060",
+      "cycle_id": "cycle-0050",
       "decision": null,
       "edges": [
         {
@@ -2820,7 +2164,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0061",
+      "cycle_id": "cycle-0051",
       "decision": null,
       "edges": [
         {
@@ -2870,7 +2214,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0062",
+      "cycle_id": "cycle-0052",
       "decision": null,
       "edges": [
         {
@@ -2920,7 +2264,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0063",
+      "cycle_id": "cycle-0053",
       "decision": null,
       "edges": [
         {
@@ -2970,7 +2314,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0064",
+      "cycle_id": "cycle-0054",
       "decision": null,
       "edges": [
         {
@@ -3033,7 +2377,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0065",
+      "cycle_id": "cycle-0055",
       "decision": null,
       "edges": [
         {
@@ -3096,7 +2440,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0066",
+      "cycle_id": "cycle-0056",
       "decision": null,
       "edges": [
         {
@@ -3159,7 +2503,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0067",
+      "cycle_id": "cycle-0057",
       "decision": null,
       "edges": [
         {
@@ -3222,7 +2566,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0068",
+      "cycle_id": "cycle-0058",
       "decision": null,
       "edges": [
         {
@@ -3245,6 +2589,766 @@
       "length": 4,
       "max_transitive_descendants": 32,
       "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.publication_matrix",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
+          "title": "Publication Matrix",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.claims_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
+          "title": "Manuscript Claims Surface",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
+          "title": "Gravity Publication Package Summary",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.external_reviewer_guide",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
+          "title": "External Reviewer Guide",
+          "transitive_descendants": 32
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0059",
+      "decision": null,
+      "edges": [
+        {
+          "from": "publication.ci3_z3.quantitative_summary_table",
+          "to": "publication.ci3_z3.publication_matrix"
+        },
+        {
+          "from": "publication.ci3_z3.publication_matrix",
+          "to": "publication.ci3_z3.claims_table"
+        },
+        {
+          "from": "publication.ci3_z3.claims_table",
+          "to": "publication.ci3_z3.derivation_validation_map"
+        },
+        {
+          "from": "publication.ci3_z3.derivation_validation_map",
+          "to": "publication.ci3_z3.quantitative_summary_table"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 32,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.quantitative_summary_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
+          "title": "Quantitative Summary Table",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.publication_matrix",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
+          "title": "Publication Matrix",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.claims_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
+          "title": "Manuscript Claims Surface",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.derivation_validation_map",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
+          "title": "Derivation / Validation Map",
+          "transitive_descendants": 32
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0060",
+      "decision": null,
+      "edges": [
+        {
+          "from": "publication.ci3_z3.quantitative_summary_table",
+          "to": "publication.ci3_z3.publication_matrix"
+        },
+        {
+          "from": "publication.ci3_z3.publication_matrix",
+          "to": "publication.ci3_z3.claims_table"
+        },
+        {
+          "from": "publication.ci3_z3.claims_table",
+          "to": "publication.ci3_z3.full_claim_ledger"
+        },
+        {
+          "from": "publication.ci3_z3.full_claim_ledger",
+          "to": "publication.ci3_z3.quantitative_summary_table"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 32,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.quantitative_summary_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
+          "title": "Quantitative Summary Table",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.publication_matrix",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
+          "title": "Publication Matrix",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.claims_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
+          "title": "Manuscript Claims Surface",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.full_claim_ledger",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md",
+          "title": "Full Claim Ledger",
+          "transitive_descendants": 32
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0061",
+      "decision": null,
+      "edges": [
+        {
+          "from": "publication.ci3_z3.claims_table",
+          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
+        },
+        {
+          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "to": "publication.ci3_z3.external_reviewer_guide"
+        },
+        {
+          "from": "publication.ci3_z3.external_reviewer_guide",
+          "to": "publication.ci3_z3.results_index"
+        },
+        {
+          "from": "publication.ci3_z3.results_index",
+          "to": "publication.ci3_z3.science_map"
+        },
+        {
+          "from": "publication.ci3_z3.science_map",
+          "to": "publication.ci3_z3.claims_table"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 32,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.claims_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
+          "title": "Manuscript Claims Surface",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
+          "title": "Gravity Publication Package Summary",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.external_reviewer_guide",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
+          "title": "External Reviewer Guide",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.results_index",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
+          "title": "Results Index",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.science_map",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
+          "title": "Science Map",
+          "transitive_descendants": 32
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0062",
+      "decision": null,
+      "edges": [
+        {
+          "from": "publication.ci3_z3.publication_matrix",
+          "to": "publication.ci3_z3.claims_table"
+        },
+        {
+          "from": "publication.ci3_z3.claims_table",
+          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
+        },
+        {
+          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "to": "publication.ci3_z3.external_reviewer_guide"
+        },
+        {
+          "from": "publication.ci3_z3.external_reviewer_guide",
+          "to": "publication.ci3_z3.inputs_and_qualifiers_note"
+        },
+        {
+          "from": "publication.ci3_z3.inputs_and_qualifiers_note",
+          "to": "publication.ci3_z3.publication_matrix"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 32,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.publication_matrix",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
+          "title": "Publication Matrix",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.claims_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
+          "title": "Manuscript Claims Surface",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
+          "title": "Gravity Publication Package Summary",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.external_reviewer_guide",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
+          "title": "External Reviewer Guide",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.inputs_and_qualifiers_note",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
+          "title": "Inputs And Qualifiers",
+          "transitive_descendants": 32
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0063",
+      "decision": null,
+      "edges": [
+        {
+          "from": "publication.ci3_z3.publication_matrix",
+          "to": "publication.ci3_z3.claims_table"
+        },
+        {
+          "from": "publication.ci3_z3.claims_table",
+          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
+        },
+        {
+          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "to": "publication.ci3_z3.external_reviewer_guide"
+        },
+        {
+          "from": "publication.ci3_z3.external_reviewer_guide",
+          "to": "publication.ci3_z3.results_index"
+        },
+        {
+          "from": "publication.ci3_z3.results_index",
+          "to": "publication.ci3_z3.publication_matrix"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 32,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.publication_matrix",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
+          "title": "Publication Matrix",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.claims_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
+          "title": "Manuscript Claims Surface",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
+          "title": "Gravity Publication Package Summary",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.external_reviewer_guide",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
+          "title": "External Reviewer Guide",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.results_index",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
+          "title": "Results Index",
+          "transitive_descendants": 32
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0064",
+      "decision": null,
+      "edges": [
+        {
+          "from": "publication.ci3_z3.publication_matrix",
+          "to": "publication.ci3_z3.claims_table"
+        },
+        {
+          "from": "publication.ci3_z3.claims_table",
+          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
+        },
+        {
+          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "to": "publication.ci3_z3.external_reviewer_guide"
+        },
+        {
+          "from": "publication.ci3_z3.external_reviewer_guide",
+          "to": "publication.ci3_z3.what_this_paper_does_not_claim"
+        },
+        {
+          "from": "publication.ci3_z3.what_this_paper_does_not_claim",
+          "to": "publication.ci3_z3.publication_matrix"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 32,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.publication_matrix",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
+          "title": "Publication Matrix",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.claims_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
+          "title": "Manuscript Claims Surface",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
+          "title": "Gravity Publication Package Summary",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.external_reviewer_guide",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
+          "title": "External Reviewer Guide",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.what_this_paper_does_not_claim",
+          "current_status": "unknown",
+          "effective_status": "audited_conditional",
+          "note_path": "docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md",
+          "title": "What This Paper Does Not Claim",
+          "transitive_descendants": 32
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0065",
+      "decision": null,
+      "edges": [
+        {
+          "from": "publication.ci3_z3.quantitative_summary_table",
+          "to": "publication.ci3_z3.publication_matrix"
+        },
+        {
+          "from": "publication.ci3_z3.publication_matrix",
+          "to": "publication.ci3_z3.claims_table"
+        },
+        {
+          "from": "publication.ci3_z3.claims_table",
+          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
+        },
+        {
+          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "to": "publication.ci3_z3.external_reviewer_guide"
+        },
+        {
+          "from": "publication.ci3_z3.external_reviewer_guide",
+          "to": "publication.ci3_z3.quantitative_summary_table"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 32,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.quantitative_summary_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
+          "title": "Quantitative Summary Table",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.publication_matrix",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
+          "title": "Publication Matrix",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.claims_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
+          "title": "Manuscript Claims Surface",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
+          "title": "Gravity Publication Package Summary",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.external_reviewer_guide",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
+          "title": "External Reviewer Guide",
+          "transitive_descendants": 32
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0066",
+      "decision": null,
+      "edges": [
+        {
+          "from": "publication.ci3_z3.readme",
+          "to": "publication.ci3_z3.quantitative_summary_table"
+        },
+        {
+          "from": "publication.ci3_z3.quantitative_summary_table",
+          "to": "publication.ci3_z3.publication_matrix"
+        },
+        {
+          "from": "publication.ci3_z3.publication_matrix",
+          "to": "publication.ci3_z3.claims_table"
+        },
+        {
+          "from": "publication.ci3_z3.claims_table",
+          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
+        },
+        {
+          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "to": "publication.ci3_z3.readme"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 32,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.readme",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/README.md",
+          "title": "Cl(3) / Z^3 Publication Package",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.quantitative_summary_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
+          "title": "Quantitative Summary Table",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.publication_matrix",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
+          "title": "Publication Matrix",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.claims_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
+          "title": "Manuscript Claims Surface",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
+          "title": "Gravity Publication Package Summary",
+          "transitive_descendants": 32
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0067",
+      "decision": null,
+      "edges": [
+        {
+          "from": "publication.ci3_z3.publication_matrix",
+          "to": "publication.ci3_z3.claims_table"
+        },
+        {
+          "from": "publication.ci3_z3.claims_table",
+          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
+        },
+        {
+          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "to": "publication.ci3_z3.external_reviewer_guide"
+        },
+        {
+          "from": "publication.ci3_z3.external_reviewer_guide",
+          "to": "publication.ci3_z3.results_index"
+        },
+        {
+          "from": "publication.ci3_z3.results_index",
+          "to": "publication.ci3_z3.science_map"
+        },
+        {
+          "from": "publication.ci3_z3.science_map",
+          "to": "publication.ci3_z3.publication_matrix"
+        }
+      ],
+      "length": 6,
+      "max_transitive_descendants": 32,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.publication_matrix",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
+          "title": "Publication Matrix",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.claims_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
+          "title": "Manuscript Claims Surface",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
+          "title": "Gravity Publication Package Summary",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.external_reviewer_guide",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
+          "title": "External Reviewer Guide",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.results_index",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
+          "title": "Results Index",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.science_map",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
+          "title": "Science Map",
+          "transitive_descendants": 32
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0068",
+      "decision": null,
+      "edges": [
+        {
+          "from": "publication.ci3_z3.readme",
+          "to": "publication.ci3_z3.quantitative_summary_table"
+        },
+        {
+          "from": "publication.ci3_z3.quantitative_summary_table",
+          "to": "publication.ci3_z3.publication_matrix"
+        },
+        {
+          "from": "publication.ci3_z3.publication_matrix",
+          "to": "publication.ci3_z3.claims_table"
+        },
+        {
+          "from": "publication.ci3_z3.claims_table",
+          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
+        },
+        {
+          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "to": "publication.ci3_z3.external_reviewer_guide"
+        },
+        {
+          "from": "publication.ci3_z3.external_reviewer_guide",
+          "to": "publication.ci3_z3.readme"
+        }
+      ],
+      "length": 6,
+      "max_transitive_descendants": 32,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.readme",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/README.md",
+          "title": "Cl(3) / Z^3 Publication Package",
+          "transitive_descendants": 32
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.quantitative_summary_table",
+          "current_status": "unknown",
+          "effective_status": "audited_failed",
+          "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
+          "title": "Quantitative Summary Table",
+          "transitive_descendants": 32
+        },
         {
           "audit_status": "unaudited",
           "claim_id": "publication.ci3_z3.publication_matrix",
@@ -3298,766 +3402,6 @@
         },
         {
           "from": "publication.ci3_z3.claims_table",
-          "to": "publication.ci3_z3.derivation_validation_map"
-        },
-        {
-          "from": "publication.ci3_z3.derivation_validation_map",
-          "to": "publication.ci3_z3.quantitative_summary_table"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 32,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.quantitative_summary_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
-          "title": "Quantitative Summary Table",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.publication_matrix",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
-          "title": "Publication Matrix",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.claims_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
-          "title": "Manuscript Claims Surface",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.derivation_validation_map",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
-          "title": "Derivation / Validation Map",
-          "transitive_descendants": 32
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0070",
-      "decision": null,
-      "edges": [
-        {
-          "from": "publication.ci3_z3.quantitative_summary_table",
-          "to": "publication.ci3_z3.publication_matrix"
-        },
-        {
-          "from": "publication.ci3_z3.publication_matrix",
-          "to": "publication.ci3_z3.claims_table"
-        },
-        {
-          "from": "publication.ci3_z3.claims_table",
-          "to": "publication.ci3_z3.full_claim_ledger"
-        },
-        {
-          "from": "publication.ci3_z3.full_claim_ledger",
-          "to": "publication.ci3_z3.quantitative_summary_table"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 32,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.quantitative_summary_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
-          "title": "Quantitative Summary Table",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.publication_matrix",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
-          "title": "Publication Matrix",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.claims_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
-          "title": "Manuscript Claims Surface",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.full_claim_ledger",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md",
-          "title": "Full Claim Ledger",
-          "transitive_descendants": 32
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0071",
-      "decision": null,
-      "edges": [
-        {
-          "from": "publication.ci3_z3.claims_table",
-          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
-        },
-        {
-          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "to": "publication.ci3_z3.external_reviewer_guide"
-        },
-        {
-          "from": "publication.ci3_z3.external_reviewer_guide",
-          "to": "publication.ci3_z3.results_index"
-        },
-        {
-          "from": "publication.ci3_z3.results_index",
-          "to": "publication.ci3_z3.science_map"
-        },
-        {
-          "from": "publication.ci3_z3.science_map",
-          "to": "publication.ci3_z3.claims_table"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 32,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.claims_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
-          "title": "Manuscript Claims Surface",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
-          "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.external_reviewer_guide",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
-          "title": "External Reviewer Guide",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.results_index",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
-          "title": "Results Index",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.science_map",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
-          "title": "Science Map",
-          "transitive_descendants": 32
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0072",
-      "decision": null,
-      "edges": [
-        {
-          "from": "publication.ci3_z3.publication_matrix",
-          "to": "publication.ci3_z3.claims_table"
-        },
-        {
-          "from": "publication.ci3_z3.claims_table",
-          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
-        },
-        {
-          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "to": "publication.ci3_z3.external_reviewer_guide"
-        },
-        {
-          "from": "publication.ci3_z3.external_reviewer_guide",
-          "to": "publication.ci3_z3.inputs_and_qualifiers_note"
-        },
-        {
-          "from": "publication.ci3_z3.inputs_and_qualifiers_note",
-          "to": "publication.ci3_z3.publication_matrix"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 32,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.publication_matrix",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
-          "title": "Publication Matrix",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.claims_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
-          "title": "Manuscript Claims Surface",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
-          "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.external_reviewer_guide",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
-          "title": "External Reviewer Guide",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.inputs_and_qualifiers_note",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
-          "title": "Inputs And Qualifiers",
-          "transitive_descendants": 32
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0073",
-      "decision": null,
-      "edges": [
-        {
-          "from": "publication.ci3_z3.publication_matrix",
-          "to": "publication.ci3_z3.claims_table"
-        },
-        {
-          "from": "publication.ci3_z3.claims_table",
-          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
-        },
-        {
-          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "to": "publication.ci3_z3.external_reviewer_guide"
-        },
-        {
-          "from": "publication.ci3_z3.external_reviewer_guide",
-          "to": "publication.ci3_z3.results_index"
-        },
-        {
-          "from": "publication.ci3_z3.results_index",
-          "to": "publication.ci3_z3.publication_matrix"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 32,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.publication_matrix",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
-          "title": "Publication Matrix",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.claims_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
-          "title": "Manuscript Claims Surface",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
-          "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.external_reviewer_guide",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
-          "title": "External Reviewer Guide",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.results_index",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
-          "title": "Results Index",
-          "transitive_descendants": 32
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0074",
-      "decision": null,
-      "edges": [
-        {
-          "from": "publication.ci3_z3.publication_matrix",
-          "to": "publication.ci3_z3.claims_table"
-        },
-        {
-          "from": "publication.ci3_z3.claims_table",
-          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
-        },
-        {
-          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "to": "publication.ci3_z3.external_reviewer_guide"
-        },
-        {
-          "from": "publication.ci3_z3.external_reviewer_guide",
-          "to": "publication.ci3_z3.what_this_paper_does_not_claim"
-        },
-        {
-          "from": "publication.ci3_z3.what_this_paper_does_not_claim",
-          "to": "publication.ci3_z3.publication_matrix"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 32,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.publication_matrix",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
-          "title": "Publication Matrix",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.claims_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
-          "title": "Manuscript Claims Surface",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
-          "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.external_reviewer_guide",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
-          "title": "External Reviewer Guide",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.what_this_paper_does_not_claim",
-          "current_status": "unknown",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md",
-          "title": "What This Paper Does Not Claim",
-          "transitive_descendants": 32
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0075",
-      "decision": null,
-      "edges": [
-        {
-          "from": "publication.ci3_z3.quantitative_summary_table",
-          "to": "publication.ci3_z3.publication_matrix"
-        },
-        {
-          "from": "publication.ci3_z3.publication_matrix",
-          "to": "publication.ci3_z3.claims_table"
-        },
-        {
-          "from": "publication.ci3_z3.claims_table",
-          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
-        },
-        {
-          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "to": "publication.ci3_z3.external_reviewer_guide"
-        },
-        {
-          "from": "publication.ci3_z3.external_reviewer_guide",
-          "to": "publication.ci3_z3.quantitative_summary_table"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 32,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.quantitative_summary_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
-          "title": "Quantitative Summary Table",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.publication_matrix",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
-          "title": "Publication Matrix",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.claims_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
-          "title": "Manuscript Claims Surface",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
-          "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.external_reviewer_guide",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
-          "title": "External Reviewer Guide",
-          "transitive_descendants": 32
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0076",
-      "decision": null,
-      "edges": [
-        {
-          "from": "publication.ci3_z3.readme",
-          "to": "publication.ci3_z3.quantitative_summary_table"
-        },
-        {
-          "from": "publication.ci3_z3.quantitative_summary_table",
-          "to": "publication.ci3_z3.publication_matrix"
-        },
-        {
-          "from": "publication.ci3_z3.publication_matrix",
-          "to": "publication.ci3_z3.claims_table"
-        },
-        {
-          "from": "publication.ci3_z3.claims_table",
-          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
-        },
-        {
-          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "to": "publication.ci3_z3.readme"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 32,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.readme",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/README.md",
-          "title": "Cl(3) / Z^3 Publication Package",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.quantitative_summary_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
-          "title": "Quantitative Summary Table",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.publication_matrix",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
-          "title": "Publication Matrix",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.claims_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
-          "title": "Manuscript Claims Surface",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
-          "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 32
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0077",
-      "decision": null,
-      "edges": [
-        {
-          "from": "publication.ci3_z3.publication_matrix",
-          "to": "publication.ci3_z3.claims_table"
-        },
-        {
-          "from": "publication.ci3_z3.claims_table",
-          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
-        },
-        {
-          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "to": "publication.ci3_z3.external_reviewer_guide"
-        },
-        {
-          "from": "publication.ci3_z3.external_reviewer_guide",
-          "to": "publication.ci3_z3.results_index"
-        },
-        {
-          "from": "publication.ci3_z3.results_index",
-          "to": "publication.ci3_z3.science_map"
-        },
-        {
-          "from": "publication.ci3_z3.science_map",
-          "to": "publication.ci3_z3.publication_matrix"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 32,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.publication_matrix",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
-          "title": "Publication Matrix",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.claims_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
-          "title": "Manuscript Claims Surface",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
-          "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.external_reviewer_guide",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
-          "title": "External Reviewer Guide",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.results_index",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
-          "title": "Results Index",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.science_map",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
-          "title": "Science Map",
-          "transitive_descendants": 32
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0078",
-      "decision": null,
-      "edges": [
-        {
-          "from": "publication.ci3_z3.readme",
-          "to": "publication.ci3_z3.quantitative_summary_table"
-        },
-        {
-          "from": "publication.ci3_z3.quantitative_summary_table",
-          "to": "publication.ci3_z3.publication_matrix"
-        },
-        {
-          "from": "publication.ci3_z3.publication_matrix",
-          "to": "publication.ci3_z3.claims_table"
-        },
-        {
-          "from": "publication.ci3_z3.claims_table",
-          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
-        },
-        {
-          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "to": "publication.ci3_z3.external_reviewer_guide"
-        },
-        {
-          "from": "publication.ci3_z3.external_reviewer_guide",
-          "to": "publication.ci3_z3.readme"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 32,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.readme",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/README.md",
-          "title": "Cl(3) / Z^3 Publication Package",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.quantitative_summary_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
-          "title": "Quantitative Summary Table",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.publication_matrix",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
-          "title": "Publication Matrix",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.claims_table",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
-          "title": "Manuscript Claims Surface",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
-          "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 32
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.external_reviewer_guide",
-          "current_status": "unknown",
-          "effective_status": "audited_failed",
-          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
-          "title": "External Reviewer Guide",
-          "transitive_descendants": 32
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0079",
-      "decision": null,
-      "edges": [
-        {
-          "from": "publication.ci3_z3.quantitative_summary_table",
-          "to": "publication.ci3_z3.publication_matrix"
-        },
-        {
-          "from": "publication.ci3_z3.publication_matrix",
-          "to": "publication.ci3_z3.claims_table"
-        },
-        {
-          "from": "publication.ci3_z3.claims_table",
           "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
         },
         {
@@ -4147,7 +3491,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0080",
+      "cycle_id": "cycle-0070",
       "decision": null,
       "edges": [
         {
@@ -4262,7 +3606,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0081",
+      "cycle_id": "cycle-0071",
       "decision": null,
       "edges": [
         {
@@ -4299,7 +3643,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0082",
+      "cycle_id": "cycle-0072",
       "decision": null,
       "edges": [
         {
@@ -4336,7 +3680,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0083",
+      "cycle_id": "cycle-0073",
       "decision": null,
       "edges": [
         {
@@ -4386,7 +3730,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0084",
+      "cycle_id": "cycle-0074",
       "decision": null,
       "edges": [
         {
@@ -4436,7 +3780,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0085",
+      "cycle_id": "cycle-0075",
       "decision": null,
       "edges": [
         {
@@ -4473,7 +3817,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0086",
+      "cycle_id": "cycle-0076",
       "decision": null,
       "edges": [
         {
@@ -4510,7 +3854,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0087",
+      "cycle_id": "cycle-0077",
       "decision": null,
       "edges": [
         {
@@ -4547,7 +3891,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0088",
+      "cycle_id": "cycle-0078",
       "decision": null,
       "edges": [
         {
@@ -4584,7 +3928,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0089",
+      "cycle_id": "cycle-0079",
       "decision": null,
       "edges": [
         {
@@ -4621,7 +3965,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0090",
+      "cycle_id": "cycle-0080",
       "decision": null,
       "edges": [
         {
@@ -4658,7 +4002,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0091",
+      "cycle_id": "cycle-0081",
       "decision": null,
       "edges": [
         {
@@ -4695,7 +4039,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0092",
+      "cycle_id": "cycle-0082",
       "decision": null,
       "edges": [
         {
@@ -4732,7 +4076,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0093",
+      "cycle_id": "cycle-0083",
       "decision": null,
       "edges": [
         {
@@ -4769,7 +4113,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0094",
+      "cycle_id": "cycle-0084",
       "decision": null,
       "edges": [
         {
@@ -4806,7 +4150,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0095",
+      "cycle_id": "cycle-0085",
       "decision": null,
       "edges": [
         {
@@ -4843,7 +4187,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0096",
+      "cycle_id": "cycle-0086",
       "decision": null,
       "edges": [
         {
@@ -4893,7 +4237,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0097",
+      "cycle_id": "cycle-0087",
       "decision": null,
       "edges": [
         {
@@ -4943,7 +4287,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0098",
+      "cycle_id": "cycle-0088",
       "decision": null,
       "edges": [
         {
@@ -4993,7 +4337,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0099",
+      "cycle_id": "cycle-0089",
       "decision": null,
       "edges": [
         {
@@ -5016,6 +4360,740 @@
       "length": 4,
       "max_transitive_descendants": 22,
       "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "current_status": "unknown",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
+          "transitive_descendants": 22
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0090",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
+          "to": "wave_direct_dm_portability_batch_note"
+        },
+        {
+          "from": "wave_direct_dm_portability_batch_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 22,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_portability_batch_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md",
+          "title": "Wave Direct-dM Portability Batch",
+          "transitive_descendants": 22
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0091",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 22,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "current_status": "unknown",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
+          "transitive_descendants": 22
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0092",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wave_direct_dm_h025_high_band_boundary_note",
+          "to": "wave_direct_dm_h025_low_band_retention_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_low_band_retention_note",
+          "to": "wave_direct_dm_h025_fam1_seed1_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam1_seed1_control_note",
+          "to": "wave_direct_dm_h025_two_point_synthesis_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_high_band_boundary_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 22,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_high_band_boundary_note",
+          "current_status": "unknown",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 High-Band Boundary Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_low_band_retention_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Low-Band Retention Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam1_seed1_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam1 Seed1 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note",
+          "transitive_descendants": 22
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0093",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wave_direct_dm_h025_low_band_retention_note",
+          "to": "wave_direct_dm_h025_fam1_seed1_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam1_seed1_control_note",
+          "to": "wave_direct_dm_h025_two_point_synthesis_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_feasibility_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_feasibility_note",
+          "to": "wave_direct_dm_h025_low_band_retention_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 22,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_low_band_retention_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Low-Band Retention Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam1_seed1_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam1 Seed1 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_feasibility_note",
+          "current_status": "unknown",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FEASIBILITY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Feasibility Note",
+          "transitive_descendants": 22
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0094",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wave_direct_dm_h025_fam1_seed0_control_note",
+          "to": "wave_direct_dm_h025_high_band_boundary_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_high_band_boundary_note",
+          "to": "wave_direct_dm_h025_low_band_retention_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_low_band_retention_note",
+          "to": "wave_direct_dm_h025_fam1_seed1_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam1_seed1_control_note",
+          "to": "wave_direct_dm_h025_two_point_synthesis_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_fam1_seed0_control_note"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 22,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam1_seed0_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam1 Seed0 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_high_band_boundary_note",
+          "current_status": "unknown",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 High-Band Boundary Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_low_band_retention_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Low-Band Retention Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam1_seed1_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam1 Seed1 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note",
+          "transitive_descendants": 22
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0095",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
+          "to": "wave_direct_dm_portability_batch_note"
+        },
+        {
+          "from": "wave_direct_dm_portability_batch_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 22,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "current_status": "unknown",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_portability_batch_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md",
+          "title": "Wave Direct-dM Portability Batch",
+          "transitive_descendants": 22
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0096",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
+          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 22,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "current_status": "unknown",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
+          "transitive_descendants": 22
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0097",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wave_direct_dm_h025_high_band_boundary_note",
+          "to": "wave_direct_dm_h025_low_band_retention_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_low_band_retention_note",
+          "to": "wave_direct_dm_h025_fam1_seed1_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam1_seed1_control_note",
+          "to": "wave_direct_dm_h025_two_point_synthesis_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_feasibility_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_feasibility_note",
+          "to": "wave_direct_dm_h025_high_band_boundary_note"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 22,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_high_band_boundary_note",
+          "current_status": "unknown",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 High-Band Boundary Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_low_band_retention_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Low-Band Retention Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam1_seed1_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam1 Seed1 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_feasibility_note",
+          "current_status": "unknown",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FEASIBILITY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Feasibility Note",
+          "transitive_descendants": 22
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0098",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
+          "to": "wave_direct_dm_portability_batch_note"
+        },
+        {
+          "from": "wave_direct_dm_portability_batch_note",
+          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+        }
+      ],
+      "length": 6,
+      "max_transitive_descendants": 22,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "current_status": "unknown",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_portability_batch_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md",
+          "title": "Wave Direct-dM Portability Batch",
+          "transitive_descendants": 22
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0099",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wave_direct_dm_h025_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
+          "to": "wave_direct_dm_h025_two_point_synthesis_note"
+        }
+      ],
+      "length": 6,
+      "max_transitive_descendants": 22,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "current_status": "proposed_retained",
+          "effective_status": "unknown",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
+          "transitive_descendants": 22
+        },
         {
           "audit_status": "unaudited",
           "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
@@ -5060,740 +5138,6 @@
       "decision": null,
       "edges": [
         {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "to": "wave_direct_dm_portability_batch_note"
-        },
-        {
-          "from": "wave_direct_dm_portability_batch_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 22,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_portability_batch_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md",
-          "title": "Wave Direct-dM Portability Batch",
-          "transitive_descendants": 22
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0101",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 22,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "current_status": "unknown",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 22
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0102",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_high_band_boundary_note",
-          "to": "wave_direct_dm_h025_low_band_retention_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_low_band_retention_note",
-          "to": "wave_direct_dm_h025_fam1_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam1_seed1_control_note",
-          "to": "wave_direct_dm_h025_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_high_band_boundary_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 22,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_high_band_boundary_note",
-          "current_status": "unknown",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 High-Band Boundary Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_low_band_retention_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Low-Band Retention Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam1_seed1_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam1 Seed1 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note",
-          "transitive_descendants": 22
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0103",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_low_band_retention_note",
-          "to": "wave_direct_dm_h025_fam1_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam1_seed1_control_note",
-          "to": "wave_direct_dm_h025_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_feasibility_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_feasibility_note",
-          "to": "wave_direct_dm_h025_low_band_retention_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 22,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_low_band_retention_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Low-Band Retention Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam1_seed1_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam1 Seed1 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_feasibility_note",
-          "current_status": "unknown",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FEASIBILITY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Feasibility Note",
-          "transitive_descendants": 22
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0104",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam1_seed0_control_note",
-          "to": "wave_direct_dm_h025_high_band_boundary_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_high_band_boundary_note",
-          "to": "wave_direct_dm_h025_low_band_retention_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_low_band_retention_note",
-          "to": "wave_direct_dm_h025_fam1_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam1_seed1_control_note",
-          "to": "wave_direct_dm_h025_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam1_seed0_control_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 22,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam1_seed0_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam1 Seed0 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_high_band_boundary_note",
-          "current_status": "unknown",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 High-Band Boundary Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_low_band_retention_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Low-Band Retention Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam1_seed1_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam1 Seed1 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note",
-          "transitive_descendants": 22
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0105",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "to": "wave_direct_dm_portability_batch_note"
-        },
-        {
-          "from": "wave_direct_dm_portability_batch_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 22,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "current_status": "unknown",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_portability_batch_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md",
-          "title": "Wave Direct-dM Portability Batch",
-          "transitive_descendants": 22
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0106",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 22,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "current_status": "unknown",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
-          "transitive_descendants": 22
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0107",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_high_band_boundary_note",
-          "to": "wave_direct_dm_h025_low_band_retention_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_low_band_retention_note",
-          "to": "wave_direct_dm_h025_fam1_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam1_seed1_control_note",
-          "to": "wave_direct_dm_h025_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_feasibility_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_feasibility_note",
-          "to": "wave_direct_dm_h025_high_band_boundary_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 22,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_high_band_boundary_note",
-          "current_status": "unknown",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 High-Band Boundary Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_low_band_retention_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Low-Band Retention Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam1_seed1_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam1 Seed1 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_feasibility_note",
-          "current_status": "unknown",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FEASIBILITY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Feasibility Note",
-          "transitive_descendants": 22
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0108",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "to": "wave_direct_dm_portability_batch_note"
-        },
-        {
-          "from": "wave_direct_dm_portability_batch_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 22,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "current_status": "unknown",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_portability_batch_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md",
-          "title": "Wave Direct-dM Portability Batch",
-          "transitive_descendants": 22
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0109",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "to": "wave_direct_dm_h025_two_point_synthesis_note"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 22,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "current_status": "unknown",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 22
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "current_status": "proposed_retained",
-          "effective_status": "unknown",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
-          "transitive_descendants": 22
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0110",
-      "decision": null,
-      "edges": [
-        {
           "from": "wave_direct_dm_h025_two_point_synthesis_note",
           "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
         },
@@ -5892,7 +5236,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0111",
+      "cycle_id": "cycle-0101",
       "decision": null,
       "edges": [
         {
@@ -6007,7 +5351,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0112",
+      "cycle_id": "cycle-0102",
       "decision": null,
       "edges": [
         {
@@ -6135,7 +5479,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0113",
+      "cycle_id": "cycle-0103",
       "decision": null,
       "edges": [
         {
@@ -6276,7 +5620,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0114",
+      "cycle_id": "cycle-0104",
       "decision": null,
       "edges": [
         {
@@ -6313,7 +5657,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0115",
+      "cycle_id": "cycle-0105",
       "decision": null,
       "edges": [
         {
@@ -6350,7 +5694,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0116",
+      "cycle_id": "cycle-0106",
       "decision": null,
       "edges": [
         {
@@ -6387,7 +5731,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0117",
+      "cycle_id": "cycle-0107",
       "decision": null,
       "edges": [
         {
@@ -6424,7 +5768,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0118",
+      "cycle_id": "cycle-0108",
       "decision": null,
       "edges": [
         {
@@ -6461,7 +5805,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0119",
+      "cycle_id": "cycle-0109",
       "decision": null,
       "edges": [
         {
@@ -6511,7 +5855,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0120",
+      "cycle_id": "cycle-0110",
       "decision": null,
       "edges": [
         {
@@ -6561,7 +5905,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0121",
+      "cycle_id": "cycle-0111",
       "decision": null,
       "edges": [
         {
@@ -6611,7 +5955,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0122",
+      "cycle_id": "cycle-0112",
       "decision": null,
       "edges": [
         {
@@ -6661,7 +6005,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0123",
+      "cycle_id": "cycle-0113",
       "decision": null,
       "edges": [
         {
@@ -6724,7 +6068,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0124",
+      "cycle_id": "cycle-0114",
       "decision": null,
       "edges": [
         {
@@ -6787,7 +6131,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0125",
+      "cycle_id": "cycle-0115",
       "decision": null,
       "edges": [
         {
@@ -6824,7 +6168,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0126",
+      "cycle_id": "cycle-0116",
       "decision": null,
       "edges": [
         {
@@ -6861,7 +6205,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0127",
+      "cycle_id": "cycle-0117",
       "decision": null,
       "edges": [
         {
@@ -6898,7 +6242,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0128",
+      "cycle_id": "cycle-0118",
       "decision": null,
       "edges": [
         {
@@ -6948,7 +6292,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0129",
+      "cycle_id": "cycle-0119",
       "decision": null,
       "edges": [
         {
@@ -6985,7 +6329,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0130",
+      "cycle_id": "cycle-0120",
       "decision": null,
       "edges": [
         {
@@ -7022,7 +6366,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0131",
+      "cycle_id": "cycle-0121",
       "decision": null,
       "edges": [
         {
@@ -7059,7 +6403,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0132",
+      "cycle_id": "cycle-0122",
       "decision": null,
       "edges": [
         {
@@ -7096,16 +6440,16 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-04-29T11:40:13.007527+00:00",
+  "generated_at": "2026-04-29T12:23:57.776054+00:00",
   "length_counts": {
     "10": 1,
-    "2": 64,
-    "3": 26,
+    "2": 59,
+    "3": 25,
     "4": 15,
     "5": 12,
-    "6": 6,
-    "7": 3,
-    "8": 4,
+    "6": 5,
+    "7": 2,
+    "8": 2,
     "9": 1
   },
   "sort": [
@@ -7113,5 +6457,5 @@
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-04-29T11:40:10.218475+00:00"
+  "source_graph_generated_at": "2026-04-29T12:23:48.360131+00:00"
 }
