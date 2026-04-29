@@ -18,6 +18,13 @@
 - [`scripts/frontier_emergent_schwarzschild.py`](../../../scripts/frontier_emergent_schwarzschild.py)
 - [`scripts/frontier_hawking_analog.py`](../../../scripts/frontier_hawking_analog.py)
 - [`scripts/frontier_quantized_energy_levels.py`](../../../scripts/frontier_quantized_energy_levels.py)
+- [`scripts/frontier_signed_gravity_response_lane_status.py`](../../../scripts/frontier_signed_gravity_response_lane_status.py)
+
+## Active Frontier Status
+
+- [`../../SIGNED_GRAVITY_RESPONSE_LANE_STATUS_NOTE_2026-04-26.md`](../../SIGNED_GRAVITY_RESPONSE_LANE_STATUS_NOTE_2026-04-26.md)
+  lands the signed gravitational response review as conditional support plus
+  no-go boundaries. It is not a retained physical antigravity claim.
 
 ## Current Standing
 

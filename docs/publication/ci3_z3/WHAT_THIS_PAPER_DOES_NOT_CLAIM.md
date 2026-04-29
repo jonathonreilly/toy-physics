@@ -229,6 +229,11 @@ The paper does **not** claim:
 - a direct gravitational-wave mass falsification claim from the
   gravity/cosmology tower Lambda bridge without separately promoting the
   bounded particle interpretation of the compactness towers;
+- a physical antigravity, negative-inertial-mass, shielding, propulsion,
+  reactionless-force, or switchable-gravity sector. The signed gravitational
+  response lane has a conditional locked source/response consequence harness
+  and determinant-orientation support/no-go boundary, but the native physical
+  `chi_g` source selector and source action remain open;
 - evaluation of the DM microscopic charged block `D_-`, selection of the
   charged support split, derivation of the right-sensitive selector law on
   `L_e`, or independent final DM closure from the

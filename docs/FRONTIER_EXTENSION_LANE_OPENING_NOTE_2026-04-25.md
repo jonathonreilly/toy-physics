@@ -242,13 +242,15 @@ response-only sign flips are controls, not physical sectors.
 - continuum/refinement and family-portability checks do not collapse the sign
   sector into a parameter artifact
 
-### Initial artifact targets
+### Canonical artifact targets
 
-- `docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md`
-- `scripts/gravity_signed_sector_harness.py`
-- `scripts/signed_gravity_two_body_action_reaction.py`
-- `scripts/staggered_antigravity_response_window.py`
-- `scripts/lensing_sign_phase_diagram.py`
+- `docs/SIGNED_GRAVITY_RESPONSE_LANE_STATUS_NOTE_2026-04-26.md`
+- `scripts/frontier_signed_gravity_response_lane_status.py`
+
+Branch-level prototype harnesses for locked response, two-body balance,
+lensing sign phases, staggered response windows, APS probes, determinant-line
+probes, and no-go controls were reviewed. They were consolidated into the
+canonical status note and harness rather than imported wholesale.
 
 ### First retained-safe statement if the lane works
 
@@ -266,6 +268,24 @@ response-only sign flips are controls, not physical sectors.
   parameter-window effects.
 - Response-only sign reversal risks one-way forces and should be treated as a
   no-go control unless it is tied to source sign.
+
+### 2026-04-26 Status Update
+
+The signed-response review landed as
+[SIGNED_GRAVITY_RESPONSE_LANE_STATUS_NOTE_2026-04-26.md](SIGNED_GRAVITY_RESPONSE_LANE_STATUS_NOTE_2026-04-26.md).
+The lane now has a compact status harness:
+
+- locked source/response sign passes the two-body action-reaction consequence
+  check;
+- source-only and response-only signs remain no-go controls;
+- the strict local/taste-cell `chi_g` selector and local signed source
+  primitive are blocked;
+- the determinant-orientation line is naturally hosted and gives a unique
+  `chi_eta` source character inside its grammar, but no canonical physical
+  source section or source action is derived.
+
+This update does not promote a physical antigravity, negative-mass, shielding,
+propulsion, reactionless-force, or switchable-gravity claim.
 
 ## Priority Order
 
