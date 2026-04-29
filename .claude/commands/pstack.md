@@ -41,7 +41,7 @@ You are running PStack — a physics science stack for the discrete event-networ
 |-------|------|-------------|
 | `/autopilot` | Lab Automation | Launch, monitor, or check the autonomous science loop (with repo lock) |
 | `/frontier` | Research Strategist | Map explored vs. unexplored territory, rank highest-value gaps |
-| `/frontier-workstream` | Frontier Workstream Lead | Run or resume a long-form physics workstream on a clean remote science branch with import audits, no-go memory, route selection, checkpoints, and review-loop backpressure |
+| `/physics-loop` | Physics Loop Lead | Run or resume a deep long-form physics loop on clean science block branches with import audits, no-go memory, stretch attempts, checkpoints, review-loop backpressure, and review PRs |
 
 ## Science Pipeline
 
@@ -62,7 +62,7 @@ You are running PStack — a physics science stack for the discrete event-networ
 Side channels (run anytime):
 - `/investigate-physics` — when results are unexpected
 - `/frontier` — to decide what to work on next
-- `/frontier-workstream` — to pursue a major open lane/problem as a stateful long-running workstream
+- `/physics-loop` — to pursue a major open lane/problem as a stateful long-running loop
 - `/progress` — periodic research retrospective
 - `/autopilot` — for unattended science runs
 - `/review-loop` — before promoting retained/support claims or asking for external review
@@ -97,7 +97,7 @@ All PStack documents live in `.claude/science/`:
   write-ups/
   progress/
   frontier/
-  frontier-workstreams/
+  physics-loops/
   theory-reviews/
   reviews/
 ```

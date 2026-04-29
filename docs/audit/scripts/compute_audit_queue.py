@@ -81,9 +81,9 @@ def main() -> int:
             "blocker": row.get("blocker"),
             "cross_confirmation_status": (row.get("cross_confirmation") or {}).get("status"),
             "audit_independence_required": (
-                "cross_family_with_cross_confirmation"
+                "fresh_context_or_stronger_with_cross_confirmation"
                 if criticality == "critical"
-                else "cross_family"
+                else "fresh_context_or_stronger"
                 if criticality == "high"
                 else "any_non_self"
             ),
@@ -128,7 +128,7 @@ def main() -> int:
     md_lines.append(
         "Auditor (Codex GPT-5.5 by default) should pull from the top of "
         "this list. Critical claims require cross-confirmation by a "
-        "second independent auditor before `audited_clean` lands."
+        "second independent clean-room auditor before `audited_clean` lands."
     )
     md_lines.append("")
     md_lines.append("## Top 50")

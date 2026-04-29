@@ -183,7 +183,9 @@ def part4_claim_state() -> None:
 
     check(
         "Lane 4 status after this artifact is open, not retained closure",
-        True,
+        M1_HEAVY_GEV > 0.0
+        and M_DIRAC_DIRECT_SM_EV / M3_SEESAW_EV > 1.0e9
+        and Y_DIRAC_FOR_M3_SM < 1.0e-12,
         "fork isolated; positive activation law still missing",
     )
 

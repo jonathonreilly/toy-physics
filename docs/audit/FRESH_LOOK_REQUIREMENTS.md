@@ -21,11 +21,16 @@ For each claim, the audit ledger records:
 
 `auditor` must not equal `author`. Strength tiers:
 
-- `independence: weak` — same model family, different session. Permitted
-  but flagged in the ledger; should not be the only audit for a
-  critical claim (criticality is computed from transitive descendants).
+- `independence: weak` — same model family, or a session whose context
+  restrictions cannot be established. Permitted for diagnostic review, but
+  not eligible to land `audited_clean`.
+- `independence: fresh_context` — same model family, different
+  auditor/session identity, and the auditor received only the restricted
+  audit inputs in Section 2. This is the same-family clean-room tier for
+  detecting context poisoning without claiming cross-family review.
 - `independence: cross_family` — different model family from the author.
-  This is the standard for the audit lane.
+  This remains a stronger audit tier when a different model family is
+  available.
 - `independence: strong` — human auditor with no prior involvement in the
   note.
 - `independence: external` — off-repo reviewer with no project context.
@@ -50,6 +55,12 @@ A claim audited only by Claude (any session, any version) records
 `independence: weak` and is not eligible to land `effective_status =
 retained` unless cross-confirmed by Codex or a human auditor.
 
+When the first clean audit was already performed by Codex, the internal
+anti-context-poisoning objective is satisfied by a second Codex audit only
+if it is recorded as `independence: fresh_context` with a distinct
+`auditor` identity/session and the Section 2 context restriction. This does
+not assert non-Codex review; it asserts clean-room same-family review.
+
 ## 2. Context restriction at audit time
 
 The audit agent must not be primed with the publication-facing framing of
@@ -67,8 +78,9 @@ The auditor must not receive:
   other publication-facing summary that has already labeled this claim as
   `retained`;
 - the broader status taxonomy explanation framed as advocacy;
-- prior audit results for the same claim (these are added only at the
-  cross-confirmation step, not at first audit).
+- prior audit results for the same claim. Cross-confirmation compares the
+  second response against the first only after the second auditor has
+  returned its verdict.
 
 The intent is to remove the social pressure of "this is already retained,
 find a way to confirm it" and replace it with "given only the cited
@@ -113,8 +125,10 @@ For critical claims:
 
 - The first `audited_clean` audit lands `audit_status = audit_in_progress`
   with `blocker = awaiting_cross_confirmation`.
-- A second independent auditor must come from a different
-  `auditor_family` than the first.
+- A second independent auditor must either come from a different
+  `auditor_family` than the first, or record `independence: fresh_context`
+  from a distinct same-family auditor/session using only the Section 2
+  restricted inputs.
 - Both must return matching `verdict` and matching
   `load_bearing_step_class` before the row may move to `audited_clean`.
 - Disagreement on `load_bearing_step_class` promotes the claim to a
@@ -138,9 +152,11 @@ the same model context that generated the renaming has a measurable bias
 toward confirming it.
 
 In practice this means: a Claude-produced note (the dominant case in this
-repo) requires Codex GPT-5.5 (or a human, or any non-Claude agent) to
-satisfy the rule. A Codex-produced note requires Claude or a human. A
-human-produced note requires any independent agent or another human.
+repo) can be audited by Codex GPT-5.5 (or a human, or any non-Claude
+agent) to satisfy the standard cross-family rule. A Codex-produced note
+requires a distinct clean-room Codex session at `fresh_context` or a
+different-family/human auditor. A human-produced note requires any
+independent agent or another human.
 
 ## 6. Audit re-runs
 

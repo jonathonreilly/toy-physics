@@ -15,6 +15,18 @@ sub-target.
 **Non-claim boundary:** the top mass is retained; the remaining five quark
 masses are not.
 
+## 2026-04-27 Dependency Firewall
+
+The [Quark Lane 3 bounded-companion retention firewall](../../QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md)
+records the current no-go boundary for this lane. The top mass is retained,
+but CKM closure, bounded down-type ratios, and bounded up-type extensions do
+not by themselves retain `m_u`, `m_d`, `m_s`, `m_c`, or `m_b`.
+
+The firewall blocks any five-mass closure unless a branch supplies theorem-core
+down-type bridges and scale selection, a retained up-type partition or scalar
+amplitude law, and a species-differentiated Yukawa Ward or equivalent absolute
+scale primitive for non-top quarks.
+
 ## 1. Missing-science framing
 
 The CKM atlas/axiom package closes many mixing identities, but the framework
@@ -173,7 +185,9 @@ already-retained CKM atlas/axiom structural identities.
 
 - Depends on: Koide closure (for the Q-side of the cross-sector V_cb bridge,
   which provides additional constraint on quark masses via Q_ℓ · α_s² = 4|V_cb|²)
-- Enables: Lane 1 (hadron masses depend on quark masses)
+- Enables: Lane 1 (hadron masses depend on quark masses; Lane 1 now
+  identifies combined `m_u + m_d` retention as the shortest quark-mass
+  dependency for the GMOR pion route)
 - Enables: Lane 4 (neutrino sector consistency checks via flavor-universal
   Yukawa structure)
 - Cross-validates: existing CKM atlas/axiom package (CKM was closed without

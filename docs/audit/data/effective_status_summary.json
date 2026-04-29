@@ -1,44 +1,44 @@
 {
-  "computed_at": "2026-04-27T12:57:02.299531+00:00",
+  "computed_at": "2026-04-28T12:35:16.806705+00:00",
   "cycle_examples": [
     [
       "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
       "ai_methodology.canonical_framing_paragraph_2026-04-25"
     ],
     [
+      "yt_ew_color_projection_theorem",
+      "rconn_derived_note"
+    ],
+    [
+      "rconn_derived_note",
+      "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+    ],
+    [
+      "yt_ew_color_projection_theorem",
+      "rconn_derived_note",
+      "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+    ],
+    [
       "ckm_atlas_axiom_closure_note",
       "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
-    ],
-    [
-      "ckm_atlas_axiom_closure_note",
-      "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-      "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-    ],
-    [
-      "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-      "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-    ],
-    [
-      "left_handed_charge_matching_note",
-      "one_generation_matter_closure_note"
     ]
   ],
-  "cycles_detected": 284,
+  "cycles_detected": 288,
   "effective_status_counts": {
-    "audited_conditional": 297,
+    "audited_conditional": 400,
     "audited_decoration": 3,
-    "audited_failed": 89,
+    "audited_failed": 148,
     "audited_numerical_match": 5,
-    "audited_renaming": 2,
+    "audited_renaming": 3,
     "bounded": 184,
-    "open": 11,
-    "proposed_promoted": 2,
-    "proposed_retained": 161,
-    "retained": 39,
-    "support": 106,
-    "unknown": 720
+    "open": 15,
+    "proposed_promoted": 1,
+    "proposed_retained": 3,
+    "retained": 79,
+    "support": 100,
+    "unknown": 689
   },
-  "proposed_demoted_by_upstream_count": 137,
+  "proposed_demoted_by_upstream_count": 140,
   "proposed_demoted_by_upstream_examples": [
     "alpha_s_derived_note",
     "atomic_hydrogen_helium_probe_note",

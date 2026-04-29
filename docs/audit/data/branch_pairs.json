@@ -1,0 +1,563 @@
+{
+  "branches": [
+    {
+      "best_partner_score": null,
+      "branch": "codex/gauge-perron-variational-proof-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 1,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-chronology-boundary-classifier-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 23,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-ckm-a-rho-multiplicative-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-ckm-barred-brocard-points-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-ckm-brocard-closed-form-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-ckm-ew-color-square-support-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-ckm-orthic-triangle-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-ckm-physical-ratios-circumradius-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-ckm-steiner-marden-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-ckm-symmedian-brocard-circle-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-ew-alpha-adjoint-support-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-gauge-perron-variational-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-koide-closure-targets-ab-v2-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-neutrino-seesaw-boundary-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-phase-valley-distance-law-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/land-target3-coframe-derivation-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/neutrino-seesaw-boundary-proof-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 1,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/review-ckm-alpha-prophecy-2026-04-26",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/review-ckm-vus-power-tower-2026-04-26",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/review-saturday-koide-2026-04-25",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/review-sm-accidental-bl-proof-2026-04-26",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/review-sm-gim-neutral-current-proof-2026-04-26",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/review-sm-weinberg-operator-proof-2026-04-26",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/sm-accidental-bl-proof-2026-04-26",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/sm-gim-neutral-current-proof-2026-04-26",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/sm-quark-flavor-count-proof-2026-04-26",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/sm-weinberg-operator-proof-2026-04-26",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 1,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "codex/target3-coframe-derivation",
+      "classification": "is_codex_review_or_land",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": 0.787,
+      "branch": "ckm-a-rho-multiplicative-koide-bridge",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/land-ckm-a-rho-multiplicative-2026-04-25",
+          "score": 0.787
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.59,
+      "branch": "ckm-alpha-s-independent-structural-prophecy",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/review-ckm-alpha-prophecy-2026-04-26",
+          "score": 0.59
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.7,
+      "branch": "ckm-bare-ew-color-square-identity",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/land-ckm-ew-color-square-support-2026-04-25",
+          "score": 0.7
+        },
+        {
+          "codex_branch": "codex/land-ckm-barred-brocard-points-2026-04-25",
+          "score": 0.552
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.708,
+      "branch": "ckm-barred-brocard-angle-exact-closed-form",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/land-ckm-brocard-closed-form-2026-04-25",
+          "score": 0.708
+        },
+        {
+          "codex_branch": "codex/land-ckm-barred-brocard-points-2026-04-25",
+          "score": 0.657
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.735,
+      "branch": "ckm-barred-brocard-points-exact-closed-form",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/land-ckm-barred-brocard-points-2026-04-25",
+          "score": 0.735
+        },
+        {
+          "codex_branch": "codex/land-ckm-brocard-closed-form-2026-04-25",
+          "score": 0.697
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.603,
+      "branch": "ckm-barred-orthic-triangle-exact-closed-form",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/land-ckm-orthic-triangle-2026-04-25",
+          "score": 0.603
+        },
+        {
+          "codex_branch": "codex/land-ckm-brocard-closed-form-2026-04-25",
+          "score": 0.597
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.6,
+      "branch": "ckm-barred-steiner-inellipse-marden-closed-form",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/land-ckm-brocard-closed-form-2026-04-25",
+          "score": 0.6
+        },
+        {
+          "codex_branch": "codex/land-ckm-steiner-marden-2026-04-25",
+          "score": 0.554
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.747,
+      "branch": "ckm-barred-symmedian-brocard-circle-closed-form",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/land-ckm-symmedian-brocard-circle-2026-04-25",
+          "score": 0.747
+        },
+        {
+          "codex_branch": "codex/land-ckm-brocard-closed-form-2026-04-25",
+          "score": 0.657
+        },
+        {
+          "codex_branch": "codex/land-ckm-barred-brocard-points-2026-04-25",
+          "score": 0.583
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.578,
+      "branch": "ckm-bs-phi-s-nlo-jarlskog-bridge",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/land-ckm-phi-s-nlo-2026-04-25",
+          "score": 0.578
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.746,
+      "branch": "ckm-cubic-bernoulli-koide-bridge",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 1,
+      "partners": [
+        {
+          "codex_branch": "codex/ckm-cubic-bernoulli-support",
+          "score": 0.746
+        },
+        {
+          "codex_branch": "codex/ckm-egyptian-bernoulli-support",
+          "score": 0.581
+        },
+        {
+          "codex_branch": "codex/ckm-bernoulli-2-9-support",
+          "score": 0.561
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.703,
+      "branch": "ckm-egyptian-bernoulli-closures-koide-bridge",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 1,
+      "partners": [
+        {
+          "codex_branch": "codex/ckm-egyptian-bernoulli-support",
+          "score": 0.703
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.679,
+      "branch": "ckm-magnitudes-vus-power-tower-bridge",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/review-ckm-vus-power-tower-2026-04-26",
+          "score": 0.679
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.571,
+      "branch": "ckm-multi-projection-bernoulli-koide-bridge",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/ckm-cubic-bernoulli-support",
+          "score": 0.571
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.552,
+      "branch": "ckm-n9-structural-family-koide-bridge",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 1,
+      "partners": [
+        {
+          "codex_branch": "codex/ckm-n9-family-support",
+          "score": 0.552
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.901,
+      "branch": "ckm-physical-ratios-circumradius-bridge",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/land-ckm-physical-ratios-circumradius-2026-04-25",
+          "score": 0.901
+        },
+        {
+          "codex_branch": "codex/ckm-barred-circumradius-landing",
+          "score": 0.629
+        }
+      ]
+    },
+    {
+      "best_partner_score": 0.941,
+      "branch": "koide-closure-targets-AB",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 14,
+      "partners": [
+        {
+          "codex_branch": "codex/land-koide-closure-targets-ab-v2-2026-04-25",
+          "score": 0.941
+        },
+        {
+          "codex_branch": "codex/koide-targets-ab-support-salvage",
+          "score": 0.571
+        }
+      ]
+    },
+    {
+      "best_partner_score": 1.0,
+      "branch": "koide-closure-targets-AB-v2",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/land-koide-closure-targets-ab-v2-2026-04-25",
+          "score": 1.0
+        },
+        {
+          "codex_branch": "codex/koide-targets-ab-support-salvage",
+          "score": 0.61
+        }
+      ]
+    },
+    {
+      "best_partner_score": 1.0,
+      "branch": "saturday-koide",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/review-saturday-koide-2026-04-25",
+          "score": 1.0
+        },
+        {
+          "codex_branch": "codex/review-sunday-koide-2026-04-26",
+          "score": 0.846
+        },
+        {
+          "codex_branch": "codex/review-monday-koide",
+          "score": 0.692
+        }
+      ]
+    },
+    {
+      "best_partner_score": 1.0,
+      "branch": "sunday-koide",
+      "classification": "reviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": [
+        {
+          "codex_branch": "codex/review-sunday-koide-2026-04-26",
+          "score": 1.0
+        },
+        {
+          "codex_branch": "codex/review-saturday-koide-2026-04-25",
+          "score": 0.846
+        },
+        {
+          "codex_branch": "codex/review-monday-koide",
+          "score": 0.833
+        }
+      ]
+    },
+    {
+      "best_partner_score": null,
+      "branch": "ckm-a-squared-below-w2-y-quantum-closure",
+      "classification": "unreviewed_unlanded",
+      "novel_path_count": 1,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "ckm-alpha-ew-lattice-adjoint-dim-closed-form",
+      "classification": "unreviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "ckm-barred-nine-point-circle-protected-pencil",
+      "classification": "unreviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "ckm-bernoulli-two-ninths-koide-bridge",
+      "classification": "unreviewed_unlanded",
+      "novel_path_count": 1,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "ckm-consecutive-primes-s3-koide-bridge",
+      "classification": "unreviewed_unlanded",
+      "novel_path_count": 1,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "ckm-perfect-number-triangular-koide-bridge",
+      "classification": "unreviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "claude/flamboyant-hodgkin-e16786",
+      "classification": "unreviewed_unlanded",
+      "novel_path_count": 3,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "koide-q-closure-via-op-uniqueness",
+      "classification": "unreviewed_unlanded",
+      "novel_path_count": 3,
+      "partners": []
+    },
+    {
+      "best_partner_score": null,
+      "branch": "koide-q-op-uniqueness-support-v4",
+      "classification": "unreviewed_unlanded",
+      "novel_path_count": 2,
+      "partners": []
+    }
+  ],
+  "classification_counts": {
+    "is_codex_review_or_land": 28,
+    "reviewed_unlanded": 19,
+    "unreviewed_unlanded": 9
+  },
+  "generated_at": "2026-04-27T12:08:03.580887+00:00",
+  "novel_branch_count": 56,
+  "similarity_threshold": 0.55
+}

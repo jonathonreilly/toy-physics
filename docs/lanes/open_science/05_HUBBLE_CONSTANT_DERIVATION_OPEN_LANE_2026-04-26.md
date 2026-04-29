@@ -16,6 +16,18 @@ derivation.
 **Non-claim boundary:** current `H_0` usage remains external-input until a
 retained derivation lands.
 
+## 2026-04-27 Dependency Firewall
+
+The [Hubble Lane 5 two-gate dependency firewall](../../HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md)
+records the current no-go boundary for this lane. The late-time structural
+lock reduces the numerical surface to `H_0 = H_inf / sqrt(L)`, but it does
+not supply both the absolute scale and dimensionless cosmic-history input.
+
+The firewall blocks any numerical `H_0` closure unless a branch supplies both
+`(C1)` absolute-scale information and one of `{(C2), (C3)}` for the
+dimensionless cosmic-history or cosmic-`L` gate. Either side alone leaves a
+one-parameter family.
+
 ## 1. Missing-science framing
 
 The framework currently records

@@ -198,26 +198,30 @@ def part4_ward_reuse_firewall() -> None:
     )
     check(
         "absolute non-top Yukawas require species differentiation",
-        True,
+        "species-differentiation primitive" in read("docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md"),
         "species-uniform reading closed negatively; new primitive required",
     )
 
 
 def part5_safe_endpoint() -> None:
     section("Part 5: safe endpoint")
+    lane = read("docs/lanes/open_science/03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md")
+    note = read("docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md")
     check(
         "CKM closure is not a five-mass closure theorem",
-        True,
+        "CKM closure is a mixing theorem, not a mass-retention theorem" in note,
         "mixing package needs mass-ratio bridges and selectors before retention",
     )
     check(
         "Lane 3 honest status is open, not retained closure",
-        True,
+        "ACCEPTED CRITICAL OPEN SCIENCE LANE" in lane
+        and "the remaining five quark" in lane
+        and "Lane 3 remains open" in note,
         "open gates: 5/6 NP proof, up scalar/partition law, generation-stratified Ward",
     )
     check(
         "firewall does not use observed masses as derivation inputs",
-        True,
+        "No observed quark mass is used as a derivation input" in note,
         "PDG values are comparator/sensitivity only",
     )
 

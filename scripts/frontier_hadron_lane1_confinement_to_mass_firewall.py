@@ -114,7 +114,7 @@ def part2_one_scale_is_not_spectrum() -> None:
     )
     check(
         "bounded sqrt(sigma) alone leaves arbitrary channel coefficients",
-        True,
+        len({round(c_pi_charged, 3), round(c_pi_neutral, 3), round(c_p, 3), round(c_n, 3)}) > 2,
         "m_H = c_H sqrt(sigma); c_H is not retained",
     )
 
@@ -126,6 +126,8 @@ def part3_gmor_dependency() -> None:
     # condensate changes m_pi by sqrt(1.1), while f_pi changes it inversely.
     factor_mass_or_sigma = math.sqrt(1.10)
     factor_fpi = 1.0 / 1.10
+    lane = read("docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md")
+    lane3 = read("docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md")
 
     print("  GMOR: m_pi^2 f_pi^2 = (m_u + m_d) Sigma")
     print(f"  10% change in (m_u+m_d) or Sigma changes m_pi by {factor_mass_or_sigma:.4f}x")
@@ -143,7 +145,10 @@ def part3_gmor_dependency() -> None:
     )
     check(
         "current Lane 1 cannot close m_pi until m_u, m_d, Sigma, and f_pi land",
-        True,
+        "Quark masses m_u, m_d" in lane
+        and "Chiral condensate" in lane
+        and "Pion decay constant" in lane
+        and "Lane 3 remains open" in lane3,
         "all four are load-bearing in GMOR",
     )
 
@@ -172,14 +177,19 @@ def part4_confinement_runner_boundary() -> None:
 
 def part5_safe_endpoint() -> None:
     section("Part 5: safe endpoint")
+    lane = read("docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md")
+    note = read("docs/HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md")
     check(
         "Lane 1 honest status is open, not retained hadron closure",
-        True,
+        "ACCEPTED CRITICAL OPEN SCIENCE LANE" in lane
+        and "no theorem or claim" in lane
+        and "Lane 1 remains open" in note,
         "open gates: quark masses, chiral inputs, hadronic running, correlators",
     )
     check(
         "standard lattice-QCD methodology remains a bridge until instantiated",
-        True,
+        "lattice-QCD-equivalent correlator extraction" in note
+        and "standard lattice-QCD methodology by itself counts as a framework derivation" in note,
         "methodology alone is not a framework mass calculation",
     )
 

@@ -1233,6 +1233,46 @@
       "to": "lanes.open_science.readme"
     },
     {
+      "from": "canonical_harness_index",
+      "to": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "atomic_rydberg_dependency_firewall_note_2026-04-27"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "neutrino_lane4_theorem_plan_note_2026-04-28"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "neutrino_lane4_workstream_closeout_note_2026-04-28"
+    },
+    {
       "from": "causal_distance_tail_note",
       "to": "causal_propagating_field_note"
     },
@@ -3565,6 +3605,14 @@
       "to": "dm_neutrino_cp_kernel_deformation_necessity_note_2026-04-15"
     },
     {
+      "from": "dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15",
+      "to": "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15",
+      "to": "dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15"
+    },
+    {
       "from": "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
       "to": "dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20"
     },
@@ -3903,6 +3951,14 @@
     {
       "from": "evanescent_barrier_amplitude_suppression_theorem_note",
       "to": "star_supported_bridge_class_note"
+    },
+    {
+      "from": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+      "to": "rconn_derived_note"
+    },
+    {
+      "from": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+      "to": "yt_ew_color_projection_theorem"
     },
     {
       "from": "ew_lattice_cos_sq_theta_w_complement_bridge_theorem_note_2026-04-26",
@@ -4425,6 +4481,38 @@
       "to": "gravity_sign_audit_2026-04-10"
     },
     {
+      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
+      "to": "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24"
+    },
+    {
+      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
+      "to": "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24"
+    },
+    {
+      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
+      "to": "koide_berry_phase_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
+      "to": "koide_brannen_geometry_dirac_support_note_2026-04-22"
+    },
+    {
+      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
+      "to": "koide_brannen_callan_harvey_candidate_note_2026-04-22"
+    },
+    {
+      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
+      "to": "koide_brannen_phase_reduction_theorem_note_2026-04-20"
+    },
+    {
+      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
+      "to": "koide_q_delta_linking_relation_theorem_note_2026-04-20"
+    },
+    {
+      "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
       "from": "koide_c3_constant_singlet_reparameterization_theorem_note_2026-04-20",
       "to": "koide_z3_scalar_potential_support_note_2026-04-19"
     },
@@ -4707,6 +4795,26 @@
     {
       "from": "koide_positive_paths_first_principles_note_2026-04-18",
       "to": "koide_circulant_character_bridge_note_2026-04-18"
+    },
+    {
+      "from": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
+      "to": "koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25"
+    },
+    {
+      "from": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
+      "to": "koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25"
+    },
+    {
+      "from": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
+      "to": "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25"
+    },
+    {
+      "from": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
+      "to": "koide_q_so2_phase_erasure_support_note_2026-04-25"
     },
     {
       "from": "koide_selected_slice_frozen_bank_decomposition_note_2026-04-18",
@@ -5047,6 +5155,14 @@
     {
       "from": "minimal_axioms_2026-04-11",
       "to": "higgs_vacuum_explicit_systematic_note"
+    },
+    {
+      "from": "native_gauge_closure_note",
+      "to": "graph_first_selector_derivation_note"
+    },
+    {
+      "from": "native_gauge_closure_note",
+      "to": "graph_first_su3_integration_note"
     },
     {
       "from": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
@@ -6661,6 +6777,18 @@
       "to": "quark_up_amplitude_native_expression_scan_note_2026-04-19"
     },
     {
+      "from": "rconn_derived_note",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "rconn_derived_note",
+      "to": "yukawa_color_projection_theorem"
+    },
+    {
+      "from": "rconn_derived_note",
+      "to": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+    },
+    {
       "from": "restricted_strong_field_closure_note",
       "to": "evanescent_barrier_amplitude_suppression_theorem_note"
     },
@@ -7749,6 +7877,14 @@
       "to": "yt_boundary_theorem"
     },
     {
+      "from": "yt_ew_color_projection_theorem",
+      "to": "rconn_derived_note"
+    },
+    {
+      "from": "yt_ew_color_projection_theorem",
+      "to": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+    },
+    {
       "from": "yt_exact_schur_normal_form_uniqueness_note",
       "to": "yt_exact_coarse_grained_bridge_operator_note"
     },
@@ -7799,6 +7935,114 @@
     {
       "from": "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17",
       "to": "yt_exact_schur_normal_form_uniqueness_note"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_ward_identity_derivation_theorem"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_color_factor_retention_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_i_s_revision_verification_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_h_unit_renormalization_framework_native_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_loop_geometric_bound_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_1_bz_computation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_2_bz_computation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_3_bz_computation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_r_2_loop_extension_note_2026-04-18"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p2_taste_staircase_transport_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p2_v_matching_theorem_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p2_f_yt_loop_geometric_bound_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_k_series_geometric_bound_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_exact_schur_normal_form_uniqueness_note"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "plaquette_self_consistency_note"
     },
     {
       "from": "yt_vertex_power_derivation",
@@ -7866,7 +8110,7 @@
     },
     {
       "from": "ai_methodology.llm_skill_pack_2026-04-25",
-      "to": "ai_methodology.skills.frontier-workstream.skill"
+      "to": "ai_methodology.skills.physics-loop.skill"
     },
     {
       "from": "ai_methodology.llm_skill_pack_2026-04-25",
@@ -8010,7 +8254,7 @@
     },
     {
       "from": "ai_methodology.readme",
-      "to": "ai_methodology.skills.frontier-workstream.skill"
+      "to": "ai_methodology.skills.physics-loop.skill"
     },
     {
       "from": "ai_methodology.readme",
@@ -8321,20 +8565,20 @@
       "to": "down_type_mass_ratio_ckm_dual_note"
     },
     {
-      "from": "ai_methodology.skills.frontier-workstream.skill",
-      "to": "ai_methodology.skills.frontier-workstream.references.assumption-import-audit"
+      "from": "ai_methodology.skills.physics-loop.skill",
+      "to": "ai_methodology.skills.physics-loop.references.assumption-import-audit"
     },
     {
-      "from": "ai_methodology.skills.frontier-workstream.skill",
-      "to": "ai_methodology.skills.frontier-workstream.references.route-patterns"
+      "from": "ai_methodology.skills.physics-loop.skill",
+      "to": "ai_methodology.skills.physics-loop.references.route-patterns"
     },
     {
-      "from": "ai_methodology.skills.frontier-workstream.skill",
-      "to": "ai_methodology.skills.frontier-workstream.references.literature-bridge-protocol"
+      "from": "ai_methodology.skills.physics-loop.skill",
+      "to": "ai_methodology.skills.physics-loop.references.literature-bridge-protocol"
     },
     {
-      "from": "ai_methodology.skills.frontier-workstream.skill",
-      "to": "ai_methodology.skills.frontier-workstream.references.long-running-execution"
+      "from": "ai_methodology.skills.physics-loop.skill",
+      "to": "ai_methodology.skills.physics-loop.references.long-running-execution"
     },
     {
       "from": "lanes.active_working_lanes_2026-04-26",
@@ -8382,7 +8626,19 @@
     },
     {
       "from": "lanes.active_working_lanes_2026-04-26",
+      "to": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27"
+    },
+    {
+      "from": "lanes.active_working_lanes_2026-04-26",
+      "to": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27"
+    },
+    {
+      "from": "lanes.active_working_lanes_2026-04-26",
       "to": "lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26"
+    },
+    {
+      "from": "lanes.active_working_lanes_2026-04-26",
+      "to": "atomic_rydberg_dependency_firewall_note_2026-04-27"
     },
     {
       "from": "lanes.active_working_lanes_2026-04-26",
@@ -8390,11 +8646,31 @@
     },
     {
       "from": "lanes.active_working_lanes_2026-04-26",
+      "to": "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27"
+    },
+    {
+      "from": "lanes.active_working_lanes_2026-04-26",
       "to": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26"
     },
     {
       "from": "lanes.active_working_lanes_2026-04-26",
+      "to": "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27"
+    },
+    {
+      "from": "lanes.active_working_lanes_2026-04-26",
+      "to": "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28"
+    },
+    {
+      "from": "lanes.active_working_lanes_2026-04-26",
+      "to": "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28"
+    },
+    {
+      "from": "lanes.active_working_lanes_2026-04-26",
       "to": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26"
+    },
+    {
+      "from": "lanes.active_working_lanes_2026-04-26",
+      "to": "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27"
     },
     {
       "from": "lanes.active_working_lanes_2026-04-26",
@@ -8514,7 +8790,23 @@
     },
     {
       "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
+      "to": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27"
+    },
+    {
+      "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
       "to": "confinement_string_tension_note"
+    },
+    {
+      "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
+      "to": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27"
+    },
+    {
+      "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
+      "to": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27"
+    },
+    {
+      "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
+      "to": "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27"
     },
     {
       "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
@@ -8530,11 +8822,19 @@
     },
     {
       "from": "lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26",
+      "to": "atomic_rydberg_dependency_firewall_note_2026-04-27"
+    },
+    {
+      "from": "lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26",
       "to": "atomic_hydrogen_helium_probe_note"
     },
     {
       "from": "lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26",
       "to": "bound_state_selection_note"
+    },
+    {
+      "from": "lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26",
+      "to": "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27"
     },
     {
       "from": "lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26",
@@ -8555,6 +8855,30 @@
     {
       "from": "lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26",
       "to": "yt_ward_identity_derivation_theorem"
+    },
+    {
+      "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
+      "to": "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27"
+    },
+    {
+      "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
+      "to": "neutrino_lane4_theorem_plan_note_2026-04-28"
+    },
+    {
+      "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
+      "to": "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28"
+    },
+    {
+      "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
+      "to": "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28"
+    },
+    {
+      "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
+      "to": "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28"
+    },
+    {
+      "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
+      "to": "neutrino_lane4_workstream_closeout_note_2026-04-28"
     },
     {
       "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
@@ -8591,6 +8915,10 @@
     {
       "from": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
       "to": "neutrino_two_amplitude_last_mile_reduction_note"
+    },
+    {
+      "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+      "to": "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27"
     },
     {
       "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
@@ -8723,6 +9051,26 @@
     {
       "from": "lanes.open_science.readme",
       "to": "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26"
+    },
+    {
+      "from": "lanes.open_science.readme",
+      "to": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27"
+    },
+    {
+      "from": "lanes.open_science.readme",
+      "to": "atomic_rydberg_dependency_firewall_note_2026-04-27"
+    },
+    {
+      "from": "lanes.open_science.readme",
+      "to": "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27"
+    },
+    {
+      "from": "lanes.open_science.readme",
+      "to": "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27"
+    },
+    {
+      "from": "lanes.open_science.readme",
+      "to": "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27"
     },
     {
       "from": "lanes.open_science.readme",
@@ -11043,6 +11391,18 @@
     {
       "from": "publication.ci3_z3.derivation_atlas",
       "to": "monopole_derived_note"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27"
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
@@ -14062,6 +14422,10 @@
     },
     {
       "from": "publication.ci3_z3.publication_matrix",
+      "to": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27"
+    },
+    {
+      "from": "publication.ci3_z3.publication_matrix",
       "to": "left_handed_charge_matching_note"
     },
     {
@@ -15174,6 +15538,10 @@
     },
     {
       "from": "publication.ci3_z3.readme",
+      "to": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.readme",
       "to": "planck_scale_lane_status_note_2026-04-23"
     },
     {
@@ -15415,6 +15783,10 @@
     {
       "from": "publication.ci3_z3.results_index",
       "to": "confinement_string_tension_note"
+    },
+    {
+      "from": "publication.ci3_z3.results_index",
+      "to": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27"
     },
     {
       "from": "publication.ci3_z3.results_index",
@@ -17521,7 +17893,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T12:57:00.747840+00:00",
+  "generated_at": "2026-04-28T12:35:15.101683+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -17692,13 +18064,13 @@
         "ai_methodology.methodology_case_studies_2026-04-25",
         "ai_methodology.raw.claude_project_commands",
         "ai_methodology.skills.ai-physics-lane-builder.skill",
-        "ai_methodology.skills.frontier-workstream.skill",
+        "ai_methodology.skills.physics-loop.skill",
         "ai_methodology.skills.physics-claim-reviewer.skill",
         "ai_methodology.skills.review-loop.skill",
         "ai_methodology.skills.reviewer-backpressure-integrator.skill",
         "ai_methodology.skills.methodology-paper-synthesizer.skill"
       ],
-      "note_hash": "6c33f2a25eae20154bc4ea09fd7bf0bbc0e0bb9eed188907cf7813c8ef5a77c5",
+      "note_hash": "8c0302b031f3c6c22f7a58be92d7c0b057b772a077aeb8a889d463c261228ac1",
       "path": "docs/ai_methodology/LLM_SKILL_PACK_2026-04-25.md",
       "runner_path": null,
       "title": "AI Physics Methodology LLM Skill Pack"
@@ -18495,13 +18867,13 @@
         "claude_branch_retainability_note",
         "unpromoted_branch_retainability_audit_note",
         "ai_methodology.skills.ai-physics-lane-builder.skill",
-        "ai_methodology.skills.frontier-workstream.skill",
+        "ai_methodology.skills.physics-loop.skill",
         "ai_methodology.skills.physics-claim-reviewer.skill",
         "ai_methodology.skills.review-loop.skill",
         "ai_methodology.skills.reviewer-backpressure-integrator.skill",
         "ai_methodology.skills.methodology-paper-synthesizer.skill"
       ],
-      "note_hash": "9079a18109042be6e02aa055a9645b4d3099f2065d1491fdc658d2f46ad54e94",
+      "note_hash": "a2ce609fbb3db3f9f2b88abfc77e5b678a95333b1bf788375d4d1aece9c17096",
       "path": "docs/ai_methodology/README.md",
       "runner_path": null,
       "title": "AI Methodology Lane"
@@ -18526,61 +18898,6 @@
       "runner_path": null,
       "title": "AI Physics Lane Builder"
     },
-    "ai_methodology.skills.frontier-workstream.references.assumption-import-audit": {
-      "claim_id": "ai_methodology.skills.frontier-workstream.references.assumption-import-audit",
-      "current_status": "unknown",
-      "current_status_raw": null,
-      "deps": [],
-      "note_hash": "3039d18709f066b15dadfd8817940a1f3d592275863333153027615013cc9d84",
-      "path": "docs/ai_methodology/skills/frontier-workstream/references/assumption-import-audit.md",
-      "runner_path": null,
-      "title": "Assumption And Import Audit"
-    },
-    "ai_methodology.skills.frontier-workstream.references.literature-bridge-protocol": {
-      "claim_id": "ai_methodology.skills.frontier-workstream.references.literature-bridge-protocol",
-      "current_status": "unknown",
-      "current_status_raw": null,
-      "deps": [],
-      "note_hash": "12ecc9b9f41e68a8c33f9e4a0d5731d69a57e7da58bbb8e0f5b060eec658f332",
-      "path": "docs/ai_methodology/skills/frontier-workstream/references/literature-bridge-protocol.md",
-      "runner_path": null,
-      "title": "Literature Bridge Protocol"
-    },
-    "ai_methodology.skills.frontier-workstream.references.long-running-execution": {
-      "claim_id": "ai_methodology.skills.frontier-workstream.references.long-running-execution",
-      "current_status": "unknown",
-      "current_status_raw": null,
-      "deps": [],
-      "note_hash": "d488e3a62e598797c01109f24b65be9036f9281f1280b602eae47deaec9d5b07",
-      "path": "docs/ai_methodology/skills/frontier-workstream/references/long-running-execution.md",
-      "runner_path": null,
-      "title": "Long-Running Execution"
-    },
-    "ai_methodology.skills.frontier-workstream.references.route-patterns": {
-      "claim_id": "ai_methodology.skills.frontier-workstream.references.route-patterns",
-      "current_status": "unknown",
-      "current_status_raw": null,
-      "deps": [],
-      "note_hash": "5e3928749261c513b437af26f8a413af45d6eafdb0c9bf455ed62673fde03e14",
-      "path": "docs/ai_methodology/skills/frontier-workstream/references/route-patterns.md",
-      "runner_path": null,
-      "title": "Route Patterns"
-    },
-    "ai_methodology.skills.frontier-workstream.skill": {
-      "claim_id": "ai_methodology.skills.frontier-workstream.skill",
-      "current_status": "unknown",
-      "current_status_raw": null,
-      "deps": [
-        "ai_methodology.skills.frontier-workstream.references.assumption-import-audit",
-        "ai_methodology.skills.frontier-workstream.references.route-patterns",
-        "ai_methodology.skills.frontier-workstream.references.literature-bridge-protocol",
-        "ai_methodology.skills.frontier-workstream.references.long-running-execution"
-      ],
-      "note_hash": "c6bd7b2bd2baf48a038b3a95dde3c8efab53edda182fb85cde16625fa6ae24bd",
-      "path": "docs/ai_methodology/skills/frontier-workstream/SKILL.md",
-      "runner_path": null,
-      "title": "Frontier Workstream"
-    },
     "ai_methodology.skills.methodology-paper-synthesizer.skill": {
       "claim_id": "ai_methodology.skills.methodology-paper-synthesizer.skill",
       "current_status": "unknown",
@@ -18600,6 +18917,61 @@
       "path": "docs/ai_methodology/skills/physics-claim-reviewer/SKILL.md",
       "runner_path": null,
       "title": "Physics Claim Reviewer"
+    },
+    "ai_methodology.skills.physics-loop.references.assumption-import-audit": {
+      "claim_id": "ai_methodology.skills.physics-loop.references.assumption-import-audit",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "3039d18709f066b15dadfd8817940a1f3d592275863333153027615013cc9d84",
+      "path": "docs/ai_methodology/skills/physics-loop/references/assumption-import-audit.md",
+      "runner_path": null,
+      "title": "Assumption And Import Audit"
+    },
+    "ai_methodology.skills.physics-loop.references.literature-bridge-protocol": {
+      "claim_id": "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "29edda5688fa04cb742ee524522b35dcf41d790d5c49fc46c5b4b1517f0ff5dd",
+      "path": "docs/ai_methodology/skills/physics-loop/references/literature-bridge-protocol.md",
+      "runner_path": null,
+      "title": "Literature Bridge Protocol"
+    },
+    "ai_methodology.skills.physics-loop.references.long-running-execution": {
+      "claim_id": "ai_methodology.skills.physics-loop.references.long-running-execution",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "bb58df516b36c7e507f658a6a3f87c5728e3f159f6224464827f55454910dc34",
+      "path": "docs/ai_methodology/skills/physics-loop/references/long-running-execution.md",
+      "runner_path": null,
+      "title": "Long-Running Execution"
+    },
+    "ai_methodology.skills.physics-loop.references.route-patterns": {
+      "claim_id": "ai_methodology.skills.physics-loop.references.route-patterns",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "753f52a10707d2c5b8b1b4d9da7baa93f872c0cfca746869e3216b01ffce7b47",
+      "path": "docs/ai_methodology/skills/physics-loop/references/route-patterns.md",
+      "runner_path": null,
+      "title": "Route Patterns"
+    },
+    "ai_methodology.skills.physics-loop.skill": {
+      "claim_id": "ai_methodology.skills.physics-loop.skill",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [
+        "ai_methodology.skills.physics-loop.references.assumption-import-audit",
+        "ai_methodology.skills.physics-loop.references.route-patterns",
+        "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
+        "ai_methodology.skills.physics-loop.references.long-running-execution"
+      ],
+      "note_hash": "87e13ceec5176137cd7f48ae3fe60d02a85aa2147ba0d155d6063a6ee6524bd9",
+      "path": "docs/ai_methodology/skills/physics-loop/SKILL.md",
+      "runner_path": null,
+      "title": "Physics Loop"
     },
     "ai_methodology.skills.review-loop.skill": {
       "claim_id": "ai_methodology.skills.review-loop.skill",
@@ -19518,9 +19890,19 @@
         "lanes.active_working_lanes_2026-04-26",
         "frontier_extension_lane_opening_note_2026-04-25",
         "chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25",
-        "lanes.open_science.readme"
+        "lanes.open_science.readme",
+        "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
+        "atomic_rydberg_dependency_firewall_note_2026-04-27",
+        "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
+        "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+        "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
+        "neutrino_lane4_theorem_plan_note_2026-04-28",
+        "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28",
+        "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
+        "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
+        "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "99744a93b4e9a1efc86ede74623278ecf3b1778bf09487ab0b8b410312fbc22f",
+      "note_hash": "c895f516601e699aae6dece28efb5e0942584c22359622b21742057257046548",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -23325,10 +23707,13 @@
     },
     "dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15": {
       "claim_id": "dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15",
-      "current_status": "proposed_retained",
-      "current_status_raw": "invented axiom-native candidate bridge family beyond the proposed_retained local bank",
-      "deps": [],
-      "note_hash": "72e70b189b445703b2d38c8f0bb4ec7f29f22e2999f17ad683838c6e7d9fe05e",
+      "current_status": "bounded",
+      "current_status_raw": "bounded candidate algebraic family \u2014 defines a one-parameter `K_\u03bb` family that algebraically populates the residual-`Z_2`-odd slot. This is **not** a derivation of the bridge amplitude `\u03bb` from primitives, **not** a leptogenesis closure, and outside the audit-ratified tier on the DM-neutrino mixed bridge.",
+      "deps": [
+        "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
+        "dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15"
+      ],
+      "note_hash": "5203d8fc98b24b312fd31cdf93d5ac3c48d43a89cbcc6ec4b503c9e8e852d9e1",
       "path": "docs/DM_NEUTRINO_Z3_PHASE_LIFT_MIXED_BRIDGE_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_z3_phase_lift_bridge.py",
       "title": "DM Neutrino `Z_3` Phase-Lift Mixed Bridge"
@@ -24179,13 +24564,13 @@
     },
     "equivalence_principle_note": {
       "claim_id": "equivalence_principle_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained positive \u2014 m_inertial = m_gravitational to 0.8%",
+      "current_status": "bounded",
+      "current_status_raw": "bounded scaffold lane \u2014 uniform-field beam deflection gives near-unity exponents. This is **not** a derivation of `m_inertial = m_gravitational`.",
       "deps": [],
-      "note_hash": "a322e5a0208d4126793553dcd161d4c05252c7ccc544b80aaed4dca48958d7d6",
+      "note_hash": "c36fa4a8ff75e0d71527758ea25c5e8570f9ddc2307109b81077438f9536da94",
       "path": "docs/EQUIVALENCE_PRINCIPLE_NOTE.md",
       "runner_path": null,
-      "title": "Equivalence Principle"
+      "title": "Equivalence Principle \u2014 Bounded Scaffold Lane"
     },
     "evanescent_barrier_amplitude_suppression_theorem_note": {
       "claim_id": "evanescent_barrier_amplitude_suppression_theorem_note",
@@ -24272,6 +24657,19 @@
       "path": "docs/EW_COUPLING_DERIVATION_NOTE.md",
       "runner_path": "scripts/frontier_yt_ew_coupling_derivation.py",
       "title": "Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)"
+    },
+    "ew_current_matching_ozi_suppression_theorem_note_2026-04-27": {
+      "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+      "current_status": "bounded",
+      "current_status_raw": "bounded support theorem for EW current matching on the standard 1/N_c expansion surface",
+      "deps": [
+        "rconn_derived_note",
+        "yt_ew_color_projection_theorem"
+      ],
+      "note_hash": "3f39d8f68c97dc11168c0843974ef6670514990014fbb6e390a05622cbf83ab5",
+      "path": "docs/EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_color_projection_mc.py",
+      "title": "EW Current Matching via OZI / Disconnected-Trace Suppression Theorem"
     },
     "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26": {
       "claim_id": "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
@@ -25881,6 +26279,16 @@
       "runner_path": null,
       "title": "3D `1/L^2 + h^2` Narrow `h=0.125` Bridge Note"
     },
+    "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27": {
+      "claim_id": "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27",
+      "current_status": "support",
+      "current_status_raw": "support / open-lane scoping no-go on `main`; no theorem or",
+      "deps": [],
+      "note_hash": "65e15699ded1556c9f6480a652230b2c902a1f0533c9daad8cd44ed652d0b42c",
+      "path": "docs/HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING_SUPPORT_NOTE_2026-04-27.md",
+      "runner_path": null,
+      "title": "Lane 1 Chiral Condensate `Sigma` via Banks-Casher: Scoping Audit"
+    },
     "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27": {
       "claim_id": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
       "current_status": "proposed_retained",
@@ -25890,6 +26298,26 @@
       "path": "docs/HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py",
       "title": "Hadron Lane 1 Confinement-To-Mass Firewall"
+    },
+    "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27": {
+      "claim_id": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
+      "current_status": "support",
+      "current_status_raw": "support / open-lane gate-audit note on `main`; no theorem or",
+      "deps": [],
+      "note_hash": "8ac862619b9b970e8c9125f5923b49b2ea1b28996d972d1d8fd60427033e6031",
+      "path": "docs/HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md",
+      "runner_path": null,
+      "title": "Lane 1 `sqrt(sigma)` Retention Gate Audit: EFT-Bridge Decomposition of the 5.6% Gap"
+    },
+    "hadron_mass_lane1_theorem_plan_support_note_2026-04-27": {
+      "claim_id": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
+      "current_status": "support",
+      "current_status_raw": "support / open-lane planning note on `main`; no theorem or",
+      "deps": [],
+      "note_hash": "9596fab15319190fde188f6faadfd398c7f0fd5ca1002ab9d9b55d29ce449eb9",
+      "path": "docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md",
+      "runner_path": null,
+      "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap"
     },
     "hard_geometry_gravity_window_note": {
       "claim_id": "hard_geometry_gravity_window_note",
@@ -26377,6 +26805,25 @@
       "path": "docs/KERNEL_VS_GRAVITY_NOTE.md",
       "runner_path": null,
       "title": "Complex Action: Kernel-Generic vs Gravity-Specific"
+    },
+    "koide_a1_brannen_plancherel_identity_support_note_2026-04-25": {
+      "claim_id": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
+      "current_status": "support",
+      "current_status_raw": "support-grade algebraic identity inside the Brannen",
+      "deps": [
+        "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24",
+        "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
+        "koide_berry_phase_theorem_note_2026-04-19",
+        "koide_brannen_geometry_dirac_support_note_2026-04-22",
+        "koide_brannen_callan_harvey_candidate_note_2026-04-22",
+        "koide_brannen_phase_reduction_theorem_note_2026-04-20",
+        "koide_q_delta_linking_relation_theorem_note_2026-04-20",
+        "koide_circulant_character_derivation_note_2026-04-18"
+      ],
+      "note_hash": "274769b021b1febacd5318ec23666dc6b340c01d8d2f93ba37a2e9fb06bc941b",
+      "path": "docs/KOIDE_A1_BRANNEN_PLANCHEREL_IDENTITY_SUPPORT_NOTE_2026-04-25.md",
+      "runner_path": "scripts/frontier_koide_a1_brannen_plancherel_identity_support.py",
+      "title": "Koide A1 \u2014 Brannen `\u03b4 = arg(b)` Plancherel Identity Support Note"
     },
     "koide_a1_closure_recommendation_2026-04-22": {
       "claim_id": "koide_a1_closure_recommendation_2026-04-22",
@@ -27156,6 +27603,22 @@
       "runner_path": "scripts/frontier_koide_q_op_locality_c3_fixed_source_support.py",
       "title": "Koide Q OP-Locality / C3-Fixed Source Support Note"
     },
+    "koide_q_op_uniqueness_source_domain_support_note_2026-04-25": {
+      "claim_id": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
+      "current_status": "support",
+      "current_status_raw": "**support-grade** \u2014 this note does **not** close `Q_l = 2/3`.",
+      "deps": [
+        "observable_principle_from_axiom_note",
+        "koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25",
+        "koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25",
+        "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25",
+        "koide_q_so2_phase_erasure_support_note_2026-04-25"
+      ],
+      "note_hash": "4f39562866bf0dc4380712154a8830f98d78994307f964974502ac46c3e8fb21",
+      "path": "docs/KOIDE_Q_OP_UNIQUENESS_SOURCE_DOMAIN_SUPPORT_NOTE_2026-04-25.md",
+      "runner_path": "scripts/frontier_koide_q_op_uniqueness_source_domain_support.py",
+      "title": "Koide Q OP-Uniqueness Source-Domain Support Note (V4)"
+    },
     "koide_q_readout_factorization_theorem_2026-04-22": {
       "claim_id": "koide_q_readout_factorization_theorem_2026-04-22",
       "current_status": "support",
@@ -27498,10 +27961,18 @@
         "planck_scale_conditional_completion_note_2026-04-24",
         "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
         "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
+        "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
+        "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
         "lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26",
+        "atomic_rydberg_dependency_firewall_note_2026-04-27",
         "lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26",
+        "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
         "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
+        "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+        "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28",
+        "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+        "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
         "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26",
         "frontier_extension_lane_opening_note_2026-04-25",
         "ai_methodology.readme",
@@ -27509,7 +27980,7 @@
         "ai_methodology.raw.readme",
         "lanes.open_science.readme"
       ],
-      "note_hash": "bdff4601bca9a577e226f69ed1cd2c5dce72b12ae00cc631252f734b34d32c0e",
+      "note_hash": "b3196969c36cc43c89ae380c29b4ef266afebfd16bc22a50b1a1c84aeb765f8d",
       "path": "docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md",
       "runner_path": null,
       "title": "Active Working Lanes"
@@ -27584,12 +28055,16 @@
       "current_status": "open",
       "current_status_raw": "ACCEPTED CRITICAL OPEN SCIENCE LANE on `main`; no theorem or claim",
       "deps": [
+        "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
         "confinement_string_tension_note",
+        "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
+        "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
+        "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27",
         "graph_first_su3_integration_note",
         "alpha_s_derived_note",
         "quark_mass_ratio_review_packet_2026-04-18"
       ],
-      "note_hash": "f5ff6b7a6e2d2e4cb763ebed20bad9572dd2ca688528909bf605e1c94038f54e",
+      "note_hash": "194ef27b3219c47bc963c2322ca513e46471721661f1f4f548785a8b57b83eb7",
       "path": "docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md",
       "runner_path": null,
       "title": "Lane 1 \u2014 Hadron Mass Program"
@@ -27599,10 +28074,11 @@
       "current_status": "open",
       "current_status_raw": "ACCEPTED CRITICAL OPEN SCIENCE LANE on `main`; no theorem or claim",
       "deps": [
+        "atomic_rydberg_dependency_firewall_note_2026-04-27",
         "atomic_hydrogen_helium_probe_note",
         "bound_state_selection_note"
       ],
-      "note_hash": "70c01d14d47322b2b6738abf16224c7ee930fffaa6478b6e38d63518ab2afa3f",
+      "note_hash": "734a4d33a6ece99b007adf271584ac8289aee2c6f84c591a954f72440c1ae444",
       "path": "docs/lanes/open_science/02_ATOMIC_SCALE_PROGRAM_OPEN_LANE_2026-04-26.md",
       "runner_path": null,
       "title": "Lane 2 \u2014 Atomic-Scale Predictions"
@@ -27612,13 +28088,14 @@
       "current_status": "open",
       "current_status_raw": "ACCEPTED CRITICAL OPEN SCIENCE LANE on `main`; no theorem or claim",
       "deps": [
+        "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
         "quark_mass_ratio_review_packet_2026-04-18",
         "quark_mass_ratio_full_solve_note_2026-04-18",
         "quark_mass_ratios_taste_staircase_support_note_2026-04-25",
         "down_type_mass_ratio_ckm_dual_note",
         "yt_ward_identity_derivation_theorem"
       ],
-      "note_hash": "ac4c7fbb63b12a8df3c033e6d6975456160631327934d98b7fe2be0f62c83a29",
+      "note_hash": "79a3a4a13e73ed4c5f5b97290da8ef164e52497400c09130d00ab81ceac4aa61",
       "path": "docs/lanes/open_science/03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md",
       "runner_path": null,
       "title": "Lane 3 \u2014 Quark Masses Retention"
@@ -27628,6 +28105,12 @@
       "current_status": "open",
       "current_status_raw": "ACCEPTED CRITICAL OPEN SCIENCE LANE on `main`; no theorem or claim",
       "deps": [
+        "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+        "neutrino_lane4_theorem_plan_note_2026-04-28",
+        "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28",
+        "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
+        "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
+        "neutrino_lane4_workstream_closeout_note_2026-04-28",
         "charged_lepton_koide_review_packet_2026-04-18",
         "neutrino_retained_status_note_2026-04-16",
         "neutrino_retained_observable_bounds_theorem_note_2026-04-24",
@@ -27638,7 +28121,7 @@
         "n_eff_from_three_generations_theorem_note_2026-04-24",
         "neutrino_two_amplitude_last_mile_reduction_note"
       ],
-      "note_hash": "005d7b589e63f0eeedec0a839caa3407d4abb07b62f9997533f895b61bb2e2f3",
+      "note_hash": "f93ead541b9170af0174f4a748d72af66b13e9d355ec09759cd4cd449bc8cb93",
       "path": "docs/lanes/open_science/04_NEUTRINO_QUANTITATIVE_OPEN_LANE_2026-04-26.md",
       "runner_path": null,
       "title": "Lane 4 \u2014 Neutrino Quantitative Closure"
@@ -27648,6 +28131,7 @@
       "current_status": "open",
       "current_status_raw": "ACCEPTED CRITICAL OPEN SCIENCE LANE on `main`; no theorem or claim",
       "deps": [
+        "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
         "publication.ci3_z3.inputs_and_qualifiers_note",
         "hubble_tension_structural_lock_theorem_note_2026-04-26",
         "primordial_spectrum_note",
@@ -27666,7 +28150,7 @@
         "gravity_cosmology_tower_lambda_spectral_bridge_theorem_note_2026-04-25",
         "cosmology_scale_identification_and_reduction_note"
       ],
-      "note_hash": "548592a830d78bb507b70d205af737f2e60da403849788b7562ef04b284e77bb",
+      "note_hash": "ecb43a821181f6ad41e7b10939c8be8c1eb3b5328d178e129ff3c18d49660f10",
       "path": "docs/lanes/open_science/05_HUBBLE_CONSTANT_DERIVATION_OPEN_LANE_2026-04-26.md",
       "runner_path": null,
       "title": "Lane 5 \u2014 Hubble Constant H_0 Derivation"
@@ -27703,10 +28187,15 @@
         "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
         "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
         "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26",
+        "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
+        "atomic_rydberg_dependency_firewall_note_2026-04-27",
+        "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
+        "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+        "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
         "publication.ci3_z3.what_this_paper_does_not_claim",
         "publication.ci3_z3.inputs_and_qualifiers_note"
       ],
-      "note_hash": "9a6315cd9391b3494b382439587e50d8b844341194f551ea301da1cf1865a0c6",
+      "note_hash": "a3a5c8ace42f8e5a1df597076f75ab75db6a05df5302bed8585dd831419b7edc",
       "path": "docs/lanes/open_science/README.md",
       "runner_path": null,
       "title": "Critical Open Science Lanes"
@@ -28947,10 +29436,13 @@
       "claim_id": "native_gauge_closure_note",
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained exact native `SU(2)` + proposed_retained structural `SU(3)`; bounded abelian factor (`+1/3`, `-1` on the left-handed surface)",
-      "deps": [],
-      "note_hash": "8e079e359cbc4c6f6aea39a5f98a0fdffabc5a2e06278b32609b6528e65ec1f7",
+      "deps": [
+        "graph_first_selector_derivation_note",
+        "graph_first_su3_integration_note"
+      ],
+      "note_hash": "f8ec18a4bf64410e9fe9d5e0c6c794f82a7c9f4ed3a83e109aef8cc11add1bab",
       "path": "docs/NATIVE_GAUGE_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_non_abelian_gauge.py",
       "title": "Native Gauge Closure Note: Graph-First Gauge Closure on Z^3"
     },
     "nature_discovery_directions_2026-04-11": {
@@ -28972,6 +29464,26 @@
       "path": "docs/NATURE_RANKED_DIRECTIONS_2026-04-11.md",
       "runner_path": null,
       "title": "Nature-Level Discovery \u2014 Ranked Directions After Full Synthesis"
+    },
+    "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28": {
+      "claim_id": "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open stuck-fan-out note for Lane 4; synthesis and route triage",
+      "deps": [],
+      "note_hash": "4ae38d4fc2efd910d4f0a69fdc6ca8488bd0a733b6d56d30f8c9a8e770d0828e",
+      "path": "docs/NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "Stuck Fan-Out: Strict vs Permissive Reading of `A_min` Axiom 3"
+    },
+    "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28": {
+      "claim_id": "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "support conditional theorem for Lane 4 gate isolation; no",
+      "deps": [],
+      "note_hash": "e17820a36fad4f55b77146576afc8435eb51a0b975a35c3ff206a04f0fb16332",
+      "path": "docs/NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "Neutrino Dirac Global Lift \u2014 Partial Theorem with Named Obstruction"
     },
     "neutrino_dirac_pmns_retained_lane_packet_2026-04-16": {
       "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
@@ -29030,6 +29542,26 @@
       "path": "docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py",
       "title": "Lane 4 Neutrino Dirac/Seesaw Fork No-Go"
+    },
+    "neutrino_lane4_theorem_plan_note_2026-04-28": {
+      "claim_id": "neutrino_lane4_theorem_plan_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open Lane 4 theorem-plan note; roadmap only, no claim promotion.",
+      "deps": [],
+      "note_hash": "0311c840028fb83cce9e38645d1de1f6cae44b42811b3deca9f151550adf5dd2",
+      "path": "docs/NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "Lane 4 Neutrino Theorem Plan: Closure Roadmap with Phase Ordering"
+    },
+    "neutrino_lane4_workstream_closeout_note_2026-04-28": {
+      "claim_id": "neutrino_lane4_workstream_closeout_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open workstream close-out note for Lane 4; no claim promotion.",
+      "deps": [],
+      "note_hash": "183fa3f85b7d4657f9b29b84e03b1c942c7636225bd7d7971805f8b910cc6d39",
+      "path": "docs/NEUTRINO_LANE4_WORKSTREAM_CLOSEOUT_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "Lane 4 Loop Close-Out: Honest Stop + Final Report"
     },
     "neutrino_majorana_adjacent_singlet_placement_theorem_note": {
       "claim_id": "neutrino_majorana_adjacent_singlet_placement_theorem_note",
@@ -29673,6 +30205,16 @@
       "path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_mass_reduction_to_dirac.py",
       "title": "Neutrino Mass Reduction To The Dirac Lane"
+    },
+    "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28": {
+      "claim_id": "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
+      "current_status": "open",
+      "current_status_raw": "open stretch-attempt note for Lane 4; no `(C2-X)` closure.",
+      "deps": [],
+      "note_hash": "d6aef50a39266949659832add106bd224531d1b283b6164e3c5fd97c6bbb14cd",
+      "path": "docs/NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md",
+      "runner_path": null,
+      "title": "Normal-Grammar `U(1)` Rigidity Stretch Attempt \u2014 First-Principles Work From `A_min`"
     },
     "neutrino_retained_lanes_review_packet_2026-04-16": {
       "claim_id": "neutrino_retained_lanes_review_packet_2026-04-16",
@@ -31596,6 +32138,9 @@
         "proton_lifetime_derived_note",
         "vacuum_critical_stability_note",
         "monopole_derived_note",
+        "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
+        "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
+        "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27",
         "pmns_lower_level_end_to_end_closure_note",
         "pmns_active_four_real_source_from_transport_note",
         "pmns_uniform_scalar_deformation_boundary_note",
@@ -31655,7 +32200,7 @@
         "lattice_complementarity_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "430757207bec00b834c8d02019a046561037c21d2ac22c6d45051fa173249405",
+      "note_hash": "e8f5a60f4392fdd45ddb9710b3f4d0b377fce02d4ccb4d392e6fff4632d23408",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -32348,7 +32893,7 @@
         "publication.ci3_z3.publication_matrix",
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
-      "note_hash": "fd43a021e94af270729258723c83f7d869785d0f9e0e531920b1da882a49c9f2",
+      "note_hash": "594f801d1cc034833b34c5d21105f258bde7f5db67013bbc955ad1727386692a",
       "path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
       "runner_path": null,
       "title": "Inputs And Qualifiers"
@@ -32417,7 +32962,7 @@
         "dark_energy_eos_note",
         "graviton_mass_derived_note"
       ],
-      "note_hash": "4c023924d9da09d4f2765f1bb7e37dcbdaf81633eea9cbde092a95267f38244b",
+      "note_hash": "862d317ab0a073a846a3afb5651c58c472594cb63c5f12bafcb2ea328237a1fe",
       "path": "docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md",
       "runner_path": null,
       "title": "Prediction Surface"
@@ -32460,6 +33005,7 @@
         "native_gauge_closure_note",
         "graph_first_su3_integration_note",
         "confinement_string_tension_note",
+        "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
         "left_handed_charge_matching_note",
         "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
         "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
@@ -32653,7 +33199,7 @@
         "gw_echo_null_result_note",
         "koide_reviewer_stress_test_note_2026-04-21"
       ],
-      "note_hash": "1f063fc084134d90c7ec5a6357944be87cd9ef508b8d044b841188e185168280",
+      "note_hash": "f54cdfbf3a779928c93342b37e5f3e265e4e190f00a47cef9a31f7c94ff72c0c",
       "path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
       "runner_path": null,
       "title": "Publication Matrix"
@@ -32760,6 +33306,7 @@
         "cosmology_open_number_reduction_theorem_note_2026-04-26",
         "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
         "publication.ci3_z3.usable_derived_values_index",
+        "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
         "planck_scale_lane_status_note_2026-04-23",
         "planck_scale_conditional_completion_note_2026-04-24",
         "planck_source_unit_normalization_support_theorem_note_2026-04-25",
@@ -32774,7 +33321,7 @@
         "single_axiom_information_note",
         "single_axiom_hilbert_note"
       ],
-      "note_hash": "0a8f5bd3d25997e60d92b41a5535da34bd13b38b4dd537fd8aafab95edd677a3",
+      "note_hash": "e3e3c9047c1779bcc36ab9dc9b9afe89e94c2880882af16662c33081a5c00144",
       "path": "docs/publication/ci3_z3/README.md",
       "runner_path": null,
       "title": "Cl(3) / Z^3 Publication Package"
@@ -32864,6 +33411,7 @@
         "g_bare_rigidity_theorem_note",
         "physical_lattice_necessity_note",
         "confinement_string_tension_note",
+        "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
         "anomaly_forces_time_theorem",
         "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
         "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
@@ -33158,7 +33706,7 @@
         "ckm_atlas_axiom_closure_note",
         "ckm_thales_pinned_alpha_s_independent_ratios_theorem_note_2026-04-25"
       ],
-      "note_hash": "7dce308317faf7675e013a1f935b1de5c03d8b30815bdbef7b6e9f02733dc6d8",
+      "note_hash": "488e750df94252d72389226ed4a26b4bf11429a77444b6c6bffdb0d0597ceea9",
       "path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
       "runner_path": null,
       "title": "Results Index"
@@ -33225,7 +33773,7 @@
         "publication.ci3_z3.release_environment",
         "publication.ci3_z3.derivation_atlas"
       ],
-      "note_hash": "8576f1d27c9f2bea645635a52fdc22f28644ed80ab9c65b2b9a77b5a0376455f",
+      "note_hash": "dbd839de644c8b3bf7625cbe92f12d0a4bdafcdb6cb877b3805548838b6fef65",
       "path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
       "runner_path": null,
       "title": "Science Map"
@@ -33835,10 +34383,14 @@
     },
     "rconn_derived_note": {
       "claim_id": "rconn_derived_note",
-      "current_status": "support",
-      "current_status_raw": "DERIVED (leading order in 1/N_c) + VERIFIED (MC)",
-      "deps": [],
-      "note_hash": "c273897e988edd68462ddf3b99efa407a5473b5ec1ad2a8f8eca3b99839a3f46",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained leading-order `1/N_c` derivation with bounded `O(1/N_c\u2074)` correction; MC-verified",
+      "deps": [
+        "yt_ew_color_projection_theorem",
+        "yukawa_color_projection_theorem",
+        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+      ],
+      "note_hash": "0caf09f59ae9c2739d77621f01cf6fe3dce15b4365035cbfbd4c749277bd46af",
       "path": "docs/RCONN_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "R_conn Derivation from the 1/N_c Expansion"
@@ -37986,11 +38538,14 @@
     "yt_ew_color_projection_theorem": {
       "claim_id": "yt_ew_color_projection_theorem",
       "current_status": "proposed_retained",
-      "current_status_raw": "DERIVED -- standalone proposed_retained EW normalization lane on `main`",
-      "deps": [],
-      "note_hash": "4f5b3aa7850ed4874f8061865f021805b62d40031fe088181c5067febda513b8",
+      "current_status_raw": "proposed_retained EW normalization lane on `main`",
+      "deps": [
+        "rconn_derived_note",
+        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+      ],
+      "note_hash": "fe339c5e80e1b6719104ad6e93ea73defe45885fac159f661399d832fd1451e0",
       "path": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "Color-Singlet Projection Theorem for EW Couplings"
     },
     "yt_ew_coupling_bridge_note": {
@@ -38454,8 +39009,36 @@
       "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained **master obstruction theorem** on the YT",
-      "deps": [],
-      "note_hash": "535225544d8b222b457a8b09817ecea2b2f3c1155990a297ee8b8727ebf667df",
+      "deps": [
+        "yt_ward_identity_derivation_theorem",
+        "charged_lepton_mass_hierarchy_review_note_2026-04-17",
+        "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17",
+        "yt_p1_color_factor_retention_note_2026-04-17",
+        "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
+        "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
+        "yt_p1_i_s_revision_verification_note_2026-04-17",
+        "yt_p1_h_unit_renormalization_framework_native_note_2026-04-17",
+        "yt_p1_loop_geometric_bound_note_2026-04-17",
+        "yt_p1_delta_1_bz_computation_note_2026-04-17",
+        "yt_p1_delta_2_bz_computation_note_2026-04-17",
+        "yt_p1_delta_3_bz_computation_note_2026-04-17",
+        "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
+        "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
+        "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
+        "yt_p2_taste_staircase_transport_note_2026-04-17",
+        "yt_p2_v_matching_theorem_note_2026-04-17",
+        "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
+        "yt_p2_f_yt_loop_geometric_bound_note_2026-04-17",
+        "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17",
+        "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
+        "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17",
+        "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17",
+        "yt_p3_k_series_geometric_bound_note_2026-04-17",
+        "yt_ew_color_projection_theorem",
+        "yt_exact_schur_normal_form_uniqueness_note",
+        "plaquette_self_consistency_note"
+      ],
+      "note_hash": "5d0d34df7c76d0f56f48b7b70983261af05a9c308865d8229f6b7606ad9aa7f3",
       "path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_uv_to_ir_transport_obstruction.py",
       "title": "YT UV-to-IR Transport Master Obstruction Theorem Note"
@@ -38612,12 +39195,12 @@
     "ai_methodology.raw.workflow_tooling",
     "ai_methodology.repo_trajectory_and_governance_evidence_2026-04-25",
     "ai_methodology.skills.ai-physics-lane-builder.skill",
-    "ai_methodology.skills.frontier-workstream.references.assumption-import-audit",
-    "ai_methodology.skills.frontier-workstream.references.literature-bridge-protocol",
-    "ai_methodology.skills.frontier-workstream.references.long-running-execution",
-    "ai_methodology.skills.frontier-workstream.references.route-patterns",
     "ai_methodology.skills.methodology-paper-synthesizer.skill",
     "ai_methodology.skills.physics-claim-reviewer.skill",
+    "ai_methodology.skills.physics-loop.references.assumption-import-audit",
+    "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
+    "ai_methodology.skills.physics-loop.references.long-running-execution",
+    "ai_methodology.skills.physics-loop.references.route-patterns",
     "ai_methodology.skills.review-loop.skill",
     "ai_methodology.skills.reviewer-backpressure-integrator.skill",
     "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
@@ -38865,7 +39448,6 @@
     "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14",
     "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
     "dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15",
-    "dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15",
     "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21",
     "dm_pmns_asymptotic_source_no_go_note_2026-04-20",
     "dm_pmns_chamber_spectral_completeness_theorem_note_2026-04-20",
@@ -39049,7 +39631,10 @@
     "h0125_wider_w4_note",
     "h0125_wider_w4_probe_note",
     "h2t_h0125_narrow_bridge_note",
+    "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27",
     "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
+    "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
+    "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
     "hard_geometry_gravity_window_note",
     "hard_geometry_head_to_head_note",
     "hard_geometry_local_note",
@@ -39247,16 +39832,20 @@
     "moving_source_cross_family_replay_note",
     "moving_source_retarded_portability_note",
     "multipole_tidal_response_note",
-    "native_gauge_closure_note",
     "nature_discovery_directions_2026-04-11",
     "nature_ranked_directions_2026-04-11",
+    "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
+    "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28",
     "neutrino_dirac_two_higgs_canonical_reduction_note",
     "neutrino_dirac_z3_support_trichotomy_note",
     "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+    "neutrino_lane4_theorem_plan_note_2026-04-28",
+    "neutrino_lane4_workstream_closeout_note_2026-04-28",
     "neutrino_majorana_current_stack_exhaustion_note",
     "neutrino_majorana_lower_level_pairing_nogo_note",
     "neutrino_majorana_nur_character_boundary_note",
     "neutrino_majorana_nur_charge2_primitive_reduction_note",
+    "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
     "neutrino_sole_axiom_full_closure_boundary_note",
     "neutrino_two_amplitude_last_mile_reduction_note",
     "newton_derivation_note",
@@ -39381,7 +39970,6 @@
     "quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19",
     "quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19",
     "quasi_persistent_relaunch_probe_note",
-    "rconn_derived_note",
     "reopened_lane_checklist",
     "replay_environment_note",
     "repo_submission_consolidation_plan_2026-04-12",
@@ -39669,7 +40257,6 @@
     "yt_class_7_spontaneous_c3_breaking_note_2026-04-18",
     "yt_color_projection_correction_note",
     "yt_constructive_uv_bridge_note",
-    "yt_ew_color_projection_theorem",
     "yt_ew_coupling_bridge_note",
     "yt_ew_delta_r_retention_analysis_note_2026-04-18",
     "yt_exact_coarse_grained_bridge_operator_note",
@@ -39710,24 +40297,23 @@
     "yt_right_handed_species_dependence_note_2026-04-18",
     "yt_schur_stability_gap_note",
     "yt_ssb_matching_gap_analysis_note_2026-04-18",
-    "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
     "yt_zero_import_chain_note",
     "yukawa_color_projection_theorem",
     "z2_hw1_mass_matrix_parametrization_note"
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4380,
-    "leaf_count": 755,
-    "node_count": 1619,
-    "root_count": 1181,
-    "runners_with_path": 707,
+    "edge_count": 4473,
+    "leaf_count": 731,
+    "node_count": 1630,
+    "root_count": 1184,
+    "runners_with_path": 712,
     "status_counts": {
-      "bounded": 209,
-      "open": 26,
+      "bounded": 212,
+      "open": 30,
       "proposed_promoted": 6,
-      "proposed_retained": 448,
-      "support": 134,
+      "proposed_retained": 447,
+      "support": 139,
       "unknown": 796
     }
   }

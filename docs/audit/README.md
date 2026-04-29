@@ -98,9 +98,9 @@ pre-audit bare `retained` is read as `proposed_retained` until audited.
 3. **No self-audit.** The auditor of a claim must not share identity with
    the claim's author. Codex GPT-5.5 is the designated independent auditor
    for this repo (see `FRESH_LOOK_REQUIREMENTS.md`); using a different
-   model family from the one that produced most existing notes (Claude,
-   via the autopilot lane) satisfies the cross-family independence
-   condition by construction.
+   model family from the one that produced most existing notes satisfies
+   the cross-family condition, while same-family confirmation must be
+   recorded as `fresh_context` from a distinct restricted-input session.
 
 4. **Decoration must be boxed.** Claims tagged `audited_decoration` cannot
    appear as separate `proposed_retained` or `retained` rows in the

@@ -203,32 +203,44 @@ def part5_gate_inventory_specifics() -> None:
 
     open_number_flat = " ".join(open_number.split())
     c3_flat = " ".join(c3.split())
+    c1_open = (
+        "metric-compatible primitive Clifford/CAR coframe response" in c1
+        and "P_A H_cell" in c1
+        and "does NOT close the Planck lane" in c1
+    )
+    c2_open = (
+        "right-sensitive microscopic selector law" in c2
+        and "2-real `Z_3` doublet-block" in c2
+        and "does NOT close any of the DM lane work" in c2
+    )
+    open_number_two = (
+        "exactly two structural degrees of freedom" in open_number_flat
+        and "(the pair (H_0, L))" in open_number_flat
+    )
+    c3_hypothetical = (
+        "does not prove that no `(C3)` route is possible" in c3_flat
+        and "fresh `(C3)` opening would require" in c3_flat
+    )
 
     check(
         "C1 gate is the primitive Clifford/CAR coframe response",
-        "metric-compatible primitive Clifford/CAR coframe response" in c1
-        and "P_A H_cell" in c1
-        and "does NOT close the Planck lane" in c1,
+        c1_open,
     )
     check(
         "C2 gate is the right-sensitive Z_3 doublet-block selector",
-        "right-sensitive microscopic selector law" in c2
-        and "2-real `Z_3` doublet-block" in c2
-        and "does NOT close any of the DM lane work" in c2,
+        c2_open,
     )
     check(
         "open-number theorem exposes exactly two structural degrees of freedom",
-        "exactly two structural degrees of freedom" in open_number_flat
-        and "(the pair (H_0, L))" in open_number_flat,
+        open_number_two,
     )
     check(
         "current C3 audit reduces C3 to a hypothetical alternative",
-        "does not prove that no `(C3)` route is possible" in c3_flat
-        and "fresh `(C3)` opening would require" in c3_flat,
+        c3_hypothetical,
     )
     check(
         "honest Lane 5 status after this firewall is open, not retained closure",
-        True,
+        c1_open and c2_open and open_number_two and c3_hypothetical,
         "C1 and C2 remain load-bearing; C3 has no active route",
     )
 

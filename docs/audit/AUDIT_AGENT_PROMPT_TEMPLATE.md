@@ -164,8 +164,9 @@ caught downstream.
   the audit lane intentionally does not use author-declared flagship
   status), the pipeline runs the prompt twice in independent sessions
   and requires matching `verdict` and matching `load_bearing_step_class`
-  before landing `audited_clean`. Mismatches promote to a third-auditor
-  review.
+  before landing `audited_clean`. A same-family second audit is eligible
+  only when recorded as `independence: fresh_context` from a distinct
+  restricted-input session. Mismatches promote to a third-auditor review.
 - The auditor's session metadata (model version, session ID, timestamp)
   is recorded in the audit row's `auditor` field; `auditor_family =
   "codex-gpt-5.5"` is set automatically when this template is used.

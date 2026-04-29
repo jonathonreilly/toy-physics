@@ -10,6 +10,8 @@ The audit blob must include claim_id, auditor, auditor_family, and the
 fields produced by AUDIT_AGENT_PROMPT_TEMPLATE.md. Enforces the hard
 rules:
   - independence='weak' may not land audited_clean
+  - independence='fresh_context' may land audited_clean when the audit was
+    performed in a distinct clean-room session with the restricted audit inputs
   - auditor identity must differ from author identity for audited_clean
   - the row's note_hash must match disk (otherwise the audit is stale)
 """
@@ -41,7 +43,32 @@ ALLOWED_VERDICTS = {
     "audited_numerical_match",
 }
 
-ALLOWED_INDEPENDENCE = {"weak", "cross_family", "strong", "external"}
+ALLOWED_INDEPENDENCE = {"weak", "fresh_context", "cross_family", "strong", "external"}
+CLEAN_INDEPENDENCE = ALLOWED_INDEPENDENCE - {"weak"}
+
+
+def clean_independence_error(independence: str, criticality: str | None = None) -> str | None:
+    if independence in CLEAN_INDEPENDENCE:
+        return None
+    if criticality in {"critical", "high"}:
+        return f"criticality={criticality} requires independence >= fresh_context for audited_clean"
+    return "audited_clean requires independence != 'weak'"
+
+
+def cross_confirmation_error(first: dict, audit: dict) -> str | None:
+    """Return a rejection reason when the second critical audit is not independent."""
+    first_auditor = first.get("auditor")
+    auditor = audit.get("auditor")
+    if first_auditor and first_auditor == auditor:
+        return "second auditor must have a distinct auditor identity/session from the first"
+
+    same_family = first.get("auditor_family") == audit.get("auditor_family")
+    if same_family and audit.get("independence") != "fresh_context":
+        return (
+            "same-family second audit requires independence='fresh_context' "
+            "to document a restricted-input clean-room session"
+        )
+    return None
 
 
 def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
@@ -64,14 +91,11 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     if independence not in ALLOWED_INDEPENDENCE:
         return False, f"independence {independence!r} not in {sorted(ALLOWED_INDEPENDENCE)}"
 
-    # Hard rule: weak independence cannot land audited_clean.
-    if verdict == "audited_clean" and independence == "weak":
-        return False, "audited_clean requires independence != 'weak'"
-
-    # Criticality-aware independence rule.
     criticality = row.get("criticality") or "leaf"
-    if verdict == "audited_clean" and criticality in {"critical", "high"} and independence == "weak":
-        return False, f"criticality={criticality} requires independence >= cross_family for audited_clean"
+    if verdict == "audited_clean":
+        err = clean_independence_error(independence, criticality)
+        if err:
+            return False, err
 
     # Hash drift check.
     on_disk_path = REPO_ROOT / row.get("note_path", "")
@@ -95,6 +119,7 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
                 "first_audit": {
                     "auditor": audit["auditor"],
                     "auditor_family": audit["auditor_family"],
+                    "independence": independence,
                     "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
                     "load_bearing_step_class": audit.get("load_bearing_step_class"),
                     "verdict": "audited_clean",
@@ -108,12 +133,14 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
             ledger["rows"] = rows
             return True, "first audit recorded; awaiting independent second auditor"
         # We have a first audit on file; this is the second.
-        if first.get("auditor_family") == audit["auditor_family"]:
-            return False, "second auditor must be from a different auditor_family than the first"
+        err = cross_confirmation_error(first, audit)
+        if err:
+            return False, err
         if first.get("load_bearing_step_class") != audit.get("load_bearing_step_class"):
             row["cross_confirmation"]["second_audit"] = {
                 "auditor": audit["auditor"],
                 "auditor_family": audit["auditor_family"],
+                "independence": independence,
                 "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
                 "load_bearing_step_class": audit.get("load_bearing_step_class"),
                 "verdict": "audited_clean",
@@ -132,6 +159,7 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         row["cross_confirmation"]["second_audit"] = {
             "auditor": audit["auditor"],
             "auditor_family": audit["auditor_family"],
+            "independence": independence,
             "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
             "load_bearing_step_class": audit.get("load_bearing_step_class"),
             "verdict": "audited_clean",

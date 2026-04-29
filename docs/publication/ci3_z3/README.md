@@ -166,7 +166,8 @@ Those surfaces are intentionally separate:
   [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 - quantitative electroweak, QCD, Yukawa, Higgs:
   [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md),
-  [USABLE_DERIVED_VALUES_INDEX.md](./USABLE_DERIVED_VALUES_INDEX.md)
+  [USABLE_DERIVED_VALUES_INDEX.md](./USABLE_DERIVED_VALUES_INDEX.md),
+  [hadron mass open lane](../../lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md)
 - flavor, CKM, quark, charged leptons:
   [CLAIMS_TABLE.md](./CLAIMS_TABLE.md),
   [SCIENCE_MAP.md](./SCIENCE_MAP.md)

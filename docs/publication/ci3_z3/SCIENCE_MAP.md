@@ -113,6 +113,12 @@ Validate with:
   `alpha_s(M_Z)`, EW normalization, retained EW Higgs gauge-mass
   diagonalization as the tree-level mass/charge guardrail, retained YT/top
   transport
+- bounded QCD/hadron lane:
+  exact graph-first confinement is retained, but quantitative hadron masses are
+  still open. The current support map isolates `sqrt(sigma)` promotion behind
+  `(B2)` dynamical screening and `(B5)` framework-to-standard-YM validation, and
+  identifies Lane 3 `m_u + m_d` as the shortest dependency for the GMOR pion
+  path.
 - promoted quantitative flavor lane:
   CKM atlas/axiom package, including the standalone Wolfenstein structural
   identities `lambda^2 = alpha_s(v)/2`, `A^2 = 2/3`, and the CP-phase

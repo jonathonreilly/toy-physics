@@ -75,7 +75,7 @@ Use it to answer:
   [`../../AUTOPILOT_SUMMARY_PROTOCOL.md`](../../AUTOPILOT_SUMMARY_PROTOCOL.md)
 - reusable methodology skills:
   [`skills/ai-physics-lane-builder/SKILL.md`](./skills/ai-physics-lane-builder/SKILL.md),
-  [`skills/frontier-workstream/SKILL.md`](./skills/frontier-workstream/SKILL.md),
+  [`skills/physics-loop/SKILL.md`](./skills/physics-loop/SKILL.md),
   [`skills/physics-claim-reviewer/SKILL.md`](./skills/physics-claim-reviewer/SKILL.md),
   [`skills/review-loop/SKILL.md`](./skills/review-loop/SKILL.md),
   [`skills/reviewer-backpressure-integrator/SKILL.md`](./skills/reviewer-backpressure-integrator/SKILL.md),

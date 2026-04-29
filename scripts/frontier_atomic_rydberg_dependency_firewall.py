@@ -172,7 +172,10 @@ def part4_current_claim_state() -> None:
     )
     check(
         "honest Lane 2 status after this artifact is open, not retained closure",
-        True,
+        lane2_says_scaffold
+        and "m_e from framework" in lane2
+        and "Absent" in lane2
+        and alpha0_not_promoted,
         "m_e and alpha(0) bridge remain load-bearing",
     )
 
