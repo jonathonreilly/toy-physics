@@ -1,5 +1,57 @@
 # Review History
 
+## 2026-04-29 Cycle 8 Review Results
+
+Artifact under review:
+
+- `docs/HUBBLE_LANE5_C1_A2_ACTION_UNIT_METROLOGY_OBSTRUCTION_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_a2_action_unit_metrology_obstruction.py`
+
+### Code / Runner: PASS
+
+- New A2 obstruction runner passes: `PASS=8 FAIL=0`.
+- New runner compiles with `py_compile`.
+- Nearby authority runners still pass:
+  - `frontier_planck_target3_phase_unit_edge_statistics.py`: `PASS=27 FAIL=0`
+  - `frontier_planck_source_unit_normalization_support_theorem.py`: `PASS=14 FAIL=0`
+  - `frontier_g_bare_two_ward_closure.py`: `PASS=18 FAIL=0`
+  - `frontier_hierarchy_spatial_bc_and_u0_scaling.py`: `PASS=8 FAIL=0`
+    with numpy determinant overflow/divide warnings during direct determinant
+    stress rows.
+
+### Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+
+- The note does not claim `(C1)` closure, Planck-scale closure, or an `hbar`
+  derivation.
+- It blocks the direct A2 shortcut: retained `g_bare = 1`, `beta = 6`,
+  plaquette/`u_0`, APBC hierarchy data, and `c_cell = 1/4` are
+  dimensionless and do not choose a dimensional `kappa` on `P_A H_cell`.
+- The exposed missing theorem is precise: a clock/source/action metrology map
+  must couple the dimensionless lattice action to the primitive
+  boundary/action carrier in a non-rescaling-invariant way.
+
+### Imports / Support: DISCLOSED
+
+- No measured Planck, Hubble, cosmological, or SI action value is used.
+- `g_bare`, plaquette/`u_0`, APBC, and `c_cell` inputs are ledgered as
+  repo-local support inputs, not as hidden metrology closure.
+
+### Nature Retention: NO-GO FOR A2, NOT FOR LANE 5
+
+- A2 is closed negatively as currently framed.
+- The broader `(C1)` gate remains open through A4 parity-gate-to-CAR,
+  a direct `P_A` module-morphism/coframe theorem, or a physical metrology
+  theorem.
+
+### Audit Compatibility: PASS
+
+- `bash docs/audit/scripts/run_pipeline.sh`: complete.
+- `python3 docs/audit/scripts/audit_lint.py --strict`: OK, with known
+  graph-cycle warning only.
+- `git diff --check`: OK.
+- Audit row seeded as `proposed_retained` / `unaudited`:
+  `hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29`.
+
 ## 2026-04-29 Cycle 6 Review Results
 
 Artifact under review:

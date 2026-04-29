@@ -195,3 +195,32 @@ Expected claim movement:
 - newly exposed import: `P_A` must be a reducing Clifford/CAR module
   morphism, or an equivalent theorem must be supplied;
 - next route becomes A2 action-unit metrology or A4 parity-gate-to-CAR.
+
+## Cycle 8: Lane 5 C1 A2 Action-Unit Metrology Obstruction
+
+Deliverables:
+
+- `docs/HUBBLE_LANE5_C1_A2_ACTION_UNIT_METROLOGY_OBSTRUCTION_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_a2_action_unit_metrology_obstruction.py`
+- `logs/2026-04-29-hubble-lane5-c1-a2-action-unit-metrology-obstruction.txt`
+
+Verification:
+
+- run and compile the new runner;
+- rerun nearby action-unit / dimensionless-normalization authority runners:
+  - `frontier_planck_target3_phase_unit_edge_statistics.py`
+  - `frontier_planck_source_unit_normalization_support_theorem.py`
+  - `frontier_g_bare_two_ward_closure.py`
+  - `frontier_hierarchy_spatial_bc_and_u0_scaling.py`
+- run audit pipeline and strict lint;
+- run `git diff --check`;
+- record review-loop emulation.
+
+Expected claim movement:
+
+- no `(C1)` closure;
+- exact negative boundary against the direct A2 shortcut;
+- newly exposed import: a physical clock/source/action metrology map tying
+  the dimensionless lattice action and `P_A` carrier to a particular
+  dimensional `kappa`;
+- next route becomes A4 parity-gate-to-CAR or a direct metrology theorem.

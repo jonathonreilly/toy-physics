@@ -1,5 +1,84 @@
 # Handoff
 
+## Loop 2 Checkpoint 2026-04-29T04:08Z
+
+Supervisor loop 2 continued Lane 5 `(C1)` after the A1 obstruction from loop
+1. The selected route was the A2 action-unit metrology stretch attempt.
+
+### Claim-State Movement This Loop
+
+Added a new exact negative boundary:
+
+- `docs/HUBBLE_LANE5_C1_A2_ACTION_UNIT_METROLOGY_OBSTRUCTION_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_a2_action_unit_metrology_obstruction.py`
+- `logs/2026-04-29-hubble-lane5-c1-a2-action-unit-metrology-obstruction.txt`
+
+Verified result: retained `g_bare = 1`, `beta = 6`, plaquette/`u_0`, APBC
+hierarchy data, and `c_cell = 1/4` remain dimensionless normalization/support
+inputs. They do not choose an absolute dimensional action quantum `kappa` on
+`P_A H_cell`; the Target 3 `(S,kappa)` rescaling degeneracy survives.
+
+This does **not** demote the `g_bare` closure, the plaquette support surface,
+the APBC/`u_0` hierarchy support theorem, the Target 3 phase-unit boundary, or
+the conditional Planck packet. It only blocks the direct A2 shortcut:
+
+```text
+g_bare=1 + plaquette/u0 + APBC + c_cell=1/4
+  => action-unit metrology on P_A H_cell.
+```
+
+### Verification
+
+- `PYTHONPATH=scripts python3 scripts/frontier_hubble_lane5_c1_a2_action_unit_metrology_obstruction.py`
+  -> `PASS=8 FAIL=0`
+- `python3 -m py_compile scripts/frontier_hubble_lane5_c1_a2_action_unit_metrology_obstruction.py`
+  -> pass
+- `PYTHONPATH=scripts python3 scripts/frontier_planck_target3_phase_unit_edge_statistics.py`
+  -> `PASS=27 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_planck_source_unit_normalization_support_theorem.py`
+  -> `PASS=14 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_g_bare_two_ward_closure.py`
+  -> `PASS=18 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_hierarchy_spatial_bc_and_u0_scaling.py`
+  -> `PASS=8 FAIL=0` with numpy determinant overflow/divide warnings during
+  direct determinant stress rows.
+- `bash docs/audit/scripts/run_pipeline.sh`
+  -> complete
+- `python3 docs/audit/scripts/audit_lint.py --strict`
+  -> OK, known graph-cycle warning only
+- `git diff --check`
+  -> pass
+- Audit row:
+  `hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29`
+  seeded as `proposed_retained` / `unaudited`.
+
+### Review-Loop Emulation
+
+- Code/runner: PASS. The new runner checks the load-bearing claim rather than
+  only printing constants.
+- Physics boundary: exact negative boundary for A2 only. No `(C1)` closure or
+  `hbar`/Planck-scale closure is claimed.
+- Imports: disclosed in `ASSUMPTIONS_AND_IMPORTS.md`; no observed or SI action
+  value is used.
+- Repo governance: no repo-wide authority weaving performed.
+
+### Next Exact Action
+
+Continue Lane 5 `(C1)` with **A4 parity-gate-to-CAR audit**. Test whether the
+primitive parity-gate carrier route supplies a stronger bridge to native
+CAR/coframe response on `P_A H_cell`. If A4 blocks, either attempt a direct
+`P_A` module-morphism/coframe theorem or checkpoint Lane 5 as blocked on
+human science judgment.
+
+Fetch note: `origin/main` advanced during this loop to `207760ce`. It now
+contains the reviewed Hubble `(C1)` residual-premise attack audit; this loop
+checked that audit from `origin/main` before finalizing A2. The branch was not
+merged with current `origin/main` in this checkpoint because that would pull a
+broad unrelated review batch into the cascade branch. Next loop should decide
+whether to merge current `origin/main` before A4.
+
+Do **not** create `STOP_ALL_LANES_REQUESTED` yet. A4 remains viable.
+
 ## Loop 1 Checkpoint 2026-04-29T03:54Z
 
 This cascade was resumed under the user's 12-hour deadline

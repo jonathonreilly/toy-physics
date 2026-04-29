@@ -18,8 +18,8 @@ Scores use the frontier-workstream dramatic-step scale: `0` low value,
 | Lane 4F Sigma m_nu structural functional form | theorem / support bridge | 2 | 1 | 3 | -0 | 6 | Executed cycle 6; structural only, numerical imports remain |
 | Lane 2 fresh-premise scan after current-main merge | route assessment | 0 | 0 | 1 | -0 | 1 | Completed; no fresh premise found |
 | Lane 5 C1 A1 Grassmann-to-boundary CAR descent | stretch attempt / no-go | 2 | 2 | 3 | -0 | 7 | Executed cycle 7; direct A1 shortcut blocked |
-| Lane 5 C1 A2 action-unit metrology from g_bare=1 | stretch attempt | 3 | 3 | 2 | -1 | 7 | Next route |
-| Lane 5 C1 A4 parity-gate-to-CAR route | theorem/audit | 2 | 2 | 2 | -1 | 5 | Backup if A2 stalls |
+| Lane 5 C1 A2 action-unit metrology from g_bare=1 | stretch attempt / no-go | 3 | 3 | 3 | -0 | 9 | Executed cycle 8; direct A2 shortcut blocked |
+| Lane 5 C1 A4 parity-gate-to-CAR route | theorem/audit | 2 | 2 | 2 | -1 | 5 | Next route |
 
 ## Selected Cycle 1 Route
 
@@ -107,3 +107,20 @@ Phase-2 dependency:
 
 Outcome: A1 is now an exact negative boundary unless a `P_A` Clifford-module
 morphism theorem is supplied.
+
+## Cycle 8 Route
+
+Execute the Lane 5 `(C1)` A2 stretch attempt because A1 sharpened `(G1)`
+while leaving `(G2)` action-unit metrology open:
+
+- test whether retained `g_bare = 1`, `beta = 6`, plaquette/`u_0`, and APBC
+  hierarchy data can pin an absolute `kappa` on `P_A H_cell`;
+- preserve those inputs as dimensionless support if the shortcut fails;
+- produce a runner that keeps the dimensionless lattice data fixed while
+  checking the Target 3 `(S,kappa)` rescaling degeneracy.
+
+Outcome: A2 is now an exact negative boundary for the direct shortcut.
+Dimensionless lattice normalizations do not choose the dimensional action
+quantum. The next live `(C1)` route is A4 parity-gate-to-CAR, or a direct
+metrology theorem that couples the lattice action to the primitive
+boundary/action carrier.

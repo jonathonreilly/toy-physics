@@ -5,8 +5,8 @@ target: best-honest-status
 runtime:
   requested_hours: 12
   hard_deadline_utc: "2026-04-29T15:48:24Z"
-  supervisor_loop: 1
-  refreshed_at_utc: "2026-04-29T03:54:07Z"
+  supervisor_loop: 2
+  refreshed_at_utc: "2026-04-29T04:08:29Z"
 lock:
   owner: frontier-workstream-lane4-cascade
   repo_lock_status: unavailable
@@ -16,10 +16,10 @@ current_lane:
   name: Hubble constant derivation
   status: open
 cycle:
-  count: 7
-  active_route: lane5_c1_a1_grassmann_boundary_car_obstruction
+  count: 8
+  active_route: lane5_c1_a2_action_unit_metrology_obstruction
   route_status: verified_negative_boundary
-  note: "Loop 1 merged current origin/main, integrated Lane 4F Sigma m_nu structural block, skipped Lane 2 for lack of fresh m_e/alpha(0)/NR-limit premise, then executed Lane 5 (C1) A1 stretch attempt."
+  note: "Loop 2 executed Lane 5 (C1) A2 stretch attempt. Retained g_bare=1 plus plaquette/u0/APBC dimensionless lattice data do not pin absolute action-unit metrology on P_A H_cell."
 files_touched:
   - docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_THEOREM_PLAN_NOTE_2026-04-28.md
   - docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_FUNCTIONAL_FORM_THEOREM_NOTE_2026-04-28.md
@@ -29,6 +29,9 @@ files_touched:
   - docs/HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md
   - scripts/frontier_hubble_lane5_c1_a1_grassmann_boundary_car_obstruction.py
   - logs/2026-04-29-hubble-lane5-c1-a1-grassmann-boundary-car-obstruction.txt
+  - docs/HUBBLE_LANE5_C1_A2_ACTION_UNIT_METROLOGY_OBSTRUCTION_NOTE_2026-04-29.md
+  - scripts/frontier_hubble_lane5_c1_a2_action_unit_metrology_obstruction.py
+  - logs/2026-04-29-hubble-lane5-c1-a2-action-unit-metrology-obstruction.txt
   - docs/audit/AUDIT_LEDGER.md
   - docs/audit/AUDIT_QUEUE.md
   - docs/audit/data/audit_ledger.json
@@ -59,6 +62,7 @@ open_imports:
   - Lane 5 C1 primitive Clifford/CAR coframe response with natural phase/action units
   - Lane 5 C1 A1 newly exposed import: P_A must be a reducing Clifford/CAR module morphism for selected edge modes
   - Lane 5 C1 G2 action-unit metrology
+  - Lane 5 C1 A2 newly exposed import: physical clock/source/action metrology map tying dimensionless lattice action to a particular kappa on P_A H_cell
   - Lane 5 C2 right-sensitive Z3 doublet-block selector and bounded-cascade dependencies
   - Lane 5 C3 direct cosmic-L route, currently no active route
   - Lane 3 non-perturbative theorem-core proof of the 5/6 bridge and scale selection
@@ -77,6 +81,7 @@ no_go_routes:
   - five non-top quark mass retention from bounded CKM/quark companion support alone
   - hadron mass retention from confinement and bounded sqrt(sigma) alone
   - Lane 5 C1 A1 direct shortcut: bulk Grassmann/CAR plus rank-four support does not force CAR on P_A H_cell without a P_A module-morphism/reducing-subspace theorem
+  - Lane 5 C1 A2 direct shortcut: g_bare=1 plus plaquette/u0/APBC dimensionless data does not break the S/kappa action-unit rescaling degeneracy on P_A H_cell
 review:
   status: passed_with_notes
   findings:
@@ -85,6 +90,8 @@ review:
     - "Lane 2 was reassessed on current main; no fresh retained m_e, alpha(0)/QED-running, or physical-unit NR-limit premise was found."
     - "Lane 5 C1 A1 stretch attempt produced an exact negative boundary: bulk CAR descends to a rank-four projected block only under a reducing-subspace/module-morphism premise for P_A."
     - "Existing conditional positive Planck/area-law runners still pass; the new A1 obstruction does not demote those conditional packets."
+    - "Lane 5 C1 A2 stretch attempt produced an exact negative boundary: retained dimensionless lattice normalizations do not choose a dimensional kappa on P_A H_cell."
+    - "Existing Target 3 phase-unit boundary, Planck source-unit support, g_bare two-Ward closure, and APBC/u0 hierarchy support runners still pass."
     - "Audit strict lint passes with the known graph-cycle warning only."
 verification:
   status: passed
@@ -99,8 +106,14 @@ verification:
     - "PYTHONPATH=scripts python3 scripts/frontier_planck_target3_phase_unit_edge_statistics.py -> PASS=27 FAIL=0"
     - "PYTHONPATH=scripts python3 scripts/frontier_planck_target3_clifford_phase_bridge.py -> PASS=34 FAIL=0"
     - "PYTHONPATH=scripts python3 scripts/frontier_area_law_primitive_car_edge_identification.py -> PASS=36 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_hubble_lane5_c1_a2_action_unit_metrology_obstruction.py -> PASS=8 FAIL=0"
+    - "python3 -m py_compile scripts/frontier_hubble_lane5_c1_a2_action_unit_metrology_obstruction.py -> pass"
+    - "PYTHONPATH=scripts python3 scripts/frontier_planck_target3_phase_unit_edge_statistics.py -> PASS=27 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_planck_source_unit_normalization_support_theorem.py -> PASS=14 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_g_bare_two_ward_closure.py -> PASS=18 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_hierarchy_spatial_bc_and_u0_scaling.py -> PASS=8 FAIL=0, with numpy determinant overflow/divide warnings during direct determinant stress rows"
     - "bash docs/audit/scripts/run_pipeline.sh -> complete"
     - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only"
     - "git diff --check -> pass"
-next_exact_action: "Continue Lane 5 (C1) after A1 obstruction: execute A2 stretch attempt on whether retained g_bare=1 plus the accepted plaquette/u0 surface projects to action-unit metrology on P_A H_cell, or if A2 is blocked, pivot to A4 parity-gate-to-CAR audit. Do not create STOP_ALL_LANES_REQUESTED yet; viable Lane 5 follow-up remains."
-stop_condition: "Not reached in loop 1. Lane 4F moved structurally; Lane 2 has no fresh premise; Lane 5 has an active next route after the A1 negative boundary."
+next_exact_action: "Before A4, note that origin/main advanced to 207760ce with a broad review batch including the Hubble C1 attack audit; decide whether to merge it. Then continue Lane 5 (C1) after A2 obstruction: execute A4 parity-gate-to-CAR audit, testing whether the primitive parity-gate carrier route supplies a stronger bridge to native CAR/coframe response on P_A H_cell. Do not create STOP_ALL_LANES_REQUESTED yet; viable Lane 5 follow-up remains."
+stop_condition: "Not reached in loop 2. A2 is blocked as a direct shortcut, but A4 remains a viable Lane 5 (C1) follow-up."
