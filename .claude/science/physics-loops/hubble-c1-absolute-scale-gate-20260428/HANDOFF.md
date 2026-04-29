@@ -15,6 +15,37 @@ audit is the last remaining live attack frame.
 | 2 | Stretch | `A1` Grassmann-from-axiom-3 ⇒ CAR — **no-go** |
 | 3 | Stretch | `A2` `g_bare=1` ⇒ action-unit — **no-go** |
 | 4 | Stretch | `A4` parity-gate ⇒ CAR — **no-go** |
+| 5 | Audit | `A5` minimal-carrier-axiom — Cl_4(C) class identified |
+
+## Cycle 5 result (2026-04-29)
+
+**Artifact:** `docs/HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md`
+**Runner:** `scripts/frontier_hubble_c1_a5_minimal_carrier_axiom_audit.py`
+**Log:** `outputs/frontier_hubble_c1_a5_minimal_carrier_axiom_audit_2026-04-28.txt`
+**Verification:** `PASS=21 FAIL=0`
+
+### What this audit closes
+
+- `A5` (minimal-carrier-axiom audit) lands; the audit's six frames
+  `A1`–`A6` are now fully accounted for.
+- Minimal carrier-axiom class identified: **irreducible Cl_4(C)
+  module axiom on `P_A H_cell`**. The four candidates (a) Cl_4(C),
+  (b) two-orbital CAR Fock, (c) Cl_2 Hermitian pair, (d) Cl_3
+  triple + parity all collapse to (a) modulo the strict weakness
+  of (c).
+- Honest closure status identified as a binary choice:
+  - **option (i):** extend `A_min` by an explicit Cl_4(C) carrier
+    axiom (statable without observed values, not duplicating any
+    A_min axiom, structurally orthogonal to retained no-go-closed
+    selectors);
+  - **option (ii):** accept `(G1)` and `(C1)` as open in the
+    current `A_min` posture.
+
+### What this audit does not close
+
+- `(G1)`, `(G2)`, `(C1)` remain open in current `A_min`.
+- The audit takes no position on options (i) vs. (ii); both are
+  honest scientific choices for the user.
 
 ## Cycle 4 result (2026-04-29)
 
@@ -44,13 +75,16 @@ audit is the last remaining live attack frame.
 
 ## Revised cycle plan
 
-- **Cycle 5 (next):** `A5` minimal-carrier-axiom audit. Identify the
-  minimal carrier axiom that would close `(G1)` and audit
-  compatibility with the retained surface.
-- **Cycle 6:** stuck fan-out across `(G1)` attack space (3-5
-  orthogonal premises) per Deep Work Rules.
-- **Cycles 7+:** review-loop pressure on the no-go cluster, possible
-  pivot to `F3` DM-cluster on Lane 4F or `M1`/`M5-c` on Lane 6.
+- **Cycle 6 (next):** stuck fan-out per Deep Work Rules. Generate
+  3-5 orthogonal premises beyond `A1`-`A6`. Candidates: graph-
+  theoretic uniqueness of `P_A H_cell`; topological/cobordism via
+  spin structure; information-theoretic Holevo / smooth-min-entropy;
+  operator-algebraic Stinespring dilation; Reeh-Schlieder /
+  cyclicity of boundary state.
+- **Cycle 7:** synthesis of fan-out; honest stop with claim-state
+  movement recorded.
+- **Cycles 8+:** review-loop pressure; possible pivot to `F3`
+  DM-cluster on Lane 4F or `M1`/`M5-c` on Lane 6.
 
 ## Remaining Nature-grade blockers
 
@@ -79,11 +113,25 @@ the next cycle should turn to `A5` audit and stuck fan-out.
 
 ## Next exact action
 
-Begin Cycle 5 = `A5` minimal-carrier-axiom audit. Frame: enumerate
-candidate minimal carrier axioms (intrinsic Cl_4(C) on `P_A H_cell`,
-intrinsic Gaussian/CAR Fock, parity Z_2 + Hermitian-anticommutator
-triple, etc.) and audit compatibility with the retained surface.
-Authority anchors: `MINIMAL_AXIOMS_2026-04-11.md`,
-`AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md`,
-`PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`,
-the Cycle 2-4 no-go notes in this loop.
+Begin Cycle 6 = stuck fan-out per Deep Work Rules. Generate 3-5
+orthogonal premises beyond the audit's `A1`-`A6` direct-derivation
+frames. Candidate frames:
+
+- **(α)** graph-theoretic uniqueness of `P_A H_cell` as the
+  irreducible primitive boundary block — does the Z^3 graph
+  symmetry plus rank-four constraint force a unique 4-dim block
+  with intrinsic Cl_4(C) action?
+- **(β)** topological/cobordism argument from spin structure
+  on the lattice — does the staggered-Dirac spin structure
+  globally force a Cl_4(C) descent?
+- **(γ)** information-theoretic argument from Holevo / smooth-min-
+  entropy boundary — does the boundary information capacity force
+  CAR semantics over non-CAR?
+- **(δ)** operator-algebraic Stinespring dilation — does the
+  primitive boundary projection P_A admit a unique Stinespring
+  extension to a Clifford action?
+- **(ε)** Reeh-Schlieder / cyclicity of the boundary state on
+  `P_A H_cell` — does cyclic-and-separating force CAR generators?
+
+Synthesize agreements/contradictions and identify best remaining
+attack frame.
