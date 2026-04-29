@@ -1,5 +1,13 @@
 # Handoff
 
+## Resume Directive 2026-04-29
+
+The user explicitly requested that the disconnected physics/frontier loop be
+picked back up for the next 12 hours. Treat this as human direction to resume
+the unattended cascade despite the prior all-lane stop marker. Preserve the
+prior stop record as historical context, but run at least one fresh route
+assessment before creating a new all-lane stop marker.
+
 **Branch:** `frontier/lane4-neutrino-cascade-20260427`
 **Updated:** 2026-04-27T12:57:24Z
 **Current lane:** Lane 1 hadron mass program
