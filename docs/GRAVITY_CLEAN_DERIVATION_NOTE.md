@@ -1,7 +1,7 @@
-# Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law
+# Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)
 
-**Date:** 2026-04-13
-**Status:** proposed_retained weak-field gravity core
+**Date:** 2026-04-13 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded conditional weak-field gravity chain — IF the framework imposes the self-consistency condition `L^{-1} = G_0`, the Born/mass-density source map `rho = |psi|^2`, and the weak-field test-mass response `S = L(1 - phi)`, THEN the `Z^3` Laplacian Green function gives a `1/r` potential and inverse-square force in lattice units. The IF-conditions are not currently registered as audit-clean dependencies and no primary runner is registered. Not yet an audit-clean derivation from the single axiom alone.
 
 ---
 
@@ -462,3 +462,52 @@ This note covers the **retained weak-field gravity core** identified in
 `review.md`. It does not claim closure of the broader gravity bundle
 (WEP, time dilation, geodesics, strong-field). Those remain bounded per
 `review.md` and are documented separately in `GRAVITY_SUB_BUNDLE_NOTE.md`.
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, high criticality, 123 transitive
+descendants):
+
+> Issue: the note advertises a zero-free-parameter derivation of
+> Newton gravity from Cl(3) on Z^3, but the load-bearing step is the
+> imposed physical closure condition `L^{-1} = G_0`, followed by
+> unregistered identifications of `rho = |psi|^2` as gravitational
+> mass density and test-mass response via `S = L(1 - phi)`. Why this
+> blocks: the algebra `L = G_0^{-1}` is valid once the closure
+> condition is granted, and the Z^3 Green-function asymptotic is
+> standard mathematics, but the audit packet does not derive or
+> register the physical law that the gravitational field operator
+> must have the same Green function as the propagator, nor the
+> source/readout/mass-coupling maps needed to turn the Poisson
+> equation into `F = G_N M_1 M_2 / r^2`.
+
+> Claim boundary until fixed: it is safe to claim a conditional
+> weak-field chain: if the framework imposes `L^{-1} = G_0` and the
+> stated source/response maps, then the Z^3 Laplacian Green function
+> gives a Newtonian `1/r` potential and inverse-square force in
+> lattice units.
+
+## What this note does NOT claim
+
+- An unconditional derivation of Newton gravity from a single axiom.
+- Registered audit-clean dependency notes for: the self-consistency
+  condition `L^{-1} = G_0`, the Born / mass-density source map
+  `rho = |psi|^2`, the weak-field test-mass response `S = L(1 - phi)`,
+  or the lattice Green-function normalization/asymptotic.
+- A registered primary runner; the note names a command but the
+  ledger has no runner_path entry.
+
+## What would close this lane (Path A future work)
+
+Promoting from bounded conditional to retained would require:
+
+1. A registered primary gravity-clean runner with controlled
+   finite-lattice checks.
+2. Registered retained theorems for the self-consistency condition
+   `L^{-1} = G_0`.
+3. A registered Born / mass-density source map theorem
+   (`rho = |psi|^2`).
+4. A registered weak-field action / test-mass response theorem
+   (`S = L(1 - phi)`).
+5. A registered lattice Green-function normalization/asymptotic
+   theorem.
