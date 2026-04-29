@@ -72,26 +72,26 @@ canonical surface.
 ## Cross-references
 
 - **Rep-A/Rep-B cancellation (derives the three-channel formula):**
-  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`.
+  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md).
 - **Δ_1 citation note (parent of `I_v_scalar` literature bracket):**
-  `docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md` — cited
+  [`docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md) — cited
   `I_v_scalar ∈ [3, 7]`, central `≃ 4`, retained bracket
   `Δ_1 ∈ [0, +8]` on conserved current.
 - **Δ_2 citation note (parent of `I_SE_gluonic` literature bracket):**
-  `docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md` — cited
+  [`docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md) — cited
   `I_SE_gluonic ∈ [1, 3]`, central `≃ 2`, retained bracket
   `Δ_2 ∈ [-5, 0]` on conserved current.
 - **Δ_3 citation note (parent of `I_SE_fermion` literature bracket):**
-  `docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md` — cited
+  [`docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md) — cited
   `I_SE_fermion ∈ [0.5, 1.5]`, central `≃ 0.7`, retained bracket
   `Δ_3 ∈ [+0.67, +2.0]`.
 - **H_unit renormalization framework-native note (Feynman rules):**
-  `docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`
+  [`docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`](YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md)
   (FR1 staggered fermion, FR2 Wilson plaquette gluon; D_S1 kernel
   structure; `N_S(k) = Σ_μ cos²(k_μ/2)` scalar-vertex numerator).
 - **Conserved vector current Z_V = 1 (21/21 PASS prior):**
-  `scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py`.
-- **Canonical-surface anchor:** `scripts/canonical_plaquette_surface.py`
+  [`scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py`](../scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py).
+- **Canonical-surface anchor:** [`scripts/canonical_plaquette_surface.py`](../scripts/canonical_plaquette_surface.py)
   — `⟨P⟩ = 0.5934`, `u_0 = 0.87768`, `α_LM = 0.09067`,
   `α_LM/(4π) = 0.00721`.
 

@@ -85,32 +85,32 @@ documents how they assemble into the retained observables.
 ## Cross-references
 
 - **Tree-level Ward identity:**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` — exact algebraic
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) — exact algebraic
   identity `y_t² = g_s² / (2 N_c) = g_s² / 6` at tree level on the
   scalar-singlet channel of the `Q_L` block.
 - **Three-channel ratio decomposition:**
-  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
+  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md)
   — structural decomposition
   `Δ_R^ratio = (α_LM/(4π)) · [C_F · Δ_1 + C_A · Δ_2 + T_F n_f · Δ_3]`.
 - **Per-channel BZ citations:**
-  `docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`
+  [`docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md)
   (`Δ_1` central `+2`, range `[−2, +12]`),
-  `docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`
+  [`docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md)
   (`Δ_2` central `−10/3`, range `[−5, 0]`),
-  `docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`
+  [`docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md)
   (`Δ_3` central `+0.93`, range from literature).
 - **P2 v-matching theorem (M = sqrt(8/9) · F_yt · sqrt(u_0)):**
-  `docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md` — retained
+  [`docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md`](YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md) — retained
   structural identity; 1-loop evaluation `M = 1.926`; 2-loop
   evaluation `M = 1.9734` on the primary chain.
 - **Retained SM 2-loop RGE implementation:**
-  `scripts/frontier_yt_zero_import_chain.py` — same RGE equations
+  [`scripts/frontier_yt_zero_import_chain.py`](../scripts/frontier_yt_zero_import_chain.py) — same RGE equations
   and boundary conditions re-used in this runner.
 - **QFP 3 % envelope:**
-  `docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md` — retained 3 %
+  [`docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md) — retained 3 %
   ceiling on 1-loop-vs-2-loop truncation.
 - **Canonical-surface anchors:**
-  `docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md` — `⟨P⟩ = 0.5934`,
+  [`docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](PLAQUETTE_SELF_CONSISTENCY_NOTE.md) — `⟨P⟩ = 0.5934`,
   `u_0 = 0.87768`, `α_LM = 0.09067`, `α_LM/(4π) = 0.00721`.
 
 ---

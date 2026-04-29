@@ -84,45 +84,45 @@ retained SUSY completion, and therefore no framework-native tan β.
 ### Foundational retained theorems (directly inherited, not modified)
 
 - **Composite Higgs D9 + scalar uniqueness D17:**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` — D9 defines the Higgs
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) — D9 defines the Higgs
   as the quark-bilinear condensate `φ = (1/N_c) ψ̄_a ψ_a`, with no
   independent fundamental scalar in the bare action. D17 proves Block-5
   uniqueness: H_unit is the only unit-norm (1,1) Dirac-scalar composite
   on Q_L with Z² = 6.
 - **Bare-action completeness D16:**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` lines 109–136 — the
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) lines 109–136 — the
   retained bare action contains exactly Wilson plaquette + staggered
   Dirac; no fundamental scalar field, no contact 4-fermion operator,
   no independent Yukawa vertex.
 - **Bottom-Yukawa retention analysis (Outcome A falsified):**
-  `docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md` —
+  [`docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`](YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md) —
   identifies candidate classes #1–#4; this note addresses class #3.
 - **One-generation matter closure (RH sector):**
-  `docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md` — u_R, d_R, e_R, ν_R
+  [`docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md) — u_R, d_R, e_R, ν_R
   right-handed completion from anomaly cancellation on the SM branch.
 - **H_unit flavor-column (class #1 closed):**
-  `docs/YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md`.
+  [`docs/YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md`](YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md).
 - **Generation-hierarchy primitive (class #2 closed):**
-  `docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`.
+  [`docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`](YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md).
 - **Right-handed species dependence (class #4 closed):**
-  `docs/YT_RIGHT_HANDED_SPECIES_DEPENDENCE_NOTE_2026-04-18.md`.
+  [`docs/YT_RIGHT_HANDED_SPECIES_DEPENDENCE_NOTE_2026-04-18.md`](YT_RIGHT_HANDED_SPECIES_DEPENDENCE_NOTE_2026-04-18.md).
 
 ### Context (admitted-extension 2-Higgs survey, corroborative only)
 
 - **DM neutrino canonical two-Higgs slot no-go:**
-  `docs/DM_NEUTRINO_CANONICAL_TWO_HIGGS_SLOT_NO_GO_NOTE_2026-04-15.md`
+  [`docs/DM_NEUTRINO_CANONICAL_TWO_HIGGS_SLOT_NO_GO_NOTE_2026-04-15.md`](DM_NEUTRINO_CANONICAL_TWO_HIGGS_SLOT_NO_GO_NOTE_2026-04-15.md)
   — shows that even as an admitted extension, the canonical 2HDM lane
   fails an internal CP-support test on the exact source-phase branch.
 - **DM neutrino two-Higgs minimality theorem:**
-  `docs/DM_NEUTRINO_TWO_HIGGS_MINIMALITY_THEOREM_NOTE_2026-04-15.md`
+  [`docs/DM_NEUTRINO_TWO_HIGGS_MINIMALITY_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_TWO_HIGGS_MINIMALITY_THEOREM_NOTE_2026-04-15.md)
   — the minimum admitted-extension class is a distinct-Z_3-charge
   two-Higgs lane; this is NOT derived from the bare axiom alone.
 - **Lepton shared-Higgs universality collapse:**
-  `docs/LEPTON_SHARED_HIGGS_UNIVERSALITY_COLLAPSE_NOTE.md` —
+  [`docs/LEPTON_SHARED_HIGGS_UNIVERSALITY_COLLAPSE_NOTE.md`](LEPTON_SHARED_HIGGS_UNIVERSALITY_COLLAPSE_NOTE.md) —
   conditional theorem on the implications of shared-Higgs universality
   if it were retained.
 - **Neutrino Dirac two-Higgs canonical reduction:**
-  `docs/NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md` — the
+  [`docs/NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`](NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md) — the
   admitted-extension two-Higgs lane carries 7 real parameters (6 moduli
   + 1 phase), equal to the number of Dirac-neutrino observables, but
   the extension itself is NOT retained.

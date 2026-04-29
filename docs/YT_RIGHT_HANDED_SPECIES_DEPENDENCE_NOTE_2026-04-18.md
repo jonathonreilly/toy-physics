@@ -73,37 +73,37 @@ analysis closes candidate class #4.
 ### Foundational retained theorems (directly inherited)
 
 - **One-generation matter closure (RH completion):**
-  `docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md` —
+  [`docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md) —
   `u_R : (1,3)_{+4/3}, d_R : (1,3)_{-2/3}, e_R : (1,1)_{-2}, nu_R : (1,1)_0`
   uniquely fixed by anomaly cancellation on the Standard Model branch.
 - **Anomaly-forced time theorem:**
-  `docs/ANOMALY_FORCES_TIME_THEOREM.md` — 3+1 spacetime signature
+  [`docs/ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md) — 3+1 spacetime signature
   forced by anomaly cancellation + chirality + single-clock
   codimension-1 evolution, producing the RH sector as opposite-chirality
   SU(2) singlets on the 4D taste space C^16 = C^8_L + C^8_R.
 - **Left-handed charge matching:**
-  `docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md` — `Q_L : (2,3)_{+1/3}`
+  [`docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md) — `Q_L : (2,3)_{+1/3}`
   and `L_L : (2,1)_{-1}` on the graph-first selected-axis surface.
 - **Three-generation chirality boundary:**
-  `docs/THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md` — chirality is
+  [`docs/THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md`](THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md) — chirality is
   not claimed on the purely spatial surface; enters only in the full
   framework through anomaly-forced time.
 - **Ward-identity tree-level theorem (Q_L block, species-uniform):**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` — Block 6 species
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) — Block 6 species
   uniformity on the 6-dim Q_L ⊗ Q_L* space (all CG overlaps = 1/√6).
 - **b-quark Yukawa retention analysis (Outcome A, falsified):**
-  `docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md` —
+  [`docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`](YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md) —
   Ward unification at M_Pl predicts m_b ≈ 140 GeV, 33× observed.
 
 ### Context
 
 - **Native gauge closure (D7-D17 lineage):**
-  `docs/NATIVE_GAUGE_CLOSURE_NOTE.md`
+  [`docs/NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md)
 - **Yukawa color projection theorem:**
-  `docs/YUKAWA_COLOR_PROJECTION_THEOREM.md` — `√(8/9)` correction
+  [`docs/YUKAWA_COLOR_PROJECTION_THEOREM.md`](YUKAWA_COLOR_PROJECTION_THEOREM.md) — `√(8/9)` correction
   on the physical Yukawa from the composite-Higgs propagator.
 - **Right-handed sector runner (algebra + charges):**
-  `scripts/frontier_right_handed_sector.py` — 61/61 PASS, verifies
+  [`scripts/frontier_right_handed_sector.py`](../scripts/frontier_right_handed_sector.py) — 61/61 PASS, verifies
   C^16 = C^8_L ⊕ C^8_R, taste SU(4), anomaly cancellation, RH
   hypercharges.
 

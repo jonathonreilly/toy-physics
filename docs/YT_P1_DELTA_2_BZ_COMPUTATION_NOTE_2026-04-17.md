@@ -67,26 +67,26 @@ could be contemplated.
 ## Cross-references
 
 - **Rep-A/Rep-B partial-cancellation theorem (derives Δ_2 formula):**
-  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
+  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md)
   (§4.3, (4.3) above; establishes `Δ_2 = I_v_gauge − (5/3) I_SE`).
 - **H_unit symbolic reduction (Wilson-plaquette context):**
-  `docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`
+  [`docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`](YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md)
   (retained Feynman rules FR1, FR2; retained tadpole factor `u_0`).
 - **Prior P1 citation chain:**
-  - `docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md` — cited
+  - [`docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`](YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md) — cited
     `I_S ∈ [4, 10]` (C_F-channel analogue, for context).
-  - `docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md` —
+  - [`docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md`](YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md) —
     revised `P1 ∈ [3.85 %, 9.62 %]` central `5.77 %`.
-  - `docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md` — geometric
+  - [`docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md) — geometric
     tail bound on the loop-expansion axis.
 - **Subordinate support:**
-  `docs/UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md` — packaged
+  [`docs/UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`](UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md) — packaged
   `delta_PT = 1.92 %`.
 - **Canonical-surface authority:**
-  `docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md` — `⟨P⟩ = 0.5934`,
+  [`docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](PLAQUETTE_SELF_CONSISTENCY_NOTE.md) — `⟨P⟩ = 0.5934`,
   `u_0 = 0.87768`, `α_LM = 0.09067`, `α_LM/(4π) = 0.00721`.
 - **Ward authority:**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` — `y_t_bare² =
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) — `y_t_bare² =
   g_bare² / (2 N_c) = g_bare² / 6` at tree level.
 
 ## Abstract (§0 verdict)

@@ -169,39 +169,39 @@ What this note adds is narrow and decisive: a framework-native decision on wheth
 ### Foundational retained theorems (directly inherited, not modified)
 
 - **Three-generation observable no-proper-quotient theorem:**
-  `docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` —
+  [`docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md) —
   retained translation projectors {P_1, P_2, P_3} + C_{3[111]} cycle
   generate M_3(C) irreducibly on H_hw=1.
 - **Three-generation matter structure:**
-  `docs/THREE_GENERATION_STRUCTURE_NOTE.md` —
+  [`docs/THREE_GENERATION_STRUCTURE_NOTE.md`](THREE_GENERATION_STRUCTURE_NOTE.md) —
   orbit algebra 8 = 1 + 1 + 3 + 3, physical-lattice necessity.
 - **S_3 taste-cube decomposition:**
-  `docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md` —
+  [`docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`](S3_TASTE_CUBE_DECOMPOSITION_NOTE.md) —
   C^8 ~= 4 A_1 + 2 E (no sign irrep A_2).
 - **Site-phase / cube-shift intertwiner:**
-  `docs/SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md` —
+  [`docs/SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`](SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md) —
   exact bridge between C^8 taste cube and BZ-corner subspace.
 - **Z_2 hw=1 mass-matrix parametrization:**
-  `docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md` —
+  [`docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`](Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md) —
   5-real-parameter Hermitian family once S_3 → Z_2.
 - **Ward identity tree-level theorem:**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` —
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) —
   Block 6 species-uniform Clebsch-Gordan (all six basis components
   of (1,1) singlet = 1/√6).
 
 ### Context (retention analyses upstream of this note)
 
 - **Bottom-Yukawa retention:**
-  `docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md` —
+  [`docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`](YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md) —
   Yukawa unification at M_Pl implied by Block 6 species uniformity;
   empirically falsified on m_b by 33×.
 - **Charged-lepton bounded review:**
-  `docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md` —
+  [`docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`](CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md) —
   Koide Q = 2/3 on hw=1 triplet is algebraically equivalent to
   equal-character-weight condition; hierarchy requires observational
   pin.
 - **Structural no-go survey:**
-  `docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md` — six no-gos on the
+  [`docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md`](STRUCTURAL_NO_GO_SURVEY_NOTE.md) — six no-gos on the
   charged-lepton hw=1 mass mechanism.
 
 ---

@@ -59,22 +59,22 @@ correction).
 ## Cross-references
 
 - **Three-channel decomposition (parent theorem):**
-  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
+  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md)
   §4.3 — `Delta_3 = (4/3) * I_SE` on the canonical surface. This note
   fills in the numerical bracket for `I_SE^{fermion-loop}`.
 - **C_F channel companion (Delta_1):**
-  `docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md` — the `I_S`
+  [`docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`](YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md) — the `I_S`
   literature bracket relevant to Delta_1 (scalar-bilinear vertex BZ
   integral). Distinct from the fermion-loop BZ integral `I_SE^{fermion-loop}`
   addressed here.
 - **Staggered fermion count on the lattice side:**
-  `docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md` §
+  [`docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md`](YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md) §
   Part 2 — `n_taste = 16` (2^4 BZ corners in 4D, 16 staggered tastes).
   Used here only for contrast; the STANDARD matching convention at
   `M_Pl` uses the MSbar-side `n_f = 6`.
 - **Retained Ward identity (tree-level):**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`.
-- **Canonical-surface constants:** `scripts/canonical_plaquette_surface.py`.
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md).
+- **Canonical-surface constants:** [`scripts/canonical_plaquette_surface.py`](../scripts/canonical_plaquette_surface.py).
 
 ---
 

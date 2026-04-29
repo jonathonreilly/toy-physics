@@ -2,8 +2,8 @@
 
 **Date:** 2026-04-15
 **Status:** bounded companion prediction on `main`
-**Primary runners:** `scripts/frontier_higgs_mass_full_3loop.py`,
-`scripts/frontier_yt_color_projection_correction.py`
+**Primary runner:** `scripts/frontier_higgs_mass_full_3loop.py` ([scripts/frontier_higgs_mass_full_3loop.py](../scripts/frontier_higgs_mass_full_3loop.py))
+**Additional primary runner:** `scripts/frontier_yt_color_projection_correction.py`
 **Boundary-support runner:** `scripts/frontier_direct_yt_extraction.py`
 
 ## Authority Role

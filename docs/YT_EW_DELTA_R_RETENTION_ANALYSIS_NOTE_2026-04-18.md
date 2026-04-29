@@ -61,29 +61,29 @@ survive the same lattice-to-MSbar analysis that produced
 ### Primary authority inputs (inherited verbatim)
 
 - **EW color projection theorem:**
-  `docs/YT_EW_COLOR_PROJECTION_THEOREM.md` —
+  [`docs/YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md) —
   `C_color = 8/9`, preserves `sin²θ_W`, gives packaged `g_1(v)`, `g_2(v)`.
 - **R_conn derived:**
-  `docs/RCONN_DERIVED_NOTE.md` — `R_conn = 8/9 + O(1/N_c^4)`.
+  [`docs/RCONN_DERIVED_NOTE.md`](RCONN_DERIVED_NOTE.md) — `R_conn = 8/9 + O(1/N_c^4)`.
 - **Zero-import chain:**
-  `docs/YT_ZERO_IMPORT_CHAIN_NOTE.md` — EW package outputs on `main`.
+  [`docs/YT_ZERO_IMPORT_CHAIN_NOTE.md`](YT_ZERO_IMPORT_CHAIN_NOTE.md) — EW package outputs on `main`.
 - **YT P1 Rep-A/Rep-B methodology (applied here):**
-  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md) —
   three-channel color decomposition
   `Δ_R = (α/(4π)) · [C_F · Δ_1 + C_A · Δ_2 + T_F n_f · Δ_3]`.
 - **YT P1 master assembly (methodology template):**
-  `docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md` —
+  [`docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`](YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md) —
   `Δ_R^{YT} = −3.27 %` (literature-cited central) on the Yukawa/strong
   ratio.
 - **YT P1 full staggered-PT BZ quadrature (precision template):**
-  `docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md` —
+  [`docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`](YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md) —
   `Δ_R^{YT} = −3.77 % ± 0.45 %` (framework-native).
 
 ### Context
 
 - **Canonical surface:** `⟨P⟩ = 0.5934`, `u_0 = 0.87768`,
   `α_LM = 0.09067`, `α_LM/(4π) = 0.00721`
-  (`docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md`).
+  ([`docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](PLAQUETTE_SELF_CONSISTENCY_NOTE.md)).
 - **Bare EW couplings:** `g_2²(bare) = 1/4`, `g_Y²(bare) = 1/5`
   (retained from Cl(3) geometry).
 - **Observed references:** `sin²θ_W(M_Z) = 0.23122 ± 0.00004` (PDG),

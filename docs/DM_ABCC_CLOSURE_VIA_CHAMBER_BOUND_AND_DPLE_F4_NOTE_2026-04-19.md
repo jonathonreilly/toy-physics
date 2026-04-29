@@ -6,7 +6,7 @@
 A-BCC selection of Basin 1 from the four derived basins `{1, N, P, X}` is
 the unique survivor of the conjunction `(C1) ∩ (C2)` with both ingredients
 already retained on branch / main.
-**Dedicated runner:** `scripts/frontier_dm_abcc_chamber_dple_closure.py`
+**Runner:** `scripts/frontier_dm_abcc_chamber_dple_closure.py` ([scripts/frontier_dm_abcc_chamber_dple_closure.py](../scripts/frontier_dm_abcc_chamber_dple_closure.py))
 **Runner result:** `PASS = 39, FAIL = 0`
 
 **2026-04-21 correction.** This note was written on the older four-basin chart

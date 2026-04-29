@@ -36,26 +36,26 @@ This note does NOT modify:
 ## Cross-references
 
 - **Master obstruction:**
-  `docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md` —
+  [`docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md) —
   names the MSbar-to-pole series as a P3 sub-primitive; this note
   closes the structural color-tensor skeleton for K_2.
 - **Prior K-series retention step:**
-  `docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md`
+  [`docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md)
   — `K_1 = C_F = 4/3` retained framework-native.
 - **Next K-series retention step:**
-  `docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  [`docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
   — 10-tensor K_3 color-tensor retention.
 - **K_2 2-loop integral citation:**
-  `docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md`
+  [`docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md)
   — documents the cited values of `J_FF`, `J_FA`, `J_Fl`, `J_Fh`
   against the published K_2(n_l=5) = 10.9405 target.
 - **SU(3) Casimir authorities:**
-  - `docs/YT_EW_COLOR_PROJECTION_THEOREM.md` (D7 — retained `C_F`,
+  - [`docs/YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md) (D7 — retained `C_F`,
     `C_A`, `T_F`).
-  - `docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md` (S1 —
+  - [`docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`](YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md) (S1 —
     gauge-group uniqueness).
 - **SM matter content:**
-  `docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md` —
+  [`docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`](CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md) —
   carries `n_l = 5` at the top-mass scale.
 
 ## Abstract

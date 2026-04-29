@@ -1,0 +1,11 @@
+{
+  "description": "Backticked dependency refs skipped during audit infra cleanup because the cited path did not resolve on disk.",
+  "schema_version": 1,
+  "skipped_refs": [
+    {
+      "note_path": "docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md",
+      "reason": "path does not resolve on disk",
+      "ref": "docs/YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md"
+    }
+  ]
+}

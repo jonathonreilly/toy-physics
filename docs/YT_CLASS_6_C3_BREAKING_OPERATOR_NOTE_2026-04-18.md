@@ -149,34 +149,34 @@ provides implicit breaking on H_hw=1.
 ### Foundational retained theorems (directly inherited, not modified)
 
 - **Three-generation observable no-proper-quotient theorem:**
-  `docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` —
+  [`docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md) —
   retained translation projectors {P_1, P_2, P_3} + C_{3[111]} cycle generate
   M_3(C) irreducibly on H_hw=1; commutant of M_3(C) on H_hw=1 is 1-dim
   (scalars only).
 - **Three-generation matter structure:**
-  `docs/THREE_GENERATION_STRUCTURE_NOTE.md` — orbit algebra 8 = 1 + 1 + 3 + 3.
+  [`docs/THREE_GENERATION_STRUCTURE_NOTE.md`](THREE_GENERATION_STRUCTURE_NOTE.md) — orbit algebra 8 = 1 + 1 + 3 + 3.
 - **S_3 taste-cube decomposition:**
-  `docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md` — C^8 ~= 4 A_1 + 2 E (no sign
+  [`docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`](S3_TASTE_CUBE_DECOMPOSITION_NOTE.md) — C^8 ~= 4 A_1 + 2 E (no sign
   irrep A_2).
 - **S_3 mass-matrix no-go:**
-  `docs/S3_MASS_MATRIX_NO_GO_NOTE.md` — every S_3-invariant Hermitian operator
+  [`docs/S3_MASS_MATRIX_NO_GO_NOTE.md`](S3_MASS_MATRIX_NO_GO_NOTE.md) — every S_3-invariant Hermitian operator
   on V_1 has at most two distinct eigenvalues; the S_3-invariant Hermitian
   algebra on V_1 has real dimension 2.
 - **Z_2 hw=1 mass-matrix parametrization:**
-  `docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md` — 5-real-parameter
+  [`docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`](Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md) — 5-real-parameter
   Hermitian family once S_3 → Z_2.
 - **Site-phase / cube-shift intertwiner:**
-  `docs/SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md` — exact bridge between C^8
+  [`docs/SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`](SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md) — exact bridge between C^8
   taste cube and BZ-corner subspace.
 - **Native gauge closure (axis selection):**
-  `docs/NATIVE_GAUGE_CLOSURE_NOTE.md` — graph-first weak-axis selector
+  [`docs/NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md) — graph-first weak-axis selector
   (one-of-three axis minima of V_sel(φ) = 32 Σ_{i<j} φ_i² φ_j²) drives the
   structural SU(3) closure.
 
 ### Context (retention analyses adjacent to this note)
 
 - **Generation-hierarchy primitive retention:**
-  `docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md` —
+  [`docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`](YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md) —
   Outcome D retained no-go; cyclic-symmetry theorem on the M_3(C) algebra.
   The present note is the Class #6 refinement of Primitive 1 in §5.3 of that
   note.

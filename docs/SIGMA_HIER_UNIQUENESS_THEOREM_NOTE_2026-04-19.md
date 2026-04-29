@@ -4,8 +4,7 @@
 **Status:** **conditional support theorem on the open DM gate** — `σ_hier = (2, 1, 0)` is the
 unique hierarchy-pairing permutation satisfying the joint 4-observable PMNS
 constraint at the pinned chamber point  
-**Dedicated runner:**
-`scripts/frontier_sigma_hier_uniqueness_theorem.py`  
+**Runner:** `scripts/frontier_sigma_hier_uniqueness_theorem.py` ([scripts/frontier_sigma_hier_uniqueness_theorem.py](../scripts/frontier_sigma_hier_uniqueness_theorem.py))
 **Runner result:** `PASS = 24, FAIL = 0`
 
 ## What this theorem establishes

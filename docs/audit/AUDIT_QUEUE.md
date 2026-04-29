@@ -1,14 +1,14 @@
 # Audit Queue
 
-**Generated:** 2026-04-29T11:40:12.722455+00:00
-**Total pending:** 1389
-**Ready (all deps already at a stable tier):** 988
+**Generated:** 2026-04-29T12:20:34.844185+00:00
+**Total pending:** 1414
+**Ready (all deps already at a stable tier):** 972
 
 By criticality:
 - `critical`: 47
-- `high`: 328
-- `medium`: 326
-- `leaf`: 688
+- `high`: 332
+- `medium`: 341
+- `leaf`: 694
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -42,7 +42,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 24 | `three_generation_structure_note` | critical | 233 | 23.87 |  | fresh_context_or_stronger_with_cross_confirmation | - |
 | 25 | `anomaly_forces_time_theorem` | critical | 230 | 20.35 |  | fresh_context_or_stronger_with_cross_confirmation | - |
 | 26 | `one_generation_matter_closure_note` | critical | 227 | 22.33 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 27 | `alpha_s_derived_note` | critical | 211 | 32.23 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 27 | `alpha_s_derived_note` | critical | 211 | 32.23 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_zero_import_chain.py` |
 | 28 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 120 | 15.42 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_source_surface_active_half_plane_theorem.py` |
 | 29 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | critical | 119 | 14.91 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_source_surface_active_affine_point_selection_boundary.py` |
 | 30 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 112 | 15.82 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_r_base_group_theory_derivation.py` |

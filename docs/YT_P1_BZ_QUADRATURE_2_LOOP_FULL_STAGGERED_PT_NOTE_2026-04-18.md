@@ -257,22 +257,22 @@ envelope with bound-constrained same-sign assembly."
 ### Directly inherited retained sub-theorems
 
 - **1-loop full staggered-PT BZ quadrature:**
-  `docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md` —
+  [`docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`](YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md) —
   `Δ_R^{(1)} = −3.77% ± 0.45%`, retained 1-loop central.
 - **2-loop structural extension:**
-  `docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md` —
+  [`docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md`](YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md) —
   8-tensor color skeleton + loop-geometric bound
   `|Δ_R^{(2)}| ≤ 0.834%`.
 - **Loop-geometric bound:**
-  `docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md` — retained
+  [`docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md) — retained
   `r_R = 0.22126` envelope at SU(3), `n_l = 5`.
 - **Master Δ_R assembly (1-loop literature):**
-  `docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`.
+  [`docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`](YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md).
 
 ### Structural analog (P3 side)
 
 - **K_2 citation note:**
-  `docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md`
+  [`docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md)
   — analogous 4-tensor 2-loop integral retention on the MSbar-to-pole
   mass-conversion side. The present note plays the same role on the
   Yukawa/gauge ratio side but with **8 tensors** (vs K_2's 4 tensors),
@@ -281,11 +281,11 @@ envelope with bound-constrained same-sign assembly."
 
 ### Supporting runners and templates
 
-- `scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py` —
+- [`scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py`](../scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py) —
   1-loop 4D grid-quadrature template;
-- `scripts/frontier_yt_p3_k2_integrals.py` — analog K_2 citation
+- [`scripts/frontier_yt_p3_k2_integrals.py`](../scripts/frontier_yt_p3_k2_integrals.py) — analog K_2 citation
   runner on P3 side;
-- `scripts/canonical_plaquette_surface.py` — canonical surface
+- [`scripts/canonical_plaquette_surface.py`](../scripts/canonical_plaquette_surface.py) — canonical surface
   constants.
 
 ---

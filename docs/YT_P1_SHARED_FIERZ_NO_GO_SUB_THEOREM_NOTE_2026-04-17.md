@@ -59,24 +59,24 @@ one-liner.
 ## Cross-references
 
 - **Master obstruction (parent):**
-  `docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
+  [`docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)
   — names P1 as the 1-loop lattice-to-MSbar matching primitive on
   the Ward ratio.
 - **Ward-identity tree-level theorem (source of D12 + S2):**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` —
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) —
   D16 (composite H_unit), D17 (H-unit normalization), D12 (SU(N_c)
   color Fierz), S2 (Lorentz Clifford Fierz); together establish
   `y_t_bare² = g_bare²/(2 N_c)` at tree level.
 - **Color-factor retention (structural decomposition):**
-  `docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md) —
   retained three-channel form
   `Δ_R = (α_LM/(4π)) · [C_F Δ_1 + C_A Δ_2 + T_F n_f Δ_3]`.
 - **Rep-A/Rep-B partial cancellation (uses this no-go as prerequisite):**
-  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
+  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md)
   — establishes the PARTIAL cancellation verdict on the ratio
   (external Z_ψ cancels; all three channels generically nonzero).
 - **Color-projection correction note:**
-  `docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md` — retained
+  [`docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md`](YT_COLOR_PROJECTION_CORRECTION_NOTE.md) — retained
   H_unit/H_bar projection + SU(N_c) Fierz structure.
 - **I_1 symbolic decomposition (Ward `I_V = 0`):**
   `docs/YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md`

@@ -1,7 +1,7 @@
 # DM Leptogenesis Transport Status
 
 **Date:** 2026-04-16
-**Authority runner:** `scripts/frontier_dm_leptogenesis_transport_status.py`
+**Runner:** `scripts/frontier_dm_leptogenesis_transport_status.py` ([scripts/frontier_dm_leptogenesis_transport_status.py](../scripts/frontier_dm_leptogenesis_transport_status.py))
 **Framework convention:** "axiom" means only `Cl(3)` on `Z^3`.
 
 ## Status

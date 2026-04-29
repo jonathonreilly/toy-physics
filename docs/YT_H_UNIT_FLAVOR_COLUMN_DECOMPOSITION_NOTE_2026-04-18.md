@@ -63,34 +63,34 @@ missing-primitive search to classes #2-#4.
 ### Foundational retained theorems (directly inherited)
 
 - **Ward-identity tree-level theorem (Q_L block, D17 uniqueness):**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` — D17 states H_unit is the
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) — D17 states H_unit is the
   unique unit-normalized color-singlet × iso-singlet × Dirac-scalar
   composite on Q_L with Z² = N_c × N_iso = 6; Block 5 numerically verifies
   the (1,8), (3,1), (8,3) alternatives give Z² = 8, 9/2, 24 respectively,
   each distinct from 6.
 - **Block 6 species uniformity (numerically verified to machine precision):**
-  same runner, `scripts/frontier_yt_ward_identity_derivation.py` lines
+  same runner, [`scripts/frontier_yt_ward_identity_derivation.py`](../scripts/frontier_yt_ward_identity_derivation.py) lines
   291-295 — all 6 basis Clebsch-Gordan overlaps on the unit-norm (1,1)
   singlet equal 1/√6.
 - **Bottom-Yukawa retention analysis (Outcome A falsified):**
-  `docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md` —
+  [`docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`](YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md) —
   identifies candidate classes #1-#4; this note addresses class #1.
 
 ### Context
 
 - **Three-generation observable theorem:**
-  `docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` — the hw=1 triplet
+  [`docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md) — the hw=1 triplet
   carries irreducible M_3(C) generation algebra; gen-indexed projectors
   exist as exact framework operators.
 - **One-generation matter closure:**
-  `docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md` — right-handed sector
+  [`docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md) — right-handed sector
   content u_R, d_R, e_R, ν_R; relevant for candidate class #4 which is
   out-of-scope here.
 - **Site-phase / cube-shift intertwiner:**
-  `docs/SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md` — BZ-corner ↔ taste-cube
+  [`docs/SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`](SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md) — BZ-corner ↔ taste-cube
   bridge; relevant for gen-indexed analysis.
 - **Z_2 hw=1 mass-matrix parametrization:**
-  `docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md` — 5-parameter residual
+  [`docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`](Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md) — 5-parameter residual
   Z_2-invariant Hermitian normal form on hw=1 triplet.
 
 ---

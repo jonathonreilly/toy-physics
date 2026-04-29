@@ -84,40 +84,40 @@ C_3-breaking primitive question on the current retained surface.
 ### Foundational retained theorems (directly inherited)
 
 - **Three-generation observable theorem:**
-  `docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` — irreducible M_3(C)
+  [`docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md) — irreducible M_3(C)
   algebra on H_hw=1, C_{3[111]} cyclic generator.
 - **Ward identity D9 (composite Higgs):**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` D9 — the framework's
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) D9 — the framework's
   composite Higgs `phi = (1/N_c) ψ̄_a ψ_a` sums over COLOR index only
   (no generation index); extended in D17 to `H_unit = (1/√6) Σ_{α,a}
   ψ̄_{α,a} ψ_{α,a}` summing over color AND weak-isospin, still no
   generation label.
 - **Hierarchy theorem:**
-  `docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md` —
+  [`docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) —
   `v = M_Pl · (7/8)^(1/4) · α_LM^16`, electroweak scale via 16 taste
   decouplings.
 - **Strong-CP θ = 0 closure:**
-  `docs/STRONG_CP_THETA_ZERO_NOTE.md` — θ_eff = 0 on the retained action
+  [`docs/STRONG_CP_THETA_ZERO_NOTE.md`](STRONG_CP_THETA_ZERO_NOTE.md) — θ_eff = 0 on the retained action
   surface; Z_3 source is weak-only, not strong-sector.
 - **CKM atlas/axiom package:**
-  `docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md` — `δ_std = arctan(√5) = 65.905°`
+  [`docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) — `δ_std = arctan(√5) = 65.905°`
   from Z_3 source phase 2π/3 on the 1+5 projector.
 
 ### Context (complementary retention analyses)
 
 - **Class #6 explicit C_3 breaking (no-go):**
-  `docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`
+  [`docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`](YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md)
   Outcome D — no retained operator on H_hw=1 breaks C_{3[111]} explicitly;
   the retained algebra is generationally symmetric.
 - **Class #1 flavor-column decomposition (no-go):**
-  `docs/YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md`
+  [`docs/YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md`](YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md)
   Outcome C — no flavor-column decomposition of `H_unit` with distinct
   per-species CG weights.
 - **Bottom-Yukawa retention analysis:**
-  `docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`
+  [`docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`](YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
   Outcome A — Yukawa unification at M_Pl empirically falsified on m_b.
 - **Structural no-go survey (six lepton no-gos):**
-  `docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md`.
+  [`docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md`](STRUCTURAL_NO_GO_SURVEY_NOTE.md).
 
 ---
 

@@ -36,9 +36,9 @@ to, and independent of, the cited `I_S` 1-loop BZ integral question
   - `YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md` — 1-loop `I_S` citation-and-bound layer on the `C_F` channel.
 - **Analog P3 bound (structural template):** `YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md` — the analog geometric tail bound on the K-series MSbar-to-pole conversion at `α_s(m_t)`. This note mirrors its structure at the UV scale with `α_LM` replacing `α_s` and a retention-retuned ratio.
 - **SU(3) Casimir authorities:**
-  - `docs/YT_EW_COLOR_PROJECTION_THEOREM.md` — retained `C_F`, `C_A`, `T_F`.
-  - `docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md` — gauge-group uniqueness.
-- **Canonical coupling authority:** `docs/UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md` and `scripts/canonical_plaquette_surface.py` — retained `α_LM = α_bare / u_0 = 0.0907` on the tadpole-improved Wilson-plaquette + staggered surface.
+  - [`docs/YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md) — retained `C_F`, `C_A`, `T_F`.
+  - [`docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`](YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md) — gauge-group uniqueness.
+- **Canonical coupling authority:** [`docs/UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`](UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md) and [`scripts/canonical_plaquette_surface.py`](../scripts/canonical_plaquette_surface.py) — retained `α_LM = α_bare / u_0 = 0.0907` on the tadpole-improved Wilson-plaquette + staggered surface.
 - **SM light-flavor content at M_Pl:** inherited `n_l = 5` through the retained SM matter content carried by the complete-prediction-chain runners.
 
 ## Abstract

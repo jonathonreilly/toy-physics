@@ -1,0 +1,1649 @@
+{
+  "broken_reason_counts": {
+    "missing_runner_file": 55,
+    "nonzero_exit": 3,
+    "timeout": 36
+  },
+  "broken_runners": [
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.06,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_gravitational_time_dilation.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "ai_methodology.raw.prompts_session_049708ba_jonreilly",
+          "note_path": "docs/ai_methodology/raw/prompts_session_049708ba_jonreilly.md"
+        }
+      ],
+      "runner_path": "/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_gravitational_time_dilation.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.063,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/scripts/distance_law_3d_64_closure.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "ai_methodology.raw.prompts_session_4ffea772_jonreilly",
+          "note_path": "docs/ai_methodology/raw/prompts_session_4ffea772_jonreilly.md"
+        }
+      ],
+      "runner_path": "/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/scripts/distance_law_3d_64_closure.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.079,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/action_power_canonical_harness.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "action_power_note",
+          "note_path": "docs/ACTION_POWER_NOTE.md"
+        }
+      ],
+      "runner_path": "action_power_canonical_harness.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.048,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_axioms_16card.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "session_synthesis_2026-04-10_graph_axioms",
+          "note_path": "docs/SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md"
+        }
+      ],
+      "runner_path": "frontier_axioms_16card.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.069,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_color_projection_mc.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "complete_prediction_chain_2026_04_15",
+          "note_path": "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md"
+        }
+      ],
+      "runner_path": "frontier_color_projection_mc.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.055,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_correct_coupling.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "gravity_sign_audit_2026-04-10",
+          "note_path": "docs/GRAVITY_SIGN_AUDIT_2026-04-10.md"
+        }
+      ],
+      "runner_path": "frontier_correct_coupling.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.061,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_critical_exponents.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "critical_exponents_topology_note_2026-04-10",
+          "note_path": "docs/CRITICAL_EXPONENTS_TOPOLOGY_NOTE_2026-04-10.md"
+        }
+      ],
+      "runner_path": "frontier_critical_exponents.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.063,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_eigenvalue_stats_and_anderson_phase.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "eigenvalue_anderson_phase_note_2026-04-11",
+          "note_path": "docs/EIGENVALUE_ANDERSON_PHASE_NOTE_2026-04-11.md"
+        }
+      ],
+      "runner_path": "frontier_eigenvalue_stats_and_anderson_phase.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.075,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_geometry_superposition.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "geometry_superposition_dag_ensemble_note_2026-04-11",
+          "note_path": "docs/GEOMETRY_SUPERPOSITION_DAG_ENSEMBLE_NOTE_2026-04-11.md"
+        }
+      ],
+      "runner_path": "frontier_geometry_superposition.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.05,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_irregular_directional_observable.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "irregular_directional_observable_note_2026-04-11",
+          "note_path": "docs/IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md"
+        }
+      ],
+      "runner_path": "frontier_irregular_directional_observable.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.069,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_irregular_sign_core_packet_gate.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "irregular_sign_core_packet_gate_note",
+          "note_path": "docs/IRREGULAR_SIGN_CORE_PACKET_GATE_NOTE.md"
+        }
+      ],
+      "runner_path": "frontier_irregular_sign_core_packet_gate.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.066,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_s3_boundary_link_theorem.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "s3_boundary_link_theorem_note",
+          "note_path": "docs/S3_BOUNDARY_LINK_THEOREM_NOTE.md"
+        }
+      ],
+      "runner_path": "frontier_s3_boundary_link_theorem.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.041,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_staggered_17card.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "session_synthesis_2026-04-10_final",
+          "note_path": "docs/SESSION_SYNTHESIS_2026-04-10_FINAL.md"
+        },
+        {
+          "claim_id": "staggered_fermion_card_2026-04-10",
+          "note_path": "docs/STAGGERED_FERMION_CARD_2026-04-10.md"
+        }
+      ],
+      "runner_path": "frontier_staggered_17card.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.065,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_staggered_cycle_battery.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "cycle_battery_note_2026-04-10",
+          "note_path": "docs/CYCLE_BATTERY_NOTE_2026-04-10.md"
+        }
+      ],
+      "runner_path": "frontier_staggered_cycle_battery.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.047,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_staggered_cycle_battery_scaled.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "cycle_battery_scaled_note_2026-04-10",
+          "note_path": "docs/CYCLE_BATTERY_SCALED_NOTE_2026-04-10.md"
+        }
+      ],
+      "runner_path": "frontier_staggered_cycle_battery_scaled.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.085,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_staggered_cycle_break_frontier.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "cycle_break_frontier_note_2026-04-10",
+          "note_path": "docs/CYCLE_BREAK_FRONTIER_NOTE_2026-04-10.md"
+        }
+      ],
+      "runner_path": "frontier_staggered_cycle_break_frontier.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.106,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_staggered_cycle_break_slice.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "cycle_break_slice_note_2026-04-10",
+          "note_path": "docs/CYCLE_BREAK_SLICE_NOTE_2026-04-10.md"
+        }
+      ],
+      "runner_path": "frontier_staggered_cycle_break_slice.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.082,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_staggered_dag.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "staggered_dag_note_2026-04-10",
+          "note_path": "docs/STAGGERED_DAG_NOTE_2026-04-10.md"
+        }
+      ],
+      "runner_path": "frontier_staggered_dag.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.077,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_staggered_self_gravity_scaling.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "self_gravity_scaling_note_2026-04-10",
+          "note_path": "docs/SELF_GRAVITY_SCALING_NOTE_2026-04-10.md"
+        }
+      ],
+      "runner_path": "frontier_staggered_self_gravity_scaling.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.085,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_two_field_retarded_family_closure.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "two_field_retarded_family_closure_note_2026-04-10",
+          "note_path": "docs/TWO_FIELD_RETARDED_FAMILY_CLOSURE_NOTE_2026-04-10.md"
+        },
+        {
+          "claim_id": "work_history.repo.backlog.nature_backlog_2026-04-10",
+          "note_path": "docs/work_history/repo/backlog/NATURE_BACKLOG_2026-04-10.md"
+        }
+      ],
+      "runner_path": "frontier_two_field_retarded_family_closure.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.086,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_two_field_retarded_probe.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "two_field_retarded_probe_note_2026-04-10",
+          "note_path": "docs/TWO_FIELD_RETARDED_PROBE_NOTE_2026-04-10.md"
+        }
+      ],
+      "runner_path": "frontier_two_field_retarded_probe.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.089,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_two_field_wave.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "staggered_two_field_wave_note",
+          "note_path": "docs/STAGGERED_TWO_FIELD_WAVE_NOTE.md"
+        }
+      ],
+      "runner_path": "frontier_two_field_wave.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.079,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_two_sign_comparison.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "two_sign_comparison_note_2026-04-10",
+          "note_path": "docs/TWO_SIGN_COMPARISON_NOTE_2026-04-10.md"
+        }
+      ],
+      "runner_path": "frontier_two_sign_comparison.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.083,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_weak_coupling_battery.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "weak_coupling_sign_sensitivity_note_2026-04-11",
+          "note_path": "docs/WEAK_COUPLING_SIGN_SENSITIVITY_NOTE_2026-04-11.md"
+        }
+      ],
+      "runner_path": "frontier_weak_coupling_battery.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.037,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/frontier_weak_coupling_retained.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "weak_coupling_retention_note_2026-04-11",
+          "note_path": "docs/WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md"
+        }
+      ],
+      "runner_path": "frontier_weak_coupling_retained.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.045,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/lattice_2d3d_continuum_check.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "ai_methodology.raw.claude_review_packets_full",
+          "note_path": "docs/ai_methodology/raw/claude_review_packets_full.md"
+        },
+        {
+          "claim_id": "branch_summary_distracted_napier",
+          "note_path": "docs/BRANCH_SUMMARY_DISTRACTED_NAPIER.md"
+        }
+      ],
+      "runner_path": "lattice_2d3d_continuum_check.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.011,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "action_normalization_note",
+          "note_path": "docs/ACTION_NORMALIZATION_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_action_normalization.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.035,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "atomic_hydrogen_helium_probe_note",
+          "note_path": "docs/ATOMIC_HYDROGEN_HELIUM_PROBE_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_atomic_hydrogen_helium_probe.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.059,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_baryogenesis.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "work_history.cabibbo_jarlskog_route_note_2026-04-12",
+          "note_path": "docs/work_history/CABIBBO_JARLSKOG_ROUTE_NOTE_2026-04-12.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_baryogenesis.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.035,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "bell_inequality_derived_note",
+          "note_path": "docs/BELL_INEQUALITY_DERIVED_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_bell_inequality.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.007,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+          "note_path": "docs/EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md"
+        },
+        {
+          "claim_id": "rconn_derived_note",
+          "note_path": "docs/RCONN_DERIVED_NOTE.md"
+        },
+        {
+          "claim_id": "yt_ew_color_projection_theorem",
+          "note_path": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_color_projection_mc.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.006,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "confinement_string_tension_note",
+          "note_path": "docs/CONFINEMENT_STRING_TENSION_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_confinement_string_tension.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.07,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "distance_law_definitive_note",
+          "note_path": "docs/DISTANCE_LAW_DEFINITIVE_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_distance_law_definitive.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.009,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20",
+          "note_path": "docs/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_abcc_basin_enumeration_completeness.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.008,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_abcc_retained_measurement_closure_theorem_note_2026-04-21",
+          "note_path": "docs/DM_ABCC_RETAINED_MEASUREMENT_CLOSURE_THEOREM_NOTE_2026-04-21.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_abcc_retained_measurement_closure_2026_04_21.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.01,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16",
+          "note_path": "docs/DM_FULL_CLOSURE_SAME_SURFACE_NUMERATOR_SELECTOR_BOUNDARY_NOTE_2026-04-16.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_full_closure_same_surface_numerator_selector_boundary.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.015,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17",
+          "note_path": "docs/DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_full_closure_same_surface_thermal_bounding_theorem.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.012,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17",
+          "note_path": "docs/DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_SERIES_TAIL_SUPPORT_NOTE_2026-04-17.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_full_closure_same_surface_thermal_series_tail_support.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.696,
+      "exit_code": 1,
+      "output_tail": "========================================================================================\nPART 2: THE CURRENT BRANCH STILL MARKS RADIATION EXPANSION AS NON-AUTHORITATIVE\n========================================================================================\nTraceback (most recent call last):\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_leptogenesis_expansion_axiom_boundary.py\", line 129, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_leptogenesis_expansion_axiom_boundary.py\", line 119, in main\n    part2_the_current_branch_still_marks_radiation_expansion_as_non_authoritative()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_leptogenesis_expansion_axiom_boundary.py\", line 75, in part2_the_current_branch_still_marks_radiation_expansion_as_non_authoritative\n    note = open(\n           ~~~~^\n        \"/Users/jonBridger/Toy Physics-dm-main-refresh/docs/DM_CLEAN_DERIVATION_NOTE.md\",\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        encoding=\"utf-8\",\n        ^^^^^^^^^^^^^^^^^\n    ).read()\n    ^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonBridger/Toy Physics-dm-main-refresh/docs/DM_CLEAN_DERIVATION_NOTE.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16",
+          "note_path": "docs/DM_LEPTOGENESIS_EXPANSION_AXIOM_BOUNDARY_NOTE_2026-04-16.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_leptogenesis_expansion_axiom_boundary.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.028,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_leptogenesis_full_axiom_closure.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "work_history.dm.dm_leptogenesis_full_axiom_closure_note_2026-04-15",
+          "note_path": "docs/work_history/dm/DM_LEPTOGENESIS_FULL_AXIOM_CLOSURE_NOTE_2026-04-15.md"
+        },
+        {
+          "claim_id": "work_history.dm.dm_leptogenesis_full_axiom_closure_note_2026-04-16",
+          "note_path": "docs/work_history/dm/DM_LEPTOGENESIS_FULL_AXIOM_CLOSURE_NOTE_2026-04-16.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_leptogenesis_full_axiom_closure.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.018,
+      "exit_code": null,
+      "output_tail": "    - the later certified-global theorem sharpens the total reduced-surface branch count to three\n\n========================================================================================\nPART 4: BOTTOM LINE\n========================================================================================\n  [PASS] The reduced-surface selector problem now has an exact closed-form symmetry reduction  (H_e(delta) is explicit and delta-even)\n  [PASS] The remaining classification is a real KKT problem on the exact reduced domain  (no passive-sector or transport state lives outside that domain)\n  [PASS] The exact current branch still has a closed-form symmetry reduction and a physically selected low-action closure branch  (the later certified-global theorem sharpens the exact branch count on the same reduced surface)\n\n  Honest scope:\n    - closed-form structural reduction: yes\n    - exact broad-multistart dominant-branch classification on the reduced surface: yes\n    - separate global analytic elimination of every conceivable stationary\n      component in the abstract: not claimed here\n\n========================================================================================\nSUMMARY: PASS=14 FAIL=0\n========================================================================================\n\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_leptogenesis_pmns_analytic_stationary_classification_theorem_note_2026-04-16",
+          "note_path": "docs/DM_LEPTOGENESIS_PMNS_ANALYTIC_STATIONARY_CLASSIFICATION_THEOREM_NOTE_2026-04-16.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_leptogenesis_pmns_analytic_stationary_classification_theorem.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.01,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_leptogenesis_pmns_multistart_selector_support_note_2026-04-16",
+          "note_path": "docs/DM_LEPTOGENESIS_PMNS_MULTISTART_SELECTOR_SUPPORT_NOTE_2026-04-16.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_leptogenesis_pmns_multistart_selector_support.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.022,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_leptogenesis_pmns_reduced_surface_selector_support_note_2026-04-16",
+          "note_path": "docs/DM_LEPTOGENESIS_PMNS_REDUCED_SURFACE_SELECTOR_SUPPORT_NOTE_2026-04-16.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_leptogenesis_pmns_reduced_surface_selector_support.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.012,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_leptogenesis_pmns_reduction_exhaustion_theorem_note_2026-04-16",
+          "note_path": "docs/DM_LEPTOGENESIS_PMNS_REDUCTION_EXHAUSTION_THEOREM_NOTE_2026-04-16.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_leptogenesis_pmns_reduction_exhaustion_theorem.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.008,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_leptogenesis_pmns_stationary_cp_incompatibility_theorem_note_2026-04-16",
+          "note_path": "docs/DM_LEPTOGENESIS_PMNS_STATIONARY_CP_INCOMPATIBILITY_THEOREM_NOTE_2026-04-16.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_leptogenesis_pmns_stationary_cp_incompatibility_theorem.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.093,
+      "exit_code": 1,
+      "output_tail": "    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_leptogenesis_projection_theorem.py\", line 212, in main\n    part4_the_runner_surface_now_has_an_exact_denominator_divide()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_leptogenesis_projection_theorem.py\", line 188, in part4_the_runner_surface_now_has_an_exact_denominator_divide\n    full_axiom_note = read(\"docs/DM_LEPTOGENESIS_FULL_AXIOM_CLOSURE_NOTE_2026-04-16.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_leptogenesis_projection_theorem.py\", line 86, in read\n    return (ROOT / rel).read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/docs/DM_LEPTOGENESIS_FULL_AXIOM_CLOSURE_NOTE_2026-04-16.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_leptogenesis_projection_theorem_note_2026-04-15",
+          "note_path": "docs/DM_LEPTOGENESIS_PROJECTION_THEOREM_NOTE_2026-04-15.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_leptogenesis_projection_theorem.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.046,
+      "exit_code": 1,
+      "output_tail": "    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_leptogenesis_washout_axiom_boundary.py\", line 285, in main\n    part3_the_old_099_benchmark_is_not_physically_consistent_once_projection_is_closed()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_leptogenesis_washout_axiom_boundary.py\", line 232, in part3_the_old_099_benchmark_is_not_physically_consistent_once_projection_is_closed\n    audit = read(\"docs/DM_LEPTOGENESIS_EXACT_KERNEL_AUDIT_NOTE_2026-04-15.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_leptogenesis_washout_axiom_boundary.py\", line 83, in read\n    return (ROOT / rel).read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/docs/DM_LEPTOGENESIS_EXACT_KERNEL_AUDIT_NOTE_2026-04-15.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_leptogenesis_washout_axiom_boundary_note_2026-04-15",
+          "note_path": "docs/DM_LEPTOGENESIS_WASHOUT_AXIOM_BOUNDARY_NOTE_2026-04-15.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_leptogenesis_washout_axiom_boundary.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.095,
+      "exit_code": 1,
+      "output_tail": "    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_breaking_triplet_axiom_law_attempt.py\", line 313, in main\n    part5_bank_records_the_boundary_cleanly()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_breaking_triplet_axiom_law_attempt.py\", line 278, in part5_bank_records_the_boundary_cleanly\n    blocker = read(\"docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_breaking_triplet_axiom_law_attempt.py\", line 66, in read\n    return (ROOT / rel).read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15",
+          "note_path": "docs/DM_NEUTRINO_BREAKING_TRIPLET_AXIOM_LAW_ATTEMPT_NOTE_2026-04-15.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_neutrino_breaking_triplet_axiom_law_attempt.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.098,
+      "exit_code": 1,
+      "output_tail": "    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_breaking_triplet_cp_theorem.py\", line 213, in main\n    part4_bank_records_the_triplet_endpoint()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_breaking_triplet_cp_theorem.py\", line 185, in part4_bank_records_the_triplet_endpoint\n    blocker = read(\"docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_breaking_triplet_cp_theorem.py\", line 79, in read\n    return (ROOT / rel).read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_neutrino_breaking_triplet_cp_theorem_note_2026-04-15",
+          "note_path": "docs/DM_NEUTRINO_BREAKING_TRIPLET_CP_THEOREM_NOTE_2026-04-15.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_neutrino_breaking_triplet_cp_theorem.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.077,
+      "exit_code": 1,
+      "output_tail": "  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_codd_bosonic_normalization_theorem.py\", line 207, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_codd_bosonic_normalization_theorem.py\", line 198, in main\n    part3_canonical_odd_normalization_fixes_c_odd_to_unit_magnitude()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_codd_bosonic_normalization_theorem.py\", line 156, in part3_canonical_odd_normalization_fixes_c_odd_to_unit_magnitude\n    selector_note = Path(\"/Users/jonBridger/Toy Physics-neutrino-majorana/docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md\").read_text(\n        encoding=\"utf-8\"\n    )\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonBridger/Toy Physics-neutrino-majorana/docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
+          "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_neutrino_codd_bosonic_normalization_theorem.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.104,
+      "exit_code": 1,
+      "output_tail": "    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_polar_aligned_core_nogo.py\", line 245, in main\n    part4_bank_records_the_new_h_side_blocker()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_polar_aligned_core_nogo.py\", line 211, in part4_bank_records_the_new_h_side_blocker\n    blocker = read(\"docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_polar_aligned_core_nogo.py\", line 81, in read\n    return (ROOT / rel).read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_neutrino_polar_aligned_core_no_go_note_2026-04-15",
+          "note_path": "docs/DM_NEUTRINO_POLAR_ALIGNED_CORE_NO_GO_NOTE_2026-04-15.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_neutrino_polar_aligned_core_nogo.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.096,
+      "exit_code": 1,
+      "output_tail": "    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_postcanonical_polar_section.py\", line 303, in main\n    part4_bank_records_the_new_endpoint()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_postcanonical_polar_section.py\", line 268, in part4_bank_records_the_new_endpoint\n    blocker = read(\"docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_postcanonical_polar_section.py\", line 88, in read\n    return (ROOT / rel).read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_neutrino_postcanonical_polar_section_note_2026-04-15",
+          "note_path": "docs/DM_NEUTRINO_POSTCANONICAL_POLAR_SECTION_NOTE_2026-04-15.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_neutrino_postcanonical_polar_section.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.013,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_neutrino_source_surface_perturbative_uniqueness_theorem_note_2026-04-17",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_neutrino_source_surface_perturbative_uniqueness_theorem.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.006,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate_note_2026-04-18",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOWER_REPAIR_UPPER_FACE_EXTREMALS_CANDIDATE_NOTE_2026-04-18.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.088,
+      "exit_code": 1,
+      "output_tail": "    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_triplet_character_source_theorem.py\", line 188, in main\n    part3_the_branch_records_gamma_as_the_unique_character_odd_transfer_slot()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_triplet_character_source_theorem.py\", line 169, in part3_the_branch_records_gamma_as_the_unique_character_odd_transfer_slot\n    blocker = read(\"docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_triplet_character_source_theorem.py\", line 49, in read\n    return (ROOT / rel).read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_neutrino_triplet_character_source_theorem_note_2026-04-15",
+          "note_path": "docs/DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_neutrino_triplet_character_source_theorem.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.08,
+      "exit_code": 1,
+      "output_tail": "    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_triplet_even_response_theorem.py\", line 215, in main\n    part3_the_branch_records_the_even_response_form_cleanly()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_triplet_even_response_theorem.py\", line 196, in part3_the_branch_records_the_even_response_form_cleanly\n    blocker = read(\"docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_triplet_even_response_theorem.py\", line 67, in read\n    return (ROOT / rel).read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_neutrino_triplet_even_response_theorem_note_2026-04-15",
+          "note_path": "docs/DM_NEUTRINO_TRIPLET_EVEN_RESPONSE_THEOREM_NOTE_2026-04-15.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_neutrino_triplet_even_response_theorem.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.043,
+      "exit_code": 1,
+      "output_tail": "    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_triplet_normalization_target.py\", line 129, in main\n    part3_the_target_must_live_in_gamma_and_the_even_response_channels()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_triplet_normalization_target.py\", line 109, in part3_the_target_must_live_in_gamma_and_the_even_response_channels\n    blocker = read(\"docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_triplet_normalization_target.py\", line 50, in read\n    return (ROOT / rel).read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_neutrino_triplet_normalization_target_note_2026-04-15",
+          "note_path": "docs/DM_NEUTRINO_TRIPLET_NORMALIZATION_TARGET_NOTE_2026-04-15.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_neutrino_triplet_normalization_target.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.08,
+      "exit_code": 1,
+      "output_tail": "    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_veven_bosonic_normalization_theorem.py\", line 233, in main\n    part4_the_branch_surface_records_the_new_closure_point()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_veven_bosonic_normalization_theorem.py\", line 207, in part4_the_branch_surface_records_the_new_closure_point\n    blocker = read(\"docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_veven_bosonic_normalization_theorem.py\", line 59, in read\n    return (ROOT / rel).read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15",
+          "note_path": "docs/DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_neutrino_veven_bosonic_normalization_theorem.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.081,
+      "exit_code": 1,
+      "output_tail": "  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_weak_triplet_coefficient_axiom_boundary.py\", line 201, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_weak_triplet_coefficient_axiom_boundary.py\", line 190, in main\n    part2_c_odd_is_now_fixed_by_bosonic_matching()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_weak_triplet_coefficient_axiom_boundary.py\", line 96, in part2_c_odd_is_now_fixed_by_bosonic_matching\n    selector = Path(\"/Users/jonBridger/Toy Physics-neutrino-majorana/docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md\").read_text(\n        encoding=\"utf-8\"\n    )\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonBridger/Toy Physics-neutrino-majorana/docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15",
+          "note_path": "docs/DM_NEUTRINO_WEAK_TRIPLET_COEFFICIENT_AXIOM_BOUNDARY_NOTE_2026-04-15.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_neutrino_weak_triplet_coefficient_axiom_boundary.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.08,
+      "exit_code": 1,
+      "output_tail": "  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py\", line 203, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py\", line 192, in main\n    part1_current_stack_already_has_a_1_plus_2_source_bundle_and_a_1_plus_2_target_bundle()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py\", line 68, in part1_current_stack_already_has_a_1_plus_2_source_bundle_and_a_1_plus_2_target_bundle\n    selector = Path(\"/Users/jonBridger/Toy Physics-neutrino-majorana/docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md\").read_text(\n        encoding=\"utf-8\"\n    )\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonBridger/Toy Physics-neutrino-majorana/docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15",
+          "note_path": "docs/DM_NEUTRINO_WEAK_TRIPLET_TRANSFER_CLASS_THEOREM_NOTE_2026-04-15.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.016,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_pns_attack_cascade_note_2026-04-19",
+          "note_path": "docs/DM_PNS_ATTACK_CASCADE_NOTE_2026-04-19.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_pns_attack_cascade.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.011,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21",
+          "note_path": "docs/DM_SPLIT2_DENSE_GRID_LIPSCHITZ_DOMINANCE_SUPPORT_NOTE_2026-04-21.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_split2_dense_grid_lipschitz_dominance_support_2026_04_21.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.082,
+      "exit_code": 1,
+      "output_tail": "    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_strong_cp_gamma_transfer_nogo.py\", line 219, in main\n    part1_the_current_strong_cp_surface_is_weak_only_and_quark_specific()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_strong_cp_gamma_transfer_nogo.py\", line 125, in part1_the_current_strong_cp_surface_is_weak_only_and_quark_specific\n    theta_note = read_external(STRONG_CP_ROOT / \"docs/STRONG_CP_THETA_ZERO_NOTE.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_dm_strong_cp_gamma_transfer_nogo.py\", line 62, in read_external\n    return path.read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonBridger/Toy Physics/.claude/worktrees/strong-cp-nature/docs/STRONG_CP_THETA_ZERO_NOTE.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "dm_strong_cp_gamma_transfer_no_go_note_2026-04-15",
+          "note_path": "docs/DM_STRONG_CP_GAMMA_TRANSFER_NO_GO_NOTE_2026-04-15.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_strong_cp_gamma_transfer_nogo.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.018,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "dm_wilson_direct_descendant_canonical_path_derivation_no_go_note_2026-04-19",
+          "note_path": "docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_PATH_DERIVATION_NO_GO_NOTE_2026-04-19.md"
+        },
+        {
+          "claim_id": "dm_wilson_direct_descendant_canonical_path_selector_theorem_note_2026-04-19",
+          "note_path": "docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_PATH_SELECTOR_THEOREM_NOTE_2026-04-19.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_dm_wilson_direct_descendant_canonical_path_selector_theorem_2026_04_19.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.009,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "frozen_stars_rigorous_note",
+          "note_path": "docs/FROZEN_STARS_RIGOROUS_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_frozen_stars_rigorous.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.007,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "g_bare_dynamical_fixation_obstruction_note_2026-04-18",
+          "note_path": "docs/G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_g_bare_critical_feature_scan.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.031,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_g_bare_derivation.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "g_bare_derivation_note",
+          "note_path": "docs/G_BARE_DERIVATION_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_g_bare_derivation.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.027,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19",
+          "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.024,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_2026_04_19.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19",
+          "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_FIRST_HANKEL_TO_DM_BOUNDARY_NOTE_2026-04-19.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_2026_04_19.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.013,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_note_2026-04-20",
+          "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_CLOSURE_ENDPOINT_NOTE_2026-04-20.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_2026_04_20.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.012,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
+          "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_REDUCED_PACKET_COMPLEX_GIVENS_SELECTOR_THEOREM_NOTE_2026-04-20.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_2026_04_20.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.028,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_2026_04_19.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19",
+          "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_2026_04_19.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.021,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_2026_04_19.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19",
+          "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TAIL_UNDERDETERMINATION_THEOREM_NOTE_2026-04-19.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_2026_04_19.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.024,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19",
+          "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.079,
+      "exit_code": 1,
+      "output_tail": "Traceback (most recent call last):\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_gr_class_expansion_finite_rank_target.py\", line 47, in <module>\n    ).load_module()\n      ~~~~~~~~~~~^^\n  File \"<frozen importlib._bootstrap_external>\", line 680, in _check_name_wrapper\n  File \"<frozen importlib._bootstrap_external>\", line 1207, in load_module\n  File \"<frozen importlib._bootstrap_external>\", line 1031, in load_module\n  File \"<frozen importlib._bootstrap>\", line 537, in _load_module_shim\n  File \"<frozen importlib._bootstrap>\", line 966, in _load\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 1022, in exec_module\n  File \"<frozen importlib._bootstrap_external>\", line 1159, in get_code\n  File \"<frozen importlib._bootstrap_external>\", line 1217, in get_data\nFileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/physics-review-active/scripts/frontier_finite_rank_source_to_metric_theorem.py'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "gr_class_expansion_finite_rank_target_note",
+          "note_path": "docs/GR_CLASS_EXPANSION_FINITE_RANK_TARGET_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_gr_class_expansion_finite_rank_target.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "runner exited 1"
+      },
+      "elapsed_sec": 0.037,
+      "exit_code": 1,
+      "output_tail": "  m=0.001: ratio_num=1.154700478981, ratio_exact=1.154700478981, rel=0.00e+00\n  m=0.01: ratio_num=1.154694598791, ratio_exact=1.154694598791, rel=1.92e-16\n  m=0.1: ratio_num=1.154108839371, ratio_exact=1.154108839371, rel=1.92e-16\n  [PASS] cond(Lt->inf) / cond(Lt=2) = sqrt((m^2+4u0^2)/(m^2+3u0^2))\n         max relative error using Lt=80 = 1.92e-16\n\n==============================================================================\nPART 4: DIMENSION-4 ENDPOINT CORRECTION\n==============================================================================\nTraceback (most recent call last):\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_hierarchy_effective_potential_endpoint.py\", line 224, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_hierarchy_effective_potential_endpoint.py\", line 216, in main\n    test_dimension4_endpoint_factor()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_hierarchy_effective_potential_endpoint.py\", line 185, in test_dimension4_endpoint_factor\n    alpha_bare = CANONICAL_ALPHA_BARE\n                 ^^^^^^^^^^^^^^^^^^^^\nNameError: name 'CANONICAL_ALPHA_BARE' is not defined",
+      "reason": "nonzero_exit",
+      "rows": [
+        {
+          "claim_id": "hierarchy_effective_potential_endpoint_note",
+          "note_path": "docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_hierarchy_effective_potential_endpoint.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.011,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "higgs_from_lattice_note",
+          "note_path": "docs/HIGGS_FROM_LATTICE_NOTE.md"
+        },
+        {
+          "claim_id": "higgs_mechanism_note",
+          "note_path": "docs/HIGGS_MECHANISM_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_higgs_mass_derived.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.029,
+      "exit_code": 2,
+      "output_tail": "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_lorentz_derived.py': [Errno 2] No such file or directory",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "lorentz_violation_derived_note",
+          "note_path": "docs/LORENTZ_VIOLATION_DERIVED_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_lorentz_derived.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.023,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "lorentz_kernel_positive_closure_note",
+          "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_lorentz_kernel_positive_closure.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.008,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "plaquette_self_consistency_note",
+          "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_plaquette_self_consistency.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.097,
+      "exit_code": 1,
+      "output_tail": "    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py\", line 283, in main\n    part4_current_bank_records_the_post_selector_endpoint()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py\", line 246, in part4_current_bank_records_the_post_selector_endpoint\n    last_mile = read(\"docs/NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py\", line 42, in read\n    return (ROOT / rel).read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/docs/NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "pmns_branch_conditioned_quadratic_sheet_closure_note",
+          "note_path": "docs/PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.078,
+      "exit_code": 1,
+      "output_tail": "    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_pmns_intrinsic_completion_boundary.py\", line 187, in main\n    part2_current_bank_still_does_not_make_the_completion_intrinsic()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_pmns_intrinsic_completion_boundary.py\", line 109, in part2_current_bank_still_does_not_make_the_completion_intrinsic\n    sheet = read(\"docs/PMNS_BRANCH_SHEET_NONFORCING_NOTE.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_pmns_intrinsic_completion_boundary.py\", line 37, in read\n    return (ROOT / rel).read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/docs/PMNS_BRANCH_SHEET_NONFORCING_NOTE.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "pmns_intrinsic_completion_boundary_note",
+          "note_path": "docs/PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_pmns_intrinsic_completion_boundary.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.033,
+      "exit_code": 1,
+      "output_tail": "  missing PMNS branch selector?\nTraceback (most recent call last):\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_pmns_selector_bank_nonrealization.py\", line 132, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_pmns_selector_bank_nonrealization.py\", line 72, in main\n    higgs_qh = read(\"docs/NEUTRINO_HIGGS_Z3_UNDERDETERMINATION_NOTE.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_pmns_selector_bank_nonrealization.py\", line 50, in read\n    return (ROOT / rel).read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/docs/NEUTRINO_HIGGS_Z3_UNDERDETERMINATION_NOTE.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "pmns_selector_bank_nonrealization_note",
+          "note_path": "docs/PMNS_SELECTOR_BANK_NONREALIZATION_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_pmns_selector_bank_nonrealization.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "python could not open runner path"
+      },
+      "elapsed_sec": 0.085,
+      "exit_code": 1,
+      "output_tail": "    sys.exit(main())\n             ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_pmns_selector_sign_to_branch_reduction.py\", line 122, in main\n    part2_after_sign_selection_only_the_branch_conditioned_coefficients_remain()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_pmns_selector_sign_to_branch_reduction.py\", line 65, in part2_after_sign_selection_only_the_branch_conditioned_coefficients_remain\n    last_mile = read(\"docs/NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md\")\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_pmns_selector_sign_to_branch_reduction.py\", line 35, in read\n    return (ROOT / rel).read_text(encoding=\"utf-8\")\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/docs/NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md'",
+      "reason": "missing_runner_file",
+      "rows": [
+        {
+          "claim_id": "pmns_selector_sign_to_branch_reduction_note",
+          "note_path": "docs/PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_pmns_selector_sign_to_branch_reduction.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.012,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "quark_e_channel_endpoint_quotient_law_note_2026-04-19",
+          "note_path": "docs/QUARK_E_CHANNEL_ENDPOINT_QUOTIENT_LAW_NOTE_2026-04-19.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_quark_e_channel_endpoint_quotient_law.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.02,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "quark_endpoint_ratio_chain_law_note_2026-04-19",
+          "note_path": "docs/QUARK_ENDPOINT_RATIO_CHAIN_LAW_NOTE_2026-04-19.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_quark_endpoint_ratio_chain_law.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.02,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "quark_route2_exact_time_coupling_note_2026-04-19",
+          "note_path": "docs/QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_quark_route2_exact_time_coupling.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.016,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "quark_up_amplitude_native_affine_no_go_note_2026-04-19",
+          "note_path": "docs/QUARK_UP_AMPLITUDE_NATIVE_AFFINE_NO_GO_NOTE_2026-04-19.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_quark_up_amplitude_native_affine_no_go.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exited 1"
+      },
+      "elapsed_sec": 33.047,
+      "exit_code": 1,
+      "output_tail": "    -> attractive=True, beta=1.280, monotonic=True\n  Biharmonic (nabla^4 phi = rho):  converged=True\n    -> attractive=False, beta=0.874\n  Local (phi = G*rho):             converged=True\n    -> attractive=False, beta=8.637\n  Random kernel:                   converged=True\n    -> attractive=False, beta=4.186\n\nPropagator susceptibility vs Poisson Green's function:\n  3D correlation: 0.9303\n  -> STRONG match: propagator's own structure demands Poisson\n\nTraceback (most recent call last):\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_self_consistent_field_equation.py\", line 960, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/jonreilly/.codex/worktrees/169e/CL3Z3 new work/scripts/frontier_self_consistent_field_equation.py\", line 903, in main\n    sweep['attractive'] for sweep in screened_sweep_results.values()\n                                     ^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'screened_sweep_results' is not defined",
+      "reason": "nonzero_exit",
+      "rows": [
+        {
+          "claim_id": "self_consistency_forces_poisson_note",
+          "note_path": "docs/SELF_CONSISTENCY_FORCES_POISSON_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_self_consistent_field_equation.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "runner exited 1"
+      },
+      "elapsed_sec": 12.562,
+      "exit_code": 1,
+      "output_tail": "Minimal rank-two tensor block closure test\n==============================================================================\nexact local O_h:\n  scalar_action=-9.649741e-02, base_eta=[0.000e+00, 3.449e-04], eta_coeff=3.573797e-03\n  K_tensor=[[4.442009e-03, 5.020745e-04], [5.020745e-04, 3.666789e-02]]\n  a_star=[-1.064685e-03, 9.419596e-03]\n  mixed additivity error=[dG_0i=3.059e-08, dG_TF=8.023e-18]\nfinite-rank:\n  scalar_action=-1.373264e+00, base_eta=[0.000e+00, 4.555e-03], eta_coeff=3.317194e-03\n  K_tensor=[[4.049376e-03, 1.232683e-04], [1.232683e-04, 4.973095e-02]]\n  a_star=[-2.788652e-03, 9.160748e-02]\n  mixed additivity error=[dG_0i=6.850e-08, dG_TF=6.191e-11]\n\nCross-family comparison:\n  kernel relative difference = 2.621449e-01\n  eta_coeff relative difference = 7.180115e-02\n  a_star relative difference = 8.969562e-01\n\nVerdict:\nThe rank-two block is locally sufficient on each family, but not universal across the audited restricted class. The tensor source-map and kernel remain family-sensitive, so the minimal completion does not yet close the branch as a single universal theorem.",
+      "reason": "nonzero_exit",
+      "rows": [
+        {
+          "claim_id": "tensor_block_closure_test_note",
+          "note_path": "docs/TENSOR_BLOCK_CLOSURE_TEST_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_tensor_block_closure_test.py",
+      "timed_out": false
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.012,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "tensor_support_center_excess_law_note",
+          "note_path": "docs/TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_tensor_support_center_excess_law.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.011,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "wilson_mu2_distance_sweep_note_2026-04-11",
+          "note_path": "docs/WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_wilson_mu2_distance_sweep.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.007,
+      "exit_code": null,
+      "output_tail": "\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "yt_bridge_uv_class_uniqueness_note",
+          "note_path": "docs/YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_yt_bridge_uv_class_uniqueness.py",
+      "timed_out": true
+    },
+    {
+      "details": {
+        "detail": "runner exceeded 60s timeout"
+      },
+      "elapsed_sec": 60.012,
+      "exit_code": null,
+      "output_tail": "  The g_2 coefficient in beta_yt is 9/4 = 2.25, which is\n  3.5x smaller than the QCD coefficient 8. Even this wide\n  [0.4, 0.9] scan shifts y_t(v) by only ~7.4%.\n\n  [PASS] g_2(v) insensitivity: scan [0.4, 0.9] < 10%\n         max deviation = 7.3695% over [0.4, 0.9]\n------------------------------------------------------------\n  3c: lambda(v) SCAN over [0.05, 0.30]\n------------------------------------------------------------\n\n  lambda(v) physical = 0.1290\n\n   lambda(v)      y_t(v)   m_t [GeV]    Delta%\n  ----------  ----------  ----------  --------\n      0.0500    0.972425      169.35   -0.0254%\n      0.1000    0.972580      169.37   -0.0095%\n      0.1500    0.972739      169.40   +0.0069%\n      0.2000    0.972881      169.43   +0.0215%\n\n[TIMEOUT after 60s]",
+      "reason": "timeout",
+      "rows": [
+        {
+          "claim_id": "yt_qfp_insensitivity_support_note",
+          "note_path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md"
+        }
+      ],
+      "runner_path": "scripts/frontier_yt_qfp_insensitivity.py",
+      "timed_out": true
+    }
+  ],
+  "generated_by": "audit infra cleanup runner triage",
+  "rows_with_runner": 747,
+  "runner_timeout_sec": 60,
+  "schema_version": 1,
+  "summary": {
+    "broken": 94,
+    "healthy": 63,
+    "science_failure": 570
+  },
+  "unique_runners_checked": 727
+}

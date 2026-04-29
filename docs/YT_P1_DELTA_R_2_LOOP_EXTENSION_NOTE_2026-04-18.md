@@ -78,11 +78,11 @@ the 1-loop piece under the retained envelope ratio.
 ### Directly inherited retained sub-theorems
 
 - **1-loop master assembly (central):**
-  `docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md` —
+  [`docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`](YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md) —
   `Δ_R^{1-loop} = (α_LM/(4π)) · [C_F Δ_1 + C_A Δ_2 + T_F n_f Δ_3] = −3.27 %`
   at central `(Δ_1, Δ_2, Δ_3) = (+2, −10/3, +0.933)`.
 - **Loop-geometric bound (envelope):**
-  `docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md) —
   retained framework-native ratio `r_R = (α_LM/π) · b_0 = 0.22126` at
   `SU(3)`, `n_l = 5`, enveloping the three indicative 2-loop/1-loop
   ratios `(r_CF, r_CA, r_lp) = (0.0770, 0.1732, 0.1443)` with margin
@@ -91,11 +91,11 @@ the 1-loop piece under the retained envelope ratio.
 ### Structural template (P3 side, analogous role)
 
 - **`K_2` 4-tensor color skeleton:**
-  `docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  [`docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
   (referenced structurally; this note mirrors its role at 2-loop for
   the ratio correction rather than the mass conversion).
 - **`K_3` 10-tensor color skeleton:**
-  `docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  [`docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
   — the 10-tensor enumeration with the
   `{n_l⁰, n_l¹, n_l²} × {heavy, light}` structure that informs the
   analogous 2-loop enumeration here.
@@ -103,23 +103,23 @@ the 1-loop piece under the retained envelope ratio.
 ### 1-loop foundations (inherited via the master assembly)
 
 - **Three-channel structural decomposition:**
-  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`.
+  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md).
 - **Δ_i BZ-computation sub-theorems:**
-  `docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`,
-  `docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`,
-  `docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`.
+  [`docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md),
+  [`docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md),
+  [`docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md).
 - **Canonical-surface anchors:**
-  `docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md` —
+  [`docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](PLAQUETTE_SELF_CONSISTENCY_NOTE.md) —
   `α_LM = 0.09067`, `α_LM/(4π) = 0.00721`, `(α_LM/(4π))² = 5.20×10⁻⁵`.
 
 ### Context
 
 - **Master obstruction (unchanged):**
-  `docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
+  [`docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)
   (P1 primitive budget line; this note refines the 2-loop line
   within the existing P1 budget).
 - **Ward identity (tree level):**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` —
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) —
   `y_t_bare² = g_bare²/6` at tree level.
 
 ---
