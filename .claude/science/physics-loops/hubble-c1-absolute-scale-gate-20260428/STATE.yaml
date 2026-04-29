@@ -13,13 +13,13 @@ base: origin/main
 base_commit_at_start: "394bf242 (origin/main)"
 lock_status: unavailable
 lock_note: "scripts/automation_lock.py hardcodes /Users/jonreilly paths; this worktree is on /Users/jonBridger. Skipping per skill optionality."
-current_phase: cycle-5-complete-A5-audit
-cycles_completed: 5
-audit_grade_cycles_in_a_row: 1
+current_phase: cycle-6-complete-stuck-fanout
+cycles_completed: 6
+audit_grade_cycles_in_a_row: 2
 last_stretch_attempt_cycle: 4
-last_stuck_fanout_cycle: null
+last_stuck_fanout_cycle: 6
 active_route: null
-active_hard_residual: "(G1) edge-statistics on P_A H_cell — minimal carrier axiom identified as irreducible Cl_4(C) module axiom (Cycle 5 audit). Cycle 6 = stuck fan-out across orthogonal premises beyond A1-A6 per Deep Work Rules."
+active_hard_residual: "(G1) edge-statistics on P_A H_cell — Cl_4(C) carrier axiom identified as minimal class. Stuck fan-out exhausted (alpha/beta/gamma/delta/epsilon all non-Cl_4(C)-forcing). Loop ready for honest stop and PR packaging."
 files_touched:
   - .claude/science/physics-loops/hubble-c1-absolute-scale-gate-20260428/STATE.yaml
   - .claude/science/physics-loops/hubble-c1-absolute-scale-gate-20260428/GOAL.md
@@ -44,6 +44,9 @@ files_touched:
   - docs/HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md
   - scripts/frontier_hubble_c1_a5_minimal_carrier_axiom_audit.py
   - outputs/frontier_hubble_c1_a5_minimal_carrier_axiom_audit_2026-04-28.txt
+  - docs/HUBBLE_LANE5_C1_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md
+  - scripts/frontier_hubble_c1_stuck_fanout_synthesis.py
+  - outputs/frontier_hubble_c1_stuck_fanout_synthesis_2026-04-28.txt
 open_imports:
   - "(G1) native edge-statistics principle on P_A H_cell — open after A1 falsification; A4 parity-gate route is primary direct-derivation candidate; A5 fallback indicated"
   - "(G2) action-unit metrology — coupled to (G1) via Gauss-flux source-unit identification; closes conditionally if (G1) closes via A4 or A5"
@@ -62,6 +65,7 @@ review_findings:
   - "Cycle 3 review (branch-local 6-criterion self-review pending). Cycle 3 stretch attempt produced theorem-grade no-go on A2; runner verifies 16/16 PASS; (S, kappa) rescaling invariance preserved by axiom 4 alone; only on-package route to break (S, kappa) is Gauss-flux source-unit identification conditional on (G1). Cycle-2 A1 no-go propagates to A2. Counts as stretch attempt; last_stretch_attempt_cycle = 3."
   - "Cycle 4 review (branch-local 6-criterion self-review pending). Cycle 4 stretch attempt produced theorem-grade no-go on A4; runner verifies 19/19 PASS; parity-gate carrier theorem assumes CAR as Assumption 1; bare parity Z_2 structure 2+2 signature preserved by CAR, two-qubit spin, ququart. Counts as stretch attempt; last_stretch_attempt_cycle = 4. Three consecutive stretch-attempt no-gos."
   - "Cycle 5 review (branch-local 6-criterion self-review pending). Cycle 5 audit identifies minimal carrier-axiom class as irreducible Cl_4(C) module axiom on P_A H_cell; four candidates collapse modulo strict weakness of Cl_2 pair; runner verifies 21/21 PASS. Audit-grade. Honest closure status: (i) extend A_min by Cl_4(C) carrier axiom OR (ii) accept (C1) as open. audit_grade_cycles_in_a_row = 1."
+  - "Cycle 6 review (branch-local 6-criterion self-review pending). Cycle 6 stuck fan-out generates 5 orthogonal premises (alpha graph-theoretic S_4, beta topological/cobordism, gamma information-theoretic Holevo, delta Stinespring, epsilon Reeh-Schlieder); runner verifies 17/17 PASS. None forces Cl_4(C) on P_A H_cell. Confirms A5 audit conclusion. Audit-grade; audit_grade_cycles_in_a_row = 2 (at threshold). Loop ready for honest stop."
 artifacts_landed:
   - "docs/HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md (Cycle 1 audit)"
   - "docs/HUBBLE_LANE5_C1_A1_GRASSMANN_NO_GO_NOTE_2026-04-28.md (Cycle 2 stretch-attempt no-go)"
@@ -76,11 +80,15 @@ artifacts_landed:
   - "docs/HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md (Cycle 5 audit)"
   - "scripts/frontier_hubble_c1_a5_minimal_carrier_axiom_audit.py (Cycle 5 runner; PASS=21 FAIL=0)"
   - "outputs/frontier_hubble_c1_a5_minimal_carrier_axiom_audit_2026-04-28.txt"
+  - "docs/HUBBLE_LANE5_C1_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md (Cycle 6 stuck-fan-out synthesis)"
+  - "scripts/frontier_hubble_c1_stuck_fanout_synthesis.py (Cycle 6 runner; PASS=17 FAIL=0)"
+  - "outputs/frontier_hubble_c1_stuck_fanout_synthesis_2026-04-28.txt"
 claim_state_movement:
   - "Cycle 1: residual-premise attack audit landed; six attack frames A1-A6 enumerated."
   - "Cycle 2: A1 attack frame falsified; bulk axiom-3 Cl_4(C) action does not preserve P_A as a Clifford submodule."
   - "Cycle 3: A2 attack frame falsified; (S, kappa) rescaling not broken by axiom 4 alone; (G1) and (G2) coupled via Gauss-flux source-unit identification. A1+A2 joint pathway (= old A3 plan) fully retired."
   - "Cycle 4: A4 attack frame falsified; parity-gate carrier theorem assumes CAR as input (Assumption 1) hence cannot derive (G1); bare parity Z_2 structure underdetermines CAR vs. non-CAR (CAR, two-qubit spin, ququart all preserve 2+2 parity grading). All three direct-derivation candidates A1, A2, A4 now closed negatively. A5 (minimal-carrier-axiom audit) is the last remaining live frame."
-  - "Cycle 5: A5 audit lands; minimal carrier-axiom class identified as irreducible Cl_4(C) module axiom on P_A H_cell. Four candidates (a) Cl_4(C), (b) two-orbital CAR Fock, (c) Cl_2 Hermitian pair, (d) Cl_3 triple+parity all collapse to (a) modulo strict weakness of (c). Honest closure status: option (i) extend A_min by Cl_4(C) carrier axiom (statable without observed values/fitted parameters; not duplicating A_min; structurally distinct from no-go-closed selectors), or option (ii) accept (C1) open in current A_min posture."
-next_exact_action: "Cycle 6 = STUCK FAN-OUT per Deep Work Rules. Generate 3-5 orthogonal premises beyond audit's A1-A6 frames. Candidate orthogonal premises: (alpha) graph-theoretic uniqueness of P_A H_cell as irreducible block; (beta) topological/cobordism argument via spin structure; (gamma) information-theoretic Holevo / smooth-min-entropy boundary; (delta) operator-algebraic Stinespring dilation; (epsilon) Reeh-Schlieder / cyclicity of boundary state. Synthesize agreements/contradictions. Output: stuck-fan-out synthesis note (audit-grade)."
+  - "Cycle 5: A5 audit lands; minimal carrier-axiom class identified as irreducible Cl_4(C) module axiom on P_A H_cell. Four candidates (a) Cl_4(C), (b) two-orbital CAR Fock, (c) Cl_2 Hermitian pair, (d) Cl_3 triple+parity all collapse to (a) modulo strict weakness of (c)."
+  - "Cycle 6: stuck fan-out across 5 orthogonal premises (alpha/beta/gamma/delta/epsilon) confirms A5 conclusion; none forces Cl_4(C) on P_A H_cell. Loop's hard residual is now sharp: (G1) requires either explicit Cl_4(C) carrier axiom on P_A H_cell or acceptance as open. Audit-quota satisfied (≥1 stretch); stuck-fan-out satisfied (5 orthogonal premises). Honest stop appropriate."
+next_exact_action: "Cycle 7 (final) = honest-stop closeout. Package the loop's six science blocks (Cycle 1 audit + Cycles 2-4 no-gos + Cycle 5 audit + Cycle 6 fan-out) for review PRs. Run review-loop pressure on each artifact. Update HANDOFF.md with final claim-state report. Open one review PR per coherent science block via stacked branches OR a single bundled PR per loop convention."
 stop_condition: "runtime budget reached, max cycles, blocker requiring human science judgment, honest claim-state closure achieved, OR no route passes dramatic-step gate after Deep Work Rules satisfied"

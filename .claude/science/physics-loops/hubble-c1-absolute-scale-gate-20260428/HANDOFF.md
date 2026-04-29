@@ -16,6 +16,7 @@ audit is the last remaining live attack frame.
 | 3 | Stretch | `A2` `g_bare=1` ⇒ action-unit — **no-go** |
 | 4 | Stretch | `A4` parity-gate ⇒ CAR — **no-go** |
 | 5 | Audit | `A5` minimal-carrier-axiom — Cl_4(C) class identified |
+| 6 | Fan-out | 5 orthogonal premises (α/β/γ/δ/ε) — none force Cl_4(C) |
 
 ## Cycle 5 result (2026-04-29)
 
