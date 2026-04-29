@@ -17,15 +17,17 @@ Remaining critical rows at the top of the queue are first clean audits awaiting
 required second-auditor cross-confirmation; this auditor did not self-confirm
 those rows.
 
+Resume stop condition reached: 50 total audits applied in this session.
+
 ## Counts
 
-- Total claims audited: 42
+- Total claims audited: 50
 - First clean audits recorded, awaiting cross-confirmation: 14
-- Audited conditional: 15
+- Audited conditional: 21
 - Audited renaming: 6
 - Audited decoration: 0
 - Audited failed: 0
-- Audited numerical match: 7
+- Audited numerical match: 9
 
 ## Claims Audited
 
@@ -73,6 +75,14 @@ those rows.
 | `universal_qg_optional_textbook_comparison_note` | `audited_renaming` | E |
 | `dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16` | `audited_conditional` | B |
 | `dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16` | `audited_conditional` | B |
+| `dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16` | `audited_conditional` | B |
+| `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | `audited_conditional` | A |
+| `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | `audited_conditional` | B |
+| `work_history.ckm.ckm_mass_basis_nni_note` | `audited_numerical_match` | G |
+| `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | `audited_conditional` | B |
+| `neutrino_dirac_z3_support_trichotomy_note` | `audited_conditional` | A |
+| `tensor_support_center_excess_law_note` | `audited_numerical_match` | G |
+| `quark_route2_exact_readout_map_note_2026-04-19` | `audited_conditional` | B |
 
 ## Structural Patterns
 
@@ -106,6 +116,17 @@ those rows.
   a closed theorem audit.
 - `gravity_sign_audit_2026-04-10` points to a missing primary runner path and
   cites external coupling authorities not supplied in the restricted context.
+- The later source-surface and DM/PMNS reduction rows repeat the same pattern:
+  strong local reductions over imported runners, while the actual
+  source-response laws or upstream surfaces are not declared as audit
+  dependencies.
+- `neutrino_dirac_z3_support_trichotomy_note` is exact modulo-3 algebra once
+  the charges and single-Higgs condition are supplied, but those premises are
+  not registered as clean one-hop inputs.
+- The tensor/quark Route-2 rows narrow the remaining maps substantially, but
+  their load-bearing results are bounded affine/readout compatibility or
+  obstruction statements over imported endpoint data, not closed readout
+  theorems.
 
 ## Awaiting Cross-Confirmation
 
