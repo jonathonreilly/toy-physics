@@ -121,8 +121,8 @@ This note does **not** claim:
 ## Why it matters on `main`
 
 The BH entropy lane is currently carried as a **bounded companion** in
-[PUBLICATION_MATRIX.md](./publication/ci3_z3/PUBLICATION_MATRIX.md) and
-[CLAIMS_TABLE.md](./publication/ci3_z3/CLAIMS_TABLE.md) on the basis of an
+`PUBLICATION_MATRIX.md` and
+`CLAIMS_TABLE.md` on the basis of an
 observed numerical RT ratio `~0.24` on lattices up to `L = 32`, explained as
 "expected regulator dependence". This note closes the question properly: the
 actual asymptotic value *is* regulator-determined, and it is `c_Widom = 1/6`

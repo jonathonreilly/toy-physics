@@ -5,7 +5,7 @@
 **Primary runner:** `scripts/frontier_quark_projector_ray_phase_completion.py`
 
 Sharper parameter audit:
-[QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md](./QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md).
+`QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`.
 That newer note shows the current projector/tensor surface already supports
 the exact projector ray, an exact-support down amplitude `1/sqrt(42)`, and a
 small support-angle probe `-1/42 rad`, leaving only one up-sector scalar

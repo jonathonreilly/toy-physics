@@ -1,44 +1,44 @@
 {
-  "computed_at": "2026-04-29T11:05:59.093611+00:00",
+  "computed_at": "2026-04-29T11:40:12.670141+00:00",
   "cycle_examples": [
     [
-      "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
-      "ai_methodology.canonical_framing_paragraph_2026-04-25"
+      "ckm_neutron_edm_bound_note",
+      "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24"
     ],
     [
-      "yt_ew_color_projection_theorem",
-      "rconn_derived_note"
+      "down_type_mass_ratio_ckm_dual_note",
+      "quark_mass_ratios_taste_staircase_support_note_2026-04-25",
+      "ckm_five_sixths_bridge_support_note"
     ],
     [
-      "rconn_derived_note",
-      "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+      "down_type_mass_ratio_ckm_dual_note",
+      "quark_mass_ratios_taste_staircase_support_note_2026-04-25"
     ],
     [
-      "yt_ew_color_projection_theorem",
-      "rconn_derived_note",
-      "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+      "down_type_mass_ratio_ckm_dual_note",
+      "quark_mass_ratios_taste_staircase_support_note_2026-04-25",
+      "up_type_mass_ratio_ckm_inversion_note"
     ],
     [
-      "ckm_atlas_axiom_closure_note",
-      "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
+      "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
+      "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
     ]
   ],
-  "cycles_detected": 288,
+  "cycles_detected": 132,
   "effective_status_counts": {
-    "audited_conditional": 354,
+    "audited_conditional": 375,
     "audited_decoration": 3,
-    "audited_failed": 129,
+    "audited_failed": 102,
     "audited_numerical_match": 4,
     "audited_renaming": 3,
-    "bounded": 232,
+    "bounded": 234,
     "open": 28,
-    "proposed_promoted": 1,
-    "proposed_retained": 9,
+    "proposed_retained": 10,
     "retained": 78,
-    "support": 123,
-    "unknown": 698
+    "support": 129,
+    "unknown": 696
   },
-  "proposed_demoted_by_upstream_count": 140,
+  "proposed_demoted_by_upstream_count": 139,
   "proposed_demoted_by_upstream_examples": [
     "alpha_s_derived_note",
     "atomic_hydrogen_helium_probe_note",

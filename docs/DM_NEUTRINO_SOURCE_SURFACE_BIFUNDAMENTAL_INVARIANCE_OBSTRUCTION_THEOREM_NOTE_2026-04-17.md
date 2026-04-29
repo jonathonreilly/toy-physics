@@ -452,7 +452,7 @@ via another retained route (not Frobenius-bifundamental-gauge).
 Appropriate placement:
 
 - atlas obstruction row in
- [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md) under
+ `DERIVATION_ATLAS.md` under
  the DM neutrino source-surface family, sibling to the info-geometric / Z_3-cubic / parity-split obstructions, the
  parity-mixing note, the observable-bank exhaustion theorem, and the quartic-isotropy+U(2) obstruction
 - **do NOT** use for any publication-grade positive quantitative claim

@@ -312,7 +312,7 @@ The runner uses the Python standard library plus the canonical
   -- retained `rho`, `eta` apex identities.
 - [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md)
   -- retained `lambda^2 = alpha_s(v)/2`.
-- [`CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md`](CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md)
+- `CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md`
   -- companion B_s mixing-phase derivation, similar Wolfenstein-NLO route.
 - [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)
   -- canonical `alpha_s(v)` derivation.

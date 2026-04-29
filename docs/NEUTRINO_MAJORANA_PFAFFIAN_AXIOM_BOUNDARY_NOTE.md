@@ -88,7 +88,7 @@ Current answer: no.
 That boundary statement can now be strengthened to the exact current-stack
 no-forcing theorem:
 
-- [NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md](./NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md)
+- `NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md`
 - `scripts/frontier_neutrino_majorana_pfaffian_no_forcing_theorem.py`
 
 The stronger result there is not just that the Pfaffian sector is "not yet

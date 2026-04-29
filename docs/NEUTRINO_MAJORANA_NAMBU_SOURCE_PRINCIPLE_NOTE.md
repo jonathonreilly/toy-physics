@@ -182,7 +182,7 @@ This note does **not** yet prove:
 - full zero-import `eta`
 
 The later
-[NEUTRINO_MAJORANA_SOURCE_RAY_THEOREM_NOTE.md](./NEUTRINO_MAJORANA_SOURCE_RAY_THEOREM_NOTE.md)
+`NEUTRINO_MAJORANA_SOURCE_RAY_THEOREM_NOTE.md`
 sharpens one part of this further: the genuinely new one-generation source
 increment is not an arbitrary direction on the admitted local family. Up to
 rephasing it is the pure-pairing ray `mu J_x`.

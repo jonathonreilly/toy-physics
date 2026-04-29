@@ -61,7 +61,7 @@ This note classifies which quadratic same-chirality operator is allowed.
 It does **not** by itself show that the current native microscopic surface
 generates that operator with nonzero coefficient. The exact companion
 
-- [NEUTRINO_MAJORANA_NATIVE_GAUSSIAN_NO_GO_NOTE.md](./NEUTRINO_MAJORANA_NATIVE_GAUSSIAN_NO_GO_NOTE.md)
+- `NEUTRINO_MAJORANA_NATIVE_GAUSSIAN_NO_GO_NOTE.md`
 - `scripts/frontier_neutrino_majorana_native_gaussian_nogo.py`
 
 shows that on the current quadratic determinant surface the coefficient is
@@ -71,14 +71,14 @@ Gaussian toolbox.
 
 That boundary is now sharper than before. The stronger companion
 
-- [NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md](./NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md)
+- `NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md`
 - `scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py`
 
 shows that even arbitrary finite number-preserving interactions inside the
 retained normal grammar still leave the Majorana coefficient exactly zero.
 
 That constructed next-step object now lives at
-[NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md](./NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md)
+`NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md`
 with runner `scripts/frontier_neutrino_majorana_pfaffian_extension.py`.
 
 ## What is exact here

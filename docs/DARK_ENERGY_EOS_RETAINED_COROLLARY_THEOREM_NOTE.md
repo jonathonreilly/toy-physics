@@ -135,7 +135,7 @@ following are **not** upgraded by this note:
 
 The EOS value `w` and the numerical `Lambda` value already sit in **distinct
 rows** of
-[`PUBLICATION_MATRIX.md`](publication/ci3_z3/PUBLICATION_MATRIX.md). This note
+`PUBLICATION_MATRIX.md`. This note
 asks only for the `Dark energy EOS w` row to move. The `Cosmological constant
 Lambda` row is unchanged and stays `bounded` as recorded in
 [`COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md`](COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md).
@@ -222,8 +222,8 @@ observational sensitivity.
 ## Proposed Publication Matrix Row Upgrade
 
 This note is now wired into
-[`PUBLICATION_MATRIX.md`](publication/ci3_z3/PUBLICATION_MATRIX.md) and
-[`CLAIMS_TABLE.md`](publication/ci3_z3/CLAIMS_TABLE.md). The current
+`PUBLICATION_MATRIX.md` and
+`CLAIMS_TABLE.md`. The current
 `Dark energy EOS w` row of the quantitative component stack is:
 
 | Quantity / lane | Workstream | Framework result | Observation / comparator | Claim-strength status | Import class | Current publication decision | Authority / best source | Frozen-out ref |

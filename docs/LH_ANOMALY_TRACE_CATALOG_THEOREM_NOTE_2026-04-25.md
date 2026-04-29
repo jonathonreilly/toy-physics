@@ -6,10 +6,10 @@
 left-handed matter surface. Catalogues, names, and regression-tests the
 five specific anomaly-trace identities on the retained left-handed
 content `Q_L + L_L` already used in the body of
-[`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md).
+`ANOMALY_FORCES_TIME_THEOREM.md`.
 The numerical values are the explicit inputs to the right-handed
 hypercharge solve packaged by
-[`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md).
+`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`.
 
 **Primary runner:** `scripts/frontier_lh_anomaly_trace_catalog.py`
 
@@ -52,7 +52,7 @@ specific rational fingerprints already used in adjacent retained theorems.
 | Retained `N_c = 3` color count | [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) |
 | Retained `SU(2)_L` weak-doublet structure | [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md) |
 | Standard ABJ anomaly-trace formulae | textbook |
-| Retained anomaly-cancellation usage | [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md) |
+| Retained anomaly-cancellation usage | `ANOMALY_FORCES_TIME_THEOREM.md` |
 
 No observed mass, charge, or cross-section enters the catalog.
 
@@ -121,7 +121,7 @@ this catalog only records the LH-only contribution `4`.
 ## Role In The Anomaly System
 
 The right-handed solve packaged in
-[`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md)
+`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
 sets the (LH + RH) traces (C1)-(C4) to zero and solves for the four RH
 hypercharges. The catalog values
 
@@ -153,7 +153,7 @@ This note claims:
   traces on the retained LH content;
 - the integer Witten doublet count (C5) on the retained LH content;
 - consistency with the LH-only entries in the anomaly table of
-  [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md).
+  `ANOMALY_FORCES_TIME_THEOREM.md`.
 
 This note does not claim:
 
@@ -182,15 +182,15 @@ exact `fractions.Fraction` arithmetic.
 
 ## Cross-References
 
-- [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md)
+- `ANOMALY_FORCES_TIME_THEOREM.md`
   - parent theorem citing these LH trace values inline.
-- [`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md)
+- `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
   - companion solving the RH hypercharges using these LH inputs.
 - [`SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`](SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md)
   - companion verifying the Witten cancellation across the full content.
 - [`SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`](SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md)
   - companion handling the cubic SU(3) gauge anomaly.
-- [`BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md`](BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md)
+- `BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md`
   - companion handling the B-L gauge-extension anomaly closure.
 - [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md)
   - retained left-handed content authority.

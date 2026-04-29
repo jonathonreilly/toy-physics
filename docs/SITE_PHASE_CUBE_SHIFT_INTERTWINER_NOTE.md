@@ -40,7 +40,7 @@ intertwined on this restricted support.
 
 This is the full `C^8` companion to the retained `hw=1` observable algebra
 already used in
-[THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](./THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md).
+`THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`.
 It is the canonical route for lifting full taste-cube statements back to
 lattice BZ-corner statements without inventing a second authority surface.
 

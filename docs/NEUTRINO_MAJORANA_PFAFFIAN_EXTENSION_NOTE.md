@@ -92,12 +92,12 @@ retained grammar, but a genuine change of microscopic symmetry class.
 
 That reduction target is now separated explicitly in:
 
-- [NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md](./NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md)
+- `NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md`
 - `scripts/frontier_neutrino_majorana_charge_two_primitive_reduction.py`
 
 The new local-bilinear companion
 
-- [NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md](./NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md)
+- `NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md`
 - `scripts/frontier_neutrino_majorana_local_pfaffian_uniqueness.py`
 
 sharpens that statement:
@@ -114,7 +114,7 @@ So the Pfaffian construction should now be read as:
 
 The exact local-form companion is now:
 
-- [NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md](./NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md)
+- `NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md`
 - `scripts/frontier_neutrino_majorana_unique_source_slot.py`
 
 That note says the local source completion, if admitted at bilinear level,
@@ -123,7 +123,7 @@ Gaussian realization of that same slot.
 
 The one-generation phase-removal companion is now:
 
-- [NEUTRINO_MAJORANA_PHASE_REMOVAL_NOTE.md](./NEUTRINO_MAJORANA_PHASE_REMOVAL_NOTE.md)
+- `NEUTRINO_MAJORANA_PHASE_REMOVAL_NOTE.md`
 - `scripts/frontier_neutrino_majorana_phase_removal.py`
 
 Current result there: on the one-generation local block, the phase of `m` is
@@ -132,7 +132,7 @@ removable, so the retained CPT-even invariant is one real amplitude
 
 The canonical local-block companion is now:
 
-- [NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md](./NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md)
+- `NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md`
 - `scripts/frontier_neutrino_majorana_canonical_local_block.py`
 
 Current result there: every one-generation antisymmetric local realization is
@@ -152,7 +152,7 @@ So this is a precise construction step, not a closure claim.
 
 That exact boundary question is now separated cleanly in:
 
-- [NEUTRINO_MAJORANA_PFAFFIAN_AXIOM_BOUNDARY_NOTE.md](./NEUTRINO_MAJORANA_PFAFFIAN_AXIOM_BOUNDARY_NOTE.md)
+- `NEUTRINO_MAJORANA_PFAFFIAN_AXIOM_BOUNDARY_NOTE.md`
 - `scripts/frontier_neutrino_majorana_pfaffian_axiom_boundary.py`
 
 Current result there: the Pfaffian/Nambu sector is still an admitted

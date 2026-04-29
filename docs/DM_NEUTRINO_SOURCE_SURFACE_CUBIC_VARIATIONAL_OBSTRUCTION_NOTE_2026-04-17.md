@@ -239,7 +239,7 @@ This note **is**:
 Appropriate placement:
 
 - atlas support row in
- [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
+ `DERIVATION_ATLAS.md`
  under the DM neutrino source-surface family, labeled as **narrowed gap
  / obstruction**
 - this note does not close the DM flagship lane (the integrated closure

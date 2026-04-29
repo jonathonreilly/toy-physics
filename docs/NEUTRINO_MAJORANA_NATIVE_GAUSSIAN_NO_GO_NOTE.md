@@ -109,7 +109,7 @@ Answer: no.
 
 The stronger current companion is now:
 
-- [NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md](./NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md)
+- `NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md`
 - `scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py`
 
 That note extends the same obstruction from the quadratic Gaussian family to
@@ -133,7 +133,7 @@ determinant toolbox: for example a Nambu/Pfaffian Gaussian or another exact
 
 The constructed next-step companion is:
 
-- [NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md](./NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md)
+- `NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md`
 - `scripts/frontier_neutrino_majorana_pfaffian_extension.py`
 
 That companion is still bounded carefully: it constructs the minimal exact

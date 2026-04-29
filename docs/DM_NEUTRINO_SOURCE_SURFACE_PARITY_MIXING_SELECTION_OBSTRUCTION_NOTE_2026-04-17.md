@@ -327,7 +327,7 @@ functional-selection ambiguity", matching the sibling status of the information-
 Appropriate placement:
 
 - atlas obstruction row in
- [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
+ `DERIVATION_ATLAS.md`
  under the DM neutrino source-surface family, sibling to the info-geometric / Z_3-cubic / parity-split obstructions
 - **do NOT** use for any publication-grade positive quantitative claim
 - **do NOT** use to "justify" the Schur-Q variational candidate — this

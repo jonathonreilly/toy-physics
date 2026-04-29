@@ -24,7 +24,7 @@ More precisely:
   still listed explicitly; this note now serves mainly as a witness for that
   reduced-stack fact
 - the newer
-  [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md)
+  `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
   now closes the stronger retained-package point that this regulator reading is
   **not** an equivalent reading of the same accepted framework stack and that,
   once the retained matter closure plus live `alpha_s(v)`/`v` package are
@@ -50,11 +50,11 @@ It is directly reusable for:
 
 This note supports but does not replace:
 
-- [THREE_GENERATION_STRUCTURE_NOTE.md](./THREE_GENERATION_STRUCTURE_NOTE.md)
-- [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](./THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
-- [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md)
-- [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](./ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
-- [ANOMALY_FORCES_TIME_THEOREM.md](./ANOMALY_FORCES_TIME_THEOREM.md)
+- `THREE_GENERATION_STRUCTURE_NOTE.md`
+- `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
+- `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
+- `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`
+- `ANOMALY_FORCES_TIME_THEOREM.md`
 
 Those notes carry the retained claim surfaces.
 This note now isolates the older reduced-stack witness after the stronger
@@ -66,9 +66,9 @@ The clean current division of labor is:
 - this note:
   reduced-stack witness showing why the substrate premise looked explicit on
   the old five-item memo
-- [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](./THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md):
+- `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`:
   exact retained-generation no-proper-quotient theorem
-- [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md):
+- `PHYSICAL_LATTICE_NECESSITY_NOTE.md`:
   exact no-same-stack / no-same-surface regulator reinterpretation closure,
   exact retained observable-species semantics on the accepted Hilbert surface,
   retained-package conditional necessity, and accepted one-axiom substrate
@@ -83,4 +83,4 @@ Current main-branch runner state:
 
 - `frontier_generation_axiom_boundary.py`: `PASS=31`, `FAIL=0`;
   reduced-stack witness only, with the stronger live closure now carried by
-  [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md)
+  `PHYSICAL_LATTICE_NECESSITY_NOTE.md`

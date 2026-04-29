@@ -150,7 +150,7 @@ numerical evaluation) can anchor on a retained surface.
 ## Relation to Existing Matrix Rows
 
 The existing `Cosmological constant Lambda` row in
-[`PUBLICATION_MATRIX.md`](publication/ci3_z3/PUBLICATION_MATRIX.md) carries
+`PUBLICATION_MATRIX.md` carries
 the status `bounded` because its claim is about the
 **numerical value** of `Lambda` against the observed `~ 1.09 x 10^-52 m^-2`.
 This theorem does **not** change that row: the numerical comparison remains
@@ -165,7 +165,7 @@ carries an exact `T = 0` confinement theorem independently of the bounded
 ## Publication Matrix Row
 
 This note is now wired into
-[`PUBLICATION_MATRIX.md`](publication/ci3_z3/PUBLICATION_MATRIX.md) as the
+`PUBLICATION_MATRIX.md` as the
 retained structural identity row in the cosmology block:
 
 | Quantity / lane | Workstream | Framework result | Observation / comparator | Claim-strength status | Import class | Current publication decision | Authority / best source | Frozen-out ref |

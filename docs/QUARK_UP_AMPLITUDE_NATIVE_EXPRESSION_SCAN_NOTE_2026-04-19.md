@@ -168,7 +168,7 @@ So the remaining gap is no longer unconstrained, but it is still open.
   isolates the remaining scalar.
 - [QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md](./QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md)
   compresses the scalar to a bounded exact shortlist.
-- [QUARK_UP_AMPLITUDE_NATIVE_AFFINE_NO_GO_NOTE_2026-04-19.md](./QUARK_UP_AMPLITUDE_NATIVE_AFFINE_NO_GO_NOTE_2026-04-19.md)
+- `QUARK_UP_AMPLITUDE_NATIVE_AFFINE_NO_GO_NOTE_2026-04-19.md`
   is the follow-on widened affine-support no-go.
 - This note is the follow-on restricted native-family no-go.
 
