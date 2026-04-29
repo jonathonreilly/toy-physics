@@ -1,7 +1,7 @@
-# DM Neutrino Bosonic Normalization Theorem
+# DM Neutrino Bosonic Normalization Theorem (Conditional)
 
-**Date:** 2026-04-15
-**Status:** EXACT normalization selector on the proposed_retained local Higgs family
+**Date:** 2026-04-15 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded conditional normalization selector on the upstream local Higgs family — IF physical local scalar observables are taken to be exactly `W[J]` source-response coefficients (the observable-principle premise), THEN the algebraic checks close. The observable-principle premise is not registered as an audit-clean theorem in the audit packet, and the runner only checks `Y` log-det response and `Gamma_1` even response, not the admissibility of active-space ratios. Not a tier-ratifiable normalization selector.
 **Script:** `scripts/frontier_dm_neutrino_bosonic_normalization_theorem.py`
 
 ---
@@ -163,3 +163,31 @@ So the honest remaining question is no longer whether the direct Dirac lane can
 reach `k_B = 8`. On the retained local lane, it does. The remaining question is
 whether the Majorana side is axiom-forced strongly enough to turn that local
 Dirac result into a full zero-import `eta`.
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, leaf criticality):
+
+> Issue: the algebraic checks close after accepting the
+> observable-principle premise, but the note does not register or
+> reproduce the theorem that physical local scalar observables are
+> exactly `W[J]` source-response coefficients on the retained local
+> Higgs family. Why this blocks: without that physical selection
+> theorem, the runner only shows that `Y` has zero log-det response
+> and `Gamma_1` has nonzero even response; it does not by itself
+> prove that the active-space ratio 1 is inadmissible or that
+> `1/sqrt(2)` is the unique admissible normalization.
+
+## What this note does NOT claim
+
+- A tier-ratifiable normalization selector.
+- An audit-clean upstream observable-principle theorem.
+- That the active-space ratio 1 is inadmissible without the
+  observable-principle premise.
+
+## What would close this lane (Path A future work)
+
+A retained normalization selector would require registering the
+physical-observable selection theorem (physical local scalar
+observables = `W[J]` source-response coefficients) as an audit-clean
+upstream dependency.
