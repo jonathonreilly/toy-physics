@@ -1,0 +1,36 @@
+loop_slug: impact-campaign-20260429
+mode: campaign
+target_status: best-honest-status
+requested_runtime: 4h
+launch_started_utc: "2026-04-29T11:48:38Z"
+root_worktree: /Users/jonBridger/CI3Z2-physics-loop-impact-campaign-20260429
+supervisor_branch: physics-loop/impact-campaign-20260429
+base_ref: origin/main
+base_commit: "462696d1"
+current_status: "launch scaffold created; supervisor pending launch"
+repo_lock:
+  default_automation_lock: "unavailable: scripts/automation_lock.py status returned permission denied for /Users/jonreilly"
+  branch_local_supervisor_lock: ".claude/science/physics-loops/impact-campaign-20260429/supervisor.lock"
+campaign_rules:
+  infer_mode: "campaign for this 4-hour unattended request"
+  continue_until: "runtime exhausted, max cycles exhausted, or documented global queue exhaustion"
+  nonfatal_events:
+    - lane no-go
+    - support-only result
+    - human-judgment blocker on one lane
+    - retained-proposal certificate failure
+    - dirty or missing PR
+    - GitHub auth/network failure
+  required_pivot: "checkpoint, demote/backlog if needed, refresh OPPORTUNITY_QUEUE.md, continue"
+artifacts:
+  - .claude/science/physics-loops/impact-campaign-20260429/GOAL.md
+  - .claude/science/physics-loops/impact-campaign-20260429/STATE.yaml
+  - .claude/science/physics-loops/impact-campaign-20260429/OPPORTUNITY_QUEUE.md
+  - .claude/science/physics-loops/impact-campaign-20260429/HANDOFF.md
+  - .claude/science/physics-loops/impact-campaign-20260429/REVIEW_HISTORY.md
+  - .claude/science/physics-loops/impact-campaign-20260429/CLAIM_STATUS_CERTIFICATE.md
+  - .claude/science/physics-loops/impact-campaign-20260429/PR_BACKLOG.md
+  - .claude/science/physics-loops/impact-campaign-20260429/physics_loop_campaign_supervisor.py
+next_exact_action: "launch supervisor with --duration-hours 4 and verify supervisor_status.json"
+stop_condition: null
+
