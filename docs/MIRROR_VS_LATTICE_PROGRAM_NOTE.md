@@ -1,8 +1,7 @@
 # Mirror vs Lattice Program Note
 
-**Date:** 2026-04-04
-**Status:** canonical comparison note for the proposed_retained mirror flagship and the
-ordered-lattice / nearest-neighbor secondary frontier
+**Date:** 2026-04-04 (status line rephrased + claim narrowed 2026-04-28 per audit-lane verdict)
+**Status:** support / cross-program comparison index pointing to other notes; not a tier-ratified result on its own and inherits-down from any unaudited / conditional / failed cited authority.
 
 This note compares the retained program lanes using only artifact-backed claims.
 It is intentionally conservative:
@@ -110,3 +109,35 @@ Do not use:
 - NN refinement is a finished continuum theorem
 - the lattice / NN branch has closed the continuum question
 - the split lattice harnesses are equivalent to the mirror flagship card
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: The retained comparison imports multiple named authorities
+> that are not audit-clean, including unaudited/unknown synthesis and
+> lattice notes, a conditional mirror MI note, and failed lattice-side
+> notes such as `LATTICE_3D_DENSE_SPENT_DELAY_NOTE` and
+> `LATTICE_SYNTHESIS_GUARD_NOTE`. Why this blocks: the note's
+> flagship/secondary/frontier ranking is a cross-note synthesis, so it
+> cannot be retained while load-bearing source rows are unaudited,
+> conditional, or failed.
+
+The note has been re-tiered to `support`. The cross-program ranking
+remains useful as a navigational index but is not a tier-ratified
+claim until its cited authorities are audit-clean.
+
+## What this note does NOT claim
+
+- That the comparison ranking is a tier-ratified claim.
+- That the cited lattice and mirror notes are audit-clean (several are
+  unaudited, conditional, or failed).
+- That the flagship/secondary/frontier categorization carries the same
+  weight as the underlying retained claims it indexes.
+
+## What would close this lane (Path A future work)
+
+A cross-program comparison theorem would require auditing or repairing
+each cited authority first, removing failed inputs from the retained
+comparison, and ideally generating the comparison from a registered
+runner that asserts the ranking criteria.
