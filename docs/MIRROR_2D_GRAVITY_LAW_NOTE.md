@@ -1,7 +1,7 @@
 # Exact 2D Mirror Gravity-Law Cleanup Note
 
-**Date:** 2026-04-03  
-**Status:** gravity-law cleanup complete; no clean 2D mirror law proposed_promoted
+**Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** bounded null-result note — gravity-law cleanup found no clean 2D mirror mass law and no clean 2D mirror distance law on the searched windows.
 
 This note freezes the exact 2D mirror gravity-law cleanup lane.
 
@@ -67,3 +67,44 @@ So the conservative synthesis is:
 
 The family remains scientifically useful, but on the gravity side it is still a
 bounded pocket rather than a law-like result.
+
+## Audit boundary (2026-04-28)
+
+The earlier Status line ended in "no clean 2D mirror law `proposed_promoted`",
+which the audit-lane parser read as a `proposed_promoted` claim even though
+the literal sentence said the opposite. The Status line has been rephrased
+to a positive bounded null-result framing.
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: the target is classified as `proposed_promoted`, but the source
+> note and runner both say the cleanup found no clean promoted 2D mirror
+> gravity law. Why this blocks: the best mass exponents are weak or
+> deteriorating and the distance-tail fits are absent or low quality, so
+> promoting a law would invert the actual result of the source packet.
+
+> Repair target: change the Status line so the audit queue does not read
+> this as `proposed_promoted`; the safe statement is the bounded
+> null-result that the cleanup did not find a clean promoted mass or
+> distance law.
+
+## What this note does NOT claim
+
+- A promoted 2D mirror mass law.
+- A promoted 2D mirror distance law.
+- That the bounded coexistence pocket is the same thing as a
+  promoted-tier gravity result on the 2D mirror family.
+
+## What would close this lane (Path A future work)
+
+Reinstating a promoted 2D mirror gravity law would require:
+
+1. A registered runner whose mass-exponent fit clears a hard `R^2`
+   threshold (e.g. `R^2 >= 0.95`) on at least three sizes — the current
+   best is `R^2 = 0.923` at `N = 60` and degrades to `R^2 = 0.568` at
+   `N = 100`.
+2. A registered runner whose distance-tail fit clears the same hard
+   threshold — currently the `N = 80` row has no review-safe fit and
+   `N = 100` has `R^2 = 0.321`.
+3. A first-principles argument that the fitted exponent is the
+   mass-coupling exponent, not just an empirical curve fit.
