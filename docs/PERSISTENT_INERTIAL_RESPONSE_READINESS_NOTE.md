@@ -1,7 +1,7 @@
 # Persistent Inertial-Response Readiness Note
 
-**Date:** 2026-04-04  
-**Status:** bounded readiness audit; packet re-identification control now exists, and quasi-persistent relaunch/compression probes are now proposed_retained, but no persistent-mass theorem yet
+**Date:** 2026-04-04 (status line rephrased + claim narrowed 2026-04-28 per audit-lane verdict)
+**Status:** support / bounded readiness audit pointing to other notes; multiple cited authorities are unaudited / conditional / failed, so this readiness summary cannot itself be tier-ratified. No persistent-mass theorem is asserted by this note.
 
 ## Purpose
 
@@ -239,3 +239,35 @@ The smallest viable next move is:
 - the next honest escalation is now a true persistent/quasi-persistent
   inertial-response probe beyond the broad mesoscopic surrogate, or a bounded
   negative explaining why the current codebase still cannot realize it
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: The retained-style readiness synthesis imports a large set
+> of surrogate, relaunch, localization, and threshold artifacts, but
+> those named support rows are not all audit-clean; they include
+> bounded/unaudited notes, audited_conditional rows, and audited_failed
+> rows such as `MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE`,
+> `LOCALIZED_SOURCE_RESPONSE_SWEEP_NOTE`,
+> `MESOSCOPIC_SURROGATE_COMPACT_FLOOR_SWEEP_NOTE`,
+> `MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE`, and
+> `MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE`. Why this
+> blocks: a canonical retained readiness/frontier summary cannot be
+> ratified from inputs that are not themselves audit-clean.
+
+The note has been re-tiered to `support` (cross-note readiness index).
+
+## What this note does NOT claim
+
+- A persistent-mass theorem.
+- That any of the cited surrogate / relaunch / localization /
+  threshold notes are audit-clean.
+- That the readiness ranking is a tier-ratifiable claim independent
+  of the cited authorities.
+
+## What would close this lane (Path A future work)
+
+A tier-promotable readiness frontier would require auditing or
+repairing each cited authority first, then re-deriving the ranking
+from a registered runner that asserts the summary criteria.
