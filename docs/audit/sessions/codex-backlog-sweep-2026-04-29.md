@@ -8,22 +8,24 @@ Branch: `audit/codex-backlog-sweep-2026-04-29`
 ## Scope
 
 This session applied restricted-context fresh-look audits to the promoted
-critical backlog block and then walked ready rows through the original rank-20
-ready-critical stop point.
+critical backlog block, walked ready rows through the original rank-20
+ready-critical stop point, then resumed into the next ready high-criticality
+support/bounded/unknown rows after the user requested continuation.
 
-Stop condition reached: the ready-critical block was exhausted. Remaining
-critical rows at the top of the queue are first clean audits awaiting required
-second-auditor cross-confirmation.
+Initial stop condition reached: the ready-critical block was exhausted.
+Remaining critical rows at the top of the queue are first clean audits awaiting
+required second-auditor cross-confirmation; this auditor did not self-confirm
+those rows.
 
 ## Counts
 
-- Total claims audited: 22
+- Total claims audited: 32
 - First clean audits recorded, awaiting cross-confirmation: 14
-- Audited conditional: 5
-- Audited renaming: 3
+- Audited conditional: 12
+- Audited renaming: 5
 - Audited decoration: 0
 - Audited failed: 0
-- Audited numerical match: 0
+- Audited numerical match: 1
 
 ## Claims Audited
 
@@ -51,6 +53,16 @@ second-auditor cross-confirmation.
 | `yt_qfp_insensitivity_support_note` | `audited_conditional` | F |
 | `yt_explicit_systematic_budget_note` | `audited_conditional` | B |
 | `higgs_mass_from_axiom_note` | `audited_renaming` | F |
+| `s3_time_bilinear_tensor_primitive_note` | `audited_renaming` | E |
+| `cl3_taste_generation_theorem` | `audited_renaming` | F |
+| `s3_time_bilinear_tensor_action_note` | `audited_conditional` | B |
+| `neutrino_majorana_current_stack_exhaustion_note` | `audited_conditional` | B |
+| `ckm_from_mass_hierarchy_note` | `audited_numerical_match` | G |
+| `hierarchy_matsubara_decomposition_note` | `audited_conditional` | A |
+| `dm_neutrino_cascade_geometry_note_2026-04-14` | `audited_conditional` | A |
+| `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | `audited_conditional` | B |
+| `ckm_schur_complement_theorem` | `audited_conditional` | A |
+| `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15` | `audited_conditional` | A |
 
 ## Structural Patterns
 
@@ -67,6 +79,13 @@ second-auditor cross-confirmation.
   runner, `higgs_mass_from_axiom_note` has no ledger runner path, and
   `yt_qfp_insensitivity_support_note` was terminated after a multi-minute stall
   during the current audit run.
+- The resumed high-priority support rows had several exact local algebra checks
+  that were strong as support, but strict lint blocks `audited_clean` on rows
+  whose current status is `support` or `unknown`. Those were recorded as
+  conditional with narrowed claim boundaries.
+- CKM support rows repeatedly reduced to broad numerical compatibility bands or
+  exact local identities plus missing texture/mass-hierarchy authorities, not
+  closed CKM observable derivations.
 
 ## Awaiting Cross-Confirmation
 
