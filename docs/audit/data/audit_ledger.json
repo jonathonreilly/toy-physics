@@ -1,5 +1,5 @@
 {
-  "effective_status_computed_at": "2026-04-29T12:27:34.516916+00:00",
+  "effective_status_computed_at": "2026-04-29T12:39:32.502161+00:00",
   "generated_at": "2026-04-29T11:35:42.558285+00:00",
   "rows": {
     "3d_correction_master_note": {
@@ -14669,8 +14669,8 @@
         "confinement_string_tension_note"
       ],
       "direct_in_degree": 19,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dark_energy_eos_retained_corollary_theorem_note",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "inherited_from:universal_qg_smooth_gravitational_global_solution_class_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 16.431,
@@ -14852,7 +14852,7 @@
         "dark_energy_eos_retained_corollary_theorem_note"
       ],
       "direct_in_degree": 13,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "inherited_from:cosmological_constant_spectral_gap_identity_theorem_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -14930,7 +14930,7 @@
         "n_eff_from_three_generations_theorem_note_2026-04-24"
       ],
       "direct_in_degree": 10,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "inherited_from:cosmological_constant_spectral_gap_identity_theorem_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -15651,8 +15651,8 @@
         "publication.ci3_z3.claims_table"
       ],
       "direct_in_degree": 12,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:confinement_string_tension_note",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "inherited_from:universal_qg_smooth_gravitational_global_solution_class_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 12.931,
@@ -21836,7 +21836,7 @@
       ],
       "direct_in_degree": 17,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_slot_torsion_boundary_theorem_note_2026-04-16",
+      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 15.522,
@@ -22070,14 +22070,21 @@
       "verdict_rationale": null
     },
     "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-29T12:39:26.324910+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 10.055,
+        "transitive_descendants": 132
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+      "auditor_confidence": 0.89,
+      "auditor_family": "codex-gpt-5.5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies exact carrier identities over imported source-surface and bridge-carrier functions, but the ledger row supplies no one-hop dependencies for those upstream constructions.",
       "claim_id": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
       "criticality": "high",
       "current_status": "unknown",
@@ -22085,30 +22092,36 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 6,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 10.055,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "After quotienting by the exact common diagonal-shift tangent, the live source-oriented sheet factors through B_H,min and the exact source surface becomes gamma = 1/2, delta + rho = sqrt(8/3), sigma sin(2v) = 8/9.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "8f2559aaf6f3daa5682dbc0977bb21ce42c14724f57aec64fc987a789b5d1893",
       "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "scripts/frontier_dm_neutrino_exact_h_source_surface_preimage_bundle_theorem.py",
+        "scripts/frontier_dm_neutrino_hermitian_bridge_carrier.py",
+        "scripts/frontier_dm_neutrino_breaking_triplet_cp_theorem.py",
+        "scripts/frontier_dm_neutrino_positive_polar_h_cp_theorem.py",
+        "scripts/dm_leptogenesis_exact_common.py"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 8,
+        "B": 5,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 13
       },
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_carrier_normal_form.py",
       "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
       "transitive_descendants": 132,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the normal form depends on imported source-surface preimage, Hermitian bridge carrier, CP, and exact-package modules that are not declared as cited authorities. Why this blocks: the algebraic reduction appears exact over the implementation, but the audit cannot ratify the live source-oriented sheet or carrier coordinates from the allowed note alone. Repair target: add retained/proposed-retained one-hop deps for the source-surface preimage bundle, Hermitian bridge carrier, CP theorem, and exact package. Claim boundary until fixed: exact normal-form reduction conditional on those imported upstream constructions, not a standalone closed theorem."
     },
     "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18": {
       "audit_date": null,
@@ -22342,14 +22355,21 @@
       "verdict_rationale": null
     },
     "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-29T12:38:59.259099+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 12.055,
+        "transitive_descendants": 132
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+      "auditor_confidence": 0.88,
+      "auditor_family": "codex-gpt-5.5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the constant-slot calculation for the imported shift-quotient bundle, but the ledger row lists no one-hop authorities for that bundle, the CP package, or the positive polar section functions.",
       "claim_id": "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
       "criticality": "high",
       "current_status": "unknown",
@@ -22357,30 +22377,35 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 10,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 12.055,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the quotient gauge, the intrinsic slot pair simplifies exactly to one constant pair and the quotient-bundle coordinates m, delta, r31 drop out of a(H) and b(H) completely on the live source-oriented sheet.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "14c592f09d3b7f5fde41389e14bd32916f99682303a17569aae54b36470d51a3",
       "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "scripts/frontier_dm_neutrino_source_surface_shift_quotient_bundle_theorem.py",
+        "scripts/frontier_dm_neutrino_positive_polar_h_cp_theorem.py",
+        "scripts/frontier_dm_neutrino_postcanonical_polar_section.py",
+        "scripts/dm_leptogenesis_exact_common.py"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 5,
+        "B": 4,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 9
       },
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_intrinsic_slot_theorem.py",
       "title": "DM Neutrino Source-Surface Intrinsic Slot Theorem",
       "transitive_descendants": 132,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the theorem depends on a pre-reduced live source-oriented shift-quotient bundle and CP/readout functions imported by the runner but not declared as ledger deps. Why this blocks: within the allowed context, the audit can check the algebra over those imported functions, but not the upstream reduction that makes them authoritative. Repair target: add retained/proposed-retained one-hop deps for the shift-quotient bundle, positive polar section, and exact CP package or make this row explicitly conditional on them. Claim boundary until fixed: exact constant-slot corollary over the imported bundle implementation, not a closed standalone mainline theorem."
     },
     "dm_neutrino_source_surface_m_spectator_theorem_note_2026-04-16": {
       "audit_date": null,
@@ -22402,8 +22427,8 @@
         "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16"
       ],
       "direct_in_degree": 6,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 10.044,
@@ -35943,7 +35968,7 @@
         "publication.ci3_z3.publication_matrix"
       ],
       "direct_in_degree": 8,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "inherited_from:cosmological_constant_spectral_gap_identity_theorem_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -36018,7 +36043,7 @@
         "confinement_string_tension_note"
       ],
       "direct_in_degree": 11,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "inherited_from:graviton_mass_spectral_gap_identity_theorem_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -36195,7 +36220,7 @@
         "cosmological_constant_spectral_gap_identity_theorem_note"
       ],
       "direct_in_degree": 10,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "inherited_from:graviton_spectral_tower_theorem_note_2026-04-24",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -36512,14 +36537,21 @@
       "verdict_rationale": null
     },
     "gravity_sign_audit_2026-04-10": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-29T12:37:56.319394+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 10.077,
+        "transitive_descendants": 134
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+      "auditor_confidence": 0.94,
+      "auditor_family": "codex-gpt-5.5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note relies on external staggered-fermion coupling authority and declared runner evidence that is not available at runner_path; it also states the irregular graph directional observable remains open.",
       "claim_id": "gravity_sign_audit_2026-04-10",
       "criticality": "high",
       "current_status": "unknown",
@@ -36527,18 +36559,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 6,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 10.077,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The literature-correct scalar channel is H_diag = (m + Phi) * epsilon(x), and both corrected parity/lapse couplings distinguish well from hill in the direct sign test.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "7764453ff450b15ab28846c7f1bda85220470d11d134f7fd3c4861740c02911d",
       "note_path": "docs/GRAVITY_SIGN_AUDIT_2026-04-10.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "missing runner: frontier_correct_coupling.py",
+        "external authority cited in note: Zache et al. 2020 / Dempsey et al. 2025",
+        "open blocker stated in note: graph-native directional observable on irregular graphs"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
@@ -36550,7 +36586,7 @@
       "runner_path": "frontier_correct_coupling.py",
       "title": "Gravity Sign Audit \u2014 Corrected Assessment",
       "transitive_descendants": 134,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the declared primary runner `frontier_correct_coupling.py` is missing, and the parity/lapse coupling authority is cited but not provided as a one-hop ledger dependency. Why this blocks: the direct well/hill split and corrected-coupling premise cannot be independently checked from the allowed files. Repair target: restore or relink the runner and provide a retained coupling-sign theorem or cited authority note covering the staggered scalar channel. Claim boundary until fixed: the note can stand as a conditional sign-audit status memo with explicit open irregular-graph blockers, not as a closed gravity-sign derivation."
     },
     "growing_graph_dynamic_limit_diagnostic_note": {
       "audit_date": null,
@@ -40134,8 +40170,8 @@
         "gravity_sign_audit_2026-04-10"
       ],
       "direct_in_degree": 2,
-      "effective_status": "unknown",
-      "effective_status_reason": "inherited_from:irregular_directional_observable_note_2026-04-11",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:gravity_sign_audit_2026-04-10",
       "independence": null,
       "intrinsic_status": "bounded",
       "load_bearing_score": 5.0,
@@ -44589,7 +44625,7 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_neutrino_positive_polar_h_cp_theorem_note_2026-04-15",
+      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 9.431,
@@ -46732,8 +46768,8 @@
         "gravity_sign_audit_2026-04-10"
       ],
       "direct_in_degree": 1,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:gravity_sign_audit_2026-04-10",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 2.085,
@@ -50613,7 +50649,7 @@
         "three_generation_structure_note"
       ],
       "direct_in_degree": 15,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "inherited_from:cosmology_frw_kinematic_reduction_theorem_note_2026-04-24",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -54605,8 +54641,8 @@
         "neutrino_majorana_partition_projective_transplant_obstruction_note"
       ],
       "direct_in_degree": 0,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:neutrino_majorana_partition_projective_transplant_obstruction_note",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "inherited_from:universal_qg_continuum_bridge_reduction_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 0.0,
@@ -67019,14 +67055,25 @@
       "verdict_rationale": null
     },
     "quark_cp_carrier_completion_note_2026-04-18": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-29T12:30:42.977308+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "quark_projector_ray_phase_completion_note_2026-04-18": "bounded"
+        },
+        "deps": [
+          "quark_projector_ray_phase_completion_note_2026-04-18"
+        ],
+        "load_bearing_score": 12.098,
+        "transitive_descendants": 136
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+      "auditor_confidence": 0.94,
+      "auditor_family": "codex-gpt-5.5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner finds a numerical completion with solved xi_u and xi_d carriers, but those carriers are not derived and the one-hop dependency is itself bounded/unaudited.",
       "claim_id": "quark_cp_carrier_completion_note_2026-04-18",
       "criticality": "high",
       "current_status": "bounded",
@@ -67036,30 +67083,33 @@
         "quark_projector_ray_phase_completion_note_2026-04-18"
       ],
       "direct_in_degree": 10,
-      "effective_status": "bounded",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 12.098,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Adding one independent complex 1-3 carrier in each sector closes the full quark package numerically while keeping arg det(M_u M_d) = 0 mod 2pi.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "7ff245de7e79f9a8b958ac81986e39c8e486e02c03319c31f4ec9c9f7b7165b5",
       "note_path": "docs/QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "quark_projector_ray_phase_completion_note_2026-04-18: bounded/unaudited dependency",
+        "missing theorem: derivation of xi_u and xi_d complex 1-3 carriers"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 11,
+        "total_pass": 11
       },
       "runner_path": "scripts/frontier_quark_cp_carrier_completion.py",
       "title": "Quark CP-Carrier Completion on the Live Mass-Ratio Lane",
       "transitive_descendants": 136,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note's closure is achieved by fitting explicit complex sector-specific carriers, not by deriving them from the framework. Why this blocks: the runner confirms the fitted surface matches mass-ratio and CKM/J targets, but also shows the added carrier dominates the Schur base, especially in the up sector, making it a bounded completion ansatz rather than a retained primitive. Repair target: derive xi_u and xi_d, or replace them with an audited projector-native law, and audit the projector-ray completion dependency. Claim boundary until fixed: bounded numerical existence proof for a determinant-neutral CP carrier extension, not an audited-clean quark CP theorem."
     },
     "quark_e_channel_endpoint_quotient_law_note_2026-04-19": {
       "audit_date": null,
@@ -67854,14 +67904,29 @@
       "verdict_rationale": null
     },
     "quark_projector_parameter_audit_note_2026-04-19": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-29T12:29:45.217897+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "quark_cp_carrier_completion_note_2026-04-18": "bounded",
+          "quark_projector_ray_phase_completion_note_2026-04-18": "bounded",
+          "quark_up_amplitude_candidate_scan_note_2026-04-19": "bounded"
+        },
+        "deps": [
+          "quark_cp_carrier_completion_note_2026-04-18",
+          "quark_projector_ray_phase_completion_note_2026-04-18",
+          "quark_up_amplitude_candidate_scan_note_2026-04-19"
+        ],
+        "load_bearing_score": 14.098,
+        "transitive_descendants": 136
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+      "auditor_confidence": 0.9,
+      "auditor_family": "codex-gpt-5.5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner confirms a strong numerical fit after fixing two proposed exact-support inputs, but it still solves the up amplitude and mass ratios against atlas targets, and all three ledger deps are bounded/unaudited support notes.",
       "claim_id": "quark_projector_parameter_audit_note_2026-04-19",
       "criticality": "high",
       "current_status": "bounded",
@@ -67873,40 +67938,58 @@
         "quark_cp_carrier_completion_note_2026-04-18"
       ],
       "direct_in_degree": 14,
-      "effective_status": "bounded",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 14.098,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "With a_d = 1/sqrt(42) and phi = -1/42 fixed, solving only for (m_u/m_c, m_c/m_t, a_u) keeps the full quark package within about 1% to 2%.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "a83f26b266c648fa085b1a87b042b12da04694b51e59f621272e40e2e6d6da4f",
       "note_path": "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "quark_up_amplitude_candidate_scan_note_2026-04-19: bounded/unaudited dependency",
+        "quark_projector_ray_phase_completion_note_2026-04-18: bounded/unaudited dependency",
+        "quark_cp_carrier_completion_note_2026-04-18: bounded/unaudited dependency",
+        "missing theorem: up-sector scalar amplitude law a_u"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 6,
+        "total_pass": 6
       },
       "runner_path": "scripts/frontier_quark_projector_parameter_audit.py",
       "title": "Quark Projector-Parameter Audit",
       "transitive_descendants": 136,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the decisive support is numerical compatibility of exact-looking anchors with a refit surface, not a derivation of the reduced quark parameters. Why this blocks: a_u remains solved, the fit targets are imported from the quark atlas constants in runner dependencies, and the one-hop deps are themselves bounded/unaudited rather than retained. Repair target: derive the up-sector scalar amplitude law and promote the projector-ray/down-amplitude/support-angle authorities independently before using this as a closed parameter audit. Claim boundary until fixed: bounded numerical compression of the quark closure gap to one non-derived scalar amplitude."
     },
     "quark_projector_ray_phase_completion_note_2026-04-18": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-29T12:31:39.316968+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "quark_cp_carrier_completion_note_2026-04-18": "bounded",
+          "quark_projector_parameter_audit_note_2026-04-19": "bounded"
+        },
+        "deps": [
+          "quark_cp_carrier_completion_note_2026-04-18",
+          "quark_projector_parameter_audit_note_2026-04-19"
+        ],
+        "load_bearing_score": 12.098,
+        "transitive_descendants": 136
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+      "auditor_confidence": 0.93,
+      "auditor_family": "codex-gpt-5.5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner confirms a reduced numerical fit, but a_u, a_d, phi_shared, and two mass ratios are solved against atlas targets, while both one-hop dependencies remain bounded rather than retained.",
       "claim_id": "quark_projector_ray_phase_completion_note_2026-04-18",
       "criticality": "high",
       "current_status": "bounded",
@@ -67917,30 +68000,34 @@
         "quark_cp_carrier_completion_note_2026-04-18"
       ],
       "direct_in_degree": 10,
-      "effective_status": "bounded",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 12.098,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "One fixed projector ray, two sector amplitudes, and one shared phase are enough to close the full quark package numerically.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "ee6d8dc13e8f83d89471991e534ca6c5c6213fbdbe4948e26c8b2d715bdd9546",
       "note_path": "docs/QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "quark_projector_parameter_audit_note_2026-04-19: audited_numerical_match dependency",
+        "quark_cp_carrier_completion_note_2026-04-18: audited_numerical_match dependency",
+        "missing theorem: sector amplitudes a_u/a_d and shared phase phi_shared"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 8,
+        "total_pass": 8
       },
       "runner_path": "scripts/frontier_quark_projector_ray_phase_completion.py",
       "title": "Reduced Quark Closure on a Fixed Projector Ray",
       "transitive_descendants": 136,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the exact-looking projector ray is used inside a fitted reduced ansatz whose amplitudes and shared phase are solved, not derived. Why this blocks: the fit closes CKM magnitudes, J, and determinant phase numerically, but the physical parameter laws remain open and the dependencies are bounded support rows. Repair target: derive the sector amplitudes and shared phase from projector/support machinery and promote the dependency surface before claiming retained closure. Claim boundary until fixed: bounded numerical reduced closure on a fixed projector ray, not a retained quark CP theorem."
     },
     "quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28": {
       "audit_date": null,
@@ -68382,8 +68469,8 @@
         "quark_up_amplitude_native_expression_scan_note_2026-04-19"
       ],
       "direct_in_degree": 3,
-      "effective_status": "bounded",
-      "effective_status_reason": "self",
+      "effective_status": "audited_numerical_match",
+      "effective_status_reason": "inherited_from:quark_projector_parameter_audit_note_2026-04-19",
       "independence": null,
       "intrinsic_status": "bounded",
       "load_bearing_score": 8.511,
@@ -68408,14 +68495,31 @@
       "verdict_rationale": null
     },
     "quark_up_amplitude_candidate_scan_note_2026-04-19": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-29T12:32:30.519078+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "quark_projector_parameter_audit_note_2026-04-19": "bounded",
+          "quark_projector_ray_phase_completion_note_2026-04-18": "bounded",
+          "quark_up_amplitude_native_affine_no_go_note_2026-04-19": "bounded",
+          "quark_up_amplitude_native_expression_scan_note_2026-04-19": "bounded"
+        },
+        "deps": [
+          "quark_projector_parameter_audit_note_2026-04-19",
+          "quark_projector_ray_phase_completion_note_2026-04-18",
+          "quark_up_amplitude_native_affine_no_go_note_2026-04-19",
+          "quark_up_amplitude_native_expression_scan_note_2026-04-19"
+        ],
+        "load_bearing_score": 10.098,
+        "transitive_descendants": 136
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+      "auditor_confidence": 0.92,
+      "auditor_family": "codex-gpt-5.5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner ranks candidate constants by numerical fit quality against anchored CKM/J targets, but none of the candidates is derived and two one-hop deps remain unaudited bounded scans.",
       "claim_id": "quark_up_amplitude_candidate_scan_note_2026-04-19",
       "criticality": "high",
       "current_status": "bounded",
@@ -68428,40 +68532,61 @@
         "quark_up_amplitude_native_affine_no_go_note_2026-04-19"
       ],
       "direct_in_degree": 6,
-      "effective_status": "bounded",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 10.098,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The remaining up-sector amplitude sits on a short exact-candidate shortlist, with 7/9 best on refit and sqrt(3/5) best on the anchored package.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "7a8c7cc6c5d9cb2aa870e2dda379080dd54a985408cd0ff71d538ec3f348b517",
       "note_path": "docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "quark_projector_parameter_audit_note_2026-04-19: audited_numerical_match dependency",
+        "quark_projector_ray_phase_completion_note_2026-04-18: audited_numerical_match dependency",
+        "quark_up_amplitude_native_expression_scan_note_2026-04-19: bounded/unaudited dependency",
+        "quark_up_amplitude_native_affine_no_go_note_2026-04-19: bounded/unaudited dependency",
+        "missing theorem: unique framework-forced a_u law"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 7,
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_quark_up_amplitude_candidate_scan.py",
       "title": "Quark Up-Amplitude Exact-Candidate Scan",
       "transitive_descendants": 136,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the result is a candidate-ranking scan around a previously solved a_u value, not a derivation of an amplitude law. Why this blocks: the shortlist is useful compression, but the winning candidates are selected by refit/anchored deviation metrics, and the native-expression and affine no-go dependencies are not yet audited. Repair target: derive a unique a_u law from the native projector/support grammar, or keep this as bounded search-space compression. Claim boundary until fixed: exact-candidate shortlist support for the remaining up amplitude, not a retained quark closure theorem."
     },
     "quark_up_amplitude_native_affine_no_go_note_2026-04-19": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-29T12:33:37.549087+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "quark_projector_parameter_audit_note_2026-04-19": "bounded",
+          "quark_up_amplitude_candidate_scan_note_2026-04-19": "bounded",
+          "quark_up_amplitude_native_expression_scan_note_2026-04-19": "bounded"
+        },
+        "deps": [
+          "quark_projector_parameter_audit_note_2026-04-19",
+          "quark_up_amplitude_candidate_scan_note_2026-04-19",
+          "quark_up_amplitude_native_expression_scan_note_2026-04-19"
+        ],
+        "load_bearing_score": 9.598,
+        "transitive_descendants": 136
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+      "auditor_confidence": 0.91,
+      "auditor_family": "codex-gpt-5.5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner exhausts a chosen finite affine grammar and comparator scoring surface, but the no-go is bounded to those grammar and baseline choices and all one-hop deps remain bounded/numerical support.",
       "claim_id": "quark_up_amplitude_native_affine_no_go_note_2026-04-19",
       "criticality": "high",
       "current_status": "bounded",
@@ -68473,40 +68598,60 @@
         "quark_up_amplitude_native_expression_scan_note_2026-04-19"
       ],
       "direct_in_degree": 5,
-      "effective_status": "bounded",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 9.598,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The widened affine family has laws that beat each external baseline separately, but zero laws beat both the 7/9 refit baseline and the sqrt(3/5) anchored baseline at once.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "758a98811d2ffa5556cc00f70678f4db0c5d2802bdeef3c6db823722aeb3bd54",
       "note_path": "docs/QUARK_UP_AMPLITUDE_NATIVE_AFFINE_NO_GO_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "quark_projector_parameter_audit_note_2026-04-19: audited_numerical_match dependency",
+        "quark_up_amplitude_candidate_scan_note_2026-04-19: audited_numerical_match dependency",
+        "quark_up_amplitude_native_expression_scan_note_2026-04-19: bounded/unaudited dependency",
+        "missing theorem: native affine grammar is exhaustive for a_u"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 7,
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_quark_up_amplitude_native_affine_no_go.py",
       "title": "Quark Up-Amplitude Native Affine No-Go",
       "transitive_descendants": 136,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the negative result is an exhaustive numerical comparison within a hand-bounded affine grammar, not a proof that no framework-native a_u law exists. Why this blocks: changing the grammar, scoring metric, or baseline definitions would be a different claim, and the dependency chain is still bounded around fitted/candidate amplitudes. Repair target: formalize the native affine grammar as a retained search space or derive the scalar law directly. Claim boundary until fixed: bounded no-go for this finite widened affine support scan, not a retained theorem-forced exclusion."
     },
     "quark_up_amplitude_native_expression_scan_note_2026-04-19": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-29T12:37:14.069247+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "quark_projector_parameter_audit_note_2026-04-19": "bounded",
+          "quark_up_amplitude_candidate_scan_note_2026-04-19": "bounded",
+          "quark_up_amplitude_native_affine_no_go_note_2026-04-19": "bounded"
+        },
+        "deps": [
+          "quark_projector_parameter_audit_note_2026-04-19",
+          "quark_up_amplitude_candidate_scan_note_2026-04-19",
+          "quark_up_amplitude_native_affine_no_go_note_2026-04-19"
+        ],
+        "load_bearing_score": 9.598,
+        "transitive_descendants": 136
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+      "auditor_confidence": 0.9,
+      "auditor_family": "codex-gpt-5.5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The finite restricted-grammar comparison closes numerically, but it does not derive a unique up-sector amplitude law; it ranks candidate expressions against chosen refit and anchored baselines.",
       "claim_id": "quark_up_amplitude_native_expression_scan_note_2026-04-19",
       "criticality": "high",
       "current_status": "bounded",
@@ -68518,30 +68663,34 @@
         "quark_up_amplitude_native_affine_no_go_note_2026-04-19"
       ],
       "direct_in_degree": 5,
-      "effective_status": "bounded",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 9.598,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The restricted native one-step scan finds no expression that beats both the external 7/9 refit baseline and the external sqrt(3/5) anchored baseline at once.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "a9f25441e5af272556e36098ad36960d7f63e462c86a5c60fcdeab7ab7630423",
       "note_path": "docs/QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
+        "docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md",
+        "docs/QUARK_UP_AMPLITUDE_NATIVE_AFFINE_NO_GO_NOTE_2026-04-19.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 5,
+        "total_pass": 5
       },
       "runner_path": "scripts/frontier_quark_up_amplitude_native_expression_scan.py",
       "title": "Quark Up-Amplitude Native-Expression Scan",
       "transitive_descendants": 136,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the load-bearing result is a comparator-ranked restricted grammar scan, not a derivation of a_u from retained upstream inputs. Why this blocks: the conclusion depends on fit metrics against the 7/9 and sqrt(3/5) baselines and its one-hop quark dependencies are themselves bounded numerical-match audits. Repair target: a retained theorem forcing one amplitude law, or a runner proving exhaustive dominance from exact algebra rather than score comparisons. Claim boundary until fixed: the note may stand as a bounded no-go for this one-step native grammar, not as a derived quark amplitude law."
     },
     "quark_up_amplitude_provenance_audit_note_2026-04-19": {
       "audit_date": null,
@@ -68819,8 +68968,8 @@
         "quark_up_amplitude_native_affine_no_go_note_2026-04-19"
       ],
       "direct_in_degree": 5,
-      "effective_status": "bounded",
-      "effective_status_reason": "self",
+      "effective_status": "audited_numerical_match",
+      "effective_status_reason": "inherited_from:quark_up_amplitude_affine_support_scan_note_2026-04-19",
       "independence": null,
       "intrinsic_status": "bounded",
       "load_bearing_score": 9.5,
@@ -68864,8 +69013,8 @@
         "quark_up_amplitude_native_expression_scan_note_2026-04-19"
       ],
       "direct_in_degree": 1,
-      "effective_status": "bounded",
-      "effective_status_reason": "self",
+      "effective_status": "audited_numerical_match",
+      "effective_status_reason": "inherited_from:quark_projector_parameter_audit_note_2026-04-19",
       "independence": null,
       "intrinsic_status": "bounded",
       "load_bearing_score": 7.489,
@@ -69380,8 +69529,8 @@
         "two_sign_comparison_note_2026-04-10"
       ],
       "direct_in_degree": 2,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:gravity_sign_audit_2026-04-10",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 4.17,
@@ -70833,7 +70982,7 @@
         "s3_cap_uniqueness_note"
       ],
       "direct_in_degree": 8,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "inherited_from:cosmological_constant_spectral_gap_identity_theorem_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -81205,8 +81354,8 @@
         "universal_qg_optional_textbook_comparison_note"
       ],
       "direct_in_degree": 6,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "inherited_from:universal_qg_optional_textbook_comparison_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 9.943,
@@ -81330,8 +81479,8 @@
         "universal_qg_optional_textbook_comparison_note"
       ],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "inherited_from:universal_qg_optional_textbook_comparison_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 9.443,
@@ -81373,8 +81522,8 @@
         "universal_qg_optional_textbook_comparison_note"
       ],
       "direct_in_degree": 10,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "inherited_from:universal_qg_optional_textbook_comparison_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 11.943,
@@ -81416,8 +81565,8 @@
         "universal_qg_optional_textbook_comparison_note"
       ],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "inherited_from:universal_qg_optional_textbook_comparison_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 9.443,
@@ -81459,8 +81608,8 @@
         "universal_qg_optional_textbook_comparison_note"
       ],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "inherited_from:universal_qg_optional_textbook_comparison_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 9.443,
@@ -81502,8 +81651,8 @@
         "universal_qg_optional_textbook_comparison_note"
       ],
       "direct_in_degree": 3,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "inherited_from:universal_qg_optional_textbook_comparison_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 8.454,
@@ -81545,8 +81694,8 @@
         "universal_qg_optional_textbook_comparison_note"
       ],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "inherited_from:universal_qg_optional_textbook_comparison_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 9.443,
@@ -81612,14 +81761,21 @@
       "verdict_rationale": null
     },
     "universal_qg_optional_textbook_comparison_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-29T12:38:26.404119+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 12.566,
+        "transitive_descendants": 133
+      },
+      "audit_status": "audited_renaming",
+      "auditor": "codex-gpt-5.5-backlog-sweep-2026-04-29",
+      "auditor_confidence": 0.93,
+      "auditor_family": "codex-gpt-5.5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note defines a packaging boundary rather than deriving a result; its statement that the textbook continuum target is already closed cites no one-hop authority in the ledger.",
       "claim_id": "universal_qg_optional_textbook_comparison_note",
       "criticality": "high",
       "current_status": "unknown",
@@ -81627,18 +81783,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 11,
-      "effective_status": "unknown",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_renaming",
       "load_bearing_score": 12.566,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "This note is packaging-only and is not a theorem, claim, or new authority surface.",
+      "load_bearing_step_class": "E",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "2b76941ca0b72d46923e20d0ab5b17bcda9291ec124ace0ec4394530a0bf98fe",
       "note_path": "docs/UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "unspecified closed theorem stack for canonical textbook continuum target"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
         "A": 0,
@@ -81650,7 +81808,7 @@
       "runner_path": null,
       "title": "Universal QG Optional Textbook Comparison Note",
       "transitive_descendants": 133,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the load-bearing content is a scope declaration for optional comparison, not a derivation or independent authority. Why this blocks: the only substantive closure sentence points to an unspecified project route that is not supplied as a dependency. Repair target: cite the retained continuum/QG closure theorem if this row is meant to ratify that closure, or keep this row explicitly non-claim packaging. Claim boundary until fixed: usable as a notation/comparison boundary only, not as evidence for universal QG closure."
     },
     "universal_qg_pl_field_interface_note": {
       "audit_date": null,
@@ -81834,8 +81992,8 @@
         "universal_qg_optional_textbook_comparison_note"
       ],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "inherited_from:universal_qg_optional_textbook_comparison_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 9.443,
@@ -81877,8 +82035,8 @@
         "universal_qg_optional_textbook_comparison_note"
       ],
       "direct_in_degree": 8,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "inherited_from:universal_qg_optional_textbook_comparison_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 10.943,
@@ -81920,8 +82078,8 @@
         "universal_qg_optional_textbook_comparison_note"
       ],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_renaming",
+      "effective_status_reason": "inherited_from:universal_qg_optional_textbook_comparison_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 9.443,
@@ -82786,7 +82944,7 @@
         "s3_cap_uniqueness_note"
       ],
       "direct_in_degree": 10,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "inherited_from:cosmological_constant_spectral_gap_identity_theorem_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -87683,8 +87841,8 @@
         "work_history.repo.lane_status_board"
       ],
       "direct_in_degree": 2,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:work_history.repo.review_feedback.rerun_required_bug_audit_2026-04-11",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 4.17,
@@ -87946,8 +88104,8 @@
         "work_history.repo.lane_status_board"
       ],
       "direct_in_degree": 4,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:repo.retest_playbook",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 5.17,

@@ -19,13 +19,13 @@ those rows.
 
 ## Counts
 
-- Total claims audited: 32
+- Total claims audited: 42
 - First clean audits recorded, awaiting cross-confirmation: 14
-- Audited conditional: 12
-- Audited renaming: 5
+- Audited conditional: 15
+- Audited renaming: 6
 - Audited decoration: 0
 - Audited failed: 0
-- Audited numerical match: 1
+- Audited numerical match: 7
 
 ## Claims Audited
 
@@ -63,6 +63,16 @@ those rows.
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | `audited_conditional` | B |
 | `ckm_schur_complement_theorem` | `audited_conditional` | A |
 | `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15` | `audited_conditional` | A |
+| `quark_projector_parameter_audit_note_2026-04-19` | `audited_numerical_match` | G |
+| `quark_cp_carrier_completion_note_2026-04-18` | `audited_numerical_match` | G |
+| `quark_projector_ray_phase_completion_note_2026-04-18` | `audited_numerical_match` | G |
+| `quark_up_amplitude_candidate_scan_note_2026-04-19` | `audited_numerical_match` | G |
+| `quark_up_amplitude_native_affine_no_go_note_2026-04-19` | `audited_numerical_match` | G |
+| `quark_up_amplitude_native_expression_scan_note_2026-04-19` | `audited_numerical_match` | G |
+| `gravity_sign_audit_2026-04-10` | `audited_conditional` | B |
+| `universal_qg_optional_textbook_comparison_note` | `audited_renaming` | E |
+| `dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16` | `audited_conditional` | B |
+| `dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16` | `audited_conditional` | B |
 
 ## Structural Patterns
 
@@ -86,6 +96,16 @@ those rows.
 - CKM support rows repeatedly reduced to broad numerical compatibility bands or
   exact local identities plus missing texture/mass-hierarchy authorities, not
   closed CKM observable derivations.
+- The quark projector/up-amplitude continuation consistently landed as
+  numerical-match support: the runners compress the remaining scalar into
+  strong bounded candidate families, but the load-bearing tests still rank
+  selected amplitude laws against fit/comparator metrics.
+- The source-surface neutrino carrier/slot notes have strong exact local
+  algebra over their imported implementations, but their ledger rows omit the
+  one-hop source-surface, carrier, CP, and exact-package authorities needed for
+  a closed theorem audit.
+- `gravity_sign_audit_2026-04-10` points to a missing primary runner path and
+  cites external coupling authorities not supplied in the restricted context.
 
 ## Awaiting Cross-Confirmation
 
@@ -114,6 +134,7 @@ Final commands run:
 python3 docs/audit/scripts/compute_effective_status.py
 python3 docs/audit/scripts/compute_audit_queue.py
 python3 docs/audit/scripts/audit_lint.py --strict
+git diff --check
 ```
 
 `audit_lint --strict` passed with two existing warnings:
