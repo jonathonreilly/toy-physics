@@ -5157,6 +5157,14 @@
       "to": "higgs_vacuum_explicit_systematic_note"
     },
     {
+      "from": "mirror_chokepoint_note",
+      "to": "mirror_chokepoint_boundary_fit_note"
+    },
+    {
+      "from": "mirror_mutual_information_chokepoint_note",
+      "to": "mirror_chokepoint_note"
+    },
+    {
       "from": "native_gauge_closure_note",
       "to": "graph_first_selector_derivation_note"
     },
@@ -17893,7 +17901,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-28T12:35:15.101683+00:00",
+  "generated_at": "2026-04-29T03:48:09.168855+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19433,13 +19441,13 @@
     },
     "bell_inequality_derived_note": {
       "claim_id": "bell_inequality_derived_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained",
+      "current_status": "bounded",
+      "current_status_raw": "bounded reproducible model-surface CHSH violation for the listed finite lattices and selected `G` couplings, with explicit Cl(3) taste-operator checks and `G = 0` null controls. The earlier strong-tier claim depended on selected small lattices and large chosen `G` values plus unregistered assumptions about two-species bipartition and the diagonal periodic-Poisson coupling as the gravitational interaction. Not a tier-ratifiable framework-native or physical gravitational Bell-violation theorem.",
       "deps": [],
-      "note_hash": "732be15e76739011d9bff73c9763e48b5a4acf4fee0f76f5260cc60bcffd6663",
+      "note_hash": "0766665852205e3ec08c57e48f9eae69a3aa020b944f24676a3c459be4a27591",
       "path": "docs/BELL_INEQUALITY_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_bell_inequality.py",
-      "title": "Bell Inequality (CHSH) Violation with Explicit Cl(3) Taste Measurements"
+      "title": "Bell Inequality (CHSH) Violation with Explicit Cl(3) Taste Measurements (Conditional Model Surface)"
     },
     "beyond_lattice_qcd_note": {
       "claim_id": "beyond_lattice_qcd_note",
@@ -19621,20 +19629,20 @@
     },
     "broad_surrogate_point_source_compare_note": {
       "claim_id": "broad_surrogate_point_source_compare_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "bounded interpretive diagnostic on the proposed_retained 3D ordered-lattice family",
+      "current_status": "bounded",
+      "current_status_raw": "bounded interpretive diagnostic comparing broad-source and point-source representations on the upstream 3D ordered-lattice surrogate lane; not a tier-ratifiable persistent-mass, inertial-response, or geometry-generic theorem.",
       "deps": [],
-      "note_hash": "6cd32bbf21c45c4df25ed323bc91e6b091f0139dbb52b1d7c1b814702fc96dc6",
+      "note_hash": "c7f2469700e5666617881982a935a3c86f449f96c8ebbfc2d1509917c20bc4d6",
       "path": "docs/BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md",
       "runner_path": null,
       "title": "Broad Surrogate Point Source Compare Note"
     },
     "broken_graph_action_power_robustness_note": {
       "claim_id": "broken_graph_action_power_robustness_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "bounded graph-damage replay on the proposed_retained 3D ordered-lattice",
+      "current_status": "bounded",
+      "current_status_raw": "bounded graph-damage replay diagnostic on the upstream 3D ordered-lattice family; not a standalone tier-ratifiable theorem, the cited frozen log is missing, and the cited relation notes are themselves bounded fixed-family controls rather than audit-clean dependencies.",
       "deps": [],
-      "note_hash": "d403bc0ff834c0c09fc962281bf3cdb14491ec28f22b0b5f94c6d4b79fd68340",
+      "note_hash": "759d812a0dfbecaef3f6991044e52a4cff77a7aceab1b6dc40a349e4323425ec",
       "path": "docs/BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md",
       "runner_path": null,
       "title": "Broken-Graph Action-Power Robustness Note"
@@ -19932,13 +19940,13 @@
     },
     "causal_escape_window_note": {
       "claim_id": "causal_escape_window_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained positive \u2014 escape regime exists but mechanism is exposure reduction, not irreducible cone geometry",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional finite-window diagnostic at `eta = 20` on the listed seeds \u2014 escape regime exists in the registered runner output, but the broader mechanism / boundary package (exposure-matched static escape, `c_crit` / `eta_max` / s-dependence tables, four-seed robustness gate) is not computed by the runner. Not a tier-ratifiable causal-escape theorem.",
       "deps": [],
-      "note_hash": "2c943920437066c93d92e5df32ecf61bcb6777dfe90e5f670b2d705a4fd84ef9",
+      "note_hash": "9e22a9134a48246a2df0f06162aef738ae23699218d40773b0c7858ea9c45897",
       "path": "docs/CAUSAL_ESCAPE_WINDOW_NOTE.md",
       "runner_path": null,
-      "title": "Causal-Escape Window: Qualitative Regime"
+      "title": "Causal-Escape Window: Qualitative Regime (Conditional)"
     },
     "causal_field_canonical_chain_note": {
       "claim_id": "causal_field_canonical_chain_note",
@@ -19962,10 +19970,10 @@
     },
     "causal_field_reconciliation_note": {
       "claim_id": "causal_field_reconciliation_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "diagnosed harness boundary for the fixed-anchor cross-family replay; proposed_retained center-family causal-field result remains valid",
+      "current_status": "bounded",
+      "current_status_raw": "bounded harness-boundary diagnostic for the fixed-anchor cross-family replay; the upstream center-family causal-field result is **not** asserted as valid by this note (the cited runner emits no executable verification and the cited diagnostic logs are missing).",
       "deps": [],
-      "note_hash": "30868eaadfe23c4b37b825c105559c4bca2565fe8afeaffe602cfecb380151d2",
+      "note_hash": "b76057aab61b9dccff219641911313d56a9f13add76b7a95d40f7091470071ee",
       "path": "docs/CAUSAL_FIELD_RECONCILIATION_NOTE.md",
       "runner_path": null,
       "title": "Causal Field Reconciliation Note"
@@ -21170,10 +21178,10 @@
     },
     "clifford_bimodule_ray_saturation_future_target_note_2026-04-19": {
       "claim_id": "clifford_bimodule_ray_saturation_future_target_note_2026-04-19",
-      "current_status": "proposed_retained",
-      "current_status_raw": "**Future mathematical target.** Explicitly NOT a proposed_retained",
+      "current_status": "open",
+      "current_status_raw": "open / future mathematical target (status line rephrased 2026-04-28 per audit-lane verdict). This is a named research target; it is not a theorem, has no runner, has no proof, and is not part of the current publishable claim surface. Named and scoped as the concrete math target that, if proven,",
       "deps": [],
-      "note_hash": "9a35e1487c4df4c559ccb38cf60d1bd8fd6eed95b32e7a7d9b568ecebc2bebe6",
+      "note_hash": "9e1f45295dd2d6c87e76858da3fe4a21dd6545d013f3e5831862b165cd832156",
       "path": "docs/CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Clifford Bimodule Ray-Saturation Theorem \u2014 Future Target"
@@ -21190,13 +21198,13 @@
     },
     "complex_action_note": {
       "claim_id": "complex_action_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained positive \u2014 complex action unifies gravity and horizons while preserving Born rule",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional one-parameter complex-kernel model \u2014 `gamma = 0` reduces to the real-action propagator, linearity keeps `I_3` near machine zero, and positive `gamma` produces absorption-biased escape/centroid behavior in the listed setup. The free `gamma` is not derived from Cl(3)/Z^3 or the gravity chain, and absorption-biased AWAY centroid shifts are not horizon physics without photon-sphere / Schwarzschild / Hawking / causal-horizon tests. Not a tier-ratifiable gravity-horizon unification theorem.",
       "deps": [],
-      "note_hash": "713576f0610f01bc980faf04315dfbdf6fdc77f6372a0b049bdb37a789bdb21f",
+      "note_hash": "ab2ac2fdc758cfeca9ba68841e3dc0eb7868acbd46fe4525be01c15bc9fe7e7c",
       "path": "docs/COMPLEX_ACTION_NOTE.md",
       "runner_path": null,
-      "title": "Complex Action: Gravity + Horizons Unification"
+      "title": "Complex Action: Gravity + Horizons Unification (Conditional Model)"
     },
     "complex_selectivity_compare_note": {
       "claim_id": "complex_selectivity_compare_note",
@@ -21220,10 +21228,10 @@
     },
     "composite_source_additivity_2d_note": {
       "claim_id": "composite_source_additivity_2d_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "bounded second-family additivity probe on the proposed_retained 2D ordered lattice",
+      "current_status": "bounded",
+      "current_status_raw": "bounded second-family additivity probe on the upstream 2D ordered lattice; not a standalone tier-ratifiable theorem and depends on unregistered upstream 2D ordered-lattice / continuum lane and 3D additivity note dependencies. Persistent-pattern inertia is explicitly left open.",
       "deps": [],
-      "note_hash": "132d6766c6ec9210a9dbf5b56148f252a6315559b81bd84d7f758afb5c4fc7b2",
+      "note_hash": "5fe26e93bca2f2dfcc055d889465f96cbabb2fbd5f8d817e73c2d7a2407dfb0d",
       "path": "docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md",
       "runner_path": null,
       "title": "Composite-Source Additivity Cross-Family Note"
@@ -21250,10 +21258,10 @@
     },
     "connectivity_family_v2_elliptical_duplicate_note": {
       "claim_id": "connectivity_family_v2_elliptical_duplicate_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "diagnostic duplicate of the portable sign-law fixed point; not a new proposed_retained family",
+      "current_status": "support",
+      "current_status_raw": "support / diagnostic duplicate of the portable sign-law fixed point; the elliptical-shell slice sits inside the existing sign-portability invariant and is not a new tier-ratifiable family.",
       "deps": [],
-      "note_hash": "471aea7f4e3ca4f821c0eac641a94cb6c0d7cb35eefc487902b7b3665bc45f1b",
+      "note_hash": "71dd234fda33747c9b473e68f8a068cda68d6dd9412a24c331e2458eca8d6eed",
       "path": "docs/CONNECTIVITY_FAMILY_V2_ELLIPTICAL_DUPLICATE_NOTE.md",
       "runner_path": null,
       "title": "Connectivity Family V2 Elliptical Duplicate Note"
@@ -21448,13 +21456,13 @@
     },
     "cross_family_universality_note": {
       "claim_id": "cross_family_universality_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained POSITIVE (bounded) \u2014 at H=0.5, the family-mean dispersion and lensing observables are consistent across all three tested DAG families. The Schr\u00f6dinger/KG near-tie persists in every family. However, per-seed variance is large (slope \u03c3 \u2248 0.16\u20130.23), so the supported claim is \"no detectable family effect at H=0.5,\" not \"the physics is family-independent.\" Fine-H (H=0.25) universality is **untested** for Fam2 and Fam3.",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional finite-runner consistency at `H = 0.5` \u2014 family-mean dispersion and lensing observables agree across the three tested DAG families on the registered seed-mean output, with the Schr\u00f6dinger/KG near-tie holding in each family. Per-seed variance and statistical power are not reported by the runner, so the \"no detectable family effect\" wording is unsupported; fine-H (`H = 0.25`) universality is untested on Fam2 / Fam3. Not a tier-ratifiable universality theorem.",
       "deps": [],
-      "note_hash": "c3c03026645907855bd317c25c24970d931a6fa295dd56a7703ffe567ab964bb",
+      "note_hash": "141cca89f25840dae3b3932b9bf077d3a1eb3cfa5cea8d0de737318c3a025c72",
       "path": "docs/CROSS_FAMILY_UNIVERSALITY_NOTE.md",
       "runner_path": null,
-      "title": "Cross-Family Consistency: Dispersion + Lensing at H=0.5"
+      "title": "Cross-Family Consistency: Dispersion + Lensing at H=0.5 (Conditional)"
     },
     "cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25": {
       "claim_id": "cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25",
@@ -21827,10 +21835,10 @@
     },
     "distance_law_breakpoint_note": {
       "claim_id": "distance_law_breakpoint_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained narrow breakpoint diagnosis",
+      "current_status": "bounded",
+      "current_status_raw": "bounded narrow breakpoint table \u2014 the runner reprints hard-coded `alpha` / direction rows; the architecture-feature diagnosis (open directed vs shell vs reflection vs deep-branch routing) is not closed by matched ablation computations. Cited distance-law portability note is unknown; sign-invariant context is conditional. Not a tier-ratifiable architecture-feature theorem.",
       "deps": [],
-      "note_hash": "e34d373bd92c63dbd1f30eb191f45ee45d612fe7da13cc7437943a5c449311ed",
+      "note_hash": "24bff63d0d5d742245b5d59f1ec472b70780530129439c038d37ed7bd08be219",
       "path": "docs/DISTANCE_LAW_BREAKPOINT_NOTE.md",
       "runner_path": null,
       "title": "Distance Law Breakpoint Note"
@@ -21847,10 +21855,10 @@
     },
     "distance_law_frontier_audit_note": {
       "claim_id": "distance_law_frontier_audit_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained frontier note, now superseded upward by the independently replayed wide-lattice `h^2+T` result on `main`",
+      "current_status": "support",
+      "current_status_raw": "support / frontier-summary note, no runner registered, depends on three unaudited upstream distance-law notes; not a tier-ratifiable summary on its own.",
       "deps": [],
-      "note_hash": "67184b4d6f6e1edb5b3d2aa3502f3d819382c343213b80124431eac2e76f95e9",
+      "note_hash": "27fb890424b8c4509a2bcde8f7defee9fda79489f69ed91841ee5ceb409439b5",
       "path": "docs/DISTANCE_LAW_FRONTIER_AUDIT_NOTE.md",
       "runner_path": null,
       "title": "Distance Law Frontier Audit"
@@ -22596,13 +22604,13 @@
     },
     "dm_neutrino_bosonic_normalization_theorem_note_2026-04-15": {
       "claim_id": "dm_neutrino_bosonic_normalization_theorem_note_2026-04-15",
-      "current_status": "proposed_retained",
-      "current_status_raw": "EXACT normalization selector on the proposed_retained local Higgs family",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional normalization selector on the upstream local Higgs family \u2014 IF physical local scalar observables are taken to be exactly `W[J]` source-response coefficients (the observable-principle premise), THEN the algebraic checks close. The observable-principle premise is not registered as an audit-clean theorem in the audit packet, and the runner only checks `Y` log-det response and `Gamma_1` even response, not the admissibility of active-space ratios. Not a tier-ratifiable normalization selector.",
       "deps": [],
-      "note_hash": "e2c1a5e18dcc1cd2fa1aeea5022f69cd7f9fff68302973ba74845701cf924a75",
+      "note_hash": "b2cebc816c44f12e49e01bd49bb4559125eb05e64c8c6be1ac05aef1768dd826",
       "path": "docs/DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_bosonic_normalization_theorem.py",
-      "title": "DM Neutrino Bosonic Normalization Theorem"
+      "title": "DM Neutrino Bosonic Normalization Theorem (Conditional)"
     },
     "dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15": {
       "claim_id": "dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15",
@@ -22886,10 +22894,10 @@
     },
     "dm_neutrino_schur_suppression_theorem_note_2026-04-15": {
       "claim_id": "dm_neutrino_schur_suppression_theorem_note_2026-04-15",
-      "current_status": "proposed_retained",
-      "current_status_raw": "exact second-order suppression theorem on the proposed_retained local lane",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional theorem \u2014 IF the projectors and block `M(m, j)` are supplied as inputs, THEN the Schur return gives `j^2 / m`, and therefore `g_weak^2 / 64` IF additionally `m = 32` and `j = g_weak / sqrt(2)`. The IF-conditions (selector curvature, Gamma_1 bridge, bosonic normalization, DM staircase relation) are not registered as audit-clean dependencies; this is conditional algebra on selected inputs, not an independently audit-clean DM denominator result.",
       "deps": [],
-      "note_hash": "b403233e43aa76736efe859b7b797d4917bea240119b19a00111d5414389c0c9",
+      "note_hash": "cbef2c3ead62532d50a9456bcc1734c6fad24a34347f0c8a6fe5b72b5df9be3d",
       "path": "docs/DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_schur_suppression_theorem.py",
       "title": "DM Neutrino Schur Suppression Theorem"
@@ -24484,10 +24492,10 @@
     },
     "electrostatics_grown_sign_law_note": {
       "claim_id": "electrostatics_grown_sign_law_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained narrow grown-geometry sign-law companion",
+      "current_status": "bounded",
+      "current_status_raw": "bounded narrow grown-geometry sign-law companion \u2014 frozen numerical results for one fixed grown geometry row; the runner is not registered in the audit ledger and the artifact links use absolute local paths outside the audit packet.",
       "deps": [],
-      "note_hash": "4e011be653c80df5cc9771da1d4b6e367b4a56a4d8eeb372cc2b53e452ca2385",
+      "note_hash": "84dc0c6cbb84a0236d1b49b47056039db5e56a976ed34e570012b944b624891a",
       "path": "docs/ELECTROSTATICS_GROWN_SIGN_LAW_NOTE.md",
       "runner_path": null,
       "title": "Electrostatics Grown Sign-Law Note"
@@ -24524,13 +24532,13 @@
     },
     "emergent_lorentz_invariance_note": {
       "claim_id": "emergent_lorentz_invariance_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained exact structural theorem with proposed_retained hierarchy-scale",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional structural-dispersion theorem on the cubic Z\u00b3 lattice \u2014 IF exact CPT, exact/tree-level parity protection against odd-dimension LV, and the hierarchy-scale identification `a ~ 1/M_Planck` are supplied as bridge premises, THEN the registered structural-dispersion / cubic-harmonic results imply Lorentz invariance to the reported precision. The IF-conditions are not registered as audit-clean dependencies. Not a tier-ratifiable Lorentz-invariance theorem on its own.",
       "deps": [],
-      "note_hash": "b0d095ed469612b774a161303190cd133194098f30498f908a424654eb544413",
+      "note_hash": "296429f41517fec385da2461b9423dec161f859714822611a94680e67a8d4973",
       "path": "docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md",
       "runner_path": "scripts/frontier_emergent_lorentz_invariance.py",
-      "title": "Emergent Lorentz Invariance from the Cubic Z\u00b3 Lattice"
+      "title": "Emergent Lorentz Invariance from the Cubic Z\u00b3 Lattice (Conditional)"
     },
     "emergent_product_law_audit_2026-04-11": {
       "claim_id": "emergent_product_law_audit_2026-04-11",
@@ -24600,20 +24608,20 @@
     },
     "evolving_network_prototype_v2_note": {
       "claim_id": "evolving_network_prototype_v2_note",
-      "current_status": "proposed_promoted",
-      "current_status_raw": "bounded Gate B prototype note, not a proposed_promoted dynamics theorem",
+      "current_status": "bounded",
+      "current_status_raw": "bounded Gate B prototype note; not a closed Gate B dynamics theorem and not a tier-ratified dynamics result.",
       "deps": [],
-      "note_hash": "0bfeaa873ffe19337545a45b5fe77f6a7111959251aaa67fe0c172c12437b84a",
+      "note_hash": "f7b54e55480dc491f4bd555b20e8ecb4007b8ecd1a03f717b3b5d3bd2319787c",
       "path": "docs/EVOLVING_NETWORK_PROTOTYPE_V2_NOTE.md",
       "runner_path": null,
       "title": "Evolving Network Prototype V2 Note"
     },
     "evolving_network_prototype_v3_note": {
       "claim_id": "evolving_network_prototype_v3_note",
-      "current_status": "proposed_promoted",
-      "current_status_raw": "public Gate B control audit, not a proposed_promoted dynamics result",
+      "current_status": "bounded",
+      "current_status_raw": "bounded Gate B control audit; cleaner control discipline relative to v2 but not a closed dynamics result and not a tier-ratified Gate B claim.",
       "deps": [],
-      "note_hash": "7c9d64342d5cea2769f5a875709f0a6459a2e2861d109896dff8186a6a4f21c8",
+      "note_hash": "5a05bf13750ee439902143539d11bbff887f6957e03b583259ef88911224e793",
       "path": "docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md",
       "runner_path": null,
       "title": "Evolving Network Prototype V3 Note"
@@ -24725,10 +24733,10 @@
     },
     "family_companion_compare_note": {
       "claim_id": "family_companion_compare_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "narrow cross-family comparison card for the proposed_retained fixed-companion weak-field law",
+      "current_status": "support",
+      "current_status_raw": "support / cross-family comparison card pointing to other notes for the fixed-companion weak-field law; static summary only, no audit-registered dependency chain, no runner that recomputes controls and `F~M` values.",
       "deps": [],
-      "note_hash": "8abbd4c985e2486c2ddc8474fbf7d52b58a5c65bc718efc1512f6c1124feff79",
+      "note_hash": "0476691579b4a2232c5f669f8d4e30fa77b645fd9258612c5adef63b83370c1e",
       "path": "docs/FAMILY_COMPANION_COMPARE_NOTE.md",
       "runner_path": null,
       "title": "Family Companion Compare Note"
@@ -24865,10 +24873,10 @@
     },
     "four_d_distance_width_probe_note": {
       "claim_id": "four_d_distance_width_probe_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "bounded support chain for the proposed_retained 4D valley-linear family; not an asymptotic closure claim",
+      "current_status": "bounded",
+      "current_status_raw": "bounded width-limited support chain on the upstream 4D valley-linear family with `W = 5..7` reproduced live and `W = 8` present only as a frozen companion log; dimensional-table relation is unaudited / unknown; not a tier-ratifiable 4D family theorem and not an asymptotic distance-law closure.",
       "deps": [],
-      "note_hash": "414c6dadfcfd80016fcb866119d17bcdc539b82e4c3137e908fa40fa4a8d5eaf",
+      "note_hash": "b64c071c5d9cdb010a6366acfc247b13cd4beb78779ad3be0fe0df70305410d6",
       "path": "docs/FOUR_D_DISTANCE_WIDTH_PROBE_NOTE.md",
       "runner_path": null,
       "title": "4D Distance Width Probe Note"
@@ -25060,10 +25068,10 @@
     },
     "gate_b_complex_action_falsifier_note": {
       "claim_id": "gate_b_complex_action_falsifier_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "tiny falsification-first complex-action probe on the proposed_retained Gate B grown row",
+      "current_status": "bounded",
+      "current_status_raw": "bounded tiny falsification-first complex-action probe \u2014 local detector-attenuation effect is verified on the named row, but the inherited Gate B / Born guardrail comes from an upstream bounded / unaudited note; not a tier-ratifiable complex-action branch claim.",
       "deps": [],
-      "note_hash": "af50eb73c135eba85d332bcc6eaf54cadeffcc9e29936f7bf91b203607362cdd",
+      "note_hash": "0397a859f53bea308b1a28f237f0f25a7552edcebaefbfe06b64df3804728074",
       "path": "docs/GATE_B_COMPLEX_ACTION_FALSIFIER_NOTE.md",
       "runner_path": null,
       "title": "Gate B Complex-Action Falsifier Note"
@@ -25795,13 +25803,13 @@
     },
     "global_coherence_off_scaffold_note": {
       "claim_id": "global_coherence_off_scaffold_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained negative \u2014 the frozen rule `free_coh \u2265 7.96e-04` generalizes to only 5/9 = 55.6% on off-scaffold generators, matching the old node-level rule exactly. The grid scaffold was doing work the classifier was attributing to `free_coh`. The simple-classifier line of attack is now exhausted. A pre-committed structural pass/fail intuition hits 8/9 = 88.9%, suggesting the underlying physics is predictable \u2014 but not with a single node-level or single-global scalar metric.",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional finite off-scaffold negative \u2014 the frozen rule `free_coh \u2265 7.96e-04` generalizes to only 5/9 on the nine hand-specified off-scaffold generators tested by the registered runner. The broader claim that no single node-level or global scalar metric carries the weight off-scaffold is not closed by the runner; it tests one frozen threshold against one two-property rule on a small held-out set. Not a tier-ratifiable simple-classifier exhaustion theorem.",
       "deps": [],
-      "note_hash": "d3427feada74e62a696e91fb9d487bcc5e469d41d8cd05216c197732e76b4cfd",
+      "note_hash": "9082b0ca1db771e22b3de0fd0a50fd3971760447bd5fbf4272070531b64d58c5",
       "path": "docs/GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md",
       "runner_path": null,
-      "title": "Off-Scaffold Held-Out Test of `free_coh` \u2014 DECISIVE NEGATIVE"
+      "title": "Off-Scaffold Held-Out Test of `free_coh` \u2014 Bounded Conditional Negative"
     },
     "global_coherence_predictor_note": {
       "claim_id": "global_coherence_predictor_note",
@@ -26014,13 +26022,13 @@
     },
     "gravity_clean_derivation_note": {
       "claim_id": "gravity_clean_derivation_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained weak-field gravity core",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional weak-field gravity chain \u2014 IF the framework imposes the self-consistency condition `L^{-1} = G_0`, the Born/mass-density source map `rho = |psi|^2`, and the weak-field test-mass response `S = L(1 - phi)`, THEN the `Z^3` Laplacian Green function gives a `1/r` potential and inverse-square force in lattice units. The IF-conditions are not currently registered as audit-clean dependencies and no primary runner is registered. Not yet an audit-clean derivation from the single axiom alone.",
       "deps": [],
-      "note_hash": "aac957e736cacf83ffb9c2201402e041c1f16d720a845b63ebed4166b650dd50",
+      "note_hash": "5be3d259dc3b28ca373d03610b045f4e2f1980dad03890c7a0b0adb8e63ded6d",
       "path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
       "runner_path": null,
-      "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law"
+      "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)"
     },
     "gravity_cosmology_tower_lambda_spectral_bridge_theorem_note_2026-04-25": {
       "claim_id": "gravity_cosmology_tower_lambda_spectral_bridge_theorem_note_2026-04-25",
@@ -26069,10 +26077,10 @@
     },
     "gravity_observable_hierarchy_note": {
       "claim_id": "gravity_observable_hierarchy_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "canonical sign-interpretation note for proposed_retained lattice branches",
+      "current_status": "bounded",
+      "current_status_raw": "bounded sign-interpretation note for the dense-3D lattice family on the rows the registered runner actually computes (`z = 3` and `z = 5`); the broader `z = 2..6` example table extends past what the runner asserts and is not in scope for ratification.",
       "deps": [],
-      "note_hash": "8c43347eb4b05a6da26a2c912181173c1a96388a279a81e974e4b78dd2da82f5",
+      "note_hash": "f53bc28fe510c9516473898f8be01bc1d86f51258e1a17fc120403c722f90bf2",
       "path": "docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md",
       "runner_path": null,
       "title": "Gravity Observable Hierarchy"
@@ -28404,10 +28412,10 @@
     },
     "lattice_kernel_transfer_norm_note": {
       "claim_id": "lattice_kernel_transfer_norm_note",
-      "current_status": "proposed_promoted",
-      "current_status_raw": "bounded discrimination probe, not a proposed_promoted branch claim",
+      "current_status": "bounded",
+      "current_status_raw": "bounded local discrimination probe; not a branch-promotion claim and not a continuum-limit theorem.",
       "deps": [],
-      "note_hash": "907d9d1fa32bb9606101b841657f11c6f361851cbe1d5eae15126e838392d6fd",
+      "note_hash": "a552d1072fabb912a94b47c6adab0194a9f9c67b1975e07732dd1eedeabd39f6",
       "path": "docs/LATTICE_KERNEL_TRANSFER_NORM_NOTE.md",
       "runner_path": null,
       "title": "3D Kernel Transfer-Norm Probe"
@@ -28434,10 +28442,10 @@
     },
     "lattice_nn_distance_law_note": {
       "claim_id": "lattice_nn_distance_law_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained distance-law signal on the refinement path inherited from the",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional distance-law signal on the refinement path \u2014 live distance-law numbers reproduce in the runner, but the path is inherited from an upstream Born-clean NN branch whose note is not audit-clean; archived logs named by the source are absent from this worktree; the distance runner does not check Born or `k = 0`. Not a tier-ratifiable Born-safe refinement-path theorem.",
       "deps": [],
-      "note_hash": "2fdaf10ceff40510bf9de3f440687100ea35c79513cfbd713cc28f072c5d245f",
+      "note_hash": "1f77939b889ff5d61c44061ea9cb73eeb7b0b022afabebde994b51db4059f92c",
       "path": "docs/LATTICE_NN_DISTANCE_LAW_NOTE.md",
       "runner_path": null,
       "title": "NN Lattice Distance-Law Note"
@@ -28514,10 +28522,10 @@
     },
     "lattice_synthesis_guard_note": {
       "claim_id": "lattice_synthesis_guard_note",
-      "current_status": "proposed_promoted",
-      "current_status_raw": "synthesis narrow; NN refinement is a bounded bridge, not a proposed_promoted continuum theorem",
+      "current_status": "bounded",
+      "current_status_raw": "support / narrow synthesis guard note; NN refinement is a bounded bridge, not a continuum theorem and not a tier-ratifiable continuum claim.",
       "deps": [],
-      "note_hash": "03bc81ef4edbfa6d0bcf542a5cfc56ac141dcf313f952897de45def4cf8d5d03",
+      "note_hash": "b9e06290d1972580da24b31d3fd237c048c2683e9d0612891a2f43a7544c3202",
       "path": "docs/LATTICE_SYNTHESIS_GUARD_NOTE.md",
       "runner_path": null,
       "title": "Lattice Synthesis Guard Note"
@@ -28604,10 +28612,10 @@
     },
     "lensing_beta_sweep_note": {
       "claim_id": "lensing_beta_sweep_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained negative. The apparent coarse-grid `beta=5` recovery of",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional negative (status line narrowed 2026-04-28 per audit-lane verdict). The reported coarse-grid `beta = 5` recovery of canonical `1/b` lensing is described in this note as an isolated coarse-resolution spike that is unstable under nearby `beta = 7, 10` and under H-refinement at `H = 0.35`. The runner is not registered in the audit ledger; the result is scoped to Fam1 `b = {3, 4, 5, 6}`; the adjoint-kernel authority used for interpretation is not registered. Not a tier-ratifiable negative theorem.",
       "deps": [],
-      "note_hash": "2f639aacec36fe13959465facba0a86d23650a02f513c3ca63dc8b347cb5a24c",
+      "note_hash": "9b8892a41363caccd80cb1661c47d1989fb40068bda490e8136d10798344dfc5",
       "path": "docs/LENSING_BETA_SWEEP_NOTE.md",
       "runner_path": null,
       "title": null
@@ -28648,13 +28656,13 @@
     },
     "lensing_k_sweep_note": {
       "claim_id": "lensing_k_sweep_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained STRONG DIAGNOSTIC \u2014 the lensing slope oscillates between +0.58 and \u22121.43 across k\u00b7H \u2208 {0.5, ..., 5.0}. The \u22121.40 at k\u00b7H=2.5 is NOT a geometric invariant \u2014 it is one point on a k-dependent interference curve. At k\u00b7H=0.5 the deflection reverses sign (repulsive). At k\u00b7H=5.0 all seeds are repulsive. The eikonal gap oscillates in sign with k, confirming it is a wave-coupling effect.",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional diagnostic \u2014 the lensing slope oscillates between +0.58 and \u22121.43 across `k\u00b7H \u2208 {0.5, ..., 5.0}` on a single Fam1 setup with three seeds per `k\u00b7H` value. The k-sweep runner is not registered in the audit ledger; the wave-interference-mechanism inference is stronger than the k-sweep table alone supports without registered kernel/mode analysis. Not a tier-ratifiable framework theorem.",
       "deps": [],
-      "note_hash": "0ebc9a9e0a56bc9e44373229ccf819a25b391fccee660c393f35be27ad4db06a",
+      "note_hash": "d77d6b69c233c7984ec2eafd448bf73397c6402e2b0de243387a648cf94f41bb",
       "path": "docs/LENSING_K_SWEEP_NOTE.md",
       "runner_path": null,
-      "title": "Lensing Slope vs k (Phase Coupling): Strongly k-Dependent"
+      "title": "Lensing Slope vs k (Phase Coupling): k-Dependent (Conditional Diagnostic)"
     },
     "lensing_long_path_test_note": {
       "claim_id": "lensing_long_path_test_note",
@@ -28750,10 +28758,10 @@
     },
     "linear_response_true_kubo_note": {
       "claim_id": "linear_response_true_kubo_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained positive \u2014 literal first-order d(cz)/ds computed symbolically from the propagator via a parallel perturbation recurrence matches the measured finite-difference response at **r = 0.9716 overall and r = 0.9995 off-scaffold** across 44 families. Sign agreement **42/44 = 95.5%**. The three residual sign misses from the previous heuristic lane are all correctly captured. This is the analytic first-order derivation that the \"compact underlying principle\" row has been asking for.",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional first-order response formula on the specified propagator/field, subject to the derivation assumptions in the note. The 44-family correlation/sign-agreement battery (`r = 0.9716` overall, `r = 0.9995` off-scaffold, 42/44 sign agreement) is unratified numerical support \u2014 it depends on a runner that is not registered in the audit ledger as the primary runner. Not a tier-ratifiable physical theorem until the runner is registered, the dataset is regenerable, and hard thresholds are wired into the runner.",
       "deps": [],
-      "note_hash": "d747f13c1815e49efc32a0b0f994171cf7aaad0dd02f3e0124b3f14489a6c5c8",
+      "note_hash": "8ca5bf19ddc98644526c2286142be11b2acd8e3aab57410bfb053feabd132477",
       "path": "docs/LINEAR_RESPONSE_TRUE_KUBO_NOTE.md",
       "runner_path": null,
       "title": "True First-Order Kubo \u2014 Closed-Form Analytic Derivation"
@@ -29049,10 +29057,10 @@
     },
     "mesoscopic_surrogate_threshold_2d_note": {
       "claim_id": "mesoscopic_surrogate_threshold_2d_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "bounded control note; proposed_retained 2D support sweep found no sharp",
+      "current_status": "bounded",
+      "current_status_raw": "bounded control note; finite 2D support sweep found no sharp threshold in two-stage sourced-response stability and is not a persistent-mass or inertial-response theorem.",
       "deps": [],
-      "note_hash": "525344a61ea8c93368a6cb269e71481f7725fcbf4a3a43e857dd8bde909738e6",
+      "note_hash": "919ba0bcb2682c6230c5677ed58de9426bd49ccbc79702a9672b9068d15ef965",
       "path": "docs/MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md",
       "runner_path": null,
       "title": "Mesoscopic Surrogate Threshold 2D Note"
@@ -29128,10 +29136,10 @@
     },
     "mirror_2d_gravity_law_note": {
       "claim_id": "mirror_2d_gravity_law_note",
-      "current_status": "proposed_promoted",
-      "current_status_raw": "gravity-law cleanup complete; no clean 2D mirror law proposed_promoted",
+      "current_status": "bounded",
+      "current_status_raw": "bounded null-result note \u2014 gravity-law cleanup found no clean 2D mirror mass law and no clean 2D mirror distance law on the searched windows.",
       "deps": [],
-      "note_hash": "f14a869983e9987213a3b1d949e56e36c8a184920c4d0153e527c3203804dffb",
+      "note_hash": "a69fe1134adf919ef597c2f1508b31a8096b9e9a451a0e0de60be389f6792d55",
       "path": "docs/MIRROR_2D_GRAVITY_LAW_NOTE.md",
       "runner_path": null,
       "title": "Exact 2D Mirror Gravity-Law Cleanup Note"
@@ -29158,10 +29166,12 @@
     },
     "mirror_chokepoint_note": {
       "claim_id": "mirror_chokepoint_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained bounded mirror pocket through `N = 100`; `N = 120` loses gravity",
-      "deps": [],
-      "note_hash": "1929b93dadf14ee0c6cc73a4bb7d7049065ee90853f92919e0f0feb39bb32cea",
+      "current_status": "bounded",
+      "current_status_raw": "bounded finite mirror chokepoint diagnostic across stitched parameter surfaces; not a single-surface family theorem and not an asymptotic claim.",
+      "deps": [
+        "mirror_chokepoint_boundary_fit_note"
+      ],
+      "note_hash": "f9bb9452cae52f710b8eb2458498397d1e44c2ee8417a26ef5e90b39bec79584",
       "path": "docs/MIRROR_CHOKEPOINT_NOTE.md",
       "runner_path": null,
       "title": "Mirror Chokepoint Note"
@@ -29178,10 +29188,10 @@
     },
     "mirror_grown_combined_note": {
       "claim_id": "mirror_grown_combined_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "exploratory only; does not approximate the proposed_retained higher-symmetry benefit",
+      "current_status": "bounded",
+      "current_status_raw": "bounded exploratory negative control; the grown-symmetry scout does not approximate the higher-symmetry mirror / Z2 x Z2 benefit and is not a successor lane.",
       "deps": [],
-      "note_hash": "382ce62f64c63aebac1045bb7f0dad4d7fafcee954b96202a53d6ceabfd15bf1",
+      "note_hash": "5971fe8cc172a2b2a64bda75580099f7996fc6727e0d46464c92017c3018868c",
       "path": "docs/MIRROR_GROWN_COMBINED_NOTE.md",
       "runner_path": null,
       "title": "Mirror + Grown Combined Note"
@@ -29198,10 +29208,12 @@
     },
     "mirror_mutual_information_chokepoint_note": {
       "claim_id": "mirror_mutual_information_chokepoint_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "canonical exact-mirror MI artifact chain on the proposed_retained dense chokepoint family",
-      "deps": [],
-      "note_hash": "cc918e3f55f4b788dc4271e0084f2bf81248a937b5eecbf79463457fba5148fc",
+      "current_status": "bounded",
+      "current_status_raw": "bounded finite mid-N exact-mirror MI diagnostic on a single dense chokepoint parameter card. Not a clean asymptotic theorem; not a whole-window mirror MI advantage.",
+      "deps": [
+        "mirror_chokepoint_note"
+      ],
+      "note_hash": "1ab930fc5c97243ad06bf6d28837db7768966f573949e27ef04cfd04aeaf9f38",
       "path": "docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md",
       "runner_path": null,
       "title": "Mirror Mutual Information Chokepoint Note"
@@ -29238,10 +29250,10 @@
     },
     "mirror_vs_lattice_program_note": {
       "claim_id": "mirror_vs_lattice_program_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "canonical comparison note for the proposed_retained mirror flagship and the",
+      "current_status": "support",
+      "current_status_raw": "support / cross-program comparison index pointing to other notes; not a tier-ratified result on its own and inherits-down from any unaudited / conditional / failed cited authority.",
       "deps": [],
-      "note_hash": "5abdefef8015f667489ba21063e55220afa48da5fd24ddf462b4cd203c4a5207",
+      "note_hash": "9eb4bdd308f28bdc11ba68445a4f41f1ca002b3cbeb9044a0387036a89311e2d",
       "path": "docs/MIRROR_VS_LATTICE_PROGRAM_NOTE.md",
       "runner_path": null,
       "title": "Mirror vs Lattice Program Note"
@@ -29525,10 +29537,10 @@
     },
     "neutrino_dirac_z3_support_trichotomy_note": {
       "claim_id": "neutrino_dirac_z3_support_trichotomy_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "exact support theorem on the proposed_retained Dirac-neutrino lane,",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional theorem \u2014 IF generation charges `q_L = (0, +1, -1)`, `q_R = (0, -1, +1)`, and a single Higgs doublet with one definite `Z_3` charge `q_H` are supplied as inputs, THEN `Y_nu` support reduces to one of three three-entry permutation patterns. The IF-conditions are not currently registered as audit-clean dependencies; this note is therefore not yet a tier-ratifiable derivation.",
       "deps": [],
-      "note_hash": "dbe2f786aede7cf1a9fc08714e52782c7dc9ed0cd372f6ffd53c183674af7919",
+      "note_hash": "830f3a016c11b31834983cb618ef0f97a8b1ab53fe1d4c539ac8d381832c36bd",
       "path": "docs/NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_dirac_z3_support_trichotomy.py",
       "title": "Neutrino Dirac `Z_3` Support Trichotomy"
@@ -30572,10 +30584,10 @@
     },
     "persistent_inertial_response_readiness_note": {
       "claim_id": "persistent_inertial_response_readiness_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "bounded readiness audit; packet re-identification control now exists, and quasi-persistent relaunch/compression probes are now proposed_retained, but no persistent-mass theorem yet",
+      "current_status": "bounded",
+      "current_status_raw": "support / bounded readiness audit pointing to other notes; multiple cited authorities are unaudited / conditional / failed, so this readiness summary cannot itself be tier-ratified. No persistent-mass theorem is asserted by this note.",
       "deps": [],
-      "note_hash": "310343c89a5d3cbccbf5de9bfb839d7cc70bc7755d616729397e315373cff638",
+      "note_hash": "4e7c7b7e4efc1157098a1eadf8b6fee256be19e8d4c5f2bcfd4742fe5d34da3d",
       "path": "docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md",
       "runner_path": null,
       "title": "Persistent Inertial-Response Readiness Note"
@@ -31458,10 +31470,10 @@
     },
     "poisson_self_gravity_mechanism_note": {
       "claim_id": "poisson_self_gravity_mechanism_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "frozen as a control-only family, not a proposed_retained self-gravity mechanism",
+      "current_status": "bounded",
+      "current_status_raw": "bounded control-only family; the exact-lattice Poisson self-gravity mechanism does not close on the four hard-bar criteria and is not a tier-ratified self-gravity mechanism.",
       "deps": [],
-      "note_hash": "93c345a2b1a3ab3d574cc4383d4a3a13eca2895f7d0ceb009d8347135215d97d",
+      "note_hash": "97e6d6c3e04a0e36dcb0c78c769657b26dafca3121c2e8d965af1e4a737bae84",
       "path": "docs/POISSON_SELF_GRAVITY_MECHANISM_NOTE.md",
       "runner_path": null,
       "title": "Poisson Self-Gravity Mechanism Note"
@@ -33900,10 +33912,10 @@
     },
     "qnm_control_hardening_note": {
       "claim_id": "qnm_control_hardening_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "bounded control program only; no proposed_retained spectral claim yet",
+      "current_status": "bounded",
+      "current_status_raw": "bounded control program only; no spectral claim and no quasi-normal-mode result asserted by this note.",
       "deps": [],
-      "note_hash": "a5ba29938152bf65491fff1810a42030b9a49c5e791d2187d3d6dea920b40494",
+      "note_hash": "39b67984e36a5a99d51c7362c34c20dfe78d17d947ff122e14b7ad952eea2407",
       "path": "docs/QNM_CONTROL_HARDENING_NOTE.md",
       "runner_path": null,
       "title": "QNM Control Hardening Note"
@@ -34202,10 +34214,10 @@
     },
     "quark_strc_observable_principle_note_2026-04-19": {
       "claim_id": "quark_strc_observable_principle_note_2026-04-19",
-      "current_status": "proposed_retained",
-      "current_status_raw": "**SUPERSEDED.** This note records the earlier \"proposed_retained",
+      "current_status": "support",
+      "current_status_raw": "support / route-history note (status line rephrased 2026-04-28 per audit-lane verdict). **SUPERSEDED** by the explicit derivation in `docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`. This note records the earlier observable-principle framing of STRC-LO and should not be cited as the primary source for the STRC-LO relation.",
       "deps": [],
-      "note_hash": "e1c734e2a7eb913b4004158406419255941276bb1916eb83dbcde5c91268ac5d",
+      "note_hash": "fdf0b0d29d75aceceae0cc7d62dfdd3b67c219a6324a6dbf0c9c9bc4f832cbac",
       "path": "docs/QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_quark_strc_observable_principle.py",
       "title": "Scalar-Tensor Ray Complementarity (STRC) \u2014 Historical Observable-Principle Framing (SUPERSEDED)"
@@ -34407,10 +34419,10 @@
     },
     "replay_environment_note": {
       "claim_id": "replay_environment_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "narrow reproducibility note for proposed_retained numpy replay lanes",
+      "current_status": "support",
+      "current_status_raw": "support / operational reproducibility documentation for numpy replay lanes; not a scientific claim and not a tier-ratified physics result.",
       "deps": [],
-      "note_hash": "14f9af05f68e4d4f05caea36e84323d90c94b691e4242c960782d81a6801f004",
+      "note_hash": "f3204b3da2289e4cf604e78a844bb63216674971682cb2ef2ae797c4ce8ff207",
       "path": "docs/REPLAY_ENVIRONMENT_NOTE.md",
       "runner_path": null,
       "title": "Replay Environment Note"
@@ -35090,10 +35102,10 @@
     },
     "session_synthesis_2026-04-10_graph_axioms": {
       "claim_id": "session_synthesis_2026-04-10_graph_axioms",
-      "current_status": "proposed_retained",
-      "current_status_raw": "historical synthesis note. The current proposed_retained staggered status is",
+      "current_status": "support",
+      "current_status_raw": "support / historical synthesis note (downgraded 2026-04-28 per audit-lane verdict). The current staggered status is tracked by the force-based card and corrected full-suite baseline, not by the older `frontier_staggered_fermion.py` successor framing alone. The runner declared in this note is a legacy proxy harness and does not function as a current-main evidence surface.",
       "deps": [],
-      "note_hash": "47e11b1d7009e306919723ad8b059af130aaa466b283098cf8c35d2612221eff",
+      "note_hash": "f10bbaa5bbcd241853598017fa2d50c29b06fbe0458e30b4da57d564ae38fe21",
       "path": "docs/SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md",
       "runner_path": "frontier_axioms_16card.py",
       "title": "Session Synthesis: Graph Laplacian Axioms (2026-04-10)"
@@ -35260,10 +35272,10 @@
     },
     "sign_portability_invariant_note": {
       "claim_id": "sign_portability_invariant_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained narrow comparison positive",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional comparison invariant across reported sign-law families; the comparison runner is not registered in the audit ledger and the cited family notes are not registered as one-hop dependencies. Not a tier-ratifiable portability theorem or independent order parameter.",
       "deps": [],
-      "note_hash": "648632f19e0b10c8ba1f2650a812609d5f7a77ee95c045abd513e4962484d57b",
+      "note_hash": "6ab0bb166c167ca708ab63df72666fa249254b41c738587047640ce3b0b27b7c",
       "path": "docs/SIGN_PORTABILITY_INVARIANT_NOTE.md",
       "runner_path": null,
       "title": "Sign Portability Invariant Note"
@@ -36042,13 +36054,13 @@
     },
     "strong_cp_theta_zero_note": {
       "claim_id": "strong_cp_theta_zero_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained action-surface `\u03b8_eff = 0` closure on the proposed_retained",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional `\u03b8_eff = 0` closure on the **explicitly \u03b8-free Wilson-plus-staggered scalar-mass surface** that the runner restricts to. The decisive step is action-surface selection (no bare \u03b8 slot, real positive mass orientation), not a derived dynamical \u03b8 = 0 result. Not a tier-ratifiable strong-CP solution beyond that selected surface.",
       "deps": [],
-      "note_hash": "4e407fadb13ef9d9dd55c3d9e30170ba4a7175e5aeb318d5c0aad6b3e81f9ece",
+      "note_hash": "ec1dbd767b1a8511d6e59bb9383f33a0be3b5d8482e7d955d5225efb77c0b925",
       "path": "docs/STRONG_CP_THETA_ZERO_NOTE.md",
       "runner_path": "scripts/frontier_strong_cp_theta_zero.py",
-      "title": "Strong CP / \u03b8 = 0 Retained Action-Surface Closure"
+      "title": "Strong CP / \u03b8 = 0 Conditional Action-Surface Closure"
     },
     "structural_no_go_survey_note": {
       "claim_id": "structural_no_go_survey_note",
@@ -36076,20 +36088,20 @@
     },
     "structured_chokepoint_bridge_note": {
       "claim_id": "structured_chokepoint_bridge_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained bounded structured bridge pocket; narrow canonical readout only",
+      "current_status": "bounded",
+      "current_status_raw": "bounded finite structured-chokepoint card on the named `N = 25, 40, 60` slice with the registered canonical readout \u2014 no architecture-level bridge closure, no asymptotic behavior, and no readout-independent survival is asserted; runner prints diagnostics rather than enforcing hard pass thresholds. Not a tier-ratifiable bridge pocket theorem.",
       "deps": [],
-      "note_hash": "38130dad0b207fd1652ce8f5960193125351b5285642bbca8a2c316471173efa",
+      "note_hash": "eedc88ecddb5491db4a2b94262037a84680caf094c5c35994b856f3019c391c0",
       "path": "docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md",
       "runner_path": null,
       "title": "Structured Chokepoint Bridge Note"
     },
     "structured_mirror_bornsafe_scan_note": {
       "claim_id": "structured_mirror_bornsafe_scan_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "no proposed_retained Born-safe structured-mirror pocket found in the scanned linear family",
+      "current_status": "bounded",
+      "current_status_raw": "bounded null-result note \u2014 the scanned structured-mirror linear-propagator family contains no Born-safe pocket; this is a useful negative control, not a successor lane.",
       "deps": [],
-      "note_hash": "62cbc96f715a54b233e097af33650ef7983ea6bc888d9314877963052f821dc2",
+      "note_hash": "605f761f2ad0a9addf780450c5d0cbcb2e40fe0a1b2853087d93c72119b2d68a",
       "path": "docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md",
       "runner_path": null,
       "title": "Structured Mirror Born-Safe Scan Note"
@@ -37036,10 +37048,10 @@
     },
     "unpromoted_branch_retainability_audit_note": {
       "claim_id": "unpromoted_branch_retainability_audit_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "review-safe audit of proposed_retained branch claims; no promotion beyond bounded comparisons",
+      "current_status": "support",
+      "current_status_raw": "support / review-safe summary of branch-claim promotion boundaries across wider-family, grown-transfer, graph-frontier, and persistent-object lanes; no one-hop dependencies registered, no runner output, and no machine-checkable status/output inventory. Not a tier-ratifiable summary on its own.",
       "deps": [],
-      "note_hash": "f523249dcb6fe5fbc918e53f7f85bb4d3727d8a5df512ae9b9f0cd4db3fcd01c",
+      "note_hash": "d0bbee82be3f4842fce01320449778df505cfececa9d1499708019a6a4effc2a",
       "path": "docs/UNPROMOTED_BRANCH_RETAINABILITY_AUDIT_NOTE.md",
       "runner_path": null,
       "title": "Unpromoted Branch Retainability Audit Note"
@@ -37640,13 +37652,13 @@
     },
     "wave_retardation_continuum_limit_note": {
       "claim_id": "wave_retardation_continuum_limit_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained negative \u2014 refining the lattice spacing H from 0.5 to 0.35 to 0.25 (with physical parameters held approximately constant; v/c drifts 3% at medium due to integer rounding) does NOT give a converged value for the retardation magnitude under any of **three** tested c=\u221e comparators: cached static slices at NL_dyn (`dI`), equilibrated static slices at 3\u00d7NL_dyn (`dIeq`), or the corrected radial imposed-Newton field (`dN`). dM (retarded wave field) is fairly stable across the refinement (14% monotone drift) \u2014 the instability is in the comparator construction, not in the retarded field. After correcting the imposed-Newton comparator to include the transverse `y` term, `dN` no longer provides a cleaner magnitude story: `rel_MN` runs `25.60% \u2192 1.26% \u2192 31.24%`, while `rel_MIeq` runs `74.11% \u2192 29.44% \u2192 23.16%`. `dIeq` is the least unstable comparator on the last refinement step, but it still does **not** converge to `dN` (`rel_IeqN` runs `80.74% \u2192 30.33% \u2192 47.17%`) and does not itself converge. The \"M \u2260 I\" existence is logically valid, but the magnitude does not survive lattice refinement under any tested comparator. The retarded field dM itself is continuum-stable and remains a well-defined physical quantity; the issue is the reference it's compared against.",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional negative \u2014 the reported numerical battery says that refining lattice spacing `H = 0.5 / 0.35 / 0.25` does NOT give a converged retardation magnitude under any of three tested `c=\u221e` comparators, but the runner is not registered in the audit ledger as the primary runner. The `M \u2260 I` existence is logically valid; the magnitude statement is conditional on the unregistered computation and on the absence of a discrete static comparator theorem. The retarded field `dM` itself is continuum-stable on the reported runs.",
       "deps": [],
-      "note_hash": "1169d8defa0f43780d6e53bc5d2f50746e42694b9fe5c4e71c3f0feb3d5ba7df",
+      "note_hash": "f9e4b535df6b66c188657a55356ca05eb849d9e6d71f570f5442d5fb372e5abc",
       "path": "docs/WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md",
       "runner_path": null,
-      "title": "Wave-Retardation Continuum Limit \u2014 NEGATIVE (Comparator-Dominated, Not Retardation-Dominated)"
+      "title": "Wave-Retardation Continuum Limit \u2014 Conditional Negative (Comparator-Dominated)"
     },
     "wave_retardation_lab_prediction_note": {
       "claim_id": "wave_retardation_lab_prediction_note",
@@ -37740,10 +37752,10 @@
     },
     "weak_coupling_retention_note_2026-04-11": {
       "claim_id": "weak_coupling_retention_note_2026-04-11",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained sign-sensitive regime, narrowly and explicitly",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional sign-sensitive weak-coupling regime on the selected finite audit surface \u2014 the runner verifies shell-ordering 60/60 and shell margin 60/60, but the registered runner path is wrong, the secondary gap count is live-stale at 54/60, and the note's broader inference (theorem for admissible irregular bipartite graphs, coordinate-force closure, stable secondary spectral-gap row) is not closed by the current packet.",
       "deps": [],
-      "note_hash": "cb8dbaed5e9a546f96a4eae1233ece494eced80f15e69aaa296ef44a6626cce5",
+      "note_hash": "69b70b82e69ac931ecc04892fb83411e65ab76c2063765b6d707c4e51d36ae7b",
       "path": "docs/WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md",
       "runner_path": "frontier_weak_coupling_retained.py",
       "title": "Weak-Coupling Retention Note"
@@ -39806,11 +39818,9 @@
     "mirror_2d_gravity_law_note",
     "mirror_2d_validation_note",
     "mirror_chokepoint_boundary_fit_note",
-    "mirror_chokepoint_note",
     "mirror_gravity_probe_note",
     "mirror_grown_combined_note",
     "mirror_mutual_information_canonical_families_note",
-    "mirror_mutual_information_chokepoint_note",
     "mirror_mutual_information_note",
     "mirror_program_synthesis",
     "mirror_vs_central_head_to_head_note",
@@ -40303,17 +40313,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4473,
-    "leaf_count": 731,
+    "edge_count": 4475,
+    "leaf_count": 730,
     "node_count": 1630,
-    "root_count": 1184,
+    "root_count": 1182,
     "runners_with_path": 712,
     "status_counts": {
-      "bounded": 212,
-      "open": 30,
-      "proposed_promoted": 6,
-      "proposed_retained": 447,
-      "support": 139,
+      "bounded": 253,
+      "open": 31,
+      "proposed_promoted": 1,
+      "proposed_retained": 402,
+      "support": 147,
       "unknown": 796
     }
   }
