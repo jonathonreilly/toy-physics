@@ -1,7 +1,7 @@
 # Distance Law Breakpoint Note
 
-**Date:** 2026-04-06  
-**Status:** proposed_retained narrow breakpoint diagnosis
+**Date:** 2026-04-06 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** bounded narrow breakpoint table — the runner reprints hard-coded `alpha` / direction rows; the architecture-feature diagnosis (open directed vs shell vs reflection vs deep-branch routing) is not closed by matched ablation computations. Cited distance-law portability note is unknown; sign-invariant context is conditional. Not a tier-ratifiable architecture-feature theorem.
 
 ## Artifact Chain
 
@@ -60,3 +60,32 @@ The break features are:
 **retained narrow breakpoint diagnosis: the near-Newtonian distance tail
 survives only in open directed transport families; shell-locking, reflection
 closure, and deep branch routing break or flatten it**
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, leaf criticality):
+
+> Issue: the note turns a static breakpoint table into a causal
+> architecture-feature diagnosis, but the runner only reprints
+> hard-coded alpha/direction rows and labels. Why this blocks: the
+> conclusion that open directed transport preserves the tail while
+> shell routing, reflection closure, or deep branch routing break
+> it requires either clean upstream rows or matched ablation
+> computations; the cited distance-law portability note is unknown
+> and the sign-invariant context is already conditional.
+
+## What this note does NOT claim
+
+- A tier-ratifiable architecture-feature theorem.
+- That the runner re-derives the alpha/direction labels; it
+  reprints them as hard-coded rows.
+- That the cited distance-law portability note is audit-clean.
+
+## What would close this lane (Path A future work)
+
+A retained architecture-feature theorem would require:
+
+1. A runner that performs matched ablation computations for shell
+   routing, reflection closure, and deep-branch routing.
+2. Audit-clean upstream rows for the distance-law portability note.
+3. A sign-invariant authority registered as a one-hop dependency.
