@@ -1,0 +1,46 @@
+==============================================================================
+LANE 5 (C1) GATE — A4 PARITY-GATE-FROM-A_MIN NO-GO RUNNER
+==============================================================================
+
+Question: does the primitive parity-gate carrier theorem
+(AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md)
+force CAR semantics on P_A H_cell intrinsically, without
+invoking bulk-axiom-3 projection?
+
+[PASS] parity-gate carrier theorem assumes CAR as input (Assumption 1): P_A H_cell ~= F(C^2) is the theorem's first hypothesis; hence not derivable as output of the theorem
+[PASS] Widom coefficient c_Widom = 3/12 = 1/4 is conditional on CAR: <N_x> = 3 averaged crossing count uses Gaussian free-fermion orbital structure; not a parity-only computation
+[PASS] CAR parity (-1)^N on F(C^2) is a Z_2 involution: (P_car)^2 = I
+[PASS] CAR parity has 2+2 eigenvalue signature on the rank-four block: (plus, minus) = (2, 2)
+[PASS] two-qubit Z otimes Z parity is a Z_2 involution: (Z otimes Z)^2 = I
+[PASS] two-qubit Z otimes Z parity has 2+2 signature on the rank-four block: (plus, minus) = (2, 2)
+[PASS] ququart Z_4^2 parity is a Z_2 involution: (Z_4^2)^2 = I
+[PASS] ququart Z_4^2 parity has 2+2 signature on the rank-four block: (plus, minus) = (2, 2)
+[PASS] all three semantics admit a 2+2 parity grading hence half-zone measure 1/2: every Z_2 involution with 2+2 spectrum has dim(+1)/dim = 1/2
+[PASS] CAR realisation has anticommuting Hermitian Majorana generators: ||{gamma_0, gamma_1}|| = 0.00e+00 (CAR)
+[PASS] two-qubit spin X otimes I and I otimes X commute (not anticommute): ||[X otimes I, I otimes X]|| = 0.00e+00
+[PASS] two-qubit spin generators do not satisfy CAR anticommutation: ||{X otimes I, I otimes X}|| = 4.00e+00
+[PASS] tau-involution gives equal-count low/high partition in 2D: n_low=31, n_high=31, n_boundary=2
+[PASS] tau-involution gives equal-count low/high partition in 3D: n_low=1985, n_high=1985, n_boundary=126
+[PASS] self-dual half-zone measure mu = 1/2 by exact tau involution: Delta_perp(tau q) = 2 - Delta_perp(q) makes the half-zone exact in the continuum; finite-grid boundary set has measure zero
+[PASS] self-dual half-zone measure is a Z_2 statement, not a CAR statement: the involution tau(q) = q + pi sends Delta_perp -> 2 - Delta_perp is a Z_2 lattice symmetry independent of fermion semantics
+[PASS] parity-gate carrier theorem assumes CAR; cannot derive (G1): Assumption 1 of the theorem is exactly the (G1) edge-statistics principle on P_A H_cell
+[PASS] bare parity-gate Z_2 structure does not force CAR vs. non-CAR: all three semantics (CAR, two-qubit spin, ququart) preserve 2+2 parity grading and self-dual half-zone measure 1/2
+[PASS] A4 attack frame is structurally falsified: neither the parity-gate carrier theorem (CAR-input) nor the bare parity-gate Z_2 structure (CAR/non-CAR underdetermined) supplies a derivation of CAR semantics on P_A H_cell
+
+==============================================================================
+SUMMARY: PASS=19  FAIL=0
+==============================================================================
+
+Verdict: A4 parity-gate attack frame cannot close (G1) on A_min
+alone.  The retained primitive parity-gate carrier theorem
+assumes CAR as input (its Assumption 1).  The bare parity-gate
+Z_2 structure on the rank-four block has 2+2 spectrum, preserved
+by CAR, two-qubit spin, and ququart semantics; it cannot
+distinguish CAR from non-CAR.
+
+Implication: A1, A2, and A4 are all closed negatively.  The
+remaining direct-derivation candidate is A5 (minimal-carrier-
+axiom audit).  Cycle 5 should run A5 honestly: identify the
+minimal carrier axiom that would close (G1) without violating
+the framework's no-fitted-parameter posture, and audit its
+compatibility with the existing retained surface.

@@ -35,6 +35,19 @@
   closes a Clifford-Majorana algebra on the rank-four block. `P_A` is
   not a Clifford-module morphism for any bulk-axiom-3 action.
 
+- **A4 parity-gate ⇒ CAR semantics on `P_A H_cell`** — Cycle 4,
+  `HUBBLE_LANE5_C1_A4_PARITY_GATE_NO_GO_NOTE_2026-04-28.md`. The
+  retained primitive parity-gate carrier theorem
+  (`AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md`)
+  takes `P_A H_cell ≅ F(C^2)` as Assumption 1 — exactly the `(G1)`
+  edge-statistics principle — and therefore cannot derive `(G1)` as
+  output. The bare parity Z_2 structure (2+2 eigenvalue signature on
+  the rank-four block) is preserved by CAR `(-1)^N`, two-qubit
+  commuting spin `Z ⊗ Z`, and ququart clock-shift `Z_4^2`; the
+  self-dual half-zone measure 1/2 is also preserved by all three.
+  The CAR-distinguishing structural feature (anticommuting Hermitian
+  generators) is not a Z_2 statement.
+
 - **A2 g_bare=1 ⇒ action-unit on `P_A H_cell`** — Cycle 3,
   `HUBBLE_LANE5_C1_A2_ACTION_UNIT_NO_GO_NOTE_2026-04-28.md`. Amplitudes
   on `V = P_A H_cell` are invariant under `(S, κ) → (λ S, λ κ)` for
