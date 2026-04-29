@@ -101,3 +101,11 @@
 | Primitive-CAR edge carrier | Conditional positive carrier class in which the parity gate fixes `c_Widom=1/4` | conditional support theorem | `AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md`; `AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md` | Yes | Yes | Derive the native CAR/coframe response rather than assume carrier semantics | Open/conditional |
 | Orientation/statistics lift from even `Z_2` gate to odd Clifford/CAR coframe generators | Newly exposed missing premise for A4 positive closure | open import | `HUBBLE_LANE5_C1_A4_PARITY_GATE_CAR_BOUNDARY_NOTE_2026-04-29.md` | Yes | Yes for `(C1)` G1 | Prove a theorem that the primitive parity gate determines metric-compatible odd edge generators on `P_A H_cell` | Open |
 | Non-CAR rank-four semantics compatible with the same gate data | Countermodel class for gate-only closure | exact negative boundary | A4 runner; `PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md` | Yes for no-go | Yes | Closed as a direct A4 shortcut | Guardrail |
+
+## Lane 5 C1 A5 Imports Added In Cycle 10
+
+| Item | Role in claim | Current class | Source surface | Load-bearing? | Needed for target status? | Retirement path | Disposition |
+|---|---|---|---|---|---|---|---|
+| Hamming-weight-one `P_A` packet | Active block tested for direct inherited coframe response | retained/proposed_retained support | `PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`; A5 runner | Yes | Yes | Already selected as carrier; not by itself a reducing odd-coframe module | Reuse with guardrail |
+| Natural full-cell Boolean/Jordan-Wigner odd coframe generators | Candidate direct inherited `Cl_4` response from `H_cell=(C^2)^4` | proof infrastructure / candidate route | A5 runner | Yes for A5 test | Not sufficient for `(C1)` | Need a different intrinsic active-block theorem, quotient/bilinear theorem, or carrier premise | Blocked as direct restriction |
+| Intrinsic active-block metric-compatible `Cl_4` law | Newly sharpened missing premise after A5 | open import | `HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md`; `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md` | Yes | Yes for `(C1)` G1 | Derive `Cl_4` response directly on `P_A H_cell`, not by compressing full-cell odd maps | Open |

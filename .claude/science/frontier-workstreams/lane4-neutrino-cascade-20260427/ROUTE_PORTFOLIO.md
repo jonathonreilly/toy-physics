@@ -20,7 +20,9 @@ Scores use the frontier-workstream dramatic-step scale: `0` low value,
 | Lane 5 C1 A1 Grassmann-to-boundary CAR descent | stretch attempt / no-go | 2 | 2 | 3 | -0 | 7 | Executed cycle 7; direct A1 shortcut blocked |
 | Lane 5 C1 A2 action-unit metrology from g_bare=1 | stretch attempt / no-go | 3 | 3 | 3 | -0 | 9 | Executed cycle 8; direct A2 shortcut blocked |
 | Lane 5 C1 A4 parity-gate-to-CAR route | support/boundary theorem | 2 | 2 | 3 | -0 | 7 | Executed cycle 9; direct gate-to-CAR lift blocked |
-| Lane 5 C1 direct module-morphism/coframe theorem | stretch attempt | 3 | 3 | 1 | -2 | 5 | Candidate next route; high risk |
+| Lane 5 C1 A5 Boolean coframe restriction | stretch attempt / no-go | 2 | 2 | 3 | -0 | 7 | Executed cycle 10; direct full-cell odd coframe restriction blocked |
+| Lane 5 C1 intrinsic active-block coframe theorem | stretch attempt | 3 | 3 | 1 | -2 | 5 | Candidate next route; high risk |
+| Lane 5 C1 number-preserving bilinear / quotient route | theorem/audit | 2 | 2 | 2 | -1 | 5 | Candidate follow-up after A5 |
 | Lane 5 C1 minimal carrier/metrology axiom audit | conditional closeout / human-judgment boundary | 1 | 1 | 2 | -0 | 4 | Use only if theorem routes fail |
 
 ## Selected Cycle 1 Route
@@ -143,3 +145,23 @@ Outcome: A4 is now an exact support/boundary result. The parity gate supplies
 the exact half-zone selector and gives `c_Widom = c_cell = 1/4` inside the
 primitive-CAR carrier class, but it does not force the metric-compatible
 Clifford/CAR coframe response on `P_A H_cell`.
+
+## Cycle 10 Route
+
+Execute the Lane 5 `(C1)` A5 Boolean-coframe restriction route because A1
+exposed a missing `P_A` module-morphism theorem and A4 left the active
+Clifford/CAR response open:
+
+- test the most literal inherited-coframe shortcut, using natural full-cell
+  Boolean/Jordan-Wigner odd `Cl_4` generators on `H_cell=(C^2)^4`;
+- check whether the Hamming-weight-one `P_A` packet is reducing for those
+  generators;
+- preserve the conditional Target 3 Clifford bridge if the active-block
+  response is supplied intrinsically.
+
+Outcome: A5 is an exact negative boundary for direct restriction. The
+full-cell odd coframe generators change Hamming weight, so `P_A Gamma_i P_A`
+vanishes and cannot be the metric-compatible active-block response. The next
+constructive route, if attempted, must be an intrinsic active-block `Cl_4`
+law, a quotient/number-preserving bilinear theorem, or an explicit conditional
+carrier premise.

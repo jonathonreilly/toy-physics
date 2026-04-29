@@ -6,7 +6,7 @@ runtime:
   requested_hours: 12
   hard_deadline_utc: "2026-04-29T15:48:24Z"
   supervisor_loop: 3
-  refreshed_at_utc: "2026-04-29T04:20:46Z"
+  refreshed_at_utc: "2026-04-29T04:27:30Z"
 lock:
   owner: frontier-workstream-lane4-cascade
   repo_lock_status: unavailable
@@ -16,10 +16,10 @@ current_lane:
   name: Hubble constant derivation
   status: open
 cycle:
-  count: 9
-  active_route: lane5_c1_a4_parity_gate_car_boundary
-  route_status: verified_support_boundary
-  note: "Loop 3 executed Lane 5 (C1) A4 stretch attempt. The primitive parity gate supplies the exact half-zone selector inside a CAR carrier, but its even Z2 gate algebra does not force odd Clifford/CAR coframe response or action-unit metrology on P_A H_cell."
+  count: 10
+  active_route: lane5_c1_a5_boolean_coframe_restriction_obstruction
+  route_status: verified_negative_boundary
+  note: "Loop 3 executed Lane 5 (C1) A5 stretch attempt. Natural full-cell Boolean/Jordan-Wigner odd coframe generators obey Cl4 on H_cell but shift Hamming weight, so P_A H_cell is not reducing and direct compression gives zero rather than the active coframe response."
 files_touched:
   - docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_THEOREM_PLAN_NOTE_2026-04-28.md
   - docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_FUNCTIONAL_FORM_THEOREM_NOTE_2026-04-28.md
@@ -35,6 +35,9 @@ files_touched:
   - docs/HUBBLE_LANE5_C1_A4_PARITY_GATE_CAR_BOUNDARY_NOTE_2026-04-29.md
   - scripts/frontier_hubble_lane5_c1_a4_parity_gate_car_boundary.py
   - logs/2026-04-29-hubble-lane5-c1-a4-parity-gate-car-boundary.txt
+  - docs/HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md
+  - scripts/frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py
+  - logs/2026-04-29-hubble-lane5-c1-a5-boolean-coframe-restriction-obstruction.txt
   - docs/audit/AUDIT_LEDGER.md
   - docs/audit/AUDIT_QUEUE.md
   - docs/audit/data/audit_ledger.json
@@ -67,6 +70,7 @@ open_imports:
   - Lane 5 C1 G2 action-unit metrology
   - Lane 5 C1 A2 newly exposed import: physical clock/source/action metrology map tying dimensionless lattice action to a particular kappa on P_A H_cell
   - Lane 5 C1 A4 newly exposed import: orientation/statistics lift from the even primitive Z2 parity gate to odd metric-compatible Clifford/CAR coframe generators on P_A H_cell
+  - Lane 5 C1 A5 newly exposed import: intrinsic active-block Cl4 law, quotient/number-preserving bilinear theorem, or explicit carrier premise; direct full-cell odd coframe restriction fails
   - Lane 5 C2 right-sensitive Z3 doublet-block selector and bounded-cascade dependencies
   - Lane 5 C3 direct cosmic-L route, currently no active route
   - Lane 3 non-perturbative theorem-core proof of the 5/6 bridge and scale selection
@@ -87,6 +91,7 @@ no_go_routes:
   - Lane 5 C1 A1 direct shortcut: bulk Grassmann/CAR plus rank-four support does not force CAR on P_A H_cell without a P_A module-morphism/reducing-subspace theorem
   - Lane 5 C1 A2 direct shortcut: g_bare=1 plus plaquette/u0/APBC dimensionless data does not break the S/kappa action-unit rescaling degeneracy on P_A H_cell
   - Lane 5 C1 A4 direct shortcut: primitive parity gate plus rank(P_A)=4 does not force metric-compatible Clifford/CAR coframe response on P_A H_cell
+  - Lane 5 C1 A5 direct shortcut: natural full-cell odd Boolean/Jordan-Wigner Cl4 generators do not restrict to P_A H_cell because P_A is not reducing
 review:
   status: passed_with_notes
   findings:
@@ -99,6 +104,8 @@ review:
     - "Existing Target 3 phase-unit boundary, Planck source-unit support, g_bare two-Ward closure, and APBC/u0 hierarchy support runners still pass."
     - "Lane 5 C1 A4 stretch attempt produced an exact support/boundary theorem: the parity gate remains a valid half-zone selector inside primitive-CAR semantics, but it does not derive the CAR/coframe response."
     - "Existing primitive parity-gate, primitive-CAR edge, native-CAR tightening, Target 3 Clifford bridge, and Target 3 phase-unit boundary runners still pass."
+    - "Lane 5 C1 A5 stretch attempt produced an exact negative boundary: direct inherited full-cell odd coframe restriction to P_A H_cell gives zero compressed generators, not an active Cl4 response."
+    - "Existing Target 3 Clifford bridge, primitive coframe carrier, and finite-response no-go runners still pass."
     - "Audit strict lint passes with the known graph-cycle warning only."
 verification:
   status: passed
@@ -126,8 +133,13 @@ verification:
     - "PYTHONPATH=scripts python3 scripts/frontier_area_law_native_car_semantics_tightening.py -> PASS=23 FAIL=0"
     - "PYTHONPATH=scripts python3 scripts/frontier_planck_target3_clifford_phase_bridge.py -> PASS=34 FAIL=0"
     - "PYTHONPATH=scripts python3 scripts/frontier_planck_target3_phase_unit_edge_statistics.py -> 27/27 checks passed"
+    - "PYTHONPATH=scripts python3 scripts/frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py -> PASS=9 FAIL=0"
+    - "python3 -m py_compile scripts/frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py -> pass"
+    - "PYTHONPATH=scripts python3 scripts/frontier_planck_target3_clifford_phase_bridge.py -> PASS=34 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_planck_primitive_coframe_boundary_carrier.py -> PASS=14 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_planck_finite_response_nogo.py -> 7/7 checks passed"
     - "bash docs/audit/scripts/run_pipeline.sh -> complete"
     - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only"
     - "git diff --check -> pass"
-next_exact_action: "Continue Lane 5 (C1) after A4: attempt a direct P_A module-morphism / metric-compatible coframe theorem, or write the minimal carrier/metrology axiom audit that records the remaining human-judgment boundary. Do not create STOP_ALL_LANES_REQUESTED yet unless the next route assessment finds all queued lanes still blocked."
-stop_condition: "Not reached in loop 3. A4 is blocked as a direct shortcut, but a direct P_A coframe theorem or explicit conditional-axiom closeout remains to be assessed."
+next_exact_action: "Continue Lane 5 (C1) after A5: assess a number-preserving bilinear / quotient route that might select an intrinsic Cl4 basis on the one-particle P_A sector. If no theorem-grade route passes, write a minimal carrier/metrology axiom audit and mark Lane 5 blocked by human science judgment before pivoting."
+stop_condition: "Not reached in loop 3. A5 blocks direct inherited odd coframe restriction, but the number-preserving bilinear/quotient route remains to be assessed."

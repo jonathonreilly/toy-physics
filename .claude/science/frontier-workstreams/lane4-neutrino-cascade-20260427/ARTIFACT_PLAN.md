@@ -257,3 +257,32 @@ Expected claim movement:
 - next route is either a direct `P_A` module-morphism/coframe theorem or a
   minimal carrier/metrology axiom audit that records the human-judgment
   boundary.
+
+## Cycle 10: Lane 5 C1 A5 Boolean-Coframe Restriction Obstruction
+
+Deliverables:
+
+- `docs/HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py`
+- `logs/2026-04-29-hubble-lane5-c1-a5-boolean-coframe-restriction-obstruction.txt`
+
+Verification:
+
+- run and compile the new runner;
+- rerun nearby Planck/coframe authority runners:
+  - `frontier_planck_target3_clifford_phase_bridge.py`
+  - `frontier_planck_primitive_coframe_boundary_carrier.py`
+  - `frontier_planck_finite_response_nogo.py`
+- run audit pipeline and strict lint;
+- run `git diff --check`;
+- record review-loop emulation.
+
+Expected claim movement:
+
+- no `(C1)` closure;
+- exact negative boundary against direct inherited full-cell odd coframe
+  restriction to `P_A H_cell`;
+- newly exposed import: an intrinsic active-block `Cl_4` law, quotient /
+  number-preserving bilinear theorem, or explicit carrier premise;
+- next route is an intrinsic active-block coframe attempt or the minimal
+  carrier/metrology axiom audit.

@@ -1,0 +1,15 @@
+==============================================================================
+Lane 5 (C1) A5 Boolean-coframe restriction obstruction verifier
+==============================================================================
+[PASS] hamming_weight_one_block_is_the_primitive_P_A_carrier: rank(P_A)=4, dim(H_cell)=16, c_cell=0.250000000000
+[PASS] natural_full_cell_jordan_wigner_coframe_is_clifford: full-cell Cl_4 residual=0.000e+00
+[PASS] P_A_is_not_reducing_for_natural_odd_coframe_generators: max ||[P_A,Gamma_i]||=2.828e+00, max ||P_A Gamma_i P_A||=0.000e+00
+[PASS] compressed_odd_coframe_response_fails_metric_compatibility: max ||(P_A Gamma_i P_A)^2-P_A||=2.000e+00
+[PASS] natural_odd_generators_shift_weight_one_outside_P_A: leaking basis states by axis=[4, 4, 4, 4]
+[PASS] full_cell_occupation_parity_restricts_to_scalar_on_P_A: ||P_A parity P_A + P_A||=0.000e+00
+[PASS] compressed_direct_restriction_has_no_active_clifford_content: span rank of P_A and compressed odd generators=1
+[PASS] intrinsic_active_block_clifford_response_exists_but_is_extra: internal Cl_4 residual=0.000e+00, internal span=16
+[PASS] a5_exposes_active_block_response_import: Need an intrinsic active-block coframe law, quotient/bilinear theorem, or explicit carrier premise.
+------------------------------------------------------------------------------
+TOTAL: PASS=9, FAIL=0
+Conclusion: P_A H_cell does not inherit the natural full-cell odd Boolean/Jordan-Wigner coframe response by restriction. The active Cl_4/CAR response must be derived intrinsically or kept conditional.

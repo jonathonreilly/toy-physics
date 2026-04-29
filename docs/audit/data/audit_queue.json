@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 80,
     "high": 517,
-    "leaf": 630,
+    "leaf": 631,
     "medium": 85
   },
-  "generated_at": "2026-04-29T04:22:25.666676+00:00",
+  "generated_at": "2026-04-29T04:29:31.712913+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -21611,6 +21611,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "impact_parameter_portability_extension_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -27219,6 +27236,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 889,
-  "total_pending": 1312
+  "ready_count": 890,
+  "total_pending": 1313
 }

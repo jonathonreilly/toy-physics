@@ -1,5 +1,52 @@
 # Review History
 
+## 2026-04-29 Cycle 10 Review Results
+
+Artifact under review:
+
+- `docs/HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py`
+
+### Code / Runner: PASS
+
+- New A5 obstruction runner passes: `PASS=9 FAIL=0`.
+- New runner compiles with `py_compile`.
+- Nearby authority runners still pass:
+  - `frontier_planck_target3_clifford_phase_bridge.py`: `PASS=34 FAIL=0`
+  - `frontier_planck_primitive_coframe_boundary_carrier.py`: `PASS=14 FAIL=0`
+  - `frontier_planck_finite_response_nogo.py`: `7/7 checks passed`
+
+### Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+
+- The note blocks only the direct inherited-coframe shortcut: natural
+  full-cell Boolean/Jordan-Wigner odd `Cl_4` generators do not reduce to the
+  Hamming-weight-one `P_A` packet.
+- The compression `P_A Gamma_i P_A` vanishes, so it cannot supply the
+  metric-compatible active-block coframe response.
+- The note explicitly preserves the possibility of an intrinsic active-block
+  `Cl_4` theorem, quotient/bilinear theorem, or explicit carrier premise.
+
+### Imports / Support: DISCLOSED
+
+- No measured Planck, Hubble, cosmological, or SI action value is used.
+- Newly exposed import: an intrinsic active-block coframe law rather than a
+  naive full-cell odd-generator restriction.
+
+### Nature Retention: NO-GO FOR A5 DIRECT SHORTCUT, NOT FOR LANE 5
+
+- A5 is closed negatively as currently framed.
+- The broader `(C1)` gate remains open through a harder intrinsic coframe
+  theorem or a transparent conditional carrier/metrology axiom.
+
+### Audit Compatibility: PASS
+
+- `bash docs/audit/scripts/run_pipeline.sh`: complete.
+- `python3 docs/audit/scripts/audit_lint.py --strict`: OK, with known
+  graph-cycle warning only.
+- `git diff --check`: OK.
+- Audit row seeded as `proposed_retained` / `unaudited`:
+  `hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29`.
+
 ## 2026-04-29 Cycle 9 Review Results
 
 Artifact under review:

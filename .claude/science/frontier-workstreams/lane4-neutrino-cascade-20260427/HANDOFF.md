@@ -1,5 +1,72 @@
 # Handoff
 
+## Loop 3 Checkpoint 2026-04-29T04:27Z
+
+Supervisor loop 3 continued Lane 5 `(C1)` after the A4 parity-gate boundary.
+The selected route was the direct `P_A` module-morphism / Boolean-coframe
+restriction attempt.
+
+### Claim-State Movement This Checkpoint
+
+Added a new exact negative boundary:
+
+- `docs/HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py`
+- `logs/2026-04-29-hubble-lane5-c1-a5-boolean-coframe-restriction-obstruction.txt`
+
+Verified result: the natural full-cell Boolean/Jordan-Wigner odd coframe
+generators obey `Cl_4` on `H_cell=(C^2)^4`, but they change Hamming weight.
+The Hamming-weight-one `P_A` packet is therefore not a reducing submodule:
+
+```text
+P_A Gamma_i P_A = 0,
+[P_A, Gamma_i] != 0.
+```
+
+Direct compression cannot supply the active-block metric-compatible coframe
+response. The intrinsic active-block `Cl_4` response remains possible, but it
+must be derived by a different theorem or kept conditional.
+
+### Verification
+
+- `PYTHONPATH=scripts python3 scripts/frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py`
+  -> `PASS=9 FAIL=0`
+- `python3 -m py_compile scripts/frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py`
+  -> pass
+- `PYTHONPATH=scripts python3 scripts/frontier_planck_target3_clifford_phase_bridge.py`
+  -> `PASS=34 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_planck_primitive_coframe_boundary_carrier.py`
+  -> `PASS=14 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_planck_finite_response_nogo.py`
+  -> `7/7 checks passed`
+- `bash docs/audit/scripts/run_pipeline.sh`
+  -> complete
+- `python3 docs/audit/scripts/audit_lint.py --strict`
+  -> OK, known graph-cycle warning only
+- `git diff --check`
+  -> pass
+- Audit row:
+  `hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29`
+  seeded as `proposed_retained` / `unaudited`.
+
+### Review-Loop Emulation
+
+- Code/runner: PASS. The runner checks the load-bearing direct restriction
+  shortcut and distinguishes it from an intrinsic active-block response.
+- Physics boundary: exact negative boundary for direct full-cell odd coframe
+  restriction only. The Target 3 Clifford bridge remains conditional positive.
+- Imports: disclosed in `ASSUMPTIONS_AND_IMPORTS.md`; no observed or SI
+  action value is used.
+- Repo governance: no repo-wide authority weaving performed. Audit generated
+  surfaces were refreshed for parseability only.
+
+### Next Exact Action
+
+Assess a number-preserving bilinear / quotient route that might select an
+intrinsic `Cl_4` basis on the one-particle `P_A` sector. If that route fails,
+write the minimal carrier/metrology axiom audit and mark Lane 5 `(C1)` as
+blocked by human science judgment before pivoting.
+
 ## Loop 3 Checkpoint 2026-04-29T04:20Z
 
 Supervisor loop 3 continued Lane 5 `(C1)` after the A2 action-unit

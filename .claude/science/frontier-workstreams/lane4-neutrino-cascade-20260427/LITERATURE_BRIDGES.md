@@ -33,6 +33,10 @@ Cycle 9 used no new literature. The A4 boundary is finite algebra plus the
 repo-local primitive parity-gate/CAR/coframe packet, with no observational
 comparator.
 
+Cycle 10 used no new literature. The A5 obstruction is finite algebra over
+the repo-local Boolean event cell, `P_A` carrier, and natural full-cell
+Jordan-Wigner coframe candidate.
+
 If later cycles need external bridge material, enter each imported theorem,
 experimental number, or convention here with role `bridge`, `comparator`,
 `admitted convention`, or `non-derivation context`.
