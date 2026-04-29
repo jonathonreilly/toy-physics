@@ -1,7 +1,7 @@
-# Lensing Slope vs k (Phase Coupling): Strongly k-Dependent
+# Lensing Slope vs k (Phase Coupling): k-Dependent (Conditional Diagnostic)
 
-**Date:** 2026-04-09
-**Status:** proposed_retained STRONG DIAGNOSTIC — the lensing slope oscillates between +0.58 and −1.43 across k·H ∈ {0.5, ..., 5.0}. The −1.40 at k·H=2.5 is NOT a geometric invariant — it is one point on a k-dependent interference curve. At k·H=0.5 the deflection reverses sign (repulsive). At k·H=5.0 all seeds are repulsive. The eikonal gap oscillates in sign with k, confirming it is a wave-coupling effect.
+**Date:** 2026-04-09 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded conditional diagnostic — the lensing slope oscillates between +0.58 and −1.43 across `k·H ∈ {0.5, ..., 5.0}` on a single Fam1 setup with three seeds per `k·H` value. The k-sweep runner is not registered in the audit ledger; the wave-interference-mechanism inference is stronger than the k-sweep table alone supports without registered kernel/mode analysis. Not a tier-ratifiable framework theorem.
 
 ## Setup
 
@@ -90,3 +90,39 @@ The honest characterization is:
 > eikonal gap oscillates in sign, confirming the correction is wave-
 > interference, not geometric. The propagator's gravitational response
 > is a k-dependent interference phenomenon."
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, high criticality, 124 transitive
+descendants):
+
+> Issue: the proposed_retained diagnostic rests on a numerical k-sweep
+> over one Fam1 setup with three seeds per k*H value, but the audit
+> ledger registers no primary runner/output for
+> `scripts/lensing_k_sweep.py` or its log. Why this blocks: a hostile
+> auditor cannot reproduce the reported slope range, sign flips, R^2
+> ranges, seed spread, or eikonal-gap oscillation from registered
+> evidence; additionally, the inference that the correction is a
+> wave-interference mechanism is stronger than the table alone unless
+> supported by registered kernel/mode analysis.
+
+## What this note does NOT claim
+
+- A framework-level theorem about lensing-slope k-dependence beyond
+  the single Fam1 sweep.
+- That the wave-interference mechanism interpretation is supported by
+  registered kernel / mode analysis; only the slope table is
+  reported.
+- Reproducibility from the audit packet alone; the runner and log
+  are not registered.
+
+## What would close this lane (Path A future work)
+
+Promoting from bounded conditional to retained would require:
+
+1. Registering `scripts/lensing_k_sweep.py` and its deterministic
+   output as the primary runner with PASS thresholds for slopes,
+   signs, and seed spread.
+2. Registering the eikonal baseline and adjoint-kernel / mode
+   analysis used to infer the wave-interference mechanism.
+3. Extending or explicitly bounding the family / seed coverage.
