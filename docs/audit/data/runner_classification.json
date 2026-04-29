@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T23:15:24.371382+00:00",
+  "generated_at": "2026-04-29T23:15:47.848669+00:00",
   "per_claim": {
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "assert_count": 0,
@@ -49,30 +49,6 @@
       "dominant_class": null,
       "runner": "action_power_canonical_harness.py"
     },
-    "ai_methodology.raw.claude_review_packets_full": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "runner": "lattice_2d3d_continuum_check.py"
-    },
-    "ai_methodology.raw.prompts_session_049708ba_jonreilly": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "runner": "/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_gravitational_time_dilation.py"
-    },
     "ai_methodology.raw.prompts_session_04c820e1": {
       "assert_count": 0,
       "counts": {
@@ -85,18 +61,6 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_dimension_selection.py"
     },
-    "ai_methodology.raw.prompts_session_4ffea772_jonreilly": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "runner": "/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/scripts/distance_law_3d_64_closure.py"
-    },
     "ai_methodology.raw.prompts_session_ebae4639_jonreilly": {
       "assert_count": 2,
       "counts": {
@@ -108,18 +72,6 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_quark_issr1_bicac_forcing.py"
-    },
-    "ai_methodology.raw.science_scaffolding": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "runner": "scripts/interference_geometry_sweep.py"
     },
     "alpha_s_derived_note": {
       "assert_count": 0,
@@ -8967,36 +8919,6 @@
     }
   },
   "per_runner": {
-    "/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_gravitational_time_dilation.py": {
-      "assert_count": 0,
-      "claims": [
-        "ai_methodology.raw.prompts_session_049708ba_jonreilly"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": false
-    },
-    "/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/scripts/distance_law_3d_64_closure.py": {
-      "assert_count": 0,
-      "claims": [
-        "ai_methodology.raw.prompts_session_4ffea772_jonreilly"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": false
-    },
     "action_power_canonical_harness.py": {
       "assert_count": 0,
       "claims": [
@@ -9347,7 +9269,6 @@
     "lattice_2d3d_continuum_check.py": {
       "assert_count": 0,
       "claims": [
-        "ai_methodology.raw.claude_review_packets_full",
         "branch_summary_distracted_napier"
       ],
       "counts": {
@@ -19859,21 +19780,6 @@
       "dominant_class": "C",
       "exists": true
     },
-    "scripts/interference_geometry_sweep.py": {
-      "assert_count": 0,
-      "claims": [
-        "ai_methodology.raw.science_scaffolding"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": true
-    },
     "scripts/verify_cl3_sm_embedding.py": {
       "assert_count": 2,
       "claims": [
@@ -19901,9 +19807,9 @@
       "B": 107,
       "C": 350,
       "D": 120,
-      "none": 144
+      "none": 141
     },
-    "runners_classified": 727,
+    "runners_classified": 724,
     "runners_with_C": 433,
     "runners_with_D": 208
   }
