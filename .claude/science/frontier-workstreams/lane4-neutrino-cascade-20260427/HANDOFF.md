@@ -1,5 +1,97 @@
 # Handoff
 
+## Loop 1 Checkpoint 2026-04-29T03:54Z
+
+This cascade was resumed under the user's 12-hour deadline
+`2026-04-29T15:48:24Z`. The branch first merged current `origin/main`
+cleanly so the route assessment used the landed Lane 4 physics-loop closeout
+and current audit surfaces.
+
+### Claim-State Movement This Loop
+
+1. **Lane 4F Sigma m_nu structural functional form integrated and verified.**
+   The unmerged `frontier/neutrino-sigma-mnu-cosmology-20260428` block was
+   cherry-picked onto this cascade branch. It adds:
+   - `docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_THEOREM_PLAN_NOTE_2026-04-28.md`
+   - `docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_FUNCTIONAL_FORM_THEOREM_NOTE_2026-04-28.md`
+   - `scripts/frontier_neutrino_lane4_4f_sigma_m_nu_functional_form.py`
+   - `docs/NEUTRINO_LANE4_4F_PHASE2_ATTACK_FRAME_FANOUT_NOTE_2026-04-28.md`
+
+   Verified result: structural identity
+   `Sigma m_nu = (1 - L - R - Omega_b - Omega_DM) * C_nu * h^2` on the
+   retained cosmology bounded surface plus admitted matter-budget/CMB-neutrino
+   convention. The runner passes `PASS=4 FAIL=0`. This is not numerical
+   retained Sigma m_nu closure because `h`, `Omega_b`, and `Omega_DM` remain
+   open/admitted.
+
+2. **Lane 2 reassessed and skipped for lack of a fresh premise.** Current main
+   still points to the 2026-04-27 Rydberg dependency firewall. No new retained
+   `m_e`, `alpha(0)`/QED-running bridge, or physical-unit nonrelativistic
+   limit was found, so Lane 2 remains blocked without a new theorem route in
+   this loop.
+
+3. **Lane 5 `(C1)` A1 stretch attempt executed.** Added:
+   - `docs/HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md`
+   - `scripts/frontier_hubble_lane5_c1_a1_grassmann_boundary_car_obstruction.py`
+
+   Verified result: exact negative boundary for the direct A1 shortcut. Bulk
+   Grassmann/CAR structure plus rank-four support does not force CAR semantics
+   on `P_A H_cell`; the descent works only when `P_A` is a reducing
+   Clifford/CAR module morphism for the selected modes. The runner passes
+   `PASS=5 FAIL=0`.
+
+### Verification
+
+- `PYTHONPATH=scripts python3 scripts/frontier_neutrino_lane4_4f_sigma_m_nu_functional_form.py`
+  -> `PASS=4 FAIL=0`
+- `python3 -m py_compile scripts/frontier_neutrino_lane4_4f_sigma_m_nu_functional_form.py`
+  -> pass
+- `PYTHONPATH=scripts python3 scripts/frontier_neutrino_retained_observable_bounds.py`
+  -> `PASS=35 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_cosmology_open_number_reduction.py`
+  -> `PASS=5 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_hubble_lane5_c1_a1_grassmann_boundary_car_obstruction.py`
+  -> `PASS=5 FAIL=0`
+- `python3 -m py_compile scripts/frontier_hubble_lane5_c1_a1_grassmann_boundary_car_obstruction.py scripts/frontier_neutrino_lane4_4f_sigma_m_nu_functional_form.py`
+  -> pass
+- `PYTHONPATH=scripts python3 scripts/frontier_area_law_native_car_semantics_tightening.py`
+  -> `PASS=23 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_planck_target3_phase_unit_edge_statistics.py`
+  -> `PASS=27 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_planck_target3_clifford_phase_bridge.py`
+  -> `PASS=34 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_area_law_primitive_car_edge_identification.py`
+  -> `PASS=36 FAIL=0`
+- `bash docs/audit/scripts/run_pipeline.sh`
+  -> complete
+- `python3 docs/audit/scripts/audit_lint.py --strict`
+  -> OK, known graph-cycle warning only
+- `git diff --check`
+  -> pass
+
+### Review-Loop Emulation
+
+- Lane 4F: PASS with boundary note. Structural functional form retained only
+  at the algebraic/formal level; numerical `Sigma m_nu` still depends on
+  Lane 5 `h` and admitted matter-budget inputs.
+- Lane 2: no new route. Keep the 2026-04-27 dependency firewall as the active
+  stop boundary until a fresh electron-mass, QED-running, or NR-limit premise
+  lands.
+- Lane 5 A1: PASS as negative-boundary artifact. The direct A1 route is not
+  closed positively; it exposes a sharper import (`P_A` module morphism).
+  Conditional Planck/area-law positive packets remain intact.
+
+### Next Exact Action
+
+Continue Lane 5 `(C1)` rather than stopping the cascade. Execute **A2 stretch
+attempt**: test whether retained `g_bare = 1` plus the accepted plaquette /
+`u_0` surface and minimal APBC hierarchy block projects to action-unit
+metrology on `P_A H_cell`. If A2 is blocked, pivot to A4
+parity-gate-to-CAR audit or A5 minimal-carrier-axiom audit.
+
+Do **not** create `STOP_ALL_LANES_REQUESTED` yet. Lane 5 still has viable
+follow-up after the A1 negative boundary.
+
 ## Resume Directive 2026-04-29
 
 The user explicitly requested that the disconnected physics/frontier loop be

@@ -1,5 +1,88 @@
 # Review History
 
+## 2026-04-29 Cycle 6 Review Results
+
+Artifact under review:
+
+- `docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_THEOREM_PLAN_NOTE_2026-04-28.md`
+- `docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_FUNCTIONAL_FORM_THEOREM_NOTE_2026-04-28.md`
+- `scripts/frontier_neutrino_lane4_4f_sigma_m_nu_functional_form.py`
+- `docs/NEUTRINO_LANE4_4F_PHASE2_ATTACK_FRAME_FANOUT_NOTE_2026-04-28.md`
+
+### Code / Runner: PASS
+
+- Lane 4F runner passes: `PASS=4 FAIL=0`.
+- Runner compiles with `py_compile`.
+- Existing neutrino observable bounds runner still passes: `PASS=35 FAIL=0`.
+- Existing cosmology open-number reduction runner still passes: `PASS=5 FAIL=0`.
+
+### Physics Claim Boundary: STRUCTURAL SUPPORT / OPEN NUMERICAL TARGET
+
+- The structural identity
+  `Sigma m_nu = (1 - L - R - Omega_b - Omega_DM) * C_nu * h^2`
+  is verified as an algebraic consequence on the retained cosmology bounded
+  surface plus admitted matter-budget/CMB-neutrino convention.
+- Numerical `Sigma m_nu` retention is not claimed. It still requires Lane 5
+  `h` closure and matter-budget input promotions.
+
+### Imports / Support: DISCLOSED
+
+- `h`, `Omega_b`, `Omega_DM`, and `C_nu` are explicitly ledgered as open or
+  admitted.
+- No observed `Sigma m_nu` value is used as a derivation input.
+
+### Repo Governance: PASS
+
+- Current `origin/main` was merged into the science branch before integration.
+- No PR was opened and no push to `main` was made.
+- Status wording in the imported notes was tightened to
+  `proposed_retained` so strict audit lint passes.
+
+## 2026-04-29 Cycle 7 Review Results
+
+Artifact under review:
+
+- `docs/HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_a1_grassmann_boundary_car_obstruction.py`
+
+### Code / Runner: PASS
+
+- New A1 obstruction runner passes: `PASS=5 FAIL=0`.
+- New runner compiles with `py_compile`.
+- Nearby authority runners still pass:
+  - `frontier_area_law_native_car_semantics_tightening.py`: `PASS=23 FAIL=0`
+  - `frontier_planck_target3_phase_unit_edge_statistics.py`: `PASS=27 FAIL=0`
+  - `frontier_planck_target3_clifford_phase_bridge.py`: `PASS=34 FAIL=0`
+  - `frontier_area_law_primitive_car_edge_identification.py`: `PASS=36 FAIL=0`
+
+### Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+
+- The note does not claim `(C1)` closure.
+- It blocks the direct A1 shortcut: bulk finite Grassmann/CAR structure plus
+  rank-four support does not force CAR semantics on `P_A H_cell`.
+- The exposed missing theorem is precise: `P_A` must be a reducing
+  Clifford/CAR module morphism for the selected edge modes, or an equivalent
+  coframe-response theorem must be supplied.
+
+### Imports / Support: DISCLOSED
+
+- No measured Planck, Hubble, or cosmology value is used.
+- The witness is finite-algebraic and uses standard CAR matrices only as
+  proof infrastructure.
+
+### Nature Retention: NO-GO FOR A1, NOT FOR LANE 5
+
+- A1 is closed negatively as currently framed.
+- The broader `(C1)` gate remains open through A2, A4, or a direct
+  `P_A` module-morphism theorem.
+
+### Audit Compatibility: PASS
+
+- `bash docs/audit/scripts/run_pipeline.sh`: complete.
+- `python3 docs/audit/scripts/audit_lint.py --strict`: OK, with known
+  graph-cycle warning only.
+- `git diff --check`: OK.
+
 ## 2026-04-27 Cycle 1 Review Results
 
 Artifact under review:

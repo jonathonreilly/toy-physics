@@ -63,3 +63,22 @@
 | Chiral condensate `Sigma` and `f_pi` | GMOR pion-mass closure inputs | open dependency | Lane 1 open stub | Yes | Yes | Derive chiral-SB inputs from staggered-Dirac partition | Open |
 | Hadronic-scale matching and correlator extraction | Proton/neutron/spectrum closure | open methodology bridge | Lane 1 open stub | Yes | Yes | Instantiate lattice-QCD-equivalent calculation on framework substrate | Open |
 | Observed hadron masses | Spectral-coefficient sensitivity examples | comparator | standard hadron values | No | No | Keep out of derivation chain | Comparator only |
+
+## Lane 4F Sigma m_nu Imports Added In Cycle 6
+
+| Item | Role in claim | Current class | Source surface | Load-bearing? | Needed for target status? | Retirement path | Disposition |
+|---|---|---|---|---|---|---|---|
+| `L = Omega_Lambda,0 = (H_inf/H_0)^2` | Structural variable in Sigma m_nu functional form | retained structural identity | `COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md`; `OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md` | Yes | Yes for structural form | Already retained as structural variable, not numerical closure | Reuse |
+| `R = Omega_r,0` | Radiation fraction in matter-budget split | admitted cosmology layer | `COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md` | Yes | Yes for numerical Sigma m_nu | Retain radiation/CMB readout or keep admitted | Open/admitted |
+| `h = H_0 / 100 km/s/Mpc` | Converts Omega_nu h^2 to Sigma m_nu | open Lane 5 variable | Lane 5 two-gate dependency firewall and Hubble C1/C2 audits | Yes | Yes for numerical Sigma m_nu | Close Lane 5 `(C1)` plus `(C2)` or `(C3)` | Open |
+| `Omega_b`, `Omega_DM` | Matter-budget split subtracting baryon and dark matter fractions | admitted observational layer | Lane 4F theorem-plan note | Yes | Yes for numerical Sigma m_nu | Retain baryon and dark-matter density fractions or keep admitted | Open/admitted |
+| `C_nu = 93.14 eV` | Standard CMB-neutrino relic conversion constant | admitted convention | Lane 4F functional-form note | Yes | Yes for conventional physical-units form | Derive from retained `N_eff`, `T_CMB`, entropy transfer, and unit conventions | Admitted convention |
+
+## Lane 5 C1 A1 Imports Added In Cycle 7
+
+| Item | Role in claim | Current class | Source surface | Load-bearing? | Needed for target status? | Retirement path | Disposition |
+|---|---|---|---|---|---|---|---|
+| Bulk finite Grassmann / CAR structure | Starting point for A1 stretch attempt | accepted framework input | `MINIMAL_AXIOMS_2026-04-11.md` | Yes | Yes | Already in `A_min` | Reuse |
+| `P_A H_cell`, rank-four primitive boundary block | Boundary target for C1 G1 edge-statistics principle | retained/support Planck packet | `PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`; `HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md` | Yes | Yes | Already identified, but not CAR-forcing by rank alone | Reuse with boundary |
+| `P_A` Clifford/CAR module-morphism or reducing-subspace property | Newly exposed missing premise for A1 direct descent | open import | `HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md` | Yes | Yes for A1 positive closure | Prove `P_A` reduces selected edge modes from coframe response or another retained primitive | Open |
+| Non-CAR rank-four semantics | Countermodel class for rank-only closure | exact negative boundary | `AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md`; A1 obstruction runner | Yes for no-go | Yes | Closed as a direct A1 shortcut | Guardrail |

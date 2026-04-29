@@ -18,6 +18,13 @@ Cycle 5 used standard pion/proton/neutron masses only to display the
 dimensionless spectral coefficients left open by `sqrt(sigma)`. No hadron
 mass was used as a derivation input.
 
+Cycle 6 used the standard `C_nu = 93.14 eV` CMB-neutrino relic conversion
+constant only as an admitted convention in the `Sigma m_nu` functional-form
+identity; it remains ledgered as a convention, not a framework derivation.
+
+Cycle 7 used no new literature. The A1 obstruction is finite algebra over CAR
+matrices and rank-four projections, with no observational comparator.
+
 If later cycles need external bridge material, enter each imported theorem,
 experimental number, or convention here with role `bridge`, `comparator`,
 `admitted convention`, or `non-derivation context`.

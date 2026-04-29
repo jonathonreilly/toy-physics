@@ -1,7 +1,7 @@
 # Lane 4F `Σm_ν` Theorem Plan: Cosmology-Bridge Closure Roadmap
 
 **Date:** 2026-04-28
-**Status:** retained branch-local theorem-plan note on
+**Status:** proposed_retained branch-local theorem-plan note on
 `frontier/neutrino-sigma-mnu-cosmology-20260428`. Reduces Lane 4 sub-
 target 4F (`Σm_ν` cosmological constraint) to a sharp structural-
 functional-form identity over the retained cosmology open-number

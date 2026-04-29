@@ -1,7 +1,7 @@
 # Lane 4F Phase-2 Attack Frame — Stuck Fan-Out
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **stuck fan-out** note on
+**Status:** proposed_retained branch-local **stuck fan-out** note on
 `frontier/neutrino-sigma-mnu-cosmology-20260428`. Cycle 3 of the 4F
 loop. With 4F-α (structural functional form) RETAINED in Cycle 2,
 Phase-2 (numerical `Σm_ν` retention) is the next target. Per Deep

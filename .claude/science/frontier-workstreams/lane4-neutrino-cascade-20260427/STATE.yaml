@@ -4,37 +4,31 @@ mode: run/resume
 target: best-honest-status
 runtime:
   requested_hours: 12
-  hard_deadline_utc: "2026-04-28T00:19:36Z"
+  hard_deadline_utc: "2026-04-29T15:48:24Z"
   supervisor_loop: 1
+  refreshed_at_utc: "2026-04-29T03:54:07Z"
 lock:
   owner: frontier-workstream-lane4-cascade
-  repo_local_lock: logs/physics_worker_lock.json
+  repo_lock_status: unavailable
+  repo_lock_note: "scripts/automation_lock.py status fails in this workspace with permission denied on /Users/jonreilly; using branch-local supervisor lock only."
 current_lane:
-  id: 1
-  name: hadron mass program
+  id: 5
+  name: Hubble constant derivation
   status: open
 cycle:
-  count: 5
-  active_route: hadron_confinement_to_mass_firewall
-  route_status: verified
+  count: 7
+  active_route: lane5_c1_a1_grassmann_boundary_car_obstruction
+  route_status: verified_negative_boundary
+  note: "Loop 1 merged current origin/main, integrated Lane 4F Sigma m_nu structural block, skipped Lane 2 for lack of fresh m_e/alpha(0)/NR-limit premise, then executed Lane 5 (C1) A1 stretch attempt."
 files_touched:
-  - docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md
-  - scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py
-  - scripts/frontier_neutrino_majorana_current_stack_zero_law.py
-  - logs/2026-04-27-neutrino-lane4-dirac-seesaw-fork-no-go.txt
-  - docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md
-  - scripts/frontier_atomic_rydberg_dependency_firewall.py
-  - logs/2026-04-27-atomic-rydberg-dependency-firewall.txt
-  - docs/HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md
-  - scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py
-  - logs/2026-04-27-hubble-lane5-two-gate-dependency-firewall.txt
-  - docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md
-  - scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py
-  - logs/2026-04-27-quark-lane3-bounded-companion-retention-firewall.txt
-  - docs/HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md
-  - scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py
-  - logs/2026-04-27-hadron-lane1-confinement-to-mass-firewall.txt
-  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/STOP_ALL_LANES_REQUESTED
+  - docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_THEOREM_PLAN_NOTE_2026-04-28.md
+  - docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_FUNCTIONAL_FORM_THEOREM_NOTE_2026-04-28.md
+  - scripts/frontier_neutrino_lane4_4f_sigma_m_nu_functional_form.py
+  - docs/NEUTRINO_LANE4_4F_PHASE2_ATTACK_FRAME_FANOUT_NOTE_2026-04-28.md
+  - logs/2026-04-29-neutrino-lane4-4f-sigma-m-nu-functional-form.txt
+  - docs/HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md
+  - scripts/frontier_hubble_lane5_c1_a1_grassmann_boundary_car_obstruction.py
+  - logs/2026-04-29-hubble-lane5-c1-a1-grassmann-boundary-car-obstruction.txt
   - docs/audit/AUDIT_LEDGER.md
   - docs/audit/AUDIT_QUEUE.md
   - docs/audit/data/audit_ledger.json
@@ -43,27 +37,30 @@ files_touched:
   - docs/audit/data/effective_status_summary.json
   - docs/audit/data/load_bearing_summary.json
   - docs/audit/data/runner_classification.json
-  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/GOAL.md
+  - .claude/science/physics-loops/neutrino-sigma-mnu-cosmology-20260428/
+  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/STATE.yaml
+  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/HANDOFF.md
   - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/ASSUMPTIONS_AND_IMPORTS.md
   - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/ROUTE_PORTFOLIO.md
   - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/NO_GO_LEDGER.md
   - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/LITERATURE_BRIDGES.md
   - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/ARTIFACT_PLAN.md
   - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/REVIEW_HISTORY.md
-  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/HANDOFF.md
-  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/STATE.yaml
 open_imports:
   - nonzero charge-2 Majorana primitive or equivalent admitted extension
   - tiny Dirac Y_nu activation law
   - full off-diagonal M_R texture for Delta m2_21
   - PMNS value-selection law for J_chi
+  - h = H_0 / 100 km/s/Mpc for numerical Sigma m_nu; depends on Lane 5 C1 plus C2/C3
+  - Omega_b and Omega_DM admitted matter-budget inputs for numerical Sigma m_nu
   - retained electron mass or charged-lepton y_e activation law
   - retained alpha(0) or QED running bridge from alpha_EM(M_Z)
   - physical-unit nonrelativistic Schrodinger/Coulomb limit
   - Lane 5 C1 primitive Clifford/CAR coframe response with natural phase/action units
+  - Lane 5 C1 A1 newly exposed import: P_A must be a reducing Clifford/CAR module morphism for selected edge modes
+  - Lane 5 C1 G2 action-unit metrology
   - Lane 5 C2 right-sensitive Z3 doublet-block selector and bounded-cascade dependencies
   - Lane 5 C3 direct cosmic-L route, currently no active route
-  - admitted T_CMB radiation readout for current bounded cosmology surface
   - Lane 3 non-perturbative theorem-core proof of the 5/6 bridge and scale selection
   - Lane 3 up-type partition/scalar amplitude law
   - Lane 3 generation-stratified or species-differentiated Yukawa Ward identities
@@ -79,49 +76,31 @@ no_go_routes:
   - numerical H_0 closure from a single Lane 5 gate or from the structural lock alone
   - five non-top quark mass retention from bounded CKM/quark companion support alone
   - hadron mass retention from confinement and bounded sqrt(sigma) alone
+  - Lane 5 C1 A1 direct shortcut: bulk Grassmann/CAR plus rank-four support does not force CAR on P_A H_cell without a P_A module-morphism/reducing-subspace theorem
 review:
   status: passed_with_notes
   findings:
-    - "No retained Lane 4 closure; artifact is exact negative boundary."
-    - "Existing Majorana zero-law runner needed atlas Pfaffian/Nambu scoping compatibility fix after origin/main fast-forward."
-    - "No retained Lane 2 closure; artifact is exact dependency firewall."
-    - "No retained Lane 5 closure; artifact is exact two-gate dependency firewall."
-    - "No retained Lane 3 five-mass closure; artifact is exact bounded-companion retention firewall."
-    - "No retained Lane 1 hadron-mass closure; artifact is exact confinement-to-mass firewall."
-    - "Audit strict lint passes with known graph-cycle warning only."
+    - "Lane 4F Sigma m_nu structural functional form integrated from the unmerged 2026-04-28 branch and verified: runner PASS=4 FAIL=0."
+    - "Lane 4F is structural, not numerical: h, Omega_b, and Omega_DM remain open/admitted for numerical Sigma m_nu."
+    - "Lane 2 was reassessed on current main; no fresh retained m_e, alpha(0)/QED-running, or physical-unit NR-limit premise was found."
+    - "Lane 5 C1 A1 stretch attempt produced an exact negative boundary: bulk CAR descends to a rank-four projected block only under a reducing-subspace/module-morphism premise for P_A."
+    - "Existing conditional positive Planck/area-law runners still pass; the new A1 obstruction does not demote those conditional packets."
+    - "Audit strict lint passes with the known graph-cycle warning only."
 verification:
   status: passed
   commands:
-    - "PYTHONPATH=scripts python3 scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py -> PASS=10 FAIL=0"
-    - "python3 -m py_compile scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py scripts/frontier_neutrino_majorana_current_stack_zero_law.py -> pass"
-    - "PYTHONPATH=scripts python3 scripts/frontier_neutrino_majorana_current_stack_zero_law.py -> PASS=13 FAIL=0"
-    - "PYTHONPATH=scripts python3 scripts/frontier_neutrino_mass_derived.py -> PASS=19 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_neutrino_lane4_4f_sigma_m_nu_functional_form.py -> PASS=4 FAIL=0"
+    - "python3 -m py_compile scripts/frontier_neutrino_lane4_4f_sigma_m_nu_functional_form.py -> pass"
     - "PYTHONPATH=scripts python3 scripts/frontier_neutrino_retained_observable_bounds.py -> PASS=35 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_cosmology_open_number_reduction.py -> PASS=5 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_hubble_lane5_c1_a1_grassmann_boundary_car_obstruction.py -> PASS=5 FAIL=0"
+    - "python3 -m py_compile scripts/frontier_hubble_lane5_c1_a1_grassmann_boundary_car_obstruction.py scripts/frontier_neutrino_lane4_4f_sigma_m_nu_functional_form.py -> pass"
+    - "PYTHONPATH=scripts python3 scripts/frontier_area_law_native_car_semantics_tightening.py -> PASS=23 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_planck_target3_phase_unit_edge_statistics.py -> PASS=27 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_planck_target3_clifford_phase_bridge.py -> PASS=34 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_area_law_primitive_car_edge_identification.py -> PASS=36 FAIL=0"
     - "bash docs/audit/scripts/run_pipeline.sh -> complete"
     - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only"
     - "git diff --check -> pass"
-    - "PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0"
-    - "python3 -m py_compile scripts/frontier_atomic_rydberg_dependency_firewall.py -> pass"
-    - "PYTHONPATH=scripts python3 scripts/frontier_atomic_hydrogen_helium_probe.py -> bounded scaffold output reproduced"
-    - "bash docs/audit/scripts/run_pipeline.sh -> complete after Lane 2 artifact"
-    - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only after Lane 2 artifact"
-    - "PYTHONPATH=scripts python3 scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py -> PASS=18 FAIL=0"
-    - "python3 -m py_compile scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py -> pass"
-    - "PYTHONPATH=scripts python3 scripts/frontier_cosmology_open_number_reduction.py -> PASS=5 FAIL=0"
-    - "PYTHONPATH=scripts python3 scripts/frontier_hubble_tension_structural_lock.py -> PASS=5 FAIL=0"
-    - "bash docs/audit/scripts/run_pipeline.sh -> complete after Lane 5 artifact"
-    - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only after Lane 5 artifact"
-    - "PYTHONPATH=scripts python3 scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py -> PASS=17 FAIL=0"
-    - "python3 -m py_compile scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py -> pass"
-    - "PYTHONPATH=scripts python3 scripts/frontier_quark_mass_ratio_review.py -> PASS=46 FAIL=0"
-    - "PYTHONPATH=scripts python3 scripts/frontier_yt_bottom_yukawa_retention.py -> PASS=52 FAIL=0"
-    - "PYTHONPATH=scripts python3 scripts/frontier_yt_ward_identity_derivation.py -> PASS=45 FAIL=0"
-    - "bash docs/audit/scripts/run_pipeline.sh -> complete after Lane 3 artifact"
-    - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only after Lane 3 artifact"
-    - "PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py -> PASS=16 FAIL=0"
-    - "python3 -m py_compile scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py -> pass"
-    - "PYTHONPATH=scripts python3 scripts/frontier_confinement_string_tension.py -> PASS=30 FAIL=0"
-    - "bash docs/audit/scripts/run_pipeline.sh -> complete after Lane 1 artifact"
-    - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only after Lane 1 artifact"
-next_exact_action: "Stop the cascade; branch frontier/lane4-neutrino-cascade-20260427 is pushed with STOP_ALL_LANES_REQUESTED."
-stop_condition: "Reached after cycle 5: every viable queued lane has an exact dependency boundary requiring new science premise or human-judgment selection; Lane 6 has no new charged-lepton premise and remains recently exhausted."
+next_exact_action: "Continue Lane 5 (C1) after A1 obstruction: execute A2 stretch attempt on whether retained g_bare=1 plus the accepted plaquette/u0 surface projects to action-unit metrology on P_A H_cell, or if A2 is blocked, pivot to A4 parity-gate-to-CAR audit. Do not create STOP_ALL_LANES_REQUESTED yet; viable Lane 5 follow-up remains."
+stop_condition: "Not reached in loop 1. Lane 4F moved structurally; Lane 2 has no fresh premise; Lane 5 has an active next route after the A1 negative boundary."

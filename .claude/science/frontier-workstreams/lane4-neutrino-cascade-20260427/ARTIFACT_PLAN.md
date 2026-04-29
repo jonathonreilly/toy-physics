@@ -141,3 +141,57 @@ Expected claim movement:
   masses;
 - all viable cascade lanes now checkpointed at exact dependency boundaries,
   so the stop marker is justified.
+
+## Cycle 6: Lane 4F Sigma m_nu Structural Functional Form
+
+Deliverables integrated from `frontier/neutrino-sigma-mnu-cosmology-20260428`:
+
+- `docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_THEOREM_PLAN_NOTE_2026-04-28.md`
+- `docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_FUNCTIONAL_FORM_THEOREM_NOTE_2026-04-28.md`
+- `scripts/frontier_neutrino_lane4_4f_sigma_m_nu_functional_form.py`
+- `docs/NEUTRINO_LANE4_4F_PHASE2_ATTACK_FRAME_FANOUT_NOTE_2026-04-28.md`
+- `logs/2026-04-29-neutrino-lane4-4f-sigma-m-nu-functional-form.txt`
+
+Verification:
+
+- run and compile the new runner;
+- rerun the retained neutrino observable bounds runner;
+- rerun the cosmology open-number reduction runner;
+- run audit pipeline and strict lint;
+- run `git diff --check`;
+- record review-loop emulation.
+
+Expected claim movement:
+
+- structural functional-form support for `Sigma m_nu`;
+- no numerical `Sigma m_nu` closure;
+- Phase-2 dependencies handed to Lane 5 `(C1)`/`(C2)` and admitted matter
+  inputs.
+
+## Cycle 7: Lane 5 C1 A1 Grassmann-To-Boundary CAR Obstruction
+
+Deliverables:
+
+- `docs/HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_a1_grassmann_boundary_car_obstruction.py`
+- `logs/2026-04-29-hubble-lane5-c1-a1-grassmann-boundary-car-obstruction.txt`
+
+Verification:
+
+- run and compile the new runner;
+- rerun nearby conditional Planck/area-law authority runners:
+  - `frontier_area_law_native_car_semantics_tightening.py`
+  - `frontier_planck_target3_phase_unit_edge_statistics.py`
+  - `frontier_planck_target3_clifford_phase_bridge.py`
+  - `frontier_area_law_primitive_car_edge_identification.py`
+- run audit pipeline and strict lint;
+- run `git diff --check`;
+- record review-loop emulation.
+
+Expected claim movement:
+
+- no `(C1)` closure;
+- exact negative boundary against the direct A1 shortcut;
+- newly exposed import: `P_A` must be a reducing Clifford/CAR module
+  morphism, or an equivalent theorem must be supplied;
+- next route becomes A2 action-unit metrology or A4 parity-gate-to-CAR.

@@ -1,0 +1,11 @@
+==============================================================================
+Lane 5 (C1) A1 Grassmann-to-boundary CAR obstruction verifier
+==============================================================================
+[PASS] bulk_3_mode_car: worst CAR residual on F(C^3) = 0.000e+00
+[PASS] reducing_projection_preserves_selected_car: CAR residual=0.000e+00, commutator residual=0.000e+00
+[PASS] rank_four_projection_need_not_preserve_car: CAR residual=2.000e+00, commutator residual=2.000e+00
+[PASS] same_rank_parity_allows_non_car_two_qubit_semantics: commutator=0.000e+00, anticommutator=4.000e+00, parity spectrum=(-1.0, -1.0, 1.0, 1.0)
+[PASS] a1_exposes_projection_morphism_import: Need P_A to reduce the selected Clifford/CAR algebra, or an equivalent module-morphism theorem.
+------------------------------------------------------------------------------
+TOTAL: PASS=5, FAIL=0
+Conclusion: bulk CAR plus rank-four support is insufficient; A1 needs a P_A module-morphism/reducing-subspace theorem.

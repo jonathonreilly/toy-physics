@@ -15,6 +15,11 @@ Scores use the frontier-workstream dramatic-step scale: `0` low value,
 | Lane 5 two-gate Hubble dependency firewall | no-go / closure-pathway audit | 2 | 2 | 3 | -0 | 7 | Executed cycle 3 |
 | Lane 3 bounded-companion retention firewall | no-go / bounded-vs-retained audit | 2 | 2 | 3 | -0 | 7 | Executed cycle 4 |
 | Lane 1 confinement-to-mass firewall | no-go / prerequisite-vs-closure audit | 2 | 2 | 3 | -0 | 7 | Executed cycle 5 |
+| Lane 4F Sigma m_nu structural functional form | theorem / support bridge | 2 | 1 | 3 | -0 | 6 | Executed cycle 6; structural only, numerical imports remain |
+| Lane 2 fresh-premise scan after current-main merge | route assessment | 0 | 0 | 1 | -0 | 1 | Completed; no fresh premise found |
+| Lane 5 C1 A1 Grassmann-to-boundary CAR descent | stretch attempt / no-go | 2 | 2 | 3 | -0 | 7 | Executed cycle 7; direct A1 shortcut blocked |
+| Lane 5 C1 A2 action-unit metrology from g_bare=1 | stretch attempt | 3 | 3 | 2 | -1 | 7 | Next route |
+| Lane 5 C1 A4 parity-gate-to-CAR route | theorem/audit | 2 | 2 | 2 | -1 | 5 | Backup if A2 stalls |
 
 ## Selected Cycle 1 Route
 
@@ -77,3 +82,28 @@ blocked by prerequisite-vs-closure drift:
 - it exposes GMOR's light-quark and chiral-input dependencies;
 - it identifies the ab-initio proton/neutron gates before stopping the
   all-lane cascade.
+
+## Selected Cycle 6 Route
+
+Integrate and verify the Lane 4F `Sigma m_nu` structural functional-form
+block from `frontier/neutrino-sigma-mnu-cosmology-20260428` because it is
+fresh Lane 4 claim-state movement since the earlier all-lane stop:
+
+- it retains the algebraic functional form on the bounded cosmology surface;
+- it keeps numerical `Sigma m_nu` blocked on `h`, `Omega_b`, and `Omega_DM`;
+- it supplies a direct bridge to Lane 5 `(C1)`/`(C2)` work without pretending
+  the absolute neutrino mass program is closed.
+
+## Cycle 7 Route
+
+Execute the Lane 5 `(C1)` A1 stretch attempt because Lane 2 has no fresh
+premise and the Lane 4F fan-out identified `(C1)` as the strongest next
+Phase-2 dependency:
+
+- test whether bulk finite Grassmann/CAR structure descends to `P_A H_cell`;
+- produce an executable finite-algebra witness;
+- keep the conditional Planck/CAR positive packet intact while closing the
+  direct A1 shortcut if a projection/morphism premise is missing.
+
+Outcome: A1 is now an exact negative boundary unless a `P_A` Clifford-module
+morphism theorem is supplied.

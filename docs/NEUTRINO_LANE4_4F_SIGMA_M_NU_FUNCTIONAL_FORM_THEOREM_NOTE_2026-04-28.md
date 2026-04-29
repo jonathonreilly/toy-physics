@@ -1,7 +1,7 @@
 # `Σm_ν` Structural Functional Form on Retained Cosmology Bounded Surface — Theorem (4F-α)
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **stretch-attempt theorem** note on
+**Status:** proposed_retained branch-local **stretch-attempt theorem** note on
 `frontier/neutrino-sigma-mnu-cosmology-20260428`. Cycle 2 of the
 neutrino-sigma-mnu-cosmology loop. **Result: structural functional
 form `Σm_ν = (1 - L - R - Ω_b - Ω_DM) × C_ν × h²` retained as an
