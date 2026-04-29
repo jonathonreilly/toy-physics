@@ -1,7 +1,7 @@
 # Gravity Observable Hierarchy
 
-**Date:** 2026-04-04  
-**Status:** canonical sign-interpretation note for proposed_retained lattice branches
+**Date:** 2026-04-04 (status line rephrased + claim narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded sign-interpretation note for the dense-3D lattice family on the rows the registered runner actually computes (`z = 3` and `z = 5`); the broader `z = 2..6` example table extends past what the runner asserts and is not in scope for ratification.
 
 ## Purpose
 
@@ -171,3 +171,44 @@ rescue the retained 3D barrier failure.
 - [`scripts/gravity_observable_hierarchy.py`](/Users/jonreilly/Projects/Physics/scripts/gravity_observable_hierarchy.py)
 - [`logs/2026-04-04-gravity-observable-hierarchy.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-gravity-observable-hierarchy.txt)
 - [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
+
+## Audit boundary (2026-04-28)
+
+The earlier Status line referred to "`proposed_retained` lattice
+branches", which the audit-lane parser caught even though this note is
+about sign interpretation, not a `proposed_retained` claim itself.
+More importantly, the load-bearing example table covers `z = 2..6`
+while the registered runner computes only `z = 3` and `z = 5`, and one
+cited dense-spent-delay note has already failed audit.
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: the note's load-bearing retained dense-3D attraction claim
+> covers `z = 2..6`, but the current runner and log report only dense
+> `z = 3` and `z = 5`, and the one cited dense-spent-delay note is
+> itself audited failed for an endpoint/window mismatch. Why this
+> blocks: a canonical sign-interpretation note cannot retain an
+> example table that the executable artifact does not compute,
+> especially when a cited source for that example has already failed
+> audit.
+
+The Status line has been narrowed to match what the runner actually
+computes.
+
+## What this note does NOT claim
+
+- That dense `z = 2`, `z = 4`, `z = 6`, or the `z = 7` null boundary
+  are computed by the registered runner.
+- That the cited dense-spent-delay upstream note is audit-clean (it
+  has failed audit on an endpoint/window mismatch).
+- A canonical retained sign-interpretation that holds across the full
+  `z = 2..6` window — it holds only on `z = 3` and `z = 5`.
+
+## What would close this lane (Path A future work)
+
+Restoring the full `z = 2..6` retained table would require either:
+
+1. updating the runner to compute and assert every row in the example
+   table, including `z = 2, 4, 6` and the `z = 7` null boundary; or
+2. resolving the audit failure of the cited dense-spent-delay upstream
+   note so the inheritance is clean.
