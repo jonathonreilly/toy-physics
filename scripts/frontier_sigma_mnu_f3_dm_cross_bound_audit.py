@@ -12,7 +12,7 @@ Sigma m_nu functional form
   Sigma m_nu = (1 - L - R - Omega_b - Omega_DM) C_nu h^2
              [NEUTRINO_LANE4_4F_SIGMA_M_NU_FUNCTIONAL_FORM_THEOREM_NOTE_2026-04-28.md]
 
-with the retained Omega_DM bound
+with the current-bank Omega_DM interval
 
   Omega_DM in [0.2677, 0.2697]
              [DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md]
@@ -25,7 +25,7 @@ The runner does NOT import any observed Sigma m_nu, fitted DM coupling,
 or framework-side carrier axiom.  It uses only:
 
   - the (T-4F-alpha-2) retained functional form
-  - the (DM thermal bounding theorem) retained Omega_DM interval
+  - the (DM thermal bounding theorem) current-bank Omega_DM interval
   - the admitted convention C_nu = 93.14 eV (T_CMB + N_eff)
   - the admitted observational ranges for (L, Omega_b, h) drawn from
     standard cosmology surveys, treated as DERIVATION inputs to be
@@ -65,11 +65,11 @@ def check(name: str, passed: bool, detail: str) -> bool:
 
 
 # ------------------------------------------------------------
-# Retained / admitted constants used by the audit.
+# Current-bank / admitted constants used by the audit.
 # Sources:
 #   C_nu = 93.14 eV  ADMITTED CMB-neutrino-relic convention
 #                    (depends on admitted T_CMB and retained N_eff = 3.046).
-#   Omega_DM bound:  RETAINED conditional on same-surface admitted family
+#   Omega_DM interval:  current-bank, conditional on same-surface admitted family
 #                    [0.2677, 0.2697] from DM thermal bounding theorem.
 #   R = Omega_r,0:   ADMITTED ~ 9.182e-5 from T_CMB + N_eff (standard).
 #   Sigma m_nu osc lower bound: ADMITTED 0.06 eV from PDG oscillation data,
@@ -77,8 +77,8 @@ def check(name: str, passed: bool, detail: str) -> bool:
 # ------------------------------------------------------------
 C_NU_EV = 93.14  # admitted CMB-neutrino-relic conversion (eV)
 OMEGA_R_0 = 9.182e-5  # admitted radiation density fraction
-OMEGA_DM_LO = 0.267709052538  # framework retained low endpoint
-OMEGA_DM_HI = 0.269717881596  # framework retained high endpoint
+OMEGA_DM_LO = 0.267709052538  # framework current-bank low endpoint
+OMEGA_DM_HI = 0.269717881596  # framework current-bank high endpoint
 SIGMA_MNU_OSC_LOWER_EV = 0.06  # comparator only
 
 
@@ -93,7 +93,7 @@ def main() -> int:
     print("LANE 4F (Sigma m_nu) — F3 DM CROSS-BOUND AUDIT RUNNER")
     print("=" * 78)
     print()
-    print("Question: does the retained Omega_DM bound (DM thermal-bounding")
+    print("Question: does the current-bank Omega_DM interval (DM thermal-bounding")
     print("theorem) supply a usable cross-bound for Sigma m_nu via")
     print("(T-4F-alpha-2) at honest observational admissions?")
     print()
@@ -230,7 +230,7 @@ def main() -> int:
             "favorable admission region (where Sigma m_nu > 0) is empty",
             False,
             "no admission point in grid gives Sigma m_nu > 0; cross-bound"
-            " is universally negative under retained Omega_DM bound",
+            " is universally negative under current-bank Omega_DM interval",
         )
 
     # ------------------------------------------------------------
@@ -289,11 +289,11 @@ def main() -> int:
 
     print()
     print("Verdict: F3 DM cross-bound chain is structurally available via")
-    print("(T-4F-alpha-2) + retained Omega_DM thermal bound, but at standard")
+    print("(T-4F-alpha-2) + current-bank Omega_DM thermal interval, but at standard")
     print("Planck admissions (L=0.6847, Omega_b=0.0493, h=0.6736) the chain")
     print("predicts Sigma m_nu < 0, an unphysical structural tension.")
     print()
-    print("The framework's retained Omega_DM bound [0.2677, 0.2697] (conditional")
+    print("The framework's current-bank Omega_DM interval [0.2677, 0.2697] (conditional")
     print("on same-surface admitted family) exceeds the observationally-derived")
     print("Omega_DM ~0.265 by ~0.003-0.005.  Since Sigma m_nu = (Omega_m,0 -")
     print("Omega_b - Omega_DM) C_nu h^2, any framework Omega_DM that exceeds")

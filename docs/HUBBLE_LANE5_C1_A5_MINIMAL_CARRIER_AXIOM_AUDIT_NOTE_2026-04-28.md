@@ -1,7 +1,7 @@
 # Lane 5 `(C1)` Gate — A5 Minimal-Carrier-Axiom Audit
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **audit** note on
+**Status:** open branch-local **minimal-carrier-axiom audit** note on
 `frontier/hubble-c1-absolute-scale-gate-20260428`. Cycle 5 of the
 (C1) gate loop. Audit-grade. Identifies the minimal carrier-axiom
 class that would close `(G1)` after Cycles 2-4 closed `A1`, `A2`,

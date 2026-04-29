@@ -1,7 +1,7 @@
 # Lane 5 `(C1)` Gate — Stuck Fan-Out Synthesis
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **stuck-fan-out synthesis** note on
+**Status:** open branch-local **stuck-fan-out synthesis** note on
 `frontier/hubble-c1-absolute-scale-gate-20260428`. Cycle 6 of the
 (C1) gate loop. Audit-grade. Per Deep Work Rules: 3-5 orthogonal
 premises beyond the audit's `A1`–`A6` direct-derivation frames.

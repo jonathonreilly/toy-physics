@@ -1,7 +1,7 @@
 # Lane 4F (Σm_ν) — F3 DM Cross-Bound Audit
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **audit** note on
+**Status:** support / branch-local **cross-bound audit** note on
 `physics-loop/sigma-mnu-f3-dm-cluster-20260428`. Cycle 1 of the
 F3 loop. Audit-grade. Identifies the strength and structural
 limits of the DM cross-bound chain for numerical Σm_ν retention.
@@ -30,7 +30,7 @@ returns "Cl_4(C) carrier-axiom extension required or accept (C1)
 open".
 
 This note executes F3 (DM relic abundance cross-bound) audit:
-combine (T-4F-α-2) with the retained Ω_DM bound from
+combine (T-4F-α-2) with the current-bank Ω_DM interval from
 `DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md`
 and verify the resulting Σm_ν cross-bound interval over an honest
 admission range for the open layer (L, Ω_b, h).
@@ -39,8 +39,8 @@ admission range for the open layer (L, Ω_b, h).
 
 | Input | Tier | Value or interval | Source |
 |---|---|---|---|
-| `Σm_ν` functional form (T-4F-α-2) | retained-support | algebraic identity | `NEUTRINO_LANE4_4F_SIGMA_M_NU_FUNCTIONAL_FORM_THEOREM_NOTE_2026-04-28.md` |
-| `Ω_DM` interval | retained (conditional) | `[0.267709, 0.269718]` | `DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md` |
+| `Σm_ν` functional form (T-4F-α-2) | support | algebraic identity | `NEUTRINO_LANE4_4F_SIGMA_M_NU_FUNCTIONAL_FORM_THEOREM_NOTE_2026-04-28.md` |
+| `Ω_DM` interval | current-bank / unaudited | `[0.267709, 0.269718]` | `DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md` |
 | `R = Ω_r,0` | admitted | `~9.182 × 10⁻⁵` | T_CMB + retained N_eff |
 | `C_ν` | admitted convention | `93.14 eV` | T_CMB + retained N_eff bookkeeping |
 | `L = Ω_Λ,0` | admitted | observational (Planck-like ~0.6847) | open-number reduction |
@@ -48,7 +48,7 @@ admission range for the open layer (L, Ω_b, h).
 | `h = H_0/100` | open | research-level distant | Lane 5 two-gate dep (open) |
 | Σm_ν oscillation lower bound | comparator only | `≥ 0.06 eV` | PDG; **NOT** a derivation input |
 
-The framework's retained `Ω_DM` bound is **conditional on the
+The framework's current-bank `Ω_DM` interval is **conditional on the
 same-surface admitted DM family** `α(σ) = α_lo + σ(α_hi - α_lo)`
 with σ in a narrow root interval. The current-bank itself is not
 yet a selector law (per the DM thermal bounding theorem's "Honest
@@ -56,14 +56,14 @@ Status" §). The F3 cross-bound therefore inherits this conditional.
 
 ## 2. Theorem (audit)
 
-> **Theorem (F3 cross-bound audit).** The retained `Ω_DM` interval
+> **Theorem (F3 cross-bound audit).** The current-bank `Ω_DM` interval
 > from the DM thermal-bounding theorem, combined with (T-4F-α-2),
 > supplies a closed-form Σm_ν cross-bound interval conditional on
 > the admission triple `(L, Ω_b, h)`. At standard Planck-style
 > admissions `(L, Ω_b, h) = (0.6847, 0.0493, 0.6736)` the cross-
 > bound predicts `Σm_ν ∈ [-0.161, -0.076] eV`, **negative at both
 > endpoints**. This represents a structural tension between the
-> framework's retained `Ω_DM` bound and the standard observational
+> framework's current-bank `Ω_DM` interval and the standard observational
 > matter-budget split, since the framework's `Ω_DM ∈ [0.2677,
 > 0.2697]` exceeds the observationally-derived `Ω_DM ≈ 0.265` by
 > roughly `0.003-0.005`. The cross-bound becomes physically
@@ -85,7 +85,7 @@ The (T-4F-α-2) identity is algebraic on the matter-budget split
 plus the CMB-neutrino-relic conversion `Ω_ν,0 h² = Σm_ν / C_ν`.
 Substituting gives `Σm_ν = (1 - L - R - Ω_b - Ω_DM) C_ν h²`.
 
-Plugging in the framework's retained Ω_DM bound at the Planck
+Plugging in the framework's current-bank Ω_DM interval at the Planck
 admission `(L, Ω_b, h) = (0.6847, 0.0493, 0.6736)`:
 
 ```text
@@ -128,7 +128,7 @@ shift) gives `Σm_ν ≈ 0.038 eV` at Planck admission, recovering
 positivity but still below the `0.06 eV` oscillation lower bound.
 
 Therefore F3 cannot supply numerical Σm_ν retention without either
-(i) tightening the framework's `Ω_DM` bound by `~0.003-0.005` to
+(i) tightening the framework's `Ω_DM` interval by `~0.003-0.005` to
 admit Planck CMB-derived `Ω_DM`, or (ii) loosening the framework's
 same-surface DM family to a wider admission interval. Both are
 research-level pivots beyond a single audit cycle. ∎
@@ -154,8 +154,8 @@ all the steps:
 Output: `SUMMARY: PASS=14  FAIL=0`.
 
 The runner uses no observed `Σm_ν`, no fitted DM coupling, no
-framework-side carrier axiom. It uses only the retained
-(T-4F-α-2), the retained `Ω_DM` interval, the admitted convention
+framework-side carrier axiom. It uses only the support-level
+(T-4F-α-2), the current-bank `Ω_DM` interval, the admitted convention
 `C_ν = 93.14 eV`, and the admitted observational ranges `(L, Ω_b,
 h)` treated as derivation inputs to be audited (NOT as proof
 inputs).
@@ -163,10 +163,10 @@ inputs).
 ## 4. What this audit closes
 
 - F3 cross-bound chain is **structurally identified**: (T-4F-α-2)
-  + retained Ω_DM bound + admitted convention `C_ν` supplies a
+  + current-bank Ω_DM interval + admitted convention `C_ν` supplies a
   closed-form `Σm_ν` interval conditional on `(L, Ω_b, h)`.
 - Structural tension at Planck admission is **identified**: the
-  framework's retained `Ω_DM` bound exceeds Planck CMB-derived
+  framework's current-bank `Ω_DM` interval exceeds Planck CMB-derived
   `Ω_DM` by `~0.003-0.005`.
 - Favorable admission sub-region is **mapped**: `42.9%` of the
   grid yields `Σm_ν > 0`, with admissions slightly off Planck
@@ -176,7 +176,7 @@ inputs).
 
 - Numerical `Σm_ν` retention. The cross-bound is conditional and
   in observational tension at standard Planck admissions.
-- The framework's retained `Ω_DM` bound itself. The bound is
+- The framework's current-bank `Ω_DM` interval itself. The interval is
   conditional on the same-surface admitted DM family, which is
   itself an open scientific question (per the DM thermal-bounding
   theorem's "Honest Status" §).
@@ -190,7 +190,7 @@ inputs).
 Cycle 2 options:
 
 - **Option A:** investigate whether the framework can tighten the
-  retained `Ω_DM` bound by `~0.003-0.005` via a sharpened DM
+  current-bank `Ω_DM` interval by `~0.003-0.005` via a sharpened DM
   same-surface family (would restore F3 cross-bound usability at
   Planck admissions);
 - **Option B:** investigate whether a different admitted Ω_b
@@ -229,12 +229,12 @@ note recommends **Option C** for Cycle 2 (stuck fan-out).
 This is an **audit** note, not a stretch attempt or no-go closure.
 It does not retain `Σm_ν`, does not retire any open import, and
 does not extend the framework. It identifies a **structural
-tension** between the framework's retained `Ω_DM` bound and the
+tension** between the framework's current-bank `Ω_DM` interval and the
 observational matter-budget split at standard Planck admissions,
 and maps the favorable admission sub-region where the F3
 cross-bound is consistent with positive `Σm_ν`.
 
-The audit observes that the framework's retained `Ω_DM` bound,
+The audit observes that the framework's current-bank `Ω_DM` interval,
 while honest as a structural prediction, is in mild tension with
 observation; tightening or loosening either bound requires
 research-level work beyond a single audit cycle.

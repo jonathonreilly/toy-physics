@@ -9,7 +9,7 @@ Cycle 2 of the sigma-mnu-f3-dm-cluster-20260428 loop.  After Cycle 1
 identified structural tension in the DM cross-bound at Planck
 admissions, this Cycle-2 stuck fan-out generates 5 orthogonal
 Sigma m_nu cross-bound routes and audits their structural status
-against the retained surface.
+against the current framework surface.
 
 Routes:
   (F3-alpha) PDG oscillation Sigma m_nu lower bound -- comparator only
@@ -24,7 +24,7 @@ Routes:
               leptogenesis cascade
 
 Synthesis: which route gives the strongest single-cycle Sigma m_nu
-cross-bound on the retained surface, and what is the residual
+cross-bound on the current framework surface, and what is the residual
 structural gap?
 
 Exit code: 0 on PASS, 1 on FAIL.
@@ -68,7 +68,7 @@ def main() -> int:
     print()
     print("Question: do alternative Sigma m_nu cross-bound routes (F3-alpha")
     print("through F3-epsilon) supply a usable single-cycle bound on the")
-    print("retained surface, and how do they relate to the Cycle-1 F3 DM")
+    print("current framework surface, and how do they relate to the Cycle-1 F3 DM")
     print("cross-bound result?")
     print()
 
@@ -95,7 +95,7 @@ def main() -> int:
         f"computed = {sigma_mnu_lower_IO:.4f} eV; PDG IO ~ {SIGMA_MNU_OSC_IO:.4f} eV",
     )
     check(
-        "(F3-alpha) is comparator only; not a derivation input on retained surface",
+        "(F3-alpha) is comparator only; not a derivation input on current framework surface",
         True,
         "PDG oscillation values are observational; cannot be a derivation"
         " input under the framework's no-fitted-parameter posture",
@@ -147,7 +147,7 @@ def main() -> int:
     print("(F3-gamma) admitted CMB Omega_m,0 h^2 pin -- alt admission")
     print("-" * 78)
     # Standard CMB peak heights pin Omega_m,0 h^2 ~ 0.143 (Planck).
-    # On the framework's retained surface, Omega_m,0 = 1 - L - R, with L
+    # On the framework's current surface, Omega_m,0 = 1 - L - R, with L
     # admitted from H_0 + H_inf observation.  An alt admission surface
     # is to take Omega_m,0 h^2 directly from CMB peak heights instead of
     # via L admission.
@@ -159,7 +159,7 @@ def main() -> int:
     # = Sigma m_nu / 93.14):
     # Sigma m_nu = Omega_nu h^2 * C_nu = Omega_m_h2 * (1 - Omega_DM/Omega_m
     # - Omega_b/Omega_m) * C_nu.
-    # This depends on Omega_DM/Omega_m, which uses framework-retained
+    # This depends on Omega_DM/Omega_m, which uses framework current-bank
     # Omega_DM bound but observational Omega_m,0 / Omega_m h^2.
     omega_dm_h2_planck = 0.120  # admitted CMB-derived
     omega_b_h2_planck = 0.0224  # admitted CMB-derived
@@ -184,11 +184,11 @@ def main() -> int:
         " ~0.003 eV gap, opposite-sign tension to Cycle-1 Omega_DM bound)",
     )
     check(
-        "(F3-gamma) uses CMB-derived Omega_DM h^2 ~ 0.120 (NOT framework retained"
+        "(F3-gamma) uses CMB-derived Omega_DM h^2 ~ 0.120 (NOT framework current-bank"
         " Omega_DM bound)",
         True,
-        "the alt admission surface bypasses the framework's retained"
-        " Omega_DM bound; uses Planck-derived 0.120 instead",
+        "the alt admission surface bypasses the framework's current-bank"
+        " Omega_DM interval; uses Planck-derived 0.120 instead",
     )
 
     # ============================================================
@@ -198,9 +198,8 @@ def main() -> int:
     print("-" * 78)
     print("(F3-delta) Lane 4D Dirac global lift -- kinematic interpretation")
     print("-" * 78)
-    # Per NEUTRINO_DIRAC_GLOBAL_LIFT_CURRENT_AXIOM_SET_THEOREM_NOTE_2026-04-28.md
-    # (proposed_retained from the prior session), the framework derives
-    # neutrinos as Dirac, not Majorana, on the current axiom set.  The
+    # A prior unlanded branch proposed a Dirac global-lift reading.  It is
+    # not a current-main authority, and even if later closed, the
     # cosmology relic Sigma m_nu = (1 - ...) C_nu h^2 is the SAME
     # algebraic identity for Dirac and Majorana mass-eigenstates;
     # Dirac/Majorana switches only the BASIS (mass-eigenstate vs.
@@ -212,9 +211,9 @@ def main() -> int:
         " Dirac/Majorana basis",
     )
     check(
-        "(F3-delta) Dirac retention does NOT supply a Sigma m_nu floor",
+        "(F3-delta) Dirac/Majorana basis status does NOT supply a Sigma m_nu floor",
         True,
-        "Dirac global lift theorem identifies Dirac structure; says nothing"
+        "Dirac/Majorana basis structure says nothing"
         " about absolute Sigma m_nu value",
     )
     check(
@@ -230,26 +229,26 @@ def main() -> int:
     print("-" * 78)
     print("(F3-epsilon) baryogenesis/eta admitted-input promotion (F2)")
     print("-" * 78)
-    # If the framework can promote eta_obs (baryon-to-photon ratio) from
-    # admitted to retained, then Omega_b becomes retained.  This was
+    # If the framework can close eta_obs (baryon-to-photon ratio) from
+    # admitted input, then Omega_b becomes closed.  This was
     # named F2 in the prior fan-out.  Status: speculative per prior
     # session's rating.  The framework has substantial leptogenesis
-    # work but the eta retention itself is not on the retained surface.
+    # work but eta_obs itself is not closed on the current surface.
     check(
-        "(F3-epsilon) eta_obs retention would promote Omega_b from admitted to retained",
+        "(F3-epsilon) eta_obs closure would move Omega_b from admitted to closed",
         True,
         "Omega_b = Omega_b(eta_obs); retaining eta_obs propagates to Omega_b",
     )
     check(
-        "(F3-epsilon) eta_obs retention is currently speculative per prior fan-out",
+        "(F3-epsilon) eta_obs closure is currently speculative per prior fan-out",
         True,
-        "framework has DM-leptogenesis cascade content but not eta_obs retention",
+        "framework has DM-leptogenesis cascade content but not eta_obs closure",
     )
     check(
         "(F3-epsilon) does not currently supply a Sigma m_nu cross-bound",
         True,
-        "even with retained Omega_b, Sigma m_nu retention also requires"
-        " retained (L, h, Omega_DM); not currently available",
+        "even with closed Omega_b, Sigma m_nu retention also requires"
+        " closed (L, h, Omega_DM); not currently available",
     )
 
     # ============================================================
@@ -263,9 +262,9 @@ def main() -> int:
         "F3-alpha (osc lower bound)": "comparator only; not a derivation input",
         "F3-beta (N_eff)": "structural; does not pin Sigma m_nu independently",
         "F3-gamma (Omega_m,0 h^2 alt admission)": "consistent with osc;"
-        " uses CMB-derived Omega_DM h^2, NOT framework retained Omega_DM",
+        " uses CMB-derived Omega_DM h^2, NOT framework current-bank Omega_DM",
         "F3-delta (Dirac global lift)": "kinematic only; Sigma m_nu unaffected",
-        "F3-epsilon (eta retention)": "speculative; not currently retained",
+        "F3-epsilon (eta closure)": "speculative; not currently closed",
     }
     print()
     print("Route status:")
@@ -273,7 +272,7 @@ def main() -> int:
         print(f"  {route}: {status}")
 
     check(
-        "no orthogonal F3-* route supplies an independent retained Sigma m_nu"
+        "no orthogonal F3-* route supplies an independent closed Sigma m_nu"
         " cross-bound",
         True,
         "F3-alpha is comparator; F3-beta/delta are structural-only;"
@@ -282,19 +281,19 @@ def main() -> int:
     )
     check(
         "best remaining single-cycle attack: F3-gamma alt admission on CMB"
-        " peak Omega_DM h^2 ~ 0.120 instead of framework retained Omega_DM"
+        " peak Omega_DM h^2 ~ 0.120 instead of framework current-bank Omega_DM"
         " ~0.268",
         True,
         "this would resolve the Cycle-1 structural tension by switching"
-        " the Omega_DM source from framework-retained to admitted-CMB-peak",
+        " the Omega_DM source from framework current-bank to admitted-CMB-peak",
     )
     check(
-        "F3-gamma resolution implies framework-retained Omega_DM bound is"
+        "F3-gamma resolution implies framework current-bank Omega_DM interval is"
         " the LIVE structural-tension residue, not (T-4F-alpha-2) itself",
         True,
         "the (T-4F-alpha-2) identity is consistent with positive Sigma m_nu"
         " when Omega_DM h^2 ~ 0.120 admitted from CMB; the framework's"
-        " retained Omega_DM ~0.268 is the source of the tension",
+        " current-bank Omega_DM ~0.268 is the source of the tension",
     )
     check(
         "F3 fan-out confirms: numerical Sigma m_nu retention requires either"
@@ -315,13 +314,13 @@ def main() -> int:
     print()
     print("Verdict: F3 stuck fan-out across 5 orthogonal Sigma m_nu cross-bound")
     print("routes confirms that no orthogonal route supplies an independent")
-    print("retained Sigma m_nu cross-bound on the framework's retained surface.")
+    print("closed Sigma m_nu cross-bound on the framework's current surface.")
     print()
     print("Best remaining single-cycle attack: F3-gamma alt admission on CMB")
-    print("peak Omega_DM h^2 ~ 0.120 instead of framework retained Omega_DM")
+    print("peak Omega_DM h^2 ~ 0.120 instead of framework current-bank Omega_DM")
     print("~0.268.  This bypasses the Cycle-1 structural tension at the cost")
     print("of admitting a different Omega_DM input.  The trade-off is structural:")
-    print("either trust the framework's retained Omega_DM bound (and accept")
+    print("either trust the framework's current-bank Omega_DM interval (and accept")
     print("Sigma m_nu < 0 tension) or trust CMB peak admission (and lose")
     print("the framework Omega_DM cross-bound usage).")
     print()

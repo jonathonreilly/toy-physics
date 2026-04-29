@@ -2,7 +2,7 @@
 LANE 4F (Sigma m_nu) — F3 DM CROSS-BOUND AUDIT RUNNER
 ==============================================================================
 
-Question: does the retained Omega_DM bound (DM thermal-bounding
+Question: does the current-bank Omega_DM interval (DM thermal-bounding
 theorem) supply a usable cross-bound for Sigma m_nu via
 (T-4F-alpha-2) at honest observational admissions?
 
@@ -26,11 +26,11 @@ SUMMARY: PASS=14  FAIL=0
 ==============================================================================
 
 Verdict: F3 DM cross-bound chain is structurally available via
-(T-4F-alpha-2) + retained Omega_DM thermal bound, but at standard
+(T-4F-alpha-2) + current-bank Omega_DM thermal interval, but at standard
 Planck admissions (L=0.6847, Omega_b=0.0493, h=0.6736) the chain
 predicts Sigma m_nu < 0, an unphysical structural tension.
 
-The framework's retained Omega_DM bound [0.2677, 0.2697] (conditional
+The framework's current-bank Omega_DM interval [0.2677, 0.2697] (conditional
 on same-surface admitted family) exceeds the observationally-derived
 Omega_DM ~0.265 by ~0.003-0.005.  Since Sigma m_nu = (Omega_m,0 -
 Omega_b - Omega_DM) C_nu h^2, any framework Omega_DM that exceeds

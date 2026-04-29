@@ -1,7 +1,7 @@
 # Lane 4F (Σm_ν) — F3 Stuck Fan-Out Synthesis
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **stuck-fan-out synthesis** note on
+**Status:** open branch-local **stuck-fan-out synthesis** note on
 `physics-loop/sigma-mnu-f3-dm-cluster-20260428`. Cycle 2 of the F3
 loop. Audit-grade. Per Deep Work Rules: 5 orthogonal Σm_ν cross-
 bound routes beyond the Cycle-1 DM-cluster cross-bound.
@@ -16,11 +16,11 @@ bound routes beyond the Cycle-1 DM-cluster cross-bound.
 
 Cycle 1 (`SIGMA_MNU_F3_DM_CROSS_BOUND_AUDIT_NOTE_2026-04-28.md`)
 identified a structural tension at Planck admissions in the F3 DM-
-cluster cross-bound: the framework's retained `Ω_DM ∈ [0.2677,
+cluster cross-bound: the framework's current-bank `Ω_DM ∈ [0.2677,
 0.2697]` exceeds the Planck-derived `Ω_DM ≈ 0.265`, leaving no
 room for positive Σm_ν at standard `(L, Ω_b, h)` admissions. This
 Cycle-2 fan-out generates 5 orthogonal Σm_ν cross-bound routes and
-audits each for retained-surface usability.
+audits each for current-framework usability.
 
 ## 1. Five orthogonal routes
 
@@ -82,21 +82,20 @@ This is positive but **just below** the NO osc floor `0.0586 eV`
 by a small margin (~0.003 eV).
 
 **Status.** **Alt admission surface.** Bypasses the framework's
-retained `Ω_DM` bound by using CMB-peak-derived `Ω_DM h²` instead.
+current-bank `Ω_DM` interval by using CMB-peak-derived `Ω_DM h²` instead.
 Gives a positive Σm_ν that is in marginal tension with the NO osc
 floor in the **opposite direction** from the Cycle-1 tension. This
-is structurally significant: the framework-retained `Ω_DM` ~0.268
+is structurally significant: the framework current-bank `Ω_DM` ~0.268
 gives Σm_ν < 0; the CMB-peak-admitted `Ω_DM h²` ≈ 0.120 gives
 Σm_ν ≈ 0.056 < 0.0586 (NO floor). Both are within ~0.003 eV of
 "physically just-allowed". The window for positive consistent
 Σm_ν is narrow on either admission.
 
-### (F3-δ) Lane 4D Dirac global lift floor
+### (F3-δ) Lane 4D Dirac/Majorana basis route
 
-**Route.** Per the prior session's
-`NEUTRINO_DIRAC_GLOBAL_LIFT_CURRENT_AXIOM_SET_THEOREM_NOTE_2026-04-28.md`,
-neutrinos are Dirac on the framework's current axiom set. Does
-this constrain Σm_ν?
+**Route.** A prior unlanded branch proposed a Dirac global-lift
+reading, but that note is not a current-main authority. Even if a
+Dirac/Majorana basis decision later lands, does it constrain Σm_ν?
 
 **Status.** **Kinematic only.** (T-4F-α-2) is a mass-density
 relation; it is identical for Dirac and Majorana mass eigenstates.
@@ -113,8 +112,8 @@ then be retained.
 
 **Status.** **Speculative.** Framework has substantial DM-
 leptogenesis cascade content but does not currently retain
-`eta_obs`. Even with retained `Ω_b`, Σm_ν retention also requires
-retained `(L, h, Ω_DM)`; not currently available.
+`eta_obs`. Even with a closed `Ω_b`, Σm_ν retention also requires
+closed `(L, h, Ω_DM)` inputs; not currently available.
 
 ## 2. Synthesis
 
@@ -127,7 +126,7 @@ retained `(L, h, Ω_DM)`; not currently available.
 | F3-ε (eta retention) | speculative | **No** (not currently retained) |
 
 **Synthesis result.** No orthogonal F3-* route supplies an
-independent retained Σm_ν cross-bound on the framework's retained
+independent Σm_ν cross-bound on the framework's current-bank
 surface. The best remaining single-cycle attack is **F3-γ**: alt
 admission via CMB peak heights `Ω_m,0 h² ≈ 0.143, Ω_DM h² ≈ 0.120,
 Ω_b h² ≈ 0.0224`. This route gives Σm_ν ≈ 0.056 eV at standard
@@ -136,7 +135,7 @@ CMB pins — positive but just below the NO osc floor.
 The Cycle-1 tension and the F3-γ tension are in **opposite
 directions** at the ~0.003 eV scale:
 
-- Cycle-1 (framework-retained Ω_DM): Σm_ν < 0 (excess Ω_DM by
+- Cycle-1 (framework current-bank Ω_DM): Σm_ν < 0 (excess Ω_DM by
   ~0.003);
 - F3-γ (CMB-peak Ω_DM h²): Σm_ν ≈ 0.056 < 0.0586 (NO floor);
   shortfall by ~0.003 eV.
@@ -156,7 +155,7 @@ multiple admissions tuned within ~0.003 eV of each other.
 | CMB peak `Ω_DM h² ≈ 0.120` (F3-γ) | `~0.056` eV (just below NO floor) |
 | Tightened framework `Ω_DM ≈ 0.265` | `~0.038` eV (positive but below floor) |
 
-**Live structural-tension residue:** the framework's retained
+**Live structural-tension residue:** the framework's current-bank
 `Ω_DM ≈ 0.268` vs. observation `Ω_DM ≈ 0.265`. The (T-4F-α-2)
 identity itself is consistent with positive Σm_ν when `Ω_DM h² ≈
 0.120` admitted from CMB.
@@ -167,9 +166,9 @@ retention as a single-cycle move. The path forward requires either:
 - (i) framework `Ω_DM` bound tightening by ~0.003 (research-level);
 - (ii) bypassing framework `Ω_DM` via CMB peak admission (loses
   framework cross-bound usage; reduces to standard cosmology);
-- (iii) Lane 5 (C1) gate retention to fix `h`, combined with
-  retained `Ω_b h²` and retained `Ω_DM h²`, would supply a fully
-  retained Σm_ν — but Lane 5 (C1) gate is itself open per the
+- (iii) Lane 5 (C1) gate closure to fix `h`, combined with
+  closed `Ω_b h²` and closed `Ω_DM h²`, would supply a fully
+  closed Σm_ν — but Lane 5 (C1) gate is itself open per the
   parallel `hubble-c1-absolute-scale-gate-20260428` loop's Cycles
   1-6.
 
@@ -181,7 +180,7 @@ cycle.
 - Stuck fan-out per Deep Work Rules **landed**: 5 orthogonal Σm_ν
   cross-bound routes generated and audited.
 - The Cycle-1 tension's structural source is **identified**: it is
-  centered on the framework-retained `Ω_DM` bound, not on
+  centered on the framework current-bank `Ω_DM` interval, not on
   (T-4F-α-2) itself.
 - The F3 loop's hard residual is now **sharp**: numerical Σm_ν
   retention requires either framework `Ω_DM` tightening, alt
@@ -191,7 +190,7 @@ cycle.
 
 - Numerical Σm_ν retention.
 - Framework `Ω_DM` bound tightening.
-- Lane 5 (C1) gate retention.
+- Lane 5 (C1) gate closure.
 
 ## 6. Implication for honest stop and pivot
 
@@ -239,7 +238,7 @@ remaining work is either:
 This is a **stuck-fan-out synthesis** note (audit-grade). It does
 not retain Σm_ν, does not retire any open import, and does not
 extend the framework. It identifies the structural-tension residue
-of F3 (framework `Ω_DM` bound vs. observation), maps the narrow
+of F3 (framework `Ω_DM` interval vs. observation), maps the narrow
 ~0.003 eV window for cross-bound consistency, and confirms that
 numerical Σm_ν retention requires research-level pivots beyond a
 single audit cycle.

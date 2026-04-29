@@ -1,7 +1,7 @@
 # Lane 5 `(C1)` Gate — A2 g_bare-Action-Unit No-Go
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **no-go** note on
+**Status:** proposed_retained exact negative boundary note on
 `frontier/hubble-c1-absolute-scale-gate-20260428`. Cycle 3 of the
 (C1) gate loop. Stretch-attempt cycle. Closes the audit's `A2`
 attack frame (`g_bare = 1` ⇒ action-unit metrology on `P_A H_cell`).

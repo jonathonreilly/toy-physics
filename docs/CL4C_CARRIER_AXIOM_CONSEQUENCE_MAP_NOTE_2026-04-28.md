@@ -1,7 +1,7 @@
 # Cl_4(C) Carrier-Axiom Consequence Map (Cross-Lane)
 
 **Date:** 2026-04-28
-**Status:** retained branch-local **conditional-closure consequence
+**Status:** open branch-local **conditional-closure consequence
 map** on `physics-loop/cl4c-carrier-axiom-consequence-map-20260428`.
 Cycle 1. Audit-grade. Traces downstream consequences across lanes
 conditional on adopting the irreducible Cl_4(C) module axiom on
@@ -33,12 +33,12 @@ The A5 audit identified two honest closure options:
 - **option (ii):** accept `(G1)` and `(C1)` as open in current `A_min`.
 
 The audit took no position on (i) vs. (ii). This note **maps the
-downstream consequences** of option (i) — what becomes retained,
+downstream consequences** of option (i) — what would become closed,
 bounded, or still-open if Axiom\* is adopted — without endorsing
 the adoption itself. The map is purely structural; it does not
 extend `A_min`, only traces conditionals.
 
-## 1. Lane 5 (Hubble) (C1) gate retention chain
+## 1. Lane 5 (Hubble) (C1) gate conditional chain
 
 Adopting Axiom\* discharges the conditional Clifford phase bridge
 of `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`.
@@ -46,12 +46,12 @@ The chain proceeds:
 
 ```text
 Axiom*
-  ⇒ Clifford phase bridge retained
-  ⇒ c_Widom = 1/4 retained,  G_Newton,lat = 1 retained
-  ⇒ a/l_P = 1 retained,  hence  a^{-1} = M_Pl as derived numerical statement
+  ⇒ Clifford phase bridge closed in the Axiom* extension
+  ⇒ c_Widom = 1/4 closed,  G_Newton,lat = 1 closed
+  ⇒ a/l_P = 1 closed,  hence  a^{-1} = M_Pl as derived numerical statement
   ⇒ R_Λ numerically retainable (modulo admitted Λ ~ 1.1e-52 m^{-2})
-  ⇒ H_inf = c/R_Λ retained
-  ⇒ (C1) absolute-scale gate retained.
+  ⇒ H_inf = c/R_Λ closed
+  ⇒ (C1) absolute-scale gate closed in the Axiom* extension.
 ```
 
 This supplies one of the two Lane 5 gates per
@@ -59,11 +59,11 @@ This supplies one of the two Lane 5 gates per
 Lane 5 closure (`H_0` retention) requires `(C1) + (C2)` or
 `(C1) + (C3)`. Axiom\* alone closes only (C1).
 
-## 2. Lane 4F (Σm_ν) numerical retention chain
+## 2. Lane 4F (Σm_ν) numerical conditional chain
 
 Conditional on Lane 5 closure (which itself requires Axiom\* +
-(C2) closure), `H_0` becomes retained, hence `h = H_0/100`
-retained. The Cycle-2 4F functional form theorem
+(C2) closure), `H_0` becomes closed, hence `h = H_0/100`
+closed. The Cycle-2 4F functional form support note
 (`NEUTRINO_LANE4_4F_SIGMA_M_NU_FUNCTIONAL_FORM_THEOREM_NOTE_2026-04-28.md`)
 then gives:
 
@@ -71,24 +71,24 @@ then gives:
 Σm_ν = (1 - L - R - Ω_b - Ω_DM) × C_ν × h²
 ```
 
-with `h` retained. The right-hand side becomes numerical at fixed
+with `h` closed. The right-hand side becomes numerical at fixed
 admitted `(L, R, Ω_b, Ω_DM, C_ν)`.
 
 **Tension residue persists under Axiom\*.** The Cycle-1 F3 audit
 (`SIGMA_MNU_F3_DM_CROSS_BOUND_AUDIT_NOTE_2026-04-28.md`) identified
-a structural tension between framework-retained `Ω_DM ∈ [0.2677,
+a structural tension between framework current-bank `Ω_DM ∈ [0.2677,
 0.2697]` and observational `Ω_DM ≈ 0.265` at standard Planck
 admissions. Axiom\* closes `(G1)` edge-statistics on `P_A H_cell`
 but does NOT affect the DM thermal-bounding theorem or its
 same-surface admitted-family conditional. The ~0.003 Ω_DM tension
 persists.
 
-**Net effect:** Axiom\* moves Σm_ν from full-open to h-retained-
+**Net effect:** Axiom\* moves Σm_ν from full-open to h-closed-
 conditional on observational `(L, Ω_b, Ω_DM)` admissions. Numerical
 Σm_ν retention requires either Axiom\* + (C2) + tightened framework
 Ω_DM bound, or alt admissions.
 
-## 3. Lane 1 (gravity / area-law) Target 2 retention chain
+## 3. Lane 1 (gravity / area-law) Target 2 conditional chain
 
 Per `AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md`,
 the parity-gate carrier theorem's Assumption 1 is `P_A H_cell ≅
@@ -97,40 +97,38 @@ assumption:
 
 ```text
 Axiom*
-  ⇒ parity-gate carrier theorem retained
-  ⇒ c_Widom = 3/12 = 1/4 retained entanglement coefficient
-  ⇒ Target 2 horizon-entropy carrier closed at retained grade.
+  ⇒ parity-gate carrier theorem closed in the Axiom* extension
+  ⇒ c_Widom = 3/12 = 1/4 closed entanglement coefficient
+  ⇒ Target 2 horizon-entropy carrier closed in the Axiom* extension.
 ```
 
-## 4. Planck lane retention chain
+## 4. Planck lane conditional chain
 
 Per `PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md`, all three
 Planck-lane targets (Target 1 gravity/action unit-map, Target 2
 horizon-entropy 1/4 carrier, Target 3 information/action bridge)
 collapse to the conditional Clifford coframe response premise.
-Axiom\* discharges this conditional and supplies retention to all
-three targets.
+Axiom\* would discharge this conditional and supply closure to all
+three targets inside the Axiom\* extension.
 
 ## 5. Lane 4D (Dirac global lift) consequence
 
-Per `NEUTRINO_DIRAC_GLOBAL_LIFT_CURRENT_AXIOM_SET_THEOREM_NOTE_2026-04-28.md`
-(prior session, proposed_retained), the framework derives Dirac
-neutrinos on the current axiom set via Cl(3) bulk + leptogenesis
-cascade. This derivation is structurally independent of `P_A H_cell`
-edge-statistics. Lane 4D is therefore **already retained
-independently** of Axiom\*; no consequence chain.
+No current-main Dirac global-lift theorem is used in this map. The
+prior `frontier/neutrino-quantitative-20260428` PR remains outside
+this landed surface, so Lane 4D is treated as independent and
+unresolved here.
 
 ## 6. Cross-lane synthesis table
 
 | Lane / Target | Pre-Axiom\* status | Post-Axiom\* status | Independent residual? |
 |---|---|---|---|
-| Lane 5 (C1) gate | open (Cycles 1-6 closed negatively) | **retained** | (C2) eta-retirement gate |
+| Lane 5 (C1) gate | open (Cycles 1-6 closed negatively) | **closed in Axiom\* extension** | (C2) eta-retirement gate |
 | Lane 5 H_0 | open | **conditional on (C2)** | (C2) closure |
-| Lane 4F Σm_ν | full open | **h-retained-conditional** | observational (L, Ω_b, Ω_DM) |
-| Lane 1 / Planck Target 2 | conditional | **retained (c_Widom = 1/4)** | none |
-| Planck Target 1 (G_Newton,lat = 1) | conditional | **retained** | none |
-| Planck Target 3 (info/action bridge) | conditional | **retained** | none |
-| Lane 4D Dirac global lift | proposed_retained | unchanged (independent) | already retained |
+| Lane 4F Σm_ν | full open | **h-closed conditional** | observational (L, Ω_b, Ω_DM) |
+| Lane 1 / Planck Target 2 | conditional | **closed in Axiom\* extension (c_Widom = 1/4)** | none |
+| Planck Target 1 (G_Newton,lat = 1) | conditional | **closed in Axiom\* extension** | none |
+| Planck Target 3 (info/action bridge) | conditional | **closed in Axiom\* extension** | none |
+| Lane 4D Dirac global lift | open outside this map | unchanged (independent) | #113 not landed |
 | DM thermal bound vs. observation | tension (~0.003 Ω_DM) | **tension persists** | DM same-surface family |
 
 ## 7. Theorem (audit)
@@ -138,14 +136,14 @@ independently** of Axiom\*; no consequence chain.
 > **Theorem (Axiom\* consequence map).** Adopting Axiom\* (the
 > irreducible Cl_4(C) module axiom on `P_A H_cell`) into `A_min`
 > discharges the metric-compatible Clifford coframe response
-> conditional and supplies retention cascade to:
+> conditional and supplies an Axiom\*-extension closure cascade to:
 >
 > - Lane 5 `(C1)` absolute-scale gate (and hence `a/l_P = 1`,
 >   `a^{-1} = M_Pl`, `R_Λ` numerically retainable);
 > - Lane 1 / Planck Targets 1-3 (`c_Widom = 1/4`, `G_Newton,lat =
 >   1`, `c_cell = 1/4`).
 >
-> It moves Lane 4F Σm_ν from full-open to h-retained-conditional on
+> It moves Lane 4F Σm_ν from full-open to h-closed-conditional on
 > observational `(L, Ω_b, Ω_DM)` admissions.
 >
 > **It does NOT close:**
@@ -168,25 +166,25 @@ independently** of Axiom\*; no consequence chain.
 
 The runner verifies the conditional-closure chain step-by-step:
 
-1. Axiom\* → Clifford phase bridge retained;
+1. Axiom\* → Clifford phase bridge closed in the Axiom\* extension;
 2. Clifford phase bridge + Gauss-flux source-unit theorem
    (`PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md`)
    → c_Widom = 1/4, G_Newton,lat = 1;
-3. → a/l_P = 1 retained (numerical equality verified);
+3. → a/l_P = 1 closed in the Axiom\* extension (numerical equality verified);
 4. + retained Λ identity → R_Λ numerically retainable (modulo
    admitted Λ);
-5. + retained H_inf identity → H_inf retained;
-6. (C1) gate retained (per cosmic-history-ratio necessity no-go
+5. + retained H_inf identity → H_inf closed in the Axiom\* extension;
+6. (C1) gate closed in the Axiom\* extension (per cosmic-history-ratio necessity no-go
    §3 of 2026-04-26 audit);
 7. (C2) gate independent — concerns `dW_e^H = Schur_{E_e}(D_-)`
    point-selection law; not addressed by Axiom\*;
-8. Lane 4F (T-4F-α-2) at h retained gives Σm_ν numerical
+8. Lane 4F (T-4F-α-2) at h closed gives Σm_ν numerical
    conditional on `(L, R, Ω_b, Ω_DM, C_ν)` admissions;
 9. DM thermal-bound tension (~0.003 Ω_DM) persists since the
    thermal-bounding theorem's same-surface admitted family is not
    affected by `P_A H_cell` edge-statistics;
 10. Lane 1 / Planck Target 2: parity-gate carrier theorem
-    Assumption 1 = Axiom\*, hence retained → `c_Widom = 1/4`;
+    Assumption 1 = Axiom\*, hence closed in the extension → `c_Widom = 1/4`;
 11. Planck Targets 1, 3: collapsed to Clifford coframe conditional;
     discharged by Axiom\*.
 
@@ -217,9 +215,9 @@ The user's option (i) of the A5 audit's honest closure status (PR
 #169) — "extend A_min by Axiom\*" — is now mapped:
 
 - **High value:** Axiom\* unlocks Lane 5 `(C1)` gate, Planck
-  Targets 1-3, and Lane 1 Target 2 simultaneously. The cascade
-  promotes from "many conditional theorems" to "many retained
-  theorems" with one carrier-axiom extension.
+  Targets 1-3, and Lane 1 Target 2 simultaneously in the extension.
+  The cascade moves many conditional theorems to closed-in-extension
+  status with one carrier-axiom extension.
 - **Limit:** Axiom\* alone does NOT close Hubble `H_0` retention
   (requires (C2) too), nor `Σm_ν` numerical retention (requires
   observational `(L, Ω_b, Ω_DM)` plus `(C2)` for `h`).
@@ -247,10 +245,10 @@ takes no position.
 
 ## 12. Boundary
 
-This is an **audit-grade conditional-closure consequence map**. It
+This is a **conditional-closure consequence map**. It
 does not adopt Axiom\*, does not retain any cosmology variable, and
-does not promote any conditional theorem to retained on the actual
-retained surface. It only traces what would happen IF Axiom\* were
+does not upgrade any conditional theorem on the actual current
+surface. It only traces what would happen IF Axiom\* were
 adopted, mapping the structurally orthogonal residuals so the
 user's option-(i) decision can be made with full visibility.
 
