@@ -1,7 +1,7 @@
 # Structured Mirror Born-Safe Scan Note
 
-**Date:** 2026-04-03  
-**Status:** no proposed_retained Born-safe structured-mirror pocket found in the scanned linear family
+**Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** bounded null-result note — the scanned structured-mirror linear-propagator family contains no Born-safe pocket; this is a useful negative control, not a successor lane.
 
 This note freezes the bounded search for a review-safe structured-mirror
 variant using the strictly linear propagator.
@@ -76,5 +76,46 @@ readout, so it is not a seed fluke.
 ## Bottom Line
 
 - exact mirror and `Z2 x Z2` remain the review-safe symmetry lanes
-- structured mirror growth is a useful negative control, not a retained
-  Born-safe replacement
+- structured mirror growth is a useful negative control, not a Born-safe
+  successor
+
+## Audit boundary (2026-04-28)
+
+The earlier Status line read "no `proposed_retained` Born-safe
+structured-mirror pocket found in the scanned linear family", which the
+audit-lane parser read as a `proposed_retained` claim even though the
+literal sentence said the opposite. The Status line has been rephrased
+to a positive bounded null-result framing.
+
+Audit verdict (`audited_failed`, leaf criticality):
+
+> Issue: this is a parser false positive for the audit queue: the
+> status line contains the token `proposed_retained` only inside the
+> negative statement that no `proposed_retained` Born-safe structured-
+> mirror pocket was found.
+
+The note's actual content is a search that failed to find a Born-safe
+pocket, plus the best near-Born candidate which was confirmed with 6
+seeds. That is a negative control, not a retained or proposed-retained
+claim.
+
+## What this note does NOT claim
+
+- A Born-safe structured-mirror pocket on the scanned linear-propagator
+  family.
+- That structured mirror growth is a successor lane to exact mirror or
+  `Z2 x Z2`.
+- That the best near-Born candidate (`Born 8.79e-03`) clears any
+  Born-safety threshold.
+
+## What would close this lane (Path A future work)
+
+Reinstating a Born-safe structured-mirror successor would require:
+
+1. A registered runner whose corrected Born `|I3|/P` lands at machine
+   precision (≤ `1e-14`) on at least one structured-mirror parameter
+   set.
+2. A registered runner that holds across at least 6 seeds at the same
+   Born tolerance.
+3. A coexistence demonstration of decoherence and gravity together with
+   the Born-safe pocket on the same parameter set.
