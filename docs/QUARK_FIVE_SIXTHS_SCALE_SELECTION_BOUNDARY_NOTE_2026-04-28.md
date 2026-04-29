@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-28
 
-**Status:** exact negative boundary / scale-selection theorem target for Lane
+**Status:** support / exact negative boundary / scale-selection theorem target for Lane
 3 target 3A. This block-04 stretch attempt attacks the down-type `5/6`
 bridge residual. It does not prove the non-perturbative exponentiation
 mechanism, does not derive the threshold-local scale choice, and does not

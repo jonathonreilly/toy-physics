@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T03:51:33.430897+00:00",
+  "generated_at": "2026-04-29T03:54:04.660207+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -6673,6 +6673,54 @@
       "dominant_class": null,
       "runner": "scripts/frontier_quark_bimodule_norm_naturality_theorem.py"
     },
+    "quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_quark_c3_a1_source_domain_bridge_no_go.py"
+    },
+    "quark_c3_circulant_source_law_boundary_note_2026-04-28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 4,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_quark_c3_circulant_source_law_boundary.py"
+    },
+    "quark_c3_oriented_ward_splitter_support_note_2026-04-28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 8,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_quark_c3_oriented_ward_splitter_support.py"
+    },
+    "quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_quark_c3_p1_positive_parent_readout_no_go.py"
+    },
     "quark_cp_carrier_completion_note_2026-04-18": {
       "assert_count": 2,
       "counts": {
@@ -6733,6 +6781,42 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_quark_endpoint_readout_constraints.py"
     },
+    "quark_five_sixths_scale_selection_boundary_note_2026-04-28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_quark_five_sixths_scale_selection_boundary.py"
+    },
+    "quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_quark_generation_equivariant_ward_degeneracy_no_go.py"
+    },
+    "quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 7,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_quark_generation_stratified_ward_free_matrix_no_go.py"
+    },
     "quark_issr1_bicac_forcing_theorem_note_2026-04-19": {
       "assert_count": 2,
       "counts": {
@@ -6780,6 +6864,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py"
+    },
+    "quark_lane3_stuck_fanout_synthesis_2026-04-28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_quark_lane3_stuck_fanout_synthesis.py"
     },
     "quark_mass_ratio_full_solve_note_2026-04-18": {
       "assert_count": 2,
@@ -6829,6 +6925,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_quark_projector_ray_phase_completion.py"
     },
+    "quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_quark_route2_e_channel_readout_naturality_no_go.py"
+    },
     "quark_route2_exact_readout_map_note_2026-04-19": {
       "assert_count": 1,
       "counts": {
@@ -6852,6 +6960,54 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_quark_route2_exact_time_coupling.py"
+    },
+    "quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_quark_route2_rconn_center_ratio_bridge_obstruction.py"
+    },
+    "quark_route2_source_domain_bridge_no_go_note_2026-04-28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_quark_route2_source_domain_bridge_no_go.py"
+    },
+    "quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py"
+    },
+    "quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py"
     },
     "quark_strc_observable_principle_note_2026-04-19": {
       "assert_count": 2,
@@ -6936,6 +7092,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/frontier_quark_up_amplitude_rpsr_conditional.py"
+    },
+    "quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py"
     },
     "quark_up_amplitude_scalar_comparison_bridge_note_2026-04-19": {
       "assert_count": 1,
@@ -16999,6 +17167,66 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_quark_c3_a1_source_domain_bridge_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_quark_c3_circulant_source_law_boundary.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_c3_circulant_source_law_boundary_note_2026-04-28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 4,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_quark_c3_oriented_ward_splitter_support.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_c3_oriented_ward_splitter_support_note_2026-04-28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 8,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_quark_c3_p1_positive_parent_readout_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_quark_cp_carrier_completion.py": {
       "assert_count": 2,
       "claims": [
@@ -17074,6 +17302,51 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_quark_five_sixths_scale_selection_boundary.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_five_sixths_scale_selection_boundary_note_2026-04-28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_quark_generation_equivariant_ward_degeneracy_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_quark_generation_stratified_ward_free_matrix_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 7,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_quark_issr1_bicac_forcing.py": {
       "assert_count": 2,
       "claims": [
@@ -17119,6 +17392,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_quark_lane3_stuck_fanout_synthesis.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_lane3_stuck_fanout_synthesis_2026-04-28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_quark_mass_ratio_full_solve.py": {
@@ -17181,6 +17469,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_quark_route2_e_channel_readout_naturality_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_quark_route2_exact_readout_map.py": {
       "assert_count": 1,
       "claims": [
@@ -17209,6 +17512,66 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_quark_route2_rconn_center_ratio_bridge_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_quark_route2_source_domain_bridge_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_route2_source_domain_bridge_no_go_note_2026-04-28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_quark_strc_observable_principle.py": {
@@ -17314,6 +17677,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_quark_up_amplitude_scalar_comparison_bridge.py": {
@@ -19022,13 +19400,13 @@
     "decoration_candidates": 71,
     "dominant_class_distribution": {
       "A": 6,
-      "B": 103,
-      "C": 336,
-      "D": 110,
+      "B": 107,
+      "C": 340,
+      "D": 116,
       "none": 141
     },
-    "runners_classified": 696,
-    "runners_with_C": 415,
-    "runners_with_D": 186
+    "runners_classified": 710,
+    "runners_with_C": 422,
+    "runners_with_D": 198
   }
 }

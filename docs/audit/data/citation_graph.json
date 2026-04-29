@@ -17937,7 +17937,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-29T03:51:31.750326+00:00",
+  "generated_at": "2026-04-29T03:54:03.037256+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -34025,6 +34025,46 @@
       "runner_path": "scripts/frontier_quark_bimodule_norm_naturality_theorem.py",
       "title": "Quark Bimodule NORM-Naturality Theorem"
     },
+    "quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28": {
+      "claim_id": "quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "exact current-bank no-go / support-boundary theorem for Lane 3",
+      "deps": [],
+      "note_hash": "c6295795bc43821d889e5cc269666eaf8dd0749c9ce66a1527e9e3bf20b8c4db",
+      "path": "docs/QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md",
+      "runner_path": "scripts/frontier_quark_c3_a1_source_domain_bridge_no_go.py",
+      "title": "Quark `C3` A1 Source-Domain Bridge No-Go Note"
+    },
+    "quark_c3_circulant_source_law_boundary_note_2026-04-28": {
+      "claim_id": "quark_c3_circulant_source_law_boundary_note_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "exact support/boundary theorem for Lane 3 target 3C. This",
+      "deps": [],
+      "note_hash": "d8d2bf8b6f88e71fe1ec66a6c52a133066a1be8bda58910fca970d076fb92592",
+      "path": "docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md",
+      "runner_path": "scripts/frontier_quark_c3_circulant_source_law_boundary.py",
+      "title": "Quark `C3` Circulant Source-Law Boundary Note"
+    },
+    "quark_c3_oriented_ward_splitter_support_note_2026-04-28": {
+      "claim_id": "quark_c3_oriented_ward_splitter_support_note_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "exact support/boundary theorem for Lane 3 target 3C. This",
+      "deps": [],
+      "note_hash": "7a27ede997e1408fad92b18d69a7916a8c0e9feb0e6e3c0d307189ae0b43b30a",
+      "path": "docs/QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md",
+      "runner_path": "scripts/frontier_quark_c3_oriented_ward_splitter_support.py",
+      "title": "Quark `C3`-Oriented Ward Splitter Support Note"
+    },
+    "quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28": {
+      "claim_id": "quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "exact current-bank no-go / support-boundary theorem for Lane 3",
+      "deps": [],
+      "note_hash": "5099627c83616dbd7a9efa382f8d11b8d45be9d228e6252e980252ff331c895d",
+      "path": "docs/QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md",
+      "runner_path": "scripts/frontier_quark_c3_p1_positive_parent_readout_no_go.py",
+      "title": "Quark `C3` P1 Positive-Parent Readout No-Go Note"
+    },
     "quark_cp_carrier_completion_note_2026-04-18": {
       "claim_id": "quark_cp_carrier_completion_note_2026-04-18",
       "current_status": "bounded",
@@ -34083,6 +34123,36 @@
       "runner_path": "scripts/frontier_quark_endpoint_readout_constraints.py",
       "title": "Quark Endpoint Readout Constraints"
     },
+    "quark_five_sixths_scale_selection_boundary_note_2026-04-28": {
+      "claim_id": "quark_five_sixths_scale_selection_boundary_note_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "support / exact negative boundary / scale-selection theorem target for Lane",
+      "deps": [],
+      "note_hash": "80e8456c59dadd65a1399ca79b5640bf9b613f9a8c1b0090b976e95a8f968047",
+      "path": "docs/QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md",
+      "runner_path": "scripts/frontier_quark_five_sixths_scale_selection_boundary.py",
+      "title": "Quark Five-Sixths Scale-Selection Boundary"
+    },
+    "quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28": {
+      "claim_id": "quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "support / exact negative boundary for Lane 3 target 3C. This block-05",
+      "deps": [],
+      "note_hash": "045573aca0bfc2aee123a489b15a9019521a88c74def80c7f33138743f1dfbf7",
+      "path": "docs/QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md",
+      "runner_path": "scripts/frontier_quark_generation_equivariant_ward_degeneracy_no_go.py",
+      "title": "Quark Generation-Equivariant Ward Degeneracy No-Go"
+    },
+    "quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28": {
+      "claim_id": "quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary for Lane 3 target 3C.",
+      "deps": [],
+      "note_hash": "2f9805a79258d0e24f67b11461fc1cca1f76bce737514d1670f55adb7c90cbbb",
+      "path": "docs/QUARK_GENERATION_STRATIFIED_WARD_FREE_MATRIX_NO_GO_NOTE_2026-04-28.md",
+      "runner_path": "scripts/frontier_quark_generation_stratified_ward_free_matrix_no_go.py",
+      "title": "Quark Generation-Stratified Ward Free-Matrix No-Go"
+    },
     "quark_issr1_bicac_forcing_theorem_note_2026-04-19": {
       "claim_id": "quark_issr1_bicac_forcing_theorem_note_2026-04-19",
       "current_status": "support",
@@ -34132,6 +34202,16 @@
       "path": "docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py",
       "title": "Quark Lane 3 Bounded-Companion Retention Firewall"
+    },
+    "quark_lane3_stuck_fanout_synthesis_2026-04-28": {
+      "claim_id": "quark_lane3_stuck_fanout_synthesis_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "support / exact current-bank synthesis / no-route-passes boundary for Lane 3.",
+      "deps": [],
+      "note_hash": "a7f577f52d66b4f78238fa2b111f3d1c6129f7164c5b79123749deace7502e1e",
+      "path": "docs/QUARK_LANE3_STUCK_FANOUT_SYNTHESIS_2026-04-28.md",
+      "runner_path": "scripts/frontier_quark_lane3_stuck_fanout_synthesis.py",
+      "title": "Quark Lane 3 Stuck Fan-Out Synthesis"
     },
     "quark_mass_ratio_full_solve_note_2026-04-18": {
       "claim_id": "quark_mass_ratio_full_solve_note_2026-04-18",
@@ -34235,6 +34315,16 @@
       "runner_path": "scripts/frontier_quark_projector_ray_phase_completion.py",
       "title": "Reduced Quark Closure on a Fixed Projector Ray"
     },
+    "quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28": {
+      "claim_id": "quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary for Lane 3 target 3B.",
+      "deps": [],
+      "note_hash": "65acee4543e4074a2ef74139b4340a19f9c11330dd88d136aea02d47be93774b",
+      "path": "docs/QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md",
+      "runner_path": "scripts/frontier_quark_route2_e_channel_readout_naturality_no_go.py",
+      "title": "Quark Route-2 E-Channel Readout Naturality No-Go"
+    },
     "quark_route2_exact_readout_map_note_2026-04-19": {
       "claim_id": "quark_route2_exact_readout_map_note_2026-04-19",
       "current_status": "unknown",
@@ -34256,6 +34346,46 @@
       "path": "docs/QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_quark_route2_exact_time_coupling.py",
       "title": "Quark Route-2 Exact Time Coupling"
+    },
+    "quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28": {
+      "claim_id": "quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "support / exact conditional bridge plus exact import-boundary obstruction for",
+      "deps": [],
+      "note_hash": "b901cd657b0949e9fc02e1b7e9f6d21a2397d55c468254fd837b5b33c7182d74",
+      "path": "docs/QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md",
+      "runner_path": "scripts/frontier_quark_route2_rconn_center_ratio_bridge_obstruction.py",
+      "title": "Quark Route-2 R_conn Center-Ratio Bridge Obstruction"
+    },
+    "quark_route2_source_domain_bridge_no_go_note_2026-04-28": {
+      "claim_id": "quark_route2_source_domain_bridge_no_go_note_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "exact current-bank no-go / exact negative boundary for Lane 3",
+      "deps": [],
+      "note_hash": "ae4928b89e4b03edaa63812863f0d0c12e63dd6592f5e41092f9d9b36a5b6181",
+      "path": "docs/QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md",
+      "runner_path": "scripts/frontier_quark_route2_source_domain_bridge_no_go.py",
+      "title": "Quark Route-2 Source-Domain Bridge No-Go"
+    },
+    "quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28": {
+      "claim_id": "quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "exact no-go / boundary theorem for Lane 3 targets 3B and 3C.",
+      "deps": [],
+      "note_hash": "00ebaff4a46feaa1827929ba683e44c545673086b0ab3fa95c56a47101ba9398",
+      "path": "docs/QUARK_RPSR_C3_JOINT_READOUT_RANK_BOUNDARY_NOTE_2026-04-28.md",
+      "runner_path": "scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py",
+      "title": "Quark RPSR-C3 Joint Readout Rank Boundary Note"
+    },
+    "quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28": {
+      "claim_id": "quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "exact no-go / boundary theorem for Lane 3 target 3B. This",
+      "deps": [],
+      "note_hash": "4ba99db187f3ddf2adfb04cf99118843b3dfc1d50bdee64a85dfda7bc8f67b8a",
+      "path": "docs/QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md",
+      "runner_path": "scripts/frontier_quark_rpsr_single_scalar_readout_underdetermination.py",
+      "title": "Quark RPSR Single-Scalar Readout Underdetermination Note"
     },
     "quark_strc_observable_principle_note_2026-04-19": {
       "claim_id": "quark_strc_observable_principle_note_2026-04-19",
@@ -34343,6 +34473,16 @@
       "path": "docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_quark_up_amplitude_rpsr_conditional.py",
       "title": "Quark Up-Amplitude Reduced Projector-Ray Sum Rule (RPSR)"
+    },
+    "quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28": {
+      "claim_id": "quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28",
+      "current_status": "support",
+      "current_status_raw": "exact support/boundary theorem for Lane 3 target 3B. This",
+      "deps": [],
+      "note_hash": "8bbc8f08830dffd53981a9ee2ca3f6ef750c621f2923c742093457d741ee004b",
+      "path": "docs/QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md",
+      "runner_path": "scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py",
+      "title": "Quark Up-Amplitude RPSR Mass-Retention Boundary Note"
     },
     "quark_up_amplitude_scalar_comparison_bridge_note_2026-04-19": {
       "claim_id": "quark_up_amplitude_scalar_comparison_bridge_note_2026-04-19",
@@ -40021,18 +40161,32 @@
     "quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19",
     "quark_bimodule_norm_existence_theorem_note_2026-04-19",
     "quark_bimodule_norm_naturality_theorem_note_2026-04-19",
+    "quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28",
+    "quark_c3_circulant_source_law_boundary_note_2026-04-28",
+    "quark_c3_oriented_ward_splitter_support_note_2026-04-28",
+    "quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28",
     "quark_e_channel_endpoint_quotient_law_note_2026-04-19",
     "quark_endpoint_denominator_admissibility_note_2026-04-19",
     "quark_endpoint_ratio_chain_law_note_2026-04-19",
+    "quark_five_sixths_scale_selection_boundary_note_2026-04-28",
+    "quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28",
+    "quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28",
     "quark_issr1_bicac_forcing_theorem_note_2026-04-19",
     "quark_jts_affine_physical_carrier_theorem_note_2026-04-19",
     "quark_jts_physical_point_closure_theorem_note_2026-04-19",
     "quark_jts_residue_note_2026-04-19",
     "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
+    "quark_lane3_stuck_fanout_synthesis_2026-04-28",
+    "quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28",
     "quark_route2_exact_readout_map_note_2026-04-19",
+    "quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28",
+    "quark_route2_source_domain_bridge_no_go_note_2026-04-28",
+    "quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28",
+    "quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28",
     "quark_strc_observable_principle_note_2026-04-19",
     "quark_up_amplitude_provenance_audit_note_2026-04-19",
     "quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19",
+    "quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28",
     "quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19",
     "quasi_persistent_relaunch_probe_note",
     "reopened_lane_checklist",
@@ -40370,16 +40524,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4484,
-    "leaf_count": 730,
-    "node_count": 1631,
-    "root_count": 1183,
-    "runners_with_path": 713,
+    "leaf_count": 744,
+    "node_count": 1645,
+    "root_count": 1197,
+    "runners_with_path": 727,
     "status_counts": {
       "bounded": 253,
       "open": 31,
       "proposed_promoted": 1,
-      "proposed_retained": 402,
-      "support": 148,
+      "proposed_retained": 404,
+      "support": 160,
       "unknown": 796
     }
   }

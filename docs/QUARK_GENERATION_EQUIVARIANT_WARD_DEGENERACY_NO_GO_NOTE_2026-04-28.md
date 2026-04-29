@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-28
 
-**Status:** exact negative boundary for Lane 3 target 3C. This block-05
+**Status:** support / exact negative boundary for Lane 3 target 3C. This block-05
 artifact tests whether a generation-equivariant Ward operator on the retained
 `hw=1` triplet can derive generation-stratified quark Yukawa values. It does
 not claim retained `m_u`, `m_d`, `m_s`, `m_c`, or `m_b`.

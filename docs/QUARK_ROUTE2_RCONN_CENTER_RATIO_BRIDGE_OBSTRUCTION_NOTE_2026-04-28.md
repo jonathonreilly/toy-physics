@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-28
 
-**Status:** exact conditional bridge plus exact import-boundary obstruction for
+**Status:** support / exact conditional bridge plus exact import-boundary obstruction for
 Lane 3 target 3B. This note records a block-02 stretch attempt on the
 Route-2 up-type amplitude scalar-law residual. It does not derive the
 E-channel readout law `beta_E / alpha_E = 21/4`, and it does not claim

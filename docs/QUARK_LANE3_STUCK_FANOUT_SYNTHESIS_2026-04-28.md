@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-28
 
-**Status:** exact current-bank synthesis / no-route-passes boundary for Lane 3.
+**Status:** support / exact current-bank synthesis / no-route-passes boundary for Lane 3.
 This block-13 artifact is the required stuck fan-out after the deep 3B/3C
 RPSR work. It does not claim retained `m_u`, `m_d`, `m_s`, `m_c`, or `m_b`,
 and it does not claim that no future theorem can exist. It records that no
