@@ -17893,7 +17893,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-29T04:29:30.040935+00:00",
+  "generated_at": "2026-04-29T04:34:46.693757+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -26584,6 +26584,16 @@
       "path": "docs/HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md",
       "runner_path": "scripts/frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py",
       "title": "Lane 5 `(C1)` A5 Boolean-Coframe Restriction Obstruction Note"
+    },
+    "hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29": {
+      "claim_id": "hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact support/boundary theorem / stretch-attempt",
+      "deps": [],
+      "note_hash": "ef44b218466fdb8f323490a3187347d2eec06a52f7538f6ba2ae28ef238b0e76",
+      "path": "docs/HUBBLE_LANE5_C1_A6_BILINEAR_ACTIVE_BLOCK_SUPPORT_BOUNDARY_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py",
+      "title": "Lane 5 `(C1)` A6 Bilinear Active-Block Support/Boundary Note"
     },
     "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27": {
       "claim_id": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
@@ -39725,6 +39735,7 @@
     "hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29",
     "hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29",
     "hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29",
+    "hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29",
     "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
     "hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26",
     "hubble_lane5_eta_retirement_gate_audit_note_2026-04-26",
@@ -40381,15 +40392,15 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4473,
-    "leaf_count": 738,
-    "node_count": 1637,
-    "root_count": 1191,
-    "runners_with_path": 716,
+    "leaf_count": 739,
+    "node_count": 1638,
+    "root_count": 1192,
+    "runners_with_path": 717,
     "status_counts": {
       "bounded": 212,
       "open": 30,
       "proposed_promoted": 6,
-      "proposed_retained": 453,
+      "proposed_retained": 454,
       "support": 139,
       "unknown": 797
     }

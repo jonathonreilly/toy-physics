@@ -1,5 +1,53 @@
 # Review History
 
+## 2026-04-29 Cycle 11 Review Results
+
+Artifact under review:
+
+- `docs/HUBBLE_LANE5_C1_A6_BILINEAR_ACTIVE_BLOCK_SUPPORT_BOUNDARY_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py`
+
+### Code / Runner: PASS
+
+- New A6 support/boundary runner passes: `PASS=9 FAIL=0`.
+- New runner compiles with `py_compile`.
+- Nearby authority runners still pass:
+  - `frontier_planck_target3_clifford_phase_bridge.py`: `PASS=34 FAIL=0`
+  - `frontier_area_law_native_car_semantics_tightening.py`: `PASS=23 FAIL=0`
+  - `frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py`: `PASS=9 FAIL=0`
+
+### Physics Claim Boundary: EXACT SUPPORT/BOUNDARY
+
+- Positive support: number-preserving bilinears on the one-particle `P_A`
+  sector generate `M_4(C)` and can host an intrinsic active-block `Cl_4`.
+- Boundary: the bilinear algebra alone admits distinct Clifford bases and
+  phase conventions, so it does not select the primitive metric coframe,
+  oriented CAR pairing, or dimensional action unit.
+- No `(C1)` closure, `H_0` closure, or `hbar`/absolute action-unit derivation
+  is claimed.
+
+### Imports / Support: DISCLOSED
+
+- No measured Planck, Hubble, cosmological, or SI action value is used.
+- Newly exposed import: a primitive metric/orientation/phase selector on the
+  active bilinear algebra, plus the already-open action metrology map.
+
+### Nature Retention: SUPPORT ONLY, LANE 5 STILL OPEN
+
+- A6 is useful support for the quotient/bilinear route, but it does not
+  retire the `(C1)` premise.
+- The next honest route is a selector/metrology theorem or a minimal
+  carrier/metrology axiom audit.
+
+### Audit Compatibility: PASS
+
+- `bash docs/audit/scripts/run_pipeline.sh`: complete.
+- `python3 docs/audit/scripts/audit_lint.py --strict`: OK, with known
+  graph-cycle warning only.
+- `git diff --check`: OK.
+- Audit row seeded as `proposed_retained` / `unaudited`:
+  `hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29`.
+
 ## 2026-04-29 Cycle 10 Review Results
 
 Artifact under review:

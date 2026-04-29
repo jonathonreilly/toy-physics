@@ -286,3 +286,32 @@ Expected claim movement:
   number-preserving bilinear theorem, or explicit carrier premise;
 - next route is an intrinsic active-block coframe attempt or the minimal
   carrier/metrology axiom audit.
+
+## Cycle 11: Lane 5 C1 A6 Bilinear Active-Block Support/Boundary
+
+Deliverables:
+
+- `docs/HUBBLE_LANE5_C1_A6_BILINEAR_ACTIVE_BLOCK_SUPPORT_BOUNDARY_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py`
+- `logs/2026-04-29-hubble-lane5-c1-a6-bilinear-active-block-support-boundary.txt`
+
+Verification:
+
+- run and compile the new runner;
+- rerun nearby authority/boundary runners:
+  - `frontier_planck_target3_clifford_phase_bridge.py`
+  - `frontier_area_law_native_car_semantics_tightening.py`
+  - `frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py`
+- run audit pipeline and strict lint;
+- run `git diff --check`;
+- record review-loop emulation.
+
+Expected claim movement:
+
+- no `(C1)` closure;
+- exact positive support that the one-particle `P_A` bilinear algebra can host
+  `Cl_4`;
+- exact boundary that the bilinear algebra does not select the primitive
+  metric/orientation/phase basis or dimensional action unit;
+- next route is a minimal carrier/metrology axiom audit unless a new selector
+  theorem is found.

@@ -37,6 +37,10 @@ Cycle 10 used no new literature. The A5 obstruction is finite algebra over
 the repo-local Boolean event cell, `P_A` carrier, and natural full-cell
 Jordan-Wigner coframe candidate.
 
+Cycle 11 used no new literature. The A6 support/boundary theorem is finite
+algebra over the repo-local one-particle `P_A` sector and number-preserving
+bilinears.
+
 If later cycles need external bridge material, enter each imported theorem,
 experimental number, or convention here with role `bridge`, `comparator`,
 `admitted convention`, or `non-derivation context`.

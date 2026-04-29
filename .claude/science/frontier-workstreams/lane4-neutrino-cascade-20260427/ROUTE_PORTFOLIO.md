@@ -22,8 +22,8 @@ Scores use the frontier-workstream dramatic-step scale: `0` low value,
 | Lane 5 C1 A4 parity-gate-to-CAR route | support/boundary theorem | 2 | 2 | 3 | -0 | 7 | Executed cycle 9; direct gate-to-CAR lift blocked |
 | Lane 5 C1 A5 Boolean coframe restriction | stretch attempt / no-go | 2 | 2 | 3 | -0 | 7 | Executed cycle 10; direct full-cell odd coframe restriction blocked |
 | Lane 5 C1 intrinsic active-block coframe theorem | stretch attempt | 3 | 3 | 1 | -2 | 5 | Candidate next route; high risk |
-| Lane 5 C1 number-preserving bilinear / quotient route | theorem/audit | 2 | 2 | 2 | -1 | 5 | Candidate follow-up after A5 |
-| Lane 5 C1 minimal carrier/metrology axiom audit | conditional closeout / human-judgment boundary | 1 | 1 | 2 | -0 | 4 | Use only if theorem routes fail |
+| Lane 5 C1 A6 number-preserving bilinear / quotient route | support/boundary theorem | 2 | 2 | 3 | -0 | 7 | Executed cycle 11; capacity positive, selector/metrology open |
+| Lane 5 C1 minimal carrier/metrology axiom audit | conditional closeout / human-judgment boundary | 1 | 1 | 2 | -0 | 4 | Next route if no selector theorem is available |
 
 ## Selected Cycle 1 Route
 
@@ -165,3 +165,21 @@ vanishes and cannot be the metric-compatible active-block response. The next
 constructive route, if attempted, must be an intrinsic active-block `Cl_4`
 law, a quotient/number-preserving bilinear theorem, or an explicit conditional
 carrier premise.
+
+## Cycle 11 Route
+
+Execute the Lane 5 `(C1)` A6 number-preserving bilinear route because A5
+blocked direct odd restriction while leaving a quotient/intrinsic active-block
+route open:
+
+- test whether `a_i^dagger a_j` bilinears on the one-particle `P_A` sector
+  generate enough active algebra to host `Cl_4`;
+- separate algebraic capacity from metric/orientation/phase selection;
+- check that action-unit metrology remains unresolved.
+
+Outcome: A6 is exact support plus boundary. The bilinears generate
+`M_4(C)` on `P_A H_cell`, so an intrinsic active-block `Cl_4` response is
+algebraically possible. But the same algebra admits distinct Clifford bases
+and phase conventions, and the `(S,kappa)` rescaling degeneracy remains. The
+remaining route is a primitive selector/metrology theorem or an explicit
+conditional carrier/metrology axiom.

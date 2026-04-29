@@ -1,5 +1,72 @@
 # Handoff
 
+## Loop 3 Checkpoint 2026-04-29T04:32Z
+
+Supervisor loop 3 continued Lane 5 `(C1)` after the A5 direct-restriction
+obstruction. The selected route was the number-preserving bilinear /
+quotient active-block route.
+
+### Claim-State Movement This Checkpoint
+
+Added a new exact support/boundary theorem:
+
+- `docs/HUBBLE_LANE5_C1_A6_BILINEAR_ACTIVE_BLOCK_SUPPORT_BOUNDARY_NOTE_2026-04-29.md`
+- `scripts/frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py`
+- `logs/2026-04-29-hubble-lane5-c1-a6-bilinear-active-block-support-boundary.txt`
+
+Verified result: number-preserving bilinears `a_i^dagger a_j` on the
+one-particle `P_A` sector generate the full active algebra:
+
+```text
+End(P_A H_cell) ~= M_4(C).
+```
+
+So an intrinsic active-block `Cl_4` response is algebraically possible after
+A5. But the same bilinear algebra admits distinct Clifford bases and active
+phase conventions, and it does not break the dimensional action-unit
+rescaling degeneracy. A6 is support only; it does not close `(C1)`.
+
+### Verification
+
+- `PYTHONPATH=scripts python3 scripts/frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py`
+  -> `PASS=9 FAIL=0`
+- `python3 -m py_compile scripts/frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py`
+  -> pass
+- `PYTHONPATH=scripts python3 scripts/frontier_planck_target3_clifford_phase_bridge.py`
+  -> `PASS=34 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_area_law_native_car_semantics_tightening.py`
+  -> `PASS=23 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py`
+  -> `PASS=9 FAIL=0`
+- `bash docs/audit/scripts/run_pipeline.sh`
+  -> complete
+- `python3 docs/audit/scripts/audit_lint.py --strict`
+  -> OK, known graph-cycle warning only
+- `git diff --check`
+  -> pass
+- Audit row:
+  `hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29`
+  seeded as `proposed_retained` / `unaudited`.
+
+### Review-Loop Emulation
+
+- Code/runner: PASS. The runner separates algebraic capacity from selector
+  and metrology closure.
+- Physics boundary: exact support/boundary. The bilinear route can host
+  `Cl_4`, but no primitive metric/orientation/phase basis or action unit is
+  selected.
+- Imports: disclosed in `ASSUMPTIONS_AND_IMPORTS.md`; no observed or SI
+  action value is used.
+- Repo governance: no repo-wide authority weaving performed. Audit generated
+  surfaces were refreshed for parseability only.
+
+### Next Exact Action
+
+Unless a fresh selector theorem is found immediately, write the minimal
+carrier/metrology axiom audit for Lane 5 `(C1)`. That audit should state the
+exact remaining human-judgment premise before pivoting to the next queued
+lane.
+
 ## Loop 3 Checkpoint 2026-04-29T04:27Z
 
 Supervisor loop 3 continued Lane 5 `(C1)` after the A4 parity-gate boundary.

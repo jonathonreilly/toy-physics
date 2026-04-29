@@ -1,0 +1,15 @@
+==============================================================================
+Lane 5 (C1) A6 bilinear active-block support/boundary verifier
+==============================================================================
+[PASS] one_particle_P_A_sector_has_rank_four: indices=[1, 2, 4, 8], c_cell=0.250000000000
+[PASS] number_preserving_bilinears_generate_full_active_matrix_algebra: span rank on P_A sector=16
+[PASS] bilinears_recover_all_matrix_units_on_P_A: worst matrix-unit projection residual=0.000e+00
+[PASS] active_bilinear_sector_has_matrix_unit_multiplication: worst E_ij E_kl residual=0.000e+00
+[PASS] bilinear_active_algebra_can_host_a_Cl4_response: Cl_4 residual=0.000e+00, span residual=0.000e+00
+[PASS] same_bilinear_algebra_admits_distinct_Cl4_bases: permuted Cl_4 residual=0.000e+00, basis difference=2.828e+00
+[PASS] continuous_active_basis_phase_is_not_fixed_by_bilinears: phase-rotated Cl_4 residual=0.000e+00, basis difference=5.203e-01
+[PASS] bilinear_route_does_not_pin_dimensional_action_unit: common (S,kappa) rescaling phase spread=0.000e+00
+[PASS] a6_exposes_selector_not_existence_boundary: Bilinears can host Cl_4, but a metric/orientation/phase and action-unit law remains open.
+------------------------------------------------------------------------------
+TOTAL: PASS=9, FAIL=0
+Conclusion: number-preserving bilinears on P_A H_cell generate M_4(C) and can host an intrinsic Cl_4 response, but they do not select the metric coframe basis or dimensional action unit.

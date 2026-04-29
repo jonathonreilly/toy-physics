@@ -109,3 +109,11 @@
 | Hamming-weight-one `P_A` packet | Active block tested for direct inherited coframe response | retained/proposed_retained support | `PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`; A5 runner | Yes | Yes | Already selected as carrier; not by itself a reducing odd-coframe module | Reuse with guardrail |
 | Natural full-cell Boolean/Jordan-Wigner odd coframe generators | Candidate direct inherited `Cl_4` response from `H_cell=(C^2)^4` | proof infrastructure / candidate route | A5 runner | Yes for A5 test | Not sufficient for `(C1)` | Need a different intrinsic active-block theorem, quotient/bilinear theorem, or carrier premise | Blocked as direct restriction |
 | Intrinsic active-block metric-compatible `Cl_4` law | Newly sharpened missing premise after A5 | open import | `HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md`; `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md` | Yes | Yes for `(C1)` G1 | Derive `Cl_4` response directly on `P_A H_cell`, not by compressing full-cell odd maps | Open |
+
+## Lane 5 C1 A6 Imports Added In Cycle 11
+
+| Item | Role in claim | Current class | Source surface | Load-bearing? | Needed for target status? | Retirement path | Disposition |
+|---|---|---|---|---|---|---|---|
+| Number-preserving bilinears `a_i^dagger a_j` on the one-particle `P_A` sector | Candidate quotient/intrinsic active-block route after A5 | exact support/boundary theorem | `HUBBLE_LANE5_C1_A6_BILINEAR_ACTIVE_BLOCK_SUPPORT_BOUNDARY_NOTE_2026-04-29.md` | Yes | Not sufficient for `(C1)` | Add primitive metric/orientation/phase selector and metrology theorem | Support only |
+| Primitive metric/orientation/phase selector on the active `M_4(C)` algebra | Newly exposed missing selector for the bilinear route | open import | A6 note and runner | Yes | Yes for `(C1)` G1 | Derive which active bilinear combinations are the coframe axes and oriented CAR pairings | Open |
+| Dimensional action-unit map on the bilinear active-block route | Newly exposed metrology dependency remains after A6 | open import | A2 and A6 notes | Yes | Yes for `(C1)` G2 | Derive non-rescaling-invariant clock/source/action metrology | Open |
