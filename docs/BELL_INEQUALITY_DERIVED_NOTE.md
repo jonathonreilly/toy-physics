@@ -1,7 +1,7 @@
-# Bell Inequality (CHSH) Violation with Explicit Cl(3) Taste Measurements
+# Bell Inequality (CHSH) Violation with Explicit Cl(3) Taste Measurements (Conditional Model Surface)
 
-**Date:** 2026-04-16
-**Status:** proposed_retained
+**Date:** 2026-04-16 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded reproducible model-surface CHSH violation for the listed finite lattices and selected `G` couplings, with explicit Cl(3) taste-operator checks and `G = 0` null controls. The earlier strong-tier claim depended on selected small lattices and large chosen `G` values plus unregistered assumptions about two-species bipartition and the diagonal periodic-Poisson coupling as the gravitational interaction. Not a tier-ratifiable framework-native or physical gravitational Bell-violation theorem.
 **Script:** `scripts/frontier_bell_inequality.py`
 **Runtime:** ~2-5 minutes (dominated by 3D 4x4x4 eigenvalue decomposition)
 
@@ -343,3 +343,45 @@ python3 scripts/frontier_bell_inequality.py
 ```
 
 Runtime: ~2-5 minutes total (3D points dominate). Requires numpy, scipy.
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_numerical_match`, high criticality, 123
+transitive descendants):
+
+> Issue: the runner cleanly computes CHSH > 2 for the specified
+> two-species staggered-lattice Hamiltonian, but the retained claim
+> is load-bearing on selected small lattices and large chosen `G`
+> values, plus unregistered assumptions that two distinguishable
+> retained species supply the bipartition and that the diagonal
+> periodic-Poisson density coupling is the relevant gravitational
+> interaction.
+
+> Claim boundary until fixed: it is safe to claim a reproducible
+> model-surface CHSH violation for the listed finite lattices and
+> selected couplings, with explicit Cl(3) taste-operator checks and
+> `G = 0` null controls; it is not yet an audited retained
+> framework-native or physical gravitational Bell-violation theorem.
+
+## What this note does NOT claim
+
+- A framework-native or physical gravitational Bell-violation theorem.
+- Audit-clean upstream registration of the two-species Hilbert /
+  matter theorem.
+- A registered D5 Poisson-coupling authority establishing the
+  diagonal density coupling as the relevant gravitational
+  interaction.
+- A derived physical normalization of `G` or its continuum scaling.
+
+## What would close this lane (Path A future work)
+
+Promoting from numerical-match-on-selected-couplings to retained
+would require:
+
+1. Registering the Hilbert / two-species matter theorem as a one-hop
+   dependency.
+2. Registering a D5 Poisson-coupling authority.
+3. Deriving the physical normalization of `G` and its continuum
+   scaling.
+4. A runner that tests a fixed derived coupling / continuum-refinement
+   family rather than sweeping to violation.
