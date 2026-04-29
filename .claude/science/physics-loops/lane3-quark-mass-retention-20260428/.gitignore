@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+supervisor.lock
+supervisor.log
+supervisor.pid
+supervisor_status.json
+physics_loop_supervisor.py
+messages/

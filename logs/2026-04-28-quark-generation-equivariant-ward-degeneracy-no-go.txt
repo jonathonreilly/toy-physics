@@ -1,0 +1,68 @@
+========================================================================================
+LANE 3 GENERATION-EQUIVARIANT WARD DEGENERACY NO-GO
+========================================================================================
+
+A. Authority surfaces
+------------------------------------------------------------------------
+PASS: QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md exists -- docs/QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md
+PASS: THREE_GENERATION_STRUCTURE_NOTE.md exists -- docs/THREE_GENERATION_STRUCTURE_NOTE.md
+PASS: S3_TASTE_CUBE_DECOMPOSITION_NOTE.md exists -- docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md
+PASS: QUARK_GENERATION_STRATIFIED_WARD_FREE_MATRIX_NO_GO_NOTE_2026-04-28.md exists -- docs/QUARK_GENERATION_STRATIFIED_WARD_FREE_MATRIX_NO_GO_NOTE_2026-04-28.md
+PASS: SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md exists -- docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md
+PASS: generation note says hierarchy remains open
+PASS: S3 support note identifies hw=1 as A_1 + E
+PASS: block01 free-matrix no-go is compatible
+PASS: new note forbids retained mass closure
+
+B. S3 permutation representation on the generation triplet
+------------------------------------------------------------------------
+PASS: Pe is orthogonal
+PASS: P(12) is orthogonal
+PASS: P(23) is orthogonal
+PASS: P(13) is orthogonal
+PASS: P(123) is orthogonal
+PASS: P(132) is orthogonal
+PASS: identity acts trivially
+PASS: transpositions square to identity
+PASS: 3-cycles cube to identity
+PASS: character chi(e)=3
+PASS: transposition character chi(2c)=1
+PASS: 3-cycle character chi(3c)=0
+PASS: hw=1 permutation carrier has one A_1 -- 1.000000
+PASS: hw=1 permutation carrier has no A_2 -- 0.000000
+PASS: hw=1 permutation carrier has one E -- 1.000000
+
+C. Commutant dimension and normal form
+------------------------------------------------------------------------
+PASS: linear commutant has dimension 2 -- nullity=2
+PASS: identity commutes with all S3 generators
+PASS: all-ones matrix commutes with all S3 generators
+PASS: a I + b J sample commutes with all S3 elements
+PASS: a I + b J sample has commutant form
+PASS: distinct diagonal hierarchy is not S3-equivariant
+
+D. Eigenvalue degeneracy
+------------------------------------------------------------------------
+PASS: sample has at most two distinct eigenvalues -- [0.95 2.   2.  ]
+PASS: E plane is degenerate -- 2.000000, 2.000000
+PASS: singlet eigenvalue equals a+3b -- 0.950000
+PASS: E eigenvalue equals a -- 2.000000
+PASS: scalar diagonal readout is S3-equivariant
+PASS: non-scalar diagonal readout fails S3 equivariance
+PASS: diagonal S3-equivariant readout has one eigenvalue
+
+E. Boundary against hidden symmetry breaking
+------------------------------------------------------------------------
+PASS: oriented C3 example commutes with the 3-cycle
+PASS: oriented C3 example breaks reflection
+PASS: oriented C3 example can split three eigenvalues -- [0.05717968 1.44282032 1.5       ]
+PASS: therefore C3 splitting requires an extra orientation/reflection-breaking premise
+PASS: forbidden proof inputs are absent -- ['Hermitian_Ward_endomorphism', 'S3_generation_action', 'commutant_linear_algebra', 'hw1_A1_plus_E_decomposition']
+PASS: new note leaves future source/readout primitive open
+PASS: new note does not overclaim future no-go
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=44, FAIL=0
+VERDICT: S_3-equivariant Ward operators cannot stratify three quark
+generation Yukawa eigenvalues without a new source/readout primitive.

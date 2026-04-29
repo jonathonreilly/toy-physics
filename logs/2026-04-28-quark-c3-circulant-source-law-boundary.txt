@@ -1,0 +1,70 @@
+========================================================================================
+LANE 3 C3 CIRCULANT SOURCE-LAW BOUNDARY
+========================================================================================
+
+A. Authority surfaces
+------------------------------------------------------------------------
+PASS: QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md exists -- docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md
+PASS: QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md exists -- docs/QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md
+PASS: YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md exists -- docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md
+PASS: YT_CLASS_6_C3_BREAKING_OPERATOR_NOTE_2026-04-18.md exists -- docs/YT_CLASS_6_C3_BREAKING_OPERATOR_NOTE_2026-04-18.md
+PASS: KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md exists -- docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md
+PASS: KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md exists -- docs/KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md
+PASS: QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md exists -- docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md
+PASS: hierarchy note records Fourier-basis correction
+PASS: class6 note keeps A1/P1 non-retained
+PASS: Koide bridge marks A1 as not retained
+PASS: sqrtm note narrows P1 without closing parent/readout
+PASS: Lane 3 firewall blocks bounded mass promotion
+PASS: new note forbids observed quark masses
+
+B. Exact circulant carrier and inverse map
+------------------------------------------------------------------------
+PASS: C3 cycle is unitary
+PASS: C3 cycle has order 3
+PASS: sample circulant is Hermitian
+PASS: sample circulant commutes with C3
+PASS: closed-form eigenvalues match numerical eigenvalues -- [0.66894882 1.43105118 2.1       ]
+PASS: inverse Fourier map fits arbitrary real triples
+PASS: carrier has same real dimension as real eigenvalue triples -- dim Herm_circ(C3)=3, dim spectrum=3
+PASS: therefore carrier alone is representation, not prediction
+
+C. A1 relation
+------------------------------------------------------------------------
+PASS: A1 fixes |q|^2/a^2 = 1/2
+PASS: A1 gives Q=2/3 independent of phase -- [0.66666667 0.66666667 0.66666667 0.66666667]
+PASS: off-A1 circulant generally has Q != 2/3 -- Q=0.340000
+PASS: different A1 phases give different normalized spectra
+PASS: A1 leaves phase as a live source variable
+PASS: A1 leaves overall scale as a live source variable
+
+D. P1 and positive-parent readout boundary
+------------------------------------------------------------------------
+PASS: positive sample amplitude eigenvalues are positive -- [0.80333499 1.81507352 3.38159149]
+PASS: quadratic parent eigenvalues are amplitude squares
+PASS: parent commutes with C3 if amplitude commutes with C3
+PASS: P1 still asks which parent/readout is physical
+PASS: P1 cannot be imported as retained Lane 3 theorem
+
+E. Quark sector species boundary
+------------------------------------------------------------------------
+PASS: one universal phase gives identical normalized up/down shapes
+PASS: distinct up/down shapes require distinct phase or source data
+PASS: species-blind carrier does not name up/down phases
+PASS: separate phases/scales are new species source data
+PASS: Lane 3 still needs five non-top Ward ratios
+PASS: quark-specific source/readout theorem remains load-bearing
+
+F. Import firewall
+------------------------------------------------------------------------
+PASS: proof inputs are disjoint from forbidden imports -- ['A1_P1_as_open_support', 'Hermitian_circulant_algebra', 'retained_C3_cycle', 'retained_hw1_triplet']
+PASS: new note keeps claim status open
+PASS: new note says support, not retained mass closure
+PASS: new note names A1/P1 as load-bearing
+PASS: runner defines no observed quark mass constants
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=43, FAIL=0
+VERDICT: C3 circulants are exact hierarchy carriers, but A1/P1 plus
+quark-specific species source/readout laws remain load-bearing.

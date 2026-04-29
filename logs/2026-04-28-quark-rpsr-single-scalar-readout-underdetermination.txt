@@ -1,0 +1,110 @@
+========================================================================================
+LANE 3 RPSR SINGLE-SCALAR READOUT UNDERDETERMINATION
+========================================================================================
+
+A. Authority surfaces
+------------------------------------------------------------------------
+PASS: QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md exists -- docs/QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md
+PASS: QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md exists -- docs/QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md
+PASS: STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md exists -- docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md
+PASS: QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md exists -- docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md
+PASS: YT_WARD_IDENTITY_DERIVATION_THEOREM.md exists -- docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md
+PASS: QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md exists -- docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md
+PASS: SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md exists -- docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md
+PASS: new note states single-scalar underdetermination
+PASS: block10 note supplies exact RPSR amplitude
+PASS: block10 note requires amplitude-to-Yukawa readout
+PASS: STRC note remains the LO support surface
+PASS: RPSR note records reduced amplitude target
+PASS: top Ward note remains top-channel anchor
+PASS: firewall blocks direct companion promotion
+PASS: one-Higgs note leaves Yukawa matrices as boundary
+
+B. Exact RPSR scalar
+------------------------------------------------------------------------
+PASS: RPSR scalar lies in (0,1) -- a_u=0.774886561056
+PASS: RPSR identity still closes -- lhs=1.003149047958, rhs=1.003149047958
+PASS: log(a_u) is nonzero and negative -- log(a_u)=-0.255038633173
+PASS: a_u is not a two-ratio object
+PASS: new note names both independent ratios
+
+C. Scale-covariant power readout family
+------------------------------------------------------------------------
+PASS: R_1_1 gives positive triple
+PASS: R_1_1 gives ordered triple -- (0.6004491825057139, 0.7748865610563355, 1.0)
+PASS: R_1_1 ratio y_u/y_c is a^p
+PASS: R_1_1 ratio y_c/y_t is a^q
+PASS: R_2_1 gives positive triple
+PASS: R_2_1 gives ordered triple -- (0.4652800021209406, 0.7748865610563355, 1.0)
+PASS: R_2_1 ratio y_u/y_c is a^p
+PASS: R_2_1 ratio y_c/y_t is a^q
+PASS: R_1_2 gives positive triple
+PASS: R_1_2 gives ordered triple -- (0.4652800021209406, 0.6004491825057139, 1.0)
+PASS: R_1_2 ratio y_u/y_c is a^p
+PASS: R_1_2 ratio y_c/y_t is a^q
+PASS: R_3_2 gives positive triple
+PASS: R_3_2 gives ordered triple -- (0.27937699690977563, 0.6004491825057139, 1.0)
+PASS: R_3_2 ratio y_u/y_c is a^p
+PASS: R_3_2 ratio y_c/y_t is a^q
+PASS: scale covariance preserves y_u/y_c
+PASS: scale covariance preserves y_c/y_t
+PASS: different p changes y_u/y_c for same a_u
+PASS: different q changes y_c/y_t for same a_u
+PASS: same a_u supports multiple ratio pairs
+
+D. Fit-capacity versus prediction
+------------------------------------------------------------------------
+PASS: synthetic pair 1 gives positive p -- p=5.435625
+PASS: synthetic pair 1 gives positive q -- q=2.717812
+PASS: synthetic pair 1 reconstructs y_u/y_c
+PASS: synthetic pair 1 reconstructs y_c/y_t
+PASS: synthetic pair 2 gives positive p -- p=9.028378
+PASS: synthetic pair 2 gives positive q -- q=4.307631
+PASS: synthetic pair 2 reconstructs y_u/y_c
+PASS: synthetic pair 2 reconstructs y_c/y_t
+PASS: synthetic pair 3 gives positive p -- p=3.592753
+PASS: synthetic pair 3 gives positive q -- q=1.127994
+PASS: synthetic pair 3 reconstructs y_u/y_c
+PASS: synthetic pair 3 reconstructs y_c/y_t
+PASS: synthetic pair 4 gives positive p -- p=18.056755
+PASS: synthetic pair 4 gives positive q -- q=6.310565
+PASS: synthetic pair 4 reconstructs y_u/y_c
+PASS: synthetic pair 4 reconstructs y_c/y_t
+PASS: distinct synthetic pairs need distinct exponent data
+PASS: exponent selection is an extra readout law
+PASS: fit-capacity is explicitly non-predictive
+
+E. Typed-edge boundary
+------------------------------------------------------------------------
+PASS: RPSR reaches amplitude support
+PASS: RPSR does not reach physical up ratio pair
+PASS: top scale anchor does not supply non-top ratio pair
+PASS: one-Higgs gauge skeleton does not supply ratio pair
+PASS: adding readout and bridge edges creates ratio path
+PASS: missing readout functions are new theorem content
+
+F. Import firewall
+------------------------------------------------------------------------
+PASS: allowed and forbidden input sets are disjoint
+PASS: new note forbids observed quark masses
+PASS: new note forbids fitted Yukawa entries
+PASS: new note forbids CKM singular values as mass inputs
+PASS: new note forbids hidden exponent law
+PASS: new note forbids species-uniform top Ward reuse
+PASS: runner contains no named mass-table import
+PASS: runner contains no observed mass constants
+
+G. Boundary classification
+------------------------------------------------------------------------
+PASS: new note retires direct shortcut
+PASS: new note keeps RPSR as valuable support
+PASS: new note requires generation/source theorem
+PASS: new note requires top-compatible bridge
+PASS: new note keeps Lane 3 open
+PASS: new note does not claim retained non-top masses
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=80, FAIL=0
+VERDICT: exact RPSR scalar support remains underdetermined as a
+two-ratio up-type Yukawa readout without a new readout theorem.
