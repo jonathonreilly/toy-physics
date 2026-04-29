@@ -1,7 +1,7 @@
 # Structured Chokepoint Bridge Note
 
-**Date:** 2026-04-04  
-**Status:** proposed_retained bounded structured bridge pocket; narrow canonical readout only
+**Date:** 2026-04-04 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** bounded finite structured-chokepoint card on the named `N = 25, 40, 60` slice with the registered canonical readout — no architecture-level bridge closure, no asymptotic behavior, and no readout-independent survival is asserted; runner prints diagnostics rather than enforcing hard pass thresholds. Not a tier-ratifiable bridge pocket theorem.
 
 This note freezes the bridge between the structured-placement lane and the
 canonical mirror chokepoint readout.
@@ -54,3 +54,34 @@ This is the cleanest claim available for the structured chokepoint bridge:
 - the decoherence side remains below the ceiling on the largest retained row
 - the pocket is real, but only as a bounded narrow bridge
 
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, medium criticality, 5 transitive
+descendants):
+
+> Issue: the runner supports the finite N=25,40,60 structured
+> chokepoint card, but the note promotes that selected slice as a
+> retained bridge pocket without a registered canonical-readout
+> dependency or theorem selecting the graph parameters. Why this
+> blocks: a hostile auditor can verify the printed table, but cannot
+> infer architecture-level bridge closure, asymptotic behavior, or
+> readout-independent survival from the current packet; the runner
+> also prints diagnostics rather than enforcing hard assertions.
+
+## What this note does NOT claim
+
+- An architecture-level bridge closure theorem.
+- Asymptotic behavior of the chokepoint card beyond `N = 25, 40, 60`.
+- Readout-independent survival of the bridge pocket.
+- A registered theorem selecting the graph parameters.
+
+## What would close this lane (Path A future work)
+
+Reinstating a retained bridge pocket would require:
+
+1. A registered canonical-readout dependency.
+2. A theorem selecting the graph parameters from upstream primitives.
+3. Hard runner-side pass thresholds (not just printed diagnostics).
+4. Architecture-level closure or asymptotic behavior beyond the
+   tested `N` slice.
