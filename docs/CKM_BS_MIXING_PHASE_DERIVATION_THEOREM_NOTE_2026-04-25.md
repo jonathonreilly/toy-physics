@@ -321,7 +321,7 @@ The runner uses the Python standard library plus the canonical
 
 ## Cross-References
 
-- [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+- `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
   -- parent CKM atlas/axiom package.
 - [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
   -- retained `rho`, `eta`, `delta_CKM` identities.

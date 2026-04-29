@@ -321,7 +321,7 @@ only.
 Appropriate placement:
 
 - atlas support row in
- [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
+ `DERIVATION_ATLAS.md`
  under the DM neutrino source-surface family, labeled
  "commutant-class reference (conditional; NOT a live-sheet
  promotion)"

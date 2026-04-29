@@ -4,9 +4,9 @@
 **Status:** proposed_retained leading-order `1/N_c` derivation with bounded `O(1/N_c⁴)` correction; MC-verified
 **Depends on:** Cl(3) axiom (N_c = 3), SU(N_c) gauge theory
 **Cross-refs:**
-[YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md),
+`YT_EW_COLOR_PROJECTION_THEOREM.md`,
 [YUKAWA_COLOR_PROJECTION_THEOREM.md](YUKAWA_COLOR_PROJECTION_THEOREM.md),
-[EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md](EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md)
+`EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md`
 **Primary runner:** `scripts/frontier_color_projection_mc.py` (MC verification)
 
 ---

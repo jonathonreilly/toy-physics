@@ -232,7 +232,7 @@ The runner:
 - [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md) — existence of the RH completion, anomaly traces `−16/9`, `1/3` cited
 - [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md) — LH content
 - [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md) — `Y(ν_R) = 0` pin
-- [`HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`](HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md) — named `Tr[Y^2]` / GUT-normalization arithmetic on the same one-generation content
+- `HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md` — named `Tr[Y^2]` / GUT-normalization arithmetic on the same one-generation content
 - [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md) — wider closure whose hypercharge step is now retained standalone
 - [`THREE_GENERATION_STRUCTURE_NOTE.md`](THREE_GENERATION_STRUCTURE_NOTE.md) — why the same template applies per generation
 - Adler 1969, Bell–Jackiw 1969 — original ABJ anomaly

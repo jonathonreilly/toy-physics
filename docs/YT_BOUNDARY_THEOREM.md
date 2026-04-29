@@ -237,7 +237,7 @@ This theorem fixes the endpoint question:
 The theorem supports the current bounded authority stack together with:
 
 - [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](./YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
-- [YT_EFT_BRIDGE_THEOREM.md](./YT_EFT_BRIDGE_THEOREM.md)
+- `YT_EFT_BRIDGE_THEOREM.md`
 
 The lane still stays bounded because the full low-energy transfer is not yet
 packaged as one promoted same-surface closure theorem.

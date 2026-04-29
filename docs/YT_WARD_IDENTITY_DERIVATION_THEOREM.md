@@ -12,7 +12,7 @@ algebraic equality on the stated surface; it does NOT make any
 quantitative precision claim.
 **Primary runner:** `scripts/frontier_yt_ward_identity_derivation.py`
 **Support (NOT part of the authority chain):**
-[UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md](UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md)
+`UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
 documents the perturbative 1-loop vertex correction, which is OPEN
 for quantitative lane reuse (not part of this exact theorem).
 
@@ -403,7 +403,7 @@ These are exact algebraic identities on the stated matching surface.
 No precision bound, no NLO claim, no systematic is attached to this
 theorem. Perturbative and higher-order corrections are out of scope
 and are discussed in the support note
-[UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md](UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md).
+`UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`.
 Downstream quantitative reuse carries whatever systematic the
 downstream package carries independently; the theorem does not
 narrow that.

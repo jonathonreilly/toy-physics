@@ -186,7 +186,7 @@ narrower-gap + obstruction + cross-check note.
 Appropriate placement:
 
 - atlas obstruction row in
- [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
+ `DERIVATION_ATLAS.md`
  under the DM neutrino source-surface family, sibling to the
  Schur-baseline partial closure
 - do NOT use for any publication-grade positive quantitative claim

@@ -295,7 +295,7 @@ Quartic Tr(J^4) at scalar baseline is (1/2) Tr(J^2)^2 — isotropic
 Appropriate placement:
 
 - atlas obstruction row in
- [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
+ `DERIVATION_ATLAS.md`
  under the DM neutrino source-surface family, sibling to the info-geometric / Z_3-cubic / parity-split obstructions
  and the parity-mixing selector law
 - **do NOT** use for any publication-grade positive quantitative claim

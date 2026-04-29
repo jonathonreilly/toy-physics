@@ -238,7 +238,7 @@ spectral step away.
 ## Publication Matrix Capture
 
 This theorem is now wired into
-[`PUBLICATION_MATRIX.md`](publication/ci3_z3/PUBLICATION_MATRIX.md) as a
+`PUBLICATION_MATRIX.md` as a
 retained structural row distinct from the bounded numerical companion:
 
 | Quantity / lane | Workstream | Framework result | Observation / comparator | Claim-strength status | Import class | Current publication decision | Authority / best source | Frozen-out ref |

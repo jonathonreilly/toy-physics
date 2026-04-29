@@ -276,7 +276,7 @@ This note is **not** flagship publication-grade on its own. It is a
 object:
 
 - atlas obstruction row in
- [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
+ `DERIVATION_ATLAS.md`
  under the DM neutrino source-surface family, sibling to the
  info-geometric / cubic-variational / parity-split obstructions, the
  parity-mixing F1 candidate, and the transport chamber-blindness

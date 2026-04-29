@@ -315,7 +315,7 @@ is a hard obstruction / impossibility theorem on the axiom-level claim
 surface. Appropriate placement:
 
 - atlas obstruction row in
- [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
+ `DERIVATION_ATLAS.md`
  under the DM neutrino source-surface family, as a distinguished
  deepest-level sibling to the info-geometric selection obstruction / the cubic variational selection obstruction / the Z_3 parity-split theorem / Parity-Mixing
  notes

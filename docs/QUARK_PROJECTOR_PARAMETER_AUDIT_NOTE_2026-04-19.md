@@ -23,7 +23,7 @@ The answer is sharper than before.
 This note audits the exact-support anchor itself. It does **not** try to
 exhaust the remaining exact-candidate laws for `a_u`; that wider shortlist is
 now tracked separately in
-[QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md](./QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md).
+`QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`.
 
 ## What is exact-support compatible now
 

@@ -40,7 +40,7 @@ activation law for one complex source coordinate.
 
 That one-generation slot is now sharpened further by:
 
-- [NEUTRINO_MAJORANA_PHASE_REMOVAL_NOTE.md](./NEUTRINO_MAJORANA_PHASE_REMOVAL_NOTE.md)
+- `NEUTRINO_MAJORANA_PHASE_REMOVAL_NOTE.md`
 - `scripts/frontier_neutrino_majorana_phase_removal.py`
 
 Current result there: the local slot phase is removable on the current
@@ -49,7 +49,7 @@ one-generation `nu_R` lane, so the invariant datum is one real amplitude
 
 The canonical local-block companion is now:
 
-- [NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md](./NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md)
+- `NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md`
 - `scripts/frontier_neutrino_majorana_canonical_local_block.py`
 
 Current result there: after phase removal, the full one-generation local
@@ -130,8 +130,8 @@ This note does **not** choose a full microscopic realization.
 But once the unique source slot `m` is embedded into an antisymmetric
 Grassmann/Nambu Gaussian, the exact companion
 
-- [NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md](./NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md)
-- [NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md](./NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md)
+- `NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md`
+- `NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md`
 
 shows that, on the retained **local bilinear** lane, the Pfaffian realization
 is actually forced.

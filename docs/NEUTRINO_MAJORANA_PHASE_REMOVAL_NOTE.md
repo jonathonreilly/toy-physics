@@ -58,7 +58,7 @@ complex number `m` to one nonnegative real amplitude
 
 The resulting local block is now sharpened one step further by:
 
-- [NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md](./NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md)
+- `NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md`
 - `scripts/frontier_neutrino_majorana_canonical_local_block.py`
 
 Current result there: the full one-generation antisymmetric local block is

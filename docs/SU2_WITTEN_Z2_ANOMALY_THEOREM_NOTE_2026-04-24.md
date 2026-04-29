@@ -48,10 +48,10 @@ nonperturbative Witten `Z_2` level.
 | Input | Authority |
 |---|---|
 | Native `SU(2)` gauge structure | [NATIVE_GAUGE_CLOSURE_NOTE.md](NATIVE_GAUGE_CLOSURE_NOTE.md) |
-| Retained left-handed `Q_L`, `L_L` doublet content | [LEFT_HANDED_CHARGE_MATCHING_NOTE.md](LEFT_HANDED_CHARGE_MATCHING_NOTE.md), [ANOMALY_FORCES_TIME_THEOREM.md](ANOMALY_FORCES_TIME_THEOREM.md) |
+| Retained left-handed `Q_L`, `L_L` doublet content | [LEFT_HANDED_CHARGE_MATCHING_NOTE.md](LEFT_HANDED_CHARGE_MATCHING_NOTE.md), `ANOMALY_FORCES_TIME_THEOREM.md` |
 | Retained `N_c = 3` color count | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) |
 | Retained three-generation structure | [THREE_GENERATION_STRUCTURE_NOTE.md](THREE_GENERATION_STRUCTURE_NOTE.md) |
-| Singlet right-handed completion | [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](ONE_GENERATION_MATTER_CLOSURE_NOTE.md), [STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md) |
+| Singlet right-handed completion | `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`, `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md` |
 
 The homotopy fact `pi_4(SU(2)) = Z_2` and the associated sign obstruction are
 standard Witten-anomaly input. The repo theorem here packages the count on the
@@ -147,7 +147,7 @@ This theorem covers the Witten global anomaly for fundamental `SU(2)` Weyl
 doublets on the retained matter content.
 
 It does not reprove the perturbative anomaly equations in
-[ANOMALY_FORCES_TIME_THEOREM.md](ANOMALY_FORCES_TIME_THEOREM.md).
+`ANOMALY_FORCES_TIME_THEOREM.md`.
 
 It does not replace the SM hypercharge uniqueness theorem or the `B-L`
 anomaly-freedom theorem.

@@ -5,7 +5,7 @@
 **Primary runner:** `scripts/frontier_quark_cp_carrier_completion.py`
 
 This note is now complemented by a stronger reduced closure:
-[QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md](./QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md).
+`QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`.
 That newer note shows the full quark package can already be closed on a fixed
 projector ray with only two real sector amplitudes plus one shared phase.
 The present note remains the broader existence proof with freer complex

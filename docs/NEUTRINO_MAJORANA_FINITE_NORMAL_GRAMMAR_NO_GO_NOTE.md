@@ -61,7 +61,7 @@ The companion exact inputs already established on this branch are:
 
 - [NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md](./NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md)
 - [NEUTRINO_MAJORANA_NATIVE_GAUSSIAN_NO_GO_NOTE.md](./NEUTRINO_MAJORANA_NATIVE_GAUSSIAN_NO_GO_NOTE.md)
-- [NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md](./NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md)
+- `NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md`
 
 ## Why this extends the Gaussian note
 
@@ -135,7 +135,7 @@ So the current blocker is sharper than before:
 
 That reduction target is now separated explicitly in:
 
-- [NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md](./NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md)
+- `NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md`
 - `scripts/frontier_neutrino_majorana_charge_two_primitive_reduction.py`
 
 ## What this does not close
@@ -154,12 +154,12 @@ It leaves open:
 
 The exact admitted-extension companion remains:
 
-- [NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md](./NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md)
+- `NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md`
 - `scripts/frontier_neutrino_majorana_pfaffian_extension.py`
 
 The exact grammar-boundary companion remains:
 
-- [NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md](./NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md)
+- `NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md`
 - `scripts/frontier_neutrino_majorana_pfaffian_no_forcing_theorem.py`
 
 ## Safe wording

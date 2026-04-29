@@ -98,7 +98,7 @@ The lane is now sharply stratified:
 The next real task is now very narrow:
 
 - derive the missing object identified in
-  [NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md](./NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md):
+  `NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md`:
   a genuinely new charge-`2` microscopic primitive on the unique `nu_R`
   channel
 - then test whether the axiom forces any realization of that primitive

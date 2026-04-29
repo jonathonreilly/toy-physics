@@ -5,7 +5,7 @@
 **Primary runner:** `scripts/frontier_color_projection_mc.py`
 **Depends on:**
 [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md),
-[YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
+`YT_EW_COLOR_PROJECTION_THEOREM.md`
 
 ---
 
@@ -37,7 +37,7 @@ as a bounded matching model, not as an exact coefficient derived by this
 note alone.
 
 This addresses the matching-rule gap flagged on
-[YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md):
+`YT_EW_COLOR_PROJECTION_THEOREM.md`:
 the connected-trace route now has an explicit large-`N_c` support
 argument. It remains a bounded support input until an independent
 derivation fixes the disconnected coefficient required for exact
@@ -200,7 +200,7 @@ matching at leading order in `1/N_c`. It does **not** prove:
 ## Cross-references
 
 - Parent claim:
-  [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
+  `YT_EW_COLOR_PROJECTION_THEOREM.md`
   — the EW color projection lane that this theorem unblocks.
 - Sibling derivation:
   [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md) — the q-qbar channel

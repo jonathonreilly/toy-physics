@@ -58,6 +58,6 @@ make the repo decide what is live.
 ## Reading Rule
 
 - For the short manuscript paragraph, use
-  [`CANONICAL_FRAMING_PARAGRAPH_2026-04-25.md`](./CANONICAL_FRAMING_PARAGRAPH_2026-04-25.md).
+  `CANONICAL_FRAMING_PARAGRAPH_2026-04-25.md`.
 - For the broader process description, use
   [`../AI_METHODOLOGY_NOTE_2026-04-25.md`](../AI_METHODOLOGY_NOTE_2026-04-25.md).

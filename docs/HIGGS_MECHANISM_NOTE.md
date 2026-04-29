@@ -6,7 +6,7 @@
 
 ## Authority Rule
 
-Use [HIGGS_MASS_DERIVED_NOTE.md](./HIGGS_MASS_DERIVED_NOTE.md) for the current
+Use `HIGGS_MASS_DERIVED_NOTE.md` for the current
 Higgs authority boundary. This note exists only to support the mechanism-level
 claim.
 

@@ -205,18 +205,6 @@
       "to": "bh_entropy_derived_note"
     },
     {
-      "from": "bh_entropy_rt_ratio_widom_no_go_note",
-      "to": "publication.ci3_z3.publication_matrix"
-    },
-    {
-      "from": "bh_entropy_rt_ratio_widom_no_go_note",
-      "to": "publication.ci3_z3.claims_table"
-    },
-    {
-      "from": "bminusl_anomaly_freedom_theorem_note_2026-04-24",
-      "to": "proton_lifetime_derived_note"
-    },
-    {
       "from": "bminusl_anomaly_freedom_theorem_note_2026-04-24",
       "to": "one_generation_matter_closure_note"
     },
@@ -1657,14 +1645,6 @@
       "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
     },
     {
-      "from": "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
-      "to": "ckm_atlas_axiom_closure_note"
-    },
-    {
-      "from": "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
-      "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
-    },
-    {
       "from": "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
       "to": "left_handed_charge_matching_note"
     },
@@ -1926,10 +1906,6 @@
     },
     {
       "from": "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25",
-      "to": "ckm_atlas_axiom_closure_note"
-    },
-    {
-      "from": "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25",
       "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
     },
     {
@@ -1982,10 +1958,6 @@
     },
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-      "to": "ckm_atlas_axiom_closure_note"
-    },
-    {
-      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
     },
     {
@@ -1995,14 +1967,6 @@
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "to": "alpha_s_derived_note"
-    },
-    {
-      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-      "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
     },
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
@@ -2114,14 +2078,6 @@
     },
     {
       "from": "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-      "to": "ckm_atlas_axiom_closure_note"
-    },
-    {
-      "from": "ckm_first_row_magnitudes_theorem_note_2026-04-24",
       "to": "alpha_s_derived_note"
     },
     {
@@ -2198,10 +2154,6 @@
     },
     {
       "from": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
-      "to": "ckm_atlas_axiom_closure_note"
-    },
-    {
-      "from": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
       "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
     },
     {
@@ -2215,18 +2167,6 @@
     {
       "from": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
       "to": "alpha_s_derived_note"
-    },
-    {
-      "from": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
-      "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
-      "to": "ckm_second_row_magnitudes_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
-      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
     },
     {
       "from": "ckm_multi_channel_alpha_s_extraction_consistency_theorem_note_2026-04-26",
@@ -2311,22 +2251,6 @@
     {
       "from": "ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25",
       "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25",
-      "to": "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_second_row_magnitudes_theorem_note_2026-04-25",
-      "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_second_row_magnitudes_theorem_note_2026-04-25",
-      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_second_row_magnitudes_theorem_note_2026-04-25",
-      "to": "ckm_atlas_axiom_closure_note"
     },
     {
       "from": "ckm_second_row_magnitudes_theorem_note_2026-04-25",
@@ -2426,10 +2350,6 @@
     },
     {
       "from": "ckm_third_row_magnitudes_theorem_note_2026-04-24",
-      "to": "ckm_atlas_axiom_closure_note"
-    },
-    {
-      "from": "ckm_third_row_magnitudes_theorem_note_2026-04-24",
       "to": "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24"
     },
     {
@@ -2459,10 +2379,6 @@
     {
       "from": "ckm_wolfenstein_eta_inverse_square_gap_theorem_note_2026-04-26",
       "to": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_wolfenstein_eta_inverse_square_gap_theorem_note_2026-04-26",
-      "to": "ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25"
     },
     {
       "from": "cl3_sm_embedding_master_note",
@@ -2539,10 +2455,6 @@
     {
       "from": "cosmological_constant_spectral_gap_identity_theorem_note",
       "to": "dark_energy_eos_retained_corollary_theorem_note"
-    },
-    {
-      "from": "cosmological_constant_spectral_gap_identity_theorem_note",
-      "to": "publication.ci3_z3.publication_matrix"
     },
     {
       "from": "cosmological_constant_spectral_gap_identity_theorem_note",
@@ -2691,14 +2603,6 @@
     {
       "from": "dark_energy_eos_retained_corollary_theorem_note",
       "to": "cosmological_constant_result_2026-04-12"
-    },
-    {
-      "from": "dark_energy_eos_retained_corollary_theorem_note",
-      "to": "publication.ci3_z3.publication_matrix"
-    },
-    {
-      "from": "dark_energy_eos_retained_corollary_theorem_note",
-      "to": "publication.ci3_z3.claims_table"
     },
     {
       "from": "dirac_observable_panel_note",
@@ -2917,10 +2821,6 @@
       "to": "dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17"
     },
     {
-      "from": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-      "to": "publication.ci3_z3.derivation_atlas"
-    },
-    {
       "from": "dm_neutrino_polar_aligned_core_no_go_note_2026-04-15",
       "to": "dm_neutrino_postcanonical_polar_section_note_2026-04-15"
     },
@@ -3137,10 +3037,6 @@
       "to": "dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17"
     },
     {
-      "from": "dm_neutrino_source_surface_bifundamental_invariance_obstruction_theorem_note_2026-04-17",
-      "to": "publication.ci3_z3.derivation_atlas"
-    },
-    {
       "from": "dm_neutrino_source_surface_cubic_variational_obstruction_note_2026-04-17",
       "to": "dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17"
     },
@@ -3163,10 +3059,6 @@
     {
       "from": "dm_neutrino_source_surface_cubic_variational_obstruction_note_2026-04-17",
       "to": "dm_neutrino_source_surface_scalar_baseline_active_quadratic_diagnostic_note_2026-04-17"
-    },
-    {
-      "from": "dm_neutrino_source_surface_cubic_variational_obstruction_note_2026-04-17",
-      "to": "publication.ci3_z3.derivation_atlas"
     },
     {
       "from": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
@@ -3265,10 +3157,6 @@
       "to": "one_generation_matter_closure_note"
     },
     {
-      "from": "dm_neutrino_source_surface_microscopic_polynomial_impossibility_theorem_note_2026-04-17",
-      "to": "publication.ci3_z3.derivation_atlas"
-    },
-    {
       "from": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
       "to": "dm_neutrino_source_surface_observable_grammar_exhaustion_obstruction_note_2026-04-17"
     },
@@ -3357,10 +3245,6 @@
       "to": "dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15"
     },
     {
-      "from": "dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17",
-      "to": "publication.ci3_z3.derivation_atlas"
-    },
-    {
       "from": "dm_neutrino_source_surface_perturbative_uniqueness_theorem_note_2026-04-17",
       "to": "neutrino_dirac_z3_support_trichotomy_note"
     },
@@ -3405,10 +3289,6 @@
       "to": "dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17"
     },
     {
-      "from": "dm_neutrino_source_surface_quartic_isotropy_and_u2_obstruction_note_2026-04-17",
-      "to": "publication.ci3_z3.derivation_atlas"
-    },
-    {
       "from": "dm_neutrino_source_surface_scalar_baseline_active_quadratic_diagnostic_note_2026-04-17",
       "to": "observable_principle_from_axiom_note"
     },
@@ -3447,10 +3327,6 @@
     {
       "from": "dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
       "to": "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16"
-    },
-    {
-      "from": "dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
-      "to": "publication.ci3_z3.derivation_atlas"
     },
     {
       "from": "dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
@@ -3515,10 +3391,6 @@
     {
       "from": "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
       "to": "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16"
-    },
-    {
-      "from": "dm_neutrino_source_surface_z3_parity_split_theorem_note_2026-04-17",
-      "to": "publication.ci3_z3.derivation_atlas"
     },
     {
       "from": "dm_neutrino_source_surface_z3_parity_split_theorem_note_2026-04-17",
@@ -3961,10 +3833,6 @@
       "to": "rconn_derived_note"
     },
     {
-      "from": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
-      "to": "yt_ew_color_projection_theorem"
-    },
-    {
       "from": "ew_lattice_cos_sq_theta_w_complement_bridge_theorem_note_2026-04-26",
       "to": "yt_ew_color_projection_theorem"
     },
@@ -4137,26 +4005,6 @@
       "to": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
     },
     {
-      "from": "generation_axiom_boundary_note",
-      "to": "physical_lattice_necessity_note"
-    },
-    {
-      "from": "generation_axiom_boundary_note",
-      "to": "three_generation_structure_note"
-    },
-    {
-      "from": "generation_axiom_boundary_note",
-      "to": "three_generation_observable_theorem_note"
-    },
-    {
-      "from": "generation_axiom_boundary_note",
-      "to": "one_generation_matter_closure_note"
-    },
-    {
-      "from": "generation_axiom_boundary_note",
-      "to": "anomaly_forces_time_theorem"
-    },
-    {
       "from": "global_coherence_held_out2_note",
       "to": "global_coherence_off_scaffold_note"
     },
@@ -4223,10 +4071,6 @@
     {
       "from": "graviton_mass_spectral_gap_identity_theorem_note",
       "to": "confinement_string_tension_note"
-    },
-    {
-      "from": "graviton_mass_spectral_gap_identity_theorem_note",
-      "to": "publication.ci3_z3.publication_matrix"
     },
     {
       "from": "graviton_spectral_tower_theorem_note_2026-04-24",
@@ -4333,20 +4177,12 @@
       "to": "yt_ward_identity_derivation_theorem"
     },
     {
-      "from": "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
-      "to": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19"
-    },
-    {
       "from": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
       "to": "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19"
     },
     {
       "from": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
       "to": "yt_ward_identity_derivation_theorem"
-    },
-    {
-      "from": "higgs_from_lattice_note",
-      "to": "higgs_mass_derived_note"
     },
     {
       "from": "higgs_mass_derived_note",
@@ -4359,10 +4195,6 @@
     {
       "from": "higgs_mass_derived_note",
       "to": "higgs_from_lattice_note"
-    },
-    {
-      "from": "higgs_mechanism_note",
-      "to": "higgs_mass_derived_note"
     },
     {
       "from": "higgs_vacuum_explicit_systematic_note",
@@ -4427,10 +4259,6 @@
     {
       "from": "hw1_second_order_return_shape_theorem_note",
       "to": "higher_order_structural_theorems_note"
-    },
-    {
-      "from": "hypercharge_identification_note",
-      "to": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
     },
     {
       "from": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
@@ -4937,10 +4765,6 @@
       "to": "graph_first_su3_integration_note"
     },
     {
-      "from": "left_handed_charge_matching_note",
-      "to": "one_generation_matter_closure_note"
-    },
-    {
       "from": "lensing_adjoint_kernel_note",
       "to": "lensing_long_path_test_note"
     },
@@ -4970,14 +4794,6 @@
     },
     {
       "from": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
-      "to": "anomaly_forces_time_theorem"
-    },
-    {
-      "from": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
-      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
-    },
-    {
-      "from": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
       "to": "left_handed_charge_matching_note"
     },
     {
@@ -4999,10 +4815,6 @@
     {
       "from": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
       "to": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
-    },
-    {
-      "from": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
-      "to": "bminusl_anomaly_freedom_theorem_note_2026-04-24"
     },
     {
       "from": "lorentz_boost_covariance_2d_theorem_note",
@@ -5342,15 +5154,7 @@
     },
     {
       "from": "neutrino_majorana_charge_two_primitive_reduction_note",
-      "to": "neutrino_majorana_local_pfaffian_uniqueness_note"
-    },
-    {
-      "from": "neutrino_majorana_charge_two_primitive_reduction_note",
       "to": "neutrino_majorana_current_atlas_nonrealization_note"
-    },
-    {
-      "from": "neutrino_majorana_charge_two_primitive_reduction_note",
-      "to": "neutrino_majorana_unique_source_slot_note"
     },
     {
       "from": "neutrino_majorana_continuum_bridge_transplant_obstruction_note",
@@ -5437,18 +5241,6 @@
       "to": "neutrino_majorana_native_gaussian_no_go_note"
     },
     {
-      "from": "neutrino_majorana_finite_normal_grammar_no_go_note",
-      "to": "neutrino_majorana_pfaffian_no_forcing_theorem_note"
-    },
-    {
-      "from": "neutrino_majorana_finite_normal_grammar_no_go_note",
-      "to": "neutrino_majorana_charge_two_primitive_reduction_note"
-    },
-    {
-      "from": "neutrino_majorana_finite_normal_grammar_no_go_note",
-      "to": "neutrino_majorana_pfaffian_extension_note"
-    },
-    {
       "from": "neutrino_majorana_local_pfaffian_uniqueness_note",
       "to": "neutrino_majorana_charge_two_primitive_reduction_note"
     },
@@ -5509,20 +5301,8 @@
       "to": "neutrino_majorana_current_stack_exhaustion_note"
     },
     {
-      "from": "neutrino_majorana_nambu_source_principle_note",
-      "to": "neutrino_majorana_source_ray_theorem_note"
-    },
-    {
       "from": "neutrino_majorana_native_gaussian_no_go_note",
       "to": "neutrino_majorana_operator_axiom_first_note"
-    },
-    {
-      "from": "neutrino_majorana_native_gaussian_no_go_note",
-      "to": "neutrino_majorana_finite_normal_grammar_no_go_note"
-    },
-    {
-      "from": "neutrino_majorana_native_gaussian_no_go_note",
-      "to": "neutrino_majorana_pfaffian_extension_note"
     },
     {
       "from": "neutrino_majorana_no_stationary_scale_theorem_note",
@@ -5565,18 +5345,6 @@
       "to": "neutrino_majorana_z3_nonactivation_theorem_note"
     },
     {
-      "from": "neutrino_majorana_operator_axiom_first_note",
-      "to": "neutrino_majorana_native_gaussian_no_go_note"
-    },
-    {
-      "from": "neutrino_majorana_operator_axiom_first_note",
-      "to": "neutrino_majorana_finite_normal_grammar_no_go_note"
-    },
-    {
-      "from": "neutrino_majorana_operator_axiom_first_note",
-      "to": "neutrino_majorana_pfaffian_extension_note"
-    },
-    {
       "from": "neutrino_majorana_partition_projective_transplant_obstruction_note",
       "to": "universal_qg_uv_finite_partition_note"
     },
@@ -5609,10 +5377,6 @@
       "to": "neutrino_majorana_pfaffian_extension_note"
     },
     {
-      "from": "neutrino_majorana_pfaffian_axiom_boundary_note",
-      "to": "neutrino_majorana_pfaffian_no_forcing_theorem_note"
-    },
-    {
       "from": "neutrino_majorana_pfaffian_extension_note",
       "to": "neutrino_majorana_operator_axiom_first_note"
     },
@@ -5623,30 +5387,6 @@
     {
       "from": "neutrino_majorana_pfaffian_extension_note",
       "to": "neutrino_majorana_finite_normal_grammar_no_go_note"
-    },
-    {
-      "from": "neutrino_majorana_pfaffian_extension_note",
-      "to": "neutrino_majorana_charge_two_primitive_reduction_note"
-    },
-    {
-      "from": "neutrino_majorana_pfaffian_extension_note",
-      "to": "neutrino_majorana_local_pfaffian_uniqueness_note"
-    },
-    {
-      "from": "neutrino_majorana_pfaffian_extension_note",
-      "to": "neutrino_majorana_unique_source_slot_note"
-    },
-    {
-      "from": "neutrino_majorana_pfaffian_extension_note",
-      "to": "neutrino_majorana_phase_removal_note"
-    },
-    {
-      "from": "neutrino_majorana_pfaffian_extension_note",
-      "to": "neutrino_majorana_canonical_local_block_note"
-    },
-    {
-      "from": "neutrino_majorana_pfaffian_extension_note",
-      "to": "neutrino_majorana_pfaffian_axiom_boundary_note"
     },
     {
       "from": "neutrino_majorana_pfaffian_no_forcing_theorem_note",
@@ -5663,14 +5403,6 @@
     {
       "from": "neutrino_majorana_pfaffian_no_forcing_theorem_note",
       "to": "neutrino_majorana_pfaffian_axiom_boundary_note"
-    },
-    {
-      "from": "neutrino_majorana_pfaffian_no_forcing_theorem_note",
-      "to": "neutrino_majorana_charge_two_primitive_reduction_note"
-    },
-    {
-      "from": "neutrino_majorana_phase_removal_note",
-      "to": "neutrino_majorana_canonical_local_block_note"
     },
     {
       "from": "neutrino_majorana_phase_removal_note",
@@ -5854,14 +5586,6 @@
     },
     {
       "from": "neutrino_majorana_unique_source_slot_note",
-      "to": "neutrino_majorana_phase_removal_note"
-    },
-    {
-      "from": "neutrino_majorana_unique_source_slot_note",
-      "to": "neutrino_majorana_canonical_local_block_note"
-    },
-    {
-      "from": "neutrino_majorana_unique_source_slot_note",
       "to": "neutrino_majorana_operator_axiom_first_note"
     },
     {
@@ -5875,14 +5599,6 @@
     {
       "from": "neutrino_majorana_unique_source_slot_note",
       "to": "neutrino_majorana_current_atlas_nonrealization_note"
-    },
-    {
-      "from": "neutrino_majorana_unique_source_slot_note",
-      "to": "neutrino_majorana_pfaffian_extension_note"
-    },
-    {
-      "from": "neutrino_majorana_unique_source_slot_note",
-      "to": "neutrino_majorana_local_pfaffian_uniqueness_note"
     },
     {
       "from": "neutrino_majorana_z3_nonactivation_theorem_note",
@@ -6469,10 +6185,6 @@
       "to": "bminusl_anomaly_freedom_theorem_note_2026-04-24"
     },
     {
-      "from": "quark_cp_carrier_completion_note_2026-04-18",
-      "to": "quark_projector_ray_phase_completion_note_2026-04-18"
-    },
-    {
       "from": "quark_endpoint_readout_constraints_note_2026-04-19",
       "to": "one_parameter_reduced_shell_law_note"
     },
@@ -6662,19 +6374,11 @@
     },
     {
       "from": "quark_projector_parameter_audit_note_2026-04-19",
-      "to": "quark_up_amplitude_candidate_scan_note_2026-04-19"
-    },
-    {
-      "from": "quark_projector_parameter_audit_note_2026-04-19",
       "to": "quark_projector_ray_phase_completion_note_2026-04-18"
     },
     {
       "from": "quark_projector_parameter_audit_note_2026-04-19",
       "to": "quark_cp_carrier_completion_note_2026-04-18"
-    },
-    {
-      "from": "quark_projector_ray_phase_completion_note_2026-04-18",
-      "to": "quark_projector_parameter_audit_note_2026-04-19"
     },
     {
       "from": "quark_projector_ray_phase_completion_note_2026-04-18",
@@ -6705,14 +6409,6 @@
       "to": "quark_projector_ray_phase_completion_note_2026-04-18"
     },
     {
-      "from": "quark_up_amplitude_candidate_scan_note_2026-04-19",
-      "to": "quark_up_amplitude_native_expression_scan_note_2026-04-19"
-    },
-    {
-      "from": "quark_up_amplitude_candidate_scan_note_2026-04-19",
-      "to": "quark_up_amplitude_native_affine_no_go_note_2026-04-19"
-    },
-    {
       "from": "quark_up_amplitude_native_affine_no_go_note_2026-04-19",
       "to": "quark_projector_parameter_audit_note_2026-04-19"
     },
@@ -6731,10 +6427,6 @@
     {
       "from": "quark_up_amplitude_native_expression_scan_note_2026-04-19",
       "to": "quark_up_amplitude_candidate_scan_note_2026-04-19"
-    },
-    {
-      "from": "quark_up_amplitude_native_expression_scan_note_2026-04-19",
-      "to": "quark_up_amplitude_native_affine_no_go_note_2026-04-19"
     },
     {
       "from": "quark_up_amplitude_scalar_comparison_bridge_note_2026-04-19",
@@ -6794,15 +6486,7 @@
     },
     {
       "from": "rconn_derived_note",
-      "to": "yt_ew_color_projection_theorem"
-    },
-    {
-      "from": "rconn_derived_note",
       "to": "yukawa_color_projection_theorem"
-    },
-    {
-      "from": "rconn_derived_note",
-      "to": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
     },
     {
       "from": "restricted_strong_field_closure_note",
@@ -6849,10 +6533,6 @@
       "to": "s3_cap_uniqueness_note"
     },
     {
-      "from": "site_phase_cube_shift_intertwiner_note",
-      "to": "three_generation_observable_theorem_note"
-    },
-    {
       "from": "staggered_layered_loop_threshold_note",
       "to": "graph_dirac_requirements_2026-04-10"
     },
@@ -6883,10 +6563,6 @@
     {
       "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
       "to": "graph_first_su3_integration_note"
-    },
-    {
-      "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-      "to": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
     },
     {
       "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
@@ -7014,23 +6690,11 @@
     },
     {
       "from": "su2_witten_z2_anomaly_theorem_note_2026-04-24",
-      "to": "anomaly_forces_time_theorem"
-    },
-    {
-      "from": "su2_witten_z2_anomaly_theorem_note_2026-04-24",
       "to": "graph_first_su3_integration_note"
     },
     {
       "from": "su2_witten_z2_anomaly_theorem_note_2026-04-24",
       "to": "three_generation_structure_note"
-    },
-    {
-      "from": "su2_witten_z2_anomaly_theorem_note_2026-04-24",
-      "to": "one_generation_matter_closure_note"
-    },
-    {
-      "from": "su2_witten_z2_anomaly_theorem_note_2026-04-24",
-      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
     },
     {
       "from": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
@@ -7039,18 +6703,6 @@
     {
       "from": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
       "to": "left_handed_charge_matching_note"
-    },
-    {
-      "from": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
-      "to": "anomaly_forces_time_theorem"
-    },
-    {
-      "from": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
-      "to": "one_generation_matter_closure_note"
-    },
-    {
-      "from": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
-      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
     },
     {
       "from": "three_generation_chirality_boundary_note",
@@ -7078,10 +6730,6 @@
     },
     {
       "from": "three_generation_observable_theorem_note",
-      "to": "three_generation_structure_note"
-    },
-    {
-      "from": "three_generation_observable_theorem_note",
       "to": "site_phase_cube_shift_intertwiner_note"
     },
     {
@@ -7099,14 +6747,6 @@
     {
       "from": "three_generation_observable_theorem_note",
       "to": "generation_axiom_boundary_note"
-    },
-    {
-      "from": "three_generation_observable_theorem_note",
-      "to": "physical_lattice_necessity_note"
-    },
-    {
-      "from": "three_generation_structure_note",
-      "to": "three_generation_chirality_boundary_note"
     },
     {
       "from": "three_generation_structure_note",
@@ -7758,22 +7398,6 @@
     },
     {
       "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-      "to": "ckm_atlas_axiom_closure_note"
-    },
-    {
-      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-      "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-    },
-    {
-      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-      "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
-    },
-    {
-      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
-    },
-    {
-      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
       "to": "native_gauge_closure_note"
     },
     {
@@ -7879,10 +7503,6 @@
     {
       "from": "yt_boundary_theorem",
       "to": "yt_zero_import_authority_note"
-    },
-    {
-      "from": "yt_boundary_theorem",
-      "to": "yt_eft_bridge_theorem"
     },
     {
       "from": "yt_eft_bridge_theorem",
@@ -8069,10 +7689,6 @@
       "to": "yt_zero_import_authority_note"
     },
     {
-      "from": "yt_ward_identity_derivation_theorem",
-      "to": "uv_gauge_to_yukawa_bridge_sc_vs_pert_note"
-    },
-    {
       "from": "yt_zero_import_authority_note",
       "to": "yt_ward_identity_derivation_theorem"
     },
@@ -8086,15 +7702,7 @@
     },
     {
       "from": "yt_zero_import_authority_note",
-      "to": "yt_flagship_boundary_note"
-    },
-    {
-      "from": "yt_zero_import_authority_note",
       "to": "yt_explicit_systematic_budget_note"
-    },
-    {
-      "from": "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
-      "to": "ai_methodology.canonical_framing_paragraph_2026-04-25"
     },
     {
       "from": "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
@@ -17937,7 +17545,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-29T11:05:57.155832+00:00",
+  "generated_at": "2026-04-29T11:40:10.218475+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -18078,10 +17686,9 @@
       "current_status": "unknown",
       "current_status_raw": "package-level disclosure note for the methodology lane",
       "deps": [
-        "ai_methodology.canonical_framing_paragraph_2026-04-25",
         "ai_methodology_note_2026-04-25"
       ],
-      "note_hash": "b998619e76c918e812b8c87504f157268c734755e64a6708d59c29e3cd1e00f1",
+      "note_hash": "5cd281e50534055469d8f48f412b4319e73e1ec324088833cf68e86abfe10ad6",
       "path": "docs/ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md",
       "runner_path": null,
       "title": "AI Accountability And Disclosure Note"
@@ -19512,11 +19119,9 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained no-go theorem for the bounded BH entropy companion lane",
       "deps": [
-        "bh_entropy_derived_note",
-        "publication.ci3_z3.publication_matrix",
-        "publication.ci3_z3.claims_table"
+        "bh_entropy_derived_note"
       ],
-      "note_hash": "9d0981d97e6aa6b86a7e0f3039eb0058533f845d73ff7579b74fbe4916883e0f",
+      "note_hash": "08e96fe75b90017a2dff6859b8a49d742b72322a9e86ee09e179de50361cce80",
       "path": "docs/BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md",
       "runner_path": "scripts/frontier_bh_entropy_rt_ratio_widom.py",
       "title": "BH Entropy RT-Ratio Widom No-Go Theorem"
@@ -19526,12 +19131,11 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained standalone structural theorem on `main`. This note",
       "deps": [
-        "proton_lifetime_derived_note",
         "one_generation_matter_closure_note",
         "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
         "anomaly_forces_time_theorem"
       ],
-      "note_hash": "ef07bf6d45bab1833efcb8c5a6963559f5cf8a6a1fd6a84bfa0cc69aec29cb14",
+      "note_hash": "b480975d001f5398a15fe0070725cfa86139c5a80d13ad9eff01549e485f6c3e",
       "path": "docs/BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_bminusl_anomaly_freedom.py",
       "title": "B-L Anomaly-Freedom Theorem With Retained nu_R"
@@ -20548,11 +20152,9 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained structural-identity subtheorem of the proposed_promoted CKM",
       "deps": [
-        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-        "ckm_atlas_axiom_closure_note",
-        "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
+        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
       ],
-      "note_hash": "6268b4009fc5d9378f8ce6454696a7f16ec1ece37f233d325e10eb828c2b72ed",
+      "note_hash": "9dd9fc637017469dbad787bb801d4b0bca7b2dd3311dbefadefddf1104b16484",
       "path": "docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_ckm_atlas_triangle_right_angle.py",
       "title": "CKM Atlas Triangle Right-Angle Identity"
@@ -20730,10 +20332,9 @@
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
         "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
-        "ckm_atlas_axiom_closure_note",
         "ckm_third_row_magnitudes_theorem_note_2026-04-24"
       ],
-      "note_hash": "0c261657a5d2d1c78dab2dfc09560fc9e9b2806a7454d79f65fc16e261ab7cbb",
+      "note_hash": "a194c936a5830a7ae4688b14f5ccffbc267596be9c59ce4a7c2bf07e13d4809f",
       "path": "docs/CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_ckm_bs_mixing_phase_derivation.py",
       "title": "CKM B_s Mixing Phase Derivation Theorem"
@@ -20788,15 +20389,12 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained standalone structural-identity theorem on `main`.",
       "deps": [
-        "ckm_atlas_axiom_closure_note",
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "left_handed_charge_matching_note",
         "alpha_s_derived_note",
-        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
         "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
       ],
-      "note_hash": "1701d4bb4a762e34bf9ee897ad82fd58d54e500714b7c9d3bb1848b76eaa01f8",
+      "note_hash": "3f8e983724111958f356d4d6e7ad1587f7e60de170c318b87148306e8a2897d4",
       "path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_ckm_cp_phase_structural_identity.py",
       "title": "CKM CP-Phase Structural Identity Theorem"
@@ -20886,12 +20484,10 @@
       "deps": [
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
-        "ckm_atlas_axiom_closure_note",
         "alpha_s_derived_note",
         "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24"
       ],
-      "note_hash": "56906642fb23e38b62ac3ec771b7b491f75beec8d14e5293eb1f955f91178260",
+      "note_hash": "a5164e59e46a61d429b33666f5edf6c283f72f4e9bfc4ca8230fa788fa4f675a",
       "path": "docs/CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_ckm_first_row_magnitudes.py",
       "title": "CKM First-Row Atlas-Leading Magnitudes Structural Identities"
@@ -20972,16 +20568,12 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained structural-identity subtheorem of the proposed_promoted CKM",
       "deps": [
-        "ckm_atlas_axiom_closure_note",
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
         "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
-        "alpha_s_derived_note",
-        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-        "ckm_second_row_magnitudes_theorem_note_2026-04-25",
-        "ckm_third_row_magnitudes_theorem_note_2026-04-24"
+        "alpha_s_derived_note"
       ],
-      "note_hash": "91d1e4cf0bbc154ec50b41903a31ad8f79df050e1b6896e5e444df7a3d80b8bd",
+      "note_hash": "29d85d721c9cddefae587a79338c35f3dfc859ab382a4efa415df838f3d4a1da",
       "path": "docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_ckm_magnitudes_structural_counts.py",
       "title": "CKM Magnitudes Structural Counts Theorem"
@@ -21065,10 +20657,9 @@
         "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
         "alpha_s_derived_note",
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-        "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25"
+        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
       ],
-      "note_hash": "50072719bef5ccf4018f8c240607d6cf6978346a2ce72b7ad0b33efab6f4f8c1",
+      "note_hash": "e823ee5dd442f5df436fe3267291114da20399f38f8498cab503302e8db4553c",
       "path": "docs/CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_ckm_nlo_barred_triangle_protected_gamma.py",
       "title": "CKM NLO Barred-Triangle and Protected-Gamma Theorem"
@@ -21088,15 +20679,12 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained structural-identity subtheorem of the proposed_promoted CKM",
       "deps": [
-        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
-        "ckm_atlas_axiom_closure_note",
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "alpha_s_derived_note",
         "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
         "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24"
       ],
-      "note_hash": "419c17fadd8b60d38fafa5f6af85300f139ea5ac7af86575bfa0570141f63082",
+      "note_hash": "3caddd826c575d7384a58f08ce8fcee45270afab45df2c2bbac009388d680b60",
       "path": "docs/CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_ckm_second_row_magnitudes.py",
       "title": "CKM Second-Row Magnitudes Structural Identities Theorem"
@@ -21159,11 +20747,10 @@
       "deps": [
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-        "ckm_atlas_axiom_closure_note",
         "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
         "alpha_s_derived_note"
       ],
-      "note_hash": "6afd3ea97864cf013b7628573aba899112eb12b2e469cb0718f73223bba4280b",
+      "note_hash": "1174c43d5419557a6222061fc728978ac31984ac61aec9751b67a35ae333bce5",
       "path": "docs/CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_ckm_third_row_magnitudes.py",
       "title": "CKM Third-Row Magnitudes Structural Identities"
@@ -21178,10 +20765,9 @@
         "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-        "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
-        "ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25"
+        "ckm_magnitudes_structural_counts_theorem_note_2026-04-25"
       ],
-      "note_hash": "401cf644fbbe1bc0d639bafd77ef72518a211a47f08a426acecddf1b86eda93f",
+      "note_hash": "ff4315f3a51c7cd684bb67726663b355fd1fe4e1425b835676ab558c1c5f78a5",
       "path": "docs/CKM_WOLFENSTEIN_ETA_INVERSE_SQUARE_GAP_THEOREM_NOTE_2026-04-26.md",
       "runner_path": "scripts/frontier_ckm_wolfenstein_eta_inverse_square_gap.py",
       "title": "CKM Wolfenstein `eta^2` Inverse-Square Structural Reading Theorem"
@@ -21434,10 +21020,9 @@
         "cosmological_constant_result_2026-04-12",
         "cosmology_scale_identification_and_reduction_note",
         "dark_energy_eos_retained_corollary_theorem_note",
-        "publication.ci3_z3.publication_matrix",
         "confinement_string_tension_note"
       ],
-      "note_hash": "e25a3751dfd9044aa75bbd6b5e8c8147523a92610ac297cba221c4a481be30bc",
+      "note_hash": "44b5e3ff25c5c01407fce9fa8d58d9e5c0acdf45eb11e559b681fb2c035598d9",
       "path": "docs/COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_cosmological_constant_spectral_gap_identity.py",
       "title": "Spectral-Gap Cosmological-Constant Identity Theorem"
@@ -21649,11 +21234,9 @@
         "confinement_string_tension_note",
         "ckm_neutron_edm_bound_note",
         "dark_energy_eos_note",
-        "cosmological_constant_result_2026-04-12",
-        "publication.ci3_z3.publication_matrix",
-        "publication.ci3_z3.claims_table"
+        "cosmological_constant_result_2026-04-12"
       ],
-      "note_hash": "a6d6f791a39ee45f877f1dc55eb4ae39e1222b598a9f2f4ce3a7a2b14e2f9094",
+      "note_hash": "7aa7007801312533d6adae873f5d099343c15b849f120c7df6a253cbf27ba1fc",
       "path": "docs/DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_dark_energy_eos_retained_corollary.py",
       "title": "Dark-Energy EOS Retained Structural Corollary"
@@ -22857,10 +22440,9 @@
         "omega_lambda_derivation_note",
         "dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16",
         "dm_neutrino_transport_chamber_blindness_theorem_note_2026-04-17",
-        "dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17",
-        "publication.ci3_z3.derivation_atlas"
+        "dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17"
       ],
-      "note_hash": "1141a5aa3785cc8c17f74642e2ef459c4ada46e97bf9f43397eab4dd5e17f0ef",
+      "note_hash": "90a4c8106f495f17f8264e9822c42525860feb88e2720aa9b5c063402a9d099b",
       "path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_dm_neutrino_observable_bank_exhaustion_theorem.py",
       "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)"
@@ -23125,10 +22707,9 @@
         "dm_neutrino_source_surface_z3_parity_split_theorem_note_2026-04-17",
         "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
         "dm_neutrino_positive_polar_h_cp_theorem_note_2026-04-15",
-        "dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17",
-        "publication.ci3_z3.derivation_atlas"
+        "dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17"
       ],
-      "note_hash": "fbcf0954f4733a9a55db0007845d599b6d458694a79315965fc04a66c1fc1bed",
+      "note_hash": "bc6dbe9509b60de9280ca63a9808fe0d0bd805bd8ad679fd077384e8f86969a4",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_BIFUNDAMENTAL_INVARIANCE_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_bifundamental_invariance_obstruction_theorem.py",
       "title": "Bifundamental Invariance U(2)_L \u00d7 U(2)_R on the Active Doublet Block \u2014 Obstruction Theorem"
@@ -23173,10 +22754,9 @@
         "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
         "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
-        "dm_neutrino_source_surface_scalar_baseline_active_quadratic_diagnostic_note_2026-04-17",
-        "publication.ci3_z3.derivation_atlas"
+        "dm_neutrino_source_surface_scalar_baseline_active_quadratic_diagnostic_note_2026-04-17"
       ],
-      "note_hash": "5bc29d5a90e4c868dcf57451e903244167ffd1c849a637a0920626749cce9f98",
+      "note_hash": "f9ea62eb00065aa89c8aa8e3d19bfd83f29aa92611b36bb5b0d73a151a45edfa",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CUBIC_VARIATIONAL_OBSTRUCTION_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_cubic_variational_obstruction.py",
       "title": "Z_3 Cubic Right-Sensitive Selector \u2014 Obstruction Theorem"
@@ -23265,10 +22845,9 @@
         "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
         "dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
         "observable_principle_from_axiom_note",
-        "one_generation_matter_closure_note",
-        "publication.ci3_z3.derivation_atlas"
+        "one_generation_matter_closure_note"
       ],
-      "note_hash": "a4a59cf851f51179cb12ca3e46628f863798c16e335bb0026563d09a500625ff",
+      "note_hash": "6d83969228b6dc7a2c6c7e383da5d891aedd9edeb53efc5b06feb4f45245a774",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POLYNOMIAL_IMPOSSIBILITY_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_microscopic_polynomial_impossibility_theorem.py",
       "title": "Microscopic-Polynomial Impossibility Theorem \u2014 Axiom-Level Silence on (delta, q_+)"
@@ -23338,10 +22917,9 @@
         "dm_neutrino_source_surface_info_geometric_selection_obstruction_note_2026-04-17",
         "dm_neutrino_source_surface_cubic_variational_obstruction_note_2026-04-17",
         "dm_neutrino_source_surface_z3_parity_split_theorem_note_2026-04-17",
-        "dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15",
-        "publication.ci3_z3.derivation_atlas"
+        "dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15"
       ],
-      "note_hash": "f2b2489a972e279db6f12a810c6350745589ebb12d5577b387733e8c26f2cad3",
+      "note_hash": "4284cb8eea0ca4afe9b380afd75c48fd4349e864cd8ad78ad70152c81c933935",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_PARITY_MIXING_SELECTION_OBSTRUCTION_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_parity_mixing_selection_obstruction.py",
       "title": "Parity-Mixing Selector Law \u2014 Narrower-Gap + Closure-Candidate-Pending-Physics-Cross-Check"
@@ -23372,10 +22950,9 @@
         "dm_neutrino_source_surface_info_geometric_selection_obstruction_note_2026-04-17",
         "dm_neutrino_source_surface_cubic_variational_obstruction_note_2026-04-17",
         "dm_neutrino_source_surface_z3_parity_split_theorem_note_2026-04-17",
-        "dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17",
-        "publication.ci3_z3.derivation_atlas"
+        "dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17"
       ],
-      "note_hash": "a646b0a55fe2d2a401f8435741ea9df529ed7513ec36f608228e1d9995656f2a",
+      "note_hash": "98d85217515a530ca3b016f33931867d544adb05a4c69f97335c22b67f9ba49c",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_QUARTIC_ISOTROPY_AND_U2_OBSTRUCTION_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_quartic_isotropy_and_u2_obstruction.py",
       "title": "Quartic-Isotropy Identity + U(2)-Invariance Obstruction \u2014 Frobenius Uniqueness + Full-W at Physically-Forced m + Quartic Extension"
@@ -23416,10 +22993,9 @@
         "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
         "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
-        "publication.ci3_z3.derivation_atlas",
         "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
       ],
-      "note_hash": "208ba5c5f6a3aaa8b6b612b68716340957d37a9a0acd6afe3c1daaaabe6686c5",
+      "note_hash": "73602f5dfe3ecd7adb5d553462d5bcb4703a129dd120d56f29336eb5e2f77432",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SCHUR_SCALAR_BASELINE_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_schur_scalar_baseline_theorem.py",
       "title": "Commutant-Class Structural Lemma (Schur Scalar Baseline) \u2014 CONDITIONAL ONLY"
@@ -23587,7 +23163,6 @@
       "current_status": "unknown",
       "current_status_raw": "OBSTRUCTION + NARROWER-GAP + CROSS-CHECK-CANDIDATE",
       "deps": [
-        "publication.ci3_z3.derivation_atlas",
         "dm_leptogenesis_transport_status_note_2026-04-16",
         "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
         "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
@@ -23595,7 +23170,7 @@
         "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17"
       ],
-      "note_hash": "aba35fc15312017bdb1272abb647cbf8b14fbe04a1cf1af5ce398d7d956c9c95",
+      "note_hash": "893f10c572e34e151cd8b6976636ae9c02a185e6565fc86e62cfd65f36bd92db",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_PARITY_SPLIT_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_z3_parity_split_theorem.py",
       "title": "Z_3 Parity-Split Theorem \u2014 Microscopic Holonomy Selector Attempt"
@@ -24768,10 +24343,9 @@
       "current_status": "bounded",
       "current_status_raw": "bounded support theorem for EW current matching on the standard 1/N_c expansion surface",
       "deps": [
-        "rconn_derived_note",
-        "yt_ew_color_projection_theorem"
+        "rconn_derived_note"
       ],
-      "note_hash": "3f39d8f68c97dc11168c0843974ef6670514990014fbb6e390a05622cbf83ab5",
+      "note_hash": "34f867539e6431ff85be9cd67b257f0ba358e4095934453c130cb633dcb74365",
       "path": "docs/EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "EW Current Matching via OZI / Disconnected-Trace Suppression Theorem"
@@ -25133,10 +24707,9 @@
       "current_status": "support",
       "current_status_raw": "DERIVED \u2014 load-bearing support theorem for the two-Ward `g_bare` route",
       "deps": [
-        "yt_ward_identity_derivation_theorem",
-        "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19"
+        "yt_ward_identity_derivation_theorem"
       ],
-      "note_hash": "d8fa0434b050720de0db6fac138d35a4f08ee31a73b4ccaf5f75339f1d66b2fb",
+      "note_hash": "b64360312dbb0b14473727c28670ab435d43acb547ee87b4320cefffe91b75b5",
       "path": "docs/G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Rep-B Bare-Scale Independence Theorem for the Two-Ward `g_bare` Route"
@@ -25854,14 +25427,8 @@
       "claim_id": "generation_axiom_boundary_note",
       "current_status": "proposed_retained",
       "current_status_raw": "exact support theorem on the proposed_retained three-generation surface and",
-      "deps": [
-        "physical_lattice_necessity_note",
-        "three_generation_structure_note",
-        "three_generation_observable_theorem_note",
-        "one_generation_matter_closure_note",
-        "anomaly_forces_time_theorem"
-      ],
-      "note_hash": "9c46007565efab0e37b80ab49e85ddb550712a182fd8f210c0dc6ceafbd8f9f1",
+      "deps": [],
+      "note_hash": "49c19fe5447dfc9e4e3d48eb16528f696302c85ead7cd28e31be86f9358d6ac9",
       "path": "docs/GENERATION_AXIOM_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_generation_axiom_boundary.py",
       "title": "Generation Axiom Boundary Note"
@@ -26092,10 +25659,9 @@
         "s3_cap_uniqueness_note",
         "graviton_mass_derived_note",
         "ckm_neutron_edm_bound_note",
-        "confinement_string_tension_note",
-        "publication.ci3_z3.publication_matrix"
+        "confinement_string_tension_note"
       ],
-      "note_hash": "26e008a537f87d0cc463cd6fb878e4cb59ee03b2aff3f3a9fa825c217f6a81fd",
+      "note_hash": "198188c166e8c9d7260979e0783f250f4988eb8c63500470703f3a3947f361ea",
       "path": "docs/GRAVITON_MASS_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_graviton_mass_spectral_gap_identity.py",
       "title": "Graviton-Mass Spectral-Gap Identity Theorem"
@@ -26509,10 +26075,8 @@
       "claim_id": "higgs_from_lattice_note",
       "current_status": "bounded",
       "current_status_raw": "bounded quantitative support only",
-      "deps": [
-        "higgs_mass_derived_note"
-      ],
-      "note_hash": "058c3b02402174265a241af00ccbbeeb601421d5bd052bf5b786c49385588b2d",
+      "deps": [],
+      "note_hash": "853cb60666b003d9006e5352ea187247ff23e027c97ca519772291da9c2e05a6",
       "path": "docs/HIGGS_FROM_LATTICE_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "title": "Higgs From Lattice: Bounded Quantitative Support"
@@ -26565,10 +26129,8 @@
       "claim_id": "higgs_mechanism_note",
       "current_status": "support",
       "current_status_raw": "mechanism-level support only",
-      "deps": [
-        "higgs_mass_derived_note"
-      ],
-      "note_hash": "360225a684b4246ca620699a7b9cb40b879c5d897f2fe3ed6d7c964467d7060a",
+      "deps": [],
+      "note_hash": "7dfb16a5d49199182a50172deb3016c13189f2d8c913551b8047e942b50f7a98",
       "path": "docs/HIGGS_MECHANISM_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "title": "Higgs Mechanism Note"
@@ -26807,10 +26369,8 @@
       "claim_id": "hypercharge_identification_note",
       "current_status": "unknown",
       "current_status_raw": null,
-      "deps": [
-        "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
-      ],
-      "note_hash": "7a20a4c093a0431c9f3abfc5442f4dd94a5fcd582aa9837c06d15453bc22980c",
+      "deps": [],
+      "note_hash": "9e76626e92fae836407aaf65e5d4774161f42808dc04070fc0eda54e679f241f",
       "path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
       "runner_path": null,
       "title": "Hypercharge U(1)_Y Identification from the Commutant"
@@ -28717,10 +28277,9 @@
       "current_status_raw": "proposed_retained corollary on the current paper surface",
       "deps": [
         "graph_first_selector_derivation_note",
-        "graph_first_su3_integration_note",
-        "one_generation_matter_closure_note"
+        "graph_first_su3_integration_note"
       ],
-      "note_hash": "aabe2f548d9b5b5f33f28a2bc4195db827a6a862d2685eedd4034acaff3b830e",
+      "note_hash": "28f7ea2e62d8f4ff540838e8bd9eaee4f85e26b597301fd57dee3e930ada7279",
       "path": "docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md",
       "runner_path": "scripts/frontier_graph_first_su3_integration.py",
       "title": "Left-Handed Charge Matching on the Selected-Axis Surface"
@@ -28872,17 +28431,14 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained structural-arithmetic subtheorem on the proposed_retained",
       "deps": [
-        "anomaly_forces_time_theorem",
-        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
         "left_handed_charge_matching_note",
         "hypercharge_identification_note",
         "graph_first_su3_integration_note",
         "native_gauge_closure_note",
         "su2_witten_z2_anomaly_theorem_note_2026-04-24",
-        "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
-        "bminusl_anomaly_freedom_theorem_note_2026-04-24"
+        "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
       ],
-      "note_hash": "8b8547200cf5255e3e67c4f1f3424754b1ff2cc9d6827058c421cbd8a1259bf6",
+      "note_hash": "4bd0d8dc2e6b7dcb9167af5531b8359318da12ca3baffd7fa11e10cbe237b12f",
       "path": "docs/LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_lh_anomaly_trace_catalog.py",
       "title": "Left-Handed-Content Anomaly Trace Catalog Theorem"
@@ -29849,11 +29405,9 @@
         "neutrino_majorana_finite_normal_grammar_no_go_note",
         "neutrino_majorana_pfaffian_no_forcing_theorem_note",
         "neutrino_majorana_pfaffian_extension_note",
-        "neutrino_majorana_local_pfaffian_uniqueness_note",
-        "neutrino_majorana_current_atlas_nonrealization_note",
-        "neutrino_majorana_unique_source_slot_note"
+        "neutrino_majorana_current_atlas_nonrealization_note"
       ],
-      "note_hash": "8cf4c53492495117fd6af8e9b511a9cb9c513247a8c0df2ed63daf59880988bc",
+      "note_hash": "13135e2f2c2147ae7d533603da38cb6896123208676babfa82ebed00175db9a2",
       "path": "docs/NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_majorana_charge_two_primitive_reduction.py",
       "title": "Majorana Charge-Two Primitive Reduction"
@@ -29959,12 +29513,9 @@
       "current_status_raw": "exact boundary result on the current finite normal grammar;",
       "deps": [
         "neutrino_majorana_operator_axiom_first_note",
-        "neutrino_majorana_native_gaussian_no_go_note",
-        "neutrino_majorana_pfaffian_no_forcing_theorem_note",
-        "neutrino_majorana_charge_two_primitive_reduction_note",
-        "neutrino_majorana_pfaffian_extension_note"
+        "neutrino_majorana_native_gaussian_no_go_note"
       ],
-      "note_hash": "ce8cdb65e331f4b9bd865bcc133c4b319aa35a6193a749c1e419a3b8c0ef2682",
+      "note_hash": "2ff3cb747f9ef025b38be6c8145279a5711cd255bea4c100a603511125866840",
       "path": "docs/NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py",
       "title": "Finite Normal-Grammar Majorana No-Go"
@@ -30031,10 +29582,9 @@
         "neutrino_majorana_operator_axiom_first_note",
         "neutrino_majorana_unique_source_slot_note",
         "neutrino_majorana_local_pfaffian_uniqueness_note",
-        "neutrino_majorana_current_stack_exhaustion_note",
-        "neutrino_majorana_source_ray_theorem_note"
+        "neutrino_majorana_current_stack_exhaustion_note"
       ],
-      "note_hash": "dbd3991cd5c983f3a07ce4e8a44f8a3136c386790522dce6224e251341593f1b",
+      "note_hash": "02f9f50ce2830016e8b28268465777561b1e3ed8ad01c6544efc885289247743",
       "path": "docs/NEUTRINO_MAJORANA_NAMBU_SOURCE_PRINCIPLE_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_majorana_nambu_source_principle.py",
       "title": "Majorana Nambu Source Principle"
@@ -30044,11 +29594,9 @@
       "current_status": "unknown",
       "current_status_raw": "exact boundary result on the current native quadratic surface;",
       "deps": [
-        "neutrino_majorana_operator_axiom_first_note",
-        "neutrino_majorana_finite_normal_grammar_no_go_note",
-        "neutrino_majorana_pfaffian_extension_note"
+        "neutrino_majorana_operator_axiom_first_note"
       ],
-      "note_hash": "8ded7f78a0db4be7946edc17cb3861f1fa410017eb2d243a3ba5bf94c000607c",
+      "note_hash": "72ba02b592b6d10948922d8a6e69fd18cc58a2810dcb39c1780cb4315d77ec0f",
       "path": "docs/NEUTRINO_MAJORANA_NATIVE_GAUSSIAN_NO_GO_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_majorana_native_gaussian_nogo.py",
       "title": "Native-Gaussian Majorana No-Go"
@@ -30109,12 +29657,8 @@
       "claim_id": "neutrino_majorana_operator_axiom_first_note",
       "current_status": "unknown",
       "current_status_raw": "exact operator-classification result; not a mass-spectrum closure",
-      "deps": [
-        "neutrino_majorana_native_gaussian_no_go_note",
-        "neutrino_majorana_finite_normal_grammar_no_go_note",
-        "neutrino_majorana_pfaffian_extension_note"
-      ],
-      "note_hash": "0f44c5e28485856cdc755a13a9fb1ea9b97505d944b8b0dd38411a3c087e3599",
+      "deps": [],
+      "note_hash": "3105f5085e95e847408ffd0ed84a1c5ece7787600eddd66156cfbf956877c476",
       "path": "docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_majorana_operator.py",
       "title": "Axiom-First Majorana Operator Classification"
@@ -30142,10 +29686,9 @@
       "deps": [
         "neutrino_majorana_operator_axiom_first_note",
         "neutrino_majorana_native_gaussian_no_go_note",
-        "neutrino_majorana_pfaffian_extension_note",
-        "neutrino_majorana_pfaffian_no_forcing_theorem_note"
+        "neutrino_majorana_pfaffian_extension_note"
       ],
-      "note_hash": "84802bc3ed27efb51b6d7b24c1341548725d600e82368b6a6d231864fa091a41",
+      "note_hash": "cf2cdf11dab0b4a3a3d4ef8d07d89ae0ca40b3a7744d896849431b979185ed74",
       "path": "docs/NEUTRINO_MAJORANA_PFAFFIAN_AXIOM_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_majorana_pfaffian_axiom_boundary.py",
       "title": "Current Pfaffian Axiom Boundary"
@@ -30157,15 +29700,9 @@
       "deps": [
         "neutrino_majorana_operator_axiom_first_note",
         "neutrino_majorana_native_gaussian_no_go_note",
-        "neutrino_majorana_finite_normal_grammar_no_go_note",
-        "neutrino_majorana_charge_two_primitive_reduction_note",
-        "neutrino_majorana_local_pfaffian_uniqueness_note",
-        "neutrino_majorana_unique_source_slot_note",
-        "neutrino_majorana_phase_removal_note",
-        "neutrino_majorana_canonical_local_block_note",
-        "neutrino_majorana_pfaffian_axiom_boundary_note"
+        "neutrino_majorana_finite_normal_grammar_no_go_note"
       ],
-      "note_hash": "1a806a6755faa7e4137fe4e0c3f746d215f9460607c3046979dcf54549bdf33f",
+      "note_hash": "85782f07e11928b74f8aae4916de26ac48b0a4f9e3d97ebf783f2b734f54a9f9",
       "path": "docs/NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_majorana_pfaffian_extension.py",
       "title": "Minimal Pfaffian `Delta L = 2` Extension"
@@ -30178,10 +29715,9 @@
         "neutrino_majorana_operator_axiom_first_note",
         "neutrino_majorana_native_gaussian_no_go_note",
         "neutrino_majorana_pfaffian_extension_note",
-        "neutrino_majorana_pfaffian_axiom_boundary_note",
-        "neutrino_majorana_charge_two_primitive_reduction_note"
+        "neutrino_majorana_pfaffian_axiom_boundary_note"
       ],
-      "note_hash": "71319c1f56bd3cc9fa6da794fa902c7d3d18853668605df8c288edfe6b0b4632",
+      "note_hash": "31d8f089a500bf84e3f7bf70a87e8b169eae777c6e86959e38810a359f8ac9ec",
       "path": "docs/NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_majorana_pfaffian_no_forcing_theorem.py",
       "title": "Pfaffian No-Forcing Theorem"
@@ -30191,13 +29727,12 @@
       "current_status": "unknown",
       "current_status_raw": "exact one-generation local-form refinement on the current neutrino",
       "deps": [
-        "neutrino_majorana_canonical_local_block_note",
         "one_generation_matter_closure_note",
         "neutrino_majorana_operator_axiom_first_note",
         "neutrino_majorana_unique_source_slot_note",
         "neutrino_majorana_pfaffian_extension_note"
       ],
-      "note_hash": "d28c95eda30e58d2edd10b25def8257019768d76d5adfe5f536c0540d572460d",
+      "note_hash": "82d9f001b320a6719a58eb4a6b65e144e7dc3d0ffe3a68f8156ea514bdc03e05",
       "path": "docs/NEUTRINO_MAJORANA_PHASE_REMOVAL_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_majorana_phase_removal.py",
       "title": "Majorana One-Generation Phase Removal Theorem"
@@ -30347,16 +29882,12 @@
       "current_status": "unknown",
       "current_status_raw": "exact local-form theorem on the current neutrino lane; not yet an",
       "deps": [
-        "neutrino_majorana_phase_removal_note",
-        "neutrino_majorana_canonical_local_block_note",
         "neutrino_majorana_operator_axiom_first_note",
         "neutrino_majorana_finite_normal_grammar_no_go_note",
         "neutrino_majorana_charge_two_primitive_reduction_note",
-        "neutrino_majorana_current_atlas_nonrealization_note",
-        "neutrino_majorana_pfaffian_extension_note",
-        "neutrino_majorana_local_pfaffian_uniqueness_note"
+        "neutrino_majorana_current_atlas_nonrealization_note"
       ],
-      "note_hash": "18e8aba6f439a176082a4a65601d88a4da1d0c92959c3669929ff726cbce8afa",
+      "note_hash": "b910c60f62a4ad098b1649b7a5929c6e9b9fc3f658469cbb612240e1530dface",
       "path": "docs/NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_majorana_unique_source_slot.py",
       "title": "Majorana Unique Source Slot Theorem"
@@ -34219,10 +33750,8 @@
       "claim_id": "quark_cp_carrier_completion_note_2026-04-18",
       "current_status": "bounded",
       "current_status_raw": "bounded one-primitive full-closure extension",
-      "deps": [
-        "quark_projector_ray_phase_completion_note_2026-04-18"
-      ],
-      "note_hash": "7ff245de7e79f9a8b958ac81986e39c8e486e02c03319c31f4ec9c9f7b7165b5",
+      "deps": [],
+      "note_hash": "97604232f9e9b66b94b2ccd8e5b19a197080e2345a60ef5ae77d45ec02d62bce",
       "path": "docs/QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_quark_cp_carrier_completion.py",
       "title": "Quark CP-Carrier Completion on the Live Mass-Ratio Lane"
@@ -34443,11 +33972,10 @@
       "current_status": "bounded",
       "current_status_raw": "bounded parameter audit on the reduced projector-ray closure",
       "deps": [
-        "quark_up_amplitude_candidate_scan_note_2026-04-19",
         "quark_projector_ray_phase_completion_note_2026-04-18",
         "quark_cp_carrier_completion_note_2026-04-18"
       ],
-      "note_hash": "a83f26b266c648fa085b1a87b042b12da04694b51e59f621272e40e2e6d6da4f",
+      "note_hash": "5a799e192c15e027605f14c2355b4b5023ba5b85ce9cfce1aaaa0422a5633d6e",
       "path": "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_quark_projector_parameter_audit.py",
       "title": "Quark Projector-Parameter Audit"
@@ -34457,10 +33985,9 @@
       "current_status": "bounded",
       "current_status_raw": "bounded reduced full-closure extension",
       "deps": [
-        "quark_projector_parameter_audit_note_2026-04-19",
         "quark_cp_carrier_completion_note_2026-04-18"
       ],
-      "note_hash": "ee6d8dc13e8f83d89471991e534ca6c5c6213fbdbe4948e26c8b2d715bdd9546",
+      "note_hash": "370b199a684fd2403401d6d92ff5575d6ec77c99ed323e175fb9f70a7814835a",
       "path": "docs/QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_quark_projector_ray_phase_completion.py",
       "title": "Reduced Quark Closure on a Fixed Projector Ray"
@@ -34567,11 +34094,9 @@
       "current_status_raw": "bounded exact-candidate shortlist on the reduced quark closure",
       "deps": [
         "quark_projector_parameter_audit_note_2026-04-19",
-        "quark_projector_ray_phase_completion_note_2026-04-18",
-        "quark_up_amplitude_native_expression_scan_note_2026-04-19",
-        "quark_up_amplitude_native_affine_no_go_note_2026-04-19"
+        "quark_projector_ray_phase_completion_note_2026-04-18"
       ],
-      "note_hash": "7a8c7cc6c5d9cb2aa870e2dda379080dd54a985408cd0ff71d538ec3f348b517",
+      "note_hash": "d04347fd4815852878dbd6944b41b602d58f36f724f1708fb571041619b06118",
       "path": "docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_quark_up_amplitude_candidate_scan.py",
       "title": "Quark Up-Amplitude Exact-Candidate Scan"
@@ -34596,10 +34121,9 @@
       "current_status_raw": "bounded restricted native-grammar scan for the remaining reduced",
       "deps": [
         "quark_projector_parameter_audit_note_2026-04-19",
-        "quark_up_amplitude_candidate_scan_note_2026-04-19",
-        "quark_up_amplitude_native_affine_no_go_note_2026-04-19"
+        "quark_up_amplitude_candidate_scan_note_2026-04-19"
       ],
-      "note_hash": "a9f25441e5af272556e36098ad36960d7f63e462c86a5c60fcdeab7ab7630423",
+      "note_hash": "788878290e55a9164f83b1ffd4f76b8ecb83d03cfb1bd8319e0f7674e93f6c8e",
       "path": "docs/QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_quark_up_amplitude_native_expression_scan.py",
       "title": "Quark Up-Amplitude Native-Expression Scan"
@@ -34733,11 +34257,9 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained leading-order `1/N_c` derivation with bounded `O(1/N_c\u2074)` correction; MC-verified",
       "deps": [
-        "yt_ew_color_projection_theorem",
-        "yukawa_color_projection_theorem",
-        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+        "yukawa_color_projection_theorem"
       ],
-      "note_hash": "0caf09f59ae9c2739d77621f01cf6fe3dce15b4365035cbfbd4c749277bd46af",
+      "note_hash": "80adfe2bd67fe6a8f97b4d769950e6d3d980f5004dfd8fd1e3ae88a1172a28ff",
       "path": "docs/RCONN_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "R_conn Derivation from the 1/N_c Expansion"
@@ -35669,10 +35191,8 @@
       "claim_id": "site_phase_cube_shift_intertwiner_note",
       "current_status": "support",
       "current_status_raw": "exact support theorem on the full taste-cube / BZ-corner bridge",
-      "deps": [
-        "three_generation_observable_theorem_note"
-      ],
-      "note_hash": "c8698f3bca41478fe33734165e6f34499fd8c809cddab5737d5a3c98c2adcee6",
+      "deps": [],
+      "note_hash": "eda421e43878572bc6d00e8fb07e98980d0a204796cc02827ab1257fffb57398",
       "path": "docs/SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md",
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "title": "Site-Phase / Cube-Shift Intertwiner Note"
@@ -36361,10 +35881,9 @@
         "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
         "native_gauge_closure_note",
         "graph_first_su3_integration_note",
-        "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
         "three_generation_structure_note"
       ],
-      "note_hash": "3782695b55c8109e5b7fc3a9bbb72b6b29b5f9c9e2f248b73239edbaf82c50e4",
+      "note_hash": "0c3173fe82e96691468c149212a0345483797b20cbb007b01a3e1540aed00ad4",
       "path": "docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_sm_hypercharge_uniqueness.py",
       "title": "Standard Model Hypercharge Uniqueness from Anomaly Cancellation"
@@ -36537,13 +36056,10 @@
       "deps": [
         "native_gauge_closure_note",
         "left_handed_charge_matching_note",
-        "anomaly_forces_time_theorem",
         "graph_first_su3_integration_note",
-        "three_generation_structure_note",
-        "one_generation_matter_closure_note",
-        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+        "three_generation_structure_note"
       ],
-      "note_hash": "b8f34a53bccaf89e13155e770f234f868f6e659dbf2869f1ab00451484c75c20",
+      "note_hash": "b3b13e7ac1fbc890770ea58d020ebef4254715a996a492596c8ed7df69e00e0f",
       "path": "docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md",
       "runner_path": null,
       "title": "SU(2) Witten Z_2 Global Anomaly Cancellation Theorem"
@@ -36554,12 +36070,9 @@
       "current_status_raw": "proposed_retained structural-anomaly theorem on the accepted one-generation",
       "deps": [
         "graph_first_su3_integration_note",
-        "left_handed_charge_matching_note",
-        "anomaly_forces_time_theorem",
-        "one_generation_matter_closure_note",
-        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+        "left_handed_charge_matching_note"
       ],
-      "note_hash": "e10135b40969a7200e552cb6c4a8c235e0e3c4e6e665acdd4998b7cc6e486528",
+      "note_hash": "d80d25858cff4c761d4b8bd64a98c986adf626306df193f25868c36a32709195",
       "path": "docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md",
       "runner_path": null,
       "title": "SU(3)^3 Cubic Gauge Anomaly Cancellation Theorem"
@@ -36766,15 +36279,13 @@
       "current_status": "proposed_retained",
       "current_status_raw": "exact support theorem on the proposed_retained three-generation surface",
       "deps": [
-        "three_generation_structure_note",
         "site_phase_cube_shift_intertwiner_note",
         "s3_taste_cube_decomposition_note",
         "s3_mass_matrix_no_go_note",
         "z2_hw1_mass_matrix_parametrization_note",
-        "generation_axiom_boundary_note",
-        "physical_lattice_necessity_note"
+        "generation_axiom_boundary_note"
       ],
-      "note_hash": "52ff99cd4ee31c71768e6028df306ca2305087a9c747144f96a8ded2553b1f17",
+      "note_hash": "5db23c7536c4a68b870736a1c82311c98d4bce81c2a7ceb79bb31c9047ac3915",
       "path": "docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
       "title": "Three-Generation Observable Theorem Note"
@@ -36784,11 +36295,10 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained",
       "deps": [
-        "three_generation_chirality_boundary_note",
         "three_generation_observable_theorem_note",
         "physical_lattice_necessity_note"
       ],
-      "note_hash": "7580f0d526ad78932f8d550ec3953f262b5404ed0613233ed6313d8590836064",
+      "note_hash": "308ca6f60e4a77379eb283a4d36c898085ec9b96931e574aa7cb19c577b1b3fe",
       "path": "docs/THREE_GENERATION_STRUCTURE_NOTE.md",
       "runner_path": null,
       "title": "Three-Generation Matter Structure Note"
@@ -38226,16 +37736,12 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained structural-identity subtheorem of the proposed_promoted CKM",
       "deps": [
-        "ckm_atlas_axiom_closure_note",
-        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
         "native_gauge_closure_note",
         "graph_first_su3_integration_note",
         "alpha_s_derived_note",
         "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
       ],
-      "note_hash": "af6d63863a897cc63e939aaaa09ec1886318d7f0003b9b9ed23a93ced19742f2",
+      "note_hash": "df31d2b0e572567eef04f9c2d32b70dda323b7746508e27ba4aebb0dd14566b9",
       "path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_wolfenstein_lambda_a_structural_identities.py",
       "title": "Wolfenstein Lambda and A Structural Identities Theorem"
@@ -38731,10 +38237,9 @@
       "current_status": "open",
       "current_status_raw": "exact subderivation; bridge-conditioned on the open lane",
       "deps": [
-        "yt_zero_import_authority_note",
-        "yt_eft_bridge_theorem"
+        "yt_zero_import_authority_note"
       ],
-      "note_hash": "ba38fdfe2d93487ef3a6d2faf701a33f4cb0c759651f695a8c3d6b06b23c2510",
+      "note_hash": "cefbf6919d697634de29427ecb5920dfd4442c6f2637d5c756a3691981be36c3",
       "path": "docs/YT_BOUNDARY_THEOREM.md",
       "runner_path": "scripts/frontier_yt_boundary_consistency.py",
       "title": "Boundary Selection Theorem: v is the Physical Crossover Endpoint"
@@ -39437,10 +38942,8 @@
       "claim_id": "yt_ward_identity_derivation_theorem",
       "current_status": "support",
       "current_status_raw": "DERIVED as an EXACT algebraic tree-level identity from",
-      "deps": [
-        "uv_gauge_to_yukawa_bridge_sc_vs_pert_note"
-      ],
-      "note_hash": "2e661fb9af93f4ededfe0307aceff78a25b29572698a8cc4e158a0c34eb9f7e5",
+      "deps": [],
+      "note_hash": "548510ef15aa972473e04bb2b651759491c76c7524a88b7dbed34694780b7e2c",
       "path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
       "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
       "title": "Ward-Identity Derivation Theorem: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)"
@@ -39453,10 +38956,9 @@
         "yt_ward_identity_derivation_theorem",
         "alpha_s_derived_note",
         "yt_color_projection_correction_note",
-        "yt_flagship_boundary_note",
         "yt_explicit_systematic_budget_note"
       ],
-      "note_hash": "de5109a84e11b2772efa5000043cc09c8a56c8ca86b56276a30476d1f6b71a03",
+      "note_hash": "eb10d363fb551e8d11ca8b0a13033e3a486563d7bf6f417d4cd1dde287fbfe01",
       "path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
       "runner_path": null,
       "title": "y_t Lane: Zero-Import Authority"
@@ -39975,6 +39477,7 @@
     "gauge_vacuum_plaquette_susceptibility_flow_theorem_note",
     "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
     "generated_geometry_synthesis_note",
+    "generation_axiom_boundary_note",
     "geometry_lane_head_to_head_note",
     "geometry_superposition_dag_ensemble_note_2026-04-11",
     "global_coherence_off_scaffold_note",
@@ -40026,9 +39529,11 @@
     "hierarchy_effective_potential_endpoint_note",
     "hierarchy_matsubara_decomposition_note",
     "hierarchy_spatial_bc_and_u0_scaling_note",
+    "higgs_from_lattice_note",
     "higgs_mass_from_axiom_note",
     "higgs_mass_hierarchy_correction_note",
     "higgs_mass_retention_analysis_note_2026-04-18",
+    "higgs_mechanism_note",
     "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
     "higher_dimension_status_2026-04-01",
     "higher_symmetry_gravity_probe_note",
@@ -40046,6 +39551,7 @@
     "hubble_lane5_planck_c1_gate_audit_note_2026-04-26",
     "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
     "hubble_lane5_workstream_status_note_2026-04-27",
+    "hypercharge_identification_note",
     "i3_zero_exact_theorem_note",
     "if_program_closing_note",
     "impact_parameter_lensing_note",
@@ -40235,6 +39741,7 @@
     "neutrino_majorana_lower_level_pairing_nogo_note",
     "neutrino_majorana_nur_character_boundary_note",
     "neutrino_majorana_nur_charge2_primitive_reduction_note",
+    "neutrino_majorana_operator_axiom_first_note",
     "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
     "neutrino_sole_axiom_full_closure_boundary_note",
     "neutrino_two_amplitude_last_mile_reduction_note",
@@ -40350,6 +39857,7 @@
     "quark_c3_circulant_source_law_boundary_note_2026-04-28",
     "quark_c3_oriented_ward_splitter_support_note_2026-04-28",
     "quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28",
+    "quark_cp_carrier_completion_note_2026-04-18",
     "quark_e_channel_endpoint_quotient_law_note_2026-04-19",
     "quark_endpoint_denominator_admissibility_note_2026-04-19",
     "quark_endpoint_ratio_chain_law_note_2026-04-19",
@@ -40454,6 +39962,7 @@
     "signed_gravity_response_lane_status_note_2026-04-26",
     "single_axiom_hilbert_note",
     "single_axiom_information_note",
+    "site_phase_cube_shift_intertwiner_note",
     "sixth_family_complex_boundary_note",
     "sixth_family_distance_law_third_vs_sixth_quick_note",
     "sixth_family_sheared_boundary_note",
@@ -40704,16 +40213,17 @@
     "yt_right_handed_species_dependence_note_2026-04-18",
     "yt_schur_stability_gap_note",
     "yt_ssb_matching_gap_analysis_note_2026-04-18",
+    "yt_ward_identity_derivation_theorem",
     "yt_zero_import_chain_note",
     "yukawa_color_projection_theorem",
     "z2_hw1_mass_matrix_parametrization_note"
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4484,
-    "leaf_count": 761,
+    "edge_count": 4386,
+    "leaf_count": 762,
     "node_count": 1662,
-    "root_count": 1214,
+    "root_count": 1222,
     "runners_with_path": 735,
     "status_counts": {
       "bounded": 253,

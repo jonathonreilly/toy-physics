@@ -3,7 +3,7 @@
 **Date:** 2026-04-24
 **Status:** proposed_retained standalone structural theorem on `main`. This note
 replaces the partial linear-only B-L remark in
-[`PROTON_LIFETIME_DERIVED_NOTE.md`](PROTON_LIFETIME_DERIVED_NOTE.md) with the
+`PROTON_LIFETIME_DERIVED_NOTE.md` with the
 full anomaly packet needed to gauge `U(1)_{B-L}` alongside the retained
 Standard Model gauge group.
 
@@ -194,4 +194,4 @@ exact rational identities rather than floating-point comparisons.
 - [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
 - [`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md)
 - [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md)
-- [`PROTON_LIFETIME_DERIVED_NOTE.md`](PROTON_LIFETIME_DERIVED_NOTE.md)
+- `PROTON_LIFETIME_DERIVED_NOTE.md`

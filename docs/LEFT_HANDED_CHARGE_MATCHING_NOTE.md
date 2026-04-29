@@ -40,7 +40,7 @@ The safe authority boundary is:
 - full anomaly-complete hypercharge closure is **not** claimed here
 
 That stronger statement is absorbed into
-[ONE_GENERATION_MATTER_CLOSURE_NOTE.md](./ONE_GENERATION_MATTER_CLOSURE_NOTE.md).
+`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`.
 
 ## Validation
 

@@ -103,7 +103,7 @@ Tr[Y^2] = 8/3 and Tr[T\_a^2]\_SU(3) = 1 are consistent with the standard
 SU(5) embedding.
 This squared-trace arithmetic is now packaged as the standalone retained
 subtheorem
-[`HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`](HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md).
+`HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`.
 
 ## Key Insight
 

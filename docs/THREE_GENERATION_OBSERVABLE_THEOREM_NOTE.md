@@ -27,7 +27,7 @@ retained generation algebra exists on `H_hw=1`.
 ## Role in the package
 
 This note is not the original physical three-generation claim surface. That
-remains [THREE_GENERATION_STRUCTURE_NOTE.md](./THREE_GENERATION_STRUCTURE_NOTE.md).
+remains `THREE_GENERATION_STRUCTURE_NOTE.md`.
 
 Its narrower job is to close the exact scientific point:
 
@@ -236,7 +236,7 @@ reduction loophole, not the separate global framework boundary.
 > surface is irreducible and admits no proper exact quotient. This sharpens the
 > three-generation defense before any flavor input is used. The stronger
 > one-axiom substrate-necessity result now lives separately in
-> [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md).
+> `PHYSICAL_LATTICE_NECESSITY_NOTE.md`.
 
 ## Validation
 

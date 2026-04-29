@@ -4,8 +4,8 @@
 
 **Status:** proposed_retained structural-identity subtheorem of the proposed_promoted CKM
 atlas/axiom package. Companion to the mainline
-[`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
-[`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`,
+`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`
 and parent CKM package. This note closes the second row of the
 leading-Wolfenstein structural CKM-magnitude surface.
 
@@ -37,7 +37,7 @@ the retained atlas surface.
 
 | Input | Authority |
 | --- | --- |
-| Parent CKM atlas/axiom surface | [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
+| Parent CKM atlas/axiom surface | `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md` |
 | `lambda^2 = alpha_s(v)/2`, `A^2 = 2/3` | [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md) |
 | Canonical `alpha_s(v)` | [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md), `scripts/canonical_plaquette_surface.py` |
 | Exact CKM unitarity | parent CKM atlas package |
@@ -167,11 +167,11 @@ The runner uses the Python standard library plus the already-mainline
 
 ## Cross-References
 
-- [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+- `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
   - parent CKM package.
-- [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+- `CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`
   - first-row companion.
-- [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+- `CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`
   - third-row companion.
 - [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md)
   - `lambda` and `A` identities.

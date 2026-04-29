@@ -116,7 +116,7 @@ The exact Pfaffian extension note
 
 should now be read together with the local-bilinear uniqueness companion
 
-- [NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md](./NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md)
+- `NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md`
 
 On that retained local bilinear lane, Pfaffian is no longer optional: it is
 the unique local realization. But the present reduction note is still stricter
@@ -151,7 +151,7 @@ contain that missing charge-`2` primitive under another name.
 
 The next exact local-form refinement is now also separated cleanly in:
 
-- [NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md](./NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md)
+- `NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md`
 - `scripts/frontier_neutrino_majorana_unique_source_slot.py`
 
 Current result there: under the local bilinear source assumption, any future
