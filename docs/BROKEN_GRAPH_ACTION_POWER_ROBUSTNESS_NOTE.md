@@ -1,8 +1,7 @@
 # Broken-Graph Action-Power Robustness Note
 
-**Date:** 2026-04-04  
-**Status:** bounded graph-damage replay on the proposed_retained 3D ordered-lattice
-family
+**Date:** 2026-04-04 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Status:** bounded graph-damage replay diagnostic on the upstream 3D ordered-lattice family; not a standalone tier-ratifiable theorem, the cited frozen log is missing, and the cited relation notes are themselves bounded fixed-family controls rather than audit-clean dependencies.
 
 ## Artifact chain
 
@@ -99,3 +98,26 @@ Those are related but not identical questions.
 - if we keep exploring, the next move should be a different graph family or a
   more explicit perturbation model, not another attempt to promote `p = 1` as
   the uniquely robust answer on this retained family
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, leaf criticality):
+
+> Issue: the finite replay supports the bounded negative summary, but
+> the row is not a standalone retained theorem; it is a bounded
+> graph-damage diagnostic on an upstream proposed_retained
+> ordered-lattice family, its cited frozen log is absent from
+> `logs/`, and its relation notes are themselves bounded fixed-family
+> controls rather than registered retained dependencies.
+
+## What this note does NOT claim
+
+- A standalone retained theorem on graph-damage robustness.
+- An audit-clean upstream ordered-lattice family dependency.
+- That the cited frozen log is present in `logs/` (it is missing).
+
+## What would close this lane (Path A future work)
+
+A retained graph-damage robustness theorem would require a registered
+runner with archived log, audit-clean upstream ordered-lattice family
+dependency, and registered fixed-family relation notes.
