@@ -1,7 +1,7 @@
 # True First-Order Kubo — Closed-Form Analytic Derivation
 
-**Date:** 2026-04-07
-**Status:** proposed_retained positive — literal first-order d(cz)/ds computed symbolically from the propagator via a parallel perturbation recurrence matches the measured finite-difference response at **r = 0.9716 overall and r = 0.9995 off-scaffold** across 44 families. Sign agreement **42/44 = 95.5%**. The three residual sign misses from the previous heuristic lane are all correctly captured. This is the analytic first-order derivation that the "compact underlying principle" row has been asking for.
+**Date:** 2026-04-07 (status line narrowed 2026-04-28 per audit-lane verdict)
+**Status:** bounded conditional first-order response formula on the specified propagator/field, subject to the derivation assumptions in the note. The 44-family correlation/sign-agreement battery (`r = 0.9716` overall, `r = 0.9995` off-scaffold, 42/44 sign agreement) is unratified numerical support — it depends on a runner that is not registered in the audit ledger as the primary runner. Not a tier-ratifiable physical theorem until the runner is registered, the dataset is regenerable, and hard thresholds are wired into the runner.
 
 ## Artifact chain
 
@@ -251,3 +251,49 @@ package from the propagator.
 > captured. This is the closed-form analytic first-order derivation
 > of the gravity sign — no fitting, no heuristics — that the
 > 'compact underlying principle' row has been asking for."
+
+## Audit boundary (2026-04-28)
+
+Audit verdict (`audited_conditional`, high criticality, 125 transitive
+descendants):
+
+> Issue: the source note gives a plausible first-order derivative
+> recurrence for the specified propagator and field, but the retained
+> claim rests on a 44-family empirical finite-difference comparison
+> and sign-agreement battery for which the audit packet has no
+> registered primary runner, deterministic output, or
+> ledger-recognized log. The note names
+> `scripts/linear_response_true_kubo.py` and a log, but the
+> ledger/queue runner_path is null, so those artifacts are not
+> available as the registered primary evidence for this audit.
+
+> Claim boundary until fixed: it is safe to claim a conditional
+> first-order response formula for the specified propagator/field,
+> subject to the derivation assumptions in the note; the 44-family
+> correlation/sign-agreement result is unratified numerical support,
+> not a retained physical theorem or retained compact-principle
+> explanation.
+
+## What this note does NOT claim
+
+- That the 44-family correlation result (`r = 0.9716` overall,
+  `r = 0.9995` off-scaffold, 42/44 sign agreement) is independently
+  verifiable from the audit packet. The runner is not registered as
+  the primary runner for this claim.
+- A "compact underlying principle" theorem on top of the analytic
+  recurrence.
+- That the runner independently checks the recurrence derivative
+  against the finite-difference battery with hard thresholds.
+
+## What would close this lane (Path A future work)
+
+Promoting from bounded conditional to retained would require:
+
+1. Registering `scripts/linear_response_true_kubo.py` as the claim's
+   primary runner in the audit ledger.
+2. Including or regenerating the deterministic 44-family
+   dataset/log.
+3. Making the runner independently check both the recurrence
+   derivative and the finite-difference comparison with exact
+   thresholds for the reported correlations, sign counts, scaffold
+   exclusions, and residual sign cases.
