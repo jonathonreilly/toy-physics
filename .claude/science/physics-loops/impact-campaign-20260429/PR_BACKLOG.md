@@ -1,15 +1,19 @@
 # PR Backlog
 
-**Updated:** 2026-04-30T10:07:35Z
+**Updated:** 2026-04-30T10:43:36Z
 
 ## Recovery Status
 
 The original backlog below records the unattended supervisor's failed delivery
-attempts. Recovery was started on 2026-04-30 after removing the stale launchd
-keepalive job. Blocks 01-05 should now be shipped as one aggregate review PR
-from `physics-loop/impact-campaign-20260429`, because the campaign ledgers,
-claim-status certificate, review history, and global-stop marker are shared
-across all five blocks.
+attempts. Recovery completed on 2026-04-30 after removing the stale launchd
+keepalive job, committing the aggregate campaign artifacts, pushing
+`physics-loop/impact-campaign-20260429`, and opening PR #209.
+
+PR: https://github.com/jonathonreilly/cl3-lattice-framework/pull/209
+
+Blocks 01-05 ship together because the campaign ledgers, claim-status
+certificate, review history, and global-stop marker are shared across all five
+blocks.
 
 Aggregate PR title:
 
