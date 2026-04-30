@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:42:38.437297+00:00
+**Generated:** 2026-04-30T02:42:41.814869+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 204 |
 | support | 104 |
 | open | 24 |
-| unknown | 524 |
+| unknown | 523 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 48 |
 | ~~audited_renaming~~ | 72 |
-| ~~audited_conditional~~ | 432 |
+| ~~audited_conditional~~ | 433 |
 | ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 158 |
+| `audited_conditional` | 159 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1261 |
+| `unaudited` | 1260 |
 
 | criticality | count |
 |---|---:|
@@ -200,6 +200,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_transport_status_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_cascade_geometry_note_2026-04-14` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
+| `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -1180,6 +1181,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** Issue: the proof starts from the retained local post-EWSB Higgs family M(phi), the exact selector V_sel, the 3+1 completed chirality surface, and a weak-axis branch convention, but these inputs are not present as one-hop retained dependencies in the ledger. Why this blocks: the runner proves the algebra after those structures are chosen, not that the framework forces those structures from retained primitives. Repair target: add retained dependencies or an integrated derivation for the Higgs family, selector, 3+1 chirality operator, and weak-axis convention before the Gamma_1 selection step. Claim boundary until fixed: the note can claim a conditional local-operator selection result within that retained family, not an audited standalone Dirac bridge theorem.
 - **open / conditional deps cited:**
   - `DM_NEUTRINO_WEAK_VECTOR_THEOREM_NOTE_2026-04-15.md`
+- **auditor confidence:** high
+
+### `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_ODD_CIRCULANT_CURRENT_STACK_ZERO_LAW_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_ODD_CIRCULANT_CURRENT_STACK_ZERO_LAW_NOTE_2026-04-15.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Any residual-Z2-equivariant functional of a residual-Z2-even input is again residual-Z2 even, so its projection onto the unique odd circulant slot vanishes.  _(class `C`)_
+- **chain closes:** False — The symmetry implication closes, but the claim that the full current retained DM stack consists only of those even/equivariant inputs and functionals is imported rather than audited from one-hop dependencies.
+- **rationale:** Issue: the theorem depends on the current-stack boundary: exact weak-axis 1+2 split, even circulant bridge, and the retained support/Hermitian/scalar DM bank being exhausted by residual-Z2-equivariant functionals of even data. Why this blocks: the runner verifies the symmetry mechanism on representative current-bank-like functionals, but it does not prove that no other retained current-stack object exists. Repair target: provide a retained inventory theorem for the current DM bank or make the runner enumerate the exact retained stack and prove all entries are residual-Z2-even/equivariant. Claim boundary until fixed: conditional no-go for the specified even/equivariant current stack, not an audited universal current-stack zero law.
 - **auditor confidence:** high
 
 ### `dm_neutrino_schur_suppression_theorem_note_2026-04-15`
