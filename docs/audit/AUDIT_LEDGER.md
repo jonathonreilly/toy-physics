@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:58:02.681597+00:00
+**Generated:** 2026-04-30T03:01:51.623842+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 201 |
 | support | 101 |
 | open | 24 |
-| unknown | 503 |
+| unknown | 502 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 395 |
+| ~~audited_conditional~~ | 396 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 178 |
+| `audited_conditional` | 179 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1238 |
+| `unaudited` | 1237 |
 
 | criticality | count |
 |---|---:|
@@ -254,6 +254,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higgs_from_lattice_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `higgs_mechanism_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `higher_order_structural_theorems_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `impact_parameter_lensing_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -2582,6 +2583,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `package_citation_chain_status_upgrade_CONDITIONAL_to_GAUGE_not_independently_verified`
   - `sigma_hier_observational_row_permutation_remains_open`
   - `branch_choice_A_BCC_or_basin_signature_condition_remains_open`
+- **auditor confidence:** high
+
+### `higher_order_structural_theorems_note`
+
+- **Note:** [`HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md`](../../docs/HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The listed scripts verify a bundle of structural no-go and support calculations: Higgs-dressed transport no-match, no retained variational Koide principle, real-irrep-block democracy only as a non-retained/partial primitive, fourth-order mixed-Gamma cancellation, an S2-breaking survey with only post-hoc ambiguity, and a bounded charged-lepton observational pin.  _(class `C`)_
+- **chain closes:** False — The bundle closes several candidate routes negatively, but it does not derive the charged-lepton hierarchy or Koide relation from retained inputs; the final charged-lepton closure remains bounded by an explicit PDG observational pin and named missing primitives.
+- **rationale:** Issue: the note's structural runners pass, but the headline overstates closure and the runner manifest is stale. Why this blocks: the note advertises Runners (8) while listing seven scripts, and those seven currently report 140 PASS rather than the advertised 133 PASS; more importantly, the passing scripts rule out or bound routes rather than supply a retained S2-breaking/Koide-generating primitive. Repair target: update the runner inventory/pass counts and split the exact no-go/support theorems from the bounded observational-pin closure, or add a retained primitive that derives the hierarchy without the PDG pin. Claim boundary until fixed: structural no-go/support bundle for charged-lepton Koide routes, not an exact retained charged-lepton hierarchy theorem.
 - **auditor confidence:** high
 
 ### `higher_symmetry_joint_validation_note`
