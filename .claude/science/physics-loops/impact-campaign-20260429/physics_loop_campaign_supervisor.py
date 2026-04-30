@@ -23,6 +23,15 @@ LAST_MESSAGE = LOOP / "last_codex_message.md"
 GLOBAL_STOP = LOOP / "CAMPAIGN_GLOBAL_STOP_ALLOWED"
 USER_STOP = LOOP / "USER_STOP_REQUESTED"
 CODEX = Path("/Users/jonBridger/.npm-global/bin/codex")
+LAUNCH_ENV_PATH = (
+    "/opt/homebrew/bin:"
+    "/Users/jonBridger/.npm-global/bin:"
+    "/usr/local/bin:"
+    "/usr/bin:"
+    "/bin:"
+    "/usr/sbin:"
+    "/sbin"
+)
 
 
 def utc_now() -> dt.datetime:
@@ -110,10 +119,15 @@ def run_iteration(iteration: int, deadline: dt.datetime, model: str) -> int:
     with LOG.open("a", encoding="utf-8") as log_fh:
         log_fh.write("\n=== codex iteration %d start %s ===\n" % (iteration, iso(utc_now())))
         log_fh.flush()
+        env = os.environ.copy()
+        env["PATH"] = LAUNCH_ENV_PATH
+        env.setdefault("HOME", "/Users/jonBridger")
+        env.setdefault("SHELL", "/bin/zsh")
         try:
             completed = subprocess.run(
                 cmd,
                 cwd=str(ROOT),
+                env=env,
                 stdout=log_fh,
                 stderr=subprocess.STDOUT,
                 text=True,
@@ -190,4 +204,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

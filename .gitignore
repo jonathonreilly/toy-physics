@@ -9,3 +9,7 @@ logs/*
 !logs/retained/
 !logs/retained/README.md
 .claude/worktrees/
+.claude/science/physics-loops/**/last_codex_message.md
+.claude/science/physics-loops/**/supervisor.lock
+.claude/science/physics-loops/**/supervisor.log
+.claude/science/physics-loops/**/supervisor_status.json

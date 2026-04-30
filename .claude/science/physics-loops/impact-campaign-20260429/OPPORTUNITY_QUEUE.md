@@ -1,35 +1,63 @@
 # Opportunity Queue
 
-**Status:** initial launch seed. The first worker invocation must refresh this
-from current repo surfaces before committing to a route.
+**Refreshed:** 2026-04-29T13:23:24Z
+**Mode:** campaign
+**Target:** best-honest-status
+**Decision:** current-bank global stop allowed.
 
-Ranking criteria from `physics-loop`:
+## Current Repo Surfaces Rechecked
 
-- retained-positive probability;
-- missing-import count;
-- runner/test availability;
-- review landability;
-- blast radius and branch size;
-- independence from any just-blocked lane.
-
-## Seed Ranking
-
-| rank | lane | reason to try first | likely first move | initial status boundary |
-|---|---|---|---|---|
-| 1 | Lane 6 charged-lepton mass retention | Highest leverage in `docs/lanes/open_science/README.md`; unlocks atomic scale and matter-mass program. | Reassess `y_tau` Ward-identity / `V_0` dependency against latest Koide and charged-lepton loop packs; seek theorem-grade route or exact blocker. | open; no bare retained |
-| 2 | Lane 5 Hubble constant | Recent structural landings make the two-gate firewall more tractable than it first appears. | Attack `(C1)` absolute-scale gate or one cosmic-`L` gate with current retained identities. | open / support; no numerical `H_0` claim without both gates |
-| 3 | Lane 3 quark mass retention | Tier-1 missing science and highest impact, but likely bigger than 4h. | Look for a narrow denominator/readout theorem or an exact firewall/support upgrade. | bounded companion only |
-| 4 | Lane 2 atomic-scale predictions | High visceral value but depends on Lane 6 absolute scale plus QED running/NR limit. | If Lane 6 moves, substitute; otherwise sharpen dependency firewall. | scaffold/support only |
-| 5 | Lane 1 hadron mass program | Highest impact but depends on quark masses/chiral inputs. | Attack a narrow dependency theorem such as GMOR prerequisites only if Lane 3 moves. | open; confinement alone is insufficient |
-| 6 | Lane 4 neutrino quantitative closure | High impact but current notes show long structural dependency chain. | Prefer specific theorem gates over broad support prose. | open/bounded |
-
-## Refresh Requirement
-
-Before choosing a block, reread:
-
+- `docs/repo/REPO_ORGANIZATION.md`
+- `docs/repo/CONTROLLED_VOCABULARY.md`
 - `docs/repo/ACTIVE_REVIEW_QUEUE.md`
+- `docs/repo/REVIEW_FEEDBACK_WORKFLOW.md`
+- `docs/CANONICAL_HARNESS_INDEX.md`
+- `docs/repo/LANE_REGISTRY.yaml`
+- `docs/work_history/repo/LANE_STATUS_BOARD.md`
 - `docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md`
 - `docs/lanes/open_science/README.md`
-- `docs/CANONICAL_HARNESS_INDEX.md`
-- current loop packs under `.claude/science/physics-loops/`
+- all six `docs/lanes/open_science/*_OPEN_LANE_2026-04-26.md`
+- prior loop packs under `.claude/science/physics-loops/`
+- block artifacts 01-05 from this campaign
 
+## Applied Outcomes
+
+- Block 01: Lane 4D `(SR-2)` scalar two-point route is no-go on current data.
+- Block 02: Lane 1 `(B2)` pure-gauge/rough-screening closure is no-go on
+  current data.
+- Block 03: Lane 5 `(C2)` CKM/PMNS sign-transfer route is no-go without a new
+  typed cross-sector coupling law.
+- Block 04: Lane 2 `alpha_EM(M_Z) -> alpha(0)` closure is no-go without
+  threshold and low-energy bridge inputs.
+- Block 05: Lane 2 physical-unit Rydberg closure is no-go without the Hartree
+  scale inputs and physical-unit one-body limit.
+
+## Exhaustion Table
+
+| lane / route | current-surface disposition | why not viable for another current-bank block |
+|---|---|---|
+| Lane 6 charged-lepton `y_tau` / absolute electron scale | blocked | 2026-04-28 charged-lepton loop closed all single-cycle Ward routes; surviving M1/M5-c routes require Koide flagship progress or new structural content. |
+| Lane 3 quark masses | blocked | Prior 13-block loop records current-bank exhaustion after deep work and fan-out; no new theorem premise is present. |
+| Lane 1 `sqrt(sigma)` B2 | blocked | Block 02 shows the remaining route needs an `N_f=2+1` determinant ensemble or explicit budgeted comparator, not present in repo. |
+| Lane 1 GMOR / proton / spectroscopy | dependency-blocked | Requires Lane 3 light-quark progress, `Sigma`, `f_pi`, spectral coefficients, or lattice-QCD-equivalent computation. |
+| Lane 2 Rydberg / atomic scale | dependency-blocked | Blocks 04-05 plus the prior Rydberg firewall show `m_e`, `alpha(0)`, and the physical-unit one-body limit remain load-bearing. |
+| Lane 4D neutrino global Dirac lift | new-premise blocked | Block 01 closes SR-2; SR-1/SR-3 require a new Pfaffian-Lorentz or stronger anomaly coupling premise. |
+| Lane 5 Hubble `(C1)` | human-science blocked | Current C1 packet isolates an irreducible Cl_4(C) carrier/primitive coframe premise; branch-local artifacts must not adopt it. |
+| Lane 5 Hubble `(C2)` | new-premise blocked | Block 03 closes the CKM/PMNS sign-transfer stretch; native right-frame route requires a new right-sensitive observable principle. |
+| Lane 5 direct `(C3)` cosmic-`L` | no-active-route | Current Hubble workstream status records no active direct vacuum/topology route. |
+
+## Global Stop Justification
+
+Every ranked current-bank opportunity that is both high-impact and executable
+has now either been closed in this campaign or is blocked by a documented prior
+loop. The remaining routes require at least one of:
+
+- a new structural theorem premise;
+- a human science decision on an axiom/carrier;
+- an off-budget large-volume or dynamical lattice computation;
+- progress in another blocked lane.
+
+Under the physics-loop long-running policy, this satisfies the queue-based
+global stop condition for the current repo surface. This is not a claim that
+the open science program is impossible; it is a claim that the current bank of
+branch-local executable opportunities is exhausted.

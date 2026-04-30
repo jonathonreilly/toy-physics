@@ -1,0 +1,67 @@
+========================================================================================
+LANE 1 B2: DYNAMICAL SCREENING BOUNDARY
+========================================================================================
+
+Claim under test:
+  Current pure-gauge beta=6.0 data plus the rough 0.96 factor might
+  close the N_f=2+1 dynamical screening budget for sqrt(sigma).
+
+Boundary result:
+  The B2 factor is determinant-dependent. The current data remain
+  bounded-support only until a dynamical calculation or explicit
+  budgeted comparator is supplied.
+
+========================================================================================
+PART 1: AUTHORITY TEXT NAMES B2 AS THE LOAD-BEARING GAP
+========================================================================================
+  [PASS] Lane 1 file names B2 as the current highest-leverage sqrt(sigma) gate
+  [PASS] Audit note identifies B2 as the dominant numerical residual
+  [PASS] Audit note requires a proper N_f=2+1 lattice calculation
+  [PASS] Confinement note says the current correction is rough
+  [PASS] Current confinement runner is pure-gauge at beta=6.0
+
+========================================================================================
+PART 2: SAME PURE-GAUGE PAYLOAD ADMITS MANY SCREENING FACTORS
+========================================================================================
+  pure-gauge payload = beta, r0/a, sigma_a2, plaquette = (6.0, 5.37, 0.0465, 0.5934)
+  f_screen=0.90 -> sqrt(sigma)=435.60 MeV
+  f_screen=0.94 -> sqrt(sigma)=454.96 MeV
+  f_screen=0.96 -> sqrt(sigma)=464.64 MeV
+  f_screen=1.00 -> sqrt(sigma)=484.00 MeV
+  [PASS] Pure-gauge payload is unchanged across the factor family
+  [PASS] Different factors produce materially different sqrt(sigma) readouts  (spread=48.40 MeV)
+  [PASS] The current rough factor is not selected by the pure-gauge payload
+  [PASS] The comparator-implied factor is distinct from the rough factor  (440/484=0.9091)
+
+========================================================================================
+PART 3: SEA-FERMION DETERMINANT DATA CHANGE THE MEASURE
+========================================================================================
+  quenched <sigma a^2>       = 0.04586853
+  light-sea <sigma a^2>      = 0.04899997
+  heavier-sea <sigma a^2>    = 0.04881276
+  [PASS] Including determinant weights changes the measured observable  (delta=+0.003131)
+  [PASS] Changing sea masses changes the determinant-weighted observable  (delta=+0.000187)
+  [PASS] Therefore N_f and sea-mass data are load-bearing for B2
+
+========================================================================================
+PART 4: CURRENT FINITE RUNNER CANNOT BE THE B2 CLOSURE
+========================================================================================
+  [PASS] Confinement note says quantitative extraction needs larger volumes
+  [PASS] Current runner uses L=4 for a qualitative pure-gauge check
+  [PASS] A 16^4 check has much larger link count than the current 4^4 runner  (link-count ratio=256x)
+  [PASS] The B2 spread exceeds a one-percent budget until determinant data enter  (screening-factor family spans ten percent)
+
+========================================================================================
+PART 5: CLAIM-STATUS FIREWALL
+========================================================================================
+  [PASS] Sea-fermion determinant input is absent from the current B2 payload
+  [PASS] No N_f=2+1 beta=6.0 ensemble is present in the current B2 payload
+  [PASS] Sea-mass specification remains load-bearing
+  [PASS] Large-volume Creutz-ratio extraction remains load-bearing
+  [PASS] B2 cannot close on the current data alone
+
+========================================================================================
+SUMMARY: PASS=21 FAIL=0
+========================================================================================
+Result: B2 remains open; current pure-gauge data cannot close it.
+A proper N_f=2+1 determinant ensemble or explicit budgeted comparator is required.
