@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:26:32.795114+00:00
+**Generated:** 2026-04-30T22:28:59.136900+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 214 |
+| `audited_clean` | 215 |
 | `audited_conditional` | 468 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 790 |
+| `unaudited` | 789 |
 
 | criticality | count |
 |---|---:|
@@ -289,6 +289,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `scalar_3plus1_temporal_ratio_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
+| `self_consistency_forces_poisson_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-gpt-5 | C | - |
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
@@ -10180,6 +10181,18 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 - **load-bearing step:** 9 candidate families tested, with best second candidate drift=0.05, restore=0.30, passing the full control battery for F~M, Born, gravity TOWARD, and complex-action crossover.  _(class `C`)_
 - **chain closes:** False — The only cited battery script is absent from the repository and is described as 'to be frozen', so the numeric control battery cannot be rerun or checked from the provided artifact chain.
 - **rationale:** Issue: The note's retained positive result rests on a missing artifact, scripts/second_grown_family_battery.py, explicitly labeled as not yet frozen, and no frozen output is provided in the artifact chain. Why this blocks: the quoted F~M, Born, gravity, and complex-action control-battery numbers are unreviewable from the allowed source and artifacts, so the proposed-retained second-family claim cannot be independently reproduced or checked. Repair target: restore or recreate the exact battery script, add a frozen log and preferably a PASS/FAIL assertion runner, or replace this note with audit-clean sign/complex second-family notes that actually carry the evidence. Claim boundary until fixed: it is safe to say this note records a historical candidate at drift=0.05, restore=0.30; it is not safe to claim a retained second independent grown family from the current artifact chain.
+- **auditor confidence:** high
+
+### `self_consistency_forces_poisson_note`
+
+- **Note:** [`SELF_CONSISTENCY_FORCES_POISSON_NOTE.md`](../../docs/SELF_CONSISTENCY_FORCES_POISSON_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-25`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** On the tested 3D nearest-neighbor cubic-lattice surface, unscreened Poisson is the best-supported operator in the finite sweep: it converges with attractive monotone near-Newtonian fields, the tested non-screened alternatives fail the same physics checks, screened variants drift away from beta=1, and susceptibility correlates with the Poisson Green profile.  _(class `C`)_
+- **chain closes:** True — The source note explicitly scopes itself to a bounded finite-lattice/tested-family preference result and disclaims full uniqueness. The restored runner exits 0 and reproduces the stated Poisson convergence, alternative-operator comparison, susceptibility correlation, screened-Poisson drift, and N=24 confirmation.
+- **rationale:** Clean as a bounded operator-preference result only: the note does not claim retained Poisson uniqueness, and its caveats match the runner surface. The live runner exits 0 after runner restoration and verifies that Poisson converges on N=20 and N=24 with attractive monotone fields, tested non-screened alternatives do not share the same physically correct profile, screened Poisson with positive mu^2 drifts away from beta=1, and the susceptibility profile is strongly correlated with the Poisson Green profile. Residual risk is the stated bounded scope: finite lattices, tested operator family, small-perturbation susceptibility, and ordered cubic graph only.
 - **auditor confidence:** high
 
 ### `self_gravity_entropy_note_2026-04-11`
