@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T15:15:03.913056+00:00
+**Generated:** 2026-04-30T15:15:07.488238+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 9 |
-| `audited_clean` | 94 |
+| `audited_clean` | 95 |
 | `audited_conditional` | 274 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1113 |
+| `unaudited` | 1112 |
 
 | criticality | count |
 |---|---:|
@@ -124,6 +124,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `charged_lepton_radiative_tau_selector_firewall_note_2026-04-26` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `chiral_3plus1d_coupled_coin_note` | unknown | ~~audited_clean~~ | unknown | cross_family | codex-current | C | - |
 | `claude_complex_action_carryover_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `composite_source_additivity_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -1661,6 +1662,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `chiral_3plus1d_coupled_coin_note`
+
+- **Note:** [`CHIRAL_3PLUS1D_COUPLED_COIN_NOTE.md`](../../docs/CHIRAL_3PLUS1D_COUPLED_COIN_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** unknown  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** The coupled-coin scan records how interpolation from factorized 2x2 coins to a coupled 6x6 unitary affects dispersion, isotropy, and loop response on the stated finite grid.  _(class `C`)_
+- **chain closes:** True — Yes. The claim is a finite scan report and the registered runner completed successfully on that scan.
+- **rationale:** The row is audit-clean only as a finite scan artifact. The runner completed successfully and the classified check surface is {'A': 0, 'B': 0, 'C': 7, 'D': 0, 'total_pass': 7}; no external comparator or broad theorem is being ratified. Residual risk is any extension beyond the stated grid and mix sweep.
 - **auditor confidence:** high
 
 ### `chiral_3plus1d_mixing_period_note`
