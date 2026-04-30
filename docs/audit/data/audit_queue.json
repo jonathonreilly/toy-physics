@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 378,
+    "leaf": 377,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:26:51.548563+00:00",
+  "generated_at": "2026-04-30T19:26:57.646663+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13220,23 +13220,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "gate_b_grown_joint_package_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.5,
-      "note_path": "docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/gate_b_grown_joint_package.py",
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "graph_laplacian_core_card_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -13317,27 +13300,6 @@
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "lanes.generated-geometry.readme",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "gate_b_grown_joint_package_note",
-        "source_resolved_generated_architecture_bridge_note",
-        "emergent_geometry_growth_note_2026-04-10"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.085,
-      "note_path": "docs/lanes/generated-geometry/README.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 2
     },
     {
       "audit_independence_required": "any_non_self",
@@ -18281,6 +18243,27 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "lanes.generated-geometry.readme",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "gate_b_grown_joint_package_note",
+        "source_resolved_generated_architecture_bridge_note",
+        "emergent_geometry_growth_note_2026-04-10"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 2.085,
+      "note_path": "docs/lanes/generated-geometry/README.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 2
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "lanes.mirror.readme",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -19750,6 +19733,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 522,
-  "total_pending": 904
+  "ready_count": 520,
+  "total_pending": 903
 }
