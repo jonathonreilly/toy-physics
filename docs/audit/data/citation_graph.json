@@ -18325,7 +18325,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T13:30:39.413625+00:00",
+  "generated_at": "2026-04-30T13:31:17.098477+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19818,6 +19818,16 @@
       "path": "docs/AXIOM_CHANGE_PROPOSAL_2026-04-10.md",
       "runner_path": null,
       "title": "Axiom Update And Interpretation Change"
+    },
+    "axiom_first_reflection_positivity_theorem_note_2026-04-29": {
+      "claim_id": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support \u2014 branch-local theorem note on A_min; runner passing; audit-pending.",
+      "deps": [],
+      "note_hash": "d5e0c27fcb2697459a61091181ec8cb122e0e4a24f4e05190fc46b8c102839bb",
+      "path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
+      "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action"
     },
     "axiom_first_spin_statistics_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_spin_statistics_theorem_note_2026-04-29",
@@ -40252,6 +40262,7 @@
     "atomic_rydberg_dependency_firewall_note_2026-04-27",
     "audited_symmetry_synthesis_note",
     "axiom_change_proposal_2026-04-10",
+    "axiom_first_reflection_positivity_theorem_note_2026-04-29",
     "axiom_first_spin_statistics_theorem_note_2026-04-29",
     "axiom_reduction_note",
     "b_independence_mechanism_note",
@@ -41350,16 +41361,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4581,
-    "leaf_count": 738,
-    "node_count": 1676,
-    "root_count": 1204,
-    "runners_with_path": 760,
+    "leaf_count": 739,
+    "node_count": 1677,
+    "root_count": 1205,
+    "runners_with_path": 761,
     "status_counts": {
       "bounded": 254,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 178,
+      "support": 179,
       "unknown": 795
     }
   }
