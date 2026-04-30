@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:06:22.467414+00:00
+**Generated:** 2026-04-30T22:07:36.900588+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 7 |
 | bounded | 280 |
-| support | 249 |
+| support | 248 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 740 |
+| ~~audited_conditional~~ | 741 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 212 |
-| `audited_conditional` | 462 |
+| `audited_conditional` | 463 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 799 |
+| `unaudited` | 798 |
 
 | criticality | count |
 |---|---:|
@@ -742,6 +742,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `three_generation_structure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `universal_qg_canonical_refinement_net_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `unpromoted_branch_retainability_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `vector_sector_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -10942,6 +10943,23 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `finite_atlas_transition_cocycle`
   - `chartwise_K_GR_nondegeneracy`
   - `global_source_field_pairing_patch`
+- **auditor confidence:** high
+
+### `universal_qg_canonical_refinement_net_note`
+
+- **Note:** [`UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`](../../docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-16`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Once the barycentric-dyadic refinement maps are chosen geometrically, they induce canonical coarse/fine splittings, so the atlas-refinement pullback and Gaussian projective pushforward live on the same canonical discrete net.  _(class `B`)_
+- **chain closes:** False — The barycentric/dyadic directed index family is a plausible canonical net, but the claimed exact pullback/projective compatibility imports unaudited or conditional upstream results: global stationary atlas closure, UV-finite partition density, and Schur/projective pushforward. No runner or proof artifact constructs the refinement maps, coarse/fine splittings, cocycles, and pushforwards together on one finite net.
+- **rationale:** Issue: the note correctly names a natural barycentric-spatial/dyadic-temporal refinement family, but the stronger claim that the route now has exact refinement pullback plus Gaussian projective pushforward on that net depends on separate upstream closure theorems and an unverified canonical coarse/fine split. Why this blocks: a directed refinement index set is not yet a proved QG projective-system theorem. Repair target: register a proof/runner that builds A_(n,m), verifies transition cocycles and density invariance, constructs the induced coarse/fine splitting, and applies the Schur pushforward associatively. Claim boundary until fixed: the barycentric-dyadic atlas family is a natural candidate canonical geometric net; exact QG refinement/projective closure remains conditional.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
+  - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
+  - `UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`
+  - `canonical_coarse_fine_refinement_splitting_runner`
 - **auditor confidence:** high
 
 ### `universal_qg_optional_textbook_comparison_note`
