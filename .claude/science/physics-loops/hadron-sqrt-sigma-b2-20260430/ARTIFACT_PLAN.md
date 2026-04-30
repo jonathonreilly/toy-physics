@@ -20,3 +20,50 @@ Status: complete in
 `docs/HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md`
 with runner
 `scripts/frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge.py`.
+
+## Cycle 3
+
+- B5 current-surface framework-link audit.
+- Close the shortcut "structural `SU(3)` + `beta=6` + `4^4` check retains
+  framework-to-standard-QCD bridge".
+- Name the next B5 executable route: local finite-volume scout or compute
+  budget.
+
+Status: complete in
+`docs/HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md`
+with runner
+`scripts/frontier_hadron_lane1_sqrt_sigma_b5_framework_link_audit.py`.
+
+## Cycle 4
+
+- Finite-volume ladder compute budget.
+- Decide whether `L=4,6,8` can materially close B5.
+- Name the first compute class that can close B5.
+
+Status: complete in
+`docs/HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md`
+with runner
+`scripts/frontier_hadron_lane1_sqrt_sigma_b5_ladder_budget.py`.
+
+## Cycle 5
+
+- Low-stat finite-volume pure-gauge scout at `L=4,6,8`.
+- Validate plaquette, Wilson-loop, and Creutz-ratio measurement plumbing.
+- Keep the result explicitly below B5-closure status.
+
+Status: complete in
+`docs/HADRON_LANE1_SQRT_SIGMA_B5_LOWSTAT_SCOUT_NOTE_2026-04-30.md`
+with runner
+`scripts/frontier_hadron_lane1_sqrt_sigma_b5_lowstat_scout.py`.
+
+## Cycle 6
+
+- Add a resumable B5 Wilson/Creutz ladder runner.
+- Provide append-only JSONL measurements and per-volume state checkpoints.
+- Smoke-verify the runner while keeping B5 non-closing until production
+  `L=8,12,16` statistics are accumulated.
+
+Status: complete in
+`docs/HADRON_LANE1_SQRT_SIGMA_B5_RESUMABLE_LADDER_NOTE_2026-04-30.md`
+with runner
+`scripts/frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder.py`.

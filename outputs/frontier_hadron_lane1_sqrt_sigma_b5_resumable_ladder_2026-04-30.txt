@@ -1,0 +1,44 @@
+========================================================================================
+LANE 1 SQRT(SIGMA) B5 RESUMABLE WILSON/CREUTZ LADDER
+========================================================================================
+
+Question:
+  Is there now a resumable compute path for the B5 production ladder?
+
+Answer:
+  Yes as executable infrastructure; no as B5 closure until production
+  L=8,12,16 statistics and uncertainties are actually accumulated.
+
+----------------------------------------------------------------------------------------
+Part 1: runner configuration checks
+----------------------------------------------------------------------------------------
+  profile=smoke
+  volumes=4
+  therm=1, measurements=1, skip=1
+  max_seconds=30.0
+  [PASS] production profile targets the first B5-closing volume class
+  [PASS] runner has wall-clock and checkpoint controls
+  [PASS] smoke profile stays below B5 closure scale
+
+----------------------------------------------------------------------------------------
+Part 2: resumable ladder smoke run
+----------------------------------------------------------------------------------------
+  L=4: sweeps=2, measurements=1/1, acc=0.187, status=complete
+  [PASS] runner produced at least one JSONL measurement
+  [PASS] JSONL measurement schema is complete
+  [PASS] latest measurement has finite primary observables
+  [PASS] state checkpoint was written for each started volume
+  [PASS] checkpoint can be reloaded for resume
+  [PASS] resume counters advanced
+
+----------------------------------------------------------------------------------------
+Part 3: artifact checks
+----------------------------------------------------------------------------------------
+  [PASS] note labels the runner as append-only/resumable but not B5 closure
+  [PASS] canonical index includes the resumable ladder runner
+  [PASS] Lane 1 open-science doc includes the resumable ladder
+  [PASS] loop state advanced to cycle 6
+
+========================================================================================
+PASS=13 FAIL=0
+========================================================================================

@@ -10,10 +10,17 @@ branch: physics-loop/hadron-sqrt-sigma-b2-block01-20260430
 base: origin/main
 base_commit_at_start: "17789d49 audit: normalize replayed sweep surfaces"
 lock_status: held
-current_phase: cycle-2-complete
-cycles_completed: 2
-active_route: R3-B5-large-volume-framework-link-next
-active_hard_residual: "External static-energy bridge is bounded and materially stronger than rough x0.96, but finite-window sigma has a convention split and B5 framework-to-standard-QCD linkage remains explicit."
+current_phase: cycle-6-complete
+cycles_completed: 6
+completed_phases:
+  - cycle-1-complete
+  - cycle-2-complete
+  - cycle-3-complete
+  - cycle-4-complete
+  - cycle-5-complete
+  - cycle-6-complete
+active_route: R3-B5-production-statistics-next
+active_hard_residual: "B5 is compute-limited: the low-stat L=4,6,8 scout and resumable ladder runner validate the local compute pipeline, but B5 remains non-closing until production L=8,12,16 statistics and uncertainties are accumulated."
 files_touched:
   - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/STATE.yaml
   - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/GOAL.md
@@ -27,15 +34,32 @@ files_touched:
   - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/HANDOFF.md
   - docs/HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md
   - docs/HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md
+  - docs/HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md
+  - docs/HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md
+  - docs/HADRON_LANE1_SQRT_SIGMA_B5_LOWSTAT_SCOUT_NOTE_2026-04-30.md
+  - docs/HADRON_LANE1_SQRT_SIGMA_B5_RESUMABLE_LADDER_NOTE_2026-04-30.md
   - docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md
   - docs/CANONICAL_HARNESS_INDEX.md
   - scripts/frontier_hadron_lane1_sqrt_sigma_b2_gate_repair.py
   - scripts/frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge.py
+  - scripts/frontier_hadron_lane1_sqrt_sigma_b5_framework_link_audit.py
+  - scripts/frontier_hadron_lane1_sqrt_sigma_b5_ladder_budget.py
+  - scripts/frontier_hadron_lane1_sqrt_sigma_b5_lowstat_scout.py
+  - scripts/frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder.py
   - outputs/frontier_hadron_lane1_sqrt_sigma_b2_gate_repair_2026-04-30.txt
   - outputs/frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge_2026-04-30.txt
+  - outputs/frontier_hadron_lane1_sqrt_sigma_b5_framework_link_audit_2026-04-30.txt
+  - outputs/frontier_hadron_lane1_sqrt_sigma_b5_ladder_budget_2026-04-30.txt
+  - outputs/frontier_hadron_lane1_sqrt_sigma_b5_lowstat_scout_2026-04-30.txt
+  - outputs/frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder_2026-04-30.txt
+  - outputs/frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder_2026-04-30.jsonl
 verification:
   - "PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b2_gate_repair.py -> PASS=16 FAIL=0"
   - "PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge.py -> PASS=14 FAIL=0"
+  - "PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b5_framework_link_audit.py -> PASS=16 FAIL=0"
+  - "PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b5_ladder_budget.py -> PASS=13 FAIL=0"
+  - "PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b5_lowstat_scout.py -> PASS=9 FAIL=0"
+  - "PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder.py --profile smoke --fresh --checkpoint-dir outputs/frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder_checkpoints_smoke -> PASS=13 FAIL=0"
   - "PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py -> PASS=16 FAIL=0"
 claim_state_movement:
   - "Cycle 1: rough x0.96 B2 promotion closed negatively."
@@ -43,5 +67,9 @@ claim_state_movement:
   - "Cycle 1: literal asymptotic full-QCD string tension rejected as the B2 target because full QCD strings break."
   - "Cycle 1: B2 repaired into B2a observable-definition and B2b bridge-value gates."
   - "Cycle 2: external static-energy bridge scouted; TUMQCD fit-window sigma gives 467.39 +/- 9.57 MeV or 481.71 +/- 9.70 MeV depending static-potential convention; CLS N_f=2+1 r0/r1 force scales are clean but do not uniquely map to sqrt(sigma)."
-next_exact_action: "Cycle 3 B5 large-volume framework-to-standard-QCD link check, or write a retained-with-budget draft that chooses r0/r1 as the force-scale observable and keeps sqrt(sigma) bounded."
+  - "Cycle 3: B5 current-surface shortcut closed negatively; graph-first SU(3) + g_bare normalization + 4^4 check is support, not retained framework-to-standard-QCD bridge."
+  - "Cycle 4: B5 ladder budget landed; L=4,6,8 is scout only, first B5-closing compute class is L=8,12,16 or equivalent theorem."
+  - "Cycle 5: low-stat L=4,6,8 pure-gauge scout validates the local plaquette/Wilson-loop/Creutz measurement pipeline, but is explicitly not B5 closure."
+  - "Cycle 6: resumable B5 Wilson/Creutz ladder runner landed and smoke-verified; production L=8,12,16 statistics remain to be accumulated before any B5 promotion."
+next_exact_action: "Run the resumable B5 ladder with --profile production under wall-clock checkpoints until L=8,12,16 statistics support or reject the bridge with uncertainties."
 stop_condition: "runtime budget reached, blocker requiring human science judgment, honest claim-state closure achieved, or no route passes dramatic-step gate after Deep Work Rules are satisfied"

@@ -11,6 +11,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 import math
+import re
 import sys
 from pathlib import Path
 
@@ -47,6 +48,11 @@ CLS_R0_OVER_R1_ERR = 0.012
 
 def read(rel: str) -> str:
     return (ROOT / rel).read_text(encoding="utf-8")
+
+
+def state_cycle_at_least(state: str, cycle: int) -> bool:
+    match = re.search(r"cycles_completed:\s*(\d+)", state)
+    return bool(match) and int(match.group(1)) >= cycle
 
 
 def check(name: str, condition: bool, detail: str = "") -> bool:
@@ -257,7 +263,7 @@ def part4_artifact_checks() -> None:
     )
     check(
         "loop state advanced to cycle 2",
-        "cycles_completed: 2" in state and "cycle-2-complete" in state,
+        state_cycle_at_least(state, 2) and "cycle-2-complete" in state,
     )
 
 

@@ -1,0 +1,39 @@
+========================================================================================
+LANE 1 SQRT(SIGMA) B5 LOW-STAT FINITE-VOLUME SCOUT
+========================================================================================
+
+Question:
+  Does the local L=4,6,8 measurement pipeline work well enough to
+  justify a production B5 ladder?
+
+Answer:
+  Yes as a pipeline scout; no as B5 closure.
+
+----------------------------------------------------------------------------------------
+Part 1: low-stat beta=6 scout
+----------------------------------------------------------------------------------------
+  L=4: P=0.8174 +/- 0.0108, W11=0.8174, W12=0.7250, W22=0.6294, chi22=0.0214, acc=0.248
+  L=6: P=0.8149 +/- 0.0103, W11=0.8149, W12=0.7165, W22=0.6179, chi22=0.0194, acc=0.250
+  L=8: P=0.8204 +/- 0.0099, W11=0.8217, W12=0.7246, W22=0.6237, chi22=0.0242, acc=0.245
+  [PASS] all scout plaquettes are finite and in a physical range
+  [PASS] all scout acceptances are usable
+  [PASS] all scout Wilson loops have positive W11/W12/W22 signals
+
+----------------------------------------------------------------------------------------
+Part 2: qualitative ladder checks
+----------------------------------------------------------------------------------------
+  [PASS] area ordering holds on every volume
+  [PASS] chi22 is finite on every volume
+  plaquette drift across L=4,6,8 = 0.0054
+  [PASS] low-stat plaquette drift is measured, not assumed zero  (drift=0.0054)
+
+----------------------------------------------------------------------------------------
+Part 3: artifact checks
+----------------------------------------------------------------------------------------
+  [PASS] note labels the run as scout rather than closure
+  [PASS] canonical index includes the low-stat scout runner
+  [PASS] loop state advanced to cycle 5
+
+========================================================================================
+PASS=9 FAIL=0
+========================================================================================

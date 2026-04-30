@@ -1,0 +1,60 @@
+========================================================================================
+LANE 1 SQRT(SIGMA) B5 FINITE-VOLUME LADDER BUDGET
+========================================================================================
+
+Question:
+  Can an L=4,6,8 local ladder materially close the B5 framework
+  link for imported static-energy/string-tension values?
+
+Answer:
+  No. It is useful as a scout, but B5 closure first appears in
+  the production L=8,12,16 class or an equivalent theorem.
+
+----------------------------------------------------------------------------------------
+Part 1: finite-volume cost scaling
+----------------------------------------------------------------------------------------
+  L= 4: sites=   256, links=   1024, rel_to_L4=   1.0x, max_R~2, link_mem=   0.1 MiB
+  L= 6: sites=  1296, links=   5184, rel_to_L4=   5.1x, max_R~3, link_mem=   0.7 MiB
+  L= 8: sites=  4096, links=  16384, rel_to_L4=  16.0x, max_R~4, link_mem=   2.2 MiB
+  L=12: sites= 20736, links=  82944, rel_to_L4=  81.0x, max_R~6, link_mem=  11.4 MiB
+  L=16: sites= 65536, links= 262144, rel_to_L4= 256.0x, max_R~8, link_mem=  36.0 MiB
+  [PASS] L=16 is 256x the per-sweep site count of L=4
+  [PASS] L=8 is still only a scout relative to L=16
+  [PASS] link memory is not the blocker through L=16  (L16 link memory 36.0 MiB)
+
+----------------------------------------------------------------------------------------
+Part 2: Wilson-loop / Creutz-ratio size requirements
+----------------------------------------------------------------------------------------
+  L=4 max conservative square loop R~2
+  L=8 max conservative square loop R~4
+  L=16 max conservative square loop R~8
+  [PASS] current L=4 cannot test R>=3 square loops  (max_R~2)
+  [PASS] L=8 can first touch R=4 but has no asymptotic plateau leverage  (one large-loop endpoint only)
+  [PASS] L=16 can support multiple R>=3 Creutz-ratio points  (max_R~8)
+
+----------------------------------------------------------------------------------------
+Part 3: B5 ladder gate model
+----------------------------------------------------------------------------------------
+  current_L4_only: 1/5 gate bits
+  local_L4_L6_L8_scout: 3/5 gate bits
+  production_L8_L12_L16_ladder: 5/5 gate bits
+  [PASS] current L4-only evidence is below B5 ladder threshold
+  [PASS] local L4/L6/L8 scout can quantify drift but not close B5
+  [PASS] production L8/L12/L16 ladder is the first B5-closing class
+
+----------------------------------------------------------------------------------------
+Part 4: required observable packet
+----------------------------------------------------------------------------------------
+  required: plaquette mean and uncertainty
+  required: Wilson loops W(R,T)
+  required: Creutz ratios chi(R,T)
+  required: static-force or r0/r1 proxy
+  required: same beta=6 and action policy
+  [PASS] budget note lists the required observable packet
+  [PASS] budget note marks L4/L6/L8 as scout rather than closure
+  [PASS] canonical index includes the B5 ladder budget runner
+  [PASS] loop state advanced to cycle 4
+
+========================================================================================
+PASS=13 FAIL=0
+========================================================================================

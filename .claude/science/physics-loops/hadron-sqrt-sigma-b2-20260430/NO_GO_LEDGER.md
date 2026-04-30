@@ -25,3 +25,20 @@
 - **Literal asymptotic full-QCD string tension**: not the right B2
   object because full QCD strings break. B2 must target a pre-breaking
   effective tension, force scale, or static-energy fit window.
+- **B5 current-surface shortcut**: structural graph-first `SU(3)`, the
+  conditional `g_bare -> beta=6` Wilson-action coefficient, and the
+  current `4^4` plaquette/Wilson-loop check do not retain the
+  framework-to-standard-QCD bridge. They remain support for a bounded
+  bridge until a large-volume/asymptotic framework-side ladder or
+  equivalent theorem lands.
+- **B5 local-ladder closure**: `L=4,6,8` can quantify finite-volume drift
+  and validate the pipeline, but it does not provide enough large-loop
+  leverage for B5 retention. The first B5-closing compute class is
+  `L=8,12,16` or an equivalent theorem.
+- **B5 low-stat scout promotion**: the fixed `L=4,6,8` scout validates
+  measurement plumbing only. Its statistics, loop extent, and volume ladder
+  are not enough to promote or retain the framework-to-standard-QCD bridge.
+- **B5 runner-exists promotion**: a resumable Wilson/Creutz runner is
+  infrastructure, not evidence. The bridge still needs production
+  `L=8,12,16` statistics, uncertainty estimates, and a Wilson-action
+  residual declaration before promotion.

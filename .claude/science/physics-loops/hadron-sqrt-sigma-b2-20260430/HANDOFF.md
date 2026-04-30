@@ -17,7 +17,18 @@ The landed result is negative/progress:
   screening closure. TUMQCD fit-window `sqrt(sigma)` gives about
   `467.39 +/- 9.57 MeV` or `481.71 +/- 9.70 MeV` depending the
   static-potential convention; CLS `N_f=2+1` gives clean `r0`/`r1`
-  force scales but not a unique `sqrt(sigma)` map.
+  force scales but not a unique `sqrt(sigma)` map;
+- B5 current-surface shortcut is closed negatively: structural `SU(3)` +
+  `g_bare -> beta=6` + current `4^4` check supports the bridge but does
+  not retain it;
+- B5 ladder budget is now explicit: `L=4,6,8` is a scout, not closure;
+  `L=8,12,16` is the first compute class that can close B5.
+- the fixed low-stat `L=4,6,8` pure-gauge scout validates local
+  plaquette/Wilson-loop/Creutz measurement plumbing but remains explicitly
+  non-closing.
+- a resumable B5 Wilson/Creutz ladder runner now exists. Its smoke
+  profile is verified; production `L=8,12,16` statistics remain to be
+  accumulated before B5 can be promoted.
 
 Verification:
 
@@ -28,6 +39,21 @@ PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b2_gate_repa
 PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge.py
 # PASS=14 FAIL=0
 
+PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b5_framework_link_audit.py
+# PASS=16 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b5_ladder_budget.py
+# PASS=13 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b5_lowstat_scout.py
+# PASS=9 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder.py \
+  --profile smoke \
+  --fresh \
+  --checkpoint-dir outputs/frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder_checkpoints_smoke
+# PASS=13 FAIL=0
+
 PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py
 # PASS=16 FAIL=0
 ```
@@ -36,9 +62,9 @@ PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_confinement_to_mass_fir
 
 Pick one of two next blocks:
 
-1. B5 large-volume framework-to-standard-QCD link check. This is the
-   stronger science route because it would reduce the residual on all
-   imported lattice-QCD bridge values.
+1. Run the resumable B5 ladder with `--profile production` under repeated
+   wall-clock checkpoints until the `L=8,12,16` statistics can support or
+   reject the bridge with uncertainties.
 2. Retained-with-budget draft that chooses `r0`/`r1` as the Lane 1
    force-scale observable and keeps `sqrt(sigma)` as a bounded
    comparator, with static-potential convention split explicit.
