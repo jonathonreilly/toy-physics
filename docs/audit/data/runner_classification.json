@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T11:47:39.014181+00:00",
+  "generated_at": "2026-04-30T11:54:21.323677+00:00",
   "per_claim": {
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "assert_count": 0,
@@ -264,6 +264,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_bh_entropy_rt_ratio_widom.py"
+    },
+    "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_bh_quarter_wald_noether_framework_carrier.py"
     },
     "bminusl_anomaly_freedom_theorem_note_2026-04-24": {
       "assert_count": 1,
@@ -9713,6 +9725,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_bh_quarter_wald_noether_framework_carrier.py": {
+      "assert_count": 0,
+      "claims": [
+        "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_bminusl_anomaly_freedom.py": {
@@ -20102,13 +20129,13 @@
     "decoration_candidates": 73,
     "dominant_class_distribution": {
       "A": 6,
-      "B": 111,
+      "B": 112,
       "C": 358,
       "D": 121,
       "none": 140
     },
-    "runners_classified": 736,
+    "runners_classified": 737,
     "runners_with_C": 442,
-    "runners_with_D": 212
+    "runners_with_D": 213
   }
 }

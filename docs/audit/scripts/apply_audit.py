@@ -16,6 +16,8 @@ rules:
   - the row's note_hash must match disk (otherwise the audit is stale)
   - fresh-context second passes over existing high/critical terminal verdicts
     record a cross-confirmation comparison before any retraction can cascade
+  - third-auditor passes over cross-confirmation disagreements record the
+    tiebreaker and hard-stop on genuine three-way disagreement
 """
 from __future__ import annotations
 
@@ -73,6 +75,30 @@ def cross_confirmation_error(first: dict, audit: dict) -> str | None:
     if same_family and audit.get("independence") != "fresh_context":
         return (
             "same-family second audit requires independence='fresh_context' "
+            "to document a restricted-input clean-room session"
+        )
+    return None
+
+
+def third_confirmation_error(cross_confirmation: dict, audit: dict) -> str | None:
+    """Return a rejection reason when the third audit is not independent."""
+    prior_auditors = {
+        (cross_confirmation.get("first_audit") or {}).get("auditor"),
+        (cross_confirmation.get("second_audit") or {}).get("auditor"),
+    }
+    prior_auditors.discard(None)
+    auditor = audit.get("auditor")
+    if auditor in prior_auditors:
+        return "third auditor must have a distinct auditor identity/session from both prior auditors"
+
+    prior_families = {
+        (cross_confirmation.get("first_audit") or {}).get("auditor_family"),
+        (cross_confirmation.get("second_audit") or {}).get("auditor_family"),
+    }
+    prior_families.discard(None)
+    if audit.get("auditor_family") in prior_families and audit.get("independence") != "fresh_context":
+        return (
+            "same-family third audit requires independence='fresh_context' "
             "to document a restricted-input clean-room session"
         )
     return None
@@ -140,6 +166,9 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     terminal_second_pass_msg: str | None = None
     terminal_second_pass_error: str | None = None
     terminal_second_pass_blocker: str | None = None
+    third_pass_msg: str | None = None
+    third_pass_error: str | None = None
+    third_pass_blocker: str | None = None
     prior_cross_confirmation = row.get("cross_confirmation")
     prior_cross_confirmation_status = (
         prior_cross_confirmation.get("status")
@@ -181,6 +210,44 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
                 "promote to third-auditor review or human escalation"
             )
             terminal_second_pass_blocker = "cross_confirmation_disagreement"
+
+    third_pass = (
+        prior_cross_confirmation_status == "disagreement"
+        and row.get("blocker") == "cross_confirmation_disagreement"
+    )
+    if third_pass:
+        if independence == "weak":
+            return False, "third-auditor confirmation requires independence != 'weak'"
+        err = third_confirmation_error(prior_cross_confirmation or {}, audit)
+        if err:
+            return False, err
+
+        first = (prior_cross_confirmation or {}).get("first_audit") or {}
+        second = (prior_cross_confirmation or {}).get("second_audit") or {}
+        third = audit_summary_from_blob(audit)
+        first_verdict = first.get("verdict")
+        second_verdict = second.get("verdict")
+        third_verdict = third.get("verdict")
+        if third_verdict == first_verdict:
+            row["cross_confirmation"]["third_audit"] = third
+            row["cross_confirmation"]["status"] = "third_confirmed_first"
+            row["cross_confirmation"]["mode"] = "terminal_third_pass"
+            third_pass_msg = "third auditor confirmed first verdict"
+        elif third_verdict == second_verdict:
+            row["cross_confirmation"]["third_audit"] = third
+            row["cross_confirmation"]["status"] = "third_confirmed_second"
+            row["cross_confirmation"]["mode"] = "terminal_third_pass"
+            third_pass_msg = "third auditor confirmed second verdict"
+        else:
+            row["cross_confirmation"]["third_audit"] = third
+            row["cross_confirmation"]["status"] = "three_way_disagreement"
+            row["cross_confirmation"]["mode"] = "terminal_third_pass"
+            third_pass_error = (
+                "third auditor introduced a third verdict "
+                f"({first_verdict!r} vs {second_verdict!r} vs {third_verdict!r}); "
+                "escalate to human review"
+            )
+            third_pass_blocker = "third_auditor_disagreement"
 
     # Cross-confirmation flow for critical claims.
     # First audit on a critical claim with audited_clean lands as
@@ -257,7 +324,7 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     row["auditor_confidence"] = audit.get("auditor_confidence")
     if "runner_check_breakdown" in audit:
         row["runner_check_breakdown"] = audit["runner_check_breakdown"]
-    row["blocker"] = terminal_second_pass_blocker
+    row["blocker"] = third_pass_blocker if third_pass else terminal_second_pass_blocker
 
     # Snapshot the state at audit time so invalidate_stale_audits.py can
     # detect changes that warrant re-audit (dep added/removed, dep status
@@ -282,6 +349,10 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         return False, terminal_second_pass_error
     if terminal_second_pass_msg:
         return True, terminal_second_pass_msg
+    if third_pass_error:
+        return False, third_pass_error
+    if third_pass_msg:
+        return True, third_pass_msg
     return True, "applied"
 
 

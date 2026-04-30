@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 1,
     "high": 235,
-    "leaf": 571,
+    "leaf": 572,
     "medium": 344
   },
-  "generated_at": "2026-04-30T11:47:39.308059+00:00",
+  "generated_at": "2026-04-30T11:54:21.812128+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -266,6 +266,23 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "universal_gr_lorentzian_global_atlas_closure_note",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 8,
+      "load_bearing_score": 9.129,
+      "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 34
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "universal_qg_canonical_refinement_net_note",
       "criticality": "high",
       "criticality_rank": 2,
@@ -464,23 +481,6 @@
       "note_path": "docs/DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md",
       "ready": true,
       "runner_path": "scripts/frontier_dm_pmns_ordered_chain_graded_current_delta_closure_2026_04_21.py",
-      "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "universal_gr_lorentzian_global_atlas_closure_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 7,
-      "load_bearing_score": 8.587,
-      "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md",
-      "ready": true,
-      "runner_path": null,
       "transitive_descendants": 33
     },
     {
@@ -4432,6 +4432,25 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [
+        "universal_qg_optional_textbook_comparison_note"
+      ],
+      "direct_in_degree": 6,
+      "load_bearing_score": 8.087,
+      "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 33
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "proton_lifetime_derived_note",
       "criticality": "high",
       "criticality_rank": 2,
@@ -4705,25 +4724,6 @@
       "direct_in_degree": 5,
       "load_bearing_score": 7.544,
       "note_path": "docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 32
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [
-        "universal_qg_optional_textbook_comparison_note"
-      ],
-      "direct_in_degree": 5,
-      "load_bearing_score": 7.544,
-      "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md",
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 32
@@ -22889,6 +22889,30 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
+        "planck_boundary_density_extension_theorem_note_2026-04-24",
+        "universal_gr_discrete_global_closure_note",
+        "universal_gr_lorentzian_global_atlas_closure_note",
+        "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+        "planck_source_unit_normalization_support_theorem_note_2026-04-25"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_bh_quarter_wald_noether_framework_carrier.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "causal_distance_tail_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -24015,5 +24039,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1151
+  "total_pending": 1152
 }

@@ -1,14 +1,14 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T11:47:39.308059+00:00
-**Total pending:** 1151
+**Generated:** 2026-04-30T11:54:21.812128+00:00
+**Total pending:** 1152
 **Ready (all deps already at a stable tier):** 746
 
 By criticality:
 - `critical`: 1
 - `high`: 235
 - `medium`: 344
-- `leaf`: 571
+- `leaf`: 572
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -31,19 +31,19 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 13 | `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | high | 35 | 10.67 | Y | fresh_context_or_stronger | `scripts/frontier_ew_higgs_gauge_mass_diagonalization.py` |
 | 14 | `signed_gravity_response_lane_status_note_2026-04-26` | high | 35 | 9.17 | Y | fresh_context_or_stronger | `scripts/frontier_signed_gravity_response_lane_status.py` |
 | 15 | `single_axiom_hilbert_note` | high | 34 | 9.63 | Y | fresh_context_or_stronger | `scripts/frontier_single_axiom_hilbert.py` |
-| 16 | `universal_qg_canonical_refinement_net_note` | high | 34 | 9.13 | Y | fresh_context_or_stronger | - |
-| 17 | `universal_qg_uv_finite_partition_note` | high | 34 | 8.63 | Y | fresh_context_or_stronger | - |
-| 18 | `bell_inequality_derived_note` | high | 34 | 8.13 | Y | fresh_context_or_stronger | `scripts/frontier_bell_inequality.py` |
-| 19 | `broad_gravity_derivation_note` | high | 34 | 8.13 | Y | fresh_context_or_stronger | - |
-| 20 | `ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26` | high | 33 | 10.09 | Y | fresh_context_or_stronger | `scripts/frontier_ckm_moduli_only_unitarity_jarlskog_area_certificate.py` |
-| 21 | `koide_q_so2_phase_erasure_support_note_2026-04-25` | high | 33 | 9.59 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_so2_phase_erasure_support.py` |
-| 22 | `sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26` | high | 33 | 9.59 | Y | fresh_context_or_stronger | `scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py` |
-| 23 | `newton_law_derived_note` | high | 33 | 9.09 | Y | fresh_context_or_stronger | - |
-| 24 | `poisson_exhaustive_uniqueness_note` | high | 33 | 9.09 | Y | fresh_context_or_stronger | `scripts/frontier_poisson_exhaustive_uniqueness.py` |
-| 25 | `self_consistency_forces_poisson_note` | high | 33 | 9.09 | Y | fresh_context_or_stronger | `scripts/frontier_self_consistent_field_equation.py` |
-| 26 | `single_axiom_information_note` | high | 33 | 9.09 | Y | fresh_context_or_stronger | `scripts/frontier_single_axiom_information.py` |
-| 27 | `dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21` | high | 33 | 8.59 | Y | fresh_context_or_stronger | `scripts/frontier_dm_pmns_ordered_chain_graded_current_delta_closure_2026_04_21.py` |
-| 28 | `universal_gr_lorentzian_global_atlas_closure_note` | high | 33 | 8.59 | Y | fresh_context_or_stronger | - |
+| 16 | `universal_gr_lorentzian_global_atlas_closure_note` | high | 34 | 9.13 | Y | fresh_context_or_stronger | - |
+| 17 | `universal_qg_canonical_refinement_net_note` | high | 34 | 9.13 | Y | fresh_context_or_stronger | - |
+| 18 | `universal_qg_uv_finite_partition_note` | high | 34 | 8.63 | Y | fresh_context_or_stronger | - |
+| 19 | `bell_inequality_derived_note` | high | 34 | 8.13 | Y | fresh_context_or_stronger | `scripts/frontier_bell_inequality.py` |
+| 20 | `broad_gravity_derivation_note` | high | 34 | 8.13 | Y | fresh_context_or_stronger | - |
+| 21 | `ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26` | high | 33 | 10.09 | Y | fresh_context_or_stronger | `scripts/frontier_ckm_moduli_only_unitarity_jarlskog_area_certificate.py` |
+| 22 | `koide_q_so2_phase_erasure_support_note_2026-04-25` | high | 33 | 9.59 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_so2_phase_erasure_support.py` |
+| 23 | `sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26` | high | 33 | 9.59 | Y | fresh_context_or_stronger | `scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py` |
+| 24 | `newton_law_derived_note` | high | 33 | 9.09 | Y | fresh_context_or_stronger | - |
+| 25 | `poisson_exhaustive_uniqueness_note` | high | 33 | 9.09 | Y | fresh_context_or_stronger | `scripts/frontier_poisson_exhaustive_uniqueness.py` |
+| 26 | `self_consistency_forces_poisson_note` | high | 33 | 9.09 | Y | fresh_context_or_stronger | `scripts/frontier_self_consistent_field_equation.py` |
+| 27 | `single_axiom_information_note` | high | 33 | 9.09 | Y | fresh_context_or_stronger | `scripts/frontier_single_axiom_information.py` |
+| 28 | `dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21` | high | 33 | 8.59 | Y | fresh_context_or_stronger | `scripts/frontier_dm_pmns_ordered_chain_graded_current_delta_closure_2026_04_21.py` |
 | 29 | `universal_gr_lorentzian_signature_extension_note` | high | 33 | 8.59 | Y | fresh_context_or_stronger | - |
 | 30 | `dm_split2_interval_certified_dominance_closure_theorem_note_2026-04-21` | high | 33 | 8.09 | Y | fresh_context_or_stronger | `scripts/frontier_dm_split2_interval_certified_dominance_closure_2026_04_21.py` |
 | 31 | `grav_decoherence_derived_note` | high | 33 | 7.59 | Y | fresh_context_or_stronger | `scripts/frontier_grav_decoherence_derived.py` |
