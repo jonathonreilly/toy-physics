@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:56:07.562438+00:00
+**Generated:** 2026-04-30T18:56:14.648278+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 111 |
+| `audited_clean` | 112 |
 | `audited_conditional` | 311 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1053 |
+| `unaudited` | 1052 |
 
 | criticality | count |
 |---|---:|
@@ -196,6 +196,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
+| `two_sign_comparison_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_retardation_lab_prediction_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -7769,6 +7770,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `GROWN_TRANSFER_BASIN_NOTE.md`
   - `EARLY_FAMILY_TRANSFER_CONNECTIVITY_DIAGNOSIS.md`
+- **auditor confidence:** high
+
+### `two_sign_comparison_note_2026-04-10`
+
+- **Note:** [`TWO_SIGN_COMPARISON_NOTE_2026-04-10.md`](../../docs/TWO_SIGN_COMPARISON_NOTE_2026-04-10.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-ca82-singer-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Under the old identity-coupling convention, both attractive and repulsive signs remain stable on the tested graph families, so consistency does not select the sign at these parameters.  _(class `D`)_
+- **chain closes:** True — The current runner compares both signs across the three registered families and reports comparable norm drift, bounded energy, stable Phi, comparable spectra, and non-sign-selective force proxies. The conclusion is bounded to the retired identity-coupling convention and tested parameter surface.
+- **rationale:** The negative-control claim closes from the source note and current runner output. It does not claim final sign selection for the corrected parity-coupled scalar channel, and the note states that boundary. Residual risk is only if downstream readers apply this old-convention result to the corrected-coupling lane.
 - **auditor confidence:** high
 
 ### `unified_basin_freeze_note`
