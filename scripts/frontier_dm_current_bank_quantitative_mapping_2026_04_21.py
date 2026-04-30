@@ -38,13 +38,13 @@ from dm_leptogenesis_exact_common import (  # noqa: E402
     exact_package,
 )
 
-PASSES: list[tuple[str, bool, str]] = []
+PASSES: list[tuple[str, bool, str, str]] = []
 
 
-def record(name: str, ok: bool, detail: str = ""):
-    PASSES.append((name, ok, detail))
+def record(name: str, ok: bool, detail: str = "", cls: str = "C"):
+    PASSES.append((name, ok, detail, cls))
     status = "PASS" if ok else "FAIL"
-    print(f"[{status}] {name}")
+    print(f"[{cls}] {status}: {name}")
     if detail:
         for line in detail.split("\n"):
             print(f"       {line}")
@@ -196,6 +196,7 @@ def main() -> int:
         0.1 < pkg.eta_ratio_fit_bench_exact_bookkeeping < 10
         and np.isfinite(pkg.eta_ratio_fit_bench_exact_bookkeeping),
         f"ratio = {pkg.eta_ratio_fit_bench_exact_bookkeeping:.4f}",
+        cls="D",
     )
 
     # =========================================================================
@@ -216,7 +217,7 @@ def main() -> int:
     record("F.1 All cosmological constants finite", all(np.isfinite([
         M_PL, V_EW, G_STAR_EXACT, C_SPH, D_THERMAL_EXACT,
         S_OVER_NGAMMA_EXACT, Y0_SQ, ETA_OBS,
-    ])))
+    ])), cls="D")
 
     # =========================================================================
     # Part G — Summary table
@@ -270,15 +271,15 @@ def main() -> int:
     # =========================================================================
     print_section("Part I — verdict on current-bank DM mapping")
 
-    all_pass = all(ok for _, ok, _ in PASSES)
+    all_pass = all(ok for _, ok, _, _ in PASSES)
     record("I.1 Current-bank quantitative mapping explicit and consistent", all_pass)
 
-    n_pass = sum(1 for _, ok, _ in PASSES if ok)
+    n_pass = sum(1 for _, ok, _, _ in PASSES if ok)
     n_total = len(PASSES)
-    print(f"PASSED: {n_pass}/{n_total}")
-    for name, ok, _ in PASSES:
+    print(f"classified_passed: {n_pass}/{n_total}")
+    for name, ok, _, cls in PASSES:
         status = "PASS" if ok else "FAIL"
-        print(f"  [{status}] {name}")
+        print(f"  [{cls}] {status}: {name}")
 
     print()
     print("VERDICT:")

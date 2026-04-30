@@ -57,18 +57,23 @@ STATUS_LINE_RE = re.compile(
 TITLE_RE = re.compile(r"^#\s+(.+)$", re.MULTILINE)
 RUNNER_LABEL_RE = re.compile(
     r"^\s*(?:[-*]\s*)?"
-    r"(?:\*\*(?:Primary runner|Primary artifact|Primary artifacts|Script|Runner):?\*\*|"
-    r"Primary runner:|Primary artifact:|Primary artifacts:|Script:|Runner:)\s*",
+    r"(?:\*\*(?:Primary runner|Primary runners|Primary artifact|Primary artifacts|Primary files|"
+    r"Derivation runner|Source runner|Source runners|Script|Scripts|Runner|Runners|"
+    r"Files|Harnesses):?\*\*|"
+    r"Primary runner:|Primary runners:|Primary artifact:|Primary artifacts:|"
+    r"Derivation runner:|Source runner:|Source runners:|Script:|Scripts:|Runner:|Runners:|"
+    r"Files:|Harnesses:)\s*",
     re.IGNORECASE,
 )
 RUNNER_PATH_RE = re.compile(
     r"(scripts/[A-Za-z0-9_./\-]+\.py)|(?<![A-Za-z0-9_./\-])([A-Za-z0-9_.\-]+\.py)"
 )
 RUNNER_SECTION_RE = re.compile(
-    r"^##\s+(?:Primary\s+)?(?:Artifact(?:\s+chain)?|Artifacts|Script|Files)\b.*$",
+    r"^#{2,6}\s+(?:(?:Primary|Key|Audited|New|Source|Validated|Corrected(?:\s+live)?)\s+)?"
+    r"(?:Artifact(?:\s+chain)?|Artifacts|Script|Scripts|Runner|Runners|Files|Surfaces|What\s+was\s+tested)\b.*$",
     re.IGNORECASE | re.MULTILINE,
 )
-HEADING_RE = re.compile(r"^##\s+", re.MULTILINE)
+HEADING_RE = re.compile(r"^#{1,6}\s+", re.MULTILINE)
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)\s#]+\.md)(?:#[^)]*)?\)")
 
 
@@ -151,6 +156,21 @@ def extract_runner(body: str, rel_path: str | None = None) -> str | None:
         runner = first_runner_path(extract_section(body, m.end()))
         if runner:
             return runner
+
+    # Some older cards put the runner name directly in a section heading, e.g.
+    # "## 1. Canonical 17-Card (frontier_staggered_17card.py)".
+    for line in lines[:120]:
+        if line.startswith("#"):
+            runner = first_runner_path(line)
+            if runner:
+                return runner
+
+    if rel_path and not rel_path.startswith(("repo/", "work_history/", "publication/", "lanes/")):
+        first_heading = HEADING_RE.search(body)
+        preamble = body[: first_heading.start()] if first_heading else "\n".join(lines[:20])
+        preamble_paths = list(dict.fromkeys(runner_paths(preamble)))
+        if len(preamble_paths) > 1:
+            return preamble_paths[0]
 
     top_paths = list(dict.fromkeys(runner_paths("\n".join(lines[:80]))))
     if len(top_paths) == 1:
