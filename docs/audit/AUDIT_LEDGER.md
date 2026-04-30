@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T11:42:46.564703+00:00
+**Generated:** 2026-04-30T11:42:49.911532+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -27,20 +27,20 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 442 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
-| ~~audited_renaming~~ | 38 |
-| ~~audited_conditional~~ | 441 |
+| ~~audited_renaming~~ | 37 |
+| ~~audited_conditional~~ | 442 |
 | ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 226 |
+| `audited_conditional` | 227 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1152 |
+| `unaudited` | 1151 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 384 |
 | `leaf` | 764 |
 
-- **Proposed claims demoted by upstream:** 135
+- **Proposed claims demoted by upstream:** 134
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -400,6 +400,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_exact_schur_normal_form_uniqueness_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `yt_explicit_systematic_budget_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p2_v_matching_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_qfp_insensitivity_support_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -6556,6 +6557,27 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `missing authority: derivation of nonlocal exact-bridge tail`
   - `missing authority: structural bridge ambiguity closed on tested Schur-bridge scale`
 - **auditor confidence:** 0.9
+
+### `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18`
+
+- **Note:** [`YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`](../../docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The full Kawamoto-Smit staggered-PT BZ quadrature gives Delta_R = -3.77% +/- 0.45% for the three-channel ratio decomposition.  _(class `C`)_
+- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md, YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md, YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md, YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md, YT_WARD_IDENTITY_DERIVATION_THEOREM.md.
+- **rationale:** Issue: The load-bearing step still imports unratified direct authority: YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md, YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md, YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md, YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md, YT_WARD_IDENTITY_DERIVATION_THEOREM.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
+- **open / conditional deps cited:**
+  - `YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md`
+  - `YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`
+  - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
+  - `YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`
+  - `YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`
+  - `YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`
+  - `YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+- **auditor confidence:** high
 
 ### `yt_p1_i_s_lattice_pt_citation_note_2026-04-17`
 

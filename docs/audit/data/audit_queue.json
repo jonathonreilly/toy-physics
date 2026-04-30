@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 6,
+    "critical": 5,
     "high": 234,
     "leaf": 571,
     "medium": 342
   },
-  "generated_at": "2026-04-30T11:42:46.412474+00:00",
+  "generated_at": "2026-04-30T11:42:49.745938+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,32 +23,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "transitive_descendants": 281
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "yt_p1_bz_quadrature_numerical_note_2026-04-18",
-        "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
-        "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
-        "yt_p1_delta_1_bz_computation_note_2026-04-17",
-        "yt_p1_delta_2_bz_computation_note_2026-04-17",
-        "yt_p1_delta_3_bz_computation_note_2026-04-17",
-        "yt_p1_h_unit_renormalization_framework_native_note_2026-04-17",
-        "yt_ward_identity_derivation_theorem"
-      ],
-      "direct_in_degree": 17,
-      "load_bearing_score": 14.115,
-      "note_path": "docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py",
-      "transitive_descendants": 48
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24298,5 +24272,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1153
+  "total_pending": 1152
 }
