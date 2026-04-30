@@ -9,15 +9,15 @@
 
 ## 0. Result
 
-The first five production-profile ladder intervals completed cleanly and
+The first six production-profile ladder intervals completed cleanly and
 produced `L=8` data:
 
-- `671` JSONL measurement records;
-- last checkpointed production state: `L=8`, `6946` sweeps,
-  `671/1000` measurements;
+- `810` JSONL measurement records;
+- last checkpointed production state: `L=8`, `8338` sweeps,
+  `810/1000` measurements;
 - acceptance approximately `0.419`;
-- plaquette mean `0.59452147 +/- 0.00007895`;
-- `chi22` mean `0.25640503 +/- 0.00163185`.
+- plaquette mean `0.59445276 +/- 0.00007226`;
+- `chi22` mean `0.25804809 +/- 0.00148519`.
 
 This is a real production checkpoint, but it is **not B5 closure**.
 
