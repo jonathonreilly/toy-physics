@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:42:28.327206+00:00
+**Generated:** 2026-04-30T02:42:31.717479+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,25 +22,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
 | bounded | 205 |
-| support | 105 |
+| support | 104 |
 | open | 24 |
 | unknown | 525 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 48 |
 | ~~audited_renaming~~ | 72 |
-| ~~audited_conditional~~ | 429 |
+| ~~audited_conditional~~ | 430 |
 | ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 155 |
+| `audited_conditional` | 156 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1264 |
+| `unaudited` | 1263 |
 
 | criticality | count |
 |---|---:|
@@ -242,6 +242,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `growing_graph_frontier_architecture_transfer_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `grown_wavefield_failure_diagnosis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hierarchy_matsubara_decomposition_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `higgs_mechanism_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -2341,6 +2342,21 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `HIGGS_MASS_DERIVED_NOTE.md: listed dependency missing from ledger deps`
   - `missing theorem: scalar curvature-to-physical Higgs mass/VEV normalization`
 - **auditor confidence:** 0.91
+
+### `higgs_mechanism_note`
+
+- **Note:** [`HIGGS_MECHANISM_NOTE.md`](../../docs/HIGGS_MECHANISM_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Use HIGGS_MASS_DERIVED_NOTE for the current Higgs authority boundary; this note exists only to support the mechanism-level claim.  _(class `B`)_
+- **chain closes:** False — The note intentionally delegates the authority boundary to another Higgs note and makes support-only mechanism claims, so it does not close as a standalone derivation from the audit bundle.
+- **rationale:** Issue: the mechanism note depends on HIGGS_MASS_DERIVED_NOTE and the bounded Higgs runner's comparison-input machinery, while explicitly disclaiming exact Higgs-mass closure. Why this blocks: the mechanism-level statements are support claims conditional on an external Higgs authority boundary and do not independently derive EWSB or hierarchy closure from retained one-hop inputs. Repair target: make the Higgs authority note a retained dependency and provide a runner that isolates the mechanism-level theorem from SM-input consistency checks. Claim boundary until fixed: this remains support for a possible Higgs mechanism route, not an audited retained Higgs mechanism theorem.
+- **open / conditional deps cited:**
+  - `HIGGS_MASS_DERIVED_NOTE.md`
+  - `scripts/frontier_higgs_mass_derived.py`
+- **auditor confidence:** high
 
 ### `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17`
 
