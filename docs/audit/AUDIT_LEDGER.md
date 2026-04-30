@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:57:39.438223+00:00
+**Generated:** 2026-04-30T18:57:47.230785+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
 | bounded | 346 |
-| support | 271 |
+| support | 270 |
 | open | 19 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 603 |
+| ~~audited_conditional~~ | 604 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 116 |
-| `audited_conditional` | 317 |
+| `audited_conditional` | 318 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1042 |
+| `unaudited` | 1041 |
 
 | criticality | count |
 |---|---:|
@@ -395,6 +395,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `hubble_lane5_eta_retirement_gate_audit_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_planck_c1_gate_audit_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `impact_parameter_lensing_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `impact_parameter_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4774,6 +4775,26 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md`
   - `OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md`
   - `PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md`
+- **auditor confidence:** medium
+
+### `hubble_lane5_eta_retirement_gate_audit_note_2026-04-26`
+
+- **Note:** [`HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md`](../../docs/HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-linnaeus-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Per DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md, what remains open is exactly one structural object: the right-sensitive microscopic selector law on dW_e^H = Schur_{E_e}(D_-).  _(class `B`)_
+- **chain closes:** False — The note identifies a gate by inventorying prior DM/PMNS status and no-go notes, but those authorities are not supplied as ledger deps and no runner checks the exhaustiveness. The single-residual-gate claim is therefore conditional on that upstream inventory.
+- **rationale:** Issue: the claim that there is a single residual microscopic selector law is a cross-note status/exhaustion claim, but the ledger supplies no one-hop deps and the note has no runner. Why this blocks: the source itself says the selector law remains open and the exactness of the gate inventory cannot be verified from the restricted note alone. Repair target: supply the DM transport/status, reduced-surface, exhaustion, last-mile, and cascade authorities as dependencies or add a self-contained audit runner/table proving the inventory is exhaustive. Claim boundary until fixed: support-level gate identification for future DM-lane work, not audited retirement of eta or closure of C2.
+- **open / conditional deps cited:**
+  - `DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md`
+  - `DM_LEPTOGENESIS_PMNS_REDUCED_SURFACE_SELECTOR_SUPPORT_NOTE_2026-04-16.md`
+  - `DM_LEPTOGENESIS_PMNS_REDUCTION_EXHAUSTION_THEOREM_NOTE_2026-04-16.md`
+  - `DM_LEPTOGENESIS_PMNS_MICROSCOPIC_D_LAST_MILE_NOTE_2026-04-16.md`
+  - `OMEGA_LAMBDA_DERIVATION_NOTE.md`
+  - `R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md`
+  - `HUBBLE_LANE5_COSMIC_HISTORY_RATIO_NECESSITY_NO_GO_NOTE_2026-04-26.md`
 - **auditor confidence:** medium
 
 ### `hubble_lane5_planck_c1_gate_audit_note_2026-04-26`
