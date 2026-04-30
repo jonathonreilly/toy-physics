@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:33:53.326140+00:00
+**Generated:** 2026-04-30T19:33:59.213792+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 192 |
+| `audited_clean` | 193 |
 | `audited_conditional` | 446 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 836 |
+| `unaudited` | 835 |
 
 | criticality | count |
 |---|---:|
@@ -231,6 +231,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
+| `hubble_lane5_c2_ckm_pmns_right_sensitive_selector_stretch_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
@@ -7268,6 +7269,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** Issue: the wrapper's overall exhaustion claim overstates what the five checks establish. Why this blocks: Thread 1 preserved the route-local alpha S_4, beta cobordism, gamma Holevo, delta Stinespring, and epsilon Reeh-Schlieder observations, but rejected the wrapper as an active global no-hidden-route proof. Repair target: keep the five narrow no-gos in one support-tier salvage note and archive the failed wrapper. Claim boundary until fixed: safe to cite docs/HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md for route-local boundaries only; do not cite this wrapper as exhaustion or Axiom* minimality support.
 - **open / conditional deps cited:**
   - `HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md`
+- **auditor confidence:** high
+
+### `hubble_lane5_c2_ckm_pmns_right_sensitive_selector_stretch_note_2026-04-29`
+
+- **Note:** [`HUBBLE_LANE5_C2_CKM_PMNS_RIGHT_SENSITIVE_SELECTOR_STRETCH_NOTE_2026-04-29.md`](../../docs/HUBBLE_LANE5_C2_CKM_PMNS_RIGHT_SENSITIVE_SELECTOR_STRETCH_NOTE_2026-04-29.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** selector route; no `eta`, `Omega_Lambda`, or `H_0` numerical claim.  _(class `B`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 1 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified B-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
 ### `hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27`
