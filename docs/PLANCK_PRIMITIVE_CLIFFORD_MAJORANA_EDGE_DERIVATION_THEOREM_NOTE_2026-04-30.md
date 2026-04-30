@@ -1,7 +1,7 @@
 # Planck Primitive Clifford-Majorana Edge Derivation Theorem
 
 **Date:** 2026-04-30
-**Status:** proposed_retained structural derivation theorem pending audit
+**Status:** audited_renaming audit verdict; chain does not close
 **Runner:** `scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py`
 
 ## Purpose
@@ -19,15 +19,43 @@ D(v)^2 = ||v||^2 I_K
 on `K = P_A H_cell ~= C^4`, and is explicitly marked as "native candidate,
 not yet independently forced."
 
-This note supplies the proposed retained construction. It uses the retained
-native `Cl(3)` / `SU(2)` bivector content, the graph-first structural `SU(3)`
-surface, and the anomaly-forced `3+1` time-axis closure to construct the
-complex `Cl_4(C)` module on the primitive packet. The resulting oriented
-Majorana pairs give the two-mode CAR Fock carrier.
+This note records the attempted construction. It uses the retained native
+`Cl(3)` / `SU(2)` bivector content, the graph-first structural `SU(3)`
+surface, and the anomaly-forced `3+1` time-axis closure to construct an
+explicit complex `Cl_4(C)` module on the primitive packet. Audit accepted the
+algebraic construction but rejected the claimed derivation of that carrier
+from the supplied substrate inputs.
 
 This is not a Hilbert-rank-only argument. The Hilbert-only no-go in
 `PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`
 remains valid if the Clifford substrate content is stripped away.
+
+## Audit Outcome
+
+Fresh-context audit returned `audited_renaming`. The algebraic construction is
+correct as an explicit `Cl_4(C)` / two-mode CAR representation, and the runner
+still verifies all eight construction checks. The derivation does not close as
+a retained substrate theorem because the load-bearing step identifies
+
+```text
+rank(P_A H_cell) = 4
+```
+
+with the irreducible complex `Cl_4` module by dimension and representation
+theory, but does not prove that the retained event-cell substrate action
+restricts invariantly and uniquely to that module on `P_A H_cell`.
+
+The missing step is therefore:
+
+```text
+retained Cl(3)+time event-cell action
+  -> invariant active P_A block
+  -> induced Cl_4(C) generators on that block.
+```
+
+Until that substrate-to-packet forcing theorem is supplied, the primitive
+Clifford-Majorana edge algebra remains a carrier assignment for the Planck
+chain, not a derived consequence of the cited upstream content.
 
 ## Upstream Authorities
 
@@ -374,10 +402,82 @@ The theorem fixes the primitive Clifford-Majorana edge-statistics carrier on
 the retained substrate. `G_Newton,lat=1` and `a/l_P=1` are natural-lattice-unit
 consequences only after the source-unit support theorem is applied.
 
-## Audit Request
+## Audit Robustness Checks
 
-This note self-declares only `proposed_retained`. It requests an independent
-audit of the load-bearing step:
+### Metric Signature
+
+The construction is explicitly the Euclidean local lattice construction
+`Cl(4,0)_C ~= Cl_4(C) ~= M_4(C)`. The Hermitian generators in the runner obey
+
+```text
+Gamma_a^2 = I,        {Gamma_a,Gamma_b} = 2 delta_ab I.
+```
+
+This is the Wick-rotated primitive-block algebra used by the lattice
+calculation surface. A Lorentzian reading would replace the real quadratic
+form by signature `(1,3)` before complexification, but
+
+```text
+Cl(1,3)_C ~= Cl(4,0)_C ~= M_4(C).
+```
+
+So the complex primitive module and the CAR pairing are not sensitive to a
+separate signature choice. The theorem does not use Lorentzian signature as an
+additional premise.
+
+### Face Orientation
+
+The oriented face choice only chooses a basis of the already constructed
+orthonormal four-axis coframe. If
+
+```text
+Gamma'_a = R_a^b Gamma_b
+```
+
+for an orthogonal relabeling of `(t,n,tau_1,tau_2)` induced by a substrate
+face rotation or tangent-orientation reversal, then the Clifford
+anticommutator is preserved:
+
+```text
+{Gamma'_a,Gamma'_b} = 2 delta_ab I.
+```
+
+By the uniqueness of the irreducible complex `Cl_4` module, this relabeling is
+implemented on `K` by a unitary Clifford automorphism, up to the usual central
+phase. The induced change on `(c_N,c_T)` is therefore a CAR-preserving
+Bogoliubov/unitary transformation. In particular, reversing
+`tau_1,tau_2` conjugates the tangent mode or swaps an equivalent oriented
+pairing; it does not add a new edge-statistics carrier.
+
+### Complex Structure
+
+The complex scalar `i` used in
+
+```text
+c_N = (Gamma_t + i Gamma_n)/2,
+c_T = (Gamma_tau1 + i Gamma_tau2)/2
+```
+
+is not introduced as an extra Clifford-Majorana premise. The theorem is stated
+on the retained quantum packet
+
+```text
+H_cell ~= C^2_t otimes C^2_x otimes C^2_y otimes C^2_z,
+K = P_A H_cell ~= C^4,
+```
+
+whose complex Hilbert structure is the same pairwise-interference/Born-rule
+surface recorded by `I_3=0`. The real Clifford generators act by Hermitian
+endomorphisms of this already complex module, and the CAR modes use the
+module's retained complex structure to combine Majorana pairs. If an auditor
+does not accept the complex Hilbert packet as retained input, the correct
+verdict is `audited_conditional`; the construction does not hide that issue in
+the CAR pairing step.
+
+## Audit Verdict
+
+This note originally self-declared `proposed_retained` and requested an
+independent audit of the load-bearing step:
 
 > Are the retained native `Cl(3)` / `SU(2)` bivectors, graph-first `SU(3)`
 > gauge surface, anomaly-forced single time axis, and rank-four
@@ -385,12 +485,11 @@ audit of the load-bearing step:
 > irreducible Clifford-Majorana edge algebra on `P_A H_cell` without adding a
 > new structural premise?
 
-The audit should specifically test the hidden-axiom risk: whether the
-restriction of the substrate Clifford module to the active primitive boundary
-packet is forced by the retained event-cell construction, or whether it is an
-additional carrier assignment. If that restriction is judged extra, the claim
-should remain `audited_conditional`; if it is judged forced, the Planck-pin
-conditional chain can be promoted by the audit ledger.
+The audit judged that restriction to be an additional carrier assignment. Its
+verdict is `audited_renaming`: the construction names the rank-four primitive
+packet as the irreducible `Cl_4(C)` module, but the supplied inputs do not force
+the substrate action to preserve `P_A` and induce the displayed generators.
+Consequently, the Planck-pin conditional chain is not promoted by this note.
 
 ## Verification
 

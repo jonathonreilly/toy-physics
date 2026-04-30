@@ -18413,7 +18413,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T19:56:05.943214+00:00",
+  "generated_at": "2026-04-30T20:51:27.507187+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19727,26 +19727,26 @@
     },
     "area_law_native_car_semantics_tightening_note_2026-04-25": {
       "claim_id": "area_law_native_car_semantics_tightening_note_2026-04-25",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained Target 2 residual-semantics closure pending audit;",
+      "current_status": "support",
+      "current_status_raw": "support / conditional Target 2 residual-semantics closure;",
       "deps": [
         "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
       ],
-      "note_hash": "29f6814e2fabb095dd2110548ade7792323b00786140ec10028c4c0f960f2f22",
+      "note_hash": "9357ae1651279f763a233c274dce65ba224716413808a26bfa71e6abd329eef2",
       "path": "docs/AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_area_law_native_car_semantics_tightening.py",
       "title": "Area-Law Native CAR Semantics Tightening Note"
     },
     "area_law_primitive_car_edge_identification_theorem_note_2026-04-25": {
       "claim_id": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained Target 2 bridge corollary pending audit;",
+      "current_status": "support",
+      "current_status_raw": "support / conditional Target 2 bridge; 2026-04-30 carrier",
       "deps": [
         "area_law_native_car_semantics_tightening_note_2026-04-25",
         "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25",
         "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
       ],
-      "note_hash": "f5afbfa179378015d6b766722ca12417814047eedbb0a47736150774680912fa",
+      "note_hash": "ef452d8c7f2241b6c059ee9d6e84d13967d6d1f7cad98859c4c36f8e951fa9cf",
       "path": "docs/AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_area_law_primitive_car_edge_identification.py",
       "title": "Area-Law Primitive CAR Edge Identification Theorem Note"
@@ -31694,8 +31694,8 @@
     },
     "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30": {
       "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained structural derivation theorem pending audit",
+      "current_status": "unknown",
+      "current_status_raw": "audited_renaming audit verdict; chain does not close",
       "deps": [
         "minimal_axioms_2026-04-11",
         "native_gauge_closure_note",
@@ -31703,7 +31703,7 @@
         "anomaly_forces_time_theorem",
         "i3_zero_exact_theorem_note"
       ],
-      "note_hash": "2c03b6dc6d276f405937a41b38088cfa2cc9221cb01db3cd79561c847795d9cc",
+      "note_hash": "ceee901bd5d1e5575de4def107a6417db0df3818544a80297c9c271c248642fc",
       "path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py",
       "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem"
@@ -31756,7 +31756,7 @@
         "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
         "area_law_native_car_semantics_tightening_note_2026-04-25"
       ],
-      "note_hash": "465b36a91945183bf4045b352130113bfe7ade6bf8f3ee8f2e4b855f4421b0c0",
+      "note_hash": "b16a0684c1298311721a0fcea5b3a8a4bda5ed7f25b3e37c212504568676f741",
       "path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
       "runner_path": null,
       "title": "Planck-Scale Lane Status Note"
@@ -31773,12 +31773,12 @@
     },
     "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25": {
       "claim_id": "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained Target 3 bridge corollary pending audit;",
+      "current_status": "support",
+      "current_status_raw": "support / conditional Target 3 bridge; 2026-04-30 carrier",
       "deps": [
         "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
       ],
-      "note_hash": "67b005eda44048f53ebb67e154a9dd47382c156e1eb70171c722a637d36b6875",
+      "note_hash": "34a6e72ce86f09a118a43733f86479fd7df0276edc628686d5ddb41f63479073",
       "path": "docs/PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_planck_target3_clifford_phase_bridge.py",
       "title": "Planck Target 3 Clifford Phase Bridge Theorem"
@@ -32555,7 +32555,7 @@
         "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
-      "note_hash": "b308bca3b417f7ab51e834fa6901a3eb01b524e2fe6efe0aef7635daf5ed0a49",
+      "note_hash": "be1d4084a50d769216520b9451b12b91069ea6e4a3969711c86767deb7a60120",
       "path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
       "runner_path": null,
       "title": "Manuscript Claims Surface"
@@ -33334,7 +33334,7 @@
         "charged_lepton_two_higgs_canonical_reduction_note",
         "publication.ci3_z3.claims_table"
       ],
-      "note_hash": "3f0c0fe0fb28fe30aafb4c186525e5456d7c87f3b4dde80953abd20ad6470a6c",
+      "note_hash": "663ca839aea742708089aaf6b1320e9fc456b83030189108e881066bd5652a82",
       "path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
       "runner_path": null,
       "title": "Derivation / Validation Map"
@@ -33747,7 +33747,7 @@
         "publication.ci3_z3.publication_matrix",
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
-      "note_hash": "2b7f3078ba83c16104ebf6ad2bb02da6fde912c52b6b687a2620f9d5e0164233",
+      "note_hash": "ce4b83693d2be60eadf7145b379cfaa03d1dec2dcd25288c4bf9be4adbbd2bd7",
       "path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
       "runner_path": null,
       "title": "Inputs And Qualifiers"
@@ -41248,9 +41248,9 @@
       "bounded": 446,
       "open": 48,
       "proposed_promoted": 1,
-      "proposed_retained": 376,
-      "support": 375,
-      "unknown": 410
+      "proposed_retained": 372,
+      "support": 378,
+      "unknown": 411
     }
   }
 }

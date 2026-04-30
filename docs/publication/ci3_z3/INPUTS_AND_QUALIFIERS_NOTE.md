@@ -87,19 +87,17 @@ current canonical same-surface evaluated constants on `main`.
 Current absolute-scale package rule:
 
 - on the accepted physical-lattice reading, the package currently carries
-  `a^(-1) = M_Pl` as an explicit Planck-scale fallback pin until audit
-  ratification of the 2026-04-30 primitive Clifford-Majorana edge derivation
-- the proposed same-surface structural derivation is now:
-  retained `Cl(3)` spatial bivectors plus the anomaly-forced time axis
-  construct the primitive `Cl_4(C)` module on `P_A H_cell`, giving
-  `F(C^2)`, `c_Widom=c_cell=1/4`, `G_Newton,lat=1`, and `a/l_P=1` in
-  natural lattice units, pending audit
+  `a^(-1) = M_Pl` as an explicit Planck-scale fallback pin
+- the attempted same-surface structural derivation from the 2026-04-30
+  primitive Clifford-Majorana note was audited as `audited_renaming`: it
+  verifies the candidate `Cl_4(C)` / `F(C^2)` carrier algebra, but does not
+  force that carrier as the substrate-restricted action on `P_A H_cell`
 - the 2026-04-24 conditional-completion packet derives `c_cell = 1/4` and
   the unique additive finite-boundary density extension, then gives
   `a/l_P = 1` after the primitive boundary count is accepted as the
-  gravitational boundary/action carrier; the 2026-04-30 theorem proposes to
-  supply the missing primitive Clifford/CAR edge-statistics carrier
-  identification from retained substrate content
+  gravitational boundary/action carrier; the missing primitive Clifford/CAR
+  edge-statistics carrier identification remains conditional after the
+  2026-04-30 audit
 - the 2026-04-25 primitive coframe boundary-carrier support theorem identifies
   `P_A` as the unique first-order coframe-slot carrier on the time-locked
   primitive Boolean event cell under the stated locality/additivity/symmetry
@@ -187,10 +185,10 @@ packaging. Use:
 These rows are still on the paper surface, but their interpretation uses a
 bridge layer beyond the exact structural core.
 
-The Planck-pin row is no longer listed here as a bridge-conditioned row. It
-has moved to the same-surface proposed structural package in §3, pending audit
-of
-[PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md](../../PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md).
+The Planck-pin row remains bridge-conditioned. The attempted 2026-04-30
+same-surface derivation in
+[PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md](../../PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md)
+was audited as `audited_renaming`, so it does not remove the carrier bridge.
 
 - `alpha_s(M_Z)` and the `M_Z` EW rows:
   - same-surface derived framework values plus the retained running bridge

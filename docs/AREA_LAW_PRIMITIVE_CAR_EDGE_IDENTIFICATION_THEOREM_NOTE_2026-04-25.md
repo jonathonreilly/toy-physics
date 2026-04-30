@@ -1,9 +1,8 @@
 # Area-Law Primitive CAR Edge Identification Theorem Note
 
 **Date:** 2026-04-25
-**Status:** proposed_retained Target 2 bridge corollary pending audit;
-primitive complex-CAR edge semantics supplied by the 2026-04-30
-Clifford-Majorana derivation theorem
+**Status:** support / conditional Target 2 bridge; 2026-04-30 carrier
+identification audited_renaming
 **Runner:** `scripts/frontier_area_law_primitive_car_edge_identification.py`
 
 ## Purpose
@@ -180,12 +179,12 @@ carrier."
 The remaining question was exactly whether the primitive-CAR edge axioms are
 accepted as native `Cl(3)/Z^3` horizon semantics. The Target 3 Clifford phase
 bridge supplies a sufficient metric-compatible coframe response, and the
-2026-04-30 primitive Clifford-Majorana edge derivation now proposes to derive
+2026-04-30 primitive Clifford-Majorana edge derivation attempted to derive
 that response from retained spatial `Cl(3)` bivectors plus the anomaly-forced
-time axis. If the new derivation is audit-ratified, this result becomes a
-corollary rather than a conditional theorem. If it is rejected or stripped
-away, this result remains a sharp conditional theorem and the retained no-go
-packet still describes the selector-free surface.
+time axis. Audit returned `audited_renaming`: the carrier algebra is verified,
+but the substrate-to-`P_A` forcing step is not derived. This result therefore
+remains a sharp conditional theorem, and the retained no-go packet still
+describes the selector-free surface.
 
 [AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md](./AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md)
 tightens this question further: primitive-CAR semantics are equivalent to
@@ -199,7 +198,8 @@ rank-four irreducible module is equivalent to the two-mode CAR carrier. On a
 stripped Hilbert-only surface the conditional wording still applies.
 
 [PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md](./PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md)
-is the proposed retained construction of that coframe response from retained
+is the audited-renaming construction of that coframe response: useful as an
+explicit carrier model, but not a derivation of the carrier from the supplied
 substrate content.
 
 ## Relation to retained no-gos

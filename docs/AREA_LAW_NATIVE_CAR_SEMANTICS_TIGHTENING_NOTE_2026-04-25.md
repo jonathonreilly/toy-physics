@@ -1,9 +1,8 @@
 # Area-Law Native CAR Semantics Tightening Note
 
 **Date:** 2026-04-25
-**Status:** proposed_retained Target 2 residual-semantics closure pending audit;
-primitive Clifford-Majorana/CAR coframe response supplied by the 2026-04-30
-derivation theorem
+**Status:** support / conditional Target 2 residual-semantics closure;
+2026-04-30 carrier identification audited_renaming
 **Runner:** `scripts/frontier_area_law_native_car_semantics_tightening.py`
 
 ## Purpose
@@ -21,11 +20,10 @@ philosophical choice. It was one concrete statistics statement:
 
 The 2026-04-30 theorem
 [PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md](./PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md)
-now supplies that statement as a proposed retained construction from the
-retained native `Cl(3)` bivectors plus the anomaly-forced time axis. If the
-audit ratifies that construction, the complex-CAR two-mode edge carrier is no
-longer a separate residual premise; it is the primitive `Cl_4(C)` module on
-`P_A H_cell`.
+was audited as `audited_renaming`: it constructs the valid complex-CAR
+two-mode carrier, but it does not force the substrate action to preserve
+`P_A H_cell` and induce that carrier. The residual premise therefore remains
+open as a carrier premise.
 
 ## The tightening theorem
 
@@ -135,9 +133,9 @@ information/action bridge.
 The Target 3 Clifford phase bridge supplied a conditional positive route:
 metric-compatible primitive coframe response on `P_A H_cell` implies that
 edge-statistics principle. The 2026-04-30 primitive Clifford-Majorana theorem
-now proposes to derive that coframe response from retained substrate content.
-Pending audit, the residual statement is therefore closed by that theorem
-rather than left as an independent edge-statistics premise.
+was audited as not deriving that coframe response from retained substrate
+content. The residual statement therefore remains an independent
+edge-statistics/coframe-response premise.
 
 The Target 3 boundary theorem now records the current status in
 `PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`: the
@@ -155,20 +153,18 @@ remains valid if that coframe structure is not supplied.
 
 The proposed derivation of that target is recorded in
 `PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md`:
-retained spatial `Cl(3)` bivectors plus the anomaly-forced time axis construct
-the primitive `Cl_4(C)` module on `P_A H_cell`, whose oriented Majorana pairs
-are exactly `F(C^2)`.
+the construction verifies the primitive `Cl_4(C)` / `F(C^2)` carrier, but audit
+found that the substrate-to-`P_A` forcing step is still missing.
 
 ## Package wording
 
 Safe wording:
 
-> Pending audit of the 2026-04-30 primitive Clifford-Majorana derivation, the
-> exact `1/4` entanglement carrier is derived on the primitive rank-four
-> boundary block because the active horizon edge response is the irreducible
-> `Cl_4(C)` module constructed from retained `Cl(3)` bivectors plus the
-> anomaly-forced time axis. Rank four alone still does not force CAR; the
-> load-bearing input is the retained Clifford substrate.
+> The exact `1/4` entanglement carrier is derived conditionally on the
+> primitive rank-four boundary block carrying the irreducible
+> Clifford-Majorana / `Cl_4(C)` edge response. The 2026-04-30 construction
+> verifies that carrier algebra, but audit found that rank four plus the cited
+> substrate content still does not force it.
 
 Unsafe wording:
 

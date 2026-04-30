@@ -7,9 +7,9 @@
 ## 1. Current package stance
 
 The accepted package already treats `Cl(3)` on `Z^3` as a **physical lattice**,
-not a disposable regulator family. Before the primitive Clifford-Majorana edge
-derivation is audit-ratified, the public surface still tracks the absolute
-lattice scale by one explicit package pin:
+not a disposable regulator family. The primitive Clifford-Majorana edge
+derivation was audited as `audited_renaming`, so the public surface still
+tracks the absolute lattice scale by one explicit package pin:
 
 > `a^(-1) = M_Pl`
 
@@ -18,19 +18,18 @@ This is the cleanest honest package statement for the current tree.
 That fallback pin means:
 
 - the physical-lattice reading is accepted on the package boundary;
-- the absolute lattice spacing can still be carried by one explicit Planck
-  scale pin while audit is pending;
-- the proposed 2026-04-30 derivation now supplies the missing
-  Clifford-Majorana edge-statistics premise, but the audit ledger has not yet
-  ratified the cascade.
+- the absolute lattice spacing is still carried by one explicit Planck scale
+  pin;
+- the 2026-04-30 construction verifies the candidate Clifford-Majorana
+  carrier algebra, but audit did not ratify it as a derivation of the missing
+  edge-statistics premise.
 
 So the current lane status is:
 
 - **physical lattice:** accepted package posture
-- **absolute scale `a^(-1) = M_Pl`:** fallback package pin until audit
-  ratification
+- **absolute scale `a^(-1) = M_Pl`:** fallback package pin remains active
 - **natural-unit structural derivation `G_Newton,lat=1`, `a/l_P=1`:**
-  proposed retained via the primitive Clifford-Majorana edge derivation
+  conditional on the primitive Clifford-Majorana edge carrier premise
 
 The 2026-04-24 Planck conditional packet sharpened this posture. It is retained
 in
@@ -68,16 +67,18 @@ in
 
 This improves the derivation program, but it does not make the older minimal
 finite stack alone derive the SI Planck length. The public package pin remains
-the correct manuscript fallback unless the 2026-04-30 primitive
-Clifford-Majorana edge derivation is audit-ratified as part of the accepted
-Planck package.
+the correct manuscript fallback because the 2026-04-30 primitive
+Clifford-Majorana edge derivation was not audit-ratified as part of the
+accepted Planck package.
 
 The 2026-04-30 update is
 [PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md](./PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md).
 It proposes to derive the metric-compatible primitive Clifford/CAR edge
 statistics from retained `Cl(3)` bivectors plus the anomaly-forced time axis.
-If ratified, the Planck pin becomes a retained structural theorem on the
-natural phase/action units surface rather than a conditional carrier premise.
+Audit returned `audited_renaming`: the construction verifies an assigned
+carrier but does not derive the substrate-to-`P_A` forcing step. The Planck
+pin therefore remains the active fallback, and the natural-unit closure remains
+conditional on the Clifford/CAR carrier premise.
 
 ## 2. Why this lane exists
 
@@ -265,13 +266,12 @@ Current blocker:
 2026-04-30 Target 2 update:
 
 - [PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md](./PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md)
-  proposes to derive the residual primitive coframe/CAR response from retained
-  `Cl(3)` bivectors plus the anomaly-forced time axis. The active primitive
-  block carries the irreducible `Cl_4(C) ~= M_4(C)` module, equivalently two
-  complex CAR modes, and the earlier conditional bridge becomes a corollary.
-- if that new derivation is not audit-ratified, the Target 3 boundary theorem
-  still applies and Target 2 reverts to the prior conditional wording on
-  native edge statistics.
+  attempted to derive the residual primitive coframe/CAR response from
+  retained `Cl(3)` bivectors plus the anomaly-forced time axis. Audit returned
+  `audited_renaming`: the active primitive `Cl_4(C)` / CAR model is explicit,
+  but the substrate-to-`P_A` forcing step is not derived.
+- therefore the Target 3 boundary theorem still applies and Target 2 keeps
+  the prior conditional wording on native edge statistics.
 
 ### Target 3: one-axiom information/action bridge
 
@@ -314,11 +314,11 @@ Former blocker:
 2026-04-30 Target 3 update:
 
 - [PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md](./PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md)
-  supplies the requested derivation as a proposed retained theorem: retained
-  spatial `Cl(3)` bivectors give the native `SU(2)` edge-spin content, the
-  anomaly-forced time axis extends the primitive coframe to `Cl_4(C)`, and
-  `rank(P_A)=4` identifies the active packet with the unique irreducible
-  `Cl_4(C)` module;
+  supplies an explicit candidate model, not an audit-clean derivation:
+  retained spatial `Cl(3)` bivectors give the native `SU(2)` edge-spin
+  content, the anomaly-forced time axis extends the primitive coframe to a
+  candidate `Cl_4(C)` carrier, but `rank(P_A)=4` does not by itself identify
+  the active packet with the unique irreducible `Cl_4(C)` module;
 - the oriented normal/tangent Majorana pairings give the two complex CAR modes
   required by the primitive edge theorem;
 - the Hilbert-only no-go remains valid because the derivation uses retained
@@ -369,17 +369,17 @@ Former blocker:
 
 ## 6. Package rule on `main`
 
-After the 2026-04-30 primitive Clifford-Majorana edge derivation, the correct
-package statement is:
+After audit of the 2026-04-30 primitive Clifford-Majorana edge derivation, the
+correct package statement is:
 
-- `a^(-1) = M_Pl` / `a/l_P=1` is a proposed retained structural theorem on the
-  primitive Clifford-Majorana edge-statistics surface with natural
-  phase/action units, pending audit ratification of the 2026-04-30 derivation
+- `a^(-1) = M_Pl` remains the explicit package pin; `a/l_P=1` in natural
+  phase/action units remains conditional on the primitive Clifford-Majorana
+  edge-statistics carrier
 - it is **not** a derivation of the SI decimal value of `hbar` or a
   Hilbert-only theorem with the Clifford coframe stripped away
-- the primitive boundary count is now identified with the microscopic
-  gravitational and entanglement boundary/action carrier through the
-  Clifford-CAR bridge:
+- the primitive boundary count is identified with the microscopic
+  gravitational and entanglement boundary/action carrier only under the
+  Clifford-CAR bridge premise:
   `P_A H_cell -> Cl_4(C) irreducible module -> F(C^2) -> c_Widom=c_cell=1/4`
 - the source-unit normalization support theorem resolves the bare-source
   `4 pi` mismatch on the same carrier surface and gives
@@ -390,9 +390,8 @@ package statement is:
   alternate promotion path
 - the carrier-only parent-source scalar route is a retained no-go, not an
   alternate promotion path without a separate no-hidden-character law
-- until the new theorem is audit-ratified, publication-facing prose must keep
-  the `proposed_retained pending audit` qualifier and retain the explicit
-  package pin as a fallback
+- publication-facing prose must not promote the 2026-04-30 construction; audit
+  found the carrier-identification step to be `audited_renaming`
 
 That is the canonical posture to use when wiring hierarchy, YT/Higgs,
 neutrino/DM mass ladders, gravity/cosmology companions, and compact-object

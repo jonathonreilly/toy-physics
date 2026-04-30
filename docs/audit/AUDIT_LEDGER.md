@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:57:10.241555+00:00
+**Generated:** 2026-04-30T20:51:49.303716+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -26,8 +26,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
-| ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 741 |
+| ~~audited_renaming~~ | 47 |
+| ~~audited_conditional~~ | 735 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
@@ -37,8 +37,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
-| `audited_renaming` | 11 |
-| `unaudited` | 816 |
+| `audited_renaming` | 12 |
+| `unaudited` | 815 |
 
 | criticality | count |
 |---|---:|
@@ -47,7 +47,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 381 |
 | `leaf` | 769 |
 
-- **Proposed claims demoted by upstream:** 133
+- **Proposed claims demoted by upstream:** 129
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -832,6 +832,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higgs_mass_from_axiom_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `hypercharge_identification_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
+| `planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `s3_time_bilinear_tensor_primitive_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_qg_optional_textbook_comparison_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -9297,6 +9298,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Because C(c_cell, delta)=c_cell is constant on the affine hidden-character fiber while p_Schur(c_cell, delta)=c_cell+delta varies, p_Schur=p_event holds iff delta=0 and no carrier-only function can recover the Schur scalar on that fiber.  _(class `A`)_
 - **chain closes:** True — The source note and runner prove the bounded no-go by an explicit two-point affine-fiber counterexample: identical carrier data produce different Schur scalars, so carrier commutation alone cannot force scalar equality.
 - **rationale:** The claim is scoped as a negative no-go for the unconstrained carrier-only parent-source scalar route, not as a positive Planck coefficient derivation. The load-bearing hidden-character fiber is explicit in the source note and the runner verifies the kernel, two-parent counterexample, carrier-only non-recoverability, equivalence of scalar equality to delta=0, and normalization sensitivity. Residual boundary: this clean audit does not rule out a future no-hidden-character law or a direct gravitational carrier-identification theorem; it only closes the carrier-only route without such an extra law.
+- **auditor confidence:** high
+
+### `planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30`
+
+- **Note:** [`PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md`](../../docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `self`)
+- **auditor:** `codex-fresh-context-pr228-019de022-0990-7d43-a3c6-91959e585207`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The rank-four primitive packet is therefore exactly the irreducible Cl_4(C) module, with no active spectator sector.  _(class `F`)_
+- **chain closes:** False — The note verifies that a chosen four-dimensional Cl_4(C) representation has the desired CAR structure, but it does not force that representation as the restriction of the retained event-cell substrate action to P_A H_cell. The missing step is an independent derivation that P_A is invariantly and uniquely the active Cl_4 carrier rather than an assigned four-dimensional module.
+- **rationale:** The load-bearing move identifies the Hamming-weight-one packet with the irreducible Cl_4(C) module from matching dimension and standard representation theory. That is not enough to derive the carrier action from the cited inputs; it assigns the Clifford module structure to K. The runner confirms the assigned matrices and downstream CAR algebra, but not the missing substrate-to-packet forcing step. Two cited authorities also carry unknown current_status markers, so the result would not qualify as audited_clean in any case.
+- **open / conditional deps cited:**
+  - `MINIMAL_AXIOMS_2026-04-11.md`
+  - `ANOMALY_FORCES_TIME_THEOREM.md`
 - **auditor confidence:** high
 
 ### `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25`

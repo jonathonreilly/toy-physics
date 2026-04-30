@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 4,
-    "high": 237,
+    "high": 236,
     "leaf": 286,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:57:09.973620+00:00",
+  "generated_at": "2026-04-30T20:51:49.227708+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -3267,29 +3267,6 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "minimal_axioms_2026-04-11",
-        "native_gauge_closure_note",
-        "graph_first_su3_integration_note",
-        "anomaly_forces_time_theorem",
-        "i3_zero_exact_theorem_note"
-      ],
-      "direct_in_degree": 7,
-      "load_bearing_score": 9.085,
-      "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py",
-      "transitive_descendants": 47
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
       "criticality": "high",
       "criticality_rank": 2,
@@ -3339,7 +3316,7 @@
       "criticality": "high",
       "criticality_rank": 2,
       "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
+      "current_status": "support",
       "deps": [
         "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
       ],
@@ -3358,7 +3335,7 @@
       "criticality": "high",
       "criticality_rank": 2,
       "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
+      "current_status": "support",
       "deps": [
         "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
       ],
@@ -3420,7 +3397,7 @@
       "criticality": "high",
       "criticality_rank": 2,
       "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
+      "current_status": "support",
       "deps": [
         "area_law_native_car_semantics_tightening_note_2026-04-25",
         "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25",
@@ -18486,5 +18463,5 @@
     }
   ],
   "ready_count": 431,
-  "total_pending": 816
+  "total_pending": 815
 }
