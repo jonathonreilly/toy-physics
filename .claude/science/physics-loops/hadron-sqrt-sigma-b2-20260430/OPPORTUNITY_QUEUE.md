@@ -10,7 +10,7 @@ review landability, and low repo-wide blast radius.
 with `--profile production` under wall-clock checkpoints.
 
 **Current checkpoint:** `L=8` has `1000/1000` production measurements after
-`10239` sweeps. `L=12` has `233/1000` production measurements after `2598`
+`10239` sweeps. `L=12` has `260/1000` production measurements after `2871`
 sweeps. `L=16` has not started.
 
 **Why first:** it directly attacks the named active residual: the

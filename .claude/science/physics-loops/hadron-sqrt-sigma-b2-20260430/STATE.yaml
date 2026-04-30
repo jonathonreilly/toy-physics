@@ -19,8 +19,8 @@ proposal_allowed: false
 proposal_allowed_reason: "B2/B5 remain open; production L=8,12,16 framework-side statistics and uncertainty budget are not yet accumulated."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-current_phase: cycle-22-production-checkpoint-complete
-cycles_completed: 22
+current_phase: cycle-23-production-checkpoint-complete
+cycles_completed: 23
 completed_phases:
   - cycle-1-complete
   - cycle-2-complete
@@ -44,8 +44,9 @@ completed_phases:
   - cycle-20-production-checkpoint-complete
   - cycle-21-production-checkpoint-complete
   - cycle-22-production-checkpoint-complete
+  - cycle-23-production-checkpoint-complete
 active_route: R3-B5-production-statistics-continue
-active_hard_residual: "B5 is compute-limited: production L=8 now has 1000/1000 JSONL measurements and L=12 has 233/1000 measurements, but L=16 is missing and L=12 is shallow; B5 remains non-closing until the production volume ladder and uncertainties are accumulated."
+active_hard_residual: "B5 is compute-limited: production L=8 now has 1000/1000 JSONL measurements and L=12 has 260/1000 measurements, but L=16 is missing and L=12 is shallow; B5 remains non-closing until the production volume ladder and uncertainties are accumulated."
 files_touched:
   - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/STATE.yaml
   - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/GOAL.md
@@ -119,6 +120,7 @@ claim_state_movement:
   - "Cycle 20: fourteenth production-profile run advanced L=12 to 181 records; aggregator reports L12 plaquette 0.59443780 +/- 0.00006080 and L12 chi22 0.26341582 +/- 0.00284497, while B5 remains open because L=16 is missing and L=12 remains shallow."
   - "Cycle 21: fifteenth production-profile run advanced L=12 to 207 records; aggregator reports L12 plaquette 0.59440173 +/- 0.00005946 and L12 chi22 0.26315236 +/- 0.00264293, while B5 remains open because L=16 is missing and L=12 remains shallow."
   - "Cycle 22: sixteenth production-profile run advanced L=12 to 233 records; aggregator reports L12 plaquette 0.59432561 +/- 0.00005660 and L12 chi22 0.26358595 +/- 0.00248358, while B5 remains open because L=16 is missing and L=12 remains shallow."
+  - "Cycle 23: seventeenth production-profile run advanced L=12 to 260 records; aggregator reports L12 plaquette 0.59420426 +/- 0.00005718 and L12 chi22 0.26390619 +/- 0.00230264, while B5 remains open because L=16 is missing and L=12 remains shallow."
 campaign_correction:
   - "2026-04-30T01:07:22Z: resumed after incorrect PR-checkpoint stop; user clarified the 12h campaign budget must continue."
   - "Repo-wide authority-surface weaving is being removed from this science PR; proposed integration belongs in HANDOFF until review."
