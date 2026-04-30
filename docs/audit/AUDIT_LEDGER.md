@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:53:06.161374+00:00
+**Generated:** 2026-04-30T22:54:27.406993+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 83 |
 | _proposed_retained_ | 1 |
-| bounded | 275 |
+| bounded | 274 |
 | support | 241 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 749 |
+| ~~audited_conditional~~ | 750 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 220 |
-| `audited_conditional` | 476 |
+| `audited_conditional` | 477 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 774 |
+| `unaudited` | 773 |
 
 | criticality | count |
 |---|---:|
@@ -763,6 +763,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_qg_canonical_refinement_net_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `universal_qg_inverse_limit_closure_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_uv_finite_partition_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `unpromoted_branch_retainability_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -11343,6 +11344,22 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
   - `UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`
   - `canonical_coarse_fine_refinement_splitting_runner`
+- **auditor confidence:** high
+
+### `universal_qg_inverse_limit_closure_note`
+
+- **Note:** [`UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-41`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Because Schur pushforward is exact and associative, every coarser finite sector obtained from a finer one yields the same effective operator/source pair, independent of the path through intermediate refinements.  _(class `B`)_
+- **chain closes:** False — The projective-limit conclusion is exact only if the upstream finite Gaussian family, Schur/projective closure, and canonical barycentric-dyadic refinement/coarse-fine split are already established. In the current ledger those inputs are conditional or unaudited support, so the bounded inverse-limit row cannot close independently.
+- **rationale:** Issue: the inverse-limit closure imports the UV-finite partition family, exact Schur/projective coarse-graining, and canonical refinement-net compatibility rather than proving all of them in this note. Why this blocks: the UV partition and refinement-net rows are already audited_conditional, and the Schur/projective closure row is still unaudited support, so the projective consistency theorem cannot be ratified as closed. Repair target: audit/repair the UV partition, Schur-projective closure, and canonical refinement-net rows, including the canonical coarse/fine split and finite-sector pushforward maps. Claim boundary until fixed: safe as a bounded roadmap/conditional theorem for the project discrete inverse-limit object, not as a closed QG inverse-limit theorem.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
+  - `UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_qg_optional_textbook_comparison_note`
