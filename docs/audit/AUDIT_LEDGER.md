@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:41:54.264638+00:00
+**Generated:** 2026-04-30T22:43:28.058863+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,25 +20,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 82 |
-| _proposed_retained_ | 5 |
+| _proposed_retained_ | 4 |
 | bounded | 276 |
 | support | 241 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 747 |
+| ~~audited_conditional~~ | 748 |
 | ~~audited_failed~~ | 127 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 218 |
-| `audited_conditional` | 473 |
+| `audited_conditional` | 474 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 780 |
+| `unaudited` | 779 |
 
 | criticality | count |
 |---|---:|
@@ -619,6 +619,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_eta_retirement_gate_audit_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_planck_c1_gate_audit_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `hubble_lane5_two_gate_dependency_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `impact_parameter_lensing_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `impact_parameter_portability_extension_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `impact_parameter_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -7552,6 +7553,25 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`
   - `AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md`
   - `PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`
+- **auditor confidence:** high
+
+### `hubble_lane5_two_gate_dependency_firewall_note_2026-04-27`
+
+- **Note:** [`HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md`](../../docs/HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-35`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Given the retained late-time cosmology stack and current Lane 5 gate taxonomy, H_0 = H_inf/sqrt(L) proves that numerical H_0 closure requires both an absolute-scale gate C1 and a dimensionless cosmic-history gate C2 or C3; no single gate or structural lock can close H_0.  _(class `B`)_
+- **chain closes:** False — The runner verifies the two-gate algebra and current-repo gate guardrails, but the row imports the Omega_Lambda bridge, open-number reduction, structural lock, C1/C2 gate audits, and C3 route taxonomy. Several of those authorities are unaudited or audited_conditional, so proposed-retained closure cannot propagate.
+- **rationale:** Issue: the two-gate firewall calculation passes, but it rests on a cross-note Lane 5 taxonomy whose supporting bridge and gate-inventory authorities are not all audited clean. Why this blocks: H_0=H_inf/sqrt(L) is exact once the late-time cosmology stack and L definition are admitted, yet the Omega_Lambda matter bridge, open-number reduction, structural lock, C1/C2 gate audits, and C3 no-active-route inventory are conditional or unaudited in the ledger. Repair target: audit-clean/register the late-time structural bridge, open-number theorem, structural lock, and C1/C2/C3 gate taxonomy as explicit dependencies, then rerun this firewall verifier. Claim boundary until fixed: conditional negative boundary showing that, under the supplied Lane 5 taxonomy, a single closure gate or structural lock alone cannot yield numerical H_0.
+- **open / conditional deps cited:**
+  - `OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md`
+  - `COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md`
+  - `HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md`
+  - `HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md`
+  - `HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md`
+  - `HUBBLE_LANE5_C3_VACUUM_TOPOLOGY_NO_ACTIVE_ROUTE_NOTE_2026-04-27.md`
 - **auditor confidence:** high
 
 ### `hypercharge_identification_note`
