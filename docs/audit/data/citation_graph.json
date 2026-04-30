@@ -2497,6 +2497,26 @@
       "to": "n_eff_from_three_generations_theorem_note_2026-04-24"
     },
     {
+      "from": "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29",
+      "to": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29"
+    },
+    {
+      "from": "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29",
+      "to": "cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25"
+    },
+    {
+      "from": "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29",
+      "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
+    },
+    {
+      "from": "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29",
+      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
+    },
+    {
+      "from": "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29",
+      "to": "alpha_s_derived_note"
+    },
+    {
       "from": "cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25",
       "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
     },
@@ -18273,7 +18293,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T11:16:17.183961+00:00",
+  "generated_at": "2026-04-30T11:29:30.055506+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21865,6 +21885,22 @@
       "path": "docs/CROSS_FAMILY_UNIVERSALITY_NOTE.md",
       "runner_path": null,
       "title": "Cross-Family Consistency: Dispersion + Lensing at H=0.5 (Conditional)"
+    },
+    "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29": {
+      "claim_id": "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support: cross-sector identity Q_l \u00d7 \u03b1_s(v)\u00b2 = 4|V_cb|\u00b2 composition, conditional on V8 (Block 1) ratification.",
+      "deps": [
+        "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29",
+        "cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25",
+        "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
+        "alpha_s_derived_note"
+      ],
+      "note_hash": "861b223cd74e063a7b66b2f7a256d1a71984a292fdcdd4ad4e077770184b3f22",
+      "path": "docs/CROSS_SECTOR_A_SQUARED_KOIDE_VCB_BRIDGE_PROMOTED_VIA_V8_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8.py",
+      "title": "Cross-Sector A\u00b2-Q_l-|V_cb| Bridge Support via V8 Composition (V1)"
     },
     "cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25": {
       "claim_id": "cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25",
@@ -41240,17 +41276,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4568,
+    "edge_count": 4573,
     "leaf_count": 736,
-    "node_count": 1672,
+    "node_count": 1673,
     "root_count": 1203,
-    "runners_with_path": 756,
+    "runners_with_path": 757,
     "status_counts": {
       "bounded": 253,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 174,
+      "support": 175,
       "unknown": 796
     }
   }
