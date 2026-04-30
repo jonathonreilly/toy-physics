@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 382,
+    "leaf": 381,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:26:27.940753+00:00",
+  "generated_at": "2026-04-30T19:26:33.789334+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13824,26 +13824,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "frozen_stars_rigorous_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "gw_echo_null_result_note",
-        "work_history.gw_echo_timing_route_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/FROZEN_STARS_RIGOROUS_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_frozen_stars_rigorous.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "gap_physics_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -19821,6 +19801,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 526,
-  "total_pending": 908
+  "ready_count": 525,
+  "total_pending": 907
 }

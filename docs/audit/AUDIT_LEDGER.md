@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:26:28.102792+00:00
+**Generated:** 2026-04-30T19:26:33.946206+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
 | bounded | 322 |
-| support | 277 |
+| support | 276 |
 | open | 21 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 667 |
+| ~~audited_conditional~~ | 668 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 176 |
-| `audited_conditional` | 390 |
+| `audited_conditional` | 391 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 908 |
+| `unaudited` | 907 |
 
 | criticality | count |
 |---|---:|
@@ -479,6 +479,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fine_h_family_universality_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `four_d_distance_width_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `fourth_family_complex_boundary_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `frozen_stars_rigorous_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `g_bare_derivation_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `g_bare_rigidity_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | F | - |
 | `g_bare_structural_normalization_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -5125,6 +5126,21 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `audit_queue_runner_path_null_for_named_primary_verifier`
   - `retained_EW_bare_coupling_bookkeeping_not_registered_one_hop_dependency`
   - `Cl3_to_SM_dimension_count_d_plus_1_d_plus_2_support_packet_not_registered_one_hop_dependency`
+- **auditor confidence:** high
+
+### `frozen_stars_rigorous_note`
+
+- **Note:** [`FROZEN_STARS_RIGOROUS_NOTE.md`](../../docs/FROZEN_STARS_RIGOROUS_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** **Bounded claim:** Lattice Fermi pressure resists gravitational collapse on all  _(class `B`)_
+- **chain closes:** False — No. One-hop dependencies are not all retained (gw_echo_null_result_note=bounded, work_history.gw_echo_timing_route_note=support), so the chain does not close under the leaf audit rule.
+- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (gw_echo_null_result_note=bounded, work_history.gw_echo_timing_route_note=support). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
+- **open / conditional deps cited:**
+  - `GW_ECHO_NULL_RESULT_NOTE.md`
+  - `work_history/GW_ECHO_TIMING_ROUTE_NOTE.md`
 - **auditor confidence:** high
 
 ### `g_bare_derivation_note`
