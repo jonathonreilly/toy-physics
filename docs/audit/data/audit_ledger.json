@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T00:52:06.161097+00:00",
-  "generated_at": "2026-04-30T00:52:04.430656+00:00",
-  "invalidation_run_at": "2026-04-30T00:52:06.105146+00:00",
+  "effective_status_computed_at": "2026-04-30T00:52:09.432702+00:00",
+  "generated_at": "2026-04-30T00:52:07.690155+00:00",
+  "invalidation_run_at": "2026-04-30T00:52:09.376945+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T00:52:05.992316+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:52:09.263712+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -67834,15 +67834,27 @@
       "verdict_rationale": null
     },
     "quark_up_amplitude_native_expression_scan_note_2026-04-19": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T00:52:06.763930+00:00",
+      "audit_state_snapshot": {
+        "criticality": "medium",
+        "dep_effective_status": {
+          "quark_projector_parameter_audit_note_2026-04-19": "audited_numerical_match",
+          "quark_up_amplitude_candidate_scan_note_2026-04-19": "audited_numerical_match"
+        },
+        "deps": [
+          "quark_projector_parameter_audit_note_2026-04-19",
+          "quark_up_amplitude_candidate_scan_note_2026-04-19"
+        ],
+        "load_bearing_score": 7.459,
+        "transitive_descendants": 43
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The no-go is a bounded numerical dominance test over a restricted grammar and comparator baselines inherited from prior bounded scans. It sharpens the search surface but does not derive the missing amplitude law or close the quark branch.",
       "claim_id": "quark_up_amplitude_native_expression_scan_note_2026-04-19",
       "criticality": "medium",
       "cross_confirmation": null,
@@ -67855,17 +67867,20 @@
       ],
       "direct_in_degree": 4,
       "effective_status": "audited_numerical_match",
-      "effective_status_reason": "inherited_from:quark_projector_parameter_audit_note_2026-04-19",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "effective_status_reason": "self",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 7.459,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The restricted native one-step scan finds different best native laws on the refit and anchored axes and no expression that beats both the 7/9 refit baseline and sqrt(3/5) anchored baseline at once.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "788878290e55a9164f83b1ffd4f76b8ecb83d03cfb1bd8319e0f7674e93f6c8e",
       "note_path": "docs/QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
+        "docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-29T11:40:10.272201+00:00",
@@ -67940,13 +67955,13 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 5,
+        "total_pass": 5
       },
       "runner_path": "scripts/frontier_quark_up_amplitude_native_expression_scan.py",
       "title": "Quark Up-Amplitude Native-Expression Scan",
       "transitive_descendants": 43,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the load-bearing negative result depends on selected comparator axes, external bounded baselines, and a restricted one-step grammar. Why this blocks: failing to beat both numerical baselines is not a retained derivation of the amplitude, and the dependencies remain bounded/numerical. Repair target: prove a native expression family is complete for the physical amplitude law, or derive the amplitude directly from retained primitives. Claim boundary until fixed: this is a bounded native-grammar no-go over the tested family."
     },
     "quark_up_amplitude_provenance_audit_note_2026-04-19": {
       "audit_date": null,

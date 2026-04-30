@@ -3,9 +3,9 @@
     "critical": 49,
     "high": 302,
     "leaf": 615,
-    "medium": 327
+    "medium": 326
   },
-  "generated_at": "2026-04-30T00:52:06.218564+00:00",
+  "generated_at": "2026-04-30T00:52:09.487591+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -13552,26 +13552,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "quark_up_amplitude_native_expression_scan_note_2026-04-19",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "quark_projector_parameter_audit_note_2026-04-19",
-        "quark_up_amplitude_candidate_scan_note_2026-04-19"
-      ],
-      "direct_in_degree": 4,
-      "load_bearing_score": 7.459,
-      "note_path": "docs/QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_quark_up_amplitude_native_expression_scan.py",
-      "transitive_descendants": 43
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "boundary_law_robustness_note_2026-04-11",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -27015,5 +26995,5 @@
     }
   ],
   "ready_count": 844,
-  "total_pending": 1293
+  "total_pending": 1292
 }
