@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:17:04.016904+00:00
+**Generated:** 2026-04-30T00:17:22.494833+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -38,9 +38,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 133 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 50 |
-| `audited_numerical_match` | 11 |
+| `audited_numerical_match` | 12 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1291 |
+| `unaudited` | 1290 |
 
 | criticality | count |
 |---|---:|
@@ -382,6 +382,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | weak | codex-current | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | weak | codex-current | G | - |
 | `quark_up_amplitude_candidate_scan_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | weak | codex-current | G | - |
+| `quark_up_amplitude_native_affine_no_go_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | weak | codex-current | G | - |
 | `quark_up_amplitude_native_expression_scan_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | weak | codex-current | G | - |
 | `tensor_support_center_excess_law_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
@@ -3388,6 +3389,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
   - `QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `quark_up_amplitude_native_affine_no_go_note_2026-04-19`
+
+- **Note:** [`QUARK_UP_AMPLITUDE_NATIVE_AFFINE_NO_GO_NOTE_2026-04-19.md`](../../docs/QUARK_UP_AMPLITUDE_NATIVE_AFFINE_NO_GO_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-20260430-standard`  (codex-current; independence=weak)
+- **load-bearing step:** The widened affine scan finds nine laws beating each external baseline separately but zero laws beating both the 7/9 refit baseline and the sqrt(3/5) anchored baseline at once.  _(class `G`)_
+- **chain closes:** False — The finite affine-family scan is reproduced, but its no-go criterion is a numerical dominance test against comparator-selected baselines, not a retained derivation of the amplitude law.
+- **rationale:** Issue: The claimed no-go rests on a chosen affine grammar and on comparison to 7/9 and sqrt(3/5) baselines selected by fit quality. Why this blocks: the result bounds that scan family, but does not prove the framework cannot force a different native law or derive a_u independently. Repair target: derive the affine family and dominance criterion from retained projector/support theorems, or derive the up-sector scalar directly before using the scan as a consistency check. Claim boundary until fixed: the note is a strong bounded no-go for the widened affine support family, not an audited-clean closure of the quark scalar.
+- **open / conditional deps cited:**
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`
+  - `QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `quark_up_amplitude_native_expression_scan_note_2026-04-19`
