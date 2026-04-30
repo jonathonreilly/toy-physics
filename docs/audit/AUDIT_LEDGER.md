@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:50:11.734066+00:00
+**Generated:** 2026-04-30T22:51:42.941527+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 83 |
 | _proposed_retained_ | 1 |
-| bounded | 276 |
+| bounded | 275 |
 | support | 241 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 748 |
+| ~~audited_conditional~~ | 749 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 219 |
-| `audited_conditional` | 475 |
+| `audited_conditional` | 476 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 776 |
+| `unaudited` | 775 |
 
 | criticality | count |
 |---|---:|
@@ -47,7 +47,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 381 |
 | `leaf` | 769 |
 
-- **Proposed claims demoted by upstream:** 129
+- **Proposed claims demoted by upstream:** 128
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -658,6 +658,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_theta_hierarchy_open_scalar_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_z3_scalar_potential_support_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
+| `lanes.ordered-lattice.readme` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_3d_l2_numpy_h0125_bridge_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
@@ -8657,6 +8658,21 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** Issue: the result depends on a selected 15/41-family linearity subset and imported battery measurements, with the listed runner/log outside the audit row and a bounded conditional Kubo dependency. Why this blocks: the note gives useful non-tautological evidence for the linear-response subset, but a selected finite subset and unregistered computation cannot be ratified as a retained theorem about the full range of validity. Repair target: register scripts/kubo_range_of_validity.py as the primary runner, recompute the family table with hard thresholds, and keep the claim scoped to the exact subset unless a theorem derives the selection boundary. Claim boundary until fixed: safe as bounded numerical evidence that the first-order Kubo formula predicts F~M near 1 on the listed linearity-regime subset; not safe as audit-clean retained validity range.
 - **open / conditional deps cited:**
   - `LINEAR_RESPONSE_TRUE_KUBO_NOTE.md`
+- **auditor confidence:** high
+
+### `lanes.ordered-lattice.readme`
+
+- **Note:** [`lanes/ordered-lattice/README.md`](../../docs/lanes/ordered-lattice/README.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-39`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The ordered-lattice lane remains a historical proposed-retained major program covering the dense spent-delay branch, nearest-neighbor refinement bridge, and structured chokepoint/generated-symmetry bridge.  _(class `B`)_
+- **chain closes:** False — The README is a lane-level inventory whose direct dependencies are bounded rather than retained, including an unaudited continuum bridge and a bounded structured-chokepoint card. The registered runner prints a 10-property diagnostic card but the classifier finds no A/B/C/D PASS assertions, so it does not by itself ratify a proposed-retained program claim.
+- **rationale:** Issue: the row is a lane README/historical program claim, not a closed theorem, and it depends on bounded ordered-lattice bridge notes while the registered runner emits diagnostics with no classified A/B/C/D PASS lines. Why this blocks: a proposed-retained lane-wide claim cannot be ratified from bounded one-hop inputs or from an unclassified diagnostic card. Repair target: split any retained ordered-lattice theorem into a narrow source note with retained dependencies and a classified runner, and separately audit the continuum bridge. Claim boundary until fixed: safe as a bounded historical lane index and diagnostic runner entry point only.
+- **open / conditional deps cited:**
+  - `CONTINUUM_BRIDGE_NOTE.md`
+  - `STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`
 - **auditor confidence:** high
 
 ### `lattice_3d_dense_refinement_reconciliation_note`

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 1,
     "high": 201,
-    "leaf": 287,
+    "leaf": 286,
     "medium": 287
   },
-  "generated_at": "2026-04-30T22:50:11.525502+00:00",
+  "generated_at": "2026-04-30T22:51:42.764744+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -12902,26 +12902,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "lanes.ordered-lattice.readme",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "continuum_bridge_note",
-        "structured_chokepoint_bridge_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.085,
-      "note_path": "docs/lanes/ordered-lattice/README.md",
-      "ready": true,
-      "runner_path": "scripts/lattice_3d_dense_10prop.py",
-      "transitive_descendants": 2
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "born_rule_analysis_2026-04-11",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -17797,6 +17777,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 393,
-  "total_pending": 776
+  "ready_count": 392,
+  "total_pending": 775
 }
