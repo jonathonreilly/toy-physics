@@ -1,0 +1,3 @@
+NUMBA_PROFILE_ELAPSED_SECONDS 0.818212
+Numba nopython kernel: Python cProfile cannot attribute time inside compiled loops.
+Use component_seconds.heatbath_sweep in the JSON benchmark for the production estimate.

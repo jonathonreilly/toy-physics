@@ -1,0 +1,95 @@
+{
+  "bottleneck": {
+    "detail": "At 12^3 x 24, one heat-bath sweep plus four overrelaxation sweeps is about 6.06s before plaquette/correlator work.",
+    "primary": "gauge evolution",
+    "strict_campaign_status": "not_completed_in_this_environment"
+  },
+  "component_results": {
+    "measure_correlator_cg_infos": [
+      0,
+      0,
+      0
+    ],
+    "measure_correlator_max_cg_residual": 9.08367296671364e-09,
+    "measure_correlator_time_slices": 24,
+    "plaquette_after_one_sweep": 0.6623425473422043,
+    "single_cg_info": 0,
+    "single_cg_residual": 9.08367296671364e-09
+  },
+  "component_seconds": {
+    "ape_smear_one_step": 12.563164208084345,
+    "dirac_build_one_mass": 3.492021250538528,
+    "gauge_init": 0.00488370843231678,
+    "heatbath_sweep": 1.6333159171044827,
+    "measure_correlator_one_mass": 5.182000292465091,
+    "overrelax_sweep": 1.1057559167966247,
+    "plaquette": 0.15815541706979275,
+    "single_cg_solve": 1.2442615423351526
+  },
+  "geometry": {
+    "matrix_size": 124416,
+    "spatial_L": 12,
+    "time_L": 24,
+    "volume": 41472
+  },
+  "linear_volume_extrapolation": {
+    "12x24": {
+      "correlator_measurement_seconds": 28109.165085479617,
+      "gauge_evolution_seconds": 127183.1312701106,
+      "gauge_sweeps": 21000.0,
+      "plaquette_seconds": 316.3108341395855,
+      "total_days": 1.8010255461774283,
+      "total_seconds": 155608.6071897298,
+      "volume_scale_from_12x24": 1.0
+    },
+    "16x32": {
+      "correlator_measurement_seconds": 88838.8427392936,
+      "gauge_evolution_seconds": 401961.5012981273,
+      "gauge_sweeps": 21000.0,
+      "plaquette_seconds": 999.6984387621467,
+      "total_days": 5.692130121252118,
+      "total_seconds": 491800.04247618304,
+      "volume_scale_from_12x24": 3.1604938271604937
+    },
+    "24x48": {
+      "correlator_measurement_seconds": 449746.6413676739,
+      "gauge_evolution_seconds": 2034930.1003217697,
+      "gauge_sweeps": 21000.0,
+      "plaquette_seconds": 5060.973346233368,
+      "total_days": 28.816408738838852,
+      "total_seconds": 2489737.715035677,
+      "volume_scale_from_12x24": 16.0
+    }
+  },
+  "memory_notes": {
+    "dirac_matrix_shape_12x24": [
+      124416,
+      124416
+    ],
+    "dirac_nnz_12x24": 3110400,
+    "dirac_nnz_per_lattice_site": 75,
+    "estimated_dirac_nnz_24x48": 49766400,
+    "normal_equation_note": "CG currently forms D^dagger D explicitly per source; memory pressure grows beyond the raw D matrix."
+  },
+  "metadata": {
+    "artifact": "production_scale_benchmark_not_certificate",
+    "created_utc": "2026-04-30T21:40:25Z",
+    "engine": "numba",
+    "numba_available": true,
+    "numba_warmup_seconds": 9.398323458619416,
+    "numpy": "2.4.1",
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "python": "3.12.8 (v3.12.8:2dc476bcb91, Dec  3 2024, 14:43:19) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "scipy_sparse_cg": "scipy.sparse.linalg.cg",
+    "seed": 20260430
+  },
+  "production_protocol": {
+    "mass_points": 3,
+    "overrelaxation_sweeps_per_heatbath": 4,
+    "saved_configurations_per_volume": 1000,
+    "separation_sweeps": 20,
+    "thermalization_sweeps": 1000
+  },
+  "profile_path": "outputs/yt_direct_lattice_correlator_production/L12xT24/heatbath_profile_numba.txt",
+  "total_three_volume_estimate_days": 36.3095644062684
+}

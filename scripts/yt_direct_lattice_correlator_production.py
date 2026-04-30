@@ -41,6 +41,11 @@ import numpy as np
 from scipy import sparse
 from scipy.sparse.linalg import cg
 
+try:
+    from numba import njit
+except Exception:  # pragma: no cover - optional acceleration dependency
+    njit = None
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = REPO_ROOT / "outputs" / "yt_direct_lattice_correlator"
@@ -56,6 +61,344 @@ R0_OVER_A_BETA6_REFERENCE = 5.37
 V_GEV = 246.21965
 PDG_TOP_MASS_GEV = 172.56
 YT_TARGET = 0.917
+NUMBA_AVAILABLE = njit is not None
+
+
+if NUMBA_AVAILABLE:
+
+    @njit
+    def nb_seed(seed: int) -> None:
+        np.random.seed(seed)
+
+
+    @njit
+    def nb_eye3() -> np.ndarray:
+        out = np.zeros((3, 3), dtype=np.complex128)
+        for i in range(3):
+            out[i, i] = 1.0 + 0.0j
+        return out
+
+
+    @njit
+    def nb_matmul3(a: np.ndarray, b: np.ndarray) -> np.ndarray:
+        out = np.zeros((3, 3), dtype=np.complex128)
+        for i in range(3):
+            for j in range(3):
+                s = 0.0 + 0.0j
+                for k in range(3):
+                    s += a[i, k] * b[k, j]
+                out[i, j] = s
+        return out
+
+
+    @njit
+    def nb_dagger3(a: np.ndarray) -> np.ndarray:
+        out = np.empty((3, 3), dtype=np.complex128)
+        for i in range(3):
+            for j in range(3):
+                out[i, j] = np.conj(a[j, i])
+        return out
+
+
+    @njit
+    def nb_det3(a: np.ndarray) -> complex:
+        return (
+            a[0, 0] * (a[1, 1] * a[2, 2] - a[1, 2] * a[2, 1])
+            - a[0, 1] * (a[1, 0] * a[2, 2] - a[1, 2] * a[2, 0])
+            + a[0, 2] * (a[1, 0] * a[2, 1] - a[1, 1] * a[2, 0])
+        )
+
+
+    @njit
+    def nb_project_su3(mat: np.ndarray) -> np.ndarray:
+        out = np.empty((3, 3), dtype=np.complex128)
+        norm0 = 0.0
+        for i in range(3):
+            norm0 += (np.conj(mat[i, 0]) * mat[i, 0]).real
+        norm0 = math.sqrt(max(norm0, 1.0e-30))
+        for i in range(3):
+            out[i, 0] = mat[i, 0] / norm0
+
+        dot01 = 0.0 + 0.0j
+        for i in range(3):
+            dot01 += np.conj(out[i, 0]) * mat[i, 1]
+        norm1 = 0.0
+        for i in range(3):
+            out[i, 1] = mat[i, 1] - dot01 * out[i, 0]
+            norm1 += (np.conj(out[i, 1]) * out[i, 1]).real
+        norm1 = math.sqrt(max(norm1, 1.0e-30))
+        for i in range(3):
+            out[i, 1] /= norm1
+
+        out[0, 2] = np.conj(out[1, 0] * out[2, 1] - out[2, 0] * out[1, 1])
+        out[1, 2] = np.conj(out[2, 0] * out[0, 1] - out[0, 0] * out[2, 1])
+        out[2, 2] = np.conj(out[0, 0] * out[1, 1] - out[1, 0] * out[0, 1])
+
+        det = nb_det3(out)
+        if abs(det) > 1.0e-30:
+            for i in range(3):
+                out[i, 2] /= det
+        return out
+
+
+    @njit
+    def nb_random_su2_quaternion() -> np.ndarray:
+        out = np.empty(4, dtype=np.float64)
+        norm = 0.0
+        for i in range(4):
+            v = np.random.normal()
+            out[i] = v
+            norm += v * v
+        norm = math.sqrt(max(norm, 1.0e-30))
+        for i in range(4):
+            out[i] /= norm
+        return out
+
+
+    @njit
+    def nb_quaternion_to_su2(q: np.ndarray) -> np.ndarray:
+        out = np.empty((2, 2), dtype=np.complex128)
+        a0, a1, a2, a3 = q[0], q[1], q[2], q[3]
+        out[0, 0] = a0 + 1j * a3
+        out[0, 1] = a2 + 1j * a1
+        out[1, 0] = -a2 + 1j * a1
+        out[1, 1] = a0 - 1j * a3
+        return out
+
+
+    @njit
+    def nb_su2_heatbath_quaternion(k: float) -> np.ndarray:
+        if k < 1.0e-10:
+            return nb_random_su2_quaternion()
+        two_k = 2.0 * k
+        a0 = 0.0
+        for _ in range(10000):
+            r = np.random.random()
+            if two_k > 100.0:
+                a0 = 1.0 + math.log(max(r + (1.0 - r) * math.exp(-2.0 * two_k), 1.0e-300)) / two_k
+            else:
+                a0 = math.log(r * math.exp(two_k) + (1.0 - r) * math.exp(-two_k)) / two_k
+            if -1.0 <= a0 <= 1.0 and np.random.random() < math.sqrt(max(1.0 - a0 * a0, 0.0)):
+                break
+        radius = math.sqrt(max(1.0 - a0 * a0, 0.0))
+        phi = 2.0 * math.pi * np.random.random()
+        cos_theta = 2.0 * np.random.random() - 1.0
+        sin_theta = math.sqrt(max(1.0 - cos_theta * cos_theta, 0.0))
+        out = np.empty(4, dtype=np.float64)
+        out[0] = a0
+        out[1] = radius * sin_theta * math.cos(phi)
+        out[2] = radius * sin_theta * math.sin(phi)
+        out[3] = radius * cos_theta
+        return out
+
+
+    @njit
+    def nb_subgroup_pair(subgroup: int) -> tuple[int, int]:
+        if subgroup == 0:
+            return 0, 1
+        if subgroup == 1:
+            return 0, 2
+        return 1, 2
+
+
+    @njit
+    def nb_extract_su2(mat: np.ndarray, subgroup: int) -> np.ndarray:
+        i0, i1 = nb_subgroup_pair(subgroup)
+        out = np.empty((2, 2), dtype=np.complex128)
+        out[0, 0] = mat[i0, i0]
+        out[0, 1] = mat[i0, i1]
+        out[1, 0] = mat[i1, i0]
+        out[1, 1] = mat[i1, i1]
+        return out
+
+
+    @njit
+    def nb_embed_su2(mat: np.ndarray, subgroup: int) -> np.ndarray:
+        out = nb_eye3()
+        i0, i1 = nb_subgroup_pair(subgroup)
+        out[i0, i0] = mat[0, 0]
+        out[i0, i1] = mat[0, 1]
+        out[i1, i0] = mat[1, 0]
+        out[i1, i1] = mat[1, 1]
+        return out
+
+
+    @njit
+    def nb_matmul2(a: np.ndarray, b: np.ndarray) -> np.ndarray:
+        out = np.empty((2, 2), dtype=np.complex128)
+        out[0, 0] = a[0, 0] * b[0, 0] + a[0, 1] * b[1, 0]
+        out[0, 1] = a[0, 0] * b[0, 1] + a[0, 1] * b[1, 1]
+        out[1, 0] = a[1, 0] * b[0, 0] + a[1, 1] * b[1, 0]
+        out[1, 1] = a[1, 0] * b[0, 1] + a[1, 1] * b[1, 1]
+        return out
+
+
+    @njit
+    def nb_dagger2(a: np.ndarray) -> np.ndarray:
+        out = np.empty((2, 2), dtype=np.complex128)
+        out[0, 0] = np.conj(a[0, 0])
+        out[0, 1] = np.conj(a[1, 0])
+        out[1, 0] = np.conj(a[0, 1])
+        out[1, 1] = np.conj(a[1, 1])
+        return out
+
+
+    @njit
+    def nb_project_su2(mat: np.ndarray) -> np.ndarray:
+        det = mat[0, 0] * mat[1, 1] - mat[0, 1] * mat[1, 0]
+        if abs(det) < 1.0e-30:
+            out = np.zeros((2, 2), dtype=np.complex128)
+            out[0, 0] = 1.0 + 0.0j
+            out[1, 1] = 1.0 + 0.0j
+            return out
+        root = np.sqrt(det)
+        v00 = mat[0, 0] / root
+        v01 = mat[0, 1] / root
+        v10 = mat[1, 0] / root
+        v11 = mat[1, 1] / root
+        a = 0.5 * (v00 + np.conj(v11))
+        b = 0.5 * (v10 - np.conj(v01))
+        norm = math.sqrt(abs(a) ** 2 + abs(b) ** 2)
+        out = np.empty((2, 2), dtype=np.complex128)
+        if norm < 1.0e-30:
+            out[0, 0] = 1.0 + 0.0j
+            out[0, 1] = 0.0 + 0.0j
+            out[1, 0] = 0.0 + 0.0j
+            out[1, 1] = 1.0 + 0.0j
+            return out
+        a /= norm
+        b /= norm
+        out[0, 0] = a
+        out[0, 1] = -np.conj(b)
+        out[1, 0] = b
+        out[1, 1] = np.conj(a)
+        return out
+
+
+    @njit
+    def nb_shift(t: int, x: int, y: int, z: int, mu: int, step: int, time_l: int, spatial_l: int) -> tuple[int, int, int, int]:
+        if mu == 0:
+            return (t + step) % time_l, x, y, z
+        if mu == 1:
+            return t, (x + step) % spatial_l, y, z
+        if mu == 2:
+            return t, x, (y + step) % spatial_l, z
+        return t, x, y, (z + step) % spatial_l
+
+
+    @njit
+    def nb_staple(u: np.ndarray, t: int, x: int, y: int, z: int, mu: int) -> np.ndarray:
+        time_l = u.shape[0]
+        spatial_l = u.shape[1]
+        acc = np.zeros((3, 3), dtype=np.complex128)
+        tp_mu, xp_mu, yp_mu, zp_mu = nb_shift(t, x, y, z, mu, 1, time_l, spatial_l)
+        for nu in range(4):
+            if nu == mu:
+                continue
+            tp_nu, xp_nu, yp_nu, zp_nu = nb_shift(t, x, y, z, nu, 1, time_l, spatial_l)
+            tm_nu, xm_nu, ym_nu, zm_nu = nb_shift(t, x, y, z, nu, -1, time_l, spatial_l)
+            tpm, xpm, ypm, zpm = nb_shift(tp_mu, xp_mu, yp_mu, zp_mu, nu, -1, time_l, spatial_l)
+
+            term = nb_matmul3(
+                nb_matmul3(u[tp_mu, xp_mu, yp_mu, zp_mu, nu], nb_dagger3(u[tp_nu, xp_nu, yp_nu, zp_nu, mu])),
+                nb_dagger3(u[t, x, y, z, nu]),
+            )
+            acc += term
+            term = nb_matmul3(
+                nb_matmul3(nb_dagger3(u[tpm, xpm, ypm, zpm, nu]), nb_dagger3(u[tm_nu, xm_nu, ym_nu, zm_nu, mu])),
+                u[tm_nu, xm_nu, ym_nu, zm_nu, nu],
+            )
+            acc += term
+        return acc
+
+
+    @njit
+    def nb_heatbath_link(u: np.ndarray, t: int, x: int, y: int, z: int, mu: int, beta: float) -> None:
+        staple = nb_staple(u, t, x, y, z, mu)
+        link = u[t, x, y, z, mu].copy()
+        for subgroup in range(3):
+            w = nb_matmul3(link, staple)
+            w2 = nb_extract_su2(w, subgroup)
+            det_w2 = w2[0, 0] * w2[1, 1] - w2[0, 1] * w2[1, 0]
+            scale = math.sqrt(max(det_w2.real, 0.0))
+            if scale < 1.0e-15:
+                rotation2 = nb_quaternion_to_su2(nb_random_su2_quaternion())
+            else:
+                k = (beta / 3.0) * scale
+                r_new = nb_quaternion_to_su2(nb_su2_heatbath_quaternion(k))
+                rotation2 = nb_matmul2(r_new, nb_dagger2(nb_project_su2(w2)))
+            link = nb_matmul3(nb_embed_su2(rotation2, subgroup), link)
+        u[t, x, y, z, mu] = nb_project_su3(link)
+
+
+    @njit
+    def nb_heatbath_sweep(u: np.ndarray, beta: float) -> None:
+        for t in range(u.shape[0]):
+            for x in range(u.shape[1]):
+                for y in range(u.shape[2]):
+                    for z in range(u.shape[3]):
+                        for mu in range(4):
+                            nb_heatbath_link(u, t, x, y, z, mu, beta)
+
+
+    @njit
+    def nb_overrelax_link(u: np.ndarray, t: int, x: int, y: int, z: int, mu: int) -> None:
+        staple = nb_staple(u, t, x, y, z, mu)
+        target = nb_project_su3(nb_dagger3(staple))
+        link = nb_matmul3(nb_matmul3(target, nb_dagger3(u[t, x, y, z, mu])), target)
+        u[t, x, y, z, mu] = nb_project_su3(link)
+
+
+    @njit
+    def nb_overrelax_sweep(u: np.ndarray) -> None:
+        for t in range(u.shape[0]):
+            for x in range(u.shape[1]):
+                for y in range(u.shape[2]):
+                    for z in range(u.shape[3]):
+                        for mu in range(4):
+                            nb_overrelax_link(u, t, x, y, z, mu)
+
+
+    @njit
+    def nb_plaquette(u: np.ndarray) -> float:
+        total = 0.0
+        count = 0
+        time_l = u.shape[0]
+        spatial_l = u.shape[1]
+        for t in range(time_l):
+            for x in range(spatial_l):
+                for y in range(spatial_l):
+                    for z in range(spatial_l):
+                        for mu in range(4):
+                            tp_mu, xp_mu, yp_mu, zp_mu = nb_shift(t, x, y, z, mu, 1, time_l, spatial_l)
+                            for nu in range(mu + 1, 4):
+                                tp_nu, xp_nu, yp_nu, zp_nu = nb_shift(t, x, y, z, nu, 1, time_l, spatial_l)
+                                p = nb_matmul3(
+                                    nb_matmul3(
+                                        nb_matmul3(u[t, x, y, z, mu], u[tp_mu, xp_mu, yp_mu, zp_mu, nu]),
+                                        nb_dagger3(u[tp_nu, xp_nu, yp_nu, zp_nu, mu]),
+                                    ),
+                                    nb_dagger3(u[t, x, y, z, nu]),
+                                )
+                                total += (p[0, 0] + p[1, 1] + p[2, 2]).real / 3.0
+                                count += 1
+        return total / count
+
+
+    @njit
+    def nb_warmup() -> None:
+        u = np.zeros((2, 2, 2, 2, 4, 3, 3), dtype=np.complex128)
+        for t in range(2):
+            for x in range(2):
+                for y in range(2):
+                    for z in range(2):
+                        for mu in range(4):
+                            for c in range(3):
+                                u[t, x, y, z, mu, c, c] = 1.0 + 0.0j
+        nb_seed(17)
+        nb_heatbath_sweep(u, 6.0)
+        nb_overrelax_sweep(u)
+        nb_plaquette(u)
 
 
 def project_su3(mat: np.ndarray) -> np.ndarray:
@@ -271,6 +614,39 @@ class GaugeField:
         return total / count
 
 
+def resolve_engine(args: argparse.Namespace) -> str:
+    requested = getattr(args, "engine", "auto")
+    if requested == "python":
+        return "python"
+    if requested == "numba":
+        if not NUMBA_AVAILABLE:
+            raise RuntimeError("requested --engine numba, but numba is not available")
+        return "numba"
+    return "numba" if NUMBA_AVAILABLE else "python"
+
+
+def cold_link_array(geom: Geometry) -> np.ndarray:
+    u = np.zeros((*geom.dims, NDIM, NC, NC), dtype=np.complex128)
+    for color in range(NC):
+        u[..., color, color] = 1.0 + 0.0j
+    return u
+
+
+def gauge_field_from_array(geom: Geometry, u: np.ndarray) -> GaugeField:
+    gauge = GaugeField(geom)
+    gauge.u = u
+    return gauge
+
+
+def warm_numba_kernels(seed: int) -> float:
+    if not NUMBA_AVAILABLE:
+        return 0.0
+    t0 = time.perf_counter()
+    nb_seed(seed)
+    nb_warmup()
+    return time.perf_counter() - t0
+
+
 def ape_smear_spatial(gauge: GaugeField, alpha: float, steps: int) -> GaugeField:
     out = gauge.copy()
     for _ in range(steps):
@@ -438,6 +814,9 @@ def physical_mass_gev(m_lat: float) -> float:
 
 
 def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: list[float], rng: np.random.Generator) -> dict[str, Any]:
+    if resolve_engine(args) == "numba":
+        return run_volume_numba(args, spatial_l, time_l, masses)
+
     geom = Geometry(spatial_l, time_l)
     gauge = GaugeField(geom)
     t0 = time.time()
@@ -503,6 +882,91 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
             "fermion_time": "antiperiodic",
         },
         "update_algorithm": "Cabibbo-Marinari heatbath + polar overrelaxation",
+        "update_engine": "python",
+        "thermalization_sweeps": args.therm,
+        "measurement_sweeps": args.measurements,
+        "measurement_separation_sweeps": args.separation,
+        "ape_smearing": {"steps": args.ape_steps, "alpha": args.ape_alpha},
+        "plaquette_history": [float(x) for x in plaquette_history],
+        "plaquette_measurements": [float(x) for x in plaquettes],
+        "plaquette_mean": float(np.mean(plaquettes)) if plaquettes else None,
+        "mass_parameter_scan": mass_scan,
+        "selected_mass_parameter": selected_mass,
+        "correlators": correlator_rows,
+        "effective_mass": effective_mass(np.array([r["mean"] for r in correlator_rows])),
+        "mass_fit": selected_fit,
+        "runtime_seconds": elapsed,
+    }
+
+
+def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, masses: list[float]) -> dict[str, Any]:
+    geom = Geometry(spatial_l, time_l)
+    u = cold_link_array(geom)
+    t0 = time.time()
+    plaquette_history = []
+    for sweep in range(args.therm):
+        nb_heatbath_sweep(u, BETA)
+        for _ in range(args.overrelax):
+            nb_overrelax_sweep(u)
+        plaquette_history.append(float(nb_plaquette(u)))
+        print(f"  therm L={spatial_l} sweep={sweep + 1}/{args.therm} plaquette={plaquette_history[-1]:.6f}")
+
+    measurements: dict[float, list[list[float]]] = {m: [] for m in masses}
+    cg_residuals: dict[float, list[float]] = {m: [] for m in masses}
+    plaquettes = []
+    for cfg in range(args.measurements):
+        for _ in range(args.separation):
+            nb_heatbath_sweep(u, BETA)
+            for _ in range(args.overrelax):
+                nb_overrelax_sweep(u)
+        plaquettes.append(float(nb_plaquette(u)))
+        gauge_view = gauge_field_from_array(geom, u)
+        meas_gauge = ape_smear_spatial(gauge_view, args.ape_alpha, args.ape_steps) if args.ape_steps else gauge_view
+        for mass in masses:
+            measured = measure_correlator(meas_gauge, mass, args.cg_rtol, args.cg_maxiter)
+            measurements[mass].append(measured["correlator"])
+            cg_residuals[mass].append(float(measured["max_cg_residual"]))
+        print(f"  meas L={spatial_l} cfg={cfg + 1}/{args.measurements} plaquette={plaquettes[-1]:.6f}")
+
+    mass_scan = []
+    selected_fit: dict[str, Any] | None = None
+    selected_mass = masses[len(masses) // 2]
+    correlator_rows = []
+    for mass in masses:
+        arr = np.asarray(measurements[mass], dtype=float)
+        mean, err = jackknife_mean_err(arr)
+        fit = fit_mass(mean, err)
+        mass_scan.append(
+            {
+                "m_bare_lat": mass,
+                "m_fit_lat": fit["m_lat"],
+                "m_fit_lat_err": fit["m_lat_err"],
+                "chi2_dof": fit["chi2_dof"],
+                "max_cg_residual": max(cg_residuals[mass]) if cg_residuals[mass] else None,
+            }
+        )
+        if mass == selected_mass:
+            selected_fit = fit
+            for tau, (c, e) in enumerate(zip(mean, err)):
+                correlator_rows.append({"tau": tau, "mean": float(c), "stderr": float(e)})
+
+    if selected_fit is None:
+        selected_fit = mass_scan[len(mass_scan) // 2]
+
+    elapsed = time.time() - t0
+    return {
+        "spatial_L": spatial_l,
+        "time_L": time_l,
+        "dims": [spatial_l, spatial_l, spatial_l, time_l],
+        "a_fm": R0_FM / R0_OVER_A_BETA6_REFERENCE,
+        "r0_over_a": R0_OVER_A_BETA6_REFERENCE,
+        "boundary_conditions": {
+            "gauge_spatial": "periodic",
+            "gauge_time": "periodic",
+            "fermion_time": "antiperiodic",
+        },
+        "update_algorithm": "Cabibbo-Marinari heatbath + polar overrelaxation",
+        "update_engine": "numba",
         "thermalization_sweeps": args.therm,
         "measurement_sweeps": args.measurements,
         "measurement_separation_sweeps": args.separation,
@@ -584,6 +1048,28 @@ def parse_volume_spec(spec: str) -> list[tuple[int, int]]:
             l_s = int(part)
             out.append((l_s, 2 * l_s))
     return out
+
+
+def volume_artifact_path(output_dir: Path, spatial_l: int, time_l: int) -> Path:
+    return output_dir / f"L{spatial_l}xT{time_l}" / "ensemble_measurement.json"
+
+
+def write_volume_artifact(output_dir: Path, ensemble: dict[str, Any]) -> Path:
+    spatial_l = int(ensemble["spatial_L"])
+    time_l = int(ensemble["time_L"])
+    path = volume_artifact_path(output_dir, spatial_l, time_l)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(ensemble, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    return path
+
+
+def load_volume_artifact(output_dir: Path, spatial_l: int, time_l: int) -> dict[str, Any]:
+    path = volume_artifact_path(output_dir, spatial_l, time_l)
+    with path.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+    if not isinstance(data, dict):
+        raise ValueError(f"volume artifact is not a JSON object: {path}")
+    return data
 
 
 def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]]) -> dict[str, Any]:
@@ -669,6 +1155,7 @@ def run_production_benchmark(args: argparse.Namespace) -> int:
     volume_dir = PRODUCTION_OUTPUT_DIR / "L12xT24"
     volume_dir.mkdir(parents=True, exist_ok=True)
 
+    engine = resolve_engine(args)
     rng = np.random.default_rng(args.seed)
     geom = Geometry(12, 24)
     component_seconds: dict[str, float] = {}
@@ -677,16 +1164,32 @@ def run_production_benchmark(args: argparse.Namespace) -> int:
     print("YT direct lattice correlator production-scale benchmark")
     print("=" * 78)
     print("This benchmark is not a production certificate and does not update y_t.")
-    print(f"geometry=12^3 x 24, volume={geom.volume}, matrix_size={geom.volume * NC}")
+    print(f"geometry=12^3 x 24, volume={geom.volume}, matrix_size={geom.volume * NC}, engine={engine}")
 
-    init_seconds, gauge = time_component("gauge_init", lambda: GaugeField(geom))
-    component_seconds["gauge_init"] = init_seconds
-    component_seconds["heatbath_sweep"], _ = time_component("heatbath_sweep", lambda: gauge.heatbath_sweep(rng))
-    component_seconds["overrelax_sweep"], _ = time_component("overrelax_sweep", gauge.overrelax_sweep)
-    component_seconds["plaquette"], plaquette_value = time_component("plaquette", gauge.plaquette)
-    component_seconds["ape_smear_one_step"], smeared = time_component(
-        "ape_smear_one_step", lambda: ape_smear_spatial(gauge, args.ape_alpha, 1)
-    )
+    warmup_seconds = 0.0
+    if engine == "numba":
+        warmup_seconds = warm_numba_kernels(args.seed)
+        print(f"  numba warmup/compile: {warmup_seconds:.6f}s", flush=True)
+        init_seconds, u = time_component("gauge_init", lambda: cold_link_array(geom))
+        component_seconds["gauge_init"] = init_seconds
+        nb_seed(args.seed)
+        component_seconds["heatbath_sweep"], _ = time_component("heatbath_sweep", lambda: nb_heatbath_sweep(u, BETA))
+        component_seconds["overrelax_sweep"], _ = time_component("overrelax_sweep", lambda: nb_overrelax_sweep(u))
+        component_seconds["plaquette"], plaquette_value = time_component("plaquette", lambda: nb_plaquette(u))
+        gauge = gauge_field_from_array(geom, u)
+        component_seconds["ape_smear_one_step"], smeared = time_component(
+            "ape_smear_one_step", lambda: ape_smear_spatial(gauge, args.ape_alpha, 1)
+        )
+    else:
+        init_seconds, gauge = time_component("gauge_init", lambda: GaugeField(geom))
+        component_seconds["gauge_init"] = init_seconds
+        component_seconds["heatbath_sweep"], _ = time_component("heatbath_sweep", lambda: gauge.heatbath_sweep(rng))
+        component_seconds["overrelax_sweep"], _ = time_component("overrelax_sweep", gauge.overrelax_sweep)
+        component_seconds["plaquette"], plaquette_value = time_component("plaquette", gauge.plaquette)
+        component_seconds["ape_smear_one_step"], smeared = time_component(
+            "ape_smear_one_step", lambda: ape_smear_spatial(gauge, args.ape_alpha, 1)
+        )
+
     dirac_seconds, dirac = time_component("dirac_build_one_mass", lambda: build_staggered_dirac(smeared, 0.75))
     component_seconds["dirac_build_one_mass"] = dirac_seconds
     cg_seconds, cg_result = time_component(
@@ -701,17 +1204,29 @@ def run_production_benchmark(args: argparse.Namespace) -> int:
 
     profile_text = None
     if args.profile_heatbath:
-        profile_gauge = GaugeField(geom)
-        profile = cProfile.Profile()
-        t0 = time.perf_counter()
-        profile.enable()
-        profile_gauge.heatbath_sweep(np.random.default_rng(args.seed + 1))
-        profile.disable()
-        profile_elapsed = time.perf_counter() - t0
-        stream = io.StringIO()
-        pstats.Stats(profile, stream=stream).sort_stats("cumtime").print_stats(25)
-        profile_text = f"PROFILE_ELAPSED_SECONDS {profile_elapsed:.6f}\n{stream.getvalue()}"
-        profile_path = volume_dir / "heatbath_profile.txt"
+        profile_path = volume_dir / f"heatbath_profile_{engine}.txt"
+        if engine == "python":
+            profile_gauge = GaugeField(geom)
+            profile = cProfile.Profile()
+            t0 = time.perf_counter()
+            profile.enable()
+            profile_gauge.heatbath_sweep(np.random.default_rng(args.seed + 1))
+            profile.disable()
+            profile_elapsed = time.perf_counter() - t0
+            stream = io.StringIO()
+            pstats.Stats(profile, stream=stream).sort_stats("cumtime").print_stats(25)
+            profile_text = f"PROFILE_ELAPSED_SECONDS {profile_elapsed:.6f}\n{stream.getvalue()}".rstrip() + "\n"
+        else:
+            profile_u = cold_link_array(geom)
+            nb_seed(args.seed + 1)
+            t0 = time.perf_counter()
+            nb_heatbath_sweep(profile_u, BETA)
+            profile_elapsed = time.perf_counter() - t0
+            profile_text = (
+                f"NUMBA_PROFILE_ELAPSED_SECONDS {profile_elapsed:.6f}\n"
+                "Numba nopython kernel: Python cProfile cannot attribute time inside compiled loops.\n"
+                "Use component_seconds.heatbath_sweep in the JSON benchmark for the production estimate.\n"
+            )
         profile_path.write_text(profile_text, encoding="utf-8")
     else:
         profile_path = None
@@ -737,6 +1252,9 @@ def run_production_benchmark(args: argparse.Namespace) -> int:
             "python": sys.version,
             "platform": platform.platform(),
             "numpy": np.__version__,
+            "numba_available": NUMBA_AVAILABLE,
+            "numba_warmup_seconds": warmup_seconds,
+            "engine": engine,
             "scipy_sparse_cg": "scipy.sparse.linalg.cg",
             "seed": args.seed,
         },
@@ -773,7 +1291,7 @@ def run_production_benchmark(args: argparse.Namespace) -> int:
         "memory_notes": memory_notes,
         "profile_path": str(profile_path.relative_to(REPO_ROOT)) if profile_path is not None else None,
     }
-    benchmark_path = volume_dir / "production_scale_benchmark_2026-04-30.json"
+    benchmark_path = volume_dir / f"production_scale_benchmark_{engine}_2026-04-30.json"
     benchmark_path.write_text(json.dumps(benchmark, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
     print("\nBENCHMARK SUMMARY")
@@ -803,6 +1321,28 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=20260430, help="Random seed.")
     parser.add_argument("--output", type=Path, default=DEFAULT_CERTIFICATE, help="Certificate JSON output path.")
     parser.add_argument(
+        "--production-output-dir",
+        type=Path,
+        default=PRODUCTION_OUTPUT_DIR,
+        help="Directory for per-volume production artifacts and benchmarks.",
+    )
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="Reuse existing per-volume artifacts from --production-output-dir when present.",
+    )
+    parser.add_argument(
+        "--archive-copy",
+        action="store_true",
+        help="Always write a timestamped archive copy under outputs/yt_direct_lattice_correlator.",
+    )
+    parser.add_argument(
+        "--engine",
+        choices=("auto", "python", "numba"),
+        default="auto",
+        help="Gauge-update engine. auto uses numba when available and falls back to python.",
+    )
+    parser.add_argument(
         "--benchmark-production",
         action="store_true",
         help="Benchmark the 12^3 x 24 production-scale components and write a non-certificate artifact.",
@@ -825,6 +1365,11 @@ def main() -> int:
     if args.benchmark_production:
         return run_production_benchmark(args)
 
+    engine = resolve_engine(args)
+    if engine == "numba":
+        warmup_seconds = warm_numba_kernels(args.seed)
+        print(f"numba warmup/compile: {warmup_seconds:.6f}s")
+
     if args.production_targets:
         args.volumes = args.volumes or "12x24,16x32,24x48"
         args.therm = 1000 if args.therm is None else args.therm
@@ -839,6 +1384,7 @@ def main() -> int:
         args.overrelax = 1 if args.overrelax is None else args.overrelax
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    args.production_output_dir.mkdir(parents=True, exist_ok=True)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     volumes = parse_volume_spec(args.volumes)
     masses = [float(x) for x in args.masses.split(",") if x.strip()]
@@ -856,16 +1402,27 @@ def main() -> int:
 
     ensembles = []
     for spatial_l, time_l in volumes:
-        ensembles.append(run_volume(args, spatial_l, time_l, masses, rng))
+        artifact_path = volume_artifact_path(args.production_output_dir, spatial_l, time_l)
+        if args.resume and artifact_path.exists():
+            ensemble = load_volume_artifact(args.production_output_dir, spatial_l, time_l)
+            print(f"  resume L={spatial_l}: loaded {artifact_path}")
+        else:
+            ensemble = run_volume(args, spatial_l, time_l, masses, rng)
+            if args.production_targets:
+                written = write_volume_artifact(args.production_output_dir, ensemble)
+                print(f"  wrote volume artifact: {written}")
+        ensembles.append(ensemble)
 
     certificate = build_certificate(args, ensembles)
     with args.output.open("w", encoding="utf-8") as f:
         json.dump(certificate, f, indent=2, sort_keys=True)
         f.write("\n")
-    stamped = OUTPUT_DIR / f"yt_direct_lattice_correlator_{int(time.time())}.json"
-    with stamped.open("w", encoding="utf-8") as f:
-        json.dump(certificate, f, indent=2, sort_keys=True)
-        f.write("\n")
+    stamped = None
+    if args.archive_copy or args.output.resolve() == DEFAULT_CERTIFICATE.resolve():
+        stamped = OUTPUT_DIR / f"yt_direct_lattice_correlator_{int(time.time())}.json"
+        with stamped.open("w", encoding="utf-8") as f:
+            json.dump(certificate, f, indent=2, sort_keys=True)
+            f.write("\n")
 
     result = certificate["result"]
     print("\nRESULT SUMMARY")
@@ -874,8 +1431,12 @@ def main() -> int:
     print(f"  total dm_t      = {result['total_m_t_pole_uncertainty_GeV']:.6f} GeV")
     print(f"  total dy_t      = {result['total_y_t_uncertainty']:.8f}")
     print(f"  wrote           = {args.output}")
-    print(f"  archive copy    = {stamped}")
-    print("\nThis reduced certificate is not retained evidence unless the strict runner passes.")
+    if stamped is not None:
+        print(f"  archive copy    = {stamped}")
+    if args.production_targets:
+        print("\nThis production-targeted certificate is not retained evidence unless the strict runner passes.")
+    else:
+        print("\nThis reduced certificate is not retained evidence unless the strict runner passes.")
     return 0
 
 

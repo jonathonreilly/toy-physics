@@ -189,56 +189,63 @@ reported mass and Yukawa are proxy values from the reduced infrastructure run;
 they are far from the physical comparators and deliberately do not pass strict
 mode.
 
-## Production-Scale Benchmark Attempt
+## Production-Scale Engineering Status
 
 The requested production campaign was benchmarked on the actual `12^3 x 24`
-path rather than certified from reduced data.  The command was:
+path rather than certified from reduced data.  The original Python gauge path
+was too slow, so this PR now includes a Numba-backed gauge-update engine selected
+by `--engine auto` when Numba is available.  The benchmark command is:
 
 ```bash
-python3 scripts/yt_direct_lattice_correlator_production.py --benchmark-production --profile-heatbath
+python3 scripts/yt_direct_lattice_correlator_production.py --benchmark-production --engine numba --profile-heatbath
 ```
 
-It wrote a non-certificate benchmark artifact at
-`outputs/yt_direct_lattice_correlator_production/L12xT24/production_scale_benchmark_2026-04-30.json`
-and a heat-bath profile at
-`outputs/yt_direct_lattice_correlator_production/L12xT24/heatbath_profile.txt`.
+It wrote a non-certificate optimized benchmark artifact at
+`outputs/yt_direct_lattice_correlator_production/L12xT24/production_scale_benchmark_numba_2026-04-30.json`
+and a Numba profile note at
+`outputs/yt_direct_lattice_correlator_production/L12xT24/heatbath_profile_numba.txt`.
+The original Python reference benchmark remains at
+`outputs/yt_direct_lattice_correlator_production/L12xT24/production_scale_benchmark_2026-04-30.json`.
 
-Measured `12^3 x 24` component timings:
+Measured `12^3 x 24` component timings after the Numba gauge-engine fix:
 
 | Component | Seconds |
 |---|---:|
-| One heat-bath sweep | `33.231613` |
-| One overrelaxation sweep | `17.829914` |
-| One plaquette pass | `2.217985` |
-| One APE smearing step | `7.334851` |
-| One staggered-Dirac build | `2.392469` |
-| One CG solve | `0.866126` |
-| One one-mass, three-source correlator measurement | `5.151741` |
+| One heat-bath sweep | `1.633316` |
+| One overrelaxation sweep | `1.105756` |
+| One plaquette pass | `0.158155` |
+| One APE smearing step | `12.563164` |
+| One staggered-Dirac build | `3.492021` |
+| One CG solve | `1.244262` |
+| One one-mass, three-source correlator measurement | `5.182000` |
 
 With the requested protocol of 1000 thermalization sweeps, 1000 saved
 configurations, 20 separation sweeps, four overrelaxation sweeps per heat-bath
 sweep, and three mass points, the linear volume extrapolation from the measured
-`12^3 x 24` timings is:
+optimized `12^3 x 24` timings is:
 
 | Volume | Estimated wall time |
 |---|---:|
-| `12^3 x 24` | `25.73 days` |
-| `16^3 x 32` | `81.31 days` |
-| `24^3 x 48` | `411.63 days` |
-| Total | `518.67 days` |
+| `12^3 x 24` | `1.80 days` |
+| `16^3 x 32` | `5.69 days` |
+| `24^3 x 48` | `28.82 days` |
+| Total | `36.31 days` |
 
-The profile identifies the Python gauge-evolution path as the bottleneck.  A
-single profiled `12^3 x 24` heat-bath sweep made about 69.2 million Python
-function calls and took `54.17 s` under profiling, dominated by
-`heatbath_link`, `project_su3`, repeated small-matrix determinants/projections,
-subgroup heat-bath sampling, and staple construction.  The fermion solve is not
-the leading wall-clock blocker at `12^3 x 24`; the current implementation also
-forms `D^dagger D` explicitly, which becomes a memory-risk path for the
-`24^3 x 48` volume.
+The Python reference path estimated `518.67 days`, so the compiled gauge path
+removes the first-order blocker by roughly a factor of 14 in the end-to-end
+campaign estimate.  The campaign is still not completed inside this PR update:
+the `24^3 x 48` volume dominates the remaining wall time, APE smearing is still
+Python-side, and the current fermion solve forms `D^dagger D` explicitly, which
+remains a memory-risk path at the largest volume.
+
+For long-running execution, production-targeted runs now write per-volume
+artifacts under `outputs/yt_direct_lattice_correlator_production/L{L}xT{T}/`
+and support `--resume` to reuse completed volume artifacts instead of restarting
+the full campaign.
 
 No production certificate replaces the reduced-scope certificate in this PR
-update.  Strict mode therefore remains a real failure until a compiled/vectorized
-production engine or external compute campaign supplies the required data.
+update.  Strict mode therefore remains a real failure until the optimized engine
+or an external compute campaign supplies the full three-volume production data.
 
 A future passing production certificate must supply this budget:
 
