@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 412,
+    "leaf": 411,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:23:21.422121+00:00",
+  "generated_at": "2026-04-30T19:23:28.730927+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13705,23 +13705,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_pmns_z3_doublet_block_center_positive_sheet_no_go_2026_04_20.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_pns_attack_cascade_note_2026-04-19",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20357,6 +20340,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 551,
-  "total_pending": 938
+  "ready_count": 550,
+  "total_pending": 937
 }
