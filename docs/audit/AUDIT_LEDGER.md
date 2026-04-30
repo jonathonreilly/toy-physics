@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:17:12.307927+00:00
+**Generated:** 2026-04-30T19:17:18.734716+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 132 |
+| `audited_clean` | 133 |
 | `audited_conditional` | 346 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 996 |
+| `unaudited` | 995 |
 
 | criticality | count |
 |---|---:|
@@ -125,6 +125,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cycle_break_slice_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `distance_law_3d_64_closure_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `distance_law_preserving_third_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `dm_abcc_assumptions_audit_note_2026-04-19` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `dm_full_closure_same_surface_thermal_monotonicity_theorem_note_2026-04-17` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -3046,6 +3047,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The high-drift/high-restore third family passes both gates on the direct test: exact zero and neutral controls, sign orientation, weak charge exponent 1.000, distance tail alpha = -1.150 with R^2 = 0.971, and 5/5 TOWARD.  _(class `C`)_
 - **chain closes:** True — The live direct runner recomputes the specified drift=0.50, restore=0.90 family and reproduces the sign gate, weak scaling, tail alpha/R2, and direction count stated in the note.
 - **rationale:** The clean verdict is limited to the direct high-drift/high-restore family tested by the runner. The live output gives zero = 0, neutral = 0, plus/minus antisymmetry, weak charge exponent 0.99998, tail alpha = -1.1501, R2 = 0.9714, and 5/5 TOWARD, matching the note. The distance-law portability context is not load-bearing here because it describes a different structured-family row; this note's own runner establishes the claimed direct preservation result. Residual risk is the stated scope: one family, finite seeds, and no geometry-universal theorem.
+- **auditor confidence:** high
+
+### `dm_abcc_assumptions_audit_note_2026-04-19`
+
+- **Note:** [`DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md`](../../docs/DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** - `docs/ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md` (observational grounding)  _(class `C`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 9 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
 ### `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20`
