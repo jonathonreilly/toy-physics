@@ -1,24 +1,37 @@
-# Ward-Identity Derivation Theorem: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)
+# Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)
 
 **Date:** 2026-04-17
-**Status:** DERIVED as an EXACT algebraic tree-level identity from
-AX1 + AX2 (Cl(3) × Z³) alone, via the retained framework chain
-D1 – D17 and standard group-theoretic identities (SU(N_c) Fierz D12
-and Lorentz Clifford Fierz S2). The identity arises as a single
-1PI Green's function `Γ⁽⁴⁾(q²)` on the scalar-singlet channel
-computed two algebraically equivalent ways within the SAME retained
-theory (no UV-vs-EFT matching). The theorem states only this
-algebraic equality on the stated surface; it does NOT make any
-quantitative precision claim.
+**Status:** support: structural identification of the unit-normalized H_unit-to-top matrix element with the Standard Model top Yukawa readout within A_min; audit_status=audited_renaming. This note is an identification, not a first-principles derivation of the Standard Model top Yukawa value.
 **Primary runner:** `scripts/frontier_yt_ward_identity_derivation.py`
 **Support (NOT part of the authority chain):**
 `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
 documents the perturbative 1-loop vertex correction, which is OPEN
-for quantitative lane reuse (not part of this exact theorem).
+for quantitative lane reuse (not part of this support-tier identification).
 
 ---
 
-## Theorem (exact algebraic, tree level)
+## Audit boundary
+
+This note identifies the unit-normalized `H_unit` matrix element on the
+Q_L scalar-singlet channel within A_min, including the `1/sqrt(6)`
+Clebsch-Gordan overlap and the canonical-surface ratio calculation.
+
+The identified Standard Model construct is the top Yukawa readout used
+on that same canonical surface, not an independently derived SM input.
+
+This note does **not** claim to derive the numerical Standard Model top
+Yukawa value from first principles, to derive the existence of the SM
+Yukawa construct independent of this identification, or to supply a
+precision prediction after RG running and matching.
+
+Audit history: the audit lane records `audit_status=audited_renaming`
+for `yt_ward_identity_derivation_theorem`, cross-confirmed as class E
+by `codex-audit-loop-round-2` and
+`codex-fresh-context-20260430-01-yt-ward`.
+
+---
+
+## Structural identification (tree-level algebraic support)
 
 On the Cl(3) × Z³ Wilson-staggered lattice with the canonical
 plaquette / u_0 evaluation surface (C1 + C2, `g_bare = 1` at
@@ -47,20 +60,20 @@ the exact tree-level identity
 
 on the same surface.
 
-**Scope of this theorem:**
+**Scope of this support note:**
 - It is the exact tree-level 1PI matching identity only.
 - It makes NO quantitative precision claim (no `±%`, no NLO bound,
   no lane budget).
 - Perturbative 1-loop corrections, higher-order topology corrections,
-  and any quantitative lane reuse are OUT OF SCOPE of this theorem
+  and any quantitative lane reuse are OUT OF SCOPE of this note
   and are discussed in the support note (see above).
 - Downstream quantitative reuse of this identity inherits whatever
   systematic the downstream package carries independently. This
-  theorem does not narrow or claim such systematics.
+  note does not narrow or claim such systematics.
 
 ---
 
-## Axioms and derived-from-axioms table
+## Inputs and dependency table
 
 | # | Input | Status | Source |
 |---|-------|--------|--------|
@@ -88,14 +101,13 @@ on the same surface.
 | D16 | Tree-level Feynman-rule completeness of the bare action on the scalar-singlet channel: at O(α_LM), the bare Cl(3) × Z³ action (Wilson plaquette + staggered Dirac, MINIMAL_AXIOMS:18-20) yields exactly ONE tree diagram contributing to `Γ⁽⁴⁾(q²)` on the color-singlet × iso-singlet × Dirac-scalar channel — the single-gluon-exchange diagram, projected via D12 + S2 with coefficient (3.5) | DERIVED from tree-level Feynman rules of the retained action + the absence of any fundamental scalar field or bare contact 4-fermion vertex in the bare action (D9 composite-Higgs) | framework-native; follows from MINIMAL_AXIOMS_2026-04-11.md:18-20 + D9 |
 | D17 | Scalar-singlet composite uniqueness on the Q_L block: the unique unit-normalized (Z² = 6) color-singlet × iso-singlet × Dirac-scalar composite operator on Q_L = (2,3) is `H_unit = (1/√(N_c · N_iso)) Σ ψ̄ψ`. Other (1,8), (3,1), (8,3) irreps give `Z² = 8, 9/2, 24` respectively (Block 5 verified) — each distinct from `Z² = 6`, hence none are the framework's scalar singlet on this block | DERIVED and numerically verified (Block 5) | YCP:33-40 (D9); Block 5 of runner |
 
-The only AXIOMS are AX1 (Cl(3)) and AX2 (Z³). Everything else is
-DERIVED from these via retained framework theorems (D1-D17), a
-CANONICAL NORM CHOICE (C1, C2), or a STANDARD group-theoretic identity
-(S1, S2) that is independent of framework content. S1 and S2 are
-properties any SU(N_c) gauge theory in 4D with Dirac fermions must
-respect — they are not framework axioms. **There is no separate
-"matching axiom" in this theorem.** The bare-action 1PI Green's
-function `Γ⁽⁴⁾` on the scalar-singlet channel is computed two
+The only AXIOMS are AX1 (Cl(3)) and AX2 (Z³). The remaining inputs are
+the framework chain (D1-D17), a CANONICAL NORM CHOICE (C1, C2), or a
+STANDARD group-theoretic identity (S1, S2) that is independent of
+framework content. S1 and S2 are properties any SU(N_c) gauge theory in
+4D with Dirac fermions must respect — they are not framework axioms.
+**There is no separate "matching axiom" in this note.** The bare-action
+1PI Green's function `Γ⁽⁴⁾` on the scalar-singlet channel is computed two
 algebraically equivalent ways within the SAME retained theory:
 directly from Feynman rules (D16 → OGE only at O(α_LM)) and via
 the composite operator `H_unit` (D17 → unique scalar singlet on
@@ -104,9 +116,9 @@ that algebraic identity gives `y_t_bare² = g_bare²/(2 N_c)`.
 
 ---
 
-## The critical structural fact: no independent Yukawa parameter
+## Structural identification fact: no independent Yukawa parameter
 
-The Ward identity requires one piece of structural content that
+The identification uses one piece of structural content that
 deserves explicit attention: **the Cl(3) × Z³ lattice action has NO
 independent Yukawa parameter**. This follows framework-natively from D9:
 
@@ -122,7 +134,7 @@ lattice action. The bare Lagrangian contains only:
 - Staggered Dirac operator (D2-D4): fermion kinetic term
 - No separate Higgs or Yukawa terms
 
-The "Yukawa coupling" `y_t` in the SM sense is therefore a **derived
+The "Yukawa coupling" `y_t` in the SM sense is therefore an **identified
 emergent observable**, not a bare parameter. It is extracted from:
 - The composite `phi` (defined by D9)
 - The composite's VEV after EWSB
@@ -132,12 +144,12 @@ There is **no free parameter** `c_Y` to "identify with g_bare" because
 no such parameter exists in the bare Cl(3) × Z³ action. The earlier
 reviews' objection to an "unsupported vertex-identification" step is
 resolved by observing that no such identification step is needed — the
-Yukawa is not a vertex in the bare action, it is a derived observable
+Yukawa is not a vertex in the bare action, it is an identified observable
 of the composite structure.
 
 ---
 
-## Derivation
+## Structural calculation
 
 ### Step 1: Canonical kinetic normalization of phi on the Q_L block
 
@@ -179,15 +191,15 @@ has overlap
 
 (same for each of the 6 basis components, by singlet uniformity).
 
-### Step 3: Same-1PI-function residue theorem (scalar-singlet channel)
+### Step 3: Same-1PI-function residue check (scalar-singlet channel)
 
-This step proves the load-bearing identity entirely within the
+This step records the load-bearing identity entirely within the
 retained Cl(3) × Z³ theory, as a single 1PI Green's function
 computed two ways. There is no UV-vs-EFT matching, no second
 "effective theory" to be defined; only one theory, one Green's
 function, two algebraically equivalent representations of it.
 
-**Object of the theorem.** Define the amputated, 1PI, color-singlet
+**Object of the check.** Define the amputated, 1PI, color-singlet
 × iso-singlet × Dirac-scalar-scalar projection of the four-fermion
 Green's function on the Q_L block:
 
@@ -198,7 +210,7 @@ Green's function on the Q_L block:
 where `P_{S,(1,1)}` projects onto the single channel
 `O_S = (ψ̄ψ)_{(1,1)} (ψ̄ψ)_{(1,1)}` — color-singlet, iso-singlet,
 Dirac-scalar on both bilinears. **Only this one channel is the
-subject of the theorem; no other Dirac or representation channel is
+subject of the note; no other Dirac or representation channel is
 claimed.**
 
 **Representation A — direct OGE computation in the bare action.**
@@ -331,8 +343,8 @@ operator content of the composite Higgs (Representation B) give
 the same Green's function on the load-bearing scalar-singlet
 channel.
 
-**The Yukawa coupling y_t_bare = 1/√6 is therefore established
-INDEPENDENTLY** from H_unit operator content (3.7-3.8). The
+**The Yukawa coupling y_t_bare = 1/√6 is therefore defined and evaluated**
+from H_unit operator content (3.7-3.8). The
 agreement (3.10 = 3.11) confirms internal consistency of the
 framework but is not the source of the value.
 
@@ -358,7 +370,7 @@ framework but is not the source of the value.
    matching convention at the cutoff.
 
 There is no second theory, no matching rule, no auxiliary mass
-freedom, no spectral assumption. The theorem says only that one
+freedom, no spectral assumption. The note records only that one
 1PI Green's function on the Q_L scalar-singlet channel equals
 itself when computed two algebraically equivalent ways.
 
@@ -390,9 +402,9 @@ Taking the ratio, the `1/sqrt(u_0)` cancels:
     y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)                               (4.3)
 ```
 
-This is the retained Ward identity.
+This is the support-tier structural identification recorded by the note.
 
-### Closure
+### Boundary of the identification
 
 ```
     y_t_bare = g_bare / sqrt(6)              (T1, exact tree-level algebra)
@@ -401,27 +413,27 @@ This is the retained Ward identity.
 
 These are exact algebraic identities on the stated matching surface.
 No precision bound, no NLO claim, no systematic is attached to this
-theorem. Perturbative and higher-order corrections are out of scope
+identification. Perturbative and higher-order corrections are out of scope
 and are discussed in the support note
 `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`.
 Downstream quantitative reuse carries whatever systematic the
-downstream package carries independently; the theorem does not
+downstream package carries independently; the note does not
 narrow that.
 
-This is a framework-native derivation from AX1+AX2 (Cl(3) × Z³) via
-retained structural theorems (D1-D15) and canonical-surface
-normalization choices (C1-C2). No new axioms. No framework conventions
-beyond canonical normalization. No package-status-doc imports.
+This is a framework-native structural identification within A_min using
+the Cl(3) × Z³ chain (D1-D15) and canonical-surface normalization
+choices (C1-C2). No new axioms. No framework conventions beyond
+canonical normalization. No package-status-doc imports.
 
 ---
 
 ## Scale/scheme statement
 
-What is derived where:
+What is identified where:
 
 1. **At M_Pl on the canonical surface**: the RATIO `y_t/g_s = 1/sqrt(6)`
-   is derived from AX1+AX2 via D1-D15 + C1-C2 as above. UV boundary
-   condition.
+   is the structural identification within A_min via D1-D15 + C1-C2 as
+   above. UV boundary condition.
 
 2. **At v on the matching surface**: `y_t(v)` is obtained by backward
    RGE from `y_t(M_Pl)`. The `sqrt(8/9)` color-projection correction
@@ -430,4 +442,4 @@ What is derived where:
    scales and do not compete.
 
 3. **No blanket equality** is claimed across M_Pl and v schemes; only
-   the M_Pl ratio is derived here.
+   the M_Pl ratio is identified here.
