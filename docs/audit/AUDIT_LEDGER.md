@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:54:42.129316+00:00
+**Generated:** 2026-04-30T02:55:46.009365+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 202 |
 | support | 101 |
 | open | 24 |
-| unknown | 505 |
+| unknown | 504 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 393 |
+| ~~audited_conditional~~ | 394 |
 | ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 176 |
+| `audited_conditional` | 177 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1241 |
+| `unaudited` | 1240 |
 
 | criticality | count |
 |---|---:|
@@ -258,6 +258,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `impact_parameter_lensing_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `impact_parameter_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `koide_a1_derivation_status_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -2758,6 +2759,23 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** Kernel-generic absorption occurs under any nonzero field for gamma > 0, while only the localized 1/r gravity field produces the TOWARD -> AWAY deflection crossover.  _(class `C`)_
 - **chain closes:** False — The live runner supports the gravity-specific crossover and gamma=0.5 escape suppression, but it contradicts the source's stronger detector-escape claim for any gamma > 0: several nonzero-field rows at gamma=0.1 or 0.2 still have escape ratios above 1.
 - **rationale:** Issue: the source conflates link-level imaginary-action damping with the detector escape observable. The factor exp(-k gamma L f) is below 1 for f > 0 and gamma > 0, but the runner's detector escape ratios are still above 1 for UNIFORM f=0.005 at gamma=0.1 and 0.2, UNIFORM f=0.01 at gamma=0.1 and 0.2, and GRAVITY at gamma=0.1 and 0.2. Why this blocks: the retained separation claim says kernel-generic absorption occurs under any nonzero field at gamma > 0, but the measured observable used by the note only shows suppression at sufficiently large gamma in this setup. Repair target: distinguish local per-link attenuation from total detector escape, or add a theorem/runner proving a thresholded escape-suppression criterion across gamma and field families. Claim boundary until fixed: safely claim only that gamma=0.5 suppresses detector escape for the tested nonzero fields, and that the 1/r gravity field uniquely shows the tested TOWARD -> AWAY centroid crossover by gamma=0.2.
+- **auditor confidence:** high
+
+### `koide_a1_derivation_status_note`
+
+- **Note:** [`KOIDE_A1_DERIVATION_STATUS_NOTE.md`](../../docs/KOIDE_A1_DERIVATION_STATUS_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** If the retained charged-lepton effective action contains V(Phi) = [2(tr Phi)^2 - 3 tr(Phi^2)]^2, then on a circulant C3-invariant Phi its unique zero/minimum forces |b|/a = 1/sqrt(2), hence A1 and Q = 2/3.  _(class `B`)_
+- **chain closes:** False — The quartic-potential implication closes, but the potential is not derived from Cl(3)/Z^3 and several cited no-go/status authorities are not retained in the current audit state.
+- **rationale:** Issue: the note reports A1 derivation status and a conditional quartic-potential route, but does not derive the quartic from the retained framework. Why this blocks: the runner proves that the chosen U(3)-invariant square has A1 as its minimum, while explicitly leaving the derivation of that potential from Cl(3)/Z^3 as the remaining task; the surrounding no-go inventory also cites authorities with non-retained audit status. Repair target: audit/repair the cited no-go/equivalence notes and prove that the specific quartic term occurs in the retained charged-lepton effective action. Claim boundary until fixed: conditional status note: A1 follows from the imported quartic potential, but A1 is not axiom-native on the current retained stack.
+- **open / conditional deps cited:**
+  - `STRUCTURAL_NO_GO_SURVEY_NOTE.md`
+  - `HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md`
+  - `CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`
+  - `HW1_SECOND_ORDER_RETURN_SHAPE_THEOREM_NOTE.md`
 - **auditor confidence:** high
 
 ### `koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24`
