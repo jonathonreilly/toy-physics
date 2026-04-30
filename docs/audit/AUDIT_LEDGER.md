@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T21:23:10.763108+00:00
+**Generated:** 2026-04-30T21:57:42.218085+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,41 +19,41 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 81 |
+| **retained** | 83 |
 | _proposed_retained_ | 8 |
 | bounded | 278 |
 | support | 251 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
-| ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 742 |
+| ~~audited_renaming~~ | 47 |
+| ~~audited_conditional~~ | 735 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 198 |
+| `audited_clean` | 200 |
 | `audited_conditional` | 461 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
-| `audited_renaming` | 11 |
-| `unaudited` | 817 |
+| `audited_renaming` | 12 |
+| `unaudited` | 815 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 76 |
 | `high` | 333 |
-| `medium` | 382 |
+| `medium` | 383 |
 | `leaf` | 769 |
 
-- **Proposed claims demoted by upstream:** 130
+- **Proposed claims demoted by upstream:** 129
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1129
-- runners with (C) first-principles compute hits: 520
+- runners classified: 1130
+- runners with (C) first-principles compute hits: 521
 - runners with (D) external comparator hits: 278
 - decoration candidates (no C, no D): 81
 
@@ -63,31 +63,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | criticality | desc | score | audit_status | effective |
 |---:|---|---|---:|---:|---|---|
-| 1 | `alpha_s_derived_note` | critical | 256 | 33.51 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `yt_ward_identity_derivation_theorem` | critical | 299 | 31.73 | `audited_renaming` | ~~audited_renaming~~ |
-| 3 | `observable_principle_from_axiom_note` | critical | 247 | 30.45 | `audited_conditional` | ~~audited_conditional~~ |
-| 4 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 28.86 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 28.84 | `audited_conditional` | ~~audited_conditional~~ |
-| 6 | `graph_first_su3_integration_note` | critical | 301 | 28.74 | `audited_clean` | **retained** |
-| 7 | `yt_ew_color_projection_theorem` | critical | 126 | 26.49 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `three_generation_observable_theorem_note` | critical | 290 | 25.68 | `audited_conditional` | ~~audited_conditional~~ |
-| 9 | `three_generation_structure_note` | critical | 264 | 25.05 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 101 | 23.67 | `audited_conditional` | ~~audited_conditional~~ |
-| 11 | `minimal_axioms_2026-04-11` | critical | 119 | 22.91 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `anomaly_forces_time_theorem` | critical | 261 | 22.53 | `audited_conditional` | ~~audited_conditional~~ |
-| 13 | `native_gauge_closure_note` | critical | 297 | 21.72 | `audited_conditional` | ~~audited_conditional~~ |
-| 14 | `left_handed_charge_matching_note` | critical | 265 | 21.55 | `audited_conditional` | ~~audited_conditional~~ |
-| 15 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 20.83 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `one_generation_matter_closure_note` | critical | 244 | 20.44 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `plaquette_self_consistency_note` | critical | 302 | 20.24 | `audited_conditional` | ~~audited_conditional~~ |
-| 18 | `physical_lattice_necessity_note` | critical | 286 | 19.66 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 93 | 19.55 | `audited_conditional` | ~~audited_conditional~~ |
-| 20 | `site_phase_cube_shift_intertwiner_note` | critical | 293 | 19.20 | `audited_clean` | support |
-| 21 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | critical | 263 | 19.04 | `unaudited` | ~~audited_conditional~~ |
-| 22 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | critical | 263 | 18.54 | `unaudited` | ~~audited_conditional~~ |
-| 23 | `rconn_derived_note` | critical | 129 | 18.52 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `higgs_mass_derived_note` | critical | 122 | 18.44 | `audited_conditional` | ~~audited_conditional~~ |
-| 25 | `higgs_vacuum_explicit_systematic_note` | critical | 121 | 18.43 | `audited_conditional` | ~~audited_conditional~~ |
+| 1 | `alpha_s_derived_note` | critical | 255 | 29.50 | `audited_conditional` | ~~audited_conditional~~ |
+| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 28.86 | `audited_conditional` | ~~audited_conditional~~ |
+| 3 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 28.84 | `audited_conditional` | ~~audited_conditional~~ |
+| 4 | `graph_first_su3_integration_note` | critical | 300 | 28.23 | `audited_clean` | **retained** |
+| 5 | `yt_ward_identity_derivation_theorem` | critical | 298 | 27.72 | `audited_renaming` | ~~audited_renaming~~ |
+| 6 | `observable_principle_from_axiom_note` | critical | 246 | 26.45 | `audited_conditional` | ~~audited_conditional~~ |
+| 7 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 101 | 23.67 | `audited_conditional` | ~~audited_conditional~~ |
+| 8 | `yt_ew_color_projection_theorem` | critical | 125 | 22.48 | `audited_conditional` | ~~audited_conditional~~ |
+| 9 | `three_generation_observable_theorem_note` | critical | 289 | 21.68 | `audited_conditional` | ~~audited_conditional~~ |
+| 10 | `three_generation_structure_note` | critical | 263 | 21.04 | `audited_conditional` | ~~audited_conditional~~ |
+| 11 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 20.83 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `one_generation_matter_closure_note` | critical | 244 | 20.44 | `audited_conditional` | ~~audited_conditional~~ |
+| 13 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 93 | 19.55 | `audited_conditional` | ~~audited_conditional~~ |
+| 14 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 42 | 18.43 | `audited_clean` | **retained** |
+| 15 | `minimal_axioms_2026-04-11` | critical | 118 | 18.39 | `audited_conditional` | ~~audited_conditional~~ |
+| 16 | `anomaly_forces_time_theorem` | critical | 260 | 18.03 | `audited_conditional` | ~~audited_conditional~~ |
+| 17 | `left_handed_charge_matching_note` | critical | 264 | 17.55 | `audited_conditional` | ~~audited_conditional~~ |
+| 18 | `ckm_atlas_axiom_closure_note` | critical | 74 | 17.23 | `audited_conditional` | ~~audited_conditional~~ |
+| 19 | `native_gauge_closure_note` | critical | 296 | 17.21 | `audited_conditional` | ~~audited_conditional~~ |
+| 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 120 | 16.42 | `audited_conditional` | ~~audited_conditional~~ |
+| 21 | `plaquette_self_consistency_note` | critical | 301 | 16.24 | `audited_conditional` | ~~audited_conditional~~ |
+| 22 | `physical_lattice_necessity_note` | critical | 285 | 15.66 | `audited_conditional` | ~~audited_conditional~~ |
+| 23 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 127 | 15.50 | `audited_conditional` | ~~audited_conditional~~ |
+| 24 | `site_phase_cube_shift_intertwiner_note` | critical | 292 | 15.20 | `audited_clean` | support |
+| 25 | `cosmological_constant_spectral_gap_identity_theorem_note` | critical | 48 | 15.12 | `audited_conditional` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -177,6 +177,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `emergent_product_law_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `equivalence_principle_harness_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `evolving_network_prototype_v3_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
+| `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `fixed_field_complex_grown_basin_v2_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fixed_field_family_unification_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fixed_field_grown_transfer_scout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -280,6 +281,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `staggered_newton_reproduction_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
+| `substrate_to_p_a_forcing_theorem_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `two_sign_comparison_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -832,6 +834,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higgs_mass_from_axiom_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `hypercharge_identification_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
+| `planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `s3_time_bilinear_tensor_primitive_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_qg_optional_textbook_comparison_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -5244,6 +5247,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `title_uses_universality_while_claim_disclaims_universality`
 - **auditor confidence:** medium
 
+### `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30`
+
+- **Note:** [`FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md`](../../docs/FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `Banach-019de05d-312b-7d01-8de9-7ef5bf7e6791`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The Hodge-complement map satisfies * P_1 *^{-1} = P_3 while preserving the listed spin/time/CPT/local substrate structure.  _(class `A`)_
+- **chain closes:** True — The note gives a self-contained algebraic counterexample: P_1 and P_3 are distinct, rank-four, tensor-local projectors, and the runner verifies that P_3 satisfies the same retained substrate symmetry tests. That is enough to show those symmetries do not force first-order P_1 over Hodge-dual P_3.
+- **rationale:** This is a clean no-go, not a renaming. It does not merely rename first-order as third-order; it exhibits a distinct symmetry-equivalent admissible carrier. The only delicate point is that Hodge sends time parity T to -T, but the runner also verifies directly that both P_1 and P_3 commute with the symmetry data, so the no-go does not depend on hiding that sign as equality.
+- **auditor confidence:** high
+
 ### `fixed_field_complex_grown_basin_v2_note`
 
 - **Note:** [`FIXED_FIELD_COMPLEX_GROWN_BASIN_V2_NOTE.md`](../../docs/FIXED_FIELD_COMPLEX_GROWN_BASIN_V2_NOTE.md)
@@ -9299,6 +9314,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** The claim is scoped as a negative no-go for the unconstrained carrier-only parent-source scalar route, not as a positive Planck coefficient derivation. The load-bearing hidden-character fiber is explicit in the source note and the runner verifies the kernel, two-parent counterexample, carrier-only non-recoverability, equivalence of scalar equality to delta=0, and normalization sensitivity. Residual boundary: this clean audit does not rule out a future no-hidden-character law or a direct gravitational carrier-identification theorem; it only closes the carrier-only route without such an extra law.
 - **auditor confidence:** high
 
+### `planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30`
+
+- **Note:** [`PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md`](../../docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `self`)
+- **auditor:** `Peirce-019de064-6a5a-7861-8692-124ff496cff2`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** rank(P_A H_cell) = 4 is identified with the irreducible complex Cl_4(C) module by dimension/representation theory, without proving that the retained event-cell action invariantly selects P_A and induces those generators there.  _(class `F`)_
+- **chain closes:** False — The explicit C^4 Clifford/CAR construction closes algebraically, but the substrate-to-active-packet implication does not: retained Cl(3)+time event-cell action -> invariant active P_A block -> induced Cl_4(C) generators.
+- **rationale:** The note does not unconditionally derive active Clifford-Majorana edge statistics from the retained substrate. It constructs a correct carrier once P_A H_cell ~= C^4 is treated as the active irreducible block, but the audited-clean no-gos show that the current substrate symmetries do not force that block or first-order selection over the Hodge-dual P_3.
+- **open / conditional deps cited:**
+  - `derive an independent first-order boundary/orientation/incidence law`
+  - `or derive an intrinsic active-block theorem that selects/induces the Cl_4(C) module without assuming P_A as input`
+- **auditor confidence:** high
+
 ### `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25`
 
 - **Note:** [`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`](../../docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
@@ -10482,6 +10512,18 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 - **load-bearing step:** For N=25,40,60, the structured chokepoint slice remains Born-clean, k=0 pinned, positive-gravity, and below the decoherence ceiling on the registered canonical readout.  _(class `D`)_
 - **chain closes:** True — The current runner reproduces the three-row diagnostic table with the stated Born, k=0, gravity, and pur_cl values. The closure is finite and readout-specific, with no asymptotic or architecture-level bridge theorem.
 - **rationale:** The bounded finite card closes from the source note and current runner output. It does not derive the graph parameters, enforce hard assertions in code, or establish readout-independent survival, but the current note explicitly narrows away from those stronger claims. Residual risk is scope drift if the word bridge is later treated as architecture-level closure.
+- **auditor confidence:** high
+
+### `substrate_to_p_a_forcing_theorem_note_2026-04-30`
+
+- **Note:** [`SUBSTRATE_TO_P_A_FORCING_THEOREM_NOTE_2026-04-30.md`](../../docs/SUBSTRATE_TO_P_A_FORCING_THEOREM_NOTE_2026-04-30.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `Faraday-019de062-50d8-7663-811a-0429a5cbc593`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** P_3 violates none of the stated constraints (a)-(e). It is not P_A, so uniqueness fails.  _(class `A`)_
+- **chain closes:** True — The no-go only needs one non-P_A admissible projector, and P_3 = E_{tVV} + E_{VVV} is explicitly rank four, tensor-local, complex-linear, and commutes with the same spin/time/CPT actions. The 17-class enumeration is useful context, but not necessary for the no-go.
+- **rationale:** The runner constructs H_cell = (C^2)^4, implements the stated local so(3) spin lift, time parity, CPT grading, and local number algebra, then verifies both P_A and non-P_A P_3 satisfy the same constraints with zero equivariance/local-polynomial error. There is no unproven premise or renaming move inside the negative witness. The only repair target is external to this no-go: add a retained first-order boundary/orientation principle that excludes the Hodge-dual weight-three sector without simply defining P_A as active.
 - **auditor confidence:** high
 
 ### `symmetry_head_to_head_note`

@@ -1,7 +1,7 @@
 # Substrate-To-P_A Forcing No-Go Theorem
 
 **Date:** 2026-04-30
-**Status:** proposed_retained no-go theorem
+**Status:** audited_clean; proposed_retained no-go theorem ratified 2026-04-30
 **Runner:** `scripts/frontier_substrate_to_p_a_forcing.py`
 
 ## Purpose
@@ -23,30 +23,46 @@ Hamming-weight-three projector and additional local equivariant rank-four
 sums. Therefore the boundary-block selection remains an additional structural
 choice unless a stronger first-order boundary/orientation law is supplied.
 
-## Upstream Inputs Used
+## Audit Verdict
+
+Fresh-context audit returned `audited_clean`. The load-bearing step is the
+explicit counterexample:
+
+```text
+P_3 violates none of the stated constraints (a)-(e).
+It is not P_A, so uniqueness fails.
+```
+
+The auditor judged this a clean finite-dimensional no-go because `P_3 =
+E_{tVV} + E_{VVV}` is rank four, tensor-local, complex-linear, and commutes
+with the same spin/time/CPT actions. The 17-class enumeration is useful
+context, but the single `P_3` witness is already sufficient to refute
+uniqueness. The repair target is external to this no-go: derive a retained
+first-order boundary/orientation principle that excludes the Hodge-dual
+weight-three sector without defining `P_A` as active.
+
+## Inputs Granted For The Negative Witness
 
 The runner grants the strongest local version of the requested substrate
-inputs:
+inputs and proves that even those granted inputs do not force uniqueness:
 
-- [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](./GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
-  for the retained graph-first substrate gauge surface.
-- [I3_ZERO_EXACT_THEOREM_NOTE.md](./I3_ZERO_EXACT_THEOREM_NOTE.md) for the
-  retained complex Hilbert/Born-rule interference surface. This only supplies
-  complex-linearity of the projectors.
-- [CPT_EXACT_NOTE.md](./CPT_EXACT_NOTE.md) for the structural CPT grading
-  action. In the current audit ledger this note is support/unaudited, so the
-  no-go should be read as stronger: even granting the structural CPT action,
-  uniqueness fails.
-- [PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md](./PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md)
-  for the audit-clean Hilbert-only no-go boundary.
-- [NATIVE_GAUGE_CLOSURE_NOTE.md](./NATIVE_GAUGE_CLOSURE_NOTE.md) only for the
-  local `Cl(3)` bivector/spatial spin-lift content, not for the broader
-  conditional native-gauge closure.
-- [ANOMALY_FORCES_TIME_THEOREM.md](./ANOMALY_FORCES_TIME_THEOREM.md) only for
-  the structural single-time-axis fact, not for the broader conditional anomaly
-  package.
-- [MINIMAL_AXIOMS_2026-04-11.md](./MINIMAL_AXIOMS_2026-04-11.md) only for the
-  local tensor product event-cell surface.
+- the graph-first substrate gauge surface;
+- the retained complex Hilbert/Born-rule interference surface, used only for
+  complex-linearity of the projectors;
+- the structural CPT grading action;
+- the Hilbert-only no-go boundary;
+- the local `Cl(3)` bivector/spatial spin-lift content;
+- the structural single-time-axis fact;
+- the local tensor product event-cell surface.
+
+Those phrases correspond to the framework notes
+`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`, `I3_ZERO_EXACT_THEOREM_NOTE.md`,
+`CPT_EXACT_NOTE.md`,
+`PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`,
+`NATIVE_GAUGE_CLOSURE_NOTE.md`, `ANOMALY_FORCES_TIME_THEOREM.md`, and
+`MINIMAL_AXIOMS_2026-04-11.md`. They are contextual labels, not load-bearing
+one-hop authorities for the no-go. The no-go is stronger than a dependency
+claim: even granting the listed local actions, `P_A` is not unique.
 
 No step uses `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`,
 `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`, or any `alpha_LM` decoration chain.
@@ -239,6 +255,14 @@ Hodge-dual or higher-grade alternatives. Examples of possible additional
 inputs would be a first-order coframe-response law, an oriented boundary
 normal-flow law, or a reflection-positive edge orientation theorem. None is
 derived here.
+
+A follow-up first-order-coframe no-go on 2026-04-30 grants the same substrate
+symmetries and asks whether they force the first-order coframe carrier over
+its Hodge-dual third-order carrier. They do not: the Hodge-complement map
+exchanges `P_1` and `P_3` while preserving spin-lift equivariance, time parity
+up to central sign, CPT grading, complex Hilbert structure, and tensor-local
+number algebra. The next positive route therefore has to derive an additional
+boundary/orientation law, not just reanalyze the current symmetry list.
 
 ## Verification
 

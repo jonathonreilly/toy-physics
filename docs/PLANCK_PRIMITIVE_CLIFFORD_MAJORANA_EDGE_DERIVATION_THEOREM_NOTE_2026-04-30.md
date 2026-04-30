@@ -65,6 +65,16 @@ rank-four local equivariant sums satisfy the same spin/time/CPT/Born/locality
 checks. Therefore the repair target requires an additional first-order
 boundary/orientation principle, not only the symmetries listed in PR #228.
 
+The next repair attempt is also negative and has now been audited clean:
+[FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md](./FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md)
+checks whether the retained substrate symmetries force the first-order coframe
+carrier over its Hodge-dual third-order carrier. They do not. The oriented
+Hodge-complement map exchanges `P_1` and `P_3` while preserving the same
+spin-lift, time-parity, CPT, complex-Hilbert, and tensor-local number-algebra
+structure. Thus a first-order boundary/orientation law remains an additional
+input unless it is derived by a stronger theorem not currently in the retained
+bank.
+
 ## Upstream Authorities
 
 The construction cites these existing framework authorities:
@@ -498,6 +508,11 @@ verdict is `audited_renaming`: the construction names the rank-four primitive
 packet as the irreducible `Cl_4(C)` module, but the supplied inputs do not force
 the substrate action to preserve `P_A` and induce the displayed generators.
 Consequently, the Planck-pin conditional chain is not promoted by this note.
+The substrate-to-`P_A` and first-order-coframe follow-up no-gos localize the
+remaining scientific gap: an audit-clean positive route must derive a
+first-order boundary/orientation law, or bypass the full-cell carrier
+selection by an intrinsic active-block theorem that does not use `P_A` as an
+input.
 
 ## Verification
 

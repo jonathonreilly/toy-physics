@@ -1,13 +1,13 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T21:23:10.499920+00:00
-**Total pending:** 817
+**Generated:** 2026-04-30T21:57:41.962770+00:00
+**Total pending:** 815
 **Ready (all deps already at a stable tier):** 431
 
 By criticality:
 - `critical`: 4
-- `high`: 237
-- `medium`: 290
+- `high`: 236
+- `medium`: 289
 - `leaf`: 286
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
@@ -16,18 +16,18 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 
 | # | claim_id | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---:|---:|:---:|---|---|
-| 1 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | critical | 263 | 19.04 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 2 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | critical | 263 | 18.54 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 3 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | critical | 262 | 17.04 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_anomaly_trace_catalog.py` |
+| 1 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | critical | 262 | 15.04 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 2 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | critical | 262 | 14.54 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 3 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | critical | 261 | 13.03 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_anomaly_trace_catalog.py` |
 | 4 | `publication.ci3_z3.publication_matrix` | critical | 32 | 12.54 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 5 | `cpt_exact_note` | high | 53 | 14.26 | Y | fresh_context_or_stronger | - |
-| 6 | `koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25` | high | 43 | 11.96 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_background_zero_z_erasure_criterion.py` |
-| 7 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | high | 43 | 10.96 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py` |
-| 8 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | high | 40 | 9.86 | Y | fresh_context_or_stronger | `scripts/frontier_area_law_algebraic_spectrum_entropy_no_go.py` |
-| 9 | `koide_q_delta_closure_package_readme_2026-04-21` | high | 39 | 11.32 | Y | fresh_context_or_stronger | - |
-| 10 | `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | high | 38 | 10.29 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_source_domain_canonical_descent.py` |
-| 11 | `pmns_selector_current_stack_zero_law_note` | high | 38 | 8.79 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_selector_current_stack_zero_law.py` |
-| 12 | `cl3_color_automorphism_theorem` | high | 37 | 10.25 | Y | fresh_context_or_stronger | `scripts/verify_cl3_sm_embedding.py` |
+| 5 | `koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25` | high | 43 | 11.96 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_background_zero_z_erasure_criterion.py` |
+| 6 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | high | 43 | 10.96 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py` |
+| 7 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | high | 40 | 9.86 | Y | fresh_context_or_stronger | `scripts/frontier_area_law_algebraic_spectrum_entropy_no_go.py` |
+| 8 | `koide_q_delta_closure_package_readme_2026-04-21` | high | 39 | 11.32 | Y | fresh_context_or_stronger | - |
+| 9 | `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | high | 38 | 10.29 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_source_domain_canonical_descent.py` |
+| 10 | `pmns_selector_current_stack_zero_law_note` | high | 38 | 8.79 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_selector_current_stack_zero_law.py` |
+| 11 | `cl3_color_automorphism_theorem` | high | 37 | 10.25 | Y | fresh_context_or_stronger | `scripts/verify_cl3_sm_embedding.py` |
+| 12 | `cpt_exact_note` | high | 37 | 9.25 | Y | fresh_context_or_stronger | - |
 | 13 | `neutrino_two_amplitude_last_mile_reduction_note` | high | 37 | 9.25 | Y | fresh_context_or_stronger | `scripts/frontier_neutrino_two_amplitude_last_mile.py` |
 | 14 | `pmns_right_conjugacy_invariant_no_go_note` | high | 37 | 8.75 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_right_conjugacy_invariant_nogo.py` |
 | 15 | `pmns_sigma_zero_nogo_note` | high | 37 | 8.75 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_sigma_zero_no_go.py` |
@@ -62,7 +62,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 44 | `universal_qg_canonical_smooth_geometric_action_note` | high | 33 | 7.59 | Y | fresh_context_or_stronger | - |
 | 45 | `hubble_lane5_two_gate_dependency_firewall_note_2026-04-27` | high | 16 | 6.59 | Y | fresh_context_or_stronger | `scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py` |
 | 46 | `atomic_rydberg_dependency_firewall_note_2026-04-27` | high | 15 | 6.50 | Y | fresh_context_or_stronger | `scripts/frontier_atomic_rydberg_dependency_firewall.py` |
-| 47 | `yt_zero_import_authority_note` | high | 218 | 15.28 |  | fresh_context_or_stronger | `scripts/frontier_yt_ward_identity_derivation.py` |
+| 47 | `yt_zero_import_authority_note` | high | 217 | 11.27 |  | fresh_context_or_stronger | `scripts/frontier_yt_ward_identity_derivation.py` |
 | 48 | `neutrino_majorana_native_gaussian_no_go_note` | high | 180 | 10.00 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_native_gaussian_nogo.py` |
 | 49 | `neutrino_majorana_finite_normal_grammar_no_go_note` | high | 179 | 10.49 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py` |
 | 50 | `neutrino_majorana_pfaffian_extension_note` | high | 178 | 9.98 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_extension.py` |

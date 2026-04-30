@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T21:23:09.741419+00:00",
+  "generated_at": "2026-04-30T21:57:41.188608+00:00",
   "per_claim": {
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "assert_count": 0,
@@ -5136,6 +5136,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/frontier_finite_rank_source_to_metric_theorem.py"
+    },
+    "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_first_order_coframe_unconditionality_no_go.py"
     },
     "fixed_field_complex_grown_basin_v2_note": {
       "assert_count": 0,
@@ -20783,6 +20795,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_first_order_coframe_unconditionality_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_fractional_charge_denominator_from_n_c.py": {
       "assert_count": 1,
       "claims": [
@@ -31338,12 +31365,12 @@
     "dominant_class_distribution": {
       "A": 7,
       "B": 118,
-      "C": 433,
+      "C": 434,
       "D": 180,
       "none": 391
     },
-    "runners_classified": 1129,
-    "runners_with_C": 520,
+    "runners_classified": 1130,
+    "runners_with_C": 521,
     "runners_with_D": 278
   }
 }
