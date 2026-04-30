@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:28:59.136900+00:00
+**Generated:** 2026-04-30T22:30:40.008105+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 82 |
 | _proposed_retained_ | 5 |
 | bounded | 278 |
-| support | 245 |
+| support | 244 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 746 |
+| ~~audited_conditional~~ | 747 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 215 |
-| `audited_conditional` | 468 |
+| `audited_conditional` | 469 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 789 |
+| `unaudited` | 788 |
 
 | criticality | count |
 |---|---:|
@@ -722,6 +722,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `single_axiom_hilbert_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `single_axiom_information_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `sixth_family_distance_law_third_vs_sixth_quick_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `source_resolved_generated_support_recovery_basin_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -10383,6 +10384,24 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
   - `local_dimension_and_hamiltonian_specification`
   - `hermitian_local_interaction_restriction`
   - `born_rule_readout_postulate`
+- **auditor confidence:** high
+
+### `single_axiom_information_note`
+
+- **Note:** [`SINGLE_AXIOM_INFORMATION_NOTE.md`](../../docs/SINGLE_AXIOM_INFORMATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-26`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The single statement 'conserved information flow on a network' derives both the graph substrate and unitary dynamics, with locality and unitarity forced by self-consistent physics rather than supplied as independent assumptions.  _(class `B`)_
+- **chain closes:** False — The runner verifies useful finite-dimensional diagnostics once a sparse Hermitian H, graph support, Born density/current formulas, and physical consistency criteria are supplied. It does not derive those ingredients from the single statement itself, and the unitarity/locality-forced tests remain bounded finite-lattice comparisons rather than theorem-level closure.
+- **rationale:** Issue: the note promotes a compression slogan into a single-axiom derivation, but the hard structures are supplied at the start: a finite state set, sparse Hermitian H, graph support from nonzero entries, Born density/current formulas, and selected physics-quality criteria. Why this blocks: Hermitian exponentiation does give a unitary and a conserved current, but that is conditional on choosing H; the runner's locality and dissipation tests are finite diagnostics, and the unitary baseline in Test 3 still reports a broken finite-lattice mass proxy (M_eff CV 0.338, alpha -1.819), so it shows dissipation worsens the model, not that unitarity/locality are first-principles forced. Repair target: prove finite state space, Hermiticity, sparsity/locality, Born current, and physical consistency selection from the proposed information-flow axiom, with theorem-level thresholds or continuum controls for the locality/unitarity tests. Claim boundary until fixed: exact finite-dimensional algebra that a supplied sparse Hermitian H defines a graph by support, yields unitary exp(iHt), and carries a locally conserved current, plus bounded diagnostics that dense/random/dissipative variants fail selected finite tests.
+- **open / conditional deps cited:**
+  - `finite_state_space_from_information_flow_theorem`
+  - `hermiticity_from_conservation_theorem`
+  - `sparsity_locality_derivation`
+  - `Born_current_readout_theorem`
+  - `physical_consistency_selection_rule`
 - **auditor confidence:** high
 
 ### `site_phase_cube_shift_intertwiner_note`
