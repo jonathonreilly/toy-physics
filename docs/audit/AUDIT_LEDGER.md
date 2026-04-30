@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:30:01.553401+00:00
+**Generated:** 2026-04-30T19:30:07.709893+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 307 |
+| bounded | 306 |
 | support | 272 |
 | open | 21 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 687 |
+| ~~audited_conditional~~ | 688 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 190 |
-| `audited_conditional` | 411 |
+| `audited_conditional` | 412 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 873 |
+| `unaudited` | 872 |
 
 | criticality | count |
 |---|---:|
@@ -541,6 +541,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravity_clean_derivation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | E | - |
 | `gravity_observable_hierarchy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gravity_sign_audit_2026-04-10` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `growing_graph_dynamic_limit_diagnostic_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `growing_graph_frontier_architecture_transfer_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `grown_wavefield_failure_diagnosis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hierarchy_matsubara_decomposition_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -6398,6 +6399,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `external authority cited in note: Zache et al. 2020 / Dempsey et al. 2025`
   - `open blocker stated in note: graph-native directional observable on irregular graphs`
 - **auditor confidence:** 0.94
+
+### `growing_graph_dynamic_limit_diagnostic_note`
+
+- **Note:** [`GROWING_GRAPH_DYNAMIC_LIMIT_DIAGNOSTIC_NOTE.md`](../../docs/GROWING_GRAPH_DYNAMIC_LIMIT_DIAGNOSTIC_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** - the growth lane is therefore better framed as a graph-expansion proxy than  _(class `B`)_
+- **chain closes:** False — No. The runner exits zero, but the audit classifier records no A/B/C/D PASS checks for a load-bearing audit surface.
+- **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a bounded note with executable but unratified support.
+- **auditor confidence:** medium
 
 ### `growing_graph_frontier_architecture_transfer_note`
 
