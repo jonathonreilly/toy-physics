@@ -3,9 +3,9 @@
     "critical": 44,
     "high": 281,
     "leaf": 617,
-    "medium": 343
+    "medium": 342
   },
-  "generated_at": "2026-04-30T01:23:46.681979+00:00",
+  "generated_at": "2026-04-30T01:24:21.119827+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -11318,25 +11318,6 @@
       "note_path": "docs/KOIDE_Q_SECOND_ORDER_REVIEWER_STRESS_TEST_NOTE_2026-04-22.md",
       "ready": true,
       "runner_path": "scripts/frontier_koide_q_second_order_reviewer_stress_test.py",
-      "transitive_descendants": 32
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "kubo_range_of_validity_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "linear_response_true_kubo_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.544,
-      "note_path": "docs/KUBO_RANGE_OF_VALIDITY_NOTE.md",
-      "ready": true,
-      "runner_path": null,
       "transitive_descendants": 32
     },
     {
@@ -26781,6 +26762,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 849,
-  "total_pending": 1285
+  "ready_count": 848,
+  "total_pending": 1284
 }

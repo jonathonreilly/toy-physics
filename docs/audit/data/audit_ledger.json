@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T01:23:46.623774+00:00",
-  "generated_at": "2026-04-30T01:23:44.783256+00:00",
-  "invalidation_run_at": "2026-04-30T01:23:46.562460+00:00",
+  "effective_status_computed_at": "2026-04-30T01:24:21.061447+00:00",
+  "generated_at": "2026-04-30T01:24:19.205283+00:00",
+  "invalidation_run_at": "2026-04-30T01:24:20.998691+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T01:23:46.435459+00:00",
+  "load_bearing_computed_at": "2026-04-30T01:24:20.873567+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -44316,8 +44316,8 @@
       "load_bearing_score": 1.5,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
-      "max_descendant_status": "bounded",
-      "max_descendant_status_rank": 60,
+      "max_descendant_status": "audited_numerical_match",
+      "max_descendant_status_rank": 15,
       "note_hash": "57abcb3daf54a3b4cefc4b7730b768b46c525b199af83acd88845a14bed1f68b",
       "note_path": "docs/KUBO_FAM2_REFINEMENT_NOTE.md",
       "open_dependency_paths": [],
@@ -44361,14 +44361,25 @@
       "verdict_rationale": null
     },
     "kubo_range_of_validity_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T01:24:14.046772+00:00",
+      "audit_state_snapshot": {
+        "criticality": "medium",
+        "dep_effective_status": {
+          "linear_response_true_kubo_note": "bounded"
+        },
+        "deps": [
+          "linear_response_true_kubo_note"
+        ],
+        "load_bearing_score": 5.544,
+        "transitive_descendants": 32
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The conclusion is a finite-battery subset readout whose data-producing runner is not registered as the primary audit runner. Its one-hop Kubo authority is bounded conditional, so the retained range-of-validity claim does not close from clean dependencies.",
       "claim_id": "kubo_range_of_validity_note",
       "criticality": "medium",
       "current_status": "proposed_retained",
@@ -44378,18 +44389,20 @@
         "linear_response_true_kubo_note"
       ],
       "direct_in_degree": 1,
-      "effective_status": "bounded",
-      "effective_status_reason": "inherited_from:linear_response_true_kubo_note",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "effective_status": "audited_numerical_match",
+      "effective_status_reason": "self",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 5.544,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On a linearity-regime subset of 15/41 families selected by |measured/(kubo_true*s)-1| < 0.10 at all four strengths, measured F~M = 1.0048 \u00b1 0.0069 and all 15 satisfy the 0.10 F~M band.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "0d8a04d9f841e6ba34b6d0cf439e2a76afe0bff389f58584e69a1ac59278afc0",
       "note_path": "docs/KUBO_RANGE_OF_VALIDITY_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/LINEAR_RESPONSE_TRUE_KUBO_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368901+00:00",
@@ -44427,7 +44440,7 @@
       "runner_path": null,
       "title": "First-Order Kubo Range of Validity \u2014 F~M \u2248 1 Derived on Linearity-Regime Subset",
       "transitive_descendants": 32,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the result depends on a selected 15/41-family linearity subset and imported battery measurements, with the listed runner/log outside the audit row and a bounded conditional Kubo dependency. Why this blocks: the note gives useful non-tautological evidence for the linear-response subset, but a selected finite subset and unregistered computation cannot be ratified as a retained theorem about the full range of validity. Repair target: register scripts/kubo_range_of_validity.py as the primary runner, recompute the family table with hard thresholds, and keep the claim scoped to the exact subset unless a theorem derives the selection boundary. Claim boundary until fixed: safe as bounded numerical evidence that the first-order Kubo formula predicts F~M near 1 on the listed linearity-regime subset; not safe as audit-clean retained validity range."
     },
     "lanes.action-law.readme": {
       "audit_date": null,

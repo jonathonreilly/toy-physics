@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:23:46.866625+00:00
+**Generated:** 2026-04-30T01:24:21.311582+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,12 +21,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 78 |
 | _proposed_retained_ | 11 |
-| bounded | 211 |
+| bounded | 210 |
 | support | 108 |
 | open | 24 |
 | unknown | 538 |
 | ~~audited_decoration~~ | 4 |
-| ~~audited_numerical_match~~ | 40 |
+| ~~audited_numerical_match~~ | 41 |
 | ~~audited_renaming~~ | 42 |
 | ~~audited_conditional~~ | 443 |
 | ~~audited_failed~~ | 89 |
@@ -38,9 +38,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 148 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 50 |
-| `audited_numerical_match` | 15 |
+| `audited_numerical_match` | 16 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1284 |
+| `unaudited` | 1283 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 382 |
 | `leaf` | 797 |
 
-- **Proposed claims demoted by upstream:** 155
+- **Proposed claims demoted by upstream:** 154
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -382,6 +382,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `kubo_continuum_limit_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
+| `kubo_range_of_validity_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
@@ -2706,6 +2707,20 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** Issue: the claim depends on a selected three-point refinement sweep with fixed program conventions, Fam1 geometry, regularizer 0.1, kH=2.5, and approximate physical-parameter matching, while the runner/log that produce the values are not registered as the primary audit runner. Why this blocks: a finite numerical convergence pattern can support a bounded observation, but it is not a retained continuum theorem without a reproducible runner, registered dependencies, and an explicit convergence/error criterion. Repair target: register scripts/kubo_continuum_limit.py as the primary runner, have it recompute the table with pass/fail thresholds, and close or narrow the bounded Kubo and wave-retardation dependencies. Claim boundary until fixed: safe as a bounded numerical report that this Fam1 setup shows last-step stability near +5.986; not safe as a general retained continuum-limit result.
 - **open / conditional deps cited:**
   - `WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md`
+  - `LINEAR_RESPONSE_TRUE_KUBO_NOTE.md`
+- **auditor confidence:** high
+
+### `kubo_range_of_validity_note`
+
+- **Note:** [`KUBO_RANGE_OF_VALIDITY_NOTE.md`](../../docs/KUBO_RANGE_OF_VALIDITY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On a linearity-regime subset of 15/41 families selected by |measured/(kubo_true*s)-1| < 0.10 at all four strengths, measured F~M = 1.0048 ± 0.0069 and all 15 satisfy the 0.10 F~M band.  _(class `G`)_
+- **chain closes:** False — The conclusion is a finite-battery subset readout whose data-producing runner is not registered as the primary audit runner. Its one-hop Kubo authority is bounded conditional, so the retained range-of-validity claim does not close from clean dependencies.
+- **rationale:** Issue: the result depends on a selected 15/41-family linearity subset and imported battery measurements, with the listed runner/log outside the audit row and a bounded conditional Kubo dependency. Why this blocks: the note gives useful non-tautological evidence for the linear-response subset, but a selected finite subset and unregistered computation cannot be ratified as a retained theorem about the full range of validity. Repair target: register scripts/kubo_range_of_validity.py as the primary runner, recompute the family table with hard thresholds, and keep the claim scoped to the exact subset unless a theorem derives the selection boundary. Claim boundary until fixed: safe as bounded numerical evidence that the first-order Kubo formula predicts F~M near 1 on the listed linearity-regime subset; not safe as audit-clean retained validity range.
+- **open / conditional deps cited:**
   - `LINEAR_RESPONSE_TRUE_KUBO_NOTE.md`
 - **auditor confidence:** high
 
