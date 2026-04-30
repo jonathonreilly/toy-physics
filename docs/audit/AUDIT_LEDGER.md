@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:19:46.956878+00:00
+**Generated:** 2026-04-30T19:19:52.878025+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 333 |
+| bounded | 332 |
 | support | 297 |
 | open | 21 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 636 |
+| ~~audited_conditional~~ | 637 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 148 |
-| `audited_conditional` | 353 |
+| `audited_conditional` | 354 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 973 |
+| `unaudited` | 972 |
 
 | criticality | count |
 |---|---:|
@@ -387,6 +387,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_projector_interface_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | E | - |
+| `dm_leptogenesis_projection_theorem_note_2026-04-15` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_transport_integral_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_transport_status_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -3600,6 +3601,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — The second verdict is right: the row is conditional on adopting a source-selector candidate beyond the sole axiom. The load-bearing class is sharpened to E because the disputed step is the introduced selector rule, while the first audit misread the row as a tuned numerical match.
 - **rationale:** The second verdict is right: the row is conditional on adopting a source-selector candidate beyond the sole axiom. The load-bearing class is sharpened to E because the disputed step is the introduced selector rule, while the first audit misread the row as a tuned numerical match.
 - **auditor confidence:** judicial
+
+### `dm_leptogenesis_projection_theorem_note_2026-04-15`
+
+- **Note:** [`DM_LEPTOGENESIS_PROJECTION_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_LEPTOGENESIS_PROJECTION_THEOREM_NOTE_2026-04-15.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** **Script:** `scripts/frontier_dm_leptogenesis_projection_theorem.py`  _(class `C`)_
+- **chain closes:** False — No. The registered runner returned nonzero, so the current executable chain is not cleanly reproducible.
+- **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a bounded note with non-clean executable support.
+- **auditor confidence:** medium
 
 ### `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16`
 
