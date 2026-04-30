@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 397,
+    "leaf": 396,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:24:55.257668+00:00",
+  "generated_at": "2026-04-30T19:25:01.562929+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -19204,27 +19204,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_wilson_to_dweh_local_chain_path_algebra_current_bank_boundary_note_2026-04-18",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [
-        "dm_wilson_to_dweh_hermitian_source_family_current_bank_boundary_note_2026-04-18",
-        "dm_wilson_to_dweh_local_chain_path_algebra_target_note_2026-04-18",
-        "dm_wilson_to_dweh_local_path_algebra_minimal_certificate_note_2026-04-18"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_WILSON_TO_DWEH_LOCAL_CHAIN_PATH_ALGEBRA_CURRENT_BANK_BOUNDARY_NOTE_2026-04-18.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_dm_wilson_to_dweh_local_chain_path_algebra_current_bank_boundary_2026_04_18.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "gauge_matter_closure_gates_2026-04-12",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20081,5 +20060,5 @@
     }
   ],
   "ready_count": 540,
-  "total_pending": 923
+  "total_pending": 922
 }
