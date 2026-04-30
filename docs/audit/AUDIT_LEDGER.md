@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:20:58.557559+00:00
+**Generated:** 2026-04-30T00:23:03.680083+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,18 +24,18 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 215 |
 | support | 111 |
 | open | 24 |
-| unknown | 564 |
+| unknown | 563 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 23 |
-| ~~audited_conditional~~ | 197 |
+| ~~audited_conditional~~ | 198 |
 | ~~audited_failed~~ | 342 |
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 8 |
+| `audit_in_progress` | 7 |
 | `audited_clean` | 78 |
-| `audited_conditional` | 133 |
+| `audited_conditional` | 134 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 12 |
@@ -96,7 +96,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | support | audit_in_progress | support | - | - | - | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
@@ -212,6 +211,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_h025_farfield_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gate_b_strong_field_observable_split_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_scalar_temporal_completion_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -1605,6 +1605,18 @@ Repair target: supply and audit a theorem deriving the interacting plaquette exp
 Claim boundary until fixed: safe to claim the conditional exact temporal-completion law on the accepted Wilson local gauge-source class, not full plaquette observable closure.
 - **open / conditional deps cited:**
   - `observable_level_interacting_plaquette_to_local_response_reduction_missing`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_connected_hierarchy_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-fresh-cross-confirm-20260430-session-b`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Because beta enters as one common source on every plaquette, d/d beta = sum_r d/d J_r on the source-shifted finite Wilson surface.  _(class `A`)_
+- **chain closes:** False — The fresh algebraic check closes within its stated scope, but current_status='unknown' is not eligible for audited_clean under the audit lane. It must stay conditional/support until the source claim is proposed for retention and re-confirmed.
+- **rationale:** Issue: The fresh cross-confirmation found an exact class-A closure, but the ledger row has current_status='unknown', so landing audited_clean would violate the audit-lane ratification gate. Why this blocks: audited_clean is reserved for proposed_retained/proposed_promoted rows and audit_lint rejects clean status on support/unknown rows. Repair target: if this claim is intended to be retained, update the source note to proposed_retained/proposed_promoted through the science lane and rerun a fresh-context cross-confirmation. Claim boundary until fixed: the bounded algebraic/support statement may be cited as support, but it is not an audit-ratified retained claim. Fresh-audit note: The uniform-source identity follows directly from y_p = beta + J_p, and the cumulant hierarchy follows by applying source derivatives. The runner executed with SUMMARY: THEOREM PASS=4 SUPPORT=4 FAIL=0.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_constant_lift_obstruction_note`
