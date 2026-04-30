@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 53,
+    "critical": 52,
     "high": 305,
     "leaf": 615,
     "medium": 327
   },
-  "generated_at": "2026-04-30T00:48:13.554175+00:00",
+  "generated_at": "2026-04-30T00:48:16.823480+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -56,23 +56,6 @@
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md",
       "ready": true,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py",
-      "transitive_descendants": 295
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "gauge_vacuum_plaquette_susceptibility_flow_theorem_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 5,
-      "load_bearing_score": 14.709,
-      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py",
       "transitive_descendants": 295
     },
     {
@@ -27160,6 +27143,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 847,
-  "total_pending": 1300
+  "ready_count": 846,
+  "total_pending": 1299
 }
