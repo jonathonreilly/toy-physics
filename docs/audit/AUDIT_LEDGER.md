@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:04:42.948511+00:00
+**Generated:** 2026-04-30T19:04:52.414118+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,25 +21,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 345 |
+| bounded | 344 |
 | support | 270 |
 | open | 18 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 606 |
+| ~~audited_conditional~~ | 607 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 120 |
-| `audited_conditional` | 320 |
+| `audited_conditional` | 321 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1035 |
+| `unaudited` | 1034 |
 
 | criticality | count |
 |---|---:|
@@ -449,6 +449,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_dirac_two_higgs_canonical_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `neutrino_lane4_theorem_plan_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `neutrino_lane4_workstream_closeout_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_majorana_current_stack_exhaustion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `neutrino_majorana_operator_axiom_first_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `newton_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -6155,6 +6156,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The plan does not derive any neutrino mass or splitting; it produces the structural roadmap.  _(class `B`)_
 - **chain closes:** False — The roadmap depends on upstream retained/open Lane-4 inputs and future derivation targets, but the ledger supplies no one-hop dependencies for checking those inputs. The source note explicitly says no neutrino mass, splitting, globalization, or seesaw closure is derived.
 - **rationale:** Issue: the phase ordering and target priority map rely on upstream framework-status claims and open theorem objects that are not supplied as ledger dependencies. Why this blocks: the roadmap may be useful, but its load-bearing dependency ordering cannot be audit-ratified from the restricted inputs. Repair target: register the actual one-hop authorities and separately audit the 4D globalization, 4E mass mechanism, and downstream arithmetic targets. Claim boundary until fixed: roadmap and planning inventory only, with no neutrino quantitative closure.
+- **auditor confidence:** high
+
+### `neutrino_lane4_workstream_closeout_note_2026-04-28`
+
+- **Note:** [`NEUTRINO_LANE4_WORKSTREAM_CLOSEOUT_NOTE_2026-04-28.md`](../../docs/NEUTRINO_LANE4_WORKSTREAM_CLOSEOUT_NOTE_2026-04-28.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-a-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The Cycle-2 conditional theorem becomes unconditional only if (SR-2), (SR-1), or (SR-3) supplies a derivation from fixed A_min; until then, 4D is bounded conditional only.  _(class `B`)_
+- **chain closes:** False — The close-out summarizes prior cycle artifacts and names C2-X as the remaining gate, but the ledger supplies no one-hop dependencies for those artifacts. The note itself preserves a bounded stop rather than closing the physics claim.
+- **rationale:** Issue: the workstream-progress claims depend on prior cycle notes, A_min policy, and C2-X status that are not available as one-hop ledger inputs. Why this blocks: the audit can accept the boundary language, but cannot ratify the summarized structural progress or PR/workstream assertions from the restricted record. Repair target: register the cycle artifacts as dependencies and audit the C2-X gate or the named SR attack frame that closes it. Claim boundary until fixed: close-out and handoff inventory only; 4D remains bounded conditional.
 - **auditor confidence:** high
 
 ### `neutrino_majorana_current_stack_exhaustion_note`
