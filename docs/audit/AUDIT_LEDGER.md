@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T23:44:43.230408+00:00
+**Generated:** 2026-04-30T23:46:29.260247+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,12 +33,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 223 |
-| `audited_conditional` | 480 |
+| `audited_conditional` | 481 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 772 |
+| `unaudited` | 771 |
 
 | criticality | count |
 |---|---:|
@@ -47,7 +47,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 385 |
 | `leaf` | 769 |
 
-- **Proposed claims demoted by upstream:** 129
+- **Proposed claims demoted by upstream:** 128
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -707,6 +707,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `physical_lattice_necessity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `plaquette_self_consistency_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -9749,6 +9750,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The signed-permutation finite frame B_4 has min_{g != I} ||g-I||_F = 2 and therefore zero infinitesimal tangent, while linearized metric/coframe response requires nonzero Sym^2(R^4) directions of dimension 10.  _(class `A`)_
 - **chain closes:** True — The note is scoped to a finite-automorphism-only no-go, and the source plus runner give an exact group-theoretic identity-gap/tangent-dimension obstruction. The retained parent-source hidden-character no-go is already audited clean and is cited only as an independent remaining-route boundary, not as a missing premise for this finite-response no-go.
 - **rationale:** The claim is a bounded negative theorem about the finite-automorphism-only Planck route, not a positive Planck-scale derivation. The runner explicitly enumerates B_4, verifies |B_4|=384, proves the nearest nonidentity element is Frobenius distance 2, checks the empty infinitesimal neighborhood, contrasts zero finite-group tangent with the 10-dimensional symmetric metric-response space, and confirms the finite-dimensional trace obstruction for canonical commutators. Residual boundary: this clean audit only closes the finite automorphism route; it does not derive the gravitational carrier identification or rule out realified/canonical response surfaces.
+- **auditor confidence:** high
+
+### `planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30`
+
+- **Note:** [`PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md`](../../docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-04-30-fresh-context`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Let u_a denote the fundamental local link/source variable for primitive axis a; with S_link = sum_a u_a J_a and support(J_a) = {a}, the primitive first variation dS_link/du_a has support on exactly {t}, {x}, {y}, {z}, therefore P_1 = P_A.  _(class `B`)_
+- **chain closes:** False — The algebraic consequence of an already accepted one-link action-source domain is checked, but the cited authority rows carrying the action/source/time/CPT surface are not clean. The runner encodes the link-local source terms as a fixed one-axis list instead of deriving that source domain from clean retained inputs.
+- **rationale:** Issue: The P_A selector is load-bearing only after accepting that the retained microscopic action supplies fundamental one-link/source variables and that the primitive active response must be the first variation with respect to those variables; the cited authority rows for that source/action/time/CPT surface are not clean. Why this blocks: Retained-grade closure cannot propagate through unknown, support, or audited_conditional one-hop inputs, and the runner hard-codes link_local_action_terms as one-axis source terms rather than deriving the disputed action-source bridge. Repair target: Audit or promote a retained theorem deriving the fundamental link-local source domain, time completion, and CPT/action support from clean inputs, with a runner that constructs those source terms from that theorem. Claim boundary until fixed: Conditional theorem only: given a link-local one-axis microscopic action source domain and anomaly-forced time axis, the first variation selects P_1 = P_A; no unconditional retained Planck active-packet forcing is closed yet.
+- **open / conditional deps cited:**
+  - `MINIMAL_AXIOMS_2026-04-11.md`
+  - `NATIVE_GAUGE_CLOSURE_NOTE.md`
+  - `ANOMALY_FORCES_TIME_THEOREM.md`
+  - `CPT_EXACT_NOTE.md`
 - **auditor confidence:** high
 
 ### `planck_parent_source_hidden_character_no_go_note_2026-04-24`

@@ -3,9 +3,9 @@
     "critical": 4,
     "high": 195,
     "leaf": 286,
-    "medium": 287
+    "medium": 286
   },
-  "generated_at": "2026-04-30T23:44:43.051468+00:00",
+  "generated_at": "2026-04-30T23:46:29.053392+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10521,30 +10521,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "minimal_axioms_2026-04-11",
-        "native_gauge_closure_note",
-        "graph_first_su3_integration_note",
-        "anomaly_forces_time_theorem",
-        "i3_zero_exact_theorem_note",
-        "cpt_exact_note"
-      ],
-      "direct_in_degree": 3,
-      "load_bearing_score": 6.587,
-      "note_path": "docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_planck_link_local_first_variation_p_a_forcing.py",
-      "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "publication.ci3_z3.usable_derived_values_index",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -17758,5 +17734,5 @@
     }
   ],
   "ready_count": 385,
-  "total_pending": 772
+  "total_pending": 771
 }
