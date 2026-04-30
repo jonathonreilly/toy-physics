@@ -73,9 +73,10 @@ def part1_existing_open_boundary() -> None:
         has_all(
             onsite,
             (
-                "not retained native Koide closure",
+                "source-domain retention law is still missing",
                 "this note does not prove",
-                "physical undeformed charged-lepton scalar source domain",
+                "that the physical undeformed charged-lepton scalar source domain equals the onsite local function algebra",
+                "derive_retained_source_domain_equals_onsite_function_algebra_not_C3_commutant",
             ),
         ),
     )
