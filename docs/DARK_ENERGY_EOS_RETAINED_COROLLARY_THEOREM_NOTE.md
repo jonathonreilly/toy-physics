@@ -7,12 +7,12 @@ de Sitter stationary vacuum. Following an earlier review that flagged the
 previous version as still resting on a companion-lane premise, the load-
 bearing identity `Lambda_vac = lambda_1(S^3_R) = 3/R^2` has been crystallized
 into a standalone retained theorem
-([`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md))
+(`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`)
 built from already-retained GR and topology authorities, not from the
 bounded numerical-`Lambda` row.
 **Script:** `scripts/frontier_dark_energy_eos_retained_corollary.py`
 **Upstream authorities (all retained on `main`):**
-[`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md),
+`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`,
 [`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md),
 [`UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md`](UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md),
 [`UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md`](UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md),
@@ -36,7 +36,7 @@ The scientific content was already present (as a conditional statement) in
 [`COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md`](COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md)
 under "`w = -1` is the same mechanism". The contribution of this note is to
 (i) pair that statement with the companion identity theorem
-[`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
+`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`
 that retains the load-bearing premise, and (ii) package the EOS `w` as a
 standalone retained corollary row, following the retained-structural-
 corollary precedent of
@@ -55,7 +55,7 @@ Let the retained surface carry:
 2. the retained spectral-gap cosmological-constant identity
    `Lambda_vac = lambda_1(S^3_R) = 3 / R^2` on the de Sitter stationary
    vacuum sector of the retained direct-universal GR closure (authority:
-   [`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
+   `COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`
    — this single retained theorem discharges both the spectral fact
    `lambda_1 = 3/R^2` and the Einstein-side relation `Lambda_vac = 3/R^2`);
 3. the stationary vacuum condition on the retained smooth global
@@ -228,7 +228,7 @@ This note is now wired into
 
 | Quantity / lane | Workstream | Framework result | Observation / comparator | Claim-strength status | Import class | Current publication decision | Authority / best source | Frozen-out ref |
 |---|---|---|---|---|---|---|---|---|
-| Dark energy EOS `w` | spectral-gap cosmology | `w = -1` exactly on retained direct-universal GR de Sitter stationary vacuum + retained `Lambda_vac = lambda_1(S^3_R)` identity; CPL `(w_0, w_a) = (-1, 0)` | observationally near `-1`, DESI BAO + CMB + SN posteriors show persistent 2-4 sigma preference for `w != -1` depending on SN combination | retained | retained direct-universal GR closure + retained smooth global gravitational stationary/Gaussian class + retained canonical textbook continuum GR closure + retained `S^3` topology + retained `Lambda_vac = lambda_1(S^3_R)` identity theorem + FRW continuity equation | retained corollary may appear on the flagship / SI surface; numerical `Lambda` stays the existing bounded companion row | this note + [COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md](../../COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md) | n/a |
+| Dark energy EOS `w` | spectral-gap cosmology | `w = -1` exactly on retained direct-universal GR de Sitter stationary vacuum + retained `Lambda_vac = lambda_1(S^3_R)` identity; CPL `(w_0, w_a) = (-1, 0)` | observationally near `-1`, DESI BAO + CMB + SN posteriors show persistent 2-4 sigma preference for `w != -1` depending on SN combination | retained | retained direct-universal GR closure + retained smooth global gravitational stationary/Gaussian class + retained canonical textbook continuum GR closure + retained `S^3` topology + retained `Lambda_vac = lambda_1(S^3_R)` identity theorem + FRW continuity equation | retained corollary may appear on the flagship / SI surface; numerical `Lambda` stays the existing bounded companion row | this note + `COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md` | n/a |
 
 The adjacent numerical `Cosmological constant Lambda` row and the remaining
 cosmology rows are unchanged in status. They remain bounded because their

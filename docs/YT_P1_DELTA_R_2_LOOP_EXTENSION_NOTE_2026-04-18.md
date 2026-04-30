@@ -91,7 +91,7 @@ the 1-loop piece under the retained envelope ratio.
 ### Structural template (P3 side, analogous role)
 
 - **`K_2` 4-tensor color skeleton:**
-  [`docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
+  `docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
   (referenced structurally; this note mirrors its role at 2-loop for
   the ratio correction rather than the mass conversion).
 - **`K_3` 10-tensor color skeleton:**
@@ -115,7 +115,7 @@ the 1-loop piece under the retained envelope ratio.
 ### Context
 
 - **Master obstruction (unchanged):**
-  [`docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)
+  `docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
   (P1 primitive budget line; this note refines the 2-loop line
   within the existing P1 budget).
 - **Ward identity (tree level):**

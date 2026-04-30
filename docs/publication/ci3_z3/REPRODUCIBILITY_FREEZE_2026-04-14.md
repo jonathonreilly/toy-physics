@@ -6,7 +6,7 @@ publication slice before full submission freeze.
 
 This is not the current active package freeze and not the final full release
 freeze. It is an earlier pinned package slice kept for provenance.
-Current validation should start from [REPRODUCE.md](./REPRODUCE.md) and the
+Current validation should start from `REPRODUCE.md` and the
 current package surfaces rather than from this archival note alone.
 
 ## Freeze base

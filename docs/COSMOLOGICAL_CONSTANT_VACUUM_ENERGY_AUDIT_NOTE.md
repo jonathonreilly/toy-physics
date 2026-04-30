@@ -42,7 +42,7 @@ The honest result is negative:
 The cosmology lane now uses two distinct authority surfaces:
 
 - positive bounded/conditional companion:
-  [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](./COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md)
+  `COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md`
   with
   [frontier_cosmological_constant_spectral_gap.py](../scripts/frontier_cosmological_constant_spectral_gap.py)
 - negative/exploratory vacuum-energy audit:
@@ -64,4 +64,3 @@ Unsafe statement:
 
 > the framework derives the observed cosmological constant from vacuum-energy
 > finiteness alone.
-

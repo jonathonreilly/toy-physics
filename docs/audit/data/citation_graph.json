@@ -161,14 +161,6 @@
       "to": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25"
     },
     {
-      "from": "area_law_native_car_semantics_tightening_note_2026-04-25",
-      "to": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25"
-    },
-    {
-      "from": "area_law_native_car_semantics_tightening_note_2026-04-25",
-      "to": "area_law_primitive_parity_gate_carrier_theorem_note_2026-04-25"
-    },
-    {
       "from": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
       "to": "area_law_native_car_semantics_tightening_note_2026-04-25"
     },
@@ -195,10 +187,6 @@
     {
       "from": "atomic_hydrogen_helium_probe_note",
       "to": "charged_lepton_koide_review_packet_2026-04-18"
-    },
-    {
-      "from": "bh_entropy_derived_note",
-      "to": "bh_entropy_rt_ratio_widom_no_go_note"
     },
     {
       "from": "bh_entropy_rt_ratio_widom_no_go_note",
@@ -1302,18 +1290,6 @@
     },
     {
       "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_circulant_character_derivation_note_2026-04-18"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_circulant_character_bridge_note_2026-04-18"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
       "to": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18"
     },
     {
@@ -1470,19 +1446,7 @@
     },
     {
       "from": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
-    },
-    {
-      "from": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
       "to": "hw1_second_order_return_shape_theorem_note"
-    },
-    {
-      "from": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-      "to": "mass_mixing_subspace_disjointness_theorem_note"
-    },
-    {
-      "from": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-      "to": "structural_no_go_survey_note"
     },
     {
       "from": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
@@ -2457,10 +2421,6 @@
       "to": "confinement_string_tension_note"
     },
     {
-      "from": "cosmological_constant_vacuum_energy_audit_note",
-      "to": "cosmological_constant_result_2026-04-12"
-    },
-    {
       "from": "cosmology_from_mass_spectrum_note",
       "to": "r_base_group_theory_derivation_theorem_note_2026-04-24"
     },
@@ -2555,10 +2515,6 @@
     {
       "from": "cycle_break_frontier_note_2026-04-10",
       "to": "cycle_battery_scaled_note_2026-04-10"
-    },
-    {
-      "from": "dark_energy_eos_retained_corollary_theorem_note",
-      "to": "cosmological_constant_spectral_gap_identity_theorem_note"
     },
     {
       "from": "dark_energy_eos_retained_corollary_theorem_note",
@@ -4033,10 +3989,6 @@
       "to": "ckm_from_mass_hierarchy_note"
     },
     {
-      "from": "down_type_mass_ratio_ckm_dual_note",
-      "to": "ckm_five_sixths_bridge_support_note"
-    },
-    {
       "from": "evanescent_barrier_amplitude_suppression_theorem_note",
       "to": "restricted_strong_field_closure_note"
     },
@@ -4485,10 +4437,6 @@
       "to": "yt_flagship_boundary_note"
     },
     {
-      "from": "higher_order_structural_theorems_note",
-      "to": "structural_no_go_survey_note"
-    },
-    {
       "from": "hubble_tension_structural_lock_theorem_note_2026-04-26",
       "to": "minimal_axioms_2026-04-11"
     },
@@ -4682,10 +4630,6 @@
     },
     {
       "from": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
-      "to": "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18"
-    },
-    {
-      "from": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
       "to": "koide_gamma_orbit_selector_bridge_note_2026-04-18"
     },
     {
@@ -4695,10 +4639,6 @@
     {
       "from": "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18",
       "to": "koide_gamma_orbit_selector_bridge_note_2026-04-18"
-    },
-    {
-      "from": "koide_gamma_orbit_exponential_value_law_candidate_note_2026-04-18",
-      "to": "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18"
     },
     {
       "from": "koide_gamma_orbit_exponential_value_law_candidate_note_2026-04-18",
@@ -4715,10 +4655,6 @@
     {
       "from": "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18",
       "to": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18"
-    },
-    {
-      "from": "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18",
-      "to": "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18"
     },
     {
       "from": "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18",
@@ -4742,27 +4678,11 @@
     },
     {
       "from": "koide_gamma_orbit_selected_line_closure_note_2026-04-18",
-      "to": "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18"
-    },
-    {
-      "from": "koide_gamma_orbit_selected_line_closure_note_2026-04-18",
-      "to": "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18"
-    },
-    {
-      "from": "koide_gamma_orbit_selected_line_closure_note_2026-04-18",
-      "to": "koide_gamma_orbit_exponential_value_law_candidate_note_2026-04-18"
-    },
-    {
-      "from": "koide_gamma_orbit_selected_line_closure_note_2026-04-18",
       "to": "koide_selected_line_cyclic_response_bridge_note_2026-04-18"
     },
     {
       "from": "koide_gamma_orbit_selected_line_closure_note_2026-04-18",
       "to": "koide_microscopic_scalar_selector_target_note_2026-04-18"
-    },
-    {
-      "from": "koide_gamma_orbit_selector_bridge_note_2026-04-18",
-      "to": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18"
     },
     {
       "from": "koide_microscopic_scalar_selector_target_note_2026-04-18",
@@ -4771,10 +4691,6 @@
     {
       "from": "koide_microscopic_scalar_selector_target_note_2026-04-18",
       "to": "koide_selected_line_cyclic_response_bridge_note_2026-04-18"
-    },
-    {
-      "from": "koide_microscopic_scalar_selector_target_note_2026-04-18",
-      "to": "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18"
     },
     {
       "from": "koide_microscopic_scalar_selector_target_note_2026-04-18",
@@ -4922,10 +4838,6 @@
     },
     {
       "from": "koide_selected_slice_frozen_bank_decomposition_note_2026-04-18",
-      "to": "koide_microscopic_scalar_selector_target_note_2026-04-18"
-    },
-    {
-      "from": "koide_selected_slice_frozen_bank_decomposition_note_2026-04-18",
       "to": "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16"
     },
     {
@@ -4959,22 +4871,6 @@
     {
       "from": "koide_sqrtm_amplitude_principle_note_2026-04-18",
       "to": "dm_neutrino_postcanonical_polar_section_note_2026-04-15"
-    },
-    {
-      "from": "koide_sqrtm_amplitude_principle_note_2026-04-18",
-      "to": "koide_circulant_character_derivation_note_2026-04-18"
-    },
-    {
-      "from": "koide_weighted_character_source_axis_theorem_note_2026-04-20",
-      "to": "structural_no_go_survey_note"
-    },
-    {
-      "from": "koide_weighted_character_source_axis_theorem_note_2026-04-20",
-      "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
-    },
-    {
-      "from": "koide_weighted_character_source_axis_theorem_note_2026-04-20",
-      "to": "koide_positive_paths_first_principles_note_2026-04-18"
     },
     {
       "from": "koide_weighted_character_source_axis_theorem_note_2026-04-20",
@@ -5053,10 +4949,6 @@
       "to": "born_scattering_comparison_note"
     },
     {
-      "from": "lensing_finite_path_explanation_note",
-      "to": "lensing_long_path_test_note"
-    },
-    {
       "from": "lensing_long_path_test_note",
       "to": "lensing_finite_path_explanation_note"
     },
@@ -5098,10 +4990,6 @@
     },
     {
       "from": "lorentz_boost_covariance_3plus1d_theorem_note",
-      "to": "angular_kernel_underdetermination_no_go_note"
-    },
-    {
-      "from": "lorentz_boost_covariance_3plus1d_theorem_note",
       "to": "emergent_lorentz_invariance_note"
     },
     {
@@ -5139,10 +5027,6 @@
     {
       "from": "mass_mixing_subspace_disjointness_theorem_note",
       "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
-    },
-    {
-      "from": "mass_spectrum_derived_note",
-      "to": "quark_mass_ratio_review_packet_2026-04-18"
     },
     {
       "from": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
@@ -6486,10 +6370,6 @@
     },
     {
       "from": "quark_mass_ratios_taste_staircase_support_note_2026-04-25",
-      "to": "ckm_five_sixths_bridge_support_note"
-    },
-    {
-      "from": "quark_mass_ratios_taste_staircase_support_note_2026-04-25",
       "to": "ckm_from_mass_hierarchy_note"
     },
     {
@@ -6499,10 +6379,6 @@
     {
       "from": "quark_mass_ratios_taste_staircase_support_note_2026-04-25",
       "to": "observable_principle_from_axiom_note"
-    },
-    {
-      "from": "quark_mass_ratios_taste_staircase_support_note_2026-04-25",
-      "to": "down_type_mass_ratio_ckm_dual_note"
     },
     {
       "from": "quark_mass_ratios_taste_staircase_support_note_2026-04-25",
@@ -7189,20 +7065,12 @@
       "to": "universal_qg_optional_textbook_comparison_note"
     },
     {
-      "from": "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24",
-      "to": "ckm_neutron_edm_bound_note"
-    },
-    {
       "from": "up_type_mass_ratio_ckm_inversion_note",
       "to": "alpha_s_derived_note"
     },
     {
       "from": "up_type_mass_ratio_ckm_inversion_note",
       "to": "ckm_atlas_axiom_closure_note"
-    },
-    {
-      "from": "up_type_mass_ratio_ckm_inversion_note",
-      "to": "down_type_mass_ratio_ckm_dual_note"
     },
     {
       "from": "uv_gauge_to_yukawa_bridge_sc_vs_pert_note",
@@ -7254,18 +7122,10 @@
     },
     {
       "from": "wave_direct_dm_h025_fam1_seed0_control_note",
-      "to": "wave_direct_dm_h025_high_band_boundary_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_fam1_seed0_control_note",
       "to": "wave_direct_dm_h025_seed0_crossfamily_note"
     },
     {
       "from": "wave_direct_dm_h025_fam1_seed1_control_note",
-      "to": "wave_direct_dm_h025_low_band_retention_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_fam1_seed1_control_note",
       "to": "wave_direct_dm_h025_two_point_synthesis_note"
     },
     {
@@ -7275,14 +7135,6 @@
     {
       "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
       "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-      "to": "wave_direct_dm_portability_batch_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-      "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
     },
     {
       "from": "wave_direct_dm_h025_fam2_seed0_control_note",
@@ -7297,10 +7149,6 @@
       "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
     },
     {
-      "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-      "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
-    },
-    {
       "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
       "to": "wave_direct_dm_h025_fam2_seed1_control_note"
     },
@@ -7311,34 +7159,6 @@
     {
       "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
       "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-      "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-      "to": "wave_direct_dm_h025_two_point_synthesis_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-      "to": "wave_direct_dm_portability_batch_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-      "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-      "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-      "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-      "to": "wave_direct_dm_h025_fam2_seed1_control_note"
     },
     {
       "from": "wave_direct_dm_h025_fam3_seed0_control_note",
@@ -7397,44 +7217,12 @@
       "to": "wave_direct_dm_h025_two_point_synthesis_note"
     },
     {
-      "from": "wave_direct_dm_h025_high_band_boundary_note",
-      "to": "wave_direct_dm_h025_feasibility_note"
-    },
-    {
       "from": "wave_direct_dm_h025_low_band_retention_note",
       "to": "wave_direct_dm_h025_fam1_seed1_control_note"
     },
     {
       "from": "wave_direct_dm_h025_low_band_retention_note",
       "to": "wave_direct_dm_h025_two_point_synthesis_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_low_band_retention_note",
-      "to": "wave_direct_dm_h025_high_band_boundary_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_seed0_crossfamily_note",
-      "to": "wave_direct_dm_h025_fam1_seed0_control_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_seed0_crossfamily_note",
-      "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_seed0_crossfamily_note",
-      "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_seed0_crossfamily_note",
-      "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_seed0_crossfamily_note",
-      "to": "wave_direct_dm_h025_high_band_boundary_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_seed0_crossfamily_note",
-      "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
     },
     {
       "from": "wave_direct_dm_h025_seed1_crossfamily_note",
@@ -7479,46 +7267,6 @@
     {
       "from": "wave_direct_dm_h025_three_family_transfer_note",
       "to": "wave_direct_dm_h025_fam3_seed1_control_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_two_point_synthesis_note",
-      "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_two_point_synthesis_note",
-      "to": "wave_direct_dm_seed_band_diagnosis_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_two_point_synthesis_note",
-      "to": "wave_direct_dm_h025_feasibility_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_two_point_synthesis_note",
-      "to": "wave_direct_dm_h025_high_band_boundary_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_two_point_synthesis_note",
-      "to": "wave_direct_dm_h025_low_band_retention_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_two_point_synthesis_note",
-      "to": "wave_direct_dm_h025_fam1_seed0_control_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_two_point_synthesis_note",
-      "to": "wave_direct_dm_h025_fam1_seed1_control_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_two_point_synthesis_note",
-      "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_two_point_synthesis_note",
-      "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_two_point_synthesis_note",
-      "to": "wave_direct_dm_portability_batch_note"
     },
     {
       "from": "wave_direct_dm_matched_history_note",
@@ -8138,18 +7886,6 @@
     },
     {
       "from": "yt_p1_color_factor_retention_note_2026-04-17",
-      "to": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
-    },
-    {
-      "from": "yt_p1_color_factor_retention_note_2026-04-17",
-      "to": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17"
-    },
-    {
-      "from": "yt_p1_color_factor_retention_note_2026-04-17",
-      "to": "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17"
-    },
-    {
-      "from": "yt_p1_color_factor_retention_note_2026-04-17",
       "to": "yt_p1_delta_1_bz_computation_note_2026-04-17"
     },
     {
@@ -8174,10 +7910,6 @@
     },
     {
       "from": "yt_p1_delta_1_bz_computation_note_2026-04-17",
-      "to": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17"
-    },
-    {
-      "from": "yt_p1_delta_1_bz_computation_note_2026-04-17",
       "to": "yt_p1_h_unit_renormalization_framework_native_note_2026-04-17"
     },
     {
@@ -8187,10 +7919,6 @@
     {
       "from": "yt_p1_delta_1_bz_computation_note_2026-04-17",
       "to": "yt_p1_i_s_revision_verification_note_2026-04-17"
-    },
-    {
-      "from": "yt_p1_delta_2_bz_computation_note_2026-04-17",
-      "to": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17"
     },
     {
       "from": "yt_p1_delta_2_bz_computation_note_2026-04-17",
@@ -8222,10 +7950,6 @@
     },
     {
       "from": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-      "to": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17"
-    },
-    {
-      "from": "yt_p1_delta_3_bz_computation_note_2026-04-17",
       "to": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17"
     },
     {
@@ -8243,10 +7967,6 @@
     {
       "from": "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
       "to": "yt_p1_loop_geometric_bound_note_2026-04-17"
-    },
-    {
-      "from": "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
-      "to": "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17"
     },
     {
       "from": "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
@@ -8274,27 +7994,7 @@
     },
     {
       "from": "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
-      "to": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
-    },
-    {
-      "from": "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
       "to": "yt_ward_identity_derivation_theorem"
-    },
-    {
-      "from": "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
-      "to": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17"
-    },
-    {
-      "from": "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
-      "to": "yt_p1_delta_1_bz_computation_note_2026-04-17"
-    },
-    {
-      "from": "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
-      "to": "yt_p1_delta_2_bz_computation_note_2026-04-17"
-    },
-    {
-      "from": "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
-      "to": "yt_p1_delta_3_bz_computation_note_2026-04-17"
     },
     {
       "from": "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
@@ -8386,19 +8086,11 @@
     },
     {
       "from": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
-      "to": "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17"
-    },
-    {
-      "from": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
       "to": "yt_ew_color_projection_theorem"
     },
     {
       "from": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
       "to": "yukawa_color_projection_theorem"
-    },
-    {
-      "from": "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17",
-      "to": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
     },
     {
       "from": "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17",
@@ -8446,10 +8138,6 @@
     },
     {
       "from": "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17",
-      "to": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
-    },
-    {
-      "from": "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17",
       "to": "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17"
     },
     {
@@ -8470,14 +8158,6 @@
     },
     {
       "from": "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
-      "to": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
-    },
-    {
-      "from": "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
-      "to": "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17"
-    },
-    {
-      "from": "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
       "to": "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17"
     },
     {
@@ -8495,18 +8175,6 @@
     {
       "from": "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
       "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
-    },
-    {
-      "from": "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17",
-      "to": "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17"
-    },
-    {
-      "from": "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17",
-      "to": "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17"
-    },
-    {
-      "from": "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17",
-      "to": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
     },
     {
       "from": "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17",
@@ -16253,10 +15921,6 @@
       "to": "publication.ci3_z3.reproducibility_freeze_2026-04-14"
     },
     {
-      "from": "publication.ci3_z3.reproducibility_freeze_2026-04-14",
-      "to": "publication.ci3_z3.reproduce"
-    },
-    {
       "from": "publication.ci3_z3.results_index",
       "to": "publication.ci3_z3.derivation_validation_map"
     },
@@ -18409,14 +18073,6 @@
       "to": "work_history.repo.backlog.nature_backlog_2026-04-10"
     },
     {
-      "from": "work_history.repo.backlog.readme",
-      "to": "repo.active_review_queue"
-    },
-    {
-      "from": "work_history.repo.backlog.readme",
-      "to": "repo.review_feedback_workflow"
-    },
-    {
       "from": "work_history.repo.backlog.work_backlog_2026-04-10",
       "to": "two_sign_comparison_note_2026-04-10"
     },
@@ -18509,14 +18165,6 @@
       "to": "work_history.repo.review_feedback.publication_discovery_audit_2026-04-11"
     },
     {
-      "from": "work_history.repo.review_feedback.readme",
-      "to": "repo.active_review_queue"
-    },
-    {
-      "from": "work_history.repo.review_feedback.readme",
-      "to": "repo.review_feedback_workflow"
-    },
-    {
       "from": "work_history.repo.review_feedback.rerun_required_bug_audit_2026-04-11",
       "to": "work_history.repo.review_feedback.code_review_last_week_2026-04-11"
     },
@@ -18537,7 +18185,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T00:57:37.653534+00:00",
+  "generated_at": "2026-04-30T01:01:47.170611+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19863,11 +19511,8 @@
       "claim_id": "area_law_native_car_semantics_tightening_note_2026-04-25",
       "current_status": "unknown",
       "current_status_raw": "Target 2 residual-semantics tightening theorem; residual premise",
-      "deps": [
-        "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
-        "area_law_primitive_parity_gate_carrier_theorem_note_2026-04-25"
-      ],
-      "note_hash": "d1bc7943df19deee41cc27777e9e823a81d32485aa1bd21fe78fcf7e7f31ab22",
+      "deps": [],
+      "note_hash": "d792aa4c18523cdef2da987d4fbcbdc894f08639ce28ca6ee58cdd9b83f38fba",
       "path": "docs/AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_area_law_native_car_semantics_tightening.py",
       "title": "Area-Law Native CAR Semantics Tightening Note"
@@ -20098,10 +19743,8 @@
       "claim_id": "bh_entropy_derived_note",
       "current_status": "bounded",
       "current_status_raw": ": BOUNDED companion.  The RT bond-dimension coefficient `~ 0.24`",
-      "deps": [
-        "bh_entropy_rt_ratio_widom_no_go_note"
-      ],
-      "note_hash": "950f699e10921f2d0ac100b2d1b53886c5f99e284578dd6b9778ddc7ef02496b",
+      "deps": [],
+      "note_hash": "7353c18d547e13a31f8f335e32fd342c301c9151ce0d129d35970de2cb9d72f8",
       "path": "docs/BH_ENTROPY_DERIVED_NOTE.md",
       "runner_path": null,
       "title": "Bekenstein-Hawking Entropy Derived from Lattice Entanglement"
@@ -20795,9 +20438,6 @@
       "current_status": "unknown",
       "current_status_raw": null,
       "deps": [
-        "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-        "koide_circulant_character_derivation_note_2026-04-18",
-        "koide_circulant_character_bridge_note_2026-04-18",
         "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
         "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18",
         "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18",
@@ -20833,7 +20473,7 @@
         "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24",
         "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24"
       ],
-      "note_hash": "db61dbed1d39999f158b0b0ca35cdd6445fa22dc0504d8c50c381a2d9c35519e",
+      "note_hash": "7a5613ac23a1a1244c79c23163b3c88b4fbbfc9f38426672607aed1eed0674a4",
       "path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
       "runner_path": null,
       "title": "Charged-Lepton Koide Support Packet (2026-04-18)"
@@ -20858,13 +20498,10 @@
         "observable_principle_from_axiom_note",
         "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
         "anomaly_forces_time_theorem",
-        "charged_lepton_koide_cone_algebraic_equivalence_note",
         "hw1_second_order_return_shape_theorem_note",
-        "mass_mixing_subspace_disjointness_theorem_note",
-        "structural_no_go_survey_note",
         "higher_order_structural_theorems_note"
       ],
-      "note_hash": "6bf3fdd8492b4de454e38e747f315227768a93da98b46480f6c97c6abaa450a4",
+      "note_hash": "418afd8847f1173b8416846e60fdd0ca0e633bdb5487961b609163714fde9154",
       "path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_charged_lepton_observable_curvature.py",
       "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework"
@@ -22022,10 +21659,8 @@
       "claim_id": "cosmological_constant_vacuum_energy_audit_note",
       "current_status": "unknown",
       "current_status_raw": "Negative audit. Not the canonical positive `\\Lambda` companion",
-      "deps": [
-        "cosmological_constant_result_2026-04-12"
-      ],
-      "note_hash": "86149375bff915a46cb9f57627682be309a01d33d4a8e9e67a19d4c21c562d4d",
+      "deps": [],
+      "note_hash": "bcb72ea2ecfa549bf11fc6aa1b9ade9c1abda5ee520d3991882a9e60500303b1",
       "path": "docs/COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md",
       "runner_path": null,
       "title": "Cosmological Constant Vacuum-Energy Audit"
@@ -22215,7 +21850,6 @@
       "current_status": "proposed_retained",
       "current_status_raw": "**proposed_retained structural corollary** on `main`, on the proposed_retained",
       "deps": [
-        "cosmological_constant_spectral_gap_identity_theorem_note",
         "universal_gr_discrete_global_closure_note",
         "universal_qg_smooth_gravitational_global_solution_class_note",
         "universal_qg_canonical_textbook_continuum_gr_closure_note",
@@ -22227,7 +21861,7 @@
         "dark_energy_eos_note",
         "cosmological_constant_result_2026-04-12"
       ],
-      "note_hash": "7aa7007801312533d6adae873f5d099343c15b849f120c7df6a253cbf27ba1fc",
+      "note_hash": "5a9a12c08eb9eadda495111e6d7a20665210ade5dadfae69ba8f9220c4ed963d",
       "path": "docs/DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_dark_energy_eos_retained_corollary.py",
       "title": "Dark-Energy EOS Retained Structural Corollary"
@@ -25155,10 +24789,9 @@
         "quark_mass_ratios_taste_staircase_support_note_2026-04-25",
         "alpha_s_derived_note",
         "ckm_atlas_axiom_closure_note",
-        "ckm_from_mass_hierarchy_note",
-        "ckm_five_sixths_bridge_support_note"
+        "ckm_from_mass_hierarchy_note"
       ],
-      "note_hash": "e0586473fd16ba66ce6dee8d4b870c2530f8831bccc13b2c4731330dff4a7f9b",
+      "note_hash": "607ac42d89f466366dde4df88d262ac110f7ee03ce729e90144cc934ed113976",
       "path": "docs/DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md",
       "runner_path": "scripts/frontier_mass_ratio_ckm_dual.py",
       "title": "Down-Type Mass Ratios from the CKM Dual"
@@ -27247,10 +26880,8 @@
       "claim_id": "higher_order_structural_theorems_note",
       "current_status": "unknown",
       "current_status_raw": "exact structural theorem; bundled three-theorem note plus one companion survey and observational-pin closure spec",
-      "deps": [
-        "structural_no_go_survey_note"
-      ],
-      "note_hash": "565d6b69dc94fd969c3210da12cdba72daff8f9fb0458284349a302c92f240b4",
+      "deps": [],
+      "note_hash": "9d63166997ebd1218bbff448687a2723fc93f12701f8f791d0ae911b3de8d30b",
       "path": "docs/HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md",
       "runner_path": "scripts/frontier_koide_cone_variational_principle_survey.py",
       "title": "Higher-Order Structural Theorems on the Charged-Lepton Sector"
@@ -27971,10 +27602,9 @@
       "current_status": "unknown",
       "current_status_raw": "exact physical-lattice basis law on the `Gamma_i` / full-cube route",
       "deps": [
-        "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18",
         "koide_gamma_orbit_selector_bridge_note_2026-04-18"
       ],
-      "note_hash": "59c233d45883c61493d2da4e4852ce3bf08eb4c2251ac187d6747803677da3bb",
+      "note_hash": "ffce1c648d0404ed18ebd3a6927787dd9d2283d19afa89b62c32493cf691c43f",
       "path": "docs/KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_gamma_axis_covariant_full_cube_orbit_law.py",
       "title": "Koide `Gamma` Axis-Covariant Full-Cube Orbit Law"
@@ -27997,11 +27627,10 @@
       "current_status": "unknown",
       "current_status_raw": "positive one-parameter witness inside the exact one-clock semigroup",
       "deps": [
-        "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18",
         "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
         "koide_gamma_orbit_selector_bridge_note_2026-04-18"
       ],
-      "note_hash": "d40ec60d78a586a14e14d2ca4a9b6faf5d2ee8ca3b3f3c355a8a23332d6c9f3d",
+      "note_hash": "2e7a107ab483f8611348d9107002e373b951e16dae2cdf7ef3790b2db0323e4d",
       "path": "docs/KOIDE_GAMMA_ORBIT_EXPONENTIAL_VALUE_LAW_CANDIDATE_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_gamma_orbit_exponential_value_law_candidate.py",
       "title": "Koide `Gamma`-Orbit Exponential Value-Law Candidate"
@@ -28013,10 +27642,9 @@
       "deps": [
         "dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17",
         "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
-        "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18",
         "koide_gamma_orbit_selected_line_closure_note_2026-04-18"
       ],
-      "note_hash": "26c9451247dd5c7a0e0df36e033ae70713053e3be093370a55688a9cf99264e4",
+      "note_hash": "9a612bd59a93ea457b08a89b68729cda2f0ba6621d336e32881d6ba618cc8c78",
       "path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_gamma_orbit_observable_selector_generator_line.py",
       "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line"
@@ -28041,13 +27669,10 @@
       "current_status": "unknown",
       "current_status_raw": "closes the remaining free coordinates on the current positive",
       "deps": [
-        "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18",
-        "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18",
-        "koide_gamma_orbit_exponential_value_law_candidate_note_2026-04-18",
         "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
         "koide_microscopic_scalar_selector_target_note_2026-04-18"
       ],
-      "note_hash": "9d51efe0803e64dcf08027d9c41dd25843800d13ee070873c6d0da964b2ec7da",
+      "note_hash": "d745c5b7c906711c03128c7818c4a953eed8f4681cc7a86e6d1420da0cf39098",
       "path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_gamma_orbit_selected_line_closure.py",
       "title": "Koide `Gamma`-Orbit Selected-Line Closure"
@@ -28056,10 +27681,8 @@
       "claim_id": "koide_gamma_orbit_selector_bridge_note_2026-04-18",
       "current_status": "unknown",
       "current_status_raw": "exact selector pullback on the fresh `Gamma`/orbit-return route",
-      "deps": [
-        "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18"
-      ],
-      "note_hash": "8c9289e66594a8df0431eac6598ecfdc94768b6667e569f34f58869a12b1a52e",
+      "deps": [],
+      "note_hash": "711434c4a30d3061cc7db29b0741c1b9e1c16741c96b61005426a3f31ebebcef",
       "path": "docs/KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_gamma_orbit_selector_bridge.py",
       "title": "Koide `Gamma`-Orbit Selector Bridge Note"
@@ -28121,12 +27744,11 @@
       "deps": [
         "koide_dweh_cyclic_compression_note_2026-04-18",
         "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
-        "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18",
         "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_m_spectator_theorem_note_2026-04-16",
         "koide_selected_slice_frozen_bank_decomposition_note_2026-04-18"
       ],
-      "note_hash": "8e80f5b80189ce903d1d54c0e0c63f9b81ff2408dd52037b2c49e996cba67309",
+      "note_hash": "85e2910ddb69fa1f2f9c127f4b0227b12e83747885f1c6caa3174ed62b17b033",
       "path": "docs/KOIDE_MICROSCOPIC_SCALAR_SELECTOR_TARGET_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_microscopic_scalar_selector_target.py",
       "title": "Koide Microscopic Scalar Selector Target"
@@ -28542,13 +28164,12 @@
       "current_status": "unknown",
       "current_status_raw": "exact reduction of the charged-lepton selected slice to the frozen",
       "deps": [
-        "koide_microscopic_scalar_selector_target_note_2026-04-18",
         "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
         "dm_neutrino_positive_polar_h_cp_theorem_note_2026-04-15",
         "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17"
       ],
-      "note_hash": "d6202798dc95396f82eeed791bc5df2f0f62849a48f88594ed79ed9d1da71d7a",
+      "note_hash": "7ba4bb43507617bba4c5b222fcbf7713a86134556531641eea8ef553f8f987c0",
       "path": "docs/KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_selected_slice_frozen_bank_decomposition.py",
       "title": "Koide Selected-Slice Frozen-Bank Decomposition"
@@ -28572,10 +28193,9 @@
         "koide_full_lattice_schur_inheritance_note_2026-04-18",
         "charged_lepton_mass_hierarchy_review_note_2026-04-17",
         "yukawa_color_projection_theorem",
-        "dm_neutrino_postcanonical_polar_section_note_2026-04-15",
-        "koide_circulant_character_derivation_note_2026-04-18"
+        "dm_neutrino_postcanonical_polar_section_note_2026-04-15"
       ],
-      "note_hash": "6cadb314107aa47bd4f2e651b435db6423365003299980041d3a19ed50ca0f10",
+      "note_hash": "7bd7edc3d134a74fcfb1273e90f2e282895f79c6a5b14c6510acbda1305fdc12",
       "path": "docs/KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_sqrtm_amplitude_principle.py",
       "title": "Koide `\u221am` Amplitude Principle Note"
@@ -28615,13 +28235,10 @@
       "current_status": "support",
       "current_status_raw": "exact no-go sharpening on the charged-lepton observable-principle /",
       "deps": [
-        "structural_no_go_survey_note",
-        "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-        "koide_positive_paths_first_principles_note_2026-04-18",
         "koide_microscopic_scalar_selector_target_note_2026-04-18",
         "koide_cyclic_wilson_descendant_law_note_2026-04-18"
       ],
-      "note_hash": "a870d91100cab91c04c65f06e1d2dc2dcb93ed2a94bdd9ca4c8a800b7e9810d5",
+      "note_hash": "90e03f78bea5cdb9485f14f97b814e437d92d8f99e34a9ac758003bcb36aca8a",
       "path": "docs/KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md",
       "runner_path": "scripts/frontier_koide_weighted_character_source_axis_theorem.py",
       "title": "Koide Weighted Character-Source Axis Theorem"
@@ -29438,10 +29055,8 @@
       "claim_id": "lensing_finite_path_explanation_note",
       "current_status": "unknown",
       "current_status_raw": "RETRACTED as an explanation of the slope. Two independent issues invalidate the previous \"1.5% analytical match\" claim:",
-      "deps": [
-        "lensing_long_path_test_note"
-      ],
-      "note_hash": "1832c8f3476adfe62cf474f8e8fde9d97bdcc47de8884440e20263a88c8401a4",
+      "deps": [],
+      "note_hash": "a6425a31c1cc39315e803d22fe7019d879d4808c0cd5ddfb48f64c8d3e3141e8",
       "path": "docs/LENSING_FINITE_PATH_EXPLANATION_NOTE.md",
       "runner_path": null,
       "title": "Lensing Slope \u2014 Finite-Path Surrogate FALSIFIED at a Second T_phys"
@@ -29614,12 +29229,11 @@
       "current_status_raw": "proposed_retained exact theorem on the continuum-limit free-scalar",
       "deps": [
         "lorentz_boost_covariance_2d_theorem_note",
-        "angular_kernel_underdetermination_no_go_note",
         "emergent_lorentz_invariance_note",
         "light_cone_framing_note",
         "planck_scale_lane_status_note_2026-04-23"
       ],
-      "note_hash": "0f842d02f2fa97e45b7c81c3ce4cc6fc73062286011effb8e2aa4487a466f4f4",
+      "note_hash": "34ce72c985c05b2f4d7143f1969d484e72088a433af1a11066a88b1274a29041",
       "path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_lorentz_boost_3plus1d.py",
       "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function"
@@ -29677,10 +29291,8 @@
       "claim_id": "mass_spectrum_derived_note",
       "current_status": "unknown",
       "current_status_raw": "headline bundling note for the current five-phase mass-spectrum",
-      "deps": [
-        "quark_mass_ratio_review_packet_2026-04-18"
-      ],
-      "note_hash": "73703246834f288dd5305fe4d3c0338441774df158e2e3c0ca25a896d083b624",
+      "deps": [],
+      "note_hash": "4ceadcfb267a4985632391c535e463d012819d74f529cc37871b1d9ca248e908",
       "path": "docs/MASS_SPECTRUM_DERIVED_NOTE.md",
       "runner_path": null,
       "title": "Mass Spectrum Derived \u2014 Five-Phase Attack Closure"
@@ -34165,10 +33777,8 @@
       "claim_id": "publication.ci3_z3.reproducibility_freeze_2026-04-14",
       "current_status": "unknown",
       "current_status_raw": null,
-      "deps": [
-        "publication.ci3_z3.reproduce"
-      ],
-      "note_hash": "b7ee1a0e226a3d210b3dd78cb9d41175f6156ba62c655cd43c9ed3b5470d6aab",
+      "deps": [],
+      "note_hash": "7cea750dbd17ebf3e900c0884467fa8bbc8cf58ce9f01bf554b0956424c50d61",
       "path": "docs/publication/ci3_z3/REPRODUCIBILITY_FREEZE_2026-04-14.md",
       "runner_path": null,
       "title": "Archival Reproducibility Freeze"
@@ -35026,15 +34636,13 @@
         "alpha_s_derived_note",
         "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
         "ckm_atlas_axiom_closure_note",
-        "ckm_five_sixths_bridge_support_note",
         "ckm_from_mass_hierarchy_note",
         "cl3_taste_generation_theorem",
         "observable_principle_from_axiom_note",
-        "down_type_mass_ratio_ckm_dual_note",
         "up_type_mass_ratio_ckm_inversion_note",
         "ckm_down_type_scale_convention_support_note_2026-04-22"
       ],
-      "note_hash": "54f41c0036d25eb1f712ecb62b15594e48ca21100538554421f169e55c3e20c4",
+      "note_hash": "7a3e4d1ca02bcafa6a90a6f1c65345f311d5b3bb79f8c63f898487605b94d7aa",
       "path": "docs/QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_quark_mass_ratios_taste_staircase_support.py",
       "title": "Quark Mass Ratios from the Taste-Staircase + EWSB Cascade"
@@ -37969,10 +37577,8 @@
       "claim_id": "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24",
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained structural corollary on the proposed_retained strong-CP action",
-      "deps": [
-        "ckm_neutron_edm_bound_note"
-      ],
-      "note_hash": "8c5ac94e1ed6eb059df37ba277a7e6a8ed05a2da32899c21390f410918139db8",
+      "deps": [],
+      "note_hash": "985f7031e3166a327a21381b4eea8fbbf29c2d1a8845cb9c13305558f74fde3f",
       "path": "docs/UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_universal_theta_induced_edm_vanishing.py",
       "title": "Universal Theta-Induced EDM Response Vanishing Theorem"
@@ -38017,10 +37623,9 @@
       "current_status_raw": "bounded secondary lane (one conditional partition)",
       "deps": [
         "alpha_s_derived_note",
-        "ckm_atlas_axiom_closure_note",
-        "down_type_mass_ratio_ckm_dual_note"
+        "ckm_atlas_axiom_closure_note"
       ],
-      "note_hash": "13646e4bfde93dccde7963d34f69b1c5c7c38b2b53f219de5c3786efd5be3adf",
+      "note_hash": "3bbf934e32b127a4bfb3517dd3cbbdbab5cdbd5dff0eb74abcfb1c2d25ba894e",
       "path": "docs/UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md",
       "runner_path": "scripts/frontier_mass_ratio_up_sector.py",
       "title": "Up-Type Mass Ratios from the CKM Inversion (Phase 2 of mass spectrum)"
@@ -38220,10 +37825,9 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained control-ladder hardening on the Fam1/seed0 fine-H boundary replay",
       "deps": [
-        "wave_direct_dm_h025_high_band_boundary_note",
         "wave_direct_dm_h025_seed0_crossfamily_note"
       ],
-      "note_hash": "1345d9f19c4cb911286bd0077b1a2add91762c9db7c38e513edd5cfbe60d62b9",
+      "note_hash": "1b8afc1aeaa4638d1815eea93b60a88cfe64c10f358e4dbba5decc26fbbcfc16",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md",
       "runner_path": null,
       "title": "Wave Direct-dM H=0.25 Fam1 Seed0 Control Note"
@@ -38233,10 +37837,9 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained control-ladder hardening on the Fam1/seed1 fine-H continuation",
       "deps": [
-        "wave_direct_dm_h025_low_band_retention_note",
         "wave_direct_dm_h025_two_point_synthesis_note"
       ],
-      "note_hash": "6adfcd21e056a65f63f7218ad36a34452262e8735eb52c88d344693a59dc3005",
+      "note_hash": "d1366674d771b24ec9ba1acc72303ffea089e3a348d41296e281a62ceddcee4f",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
       "runner_path": null,
       "title": "Wave Direct-dM H=0.25 Fam1 Seed1 Control Note"
@@ -38247,10 +37850,9 @@
       "current_status_raw": "diagnosed closure on the first extra-family `H = 0.25` reserve point",
       "deps": [
         "wave_direct_dm_h025_fam2_seed0_control_note",
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-        "wave_direct_dm_portability_batch_note"
+        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
       ],
-      "note_hash": "73a4d9c7602f9c47f1948757cb70e141eee0ecea3b1bd769f08a9f642d9c88a7",
+      "note_hash": "9fa73444a94c0c42c4e5033617d2dac8a0cd486e37f01884a53e37d3877b9358",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
       "runner_path": null,
       "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note"
@@ -38260,10 +37862,9 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained control-ladder hardening on the Fam2/seed0 fine-H boundary replay",
       "deps": [
-        "wave_direct_dm_h025_fam2_seed0_boundary_note",
         "wave_direct_dm_h025_fam2_seed1_control_note"
       ],
-      "note_hash": "a349aaa215fd49471026b6d229b9d5c0b0023db7132e41edd3c26e9d159149b3",
+      "note_hash": "b5988e5a4063f8f0241a252db8f2ca983109214d89a05e0d0b7e4c79965c5f60",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
       "runner_path": null,
       "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note"
@@ -38274,10 +37875,9 @@
       "current_status_raw": "proposed_retained control-ladder hardening on the Fam2/seed1 fine-H replay",
       "deps": [
         "wave_direct_dm_h025_fam2_seed0_control_note",
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-        "wave_direct_dm_h025_fam2_seed1_followup_note"
+        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
       ],
-      "note_hash": "a0aa26b92eef0c160455d03199e3c7ed6f889a96487614b771308c6ba1cddabf",
+      "note_hash": "331d38d423fb11e0760d4373c6f7e2695be41722fb2eb443092aa202516b7215",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
       "runner_path": null,
       "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note"
@@ -38289,12 +37889,9 @@
       "deps": [
         "wave_direct_dm_h025_fam2_seed1_control_note",
         "wave_direct_dm_h025_fam2_seed0_control_note",
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-        "wave_direct_dm_h025_fam2_seed0_boundary_note",
-        "wave_direct_dm_h025_two_point_synthesis_note",
-        "wave_direct_dm_portability_batch_note"
+        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
       ],
-      "note_hash": "4324ab39be214c1a00a537e23d71ddf50116c9af1ca274e2458a9ff91270b83a",
+      "note_hash": "b92c5d873d173bbf740cbed76d17e666180b96e3d72a9c101f6c8067099d80e4",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
       "runner_path": null,
       "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note"
@@ -38303,13 +37900,8 @@
       "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained narrow synthesis on the second fine-`H` `Fam2` pair",
-      "deps": [
-        "wave_direct_dm_h025_fam2_seed0_boundary_note",
-        "wave_direct_dm_h025_fam2_seed0_control_note",
-        "wave_direct_dm_h025_fam2_seed1_followup_note",
-        "wave_direct_dm_h025_fam2_seed1_control_note"
-      ],
-      "note_hash": "2631dbdc5081542db5bd8a10e64c6678d83aacb1875a61aae2dacc701b0d1603",
+      "deps": [],
+      "note_hash": "ea4266a52b5d2b3ef299cd9d3ad9dbf9c66199d1d2303ba1272c74b85b1d7a8c",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
       "runner_path": null,
       "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note"
@@ -38376,10 +37968,9 @@
       "current_status_raw": "diagnosed closure on the Fam1/seed0 high-band continuation",
       "deps": [
         "wave_direct_dm_h025_low_band_retention_note",
-        "wave_direct_dm_h025_two_point_synthesis_note",
-        "wave_direct_dm_h025_feasibility_note"
+        "wave_direct_dm_h025_two_point_synthesis_note"
       ],
-      "note_hash": "3af0037c350ace634373e4cc2e26b6537147a7f9b35463526d8d484530ef8a3f",
+      "note_hash": "546d7da2a9bd7cfb3ab11818055e300e283983cc5b374ce107b5188cf64f613b",
       "path": "docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md",
       "runner_path": null,
       "title": "Wave Direct-dM H=0.25 High-Band Boundary Note"
@@ -38390,10 +37981,9 @@
       "current_status_raw": "proposed_retained one-strength validation on the Fam1/seed1 branch replay, later hardened by control ladder",
       "deps": [
         "wave_direct_dm_h025_fam1_seed1_control_note",
-        "wave_direct_dm_h025_two_point_synthesis_note",
-        "wave_direct_dm_h025_high_band_boundary_note"
+        "wave_direct_dm_h025_two_point_synthesis_note"
       ],
-      "note_hash": "5abd2c8e55364732132539e87cbd3b0e18e484b199d44a6fdc4bb1cc3c774f21",
+      "note_hash": "470b2631c8ba049104e90846fe57ab10b87877cb533c1035e6a03665234a606f",
       "path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
       "runner_path": null,
       "title": "Wave Direct-dM H=0.25 Low-Band Retention Note"
@@ -38402,15 +37992,8 @@
       "claim_id": "wave_direct_dm_h025_seed0_crossfamily_note",
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained same-seed cross-family compression on the controlled seed-`0` fine-`H` surface",
-      "deps": [
-        "wave_direct_dm_h025_fam1_seed0_control_note",
-        "wave_direct_dm_h025_fam2_seed0_control_note",
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-        "wave_direct_dm_h025_fam2_seed1_control_note",
-        "wave_direct_dm_h025_high_band_boundary_note",
-        "wave_direct_dm_h025_fam2_seed0_boundary_note"
-      ],
-      "note_hash": "ded7d7c6b51235b1dc828129a371f022c1c8656354d10f9718cb32ecccebd976",
+      "deps": [],
+      "note_hash": "011cd531e7269d6d0be5306edf8f264f8d3ada36af1cb085d38de244516a8143",
       "path": "docs/WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md",
       "runner_path": null,
       "title": "Wave Direct-dM H=0.25 Seed0 Cross-Family Compression Note"
@@ -38452,19 +38035,8 @@
       "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained narrow synthesis on the controlled first fine-`H` `Fam1` pair",
-      "deps": [
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-        "wave_direct_dm_seed_band_diagnosis_note",
-        "wave_direct_dm_h025_feasibility_note",
-        "wave_direct_dm_h025_high_band_boundary_note",
-        "wave_direct_dm_h025_low_band_retention_note",
-        "wave_direct_dm_h025_fam1_seed0_control_note",
-        "wave_direct_dm_h025_fam1_seed1_control_note",
-        "wave_direct_dm_h025_fam2_seed0_boundary_note",
-        "wave_direct_dm_h025_fam2_seed1_followup_note",
-        "wave_direct_dm_portability_batch_note"
-      ],
-      "note_hash": "649cb0a4a13a21ccc7b98738b326429b9c218d3f9c4e498ee0de68fc9ababb20",
+      "deps": [],
+      "note_hash": "6b03c214184b0785deb33f36b90bcf3f5c6097dec0c0dfe4284ff3393d445863",
       "path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
       "runner_path": null,
       "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note"
@@ -38547,7 +38119,7 @@
         "wave_direct_dm_portability_batch_note",
         "wave_direct_dm_h025_two_point_synthesis_note"
       ],
-      "note_hash": "d57a033ceeeaccb5a6d479a8a5f30789810eb02a07ad0462c787f4066ba9ebf1",
+      "note_hash": "b0495478f45ff883a4e42de95b68f98f6a573d9053006a073822ebd45b781780",
       "path": "docs/WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md",
       "runner_path": null,
       "title": "Wave Direct-dM Seed-Band Diagnosis"
@@ -39017,11 +38589,8 @@
       "claim_id": "work_history.repo.backlog.readme",
       "current_status": "unknown",
       "current_status_raw": null,
-      "deps": [
-        "repo.active_review_queue",
-        "repo.review_feedback_workflow"
-      ],
-      "note_hash": "53f3386faecafe61bee2e19f58159427cca717f8e28e428f752969f1557347e2",
+      "deps": [],
+      "note_hash": "eb05a1f1aa7a2d0b268fa228efc98f86d52b5f069b38490c5e7164c5e4e789f2",
       "path": "docs/work_history/repo/backlog/README.md",
       "runner_path": null,
       "title": "Historical Backlog Archive"
@@ -39196,11 +38765,8 @@
       "claim_id": "work_history.repo.review_feedback.readme",
       "current_status": "unknown",
       "current_status_raw": null,
-      "deps": [
-        "repo.active_review_queue",
-        "repo.review_feedback_workflow"
-      ],
-      "note_hash": "5cd1c9fe170c756018ff7ed4b6a3e64016fcaf87d371fbcd8ebec68bdc8bd4a0",
+      "deps": [],
+      "note_hash": "200b47635b39737b35a01fed28cb83cc4dd93e1825dbbd1f9aa85f40225d47b1",
       "path": "docs/work_history/repo/review_feedback/README.md",
       "runner_path": null,
       "title": "Review Feedback Archive"
@@ -39768,9 +39334,6 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained structural sub-theorem \u2014 the 1-loop lattice-to-MSbar",
       "deps": [
-        "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-        "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
-        "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17",
         "yt_p1_delta_1_bz_computation_note_2026-04-17",
         "yt_p1_delta_2_bz_computation_note_2026-04-17",
         "yt_p1_delta_3_bz_computation_note_2026-04-17",
@@ -39778,7 +39341,7 @@
         "yt_ew_color_projection_theorem",
         "yt_exact_schur_normal_form_uniqueness_note"
       ],
-      "note_hash": "66f3c154a301e2cbf13ab42909af034d0e2208dc40067e8121e2f348bee6fb82",
+      "note_hash": "6853486770089e591d3ce98b5dee3e00182c5af2abde1b46083278993878202a",
       "path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_p1_color_factor_retention.py",
       "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)"
@@ -39788,12 +39351,11 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained citation-and-bound computation of the `C_F`",
       "deps": [
-        "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
         "yt_p1_h_unit_renormalization_framework_native_note_2026-04-17",
         "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
         "yt_p1_i_s_revision_verification_note_2026-04-17"
       ],
-      "note_hash": "526ee7f66ff9fc98e401a60f7a36050cf410b559e88ca8564e263734038f5754",
+      "note_hash": "ac4bd3e4b36cd52d9963b94a7b61ee454da7ff246e961d8254fbd720a70fc2a4",
       "path": "docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_p1_delta_1_bz.py",
       "title": "P1 \u0394_1 BZ-Computation Note (C_F Channel of the Ward-Ratio 1-Loop Correction)"
@@ -39803,7 +39365,6 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained **citation-and-bound** computation of the C_A",
       "deps": [
-        "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
         "yt_p1_h_unit_renormalization_framework_native_note_2026-04-17",
         "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
         "yt_p1_i_s_revision_verification_note_2026-04-17",
@@ -39812,7 +39373,7 @@
         "plaquette_self_consistency_note",
         "yt_ward_identity_derivation_theorem"
       ],
-      "note_hash": "eb03e4743b2476897ee67a84e667a5447a92f4135be49cd73fa6c2c09e875052",
+      "note_hash": "5a03706c858ccf8eb5a8021c887a90f5b778364e1de373b887e9a6e8309ca018",
       "path": "docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_p1_delta_2_bz.py",
       "title": "P1 \u0394_2 (C_A Channel) BZ Computation Note"
@@ -39822,12 +39383,11 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained citation-and-bound computation of the T_F n_f",
       "deps": [
-        "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
         "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
         "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
         "yt_ward_identity_derivation_theorem"
       ],
-      "note_hash": "dd254b6cb07f2cadba09f545b97efe90417aa08e28104c9b5f3c05f85fde71ec",
+      "note_hash": "8607e86b14cb82a3d59528d00da5538019cd0ef6d046d2262e33407d5d24efbd",
       "path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_p1_delta_3_bz.py",
       "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)"
@@ -39839,17 +39399,15 @@
       "deps": [
         "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
         "yt_p1_loop_geometric_bound_note_2026-04-17",
-        "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
         "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17",
         "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
         "yt_p1_delta_1_bz_computation_note_2026-04-17",
         "yt_p1_delta_2_bz_computation_note_2026-04-17",
         "yt_p1_delta_3_bz_computation_note_2026-04-17",
         "plaquette_self_consistency_note",
-        "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_ward_identity_derivation_theorem"
       ],
-      "note_hash": "204c6dd986c2a13b68ad9f9a3aa50c7b89e45993d746cbbc483b29e998fc6eb4",
+      "note_hash": "16e3225e09270e35dcfd34ec23ec8d19ecfc287a1e57e9ce3a2904df439f421c",
       "path": "docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_p1_delta_r_2_loop_extension.py",
       "title": "P1 \u0394_R 2-Loop Structural Extension Theorem Note (Color-Tensor Retention + Loop-Geometric Bound)"
@@ -39859,16 +39417,12 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained **literature-cited master assembly theorem** on the P1",
       "deps": [
-        "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
-        "yt_p1_delta_1_bz_computation_note_2026-04-17",
-        "yt_p1_delta_2_bz_computation_note_2026-04-17",
-        "yt_p1_delta_3_bz_computation_note_2026-04-17",
         "yt_ward_identity_derivation_theorem",
         "plaquette_self_consistency_note",
         "uv_gauge_to_yukawa_bridge_sc_vs_pert_note",
         "yt_p1_i_s_lattice_pt_citation_note_2026-04-17"
       ],
-      "note_hash": "f193c6aa0571eaba392499256e95c67ff2c571cbe0fd12b3452deb9aa3d3e33e",
+      "note_hash": "746b0f1ae6857d766282f330cd14e79fb2e93f006e4d8994a91375336e81516b",
       "path": "docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_p1_delta_r_master_assembly.py",
       "title": "P1 \u0394_R Master Assembly Theorem Note (Three-Channel Ratio Correction Roll-Up)"
@@ -39949,11 +39503,10 @@
         "yt_ward_identity_derivation_theorem",
         "yt_p1_i_s_revision_verification_note_2026-04-17",
         "yt_p1_color_factor_retention_note_2026-04-17",
-        "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17",
         "yt_ew_color_projection_theorem",
         "yukawa_color_projection_theorem"
       ],
-      "note_hash": "92c0d6befc8f1990f259ecbdaf3bb6e311871c601c632cf31e95b419c4b002db",
+      "note_hash": "ab6361f8f9833f3880d2768ff82a5ed61a8b4f033e9a09290975d689b7e7b115",
       "path": "docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_p1_rep_ab_cancellation.py",
       "title": "P1 Rep-A vs Rep-B 1-Loop Cancellation Sub-Theorem Note (Ward-Identity Ratio Stability)"
@@ -39963,13 +39516,12 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained structural sub-theorem \u2014 **definitive no-go",
       "deps": [
-        "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_ward_identity_derivation_theorem",
         "yt_p1_color_factor_retention_note_2026-04-17",
         "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
         "yt_color_projection_correction_note"
       ],
-      "note_hash": "707c40912a293fac944deccb7ae20b343319e48c22ea997d5ca3c9578f5a6603",
+      "note_hash": "a82428f80ff8d6ba556bbe27721696a0f86a3772ae972cc95beeee5f25e313a8",
       "path": "docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_p1_shared_fierz_no_go.py",
       "title": "P1 Shared-Fierz Shortcut No-Go Sub-Theorem Note"
@@ -40038,14 +39590,13 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained **framework-native** structural sub-theorem \u2014 the",
       "deps": [
-        "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
         "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17",
         "yt_p3_k_series_geometric_bound_note_2026-04-17",
         "yt_ew_color_projection_theorem",
         "yt_exact_schur_normal_form_uniqueness_note"
       ],
-      "note_hash": "58cb27633af2149a5d6b998ce0f5d3e40e7e33492d4b7cc8f08f6a05cea38a1f",
+      "note_hash": "e75727e012bdd2c18a862a5a482422f8923309c093df0ca6a85b9d0465eec10f",
       "path": "docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_p3_msbar_to_pole_k1.py",
       "title": "P3 MSbar-to-Pole K_1 Framework-Native Derivation Note (1-loop Casimir)"
@@ -40055,15 +39606,13 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained structural sub-theorem \u2014 the two-loop color-tensor",
       "deps": [
-        "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-        "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17",
         "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17",
         "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17",
         "yt_ew_color_projection_theorem",
         "yt_exact_schur_normal_form_uniqueness_note",
         "charged_lepton_mass_hierarchy_review_note_2026-04-17"
       ],
-      "note_hash": "644ed4e0a2e8835875c516c5bfb605aa103fe9ed50bd0eb4f6c95b9afef18ccc",
+      "note_hash": "0986389238ee5632d1b70a1954405edd151abf80e3d8b17905194a2208400564",
       "path": "docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_p3_msbar_to_pole_k2.py",
       "title": "P3 MSbar-to-Pole K_2 Color-Tensor Retention Theorem (2-loop structural skeleton)"
@@ -40073,14 +39622,11 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained structural cite-and-verify of the four 2-loop on-shell QCD integrals `{I_FF, I_FA, I_Fl, I_Fh}` that enter the K_2 color-tensor decomposition; citation-and-verification layer on top of the prior K_2 color-factor retention.",
       "deps": [
-        "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
-        "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17",
-        "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_color_projection_correction_note",
         "yt_ew_color_projection_theorem",
         "yt_exact_schur_normal_form_uniqueness_note"
       ],
-      "note_hash": "ded74430f0665697120b046d484c62ecb5f3089c5ca478461d66c8e578227aea",
+      "note_hash": "f6658adeeddcecfbffbdcee94b665116c498d94f664d9b830d9e914fb084c6a2",
       "path": "docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_p3_k2_integrals.py",
       "title": "P3 MSbar-to-Pole K_2 Two-Loop Integral Citation Note"
@@ -40375,6 +39921,7 @@
     "architecture_options",
     "architecture_portability_sweep_note",
     "area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25",
+    "area_law_native_car_semantics_tightening_note_2026-04-25",
     "area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25",
     "asymmetry_persistence_born_note",
     "asymmetry_persistence_collapse_note",
@@ -40391,6 +39938,7 @@
     "backreaction_note",
     "bell_inequality_derived_note",
     "beyond_lattice_qcd_note",
+    "bh_entropy_derived_note",
     "bmv_bounded_negative_note",
     "bmv_entanglement_note_2026-04-11",
     "bmv_threebody_note_2026-04-11",
@@ -40462,6 +40010,7 @@
     "continuum_bridge_note",
     "continuum_convergence_note",
     "continuum_limit_note",
+    "cosmological_constant_vacuum_energy_audit_note",
     "cosmology_scale_identification_and_reduction_note",
     "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
     "coupled_field_generated_family_probe_note",
@@ -40804,6 +40353,7 @@
     "higgs_mechanism_note",
     "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
     "higher_dimension_status_2026-04-01",
+    "higher_order_structural_theorems_note",
     "higher_symmetry_gravity_probe_note",
     "higher_symmetry_joint_validation_note",
     "holographic_probe_note_2026-04-11",
@@ -40856,6 +40406,7 @@
     "koide_eigenvalue_q23_surface_theorem_note_2026-04-20",
     "koide_explicit_calculations_note",
     "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
+    "koide_gamma_orbit_selector_bridge_note_2026-04-18",
     "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20",
     "koide_hostile_review_guard_note_2026-04-24",
     "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
@@ -40934,6 +40485,7 @@
     "lensing_adjoint_kernel_reduced_model_note",
     "lensing_beta_sweep_note",
     "lensing_deflection_note",
+    "lensing_finite_path_explanation_note",
     "lensing_k_sweep_note",
     "lepton_shared_higgs_universality_collapse_note",
     "lepton_shared_higgs_universality_underdetermination_note",
@@ -40948,6 +40500,7 @@
     "localized_source_response_sweep_note",
     "lorentz_violation_derived_note",
     "main_open_cubic_validation_2026-04-11",
+    "mass_spectrum_derived_note",
     "matched_2d_4d_decoherence_note",
     "matter_inertial_closure_note",
     "memory_decay_diagnosis_2026-04-11",
@@ -41114,6 +40667,7 @@
     "propagator_family_unification_note",
     "publication.ci3_z3.arxiv_draft",
     "publication.ci3_z3.release_environment",
+    "publication.ci3_z3.reproducibility_freeze_2026-04-14",
     "qnm_control_hardening_note",
     "qnm_hardening_feasibility_note",
     "quantum_horizon_note",
@@ -41367,6 +40921,7 @@
     "universal_qg_pl_weak_form_note",
     "universal_qg_projective_schur_closure_note",
     "universal_qg_uv_finite_partition_note",
+    "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24",
     "unpromoted_branch_retainability_audit_note",
     "up_sector_partition_revisit_note_2026-04-19",
     "valley_linear_action_note",
@@ -41381,6 +40936,9 @@
     "wave_3plus1d_promotions_note",
     "wave_amplification_near_horizon_note",
     "wave_direct_dm_family_scout_note",
+    "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+    "wave_direct_dm_h025_seed0_crossfamily_note",
+    "wave_direct_dm_h025_two_point_synthesis_note",
     "wave_equation_gravity_note",
     "wave_equation_self_field_note",
     "wave_radiation_note",
@@ -41414,6 +40972,7 @@
     "work_history.repo.backlog.graph_observables_work_backlog",
     "work_history.repo.backlog.nature_backlog_2026-04-10",
     "work_history.repo.backlog.overnight_work_backlog",
+    "work_history.repo.backlog.readme",
     "work_history.repo.backlog.review_hardening_backlog",
     "work_history.repo.review_feedback.adversarial_review_2026_04_05",
     "work_history.repo.review_feedback.architecture_portability_audit_2026-04-11",
@@ -41421,6 +40980,7 @@
     "work_history.repo.review_feedback.claude_dead_end_reopen_audit_note",
     "work_history.repo.review_feedback.code_review_last_week_2026-04-11",
     "work_history.repo.review_feedback.publication_discovery_audit_2026-04-11",
+    "work_history.repo.review_feedback.readme",
     "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15",
     "work_history.yt.yt_explicit_systematic_status_review_2026-04-15",
     "writing_voice_guide_2026-04-25",
@@ -41460,10 +41020,10 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4634,
-    "leaf_count": 739,
+    "edge_count": 4546,
+    "leaf_count": 740,
     "node_count": 1662,
-    "root_count": 1181,
+    "root_count": 1195,
     "runners_with_path": 747,
     "status_counts": {
       "bounded": 253,

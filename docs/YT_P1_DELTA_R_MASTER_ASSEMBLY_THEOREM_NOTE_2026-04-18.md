@@ -172,24 +172,24 @@ citation-and-bound channel evaluations.
 ### Foundational sub-theorems (directly inherited)
 
 - **Three-channel structural decomposition (parent theorem):**
-  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md) —
+  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md` —
   `Δ_R^ratio = (α_LM/(4π)) · [C_F Δ_1 + C_A Δ_2 + T_F n_f Δ_3]` with
   partial-cancellation verdict (external Z_ψ cancels exactly; all
   three channels generically nonzero).
 - **Δ_1 channel (C_F):**
-  [`docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md) —
+  `docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md` —
   `Δ_1 = 2 (I_v_scalar − I_v_gauge) − 6`, retained
   `I_v_gauge = 0` (conserved point-split current, 21/21 PASS
   symbolic reduction), literature-central `I_v_scalar ≃ 4`, giving
   `Δ_1 ≃ +2` central with range `[0, +8]`.
 - **Δ_2 channel (C_A):**
-  [`docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md) —
+  `docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md` —
   `Δ_2 = I_v_gauge − (5/3) I_SE^{gluonic+ghost}`, with
   `I_v_gauge = 0` (retained conserved current) and literature-central
   `I_SE^{gluonic+ghost} ≃ 2`, giving `Δ_2 ≃ −10/3` central with
   range `[−5, 0]`.
 - **Δ_3 channel (T_F n_f):**
-  [`docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md) —
+  `docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md` —
   `Δ_3 = (4/3) I_SE^{fermion-loop}`, with literature-central
   `I_SE^{fermion-loop} ≃ 0.7` (per flavor, `α/(4π)` convention,
   Sharpe–Bhattacharya 1998 bracket), giving `Δ_3 ≃ +0.933` central

@@ -4,7 +4,7 @@
 observed at `L <= 32` is a finite-L artifact; the asymptotic value on this
 carrier is the Widom-Gioev-Klich coefficient `c_Widom = 1/6`, not `1/4`.
 See the retained no-go theorem
-[BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md](./BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md).
+`BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`.
 
 **Scripts**:
 - `scripts/frontier_bh_entropy_derived.py` (this bounded lane)
@@ -57,7 +57,7 @@ ground state on an OBC `L x L` square lattice (and on `L^3` cubic lattice):
    asymptotic ratio is `c_Widom = 1/6 != 1/4`, this identification is
    not an exact framework theorem on this carrier; it is a bounded
    companion number only. See
-   [BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md](./BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md)
+   `BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`
    for the retained no-go statement.
 
 ## What is regulator-dependent and what is not

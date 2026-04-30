@@ -118,7 +118,7 @@ trivial-character subspace and on the two-dimensional nontrivial-
 character subspace.
 
 The full derivation chain from hypothesis to Theorem 1 is in
-[CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md](./CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md).
+`CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`.
 
 Runner: `scripts/frontier_charged_lepton_observable_curvature.py`.
 
@@ -209,7 +209,7 @@ generators lies in the species-diagonal subspace. Disjointness is
 the strictly weaker, metric-free statement; the stronger claim of
 orthogonality under a specific Hermitian inner product is NOT
 established by the runner and is NOT used downstream. See
-[MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md](./MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md)
+`MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md`
 §Safe statement for the disjoint-vs-orthogonal scope note.
 
 **Corollary.** Charged-lepton mass eigenvalues (which live in `V_D` by
@@ -229,7 +229,7 @@ the two are structurally independent and together span 6 of the 9
 real dimensions of the retained Hermitian algebra.
 
 Full details:
-[MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md](./MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md).
+`MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md`.
 
 Runners:
 - `scripts/frontier_mass_mixing_disjointness_theorem.py`
@@ -242,7 +242,7 @@ mechanisms for forcing the mass-square-root vector onto the Koide
 cone `a_0² = 2|z|²` without observational pinning. Each is
 established by explicit symbolic construction or counterexample.
 Full statements, proofs, and numerical verifications are in
-[STRUCTURAL_NO_GO_SURVEY_NOTE.md](./STRUCTURAL_NO_GO_SURVEY_NOTE.md).
+`STRUCTURAL_NO_GO_SURVEY_NOTE.md`.
 
 ### 5.1 Z_3 invariance alone is insufficient
 

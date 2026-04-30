@@ -15,8 +15,8 @@ Do **not** use this directory as the live queue.
 
 The canonical active surface is:
 
-- [`docs/repo/ACTIVE_REVIEW_QUEUE.md`](../../../repo/ACTIVE_REVIEW_QUEUE.md)
+- `docs/repo/ACTIVE_REVIEW_QUEUE.md`
 
 The process document is:
 
-- [`docs/repo/REVIEW_FEEDBACK_WORKFLOW.md`](../../../repo/REVIEW_FEEDBACK_WORKFLOW.md)
+- `docs/repo/REVIEW_FEEDBACK_WORKFLOW.md`

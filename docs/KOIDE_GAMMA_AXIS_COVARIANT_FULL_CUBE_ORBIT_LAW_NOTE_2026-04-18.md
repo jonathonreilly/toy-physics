@@ -157,7 +157,7 @@ This closes the only remaining **basis** ambiguity in the positive
 
 Combined with the earlier notes:
 
-- [KOIDE_GAMMA_ORBIT_CYCLIC_RETURN_CANDIDATE_NOTE_2026-04-18.md](./KOIDE_GAMMA_ORBIT_CYCLIC_RETURN_CANDIDATE_NOTE_2026-04-18.md)
+- `KOIDE_GAMMA_ORBIT_CYCLIC_RETURN_CANDIDATE_NOTE_2026-04-18.md`
   gave the exact axis-1 reduction
   ```text
   diag(u,v,w) -> (r0,r1,r2);

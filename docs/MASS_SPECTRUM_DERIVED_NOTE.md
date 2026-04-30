@@ -18,7 +18,7 @@ own authority note.  This document is the index + honest-accounting
 table for the entire lane.
 
 Quark-only primary entry point on current `main`:
-[QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md](./QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md).
+`QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md`.
 That packet now separates three quark endpoints clearly:
 minimal-surface CKM-CP no-go, bounded reduced projector-ray closure, and a
 broader bounded complex-carrier existence proof. None of those upgrades the

@@ -97,5 +97,5 @@ order:
 
 - [`scripts/wave_direct_dm_seed_band_diagnosis.py`](../scripts/wave_direct_dm_seed_band_diagnosis.py)
 - [`logs/2026-04-08-wave-direct-dm-seed-band-diagnosis.txt`](../logs/2026-04-08-wave-direct-dm-seed-band-diagnosis.txt)
-- [`docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md`](./WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md)
+- `docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md`
 - [`docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md)

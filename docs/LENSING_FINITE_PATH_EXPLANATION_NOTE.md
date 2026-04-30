@@ -29,7 +29,7 @@ match" at T_phys=15 with the centered surrogate was a coincidence
 of two narrow choices (centering convention + the specific T value)
 that landed on top of the actual measurement.
 
-See [`LENSING_LONG_PATH_TEST_NOTE.md`](LENSING_LONG_PATH_TEST_NOTE.md)
+See `LENSING_LONG_PATH_TEST_NOTE.md`
 for the Lane L++ falsifying data and the new "L-independent slope"
 finding.
 

@@ -67,7 +67,7 @@ could be contemplated.
 ## Cross-references
 
 - **Rep-A/Rep-B partial-cancellation theorem (derives Δ_2 formula):**
-  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md)
+  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
   (§4.3, (4.3) above; establishes `Δ_2 = I_v_gauge − (5/3) I_SE`).
 - **H_unit symbolic reduction (Wilson-plaquette context):**
   [`docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`](YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md)

@@ -59,7 +59,7 @@ correction).
 ## Cross-references
 
 - **Three-channel decomposition (parent theorem):**
-  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md)
+  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
   §4.3 — `Delta_3 = (4/3) * I_SE` on the canonical surface. This note
   fills in the numerical bracket for `I_SE^{fermion-loop}`.
 - **C_F channel companion (Delta_1):**

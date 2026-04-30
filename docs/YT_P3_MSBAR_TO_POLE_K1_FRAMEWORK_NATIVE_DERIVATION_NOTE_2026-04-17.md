@@ -31,7 +31,7 @@ This note does NOT modify:
 ## Cross-references
 
 - **Master obstruction:**
-  [`docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md) —
+  `docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md` —
   names the MSbar-to-pole mass conversion series as a P3 sub-primitive;
   this note closes the K_1 step framework-native.
 - **K-series continuation:**

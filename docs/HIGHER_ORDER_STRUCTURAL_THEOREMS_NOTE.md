@@ -103,7 +103,7 @@ triplet. All six close negatively.
 | H-2 | Max-entropy with `C_3` character constraint | AD-HOC (the "char constraint" IS Koide — circular) | — | — |
 | H-3 | `log|det(D + J)|` partition extremum | RETAINED | NO (stationary at full degeneracy `Q = 1/3`; Hessian triply-degenerate and strictly negative) | NO |
 | H-4 | Fisher-Rao geodesic midpoint (uniform → corner) | AD-HOC | NO (`Q ≈ 0.4226`) | NO |
-| H-5 | `C_3` norm extremum `α|v_∥|² + β|v_⊥|²` | AD-HOC | NO (reduces to the Candidate-B `α = β` no-go of §5.3 in [STRUCTURAL_NO_GO_SURVEY_NOTE.md](./STRUCTURAL_NO_GO_SURVEY_NOTE.md)) | NO |
+| H-5 | `C_3` norm extremum `α|v_∥|² + β|v_⊥|²` | AD-HOC | NO (reduces to the Candidate-B `α = β` no-go of §5.3 in `STRUCTURAL_NO_GO_SURVEY_NOTE.md`) | NO |
 | H-6 | Retained Matsubara `K_{ii}` shape theorem | RETAINED (from Theorem 2) | NO (stationary at full degeneracy or 2+1 split; observed hierarchy not selected) | NO |
 
 Retained-and-cone-forcing intersection: **empty**.

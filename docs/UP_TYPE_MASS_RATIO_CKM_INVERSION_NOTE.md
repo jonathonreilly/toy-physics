@@ -42,7 +42,7 @@ candidates are tracked but not promoted:
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](./CKM_ATLAS_AXIOM_CLOSURE_NOTE.md):
   `|V_us| = sqrt(alpha_s(v)/2)`, `|V_cb| = alpha_s(v)/sqrt(6)`,
   `|V_ub| = alpha_s(v)^(3/2)/(6*sqrt(2))`, `delta = arctan(sqrt(5))`.
-- [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](./DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md):
+- `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`:
   Phase 1 down-type ratios from GST and the 5/6 bridge.
 - Exact SU(3) group constants `C_F = 4/3`, `T_F = 1/2`, `C_F - T_F = 5/6`.
 

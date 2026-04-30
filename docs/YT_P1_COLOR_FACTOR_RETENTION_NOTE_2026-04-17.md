@@ -34,17 +34,17 @@ This note does NOT modify:
 ## Cross-references
 
 - **Master obstruction (parent):**
-  [`docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md) —
+  `docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md` —
   names P1 as the 1-loop lattice-to-MSbar matching primitive on the
   Ward ratio.
 - **Rep-A/Rep-B partial-cancellation sub-theorem:**
-  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md) —
+  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md` —
   derives the three-channel structure from the diagrammatic subtraction
   of δ_g (Rep-A, OGE extraction of g_s²) and δ_y (Rep-B, H_unit
   extraction of y_t²). This note packages the resulting color-tensor
   decomposition.
 - **Shared-Fierz shortcut no-go:**
-  [`docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md`](YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md) — the
+  `docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md` — the
   three-channel structure is NOT reducible to a single channel by any
   shared Ward-Fierz shortcut.
 - **Δ_1 BZ computation:**

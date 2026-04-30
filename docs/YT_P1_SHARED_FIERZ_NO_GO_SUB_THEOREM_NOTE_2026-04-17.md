@@ -59,7 +59,7 @@ one-liner.
 ## Cross-references
 
 - **Master obstruction (parent):**
-  [`docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)
+  `docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
   — names P1 as the 1-loop lattice-to-MSbar matching primitive on
   the Ward ratio.
 - **Ward-identity tree-level theorem (source of D12 + S2):**
