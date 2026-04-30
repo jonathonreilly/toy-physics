@@ -1,7 +1,7 @@
 # Third Grown Family Boundary Note
 
 **Date:** 2026-04-06  
-**Status:** diagnosed boundary for the third grown-family signed-source slice
+**Status:** support - structural or confirmatory support note
 
 ## Artifact chain
 

@@ -1,5 +1,6 @@
 # Poisson Exhaustive Uniqueness
 
+**Status:** unknown (pending author classification)
 ## Result
 
 The Poisson field equation (nabla^2 phi = -G rho) is **unique** among a continuous

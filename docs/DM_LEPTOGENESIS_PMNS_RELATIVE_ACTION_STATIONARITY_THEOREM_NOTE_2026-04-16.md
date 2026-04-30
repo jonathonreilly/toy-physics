@@ -1,5 +1,6 @@
 # DM Leptogenesis PMNS Relative-Action Stationarity Theorem
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16  
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_relative_action_stationarity_theorem.py`  
 **Framework convention:** “axiom” means only `Cl(3)` on `Z^3`

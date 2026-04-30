@@ -1,7 +1,7 @@
 # Second Grown Family Complex Boundary Note
 
 **Date:** 2026-04-06  
-**Status:** diagnosed boundary on the tighter single-seed window
+**Status:** support - structural or confirmatory support note
 
 ## Artifact chain
 

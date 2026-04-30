@@ -1,5 +1,6 @@
 # Hierarchy Effective-Potential Endpoint Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-13  
 **Script:** `scripts/frontier_hierarchy_effective_potential_endpoint.py`
 

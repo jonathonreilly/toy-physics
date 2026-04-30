@@ -1,5 +1,6 @@
 # Hierarchy Spatial-BC And `u_0`-Scaling Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-13  
 **Script:** `scripts/frontier_hierarchy_spatial_bc_and_u0_scaling.py`
 

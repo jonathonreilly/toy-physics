@@ -1,6 +1,6 @@
 # Staggered Layered Backreaction Note
 
-**Status:** first layered/DAG-compatible backreaction bridge
+**Status:** bounded - bounded or caveated result note
 
 This note freezes the first retained bridge between the staggered transport law
 and a source-generated `Phi` on layered graph families.

@@ -1,5 +1,6 @@
 # DM PNS Attack Cascade: Seven Attack Vectors on PMNS Non-Singularity
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-19
 **Lane:** Dark-matter A-BCC basin-selector (PNS derivation from axioms)**Status:** CONDITIONAL THEOREM (sigma-chain). PNS is derivable from the
 retained measurement framework. Pure algebraic PNS (from Cl(3)/Z³

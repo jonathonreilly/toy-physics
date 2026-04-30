@@ -1,5 +1,6 @@
 # Route 2 Spacetime Tensor Primitive Candidate on `PL S^3 x R`
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-14  
 **Purpose:** define the smallest plausible spacetime-level tensor carrier that
 mediates between the bounded support-side tensor data `Theta_R^(0)` and the

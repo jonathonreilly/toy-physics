@@ -1,7 +1,7 @@
 # Legacy Exploratory Drivers
 
 **Date:** 2026-04-04  
-**Status:** historical experiment drivers, not current canonical harnesses
+**Status:** support - structural or confirmatory support note
 
 This note exists so a new reader does not mistake older exploratory scripts
 for the retained physics harnesses.

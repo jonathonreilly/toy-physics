@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19
 **Lane:** Quark up-amplitude.
-**Status:** **Resolved on the exact affine physical carrier.** The JTS
+**Status:** support - structural or confirmatory support note
 identification is now derived from retained bimodule geometry:
 
 ```text

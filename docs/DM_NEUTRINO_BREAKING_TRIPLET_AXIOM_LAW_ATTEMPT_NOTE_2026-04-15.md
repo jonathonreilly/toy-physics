@@ -1,7 +1,7 @@
 # DM Neutrino Breaking-Triplet Axiom-Law Attempt
 
 **Date:** 2026-04-15
-**Status:** strongest exact axiom-boundary theorem for the DM breaking triplet
+**Status:** support - structural or confirmatory support note
 `(delta, rho, gamma)`
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`

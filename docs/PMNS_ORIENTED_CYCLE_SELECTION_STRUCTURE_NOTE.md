@@ -1,7 +1,7 @@
 # PMNS Oriented Cycle Selection Structure
 
 **Date:** 2026-04-16  
-**Status:** exact selection-structure theorem  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_pmns_oriented_cycle_selection_structure.py`
 
 ## Question

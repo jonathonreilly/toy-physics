@@ -1,5 +1,6 @@
 # Scaling Failure Mechanisms
 
+**Status:** bounded - bounded or caveated result note
 ## Gravity: Phase-Valley Saturation
 
 **Reduced variable:** `Q_sat = k × ΣΔS` (total phase deficit across the beam)

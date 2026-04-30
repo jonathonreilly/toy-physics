@@ -1,7 +1,7 @@
 # Impact-Parameter Portability Extension Note
 
 **Date:** 2026-04-06  
-**Status:** diagnosed boundary, not a broader portability win
+**Status:** support - structural or confirmatory support note
 
 ## Artifact Chain
 

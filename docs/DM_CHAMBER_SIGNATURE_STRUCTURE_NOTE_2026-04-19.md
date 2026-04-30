@@ -1,7 +1,7 @@
 # DM Chamber Signature Structure -- F4 Closed by DPLE Theorem
 
 **Date:** 2026-04-19
-**Status:** SUPERSEDED (this cycle). Originally the cycle 7B / 8
+**Status:** support - structural or confirmatory support note
 signature-structure analysis of the DM A-BCC chart, introducing F4
 (interior-minimum linear-path Sylvester discriminant) as the basin-
 selector axiom candidate. this cycle reduces F4 to a **theorem**: the

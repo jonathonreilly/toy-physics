@@ -1,7 +1,7 @@
 # Emergent Geometry from Matter-Coupled Growth
 
 **Date:** 2026-04-10  
-**Status:** exploratory mixed, partial reopen at high `G` only  
+**Status:** bounded - bounded or caveated result note
 **Scripts:** `frontier_emergent_geometry.py`, `frontier_emergent_geometry_v2.py`
 
 ## Question

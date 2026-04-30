@@ -1,5 +1,6 @@
 # DM Neutrino Weak Matching Obstruction
 
+**Status:** support - structural or confirmatory support note
 **Date:** 2026-04-15  
 **Branch:** `codex/dm-across-the-line`  
 **Script:** `scripts/frontier_dm_neutrino_weak_matching_obstruction.py`

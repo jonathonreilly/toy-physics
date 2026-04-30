@@ -1,5 +1,6 @@
 # Distance Law Portability Across Retained Structured Families
 
+**Status:** bounded - bounded or caveated result note
 This sweep asked a narrow question:
 
 Can the retained near-Newtonian distance tail transfer beyond the first two grown families into the newer retained structured families?

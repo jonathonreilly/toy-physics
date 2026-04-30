@@ -1,5 +1,6 @@
 # Periodic 2D Wraparound Fix Note (2026-04-11)
 
+**Status:** bounded - bounded or caveated result note
 ## Scope
 
 This note records the validated periodic-lattice minimum-image bug and the

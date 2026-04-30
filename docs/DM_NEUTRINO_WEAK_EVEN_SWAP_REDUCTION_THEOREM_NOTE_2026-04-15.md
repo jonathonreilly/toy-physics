@@ -1,7 +1,7 @@
 # DM Neutrino Weak Even Swap-Reduction Theorem
 
 **Date:** 2026-04-15  
-**Status:** exact single-axiom reduction theorem for the even weak-to-triplet
+**Status:** support - structural or confirmatory support note
 transfer leg  
 **Script:** `scripts/frontier_dm_neutrino_weak_even_swap_reduction_theorem.py`
 

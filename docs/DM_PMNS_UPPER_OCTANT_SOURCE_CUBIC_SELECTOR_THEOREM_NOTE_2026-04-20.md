@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-20  
 **Lane:** DM A-BCC sigma-chain / open imports `I12` and `I5`  
-**Status:** `I12` is closed on this branch. The remaining `mu <-> tau`
+**Status:** support - structural or confirmatory support note
 ambiguity is arrested by a small complete system:
 
 ```text

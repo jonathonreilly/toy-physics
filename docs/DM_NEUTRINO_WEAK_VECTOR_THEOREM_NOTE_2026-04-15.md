@@ -1,5 +1,6 @@
 # DM Neutrino Weak Vector Theorem
 
+**Status:** support - structural or confirmatory support note
 **Date:** 2026-04-15  
 **Branch:** `codex/dm-across-the-line`
 

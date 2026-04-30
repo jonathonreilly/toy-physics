@@ -1,7 +1,7 @@
 # Mirror vs Central Head-To-Head Note
 
 **Date:** 2026-04-03
-**Status:** review-safe comparison summary
+**Status:** support - structural or confirmatory support note
 
 This note compares the retained mirror chokepoint pocket against the
 best dense central-band hard-geometry lane using the already-retained

@@ -1,5 +1,6 @@
 # Staggered Fermion on Layered DAG-Derived Family — Bounded Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-10  
 **Script:** `frontier_staggered_dag.py`
 

@@ -1,7 +1,7 @@
 # Mass Spectrum Derived — Five-Phase Attack Closure
 
 **Date:** 2026-04-19
-**Status:** headline bundling note for the current five-phase mass-spectrum
+**Status:** bounded - bounded or caveated result note
 lane on `main`. Mixed closure: two bounded quark phases (Phase 1 down-type
 dual and Phase 2 up sector), one bounded cross-reference (Phase 3 charged
 leptons), one retained seesaw scale + bounded solar/PMNS (Phase 4 neutrino),

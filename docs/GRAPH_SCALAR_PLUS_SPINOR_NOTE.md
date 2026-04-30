@@ -1,5 +1,6 @@
 # Graph Scalar + Spinor Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-10  
 **Harness:** [`scripts/frontier_graph_scalar_plus_spinor.py`](../scripts/frontier_graph_scalar_plus_spinor.py)
 

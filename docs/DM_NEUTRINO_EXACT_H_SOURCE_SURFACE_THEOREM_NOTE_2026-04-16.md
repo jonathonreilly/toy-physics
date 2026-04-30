@@ -1,7 +1,7 @@
 # DM Neutrino Exact H-Side Source-Surface Theorem
 
 **Date:** 2026-04-16  
-**Status:** exact blocker-reduction theorem on the mainline post-canonical gate  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_neutrino_exact_h_source_surface_theorem.py`
 
 ## Question

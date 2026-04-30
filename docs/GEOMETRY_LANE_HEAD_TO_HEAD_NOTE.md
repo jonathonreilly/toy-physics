@@ -1,7 +1,7 @@
 # Geometry Lane Head-to-Head Note
 
 **Date:** 2026-04-02  
-**Status:** matched-seed comparison complete
+**Status:** support - structural or confirmatory support note
 
 ## Setup
 

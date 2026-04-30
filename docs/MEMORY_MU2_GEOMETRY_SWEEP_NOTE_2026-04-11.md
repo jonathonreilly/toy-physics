@@ -1,7 +1,7 @@
 # Memory `mu^2` / Geometry Sweep Note
 
 **Date:** 2026-04-11  
-**Status:** exploratory / protocol diagnostic
+**Status:** bounded - bounded or caveated result note
 
 **Script:** `scripts/frontier_memory_mu2_size_sweep.py`
 

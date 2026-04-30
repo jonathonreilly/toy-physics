@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-26
 
-**Status:** standalone positive Standard Model/EW theorem. This note proves
+**Status:** proposed_retained - explicit strong derivation claim pending audit
 the exact gauge-selection rule for renormalizable Dirac Yukawa monomials in
 the one-Higgs-doublet Standard Model matter surface carried by the retained
 hypercharge and EW notes. It does not derive any Yukawa eigenvalue, mixing

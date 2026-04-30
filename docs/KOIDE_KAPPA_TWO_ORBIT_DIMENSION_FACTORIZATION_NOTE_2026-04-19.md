@@ -1,5 +1,6 @@
 # Koide kappa = 2 Orbit-Dimension Factorization
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-19
 **Scope:** Structural factorization of the charged-lepton identity
 `kappa = g_0^2 / |g_1|^2 = 2` into (i) an axiom-native integer piece

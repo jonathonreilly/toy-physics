@@ -1,6 +1,6 @@
 # PMNS Twisted Flux Transfer Holonomy Boundary
 
-**Status:** theorem-grade boundary with a positive fluxed-holonomy sublaw  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_pmns_twisted_flux_transfer_holonomy_boundary.py`
 
 ## Question

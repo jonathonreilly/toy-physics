@@ -1,5 +1,6 @@
 # DM Leptogenesis Expansion Axiom Boundary
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16
 **Branch:** `codex/dm-main-refresh`
 **Script:** `scripts/frontier_dm_leptogenesis_expansion_axiom_boundary.py`

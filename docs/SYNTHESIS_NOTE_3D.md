@@ -1,7 +1,7 @@
 # Synthesis Note: 3D Extension of Discrete Causal DAG Model
 
 **Date:** 2026-04-01
-**Status:** Results locked. 3D investigation complete.
+**Status:** support - structural or confirmatory support note
 
 ## The claim
 

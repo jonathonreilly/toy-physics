@@ -1,5 +1,6 @@
 # Universal GR Invariant-Frame Obstruction Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Scope:** universal representation/invariant route only  

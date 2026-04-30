@@ -1,7 +1,7 @@
 # DM Leptogenesis PMNS Breaking-Triplet Source Law
 
 **Date:** 2026-04-16  
-**Status:** exact charged-sector bridge theorem from the PMNS off-seed active
+**Status:** support - structural or confirmatory support note
 family to the mainline breaking-triplet CP channels  
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_breaking_triplet_source_law.py`
 

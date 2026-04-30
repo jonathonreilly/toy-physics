@@ -1,5 +1,6 @@
 # Graph True KG vs CN Note
 
+**Status:** bounded - bounded or caveated result note
 Files:
 - [frontier_graph_true_kg_vs_cn.py](../scripts/frontier_graph_true_kg_vs_cn.py)
 

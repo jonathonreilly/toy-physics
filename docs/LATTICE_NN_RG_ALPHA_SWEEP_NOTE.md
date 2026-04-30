@@ -1,7 +1,7 @@
 # NN Lattice RG Alpha Sweep Note
 
 **Date:** 2026-04-03  
-**Status:** promising but narrow; the largest scanned alpha is `1.5`, and it is
+**Status:** bounded - bounded or caveated result note
   the closest to h-stability on the tested grid
 
 This note freezes the alpha-sweep follow-up to the Born-safe nearest-neighbor

@@ -1,7 +1,7 @@
 # DM Wilson Direct-Descendant Boundary-Arrest Triplet/Y Maximin Note
 
 **Date:** 2026-04-19  
-**Status:** exact positive boundary-arrest result on the DM source-fiber /
+**Status:** support - structural or confirmatory support note
 boundary-drift lane downstream of the same-day spectral completion and
 `J_iso` no-go notes
 

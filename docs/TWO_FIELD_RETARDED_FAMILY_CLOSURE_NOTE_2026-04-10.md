@@ -1,5 +1,6 @@
 # Two-Field Retarded/Hybrid Family Closure Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-10  
 **Script:** `frontier_two_field_retarded_family_closure.py`
 

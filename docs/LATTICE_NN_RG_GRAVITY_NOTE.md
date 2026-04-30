@@ -1,7 +1,7 @@
 # NN Lattice RG-Style Gravity Note
 
 **Date:** 2026-04-03  
-**Status:** ambiguous; simple strength scalings are suggestive but the checked
+**Status:** bounded - bounded or caveated result note
   fine-spacing failures are not schedule-discriminating
 
 This note freezes the RG-style gravity probe on the raw nearest-neighbor lattice.

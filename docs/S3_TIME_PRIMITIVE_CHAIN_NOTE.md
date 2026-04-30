@@ -1,5 +1,6 @@
 # Route 2 Primitive Chain: Readout and Time-Coupling Update
 
+**Status:** unknown (pending author classification)
 **Date:** 2026-04-19  
 **Purpose:** restate the remaining Route-2 primitives after the exact bilinear
 carrier and the new readout/time-coupling theorem block

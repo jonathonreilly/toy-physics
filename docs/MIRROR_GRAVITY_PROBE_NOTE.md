@@ -1,7 +1,7 @@
 # Mirror Gravity Probe Note
 
 **Date:** 2026-04-03  
-**Status:** review-safe mirror gravity probe complete
+**Status:** bounded - bounded or caveated result note
 
 This note freezes the narrow mirror-only gravity probe requested after the
 retained mirror chokepoint pocket was established.

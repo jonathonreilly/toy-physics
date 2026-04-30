@@ -1,7 +1,7 @@
 # DM Neutrino Two-Higgs Continuity Sheet Theorem
 
 **Date:** 2026-04-15  
-**Status:** exact DM-side sheet-fixing theorem on the circulant two-Higgs
+**Status:** support - structural or confirmatory support note
 subcone  
 **Script:** `scripts/frontier_dm_neutrino_two_higgs_continuity_sheet_theorem.py`
 

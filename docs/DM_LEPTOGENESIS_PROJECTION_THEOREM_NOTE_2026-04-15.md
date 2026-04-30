@@ -1,5 +1,6 @@
 # DM Leptogenesis Projection Theorem
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-15
 **Branch:** `codex/dm-main-refresh`
 **Script:** `scripts/frontier_dm_leptogenesis_projection_theorem.py`

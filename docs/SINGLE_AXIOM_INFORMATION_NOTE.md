@@ -1,7 +1,7 @@
 # Single Axiom: Conserved Information Flow Unifies Graph + Unitarity
 
 **Date:** 2026-04-12
-**Status:** confirmed (all four tests pass)
+**Status:** support - structural or confirmatory support note
 **Runner:** `scripts/frontier_single_axiom_information.py`
 
 **Scope note:** this is a reduction/support note for framework compression and

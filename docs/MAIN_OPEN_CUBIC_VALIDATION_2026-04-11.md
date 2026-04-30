@@ -1,5 +1,6 @@
 # Main Open-Cubic Validation
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-11  
 **Scope:** promoted open-cubic staggered subset on `main`  
 **Worktree:** `codex/main-open-cubic-validation` at `410ce75`

@@ -1,7 +1,7 @@
 # Unification Basin Failure Note
 
 **Date:** 2026-04-06  
-**Status:** diagnosed boundary note for the shared grown-family basin
+**Status:** support - structural or confirmatory support note
 
 ## Artifact chain
 

@@ -1,7 +1,7 @@
 # Koide Cyclic Wilson-Descendant Law
 
 **Date:** 2026-04-18
-**Status:** constructive law on the charged-lepton Koide lane
+**Status:** support - structural or confirmatory support note
 **Runner:** `scripts/frontier_koide_cyclic_wilson_descendant_law.py`
 
 ## Question

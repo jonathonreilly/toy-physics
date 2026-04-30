@@ -1,5 +1,6 @@
 # DM A-BCC: Sylvester Signature-Forcing Theorem
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-19
 **Lane:** Dark-matter A-BCC basin-selector (source-side physical-sheet
 identification)**Status:** RETAINED THEOREM. Sylvester's law of inertia proves that any

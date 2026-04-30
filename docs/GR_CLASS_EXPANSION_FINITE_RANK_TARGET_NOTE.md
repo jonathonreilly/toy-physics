@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-14  
 **Script:** `scripts/frontier_gr_class_expansion_finite_rank_target.py`  
-**Status:** exact widening candidate beyond the current star-supported/static-conformal restricted class; not full GR
+**Status:** bounded - bounded or caveated result note
 
 ## Question
 

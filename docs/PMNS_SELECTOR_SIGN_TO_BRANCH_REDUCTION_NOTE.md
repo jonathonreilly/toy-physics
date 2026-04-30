@@ -1,7 +1,7 @@
 # PMNS Selector Sign-To-Branch Reduction
 
 **Date:** 2026-04-15
-**Status:** exact reduction theorem from selector realization to
+**Status:** support - structural or confirmatory support note
 branch-conditioned coefficient derivation
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`

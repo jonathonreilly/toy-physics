@@ -1,5 +1,6 @@
 # Gravitational Entanglement Between Two Wavepackets
 
+**Status:** support - structural or confirmatory support note
 ## Setup
 
 Two free-fermion species (A, B) on a shared 1D chain (N = 40--80 sites), coupled only through their mutual gravitational Poisson fields. Species A evolves in the potential sourced by B's density, and vice versa. Initial state is a product of separated Gaussian wavepackets -- zero entanglement at t = 0.

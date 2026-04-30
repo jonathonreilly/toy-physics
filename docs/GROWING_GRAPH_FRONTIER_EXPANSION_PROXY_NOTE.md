@@ -1,7 +1,7 @@
 # Growing Graph Frontier Expansion Proxy Note
 
 **Date:** 2026-04-05  
-**Status:** first review-safe growing-graph expansion proxy on the existing prototype family
+**Status:** support - structural or confirmatory support note
 
 ## One-line read
 

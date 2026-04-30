@@ -1,7 +1,7 @@
 # The Spectral--Trajectory Dichotomy in Discrete Self-Gravitating Quantum Mechanics
 
 **Date:** 2026-04-11  
-**Status:** Theoretical argument document  
+**Status:** bounded - bounded or caveated result note
 **Branch:** `frontier/spot-checks`
 
 ---

@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-26
 
-**Status:** standalone positive CKM theorem. This note proves a
+**Status:** proposed_retained - explicit strong derivation claim pending audit
 model-independent algebraic certificate that converts a 3x3 CKM squared-
 magnitude table into its unitarity-triangle area and Jarlskog magnitude,
 using only the moduli. It does not modify, promote, or close any retained CKM

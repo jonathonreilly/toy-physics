@@ -1,7 +1,7 @@
 # Lattice NN RG Reconciliation Note
 
 **Date:** 2026-04-03  
-**Status:** canonical reconciliation; the stronger `alpha = 2.0` / "continuum complete" branch-history language is not yet artifact-backed
+**Status:** bounded - bounded or caveated result note
 
 This note reconciles the stronger branch-history story against the current
 artifact chain for the nearest-neighbor lattice refinement work.

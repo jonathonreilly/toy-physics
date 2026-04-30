@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-03
 **Branches:** claude/distracted-napier (gap-physics + spectral program), main (mirror / higher-symmetry audit chain)
-**Status:** legacy mirror-program synthesis; use [`docs/UNIFIED_PROGRAM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md) for the current canonical project state
+**Status:** support - structural or confirmatory support note
 
 ## The Problem
 

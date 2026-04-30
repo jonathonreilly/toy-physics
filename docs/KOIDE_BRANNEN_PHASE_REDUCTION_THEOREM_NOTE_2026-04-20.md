@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-20
 **Lane:** Charged-lepton Koide phase `delta = 2/9`.
-**Status:** conditional reduction route. This note proves the route
+**Status:** bounded - bounded or caveated result note
 `δ = Q/d` from the doublet conjugate-pair charge `n_eff = 2` and `d = 3 = |C_3|`.
 The cycle-2 linking theorem and direct no-go sharpen the remaining load-bearing
 step: on the physical selected-line CP¹ base, the structural ratio `2/d²`

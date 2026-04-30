@@ -1,5 +1,6 @@
 # PMNS Lower-Level End-to-End Closure
 
+**Status:** support - structural or confirmatory support note
 Starting from lower-level observable packs only:
 
 - active/passive response columns on the retained lepton supports

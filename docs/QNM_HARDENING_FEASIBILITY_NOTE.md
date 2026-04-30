@@ -1,5 +1,6 @@
 # QNM Hardening Feasibility Note
 
+**Status:** support - structural or confirmatory support note
 **Date:** 2026-04-05  
 **Scope:** decide whether any exact-lattice self-consistent spectral claim can
 be made review-safely from the current code/branch context

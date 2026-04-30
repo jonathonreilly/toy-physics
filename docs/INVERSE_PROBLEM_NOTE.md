@@ -1,5 +1,6 @@
 # Inverse Problem: What Does Newton+Born Require of the Network?
 
+**Status:** unknown (pending author classification)
 **Date:** 2026-04-04
 
 ## Answer: almost nothing.

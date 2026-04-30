@@ -1,5 +1,6 @@
 # Self-Consistency Structured-Null Note (2026-04-11)
 
+**Status:** bounded - bounded or caveated result note
 ## Scope
 
 This rerun replaces the earlier ad hoc random controls in

@@ -1,7 +1,7 @@
 # Gate B Non-Label Sign Grown Transfer Note
 
 **Date:** 2026-04-06
-**Status:** grown-row architecture test for the old geometry-sector idea
+**Status:** bounded - bounded or caveated result note
 
 ## Artifact chain
 

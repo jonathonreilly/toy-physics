@@ -1,5 +1,6 @@
 # Second Grown Family Signed-Source Note
 
+**Status:** bounded - bounded or caveated result note
 This note records a genuinely different grown-family slice from the retained drift/restore neighborhood:
 
 - family: no-restore Gate B grown geometry

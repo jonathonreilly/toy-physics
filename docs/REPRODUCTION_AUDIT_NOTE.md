@@ -1,7 +1,7 @@
 # Reproduction Audit Note
 
 **Date:** 2026-04-04  
-**Status:** skeptical-reader reproduction entry point
+**Status:** support - structural or confirmatory support note
 
 This note explains how to reproduce the current retained frontier without
 mistaking exploratory drivers for canonical harnesses.

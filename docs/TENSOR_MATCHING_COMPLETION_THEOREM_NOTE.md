@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-14  
 **Script:** `scripts/frontier_tensor_matching_completion_theorem.py`  
-**Status:** exact localization of the minimal tensor boundary data on the current restricted class
+**Status:** support - structural or confirmatory support note
 
 ## Purpose
 

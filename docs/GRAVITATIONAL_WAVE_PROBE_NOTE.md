@@ -1,5 +1,6 @@
 # Gravitational Wave / Post-Newtonian Probe
 
+**Status:** bounded - bounded or caveated result note
 ## Status: Three of four tests positive
 
 ## What was tested

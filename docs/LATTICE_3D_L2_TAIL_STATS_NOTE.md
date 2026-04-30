@@ -1,7 +1,7 @@
 # 3D 1/L^2 Tail Statistics Note
 
 **Date:** 2026-04-04  
-**Status:** exploratory tail-resolution improvement on the 3D inverse-square branch
+**Status:** bounded - bounded or caveated result note
 
 ## Purpose
 

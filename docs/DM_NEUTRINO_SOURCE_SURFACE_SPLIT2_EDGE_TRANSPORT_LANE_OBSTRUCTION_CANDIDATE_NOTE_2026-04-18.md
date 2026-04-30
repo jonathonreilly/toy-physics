@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Split-2 Edge Transport-Lane Obstruction Candidate
 
 **Date:** 2026-04-18  
-**Status:** broad split-2 edge is transport-incompatible with the preferred recovered lane on the tested interval; not flagship closure
+**Status:** bounded - bounded or caveated result note
 
 ## Question
 

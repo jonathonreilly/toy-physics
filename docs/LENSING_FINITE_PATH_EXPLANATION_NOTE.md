@@ -1,7 +1,7 @@
 # Lensing Slope — Finite-Path Surrogate FALSIFIED at a Second T_phys
 
 **Date:** 2026-04-07 (revised twice: first narrowed by literal-geometry check, then falsified by Lane L++ short-path test)
-**Status:** RETRACTED as an explanation of the slope. Two independent issues invalidate the previous "1.5% analytical match" claim:
+**Status:** open - open or unresolved claim state
 
 > **Issue 1 (parallel narrowing, bd14a30):** The "1.5% match" used a
 > *centered* finite-path surrogate with `L = 10`. The literal harness

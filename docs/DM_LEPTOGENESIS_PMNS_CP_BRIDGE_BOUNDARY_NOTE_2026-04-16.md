@@ -1,7 +1,7 @@
 # DM Leptogenesis PMNS/Mainline CP Bridge Boundary
 
 **Date:** 2026-04-16
-**Status:** exact boundary theorem connecting the PMNS near-closing comparator
+**Status:** support - structural or confirmatory support note
 to the mainline post-canonical leptogenesis CP package
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_cp_bridge_boundary.py`
 

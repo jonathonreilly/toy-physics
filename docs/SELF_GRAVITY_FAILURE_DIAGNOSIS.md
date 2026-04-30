@@ -1,7 +1,7 @@
 # Self-Gravity Failure Diagnosis
 
 **Date:** 2026-04-06  
-**Status:** diagnosed closure of the exact-lattice Poisson-like backreaction lane
+**Status:** support - structural or confirmatory support note
 
 ## Artifact chain
 

@@ -1,7 +1,7 @@
 # DM Neutrino Hermitian Bridge Carrier
 
 **Date:** 2026-04-15  
-**Status:** exact DM-side carrier transplant from the local neutrino lane  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_neutrino_hermitian_bridge_carrier.py`
 
 ## Question

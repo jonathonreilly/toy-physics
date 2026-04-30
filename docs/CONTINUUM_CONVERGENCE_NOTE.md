@@ -1,7 +1,7 @@
 # Continuum Convergence Note
 
 **Date:** 2026-04-04  
-**Status:** exploratory propagator-fork note for the ordered-lattice continuum lane
+**Status:** bounded - bounded or caveated result note
 
 This note collects the current dimension-dependent-kernel results on the
 ordered-lattice family. It is intentionally narrower than the branch-history

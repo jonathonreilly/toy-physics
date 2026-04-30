@@ -1,5 +1,6 @@
 # Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion `3d+1` `rho1` Least-Distortion Selector Theorem
 
+**Status:** bounded - bounded or caveated result note
 ## Statement
 
 The remaining retained-line multiplicity on the selected Wilson branch is

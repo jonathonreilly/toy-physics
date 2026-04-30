@@ -1,7 +1,7 @@
 # Generated Geometry Synthesis
 
 **Date:** 2026-04-05
-**Status:** strongest Gate B result to date — full Newtonian package on grown geometry
+**Status:** bounded - bounded or caveated result note
 
 ## Growth rule
 

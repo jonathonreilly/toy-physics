@@ -1,5 +1,6 @@
 # Sixth Family Sheared Basin
 
+**Status:** bounded - bounded or caveated result note
 The sixth-family scout tests a parity-sheared shell connectivity rule on the
 no-restore grown slice. It is deliberately different from the earlier retained
 families:

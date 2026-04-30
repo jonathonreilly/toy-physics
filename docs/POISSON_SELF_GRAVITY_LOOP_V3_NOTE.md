@@ -1,7 +1,7 @@
 # Poisson Self-Gravity Loop V3 Note
 
 **Date:** 2026-04-05  
-**Status:** exact-null control on a reduced exact-lattice family; tiny control effect, not a new backreaction lane
+**Status:** bounded - bounded or caveated result note
 
 ## Artifact chain
 

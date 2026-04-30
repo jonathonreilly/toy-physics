@@ -1,5 +1,6 @@
 # Staggered Fermion + Scalar/Parity Potential Gravity — Force-Based Card
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-10
 **Script:** `frontier_staggered_17card.py`
 **Architecture:** Kogut-Susskind staggered fermion, 1 scalar per site, Dirac

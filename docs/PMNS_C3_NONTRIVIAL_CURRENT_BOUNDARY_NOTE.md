@@ -1,5 +1,6 @@
 # PMNS `C3` Nontrivial-Character Current Boundary
 
+**Status:** support - structural or confirmatory support note
 ## Question
 Once the retained PMNS lane has been reduced to the native `C3`-character
 family, what is the exact smallest remaining sole-axiom source object?

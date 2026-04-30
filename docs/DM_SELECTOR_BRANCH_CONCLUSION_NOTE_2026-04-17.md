@@ -1,5 +1,6 @@
 # DM Selector Branch Conclusion
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-17
 **Branch:** `codex/dm-selector-rebuild-2026-04-17`
 **Final verdict:** `obstruction`.

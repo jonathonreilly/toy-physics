@@ -1,7 +1,7 @@
 # Shapiro Phase Lag: Experimental Card
 
 **Date:** 2026-04-06
-**Status:** lab-facing prediction card — what the model predicts, what it doesn't
+**Status:** support - structural or confirmatory support note
 
 ## The observable
 

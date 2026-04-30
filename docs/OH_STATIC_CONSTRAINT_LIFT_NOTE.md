@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-13
 **Script:** `scripts/frontier_oh_static_constraint_lift.py`
-**Status:** Exact local shell-to-`3+1` constraint lift on the current static conformal bridge surface
+**Status:** support - structural or confirmatory support note
 
 ## Purpose
 

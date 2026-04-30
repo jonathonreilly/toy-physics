@@ -1,7 +1,7 @@
 # DM Leptogenesis PMNS Oriented-Phase Sheet-Selector Theorem
 
 **Date:** 2026-04-16  
-**Status:** exact selector-reduction theorem on the PMNS comparator gate  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_oriented_phase_sheet_selector_theorem.py`
 
 ## Question

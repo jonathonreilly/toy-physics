@@ -1,7 +1,7 @@
 # Nearest-Neighbor Lattice Refinement Note
 
 **Date:** 2026-04-03  
-**Status:** Born-clean positive refinement trend through `h = 0.25`; `h = 0.125` remains unresolved for the raw kernel
+**Status:** open - open or unresolved claim state
 
 This note freezes the canonical raw nearest-neighbor lattice refinement run.
 It is intentionally narrow:

@@ -1,7 +1,7 @@
 # Gauge-Vacuum Plaquette First-Sector Completed Triple Current Transfer-Family Boundary
 
 **Date:** 2026-04-19  
-**Status:** theorem-grade constructive boundary after the explicit first-sector
+**Status:** support - structural or confirmatory support note
 completion; on the audited current explicit `beta = 6`
 `spatial_pair` witness family, even the best scaled fit still does not realize
 the completed triple `Z^min` exactly  

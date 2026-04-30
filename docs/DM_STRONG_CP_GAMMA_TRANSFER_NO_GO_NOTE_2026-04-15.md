@@ -1,7 +1,7 @@
 # DM Strong-CP `\gamma`-Transfer Boundary
 
 **Date:** 2026-04-15  
-**Status:** exact current-stack transfer boundary between strong-CP/CKM closure
+**Status:** support - structural or confirmatory support note
 and the DM neutrino Hermitian carrier  
 **Script:** `scripts/frontier_dm_strong_cp_gamma_transfer_nogo.py`
 

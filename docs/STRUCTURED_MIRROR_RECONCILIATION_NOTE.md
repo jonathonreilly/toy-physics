@@ -1,7 +1,7 @@
 # Structured Mirror Reconciliation Note
 
 **Date:** 2026-04-03  
-**Status:** reconciliation of the structured-growth Born discrepancy
+**Status:** bounded - bounded or caveated result note
 
 This note freezes the comparison between the committed canonical structured
 mirror validator and the newer quick linear Born claims.

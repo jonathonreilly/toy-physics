@@ -1,7 +1,7 @@
 # DM Leptogenesis PMNS Microscopic `D` Last-Mile Reduction
 
 **Date:** 2026-04-16  
-**Status:** exact PMNS-assisted `D`-level reduction theorem on the DM branch  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_microscopic_d_last_mile.py`
 
 ## Question

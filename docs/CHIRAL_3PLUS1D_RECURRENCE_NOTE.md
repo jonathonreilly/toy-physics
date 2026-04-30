@@ -1,7 +1,7 @@
 # 3+1D Periodic Chiral Sign Windows: Wrap and Recurrence Scale
 
 **Date:** 2026-04-09  
-**Status:** Diagnosed, not resolved
+**Status:** open - open or unresolved claim state
 
 This note reduces the 3+1D periodic chiral sign windows to dimensionless finite-volume scales. The sweep was run with the periodic architecture in [`scripts/frontier_chiral_3plus1d_decoherence_sweep.py`](../scripts/frontier_chiral_3plus1d_decoherence_sweep.py) using:
 
