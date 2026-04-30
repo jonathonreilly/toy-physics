@@ -14,6 +14,8 @@ rules:
     performed in a distinct clean-room session with the restricted audit inputs
   - auditor identity must differ from author identity for audited_clean
   - the row's note_hash must match disk (otherwise the audit is stale)
+  - fresh-context second passes over existing high/critical terminal verdicts
+    record a cross-confirmation comparison before any retraction can cascade
 """
 from __future__ import annotations
 
@@ -45,6 +47,11 @@ ALLOWED_VERDICTS = {
 
 ALLOWED_INDEPENDENCE = {"weak", "fresh_context", "cross_family", "strong", "external"}
 CLEAN_INDEPENDENCE = ALLOWED_INDEPENDENCE - {"weak"}
+TERMINAL_CROSS_CONFIRM_VERDICTS = {
+    "audited_renaming",
+    "audited_numerical_match",
+    "audited_failed",
+}
 
 
 def clean_independence_error(independence: str, criticality: str | None = None) -> str | None:
@@ -69,6 +76,29 @@ def cross_confirmation_error(first: dict, audit: dict) -> str | None:
             "to document a restricted-input clean-room session"
         )
     return None
+
+
+def audit_summary_from_row(row: dict) -> dict:
+    """Build the restricted summary used for later comparison."""
+    return {
+        "auditor": row.get("auditor"),
+        "auditor_family": row.get("auditor_family"),
+        "independence": row.get("independence"),
+        "audit_date": row.get("audit_date"),
+        "load_bearing_step_class": row.get("load_bearing_step_class"),
+        "verdict": row.get("audit_status"),
+    }
+
+
+def audit_summary_from_blob(audit: dict) -> dict:
+    return {
+        "auditor": audit.get("auditor"),
+        "auditor_family": audit.get("auditor_family"),
+        "independence": audit.get("independence"),
+        "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
+        "load_bearing_step_class": audit.get("load_bearing_step_class"),
+        "verdict": audit.get("verdict"),
+    }
 
 
 def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
@@ -106,6 +136,51 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         ).hexdigest()
         if on_disk_hash != row.get("note_hash"):
             return False, "note_hash drift; rerun seed_audit_ledger.py before applying audit"
+
+    terminal_second_pass_msg: str | None = None
+    terminal_second_pass_error: str | None = None
+    terminal_second_pass_blocker: str | None = None
+    prior_cross_confirmation = row.get("cross_confirmation")
+    prior_cross_confirmation_status = (
+        prior_cross_confirmation.get("status")
+        if isinstance(prior_cross_confirmation, dict)
+        else prior_cross_confirmation
+    )
+    first_terminal_verdict = row.get("audit_status")
+    terminal_second_pass = (
+        first_terminal_verdict in TERMINAL_CROSS_CONFIRM_VERDICTS
+        and criticality in {"critical", "high"}
+        and prior_cross_confirmation_status in {None, "none"}
+    )
+    if terminal_second_pass:
+        first = audit_summary_from_row(row)
+        err = cross_confirmation_error(first, audit)
+        if err:
+            return False, err
+        if independence == "weak":
+            return False, "terminal cross-confirmation requires independence != 'weak'"
+
+        second = audit_summary_from_blob(audit)
+        matches = (
+            first.get("verdict") == second.get("verdict")
+            and first.get("load_bearing_step_class") == second.get("load_bearing_step_class")
+        )
+        row["cross_confirmation"] = {
+            "first_audit": first,
+            "second_audit": second,
+            "status": "confirmed" if matches else "disagreement",
+            "mode": "terminal_second_pass",
+        }
+        if matches:
+            terminal_second_pass_msg = "terminal verdict cross-confirmed"
+        else:
+            terminal_second_pass_error = (
+                "first and second audits disagree "
+                f"({first.get('verdict')!r}/{first.get('load_bearing_step_class')!r} vs "
+                f"{second.get('verdict')!r}/{second.get('load_bearing_step_class')!r}); "
+                "promote to third-auditor review or human escalation"
+            )
+            terminal_second_pass_blocker = "cross_confirmation_disagreement"
 
     # Cross-confirmation flow for critical claims.
     # First audit on a critical claim with audited_clean lands as
@@ -182,7 +257,7 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     row["auditor_confidence"] = audit.get("auditor_confidence")
     if "runner_check_breakdown" in audit:
         row["runner_check_breakdown"] = audit["runner_check_breakdown"]
-    row["blocker"] = None
+    row["blocker"] = terminal_second_pass_blocker
 
     # Snapshot the state at audit time so invalidate_stale_audits.py can
     # detect changes that warrant re-audit (dep added/removed, dep status
@@ -203,6 +278,10 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
 
     rows[cid] = row
     ledger["rows"] = rows
+    if terminal_second_pass_error:
+        return False, terminal_second_pass_error
+    if terminal_second_pass_msg:
+        return True, terminal_second_pass_msg
     return True, "applied"
 
 
