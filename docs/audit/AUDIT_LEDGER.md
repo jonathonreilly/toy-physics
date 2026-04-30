@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:56:07.978373+00:00
+**Generated:** 2026-04-30T22:56:52.257467+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 83 |
 | _proposed_retained_ | 1 |
 | bounded | 274 |
-| support | 239 |
+| support | 238 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 752 |
+| ~~audited_conditional~~ | 753 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 220 |
-| `audited_conditional` | 479 |
+| `audited_conditional` | 480 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 771 |
+| `unaudited` | 770 |
 
 | criticality | count |
 |---|---:|
@@ -766,6 +766,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_qg_inverse_limit_closure_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_pl_field_interface_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_pl_sobolev_interface_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `universal_qg_pl_weak_form_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_uv_finite_partition_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `unpromoted_branch_retainability_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -11409,6 +11410,24 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md`
   - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
   - `UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_qg_pl_weak_form_note`
+
+- **Note:** [`UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md`](../../docs/UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-44`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The stationary equation K u_* = J is equivalent to the exact weak problem a(u_*, v) = ell(v) for every test field v, and Schur reduction induces the exact coarse weak form again.  _(class `B`)_
+- **chain closes:** False — The equivalence between a symmetric positive operator equation and its finite-dimensional weak form is algebraic once K, the PL field ladder, and the Schur coarse-graining system are established. Those imported inputs are conditional, unaudited support, or audited as renaming in the current ledger.
+- **rationale:** Issue: the PL weak-form closure imports the UV-finite positive Gaussian operator, exact Schur/projective coarse-graining, canonical refinement net, abstract Gaussian completion, and PL field carrier rather than closing them here. Why this blocks: the weak equation is a valid finite-dimensional reformulation only after those systems are established; current upstream audit states include conditional, unaudited support, and renaming. Repair target: ratify or repair the UV partition, Schur/projective closure, refinement-net, abstract completion, and PL field-interface rows, then re-audit the weak-form theorem. Claim boundary until fixed: safe as a conditional project-native weak-form formulation, not as closed QG weak/Dirichlet closure.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
+  - `UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
+  - `UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md`
+  - `UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_qg_uv_finite_partition_note`
