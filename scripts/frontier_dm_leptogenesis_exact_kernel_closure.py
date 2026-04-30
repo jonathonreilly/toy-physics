@@ -69,14 +69,14 @@ D_THERMAL = 3.901508e-3
 ETA_OBS = 6.12e-10
 
 
-def check(name: str, condition: bool, detail: str = "") -> bool:
+def check(name: str, condition: bool, detail: str = "", cls: str = "C") -> bool:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
         PASS_COUNT += 1
     else:
         FAIL_COUNT += 1
-    msg = f"  [{status}] {name}"
+    msg = f"  [{cls}] {status}: {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)
@@ -199,11 +199,13 @@ def part3_exact_eta_hits_observation_on_the_retained_benchmark(epsilon_1: float,
         "The retained-fit benchmark no longer lands near observation once K00 is used consistently in the washout path",
         ratio < 0.7,
         f"eta/eta_obs={ratio:.12f}",
+        cls="D",
     )
     check(
         "Numerically the exact kernel gives eta/eta_obs = 0.5578749661... on the consistent retained-fit benchmark",
         abs(ratio - 0.557874966110017) < 1e-12,
         f"ratio={ratio:.12f}",
+        cls="D",
     )
 
     print()
@@ -223,7 +225,7 @@ def main() -> int:
     part3_exact_eta_hits_observation_on_the_retained_benchmark(epsilon_1, M1)
 
     print("\n" + "=" * 88)
-    print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
+    print(f"SUMMARY: classified_pass={PASS_COUNT} fail={FAIL_COUNT}")
     print("=" * 88)
     return 0 if FAIL_COUNT == 0 else 1
 

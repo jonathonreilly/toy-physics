@@ -491,7 +491,8 @@ def main() -> None:
     print("-" * 128)
     pass_count = 0
     for label, value, status in rows:
-        print(f"{label:<28} {value:<88} {status}")
+        classified_status = f"[C] {status}" if status in {"PASS", "FAIL"} else status
+        print(f"{label:<28} {value:<88} {classified_status}")
         pass_count += int(status == "PASS")
 
     print("-" * 128)

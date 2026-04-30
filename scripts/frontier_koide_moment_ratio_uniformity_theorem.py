@@ -37,14 +37,14 @@ PASS = 0
 FAIL = 0
 
 
-def check(label: str, cond: bool, detail: str = "") -> None:
+def check(label: str, cond: bool, detail: str = "", cls: str = "A") -> None:
     global PASS, FAIL
     status = "PASS" if cond else "FAIL"
     if cond:
         PASS += 1
     else:
         FAIL += 1
-    print(f"[{status}] {label}" + (f"  ({detail})" if detail else ""))
+    print(f"[{cls}] {status}: {label}" + (f"  ({detail})" if detail else ""))
 
 
 def shift_matrix(d: int = 3) -> sp.Matrix:
@@ -229,7 +229,7 @@ def main() -> int:
     print("  non-trivial real doublet to a single scalar radius rho_perp.")
     print("  That makes the scalar charged-lepton carrier two-slot, not three-slot,")
     print("  and the reduced-carrier log-volume extremum is exactly MRU.")
-    print(f"\nPASS={PASS} FAIL={FAIL}")
+    print(f"\nclassified_pass={PASS} fail={FAIL}")
     return 0 if FAIL == 0 else 1
 
 

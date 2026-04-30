@@ -1,6 +1,6 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T19:36:23.218078+00:00
+**Generated:** 2026-04-30T20:10:16.450432+00:00
 **Total pending:** 812
 **Ready (all deps already at a stable tier):** 431
 
@@ -19,7 +19,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 1 | `koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25` | high | 43 | 11.96 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_background_zero_z_erasure_criterion.py` |
 | 2 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | high | 43 | 10.96 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py` |
 | 3 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | high | 40 | 9.86 | Y | fresh_context_or_stronger | `scripts/frontier_area_law_algebraic_spectrum_entropy_no_go.py` |
-| 4 | `koide_q_delta_closure_package_readme_2026-04-21` | high | 39 | 11.32 | Y | fresh_context_or_stronger | - |
+| 4 | `koide_q_delta_closure_package_readme_2026-04-21` | high | 39 | 11.32 | Y | fresh_context_or_stronger | `scripts/frontier_koide_Q_eq_3delta_identity.py` |
 | 5 | `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | high | 38 | 10.29 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_source_domain_canonical_descent.py` |
 | 6 | `pmns_selector_current_stack_zero_law_note` | high | 38 | 8.79 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_selector_current_stack_zero_law.py` |
 | 7 | `cl3_color_automorphism_theorem` | high | 37 | 10.25 | Y | fresh_context_or_stronger | `scripts/verify_cl3_sm_embedding.py` |
@@ -52,7 +52,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 34 | `universal_qg_pl_field_interface_note` | high | 33 | 8.09 | Y | fresh_context_or_stronger | - |
 | 35 | `universal_qg_pl_sobolev_interface_note` | high | 33 | 8.09 | Y | fresh_context_or_stronger | - |
 | 36 | `universal_qg_pl_weak_form_note` | high | 33 | 8.09 | Y | fresh_context_or_stronger | - |
-| 37 | `koide_q_second_order_support_batch_note_2026-04-22` | high | 33 | 7.59 | Y | fresh_context_or_stronger | - |
+| 37 | `koide_q_second_order_support_batch_note_2026-04-22` | high | 33 | 7.59 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_bridge_single_primitive.py` |
 | 38 | `koide_reviewer_stress_test_note_2026-04-21` | high | 33 | 7.59 | Y | fresh_context_or_stronger | `scripts/frontier_koide_reviewer_stress_test.py` |
 | 39 | `primordial_spectrum_note` | high | 33 | 7.59 | Y | fresh_context_or_stronger | `scripts/frontier_primordial_spectrum.py` |
 | 40 | `universal_qg_canonical_smooth_geometric_action_note` | high | 33 | 7.59 | Y | fresh_context_or_stronger | - |

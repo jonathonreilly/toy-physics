@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:36:23.400760+00:00
+**Generated:** 2026-04-30T20:10:16.717313+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -52,9 +52,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1127
-- runners with (C) first-principles compute hits: 518
-- runners with (D) external comparator hits: 278
+- runners classified: 1155
+- runners with (C) first-principles compute hits: 534
+- runners with (D) external comparator hits: 284
 - decoration candidates (no C, no D): 81
 
 ## Top 25 by load-bearing score (topology only)

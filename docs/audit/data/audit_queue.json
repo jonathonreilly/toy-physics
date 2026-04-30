@@ -5,7 +5,7 @@
     "leaf": 286,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:36:23.218078+00:00",
+  "generated_at": "2026-04-30T20:10:16.450432+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -72,7 +72,7 @@
       "load_bearing_score": 11.322,
       "note_path": "docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_Q_eq_3delta_identity.py",
       "transitive_descendants": 39
     },
     {
@@ -633,7 +633,7 @@
       "load_bearing_score": 7.587,
       "note_path": "docs/KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_q_bridge_single_primitive.py",
       "transitive_descendants": 33
     },
     {
@@ -2577,7 +2577,7 @@
       "load_bearing_score": 9.477,
       "note_path": "docs/HW1_SECOND_ORDER_RETURN_SHAPE_THEOREM_NOTE.md",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_hw1_second_order_return_shape_theorem.py",
       "transitive_descendants": 62
     },
     {
@@ -3883,7 +3883,7 @@
       "load_bearing_score": 9.209,
       "note_path": "docs/THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_generation_fermi_point.py",
       "transitive_descendants": 36
     },
     {
@@ -8118,7 +8118,7 @@
       "load_bearing_score": 5.67,
       "note_path": "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md",
       "ready": true,
-      "runner_path": "scripts/frontier_color_projection_mc.py",
+      "runner_path": "scripts/frontier_complete_prediction_chain.py",
       "transitive_descendants": 35
     },
     {
@@ -10927,7 +10927,7 @@
       "load_bearing_score": 7.087,
       "note_path": "docs/MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_mass_mixing_disjointness_theorem.py",
       "transitive_descendants": 33
     },
     {
@@ -10961,7 +10961,7 @@
       "load_bearing_score": 6.587,
       "note_path": "docs/DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py",
       "transitive_descendants": 33
     },
     {
@@ -12593,7 +12593,7 @@
       "load_bearing_score": 3.822,
       "note_path": "docs/BORN_SCATTERING_COMPARISON_NOTE.md",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/gaussian_beam_eikonal.py",
       "transitive_descendants": 4
     },
     {
@@ -13213,7 +13213,7 @@
       "load_bearing_score": 2.5,
       "note_path": "docs/EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_emergent_geometry.py",
       "transitive_descendants": 3
     },
     {
@@ -13230,7 +13230,7 @@
       "load_bearing_score": 2.5,
       "note_path": "docs/GRAPH_LAPLACIAN_CORE_CARD_NOTE.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_graph_kg_16card.py",
       "transitive_descendants": 3
     },
     {
@@ -13264,7 +13264,7 @@
       "load_bearing_score": 2.5,
       "note_path": "docs/MIRROR_PROGRAM_SYNTHESIS.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/mirror_born_audit.py",
       "transitive_descendants": 3
     },
     {
@@ -13298,7 +13298,7 @@
       "load_bearing_score": 2.5,
       "note_path": "docs/STAGGERED_FERMION_CARD_2026-04-11.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_17card.py",
       "transitive_descendants": 3
     },
     {
@@ -13318,7 +13318,7 @@
       "load_bearing_score": 2.085,
       "note_path": "docs/lanes/ordered-lattice/README.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_dense_10prop.py",
       "transitive_descendants": 2
     },
     {
@@ -13386,7 +13386,7 @@
       "load_bearing_score": 1.5,
       "note_path": "docs/MIRROR_MUTUAL_INFORMATION_CANONICAL_FAMILIES_NOTE.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/mirror_mutual_information_canonical_families.py",
       "transitive_descendants": 1
     },
     {
@@ -13592,7 +13592,7 @@
       "load_bearing_score": 0.0,
       "note_path": "docs/MAIN_OPEN_CUBIC_VALIDATION_2026-04-11.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_newton_reproduction.py",
       "transitive_descendants": 0
     },
     {
@@ -13779,7 +13779,7 @@
       "load_bearing_score": 0.0,
       "note_path": "docs/MIRROR_GRAVITY_PROBE_NOTE.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/mirror_gravity_fixed_anchor.py",
       "transitive_descendants": 0
     },
     {
@@ -14002,7 +14002,7 @@
       "load_bearing_score": 0.0,
       "note_path": "docs/OLLIVIER_EINSTEIN_PROXY_NOTE_2026-04-11.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_ollivier_einstein.py",
       "transitive_descendants": 0
     },
     {
@@ -15056,7 +15056,7 @@
       "load_bearing_score": 0.0,
       "note_path": "docs/SCALAR_KG_RERUN_NOTE_2026-04-10.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_scalar_kg_16card_v2.py",
       "transitive_descendants": 0
     },
     {
@@ -15090,7 +15090,7 @@
       "load_bearing_score": 0.0,
       "note_path": "docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_moment_ratio_uniformity_theorem.py",
       "transitive_descendants": 0
     },
     {
@@ -15175,7 +15175,7 @@
       "load_bearing_score": 0.0,
       "note_path": "docs/SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_z3_joint_projector_identity.py",
       "transitive_descendants": 0
     },
     {
@@ -15872,7 +15872,7 @@
       "load_bearing_score": 0.0,
       "note_path": "docs/SPECTRAL_CLOSURE_2026-04-09.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_spectral_on_lattice.py",
       "transitive_descendants": 0
     },
     {
@@ -15889,7 +15889,7 @@
       "load_bearing_score": 0.0,
       "note_path": "docs/SPECTRAL_SYMMETRY_NOTE.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/ceiling_formal_proof.py",
       "transitive_descendants": 0
     },
     {
@@ -16076,7 +16076,7 @@
       "load_bearing_score": 0.0,
       "note_path": "docs/STRUCTURED_MIRROR_JOINT_VALIDATION_NOTE.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/structured_mirror_joint_validation.py",
       "transitive_descendants": 0
     },
     {
@@ -16620,7 +16620,7 @@
       "load_bearing_score": 0.0,
       "note_path": "docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_yt_ew_coupling_derivation.py",
       "transitive_descendants": 0
     },
     {
@@ -16700,7 +16700,7 @@
       "load_bearing_score": 2.085,
       "note_path": "docs/lanes/action-law/README.md",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_3plus1d_closure_card.py",
       "transitive_descendants": 2
     },
     {
@@ -16720,7 +16720,7 @@
       "load_bearing_score": 2.085,
       "note_path": "docs/lanes/coin-walks/README.md",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_chiral_bottleneck_card.py",
       "transitive_descendants": 2
     },
     {
@@ -16741,7 +16741,7 @@
       "load_bearing_score": 2.085,
       "note_path": "docs/lanes/generated-geometry/README.md",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_joint_package.py",
       "transitive_descendants": 2
     },
     {
@@ -16761,7 +16761,7 @@
       "load_bearing_score": 2.085,
       "note_path": "docs/lanes/mirror/README.md",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/mirror_2d_validation.py",
       "transitive_descendants": 2
     },
     {
@@ -16781,7 +16781,7 @@
       "load_bearing_score": 2.085,
       "note_path": "docs/lanes/staggered/README.md",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_17card.py",
       "transitive_descendants": 2
     },
     {
@@ -17028,7 +17028,7 @@
       "load_bearing_score": 1.5,
       "note_path": "docs/publication/ci3_z3/FIGURE_PLAN.md",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_graph_first_su3_integration.py",
       "transitive_descendants": 1
     },
     {
@@ -17184,7 +17184,7 @@
       "load_bearing_score": 0.0,
       "note_path": "docs/3D_CORRECTION_MASTER_NOTE.md",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/dispersion_3d_lattice.py",
       "transitive_descendants": 0
     },
     {
@@ -17727,7 +17727,7 @@
       "load_bearing_score": 0.0,
       "note_path": "docs/PERIODIC_2D_WRAPAROUND_FIX_NOTE_2026-04-11.md",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_self_consistency_test.py",
       "transitive_descendants": 0
     },
     {

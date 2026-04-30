@@ -33,14 +33,14 @@ PASS_COUNT = 0
 FAIL_COUNT = 0
 
 
-def check(name: str, condition: bool, detail: str = "") -> bool:
+def check(name: str, condition: bool, detail: str = "", cls: str = "C") -> bool:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
         PASS_COUNT += 1
     else:
         FAIL_COUNT += 1
-    msg = f"  [{status}] {name}"
+    msg = f"  [{cls}] {status}: {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)
@@ -141,7 +141,7 @@ def main() -> int:
     print("      converged or exact thermal theorem before attempting further selector collapse")
 
     print("\n" + "=" * 88)
-    print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
+    print(f"SUMMARY: classified_pass={PASS_COUNT} fail={FAIL_COUNT}")
     print("=" * 88)
     return 0 if FAIL_COUNT == 0 else 1
 
