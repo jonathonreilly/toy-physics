@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 26,
+    "critical": 25,
     "high": 234,
     "leaf": 571,
     "medium": 342
   },
-  "generated_at": "2026-04-30T11:41:37.969277+00:00",
+  "generated_at": "2026-04-30T11:41:41.322454+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,29 +23,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "transitive_descendants": 281
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [
-        "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
-        "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
-        "dm_neutrino_source_surface_m_spectator_theorem_note_2026-04-16",
-        "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
-        "dm_neutrino_source_surface_slot_torsion_boundary_theorem_note_2026-04-16"
-      ],
-      "direct_in_degree": 17,
-      "load_bearing_score": 15.477,
-      "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_dm_neutrino_source_surface_active_half_plane_theorem.py",
-      "transitive_descendants": 125
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24764,5 +24741,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1173
+  "total_pending": 1172
 }
