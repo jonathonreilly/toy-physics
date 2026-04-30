@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:42:07.960915+00:00
+**Generated:** 2026-04-30T02:42:11.272000+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 205 |
 | support | 105 |
 | open | 24 |
-| unknown | 537 |
+| unknown | 536 |
 | ~~audited_decoration~~ | 4 |
 | ~~audited_numerical_match~~ | 47 |
-| ~~audited_renaming~~ | 65 |
-| ~~audited_conditional~~ | 427 |
+| ~~audited_renaming~~ | 72 |
+| ~~audited_conditional~~ | 421 |
 | ~~audited_failed~~ | 91 |
 
 | audit_status | count |
@@ -39,8 +39,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 19 |
-| `audited_renaming` | 9 |
-| `unaudited` | 1270 |
+| `audited_renaming` | 10 |
+| `unaudited` | 1269 |
 
 | criticality | count |
 |---|---:|
@@ -85,7 +85,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 18 | `minimal_axioms_2026-04-11` | critical | 102 | 17.19 | `unaudited` | ~~audited_renaming~~ |
 | 19 | `native_gauge_closure_note` | critical | 280 | 16.63 | `unaudited` | ~~audited_conditional~~ |
 | 20 | `plaquette_self_consistency_note` | critical | 286 | 16.16 | `unaudited` | ~~audited_conditional~~ |
-| 21 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 116 | 15.87 | `unaudited` | ~~audited_conditional~~ |
+| 21 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 116 | 15.87 | `unaudited` | ~~audited_renaming~~ |
 | 22 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 125 | 15.48 | `unaudited` | ~~audited_conditional~~ |
 | 23 | `site_phase_cube_shift_intertwiner_note` | critical | 277 | 15.12 | `audit_in_progress` | support |
 | 24 | `physical_lattice_necessity_note` | critical | 270 | 15.08 | `unaudited` | ~~audited_renaming~~ |
@@ -409,6 +409,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `g_bare_rigidity_theorem_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `higgs_mass_from_axiom_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
+| `hypercharge_identification_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5 | F | - |
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `s3_time_bilinear_tensor_primitive_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_qg_optional_textbook_comparison_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
@@ -2386,6 +2387,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** So numerical Lane 5 closure requires a retained absolute-scale premise and a retained dimensionless cosmic-history premise: `(C1) AND ((C2) OR (C3))`.  _(class `A`)_
 - **chain closes:** True — The claim is a negative boundary: the note does not derive numerical H_0, but shows that H_0 = H_inf/sqrt(L) remains sensitive to both an absolute-scale input and a dimensionless-history input. The live runner verifies the symbolic identity, one-gate counterexample families, structural-lock rescaling, and current gate inventory with PASS=18 FAIL=0.
 - **rationale:** The retained content is the two-gate firewall, not a numerical H_0 derivation. The note's load-bearing algebra closes: solving L = (H_inf/H_0)^2 gives H_0 = H_inf/sqrt(L), and the live runner verifies nonzero sensitivity to both H_inf and L plus explicit one-gate counterexample families. The structural lock is correctly treated as a dimensionless form invariant under common rescaling, not as a scalar H_0 prediction. Residual risk is downstream misuse: this audit does not ratify Omega_Lambda, R_Lambda, Planck normalization, or a numerical Hubble-tension resolution.
+- **auditor confidence:** high
+
+### `hypercharge_identification_note`
+
+- **Note:** [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](../../docs/HYPERCHARGE_IDENTIFICATION_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** With conventional normalization a = 1/3, the unique traceless commutant generator has eigenvalues +1/3 on the (2,3) subspace and -1 on the (2,1) subspace, which are identified as the Standard Model left-handed quark and lepton hypercharges.  _(class `F`)_
+- **chain closes:** False — The algebraic commutant and traceless-generator calculation closes, but the note does not derive the physical readout that this internal U(1) is the Standard Model hypercharge gauge generator rather than an isomorphic assignment on a chosen left-handed surface.
+- **rationale:** Issue: the note identifies the unique traceless commutant U(1) with Standard Model hypercharge after choosing the conventional normalization and labeling the (2,3)/(2,1) subspaces as quark/lepton doublets. Why this blocks: the linear algebra proves the eigenvalue ratio, but it does not derive the physical gauge-field/readout map or the full SM fermion assignment from retained inputs. Repair target: provide a retained theorem deriving the hypercharge gauge generator, normalization, and state identification from the lattice/taste construction, including the full anomaly-canceling fermion surface. Claim boundary until fixed: the note supports an internal commutant U(1) with the same left-handed eigenvalue pattern as hypercharge, not an audited physical hypercharge identification.
 - **auditor confidence:** high
 
 ### `i3_zero_exact_theorem_note`
