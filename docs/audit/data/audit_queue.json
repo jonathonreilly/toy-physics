@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 4,
+    "critical": 3,
     "high": 234,
     "leaf": 571,
     "medium": 342
   },
-  "generated_at": "2026-04-30T11:42:53.206827+00:00",
+  "generated_at": "2026-04-30T11:42:56.545185+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,29 +23,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "transitive_descendants": 281
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "n_eff_from_three_generations_theorem_note_2026-04-24",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "three_generation_structure_note",
-        "one_generation_matter_closure_note",
-        "bminusl_anomaly_freedom_theorem_note_2026-04-24",
-        "neutrino_mass_derived_note",
-        "matter_radiation_equality_structural_identity_theorem_note_2026-04-24"
-      ],
-      "direct_in_degree": 16,
-      "load_bearing_score": 13.285,
-      "note_path": "docs/N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_n_eff_from_three_generations.py",
-      "transitive_descendants": 38
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24245,5 +24222,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1151
+  "total_pending": 1150
 }
