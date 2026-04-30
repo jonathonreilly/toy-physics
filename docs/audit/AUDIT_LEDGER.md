@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:56:00.207953+00:00
+**Generated:** 2026-04-30T18:56:07.562438+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 110 |
+| `audited_clean` | 111 |
 | `audited_conditional` | 311 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1054 |
+| `unaudited` | 1053 |
 
 | criticality | count |
 |---|---:|
@@ -195,6 +195,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
+| `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_retardation_lab_prediction_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -7589,6 +7590,18 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 - **open / conditional deps cited:**
   - `STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`
   - `MIRROR_CHOKEPOINT_NOTE.md`
+- **auditor confidence:** high
+
+### `structured_chokepoint_bridge_note`
+
+- **Note:** [`STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](../../docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-ca82-singer-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For N=25,40,60, the structured chokepoint slice remains Born-clean, k=0 pinned, positive-gravity, and below the decoherence ceiling on the registered canonical readout.  _(class `D`)_
+- **chain closes:** True — The current runner reproduces the three-row diagnostic table with the stated Born, k=0, gravity, and pur_cl values. The closure is finite and readout-specific, with no asymptotic or architecture-level bridge theorem.
+- **rationale:** The bounded finite card closes from the source note and current runner output. It does not derive the graph parameters, enforce hard assertions in code, or establish readout-independent survival, but the current note explicitly narrows away from those stronger claims. Residual risk is scope drift if the word bridge is later treated as architecture-level closure.
 - **auditor confidence:** high
 
 ### `symmetry_head_to_head_note`
