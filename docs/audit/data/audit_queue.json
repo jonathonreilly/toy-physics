@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 345,
+    "leaf": 344,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:30:13.617506+00:00",
+  "generated_at": "2026-04-30T19:30:19.533979+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13854,23 +13854,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "growing_graph_expansion_card_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GROWING_GRAPH_EXPANSION_CARD_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/growing_graph_expansion_card.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "growing_graph_expansion_skeptic_audit_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -19179,6 +19162,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 490,
-  "total_pending": 871
+  "ready_count": 489,
+  "total_pending": 870
 }
