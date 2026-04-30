@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T00:48:10.186701+00:00",
-  "generated_at": "2026-04-30T00:48:08.395620+00:00",
-  "invalidation_run_at": "2026-04-30T00:48:10.125560+00:00",
+  "effective_status_computed_at": "2026-04-30T00:48:13.493424+00:00",
+  "generated_at": "2026-04-30T00:48:11.734300+00:00",
+  "invalidation_run_at": "2026-04-30T00:48:13.433237+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T00:48:09.996880+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:48:13.314345+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -32670,14 +32670,21 @@
       "verdict_rationale": null
     },
     "gauge_vacuum_plaquette_spectral_measure_theorem_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:48:10.795090+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The compact spectral-measure construction closes, but the source row is current_status=unknown, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "gauge_vacuum_plaquette_spectral_measure_theorem_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32697,30 +32704,32 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Pushing the finite Wilson partition function forward by the continuous plaquette average A_L gives Z_L(beta)=Z_L(0) integral exp(beta N_plaq a) dmu_L(a), so the connected hierarchy is the tilted cumulant hierarchy of one compact measure.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "094d106e108052485ace117cfbae260096371acffb4b54ac59ff947a64194cf2",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 8,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 8
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py",
       "title": "Gauge-Vacuum Plaquette Spectral-Measure Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the exact generating measure exists uniquely, but explicit beta=6 identification is not ratified."
     },
     "gauge_vacuum_plaquette_susceptibility_flow_theorem_note": {
       "audit_date": null,
