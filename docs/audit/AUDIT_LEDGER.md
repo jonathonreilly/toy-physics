@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:25:13.596557+00:00
+**Generated:** 2026-04-30T19:25:19.921702+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 174 |
+| `audited_clean` | 175 |
 | `audited_conditional` | 380 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 920 |
+| `unaudited` | 919 |
 
 | criticality | count |
 |---|---:|
@@ -174,6 +174,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `electric_sign_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `electrostatics_card_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `electrostatics_superposition_proxy_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `emergent_product_law_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `equivalence_principle_harness_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fixed_field_complex_grown_basin_v2_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fixed_field_family_unification_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -4794,6 +4795,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `CPT_EXACT_NOTE.md_not_registered_one_hop_dependency`
   - `parity_operator_basis_dimension5_LV_no_go_theorem_not_registered`
   - `hierarchy_scale_a_equals_planck_length_theorem_not_registered`
+- **auditor confidence:** high
+
+### `emergent_product_law_note`
+
+- **Note:** [`EMERGENT_PRODUCT_LAW_NOTE.md`](../../docs/EMERGENT_PRODUCT_LAW_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** **Frozen-source control:** Poisson fields computed once from initial densities and  _(class `C`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 3 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
 ### `equivalence_principle_harness_note`

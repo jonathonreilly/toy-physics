@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 394,
+    "leaf": 393,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:25:13.437308+00:00",
+  "generated_at": "2026-04-30T19:25:19.758650+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13756,23 +13756,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "emergent_product_law_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/EMERGENT_PRODUCT_LAW_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_emergent_product_law.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "evolving_network_prototype_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20025,6 +20008,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 538,
-  "total_pending": 920
+  "ready_count": 537,
+  "total_pending": 919
 }
