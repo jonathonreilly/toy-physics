@@ -1,10 +1,11 @@
 # Lane 4 Loop Close-Out: Honest Stop + Final Report
 
 **Date:** 2026-04-28
-**Status:** open workstream close-out note for Lane 4; no claim promotion.
-Per new physics-loop skill stop-condition: both Deep Work Rules requirements
-satisfied (≥1 stretch attempt in Cycle 3, ≥1 stuck fan-out in Cycle 4).
-Honest stop with workstream close-out + PR opening.
+**Status:** bounded workstream close-out / no-go inventory for Lane 4; no
+claim promotion and no axiom amendment. Per new physics-loop skill
+stop-condition: both Deep Work Rules requirements satisfied (≥1 stretch
+attempt in Cycle 3, ≥1 stuck fan-out in Cycle 4). Honest stop with
+workstream close-out + PR opening.
 **Lane:** 4 — Neutrino quantitative closure
 **Loop:** `neutrino-quantitative-20260428`
 
@@ -25,7 +26,7 @@ two STATE.yaml patches).
 - Cycle 1: `docs/NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md`
   (Lane 4 closure roadmap; audit-grade)
 - Cycle 2: `docs/NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md`
-  (conditional Dirac global theorem; audit-grade/blocker-isolation)
+  (bounded conditional Dirac theorem; audit-grade/blocker-isolation)
 - Cycle 3: `docs/NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md`
   (mandatory stretch attempt from `A_min`; STRETCH-grade)
 - Cycle 4: `docs/NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md`
@@ -39,24 +40,22 @@ Plus 10-file workstream pack at
 **Net structural progress on Lane 4:**
 
 1. Closure roadmap with phase ordering (Cycle 1).
-2. Conditional Dirac global theorem on retained content + named
+2. Bounded conditional Dirac theorem on retained content + named
    single load-bearing obstruction `(C2-X)` charge-2 primitive class
-   exhaustion + four candidate retention routes (Cycle 2).
+   exhaustion + bounded candidate attack ledger (Cycle 2).
 3. **`(R-X1)` anomaly-cancellation exhaustion FALSIFIED** as a
    closure route (Cycle 3 finding).
-4. `(C2-X)` reformulated from research-level to decision-level via
-   the strict-vs-permissive `A_min` axiom-3 reading (Cycle 3
-   finding).
-5. **Cycle 4 stuck fan-out REVISED Cycle 3's conclusion** — the
-   framework's intended reading of axiom 3 is permissive (per
-   explicit authorial intent across the Majorana cluster +
-   `MINIMAL_AXIOMS` note's own posture statement). `(C2-X)` returns
-   to research-level.
-6. New attack frames identified for `(C2-X)` under permissive
-   reading: `(SR-1)` Lorentz-onset incompatibility, **`(SR-2)`
-   continuum-limit scalar 2-point incompatibility (recommended
-   single-cycle continuation)**, `(SR-3)` stronger SM anomaly
-   cluster forcing bilinear matter content.
+4. `(C2-X)` reformulated as a strict-vs-permissive `A_min` axiom-3
+   reading boundary (Cycle 3 finding), now governed by
+   `docs/audit/AXIOM_MINIMALITY_POLICY.md`: no axiom amendment closes
+   the lane during the repo audit.
+5. **Cycle 4 stuck fan-out REVISED Cycle 3's conclusion** — `(C2-X)`
+   remains unclosed from fixed `A_min`; the strict/permissive fork is
+   bounded inventory, not a closure decision.
+6. New candidate attack frames identified for `(C2-X)`: `(SR-1)`
+   Lorentz-onset incompatibility, **`(SR-2)` continuum-limit scalar
+   2-point incompatibility**, `(SR-3)` stronger SM anomaly cluster
+   forcing bilinear matter content.
 
 **Deep Work Rules compliance:**
 
@@ -67,22 +66,22 @@ Plus 10-file workstream pack at
 - Cycle 4 = stuck fan-out with 5+5 (≥3+3) orthogonal arguments +
   synthesis + best-remaining-attack identification.
 - Cycle 4 revised Cycle 3 — the fan-out caught a prior over-claim
-  (decision-level reformulation), demonstrating the new skill's
+  (axiom-reading reformulation), demonstrating the new skill's
   intended self-correcting pattern.
 
 **Lane 4 closure pathway after this loop:**
 
 ```text
-4D Dirac global lift = Cycle 2 conditional theorem + (C2-X) retained
+4D Dirac global lift = Cycle 2 bounded conditional theorem + (C2-X) derived
                      ↑
-             gated on closing (C2-X) under permissive reading
+             gated on closing (C2-X) from fixed A_min
                      ↑
-        best single-cycle continuation: (SR-2) continuum-limit
-        scalar 2-point incompatibility with Pfaffian extensions
+        candidate attack frames: (SR-1), (SR-2), (SR-3)
 ```
 
-The Cycle-2 conditional theorem becomes unconditional if `(SR-2)`
-(or `(SR-1)` or `(SR-3)`) lands. Until then, 4D is conditional only.
+The Cycle-2 conditional theorem becomes unconditional only if `(SR-2)`
+(or `(SR-1)` or `(SR-3)`) supplies a derivation from fixed `A_min`.
+Until then, 4D is bounded conditional only.
 
 ## 1. Stop-condition justification
 
@@ -137,7 +136,7 @@ re-enters this same pack. The pack will quickly evaluate Cycle 5
 candidates:
 
 - **(SR-2) continuum-limit scalar 2-point incompatibility with
-  Pfaffian extensions** — recommended single-cycle continuation.
+  Pfaffian extensions** — candidate attack frame.
 - **(SR-1) Lorentz-onset incompatibility** — alternative angle.
 - **(SR-3) stronger SM anomaly cluster** — alternative angle.
 - **Pivot to 4F `Sigma m_nu`** if `(C2-X)` work is paused.
@@ -152,17 +151,16 @@ Review-loop integration applied the public discovery wiring:
   now points to the roadmap, conditional lift, stretch attempt, fan-out, and
   close-out artifacts.
 - `docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md` now records the conditional
-  4D gate isolation, the falsified `(R-X1)` route, and `(SR-2)` as the next
-  recommended attack.
+  bounded 4D gate isolation, the falsified `(R-X1)` route, and the
+  `(SR-1)` / `(SR-2)` / `(SR-3)` no-go ledger.
 - `docs/CANONICAL_HARNESS_INDEX.md` now lists the Lane 4 workstream packet
   under open frontier lanes.
 
-Remaining future integration item:
+Policy integration item:
 
-- `docs/MINIMAL_AXIOMS_2026-04-11.md`: consider explicitly stating
-  whether axiom 3 is read as permissive (which the framework's
-  authorial intent suggests). The Cycle 4 fan-out provides the
-  argument.
+- `docs/audit/AXIOM_MINIMALITY_POLICY.md` fixes `A_min` through the repo
+  audit. This supersedes any `MINIMAL_AXIOMS_2026-04-11.md` amendment path
+  for the Cycle 3 / Cycle 4 axiom-3 reading question.
 
 ## 5. Cross-references
 
@@ -174,16 +172,18 @@ Remaining future integration item:
 - Lane file:
   `docs/lanes/open_science/04_NEUTRINO_QUANTITATIVE_OPEN_LANE_2026-04-26.md`
 - Axiom source:
-  `docs/MINIMAL_AXIOMS_2026-04-11.md` (under interpretation per
-  Cycle 3 + Cycle 4)
+  `docs/MINIMAL_AXIOMS_2026-04-11.md` (source of the axiom-3 reading
+  boundary recorded in Cycle 3 + Cycle 4)
+- Audit policy:
+  `docs/audit/AXIOM_MINIMALITY_POLICY.md` (fixes `A_min` through the
+  repo audit)
 
 ## 6. Boundary
 
 This is a workstream close-out artifact. It does not retire any
-input, does not introduce new claims, does not promote any cycle's
-content. It documents the runtime exhaustion + Deep Work Rules
-satisfaction stop, lists the four cycle artifacts for the post-loop
-integration pipeline, and hands off the recommended `(SR-2)`
-continuation route.
+input, does not introduce new claims, does not promote any cycle's content,
+and does not amend `A_min`. It documents the runtime exhaustion + Deep Work
+Rules satisfaction stop, lists the four cycle artifacts for the post-loop
+integration pipeline, and lands the `(C2-X)` work as bounded no-go inventory.
 
 A runner is not authored.

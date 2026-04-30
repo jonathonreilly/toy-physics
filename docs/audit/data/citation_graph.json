@@ -18433,7 +18433,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T14:42:45.281058+00:00",
+  "generated_at": "2026-04-30T14:54:01.205268+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -20583,7 +20583,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "112d113a0edbb7a6a8689f30fd45513f45b7512f76b48331ec614938c1cb9f30",
+      "note_hash": "a99b9e94874028a54702ed75acecc9c672b73d54c1cb1fb6ee542bf2ab21cf39",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -28994,7 +28994,7 @@
         "ai_methodology.raw.readme",
         "lanes.open_science.readme"
       ],
-      "note_hash": "5460be5ce14b2e58104dfb0651ebd6415b7878ff4b99648d947ba319d55b3faf",
+      "note_hash": "168ac6f8107dfcc57246c1e7fd7ac790353741280fa3a42361c1db12c938c65e",
       "path": "docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md",
       "runner_path": null,
       "title": "Active Working Lanes"
@@ -29140,7 +29140,7 @@
         "n_eff_from_three_generations_theorem_note_2026-04-24",
         "neutrino_two_amplitude_last_mile_reduction_note"
       ],
-      "note_hash": "f93ead541b9170af0174f4a748d72af66b13e9d355ec09759cd4cd449bc8cb93",
+      "note_hash": "2d5d42f19aee92365c445ca2d63ce670a8e0c77112d675486e6e38d49fc3d245",
       "path": "docs/lanes/open_science/04_NEUTRINO_QUANTITATIVE_OPEN_LANE_2026-04-26.md",
       "runner_path": null,
       "title": "Lane 4 \u2014 Neutrino Quantitative Closure"
@@ -30487,23 +30487,23 @@
     },
     "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28": {
       "claim_id": "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
-      "current_status": "open",
-      "current_status_raw": "open stuck-fan-out note for Lane 4; synthesis and route triage",
+      "current_status": "bounded",
+      "current_status_raw": "bounded stuck-fan-out / no-go inventory for Lane 4; synthesis and",
       "deps": [],
-      "note_hash": "4ae38d4fc2efd910d4f0a69fdc6ca8488bd0a733b6d56d30f8c9a8e770d0828e",
+      "note_hash": "de664c24e09527aab1d3c01ba306be36a9ec10e576c877c5c83a4cbe0220ea00",
       "path": "docs/NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "Stuck Fan-Out: Strict vs Permissive Reading of `A_min` Axiom 3"
     },
     "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28": {
       "claim_id": "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28",
-      "current_status": "support",
-      "current_status_raw": "support conditional theorem for Lane 4 gate isolation; no",
+      "current_status": "bounded",
+      "current_status_raw": "bounded conditional theorem / Lane 4 no-go inventory entry; no",
       "deps": [],
-      "note_hash": "e17820a36fad4f55b77146576afc8435eb51a0b975a35c3ff206a04f0fb16332",
+      "note_hash": "a17d9bc1a6b8ef948d5c9494479f81d7c2a1ba7c99ce533d2b34a6b68d792b6c",
       "path": "docs/NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md",
       "runner_path": null,
-      "title": "Neutrino Dirac Global Lift \u2014 Partial Theorem with Named Obstruction"
+      "title": "Neutrino Dirac Global Lift \u2014 Bounded Conditional Theorem with Named Obstruction"
     },
     "neutrino_dirac_pmns_retained_lane_packet_2026-04-16": {
       "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
@@ -30615,10 +30615,10 @@
     },
     "neutrino_lane4_workstream_closeout_note_2026-04-28": {
       "claim_id": "neutrino_lane4_workstream_closeout_note_2026-04-28",
-      "current_status": "open",
-      "current_status_raw": "open workstream close-out note for Lane 4; no claim promotion.",
+      "current_status": "bounded",
+      "current_status_raw": "bounded workstream close-out / no-go inventory for Lane 4; no",
       "deps": [],
-      "note_hash": "183fa3f85b7d4657f9b29b84e03b1c942c7636225bd7d7971805f8b910cc6d39",
+      "note_hash": "4844604bb763e0e717b21ac9816a84936ab28d12ca89568d7a281fa08def3a43",
       "path": "docs/NEUTRINO_LANE4_WORKSTREAM_CLOSEOUT_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "Lane 4 Loop Close-Out: Honest Stop + Final Report"
@@ -31246,7 +31246,7 @@
       "current_status": "open",
       "current_status_raw": "open stretch-attempt note for Lane 4; no `(C2-X)` closure.",
       "deps": [],
-      "note_hash": "d6aef50a39266949659832add106bd224531d1b283b6164e3c5fd97c6bbb14cd",
+      "note_hash": "1c2b939b78c81018143534d88304129a7f8133ae96c1064c6625cdc886a0051f",
       "path": "docs/NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "Normal-Grammar `U(1)` Rigidity Stretch Attempt \u2014 First-Principles Work From `A_min`"
@@ -41677,11 +41677,11 @@
     "root_count": 1216,
     "runners_with_path": 777,
     "status_counts": {
-      "bounded": 258,
-      "open": 40,
+      "bounded": 261,
+      "open": 38,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 190,
+      "support": 189,
       "unknown": 796
     }
   }

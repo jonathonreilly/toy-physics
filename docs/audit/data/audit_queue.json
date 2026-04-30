@@ -5,7 +5,7 @@
     "leaf": 588,
     "medium": 347
   },
-  "generated_at": "2026-04-30T14:42:47.289760+00:00",
+  "generated_at": "2026-04-30T14:54:03.345081+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10021,7 +10021,7 @@
       "criticality": "medium",
       "criticality_rank": 1,
       "cross_confirmation_status": null,
-      "current_status": "open",
+      "current_status": "bounded",
       "deps": [],
       "direct_in_degree": 3,
       "load_bearing_score": 5.5,
@@ -10038,7 +10038,7 @@
       "criticality": "medium",
       "criticality_rank": 1,
       "cross_confirmation_status": null,
-      "current_status": "support",
+      "current_status": "bounded",
       "deps": [],
       "direct_in_degree": 3,
       "load_bearing_score": 5.5,
@@ -10072,7 +10072,7 @@
       "criticality": "medium",
       "criticality_rank": 1,
       "cross_confirmation_status": null,
-      "current_status": "open",
+      "current_status": "bounded",
       "deps": [],
       "direct_in_degree": 2,
       "load_bearing_score": 5.0,

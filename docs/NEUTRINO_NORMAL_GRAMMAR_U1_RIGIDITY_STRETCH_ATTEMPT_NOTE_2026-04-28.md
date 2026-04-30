@@ -231,19 +231,20 @@ question:
 > **`(C2-X)-strict`**: `A_min` axiom 3 is interpreted strictly as
 > the staggered-Dirac partition without Pfaffian / pairing extensions.
 
-If the framework adopts `(C2-X)-strict` as the canonical reading of
-its own axiom 3, then by §3.4's corollary the conditional Dirac
-global lift becomes **unconditional**.
+If `(C2-X)-strict` were adopted as an extra axiom-interpretation rule, then
+by §3.4's corollary the conditional Dirac global lift would become
+**unconditional**.
 
 This is a **sharper obstruction** than (C2-X) was at the start of the
-cycle. It is also a **decision-level obstruction** (about how to
-read an existing axiom) rather than a research-level obstruction
-(requiring new framework content).
+cycle. It is not a closed derivation from fixed `A_min`; it is a boundary
+showing exactly what an extra axiom-reading decision would buy.
 
-### 5.2 Recommended axiom-clarification path
+### 5.2 Policy resolution: no axiom-clarification path
 
-The framework's `MINIMAL_AXIOMS_2026-04-11.md` should be amended /
-clarified to explicitly state which reading of axiom 3 it adopts:
+Per `docs/audit/AXIOM_MINIMALITY_POLICY.md`, `A_min` is fixed through the
+repo audit. This work therefore does **not** recommend amending
+`MINIMAL_AXIOMS_2026-04-11.md` to select either of these readings as a
+closure move:
 
 - **(strict reading):** "the package works with the finite local
   Grassmann / staggered-Dirac partition **exclusively**; Pfaffian /
@@ -256,6 +257,10 @@ clarified to explicitly state which reading of axiom 3 it adopts:
 The strict reading closes `(C2-X)` and globalizes Dirac. The
 permissive reading leaves `(C2-X)` open as a research question on
 substrate extensions.
+
+Under the policy, this fork is recorded as bounded no-go inventory:
+adopting either reading as a primitive is a science-level decision outside
+the audit lane, not a derivation.
 
 ### 5.3 Falsified angles
 
@@ -284,20 +289,18 @@ substrate extensions.
   via three independent attempts.
 - Identification of the load-bearing wall: substrate-class
   admissibility of `A_min` axiom 3.
-- A precise reformulation: `(C2-X)` ⇔ strict reading of
-  `A_min` axiom 3 (which is a **decision-level**, not research-
-  level, obstruction).
+- A precise boundary: `(C2-X)` would follow from a strict reading of
+  `A_min` axiom 3, but that reading is not available as an audit-lane
+  amendment under `AXIOM_MINIMALITY_POLICY.md`.
 - Falsification of `(R-X1)` (anomaly-cancellation exhaustion)
   as a closure route.
-- A recommended axiom-clarification path with two explicit
-  readings (strict vs permissive) and their consequences.
+- An explicit strict/permissive fork recorded as bounded no-go
+  inventory, not as an axiom-clarification recommendation.
 
 **Does not close:**
 
-- `(C2-X)` unconditionally — but the obstruction is now sharply
-  decision-level, not research-level.
-- The unconditional Dirac global lift — but it is now a one-line
-  corollary of the strict reading of axiom 3.
+- `(C2-X)` unconditionally.
+- The unconditional Dirac global lift.
 - The substrate-class admissibility question itself.
 - Any neutrino mass numerically.
 
@@ -317,20 +320,21 @@ The stretch-attempt findings are falsified by:
 
 ## 8. How this advances Lane 4
 
-After this stretch attempt, the closure path for the unconditional
-Dirac global lift reduces to **a single decision-level question**:
-how is `A_min` axiom 3 to be read?
+After this stretch attempt, the blocked shortcut is explicit: the
+unconditional Dirac global lift would follow from strict substrate-class
+admissibility, but that shortcut is not a derivation from fixed `A_min`.
 
 This is a substantially **sharper** state than where Cycle 2 left
 us. Cycle 2 said "needs an exhaustion theorem on charge-2 primitives"
-(research-level). Cycle 3 says "needs an axiom-clarification on
-admissible substrate extensions" (decision-level).
+(research-level). Cycle 3 says "one possible closure move would be an
+axiom-reading decision", which the audit policy now excludes as a closure
+move.
 
 Recommended next-step paths:
 
 - **Cycle 4 candidate A:** Stuck fan-out on the strict-vs-permissive
   reading. Generate 3-5 framework-internal arguments for each
-  reading; synthesize.
+  reading; synthesize as a bounded inventory, not as an axiom amendment.
 - **Cycle 4 candidate B:** Search the existing retained framework
   content (anomaly cluster, gauge-cluster proofs, recent SM
   retentions) for evidence pointing to one reading or the other.
@@ -348,6 +352,8 @@ Recommended next-step paths:
   P6).
 - `docs/MINIMAL_AXIOMS_2026-04-11.md` — A_min, the axiom-3
   ambiguity surfaced here.
+- `docs/audit/AXIOM_MINIMALITY_POLICY.md` — audit-lane rule fixing
+  `A_min` and disallowing axiom amendment as a closure move.
 - `docs/NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md`
   (Cycle 2; this stretch attempt sharpens its (C2-X) obstruction).
 - `docs/NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md` (Cycle 1;
@@ -364,9 +370,9 @@ substrate-class admissibility either way. It produces:
 
 - a worked first-principles attempt across three angles;
 - one falsified angle (`(R-X1)`);
-- a sharper obstruction reformulation (decision-level vs research-
-  level);
-- a recommended axiom-clarification path.
+- a sharper obstruction reformulation;
+- a strict/permissive fork recorded as bounded no-go inventory under
+  `AXIOM_MINIMALITY_POLICY.md`.
 
 This is honest first-principles progress with a named obstruction
 — valid output per Deep Work Rules' no-churn exception. The output
