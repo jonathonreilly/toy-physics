@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T19:16:17.054200+00:00",
+  "generated_at": "2026-04-30T19:25:02.314160+00:00",
   "per_claim": {
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "assert_count": 0,
@@ -144,6 +144,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_zero_import_chain.py"
+    },
+    "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30": {
+      "assert_count": 4,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 8,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_alpha_s_direct_wilson_loop.py"
     },
     "alt_connectivity_family_basin_note": {
       "assert_count": 0,
@@ -15979,6 +15991,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_alpha_s_direct_wilson_loop.py": {
+      "assert_count": 4,
+      "claims": [
+        "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 8,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_anderson_phase_unscreened_periodic.py": {
       "assert_count": 0,
       "claims": [
@@ -31284,12 +31311,12 @@
     "dominant_class_distribution": {
       "A": 7,
       "B": 118,
-      "C": 431,
+      "C": 432,
       "D": 180,
       "none": 391
     },
-    "runners_classified": 1127,
-    "runners_with_C": 518,
-    "runners_with_D": 278
+    "runners_classified": 1128,
+    "runners_with_C": 519,
+    "runners_with_D": 279
   }
 }
