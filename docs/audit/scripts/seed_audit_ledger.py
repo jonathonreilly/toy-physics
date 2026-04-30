@@ -6,7 +6,9 @@ with audit_status=unaudited as the default. If a row already exists,
 preserve its audit fields but update the dependency list and current_status
 from the graph. If the source note's hash has changed since the last
 audit, reset audit_status to unaudited and archive the prior verdict in
-previous_audits.
+previous_audits. Terminal failed rows whose source notes moved to
+archive_unlanded/ are preserved as negative-result history even though
+they are no longer active graph nodes.
 
 Writes docs/audit/data/audit_ledger.json.
 """
@@ -127,6 +129,16 @@ def should_gate_node(node: dict, prior: dict | None) -> bool:
     return node.get("current_status") == "unknown"
 
 
+def should_preserve_archived_failed_row(row: dict) -> bool:
+    """Keep terminal failed audit rows for archived notes out of docs/."""
+    if row.get("audit_status") != "audited_failed":
+        return False
+    note_path = row.get("note_path") or ""
+    if not note_path.startswith("archive_unlanded/"):
+        return False
+    return (REPO_ROOT / note_path).exists()
+
+
 def load_json(path: Path, default):
     if not path.exists():
         return default
@@ -168,6 +180,11 @@ def seed() -> dict:
         if not should_gate_node(node, existing_rows.get(cid))
     }
     gated = [cid for cid in graph["nodes"] if cid not in included_cids]
+    archived_failed_rows = {
+        cid: dict(row)
+        for cid, row in existing_rows.items()
+        if cid not in graph["nodes"] and should_preserve_archived_failed_row(row)
+    }
 
     for cid, node in graph["nodes"].items():
         if cid not in included_cids:
@@ -207,10 +224,21 @@ def seed() -> dict:
                 preserved += 1
         out_rows[cid] = row
 
+    for cid, row in archived_failed_rows.items():
+        out_rows[cid] = row
+
     # Drop ledger rows whose source note no longer exists, plus rows
     # intentionally gated out as non-claim infrastructure.
-    dropped = [cid for cid in existing_rows if cid not in included_cids]
-    missing = [cid for cid in existing_rows if cid not in graph["nodes"]]
+    dropped = [
+        cid
+        for cid in existing_rows
+        if cid not in included_cids and cid not in archived_failed_rows
+    ]
+    missing = [
+        cid
+        for cid in existing_rows
+        if cid not in graph["nodes"] and cid not in archived_failed_rows
+    ]
 
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -219,6 +247,7 @@ def seed() -> dict:
             "row_count": len(out_rows),
             "seeded_new": seeded,
             "preserved_existing": preserved,
+            "preserved_archived_failed": len(archived_failed_rows),
             "re_audit_required": re_audit_required,
             "dropped_missing_notes": len(missing),
             "dropped_gated_sources": len(gated),
@@ -237,6 +266,7 @@ def main() -> int:
     print(f"  rows: {s['row_count']}")
     print(f"  newly seeded: {s['seeded_new']}")
     print(f"  preserved (audit kept): {s['preserved_existing']}")
+    print(f"  preserved archived failed: {s['preserved_archived_failed']}")
     print(f"  re-audit required (hash changed): {s['re_audit_required']}")
     print(f"  dropped (note removed): {s['dropped_missing_notes']}")
     print(f"  dropped (gated source): {s['dropped_gated_sources']}")

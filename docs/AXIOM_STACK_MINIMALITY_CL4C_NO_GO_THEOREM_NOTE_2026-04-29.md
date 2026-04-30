@@ -23,14 +23,14 @@ that closes the (G1) gate. Bare `retained` / `promoted` is NOT used.
   alone; doesn't determine Cl_4(C).
 - [HUBBLE_LANE5_C1_A4_PARITY_GATE_NO_GO_NOTE_2026-04-28.md](HUBBLE_LANE5_C1_A4_PARITY_GATE_NO_GO_NOTE_2026-04-28.md)
   — A4 no-go: parity-gate Z_2 underdetermines CAR vs. non-CAR.
-- [HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md](HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md)
+- [HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md](../archive_unlanded/stale-frames-2026-04-30/HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md)
   — A5 audit: identifies Cl_4(C) module on P_A H_cell as the minimal
   carrier-axiom class for (G1) closure.
-- [HUBBLE_LANE5_C1_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md](HUBBLE_LANE5_C1_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md)
-  — Cycle 6 fan-out: confirms (α) S_4, (β) cobordism, (γ) Holevo,
-  (δ) Stinespring, (ε) Reeh-Schlieder all do NOT independently force
-  Cl_4(C).
-- [CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md](CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md)
+- [HUBBLE_LANE5_C1_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md](../archive_unlanded/stale-frames-2026-04-30/HUBBLE_LANE5_C1_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md)
+  — archived Cycle 6 wrapper. Its exhaustion frame failed audit; only
+  the narrow route-local observations are preserved in
+  [HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md](HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md).
+- [CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md](../archive_unlanded/stale-frames-2026-04-30/CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md)
   — conditional consequence map showing 5 lanes that retention-cascade
   if Axiom* is adopted.
 
@@ -219,7 +219,8 @@ input. By the audit (A5), this is statable as Axiom*:
 Equivalently, by the (a)⇔(b) audit equivalence: `P_A H_cell ≅ F(C^2)`
 the two-mode CAR Fock space.
 
-By the consequence map (CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28),
+By the archived consequence map
+(archive_unlanded/stale-frames-2026-04-30/CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28),
 adopting Axiom* + (C2) gate closure cascades retention through:
 - Lane 5 (C1) absolute-scale gate (forces H_inf, R_Λ, H_0);
 - Lane 1 Target 2 (Planck completion);
@@ -286,7 +287,7 @@ integration:
 - **MINIMAL_AXIOMS_2026-04-11.md:** add a §Note (audit-grade) that
   extending A_min by Axiom* is the unique minimal honest extension
   for closing (G1). The science-level decision remains the user's.
-- **CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md:** adds
+- **archive_unlanded/stale-frames-2026-04-30/CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md:** adds
   V1 as the no-go basis showing Axiom* is FORCED as the minimal
   extension (rather than just one option among many).
 - **PUBLICATION_MATRIX.md** lines 169 (n_s spectral tilt), 177

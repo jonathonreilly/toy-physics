@@ -11,7 +11,7 @@ an outside check: a separate `audit_status` per claim, propagated through the
 citation graph, and a hard rule that nothing presents as `retained` to the
 outside world unless its audit chain is clean.
 
-The first repo-wide trace (CKM atlas) showed three failure modes that
+The first repo-wide trace (CKM atlas) showed several failure modes that
 self-declared tiers do not catch:
 
 1. **Definition-as-derivation** — a new symbol is defined as a small-integer
@@ -20,8 +20,10 @@ self-declared tiers do not catch:
    `open` note for the load-bearing identification step.
 3. **Algebraic decoration** — many `retained` corollaries are consequences of
    a single upstream parameter choice and add no independent physical content.
+4. **Stale narrative wrappers** — a failed wrapper frame remains easy to cite
+   even after its audit verdict invalidates the global story.
 
-The audit lane mechanizes detection of all three.
+The audit lane mechanizes detection of these patterns.
 
 ## Layout
 
@@ -30,6 +32,7 @@ docs/audit/
   README.md                          # this file
   FRESH_LOOK_REQUIREMENTS.md         # who may audit what, and how
   ALGEBRAIC_DECORATION_POLICY.md     # how to identify and prune decoration
+  STALE_NARRATIVE_POLICY.md          # how to archive failed wrapper frames
   AUDIT_AGENT_PROMPT_TEMPLATE.md     # the prompt template for cold auditors
   AUDIT_LEDGER.md                    # human-readable ledger
   data/
