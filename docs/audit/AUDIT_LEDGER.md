@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:52:09.644520+00:00
+**Generated:** 2026-04-30T00:52:12.938014+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -38,9 +38,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 145 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 50 |
-| `audited_numerical_match` | 11 |
+| `audited_numerical_match` | 12 |
 | `audited_renaming` | 9 |
-| `unaudited` | 1291 |
+| `unaudited` | 1290 |
 
 | criticality | count |
 |---|---:|
@@ -381,6 +381,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `quark_up_amplitude_candidate_scan_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
+| `quark_up_amplitude_native_affine_no_go_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `quark_up_amplitude_native_expression_scan_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `tensor_support_center_excess_law_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
@@ -3560,6 +3561,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
   - `QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `quark_up_amplitude_native_affine_no_go_note_2026-04-19`
+
+- **Note:** [`QUARK_UP_AMPLITUDE_NATIVE_AFFINE_NO_GO_NOTE_2026-04-19.md`](../../docs/QUARK_UP_AMPLITUDE_NATIVE_AFFINE_NO_GO_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The widened native affine scan finds laws that beat each external baseline separately but zero laws that beat both the 7/9 refit baseline and sqrt(3/5) anchored baseline at once.  _(class `G`)_
+- **chain closes:** False — The runner exhaustively checks the stated finite affine grammar, but the conclusion is still a comparator/baseline dominance result on bounded numerical axes. It does not supply a retained physical selection rule for a_u.
+- **rationale:** Issue: the negative result is a bounded scan over a selected affine grammar with dominance measured against numerical baselines. Why this blocks: even an exhaustive no-go inside that grammar does not derive the amplitude or prove the grammar is physically complete, and its dependencies are bounded/numerical. Repair target: derive the affine family as the complete native support law or produce a retained theorem selecting one amplitude before target comparison. Claim boundary until fixed: this row is a bounded affine-support no-go, not a retained quark-amplitude closure.
+- **open / conditional deps cited:**
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`
+  - `QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `quark_up_amplitude_native_expression_scan_note_2026-04-19`

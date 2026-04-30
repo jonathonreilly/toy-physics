@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T00:52:09.432702+00:00",
-  "generated_at": "2026-04-30T00:52:07.690155+00:00",
-  "invalidation_run_at": "2026-04-30T00:52:09.376945+00:00",
+  "effective_status_computed_at": "2026-04-30T00:52:12.706976+00:00",
+  "generated_at": "2026-04-30T00:52:10.948902+00:00",
+  "invalidation_run_at": "2026-04-30T00:52:12.647201+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T00:52:09.263712+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:52:12.528336+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -67740,15 +67740,29 @@
       "verdict_rationale": "Issue: the claim is carried by comparator scoring of a curated/grammar candidate shortlist against a solved amplitude surface. Why this blocks: a short list of close numerical candidates does not derive the up-sector scalar or make one candidate load-bearing from retained primitives. Repair target: derive a unique a_u law from the projector/support constants and have the runner compute it independently before evaluating CKM/J. Claim boundary until fixed: the row may summarize bounded exact-candidate compression, not a retained quark-amplitude theorem."
     },
     "quark_up_amplitude_native_affine_no_go_note_2026-04-19": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T00:52:10.021962+00:00",
+      "audit_state_snapshot": {
+        "criticality": "medium",
+        "dep_effective_status": {
+          "quark_projector_parameter_audit_note_2026-04-19": "audited_numerical_match",
+          "quark_up_amplitude_candidate_scan_note_2026-04-19": "audited_numerical_match",
+          "quark_up_amplitude_native_expression_scan_note_2026-04-19": "audited_numerical_match"
+        },
+        "deps": [
+          "quark_projector_parameter_audit_note_2026-04-19",
+          "quark_up_amplitude_candidate_scan_note_2026-04-19",
+          "quark_up_amplitude_native_expression_scan_note_2026-04-19"
+        ],
+        "load_bearing_score": 6.858,
+        "transitive_descendants": 40
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner exhaustively checks the stated finite affine grammar, but the conclusion is still a comparator/baseline dominance result on bounded numerical axes. It does not supply a retained physical selection rule for a_u.",
       "claim_id": "quark_up_amplitude_native_affine_no_go_note_2026-04-19",
       "criticality": "medium",
       "cross_confirmation": null,
@@ -67762,17 +67776,21 @@
       ],
       "direct_in_degree": 3,
       "effective_status": "audited_numerical_match",
-      "effective_status_reason": "inherited_from:quark_projector_parameter_audit_note_2026-04-19",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "effective_status_reason": "self",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 6.858,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The widened native affine scan finds laws that beat each external baseline separately but zero laws that beat both the 7/9 refit baseline and sqrt(3/5) anchored baseline at once.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "758a98811d2ffa5556cc00f70678f4db0c5d2802bdeef3c6db823722aeb3bd54",
       "note_path": "docs/QUARK_UP_AMPLITUDE_NATIVE_AFFINE_NO_GO_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
+        "docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md",
+        "docs/QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-29T23:17:15.568745+00:00",
@@ -67825,13 +67843,13 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 7,
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_quark_up_amplitude_native_affine_no_go.py",
       "title": "Quark Up-Amplitude Native Affine No-Go",
       "transitive_descendants": 40,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the negative result is a bounded scan over a selected affine grammar with dominance measured against numerical baselines. Why this blocks: even an exhaustive no-go inside that grammar does not derive the amplitude or prove the grammar is physically complete, and its dependencies are bounded/numerical. Repair target: derive the affine family as the complete native support law or produce a retained theorem selecting one amplitude before target comparison. Claim boundary until fixed: this row is a bounded affine-support no-go, not a retained quark-amplitude closure."
     },
     "quark_up_amplitude_native_expression_scan_note_2026-04-19": {
       "audit_date": "2026-04-30T00:52:06.763930+00:00",
