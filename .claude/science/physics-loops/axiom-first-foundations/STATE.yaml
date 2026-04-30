@@ -1,0 +1,38 @@
+slug: axiom-first-foundations
+date_started: 2026-04-29
+runtime_target: 12h
+target_status: best-honest-status
+goal: |
+  Produce new axiom-first theorems on A_min (Cl(3) on Z^3 + Grassmann/staggered-Dirac
+  + canonical g_bare=1 normalization) that other lanes can re-use as black-box tools.
+  Output type restricted to derivations / theorem notes + paired runners.
+A_min:
+  - "Local algebra: Cl(3)"
+  - "Spatial substrate: Z^3 cubic lattice"
+  - "Microscopic dynamics: finite local Grassmann / staggered-Dirac partition + lattice operators"
+  - "Canonical normalization: g_bare = 1, plaquette/u_0 surface, minimal APBC hierarchy block"
+forbidden_imports:
+  - "observed values (m_t, v, alpha_s, masses, mixing angles, H_0, sigma_m_nu, etc.)"
+  - "literature theorems whose derivation is not pinned in the framework"
+  - "fitted selectors or tuned parameters"
+  - "continuum-QFT axioms (Wightman, OS) imported as primitive"
+science_branch: physics-loop/axiom-first-foundations-block01-20260429
+based_on: origin/main (37329240)
+cycle: 0
+block: 1
+active_route: null
+hard_residuals_attacked: []
+files_touched: []
+open_imports_at_start:
+  - "spin-statistics on Cl(3) Grassmann lattice (used implicitly across DM/leptogenesis, Yukawa lanes)"
+  - "reflection positivity for canonical staggered-Dirac action (used implicitly for Hilbert reconstruction)"
+  - "cluster decomposition / exponential clustering of correlators (used implicitly across confinement/area-law lanes)"
+  - "CPT-evenness (asserted in OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)"
+no_go_routes_in_session: []
+review_findings: []
+pr_status: not-yet-pushed
+next_exact_action: "Begin Cycle 1 (Route R1: spin-statistics theorem)"
+stop_condition: |
+  12h budget exhausted, OR the three planned cycles plus a stretch attempt have
+  produced reviewable artifacts AND the science branch is pushed with one PR
+  prepared.
