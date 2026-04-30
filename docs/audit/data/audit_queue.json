@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 1,
-    "high": 233,
+    "high": 232,
     "leaf": 286,
     "medium": 289
   },
-  "generated_at": "2026-04-30T21:46:00.939178+00:00",
+  "generated_at": "2026-04-30T21:47:23.544668+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -300,23 +300,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_pmns_selector_current_stack_zero_law.py",
       "transitive_descendants": 38
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "cl3_color_automorphism_theorem",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 10,
-      "load_bearing_score": 10.248,
-      "note_path": "docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md",
-      "ready": true,
-      "runner_path": "scripts/verify_cl3_sm_embedding.py",
-      "transitive_descendants": 37
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -18351,6 +18334,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 427,
-  "total_pending": 809
+  "ready_count": 426,
+  "total_pending": 808
 }

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T21:46:01.111194+00:00
+**Generated:** 2026-04-30T21:47:23.723197+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 207 |
+| `audited_clean` | 208 |
 | `audited_conditional` | 457 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 809 |
+| `unaudited` | 808 |
 
 | criticality | count |
 |---|---:|
@@ -118,6 +118,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `chiral_3plus1d_coupled_coin_note` | open | ~~audited_clean~~ | open | cross_family | codex-current | C | - |
+| `cl3_color_automorphism_theorem` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
 | `claude_complex_action_carryover_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `composite_source_additivity_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -2446,6 +2447,18 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
   - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
   - `ALPHA_S_DERIVED_NOTE.md`
+- **auditor confidence:** high
+
+### `cl3_color_automorphism_theorem`
+
+- **Note:** [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](../../docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-05`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The Cl(3)/Z^3 taste-cube construction has a 3D symmetric base subspace carrying SU(3), commuting with fiber SU(2) and hypercharge, with N_c=3 and R_conn=(N_c^2-1)/N_c^2=8/9 from the SU(3) Fierz identity.  _(class `C`)_
+- **chain closes:** True — The runner constructs the Cl(3) taste-space matrices, the symmetric-base SU(3) embedding, the commuting SU(2)/Y structure, and the Fierz/R_conn algebra directly. The source note limits the result to an algebraic support packet and explicitly leaves continuum color matching and running to separate lanes.
+- **rationale:** The support-tier algebraic color-structure claim closes on its own scoped surface: the runner verifies the Cl(3) generators, even-subalgebra su(2), hypercharge projectors, S3/Z3 taste decomposition, symmetric-base SU(3) embedding, commutators with weak/Y, N_c=3, Fierz identity, R_conn=8/9, and sqrt(9/8) factor. This clean audit is limited to the finite taste-cube support theorem; it does not ratify continuum QCD color matching, alpha_s running, or the critical native-gauge/EW-color projection lanes. Residual risk is downstream citation as a full physical gauge-closure theorem rather than as algebraic support.
 - **auditor confidence:** high
 
 ### `cl3_taste_generation_theorem`
