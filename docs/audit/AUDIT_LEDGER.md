@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:26:16.352288+00:00
+**Generated:** 2026-04-30T01:27:06.136086+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 78 |
-| _proposed_retained_ | 8 |
+| _proposed_retained_ | 7 |
 | bounded | 206 |
 | support | 108 |
 | open | 24 |
@@ -28,19 +28,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 4 |
 | ~~audited_numerical_match~~ | 46 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 443 |
+| ~~audited_conditional~~ | 444 |
 | ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 78 |
-| `audited_conditional` | 148 |
+| `audited_conditional` | 149 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1280 |
+| `unaudited` | 1279 |
 
 | criticality | count |
 |---|---:|
@@ -189,6 +189,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `diamond_nv_phase_ramp_signal_budget_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `diamond_signal_budget_hardening_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dispersion_relation_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `dm_abcc_chamber_bound_derivation_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -1016,6 +1017,24 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md`
   - `SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md`
   - `DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md`
+- **auditor confidence:** high
+
+### `dm_abcc_chamber_bound_derivation_note_2026-04-20`
+
+- **Note:** [`DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`](../../docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The carrier normal form fixes the live source-oriented branch as s = +sqrt(r31^2 - 1/4) >= 0, hence q_+ - E_1 + delta >= 0 and q_+ + delta >= sqrt(8/3).  _(class `B`)_
+- **chain closes:** False — The algebraic inequality follows once the active chart, constants, carrier identity, and live-branch sign are supplied. Those retained ingredients are cited in prose but the audit row has no one-hop dependencies, and the runner hard-codes the branch/sample surface rather than deriving it from registered authorities.
+- **rationale:** Issue: the proof's load-bearing branch selection and active-chart constants are imported from named source-surface/carrier-normal-form theorems that are not ledger dependencies for this row. Why this blocks: without those one-hop authorities, the runner verifies algebra and sampled consequences after setting the chart, basin table, and source-oriented branch, but does not independently derive the chamber half-plane from retained inputs. Repair target: register the affine chart, source constants, Z3 doublet-block normal form, active half-plane/carrier inverse chart, and slot-torsion branch-selection notes as dependencies, then have the runner verify their effective clean status or consume generated data from them. Claim boundary until fixed: safe as an inline conditional derivation of q_+ + delta >= sqrt(8/3) given the cited source-oriented carrier branch; not safe as a self-contained retained local theorem.
+- **open / conditional deps cited:**
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_SLOT_TORSION_BOUNDARY_THEOREM_NOTE_2026-04-16.md`
 - **auditor confidence:** high
 
 ### `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`

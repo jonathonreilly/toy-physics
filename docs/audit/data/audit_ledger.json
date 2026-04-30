@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T01:26:16.113852+00:00",
-  "generated_at": "2026-04-30T01:26:14.277957+00:00",
-  "invalidation_run_at": "2026-04-30T01:26:16.052345+00:00",
+  "effective_status_computed_at": "2026-04-30T01:27:05.907253+00:00",
+  "generated_at": "2026-04-30T01:27:04.047798+00:00",
+  "invalidation_run_at": "2026-04-30T01:27:05.838870+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T01:26:15.931636+00:00",
+  "load_bearing_computed_at": "2026-04-30T01:27:05.697138+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -14990,7 +14990,7 @@
       "verdict_rationale": "Issue: the runner verifies a large finite search and reproduces 30 PASS stamps, but the note promotes that search to a theorem-grade exhaustiveness certificate. Why this blocks: a dense grid plus Nelder-Mead can miss a narrow basin between seeds; the empirical 99.5-percentile Lipschitz estimate is not a worst-case bound, the far-field exclusion is random sampling rather than an analytic lower bound, and the claim that any unknown candidate basin would be reached analogously is exactly the missing theorem. Repair target: replace the heuristic certificate with an interval/branch-and-bound proof over the R=50 box, or a computer-algebra/root-isolation enumeration with certified eigenvalue-gap/Lipschitz bounds and a deterministic far-field asymptotic exclusion. Claim boundary until fixed: it is safe to claim that the current runner found only Basin 1, Basin 2, and Basin X in the active chamber under the retained sigma set, clustered them to the five-basin chart, and found no additional basin in this finite multistart/random-sampling scan; it is not an audited retained completeness theorem."
     },
     "dm_abcc_chamber_bound_derivation_note_2026-04-20": {
-      "audit_date": null,
+      "audit_date": "2026-04-30T01:26:58.487436+00:00",
       "audit_state_snapshot": {
         "criticality": "leaf",
         "dep_effective_status": {},
@@ -14998,13 +14998,13 @@
         "load_bearing_score": 0.0,
         "transitive_descendants": 0
       },
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The algebraic inequality follows once the active chart, constants, carrier identity, and live-branch sign are supplied. Those retained ingredients are cited in prose but the audit row has no one-hop dependencies, and the runner hard-codes the branch/sample surface rather than deriving it from registered authorities.",
       "claim_id": "dm_abcc_chamber_bound_derivation_note_2026-04-20",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -15012,18 +15012,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The carrier normal form fixes the live source-oriented branch as s = +sqrt(r31^2 - 1/4) >= 0, hence q_+ - E_1 + delta >= 0 and q_+ + delta >= sqrt(8/3).",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "cd8cc94082c4833bf8356ac47450b998d87601442aef90a33bfe0971657e2e5b",
       "note_path": "docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_SLOT_TORSION_BOUNDARY_THEOREM_NOTE_2026-04-16.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368055+00:00",
@@ -15083,16 +15089,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 11,
+        "B": 4,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 15
       },
       "runner_path": "scripts/frontier_dm_abcc_chamber_bound_derivation.py",
       "title": "Inline Derivation of the Active Affine Chamber Bound `q_+ + \u03b4 \u2265 \u221a(8/3)`",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the proof's load-bearing branch selection and active-chart constants are imported from named source-surface/carrier-normal-form theorems that are not ledger dependencies for this row. Why this blocks: without those one-hop authorities, the runner verifies algebra and sampled consequences after setting the chart, basin table, and source-oriented branch, but does not independently derive the chamber half-plane from retained inputs. Repair target: register the affine chart, source constants, Z3 doublet-block normal form, active half-plane/carrier inverse chart, and slot-torsion branch-selection notes as dependencies, then have the runner verify their effective clean status or consume generated data from them. Claim boundary until fixed: safe as an inline conditional derivation of q_+ + delta >= sqrt(8/3) given the cited source-oriented carrier branch; not safe as a self-contained retained local theorem."
     },
     "dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19": {
       "audit_date": null,
@@ -33434,8 +33440,8 @@
       "load_bearing_score": 3.5,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
-      "max_descendant_status": "bounded",
-      "max_descendant_status_rank": 60,
+      "max_descendant_status": "audited_conditional",
+      "max_descendant_status_rank": 10,
       "note_hash": "9082b0ca1db771e22b3de0fd0a50fd3971760447bd5fbf4272070531b64d58c5",
       "note_path": "docs/GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md",
       "open_dependency_paths": [],
@@ -33543,8 +33549,8 @@
       "load_bearing_score": 1.5,
       "load_bearing_step": "The single-property free_coh >= 7.96e-04 rule improves cross-generator accuracy from 6/9 to 7/9 on scaffolded data, but the 2026-04-07 off-scaffold update says the advantage disappears and the classifier lane is closed.",
       "load_bearing_step_class": "G",
-      "max_descendant_status": "bounded",
-      "max_descendant_status_rank": 60,
+      "max_descendant_status": "audited_failed",
+      "max_descendant_status_rank": 0,
       "note_hash": "f5ea18884cef03886e1df49b272783fb6ff16993e1d8469e84bcbaa57b2f58f6",
       "note_path": "docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md",
       "open_dependency_paths": [
