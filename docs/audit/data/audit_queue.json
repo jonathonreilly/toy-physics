@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 237,
-    "leaf": 554,
+    "leaf": 553,
     "medium": 347
   },
-  "generated_at": "2026-04-30T15:13:34.060935+00:00",
+  "generated_at": "2026-04-30T15:13:37.569494+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -14924,23 +14924,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "beyond_lattice_qcd_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/BEYOND_LATTICE_QCD_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_beyond_lattice_qcd.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "bmv_bounded_negative_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -23993,6 +23976,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 735,
-  "total_pending": 1147
+  "ready_count": 734,
+  "total_pending": 1146
 }
