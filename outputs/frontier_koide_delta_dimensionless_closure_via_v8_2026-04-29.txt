@@ -1,0 +1,64 @@
+========================================================================
+Koide δ Dimensionless Closure via V8 (Block 2) audit
+========================================================================
+
+Section 1: V8 (Block 1, Q closure) prerequisite check
+------------------------------------------------------------------------
+[PASS] V8 note exists on disk — block 1 closure note found
+[PASS] V8 carries proposed_retained status — V8 firewall: proposed_retained
+[PASS] V8 carries audit-required-before-effective-retained flag — V8 firewall: audit required
+[PASS] V8 closes Q = 2/3 on A_min — V8 §2 theorem statement
+
+Section 2: retained Brannen phase reduction theorem audit
+------------------------------------------------------------------------
+[PASS] Brannen phase reduction note exists — retained on main
+[PASS] n_eff = 2 from doublet conjugate-pair forcing — Brannen §1.3
+[PASS] d = 3 from |C_3| — Brannen §1
+[PASS] δ = n_eff / d² = 2/9 (Brannen normalization) — Brannen §2.3
+[PASS] δ = Q/d at d=3 — Brannen §2.4
+[PASS] Plancherel identity note exists — support-grade on main
+[PASS] Plancherel: arg(b) = δ (mod 2π) inside Brannen parameterization — Plancherel §1 lemma
+[PASS] Q = p·δ identity note exists — retained on main
+[PASS] Q = p·δ at p = d = 3 identity — Q = p·δ identity
+[PASS] Z_3 qubit radian-bridge no-go note exists — retained negative result on main
+[PASS] Z_3 qubit no-go closes canonical R/Z → U(1) lift route — no-go §2.1 candidate A
+
+Section 3: algebraic identities of the composition (sympy/numpy)
+------------------------------------------------------------------------
+[PASS] Q = 2/3 (composed from V8) — Q = 2/3
+[PASS] n_eff = |d(arg ζ)/dθ| = 2 (doublet conjugate-pair winding) — n_eff = 2
+[PASS] d = |C_3| = 3 — d = 3
+[PASS] δ_dimensionless = n_eff / d² = 2/9 (Brannen normalization) — δ = 2/9
+[PASS] δ = Q/d at d=3 cross-check — Q/d = 2/9
+[PASS] Q = p·δ structural identity (p=d=3) — p·δ = 3·(2/9) = 2/3 == Q = 2/3
+[PASS] Plancherel arg(b) = δ inside Brannen parameterization (numerical witness) — verified across δ ∈ (-π, π) per Plancherel §1 lemma
+
+Section 4: radian-bridge postulate P status (NOT closed)
+------------------------------------------------------------------------
+[PASS] Standard 2π-radian conversion gives 4π/9 rad (NOT 2/9 rad) — 2π·(2/9) = 1.396263 = 4π/9 = 1.396263
+[PASS] Standard conversion ≠ 2/9 rad (postulate P would identify them) — 2π·(2/9) = 1.396263 ≠ 2/9 = 0.222222
+[PASS] Brannen-PDG match value δ_observed = 2/9 rad (support-grade witness) — δ_observed ≈ 2/9 rad ≈ 0.222222
+[PASS] Postulate P (literal 2/9 = 2/9 rad) NOT closed by V1 — radian-bridge postulate explicitly open per §4 of V1 note
+
+Section 5: V1 status firewall fields
+------------------------------------------------------------------------
+[PASS] V1 carries actual_current_surface_status: proposed_retained — V1 firewall
+[PASS] V1 carries audit_required_before_effective_retained: true — V1 firewall
+[PASS] V1 carries bare_retained_allowed: false — V1 firewall
+[PASS] V1 records radian_bridge_postulate_P_status: open — V1 firewall: P explicitly open
+[PASS] V1 records literal 2/9 rad PDG match as support_grade — V1 firewall: PDG match support-grade
+
+Section 6: forbidden imports check
+------------------------------------------------------------------------
+[PASS] forbidden import not used as proof input: m_e — no observed lepton mass enters proof
+[PASS] forbidden import not used as proof input: m_mu — no observed lepton mass enters proof
+[PASS] forbidden import not used as proof input: m_tau — no observed lepton mass enters proof
+[PASS] forbidden import not used as proof input: delta_obs — no observed lepton mass enters proof
+
+========================================================================
+FAIL count: 0
+DELTA_DIMENSIONLESS_PROPOSED_RETAINED_CHAIN_VERIFIED = True
+RADIAN_BRIDGE_POSTULATE_P_STATUS = open  # NOT closed by V1
+(This flag verifies the V1 dimensionless chain authorities + algebraic identities. The radian-bridge postulate P remains explicitly open. Independent audit required before the repo treats this as effective retained.)
+
+All Block 2 chain authorities + algebraic identities verified.
