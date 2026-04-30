@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 384,
+    "leaf": 383,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:26:16.054115+00:00",
+  "generated_at": "2026-04-30T19:26:22.306191+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13807,23 +13807,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "four_d_distance_width_probe_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/FOUR_D_DISTANCE_WIDTH_PROBE_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/four_d_distance_width_probe.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "fourth_family_complex_boundary_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -19855,6 +19838,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 528,
-  "total_pending": 910
+  "ready_count": 527,
+  "total_pending": 909
 }
