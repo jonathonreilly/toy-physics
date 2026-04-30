@@ -1,0 +1,39 @@
+slug: axiom-first-foundations-block02
+date_started: 2026-04-29
+runtime_target: ~2h (continuation of block01's 12h budget)
+target_status: best-honest-status
+goal: |
+  Two more axiom-first theorems on A_min that complement block01's
+  Wightman-axiom-analogue tetrad + Noether + Cl(3) uniqueness.
+A_min:
+  - "Local algebra: Cl(3)"
+  - "Spatial substrate: Z^3 cubic lattice"
+  - "Microscopic dynamics: finite local Grassmann staggered partition + lattice operators"
+  - "Canonical normalization: g_bare = 1, plaquette/u_0 surface, minimal APBC hierarchy block"
+forbidden_imports:
+  - "observed values"
+  - "literature theorems whose derivation is not pinned in the framework"
+  - "fitted selectors or tuned parameters"
+  - "continuum-QFT axioms imported as primitive"
+science_branch: physics-loop/axiom-first-foundations-block02-20260429
+based_on: origin/main (independent of block01; cites block01 R2 as parallel theorem)
+cycle: 2
+block: 2
+active_route: end-of-block02 push + PR
+hard_residuals_attacked:
+  - "Spectrum condition lattice analogue (B2-C1 / R7) — closed branch-local"
+  - "Coleman–Mermin–Wagner lattice analogue + d_s=3 minimality (B2-C2 / R10) — closed branch-local"
+files_touched:
+  - "docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md"
+  - "scripts/axiom_first_spectrum_condition_check.py"
+  - "outputs/axiom_first_spectrum_condition_check_2026-04-29.txt"
+  - "docs/AXIOM_FIRST_COLEMAN_MERMIN_WAGNER_THEOREM_NOTE_2026-04-29.md"
+  - "scripts/axiom_first_coleman_mermin_wagner_check.py"
+  - "outputs/axiom_first_coleman_mermin_wagner_check_2026-04-29.txt"
+parallel_work:
+  - "block01 PR #191 (six branch-local theorems on the same A_min)"
+pr_status: not-yet-pushed (about to push + open PR)
+next_exact_action: "Push branch and open PR for block02"
+stop_condition: |
+  After two cycles, push branch and open separate PR. block02 is
+  smaller in scope than block01 and is intended as a follow-up.
