@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:20:45.482874+00:00
+**Generated:** 2026-04-30T00:20:48.781877+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,18 +24,18 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 215 |
 | support | 114 |
 | open | 24 |
-| unknown | 565 |
+| unknown | 564 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 196 |
+| ~~audited_conditional~~ | 197 |
 | ~~audited_failed~~ | 341 |
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 12 |
+| `audit_in_progress` | 11 |
 | `audited_clean` | 78 |
-| `audited_conditional` | 132 |
+| `audited_conditional` | 133 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 12 |
@@ -98,7 +98,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 |---|---|---|---|---|---|---|---|
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | unknown | audit_in_progress | unknown | - | - | - | - |
-| `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | support | audit_in_progress | support | - | - | - | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | audit_in_progress | support | - | - | - | - |
@@ -222,6 +221,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `graph_first_selector_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1756,6 +1756,20 @@ Repair target: derive and audit the full beta-dependent reduction law and its no
 Claim boundary until fixed: safe to claim the exact first nonlocal coefficient and beta_eff onset, not full plaquette observable closure.
 - **open / conditional deps cited:**
   - `nonperturbative_beta6_continuation_of_beta_eff_missing`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-fresh-cross-confirm-20260430-session-b`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Choose two distinct positive conjugation-symmetric residual source-sector environment operators R_A != R_B on the same explicit source sector.  _(class `A`)_
+- **chain closes:** False — The runner shows different Perron/Jacobi data for two injected positive diagonal residual operators, but it does not show both are admissible Wilson residual environments.
+- **rationale:** Issue: the obstruction uses arbitrary positive diagonal residual operators as witnesses. Why this blocks: underdetermination of the Wilson framework point requires proving the current exact Wilson constraints permit both residual operators, not merely that a broad abstract positive class permits them. Repair target: characterize the Wilson residual-environment admissible set or prove no additional constraints fix the Perron moments. Claim boundary until fixed: the abstract factorized positive-diagonal class does not determine unique Perron/Jacobi data.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`
