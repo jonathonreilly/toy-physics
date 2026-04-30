@@ -33,9 +33,9 @@ link.
 - Production checkpoint evidence exists for complete `L=8` support and a
   shallow `L=12` start: `L=8` has `1000` records, plaquette
   `0.59439642 +/- 0.00006509`, and `chi22`
-  `0.25696886 +/- 0.00132492`; `L=12` has `102` records, plaquette
-  `0.59461371 +/- 0.00008335`, and `chi22`
-  `0.25742498 +/- 0.00390454`. This does not close B5 because `L=16` is
+  `0.25696886 +/- 0.00132492`; `L=12` has `129` records, plaquette
+  `0.59452000 +/- 0.00007249`, and `chi22`
+  `0.26167156 +/- 0.00337043`. This does not close B5 because `L=16` is
   missing and `L=12` remains shallow.
 
 ## Open Imports And Dependencies
