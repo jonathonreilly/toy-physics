@@ -40,7 +40,7 @@ bare_retained_allowed: false
    This is a genuine substrate-native pin — but it is forbidden as a proof input
    under the loop goal.
 
-2. **Five-frame no-go**: No alternative algebraic, spectral, topological, taste,
+2. **Five-frame no-go**: No explored algebraic, spectral, topological, taste,
    representation, boundary-condition, or anomaly route produces a
    substrate-native pin for the top-sector heavy bare mass parameter within the
    current forbiddance set. The five frames are mutually independent, each
@@ -62,7 +62,7 @@ bare_retained_allowed: false
 ## Allowed Wording
 
 - "no-go / exact-negative-boundary" — **allowed**
-- "five-frame exhaustive search, no substrate pin found" — **allowed**
+- "five-frame structured search, no substrate pin found in the explored route classes" — **allowed**
 - "Yukawa coupling freedom is the exact Nature-grade wall" — **allowed**
 - "conditional on permitting Ward identity: exact pin exists" — **allowed**
 - "PR #230 lane requires Ward identity or downgrade for derivational status" — **allowed**
@@ -99,7 +99,8 @@ appear as proof inputs in any frame.
 ## Independent Audit Note
 
 This certificate records a no-go result. Independent audit should verify:
-1. The five-frame fan-out is exhaustive (no additional route class was missed).
+1. The five-frame fan-out covers the route classes claimed by the note, and no
+   important route class is being hidden or skipped.
 2. The R_conn route (Frame 4 subsection g) genuinely fails to pin y_t_bare
    without the Ward identity — i.e., sqrt(R_conn/(2 N_c)) ≠ 1/sqrt(6).
 3. The hypothetical consequence (Ward identity permission → exact pin) is

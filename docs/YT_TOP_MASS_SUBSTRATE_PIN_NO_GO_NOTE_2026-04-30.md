@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-30
 **Status:** exact-negative-boundary / no-go — five-frame stuck fan-out, no
-  derivation found on any explored route
+  derivation found in the explored route classes under the stated forbiddance set
 **Claim boundary authority:** this note
 **Import ledger:** `YT_TOP_MASS_SUBSTRATE_PIN_ASSUMPTIONS_AND_IMPORTS_2026-04-30.md`
 **Runner:** `scripts/frontier_yt_top_mass_substrate_pin_no_go.py`
@@ -18,7 +18,7 @@ condition for derivational status:
 
 > *"an independent non-MC substrate pin for the top-sector mass parameter"*
 
-This note executes a five-frame exhaustive search for such a pin on the
+This note executes a five-frame structured search for such a pin on the
 `Cl(3)/Z^3` / `g_bare = 1` / staggered-Dirac substrate. Forbidden as proof
 inputs: `H_unit`, `yt_ward_identity`, `alpha_LM`/plaquette/tadpole routes,
 PDG `m_t`, target `y_t`, observed top-mass tuning, fitted selectors, and
@@ -36,8 +36,11 @@ Each frame is executed from minimal permitted inputs (section A of the import
 ledger). Each reaches the same obstruction. After the five-frame fan-out, a
 synthesis identifies the exact Nature-grade wall.
 
-**Verdict: No-go / exact-negative-boundary.** No substrate-native pin for the
-top-sector heavy bare mass parameter exists within the permitted input set.
+**Verdict: No-go / exact-negative-boundary.** No pin follows from the explored
+spectral, topological, taste, representation-theoretic, boundary-condition, or
+anomaly route classes within the permitted input set.  A future route would
+need to either permit the Ward identity, introduce a new substrate dynamical
+premise, or accept calibrated-observable status.
 
 ---
 

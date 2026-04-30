@@ -13,9 +13,9 @@
 **Incoming state:** PR #230 had an explicit open blocker — "an independent non-MC
 substrate pin for the top-sector mass parameter" — with no known candidate.
 
-**Outgoing state:** Exact no-go recorded on the `Cl(3)/Z^3` / `g_bare = 1` /
-staggered-Dirac surface. Five attack frames exhausted. Exact Nature-grade wall
-named. Two recovery paths documented.
+**Outgoing state:** Exact no-go recorded for the explored route classes on the
+`Cl(3)/Z^3` / `g_bare = 1` / staggered-Dirac surface. Five attack frames
+closed. Exact Nature-grade wall named. Two recovery paths documented.
 
 | Item | Before | After |
 |---|---|---|
@@ -78,9 +78,11 @@ already provides the honest options:
 The following updates are proposed for later integration after independent audit:
 
 1. Add a row to the audit ledger for `yt_top_mass_substrate_pin_no_go_note_2026-04-30`:
-   - Status: `audited_clean` (no-go packet, verified PASS=19 FAIL=0)
-   - Note: "Five-frame exhaustive search; no non-MC substrate pin found for top-sector
-     bare mass within the current forbiddance set."
+   - Initial status: `unaudited` / `exact-negative-boundary` author claim
+   - Note: "Five-frame structured search; no non-MC substrate pin found for
+     the explored top-sector bare-mass route classes within the current
+     forbiddance set."
+   - Independent audit decides whether this negative-boundary packet is clean.
 
 2. Update PR #230 body with reference to this no-go analysis:
    - Add section: "Non-MC Substrate Pin Status: exact-negative-boundary — see
@@ -128,7 +130,9 @@ The exact wall is:
 
 ## Stop Condition
 
-Runtime and deep-block analysis complete. The refreshed opportunity queue (see
-five-frame fan-out in the no-go note) confirms no further retained-positive
-candidate exists for the top-mass substrate pin within the current forbiddance
-set. Campaign stop is authorized by the global queue exhaustion condition.
+The first deep-block analysis completed early with a coherent negative-boundary
+packet. The five-frame fan-out in the no-go note found no retained-positive
+candidate for the top-mass substrate pin within the current forbiddance set.
+A longer campaign could still revisit the Ward decomposition or add a new
+dynamical premise, but that would be a different route than the non-MC,
+Ward-forbidden pin requested here.

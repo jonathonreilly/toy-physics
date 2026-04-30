@@ -1,7 +1,9 @@
 # Direct Lattice-Correlator Top-Yukawa Measurement Gate
 
 **Date:** 2026-04-30
-**Status:** proposed_retained measurement route, pending production-scale staggered-correlator data and audit
+**Status:** proposed_retained measurement route / calibrated readout unless
+Ward identity is re-permitted; pending production-scale staggered-correlator
+data and audit
 **Primary runner:** `scripts/frontier_yt_direct_lattice_correlator.py`
 **Production harness:** `scripts/yt_direct_lattice_correlator_production.py`
 
@@ -41,9 +43,13 @@ of the following is supplied:
    derivation.
 
 PR #230 currently lands the measurement lane, pilot data, production-capable
-runner, and strict gate.  It does not yet supply the independent non-MC
-top-mass substrate pin.  That missing pin is the active follow-on physics-loop
-target.
+runner, and strict gate.  A follow-on physics-loop search is recorded in
+[YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md](YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md):
+within the stated forbiddance set, no explored spectral, topological, taste,
+representation-theoretic, boundary-condition, or anomaly route supplies the
+missing non-MC top-mass substrate pin.  The current honest status is therefore
+calibrated physical-observable readout unless the Ward identity route is
+re-permitted and independently re-audited.
 
 A production certificate is expected to give, after scale setting and the
 standard SM/QCD running bridge,
@@ -296,6 +302,8 @@ or an external compute campaign supplies the full three-volume production data.
 Even after that production evidence exists, the result is still only a
 derivational `y_t` result if the heavy top-sector mass parameter has been
 fixed by a non-MC substrate pin rather than by matching the observed top mass.
+The paired substrate-pin no-go note records that no such pin was found in the
+Ward-forbidden route classes explored here.
 
 A future passing production certificate must supply this budget:
 
@@ -423,7 +431,10 @@ Safe current claim:
 > and pilot MC/correlator certificates, a Numba production engine with resume
 > artifacts, a strict production-certificate gate that blocks prior
 > Ward/matrix-element authority, and an explicit identification of the remaining
-> non-MC top-mass substrate-pin blocker.
+> non-MC top-mass substrate-pin blocker.  The follow-on structured no-go packet
+> finds no Ward-forbidden non-MC pin in the explored route classes, so the lane
+> is a calibrated readout unless the Ward identity is re-permitted and
+> independently re-audited.
 
 Unsafe current claim:
 
