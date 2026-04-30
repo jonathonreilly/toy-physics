@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:08:40.805893+00:00
+**Generated:** 2026-04-30T22:14:20.610468+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 7 |
-| bounded | 280 |
+| bounded | 279 |
 | support | 247 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 15 |
+| ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
 | ~~audited_conditional~~ | 742 |
 | ~~audited_failed~~ | 122 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 464 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
-| `audited_numerical_match` | 11 |
+| `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 797 |
+| `unaudited` | 796 |
 
 | criticality | count |
 |---|---:|
@@ -833,6 +833,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `wilson_mu2_distance_sweep_note_2026-04-11` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `bell_inequality_derived_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `dm_continuum_limit_velocity_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -1540,6 +1541,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `Gcrit_0.011_not_sampled_or_reproduced_by_live_runner`
   - `field_strength_dependence_rows_s_0.001_and_s_0.016_not_present_in_current_runner`
   - `high_G_live_runner_shows_unstable_away_behavior_not_smooth_threshold_table`
+- **auditor confidence:** high
+
+### `bell_inequality_derived_note`
+
+- **Note:** [`BELL_INEQUALITY_DERIVED_NOTE.md`](../../docs/BELL_INEQUALITY_DERIVED_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-18`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** For the hard-coded two-species tensor product Hamiltonian H=H1⊗I+I⊗H1+G V(i,j)|i><i|⊗|j><j|, selected finite-lattice/large-G points give Horodecki CHSH values above 2 while G=0 gives |S|=2.000.  _(class `G`)_
+- **chain closes:** False — The current runner reproduces the listed CHSH values, Cl(3) taste-operator checks, tensor-product commutativity, and G=0 null controls. The claim remains a selected finite-lattice/selected-G model surface because the two-species physical bipartition, D5 Poisson density coupling as gravity, physical G normalization, and continuum scaling are not derived as retained inputs.
+- **rationale:** Issue: the computation is reproducible for the listed finite lattices and selected G values, but the Bell violation depends on chosen strong-coupling parameter points rather than a derived physical gravitational coupling or continuum family. Why this blocks: G=0 is a useful null control and the taste-operator identification is now explicit, yet the model surface does not prove a framework-native or physical gravitational Bell-violation theorem. Repair target: register clean one-hop inputs for the two-species retained matter bipartition and D5 Poisson coupling, derive the physical normalization/scaling of G, and test a fixed derived coupling or continuum-refinement family rather than sweeping to violation. Claim boundary until fixed: bounded reproducible model-surface CHSH violation for the listed small lattices and selected G couplings, with explicit Cl(3) taste checks and G=0 null controls.
+- **open / conditional deps cited:**
+  - `SINGLE_AXIOM_HILBERT_NOTE.md`
+  - `retained_multi_species_matter_content_not_registered_one_hop`
+  - `D5_periodic_Poisson_coupling_not_registered_one_hop`
+  - `physical_G_normalization_and_continuum_limit_not_derived`
 - **auditor confidence:** high
 
 ### `beyond_lattice_qcd_note`
