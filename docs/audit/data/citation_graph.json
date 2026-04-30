@@ -4501,6 +4501,38 @@
       "to": "yt_flagship_boundary_note"
     },
     {
+      "from": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
+      "to": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29"
+    },
+    {
+      "from": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
+      "to": "hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29"
+    },
+    {
+      "from": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
+      "to": "hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29"
+    },
+    {
+      "from": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
+      "to": "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29"
+    },
+    {
+      "from": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
+      "to": "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25"
+    },
+    {
+      "from": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
+      "to": "planck_source_unit_normalization_support_theorem_note_2026-04-25"
+    },
+    {
+      "from": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
+      "to": "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27"
+    },
+    {
+      "from": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
+      "to": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27"
+    },
+    {
       "from": "hubble_tension_structural_lock_theorem_note_2026-04-26",
       "to": "minimal_axioms_2026-04-11"
     },
@@ -18325,7 +18357,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T13:33:10.016462+00:00",
+  "generated_at": "2026-04-30T13:33:50.278172+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -27304,6 +27336,25 @@
       "path": "docs/HUBBLE_LANE5_C1_CARRIER_METROLOGY_AXIOM_AUDIT_NOTE_2026-04-29.md",
       "runner_path": "scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py",
       "title": "Lane 5 `(C1)` Carrier/Metrology Axiom Audit Note"
+    },
+    "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30": {
+      "claim_id": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [
+        "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
+        "hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29",
+        "hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29",
+        "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29",
+        "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25",
+        "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+        "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
+        "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27"
+      ],
+      "note_hash": "6f3269c80284e6dcf5c9b9408972301eb5d51830cfcf1899034c9025ded9c374",
+      "path": "docs/HUBBLE_LANE5_C1_CL4C_CONDITIONAL_DERIVATION_CHAIN_CONSTRUCTION_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_hubble_lane5_c1_cl4c_conditional_derivation_chain_construction.py",
+      "title": "Lane 5 `(C1)` Cl_4(C)-Conditional Derivation Chain Construction Note"
     },
     "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28": {
       "claim_id": "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28",
@@ -41426,18 +41477,18 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4581,
+    "edge_count": 4589,
     "leaf_count": 745,
-    "node_count": 1683,
+    "node_count": 1684,
     "root_count": 1211,
-    "runners_with_path": 767,
+    "runners_with_path": 768,
     "status_counts": {
       "bounded": 255,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
       "support": 184,
-      "unknown": 795
+      "unknown": 796
     }
   }
 }
