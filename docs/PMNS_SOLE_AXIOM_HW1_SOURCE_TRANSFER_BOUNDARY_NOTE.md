@@ -1,5 +1,6 @@
 # PMNS Sole-Axiom `hw=1` Source/Transfer Boundary
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16  
 **Script:** `scripts/frontier_pmns_sole_axiom_hw1_source_transfer_boundary.py`
 

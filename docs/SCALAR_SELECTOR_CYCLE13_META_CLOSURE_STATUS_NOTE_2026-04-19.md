@@ -3,7 +3,7 @@
 **Date:** 2026-04-19
 **Scope:** Honest status update after the this cycle meta-closure return, taken
 before the April 19, 2026 7:00 PM America/New_York rate-limit reset.
-**Status:** structural/meta-closure note only. This is not a claim that the
+**Status:** support - structural or confirmatory support note
 four scalar-selector gates are now reviewer-grade derivations.
 
 ## Executive summary

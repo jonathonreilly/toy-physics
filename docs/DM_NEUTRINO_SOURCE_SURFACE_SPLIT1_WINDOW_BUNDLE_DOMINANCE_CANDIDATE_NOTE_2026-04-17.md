@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Split-1 Window Bundle-Dominance Candidate
 
 **Date:** 2026-04-17  
-**Status:** strong local split-1 dominance candidate on a broad exact bundle box; not flagship closure  
+**Status:** bounded - bounded or caveated result note
 **Primary runner:** `scripts/frontier_dm_neutrino_source_surface_split1_window_bundle_dominance_candidate.py`
 
 ## Question

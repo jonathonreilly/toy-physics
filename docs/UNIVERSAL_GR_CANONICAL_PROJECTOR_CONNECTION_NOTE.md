@@ -1,5 +1,6 @@
 # Universal GR Canonical Projector / Connection Candidate on `PL S^3 x R`
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / canonicalization note  

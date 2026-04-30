@@ -1,5 +1,6 @@
 # Graph Laplacian KG Core Card Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-10  
 **Harnesses:**  
 - [`scripts/frontier_graph_kg_16card.py`](../scripts/frontier_graph_kg_16card.py)  

@@ -1,5 +1,6 @@
 # Triple-Stack Collapse Scaling Note
 
+**Status:** bounded - bounded or caveated result note
 This note records the corrected scaling pilot for the stacked hard-geometry lane:
 
 - linear baseline

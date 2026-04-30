@@ -1,5 +1,6 @@
 # Staggered Fermion + Parity-Coupled Gravity — Complete Card
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-11 (parity coupling rewrite)
 **Coupling:** `H_diag = (m + Phi) * epsilon(x)` — scalar 1x1 in spin-taste
 **Reference:** Zache et al. (Quantum 2020), Dempsey et al. (arXiv:2501.10862)

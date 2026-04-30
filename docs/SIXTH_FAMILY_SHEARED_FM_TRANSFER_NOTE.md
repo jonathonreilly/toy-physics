@@ -1,5 +1,6 @@
 # Sixth Family Sheared Weak-Field Transfer
 
+**Status:** bounded - bounded or caveated result note
 The sixth-family sheared-shell basin retains weak-field linearity on the rows
 that survive the exact gate.
 

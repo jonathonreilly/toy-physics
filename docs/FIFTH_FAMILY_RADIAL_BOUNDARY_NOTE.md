@@ -1,7 +1,7 @@
 # Fifth Family Radial Boundary Note
 
 **Date:** 2026-04-06  
-**Status:** diagnosed sign-orientation boundary for the radial-shell fifth-family slice
+**Status:** support - structural or confirmatory support note
 
 ## Artifact Chain
 

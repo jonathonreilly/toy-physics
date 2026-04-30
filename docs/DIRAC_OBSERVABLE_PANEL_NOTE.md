@@ -1,5 +1,6 @@
 # Dirac Observable Panel Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-10  
 **Scope:** one Dirac 3+1D harness, many gravity readouts.
 

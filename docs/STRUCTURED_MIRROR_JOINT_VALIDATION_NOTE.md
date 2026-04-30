@@ -1,4 +1,4 @@
-**Status:** structured mirror linear joint check saved
+**Status:** bounded - bounded or caveated result note
 
 Artifacts:
 - [`scripts/structured_mirror_joint_validation.py`](/Users/jonreilly/Projects/Physics/scripts/structured_mirror_joint_validation.py)

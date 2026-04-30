@@ -1,7 +1,7 @@
 # PMNS Graph-Commutant Cycle Value Boundary
 
 **Date:** 2026-04-16  
-**Status:** theorem-grade boundary for the graph-native projected-commutant route  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_pmns_graph_commutant_cycle_value_boundary.py`
 
 ## Question

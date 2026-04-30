@@ -1,5 +1,6 @@
 # DM Leptogenesis PMNS Analytic Stationary Classification Theorem
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16  
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_analytic_stationary_classification_theorem.py`  
 **Framework convention:** “axiom” means only `Cl(3)` on `Z^3`

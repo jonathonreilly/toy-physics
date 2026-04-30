@@ -5,7 +5,7 @@
 valuable theorem files from the canonical branch on 2026-04-19 evening, and
 an earlier retirement-style note applied a correct argument to a different
 base than the one the selected-line theorem actually uses.
-**Status:** Historical recovery note only. This is **not** the current
+**Status:** support - structural or confirmatory support note
 claim surface. It preserves valuable same-day material and route history, but
 its closure language is superseded by the current package-facing documents:
 `publication/ci3_z3/README.md`,

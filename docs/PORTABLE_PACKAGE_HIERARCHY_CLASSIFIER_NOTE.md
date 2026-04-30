@@ -1,7 +1,7 @@
 # Portable Package Hierarchy Classifier
 
 **Date:** 2026-04-06  
-**Status:** review-safe compact classifier
+**Status:** unknown (pending author classification)
 
 ## Artifact Chain
 

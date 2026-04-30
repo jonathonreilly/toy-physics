@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-21
 **Lane:** native/source DM A-BCC sharpening
-**Status:** exact target-surface closure theorem. Once the exact PMNS target
+**Status:** support - structural or confirmatory support note
 surface is granted, no separate native branch-choice residue remains: the
 active half-plane chamber is already exact on the source side, the exact
 target-surface chamber roots are exactly `{Basin 1, Basin 2, Basin X}`, and

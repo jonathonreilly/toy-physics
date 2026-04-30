@@ -71,7 +71,7 @@ Step 9  — ambient-S^2 monopole story retires: actual positive projectivized
            runner verified]
 ```
 
-**Status:** the Brannen-Zenczykowski phase offset supplies `delta = 2/9` (†); the actual-route Berry
+**Status:** bounded - bounded or caveated result note
 theorem supplies its geometric meaning as a canonical Pancharatnam–Berry
 holonomy on the physical selected line. Together they eliminate the
 previously separate `m_* / kappa_sel,*` imports as derived

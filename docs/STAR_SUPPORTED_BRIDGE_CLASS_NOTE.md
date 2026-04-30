@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-13  
 **Script:** `scripts/frontier_star_supported_bridge_class.py`  
-**Status:** Exact bridge-side closure across the star-supported finite-rank class on the current bridge surface
+**Status:** support - structural or confirmatory support note
 
 ## Purpose
 

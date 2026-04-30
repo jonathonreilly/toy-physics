@@ -1,7 +1,7 @@
 # DM Neutrino Two-Higgs Closure Attacks
 
 **Date:** 2026-04-15  
-**Status:** route-selection note for the current DM denominator blocker
+**Status:** bounded - bounded or caveated result note
 
 ## Exact live gaps
 

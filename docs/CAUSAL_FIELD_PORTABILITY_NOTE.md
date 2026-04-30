@@ -1,7 +1,7 @@
 # Causal Field Portability Note
 
 **Date:** 2026-04-06  
-**Status:** diagnosed family boundary: exact-null survives, but the forward-only and finite-cone ratios do not stay portable across all three families
+**Status:** support - structural or confirmatory support note
 
 ## Artifact Chain
 

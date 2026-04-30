@@ -1,7 +1,7 @@
 # DM Leptogenesis PMNS Observable-Relative-Action Law
 
 **Date:** 2026-04-16  
-**Status:** strongest framework-internal selector law currently available  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_observable_relative_action_law.py`
 
 ## Law

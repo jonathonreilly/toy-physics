@@ -1,7 +1,7 @@
 # PMNS Oriented Cycle Reduced-Channel Nonselection
 
 **Date:** 2026-04-16  
-**Status:** exact nonselection theorem  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py`
 
 ## Question

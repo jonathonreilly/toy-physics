@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Split-2 Upper-m Slack-Floor Endpoint Candidate
 
 **Date:** 2026-04-18  
-**Status:** tested-line positive-path reduction on split-2; not flagship closure
+**Status:** bounded - bounded or caveated result note
 
 ## Question
 

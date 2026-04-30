@@ -1,7 +1,7 @@
 # Higgs Mass: Hierarchy Correction Analysis (Negative Result)
 
 **Date:** 2026-04-14
-**Status:** NEGATIVE RESULT -- the L_t=4 curvature correction goes the wrong
+**Status:** bounded - bounded or caveated result note
 direction. No hierarchy correction chain reduces m_H from 140.3 toward 125.
 
 ---

@@ -1,5 +1,6 @@
 # PMNS Current Bank Value-Selection No-Go
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16  
 **Script:** `scripts/frontier_pmns_current_bank_value_selection_nogo.py`
 

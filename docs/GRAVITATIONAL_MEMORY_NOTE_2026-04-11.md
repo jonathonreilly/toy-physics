@@ -1,6 +1,6 @@
 # Gravitational Memory Note
 
-Status: exploratory / protocol-specific
+**Status:** bounded - bounded or caveated result note
 
 Primary artifact:
 - [`scripts/frontier_gravitational_memory.py`](../scripts/frontier_gravitational_memory.py)

@@ -1,5 +1,6 @@
 # Neutrino Majorana `nu_R` Charge-2 Primitive Reduction
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16  
 **Script:** `scripts/frontier_neutrino_majorana_nur_charge2_primitive_reduction.py`
 

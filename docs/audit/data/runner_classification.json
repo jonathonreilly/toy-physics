@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T17:50:12.222788+00:00",
+  "generated_at": "2026-04-30T18:17:53.582508+00:00",
   "per_claim": {
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "assert_count": 0,
@@ -6145,18 +6145,6 @@
       "dominant_class": null,
       "runner": "scripts/frontier_gr_class_expansion_finite_rank_target.py"
     },
-    "graph_dirac_requirements_2026-04-10": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 21,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "runner": "scripts/frontier_staggered_17card.py"
-    },
     "graph_first_selector_derivation_note": {
       "assert_count": 1,
       "counts": {
@@ -7260,18 +7248,6 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_koide_circulant_wilson_target.py"
-    },
-    "koide_closure_atlas_issues_flagged": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 10,
-        "D": 6
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "runner": "scripts/frontier_higgs_dressed_propagator_v1.py"
     },
     "koide_cyclic_projector_block_democracy_note_2026-04-18": {
       "assert_count": 1,
@@ -9937,18 +9913,6 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_physical_lattice_necessity.py"
     },
-    "physics_critic_tracker": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 21,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "runner": "scripts/frontier_staggered_17card.py"
-    },
     "planck_boundary_density_extension_theorem_note_2026-04-24": {
       "assert_count": 0,
       "counts": {
@@ -11605,30 +11569,6 @@
       "dominant_class": null,
       "runner": "scripts/topology_families.py"
     },
-    "session_synthesis_2026-04-09": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "runner": "scripts/frontier_geodesic_gravity_test.py"
-    },
-    "session_synthesis_2026-04-10_final": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 21,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "runner": "scripts/frontier_staggered_17card.py"
-    },
     "session_synthesis_2026-04-10_graph_axioms": {
       "assert_count": 0,
       "counts": {
@@ -11640,18 +11580,6 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_axioms_16card.py"
-    },
-    "session_synthesis_2026-04-11": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 6,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "runner": "scripts/frontier_correct_coupling.py"
     },
     "shapiro_complex_interaction_note": {
       "assert_count": 0,
@@ -14256,30 +14184,6 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_qfp_insensitivity.py"
-    },
-    "yt_retention_landing_readiness_2026-04-18": {
-      "assert_count": 5,
-      "counts": {
-        "A": 0,
-        "B": 2,
-        "C": 0,
-        "D": 5
-      },
-      "decoration_candidate": false,
-      "dominant_class": "D",
-      "runner": "scripts/frontier_yt_retention_landing_readiness.py"
-    },
-    "yt_retention_master_manifest_2026-04-18": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 1,
-        "C": 0,
-        "D": 9
-      },
-      "decoration_candidate": false,
-      "dominant_class": "D",
-      "runner": "scripts/frontier_yt_retention_manifest.py"
     },
     "yt_right_handed_species_dependence_note_2026-04-18": {
       "assert_count": 0,
@@ -17435,8 +17339,7 @@
     "scripts/frontier_correct_coupling.py": {
       "assert_count": 0,
       "claims": [
-        "gravity_sign_audit_2026-04-10",
-        "session_synthesis_2026-04-11"
+        "gravity_sign_audit_2026-04-10"
       ],
       "counts": {
         "A": 0,
@@ -21486,21 +21389,6 @@
       "dominant_class": "C",
       "exists": true
     },
-    "scripts/frontier_geodesic_gravity_test.py": {
-      "assert_count": 0,
-      "claims": [
-        "session_synthesis_2026-04-09"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": true
-    },
     "scripts/frontier_geometry_superposition.py": {
       "assert_count": 0,
       "claims": [
@@ -21902,21 +21790,6 @@
         "B": 0,
         "C": 2,
         "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "exists": true
-    },
-    "scripts/frontier_higgs_dressed_propagator_v1.py": {
-      "assert_count": 0,
-      "claims": [
-        "koide_closure_atlas_issues_flagged"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 10,
-        "D": 6
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -26210,9 +26083,6 @@
     "scripts/frontier_staggered_17card.py": {
       "assert_count": 0,
       "claims": [
-        "graph_dirac_requirements_2026-04-10",
-        "physics_critic_tracker",
-        "session_synthesis_2026-04-10_final",
         "staggered_fermion_card_2026-04-10"
       ],
       "counts": {
@@ -27888,36 +27758,6 @@
         "B": 0,
         "C": 4,
         "D": 5
-      },
-      "decoration_candidate": false,
-      "dominant_class": "D",
-      "exists": true
-    },
-    "scripts/frontier_yt_retention_landing_readiness.py": {
-      "assert_count": 5,
-      "claims": [
-        "yt_retention_landing_readiness_2026-04-18"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 2,
-        "C": 0,
-        "D": 5
-      },
-      "decoration_candidate": false,
-      "dominant_class": "D",
-      "exists": true
-    },
-    "scripts/frontier_yt_retention_manifest.py": {
-      "assert_count": 0,
-      "claims": [
-        "yt_retention_master_manifest_2026-04-18"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 1,
-        "C": 0,
-        "D": 9
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -31444,12 +31284,12 @@
     "dominant_class_distribution": {
       "A": 7,
       "B": 118,
-      "C": 432,
-      "D": 182,
-      "none": 392
+      "C": 431,
+      "D": 180,
+      "none": 391
     },
-    "runners_classified": 1131,
-    "runners_with_C": 519,
-    "runners_with_D": 281
+    "runners_classified": 1127,
+    "runners_with_C": 518,
+    "runners_with_D": 278
   }
 }

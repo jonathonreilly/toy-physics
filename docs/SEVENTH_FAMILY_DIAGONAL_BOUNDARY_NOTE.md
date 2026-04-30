@@ -1,5 +1,6 @@
 # Seventh Family Diagonal Boundary Note
 
+**Status:** support - structural or confirmatory support note
 The diagonal-stripe seventh-family scout is highly selective.
 
 Exact-gate result:

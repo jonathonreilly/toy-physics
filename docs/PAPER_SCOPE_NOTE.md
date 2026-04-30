@@ -1,7 +1,7 @@
 # Paper Scope Note
 
 **Date:** 2026-04-04  
-**Status:** public scope note for the current action-law fork
+**Status:** support - structural or confirmatory support note
 
 ## Recommended paper scope
 

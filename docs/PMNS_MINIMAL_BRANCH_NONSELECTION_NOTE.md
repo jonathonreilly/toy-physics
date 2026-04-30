@@ -1,7 +1,7 @@
 # PMNS Minimal-Branch Current-Atlas Nonselection Theorem
 
 **Date:** 2026-04-15
-**Status:** exact current-atlas/package theorem on the surviving minimal
+**Status:** support - structural or confirmatory support note
 PMNS-producing branches
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`

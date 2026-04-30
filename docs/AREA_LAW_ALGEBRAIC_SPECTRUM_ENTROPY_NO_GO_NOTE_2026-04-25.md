@@ -1,7 +1,7 @@
 # Area-Law Algebraic-Spectrum Entropy No-Go Note
 
 **Date:** 2026-04-25
-**Status:** residual selector lemma for Planck Target 2
+**Status:** bounded - bounded or caveated result note
 **Runner:** `scripts/frontier_area_law_algebraic_spectrum_entropy_no_go.py`
 
 ## Purpose

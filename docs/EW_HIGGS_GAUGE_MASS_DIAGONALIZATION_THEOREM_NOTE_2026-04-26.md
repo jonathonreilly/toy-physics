@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-26
 
-**Status:** standalone positive electroweak/Higgs theorem. This note proves
+**Status:** proposed_retained - explicit strong derivation claim pending audit
 the exact tree-level gauge-boson mass spectrum and charge normalization
 forced by one `SU(2)_L` Higgs doublet of hypercharge `Y_H = 1/2`. It is a
 structural guardrail for the retained EW normalization and bounded `M_W`

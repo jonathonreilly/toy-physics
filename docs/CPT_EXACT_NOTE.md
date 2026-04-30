@@ -1,5 +1,6 @@
 # CPT Exact Preservation in the Cl(3) Staggered Framework
 
+**Status:** support - structural or confirmatory support note
 ## Status
 
 EXACT theorem on even periodic lattices. All checks pass on `L = 4, 6, 8`

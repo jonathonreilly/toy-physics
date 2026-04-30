@@ -1,7 +1,7 @@
 # Source-Resolved Generated Architecture Bridge Note
 
 **Date:** 2026-04-05
-**Status:** generated-family architecture bridge, not a closure theorem
+**Status:** bounded - bounded or caveated result note
 
 ## Artifact chain
 

@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-20  
 **Lane:** PMNS / `I5` remaining angle-pin task  
-**Status:** theorem-grade reduction on the charged-lepton-side branch; not a
+**Status:** support - structural or confirmatory support note
 full positive `I5` closure  
 **Does not close:** a framework-native point-selection law on the exact PMNS
 source manifold  

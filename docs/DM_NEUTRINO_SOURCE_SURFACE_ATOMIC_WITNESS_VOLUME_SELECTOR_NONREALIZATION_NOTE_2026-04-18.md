@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Atomic Witness-Volume Selector Nonrealization
 
 **Date:** 2026-04-18  
-**Status:** exact current-bank nonrealization theorem on the selector side  
+**Status:** support - structural or confirmatory support note
 **Primary runner:** `scripts/frontier_dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization.py`
 
 ## Question

@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-20
 **Lane:** Charged-lepton Koide / kappa = 2
-**Status:** structural repositioning note. Formally demotes the MRU
+**Status:** support - structural or confirmatory support note
 "SO(2)-quotient" closure route to supplementary / alternative-framing
 support, and promotes the spectrum-operator bridge theorem as the
 **primary** retained closure route for operator-side kappa = 2.

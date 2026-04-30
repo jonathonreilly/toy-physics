@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-21
 **Lane:** native/source DM last-mile sharpening
-**Status:** exact reduction theorem on the reduced graph-first carrier; the
+**Status:** support - structural or confirmatory support note
 later same-day affine sharpening and ordered-chain graded-current closure
 theorems complete the physical native/source last mile
 **Positive activation theorem:**

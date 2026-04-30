@@ -1,5 +1,6 @@
 # Scalar-Selector Synthesis
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-19
 **Scope:** Publishable synthesis of four Tier-1 Standard Model
 scalar-selector gates: Koide `kappa`, Koide doublet-phase (Koide

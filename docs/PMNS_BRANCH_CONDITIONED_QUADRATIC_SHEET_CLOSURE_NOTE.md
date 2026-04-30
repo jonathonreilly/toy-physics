@@ -1,7 +1,7 @@
 # PMNS Branch-Conditioned Quadratic-Sheet Closure
 
 **Date:** 2026-04-15
-**Status:** exact branch-conditioned coefficient-reconstruction theorem on the
+**Status:** support - structural or confirmatory support note
 minimal PMNS branches
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`

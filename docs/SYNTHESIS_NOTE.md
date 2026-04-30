@@ -1,7 +1,7 @@
 # Synthesis Note: Emergent Physics on Discrete Causal DAGs
 
 **Date:** 2026-04-03
-**Status:** Hardened synthesis. Several older claims below are historical snapshots; the
+**Status:** support - structural or confirmatory support note
 retained conclusions are summarized in the next section.
 
 ## The model

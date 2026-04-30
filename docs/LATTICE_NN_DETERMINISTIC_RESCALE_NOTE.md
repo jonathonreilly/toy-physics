@@ -1,7 +1,7 @@
 # Lattice NN Deterministic Rescale Note
 
 **Date:** 2026-04-03  
-**Status:** Born-safe deterministic extension through `h=0.0625`
+**Status:** bounded - bounded or caveated result note
 
 This note freezes the deterministic-rescale follow-up to the raw nearest-neighbor
 lattice continuum harness.

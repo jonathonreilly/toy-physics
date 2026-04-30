@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Microscopic Positive-Probe Representation Theorem
 
 **Date:** 2026-04-17  
-**Status:** conditional selector-class representation theorem on the exact
+**Status:** bounded - bounded or caveated result note
 microscopic positive-probe grammar; not flagship closure  
 **Primary runner:** `scripts/frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py`
 

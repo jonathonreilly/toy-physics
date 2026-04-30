@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-14  
 **Script:** `scripts/frontier_tensor_block_closure_test.py`  
-**Status:** minimal rank-two tensor block is locally sufficient, but not universal across the audited restricted class
+**Status:** bounded - bounded or caveated result note
 
 ## Question
 

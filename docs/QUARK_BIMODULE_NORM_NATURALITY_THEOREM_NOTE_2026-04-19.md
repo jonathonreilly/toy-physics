@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19  
 **Lane:** Quark up-amplitude / bimodule LO closure  
-**Status:** same-day strengthening theorem; this theorem adds three explicit
+**Status:** support - structural or confirmatory support note
 bimodule structural conditions (complementarity, endpoint normalization,
 affine naturality) above the previously retained quark packet and shows that
 BICAC is the unique normalized affine extension of the LO split law under

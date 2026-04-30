@@ -1,7 +1,7 @@
 # DM Leptogenesis PMNS Off-Seed Triplet Sign Boundary
 
 **Date:** 2026-04-16  
-**Status:** exact off-seed PMNS sign-boundary theorem for the charged-sector
+**Status:** support - structural or confirmatory support note
 comparator lane  
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_off_seed_triplet_sign_boundary.py`
 

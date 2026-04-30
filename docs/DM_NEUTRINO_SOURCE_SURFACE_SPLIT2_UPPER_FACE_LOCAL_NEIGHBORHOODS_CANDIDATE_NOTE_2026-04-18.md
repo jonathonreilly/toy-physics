@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Split-2 Upper-Face Local Neighborhoods Candidate
 
 **Date:** 2026-04-18  
-**Status:** local carrier-side exhaustion candidate on the science branch  
+**Status:** bounded - bounded or caveated result note
 **Primary runner:** `scripts/frontier_dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate.py`
 
 ## Question

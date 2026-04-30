@@ -1,7 +1,7 @@
 # Staggered Backreaction Prototype
 
 **Date:** 2026-04-10  
-**Status:** prototype implemented
+**Status:** bounded - bounded or caveated result note
 
 ## Objective
 

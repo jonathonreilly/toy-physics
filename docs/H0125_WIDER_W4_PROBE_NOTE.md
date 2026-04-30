@@ -1,5 +1,6 @@
 # Wider `h = 0.125` `phys_w = 4` Probe Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-06
 
 This note records the cheapest width-4 continuation probe for the dense

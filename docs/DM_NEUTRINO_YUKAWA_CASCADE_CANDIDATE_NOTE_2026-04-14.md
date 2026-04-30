@@ -1,5 +1,6 @@
 # DM Neutrino Yukawa Cascade Candidate
 
+**Status:** support - structural or confirmatory support note
 **Date:** 2026-04-14
 **Branch:** `codex/dm-main-derived`
 **Script:** `scripts/frontier_dm_neutrino_yukawa_candidate.py`

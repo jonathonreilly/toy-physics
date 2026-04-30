@@ -1,7 +1,7 @@
 # DM Leptogenesis `N_e` Projected-Source Triplet Sign Theorem
 
 **Date:** 2026-04-16  
-**Status:** exact bridge theorem from the DM-lane projected Hermitian source law
+**Status:** support - structural or confirmatory support note
 to the baryogenesis-side triplet sign target  
 **Script:** `scripts/frontier_dm_leptogenesis_ne_projected_source_triplet_sign_theorem.py`
 

@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Observable-Grammar Exhaustion Obstruction
 
 **Date:** 2026-04-17  
-**Status:** exact obstruction note for the top-down selector attack; publishable
+**Status:** support - structural or confirmatory support note
 without selector closure  
 **Primary runner:** `scripts/frontier_dm_neutrino_source_surface_observable_grammar_exhaustion_obstruction.py`
 

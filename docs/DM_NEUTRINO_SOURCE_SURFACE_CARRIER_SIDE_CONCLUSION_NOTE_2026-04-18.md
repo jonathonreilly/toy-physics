@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Carrier-Side Conclusion
 
 **Date:** 2026-04-18  
-**Status:** carrier-side conclusion note on the science branch  
+**Status:** bounded - bounded or caveated result note
 **Primary runner:** `scripts/frontier_dm_neutrino_source_surface_carrier_side_conclusion.py`
 
 ## Verdict

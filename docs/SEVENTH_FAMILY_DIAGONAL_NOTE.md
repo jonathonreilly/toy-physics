@@ -1,5 +1,6 @@
 # Seventh Family Diagonal Note
 
+**Status:** bounded - bounded or caveated result note
 This note freezes the seventh-family diagonal-stripe scout as a seed-selective
 boundary on the no-restore grown slice.
 

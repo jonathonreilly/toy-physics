@@ -1,5 +1,6 @@
 # Neutrino Majorana `nu_R` Transfer-Character Boundary
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16  
 **Script:** `scripts/frontier_neutrino_majorana_nur_character_boundary.py`
 

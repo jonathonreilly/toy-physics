@@ -39,6 +39,7 @@ STATUS_PATTERNS = [
     # interpretation rule from FRESH_LOOK_REQUIREMENTS.md.
     (re.compile(r"\bretained\b", re.IGNORECASE), "proposed_retained"),
     (re.compile(r"\bpromoted\b", re.IGNORECASE), "proposed_promoted"),
+    (re.compile(r"\bsuperseded_by\b", re.IGNORECASE), "support"),
     (re.compile(r"\boutside\s+audit-ratified\s+tier\b", re.IGNORECASE), "support"),
     (re.compile(r"\bflagship\s+closed\b", re.IGNORECASE), "proposed_retained"),
     (re.compile(r"\bbounded\b", re.IGNORECASE), "bounded"),

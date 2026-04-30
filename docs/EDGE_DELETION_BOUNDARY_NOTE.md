@@ -1,7 +1,7 @@
 # Edge Deletion Boundary: Gravity Sign Flip
 
 **Date:** 2026-04-04
-**Status:** frozen boundary sweep
+**Status:** support - structural or confirmatory support note
 
 ## Result
 

@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
+**Status:** support - structural or confirmatory support note
 **Purpose:** direct-to-universal-GR architecture memo, treating the current restricted-class tensor ladder as a diagnostic reference rather than the primary route.
 
 ## Executive summary

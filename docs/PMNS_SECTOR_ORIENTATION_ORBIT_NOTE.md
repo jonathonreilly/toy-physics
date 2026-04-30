@@ -1,7 +1,7 @@
 # PMNS Sector-Orientation Orbit Reduction
 
 **Date:** 2026-04-15
-**Status:** exact current-bank reduction theorem on the residual discrete
+**Status:** support - structural or confirmatory support note
 freedom of the non-universal one-sided PMNS surface
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`

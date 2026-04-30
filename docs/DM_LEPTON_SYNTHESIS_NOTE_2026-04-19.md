@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19  
 **Branch:** `frontier/dm-leptons-review`  
-**Status:** Complete derivation stack from Cl(3)/Z³ axiom through
+**Status:** support - structural or confirmatory support note
 observational-promotion closure
 
 ## Overview

@@ -1,5 +1,6 @@
 # Higher-Dimension Status
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-01  
 **Purpose:** compact, review-safe summary of the current 3D / 4D / 5D state.
 

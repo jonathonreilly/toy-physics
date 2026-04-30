@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-14  
 **Script:** `scripts/frontier_tensor_source_map_eta.py`  
-**Status:** exact rank-two source response on the current restricted class; not full nonlinear GR
+**Status:** bounded - bounded or caveated result note
 
 ## Purpose
 

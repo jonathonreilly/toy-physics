@@ -1,7 +1,7 @@
 # DM Leptogenesis PMNS Sole-Axiom Boundary
 
 **Date:** 2026-04-16  
-**Status:** exact sole-axiom boundary on the PMNS-assisted flavored-DM repair route  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_sole_axiom_boundary.py`
 
 ## Question

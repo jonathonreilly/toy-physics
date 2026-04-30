@@ -1,7 +1,7 @@
 # DM Neutrino Triplet Normalization Target
 
 **Date:** 2026-04-15  
-**Status:** exact coefficient target theorem for the missing triplet law  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_neutrino_triplet_normalization_target.py`
 
 ## Question

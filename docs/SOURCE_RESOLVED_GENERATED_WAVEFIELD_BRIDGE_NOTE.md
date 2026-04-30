@@ -1,5 +1,6 @@
 # Source-Resolved Generated Wavefield Bridge
 
+**Status:** bounded - bounded or caveated result note
 This probe tests whether the retained exact-lattice wavefield idea can be transferred onto the compact generated-family bridge, rather than only using static or causal smoothing.
 
 ## Setup

@@ -1,5 +1,6 @@
 # Neutrino Two-Amplitude Last-Mile Reduction
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16  
 **Script:** `scripts/frontier_neutrino_two_amplitude_last_mile.py`
 

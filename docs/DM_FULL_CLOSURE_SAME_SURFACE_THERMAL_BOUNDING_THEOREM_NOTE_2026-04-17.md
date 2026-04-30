@@ -1,5 +1,6 @@
 # DM Full Closure Same-Surface Thermal Bounding Theorem
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-17  
 **Branch:** `codex/dm-thermal-review-2026-04-17`  
 **Script:** `scripts/frontier_dm_full_closure_same_surface_thermal_bounding_theorem.py`

@@ -1,7 +1,7 @@
 # Shapiro Scaling Note
 
 **Date:** 2026-04-08  
-**Status:** direct data-bearing replay; reconstruction-only anchor chain closed
+**Status:** support - structural or confirmatory support note
 
 ## Pointer
 

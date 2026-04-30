@@ -1,7 +1,7 @@
 # PMNS Corner Transport Active Block
 
 **Date:** 2026-04-16  
-**Status:** positive native transport law on the active hw=1 block, but not full microscopic closure  
+**Status:** bounded - bounded or caveated result note
 **Script:** `scripts/frontier_pmns_corner_transport_active_block.py`
 
 ## Question

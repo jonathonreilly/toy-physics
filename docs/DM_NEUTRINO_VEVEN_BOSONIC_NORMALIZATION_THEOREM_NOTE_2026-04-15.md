@@ -1,7 +1,7 @@
 # DM Neutrino `v_even` Bosonic Normalization Theorem
 
 **Date:** 2026-04-15  
-**Status:** exact single-axiom normalization theorem for the swap-reduced even
+**Status:** support - structural or confirmatory support note
 transfer coefficients  
 **Script:** `scripts/frontier_dm_neutrino_veven_bosonic_normalization_theorem.py`
 

@@ -1,5 +1,6 @@
 # Light Cone Framing — Lieb-Robinson is Standard Lattice QFT
 
+**Status:** support - structural or confirmatory support note
 **Date:** 2026-04-11
 
 ## The Concern

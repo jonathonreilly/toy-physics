@@ -1,5 +1,6 @@
 # Universal GR Lorentzian Global Atlas Closure on `PL S^3 x R`
 
+**Status:** support - structural or confirmatory support note
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / finite-atlas global theorem

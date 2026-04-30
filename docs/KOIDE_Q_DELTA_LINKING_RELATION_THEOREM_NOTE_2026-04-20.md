@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-20
 **Lane:** Scalar-selector cycle 1 — joint Koide-program import consolidation.
-**Status:** Partial closure. The linking relation `δ = Q/d` is proved as a
+**Status:** bounded - bounded or caveated result note
 consequence of two retained structural identities **plus one residual
 radian-bridge postulate** that is named precisely below. The relation is not
 derivable from Cl(3)/Z³ + selected-line CP¹ Berry structure alone.

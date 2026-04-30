@@ -1,7 +1,7 @@
 # DM Leptogenesis PMNS Even-Response Sole-Axiom Boundary
 
 **Date:** 2026-04-16  
-**Status:** exact negative boundary theorem on the PMNS comparator gate  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_even_response_sole_axiom_boundary.py`
 
 ## Question

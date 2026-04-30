@@ -1,7 +1,7 @@
 # PMNS Transfer-Operator Dominant Mode
 
 **Date:** 2026-04-16  
-**Status:** positive native transfer-operator theorem on the `hw=1` triplet  
+**Status:** support - structural or confirmatory support note
 **Script:** [`frontier_pmns_transfer_operator_dominant_mode.py`](../scripts/frontier_pmns_transfer_operator_dominant_mode.py)
 
 ## Question

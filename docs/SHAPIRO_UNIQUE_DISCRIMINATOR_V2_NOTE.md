@@ -1,7 +1,7 @@
 # Shapiro Unique Discriminator V2 Note
 
 **Date:** 2026-04-06  
-**Status:** boundary result - detector-line phase lag is portable, but a static cone-shape proxy reproduces it exactly
+**Status:** support - structural or confirmatory support note
 
 ## Artifact Chain
 

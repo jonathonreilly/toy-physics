@@ -1,7 +1,7 @@
 # Complete Prediction Chain: Cl(3) on Z^3
 
 **Date:** 2026-04-15
-**Status:** DEFINITIVE -- this document supersedes all prior y_t, m_H, and EW notes
+**Status:** proposed_retained - explicit strong derivation claim pending audit
 **Scripts:** `frontier_complete_prediction_chain.py`,
 `frontier_yt_zero_import_chain.py`, `frontier_yt_color_projection_correction.py`,
 `frontier_higgs_mass_stability.py`, `frontier_higgs_mass_corrected_yt.py`,

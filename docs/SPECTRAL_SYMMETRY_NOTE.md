@@ -8,7 +8,7 @@ exploratory decoherence-side lead, not a Born/gravity-validated successor.
 
 **Date:** 2026-04-03
 **Branch:** claude/distracted-napier
-**Status:** Complete. Three-tier result: theorem, mechanism, quantitative scaling.
+**Status:** support - structural or confirmatory support note
 
 ## The theorem (workstream 3)
 

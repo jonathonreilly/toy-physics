@@ -1,5 +1,6 @@
 # K Dependence Review-Safe Note
 
+**Status:** support - structural or confirmatory support note
 This note captures the hardened rerun for the k-dependence claim from
 `scripts/k_dependence_ceiling.py`.
 

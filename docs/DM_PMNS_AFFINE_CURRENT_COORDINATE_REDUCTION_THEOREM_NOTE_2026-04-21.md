@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-21
 **Lane:** native/source DM last-mile sharpening
-**Status:** exact affine-chart sharpening theorem; later same-day precursor to
+**Status:** support - structural or confirmatory support note
 the closure theorem
 `DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md`
 **Primary runner:**

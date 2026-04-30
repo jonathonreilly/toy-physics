@@ -1,5 +1,6 @@
 # Gravity Law Cleanup Note
 
+**Status:** bounded - bounded or caveated result note
 Date: 2026-04-02
 
 This note records the controlled replacements for the earlier gravity-law

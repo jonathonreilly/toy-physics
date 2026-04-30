@@ -1,5 +1,6 @@
 # Cycle-Bearing Graph Battery, Scaled
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-10  
 **Script:** `frontier_staggered_cycle_battery_scaled.py`
 

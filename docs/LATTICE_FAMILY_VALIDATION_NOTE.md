@@ -1,7 +1,7 @@
 # Lattice Family Validation Note
 
 **Date:** 2026-04-03  
-**Status:** review-safe ordered-lattice standard-strength same-family two-harness bridge
+**Status:** support - structural or confirmatory support note
 
 This note freezes the strongest retained **standard-strength** ordered-lattice
 bridge result on the ordered 2D lattice family.

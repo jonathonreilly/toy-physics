@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-21  
 **Lane:** exact-target native/source-map completion
-**Status:** exact closure theorem on the physical affine/source family  
+**Status:** support - structural or confirmatory support note
 **Primary runner:**  
 `scripts/frontier_dm_pmns_ordered_chain_graded_current_delta_closure_2026_04_21.py`
 

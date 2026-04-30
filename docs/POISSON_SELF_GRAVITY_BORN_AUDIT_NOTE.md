@@ -1,7 +1,7 @@
 # Poisson Self-Gravity Born Audit Note
 
 **Date:** 2026-04-05  
-**Status:** explicit per-step vs end-to-end Born audit for the iterated
+**Status:** bounded - bounded or caveated result note
 Poisson-like backreaction loop
 
 ## Artifact chain

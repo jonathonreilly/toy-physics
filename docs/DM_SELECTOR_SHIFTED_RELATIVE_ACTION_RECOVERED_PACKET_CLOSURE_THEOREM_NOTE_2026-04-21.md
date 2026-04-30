@@ -1,7 +1,7 @@
 # DM Selector Shifted-Relative-Action Recovered-Packet Closure Theorem
 
 **Date:** 2026-04-21
-**Status:** current-package closure theorem on the recovered selector packet
+**Status:** support - structural or confirmatory support note
 **Primary runner:** `scripts/frontier_dm_selector_shifted_relative_action_recovered_packet_closure_2026_04_21.py`
 
 ## Statement

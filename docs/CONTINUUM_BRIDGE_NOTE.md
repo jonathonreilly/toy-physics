@@ -1,5 +1,6 @@
 # Continuum / Asymptotic Bridge Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-01
 **Purpose:** Separate finite-size artifacts from potentially retained
 discrete structure. Gate C of the review-hardening backlog.

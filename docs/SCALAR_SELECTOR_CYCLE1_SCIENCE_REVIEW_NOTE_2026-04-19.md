@@ -1,5 +1,6 @@
 # Scalar-Selector this cycle-10 Science Review Note
 
+**Status:** support - structural or confirmatory support note
 **Date:** 2026-04-19
 **Scope:** Science audit of the this cycle to this cycle scalar-selector branch.
 This note is intentionally **not** a claim-surface audit. The question here is

@@ -1,5 +1,6 @@
 # Field Equation Derivation — Variational Argument
 
+**Status:** support - structural or confirmatory support note
 **Date:** 2026-04-11
 
 ## The Problem

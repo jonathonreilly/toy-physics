@@ -1,7 +1,7 @@
 # Cosmological Constant Vacuum-Energy Audit
 
 **Date:** 2026-04-15  
-**Status:** Negative audit. Not the canonical positive `\Lambda` companion
+**Status:** bounded - bounded or caveated result note
 surface.
 
 ## Role In The Cosmology Lane

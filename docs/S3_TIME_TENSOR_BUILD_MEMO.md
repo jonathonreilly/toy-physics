@@ -1,5 +1,6 @@
 # Route 2 Tensor Build Memo
 
+**Status:** unknown (pending author classification)
 **Date:** 2026-04-19  
 **Scope:** current Route-2 tensor/readout/time stack after the exact bilinear
 carrier and the readout/time-coupling theorem block

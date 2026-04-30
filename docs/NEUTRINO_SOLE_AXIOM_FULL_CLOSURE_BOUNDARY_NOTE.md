@@ -1,5 +1,6 @@
 # Neutrino Sole-Axiom Full Closure Boundary
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16  
 **Script:** `scripts/frontier_neutrino_sole_axiom_full_closure_boundary.py`
 

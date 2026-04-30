@@ -1,7 +1,7 @@
 # Gauge-Vacuum Plaquette First-Sector First-Hankel to DM Boundary
 
 **Date:** 2026-04-19  
-**Status:** exact boundary sharpening; the earliest Wilson-side scalar packet
+**Status:** support - structural or confirmatory support note
 that still has to be fixed before quantitative DM matching is the first
 Hankel packet `(m1,m2)`, equivalently the first Jacobi layer
 `(alpha0,beta1)`  

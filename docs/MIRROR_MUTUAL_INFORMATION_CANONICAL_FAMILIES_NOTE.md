@@ -1,4 +1,4 @@
-**Status:** broader mirror-family MI extension saved
+**Status:** bounded - bounded or caveated result note
 
 This note complements the retained exact chokepoint MI artifact by extending
 the same mutual-information measurement to the broader canonical 3D mirror

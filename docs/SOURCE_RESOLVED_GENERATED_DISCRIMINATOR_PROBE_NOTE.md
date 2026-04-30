@@ -1,7 +1,7 @@
 # Source-Resolved Generated Discriminator Probe
 
 **Date:** 2026-04-05
-**Status:** discriminator probe, not a closure theorem
+**Status:** bounded - bounded or caveated result note
 
 ## Artifact chain
 

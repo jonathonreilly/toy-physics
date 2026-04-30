@@ -1,7 +1,7 @@
 # PMNS Uniform Scalar Deformation Boundary
 
 **Date:** 2026-04-16  
-**Status:** exact negative extension theorem  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_pmns_uniform_scalar_deformation_boundary.py`
 
 ## Question

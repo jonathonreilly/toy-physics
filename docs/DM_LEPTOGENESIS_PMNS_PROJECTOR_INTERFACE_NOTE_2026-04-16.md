@@ -1,5 +1,6 @@
 # DM Leptogenesis PMNS Projector Interface
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16  
 **Branch:** `codex/dm-main-refresh`  
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_projector_interface.py`  

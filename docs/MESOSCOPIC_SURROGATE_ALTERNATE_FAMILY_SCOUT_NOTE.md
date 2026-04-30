@@ -1,7 +1,7 @@
 # Mesoscopic Surrogate Alternate-Family Scout Note
 
 **Date:** 2026-04-04  
-**Status:** cheap scouting memo; recommends the next localized attempt only on
+**Status:** bounded - bounded or caveated result note
 the retained 3D `h=0.25` family
 
 ## Question

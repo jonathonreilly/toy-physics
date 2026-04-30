@@ -1,5 +1,6 @@
 # DM Leptogenesis Equilibrium-Conversion Theorem
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16
 **Branch:** `codex/dm-main-refresh`
 **Script:** `scripts/frontier_dm_leptogenesis_equilibrium_conversion_theorem.py`

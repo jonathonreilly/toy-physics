@@ -1,5 +1,6 @@
 # PMNS `C3` Character Holonomy Closure
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16  
 **Script:** `scripts/frontier_pmns_c3_character_holonomy_closure.py`
 

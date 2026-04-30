@@ -1,5 +1,6 @@
 # Gravity Derivation Summary
 
+**Status:** support - structural or confirmatory support note
 **Date:** 2026-04-15
 **Scope:** concise summary of the gravity ladder only
 **Boundary:** direct-universal gravity and weak/Gaussian continuum bridge on the chosen smooth realization, not stronger textbook geometric/action comparison beyond that level

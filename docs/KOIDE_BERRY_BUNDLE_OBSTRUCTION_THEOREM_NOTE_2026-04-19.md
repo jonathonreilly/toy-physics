@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19
 **Lane:** Charged-lepton Koide Berry route.
-**Status:** Exact obstruction theorem on the actual positive projectivized
+**Status:** support - structural or confirmatory support note
 Koide cone. This sharpens the Berry lane by proving that the remaining
 bundle/Chern choice is not just underived on the actual base: it is
 topologically obstructed there. The old monopole picture can only live on an

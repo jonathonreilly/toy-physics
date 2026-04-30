@@ -1,7 +1,7 @@
 # Lattice Field-Strength Unification Note
 
 **Date:** 2026-04-03  
-**Status:** narrow weak-field reopening on the dense ordered-lattice symmetry line
+**Status:** bounded - bounded or caveated result note
 
 This note freezes the follow-up that rechecks the ordered-lattice symmetry
 decision after adding the missing field-strength axis.

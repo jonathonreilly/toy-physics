@@ -1,5 +1,6 @@
 # Dirac 3+1D Core Card Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-10  
 **Harness:** [`scripts/frontier_dirac_walk_3plus1d_core_card.py`](../scripts/frontier_dirac_walk_3plus1d_core_card.py)
 

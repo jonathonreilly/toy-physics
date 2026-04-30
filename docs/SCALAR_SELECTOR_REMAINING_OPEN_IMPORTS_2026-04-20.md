@@ -1,5 +1,6 @@
 # Scalar-Selector Cycle 1 — Remaining Open Imports
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-20
 **Scope:** Each still-open import on the remaining flagship scalar-selector
 lanes (Koide θ, Koide κ, plus the supporting selected-line and bounded quark

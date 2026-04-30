@@ -1,5 +1,6 @@
 # Mesoscopic Surrogate Localization Sweep
 
+**Status:** bounded - bounded or caveated result note
 This note records an alternative localization-family sweep on the retained 3D ordered-lattice mesoscopic source control. The question was whether an explicitly local source shape can preserve the same two-stage sourced-response stability as the broad top-N control, and possibly improve on it.
 
 ## Setup

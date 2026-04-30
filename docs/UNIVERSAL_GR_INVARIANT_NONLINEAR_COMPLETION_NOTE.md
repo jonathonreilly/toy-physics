@@ -1,5 +1,6 @@
 # Universal GR Invariant Nonlinear Completion on `PL S^3 x R`
 
+**Status:** unknown (pending author classification)
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / nonlinear invariant-family theorem step

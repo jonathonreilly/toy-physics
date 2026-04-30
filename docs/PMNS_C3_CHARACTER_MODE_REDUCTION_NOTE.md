@@ -1,6 +1,6 @@
 # PMNS `C3` Character-Mode Reduction
 
-**Status:** theorem-grade reduced-law sharpening  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_pmns_c3_character_mode_reduction.py`
 
 ## Question

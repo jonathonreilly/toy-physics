@@ -1,7 +1,7 @@
 # Koide Theta Hierarchy Open Scalar -- Closed on the Actual Berry Route
 
 **Date:** 2026-04-19
-**Status:** closed for the Brannen-Zenczykowski phase offset / the charged-lepton phase gate. On the
+**Status:** support - structural or confirmatory support note
 actual-route stack, the previously separate selected-line
 `m_* / kappa_sel,*` input is also gone as a corollary. The old ambient-`S^2` /
 `n = 2` monopole story is superseded. The correct closure lives on the exact

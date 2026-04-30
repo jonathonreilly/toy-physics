@@ -1,7 +1,7 @@
 # PMNS Selector Class-Space Uniqueness
 
 **Date:** 2026-04-15
-**Status:** exact reduction theorem on the residual class-level selector space
+**Status:** support - structural or confirmatory support note
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_pmns_selector_class_space_uniqueness.py`

@@ -1,5 +1,6 @@
 # Sixth Family Sheared Boundary
 
+**Status:** bounded - bounded or caveated result note
 The sixth-family sheared-shell basin has a clean local boundary.
 
 What fails:

@@ -1,5 +1,6 @@
 # Source-Resolved Propagating Generated Transfer Note
 
+**Status:** bounded - bounded or caveated result note
 This note freezes the generated-family test of the propagating Green pocket.
 
 ## Files

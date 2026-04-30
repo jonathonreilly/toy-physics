@@ -3,7 +3,7 @@
 **Date:** 2026-04-20
 **Lane:** Scalar-selector cycle 1 — public support on I1 (Koide
 `Q = 2/3`) and I2/P (Brannen phase `δ = 2/9`).
-**Status:** **Conditional closure — public.** Six independent
+**Status:** bounded - bounded or caveated result note
 retained paths at d = 3 converge at exact Q = 2/3 and δ = 2/9, but the
 closure rests on accepting the qubit-lattice-dim / anomaly-arithmetic
 identification (`Q_Koide = dim(Cl(3) spinor)/dim(Z³ lattice) = |Y(d_R)|`)

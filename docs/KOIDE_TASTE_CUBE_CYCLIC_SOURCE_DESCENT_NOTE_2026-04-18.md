@@ -1,7 +1,7 @@
 # Koide Taste-Cube Cyclic-Source Descent Note
 
 **Date:** 2026-04-18  
-**Status:** constructive full-lattice positive-path reduction theorem  
+**Status:** support - structural or confirmatory support note
 **Runner:** `scripts/frontier_koide_taste_cube_cyclic_source_descent.py`
 
 ## Question

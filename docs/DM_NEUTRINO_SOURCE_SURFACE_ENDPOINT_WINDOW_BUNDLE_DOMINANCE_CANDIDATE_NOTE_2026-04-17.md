@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Endpoint Window Bundle-Dominance Candidate
 
 **Date:** 2026-04-17  
-**Status:** strong local endpoint dominance candidate on a broad exact bundle box; not flagship closure  
+**Status:** bounded - bounded or caveated result note
 **Primary runner:** `scripts/frontier_dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate.py`
 
 ## Question
