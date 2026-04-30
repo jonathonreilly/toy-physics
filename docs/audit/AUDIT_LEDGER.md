@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:11:06.239315+00:00
+**Generated:** 2026-04-30T03:12:15.726989+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 199 |
 | support | 100 |
 | open | 24 |
-| unknown | 498 |
+| unknown | 497 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
-| ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 404 |
+| ~~audited_renaming~~ | 53 |
+| ~~audited_conditional~~ | 413 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 186 |
+| `audited_conditional` | 187 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1230 |
+| `unaudited` | 1229 |
 
 | criticality | count |
 |---|---:|
@@ -348,6 +348,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `taste_scalar_isotropy_theorem_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `vector_sector_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_3plus1d_promotions_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -5306,6 +5307,24 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: The note combines two different surfaces as one unified basin: NONLABEL_GROWN_BASIN_TARGETED still gives 3/3 signed-source rows with exact zero/neutral controls, but complex_action_kernel_vs_gravity is a fixed-row kernel/generic-vs-gravity separation test, not a nearby basin; the actual FIXED_FIELD_COMPLEX_GROWN_BASIN runner gives exact gamma=0 + Born proxy survivors 0/2. Why this blocks: the claim that one grown connectivity family supports both couplings across a small nearby basin with exact controls is not computed by the supplied runners and is contradicted by the available complex-basin runner. Repair target: provide a single unified runner over the same drift/restore neighborhood and seed set, with explicit zero/neutral/gamma=0/Born assertions for both coupling surfaces, or split the note into separate retained/failed components. Claim boundary until fixed: safe to claim the signed-source non-label basin currently passes 3/3 at restore 0.60/0.70/0.80, and the kernel-vs-gravity fixed-row runner separates absorption from gravity-specific deflection; not safe to claim a unified two-coupling basin.
 - **open / conditional deps cited:**
   - `KERNEL_VS_GRAVITY_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_gr_discrete_global_closure_note`
+
+- **Note:** [`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The unregistered capstone runner verifies a finite overlap-covariance/action-stationarity patching calculation for K_GR(D)=H_D otimes Lambda_R and checks by text search that positive-background, Lorentzian, global-atlas, and PL S3 x R authority notes exist.  _(class `B`)_
+- **chain closes:** False — The local patching algebra passes, but the claimed global GR closure depends on several upstream route notes and a non-hermetic runner that reads hard-coded files outside the current worktree; the ledger row records no one-hop dependencies or runner path.
+- **rationale:** Issue: the capstone claim is broader than the auditable artifact. Why this blocks: `scripts/frontier_universal_gr_discrete_global_closure.py` passes 5/5, but it imports authority text from `/Users/jonreilly/Projects/Physics` rather than the audited worktree and only checks substring presence plus a finite chart-overlap algebra toy; it does not independently prove the positive-background, Lorentzian-signature, global-atlas, or PL S3 x R inputs. Repair target: register the runner in the ledger, make it repo-root relative, add audited one-hop dependencies for each route component, and scope the theorem to discrete-global stationary action patching unless/until continuum GR interpretation is separately proved. Claim boundary until fixed: conditional capstone over supplied direct-universal GR route notes, not a standalone audited full-GR closure theorem.
+- **open / conditional deps cited:**
+  - `scripts/frontier_universal_gr_discrete_global_closure.py hard-coded external ROOT`
+  - `UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md`
+  - `UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md`
+  - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
+  - `S3_ANOMALY_SPACETIME_LIFT_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_qg_optional_textbook_comparison_note`
