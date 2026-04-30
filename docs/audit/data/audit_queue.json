@@ -1,12 +1,97 @@
 {
   "by_criticality": {
-    "critical": 0,
+    "critical": 5,
     "high": 237,
     "leaf": 588,
     "medium": 347
   },
-  "generated_at": "2026-04-30T14:53:46.604994+00:00",
+  "generated_at": "2026-04-30T14:56:04.603440+00:00",
   "queue": [
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "audit_in_progress",
+      "blocker": "cross_confirmation_disagreement",
+      "claim_id": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": "disagreement",
+      "current_status": "open",
+      "deps": [],
+      "direct_in_degree": 5,
+      "load_bearing_score": 10.709,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py",
+      "transitive_descendants": 295
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "audit_in_progress",
+      "blocker": "cross_confirmation_disagreement",
+      "claim_id": "gauge_vacuum_plaquette_perron_reduction_theorem_note",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": "disagreement",
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 5,
+      "load_bearing_score": 10.709,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py",
+      "transitive_descendants": 295
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "audit_in_progress",
+      "blocker": "cross_confirmation_disagreement",
+      "claim_id": "gauge_vacuum_plaquette_reduction_existence_theorem_note",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": "disagreement",
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 5,
+      "load_bearing_score": 10.709,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py",
+      "transitive_descendants": 295
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "audit_in_progress",
+      "blocker": "cross_confirmation_disagreement",
+      "claim_id": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": "disagreement",
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 5,
+      "load_bearing_score": 10.709,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py",
+      "transitive_descendants": 295
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "audit_in_progress",
+      "blocker": "cross_confirmation_disagreement",
+      "claim_id": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": "disagreement",
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 5,
+      "load_bearing_score": 10.709,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py",
+      "transitive_descendants": 295
+    },
     {
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
@@ -24416,6 +24501,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 760,
-  "total_pending": 1172
+  "ready_count": 765,
+  "total_pending": 1177
 }

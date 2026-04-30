@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T14:53:46.824239+00:00
+**Generated:** 2026-04-30T14:56:04.777136+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,19 +22,20 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 80 |
 | _proposed_retained_ | 3 |
 | bounded | 201 |
-| support | 120 |
-| open | 19 |
-| unknown | 442 |
+| support | 123 |
+| open | 20 |
+| unknown | 445 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 472 |
+| ~~audited_conditional~~ | 465 |
 | ~~audited_failed~~ | 170 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 81 |
-| `audited_conditional` | 237 |
+| `audit_in_progress` | 5 |
+| `audited_clean` | 83 |
+| `audited_conditional` | 230 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 12 |
@@ -95,6 +96,11 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
+| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open | audit_in_progress | open | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_perron_reduction_theorem_note` | support | audit_in_progress | support | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_reduction_existence_theorem_note` | unknown | audit_in_progress | unknown | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | audit_in_progress | support | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | support | audit_in_progress | support | fresh_context | codex-gpt-5 | A | - |
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -130,6 +136,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_grown_wavefield_companion_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gate_b_v6_nearfield_comparator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | unknown | ~~audited_clean~~ | unknown | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | unknown | ~~audited_clean~~ | unknown | fresh_context | codex-gpt-5 | A | - |
 | `graph_first_su3_integration_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `growing_graph_static_control_audit_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `hadron_lane1_confinement_to_mass_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -256,15 +264,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
-| `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
-| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
-| `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
-| `gauge_vacuum_plaquette_perron_reduction_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
-| `gauge_vacuum_plaquette_reduction_existence_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
-| `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
-| `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -2571,28 +2572,12 @@ Claim boundary until fixed: safe to claim the constant-lift obstruction Gamma_ca
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md)
 - **current_status:** unknown
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** If the full diagonal connected hierarchy truncated at finite order, K_L(t) would be a polynomial and therefore P_L(t)=K_L'(t)/N_plaq would be a polynomial with a finite limit at infinity, forcing it to be constant, contradicting P_L(0)=0 and lim P_L(t)=1.  _(class `A`)_
-- **chain closes:** False — The polynomial-truncation obstruction closes algebraically, but the source row is current_status=unknown, so the audit lane cannot ratify it as audited_clean.
-- **rationale:** Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: finite-order hierarchy truncation is ruled out as an exact obstruction, while explicit nonpolynomial closure of P(6) remains open.
-- **open / conditional deps cited:**
-  - `GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md`
-- **auditor confidence:** high
-
-### `gauge_vacuum_plaquette_local_environment_factorization_theorem_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md)
-- **current_status:** open
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** After trivial-channel normalization the full mixed-kernel compression on the marked plaquette character sector is exactly D_beta^mix,norm chi_(p,q)=a_(p,q)(beta)^4 chi_(p,q).  _(class `A`)_
-- **chain closes:** False — The mixed-kernel localization argument closes algebraically, but the source row is current_status=open, so the audit lane cannot ratify it as audited_clean.
-- **rationale:** Issue: the derivation is presented on a source row with current_status=open, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the normalized mixed-kernel localization can be used as open/support structure, while residual environment data and P(6) remain open.
-- **open / conditional deps cited:**
-  - `GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** unknown  (reason: `self`)
+- **auditor:** `codex-audit-loop-second-20260430-gauge-infinite-hierarchy`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** If the full diagonal connected hierarchy truncated at finite order, then K_L(t) would be a polynomial and therefore P_L(t)=K_L'(t)/N_plaq would also be a polynomial; since P_L has finite limit 1 at infinity but P_L(0)=0, this is impossible.  _(class `A`)_
+- **chain closes:** True — The obstruction is an exact finite-dimensional real-variable argument on the diagonal source generator: finite Taylor support gives a polynomial, and a nonconstant polynomial cannot have a finite limit at infinity. The only substantive analytic input is the stated finite compact Wilson-surface concentration P_L(t)->1, which is used directly rather than tuned.
+- **rationale:** The note proves a negative no-go claim, not a numerical plaquette closure: exact finite-order truncation would force the diagonal generator to be polynomial, hence its derivative would be a polynomial with a finite large-t limit and must be constant, contradicting P(0)=0 and P(t)->1. The runner reproduces this structure and reports THEOREM PASS=4 SUPPORT=3 FAIL=0, with no external comparator or tuned scale. Residual risk is limited to the standard finite compact Wilson-surface concentration premise, but that premise is explicit and sufficient for this obstruction claim.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_mixed_cumulant_audit_note`
@@ -2616,56 +2601,12 @@ Claim boundary until fixed: safe to claim the exact first nonlocal coefficient a
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md)
 - **current_status:** unknown
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Distinct admissible positive conjugation-symmetric residual source-sector environment operators R_A and R_B in T=M D_6^loc R M can induce different Perron moments for the same explicit source operator J.  _(class `A`)_
-- **chain closes:** False — The witness underdetermination closes inside the stated factorized class, but the source row is current_status=unknown, so the audit lane cannot ratify it as audited_clean.
-- **rationale:** Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the admissible-witness obstruction may be used to show current Jacobi data are not forced, but it is not a retained audit-clean claim.
-- **open / conditional deps cited:**
-  - `GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md`
-- **auditor confidence:** high
-
-### `gauge_vacuum_plaquette_perron_reduction_theorem_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** By positivity improvement and the compact self-adjoint Perron-Jentzsch theorem, the transfer operator has one simple strictly positive Perron mode, and the large-derived-time trace state converges to that Perron expectation for bounded f(J).  _(class `A`)_
-- **chain closes:** False — The Perron reduction closes as an operator-theoretic support theorem, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.
-- **rationale:** Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the transfer-state problem is reduced to Perron/Jacobi data at support level; explicit beta=6 data remain open.
-- **open / conditional deps cited:**
-  - `GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md`
-- **auditor confidence:** high
-
-### `gauge_vacuum_plaquette_reduction_existence_theorem_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md)
-- **current_status:** unknown
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Since P_1plaq is a bijection [0,infinity) to [0,1) and P_L(beta) lies in [0,1) for finite beta, beta_eff,L(beta):=P_1plaq^{-1}(P_L(beta)) is well-defined and unique.  _(class `A`)_
-- **chain closes:** False — The implicit existence/uniqueness construction closes, but the source row is current_status=unknown, so the audit lane cannot ratify it as audited_clean.
-- **rationale:** Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the exact implicit reduction law exists uniquely, but no explicit beta_eff(6) or P(6) closure is ratified.
-- **open / conditional deps cited:**
-  - `GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md`
-- **auditor confidence:** high
-
-### `gauge_vacuum_plaquette_residual_environment_identification_theorem_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** K_beta^src = exp[(beta/2)J] D_beta^loc R_beta^env exp[(beta/2)J], where R_beta^env is exactly the compression of the unmarked spatial Wilson environment after the marked half-slice multipliers and local mixed-kernel factor are stripped.  _(class `A`)_
-- **chain closes:** False — The residual-environment identification closes as a support theorem, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.
-- **rationale:** Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the remaining object is identified as residual environment data at support level; explicit rho coefficients and P(6) remain open.
-- **open / conditional deps cited:**
-  - `GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** unknown  (reason: `self`)
+- **auditor:** `codex-audit-loop-second-20260430-gauge-perron-jacobi-underdet`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The runner exhibits two explicit admissible positive residual source-sector environment operators with m_1^(A) != m_1^(B) and higher moments differing as well.  _(class `A`)_
+- **chain closes:** True — The note claims an underdetermination result, not a positive prediction of the missing Jacobi data. Given the stated admissible residual class R > 0 with conjugation symmetry, the displayed two-witness construction is enough to show the current structural boundary does not force a unique Perron moment sequence.
+- **rationale:** The load-bearing step is an explicit two-witness obstruction inside the factorized residual-environment class stated by the note. The runner checks that the local Wilson factor and both residual operators satisfy the required positivity and conjugation-symmetry constraints, then computes distinct Perron moments and distinct Jacobi coefficients for the same source operator J. Because the claim is negative underdetermination, no external comparator or calibrated numerical target is needed. Residual risk is limited to whether the source note's stated admissible residual class is exactly the intended current boundary, but under the restricted inputs there is no contrary dependency or hidden one-hop premise.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note`
@@ -2680,20 +2621,6 @@ Claim boundary until fixed: safe to claim the exact first nonlocal coefficient a
 - **rationale:** Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the factorized matrix law may be used as support; it does not compute the Wilson D_6 coefficients or ratify P(6).
 - **open / conditional deps cited:**
   - `GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md`
-- **auditor confidence:** high
-
-### `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The residual environment operator is exactly normalized convolution by the boundary class function Z_beta^env/z_(0,0)^env, so R_beta^env chi_(p,q)=rho_(p,q)(beta) chi_(p,q).  _(class `A`)_
-- **chain closes:** False — The boundary-character representation closes as a support theorem, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.
-- **rationale:** Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the residual operator is represented by boundary character coefficients at support level; explicit beta=6 coefficients remain open.
-- **open / conditional deps cited:**
-  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`
