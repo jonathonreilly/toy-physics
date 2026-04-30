@@ -54,8 +54,8 @@ open_imports_at_start:
   - "CPT-evenness (asserted in OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)"
 no_go_routes_in_session: []
 review_findings: []
-pr_status: not-yet-pushed
-next_exact_action: "End-of-loop: push branch and prepare review PR for the four cycles."
+pr_status: opened (PR #191)
+next_exact_action: "Loop block01 closed. Resume by reading HANDOFF.md, REVIEW_HISTORY.md, and PR #191 review comments. Deferred routes (R4-gauge, R7, R8, R9, R10) are documented in HANDOFF.md for the next block."
 stop_condition: |
   12h budget exhausted, OR the three planned cycles plus a stretch attempt have
   produced reviewable artifacts AND the science branch is pushed with one PR
