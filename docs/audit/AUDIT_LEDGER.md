@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:15:46.895865+00:00
+**Generated:** 2026-04-30T19:15:53.108130+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
 | bounded | 343 |
-| support | 303 |
+| support | 301 |
 | open | 22 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 618 |
+| ~~audited_conditional~~ | 620 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 132 |
-| `audited_conditional` | 333 |
+| `audited_conditional` | 334 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1009 |
+| `unaudited` | 1008 |
 
 | criticality | count |
 |---|---:|
@@ -263,6 +263,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `bmv_bounded_negative_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `born_lane_comparison_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `branch_entanglement_robustness_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `broad_surrogate_point_source_compare_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `broken_graph_action_power_robustness_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_cone_speed_map_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1415,6 +1416,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `branch_entanglement_robustness_note_2026-04-11`
+
+- **Note:** [`BRANCH_ENTANGLEMENT_ROBUSTNESS_NOTE_2026-04-11.md`](../../docs/BRANCH_ENTANGLEMENT_ROBUSTNESS_NOTE_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** `tau_3 = 0` is theorem-implied by the overlap algebra, so the GHZ count is  _(class `B`)_
+- **chain closes:** False — No. One-hop dependencies are not all retained (bmv_entanglement_note_2026-04-11=bounded, bmv_threebody_note_2026-04-11=support), so the chain does not close under the leaf audit rule.
+- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (bmv_entanglement_note_2026-04-11=bounded, bmv_threebody_note_2026-04-11=support). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
+- **open / conditional deps cited:**
+  - `BMV_ENTANGLEMENT_NOTE_2026-04-11.md`
+  - `BMV_THREEBODY_NOTE_2026-04-11.md`
 - **auditor confidence:** high
 
 ### `broad_surrogate_point_source_compare_note`

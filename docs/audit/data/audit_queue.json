@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 483,
+    "leaf": 482,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:15:46.730739+00:00",
+  "generated_at": "2026-04-30T19:15:52.948204+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13499,26 +13499,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "branch_entanglement_robustness_note_2026-04-11",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "bmv_entanglement_note_2026-04-11",
-        "bmv_threebody_note_2026-04-11"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/BRANCH_ENTANGLEMENT_ROBUSTNESS_NOTE_2026-04-11.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_branch_entanglement_robustness.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "causal_field_reconciliation_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -17244,32 +17224,6 @@
       "direct_in_degree": 0,
       "load_bearing_score": 0.0,
       "note_path": "docs/PAPER_SCOPE_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "periodic_2d_wraparound_fix_note_2026-04-11",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "self_consistency_structured_null_note_2026-04-11",
-        "born_rule_analysis_2026-04-11",
-        "holographic_probe_note_2026-04-11",
-        "boundary_law_robustness_note_2026-04-11",
-        "staggered_geometry_superposition_note_2026-04-11",
-        "bmv_entanglement_note_2026-04-11",
-        "branch_entanglement_robustness_note_2026-04-11",
-        "bmv_threebody_note_2026-04-11"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/PERIODIC_2D_WRAPAROUND_FIX_NOTE_2026-04-11.md",
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 0
@@ -21165,6 +21119,32 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "periodic_2d_wraparound_fix_note_2026-04-11",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "self_consistency_structured_null_note_2026-04-11",
+        "born_rule_analysis_2026-04-11",
+        "holographic_probe_note_2026-04-11",
+        "boundary_law_robustness_note_2026-04-11",
+        "staggered_geometry_superposition_note_2026-04-11",
+        "bmv_entanglement_note_2026-04-11",
+        "branch_entanglement_robustness_note_2026-04-11",
+        "bmv_threebody_note_2026-04-11"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/PERIODIC_2D_WRAPAROUND_FIX_NOTE_2026-04-11.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "pmns_three_identity_q_koide_from_v8_support_lift_theorem_note_2026-04-29",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21607,6 +21587,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 619,
-  "total_pending": 1009
+  "ready_count": 617,
+  "total_pending": 1008
 }
