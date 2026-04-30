@@ -18325,7 +18325,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T13:32:57.620100+00:00",
+  "generated_at": "2026-04-30T13:33:10.016462+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19838,6 +19838,16 @@
       "path": "docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_cluster_decomposition_check.py",
       "title": "Axiom-First Cluster Decomposition / Lieb\u2013Robinson Bound on Cl(3) \u2297 Z^3"
+    },
+    "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29": {
+      "claim_id": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support \u2014 branch-local theorem note on A_min; runner passing; audit-pending.",
+      "deps": [],
+      "note_hash": "e3fee6f136cc1ee3631751eb772a145cc3b10c9e20a12327834b9e5700f0f427",
+      "path": "docs/AXIOM_FIRST_COLEMAN_MERMIN_WAGNER_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/axiom_first_coleman_mermin_wagner_check.py",
+      "title": "Axiom-First Coleman\u2013Mermin\u2013Wagner Lattice Analogue on Cl(3) \u2297 Z^d"
     },
     "axiom_first_cpt_theorem_stretch_note_2026-04-29": {
       "claim_id": "axiom_first_cpt_theorem_stretch_note_2026-04-29",
@@ -40314,6 +40324,7 @@
     "axiom_change_proposal_2026-04-10",
     "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
     "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+    "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29",
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
     "axiom_first_lattice_noether_theorem_note_2026-04-29",
     "axiom_first_reflection_positivity_theorem_note_2026-04-29",
@@ -41416,16 +41427,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4581,
-    "leaf_count": 744,
-    "node_count": 1682,
-    "root_count": 1210,
-    "runners_with_path": 766,
+    "leaf_count": 745,
+    "node_count": 1683,
+    "root_count": 1211,
+    "runners_with_path": 767,
     "status_counts": {
       "bounded": 255,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 183,
+      "support": 184,
       "unknown": 795
     }
   }
