@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 1,
-    "high": 218,
+    "high": 217,
     "leaf": 287,
     "medium": 289
   },
-  "generated_at": "2026-04-30T22:16:19.645322+00:00",
+  "generated_at": "2026-04-30T22:18:07.832315+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -249,23 +249,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 32
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 10,
-      "load_bearing_score": 10.129,
-      "note_path": "docs/CKM_MODULI_ONLY_UNITARITY_JARLSKOG_AREA_CERTIFICATE_THEOREM_NOTE_2026-04-26.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_ckm_moduli_only_unitarity_jarlskog_area_certificate.py",
-      "transitive_descendants": 34
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -18120,6 +18103,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 412,
-  "total_pending": 795
+  "ready_count": 411,
+  "total_pending": 794
 }

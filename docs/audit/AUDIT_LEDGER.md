@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:16:19.814323+00:00
+**Generated:** 2026-04-30T22:18:08.007572+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 81 |
-| _proposed_retained_ | 7 |
+| **retained** | 82 |
+| _proposed_retained_ | 6 |
 | bounded | 278 |
 | support | 247 |
 | open | 18 |
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 212 |
+| `audited_clean` | 213 |
 | `audited_conditional` | 465 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 795 |
+| `unaudited` | 794 |
 
 | criticality | count |
 |---|---:|
@@ -119,6 +119,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `chiral_3plus1d_coupled_coin_note` | open | ~~audited_clean~~ | open | cross_family | codex-current | C | - |
+| `ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `cl3_color_automorphism_theorem` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
 | `claude_complex_action_carryover_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -2402,6 +2403,18 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
   - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
   - `ALPHA_S_DERIVED_NOTE.md`
+- **auditor confidence:** high
+
+### `ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26`
+
+- **Note:** [`CKM_MODULI_ONLY_UNITARITY_JARLSKOG_AREA_CERTIFICATE_THEOREM_NOTE_2026-04-26.md`](../../docs/CKM_MODULI_ONLY_UNITARITY_JARLSKOG_AREA_CERTIFICATE_THEOREM_NOTE_2026-04-26.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-20`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** For any 3x3 unitary matrix, every row-pair and column-pair Heron certificate computed from the squared moduli equals 4J^2, and conversely a strictly positive 3x3 bistochastic table with one closing row-pair triangle has a unitary lift with |J| = sqrt(R)/2.  _(class `A`)_
+- **chain closes:** True — The claim closes as finite-dimensional 3x3 algebra. Row and column orthogonality turn the moduli products into unitarity-triangle side lengths, Heron's identity gives the area, Jarlskog quartets give twice the signed area, and the constructive converse builds the third row by the Hermitian cross product; the runner verifies symbolic identities plus a nondegenerate numeric lift and scope guardrails.
+- **rationale:** The theorem is a clean model-independent 3x3 algebraic certificate: no Wolfenstein expansion, alpha_s input, CKM numeric comparator, or framework-specific physics is needed. The necessity direction follows from row/column orthogonality and Heron's side-square formula; the sufficiency direction is constructively proved for strictly positive bistochastic tables by closing one row triangle and completing the unitary with the cross-product row. Residual risk is only downstream overuse beyond the stated 3x3 positive/interior setting or as a new numerical CKM prediction, both of which the note explicitly excludes.
 - **auditor confidence:** high
 
 ### `ckm_n9_structural_family_koide_bridge_support_note_2026-04-25`
