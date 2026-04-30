@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:39:16.193961+00:00
+**Generated:** 2026-04-30T22:40:33.675213+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 217 |
+| `audited_clean` | 218 |
 | `audited_conditional` | 472 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 782 |
+| `unaudited` | 781 |
 
 | criticality | count |
 |---|---:|
@@ -262,6 +262,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_second_order_support_batch_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_so2_phase_erasure_support_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
+| `koide_reviewer_stress_test_note_2026-04-21` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `lattice_3d_dense_refinement_reconciliation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -8438,6 +8439,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The unique trace-preserving local descent from A=span(P_plus,P_perp) to D^C3=span(I) is E_loc(X)=Tr(X)I/3, equals diagonal compression on A, and erases the reduced traceless Z coordinate modulo common scalar background.  _(class `A`)_
 - **chain closes:** True — The runner verifies the projector algebra, diagonal compression, uniqueness from trace preservation, and quotient erasure exactly. The note explicitly keeps the physical source-domain law and retained Koide closure open.
 - **rationale:** The support-tier canonical-descent theorem closes on its stated scope: with scalar preservation, trace preservation, and strict onsite target fixed, the descent A -> D^C3 is uniquely Tr(X)I/3 and agrees with site-local diagonal compression. The runner verifies 55 checks including the boundary guardrails, projector algebra, uniqueness, and erasure of the reduced Z coordinate modulo common scalar. Residual risk is downstream overuse: this clean audit does not prove that the physical charged-lepton source-domain law must use onsite descent, nor does it retain native Q, delta, or full Koide closure.
+- **auditor confidence:** high
+
+### `koide_reviewer_stress_test_note_2026-04-21`
+
+- **Note:** [`KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`](../../docs/KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-33`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The reviewer stress-test enumerates the main internal objections to the Koide Q AM-GM support route and delta ambient-APS support route, and each objection is answered by executable symbolic/numeric checks or explicit scoped premises while leaving the physical bridges open.  _(class `A`)_
+- **chain closes:** True — The registered runner exits 0 with 34/34 checks passing: AM-GM uniqueness/global maximum, tangent-weight/eta identities, positivity/interior checks, PL/smooth/Morse-Bott conditions, independence clustering, Peter-Weyl decoupling, spacetime-lift decoupling, and retained-kinematics scope are all checked on the support surface declared by the note.
+- **rationale:** Clean on the declared internal reviewer-stress-test scope. The runner verifies the stated objections against the AM-GM Koide-Q support chain and ambient-APS delta support chain, and the note explicitly preserves the remaining physical/source-law bridge for Q, the Brannen-phase bridge for delta, and separate PMNS/quark/sign lanes. This audit does not promote Q=2/3 or delta=2/9 to closure; it only ratifies that the listed internal support-chain objections are executable and pass under the stated retained-kinematics premises.
 - **auditor confidence:** high
 
 ### `koide_selected_line_cyclic_response_bridge_note_2026-04-18`
