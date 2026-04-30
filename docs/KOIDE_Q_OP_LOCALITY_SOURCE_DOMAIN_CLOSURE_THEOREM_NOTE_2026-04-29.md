@@ -1,13 +1,11 @@
-# Koide Q OP-Locality Source-Domain Closure Theorem (V8)
+# Koide Q OP-Locality Source-Domain Structural Support Claim (V8)
 
 **Date:** 2026-04-29
-**Status (actual current surface):** `proposed_retained` author proposal —
-audit-ratified status pending independent review. The proposal is a
-structural derivation that converts the V4 / V7.3 conditional Q closure
-into an unconditional `proposed_retained` theorem by composing four
-already-retained authorities into a single axiom-to-readout chain. Bare
-`retained` / `promoted` is NOT used; this note explicitly carries the
-audit-required-before-effective-retained flag.
+**Status (actual current surface):** `support` structural support claim on
+the actual current surface. This note documents the V8 axiom-to-readout
+chain as support evidence for the charged-lepton Koide `Q = 2/3`
+closure, but it does not promote that closure beyond support status.
+Bare `retained` / `promoted` wording is NOT used.
 **Primary runner:** `scripts/frontier_koide_q_op_locality_source_domain_closure.py`
 **Supersedes (status only, not deletes):** the V4 / V7.3 conditional
 framing of the Koide Q closure. V4
@@ -73,10 +71,10 @@ CRIT
      traceless coordinate z; hence Y = I_2; hence Q = 2/3.
 ```
 
-The combined chain promotes the conditional V4 / V7.3 closure to an
-unconditional `proposed_retained` author proposal on the actual current
-surface, modulo (a) the standard independent audit and (b) the
-unchanged audit-required-before-effective-retained flag.
+The combined chain records a structural support route extending the V4 /
+V7.3 closure story on the actual current surface. Because the strict
+reading in §1.2 remains the load-bearing interpretive step, this note is
+kept at support status rather than promoted beyond support.
 
 ---
 
@@ -175,9 +173,9 @@ reduced two-block carrier with exact source law
 3. Hence `Y_phys = I_2` (up to the common scale absorbed into the
    overall normalization), `z = 0`, `⟨Z⟩ = 0`, and `Q = 2/3`.
 
-**Status:** `proposed_retained` author proposal on the actual current
-surface. Independent audit required before the repo treats this as
-audit-ratified retained status.
+**Status:** `support` structural claim on the actual current surface.
+Independent audit remains required before any stronger status claim
+could be made.
 
 ### Proof
 
@@ -231,7 +229,7 @@ By CRIT, `K_phys = 0 ⇔ Y_phys = I_2 ⇔ z_phys = 0 ⇔ Q = 2/3`.
 ## 3. Status firewall fields (per skill SKILL.md §Claim-Status Firewalls)
 
 ```yaml
-actual_current_surface_status: proposed_retained
+actual_current_surface_status: support
 conditional_surface_status: null
 hypothetical_axiom_status: null
 admitted_observation_status: null
@@ -247,10 +245,9 @@ bare_retained_allowed: false
 ```
 
 The bare `retained` wording is BANNED on this branch-local source note
-per the skill's claim-status firewall. The wording `proposed_retained`
-is permitted only because all five conditions of the
-retained-proposal certificate (skill §Retained-Proposal Certificate)
-are satisfied; see [CLAIM_STATUS_CERTIFICATE.md](../.claude/science/physics-loops/axiom-to-main-lane-cascade-20260429/CLAIM_STATUS_CERTIFICATE.md).
+per the skill's claim-status firewall. The wording `support` is used
+because the §1.2 strict-reading inference remains the load-bearing
+interpretive step under review.
 
 ---
 
@@ -297,12 +294,12 @@ are satisfied; see [CLAIM_STATUS_CERTIFICATE.md](../.claude/science/physics-loop
 | Strict reading | defended hypothesis | conditional Q corollary | structural theorem (§1.1+§1.2) |
 | Source-domain inference | interpretive | conditional | structural |
 | Bridge to E_loc | open | conditional | retained chain (Step 4) |
-| Closure status | support-grade conditional | conditional retained promotion | proposed_retained unconditional |
+| Closure status | support-grade conditional | conditional retained promotion | support-grade structural claim |
 | Audit required | yes | yes | yes (unchanged) |
 
 V8 does not retract V4 or V7.3 — both remain valid as conditional
-support / conditional promotion notes. V8 lifts the conditionality by
-naming the structural piece.
+support / conditional promotion notes. V8 adds the structural piece,
+but keeps the result at support status.
 
 ---
 
@@ -338,8 +335,8 @@ physics-loop skill's science-only rule.
 python3 scripts/frontier_koide_q_op_locality_source_domain_closure.py
 ```
 
-The runner audits dependency classes (not just numerical output) per the
-skill's retained-proposal certificate item 5:
+The runner audits dependency classes and the support-chain algebraic
+surface, not just numerical output:
 
 1. **OP Theorem 1 audit:** reads `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
    from disk; verifies Theorem 1 statement (multiplicative-to-additive
@@ -362,8 +359,8 @@ skill's retained-proposal certificate item 5:
    - On the C3 orbit, Z has off-diagonal entries (numerical);
    - Q(z = 0) = 2/3 on Y_Z(0) = I_2 (numerical);
    - Independence of the chain from any observed lepton mass input.
-8. **Closure flag**:
-   `Q_L_EQ_2_OVER_3_PROPOSED_RETAINED_CHAIN_VERIFIED = True`
+8. **Support-chain flag**:
+   `Q_L_EQ_2_OVER_3_SUPPORT_CHAIN_VERIFIED = True`
    (verified by audit, NOT asserted as Boolean closure).
 
 Expected: `PASS = N`, `FAIL = 0`. The PASSes verify all five chain
@@ -375,7 +372,7 @@ effective retained.
 
 ## 8. Honest residual
 
-After V8 lands as `proposed_retained`, the remaining Koide closure
+After V8 lands as `support`, the remaining Koide closure
 residuals are:
 
 - δ = 2/9 rad analytical derivation (Block 2 target);

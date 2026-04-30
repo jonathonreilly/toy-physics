@@ -1,4 +1,4 @@
-"""Runner: Koide Q OP-Locality Source-Domain Closure Theorem (V8) audit.
+"""Runner: Koide Q OP-Locality Source-Domain structural support claim (V8).
 
 Per docs/ai_methodology/skills/physics-loop/SKILL.md, this runner audits
 *dependency classes* of the V8 chain — not just numerical output. The
@@ -7,9 +7,9 @@ disk with the load-bearing clauses, and that the algebraic identities of
 the V8 chain hold.
 
 The runner does NOT assert closure as a Boolean. It verifies the
-chain authorities and identities. The proposed_retained status of the
-V8 theorem requires independent audit before the repo treats it as
-effective retained.
+chain authorities and identities. The V8 note is kept at support
+status because the strict-reading inference remains the load-bearing
+interpretive step under review.
 """
 
 from __future__ import annotations
@@ -44,7 +44,7 @@ AUDIT_FAILS: list[str] = []
 
 def main() -> int:
     print("=" * 72)
-    print("Koide Q OP-Locality Source-Domain Closure Theorem (V8) audit")
+    print("Koide Q OP-Locality Source-Domain structural support claim (V8)")
     print("=" * 72)
 
     # ---- Section 1: retained authority audits ------------------------------
@@ -268,8 +268,8 @@ def main() -> int:
 
     # 3.3 Status firewall fields present
     audit(
-        "actual_current_surface_status = proposed_retained",
-        "actual_current_surface_status: proposed_retained" in own_text,
+        "actual_current_surface_status = support",
+        "actual_current_surface_status: support" in own_text,
         "skill firewall field present",
     )
     audit(
@@ -289,15 +289,15 @@ def main() -> int:
     )
 
     # 3.4 Closure flag (NOT a Boolean closure; a chain-verification flag)
-    Q_PROPOSED_RETAINED_CHAIN_VERIFIED = (
+    Q_SUPPORT_CHAIN_VERIFIED = (
         len(AUDIT_FAILS) == 0
         and Q_simplified.subs(z_sym2, 0) == sp.Rational(2, 3)
         and np.isclose(np.trace(Z3), -1.0)
     )
     print()
     print(
-        f"Q_L_EQ_2_OVER_3_PROPOSED_RETAINED_CHAIN_VERIFIED = "
-        f"{Q_PROPOSED_RETAINED_CHAIN_VERIFIED}"
+        f"Q_L_EQ_2_OVER_3_SUPPORT_CHAIN_VERIFIED = "
+        f"{Q_SUPPORT_CHAIN_VERIFIED}"
     )
     print(
         "(This flag verifies the V8 chain authorities + algebraic identities. "
@@ -320,8 +320,8 @@ def main() -> int:
     if fail_count == 0:
         print("All chain authorities + algebraic identities verified.")
         print(
-            "V8 audit-grade chain check PASSES. proposed_retained status "
-            "is now eligible per the retained-proposal certificate."
+            "V8 audit-grade chain check PASSES. support status is kept "
+            "while the strict-reading inference remains under review."
         )
         return 0
     else:
