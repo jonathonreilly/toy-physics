@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:23:26.893709+00:00
+**Generated:** 2026-04-30T00:24:09.913049+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -34,12 +34,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 78 |
-| `audited_conditional` | 141 |
+| `audited_conditional` | 142 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1292 |
+| `unaudited` | 1291 |
 
 | criticality | count |
 |---|---:|
@@ -79,7 +79,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 13 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 94 | 23.57 | `unaudited` | ~~audited_failed~~ |
 | 14 | `left_handed_charge_matching_note` | critical | 265 | 21.55 | `unaudited` | ~~audited_conditional~~ |
 | 15 | `anomaly_forces_time_theorem` | critical | 261 | 21.53 | `unaudited` | ~~audited_failed~~ |
-| 16 | `minimal_axioms_2026-04-11` | critical | 109 | 21.28 | `unaudited` | ~~audited_failed~~ |
+| 16 | `minimal_axioms_2026-04-11` | critical | 109 | 21.28 | `audited_conditional` | ~~audited_failed~~ |
 | 17 | `ckm_atlas_axiom_closure_note` | critical | 75 | 21.25 | `unaudited` | ~~audited_failed~~ |
 | 18 | `native_gauge_closure_note` | critical | 289 | 20.68 | `unaudited` | ~~audited_conditional~~ |
 | 19 | `plaquette_self_consistency_note` | critical | 294 | 20.20 | `unaudited` | ~~audited_failed~~ |
@@ -250,6 +250,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `linear_response_second_order_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `local_zsym_predictor_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_failed~~ | weak | codex-current | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `neutrino_majorana_current_stack_exhaustion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `newton_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -2927,6 +2928,33 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The live probe shows escape_fraction(alpha) falls below 50% by alpha=0.10 while the alpha=0 weak-field recovery check gives 3/3 TOWARD and F~M=1.00 on the tested generated-geometry family.  _(class `C`)_
 - **chain closes:** False — The bounded proxy computation closes, but the queued proposed_retained claim does not: the note itself calls this a bounded moonshot trapping probe, and the absorption parameter is an inserted proxy rather than a derived horizon mechanism.
 - **rationale:** Issue: The source is explicitly a bounded moonshot trapping probe on a proposed_retained generated-geometry family, but its branch verdict says it produces a retained threshold. The live runner inserts an absorptive parameter alpha and measures escape fraction; it does not derive an absorbing horizon law or black-hole observable from retained inputs. Why this blocks: a hand-added absorption proxy with one finite family, four seeds, and three source positions cannot be ratified as a retained horizon/trapping theorem. Repair target: either correct the Status/current_status to bounded/proposed_bounded, or derive the absorption law from retained dynamics and show the threshold is a framework-native strong-field observable with clean weak-field reduction and audited dependencies. Claim boundary until fixed: it is safe to claim the live artifact reproduces alpha=0 weak-field recovery and a proxy escape threshold below 50% at alpha ~= 0.10 on this setup; it is not safe to call this a retained horizon theorem or full black-hole mechanism.
+- **auditor confidence:** high
+
+### `minimal_axioms_2026-04-11`
+
+- **Note:** [`MINIMAL_AXIOMS_2026-04-11.md`](../../docs/MINIMAL_AXIOMS_2026-04-11.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_failed~~  (reason: `inherited_from:g_bare_structural_normalization_theorem_note_2026-04-18`)
+- **auditor:** `codex-audit-loop-20260430-standard-rerun`  (codex-current; independence=weak)
+- **load-bearing step:** The memo states that the current package uses g_bare = 1 plus the plaquette/u0 surface and then lists retained current consequences and safe quantitative results as following from that stack.  _(class `B`)_
+- **chain closes:** False — After the plaquette cross-confirmation pass, the aggregation remains dependent on non-clean upstream rows, including alpha_s and plaquette self-consistency now weakened through an audited_failed plaquette obstruction.
+- **rationale:** Issue: The minimal input stack and retained consequence list aggregate upstream gauge-normalization, plaquette, observable-principle, alpha_s/R_conn/Yukawa, and Higgs rows whose effective statuses are not clean retained inputs; alpha_s is now stale/unaudited after the plaquette dependency weakened. Why this blocks: the memo cannot act as an audited-clean retained package map while load-bearing quantitative inputs inherit failed or conditional upstream audits. Repair target: repair and re-audit the upstream plaquette/alpha_s and quantitative bridge rows, then rerun this stack audit against the stabilized dependency surface. Claim boundary until fixed: the file may remain a current package map, but not an audit-ratified derivation of the listed retained quantitative package.
+- **open / conditional deps cited:**
+  - `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`
+  - `G_BARE_RIGIDITY_THEOREM_NOTE.md`
+  - `G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md`
+  - `G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md`
+  - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `ALPHA_S_DERIVED_NOTE.md`
+  - `RCONN_DERIVED_NOTE.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`
+  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
+  - `YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md`
+  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
+  - `HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md`
 - **auditor confidence:** high
 
 ### `minimal_bidirectional_trapping_probe_note`

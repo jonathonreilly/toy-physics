@@ -1,11 +1,11 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T00:23:26.722374+00:00
-**Total pending:** 1292
+**Generated:** 2026-04-30T00:24:09.750591+00:00
+**Total pending:** 1291
 **Ready (all deps already at a stable tier):** 843
 
 By criticality:
-- `critical`: 50
+- `critical`: 49
 - `high`: 302
 - `medium`: 325
 - `leaf`: 615
@@ -49,22 +49,22 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 31 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 24.83 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_atlas_triangle_right_angle.py` |
 | 32 | `higgs_mass_derived_note` | critical | 112 | 18.32 |  | fresh_context_or_stronger_with_cross_confirmation | - |
 | 33 | `higgs_vacuum_explicit_systematic_note` | critical | 111 | 18.31 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_full_3loop.py` |
-| 34 | `minimal_axioms_2026-04-11` | critical | 109 | 21.28 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 35 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 102 | 27.69 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_magnitudes_structural_counts.py` |
-| 36 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 94 | 23.57 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_nlo_barred_triangle_protected_gamma.py` |
-| 37 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 84 | 18.41 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_third_row_magnitudes.py` |
-| 38 | `ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25` | critical | 83 | 18.39 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_bernoulli_two_ninths_koide_bridge.py` |
-| 39 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | critical | 83 | 18.39 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_bs_mixing_phase_derivation.py` |
-| 40 | `ckm_n9_structural_family_koide_bridge_support_note_2026-04-25` | critical | 82 | 18.38 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 41 | `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25` | critical | 82 | 18.38 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_thales_cross_system_cp_ratio.py` |
-| 42 | `charged_lepton_mass_hierarchy_review_note_2026-04-17` | critical | 80 | 13.84 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_charged_lepton_observable_curvature.py` |
-| 43 | `ckm_atlas_axiom_closure_note` | critical | 75 | 21.25 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_atlas_axiom_closure.py` |
-| 44 | `yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17` | critical | 63 | 16.00 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_uv_to_ir_transport_obstruction.py` |
-| 45 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | critical | 63 | 14.50 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py` |
-| 46 | `down_type_mass_ratio_ckm_dual_note` | critical | 61 | 14.45 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_mass_ratio_ckm_dual.py` |
-| 47 | `cosmological_constant_spectral_gap_identity_theorem_note` | critical | 48 | 15.12 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_cosmological_constant_spectral_gap_identity.py` |
-| 48 | `n_eff_from_three_generations_theorem_note_2026-04-24` | critical | 39 | 13.32 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_n_eff_from_three_generations.py` |
-| 49 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | critical | 39 | 12.82 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_matter_radiation_equality_structural_identity.py` |
-| 50 | `publication.ci3_z3.publication_matrix` | critical | 32 | 12.54 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 34 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 102 | 27.69 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_magnitudes_structural_counts.py` |
+| 35 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 94 | 23.57 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_nlo_barred_triangle_protected_gamma.py` |
+| 36 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 84 | 18.41 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_third_row_magnitudes.py` |
+| 37 | `ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25` | critical | 83 | 18.39 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_bernoulli_two_ninths_koide_bridge.py` |
+| 38 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | critical | 83 | 18.39 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_bs_mixing_phase_derivation.py` |
+| 39 | `ckm_n9_structural_family_koide_bridge_support_note_2026-04-25` | critical | 82 | 18.38 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 40 | `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25` | critical | 82 | 18.38 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_thales_cross_system_cp_ratio.py` |
+| 41 | `charged_lepton_mass_hierarchy_review_note_2026-04-17` | critical | 80 | 13.84 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_charged_lepton_observable_curvature.py` |
+| 42 | `ckm_atlas_axiom_closure_note` | critical | 75 | 21.25 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_atlas_axiom_closure.py` |
+| 43 | `yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17` | critical | 63 | 16.00 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_uv_to_ir_transport_obstruction.py` |
+| 44 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | critical | 63 | 14.50 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py` |
+| 45 | `down_type_mass_ratio_ckm_dual_note` | critical | 61 | 14.45 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_mass_ratio_ckm_dual.py` |
+| 46 | `cosmological_constant_spectral_gap_identity_theorem_note` | critical | 48 | 15.12 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_cosmological_constant_spectral_gap_identity.py` |
+| 47 | `n_eff_from_three_generations_theorem_note_2026-04-24` | critical | 39 | 13.32 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_n_eff_from_three_generations.py` |
+| 48 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | critical | 39 | 12.82 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_matter_radiation_equality_structural_identity.py` |
+| 49 | `publication.ci3_z3.publication_matrix` | critical | 32 | 12.54 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 50 | `neutrino_majorana_operator_axiom_first_note` | high | 196 | 13.62 | Y | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_operator.py` |
 
 Full queue lives in `data/audit_queue.json`.
