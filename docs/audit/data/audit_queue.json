@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 1,
-    "high": 204,
+    "high": 203,
     "leaf": 287,
     "medium": 289
   },
-  "generated_at": "2026-04-30T22:40:33.466771+00:00",
+  "generated_at": "2026-04-30T22:41:54.085107+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -333,23 +333,6 @@
       "note_path": "docs/UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "primordial_spectrum_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 5,
-      "load_bearing_score": 7.587,
-      "note_path": "docs/PRIMORDIAL_SPECTRUM_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_primordial_spectrum.py",
       "transitive_descendants": 33
     },
     {
@@ -17882,6 +17865,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 398,
-  "total_pending": 781
+  "ready_count": 397,
+  "total_pending": 780
 }

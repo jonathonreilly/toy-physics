@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:40:33.675213+00:00
+**Generated:** 2026-04-30T22:41:54.264638+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 82 |
 | _proposed_retained_ | 5 |
-| bounded | 277 |
+| bounded | 276 |
 | support | 241 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 746 |
+| ~~audited_conditional~~ | 747 |
 | ~~audited_failed~~ | 127 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 218 |
-| `audited_conditional` | 472 |
+| `audited_conditional` | 473 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 781 |
+| `unaudited` | 780 |
 
 | criticality | count |
 |---|---:|
@@ -710,6 +710,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `poisson_3d_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `poisson_exhaustive_uniqueness_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `poisson_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `primordial_spectrum_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `propagator_family_unification_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quantum_horizon_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
@@ -9915,6 +9916,24 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `SIGN_PORTABILITY_INVARIANT_NOTE.md`
   - `DISTANCE_LAW_PORTABILITY_NOTE.md`
   - `COMPLEX_SELECTIVITY_COMPARE_NOTE.md`
+- **auditor confidence:** high
+
+### `primordial_spectrum_note`
+
+- **Note:** [`PRIMORDIAL_SPECTRUM_NOTE.md`](../../docs/PRIMORDIAL_SPECTRUM_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-34`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Graph growth in d=3 derives the corrected spectral index n_s = 1 - 2/N_e and r ~ d^2/N_e^2, so with N_e=60 it lands near Planck/BICEP values as a bounded primordial-spectrum prediction.  _(class `B`)_
+- **chain closes:** False — The runner reproduces the analytic formula, but the numerical graph/lattice spectra are too small and unstable to verify the spectral tilt. The successful n_s value comes from assuming the growth-noise correction and choosing a physical N_e=60 mapping, while the live finite graph run reports n_s=-3.8499 +/- 3.5842 and the best lattice summary reports n_s=0.4078 +/- 2.9546.
+- **rationale:** Issue: the claimed Planck/BICEP agreement depends on an assumed analytic growth-noise correction and an external N_e=60 e-fold mapping, while the live numerical runner does not independently recover the spectral index. Why this blocks: the source says the tilt follows from graph-growth statistics, but the finite computations are explicitly dominated by finite-size/noise and even report wildly different central n_s values with huge uncertainties; the runner also has no classified pass/fail guardrails for the load-bearing analytic correction. Repair target: derive and audit the growth-noise correction, register the graph-time-to-physical-e-fold mapping, add finite-size scaling that approaches the analytic n_s, and add classified PASS checks for n_s/r thresholds and comparator use. Claim boundary until fixed: bounded analytic toy support that if d=3 graph growth has the stated correction and if N_e=60 is supplied, then n_s=0.9667 and r~0.0025; current numerics are inconclusive.
+- **open / conditional deps cited:**
+  - `growth_noise_correction_derivation`
+  - `graph_time_to_physical_efolds_map`
+  - `finite_size_spectrum_scaling_runner`
+  - `tensor_mode_graph_derivation`
+  - `Planck_BICEP_comparator_authority`
 - **auditor confidence:** high
 
 ### `propagator_family_unification_note`
