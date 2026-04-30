@@ -18,13 +18,14 @@ forbidden_imports:
   - "continuum-QFT axioms (Wightman, OS) imported as primitive"
 science_branch: physics-loop/axiom-first-foundations-block01-20260429
 based_on: origin/main (37329240)
-cycle: 3
+cycle: 4
 block: 1
-active_route: R4 (CPT theorem stretch attempt) — about to start
+active_route: end-of-loop checkpoint + PR prep
 hard_residuals_attacked:
   - "spin-statistics on Cl(3) staggered surface (Cycle 1 / R1 — closed branch-local)"
   - "reflection positivity for canonical staggered + Wilson plaquette action (Cycle 2 / R2 — closed branch-local)"
   - "cluster decomposition / Lieb–Robinson on Cl(3) ⊗ Z^3 (Cycle 3 / R3 — closed branch-local)"
+  - "CPT theorem on fermion sector (Cycle 4 / R4 — closed branch-local on canonical A_min; Wilson plaquette gauge-sector step deferred)"
 files_touched:
   - "docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md"
   - "scripts/axiom_first_spin_statistics_check.py"
@@ -35,6 +36,9 @@ files_touched:
   - "docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md"
   - "scripts/axiom_first_cluster_decomposition_check.py"
   - "outputs/axiom_first_cluster_decomposition_check_2026-04-29.txt"
+  - "docs/AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md"
+  - "scripts/axiom_first_cpt_check.py"
+  - "outputs/axiom_first_cpt_check_2026-04-29.txt"
 open_imports_at_start:
   - "spin-statistics on Cl(3) Grassmann lattice (used implicitly across DM/leptogenesis, Yukawa lanes)"
   - "reflection positivity for canonical staggered-Dirac action (used implicitly for Hilbert reconstruction)"
@@ -43,7 +47,7 @@ open_imports_at_start:
 no_go_routes_in_session: []
 review_findings: []
 pr_status: not-yet-pushed
-next_exact_action: "Begin stretch attempt (Route R4: CPT theorem for canonical Cl(3) staggered Grassmann action)"
+next_exact_action: "End-of-loop: push branch and prepare review PR for the four cycles."
 stop_condition: |
   12h budget exhausted, OR the three planned cycles plus a stretch attempt have
   produced reviewable artifacts AND the science branch is pushed with one PR

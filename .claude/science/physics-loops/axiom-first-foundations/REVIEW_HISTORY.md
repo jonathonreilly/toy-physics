@@ -149,3 +149,58 @@ ordering (LR is conservative; tighter Hastings 2010 / Bravyi-Hastings
 **Disposition.** Accept artifact as branch-local theorem. Proceed to
 stretch attempt (Cycle 4 / R4: CPT theorem).
 
+## Cycle 4 — R4: CPT theorem (stretch attempt; in-loop self-review)
+
+**Artifacts.**
+- `docs/AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`
+- `scripts/axiom_first_cpt_check.py`
+- `outputs/axiom_first_cpt_check_2026-04-29.txt`
+
+**Runner result.** PASSED 4/4 on canonical A_min (pure staggered on
+Z^3, two block sizes / masses tested at machine precision).
+Diagnostic 1D toy fails (CPT2) at residual 1.0 — expected because
+no spatial parity exists in 1D and CPT reduces to TC. Wall test
+(staggered + Wilson *fermion* term in 3D) fails (CPT2),
+ε-Hermiticity, and P, T separately at residual 2.0 — also expected
+and explicitly NOT in A_min: the canonical A3 uses pure staggered;
+the Wilson plaquette in A4 is a gauge-sector term, not a fermion
+Wilson term.
+
+**In-loop review findings.**
+
+1. *Mid-cycle correction.* The first draft of the runner used my
+   cycle 1's `build_staggered_dirac_wilson` which adds a Wilson
+   *fermion* term. That is NOT canonical A_min. The canonical A3 is
+   the *finite local Grassmann staggered* partition: pure Kogut-
+   Susskind hop + mass + staggered phases, no Wilson fermion term.
+   The runner now uses pure staggered (`r_wilson = 0`) for all
+   canonical blocks; the `r_wilson = 1.0` block is retained as a
+   wall test to make the load-bearing dependency on pure staggered
+   explicit.
+2. *Hypothesis set audit.* On canonical blocks: A1 only via Cl(3)
+   C-matrix and staggered phases; A2 via spatial parity, time
+   reflection on Z^3; A3 via pure staggered Grassmann action; A4
+   via Re-trace structure of Wilson plaquette (gauge sector). No
+   imports from forbidden list.
+3. *Closure status.* Fermion-sector identities (CPT1)–(CPT5) close
+   in-block on canonical A_min (pure staggered on Z^3). Wilson-
+   plaquette gauge-sector CPT is asserted by inspection (Re-trace
+   manifestly invariant under U_P → U_P^*) and the operator-level
+   lift in full SU(3) representation generality is the deferred
+   step. This is a partial-progress closure for the stretch — the
+   bigger hammer (gauge-sector CPT) is documented for the next loop.
+4. *Reuse / discharge.* C1 discharges the CPT-even premise in
+   `docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`. C2 confirms
+   compatibility with the strong-CP / `θ_eff = 0` row of
+   `docs/ASSUMPTION_DERIVATION_LEDGER.md`. C3 is reusable for any
+   neutral-current / CP-odd lane.
+5. *Linkage.* Cycles 1+2+3+4 form an axiom-first foundational
+   tetrad: spin-statistics + reflection positivity + cluster
+   decomposition + CPT, all on A_min. The first three close fully
+   in-block; the fourth closes on the fermion sector with the
+   gauge-sector step honestly deferred.
+
+**Disposition.** Accept artifact as branch-local stretch-progress
+theorem. Proceed to end-of-loop checkpoint, branch push, and PR
+preparation.
+
