@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:01:37.667197+00:00
+**Generated:** 2026-04-30T19:02:35.548088+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 118 |
+| `audited_clean` | 119 |
 | `audited_conditional` | 319 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1038 |
+| `unaudited` | 1037 |
 
 | criticality | count |
 |---|---:|
@@ -171,6 +171,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
+| `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `lattice_3d_dense_refinement_reconciliation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_3d_dense_window_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -5174,6 +5175,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`
   - `KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
   - `KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md`
+- **auditor confidence:** high
+
+### `koide_frobenius_isotype_split_uniqueness_note_2026-04-21`
+
+- **Note:** [`KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md`](../../docs/KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-ca82-local-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the admitted Cl(3)/Herm_circ(3) matrix-space route, the Frobenius trace form and scalar/traceless isotype projections are fixed, and AM-GM on E_+ E_perp forces kappa=2 and Q=2/3 internally.  _(class `C`)_
+- **chain closes:** True — The support claim closes on its internal route. The runner verifies the trace-form invariance, C3 singlet projector uniqueness, matrix-space scalar projection, E_+ and E_perp formulas, positivity, Pythagoras, AM-GM extremum, and composite Q=2/3 chain with 28/28 passes; the source note excludes the remaining physical/source-law bridge.
+- **rationale:** The executable internal support chain closes: the admitted Frobenius/isotype route fixes the decomposition and AM-GM extremum yielding Q=2/3. This clean audit is limited to that admitted mathematical route and does not prove that the charged-lepton packet is physically selected by the extremal principle, which the note correctly leaves open.
 - **auditor confidence:** high
 
 ### `koide_full_lattice_schur_inheritance_note_2026-04-18`
