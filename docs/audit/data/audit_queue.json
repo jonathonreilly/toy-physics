@@ -3,9 +3,9 @@
     "critical": 0,
     "high": 237,
     "leaf": 486,
-    "medium": 324
+    "medium": 323
   },
-  "generated_at": "2026-04-30T18:56:54.055825+00:00",
+  "generated_at": "2026-04-30T18:57:03.397657+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -10162,23 +10162,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_staggered_newton_reproduction.py",
       "transitive_descendants": 15
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wilson_two_body_open_note_2026-04-11",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 4.407,
-      "note_path": "docs/WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 14
     },
     {
       "audit_independence_required": "any_non_self",
@@ -22266,6 +22249,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 655,
-  "total_pending": 1047
+  "ready_count": 654,
+  "total_pending": 1046
 }
