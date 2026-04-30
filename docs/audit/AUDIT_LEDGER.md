@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:10:26.742713+00:00
+**Generated:** 2026-04-30T19:10:34.526855+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,25 +21,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 339 |
+| bounded | 338 |
 | support | 267 |
 | open | 17 |
 | unknown | 47 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 616 |
+| ~~audited_conditional~~ | 617 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 128 |
-| `audited_conditional` | 329 |
+| `audited_conditional` | 330 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1017 |
+| `unaudited` | 1016 |
 
 | criticality | count |
 |---|---:|
@@ -336,6 +336,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -2914,6 +2915,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** True — The sign proof is explicit: h'(y)=2 e^y (e^y - 1 - y)>0 for y>0 gives the derivative bounds, and the weighted derivative is pointwise positive. The runner checks the identities and representative stability with PASS=5 FAIL=0.
 - **rationale:** The load-bearing monotonicity step closes as a structural theorem over the stated same-surface thermal factors and channel weights, with no numerical tuning or external comparator. Residual risk is limited to the upstream choice of same-surface channel weights, which the note treats as its scoped object rather than deriving here.
 - **auditor confidence:** high
+
+### `dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17`
+
+- **Note:** [`DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_SERIES_TAIL_SUPPORT_NOTE_2026-04-17.md`](../../docs/DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_SERIES_TAIL_SUPPORT_NOTE_2026-04-17.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-d-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The support claim rests on exact positive-series decompositions, exact J1/J2 special-function term integrals, and exact tail bounds that enclose the live DM-slice ratios below 1e-9 width.  _(class `C`)_
+- **chain closes:** False — The current output supports the reported narrow intervals, but the runner asserts the key exact series/tail reductions and only spot-checks helper positivity/evaluator inclusion. The restricted inputs do not expose a proof that the Meijer-G term-integral representation and interval enclosure machinery are theorem-grade exact.
+- **rationale:** Issue: exactness of the J1/J2 reduction and the interval-enclosure machinery is imported rather than proved by the source note or runner shown here. Why this blocks: the advertised exact series/tail support intervals depend on that unexposed certification, not just on the elementary positive-series identities. Repair target: include the explicit Meijer-G reduction, tail-to-J1/J2 inequalities, and interval arithmetic proof in the note or a runner that checks those symbolic bounds. Claim boundary until fixed: the current runner supports narrow live-slice intervals and agreement with the continuum evaluator, but theorem-grade exact tail support remains conditional.
+- **auditor confidence:** medium
 
 ### `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16`
 
