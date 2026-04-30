@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T20:18:33.454169+00:00
+**Generated:** 2026-04-30T20:19:32.591551+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,18 +22,18 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
 | bounded | 278 |
-| support | 252 |
+| support | 253 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 739 |
+| ~~audited_conditional~~ | 738 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 199 |
-| `audited_conditional` | 463 |
+| `audited_clean` | 200 |
+| `audited_conditional` | 462 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
@@ -242,6 +242,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_kappa_two_orbit_dimension_factorization_note_2026-04-19` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `koide_moment_ratio_uniformity_theorem_note_2026-04-19` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_mru_demotion_note_2026-04-20` | support | ~~audited_clean~~ | support | cross_family | codex-current | D | - |
+| `koide_mru_weight_class_obstruction_theorem_note_2026-04-19` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_q23_oh_covariance_nogo_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_bridge_single_primitive_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -623,7 +624,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
 | `koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
-| `koide_mru_weight_class_obstruction_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_native_dimensionless_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_zero_section_closure_route_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_native_zero_section_nature_review_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7945,13 +7945,13 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 
 - **Note:** [`KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md)
 - **current_status:** support
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** its resolution. The theorem itself is unchanged: the unreduced  _(class `B`)_
-- **chain closes:** False — No. The runner exits zero, but the audit classifier records no A/B/C/D PASS checks for a load-bearing audit surface.
-- **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a support note with executable but unratified support.
-- **auditor confidence:** medium
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-round2-20260430-02`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** For S_{mu,nu} = mu log(E_+) + nu log(E_perp) at fixed E_tot, the stationary leaf has kappa = 2 mu / nu, so the unreduced determinant weights (1,2) land at kappa = 1 while the SO(2)-quotient two-slot carrier lands at kappa = 2.  _(class `A`)_
+- **chain closes:** True — The note derives the weighted stationary point, the unreduced determinant multiplicity obstruction, and the quotient-carrier resolution by explicit algebra; the runner reproduces those checks with 21 A-class PASS lines.
+- **rationale:** The support-tier theorem closes as a local algebraic classification: the weighted log-volume stationary equations, the unreduced rank/determinant obstruction, and the reduced two-slot determinant resolution are all derived in the note and verified by the runner. There are no one-hop dependencies or external comparators, so the clean verdict is limited to the obstruction/resolution support theorem and does not ratify a physical charged-lepton mass closure. Residual risk is downstream citation as a retained Koide mechanism without an independently audited physical carrier/value law.
+- **auditor confidence:** high
 
 ### `koide_native_dimensionless_review_packet_2026-04-24`
 
