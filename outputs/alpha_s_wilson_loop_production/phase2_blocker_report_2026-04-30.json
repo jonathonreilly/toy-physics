@@ -1,0 +1,45 @@
+{
+  "alpha_s_MZ_claimed": false,
+  "benchmark": {
+    "acceptance_rate": 0.152,
+    "beta": 6.0,
+    "measured_volume": "12^3x24",
+    "seconds_per_sweep": 14.181,
+    "seconds_per_updated_link": 8.549e-05,
+    "updated_links_per_sweep": 165888
+  },
+  "certificate_generated": false,
+  "date": "2026-04-30",
+  "estimated_sweep_only_wall_time_days": {
+    "12^3x24": 3.4,
+    "16^3x32": 10.9,
+    "24^3x48": 55.1,
+    "total": 69.4
+  },
+  "excluded_from_estimate": [
+    "Wilson-loop measurement overhead for R,T=1..8",
+    "APE/HYP smearing",
+    "jackknife/bootstrap analysis",
+    "static-potential plateau fitting",
+    "reruns for autocorrelation or failed plateaus"
+  ],
+  "existing_infrastructure": [
+    "scripts/frontier_alpha_s_direct_wilson_loop.py",
+    "scripts/frontier_plaquette_self_consistency.py",
+    "scripts/frontier_g_bare_critical_feature_scan.py",
+    "scripts/frontier_confinement_string_tension.py"
+  ],
+  "phase2_status": "blocked",
+  "reason": "Existing repo SU(3) Wilson MC infrastructure is small-volume pure-Python Metropolis code, not a production heat-bath/overrelaxation Wilson-loop pipeline.",
+  "requested_protocol": {
+    "measurement_separation_sweeps": 20,
+    "measurements_per_volume": 1000,
+    "thermalization_sweeps": 1000,
+    "volumes": [
+      "12^3x24",
+      "16^3x32",
+      "24^3x48"
+    ]
+  },
+  "strict_runner_expected_result": "blocked_missing_production_certificate"
+}

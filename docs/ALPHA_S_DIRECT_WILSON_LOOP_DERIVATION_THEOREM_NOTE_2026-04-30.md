@@ -115,6 +115,59 @@ and `alpha_bare_over_u0_squared`.
 No retained direct Wilson-loop numerical result is currently present in this
 branch.  The strict gate is therefore blocked, not promoted.
 
+## Phase 2 Production Attempt: Blocked, No Certificate
+
+On 2026-04-30, Phase 2 was scoped against the existing framework MC
+infrastructure.  The repository currently has small-volume pure-gauge
+Metropolis code paths:
+
+- `scripts/frontier_alpha_s_direct_wilson_loop.py` scout mode;
+- `scripts/frontier_plaquette_self_consistency.py`;
+- `scripts/frontier_g_bare_critical_feature_scan.py`;
+- `scripts/frontier_confinement_string_tension.py`.
+
+These are useful for scout/qualitative checks, but they are not a production
+Cabibbo-Marinari heat-bath / overrelaxation Wilson-loop pipeline with smearing,
+autocorrelation control, and static-potential plateau analysis.
+
+A benchmark on the requested first production volume used the array-backed
+Wilson Metropolis implementation:
+
+```text
+12^3x24: 14.181 s/sweep, links=165888, 85.49 us/link, acc=0.152
+```
+
+Using the requested protocol
+
+```text
+1000 thermalization sweeps + 1000 measurements * 20 separated sweeps
+```
+
+gives the following sweep-only estimate:
+
+| Volume | Estimated seconds / sweep | Estimated sweep-only wall time |
+|---|---:|---:|
+| `12^3 x 24` | 14.2 | 3.4 days |
+| `16^3 x 32` | 44.8 | 10.9 days |
+| `24^3 x 48` | 226.9 | 55.1 days |
+| Total | - | 69.4 days |
+
+This excludes the expensive measurement pass for all Wilson loops
+`R,T in {1,...,8}`, APE/HYP smearing, jackknife/bootstrap analysis, plateau
+fitting, and any reruns needed for autocorrelation or failed plateaus.
+
+The production evidence therefore remains absent.  The branch records the
+blocker in:
+
+```text
+outputs/alpha_s_wilson_loop_production/PHASE2_BLOCKER_REPORT_2026-04-30.md
+outputs/alpha_s_wilson_loop_production/phase2_blocker_report_2026-04-30.json
+```
+
+No production certificate was generated, no direct `alpha_s(M_Z)` value is
+claimed, and the strict runner must continue to fail until real production
+Wilson-loop/static-potential data exist.
+
 Required uncertainty budget for a future passing certificate:
 
 | Component | Required content |
