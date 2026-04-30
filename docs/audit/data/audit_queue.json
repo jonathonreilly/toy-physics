@@ -3,9 +3,9 @@
     "critical": 0,
     "high": 237,
     "leaf": 486,
-    "medium": 293
+    "medium": 292
   },
-  "generated_at": "2026-04-30T19:10:34.296988+00:00",
+  "generated_at": "2026-04-30T19:12:37.928302+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -8663,23 +8663,6 @@
       "note_path": "docs/HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md",
       "ready": true,
       "runner_path": "scripts/frontier_hubble_tension_structural_lock.py",
-      "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_q23_oh_covariance_nogo_note_2026-04-22",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 4,
-      "load_bearing_score": 7.087,
-      "note_path": "docs/KOIDE_Q23_OH_COVARIANCE_NOGO_NOTE_2026-04-22.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_q23_oh_covariance_nogo.py",
       "transitive_descendants": 33
     },
     {
@@ -21739,6 +21722,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 623,
-  "total_pending": 1016
+  "ready_count": 622,
+  "total_pending": 1015
 }
