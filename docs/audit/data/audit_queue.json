@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 379,
+    "leaf": 378,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:26:45.695839+00:00",
+  "generated_at": "2026-04-30T19:26:51.548563+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13858,23 +13858,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "gate_b_farfield_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/gate_b_farfield_harness.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "gate_b_grown_propagating_field_radical_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -19767,6 +19750,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 523,
-  "total_pending": 905
+  "ready_count": 522,
+  "total_pending": 904
 }
