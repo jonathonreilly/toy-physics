@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 59,
+    "critical": 58,
     "high": 302,
     "leaf": 615,
     "medium": 325
   },
-  "generated_at": "2026-04-30T00:20:55.138374+00:00",
+  "generated_at": "2026-04-30T00:20:58.385796+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -107,23 +107,6 @@
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md",
       "ready": true,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py",
-      "transitive_descendants": 295
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 5,
-      "load_bearing_score": 14.709,
-      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py",
       "transitive_descendants": 295
     },
     {
@@ -27164,6 +27147,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 852,
-  "total_pending": 1301
+  "ready_count": 851,
+  "total_pending": 1300
 }

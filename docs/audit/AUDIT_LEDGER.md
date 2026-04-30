@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:20:55.294600+00:00
+**Generated:** 2026-04-30T00:20:58.557559+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,22 +22,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 78 |
 | _proposed_retained_ | 12 |
 | bounded | 215 |
-| support | 112 |
+| support | 111 |
 | open | 24 |
 | unknown | 564 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 23 |
 | ~~audited_conditional~~ | 197 |
-| ~~audited_failed~~ | 341 |
+| ~~audited_failed~~ | 342 |
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 9 |
+| `audit_in_progress` | 8 |
 | `audited_clean` | 78 |
 | `audited_conditional` | 133 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 51 |
+| `audited_failed` | 52 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 10 |
 | `unaudited` | 1292 |
@@ -100,7 +100,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | support | audit_in_progress | support | - | - | - | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
-| `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | support | audit_in_progress | support | - | - | - | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | support | audit_in_progress | support | - | - | - | - |
@@ -332,6 +331,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_portability_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `grown_transfer_basin_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -1800,6 +1800,20 @@ Claim boundary until fixed: safe to claim the exact first nonlocal coefficient a
 - **open / conditional deps cited:**
   - `GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md`
 - **auditor confidence:** medium
+
+### `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-fresh-cross-confirm-20260430-session-b`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Because the Wilson weight is real and nonnegative, Z_beta^env is of positive type; therefore the normalized character coefficients rho_(p,q)(beta) are nonnegative.  _(class `A`)_
+- **chain closes:** False — Real nonnegative central class functions are not automatically positive type, and the runner injects a positive coefficient sequence rather than deriving it from the Wilson environment.
+- **rationale:** Issue: the note infers positive-type character coefficients from real nonnegative Wilson boundary weights without proving positive definiteness of the boundary class function or convolution operator. Why this blocks: rho_(p,q)(beta) >= 0 and the positive residual-operator realization are load-bearing for the theorem. Repair target: prove reflection/positive-definiteness of Z_beta^env or weaken the result to a central character expansion with unconstrained real coefficients. Claim boundary until fixed: Z_beta^env is a central boundary class function with a Peter-Weyl expansion.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`
+- **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`
 

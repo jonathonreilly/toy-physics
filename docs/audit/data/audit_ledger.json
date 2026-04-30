@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T00:20:55.085133+00:00",
-  "generated_at": "2026-04-30T00:20:53.370913+00:00",
-  "invalidation_run_at": "2026-04-30T00:20:55.027942+00:00",
+  "effective_status_computed_at": "2026-04-30T00:20:58.332162+00:00",
+  "generated_at": "2026-04-30T00:20:56.618483+00:00",
+  "invalidation_run_at": "2026-04-30T00:20:58.260844+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T00:20:54.908358+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:20:58.146110+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -32502,14 +32502,21 @@
       "verdict_rationale": "Issue: T_src(beta)=exp[(beta/2)J] D_beta exp[(beta/2)J] is obtained by defining D_beta as the residual after stripping the two half-slice factors. Why this blocks: the claimed matrix-element closure is tautological unless the Wilson residual diagonal coefficients kappa_(p,q)(6) are constructed or independently constrained. Repair target: derive the residual Wilson source-sector compression and its diagonal character coefficients from the kernel. Claim boundary until fixed: for any positive diagonal D_beta, the displayed factorized matrix formula is valid."
     },
     "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:20:55.676747+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-fresh-cross-confirm-20260430-session-b",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "Real nonnegative central class functions are not automatically positive type, and the runner injects a positive coefficient sequence rather than deriving it from the Wilson environment.",
       "claim_id": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32529,30 +32536,32 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "support",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Because the Wilson weight is real and nonnegative, Z_beta^env is of positive type; therefore the normalized character coefficients rho_(p,q)(beta) are nonnegative.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "ff0016776547627249ad0ebb49ef7264834eca17f201cf27771c71e4b44bd696",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 7,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Character-Measure Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note infers positive-type character coefficients from real nonnegative Wilson boundary weights without proving positive definiteness of the boundary class function or convolution operator. Why this blocks: rho_(p,q)(beta) >= 0 and the positive residual-operator realization are load-bearing for the theorem. Repair target: prove reflection/positive-definiteness of Z_beta^env or weaken the result to a central character expansion with unconstrained real coefficients. Claim boundary until fixed: Z_beta^env is a central boundary class function with a Peter-Weyl expansion."
     },
     "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note": {
       "audit_date": "2026-04-28",
