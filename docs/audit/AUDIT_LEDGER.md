@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:56:14.648278+00:00
+**Generated:** 2026-04-30T18:56:22.975675+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,25 +21,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 349 |
+| bounded | 348 |
 | support | 274 |
 | open | 19 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 597 |
+| ~~audited_conditional~~ | 598 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 112 |
-| `audited_conditional` | 311 |
+| `audited_conditional` | 312 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1052 |
+| `unaudited` | 1051 |
 
 | criticality | count |
 |---|---:|
@@ -317,6 +317,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `distance_law_breakpoint_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_chamber_bound_derivation_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -2804,6 +2805,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** Issue: the claim rests on selected finite H and velocity values from scripts/dm_continuum_limit_velocity.py, but that runner is not registered and the dependency is a bounded wave-retardation continuum note. Why this blocks: the finite negative is plausible and useful, yet it is still a numerical surface rather than a retained continuum-limit theorem or exhaustive no-go. Repair target: register the runner/log as the primary audit artifact, recompute the table with hard convergence thresholds, and narrow the status to bounded finite-sweep negative unless a theorem/extrapolation closes the continuum behavior. Claim boundary until fixed: safe as a bounded report that the tested Fam1 velocities do not converge by H=0.25; not safe as audit-clean retained continuum velocity science.
 - **open / conditional deps cited:**
   - `WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md`
+- **auditor confidence:** high
+
+### `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_FULL_MICROSCOPIC_REDUCTION_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_FULL_MICROSCOPIC_REDUCTION_NOTE_2026-04-16.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-singer-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Once the full microscopic charge-preserving operator D is supplied, the chain D -> D_- -> dW_e^H -> H_e -> |U_e|^2^T -> selected transport column -> eta is algorithmic.  _(class `A`)_
+- **chain closes:** False — The runner verifies the algebraic downstream reduction for a supplied/constructed D, but it does not derive the microscopic value law of D from Cl(3) on Z^3. The near-closing eta result is therefore conditional on the missing D theorem.
+- **rationale:** Issue: the runner constructs or supplies a charge-preserving D arranged to reproduce the target charged block, then checks the downstream Schur/source/packet/eta algebra. Why this blocks: the note's own remaining target, the microscopic value law of D from the axiom, is not derived, so the PMNS-assisted near-closing value is not a first-principles result. Repair target: derive D from Cl(3) on Z^3 and make the runner build D from that law rather than from the target charged sample. Claim boundary until fixed: the note is a valid conditional reduction showing that D would be sufficient, not a microscopic DM prediction.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16`
