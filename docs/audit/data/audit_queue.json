@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 477,
+    "leaf": 476,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:16:23.339424+00:00",
+  "generated_at": "2026-04-30T19:16:30.047033+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20444,28 +20444,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "cosmological_constant_spectral_gap_identity_theorem_note",
-        "universal_gr_discrete_global_closure_note",
-        "s3_general_r_derivation_note",
-        "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/COSMOLOGICAL_CONSTANT_RETENTION_WITH_R_BUDGET_THEOREM_NOTE_2026-04-29.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_cosmological_constant_retention_with_r_budget.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21495,5 +21473,5 @@
     }
   ],
   "ready_count": 613,
-  "total_pending": 1003
+  "total_pending": 1002
 }
