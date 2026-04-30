@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T21:43:03.779977+00:00
+**Generated:** 2026-04-30T21:44:38.645972+00:00
 **Total pending:** 810
-**Ready (all deps already at a stable tier):** 429
+**Ready (all deps already at a stable tier):** 428
 
 By criticality:
-- `critical`: 0
-- `high`: 235
+- `critical`: 1
+- `high`: 234
 - `medium`: 289
 - `leaf`: 286
 
@@ -16,8 +16,8 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 
 | # | claim_id | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---:|---:|:---:|---|---|
-| 1 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | high | 40 | 9.86 | Y | fresh_context_or_stronger | `scripts/frontier_area_law_algebraic_spectrum_entropy_no_go.py` |
-| 2 | `koide_q_delta_closure_package_readme_2026-04-21` | high | 39 | 11.32 | Y | fresh_context_or_stronger | `scripts/frontier_koide_Q_eq_3delta_identity.py` |
+| 1 | `publication.ci3_z3.publication_matrix` | critical | 32 | 12.54 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 2 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | high | 40 | 9.86 | Y | fresh_context_or_stronger | `scripts/frontier_area_law_algebraic_spectrum_entropy_no_go.py` |
 | 3 | `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | high | 38 | 10.29 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_source_domain_canonical_descent.py` |
 | 4 | `pmns_selector_current_stack_zero_law_note` | high | 38 | 8.79 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_selector_current_stack_zero_law.py` |
 | 5 | `cl3_color_automorphism_theorem` | high | 37 | 10.25 | Y | fresh_context_or_stronger | `scripts/verify_cl3_sm_embedding.py` |
