@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:12:38.103638+00:00
+**Generated:** 2026-04-30T19:13:11.333691+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 129 |
+| `audited_clean` | 130 |
 | `audited_conditional` | 330 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1015 |
+| `unaudited` | 1014 |
 
 | criticality | count |
 |---|---:|
@@ -179,6 +179,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_hostile_review_guard_note_2026-04-24` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q23_oh_covariance_nogo_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
+| `koide_q_bridge_single_primitive_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `lattice_3d_dense_refinement_reconciliation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_3d_dense_window_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -5562,6 +5563,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The retained affine Hermitian chart is covariant under only {+I,-I} inside the 48-element O_h signed-permutation group, so the O_h cubic-invariance sub-route to spin-1/Q=2/3 is ruled out.  _(class `C`)_
 - **chain closes:** True — The runner enumerates all 48 O_h elements, computes individual stabilizers, verifies the joint pointwise stabilizer has size 2, and verifies the chart-span covariance group is exactly {+I,-I}. This closes the stated negative sub-route boundary while leaving the other spin-1 routes open.
 - **rationale:** The no-go closes on its stated support boundary: the retained chart does not carry O_h covariance beyond parity, so sub-route (a) is falsified. This audit does not close Q=2/3; it only removes the cubic-chart-invariance mechanism and preserves the note's open sub-routes (b) and (c).
+- **auditor confidence:** high
+
+### `koide_q_bridge_single_primitive_note_2026-04-22`
+
+- **Note:** [`KOIDE_Q_BRIDGE_SINGLE_PRIMITIVE_NOTE_2026-04-22.md`](../../docs/KOIDE_Q_BRIDGE_SINGLE_PRIMITIVE_NOTE_2026-04-22.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-ca82-local-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The surviving arithmetic and representation-theoretic faces of the Koide Q bridge all reduce to the same scalar primitive P_Q=|b|^2/a^2=1/2, leaving physical identification of that primitive as the remaining burden.  _(class `C`)_
+- **chain closes:** True — The runner proves the cyclic block-power equivalence, maps it to |b|^2/a^2=1/2 and kappa=2, derives c=sqrt(2) and Q=2/3 conditionally, and verifies the spinor/Cl^+(3) and Yukawa-Casimir faces hit the same scalar, with 10/10 passes. The source note explicitly does not prove physical/source-law selection.
+- **rationale:** The support/narrowing claim closes: the candidate arithmetic faces collapse to one primitive rather than competing bridge values. This clean audit is not a closure of physical Koide Q, because the note and runner leave open why the charged-lepton packet must realize P_Q=1/2.
 - **auditor confidence:** high
 
 ### `koide_q_delta_linking_relation_theorem_note_2026-04-20`
