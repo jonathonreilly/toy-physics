@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T11:41:03.344548+00:00
+**Generated:** 2026-04-30T11:41:06.894822+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -35,12 +35,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 196 |
+| `audited_conditional` | 197 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1182 |
+| `unaudited` | 1181 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 384 |
 | `leaf` | 764 |
 
-- **Proposed claims demoted by upstream:** 154
+- **Proposed claims demoted by upstream:** 153
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -72,7 +72,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 5 | `observable_principle_from_axiom_note` | critical | 229 | 25.84 | `audited_conditional` | ~~audited_conditional~~ |
 | 6 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 99 | 23.64 | `unaudited` | ~~audited_conditional~~ |
 | 7 | `yt_ew_color_projection_theorem` | critical | 110 | 22.29 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `three_generation_observable_theorem_note` | critical | 278 | 21.62 | `unaudited` | ~~audited_conditional~~ |
+| 8 | `three_generation_observable_theorem_note` | critical | 278 | 21.62 | `audited_conditional` | ~~audited_conditional~~ |
 | 9 | `three_generation_structure_note` | critical | 247 | 20.95 | `unaudited` | ~~audited_conditional~~ |
 | 10 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 111 | 20.81 | `unaudited` | ~~audited_conditional~~ |
 | 11 | `one_generation_matter_closure_note` | critical | 241 | 20.42 | `unaudited` | ~~audited_conditional~~ |
@@ -357,6 +357,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `taste_scalar_isotropy_theorem_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `three_generation_observable_theorem_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `vector_sector_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -5514,6 +5515,23 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** Three independent grown families produce quantitatively identical physics on all 9 measurable properties to within 5%.  _(class `B`)_
 - **chain closes:** False — The source table itself leaves Family 3 Distance alpha as '(not yet)', and no runner is provided to recompute the 9-property comparison, so the headline 9/9 three-family match does not close.
 - **rationale:** Issue: The note claims three families match on all 9 measurable properties, but the table explicitly has Family 3 Distance alpha marked '(not yet)' and the note provides no runner or log artifact to verify the cross-family card. Why this blocks: the load-bearing 9/9 statement is false on the face of the supplied table, and the broader inference that observables are geometry-independent cannot follow from a partial, hand-entered comparison. Repair target: add a runner that recomputes every listed property for all three families, including Family 3 Distance alpha, with explicit <5% assertions and at least one holdout check. Claim boundary until fixed: safe to cite this as a partial comparison of three selected drift/restore rows with eight populated properties and distance-alpha data only for Families 1 and 2; not safe to claim 9/9 three-family equality or geometry-independence.
+- **auditor confidence:** high
+
+### `three_generation_observable_theorem_note`
+
+- **Note:** [`THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`](../../docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Translation projectors together with C3[111] generate the full retained operator algebra M_3(C) on H_hw=1, forbidding a proper observable-preserving quotient.  _(class `A`)_
+- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md, S3_TASTE_CUBE_DECOMPOSITION_NOTE.md, Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md, GENERATION_AXIOM_BOUNDARY_NOTE.md.
+- **rationale:** Issue: The load-bearing step still imports unratified direct authority: SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md, S3_TASTE_CUBE_DECOMPOSITION_NOTE.md, Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md, GENERATION_AXIOM_BOUNDARY_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
+- **open / conditional deps cited:**
+  - `SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`
+  - `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`
+  - `Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`
+  - `GENERATION_AXIOM_BOUNDARY_NOTE.md`
 - **auditor confidence:** high
 
 ### `triage_no_promotion_note`

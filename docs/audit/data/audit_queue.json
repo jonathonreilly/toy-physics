@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 36,
+    "critical": 35,
     "high": 234,
     "leaf": 571,
     "medium": 342
   },
-  "generated_at": "2026-04-30T11:41:03.189458+00:00",
+  "generated_at": "2026-04-30T11:41:06.739258+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,29 +23,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "transitive_descendants": 281
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "three_generation_observable_theorem_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "site_phase_cube_shift_intertwiner_note",
-        "s3_taste_cube_decomposition_note",
-        "s3_mass_matrix_no_go_note",
-        "z2_hw1_mass_matrix_parametrization_note",
-        "generation_axiom_boundary_note"
-      ],
-      "direct_in_degree": 27,
-      "load_bearing_score": 21.624,
-      "note_path": "docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
-      "transitive_descendants": 278
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24977,5 +24954,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1183
+  "total_pending": 1182
 }
