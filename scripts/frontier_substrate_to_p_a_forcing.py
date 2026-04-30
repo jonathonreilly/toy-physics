@@ -162,7 +162,7 @@ def local_polynomial_weight(k: int) -> np.ndarray:
 
 def check(label: str, ok: bool, detail: str) -> bool:
     tag = "PASS" if ok else "FAIL"
-    print(f"[{tag}] {label}: {detail}")
+    print(f"[{tag} (A)] {label}: {detail}")
     return ok
 
 
