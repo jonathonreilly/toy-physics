@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 407,
+    "leaf": 406,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:23:54.786706+00:00",
+  "generated_at": "2026-04-30T19:24:01.361636+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13705,23 +13705,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_selector_shifted_doublet_imag_sign_support_theorem_note_2026-04-21",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_SELECTOR_SHIFTED_DOUBLET_IMAG_SIGN_SUPPORT_THEOREM_NOTE_2026-04-21.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_selector_shifted_doublet_imag_sign_support_2026_04_21.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_selector_threshold_stabilization_support_theorem_note_2026-04-21",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20272,6 +20255,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 546,
-  "total_pending": 933
+  "ready_count": 545,
+  "total_pending": 932
 }
