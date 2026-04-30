@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:20:29.443303+00:00
+**Generated:** 2026-04-30T19:20:35.366802+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 150 |
+| `audited_clean` | 151 |
 | `audited_conditional` | 358 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 966 |
+| `unaudited` | 965 |
 
 | criticality | count |
 |---|---:|
@@ -145,6 +145,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_sole_axiom_boundary_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_lepton_synthesis_note_2026-04-19` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `electric_sign_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -3762,6 +3763,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** Issue: the proof starts from the retained local post-EWSB Higgs family M(phi), the exact selector V_sel, the 3+1 completed chirality surface, and a weak-axis branch convention, but these inputs are not present as one-hop retained dependencies in the ledger. Why this blocks: the runner proves the algebra after those structures are chosen, not that the framework forces those structures from retained primitives. Repair target: add retained dependencies or an integrated derivation for the Higgs family, selector, 3+1 chirality operator, and weak-axis convention before the Gamma_1 selection step. Claim boundary until fixed: the note can claim a conditional local-operator selection result within that retained family, not an audited standalone Dirac bridge theorem.
 - **open / conditional deps cited:**
   - `DM_NEUTRINO_WEAK_VECTOR_THEOREM_NOTE_2026-04-15.md`
+- **auditor confidence:** high
+
+### `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_K00_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_K00_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** **Script:** `scripts/frontier_dm_neutrino_k00_bosonic_normalization_theorem.py`  _(class `C`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 5 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
 ### `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15`

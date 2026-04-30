@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 440,
+    "leaf": 439,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:20:29.258067+00:00",
+  "generated_at": "2026-04-30T19:20:35.205257+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13824,23 +13824,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_NEUTRINO_K00_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_k00_bosonic_normalization_theorem.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_neutrino_operator_selection_obstruction_note_2026-04-14",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20840,6 +20823,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 580,
-  "total_pending": 966
+  "ready_count": 579,
+  "total_pending": 965
 }
