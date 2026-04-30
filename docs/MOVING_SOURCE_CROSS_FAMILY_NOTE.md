@@ -10,8 +10,8 @@
 - first portable moving-source lane:
   - [`docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md)
 - second portable family context:
-  - [`docs/PORTABLE_CARD_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PORTABLE_CARD_EXTENSION_NOTE.md)
-  - [`docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md)
+  - [`archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_CARD_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_CARD_EXTENSION_NOTE.md)
+  - [`archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_PACKAGE_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_PACKAGE_EXTENSION_NOTE.md)
 
 ## Question
 

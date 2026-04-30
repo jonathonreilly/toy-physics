@@ -5,7 +5,9 @@ Triggers (any of):
 
   1. Hash drift on the source note (already handled by seed_audit_ledger.py;
      this script does not duplicate that path).
-  2. A dependency was added or removed since audit time.
+  2. A dependency was added or removed since audit time. Removing a dependency
+     solely because a terminal failed note moved to archive_unlanded/ is ignored:
+     that is stale-narrative surface cleanup, not a new proof dependency.
   3. A dependency's effective_status moved to a weaker tier since audit
      time. (A dep getting stronger is fine; getting weaker means the
      audit may have relied on a now-questionable input.)
@@ -99,13 +101,18 @@ def detect_invalidation(row: dict, rows: dict[str, dict]) -> str | None:
     snap_deps = sorted(snap.get("deps", []))
     if current_deps != snap_deps:
         added = sorted(set(current_deps) - set(snap_deps))
-        removed = sorted(set(snap_deps) - set(current_deps))
+        removed = sorted(
+            dep
+            for dep in set(snap_deps) - set(current_deps)
+            if not is_archived_terminal_failed_dep(dep, rows)
+        )
         parts = []
         if added:
             parts.append(f"dep_added:{','.join(added[:3])}")
         if removed:
             parts.append(f"dep_removed:{','.join(removed[:3])}")
-        return "deps_changed:" + "|".join(parts)
+        if parts:
+            return "deps_changed:" + "|".join(parts)
 
     snap_dep_status = snap.get("dep_effective_status", {})
     for d in current_deps:
@@ -120,6 +127,16 @@ def detect_invalidation(row: dict, rows: dict[str, dict]) -> str | None:
         return f"criticality_increased:{snap_crit}->{cur_crit}"
 
     return None
+
+
+def is_archived_terminal_failed_dep(dep: str, rows: dict[str, dict]) -> bool:
+    dep_row = rows.get(dep)
+    if not dep_row:
+        return False
+    return (
+        dep_row.get("audit_status") == "audited_failed"
+        and (dep_row.get("note_path") or "").startswith("archive_unlanded/")
+    )
 
 
 def archive_and_reset(row: dict, reason: str) -> dict:

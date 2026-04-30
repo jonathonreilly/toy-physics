@@ -6,7 +6,7 @@
 ## Artifact Chain
 
 - [`docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md)
-- [`docs/SOURCE_RESOLVED_TRANSVERSE_PROPAGATING_GREEN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SOURCE_RESOLVED_TRANSVERSE_PROPAGATING_GREEN_NOTE.md)
+- [`archive_unlanded/source-resolved-green-stale-runners-2026-04-30/SOURCE_RESOLVED_TRANSVERSE_PROPAGATING_GREEN_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/source-resolved-green-stale-runners-2026-04-30/SOURCE_RESOLVED_TRANSVERSE_PROPAGATING_GREEN_NOTE.md)
 - [`docs/ELECTROSTATICS_CARD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ELECTROSTATICS_CARD_NOTE.md)
 - [`docs/DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md)
 - [`scripts/vector_magnetic_extension_probe.py`](/Users/jonreilly/Projects/Physics/scripts/vector_magnetic_extension_probe.py)

@@ -654,10 +654,6 @@
     },
     {
       "from": "canonical_harness_index",
-      "to": "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25"
-    },
-    {
-      "from": "canonical_harness_index",
       "to": "yt_ward_identity_derivation_theorem"
     },
     {
@@ -1318,15 +1314,7 @@
     },
     {
       "from": "causal_distance_tail_note",
-      "to": "causal_propagating_field_note"
-    },
-    {
-      "from": "causal_distance_tail_note",
       "to": "causal_field_portability_note"
-    },
-    {
-      "from": "causal_impact_parameter_note",
-      "to": "causal_propagating_field_note"
     },
     {
       "from": "causal_impact_parameter_note",
@@ -2966,10 +2954,6 @@
     },
     {
       "from": "dm_neutrino_source_bank_z3_doublet_block_selection_obstruction_theorem_note_2026-04-16",
-      "to": "dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15"
-    },
-    {
-      "from": "dm_neutrino_source_bank_z3_doublet_block_selection_obstruction_theorem_note_2026-04-16",
       "to": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16"
     },
     {
@@ -3407,10 +3391,6 @@
     {
       "from": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
       "to": "dm_neutrino_source_amplitude_theorem_note_2026-04-15"
-    },
-    {
-      "from": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-      "to": "dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15"
     },
     {
       "from": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
@@ -4323,14 +4303,6 @@
     {
       "from": "gravitational_memory_note_2026-04-11",
       "to": "memory_mu2_geometry_sweep_note_2026-04-11"
-    },
-    {
-      "from": "gravitomagnetic_portability_note",
-      "to": "moving_source_cross_family_note"
-    },
-    {
-      "from": "gravitomagnetic_portability_note",
-      "to": "vector_magnetic_extension_note"
     },
     {
       "from": "graviton_mass_spectral_gap_identity_theorem_note",
@@ -7186,10 +7158,6 @@
     },
     {
       "from": "unified_program_note",
-      "to": "lattice_3d_dense_spent_delay_note"
-    },
-    {
-      "from": "unified_program_note",
       "to": "work_history.repo.backlog.overnight_work_backlog"
     },
     {
@@ -9630,10 +9598,6 @@
     },
     {
       "from": "lanes.ordered-lattice.readme",
-      "to": "lattice_3d_dense_spent_delay_note"
-    },
-    {
-      "from": "lanes.ordered-lattice.readme",
       "to": "continuum_bridge_note"
     },
     {
@@ -9927,10 +9891,6 @@
     {
       "from": "publication.ci3_z3.claims_table",
       "to": "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26"
-    },
-    {
-      "from": "publication.ci3_z3.claims_table",
-      "to": "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25"
     },
     {
       "from": "publication.ci3_z3.claims_table",
@@ -10491,10 +10451,6 @@
     {
       "from": "publication.ci3_z3.derivation_atlas",
       "to": "cl3_taste_generation_theorem"
-    },
-    {
-      "from": "publication.ci3_z3.derivation_atlas",
-      "to": "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25"
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
@@ -12718,10 +12674,6 @@
     },
     {
       "from": "publication.ci3_z3.derivation_validation_map",
-      "to": "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25"
-    },
-    {
-      "from": "publication.ci3_z3.derivation_validation_map",
       "to": "cl3_sm_embedding_theorem"
     },
     {
@@ -14638,10 +14590,6 @@
     },
     {
       "from": "publication.ci3_z3.inputs_and_qualifiers_note",
-      "to": "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25"
-    },
-    {
-      "from": "publication.ci3_z3.inputs_and_qualifiers_note",
       "to": "continuum_identification_note"
     },
     {
@@ -15231,10 +15179,6 @@
     {
       "from": "publication.ci3_z3.publication_matrix",
       "to": "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26"
-    },
-    {
-      "from": "publication.ci3_z3.publication_matrix",
-      "to": "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25"
     },
     {
       "from": "publication.ci3_z3.publication_matrix",
@@ -16559,10 +16503,6 @@
     {
       "from": "publication.ci3_z3.results_index",
       "to": "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26"
-    },
-    {
-      "from": "publication.ci3_z3.results_index",
-      "to": "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25"
     },
     {
       "from": "publication.ci3_z3.results_index",
@@ -18273,10 +18213,6 @@
       "to": "repo.controlled_vocabulary"
     },
     {
-      "from": "work_history.potential_publication_discoveries_log",
-      "to": "work_history.repo.review_feedback.architecture_portability_audit_2026-04-11"
-    },
-    {
       "from": "work_history.readme",
       "to": "publication.ci3_z3.readme"
     },
@@ -18314,10 +18250,6 @@
     },
     {
       "from": "work_history.repo.lane_status_board",
-      "to": "work_history.repo.review_feedback.architecture_portability_audit_2026-04-11"
-    },
-    {
-      "from": "work_history.repo.lane_status_board",
       "to": "work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18"
     },
     {
@@ -18331,10 +18263,6 @@
     {
       "from": "work_history.repo.backlog.work_backlog_2026-04-10",
       "to": "weak_coupling_sign_sensitivity_note_2026-04-11"
-    },
-    {
-      "from": "work_history.repo.backlog.work_backlog_2026-04-10",
-      "to": "staggered_backreaction_green_closure_note"
     },
     {
       "from": "work_history.repo.backlog.work_backlog_2026-04-10",
@@ -18437,7 +18365,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T18:17:51.032918+00:00",
+  "generated_at": "2026-04-30T18:31:18.498398+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19205,16 +19133,6 @@
       "runner_path": null,
       "title": "Claude Session \u2014 eb804083-efd5-49b0-8ccd-517f4a825f73"
     },
-    "ai_methodology.raw.prompts_session_ebae4639_jonreilly": {
-      "claim_id": "ai_methodology.raw.prompts_session_ebae4639_jonreilly",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained theorem. STRC-LO is derived from proposed_retained collinearity r = p/sqrt(7) plus the Frobenius imaginary cross-residual definition of a_u...",
-      "deps": [],
-      "note_hash": "b38d757c3353e09e5539ea5537eb00b65f1dc0fef88f3142368140ae364a4c9a",
-      "path": "docs/ai_methodology/raw/prompts_session_ebae4639_jonreilly.md",
-      "runner_path": null,
-      "title": "Claude Session \u2014 ebae4639-23f6-4620-a97e-4d374e8beaa6"
-    },
     "ai_methodology.raw.prompts_session_ef33749a_jonreilly": {
       "claim_id": "ai_methodology.raw.prompts_session_ef33749a_jonreilly",
       "current_status": "unknown",
@@ -19270,7 +19188,7 @@
       "current_status": "unknown",
       "current_status_raw": "repo-facing backlog note",
       "deps": [],
-      "note_hash": "36f027105a9e3f6cb4940b886d6726ea76480b7450bd43ae9d9395cb19abcde3",
+      "note_hash": "157f52b483b048e43ed5f8b8d0dd23b6ae39d73b07f9422bb7fa8f70f0bc9340",
       "path": "docs/ai_methodology/raw/protocols.md",
       "runner_path": null,
       "title": "Process Protocols"
@@ -20093,16 +20011,6 @@
       "runner_path": "scripts/frontier_background_independence.py",
       "title": "Background Independence: Effective Geometry Differs from Input Graph"
     },
-    "backreaction_note": {
-      "claim_id": "backreaction_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained positive \u2014 Poisson self-gravity produces absorption threshold",
-      "deps": [],
-      "note_hash": "95f97d6b8a07bb7a6297ec176dd2753040975023c6299e6884b2e2f245cd027a",
-      "path": "docs/BACKREACTION_NOTE.md",
-      "runner_path": "scripts/backreaction_poisson.py",
-      "title": "Self-Consistent Back-Reaction: Horizons from Geometry"
-    },
     "bell_inequality_derived_note": {
       "claim_id": "bell_inequality_derived_note",
       "current_status": "bounded",
@@ -20420,7 +20328,6 @@
         "ew_lattice_cos_sq_theta_w_complement_bridge_theorem_note_2026-04-26",
         "left_handed_charge_matching_note",
         "ckm_wolfenstein_eta_inverse_square_gap_theorem_note_2026-04-26",
-        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
         "yt_ward_identity_derivation_theorem",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
@@ -20587,7 +20494,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "a99b9e94874028a54702ed75acecc9c672b73d54c1cb1fb6ee542bf2ab21cf39",
+      "note_hash": "9ea7a06fec4df04fdc39d5afe5c187470f2f30769903de9684dec093f88eea5c",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -20597,7 +20504,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded cone-speed probe on the center grown family",
       "deps": [],
-      "note_hash": "0e32a8d8b2d87efc2434dbd06af3cc83ce29feed291bf95cb71ba177dd0ff7be",
+      "note_hash": "5a58957e0ce5c1f2d82dbadb4528482b13e14b2fe8047d2672858761acd69f56",
       "path": "docs/CAUSAL_CONE_SPEED_MAP_NOTE.md",
       "runner_path": "scripts/causal_cone_speed_map.py",
       "title": "Causal Cone Speed Map Note"
@@ -20607,10 +20514,9 @@
       "current_status": "bounded",
       "current_status_raw": "bounded causal-field distance-tail probe",
       "deps": [
-        "causal_propagating_field_note",
         "causal_field_portability_note"
       ],
-      "note_hash": "8ff94d30b224746d9b739e49952f0b2fc9b3d5093fac7f95d7a5122a9f582ae8",
+      "note_hash": "1b0983e90603349a5e1f4a3f0242af6287df902d7686aedd85acf585df37e0f6",
       "path": "docs/CAUSAL_DISTANCE_TAIL_NOTE.md",
       "runner_path": "scripts/causal_distance_tail_probe.py",
       "title": "Causal Distance Tail Note"
@@ -20640,7 +20546,7 @@
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
       "deps": [],
-      "note_hash": "88ebbd3e2053a6380ec1fa83a94310ee659ec6902da7a8f4f632b1ac6635c1f2",
+      "note_hash": "2a9fb30bdad52c5a72731bda3149ef3ebfa21a73c1de3f29c0e784f81e4d8263",
       "path": "docs/CAUSAL_FIELD_PORTABILITY_NOTE.md",
       "runner_path": "scripts/causal_field_portability_probe.py",
       "title": "Causal Field Portability Note"
@@ -20650,7 +20556,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded harness-boundary diagnostic for the fixed-anchor cross-family replay; the upstream center-family causal-field result is **not** asserted as valid by this note (the cited runner emits no executable verification and the cited diagnostic logs are missing).",
       "deps": [],
-      "note_hash": "b76057aab61b9dccff219641911313d56a9f13add76b7a95d40f7091470071ee",
+      "note_hash": "a9fddc6766587025d35aeeb5a236d2e2dea8d0423d82e58139a612712257350a",
       "path": "docs/CAUSAL_FIELD_RECONCILIATION_NOTE.md",
       "runner_path": "scripts/causal_field_portability_probe.py",
       "title": "Causal Field Reconciliation Note"
@@ -20660,11 +20566,10 @@
       "current_status": "proposed_retained",
       "current_status_raw": "bounded causal-field impact-parameter probe on the proposed_retained center grown family",
       "deps": [
-        "causal_propagating_field_note",
         "causal_field_portability_note",
         "causal_field_reconciliation_note"
       ],
-      "note_hash": "4fd74ea09d854dabfacf4bcdfc0451a73e4339efde6d8b8b38b3424c5d847e28",
+      "note_hash": "6be5f224bc352e5838281dadb218cd6044031fa641c424efb9572641fae71dbc",
       "path": "docs/CAUSAL_IMPACT_PARAMETER_NOTE.md",
       "runner_path": "scripts/causal_impact_parameter_probe.py",
       "title": "Causal Impact-Parameter Note"
@@ -20674,27 +20579,17 @@
       "current_status": "unknown",
       "current_status_raw": "narrow classification note: shared causal-delay core, but genuinely separate observables",
       "deps": [],
-      "note_hash": "a739cf637debf1ed447a504e655201dd863fae39bb527eba56cab712e83e91cc",
+      "note_hash": "510a86534f0483409456cd64294ebc1c3805283d5b35bdda36d13808b49d4d28",
       "path": "docs/CAUSAL_MOVING_UNIFICATION_NOTE.md",
       "runner_path": null,
       "title": "Causal vs Moving-Source Unification Note"
-    },
-    "causal_propagating_field_note": {
-      "claim_id": "causal_propagating_field_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained positive \u2014 dynamic causal cone produces distinct observable",
-      "deps": [],
-      "note_hash": "79d0141e5a28f5ba8430896ca5e60c5af06bb8cc3f5a6062f18b75c16918aa56",
-      "path": "docs/CAUSAL_PROPAGATING_FIELD_NOTE.md",
-      "runner_path": "scripts/causal_propagating_field.py",
-      "title": "Causal Propagating Field"
     },
     "causal_source_placement_robustness_note": {
       "claim_id": "causal_source_placement_robustness_note",
       "current_status": "unknown",
       "current_status_raw": "diagnosed deeper boundary: family-aware source placement changes the causal ratios, but it does not restore a clean portable causal-field signal across all three families",
       "deps": [],
-      "note_hash": "644062fd3b29c57c1ef9464705396c9e7f0ed7d137388295fed926294c671ece",
+      "note_hash": "a0c40e4f90c97bc76f0327f97528635e1dc72b853a180df545b0f8d137561df3",
       "path": "docs/CAUSAL_SOURCE_PLACEMENT_ROBUSTNESS_NOTE.md",
       "runner_path": "scripts/causal_source_placement_robustness.py",
       "title": "Causal Source Placement Robustness Note"
@@ -21853,7 +21748,7 @@
       "current_status": "unknown",
       "current_status_raw": null,
       "deps": [],
-      "note_hash": "edbfbeea38010f5cfd95adac81ed4613b4447c7aef58b34ae60da3e60642f0bc",
+      "note_hash": "1d1fff3daa20df02d9131898ee34194091bf97db821866ed354d6f0f4bf56984",
       "path": "docs/CLAUDE_BRANCH_RETAINABILITY_NOTE.md",
       "runner_path": null,
       "title": "Claude Branch Retainability Note"
@@ -21913,7 +21808,7 @@
       "current_status": "unknown",
       "current_status_raw": "narrow comparison card for signed-source portability vs complex-action selectivity",
       "deps": [],
-      "note_hash": "859c340bc112945a598d800e36dfdf64e30aaac6f22133f8cc69b57765e4ed2f",
+      "note_hash": "145d8cf2d1bd6f376e759143602d6566b7034b33beef9e84e5617bf8a0d883bc",
       "path": "docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md",
       "runner_path": "scripts/COMPLEX_SELECTIVITY_COMPARE.py",
       "title": "Complex Selectivity Compare Note"
@@ -21923,7 +21818,7 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained narrow predictor card for complex-action survival on structured families",
       "deps": [],
-      "note_hash": "f8f26a44512124d3e207ff1b4dd12d24fc4a9269e5c355e8014d947f415b8713",
+      "note_hash": "7b1a4bf031ff0c2e0f31989817aeb71289d2751de89b35c8349b62db4163d179",
       "path": "docs/COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md",
       "runner_path": "scripts/COMPLEX_SELECTIVITY_PREDICTOR_SCAN.py",
       "title": "Complex Selectivity Predictor Note"
@@ -21963,7 +21858,7 @@
       "current_status": "support",
       "current_status_raw": "support / diagnostic duplicate of the portable sign-law fixed point; the elliptical-shell slice sits inside the existing sign-portability invariant and is not a new tier-ratifiable family.",
       "deps": [],
-      "note_hash": "71dd234fda33747c9b473e68f8a068cda68d6dd9412a24c331e2458eca8d6eed",
+      "note_hash": "839228e6547bfdaed31db8ca8c21a9b2feba4f539ec26483378fb4580988aab8",
       "path": "docs/CONNECTIVITY_FAMILY_V2_ELLIPTICAL_DUPLICATE_NOTE.md",
       "runner_path": "scripts/CONNECTIVITY_FAMILY_V2_ELLIPTICAL_SWEEP.py",
       "title": "Connectivity Family V2 Elliptical Duplicate Note"
@@ -22158,16 +22053,6 @@
       "runner_path": null,
       "title": "CPT Exact Preservation in the Cl(3) Staggered Framework"
     },
-    "critical_exponents_topology_note_2026-04-10": {
-      "claim_id": "critical_exponents_topology_note_2026-04-10",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained finite-size scout",
-      "deps": [],
-      "note_hash": "3b812e95feb91a13491d6817dbdf70c54e07c0be42f6265d47aa870c0e6af720",
-      "path": "docs/CRITICAL_EXPONENTS_TOPOLOGY_NOTE_2026-04-10.md",
-      "runner_path": "scripts/frontier_critical_exponents.py",
-      "title": "Critical Exponents vs Topology"
-    },
     "cross_family_universality_note": {
       "claim_id": "cross_family_universality_note",
       "current_status": "bounded",
@@ -22333,7 +22218,7 @@
       "current_status": "unknown",
       "current_status_raw": "calibration bridge note, not an experimental claim",
       "deps": [],
-      "note_hash": "1ab209b711ef44fd4719695e550094ae58f5586c12e6d682384e778f600d117c",
+      "note_hash": "b77d1b5918527be00103f6e690a2a8b39892bac97b19ab2e25dbd5b3701dabfb",
       "path": "docs/DIAMOND_ABSOLUTE_UNIT_BRIDGE_NOTE.md",
       "runner_path": null,
       "title": "Diamond Absolute Unit Bridge Note"
@@ -22590,16 +22475,6 @@
       "runner_path": null,
       "title": "Distance Law Frontier Audit"
     },
-    "distance_law_note": {
-      "claim_id": "distance_law_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained \u2014 alpha ~ -1.5 in far field, steepening at larger b",
-      "deps": [],
-      "note_hash": "ac8099bd15a04b0ca559c2cfc8a66b16f90d156e9e0896424fbd8dc32d571ce9",
-      "path": "docs/DISTANCE_LAW_NOTE.md",
-      "runner_path": "scripts/distance_law_wide_continuum.py",
-      "title": "Distance Law: Steeper Than Newtonian"
-    },
     "distance_law_portability_note": {
       "claim_id": "distance_law_portability_note",
       "current_status": "bounded",
@@ -22615,7 +22490,7 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained narrow positive on the high-drift/high-restore third family",
       "deps": [],
-      "note_hash": "3c40dc13da3a73fa4a49ab6ca0d1d0e423655f6fa1dde8ae7c27c56258d389ea",
+      "note_hash": "025db648144417c06ba2e6b4bbd34c38f115f1cf53c1077343c9e9b88d2c9659",
       "path": "docs/DISTANCE_LAW_PRESERVING_THIRD_FAMILY_NOTE.md",
       "runner_path": "scripts/DISTANCE_LAW_PRESERVING_THIRD_FAMILY.py",
       "title": "Distance Law Preserving Third Family Note"
@@ -22640,15 +22515,15 @@
       "runner_path": "scripts/frontier_dm_abcc_assumptions_audit.py",
       "title": "A-BCC Assumptions Audit: Can the Physical-Sheet Identification Be Derived?"
     },
-    "dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20": {
-      "claim_id": "dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20",
-      "current_status": "proposed_retained",
-      "current_status_raw": "**proposed_retained computational-certificate theorem.** Exhaustiveness",
+    "dm_abcc_basin_finite_search_support_note_2026-04-30": {
+      "claim_id": "dm_abcc_basin_finite_search_support_note_2026-04-30",
+      "current_status": "support",
+      "current_status_raw": "support. Salvage note for finite-search observations preserved",
       "deps": [],
-      "note_hash": "d056b8e843a458328eda1bb4d821d9f0b965c7b255e6508b2f73731c92ad748c",
-      "path": "docs/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md",
-      "runner_path": "scripts/frontier_dm_abcc_basin_enumeration_completeness.py",
-      "title": "DM A-BCC Basin-Enumeration Completeness Theorem (Computational Certificate)"
+      "note_hash": "94edf556047aada8528e25f85d3def7f85c333b2ff0d77c8d3dda6277e7e0d7d",
+      "path": "docs/DM_ABCC_BASIN_FINITE_SEARCH_SUPPORT_NOTE_2026-04-30.md",
+      "runner_path": null,
+      "title": "DM A-BCC Basin Finite-Search Support Note"
     },
     "dm_abcc_chamber_bound_derivation_note_2026-04-20": {
       "claim_id": "dm_abcc_chamber_bound_derivation_note_2026-04-20",
@@ -23670,12 +23545,11 @@
       "current_status_raw": "exact atlas-supported obstruction theorem on the live source-oriented sheet",
       "deps": [
         "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-        "dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15",
         "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem_note_2026-04-16"
       ],
-      "note_hash": "4f77e709dc6339e3fad183865b842c2bd7484b0372ec50fd6938837b4070696e",
+      "note_hash": "0a3889a60e3643ed22b65cbf1d4dfafd5e847ac6462c0241c6c5888f3db6ef95",
       "path": "docs/DM_NEUTRINO_SOURCE_BANK_Z3_DOUBLET_BLOCK_SELECTION_OBSTRUCTION_THEOREM_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_bank_z3_doublet_block_selection_obstruction_theorem.py",
       "title": "DM Neutrino Source-Bank `Z_3` Doublet-Block Selection Obstruction Theorem"
@@ -24190,14 +24064,13 @@
       "current_status_raw": "exact negative closeout theorem for the current bank at the final",
       "deps": [
         "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-        "dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15",
         "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
         "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem_note_2026-04-16",
         "dm_neutrino_source_bank_z3_doublet_block_selection_obstruction_theorem_note_2026-04-16"
       ],
-      "note_hash": "edefdd662588b1076589a17c58e1e3357f571645874d6200937d20d12a43a977",
+      "note_hash": "b745c2592aa79f6190e280f34eee8935e1af24519aebb37bc546489da39bc08f",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary.py",
       "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary"
@@ -24368,16 +24241,6 @@
       "path": "docs/DM_NEUTRINO_WEAK_MATCHING_OBSTRUCTION_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_weak_matching_obstruction.py",
       "title": "DM Neutrino Weak Matching Obstruction"
-    },
-    "dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15": {
-      "claim_id": "dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15",
-      "current_status": "unknown",
-      "current_status_raw": "exact single-axiom closure-boundary theorem for the DM transfer coefficients",
-      "deps": [],
-      "note_hash": "bdd3db120d19e293ed94154418e91087ceed302b94b07840918df19f6051eada",
-      "path": "docs/DM_NEUTRINO_WEAK_TRIPLET_COEFFICIENT_AXIOM_BOUNDARY_NOTE_2026-04-15.md",
-      "runner_path": "scripts/frontier_dm_neutrino_weak_triplet_coefficient_axiom_boundary.py",
-      "title": "DM Neutrino Weak-Triplet Coefficient Axiom Boundary"
     },
     "dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15": {
       "claim_id": "dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15",
@@ -25538,7 +25401,7 @@
       "current_status": "support",
       "current_status_raw": "support / cross-family comparison card pointing to other notes for the fixed-companion weak-field law; static summary only, no audit-registered dependency chain, no runner that recomputes controls and `F~M` values.",
       "deps": [],
-      "note_hash": "0476691579b4a2232c5f669f8d4e30fa77b645fd9258612c5adef63b83370c1e",
+      "note_hash": "2fc075fae48aa190d8501af08e7eaf360e95f160a562c429aa4624e7cc7f367a",
       "path": "docs/FAMILY_COMPANION_COMPARE_NOTE.md",
       "runner_path": "scripts/FAMILY_COMPANION_COMPARE.py",
       "title": "Family Companion Compare Note"
@@ -25558,50 +25421,20 @@
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
       "deps": [],
-      "note_hash": "f3a380de90549dfc3c9b20ad652e0c22a5c3602dc60dfaf78095327df998dacb",
+      "note_hash": "4a0723a08ae5321256ae817a5386a927b284bdf5a8e2122708b58e07a7c3522f",
       "path": "docs/FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md",
       "runner_path": "scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py",
       "title": "Fifth Family Complex Boundary Note"
-    },
-    "fifth_family_complex_note": {
-      "claim_id": "fifth_family_complex_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained narrow anchor-row positive on the radial-shell fifth-family slice",
-      "deps": [],
-      "note_hash": "14cb34568c80cf36b96722a4c3b34945d2e6b53c4862741e4d7edeb6e882835a",
-      "path": "docs/FIFTH_FAMILY_COMPLEX_NOTE.md",
-      "runner_path": "scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py",
-      "title": "Fifth Family Complex Note"
     },
     "fifth_family_radial_boundary_note": {
       "claim_id": "fifth_family_radial_boundary_note",
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
       "deps": [],
-      "note_hash": "33c2fe7ff37db89117f5eda26ea034ebad43694020a6e2b6c3dc8ebfebc8d49b",
+      "note_hash": "4d86a26adf0f79e7a8fcaec8e4876bf4f7f8f3ecae0a112c6010ebdb86cc7150",
       "path": "docs/FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md",
       "runner_path": "scripts/FIFTH_FAMILY_RADIAL_FAILURE_AUDIT.py",
       "title": "Fifth Family Radial Boundary Note"
-    },
-    "fifth_family_radial_fm_transfer_note": {
-      "claim_id": "fifth_family_radial_fm_transfer_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained weak-field transfer on the radial-shell fifth-family basin",
-      "deps": [],
-      "note_hash": "5d32fac50945427cf043f6fb58423dcf6c41b0c6c7a5bb28dec950ae87f0c402",
-      "path": "docs/FIFTH_FAMILY_RADIAL_FM_TRANSFER_NOTE.md",
-      "runner_path": "scripts/FIFTH_FAMILY_RADIAL_FM_TRANSFER.py",
-      "title": "Fifth Family Radial F~M Transfer Note"
-    },
-    "fifth_family_radial_note": {
-      "claim_id": "fifth_family_radial_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained narrow basin on the radial-shell no-restore grown slice",
-      "deps": [],
-      "note_hash": "7f7877947caf1abe138f8788f89b98ea928a263657842b18afbb49fb825dd8ee",
-      "path": "docs/FIFTH_FAMILY_RADIAL_NOTE.md",
-      "runner_path": "scripts/FIFTH_FAMILY_RADIAL_SWEEP.py",
-      "title": "Fifth Family Radial Note"
     },
     "fine_h_family_universality_note": {
       "claim_id": "fine_h_family_universality_note",
@@ -25719,15 +25552,15 @@
       "runner_path": "scripts/frontier_fractional_charge_denominator_from_n_c.py",
       "title": "Fractional Charge Denominator From N_c Theorem"
     },
-    "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25": {
-      "claim_id": "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
-      "current_status": "proposed_retained",
-      "current_status_raw": "exact algebraic support corollary on the proposed_retained EW-normalization",
+    "framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30": {
+      "claim_id": "framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30",
+      "current_status": "support",
+      "current_status_raw": "support. Salvage note for algebraic identities preserved after",
       "deps": [],
-      "note_hash": "1203b934537e2f59ef9c2f3cea5ba2648882106f132a363b1bb4acb298340dfb",
-      "path": "docs/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md",
-      "runner_path": "scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py",
-      "title": "Bare alpha_3 / alpha_em Dimension-Fixed Ratio Support Note"
+      "note_hash": "ea1071a99b1bd0e8ffd357cba35232305a5f4f8768fed872509db053a1d8d11d",
+      "path": "docs/FRAMEWORK_BARE_ALPHA_RATIO_ASSUMED_INPUT_IDENTITY_SUPPORT_NOTE_2026-04-30.md",
+      "runner_path": null,
+      "title": "Framework Bare Alpha Ratio Assumed-Input Identity Support Note"
     },
     "frontier_extension_lane_opening_note_2026-04-25": {
       "claim_id": "frontier_extension_lane_opening_note_2026-04-25",
@@ -26342,26 +26175,6 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion Principle"
     },
-    "gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19": {
-      "claim_id": "gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19",
-      "current_status": "proposed_retained",
-      "current_status_raw": "exact proposed_retained-sector boundary on the plaquette/Wilson framework-point seam; the explicit positive rank-one first-sector transfer witness does **not** itself lie in the canonical Wilson factorized class, and the best audited proposed_retained diagonal fit still misses the completed triple",
-      "deps": [],
-      "note_hash": "735a8e402647d7634f389c8df30db79c3bdb6424fb551143d26ea081ca48156f",
-      "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md",
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_2026_04_19.py",
-      "title": "Gauge-Vacuum Plaquette First-Sector Rank-One / Factorized-Class Boundary"
-    },
-    "gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19": {
-      "claim_id": "gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19",
-      "current_status": "proposed_retained",
-      "current_status_raw": "exact underdetermination theorem after the reduced existence seams are closed; the proposed_retained first-sector packet does not determine the higher-weight tail of the full environment data",
-      "deps": [],
-      "note_hash": "b2fc6204e4355d718e8b2915414453d977eada8db73e8561a939e116d9b76b34",
-      "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TAIL_UNDERDETERMINATION_THEOREM_NOTE_2026-04-19.md",
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_2026_04_19.py",
-      "title": "Gauge-Vacuum Plaquette First-Sector Tail Underdetermination Theorem"
-    },
     "gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19": {
       "claim_id": "gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19",
       "current_status": "proposed_retained",
@@ -26754,19 +26567,6 @@
       "runner_path": "scripts/gravitomagnetic_portable.py",
       "title": "Gravitomagnetic Effect: Velocity-Dependent Shapiro Correction"
     },
-    "gravitomagnetic_portability_note": {
-      "claim_id": "gravitomagnetic_portability_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained narrow positive - the odd-in-v phase correction is portable across the three proposed_retained grown families",
-      "deps": [
-        "moving_source_cross_family_note",
-        "vector_magnetic_extension_note"
-      ],
-      "note_hash": "4d55fd404debbc6c41523d9e51714ce982fda26c84fa7d5df70b161186c7447e",
-      "path": "docs/GRAVITOMAGNETIC_PORTABILITY_NOTE.md",
-      "runner_path": "scripts/gravitomagnetic_portability.py",
-      "title": "Gravitomagnetic Portability Note"
-    },
     "graviton_mass_derived_note": {
       "claim_id": "graviton_mass_derived_note",
       "current_status": "bounded",
@@ -26875,7 +26675,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded sign-interpretation note for the dense-3D lattice family on the rows the registered runner actually computes (`z = 3` and `z = 5`); the broader `z = 2..6` example table extends past what the runner asserts and is not in scope for ratification.",
       "deps": [],
-      "note_hash": "f53bc28fe510c9516473898f8be01bc1d86f51258e1a17fc120403c722f90bf2",
+      "note_hash": "24d7bd89b335de8d99ff5176cde229837b79de362d5a7f64e0a2b68e21b80164",
       "path": "docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md",
       "runner_path": "scripts/gravity_observable_hierarchy.py",
       "title": "Gravity Observable Hierarchy"
@@ -26970,16 +26770,6 @@
       "runner_path": "scripts/growing_graph_dynamic_limit_diag.py",
       "title": "Growing Graph Static Control Audit Note"
     },
-    "grown_transfer_basin_note": {
-      "claim_id": "grown_transfer_basin_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained narrow grown-row basin positive, but selective rather than family-wide",
-      "deps": [],
-      "note_hash": "3986b795d18b617f8c8d88c6d066c2e1f4fa66360b270b89b9d839239f2b56e9",
-      "path": "docs/GROWN_TRANSFER_BASIN_NOTE.md",
-      "runner_path": "scripts/GROWN_TRANSFER_BASIN_SWEEP.py",
-      "title": "Grown Transfer Basin Note"
-    },
     "grown_wavefield_companion_note": {
       "claim_id": "grown_wavefield_companion_note",
       "current_status": "bounded",
@@ -27021,16 +26811,6 @@
       "path": "docs/GW_ECHO_NULL_RESULT_NOTE.md",
       "runner_path": "scripts/frontier_echo_null_result.py",
       "title": "GW Echo Null Result Note"
-    },
-    "h0125_failure_derivation": {
-      "claim_id": "h0125_failure_derivation",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained negative \u2014 h=0.125 failure is diagnosed and quantified",
-      "deps": [],
-      "note_hash": "ced1c19fdf177b9fa208509ab312aba0b7ced65d3fd9f79d21ca755a089d9b40",
-      "path": "docs/H0125_FAILURE_DERIVATION.md",
-      "runner_path": null,
-      "title": "Why h=0.125 Fails: Retained Derivation"
     },
     "h0125_scalable_scout_note": {
       "claim_id": "h0125_scalable_scout_note",
@@ -27674,16 +27454,6 @@
       "runner_path": "scripts/frontier_born_rule_derived.py",
       "title": "`I_3 = 0` Exact Theorem"
     },
-    "if_program_closing_note": {
-      "claim_id": "if_program_closing_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "uniform-architecture search closed; IF / CL route proposed_retained on gap-controlled topology",
-      "deps": [],
-      "note_hash": "b0cd97b49e8b43ad10a7e96bdbbe12bba0199f3e4e956326acf08b66d7a07f8c",
-      "path": "docs/IF_PROGRAM_CLOSING_NOTE.md",
-      "runner_path": null,
-      "title": "IF Decoherence Program: Uniform-DAG Closure and Topology Outcome"
-    },
     "impact_parameter_lensing_note": {
       "claim_id": "impact_parameter_lensing_note",
       "current_status": "proposed_retained",
@@ -27699,7 +27469,7 @@
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
       "deps": [],
-      "note_hash": "93b1c58ddadf5fd8bba72afa0cd184752f149f0b42b27178cceb739060b320a7",
+      "note_hash": "6f98ae4e54fd669d78a45516f7befcaa980b6f3fd2b94d2a40f0f7102b57f49c",
       "path": "docs/IMPACT_PARAMETER_PORTABILITY_EXTENSION_NOTE.md",
       "runner_path": null,
       "title": "Impact-Parameter Portability Extension Note"
@@ -27709,7 +27479,7 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained positive across two portable grown families",
       "deps": [],
-      "note_hash": "07411ceaeecc732536c60243af7e6214e58994abd267226abdd44a0fb4a6cda2",
+      "note_hash": "ff5a6bc242069db815d5479839ee0a571a00f33d5d9c9200703a9c8bd92e8e63",
       "path": "docs/IMPACT_PARAMETER_PORTABILITY_NOTE.md",
       "runner_path": "scripts/impact_parameter_portability_probe.py",
       "title": "Impact-Parameter Portability Note"
@@ -27790,16 +27560,6 @@
       "path": "docs/K_DEPENDENCE_REVIEW_SAFE_NOTE.md",
       "runner_path": "scripts/k_dependence_ceiling.py",
       "title": "K Dependence Review-Safe Note"
-    },
-    "kernel_vs_gravity_note": {
-      "claim_id": "kernel_vs_gravity_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained \u2014 clean separation of two distinct effects",
-      "deps": [],
-      "note_hash": "1598d5abbafbf8d6c008c9909e66aca8f6d371b562a419ba3693fcc3f6144907",
-      "path": "docs/KERNEL_VS_GRAVITY_NOTE.md",
-      "runner_path": "scripts/complex_action_kernel_vs_gravity.py",
-      "title": "Complex Action: Kernel-Generic vs Gravity-Specific"
     },
     "koide_a1_brannen_plancherel_identity_support_note_2026-04-25": {
       "claim_id": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
@@ -29234,11 +28994,10 @@
       "current_status": "proposed_retained",
       "current_status_raw": "historical proposed_retained major program",
       "deps": [
-        "lattice_3d_dense_spent_delay_note",
         "continuum_bridge_note",
         "structured_chokepoint_bridge_note"
       ],
-      "note_hash": "77bbcdaa1e89c559ddb1d3ee1949eccb4d59fc09e4257ccbbed2f0af195a0051",
+      "note_hash": "e8ab65ae56a15d8617e2547cd770ddb67ab70c881d0beab8edc0d22f554299d2",
       "path": "docs/lanes/ordered-lattice/README.md",
       "runner_path": null,
       "title": "Ordered-Lattice Lane"
@@ -29287,15 +29046,15 @@
       "runner_path": "scripts/lattice_3d_dense_refinement_reconciliation.py",
       "title": "3D Dense Spent-Delay Refinement Reconciliation"
     },
-    "lattice_3d_dense_spent_delay_note": {
-      "claim_id": "lattice_3d_dense_spent_delay_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained bounded 3D dense spent-delay branch on the ordered-lattice family",
+    "lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30": {
+      "claim_id": "lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30",
+      "current_status": "support",
+      "current_status_raw": "support. Salvage note for the runner-supported portion of the",
       "deps": [],
-      "note_hash": "36d11a44e15b4f1cad428082a55a3623af96c647c44f3096ce1a09fbbdde5d11",
-      "path": "docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md",
-      "runner_path": "scripts/lattice_3d_dense_10prop.py",
-      "title": "3D Dense Spent-Delay Lattice Note"
+      "note_hash": "0db3469239c5c9293af057ae8a96a320796d8c18328fff6924f14829a876c38e",
+      "path": "docs/LATTICE_3D_DENSE_SPENT_DELAY_Z2_Z5_SUPPORT_NOTE_2026-04-30.md",
+      "runner_path": null,
+      "title": "3D Dense Spent-Delay `z=2..5` Support Note"
     },
     "lattice_3d_dense_window_extension_note": {
       "claim_id": "lattice_3d_dense_window_extension_note",
@@ -29414,7 +29173,7 @@
       "current_status": "bounded",
       "current_status_raw": "2D resolved. 3D reopened on a bounded dense-lattice branch.",
       "deps": [],
-      "note_hash": "aa494dcae7b66b1bd53485314cb6626a993cb3a0096562134bd942b486ec1b91",
+      "note_hash": "cf355a0381db6b665688e369715fe4860dd4131993f52af3526821c239c56dc1",
       "path": "docs/LATTICE_GRAVITY_RESOLUTION_NOTE.md",
       "runner_path": "scripts/lattice_3d_dense_10prop.py",
       "title": "Lattice Gravity Resolution: Ultra-Weak Field Gives Both Attraction AND 1/b"
@@ -30267,7 +30026,7 @@
       "current_status": "support",
       "current_status_raw": "support / cross-program comparison index pointing to other notes; not a tier-ratified result on its own and inherits-down from any unaudited / conditional / failed cited authority.",
       "deps": [],
-      "note_hash": "9eb4bdd308f28bdc11ba68445a4f41f1ca002b3cbeb9044a0387036a89311e2d",
+      "note_hash": "b96d53a26ea87eecda3e86f83f179d58d2a7b4a9bfd6335d64b1640b834edd03",
       "path": "docs/MIRROR_VS_LATTICE_PROGRAM_NOTE.md",
       "runner_path": null,
       "title": "Mirror vs Lattice Program Note"
@@ -30362,16 +30121,6 @@
       "runner_path": null,
       "title": "Moonshot Mechanism Next Note"
     },
-    "moonshot_other_testables_note": {
-      "claim_id": "moonshot_other_testables_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "dedicated shortlist of non-diamond testables grounded in proposed_retained",
-      "deps": [],
-      "note_hash": "8893f123cec16b71fcb2967b91291a8132c1dd05a8728c000a1ea901c27da6d4",
-      "path": "docs/MOONSHOT_OTHER_TESTABLES_NOTE.md",
-      "runner_path": null,
-      "title": "Moonshot Other Testables Note"
-    },
     "moonshot_science_next_note": {
       "claim_id": "moonshot_science_next_note",
       "current_status": "unknown",
@@ -30407,7 +30156,7 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained narrow extension positive across two portable grown families",
       "deps": [],
-      "note_hash": "6a1a33a164b171bfd729ecd3538d5542fcbf2bb08161b1270cd0b58ce6f39a94",
+      "note_hash": "ed08a51f43fec31c2c9cd4cd5ef1c4e35be5244e6f8a1b6291d4a576fb9ef0eb",
       "path": "docs/MOVING_SOURCE_CROSS_FAMILY_NOTE.md",
       "runner_path": "scripts/moving_source_cross_family_probe.py",
       "title": "Moving Source Cross-Family Note"
@@ -32520,32 +32269,12 @@
       "runner_path": "scripts/poisson_self_gravity_mechanism.py",
       "title": "Poisson Self-Gravity Mechanism Note"
     },
-    "portable_card_extension_note": {
-      "claim_id": "portable_card_extension_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained narrow extension positive with a distance-law measurement holdout",
-      "deps": [],
-      "note_hash": "e45c64fe2b9fb8e7e1623960283ce84a33cb59f046bf8738f8c8f3baea183d0b",
-      "path": "docs/PORTABLE_CARD_EXTENSION_NOTE.md",
-      "runner_path": "scripts/PORTABLE_CARD_EXTENSION_COMPARE.py",
-      "title": "Portable Card Extension Note"
-    },
-    "portable_package_extension_note": {
-      "claim_id": "portable_package_extension_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained narrow comparison positive",
-      "deps": [],
-      "note_hash": "99a7060c0a109585755e0a3c0a45930f593202bc760f914148c6139d12ca3257",
-      "path": "docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md",
-      "runner_path": "scripts/PORTABLE_PACKAGE_EXTENSION_COMPARE.py",
-      "title": "Portable Package Extension Note"
-    },
     "portable_package_hierarchy_classifier_note": {
       "claim_id": "portable_package_hierarchy_classifier_note",
       "current_status": "unknown",
       "current_status_raw": "unknown (pending author classification)",
       "deps": [],
-      "note_hash": "89841fe68f3aaf8693145a8732c4a3ce99dd2645d2ced35f62d469a4f23c8fdc",
+      "note_hash": "3aaecd150c1d280aa245c012469cd33bb71f8c51b4f0d370b9bff578730df697",
       "path": "docs/PORTABLE_PACKAGE_HIERARCHY_CLASSIFIER_NOTE.md",
       "runner_path": "scripts/portable_package_hierarchy_classifier.py",
       "title": "Portable Package Hierarchy Classifier"
@@ -32678,7 +32407,6 @@
         "yt_ward_identity_derivation_theorem",
         "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
         "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
-        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
         "cl3_sm_embedding_theorem",
         "ckm_atlas_axiom_closure_note",
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
@@ -32756,7 +32484,7 @@
         "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
-      "note_hash": "f40e7d4a95bfa697c6489b2392945c3992d61237e1f87e844782fc06610f3149",
+      "note_hash": "8ca90cb197afcd5f642070fc4e4954c826f929f045536dd22f11378acc30733d",
       "path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
       "runner_path": null,
       "title": "Manuscript Claims Surface"
@@ -32830,7 +32558,6 @@
         "cl3_sm_embedding_theorem",
         "cl3_color_automorphism_theorem",
         "cl3_taste_generation_theorem",
-        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
         "yt_ew_color_projection_theorem",
         "emergent_lorentz_invariance_note",
         "lorentz_boost_covariance_2d_theorem_note",
@@ -33255,7 +32982,7 @@
         "lattice_complementarity_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "c5006f6b98dad6a92ad6a843abd83378cd08d6c96f3bb52c4793ad58de3b032b",
+      "note_hash": "4555a71dd86f143fd62d0efe692aa5a50bc0fe318524d3cc0118019f2530e284",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -33397,7 +33124,6 @@
         "rconn_derived_note",
         "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
         "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
-        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
         "cl3_sm_embedding_theorem",
         "yt_ward_identity_derivation_theorem",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
@@ -33536,7 +33262,7 @@
         "charged_lepton_two_higgs_canonical_reduction_note",
         "publication.ci3_z3.claims_table"
       ],
-      "note_hash": "62597d35bb23e35c21d575157af05d1436e36d977a0167da3cd0c16adb600e11",
+      "note_hash": "18b812071bceae3011d36de145872c9e33e853140798850699ef55a9029f4f74",
       "path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
       "runner_path": null,
       "title": "Derivation / Validation Map"
@@ -33943,13 +33669,12 @@
         "alpha_s_derived_note",
         "observable_principle_from_axiom_note",
         "rconn_derived_note",
-        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
         "continuum_identification_note",
         "publication.ci3_z3.claims_table",
         "publication.ci3_z3.publication_matrix",
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
-      "note_hash": "41fc2b970355eb0b260577c4ce08e6ef27e54c3a1dc980c23e13c5e8f441680c",
+      "note_hash": "e52eca7ef6faded02e8a55dbc355f51aef7e0ca0f0fa3217cb990672be662e06",
       "path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
       "runner_path": null,
       "title": "Inputs And Qualifiers"
@@ -34125,7 +33850,6 @@
         "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
         "w_mass_derived_note",
         "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
-        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
         "yt_ward_identity_derivation_theorem",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
@@ -34256,7 +33980,7 @@
         "gw_echo_null_result_note",
         "koide_reviewer_stress_test_note_2026-04-21"
       ],
-      "note_hash": "5e5af7d00a893e5b8e35bc8aeff6a1ee85f4695f8898419a0dfd55d3ae1afdf4",
+      "note_hash": "b5bee0c970205090e563b3da921bafc0dcd37e4c503e4de65e0e56bf6aee29bd",
       "path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
       "runner_path": null,
       "title": "Publication Matrix"
@@ -34521,7 +34245,6 @@
         "yt_ew_delta_r_retention_analysis_note_2026-04-18",
         "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
         "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
-        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
         "yt_ward_identity_derivation_theorem",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
@@ -34762,7 +34485,7 @@
         "ckm_atlas_axiom_closure_note",
         "ckm_thales_pinned_alpha_s_independent_ratios_theorem_note_2026-04-25"
       ],
-      "note_hash": "45832e742d252b2ad9a75637c172507907751f6910c5bc0070d67fadc06bd10f",
+      "note_hash": "28a4c1638ccfde784e35e8d56d7e9efa2e29f7bfc1026668444d36114caa69fc",
       "path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
       "runner_path": null,
       "title": "Results Index"
@@ -34969,7 +34692,7 @@
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
       "deps": [],
-      "note_hash": "f324eb7e647ef53ad8d5ac61bd23606b8e16a0c64d328bebcba1e9b1ac394d45",
+      "note_hash": "7527f239ab622888417ef0a4ce209354edeca3d430b318808d77befd7dc106d4",
       "path": "docs/QNM_HARDENING_FEASIBILITY_NOTE.md",
       "runner_path": "scripts/qnm_scaling.py",
       "title": "QNM Hardening Feasibility Note"
@@ -36026,7 +35749,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
       "deps": [],
-      "note_hash": "d2bc78abec46c61d6eb807a266cadb7c2950e4c3797414db7f9bfc5632091caf",
+      "note_hash": "04ccb5e9387edfdbe769c018c33afb6b34115852075efae7d094f93140f1dfb1",
       "path": "docs/SCALAR_SELECTOR_PROOF_CHAINS_2026-04-19.md",
       "runner_path": null,
       "title": "Scalar-Selector Tier-1 Proof Chains"
@@ -36036,7 +35759,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
       "deps": [],
-      "note_hash": "e7e37aacd5e6bc8abff6e897333e7ab6a730263402dfbc685e4d2516ca3e76e9",
+      "note_hash": "fb481da4e33fc83121615f93c0cfa09fa81f28b67d6ed91d658f801a21e55e61",
       "path": "docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md",
       "runner_path": null,
       "title": "Scalar-Selector Cycle 1 \u2014 Remaining Open Imports"
@@ -36056,7 +35779,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
       "deps": [],
-      "note_hash": "202e3097d813b55cfd9a8527f06da113d8215d30ebc3ff12f2c548172b1a6772",
+      "note_hash": "ff99030502123e76c74bfb06ba7e6c4b7ffaaa66ea3ecc7e950093745c977589",
       "path": "docs/SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Scalar-Selector Synthesis"
@@ -36130,16 +35853,6 @@
       "path": "docs/SECOND_GROWN_FAMILY_COMPLEX_NOTE.md",
       "runner_path": "scripts/SECOND_GROWN_FAMILY_COMPLEX.py",
       "title": "Second Grown Family Complex Note"
-    },
-    "second_grown_family_note": {
-      "claim_id": "second_grown_family_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained positive \u2014 second family at drift=0.05, restore=0.30",
-      "deps": [],
-      "note_hash": "931338b9830d46f3d5db991af444519f8c2f85f98b38d33bc377da65c76f5cf2",
-      "path": "docs/SECOND_GROWN_FAMILY_NOTE.md",
-      "runner_path": "scripts/second_grown_family_battery.py",
-      "title": "Second Independent Grown Family"
     },
     "second_grown_family_sign_note": {
       "claim_id": "second_grown_family_sign_note",
@@ -36231,16 +35944,6 @@
       "runner_path": null,
       "title": "Session Summary: Dimensional Extension & Distance Law Investigation"
     },
-    "session_summary_2026-04-01_topology": {
-      "claim_id": "session_summary_2026-04-01_topology",
-      "current_status": "proposed_retained",
-      "current_status_raw": "architecture result proposed_retained; metrics wording tightened; soft-pruning emergence lane closed asymptotically.",
-      "deps": [],
-      "note_hash": "1d5b2fbe33f4632cfc2796c934d6b966d87a80b2ec7635be0842bc3721861632",
-      "path": "docs/SESSION_SUMMARY_2026-04-01_TOPOLOGY.md",
-      "runner_path": "scripts/topology_families.py",
-      "title": "Session Summary: Topology Pivot"
-    },
     "session_summary_2026-04-04": {
       "claim_id": "session_summary_2026-04-04",
       "current_status": "unknown",
@@ -36311,45 +36014,15 @@
       "runner_path": null,
       "title": "Seventh Family Diagonal Note"
     },
-    "shapiro_complex_interaction_note": {
-      "claim_id": "shapiro_complex_interaction_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained narrow interaction note; the c-dependent phase lag survives the complex-action crossover as a broad causal observable",
-      "deps": [],
-      "note_hash": "891993f7d809a1ed363c4b86d3dfc7280463a4ae3f8b3687934b9da24e8a9d92",
-      "path": "docs/SHAPIRO_COMPLEX_INTERACTION_NOTE.md",
-      "runner_path": "scripts/shapiro_complex_interaction.py",
-      "title": "Shapiro Complex Interaction Note"
-    },
     "shapiro_delay_note": {
       "claim_id": "shapiro_delay_note",
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained canonical replay of the discrete Shapiro-style phase lag",
       "deps": [],
-      "note_hash": "dc90c528266969a1fb90c077d42e8e36cc581d715ae45d63d5e716c110716339",
+      "note_hash": "e3f8e436bc3dcf74d4a23a0b794d047547892d0d1599230529d38f5604dcd7f3",
       "path": "docs/SHAPIRO_DELAY_NOTE.md",
       "runner_path": "scripts/shapiro_phase_lag_probe.py",
       "title": "Shapiro Delay Note"
-    },
-    "shapiro_diamond_bridge_note": {
-      "claim_id": "shapiro_diamond_bridge_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proxy-level bridge note for the proposed_retained c-dependent phase lag",
-      "deps": [],
-      "note_hash": "688bc8146a193d7ace6831064172c84427dbf74a1a12b074a5478ba4adfa4e76",
-      "path": "docs/SHAPIRO_DIAMOND_BRIDGE_NOTE.md",
-      "runner_path": null,
-      "title": "Shapiro Diamond Bridge Note"
-    },
-    "shapiro_diamond_frequency_bridge_note": {
-      "claim_id": "shapiro_diamond_frequency_bridge_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proxy-level frequency bridge note for the proposed_retained Shapiro delay",
-      "deps": [],
-      "note_hash": "e04cc1c10a300e8f5830390c1f49aded3667342420b1092bd3d5ff3c875ade96",
-      "path": "docs/SHAPIRO_DIAMOND_FREQUENCY_BRIDGE_NOTE.md",
-      "runner_path": null,
-      "title": "Shapiro Diamond Frequency Bridge Note"
     },
     "shapiro_experimental_card": {
       "claim_id": "shapiro_experimental_card",
@@ -36366,47 +36039,27 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained positive - the c-dependent phase lag reproduces cleanly across the three portable grown families",
       "deps": [],
-      "note_hash": "6cbeba6348c557206f419d55a6db2f89f26cd422769c8ce8b603dfe0b9ca9d76",
+      "note_hash": "c8420c117298c5fd5d67701aca4e151e4d34134e39a649ea4796b8a8907c075e",
       "path": "docs/SHAPIRO_FAMILY_PORTABILITY_NOTE.md",
       "runner_path": "scripts/shapiro_family_portability.py",
       "title": "Shapiro Family Portability Note"
-    },
-    "shapiro_five_family_portability_note": {
-      "claim_id": "shapiro_five_family_portability_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained positive - the c-dependent phase lag extends beyond the three-family core onto the additional structured families sampled here",
-      "deps": [],
-      "note_hash": "afcd72aa5213c8a34ff158dcf155109929c60a6c70852b4b620ba7d779f73498",
-      "path": "docs/SHAPIRO_FIVE_FAMILY_PORTABILITY_NOTE.md",
-      "runner_path": "scripts/shapiro_five_family_portability.py",
-      "title": "Shapiro Five-Family Portability Note"
     },
     "shapiro_qa_retest_note": {
       "claim_id": "shapiro_qa_retest_note",
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
       "deps": [],
-      "note_hash": "34ae39d0f4c0dc4e64b7380bd3e2fe0f9d54ba644f4e7cc2c9581dee662c7895",
+      "note_hash": "e4cd19656bf9f8d7b35b601584f769667b4357db73aaea2526ca6846dc922970",
       "path": "docs/SHAPIRO_QA_RETEST_NOTE.md",
       "runner_path": null,
       "title": "Shapiro QA Retest Note"
-    },
-    "shapiro_scaling_direct_replay_note": {
-      "claim_id": "shapiro_scaling_direct_replay_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "direct data-bearing replay of the proposed_retained Shapiro scaling laws",
-      "deps": [],
-      "note_hash": "d25f316ad821184d6e20fd64107a7afecc870103efe739f1f7d062409ad1639a",
-      "path": "docs/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md",
-      "runner_path": "scripts/shapiro_scaling_direct_replay.py",
-      "title": "Shapiro Scaling Direct Replay Note"
     },
     "shapiro_scaling_note": {
       "claim_id": "shapiro_scaling_note",
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
       "deps": [],
-      "note_hash": "f99504e437e062669530aecb25fae5003bcc6c062ab03dda43b01698354c8aae",
+      "note_hash": "4e061e8419d3cb5871a71a0fcd1dcc07a53a9cc7125c46f1b718eb60b2d150b6",
       "path": "docs/SHAPIRO_SCALING_NOTE.md",
       "runner_path": null,
       "title": "Shapiro Scaling Note"
@@ -36426,7 +36079,7 @@
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
       "deps": [],
-      "note_hash": "94506ddf74cfdeb5a85434f2fb9c0d072d839f74e6ee6c110bb756bc90632b72",
+      "note_hash": "10be84eb772e913d8b83dcaa2456a507f33cfeb285efc5b2268f2f4bb225ea45",
       "path": "docs/SHAPIRO_UNIQUE_DISCRIMINATOR_V2_NOTE.md",
       "runner_path": "scripts/shapiro_unique_discriminator_v2.py",
       "title": "Shapiro Unique Discriminator V2 Note"
@@ -36466,7 +36119,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded conditional comparison invariant across reported sign-law families; the comparison runner is not registered in the audit ledger and the cited family notes are not registered as one-hop dependencies. Not a tier-ratifiable portability theorem or independent order parameter.",
       "deps": [],
-      "note_hash": "6ab0bb166c167ca708ab63df72666fa249254b41c738587047640ce3b0b27b7c",
+      "note_hash": "e09c8eb4df55e49a787e19e817a155ec52c4d2dcf4e66f7c84e3171ece2ad8eb",
       "path": "docs/SIGN_PORTABILITY_INVARIANT_NOTE.md",
       "runner_path": "scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py",
       "title": "Sign Portability Invariant Note"
@@ -36791,16 +36444,6 @@
       "runner_path": "scripts/source_resolved_radical_geometry_probe.py",
       "title": "Source-Resolved Radical Geometry Probe"
     },
-    "source_resolved_retarded_green_pocket_note": {
-      "claim_id": "source_resolved_retarded_green_pocket_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "exact-lattice finite-lag pocket, frozen on the proposed_retained compact family",
-      "deps": [],
-      "note_hash": "f933c32b29027ca592f0ca98e09866bf0a1e89ec6bd7c3622b62f3906a8f0543",
-      "path": "docs/SOURCE_RESOLVED_RETARDED_GREEN_POCKET_NOTE.md",
-      "runner_path": "scripts/source_resolved_retarded_green_pocket.py",
-      "title": "Source-Resolved Retarded Green Pocket"
-    },
     "source_resolved_self_consistent_generated_transfer_note": {
       "claim_id": "source_resolved_self_consistent_generated_transfer_note",
       "current_status": "bounded",
@@ -36820,16 +36463,6 @@
       "path": "docs/SOURCE_RESOLVED_SUPPORT_LOCALIZATION_SPLIT_NOTE.md",
       "runner_path": "scripts/source_resolved_support_localization_split_probe.py",
       "title": "Source-Resolved Support Localization Split"
-    },
-    "source_resolved_transverse_propagating_green_note": {
-      "claim_id": "source_resolved_transverse_propagating_green_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "exact-lattice transverse-transport pocket, frozen on the proposed_retained compact family",
-      "deps": [],
-      "note_hash": "dec42b471eb19ac2d1e292ecf664c5b97ed3eea3e3f89abd05885d2d00405aa9",
-      "path": "docs/SOURCE_RESOLVED_TRANSVERSE_PROPAGATING_GREEN_NOTE.md",
-      "runner_path": "scripts/source_resolved_transverse_propagating_green.py",
-      "title": "Source-Resolved Transverse Propagating Green"
     },
     "source_resolved_wavefield_escalation_note": {
       "claim_id": "source_resolved_wavefield_escalation_note",
@@ -36911,46 +36544,6 @@
       "runner_path": "scripts/frontier_staggered_3d_self_gravity_sign.py",
       "title": "3D Staggered Self-Gravity Contraction / Sign Note"
     },
-    "staggered_backreaction_capture_closure_note": {
-      "claim_id": "staggered_backreaction_capture_closure_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained positive closure on the cycle-bearing battery, with one layered holdout check",
-      "deps": [],
-      "note_hash": "a99f6a393a836d36d84edd02d6e848cace3d80e49606e5e42816d9aee14a781a",
-      "path": "docs/STAGGERED_BACKREACTION_CAPTURE_CLOSURE_NOTE.md",
-      "runner_path": "scripts/frontier_staggered_backreaction_capture_closure_harness.py",
-      "title": "Staggered Backreaction Capture-Closure Note"
-    },
-    "staggered_backreaction_green_closure_note": {
-      "claim_id": "staggered_backreaction_green_closure_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained narrow positive",
-      "deps": [],
-      "note_hash": "c806516498ec51610ef221b938b71bf6c0c57341ad6366ed0e67b9e8e047de7f",
-      "path": "docs/STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md",
-      "runner_path": "scripts/frontier_staggered_backreaction_green_closure.py",
-      "title": "Staggered Backreaction Green-Closure Note"
-    },
-    "staggered_backreaction_iterative_note": {
-      "claim_id": "staggered_backreaction_iterative_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained negative result",
-      "deps": [],
-      "note_hash": "0939ee64d408f79e1fc3c1a6e29ae2dfc52a638c275f5d3769487145a2a83ad7",
-      "path": "docs/STAGGERED_BACKREACTION_ITERATIVE_NOTE.md",
-      "runner_path": "scripts/frontier_staggered_backreaction_iterative.py",
-      "title": "Staggered Backreaction Iterative Source-Mapping Note"
-    },
-    "staggered_backreaction_nonlocal_closure_note": {
-      "claim_id": "staggered_backreaction_nonlocal_closure_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained negative for the force-scale blocker; useful structural improvement over the local screened-Poisson baseline, but not a material win over the best calibrated linear source map",
-      "deps": [],
-      "note_hash": "07064275a439d716ec662dc946f207e1ce1364c2bb7f12441d50365a8467b00e",
-      "path": "docs/STAGGERED_BACKREACTION_NONLOCAL_CLOSURE_NOTE.md",
-      "runner_path": "scripts/frontier_staggered_backreaction_nonlocal_closure.py",
-      "title": "Staggered Backreaction Nonlocal Closure Note"
-    },
     "staggered_backreaction_note": {
       "claim_id": "staggered_backreaction_note",
       "current_status": "bounded",
@@ -36960,26 +36553,6 @@
       "path": "docs/STAGGERED_BACKREACTION_NOTE.md",
       "runner_path": "scripts/frontier_staggered_backreaction_prototype.py",
       "title": "Staggered Backreaction Prototype"
-    },
-    "staggered_backreaction_results_2026-04-10": {
-      "claim_id": "staggered_backreaction_results_2026-04-10",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained prototype",
-      "deps": [],
-      "note_hash": "59645edce96792b5ec7c13ae25c4412607f4b52a0e07f573d19452f9cc748de8",
-      "path": "docs/STAGGERED_BACKREACTION_RESULTS_2026-04-10.md",
-      "runner_path": "scripts/frontier_staggered_backreaction_prototype.py",
-      "title": "Staggered Backreaction Prototype Results"
-    },
-    "staggered_backreaction_scale_closure_note": {
-      "claim_id": "staggered_backreaction_scale_closure_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained scale-closure probe",
-      "deps": [],
-      "note_hash": "74aa65e9d7e3df85582cc47c74af88bc621dc56158acf6fbf924389ee56f9f25",
-      "path": "docs/STAGGERED_BACKREACTION_SCALE_CLOSURE_NOTE.md",
-      "runner_path": "scripts/frontier_staggered_backreaction_scale_closure.py",
-      "title": "Staggered Backreaction Scale-Closure Note"
     },
     "staggered_backreaction_shell_spectral_note": {
       "claim_id": "staggered_backreaction_shell_spectral_note",
@@ -37511,16 +37084,6 @@
       "runner_path": "scripts/frontier_tensor_support_center_excess_law.py",
       "title": "Exact Support-Side `A1` Center-Excess Law and the Remaining Tensor Gap"
     },
-    "testable_predictions_map_note": {
-      "claim_id": "testable_predictions_map_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "ranked catalog of the current proposed_retained testables on `main`",
-      "deps": [],
-      "note_hash": "ea33ed8958f4532986b9c47d92feb82b483d9dce3c8f6a986844793bd4b84cc8",
-      "path": "docs/TESTABLE_PREDICTIONS_MAP_NOTE.md",
-      "runner_path": null,
-      "title": "Testable Predictions Map"
-    },
     "third_grown_family_boundary_note": {
       "claim_id": "third_grown_family_boundary_note",
       "current_status": "support",
@@ -37560,16 +37123,6 @@
       "path": "docs/THIRD_GROWN_FAMILY_SIGN_NOTE.md",
       "runner_path": "scripts/THIRD_GROWN_FAMILY_SIGN_SWEEP.py",
       "title": "Third Grown Family Sign Note"
-    },
-    "three_family_card_note": {
-      "claim_id": "three_family_card_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained positive \u2014 three families match to <5% on all properties",
-      "deps": [],
-      "note_hash": "24670b4ad521f05c8b58506f3eaaed05759005045617f03ca52a1505d4208379",
-      "path": "docs/THREE_FAMILY_CARD_NOTE.md",
-      "runner_path": null,
-      "title": "Three Independent Grown Families: 9/9 Properties Match"
     },
     "three_generation_chirality_boundary_note": {
       "claim_id": "three_generation_chirality_boundary_note",
@@ -37616,16 +37169,6 @@
       "path": "docs/THREE_GENERATION_STRUCTURE_NOTE.md",
       "runner_path": null,
       "title": "Three-Generation Matter Structure Note"
-    },
-    "triage_no_promotion_note": {
-      "claim_id": "triage_no_promotion_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "no additional science result clears the proposed_retained bar from the current dirty stack",
-      "deps": [],
-      "note_hash": "26dafee2d0e6f1b50231356894882ee4a50f41c89f3469694fda665c2bfb8bde",
-      "path": "docs/TRIAGE_NO_PROMOTION_NOTE.md",
-      "runner_path": null,
-      "title": "Triage No-Promotion Note"
     },
     "triple_stack_collapse_scaling_note": {
       "claim_id": "triple_stack_collapse_scaling_note",
@@ -37687,15 +37230,15 @@
       "runner_path": "scripts/FIXED_FIELD_FAMILY_UNIFICATION_BASIN.py",
       "title": "Unification Basin Failure Note"
     },
-    "unified_basin_freeze_note": {
-      "claim_id": "unified_basin_freeze_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained narrow claim \u2014 one grown connectivity family supports both signed-source and complex-action couplings across a small nearby basin",
+    "unified_basin_signed_source_control_support_note_2026-04-30": {
+      "claim_id": "unified_basin_signed_source_control_support_note_2026-04-30",
+      "current_status": "support",
+      "current_status_raw": "support. Salvage note for the signed-source control observations",
       "deps": [],
-      "note_hash": "fb7d2f488bc87b861c194c18bf129ce4e222e994d3a01b94c53c9dc1b482f12a",
-      "path": "docs/UNIFIED_BASIN_FREEZE_NOTE.md",
+      "note_hash": "3660d5709c77e310a24f243bd197ec86fd7eccc7df3ffdf14a95cb33ac97ff4f",
+      "path": "docs/UNIFIED_BASIN_SIGNED_SOURCE_CONTROL_SUPPORT_NOTE_2026-04-30.md",
       "runner_path": null,
-      "title": "Unified Basin Freeze: Both Basins Pass Zero/Neutral Controls"
+      "title": "Unified Basin Signed-Source Control Support Note"
     },
     "unified_program_note": {
       "claim_id": "unified_program_note",
@@ -37724,10 +37267,9 @@
         "lattice_symmetry_unification_decision_note",
         "lattice_field_strength_unification_note",
         "lattice_3d_dense_refinement_reconciliation_note",
-        "lattice_3d_dense_spent_delay_note",
         "work_history.repo.backlog.overnight_work_backlog"
       ],
-      "note_hash": "ed2014e70c5dd54d775468cc1a92e73df751b1f022f81ec3b35c08096536794a",
+      "note_hash": "08611867bc00e8563d9800e1b252cb66be6df7fa7f9231e098d9b58e34f9d9d8",
       "path": "docs/UNIFIED_PROGRAM_NOTE.md",
       "runner_path": null,
       "title": "Unified Program Note"
@@ -38385,7 +37927,7 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained narrow extension positive, bounded to a moving-source signed response with null circulation candidate",
       "deps": [],
-      "note_hash": "e2780300d4823621b267e72540178668fbfe8f407c324fdb31a47e777831d141",
+      "note_hash": "6b46a204b5463b202f8c9051402cb823df4cbd7adbc901df5c7b389956c32784",
       "path": "docs/VECTOR_MAGNETIC_EXTENSION_NOTE.md",
       "runner_path": "scripts/vector_magnetic_extension_probe.py",
       "title": "Vector / Magnetic Extension Note"
@@ -39161,10 +38703,9 @@
       "current_status_raw": "historical planning inventory; not part of the live reviewer path",
       "deps": [
         "work_history.repo.review_feedback.publication_discovery_audit_2026-04-11",
-        "repo.controlled_vocabulary",
-        "work_history.repo.review_feedback.architecture_portability_audit_2026-04-11"
+        "repo.controlled_vocabulary"
       ],
-      "note_hash": "9ecd4873df4b003d32ac510351061516114d3714b7725d66ff6a624ed7946389",
+      "note_hash": "9fa74d13617b9c57488c91d45884b47560e85620369ca98146a10d41f34d5156",
       "path": "docs/work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md",
       "runner_path": null,
       "title": "Historical Potential Publication Discoveries Log"
@@ -39248,12 +38789,11 @@
       "deps": [
         "two_sign_comparison_note_2026-04-10",
         "weak_coupling_sign_sensitivity_note_2026-04-11",
-        "staggered_backreaction_green_closure_note",
         "gravity_sign_audit_2026-04-10",
         "staggered_backreaction_shell_spectral_note",
         "irregular_directional_observable_note_2026-04-11"
       ],
-      "note_hash": "e1e7dbc2d7f4d0f3a6c51e35af105a7af049de089ee169d6429c4622f21fa1aa",
+      "note_hash": "a2c92a42d9ef1f5e1c8f400786585fe18c0bb3c47e33c2fec2e2ebcb2ad42f96",
       "path": "docs/work_history/repo/backlog/WORK_BACKLOG_2026-04-10.md",
       "runner_path": null,
       "title": "Work Backlog"
@@ -39283,11 +38823,10 @@
         "work_history.repo.review_feedback.rerun_required_bug_audit_2026-04-11",
         "work_history.repo.review_feedback.claude_frontier_retain_audit_2026-04-11",
         "repo.controlled_vocabulary",
-        "work_history.repo.review_feedback.architecture_portability_audit_2026-04-11",
         "work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18",
         "work_history.repo.backlog.nature_backlog_2026-04-10"
       ],
-      "note_hash": "c151e2a9338a5266be5757a2e62ad60ec91a1b558deb58d4c96ba9d2e8600f0a",
+      "note_hash": "aa8af0918ea9c0eb08a36a90853f4ac788385234a73b20d76816b8cc1027df0d",
       "path": "docs/work_history/repo/LANE_STATUS_BOARD.md",
       "runner_path": null,
       "title": "Historical Lane Status Board"
@@ -39301,16 +38840,6 @@
       "path": "docs/work_history/repo/review_feedback/ADVERSARIAL_REVIEW_2026_04_05.md",
       "runner_path": null,
       "title": "Adversarial Review \u2014 2026-04-05"
-    },
-    "work_history.repo.review_feedback.architecture_portability_audit_2026-04-11": {
-      "claim_id": "work_history.repo.review_feedback.architecture_portability_audit_2026-04-11",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained bounded companion",
-      "deps": [],
-      "note_hash": "cba4efb07ee79d03e839d87ccbe5bb1e46f609074221788466218bccbc8dd0e6",
-      "path": "docs/work_history/repo/review_feedback/ARCHITECTURE_PORTABILITY_AUDIT_2026-04-11.md",
-      "runner_path": null,
-      "title": "Architecture Portability Audit"
     },
     "work_history.repo.review_feedback.claim_audit_note_2026-04-01": {
       "claim_id": "work_history.repo.review_feedback.claim_audit_note_2026-04-01",
@@ -40525,7 +40054,6 @@
     "ai_methodology.raw.prompts_session_e895b0c9_jonreilly",
     "ai_methodology.raw.prompts_session_e9f79d2e_jonreilly",
     "ai_methodology.raw.prompts_session_eb804083_jonreilly",
-    "ai_methodology.raw.prompts_session_ebae4639_jonreilly",
     "ai_methodology.raw.prompts_session_ef33749a_jonreilly",
     "ai_methodology.raw.prompts_session_f58c210e_jonreilly",
     "ai_methodology.raw.prompts_session_f85e702e_jonreilly",
@@ -40581,7 +40109,6 @@
     "axiom_reduction_note",
     "b_independence_mechanism_note",
     "background_independence_note",
-    "backreaction_note",
     "bell_inequality_derived_note",
     "beyond_lattice_qcd_note",
     "bh_entropy_derived_note",
@@ -40602,7 +40129,6 @@
     "causal_field_portability_note",
     "causal_field_reconciliation_note",
     "causal_moving_unification_note",
-    "causal_propagating_field_note",
     "causal_source_placement_robustness_note",
     "central_band_born_dense_sweep_note",
     "central_band_born_largen_note",
@@ -40660,7 +40186,6 @@
     "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
     "coupled_field_generated_family_probe_note",
     "cpt_exact_note",
-    "critical_exponents_topology_note_2026-04-10",
     "cross_family_universality_note",
     "cycle_battery_note_2026-04-10",
     "cycle_break_slice_note_2026-04-10",
@@ -40694,12 +40219,11 @@
     "distance_law_breakpoint_note",
     "distance_law_definitive_note",
     "distance_law_frontier_audit_note",
-    "distance_law_note",
     "distance_law_portability_note",
     "distance_law_preserving_third_family_note",
     "distracted_napier_reconciliation_note",
     "dm_abcc_assumptions_audit_note_2026-04-19",
-    "dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20",
+    "dm_abcc_basin_finite_search_support_note_2026-04-30",
     "dm_abcc_chamber_bound_derivation_note_2026-04-20",
     "dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19",
     "dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21",
@@ -40802,7 +40326,6 @@
     "dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15",
     "dm_neutrino_weak_even_swap_reduction_theorem_note_2026-04-15",
     "dm_neutrino_weak_matching_obstruction_note_2026-04-15",
-    "dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15",
     "dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15",
     "dm_neutrino_weak_vector_theorem_note_2026-04-15",
     "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14",
@@ -40860,10 +40383,7 @@
     "family_companion_compare_note",
     "field_equation_derivation_note",
     "fifth_family_complex_boundary_note",
-    "fifth_family_complex_note",
     "fifth_family_radial_boundary_note",
-    "fifth_family_radial_fm_transfer_note",
-    "fifth_family_radial_note",
     "fine_h_family_universality_note",
     "finite_rank_source_to_metric_theorem_note",
     "fixed_field_complex_grown_basin_v2_note",
@@ -40874,7 +40394,7 @@
     "four_d_distance_width_probe_note",
     "fourth_family_complex_boundary_note",
     "fourth_family_quadrant_note",
-    "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
+    "framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30",
     "g_bare_derivation_note",
     "g_bare_rigidity_theorem_note",
     "gap_physics_note",
@@ -40920,8 +40440,6 @@
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20",
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
-    "gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19",
-    "gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19",
     "gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19",
     "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19",
     "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19",
@@ -40970,11 +40488,9 @@
     "growing_graph_frontier_architecture_transfer_note",
     "growing_graph_frontier_expansion_proxy_note",
     "growing_graph_static_control_audit_note",
-    "grown_transfer_basin_note",
     "grown_wavefield_companion_note",
     "grown_wavefield_failure_diagnosis_note",
     "guard_reconciliation_note",
-    "h0125_failure_derivation",
     "h0125_scalable_scout_note",
     "h0125_wider_replay_note",
     "h0125_wider_w4_note",
@@ -41027,7 +40543,6 @@
     "hubble_lane5_workstream_status_note_2026-04-27",
     "hypercharge_identification_note",
     "i3_zero_exact_theorem_note",
-    "if_program_closing_note",
     "impact_parameter_lensing_note",
     "impact_parameter_portability_extension_note",
     "impact_parameter_portability_note",
@@ -41036,7 +40551,6 @@
     "inverse_problem_graph_requirements_note",
     "inverse_problem_note",
     "k_dependence_review_safe_note",
-    "kernel_vs_gravity_note",
     "koide_a1_closure_recommendation_2026-04-22",
     "koide_a1_derivation_status_note",
     "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24",
@@ -41111,7 +40625,7 @@
     "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19",
     "koide_z3_scalar_potential_support_note_2026-04-19",
     "lattice_3d_dense_refinement_reconciliation_note",
-    "lattice_3d_dense_spent_delay_note",
+    "lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30",
     "lattice_3d_dense_window_extension_note",
     "lattice_3d_l2_numpy_h0125_audit_note",
     "lattice_3d_l2_numpy_h0125_bridge_note",
@@ -41193,7 +40707,6 @@
     "moonshot_frontier_portfolio_note",
     "moonshot_honest_review_2026-04-09",
     "moonshot_mechanism_next_note",
-    "moonshot_other_testables_note",
     "moonshot_science_next_note",
     "moonshot_self_gravity_brainstorm_note",
     "moonshot_top20_frontiers",
@@ -41316,8 +40829,6 @@
     "poisson_self_gravity_loop_note",
     "poisson_self_gravity_loop_v3_note",
     "poisson_self_gravity_mechanism_note",
-    "portable_card_extension_note",
-    "portable_package_extension_note",
     "portable_package_hierarchy_classifier_note",
     "primordial_spectrum_note",
     "propagator_family_unification_note",
@@ -41403,7 +40914,6 @@
     "science_3plus1_line_law_known_limits_note_2026-04-20",
     "second_grown_family_complex_boundary_note",
     "second_grown_family_complex_note",
-    "second_grown_family_note",
     "second_grown_family_sign_note",
     "self_consistency_forces_poisson_note",
     "self_consistency_structured_null_note_2026-04-11",
@@ -41413,7 +40923,6 @@
     "self_gravity_failure_diagnosis",
     "self_gravity_scaling_note_2026-04-10",
     "session_summary_2026-04-01_dimensional",
-    "session_summary_2026-04-01_topology",
     "session_summary_2026-04-04",
     "session_synthesis_2026-04-09",
     "session_synthesis_2026-04-10_final",
@@ -41421,15 +40930,10 @@
     "session_synthesis_2026-04-11",
     "seventh_family_diagonal_boundary_note",
     "seventh_family_diagonal_note",
-    "shapiro_complex_interaction_note",
     "shapiro_delay_note",
-    "shapiro_diamond_bridge_note",
-    "shapiro_diamond_frequency_bridge_note",
     "shapiro_experimental_card",
     "shapiro_family_portability_note",
-    "shapiro_five_family_portability_note",
     "shapiro_qa_retest_note",
-    "shapiro_scaling_direct_replay_note",
     "shapiro_scaling_note",
     "shapiro_static_discriminator_note",
     "shapiro_unique_discriminator_v2_note",
@@ -41469,10 +40973,8 @@
     "source_resolved_propagating_generated_transfer_note",
     "source_resolved_propagating_green_pocket_note",
     "source_resolved_radical_geometry_probe_note",
-    "source_resolved_retarded_green_pocket_note",
     "source_resolved_self_consistent_generated_transfer_note",
     "source_resolved_support_localization_split_note",
-    "source_resolved_transverse_propagating_green_note",
     "source_resolved_wavefield_escalation_note",
     "source_resolved_wavefield_green_pocket_note",
     "source_resolved_wavefield_mechanism_note",
@@ -41481,13 +40983,7 @@
     "spectral_symmetry_note",
     "spectral_trajectory_theorem_2026-04-11",
     "staggered_3d_self_gravity_sign_note_2026-04-11",
-    "staggered_backreaction_capture_closure_note",
-    "staggered_backreaction_green_closure_note",
-    "staggered_backreaction_iterative_note",
-    "staggered_backreaction_nonlocal_closure_note",
     "staggered_backreaction_note",
-    "staggered_backreaction_results_2026-04-10",
-    "staggered_backreaction_scale_closure_note",
     "staggered_backreaction_shell_spectral_note",
     "staggered_dag_note_2026-04-10",
     "staggered_fermion_card_2026-04-10",
@@ -41529,20 +41025,17 @@
     "tensor_scalar_ratio_consolidation_theorem_note_2026-04-22",
     "tensor_source_map_eta_note",
     "tensor_support_center_excess_law_note",
-    "testable_predictions_map_note",
     "third_grown_family_boundary_note",
     "third_grown_family_complex_boundary_note",
     "third_grown_family_complex_note",
     "third_grown_family_sign_note",
-    "three_family_card_note",
-    "triage_no_promotion_note",
     "triple_stack_collapse_scaling_note",
     "two_body_mutual_attraction_note_2026-04-11",
     "two_field_retarded_family_closure_note_2026-04-10",
     "two_field_retarded_probe_note_2026-04-10",
     "two_sign_comparison_note_2026-04-10",
     "unification_basin_failure_note",
-    "unified_basin_freeze_note",
+    "unified_basin_signed_source_control_support_note_2026-04-30",
     "universal_gr_a1_invariant_section_note",
     "universal_gr_block_constraint_interpretation_note",
     "universal_gr_block_ident_note",
@@ -41631,7 +41124,6 @@
     "work_history.repo.backlog.readme",
     "work_history.repo.backlog.review_hardening_backlog",
     "work_history.repo.review_feedback.adversarial_review_2026_04_05",
-    "work_history.repo.review_feedback.architecture_portability_audit_2026-04-11",
     "work_history.repo.review_feedback.claim_audit_note_2026-04-01",
     "work_history.repo.review_feedback.claude_dead_end_reopen_audit_note",
     "work_history.repo.review_feedback.code_review_last_week_2026-04-11",
@@ -41676,18 +41168,18 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4609,
-    "leaf_count": 751,
-    "node_count": 1693,
-    "root_count": 1215,
-    "runners_with_path": 1203,
+    "edge_count": 4591,
+    "leaf_count": 721,
+    "node_count": 1655,
+    "root_count": 1178,
+    "runners_with_path": 1172,
     "status_counts": {
       "bounded": 440,
       "open": 44,
       "proposed_promoted": 1,
-      "proposed_retained": 413,
-      "support": 335,
-      "unknown": 460
+      "proposed_retained": 372,
+      "support": 339,
+      "unknown": 459
     }
   }
 }

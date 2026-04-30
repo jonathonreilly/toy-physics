@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 482,
+    "leaf": 486,
     "medium": 343
   },
-  "generated_at": "2026-04-30T18:17:53.993378+00:00",
+  "generated_at": "2026-04-30T18:31:21.705282+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -1985,7 +1985,6 @@
       "current_status": "unknown",
       "deps": [
         "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-        "dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15",
         "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem_note_2026-04-16"
@@ -2008,7 +2007,6 @@
       "current_status": "unknown",
       "deps": [
         "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-        "dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15",
         "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
         "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
@@ -4877,7 +4875,6 @@
         "yt_ward_identity_derivation_theorem",
         "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
         "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
-        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
         "cl3_sm_embedding_theorem",
         "ckm_atlas_axiom_closure_note",
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
@@ -5103,7 +5100,6 @@
         "rconn_derived_note",
         "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
         "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
-        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
         "cl3_sm_embedding_theorem",
         "yt_ward_identity_derivation_theorem",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
@@ -5631,7 +5627,6 @@
         "alpha_s_derived_note",
         "observable_principle_from_axiom_note",
         "rconn_derived_note",
-        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
         "continuum_identification_note",
         "publication.ci3_z3.claims_table",
         "publication.ci3_z3.publication_matrix",
@@ -5764,7 +5759,6 @@
         "cl3_sm_embedding_theorem",
         "cl3_color_automorphism_theorem",
         "cl3_taste_generation_theorem",
-        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
         "yt_ew_color_projection_theorem",
         "emergent_lorentz_invariance_note",
         "lorentz_boost_covariance_2d_theorem_note",
@@ -6301,7 +6295,6 @@
         "yt_ew_delta_r_retention_analysis_note_2026-04-18",
         "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
         "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
-        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
         "yt_ward_identity_derivation_theorem",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
@@ -6688,7 +6681,6 @@
       "deps": [
         "work_history.repo.review_feedback.rerun_required_bug_audit_2026-04-11",
         "work_history.repo.review_feedback.claude_frontier_retain_audit_2026-04-11",
-        "work_history.repo.review_feedback.architecture_portability_audit_2026-04-11",
         "work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18"
       ],
       "direct_in_degree": 8,
@@ -10566,6 +10558,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "work_history.potential_publication_discoveries_log",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "open",
+      "deps": [],
+      "direct_in_degree": 2,
+      "load_bearing_score": 2.585,
+      "note_path": "docs/work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 2
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "dm_wilson_to_dweh_hermitian_source_family_target_note_2026-04-18",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -12717,7 +12726,6 @@
         "ew_lattice_cos_sq_theta_w_complement_bridge_theorem_note_2026-04-26",
         "left_handed_charge_matching_note",
         "ckm_wolfenstein_eta_inverse_square_gap_theorem_note_2026-04-26",
-        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
         "yt_ward_identity_derivation_theorem",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
@@ -13747,25 +13755,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "work_history.potential_publication_discoveries_log",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "open",
-      "deps": [
-        "work_history.repo.review_feedback.architecture_portability_audit_2026-04-11"
-      ],
-      "direct_in_degree": 2,
-      "load_bearing_score": 2.585,
-      "note_path": "docs/work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 2
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "yt_right_handed_species_dependence_note_2026-04-18",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -14408,6 +14397,26 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "lanes.ordered-lattice.readme",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "continuum_bridge_note",
+        "structured_chokepoint_bridge_note"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 2.085,
+      "note_path": "docs/lanes/ordered-lattice/README.md",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 2
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "born_rule_analysis_2026-04-11",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14755,6 +14764,45 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "causal_distance_tail_note",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "causal_field_portability_note"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/CAUSAL_DISTANCE_TAIL_NOTE.md",
+      "ready": true,
+      "runner_path": "scripts/causal_distance_tail_probe.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "causal_impact_parameter_note",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "causal_field_portability_note",
+        "causal_field_reconciliation_note"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/CAUSAL_IMPACT_PARAMETER_NOTE.md",
+      "ready": true,
+      "runner_path": "scripts/causal_impact_parameter_probe.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "cycle_break_frontier_note_2026-04-10",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14873,6 +14921,23 @@
       "note_path": "docs/DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md",
       "ready": true,
       "runner_path": "scripts/frontier_dm_abcc_assumptions_audit.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "dm_abcc_basin_finite_search_support_note_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/DM_ABCC_BASIN_FINITE_SEARCH_SUPPORT_NOTE_2026-04-30.md",
+      "ready": true,
+      "runner_path": null,
       "transitive_descendants": 0
     },
     {
@@ -16227,6 +16292,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/FRAMEWORK_BARE_ALPHA_RATIO_ASSUMED_INPUT_IDENTITY_SUPPORT_NOTE_2026-04-30.md",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "frozen_stars_rigorous_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -17363,6 +17445,23 @@
       "note_path": "docs/KOIDE_Z3_JOINT_PROJECTOR_IDENTITY_NOTE_2026-04-19.md",
       "ready": true,
       "runner_path": "scripts/frontier_koide_z3_joint_projector_identity.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/LATTICE_3D_DENSE_SPENT_DELAY_Z2_Z5_SUPPORT_NOTE_2026-04-30.md",
+      "ready": true,
+      "runner_path": null,
       "transitive_descendants": 0
     },
     {
@@ -20355,6 +20454,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "unified_basin_signed_source_control_support_note_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/UNIFIED_BASIN_SIGNED_SOURCE_CONTROL_SUPPORT_NOTE_2026-04-30.md",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "universal_gr_block_ident_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20712,8 +20828,7 @@
         "lattice_family_validation_note",
         "lattice_symmetry_unification_decision_note",
         "lattice_field_strength_unification_note",
-        "lattice_3d_dense_refinement_reconciliation_note",
-        "lattice_3d_dense_spent_delay_note"
+        "lattice_3d_dense_refinement_reconciliation_note"
       ],
       "direct_in_degree": 1,
       "load_bearing_score": 2.5,
@@ -20779,27 +20894,6 @@
       "direct_in_degree": 1,
       "load_bearing_score": 2.085,
       "note_path": "docs/lanes/mirror/README.md",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 2
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "lanes.ordered-lattice.readme",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "lattice_3d_dense_spent_delay_note",
-        "continuum_bridge_note",
-        "structured_chokepoint_bridge_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.085,
-      "note_path": "docs/lanes/ordered-lattice/README.md",
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 2
@@ -21464,47 +21558,6 @@
       "note_path": "docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md",
       "ready": false,
       "runner_path": "scripts/frontier_bh_quarter_wald_noether_framework_carrier.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "causal_distance_tail_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "causal_propagating_field_note",
-        "causal_field_portability_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/CAUSAL_DISTANCE_TAIL_NOTE.md",
-      "ready": false,
-      "runner_path": "scripts/causal_distance_tail_probe.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "causal_impact_parameter_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "causal_propagating_field_note",
-        "causal_field_portability_note",
-        "causal_field_reconciliation_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/CAUSAL_IMPACT_PARAMETER_NOTE.md",
-      "ready": false,
-      "runner_path": "scripts/causal_impact_parameter_probe.py",
       "transitive_descendants": 0
     },
     {
@@ -22372,7 +22425,6 @@
       "deps": [
         "two_sign_comparison_note_2026-04-10",
         "weak_coupling_sign_sensitivity_note_2026-04-11",
-        "staggered_backreaction_green_closure_note",
         "gravity_sign_audit_2026-04-10",
         "staggered_backreaction_shell_spectral_note",
         "irregular_directional_observable_note_2026-04-11"
@@ -22537,6 +22589,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 666,
-  "total_pending": 1062
+  "ready_count": 674,
+  "total_pending": 1066
 }

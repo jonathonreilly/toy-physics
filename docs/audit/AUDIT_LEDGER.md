@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:17:54.183279+00:00
+**Generated:** 2026-04-30T18:31:21.940147+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,15 +21,15 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 351 |
-| support | 271 |
-| open | 19 |
+| bounded | 352 |
+| support | 277 |
+| open | 20 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 543 |
-| ~~audited_failed~~ | 170 |
+| ~~audited_conditional~~ | 590 |
+| ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
@@ -39,14 +39,14 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1062 |
+| `unaudited` | 1066 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 73 |
 | `high` | 335 |
 | `medium` | 381 |
-| `leaf` | 765 |
+| `leaf` | 769 |
 
 - **Proposed claims demoted by upstream:** 132
 - **Citation cycles detected:** 59
@@ -415,9 +415,9 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `linear_response_second_order_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `local_zsym_predictor_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | A | - |
+| `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
-| `n_eff_from_three_generations_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | B | - |
+| `n_eff_from_three_generations_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `neutrino_dirac_two_higgs_canonical_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -741,7 +741,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 ### `ai_methodology.raw.prompts_session_ebae4639_jonreilly`
 
-- **Note:** [`ai_methodology/raw/prompts_session_ebae4639_jonreilly.md`](../../docs/ai_methodology/raw/prompts_session_ebae4639_jonreilly.md)
+- **Note:** [`archive_unlanded/raw-prompt-transcripts-2026-04-30/prompts_session_ebae4639_jonreilly.md`](../../archive_unlanded/raw-prompt-transcripts-2026-04-30/prompts_session_ebae4639_jonreilly.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -1191,7 +1191,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 ### `backreaction_note`
 
-- **Note:** [`BACKREACTION_NOTE.md`](../../docs/BACKREACTION_NOTE.md)
+- **Note:** [`archive_unlanded/poisson-self-consistency-stale-runners-2026-04-30/BACKREACTION_NOTE.md`](../../archive_unlanded/poisson-self-consistency-stale-runners-2026-04-30/BACKREACTION_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -1353,7 +1353,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 ### `causal_propagating_field_note`
 
-- **Note:** [`CAUSAL_PROPAGATING_FIELD_NOTE.md`](../../docs/CAUSAL_PROPAGATING_FIELD_NOTE.md)
+- **Note:** [`archive_unlanded/causal-field-stale-runners-2026-04-30/CAUSAL_PROPAGATING_FIELD_NOTE.md`](../../archive_unlanded/causal-field-stale-runners-2026-04-30/CAUSAL_PROPAGATING_FIELD_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -2249,7 +2249,7 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 
 ### `critical_exponents_topology_note_2026-04-10`
 
-- **Note:** [`CRITICAL_EXPONENTS_TOPOLOGY_NOTE_2026-04-10.md`](../../docs/CRITICAL_EXPONENTS_TOPOLOGY_NOTE_2026-04-10.md)
+- **Note:** [`archive_unlanded/topology-stale-runners-2026-04-30/CRITICAL_EXPONENTS_TOPOLOGY_NOTE_2026-04-10.md`](../../archive_unlanded/topology-stale-runners-2026-04-30/CRITICAL_EXPONENTS_TOPOLOGY_NOTE_2026-04-10.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -2649,7 +2649,7 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 ### `distance_law_note`
 
-- **Note:** [`DISTANCE_LAW_NOTE.md`](../../docs/DISTANCE_LAW_NOTE.md)
+- **Note:** [`archive_unlanded/gravity-distance-law-stale-runners-2026-04-30/DISTANCE_LAW_NOTE.md`](../../archive_unlanded/gravity-distance-law-stale-runners-2026-04-30/DISTANCE_LAW_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -2673,7 +2673,7 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 ### `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20`
 
-- **Note:** [`DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`](../../docs/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md)
+- **Note:** [`archive_unlanded/dm-abcc-finite-search-salvage-2026-04-30/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`](../../archive_unlanded/dm-abcc-finite-search-salvage-2026-04-30/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -3137,7 +3137,7 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 ### `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15`
 
-- **Note:** [`DM_NEUTRINO_WEAK_TRIPLET_COEFFICIENT_AXIOM_BOUNDARY_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_WEAK_TRIPLET_COEFFICIENT_AXIOM_BOUNDARY_NOTE_2026-04-15.md)
+- **Note:** [`archive_unlanded/dm-neutrino-stale-runners-2026-04-30/DM_NEUTRINO_WEAK_TRIPLET_COEFFICIENT_AXIOM_BOUNDARY_NOTE_2026-04-15.md`](../../archive_unlanded/dm-neutrino-stale-runners-2026-04-30/DM_NEUTRINO_WEAK_TRIPLET_COEFFICIENT_AXIOM_BOUNDARY_NOTE_2026-04-15.md)
 - **current_status:** unknown
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -3316,7 +3316,7 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 ### `fifth_family_complex_note`
 
-- **Note:** [`FIFTH_FAMILY_COMPLEX_NOTE.md`](../../docs/FIFTH_FAMILY_COMPLEX_NOTE.md)
+- **Note:** [`archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_COMPLEX_NOTE.md`](../../archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_COMPLEX_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -3332,7 +3332,7 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 ### `fifth_family_radial_fm_transfer_note`
 
-- **Note:** [`FIFTH_FAMILY_RADIAL_FM_TRANSFER_NOTE.md`](../../docs/FIFTH_FAMILY_RADIAL_FM_TRANSFER_NOTE.md)
+- **Note:** [`archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_FM_TRANSFER_NOTE.md`](../../archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_FM_TRANSFER_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -3348,7 +3348,7 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 ### `fifth_family_radial_note`
 
-- **Note:** [`FIFTH_FAMILY_RADIAL_NOTE.md`](../../docs/FIFTH_FAMILY_RADIAL_NOTE.md)
+- **Note:** [`archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_NOTE.md`](../../archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -3442,7 +3442,7 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 ### `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`
 
-- **Note:** [`FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md`](../../docs/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md)
+- **Note:** [`archive_unlanded/framework-bare-alpha-assumed-input-salvage-2026-04-30/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md`](../../archive_unlanded/framework-bare-alpha-assumed-input-salvage-2026-04-30/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -3829,7 +3829,7 @@ Claim boundary until fixed: safe to claim the constant-lift obstruction Gamma_ca
 
 ### `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19`
 
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md)
+- **Note:** [`archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md`](../../archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -3843,7 +3843,7 @@ Claim boundary until fixed: safe to claim the constant-lift obstruction Gamma_ca
 
 ### `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19`
 
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TAIL_UNDERDETERMINATION_THEOREM_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TAIL_UNDERDETERMINATION_THEOREM_NOTE_2026-04-19.md)
+- **Note:** [`archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TAIL_UNDERDETERMINATION_THEOREM_NOTE_2026-04-19.md`](../../archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TAIL_UNDERDETERMINATION_THEOREM_NOTE_2026-04-19.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -4191,7 +4191,7 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 
 ### `gravitomagnetic_portability_note`
 
-- **Note:** [`GRAVITOMAGNETIC_PORTABILITY_NOTE.md`](../../docs/GRAVITOMAGNETIC_PORTABILITY_NOTE.md)
+- **Note:** [`archive_unlanded/gravitomagnetic-static-renderers-2026-04-30/GRAVITOMAGNETIC_PORTABILITY_NOTE.md`](../../archive_unlanded/gravitomagnetic-static-renderers-2026-04-30/GRAVITOMAGNETIC_PORTABILITY_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -4291,7 +4291,7 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 
 ### `grown_transfer_basin_note`
 
-- **Note:** [`GROWN_TRANSFER_BASIN_NOTE.md`](../../docs/GROWN_TRANSFER_BASIN_NOTE.md)
+- **Note:** [`archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md`](../../archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -4324,7 +4324,7 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 
 ### `h0125_failure_derivation`
 
-- **Note:** [`H0125_FAILURE_DERIVATION.md`](../../docs/H0125_FAILURE_DERIVATION.md)
+- **Note:** [`archive_unlanded/h0125-unverifiable-numerical-diagnostics-2026-04-30/H0125_FAILURE_DERIVATION.md`](../../archive_unlanded/h0125-unverifiable-numerical-diagnostics-2026-04-30/H0125_FAILURE_DERIVATION.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -4599,7 +4599,7 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 
 ### `if_program_closing_note`
 
-- **Note:** [`IF_PROGRAM_CLOSING_NOTE.md`](../../docs/IF_PROGRAM_CLOSING_NOTE.md)
+- **Note:** [`archive_unlanded/if-program-unverifiable-closing-2026-04-30/IF_PROGRAM_CLOSING_NOTE.md`](../../archive_unlanded/if-program-unverifiable-closing-2026-04-30/IF_PROGRAM_CLOSING_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -4670,7 +4670,7 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 
 ### `kernel_vs_gravity_note`
 
-- **Note:** [`KERNEL_VS_GRAVITY_NOTE.md`](../../docs/KERNEL_VS_GRAVITY_NOTE.md)
+- **Note:** [`archive_unlanded/kernel-gravity-conflation-2026-04-30/KERNEL_VS_GRAVITY_NOTE.md`](../../archive_unlanded/kernel-gravity-conflation-2026-04-30/KERNEL_VS_GRAVITY_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -5245,7 +5245,7 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 
 ### `lattice_3d_dense_spent_delay_note`
 
-- **Note:** [`LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](../../docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
+- **Note:** [`archive_unlanded/lattice-dense-spent-delay-window-salvage-2026-04-30/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](../../archive_unlanded/lattice-dense-spent-delay-window-salvage-2026-04-30/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -5523,7 +5523,7 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **Note:** [`MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](../../docs/MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_failed~~  (reason: `inherited_from:n_eff_from_three_generations_theorem_note_2026-04-24`)
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
 - **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
 - **load-bearing step:** Matter-radiation equality obeys 1+z_mr = Omega_m,0/Omega_r,0 on the admitted flat-FRW matter/radiation surface.  _(class `A`)_
 - **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md, COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md, R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md, N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md, DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md, THREE_GENERATION_STRUCTURE_NOTE.md.
@@ -5654,7 +5654,7 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 
 ### `moonshot_other_testables_note`
 
-- **Note:** [`MOONSHOT_OTHER_TESTABLES_NOTE.md`](../../docs/MOONSHOT_OTHER_TESTABLES_NOTE.md)
+- **Note:** [`archive_unlanded/testable-ranking-stale-wrappers-2026-04-30/MOONSHOT_OTHER_TESTABLES_NOTE.md`](../../archive_unlanded/testable-ranking-stale-wrappers-2026-04-30/MOONSHOT_OTHER_TESTABLES_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -5693,7 +5693,7 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **Note:** [`N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md`](../../docs/N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_failed~~  (reason: `inherited_from:neutrino_mass_derived_note`)
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
 - **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
 - **load-bearing step:** N_active = N_generations * N(nu_L per generation) = 3, with standard thermal-history correction giving N_eff=3.046.  _(class `B`)_
 - **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: THREE_GENERATION_STRUCTURE_NOTE.md, ONE_GENERATION_MATTER_CLOSURE_NOTE.md, BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md, NEUTRINO_MASS_DERIVED_NOTE.md, MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md.
@@ -6202,7 +6202,7 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 
 ### `portable_card_extension_note`
 
-- **Note:** [`PORTABLE_CARD_EXTENSION_NOTE.md`](../../docs/PORTABLE_CARD_EXTENSION_NOTE.md)
+- **Note:** [`archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_CARD_EXTENSION_NOTE.md`](../../archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_CARD_EXTENSION_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -6220,7 +6220,7 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 
 ### `portable_package_extension_note`
 
-- **Note:** [`PORTABLE_PACKAGE_EXTENSION_NOTE.md`](../../docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md)
+- **Note:** [`archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_PACKAGE_EXTENSION_NOTE.md`](../../archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_PACKAGE_EXTENSION_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -6840,7 +6840,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `second_grown_family_note`
 
-- **Note:** [`SECOND_GROWN_FAMILY_NOTE.md`](../../docs/SECOND_GROWN_FAMILY_NOTE.md)
+- **Note:** [`archive_unlanded/grown-family-missing-artifacts-2026-04-30/SECOND_GROWN_FAMILY_NOTE.md`](../../archive_unlanded/grown-family-missing-artifacts-2026-04-30/SECOND_GROWN_FAMILY_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -6864,7 +6864,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `session_summary_2026-04-01_topology`
 
-- **Note:** [`SESSION_SUMMARY_2026-04-01_TOPOLOGY.md`](../../docs/SESSION_SUMMARY_2026-04-01_TOPOLOGY.md)
+- **Note:** [`archive_unlanded/session-summary-stale-aggregates-2026-04-30/SESSION_SUMMARY_2026-04-01_TOPOLOGY.md`](../../archive_unlanded/session-summary-stale-aggregates-2026-04-30/SESSION_SUMMARY_2026-04-01_TOPOLOGY.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -6880,7 +6880,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `shapiro_complex_interaction_note`
 
-- **Note:** [`SHAPIRO_COMPLEX_INTERACTION_NOTE.md`](../../docs/SHAPIRO_COMPLEX_INTERACTION_NOTE.md)
+- **Note:** [`archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_COMPLEX_INTERACTION_NOTE.md`](../../archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_COMPLEX_INTERACTION_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -6918,7 +6918,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `shapiro_diamond_bridge_note`
 
-- **Note:** [`SHAPIRO_DIAMOND_BRIDGE_NOTE.md`](../../docs/SHAPIRO_DIAMOND_BRIDGE_NOTE.md)
+- **Note:** [`archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_DIAMOND_BRIDGE_NOTE.md`](../../archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_DIAMOND_BRIDGE_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -6935,7 +6935,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `shapiro_diamond_frequency_bridge_note`
 
-- **Note:** [`SHAPIRO_DIAMOND_FREQUENCY_BRIDGE_NOTE.md`](../../docs/SHAPIRO_DIAMOND_FREQUENCY_BRIDGE_NOTE.md)
+- **Note:** [`archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_DIAMOND_FREQUENCY_BRIDGE_NOTE.md`](../../archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_DIAMOND_FREQUENCY_BRIDGE_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -6970,7 +6970,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `shapiro_five_family_portability_note`
 
-- **Note:** [`SHAPIRO_FIVE_FAMILY_PORTABILITY_NOTE.md`](../../docs/SHAPIRO_FIVE_FAMILY_PORTABILITY_NOTE.md)
+- **Note:** [`archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_FIVE_FAMILY_PORTABILITY_NOTE.md`](../../archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_FIVE_FAMILY_PORTABILITY_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -6987,7 +6987,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `shapiro_scaling_direct_replay_note`
 
-- **Note:** [`SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`](../../docs/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md)
+- **Note:** [`archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`](../../archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -7073,7 +7073,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `source_resolved_retarded_green_pocket_note`
 
-- **Note:** [`SOURCE_RESOLVED_RETARDED_GREEN_POCKET_NOTE.md`](../../docs/SOURCE_RESOLVED_RETARDED_GREEN_POCKET_NOTE.md)
+- **Note:** [`archive_unlanded/source-resolved-green-stale-runners-2026-04-30/SOURCE_RESOLVED_RETARDED_GREEN_POCKET_NOTE.md`](../../archive_unlanded/source-resolved-green-stale-runners-2026-04-30/SOURCE_RESOLVED_RETARDED_GREEN_POCKET_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -7089,7 +7089,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `source_resolved_transverse_propagating_green_note`
 
-- **Note:** [`SOURCE_RESOLVED_TRANSVERSE_PROPAGATING_GREEN_NOTE.md`](../../docs/SOURCE_RESOLVED_TRANSVERSE_PROPAGATING_GREEN_NOTE.md)
+- **Note:** [`archive_unlanded/source-resolved-green-stale-runners-2026-04-30/SOURCE_RESOLVED_TRANSVERSE_PROPAGATING_GREEN_NOTE.md`](../../archive_unlanded/source-resolved-green-stale-runners-2026-04-30/SOURCE_RESOLVED_TRANSVERSE_PROPAGATING_GREEN_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -7172,7 +7172,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `staggered_backreaction_capture_closure_note`
 
-- **Note:** [`STAGGERED_BACKREACTION_CAPTURE_CLOSURE_NOTE.md`](../../docs/STAGGERED_BACKREACTION_CAPTURE_CLOSURE_NOTE.md)
+- **Note:** [`archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_CAPTURE_CLOSURE_NOTE.md`](../../archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_CAPTURE_CLOSURE_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -7189,7 +7189,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `staggered_backreaction_green_closure_note`
 
-- **Note:** [`STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md`](../../docs/STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md)
+- **Note:** [`archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md`](../../archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -7206,7 +7206,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `staggered_backreaction_iterative_note`
 
-- **Note:** [`STAGGERED_BACKREACTION_ITERATIVE_NOTE.md`](../../docs/STAGGERED_BACKREACTION_ITERATIVE_NOTE.md)
+- **Note:** [`archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_ITERATIVE_NOTE.md`](../../archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_ITERATIVE_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -7221,7 +7221,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `staggered_backreaction_nonlocal_closure_note`
 
-- **Note:** [`STAGGERED_BACKREACTION_NONLOCAL_CLOSURE_NOTE.md`](../../docs/STAGGERED_BACKREACTION_NONLOCAL_CLOSURE_NOTE.md)
+- **Note:** [`archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_NONLOCAL_CLOSURE_NOTE.md`](../../archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_NONLOCAL_CLOSURE_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -7237,7 +7237,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `staggered_backreaction_results_2026-04-10`
 
-- **Note:** [`STAGGERED_BACKREACTION_RESULTS_2026-04-10.md`](../../docs/STAGGERED_BACKREACTION_RESULTS_2026-04-10.md)
+- **Note:** [`archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_RESULTS_2026-04-10.md`](../../archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_RESULTS_2026-04-10.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -7251,7 +7251,7 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 ### `staggered_backreaction_scale_closure_note`
 
-- **Note:** [`STAGGERED_BACKREACTION_SCALE_CLOSURE_NOTE.md`](../../docs/STAGGERED_BACKREACTION_SCALE_CLOSURE_NOTE.md)
+- **Note:** [`archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_SCALE_CLOSURE_NOTE.md`](../../archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_SCALE_CLOSURE_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -7500,7 +7500,7 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 
 ### `testable_predictions_map_note`
 
-- **Note:** [`TESTABLE_PREDICTIONS_MAP_NOTE.md`](../../docs/TESTABLE_PREDICTIONS_MAP_NOTE.md)
+- **Note:** [`archive_unlanded/testable-ranking-stale-wrappers-2026-04-30/TESTABLE_PREDICTIONS_MAP_NOTE.md`](../../archive_unlanded/testable-ranking-stale-wrappers-2026-04-30/TESTABLE_PREDICTIONS_MAP_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -7534,7 +7534,7 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 
 ### `three_family_card_note`
 
-- **Note:** [`THREE_FAMILY_CARD_NOTE.md`](../../docs/THREE_FAMILY_CARD_NOTE.md)
+- **Note:** [`archive_unlanded/family-card-incomplete-artifacts-2026-04-30/THREE_FAMILY_CARD_NOTE.md`](../../archive_unlanded/family-card-incomplete-artifacts-2026-04-30/THREE_FAMILY_CARD_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -7578,7 +7578,7 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 
 ### `triage_no_promotion_note`
 
-- **Note:** [`TRIAGE_NO_PROMOTION_NOTE.md`](../../docs/TRIAGE_NO_PROMOTION_NOTE.md)
+- **Note:** [`archive_unlanded/process-triage-unreproducible-state-2026-04-30/TRIAGE_NO_PROMOTION_NOTE.md`](../../archive_unlanded/process-triage-unreproducible-state-2026-04-30/TRIAGE_NO_PROMOTION_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -7593,7 +7593,7 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 
 ### `unified_basin_freeze_note`
 
-- **Note:** [`UNIFIED_BASIN_FREEZE_NOTE.md`](../../docs/UNIFIED_BASIN_FREEZE_NOTE.md)
+- **Note:** [`archive_unlanded/unified-basin-signed-source-salvage-2026-04-30/UNIFIED_BASIN_FREEZE_NOTE.md`](../../archive_unlanded/unified-basin-signed-source-salvage-2026-04-30/UNIFIED_BASIN_FREEZE_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
@@ -7984,7 +7984,7 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 
 ### `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11`
 
-- **Note:** [`work_history/repo/review_feedback/ARCHITECTURE_PORTABILITY_AUDIT_2026-04-11.md`](../../docs/work_history/repo/review_feedback/ARCHITECTURE_PORTABILITY_AUDIT_2026-04-11.md)
+- **Note:** [`archive_unlanded/work-history-unverifiable-portability-2026-04-30/ARCHITECTURE_PORTABILITY_AUDIT_2026-04-11.md`](../../archive_unlanded/work-history-unverifiable-portability-2026-04-30/ARCHITECTURE_PORTABILITY_AUDIT_2026-04-11.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_failed~~
 - **effective_status:** ~~audited_failed~~  (reason: `self`)
