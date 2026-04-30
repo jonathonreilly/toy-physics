@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 49,
-    "high": 305,
+    "high": 304,
     "leaf": 615,
     "medium": 327
   },
-  "generated_at": "2026-04-30T00:51:56.316770+00:00",
+  "generated_at": "2026-04-30T00:51:59.643231+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5473,25 +5473,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_dark_energy_eos_retained_corollary.py",
       "transitive_descendants": 48
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "quark_projector_ray_phase_completion_note_2026-04-18",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "quark_cp_carrier_completion_note_2026-04-18"
-      ],
-      "direct_in_degree": 9,
-      "load_bearing_score": 10.055,
-      "note_path": "docs/QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_quark_projector_ray_phase_completion.py",
-      "transitive_descendants": 46
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -27074,5 +27055,5 @@
     }
   ],
   "ready_count": 844,
-  "total_pending": 1296
+  "total_pending": 1295
 }

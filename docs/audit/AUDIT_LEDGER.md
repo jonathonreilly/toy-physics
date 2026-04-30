@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:51:56.479754+00:00
+**Generated:** 2026-04-30T00:51:59.805702+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -38,9 +38,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 145 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 50 |
-| `audited_numerical_match` | 7 |
+| `audited_numerical_match` | 8 |
 | `audited_renaming` | 9 |
-| `unaudited` | 1295 |
+| `unaudited` | 1294 |
 
 | criticality | count |
 |---|---:|
@@ -378,6 +378,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
+| `quark_projector_ray_phase_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `tensor_support_center_excess_law_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -3495,6 +3496,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Absent those premises, the existing packet remains bounded companion support.  _(class `A`)_
 - **chain closes:** True — The claim is a negative boundary: the note does not derive non-top quark masses, but shows that the current package supplies bounded ratio/support surfaces, not absolute five-mass retention. The live runner verifies repo status guardrails, arbitrary bottom-anchor freedom for down-type ratios, up-type partition dependence, species-uniform Ward failure for m_b, and the safe open endpoint with PASS=17 FAIL=0.
 - **rationale:** The retained content is the Lane 3 firewall, not five-mass retention. The note's load-bearing step closes because the down-type formulas are ratios that preserve an arbitrary bottom anchor, the up-type branch remains partition/scalar-law selected, and the top Ward identity cannot be reused species-uniformly because the b reading overshoots by about 34.7x. The live runner confirms the relevant repo guardrails and comparator-only use of observed masses. Residual risk is downstream misuse: this audit does not ratify m_u, m_d, m_s, m_c, m_b, the 5/6 bridge, up-sector amplitude selection, or non-top Yukawa Ward identities.
+- **auditor confidence:** high
+
+### `quark_projector_ray_phase_completion_note_2026-04-18`
+
+- **Note:** [`QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`](../../docs/QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Adding one shared phase to the fixed projector-ray ansatz solves a_u, a_d, phi_shared and matches |V_us|, |V_cb|, |V_ub|, and J numerically while keeping arg det(M_u M_d)=0.  _(class `G`)_
+- **chain closes:** False — The runner verifies a bounded numerical closure with solved real amplitudes and a solved shared phase, but those parameters are not derived by the source note or its bounded dependency.
+- **rationale:** Issue: the full closure depends on solved amplitudes and a solved shared phase on a bounded carrier surface. Why this blocks: matching CKM/J targets after fitting those carrier parameters is a numerical completion, not a framework-forced derivation of the projector amplitudes or phase. Repair target: derive a_u, a_d, and phi_shared from retained projector/support primitives and rerun a runner that computes them before comparing observables. Claim boundary until fixed: the note supports a bounded reduced closure on a fixed projector ray, not a retained quark CP theorem.
+- **open / conditional deps cited:**
+  - `QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `quark_route2_exact_readout_map_note_2026-04-19`
