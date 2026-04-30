@@ -12,8 +12,9 @@ Checks (all hard rules from FRESH_LOOK_REQUIREMENTS.md and README.md):
      - No row has current_status = 'retained' or 'promoted' (these are
        audit-ratified only; authors may only declare proposed_*).
      - audit_status = audited_clean requires auditor and auditor_family set.
-     - audit_status = audited_clean with current_status not in
-       {proposed_retained, proposed_promoted} is illegal.
+     - audit_status = audited_clean is allowed on proposed_retained,
+       proposed_promoted, or support rows. Only proposed_* rows may promote
+       publication-facing effective_status; support rows remain support.
      - effective_status = retained requires audit_status = audited_clean
        AND every dep's effective_status = retained.
      - independence = 'weak' cannot land audited_clean. Critical clean
@@ -59,6 +60,7 @@ ALLOWED_CURRENT_STATUSES = {
     "open",
     "unknown",
 }
+CLEAN_AUDIT_CURRENT_STATUSES = {"proposed_retained", "proposed_promoted", "support"}
 RATIFIED_BY_AUDIT_ONLY = {"retained", "promoted"}
 ALLOWED_INDEPENDENCE = {"weak", "fresh_context", "cross_family", "strong", "external", None}
 
@@ -139,13 +141,17 @@ def main() -> int:
                 errors.append(f"{cid}: audited_clean requires non-empty auditor")
             if not row.get("auditor_family"):
                 errors.append(f"{cid}: audited_clean requires auditor_family")
-            if cs not in {"proposed_retained", "proposed_promoted"}:
+            if cs not in CLEAN_AUDIT_CURRENT_STATUSES:
                 errors.append(
                     f"{cid}: audited_clean with current_status={cs!r} is illegal "
-                    f"(audit_clean only ratifies proposed_retained / proposed_promoted)"
+                    f"(audited_clean is allowed only for proposed_retained / proposed_promoted / support)"
                 )
             # Effective must be retained or promoted.
-            if e not in {"retained", "promoted"}:
+            if cs == "support" and e != "support":
+                errors.append(
+                    f"{cid}: audited_clean support row must keep effective_status='support'; got {e!r}"
+                )
+            elif cs in {"proposed_retained", "proposed_promoted"} and e not in {"retained", "promoted"}:
                 # Could be inherited demotion; warn rather than error.
                 warnings.append(
                     f"{cid}: audited_clean but effective_status={e!r} (likely demoted by upstream dep)"
