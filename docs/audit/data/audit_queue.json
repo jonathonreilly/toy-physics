@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 416,
+    "leaf": 415,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:22:55.711627+00:00",
+  "generated_at": "2026-04-30T19:23:02.235528+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -18926,26 +18926,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20",
-        "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_dm_pmns_cp_orientation_parity_reduction_2026_04_20.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_note_2026-04-19",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20433,5 +20413,5 @@
     }
   ],
   "ready_count": 553,
-  "total_pending": 942
+  "total_pending": 941
 }

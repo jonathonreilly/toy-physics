@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:22:55.881230+00:00
+**Generated:** 2026-04-30T19:23:02.404277+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,12 +33,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 168 |
-| `audited_conditional` | 364 |
+| `audited_conditional` | 365 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 942 |
+| `unaudited` | 941 |
 
 | criticality | count |
 |---|---:|
@@ -438,6 +438,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `dm_pmns_cp_orientation_parity_reduction_note_2026-04-20` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -4347,6 +4348,21 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** `scripts/frontier_dm_pmns_chamber_spectral_completeness_theorem_2026_04_20.py`  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 12 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `dm_pmns_cp_orientation_parity_reduction_note_2026-04-20`
+
+- **Note:** [`DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md`](../../docs/DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** **Supersession note (closure status):** this note is an intermediate reduction  _(class `B`)_
+- **chain closes:** False — No. One-hop dependencies are not all retained (dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20=audited_conditional, dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20=audited_conditional), so the chain does not close under the leaf audit rule.
+- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20=audited_conditional, dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared support tier with the upstream dependency condition attached.
+- **open / conditional deps cited:**
+  - `DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md`
+  - `DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md`
 - **auditor confidence:** high
 
 ### `dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21`
