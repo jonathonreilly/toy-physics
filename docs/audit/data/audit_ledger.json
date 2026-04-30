@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T00:48:06.880478+00:00",
-  "generated_at": "2026-04-30T00:48:05.063369+00:00",
-  "invalidation_run_at": "2026-04-30T00:48:06.821873+00:00",
+  "effective_status_computed_at": "2026-04-30T00:48:10.186701+00:00",
+  "generated_at": "2026-04-30T00:48:08.395620+00:00",
+  "invalidation_run_at": "2026-04-30T00:48:10.125560+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T00:48:06.709673+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:48:09.996880+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -32515,14 +32515,21 @@
       "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the factorized matrix law may be used as support; it does not compute the Wilson D_6 coefficients or ratify P(6)."
     },
     "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:48:07.471362+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The boundary-character representation closes as a support theorem, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32542,30 +32549,32 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The residual environment operator is exactly normalized convolution by the boundary class function Z_beta^env/z_(0,0)^env, so R_beta^env chi_(p,q)=rho_(p,q)(beta) chi_(p,q).",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "ff0016776547627249ad0ebb49ef7264834eca17f201cf27771c71e4b44bd696",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 7,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Character-Measure Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the residual operator is represented by boundary character coefficients at support level; explicit beta=6 coefficients remain open."
     },
     "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note": {
       "audit_date": "2026-04-28",
