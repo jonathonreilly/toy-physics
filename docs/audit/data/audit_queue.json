@@ -3,9 +3,9 @@
     "critical": 4,
     "high": 195,
     "leaf": 286,
-    "medium": 290
+    "medium": 289
   },
-  "generated_at": "2026-04-30T23:37:49.765969+00:00",
+  "generated_at": "2026-04-30T23:39:08.896810+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,7 +23,7 @@
         "three_generation_structure_note"
       ],
       "direct_in_degree": 14,
-      "load_bearing_score": 19.044,
+      "load_bearing_score": 15.044,
       "note_path": "docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md",
       "ready": false,
       "runner_path": null,
@@ -43,7 +43,7 @@
         "left_handed_charge_matching_note"
       ],
       "direct_in_degree": 13,
-      "load_bearing_score": 18.544,
+      "load_bearing_score": 14.544,
       "note_path": "docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md",
       "ready": false,
       "runner_path": null,
@@ -67,7 +67,7 @@
         "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
       ],
       "direct_in_degree": 10,
-      "load_bearing_score": 17.039,
+      "load_bearing_score": 13.039,
       "note_path": "docs/LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
       "ready": false,
       "runner_path": "scripts/frontier_lh_anomaly_trace_catalog.py",
@@ -332,7 +332,7 @@
         "yt_explicit_systematic_budget_note"
       ],
       "direct_in_degree": 7,
-      "load_bearing_score": 15.275,
+      "load_bearing_score": 11.275,
       "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
       "ready": false,
       "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
@@ -1147,25 +1147,6 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "rconn_derived_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 11.5,
-      "note_path": "docs/EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_color_projection_mc.py",
-      "transitive_descendants": 127
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_neutrino_postcanonical_right_frame_obstruction_note_2026-04-15",
       "criticality": "high",
       "criticality_rank": 2,
@@ -1181,6 +1162,25 @@
       "note_path": "docs/DM_NEUTRINO_POSTCANONICAL_RIGHT_FRAME_OBSTRUCTION_NOTE_2026-04-15.md",
       "ready": false,
       "runner_path": "scripts/frontier_dm_neutrino_postcanonical_right_frame_obstruction.py",
+      "transitive_descendants": 127
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "rconn_derived_note"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 7.5,
+      "note_path": "docs/EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_color_projection_mc.py",
       "transitive_descendants": 127
     },
     {
@@ -1221,7 +1221,7 @@
         "yt_explicit_systematic_budget_note"
       ],
       "direct_in_degree": 1,
-      "load_bearing_score": 11.443,
+      "load_bearing_score": 7.443,
       "note_path": "docs/YT_FLAGSHIP_BOUNDARY_NOTE.md",
       "ready": false,
       "runner_path": null,
@@ -1241,7 +1241,7 @@
         "plaquette_self_consistency_note"
       ],
       "direct_in_degree": 4,
-      "load_bearing_score": 12.919,
+      "load_bearing_score": 8.919,
       "note_path": "docs/G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_critical_feature_scan.py",
@@ -6682,23 +6682,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_dm_leptogenesis_ne_projected_source_triplet_sign_theorem.py",
       "transitive_descendants": 49
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 6.115,
-      "note_path": "docs/FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_first_order_coframe_unconditionality_no_go.py",
-      "transitive_descendants": 48
     },
     {
       "audit_independence_required": "any_non_self",
@@ -17808,6 +17791,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 388,
-  "total_pending": 775
+  "ready_count": 387,
+  "total_pending": 774
 }

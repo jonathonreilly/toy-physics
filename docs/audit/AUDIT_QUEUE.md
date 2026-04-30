@@ -1,13 +1,13 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T23:37:49.765969+00:00
-**Total pending:** 775
-**Ready (all deps already at a stable tier):** 388
+**Generated:** 2026-04-30T23:39:08.896810+00:00
+**Total pending:** 774
+**Ready (all deps already at a stable tier):** 387
 
 By criticality:
 - `critical`: 4
 - `high`: 195
-- `medium`: 290
+- `medium`: 289
 - `leaf`: 286
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
@@ -16,11 +16,11 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 
 | # | claim_id | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---:|---:|:---:|---|---|
-| 1 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | critical | 263 | 19.04 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 2 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | critical | 263 | 18.54 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 3 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | critical | 262 | 17.04 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_anomaly_trace_catalog.py` |
+| 1 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | critical | 263 | 15.04 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 2 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | critical | 263 | 14.54 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 3 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | critical | 262 | 13.04 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_anomaly_trace_catalog.py` |
 | 4 | `publication.ci3_z3.publication_matrix` | critical | 32 | 12.54 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 5 | `yt_zero_import_authority_note` | high | 218 | 15.28 |  | fresh_context_or_stronger | `scripts/frontier_yt_ward_identity_derivation.py` |
+| 5 | `yt_zero_import_authority_note` | high | 218 | 11.28 |  | fresh_context_or_stronger | `scripts/frontier_yt_ward_identity_derivation.py` |
 | 6 | `neutrino_majorana_native_gaussian_no_go_note` | high | 180 | 10.00 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_native_gaussian_nogo.py` |
 | 7 | `neutrino_majorana_finite_normal_grammar_no_go_note` | high | 179 | 10.49 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py` |
 | 8 | `neutrino_majorana_pfaffian_extension_note` | high | 178 | 9.98 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_extension.py` |
@@ -59,11 +59,11 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 41 | `dm_neutrino_postcanonical_extension_class_note_2026-04-15` | high | 129 | 8.52 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_postcanonical_extension_class.py` |
 | 42 | `dm_neutrino_source_surface_slot_torsion_boundary_theorem_note_2026-04-16` | high | 128 | 9.01 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_source_surface_slot_torsion_boundary_theorem.py` |
 | 43 | `dm_neutrino_postcanonical_slot_support_class_note_2026-04-15` | high | 128 | 8.01 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_postcanonical_slot_support_class.py` |
-| 44 | `ew_current_matching_ozi_suppression_theorem_note_2026-04-27` | high | 127 | 11.50 |  | fresh_context_or_stronger | `scripts/frontier_color_projection_mc.py` |
-| 45 | `dm_neutrino_postcanonical_right_frame_obstruction_note_2026-04-15` | high | 127 | 7.50 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_postcanonical_right_frame_obstruction.py` |
+| 44 | `dm_neutrino_postcanonical_right_frame_obstruction_note_2026-04-15` | high | 127 | 7.50 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_postcanonical_right_frame_obstruction.py` |
+| 45 | `ew_current_matching_ozi_suppression_theorem_note_2026-04-27` | high | 127 | 7.50 |  | fresh_context_or_stronger | `scripts/frontier_color_projection_mc.py` |
 | 46 | `dm_neutrino_postcanonical_polar_section_note_2026-04-15` | high | 126 | 9.49 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_postcanonical_polar_section.py` |
-| 47 | `yt_flagship_boundary_note` | high | 122 | 11.44 |  | fresh_context_or_stronger | - |
-| 48 | `g_bare_dynamical_fixation_obstruction_note_2026-04-18` | high | 120 | 12.92 |  | fresh_context_or_stronger | `scripts/frontier_g_bare_critical_feature_scan.py` |
+| 47 | `yt_flagship_boundary_note` | high | 122 | 7.44 |  | fresh_context_or_stronger | - |
+| 48 | `g_bare_dynamical_fixation_obstruction_note_2026-04-18` | high | 120 | 8.92 |  | fresh_context_or_stronger | `scripts/frontier_g_bare_critical_feature_scan.py` |
 | 49 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | high | 119 | 13.91 |  | fresh_context_or_stronger | `scripts/frontier_sm_hypercharge_uniqueness.py` |
 | 50 | `dm_neutrino_polar_aligned_core_no_go_note_2026-04-15` | high | 116 | 7.37 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_polar_aligned_core_nogo.py` |
 

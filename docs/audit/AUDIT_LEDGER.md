@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T23:37:49.948080+00:00
+**Generated:** 2026-04-30T23:39:09.097601+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 83 |
-| _proposed_retained_ | 4 |
+| **retained** | 84 |
+| _proposed_retained_ | 3 |
 | bounded | 273 |
 | support | 237 |
 | open | 18 |
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 220 |
+| `audited_clean` | 221 |
 | `audited_conditional` | 480 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 775 |
+| `unaudited` | 774 |
 
 | criticality | count |
 |---|---:|
@@ -63,31 +63,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | criticality | desc | score | audit_status | effective |
 |---:|---|---|---:|---:|---|---|
-| 1 | `alpha_s_derived_note` | critical | 256 | 33.51 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `yt_ward_identity_derivation_theorem` | critical | 299 | 31.73 | `audited_renaming` | ~~audited_renaming~~ |
-| 3 | `observable_principle_from_axiom_note` | critical | 247 | 30.45 | `audited_conditional` | ~~audited_conditional~~ |
-| 4 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 28.86 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 28.84 | `audited_conditional` | ~~audited_conditional~~ |
-| 6 | `graph_first_su3_integration_note` | critical | 301 | 28.74 | `audited_clean` | **retained** |
-| 7 | `yt_ew_color_projection_theorem` | critical | 126 | 26.49 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `three_generation_observable_theorem_note` | critical | 290 | 25.68 | `audited_conditional` | ~~audited_conditional~~ |
-| 9 | `three_generation_structure_note` | critical | 264 | 25.05 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 101 | 23.67 | `audited_conditional` | ~~audited_conditional~~ |
-| 11 | `minimal_axioms_2026-04-11` | critical | 119 | 22.91 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `anomaly_forces_time_theorem` | critical | 261 | 22.53 | `audited_conditional` | ~~audited_conditional~~ |
-| 13 | `native_gauge_closure_note` | critical | 297 | 21.72 | `audited_conditional` | ~~audited_conditional~~ |
-| 14 | `left_handed_charge_matching_note` | critical | 265 | 21.55 | `audited_conditional` | ~~audited_conditional~~ |
-| 15 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 20.83 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `one_generation_matter_closure_note` | critical | 244 | 20.44 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `plaquette_self_consistency_note` | critical | 302 | 20.24 | `audited_conditional` | ~~audited_conditional~~ |
-| 18 | `physical_lattice_necessity_note` | critical | 286 | 19.66 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 93 | 19.55 | `audited_conditional` | ~~audited_conditional~~ |
-| 20 | `site_phase_cube_shift_intertwiner_note` | critical | 293 | 19.20 | `audited_clean` | support |
-| 21 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | critical | 263 | 19.04 | `unaudited` | ~~audited_conditional~~ |
-| 22 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | critical | 263 | 18.54 | `unaudited` | ~~audited_conditional~~ |
-| 23 | `rconn_derived_note` | critical | 129 | 18.52 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `higgs_mass_derived_note` | critical | 122 | 18.44 | `audited_conditional` | ~~audited_conditional~~ |
-| 25 | `higgs_vacuum_explicit_systematic_note` | critical | 121 | 18.43 | `audited_conditional` | ~~audited_conditional~~ |
+| 1 | `alpha_s_derived_note` | critical | 256 | 29.51 | `audited_conditional` | ~~audited_conditional~~ |
+| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 28.86 | `audited_conditional` | ~~audited_conditional~~ |
+| 3 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 28.84 | `audited_conditional` | ~~audited_conditional~~ |
+| 4 | `graph_first_su3_integration_note` | critical | 301 | 28.74 | `audited_clean` | **retained** |
+| 5 | `yt_ward_identity_derivation_theorem` | critical | 299 | 27.73 | `audited_renaming` | ~~audited_renaming~~ |
+| 6 | `observable_principle_from_axiom_note` | critical | 247 | 26.45 | `audited_conditional` | ~~audited_conditional~~ |
+| 7 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 101 | 23.67 | `audited_conditional` | ~~audited_conditional~~ |
+| 8 | `yt_ew_color_projection_theorem` | critical | 126 | 22.49 | `audited_conditional` | ~~audited_conditional~~ |
+| 9 | `three_generation_observable_theorem_note` | critical | 290 | 21.68 | `audited_conditional` | ~~audited_conditional~~ |
+| 10 | `three_generation_structure_note` | critical | 264 | 21.05 | `audited_conditional` | ~~audited_conditional~~ |
+| 11 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 20.83 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `one_generation_matter_closure_note` | critical | 244 | 20.44 | `audited_conditional` | ~~audited_conditional~~ |
+| 13 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 93 | 19.55 | `audited_conditional` | ~~audited_conditional~~ |
+| 14 | `minimal_axioms_2026-04-11` | critical | 119 | 18.91 | `audited_conditional` | ~~audited_conditional~~ |
+| 15 | `anomaly_forces_time_theorem` | critical | 261 | 18.53 | `audited_conditional` | ~~audited_conditional~~ |
+| 16 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 42 | 18.43 | `audited_clean` | **retained** |
+| 17 | `native_gauge_closure_note` | critical | 297 | 17.72 | `audited_conditional` | ~~audited_conditional~~ |
+| 18 | `left_handed_charge_matching_note` | critical | 265 | 17.55 | `audited_conditional` | ~~audited_conditional~~ |
+| 19 | `ckm_atlas_axiom_closure_note` | critical | 74 | 17.23 | `audited_conditional` | ~~audited_conditional~~ |
+| 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 120 | 16.42 | `audited_conditional` | ~~audited_conditional~~ |
+| 21 | `plaquette_self_consistency_note` | critical | 302 | 16.24 | `audited_conditional` | ~~audited_conditional~~ |
+| 22 | `physical_lattice_necessity_note` | critical | 286 | 15.66 | `audited_conditional` | ~~audited_conditional~~ |
+| 23 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 127 | 15.50 | `audited_conditional` | ~~audited_conditional~~ |
+| 24 | `site_phase_cube_shift_intertwiner_note` | critical | 293 | 15.20 | `audited_clean` | support |
+| 25 | `cosmological_constant_spectral_gap_identity_theorem_note` | critical | 48 | 15.12 | `audited_conditional` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -187,6 +187,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `emergent_product_law_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `equivalence_principle_harness_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `evolving_network_prototype_v3_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
+| `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `fixed_field_complex_grown_basin_v2_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fixed_field_family_unification_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fixed_field_grown_transfer_scout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -5467,6 +5468,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `live_runner_output_not_completed_in_audit_window`
   - `title_uses_universality_while_claim_disclaims_universality`
 - **auditor confidence:** medium
+
+### `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30`
+
+- **Note:** [`FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md`](../../docs/FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-proposed-ready-20260430-47`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The Hodge-complement map exchanges P_1 and P_3 while preserving the relevant substrate spin/time/CPT/local structure, so retained substrate symmetries do not force first-order coframe selection over its Hodge-dual third-order response.  _(class `A`)_
+- **chain closes:** True — The runner constructs the oriented Hodge-complement map on the 16-dimensional event cell and verifies exactly that it exchanges P_1 and P_3 while preserving the listed symmetry and tensor-local structures. The note is a negative no-go, not a positive Planck-pin closure, so this algebraic counterexample is sufficient at the claimed boundary.
+- **rationale:** Clean as a proposed-retained algebraic no-go. The Hodge-complement witness supplies a distinct rank-four P_3 carrier satisfying the same substrate tests as P_1, so first-order coframe selection is not forced by the granted substrate symmetries alone. Residual risk is downstream scope control: this clean no-go blocks unconditional first-order selection; it does not derive the positive first-order boundary/orientation law needed to recover P_A.
+- **auditor confidence:** high
 
 ### `fixed_field_complex_grown_basin_v2_note`
 
