@@ -6277,6 +6277,26 @@
       "to": "planck_parent_source_hidden_character_no_go_note_2026-04-24"
     },
     {
+      "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "to": "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25"
+    },
+    {
+      "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "to": "i3_zero_exact_theorem_note"
+    },
+    {
+      "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
       "from": "planck_scale_conditional_completion_note_2026-04-24",
       "to": "planck_boundary_density_extension_theorem_note_2026-04-24"
     },
@@ -18389,7 +18409,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T19:24:58.502389+00:00",
+  "generated_at": "2026-04-30T20:01:35.182848+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -31679,6 +31699,22 @@
       "runner_path": "scripts/frontier_planck_parent_source_hidden_character_nogo.py",
       "title": "Planck Parent-Source Hidden-Character No-Go Note"
     },
+    "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30": {
+      "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained; pending audit ratification",
+      "deps": [
+        "graph_first_su3_integration_note",
+        "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25",
+        "i3_zero_exact_theorem_note",
+        "native_gauge_closure_note",
+        "anomaly_forces_time_theorem"
+      ],
+      "note_hash": "d7cb1f63756577c5b81f9bc6dbeae23a6ba421d5a3026461198b6428bad375bf",
+      "path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py",
+      "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem"
+    },
     "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25": {
       "claim_id": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
       "current_status": "support",
@@ -41209,16 +41245,16 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4597,
-    "leaf_count": 721,
-    "node_count": 1656,
+    "edge_count": 4602,
+    "leaf_count": 722,
+    "node_count": 1657,
     "root_count": 1178,
-    "runners_with_path": 1173,
+    "runners_with_path": 1174,
     "status_counts": {
       "bounded": 446,
       "open": 48,
       "proposed_promoted": 1,
-      "proposed_retained": 373,
+      "proposed_retained": 374,
       "support": 375,
       "unknown": 413
     }

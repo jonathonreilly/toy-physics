@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 2,
-    "high": 238,
-    "leaf": 478,
+    "critical": 4,
+    "high": 236,
+    "leaf": 479,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:25:03.020751+00:00",
+  "generated_at": "2026-04-30T20:01:39.048646+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -22,6 +22,48 @@
       "note_path": "docs/YUKAWA_COLOR_PROJECTION_THEOREM.md",
       "ready": true,
       "runner_path": "scripts/frontier_yt_color_projection_correction.py",
+      "transitive_descendants": 250
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "su2_witten_z2_anomaly_theorem_note_2026-04-24",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "native_gauge_closure_note",
+        "left_handed_charge_matching_note",
+        "graph_first_su3_integration_note",
+        "three_generation_structure_note"
+      ],
+      "direct_in_degree": 14,
+      "load_bearing_score": 14.972,
+      "note_path": "docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 250
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "graph_first_su3_integration_note",
+        "left_handed_charge_matching_note"
+      ],
+      "direct_in_degree": 13,
+      "load_bearing_score": 14.472,
+      "note_path": "docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md",
+      "ready": false,
+      "runner_path": null,
       "transitive_descendants": 250
     },
     {
@@ -762,48 +804,6 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "su2_witten_z2_anomaly_theorem_note_2026-04-24",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "native_gauge_closure_note",
-        "left_handed_charge_matching_note",
-        "graph_first_su3_integration_note",
-        "three_generation_structure_note"
-      ],
-      "direct_in_degree": 14,
-      "load_bearing_score": 14.966,
-      "note_path": "docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 249
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "graph_first_su3_integration_note",
-        "left_handed_charge_matching_note"
-      ],
-      "direct_in_degree": 13,
-      "load_bearing_score": 14.466,
-      "note_path": "docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 249
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
       "criticality": "high",
       "criticality_rank": 2,
@@ -818,11 +818,11 @@
         "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
       ],
       "direct_in_degree": 10,
-      "load_bearing_score": 12.96,
+      "load_bearing_score": 12.966,
       "note_path": "docs/LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
       "ready": false,
       "runner_path": "scripts/frontier_lh_anomaly_trace_catalog.py",
-      "transitive_descendants": 248
+      "transitive_descendants": 249
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -21132,6 +21132,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "graph_first_su3_integration_note",
+        "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25",
+        "i3_zero_exact_theorem_note",
+        "native_gauge_closure_note",
+        "anomaly_forces_time_theorem"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "pmns_three_identity_q_koide_from_v8_support_lift_theorem_note_2026-04-29",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21575,5 +21598,5 @@
     }
   ],
   "ready_count": 614,
-  "total_pending": 1007
+  "total_pending": 1008
 }
