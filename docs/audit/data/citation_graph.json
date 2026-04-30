@@ -2693,6 +2693,22 @@
       "to": "dm_candidate_mass_window_theorem_note_2026-04-19"
     },
     {
+      "from": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
+      "to": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
+    },
+    {
+      "from": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
+      "to": "higgs_mass_from_axiom_note"
+    },
+    {
+      "from": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
+      "to": "r_base_group_theory_derivation_theorem_note_2026-04-24"
+    },
+    {
       "from": "dm_flagship_closure_review_note_2026-04-17",
       "to": "dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18"
     },
@@ -18393,7 +18409,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T13:43:12.860483+00:00",
+  "generated_at": "2026-04-30T13:45:07.909058+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -22766,6 +22782,21 @@
       "path": "docs/DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_dm_eta_freezeout_bypass_quantitative_theorem.py",
       "title": "DM eta Freezeout-Bypass Quantitative Theorem"
+    },
+    "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29": {
+      "claim_id": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
+      "current_status": "bounded",
+      "current_status_raw": "`bounded` support \u2014 the candidate is recorded as a",
+      "deps": [
+        "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
+        "higgs_mass_from_axiom_note",
+        "observable_principle_from_axiom_note",
+        "r_base_group_theory_derivation_theorem_note_2026-04-24"
+      ],
+      "note_hash": "04165d9e1bd670e1aa1de3521f325b9fa9ba71da41b1f4c8556d84dccbdc6c7e",
+      "path": "docs/DM_ETA_NSITES_V_STRUCTURAL_SUPPORT_LIFT_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_dm_eta_nsites_v_structural_support_lift.py",
+      "title": "DM eta N_sites \u00b7 v Structural Support Theorem (V1)"
     },
     "dm_flagship_closure_review_note_2026-04-17": {
       "claim_id": "dm_flagship_closure_review_note_2026-04-17",
@@ -41599,13 +41630,13 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4598,
-    "leaf_count": 752,
-    "node_count": 1691,
+    "edge_count": 4602,
+    "leaf_count": 753,
+    "node_count": 1692,
     "root_count": 1216,
-    "runners_with_path": 775,
+    "runners_with_path": 776,
     "status_counts": {
-      "bounded": 257,
+      "bounded": 258,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
