@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 237,
-    "leaf": 498,
+    "leaf": 497,
     "medium": 347
   },
-  "generated_at": "2026-04-30T15:16:59.524395+00:00",
+  "generated_at": "2026-04-30T15:17:18.520085+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -14924,23 +14924,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "distance_law_breakpoint_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DISTANCE_LAW_BREAKPOINT_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "distance_law_definitive_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -23041,6 +23024,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 679,
-  "total_pending": 1091
+  "ready_count": 678,
+  "total_pending": 1090
 }
