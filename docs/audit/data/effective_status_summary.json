@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-30T02:18:27.098088+00:00",
+  "computed_at": "2026-04-30T03:26:15.751115+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -25,21 +25,23 @@
   ],
   "cycles_detected": 59,
   "effective_status_counts": {
-    "audited_conditional": 447,
-    "audited_decoration": 4,
-    "audited_failed": 91,
-    "audited_numerical_match": 47,
-    "audited_renaming": 42,
-    "bounded": 205,
-    "open": 24,
+    "audited_conditional": 423,
+    "audited_decoration": 5,
+    "audited_failed": 165,
+    "audited_numerical_match": 49,
+    "audited_renaming": 53,
+    "bounded": 196,
+    "open": 23,
     "proposed_retained": 1,
     "retained": 82,
-    "support": 108,
-    "unknown": 537
+    "support": 99,
+    "unknown": 492
   },
-  "proposed_demoted_by_upstream_count": 153,
+  "proposed_demoted_by_upstream_count": 156,
   "proposed_demoted_by_upstream_examples": [
+    "area_law_quarter_broader_no_go_note_2026-04-25",
     "atomic_hydrogen_helium_probe_note",
+    "bh_entropy_rt_ratio_widom_no_go_note",
     "bminusl_anomaly_freedom_theorem_note_2026-04-24",
     "causal_impact_parameter_note",
     "charged_lepton_koide_cone_algebraic_equivalence_note",
@@ -61,8 +63,6 @@
     "ckm_brocard_q_polynomial_perfect_square_decomposition_theorem_note_2026-04-25",
     "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25",
     "ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25",
-    "ckm_compound_magnitudes_circumradius_bridge_theorem_note_2026-04-25",
-    "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-    "ckm_cp_product_alpha_s_cross_sector_extraction_theorem_note_2026-04-25"
+    "ckm_compound_magnitudes_circumradius_bridge_theorem_note_2026-04-25"
   ]
 }
