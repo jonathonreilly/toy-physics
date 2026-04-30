@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:03:37.870929+00:00
+**Generated:** 2026-04-30T22:04:54.109530+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 7 |
 | bounded | 280 |
-| support | 251 |
+| support | 250 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 738 |
+| ~~audited_conditional~~ | 739 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 212 |
-| `audited_conditional` | 461 |
+| `audited_conditional` | 462 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 800 |
+| `unaudited` | 799 |
 
 | criticality | count |
 |---|---:|
@@ -716,6 +716,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `single_axiom_hilbert_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `sixth_family_distance_law_third_vs_sixth_quick_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_generated_support_recovery_basin_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_propagating_green_pocket_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -10269,6 +10270,22 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 - **load-bearing step:** The framework has a coherent conditional signed-response consequence harness and a sharp determinant-orientation support/no-go boundary, but it does not yet derive physical signed gravity.  _(class `C`)_
 - **chain closes:** True — The status note closes on its support/open surface: the runner verifies the conditional locked-sign algebra, finite local/taste-cell selector no-go, local signed-source primitive block, eta-neutral native boundary complex, hosted-but-unselected orientation line, and explicit nonclaim boundaries. The result is only a lane-status/no-go boundary, not a retained physical repulsive-gravity sector.
 - **rationale:** The support-tier status claim is deliberately bounded and the runner matches that bounded surface. It shows the locked source/response sign consequence works only when chi_g is supplied, local/taste-cell and local-source selector routes are blocked, determinant orientation is hosted but not canonically selected, and the physical signed-gravity sector remains unretained. Residual risk is downstream overstatement of this lane as antigravity or as a derived APS/Wald/Gauss/source-action bridge, both of which the note explicitly forbids.
+- **auditor confidence:** high
+
+### `single_axiom_hilbert_note`
+
+- **Note:** [`SINGLE_AXIOM_HILBERT_NOTE.md`](../../docs/SINGLE_AXIOM_HILBERT_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-14`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The two axioms reduce to one: a finite-dimensional Hilbert space with local tensor product structure.  _(class `C`)_
+- **chain closes:** False — The runner gives small-system support demos, but the claimed one-axiom reduction still imports extra structure: local dimension, a Hermitian/local Hamiltonian, the local interaction restriction, and the probability/readout convention. The note's own caveats acknowledge that the Hamiltonian and locality qualifier do real work beyond the bare Hilbert tensor product.
+- **rationale:** Issue: the numerical tests support a compression heuristic, but they do not derive graph, unitarity, Born probabilities, and gravity/locality from a single bare axiom. Why this blocks: the conclusion still requires specifying the Hamiltonian, Hermiticity, local interaction support, local dimension, and the Born/readout rule; the runner is a set of small random demonstrations rather than a closure theorem, and its locality test even reports a failed near/far gradient while passing a weaker spread comparison. Repair target: state a formal single-axiom package that includes or derives the Hamiltonian/locality/probability structures, then prove graph recovery and unitarity/Born/locality consequences as theorems rather than small-system demos. Claim boundary until fixed: finite tensor-product Hilbert spaces with local Hermitian Hamiltonians provide useful support for framework compression; they do not by themselves reduce the current framework to one closed axiom.
+- **open / conditional deps cited:**
+  - `local_dimension_and_hamiltonian_specification`
+  - `hermitian_local_interaction_restriction`
+  - `born_rule_readout_postulate`
 - **auditor confidence:** high
 
 ### `site_phase_cube_shift_intertwiner_note`
