@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:20:41.899950+00:00
+**Generated:** 2026-04-30T00:20:45.482874+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -23,19 +23,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 12 |
 | bounded | 215 |
 | support | 114 |
-| open | 25 |
+| open | 24 |
 | unknown | 565 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 195 |
+| ~~audited_conditional~~ | 196 |
 | ~~audited_failed~~ | 341 |
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 13 |
+| `audit_in_progress` | 12 |
 | `audited_clean` | 78 |
-| `audited_conditional` | 131 |
+| `audited_conditional` | 132 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 12 |
@@ -98,7 +98,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 |---|---|---|---|---|---|---|---|
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | unknown | audit_in_progress | unknown | - | - | - | - |
-| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open | audit_in_progress | open | - | - | - | - |
 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | support | audit_in_progress | support | - | - | - | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
@@ -221,6 +220,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `graph_first_selector_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -1725,6 +1725,21 @@ Claim boundary until fixed: safe to claim the constant-lift obstruction Gamma_ca
 - **chain closes:** False — The witnesses show finite-jet plus monotonicity underdetermination, but they are not shown to be realizable Wilson reduction laws compatible with the full hierarchy or compact spectral-measure constraints.
 - **rationale:** Issue: the witness beta_eff laws are arbitrary analytic monotone functions, not constructed from admissible Wilson source surfaces or compact plaquette spectral measures. Why this blocks: an obstruction to the current exact stack must exhibit two models satisfying all closed stack constraints, not only the finite onset jet. Repair target: prove the witnesses are realized by positive Wilson/spectral data satisfying the full stated structural stack, or weaken the claim to finite-jet underdetermination. Claim boundary until fixed: the finite beta^5 onset jet and monotonicity alone do not determine P(6).
 - **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_local_environment_factorization_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-fresh-cross-confirm-20260430-session-b`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Every non-marked mixed-link factor acts only through the trivial irrep on the marked plaquette class-function sector and therefore contributes a rep-independent scalar.  _(class `A`)_
+- **chain closes:** False — The conclusion depends on an unprovided exact temporal-gauge mixed-kernel/source-sector factorization and on the claim that non-marked mixed links cannot leave representation-dependent data after compression.
+- **rationale:** Issue: the note asserts the non-marked mixed-link factors collapse to the trivial channel on the marked sector without a provided derivation through the full Wilson integration/compression. Why this blocks: the theorem's exact-local conclusion depends on excluding representation-dependent environment contributions. Repair target: provide a retained derivation of the temporal-gauge mixed-kernel compression showing non-marked links act as identity after normalization, with a runner that constructs the Wilson compression rather than setting c00/c00. Claim boundary until fixed: the local marked-link factor a_(p,q)(beta)^4 is a plausible isolated mixed-kernel component, but full normalized mixed-kernel exactness remains conditional.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md`
+  - `GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md`
+- **auditor confidence:** medium
 
 ### `gauge_vacuum_plaquette_mixed_cumulant_audit_note`
 
