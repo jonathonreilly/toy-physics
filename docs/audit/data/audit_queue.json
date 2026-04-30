@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 484,
+    "leaf": 483,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:15:40.689385+00:00",
+  "generated_at": "2026-04-30T19:15:46.730739+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20583,30 +20583,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
-        "planck_boundary_density_extension_theorem_note_2026-04-24",
-        "universal_gr_discrete_global_closure_note",
-        "universal_gr_lorentzian_global_atlas_closure_note",
-        "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-        "planck_source_unit_normalization_support_theorem_note_2026-04-25"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_bh_quarter_wald_noether_framework_carrier.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21632,5 +21608,5 @@
     }
   ],
   "ready_count": 619,
-  "total_pending": 1010
+  "total_pending": 1009
 }

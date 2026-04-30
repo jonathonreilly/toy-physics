@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:15:40.872650+00:00
+**Generated:** 2026-04-30T19:15:46.895865+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,12 +33,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 132 |
-| `audited_conditional` | 332 |
+| `audited_conditional` | 333 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1010 |
+| `unaudited` | 1009 |
 
 | criticality | count |
 |---|---:|
@@ -260,6 +260,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `beyond_lattice_qcd_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `bh_entropy_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `bmv_bounded_negative_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `born_lane_comparison_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `broad_surrogate_point_source_compare_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1343,6 +1344,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`
   - `asymptotic Widom-Gioev-Klich free-fermion carrier analysis`
   - `alternative carrier or gravitational entropy normalization required for promotion`
+- **auditor confidence:** high
+
+### `bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29`
+
+- **Note:** [`BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md`](../../docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** and the gravitational boundary/action-density identification as an  _(class `B`)_
+- **chain closes:** False — No. One-hop dependencies are not all retained (planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25=audited_conditional, planck_boundary_density_extension_theorem_note_2026-04-24=audited_conditional, universal_gr_discrete_global_closure_note=audited_conditional), so the chain does not close under the leaf audit rule.
+- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25=audited_conditional, planck_boundary_density_extension_theorem_note_2026-04-24=audited_conditional, universal_gr_discrete_global_closure_note=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
+- **open / conditional deps cited:**
+  - `PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`
+  - `PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md`
+  - `UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`
+  - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`
+  - `PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md`
 - **auditor confidence:** high
 
 ### `bmv_bounded_negative_note`
