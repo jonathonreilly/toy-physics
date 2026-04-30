@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:20:28.375155+00:00
+**Generated:** 2026-04-30T01:21:31.359028+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,26 +21,26 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 78 |
 | _proposed_retained_ | 19 |
-| bounded | 214 |
+| bounded | 213 |
 | support | 108 |
 | open | 24 |
 | unknown | 550 |
 | ~~audited_decoration~~ | 4 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 442 |
+| ~~audited_conditional~~ | 443 |
 | ~~audited_failed~~ | 89 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 78 |
-| `audited_conditional` | 147 |
+| `audited_conditional` | 148 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1288 |
+| `unaudited` | 1287 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 382 |
 | `leaf` | 797 |
 
-- **Proposed claims demoted by upstream:** 151
+- **Proposed claims demoted by upstream:** 150
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -183,6 +183,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `chiral_3plus1d_mixing_period_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `ckm_schur_complement_theorem` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `continuum_identification_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `diamond_nv_phase_ramp_signal_budget_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
@@ -834,6 +835,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`
   - `scripts/canonical_plaquette_surface.py`
   - `standard_lattice_qcd_sommer_and_string_tension_inputs`
+- **auditor confidence:** high
+
+### `continuum_identification_note`
+
+- **Note:** [`CONTINUUM_IDENTIFICATION_NOTE.md`](../../docs/CONTINUUM_IDENTIFICATION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The discrete-to-continuum chain for gravity is a 19-step exact identification ladder on one chosen canonical textbook target, all retained on main; the gauge sector is positioned through retained structural results plus a bounded EFT bridge.  _(class `B`)_
+- **chain closes:** False — The runner verifies presence of named notes and runners, but does not execute or audit the 19-step chain, the gauge authorities, or the EFT/universality bridge. The only ledger dependency supplied to this audit is the emergent Lorentz note, whose current status is bounded.
+- **rationale:** Issue: the claim imports a large continuum-identification authority stack and a gauge EFT bridge, but the audit packet registers only a bounded Lorentz dependency and the runner performs file-existence checks rather than theorem replay. Why this blocks: a hostile auditor cannot ratify the claimed continuum closure from this packet because the load-bearing chain status is summarized, not derived or provided as one-hop retained authorities. Repair target: register the actual 19 gravity authorities and gauge bridge authorities as ledger dependencies, require their effective statuses to be retained, and replace the audit runner with a replay/status check that verifies the load-bearing outputs rather than merely their files. Claim boundary until fixed: the note can serve as a continuum-identification index and bounded positioning statement, not as an audit-clean retained continuum theorem.
+- **open / conditional deps cited:**
+  - `EMERGENT_LORENTZ_INVARIANCE_NOTE.md`
 - **auditor confidence:** high
 
 ### `continuum_limit_note`

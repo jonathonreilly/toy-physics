@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T01:20:28.122944+00:00",
-  "generated_at": "2026-04-30T01:20:26.279874+00:00",
-  "invalidation_run_at": "2026-04-30T01:20:28.060245+00:00",
+  "effective_status_computed_at": "2026-04-30T01:21:31.105613+00:00",
+  "generated_at": "2026-04-30T01:21:29.239978+00:00",
+  "invalidation_run_at": "2026-04-30T01:21:31.042952+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T01:20:27.936085+00:00",
+  "load_bearing_computed_at": "2026-04-30T01:21:30.917013+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -3329,8 +3329,8 @@
       "load_bearing_score": 9.426,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
-      "max_descendant_status": "bounded",
-      "max_descendant_status_rank": 60,
+      "max_descendant_status": "unknown",
+      "max_descendant_status_rank": 30,
       "note_hash": "7353c18d547e13a31f8f335e32fd342c301c9151ce0d129d35970de2cb9d72f8",
       "note_path": "docs/BH_ENTROPY_DERIVED_NOTE.md",
       "open_dependency_paths": [],
@@ -11801,14 +11801,25 @@
       "verdict_rationale": null
     },
     "continuum_identification_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T01:21:23.729827+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "emergent_lorentz_invariance_note": "bounded"
+        },
+        "deps": [
+          "emergent_lorentz_invariance_note"
+        ],
+        "load_bearing_score": 9.044,
+        "transitive_descendants": 32
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies presence of named notes and runners, but does not execute or audit the 19-step chain, the gauge authorities, or the EFT/universality bridge. The only ledger dependency supplied to this audit is the emergent Lorentz note, whose current status is bounded.",
       "claim_id": "continuum_identification_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -11818,18 +11829,20 @@
         "emergent_lorentz_invariance_note"
       ],
       "direct_in_degree": 8,
-      "effective_status": "bounded",
-      "effective_status_reason": "inherited_from:emergent_lorentz_invariance_note",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "self",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 9.044,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The discrete-to-continuum chain for gravity is a 19-step exact identification ladder on one chosen canonical textbook target, all retained on main; the gauge sector is positioned through retained structural results plus a bounded EFT bridge.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "c0daabf6ad82149fe4213756404dbb5473a7e4f32908882b424008fa0ff563d9",
       "note_path": "docs/CONTINUUM_IDENTIFICATION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367961+00:00",
@@ -11859,15 +11872,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
+        "B": 56,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 56
       },
       "runner_path": "scripts/frontier_continuum_identification_audit.py",
       "title": "Continuum Identification: Gravity and Gauge",
       "transitive_descendants": 32,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the claim imports a large continuum-identification authority stack and a gauge EFT bridge, but the audit packet registers only a bounded Lorentz dependency and the runner performs file-existence checks rather than theorem replay. Why this blocks: a hostile auditor cannot ratify the claimed continuum closure from this packet because the load-bearing chain status is summarized, not derived or provided as one-hop retained authorities. Repair target: register the actual 19 gravity authorities and gauge bridge authorities as ledger dependencies, require their effective statuses to be retained, and replace the audit runner with a replay/status check that verifies the load-bearing outputs rather than merely their files. Claim boundary until fixed: the note can serve as a continuum-identification index and bounded positioning statement, not as an audit-clean retained continuum theorem."
     },
     "continuum_limit_note": {
       "audit_date": "2026-04-26",
