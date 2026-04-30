@@ -5,7 +5,7 @@ Koide δ Dimensionless Closure via V8 (Block 2) audit
 Section 1: V8 (Block 1, Q closure) prerequisite check
 ------------------------------------------------------------------------
 [PASS] V8 note exists on disk — block 1 closure note found
-[PASS] V8 carries proposed_retained status — V8 firewall: proposed_retained
+[PASS] V8 carries support status — V8 firewall: support
 [PASS] V8 carries audit-required-before-effective-retained flag — V8 firewall: audit required
 [PASS] V8 closes Q = 2/3 on A_min — V8 §2 theorem statement
 
@@ -42,7 +42,7 @@ Section 4: radian-bridge postulate P status (NOT closed)
 
 Section 5: V1 status firewall fields
 ------------------------------------------------------------------------
-[PASS] V1 carries actual_current_surface_status: proposed_retained — V1 firewall
+[PASS] V1 carries actual_current_surface_status: support — V1 firewall
 [PASS] V1 carries audit_required_before_effective_retained: true — V1 firewall
 [PASS] V1 carries bare_retained_allowed: false — V1 firewall
 [PASS] V1 records radian_bridge_postulate_P_status: open — V1 firewall: P explicitly open
@@ -57,8 +57,8 @@ Section 6: forbidden imports check
 
 ========================================================================
 FAIL count: 0
-DELTA_DIMENSIONLESS_PROPOSED_RETAINED_CHAIN_VERIFIED = True
+DELTA_DIMENSIONLESS_SUPPORT_COMPOSITION_VERIFIED = True
 RADIAN_BRIDGE_POSTULATE_P_STATUS = open  # NOT closed by V1
-(This flag verifies the V1 dimensionless chain authorities + algebraic identities. The radian-bridge postulate P remains explicitly open. Independent audit required before the repo treats this as effective retained.)
+(This flag verifies the V1 dimensionless chain authorities + algebraic identities. The radian-bridge postulate P remains explicitly open. Independent audit and upstream ratification are required before any stronger status.)
 
 All Block 2 chain authorities + algebraic identities verified.

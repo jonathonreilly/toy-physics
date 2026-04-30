@@ -1,20 +1,20 @@
 # Koide δ Dimensionless Closure via V8 Theorem (V1)
 
 **Date:** 2026-04-29
-**Status (actual current surface):** `proposed_retained` author proposal for
-the DIMENSIONLESS `δ = 2/9` closure on the A_min surface, composing
-V8 (Block 1, Koide Q OP-Locality Source-Domain Closure) with the
-retained Brannen phase reduction theorem and Plancherel identity. The
-RADIAN-BRIDGE postulate P (Type-B-to-radian identification) remains an
-explicitly named residual; the literal `δ = 2/9 rad` Brannen-PDG match
-is recorded as `support-grade` numerical witness, NOT promoted by this
-note. Bare `retained` / `promoted` is NOT used.
+**Status:** support: dimensionless δ=2/9 composition, conditional on V8 (Block 1) ratification and radian-bridge postulate P.
+This note composes V8 (Block 1, Koide Q OP-Locality Source-Domain
+Closure) with the retained Brannen phase reduction theorem and
+Plancherel identity. The RADIAN-BRIDGE postulate P (Type-B-to-radian
+identification) remains an explicitly named residual; the literal
+`δ = 2/9 rad` Brannen-PDG match is recorded as `support-grade`
+numerical witness, NOT promoted by this note. Bare `retained` /
+`promoted` is NOT used.
 **Primary runner:** `scripts/frontier_koide_delta_dimensionless_closure_via_v8.py`
 
 **Cited authorities (one-hop deps):**
 - [KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md](KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md)
-  — V8 Q closure (Block 1; `proposed_retained`); load-bearing input
-  for the dimensionless δ chain.
+  — V8 Q support chain (Block 1; support, audit-pending); load-bearing
+  input for the dimensionless δ chain.
 - [KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md](KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md)
   — Brannen phase reduction theorem (`δ = Q/d` from doublet
   conjugate-pair `n_eff = 2` and `d = 3`); retained on `main`.
@@ -44,13 +44,13 @@ The Koide `δ = 2/9` closure has two distinct semantic layers:
 
 The Brannen phase reduction theorem and the Q-δ linking relation
 already retained the dimensionless chain CONDITIONAL on `Q = 2/3`
-(I1 in V4's terminology). Block 1 (V8) closed `Q = 2/3` as
-`proposed_retained` from the A_min surface via the OP-locality
-structural argument.
+(I1 in V4's terminology). Block 1 (V8) now records `Q = 2/3` as
+support on main via the OP-locality structural argument; it remains
+audit-pending rather than audit-ratified.
 
 **This V1 note composes V8 (Block 1) with the retained Brannen pieces
-to lift the dimensionless `δ = 2/9` from CONDITIONAL to UNCONDITIONAL
-on A_min**, modulo audit ratification of V8 (Block 1).
+to record a support-tier dimensionless `δ = 2/9` composition on
+A_min**, conditional on audit ratification of V8 (Block 1).
 
 The RADIAN bridge (literal 2/9 rad ≡ dimensionless 2/9) is NOT closed
 by this note. It remains the named residual postulate P, with the
@@ -64,24 +64,24 @@ witness only.
 ```text
 A_min  +  PHYSICAL_LATTICE_NECESSITY §9  +  OP T1+T2  +  ONSITE no-go
        +  Canonical-descent T1  +  CRIT
-   ─[V8 chain (Block 1, 2026-04-29)]─→  Q = 2/3 (proposed_retained)
+   ─[V8 chain (Block 1, 2026-04-29)]─→  Q = 2/3 (support, audit-pending)
 
 Q = 2/3  +  Brannen phase reduction theorem
-   ─[δ = Q/d at d = 3]─→  δ = 2/9 (DIMENSIONLESS, proposed_retained)
+   ─[δ = Q/d at d = 3]─→  δ = 2/9 (DIMENSIONLESS, support composition)
 
 Brannen Plancherel identity
    ─[arg(b) = δ (mod 2π) inside Brannen parameterization]─→
        arg(b) = 2/9 (mod 2π) on the Brannen carrier
 ```
 
-The composition uses only retained authorities + V8 (Block 1). No
-observed lepton mass enters.
+The composition uses the registered authorities + V8 (Block 1 support).
+No observed lepton mass enters.
 
 The retained `Q = p·δ` arithmetic identity (`Q = 2/3 = 3 · (2/9) =
 p · δ`) is now structurally forced rather than an arithmetic
-coincidence on the support-route values: V8 closes Q, and Brannen
-phase reduction gives δ = Q/d = Q/p, so `Q · 1 = p · (Q/p) = p · δ`
-identically.
+coincidence on the support-route values: V8 supplies the support-tier
+Q input, and Brannen phase reduction gives δ = Q/d = Q/p, so
+`Q · 1 = p · (Q/p) = p · δ` identically.
 
 ---
 
@@ -99,8 +99,9 @@ On the A_min surface (with V8 closure of Q from Block 1):
 3. The retained `Q = p·δ` arithmetic identity (`Q = 3δ` at p = d = 3)
    is now structurally forced rather than coincidental.
 
-**Status:** `proposed_retained` for the DIMENSIONLESS reading on A_min.
-Audit-required-before-effective-retained flag carried per skill.
+**Status:** support for the DIMENSIONLESS reading on A_min, conditional
+on V8 (Block 1) ratification. Audit-required-before-effective-retained
+flag carried per skill.
 
 The identification of dimensionless `2/9` with `2/9 rad` (postulate P)
 is NOT closed by this theorem.
@@ -108,7 +109,8 @@ is NOT closed by this theorem.
 ### Proof
 
 **Step 1 (Q closure).** By V8 (Block 1, 2026-04-29), `Q = 2/3` is
-`proposed_retained` on A_min via the OP-locality structural chain.
+support on A_min via the OP-locality structural chain and remains
+audit-pending.
 
 **Step 2 (Brannen phase reduction).** By KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM
 §1.3 + §2.3:
@@ -139,16 +141,16 @@ The radian-bridge step (postulate P) is not part of this theorem.
 ## 3. Status firewall fields (per skill SKILL.md §Claim-Status Firewalls)
 
 ```yaml
-actual_current_surface_status: proposed_retained
+actual_current_surface_status: support
 conditional_surface_status: null
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: true
 proposal_allowed_reason: |
-  Composes V8 (Block 1 proposed_retained Q closure) with retained
+  Composes V8 (Block 1 support/audit-pending Q chain) with retained
   Brannen phase reduction theorem and Plancherel identity. No new
-  axiom, no observed mass. The dimensionless δ = 2/9 chain is
-  axiom-to-readout once V8 lands.
+  axiom, no observed mass. The dimensionless δ = 2/9 composition
+  remains support-tier until V8 is ratified; postulate P remains open.
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 radian_bridge_postulate_P_status: open  # not closed by this note
@@ -164,10 +166,10 @@ as support-grade only.
 
 ## 4. What is and is NOT closed
 
-### Closed by V1 (this note)
+### Support-tier composition recorded by V1
 
-1. dimensionless `δ = 2/9 = n_eff/d²` on A_min (proposed_retained,
-   composed with V8);
+1. dimensionless `δ = 2/9 = n_eff/d²` on A_min (support, composed
+   with V8);
 2. structural status of the `Q = p·δ` arithmetic identity (now forced
    rather than coincidental);
 3. Plancherel `arg(b) = 2/9 (mod 2π)` inside the Brannen parameterization
@@ -201,18 +203,18 @@ as support-grade only.
 **P1 (whether dimensionless `δ = 2/9` is genuine progress without P).**
 The Brannen-PDG match makes the literal radian reading the PHYSICAL
 observable. Without P, the dimensionless 2/9 is not the observed δ.
-Response: V1 closes the dimensionless half because it composes V8
-with retained Brannen pieces; the PDG match becomes a sharp
+Response: V1 records support for the dimensionless half because it
+composes V8 with retained Brannen pieces; the PDG match becomes a sharp
 falsifiable target for postulate P (rather than two independent open
 imports). This is genuine import retirement at the dimensionless
 layer, even if P remains.
 
 **P2 (wishful composition).** The Brannen phase reduction theorem
 (2026-04-20) was retained CONDITIONAL on Q = 2/3 (I1 open at the time).
-V8 (Block 1, 2026-04-29) closes Q on A_min. Composing the two is the
-intended use of "conditional theorem becomes unconditional once
-condition closes." V1 does not introduce new content beyond the
-composition; the strict-reading worry sits entirely inside V8.
+V8 (Block 1, 2026-04-29) records support for Q on A_min. Composing the
+two is conditional on the V8 support route being ratified. V1 does not
+introduce new content beyond the composition; the strict-reading worry
+sits entirely inside V8.
 
 ---
 
@@ -220,30 +222,24 @@ composition; the strict-reading worry sits entirely inside V8.
 
 | Element | KOIDE_BRANNEN_PHASE_REDUCTION (2026-04-20) | KOIDE_A1_BRANNEN_PLANCHEREL_IDENTITY (2026-04-25) | This V1 (2026-04-29) |
 |---|---|---|---|
-| `δ = Q/d` chain | retained conditional on Q | unchanged | retained unconditional via V8 |
+| `δ = Q/d` chain | retained conditional on Q | unchanged | support composition via V8 |
 | Plancherel `arg(b) = δ` | retained | support-grade | composed support |
 | Postulate P | open | open | open (unchanged) |
-| `Q = 2/3` source | I1 open | unchanged | V8 (Block 1) proposed_retained |
-| Closure status | conditional | conditional | dimensionless δ = 2/9 proposed_retained |
+| `Q = 2/3` source | I1 open | unchanged | V8 (Block 1) support, audit-pending |
+| Closure status | conditional | conditional | dimensionless δ = 2/9 support |
 | Audit required | yes | yes | yes |
 
 V1 does NOT supersede prior notes. It composes them with V8.
 
 ---
 
-## 6. Cascade unlocked (proposed for later weaving)
+## 6. Integration boundary
 
-If V1 is audit-ratified (depends on V8 audit ratification first):
-
-- **line 192 (charged-lepton Koide bridge package):** δ residual moves
-  from "open" to "dimensionless closed; radian-bridge open" status —
-  the cascade is partially complete.
-- **line 166 (charged-lepton Koide support package Q=2/3, δ=2/9):**
-  dimensionless half promotable; radian-bridge half remains support.
-- **lines 158–162 (CKM Koide-bridge supports):** "no Koide closure"
-  qualifier removable for both Q and the dimensionless δ.
-
-Repo-wide weaving is DEFERRED to later review.
+This support-tier note does not unlock downstream row changes or remove
+existing qualifiers from adjacent Koide / CKM scaffolding. Any later
+weaving pass must wait for separately audited stronger results for V8
+(Block 1), this dimensionless composition, and the radian-bridge
+postulate P.
 
 ---
 
@@ -255,7 +251,7 @@ python3 scripts/frontier_koide_delta_dimensionless_closure_via_v8.py
 
 The runner audits:
 
-1. V8 (Block 1) note exists on disk + carries `proposed_retained` +
+1. V8 (Block 1) note exists on disk + carries support status +
    audit-required flag + Q = 2/3 chain.
 2. Brannen phase reduction theorem exists on disk + `n_eff = 2` +
    `d = 3` + `δ = n_eff/d²`.
@@ -316,7 +312,7 @@ review-loop assignment. None is closed in V1.
 
 ## 9. Honest residual
 
-After V1 lands as `proposed_retained` (composed with V8), the
+After V1 lands as support (composed with V8), the
 remaining Koide closure residuals are:
 
 - **Postulate P (radian-bridge):** literal 2/9 rad ≡ dimensionless 2/9
@@ -325,5 +321,6 @@ remaining Koide closure residuals are:
 - Overall lepton scale `v_0` — out of campaign scope.
 - Down-type quark cross-sector universality (Block 3) — pending.
 
-The dimensionless half of Koide δ is now structurally on A_min modulo
-audit ratification of V8 (Block 1) and V1 (this note).
+The dimensionless half of Koide δ is recorded here as support-tier
+structural evidence on A_min, conditional on audit ratification of V8
+(Block 1), V1 (this note), and the radian-bridge postulate P.

@@ -55,9 +55,9 @@ def main() -> int:
         "block 1 closure note found",
     )
     audit(
-        "V8 carries proposed_retained status",
-        "actual_current_surface_status: proposed_retained" in v8_text,
-        "V8 firewall: proposed_retained",
+        "V8 carries support status",
+        "actual_current_surface_status: support" in v8_text,
+        "V8 firewall: support",
     )
     audit(
         "V8 carries audit-required-before-effective-retained flag",
@@ -266,8 +266,8 @@ def main() -> int:
         "KOIDE_DELTA_DIMENSIONLESS_CLOSURE_VIA_V8_THEOREM_NOTE_2026-04-29.md"
     )
     audit(
-        "V1 carries actual_current_surface_status: proposed_retained",
-        "actual_current_surface_status: proposed_retained" in own_text,
+        "V1 carries actual_current_surface_status: support",
+        "actual_current_surface_status: support" in own_text,
         "V1 firewall",
     )
     audit(
@@ -317,14 +317,14 @@ def main() -> int:
     fail_count = len(AUDIT_FAILS)
     print(f"FAIL count: {fail_count}")
 
-    DELTA_DIMENSIONLESS_PROPOSED_RETAINED_CHAIN_VERIFIED = (
+    DELTA_DIMENSIONLESS_SUPPORT_COMPOSITION_VERIFIED = (
         fail_count == 0
         and delta_dim == sp.Rational(2, 9)
         and Q_via_pdelta == Q
     )
     print(
-        f"DELTA_DIMENSIONLESS_PROPOSED_RETAINED_CHAIN_VERIFIED = "
-        f"{DELTA_DIMENSIONLESS_PROPOSED_RETAINED_CHAIN_VERIFIED}"
+        f"DELTA_DIMENSIONLESS_SUPPORT_COMPOSITION_VERIFIED = "
+        f"{DELTA_DIMENSIONLESS_SUPPORT_COMPOSITION_VERIFIED}"
     )
     print(
         "RADIAN_BRIDGE_POSTULATE_P_STATUS = open  # NOT closed by V1"
@@ -332,8 +332,8 @@ def main() -> int:
     print(
         "(This flag verifies the V1 dimensionless chain authorities + "
         "algebraic identities. The radian-bridge postulate P remains "
-        "explicitly open. Independent audit required before the repo "
-        "treats this as effective retained.)"
+        "explicitly open. Independent audit and upstream ratification "
+        "are required before any stronger status.)"
     )
 
     if fail_count == 0:
