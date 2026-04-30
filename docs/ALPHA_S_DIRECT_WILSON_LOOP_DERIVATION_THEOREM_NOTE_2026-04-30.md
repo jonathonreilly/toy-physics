@@ -172,20 +172,44 @@ matrix helpers, Cabibbo-Marinari SU(2)-subgroup heat-bath update,
 overrelaxation update, staple sums, APE spatial smearing, plaquette
 diagnostics, and rectangular Wilson-loop measurement.
 
-The compiled heat-bath speedup was real but below the explicit production
-gate:
+The first compiled benchmark exposed a real bug: the SU(2) subgroup projection
+used the raw `2x2` determinant rather than the quaternionic SU(2) component
+that controls the local `Re Tr(R W)` action.  After replacing that projection,
+rewriting the staple builder to use scratch buffers, and adding
+checkerboard-parallel sweeps plus a parallel Wilson-loop measurement kernel,
+the compiled backend passes the local speed and stability checks.
 
 | Compiled benchmark | Timing | Speedup vs pure-Python heat-bath | Gate |
 |---|---:|---:|---|
-| `4^4`, heat-bath only, 20 sweeps | `4.503 us/link` | `40.53x` | FAIL |
-| `8^4`, heat-bath only, 100 sweeps | `5.205 us/link` | `35.06x` | FAIL |
-| `8^3 x 16`, heat-bath only, 20 sweeps | `5.446 us/link` | `33.51x` | FAIL |
-| `8^4`, heat-bath plus 4 overrelaxation sweeps | `22.258 us/link` | `8.20x` | FAIL |
+| `12^3 x 24`, heat-bath only | `0.941 us/link` | `194.01x` | PASS |
+| `16^3 x 32`, heat-bath only | `1.421 us/link` | `128.39x` | PASS |
+| `24^3 x 48`, heat-bath only | `1.198 us/link` | `152.35x` | PASS |
+| `8^4`, heat-bath plus 4 overrelaxation sweeps | `3.506 us/link` | `52.06x` | PASS |
+| `8^3 x 16`, heat-bath plus 4 overrelaxation sweeps | `3.505 us/link` | `52.07x` | PASS |
+| `12^3 x 24`, heat-bath plus 3 overrelaxation sweeps | `3.074 us/link` | `59.38x` | PASS |
 
-The overrelaxation-4 run also produced a plaquette diagnostic near `0.00195`,
-while the heat-bath-only diagnostics remained in the expected rough beta=6
-range around `0.56`.  The current overrelaxation kernel is therefore not
-production-valid and must not be used to certify the theorem.
+The full larger-volume heat-bath-plus-three-overrelaxation benchmarks are
+stable but do not clear `50x` when the deliberately extra microcanonical
+sweeps are included in the denominator:
+
+```text
+16^3 x 32, OR=3: 4.963 us/link, 36.77x
+24^3 x 48, OR=3: 4.018 us/link, 45.42x
+```
+
+The heat-bath kernel itself clears the `50x` gate on those geometries.  The
+remaining blocker is not compiled inner-loop availability; it is the wall
+clock for the full three-volume production campaign.
+
+Using `OR=3`, `400` saved configurations per volume, and full `R,T <= 8`
+Wilson-loop measurements, the current estimate is:
+
+| Volume | Update wall time | Measurement wall time | Total estimate |
+|---|---:|---:|---:|
+| `12^3 x 24` | 2.97 h | 0.35 h | 3.33 h |
+| `16^3 x 32` | 15.18 h | 1.11 h | 16.29 h |
+| `24^3 x 48` | 62.21 h | 5.61 h | 67.83 h |
+| Total | 80.37 h | 7.07 h | 87.44 h |
 
 The production evidence therefore remains absent.  The branch records the
 blocker in:

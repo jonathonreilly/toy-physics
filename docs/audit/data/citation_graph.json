@@ -18409,7 +18409,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T20:59:16.959179+00:00",
+  "generated_at": "2026-04-30T21:50:32.872321+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19558,7 +19558,7 @@
         "graph_first_su3_integration_note",
         "minimal_axioms_2026-04-11"
       ],
-      "note_hash": "9a7438b271f957e79ab49b0915c680d6b8dd41f1c2f2cdf0942900bd205bece6",
+      "note_hash": "5c028d837dbcdf016cda78d24112b40effab42ab9736d9d341c97f9bf95090f1",
       "path": "docs/ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_alpha_s_direct_wilson_loop.py",
       "title": "Direct Wilson-Loop `alpha_s(M_Z)` Derivation Gate"

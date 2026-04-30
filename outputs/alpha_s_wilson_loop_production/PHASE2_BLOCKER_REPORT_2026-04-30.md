@@ -60,8 +60,11 @@ clang: available
 On follow-up, `numba` was installed and a compiled backend was added in
 `scripts/alpha_s_numba_wilson_loop_mc.py`.  The backend compiles the
 link-update, staple, APE-smearing, plaquette, and Wilson-loop kernels under
-`numba @njit`, but its measured speed and overrelaxation diagnostics still do
-not satisfy the production gate.  The compiled benchmark is recorded in:
+`numba @njit`.  A first attempt failed the speed and overrelaxation-stability
+checks; the fixed backend now uses the quaternionic SU(2) projection,
+scratch-buffer in-place staples, checkerboard-parallel updates, and a
+parallel Wilson-loop measurement kernel.  The compiled benchmark is recorded
+in:
 
 ```text
 outputs/alpha_s_wilson_loop_production/COMPILED_MC_NUMBA_BENCHMARK_REPORT_2026-04-30.md
@@ -139,25 +142,31 @@ not satisfy the requested `>=100x` speedup target.
 The compiled backend was benchmarked against the pure-Python heat-bath
 reference of `182.5 us/link`.
 
-Heat-bath-only benchmarks:
+Superseded first-attempt benchmark:
 
 ```text
 4^4, 20 sweeps:       4.503 us/link, 40.53x speedup, 50x gate FAIL
 8^4, 100 sweeps:      5.205 us/link, 35.06x speedup, 50x gate FAIL
 8^3 x 16, 20 sweeps:  5.446 us/link, 33.51x speedup, 50x gate FAIL
+8^4, OR=4, 20 sweeps: 22.258 us/link, 8.20x speedup, plaquette collapse
 ```
 
-Heat-bath plus four overrelaxation sweeps:
+Fixed backend benchmark:
 
 ```text
-8^4, 20 sweeps: 22.258 us/link, 8.20x speedup, 50x gate FAIL
+12^3 x 24 heat-bath only: 0.941 us/link, 194.01x speedup, PASS
+16^3 x 32 heat-bath only: 1.421 us/link, 128.39x speedup, PASS
+24^3 x 48 heat-bath only: 1.198 us/link, 152.35x speedup, PASS
+8^4, OR=4:                 3.506 us/link, 52.06x speedup, PASS
+8^3 x 16, OR=4:            3.505 us/link, 52.07x speedup, PASS
+12^3 x 24, OR=3:           3.074 us/link, 59.38x speedup, PASS
 ```
 
-The overrelaxation-4 run also produced a plaquette diagnostic near `0.00195`,
-while heat-bath-only diagnostics stayed around the expected beta=6 rough range.
-That makes the current overrelaxation kernel not production-valid.  Per the
-explicit benchmark criterion, production was not run and no strict certificate
-was issued.
+The fixed overrelaxation diagnostics stay around the beta=6 rough range
+(`0.594` to `0.596`) rather than collapsing.  Production was still not run to
+full statistics because the measured three-volume campaign remains about
+`87` wall-clock hours before jackknife/bootstrap, plateau fitting,
+autocorrelation analysis, and RGE conversion.
 
 ## Audit Consequence
 
@@ -172,14 +181,13 @@ missing production Wilson-loop/static-potential certificate
 
 ## Honest Completion Requirements
 
-To complete Phase 2 without fabrication, the project needs one of:
+To complete Phase 2 without fabrication, the project now needs:
 
-1. a production SU(3) heat-bath / overrelaxation implementation, preferably
-   vectorized or compiled, plus APE/HYP smearing and jackknife/bootstrap
-   analysis;
-2. access to an external lattice-QCD production code path with the same
-   Cl(3)/Z^3 Wilson-surface inputs and auditable output schema;
-3. a reduced-scope audit-approved production protocol that explicitly weakens
-   the volume/statistics requirements.
+1. run the checkpointed three-volume production campaign with the fixed numba
+   backend;
+2. combine the three ensemble JSON files into a production
+   Wilson-loop/static-potential certificate;
+3. run jackknife/bootstrap, plateau fitting, Sommer matching, RGE running, and
+   the strict certificate gate.
 
 Until then, no strict certificate should be committed.

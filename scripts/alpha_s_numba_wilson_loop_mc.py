@@ -25,7 +25,7 @@ from typing import Any
 import numpy as np
 
 try:
-    from numba import njit
+    from numba import njit, prange
 except ImportError as exc:  # pragma: no cover - exercised only without numba.
     raise SystemExit("numba is required for this production MC backend") from exc
 
@@ -101,12 +101,29 @@ def matmul3(a: np.ndarray, b: np.ndarray) -> np.ndarray:
 
 
 @njit(cache=True)
+def matmul3_out(a: np.ndarray, b: np.ndarray, out: np.ndarray) -> None:
+    for i in range(3):
+        for j in range(3):
+            z = 0.0 + 0.0j
+            for k in range(3):
+                z += a[i, k] * b[k, j]
+            out[i, j] = z
+
+
+@njit(cache=True)
 def dagger3(a: np.ndarray) -> np.ndarray:
     b = np.empty((3, 3), dtype=np.complex128)
     for i in range(3):
         for j in range(3):
             b[i, j] = np.conj(a[j, i])
     return b
+
+
+@njit(cache=True)
+def dagger3_out(a: np.ndarray, out: np.ndarray) -> None:
+    for i in range(3):
+        for j in range(3):
+            out[i, j] = np.conj(a[j, i])
 
 
 @njit(cache=True)
@@ -149,22 +166,15 @@ def project_su3_rows(m: np.ndarray) -> np.ndarray:
 
 @njit(cache=True)
 def project_su2(m: np.ndarray) -> np.ndarray:
-    det = m[0, 0] * m[1, 1] - m[0, 1] * m[1, 0]
-    if abs(det) < 1.0e-30:
+    a = 0.5 * (m[0, 0] + np.conj(m[1, 1]))
+    b = 0.5 * (m[1, 0] - np.conj(m[0, 1]))
+    norm = math.sqrt(max((a * np.conj(a)).real + (b * np.conj(b)).real, 0.0))
+    if norm < 1.0e-30:
         out = np.zeros((2, 2), dtype=np.complex128)
         out[0, 0] = 1.0
         out[1, 1] = 1.0
         return out
 
-    root = np.sqrt(det)
-    v00 = m[0, 0] / root
-    v01 = m[0, 1] / root
-    v10 = m[1, 0] / root
-    v11 = m[1, 1] / root
-
-    a = 0.5 * (v00 + np.conj(v11))
-    b = 0.5 * (v10 - np.conj(v01))
-    norm = math.sqrt(max((a * np.conj(a)).real + (b * np.conj(b)).real, 1.0e-300))
     a = a / norm
     b = b / norm
 
@@ -174,6 +184,13 @@ def project_su2(m: np.ndarray) -> np.ndarray:
     out[1, 0] = b
     out[1, 1] = np.conj(a)
     return out
+
+
+@njit(cache=True)
+def su2_quaternion_norm(m: np.ndarray) -> float:
+    a = 0.5 * (m[0, 0] + np.conj(m[1, 1]))
+    b = 0.5 * (m[1, 0] - np.conj(m[0, 1]))
+    return math.sqrt(max((a * np.conj(a)).real + (b * np.conj(b)).real, 0.0))
 
 
 @njit(cache=True)
@@ -279,6 +296,10 @@ def su2_heatbath_matrix(k: float) -> np.ndarray:
 @njit(cache=True)
 def staple_sum(u: np.ndarray, fwd: np.ndarray, bwd: np.ndarray, site: int, mu: int) -> np.ndarray:
     a = np.zeros((3, 3), dtype=np.complex128)
+    tmp1 = np.empty((3, 3), dtype=np.complex128)
+    tmp2 = np.empty((3, 3), dtype=np.complex128)
+    d1 = np.empty((3, 3), dtype=np.complex128)
+    d2 = np.empty((3, 3), dtype=np.complex128)
     xp_mu = fwd[site, mu]
     for nu in range(NDIM):
         if nu == mu:
@@ -287,19 +308,27 @@ def staple_sum(u: np.ndarray, fwd: np.ndarray, bwd: np.ndarray, site: int, mu: i
         xm_nu = bwd[site, nu]
         xp_mu_m_nu = bwd[xp_mu, nu]
 
-        term = matmul3(u[xp_mu, nu], dagger3(u[xp_nu, mu]))
-        term = matmul3(term, dagger3(u[site, nu]))
-        a += term
+        dagger3_out(u[xp_nu, mu], d1)
+        matmul3_out(u[xp_mu, nu], d1, tmp1)
+        dagger3_out(u[site, nu], d2)
+        matmul3_out(tmp1, d2, tmp2)
+        a += tmp2
 
-        term = matmul3(dagger3(u[xp_mu_m_nu, nu]), dagger3(u[xm_nu, mu]))
-        term = matmul3(term, u[xm_nu, nu])
-        a += term
+        dagger3_out(u[xp_mu_m_nu, nu], d1)
+        dagger3_out(u[xm_nu, mu], d2)
+        matmul3_out(d1, d2, tmp1)
+        matmul3_out(tmp1, u[xm_nu, nu], tmp2)
+        a += tmp2
     return a
 
 
 @njit(cache=True)
 def spatial_staple_sum(u: np.ndarray, fwd: np.ndarray, bwd: np.ndarray, site: int, mu: int) -> np.ndarray:
     a = np.zeros((3, 3), dtype=np.complex128)
+    tmp1 = np.empty((3, 3), dtype=np.complex128)
+    tmp2 = np.empty((3, 3), dtype=np.complex128)
+    d1 = np.empty((3, 3), dtype=np.complex128)
+    d2 = np.empty((3, 3), dtype=np.complex128)
     xp_mu = fwd[site, mu]
     for nu in range(3):
         if nu == mu:
@@ -308,13 +337,17 @@ def spatial_staple_sum(u: np.ndarray, fwd: np.ndarray, bwd: np.ndarray, site: in
         xm_nu = bwd[site, nu]
         xp_mu_m_nu = bwd[xp_mu, nu]
 
-        term = matmul3(u[xp_mu, nu], dagger3(u[xp_nu, mu]))
-        term = matmul3(term, dagger3(u[site, nu]))
-        a += term
+        dagger3_out(u[xp_nu, mu], d1)
+        matmul3_out(u[xp_mu, nu], d1, tmp1)
+        dagger3_out(u[site, nu], d2)
+        matmul3_out(tmp1, d2, tmp2)
+        a += tmp2
 
-        term = matmul3(dagger3(u[xp_mu_m_nu, nu]), dagger3(u[xm_nu, mu]))
-        term = matmul3(term, u[xm_nu, nu])
-        a += term
+        dagger3_out(u[xp_mu_m_nu, nu], d1)
+        dagger3_out(u[xm_nu, mu], d2)
+        matmul3_out(d1, d2, tmp1)
+        matmul3_out(tmp1, u[xm_nu, nu], tmp2)
+        a += tmp2
     return a
 
 
@@ -326,8 +359,7 @@ def heatbath_link(u: np.ndarray, fwd: np.ndarray, bwd: np.ndarray, site: int, mu
     for subgroup in range(3):
         w = matmul3(link, a)
         w2 = extract_su2_submatrix(w, subgroup)
-        det_w2 = w2[0, 0] * w2[1, 1] - w2[0, 1] * w2[1, 0]
-        scale = math.sqrt(max(det_w2.real, 0.0))
+        scale = su2_quaternion_norm(w2)
         r_new = su2_heatbath_matrix((beta / 3.0) * scale)
 
         if scale > 1.0e-15:
@@ -377,6 +409,30 @@ def sweep_heatbath_overrelax(
             for site in range(vol):
                 if parity[site] == p:
                     for mu in range(NDIM):
+                        overrelax_link(u, fwd, bwd, site, mu)
+
+
+@njit(cache=True, parallel=True)
+def sweep_heatbath_overrelax_parallel(
+    u: np.ndarray,
+    fwd: np.ndarray,
+    bwd: np.ndarray,
+    parity: np.ndarray,
+    beta: float,
+    n_overrelax: int,
+) -> None:
+    vol = u.shape[0]
+    for p in range(2):
+        for mu in range(NDIM):
+            for site in prange(vol):
+                if parity[site] == p:
+                    heatbath_link(u, fwd, bwd, site, mu, beta)
+
+    for _ in range(n_overrelax):
+        for p in range(2):
+            for mu in range(NDIM):
+                for site in prange(vol):
+                    if parity[site] == p:
                         overrelax_link(u, fwd, bwd, site, mu)
 
 
@@ -442,6 +498,60 @@ def wilson_loop_at(
 
 
 @njit(cache=True)
+def copy3(src: np.ndarray, dst: np.ndarray) -> None:
+    for i in range(3):
+        for j in range(3):
+            dst[i, j] = src[i, j]
+
+
+@njit(cache=True)
+def set_eye3(out: np.ndarray) -> None:
+    for i in range(3):
+        for j in range(3):
+            out[i, j] = 0.0
+    out[0, 0] = 1.0
+    out[1, 1] = 1.0
+    out[2, 2] = 1.0
+
+
+@njit(cache=True)
+def wilson_loop_at_fast(
+    u: np.ndarray,
+    fwd: np.ndarray,
+    bwd: np.ndarray,
+    start: int,
+    r: int,
+    t_extent: int,
+    spatial_dir: int,
+    time_dir: int,
+) -> float:
+    w = np.empty((3, 3), dtype=np.complex128)
+    tmp = np.empty((3, 3), dtype=np.complex128)
+    d = np.empty((3, 3), dtype=np.complex128)
+    set_eye3(w)
+    site = start
+    for _ in range(r):
+        matmul3_out(w, u[site, spatial_dir], tmp)
+        copy3(tmp, w)
+        site = fwd[site, spatial_dir]
+    for _ in range(t_extent):
+        matmul3_out(w, u[site, time_dir], tmp)
+        copy3(tmp, w)
+        site = fwd[site, time_dir]
+    for _ in range(r):
+        site = bwd[site, spatial_dir]
+        dagger3_out(u[site, spatial_dir], d)
+        matmul3_out(w, d, tmp)
+        copy3(tmp, w)
+    for _ in range(t_extent):
+        site = bwd[site, time_dir]
+        dagger3_out(u[site, time_dir], d)
+        matmul3_out(w, d, tmp)
+        copy3(tmp, w)
+    return (w[0, 0] + w[1, 1] + w[2, 2]).real / 3.0
+
+
+@njit(cache=True)
 def measure_wilson_loops(u: np.ndarray, fwd: np.ndarray, bwd: np.ndarray, max_r: int, max_t: int) -> np.ndarray:
     out = np.zeros((max_r, max_t), dtype=np.float64)
     vol = u.shape[0]
@@ -458,15 +568,40 @@ def measure_wilson_loops(u: np.ndarray, fwd: np.ndarray, bwd: np.ndarray, max_r:
     return out
 
 
+@njit(cache=True, parallel=True)
+def measure_wilson_loops_parallel(
+    u: np.ndarray,
+    fwd: np.ndarray,
+    bwd: np.ndarray,
+    max_r: int,
+    max_t: int,
+) -> np.ndarray:
+    out = np.zeros((max_r, max_t), dtype=np.float64)
+    vol = u.shape[0]
+    time_dir = 3
+    n_paths = vol * 3
+    for r in range(1, max_r + 1):
+        for t_extent in range(1, max_t + 1):
+            total = 0.0
+            for path in prange(n_paths):
+                site = path // 3
+                spatial_dir = path - 3 * site
+                total += wilson_loop_at_fast(u, fwd, bwd, site, r, t_extent, spatial_dir, time_dir)
+            out[r - 1, t_extent - 1] = total / n_paths
+    return out
+
+
 def warm_up_numba() -> None:
     dims = (2, 2, 2, 4)
     fwd, bwd, parity = build_neighbors(dims)
     u = cold_links(dims)
     seed_numba_rng(123)
     sweep_heatbath_overrelax(u, fwd, bwd, parity, BETA, 1)
+    sweep_heatbath_overrelax_parallel(u, fwd, bwd, parity, BETA, 1)
     _ = plaquette(u, fwd)
     us = ape_smear_spatial(u, fwd, bwd, 0.5, 1)
     _ = measure_wilson_loops(us, fwd, bwd, 1, 1)
+    _ = measure_wilson_loops_parallel(us, fwd, bwd, 1, 1)
 
 
 def run_benchmark(args: argparse.Namespace) -> dict[str, Any]:
@@ -480,13 +615,19 @@ def run_benchmark(args: argparse.Namespace) -> dict[str, Any]:
     warm_up_numba()
 
     for _ in range(args.warmup_sweeps):
-        sweep_heatbath_overrelax(u, fwd, bwd, parity, BETA, args.overrelax)
+        if args.serial:
+            sweep_heatbath_overrelax(u, fwd, bwd, parity, BETA, args.overrelax)
+        else:
+            sweep_heatbath_overrelax_parallel(u, fwd, bwd, parity, BETA, args.overrelax)
 
     links_per_sweep = math.prod(dims) * NDIM
     t0 = time.perf_counter()
     plaq_samples = []
     for i in range(args.sweeps):
-        sweep_heatbath_overrelax(u, fwd, bwd, parity, BETA, args.overrelax)
+        if args.serial:
+            sweep_heatbath_overrelax(u, fwd, bwd, parity, BETA, args.overrelax)
+        else:
+            sweep_heatbath_overrelax_parallel(u, fwd, bwd, parity, BETA, args.overrelax)
         if (i + 1) % max(1, args.plaquette_interval) == 0:
             plaq_samples.append(float(plaquette(u, fwd)))
     elapsed = time.perf_counter() - t0
@@ -502,6 +643,7 @@ def run_benchmark(args: argparse.Namespace) -> dict[str, Any]:
         "sweeps": args.sweeps,
         "warmup_sweeps": args.warmup_sweeps,
         "overrelax_sweeps_per_heatbath": args.overrelax,
+        "sweep_kernel": "serial" if args.serial else "checkerboard_parallel",
         "links_per_sweep": links_per_sweep,
         "elapsed_seconds": elapsed,
         "compiled_us_per_link": us_per_link,
@@ -599,7 +741,7 @@ def analyze_ensemble(
         a_fm = r0_anchor_fm / r0_over_a if math.isfinite(r0_over_a) and r0_over_a > 0 else float("nan")
 
         for r, force_r in zip(r_vals[: min(4, len(r_vals))], force[: min(4, len(force))]):
-            alpha = -(r * r / CF_SU3) * force_r
+            alpha = (r * r / CF_SU3) * force_r
             if alpha > 0 and math.isfinite(alpha) and math.isfinite(a_fm):
                 mu_gev = 0.1973269804 / (r * a_fm)
                 running.append({"R_over_a": float(r), "mu_GeV": float(mu_gev), "alpha_qq": float(alpha)})
@@ -621,7 +763,23 @@ def run_ensemble(args: argparse.Namespace) -> dict[str, Any]:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     dims = args.dims
     fwd, bwd, parity = build_neighbors(dims)
-    u = cold_links(dims)
+    loops = []
+    therm_done = False
+    completed_measurements = 0
+    if args.resume_checkpoint and args.checkpoint_npz.exists():
+        chk = np.load(args.checkpoint_npz, allow_pickle=False)
+        saved_dims = tuple(int(x) for x in chk["dims"].tolist())
+        if saved_dims != dims:
+            raise ValueError(f"checkpoint dims {saved_dims} do not match requested dims {dims}")
+        u = chk["u"]
+        therm_done = bool(chk["therm_done"])
+        if "loops" in chk:
+            loop_array = chk["loops"]
+            loops = [loop_array[i].copy() for i in range(loop_array.shape[0])]
+            completed_measurements = len(loops)
+        print(f"Resumed checkpoint {args.checkpoint_npz}: therm_done={therm_done}, completed={completed_measurements}")
+    else:
+        u = cold_links(dims)
     seed_numba_rng(args.seed)
     warm_up_numba()
 
@@ -629,20 +787,33 @@ def run_ensemble(args: argparse.Namespace) -> dict[str, Any]:
     print(f"Running ensemble dims={dims}, beta={BETA}, links/sweep={links_per_sweep}")
     print(f"Thermalization sweeps={args.therm}, measurements={args.measurements}, separation={args.separation}")
     t0 = time.perf_counter()
-    for sweep in range(args.therm):
-        sweep_heatbath_overrelax(u, fwd, bwd, parity, BETA, args.overrelax)
-        if (sweep + 1) % max(1, args.progress_interval) == 0:
-            print(f"  therm {sweep + 1}/{args.therm}: plaquette={plaquette(u, fwd):.6f}")
+    if not therm_done:
+        for sweep in range(args.therm):
+            if args.serial:
+                sweep_heatbath_overrelax(u, fwd, bwd, parity, BETA, args.overrelax)
+            else:
+                sweep_heatbath_overrelax_parallel(u, fwd, bwd, parity, BETA, args.overrelax)
+            if (sweep + 1) % max(1, args.progress_interval) == 0:
+                print(f"  therm {sweep + 1}/{args.therm}: plaquette={plaquette(u, fwd):.6f}")
+        therm_done = True
+        write_checkpoint(args.checkpoint_npz, dims, u, np.asarray(loops, dtype=np.float64), therm_done)
 
-    loops = []
-    for cfg in range(args.measurements):
+    for cfg in range(completed_measurements, args.measurements):
         for _ in range(args.separation):
-            sweep_heatbath_overrelax(u, fwd, bwd, parity, BETA, args.overrelax)
+            if args.serial:
+                sweep_heatbath_overrelax(u, fwd, bwd, parity, BETA, args.overrelax)
+            else:
+                sweep_heatbath_overrelax_parallel(u, fwd, bwd, parity, BETA, args.overrelax)
         measured_u = ape_smear_spatial(u, fwd, bwd, args.ape_alpha, args.ape_steps)
-        wl = measure_wilson_loops(measured_u, fwd, bwd, args.max_r, args.max_t)
+        if args.serial:
+            wl = measure_wilson_loops(measured_u, fwd, bwd, args.max_r, args.max_t)
+        else:
+            wl = measure_wilson_loops_parallel(measured_u, fwd, bwd, args.max_r, args.max_t)
         loops.append(wl)
         if (cfg + 1) % max(1, args.progress_interval) == 0:
             print(f"  cfg {cfg + 1}/{args.measurements}: W11={wl[0, 0]:.6f}, plaquette={plaquette(u, fwd):.6f}")
+        if (cfg + 1) % max(1, args.checkpoint_every) == 0:
+            write_checkpoint(args.checkpoint_npz, dims, u, np.asarray(loops, dtype=np.float64), therm_done)
 
     elapsed = time.perf_counter() - t0
     loop_array = np.asarray(loops, dtype=np.float64)
@@ -663,14 +834,36 @@ def run_ensemble(args: argparse.Namespace) -> dict[str, Any]:
         "measurements": args.measurements,
         "separation_sweeps": args.separation,
         "overrelax_sweeps_per_heatbath": args.overrelax,
+        "sweep_kernel": "serial" if args.serial else "checkerboard_parallel",
         "elapsed_seconds": elapsed,
         "raw_wilson_loops": loop_array.tolist(),
         "analysis": analyze_ensemble(dims, loop_array, args.r0_anchor_fm),
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    write_checkpoint(args.checkpoint_npz, dims, u, loop_array, therm_done)
     print(f"Wrote ensemble data: {args.output}")
     return data
+
+
+def write_checkpoint(
+    path: Path,
+    dims: tuple[int, int, int, int],
+    u: np.ndarray,
+    loops: np.ndarray,
+    therm_done: bool,
+) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp.npz")
+    np.savez(
+        tmp,
+        dims=np.asarray(dims, dtype=np.int64),
+        u=u,
+        loops=loops,
+        therm_done=np.asarray(therm_done),
+        saved_at_utc=np.asarray(time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())),
+    )
+    tmp.replace(path)
 
 
 def parse_args() -> argparse.Namespace:
@@ -682,6 +875,7 @@ def parse_args() -> argparse.Namespace:
     bench.add_argument("--sweeps", type=int, default=20)
     bench.add_argument("--warmup-sweeps", type=int, default=2)
     bench.add_argument("--overrelax", type=int, default=4)
+    bench.add_argument("--serial", action="store_true", help="Use the serial sweep kernel instead of checkerboard parallel.")
     bench.add_argument("--plaquette-interval", type=int, default=10)
     bench.add_argument("--seed", type=int, default=20260430)
     bench.add_argument("--output", type=Path, default=DEFAULT_BENCHMARK)
@@ -692,6 +886,7 @@ def parse_args() -> argparse.Namespace:
     ens.add_argument("--measurements", type=int, default=1000)
     ens.add_argument("--separation", type=int, default=20)
     ens.add_argument("--overrelax", type=int, default=4)
+    ens.add_argument("--serial", action="store_true", help="Use the serial sweep kernel instead of checkerboard parallel.")
     ens.add_argument("--ape-steps", type=int, default=5)
     ens.add_argument("--ape-alpha", type=float, default=0.5)
     ens.add_argument("--max-r", type=int, default=8)
@@ -700,6 +895,9 @@ def parse_args() -> argparse.Namespace:
     ens.add_argument("--progress-interval", type=int, default=10)
     ens.add_argument("--seed", type=int, default=20260430)
     ens.add_argument("--output", type=Path, default=OUTPUT_DIR / "ensemble.json")
+    ens.add_argument("--checkpoint-npz", type=Path, default=OUTPUT_DIR / "ensemble_checkpoint.npz")
+    ens.add_argument("--checkpoint-every", type=int, default=10)
+    ens.add_argument("--resume-checkpoint", action="store_true")
 
     return parser.parse_args()
 

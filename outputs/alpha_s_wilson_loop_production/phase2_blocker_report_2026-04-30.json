@@ -15,34 +15,41 @@
     "cffi": "available",
     "cupy": "unavailable",
     "meson": "unavailable",
-    "numba": "installed during follow-up; backend added but benchmark gate failed",
+    "numba": "installed during follow-up; backend fixed and local heat-bath speed gate passed",
     "pybind11": "unavailable"
   },
   "compiled_numba_attempt": {
     "backend": "scripts/alpha_s_numba_wilson_loop_mc.py",
     "benchmark_report": "outputs/alpha_s_wilson_loop_production/COMPILED_MC_NUMBA_BENCHMARK_REPORT_2026-04-30.md",
     "benchmarks": {
-      "4^4_heatbath_only": {
-        "compiled_us_per_link": 4.503118907450698,
-        "speedup_target_pass": false,
-        "speedup_vs_pure_python_heatbath": 40.52746635183052
+      "12^3x24_heatbath_only_fixed": {
+        "compiled_us_per_link": 0.9406889185575656,
+        "speedup_target_pass": true,
+        "speedup_vs_pure_python_heatbath": 194.0067501590664
       },
-      "8^3x16_heatbath_only": {
-        "compiled_us_per_link": 5.446027564914857,
-        "speedup_target_pass": false,
-        "speedup_vs_pure_python_heatbath": 33.5106640252294
+      "12^3x24_heatbath_plus_3_overrelax_fixed": {
+        "compiled_us_per_link": 3.0736627574955446,
+        "plaquette_diagnostic": 0.5947872445608735,
+        "production_valid": true,
+        "speedup_target_pass": true,
+        "speedup_vs_pure_python_heatbath": 59.37541441556948
       },
-      "8^4_heatbath_only_100_sweeps": {
-        "compiled_us_per_link": 5.204889984042893,
-        "speedup_target_pass": false,
-        "speedup_vs_pure_python_heatbath": 35.06318107769942
+      "16^3x32_heatbath_only_fixed": {
+        "compiled_us_per_link": 1.421470077822562,
+        "speedup_target_pass": true,
+        "speedup_vs_pure_python_heatbath": 128.38821080184633
       },
-      "8^4_heatbath_plus_4_overrelax": {
-        "compiled_us_per_link": 22.257915750856228,
-        "plaquette_diagnostic": 0.0019473394829080057,
-        "production_valid": false,
-        "speedup_target_pass": false,
-        "speedup_vs_pure_python_heatbath": 8.199330163830794
+      "24^3x48_heatbath_only_fixed": {
+        "compiled_us_per_link": 1.1979081204886532,
+        "speedup_target_pass": true,
+        "speedup_vs_pure_python_heatbath": 152.34891297468974
+      },
+      "8^4_heatbath_plus_4_overrelax_fixed": {
+        "compiled_us_per_link": 3.5057147982797687,
+        "plaquette_diagnostic": 0.5960218528089872,
+        "production_valid": true,
+        "speedup_target_pass": true,
+        "speedup_vs_pure_python_heatbath": 52.05785709937145
       }
     },
     "compiled_inner_loops": [
@@ -52,16 +59,23 @@
       "staple sum",
       "plaquette",
       "APE spatial smearing",
-      "rectangular Wilson-loop measurement"
+      "rectangular Wilson-loop measurement",
+      "checkpoint/resume ensemble generation"
     ],
-    "conclusion": "compiled backend exists but does not meet the 50x speed gate; overrelaxation path is not production-valid"
+    "conclusion": "compiled backend fixed; heat-bath speed gate passes and overrelaxation is stable, but full three-volume production data are not generated yet"
   },
   "date": "2026-04-30",
   "estimated_sweep_only_wall_time_days": {
-    "12^3x24": 3.4,
-    "16^3x32": 10.9,
-    "24^3x48": 55.1,
-    "total": 69.4
+    "12^3x24": 0.124,
+    "16^3x32": 0.632,
+    "24^3x48": 2.592,
+    "total": 3.349
+  },
+  "estimated_production_wall_time_hours_with_measurement": {
+    "12^3x24": 3.33,
+    "16^3x32": 16.29,
+    "24^3x48": 67.83,
+    "total": 87.44
   },
   "excluded_from_estimate": [
     "Wilson-loop measurement overhead for R,T=1..8",
@@ -96,14 +110,12 @@
     "source": "scripts/frontier_color_projection_mc.py"
   },
   "missing_production_features": [
-    "validated >=50x compiled Cabibbo-Marinari heat-bath kernel",
-    "production-valid SU(3) overrelaxation sweeps",
     "autocorrelation analysis",
     "production Wilson-loop/static-potential certificate",
     "full production uncertainty budget"
   ],
   "phase2_status": "blocked",
-  "reason": "Existing repo SU(3) Wilson MC infrastructure was pure Python; a numba backend was added, but it failed the requested 50x speed gate and the overrelaxation diagnostic is not production-valid.",
+  "reason": "Compiled numba backend is now fixed and locally benchmarked; full requested three-volume production statistics still require an estimated 87 wall-clock hours before analysis and certificate generation.",
   "requested_protocol": {
     "measurement_separation_sweeps": 20,
     "measurements_per_volume": 1000,
