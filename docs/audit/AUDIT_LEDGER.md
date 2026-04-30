@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:18:08.007572+00:00
+**Generated:** 2026-04-30T22:19:19.226330+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 213 |
+| `audited_clean` | 214 |
 | `audited_conditional` | 465 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 794 |
+| `unaudited` | 793 |
 
 | criticality | count |
 |---|---:|
@@ -258,6 +258,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_minimal_scale_free_selector_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_no_hidden_source_audit_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
+| `koide_q_so2_phase_erasure_support_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -8323,6 +8324,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **open / conditional deps cited:**
   - `KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md`
   - `KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`
+- **auditor confidence:** high
+
+### `koide_q_so2_phase_erasure_support_note_2026-04-25`
+
+- **Note:** [`KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE_2026-04-25.md`](../../docs/KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE_2026-04-25.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-21`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** On the Brannen square-root carrier, Q = (sum_k s_k^2)/(sum_k s_k)^2 = (c^2+2)/6, so Q is independent of the carrier scale V0 and SO(2) phase delta.  _(class `A`)_
+- **chain closes:** True — The support theorem closes by exact C3 trigonometry: the cosine first moment vanishes and the quadratic moment is 3/2, giving sum sqrt(m_k)=3V0 and sum m_k=(3V0^2/2)(2+c^2). The runner verifies the symbolic identities, the conditional c^2=2 iff Q=2/3 statement, delta erasure, and the explicit non-closure guardrails.
+- **rationale:** The row is clean as an exact support theorem, not as retained Koide closure. The algebra derives Q=(c^2+2)/6 on the stated Brannen carrier and proves scale/phase erasure without charged-lepton data or a physical source-domain premise. Residual risk is downstream overuse: c^2=2, the physical reduced carrier, delta=2/9 rad, and native dimensionless Koide closure remain open exactly as the note states.
 - **auditor confidence:** high
 
 ### `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25`
