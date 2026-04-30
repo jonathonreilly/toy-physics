@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T15:15:44.375494+00:00
+**Generated:** 2026-04-30T15:15:48.855797+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 183 |
 | support | 123 |
 | open | 11 |
-| unknown | 418 |
+| unknown | 417 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 518 |
+| ~~audited_conditional~~ | 519 |
 | ~~audited_failed~~ | 170 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 9 |
 | `audited_clean` | 96 |
-| `audited_conditional` | 283 |
+| `audited_conditional` | 284 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1102 |
+| `unaudited` | 1101 |
 
 | criticality | count |
 |---|---:|
@@ -285,6 +285,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `coupled_field_generated_family_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cross_family_universality_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `decoherence_action_independence_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `diamond_nv_phase_ramp_signal_budget_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `diamond_signal_budget_hardening_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dispersion_relation_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -2269,6 +2270,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — Yes. The registered runner completed successfully and checks the finite slice described by the source note.
 - **rationale:** The clean content is the finite cycle-break slice, not a universal repair. The runner completed successfully and the classified check surface is {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'total_pass': 0}. Residual risk is generalization outside the matched slice.
 - **auditor confidence:** medium
+
+### `decoherence_action_independence_note`
+
+- **Note:** [`DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md`](../../docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** Decoherence is Action-Independent: Confirmed on the frozen 3D `1/L^2` replay — exact numerical identity across actions  _(class `B`)_
+- **chain closes:** False — No. The load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet, so the conclusion cannot be ratified from the source note alone.
+- **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **open / conditional deps cited:**
+  - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
 
 ### `diamond_nv_phase_ramp_signal_budget_note`
 
