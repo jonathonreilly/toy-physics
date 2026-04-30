@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:08:55.865571+00:00
+**Generated:** 2026-04-30T03:10:16.410228+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,26 +21,26 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
-| bounded | 201 |
+| bounded | 200 |
 | support | 100 |
 | open | 24 |
 | unknown | 498 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 402 |
+| ~~audited_conditional~~ | 403 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 184 |
+| `audited_conditional` | 185 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1232 |
+| `unaudited` | 1231 |
 
 | criticality | count |
 |---|---:|
@@ -190,6 +190,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `continuum_identification_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `cosmology_scale_identification_and_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `diamond_nv_phase_ramp_signal_budget_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `diamond_signal_budget_hardening_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -939,6 +940,25 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `strong_field_gravity_nonmonotone_across_h`
   - `per_node_T_boundary_leakage_repair_not_implemented`
   - `runner_prints_SAFE_READ_without_hard_assertions`
+- **auditor confidence:** high
+
+### `cosmology_scale_identification_and_reduction_note`
+
+- **Note:** [`COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md`](../../docs/COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The named validation scripts reproduce the algebraic reduction: fixed S3/de-Sitter scale gives Lambda=3/R_Lambda^2=3H_inf^2/c^2, fixed rho_Lambda gives w=-1, and present-day Omega_Lambda reduces to H_inf^2/H0^2 or equivalently to flatness plus matter content.  _(class `B`)_
+- **chain closes:** False — The note closes as a bounded synthesis only: it accurately reduces present-day Omega_Lambda to matter-content and scale-identification inputs, but does not derive H_inf/H0, eta, Omega_m, flatness, or the DM relic bridge from first principles.
+- **rationale:** Issue: the reduction is internally consistent and explicitly bounded, but it imports the fixed-gap S3 scale, de Sitter/FRW definitions, observed H0/Lambda/eta inputs, BBN calibration, flatness, and the bounded DM/baryon matter-content bridge without registering them as one-hop audited dependencies. Why this blocks: the scripts verify algebra and conditional numerical consistency, not a retained cosmological parameter prediction. Repair target: add audited dependencies for the spectral-gap, EOS, FRW/flatness, BBN, eta, and matter-content bridge inputs, and derive or explicitly leave open H_inf/H0. Claim boundary until fixed: bounded cosmology-lane accounting that unifies Lambda, w=-1, and Omega_Lambda as a matter-content/scale-identification problem, not full retained cosmological closure.
+- **open / conditional deps cited:**
+  - `S3 fixed spectral-gap scale`
+  - `de Sitter/FRW cosmology definitions`
+  - `observed H0 and Lambda`
+  - `BBN eta-to-Omega_b calibration`
+  - `flatness`
+  - `bounded DM/baryon matter-content bridge`
 - **auditor confidence:** high
 
 ### `cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25`
