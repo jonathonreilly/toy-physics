@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T15:13:30.712190+00:00
+**Generated:** 2026-04-30T15:13:34.246111+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 194 |
 | support | 124 |
 | open | 17 |
-| unknown | 435 |
+| unknown | 434 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 483 |
+| ~~audited_conditional~~ | 484 |
 | ~~audited_failed~~ | 170 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 9 |
 | `audited_clean` | 94 |
-| `audited_conditional` | 248 |
+| `audited_conditional` | 249 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1139 |
+| `unaudited` | 1138 |
 
 | criticality | count |
 |---|---:|
@@ -227,6 +227,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_change_proposal_2026-04-10` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `axiom_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `bh_entropy_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `causal_field_canonical_chain_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `charged_lepton_two_higgs_canonical_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -1116,6 +1117,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Axiom-First Spin-Statistics Theorem on Cl(3) ⊗ Z^3: the stated finite-lattice/Cl(3) theorem is proved on the listed A_min objects and checked by the registered runner.  _(class `C`)_
 - **chain closes:** True — Yes. The note gives a self-contained structural proof on the stated A_min objects, and the registered runner completed successfully on the load-bearing algebraic checks.
 - **rationale:** The load-bearing theorem is structural rather than a tuned numerical match: support — branch-local theorem note on A_min; runner passing; audit-pending.. The registered runner completed successfully and its classified PASS surface is {'A': 0, 'B': 0, 'C': 9, 'D': 0, 'total_pass': 9}. Residual risk is limited to the support/branch-local scope stated by the note; this does not promote the row beyond its author-declared tier.
+- **auditor confidence:** high
+
+### `axiom_reduction_note`
+
+- **Note:** [`AXIOM_REDUCTION_NOTE.md`](../../docs/AXIOM_REDUCTION_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** Axiom Reduction: Honest Minimal Assumption Inventory: Axiom Reduction: Honest Minimal Assumption Inventory  _(class `B`)_
+- **chain closes:** False — No. The load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet, so the conclusion cannot be ratified from the source note alone.
+- **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **open / conditional deps cited:**
+  - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
 
 ### `backreaction_note`
