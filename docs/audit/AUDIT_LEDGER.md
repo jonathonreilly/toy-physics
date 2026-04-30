@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:54:27.406993+00:00
+**Generated:** 2026-04-30T22:55:29.855778+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 83 |
 | _proposed_retained_ | 1 |
 | bounded | 274 |
-| support | 241 |
+| support | 240 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 750 |
+| ~~audited_conditional~~ | 751 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 220 |
-| `audited_conditional` | 477 |
+| `audited_conditional` | 478 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 773 |
+| `unaudited` | 772 |
 
 | criticality | count |
 |---|---:|
@@ -764,6 +764,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_lorentzian_global_atlas_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_qg_canonical_refinement_net_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_inverse_limit_closure_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `universal_qg_pl_field_interface_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_uv_finite_partition_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `unpromoted_branch_retainability_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -11375,6 +11376,22 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `unspecified closed theorem stack for canonical textbook continuum target`
 - **auditor confidence:** 0.93
+
+### `universal_qg_pl_field_interface_note`
+
+- **Note:** [`UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md`](../../docs/UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-42`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Combining this with the exact abstract Gaussian completion theorem gives one exact project-native PL Gaussian completion.  _(class `B`)_
+- **chain closes:** False — The finite-element PL realization is standard once the canonical refinement net and abstract Gaussian inverse-limit object are granted. Those upstream objects are currently conditional or audited as renaming, so this support row cannot independently close the project-native PL Gaussian carrier claim.
+- **rationale:** Issue: the PL field-interface note relies on exact canonical refinement, inverse-limit Gaussian cylinder closure, and abstract Gaussian completion, but those are not audit-clean upstream inputs. Why this blocks: hat-basis prolongation can supply a PL carrier only after the directed refinement system and Gaussian limit object are established; it does not prove those inputs. Repair target: ratify or repair the refinement-net, inverse-limit, and abstract Gaussian completion rows, then re-audit the PL carrier identification. Claim boundary until fixed: safe as a conditional project-native finite-element interface, not as a closed continuum/QG carrier theorem.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
+  - `UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md`
+  - `UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md`
+- **auditor confidence:** high
 
 ### `universal_qg_uv_finite_partition_note`
 
