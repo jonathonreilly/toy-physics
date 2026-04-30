@@ -1,0 +1,6 @@
+global_stop_allowed: true
+timestamp_utc: "2026-04-29T13:23:24Z"
+reason: "OPPORTUNITY_QUEUE.md records queue-based current-bank exhaustion after Blocks 01-05 and prior loop-pack demotions."
+scope: "current repo surface and branch-local executable physics-loop opportunities only"
+not_claiming: "open science program impossible"
+next_action: "recover git delivery from PR_BACKLOG.md in an environment with write access to the git directory, then review Blocks 01-05; new science execution requires a new structural premise, human carrier decision, or off-budget computation."

@@ -1,0 +1,56 @@
+========================================================================================
+LANE 4D SR-2: PFAFFIAN / SCALAR TWO-POINT BOUNDARY
+========================================================================================
+
+Claim under test:
+  Continuum-limit free-scalar two-point closure might force the
+  Majorana Pfaffian pairing amplitude mu to be zero.
+
+Boundary result:
+  The scalar two-point closure is charge-zero and mu-blind on the
+  current typed data. A new scalar-to-Pfaffian coupling theorem would
+  be needed before SR-2 can close C2-X.
+
+========================================================================================
+PART 1: AUTHORITY TEXT CONTAINS THE SR-2 TARGET AND GUARDRAILS
+========================================================================================
+  [PASS] Lane 4 fan-out names SR-2 as scalar two-point/Pfaffian target
+  [PASS] Pfaffian no-forcing note records identical normal signature across mu
+  [PASS] Observable-principle obstruction says the normal jet is mu-blind
+  [PASS] 2D scalar theorem is a two-point boost-covariance theorem
+  [PASS] 3D scalar theorem is a two-point boost-covariance theorem
+
+========================================================================================
+PART 2: SCALAR TWO-POINT SIGNATURE IS IDENTICAL ACROSS PFAFFIAN MU
+========================================================================================
+  [PASS] All mu values share one scalar two-point signature  (distinct scalar signatures=1)
+  [PASS] The same mu values give distinct Pfaffian sectors  (distinct Pfaffian signatures=3)
+  [PASS] 2D base and boosted scalar values match  (values=0.038778907396, 0.038778907396)
+  [PASS] 3D base and boosted scalar values match  (values=0.00284440392, 0.00284440392)
+
+========================================================================================
+PART 3: NORMAL SOURCE-RESPONSE JET IS ALSO IDENTICAL ACROSS MU
+========================================================================================
+  [PASS] Normal determinant/source-response jet has one image across mu  (distinct normal jets=1)
+  [PASS] Pfaffian sector still splits across the same family  (distinct Pfaffian signatures=3)
+
+========================================================================================
+PART 4: NORMAL SOURCES ARE CHARGE ZERO; PAIRING SEED HAS CHARGE -2
+========================================================================================
+  [PASS] Normal density n0 is charge zero  (commutator norm=0.00e+00)
+  [PASS] Normal density n1 is charge zero  (commutator norm=0.00e+00)
+  [PASS] Hermitian hopping source is charge zero  (commutator norm=0.00e+00)
+  [PASS] Pairing seed carries charge -2  (charge error=0.00e+00)
+
+========================================================================================
+PART 5: SR-2 DOES NOT IMPLY MU=0 ON CURRENT DATA
+========================================================================================
+  [PASS] Scalar two-point constraints hold at mu=0
+  [PASS] Scalar two-point constraints also hold at a nonzero mu witness  (mu=0.6 has same scalar signature)
+  [PASS] Therefore scalar two-point data alone cannot force mu=0
+
+========================================================================================
+SUMMARY: PASS=18 FAIL=0
+========================================================================================
+Result: SR-2 is an exact negative boundary on the current data.
+The route cannot globalize the Dirac lift without a new typed coupling theorem.

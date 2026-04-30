@@ -1,0 +1,100 @@
+loop_slug: impact-campaign-20260429
+mode: campaign
+target_status: best-honest-status
+requested_runtime: 4h
+runtime_remaining_at_iteration_start: "239m"
+estimated_runtime_remaining_utc_2026_04_29T13_24_52Z: "about 144m"
+launch_started_utc: "2026-04-29T11:48:38Z"
+last_checkpoint_utc: "2026-04-30T10:43:36Z"
+root_worktree: /Users/jonBridger/CI3Z2-physics-loop-impact-campaign-20260429
+supervisor_branch: physics-loop/impact-campaign-20260429
+current_branch: physics-loop/impact-campaign-20260429
+base_ref: origin/main
+base_commit: "462696d1"
+current_status: "campaign global stop allowed: current-bank executable opportunity queue exhausted"
+repo_lock:
+  default_automation_lock: "unavailable: scripts/automation_lock.py status returned permission denied for /Users/jonreilly"
+  branch_local_supervisor_lock: ".claude/science/physics-loops/impact-campaign-20260429/supervisor.lock"
+  degraded_lock_mode: true
+git_delivery:
+  block_branch_attempt: "failed: git switch -c physics-loop/impact-campaign-20260429-block01-20260429 could not lock ref under /Users/jonBridger/Toy Physics/.git (operation not permitted)"
+  block01_stage_attempt: "failed: git add could not create external git index lock"
+  block02_stage_attempt: "failed: git add could not create external git index lock"
+  block03_stage_attempt: "failed: git add could not create external git index lock"
+  block04_stage_attempt: "failed: git add could not create external git index lock"
+  block05_stage_attempt: "failed: git add could not create external git index lock"
+  recovery_started_utc: "2026-04-30T10:07:35Z"
+  recovery_plan: "ship Blocks 01-05 together as one aggregate review PR from physics-loop/impact-campaign-20260429"
+  keepalive_cleanup: "launchctl remove com.jonbridger.physics-loop.impact-campaign-20260429 succeeded"
+  commit: "9351a0d8 physics-loop impact campaign block boundaries"
+  pr: "https://github.com/jonathonreilly/cl3-lattice-framework/pull/209"
+campaign_rules:
+  infer_mode: "campaign for this 4-hour unattended request"
+  global_stop_condition: "all viable current-bank opportunities globally exhausted and documented in OPPORTUNITY_QUEUE.md"
+completed_blocks:
+  - block_id: block01
+    lane: "Lane 4D neutrino global Dirac lift"
+    route: "(SR-2) Pfaffian scalar two-point boundary"
+    actual_current_surface_status: no-go
+    conditional_surface_status: conditional-support
+    verification: "SUMMARY PASS=18 FAIL=0; py_compile PASS"
+    pr_status: "open in aggregate PR #209"
+  - block_id: block02
+    lane: "Lane 1 hadron sqrt(sigma)"
+    route: "(B2) quenched-to-dynamical screening boundary"
+    actual_current_surface_status: no-go
+    conditional_surface_status: bounded-support
+    verification: "SUMMARY PASS=21 FAIL=0; py_compile PASS"
+    pr_status: "open in aggregate PR #209"
+  - block_id: block03
+    lane: "Lane 5 Hubble C2 eta-retirement"
+    route: "CKM/PMNS right-sensitive selector stretch"
+    actual_current_surface_status: no-go
+    conditional_surface_status: conditional-support
+    verification: "SUMMARY PASS=22 FAIL=0; py_compile PASS"
+    pr_status: "open in aggregate PR #209"
+  - block_id: block04
+    lane: "Lane 2 atomic alpha(0)"
+    route: "QED-running bridge boundary"
+    actual_current_surface_status: no-go
+    conditional_surface_status: conditional-support
+    verification: "SUMMARY PASS=18 FAIL=0; py_compile PASS"
+    pr_status: "open in aggregate PR #209"
+  - block_id: block05
+    lane: "Lane 2 physical-unit Rydberg"
+    route: "Schrodinger/Coulomb unit-scale boundary"
+    actual_current_surface_status: no-go
+    conditional_surface_status: conditional-support
+    verification: "SUMMARY PASS=16 FAIL=0; py_compile PASS"
+    pr_status: "open in aggregate PR #209"
+files_touched:
+  - .claude/science/physics-loops/impact-campaign-20260429/ARTIFACT_PLAN.md
+  - .claude/science/physics-loops/impact-campaign-20260429/ASSUMPTIONS_AND_IMPORTS.md
+  - .claude/science/physics-loops/impact-campaign-20260429/CAMPAIGN_GLOBAL_STOP_ALLOWED
+  - .claude/science/physics-loops/impact-campaign-20260429/CLAIM_STATUS_CERTIFICATE.md
+  - .claude/science/physics-loops/impact-campaign-20260429/HANDOFF.md
+  - .claude/science/physics-loops/impact-campaign-20260429/NO_GO_LEDGER.md
+  - .claude/science/physics-loops/impact-campaign-20260429/OPPORTUNITY_QUEUE.md
+  - .claude/science/physics-loops/impact-campaign-20260429/PR_BACKLOG.md
+  - .claude/science/physics-loops/impact-campaign-20260429/REVIEW_HISTORY.md
+  - .claude/science/physics-loops/impact-campaign-20260429/ROUTE_PORTFOLIO.md
+  - .claude/science/physics-loops/impact-campaign-20260429/STATE.yaml
+  - docs/NEUTRINO_LANE4_SR2_PFAFFIAN_SCALAR_TWO_POINT_BOUNDARY_NOTE_2026-04-29.md
+  - scripts/frontier_neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary.py
+  - outputs/frontier_neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_2026-04-29.txt
+  - docs/HADRON_LANE1_B2_DYNAMICAL_SCREENING_BOUNDARY_NOTE_2026-04-29.md
+  - scripts/frontier_hadron_lane1_b2_dynamical_screening_boundary.py
+  - outputs/frontier_hadron_lane1_b2_dynamical_screening_boundary_2026-04-29.txt
+  - docs/HUBBLE_LANE5_C2_CKM_PMNS_RIGHT_SENSITIVE_SELECTOR_STRETCH_NOTE_2026-04-29.md
+  - scripts/frontier_hubble_lane5_c2_ckm_pmns_right_sensitive_selector_stretch.py
+  - outputs/frontier_hubble_lane5_c2_ckm_pmns_right_sensitive_selector_stretch_2026-04-29.txt
+  - docs/ATOMIC_LANE2_ALPHA0_RUNNING_BRIDGE_BOUNDARY_NOTE_2026-04-29.md
+  - scripts/frontier_atomic_lane2_alpha0_running_bridge_boundary.py
+  - outputs/frontier_atomic_lane2_alpha0_running_bridge_boundary_2026-04-29.txt
+  - docs/ATOMIC_LANE2_PHYSICAL_UNIT_LIMIT_BOUNDARY_NOTE_2026-04-29.md
+  - scripts/frontier_atomic_lane2_physical_unit_limit_boundary.py
+  - outputs/frontier_atomic_lane2_physical_unit_limit_boundary_2026-04-29.txt
+pr_status: "open aggregate PR #209 for Blocks 01-05"
+next_exact_action: "review PR #209; new science execution requires a new structural premise, human carrier decision, or off-budget computation"
+return_reason: "documented global stop: OPPORTUNITY_QUEUE.md records queue-based exhaustion of current-bank executable opportunities before the hard deadline"
+stop_condition: "CAMPAIGN_GLOBAL_STOP_ALLOWED"
