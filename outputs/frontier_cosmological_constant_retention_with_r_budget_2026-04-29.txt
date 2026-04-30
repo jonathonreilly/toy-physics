@@ -1,0 +1,23 @@
+========================================================================
+Cosmological Constant Λ Retention-with-R-Budget (Block 9) audit
+========================================================================
+[PASS] Spectral-gap identity theorem exists — retained
+[PASS] Λ = λ_1(S³_R) = 3/R² function identity — retained function identity
+[PASS] UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE exists — retained
+[PASS] S^3 general R derivation exists — retained
+[PASS] Block 4 axiom-stack minimality theorem exists — Block 4 prerequisite
+[PASS] Block 4 confirms R numerical value gated on Axiom* — R-budget basis
+[PASS] Λ = 3/R² function identity (numerical witness) — verified for R ∈ [1.0, 2.0, 5.0]+
+[PASS] Implied R from Planck Λ_obs ≈ Hubble radius — R = √(3/Λ_obs) = 1.659e+26 m
+[PASS] V1 actual_current_surface_status: proposed_retained_with_budget — firewall
+[PASS] V1 audit_required_before_effective_retained: true — firewall
+[PASS] V1 bare_retained_allowed: false — firewall
+[PASS] V1 r_function_identity_status: retained_exact — firewall: R₁ retained
+[PASS] V1 r_numerical_value_status: bounded_gated_on_axiom_star — firewall: R₂ bounded
+
+========================================================================
+FAIL count: 0
+LAMBDA_RETENTION_WITH_R_BUDGET_VERIFIED = True
+R from Planck Λ_obs = 1.659e+26 m (Hubble scale)
+
+All Block 9 chain authorities + budget verified.
