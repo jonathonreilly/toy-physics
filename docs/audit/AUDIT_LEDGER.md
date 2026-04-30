@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T23:55:05.200116+00:00
+**Generated:** 2026-04-30T23:57:19.491487+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 86 |
 | _proposed_retained_ | 1 |
 | bounded | 272 |
-| support | 235 |
+| support | 234 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 760 |
+| ~~audited_conditional~~ | 761 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 224 |
-| `audited_conditional` | 482 |
+| `audited_conditional` | 483 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 769 |
+| `unaudited` | 768 |
 
 | criticality | count |
 |---|---:|
@@ -653,6 +653,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_native_dimensionless_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_zero_section_closure_route_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_native_zero_section_nature_review_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `koide_one_scalar_obstruction_triangulation_theorem_note_2026-04-18` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `koide_p_one_clock_3plus1_transport_reduction_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_q_delta_closure_package_readme_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -8320,6 +8321,26 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `rank_one_CP1_language_vs_real_primitive_endpoint_residual_open`
   - `zero_source_charged_lepton_scalar_readout_identification_not_closed_here`
   - `frontier_koide_lane_regression.py_rc_1_due_to_frontier_koide_q_so2_phase_erasure_support_22_of_23`
+- **auditor confidence:** high
+
+### `koide_one_scalar_obstruction_triangulation_theorem_note_2026-04-18`
+
+- **Note:** [`KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md`](../../docs/KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-ready-20260430-53`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The master identity 2 r_0^2 - (r_1^2 + r_2^2) = 18(g_0^2 - 2|g_1|^2) makes the Koide cone exactly equivalent to the one scalar condition kappa = g_0^2/|g_1|^2 = 2 on the cyclic commutant.  _(class `A`)_
+- **chain closes:** False — The symbolic master identity and codimension-one obstruction close as finite algebra, and the runner now emits classified A/B/D checks. The broader triangulation over the claimed retained A0-A3 surface imports missing route notes plus conditional/failed upstream authorities, so the full support theorem is not closed from the restricted packet.
+- **rationale:** Issue: the core one-scalar algebra is correct, but the note asserts a retained A0-A3 surface and three independent route consolidation without registering the load-bearing authorities; the three named route notes are absent from the ledger/disk under the cited paths, observable_principle_from_axiom_note and three_generation_observable_theorem_note are audited_conditional, hw1_second_order_return_shape_theorem_note is unaudited/effectively conditional, and koide_circulant_character_derivation_note_2026-04-18 is effectively failed. Why this blocks: the runner proves the master identity after assuming the cyclic commutant setup and records one cross-runner route assertion, but it does not supply retained authority for A0-A3 or independently verify all three missing consolidation routes. Repair target: register the route notes or replace them with existing authority paths, audit/repair the A0-A3 authorities, and make the runner execute or verify each route artifact instead of treating route PASS counts as prose. Claim boundary until fixed: it is safe to claim the exact algebraic reduction of Koide on an assumed C3-circulant Hermitian commutant to kappa = 2, plus a PDG target check; not a closed theorem over a retained Cl(3)/Z3 base.
+- **open / conditional deps cited:**
+  - `KOIDE_SCALAR_SELECTOR_DIRECT_ATTACK_SCOUT_NOTE_2026-04-18.md`
+  - `KOIDE_OBSERVABLE_PRINCIPLE_CYCLIC_SOURCE_LAW_NOTE_2026-04-18.md`
+  - `KOIDE_MATRIX_UNIT_SOURCE_LAW_CYCLIC_PROJECTION_NOTE_2026-04-18.md`
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
+  - `HW1_SECOND_ORDER_RETURN_SHAPE_THEOREM_NOTE.md`
+  - `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `koide_p_one_clock_3plus1_transport_reduction_note_2026-04-20`
