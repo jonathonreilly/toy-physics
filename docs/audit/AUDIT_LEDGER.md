@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:17:08.570252+00:00
+**Generated:** 2026-04-30T01:18:57.663300+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,12 +20,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 78 |
-| _proposed_retained_ | 20 |
+| _proposed_retained_ | 19 |
 | bounded | 215 |
 | support | 108 |
 | open | 24 |
 | unknown | 550 |
-| ~~audited_decoration~~ | 3 |
+| ~~audited_decoration~~ | 4 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 42 |
 | ~~audited_conditional~~ | 441 |
@@ -36,11 +36,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audit_in_progress` | 1 |
 | `audited_clean` | 78 |
 | `audited_conditional` | 146 |
-| `audited_decoration` | 3 |
+| `audited_decoration` | 4 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1290 |
+| `unaudited` | 1289 |
 
 | criticality | count |
 |---|---:|
@@ -324,6 +324,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
+| `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `backreaction_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -4442,6 +4443,22 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `unspecified closed theorem stack for canonical textbook continuum target`
 - **auditor confidence:** 0.93
+
+### `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24`
+
+- **Note:** [`UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md`](../../docs/UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** ~~audited_decoration~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** theta_eff | retained = 0, therefore O_theta | retained = theta_eff K_theta[O] = 0 for every theta-sourced EDM response component.  _(class `A`)_
+- **chain closes:** False — The zero-response algebra closes after theta_eff=0 is supplied, but the audit packet does not derive or register that parent strong-CP input as a clean one-hop authority. The runner sets THETA_EFF = 0.0 and then verifies downstream zero products.
+- **rationale:** Issue: the proposed-retained claim is an algebraic source-scoping corollary of an upstream theta_eff=0 claim, while the runner hard-codes theta_eff=0 and checks consequences afterward. Why this blocks: it adds no independent physical observable, comparator, or compression beyond the strong-CP parent, and its parent strong-CP/EDM authorities are not clean retained dependencies in this audit packet. Repair target: make the strong-CP theta-zero theorem itself audit-clean and box this universal EDM response as a corollary under that parent, or add an independent source-attribution theorem with a real comparator. Claim boundary until fixed: it is safe as bookkeeping saying theta-sourced EDM terms vanish if theta_eff=0 is already granted; it is not a separately retained theorem.
+- **open / conditional deps cited:**
+  - `STRONG_CP_THETA_ZERO_NOTE.md`
+  - `CKM_NEUTRON_EDM_BOUND_NOTE.md`
+- **decoration parent:** `strong_cp_theta_zero_note`
+- **auditor confidence:** high
 
 ### `valley_linear_continuum_synthesis_note`
 

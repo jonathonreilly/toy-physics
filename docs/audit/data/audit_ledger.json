@@ -1,14 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T01:17:08.384676+00:00",
-  "generated_at": "2026-04-30T01:17:06.722652+00:00",
-  "invalidation_run_at": "2026-04-30T01:17:08.335797+00:00",
-  "last_invalidations": [
-    {
-      "claim_id": "minimal_axioms_2026-04-11",
-      "reason": "dep_weakened:generation_axiom_boundary_note:proposed_retained->audited_conditional"
-    }
-  ],
-  "load_bearing_computed_at": "2026-04-30T01:17:08.237129+00:00",
+  "effective_status_computed_at": "2026-04-30T01:18:57.466914+00:00",
+  "generated_at": "2026-04-30T01:18:55.794346+00:00",
+  "invalidation_run_at": "2026-04-30T01:18:57.417500+00:00",
+  "last_invalidations": [],
+  "load_bearing_computed_at": "2026-04-30T01:18:57.317803+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -82291,33 +82286,43 @@
       "verdict_rationale": null
     },
     "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T01:18:51.787440+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 11.144,
+        "transitive_descendants": 49
+      },
+      "audit_status": "audited_decoration",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The zero-response algebra closes after theta_eff=0 is supplied, but the audit packet does not derive or register that parent strong-CP input as a clean one-hop authority. The runner sets THETA_EFF = 0.0 and then verifies downstream zero products.",
       "claim_id": "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24",
       "criticality": "high",
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained structural corollary on the proposed_retained strong-CP action",
-      "decoration_parent_claim_id": null,
+      "decoration_parent_claim_id": "strong_cp_theta_zero_note",
       "deps": [],
       "direct_in_degree": 11,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_decoration",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_decoration",
       "load_bearing_score": 11.144,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "theta_eff | retained = 0, therefore O_theta | retained = theta_eff K_theta[O] = 0 for every theta-sourced EDM response component.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "985f7031e3166a327a21381b4eea8fbbf29c2d1a8845cb9c13305558f74fde3f",
       "note_path": "docs/UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/STRONG_CP_THETA_ZERO_NOTE.md",
+        "docs/CKM_NEUTRON_EDM_BOUND_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370005+00:00",
@@ -82371,16 +82376,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 28,
+        "B": 5,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 3,
+        "total_pass": 36
       },
       "runner_path": "scripts/frontier_universal_theta_induced_edm_vanishing.py",
       "title": "Universal Theta-Induced EDM Response Vanishing Theorem",
       "transitive_descendants": 49,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the proposed-retained claim is an algebraic source-scoping corollary of an upstream theta_eff=0 claim, while the runner hard-codes theta_eff=0 and checks consequences afterward. Why this blocks: it adds no independent physical observable, comparator, or compression beyond the strong-CP parent, and its parent strong-CP/EDM authorities are not clean retained dependencies in this audit packet. Repair target: make the strong-CP theta-zero theorem itself audit-clean and box this universal EDM response as a corollary under that parent, or add an independent source-attribution theorem with a real comparator. Claim boundary until fixed: it is safe as bookkeeping saying theta-sourced EDM terms vanish if theta_eff=0 is already granted; it is not a separately retained theorem."
     },
     "universality_classifier_note": {
       "audit_date": null,
