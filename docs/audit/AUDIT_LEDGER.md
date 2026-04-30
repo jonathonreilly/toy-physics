@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:28:55.760459+00:00
+**Generated:** 2026-04-30T19:29:01.501413+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 185 |
+| `audited_clean` | 186 |
 | `audited_conditional` | 405 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 884 |
+| `unaudited` | 883 |
 
 | criticality | count |
 |---|---:|
@@ -202,6 +202,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open | ~~audited_clean~~ | open | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
@@ -5808,6 +5809,18 @@ Claim boundary until fixed: safe to claim the constant-lift obstruction Gamma_ca
   - `least_Frobenius_to_identity_selector_not_physically_derived`
   - `ordered_complex_Givens_grammar_not_derived_as_unique_retained_grammar`
   - `selected_slice_and_target_authorities_not_registered_one_hop_dependencies`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_PRINCIPLE_THEOREM_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_PRINCIPLE_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** order and therefore uniquely minimizes every positive bulk-tail functional.  _(class `C`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 15 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19`
