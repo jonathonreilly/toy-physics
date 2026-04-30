@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 8,
+    "critical": 7,
     "high": 234,
     "leaf": 571,
     "medium": 342
   },
-  "generated_at": "2026-04-30T11:42:39.707979+00:00",
+  "generated_at": "2026-04-30T11:42:43.060830+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,45 +23,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "transitive_descendants": 281
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "ckm_atlas_axiom_closure_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_promoted",
-      "deps": [
-        "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-        "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
-        "ckm_wolfenstein_eta_inverse_square_gap_theorem_note_2026-04-26",
-        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-        "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
-        "ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25",
-        "ckm_sin_2_beta_bar_nlo_n_quark_ratio_theorem_note_2026-04-25",
-        "ckm_barred_triangle_pythagorean_rho_lambda_sum_rule_theorem_note_2026-04-25",
-        "ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25",
-        "ckm_barred_orthocenter_euler_line_exact_closed_form_theorem_note_2026-04-25",
-        "ckm_barred_weitzenbock_brocard_polynomial_closed_form_theorem_note_2026-04-25",
-        "ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25",
-        "ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25",
-        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-        "ckm_second_row_magnitudes_theorem_note_2026-04-25",
-        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
-        "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25",
-        "ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25",
-        "ckm_kaon_epsilon_k_jarlskog_decomposition_theorem_note_2026-04-25",
-        "s3_time_bilinear_tensor_primitive_note",
-        "s3_time_bilinear_tensor_action_note"
-      ],
-      "direct_in_degree": 22,
-      "load_bearing_score": 17.19,
-      "note_path": "docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_ckm_atlas_axiom_closure.py",
-      "transitive_descendants": 72
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24359,5 +24320,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1155
+  "total_pending": 1154
 }
