@@ -93,12 +93,8 @@ def part2_c_odd_is_now_fixed_by_bosonic_matching() -> None:
     print("PART 2: C_ODD IS NOW FIXED BY BOSONIC MATCHING")
     print("=" * 88)
 
-    selector = Path("/Users/jonBridger/Toy Physics-neutrino-majorana/docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md").read_text(
-        encoding="utf-8"
-    )
-    sign = Path("/Users/jonBridger/Toy Physics-neutrino-majorana/docs/PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md").read_text(
-        encoding="utf-8"
-    )
+    selector = read("docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md")
+    sign = read("docs/PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md")
     source = read("docs/DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md")
     codd = read("docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md")
 
@@ -126,9 +122,7 @@ def part3_the_exact_source_carrier_closes_the_even_leg() -> None:
     print("PART 3: THE EXACT SOURCE CARRIER CLOSES THE EVEN LEG")
     print("=" * 88)
 
-    primitive = Path("/Users/jonBridger/Toy Physics/.claude/worktrees/strong-cp-nature/docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md").read_text(
-        encoding="utf-8"
-    )
+    primitive = read("docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md")
     reduction = read("docs/DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM_NOTE_2026-04-15.md")
     veven = read("docs/DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md")
 
@@ -168,16 +162,17 @@ def part4_the_current_single_axiom_boundary_is_exact() -> None:
     print("PART 4: THE CURRENT SINGLE-AXIOM BOUNDARY IS EXACT")
     print("=" * 88)
 
-    blocker = read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")
-    lepto = read("docs/DM_LEPTOGENESIS_NOTE.md")
+    boundary = read("docs/DM_NEUTRINO_WEAK_TRIPLET_COEFFICIENT_AXIOM_BOUNDARY_NOTE_2026-04-15.md")
 
     check(
-        "The blocker note records that the live gap is now source amplitudes rather than transfer coefficients",
-        "source amplitudes" in blocker and "a_sel" in blocker and "tau_+" in blocker,
+        "The boundary note records that the live gap is now source amplitudes rather than transfer coefficients",
+        "source-amplitude law" in boundary and "a_sel" in boundary and "tau_+" in boundary,
     )
     check(
-        "The leptogenesis note records that the benchmark remains bounded because the source amplitudes are still open",
-        "a_sel" in lepto and "tau_+" in lepto and "eta = 1.81e-10" in lepto,
+        "The boundary note records that the benchmark remains bounded because the source amplitudes are still open",
+        "eta = 1.81e-10" in boundary
+        and "benchmark runner has not yet been rebuilt" in boundary
+        and "exact transfer" in boundary,
     )
 
 
