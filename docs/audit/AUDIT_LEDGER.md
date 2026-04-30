@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:42:11.272000+00:00
+**Generated:** 2026-04-30T02:42:14.621192+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 205 |
 | support | 105 |
 | open | 24 |
-| unknown | 536 |
+| unknown | 530 |
 | ~~audited_decoration~~ | 4 |
 | ~~audited_numerical_match~~ | 47 |
 | ~~audited_renaming~~ | 72 |
-| ~~audited_conditional~~ | 421 |
+| ~~audited_conditional~~ | 427 |
 | ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 152 |
+| `audited_conditional` | 153 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1269 |
+| `unaudited` | 1268 |
 
 | criticality | count |
 |---|---:|
@@ -269,6 +269,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `neutrino_majorana_current_stack_exhaustion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `neutrino_majorana_operator_axiom_first_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `newton_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `observable_principle_from_axiom_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `oh_schur_boundary_action_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -3293,6 +3294,23 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `NEUTRINO_MAJORANA_Z3_NONACTIVATION_THEOREM_NOTE.md: named authority missing from ledger deps`
   - `NEUTRINO_MAJORANA_OBSERVABLE_PRINCIPLE_OBSTRUCTION_NOTE.md: named authority missing from ledger deps`
 - **auditor confidence:** 0.91
+
+### `neutrino_majorana_operator_axiom_first_note`
+
+- **Note:** [`NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md`](../../docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** On the anomaly-fixed one-generation representation, the symmetric internal bilinears satisfying G^T M + M G = 0 for SU(3)_c x SU(2)_L x U(1)_Y form a one-dimensional vector space supported only on nu_R nu_R.  _(class `B`)_
+- **chain closes:** False — The runner closes the null-space classification after the one-generation gauge representation is supplied, but the note imports that anomaly-fixed representation and authority stack without ledger dependencies for the audit to verify.
+- **rationale:** Issue: the classification depends on the anomaly-fixed one-generation spectrum, U(1)_Y charges, chirality surface, and right-handed sector being retained inputs, but those authorities are not present as one-hop ledger dependencies and some listed authority paths are not resolved by the audit bundle. Why this blocks: the runner hard-codes the representation and proves the invariant-bilinear result only conditional on that imported representation. Repair target: add retained one-hop dependencies or an integrated runner that derives the full representation from retained primitives before solving the Majorana null space. Claim boundary until fixed: the note can claim a correct conditional operator-classification result for the supplied SM-like one-generation representation, not an audited axiom-first framework closure.
+- **open / conditional deps cited:**
+  - `ANOMALY_FORCES_TIME_THEOREM.md`
+  - `scripts/frontier_right_handed_sector.py`
+  - `MINIMAL_AXIOM_INVENTORY.md`
+  - `UNIFIED_AXIOM_BOUNDARY_NOTE.md`
+- **auditor confidence:** high
 
 ### `newton_derivation_note`
 

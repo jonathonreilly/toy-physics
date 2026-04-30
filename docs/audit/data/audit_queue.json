@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 41,
-    "high": 281,
+    "high": 280,
     "leaf": 608,
     "medium": 340
   },
-  "generated_at": "2026-04-30T02:42:11.110547+00:00",
+  "generated_at": "2026-04-30T02:42:14.449939+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1165,23 +1165,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 31
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "neutrino_majorana_operator_axiom_first_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 12,
-      "load_bearing_score": 13.492,
-      "note_path": "docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_neutrino_majorana_operator.py",
-      "transitive_descendants": 179
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -26520,6 +26503,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 828,
-  "total_pending": 1270
+  "ready_count": 827,
+  "total_pending": 1269
 }
