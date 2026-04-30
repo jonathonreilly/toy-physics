@@ -9,15 +9,17 @@
 
 ## 0. Result
 
-The first seven production-profile ladder intervals completed cleanly and
-produced `L=8` data:
+The first eight production-profile ladder intervals completed cleanly,
+completed the `L=8` target, and started `L=12` production:
 
-- `950` JSONL measurement records;
-- last checkpointed production state: `L=8`, `9739` sweeps,
-  `950/1000` measurements;
-- acceptance approximately `0.419`;
-- plaquette mean `0.59442266 +/- 0.00006646`;
-- `chi22` mean `0.25736352 +/- 0.00136710`.
+- `L=8`: `1000/1000` JSONL measurement records after `10239` sweeps,
+  acceptance approximately `0.419`;
+- `L=12`: `24/1000` JSONL measurement records after `450` sweeps,
+  acceptance approximately `0.411`;
+- `L=8` plaquette mean `0.59439642 +/- 0.00006509`;
+- `L=8` `chi22` mean `0.25696886 +/- 0.00132492`;
+- `L=12` plaquette mean `0.59485712 +/- 0.00021882`;
+- `L=12` `chi22` mean `0.25182509 +/- 0.00631805`.
 
 This is a real production checkpoint, but it is **not B5 closure**.
 
@@ -30,7 +32,8 @@ B5 still needs the first full production ladder class:
 - `L=16`;
 - per-volume uncertainties and volume-drift comparison.
 
-The current checkpoint has only `L=8`. It therefore cannot retain the
+The current checkpoint has complete `L=8` support and a small `L=12`
+sample, but no `L=16` records. It therefore cannot retain the
 framework-to-standard-QCD bridge by itself.
 
 ## 2. Verification
@@ -57,4 +60,5 @@ PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b5_resumable
   --checkpoint-dir outputs/frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder_checkpoints_production
 ```
 
-Keep the status bounded until `L=12` and `L=16` records exist.
+Keep the status bounded until `L=12` and `L=16` records are accumulated
+with reviewable uncertainty and volume-drift checks.

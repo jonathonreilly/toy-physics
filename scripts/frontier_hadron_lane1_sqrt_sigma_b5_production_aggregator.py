@@ -3,8 +3,8 @@
 
 This runner is intentionally a checkpoint gate, not a closure proof.  It
 summarizes the current production records, checks that the data are finite,
-and verifies that the branch still refuses B5 promotion while L=12 and L=16
-are missing.
+and verifies that the branch still refuses B5 promotion while the required
+multi-volume ladder is incomplete.
 """
 
 from __future__ import annotations
@@ -124,7 +124,11 @@ def part2_closure_gate(by_volume: dict[int, list[dict[str, Any]]], required: set
     print(f"  missing volumes:  {missing}")
 
     check("L=8 production records exist", 8 in present)
-    check("L=12 and L=16 are still missing", {12, 16}.issubset(required - present))
+    check(
+        "required production ladder is still incomplete",
+        bool(missing),
+        f"missing volumes={missing}",
+    )
     check(
         "B5 closure gate remains open",
         not required.issubset(present),
@@ -166,7 +170,8 @@ def main() -> int:
     print("  Does the current production ladder data close B5?")
     print()
     print("Answer:")
-    print("  No. It is a useful L=8 checkpoint; L=12 and L=16 are still missing.")
+    print("  No. It is a useful production checkpoint; the required")
+    print("  multi-volume ladder is still incomplete.")
 
     rows = load_rows(args.jsonl)
     by_volume = part1_data_summary(rows, args.min_checkpoint_records)

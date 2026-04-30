@@ -30,10 +30,13 @@ link.
   `4^4` check support the route but do not close it.
 - The resumable `L=8,12,16` production ladder is executable
   infrastructure, not evidence until statistics and uncertainties land.
-- Production checkpoint evidence exists for `L=8` only: `950` records,
-  plaquette `0.59442266 +/- 0.00006646`, and `chi22`
-  `0.25736352 +/- 0.00136710`. This does not close B5 because `L=12`
-  and `L=16` are missing.
+- Production checkpoint evidence exists for complete `L=8` support and a
+  shallow `L=12` start: `L=8` has `1000` records, plaquette
+  `0.59439642 +/- 0.00006509`, and `chi22`
+  `0.25696886 +/- 0.00132492`; `L=12` has `24` records, plaquette
+  `0.59485712 +/- 0.00021882`, and `chi22`
+  `0.25182509 +/- 0.00631805`. This does not close B5 because `L=16` is
+  missing and `L=12` remains shallow.
 
 ## Open Imports And Dependencies
 

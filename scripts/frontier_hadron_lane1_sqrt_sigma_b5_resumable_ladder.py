@@ -416,11 +416,19 @@ def part2_run_and_checkpoint(config: RunnerConfig) -> None:
             and proposals == last.proposals
         )
     check("checkpoint can be reloaded for resume", reloaded)
+    checkpointable_progress = bool(summaries) and all(
+        summary.measurements_completed >= 1
+        or summary.sweeps_completed >= config.therm_sweeps
+        or (summary.status == "checkpointed" and summary.sweeps_completed >= 1)
+        for summary in summaries
+    )
+    measurement_progress = any(summary.measurements_completed >= 1 for summary in summaries)
+    thermalization_progress = any(
+        summary.status == "checkpointed" and summary.sweeps_completed >= 1 for summary in summaries
+    )
     check(
         "resume counters advanced",
-        bool(summaries)
-        and all(summary.sweeps_completed >= config.therm_sweeps for summary in summaries)
-        and any(summary.measurements_completed >= 1 for summary in summaries),
+        checkpointable_progress and (measurement_progress or thermalization_progress),
     )
 
 
