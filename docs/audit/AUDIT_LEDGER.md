@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:56:30.209644+00:00
+**Generated:** 2026-04-30T18:56:37.645441+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,25 +21,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 348 |
+| bounded | 347 |
 | support | 274 |
 | open | 19 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 598 |
+| ~~audited_conditional~~ | 599 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 113 |
-| `audited_conditional` | 312 |
+| `audited_conditional` | 313 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1050 |
+| `unaudited` | 1049 |
 
 | criticality | count |
 |---|---:|
@@ -323,6 +323,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | E | - |
+| `dm_leptogenesis_pmns_projector_interface_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | E | - |
 | `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -2883,6 +2884,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — The source note explicitly calls the rule an invented post-axiom selector law. The second auditor's conditional/E reading holds because the runner optimizes after that law is assumed; the first numerical-match reading missed the invented selector premise.
 - **rationale:** The source note explicitly calls the rule an invented post-axiom selector law. The second auditor's conditional/E reading holds because the runner optimizes after that law is assumed; the first numerical-match reading missed the invented selector premise.
 - **auditor confidence:** judicial
+
+### `dm_leptogenesis_pmns_projector_interface_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_PROJECTOR_INTERFACE_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_PMNS_PROJECTOR_INTERFACE_NOTE_2026-04-16.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-heisenberg-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Once the Hermitian pair is supplied, diagonalize H_nu and H_e, form U_PMNS = U_e^dag U_nu, and define P_i(alpha) = |U_PMNS(alpha,i)|^2.  _(class `A`)_
+- **chain closes:** False — The pair-to-projector algebra closes conditional on a supplied Hermitian pair. The stronger route-choice claim depends on an imported PMNS pair law/carrier and a physical N1 transport-column selection that are not registered as deps and are explicitly left open.
+- **rationale:** Issue: the PMNS Hermitian pair law and the physical transport column are imported or left open, while the ledger registers no one-hop PMNS authority. Why this blocks: the eta lifts are diagnostics from hard-coded sample pairs, not an axiom-side theorem selecting the physical flavored projector. Repair target: register and audit the PMNS pair-law authority plus a theorem selecting the transport-relevant column, with a runner that computes the selected column from that law. Claim boundary until fixed: the algebraic pair-to-projector interface and sample diagnostic lift are support only.
+- **auditor confidence:** high
 
 ### `dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16`
 
