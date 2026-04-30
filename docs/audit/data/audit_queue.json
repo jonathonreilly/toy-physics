@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 446,
+    "leaf": 445,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:19:52.713146+00:00",
+  "generated_at": "2026-04-30T19:19:58.405158+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13824,23 +13824,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_leptogenesis_washout_axiom_boundary_note_2026-04-15",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_LEPTOGENESIS_WASHOUT_AXIOM_BOUNDARY_NOTE_2026-04-15.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_leptogenesis_washout_axiom_boundary.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_lepton_synthesis_note_2026-04-19",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20944,6 +20927,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 585,
-  "total_pending": 972
+  "ready_count": 584,
+  "total_pending": 971
 }

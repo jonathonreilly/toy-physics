@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:19:52.878025+00:00
+**Generated:** 2026-04-30T19:19:58.561328+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 332 |
+| bounded | 331 |
 | support | 297 |
 | open | 21 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 637 |
+| ~~audited_conditional~~ | 638 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 148 |
-| `audited_conditional` | 354 |
+| `audited_conditional` | 355 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 972 |
+| `unaudited` | 971 |
 
 | criticality | count |
 |---|---:|
@@ -391,6 +391,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_transport_integral_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_transport_status_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `dm_leptogenesis_washout_axiom_boundary_note_2026-04-15` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_cascade_geometry_note_2026-04-14` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -3655,6 +3656,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **open / conditional deps cited:**
   - `scripts/dm_leptogenesis_exact_common.py`
 - **auditor confidence:** high
+
+### `dm_leptogenesis_washout_axiom_boundary_note_2026-04-15`
+
+- **Note:** [`DM_LEPTOGENESIS_WASHOUT_AXIOM_BOUNDARY_NOTE_2026-04-15.md`](../../docs/DM_LEPTOGENESIS_WASHOUT_AXIOM_BOUNDARY_NOTE_2026-04-15.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** **Script:** `scripts/frontier_dm_leptogenesis_washout_axiom_boundary.py`  _(class `B`)_
+- **chain closes:** False — No. The registered runner returned nonzero, so the current executable chain is not cleanly reproducible.
+- **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a bounded note with non-clean executable support.
+- **auditor confidence:** medium
 
 ### `dm_neutrino_cascade_geometry_note_2026-04-14`
 
