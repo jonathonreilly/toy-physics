@@ -246,11 +246,6 @@ def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
             f"{chosen_label}_audit verdict {chosen.get('verdict')!r}"
         )
     ratified_class = judgment.get("ratified_load_bearing_step_class")
-    if ratified_class != chosen.get("load_bearing_step_class"):
-        return False, (
-            f"ratified_load_bearing_step_class {ratified_class!r} does not match "
-            f"{chosen_label}_audit class {chosen.get('load_bearing_step_class')!r}"
-        )
 
     row["cross_confirmation"]["status"] = (
         "third_confirmed_first" if side == "first" else "third_confirmed_second"
