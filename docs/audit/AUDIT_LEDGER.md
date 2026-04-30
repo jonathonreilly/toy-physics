@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:29:31.230301+00:00
+**Generated:** 2026-04-30T19:29:37.670943+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 188 |
+| `audited_clean` | 189 |
 | `audited_conditional` | 408 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 878 |
+| `unaudited` | 877 |
 
 | criticality | count |
 |---|---:|
@@ -218,6 +218,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graph_first_su3_integration_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `graph_scalar_plus_spinor_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `graph_true_kg_vs_cn_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `gravitational_entanglement_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `growing_graph_static_control_audit_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `hadron_lane1_confinement_to_mass_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
@@ -6244,6 +6245,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** This is the decisive result. The free modal laws are not the same theory.  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 9 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `gravitational_entanglement_note`
+
+- **Note:** [`GRAVITATIONAL_ENTANGLEMENT_NOTE.md`](../../docs/GRAVITATIONAL_ENTANGLEMENT_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** Correlation-matrix formalism for free fermions: the joint state is tracked via a 2N x 2N one-body density matrix. Time evolution uses Trotter steps with self-consistent Poisson coupling at each step. Cross-correlations between A and B are computed via the RPA (random phase approximation): the static density-density susceptibility chi = C(1-C) mediates gravit  _(class `C`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 6 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
 ### `gravitomagnetic_note`
