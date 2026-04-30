@@ -29,9 +29,9 @@ The landed result is negative/progress:
 - a resumable B5 Wilson/Creutz ladder runner now exists. Its smoke
   profile is verified; production `L=8,12,16` statistics remain to be
   accumulated before B5 can be promoted.
-- the first nine production intervals completed `L=8` with `1000/1000`
-  JSONL records after `10239` sweeps and advanced `L=12` to `51/1000`
-  JSONL records after `722` sweeps. This is a stronger checkpoint, but it
+- the first ten production intervals completed `L=8` with `1000/1000`
+  JSONL records after `10239` sweeps and advanced `L=12` to `76/1000`
+  JSONL records after `981` sweeps. This is a stronger checkpoint, but it
   is not B5 closure because `L=12` remains shallow and `L=16` is still
   missing.
 
@@ -97,7 +97,7 @@ Branch-local artifacts:
 Pick one of two next blocks:
 
 1. Resume the resumable B5 ladder from the local production checkpoint until
-   the `L=8` target is complete and `L=12,16` statistics can start.
+   the `L=12` target is complete and `L=16` statistics can start.
 2. Retained-with-budget draft that chooses `r0`/`r1` as the Lane 1
    force-scale observable and keeps `sqrt(sigma)` as a bounded
    comparator, with static-potential convention split explicit.
