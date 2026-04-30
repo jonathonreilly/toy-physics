@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T21:52:17.865758+00:00
+**Generated:** 2026-04-30T21:56:21.182269+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 7 |
 | bounded | 282 |
-| support | 252 |
+| support | 251 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 735 |
+| ~~audited_conditional~~ | 736 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 210 |
-| `audited_conditional` | 458 |
+| `audited_conditional` | 459 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 805 |
+| `unaudited` | 804 |
 
 | criticality | count |
 |---|---:|
@@ -398,6 +398,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cosmology_scale_identification_and_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `coupled_field_generated_family_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `cpt_exact_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `cross_family_universality_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cycle_battery_scaled_note_2026-04-10` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -2741,6 +2742,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `runner_output_missing_classified_a_b_c_d_pass_lines:scripts/coupled_field_generated_family_probe.py`
 - **auditor confidence:** high
+
+### `cpt_exact_note`
+
+- **Note:** [`CPT_EXACT_NOTE.md`](../../docs/CPT_EXACT_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-09`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The combined transformation gives CPT * H * (CPT)^(-1) = C * P * H * P * C = C * (-H) * C = H, so [CPT, H] = 0 and the CPT-odd part of H vanishes.  _(class `C`)_
+- **chain closes:** False — The runner verifies the identity for the real anti-Hermitian staggered hopping operator on even lattices, but the source and runner both present the result as a physical Hamiltonian/SME statement. The runner itself notes that the physical Hermitian Hamiltonian is iH, and the antiunitary T action on that i factor is not included in the closure argument.
+- **rationale:** Issue: the proof and runner establish CPT invariance for the real anti-Hermitian staggered hopping operator D, while the note states a physical Hamiltonian/SME-zero theorem for H; the runner's own convention says the physical Hermitian Hamiltonian is iD, but the antiunitary time-reversal action on that i factor is not carried through. Why this blocks: exact CP/D algebra is not yet a closed derivation that all physical CPT-odd SME coefficients vanish. Repair target: either restate the theorem explicitly for the anti-Hermitian lattice operator only, or add a runner/proof for the Hermitian Hamiltonian and the SME operator map with antiunitary CPT handled explicitly. Claim boundary until fixed: on even periodic lattices, the real staggered hopping operator satisfies C D C = -D, P D P = -D, and C P D P C = D.
+- **open / conditional deps cited:**
+  - `physical_hermitian_hamiltonian_and_sme_bridge`
+- **auditor confidence:** medium
 
 ### `critical_exponents_topology_note_2026-04-10`
 
