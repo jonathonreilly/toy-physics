@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:32:21.942640+00:00
+**Generated:** 2026-04-30T19:32:28.230229+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 296 |
+| bounded | 295 |
 | support | 263 |
 | open | 20 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 708 |
+| ~~audited_conditional~~ | 709 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 192 |
-| `audited_conditional` | 432 |
+| `audited_conditional` | 433 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 850 |
+| `unaudited` | 849 |
 
 | criticality | count |
 |---|---:|
@@ -505,6 +505,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fifth_family_complex_boundary_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `fifth_family_radial_boundary_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `fine_h_family_universality_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `flagship_paper_contribution_statement_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `four_d_distance_width_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `fourth_family_complex_boundary_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `frozen_stars_rigorous_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -5261,6 +5262,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** True — The live runner recomputes the finite grown-row signed-source table, exact zero/neutral controls, and charge-linearity exponent from the specified row rather than importing the table. The source note explicitly limits the claim to drift=0.2, restore=0.7 fixed-field propagation and excludes geometry-generic or Maxwell-level claims.
 - **rationale:** The load-bearing claim is a bounded finite computation: on the specified grown row, the runner reproduces zero-source and neutral cancellation, opposite signs for +1 and -1 sources, like/dipole controls, and near-linear +1 to +2 scaling. The companion grown-geometry control values are consistent with the one-hop companion note already audited clean, while the present source note does not use them to derive a geometry-generic theorem. Residual boundary: the source cites a stale companion replay log filename, but the signed-source claim itself closes through the current scout runner and the available companion artifact.
 - **auditor confidence:** high
+
+### `flagship_paper_contribution_statement_note`
+
+- **Note:** [`FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md`](../../docs/FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** This note states the strongest manuscript claim that is currently audit-safe.  _(class `B`)_
+- **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
+- **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a bounded note without audit-ratified executable closure.
+- **auditor confidence:** medium
 
 ### `fm_transfer_note`
 
