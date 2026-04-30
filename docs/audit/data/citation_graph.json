@@ -18433,7 +18433,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T15:17:16.387791+00:00",
+  "generated_at": "2026-04-30T15:54:36.553205+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -18486,7 +18486,7 @@
       "deps": [],
       "note_hash": "07e5aa1b5517387c831acdc4f0cd056bf0eaeadf223c01c6cb747a7771f2e9a2",
       "path": "docs/ACTION_CROSSOVER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/action_regularity_crossover.py",
       "title": "Action Crossover: Spent-delay \u2192 Valley-linear with Regularity"
     },
     "action_geometry_bridge_note": {
@@ -18496,7 +18496,7 @@
       "deps": [],
       "note_hash": "675a5faa8d34f15df654a5f62cff340b6649512a49858b641801aa55d122228b",
       "path": "docs/ACTION_GEOMETRY_BRIDGE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/action_geometry_bridge_probe.py",
       "title": "Action Geometry Bridge Note"
     },
     "action_normalization_note": {
@@ -18516,7 +18516,7 @@
       "deps": [],
       "note_hash": "4de5a83259ca6a28969231b91792d0d2ecb709f644cc0fe4fdd3c5668f131e8f",
       "path": "docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/action_power_3d_gravity_sign_closure.py",
       "title": "Action-Power 3D Barrier Gravity-Sign Closure"
     },
     "action_power_note": {
@@ -18526,7 +18526,7 @@
       "deps": [],
       "note_hash": "bb517b577d5bb2a19b258813616dc03432f54d9e3224d6e683434b1c40f74701",
       "path": "docs/ACTION_POWER_NOTE.md",
-      "runner_path": "action_power_canonical_harness.py",
+      "runner_path": "scripts/action_power_canonical_harness.py",
       "title": "Action Power Branch: Honest Status"
     },
     "action_power_scaling_sweep_note": {
@@ -18536,7 +18536,7 @@
       "deps": [],
       "note_hash": "9e0deac351bd9542600979e86122341f6c98ac086fbaeb42b5c6da5abaaf8058",
       "path": "docs/ACTION_POWER_SCALING_SWEEP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/action_power_scaling_sweep.py",
       "title": "Action-Power Scaling Sweep"
     },
     "action_uniqueness_audit_2026-04-11": {
@@ -18546,7 +18546,7 @@
       "deps": [],
       "note_hash": "b971204908d83c596cc3311ecbc4c6c1264e5a13732efd27eed812e27633cf35",
       "path": "docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/action_uniqueness_investigation.py",
       "title": "Action Uniqueness Audit"
     },
     "action_uniqueness_note": {
@@ -18556,7 +18556,7 @@
       "deps": [],
       "note_hash": "982859030c522e770a8886a19faaf6f26e9414f23e73d224982b67dadd4c7a0d",
       "path": "docs/ACTION_UNIQUENESS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/action_universality_probe.py",
       "title": "Action Universality: F\u221dM exponent = power of f in the action"
     },
     "adaptive_coevolving_geometry_no_go": {
@@ -18566,7 +18566,7 @@
       "deps": [],
       "note_hash": "86d7a637924ee8d9026a4bab9af4bea7acdeefadc4d0ef137c0bafe87e2e1c93",
       "path": "docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md",
-      "runner_path": null,
+      "runner_path": "scripts/node_placement_emergence.py",
       "title": "Adaptive / Coevolving Geometry Scout No-Go"
     },
     "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25": {
@@ -18621,7 +18621,7 @@
       "deps": [],
       "note_hash": "0023358b71dbbc8fbfbbe9f315cf419ba2ac0ba348d9654c49ce8f35520f588e",
       "path": "docs/ai_methodology/METHODOLOGY_CASE_STUDIES_2026-04-25.md",
-      "runner_path": null,
+      "runner_path": "scripts/verify_cl3_sm_embedding.py",
       "title": "Methodology Case Studies"
     },
     "ai_methodology.methodology_evidence_ledger_2026-04-25": {
@@ -18768,7 +18768,7 @@
       "deps": [],
       "note_hash": "fdfacd7ed910934584932d98d4c2d7ee129ade7a88da7ed2b0aa4021a8bf2dd8",
       "path": "docs/ai_methodology/raw/claude_review_packets_full.md",
-      "runner_path": "lattice_2d3d_continuum_check.py",
+      "runner_path": null,
       "title": "Claude Review Packet Full Bodies"
     },
     "ai_methodology.raw.claude_review_structure": {
@@ -18908,7 +18908,7 @@
       "deps": [],
       "note_hash": "9e949f35e585e0024449fca471d1f8839c9c79e58e08b30916593894cfac1eef",
       "path": "docs/ai_methodology/raw/prompts_session_049708ba_jonreilly.md",
-      "runner_path": "/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_gravitational_time_dilation.py",
+      "runner_path": null,
       "title": "Claude Session \u2014 049708ba-932d-481f-969a-04676d577e19"
     },
     "ai_methodology.raw.prompts_session_04c820e1": {
@@ -18918,7 +18918,7 @@
       "deps": [],
       "note_hash": "75bb704d1b169cc9c76963344562f78625b469e4c71cf1bc868e63233007507e",
       "path": "docs/ai_methodology/raw/prompts_session_04c820e1.md",
-      "runner_path": "scripts/frontier_dimension_selection.py",
+      "runner_path": null,
       "title": "Claude Session \u2014 04c820e1-77cd-416f-8917-21767de255fd"
     },
     "ai_methodology.raw.prompts_session_130f89f0_jonreilly": {
@@ -19018,7 +19018,7 @@
       "deps": [],
       "note_hash": "d38ceae70c4f4db5f9168143134db281544352061ce3f057266c4c170ac22143",
       "path": "docs/ai_methodology/raw/prompts_session_4ffea772_jonreilly.md",
-      "runner_path": "/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/scripts/distance_law_3d_64_closure.py",
+      "runner_path": null,
       "title": "Claude Session \u2014 4ffea772-7b7e-4df9-9f26-b4ca51147e5b"
     },
     "ai_methodology.raw.prompts_session_596e9a60_jonreilly": {
@@ -19208,7 +19208,7 @@
       "deps": [],
       "note_hash": "b38d757c3353e09e5539ea5537eb00b65f1dc0fef88f3142368140ae364a4c9a",
       "path": "docs/ai_methodology/raw/prompts_session_ebae4639_jonreilly.md",
-      "runner_path": "scripts/frontier_quark_issr1_bicac_forcing.py",
+      "runner_path": null,
       "title": "Claude Session \u2014 ebae4639-23f6-4620-a97e-4d374e8beaa6"
     },
     "ai_methodology.raw.prompts_session_ef33749a_jonreilly": {
@@ -19370,7 +19370,7 @@
       "deps": [],
       "note_hash": "0bc5c5ee9a0c6adfcf5e6335f7deb64988ca77d6c629b4171de6e2f9b53a4612",
       "path": "docs/ai_methodology/raw/science_scaffolding.md",
-      "runner_path": "scripts/interference_geometry_sweep.py",
+      "runner_path": null,
       "title": "Science Workflow Scaffolding"
     },
     "ai_methodology.raw.workflow_tooling": {
@@ -19484,7 +19484,7 @@
       "deps": [],
       "note_hash": "16e40df8e5080bc4414e903fbb99eb41eac79aeb3cacb4e59511f2ef7bcf9e21",
       "path": "docs/ai_methodology/skills/physics-loop/references/long-running-execution.md",
-      "runner_path": null,
+      "runner_path": "scripts/automation_lock.py",
       "title": "Long-Running Execution"
     },
     "ai_methodology.skills.physics-loop.references.route-patterns": {
@@ -19590,7 +19590,7 @@
       "deps": [],
       "note_hash": "cb4afe8b657bf32a2700a05967dd893bf44cde67c5d510ec21c817cc81529533",
       "path": "docs/ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/ALT_CONNECTIVITY_FAMILY_BASIN.py",
       "title": "ALT Connectivity Family Basin Note"
     },
     "alt_connectivity_family_complex_failure_note": {
@@ -19600,7 +19600,7 @@
       "deps": [],
       "note_hash": "852b18ba67215d054c8be137383bfccc69ef2589f6214a2f22eee1a231a90352",
       "path": "docs/ALT_CONNECTIVITY_FAMILY_COMPLEX_FAILURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/ALT_CONNECTIVITY_FAMILY_COMPLEX_SWEEP.py",
       "title": "ALT Connectivity Family Complex Failure Note"
     },
     "alt_connectivity_family_failure_note": {
@@ -19610,7 +19610,7 @@
       "deps": [],
       "note_hash": "4eb5b1bd06fab9c4086ce8d7f3cb41d3e74ff277613576572fd581f5a7e8892a",
       "path": "docs/ALT_CONNECTIVITY_FAMILY_FAILURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/ALT_CONNECTIVITY_FAMILY_FAILURE_AUDIT.py",
       "title": "ALT Connectivity Family Failure Note"
     },
     "alt_connectivity_family_fm_transfer_note": {
@@ -19620,7 +19620,7 @@
       "deps": [],
       "note_hash": "0ba8ce2fe370b178b068d6fe541a23fded62bbce80f43f4616e809af2e0d4c27",
       "path": "docs/ALT_CONNECTIVITY_FAMILY_FM_TRANSFER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/ALT_CONNECTIVITY_FAMILY_FM_TRANSFER.py",
       "title": "ALT Connectivity Family F~M Transfer Note"
     },
     "alt_connectivity_family_sign_note": {
@@ -19630,7 +19630,7 @@
       "deps": [],
       "note_hash": "dd745102232da50a3a1fa8c72a8896798dae70458f6c41000113080fc702c128",
       "path": "docs/ALT_CONNECTIVITY_FAMILY_SIGN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/ALT_CONNECTIVITY_FAMILY_SIGN_SWEEP.py",
       "title": "ALT Connectivity Family Sign Note"
     },
     "alternative_coupled_field_probe_note": {
@@ -19640,7 +19640,7 @@
       "deps": [],
       "note_hash": "1ddb215c156cd1732a1525e62d25843088854804494e754e29b130fe2f492f67",
       "path": "docs/ALTERNATIVE_COUPLED_FIELD_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/alternative_coupled_field_probe.py",
       "title": "Alternative Coupled-Field Probe"
     },
     "anderson_phase_mu2_0001_note_2026-04-11": {
@@ -19831,7 +19831,7 @@
       "deps": [],
       "note_hash": "c7ac30f4e8dda9c6ed390f0b5dd735f56fddb969f655851f62811b027bff6904",
       "path": "docs/ASYMMETRY_PERSISTENCE_BORN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/asymmetry_persistence_born_calibration.py",
       "title": "Asymmetry Persistence Born Calibration Note"
     },
     "asymmetry_persistence_collapse_note": {
@@ -19841,7 +19841,7 @@
       "deps": [],
       "note_hash": "c3ea31ae7c17152d9fc68d55803f00514efe1c39f21211ca6938e203fd96711a",
       "path": "docs/ASYMMETRY_PERSISTENCE_COLLAPSE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/asymmetry_persistence_collapse_pilot.py",
       "title": "Asymmetry Persistence + Collapse Note"
     },
     "asymmetry_persistence_joint_card_note": {
@@ -19851,7 +19851,7 @@
       "deps": [],
       "note_hash": "42ed727dae63d87219874bb2f4bb04a22dbd4c79f98b4f025d96be63a723f147",
       "path": "docs/ASYMMETRY_PERSISTENCE_JOINT_CARD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/asymmetry_persistence_joint_card.py",
       "title": "Asymmetry Persistence Joint Card Note"
     },
     "asymmetry_persistence_mass_scaling_note": {
@@ -19861,7 +19861,7 @@
       "deps": [],
       "note_hash": "70b50b74202ac894d7eda221692465e186d3bb4a949f2efa8194ab2adffdaf4c",
       "path": "docs/ASYMMETRY_PERSISTENCE_MASS_SCALING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/asymmetry_persistence_mass_scaling.py",
       "title": "Asymmetry Persistence Mass Scaling Note"
     },
     "asymmetry_persistence_mass_window_note": {
@@ -19881,7 +19881,7 @@
       "deps": [],
       "note_hash": "509f89c6574016090e53657dcf11e8d7726536874279621ec57143207baacaa8",
       "path": "docs/ASYMMETRY_PERSISTENCE_PILOT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/asymmetry_persistence_pilot.py",
       "title": "Asymmetry Persistence Pilot Note"
     },
     "atomic_hydrogen_helium_probe_note": {
@@ -19950,7 +19950,7 @@
       "deps": [],
       "note_hash": "8e78b634b1790db98cf69ccc87de6177fa4d25e083a82d45538131816207b7cb",
       "path": "docs/AUDITED_SYMMETRY_SYNTHESIS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_2d_validation.py",
       "title": "Audited Symmetry Synthesis Note"
     },
     "axiom_change_proposal_2026-04-10": {
@@ -20086,7 +20086,7 @@
       "deps": [],
       "note_hash": "2d17d1caa2983b0f55d2a23063ecdd0dcdbc5caa0259428507551ea36030478c",
       "path": "docs/BACKGROUND_INDEPENDENCE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_background_independence.py",
       "title": "Background Independence: Effective Geometry Differs from Input Graph"
     },
     "backreaction_note": {
@@ -20096,7 +20096,7 @@
       "deps": [],
       "note_hash": "95f97d6b8a07bb7a6297ec176dd2753040975023c6299e6884b2e2f245cd027a",
       "path": "docs/BACKREACTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/backreaction_poisson.py",
       "title": "Self-Consistent Back-Reaction: Horizons from Geometry"
     },
     "bell_inequality_derived_note": {
@@ -20189,7 +20189,7 @@
       "deps": [],
       "note_hash": "831303a12e128310864c8cbf30e33a32c6018a1b47d6cec04dbaabcfde9b5c0a",
       "path": "docs/BMV_ENTANGLEMENT_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_bmv_entanglement.py",
       "title": "Branch-Mediated Entanglement on a Staggered Lattice"
     },
     "bmv_threebody_note_2026-04-11": {
@@ -20209,7 +20209,7 @@
       "deps": [],
       "note_hash": "063d57fda038eb7346731936475de4ac1fe6c0f9bba513f6f0cf2b3ae986d38f",
       "path": "docs/BORN_LANE_COMPARISON_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/born_compare_modular_central_ln.py",
       "title": "Born Lane Comparison Note"
     },
     "born_rule_analysis_2026-04-11": {
@@ -20241,7 +20241,7 @@
       "deps": [],
       "note_hash": "96e0b2c0e78a0cc25e0d3d660439a99db10020f1e3342662c20814fab2a5a837",
       "path": "docs/BOUND_STATE_SELECTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_bound_state_selection.py",
       "title": "Bound State Selection: Stable Matter Only at d <= 3"
     },
     "boundary_law_robustness_note_2026-04-11": {
@@ -20253,7 +20253,7 @@
       ],
       "note_hash": "ac8ae531ebd6b3d64bbbfcff658b5263ea0b10869d3ee3b41b18c1f84d7a8758",
       "path": "docs/BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_boundary_law_robustness.py",
       "title": "Boundary-Law Robustness Addendum"
     },
     "branch_entanglement_robustness_note_2026-04-11": {
@@ -20266,7 +20266,7 @@
       ],
       "note_hash": "cc83ac2e432051e3703c9e8333bed6cac922bbfe4a18573d934622ede48558fa",
       "path": "docs/BRANCH_ENTANGLEMENT_ROBUSTNESS_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_branch_entanglement_robustness.py",
       "title": "Branch Entanglement Robustness Note"
     },
     "branch_summary_distracted_napier": {
@@ -20276,7 +20276,7 @@
       "deps": [],
       "note_hash": "24f1995261a63a84b7ce8a74a48553ca242ece34fa043512ca96092cbc291d97",
       "path": "docs/BRANCH_SUMMARY_DISTRACTED_NAPIER.md",
-      "runner_path": "lattice_2d3d_continuum_check.py",
+      "runner_path": null,
       "title": "Branch Summary: claude/distracted-napier"
     },
     "breakthrough_direction_memo_2026-04-10": {
@@ -20306,7 +20306,7 @@
       "deps": [],
       "note_hash": "c7f2469700e5666617881982a935a3c86f449f96c8ebbfc2d1509917c20bc4d6",
       "path": "docs/BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/broad_surrogate_point_source_compare.py",
       "title": "Broad Surrogate Point Source Compare Note"
     },
     "broken_graph_action_power_robustness_note": {
@@ -20316,7 +20316,7 @@
       "deps": [],
       "note_hash": "759d812a0dfbecaef3f6991044e52a4cff77a7aceab1b6dc40a349e4323425ec",
       "path": "docs/BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/broken_graph_action_power_robustness.py",
       "title": "Broken-Graph Action-Power Robustness Note"
     },
     "canonical_harness_index": {
@@ -20595,7 +20595,7 @@
       "deps": [],
       "note_hash": "0e32a8d8b2d87efc2434dbd06af3cc83ce29feed291bf95cb71ba177dd0ff7be",
       "path": "docs/CAUSAL_CONE_SPEED_MAP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/causal_cone_speed_map.py",
       "title": "Causal Cone Speed Map Note"
     },
     "causal_distance_tail_note": {
@@ -20608,7 +20608,7 @@
       ],
       "note_hash": "8ff94d30b224746d9b739e49952f0b2fc9b3d5093fac7f95d7a5122a9f582ae8",
       "path": "docs/CAUSAL_DISTANCE_TAIL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/causal_distance_tail_probe.py",
       "title": "Causal Distance Tail Note"
     },
     "causal_escape_window_note": {
@@ -20618,7 +20618,7 @@
       "deps": [],
       "note_hash": "9e22a9134a48246a2df0f06162aef738ae23699218d40773b0c7858ea9c45897",
       "path": "docs/CAUSAL_ESCAPE_WINDOW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/causal_escape_window.py",
       "title": "Causal-Escape Window: Qualitative Regime (Conditional)"
     },
     "causal_field_canonical_chain_note": {
@@ -20638,7 +20638,7 @@
       "deps": [],
       "note_hash": "f0e9cd3c083ef823b0143fd846c53941b500739da1cf60f5d6b3cac0d8b483ac",
       "path": "docs/CAUSAL_FIELD_PORTABILITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/causal_field_portability_probe.py",
       "title": "Causal Field Portability Note"
     },
     "causal_field_reconciliation_note": {
@@ -20648,7 +20648,7 @@
       "deps": [],
       "note_hash": "b76057aab61b9dccff219641911313d56a9f13add76b7a95d40f7091470071ee",
       "path": "docs/CAUSAL_FIELD_RECONCILIATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/causal_field_portability_probe.py",
       "title": "Causal Field Reconciliation Note"
     },
     "causal_impact_parameter_note": {
@@ -20662,7 +20662,7 @@
       ],
       "note_hash": "4fd74ea09d854dabfacf4bcdfc0451a73e4339efde6d8b8b38b3424c5d847e28",
       "path": "docs/CAUSAL_IMPACT_PARAMETER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/causal_impact_parameter_probe.py",
       "title": "Causal Impact-Parameter Note"
     },
     "causal_moving_unification_note": {
@@ -20682,7 +20682,7 @@
       "deps": [],
       "note_hash": "79d0141e5a28f5ba8430896ca5e60c5af06bb8cc3f5a6062f18b75c16918aa56",
       "path": "docs/CAUSAL_PROPAGATING_FIELD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/causal_propagating_field.py",
       "title": "Causal Propagating Field"
     },
     "causal_source_placement_robustness_note": {
@@ -20692,7 +20692,7 @@
       "deps": [],
       "note_hash": "644062fd3b29c57c1ef9464705396c9e7f0ed7d137388295fed926294c671ece",
       "path": "docs/CAUSAL_SOURCE_PLACEMENT_ROBUSTNESS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/causal_source_placement_robustness.py",
       "title": "Causal Source Placement Robustness Note"
     },
     "central_band_born_dense_sweep_note": {
@@ -20702,7 +20702,7 @@
       "deps": [],
       "note_hash": "26296f8e5f361e0e1ed23675f64fa94676da37c4c109cd2946897eebca68192e",
       "path": "docs/CENTRAL_BAND_BORN_DENSE_SWEEP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/central_band_born_dense_sweep.py",
       "title": "Central-Band Dense Corrected Born Sweep Note"
     },
     "central_band_born_largen_note": {
@@ -20712,7 +20712,7 @@
       "deps": [],
       "note_hash": "7e10de1f8ccc6646e8dce3d407ae165a0ff2d17e7e558dd58b554a39ca79289b",
       "path": "docs/CENTRAL_BAND_BORN_LARGEN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/central_band_born_largeN.py",
       "title": "Central-Band Large-N Corrected Born Note"
     },
     "central_band_collapse_note": {
@@ -20732,7 +20732,7 @@
       "deps": [],
       "note_hash": "10819ae9a60731cfe190c7ec1efa7e5c3076406aab090a9f5baca6ccb4622394",
       "path": "docs/CENTRAL_BAND_COLLAPSE_STRENGTH_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/central_band_born_collapse_strength_sweep.py",
       "title": "Central-Band Collapse-Strength Note"
     },
     "central_band_dense_boundary_note": {
@@ -20742,7 +20742,7 @@
       "deps": [],
       "note_hash": "c041b01a5e024310cbd4615ac7e78b4abc23a6d67fedce9f789aa37cc3228181",
       "path": "docs/CENTRAL_BAND_DENSE_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/central_band_dense_boundary_sweep.py",
       "title": "Central-Band Dense Boundary Note"
     },
     "central_band_dense_joint_highn_note": {
@@ -20752,7 +20752,7 @@
       "deps": [],
       "note_hash": "a343d4b8ccc7b7cbd00788a04c816f03ab4bb8c1c4991ed1d88a8dd4736d4c07",
       "path": "docs/CENTRAL_BAND_DENSE_JOINT_HIGHN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/central_band_dense_joint_highN.py",
       "title": "Central-Band Dense High-N Joint Card Note"
     },
     "central_band_dense_joint_note": {
@@ -20762,7 +20762,7 @@
       "deps": [],
       "note_hash": "69992100110ea115a29d64e68dfece0a94964396d4702be9ca75df1fb4cd4dae",
       "path": "docs/CENTRAL_BAND_DENSE_JOINT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/central_band_dense_joint_card.py",
       "title": "Central-Band Dense Joint Card Note"
     },
     "central_band_dense_largen_note": {
@@ -20772,7 +20772,7 @@
       "deps": [],
       "note_hash": "0e4ab2d44ade16ea06ad8c5b91a6d41d10b11ea978ec3553a3b2413bced31262",
       "path": "docs/CENTRAL_BAND_DENSE_LARGEN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/central_band_dense_joint_largeN.py",
       "title": "Central-Band Dense Large-N Joint Card Note"
     },
     "central_band_layernorm_note": {
@@ -20782,7 +20782,7 @@
       "deps": [],
       "note_hash": "cf42f800464067f24312d0f7e4e8fe121ea7427e63835348778472bdae78bad4",
       "path": "docs/CENTRAL_BAND_LAYERNORM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/central_band_layernorm_combo.py",
       "title": "Central-Band Removal + Layernorm Note"
     },
     "central_band_mass_window_note": {
@@ -20792,7 +20792,7 @@
       "deps": [],
       "note_hash": "7e7cd13b4a9ba5e33456846c80d29f9e0180df2ba4048257f2f91153b48c599f",
       "path": "docs/CENTRAL_BAND_MASS_WINDOW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/central_band_mass_window_summary.py",
       "title": "Central-Band Mass Window Note"
     },
     "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26": {
@@ -20817,7 +20817,7 @@
       ],
       "note_hash": "c1fb0cd3595ab168eb2a27d130f712df64db32ba79b18ed35c35d5cc6a16107e",
       "path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_charged_lepton_observable_curvature.py",
       "title": "Charged-Lepton Koide-Cone Algebraic Equivalence"
     },
     "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27": {
@@ -21018,7 +21018,7 @@
       "deps": [],
       "note_hash": "4603e862c21d23f2cabc1f2d15ae81b18fc607a131dd7cf88aabadfa23f29e22",
       "path": "docs/CHIRAL_3PLUS1D_BOUNDARY_PHASE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_chiral_3plus1d_boundary_phase_diagram.py",
       "title": "CHIRAL 3+1D Boundary Phase Note"
     },
     "chiral_3plus1d_coupled_coin_note": {
@@ -21038,7 +21038,7 @@
       "deps": [],
       "note_hash": "a712da50e1e80ff9225a3941e0dd8bcee14366c3c4dade09b8abd7bd65a26f85",
       "path": "docs/CHIRAL_3PLUS1D_MIXING_PERIOD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_chiral_3plus1d_decoherence_sweep.py",
       "title": "3+1D Chiral Mixing Period Note"
     },
     "chiral_3plus1d_recurrence_note": {
@@ -21048,7 +21048,7 @@
       "deps": [],
       "note_hash": "31012f15cd81d87239f2ac79a71efd412327b6137d839d5b77ed9af442d3099b",
       "path": "docs/CHIRAL_3PLUS1D_RECURRENCE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_chiral_3plus1d_decoherence_sweep.py",
       "title": "3+1D Periodic Chiral Sign Windows: Wrap and Recurrence Scale"
     },
     "chiral_bottleneck_card_proposal": {
@@ -21101,7 +21101,7 @@
       ],
       "note_hash": "354e6fb5ae71ff38a5213e7b91e6cad320423dbea1c98ffabc24d4419d3aa061",
       "path": "docs/CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_chiral_3plus1d_decoherence_sweep.py",
       "title": "Chiral Walk Synthesis Addendum"
     },
     "chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25": {
@@ -21696,7 +21696,7 @@
       "deps": [],
       "note_hash": "6b2f6b4a0bafee4b283e7fac0dbbedac2e64e9eb89493cdba84ec3fbd3d43be4",
       "path": "docs/CKM_SCHUR_COMPLEMENT_THEOREM.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_ckm_schur_complement.py",
       "title": "CKM from Schur Complement of the EWSB-Dressed NNI Mass Matrix"
     },
     "ckm_second_row_magnitudes_theorem_note_2026-04-25": {
@@ -21861,7 +21861,7 @@
       "deps": [],
       "note_hash": "4eda16812dfaf2d3e2ec6e7b800d5a18cb4a7ae0b261bccd5ddfc066a264c0e7",
       "path": "docs/CLAUDE_COMPLEX_ACTION_CARRYOVER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/exact_lattice_complex_action_carryover.py",
       "title": "Claude Complex-Action Carryover Note"
     },
     "claude_complex_action_grown_companion_note": {
@@ -21871,7 +21871,7 @@
       "deps": [],
       "note_hash": "c6fcc3b639ba574192e291596ca51afc0555c3661260b86652273099fae46239",
       "path": "docs/CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/complex_action_grown_companion.py",
       "title": "Claude Complex-Action Grown Companion Note"
     },
     "clifford_bimodule_ray_saturation_future_target_note_2026-04-19": {
@@ -21891,7 +21891,7 @@
       "deps": [],
       "note_hash": "40ba120d34ee45cd1a43d207ea145bc6a715bef1fb0773d1d17b5f2b660ca0ec",
       "path": "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md",
-      "runner_path": "frontier_color_projection_mc.py",
+      "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "Complete Prediction Chain: Cl(3) on Z^3"
     },
     "complex_action_note": {
@@ -21901,7 +21901,7 @@
       "deps": [],
       "note_hash": "ab2ac2fdc758cfeca9ba68841e3dc0eb7868acbd46fe4525be01c15bc9fe7e7c",
       "path": "docs/COMPLEX_ACTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/complex_action_harness.py",
       "title": "Complex Action: Gravity + Horizons Unification (Conditional Model)"
     },
     "complex_selectivity_compare_note": {
@@ -21911,7 +21911,7 @@
       "deps": [],
       "note_hash": "859c340bc112945a598d800e36dfdf64e30aaac6f22133f8cc69b57765e4ed2f",
       "path": "docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/COMPLEX_SELECTIVITY_COMPARE.py",
       "title": "Complex Selectivity Compare Note"
     },
     "complex_selectivity_predictor_note": {
@@ -21921,7 +21921,7 @@
       "deps": [],
       "note_hash": "f8f26a44512124d3e207ff1b4dd12d24fc4a9269e5c355e8014d947f415b8713",
       "path": "docs/COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/COMPLEX_SELECTIVITY_PREDICTOR_SCAN.py",
       "title": "Complex Selectivity Predictor Note"
     },
     "composite_source_additivity_2d_note": {
@@ -21931,7 +21931,7 @@
       "deps": [],
       "note_hash": "5fe26e93bca2f2dfcc055d889465f96cbabb2fbd5f8d817e73c2d7a2407dfb0d",
       "path": "docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/composite_source_additivity_2d_cross_family.py",
       "title": "Composite-Source Additivity Cross-Family Note"
     },
     "composite_source_additivity_note": {
@@ -21941,7 +21941,7 @@
       "deps": [],
       "note_hash": "258bc5c839f3129afe1d05f903c3c8ebf89bd1a4062270608a724bd741e21e27",
       "path": "docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/composite_source_additivity_harness.py",
       "title": "Composite-Source Additivity Note"
     },
     "confinement_string_tension_note": {
@@ -21961,7 +21961,7 @@
       "deps": [],
       "note_hash": "71dd234fda33747c9b473e68f8a068cda68d6dd9412a24c331e2458eca8d6eed",
       "path": "docs/CONNECTIVITY_FAMILY_V2_ELLIPTICAL_DUPLICATE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/CONNECTIVITY_FAMILY_V2_ELLIPTICAL_SWEEP.py",
       "title": "Connectivity Family V2 Elliptical Duplicate Note"
     },
     "continuum_bridge_note": {
@@ -22003,7 +22003,7 @@
       "deps": [],
       "note_hash": "43b7ce256649ea31742fbf069d7f6401b3091434da8aad83082939df51bbf4e5",
       "path": "docs/CONTINUUM_LIMIT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_h2_T_numpy_continuum.py",
       "title": "Continuum Limit via h^2 Measure"
     },
     "cosmological_constant_result_2026-04-12": {
@@ -22019,7 +22019,7 @@
       ],
       "note_hash": "0cad1d5380fa838bd5923878a69115a130f11a502462189ac21b21eff6dabf47",
       "path": "docs/COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_cosmological_constant.py",
       "title": "Cosmological Constant \u2014 Spectral-Gap Companion"
     },
     "cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29": {
@@ -22141,7 +22141,7 @@
       "deps": [],
       "note_hash": "cbac2da07637b751552d71aa44f6183254c454211967650c80500cf1d5becf0b",
       "path": "docs/COUPLED_FIELD_GENERATED_FAMILY_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/coupled_field_generated_family_probe.py",
       "title": "Coupled Field Generated Family Probe"
     },
     "cpt_exact_note": {
@@ -22161,7 +22161,7 @@
       "deps": [],
       "note_hash": "3b812e95feb91a13491d6817dbdf70c54e07c0be42f6265d47aa870c0e6af720",
       "path": "docs/CRITICAL_EXPONENTS_TOPOLOGY_NOTE_2026-04-10.md",
-      "runner_path": "frontier_critical_exponents.py",
+      "runner_path": "scripts/frontier_critical_exponents.py",
       "title": "Critical Exponents vs Topology"
     },
     "cross_family_universality_note": {
@@ -22171,7 +22171,7 @@
       "deps": [],
       "note_hash": "141cca89f25840dae3b3932b9bf077d3a1eb3cfa5cea8d0de737318c3a025c72",
       "path": "docs/CROSS_FAMILY_UNIVERSALITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/dispersion_all_families.py",
       "title": "Cross-Family Consistency: Dispersion + Lensing at H=0.5 (Conditional)"
     },
     "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29": {
@@ -22215,7 +22215,7 @@
       "deps": [],
       "note_hash": "a8fdc8fc09923021f807f6335508747f3b54f429e837282bdbf5da63a75e0dc2",
       "path": "docs/CYCLE_BATTERY_NOTE_2026-04-10.md",
-      "runner_path": "frontier_staggered_cycle_battery.py",
+      "runner_path": "scripts/frontier_staggered_cycle_battery.py",
       "title": "Cycle-Bearing Graph Battery \u2014 Retained Note"
     },
     "cycle_battery_scaled_note_2026-04-10": {
@@ -22227,7 +22227,7 @@
       ],
       "note_hash": "0eb4c2bc4f5da39d9a800461924bda2b3a983d9458a79275efe9769a7d146467",
       "path": "docs/CYCLE_BATTERY_SCALED_NOTE_2026-04-10.md",
-      "runner_path": "frontier_staggered_cycle_battery_scaled.py",
+      "runner_path": "scripts/frontier_staggered_cycle_battery_scaled.py",
       "title": "Cycle-Bearing Graph Battery, Scaled"
     },
     "cycle_break_frontier_note_2026-04-10": {
@@ -22240,7 +22240,7 @@
       ],
       "note_hash": "99391b2b4aee233a1d60863bbf5965af63fb2e21967abfad8a760555c97931dd",
       "path": "docs/CYCLE_BREAK_FRONTIER_NOTE_2026-04-10.md",
-      "runner_path": "frontier_staggered_cycle_break_frontier.py",
+      "runner_path": "scripts/frontier_staggered_cycle_break_frontier.py",
       "title": "Cycle-Bearing Break Frontier Note"
     },
     "cycle_break_slice_note_2026-04-10": {
@@ -22250,7 +22250,7 @@
       "deps": [],
       "note_hash": "7f0a9edc51108d762d8188e103f1f3a87465f6e730108c0073ee9713eb9d48e6",
       "path": "docs/CYCLE_BREAK_SLICE_NOTE_2026-04-10.md",
-      "runner_path": "frontier_staggered_cycle_break_slice.py",
+      "runner_path": "scripts/frontier_staggered_cycle_break_slice.py",
       "title": "Cycle-Break Frontier Slice Note"
     },
     "dark_energy_eos_note": {
@@ -22291,7 +22291,7 @@
       "deps": [],
       "note_hash": "73a6a45f19438d619ae5abed4d960c570c1c5437c4695c50846e1864ee5ad313",
       "path": "docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/decoherence_action_independence.py",
       "title": "Decoherence is Action-Independent"
     },
     "decoherence_decision_note": {
@@ -22321,7 +22321,7 @@
       "deps": [],
       "note_hash": "cf8423b5d175b2749bb2d532516cba5d4e7fb4af5430537c3c780ffce32bee99",
       "path": "docs/DENSE_PRUNE_GUARD_SEED_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/channel_count_guarded_prune.py",
       "title": "Dense Prune Guard Seed Note"
     },
     "diamond_absolute_unit_bridge_note": {
@@ -22351,7 +22351,7 @@
       "deps": [],
       "note_hash": "27a399bcfa1bd89691bec384b9631dce5a08fc75cf436645bc76fbb27d82c447",
       "path": "docs/DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/diamond_phase_ramp_bridge_card.py",
       "title": "Diamond Phase-Ramp Bridge Card Note"
     },
     "diamond_sensor_prediction_note": {
@@ -22381,7 +22381,7 @@
       "deps": [],
       "note_hash": "a72f0873702bef0b1e33ba18195f47d3fca4c888db07d63c1f35822b3a1735d1",
       "path": "docs/DIAMOND_SIGNAL_BUDGET_HARDENING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/diamond_signal_budget_hardening.py",
       "title": "Diamond Signal Budget Hardening Note"
     },
     "dimension_selection_note": {
@@ -22391,7 +22391,7 @@
       "deps": [],
       "note_hash": "516e83e7d8f54c0ca1a14427bc9934ac1b382264d967ed74101c1d6c7d850401",
       "path": "docs/DIMENSION_SELECTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dimension_selection.py",
       "title": "Dimension Selection: Does Self-Consistency Require d = 3?"
     },
     "dimensional_gravity_table": {
@@ -22411,7 +22411,7 @@
       "deps": [],
       "note_hash": "612617b506f758c034925c954c88d8e22435648687521d69c02b0228938e9c40",
       "path": "docs/DIRAC_CORE_CARD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dirac_walk_3plus1d_core_card.py",
       "title": "Dirac 3+1D Core Card Note"
     },
     "dirac_decoherence_probe_note": {
@@ -22431,7 +22431,7 @@
       "deps": [],
       "note_hash": "a2cff3950651edbeffaf8c8c9d4f1488e374b83965de85ec64aad56331c0ceea",
       "path": "docs/DIRAC_FIELD_SMOOTHING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dirac_walk_3plus1d_field_smoothing_scan.py",
       "title": "Dirac Field Smoothing Note"
     },
     "dirac_observable_panel_note": {
@@ -22443,7 +22443,7 @@
       ],
       "note_hash": "f5b11936b91d5c807c952e65c4def471408899d2d66252ef6ba77d5e2e297890",
       "path": "docs/DIRAC_OBSERVABLE_PANEL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dirac_walk_3plus1d_v3.py",
       "title": "Dirac Observable Panel Note"
     },
     "dirac_source_smoothing_note": {
@@ -22453,7 +22453,7 @@
       "deps": [],
       "note_hash": "7e9935a31cbb0526b7c5815a8e7d7077a9ba49df9e8c6af0f856cfdd86bae3c7",
       "path": "docs/DIRAC_SOURCE_SMOOTHING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dirac_walk_3plus1d_source_smoothing_scan.py",
       "title": "Dirac Source Smoothing Note"
     },
     "dirac_v4_convergence_note": {
@@ -22463,7 +22463,7 @@
       "deps": [],
       "note_hash": "161d6d759136b133315dd92d43c2b20b858a61876790a58a53ade92557708496",
       "path": "docs/DIRAC_V4_CONVERGENCE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dirac_walk_3plus1d_v4_convergence.py",
       "title": "Dirac v4 Convergence Note"
     },
     "dirac_weak_coupling_note": {
@@ -22473,7 +22473,7 @@
       "deps": [],
       "note_hash": "855b0e3a9f33283a58e84b7a8a0fdd3f79b55deebebea6139c55b5d3ec0f0654",
       "path": "docs/DIRAC_WEAK_COUPLING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dirac_walk_3plus1d_weak_coupling_scan.py",
       "title": "Dirac Weak Coupling Note"
     },
     "directional_b_density_stencil_note": {
@@ -22493,7 +22493,7 @@
       "deps": [],
       "note_hash": "89d6894ed9b59497ee2fa0b0660dc8057af9e58e08db50adf0d25c2fad335d7e",
       "path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/directional_b_geometry_normalized_holdout_transfer.py",
       "title": "Directional-B Geometry-Normalized Holdout Transfer Mass5 Note"
     },
     "directional_b_geometry_normalized_holdout_transfer_note": {
@@ -22503,7 +22503,7 @@
       "deps": [],
       "note_hash": "3427034af3a052eb11a16b8f7fd431b59e171e1d4d3a514ca5ddae382bf99813",
       "path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/directional_b_geometry_normalized_holdout_transfer.py",
       "title": "Directional-B Geometry-Normalized Holdout Transfer Note"
     },
     "directional_b_geometry_normalized_overlap_map_note": {
@@ -22513,7 +22513,7 @@
       "deps": [],
       "note_hash": "7f83f7053bd895b0c3304641ebe0f0d635b2bfa80643c6847e745b071950a3d9",
       "path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/directional_b_geometry_normalized_overlap_map.py",
       "title": "Directional-B Geometry-Normalized Overlap Map Note"
     },
     "directional_b_geometry_normalized_overlap_subcritical_n12_note": {
@@ -22523,7 +22523,7 @@
       "deps": [],
       "note_hash": "7654a938843a3a4c8c8f884288c6b7d8b9d64d45c176231f7554d3e457a8afd9",
       "path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/directional_b_geometry_normalized_overlap_map.py",
       "title": "Directional-B Geometry-Normalized Overlap Subcritical `N=12` Note"
     },
     "dispersion_high_p_tiebreaker_note": {
@@ -22533,7 +22533,7 @@
       "deps": [],
       "note_hash": "3bd71f298b9c934c3654081d5e528a39f61921aabab8f0078b7e9ba97c9a6611",
       "path": "docs/DISPERSION_HIGH_P_TIEBREAKER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/dispersion_high_p_tiebreaker.py",
       "title": "High-p Dispersion Tiebreaker"
     },
     "dispersion_relation_note": {
@@ -22543,7 +22543,7 @@
       "deps": [],
       "note_hash": "f53482d4b81b802380748c535504268e361bf99ace24a7292e0fa9d6f4a76ba1",
       "path": "docs/DISPERSION_RELATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_dispersion_relation.py",
       "title": "Dispersion Relation: Geometry-Dependent, Not Decisively Relativistic or Non-Relativistic"
     },
     "distance_law_3d_64_closure_note_2026-04-11": {
@@ -22553,7 +22553,7 @@
       "deps": [],
       "note_hash": "cc0d84224611c9b5863462ef1b573be52c3367bcf6bc8a8ddc5e4c079deb40eb",
       "path": "docs/DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/distance_law_3d_64_closure.py",
       "title": "3D Path-Sum Distance Continuation Note"
     },
     "distance_law_breakpoint_note": {
@@ -22563,7 +22563,7 @@
       "deps": [],
       "note_hash": "24bff63d0d5d742245b5d59f1ec472b70780530129439c038d37ed7bd08be219",
       "path": "docs/DISTANCE_LAW_BREAKPOINT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/DISTANCE_LAW_BREAKPOINT_COMPARE.py",
       "title": "Distance Law Breakpoint Note"
     },
     "distance_law_definitive_note": {
@@ -22593,7 +22593,7 @@
       "deps": [],
       "note_hash": "ac8099bd15a04b0ca559c2cfc8a66b16f90d156e9e0896424fbd8dc32d571ce9",
       "path": "docs/DISTANCE_LAW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/distance_law_wide_continuum.py",
       "title": "Distance Law: Steeper Than Newtonian"
     },
     "distance_law_portability_note": {
@@ -22613,7 +22613,7 @@
       "deps": [],
       "note_hash": "3c40dc13da3a73fa4a49ab6ca0d1d0e423655f6fa1dde8ae7c27c56258d389ea",
       "path": "docs/DISTANCE_LAW_PRESERVING_THIRD_FAMILY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/DISTANCE_LAW_PRESERVING_THIRD_FAMILY.py",
       "title": "Distance Law Preserving Third Family Note"
     },
     "distracted_napier_reconciliation_note": {
@@ -22745,7 +22745,7 @@
       ],
       "note_hash": "0c25ecf93a276380b88f8b58b80c758d8ed91eb9d4b2adaa0cfc962f5b010be9",
       "path": "docs/DM_CONTINUUM_LIMIT_VELOCITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/dm_continuum_limit_velocity.py",
       "title": "dM Continuum Limit Across Multiple v/c \u2014 Downgraded (3-Refinement Negative)"
     },
     "dm_current_bank_quantitative_mapping_note_2026-04-21": {
@@ -22765,7 +22765,7 @@
       "deps": [],
       "note_hash": "b084ea2a074727d1d7161d95df20faaf158ee693b81f57962739b8e31d38b79c",
       "path": "docs/DM_DPLE_ABCC_NO_GO_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_dple_theorem.py",
       "title": "DPLE Cannot Close A-BCC: Sign-Blindness No-Go"
     },
     "dm_dple_dimension_parametric_extremum_theorem_note_2026-04-19": {
@@ -23320,7 +23320,7 @@
       "deps": [],
       "note_hash": "b0ac0cf3a44e10284d37c20e13e6efad164631319453daff0bc44feeb08c2808",
       "path": "docs/DM_LEPTON_SYNTHESIS_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_sigma_hier_uniqueness_theorem.py",
       "title": "Dark Matter and Lepton Sector \u2014 Synthesis Note"
     },
     "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15": {
@@ -23438,7 +23438,7 @@
       "deps": [],
       "note_hash": "8170f17dfef71d61fe4fb686fa349338b2b5cfe2c12612dd1159be66825609f5",
       "path": "docs/DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_neutrino_dirac_bridge_theorem.py",
       "title": "DM Neutrino Dirac Bridge Theorem Note"
     },
     "dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16": {
@@ -23540,7 +23540,7 @@
       "deps": [],
       "note_hash": "78e198722069cc46175441c8878c0ef4d4d409746212aafe23ad4fe555696e5a",
       "path": "docs/DM_NEUTRINO_OPERATOR_SELECTION_OBSTRUCTION_NOTE_2026-04-14.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_neutrino_operator_selection_obstruction.py",
       "title": "DM Neutrino Operator Selection Obstruction Note"
     },
     "dm_neutrino_polar_aligned_core_no_go_note_2026-04-15": {
@@ -23941,7 +23941,7 @@
       "deps": [],
       "note_hash": "f3da5e907c3079b5afc23e001cf6ee244ea693af8e39f13429f9c8cd91f03c77",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_2026_04_18.py",
       "title": "P3 Sylvester Linear-Path Signature Theorem on the DM Neutrino Source Surface"
     },
     "dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17": {
@@ -24517,7 +24517,7 @@
       ],
       "note_hash": "17aef05056d32480d0fae9747511cd5b1130c49a7b096f2f29a2b8c0b1e06c11",
       "path": "docs/DM_PMNS_LOCAL_SELECTOR_FAMILY_NO_GO_THEOREM_NOTE_2026-04-20.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_pmns_local_selector_family_no_go_theorem_2026_04_20.py",
       "title": "DM PMNS Local-Selector-Family No-Go Theorem"
     },
     "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21": {
@@ -24537,7 +24537,7 @@
       "deps": [],
       "note_hash": "14441e3fda1d61409bcb2d8d0624ece8a67d515c074ca98965f4556cb83d3aa5",
       "path": "docs/DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_pmns_ne_seed_surface_exact_source_manifold_theorem_2026_04_20.py",
       "title": "DM PMNS Fixed `N_e` Seed-Surface Exact Source-Manifold Theorem"
     },
     "dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21": {
@@ -24690,7 +24690,7 @@
       ],
       "note_hash": "734fe38b29fe78d15ff25cb489890dd25515e2ac32d902f5d73737f7addc9804",
       "path": "docs/DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_sigma_hier_upper_octant_selector_theorem_2026_04_20.py",
       "title": "DM \u03c3_hier Upper-Octant Selector Theorem"
     },
     "dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21": {
@@ -25266,7 +25266,7 @@
       "deps": [],
       "note_hash": "cf1d8c15426430d9ce7e91d5facac656a57097ab74d24d4ce05151d3dd56f4ff",
       "path": "docs/EIGENVALUE_ANDERSON_PHASE_NOTE_2026-04-11.md",
-      "runner_path": "frontier_eigenvalue_stats_and_anderson_phase.py",
+      "runner_path": "scripts/frontier_eigenvalue_stats_and_anderson_phase.py",
       "title": "Eigenvalue Statistics and Anderson Phase Note"
     },
     "electric_sign_law_note": {
@@ -25276,7 +25276,7 @@
       "deps": [],
       "note_hash": "71fd2f80c1c98344d5bbc7631b7fbba543f81adecf00ba6befc21c7c2efb3913",
       "path": "docs/ELECTRIC_SIGN_LAW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/electric_sign_law_harness.py",
       "title": "Electric Sign-Law Note"
     },
     "electrostatics_card_note": {
@@ -25286,7 +25286,7 @@
       "deps": [],
       "note_hash": "dab2944b2b5dc6a4280ec3c3869f6083a5eb2afc25a080a944ea9f77710b8103",
       "path": "docs/ELECTROSTATICS_CARD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/electrostatics_card.py",
       "title": "Electrostatics Card Note"
     },
     "electrostatics_grown_sign_law_note": {
@@ -25296,7 +25296,7 @@
       "deps": [],
       "note_hash": "84dc0c6cbb84a0236d1b49b47056039db5e56a976ed34e570012b944b624891a",
       "path": "docs/ELECTROSTATICS_GROWN_SIGN_LAW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/ELECTROSTATICS_GROWN_SIGN_LAW.py",
       "title": "Electrostatics Grown Sign-Law Note"
     },
     "electrostatics_superposition_proxy_note": {
@@ -25306,7 +25306,7 @@
       "deps": [],
       "note_hash": "aa12583a89680dd8f2ef9837791ed43087da69e03f097d002d472ce525d0e3aa",
       "path": "docs/ELECTROSTATICS_SUPERPOSITION_PROXY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/electrostatics_superposition_proxy.py",
       "title": "Electrostatics Superposition Proxy Note"
     },
     "em_gravity_coexistence_2x2_note": {
@@ -25366,7 +25366,7 @@
       "deps": [],
       "note_hash": "0bf777ec0bec4458088828592cec76f91c1b9f2cae9d4647268b807962060d05",
       "path": "docs/EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/equivalence_principle_harness.py",
       "title": "Equivalence Principle Harness Note"
     },
     "equivalence_principle_note": {
@@ -25402,7 +25402,7 @@
       "deps": [],
       "note_hash": "9ffa98b6e5de96f953dee14241338bd350b09f24e8d087847ba11a8580b17513",
       "path": "docs/EVOLVING_NETWORK_PROTOTYPE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/evolving_network_prototype_v2.py",
       "title": "Evolving Network Prototype Note"
     },
     "evolving_network_prototype_v2_note": {
@@ -25412,7 +25412,7 @@
       "deps": [],
       "note_hash": "f7b54e55480dc491f4bd555b20e8ecb4007b8ecd1a03f717b3b5d3bd2319787c",
       "path": "docs/EVOLVING_NETWORK_PROTOTYPE_V2_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/evolving_network_prototype_v2.py",
       "title": "Evolving Network Prototype V2 Note"
     },
     "evolving_network_prototype_v3_note": {
@@ -25422,7 +25422,7 @@
       "deps": [],
       "note_hash": "5a05bf13750ee439902143539d11bbff887f6957e03b583259ef88911224e793",
       "path": "docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/evolving_network_prototype_v3.py",
       "title": "Evolving Network Prototype V3 Note"
     },
     "evolving_network_prototype_v4_note": {
@@ -25432,7 +25432,7 @@
       "deps": [],
       "note_hash": "39fa8e2f291ad284d1e33322c127d040032967cddee30ec325ec7bd22dc4acbe",
       "path": "docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/evolving_network_prototype_v4.py",
       "title": "Evolving Network Prototype V4 Note"
     },
     "evolving_network_prototype_v5_note": {
@@ -25442,7 +25442,7 @@
       "deps": [],
       "note_hash": "5112b6df12c2a08ee0a17599bba896a21b2603460a151883af2f90d194c5ba80",
       "path": "docs/EVOLVING_NETWORK_PROTOTYPE_V5_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/evolving_network_prototype_v5.py",
       "title": "Evolving Network Prototype V5 Note"
     },
     "evolving_network_prototype_v6_note": {
@@ -25452,7 +25452,7 @@
       "deps": [],
       "note_hash": "84f1303187635b6dad706f47983cdf5ed457a8572f684c2da86f41b7c5aee2b1",
       "path": "docs/EVOLVING_NETWORK_PROTOTYPE_V6_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/evolving_network_prototype_v6.py",
       "title": "Evolving Network Prototype V6 Note"
     },
     "ew_coupling_derivation_note": {
@@ -25536,7 +25536,7 @@
       "deps": [],
       "note_hash": "0476691579b4a2232c5f669f8d4e30fa77b645fd9258612c5adef63b83370c1e",
       "path": "docs/FAMILY_COMPANION_COMPARE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/FAMILY_COMPANION_COMPARE.py",
       "title": "Family Companion Compare Note"
     },
     "field_equation_derivation_note": {
@@ -25556,7 +25556,7 @@
       "deps": [],
       "note_hash": "60f0663cc09ed5921d5e722850d338fbffd2436067656bffff3bbde0a96c070f",
       "path": "docs/FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py",
       "title": "Fifth Family Complex Boundary Note"
     },
     "fifth_family_complex_note": {
@@ -25566,7 +25566,7 @@
       "deps": [],
       "note_hash": "14cb34568c80cf36b96722a4c3b34945d2e6b53c4862741e4d7edeb6e882835a",
       "path": "docs/FIFTH_FAMILY_COMPLEX_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py",
       "title": "Fifth Family Complex Note"
     },
     "fifth_family_radial_boundary_note": {
@@ -25576,7 +25576,7 @@
       "deps": [],
       "note_hash": "0cfe67b5d60f567b505eba16f66457023fc398f4c99f07fa72134a13051e6e81",
       "path": "docs/FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/FIFTH_FAMILY_RADIAL_FAILURE_AUDIT.py",
       "title": "Fifth Family Radial Boundary Note"
     },
     "fifth_family_radial_fm_transfer_note": {
@@ -25586,7 +25586,7 @@
       "deps": [],
       "note_hash": "5d32fac50945427cf043f6fb58423dcf6c41b0c6c7a5bb28dec950ae87f0c402",
       "path": "docs/FIFTH_FAMILY_RADIAL_FM_TRANSFER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/FIFTH_FAMILY_RADIAL_FM_TRANSFER.py",
       "title": "Fifth Family Radial F~M Transfer Note"
     },
     "fifth_family_radial_note": {
@@ -25596,7 +25596,7 @@
       "deps": [],
       "note_hash": "7f7877947caf1abe138f8788f89b98ea928a263657842b18afbb49fb825dd8ee",
       "path": "docs/FIFTH_FAMILY_RADIAL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/FIFTH_FAMILY_RADIAL_SWEEP.py",
       "title": "Fifth Family Radial Note"
     },
     "fine_h_family_universality_note": {
@@ -25606,7 +25606,7 @@
       "deps": [],
       "note_hash": "04e70121e41bfc0900dcea49a1e2c1c6cde352a903df3671b927a04275012832",
       "path": "docs/FINE_H_FAMILY_UNIVERSALITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lensing_fine_h_batch.py",
       "title": "Fine-H (H=0.25) Lensing: Three-Family Portability"
     },
     "finite_rank_source_to_metric_theorem_note": {
@@ -25626,7 +25626,7 @@
       "deps": [],
       "note_hash": "98b52f3a1f0dd4d8a78b6dd4233e8c54403925a15507c74b5e2f374deb21b0c9",
       "path": "docs/FIXED_FIELD_COMPLEX_GROWN_BASIN_V2_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/FIXED_FIELD_COMPLEX_GROWN_BASIN_V2.py",
       "title": "Fixed-Field Complex Grown Basin V2 Note"
     },
     "fixed_field_family_unification_note": {
@@ -25636,7 +25636,7 @@
       "deps": [],
       "note_hash": "d65c8e41cb00e0e6c7c06dce0874af3842728fa1effbcb8ea43f406a3264a778",
       "path": "docs/FIXED_FIELD_FAMILY_UNIFICATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/FIXED_FIELD_FAMILY_UNIFICATION.py",
       "title": "Fixed-Field Family Unification Note"
     },
     "fixed_field_grown_transfer_scout_note": {
@@ -25646,7 +25646,7 @@
       "deps": [],
       "note_hash": "91275b537316b9d8b890871360fe42a6f143d8dcd798f385bba2af16d84ce656",
       "path": "docs/FIXED_FIELD_GROWN_TRANSFER_SCOUT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/fixed_field_grown_transfer_scout.py",
       "title": "Fixed Field Grown Transfer Scout Note"
     },
     "flagship_paper_contribution_statement_note": {
@@ -25666,7 +25666,7 @@
       "deps": [],
       "note_hash": "7297106abe14d83306ecd5731ec4e8e7b968d5f7c9a27c09a01ef68fc7e2c24a",
       "path": "docs/FM_TRANSFER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/fm_transfer_grown_companion.py",
       "title": "F~M Transfer: Grown vs Fixed Lattice"
     },
     "four_d_distance_width_probe_note": {
@@ -25676,7 +25676,7 @@
       "deps": [],
       "note_hash": "b64c071c5d9cdb010a6366acfc247b13cd4beb78779ad3be0fe0df70305410d6",
       "path": "docs/FOUR_D_DISTANCE_WIDTH_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/four_d_distance_width_probe.py",
       "title": "4D Distance Width Probe Note"
     },
     "fourth_family_complex_boundary_note": {
@@ -25686,7 +25686,7 @@
       "deps": [],
       "note_hash": "9bbdb9e65c552d690ee670b2a2a22679b5e6909de8beaaa59592b9d328983be1",
       "path": "docs/FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/FOURTH_FAMILY_COMPLEX.py",
       "title": "Fourth Family Complex Boundary Note"
     },
     "fourth_family_quadrant_note": {
@@ -25696,7 +25696,7 @@
       "deps": [],
       "note_hash": "323a4a422c9bd6d6f5a82ddf4347e7b0631638152cf4b38c5d52722cb87a93f8",
       "path": "docs/FOURTH_FAMILY_QUADRANT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/FOURTH_FAMILY_QUADRANT_SWEEP.py",
       "title": "Fourth Family Quadrant Note"
     },
     "fractional_charge_denominator_from_n_c_theorem_note_2026-04-24": {
@@ -25722,7 +25722,7 @@
       "deps": [],
       "note_hash": "1203b934537e2f59ef9c2f3cea5ba2648882106f132a363b1bb4acb298340dfb",
       "path": "docs/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py",
       "title": "Bare alpha_3 / alpha_em Dimension-Fixed Ratio Support Note"
     },
     "frontier_extension_lane_opening_note_2026-04-25": {
@@ -25871,7 +25871,7 @@
       "deps": [],
       "note_hash": "0397a859f53bea308b1a28f237f0f25a7552edcebaefbfe06b64df3804728074",
       "path": "docs/GATE_B_COMPLEX_ACTION_FALSIFIER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_complex_action_falsifier.py",
       "title": "Gate B Complex-Action Falsifier Note"
     },
     "gate_b_connectivity_tolerance_note": {
@@ -25881,7 +25881,7 @@
       "deps": [],
       "note_hash": "8f27c36fa8f6fdb54b8e2bb49b7909f53b1b793dff3ba6f9879a4b311b850030",
       "path": "docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_connectivity_tolerance.py",
       "title": "Gate B Connectivity Tolerance Note"
     },
     "gate_b_dynamics_note": {
@@ -25901,7 +25901,7 @@
       "deps": [],
       "note_hash": "67db3535cdd12932c8b9594823a807a8ca9238c5a3a3afc8ae1d86f0a2ab844c",
       "path": "docs/GATE_B_FARFIELD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_farfield_harness.py",
       "title": "Gate B Far-Field: Grown Geometry at h=0.5"
     },
     "gate_b_grown_distance_law_note": {
@@ -25911,7 +25911,7 @@
       "deps": [],
       "note_hash": "3665a4bf50e7e6007387f9afc253225c56d04b0937ad2a5f6416b96286d512e6",
       "path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_distance_law.py",
       "title": "Gate B Grown-Geometry Distance-Law Note"
     },
     "gate_b_grown_joint_package_note": {
@@ -25921,7 +25921,7 @@
       "deps": [],
       "note_hash": "c36fa5d3cb2c75fe695739b29665736d7a06248534ef2693d4287aa11613da07",
       "path": "docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_joint_package.py",
       "title": "Gate B Grown-Geometry Joint Package Note"
     },
     "gate_b_grown_propagating_field_note": {
@@ -25931,7 +25931,7 @@
       "deps": [],
       "note_hash": "bd749a88e1a7545c258e35eb3c3795f64505492e87dcf2d232bbc860c8e9f030",
       "path": "docs/GATE_B_GROWN_PROPAGATING_FIELD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_propagating_field_probe.py",
       "title": "Gate B Grown Propagating Field Note"
     },
     "gate_b_grown_propagating_field_radical_note": {
@@ -25941,7 +25941,7 @@
       "deps": [],
       "note_hash": "61aa3f38515f19e08689048f57e1707eddc5e5b48334e9ca4ef1b12cfc3ef80d",
       "path": "docs/GATE_B_GROWN_PROPAGATING_FIELD_RADICAL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_propagating_field_radical.py",
       "title": "Gate B Grown Propagating Field Radical Note"
     },
     "gate_b_grown_propagating_field_v2_note": {
@@ -25951,7 +25951,7 @@
       "deps": [],
       "note_hash": "1a1968891592ce04f5470d5e786af64bf816e90279f711f928428b6c7b11082a",
       "path": "docs/GATE_B_GROWN_PROPAGATING_FIELD_V2_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_propagating_field_v2.py",
       "title": "Gate B Grown Propagating Field v2 Note"
     },
     "gate_b_grown_propagating_field_v3_note": {
@@ -25961,7 +25961,7 @@
       "deps": [],
       "note_hash": "ad05255cf5a7f8061f66a62081321b753c1e9fc4ef5fed3deffe6ebc6b29ae51",
       "path": "docs/GATE_B_GROWN_PROPAGATING_FIELD_V3_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_propagating_field_v3.py",
       "title": "Gate B Grown Propagating Field V3 Note"
     },
     "gate_b_grown_trapping_frontier_note": {
@@ -25971,7 +25971,7 @@
       "deps": [],
       "note_hash": "f1100ad9ea721194f8e20ec09c9cdb0d1b48dcacd2bd137c00dfd0f3e56e4a9b",
       "path": "docs/GATE_B_GROWN_TRAPPING_FRONTIER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_trapping_frontier_probe.py",
       "title": "Gate B Grown Trapping Frontier Note"
     },
     "gate_b_grown_trapping_frontier_v2_note": {
@@ -25981,7 +25981,7 @@
       "deps": [],
       "note_hash": "89aed15d9d2b6f14d0869190ffdc668c0efa2fa50487b165f9b2647ca292c229",
       "path": "docs/GATE_B_GROWN_TRAPPING_FRONTIER_V2_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_trapping_frontier_v2.py",
       "title": "Gate B Grown Trapping Frontier V2 Note"
     },
     "gate_b_grown_trapping_frontier_v3_note": {
@@ -25991,7 +25991,7 @@
       "deps": [],
       "note_hash": "19de2fda31b45e79866512b0f2c10c9d6c17fa397c4cd37099acb71f8391f0be",
       "path": "docs/GATE_B_GROWN_TRAPPING_FRONTIER_V3_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_trapping_frontier_v3.py",
       "title": "Gate B Grown Trapping Frontier V3 Note"
     },
     "gate_b_grown_trapping_transport_note": {
@@ -26001,7 +26001,7 @@
       "deps": [],
       "note_hash": "f86dbc2e53059892b62b56bbe9d6ee9e89cb0b9a1bd47f7439c3a46074736619",
       "path": "docs/GATE_B_GROWN_TRAPPING_TRANSPORT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_trapping_transport_probe.py",
       "title": "Gate B Grown Trapping Transport Note"
     },
     "gate_b_grown_wavefield_companion_note": {
@@ -26011,7 +26011,7 @@
       "deps": [],
       "note_hash": "a2defd49297a7915c69c19af93902516eb210bc46ff8c21949d88f1b3d16a08c",
       "path": "docs/GATE_B_GROWN_WAVEFIELD_COMPANION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_wavefield_companion.py",
       "title": "Gate B Grown Wavefield Companion Note"
     },
     "gate_b_h025_distance_law_note": {
@@ -26021,7 +26021,7 @@
       "deps": [],
       "note_hash": "861423c686291061b9b0b70ccf3bf7d2717e3927766b2bc01783c1d381dfb668",
       "path": "docs/GATE_B_H025_DISTANCE_LAW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_h025_distance_law.py",
       "title": "Gate B h=0.25 Grown-Geometry Distance-Law Note"
     },
     "gate_b_h025_farfield_note": {
@@ -26031,7 +26031,7 @@
       "deps": [],
       "note_hash": "6527f96155f89124ac91a1a097c1bf16a6bfda50a9f5115b77f0efb86a59814a",
       "path": "docs/GATE_B_H025_FARFIELD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_h025_farfield.py",
       "title": "Gate B h=0.25 Far-Field Note"
     },
     "gate_b_h025_joint_package_note": {
@@ -26041,7 +26041,7 @@
       "deps": [],
       "note_hash": "333464621f5fcf9a9fb0c2e5e7822cb065edcef8ea533a7dc0f11bdb852dab6d",
       "path": "docs/GATE_B_H025_JOINT_PACKAGE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_h025_joint_package.py",
       "title": "Gate B h=0.25 Joint Package Note"
     },
     "gate_b_no_restore_farfield_note": {
@@ -26051,7 +26051,7 @@
       "deps": [],
       "note_hash": "c635c0bb4972268abb58f6d867ed2aaed093bdc0db643847007aafedac1cb7a0",
       "path": "docs/GATE_B_NO_RESTORE_FARFIELD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_no_restore_farfield.py",
       "title": "Gate B No-Restore Far-Field Note"
     },
     "gate_b_no_restore_joint_package_note": {
@@ -26061,7 +26061,7 @@
       "deps": [],
       "note_hash": "a2210f1072b0ab93c0271eee75b7f8a6ad85f3bbc73e6b91ba9dd13496c02d4f",
       "path": "docs/GATE_B_NO_RESTORE_JOINT_PACKAGE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_no_restore_joint_package.py",
       "title": "Gate B No-Restore Joint Package Note"
     },
     "gate_b_nonlabel_connectivity_v1_distance_note": {
@@ -26071,7 +26071,7 @@
       "deps": [],
       "note_hash": "b7deca75af5e43716ceff3e6d8710382c019a3fc514cc34fc91df077cf93ea3c",
       "path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_nonlabel_connectivity_v1_distance.py",
       "title": "Gate B Non-Label Connectivity V1 Distance-Law Note"
     },
     "gate_b_nonlabel_connectivity_v1_h025_note": {
@@ -26081,7 +26081,7 @@
       "deps": [],
       "note_hash": "06c5b0322bde8e161e7a322cd1e5900efaf808a946b1aeba7b0107c0324bc09a",
       "path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V1_H025_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_nonlabel_connectivity_v1_h025.py",
       "title": "Gate B Non-Label Connectivity V1 h=0.25 Note"
     },
     "gate_b_nonlabel_connectivity_v1_joint_note": {
@@ -26091,7 +26091,7 @@
       "deps": [],
       "note_hash": "4a328c9f80aceef8fdbe3f83c15b5cde5d3d0a58b38870c54c413f4bc9639141",
       "path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_nonlabel_connectivity_v1_joint.py",
       "title": "Gate B Non-Label Connectivity V1 Joint Note"
     },
     "gate_b_nonlabel_connectivity_v1_note": {
@@ -26101,7 +26101,7 @@
       "deps": [],
       "note_hash": "6f98d4ec720fec283ade985237339e473a0505cde88200f86ff4a6f247a373db",
       "path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_nonlabel_connectivity_v1.py",
       "title": "Gate B Non-Label Connectivity V1 Note"
     },
     "gate_b_nonlabel_connectivity_v2_note": {
@@ -26111,7 +26111,7 @@
       "deps": [],
       "note_hash": "d426c2d9f65df39abd82b81314c8bb631674876a758d851f46542c644fee1c4d",
       "path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_nonlabel_connectivity_v2.py",
       "title": "Gate B Non-Label Connectivity V2 Note"
     },
     "gate_b_nonlabel_connectivity_v3_note": {
@@ -26121,7 +26121,7 @@
       "deps": [],
       "note_hash": "89219d4a6a2217175a65c2da8779058777a29b67d1c5ab4129b60bd41862dd6c",
       "path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_nonlabel_connectivity_v3.py",
       "title": "Gate B Non-Label Connectivity V3 Note"
     },
     "gate_b_nonlabel_sign_grown_transfer_note": {
@@ -26131,7 +26131,7 @@
       "deps": [],
       "note_hash": "4d8dd9b07a04c1fd91735deb9e31c390094f993a3ac1a3c42e45c268205df2ca",
       "path": "docs/GATE_B_NONLABEL_SIGN_GROWN_TRANSFER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/GATE_B_NONLABEL_SIGN_GROWN_TRANSFER.py",
       "title": "Gate B Non-Label Sign Grown Transfer Note"
     },
     "gate_b_poisson_self_gravity_note": {
@@ -26141,7 +26141,7 @@
       "deps": [],
       "note_hash": "d55011e61456c442aa9da4b0dae203470ec2fde93b75260a47ea93439f96ff43",
       "path": "docs/GATE_B_POISSON_SELF_GRAVITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_poisson_self_gravity_probe.py",
       "title": "Gate B Poisson Self-Gravity Note"
     },
     "gate_b_strong_field_observable_split_note": {
@@ -26161,7 +26161,7 @@
       "deps": [],
       "note_hash": "5960d115135a66bdaa47ef614ea8b41fe058271eccfc60c017e0693242a80bdb",
       "path": "docs/GATE_B_V6_NEARFIELD_COMPARATOR_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_v6_nearfield_comparator.py",
       "title": "Gate B V6 Near-Field Comparator Note"
     },
     "gate_b_weak_connectivity_note": {
@@ -26171,7 +26171,7 @@
       "deps": [],
       "note_hash": "c7a9674e69bdb294d30b5f237ac882a97b11e54e32c589b1d277e8849a4bb54e",
       "path": "docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_weak_connectivity_harness.py",
       "title": "Gate B Weak-Connectivity Note"
     },
     "gauge_matter_closure_gates_2026-04-12": {
@@ -26547,7 +26547,7 @@
       "deps": [],
       "note_hash": "3ca8231b77c70e851a27b4c5904f8a36a04b19477ed779f519e511bbcebbfe5c",
       "path": "docs/GENERATED_GEOMETRY_SYNTHESIS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_farfield_harness.py",
       "title": "Generated Geometry Synthesis"
     },
     "generation_axiom_boundary_note": {
@@ -26577,7 +26577,7 @@
       "deps": [],
       "note_hash": "d3a374b73beb151022c20890747de8978b5b3345b8085b4dcc5c39f6113c520b",
       "path": "docs/GEOMETRY_SUPERPOSITION_DAG_ENSEMBLE_NOTE_2026-04-11.md",
-      "runner_path": "frontier_geometry_superposition.py",
+      "runner_path": "scripts/frontier_geometry_superposition.py",
       "title": "Geometry Superposition on a DAG Ensemble"
     },
     "global_coherence_held_out2_note": {
@@ -26590,7 +26590,7 @@
       ],
       "note_hash": "e2ae2182c4243a19b9e3bae745984e7e730e06a8be4650906b8a2b879fb4d9ab",
       "path": "docs/GLOBAL_COHERENCE_HELD_OUT2_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/global_coherence_held_out2.py",
       "title": "Global Coherence \u2014 Larger Held-Out Batch (12 NEW Generators)"
     },
     "global_coherence_off_scaffold_note": {
@@ -26600,7 +26600,7 @@
       "deps": [],
       "note_hash": "9082b0ca1db771e22b3de0fd0a50fd3971760447bd5fbf4272070531b64d58c5",
       "path": "docs/GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/global_coherence_off_scaffold.py",
       "title": "Off-Scaffold Held-Out Test of `free_coh` \u2014 Bounded Conditional Negative"
     },
     "global_coherence_predictor_note": {
@@ -26612,7 +26612,7 @@
       ],
       "note_hash": "f5ea18884cef03886e1df49b272783fb6ff16993e1d8469e84bcbaa57b2f58f6",
       "path": "docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/global_coherence_predictor.py",
       "title": "Global Free-Beam Coherence Predictor \u2014 Modest Revival"
     },
     "gr_class_expansion_finite_rank_target_note": {
@@ -26632,7 +26632,7 @@
       "deps": [],
       "note_hash": "b53f353a5ff69cf07e3426a1b155847760777c5a0ecf10881661bedb7030b5dc",
       "path": "docs/GRAPH_DIRAC_REQUIREMENTS_2026-04-10.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_17card.py",
       "title": "Graph-Dirac / K\u00e4hler-Dirac Requirements"
     },
     "graph_first_selector_derivation_note": {
@@ -26674,7 +26674,7 @@
       "deps": [],
       "note_hash": "7e9f9fc3291085eebfbe65b16581b3aa0c70254f67d7edf91db07996df5612ae",
       "path": "docs/GRAPH_PHASE_DIAGRAM_SCOUT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/graph_phase_diagram_scout.py",
       "title": "Graph Phase-Diagram Scout Note"
     },
     "graph_scalar_plus_spinor_note": {
@@ -26684,7 +26684,7 @@
       "deps": [],
       "note_hash": "245f8ec1b29fee84929d6528f0d70d4801dc88b197ca32019df5457d221f51e9",
       "path": "docs/GRAPH_SCALAR_PLUS_SPINOR_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_graph_scalar_plus_spinor.py",
       "title": "Graph Scalar + Spinor Note"
     },
     "graph_true_kg_vs_cn_note": {
@@ -26694,7 +26694,7 @@
       "deps": [],
       "note_hash": "3b747e6507b887931f0c00ff16ef8ac8a85e115f50f6be5bafc4e42ad3f41153",
       "path": "docs/GRAPH_TRUE_KG_VS_CN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_graph_true_kg_vs_cn.py",
       "title": "Graph True KG vs CN Note"
     },
     "grav_decoherence_derived_note": {
@@ -26714,7 +26714,7 @@
       "deps": [],
       "note_hash": "70335e8821423598ddaed803beaec580087acf9f880043e04dc608ec1e185f2b",
       "path": "docs/GRAVITATIONAL_ENTANGLEMENT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_gravitational_entanglement.py",
       "title": "Gravitational Entanglement Between Two Wavepackets"
     },
     "gravitational_memory_note_2026-04-11": {
@@ -26727,7 +26727,7 @@
       ],
       "note_hash": "407248d243ac17c3099dd23318e8b7129884486bad8236ad6e23daeccdfe7e1f",
       "path": "docs/GRAVITATIONAL_MEMORY_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_gravitational_memory.py",
       "title": "Gravitational Memory Note"
     },
     "gravitational_wave_probe_note": {
@@ -26737,7 +26737,7 @@
       "deps": [],
       "note_hash": "8994d21345f5064f37d48a6c05026955befcc9e093f3c23a040da63d85a7bf28",
       "path": "docs/GRAVITATIONAL_WAVE_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_grav_wave_post_newtonian.py",
       "title": "Gravitational Wave / Post-Newtonian Probe"
     },
     "gravitomagnetic_note": {
@@ -26747,7 +26747,7 @@
       "deps": [],
       "note_hash": "fead708294fd730677f896dbe4ba0f310904ca5dde3062ea8dc1f25fe2f749ef",
       "path": "docs/GRAVITOMAGNETIC_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gravitomagnetic_portable.py",
       "title": "Gravitomagnetic Effect: Velocity-Dependent Shapiro Correction"
     },
     "gravitomagnetic_portability_note": {
@@ -26760,7 +26760,7 @@
       ],
       "note_hash": "4d55fd404debbc6c41523d9e51714ce982fda26c84fa7d5df70b161186c7447e",
       "path": "docs/GRAVITOMAGNETIC_PORTABILITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gravitomagnetic_portability.py",
       "title": "Gravitomagnetic Portability Note"
     },
     "graviton_mass_derived_note": {
@@ -26863,7 +26863,7 @@
       "deps": [],
       "note_hash": "1354b4499092008ae49ab065c986015e8f8cf5c7f20ccdf1dfe4b031cae23dae",
       "path": "docs/GRAVITY_LAW_CLEANUP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gravity_distance_fixed_geometry.py",
       "title": "Gravity Law Cleanup Note"
     },
     "gravity_observable_hierarchy_note": {
@@ -26873,7 +26873,7 @@
       "deps": [],
       "note_hash": "f53bc28fe510c9516473898f8be01bc1d86f51258e1a17fc120403c722f90bf2",
       "path": "docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gravity_observable_hierarchy.py",
       "title": "Gravity Observable Hierarchy"
     },
     "gravity_reviewer_derivation_summary_2026-04-15": {
@@ -26893,7 +26893,7 @@
       "deps": [],
       "note_hash": "7764453ff450b15ab28846c7f1bda85220470d11d134f7fd3c4861740c02911d",
       "path": "docs/GRAVITY_SIGN_AUDIT_2026-04-10.md",
-      "runner_path": "frontier_correct_coupling.py",
+      "runner_path": "scripts/frontier_correct_coupling.py",
       "title": "Gravity Sign Audit \u2014 Corrected Assessment"
     },
     "growing_graph_dynamic_limit_diagnostic_note": {
@@ -26903,7 +26903,7 @@
       "deps": [],
       "note_hash": "110072b858c1e439f882b48c32632be1a1999a11dc0e07c227452fedf775744f",
       "path": "docs/GROWING_GRAPH_DYNAMIC_LIMIT_DIAGNOSTIC_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/growing_graph_dynamic_limit_diag.py",
       "title": "Growing Graph Dynamic Limit Diagnostic Note"
     },
     "growing_graph_dynamic_propagation_replacement_note": {
@@ -26913,7 +26913,7 @@
       "deps": [],
       "note_hash": "b403fa8020af8e831b606c7d01736b5f5c1cae3d59184d93b3c3fef8dd85fa4a",
       "path": "docs/GROWING_GRAPH_DYNAMIC_PROPAGATION_REPLACEMENT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/growing_graph_frontier_expansion.py",
       "title": "Growing Graph Dynamic Propagation Replacement Note"
     },
     "growing_graph_expansion_card_note": {
@@ -26923,7 +26923,7 @@
       "deps": [],
       "note_hash": "8182a49ec3396cd97b97a702cc567b01dd90bf733d389a132258c5797403bbc8",
       "path": "docs/GROWING_GRAPH_EXPANSION_CARD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/growing_graph_expansion_card.py",
       "title": "Growing Graph Expansion Card"
     },
     "growing_graph_expansion_skeptic_audit_note": {
@@ -26953,7 +26953,7 @@
       "deps": [],
       "note_hash": "ecea4334ebf7e66807a31fb885549521aec9a79b9065f5d66d04a8e91a34d2b9",
       "path": "docs/GROWING_GRAPH_FRONTIER_EXPANSION_PROXY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/growing_graph_frontier_expansion.py",
       "title": "Growing Graph Frontier Expansion Proxy Note"
     },
     "growing_graph_static_control_audit_note": {
@@ -26963,7 +26963,7 @@
       "deps": [],
       "note_hash": "cbc5ac58d424c8eb0eba322778fd5742b6b744eca237d935f15944979e305f9c",
       "path": "docs/GROWING_GRAPH_STATIC_CONTROL_AUDIT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/growing_graph_dynamic_limit_diag.py",
       "title": "Growing Graph Static Control Audit Note"
     },
     "grown_transfer_basin_note": {
@@ -26973,7 +26973,7 @@
       "deps": [],
       "note_hash": "3986b795d18b617f8c8d88c6d066c2e1f4fa66360b270b89b9d839239f2b56e9",
       "path": "docs/GROWN_TRANSFER_BASIN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/GROWN_TRANSFER_BASIN_SWEEP.py",
       "title": "Grown Transfer Basin Note"
     },
     "grown_wavefield_companion_note": {
@@ -26983,7 +26983,7 @@
       "deps": [],
       "note_hash": "a198cb658a54be21debccd5ca078211afe560ed327211a9fe744cb9e96ef9f4f",
       "path": "docs/GROWN_WAVEFIELD_COMPANION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_wavefield_companion.py",
       "title": "Grown Wavefield Companion Note"
     },
     "grown_wavefield_failure_diagnosis_note": {
@@ -26993,7 +26993,7 @@
       "deps": [],
       "note_hash": "f1cf97ae621f8ad6b5e729e82a62dae77aa32d012e1f86878c21b59a846540e6",
       "path": "docs/GROWN_WAVEFIELD_FAILURE_DIAGNOSIS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_wavefield_companion.py",
       "title": "Grown Wavefield Failure Diagnosis Note"
     },
     "guard_reconciliation_note": {
@@ -27045,7 +27045,7 @@
       "deps": [],
       "note_hash": "3cc630b2b9c5de3434b4bc8dcb98ac26bb272d1471ea367f66daed2c7f329906",
       "path": "docs/H0125_WIDER_REPLAY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_l2_wide_h0125_replay.py",
       "title": "Wider `h = 0.125` Replay Note"
     },
     "h0125_wider_w4_note": {
@@ -27055,7 +27055,7 @@
       "deps": [],
       "note_hash": "5bf1efb8af33fca7e245cecd1708f9968503c2d42e7cb9430da83a4c9d489fe5",
       "path": "docs/H0125_WIDER_W4_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_l2_wide_h0125_w4.py",
       "title": "Wider `h = 0.125` Family (`phys_w = 4`) Note"
     },
     "h0125_wider_w4_probe_note": {
@@ -27065,7 +27065,7 @@
       "deps": [],
       "note_hash": "de8daf5df7460696cb8585fb719f5e62cd1006140934c6770b8c8a83f24558cc",
       "path": "docs/H0125_WIDER_W4_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_l2_wide_h0125_w4_probe.py",
       "title": "Wider `h = 0.125` `phys_w = 4` Probe Note"
     },
     "h2t_h0125_narrow_bridge_note": {
@@ -27075,7 +27075,7 @@
       "deps": [],
       "note_hash": "01415acce021b1cbd4f519a6756ffb6d8826f93fd5dc7715f4c3895a476ce740",
       "path": "docs/H2T_H0125_NARROW_BRIDGE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_l2_numpy_h0125_audit.py",
       "title": "3D `1/L^2 + h^2` Narrow `h=0.125` Bridge Note"
     },
     "hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29": {
@@ -27175,7 +27175,7 @@
       "deps": [],
       "note_hash": "ad72a0e6069d0ef9fc4111ce10c037d4a8e65fc1b7a7ee48fb3f87f18d4b86be",
       "path": "docs/HARD_GEOMETRY_GRAVITY_WINDOW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/hard_geometry_gravity_window.py",
       "title": "Hard-Geometry Gravity Window Note"
     },
     "hard_geometry_head_to_head_note": {
@@ -27195,7 +27195,7 @@
       "deps": [],
       "note_hash": "08c6dd2f117896812b72a6d21a85bcedbe152f6296fe0ddf183dac345bbf3f4e",
       "path": "docs/HARD_GEOMETRY_LOCAL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/hard_geometry_local_support_pilot.py",
       "title": "Hard Geometry Local Support Note"
     },
     "hierarchy_bosonic_bilinear_selector_note": {
@@ -27269,7 +27269,7 @@
       ],
       "note_hash": "ce3eefa82df02d439a2dc1cbc77a994dba3d07e856d83095bc179d903667c656",
       "path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_higgs_mass_full_3loop.py",
       "title": "Higgs Mass: Canonical Authority Boundary"
     },
     "higgs_mass_from_axiom_note": {
@@ -27376,7 +27376,7 @@
       "deps": [],
       "note_hash": "df8c7a795aa5f6178a77266ecec85b4acb9221d79510e1ae40756a6b7d3e0f5b",
       "path": "docs/HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/higher_symmetry_gravity_probe.py",
       "title": "Higher-Symmetry Gravity Probe Note"
     },
     "higher_symmetry_joint_validation_note": {
@@ -27396,7 +27396,7 @@
       "deps": [],
       "note_hash": "5ce3d93ae74f8e6fcf3506050cb0544f9c2f439134f4a697fc10b117e2eebd9c",
       "path": "docs/HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_holographic_probe.py",
       "title": "Holographic Boundary-Law Probe (Bounded Companion Note)"
     },
     "hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29": {
@@ -27595,7 +27595,7 @@
       "deps": [],
       "note_hash": "3ffd075756ba154dc4c0fc90577d38624389c234a237f406963abb3e4129dab2",
       "path": "docs/HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_hubble_tension_structural_lock.py",
       "title": "Lane 5 Workstream Status: Hubble-H0 Structural Lock And Two-Gate Closure Map"
     },
     "hubble_tension_structural_lock_theorem_note_2026-04-26": {
@@ -27637,7 +27637,7 @@
       "deps": [],
       "note_hash": "3d90ebe6897287a712103e2d98f267043038c83d57c6b5c7f8ec0687d435bf0f",
       "path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_hypercharge_identification.py",
       "title": "Hypercharge U(1)_Y Identification from the Commutant"
     },
     "hypercharge_squared_trace_catalog_theorem_note_2026-04-25": {
@@ -27687,7 +27687,7 @@
       "deps": [],
       "note_hash": "cb0031916f19f1d9240b20a1ee249f8233df2c4d89c6cc4b92d6de2c361a3040",
       "path": "docs/IMPACT_PARAMETER_LENSING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/impact_parameter_lensing_probe.py",
       "title": "Impact-Parameter Lensing Note"
     },
     "impact_parameter_portability_extension_note": {
@@ -27707,7 +27707,7 @@
       "deps": [],
       "note_hash": "07411ceaeecc732536c60243af7e6214e58994abd267226abdd44a0fb4a6cda2",
       "path": "docs/IMPACT_PARAMETER_PORTABILITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/impact_parameter_portability_probe.py",
       "title": "Impact-Parameter Portability Note"
     },
     "independent_generators_heldout_note": {
@@ -27717,7 +27717,7 @@
       "deps": [],
       "note_hash": "d749a50a7b3a5292fd190400245ff7aa000260a7e8e127179560d936c81ba14f",
       "path": "docs/INDEPENDENT_GENERATORS_HELDOUT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/independent_generators_heldout.py",
       "title": "Independent-Generator Held-Out Test of the Universality Classifier \u2014 NEGATIVE RESULT"
     },
     "interest_map": {
@@ -27737,7 +27737,7 @@
       "deps": [],
       "note_hash": "b5313db5bb6b61eadd53b1a31d2be3e5304df9d7b68fd560ca6d7b83f57c2f9e",
       "path": "docs/INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/inverse_problem_graph_requirements.py",
       "title": "Inverse Problem Graph Requirements Note"
     },
     "inverse_problem_note": {
@@ -27760,7 +27760,7 @@
       ],
       "note_hash": "3bd400614bc07e4d285a41828ec2bd86fd6a8a4b927cfa7a7166f432d9978669",
       "path": "docs/IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md",
-      "runner_path": "frontier_irregular_directional_observable.py",
+      "runner_path": "scripts/frontier_irregular_directional_observable.py",
       "title": "Irregular-Graph Directional Observable Probe"
     },
     "irregular_sign_core_packet_gate_note": {
@@ -27774,7 +27774,7 @@
       ],
       "note_hash": "61c1a3a3d446e48f46099a4344180db2e0caf6e63cb2e118835056be01c5a577",
       "path": "docs/IRREGULAR_SIGN_CORE_PACKET_GATE_NOTE.md",
-      "runner_path": "frontier_irregular_sign_core_packet_gate.py",
+      "runner_path": "scripts/frontier_irregular_sign_core_packet_gate.py",
       "title": "Irregular Sign Core-Packet Gate Note"
     },
     "k_dependence_review_safe_note": {
@@ -27784,7 +27784,7 @@
       "deps": [],
       "note_hash": "e8c548bb52de61c4b8e0270698a20fea72026cb761cf45ff70610e7d7aa5a92c",
       "path": "docs/K_DEPENDENCE_REVIEW_SAFE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/k_dependence_ceiling.py",
       "title": "K Dependence Review-Safe Note"
     },
     "kernel_vs_gravity_note": {
@@ -27794,7 +27794,7 @@
       "deps": [],
       "note_hash": "1598d5abbafbf8d6c008c9909e66aca8f6d371b562a419ba3693fcc3f6144907",
       "path": "docs/KERNEL_VS_GRAVITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/complex_action_kernel_vs_gravity.py",
       "title": "Complex Action: Kernel-Generic vs Gravity-Specific"
     },
     "koide_a1_brannen_plancherel_identity_support_note_2026-04-25": {
@@ -28052,7 +28052,7 @@
       "deps": [],
       "note_hash": "747172c1bbcd855f7373e147cd49960bed53904a8956da0978fe58f485535aa9",
       "path": "docs/KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_higgs_dressed_propagator_v1.py",
       "title": "Atlas Issues Flagged During Koide Support Review"
     },
     "koide_cyclic_projector_block_democracy_note_2026-04-18": {
@@ -28399,7 +28399,7 @@
       "deps": [],
       "note_hash": "92070f9e55f963f225aa1fcb0985e075a9f9a4ac8eff2d0a0a92088c59af5f87",
       "path": "docs/KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_one_scalar_obstruction_triangulation.py",
       "title": "Koide One-Scalar Obstruction Triangulation Theorem"
     },
     "koide_p_one_clock_3plus1_transport_reduction_note_2026-04-20": {
@@ -28888,7 +28888,7 @@
       ],
       "note_hash": "72849a975042162cdc545ae54464972dceea6cd5d649118ba0a37b8d033c5ab6",
       "path": "docs/KUBO_CONTINUUM_LIMIT_FAMILIES_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/kubo_continuum_limit_families.py",
       "title": "Kubo Continuum Limit \u2014 Family Portability (Partial, Later Narrowed)"
     },
     "kubo_continuum_limit_note": {
@@ -28901,7 +28901,7 @@
       ],
       "note_hash": "18945c477ffc0dc8d3eba2d73354032f04fa2e9ae25cdaace0d53487a618c6e4",
       "path": "docs/KUBO_CONTINUUM_LIMIT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/kubo_continuum_limit.py",
       "title": "Continuum Limit of the True First-Order Kubo Coefficient \u2014 POSITIVE"
     },
     "kubo_eikonal_gap_note": {
@@ -28914,7 +28914,7 @@
       ],
       "note_hash": "56abd622fa0f1dcd758d0298a7903df00d06dd717721a8f38587a5bb963a5851",
       "path": "docs/KUBO_EIKONAL_GAP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/kubo_eikonal_gap.py",
       "title": "Kubo-Eikonal Gap Analysis"
     },
     "kubo_fam2_refinement_note": {
@@ -28926,7 +28926,7 @@
       ],
       "note_hash": "57abcb3daf54a3b4cefc4b7730b768b46c525b199af83acd88845a14bed1f68b",
       "path": "docs/KUBO_FAM2_REFINEMENT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/kubo_fam2_refinement.py",
       "title": "Fam2 Single-Family Refinement \u2014 Strong Negative on the Tested Ladder"
     },
     "kubo_range_of_validity_note": {
@@ -28938,7 +28938,7 @@
       ],
       "note_hash": "0d8a04d9f841e6ba34b6d0cf439e2a76afe0bff389f58584e69a1ac59278afc0",
       "path": "docs/KUBO_RANGE_OF_VALIDITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/kubo_range_of_validity.py",
       "title": "First-Order Kubo Range of Validity \u2014 F~M \u2248 1 Derived on Linearity-Regime Subset"
     },
     "lanes.action-law.readme": {
@@ -29280,7 +29280,7 @@
       "deps": [],
       "note_hash": "7eba357a5fc57ca22e474293e1aa1519948d0385149e3345eb6d109d0544c4b1",
       "path": "docs/LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_dense_refinement_reconciliation.py",
       "title": "3D Dense Spent-Delay Refinement Reconciliation"
     },
     "lattice_3d_dense_spent_delay_note": {
@@ -29290,7 +29290,7 @@
       "deps": [],
       "note_hash": "36d11a44e15b4f1cad428082a55a3623af96c647c44f3096ce1a09fbbdde5d11",
       "path": "docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_dense_10prop.py",
       "title": "3D Dense Spent-Delay Lattice Note"
     },
     "lattice_3d_dense_window_extension_note": {
@@ -29300,7 +29300,7 @@
       "deps": [],
       "note_hash": "e7aa4678de0ae8a74e484e6587c69740abacb4e921d5b12b091750da8f7beca5",
       "path": "docs/LATTICE_3D_DENSE_WINDOW_EXTENSION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_dense_window_extension.py",
       "title": "3D Dense Spent-Delay Window Extension Note"
     },
     "lattice_3d_l2_numpy_h0125_audit_note": {
@@ -29310,7 +29310,7 @@
       "deps": [],
       "note_hash": "54f2391b71957d152ed7b802689a69394cf7b40f20c3ac2f3c083ad32cebc885",
       "path": "docs/LATTICE_3D_L2_NUMPY_H0125_AUDIT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_l2_numpy_h0125_audit.py",
       "title": "3D 1/L^2 + h^2 Numpy h=0.125 Audit"
     },
     "lattice_3d_l2_numpy_h0125_bridge_note": {
@@ -29320,7 +29320,7 @@
       "deps": [],
       "note_hash": "96af8a9789e90b2d55f30bedcfa00f4bfd256c5096c7aca67e248d19df6e9a45",
       "path": "docs/LATTICE_3D_L2_NUMPY_H0125_BRIDGE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_l2_numpy_h0125_bridge.py",
       "title": "3D 1/L^2 Numpy h=0.125 Bridge Note"
     },
     "lattice_3d_l2_tail_stats_note": {
@@ -29340,7 +29340,7 @@
       "deps": [],
       "note_hash": "dc10d791dc2b235dc3563f9e32b0d74d467aba68862caa96d01b4047eb33c009",
       "path": "docs/LATTICE_3D_NYQUIST_DIFFRACTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_nyquist_diffraction_probe.py",
       "title": "Lattice 3D Nyquist Diffraction Note"
     },
     "lattice_3d_tapered_refinement_note": {
@@ -29350,7 +29350,7 @@
       "deps": [],
       "note_hash": "79b5abbeadaae8a15e1f13b0bedec940d59e2c9f36c5faaaaf66c8b894428283",
       "path": "docs/LATTICE_3D_TAPERED_REFINEMENT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_tapered_refinement.py",
       "title": "3D Tapered Refinement Note"
     },
     "lattice_complementarity_note": {
@@ -29360,7 +29360,7 @@
       "deps": [],
       "note_hash": "43c22963d4c4b7341e2a76d12ba32ee797b2a977a9d2ef4ba5208e3ec9e9d1c9",
       "path": "docs/LATTICE_COMPLEMENTARITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_complementarity_sweep.py",
       "title": "Lattice Complementarity Note"
     },
     "lattice_distance_law_note": {
@@ -29380,7 +29380,7 @@
       "deps": [],
       "note_hash": "9ce7ca9bf3805fcda04e070e0e70a6b429568a8c7b775f08da780bb1a1fa47fd",
       "path": "docs/LATTICE_FAMILY_VALIDATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_family_validation.py",
       "title": "Lattice Family Validation Note"
     },
     "lattice_fanout_continuum_note": {
@@ -29392,7 +29392,7 @@
       ],
       "note_hash": "63371e58d6f47e7984e0a8af885f307f2fa8a5319a0bda7dd92947106ba0516f",
       "path": "docs/LATTICE_FANOUT_CONTINUUM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_fanout_continuum.py",
       "title": "Fan-Out Normalized Kernel Continuum Limit \u2014 FALSIFIED"
     },
     "lattice_field_strength_unification_note": {
@@ -29402,7 +29402,7 @@
       "deps": [],
       "note_hash": "99abbf2a5f1a47116322e9cb99a5744fe454a65aaaa4add37ade7c2092474ef6",
       "path": "docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_field_strength_unification.py",
       "title": "Lattice Field-Strength Unification Note"
     },
     "lattice_gravity_resolution_note": {
@@ -29412,7 +29412,7 @@
       "deps": [],
       "note_hash": "aa494dcae7b66b1bd53485314cb6626a993cb3a0096562134bd942b486ec1b91",
       "path": "docs/LATTICE_GRAVITY_RESOLUTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_dense_10prop.py",
       "title": "Lattice Gravity Resolution: Ultra-Weak Field Gives Both Attraction AND 1/b"
     },
     "lattice_keff_continuum_note": {
@@ -29424,7 +29424,7 @@
       ],
       "note_hash": "9a669d8f05cd99c92ace5d4ed4476006b32ea32b6cfbaad6455c6f83a5c21fd0",
       "path": "docs/LATTICE_KEFF_CONTINUUM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_keff_continuum.py",
       "title": "k_eff = k\u00b7h Continuum Limit Note"
     },
     "lattice_kernel_transfer_norm_note": {
@@ -29434,7 +29434,7 @@
       "deps": [],
       "note_hash": "a552d1072fabb912a94b47c6adab0194a9f9c67b1975e07732dd1eedeabd39f6",
       "path": "docs/LATTICE_KERNEL_TRANSFER_NORM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_kernel_transfer_norm_probe.py",
       "title": "3D Kernel Transfer-Norm Probe"
     },
     "lattice_nn_continuum_note": {
@@ -29444,7 +29444,7 @@
       "deps": [],
       "note_hash": "b286ff51ea3cb71c2e6db2504207e52391f012b717bef2e910a421f52422a4c4",
       "path": "docs/LATTICE_NN_CONTINUUM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_nn_continuum.py",
       "title": "Nearest-Neighbor Lattice Refinement Note"
     },
     "lattice_nn_deterministic_rescale_note": {
@@ -29464,7 +29464,7 @@
       "deps": [],
       "note_hash": "1f77939b889ff5d61c44061ea9cb73eeb7b0b022afabebde994b51db4059f92c",
       "path": "docs/LATTICE_NN_DISTANCE_LAW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_nn_distance_law.py",
       "title": "NN Lattice Distance-Law Note"
     },
     "lattice_nn_high_precision_note": {
@@ -29484,7 +29484,7 @@
       "deps": [],
       "note_hash": "9cec6c11916955e812426449f5743db74883ce225b0a5e9c5438fecf059e1eba",
       "path": "docs/LATTICE_NN_LIGHT_CONE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/causal_field_gravity.py",
       "title": "NN Light-Cone Note"
     },
     "lattice_nn_mass_response_note": {
@@ -29494,7 +29494,7 @@
       "deps": [],
       "note_hash": "ca869a38c8dc89b0d73bb35e8d91799432c1aff84fd04efeb63cc9d252e93027",
       "path": "docs/LATTICE_NN_MASS_RESPONSE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_nn_mass_response.py",
       "title": "NN Lattice Mass-Response Note"
     },
     "lattice_nn_rg_alpha_sweep_note": {
@@ -29504,7 +29504,7 @@
       "deps": [],
       "note_hash": "02638a0689e240594a462a340727d7ad1ef7d96e50c5148f9a58363301fe27d5",
       "path": "docs/LATTICE_NN_RG_ALPHA_SWEEP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_nn_rg_alpha_sweep.py",
       "title": "NN Lattice RG Alpha Sweep Note"
     },
     "lattice_nn_rg_gravity_note": {
@@ -29524,7 +29524,7 @@
       "deps": [],
       "note_hash": "76c86beba00a1cb97b9b6ef53cc2b1fbe7a8c0d6b1dd6c2a634b7347a3a8ec6a",
       "path": "docs/LATTICE_NN_RG_RECONCILIATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_nn_continuum.py",
       "title": "Lattice NN RG Reconciliation Note"
     },
     "lattice_symmetry_unification_decision_note": {
@@ -29534,7 +29534,7 @@
       "deps": [],
       "note_hash": "ebd59c0d7394d08fe3dbcbd9452a8da6eaeb636c7e45445e30ec4fd24d43d904",
       "path": "docs/LATTICE_SYMMETRY_UNIFICATION_DECISION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_symmetry_unification_decision.py",
       "title": "Lattice Symmetry Unification Decision Note"
     },
     "lattice_synthesis_guard_note": {
@@ -29554,7 +29554,7 @@
       "deps": [],
       "note_hash": "a8d8f277c8c373f05a25926fbe0991038dc14d8b0d977d726d92a418d53e79b7",
       "path": "docs/LATTICE_WEAK_FIELD_MASS_SCALING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_weak_field_mass_scaling.py",
       "title": "Lattice Weak-Field Mass-Scaling Note"
     },
     "lattice_weak_field_purity_scaling_note": {
@@ -29564,7 +29564,7 @@
       "deps": [],
       "note_hash": "cfe1e325af0bd56669a0f18ca490013771693b808df2ed0de6b350dcb574f157",
       "path": "docs/LATTICE_WEAK_FIELD_PURITY_SCALING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_weak_field_purity_scaling.py",
       "title": "Lattice Weak-Field Purity Scaling Note"
     },
     "left_handed_charge_matching_note": {
@@ -29600,7 +29600,7 @@
       ],
       "note_hash": "875a45a0a2fe7e0f4d810ea923eb7bb3208d8b3603255aa6501a834776f2948b",
       "path": "docs/LENSING_ADJOINT_KERNEL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lensing_adjoint_kernel_probe.py",
       "title": "Lensing Adjoint Kernel Probe \u2014 Why The Slope Is Not A Ray-Deflection Law"
     },
     "lensing_adjoint_kernel_reduced_model_note": {
@@ -29610,7 +29610,7 @@
       "deps": [],
       "note_hash": "d625deda7ecdd026cb20b712b72cba2476d76d38ec69d5003a57bb089dcb87a7",
       "path": "docs/LENSING_ADJOINT_KERNEL_REDUCED_MODEL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lensing_adjoint_kernel_reduced_model.py",
       "title": "Lensing Adjoint Kernel Reduced Model"
     },
     "lensing_adjoint_kernel_shape_note": {
@@ -29623,7 +29623,7 @@
       ],
       "note_hash": "d76e688ea0b65bf14fbc9d778b513582f0b39aca233b46d99a1316982388ede9",
       "path": "docs/LENSING_ADJOINT_KERNEL_SHAPE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lensing_adjoint_kernel_shape_compare.py",
       "title": "Lensing Adjoint Kernel Shape Compare"
     },
     "lensing_beta_sweep_note": {
@@ -29633,7 +29633,7 @@
       "deps": [],
       "note_hash": "9b8892a41363caccd80cb1661c47d1989fb40068bda490e8136d10798344dfc5",
       "path": "docs/LENSING_BETA_SWEEP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lensing_beta_sweep.py",
       "title": null
     },
     "lensing_combined_invariant_note": {
@@ -29655,7 +29655,7 @@
       "deps": [],
       "note_hash": "4274289deba7b4d33bbeeee12fa76d5075d40921309e44024b9862d6499075ad",
       "path": "docs/LENSING_DEFLECTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lensing_deflection_sweep.py",
       "title": "Gravitational Deflection / Lensing Sweep \u2014 Power-Law Positive (NOT 1/b)"
     },
     "lensing_finite_path_explanation_note": {
@@ -29665,7 +29665,7 @@
       "deps": [],
       "note_hash": "a6425a31c1cc39315e803d22fe7019d879d4808c0cd5ddfb48f64c8d3e3141e8",
       "path": "docs/LENSING_FINITE_PATH_EXPLANATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lensing_analytical_finite_path.py",
       "title": "Lensing Slope \u2014 Finite-Path Surrogate FALSIFIED at a Second T_phys"
     },
     "lensing_k_sweep_note": {
@@ -29675,7 +29675,7 @@
       "deps": [],
       "note_hash": "d77d6b69c233c7984ec2eafd448bf73397c6402e2b0de243387a648cf94f41bb",
       "path": "docs/LENSING_K_SWEEP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lensing_k_sweep.py",
       "title": "Lensing Slope vs k (Phase Coupling): k-Dependent (Conditional Diagnostic)"
     },
     "lensing_long_path_test_note": {
@@ -29687,7 +29687,7 @@
       ],
       "note_hash": "12729060b2823343dd865126c01c8401303b52b61cee5fe2f774d1167f77279b",
       "path": "docs/LENSING_LONG_PATH_TEST_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lensing_long_path_test.py",
       "title": "Lensing Long-Path Test \u2014 Falsifies the Finite-Path Explanation"
     },
     "lepton_shared_higgs_universality_collapse_note": {
@@ -29754,7 +29754,7 @@
       "deps": [],
       "note_hash": "a4f7f9a1939d37a77305216a40a2fc96592028f5fa498e9c1225903a9c633230",
       "path": "docs/LINEAR_RESPONSE_DERIVATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/linear_response_derivation.py",
       "title": "Linear-Response Derivation-Adjacent Analysis \u2014 Partial Positive"
     },
     "linear_response_second_order_kubo_note": {
@@ -29764,7 +29764,7 @@
       "deps": [],
       "note_hash": "a29eaabbf73f3ea5bfe23690964a8a1b57b44c4cc6dffc09c6c9143378441da3",
       "path": "docs/LINEAR_RESPONSE_SECOND_ORDER_KUBO_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/linear_response_second_order_kubo.py",
       "title": "Second-Order Kubo Extension \u2014 NEGATIVE (Boundary of Taylor-Expansion Approach)"
     },
     "linear_response_true_kubo_note": {
@@ -29774,7 +29774,7 @@
       "deps": [],
       "note_hash": "8ca5bf19ddc98644526c2286142be11b2acd8e3aab57410bfb053feabd132477",
       "path": "docs/LINEAR_RESPONSE_TRUE_KUBO_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/linear_response_true_kubo.py",
       "title": "True First-Order Kubo \u2014 Closed-Form Analytic Derivation"
     },
     "literature_backmatch_live_scan_note": {
@@ -29804,7 +29804,7 @@
       "deps": [],
       "note_hash": "2508e7b4f66d7d4cc1db01e6d44c5dfbcaf7503c3382fe9e9c3e6986e388ef2b",
       "path": "docs/LOCAL_ZSYM_PREDICTOR_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/local_zsym_predictor.py",
       "title": "Local Z-Asymmetry 3rd Predictor \u2014 NEGATIVE (Hypothesis Rejected)"
     },
     "localized_source_response_sweep_note": {
@@ -29814,7 +29814,7 @@
       "deps": [],
       "note_hash": "99522e0ab264de5324faa0a08942ff6a234972bccfb2548eab459d6a92476084",
       "path": "docs/LOCALIZED_SOURCE_RESPONSE_SWEEP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/localized_source_response_sweep.py",
       "title": "Localized Source-Response Sweep Note"
     },
     "lorentz_boost_covariance_2d_theorem_note": {
@@ -29921,7 +29921,7 @@
       "deps": [],
       "note_hash": "da6562b71bcdccccfd4d3ed6814a87cb67ef076393a800381b93dd196ee41c90",
       "path": "docs/MATTER_INERTIAL_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/matter_inertial_closure.py",
       "title": "Matter / Inertial Closure \u2014 NEGATIVE (Equivalence Principle Fails)"
     },
     "matter_radiation_equality_structural_identity_theorem_note_2026-04-24": {
@@ -29950,7 +29950,7 @@
       ],
       "note_hash": "01236f5db2ff66d9ba5e341d2932d7eb471e8c0c98f780b36c8a00919ea866a4",
       "path": "docs/MATTER_SELF_FOCUSING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/matter_self_focusing.py",
       "title": "Matter Self-Focusing Attempt \u2014 Partial Improvement, Not Closure"
     },
     "memory_decay_diagnosis_2026-04-11": {
@@ -29990,7 +29990,7 @@
       "deps": [],
       "note_hash": "b0166a8fa81061129ec8da9f8490afdf855dae825ac8c9f39527c3a94d38b0e7",
       "path": "docs/MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mesoscopic_surrogate_annular_tapered_sweep.py",
       "title": "Mesoscopic Surrogate Annular / Tapered Sweep Note"
     },
     "mesoscopic_surrogate_backreaction_note": {
@@ -30000,7 +30000,7 @@
       "deps": [],
       "note_hash": "0909ee2eb4518e9ac4c2bb54e0a846c1348b1e8d9d973326b785da86679ed56f",
       "path": "docs/MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mesoscopic_surrogate_backreaction_harness.py",
       "title": "Mesoscopic Surrogate Backreaction Note"
     },
     "mesoscopic_surrogate_compact_floor_sweep_note": {
@@ -30010,7 +30010,7 @@
       "deps": [],
       "note_hash": "f3ecb1bf5529e192dc4d28fba460941920dabff799b7b048657c7bff2b72ddf9",
       "path": "docs/MESOSCOPIC_SURROGATE_COMPACT_FLOOR_SWEEP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mesoscopic_surrogate_compact_floor_sweep.py",
       "title": "Mesoscopic Surrogate Compact Floor Sweep Note"
     },
     "mesoscopic_surrogate_h025_constrained_localization_note": {
@@ -30020,7 +30020,7 @@
       "deps": [],
       "note_hash": "66daab5c192f52b4e5ae8f40b92a28e4ed888f1ee8a84ce6ef150c5fa61f7187",
       "path": "docs/MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mesoscopic_surrogate_h025_constrained_localization.py",
       "title": "Mesoscopic Surrogate h=0.25 Constrained Localization Note"
     },
     "mesoscopic_surrogate_localization_frontier_note": {
@@ -30030,7 +30030,7 @@
       "deps": [],
       "note_hash": "735a2a3cb0cde26d1c67826c011382528a8ebb1567d695f65c40e0b8bf9ea2fc",
       "path": "docs/MESOSCOPIC_SURROGATE_LOCALIZATION_FRONTIER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mesoscopic_surrogate_localization_frontier.py",
       "title": "Mesoscopic Surrogate Localization Frontier Note"
     },
     "mesoscopic_surrogate_localization_sweep_note": {
@@ -30050,7 +30050,7 @@
       "deps": [],
       "note_hash": "9be0a5c804c1c590a02f96c053a99cce68c818eb73fc84a93fd3e92b15f8a4a6",
       "path": "docs/MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mesoscopic_surrogate_multistage.py",
       "title": "Mesoscopic Surrogate Multistage Note"
     },
     "mesoscopic_surrogate_source_2d_note": {
@@ -30060,7 +30060,7 @@
       "deps": [],
       "note_hash": "8260be29e3d9ce115773a3a64e6e57601c42fcc366ebf82a967cb61e478bb1c1",
       "path": "docs/MESOSCOPIC_SURROGATE_SOURCE_2D_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mesoscopic_surrogate_source_2d.py",
       "title": "Mesoscopic Surrogate Source 2D Note"
     },
     "mesoscopic_surrogate_threshold_2d_note": {
@@ -30080,7 +30080,7 @@
       "deps": [],
       "note_hash": "eaf0f3afb6db85d91603622f565bf3620d5abcee9c30e688d5e808eb9b9e42c4",
       "path": "docs/MESOSCOPIC_SURROGATE_TWO_STAGE_2D_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mesoscopic_surrogate_two_stage_2d.py",
       "title": "Mesoscopic Surrogate Two-Stage 2D Note"
     },
     "minimal_absorbing_horizon_probe_note": {
@@ -30090,7 +30090,7 @@
       "deps": [],
       "note_hash": "eff5044937f47b5c30ce471f78f72796560655fc7074268e06d71b2c47e800de",
       "path": "docs/MINIMAL_ABSORBING_HORIZON_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/minimal_absorbing_horizon_probe.py",
       "title": "Minimal Absorbing Horizon Probe"
     },
     "minimal_axioms_2026-04-11": {
@@ -30129,7 +30129,7 @@
       "deps": [],
       "note_hash": "0240cd461ba36b4e613a80b825724b20e2738ee5b6c62be3d826a99d58abe7be",
       "path": "docs/MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/minimal_bidirectional_trapping_probe.py",
       "title": "Minimal Bidirectional Trapping Probe"
     },
     "minimal_source_driven_field_probe_note": {
@@ -30139,7 +30139,7 @@
       "deps": [],
       "note_hash": "17e0a80d3e1f7de90ea465cac48c4aa83a526d4f45e5a95c89b9f25c3b3ccc3d",
       "path": "docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/minimal_source_driven_field_probe.py",
       "title": "Minimal Source-Driven Field Probe"
     },
     "mirror_2d_gravity_law_note": {
@@ -30169,7 +30169,7 @@
       "deps": [],
       "note_hash": "f2f183a168cfec6464ae8389dff3f7c1f109d18ba871604f4da2f5270a4bbcc0",
       "path": "docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_chokepoint_joint.py",
       "title": "Mirror Chokepoint Boundary Fit Note"
     },
     "mirror_chokepoint_note": {
@@ -30181,7 +30181,7 @@
       ],
       "note_hash": "f9bb9452cae52f710b8eb2458498397d1e44c2ee8417a26ef5e90b39bec79584",
       "path": "docs/MIRROR_CHOKEPOINT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_chokepoint_joint.py",
       "title": "Mirror Chokepoint Note"
     },
     "mirror_gravity_probe_note": {
@@ -30201,7 +30201,7 @@
       "deps": [],
       "note_hash": "5971fe8cc172a2b2a64bda75580099f7996fc6727e0d46464c92017c3018868c",
       "path": "docs/MIRROR_GROWN_COMBINED_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_grown_combined.py",
       "title": "Mirror + Grown Combined Note"
     },
     "mirror_mutual_information_canonical_families_note": {
@@ -30223,7 +30223,7 @@
       ],
       "note_hash": "1ab930fc5c97243ad06bf6d28837db7768966f573949e27ef04cfd04aeaf9f38",
       "path": "docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_mutual_information_chokepoint.py",
       "title": "Mirror Mutual Information Chokepoint Note"
     },
     "mirror_mutual_information_note": {
@@ -30233,7 +30233,7 @@
       "deps": [],
       "note_hash": "e06b7831a64ce36009174dbaf50f06be5b6db1696d2da1ea5543b1a3bd1621e1",
       "path": "docs/MIRROR_MUTUAL_INFORMATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_mutual_information_chokepoint.py",
       "title": "Mirror Mutual Information Note"
     },
     "mirror_program_synthesis": {
@@ -30253,7 +30253,7 @@
       "deps": [],
       "note_hash": "2ccfbc38c96ca193f6b51df11cf4beeba92192a7082a033cfebe8ab0590e7bc7",
       "path": "docs/MIRROR_VS_CENTRAL_HEAD_TO_HEAD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_vs_central_head_to_head.py",
       "title": "Mirror vs Central Head-To-Head Note"
     },
     "mirror_vs_lattice_program_note": {
@@ -30343,7 +30343,7 @@
       "deps": [],
       "note_hash": "4d19ae311de14bb1687471f47db5feb4cd680f26e455d7dc630a5f9cbc2fb0cf",
       "path": "docs/MOONSHOT_HONEST_REVIEW_2026-04-09.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_valley_linear_card.py",
       "title": "Moonshot Honest Review \u2014 What Survived, What Didn't, What's Next"
     },
     "moonshot_mechanism_next_note": {
@@ -30403,7 +30403,7 @@
       "deps": [],
       "note_hash": "6a1a33a164b171bfd729ecd3538d5542fcbf2bb08161b1270cd0b58ce6f39a94",
       "path": "docs/MOVING_SOURCE_CROSS_FAMILY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/moving_source_cross_family_probe.py",
       "title": "Moving Source Cross-Family Note"
     },
     "moving_source_cross_family_replay_note": {
@@ -30423,7 +30423,7 @@
       "deps": [],
       "note_hash": "b84b81aa514ba5436ad1b026527957738bf2d9b01ce1293d7c35a3af14ac4227",
       "path": "docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/moving_source_retarded_portability_probe.py",
       "title": "Moving Source Retarded Portability Note"
     },
     "multipole_tidal_response_note": {
@@ -30433,7 +30433,7 @@
       "deps": [],
       "note_hash": "daa15f2f4ab610ae66adda25ab7f89940cb33afcbf0fa51deaa765b7eb89b904",
       "path": "docs/MULTIPOLE_TIDAL_RESPONSE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/multipole_tidal_response_probe.py",
       "title": "Multipole Tidal Response Note"
     },
     "n_eff_from_three_generations_theorem_note_2026-04-24": {
@@ -31369,7 +31369,7 @@
       "deps": [],
       "note_hash": "3f1746dde9a594d2963400c214e0e18fa500c91f37481dafad34b57beab2896a",
       "path": "docs/NEWTON_LAW_DERIVED_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_distance_law_definitive.py",
       "title": "Newton's Law Derived from Cl(3) on Z^3"
     },
     "newton_persistent_pattern_control_note_2026-04-11": {
@@ -31389,7 +31389,7 @@
       "deps": [],
       "note_hash": "82061dd9c294133607c9df73e819f6eab9f6f6757f5e9e2ef1cb78f301aa6678",
       "path": "docs/NEWTONIAN_DISTANCE_LAW_CONFIRMED.md",
-      "runner_path": null,
+      "runner_path": "scripts/valley_linear_wide_tail_replay.py",
       "title": "Historical Headline Note: Newtonian Distance Law"
     },
     "next_chunk_recommendation": {
@@ -31409,7 +31409,7 @@
       "deps": [],
       "note_hash": "0e904f30f9c1815d38816b6d54b0310fc79934a3f2af683db3e67f706f32e254",
       "path": "docs/NONLABEL_GROWN_BASIN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/NONLABEL_GROWN_BASIN_TARGETED.py",
       "title": "Non-Label Grown Basin Note"
     },
     "nonlabel_grown_drift_basin_note": {
@@ -31419,7 +31419,7 @@
       "deps": [],
       "note_hash": "0aea106fd49acaa9a547c5cfd7a3969215420be7c74e282decd2361ac4b056b1",
       "path": "docs/NONLABEL_GROWN_DRIFT_BASIN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/NONLABEL_GROWN_DRIFT_BASIN_SWEEP.py",
       "title": "Non-Label Grown Drift Basin Note"
     },
     "nonlinear_born_gravity_note": {
@@ -31429,7 +31429,7 @@
       "deps": [],
       "note_hash": "ad83e680f1578c2d5545afeab544cbf977244d4a8b57b2fe1acc655dd1ee33d3",
       "path": "docs/NONLINEAR_BORN_GRAVITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_nonlinear_born_gravity.py",
       "title": "Nonlinear Propagator Breaks Born Rule and Gravity Simultaneously"
     },
     "observable_principle_from_axiom_note": {
@@ -31524,7 +31524,7 @@
       "deps": [],
       "note_hash": "0667a45d70cbcc83da96fa6c94ee1d05368c515b5e142a9dced3abbc5bf8bd66",
       "path": "docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/ordered_lattice_packet_reidentification.py",
       "title": "Ordered-Lattice Packet Re-Identification Note"
     },
     "ordered_lattice_quasi_persistent_relaunch_2d_note": {
@@ -31534,7 +31534,7 @@
       "deps": [],
       "note_hash": "19bf1b962f1be57d6452f3cc56ceeeea8831ddd492b4e7188e261159770c5277",
       "path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/ordered_lattice_quasi_persistent_relaunch_2d.py",
       "title": "Ordered-Lattice Quasi-Persistent Relaunch 2D Note"
     },
     "ordered_lattice_quasi_persistent_relaunch_note": {
@@ -31544,7 +31544,7 @@
       "deps": [],
       "note_hash": "958ce52bfad3b0e9adb7950f88fc6bfc5469eaed7e0fb2ade4b7a5159c883d8c",
       "path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/ordered_lattice_quasi_persistent_relaunch.py",
       "title": "Ordered-Lattice Quasi-Persistent Relaunch Note"
     },
     "packet_memory_note": {
@@ -31554,7 +31554,7 @@
       "deps": [],
       "note_hash": "cc3aee2a54f8bb8a466601a7df94793a7c63f687dc567b570eff79f0f136e7b8",
       "path": "docs/PACKET_MEMORY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/packet_memory.py",
       "title": "Packet Memory: Initial Conditions Survive to Detector"
     },
     "paper_outline_2026-04-12": {
@@ -31603,7 +31603,7 @@
       "deps": [],
       "note_hash": "66c17e62aeeef3d43e2773037f02dd3cec2c3453b2f1121288694e2839608c58",
       "path": "docs/PERSISTENT_INERTIAL_OBJECT_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_inertial_object_probe.py",
       "title": "Persistent Inertial Object Probe Note"
     },
     "persistent_inertial_response_readiness_note": {
@@ -31623,7 +31623,7 @@
       "deps": [],
       "note_hash": "87580652e765446bf6848665228231357824d7d147737ba8b2e5e3254325532b",
       "path": "docs/PERSISTENT_OBJECT_ADAPTIVE_READOUT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_adaptive_readout_probe.py",
       "title": "Persistent Object Adaptive Readout Note"
     },
     "persistent_object_adaptive_readout_v2_note": {
@@ -31633,7 +31633,7 @@
       "deps": [],
       "note_hash": "2ce211be1715d076ddebc1cab1f5259b348a5aa97def337c47e653461b4e63e4",
       "path": "docs/PERSISTENT_OBJECT_ADAPTIVE_READOUT_V2_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_adaptive_readout_v2_probe.py",
       "title": "Persistent Object Adaptive Readout V2 Note"
     },
     "persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16": {
@@ -31643,7 +31643,7 @@
       "deps": [],
       "note_hash": "9f55a115af4c24e3a5b9a70760d507d978167bc97dde4248a29dd28193ea3f34",
       "path": "docs/PERSISTENT_OBJECT_BLENDED_READOUT_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_blended_readout_outer_transfer_sweep.py",
       "title": "Persistent Object Blended Readout Outer Transfer Sweep"
     },
     "persistent_object_blended_readout_transfer_sweep_note_2026-04-16": {
@@ -31653,7 +31653,7 @@
       "deps": [],
       "note_hash": "c0675dca06164c10666b5c3831e6a0781d1d80ce654338e4d7b5a1297289c9bc",
       "path": "docs/PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_blended_readout_boundary_probe.py",
       "title": "Persistent Object Blended Readout Transfer Sweep"
     },
     "persistent_object_compact_inertial_probe_note_2026-04-16": {
@@ -31663,7 +31663,7 @@
       "deps": [],
       "note_hash": "8b7eb15532b76b0cad004c63f1dbc4b4a41c02d0363644a787211be5afd2de1c",
       "path": "docs/PERSISTENT_OBJECT_COMPACT_INERTIAL_PROBE_NOTE_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_compact_inertial_probe.py",
       "title": "Persistent Object Compact Inertial Probe"
     },
     "persistent_object_compact_update_note": {
@@ -31673,7 +31673,7 @@
       "deps": [],
       "note_hash": "58fd514d2e0d044a79595a03933cf0624e1e52ae9a3231114294afc6ae920b6f",
       "path": "docs/PERSISTENT_OBJECT_COMPACT_UPDATE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_compact_update_probe.py",
       "title": "Persistent Object Compact Update Probe"
     },
     "persistent_object_exact_lattice_park_note_2026-04-16": {
@@ -31693,7 +31693,7 @@
       "deps": [],
       "note_hash": "2044d310c91468f367e66ad76f037d9260c39338abe83459a34e3327157f24ff",
       "path": "docs/PERSISTENT_OBJECT_GREEN_SCOUT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_green_scout.py",
       "title": "Persistent Object Green Scout"
     },
     "persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16": {
@@ -31703,7 +31703,7 @@
       "deps": [],
       "note_hash": "ae694e4ae006f2803e38cb976d656ce36da70212eec2cc19cfbfe3b282ca9cea",
       "path": "docs/PERSISTENT_OBJECT_INWARD_BOUNDARY_FLOOR_DIAGNOSIS_NOTE_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
       "title": "Persistent Object Inward Boundary Floor Diagnosis"
     },
     "persistent_object_multistage_floor_sweep_note_2026-04-16": {
@@ -31713,7 +31713,7 @@
       "deps": [],
       "note_hash": "e3903809c0bd407293739e812cf4458b97980f83305d6dc3cde31b7b97e362dd",
       "path": "docs/PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_top3_multistage_probe.py",
       "title": "Persistent Object Multistage Floor Sweep"
     },
     "persistent_object_readout_localization_note": {
@@ -31723,7 +31723,7 @@
       "deps": [],
       "note_hash": "faf15355d8eb98ff2911a81cb5118176209f529c1968ce2693a6003386ef938b",
       "path": "docs/PERSISTENT_OBJECT_READOUT_LOCALIZATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_readout_localization_probe.py",
       "title": "Persistent Object Readout Localization Probe"
     },
     "persistent_object_readout_taper_note": {
@@ -31733,7 +31733,7 @@
       "deps": [],
       "note_hash": "5c23911da2797f516422df1d8055e908a9e937a914d59aa1e21df98f79aea8e1",
       "path": "docs/PERSISTENT_OBJECT_READOUT_TAPER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_readout_taper_probe.py",
       "title": "Persistent Object Readout Taper Audit"
     },
     "persistent_object_top3_multistage_probe_note_2026-04-16": {
@@ -31743,7 +31743,7 @@
       "deps": [],
       "note_hash": "763c65ef01ab84524a4f01ca3d85fe9caff06b09be2e4cb0f2060606aee3883e",
       "path": "docs/PERSISTENT_OBJECT_TOP3_MULTISTAGE_PROBE_NOTE_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_top3_multistage_probe.py",
       "title": "Persistent Object Top3 Multistage Probe"
     },
     "persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16": {
@@ -31753,7 +31753,7 @@
       "deps": [],
       "note_hash": "8a45448eb7de9f29ca8384bb090bd7c8c26594b2a0d7e7e05445dde06d6b0e9c",
       "path": "docs/PERSISTENT_OBJECT_TOP4_MULTISTAGE_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_top4_multistage_outer_transfer_sweep.py",
       "title": "Persistent Object Top4 Multistage Outer Transfer Sweep"
     },
     "persistent_object_top4_multistage_transfer_sweep_note_2026-04-16": {
@@ -31763,7 +31763,7 @@
       "deps": [],
       "note_hash": "6766577b3de718e6f03aaed580e640b382c7315db5cb9551efb442032e65fe46",
       "path": "docs/PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
       "title": "Persistent Object Top4 Multistage Transfer Sweep"
     },
     "persistent_record_matched_compare_note": {
@@ -31773,7 +31773,7 @@
       "deps": [],
       "note_hash": "251f45d701415796cfe583eb1a991889c1d68cb03a669626ab9a4b4668ffc878",
       "path": "docs/PERSISTENT_RECORD_MATCHED_COMPARE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_record_matched_compare.py",
       "title": "Persistent Record Matched Compare Note"
     },
     "persistent_record_overlap_kernel_note": {
@@ -31783,7 +31783,7 @@
       "deps": [],
       "note_hash": "8b348a280aa39b35ce36671ec629da46e97da1aae5988a556a9691a65c05b0d1",
       "path": "docs/PERSISTENT_RECORD_OVERLAP_KERNEL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_record_overlap_kernel.py",
       "title": "Persistent Record Overlap Kernel Note"
     },
     "persistent_record_refinement_note": {
@@ -31831,7 +31831,7 @@
       ],
       "note_hash": "a80f43c97504a9b2c9e71602cd868de4ff7a3531d5def52d2334f26cf849e544",
       "path": "docs/PHYSICS_CRITIC_TRACKER.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_17card.py",
       "title": "Physics Critic Tracker"
     },
     "physics_first_attack_plan": {
@@ -32123,7 +32123,7 @@
       "deps": [],
       "note_hash": "3c132656904f05de50171610e29887ff10d24c2843e59366f0649bb96a086a80",
       "path": "docs/PMNS_GRAPH_FIRST_AXIS_ALIGNMENT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_graph_first_axis_alignment.py",
       "title": "PMNS Graph-First Axis Alignment"
     },
     "pmns_graph_first_cycle_frame_support_note": {
@@ -32133,7 +32133,7 @@
       "deps": [],
       "note_hash": "0b49999402202bb3f1dc86bc7344632de4b5825c4faf6fd1bfb098b3be7d2c25",
       "path": "docs/PMNS_GRAPH_FIRST_CYCLE_FRAME_SUPPORT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_graph_first_cycle_frame_support.py",
       "title": "PMNS Graph-First Cycle Frame Support"
     },
     "pmns_hw1_source_transfer_boundary_note": {
@@ -32343,7 +32343,7 @@
       "deps": [],
       "note_hash": "fd9aa9d0369f1c3cbc14ce4465eccec9ba0de71e9c4e7c5a667ff62e4dfae580",
       "path": "docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_PROPOSAL_README_2026-04-21.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py",
       "title": "PMNS Selector Three-Identity Support Proposal"
     },
     "pmns_selector_unique_amplitude_slot_note": {
@@ -32421,7 +32421,7 @@
       "deps": [],
       "note_hash": "2a18711dd3b507ffc30611052662a5fb2966fe66631286301e0a4901c504d831",
       "path": "docs/PMNS_TRANSFER_OPERATOR_DOMINANT_MODE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_transfer_operator_dominant_mode.py",
       "title": "PMNS Transfer-Operator Dominant Mode"
     },
     "pmns_twisted_flux_transfer_holonomy_boundary_note": {
@@ -32451,7 +32451,7 @@
       "deps": [],
       "note_hash": "c54248e4973318091704b4b279e29ff22ea8a25864c34fe9614aa023c0065c36",
       "path": "docs/POISSON_3D_SELF_FIELD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/poisson_3d_self_field.py",
       "title": "Poisson 3D Self-Field: Full Field from One Local Equation"
     },
     "poisson_exhaustive_uniqueness_note": {
@@ -32471,7 +32471,7 @@
       "deps": [],
       "note_hash": "da93eba71ab19a33bf76b51f3f1cab2bcf2fd98e72b12caf28e08de7d628a947",
       "path": "docs/POISSON_SELF_FIELD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/poisson_self_field.py",
       "title": "Poisson Self-Field: Transverse Profile from a Local Equation"
     },
     "poisson_self_gravity_born_audit_note": {
@@ -32481,7 +32481,7 @@
       "deps": [],
       "note_hash": "b905225b26359c765bc23ccebe120d916b45883824ae4d2532eb8e0ea51fd691",
       "path": "docs/POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/poisson_self_gravity_born_audit.py",
       "title": "Poisson Self-Gravity Born Audit Note"
     },
     "poisson_self_gravity_loop_note": {
@@ -32491,7 +32491,7 @@
       "deps": [],
       "note_hash": "7ccad2ed200c2ddc3c6985831023200c2ab94034a6b04408ddbbe76655f0f751",
       "path": "docs/POISSON_SELF_GRAVITY_LOOP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/poisson_self_gravity_loop.py",
       "title": "Poisson Self-Gravity Loop Note"
     },
     "poisson_self_gravity_loop_v3_note": {
@@ -32501,7 +32501,7 @@
       "deps": [],
       "note_hash": "44ee02991bd6c7940c6f8cf22de2843e836b888d235ab08c6bd7fd1a9e80e3be",
       "path": "docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
       "title": "Poisson Self-Gravity Loop V3 Note"
     },
     "poisson_self_gravity_mechanism_note": {
@@ -32511,7 +32511,7 @@
       "deps": [],
       "note_hash": "97e6d6c3e04a0e36dcb0c78c769657b26dafca3121c2e8d965af1e4a737bae84",
       "path": "docs/POISSON_SELF_GRAVITY_MECHANISM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/poisson_self_gravity_mechanism.py",
       "title": "Poisson Self-Gravity Mechanism Note"
     },
     "portable_card_extension_note": {
@@ -32521,7 +32521,7 @@
       "deps": [],
       "note_hash": "e45c64fe2b9fb8e7e1623960283ce84a33cb59f046bf8738f8c8f3baea183d0b",
       "path": "docs/PORTABLE_CARD_EXTENSION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/PORTABLE_CARD_EXTENSION_COMPARE.py",
       "title": "Portable Card Extension Note"
     },
     "portable_package_extension_note": {
@@ -32531,7 +32531,7 @@
       "deps": [],
       "note_hash": "99a7060c0a109585755e0a3c0a45930f593202bc760f914148c6139d12ca3257",
       "path": "docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/PORTABLE_PACKAGE_EXTENSION_COMPARE.py",
       "title": "Portable Package Extension Note"
     },
     "portable_package_hierarchy_classifier_note": {
@@ -32541,7 +32541,7 @@
       "deps": [],
       "note_hash": "301b2d94cb32f97a421664c31659e113d0f3da551acec9c6ce43ec52534a1846",
       "path": "docs/PORTABLE_PACKAGE_HIERARCHY_CLASSIFIER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/portable_package_hierarchy_classifier.py",
       "title": "Portable Package Hierarchy Classifier"
     },
     "primordial_spectrum_note": {
@@ -32551,7 +32551,7 @@
       "deps": [],
       "note_hash": "ec7b8f4a527ec011b7bd8dda63830a4ed8e3e8057285ef18f59f8144c6a96e3d",
       "path": "docs/PRIMORDIAL_SPECTRUM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_primordial_spectrum.py",
       "title": "Primordial Power Spectrum from Graph Growth"
     },
     "propagator_family_unification_note": {
@@ -34965,7 +34965,7 @@
       "deps": [],
       "note_hash": "e5c69c14ced20aa5870165d94e822d4ac0abf2ffdac5393a7f3b7f0c22deb8bd",
       "path": "docs/QNM_HARDENING_FEASIBILITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/qnm_scaling.py",
       "title": "QNM Hardening Feasibility Note"
     },
     "quantum_horizon_note": {
@@ -34975,7 +34975,7 @@
       "deps": [],
       "note_hash": "5e648193bfa984a0341811ee3f54fee958fd6918ada9d667653eedaae566c054",
       "path": "docs/QUANTUM_HORIZON_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/quantum_horizon_k_sweep.py",
       "title": "Quantum Horizon k-Sweep"
     },
     "quark_bicac_endpoint_obstruction_theorem_note_2026-04-19": {
@@ -35543,7 +35543,7 @@
       "deps": [],
       "note_hash": "bed2d71399c212e8f1e25f8c64d34214ca40bc88447429d1886a0aa91b6df913",
       "path": "docs/QUASI_PERSISTENT_RELAUNCH_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/quasi_persistent_relaunch_probe.py",
       "title": "Quasi-Persistent Relaunch Probe Note"
     },
     "r_base_group_theory_derivation_theorem_note_2026-04-24": {
@@ -35589,7 +35589,7 @@
       "deps": [],
       "note_hash": "f3204b3da2289e4cf604e78a844bb63216674971682cb2ef2ae797c4ce8ff207",
       "path": "docs/REPLAY_ENVIRONMENT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/numpy_replay_bootstrap.py",
       "title": "Replay Environment Note"
     },
     "repo.active_review_queue": {
@@ -35704,7 +35704,7 @@
       "deps": [],
       "note_hash": "8b0715ee6b1db5f4e6bb62f93b87c2bfff648136a6368a007072d0b864efa4df",
       "path": "docs/REPRODUCTION_AUDIT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/reproduction_audit_harness.py",
       "title": "Reproduction Audit Note"
     },
     "restricted_strong_field_closure_note": {
@@ -35736,7 +35736,7 @@
       "deps": [],
       "note_hash": "ea17deefdc4e13f3687a48a2bbea14c81614f7007c39670e4c8ffa0c2f917ba7",
       "path": "docs/RETARDATION_DISCRIMINATOR_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/retardation_discriminator.py",
       "title": "Retardation Discriminator: Oscillating Source"
     },
     "retarded_field_causality_probe_note": {
@@ -35746,7 +35746,7 @@
       "deps": [],
       "note_hash": "ab5c10ffe1daa77450a4afc1c613dea022d6b9ff436887a39420fa69eedbd910",
       "path": "docs/RETARDED_FIELD_CAUSALITY_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/retarded_field_causality_probe.py",
       "title": "Retarded Field Causality Probe"
     },
     "retarded_field_compact_refinement_note": {
@@ -35756,7 +35756,7 @@
       "deps": [],
       "note_hash": "c554d888440a03d725e3863af5d8121de22fedfb9f89e4a0383365122c67b0d3",
       "path": "docs/RETARDED_FIELD_COMPACT_REFINEMENT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/retarded_field_compact_refinement_probe.py",
       "title": "Retarded Field Compact Refinement Probe"
     },
     "retarded_field_delay_proxy_note": {
@@ -35766,7 +35766,7 @@
       "deps": [],
       "note_hash": "11ca143b7e7fe006ed21695f278ed8d127ba7892a6a552043c6685accc213257",
       "path": "docs/RETARDED_FIELD_DELAY_PROXY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/retarded_field_delay_proxy_probe.py",
       "title": "Retarded Field Delay Proxy"
     },
     "retarded_field_harness_note": {
@@ -35776,7 +35776,7 @@
       "deps": [],
       "note_hash": "9ea35ee0cd0853d929612891858b37db74a420652a259a6dcb6cb9ae79f07bd0",
       "path": "docs/RETARDED_FIELD_HARNESS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/retarded_field_harness.py",
       "title": "Retarded Field Harness"
     },
     "s3_anomaly_spacetime_lift_note": {
@@ -35796,7 +35796,7 @@
       "deps": [],
       "note_hash": "7839b4341b76a191d4af1497bff14afd37b4437f4cafb0bdfb13bb383158e884",
       "path": "docs/S3_BOUNDARY_LINK_THEOREM_NOTE.md",
-      "runner_path": "frontier_s3_boundary_link_theorem.py",
+      "runner_path": "scripts/frontier_s3_boundary_link_theorem.py",
       "title": "S^3 Boundary-Link Disk Theorem"
     },
     "s3_cap_uniqueness_note": {
@@ -35946,7 +35946,7 @@
       "deps": [],
       "note_hash": "6ab3435bf9d54881b20df5214d47f3219d43d457ab333e793a7919eccd19093a",
       "path": "docs/SAME_FAMILY_3D_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/same_family_3d_closure.py",
       "title": "Same-Family 3D Closure: Valley-Linear"
     },
     "scalar_3plus1_temporal_ratio_note": {
@@ -36012,7 +36012,7 @@
       "deps": [],
       "note_hash": "0e0b930fd91633998ad1187e11eb0db6d20dada43b35e205daf9f6891928f384",
       "path": "docs/SCALAR_SELECTOR_FULL_STACK_RECOVERY_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_berry_phase_theorem.py",
       "title": "Scalar-Selector Full-Stack Recovery \u2014 Per-Lane Audit"
     },
     "scalar_selector_proof_chains_2026-04-19": {
@@ -36042,7 +36042,7 @@
       "deps": [],
       "note_hash": "f0cc19488a3783ab893ca9e409b2eeffa4932a8334cfedc353019d6aa8d8c01a",
       "path": "docs/SCALAR_SELECTOR_REVIEWER_PACKAGE_2026-04-20.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_kappa_spectrum_operator_bridge_theorem.py",
       "title": "Scalar-Selector Cycle 1 \u2014 Reviewer Package"
     },
     "scalar_selector_synthesis_note_2026-04-19": {
@@ -36062,7 +36062,7 @@
       "deps": [],
       "note_hash": "57a71e0ffec9d6ec301730a3594e175a8a24256bb20f6b9c7f7baa188d14a7f7",
       "path": "docs/SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_quark_up_amplitude_rpsr_conditional.py",
       "title": "Scalar-Tensor Ray-Magnitude Bridge"
     },
     "scalar_trace_tensor_no_go_note": {
@@ -36112,7 +36112,7 @@
       "deps": [],
       "note_hash": "f27643e5bc41c940197b7f156c0ead38303e717830f9dd6ef91f170e29f61457",
       "path": "docs/SECOND_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/SECOND_GROWN_FAMILY_COMPLEX_QUICK.py",
       "title": "Second Grown Family Complex Boundary Note"
     },
     "second_grown_family_complex_note": {
@@ -36122,7 +36122,7 @@
       "deps": [],
       "note_hash": "086accbcaa09c2aa4653fff65eff1b1c933f218aed2f2f8cee10d0d469f02826",
       "path": "docs/SECOND_GROWN_FAMILY_COMPLEX_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/SECOND_GROWN_FAMILY_COMPLEX.py",
       "title": "Second Grown Family Complex Note"
     },
     "second_grown_family_note": {
@@ -36132,7 +36132,7 @@
       "deps": [],
       "note_hash": "931338b9830d46f3d5db991af444519f8c2f85f98b38d33bc377da65c76f5cf2",
       "path": "docs/SECOND_GROWN_FAMILY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/second_grown_family_battery.py",
       "title": "Second Independent Grown Family"
     },
     "second_grown_family_sign_note": {
@@ -36162,7 +36162,7 @@
       "deps": [],
       "note_hash": "4c2148e1124fd1343feb5eb48718f708c88eecc40c6e253a92a5b0d4622d4d6a",
       "path": "docs/SELF_CONSISTENCY_STRUCTURED_NULL_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_self_consistency_test.py",
       "title": "Self-Consistency Structured-Null Note (2026-04-11)"
     },
     "self_gravity_backreaction_closure_note": {
@@ -36172,7 +36172,7 @@
       "deps": [],
       "note_hash": "20ea2304ec9941bfea5f407043bf26855fb6056736025cf47e39e413d0561503",
       "path": "docs/SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
       "title": "Self-Gravity Backreaction Closure Note"
     },
     "self_gravity_born_hardening_note": {
@@ -36182,7 +36182,7 @@
       "deps": [],
       "note_hash": "81eecba17cd32bc627a69ec71caa834ce94abe8f9112ef3ad287ca847995d7ff",
       "path": "docs/SELF_GRAVITY_BORN_HARDENING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
       "title": "Self-Gravity Born Hardening Note"
     },
     "self_gravity_entropy_note_2026-04-11": {
@@ -36202,7 +36202,7 @@
       "deps": [],
       "note_hash": "ad48ddf25815eebbc6e853721a731ef84bba667ad53a929ffb0b8d025fc5304e",
       "path": "docs/SELF_GRAVITY_FAILURE_DIAGNOSIS.md",
-      "runner_path": null,
+      "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
       "title": "Self-Gravity Failure Diagnosis"
     },
     "self_gravity_scaling_note_2026-04-10": {
@@ -36212,7 +36212,7 @@
       "deps": [],
       "note_hash": "d2a48a542f528b8290b8f899f4af86c52b5fdb449642335b1b20cda48ffc01dc",
       "path": "docs/SELF_GRAVITY_SCALING_NOTE_2026-04-10.md",
-      "runner_path": "frontier_staggered_self_gravity_scaling.py",
+      "runner_path": "scripts/frontier_staggered_self_gravity_scaling.py",
       "title": "Staggered Self-Gravity Scaling Note"
     },
     "session_summary_2026-04-01_dimensional": {
@@ -36232,7 +36232,7 @@
       "deps": [],
       "note_hash": "1d5b2fbe33f4632cfc2796c934d6b966d87a80b2ec7635be0842bc3721861632",
       "path": "docs/SESSION_SUMMARY_2026-04-01_TOPOLOGY.md",
-      "runner_path": null,
+      "runner_path": "scripts/topology_families.py",
       "title": "Session Summary: Topology Pivot"
     },
     "session_summary_2026-04-04": {
@@ -36252,7 +36252,7 @@
       "deps": [],
       "note_hash": "f3fc6fd02820ca5ea164d1d710c1d37d5617ae5f529847832fe2608f846da6d8",
       "path": "docs/SESSION_SYNTHESIS_2026-04-09.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_geodesic_gravity_test.py",
       "title": "Session Synthesis \u2014 2026-04-09"
     },
     "session_synthesis_2026-04-10_final": {
@@ -36262,7 +36262,7 @@
       "deps": [],
       "note_hash": "901bbd31d8f0e363e4d28c88d0cd9f801ee50b3de58fe57d0419d1bc5556d19c",
       "path": "docs/SESSION_SYNTHESIS_2026-04-10_FINAL.md",
-      "runner_path": "frontier_staggered_17card.py",
+      "runner_path": "scripts/frontier_staggered_17card.py",
       "title": "Session Synthesis: From Coin Gravity Blockers to Staggered Fermions"
     },
     "session_synthesis_2026-04-10_graph_axioms": {
@@ -36272,7 +36272,7 @@
       "deps": [],
       "note_hash": "f10bbaa5bbcd241853598017fa2d50c29b06fbe0458e30b4da57d564ae38fe21",
       "path": "docs/SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md",
-      "runner_path": "frontier_axioms_16card.py",
+      "runner_path": "scripts/frontier_axioms_16card.py",
       "title": "Session Synthesis: Graph Laplacian Axioms (2026-04-10)"
     },
     "session_synthesis_2026-04-11": {
@@ -36282,7 +36282,7 @@
       "deps": [],
       "note_hash": "6bb822c3394d19e7183ef0c5b459de70e143c21ecf162e80774527ca0903eff0",
       "path": "docs/SESSION_SYNTHESIS_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_correct_coupling.py",
       "title": "Session Synthesis \u2014 2026-04-11: Parity Coupling + 10 Discovery Probes"
     },
     "seventh_family_diagonal_boundary_note": {
@@ -36312,7 +36312,7 @@
       "deps": [],
       "note_hash": "891993f7d809a1ed363c4b86d3dfc7280463a4ae3f8b3687934b9da24e8a9d92",
       "path": "docs/SHAPIRO_COMPLEX_INTERACTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/shapiro_complex_interaction.py",
       "title": "Shapiro Complex Interaction Note"
     },
     "shapiro_delay_note": {
@@ -36322,7 +36322,7 @@
       "deps": [],
       "note_hash": "dc90c528266969a1fb90c077d42e8e36cc581d715ae45d63d5e716c110716339",
       "path": "docs/SHAPIRO_DELAY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/shapiro_phase_lag_probe.py",
       "title": "Shapiro Delay Note"
     },
     "shapiro_diamond_bridge_note": {
@@ -36362,7 +36362,7 @@
       "deps": [],
       "note_hash": "6cbeba6348c557206f419d55a6db2f89f26cd422769c8ce8b603dfe0b9ca9d76",
       "path": "docs/SHAPIRO_FAMILY_PORTABILITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/shapiro_family_portability.py",
       "title": "Shapiro Family Portability Note"
     },
     "shapiro_five_family_portability_note": {
@@ -36372,7 +36372,7 @@
       "deps": [],
       "note_hash": "afcd72aa5213c8a34ff158dcf155109929c60a6c70852b4b620ba7d779f73498",
       "path": "docs/SHAPIRO_FIVE_FAMILY_PORTABILITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/shapiro_five_family_portability.py",
       "title": "Shapiro Five-Family Portability Note"
     },
     "shapiro_qa_retest_note": {
@@ -36392,7 +36392,7 @@
       "deps": [],
       "note_hash": "d25f316ad821184d6e20fd64107a7afecc870103efe739f1f7d062409ad1639a",
       "path": "docs/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/shapiro_scaling_direct_replay.py",
       "title": "Shapiro Scaling Direct Replay Note"
     },
     "shapiro_scaling_note": {
@@ -36412,7 +36412,7 @@
       "deps": [],
       "note_hash": "10d68c0ddadc3972cfac35a987848657293dc01a7fb011bdf4e06ec86cf4712b",
       "path": "docs/SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/shapiro_static_discriminator.py",
       "title": "Shapiro Static Discriminator"
     },
     "shapiro_unique_discriminator_v2_note": {
@@ -36422,7 +36422,7 @@
       "deps": [],
       "note_hash": "5fa9778c738b8f3178aed5e14ef29d2409504c9e807490c2d3363924c3d2acfd",
       "path": "docs/SHAPIRO_UNIQUE_DISCRIMINATOR_V2_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/shapiro_unique_discriminator_v2.py",
       "title": "Shapiro Unique Discriminator V2 Note"
     },
     "sigma_hier_uniqueness_theorem_note_2026-04-19": {
@@ -36462,7 +36462,7 @@
       "deps": [],
       "note_hash": "6ab0bb166c167ca708ab63df72666fa249254b41c738587047640ce3b0b27b7c",
       "path": "docs/SIGN_PORTABILITY_INVARIANT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py",
       "title": "Sign Portability Invariant Note"
     },
     "signed_gravity_response_lane_status_note_2026-04-26": {
@@ -36522,7 +36522,7 @@
       "deps": [],
       "note_hash": "47f4754329ad9bfa9a043e55e76b03250af1775be4b22449237c99c073f805e5",
       "path": "docs/SIXTH_FAMILY_DISTANCE_LAW_THIRD_VS_SIXTH_QUICK_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/SIXTH_FAMILY_DISTANCE_LAW_THIRD_VS_SIXTH_QUICK.py",
       "title": "Quick Third Vs Sixth Distance Law Note"
     },
     "sixth_family_sheared_boundary_note": {
@@ -36572,7 +36572,7 @@
       "deps": [],
       "note_hash": "66e2e8db9d883c1d7ea64bf3af8cd584a414cb831c3956094e21c5b80a2b2320",
       "path": "docs/SOURCE_DRIVEN_FIELD_RECOVERY_H025_POCKET_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_driven_field_recovery_h025_pocket.py",
       "title": "Source-Driven Field Recovery H=0.25 Pocket"
     },
     "source_driven_field_recovery_sweep_note": {
@@ -36582,7 +36582,7 @@
       "deps": [],
       "note_hash": "1f4b50ab5923bdcce54ea6fe6a666c22ad3e85dcc8ba18bc47f623b217a51811",
       "path": "docs/SOURCE_DRIVEN_FIELD_RECOVERY_SWEEP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_driven_field_recovery_sweep.py",
       "title": "Source-Driven Field Recovery Sweep"
     },
     "source_resolved_exact_green_h025_pocket_note": {
@@ -36592,7 +36592,7 @@
       "deps": [],
       "note_hash": "72e4c5fb91910f2dbc8c66c386e5f13ae81b7a365bddf5d0ad4a97af0d5ab224",
       "path": "docs/SOURCE_RESOLVED_EXACT_GREEN_H025_POCKET_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_exact_green_h025_pocket.py",
       "title": "Source-Resolved Exact Green h=0.25 Pocket"
     },
     "source_resolved_exact_green_pocket_note": {
@@ -36602,7 +36602,7 @@
       "deps": [],
       "note_hash": "79f350e5212243aad3f78cc58efb49d249528ee0cc5686d309e76cbc5d9b7e3c",
       "path": "docs/SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_exact_green_pocket.py",
       "title": "Source-Resolved Exact Green Pocket"
     },
     "source_resolved_exact_green_scaling_note": {
@@ -36612,7 +36612,7 @@
       "deps": [],
       "note_hash": "5602e1bbde2e223b03dfdb242dc60752d0d2ed29571502ccfe32ea173ae1c30a",
       "path": "docs/SOURCE_RESOLVED_EXACT_GREEN_SCALING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_exact_green_scaling.py",
       "title": "Source-Resolved Exact Green Scaling"
     },
     "source_resolved_exact_green_self_consistent_note": {
@@ -36622,7 +36622,7 @@
       "deps": [],
       "note_hash": "d36acfc86af22a6452d10ce1207729d428e2a7a244ff1c5255fbddcf9e6b0efe",
       "path": "docs/SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_exact_green_self_consistent.py",
       "title": "Source-Resolved Exact Green Self-Consistent Pocket"
     },
     "source_resolved_generated_architecture_bridge_note": {
@@ -36632,7 +36632,7 @@
       "deps": [],
       "note_hash": "7306c803749f1c8e28c47ff97a6056ccfa39e6e9921bf882037e2be4e3dc986f",
       "path": "docs/SOURCE_RESOLVED_GENERATED_ARCHITECTURE_BRIDGE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_generated_architecture_bridge.py",
       "title": "Source-Resolved Generated Architecture Bridge Note"
     },
     "source_resolved_generated_bridge_failure_audit": {
@@ -36652,7 +36652,7 @@
       "deps": [],
       "note_hash": "867fd142ccf3f910f1dc6498844139284b8e3849ea9d29f495605a3a71099c9d",
       "path": "docs/SOURCE_RESOLVED_GENERATED_DISCRIMINATOR_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_generated_discriminator_probe.py",
       "title": "Source-Resolved Generated Discriminator Probe"
     },
     "source_resolved_generated_family_probe_note": {
@@ -36662,7 +36662,7 @@
       "deps": [],
       "note_hash": "08fe9fa2a531df082a0d26e3e28e8c611099c73ea917984062500e492025d549",
       "path": "docs/SOURCE_RESOLVED_GENERATED_FAMILY_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_generated_family_probe.py",
       "title": "Source-Resolved Generated Family Probe"
     },
     "source_resolved_generated_new_family_note": {
@@ -36672,7 +36672,7 @@
       "deps": [],
       "note_hash": "35f5737d7993c5d94363374285a6029b84794b0e963a4e5315db7b0ca5213f02",
       "path": "docs/SOURCE_RESOLVED_GENERATED_NEW_FAMILY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_generated_new_family_probe.py",
       "title": "Source-Resolved Generated New Family Note"
     },
     "source_resolved_generated_new_family_v2_note": {
@@ -36682,7 +36682,7 @@
       "deps": [],
       "note_hash": "e8733ce399099391540d975859784669bf19a44a5a52457727a316db3ba7db81",
       "path": "docs/SOURCE_RESOLVED_GENERATED_NEW_FAMILY_V2_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_generated_new_family_v2_probe.py",
       "title": "Source-Resolved Generated New Family V2 Note"
     },
     "source_resolved_generated_support_mass_scaling_note": {
@@ -36692,7 +36692,7 @@
       "deps": [],
       "note_hash": "034a99c635ef12c6808a45068c2e6a24c939b75675865a2304693caabfc80ca7",
       "path": "docs/SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_generated_support_mass_scaling.py",
       "title": "Source-Resolved Generated Support + Mass Scaling"
     },
     "source_resolved_generated_support_recovery_basin_note": {
@@ -36702,7 +36702,7 @@
       "deps": [],
       "note_hash": "4ba373b9c12c94ab81d6386c72825ac702d259d19e9c449c6b901713049aa6bc",
       "path": "docs/SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_BASIN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_generated_support_recovery_basin.py",
       "title": "Source-Resolved Generated Support Recovery Basin Note"
     },
     "source_resolved_generated_support_recovery_note": {
@@ -36712,7 +36712,7 @@
       "deps": [],
       "note_hash": "3c1cf3c340e86664ee43037714b486cb3a50ce0c971ef3d97d6d56e3c592a833",
       "path": "docs/SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_generated_support_recovery.py",
       "title": "Source-Resolved Generated Support Recovery Note"
     },
     "source_resolved_generated_wavefield_bridge_note": {
@@ -36732,7 +36732,7 @@
       "deps": [],
       "note_hash": "db95ba6d4941c84938c448b23c409accd628e9116d47e523efad51464feb8f37",
       "path": "docs/SOURCE_RESOLVED_GENERATED_WAVEFIELD_TRANSFER_V2_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_generated_wavefield_transfer_v2.py",
       "title": "Source-Resolved Generated Wavefield Transfer v2"
     },
     "source_resolved_geometry_rule_repair_note": {
@@ -36742,7 +36742,7 @@
       "deps": [],
       "note_hash": "41986beda533bcb66f7792a26a653cd8227a33b3a9dca322f7013dcff5fc07bc",
       "path": "docs/SOURCE_RESOLVED_GEOMETRY_RULE_REPAIR_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_geometry_rule_repair_probe.py",
       "title": "Source-Resolved Geometry-Rule Repair Probe"
     },
     "source_resolved_green_robustness_note": {
@@ -36752,7 +36752,7 @@
       "deps": [],
       "note_hash": "dd0454249927ed36f2877172c9a952ad4fcb2b47e0308c978de9e38e26974406",
       "path": "docs/SOURCE_RESOLVED_GREEN_ROBUSTNESS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_green_robustness.py",
       "title": "Source-Resolved Green Robustness Sweep"
     },
     "source_resolved_propagating_generated_transfer_note": {
@@ -36762,7 +36762,7 @@
       "deps": [],
       "note_hash": "4dd64ee9dd287633a9e9990093e1e7b5bf614f09bd857e883fa3c439530ec534",
       "path": "docs/SOURCE_RESOLVED_PROPAGATING_GENERATED_TRANSFER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_propagating_generated_transfer.py",
       "title": "Source-Resolved Propagating Generated Transfer Note"
     },
     "source_resolved_propagating_green_pocket_note": {
@@ -36772,7 +36772,7 @@
       "deps": [],
       "note_hash": "394c25f3fdafdaece6c3f46c358d733d4533e9c6770be368bdc4f557564fc943",
       "path": "docs/SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_propagating_green_pocket.py",
       "title": "Source-Resolved Propagating Green Pocket"
     },
     "source_resolved_radical_geometry_probe_note": {
@@ -36782,7 +36782,7 @@
       "deps": [],
       "note_hash": "ed04c48761285db0be40d58f5a9239a54fa4630ba2bee019e70656150c204040",
       "path": "docs/SOURCE_RESOLVED_RADICAL_GEOMETRY_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_radical_geometry_probe.py",
       "title": "Source-Resolved Radical Geometry Probe"
     },
     "source_resolved_retarded_green_pocket_note": {
@@ -36792,7 +36792,7 @@
       "deps": [],
       "note_hash": "f933c32b29027ca592f0ca98e09866bf0a1e89ec6bd7c3622b62f3906a8f0543",
       "path": "docs/SOURCE_RESOLVED_RETARDED_GREEN_POCKET_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_retarded_green_pocket.py",
       "title": "Source-Resolved Retarded Green Pocket"
     },
     "source_resolved_self_consistent_generated_transfer_note": {
@@ -36802,7 +36802,7 @@
       "deps": [],
       "note_hash": "c16d6089f01853f355d76a85fd4be8067dd195af0862c9b9b06d46fe98a09e46",
       "path": "docs/SOURCE_RESOLVED_SELF_CONSISTENT_GENERATED_TRANSFER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_self_consistent_generated_transfer.py",
       "title": "Source-Resolved Self-Consistent Generated Transfer"
     },
     "source_resolved_support_localization_split_note": {
@@ -36812,7 +36812,7 @@
       "deps": [],
       "note_hash": "2a889a33d18a5fcad16a5befdec7298b77554bb1cbdff2eac6a7fb35f5f8d6c9",
       "path": "docs/SOURCE_RESOLVED_SUPPORT_LOCALIZATION_SPLIT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_support_localization_split_probe.py",
       "title": "Source-Resolved Support Localization Split"
     },
     "source_resolved_transverse_propagating_green_note": {
@@ -36822,7 +36822,7 @@
       "deps": [],
       "note_hash": "dec42b471eb19ac2d1e292ecf664c5b97ed3eea3e3f89abd05885d2d00405aa9",
       "path": "docs/SOURCE_RESOLVED_TRANSVERSE_PROPAGATING_GREEN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_transverse_propagating_green.py",
       "title": "Source-Resolved Transverse Propagating Green"
     },
     "source_resolved_wavefield_escalation_note": {
@@ -36832,7 +36832,7 @@
       "deps": [],
       "note_hash": "70169df97ec602f34ff4771c6e267d02f9f3d7ccbd7fb381df3e83eacdc8b6ea",
       "path": "docs/SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_wavefield_escalation.py",
       "title": "Source-Resolved Wavefield Escalation"
     },
     "source_resolved_wavefield_green_pocket_note": {
@@ -36842,7 +36842,7 @@
       "deps": [],
       "note_hash": "1b5d415966f17afd1f146d83746664cb29e35fb3b8f18b79a8fd27f0c95f4572",
       "path": "docs/SOURCE_RESOLVED_WAVEFIELD_GREEN_POCKET_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_wavefield_green_pocket.py",
       "title": "Source-Resolved Wavefield Green Pocket"
     },
     "source_resolved_wavefield_mechanism_note": {
@@ -36852,7 +36852,7 @@
       "deps": [],
       "note_hash": "74000f9faef37e5fcefd1d1449a425f2dc542462dce2cda51529c404b42e3fd2",
       "path": "docs/SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_wavefield_mechanism.py",
       "title": "Source-Resolved Wavefield Mechanism Note"
     },
     "source_resolved_wavefield_v2_note": {
@@ -36862,7 +36862,7 @@
       "deps": [],
       "note_hash": "ad863401c46fa5024c716e019b34273aac7112e9133c77c9923de445706c6f5e",
       "path": "docs/SOURCE_RESOLVED_WAVEFIELD_V2_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/source_resolved_wavefield_v2.py",
       "title": "Source-Resolved Wavefield V2 Note"
     },
     "spectral_closure_2026-04-09": {
@@ -36912,7 +36912,7 @@
       "deps": [],
       "note_hash": "a99f6a393a836d36d84edd02d6e848cace3d80e49606e5e42816d9aee14a781a",
       "path": "docs/STAGGERED_BACKREACTION_CAPTURE_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_backreaction_capture_closure_harness.py",
       "title": "Staggered Backreaction Capture-Closure Note"
     },
     "staggered_backreaction_green_closure_note": {
@@ -36922,7 +36922,7 @@
       "deps": [],
       "note_hash": "c806516498ec51610ef221b938b71bf6c0c57341ad6366ed0e67b9e8e047de7f",
       "path": "docs/STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_backreaction_green_closure.py",
       "title": "Staggered Backreaction Green-Closure Note"
     },
     "staggered_backreaction_iterative_note": {
@@ -36932,7 +36932,7 @@
       "deps": [],
       "note_hash": "0939ee64d408f79e1fc3c1a6e29ae2dfc52a638c275f5d3769487145a2a83ad7",
       "path": "docs/STAGGERED_BACKREACTION_ITERATIVE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_backreaction_iterative.py",
       "title": "Staggered Backreaction Iterative Source-Mapping Note"
     },
     "staggered_backreaction_nonlocal_closure_note": {
@@ -36942,7 +36942,7 @@
       "deps": [],
       "note_hash": "07064275a439d716ec662dc946f207e1ce1364c2bb7f12441d50365a8467b00e",
       "path": "docs/STAGGERED_BACKREACTION_NONLOCAL_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_backreaction_nonlocal_closure.py",
       "title": "Staggered Backreaction Nonlocal Closure Note"
     },
     "staggered_backreaction_note": {
@@ -36952,7 +36952,7 @@
       "deps": [],
       "note_hash": "6dc38907f6e99c54dc7164adf8c232c03660f74f1ab6393bc7aaab742625e2aa",
       "path": "docs/STAGGERED_BACKREACTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_backreaction_prototype.py",
       "title": "Staggered Backreaction Prototype"
     },
     "staggered_backreaction_results_2026-04-10": {
@@ -36962,7 +36962,7 @@
       "deps": [],
       "note_hash": "59645edce96792b5ec7c13ae25c4412607f4b52a0e07f573d19452f9cc748de8",
       "path": "docs/STAGGERED_BACKREACTION_RESULTS_2026-04-10.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_backreaction_prototype.py",
       "title": "Staggered Backreaction Prototype Results"
     },
     "staggered_backreaction_scale_closure_note": {
@@ -36972,7 +36972,7 @@
       "deps": [],
       "note_hash": "74aa65e9d7e3df85582cc47c74af88bc621dc56158acf6fbf924389ee56f9f25",
       "path": "docs/STAGGERED_BACKREACTION_SCALE_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_backreaction_scale_closure.py",
       "title": "Staggered Backreaction Scale-Closure Note"
     },
     "staggered_backreaction_shell_spectral_note": {
@@ -36982,7 +36982,7 @@
       "deps": [],
       "note_hash": "ab82ead460aefc453a7826d197d102a7eb7cfe1331aa8203417eeb75636cf073",
       "path": "docs/STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_backreaction_shell_spectral.py",
       "title": "Staggered Backreaction Shell / Spectral Note"
     },
     "staggered_dag_note_2026-04-10": {
@@ -36992,7 +36992,7 @@
       "deps": [],
       "note_hash": "5faa1de94a4545483dae3421792cfb7c819d2ce9240085078919c86d3f3bcc90",
       "path": "docs/STAGGERED_DAG_NOTE_2026-04-10.md",
-      "runner_path": "frontier_staggered_dag.py",
+      "runner_path": "scripts/frontier_staggered_dag.py",
       "title": "Staggered Fermion on Layered DAG-Derived Family \u2014 Bounded Note"
     },
     "staggered_fermion_card_2026-04-10": {
@@ -37002,7 +37002,7 @@
       "deps": [],
       "note_hash": "9009fecfedf7887572affc31480c22cee0662e4e5eb190f2a4b238bc88697bc4",
       "path": "docs/STAGGERED_FERMION_CARD_2026-04-10.md",
-      "runner_path": "frontier_staggered_17card.py",
+      "runner_path": "scripts/frontier_staggered_17card.py",
       "title": "Staggered Fermion + Scalar/Parity Potential Gravity \u2014 Force-Based Card"
     },
     "staggered_fermion_card_2026-04-11": {
@@ -37022,7 +37022,7 @@
       "deps": [],
       "note_hash": "62042775b41b0893f5df9ab74054ae12fb6545ce64f45884f33683fd907ebf3f",
       "path": "docs/STAGGERED_GEOMETRY_SUPERPOSITION_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_geometry_superposition_retained.py",
       "title": "Staggered Geometry Superposition Note \u2014 2026-04-11"
     },
     "staggered_graph_failure_map_note": {
@@ -37032,7 +37032,7 @@
       "deps": [],
       "note_hash": "23717f06f49793d369c8560f5b83ca57ab36e7f1b5023d191cf6d40e00b18744",
       "path": "docs/STAGGERED_GRAPH_FAILURE_MAP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_graph_failure_map.py",
       "title": "Staggered Graph Failure Map Note"
     },
     "staggered_graph_gauge_closure_note": {
@@ -37042,7 +37042,7 @@
       "deps": [],
       "note_hash": "33ec3f74aa46dee7ee8216fab8dea947c22ca04945b0cbf477a2af7e3bbeee85",
       "path": "docs/STAGGERED_GRAPH_GAUGE_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_graph_gauge_closure.py",
       "title": "Staggered Graph Gauge Closure Note"
     },
     "staggered_graph_gauge_closure_results_2026-04-10": {
@@ -37052,7 +37052,7 @@
       "deps": [],
       "note_hash": "eadd9caa902ec4f74c488add3f87760c017c70e70fca009c4aab78300f3c91e1",
       "path": "docs/STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_graph_gauge_closure.py",
       "title": "Staggered Graph Gauge Closure Results"
     },
     "staggered_graph_observables_note": {
@@ -37062,7 +37062,7 @@
       "deps": [],
       "note_hash": "b2b4d6dad91f5d2e11eec243931aee35f084bcec76e6f71e25ba570edaa14d9e",
       "path": "docs/STAGGERED_GRAPH_OBSERVABLES_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_graph_observables.py",
       "title": "Staggered Graph Observables Note"
     },
     "staggered_graph_portability_note": {
@@ -37072,7 +37072,7 @@
       "deps": [],
       "note_hash": "eada5d4276affd6bb7eb9cd836b725ecac2ce98247bcaafa4386a28f3e1f3c65",
       "path": "docs/STAGGERED_GRAPH_PORTABILITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_graph_portability.py",
       "title": "Staggered Graph Portability Note"
     },
     "staggered_graph_portability_stress_note": {
@@ -37082,7 +37082,7 @@
       "deps": [],
       "note_hash": "b2ddce0e6b8d4f4c3e5e807ddcc9e233f1f26d7b15f7e87b77339272e1f3fa4a",
       "path": "docs/STAGGERED_GRAPH_PORTABILITY_STRESS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_graph_portability_stress.py",
       "title": "Staggered Graph Portability Stress Note"
     },
     "staggered_layered_backreaction_note": {
@@ -37092,7 +37092,7 @@
       "deps": [],
       "note_hash": "48fc287c2ad35da5777029693a3f511c45335603c4e8dcd86eee8e572c59977c",
       "path": "docs/STAGGERED_LAYERED_BACKREACTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_layered_backreaction.py",
       "title": "Staggered Layered Backreaction Note"
     },
     "staggered_layered_gauge_engineering_note": {
@@ -37102,7 +37102,7 @@
       "deps": [],
       "note_hash": "f96903f27428ba6a84071944f59eed11044a9357d718c12578b0231f3beda247",
       "path": "docs/STAGGERED_LAYERED_GAUGE_ENGINEERING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_layered_gauge_engineering.py",
       "title": "Staggered Layered Gauge Engineering Note"
     },
     "staggered_layered_gauge_phase_diagram_note": {
@@ -37112,7 +37112,7 @@
       "deps": [],
       "note_hash": "c194325c72d0d3f711f4016a7b5262940b07a61fa6e9103526491514f01ca6df",
       "path": "docs/STAGGERED_LAYERED_GAUGE_PHASE_DIAGRAM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_layered_gauge_phase_diagram.py",
       "title": "Staggered Layered Gauge Phase Diagram Note"
     },
     "staggered_layered_loop_threshold_note": {
@@ -37124,7 +37124,7 @@
       ],
       "note_hash": "3bd04225776e14e042a50ac73dfd6ff5b01db97bd252e9c51886e15298600f70",
       "path": "docs/STAGGERED_LAYERED_LOOP_THRESHOLD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_layered_loop_threshold.py",
       "title": "Staggered Layered Loop Threshold Note"
     },
     "staggered_newton_blocking_sensitivity_note_2026-04-11": {
@@ -37174,7 +37174,7 @@
       "deps": [],
       "note_hash": "359d4d0440cd2069c5b75cff15d072f01f3a4250fca1cbe2fc6273aa621b2d6a",
       "path": "docs/STAGGERED_TWO_FIELD_WAVE_NOTE.md",
-      "runner_path": "frontier_two_field_wave.py",
+      "runner_path": "scripts/frontier_two_field_wave.py",
       "title": "Staggered Two-Field Wave Coupling \u2014 Rerun-Corrected Note"
     },
     "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24": {
@@ -37275,7 +37275,7 @@
       "deps": [],
       "note_hash": "10fdb06cc5e20c755a775e34694cb525a6f2ff22c9cae5c4650067a949631611",
       "path": "docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/structured_chokepoint_bridge_extension.py",
       "title": "Structured Chokepoint Bridge Extension Note"
     },
     "structured_chokepoint_bridge_note": {
@@ -37285,7 +37285,7 @@
       "deps": [],
       "note_hash": "eedc88ecddb5491db4a2b94262037a84680caf094c5c35994b856f3019c391c0",
       "path": "docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/structured_chokepoint_bridge.py",
       "title": "Structured Chokepoint Bridge Note"
     },
     "structured_mirror_bornsafe_scan_note": {
@@ -37392,7 +37392,7 @@
       "deps": [],
       "note_hash": "17e2817c4f2520253c67d10e6e1cfadb630f64b30e2b18938290510e4abc7a7f",
       "path": "docs/SYMMETRY_GENERATED_PAIRED_CHOKEPOINT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/symmetry_generated_paired_chokepoint.py",
       "title": "Symmetry-Generated Paired Chokepoint Note"
     },
     "symmetry_head_to_head_note": {
@@ -37402,7 +37402,7 @@
       "deps": [],
       "note_hash": "995dc67669d77542f8e86c2fc83f6bc88cb9a5f9a146eed12396dd5d08f3b4e7",
       "path": "docs/SYMMETRY_HEAD_TO_HEAD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/symmetry_head_to_head.py",
       "title": "Symmetry Head-To-Head Note"
     },
     "symmetry_spectrum_mirror_compare_note": {
@@ -37412,7 +37412,7 @@
       "deps": [],
       "note_hash": "da6e9d433f600fb1008db21ffbc6a54d5216546dd1b538850c5bfc7eddf93c16",
       "path": "docs/SYMMETRY_SPECTRUM_MIRROR_COMPARE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/symmetry_spectrum_mirror_compare.py",
       "title": "Symmetry Spectrum Mirror Compare Note"
     },
     "synthesis_note": {
@@ -37472,7 +37472,7 @@
       "deps": [],
       "note_hash": "8f34c32d57006874a45dfa923844d53214163a37cce1c518db81e1e15a3a8b3f",
       "path": "docs/TENSOR_NETWORK_CONNECTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_tensor_network_connection.py",
       "title": "Tensor Network Connection Note"
     },
     "tensor_scalar_ratio_consolidation_theorem_note_2026-04-22": {
@@ -37522,7 +37522,7 @@
       "deps": [],
       "note_hash": "ac5da3b2934dc84e8b40ca3cb9796ad81a21e0fe049252a8368ca24cd5f9c43a",
       "path": "docs/THIRD_GROWN_FAMILY_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/THIRD_GROWN_FAMILY_SIGN_SWEEP.py",
       "title": "Third Grown Family Boundary Note"
     },
     "third_grown_family_complex_boundary_note": {
@@ -37532,7 +37532,7 @@
       "deps": [],
       "note_hash": "ce2acea1f72b42d05734375545e68684b2bb4ca2bfe8da73a9edcccc3aac7de2",
       "path": "docs/THIRD_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/THIRD_GROWN_FAMILY_COMPLEX.py",
       "title": "Third Grown Family Complex Boundary Note"
     },
     "third_grown_family_complex_note": {
@@ -37542,7 +37542,7 @@
       "deps": [],
       "note_hash": "e036b77d812555250f242fb6ad3645c069c2fba3ff988cc91480ffc4ac3b2fa7",
       "path": "docs/THIRD_GROWN_FAMILY_COMPLEX_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/THIRD_GROWN_FAMILY_COMPLEX.py",
       "title": "Third Grown Family Complex Note"
     },
     "third_grown_family_sign_note": {
@@ -37552,7 +37552,7 @@
       "deps": [],
       "note_hash": "76508c7d99853cc8c8c636ebfc4ec5fc3aa0d60cc78b121b7cd1e5fa890a4a33",
       "path": "docs/THIRD_GROWN_FAMILY_SIGN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/THIRD_GROWN_FAMILY_SIGN_SWEEP.py",
       "title": "Third Grown Family Sign Note"
     },
     "three_family_card_note": {
@@ -37628,7 +37628,7 @@
       "deps": [],
       "note_hash": "72f8cbef8eae530cdf6faf7b94da71b7436f15790765655845a3993bf1cfa67e",
       "path": "docs/TRIPLE_STACK_COLLAPSE_SCALING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/triple_stack_collapse_scaling.py",
       "title": "Triple-Stack Collapse Scaling Note"
     },
     "two_body_mutual_attraction_note_2026-04-11": {
@@ -37648,7 +37648,7 @@
       "deps": [],
       "note_hash": "1aa1a6fbc6d13f7833dfffea0a00cc81790ed18ec5929f76bc7574ac11bb3765",
       "path": "docs/TWO_FIELD_RETARDED_FAMILY_CLOSURE_NOTE_2026-04-10.md",
-      "runner_path": "frontier_two_field_retarded_family_closure.py",
+      "runner_path": "scripts/frontier_two_field_retarded_family_closure.py",
       "title": "Two-Field Retarded/Hybrid Family Closure Note"
     },
     "two_field_retarded_probe_note_2026-04-10": {
@@ -37658,7 +37658,7 @@
       "deps": [],
       "note_hash": "d84a170e52d6b3a55658efe67cee6db831d98649f5686ed99ea3bd6f7895b425",
       "path": "docs/TWO_FIELD_RETARDED_PROBE_NOTE_2026-04-10.md",
-      "runner_path": "frontier_two_field_retarded_probe.py",
+      "runner_path": "scripts/frontier_two_field_retarded_probe.py",
       "title": "Two-Field Retarded/Hybrid Probe Note"
     },
     "two_sign_comparison_note_2026-04-10": {
@@ -37668,7 +37668,7 @@
       "deps": [],
       "note_hash": "52fe11b1a34f18f1d0c68bcf46169142879a7f498864616166f4dd7f1ace0aa9",
       "path": "docs/TWO_SIGN_COMPARISON_NOTE_2026-04-10.md",
-      "runner_path": "frontier_two_sign_comparison.py",
+      "runner_path": "scripts/frontier_two_sign_comparison.py",
       "title": "Two-Sign Comparison Note"
     },
     "unification_basin_failure_note": {
@@ -37678,7 +37678,7 @@
       "deps": [],
       "note_hash": "262a03a9452b0999d11e8f67f87aea2c27995eaadfaf7cdfab456bb1e3bd865b",
       "path": "docs/UNIFICATION_BASIN_FAILURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/FIXED_FIELD_FAMILY_UNIFICATION_BASIN.py",
       "title": "Unification Basin Failure Note"
     },
     "unified_basin_freeze_note": {
@@ -38224,7 +38224,7 @@
       ],
       "note_hash": "0bd26f69f9f87f5cae485010aa83405e5bc5800a3c550b3cc5091fe40bc819f0",
       "path": "docs/UNIVERSALITY_CLASSIFIER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/universality_classifier.py",
       "title": "Universality Classifier: Empirical Two-Property Predictor on a Wide Family Sweep"
     },
     "unpromoted_branch_retainability_audit_note": {
@@ -38295,7 +38295,7 @@
       "deps": [],
       "note_hash": "0c08ff946f676deabc7539a0679203dc0d1e825fb44c23b15a78eee4c56ea358",
       "path": "docs/VALLEY_LINEAR_ACTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/valley_linear_same_harness_compare.py",
       "title": "3D Valley-Linear Action Note"
     },
     "valley_linear_asymptotic_bridge_note": {
@@ -38305,7 +38305,7 @@
       "deps": [],
       "note_hash": "db9dcfa4a4f9f633b6123b0a3b62bc61026c31778697bdda08809256a3de1df2",
       "path": "docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/valley_linear_asymptotic_bridge.py",
       "title": "Valley-Linear Asymptotic Bridge Note"
     },
     "valley_linear_continuum_synthesis_note": {
@@ -38325,7 +38325,7 @@
       "deps": [],
       "note_hash": "b1330058b1550d464d36a24fcfc46d8891a09eb7e3e4c44249fe329c26116f82",
       "path": "docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/valley_linear_mirror_transfer.py",
       "title": "Valley-Linear Mirror Transfer Note"
     },
     "valley_linear_repro_note": {
@@ -38335,7 +38335,7 @@
       "deps": [],
       "note_hash": "2330d28ea229c4b1b719280e9f9a0fc7036fc721268793f852f548a175d4def8",
       "path": "docs/VALLEY_LINEAR_REPRO_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/reproduction_audit_harness.py",
       "title": "Valley-Linear Reproduction Note"
     },
     "valley_linear_robustness_note": {
@@ -38345,7 +38345,7 @@
       "deps": [],
       "note_hash": "6f734b8fbd36b4ad344c5615e41367205fdd7896d1095de22d03e898c651ec67",
       "path": "docs/VALLEY_LINEAR_ROBUSTNESS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/valley_linear_robustness_sweep.py",
       "title": "Valley-Linear Robustness Note"
     },
     "valley_linear_wide_tail_note": {
@@ -38355,7 +38355,7 @@
       "deps": [],
       "note_hash": "d9272b82eed371a65e1d450dbb74acd883cdbc44460f801b03b8e4b5fea496c9",
       "path": "docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/valley_linear_wide_tail_replay.py",
       "title": "Valley-Linear Wide Tail Note"
     },
     "vector_gauge_field_kk_tower_theorem_note_2026-04-24": {
@@ -38381,7 +38381,7 @@
       "deps": [],
       "note_hash": "e2780300d4823621b267e72540178668fbfe8f407c324fdb31a47e777831d141",
       "path": "docs/VECTOR_MAGNETIC_EXTENSION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/vector_magnetic_extension_probe.py",
       "title": "Vector / Magnetic Extension Note"
     },
     "vector_sector_note": {
@@ -38391,7 +38391,7 @@
       "deps": [],
       "note_hash": "8b2735f8e6ee7d76fa629176d39f5616ba28b292b364acc99378251a429524a2",
       "path": "docs/VECTOR_SECTOR_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/vector_sector_circular_orbit.py",
       "title": "Vector Sector: Circular Orbit Handedness"
     },
     "w_mass_derived_note": {
@@ -38415,7 +38415,7 @@
       "deps": [],
       "note_hash": "31d316d6e29fc7f4ea19b06190f852bb4af4c60b94eefe6cb8c477e8817791d9",
       "path": "docs/WAVE_3PLUS1D_PROMOTIONS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_3plus1d_promotions.py",
       "title": "(3+1)D Promotions of Lane 5 (Lightcone) and Lane 6 (Retarded vs Instantaneous)"
     },
     "wave_3plus1d_radiation_note": {
@@ -38427,7 +38427,7 @@
       ],
       "note_hash": "c39bfb58a9fe72440468e99aa425774dfec4d8e837d2968741052f5a88874fdb",
       "path": "docs/WAVE_3PLUS1D_RADIATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_3plus1d_radiation.py",
       "title": "(3+1)D Wave-Equation Radiation: Full Spatial Laplacian"
     },
     "wave_amplification_near_horizon_note": {
@@ -38437,7 +38437,7 @@
       "deps": [],
       "note_hash": "0124a1b1c2e4ac518344b3a1ed18ef7e88b029b2177dc028aafea507227551c9",
       "path": "docs/WAVE_AMPLIFICATION_NEAR_HORIZON_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_amplification_near_horizon.py",
       "title": "Wave Amplification Near Horizon"
     },
     "wave_direct_dm_family_scout_note": {
@@ -38447,7 +38447,7 @@
       "deps": [],
       "note_hash": "2b7057bd2def5a0f0646ad38db3b24666fd31c05900bbe89bbee8908ca5307ba",
       "path": "docs/WAVE_DIRECT_DM_FAMILY_SCOUT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_matched_history_probe.py",
       "title": "Wave Direct-dM Family Scout"
     },
     "wave_direct_dm_h025_fam1_seed0_control_note": {
@@ -38459,7 +38459,7 @@
       ],
       "note_hash": "1b8afc1aeaa4638d1815eea93b60a88cfe64c10f358e4dbba5decc26fbbcfc16",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
       "title": "Wave Direct-dM H=0.25 Fam1 Seed0 Control Note"
     },
     "wave_direct_dm_h025_fam1_seed1_control_note": {
@@ -38471,7 +38471,7 @@
       ],
       "note_hash": "d1366674d771b24ec9ba1acc72303ffea089e3a348d41296e281a62ceddcee4f",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
       "title": "Wave Direct-dM H=0.25 Fam1 Seed1 Control Note"
     },
     "wave_direct_dm_h025_fam2_seed0_boundary_note": {
@@ -38484,7 +38484,7 @@
       ],
       "note_hash": "9fa73444a94c0c42c4e5033617d2dac8a0cd486e37f01884a53e37d3877b9358",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
       "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note"
     },
     "wave_direct_dm_h025_fam2_seed0_control_note": {
@@ -38496,7 +38496,7 @@
       ],
       "note_hash": "b5988e5a4063f8f0241a252db8f2ca983109214d89a05e0d0b7e4c79965c5f60",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
       "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note"
     },
     "wave_direct_dm_h025_fam2_seed1_control_note": {
@@ -38509,7 +38509,7 @@
       ],
       "note_hash": "331d38d423fb11e0760d4373c6f7e2695be41722fb2eb443092aa202516b7215",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
       "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note"
     },
     "wave_direct_dm_h025_fam2_seed1_followup_note": {
@@ -38523,7 +38523,7 @@
       ],
       "note_hash": "b92c5d873d173bbf740cbed76d17e666180b96e3d72a9c101f6c8067099d80e4",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
       "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note"
     },
     "wave_direct_dm_h025_fam2_two_point_synthesis_note": {
@@ -38546,7 +38546,7 @@
       ],
       "note_hash": "fd4b5400797b3e60511693ff965e7b9107fe74f64b41c899e3f833976c7c6fbf",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM3_SEED0_CONTROL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
       "title": "Wave Direct-dM H=0.25 Fam3 Seed0 Control Note"
     },
     "wave_direct_dm_h025_fam3_seed1_control_note": {
@@ -38558,7 +38558,7 @@
       ],
       "note_hash": "b4dbe7d54c73651d54746cebb544ad632fab50628e97cdab1271e7100ce477ea",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM3_SEED1_CONTROL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
       "title": "Wave Direct-dM H=0.25 Fam3 Seed1 Control Note"
     },
     "wave_direct_dm_h025_family_pair_synthesis_note": {
@@ -38589,7 +38589,7 @@
       ],
       "note_hash": "cbdcc93a74e5319d8f1309677ebf0c4c0d54fd44fb199689819034372d2244bd",
       "path": "docs/WAVE_DIRECT_DM_H025_FEASIBILITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_feasibility_probe.py",
       "title": "Wave Direct-dM H=0.25 Feasibility Note"
     },
     "wave_direct_dm_h025_high_band_boundary_note": {
@@ -38602,7 +38602,7 @@
       ],
       "note_hash": "546d7da2a9bd7cfb3ab11818055e300e283983cc5b374ce107b5188cf64f613b",
       "path": "docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
       "title": "Wave Direct-dM H=0.25 High-Band Boundary Note"
     },
     "wave_direct_dm_h025_low_band_retention_note": {
@@ -38615,7 +38615,7 @@
       ],
       "note_hash": "470b2631c8ba049104e90846fe57ab10b87877cb533c1035e6a03665234a606f",
       "path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
       "title": "Wave Direct-dM H=0.25 Low-Band Retention Note"
     },
     "wave_direct_dm_h025_seed0_crossfamily_note": {
@@ -38668,7 +38668,7 @@
       "deps": [],
       "note_hash": "6b03c214184b0785deb33f36b90bcf3f5c6097dec0c0dfe4284ff3393d445863",
       "path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
       "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note"
     },
     "wave_direct_dm_matched_history_note": {
@@ -38682,7 +38682,7 @@
       ],
       "note_hash": "ab2a1577769c347d692d9ff9647c9602f8a50b8cd9e493fceccb6bab9b21b489",
       "path": "docs/WAVE_DIRECT_DM_MATCHED_HISTORY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_matched_history_probe.py",
       "title": "Wave Direct-dM Matched-History"
     },
     "wave_direct_dm_next_widening_recommendation": {
@@ -38721,7 +38721,7 @@
       ],
       "note_hash": "cd8a6493f82a82735f07200c84b0f5eec547dc307238f028b9351d85678efb02",
       "path": "docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_portability_batch.py",
       "title": "Wave Direct-dM Portability Batch"
     },
     "wave_direct_dm_post_fam3_successor_note": {
@@ -38751,7 +38751,7 @@
       ],
       "note_hash": "b0495478f45ff883a4e42de95b68f98f6a573d9053006a073822ebd45b781780",
       "path": "docs/WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_seed_band_diagnosis.py",
       "title": "Wave Direct-dM Seed-Band Diagnosis"
     },
     "wave_direct_dm_transfer_diagnostic_note": {
@@ -38764,7 +38764,7 @@
       ],
       "note_hash": "dff76051c06b0db4cb2df9e55992877e0dc8072f7f6650dbe83af611d48100c3",
       "path": "docs/WAVE_DIRECT_DM_TRANSFER_DIAGNOSTIC_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_transfer_diagnostic.py",
       "title": "Wave Direct-dM Transfer Diagnostic Note"
     },
     "wave_equation_gravity_note": {
@@ -38784,7 +38784,7 @@
       "deps": [],
       "note_hash": "73b2547605f55b3f912b741bb212729ebde1c660506cf3b7fc49350536070e14",
       "path": "docs/WAVE_EQUATION_SELF_FIELD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_equation_self_field.py",
       "title": "Wave-Equation Self-Field: Time-Dependent Field from One Local Equation"
     },
     "wave_radiation_note": {
@@ -38794,7 +38794,7 @@
       "deps": [],
       "note_hash": "9ee5e40997ecf9590d54a3b794c24bba2476bd0584d5181532a907b1192489cf",
       "path": "docs/WAVE_RADIATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_radiation.py",
       "title": "Wave-Equation Radiation: Oscillating Source Emits Propagating Field"
     },
     "wave_retardation_continuum_limit_note": {
@@ -38804,7 +38804,7 @@
       "deps": [],
       "note_hash": "f9e4b535df6b66c188657a55356ca05eb849d9e6d71f570f5442d5fb372e5abc",
       "path": "docs/WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_retardation_continuum_limit.py",
       "title": "Wave-Retardation Continuum Limit \u2014 Conditional Negative (Comparator-Dominated)"
     },
     "wave_retardation_lab_prediction_note": {
@@ -38814,7 +38814,7 @@
       "deps": [],
       "note_hash": "7dd0ec109e528a9aa12f2647eeb88b775c2472ae078f3247007856eec95aa936",
       "path": "docs/WAVE_RETARDATION_LAB_PREDICTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_retardation_velocity_sweep.py",
       "title": "Wave-Retardation Lab Prediction \u2014 NEGATIVE (No Clean v/c Scaling)"
     },
     "wave_retarded_gravity_note": {
@@ -38824,7 +38824,7 @@
       "deps": [],
       "note_hash": "40fe663f778dbd9f4604eb94f70408215fccb017cbbddbb771662a490cf260e7",
       "path": "docs/WAVE_RETARDED_GRAVITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_retarded_gravity.py",
       "title": "Wave Retarded Gravity: Retarded \u2260 Instantaneous on the Wave Field"
     },
     "wave_static_boundary_sensitivity_note": {
@@ -38834,7 +38834,7 @@
       "deps": [],
       "note_hash": "844f2e716d8cb5a1a0c43a5edde8c14a4ac1a4b8b3614f58645dcda49f9b23ae",
       "path": "docs/WAVE_STATIC_BOUNDARY_SENSITIVITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_static_boundary_sensitivity.py",
       "title": "Wave Static Boundary Sensitivity"
     },
     "wave_static_direct_probe_fine_note": {
@@ -38844,7 +38844,7 @@
       "deps": [],
       "note_hash": "c9d64849e660d590004df819302356421e55c088b4ce07b5e64e1c118c3e5b43",
       "path": "docs/WAVE_STATIC_DIRECT_PROBE_FINE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_static_direct_probe.py",
       "title": "Wave Static Direct-Comparator Fine Check"
     },
     "wave_static_fixed_beam_boundary_sensitivity_note": {
@@ -38854,7 +38854,7 @@
       "deps": [],
       "note_hash": "e1ae2d89016b6c502bdf39144cf3d452f60d2cd9a3100f123cf9d2d51d02a389",
       "path": "docs/WAVE_STATIC_FIXED_BEAM_BOUNDARY_SENSITIVITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_static_fixed_beam_boundary_sensitivity.py",
       "title": "Wave Static Fixed-Beam Boundary Sensitivity"
     },
     "wave_static_matrixfree_fixed_beam_boundary_note": {
@@ -38864,7 +38864,7 @@
       "deps": [],
       "note_hash": "b47a3a4861a1acd2d89b5fa5c54b6bb5f81e21f351ea0feb66923fbc55129949",
       "path": "docs/WAVE_STATIC_MATRIXFREE_FIXED_BEAM_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_static_matrixfree_fixed_beam_boundary.py",
       "title": "Wave Static Matrix-Free Fixed-Beam Boundary Probe"
     },
     "wave_static_matrixfree_moving_source_fixed_beam_boundary_note": {
@@ -38874,7 +38874,7 @@
       "deps": [],
       "note_hash": "3c955fe4fb70c7e87da21a6c67dbed44beaee1a6f149c2060bd8ea5f95a6bb98",
       "path": "docs/WAVE_STATIC_MATRIXFREE_MOVING_SOURCE_FIXED_BEAM_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_static_matrixfree_moving_source_fixed_beam_boundary.py",
       "title": "Wave Static Matrix-Free Moving-Source Fixed-Beam Boundary Probe"
     },
     "wave_static_matrixfree_shared_geometry_compare_note": {
@@ -38884,7 +38884,7 @@
       "deps": [],
       "note_hash": "883c74229b5f5fd65410a80696edd3d0c7de650db8e0cb8556d41437082badeb",
       "path": "docs/WAVE_STATIC_MATRIXFREE_SHARED_GEOMETRY_COMPARE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_static_matrixfree_shared_geometry_compare.py",
       "title": "Wave Static Matrix-Free Shared Geometry Compare"
     },
     "wave_static_single_source_compare_note": {
@@ -38894,7 +38894,7 @@
       "deps": [],
       "note_hash": "e0caa202151dc7217bc7f967413327336819b70c13bcaec57287b067c661abc2",
       "path": "docs/WAVE_STATIC_SINGLE_SOURCE_COMPARE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_static_single_source_compare.py",
       "title": "Wave Static Single-Source Compare"
     },
     "weak_coupling_retention_note_2026-04-11": {
@@ -38904,7 +38904,7 @@
       "deps": [],
       "note_hash": "69b70b82e69ac931ecc04892fb83411e65ab76c2063765b6d707c4e51d36ae7b",
       "path": "docs/WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md",
-      "runner_path": "frontier_weak_coupling_retained.py",
+      "runner_path": "scripts/frontier_weak_coupling_retained.py",
       "title": "Weak-Coupling Retention Note"
     },
     "weak_coupling_sign_sensitivity_note_2026-04-11": {
@@ -38914,7 +38914,7 @@
       "deps": [],
       "note_hash": "d22e8e415a94a893ff9f14e296f5c6224734f193ed2d1e20c445cdaf2243900a",
       "path": "docs/WEAK_COUPLING_SIGN_SENSITIVITY_NOTE_2026-04-11.md",
-      "runner_path": "frontier_weak_coupling_battery.py",
+      "runner_path": "scripts/frontier_weak_coupling_battery.py",
       "title": "Weak-Coupling Sign-Sensitivity Note"
     },
     "wide_family_h0125_bridge_reopen_audit": {
@@ -38934,7 +38934,7 @@
       "deps": [],
       "note_hash": "4763bd4a2d43ea7803869755e32cbbf6aa11e02d0016af97dc3adab2fca1042f",
       "path": "docs/WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wide_lattice_h2t_distance_replay.py",
       "title": "Wide-Lattice h^2+T Distance-Law Note"
     },
     "wide_lattice_h2t_skeptic_audit_note": {
@@ -38944,7 +38944,7 @@
       "deps": [],
       "note_hash": "3f22d2c90ba0f5b7fd65f81d89e01d9c2893c1d12c9c509c0589b327d2d93545",
       "path": "docs/WIDE_LATTICE_H2T_SKEPTIC_AUDIT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wide_lattice_h2t_distance_replay.py",
       "title": "Wide-Lattice `h^2+T` Skeptic Audit Note"
     },
     "wilson_mu2_distance_sweep_note_2026-04-11": {
@@ -39071,7 +39071,7 @@
       "deps": [],
       "note_hash": "509a3ac3d1f35a34da8295f254dd732aa05e6435fa934b0c51c5d5a77f71628f",
       "path": "docs/work_history/ckm/CKM_MASS_BASIS_NNI_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_ckm_mass_basis_nni.py",
       "title": "Historical CKM Mass-Basis NNI Note: V_ub from Schur Complement + Mass-Ratio Suppression"
     },
     "work_history.ckm.jarlskog_phase_bound_note": {
@@ -39202,7 +39202,7 @@
       "deps": [],
       "note_hash": "e626fe753006a5250a6eb8d06f3f6bb4dab461288bfad59fee728632890132b8",
       "path": "docs/work_history/repo/backlog/NATURE_BACKLOG_2026-04-10.md",
-      "runner_path": "frontier_two_field_retarded_family_closure.py",
+      "runner_path": "scripts/frontier_two_field_retarded_family_closure.py",
       "title": "Nature Backlog"
     },
     "work_history.repo.backlog.overnight_work_backlog": {
@@ -41675,7 +41675,7 @@
     "leaf_count": 752,
     "node_count": 1693,
     "root_count": 1216,
-    "runners_with_path": 777,
+    "runners_with_path": 1203,
     "status_counts": {
       "bounded": 261,
       "open": 38,
