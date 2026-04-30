@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:04:54.109530+00:00
+**Generated:** 2026-04-30T22:06:22.467414+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 7 |
 | bounded | 280 |
-| support | 250 |
+| support | 249 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 739 |
+| ~~audited_conditional~~ | 740 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
@@ -340,7 +340,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `beyond_lattice_qcd_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `bh_entropy_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
-| `bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `bmv_bounded_negative_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `born_lane_comparison_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `branch_entanglement_robustness_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -742,6 +741,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `three_generation_observable_theorem_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `three_generation_structure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `universal_gr_lorentzian_global_atlas_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `unpromoted_branch_retainability_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `vector_sector_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1566,25 +1566,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`
   - `asymptotic Widom-Gioev-Klich free-fermion carrier analysis`
   - `alternative carrier or gravitational entropy normalization required for promotion`
-- **auditor confidence:** high
-
-### `bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29`
-
-- **Note:** [`BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md`](../../docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** and the gravitational boundary/action-density identification as an  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25=audited_conditional, planck_boundary_density_extension_theorem_note_2026-04-24=audited_conditional, universal_gr_discrete_global_closure_note=audited_conditional), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25=audited_conditional, planck_boundary_density_extension_theorem_note_2026-04-24=audited_conditional, universal_gr_discrete_global_closure_note=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`
-  - `PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md`
-  - `UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`
-  - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
-  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`
-  - `PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md`
 - **auditor confidence:** high
 
 ### `bmv_bounded_negative_note`
@@ -10945,6 +10926,22 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md`
   - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
   - `S3_ANOMALY_SPACETIME_LIFT_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_gr_lorentzian_global_atlas_closure_note`
+
+- **Note:** [`UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-15`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Because each local Lorentzian operator K_GR(D) is nondegenerate, local action densities agree exactly on overlaps, and source/field pairings transform compatibly, the local stationary solutions transform compatibly across the atlas into one exact global stationary section.  _(class `A`)_
+- **chain closes:** False — The congruence invariance B_{D'}(S^T h S,S^T k S)=B_D(h,k) follows algebraically, but the note does not supply a runner, an explicit finite atlas/cocycle, nondegeneracy proof for all local K_GR(D), or a constructed source/field pairing that patches globally. The unique global stationary section is therefore conditional on missing atlas-gluing data.
+- **rationale:** Issue: the source proves or states a local congruence-covariance identity, but the theorem-level global stationary closure additionally assumes a compatible finite atlas, nondegenerate local operators on every chart, and source/field pairing compatibility without constructing or verifying them. Why this blocks: exact overlap invariance of a bilinear form is not yet a proof that a unique global Einstein/Regge stationary section exists on PL S^3 x R. Repair target: add a runner or proof artifact that builds the atlas transition data, verifies cocycle/overlap compatibility and K_GR nondegeneracy chart-by-chart, and solves the patched stationary system. Claim boundary until fixed: the local Hessian density B_D is congruence-invariant under invertible frame changes; global finite-atlas stationary closure remains conditional.
+- **open / conditional deps cited:**
+  - `finite_atlas_transition_cocycle`
+  - `chartwise_K_GR_nondegeneracy`
+  - `global_source_field_pairing_patch`
 - **auditor confidence:** high
 
 ### `universal_qg_optional_textbook_comparison_note`
