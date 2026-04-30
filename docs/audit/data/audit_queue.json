@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 23,
+    "critical": 22,
     "high": 234,
     "leaf": 571,
     "medium": 342
   },
-  "generated_at": "2026-04-30T11:41:48.183719+00:00",
+  "generated_at": "2026-04-30T11:41:51.560958+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,27 +23,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "transitive_descendants": 281
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "r_base_group_theory_derivation_theorem_note_2026-04-24",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "hypercharge_identification_note",
-        "graph_first_su3_integration_note",
-        "native_gauge_closure_note"
-      ],
-      "direct_in_degree": 18,
-      "load_bearing_score": 15.87,
-      "note_path": "docs/R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_r_base_group_theory_derivation.py",
-      "transitive_descendants": 116
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24697,5 +24676,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1170
+  "total_pending": 1169
 }

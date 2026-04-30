@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T11:41:48.335032+00:00
+**Generated:** 2026-04-30T11:41:51.726461+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -27,20 +27,20 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 442 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
-| ~~audited_renaming~~ | 44 |
-| ~~audited_conditional~~ | 435 |
+| ~~audited_renaming~~ | 40 |
+| ~~audited_conditional~~ | 439 |
 | ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 209 |
+| `audited_conditional` | 210 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1169 |
+| `unaudited` | 1168 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 384 |
 | `leaf` | 764 |
 
-- **Proposed claims demoted by upstream:** 148
+- **Proposed claims demoted by upstream:** 147
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -85,7 +85,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 18 | `ckm_atlas_axiom_closure_note` | critical | 72 | 17.19 | `unaudited` | ~~audited_conditional~~ |
 | 19 | `native_gauge_closure_note` | critical | 284 | 16.66 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `plaquette_self_consistency_note` | critical | 290 | 16.18 | `audited_conditional` | ~~audited_conditional~~ |
-| 21 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 116 | 15.87 | `unaudited` | ~~audited_renaming~~ |
+| 21 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 116 | 15.87 | `audited_conditional` | ~~audited_conditional~~ |
 | 22 | `physical_lattice_necessity_note` | critical | 274 | 15.60 | `audited_conditional` | ~~audited_conditional~~ |
 | 23 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 125 | 15.48 | `audited_conditional` | ~~audited_conditional~~ |
 | 24 | `site_phase_cube_shift_intertwiner_note` | critical | 281 | 15.14 | `audit_in_progress` | support |
@@ -336,6 +336,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `quark_route2_exact_readout_map_note_2026-04-19` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `r_base_group_theory_derivation_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `retardation_discriminator_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `retarded_field_compact_refinement_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `s3_cap_uniqueness_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -4836,6 +4837,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
   - `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `r_base_group_theory_derivation_theorem_note_2026-04-24`
+
+- **Note:** [`R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md`](../../docs/R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** R_base = (3/5)[C2(3) dim(adj3)+C2(2) dim(adj2)]/[C2(2) dim(adj2)] = 31/9.  _(class `A`)_
+- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: HYPERCHARGE_IDENTIFICATION_NOTE.md, NATIVE_GAUGE_CLOSURE_NOTE.md.
+- **rationale:** Issue: The load-bearing step still imports unratified direct authority: HYPERCHARGE_IDENTIFICATION_NOTE.md, NATIVE_GAUGE_CLOSURE_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
+- **open / conditional deps cited:**
+  - `HYPERCHARGE_IDENTIFICATION_NOTE.md`
+  - `NATIVE_GAUGE_CLOSURE_NOTE.md`
 - **auditor confidence:** high
 
 ### `retained_cross_lane_consistency_support_note_2026-04-22`
