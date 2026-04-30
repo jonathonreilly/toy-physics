@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:08:35.199255+00:00
+**Generated:** 2026-04-30T19:08:43.701748+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,22 +24,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 341 |
 | support | 268 |
 | open | 17 |
-| unknown | 49 |
+| unknown | 47 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 611 |
+| ~~audited_conditional~~ | 613 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 124 |
-| `audited_conditional` | 325 |
+| `audited_conditional` | 326 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1025 |
+| `unaudited` | 1024 |
 
 | criticality | count |
 |---|---:|
@@ -530,6 +530,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_radiation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_retarded_gravity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_static_matrixfree_shared_geometry_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `wilson_normalization_reconciliation_note_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `wilson_two_body_open_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -8510,6 +8511,18 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **chain closes:** False — The registered runner's sweep surface does not match the note's numerical table: the runner uses mu^2 values 0.22, 0.05, 0.01, 0.005, and 0.001, while the note reports 0.10 and 0.0 and omits 0.005. There is no PASS/assertion surface tying the note's headline exponents to current registered output.
 - **rationale:** Issue: the load-bearing exponent table is stale relative to the registered runner surface and current output was not available from the long sweep during this restricted audit. Why this blocks: the conclusion that the exponent monotonically softens through the reported mu^2=0.10 and mu^2=0.0 points cannot be claimed from the current runner. Repair target: sync the note and runner sweep values, add assertions or stored current output for the fitted exponents, and rerun the registered script. Claim boundary until fixed: it may be cited only as an attempted Wilson distance-law calibration with unsynchronized numerics, not as an audited screening-control result.
 - **auditor confidence:** high
+
+### `wilson_normalization_reconciliation_note_2026-04-11`
+
+- **Note:** [`WILSON_NORMALIZATION_RECONCILIATION_NOTE_2026-04-11.md`](../../docs/WILSON_NORMALIZATION_RECONCILIATION_NOTE_2026-04-11.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-b-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Cross-runner disagreements cannot be attributed to the 4*pi factor alone unless all other differences are controlled simultaneously.  _(class `B`)_
+- **chain closes:** False — The reconciliation depends on comparisons among named Wilson runners, but this ledger row has no one-hop dependencies and no registered runner output. The restricted context therefore cannot verify the same-convention coherence or the list of uncontrolled differences.
+- **rationale:** Issue: the methodological boundary relies on unregistered cross-runner evidence. Why this blocks: the audit cannot confirm from the provided row context that the cited scripts share the claimed convention or that older discrepancies differ only or not only by normalization. Repair target: register the relevant Wilson runner outputs or dependency notes and add a reconciliation runner that checks convention deltas explicitly. Claim boundary until fixed: safe as a caution against overclaiming a pure 4*pi diagnosis, not as an audited normalization reconciliation theorem.
+- **auditor confidence:** medium
 
 ### `wilson_two_body_open_note_2026-04-11`
 
