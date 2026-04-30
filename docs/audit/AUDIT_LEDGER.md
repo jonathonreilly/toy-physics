@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T10:19:07.273265+00:00
+**Generated:** 2026-04-30T10:23:57.105481+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -2745,10 +2745,10 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_clean~~
 - **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The natural bulk Cl4 generators shift Hamming weight by ±1, so P_A gamma_a P_A = 0 on the rank-four block, and no four compressed bilinears close a Clifford-Majorana algebra on P_A.  _(class `A`)_
-- **chain closes:** True — The source scopes the no-go to the two natural bulk axiom-3 Cl4/CAR realisations on H_cell, and the runner constructs both, verifies their Clifford relations, checks the P_A compression, and exhausts all 15 four-bilinear subsets. Within that stated scope, A1 is structurally falsified without external numerical or physical imports.
-- **rationale:** The no-go closes as finite linear algebra on the explicitly defined Boolean/CAR H_cell setup. The runner computes the Clifford relations, Hamming-grade shifts, zero linear compressions, and exhaustive bilinear-subset obstruction; it does not tune a comparator or import observed values. Residual risk is only scope drift: the clean verdict covers the stated A1 projection/compression mechanism, not G1, C1, or other intrinsic P_A carrier routes.
+- **auditor:** `codex-audit-loop-corrected-cl4c-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** The natural bulk Cl_4(C) generators shift Hamming weight by +/-1, so P_A gamma_a P_A = 0 on the rank-four block, and no four compressed bilinears close a Clifford-Majorana algebra on P_A.  _(class `A`)_
+- **chain closes:** True — Yes for the narrow A1 route: the runner verifies that the two natural bulk Grassmann/staggered-Dirac Cl_4(C) realizations do not preserve P_A and that compressed bilinears do not supply four anticommuting generators. The corrected PR #196 finding only invalidates broader inferences that Cl_4(C) is unreachable from A_min by every route.
+- **rationale:** The A1 no-go survives the corrected premise because it is scoped to projection/compression of the natural bulk axiom-3 Cl_4(C) actions. PR #196 supplies a different A_min-derived route through the full weight-preserving operator algebra on P_A, so the source note's broader framing that (G1) remains open or that an intrinsic Cl_4(C) carrier must be separate is stale. The retained boundary is only: bulk Grassmann/staggered-Dirac projection is not the route.
 - **auditor confidence:** high
 
 ### `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28`
