@@ -25,8 +25,13 @@ required volumes/statistics are actually present.
 from __future__ import annotations
 
 import argparse
+import cProfile
+import io
 import json
 import math
+import platform
+import pstats
+import sys
 import time
 from dataclasses import dataclass
 from pathlib import Path
@@ -39,6 +44,7 @@ from scipy.sparse.linalg import cg
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = REPO_ROOT / "outputs" / "yt_direct_lattice_correlator"
+PRODUCTION_OUTPUT_DIR = REPO_ROOT / "outputs" / "yt_direct_lattice_correlator_production"
 DEFAULT_CERTIFICATE = REPO_ROOT / "outputs" / "yt_direct_lattice_correlator_certificate_2026-04-30.json"
 
 NC = 3
@@ -619,6 +625,169 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
     }
 
 
+def time_component(name: str, fn: Any) -> tuple[float, Any]:
+    t0 = time.perf_counter()
+    result = fn()
+    elapsed = time.perf_counter() - t0
+    print(f"  benchmark {name}: {elapsed:.6f}s", flush=True)
+    return elapsed, result
+
+
+def estimate_campaign_seconds(component_seconds: dict[str, float], volume: int) -> dict[str, float]:
+    baseline_volume = 12**3 * 24
+    volume_scale = volume / baseline_volume
+    heatbath = component_seconds["heatbath_sweep"] * volume_scale
+    overrelax = component_seconds["overrelax_sweep"] * volume_scale
+    plaquette = component_seconds["plaquette"] * volume_scale
+    ape = component_seconds["ape_smear_one_step"] * volume_scale
+    measure_one_mass = component_seconds["measure_correlator_one_mass"] * volume_scale
+
+    therm_sweeps = 1000
+    saved_configurations = 1000
+    separation_sweeps = 20
+    overrelax_per_sweep = 4
+    masses = 3
+
+    gauge_sweeps = therm_sweeps + saved_configurations * separation_sweeps
+    gauge_evolution = gauge_sweeps * (heatbath + overrelax_per_sweep * overrelax)
+    plaquette_measurement = (therm_sweeps + saved_configurations) * plaquette
+    correlator_measurement = saved_configurations * (ape + masses * measure_one_mass)
+    total = gauge_evolution + plaquette_measurement + correlator_measurement
+    return {
+        "volume_scale_from_12x24": volume_scale,
+        "gauge_sweeps": float(gauge_sweeps),
+        "gauge_evolution_seconds": gauge_evolution,
+        "plaquette_seconds": plaquette_measurement,
+        "correlator_measurement_seconds": correlator_measurement,
+        "total_seconds": total,
+        "total_days": total / 86400.0,
+    }
+
+
+def run_production_benchmark(args: argparse.Namespace) -> int:
+    PRODUCTION_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    volume_dir = PRODUCTION_OUTPUT_DIR / "L12xT24"
+    volume_dir.mkdir(parents=True, exist_ok=True)
+
+    rng = np.random.default_rng(args.seed)
+    geom = Geometry(12, 24)
+    component_seconds: dict[str, float] = {}
+
+    print("=" * 78)
+    print("YT direct lattice correlator production-scale benchmark")
+    print("=" * 78)
+    print("This benchmark is not a production certificate and does not update y_t.")
+    print(f"geometry=12^3 x 24, volume={geom.volume}, matrix_size={geom.volume * NC}")
+
+    init_seconds, gauge = time_component("gauge_init", lambda: GaugeField(geom))
+    component_seconds["gauge_init"] = init_seconds
+    component_seconds["heatbath_sweep"], _ = time_component("heatbath_sweep", lambda: gauge.heatbath_sweep(rng))
+    component_seconds["overrelax_sweep"], _ = time_component("overrelax_sweep", gauge.overrelax_sweep)
+    component_seconds["plaquette"], plaquette_value = time_component("plaquette", gauge.plaquette)
+    component_seconds["ape_smear_one_step"], smeared = time_component(
+        "ape_smear_one_step", lambda: ape_smear_spatial(gauge, args.ape_alpha, 1)
+    )
+    dirac_seconds, dirac = time_component("dirac_build_one_mass", lambda: build_staggered_dirac(smeared, 0.75))
+    component_seconds["dirac_build_one_mass"] = dirac_seconds
+    cg_seconds, cg_result = time_component(
+        "single_cg_solve", lambda: solve_propagator_normal_eq(dirac, 0, args.cg_rtol, args.cg_maxiter)
+    )
+    component_seconds["single_cg_solve"] = cg_seconds
+    measure_seconds, measured = time_component(
+        "measure_correlator_one_mass",
+        lambda: measure_correlator(smeared, 0.75, args.cg_rtol, args.cg_maxiter),
+    )
+    component_seconds["measure_correlator_one_mass"] = measure_seconds
+
+    profile_text = None
+    if args.profile_heatbath:
+        profile_gauge = GaugeField(geom)
+        profile = cProfile.Profile()
+        t0 = time.perf_counter()
+        profile.enable()
+        profile_gauge.heatbath_sweep(np.random.default_rng(args.seed + 1))
+        profile.disable()
+        profile_elapsed = time.perf_counter() - t0
+        stream = io.StringIO()
+        pstats.Stats(profile, stream=stream).sort_stats("cumtime").print_stats(25)
+        profile_text = f"PROFILE_ELAPSED_SECONDS {profile_elapsed:.6f}\n{stream.getvalue()}"
+        profile_path = volume_dir / "heatbath_profile.txt"
+        profile_path.write_text(profile_text, encoding="utf-8")
+    else:
+        profile_path = None
+
+    estimates = {
+        "12x24": estimate_campaign_seconds(component_seconds, 12**3 * 24),
+        "16x32": estimate_campaign_seconds(component_seconds, 16**3 * 32),
+        "24x48": estimate_campaign_seconds(component_seconds, 24**3 * 48),
+    }
+    total_days = sum(item["total_days"] for item in estimates.values())
+    dirac_nnz_per_site = int(dirac.nnz // geom.volume)
+    memory_notes = {
+        "dirac_matrix_shape_12x24": list(dirac.shape),
+        "dirac_nnz_12x24": int(dirac.nnz),
+        "dirac_nnz_per_lattice_site": dirac_nnz_per_site,
+        "estimated_dirac_nnz_24x48": dirac_nnz_per_site * (24**3 * 48),
+        "normal_equation_note": "CG currently forms D^dagger D explicitly per source; memory pressure grows beyond the raw D matrix.",
+    }
+    benchmark = {
+        "metadata": {
+            "artifact": "production_scale_benchmark_not_certificate",
+            "created_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+            "python": sys.version,
+            "platform": platform.platform(),
+            "numpy": np.__version__,
+            "scipy_sparse_cg": "scipy.sparse.linalg.cg",
+            "seed": args.seed,
+        },
+        "geometry": {
+            "spatial_L": 12,
+            "time_L": 24,
+            "volume": geom.volume,
+            "matrix_size": geom.volume * NC,
+        },
+        "component_seconds": component_seconds,
+        "component_results": {
+            "plaquette_after_one_sweep": plaquette_value,
+            "single_cg_info": int(cg_result[1]),
+            "single_cg_residual": float(cg_result[2]),
+            "measure_correlator_max_cg_residual": measured["max_cg_residual"],
+            "measure_correlator_cg_infos": measured["cg_infos"],
+            "measure_correlator_time_slices": len(measured["correlator"]),
+        },
+        "production_protocol": {
+            "thermalization_sweeps": 1000,
+            "saved_configurations_per_volume": 1000,
+            "separation_sweeps": 20,
+            "overrelaxation_sweeps_per_heatbath": 4,
+            "mass_points": 3,
+        },
+        "linear_volume_extrapolation": estimates,
+        "total_three_volume_estimate_days": total_days,
+        "bottleneck": {
+            "primary": "gauge evolution",
+            "detail": "At 12^3 x 24, one heat-bath sweep plus four overrelaxation sweeps is about "
+            f"{component_seconds['heatbath_sweep'] + 4 * component_seconds['overrelax_sweep']:.2f}s before plaquette/correlator work.",
+            "strict_campaign_status": "not_completed_in_this_environment",
+        },
+        "memory_notes": memory_notes,
+        "profile_path": str(profile_path.relative_to(REPO_ROOT)) if profile_path is not None else None,
+    }
+    benchmark_path = volume_dir / "production_scale_benchmark_2026-04-30.json"
+    benchmark_path.write_text(json.dumps(benchmark, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+    print("\nBENCHMARK SUMMARY")
+    print(f"  12x24 heatbath sweep        = {component_seconds['heatbath_sweep']:.6f}s")
+    print(f"  12x24 overrelax sweep       = {component_seconds['overrelax_sweep']:.6f}s")
+    print(f"  12x24 one-mass correlator   = {component_seconds['measure_correlator_one_mass']:.6f}s")
+    print(f"  estimated three-volume run  = {total_days:.2f} days")
+    print(f"  wrote benchmark             = {benchmark_path}")
+    if profile_path is not None:
+        print(f"  wrote heatbath profile       = {profile_path}")
+    print("\nProduction campaign not completed; strict certificate is not updated.")
+    return 0
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--volumes", default=None, help="Comma-separated Ls x Lt list, e.g. 12x24,16x32,24x48.")
@@ -634,6 +803,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=20260430, help="Random seed.")
     parser.add_argument("--output", type=Path, default=DEFAULT_CERTIFICATE, help="Certificate JSON output path.")
     parser.add_argument(
+        "--benchmark-production",
+        action="store_true",
+        help="Benchmark the 12^3 x 24 production-scale components and write a non-certificate artifact.",
+    )
+    parser.add_argument(
+        "--profile-heatbath",
+        action="store_true",
+        help="With --benchmark-production, also write a cProfile report for one 12^3 x 24 heat-bath sweep.",
+    )
+    parser.add_argument(
         "--production-targets",
         action="store_true",
         help="Mark the run as production-targeted. This does not override strict validation thresholds.",
@@ -643,6 +822,9 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
+    if args.benchmark_production:
+        return run_production_benchmark(args)
+
     if args.production_targets:
         args.volumes = args.volumes or "12x24,16x32,24x48"
         args.therm = 1000 if args.therm is None else args.therm

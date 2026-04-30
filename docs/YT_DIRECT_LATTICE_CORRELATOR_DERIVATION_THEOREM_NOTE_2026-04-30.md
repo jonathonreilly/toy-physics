@@ -189,6 +189,57 @@ reported mass and Yukawa are proxy values from the reduced infrastructure run;
 they are far from the physical comparators and deliberately do not pass strict
 mode.
 
+## Production-Scale Benchmark Attempt
+
+The requested production campaign was benchmarked on the actual `12^3 x 24`
+path rather than certified from reduced data.  The command was:
+
+```bash
+python3 scripts/yt_direct_lattice_correlator_production.py --benchmark-production --profile-heatbath
+```
+
+It wrote a non-certificate benchmark artifact at
+`outputs/yt_direct_lattice_correlator_production/L12xT24/production_scale_benchmark_2026-04-30.json`
+and a heat-bath profile at
+`outputs/yt_direct_lattice_correlator_production/L12xT24/heatbath_profile.txt`.
+
+Measured `12^3 x 24` component timings:
+
+| Component | Seconds |
+|---|---:|
+| One heat-bath sweep | `33.231613` |
+| One overrelaxation sweep | `17.829914` |
+| One plaquette pass | `2.217985` |
+| One APE smearing step | `7.334851` |
+| One staggered-Dirac build | `2.392469` |
+| One CG solve | `0.866126` |
+| One one-mass, three-source correlator measurement | `5.151741` |
+
+With the requested protocol of 1000 thermalization sweeps, 1000 saved
+configurations, 20 separation sweeps, four overrelaxation sweeps per heat-bath
+sweep, and three mass points, the linear volume extrapolation from the measured
+`12^3 x 24` timings is:
+
+| Volume | Estimated wall time |
+|---|---:|
+| `12^3 x 24` | `25.73 days` |
+| `16^3 x 32` | `81.31 days` |
+| `24^3 x 48` | `411.63 days` |
+| Total | `518.67 days` |
+
+The profile identifies the Python gauge-evolution path as the bottleneck.  A
+single profiled `12^3 x 24` heat-bath sweep made about 69.2 million Python
+function calls and took `54.17 s` under profiling, dominated by
+`heatbath_link`, `project_su3`, repeated small-matrix determinants/projections,
+subgroup heat-bath sampling, and staple construction.  The fermion solve is not
+the leading wall-clock blocker at `12^3 x 24`; the current implementation also
+forms `D^dagger D` explicitly, which becomes a memory-risk path for the
+`24^3 x 48` volume.
+
+No production certificate replaces the reduced-scope certificate in this PR
+update.  Strict mode therefore remains a real failure until a compiled/vectorized
+production engine or external compute campaign supplies the required data.
+
 A future passing production certificate must supply this budget:
 
 | Component | Required content |
