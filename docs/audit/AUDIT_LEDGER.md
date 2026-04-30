@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:44:04.586003+00:00
+**Generated:** 2026-04-30T02:46:04.555089+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 203 |
 | support | 104 |
 | open | 24 |
-| unknown | 515 |
+| unknown | 514 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 379 |
+| ~~audited_conditional~~ | 380 |
 | ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 166 |
+| `audited_conditional` | 167 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1251 |
+| `unaudited` | 1250 |
 
 | criticality | count |
 |---|---:|
@@ -210,6 +210,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_amplitude_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
 | `dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -1369,6 +1370,24 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** For the specified H_base, affine generators, and P3 pin J_*, the runner constructs H(t)=H_base+tJ_*, proves det(H(t)) is an exact cubic, checks the closed-interval extremum set {0,1,t1}, finds min det(H(t))=0.878309>0 on [0,1], and applies Sylvester inertia continuity to conclude signature(H_base+J_*)=signature(H_base)=(2,0,1).  _(class `A`)_
 - **chain closes:** True — The claim is narrowly local and the runner closes exactly that claim. It proves Hermiticity, exact cubic determinant form, atlas A0=32*sqrt(2)/9, p(1)=0.959174, closed-form critical points, positive minimum 0.878309 on the full interval, and direct signatures at H_base and the P3 pin, with PASS=11 FAIL=0. The note explicitly excludes A-BCC, sigma_hier, chamber-wide source selection, and the DM flagship closure, so those are not load-bearing requirements for this local theorem.
 - **rationale:** Clean for the narrow local theorem at the stated P3 pin. The determinant positivity certificate is not a sampling argument: the runner constructs the exact symbolic cubic p(t), solves p'(t)=0 as a quadratic, evaluates the finite extremum set on [0,1], and obtains a strictly positive minimum before invoking Sylvester's law. Direct eigenvalue checks independently match the retained signature convention (n_-, n_0, n_+)=(2,0,1) at both endpoints. This clean audit does not promote any wider physical branch-choice statement: A-BCC, sigma_hier=(2,1,0), chamber-wide source selection, and the DM flagship lane remain outside the claim and are not closed here.
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_PARITY_COMPATIBLE_OBSERVABLE_SELECTOR_THEOREM_NOTE_2026-04-17.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_PARITY_COMPATIBLE_OBSERVABLE_SELECTOR_THEOREM_NOTE_2026-04-17.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Restricting the observable-principle scalar generator to the exact parity-compatible diagonal family D = diag(A,B,B) makes the zero-source curvature proportional to delta^2 + q_+^2, whose chamber minimizer is delta_* = q_+* = sqrt(6)/3.  _(class `A`)_
+- **chain closes:** False — The determinant, Hessian, and chamber-minimizer algebra closes on the selected local route, but that route imports the observable generator, active source family, parity-compatible diagonal baseline, and half-plane chamber from unaudited or conditional authorities.
+- **rationale:** Issue: the selected point delta_* = q_+* = sqrt(6)/3 is derived only after choosing the observable-principle generator on the parity-compatible diagonal baseline route and the active half-plane chamber. Why this blocks: the runner verifies those formulas and the subcritical transport readout after the route restrictions are supplied, but the cited route inputs are unknown/conditional and are not recorded as retained ledger dependencies. Repair target: audit/retain the observable-principle, active-affine, active-half-plane, parity-compatible baseline, and curvature-boundary inputs, then derive or retain the route-independent right-sensitive current-bank selector law. Claim boundary until fixed: exact local parity-compatible diagonal-route selector algebra with transport-subcritical readout, not route-independent current-bank or full quantitative DM closure.
+- **open / conditional deps cited:**
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_CURVATURE_23_SYMMETRIC_BASELINE_BOUNDARY_THEOREM_NOTE_2026-04-17.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_PARITY_COMPATIBLE_DIAGONAL_BASELINE_THEOREM_NOTE_2026-04-17.md`
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16`
