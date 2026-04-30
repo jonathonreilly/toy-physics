@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:13:11.333691+00:00
+**Generated:** 2026-04-30T19:14:02.457076+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 130 |
+| `audited_clean` | 131 |
 | `audited_conditional` | 330 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1014 |
+| `unaudited` | 1013 |
 
 | criticality | count |
 |---|---:|
@@ -181,6 +181,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q23_oh_covariance_nogo_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_bridge_single_primitive_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `koide_q_minimal_scale_free_selector_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `lattice_3d_dense_refinement_reconciliation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_3d_dense_window_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_3d_nyquist_diffraction_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -5635,6 +5636,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `Koide_Q_support_route_value_Q_2_over_3_not_registered_one_hop_dependency`
   - `Koide_delta_APS_support_route_value_delta_2_over_9_not_registered_one_hop_dependency`
   - `same_Z3_p_equals_d_structural_bridge_not_registered_one_hop_dependency`
+- **auditor confidence:** high
+
+### `koide_q_minimal_scale_free_selector_note_2026-04-22`
+
+- **Note:** [`KOIDE_Q_MINIMAL_SCALE_FREE_SELECTOR_NOTE_2026-04-22.md`](../../docs/KOIDE_Q_MINIMAL_SCALE_FREE_SELECTOR_NOTE_2026-04-22.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-ca82-local-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the admitted second-order returned carrier, C3 invariance leaves no nontrivial scale-free linear scalar and exactly one nontrivial scale-free quadratic selector ratio, equivalent to E_perp/E_+, 2/kappa, and Q.  _(class `C`)_
+- **chain closes:** True — The runner solves the invariant linear and quadratic scalar spaces, verifies linear invariants are not scale-free, verifies the quadratic invariant sector is two-dimensional before quotienting, and verifies the unique nontrivial scale-free ratio relations with 8/8 passes. The source note scopes this to the admitted second-order carrier and leaves the physical value law open.
+- **rationale:** The exact support claim closes: once the second-order carrier is admitted, the selector variable is unique up to reparametrization. This clean audit does not close native Koide Q, because the carrier admission and physical value law are explicitly outside this row.
 - **auditor confidence:** high
 
 ### `koide_q_op_locality_c3_fixed_source_support_note_2026-04-27`
