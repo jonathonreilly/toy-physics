@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:44:35.587623+00:00
+**Generated:** 2026-04-30T18:46:20.997987+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
 | bounded | 352 |
-| support | 277 |
+| support | 276 |
 | open | 20 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 590 |
+| ~~audited_conditional~~ | 591 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 108 |
-| `audited_conditional` | 304 |
+| `audited_conditional` | 305 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1063 |
+| `unaudited` | 1062 |
 
 | criticality | count |
 |---|---:|
@@ -382,6 +382,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higher_order_structural_theorems_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `hubble_lane5_planck_c1_gate_audit_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `impact_parameter_lensing_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `impact_parameter_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_a1_derivation_status_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -4610,6 +4611,24 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** Issue: the wrapper's overall exhaustion claim overstates what the five checks establish. Why this blocks: Thread 1 preserved the route-local alpha S_4, beta cobordism, gamma Holevo, delta Stinespring, and epsilon Reeh-Schlieder observations, but rejected the wrapper as an active global no-hidden-route proof. Repair target: keep the five narrow no-gos in one support-tier salvage note and archive the failed wrapper. Claim boundary until fixed: safe to cite docs/HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md for route-local boundaries only; do not cite this wrapper as exhaustion or Axiom* minimality support.
 - **open / conditional deps cited:**
   - `HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md`
+- **auditor confidence:** high
+
+### `hubble_lane5_planck_c1_gate_audit_note_2026-04-26`
+
+- **Note:** [`HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md`](../../docs/HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:medium-sweep-2026-04-30-04`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note asserts that all three Planck-lane targets collapse to one shared conditional: the metric-compatible primitive Clifford/CAR coframe response on P_A H_cell with natural phase/action units.  _(class `B`)_
+- **chain closes:** False — The claim is a cross-note gate synthesis, but the ledger row has no one-hop dependencies and no runner, so the referenced Planck-lane and no-go authorities are not in the restricted audit packet.
+- **rationale:** Issue: the load-bearing single-gate claim imports many Planck-lane status, conditional-completion, Clifford phase bridge, and no-go notes, but none are registered as one-hop dependencies and there is no runner that verifies the synthesis. Why this blocks: a hostile auditor cannot confirm from the restricted packet that those authorities really collapse to exactly this residual C1 gate or that adjacent routes are closed. Repair target: add explicit markdown dependencies to the referenced authority notes or a runner that checks the gate taxonomy against them, then re-audit the narrowed support claim. Claim boundary until fixed: safe as a support roadmap/gate-audit memo, not as an audit-closed structural synthesis of the Planck C1 lane.
+- **open / conditional deps cited:**
+  - `PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md`
+  - `PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md`
+  - `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`
+  - `AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md`
+  - `PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`
 - **auditor confidence:** high
 
 ### `hypercharge_identification_note`
