@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:55:44.747958+00:00
+**Generated:** 2026-04-30T18:55:52.039576+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,23 +23,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 8 |
 | bounded | 349 |
 | support | 274 |
-| open | 20 |
+| open | 19 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 596 |
+| ~~audited_conditional~~ | 597 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 109 |
-| `audited_conditional` | 310 |
+| `audited_conditional` | 311 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1056 |
+| `unaudited` | 1055 |
 
 | criticality | count |
 |---|---:|
@@ -504,6 +504,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_retarded_gravity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_static_matrixfree_shared_geometry_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `work_history.potential_publication_discoveries_log` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_color_projection_correction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_exact_schur_normal_form_uniqueness_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -8134,6 +8135,18 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **chain closes:** False — The second auditor's renaming reading holds because the algebraic mass-ratio chain closes only for normalized NNI coefficients; the physical identification of those coefficients with CKM observables is asserted, not derived from allowed inputs. The first numerical-match verdict missed the symbol-to-observable bridge.
 - **rationale:** The second auditor's renaming reading holds because the algebraic mass-ratio chain closes only for normalized NNI coefficients; the physical identification of those coefficients with CKM observables is asserted, not derived from allowed inputs. The first numerical-match verdict missed the symbol-to-observable bridge.
 - **auditor confidence:** judicial
+
+### `work_history.potential_publication_discoveries_log`
+
+- **Note:** [`work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](../../docs/work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-singer-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The Whole-Repo Ledger lists discoveries worth preserving and says every item should point to a retained note or runner.  _(class `B`)_
+- **chain closes:** False — The ledger row has deps=[] and no runner, while the note's entries depend on many referenced evidence notes and their statuses. The inventory cannot be verified from the restricted packet.
+- **rationale:** Issue: the inventory asserts many cross-note discovery/status entries without providing those notes as audit dependencies. Why this blocks: a reviewer cannot verify that the entries satisfy the inclusion and maintenance rules from this source alone. Repair target: register the intended evidence notes as deps or split the log into auditable per-discovery claims with runners/status sources. Claim boundary until fixed: it is usable only as an open historical planning inventory, not as a ratified claim ledger.
+- **auditor confidence:** high
 
 ### `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11`
 
