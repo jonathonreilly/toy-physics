@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 62,
-    "high": 303,
+    "high": 302,
     "leaf": 615,
     "medium": 327
   },
-  "generated_at": "2026-04-30T00:16:23.939701+00:00",
+  "generated_at": "2026-04-30T00:16:42.382559+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5752,26 +5752,6 @@
       "note_path": "docs/AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md",
       "ready": false,
       "runner_path": "scripts/frontier_area_law_native_car_semantics_tightening.py",
-      "transitive_descendants": 44
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "quark_up_amplitude_candidate_scan_note_2026-04-19",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "quark_projector_parameter_audit_note_2026-04-19",
-        "quark_projector_ray_phase_completion_note_2026-04-18"
-      ],
-      "direct_in_degree": 5,
-      "load_bearing_score": 7.992,
-      "note_path": "docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_quark_up_amplitude_candidate_scan.py",
       "transitive_descendants": 44
     },
     {
@@ -27256,5 +27236,5 @@
     }
   ],
   "ready_count": 857,
-  "total_pending": 1307
+  "total_pending": 1306
 }

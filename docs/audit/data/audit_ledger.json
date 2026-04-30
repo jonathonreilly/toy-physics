@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T00:16:23.887468+00:00",
-  "generated_at": "2026-04-30T00:16:22.112003+00:00",
-  "invalidation_run_at": "2026-04-30T00:16:23.825241+00:00",
+  "effective_status_computed_at": "2026-04-30T00:16:42.329465+00:00",
+  "generated_at": "2026-04-30T00:16:40.544494+00:00",
+  "invalidation_run_at": "2026-04-30T00:16:42.264576+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T00:16:23.703125+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:16:42.143120+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -67482,15 +67482,27 @@
       "verdict_rationale": null
     },
     "quark_up_amplitude_candidate_scan_note_2026-04-19": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T00:16:39.434521+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "quark_projector_parameter_audit_note_2026-04-19": "audited_numerical_match",
+          "quark_projector_ray_phase_completion_note_2026-04-18": "audited_numerical_match"
+        },
+        "deps": [
+          "quark_projector_parameter_audit_note_2026-04-19",
+          "quark_projector_ray_phase_completion_note_2026-04-18"
+        ],
+        "load_bearing_score": 7.992,
+        "transitive_descendants": 44
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop-20260430-standard",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies a short bounded candidate shortlist, but the candidates are selected by fit quality against the CKM/J comparator package rather than derived as a forced amplitude law.",
       "claim_id": "quark_up_amplitude_candidate_scan_note_2026-04-19",
       "criticality": "high",
       "cross_confirmation": null,
@@ -67503,17 +67515,20 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "audited_numerical_match",
-      "effective_status_reason": "inherited_from:quark_projector_parameter_audit_note_2026-04-19",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "effective_status_reason": "self",
+      "independence": "weak",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 7.992,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The scan ranks exact candidates for the remaining a_u by anchored CKM/J deviation and two-ratio refit quality, with 7/9 and sqrt(3/5) as the strongest baselines.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "d04347fd4815852878dbd6944b41b602d58f36f724f1708fb571041619b06118",
       "note_path": "docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
+        "docs/QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-29T11:40:10.272197+00:00",
@@ -67587,16 +67602,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 2,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 5,
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_quark_up_amplitude_candidate_scan.py",
       "title": "Quark Up-Amplitude Exact-Candidate Scan",
       "transitive_descendants": 44,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The shortlist is produced by numerical ranking on anchored and refit comparator axes, not by a retained theorem selecting a_u. Why this blocks: a good exact-looking candidate such as 7/9 or sqrt(3/5) remains a numerical match until the framework forces that law independently. Repair target: derive the up-sector amplitude from projector/support primitives and make the runner compute the selected expression before evaluating CKM/J. Claim boundary until fixed: the note validly narrows the bounded search space for a_u, but it does not audit-clean the quark amplitude law."
     },
     "quark_up_amplitude_native_affine_no_go_note_2026-04-19": {
       "audit_date": null,
