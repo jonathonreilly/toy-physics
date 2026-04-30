@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T20:27:08.525893+00:00
+**Generated:** 2026-04-30T20:32:23.336637+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -301,7 +301,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `abcc_cp_phase_no_go_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `accessible_prediction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `action_crossover_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `action_crossover_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `action_geometry_bridge_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `action_power_scaling_sweep_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -876,12 +876,12 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **current_status:** bounded
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** Action Crossover: Spent-delay → Valley-linear with Regularity: bounded crossover replay frozen on disk; branch-specific, not a universal theorem  _(class `B`)_
-- **chain closes:** False — No. The load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet, so the conclusion cannot be ratified from the source note alone.
-- **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **auditor:** `codex-audit-loop-stale-rationale-20260430-09`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The tested DAG family switches from spent-delay to valley-linear as graph geometry becomes more regular, with the best observed delta at regularity 0.40.  _(class `D`)_
+- **chain closes:** False — The primary runner is now registered and exits 0, but its runtime output contains no classified A/B/C/D PASS lines. The bounded crossover computation cannot be landed as audit-clean until the runner exposes the load-bearing replay checks in classified PASS format.
+- **rationale:** The stale missing-runner blocker is resolved because the row now has a registered primary runner. The re-audit still returns conditional: running scripts/action_regularity_crossover.py exits 0 but emits zero classified A/B/C/D PASS lines, so the audit packet still does not expose a load-bearing checked replay under the audit rubric. Claim boundary remains the source note's bounded branch-specific crossover report, not a promoted universal action theorem.
 - **open / conditional deps cited:**
-  - `unregistered_or_missing_primary_runner_or_frozen_log`
+  - `runner_output_missing_classified_a_b_c_d_pass_lines:scripts/action_regularity_crossover.py`
 - **auditor confidence:** high
 
 ### `action_geometry_bridge_note`
