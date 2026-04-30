@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:46:20.997987+00:00
+**Generated:** 2026-04-30T18:47:33.062554+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,25 +21,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 352 |
+| bounded | 351 |
 | support | 276 |
 | open | 20 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 591 |
+| ~~audited_conditional~~ | 592 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 108 |
-| `audited_conditional` | 305 |
+| `audited_conditional` | 306 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1062 |
+| `unaudited` | 1061 |
 
 | criticality | count |
 |---|---:|
@@ -423,6 +423,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `n_eff_from_three_generations_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `neutrino_axiom3_reading_stuck_fanout_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_two_higgs_canonical_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `neutrino_majorana_current_stack_exhaustion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -5776,6 +5777,25 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **rationale:** Issue: The load-bearing step still imports unratified direct authority: GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
 - **open / conditional deps cited:**
   - `GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md`
+- **auditor confidence:** high
+
+### `neutrino_axiom3_reading_stuck_fanout_note_2026-04-28`
+
+- **Note:** [`NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md`](../../docs/NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:medium-sweep-2026-04-30-05`  (codex-current; independence=cross_family)
+- **load-bearing step:** The fan-out concludes that the permissive A_min axiom-3 reading is stronger, so the decision-level (C2-X)-strict reformulation is rejected and C2-X remains a bounded obstruction with SR-1/SR-2/SR-3 attack frames.  _(class `B`)_
+- **chain closes:** False — The source is a cross-note source-reading synthesis with no runner and no registered one-hop dependencies, so the quoted Majorana, Pfaffian, axioms, g_bare, and Planck-lane authorities cannot be independently checked in the restricted packet.
+- **rationale:** Issue: the stuck-fan-out conclusion depends on unregistered source-note readings of MINIMAL_AXIOMS, Majorana/Pfaffian notes, g_bare derivations, SM anomaly work, and Planck-lane conditionals. Why this blocks: the restricted audit packet provides only this synthesis note, so a hostile auditor cannot verify that the quoted authorities support the permissive-over-strict decision or the SR-1/SR-2/SR-3 ledger. Repair target: register the cited notes as one-hop markdown dependencies or add a runner that checks the quoted source strings and route classification. Claim boundary until fixed: safe as a bounded roadmap/fan-out inventory, not as an audit-closed decision about the admissible reading of A_min axiom 3.
+- **open / conditional deps cited:**
+  - `MINIMAL_AXIOMS_2026-04-11.md`
+  - `NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE.md`
+  - `NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md`
+  - `NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md`
+  - `NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md`
+  - `NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md`
 - **auditor confidence:** high
 
 ### `neutrino_dirac_two_higgs_canonical_reduction_note`
