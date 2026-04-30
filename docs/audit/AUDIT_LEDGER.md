@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:29:49.310107+00:00
+**Generated:** 2026-04-30T19:29:55.690415+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 189 |
+| `audited_clean` | 190 |
 | `audited_conditional` | 410 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 875 |
+| `unaudited` | 874 |
 
 | criticality | count |
 |---|---:|
@@ -219,6 +219,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graph_scalar_plus_spinor_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `graph_true_kg_vs_cn_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `gravitational_entanglement_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `gravity_law_cleanup_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `growing_graph_static_control_audit_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `hadron_lane1_confinement_to_mass_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
@@ -6355,6 +6356,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `weak_field_action_test_mass_response_not_registered`
   - `lattice_green_function_normalization_runner_not_registered`
   - `scripts/frontier_gravity_clean_derivation.py_not_registered_primary_runner`
+- **auditor confidence:** high
+
+### `gravity_law_cleanup_note`
+
+- **Note:** [`GRAVITY_LAW_CLEANUP_NOTE.md`](../../docs/GRAVITY_LAW_CLEANUP_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** - the old clean `1/b²` claim does not survive as a locked statement  _(class `D`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 1 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
 ### `gravity_sign_audit_2026-04-10`

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 349,
+    "leaf": 348,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:29:49.147136+00:00",
+  "generated_at": "2026-04-30T19:29:55.536023+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13837,23 +13837,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "gravity_law_cleanup_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GRAVITY_LAW_CLEANUP_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/gravity_distance_fixed_geometry.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "gravity_observable_hierarchy_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -19247,6 +19230,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 494,
-  "total_pending": 875
+  "ready_count": 493,
+  "total_pending": 874
 }
