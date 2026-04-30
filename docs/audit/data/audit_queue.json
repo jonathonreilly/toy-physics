@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 372,
+    "leaf": 371,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:27:28.246301+00:00",
+  "generated_at": "2026-04-30T19:27:35.124641+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13820,23 +13820,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "gate_b_nonlabel_connectivity_v1_h025_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V1_H025_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/gate_b_nonlabel_connectivity_v1_h025.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "gate_b_nonlabel_connectivity_v1_joint_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -19648,6 +19631,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 515,
-  "total_pending": 898
+  "ready_count": 514,
+  "total_pending": 897
 }
