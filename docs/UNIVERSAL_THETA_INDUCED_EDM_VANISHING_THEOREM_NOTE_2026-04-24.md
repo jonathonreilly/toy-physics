@@ -8,7 +8,7 @@ surface
 ## Role
 
 This note is the source-scoped extension of
-[CKM_NEUTRON_EDM_BOUND_NOTE.md](CKM_NEUTRON_EDM_BOUND_NOTE.md).
+`CKM_NEUTRON_EDM_BOUND_NOTE.md`.
 
 The retained strong-CP theorem gives
 
@@ -104,7 +104,7 @@ The retained package therefore has the following CP/EDM structure:
 | independent BSM CP-odd sources | outside this theorem |
 
 For the neutron case, the bounded continuation is recorded in
-[CKM_NEUTRON_EDM_BOUND_NOTE.md](CKM_NEUTRON_EDM_BOUND_NOTE.md). The exact
+`CKM_NEUTRON_EDM_BOUND_NOTE.md`. The exact
 structural statement here is broader but less numerical: all theta-induced EDM
 components vanish.
 

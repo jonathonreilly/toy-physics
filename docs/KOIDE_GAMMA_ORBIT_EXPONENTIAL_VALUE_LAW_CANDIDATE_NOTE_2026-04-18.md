@@ -62,7 +62,7 @@ After one overall scale fit, the predicted amplitudes are within `0.03%` of
 the observed charged-lepton `sqrt(m)` values.
 
 By
-[KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md](./KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md),
+`KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md`,
 the exponential form is exactly the right class once repeated identical local
 clock steps are required. So this note should now be read as an explicit
 generator witness inside that exact class, not as a free-form ansatz.

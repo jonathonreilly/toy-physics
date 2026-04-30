@@ -20,13 +20,13 @@ lane.
 - [`ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md`](./ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md) — `alpha_LM^2 = alpha_bare * alpha_s(v)`.
 - [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](./CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) —
   promoted CKM atlas package.
-- [`CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md`](./CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md) — `5/6 = C_F - T_F` bridge support.
+- `CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md` — `5/6 = C_F - T_F` bridge support.
 - [`CKM_FROM_MASS_HIERARCHY_NOTE.md`](./CKM_FROM_MASS_HIERARCHY_NOTE.md) —
   GST relation provenance.
 - [`CL3_TASTE_GENERATION_THEOREM.md`](./CL3_TASTE_GENERATION_THEOREM.md) —
   generation structure from the taste cube.
 - [`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](./OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) — hierarchy theorem `v = M_Pl (7/8)^{1/4} alpha_LM^16`.
-- [`DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`](./DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md) — predecessor bounded lane; this note sharpens that route with an explicit zero-import presentation and a cubic-exact NNI consistency check.
+- `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md` — predecessor bounded lane; this note sharpens that route with an explicit zero-import presentation and a cubic-exact NNI consistency check.
 
 ## 1. Support statement
 
@@ -74,7 +74,7 @@ remains bounded support.
 ## 2. What changes vs the prior bounded lane
 
 The predecessor note
-[`DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`](./DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md)
+`DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`
 derived the same down-type ratios by *inverting* the CKM atlas through
 GST and the `5/6` bridge. It carried the bounded label because:
 
@@ -263,7 +263,7 @@ texture coefficients (Section 5). No precision is borrowed from PDG.
 1. A theorem-grade derivation of the `5/6` strong-coupling Casimir-
    difference exponentiation mechanism at `g = 1`. The bridge stays as
    bounded support, with the support stack already documented in
-   [`CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md`](./CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md).
+   `CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md`.
 2. Promotion of GST / NNI from structural bridge status to retained
    theorem-grade framework content.
 3. A retained closure of the absolute bottom-quark scale `m_b` or the
@@ -315,7 +315,7 @@ The runner verifies:
 ## 10. Reading rule
 
 This note is a **bounded support follow-up** to
-[`DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`](./DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md),
+`DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`,
 not a replacement for the repo's retained claim surface. Read it as the
 cleanest current zero-import presentation of the down-type route plus an
 explicit cubic-exact NNI admissibility check. The atlas / identities side

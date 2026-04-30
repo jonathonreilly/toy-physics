@@ -12,8 +12,8 @@ Use this directory for:
 
 Current review work should go through:
 
-- [`docs/repo/ACTIVE_REVIEW_QUEUE.md`](../../../repo/ACTIVE_REVIEW_QUEUE.md)
+- `docs/repo/ACTIVE_REVIEW_QUEUE.md`
 
 Current process/governance lives in:
 
-- [`docs/repo/REVIEW_FEEDBACK_WORKFLOW.md`](../../../repo/REVIEW_FEEDBACK_WORKFLOW.md)
+- `docs/repo/REVIEW_FEEDBACK_WORKFLOW.md`

@@ -10,7 +10,7 @@ This note is a **documentation / citation** layer.
 
 It does **not** replace, and does **not** promote the status of, the prior
 K_2 color-tensor retention note
-[YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md](./YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md).
+`YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`.
 
 It is explicitly **not** a from-scratch 2-loop on-shell QCD derivation
 on the retained `Cl(3)/Z^3` action. A framework-native 2-loop derivation
@@ -31,9 +31,9 @@ scope by design. What this note adds is narrower:
 
 Read it together with:
 
-- [YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md](./YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md)
-- [YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md](./YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
-- [YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md](./YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md) (master primitive-tracking theorem; not modified by this note)
+- `YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md`
+- `YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+- `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md` (master primitive-tracking theorem; not modified by this note)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](./YT_COLOR_PROJECTION_CORRECTION_NOTE.md) (canonical pole-mass conversion surface)
 
 ## Abstract
@@ -380,7 +380,7 @@ It does **not** claim:
   derived on the retained action.
 
 The master obstruction theorem
-[YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md](./YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)
+`YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
 tracks the P3 sub-primitive through the retained color-tensor
 skeleton layer. This note does **not** modify that master
 theorem; it only refines the audit trail on the K_2 sub-primitive.

@@ -78,7 +78,7 @@ cited `I_S` overcounts the ratio correction.
   [`docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md) —
   `Δ_R = C_F · I_1 + C_A · I_2 + T_F n_f · I_3`. Retained.
 - **No algebraic shortcut:**
-  [`docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md`](YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md) —
+  `docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md` —
   `I_1` not reducible to `I_2`, `I_3` via shared Fierz.
 - **Conserved-current reduction:**
   [`scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py`](../scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py) +

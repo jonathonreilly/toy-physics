@@ -1,44 +1,43 @@
 {
-  "computed_at": "2026-04-29T23:17:35.276994+00:00",
+  "computed_at": "2026-04-30T00:50:37.617477+00:00",
   "cycle_examples": [
-    [
-      "ckm_neutron_edm_bound_note",
-      "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24"
-    ],
-    [
-      "down_type_mass_ratio_ckm_dual_note",
-      "quark_mass_ratios_taste_staircase_support_note_2026-04-25",
-      "ckm_five_sixths_bridge_support_note"
-    ],
-    [
-      "down_type_mass_ratio_ckm_dual_note",
-      "quark_mass_ratios_taste_staircase_support_note_2026-04-25"
-    ],
-    [
-      "down_type_mass_ratio_ckm_dual_note",
-      "quark_mass_ratios_taste_staircase_support_note_2026-04-25",
-      "up_type_mass_ratio_ckm_inversion_note"
-    ],
     [
       "lorentz_boost_covariance_2d_theorem_note",
       "lorentz_boost_covariance_3plus1d_theorem_note"
+    ],
+    [
+      "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
+      "n_eff_from_three_generations_theorem_note_2026-04-24"
+    ],
+    [
+      "publication.ci3_z3.quantitative_summary_table",
+      "publication.ci3_z3.publication_matrix"
+    ],
+    [
+      "publication.ci3_z3.claims_table",
+      "publication.ci3_z3.derivation_validation_map",
+      "publication.ci3_z3.derivation_atlas"
+    ],
+    [
+      "publication.ci3_z3.derivation_validation_map",
+      "publication.ci3_z3.derivation_atlas"
     ]
   ],
-  "cycles_detected": 139,
+  "cycles_detected": 59,
   "effective_status_counts": {
-    "audited_conditional": 425,
+    "audited_conditional": 427,
     "audited_decoration": 3,
     "audited_failed": 89,
-    "audited_numerical_match": 19,
+    "audited_numerical_match": 18,
     "audited_renaming": 42,
     "bounded": 215,
     "open": 25,
-    "proposed_retained": 12,
+    "proposed_retained": 21,
     "retained": 78,
     "support": 115,
-    "unknown": 565
+    "unknown": 555
   },
-  "proposed_demoted_by_upstream_count": 161,
+  "proposed_demoted_by_upstream_count": 152,
   "proposed_demoted_by_upstream_examples": [
     "atomic_hydrogen_helium_probe_note",
     "bh_entropy_rt_ratio_widom_no_go_note",

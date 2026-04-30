@@ -69,7 +69,7 @@ the current `C_3`-equivariant Schur/effective-operator class.
   LSZ gives `√Z_φ` for one scalar external leg.
 - [DM_NEUTRINO_POSTCANONICAL_POLAR_SECTION_NOTE_2026-04-15.md](./DM_NEUTRINO_POSTCANONICAL_POLAR_SECTION_NOTE_2026-04-15.md):
   a positive Hermitian parent has the unique positive square-root representative.
-- [KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md](./KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md):
+- `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`:
   the candidate circulant operator on the `C_3[111]` orbit.
 
 ## Exact square-root dictionary

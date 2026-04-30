@@ -61,7 +61,7 @@ flavor-dependent cosmology / baryogenesis work.
   `|V_cb| = (m_s/m_b)^(C_F - T_F)`
   used here as a bounded flavor-mass bridge rather than a retained theorem
   - support:
-    [CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md](./CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md)
+    `CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md`
 
 ## Down-type formulas
 

@@ -69,6 +69,6 @@ So the honest conclusion is:
 
 - [`scripts/wave_direct_dm_h025_point_runner.py`](../scripts/wave_direct_dm_h025_point_runner.py)
 - [`logs/2026-04-08-wave-direct-dm-h025-high-band.txt`](../logs/2026-04-08-wave-direct-dm-h025-high-band.txt)
-- [`docs/WAVE_DIRECT_DM_H025_FEASIBILITY_NOTE.md`](./WAVE_DIRECT_DM_H025_FEASIBILITY_NOTE.md)
+- `docs/WAVE_DIRECT_DM_H025_FEASIBILITY_NOTE.md`
 - [`docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md`](./WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md)

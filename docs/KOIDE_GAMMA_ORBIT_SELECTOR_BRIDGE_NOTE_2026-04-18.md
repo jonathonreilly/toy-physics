@@ -113,7 +113,7 @@ But it tells us exactly what that remaining selector must look like on the
 fresh physical-lattice route.
 
 The companion
-[KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md](./KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md)
+`KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md`
 now closes the basis law before this selector: the full `Gamma_i` orbit is
 exactly the `C_3` orbit of one local three-slot template.
 

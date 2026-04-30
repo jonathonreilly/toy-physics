@@ -7,7 +7,7 @@ at finite `a`
 **Script:** `scripts/frontier_lorentz_boost_3plus1d.py` (PASS=55, FAIL=0)
 **Companions:**
 [LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md),
-[ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md](ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md),
+`ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md`,
 [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
 
 ## Theorem
@@ -290,7 +290,7 @@ Steps 1-7 together prove the Phase 4 theorem:
 - **Decoupling from angular kernel.** Phase 4 lives entirely on the
   staggered/Laplacian Hamiltonian construction, which has no angular-
   kernel parameter. The directional-measure walk
-  ([ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md](ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md))
+  (`ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md`)
   does not enter.
 
 ### What is NOT claimed

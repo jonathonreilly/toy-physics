@@ -79,7 +79,7 @@ correction, with explicit uncertainty propagation from the cited
   P1 line was the motivating target for this computation chain;
   unchanged by this note).
 - **Rep-A/Rep-B cancellation (derives the Δ_1 formula):**
-  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md)
+  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
   (`Δ_1 = 2 · (I_v_scalar − I_v_gauge) − 6`, eq. R4-Δ_1). Partial
   cancellation, three-channel structure retained.
 - **Scalar anomalous dim authority:** the `−6 C_F` constant in `Δ_1`
