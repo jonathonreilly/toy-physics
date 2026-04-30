@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:32:18.416168+00:00
+**Generated:** 2026-04-30T02:14:07.379398+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,18 +24,17 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 205 |
 | support | 108 |
 | open | 24 |
-| unknown | 538 |
+| unknown | 537 |
 | ~~audited_decoration~~ | 4 |
 | ~~audited_numerical_match~~ | 47 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 446 |
+| ~~audited_conditional~~ | 447 |
 | ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 151 |
+| `audited_conditional` | 152 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 19 |
@@ -96,7 +95,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -213,6 +211,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_h025_farfield_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gate_b_strong_field_observable_split_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_scalar_temporal_completion_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -1700,6 +1699,18 @@ Repair target: supply and audit a theorem deriving the interacting plaquette exp
 Claim boundary until fixed: safe to claim the conditional exact temporal-completion law on the accepted Wilson local gauge-source class, not full plaquette observable closure.
 - **open / conditional deps cited:**
   - `observable_level_interacting_plaquette_to_local_response_reduction_missing`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_connected_hierarchy_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-third-auditor-fresh-context-2026-04-30`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Because beta enters as one common source on every plaquette, d/d beta = sum_r d/d J_r, therefore d/d beta C_n(p_1, ..., p_n; beta) = sum_r C_(n+1)(p_1, ..., p_n, r; beta).  _(class `A`)_
+- **chain closes:** False — The finite-volume connected-cumulant hierarchy closes internally as an algebraic source-derivative identity. The full note also claims beta_eff transport/onset consequences from an exact susceptibility-flow theorem and previously closed onset theorems, but those inputs are not present as one-hop ledger dependencies in the restricted audit context.
+- **rationale:** Issue: The source-derivative hierarchy itself is exact, but the broader beta_eff transport and onset-three-point conclusions import the exact susceptibility-flow theorem, onset coefficients, and common slope through unprovided prior results/runner helpers while the ledger reports no dependencies. Why this blocks: A fresh-context audit cannot ratify the full claim from the source note alone when the beta_eff and onset portions require upstream theorems not supplied as cited authorities. Repair target: Add and ratify explicit one-hop dependencies for the susceptibility-flow theorem, beta_eff onset law, plaquette beta^5 coefficient, and common slope, or narrow this claim to Theorem 1/Corollary 1 only. Claim boundary until fixed: The note may safely claim the exact finite-volume identity d_beta C_n = sum_r C_(n+1) and chi_L as the summed connected two-point plaquette cumulant, but not audit-clean closure of the beta_eff transport/onset hierarchy consequences.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_constant_lift_obstruction_note`
