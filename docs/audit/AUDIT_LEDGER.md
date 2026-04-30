@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T23:52:31.626974+00:00
+**Generated:** 2026-04-30T23:55:05.200116+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,13 +21,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 86 |
 | _proposed_retained_ | 1 |
-| bounded | 273 |
+| bounded | 272 |
 | support | 235 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 759 |
+| ~~audited_conditional~~ | 760 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
@@ -792,7 +792,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `work_history.potential_publication_discoveries_log` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_color_projection_correction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `yt_exact_schur_normal_form_uniqueness_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
+| `yt_exact_coarse_grained_bridge_operator_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `yt_explicit_systematic_budget_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -12026,18 +12026,22 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `missing direct EW-current matching coefficient computation`
 - **auditor confidence:** 0.94
 
-### `yt_exact_schur_normal_form_uniqueness_note`
+### `yt_exact_coarse_grained_bridge_operator_note`
 
-- **Note:** [`YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`](../../docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md)
+- **Note:** [`YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md`](../../docs/YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md)
 - **current_status:** bounded
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** Within the intrinsic tested-scale local/nonlocal remainder budgets, every admissible exact Schur coarse bridge operator stays positive definite, affine on the forced UV window, and inside the conservative response budget.  _(class `C`)_
-- **chain closes:** False — The sampled normal-form stability checks close for the bounded admissible Schur class, but the upstream exact coarse bridge remains bounded and the note does not prove that the true microscopic bridge belongs to this class.
-- **rationale:** Issue: normal-form uniqueness is proved only inside the current tested Schur coarse-operator class and its intrinsic local/nonlocal remainder budgets. Why this blocks: the runner samples 300 admissible SPD perturbations and verifies affine/budget stability, but it imports the bounded coarse bridge object and does not derive microscopic membership of the interacting bridge in that admissible class. Repair target: audit/retain the exact coarse-grained bridge operator and add an analytic or exhaustive theorem that the true microscopic bridge lies in the admissible Schur class. Claim boundary until fixed: bounded normal-form stability of the tested Schur coarse class on the forced UV window, not full microscopic YT bridge uniqueness or unbounded y_t closure.
+- **auditor:** `codex-audit-loop-ready-20260430-52`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** On the current package closure surface, this exact coarse operator is symmetric positive definite, its stationary/source projection is exact, sequential coarse-graining is associative, and its response admits the same UV-centered local normal form already isolated in the bridge stack.  _(class `C`)_
+- **chain closes:** False — The Schur/Feshbach identities close as finite-dimensional algebra, and the runner now emits classified checks. The physical bridge theorem does not close because the UV-window normal-form premises and bridge-stack budgets are imported without one-hop retained authorities, and the runner builds a realization around the selected coarse operator rather than deriving it from the finite Grassmann partition.
+- **rationale:** Issue: the exact Schur identities are valid, but the theorem-grade bridge claim relies on unregistered bounded YT bridge-stack inputs: the forced UV class, local affine selector, higher-order/nonlocal budgets, and endpoint-shift budget. Why this blocks: the runner constructs a full quadratic realization whose Schur complement is the chosen K_eff, then checks normal-form consistency against hard-coded package constants; it does not derive that K_eff from the finite Cl(3)/Z^3 Grassmann partition or register the prior bounded bridge authorities as one-hop inputs. Repair target: add the bridge UV-class, hessian/local selector, higher-order, nonlocal, and endpoint-budget notes as dependencies, audit those inputs, and make the runner fail if the exact microscopic partition-to-K_eff derivation is absent. Claim boundary until fixed: it is safe to claim conditional support that, given the current UV-window kernel and budget inputs, Schur coarse-graining has exact algebraic identities and the constructed coarse operator fits the existing bounded normal form.
 - **open / conditional deps cited:**
-  - `YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md`
+  - `YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md`
+  - `YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md`
+  - `YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md`
+  - `YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md`
+  - `YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md`
 - **auditor confidence:** high
 
 ### `yt_explicit_systematic_budget_note`
