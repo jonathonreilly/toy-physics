@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:55:52.039576+00:00
+**Generated:** 2026-04-30T18:56:00.207953+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 109 |
+| `audited_clean` | 110 |
 | `audited_conditional` | 311 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1055 |
+| `unaudited` | 1054 |
 
 | criticality | count |
 |---|---:|
@@ -156,6 +156,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | unknown | ~~audited_clean~~ | unknown | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | unknown | ~~audited_clean~~ | unknown | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | support | ~~audited_clean~~ | support | judicial_review | codex-current | A | - |
+| `global_coherence_off_scaffold_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `graph_first_selector_derivation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `graph_first_su3_integration_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `growing_graph_static_control_audit_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -4201,6 +4202,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** Issue: the source status says this is an exploratory DAG-ensemble path-sum result, not a staggered proposed_retained result, and the runner path recorded in the note/ledger does not exist at the declared location. Why this blocks: a claim that explicitly disclaims retained status and lacks its registered runner cannot be audit-ratified as proposed_retained, even though a moved script reproduces the bounded exploratory output. Repair target: re-scope the note/queue as bounded or support, update the runner path to `scripts/frontier_geometry_superposition.py`, preserve a current log, and build a separate staggered geometry-superposition harness before any retained promotion. Claim boundary until fixed: safely claim only the toy DAG path-sum signal from the moved script: normalized contrast 3.93%, centroid shift 0.0574, width change 0.0211, and detector phase differences up to about 0.323 rad; do not claim a retained staggered or BMV-style closure.
 - **open / conditional deps cited:**
   - `frontier_geometry_superposition.py`
+- **auditor confidence:** high
+
+### `global_coherence_off_scaffold_note`
+
+- **Note:** [`GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md`](../../docs/GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-ca82-singer-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On nine off-scaffold generators, the frozen free_coh >= 7.96e-04 rule scores 5/9, matching the old two-property rule on the same batch.  _(class `D`)_
+- **chain closes:** True — The current runner reproduces the finite off-scaffold table, L2 accuracy 5/9, old-rule accuracy 5/9, and pre-committed structural baseline 8/9. This closes the finite bounded negative, not a universal simple-classifier exclusion theorem.
+- **rationale:** The finite off-scaffold comparison closes from the source note and current runner output. The safe claim is bounded to this nine-generator hand-specified batch, one frozen free_coh threshold, and one old two-property comparator. Residual risk is only scope drift: the result should not be read as excluding all scalar metrics or all simple classifiers.
 - **auditor confidence:** high
 
 ### `global_coherence_predictor_note`

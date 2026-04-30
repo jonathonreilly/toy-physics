@@ -3,9 +3,9 @@
     "critical": 0,
     "high": 237,
     "leaf": 486,
-    "medium": 332
+    "medium": 331
   },
-  "generated_at": "2026-04-30T18:55:51.845068+00:00",
+  "generated_at": "2026-04-30T18:55:59.989335+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -10317,23 +10317,6 @@
       "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md",
       "ready": true,
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py",
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "global_coherence_off_scaffold_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 3,
-      "load_bearing_score": 3.5,
-      "note_path": "docs/GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/global_coherence_off_scaffold.py",
       "transitive_descendants": 3
     },
     {
@@ -22402,6 +22385,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 663,
-  "total_pending": 1055
+  "ready_count": 662,
+  "total_pending": 1054
 }
