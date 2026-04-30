@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:28:38.042770+00:00
+**Generated:** 2026-04-30T19:28:43.864026+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 182 |
+| `audited_clean` | 183 |
 | `audited_conditional` | 405 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 887 |
+| `unaudited` | 886 |
 
 | criticality | count |
 |---|---:|
@@ -199,6 +199,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_weak_connectivity_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | support | ~~audited_clean~~ | support | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open | ~~audited_clean~~ | open | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
@@ -5752,6 +5753,18 @@ Claim boundary until fixed: safe to claim the constant-lift obstruction Gamma_ca
 - **load-bearing step:** exact closure now proved on the retained `3d+1` ambient is:  _(class `B`)_
 - **chain closes:** False — No. The source row is author-declared unknown, so the audit packet does not assert a closed derivation to ratify.
 - **rationale:** Issue: the source note's own Status line is unknown, not a closed theorem/result tier. Why this blocks: a leaf audit cannot turn an explicitly unsettled source claim into a closed chain without an author reclassification and supporting derivation. Repair target: update the source note to a precise support/bounded/proposed_retained claim with a runner or cited theorem package. Claim boundary until fixed: safe to cite only as an unknown note in its current wording.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** exact-solve theorem on the selected retained ambient.  _(class `C`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 6 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20`
