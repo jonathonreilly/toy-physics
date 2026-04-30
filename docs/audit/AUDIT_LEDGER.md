@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T11:41:31.239696+00:00
+**Generated:** 2026-04-30T11:41:34.648681+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -35,12 +35,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 204 |
+| `audited_conditional` | 205 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1174 |
+| `unaudited` | 1173 |
 
 | criticality | count |
 |---|---:|
@@ -81,7 +81,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 14 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 41 | 18.39 | `audited_clean` | **retained** |
 | 15 | `minimal_axioms_2026-04-11` | critical | 103 | 17.70 | `unaudited` | ~~audited_conditional~~ |
 | 16 | `left_handed_charge_matching_note` | critical | 248 | 17.46 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `anomaly_forces_time_theorem` | critical | 244 | 17.44 | `unaudited` | ~~audited_conditional~~ |
+| 17 | `anomaly_forces_time_theorem` | critical | 244 | 17.44 | `audited_conditional` | ~~audited_conditional~~ |
 | 18 | `ckm_atlas_axiom_closure_note` | critical | 72 | 17.19 | `unaudited` | ~~audited_conditional~~ |
 | 19 | `native_gauge_closure_note` | critical | 284 | 16.66 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `plaquette_self_consistency_note` | critical | 290 | 16.18 | `audited_conditional` | ~~audited_conditional~~ |
@@ -180,6 +180,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_single_source_compare_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alpha_s_derived_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `anomaly_forces_time_theorem` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `area_law_native_car_semantics_tightening_note_2026-04-25` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `bh_entropy_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -571,6 +572,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The note's load-bearing finite claim is that the parity-rotated sector-transition connectivity family is a bounded positive signed-source candidate on the no-restore grown slice, with 10 of 15 drift/seed rows passing exact zero, neutral cancellation, sign orientation, and near-linear charge-response gates.  _(class `C`)_
 - **chain closes:** True — The live sign-sweep runner rebuilds the listed five-drift by three-seed grid, applies the alternative sector-transition connectivity, and reproduces 10/15 passing rows with drift coverage [0.0, 0.1, 0.2, 0.3, 0.5] and mean exponent 1.000035. The result closes only as a finite bounded positive candidate on this slice, not as seed-wide closure or a geometry-generic theorem.
 - **rationale:** The source note's bounded claim is exactly what the runner checks: zero-source response, neutral +/- cancellation, sign orientation, and a double-to-single charge exponent near one for each drift/seed row. The current output matches the archived note values, including 10/15 passing rows, the per-drift pass pattern, and mean exponent 1.000035, while the source explicitly rejects family-wide and geometry-generic closure. Residual boundary: this is a finite computational lane candidate, not an analytic classification of all structured connectivity families.
+- **auditor confidence:** high
+
+### `anomaly_forces_time_theorem`
+
+- **Note:** [`ANOMALY_FORCES_TIME_THEOREM.md`](../../docs/ANOMALY_FORCES_TIME_THEOREM.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The theorem claims anomaly cancellation forces the single-clock 3+1 spacetime setting from the SU(2), SU(3), and left-handed anomaly trace inputs.  _(class `B`)_
+- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md, SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md, LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md.
+- **rationale:** Issue: The load-bearing step still imports unratified direct authority: SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md, SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md, LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
+- **open / conditional deps cited:**
+  - `SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`
+  - `SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`
+  - `LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`
 - **auditor confidence:** high
 
 ### `area_law_native_car_semantics_tightening_note_2026-04-25`
