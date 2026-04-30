@@ -10,7 +10,7 @@ The current package is:
 1. a retained theorem core
 2. retained standalone quantitative lanes for `alpha_s` and EW normalization
 3. a charged-lepton Koide review/support package with two explicit bridge residues
-4. promoted CKM atlas/axiom package plus a retained YT/top transport lane and a derived Higgs/vacuum lane with a retention-decomposed budget
+4. promoted CKM atlas/axiom package plus a YT/top transport lane conditioned on the support-tier Ward identification and an identification-conditioned Higgs/vacuum lane with a retention-decomposed budget
 5. a bounded prediction surface plus an explicit history bucket for important
    excluded families
 
@@ -144,7 +144,7 @@ Current status from that stack:
   where `alpha_s(v)` comes from the same-surface plaquette chain,
   `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
   rows use the retained running bridge
-- retained exact lattice-scale Ward theorem:
+- support-tier lattice-scale Ward identification (audited_renaming):
   `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`
 - bounded same-surface W-boson EW diagnostic on that retained EW lane:
   `M_W^tree = 79.7956 GeV`,
@@ -152,14 +152,14 @@ Current status from that stack:
   `M_Z^tree = 91.2663 GeV`;
   the `~0.19 GeV` `M_W` residual tracks the retained `g_2(v)` precision and
   is not a retained or few-MeV SM-indirect `M_W` claim
-- retained YT/top transport package:
+- YT/top transport package conditioned on that Ward identification:
   canonical full-staggered-PT `Δ_R = -3.77% ± 0.45%`,
-  retained `y_t(v) = 0.9176`,
-  retained canonical `m_t(pole) = 172.57 ± 6.50 GeV`,
-  with through-2-loop retained coverage
+  support-tier `y_t(v) = 0.9176`,
+  identification-conditioned canonical `m_t(pole) = 172.57 ± 6.50 GeV`,
+  with through-2-loop coverage
   `172.57 ± 6.9 GeV` (structural) /
   `172.57 ± 7.94 GeV` (bound-constrained, not MC-pinned)
-- derived Higgs / vacuum package with retention-decomposed budget:
+- identification-conditioned Higgs / vacuum package with retention-decomposed budget:
   canonical framework-side 3-loop route `m_H = 125.1 GeV`,
   retention analysis `m_H = 125.04 ± 3.17 GeV`,
   with retained `119.8 GeV` (2-loop support route)
@@ -229,11 +229,11 @@ Current status from that stack:
   `main` for reviewer / atlas use only; it sharpens algebraic weak/color/taste
   structure behind the retained matter lane, but it is not part of the
   accepted minimal-input stack
-- derived Higgs / vacuum package with retention-decomposed budget:
+- identification-conditioned Higgs / vacuum package with retention-decomposed budget:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   retention analysis `m_H = 125.04 ± 3.17 GeV`,
   with retained `119.8 GeV` (2-loop support route),
-  vacuum-stability readout inherited from the retained YT transport lane
+  vacuum-stability readout inherited from the YT transport lane with Ward-identification boundary
 - exact taste-block fermion-CW isotropy support theorem with bounded
   taste-scalar near-degeneracy companion:
   `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`

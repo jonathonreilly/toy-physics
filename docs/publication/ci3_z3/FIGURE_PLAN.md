@@ -93,7 +93,7 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 
 ### Figure A2. Retained YT transport lane and Higgs follow-on route
 
-- purpose: show the exact UV theorem, the retained low-energy YT transport lane, and the derived Higgs follow-on route
+- purpose: show the support-tier UV Ward identification, the low-energy YT transport lane, and the identification-conditioned Higgs follow-on route
 - source notes:
   - [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](../../YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
   - [YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md](../../YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)

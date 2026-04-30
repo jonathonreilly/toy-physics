@@ -109,10 +109,10 @@ Validate with:
 
 ## Quantitative Electroweak, QCD, Yukawa, and Higgs Package
 
-- retained quantitative lanes:
+- retained / identification-conditioned quantitative lanes:
   `alpha_s(M_Z)`, EW normalization, retained EW Higgs gauge-mass
-  diagonalization as the tree-level mass/charge guardrail, retained YT/top
-  transport
+  diagonalization as the tree-level mass/charge guardrail, YT/top transport
+  conditioned on the support-tier Ward identification
 - bounded QCD/hadron lane:
   exact graph-first confinement is retained, but quantitative hadron masses are
   still open. The current support map isolates `sqrt(sigma)` promotion behind
@@ -149,7 +149,7 @@ Validate with:
   `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)` at atlas-leading order
   plus the
   kaon epsilon_K CKM-bracket factorization through atlas `J_0`
-- derived quantitative lane:
+- identification-conditioned quantitative lane:
   Higgs/vacuum package with explicit retention budget
 - bounded quantitative companions:
   W-boson same-surface probe, taste-scalar near-degeneracy,
