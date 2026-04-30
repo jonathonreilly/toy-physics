@@ -11,15 +11,15 @@ Answer:
 ----------------------------------------------------------------------------------------
 Part 1: production JSONL summary
 ----------------------------------------------------------------------------------------
-  L=8: n=810, last_measurement=809, last_sweeps=8336, acceptance=0.419
-    plaquette: 0.59445276 +/- 0.00007226
-    W11: 0.59426485 +/- 0.00019805
-    W12: 0.38440939 +/- 0.00024842
-    W22: 0.19223508 +/- 0.00029743
-    chi22: 0.25804809 +/- 0.00148519
-  [PASS] production JSONL is non-empty  (records=810)
+  L=8: n=950, last_measurement=949, last_sweeps=9738, acceptance=0.419
+    plaquette: 0.59442266 +/- 0.00006646
+    W11: 0.59432963 +/- 0.00018095
+    W12: 0.38447319 +/- 0.00022998
+    W22: 0.19240087 +/- 0.00026863
+    chi22: 0.25736352 +/- 0.00136710
+  [PASS] production JSONL is non-empty  (records=950)
   [PASS] all records come from the production profile
-  [PASS] L=8 has reached the checkpoint minimum  (L8 records=810, minimum=100)
+  [PASS] L=8 has reached the checkpoint minimum  (L8 records=950, minimum=100)
   [PASS] all primary observables are finite
   [PASS] all non-null chi22 values are finite
 
