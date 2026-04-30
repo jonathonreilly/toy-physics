@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T15:11:04.725440+00:00
+**Generated:** 2026-04-30T15:11:39.709324+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,26 +21,26 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 80 |
 | _proposed_retained_ | 4 |
-| bounded | 201 |
+| bounded | 200 |
 | support | 126 |
 | open | 20 |
 | unknown | 446 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 460 |
+| ~~audited_conditional~~ | 461 |
 | ~~audited_failed~~ | 170 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 9 |
 | `audited_clean` | 85 |
-| `audited_conditional` | 225 |
+| `audited_conditional` | 226 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1171 |
+| `unaudited` | 1170 |
 
 | criticality | count |
 |---|---:|
@@ -191,6 +191,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_single_source_compare_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `accessible_prediction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `action_crossover_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alpha_s_derived_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `anomaly_forces_time_theorem` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `area_law_native_car_semantics_tightening_note_2026-04-25` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -512,6 +513,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Accessible Predictions: Where the Framework Differs from GR: Does NOT depend on lattice spacing. Tests quantum nature of gravity.  _(class `B`)_
 - **chain closes:** False — No. The rho=|psi|^2 gravitational-source law and born-gravity cross-constraint are used as framework premises rather than derived in this audit packet, so the conclusion cannot be ratified from the source note alone.
 - **rationale:** Issue: the rho=|psi|^2 gravitational-source law and Born-gravity cross-constraint are used as framework premises rather than derived in this audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **auditor confidence:** high
+
+### `action_crossover_note`
+
+- **Note:** [`ACTION_CROSSOVER_NOTE.md`](../../docs/ACTION_CROSSOVER_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** Action Crossover: Spent-delay → Valley-linear with Regularity: bounded crossover replay frozen on disk; branch-specific, not a universal theorem  _(class `B`)_
+- **chain closes:** False — No. The load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet, so the conclusion cannot be ratified from the source note alone.
+- **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **open / conditional deps cited:**
+  - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
 
 ### `action_power_note`
