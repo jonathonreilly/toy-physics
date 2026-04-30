@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:02:13.842496+00:00
+**Generated:** 2026-04-30T22:03:37.870929+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 211 |
+| `audited_clean` | 212 |
 | `audited_conditional` | 461 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 801 |
+| `unaudited` | 800 |
 
 | criticality | count |
 |---|---:|
@@ -289,6 +289,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_3plus1_temporal_ratio_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `signed_gravity_response_lane_status_note_2026-04-26` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
 | `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `staggered_newton_reproduction_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -10256,6 +10257,18 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 - **load-bearing step:** Static cone shape can mimic the c-dependent causal phase curve exactly, while static scheduling remains near-flat and does not reproduce the curve.  _(class `C`)_
 - **chain closes:** True — The current runner computes the causal, static-cone, and static-schedule curves across three families and shows zero RMSE for the static-cone mimic and nonzero scheduling mismatch.
 - **rationale:** The audited claim is the negative boundary: detector-line phase lag is not a unique causal-propagation discriminator because a static cone-shape field reproduces the same c-dependent curve in this model. The runner reproduces the note's table and the safe read, including exact zero controls and the static-scheduling mismatch. Residual risk is limited to the missing frozen log; the current executable artifact is sufficient for the scoped boundary result.
+- **auditor confidence:** high
+
+### `signed_gravity_response_lane_status_note_2026-04-26`
+
+- **Note:** [`SIGNED_GRAVITY_RESPONSE_LANE_STATUS_NOTE_2026-04-26.md`](../../docs/SIGNED_GRAVITY_RESPONSE_LANE_STATUS_NOTE_2026-04-26.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-13`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The framework has a coherent conditional signed-response consequence harness and a sharp determinant-orientation support/no-go boundary, but it does not yet derive physical signed gravity.  _(class `C`)_
+- **chain closes:** True — The status note closes on its support/open surface: the runner verifies the conditional locked-sign algebra, finite local/taste-cell selector no-go, local signed-source primitive block, eta-neutral native boundary complex, hosted-but-unselected orientation line, and explicit nonclaim boundaries. The result is only a lane-status/no-go boundary, not a retained physical repulsive-gravity sector.
+- **rationale:** The support-tier status claim is deliberately bounded and the runner matches that bounded surface. It shows the locked source/response sign consequence works only when chi_g is supplied, local/taste-cell and local-source selector routes are blocked, determinant orientation is hosted but not canonically selected, and the physical signed-gravity sector remains unretained. Residual risk is downstream overstatement of this lane as antigravity or as a derived APS/Wald/Gauss/source-action bridge, both of which the note explicitly forbids.
 - **auditor confidence:** high
 
 ### `site_phase_cube_shift_intertwiner_note`
