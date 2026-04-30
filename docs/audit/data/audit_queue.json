@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 44,
     "high": 281,
-    "leaf": 617,
+    "leaf": 616,
     "medium": 340
   },
-  "generated_at": "2026-04-30T01:25:35.279014+00:00",
+  "generated_at": "2026-04-30T01:26:16.171787+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -16420,25 +16420,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "global_coherence_predictor_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "global_coherence_off_scaffold_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "graph_dirac_requirements_2026-04-10",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20093,26 +20074,6 @@
       "direct_in_degree": 0,
       "load_bearing_score": 0.0,
       "note_path": "docs/GEOMETRY_LANE_HEAD_TO_HEAD_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "global_coherence_held_out2_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "global_coherence_off_scaffold_note",
-        "global_coherence_predictor_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GLOBAL_COHERENCE_HELD_OUT2_NOTE.md",
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 0
@@ -25910,6 +25871,26 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "global_coherence_held_out2_note",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "global_coherence_off_scaffold_note",
+        "global_coherence_predictor_note"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/GLOBAL_COHERENCE_HELD_OUT2_NOTE.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "gravitational_memory_note_2026-04-11",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -26728,6 +26709,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 843,
-  "total_pending": 1282
+  "ready_count": 841,
+  "total_pending": 1281
 }

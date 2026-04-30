@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:25:35.484116+00:00
+**Generated:** 2026-04-30T01:26:16.352288+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 78 |
 | _proposed_retained_ | 8 |
-| bounded | 208 |
+| bounded | 206 |
 | support | 108 |
 | open | 24 |
 | unknown | 538 |
@@ -29,7 +29,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 46 |
 | ~~audited_renaming~~ | 42 |
 | ~~audited_conditional~~ | 443 |
-| ~~audited_failed~~ | 89 |
+| ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
@@ -37,10 +37,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 78 |
 | `audited_conditional` | 148 |
 | `audited_decoration` | 4 |
-| `audited_failed` | 50 |
+| `audited_failed` | 51 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1281 |
+| `unaudited` | 1280 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 382 |
 | `leaf` | 797 |
 
-- **Proposed claims demoted by upstream:** 155
+- **Proposed claims demoted by upstream:** 154
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -340,6 +340,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `global_coherence_predictor_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
 | `gravitomagnetic_portability_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `grown_transfer_basin_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `h0125_failure_derivation` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -2000,6 +2001,20 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** Issue: the source status says this is an exploratory DAG-ensemble path-sum result, not a staggered proposed_retained result, and the runner path recorded in the note/ledger does not exist at the declared location. Why this blocks: a claim that explicitly disclaims retained status and lacks its registered runner cannot be audit-ratified as proposed_retained, even though a moved script reproduces the bounded exploratory output. Repair target: re-scope the note/queue as bounded or support, update the runner path to `scripts/frontier_geometry_superposition.py`, preserve a current log, and build a separate staggered geometry-superposition harness before any retained promotion. Claim boundary until fixed: safely claim only the toy DAG path-sum signal from the moved script: normalized contrast 3.93%, centroid shift 0.0574, width change 0.0211, and detector phase differences up to about 0.323 rad; do not claim a retained staggered or BMV-style closure.
 - **open / conditional deps cited:**
   - `frontier_geometry_superposition.py`
+- **auditor confidence:** high
+
+### `global_coherence_predictor_note`
+
+- **Note:** [`GLOBAL_COHERENCE_PREDICTOR_NOTE.md`](../../docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The single-property free_coh >= 7.96e-04 rule improves cross-generator accuracy from 6/9 to 7/9 on scaffolded data, but the 2026-04-07 off-scaffold update says the advantage disappears and the classifier lane is closed.  _(class `G`)_
+- **chain closes:** False — The proposed-retained partial-positive claim is stale relative to the note's own update and its one-hop off-scaffold dependency. The source now says the revival was scaffold-specific and kept for record, not a live retained predictor theorem.
+- **rationale:** Issue: the row still presents a proposed-retained partial predictor even though the source note's lead update and the one-hop off-scaffold authority state that the advantage collapsed to 5/9 and the classifier program is closed. Why this blocks: the current packet contradicts the retained surface; at most the scaffolded 7/9 result remains historical finite evidence. Repair target: change the source status to bounded/retired or split out a historical scaffolded-observation note, then register and run the predictor/off-scaffold runners if a finite-result audit is desired. Claim boundary until fixed: safe to say free_coh was a scaffold-specific empirical predictor candidate that failed off-scaffold; not safe to retain it as a live global coherence predictor.
+- **open / conditional deps cited:**
+  - `GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md`
 - **auditor confidence:** high
 
 ### `graph_first_selector_derivation_note`
