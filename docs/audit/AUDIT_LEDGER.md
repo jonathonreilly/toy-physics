@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:28:37.495164+00:00
+**Generated:** 2026-04-30T01:29:18.213441+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 79 |
-| _proposed_retained_ | 6 |
+| _proposed_retained_ | 5 |
 | bounded | 205 |
 | support | 108 |
 | open | 24 |
@@ -28,19 +28,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 4 |
 | ~~audited_numerical_match~~ | 47 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 444 |
+| ~~audited_conditional~~ | 445 |
 | ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 79 |
-| `audited_conditional` | 149 |
+| `audited_conditional` | 150 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1277 |
+| `unaudited` | 1276 |
 
 | criticality | count |
 |---|---:|
@@ -238,6 +238,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hierarchy_matsubara_decomposition_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `impact_parameter_lensing_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `impact_parameter_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -2324,6 +2325,25 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The natural bulk Cl4 generators shift Hamming weight by ±1, so P_A gamma_a P_A = 0 on the rank-four block, and no four compressed bilinears close a Clifford-Majorana algebra on P_A.  _(class `A`)_
 - **chain closes:** True — The source scopes the no-go to the two natural bulk axiom-3 Cl4/CAR realisations on H_cell, and the runner constructs both, verifies their Clifford relations, checks the P_A compression, and exhausts all 15 four-bilinear subsets. Within that stated scope, A1 is structurally falsified without external numerical or physical imports.
 - **rationale:** The no-go closes as finite linear algebra on the explicitly defined Boolean/CAR H_cell setup. The runner computes the Clifford relations, Hamming-grade shifts, zero linear compressions, and exhaustive bilinear-subset obstruction; it does not tune a comparator or import observed values. Residual risk is only scope drift: the clean verdict covers the stated A1 projection/compression mechanism, not G1, C1, or other intrinsic P_A carrier routes.
+- **auditor confidence:** high
+
+### `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28`
+
+- **Note:** [`HUBBLE_LANE5_C1_A2_ACTION_UNIT_NO_GO_NOTE_2026-04-28.md`](../../docs/HUBBLE_LANE5_C1_A2_ACTION_UNIT_NO_GO_NOTE_2026-04-28.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Breaking the (S,kappa) degeneracy requires the Gauss-flux source-unit identification, which is conditional on the Clifford phase bridge and therefore on (G1), so A2 cannot close (G2) independently on A_min alone.  _(class `B`)_
+- **chain closes:** False — The runner directly verifies finite Hilbert-flow rescaling invariances and kappa dependence, but the decisive exclusivity/conditional-chain step is imported from named source-unit and Clifford-bridge authorities that are not one-hop dependencies. Several PASS lines encode those prior-authority assertions as logical checks.
+- **rationale:** Issue: the no-go's core rescaling algebra closes, but the stronger claim that the only on-package action-unit route is conditional on the Gauss-flux/Clifford-bridge/G1 chain is not established from registered one-hop authorities. Why this blocks: the audit packet can ratify the finite kappa-rescaling obstruction, but it cannot independently ratify the exclusivity of the source-unit route or the imported conditional bridge chain. Repair target: register the Target 3 phase-unit boundary, source-unit normalization support theorem, Clifford phase bridge, A1 no-go, g_bare authority, and A_min as dependencies, then make the runner verify their effective statuses and the precise implication chain. Claim boundary until fixed: safe as a conditional A2 obstruction showing g_bare=1 alone does not fix kappa; not safe as a fully retained no-go for every on-package action-unit closure route.
+- **open / conditional deps cited:**
+  - `HUBBLE_LANE5_C1_A1_GRASSMANN_NO_GO_NOTE_2026-04-28.md`
+  - `PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`
+  - `PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md`
+  - `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`
+  - `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`
+  - `MINIMAL_AXIOMS_2026-04-11.md`
 - **auditor confidence:** high
 
 ### `hubble_lane5_two_gate_dependency_firewall_note_2026-04-27`
