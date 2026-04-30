@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T20:51:30.538518+00:00",
+  "generated_at": "2026-04-30T21:23:09.741419+00:00",
   "per_claim": {
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "assert_count": 0,
@@ -12552,6 +12552,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_su2_weak_beta_coefficient_structural_closed_form.py"
+    },
+    "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_substrate_to_p_a_forcing.py"
     },
     "symmetry_generated_paired_chokepoint_note": {
       "assert_count": 0,
@@ -26604,6 +26616,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_substrate_to_p_a_forcing.py": {
+      "assert_count": 2,
+      "claims": [
+        "substrate_to_p_a_forcing_theorem_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_taste_scalar_isotropy.py": {
       "assert_count": 2,
       "claims": [
@@ -31311,12 +31338,12 @@
     "dominant_class_distribution": {
       "A": 7,
       "B": 118,
-      "C": 432,
+      "C": 433,
       "D": 180,
       "none": 391
     },
-    "runners_classified": 1128,
-    "runners_with_C": 519,
+    "runners_classified": 1129,
+    "runners_with_C": 520,
     "runners_with_D": 278
   }
 }

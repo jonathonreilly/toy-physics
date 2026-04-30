@@ -6274,6 +6274,10 @@
     },
     {
       "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "to": "substrate_to_p_a_forcing_theorem_note_2026-04-30"
+    },
+    {
+      "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
       "to": "minimal_axioms_2026-04-11"
     },
     {
@@ -7051,6 +7055,34 @@
     {
       "from": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
       "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
+      "to": "i3_zero_exact_theorem_note"
+    },
+    {
+      "from": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
+      "to": "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25"
+    },
+    {
+      "from": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
+      "to": "minimal_axioms_2026-04-11"
     },
     {
       "from": "three_generation_chirality_boundary_note",
@@ -18413,7 +18445,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T20:51:27.507187+00:00",
+  "generated_at": "2026-04-30T21:23:06.124488+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -31697,13 +31729,14 @@
       "current_status": "unknown",
       "current_status_raw": "audited_renaming audit verdict; chain does not close",
       "deps": [
+        "substrate_to_p_a_forcing_theorem_note_2026-04-30",
         "minimal_axioms_2026-04-11",
         "native_gauge_closure_note",
         "graph_first_su3_integration_note",
         "anomaly_forces_time_theorem",
         "i3_zero_exact_theorem_note"
       ],
-      "note_hash": "ceee901bd5d1e5575de4def107a6417db0df3818544a80297c9c271c248642fc",
+      "note_hash": "3563b997891b5810db614368474216f064aac4786712c5b261a549ab34fec32a",
       "path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py",
       "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem"
@@ -37037,6 +37070,24 @@
       "runner_path": null,
       "title": "SU(3)^3 Cubic Gauge Anomaly Cancellation Theorem"
     },
+    "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
+      "claim_id": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained no-go theorem",
+      "deps": [
+        "graph_first_su3_integration_note",
+        "i3_zero_exact_theorem_note",
+        "cpt_exact_note",
+        "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25",
+        "native_gauge_closure_note",
+        "anomaly_forces_time_theorem",
+        "minimal_axioms_2026-04-11"
+      ],
+      "note_hash": "cdea043dbf1aafabd6cd34d60b6606e15462ab3384a5e6378c85b5444fb7db68",
+      "path": "docs/SUBSTRATE_TO_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_substrate_to_p_a_forcing.py",
+      "title": "Substrate-To-P_A Forcing No-Go Theorem"
+    },
     "symmetry_generated_paired_chokepoint_note": {
       "claim_id": "symmetry_generated_paired_chokepoint_note",
       "current_status": "bounded",
@@ -41239,16 +41290,16 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4603,
+    "edge_count": 4611,
     "leaf_count": 721,
-    "node_count": 1656,
+    "node_count": 1657,
     "root_count": 1176,
-    "runners_with_path": 1173,
+    "runners_with_path": 1174,
     "status_counts": {
       "bounded": 446,
       "open": 48,
       "proposed_promoted": 1,
-      "proposed_retained": 372,
+      "proposed_retained": 373,
       "support": 378,
       "unknown": 411
     }

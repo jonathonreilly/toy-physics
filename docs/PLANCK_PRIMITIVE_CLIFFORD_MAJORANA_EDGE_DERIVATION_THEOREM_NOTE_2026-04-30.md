@@ -57,6 +57,14 @@ Until that substrate-to-packet forcing theorem is supplied, the primitive
 Clifford-Majorana edge algebra remains a carrier assignment for the Planck
 chain, not a derived consequence of the cited upstream content.
 
+The follow-up no-go
+[SUBSTRATE_TO_P_A_FORCING_THEOREM_NOTE_2026-04-30.md](./SUBSTRATE_TO_P_A_FORCING_THEOREM_NOTE_2026-04-30.md)
+tests the missing step directly. It finds that the stated substrate symmetries
+do not uniquely force `P_A`: the Hamming-weight-three projector and additional
+rank-four local equivariant sums satisfy the same spin/time/CPT/Born/locality
+checks. Therefore the repair target requires an additional first-order
+boundary/orientation principle, not only the symmetries listed in PR #228.
+
 ## Upstream Authorities
 
 The construction cites these existing framework authorities:
