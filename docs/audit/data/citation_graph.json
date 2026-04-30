@@ -18365,7 +18365,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T19:07:04.678097+00:00",
+  "generated_at": "2026-04-30T19:08:46.661195+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -20922,10 +20922,10 @@
     },
     "chiral_3plus1d_coupled_coin_note": {
       "claim_id": "chiral_3plus1d_coupled_coin_note",
-      "current_status": "unknown",
-      "current_status_raw": null,
+      "current_status": "open",
+      "current_status_raw": "open - exploratory scan; coupling helps but no clean 3+1D transport law yet",
       "deps": [],
-      "note_hash": "19aa76dce5c561be43651a97f43be7434c9d7ae3dce5e0c19bed267e53bade2a",
+      "note_hash": "8aa2bc2895b8e3c6576a607b7aa1480eab8fc9117c5d3bfd7146d698abf02ee4",
       "path": "docs/CHIRAL_3PLUS1D_COUPLED_COIN_NOTE.md",
       "runner_path": "scripts/frontier_chiral_3plus1d_coupled_coin_scan.py",
       "title": "3+1D Coupled-Coin Scan Note"
@@ -22134,10 +22134,10 @@
     },
     "cycle_break_slice_note_2026-04-10": {
       "claim_id": "cycle_break_slice_note_2026-04-10",
-      "current_status": "unknown",
-      "current_status_raw": null,
+      "current_status": "bounded",
+      "current_status_raw": "bounded - finite frontier boundary probe",
       "deps": [],
-      "note_hash": "7f0a9edc51108d762d8188e103f1f3a87465f6e730108c0073ee9713eb9d48e6",
+      "note_hash": "8d361909ad49ebfa09e27b60e7f1a768f399fd13ad59a157e9f3fd99c9a411ab",
       "path": "docs/CYCLE_BREAK_SLICE_NOTE_2026-04-10.md",
       "runner_path": "scripts/frontier_staggered_cycle_break_slice.py",
       "title": "Cycle-Break Frontier Slice Note"
@@ -26051,10 +26051,10 @@
     },
     "gauge_vacuum_plaquette_connected_hierarchy_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
-      "current_status": "unknown",
-      "current_status_raw": "exact connected-cumulant hierarchy theorem for the Wilson",
+      "current_status": "support",
+      "current_status_raw": "support - exact connected-cumulant hierarchy theorem for the Wilson plaquette reduction law on finite evaluation surfaces; explicit closure at `beta = 6` still open",
       "deps": [],
-      "note_hash": "eae43851154a164f252a717600b624cb8253a0ba8b007395057a75f44a5b7da8",
+      "note_hash": "55e520187265dd5ba1a2a685791a3373706f32c483f9370385009f06030f0559",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py",
       "title": "Gauge-Vacuum Plaquette Connected-Hierarchy Theorem"
@@ -26217,10 +26217,10 @@
     },
     "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note": {
       "claim_id": "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note",
-      "current_status": "unknown",
-      "current_status_raw": "exact obstruction theorem on the finite Wilson source surface;",
+      "current_status": "support",
+      "current_status_raw": "support - exact obstruction theorem on the finite Wilson source surface; explicit connected-hierarchy closure at `beta = 6` still open",
       "deps": [],
-      "note_hash": "04c62366eae24937581ea5997e87dcfda14429bba9d2aaa842e566ca066b1059",
+      "note_hash": "079ef85f83b0b1d31e88a88797b6b7eab8aa75b6fd99b55134ea77b1747d214b",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py",
       "title": "Gauge-Vacuum Plaquette Infinite-Hierarchy Obstruction"
@@ -26247,10 +26247,10 @@
     },
     "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note": {
       "claim_id": "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
-      "current_status": "unknown",
-      "current_status_raw": "exact obstruction theorem inside the now-explicit factorized",
+      "current_status": "support",
+      "current_status_raw": "support - exact obstruction theorem inside the factorized source-sector transfer class; explicit `beta = 6` Perron / Jacobi data are still not forced",
       "deps": [],
-      "note_hash": "3e12eea32274ae860df7726c5dfda8699564d27fcd57da8d5b93b58a3f6988fd",
+      "note_hash": "682bcf9878cb5406a26f3014813a7b9f23e948f1d88c4f43b7b36c95ceb70572",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py",
       "title": "Gauge-Vacuum Plaquette Perron/Jacobi Underdetermination"
@@ -26267,10 +26267,10 @@
     },
     "gauge_vacuum_plaquette_reduction_existence_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_reduction_existence_theorem_note",
-      "current_status": "unknown",
-      "current_status_raw": "exact implicit reduction-law theorem on the finite Wilson",
+      "current_status": "support",
+      "current_status_raw": "support - exact implicit reduction-law theorem on the finite Wilson evaluation surface; explicit nonperturbative closed form still open",
       "deps": [],
-      "note_hash": "629a93d3fe545398e9db4800bb71398212e98c4743822e3a973c3b4bd78f546d",
+      "note_hash": "8c3fabbd0df0e0fc8c53b151556dfa5df487c5cb168c4fa504180b1da8517f03",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py",
       "title": "Gauge-Vacuum Plaquette Reduction Existence and Uniqueness Theorem"
@@ -26329,20 +26329,20 @@
     },
     "gauge_vacuum_plaquette_spectral_measure_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_spectral_measure_theorem_note",
-      "current_status": "unknown",
-      "current_status_raw": "exact generating-object theorem on the finite Wilson source",
+      "current_status": "support",
+      "current_status_raw": "support - exact generating-object theorem on the finite Wilson source surface; explicit spectral-measure identification at `beta = 6` still open",
       "deps": [],
-      "note_hash": "094d106e108052485ace117cfbae260096371acffb4b54ac59ff947a64194cf2",
+      "note_hash": "4eb2f8835fb36b9ffd8d3f7670b6a122f6b26ef56e6bab989b45b23ed180d282",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py",
       "title": "Gauge-Vacuum Plaquette Spectral-Measure Theorem"
     },
     "gauge_vacuum_plaquette_susceptibility_flow_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_susceptibility_flow_theorem_note",
-      "current_status": "unknown",
-      "current_status_raw": "exact nonperturbative flow theorem for the implicit plaquette",
+      "current_status": "support",
+      "current_status_raw": "support - exact nonperturbative flow theorem for the implicit plaquette reduction law on finite Wilson evaluation surfaces; explicit closure at `beta = 6` still open",
       "deps": [],
-      "note_hash": "1175f2905dd4c262516677d5a6ba73aa0ed7ebae35cf7c47d4cbc0e4ec118528",
+      "note_hash": "a6ddfd3bbf574c613b31030f7d889ab3de5f5d0ca08e7dc9c89168b6d546488c",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py",
       "title": "Gauge-Vacuum Plaquette Susceptibility-Flow Theorem"
@@ -27516,10 +27516,10 @@
     },
     "inverse_problem_note": {
       "claim_id": "inverse_problem_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - structural graph-requirements diagnostic",
       "deps": [],
-      "note_hash": "eeaa33049276d83caf876adb240d8e9ddee4e67c65270ef50aadbfbec6d53720",
+      "note_hash": "8af5157d3863ea17ea9b48aa6d94fa9101b6543e0bdb67cd9d107ee20d0183d2",
       "path": "docs/INVERSE_PROBLEM_NOTE.md",
       "runner_path": null,
       "title": "Inverse Problem: What Does Newton+Born Require of the Network?"
@@ -29718,10 +29718,10 @@
     },
     "memory_decay_diagnosis_2026-04-11": {
       "claim_id": "memory_decay_diagnosis_2026-04-11",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - diagnostic explanation for memory-screening results",
       "deps": [],
-      "note_hash": "4e63ddd441a59a26bfb0fbefbe4a224c3401e023951ba27089d36ef15b75bab5",
+      "note_hash": "b2051980eba2d6711d32782c8791e604e5903a44c13de4987ba745b73fbc99bb",
       "path": "docs/MEMORY_DECAY_DIAGNOSIS_2026-04-11.md",
       "runner_path": null,
       "title": "Memory Signal Decay \u2014 Root Cause: Yukawa Screening"
@@ -32211,10 +32211,10 @@
     },
     "poisson_exhaustive_uniqueness_note": {
       "claim_id": "poisson_exhaustive_uniqueness_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - finite exhaustive uniqueness diagnostic",
       "deps": [],
-      "note_hash": "3f50b28aa1ab14f5aa5fab2e70716a3b27cfd954e59798e54c2153eb5d9d367d",
+      "note_hash": "e184c4ee8f99cf6771d49ecacf06d054b53e254045d18e69f2b63ae30e404417",
       "path": "docs/POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md",
       "runner_path": "scripts/frontier_poisson_exhaustive_uniqueness.py",
       "title": "Poisson Exhaustive Uniqueness"
@@ -32271,10 +32271,10 @@
     },
     "portable_package_hierarchy_classifier_note": {
       "claim_id": "portable_package_hierarchy_classifier_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - review-safe portable-package classifier",
       "deps": [],
-      "note_hash": "3aaecd150c1d280aa245c012469cd33bb71f8c51b4f0d370b9bff578730df697",
+      "note_hash": "32787e3f89a0d540a14e6078336dd14619ac2eb1c4209edc1ed012e64eefeccd",
       "path": "docs/PORTABLE_PACKAGE_HIERARCHY_CLASSIFIER_NOTE.md",
       "runner_path": "scripts/portable_package_hierarchy_classifier.py",
       "title": "Portable Package Hierarchy Classifier"
@@ -35510,10 +35510,10 @@
     },
     "s3_anomaly_spacetime_lift_note": {
       "claim_id": "s3_anomaly_spacetime_lift_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "open",
+      "current_status_raw": "open - kinematic route with missing dynamic theorem",
       "deps": [],
-      "note_hash": "73af678e8ebd005a93bf153786921eace8eb16119ee5877c88f090b8e84b112b",
+      "note_hash": "67c521b4acbaec1fa762128cb3e5c1408b0963c16e9e50451cc95ee5629e2493",
       "path": "docs/S3_ANOMALY_SPACETIME_LIFT_NOTE.md",
       "runner_path": null,
       "title": "`S^3` + Anomaly-Forced Time: Axiom-First Spacetime Lift"
@@ -35600,10 +35600,10 @@
     },
     "s3_time_primitive_chain_note": {
       "claim_id": "s3_time_primitive_chain_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - route-2 primitive-chain update",
       "deps": [],
-      "note_hash": "6d774716375a1e48ea329ce7f707820ec7ba441189581332e2f8f90c773abd25",
+      "note_hash": "a28bef2fbcc15034220c0a52d424bae22f7944b3cbed0720aad55652a9a42e85",
       "path": "docs/S3_TIME_PRIMITIVE_CHAIN_NOTE.md",
       "runner_path": null,
       "title": "Route 2 Primitive Chain: Readout and Time-Coupling Update"
@@ -35620,40 +35620,40 @@
     },
     "s3_time_tensor_build_memo": {
       "claim_id": "s3_time_tensor_build_memo",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - route-2 tensor-build memo",
       "deps": [],
-      "note_hash": "0c05b4cc10de47bf24380b818658c8380b1b7104cee2c0815a42e6e68eda9753",
+      "note_hash": "e12e5b63f1015526334b40026f1d8679a946b4cdcbb87e3cbd71cb79bae8360f",
       "path": "docs/S3_TIME_TENSOR_BUILD_MEMO.md",
       "runner_path": null,
       "title": "Route 2 Tensor Build Memo"
     },
     "s3_time_tensor_primitive_prototype_note": {
       "claim_id": "s3_time_tensor_primitive_prototype_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "bounded",
+      "current_status_raw": "bounded - tensor primitive prototype",
       "deps": [],
-      "note_hash": "25d1aaf2e7e0220910772b075aaa0243e329562d80d559ba01cf3c92f15ffcbc",
+      "note_hash": "fcc6017e5156f99bcea2d62a14c375c873052e18ec0ca03987567070cb52e9cc",
       "path": "docs/S3_TIME_TENSOR_PRIMITIVE_PROTOTYPE_NOTE.md",
       "runner_path": null,
       "title": "Route 2 Tensor Primitive Prototype on `A1 x {E_x, T1x}`"
     },
     "s3_time_tensorized_schur_primitive_note": {
       "claim_id": "s3_time_tensorized_schur_primitive_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "bounded",
+      "current_status_raw": "bounded - tensorized Schur/Dirichlet primitive candidate",
       "deps": [],
-      "note_hash": "c7768ee725f5f16011abfa4a6ed4c376d0fa1e5dae55a8b25797a5fb7b22c6f6",
+      "note_hash": "6f083d678265978299cd7e0639449711422a9f57a1bbdd21f41d1ffa481f6db1",
       "path": "docs/S3_TIME_TENSORIZED_SCHUR_PRIMITIVE_NOTE.md",
       "runner_path": null,
       "title": "Route 2 Tensorized Schur/Dirichlet Primitive"
     },
     "s3_time_theta_to_slice_coupling_note": {
       "claim_id": "s3_time_theta_to_slice_coupling_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - conditional readout-to-slice coupling family",
       "deps": [],
-      "note_hash": "0f4f195c58a5a2e1c73e8273a66943a7ed48c90be9504b92849af24e275e677d",
+      "note_hash": "8be82f562c0841a14b02682830e2a99a4db66f17ac4b981f274e80635f7b0d85",
       "path": "docs/S3_TIME_THETA_TO_SLICE_COUPLING_NOTE.md",
       "runner_path": null,
       "title": "Route 2 Readout to Slice Coupling"
@@ -37276,10 +37276,10 @@
     },
     "universal_gr_a1_invariant_section_note": {
       "claim_id": "universal_gr_a1_invariant_section_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - exact A1 invariant section",
       "deps": [],
-      "note_hash": "fca7280d5b08226ae25eb9dbbd7dfae88bb10fc9ed92547d2d263bd4a893db35",
+      "note_hash": "249b5618fdd92d439fad1cc29906841dbb822ceb5d4121ce53cb4fc1a3e13dbc",
       "path": "docs/UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md",
       "runner_path": null,
       "title": "Universal GR A1 Invariant Section on `PL S^3 x R`"
@@ -37303,10 +37303,10 @@
     },
     "universal_gr_block_constraint_interpretation_note": {
       "claim_id": "universal_gr_block_constraint_interpretation_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - block-constraint interpretation",
       "deps": [],
-      "note_hash": "d8fcb3af70619a37133959e1ffb4c77b3ad1a97df3d3ffa97ebd5b28082c9fc7",
+      "note_hash": "d3827ea23e8d5ec2163df75606fcc1526578e6e288c69d041a9ac5857a2df289",
       "path": "docs/UNIVERSAL_GR_BLOCK_CONSTRAINT_INTERPRETATION_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Block-Constraint Interpretation on `PL S^3 x R`"
@@ -37343,10 +37343,10 @@
     },
     "universal_gr_casimir_block_localization_note": {
       "claim_id": "universal_gr_casimir_block_localization_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - exact Casimir block-localization step",
       "deps": [],
-      "note_hash": "65b2dc036083333a7ba16542b493030b8d0a947e8c676f8582a8656ab1e29382",
+      "note_hash": "bfdc6443d9f4919b73786224e769d26996ba555990b9970e6919c91f0653d0f0",
       "path": "docs/UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Casimir Block Localization on `PL S^3 x R`"
@@ -37363,10 +37363,10 @@
     },
     "universal_gr_constraint_action_stationarity_note": {
       "claim_id": "universal_gr_constraint_action_stationarity_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - constraint/action-stationarity test",
       "deps": [],
-      "note_hash": "1e01f4f7cc3aa13b6bc7fdd98540ae5d851e4e3b7a64021e521f74cbbc20ad84",
+      "note_hash": "a7701474bee58423e328956a959e86e1907417737c001d30f7a92227749bf44c",
       "path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`"
@@ -37403,40 +37403,40 @@
     },
     "universal_gr_invariant_nonlinear_completion_note": {
       "claim_id": "universal_gr_invariant_nonlinear_completion_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - invariant nonlinear completion step",
       "deps": [],
-      "note_hash": "b9caa3776dc57b876f0f5115f941400eacc212c930a8228f953e52dea48e8637",
+      "note_hash": "1593fd502000b7f2ac37efc1c4d64d0a170672468c904925a2ab45f8faa60db1",
       "path": "docs/UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Invariant Nonlinear Completion on `PL S^3 x R`"
     },
     "universal_gr_isotropic_glue_operator_note": {
       "claim_id": "universal_gr_isotropic_glue_operator_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - exact isotropic glue-operator step",
       "deps": [],
-      "note_hash": "cd9e3c546ab7207971ff7cbbb1deda63a0eb3f6fdf9a363e3008549437c5fbaa",
+      "note_hash": "c82a2886275748c4eb69dc28ebf5ce5a3d77f66e32cbe2c647ea790ec8205ed7",
       "path": "docs/UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Isotropic Glue Operator on `PL S^3 x R`"
     },
     "universal_gr_isotropic_schur_localization_note": {
       "claim_id": "universal_gr_isotropic_schur_localization_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - exact isotropic Schur-localization step",
       "deps": [],
-      "note_hash": "aaa9cdf818f3b784400e47e02e078c314c10a9d4207e226ab1a74f910f0c211a",
+      "note_hash": "f1824029195ac26e2016c88b405da580edc1be55313297e72d51b729be99ddae",
       "path": "docs/UNIVERSAL_GR_ISOTROPIC_SCHUR_LOCALIZATION_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Isotropic Schur Localization on `PL S^3 x R`"
     },
     "universal_gr_lambda_bypass_note": {
       "claim_id": "universal_gr_lambda_bypass_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - lambda-bypass candidate",
       "deps": [],
-      "note_hash": "5a415264d59e9b4b1f1bcd157bd1f4c83c5243f816ebcddfebe7dfa7357abd6b",
+      "note_hash": "9e57f0322272f3aead9b5cb9502fd318485644d77008abeebfbed3f696c9179a",
       "path": "docs/UNIVERSAL_GR_LAMBDA_BYPASS_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Lambda Bypass on `PL S^3 x R`"
@@ -37453,20 +37453,20 @@
     },
     "universal_gr_lorentzian_signature_extension_note": {
       "claim_id": "universal_gr_lorentzian_signature_extension_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - Lorentzian signature-class extension",
       "deps": [],
-      "note_hash": "afd9d667ddf145e62520a269a76167828014797de61eb076ccb8b2f211ea45ed",
+      "note_hash": "62779cce3628d562890e032d44dbd7265700ca2801f3bd6d3c2d2c19c89900b6",
       "path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`"
     },
     "universal_gr_polarization_frame_bundle_attempt": {
       "claim_id": "universal_gr_polarization_frame_bundle_attempt",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "open",
+      "current_status_raw": "open - polarization-frame bundle attempt blocked by complement-frame ambiguity",
       "deps": [],
-      "note_hash": "dfebe4471aeb750d7b660d695960054d5597322cc5f231de6d9981289a6ba0df",
+      "note_hash": "12fff61cac271d01633940d9c88438880238347b2696a34bbaacc9d153a414b7",
       "path": "docs/UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_ATTEMPT.md",
       "runner_path": null,
       "title": "Universal GR Polarization-Frame Bundle Attempt on `PL S^3 x R`"
@@ -37483,10 +37483,10 @@
     },
     "universal_gr_positive_background_extension_note": {
       "claim_id": "universal_gr_positive_background_extension_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - positive-background extension",
       "deps": [],
-      "note_hash": "16fa2e0a65dc0b4702d77d99380cf67f9325bfbaac8fbc262cd56418a37c90d8",
+      "note_hash": "269f245a0a23f0e9401ea56d58d01182105cda3225053a6f34f11bdf261d48d7",
       "path": "docs/UNIVERSAL_GR_POSITIVE_BACKGROUND_EXTENSION_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Positive-Background Extension on `PL S^3 x R`"
@@ -37503,10 +37503,10 @@
     },
     "universal_gr_supermetric_normal_form_note": {
       "claim_id": "universal_gr_supermetric_normal_form_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - exact supermetric normal form",
       "deps": [],
-      "note_hash": "16276622b644d1996bb761cf872dfdde9bd5bdea394e36b9c298ab577d9ea984",
+      "note_hash": "f91bf6570d524c0ae7d8cc0cb9f0f745fd48b74d26f5606e548743f2da33caa1",
       "path": "docs/UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Supermetric Normal Form on `PL S^3 x R`"
@@ -37555,20 +37555,20 @@
     },
     "universal_qg_canonical_refinement_net_note": {
       "claim_id": "universal_qg_canonical_refinement_net_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - canonical geometric refinement net",
       "deps": [],
-      "note_hash": "0609e771dbe8caec3aec43c3400da456ca260da3870f4bf47c7ea35c1ea8d536",
+      "note_hash": "5eb5ddaf2346ddf06af6840587cdf6464c4b2b3a8089ae699519904ccbaa09e0",
       "path": "docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Canonical Geometric Refinement Net on `PL S^3 x R`"
     },
     "universal_qg_canonical_smooth_geometric_action_note": {
       "claim_id": "universal_qg_canonical_smooth_geometric_action_note",
-      "current_status": "unknown",
-      "current_status_raw": "unknown (pending author classification)",
+      "current_status": "support",
+      "current_status_raw": "support - canonical smooth geometric/action equivalence",
       "deps": [],
-      "note_hash": "696723ffcc885dedab2e7c7afdd1686e2d1fa78559ab497d8864ebc580c6d2a4",
+      "note_hash": "5598a7f25782e2c61a10552a1142268218bcfe52a27c0e32059b9ac552fe5532",
       "path": "docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Canonical Smooth Geometric/Action Equivalence"
@@ -37667,40 +37667,40 @@
     },
     "universal_qg_pl_field_interface_note": {
       "claim_id": "universal_qg_pl_field_interface_note",
-      "current_status": "unknown",
-      "current_status_raw": null,
+      "current_status": "support",
+      "current_status_raw": "support - canonical PL field interface",
       "deps": [],
-      "note_hash": "da44295ac7c1bf11407a245c36202486c155ad6392d533f859aa85f46377b9b4",
+      "note_hash": "a0d1068d41f2f15cd440e9b69758a67f5a07b5bd7554df755b68cebcf53d5681",
       "path": "docs/UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Canonical PL Field Interface on `PL S^3 x R`"
     },
     "universal_qg_pl_sobolev_interface_note": {
       "claim_id": "universal_qg_pl_sobolev_interface_note",
-      "current_status": "unknown",
-      "current_status_raw": null,
+      "current_status": "support",
+      "current_status_raw": "support - canonical PL Sobolev interface",
       "deps": [],
-      "note_hash": "57cbdd889f5e4195f467eb6d7b256bf527633270e945aebe81db8b7be7866133",
+      "note_hash": "d0e0afbbc580cf72175f16d5161c19dd6d43d4c3dd1053960538ecb542a1a1f0",
       "path": "docs/UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Canonical PL Sobolev Interface on `PL S^3 x R`"
     },
     "universal_qg_pl_weak_form_note": {
       "claim_id": "universal_qg_pl_weak_form_note",
-      "current_status": "unknown",
-      "current_status_raw": null,
+      "current_status": "support",
+      "current_status_raw": "support - canonical PL weak-form closure",
       "deps": [],
-      "note_hash": "174d3ae8dcf99528f24950b6bdb31a34b65a50fa10bef0cc50b3b3e9c6b3dde9",
+      "note_hash": "c8b01c98e993879417ef855ea6a6142504cad7d975e1774bcbcf49a26b30ee32",
       "path": "docs/UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Canonical PL Weak-Form Closure on `PL S^3 x R`"
     },
     "universal_qg_projective_schur_closure_note": {
       "claim_id": "universal_qg_projective_schur_closure_note",
-      "current_status": "unknown",
-      "current_status_raw": null,
+      "current_status": "support",
+      "current_status_raw": "support - projective Schur coarse-graining closure",
       "deps": [],
-      "note_hash": "f449f57a23b3c86976af28c78b8b0d9e62c4bafde5518497007c76eda1c15778",
+      "note_hash": "c562491fb7ff354989a87947f59fb773de9eb2a4ad95b06d20b361ec5c42ecee",
       "path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Projective Schur Closure Note"
@@ -37743,10 +37743,10 @@
     },
     "universal_qg_uv_finite_partition_note": {
       "claim_id": "universal_qg_uv_finite_partition_note",
-      "current_status": "unknown",
-      "current_status_raw": null,
+      "current_status": "support",
+      "current_status_raw": "support - UV-finite partition-density bridge on the discrete route",
       "deps": [],
-      "note_hash": "a33162f887cbdaea015a72d7706382d5aaddb398adca2c55052e18c06c9451f4",
+      "note_hash": "115d526c782dd246db977cdd97113c0dcfac67cea673426385f8867a064c7d78",
       "path": "docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md",
       "runner_path": null,
       "title": "Universal QG UV-Finite Partition Density Note"
@@ -37787,10 +37787,10 @@
     },
     "up_sector_partition_revisit_note_2026-04-19": {
       "claim_id": "up_sector_partition_revisit_note_2026-04-19",
-      "current_status": "unknown",
-      "current_status_raw": "exact obstruction theorem for the old CP-orthogonal interior",
+      "current_status": "bounded",
+      "current_status_raw": "bounded - exact obstruction theorem for the old CP-orthogonal interior partition, plus a bounded phase-deformed edge update",
       "deps": [],
-      "note_hash": "7df414564f65a987fd208bf2812b68be334d35f9c274e21bd4a3ab75b77761ab",
+      "note_hash": "34699aacd3e42c8bdf1f12c884079a0eee3b4302b5ace29e6baeac0f7ba8219a",
       "path": "docs/UP_SECTOR_PARTITION_REVISIT_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_up_sector_partition_revisit.py",
       "title": "Up-Sector Partition Revisit on the Newer Quark Package"
@@ -38317,10 +38317,10 @@
     },
     "wave_equation_gravity_note": {
       "claim_id": "wave_equation_gravity_note",
-      "current_status": "unknown",
-      "current_status_raw": "5/5 tests PASS",
+      "current_status": "support",
+      "current_status_raw": "support - finite wave-equation gravity test battery passed",
       "deps": [],
-      "note_hash": "e7b77b9edb2c3bd5f020b4efabbb180cc1d53268b026fd6397e4842401bb3734",
+      "note_hash": "e4f7b88beaab43c312ec26661ccbf1030fb49b465bdc40e6d9e387fb91219853",
       "path": "docs/WAVE_EQUATION_GRAVITY_NOTE.md",
       "runner_path": "scripts/frontier_wave_equation_gravity.py",
       "title": "Wave Equation Gravity: Promoting Poisson to d'Alembertian"
@@ -38457,20 +38457,20 @@
     },
     "weak_coupling_sign_sensitivity_note_2026-04-11": {
       "claim_id": "weak_coupling_sign_sensitivity_note_2026-04-11",
-      "current_status": "unknown",
-      "current_status_raw": "exploratory positive, not blocker closure",
+      "current_status": "open",
+      "current_status_raw": "open - exploratory positive, not blocker closure",
       "deps": [],
-      "note_hash": "d22e8e415a94a893ff9f14e296f5c6224734f193ed2d1e20c445cdaf2243900a",
+      "note_hash": "5b31b3c65219b0682f9f9c056a32390b165c84450bb3a7b68ebdc7fd6d1a4a09",
       "path": "docs/WEAK_COUPLING_SIGN_SENSITIVITY_NOTE_2026-04-11.md",
       "runner_path": "scripts/frontier_weak_coupling_battery.py",
       "title": "Weak-Coupling Sign-Sensitivity Note"
     },
     "wide_family_h0125_bridge_reopen_audit": {
       "claim_id": "wide_family_h0125_bridge_reopen_audit",
-      "current_status": "unknown",
-      "current_status_raw": "the current fixed bridge family and the first genuinely wider",
+      "current_status": "bounded",
+      "current_status_raw": "bounded - current fixed bridge family and first wider `phys_w = 4` family both resolve as bounded negatives for weak-field closure",
       "deps": [],
-      "note_hash": "ea4d1426c751fe02e2196e7b4b6ea01c4513f8d626b512638b8615c48d853a4e",
+      "note_hash": "3c05a2735ac7ba396e1c34d5c054c2df52bb708e4421f5c4785c3c57210927b4",
       "path": "docs/WIDE_FAMILY_H0125_BRIDGE_REOPEN_AUDIT.md",
       "runner_path": null,
       "title": "Wide-Family `h = 0.125` Bridge Reopen Audit"
@@ -38487,10 +38487,10 @@
     },
     "wide_lattice_h2t_skeptic_audit_note": {
       "claim_id": "wide_lattice_h2t_skeptic_audit_note",
-      "current_status": "unknown",
-      "current_status_raw": "retainability audit of the most promotion-worthy wide-lattice",
+      "current_status": "bounded",
+      "current_status_raw": "bounded - finite-lattice distance-law replay; not universal distance-law closure",
       "deps": [],
-      "note_hash": "3f22d2c90ba0f5b7fd65f81d89e01d9c2893c1d12c9c509c0589b327d2d93545",
+      "note_hash": "1e8be864ff347412a6bdb1a60f93cb2f4d0dfc6e77af772d5c5366ae3bd888cc",
       "path": "docs/WIDE_LATTICE_H2T_SKEPTIC_AUDIT_NOTE.md",
       "runner_path": "scripts/wide_lattice_h2t_distance_replay.py",
       "title": "Wide-Lattice `h^2+T` Skeptic Audit Note"
@@ -38507,10 +38507,10 @@
     },
     "wilson_normalization_reconciliation_note_2026-04-11": {
       "claim_id": "wilson_normalization_reconciliation_note_2026-04-11",
-      "current_status": "unknown",
-      "current_status_raw": "methodological control note",
+      "current_status": "support",
+      "current_status_raw": "support - methodological control note",
       "deps": [],
-      "note_hash": "3aae8549a904056708a5878a42ec562a7c28f19a99fc52af353a4694f7efe540",
+      "note_hash": "9ed48adfd4c83a134da948bb3f02d620d8a43e3528b36ce91bc48ac9d5ceef41",
       "path": "docs/WILSON_NORMALIZATION_RECONCILIATION_NOTE_2026-04-11.md",
       "runner_path": null,
       "title": "Wilson Normalization / Comparison Reconciliation"
@@ -39280,10 +39280,10 @@
     },
     "yt_ew_coupling_bridge_note": {
       "claim_id": "yt_ew_coupling_bridge_note",
-      "current_status": "unknown",
-      "current_status_raw": "SUPERSEDED by `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`",
+      "current_status": "support",
+      "current_status_raw": "superseded_by `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`",
       "deps": [],
-      "note_hash": "7ba658461f270ebe5db0dfdca7b8b3289143b0bd2b762f51475a5f2ab6c54960",
+      "note_hash": "a3f417899b37d74eec8858ac51321dbdedeaf87f88c7a8053c78afdc0cccb7e2",
       "path": "docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
       "runner_path": null,
       "title": "y_t Bridge: EW Coupling Derivation and Sensitivity Analysis"
@@ -39638,10 +39638,10 @@
     },
     "yt_p1_i_s_revision_verification_note_2026-04-17": {
       "claim_id": "yt_p1_i_s_revision_verification_note_2026-04-17",
-      "current_status": "unknown",
-      "current_status_raw": "critical-review verification layer on top of the prior P1 citation note",
+      "current_status": "support",
+      "current_status_raw": "support - critical-review verification layer on top of the prior P1 citation note",
       "deps": [],
-      "note_hash": "74e65b599051cd39a6bd02aa7ed8b19e50d2e5d1bf2c126bab85c4e9ca40eeda",
+      "note_hash": "db70eed88df487f0e27b51235fca24defcddfce8fa34dd1b3353aca1fae3e9c6",
       "path": "docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_p1_i_s_revision_verification.py",
       "title": "P1 I_S Revision Verification Note (Critical Review of the 3x Upward Revision Claim)"
@@ -39718,10 +39718,10 @@
     },
     "yt_p2_taste_staircase_transport_note_2026-04-17": {
       "claim_id": "yt_p2_taste_staircase_transport_note_2026-04-17",
-      "current_status": "unknown",
-      "current_status_raw": "PARTIAL result. Structural preservation of the Ward ratio",
+      "current_status": "support",
+      "current_status_raw": "support - partial Ward-ratio transport result; the single EFT matching jump at `v` remains open",
       "deps": [],
-      "note_hash": "68434db7173d646327269793acfb9805218f3303069f50571543b394fabb4520",
+      "note_hash": "7ef3bb3ada101333a359bd1dc1167e9709d5e5c86182221da9502f27f442fa80",
       "path": "docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_p2_taste_staircase_transport.py",
       "title": "Taste-Staircase Transport Theorem (P2 Narrowing)"
@@ -41174,12 +41174,12 @@
     "root_count": 1178,
     "runners_with_path": 1172,
     "status_counts": {
-      "bounded": 440,
-      "open": 44,
+      "bounded": 446,
+      "open": 48,
       "proposed_promoted": 1,
       "proposed_retained": 372,
-      "support": 339,
-      "unknown": 459
+      "support": 375,
+      "unknown": 413
     }
   }
 }

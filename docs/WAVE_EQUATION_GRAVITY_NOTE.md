@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-12
 **Script:** `scripts/frontier_wave_equation_gravity.py`
-**Status:** 5/5 tests PASS
+**Status:** support - finite wave-equation gravity test battery passed
 
 ## Motivation
 

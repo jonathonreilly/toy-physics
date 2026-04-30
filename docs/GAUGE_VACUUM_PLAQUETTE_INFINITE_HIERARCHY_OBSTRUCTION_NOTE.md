@@ -1,8 +1,7 @@
 # Gauge-Vacuum Plaquette Infinite-Hierarchy Obstruction
 
 **Date:** 2026-04-16
-**Status:** exact obstruction theorem on the finite Wilson source surface;
-explicit connected-hierarchy closure at `beta = 6` still open
+**Status:** support - exact obstruction theorem on the finite Wilson source surface; explicit connected-hierarchy closure at `beta = 6` still open
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`
 
 ## Question

@@ -1,6 +1,6 @@
 # Universal GR A1 Invariant Section on `PL S^3 x R`
 
-**Status:** unknown (pending author classification)
+**Status:** support - exact A1 invariant section
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / selector note  

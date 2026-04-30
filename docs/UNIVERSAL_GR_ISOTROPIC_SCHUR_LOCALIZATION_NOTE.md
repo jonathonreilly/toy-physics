@@ -1,6 +1,6 @@
 # Universal GR Isotropic Schur Localization on `PL S^3 x R`
 
-**Status:** unknown (pending author classification)
+**Status:** support - exact isotropic Schur-localization step
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / isotropic background theorem step

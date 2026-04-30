@@ -1,6 +1,6 @@
 # Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`
 
-**Status:** unknown (pending author classification)
+**Status:** support - Lorentzian signature-class extension
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / signature-class extension

@@ -1,7 +1,7 @@
 # y_t Bridge: EW Coupling Derivation and Sensitivity Analysis
 
 **Date:** 2026-04-14
-**Status:** SUPERSEDED by `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`
+**Status:** superseded_by `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`
 
 > **WARNING:** This note predates the derivation of g_2 (from g_2²=1/4),
 > g_Y (from g_Y²=1/5), the color projection √(8/9) on y_t, and the

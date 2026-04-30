@@ -1,6 +1,6 @@
 # Universal GR Block-Constraint Interpretation on `PL S^3 x R`
 
-**Status:** unknown (pending author classification)
+**Status:** support - block-constraint interpretation
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / constraint interpretation test  
@@ -95,4 +95,3 @@ The direct universal route is now:
 - exact at the invariant `A1` projector level;
 - exact at the canonical block-localization level;
 - still missing the final operator-identification theorem for full GR.
-

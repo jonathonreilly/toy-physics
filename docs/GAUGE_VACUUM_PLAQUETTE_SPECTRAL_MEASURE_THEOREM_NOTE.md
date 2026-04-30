@@ -1,8 +1,7 @@
 # Gauge-Vacuum Plaquette Spectral-Measure Theorem
 
 **Date:** 2026-04-16
-**Status:** exact generating-object theorem on the finite Wilson source
-surface; explicit spectral-measure identification at `beta = 6` still open
+**Status:** support - exact generating-object theorem on the finite Wilson source surface; explicit spectral-measure identification at `beta = 6` still open
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py`
 
 ## Question

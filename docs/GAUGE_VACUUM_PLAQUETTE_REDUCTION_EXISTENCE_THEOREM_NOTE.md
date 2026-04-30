@@ -1,8 +1,7 @@
 # Gauge-Vacuum Plaquette Reduction Existence and Uniqueness Theorem
 
 **Date:** 2026-04-16
-**Status:** exact implicit reduction-law theorem on the finite Wilson
-evaluation surface; explicit nonperturbative closed form still open
+**Status:** support - exact implicit reduction-law theorem on the finite Wilson evaluation surface; explicit nonperturbative closed form still open
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`
 
 ## Question
