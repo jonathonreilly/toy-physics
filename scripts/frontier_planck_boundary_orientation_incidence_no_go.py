@@ -184,7 +184,7 @@ def max_symmetry_error(p: np.ndarray) -> float:
 
 
 def check(label: str, ok: bool, detail: str) -> bool:
-    print(f"[{'PASS' if ok else 'FAIL'}] {label}: {detail}")
+    print(f"[{'PASS' if ok else 'FAIL'} (A)] {label}: {detail}")
     return ok
 
 
