@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:42:04.527792+00:00
+**Generated:** 2026-04-30T02:42:07.960915+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -33,13 +33,14 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
+| `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
 | `audited_conditional` | 152 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 9 |
-| `unaudited` | 1271 |
+| `unaudited` | 1270 |
 
 | criticality | count |
 |---|---:|
@@ -86,7 +87,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 20 | `plaquette_self_consistency_note` | critical | 286 | 16.16 | `unaudited` | ~~audited_conditional~~ |
 | 21 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 116 | 15.87 | `unaudited` | ~~audited_conditional~~ |
 | 22 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 125 | 15.48 | `unaudited` | ~~audited_conditional~~ |
-| 23 | `site_phase_cube_shift_intertwiner_note` | critical | 277 | 15.12 | `unaudited` | support |
+| 23 | `site_phase_cube_shift_intertwiner_note` | critical | 277 | 15.12 | `audit_in_progress` | support |
 | 24 | `physical_lattice_necessity_note` | critical | 270 | 15.08 | `unaudited` | ~~audited_renaming~~ |
 | 25 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | critical | 124 | 14.97 | `unaudited` | ~~audited_conditional~~ |
 
@@ -95,6 +96,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
+| `site_phase_cube_shift_intertwiner_note` | support | audit_in_progress | support | - | - | - | - |
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
