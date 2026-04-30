@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:31:58.824352+00:00
+**Generated:** 2026-04-30T19:32:04.593468+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 299 |
+| bounded | 298 |
 | support | 264 |
 | open | 20 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 704 |
+| ~~audited_conditional~~ | 705 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 192 |
-| `audited_conditional` | 428 |
+| `audited_conditional` | 429 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 854 |
+| `unaudited` | 853 |
 
 | criticality | count |
 |---|---:|
@@ -490,6 +490,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `down_type_mass_ratio_ckm_dual_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
 | `early_family_transfer_connectivity_diagnosis` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `edge_deletion_boundary_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `edge_deletion_boundary_sweep_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `em_gravity_coexistence_2x2_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `emergent_lorentz_invariance_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `evolving_network_prototype_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -4880,6 +4881,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The earlier claim "gravity survives 70% edge deletion" was from  _(class `B`)_
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
+- **auditor confidence:** medium
+
+### `edge_deletion_boundary_sweep_note`
+
+- **Note:** [`EDGE_DELETION_BOUNDARY_SWEEP_NOTE.md`](../../docs/EDGE_DELETION_BOUNDARY_SWEEP_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** The question was whether the edge-deletion boundary seen in earlier graph-requirements work shows up as a stable 80%-90% connectivity transition on the same family when we sweep keep fractions across many seeds.  _(class `B`)_
+- **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
+- **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a bounded note without audit-ratified executable closure.
 - **auditor confidence:** medium
 
 ### `eigenvalue_anderson_phase_note_2026-04-11`
