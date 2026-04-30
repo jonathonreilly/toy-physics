@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:03:47.799364+00:00
+**Generated:** 2026-04-30T19:04:42.948511+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,23 +23,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 8 |
 | bounded | 345 |
 | support | 270 |
-| open | 19 |
+| open | 18 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 605 |
+| ~~audited_conditional~~ | 606 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 120 |
-| `audited_conditional` | 319 |
+| `audited_conditional` | 320 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1036 |
+| `unaudited` | 1035 |
 
 | criticality | count |
 |---|---:|
@@ -448,6 +448,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_dirac_global_lift_partial_theorem_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_dirac_two_higgs_canonical_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `neutrino_lane4_theorem_plan_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_majorana_current_stack_exhaustion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `neutrino_majorana_operator_axiom_first_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `newton_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -6142,6 +6143,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** At least one additional positive premise is required: a nonzero charge-2 Majorana primitive or equivalent admitted Majorana/seesaw extension, or a separate tiny Dirac `Y_nu` activation law on the surviving Dirac lane.  _(class `A`)_
 - **chain closes:** True — The claim is a negative boundary: the note does not close neutrino masses, but separates the current-stack mu_current=0 surface from the nonzero invertible seesaw benchmark and from a direct one-Higgs Dirac reading of y_nu^eff. The live runner verifies the non-invertibility, direct-Dirac overshoot, benchmark status, and remaining fork with PASS=10 FAIL=0.
 - **rationale:** The retained content is the fork no-go, not full neutrino quantitative closure. The note's load-bearing algebra closes because the current-stack Majorana zero law has det(M_R)=0 while the type-I seesaw benchmark uses a nonzero invertible M_R, so the two surfaces cannot be silently identified. The direct Dirac route also fails on its own terms: y_nu^eff v/sqrt(2) gives about 1.16e9 eV, while the benchmark meV scale would require a separate Yukawa of about 2.9e-13. Residual risk is downstream misuse: this audit does not ratify a final no-go against Majorana or Dirac neutrinos, the solar gap, PMNS quantities, or full Lane 4 mass closure.
+- **auditor confidence:** high
+
+### `neutrino_lane4_theorem_plan_note_2026-04-28`
+
+- **Note:** [`NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md`](../../docs/NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-a-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The plan does not derive any neutrino mass or splitting; it produces the structural roadmap.  _(class `B`)_
+- **chain closes:** False — The roadmap depends on upstream retained/open Lane-4 inputs and future derivation targets, but the ledger supplies no one-hop dependencies for checking those inputs. The source note explicitly says no neutrino mass, splitting, globalization, or seesaw closure is derived.
+- **rationale:** Issue: the phase ordering and target priority map rely on upstream framework-status claims and open theorem objects that are not supplied as ledger dependencies. Why this blocks: the roadmap may be useful, but its load-bearing dependency ordering cannot be audit-ratified from the restricted inputs. Repair target: register the actual one-hop authorities and separately audit the 4D globalization, 4E mass mechanism, and downstream arithmetic targets. Claim boundary until fixed: roadmap and planning inventory only, with no neutrino quantitative closure.
 - **auditor confidence:** high
 
 ### `neutrino_majorana_current_stack_exhaustion_note`
