@@ -11,10 +11,11 @@ and form-factor derivation paths.
 **First parallel-worker target:** complete. The lane now has a support
 roadmap, a `sqrt(sigma)` retention-gate audit, and a Banks-Casher `Sigma`
 scoping no-go.
-**Current highest-leverage targets:** (i) close the `(B2)` quenched-to-dynamical
-screening budget for `sqrt(sigma)` at `beta=6.0`, `N_f=2+1`; (ii) have Lane 3
-retain the combined `m_u + m_d` light-quark sum, which is the shortest unblocker
-for the GMOR pion route once `Sigma` and `f_pi` are addressed.
+**Current highest-leverage targets:** (i) close the repaired `(B2)` gate for
+`sqrt(sigma)` at `beta=6.0`, `N_f=2+1`: first define the full-QCD dynamical
+observable, then import or compute its value with a residual budget; (ii) have
+Lane 3 retain the combined `m_u + m_d` light-quark sum, which is the shortest
+unblocker for the GMOR pion route once `Sigma` and `f_pi` are addressed.
 **Non-claim boundary:** this file opens the lane only; it does not derive any
 hadron mass.
 
@@ -86,6 +87,20 @@ observables have to be retained or the QCD sector remains incomplete.
   records the Banks-Casher `Sigma` no-active-route result on current
   framework content: existing `L=4,6` data is finite-volume/lattice-free,
   and no structural identity currently pins `rho_Dirac(0)`.
+
+### Support landed 2026-04-30
+
+- [HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md](../../HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md)
+  repairs the `(B2)` target: the rough x0.96 screening factor cannot promote
+  `sqrt(sigma)`, a PDG backsolve is circular, and a literal asymptotic
+  full-QCD string tension is underdefined because full QCD strings break.
+  The gate is now split into `(B2a)` observable definition and `(B2b)` bridge
+  value plus residual budget.
+- [HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md](../../HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md)
+  tests modern full-QCD static-energy inputs. The bridge is materially stronger
+  than rough x0.96, but still bounded: `r0`/`r1` are the cleanest `N_f=2+1`
+  force-scale observables, while finite-window `sigma` carries a
+  static-potential convention split and the `(B5)` framework link remains open.
 
 ## 3. Derivation targets
 
@@ -164,9 +179,11 @@ budget like the YT/top transport lane has).
 
 **Phase 1 (now, in parallel with Lane 3):**
 
-1. **`sqrt(sigma)` retained-with-budget gate (3E)** — close `(B2)` with a
-   proper `N_f=2+1` dynamical screening calculation at `beta=6.0`, and keep
-   `(B5)` framework-to-standard-YM identification as an explicit residual until
+1. **`sqrt(sigma)` retained-with-budget gate (3E)** — close repaired `(B2)`:
+   define the full-QCD observable first (pre-breaking effective tension,
+   static-force scale, or static-energy fit window), then import or compute
+   the `N_f=2+1` value with an uncertainty budget. Keep `(B5)`
+   framework-to-standard-YM identification as an explicit residual until
    large-volume Wilson-loop/Creutz-ratio checks close it.
 2. **`Sigma` / `f_pi` support work** — Banks-Casher is currently a no-active
    route without large-volume lattice data or a new structural identity; `f_pi`

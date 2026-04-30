@@ -1,0 +1,54 @@
+========================================================================================
+LANE 1 SQRT(SIGMA) B2 GATE REPAIR AUDIT
+========================================================================================
+
+Question:
+  Can the existing rough quenched-to-dynamical screening factor
+  close the Lane 1 sqrt(sigma) retention gate?
+
+Answer:
+  No. B2 must first define the N_f=2+1 dynamical observable and
+  then import or compute it with a residual budget and B5 linkage.
+
+----------------------------------------------------------------------------------------
+Part 1: repo claim-state boundary
+----------------------------------------------------------------------------------------
+  [PASS] Lane 1 names B2 as a current highest-leverage target
+  [PASS] B2 is recorded as the dominant residual, not a closed result
+  [PASS] support note refuses sqrt(sigma) promotion until B2 is replaced
+  [PASS] audit ledger says confinement/string-tension chain does not close
+
+----------------------------------------------------------------------------------------
+Part 2: current Method 2 screening arithmetic
+----------------------------------------------------------------------------------------
+  sqrt(sigma)_quenched = 484.11 MeV
+  rough x0.96 value    = 464.75 MeV
+  comparator central factor = 0.9089
+  comparator 1-sigma factor band = [0.8676, 0.9502]
+  [PASS] replays the existing quenched Method 2 value  (484.11 MeV)
+  [PASS] rough x0.96 reproduces the bounded 465 MeV scale  (464.75 MeV)
+  [PASS] central comparator would require about x0.909, not x0.96  (factor=0.9089)
+  [PASS] rough x0.96 sits above the comparator one-sigma factor band  (x0.96 > 0.9502)
+
+----------------------------------------------------------------------------------------
+Part 3: B2 closure-gate model
+----------------------------------------------------------------------------------------
+  rough_x0p96_existing_factor: 1/5 gate bits; closes=False
+  pdg_backsolved_factor: 0/5 gate bits; closes=False
+  external_static_energy_or_force_bridge: 4/5 gate bits; closes=False
+  [PASS] existing rough factor fails the B2 closure gate  (no N_f=2+1 ensemble, observable definition, uncertainty, or B5 link)
+  [PASS] PDG backsolve fails as circular comparator use  (target value cannot define the screening factor)
+  [PASS] external static-energy bridge is the nearest viable route but still needs B5  (all but framework-to-standard-QCD linkage)
+  [PASS] no branch-local candidate currently closes B2
+
+----------------------------------------------------------------------------------------
+Part 4: repaired gate artifact checks
+----------------------------------------------------------------------------------------
+  [PASS] new note splits B2 into observable-definition and bridge-value gates
+  [PASS] new note records string breaking as the reason asymptotic sigma is not the target
+  [PASS] new note forbids rough-factor and comparator-backsolve promotion
+  [PASS] canonical harness index points to this B2 gate repair runner
+
+========================================================================================
+PASS=16 FAIL=0
+========================================================================================

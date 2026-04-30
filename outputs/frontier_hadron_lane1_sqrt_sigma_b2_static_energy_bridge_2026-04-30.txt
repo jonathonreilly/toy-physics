@@ -1,0 +1,60 @@
+========================================================================================
+LANE 1 SQRT(SIGMA) B2 STATIC-ENERGY BRIDGE SCOUT
+========================================================================================
+
+Question:
+  Does modern full-QCD static-energy literature supply a retained
+  replacement for the rough x0.96 B2 screening factor?
+
+Answer:
+  No. It supplies a useful bounded bridge, but the sigma value is
+  convention/window dependent and B5 remains open.
+
+----------------------------------------------------------------------------------------
+Part 1: static-energy bridge values
+----------------------------------------------------------------------------------------
+  TUM r0 = 0.4547 +/- 0.0064 fm
+  TUM r0*sqrt(sigma), A_r0 = 1.077 +/- 0.016
+  TUM r0*sqrt(sigma), pi/12 = 1.110 +/- 0.016
+  sqrt(sigma), A_r0 = 467.39 +/- 9.57 MeV
+  sqrt(sigma), pi/12 = 481.71 +/- 9.70 MeV
+  A-choice split = 14.32 MeV (3.02%)
+  [PASS] A_r0 static-energy bridge is near the existing rough x0.96 value  (467.39 vs rough 464.75 MeV)
+  [PASS] pi/12 static-energy bridge is close to the quenched Method 2 value  (481.71 vs quenched 484.11 MeV)
+  [PASS] static-potential convention split is larger than a sub-percent retention target  (3.02%)
+
+----------------------------------------------------------------------------------------
+Part 2: N_f=2+1 force-scale diagnostic
+----------------------------------------------------------------------------------------
+  CLS r0 = 0.4729 +/- 0.0075 fm
+  CLS r1 = 0.3127 +/- 0.0040 fm
+  CLS r0/r1 direct = 1.532 +/- 0.012
+  CLS r0/r1 from values = 1.512 +/- 0.031
+  cross-source A_r0 diagnostic = 449.40 +/- 9.73 MeV
+  cross-source pi/12 diagnostic = 463.17 +/- 9.89 MeV
+  [PASS] CLS r0/r1 is internally consistent with its r0 and r1 values  (computed 1.512, quoted 1.532)
+  [PASS] CLS supplies N_f=2+1 force scales but not a unique sigma bridge  (r0/r1 force-scale bridge only)
+  [PASS] cross-source diagnostic remains compatible with the rough value but is not a closure  (rough 464.75, diagnostic 463.17 +/- 9.89)
+
+----------------------------------------------------------------------------------------
+Part 3: bridge closure-gate model
+----------------------------------------------------------------------------------------
+  CLS_2025_force_scales: 4/6 gate bits; closes=False
+  TUMQCD_2023_fit_window_sigma: 4/6 gate bits; closes=False
+  rough_x0p96_repo_factor: 1/6 gate bits; closes=False
+  [PASS] CLS force-scale bridge cannot by itself map back to sqrt(sigma)
+  [PASS] TUMQCD finite-window sigma remains scheme-split and B5-open
+  [PASS] rough repo factor remains weaker than either external bridge route
+  [PASS] no bridge candidate closes retained B2
+
+----------------------------------------------------------------------------------------
+Part 4: artifact checks
+----------------------------------------------------------------------------------------
+  [PASS] note records the TUMQCD A-choice split
+  [PASS] note keeps the bridge bounded rather than retained
+  [PASS] canonical index includes the static-energy bridge runner
+  [PASS] loop state advanced to cycle 2
+
+========================================================================================
+PASS=14 FAIL=0
+========================================================================================
