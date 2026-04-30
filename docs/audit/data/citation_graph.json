@@ -18261,7 +18261,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T10:26:30.585294+00:00",
+  "generated_at": "2026-04-30T10:27:41.624336+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19778,7 +19778,7 @@
         "hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28",
         "cl4c_carrier_axiom_consequence_map_note_2026-04-28"
       ],
-      "note_hash": "b33b22592fe4b46f9df6f097dad2419f0babecee9cc04d9481c9ed2f2caccec5",
+      "note_hash": "49c478d69d4b0db2283e3dba793136533ef148c18cc30da09097bf4abf62ffdb",
       "path": "docs/AXIOM_STACK_MINIMALITY_CL4C_NO_GO_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/frontier_axiom_stack_minimality_cl4c_no_go.py",
       "title": "Axiom-Stack Minimality: Cl_4(C) No-Go Theorem (V1)"

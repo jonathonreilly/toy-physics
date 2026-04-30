@@ -12,6 +12,15 @@ Forces Axiom* (Cl_4(C) on P_A H_cell) as the unique minimal extension
 that closes the (G1) gate. Bare `retained` / `promoted` is NOT used.
 **Primary runner:** `scripts/frontier_axiom_stack_minimality_cl4c_no_go.py`
 
+## Status correction (audit-driven)
+
+PR #196 audited this note as `audited_failed`: direct finite linear
+algebra on `H_cell = (C^2)^{\otimes 4}` gives a full `M_4(C)`
+restriction on `P_A H_cell`, with explicit `Cl_4(C)` generators in
+`Op(A_min)|P_A`. The individual route no-gos remain route-specific
+records, but this assembled non-derivability theorem and its forced
+Axiom* conclusion should not be used as live science.
+
 **Cited authorities (one-hop deps):**
 - [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md)
   — A_min input stack: Cl(3), Z^3, Grassmann/staggered-Dirac, g_bare=1.
