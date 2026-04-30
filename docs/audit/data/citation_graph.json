@@ -8918,6 +8918,10 @@
     },
     {
       "from": "lanes.active_working_lanes_2026-04-26",
+      "to": "hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30"
+    },
+    {
+      "from": "lanes.active_working_lanes_2026-04-26",
       "to": "lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26"
     },
     {
@@ -8955,6 +8959,10 @@
     {
       "from": "lanes.active_working_lanes_2026-04-26",
       "to": "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27"
+    },
+    {
+      "from": "lanes.active_working_lanes_2026-04-26",
+      "to": "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29"
     },
     {
       "from": "lanes.active_working_lanes_2026-04-26",
@@ -9106,6 +9114,22 @@
     },
     {
       "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
+      "to": "hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30"
+    },
+    {
+      "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
+      "to": "hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30"
+    },
+    {
+      "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
+      "to": "hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30"
+    },
+    {
+      "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
+      "to": "hadron_lane1_sqrt_sigma_b5_ladder_budget_note_2026-04-30"
+    },
+    {
+      "from": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
       "to": "graph_first_su3_integration_note"
     },
     {
@@ -9215,6 +9239,30 @@
     {
       "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
       "to": "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27"
+    },
+    {
+      "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+      "to": "hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29"
+    },
+    {
+      "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+      "to": "hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29"
+    },
+    {
+      "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+      "to": "hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29"
+    },
+    {
+      "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+      "to": "hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29"
+    },
+    {
+      "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+      "to": "hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29"
+    },
+    {
+      "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+      "to": "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29"
     },
     {
       "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
@@ -18185,7 +18233,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T09:55:24.630657+00:00",
+  "generated_at": "2026-04-30T10:09:35.790192+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -26665,6 +26713,46 @@
       "runner_path": "scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py",
       "title": "Hadron Lane 1 Confinement-To-Mass Firewall"
     },
+    "hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30": {
+      "claim_id": "hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30",
+      "current_status": "support",
+      "current_status_raw": "support / open-lane gate-repair audit; no theorem or claim",
+      "deps": [],
+      "note_hash": "9012f86379b8f596ce0b84e505ffa4018831a7a8228ec1a47da5fdeeb327d4e3",
+      "path": "docs/HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_hadron_lane1_sqrt_sigma_b2_gate_repair.py",
+      "title": "Lane 1 `sqrt(sigma)` B2 Gate Repair Audit"
+    },
+    "hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30": {
+      "claim_id": "hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30",
+      "current_status": "support",
+      "current_status_raw": "support / bridge scout; no theorem or claim promotion. This",
+      "deps": [],
+      "note_hash": "a001361909bd131b19c2262b0261e7a6ca5c65b1de52526059f9a589b3dd7443",
+      "path": "docs/HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge.py",
+      "title": "Lane 1 `sqrt(sigma)` B2 Static-Energy Bridge Scout"
+    },
+    "hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30": {
+      "claim_id": "hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30",
+      "current_status": "support",
+      "current_status_raw": "support / current-surface no-go; no theorem or claim",
+      "deps": [],
+      "note_hash": "e63cec5190f2e85fe514a960ae1c580082310f4d04cdfbb44234e545a57a6f8a",
+      "path": "docs/HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_hadron_lane1_sqrt_sigma_b5_framework_link_audit.py",
+      "title": "Lane 1 `sqrt(sigma)` B5 Framework-Link Audit"
+    },
+    "hadron_lane1_sqrt_sigma_b5_ladder_budget_note_2026-04-30": {
+      "claim_id": "hadron_lane1_sqrt_sigma_b5_ladder_budget_note_2026-04-30",
+      "current_status": "support",
+      "current_status_raw": "support / compute-budget audit; no theorem or claim",
+      "deps": [],
+      "note_hash": "360e75fc7264ce0ad3fa1ed2a8d9d41617b5d8ad5dd3b592ad5312060bfd0928",
+      "path": "docs/HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_hadron_lane1_sqrt_sigma_b5_ladder_budget.py",
+      "title": "Lane 1 `sqrt(sigma)` B5 Finite-Volume Ladder Budget"
+    },
     "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27": {
       "claim_id": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
       "current_status": "support",
@@ -26916,6 +27004,16 @@
       "runner_path": null,
       "title": "Holographic Boundary-Law Probe (Bounded Companion Note)"
     },
+    "hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29": {
+      "claim_id": "hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support / current-surface negative boundary result on",
+      "deps": [],
+      "note_hash": "9d9300ff3f69372e5fe9ee7f526fa1a175c6aee416feceeb6a553685d41b01f2",
+      "path": "docs/HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_hubble_lane5_c1_a1_grassmann_boundary_car_obstruction.py",
+      "title": "Lane 5 `(C1)` A1 Grassmann-To-Boundary CAR Obstruction Note"
+    },
     "hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28": {
       "claim_id": "hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28",
       "current_status": "proposed_retained",
@@ -26925,6 +27023,16 @@
       "path": "docs/HUBBLE_LANE5_C1_A1_GRASSMANN_NO_GO_NOTE_2026-04-28.md",
       "runner_path": "scripts/frontier_hubble_c1_a1_grassmann_no_go.py",
       "title": "Lane 5 `(C1)` Gate \u2014 A1 Grassmann-from-axiom-3 No-Go"
+    },
+    "hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29": {
+      "claim_id": "hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support / current-surface negative boundary result on",
+      "deps": [],
+      "note_hash": "fe609913789b7cf5ca4bcdc5cd18a05ad0e995c3735f82cd80951d27d1ee1084",
+      "path": "docs/HUBBLE_LANE5_C1_A2_ACTION_UNIT_METROLOGY_OBSTRUCTION_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_hubble_lane5_c1_a2_action_unit_metrology_obstruction.py",
+      "title": "Lane 5 `(C1)` A2 Action-Unit Metrology Obstruction Note"
     },
     "hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28": {
       "claim_id": "hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28",
@@ -26936,6 +27044,16 @@
       "runner_path": "scripts/frontier_hubble_c1_a2_action_unit_no_go.py",
       "title": "Lane 5 `(C1)` Gate \u2014 A2 g_bare-Action-Unit No-Go"
     },
+    "hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29": {
+      "claim_id": "hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support / current-surface boundary result on `main`; does",
+      "deps": [],
+      "note_hash": "2f4e8372af7600fff73b646d175d9f11e6d8e58c6e201ae651b328ec493263d5",
+      "path": "docs/HUBBLE_LANE5_C1_A4_PARITY_GATE_CAR_BOUNDARY_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_hubble_lane5_c1_a4_parity_gate_car_boundary.py",
+      "title": "Lane 5 `(C1)` A4 Parity-Gate-To-CAR Boundary Note"
+    },
     "hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28": {
       "claim_id": "hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28",
       "current_status": "proposed_retained",
@@ -26946,6 +27064,16 @@
       "runner_path": "scripts/frontier_hubble_c1_a4_parity_gate_no_go.py",
       "title": "Lane 5 `(C1)` Gate \u2014 A4 Parity-Gate-from-A_min No-Go"
     },
+    "hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29": {
+      "claim_id": "hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support / current-surface negative boundary result on",
+      "deps": [],
+      "note_hash": "95665ba072d9c62d7a96753505195870169c5836078803f8d72b3d4ef1cee97e",
+      "path": "docs/HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py",
+      "title": "Lane 5 `(C1)` A5 Boolean-Coframe Restriction Obstruction Note"
+    },
     "hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28": {
       "claim_id": "hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28",
       "current_status": "open",
@@ -26955,6 +27083,26 @@
       "path": "docs/HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md",
       "runner_path": "scripts/frontier_hubble_c1_a5_minimal_carrier_axiom_audit.py",
       "title": "Lane 5 `(C1)` Gate \u2014 A5 Minimal-Carrier-Axiom Audit"
+    },
+    "hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29": {
+      "claim_id": "hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support / current-surface boundary result on `main`; does",
+      "deps": [],
+      "note_hash": "02b31a25717595aa59703348468521f90ed72b776f397ea8c65e21c00bf80497",
+      "path": "docs/HUBBLE_LANE5_C1_A6_BILINEAR_ACTIVE_BLOCK_SUPPORT_BOUNDARY_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py",
+      "title": "Lane 5 `(C1)` A6 Bilinear Active-Block Support/Boundary Note"
+    },
+    "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29": {
+      "claim_id": "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support / open boundary audit on `main`; does not close",
+      "deps": [],
+      "note_hash": "897992c7585c9f1997226f9a41c9d6b8e4d880c6402ef71dace3d4de1d191826",
+      "path": "docs/HUBBLE_LANE5_C1_CARRIER_METROLOGY_AXIOM_AUDIT_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py",
+      "title": "Lane 5 `(C1)` Carrier/Metrology Axiom Audit Note"
     },
     "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28": {
       "claim_id": "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28",
@@ -28378,6 +28526,7 @@
         "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
         "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
         "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
+        "hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30",
         "lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26",
         "atomic_rydberg_dependency_firewall_note_2026-04-27",
         "lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26",
@@ -28388,6 +28537,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
         "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
+        "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29",
         "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26",
         "frontier_extension_lane_opening_note_2026-04-25",
         "chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25",
@@ -28397,7 +28547,7 @@
         "ai_methodology.raw.readme",
         "lanes.open_science.readme"
       ],
-      "note_hash": "6d1a14df7bf775ec19a65ddc60782bd40a097cef9f712daa97c02cba4e2f2435",
+      "note_hash": "5460be5ce14b2e58104dfb0651ebd6415b7878ff4b99648d947ba319d55b3faf",
       "path": "docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md",
       "runner_path": null,
       "title": "Active Working Lanes"
@@ -28478,11 +28628,15 @@
         "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
         "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
         "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27",
+        "hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30",
+        "hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30",
+        "hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30",
+        "hadron_lane1_sqrt_sigma_b5_ladder_budget_note_2026-04-30",
         "graph_first_su3_integration_note",
         "alpha_s_derived_note",
         "quark_mass_ratio_review_packet_2026-04-18"
       ],
-      "note_hash": "194ef27b3219c47bc963c2322ca513e46471721661f1f4f548785a8b57b83eb7",
+      "note_hash": "74c7c84e8993485495c2af7754832c01b8fbe8d250380b46fd4614e614f78013",
       "path": "docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md",
       "runner_path": null,
       "title": "Lane 1 \u2014 Hadron Mass Program"
@@ -28550,6 +28704,12 @@
       "current_status_raw": "ACCEPTED CRITICAL OPEN SCIENCE LANE on `main`; no theorem or claim",
       "deps": [
         "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
+        "hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29",
+        "hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29",
+        "hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29",
+        "hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29",
+        "hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29",
+        "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29",
         "publication.ci3_z3.inputs_and_qualifiers_note",
         "hubble_tension_structural_lock_theorem_note_2026-04-26",
         "primordial_spectrum_note",
@@ -28568,7 +28728,7 @@
         "gravity_cosmology_tower_lambda_spectral_bridge_theorem_note_2026-04-25",
         "cosmology_scale_identification_and_reduction_note"
       ],
-      "note_hash": "ecb43a821181f6ad41e7b10939c8be8c1eb3b5328d178e129ff3c18d49660f10",
+      "note_hash": "44e07006a84541ee86ec332cb2e3f52d0866e28fae9b808c13fc62f8693c009b",
       "path": "docs/lanes/open_science/05_HUBBLE_CONSTANT_DERIVATION_OPEN_LANE_2026-04-26.md",
       "runner_path": null,
       "title": "Lane 5 \u2014 Hubble Constant H_0 Derivation"
@@ -40337,6 +40497,10 @@
     "h2t_h0125_narrow_bridge_note",
     "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27",
     "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
+    "hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30",
+    "hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30",
+    "hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30",
+    "hadron_lane1_sqrt_sigma_b5_ladder_budget_note_2026-04-30",
     "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
     "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
     "hard_geometry_gravity_window_note",
@@ -40357,10 +40521,16 @@
     "higher_symmetry_gravity_probe_note",
     "higher_symmetry_joint_validation_note",
     "holographic_probe_note_2026-04-11",
+    "hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29",
     "hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28",
+    "hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29",
     "hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28",
+    "hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29",
     "hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28",
+    "hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29",
     "hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28",
+    "hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29",
+    "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29",
     "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28",
     "hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28",
     "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
@@ -41020,17 +41190,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4546,
+    "edge_count": 4558,
     "leaf_count": 740,
-    "node_count": 1662,
-    "root_count": 1195,
-    "runners_with_path": 747,
+    "node_count": 1672,
+    "root_count": 1205,
+    "runners_with_path": 757,
     "status_counts": {
       "bounded": 253,
       "open": 43,
       "proposed_promoted": 1,
       "proposed_retained": 407,
-      "support": 162,
+      "support": 172,
       "unknown": 796
     }
   }

@@ -87,6 +87,25 @@ observables have to be retained or the QCD sector remains incomplete.
   framework content: existing `L=4,6` data is finite-volume/lattice-free,
   and no structural identity currently pins `rho_Dirac(0)`.
 
+### Support landed 2026-04-30
+
+- [HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md](../../HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md)
+  sharpens the old `(B2)` target: a single quenched-to-dynamical
+  multiplicative factor is not itself a retained observable once full-QCD
+  string breaking is handled honestly. The gate splits into `(B2a)`
+  observable-definition and `(B2b)` bridge-value closure.
+- [HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md](../../HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md)
+  shows that modern full-QCD static-energy literature is useful bridge
+  material but still does not promote the bounded `sqrt(sigma)` row.
+- [HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md](../../HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md)
+  records the current-surface no-go for `(B5)`: the repo still lacks a
+  framework-side large-volume Wilson/Creutz/static-force ladder proving
+  equivalence to standard `SU(3)` lattice QCD at the bridge level.
+- [HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md](../../HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md)
+  narrows the next executable route: a local `L = 4, 6, 8` ladder is a
+  scout only, while genuine `(B5)` closure needs the larger-volume
+  Wilson/Creutz / force-scale class.
+
 ## 3. Derivation targets
 
 ### 3A. Pion mass via Gell-Mann-Oakes-Renner (chiral SB)
@@ -164,9 +183,10 @@ budget like the YT/top transport lane has).
 
 **Phase 1 (now, in parallel with Lane 3):**
 
-1. **`sqrt(sigma)` retained-with-budget gate (3E)** — close `(B2)` with a
-   proper `N_f=2+1` dynamical screening calculation at `beta=6.0`, and keep
-   `(B5)` framework-to-standard-YM identification as an explicit residual until
+1. **`sqrt(sigma)` retained-with-budget gate (3E)** — first close `(B2a)`
+   by defining the full-QCD observable honestly, then close `(B2b)` with a
+   proper `N_f=2+1` bridge value and uncertainty budget. Keep `(B5)`
+   framework-to-standard-YM identification as an explicit residual until
    large-volume Wilson-loop/Creutz-ratio checks close it.
 2. **`Sigma` / `f_pi` support work** — Banks-Casher is currently a no-active
    route without large-volume lattice data or a new structural identity; `f_pi`
