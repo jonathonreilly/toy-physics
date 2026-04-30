@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:42:14.621192+00:00
+**Generated:** 2026-04-30T02:42:17.924309+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,9 +24,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 205 |
 | support | 105 |
 | open | 24 |
-| unknown | 530 |
+| unknown | 529 |
 | ~~audited_decoration~~ | 4 |
-| ~~audited_numerical_match~~ | 47 |
+| ~~audited_numerical_match~~ | 48 |
 | ~~audited_renaming~~ | 72 |
 | ~~audited_conditional~~ | 427 |
 | ~~audited_failed~~ | 91 |
@@ -38,9 +38,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 153 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
-| `audited_numerical_match` | 19 |
+| `audited_numerical_match` | 20 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1268 |
+| `unaudited` | 1267 |
 
 | criticality | count |
 |---|---:|
@@ -390,6 +390,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_from_mass_hierarchy_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_continuum_limit_velocity_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
+| `dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16` | unknown | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5 | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `kubo_continuum_limit_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -1118,6 +1119,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `scripts/frontier_dm_leptogenesis_pmns_projector_interface.py`
   - `missing theorem deriving dW_e^H on E_e from Cl(3) on Z^3`
 - **auditor confidence:** 0.92
+
+### `dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_MINIMUM_INFORMATION_SOURCE_LAW_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_PMNS_MINIMUM_INFORMATION_SOURCE_LAW_NOTE_2026-04-16.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Among all positive off-seed sources on the same seed surface satisfying eta_{i_*} / eta_obs = 1, choose the one minimizing I_seed.  _(class `G`)_
+- **chain closes:** False — The optimizer closes the target because exact agreement with eta_obs is imposed as a constraint; the note itself calls this an invented post-axiom selector law rather than a derived law.
+- **rationale:** Issue: the load-bearing source is selected by minimizing a chosen information cost under the explicit constraint eta_{i_*}/eta_obs = 1. Why this blocks: the exact closure is built into the optimization target, so the runner verifies a calibrated/tuned source law rather than deriving the source from retained framework dynamics. Repair target: derive the information functional and closure constraint independently from retained microscopic dynamics, or remove the eta_obs equality as an imposed selector. Claim boundary until fixed: the note may report a least-deformed calibrated closure source for the PMNS-assisted branch, not an audited axiom-first leptogenesis prediction.
+- **auditor confidence:** high
 
 ### `dm_neutrino_cascade_geometry_note_2026-04-14`
 
