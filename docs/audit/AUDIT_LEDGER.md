@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:47:33.062554+00:00
+**Generated:** 2026-04-30T18:51:58.184946+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 108 |
+| `audited_clean` | 109 |
 | `audited_conditional` | 306 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1061 |
+| `unaudited` | 1060 |
 
 | criticality | count |
 |---|---:|
@@ -121,6 +121,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `claude_complex_action_carryover_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `composite_source_additivity_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `cycle_battery_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `cycle_break_slice_note_2026-04-10` | unknown | ~~audited_clean~~ | unknown | cross_family | codex-current | C | - |
 | `distance_law_3d_64_closure_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `distance_law_preserving_third_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -2318,6 +2319,18 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
+
+### `cycle_battery_note_2026-04-10`
+
+- **Note:** [`CYCLE_BATTERY_NOTE_2026-04-10.md`](../../docs/CYCLE_BATTERY_NOTE_2026-04-10.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-current-ca82-fresh`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The staggered fermion plus parity-coupled potential-gravity architecture passes the 9-row cycle battery on the random-geometric, growing, and layered-cycle bipartite graph families, with the listed caveats.  _(class `C`)_
+- **chain closes:** True — For the bounded claim actually stated, the runner constructs the three graph families and verifies the reported source, force-proxy, norm, gauge, and gap-characterization rows. The note explicitly limits the force rows to shell-radial proxies and does not claim exact lattice-coordinate gravitational direction.
+- **rationale:** The runner output matches the note: all three families score 9/9, and the note carries the necessary caveats about shell-force proxies, two-sign nonselectivity, and graph-dependent force scale. Residual risk is that this remains a bounded harness result rather than a physical attraction theorem, but that boundary is stated in the source note.
+- **auditor confidence:** medium
 
 ### `cycle_break_slice_note_2026-04-10`
 
