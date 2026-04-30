@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:06:51.858001+00:00
+**Generated:** 2026-04-30T19:06:59.975121+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
 | bounded | 343 |
-| support | 269 |
+| support | 268 |
 | open | 17 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 610 |
+| ~~audited_conditional~~ | 611 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 123 |
-| `audited_conditional` | 324 |
+| `audited_conditional` | 325 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1028 |
+| `unaudited` | 1027 |
 
 | criticality | count |
 |---|---:|
@@ -218,6 +218,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_single_source_compare_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `weak_coupling_retention_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `abcc_cp_phase_no_go_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `accessible_prediction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `action_crossover_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `action_geometry_bridge_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -628,6 +629,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 
 ## Audit findings (full)
+
+### `abcc_cp_phase_no_go_theorem_note_2026-04-19`
+
+- **Note:** [`ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md`](../../docs/ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-c-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Given sigma_hier = (2,1,0) and the T2K bound excluding sin(delta_CP) > +0.247, every known det(H)<0 chi^2=0 PMNS solution is observationally excluded.  _(class `D`)_
+- **chain closes:** False — The runner verifies the known-basin comparator checks, but the theorem depends on unregistered sigma_hier/P3 inputs, a hard-coded external T2K bound, and non-exhaustive C_neg search.
+- **rationale:** Issue: the no-go closes only for the known C_neg basins after importing the physical sigma assignment and T2K comparator. Why this blocks: the packet does not derive sigma_hier from one-hop retained deps, does not make T2K a ledger authority, and explicitly leaves exhaustive C_neg basin exclusion open. Repair target: register the sigma_hier/P3 dependencies and either prove the structural Jarlskog sign claim for all C_neg solutions or narrow the theorem to the two known basins. Claim boundary until fixed: known C_neg basins are excluded under sigma=(2,1,0) plus the stated T2K bound.
+- **open / conditional deps cited:**
+  - `SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md`
+- **auditor confidence:** high
 
 ### `accessible_prediction_note`
 
