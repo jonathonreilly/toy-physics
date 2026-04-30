@@ -1,4 +1,4 @@
-"""Runner: cosmological constant Λ retention-with-R-budget (Block 9)."""
+"""Runner: cosmological constant Λ R-budget support (Block 9)."""
 
 from __future__ import annotations
 
@@ -29,7 +29,7 @@ def read_doc(p: str) -> str:
 
 def main() -> int:
     print("=" * 72)
-    print("Cosmological Constant Λ Retention-with-R-Budget (Block 9) audit")
+    print("Cosmological Constant Λ R-Budget Support (Block 9) audit")
     print("=" * 72)
 
     spectral = read_doc("COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md")
@@ -48,10 +48,10 @@ def main() -> int:
     audit("S^3 general R derivation exists", len(s3_general) > 0, "retained")
 
     block4 = read_doc("AXIOM_STACK_MINIMALITY_CL4C_NO_GO_THEOREM_NOTE_2026-04-29.md")
-    audit("Block 4 axiom-stack minimality theorem exists",
+    audit("Block 4 route note exists for historical budget context",
           "Cl_4(C)" in block4 and "Axiom*" in block4,
-          "Block 4 prerequisite")
-    audit("Block 4 confirms R numerical value gated on Axiom*",
+          "historical context")
+    audit("C1/Axiom* budget surface is named",
           "Hubble" in block4 or "(C1)" in block4,
           "R-budget basis")
 
@@ -71,26 +71,28 @@ def main() -> int:
           f"R = √(3/Λ_obs) = {R_implied:.3e} m")
 
     own = read_doc("COSMOLOGICAL_CONSTANT_RETENTION_WITH_R_BUDGET_THEOREM_NOTE_2026-04-29.md")
-    audit("V1 actual_current_surface_status: proposed_retained_with_budget",
-          "actual_current_surface_status: proposed_retained_with_budget" in own, "firewall")
-    audit("V1 audit_required_before_effective_retained: true",
-          "audit_required_before_effective_retained: true" in own, "firewall")
+    audit("V1 actual_current_surface_status: bounded",
+          "actual_current_surface_status: bounded" in own, "firewall")
+    audit("V1 proposal_allowed: false",
+          "proposal_allowed: false" in own, "firewall")
+    audit("V1 audit_required_before_effective_retained: false",
+          "audit_required_before_effective_retained: false" in own, "firewall")
     audit("V1 bare_retained_allowed: false",
           "bare_retained_allowed: false" in own, "firewall")
     audit("V1 r_function_identity_status: retained_exact",
           "r_function_identity_status: retained_exact" in own, "firewall: R₁ retained")
-    audit("V1 r_numerical_value_status: bounded_gated_on_axiom_star",
-          "r_numerical_value_status: bounded_gated_on_axiom_star" in own, "firewall: R₂ bounded")
+    audit("V1 r_numerical_value_status: bounded_open_c1_surface",
+          "r_numerical_value_status: bounded_open_c1_surface" in own, "firewall: R₂ bounded")
 
     print()
     print("=" * 72)
     fail_count = len(AUDIT_FAILS)
     print(f"FAIL count: {fail_count}")
-    print("LAMBDA_RETENTION_WITH_R_BUDGET_VERIFIED =", fail_count == 0)
+    print("LAMBDA_R_BUDGET_SUPPORT_VERIFIED =", fail_count == 0)
     print(f"R from Planck Λ_obs = {R_implied:.3e} m (Hubble scale)")
     if fail_count == 0:
         print()
-        print("All Block 9 chain authorities + budget verified.")
+        print("All Block 9 chain authorities + bounded R-budget verified.")
         return 0
     else:
         print(f"Failed audits: {AUDIT_FAILS}")

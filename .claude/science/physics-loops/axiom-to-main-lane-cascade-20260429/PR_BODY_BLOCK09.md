@@ -1,28 +1,26 @@
-# [physics-loop] axiom-to-main-lane-cascade block 09: cosmological constant Λ retention-with-R-budget (proposed_retained_with_budget, stacked on Block 4)
+# [physics-loop] axiom-to-main-lane-cascade block 09: cosmological constant Λ R-budget support
 
 ## Summary
 
 Block 9 formalizes the spectral-gap cosmological-constant identity
 `Λ_vac = λ_1(S³_R) = 3/R²` (already retained on `main`) into a
-retention-with-explicit-R-budget statement, mirroring Block 8's
-string-tension pattern. The numerical R value is gated on Block 4's
-axiom-stack minimality theorem (R requires Axiom* adoption or open
-acceptance per (G1)/(C1)).
+bounded support R-budget statement. The numerical R value remains open
+on the current framework surface and requires a later C1/Axiom* science
+decision or another derivation.
 
 ## Stacking note
 
-Stacked on `physics-loop/axiom-to-main-lane-cascade-20260429-block04-20260429`
-(PR #186). Block 4's audit ratification is prerequisite (V1 cites
-Block 4's no-go as the structural account of the R-budget status).
+Originally stacked on `physics-loop/axiom-to-main-lane-cascade-20260429-block04-20260429`
+(PR #186). The forced-Axiom* framing is not used as a live premise here.
 
 ## Status
 
-- `actual_current_surface_status: proposed_retained_with_budget`
-- `proposal_allowed: true`
-- `audit_required_before_effective_retained: true`
+- `actual_current_surface_status: bounded`
+- `proposal_allowed: false`
+- `audit_required_before_effective_retained: false`
 - `bare_retained_allowed: false`
 - `r_function_identity_status: retained_exact`
-- `r_numerical_value_status: bounded_gated_on_axiom_star`
+- `r_numerical_value_status: bounded_open_c1_surface`
 - `h_inf_status: bounded_downstream_of_r`
 
 ## Composed budget
@@ -30,7 +28,7 @@ Block 4's no-go as the structural account of the R-budget status).
 | Item | Status | Path to tighten |
 |---|---|---|
 | R₁ Λ(R) = 3/R² function identity | retained exact | none |
-| R₂ numerical R value | bounded | Axiom* (per Block 4) or accept (G1)/(C1) open |
+| R₂ numerical R value | bounded | later C1/Axiom* decision or another derivation |
 | R₃ H_inf vacuum-energy match | bounded | downstream of R₂ |
 | R₄ Planck Λ_obs comparator | observational | (admitted) |
 
@@ -48,20 +46,18 @@ consistent with this R.
 ## What is and is NOT closed
 
 ### Closed
-1. retention-with-R-budget formalization
-2. relabel from "open" (line 177) to "retained-with-explicit-R-budget"
-3. structural composition with Block 4's no-go
+1. explicit R-budget formalization
+2. separation of the exact function identity from the numerical R input
+3. bounded support packaging for later science review
 
 ### NOT closed
-1. **R numerical value** — gated on Axiom* or (G1)/(C1) open
+1. **R numerical value** — open pending a C1/Axiom* decision or another derivation
 2. **H_inf vacuum-energy match** — downstream of R
 3. **Vacuum-energy hierarchy puzzle** — out of scope
 
-## Cascade unlocked (proposed for later weaving)
+## No cascade unlocked
 
-If V1 audit-ratifies (depends on Block 4 audit):
-- PUBLICATION_MATRIX line 177 (Cosmological constant Λ): "open" →
-  "retained-with-explicit-R-budget; numerical R gated on Axiom*"
+This PR proposes no publication-matrix relabel and no cascade unlock.
 
 ## Verification
 
@@ -78,6 +74,6 @@ PASS=N FAIL=0.
 - [Spectral-gap identity (cited)](docs/COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
 - [Universal GR (cited)](docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
 - [S³ general R (cited)](docs/S3_GENERAL_R_DERIVATION_NOTE.md)
-- [Block 4 no-go (cited, prerequisite)](docs/AXIOM_STACK_MINIMALITY_CL4C_NO_GO_THEOREM_NOTE_2026-04-29.md)
+- [Block 4 route note (historical budget context)](docs/AXIOM_STACK_MINIMALITY_CL4C_NO_GO_THEOREM_NOTE_2026-04-29.md)
 
 🤖 Generated with [Claude Code](https://claude.com/claude-code)

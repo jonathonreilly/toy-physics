@@ -2429,6 +2429,22 @@
       "to": "graviton_mass_derived_note"
     },
     {
+      "from": "cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29",
+      "to": "cosmological_constant_spectral_gap_identity_theorem_note"
+    },
+    {
+      "from": "cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29",
+      "to": "universal_gr_discrete_global_closure_note"
+    },
+    {
+      "from": "cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29",
+      "to": "s3_general_r_derivation_note"
+    },
+    {
+      "from": "cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29",
+      "to": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29"
+    },
+    {
       "from": "cosmological_constant_spectral_gap_identity_theorem_note",
       "to": "universal_gr_discrete_global_closure_note"
     },
@@ -18357,7 +18373,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T13:33:50.278172+00:00",
+  "generated_at": "2026-04-30T13:39:32.460653+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21909,6 +21925,21 @@
       "path": "docs/COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md",
       "runner_path": null,
       "title": "Cosmological Constant \u2014 Spectral-Gap Companion"
+    },
+    "cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29": {
+      "claim_id": "cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29",
+      "current_status": "bounded",
+      "current_status_raw": "bounded support. This note does not propose an effective",
+      "deps": [
+        "cosmological_constant_spectral_gap_identity_theorem_note",
+        "universal_gr_discrete_global_closure_note",
+        "s3_general_r_derivation_note",
+        "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29"
+      ],
+      "note_hash": "5b75aa070ae4ac173ef820bb4d224cbf7802df0f07eae39ca5e09a60f3bd7f9d",
+      "path": "docs/COSMOLOGICAL_CONSTANT_RETENTION_WITH_R_BUDGET_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_cosmological_constant_retention_with_r_budget.py",
+      "title": "Cosmological Constant R-Budget Support Note (V1)"
     },
     "cosmological_constant_spectral_gap_identity_theorem_note": {
       "claim_id": "cosmological_constant_spectral_gap_identity_theorem_note",
@@ -41477,13 +41508,13 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4589,
-    "leaf_count": 745,
-    "node_count": 1684,
+    "edge_count": 4593,
+    "leaf_count": 746,
+    "node_count": 1685,
     "root_count": 1211,
-    "runners_with_path": 768,
+    "runners_with_path": 769,
     "status_counts": {
-      "bounded": 255,
+      "bounded": 256,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
