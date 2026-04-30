@@ -7,7 +7,7 @@ checks that the ``alpha_EM(M_Z) -> alpha(0)`` QED running step is honestly
 quantified into three named sub-residuals (R-Lep, R-Q-Heavy, R-Had-NP).
 
 Result:
-  The runner is a verification harness for an exact reduction theorem.
+  The runner is a verification harness for a support / exact reduction theorem.
   It does NOT close Lane 2 or retire any retained-grade dependency.
 
   The textbook-input arithmetic confirms that the QED running step is
@@ -116,8 +116,8 @@ def part1_note_structure() -> None:
         "Atomic Lane 2 — QED Running Dependency Firewall" in note,
     )
     check(
-        "note status is exact reduction theorem (not bare retained)",
-        "exact reduction theorem" in note and "no claim promotion" in note,
+        "note status is support / exact reduction theorem (not bare retained)",
+        "support / exact reduction theorem" in note and "no claim promotion" in note,
     )
     check(
         "note does NOT use bare 'Status: retained' or 'Status: promoted'",

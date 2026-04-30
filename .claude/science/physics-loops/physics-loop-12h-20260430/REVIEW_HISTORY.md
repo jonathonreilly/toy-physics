@@ -28,9 +28,8 @@ Branch-local self-review log. Disposition is one of `pass`, `passed_with_notes`,
    suffix and the §8 import-roles table. The repo retained value
    `ALPHA_MZ_INV_REPO = 127.67` is sourced from `USABLE_DERIVED_VALUES_INDEX`.
 6. **Project convention compliance**: PASS. Note follows
-   `CONTROLLED_VOCABULARY.md` — uses `exact reduction theorem` (an accepted
-   composite from the controlled vocabulary base label `exact reduction
-   theorem`) rather than bare retained. Runner follows the standard `[PASS]`
+   `CONTROLLED_VOCABULARY.md` — uses `support / exact reduction theorem`
+   rather than bare retained. Runner follows the standard `[PASS]`
    / `[FAIL]` line format and `section()` helper used elsewhere in
    `scripts/`.
 
@@ -46,11 +45,11 @@ Additional checks beyond 6-criterion:
   by Lane 1 substrate or admitted-R(s) status."
 - **Claim status certificate**: present at
   `.claude/science/physics-loops/physics-loop-12h-20260430/CLAIM_STATUS_CERTIFICATE.md`.
-  Status = `exact-reduction-theorem`. Proposal not allowed (no retained
-  quantitative result). Audit required before any retained-grade upgrade.
+  Status = `support / exact-reduction-theorem`. Proposal not allowed (no
+  retained quantitative result). No retained-grade upgrade is proposed.
 
 ### Disposition
 
-**pass** — the artifact is a coherent exact-reduction-theorem firewall
+**pass** — the artifact is a coherent support / exact-reduction-theorem firewall
 sharpening, with verified arithmetic and honest status. The runner gives
 PASS=20 FAIL=0. No bare retained wording. Forbidden-import roles respected.

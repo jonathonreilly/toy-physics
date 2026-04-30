@@ -1,9 +1,9 @@
 # Atomic Lane 2 — QED Running Dependency Firewall
 
 **Date:** 2026-04-30
-**Status:** exact reduction theorem (no claim promotion). This note is a
-support/firewall artifact for Lane 2; it does **not** derive any atomic-scale
-prediction.
+**Status:** support / exact reduction theorem (no claim promotion). This note
+is a support/firewall artifact for Lane 2; it does **not** derive any
+atomic-scale prediction.
 **Script:** `scripts/frontier_atomic_lane2_qed_running_dependency_firewall.py`
 **Lane:** 2 - Atomic-scale predictions, route depending on `alpha(0)`.
 
@@ -216,7 +216,8 @@ Expected: `PASS=N FAIL=0` (see runner for current N).
 The runner checks:
 
 1. The firewall note exists and references the 2026-04-27 predecessor.
-2. The theorem language is `exact reduction theorem`, not bare `retained`.
+2. The theorem language is `support / exact reduction theorem`, not bare
+   `retained`.
 3. The numerical decomposition reproduces the textbook running on textbook
    inputs, demonstrating the running is well-defined when the load-bearing
    masses + hadronic data are supplied.

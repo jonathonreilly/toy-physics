@@ -8,27 +8,28 @@
 ## Status
 
 ```yaml
-actual_current_surface_status: exact-reduction-theorem
+actual_current_surface_status: support / exact-reduction-theorem
 conditional_surface_status: null
 hypothetical_axiom_status: null
 admitted_observation_status: "PDG charged-lepton, heavy-quark, and Delta alpha_had^(5) values are admitted as numerical comparators only (not proof inputs). Standard QED MS-bar one-loop running formula admitted as a textbook bridge."
 proposal_allowed: false
 proposal_allowed_reason: "This block does not derive any retained quantitative result. It is a firewall/reduction theorem that names load-bearing primitives. There is nothing to propose for retained-grade promotion."
-audit_required_before_effective_retained: true
+audit_required_before_effective_retained: false
 bare_retained_allowed: false
 ```
 
 ## Disposition
 
-The artifact is an **exact reduction theorem** that sharpens the existing
-2026-04-27 atomic Rydberg dependency firewall. It does not promote any claim.
-It quantifies the QED running step `alpha_EM(M_Z) -> alpha(0)` into three
-named sub-residuals (R-Lep, R-Q-Heavy, R-Had-NP) and shows Lane 2 closure
-depends on Lanes 1, 3, and 6 plus a separate QED loop primitive.
+The artifact is a **support / exact reduction theorem** that sharpens the
+existing 2026-04-27 atomic Rydberg dependency firewall. It does not promote
+any claim. It quantifies the QED running step `alpha_EM(M_Z) -> alpha(0)`
+into three named sub-residuals (R-Lep, R-Q-Heavy, R-Had-NP) and shows Lane 2
+closure depends on Lanes 1, 3, and 6 plus a separate QED loop primitive.
 
 ## Allowed PR/Status Wording
 
-- "exact reduction theorem" — allowed
+- "support / exact reduction theorem" — allowed
+- "exact reduction theorem" — allowed as role text, not as the normalized tier
 - "support firewall" — allowed
 - "Lane 2 dependency-firewall sharpening" — allowed
 - "no claim promotion" — allowed
@@ -51,7 +52,7 @@ PYTHONPATH=scripts python3 scripts/frontier_atomic_lane2_qed_running_dependency_
 
 ## Independent Audit
 
-This block does not propose retained-grade promotion. The reduction-theorem
+This block does not propose retained-grade promotion. The support/firewall
 status is branch-local self-review until the standard repo audit pass
 classifies it on the canonical surface. A later auditor should verify:
 
