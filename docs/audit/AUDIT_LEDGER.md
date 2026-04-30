@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T10:24:20.226589+00:00
+**Generated:** 2026-04-30T10:24:39.038476+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -2776,10 +2776,10 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_clean~~
 - **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The parity-gate carrier theorem assumes P_A H_cell ≅ F(C^2) as input, and the bare Z2 parity structure has the same 2+2 signature for CAR, two-qubit spin, and ququart semantics, so it cannot force CAR.  _(class `A`)_
-- **chain closes:** True — The source quotes the relevant CAR-input assumption and the runner directly verifies that the parity Z2 data are not CAR-distinguishing. Within the stated A4 mechanism, the no-go follows without observed inputs or tuned parameters.
-- **rationale:** The runner constructs CAR, two-qubit spin, and ququart rank-four semantics, checks their shared 2+2 parity signature, verifies CAR anticommutation versus commuting spin behavior, and checks the half-zone Z2 partition. The source separately quotes the parity-gate theorem's CAR/Fock assumption, so the A4 route cannot derive the very CAR premise it requires. Residual risk is only scope drift: this clean verdict closes the A4 parity-gate route, not G1, G2, C1, or the need for A5/minimal-carrier analysis.
+- **auditor:** `codex-audit-loop-corrected-cl4c-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** The parity-gate carrier theorem assumes P_A H_cell ~= F(C^2) as input, and the bare Z_2 parity structure has the same 2+2 signature for CAR, two-qubit spin, and ququart semantics, so it cannot force CAR.  _(class `A`)_
+- **chain closes:** True — Yes for the A4 route: the source quotes the CAR/Fock assumption in the parity-gate carrier theorem and the runner verifies that parity Z_2 data do not distinguish CAR from non-CAR rank-four semantics. The corrected PR #196 Cl_4(C) presence finding supplies a different route and only invalidates the note's later 'G1 remains open/A5 only' framing.
+- **rationale:** The A4 no-go survives because it is exactly a parity-gate route obstruction: a theorem that assumes CAR cannot derive CAR, and a bare 2+2 Z_2 involution is semantics-blind. Under the corrected premise, this clean verdict must not be read as evidence that Cl_4(C) is absent from Op(A_min)|P_A or that Axiom* adoption is forced. The safe boundary is only that parity-gate structure is not the derivation mechanism.
 - **auditor confidence:** high
 
 ### `hubble_lane5_two_gate_dependency_firewall_note_2026-04-27`
