@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:19:34.869822+00:00
+**Generated:** 2026-04-30T19:19:40.686829+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 146 |
+| `audited_clean` | 147 |
 | `audited_conditional` | 353 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 975 |
+| `unaudited` | 974 |
 
 | criticality | count |
 |---|---:|
@@ -141,6 +141,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_microscopic_d_last_mile_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_multistart_selector_support_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_observable_relative_action_law_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `dm_leptogenesis_pmns_relative_action_stationarity_theorem_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `electric_sign_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -3545,6 +3546,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Once the Hermitian pair is supplied, diagonalize H_nu and H_e, form U_PMNS = U_e^dag U_nu, and define P_i(alpha) = |U_PMNS(alpha,i)|^2.  _(class `A`)_
 - **chain closes:** False — The pair-to-projector algebra closes conditional on a supplied Hermitian pair. The stronger route-choice claim depends on an imported PMNS pair law/carrier and a physical N1 transport-column selection that are not registered as deps and are explicitly left open.
 - **rationale:** Issue: the PMNS Hermitian pair law and the physical transport column are imported or left open, while the ledger registers no one-hop PMNS authority. Why this blocks: the eta lifts are diagnostics from hard-coded sample pairs, not an axiom-side theorem selecting the physical flavored projector. Repair target: register and audit the PMNS pair-law authority plus a theorem selecting the transport-relevant column, with a runner that computes the selected column from that law. Claim boundary until fixed: the algebraic pair-to-projector interface and sample diagnostic lift are support only.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_pmns_relative_action_stationarity_theorem_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_RELATIVE_ACTION_STATIONARITY_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_PMNS_RELATIVE_ACTION_STATIONARITY_THEOREM_NOTE_2026-04-16.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** **Script:** `scripts/frontier_dm_leptogenesis_pmns_relative_action_stationarity_theorem.py`  _(class `C`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 13 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16`
