@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:24:58.068901+00:00
+**Generated:** 2026-04-30T01:25:35.484116+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,13 +20,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 78 |
-| _proposed_retained_ | 9 |
-| bounded | 210 |
+| _proposed_retained_ | 8 |
+| bounded | 208 |
 | support | 108 |
 | open | 24 |
 | unknown | 538 |
 | ~~audited_decoration~~ | 4 |
-| ~~audited_numerical_match~~ | 43 |
+| ~~audited_numerical_match~~ | 46 |
 | ~~audited_renaming~~ | 42 |
 | ~~audited_conditional~~ | 443 |
 | ~~audited_failed~~ | 89 |
@@ -38,9 +38,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 148 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 50 |
-| `audited_numerical_match` | 17 |
+| `audited_numerical_match` | 18 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1282 |
+| `unaudited` | 1281 |
 
 | criticality | count |
 |---|---:|
@@ -383,6 +383,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `kubo_continuum_limit_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `kubo_range_of_validity_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
+| `mirror_chokepoint_boundary_fit_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
@@ -3052,6 +3053,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The exact 2D mirror family gives a bounded coexistence pocket over N=25,40,60,80,100, with the strongest row at N=60: MI=0.756118, 1-pur_min=0.4420, d_TV=0.8572, gravity=+2.5687, Born=1.08e-15, and k=0=0.  _(class `C`)_
 - **chain closes:** True — The named validator and archived log reproduce the retained rows, the matched random baseline, the Born and k=0 controls, and the weak gravity-law follow-up fits. Running the validator with the note's N window reproduces the table exactly; the script default includes an extra N=15 row, which is outside the note's retained window and does not change the retained claim.
 - **rationale:** The bounded exact-2D mirror pocket closes on its own terms: the runner verifies machine-scale Born residuals, zero k=0 response, positive gravity, and substantially stronger MI/decoherence/d_TV than the matched random baseline on the reported N window. The same runner also verifies that the mass-window and distance-tail fits are weak, so this clean audit ratifies only the bounded coexistence pocket, strongest at N=60; it does not ratify a promoted mass law, distance law, continuum law, or flagship replacement.
+- **auditor confidence:** high
+
+### `mirror_chokepoint_boundary_fit_note`
+
+- **Note:** [`MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](../../docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The boundary mirror family is a Born-clean, gravity-positive, decohering pocket through N=100, with canonical exponent fit alpha=-0.245 but no bounded asymptotic claim.  _(class `G`)_
+- **chain closes:** False — The claim is a finite fitted window on a selected mirror configuration, and the source itself reports a weak non-monotone fit with R^2=0.126. No primary runner or one-hop dependencies are registered in the ledger row.
+- **rationale:** Issue: the retained surface depends on a selected dense-boundary mirror parameter pocket and a weak descriptive fit, with no registered runner/log reproduction in the audit row. Why this blocks: finite fitted rows with poor monotonicity and R^2=0.126 do not establish a retained family theorem or asymptotic law. Repair target: register the mirror runner and canonical log as audit artifacts, recompute the retained rows, and either state this as bounded finite-window evidence or derive a stable pocket-selection/asymptotic criterion. Claim boundary until fixed: safe as a bounded report of the N=40..100 mirror pocket and gravity wall at N=120; not safe as proposed-retained mirror boundary science.
 - **auditor confidence:** high
 
 ### `moonshot_other_testables_note`
