@@ -69,6 +69,7 @@ ALLOWED_VERDICTS = {
 ALLOWED_INDEPENDENCE = {"weak", "fresh_context", "cross_family", "strong", "external", "judicial_review"}
 CLEAN_INDEPENDENCE = ALLOWED_INDEPENDENCE - {"weak"}
 ALLOWED_JUDICIAL_SIDES = {"first", "second", "neither"}
+JUDICIAL_REVIEWABLE_STATUSES = {"disagreement", "third_confirmed_first", "third_confirmed_second"}
 TERMINAL_CROSS_CONFIRM_VERDICTS = {
     "audited_renaming",
     "audited_numerical_match",
@@ -216,8 +217,14 @@ def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
         return False, err
 
     cross_confirmation = row.get("cross_confirmation")
-    if not isinstance(cross_confirmation, dict) or cross_confirmation.get("status") != "disagreement":
-        return False, "judicial review requires cross_confirmation.status='disagreement'"
+    if (
+        not isinstance(cross_confirmation, dict)
+        or cross_confirmation.get("status") not in JUDICIAL_REVIEWABLE_STATUSES
+    ):
+        return False, (
+            "judicial review requires cross_confirmation.status in "
+            f"{sorted(JUDICIAL_REVIEWABLE_STATUSES)}"
+        )
     first = cross_confirmation.get("first_audit") or {}
     second = cross_confirmation.get("second_audit") or {}
     if not first or not second:
