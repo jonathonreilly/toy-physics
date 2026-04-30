@@ -1,14 +1,14 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T19:33:59.054576+00:00
-**Total pending:** 835
-**Ready (all deps already at a stable tier):** 454
+**Generated:** 2026-04-30T19:34:05.872300+00:00
+**Total pending:** 834
+**Ready (all deps already at a stable tier):** 453
 
 By criticality:
 - `critical`: 0
 - `high`: 237
 - `medium`: 289
-- `leaf`: 309
+- `leaf`: 308
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
