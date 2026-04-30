@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:42:55.518467+00:00
+**Generated:** 2026-04-30T02:42:58.897135+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,9 +24,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 204 |
 | support | 104 |
 | open | 24 |
-| unknown | 519 |
+| unknown | 518 |
 | ~~audited_decoration~~ | 6 |
-| ~~audited_numerical_match~~ | 48 |
+| ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
 | ~~audited_conditional~~ | 375 |
 | ~~audited_failed~~ | 164 |
@@ -38,9 +38,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 162 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 52 |
-| `audited_numerical_match` | 20 |
+| `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1256 |
+| `unaudited` | 1255 |
 
 | criticality | count |
 |---|---:|
@@ -402,6 +402,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_from_mass_hierarchy_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_continuum_limit_velocity_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16` | unknown | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5 | G | - |
+| `dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16` | unknown | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5 | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `kubo_continuum_limit_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -1141,6 +1142,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Among all positive off-seed sources on the same seed surface satisfying eta_{i_*} / eta_obs = 1, choose the one minimizing I_seed.  _(class `G`)_
 - **chain closes:** False — The optimizer closes the target because exact agreement with eta_obs is imposed as a constraint; the note itself calls this an invented post-axiom selector law rather than a derived law.
 - **rationale:** Issue: the load-bearing source is selected by minimizing a chosen information cost under the explicit constraint eta_{i_*}/eta_obs = 1. Why this blocks: the exact closure is built into the optimization target, so the runner verifies a calibrated/tuned source law rather than deriving the source from retained framework dynamics. Repair target: derive the information functional and closure constraint independently from retained microscopic dynamics, or remove the eta_obs equality as an imposed selector. Claim boundary until fixed: the note may report a least-deformed calibrated closure source for the PMNS-assisted branch, not an audited axiom-first leptogenesis prediction.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE_NOTE_2026-04-16.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Choose the off-seed source that extremizes the exact flavored transport lift max_i eta_i / eta_obs on the fixed native seed surface, then use continuity to find eta/eta_obs = 1.  _(class `G`)_
+- **chain closes:** False — The runner constructs an overshooting source and an interpolated exact closure point, but the source is selected by optimizing a comparator involving eta_obs rather than by a retained microscopic law.
+- **rationale:** Issue: the load-bearing closure depends on selecting an off-seed source by extremizing eta/eta_obs and then locating an eta/eta_obs = 1 point by continuity. Why this blocks: the construction proves a calibrated positive candidate and existence of a closure point, but not that the framework derives this source selector independently of the target observational value. Repair target: derive the off-seed source law from retained microscopic dynamics without using eta_obs as the objective/comparator. Claim boundary until fixed: constructive PMNS-assisted closure candidate on a fixed seed surface, not an audited full-stack prediction.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_transport_status_note_2026-04-16`
