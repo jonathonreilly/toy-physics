@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 41,
     "high": 234,
-    "leaf": 571,
+    "leaf": 570,
     "medium": 341
   },
-  "generated_at": "2026-04-30T10:31:06.131870+00:00",
+  "generated_at": "2026-04-30T11:04:39.699833+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -15461,23 +15461,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "cl4c_carrier_axiom_consequence_map_note_2026-04-28",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "open",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_cl4c_carrier_axiom_consequence_map.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dirac_core_card_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -15557,40 +15540,6 @@
       "note_path": "docs/GRAPH_DIRAC_REQUIREMENTS_2026-04-10.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "open",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_hubble_c1_a5_minimal_carrier_axiom_audit.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "open",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/HUBBLE_LANE5_C1_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_hubble_c1_stuck_fanout_synthesis.py",
       "transitive_descendants": 1
     },
     {
@@ -19538,6 +19487,23 @@
       "direct_in_degree": 0,
       "load_bearing_score": 0.0,
       "note_path": "docs/HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md",
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 0
@@ -24338,6 +24304,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [
+        "observable_principle_from_axiom_note",
+        "physical_lattice_necessity_note",
+        "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25",
+        "koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25",
+        "koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_koide_q_op_locality_source_domain_closure.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -25062,6 +25051,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 748,
-  "total_pending": 1187
+  "ready_count": 746,
+  "total_pending": 1186
 }

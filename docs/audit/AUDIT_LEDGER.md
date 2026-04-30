@@ -1,8 +1,8 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T10:31:06.331723+00:00
+**Generated:** 2026-04-30T11:04:39.702439+00:00
 **Source of truth:** `data/audit_ledger.json`
-**Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
+**Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
 This file is auto-generated. Do not edit by hand. Apply audits via `scripts/apply_audit.py`, then re-run `scripts/compute_effective_status.py` and `scripts/render_audit_ledger.py`.
 
@@ -22,14 +22,14 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
 | bounded | 196 |
-| support | 109 |
-| open | 24 |
+| support | 110 |
+| open | 21 |
 | unknown | 442 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 53 |
-| ~~audited_conditional~~ | 423 |
-| ~~audited_failed~~ | 166 |
+| ~~audited_conditional~~ | 424 |
+| ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
@@ -37,17 +37,17 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 82 |
 | `audited_conditional` | 191 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 54 |
+| `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1186 |
+| `unaudited` | 1185 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 73 |
 | `high` | 333 |
 | `medium` | 383 |
-| `leaf` | 761 |
+| `leaf` | 763 |
 
 - **Proposed claims demoted by upstream:** 156
 - **Citation cycles detected:** 59
@@ -379,6 +379,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | A | - |
 | `backreaction_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | open | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | A | - |
 | `critical_exponents_topology_note_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `distance_law_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -395,6 +396,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `grown_transfer_basin_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `h0125_failure_derivation` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `h2t_h0125_narrow_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28` | open | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | A | - |
+| `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28` | open | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | A | - |
 | `if_program_closing_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `inverse_problem_graph_requirements_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `kernel_vs_gravity_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -617,9 +620,9 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** False — No. Direct finite linear algebra on H_cell = (C^2)^tensor4 gives full M_16(C) from the local single-qubit Cl(3) generators; its Hamming-weight-preserving part restricts to full M_4(C) on P_A, so the claimed S_4-only obstruction does not hold.
 - **rationale:** Issue: the proof's O2 step identifies the weight-preserving A_min algebra on P_A H_cell with an S_4/permutation algebra, but the requested finite check finds dim Op(A_min)=256, dim weight-preserving=70, and dim restricted P_A algebra=16=M_4(C). The proposed gamma_1=X tensor X, gamma_2=X tensor Y, gamma_3=X tensor Z, gamma_4=Y tensor I have membership residuals below 1e-15 in the restricted algebra, are Hermitian, square to I, and satisfy the Cl_4(C) anticommutators exactly. Why this blocks: the theorem's conclusion requires dim restricted algebra <16 or otherwise no Clifford quadruple; the computation gives full M_4(C) and an explicit quadruple. Repair target: either prove the local generators sigma_i^(a) are not actually in Op(A_min), or revise the theorem/runner to compute the generated weight-preserving algebra and retire the forced-Axiom* conclusion if they are included. Claim boundary until fixed: the individual A1/A2/A4 route no-gos may remain route-specific, but the assembled global no-hidden-third-option minimality theorem and Axiom* forced corollary cannot be claimed.
 - **open / conditional deps cited:**
-  - `HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md`
-  - `HUBBLE_LANE5_C1_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md`
-  - `CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md`
+  - `archive_unlanded/stale-frames-2026-04-30/HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md`
+  - `HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md`
+  - `archive_unlanded/stale-frames-2026-04-30/CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md`
 - **auditor confidence:** high
 
 ### `backreaction_note`
@@ -863,6 +866,18 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `missing authority: graph-first axis-selection procedure for identifying hw=1 tastes with SM generations`
   - `missing authority: physical taste-to-generation observable readout`
 - **auditor confidence:** 0.86
+
+### `cl4c_carrier_axiom_consequence_map_note_2026-04-28`
+
+- **Note:** [`archive_unlanded/stale-frames-2026-04-30/CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md`](../../archive_unlanded/stale-frames-2026-04-30/CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md)
+- **current_status:** open
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-stale-narrative-archive-2026-04-30`  (codex-current; independence=weak)
+- **load-bearing step:** The map treats Axiom* adoption as the central conditional closure surface and propagates its claimed downstream Lane 5, Planck, Lane 1, and Sigma m_nu consequences.  _(class `A`)_
+- **chain closes:** False — No. The active map is tied to the stale Axiom* carrier-axiom narrative and should not remain in docs after the failed wrapper frame is retired.
+- **rationale:** Issue: the consequence map depends on the stale carrier-axiom wrapper frame and presents an active downstream cascade from that frame. Why this blocks: after the forced/minimal Axiom* narrative failed audit, leaving this map in active docs would keep a failed closure story available as support. Repair target: if Axiom* is later adopted or reintroduced, rebuild a new consequence map from the audited extension decision and current dependencies. Claim boundary until fixed: the 2026-04-28 map is archive-only recovery material, not an active claim note.
+- **auditor confidence:** high
 
 ### `claude_complex_action_carryover_note`
 
@@ -2780,6 +2795,32 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The parity-gate carrier theorem assumes P_A H_cell ≅ F(C^2) as input, and the bare Z2 parity structure has the same 2+2 signature for CAR, two-qubit spin, and ququart semantics, so it cannot force CAR.  _(class `A`)_
 - **chain closes:** True — The source quotes the relevant CAR-input assumption and the runner directly verifies that the parity Z2 data are not CAR-distinguishing. Within the stated A4 mechanism, the no-go follows without observed inputs or tuned parameters.
 - **rationale:** The runner constructs CAR, two-qubit spin, and ququart rank-four semantics, checks their shared 2+2 parity signature, verifies CAR anticommutation versus commuting spin behavior, and checks the half-zone Z2 partition. The source separately quotes the parity-gate theorem's CAR/Fock assumption, so the A4 route cannot derive the very CAR premise it requires. Residual risk is only scope drift: this clean verdict closes the A4 parity-gate route, not G1, G2, C1, or the need for A5/minimal-carrier analysis.
+- **auditor confidence:** high
+
+### `hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28`
+
+- **Note:** [`archive_unlanded/stale-frames-2026-04-30/HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md`](../../archive_unlanded/stale-frames-2026-04-30/HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md)
+- **current_status:** open
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-stale-narrative-archive-2026-04-30`  (codex-current; independence=weak)
+- **load-bearing step:** The wrapper identifies the irreducible Cl_4(C) module on P_A H_cell as the minimal carrier axiom required for (G1) closure after the earlier A1/A2/A4 attacks.  _(class `A`)_
+- **chain closes:** False — No. The wrapper belongs to the stale Axiom* minimality/exhaustion frame; Thread 1's failed verdict rejects the assembled forced-carrier narrative, so this source note cannot remain as an active support surface.
+- **rationale:** Issue: the note's load-bearing role is to support the stale Axiom* minimal-carrier narrative that the later audit failed, not merely to record a neutral open option. Why this blocks: keeping it active would preserve a failed wrapper frame as if it were still live support for (G1)/(C1) closure. Repair target: rebuild any future carrier-axiom analysis from a fresh proof surface that does not depend on the failed exhaustion/minimality frame. Claim boundary until fixed: the source note is retained only in archive recovery history, not as an active docs claim.
+- **auditor confidence:** high
+
+### `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28`
+
+- **Note:** [`archive_unlanded/stale-frames-2026-04-30/HUBBLE_LANE5_C1_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md`](../../archive_unlanded/stale-frames-2026-04-30/HUBBLE_LANE5_C1_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md)
+- **current_status:** open
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-stale-narrative-archive-2026-04-30`  (codex-current; independence=weak)
+- **load-bearing step:** The wrapper synthesizes five orthogonal routes into an exhaustion claim that no natural symmetry, topology, information, or operator-algebra route forces Cl_4(C) on P_A H_cell.  _(class `A`)_
+- **chain closes:** False — No. The global exhaustion wrapper failed audit; only the five route-specific no-go observations survive as narrow support boundaries.
+- **rationale:** Issue: the wrapper's overall exhaustion claim overstates what the five checks establish. Why this blocks: Thread 1 preserved the route-local alpha S_4, beta cobordism, gamma Holevo, delta Stinespring, and epsilon Reeh-Schlieder observations, but rejected the wrapper as an active global no-hidden-route proof. Repair target: keep the five narrow no-gos in one support-tier salvage note and archive the failed wrapper. Claim boundary until fixed: safe to cite docs/HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md for route-local boundaries only; do not cite this wrapper as exhaustion or Axiom* minimality support.
+- **open / conditional deps cited:**
+  - `HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md`
 - **auditor confidence:** high
 
 ### `hubble_lane5_two_gate_dependency_firewall_note_2026-04-27`

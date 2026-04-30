@@ -189,7 +189,8 @@ def main() -> int:
     out.append("**Source of truth:** `data/audit_ledger.json`")
     out.append("**Schema:** see [README.md](README.md), "
                "[FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and "
-               "[ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).")
+               "[ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); "
+               "archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).")
     out.append("")
     out.append("This file is auto-generated. Do not edit by hand. Apply audits via "
                "`scripts/apply_audit.py`, then re-run `scripts/compute_effective_status.py` "
