@@ -1,11 +1,11 @@
 # Audit Queue
 
-**Generated:** 2026-04-29T23:17:35.329101+00:00
-**Total pending:** 1310
+**Generated:** 2026-04-30T00:15:41.287220+00:00
+**Total pending:** 1309
 **Ready (all deps already at a stable tier):** 857
 
 By criticality:
-- `critical`: 63
+- `critical`: 62
 - `high`: 305
 - `medium`: 327
 - `leaf`: 615
@@ -62,9 +62,9 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 44 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 24.83 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_atlas_triangle_right_angle.py` |
 | 45 | `higgs_mass_derived_note` | critical | 112 | 18.32 |  | fresh_context_or_stronger_with_cross_confirmation | - |
 | 46 | `higgs_vacuum_explicit_systematic_note` | critical | 111 | 18.31 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_full_3loop.py` |
-| 47 | `minimal_axioms_2026-04-11` | critical | 109 | 21.28 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 48 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 102 | 27.69 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_magnitudes_structural_counts.py` |
-| 49 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 94 | 23.57 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_nlo_barred_triangle_protected_gamma.py` |
-| 50 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 84 | 18.41 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_third_row_magnitudes.py` |
+| 47 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 102 | 27.69 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_magnitudes_structural_counts.py` |
+| 48 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 94 | 23.57 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_nlo_barred_triangle_protected_gamma.py` |
+| 49 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 84 | 18.41 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_third_row_magnitudes.py` |
+| 50 | `ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25` | critical | 83 | 18.39 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_bernoulli_two_ninths_koide_bridge.py` |
 
 Full queue lives in `data/audit_queue.json`.
