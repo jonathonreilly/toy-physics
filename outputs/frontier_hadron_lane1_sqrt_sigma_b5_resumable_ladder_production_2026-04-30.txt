@@ -24,7 +24,7 @@ Part 1: runner configuration checks
 Part 2: resumable ladder smoke run
 ----------------------------------------------------------------------------------------
   L=8: sweeps=10239, measurements=1000/1000, acc=0.419, status=complete
-  L=12: sweeps=2330, measurements=207/1000, acc=0.418, status=checkpointed
+  L=12: sweeps=2598, measurements=233/1000, acc=0.418, status=checkpointed
   [PASS] runner produced at least one JSONL measurement
   [PASS] JSONL measurement schema is complete
   [PASS] latest measurement has finite primary observables

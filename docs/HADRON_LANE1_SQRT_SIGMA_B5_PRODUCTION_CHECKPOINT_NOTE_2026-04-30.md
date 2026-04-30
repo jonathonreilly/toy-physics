@@ -9,17 +9,17 @@
 
 ## 0. Result
 
-The first fifteen production-profile ladder intervals completed cleanly,
+The first sixteen production-profile ladder intervals completed cleanly,
 completed the `L=8` target, and started `L=12` production:
 
 - `L=8`: `1000/1000` JSONL measurement records after `10239` sweeps,
   acceptance approximately `0.419`;
-- `L=12`: `207/1000` JSONL measurement records after `2330` sweeps,
-  acceptance approximately `0.417`;
+- `L=12`: `233/1000` JSONL measurement records after `2598` sweeps,
+  acceptance approximately `0.418`;
 - `L=8` plaquette mean `0.59439642 +/- 0.00006509`;
 - `L=8` `chi22` mean `0.25696886 +/- 0.00132492`;
-- `L=12` plaquette mean `0.59440173 +/- 0.00005946`;
-- `L=12` `chi22` mean `0.26315236 +/- 0.00264293`.
+- `L=12` plaquette mean `0.59432561 +/- 0.00005660`;
+- `L=12` `chi22` mean `0.26358595 +/- 0.00248358`.
 
 This is a real production checkpoint, but it is **not B5 closure**.
 
