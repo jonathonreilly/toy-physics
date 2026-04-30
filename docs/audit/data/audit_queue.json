@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 326,
+    "leaf": 325,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:32:10.329492+00:00",
+  "generated_at": "2026-04-30T19:32:16.096138+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13548,23 +13548,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "exponent_derivation",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/EXPONENT_DERIVATION.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "field_equation_derivation_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -18856,6 +18839,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 471,
-  "total_pending": 852
+  "ready_count": 470,
+  "total_pending": 851
 }
