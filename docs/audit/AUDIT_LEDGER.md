@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:07:36.900588+00:00
+**Generated:** 2026-04-30T22:08:40.805893+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 7 |
 | bounded | 280 |
-| support | 248 |
+| support | 247 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 741 |
+| ~~audited_conditional~~ | 742 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 212 |
-| `audited_conditional` | 463 |
+| `audited_conditional` | 464 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 798 |
+| `unaudited` | 797 |
 
 | criticality | count |
 |---|---:|
@@ -743,6 +743,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_qg_canonical_refinement_net_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `universal_qg_uv_finite_partition_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `unpromoted_branch_retainability_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `vector_sector_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -10975,6 +10976,23 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `unspecified closed theorem stack for canonical textbook continuum target`
 - **auditor confidence:** 0.93
+
+### `universal_qg_uv_finite_partition_note`
+
+- **Note:** [`UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`](../../docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-17`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Because K_GR(D) is symmetric positive definite on the positive-background class, the finite-dimensional Gaussian partition Z_GR(D,J) exists, is finite, and has mean K_GR(D)^-1 J equal to the discrete GR stationary field.  _(class `B`)_
+- **chain closes:** False — The Gaussian formula is standard once a finite-dimensional SPD operator K_GR(D) is supplied, but this note does not itself prove or register the required SPD/local-GR closure, finite-atlas patching, or Schur/projective compatibility. With no runner and no ledger dependencies, the exact QG bridge claim remains conditional on those upstream structures.
+- **rationale:** Issue: the note turns a supplied finite-dimensional positive Gaussian action into a UV-finite partition family, but the supplied operator positivity, discrete GR stationary closure, atlas density patching, and Schur coarse-graining claims are imported rather than audited here. Why this blocks: finite Gaussian integration alone does not establish the route-level statement that the direct-universal QG partition reproduces exact discrete 3+1 Einstein/Regge gravity on PL S^3 x R. Repair target: register a runner/proof that constructs K_GR(D), verifies SPD/nondegeneracy over the stated positive-background class, computes the Gaussian mean/covariance, and checks finite-atlas density transformation plus Schur compatibility. Claim boundary until fixed: for any finite-dimensional SPD K_GR(D), the Euclidean Gaussian partition is finite and has mean K_GR(D)^-1 J; the project-level QG bridge remains conditional.
+- **open / conditional deps cited:**
+  - `local_GR_K_GR_positive_definite_closure`
+  - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
+  - `UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`
+  - `finite_atlas_partition_density_patch_runner`
+- **auditor confidence:** high
 
 ### `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24`
 

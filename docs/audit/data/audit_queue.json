@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 1,
-    "high": 221,
+    "high": 220,
     "leaf": 287,
     "medium": 289
   },
-  "generated_at": "2026-04-30T22:07:36.734088+00:00",
+  "generated_at": "2026-04-30T22:08:40.602883+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -249,23 +249,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 32
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "universal_qg_uv_finite_partition_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 7,
-      "load_bearing_score": 8.67,
-      "note_path": "docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 35
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -18171,6 +18154,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 415,
-  "total_pending": 798
+  "ready_count": 414,
+  "total_pending": 797
 }
