@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:33:55.819615+00:00
+**Generated:** 2026-04-30T22:35:09.265677+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 82 |
 | _proposed_retained_ | 5 |
-| bounded | 278 |
+| bounded | 277 |
 | support | 242 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 749 |
+| ~~audited_conditional~~ | 750 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 215 |
-| `audited_conditional` | 471 |
+| `audited_conditional` | 472 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 786 |
+| `unaudited` | 785 |
 
 | criticality | count |
 |---|---:|
@@ -574,6 +574,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `geometry_lane_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `global_coherence_held_out2_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `grav_decoherence_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `gravitational_memory_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gravitational_wave_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -6656,6 +6657,25 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** This is the decisive result. The free modal laws are not the same theory.  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 9 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `grav_decoherence_derived_note`
+
+- **Note:** [`GRAV_DECOHERENCE_DERIVED_NOTE.md`](../../docs/GRAV_DECOHERENCE_DERIVED_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-29`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Cl(3) on Z^3 derives the Poisson field, lattice Green form factor, Penrose-Diosi field distinguishability rate, Planck-scale lattice correction, BMV decoherence budget, and Born-rule cross-constraint as a bounded gravitational-decoherence prediction.  _(class `B`)_
+- **chain closes:** False — The runner reproduces the numerical form-factor, rate, BMV phase, and feasibility checks, but the derivation relies on imported Poisson/Newton closure, Penrose-Diosi decoherence physics, geometry/readout assumptions, the Planck-scale lattice pin, and a Born-rule/nonlinearity bridge. Those are not all closed in this row.
+- **rationale:** Issue: the note labels the gravitational decoherence rate as derived from framework axioms, but the executable check starts after several major physics bridges are supplied: Poisson/self-consistency, lattice Green asymptotics, Penrose-Diosi field distinguishability, sphere/Gaussian geometry choices, BMV arm cutoff, Planck-scale lattice spacing, and the Born-rule beta-to-gamma relation. Why this blocks: the runner verifies numerical consistency of those supplied formulas and physical constants; it does not derive the decoherence mechanism or the experimental readout from Cl(3) on Z^3. Repair target: audit/register the Poisson/Newton source law, Penrose-Diosi bridge, geometry/readout model, Planck lattice-scale authority, and Born-rule cross-constraint, then separate pure framework form-factor checks from external phenomenology. Claim boundary until fixed: bounded companion numerics for the supplied Penrose-Diosi/BMV model with lattice form-factor corrections; not a standalone axioms-only gravitational decoherence theorem.
+- **open / conditional deps cited:**
+  - `NEWTON_LAW_DERIVED_NOTE.md`
+  - `GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`
+  - `Penrose_Diosi_decoherence_bridge`
+  - `BMV_geometry_readout_model`
+  - `Planck_scale_lattice_spacing_authority`
+  - `Born_rule_beta_gamma_cross_constraint`
 - **auditor confidence:** high
 
 ### `gravitational_entanglement_note`
