@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 485,
+    "leaf": 484,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:15:34.474275+00:00",
+  "generated_at": "2026-04-30T19:15:40.689385+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20583,29 +20583,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "atomic_rydberg_dependency_firewall_note_2026-04-27",
-        "lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26",
-        "lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26",
-        "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26",
-        "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/ATOMIC_LANE2_QED_RUNNING_DEPENDENCY_FIREWALL_NOTE_2026-04-30.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_atomic_lane2_qed_running_dependency_firewall.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21655,5 +21632,5 @@
     }
   ],
   "ready_count": 619,
-  "total_pending": 1011
+  "total_pending": 1010
 }

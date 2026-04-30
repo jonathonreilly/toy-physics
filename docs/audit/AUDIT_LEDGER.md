@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:15:34.641082+00:00
+**Generated:** 2026-04-30T19:15:40.872650+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,12 +33,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 132 |
-| `audited_conditional` | 331 |
+| `audited_conditional` | 332 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1011 |
+| `unaudited` | 1010 |
 
 | criticality | count |
 |---|---:|
@@ -252,6 +252,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `asymmetry_persistence_mass_scaling_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `asymmetry_persistence_mass_window_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `asymmetry_persistence_pilot_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `atomic_lane2_qed_running_dependency_firewall_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `audited_symmetry_synthesis_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_change_proposal_2026-04-10` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1127,6 +1128,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Atomic Lane 2 Physical-Unit Limit Boundary: the current atomic lane still lacks the named bridge needed for a framework-derived Rydberg/atomic-scale closure.  _(class `C`)_
 - **chain closes:** True — Yes. The note is a negative boundary claim, and the registered runner completed successfully while checking the missing bridge/dependency sensitivity rather than asserting an atomic prediction.
 - **rationale:** The clean content is the no-go/dependency boundary, not an atomic-scale prediction. The source note explicitly denies Rydberg closure, and the runner completed successfully with the classified PASS surface {'A': 0, 'B': 1, 'C': 0, 'D': 0, 'total_pass': 1}. Residual risk is downstream misuse as a positive atomic prediction.
+- **auditor confidence:** high
+
+### `atomic_lane2_qed_running_dependency_firewall_note_2026-04-30`
+
+- **Note:** [`ATOMIC_LANE2_QED_RUNNING_DEPENDENCY_FIREWALL_NOTE_2026-04-30.md`](../../docs/ATOMIC_LANE2_QED_RUNNING_DEPENDENCY_FIREWALL_NOTE_2026-04-30.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_failed~~  (reason: `inherited_from:lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** `alpha(M_Z) -> alpha(0)` running step as its own reduction theorem and exposes  _(class `B`)_
+- **chain closes:** False — No. One-hop dependencies are not all retained (atomic_rydberg_dependency_firewall_note_2026-04-27=proposed_retained, lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26=audited_failed, lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26=audited_conditional), so the chain does not close under the leaf audit rule.
+- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (atomic_rydberg_dependency_firewall_note_2026-04-27=proposed_retained, lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26=audited_failed, lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared support tier with the upstream dependency condition attached.
+- **open / conditional deps cited:**
+  - `ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md`
+  - `lanes/open_science/02_ATOMIC_SCALE_PROGRAM_OPEN_LANE_2026-04-26.md`
+  - `lanes/open_science/03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md`
+  - `lanes/open_science/06_CHARGED_LEPTON_MASS_RETENTION_OPEN_LANE_2026-04-26.md`
+  - `lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md`
 - **auditor confidence:** high
 
 ### `audited_symmetry_synthesis_note`
