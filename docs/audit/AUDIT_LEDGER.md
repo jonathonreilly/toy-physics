@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:18:27.274120+00:00
+**Generated:** 2026-04-30T02:42:04.527792+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,13 +22,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
 | bounded | 205 |
-| support | 108 |
+| support | 105 |
 | open | 24 |
 | unknown | 537 |
 | ~~audited_decoration~~ | 4 |
 | ~~audited_numerical_match~~ | 47 |
-| ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 447 |
+| ~~audited_renaming~~ | 65 |
+| ~~audited_conditional~~ | 427 |
 | ~~audited_failed~~ | 91 |
 
 | audit_status | count |
@@ -38,8 +38,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 19 |
-| `audited_renaming` | 8 |
-| `unaudited` | 1272 |
+| `audited_renaming` | 9 |
+| `unaudited` | 1271 |
 
 | criticality | count |
 |---|---:|
@@ -67,7 +67,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 1 | `alpha_s_derived_note` | critical | 237 | 28.89 | `audited_conditional` | ~~audited_conditional~~ |
 | 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 111 | 28.81 | `unaudited` | ~~audited_conditional~~ |
 | 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 112 | 28.32 | `unaudited` | ~~audited_conditional~~ |
-| 4 | `yt_ward_identity_derivation_theorem` | critical | 283 | 27.65 | `unaudited` | support |
+| 4 | `yt_ward_identity_derivation_theorem` | critical | 283 | 27.65 | `audited_renaming` | ~~audited_renaming~~ |
 | 5 | `observable_principle_from_axiom_note` | critical | 225 | 25.32 | `audited_conditional` | ~~audited_conditional~~ |
 | 6 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 99 | 23.64 | `unaudited` | ~~audited_conditional~~ |
 | 7 | `yt_ew_color_projection_theorem` | critical | 109 | 22.28 | `audited_conditional` | ~~audited_conditional~~ |
@@ -411,6 +411,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_time_bilinear_tensor_primitive_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_qg_optional_textbook_comparison_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
+| `yt_ward_identity_derivation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5 | E | - |
 
 
 ## Audit findings (full)
@@ -5154,6 +5155,18 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md`
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
   - `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `yt_ward_identity_derivation_theorem`
+
+- **Note:** [`YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](../../docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
+- **current_status:** support
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** On the canonical surface the framework's bare Yukawa coupling y_t_bare is DEFINED as the unit-norm-state matrix element of H_unit between the vacuum and a single top-pair state.  _(class `E`)_
+- **chain closes:** False — The Fierz and normalization arithmetic closes after the emergent Yukawa is defined as the H_unit matrix element, but the note does not derive that this matrix element is the physical top Yukawa observable rather than a definition of it.
+- **rationale:** Issue: the load-bearing step defines y_t_bare as the H_unit-to-top matrix element and then uses that definition to claim y_t_bare = g_bare/sqrt(6). Why this blocks: the runner verifies SU(3)/Clifford algebra and internal consistency, but it does not derive an independent physical bridge from that matrix element to the SM top Yukawa observable. Repair target: provide a retained theorem deriving the Yukawa readout and normalization from the bare Cl(3) x Z^3 action to the physical top Yukawa, with a runner that constructs the bridge rather than naming it. Claim boundary until fixed: the note supports an internal composite-operator matrix-element identity on the stated channel, not an audited derivation of the physical top Yukawa boundary condition.
 - **auditor confidence:** high
 
 ### `yukawa_color_projection_theorem`
