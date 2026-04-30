@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T00:23:03.456078+00:00",
-  "generated_at": "2026-04-30T00:23:01.648838+00:00",
-  "invalidation_run_at": "2026-04-30T00:23:03.399065+00:00",
+  "effective_status_computed_at": "2026-04-30T00:23:06.797663+00:00",
+  "generated_at": "2026-04-30T00:23:04.984212+00:00",
+  "invalidation_run_at": "2026-04-30T00:23:06.742152+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T00:23:03.282067+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:23:06.622856+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -32050,14 +32050,21 @@
       "verdict_rationale": "Issue: the witness beta_eff laws are arbitrary analytic monotone functions, not constructed from admissible Wilson source surfaces or compact plaquette spectral measures. Why this blocks: an obstruction to the current exact stack must exhibit two models satisfying all closed stack constraints, not only the finite onset jet. Repair target: prove the witnesses are realized by positive Wilson/spectral data satisfying the full stated structural stack, or weaken the claim to finite-jet underdetermination. Claim boundary until fixed: the finite beta^5 onset jet and monotonicity alone do not determine P(6)."
     },
     "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:23:04.076343+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-fresh-cross-confirm-20260430-session-b",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The fresh algebraic check closes within its stated scope, but current_status='unknown' is not eligible for audited_clean under the audit lane. It must stay conditional/support until the source claim is proposed for retention and re-confirmed.",
       "claim_id": "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32077,13 +32084,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "If the diagonal hierarchy truncated exactly at finite order, then K(t) would be polynomial, so P(t) = K'(t) would be a polynomial with a finite limit at infinity.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "04c62366eae24937581ea5997e87dcfda14429bba9d2aaa842e566ca066b1059",
@@ -32091,16 +32098,16 @@
       "open_dependency_paths": [],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 7,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py",
       "title": "Gauge-Vacuum Plaquette Infinite-Hierarchy Obstruction",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The fresh cross-confirmation found an exact class-A closure, but the ledger row has current_status='unknown', so landing audited_clean would violate the audit-lane ratification gate. Why this blocks: audited_clean is reserved for proposed_retained/proposed_promoted rows and audit_lint rejects clean status on support/unknown rows. Repair target: if this claim is intended to be retained, update the source note to proposed_retained/proposed_promoted through the science lane and rerun a fresh-context cross-confirmation. Claim boundary until fixed: the bounded algebraic/support statement may be cited as support, but it is not an audit-ratified retained claim. Fresh-audit note: A nonconstant polynomial cannot have the stated finite asymptotic limit, while the plaquette function changes from 0 to 1. The runner executed with SUMMARY: THEOREM PASS=4 SUPPORT=3 FAIL=0."
     },
     "gauge_vacuum_plaquette_local_environment_factorization_theorem_note": {
       "audit_date": "2026-04-30T00:20:42.425074+00:00",

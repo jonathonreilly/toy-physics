@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:23:03.680083+00:00
+**Generated:** 2026-04-30T00:23:07.012084+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,18 +24,18 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 215 |
 | support | 111 |
 | open | 24 |
-| unknown | 563 |
+| unknown | 562 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 23 |
-| ~~audited_conditional~~ | 198 |
+| ~~audited_conditional~~ | 199 |
 | ~~audited_failed~~ | 342 |
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 7 |
+| `audit_in_progress` | 6 |
 | `audited_clean` | 78 |
-| `audited_conditional` | 134 |
+| `audited_conditional` | 135 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 12 |
@@ -96,7 +96,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | support | audit_in_progress | support | - | - | - | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
@@ -216,6 +215,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -1736,6 +1736,18 @@ Claim boundary until fixed: safe to claim the constant-lift obstruction Gamma_ca
 - **load-bearing step:** There exist distinct real-analytic strictly increasing witness laws on [0,6] that share the exact closed onset jet through order beta^5 but produce different framework-point values.  _(class `A`)_
 - **chain closes:** False — The witnesses show finite-jet plus monotonicity underdetermination, but they are not shown to be realizable Wilson reduction laws compatible with the full hierarchy or compact spectral-measure constraints.
 - **rationale:** Issue: the witness beta_eff laws are arbitrary analytic monotone functions, not constructed from admissible Wilson source surfaces or compact plaquette spectral measures. Why this blocks: an obstruction to the current exact stack must exhibit two models satisfying all closed stack constraints, not only the finite onset jet. Repair target: prove the witnesses are realized by positive Wilson/spectral data satisfying the full stated structural stack, or weaken the claim to finite-jet underdetermination. Claim boundary until fixed: the finite beta^5 onset jet and monotonicity alone do not determine P(6).
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-fresh-cross-confirm-20260430-session-b`  (codex-current; independence=fresh_context)
+- **load-bearing step:** If the diagonal hierarchy truncated exactly at finite order, then K(t) would be polynomial, so P(t) = K'(t) would be a polynomial with a finite limit at infinity.  _(class `A`)_
+- **chain closes:** False — The fresh algebraic check closes within its stated scope, but current_status='unknown' is not eligible for audited_clean under the audit lane. It must stay conditional/support until the source claim is proposed for retention and re-confirmed.
+- **rationale:** Issue: The fresh cross-confirmation found an exact class-A closure, but the ledger row has current_status='unknown', so landing audited_clean would violate the audit-lane ratification gate. Why this blocks: audited_clean is reserved for proposed_retained/proposed_promoted rows and audit_lint rejects clean status on support/unknown rows. Repair target: if this claim is intended to be retained, update the source note to proposed_retained/proposed_promoted through the science lane and rerun a fresh-context cross-confirmation. Claim boundary until fixed: the bounded algebraic/support statement may be cited as support, but it is not an audit-ratified retained claim. Fresh-audit note: A nonconstant polynomial cannot have the stated finite asymptotic limit, while the plaquette function changes from 0 to 1. The runner executed with SUMMARY: THEOREM PASS=4 SUPPORT=3 FAIL=0.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_local_environment_factorization_theorem_note`
