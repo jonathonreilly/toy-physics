@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-30T11:42:32.788927+00:00",
+  "computed_at": "2026-04-30T11:42:36.228033+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -37,7 +37,7 @@
     "support": 110,
     "unknown": 442
   },
-  "proposed_demoted_by_upstream_count": 138,
+  "proposed_demoted_by_upstream_count": 137,
   "proposed_demoted_by_upstream_examples": [
     "area_law_quarter_broader_no_go_note_2026-04-25",
     "atomic_hydrogen_helium_probe_note",
