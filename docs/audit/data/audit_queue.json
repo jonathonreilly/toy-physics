@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 27,
+    "critical": 26,
     "high": 234,
     "leaf": 571,
     "medium": 342
   },
-  "generated_at": "2026-04-30T11:41:34.490498+00:00",
+  "generated_at": "2026-04-30T11:41:37.969277+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,26 +23,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "transitive_descendants": 281
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "one_generation_matter_closure_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "left_handed_charge_matching_note",
-        "anomaly_forces_time_theorem"
-      ],
-      "direct_in_degree": 25,
-      "load_bearing_score": 20.419,
-      "note_path": "docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 241
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24784,5 +24764,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1174
+  "total_pending": 1173
 }
