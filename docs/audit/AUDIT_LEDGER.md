@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T21:56:21.182269+00:00
+**Generated:** 2026-04-30T21:58:42.247596+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 7 |
-| bounded | 282 |
+| bounded | 281 |
 | support | 251 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 736 |
+| ~~audited_conditional~~ | 737 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 210 |
-| `audited_conditional` | 459 |
+| `audited_conditional` | 460 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 804 |
+| `unaudited` | 803 |
 
 | criticality | count |
 |---|---:|
@@ -677,6 +677,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_majorana_current_stack_exhaustion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `neutrino_majorana_operator_axiom_first_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `neutrino_two_amplitude_last_mile_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `newton_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `observable_principle_from_axiom_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `oh_schur_boundary_action_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -9208,6 +9209,24 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** A_min axiom 3 is under-specified on the admissibility of Pfaffian / charge-+/-2 substrate extensions; the strict reading closes C2-X, while the permissive reading does not.  _(class `C`)_
 - **chain closes:** False — The note identifies a sharper substrate-class obstruction, but it does not derive the strict reading from fixed A_min. Its own boundary says unconditional C2-X and the Dirac global lift remain unclosed.
 - **rationale:** Issue: the claimed route to U(1)_V rigidity requires an extra substrate-admissibility decision excluding Pfaffian or charge-+/-2 extensions. Why this blocks: without that theorem or policy premise as retained input, the global Dirac lift cannot follow from fixed A_min. Repair target: prove substrate-class admissibility from A_min, or supply a retained no-go theorem for Pfaffian/pairing extensions. Claim boundary until fixed: stretch-attempt inventory with one falsified route and a named obstruction, not C2-X closure.
+- **auditor confidence:** high
+
+### `neutrino_two_amplitude_last_mile_reduction_note`
+
+- **Note:** [`NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md`](../../docs/NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-10`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Only two amplitudes remain: one complex PMNS amplitude J_chi and one real Majorana amplitude mu.  _(class `B`)_
+- **chain closes:** False — The note is an aggregate last-mile reduction over PMNS and Majorana boundary results that are support/bounded and unaudited. The live runner verifies several zero-current/zero-anomalous-block checks, but it also marks the exact one-complex-plus-one-real reduction with unconditional True checks rather than deriving that completeness inside this runner.
+- **rationale:** Issue: the headline two-amplitude last-mile statement depends on upstream PMNS/Majorana boundary reductions that are still support/bounded and unaudited, and the runner asserts the exact 'one J_chi plus one mu' completeness checks instead of deriving them end-to-end. Why this blocks: the current audit can verify that the named current routes set J_chi=0 and mu=0, but not that no other sole-axiom neutrino data remain. Repair target: audit or retain the PMNS C3-current, hw=1 source-transfer, scalar deformation, nu_R character-boundary, and charge-2 primitive reductions, then make this runner fail unless those upstream dimensions/completeness statements are actually constructed. Claim boundary until fixed: on the current tested bank, the checked PMNS routes give J_chi=0 and the checked Majorana scalar/Nambu route gives mu=0.
+- **open / conditional deps cited:**
+  - `PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md`
+  - `PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md`
+  - `PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md`
+  - `NEUTRINO_MAJORANA_NUR_CHARACTER_BOUNDARY_NOTE.md`
+  - `NEUTRINO_MAJORANA_NUR_CHARGE2_PRIMITIVE_REDUCTION_NOTE.md`
 - **auditor confidence:** high
 
 ### `newton_derivation_note`
