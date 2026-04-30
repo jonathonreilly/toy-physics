@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:43:05.829343+00:00
+**Generated:** 2026-04-30T02:43:09.170800+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 204 |
 | support | 104 |
 | open | 24 |
-| unknown | 516 |
+| unknown | 515 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 377 |
+| ~~audited_conditional~~ | 378 |
 | ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 164 |
+| `audited_conditional` | 165 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1253 |
+| `unaudited` | 1252 |
 
 | criticality | count |
 |---|---:|
@@ -197,6 +197,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_transport_integral_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_transport_status_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -1144,6 +1145,22 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Among all positive off-seed sources on the same seed surface satisfying eta_{i_*} / eta_obs = 1, choose the one minimizing I_seed.  _(class `G`)_
 - **chain closes:** False — The optimizer closes the target because exact agreement with eta_obs is imposed as a constraint; the note itself calls this an invented post-axiom selector law rather than a derived law.
 - **rationale:** Issue: the load-bearing source is selected by minimizing a chosen information cost under the explicit constraint eta_{i_*}/eta_obs = 1. Why this blocks: the exact closure is built into the optimization target, so the runner verifies a calibrated/tuned source law rather than deriving the source from retained framework dynamics. Repair target: derive the information functional and closure constraint independently from retained microscopic dynamics, or remove the eta_obs equality as an imposed selector. Claim boundary until fixed: the note may report a least-deformed calibrated closure source for the PMNS-assisted branch, not an audited axiom-first leptogenesis prediction.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_SELECTOR_BANK_CP_SHEET_BLINDNESS_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_PMNS_SELECTOR_BANK_CP_SHEET_BLINDNESS_THEOREM_NOTE_2026-04-16.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Every current PMNS-side selector objective is even under delta -> -delta while gamma is odd and E1,E2 are even, so every current selected source or candidate has an equally selected opposite-CP partner.  _(class `B`)_
+- **chain closes:** False — The blindness check closes for the imported selector-bank laws and candidates, but the bank inventory and those laws are not provided as audited retained dependencies in this row.
+- **rationale:** Issue: the CP-sheet no-go depends on the current PMNS selector-bank inventory, including minimum-information, observable-relative-action, transport-extremal, and continuity-closure candidates. Why this blocks: the runner verifies delta-even blindness for those imported laws, but it does not prove that the listed bank exhausts all current selector laws from retained inputs. Repair target: add a retained selector-bank inventory theorem and retained dependencies for each covered selector law/candidate. Claim boundary until fixed: conditional no-go for the supplied PMNS selector bank, not an audited exhaustive CP-sheet blindness theorem.
+- **open / conditional deps cited:**
+  - `scripts/frontier_dm_leptogenesis_pmns_mininfo_source_law.py`
+  - `scripts/frontier_dm_leptogenesis_pmns_observable_relative_action_law.py`
+  - `scripts/frontier_dm_leptogenesis_pmns_transport_extremal_source_candidate.py`
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16`

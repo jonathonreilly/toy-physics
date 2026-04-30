@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T02:43:05.669142+00:00
-**Total pending:** 1254
-**Ready (all deps already at a stable tier):** 812
+**Generated:** 2026-04-30T02:43:09.012232+00:00
+**Total pending:** 1253
+**Ready (all deps already at a stable tier):** 811
 
 By criticality:
 - `critical`: 41
-- `high`: 265
+- `high`: 264
 - `medium`: 340
 - `leaf`: 608
 
@@ -57,14 +57,14 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 39 | `n_eff_from_three_generations_theorem_note_2026-04-24` | critical | 38 | 13.29 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_n_eff_from_three_generations.py` |
 | 40 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | critical | 38 | 12.79 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_matter_radiation_equality_structural_identity.py` |
 | 41 | `publication.ci3_z3.publication_matrix` | critical | 31 | 12.50 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 42 | `dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16` | high | 102 | 8.19 | Y | fresh_context_or_stronger | `scripts/frontier_dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem.py` |
-| 43 | `strong_cp_theta_zero_note` | high | 97 | 13.62 | Y | fresh_context_or_stronger | `scripts/frontier_strong_cp_theta_zero.py` |
-| 44 | `dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17` | high | 84 | 9.91 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_source_surface_parity_compatible_observable_selector_theorem.py` |
-| 45 | `koide_selected_line_cyclic_response_bridge_note_2026-04-18` | high | 71 | 10.17 | Y | fresh_context_or_stronger | `scripts/frontier_koide_selected_line_cyclic_response_bridge.py` |
-| 46 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | high | 69 | 8.63 | Y | fresh_context_or_stronger | `scripts/frontier_koide_gamma_orbit_selector_bridge.py` |
-| 47 | `koide_full_lattice_schur_inheritance_note_2026-04-18` | high | 67 | 9.09 | Y | fresh_context_or_stronger | `scripts/frontier_koide_full_lattice_schur_inheritance.py` |
-| 48 | `koide_z3_scalar_potential_support_note_2026-04-19` | high | 65 | 8.54 | Y | fresh_context_or_stronger | - |
-| 49 | `koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24` | high | 64 | 11.02 | Y | fresh_context_or_stronger | - |
-| 50 | `yt_exact_schur_normal_form_uniqueness_note` | high | 64 | 11.02 | Y | fresh_context_or_stronger | `scripts/frontier_yt_exact_schur_normal_form_uniqueness.py` |
+| 42 | `strong_cp_theta_zero_note` | high | 97 | 13.62 | Y | fresh_context_or_stronger | `scripts/frontier_strong_cp_theta_zero.py` |
+| 43 | `dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17` | high | 84 | 9.91 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_source_surface_parity_compatible_observable_selector_theorem.py` |
+| 44 | `koide_selected_line_cyclic_response_bridge_note_2026-04-18` | high | 71 | 10.17 | Y | fresh_context_or_stronger | `scripts/frontier_koide_selected_line_cyclic_response_bridge.py` |
+| 45 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | high | 69 | 8.63 | Y | fresh_context_or_stronger | `scripts/frontier_koide_gamma_orbit_selector_bridge.py` |
+| 46 | `koide_full_lattice_schur_inheritance_note_2026-04-18` | high | 67 | 9.09 | Y | fresh_context_or_stronger | `scripts/frontier_koide_full_lattice_schur_inheritance.py` |
+| 47 | `koide_z3_scalar_potential_support_note_2026-04-19` | high | 65 | 8.54 | Y | fresh_context_or_stronger | - |
+| 48 | `koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24` | high | 64 | 11.02 | Y | fresh_context_or_stronger | - |
+| 49 | `yt_exact_schur_normal_form_uniqueness_note` | high | 64 | 11.02 | Y | fresh_context_or_stronger | `scripts/frontier_yt_exact_schur_normal_form_uniqueness.py` |
+| 50 | `koide_brannen_callan_harvey_candidate_note_2026-04-22` | high | 64 | 9.52 | Y | fresh_context_or_stronger | - |
 
 Full queue lives in `data/audit_queue.json`.
