@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-30T01:18:57.481427+00:00",
+  "computed_at": "2026-04-30T01:20:28.138815+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -25,22 +25,21 @@
   ],
   "cycles_detected": 59,
   "effective_status_counts": {
-    "audited_conditional": 441,
+    "audited_conditional": 442,
     "audited_decoration": 4,
     "audited_failed": 89,
     "audited_numerical_match": 18,
     "audited_renaming": 42,
-    "bounded": 215,
+    "bounded": 214,
     "open": 24,
     "proposed_retained": 19,
     "retained": 78,
     "support": 108,
     "unknown": 550
   },
-  "proposed_demoted_by_upstream_count": 152,
+  "proposed_demoted_by_upstream_count": 151,
   "proposed_demoted_by_upstream_examples": [
     "atomic_hydrogen_helium_probe_note",
-    "bh_entropy_rt_ratio_widom_no_go_note",
     "bminusl_anomaly_freedom_theorem_note_2026-04-24",
     "causal_impact_parameter_note",
     "charged_lepton_koide_cone_algebraic_equivalence_note",
@@ -63,6 +62,7 @@
     "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25",
     "ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25",
     "ckm_compound_magnitudes_circumradius_bridge_theorem_note_2026-04-25",
-    "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
+    "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+    "ckm_cp_product_alpha_s_cross_sector_extraction_theorem_note_2026-04-25"
   ]
 }

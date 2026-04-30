@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 44,
-    "high": 285,
+    "high": 284,
     "leaf": 617,
     "medium": 344
   },
-  "generated_at": "2026-04-30T01:18:57.516119+00:00",
+  "generated_at": "2026-04-30T01:20:28.180920+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1985,25 +1985,6 @@
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 41
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "bh_entropy_rt_ratio_widom_no_go_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "bh_entropy_derived_note"
-      ],
-      "direct_in_degree": 7,
-      "load_bearing_score": 8.858,
-      "note_path": "docs/BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_bh_entropy_rt_ratio_widom.py",
-      "transitive_descendants": 40
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -26873,6 +26854,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 864,
-  "total_pending": 1290
+  "ready_count": 863,
+  "total_pending": 1289
 }

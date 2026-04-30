@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T01:18:57.466914+00:00",
-  "generated_at": "2026-04-30T01:18:55.794346+00:00",
-  "invalidation_run_at": "2026-04-30T01:18:57.417500+00:00",
+  "effective_status_computed_at": "2026-04-30T01:20:28.122944+00:00",
+  "generated_at": "2026-04-30T01:20:26.279874+00:00",
+  "invalidation_run_at": "2026-04-30T01:20:28.060245+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T01:18:57.317803+00:00",
+  "load_bearing_computed_at": "2026-04-30T01:20:27.936085+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -2084,7 +2084,7 @@
       ],
       "direct_in_degree": 6,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:planck_boundary_density_extension_theorem_note_2026-04-24",
+      "effective_status_reason": "inherited_from:bh_entropy_rt_ratio_widom_no_go_note",
       "independence": null,
       "intrinsic_status": "support",
       "load_bearing_score": 8.322,
@@ -3374,14 +3374,25 @@
       "verdict_rationale": null
     },
     "bh_entropy_rt_ratio_widom_no_go_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T01:20:20.084541+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "bh_entropy_derived_note": "bounded"
+        },
+        "deps": [
+          "bh_entropy_derived_note"
+        ],
+        "load_bearing_score": 8.858,
+        "transitive_descendants": 40
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The Widom integral evaluation and numerical tail checks close for the specified carrier, but the carrier is supplied by the one-hop BH entropy companion whose current status is bounded. The retained no-go status therefore depends on a bounded authority rather than a retained dependency chain.",
       "claim_id": "bh_entropy_rt_ratio_widom_no_go_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -3391,18 +3402,20 @@
         "bh_entropy_derived_note"
       ],
       "direct_in_degree": 7,
-      "effective_status": "bounded",
-      "effective_status_reason": "inherited_from:bh_entropy_derived_note",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "self",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 8.858,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "For the 2D square-lattice half-filled carrier with a straight cut, the Widom integral gives c_Widom = 1/6, so the lane's RT ratio cannot have exact asymptote 1/4 on that carrier.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "08e96fe75b90017a2dff6859b8a49d742b72322a9e86ee09e179de50361cce80",
       "note_path": "docs/BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/BH_ENTROPY_DERIVED_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367654+00:00",
@@ -3456,16 +3469,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
+        "A": 4,
+        "B": 1,
+        "C": 6,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 11
       },
       "runner_path": "scripts/frontier_bh_entropy_rt_ratio_widom.py",
       "title": "BH Entropy RT-Ratio Widom No-Go Theorem",
       "transitive_descendants": 40,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the load-bearing no-go is computed correctly for the named free-fermion carrier, but that carrier and lane interpretation are inherited from docs/BH_ENTROPY_DERIVED_NOTE.md, which is explicitly bounded. Why this blocks: the audit lane cannot ratify a proposed-retained claim whose only one-hop authority is bounded, even when the downstream Widom calculation is internally consistent. Repair target: either promote the carrier-definition note through a clean audit, or scope this no-go as a retained mathematical statement conditional on the bounded carrier definition without presenting the carrier import as retained physics. Claim boundary until fixed: safe to say the current bounded BH entropy companion's RT-bond route asymptotes to 1/6 rather than 1/4 on its free-fermion carrier; not safe to present it as an audit-clean retained theorem chain."
     },
     "bminusl_anomaly_freedom_theorem_note_2026-04-24": {
       "audit_date": null,
