@@ -16,7 +16,8 @@ Summary:
 - Adds a static-energy bridge scout: TUMQCD finite-window `sigma` is
   useful but convention-split, while CLS `N_f=2+1` `r0`/`r1` force
   scales are clean but do not uniquely map to `sqrt(sigma)`.
-- Updates Lane 1 and the canonical harness index.
+- Records proposed Lane 1 and canonical harness weaving in branch-local
+  handoff for later review integration.
 
 Test:
 

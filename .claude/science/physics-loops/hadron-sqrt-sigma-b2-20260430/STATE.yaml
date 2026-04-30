@@ -1,15 +1,24 @@
 slug: hadron-sqrt-sigma-b2-20260430
 goal: "Lane 1 route 3E sqrt(sigma) B2 quenched-to-dynamical screening gate: determine whether the current single-factor target is executable, close invalid fast routes, and repair the gate if needed."
 target_status: best-honest-status
-mode: run
+mode: campaign
 runtime: 12h-requested
 deep_block: 90m
 start_time_utc: "2026-04-30T00:27:12Z"
+last_resume_time_utc: "2026-04-30T01:07:22Z"
 checkpoint_interval: 30m
 branch: physics-loop/hadron-sqrt-sigma-b2-block01-20260430
 base: origin/main
 base_commit_at_start: "17789d49 audit: normalize replayed sweep surfaces"
 lock_status: held
+actual_current_surface_status: bounded-support
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "B2/B5 remain open; production L=8,12,16 framework-side statistics and uncertainty budget are not yet accumulated."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
 current_phase: cycle-6-complete
 cycles_completed: 6
 completed_phases:
@@ -27,7 +36,9 @@ files_touched:
   - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/ASSUMPTIONS_AND_IMPORTS.md
   - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/NO_GO_LEDGER.md
   - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/ROUTE_PORTFOLIO.md
+  - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/OPPORTUNITY_QUEUE.md
   - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/ARTIFACT_PLAN.md
+  - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/CLAIM_STATUS_CERTIFICATE.md
   - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/LITERATURE_BRIDGES.md
   - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/REVIEW_HISTORY.md
   - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/PR_BACKLOG.md
@@ -38,8 +49,6 @@ files_touched:
   - docs/HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md
   - docs/HADRON_LANE1_SQRT_SIGMA_B5_LOWSTAT_SCOUT_NOTE_2026-04-30.md
   - docs/HADRON_LANE1_SQRT_SIGMA_B5_RESUMABLE_LADDER_NOTE_2026-04-30.md
-  - docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md
-  - docs/CANONICAL_HARNESS_INDEX.md
   - scripts/frontier_hadron_lane1_sqrt_sigma_b2_gate_repair.py
   - scripts/frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge.py
   - scripts/frontier_hadron_lane1_sqrt_sigma_b5_framework_link_audit.py
@@ -71,5 +80,8 @@ claim_state_movement:
   - "Cycle 4: B5 ladder budget landed; L=4,6,8 is scout only, first B5-closing compute class is L=8,12,16 or equivalent theorem."
   - "Cycle 5: low-stat L=4,6,8 pure-gauge scout validates the local plaquette/Wilson-loop/Creutz measurement pipeline, but is explicitly not B5 closure."
   - "Cycle 6: resumable B5 Wilson/Creutz ladder runner landed and smoke-verified; production L=8,12,16 statistics remain to be accumulated before any B5 promotion."
+campaign_correction:
+  - "2026-04-30T01:07:22Z: resumed after incorrect PR-checkpoint stop; user clarified the 12h campaign budget must continue."
+  - "Repo-wide authority-surface weaving is being removed from this science PR; proposed integration belongs in HANDOFF until review."
 next_exact_action: "Run the resumable B5 ladder with --profile production under wall-clock checkpoints until L=8,12,16 statistics support or reject the bridge with uncertainties."
-stop_condition: "runtime budget reached, blocker requiring human science judgment, honest claim-state closure achieved, or no route passes dramatic-step gate after Deep Work Rules are satisfied"
+stop_condition: "12h runtime budget reached, external worktree change blocks safe continuation, required core tooling fails for all viable routes, or refreshed OPPORTUNITY_QUEUE plus Deep Work Rules prove no route passes the dramatic-step gate"

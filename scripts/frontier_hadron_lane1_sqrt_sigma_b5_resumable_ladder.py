@@ -427,8 +427,8 @@ def part2_run_and_checkpoint(config: RunnerConfig) -> None:
 def part3_artifact_checks() -> None:
     section("Part 3: artifact checks")
     note = read("docs/HADRON_LANE1_SQRT_SIGMA_B5_RESUMABLE_LADDER_NOTE_2026-04-30.md")
-    index = read("docs/CANONICAL_HARNESS_INDEX.md")
-    lane = read("docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md")
+    handoff = read(".claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/HANDOFF.md")
+    certificate = read(".claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/CLAIM_STATUS_CERTIFICATE.md")
     state = read(".claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/STATE.yaml")
 
     check(
@@ -436,13 +436,14 @@ def part3_artifact_checks() -> None:
         "append-only JSONL" in note and "wall-clock stop/resume" in note and "not B5 closure" in note,
     )
     check(
-        "canonical index includes the resumable ladder runner",
-        "HADRON_LANE1_SQRT_SIGMA_B5_RESUMABLE_LADDER_NOTE_2026-04-30.md" in index
-        and "frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder.py" in index,
+        "branch-local handoff includes the resumable ladder runner",
+        "HADRON_LANE1_SQRT_SIGMA_B5_RESUMABLE_LADDER_NOTE_2026-04-30.md" in handoff
+        and "frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder.py" in handoff,
     )
     check(
-        "Lane 1 open-science doc includes the resumable ladder",
-        "HADRON_LANE1_SQRT_SIGMA_B5_RESUMABLE_LADDER_NOTE_2026-04-30.md" in lane,
+        "claim-status certificate keeps B5 open rather than retained",
+        "actual_current_surface_status: bounded-support" in certificate
+        and "bare_retained_allowed: false" in certificate,
     )
     check(
         "loop state advanced to cycle 6",

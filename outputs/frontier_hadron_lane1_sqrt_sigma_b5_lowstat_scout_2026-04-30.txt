@@ -31,7 +31,7 @@ Part 2: qualitative ladder checks
 Part 3: artifact checks
 ----------------------------------------------------------------------------------------
   [PASS] note labels the run as scout rather than closure
-  [PASS] canonical index includes the low-stat scout runner
+  [PASS] branch-local handoff includes the low-stat scout runner
   [PASS] loop state advanced to cycle 5
 
 ========================================================================================

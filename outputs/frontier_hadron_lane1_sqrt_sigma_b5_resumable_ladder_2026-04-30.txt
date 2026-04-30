@@ -35,8 +35,8 @@ Part 2: resumable ladder smoke run
 Part 3: artifact checks
 ----------------------------------------------------------------------------------------
   [PASS] note labels the runner as append-only/resumable but not B5 closure
-  [PASS] canonical index includes the resumable ladder runner
-  [PASS] Lane 1 open-science doc includes the resumable ladder
+  [PASS] branch-local handoff includes the resumable ladder runner
+  [PASS] claim-status certificate keeps B5 open rather than retained
   [PASS] loop state advanced to cycle 6
 
 ========================================================================================

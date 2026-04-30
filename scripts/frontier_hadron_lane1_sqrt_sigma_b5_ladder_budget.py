@@ -212,7 +212,7 @@ def part4_required_observables() -> None:
         print(f"  required: {item}")
 
     note = read("docs/HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md")
-    index = read("docs/CANONICAL_HARNESS_INDEX.md")
+    handoff = read(".claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/HANDOFF.md")
     state = read(".claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/STATE.yaml")
 
     check(
@@ -224,9 +224,9 @@ def part4_required_observables() -> None:
         "scout, not closure" in note and "L = 4, 6, 8" in note,
     )
     check(
-        "canonical index includes the B5 ladder budget runner",
-        "HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md" in index
-        and "frontier_hadron_lane1_sqrt_sigma_b5_ladder_budget.py" in index,
+        "branch-local handoff includes the B5 ladder budget runner",
+        "HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md" in handoff
+        and "frontier_hadron_lane1_sqrt_sigma_b5_ladder_budget.py" in handoff,
     )
     check(
         "loop state advanced to cycle 4",

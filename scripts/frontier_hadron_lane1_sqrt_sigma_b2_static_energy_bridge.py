@@ -245,7 +245,7 @@ def part3_bridge_gate_model() -> None:
 def part4_artifact_checks() -> None:
     section("Part 4: artifact checks")
     note = read("docs/HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md")
-    index = read("docs/CANONICAL_HARNESS_INDEX.md")
+    handoff = read(".claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/HANDOFF.md")
     state = read(".claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/STATE.yaml")
 
     check(
@@ -257,9 +257,9 @@ def part4_artifact_checks() -> None:
         "not promote" in note and "bounded" in note,
     )
     check(
-        "canonical index includes the static-energy bridge runner",
-        "HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md" in index
-        and "frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge.py" in index,
+        "branch-local handoff includes the static-energy bridge runner",
+        "HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md" in handoff
+        and "frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge.py" in handoff,
     )
     check(
         "loop state advanced to cycle 2",

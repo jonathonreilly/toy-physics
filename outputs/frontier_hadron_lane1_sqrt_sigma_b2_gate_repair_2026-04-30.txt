@@ -47,7 +47,7 @@ Part 4: repaired gate artifact checks
   [PASS] new note splits B2 into observable-definition and bridge-value gates
   [PASS] new note records string breaking as the reason asymptotic sigma is not the target
   [PASS] new note forbids rough-factor and comparator-backsolve promotion
-  [PASS] canonical harness index points to this B2 gate repair runner
+  [PASS] branch-local handoff points to this B2 gate repair runner
 
 ========================================================================================
 PASS=16 FAIL=0

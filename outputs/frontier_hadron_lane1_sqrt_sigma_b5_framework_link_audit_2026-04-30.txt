@@ -43,7 +43,7 @@ Part 4: artifact checks
 ----------------------------------------------------------------------------------------
   [PASS] note records B5 as current-surface no-go, not closure
   [PASS] note defines the future large-volume ladder
-  [PASS] canonical index includes the B5 framework-link runner
+  [PASS] branch-local handoff includes the B5 framework-link runner
   [PASS] loop state advanced to cycle 3
 
 ========================================================================================

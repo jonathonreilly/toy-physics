@@ -279,16 +279,16 @@ def part2_qualitative_ladder(results: list[ScoutResult]) -> None:
 def part3_artifact_checks() -> None:
     section("Part 3: artifact checks")
     note = (Path(__file__).resolve().parents[1] / "docs/HADRON_LANE1_SQRT_SIGMA_B5_LOWSTAT_SCOUT_NOTE_2026-04-30.md").read_text(encoding="utf-8")
-    index = (Path(__file__).resolve().parents[1] / "docs/CANONICAL_HARNESS_INDEX.md").read_text(encoding="utf-8")
+    handoff = (Path(__file__).resolve().parents[1] / ".claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/HANDOFF.md").read_text(encoding="utf-8")
     state = (Path(__file__).resolve().parents[1] / ".claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/STATE.yaml").read_text(encoding="utf-8")
     check(
         "note labels the run as scout rather than closure",
         "pipeline scout" in note and "not B5 closure" in note,
     )
     check(
-        "canonical index includes the low-stat scout runner",
-        "HADRON_LANE1_SQRT_SIGMA_B5_LOWSTAT_SCOUT_NOTE_2026-04-30.md" in index
-        and "frontier_hadron_lane1_sqrt_sigma_b5_lowstat_scout.py" in index,
+        "branch-local handoff includes the low-stat scout runner",
+        "HADRON_LANE1_SQRT_SIGMA_B5_LOWSTAT_SCOUT_NOTE_2026-04-30.md" in handoff
+        and "frontier_hadron_lane1_sqrt_sigma_b5_lowstat_scout.py" in handoff,
     )
     check(
         "loop state advanced to cycle 5",

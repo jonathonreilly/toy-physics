@@ -5,8 +5,8 @@
 - Add `docs/HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md`.
 - Add `scripts/frontier_hadron_lane1_sqrt_sigma_b2_gate_repair.py`.
 - Run the script and store output under `outputs/`.
-- Update the Lane 1 open-science file and canonical harness index so the
-  repaired B2 gate is discoverable.
+- Record proposed Lane 1 open-science and canonical harness integration in
+  `HANDOFF.md` for the later review/integration pass.
 - Update this loop pack with the Cycle 1 state and handoff.
 
 ## Cycle 2

@@ -52,7 +52,7 @@ Part 4: artifact checks
 ----------------------------------------------------------------------------------------
   [PASS] note records the TUMQCD A-choice split
   [PASS] note keeps the bridge bounded rather than retained
-  [PASS] canonical index includes the static-energy bridge runner
+  [PASS] branch-local handoff includes the static-energy bridge runner
   [PASS] loop state advanced to cycle 2
 
 ========================================================================================

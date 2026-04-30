@@ -52,7 +52,7 @@ Part 4: required observable packet
   required: same beta=6 and action policy
   [PASS] budget note lists the required observable packet
   [PASS] budget note marks L4/L6/L8 as scout rather than closure
-  [PASS] canonical index includes the B5 ladder budget runner
+  [PASS] branch-local handoff includes the B5 ladder budget runner
   [PASS] loop state advanced to cycle 4
 
 ========================================================================================

@@ -218,7 +218,7 @@ def part3_candidate_gate_model() -> None:
 def part4_repaired_gate_artifact() -> None:
     section("Part 4: repaired gate artifact checks")
     note = read("docs/HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md")
-    index = read("docs/CANONICAL_HARNESS_INDEX.md")
+    handoff = read(".claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/HANDOFF.md")
 
     check(
         "new note splits B2 into observable-definition and bridge-value gates",
@@ -235,9 +235,9 @@ def part4_repaired_gate_artifact() -> None:
         and "cannot promote" in note,
     )
     check(
-        "canonical harness index points to this B2 gate repair runner",
-        "HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md" in index
-        and "frontier_hadron_lane1_sqrt_sigma_b2_gate_repair.py" in index,
+        "branch-local handoff points to this B2 gate repair runner",
+        "HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md" in handoff
+        and "frontier_hadron_lane1_sqrt_sigma_b2_gate_repair.py" in handoff,
     )
 
 
