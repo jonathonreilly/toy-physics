@@ -11,7 +11,7 @@
 - [`scripts/CONNECTIVITY_FAMILY_V2_FAILURE_AUDIT.py`](/Users/jonreilly/Projects/Physics/scripts/CONNECTIVITY_FAMILY_V2_FAILURE_AUDIT.py)
 - [`logs/2026-04-06-connectivity-family-v2-elliptical-targeted.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-06-connectivity-family-v2-elliptical-targeted.txt)
 - retained invariant: [`docs/SIGN_PORTABILITY_INVARIANT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SIGN_PORTABILITY_INVARIANT_NOTE.md)
-- out-of-band holdout: [`docs/FIFTH_FAMILY_RADIAL_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/FIFTH_FAMILY_RADIAL_NOTE.md)
+- out-of-band holdout: [`archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_NOTE.md)
 
 ## Question
 

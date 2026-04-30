@@ -369,7 +369,7 @@ Primary artifact for that correction:
 
 Primary artifact:
 
-- [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
+- [`archive_unlanded/lattice-dense-spent-delay-window-salvage-2026-04-30/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](../archive_unlanded/lattice-dense-spent-delay-window-salvage-2026-04-30/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
 
 ### Tapered 3D refinement branch
 

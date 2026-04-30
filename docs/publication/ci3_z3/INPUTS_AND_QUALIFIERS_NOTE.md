@@ -155,7 +155,7 @@ Current absolute-scale package rule:
   - exact support identity `alpha_3(bare)/alpha_em(bare) = 2d + 3 = 9`
     at `d = 3`
   - authority:
-    [FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md](../../FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md)
+    [FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md](../../../archive_unlanded/framework-bare-alpha-assumed-input-salvage-2026-04-30/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md)
   - qualifier:
     this reuses the retained EW-normalization bookkeeping and the reviewed
     `Cl(3)->SM` support counts; it does not promote that support packet into

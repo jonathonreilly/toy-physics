@@ -8,12 +8,12 @@
 - [`scripts/COMPLEX_SELECTIVITY_PREDICTOR_SCAN.py`](/Users/jonreilly/Projects/Physics/scripts/COMPLEX_SELECTIVITY_PREDICTOR_SCAN.py)
 - [`logs/2026-04-06-complex-selectivity-predictor.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-06-complex-selectivity-predictor.txt)
 - retained family cards:
-  - [`docs/GROWN_TRANSFER_BASIN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GROWN_TRANSFER_BASIN_NOTE.md)
+  - [`archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md)
   - [`docs/SECOND_GROWN_FAMILY_COMPLEX_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SECOND_GROWN_FAMILY_COMPLEX_NOTE.md)
   - [`docs/ALT_CONNECTIVITY_FAMILY_COMPLEX_FAILURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ALT_CONNECTIVITY_FAMILY_COMPLEX_FAILURE_NOTE.md)
   - [`docs/THIRD_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/THIRD_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md)
   - [`docs/FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md)
-  - [`docs/FIFTH_FAMILY_COMPLEX_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/FIFTH_FAMILY_COMPLEX_NOTE.md)
+  - [`archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_COMPLEX_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_COMPLEX_NOTE.md)
   - [`docs/FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md)
 
 ## Question

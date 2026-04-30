@@ -10,7 +10,7 @@
 
 ## Start Here
 
-- [`../../LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](../../LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
+- [`../../LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](../../../archive_unlanded/lattice-dense-spent-delay-window-salvage-2026-04-30/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
 - [`../../CONTINUUM_BRIDGE_NOTE.md`](../../CONTINUUM_BRIDGE_NOTE.md)
 - [`../../STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](../../STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md)
 

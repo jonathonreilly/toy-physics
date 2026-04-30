@@ -8,7 +8,7 @@
 This is a promotion-triage note for the current dirty / untracked stack after
 the newest retained wins already on `main`:
 
-- [`docs/GROWN_TRANSFER_BASIN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GROWN_TRANSFER_BASIN_NOTE.md)
+- [`archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md)
 - [`docs/FIXED_FIELD_FAMILY_UNIFICATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/FIXED_FIELD_FAMILY_UNIFICATION_NOTE.md)
 - [`docs/NONLABEL_GROWN_BASIN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/NONLABEL_GROWN_BASIN_NOTE.md)
 - [`docs/EARLY_FAMILY_TRANSFER_CONNECTIVITY_DIAGNOSIS.md`](/Users/jonreilly/Projects/Physics/docs/EARLY_FAMILY_TRANSFER_CONNECTIVITY_DIAGNOSIS.md)
