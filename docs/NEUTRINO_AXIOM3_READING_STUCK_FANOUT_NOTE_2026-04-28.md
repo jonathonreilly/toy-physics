@@ -1,13 +1,13 @@
 # Stuck Fan-Out: Strict vs Permissive Reading of `A_min` Axiom 3
 
 **Date:** 2026-04-28
-**Status:** open stuck-fan-out note for Lane 4; synthesis and route triage
-only, no claim promotion. Per the new physics-loop skill's Deep Work Rules
-requirement to record a stuck fan-out before any honest stop. Generates five
-framework-internal arguments for each reading of `A_min` axiom 3 ("finite
-local Grassmann / staggered-Dirac partition"), synthesizes the workstream's
-best reading of the current framework posture, and identifies the best
-remaining attack on `(C2-X)` under that reading.
+**Status:** bounded stuck-fan-out / no-go inventory for Lane 4; synthesis and
+route triage only, no claim promotion and no axiom amendment. Per
+`docs/audit/AXIOM_MINIMALITY_POLICY.md`, `A_min` remains fixed through the
+repo audit, so the strict/permissive axiom-3 fork is recorded as a boundary
+inventory rather than a closure decision. Generates five framework-internal
+arguments for each reading of `A_min` axiom 3 ("finite local Grassmann /
+staggered-Dirac partition") and preserves the named `(C2-X)` attack frames.
 **Lane:** 4 — Neutrino quantitative closure
 **Loop:** `neutrino-quantitative-20260428`
 
@@ -226,11 +226,10 @@ axioms note itself.
 
 ## 3. Synthesis
 
-### 3.1 The honest reading
+### 3.1 The source-reading inventory
 
-The framework's *intended* reading of axiom 3 is **permissive**. The
-authorial intent is explicit and consistent across multiple retained
-notes:
+As a source-reading exercise, the permissive-reading arguments are the
+stronger historical/posture evidence. The relevant source signals are:
 
 - P1 quotes from three independent notes preserve the openness of
   future Majorana extensions.
@@ -239,47 +238,46 @@ notes:
 - P5 directly states that axiom-side extensions are anticipated.
 - P4 supports this via the axiom's own phrasing.
 
-Conversely, the strict-reading arguments (S1-S5) are mostly
-*integration constraints* that would make a permissive reading
-costly, not impossible. None of S1-S5 is an explicit textual
-declaration of strictness.
+Conversely, the strict-reading arguments (S1-S5) are mostly integration
+constraints. They show what would be required to globalize the current-stack
+Dirac result, but they do not derive `(C2-X)` from fixed `A_min`.
 
 ### 3.2 Implication for `(C2-X)`
 
-Under the framework's intended permissive reading:
+Under the audit-policy resolution:
 
 - `(C2-X)` is **not** closed by an axiom-clarification.
-- The Cycle-2 conditional Dirac global theorem remains **conditional**.
+- The Cycle-2 Dirac global lift remains a **bounded conditional theorem**.
+- No amendment to `MINIMAL_AXIOMS_2026-04-11.md` is used to close the lane.
 - The unconditional global lift requires either:
-  - a research-level retention path on the permissive substrate
-    (e.g., a theorem that **all** admissible Pfaffian extensions
-    consistent with retained anomaly cancellations + retained gauge
-    structure must still preserve `U(1)_V`), or
+  - a first-principles derivation from fixed `A_min` that **all**
+    admissible Pfaffian extensions consistent with retained anomaly
+    cancellations + retained gauge structure must still preserve `U(1)_V`,
+    or
   - empirical falsification of admissible Pfaffian extensions via
     null 0νββ at experimental precision (`(R-X4)`-type sharpener).
 
-The decision-level reformulation Cycle 3 proposed is **rejected** by
-this fan-out: the framework explicitly declines to take the strict
-position on its own axioms.
+The decision-level reformulation Cycle 3 proposed is **rejected** as an
+audit-lane closure move: the framework does not amend `A_min` in order to
+close `(C2-X)`.
 
 ### 3.3 What this fan-out closes and opens
 
 **Closes:**
 
 - The decision-level reformulation. `(C2-X)` is a research-level
-  obstruction under the framework's intended reading.
-- Confidence that the framework's authors have made an explicit
-  choice (permissive) on this axiom-interpretation question.
+  obstruction under fixed `A_min`.
+- The axiom-3 amendment route for this workstream. It is replaced by
+  `AXIOM_MINIMALITY_POLICY.md`.
 
 **Opens / re-opens:**
 
-- The research-level question of `(C2-X)` retention under permissive
-  substrate extensions.
+- The research-level question of `(C2-X)` closure under fixed `A_min`.
 - The new active hard residual: a structural rigidity theorem on
   `U(1)_V` preservation under all admissible Pfaffian extensions
   consistent with retained framework structure.
 
-## 4. Best remaining attack on `(C2-X)` under permissive reading
+## 4. No-go ledger for `(C2-X)` attack frames
 
 ### 4.1 The reformulated target
 
@@ -310,7 +308,8 @@ the load-bearing target.
 
 ### 4.3 Concrete sub-targets
 
-Three concrete sub-attacks on the permissive-reading `(C2-X)`:
+Three concrete sub-attacks on `(C2-X)` remain ledgered as candidate attack
+frames:
 
 - **(SR-1) Lorentz-onset incompatibility:** show that any nonzero
   Pfaffian pairing `S` breaks the retained emergent-Lorentz
@@ -325,11 +324,11 @@ Three concrete sub-attacks on the permissive-reading `(C2-X)`:
   matter content has only bilinear-canonical insertions. This would
   effectively force `(C2-X)`-strict via the gauge-anomaly side.
 
-Of these, **(SR-2) is the most promising** as a single-cycle
-attempt: the continuum-limit closure is already retained as a
-theorem-grade result (per the framework's emergent-Lorentz cluster),
-and sharpening it to "constrains pairing extensions" is a
-self-contained structural step.
+Of these, **(SR-2)** was the cleanest single-cycle attempt because the
+continuum-limit closure is already retained as a theorem-grade result (per
+the framework's emergent-Lorentz cluster), and sharpening it to "constrains
+pairing extensions" is a self-contained structural step. It remains a
+bounded attack frame unless such a derivation is supplied from fixed `A_min`.
 
 ## 5. Loop status after this fan-out
 
@@ -340,7 +339,8 @@ Per the new physics-loop skill, this stuck fan-out satisfies the
 
 - ≥3 orthogonal attack frames generated (5+5 here).
 - Synthesis recorded with named best remaining attack.
-- Identifies a research-level continuation path (SR-1 / SR-2 / SR-3).
+- Identifies a bounded no-go ledger of candidate attack frames
+  (SR-1 / SR-2 / SR-3).
 
 ### 5.2 Honest stop vs continue
 
@@ -363,8 +363,8 @@ Given:
   attack within budget";
 
 **recommendation: stop honestly at Cycle 4.** Hand off SR-1 / SR-2 /
-SR-3 as recommended attack frames for a future loop session. Open
-the review PR per skill's PR policy.
+SR-3 as candidate attack frames for a future loop session. Open the
+review PR per skill's PR policy.
 
 ## 6. Best remaining attack — handoff to future cycle/session
 
@@ -381,8 +381,8 @@ Target: show that adding any nonzero Pfaffian pairing `S` to the
 staggered partition breaks this closure (e.g., by introducing a
 Bogoliubov mixing that is Lorentz-non-invariant in any frame).
 
-If `(SR-2)` lands, the conditional Dirac global theorem (Cycle 2)
-becomes unconditional and `(C2-X)` retains.
+If `(SR-2)` lands as a first-principles derivation from fixed `A_min`, the
+bounded conditional Dirac theorem (Cycle 2) would discharge `(C2-X)`.
 
 ## 7. Cross-references
 
@@ -408,16 +408,15 @@ becomes unconditional and `(C2-X)` retains.
 
 ## 8. Boundary
 
-This is a stuck-fan-out artifact. It does not retain any input, does
-not introduce a numerical claim, and does not promote any cycle's
-content. It synthesizes 5+5 framework-internal arguments to determine
-which reading of axiom 3 the framework intends, and identifies the
-best remaining attack under the intended reading.
+This is a bounded stuck-fan-out artifact. It does not retain any input, does
+not introduce a numerical claim, does not promote any cycle's content, and
+does not amend `A_min`. It synthesizes 5+5 framework-internal arguments and
+preserves the SR-1 / SR-2 / SR-3 attack-frame ledger for `(C2-X)`.
 
 The fan-out **revises** Cycle 3's conclusion: the decision-level
 reformulation `(C2-X)`-strict is **rejected** as inconsistent with the
-framework's authorial intent. `(C2-X)` returns to a research-level
-obstruction with a sharpened set of attack frames (SR-1, SR-2, SR-3).
+fixed-`A_min` audit policy. `(C2-X)` remains a bounded obstruction with a
+sharpened set of attack frames (SR-1, SR-2, SR-3).
 
 This revision is itself substantive output — Cycle 3 may have
 over-stated the closure path, and the fan-out catches that

@@ -38,19 +38,22 @@ derive masses or promote the lane.
 The [Dirac global lift partial theorem](../../NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md)
 records the current 4D progress: current-stack Dirac behavior globalizes only
 under the open `(C2-X)` charge-2 primitive exhaustion premise. Without
-`(C2-X)`, the result remains a support conditional theorem, not unconditional
-Dirac closure.
+`(C2-X)`, the result remains a bounded conditional theorem, not
+unconditional Dirac closure.
 
 The [normal-grammar U(1) rigidity stretch attempt](../../NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md)
 falsifies `(R-X1)` anomaly-cancellation exhaustion as a closure route and
 shows why strict-vs-permissive reading of `A_min` axiom 3 is load-bearing.
 The [stuck fan-out note](../../NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md)
-then revises the strict-reading shortcut: the current framework posture is
-permissive, so `(C2-X)` remains research-level.
+then lands the strict/permissive fork as bounded inventory under
+[`AXIOM_MINIMALITY_POLICY.md`](../../audit/AXIOM_MINIMALITY_POLICY.md):
+`A_min` is fixed, no axiom-3 amendment closes `(C2-X)`, and the obstruction
+must be derived from the existing axiom set or left as no-go boundary.
 
 The [workstream close-out](../../NEUTRINO_LANE4_WORKSTREAM_CLOSEOUT_NOTE_2026-04-28.md)
-hands off `(SR-2)` continuum-limit scalar two-point incompatibility with
-Pfaffian extensions as the recommended next single-cycle attack.
+records `(SR-1)` Lorentz-onset incompatibility, `(SR-2)` continuum-limit
+scalar two-point incompatibility, and `(SR-3)` stronger anomaly-cluster
+forcing of bilinear matter as the candidate no-go ledger for `(C2-X)`.
 
 ## 1. Missing-science framing
 
