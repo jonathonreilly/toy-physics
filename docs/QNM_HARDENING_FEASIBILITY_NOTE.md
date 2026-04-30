@@ -13,7 +13,7 @@ enough.
 Relevant branch-side anchor:
 
 - `claude/distracted-napier:scripts/qnm_scaling.py`
-- `claude/distracted-napier:docs/BACKREACTION_NOTE.md`
+- `claude/distracted-napier:archive_unlanded/poisson-self-consistency-stale-runners-2026-04-30/BACKREACTION_NOTE.md`
 
 Relevant current `main` context:
 

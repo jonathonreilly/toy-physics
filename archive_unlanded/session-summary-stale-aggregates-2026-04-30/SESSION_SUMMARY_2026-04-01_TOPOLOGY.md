@@ -142,7 +142,7 @@ the right size and location**.
 - `scripts/caldeira_leggett_bath.py` — N=25 in purity sweep
 
 ### Documentation
-- `docs/IF_PROGRAM_CLOSING_NOTE.md` — canonical closure
+- `archive_unlanded/if-program-unverifiable-closing-2026-04-30/IF_PROGRAM_CLOSING_NOTE.md` — canonical closure
 - `docs/DECOHERENCE_FAILURE_ANALYSIS.md` — updated with topology pivot
 - `docs/SESSION_SUMMARY_2026-04-01_TOPOLOGY.md` — this file
 

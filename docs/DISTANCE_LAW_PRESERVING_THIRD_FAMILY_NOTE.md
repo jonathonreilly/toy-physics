@@ -7,7 +7,7 @@
 
 - [`scripts/DISTANCE_LAW_PRESERVING_THIRD_FAMILY.py`](/Users/jonreilly/Projects/Physics/scripts/DISTANCE_LAW_PRESERVING_THIRD_FAMILY.py)
 - [`logs/2026-04-06-distance-law-preserving-third-family.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-06-distance-law-preserving-third-family.txt)
-- three-family context: [`docs/THREE_FAMILY_CARD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/THREE_FAMILY_CARD_NOTE.md)
+- three-family context: [`archive_unlanded/family-card-incomplete-artifacts-2026-04-30/THREE_FAMILY_CARD_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/family-card-incomplete-artifacts-2026-04-30/THREE_FAMILY_CARD_NOTE.md)
 - distance-law portability context: [`docs/DISTANCE_LAW_PORTABILITY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PORTABILITY_NOTE.md)
 
 ## Question
