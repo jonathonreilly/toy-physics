@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T11:42:49.911532+00:00
+**Generated:** 2026-04-30T11:42:53.353195+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -35,12 +35,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 227 |
+| `audited_conditional` | 228 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1151 |
+| `unaudited` | 1150 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 384 |
 | `leaf` | 764 |
 
-- **Proposed claims demoted by upstream:** 134
+- **Proposed claims demoted by upstream:** 133
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -200,6 +200,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `cosmological_constant_spectral_gap_identity_theorem_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `cosmology_scale_identification_and_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `diamond_nv_phase_ramp_signal_budget_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
@@ -1206,6 +1207,28 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `strong_field_gravity_nonmonotone_across_h`
   - `per_node_T_boundary_leakage_repair_not_implemented`
   - `runner_prints_SAFE_READ_without_hard_assertions`
+- **auditor confidence:** high
+
+### `cosmological_constant_spectral_gap_identity_theorem_note`
+
+- **Note:** [`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](../../docs/COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** On the retained direct-universal GR de Sitter sector, Lambda_vac = lambda_1(S^3_R) = 3/R^2 for any R.  _(class `A`)_
+- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md, UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md, UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md, S3_GENERAL_R_DERIVATION_NOTE.md, S3_CAP_UNIQUENESS_NOTE.md, COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md, COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md, DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md, and 1 more direct blockers.
+- **rationale:** Issue: The load-bearing step still imports unratified direct authority: UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md, UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md, UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md, S3_GENERAL_R_DERIVATION_NOTE.md, S3_CAP_UNIQUENESS_NOTE.md, COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md, COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md, DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md, and 1 more direct blockers. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`
+  - `UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md`
+  - `S3_GENERAL_R_DERIVATION_NOTE.md`
+  - `S3_CAP_UNIQUENESS_NOTE.md`
+  - `COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md`
+  - `COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md`
+  - `DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md`
+  - `CONFINEMENT_STRING_TENSION_NOTE.md`
 - **auditor confidence:** high
 
 ### `cosmology_scale_identification_and_reduction_note`

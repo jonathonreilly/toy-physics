@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 5,
+    "critical": 4,
     "high": 234,
     "leaf": 571,
     "medium": 342
   },
-  "generated_at": "2026-04-30T11:42:49.745938+00:00",
+  "generated_at": "2026-04-30T11:42:53.206827+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,33 +23,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "transitive_descendants": 281
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "cosmological_constant_spectral_gap_identity_theorem_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "universal_gr_discrete_global_closure_note",
-        "universal_qg_smooth_gravitational_global_solution_class_note",
-        "universal_qg_canonical_textbook_continuum_gr_closure_note",
-        "s3_general_r_derivation_note",
-        "s3_cap_uniqueness_note",
-        "cosmological_constant_result_2026-04-12",
-        "cosmology_scale_identification_and_reduction_note",
-        "dark_energy_eos_retained_corollary_theorem_note",
-        "confinement_string_tension_note"
-      ],
-      "direct_in_degree": 18,
-      "load_bearing_score": 14.555,
-      "note_path": "docs/COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_cosmological_constant_spectral_gap_identity.py",
-      "transitive_descendants": 46
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24272,5 +24245,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1152
+  "total_pending": 1151
 }
