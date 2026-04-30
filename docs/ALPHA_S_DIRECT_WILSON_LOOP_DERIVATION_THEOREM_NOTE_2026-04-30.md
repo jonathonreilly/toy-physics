@@ -164,8 +164,28 @@ This excludes the expensive measurement pass for all Wilson loops
 `R,T in {1,...,8}`, APE/HYP smearing, jackknife/bootstrap analysis, plateau
 fitting, and any reruns needed for autocorrelation or failed plateaus.
 
-The environment check also found no `numba`, `cupy`, `Cython`, `pybind11`, or
-`meson`; only `cffi` and `clang` are available for a future compiled kernel.
+The first environment check found no `numba`, `cupy`, `Cython`, `pybind11`, or
+`meson`; only `cffi` and `clang` were available.  A follow-up production
+attempt installed `numba` and added a compiled backend in
+`scripts/alpha_s_numba_wilson_loop_mc.py` with `@njit` kernels for the SU(3)
+matrix helpers, Cabibbo-Marinari SU(2)-subgroup heat-bath update,
+overrelaxation update, staple sums, APE spatial smearing, plaquette
+diagnostics, and rectangular Wilson-loop measurement.
+
+The compiled heat-bath speedup was real but below the explicit production
+gate:
+
+| Compiled benchmark | Timing | Speedup vs pure-Python heat-bath | Gate |
+|---|---:|---:|---|
+| `4^4`, heat-bath only, 20 sweeps | `4.503 us/link` | `40.53x` | FAIL |
+| `8^4`, heat-bath only, 100 sweeps | `5.205 us/link` | `35.06x` | FAIL |
+| `8^3 x 16`, heat-bath only, 20 sweeps | `5.446 us/link` | `33.51x` | FAIL |
+| `8^4`, heat-bath plus 4 overrelaxation sweeps | `22.258 us/link` | `8.20x` | FAIL |
+
+The overrelaxation-4 run also produced a plaquette diagnostic near `0.00195`,
+while the heat-bath-only diagnostics remained in the expected rough beta=6
+range around `0.56`.  The current overrelaxation kernel is therefore not
+production-valid and must not be used to certify the theorem.
 
 The production evidence therefore remains absent.  The branch records the
 blocker in:
@@ -173,6 +193,7 @@ blocker in:
 ```text
 outputs/alpha_s_wilson_loop_production/PHASE2_BLOCKER_REPORT_2026-04-30.md
 outputs/alpha_s_wilson_loop_production/phase2_blocker_report_2026-04-30.json
+outputs/alpha_s_wilson_loop_production/COMPILED_MC_NUMBA_BENCHMARK_REPORT_2026-04-30.md
 ```
 
 No production certificate was generated, no direct `alpha_s(M_Z)` value is

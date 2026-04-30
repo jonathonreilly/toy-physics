@@ -1,0 +1,33 @@
+{
+  "beta": 6.0,
+  "compiled_us_per_link": 4.503118907450698,
+  "dims": [
+    4,
+    4,
+    4,
+    4
+  ],
+  "elapsed_seconds": 0.0922238752245903,
+  "kind": "numba_compiled_su3_heatbath_overrelax_benchmark",
+  "links_per_sweep": 1024,
+  "notes": [
+    "Compiled numba @njit kernels update links; orchestration and IO remain Python.",
+    "Benchmark compares per-link time against prior pure-Python Cabibbo-Marinari heat-bath reference.",
+    "Plaquette samples are diagnostics only, not alpha_s inputs."
+  ],
+  "overrelax_sweeps_per_heatbath": 0,
+  "plaquette_samples": [
+    0.5854968712218324,
+    0.5543163908754326
+  ],
+  "production_ready": false,
+  "pure_python_heatbath_reference_us_per_link": 182.5,
+  "pure_python_metropolis_reference_us_per_link": 85.49,
+  "speedup_target": 50.0,
+  "speedup_target_pass": false,
+  "speedup_vs_pure_python_heatbath": 40.52746635183052,
+  "speedup_vs_pure_python_metropolis": 18.984619717358857,
+  "sweeps": 20,
+  "timestamp_utc": "2026-04-30T20:55:23Z",
+  "warmup_sweeps": 2
+}

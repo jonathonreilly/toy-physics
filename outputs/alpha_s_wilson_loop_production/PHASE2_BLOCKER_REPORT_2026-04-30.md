@@ -47,7 +47,7 @@ site/link loop and is not a replacement production engine for this task:
 - it benchmarks slower per link than the Metropolis implementation used in
   the first blocker estimate.
 
-Local compiled/JIT options available in the environment:
+Original local compiled/JIT options available in the environment:
 
 ```text
 numba: unavailable
@@ -57,8 +57,15 @@ cffi: available
 clang: available
 ```
 
-So a real replacement would require writing and validating a compiled C/CFFI
-or equivalent production kernel, not simply switching to existing repo code.
+On follow-up, `numba` was installed and a compiled backend was added in
+`scripts/alpha_s_numba_wilson_loop_mc.py`.  The backend compiles the
+link-update, staple, APE-smearing, plaquette, and Wilson-loop kernels under
+`numba @njit`, but its measured speed and overrelaxation diagnostics still do
+not satisfy the production gate.  The compiled benchmark is recorded in:
+
+```text
+outputs/alpha_s_wilson_loop_production/COMPILED_MC_NUMBA_BENCHMARK_REPORT_2026-04-30.md
+```
 
 ## Benchmark
 
@@ -126,6 +133,31 @@ heatbath 8^4: 2.991s/sweep, 182.5 us/link, plaq=0.6988
 At approximately `180 us/link`, the existing pure-Python heat-bath path would
 be roughly twice as slow as the Metropolis benchmark above. It therefore does
 not satisfy the requested `>=100x` speedup target.
+
+## Compiled Numba Attempt
+
+The compiled backend was benchmarked against the pure-Python heat-bath
+reference of `182.5 us/link`.
+
+Heat-bath-only benchmarks:
+
+```text
+4^4, 20 sweeps:       4.503 us/link, 40.53x speedup, 50x gate FAIL
+8^4, 100 sweeps:      5.205 us/link, 35.06x speedup, 50x gate FAIL
+8^3 x 16, 20 sweeps:  5.446 us/link, 33.51x speedup, 50x gate FAIL
+```
+
+Heat-bath plus four overrelaxation sweeps:
+
+```text
+8^4, 20 sweeps: 22.258 us/link, 8.20x speedup, 50x gate FAIL
+```
+
+The overrelaxation-4 run also produced a plaquette diagnostic near `0.00195`,
+while heat-bath-only diagnostics stayed around the expected beta=6 rough range.
+That makes the current overrelaxation kernel not production-valid.  Per the
+explicit benchmark criterion, production was not run and no strict certificate
+was issued.
 
 ## Audit Consequence
 

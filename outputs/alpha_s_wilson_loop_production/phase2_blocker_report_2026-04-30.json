@@ -15,8 +15,46 @@
     "cffi": "available",
     "cupy": "unavailable",
     "meson": "unavailable",
-    "numba": "unavailable",
+    "numba": "installed during follow-up; backend added but benchmark gate failed",
     "pybind11": "unavailable"
+  },
+  "compiled_numba_attempt": {
+    "backend": "scripts/alpha_s_numba_wilson_loop_mc.py",
+    "benchmark_report": "outputs/alpha_s_wilson_loop_production/COMPILED_MC_NUMBA_BENCHMARK_REPORT_2026-04-30.md",
+    "benchmarks": {
+      "4^4_heatbath_only": {
+        "compiled_us_per_link": 4.503118907450698,
+        "speedup_target_pass": false,
+        "speedup_vs_pure_python_heatbath": 40.52746635183052
+      },
+      "8^3x16_heatbath_only": {
+        "compiled_us_per_link": 5.446027564914857,
+        "speedup_target_pass": false,
+        "speedup_vs_pure_python_heatbath": 33.5106640252294
+      },
+      "8^4_heatbath_only_100_sweeps": {
+        "compiled_us_per_link": 5.204889984042893,
+        "speedup_target_pass": false,
+        "speedup_vs_pure_python_heatbath": 35.06318107769942
+      },
+      "8^4_heatbath_plus_4_overrelax": {
+        "compiled_us_per_link": 22.257915750856228,
+        "plaquette_diagnostic": 0.0019473394829080057,
+        "production_valid": false,
+        "speedup_target_pass": false,
+        "speedup_vs_pure_python_heatbath": 8.199330163830794
+      }
+    },
+    "compiled_inner_loops": [
+      "SU(3) matmul/dagger/projection helpers",
+      "Cabibbo-Marinari SU(2)-subgroup heat-bath update",
+      "SU(2)-subgroup overrelaxation update",
+      "staple sum",
+      "plaquette",
+      "APE spatial smearing",
+      "rectangular Wilson-loop measurement"
+    ],
+    "conclusion": "compiled backend exists but does not meet the 50x speed gate; overrelaxation path is not production-valid"
   },
   "date": "2026-04-30",
   "estimated_sweep_only_wall_time_days": {
@@ -58,15 +96,14 @@
     "source": "scripts/frontier_color_projection_mc.py"
   },
   "missing_production_features": [
-    "compiled or vectorized Cabibbo-Marinari heat-bath kernel",
-    "SU(3) overrelaxation sweeps",
-    "L^3 x L_t production geometry for heat-bath path",
-    "APE/HYP smearing",
+    "validated >=50x compiled Cabibbo-Marinari heat-bath kernel",
+    "production-valid SU(3) overrelaxation sweeps",
     "autocorrelation analysis",
-    "production Wilson-loop/static-potential pipeline"
+    "production Wilson-loop/static-potential certificate",
+    "full production uncertainty budget"
   ],
   "phase2_status": "blocked",
-  "reason": "Existing repo SU(3) Wilson MC infrastructure is small-volume pure-Python Metropolis code, not a production heat-bath/overrelaxation Wilson-loop pipeline.",
+  "reason": "Existing repo SU(3) Wilson MC infrastructure was pure Python; a numba backend was added, but it failed the requested 50x speed gate and the overrelaxation diagnostic is not production-valid.",
   "requested_protocol": {
     "measurement_separation_sweeps": 20,
     "measurements_per_volume": 1000,
