@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 461,
+    "leaf": 460,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:18:17.985105+00:00",
+  "generated_at": "2026-04-30T19:18:24.348978+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20199,28 +20199,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
-        "higgs_mass_from_axiom_note",
-        "observable_principle_from_axiom_note",
-        "r_base_group_theory_derivation_theorem_note_2026-04-24"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_ETA_NSITES_V_STRUCTURAL_SUPPORT_LIFT_THEOREM_NOTE_2026-04-29.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_dm_eta_nsites_v_structural_support_lift.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_neutrino_breaking_triplet_cp_theorem_note_2026-04-15",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21205,5 +21183,5 @@
     }
   ],
   "ready_count": 599,
-  "total_pending": 987
+  "total_pending": 986
 }
