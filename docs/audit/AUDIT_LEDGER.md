@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:00:35.606432+00:00
+**Generated:** 2026-04-30T22:02:13.842496+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 7 |
-| bounded | 281 |
+| bounded | 280 |
 | support | 251 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 737 |
+| ~~audited_conditional~~ | 738 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 211 |
-| `audited_conditional` | 460 |
+| `audited_conditional` | 461 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 802 |
+| `unaudited` | 801 |
 
 | criticality | count |
 |---|---:|
@@ -695,6 +695,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_selector_current_stack_zero_law_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
+| `pmns_sigma_zero_nogo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `poisson_3d_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `poisson_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `propagator_family_unification_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -9628,6 +9629,25 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md`
 - **decoration parent:** `pmns_selector_class_space_uniqueness_note`
+- **auditor confidence:** high
+
+### `pmns_sigma_zero_nogo_note`
+
+- **Note:** [`PMNS_SIGMA_ZERO_NOGO_NOTE.md`](../../docs/PMNS_SIGMA_ZERO_NOGO_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-12`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Every currently retained PMNS source route still lands at sigma = 0, and the current unconstrained native selector also stays at the seed rather than lifting sigma away from zero.  _(class `B`)_
+- **chain closes:** False — The runner computes sigma=0 and J_chi=0 on the listed free, hw=1 source/transfer, scalar, and native-selector samples. The stronger exhaustion claim over the current pure-retained PMNS bank depends on several upstream PMNS boundary reductions that are open/support/bounded and unaudited, and on the runner's hard-coded inventory being complete.
+- **rationale:** Issue: the live runner verifies the named route evaluations, but the note's bank-level no-go relies on unaudited/open PMNS boundary inputs and an asserted inventory of all current pure-retained source/readout/selector routes. Why this blocks: the audit can confirm sigma=0 and J_chi=0 for the listed routes, but cannot certify that the entire current PMNS bank has been exhausted from the restricted context. Repair target: audit or retain the active-transport mean, C3 current, oriented-cycle value law/nonselection, hw=1 source-transfer, and scalar-deformation boundary inputs, then make the runner derive the route inventory or consume a generated audited inventory. Claim boundary until fixed: the explicitly checked free, hw=1 source-transfer, scalar, and unconstrained native-selector samples stay at sigma=0 and give J_chi=0 where evaluated.
+- **open / conditional deps cited:**
+  - `PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md`
+  - `PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md`
+  - `PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md`
+  - `PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md`
+  - `PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md`
+  - `PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md`
 - **auditor confidence:** high
 
 ### `poisson_3d_self_field_note`
