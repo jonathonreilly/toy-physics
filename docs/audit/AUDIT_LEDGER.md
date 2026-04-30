@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:28:13.232945+00:00
+**Generated:** 2026-04-30T19:28:19.703100+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 181 |
+| `audited_clean` | 182 |
 | `audited_conditional` | 402 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 891 |
+| `unaudited` | 890 |
 
 | criticality | count |
 |---|---:|
@@ -196,6 +196,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_nonlabel_connectivity_v1_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `gate_b_nonlabel_connectivity_v3_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `gate_b_v6_nearfield_comparator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `gate_b_weak_connectivity_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | support | ~~audited_clean~~ | support | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
@@ -5612,6 +5613,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The v6 mixed result is not a case where the grown rule collapses while the exact grid stays clean: the ordered-lattice control is already worse on the closest bucket, and the retained grown row is better there though not universal across all seeds.  _(class `C`)_
 - **chain closes:** True — The live comparator recomputes the exact-vs-grown near-field control on the declared v6 setup, reproducing the overall counts, bucket localization, and closest-bucket seed split. The source note keeps the claim bounded and explicitly declines full Gate B closure or universal generated-row dominance.
 - **rationale:** The bounded comparator closes through the current runner: exact grid is 6/9 TOWARD with mean delta +0.000007, grown row is 33/36 TOWARD with mean delta +0.000021, and the closest y=1.0 bucket is worse on the exact grid while only one of four grown seeds flips. The observable in the note is the same detector-centroid shift and TOWARD count computed by the runner, and the note does not claim full Gate B closure or universal generated-row superiority. Residual boundary: the frozen log named by the note is missing, but the live runner fully regenerates the table and is the load-bearing artifact here.
+- **auditor confidence:** high
+
+### `gate_b_weak_connectivity_note`
+
+- **Note:** [`GATE_B_WEAK_CONNECTIVITY_NOTE.md`](../../docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** Can the far-field generated-geometry result survive when we remove the restoring  _(class `D`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 1 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
 ### `gauge_scalar_temporal_completion_theorem_note`
