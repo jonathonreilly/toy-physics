@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T20:26:14.401954+00:00
+**Generated:** 2026-04-30T20:27:08.525893+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,18 +22,18 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
 | bounded | 282 |
-| support | 253 |
+| support | 254 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 733 |
+| ~~audited_conditional~~ | 732 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 204 |
-| `audited_conditional` | 457 |
+| `audited_clean` | 205 |
+| `audited_conditional` | 456 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
@@ -132,6 +132,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_abcc_signature_forcing_theorem_note_2026-04-19` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `dm_current_bank_quantitative_mapping_note_2026-04-21` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
 | `dm_dple_abcc_no_go_note_2026-04-19` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_dple_dimension_parametric_extremum_theorem_note_2026-04-19` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_full_closure_same_surface_converged_thermal_selector_support_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-gpt-5 | D | - |
@@ -429,7 +430,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_chamber_bound_derivation_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_chamber_signature_structure_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `dm_current_bank_quantitative_mapping_note_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -3441,13 +3441,13 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 - **Note:** [`DM_CURRENT_BANK_QUANTITATIVE_MAPPING_NOTE_2026-04-21.md`](../../docs/DM_CURRENT_BANK_QUANTITATIVE_MAPPING_NOTE_2026-04-21.md)
 - **current_status:** support
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** quantitative mapping item only; the full DM closure package uses this note  _(class `B`)_
-- **chain closes:** False — No. The runner exits zero, but the audit classifier records no A/B/C/D PASS checks for a load-bearing audit surface.
-- **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a support note with executable but unratified support.
-- **auditor confidence:** medium
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-round2-20260430-08`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The note assembles the current exact bank into one quantitative DM-observable mapping table and verifies that the mapped quantities are finite, internally consistent, physically interpretable, and complete for the current bank.  _(class `C`)_
+- **chain closes:** True — The registered runner extracts the exact package, verifies the source primitives, CP parameters, heavy-neutrino spectrum, CP-asymmetry ratio, washout scales, baryon-asymmetry bookkeeping, constants, and mapping completeness. The note scopes this as support/bookkeeping and explicitly does not claim full DM flagship closure.
+- **rationale:** The prior infrastructure blocker is resolved because the runner now emits classified PASS lines and exits 0. The support-tier mapping claim closes on its own terms: the runner verifies all 17 current-bank mapping checks, including the finite O(1) eta_fit/eta_obs comparator and the completeness of the public table. This clean verdict is limited to the quantitative mapping/support item and does not promote the branch-choice law, selector law, or full DM flagship lane.
+- **auditor confidence:** high
 
 ### `dm_dple_abcc_no_go_note_2026-04-19`
 
