@@ -3,9 +3,9 @@
     "critical": 0,
     "high": 237,
     "leaf": 486,
-    "medium": 299
+    "medium": 298
   },
-  "generated_at": "2026-04-30T19:08:58.252269+00:00",
+  "generated_at": "2026-04-30T19:09:07.631202+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -9737,23 +9737,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_yt_schur_stability_gap.py",
       "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 3,
-      "load_bearing_score": 5.587,
-      "note_path": "docs/HUBBLE_LANE5_C1_CARRIER_METROLOGY_AXIOM_AUDIT_NOTE_2026-04-29.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py",
-      "transitive_descendants": 16
     },
     {
       "audit_independence_required": "any_non_self",
@@ -21841,6 +21824,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 629,
-  "total_pending": 1022
+  "ready_count": 628,
+  "total_pending": 1021
 }

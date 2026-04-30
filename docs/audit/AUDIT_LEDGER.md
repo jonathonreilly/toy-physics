@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:08:58.454507+00:00
+**Generated:** 2026-04-30T19:09:07.960346+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
 | bounded | 341 |
-| support | 268 |
+| support | 267 |
 | open | 17 |
 | unknown | 47 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 613 |
+| ~~audited_conditional~~ | 614 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 126 |
-| `audited_conditional` | 326 |
+| `audited_conditional` | 327 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1022 |
+| `unaudited` | 1021 |
 
 | criticality | count |
 |---|---:|
@@ -405,6 +405,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higher_order_structural_theorems_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_eta_retirement_gate_audit_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -4811,6 +4812,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** Number-preserving bilinears on P_A H_cell generate M_4(C) and can host an intrinsic Cl_4 response, but they do not select the metric coframe basis or dimensional action unit.  _(class `C`)_
 - **chain closes:** True — The finite active-block construction computes the rank-four sector, the bilinear span, matrix-unit recovery, Cl_4 hosting, and non-uniqueness witnesses. The current runner reports PASS=9, FAIL=0 and directly supports the capacity-positive but selector-open boundary.
 - **rationale:** The support/boundary result closes: bilinears give full active algebra capacity, while permutation, phase, and action-rescaling witnesses show that existence is not selection. This is a no-go/support boundary rather than algebraic decoration, because it blocks a stronger C1 shortcut. Residual risk is the later selector/metrology theorem, which the note explicitly leaves open.
+- **auditor confidence:** high
+
+### `hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29`
+
+- **Note:** [`HUBBLE_LANE5_C1_CARRIER_METROLOGY_AXIOM_AUDIT_NOTE_2026-04-29.md`](../../docs/HUBBLE_LANE5_C1_CARRIER_METROLOGY_AXIOM_AUDIT_NOTE_2026-04-29.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-b-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** C1 derived from current stack: false; C1 conditional route explicitly stated: true; remaining decision: human science judgment or new selector/metrology theorem.  _(class `B`)_
+- **chain closes:** False — The note's positive route depends on two explicit premises: a primitive active-block selector and a non-rescaling-invariant action-unit metrology map. The runner records those route states with hard-coded booleans rather than deriving them from registered one-hop dependencies.
+- **rationale:** Issue: the C1 route is conditional on new selector and metrology premises, and the row has no ledger dependencies for the A1/A2/A4/A5/A6 route-state claims it summarizes. Why this blocks: an explicit axiom boundary is not a derivation of C1 from the current stack. Repair target: derive the selector and metrology maps from retained primitives, or register the prior route notes as dependencies and keep C1 explicitly axiom-conditional. Claim boundary until fixed: safe as a carrier/metrology boundary inventory, not as an audited C1 closure.
 - **auditor confidence:** high
 
 ### `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28`
