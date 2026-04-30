@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:57:47.230785+00:00
+**Generated:** 2026-04-30T18:57:55.318151+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,25 +21,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 346 |
+| bounded | 345 |
 | support | 270 |
 | open | 19 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 604 |
+| ~~audited_conditional~~ | 605 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 116 |
-| `audited_conditional` | 318 |
+| `audited_conditional` | 319 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1041 |
+| `unaudited` | 1040 |
 
 | criticality | count |
 |---|---:|
@@ -441,6 +441,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `n_eff_from_three_generations_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `neutrino_axiom3_reading_stuck_fanout_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `neutrino_dirac_global_lift_partial_theorem_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_dirac_two_higgs_canonical_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `neutrino_majorana_current_stack_exhaustion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -6024,6 +6025,26 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md`
   - `NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md`
   - `NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md`
+- **auditor confidence:** high
+
+### `neutrino_dirac_global_lift_partial_theorem_note_2026-04-28`
+
+- **Note:** [`NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md`](../../docs/NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-local-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The current-stack Majorana zero law globalizes to every admissible framework extension only if the extra C2-X charge-2 primitive class exhaustion premise is supplied.  _(class `B`)_
+- **chain closes:** False — The note cleanly identifies C2-X as the globalization premise, but C2-X is not proved in the restricted packet and the named P1-P6 authorities are not registered as one-hop dependencies. With no runner, the global Dirac lift cannot be audited as closed from this row alone.
+- **rationale:** Issue: the global Dirac lift depends on the unclosed C2-X charge-2 primitive exhaustion premise and several unregistered upstream neutrino authorities. Why this blocks: the restricted packet establishes an explicit conditional theorem/no-go inventory, but not an unconditional framework-wide exclusion of future charge-2 primitives. Repair target: prove C2-X from fixed A_min or register/audit the one-hop authorities plus a self-contained closure proof for primitive exhaustion. Claim boundary until fixed: safe as a bounded conditional Dirac lift and obstruction ledger, not audited global Majorana exclusion.
+- **open / conditional deps cited:**
+  - `NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE.md`
+  - `NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md`
+  - `NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md`
+  - `NEUTRINO_MAJORANA_CURRENT_ATLAS_NONREALIZATION_NOTE.md`
+  - `NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md`
+  - `NEUTRINO_MAJORANA_NATIVE_GAUSSIAN_NO_GO_NOTE.md`
+  - `NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md`
 - **auditor confidence:** high
 
 ### `neutrino_dirac_two_higgs_canonical_reduction_note`
