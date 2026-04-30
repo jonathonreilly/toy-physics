@@ -1,4 +1,4 @@
-"""Runner: DM eta N_sites · v structural support lift (Block 6).
+"""Runner: DM eta N_sites · v structural support (Block 6).
 
 Audits composition of retained N_sites = 16 (HIGGS_MASS_FROM_AXIOM) +
 retained EW v (OBSERVABLE_PRINCIPLE_FROM_AXIOM) + retained R_base = 31/9
@@ -36,13 +36,13 @@ def read_doc(path_rel: str) -> str:
 
 def main() -> int:
     print("=" * 72)
-    print("DM eta N_sites · v Structural Support Lift (Block 6) audit")
+    print("DM eta N_sites · v Structural Support (Block 6) audit")
     print("=" * 72)
 
     # ---- Section 1: chain authority audits --------------------------------
 
     print()
-    print("Section 1: 4 retained chain authority audits")
+    print("Section 1: chain authority audits")
     print("-" * 72)
 
     higgs_text = read_doc("HIGGS_MASS_FROM_AXIOM_NOTE.md")
@@ -124,34 +124,41 @@ def main() -> int:
     M_Pl = 1.2209e19  # Planck mass [GeV]
     g_star = 106.75  # SM dof at EW scale
     pi = np.pi
-    R = 5.48  # retained R_base · bounded Sommerfeld
+    R_base = 31.0 / 9.0  # retained group-theory identity
     BBN_factor = 3.65e7  # Omega_b h^2 = BBN_factor · eta
 
-    # Use alpha_LM as alpha_X (framework-derived)
+    # Use alpha_LM as alpha_X on the bounded candidate route.
     alpha_LM = 0.0906678360173  # retained from PLAQUETTE_SELF_CONSISTENCY
+
+    def eta_for(x_F: float, S_ratio: float) -> float:
+        R = R_base * S_ratio
+        C = K * x_F / (
+            np.sqrt(g_star) * M_Pl * pi * alpha_LM ** 2 * R * BBN_factor
+        )
+        return C * m_DM_predicted ** 2
 
     # Central freeze-out coefficient
     x_F_central = 25
     S_ratio_central = 1.59
-    R_central = R * S_ratio_central / 1.59  # central Sommerfeld
-
-    C_central = K * x_F_central / (
-        np.sqrt(g_star) * M_Pl * pi * alpha_LM ** 2 * R_central * BBN_factor
-    )
-    eta_pred_central = C_central * m_DM_predicted ** 2
+    eta_pred_central = eta_for(x_F_central, S_ratio_central)
 
     audit(
         "Central η_pred ≈ 6.38 × 10^{-10} (from m_DM = 16 v)",
-        2e-10 < eta_pred_central < 2e-9,
+        np.isclose(eta_pred_central, 6.378e-10, rtol=1e-3),
         f"η_pred (central) = {eta_pred_central:.3e}",
     )
 
     # Bounded band over (x_F, S_vis/S_dark)
-    eta_band_min = 5.6e-10
-    eta_band_max = 7.2e-10
+    eta_band = [
+        eta_for(x_F, S_ratio)
+        for x_F in (22.0, 25.0, 28.0)
+        for S_ratio in (1.4, 1.59, 1.7)
+    ]
+    eta_band_min = min(eta_band)
+    eta_band_max = max(eta_band)
     eta_obs = 6.12e-10
     audit(
-        "Bounded η band [5.6e-10, 7.2e-10] brackets Planck observation",
+        "Computed bounded η band from x_F and S_vis/S_dark brackets Planck observation",
         eta_band_min <= eta_obs <= eta_band_max,
         f"η_obs = {eta_obs:.3e} ∈ [{eta_band_min:.3e}, {eta_band_max:.3e}]",
     )
@@ -183,14 +190,19 @@ def main() -> int:
         "DM_ETA_NSITES_V_STRUCTURAL_SUPPORT_LIFT_THEOREM_NOTE_2026-04-29.md"
     )
     audit(
-        "V1 carries actual_current_surface_status: proposed_promoted",
-        "actual_current_surface_status: proposed_promoted" in own_text,
-        "V1 firewall: support-grade lift",
+        "V1 carries actual_current_surface_status: bounded",
+        "actual_current_surface_status: bounded" in own_text,
+        "V1 firewall: plain bounded support",
     )
     audit(
-        "V1 carries audit_required_before_effective_retained: true",
-        "audit_required_before_effective_retained: true" in own_text,
-        "V1 firewall",
+        "V1 carries proposal_allowed: false",
+        "proposal_allowed: false" in own_text,
+        "V1 firewall: no status upgrade request",
+    )
+    audit(
+        "V1 carries audit_required_before_effective_retained: false",
+        "audit_required_before_effective_retained: false" in own_text,
+        "V1 firewall: no effective-retained request",
     )
     audit(
         "V1 carries bare_retained_allowed: false",
@@ -207,6 +219,11 @@ def main() -> int:
         "sommerfeld_freezeout_band_status: bounded" in own_text,
         "V1 firewall: bounded band",
     )
+    audit(
+        "V1 records alpha_x_route_status: bounded_candidate_route",
+        "alpha_x_route_status: bounded_candidate_route" in own_text,
+        "V1 firewall: alpha_X route disclosed",
+    )
 
     # ---- Summary ----------------------------------------------------------
 
@@ -215,13 +232,13 @@ def main() -> int:
     fail_count = len(AUDIT_FAILS)
     print(f"FAIL count: {fail_count}")
 
-    DM_ETA_NSITES_V_PROPOSED_PROMOTED_CHAIN_VERIFIED = (
+    DM_ETA_NSITES_V_BOUNDED_SUPPORT_CHAIN_VERIFIED = (
         fail_count == 0
         and np.isclose(m_DM_predicted, 3940.5251)
     )
     print(
-        f"DM_ETA_NSITES_V_PROPOSED_PROMOTED_CHAIN_VERIFIED = "
-        f"{DM_ETA_NSITES_V_PROPOSED_PROMOTED_CHAIN_VERIFIED}"
+        f"DM_ETA_NSITES_V_BOUNDED_SUPPORT_CHAIN_VERIFIED = "
+        f"{DM_ETA_NSITES_V_BOUNDED_SUPPORT_CHAIN_VERIFIED}"
     )
     print("G1_DARK_SINGLET_MECHANISM_STATUS = open")
     print("SOMMERFELD_FREEZEOUT_BAND_STATUS = bounded")

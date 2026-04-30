@@ -1,27 +1,27 @@
-# [physics-loop] axiom-to-main-lane-cascade block 06: DM η N_sites · v structural support lift (proposed_promoted bounded)
+# [physics-loop] axiom-to-main-lane-cascade block 06: DM η N_sites · v structural support (bounded)
 
 ## Summary
 
-Block 6 lifts the DM η freeze-out-bypass `m_DM = N_sites · v`
-candidate from "audit-discovered" (DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25)
-to "framework-composed structural product" by composing retained
-N_sites = 16 (Higgs mass derivation, minimal APBC block on Z^4) +
-retained EW v ≈ 246.28 GeV (observable-principle-from-axiom).
+Block 6 records bounded structural support for the DM η freeze-out-bypass
+`m_DM = N_sites · v` candidate: the previously audit-discovered
+candidate is also framework-composed from retained N_sites = 16
+(Higgs mass derivation, minimal APBC block on Z^4) + retained EW
+v ≈ 246.28 GeV (observable-principle-from-axiom).
 
-This is genuine support improvement (no longer a numerical
-coincidence among 22 audit candidates; now a framework-derived
-product of two retained quantities), but the G1 dark-singlet
+This is genuine support improvement (not just a numerical candidate
+among 22 audit candidates; also a framework-composed product of two
+retained quantities), but the G1 dark-singlet
 collective-mode Coleman-Weinberg mechanism remains explicitly OPEN.
 
-The bounded η prediction band [5.6e-10, 7.2e-10] brackets the Planck
+The bounded η prediction band [5.25e-10, 8.11e-10] brackets the Planck
 observation `eta_obs = 6.12e-10`. Falsifiable prediction:
 `m_DM = 16 v ≈ 3.94 TeV` for WIMP-like dark matter.
 
 ## Status (per skill firewall fields)
 
-- `actual_current_surface_status: proposed_promoted` (bounded support lift)
-- `proposal_allowed: true`
-- `audit_required_before_effective_retained: true`
+- `actual_current_surface_status: bounded` (bounded support)
+- `proposal_allowed: false`
+- `audit_required_before_effective_retained: false`
 - `bare_retained_allowed: false`
 - `g1_dark_singlet_mechanism_status: open` (NOT closed)
 - `sommerfeld_freezeout_band_status: bounded`
@@ -36,7 +36,7 @@ v = M_Pl · (7/8)^{1/4} · α_LM^16 = 246.28 GeV (retained OP from axiom)
 
 Substituted into freeze-out-bypass identity eta = C · m_DM²:
 ⇒ eta_pred (central) ≈ 6.38e-10
-⇒ eta_pred (bounded band) ∈ [5.6e-10, 7.2e-10]
+⇒ eta_pred (bounded band) ∈ [5.25e-10, 8.11e-10]
    brackets eta_obs = 6.12e-10
 ```
 
@@ -50,26 +50,30 @@ lands within 5%; among 10,743 complexity-≤4 identities, only 0.75%.
 - `outputs/frontier_dm_eta_nsites_v_structural_support_lift_2026-04-29.txt`
   (PASS=N FAIL=0)
 
-## What is and is NOT closed
+## What is closed, bounded, and open
 
 ### Closed
-1. Framework-composed product N_sites · v (no longer audit-discovered)
-2. Lift from audit-class candidate to structurally-composed candidate
-3. Bounded η prediction reproduces Planck observation within [5.6e-10, 7.2e-10]
+1. Framework-composed support for the previously audit-discovered N_sites · v candidate
+2. Support for the audit-class candidate as a structurally-composed candidate
+3. Computed bounded η band brackets Planck observation within [5.25e-10, 8.11e-10]
 
-### NOT closed (carried forward)
+### Single open ingredient
 1. **G1 mechanism** — dark-singlet collective-mode Coleman-Weinberg
    derivation that fixes the singlet's mode at exactly N_sites · v
-2. **Sommerfeld band** — bounded, not single-point
-3. **A0 hierarchy compression** — DM sector compression assumption
-4. **Origin A vs B** — N_sites = 16 has two factorization origins
+
+### Bounded or inherited inputs
+1. **Sommerfeld band** — bounded, not single-point
+2. **Freeze-out coefficient x_F** — bounded
+3. **alpha_X = alpha_LM** — inherited bounded candidate-route choice
+4. **A0 hierarchy compression** — inherited source-theorem assumption
+5. **Origin A vs B** — N_sites = 16 has two factorization origins
    (APBC block vs Cl(3) chiral cube · SU(3) Casimir)
 
-## Cascade unlocked (proposed for later weaving)
+## Downstream bookkeeping
 
-If V1 audit-ratifies:
+If V1 is kept as bounded support:
 - PUBLICATION_MATRIX line 125 (DM eta freeze-out-bypass): "bounded" →
-  "promoted bounded structural-composed" with G1 residual flagged
+  "bounded structural-composed support" with G1 residual flagged
 - DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM gets §Note that the
   candidate is now framework-composed
 
@@ -80,13 +84,14 @@ git checkout physics-loop/axiom-to-main-lane-cascade-20260429-block06-20260429
 python3 scripts/frontier_dm_eta_nsites_v_structural_support_lift.py
 ```
 
-PASS=N FAIL=0 verifies 4 retained chain authorities + numerical
-verification + status firewall fields.
+PASS=N FAIL=0 verifies the chain authorities, numerical replay, and
+status firewall fields.
 
 ## Hostile-review pressure points
 
 **P1.** Block 6 is BOUNDED, not retained closure. The G1 mechanism
-remains open. Lift is "support-grade" not "theorem-grade".
+remains open. The structural composition is support-grade, not
+theorem-grade.
 
 **P2.** N_sites = 16 has two origin stories (A from APBC, B from
 Cl(3)·SU(3)). V1 doesn't pick between them — the structural composition
@@ -100,8 +105,8 @@ Blocks 1-5.
 - [x] Runner returns PASS=N FAIL=0
 - [ ] Independent audit confirms framework composition is valid
 - [ ] Independent audit confirms uniqueness within audit class
-- [ ] User adjudicates whether the lift to "structural composition"
-  is sufficient to promote line 125
+- [ ] User adjudicates whether the bounded structural-composition wording
+  should be reflected on line 125
 
 ## Links
 
