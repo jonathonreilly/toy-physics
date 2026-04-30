@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T15:16:15.308990+00:00
+**Generated:** 2026-04-30T15:16:19.038876+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 181 |
 | support | 123 |
 | open | 11 |
-| unknown | 412 |
+| unknown | 411 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 526 |
+| ~~audited_conditional~~ | 527 |
 | ~~audited_failed~~ | 170 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 9 |
 | `audited_clean` | 96 |
-| `audited_conditional` | 291 |
+| `audited_conditional` | 292 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1094 |
+| `unaudited` | 1093 |
 
 | criticality | count |
 |---|---:|
@@ -295,6 +295,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `diamond_sensor_prediction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `diamond_sensor_protocol_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `diamond_signal_budget_hardening_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dimension_selection_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dispersion_relation_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_abcc_chamber_bound_derivation_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -2420,6 +2421,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the note hardens the diamond/NV lane by dividing the weakest nonzero proxy observables by three, but the runner hard-codes the moving-source proxy rows and the cited source note is bounded, not audited-retained. Why this blocks: a proxy-unit 3sigma threshold is not a real lab signal budget unless a theorem or calibrated input maps the proxy centroid/phase units into NV readout units and noise floor. Repair target: audit or replace the moving-source proxy input with a retained source computation, then add the missing transfer calibration from proxy units to NV X/Y/phi readout units and rerun the budget from those calibrated quantities. Claim boundary until fixed: the safe claim is a bounded proxy-budget card for the specified grown-row geometry: if the copied proxy values are taken literally, the calculator gives centroid target 2.888572e-07 and phase target 4.363583e-06 rad; it does not establish absolute detectability or a completed lab budget.
 - **open / conditional deps cited:**
   - `MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md`
+- **auditor confidence:** high
+
+### `dimension_selection_note`
+
+- **Note:** [`DIMENSION_SELECTION_NOTE.md`](../../docs/DIMENSION_SELECTION_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** Dimension Selection: Does Self-Consistency Require d = 3?: Dimension Selection: Does Self-Consistency Require d = 3?  _(class `B`)_
+- **chain closes:** False — No. The load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet, so the conclusion cannot be ratified from the source note alone.
+- **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **open / conditional deps cited:**
+  - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
 
 ### `dispersion_relation_note`
