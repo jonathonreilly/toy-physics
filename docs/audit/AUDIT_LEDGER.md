@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T20:20:23.601715+00:00
+**Generated:** 2026-04-30T20:21:01.273820+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,19 +21,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 279 |
+| bounded | 280 |
 | support | 253 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 737 |
+| ~~audited_conditional~~ | 736 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 201 |
-| `audited_conditional` | 461 |
+| `audited_clean` | 202 |
+| `audited_conditional` | 460 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
@@ -136,6 +136,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_full_closure_same_surface_converged_thermal_selector_support_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-gpt-5 | D | - |
 | `dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `dm_full_closure_same_surface_thermal_monotonicity_theorem_note_2026-04-17` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
+| `dm_full_closure_same_surface_thermal_selector_sensitivity_boundary_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-gpt-5 | C | - |
 | `dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_analytic_stationary_classification_theorem_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -431,7 +432,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
-| `dm_full_closure_same_surface_thermal_selector_sensitivity_boundary_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_leptogenesis_exact_kernel_closure_note_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3554,13 +3554,13 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 - **Note:** [`DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_SELECTOR_SENSITIVITY_BOUNDARY_NOTE_2026-04-16.md`](../../docs/DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_SELECTOR_SENSITIVITY_BOUNDARY_NOTE_2026-04-16.md)
 - **current_status:** bounded
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** **Script:** `scripts/frontier_dm_full_closure_same_surface_thermal_selector_sensitivity_boundary.py`  _(class `B`)_
-- **chain closes:** False — No. The runner exits zero, but the audit classifier records no A/B/C/D PASS checks for a load-bearing audit surface.
-- **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a bounded note with executable but unratified support.
-- **auditor confidence:** medium
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop-round2-20260430-04`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Refining the same-surface thermal quadrature shifts the admitted-family selector root by far more than the apparent 9/62 residual, so the structural 9/62 collapse is not stable.  _(class `C`)_
+- **chain closes:** True — The note's bounded negative claim is exactly reproduced by the runner: it computes the coarse apparent match, then recomputes refined roots at 4000, 8000, and 16000 points and shows material drift away from 9/62.
+- **rationale:** The bounded sensitivity boundary closes on its own terms: the runner reproduces the coarse near-match to 9/62 and then verifies that quadrature refinement shifts the selector root by a much larger amount. The conclusion is negative and scoped correctly: 9/62 must not be promoted as a DM selector law from this thermal surface. Residual risk is only downstream reuse of the coarse coincidence after this explicit instability result.
+- **auditor confidence:** high
 
 ### `dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17`
 
