@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:35:13.706642+00:00
+**Generated:** 2026-04-30T19:35:19.563883+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
 | bounded | 287 |
-| support | 252 |
+| support | 251 |
 | open | 19 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 729 |
+| ~~audited_conditional~~ | 730 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 198 |
-| `audited_conditional` | 453 |
+| `audited_conditional` | 454 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 823 |
+| `unaudited` | 822 |
 
 | criticality | count |
 |---|---:|
@@ -637,6 +637,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_theta_hierarchy_open_scalar_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_z3_scalar_potential_support_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
+| `lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_complementarity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_nn_high_precision_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `left_handed_charge_matching_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -8334,6 +8335,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `runner_path_not_registered_in_audit_ledger`
   - `asymptotic_or_all_distance_attraction_theorem_not_provided`
 - **auditor confidence:** high
+
+### `lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30`
+
+- **Note:** [`LATTICE_3D_DENSE_SPENT_DELAY_Z2_Z5_SUPPORT_NOTE_2026-04-30.md`](../../docs/LATTICE_3D_DENSE_SPENT_DELAY_Z2_Z5_SUPPORT_NOTE_2026-04-30.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** 3D dense spent-delay wrapper after its wider attractive-window claim failed  _(class `B`)_
+- **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
+- **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
+- **auditor confidence:** medium
 
 ### `lattice_3d_dense_window_extension_note`
 
