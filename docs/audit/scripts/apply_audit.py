@@ -22,6 +22,9 @@ rules:
     record a cross-confirmation comparison before any retraction can cascade
   - third-auditor passes over cross-confirmation disagreements record the
     tiebreaker and hard-stop on genuine three-way disagreement
+  - judicial third-auditor reviews over disagreements may ratify the first or
+    second prior audit after reading both prior rationales, or mark the
+    disagreement as irresolvable for human review
 """
 from __future__ import annotations
 
@@ -41,6 +44,18 @@ REQUIRED_FIELDS = {
     "auditor_family",
     "independence",
 }
+JUDICIAL_REQUIRED_FIELDS = {
+    "claim_id",
+    "third_auditor",
+    "auditor_family",
+    "independence",
+    "sided_with",
+    "ratified_verdict",
+    "ratified_load_bearing_step_class",
+    "judgment_rationale",
+    "first_auditor_error",
+    "second_auditor_error",
+}
 
 ALLOWED_VERDICTS = {
     "audited_clean",
@@ -51,8 +66,9 @@ ALLOWED_VERDICTS = {
     "audited_numerical_match",
 }
 
-ALLOWED_INDEPENDENCE = {"weak", "fresh_context", "cross_family", "strong", "external"}
+ALLOWED_INDEPENDENCE = {"weak", "fresh_context", "cross_family", "strong", "external", "judicial_review"}
 CLEAN_INDEPENDENCE = ALLOWED_INDEPENDENCE - {"weak"}
+ALLOWED_JUDICIAL_SIDES = {"first", "second", "neither"}
 TERMINAL_CROSS_CONFIRM_VERDICTS = {
     "audited_renaming",
     "audited_numerical_match",
@@ -131,7 +147,139 @@ def audit_summary_from_blob(audit: dict) -> dict:
     }
 
 
+def judicial_summary_from_blob(judgment: dict) -> dict:
+    return {
+        "auditor": judgment.get("third_auditor"),
+        "auditor_family": judgment.get("auditor_family"),
+        "independence": judgment.get("independence"),
+        "audit_date": judgment.get("audit_date") or datetime.now(timezone.utc).isoformat(),
+        "load_bearing_step_class": judgment.get("ratified_load_bearing_step_class"),
+        "verdict": judgment.get("ratified_verdict"),
+        "sided_with": judgment.get("sided_with"),
+        "judgment_rationale": judgment.get("judgment_rationale"),
+        "first_auditor_error": judgment.get("first_auditor_error"),
+        "second_auditor_error": judgment.get("second_auditor_error"),
+    }
+
+
+def snapshot_audit_state(row: dict, rows: dict[str, dict]) -> dict:
+    deps = sorted(row.get("deps", []))
+    return {
+        "deps": deps,
+        "dep_effective_status": {
+            d: rows.get(d, {}).get("effective_status")
+            or rows.get(d, {}).get("current_status")
+            or "unknown"
+            for d in deps
+        },
+        "criticality": row.get("criticality"),
+        "load_bearing_score": row.get("load_bearing_score"),
+        "transitive_descendants": row.get("transitive_descendants"),
+    }
+
+
+def note_hash_drift_error(row: dict) -> str | None:
+    on_disk_path = REPO_ROOT / row.get("note_path", "")
+    if not on_disk_path.exists():
+        return None
+    import hashlib
+    on_disk_hash = hashlib.sha256(
+        on_disk_path.read_text(encoding="utf-8", errors="replace").encode("utf-8")
+    ).hexdigest()
+    if on_disk_hash != row.get("note_hash"):
+        return "note_hash drift; rerun seed_audit_ledger.py before applying audit"
+    return None
+
+
+def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
+    missing = JUDICIAL_REQUIRED_FIELDS - set(judgment)
+    if missing:
+        return False, f"missing required judicial fields: {sorted(missing)}"
+
+    cid = judgment["claim_id"]
+    rows = ledger.get("rows", {})
+    if cid not in rows:
+        return False, f"unknown claim_id: {cid!r}"
+    row = rows[cid]
+
+    if judgment.get("independence") != "judicial_review":
+        return False, "judicial third-auditor review requires independence='judicial_review'"
+    side = judgment.get("sided_with")
+    if side not in ALLOWED_JUDICIAL_SIDES:
+        return False, f"sided_with {side!r} not in {sorted(ALLOWED_JUDICIAL_SIDES)}"
+    ratified_verdict = judgment.get("ratified_verdict")
+    if ratified_verdict not in ALLOWED_VERDICTS:
+        return False, f"ratified_verdict {ratified_verdict!r} not in {sorted(ALLOWED_VERDICTS)}"
+
+    err = note_hash_drift_error(row)
+    if err:
+        return False, err
+
+    cross_confirmation = row.get("cross_confirmation")
+    if not isinstance(cross_confirmation, dict) or cross_confirmation.get("status") != "disagreement":
+        return False, "judicial review requires cross_confirmation.status='disagreement'"
+    first = cross_confirmation.get("first_audit") or {}
+    second = cross_confirmation.get("second_audit") or {}
+    if not first or not second:
+        return False, "judicial review requires first_audit and second_audit summaries"
+
+    prior_auditors = {first.get("auditor"), second.get("auditor")}
+    if judgment.get("third_auditor") in prior_auditors:
+        return False, "judicial third auditor must differ from both prior auditors"
+
+    third = judicial_summary_from_blob(judgment)
+    row["cross_confirmation"]["third_audit"] = third
+    row["cross_confirmation"]["mode"] = "judicial_third_pass"
+
+    if side == "neither":
+        row["cross_confirmation"]["status"] = "disagreement_irresolvable"
+        row["blocker"] = "judicial_review_irresolvable"
+        rows[cid] = row
+        ledger["rows"] = rows
+        return False, "judicial review found neither prior reading sufficient; human review required"
+
+    chosen = first if side == "first" else second
+    chosen_label = "first" if side == "first" else "second"
+    if ratified_verdict != chosen.get("verdict"):
+        return False, (
+            f"ratified_verdict {ratified_verdict!r} does not match "
+            f"{chosen_label}_audit verdict {chosen.get('verdict')!r}"
+        )
+    ratified_class = judgment.get("ratified_load_bearing_step_class")
+    if ratified_class != chosen.get("load_bearing_step_class"):
+        return False, (
+            f"ratified_load_bearing_step_class {ratified_class!r} does not match "
+            f"{chosen_label}_audit class {chosen.get('load_bearing_step_class')!r}"
+        )
+
+    row["cross_confirmation"]["status"] = (
+        "third_confirmed_first" if side == "first" else "third_confirmed_second"
+    )
+    row["audit_status"] = ratified_verdict
+    row["auditor"] = judgment["third_auditor"]
+    row["auditor_family"] = judgment["auditor_family"]
+    row["independence"] = judgment["independence"]
+    row["audit_date"] = third["audit_date"]
+    row["load_bearing_step"] = judgment.get("ratified_load_bearing_step") or row.get("load_bearing_step")
+    row["load_bearing_step_class"] = ratified_class
+    row["chain_closes"] = ratified_verdict == "audited_clean"
+    row["chain_closure_explanation"] = judgment.get("judgment_rationale")
+    row["verdict_rationale"] = judgment.get("judgment_rationale")
+    if ratified_verdict == "audited_clean":
+        row["open_dependency_paths"] = []
+        row["decoration_parent_claim_id"] = None
+    row["auditor_confidence"] = judgment.get("auditor_confidence", "judicial")
+    row["blocker"] = None
+    row["audit_state_snapshot"] = snapshot_audit_state(row, rows)
+    rows[cid] = row
+    ledger["rows"] = rows
+    return True, f"judicial third auditor confirmed {side} verdict"
+
+
 def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
+    if "sided_with" in audit or "third_auditor" in audit:
+        return apply_judicial_review(ledger, audit)
+
     missing = REQUIRED_FIELDS - set(audit)
     if missing:
         return False, f"missing required fields: {sorted(missing)}"
@@ -158,14 +306,9 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
             return False, err
 
     # Hash drift check.
-    on_disk_path = REPO_ROOT / row.get("note_path", "")
-    if on_disk_path.exists():
-        import hashlib
-        on_disk_hash = hashlib.sha256(
-            on_disk_path.read_text(encoding="utf-8", errors="replace").encode("utf-8")
-        ).hexdigest()
-        if on_disk_hash != row.get("note_hash"):
-            return False, "note_hash drift; rerun seed_audit_ledger.py before applying audit"
+    err = note_hash_drift_error(row)
+    if err:
+        return False, err
 
     terminal_second_pass_msg: str | None = None
     terminal_second_pass_error: str | None = None
@@ -215,10 +358,7 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
             )
             terminal_second_pass_blocker = "cross_confirmation_disagreement"
 
-    third_pass = (
-        prior_cross_confirmation_status == "disagreement"
-        and row.get("blocker") == "cross_confirmation_disagreement"
-    )
+    third_pass = prior_cross_confirmation_status == "disagreement"
     if third_pass:
         if independence == "weak":
             return False, "third-auditor confirmation requires independence != 'weak'"
@@ -288,7 +428,12 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     # First audit on a critical claim with audited_clean lands as
     # audit_in_progress and waits for a second independent auditor.
     # Second matching audit promotes to audited_clean.
-    if verdict == "audited_clean" and criticality == "critical" and not critical_second_pass:
+    if (
+        verdict == "audited_clean"
+        and criticality == "critical"
+        and not critical_second_pass
+        and not third_pass
+    ):
         prior = row.get("cross_confirmation") or {}
         first = prior.get("first_audit")
         if first is None:
@@ -364,19 +509,7 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     # Snapshot the state at audit time so invalidate_stale_audits.py can
     # detect changes that warrant re-audit (dep added/removed, dep status
     # changed, criticality bumped).
-    deps = sorted(row.get("deps", []))
-    row["audit_state_snapshot"] = {
-        "deps": deps,
-        "dep_effective_status": {
-            d: rows.get(d, {}).get("effective_status")
-            or rows.get(d, {}).get("current_status")
-            or "unknown"
-            for d in deps
-        },
-        "criticality": row.get("criticality"),
-        "load_bearing_score": row.get("load_bearing_score"),
-        "transitive_descendants": row.get("transitive_descendants"),
-    }
+    row["audit_state_snapshot"] = snapshot_audit_state(row, rows)
 
     rows[cid] = row
     ledger["rows"] = rows
