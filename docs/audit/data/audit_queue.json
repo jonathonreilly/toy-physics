@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 237,
-    "leaf": 568,
+    "leaf": 567,
     "medium": 347
   },
-  "generated_at": "2026-04-30T15:12:44.248314+00:00",
+  "generated_at": "2026-04-30T15:12:47.737010+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -14924,23 +14924,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "asymmetry_persistence_pilot_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/ASYMMETRY_PERSISTENCE_PILOT_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -24231,6 +24214,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 749,
-  "total_pending": 1161
+  "ready_count": 748,
+  "total_pending": 1160
 }
