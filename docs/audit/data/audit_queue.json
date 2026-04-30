@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 41,
     "high": 237,
-    "leaf": 606,
+    "leaf": 605,
     "medium": 350
   },
-  "generated_at": "2026-04-30T10:25:58.151412+00:00",
+  "generated_at": "2026-04-30T10:26:32.870391+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24795,31 +24795,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "minimal_axioms_2026-04-11",
-        "hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28",
-        "hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28",
-        "hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28",
-        "hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28",
-        "hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28",
-        "cl4c_carrier_axiom_consequence_map_note_2026-04-28"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/AXIOM_STACK_MINIMALITY_CL4C_NO_GO_THEOREM_NOTE_2026-04-29.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_axiom_stack_minimality_cl4c_no_go.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "causal_distance_tail_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -25931,5 +25906,5 @@
     }
   ],
   "ready_count": 788,
-  "total_pending": 1234
+  "total_pending": 1233
 }

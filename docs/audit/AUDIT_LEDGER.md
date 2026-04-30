@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T10:25:58.379353+00:00
+**Generated:** 2026-04-30T10:26:33.070704+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -37,10 +37,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 82 |
 | `audited_conditional` | 191 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 56 |
+| `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1233 |
+| `unaudited` | 1232 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 392 |
 | `leaf` | 798 |
 
-- **Proposed claims demoted by upstream:** 157
+- **Proposed claims demoted by upstream:** 156
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -376,6 +376,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | A | - |
 | `backreaction_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | open | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -606,6 +607,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Without these, the existing hydrogen/helium harness remains scaffold-only.  _(class `A`)_
 - **chain closes:** True — The claim is a negative boundary: the note does not derive the Rydberg scale, but shows that direct use of the retained electroweak-scale alpha with textbook m_e gives the wrong atomic energy and that m_e, alpha(0), and the nonrelativistic physical-unit limit remain required inputs. The live runner verifies the dependency sensitivity and current scaffold-only state with PASS=12 FAIL=0.
 - **rationale:** The retained content is the dependency firewall, not a Rydberg derivation. The note's load-bearing step closes because the standard formula is explicitly input-sensitive and direct substitution of alpha_EM(M_Z) gives -15.675 eV rather than the textbook -13.6057 eV, so the low-energy Coulomb coupling bridge is not a notation change. The live runner also confirms the current atomic scaffold imports textbook m_e and lacks an alpha(0) closure. Residual risk is downstream misuse: this audit does not ratify hydrogen, Lamb-shift, fine-structure, hyperfine, helium, or larger-atom predictions.
+- **auditor confidence:** high
+
+### `axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_STACK_MINIMALITY_CL4C_NO_GO_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_STACK_MINIMALITY_CL4C_NO_GO_THEOREM_NOTE_2026-04-29.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-cross-confirm-2026-04-30`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** O2/combined no-go asserts that the weight-preserving A_min-derived operator algebra on P_A H_cell is only the S_4 permutation algebra and therefore cannot contain four Hermitian Clifford generators.  _(class `A`)_
+- **chain closes:** False — No. Direct finite linear algebra on H_cell = (C^2)^tensor4 gives full M_16(C) from the local single-qubit Cl(3) generators; its Hamming-weight-preserving part restricts to full M_4(C) on P_A, so the claimed S_4-only obstruction does not hold.
+- **rationale:** Issue: the proof's O2 step identifies the weight-preserving A_min algebra on P_A H_cell with an S_4/permutation algebra, but the requested finite check finds dim Op(A_min)=256, dim weight-preserving=70, and dim restricted P_A algebra=16=M_4(C). The proposed gamma_1=X tensor X, gamma_2=X tensor Y, gamma_3=X tensor Z, gamma_4=Y tensor I have membership residuals below 1e-15 in the restricted algebra, are Hermitian, square to I, and satisfy the Cl_4(C) anticommutators exactly. Why this blocks: the theorem's conclusion requires dim restricted algebra <16 or otherwise no Clifford quadruple; the computation gives full M_4(C) and an explicit quadruple. Repair target: either prove the local generators sigma_i^(a) are not actually in Op(A_min), or revise the theorem/runner to compute the generated weight-preserving algebra and retire the forced-Axiom* conclusion if they are included. Claim boundary until fixed: the individual A1/A2/A4 route no-gos may remain route-specific, but the assembled global no-hidden-third-option minimality theorem and Axiom* forced corollary cannot be claimed.
+- **open / conditional deps cited:**
+  - `HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md`
+  - `HUBBLE_LANE5_C1_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md`
+  - `CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md`
 - **auditor confidence:** high
 
 ### `backreaction_note`
