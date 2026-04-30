@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:24:21.311582+00:00
+**Generated:** 2026-04-30T01:24:58.068901+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,13 +20,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 78 |
-| _proposed_retained_ | 11 |
+| _proposed_retained_ | 9 |
 | bounded | 210 |
 | support | 108 |
 | open | 24 |
 | unknown | 538 |
 | ~~audited_decoration~~ | 4 |
-| ~~audited_numerical_match~~ | 41 |
+| ~~audited_numerical_match~~ | 43 |
 | ~~audited_renaming~~ | 42 |
 | ~~audited_conditional~~ | 443 |
 | ~~audited_failed~~ | 89 |
@@ -38,9 +38,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 148 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 50 |
-| `audited_numerical_match` | 16 |
+| `audited_numerical_match` | 17 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1283 |
+| `unaudited` | 1282 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 382 |
 | `leaf` | 797 |
 
-- **Proposed claims demoted by upstream:** 154
+- **Proposed claims demoted by upstream:** 155
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -391,6 +391,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_up_amplitude_native_expression_scan_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `tensor_support_center_excess_law_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `wave_direct_dm_h025_fam2_two_point_synthesis_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
+| `wave_direct_dm_h025_seed0_crossfamily_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `wave_direct_dm_h025_two_point_synthesis_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -4630,6 +4631,24 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`
   - `WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md`
   - `WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md`
+- **auditor confidence:** high
+
+### `wave_direct_dm_h025_seed0_crossfamily_note`
+
+- **Note:** [`WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md`](../../docs/WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The seed-0 fine-H surface is consistent across families in sign, ordering, and weak-field control, but it still does not define a stable amplitude law or a portability claim beyond Fam1/Fam2.  _(class `G`)_
+- **chain closes:** False — The conclusion is a compression of two selected H=0.25 seed-0 numerical rows. The ledger row provides no one-hop dependencies or runner to reproduce the controlled Fam1/Fam2 rows.
+- **rationale:** Issue: the claim imports selected Fam1/Fam2 seed-0 H=0.25 control rows from an artifact chain that is not registered as audit dependencies. Why this blocks: the note is a useful finite compression of two numerical rows, but it does not derive a structural theorem, stable amplitude law, or portability result from the audit packet. Repair target: register both control notes and their runner/log artifacts as dependencies, recompute the rows, and keep the statement scoped to the two-row comparison unless a broader family theorem is proved. Claim boundary until fixed: safe as a bounded observation that the two listed seed-0 rows share negative sign and weak-branch control; not safe as retained cross-family compression science.
+- **open / conditional deps cited:**
+  - `WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md`
+  - `WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`
+  - `WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`
+  - `WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md`
+  - `WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md`
 - **auditor confidence:** high
 
 ### `wave_direct_dm_h025_two_point_synthesis_note`
