@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 237,
-    "leaf": 515,
+    "leaf": 514,
     "medium": 347
   },
-  "generated_at": "2026-04-30T15:15:56.952903+00:00",
+  "generated_at": "2026-04-30T15:16:00.589992+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -14924,23 +14924,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dense_prune_guard_seed_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DENSE_PRUNE_GUARD_SEED_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "diamond_absolute_unit_bridge_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -23330,6 +23313,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 696,
-  "total_pending": 1108
+  "ready_count": 695,
+  "total_pending": 1107
 }
