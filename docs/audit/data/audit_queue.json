@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 396,
+    "leaf": 395,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:25:01.562929+00:00",
+  "generated_at": "2026-04-30T19:25:07.593923+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13739,23 +13739,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "eigenvalue_anderson_phase_note_2026-04-11",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/EIGENVALUE_ANDERSON_PHASE_NOTE_2026-04-11.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_eigenvalue_stats_and_anderson_phase.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "em_gravity_coexistence_2x2_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20059,6 +20042,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 540,
-  "total_pending": 922
+  "ready_count": 539,
+  "total_pending": 921
 }
