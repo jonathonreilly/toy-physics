@@ -1,11 +1,11 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T00:20:48.595763+00:00
-**Total pending:** 1303
-**Ready (all deps already at a stable tier):** 854
+**Generated:** 2026-04-30T00:20:51.836383+00:00
+**Total pending:** 1302
+**Ready (all deps already at a stable tier):** 853
 
 By criticality:
-- `critical`: 61
+- `critical`: 60
 - `high`: 302
 - `medium`: 325
 - `leaf`: 615
@@ -23,48 +23,48 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 5 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | critical | 295 | 14.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py` |
 | 6 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | critical | 295 | 14.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py` |
 | 7 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | critical | 295 | 14.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py` |
-| 8 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | critical | 295 | 14.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py` |
-| 9 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | critical | 295 | 14.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py` |
-| 10 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | critical | 295 | 14.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py` |
-| 11 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | critical | 295 | 14.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py` |
-| 12 | `yt_ward_identity_derivation_theorem` | critical | 290 | 31.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_ward_identity_derivation.py` |
-| 13 | `site_phase_cube_shift_intertwiner_note` | critical | 284 | 19.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_site_phase_cube_shift_intertwiner.py` |
-| 14 | `generation_axiom_boundary_note` | critical | 282 | 14.64 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_generation_axiom_boundary.py` |
-| 15 | `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | critical | 281 | 16.14 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
-| 16 | `g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19` | critical | 280 | 15.63 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
-| 17 | `hypercharge_identification_note` | critical | 270 | 15.08 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
-| 18 | `gauge_vacuum_plaquette_bridge_support_note` | critical | 295 | 14.71 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 19 | `gauge_vacuum_plaquette_distinct_shell_theorem_note` | critical | 295 | 14.71 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py` |
-| 20 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | critical | 295 | 14.71 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py` |
-| 21 | `plaquette_self_consistency_note` | critical | 294 | 20.20 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_plaquette_self_consistency.py` |
-| 22 | `native_gauge_closure_note` | critical | 289 | 20.68 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_non_abelian_gauge.py` |
-| 23 | `three_generation_observable_theorem_note` | critical | 281 | 25.64 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_three_generation_observable_theorem.py` |
-| 24 | `g_bare_structural_normalization_theorem_note_2026-04-18` | critical | 280 | 15.63 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_structural_normalization.py` |
-| 25 | `g_bare_two_ward_closure_note_2026-04-18` | critical | 279 | 15.13 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_two_ward_closure.py` |
-| 26 | `physical_lattice_necessity_note` | critical | 278 | 19.12 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_physical_lattice_necessity.py` |
-| 27 | `left_handed_charge_matching_note` | critical | 265 | 21.55 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
-| 28 | `three_generation_structure_note` | critical | 264 | 25.05 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 29 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | critical | 263 | 19.04 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 30 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | critical | 263 | 18.54 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 31 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | critical | 262 | 17.04 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_anomaly_trace_catalog.py` |
-| 32 | `anomaly_forces_time_theorem` | critical | 261 | 21.53 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 33 | `one_generation_matter_closure_note` | critical | 258 | 24.52 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 34 | `alpha_s_derived_note` | critical | 245 | 32.94 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_zero_import_chain.py` |
-| 35 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 142 | 15.66 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_source_surface_active_half_plane_theorem.py` |
-| 36 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 141 | 16.15 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_r_base_group_theory_derivation.py` |
-| 37 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | critical | 141 | 15.15 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_source_surface_active_affine_point_selection_boundary.py` |
-| 38 | `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16` | critical | 137 | 15.11 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem.py` |
-| 39 | `rconn_derived_note` | critical | 116 | 18.37 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_color_projection_mc.py` |
-| 40 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 32.36 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_wolfenstein_lambda_a_structural_identities.py` |
-| 41 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 32.84 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_cp_phase_structural_identity.py` |
-| 42 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 24.83 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_atlas_triangle_right_angle.py` |
-| 43 | `higgs_mass_derived_note` | critical | 112 | 18.32 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 44 | `higgs_vacuum_explicit_systematic_note` | critical | 111 | 18.31 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_full_3loop.py` |
-| 45 | `minimal_axioms_2026-04-11` | critical | 109 | 21.28 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 46 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 102 | 27.69 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_magnitudes_structural_counts.py` |
-| 47 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 94 | 23.57 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_nlo_barred_triangle_protected_gamma.py` |
-| 48 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 84 | 18.41 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_third_row_magnitudes.py` |
-| 49 | `ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25` | critical | 83 | 18.39 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_bernoulli_two_ninths_koide_bridge.py` |
-| 50 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | critical | 83 | 18.39 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_bs_mixing_phase_derivation.py` |
+| 8 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | critical | 295 | 14.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py` |
+| 9 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | critical | 295 | 14.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py` |
+| 10 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | critical | 295 | 14.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py` |
+| 11 | `yt_ward_identity_derivation_theorem` | critical | 290 | 31.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_ward_identity_derivation.py` |
+| 12 | `site_phase_cube_shift_intertwiner_note` | critical | 284 | 19.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_site_phase_cube_shift_intertwiner.py` |
+| 13 | `generation_axiom_boundary_note` | critical | 282 | 14.64 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_generation_axiom_boundary.py` |
+| 14 | `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | critical | 281 | 16.14 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 15 | `g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19` | critical | 280 | 15.63 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 16 | `hypercharge_identification_note` | critical | 270 | 15.08 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 17 | `gauge_vacuum_plaquette_bridge_support_note` | critical | 295 | 14.71 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 18 | `gauge_vacuum_plaquette_distinct_shell_theorem_note` | critical | 295 | 14.71 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py` |
+| 19 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | critical | 295 | 14.71 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py` |
+| 20 | `plaquette_self_consistency_note` | critical | 294 | 20.20 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_plaquette_self_consistency.py` |
+| 21 | `native_gauge_closure_note` | critical | 289 | 20.68 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_non_abelian_gauge.py` |
+| 22 | `three_generation_observable_theorem_note` | critical | 281 | 25.64 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_three_generation_observable_theorem.py` |
+| 23 | `g_bare_structural_normalization_theorem_note_2026-04-18` | critical | 280 | 15.63 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_structural_normalization.py` |
+| 24 | `g_bare_two_ward_closure_note_2026-04-18` | critical | 279 | 15.13 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_two_ward_closure.py` |
+| 25 | `physical_lattice_necessity_note` | critical | 278 | 19.12 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_physical_lattice_necessity.py` |
+| 26 | `left_handed_charge_matching_note` | critical | 265 | 21.55 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
+| 27 | `three_generation_structure_note` | critical | 264 | 25.05 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 28 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | critical | 263 | 19.04 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 29 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | critical | 263 | 18.54 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 30 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | critical | 262 | 17.04 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_anomaly_trace_catalog.py` |
+| 31 | `anomaly_forces_time_theorem` | critical | 261 | 21.53 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 32 | `one_generation_matter_closure_note` | critical | 258 | 24.52 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 33 | `alpha_s_derived_note` | critical | 245 | 32.94 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_zero_import_chain.py` |
+| 34 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 142 | 15.66 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_source_surface_active_half_plane_theorem.py` |
+| 35 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 141 | 16.15 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_r_base_group_theory_derivation.py` |
+| 36 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | critical | 141 | 15.15 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_source_surface_active_affine_point_selection_boundary.py` |
+| 37 | `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16` | critical | 137 | 15.11 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem.py` |
+| 38 | `rconn_derived_note` | critical | 116 | 18.37 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_color_projection_mc.py` |
+| 39 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 32.36 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_wolfenstein_lambda_a_structural_identities.py` |
+| 40 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 32.84 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_cp_phase_structural_identity.py` |
+| 41 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 24.83 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_atlas_triangle_right_angle.py` |
+| 42 | `higgs_mass_derived_note` | critical | 112 | 18.32 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 43 | `higgs_vacuum_explicit_systematic_note` | critical | 111 | 18.31 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_full_3loop.py` |
+| 44 | `minimal_axioms_2026-04-11` | critical | 109 | 21.28 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 45 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 102 | 27.69 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_magnitudes_structural_counts.py` |
+| 46 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 94 | 23.57 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_nlo_barred_triangle_protected_gamma.py` |
+| 47 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 84 | 18.41 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_third_row_magnitudes.py` |
+| 48 | `ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25` | critical | 83 | 18.39 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_bernoulli_two_ninths_koide_bridge.py` |
+| 49 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | critical | 83 | 18.39 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ckm_bs_mixing_phase_derivation.py` |
+| 50 | `ckm_n9_structural_family_koide_bridge_support_note_2026-04-25` | critical | 82 | 18.38 |  | fresh_context_or_stronger_with_cross_confirmation | - |
 
 Full queue lives in `data/audit_queue.json`.

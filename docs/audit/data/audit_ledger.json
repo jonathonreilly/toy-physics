@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T00:20:48.543000+00:00",
-  "generated_at": "2026-04-30T00:20:46.777549+00:00",
-  "invalidation_run_at": "2026-04-30T00:20:48.483633+00:00",
+  "effective_status_computed_at": "2026-04-30T00:20:51.779970+00:00",
+  "generated_at": "2026-04-30T00:20:50.059140+00:00",
+  "invalidation_run_at": "2026-04-30T00:20:51.717422+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T00:20:48.362063+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:20:51.598246+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -32377,14 +32377,21 @@
       "verdict_rationale": null
     },
     "gauge_vacuum_plaquette_residual_environment_identification_theorem_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:20:49.138806+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_renaming",
+      "auditor": "codex-fresh-cross-confirm-20260430-session-b",
+      "auditor_confidence": "medium",
+      "auditor_family": "codex-current",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note identifies the residual object by stripping known factors and naming the remainder; it does not derive the residual coefficients or an independent construction of the operator.",
       "claim_id": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32404,30 +32411,33 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "support",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_renaming",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Strip off the marked half-slice multipliers and the exact normalized mixed-kernel local factor; what remains is exactly the compression of the unmarked spatial Wilson environment. Call this operator R_beta^env.",
+      "load_bearing_step_class": "F",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "fad5727d8365ac1f2de0a49496982c24fffed48305eee244867b12ed76497a40",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md",
+        "docs/GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 7,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py",
       "title": "Gauge-Vacuum Plaquette Residual Environment Identification Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the load-bearing move defines/renames the post-stripping remainder as R_beta^env. Why this blocks: an exact identification theorem needs an independent derivation that the remainder is the compressed unmarked spatial environment with the stated structural class, not just a residual definition. Repair target: construct the unmarked-environment compression directly from the Wilson kernel and prove equality to the stripped residual. Claim boundary until fixed: after accepting the factorization inputs, one may denote the unknown residual factor by R_beta^env."
     },
     "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note": {
       "audit_date": null,
