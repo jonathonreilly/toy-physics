@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:20:36.619592+00:00
+**Generated:** 2026-04-30T22:24:36.527919+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 82 |
 | _proposed_retained_ | 5 |
 | bounded | 278 |
-| support | 247 |
+| support | 246 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 744 |
+| ~~audited_conditional~~ | 745 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 214 |
-| `audited_conditional` | 466 |
+| `audited_conditional` | 467 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 792 |
+| `unaudited` | 791 |
 
 | criticality | count |
 |---|---:|
@@ -683,6 +683,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `neutrino_two_amplitude_last_mile_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `newton_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `newton_law_derived_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `observable_principle_from_axiom_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `oh_schur_boundary_action_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -9294,6 +9295,24 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md`
   - `COMPOSITE_SOURCE_ADDITIVITY_NOTE.md`
   - `COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md`
+- **auditor confidence:** high
+
+### `newton_law_derived_note`
+
+- **Note:** [`NEWTON_LAW_DERIVED_NOTE.md`](../../docs/NEWTON_LAW_DERIVED_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-23`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The lattice Poisson equation on Z^3 plus the Green-function asymptotic and cross-coupling product law yields F = M M_test/(4 pi r^2) as a closed Newton-law derivation from the Cl(3) framework with no remaining gap.  _(class `B`)_
+- **chain closes:** False — The live runner supports a finite-lattice/valley-linear inverse-square distance exponent, but the full Newton-law theorem also needs the framework derivation of the Poisson equation, the force/readout bridge from potential gradient to test-mass force, and the product-law cross-coupling closure. Those inputs are cited or assumed rather than closed inside this row.
+- **rationale:** Issue: the runner confirms finite-lattice/valley-linear distance-exponent behavior, but the note claims full retained Newton-law closure from Cl(3), including the Poisson equation as equation of motion, cross-coupling product law, and force readout. Why this blocks: distance-exponent evidence alone is not a standalone derivation of F = G M1 M2/r^2 from framework primitives; the source imports the Poisson/self-consistency law, lattice Green asymptotic authority, product-law closure, and potential-gradient-to-force identification. Repair target: audit/register the Poisson self-consistency theorem, product-law runner/authority, lattice Green asymptotic authority, and force-readout bridge as explicit clean dependencies, then run a combined verifier that exercises the full theorem chain. Claim boundary until fixed: support for an inverse-square distance exponent and mass-independent scaling under the supplied Poisson/valley-linear model, not standalone retained Newton-law closure.
+- **open / conditional deps cited:**
+  - `GRAVITY_CLEAN_DERIVATION_NOTE.md`
+  - `GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`
+  - `scripts/frontier_product_law_no_ansatz.py`
+  - `force_readout_gradient_bridge`
+  - `lattice_green_asymptotic_authority`
 - **auditor confidence:** high
 
 ### `nonlabel_grown_basin_note`
