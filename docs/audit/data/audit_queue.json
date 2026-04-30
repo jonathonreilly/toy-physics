@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 1,
-    "high": 206,
+    "high": 205,
     "leaf": 287,
     "medium": 289
   },
-  "generated_at": "2026-04-30T22:37:43.287615+00:00",
+  "generated_at": "2026-04-30T22:39:16.003274+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -333,23 +333,6 @@
       "note_path": "docs/UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_q_second_order_support_batch_note_2026-04-22",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 5,
-      "load_bearing_score": 7.587,
-      "note_path": "docs/KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_q_bridge_single_primitive.py",
       "transitive_descendants": 33
     },
     {
@@ -17916,6 +17899,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 400,
-  "total_pending": 783
+  "ready_count": 399,
+  "total_pending": 782
 }

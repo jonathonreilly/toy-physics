@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:37:43.462644+00:00
+**Generated:** 2026-04-30T22:39:16.193961+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 216 |
+| `audited_clean` | 217 |
 | `audited_conditional` | 472 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 783 |
+| `unaudited` | 782 |
 
 | criticality | count |
 |---|---:|
@@ -259,6 +259,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_minimal_scale_free_selector_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_no_hidden_source_audit_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
+| `koide_q_second_order_support_batch_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_so2_phase_erasure_support_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
@@ -8401,6 +8402,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **open / conditional deps cited:**
   - `KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md`
   - `KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`
+- **auditor confidence:** high
+
+### `koide_q_second_order_support_batch_note_2026-04-22`
+
+- **Note:** [`KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md`](../../docs/KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-32`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The April 22 second-order support packet narrows the charged-lepton Koide Q bridge to one named remaining primitive: why the physical charged-lepton selector is source-free, K=0, on the admitted normalized second-order reduced carrier; it explicitly does not close Q=2/3 as axiom-native retained physics.  _(class `A`)_
+- **chain closes:** True — The primary runner and six sibling support runners all pass, verifying the quotient/factorization, unique scale-free selector, reduced observable law, normalized effective action, no-hidden-source audit, single-primitive collapse, and reviewer stress test on the admitted second-order carrier. The source note's non-closure boundary is explicit and preserved.
+- **rationale:** Clean on the declared support-batch scope only. The runners verify that, once the first-live second-order reduced carrier is admitted, the surviving Koide-Q arithmetic faces collapse to a single primitive, the reduced observable is W_red=log det(I+K), the source-free point is Y=I_2, and nonzero reduced sources merely reparameterize the selector family. The note repeatedly states that this does not prove the physical charged-lepton selector lies on that carrier or that K=0 is forced by retained physics. Residual risk is downstream over-citation: this audit does not promote Q=2/3 or delta=2/9 closure.
 - **auditor confidence:** high
 
 ### `koide_q_so2_phase_erasure_support_note_2026-04-25`
