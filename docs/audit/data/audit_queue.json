@@ -3,9 +3,9 @@
     "critical": 44,
     "high": 281,
     "leaf": 617,
-    "medium": 344
+    "medium": 343
   },
-  "generated_at": "2026-04-30T01:22:58.975916+00:00",
+  "generated_at": "2026-04-30T01:23:46.681979+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -8529,7 +8529,7 @@
         "wave_direct_dm_h025_fam2_seed1_control_note"
       ],
       "direct_in_degree": 7,
-      "load_bearing_score": 11.407,
+      "load_bearing_score": 7.407,
       "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
       "ready": false,
       "runner_path": null,
@@ -8549,7 +8549,7 @@
         "wave_direct_dm_h025_fam2_two_point_synthesis_note"
       ],
       "direct_in_degree": 7,
-      "load_bearing_score": 11.407,
+      "load_bearing_score": 7.407,
       "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
       "ready": false,
       "runner_path": null,
@@ -9993,26 +9993,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_quark_up_amplitude_provenance_audit.py",
       "transitive_descendants": 35
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "kubo_continuum_limit_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "wave_retardation_continuum_limit_note",
-        "linear_response_true_kubo_note"
-      ],
-      "direct_in_degree": 2,
-      "load_bearing_score": 10.129,
-      "note_path": "docs/KUBO_CONTINUUM_LIMIT_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 34
     },
     {
       "audit_independence_required": "any_non_self",
@@ -16410,26 +16390,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "kubo_continuum_limit_families_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "kubo_fam2_refinement_note",
-        "kubo_continuum_limit_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.5,
-      "note_path": "docs/KUBO_CONTINUUM_LIMIT_FAMILIES_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "born_rule_analysis_2026-04-11",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -16596,25 +16556,6 @@
       "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
       "ready": true,
       "runner_path": "scripts/frontier_koide_q_delta_linking_relation.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "kubo_fam2_refinement_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "kubo_continuum_limit_families_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/KUBO_FAM2_REFINEMENT_NOTE.md",
-      "ready": true,
-      "runner_path": null,
       "transitive_descendants": 1
     },
     {
@@ -25193,6 +25134,26 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "kubo_continuum_limit_families_note",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "kubo_fam2_refinement_note",
+        "kubo_continuum_limit_note"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 5.5,
+      "note_path": "docs/KUBO_CONTINUUM_LIMIT_FAMILIES_NOTE.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "branch_entanglement_robustness_note_2026-04-11",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -25291,6 +25252,25 @@
       "note_path": "docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_J_ISO_DERIVATION_AND_SCHUR_ISOTROPY_NO_GO_NOTE_2026-04-19.md",
       "ready": false,
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_2026_04_19.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "kubo_fam2_refinement_note",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "kubo_continuum_limit_families_note"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 1.5,
+      "note_path": "docs/KUBO_FAM2_REFINEMENT_NOTE.md",
+      "ready": false,
+      "runner_path": null,
       "transitive_descendants": 1
     },
     {
@@ -26801,6 +26781,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 852,
-  "total_pending": 1286
+  "ready_count": 849,
+  "total_pending": 1285
 }

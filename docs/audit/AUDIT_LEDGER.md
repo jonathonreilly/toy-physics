@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:22:59.165907+00:00
+**Generated:** 2026-04-30T01:23:46.866625+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,12 +21,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 78 |
 | _proposed_retained_ | 11 |
-| bounded | 213 |
+| bounded | 211 |
 | support | 108 |
 | open | 24 |
 | unknown | 538 |
 | ~~audited_decoration~~ | 4 |
-| ~~audited_numerical_match~~ | 38 |
+| ~~audited_numerical_match~~ | 40 |
 | ~~audited_renaming~~ | 42 |
 | ~~audited_conditional~~ | 443 |
 | ~~audited_failed~~ | 89 |
@@ -38,9 +38,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 148 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 50 |
-| `audited_numerical_match` | 14 |
+| `audited_numerical_match` | 15 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1285 |
+| `unaudited` | 1284 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 382 |
 | `leaf` | 797 |
 
-- **Proposed claims demoted by upstream:** 156
+- **Proposed claims demoted by upstream:** 155
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -381,6 +381,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_from_mass_hierarchy_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
+| `kubo_continuum_limit_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
@@ -2691,6 +2692,21 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md`
   - `KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md`
   - `SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `kubo_continuum_limit_note`
+
+- **Note:** [`KUBO_CONTINUUM_LIMIT_NOTE.md`](../../docs/KUBO_CONTINUUM_LIMIT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** At H in {0.5, 0.35, 0.25} with physical parameters held approximately constant, kubo_true goes 7.062 -> 5.973 -> 5.986, so the continuum-limit value is kubo_true ≈ +5.986 with 0.2% last-step drift.  _(class `G`)_
+- **chain closes:** False — The positive continuum value is inferred from three selected numerical refinements on Fam1 and no primary runner is registered in the audit row. Both one-hop authorities are bounded conditional notes, so the result cannot close as an independent retained continuum theorem.
+- **rationale:** Issue: the claim depends on a selected three-point refinement sweep with fixed program conventions, Fam1 geometry, regularizer 0.1, kH=2.5, and approximate physical-parameter matching, while the runner/log that produce the values are not registered as the primary audit runner. Why this blocks: a finite numerical convergence pattern can support a bounded observation, but it is not a retained continuum theorem without a reproducible runner, registered dependencies, and an explicit convergence/error criterion. Repair target: register scripts/kubo_continuum_limit.py as the primary runner, have it recompute the table with pass/fail thresholds, and close or narrow the bounded Kubo and wave-retardation dependencies. Claim boundary until fixed: safe as a bounded numerical report that this Fam1 setup shows last-step stability near +5.986; not safe as a general retained continuum-limit result.
+- **open / conditional deps cited:**
+  - `WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md`
+  - `LINEAR_RESPONSE_TRUE_KUBO_NOTE.md`
 - **auditor confidence:** high
 
 ### `lattice_3d_dense_refinement_reconciliation_note`

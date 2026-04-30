@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T01:22:58.912598+00:00",
-  "generated_at": "2026-04-30T01:22:57.090968+00:00",
-  "invalidation_run_at": "2026-04-30T01:22:58.850994+00:00",
+  "effective_status_computed_at": "2026-04-30T01:23:46.623774+00:00",
+  "generated_at": "2026-04-30T01:23:44.783256+00:00",
+  "invalidation_run_at": "2026-04-30T01:23:46.562460+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T01:22:58.725269+00:00",
+  "load_bearing_computed_at": "2026-04-30T01:23:46.435459+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -44084,7 +44084,7 @@
         "kubo_continuum_limit_note"
       ],
       "direct_in_degree": 1,
-      "effective_status": "bounded",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "inherited_from:kubo_continuum_limit_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -44136,14 +44136,27 @@
       "verdict_rationale": null
     },
     "kubo_continuum_limit_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T01:23:38.306419+00:00",
+      "audit_state_snapshot": {
+        "criticality": "medium",
+        "dep_effective_status": {
+          "linear_response_true_kubo_note": "bounded",
+          "wave_retardation_continuum_limit_note": "bounded"
+        },
+        "deps": [
+          "linear_response_true_kubo_note",
+          "wave_retardation_continuum_limit_note"
+        ],
+        "load_bearing_score": 10.129,
+        "transitive_descendants": 34
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The positive continuum value is inferred from three selected numerical refinements on Fam1 and no primary runner is registered in the audit row. Both one-hop authorities are bounded conditional notes, so the result cannot close as an independent retained continuum theorem.",
       "claim_id": "kubo_continuum_limit_note",
       "criticality": "medium",
       "current_status": "proposed_retained",
@@ -44154,18 +44167,21 @@
         "linear_response_true_kubo_note"
       ],
       "direct_in_degree": 2,
-      "effective_status": "bounded",
-      "effective_status_reason": "inherited_from:wave_retardation_continuum_limit_note",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "effective_status": "audited_numerical_match",
+      "effective_status_reason": "self",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 10.129,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "At H in {0.5, 0.35, 0.25} with physical parameters held approximately constant, kubo_true goes 7.062 -> 5.973 -> 5.986, so the continuum-limit value is kubo_true \u2248 +5.986 with 0.2% last-step drift.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "18945c477ffc0dc8d3eba2d73354032f04fa2e9ae25cdaace0d53487a618c6e4",
       "note_path": "docs/KUBO_CONTINUUM_LIMIT_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md",
+        "docs/LINEAR_RESPONSE_TRUE_KUBO_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368889+00:00",
@@ -44203,7 +44219,7 @@
       "runner_path": null,
       "title": "Continuum Limit of the True First-Order Kubo Coefficient \u2014 POSITIVE",
       "transitive_descendants": 34,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the claim depends on a selected three-point refinement sweep with fixed program conventions, Fam1 geometry, regularizer 0.1, kH=2.5, and approximate physical-parameter matching, while the runner/log that produce the values are not registered as the primary audit runner. Why this blocks: a finite numerical convergence pattern can support a bounded observation, but it is not a retained continuum theorem without a reproducible runner, registered dependencies, and an explicit convergence/error criterion. Repair target: register scripts/kubo_continuum_limit.py as the primary runner, have it recompute the table with pass/fail thresholds, and close or narrow the bounded Kubo and wave-retardation dependencies. Claim boundary until fixed: safe as a bounded numerical report that this Fam1 setup shows last-step stability near +5.986; not safe as a general retained continuum-limit result."
     },
     "kubo_eikonal_gap_note": {
       "audit_date": null,
@@ -83992,11 +84008,11 @@
       "effective_status_reason": "inherited_from:wave_direct_dm_h025_fam2_seed1_control_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
-      "load_bearing_score": 11.407,
+      "load_bearing_score": 7.407,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
-      "max_descendant_status": "proposed_retained",
-      "max_descendant_status_rank": 80,
+      "max_descendant_status": "audited_numerical_match",
+      "max_descendant_status_rank": 15,
       "note_hash": "b5988e5a4063f8f0241a252db8f2ca983109214d89a05e0d0b7e4c79965c5f60",
       "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
       "open_dependency_paths": [],
@@ -84087,11 +84103,11 @@
       "effective_status_reason": "inherited_from:wave_direct_dm_h025_fam2_two_point_synthesis_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
-      "load_bearing_score": 11.407,
+      "load_bearing_score": 7.407,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
-      "max_descendant_status": "proposed_retained",
-      "max_descendant_status_rank": 80,
+      "max_descendant_status": "audited_numerical_match",
+      "max_descendant_status_rank": 15,
       "note_hash": "331d38d423fb11e0760d4373c6f7e2695be41722fb2eb443092aa202516b7215",
       "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
       "open_dependency_paths": [],
@@ -84282,11 +84298,11 @@
       "effective_status_reason": "self",
       "independence": "cross_family",
       "intrinsic_status": "audited_numerical_match",
-      "load_bearing_score": 11.0,
+      "load_bearing_score": 7.0,
       "load_bearing_step": "On the current Fam2 fine-H pair, the direct-dM matched-history effect survives with controls on both seeds and the seed-conditioned late-gain asymmetry survives too, but the old coarse amplitude bands do not survive refinement.",
       "load_bearing_step_class": "G",
-      "max_descendant_status": "proposed_retained",
-      "max_descendant_status_rank": 80,
+      "max_descendant_status": "audited_numerical_match",
+      "max_descendant_status_rank": 15,
       "note_hash": "ea4266a52b5d2b3ef299cd9d3ad9dbf9c66199d1d2303ba1272c74b85b1d7a8c",
       "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
       "open_dependency_paths": [

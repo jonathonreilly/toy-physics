@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-30T01:22:58.930433+00:00",
+  "computed_at": "2026-04-30T01:23:46.640563+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -28,16 +28,16 @@
     "audited_conditional": 443,
     "audited_decoration": 4,
     "audited_failed": 89,
-    "audited_numerical_match": 38,
+    "audited_numerical_match": 40,
     "audited_renaming": 42,
-    "bounded": 213,
+    "bounded": 211,
     "open": 24,
     "proposed_retained": 11,
     "retained": 78,
     "support": 108,
     "unknown": 538
   },
-  "proposed_demoted_by_upstream_count": 156,
+  "proposed_demoted_by_upstream_count": 155,
   "proposed_demoted_by_upstream_examples": [
     "atomic_hydrogen_helium_probe_note",
     "bminusl_anomaly_freedom_theorem_note_2026-04-24",
