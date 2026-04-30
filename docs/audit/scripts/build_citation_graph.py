@@ -54,12 +54,20 @@ STATUS_LINE_RE = re.compile(
     re.IGNORECASE | re.MULTILINE,
 )
 TITLE_RE = re.compile(r"^#\s+(.+)$", re.MULTILINE)
-RUNNER_LINE_RE = re.compile(
-    r"(?:\*\*(?:Primary runner|Script|Runner):?\*\*|"
-    r"Primary runner:|Script:|Runner:)\s*"
-    r"`?([A-Za-z0-9_./\-]+\.py)`?",
+RUNNER_LABEL_RE = re.compile(
+    r"^\s*(?:[-*]\s*)?"
+    r"(?:\*\*(?:Primary runner|Primary artifact|Primary artifacts|Script|Runner):?\*\*|"
+    r"Primary runner:|Primary artifact:|Primary artifacts:|Script:|Runner:)\s*",
     re.IGNORECASE,
 )
+RUNNER_PATH_RE = re.compile(
+    r"(scripts/[A-Za-z0-9_./\-]+\.py)|(?<![A-Za-z0-9_./\-])([A-Za-z0-9_.\-]+\.py)"
+)
+RUNNER_SECTION_RE = re.compile(
+    r"^##\s+(?:Primary\s+)?(?:Artifact(?:\s+chain)?|Artifacts|Script|Files)\b.*$",
+    re.IGNORECASE | re.MULTILINE,
+)
+HEADING_RE = re.compile(r"^##\s+", re.MULTILINE)
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)\s#]+\.md)(?:#[^)]*)?\)")
 
 
@@ -93,11 +101,61 @@ def extract_title(body: str) -> str | None:
     return m.group(1).strip() if m else None
 
 
-def extract_runner(body: str) -> str | None:
-    m = RUNNER_LINE_RE.search(body)
-    if not m:
+def normalize_runner_path(path: str) -> str | None:
+    path = path.strip()
+    if path.startswith("scripts/"):
+        return path
+    script_path = f"scripts/{path}"
+    if (REPO_ROOT / script_path).exists():
+        return script_path
+    return None
+
+
+def runner_paths(text: str) -> list[str]:
+    paths: list[str] = []
+    for m in RUNNER_PATH_RE.finditer(text):
+        raw = m.group(1) or m.group(2)
+        if raw:
+            path = normalize_runner_path(raw)
+            if path:
+                paths.append(path)
+    return paths
+
+
+def first_runner_path(text: str) -> str | None:
+    paths = runner_paths(text)
+    return paths[0] if paths else None
+
+
+def extract_section(body: str, start: int) -> str:
+    m = HEADING_RE.search(body, start)
+    end = m.start() if m else len(body)
+    return body[start:end]
+
+
+def extract_runner(body: str, rel_path: str | None = None) -> str | None:
+    if rel_path and rel_path.startswith("ai_methodology/raw/"):
         return None
-    return m.group(1).strip()
+
+    lines = body.splitlines()
+    for i, line in enumerate(lines):
+        if not RUNNER_LABEL_RE.search(line):
+            continue
+        window = "\n".join(lines[i : i + 4])
+        runner = first_runner_path(window)
+        if runner:
+            return runner
+
+    for m in RUNNER_SECTION_RE.finditer(body):
+        runner = first_runner_path(extract_section(body, m.end()))
+        if runner:
+            return runner
+
+    top_paths = list(dict.fromkeys(runner_paths("\n".join(lines[:80]))))
+    if len(top_paths) == 1:
+        return top_paths[0]
+
+    return None
 
 
 def resolve_link_target(link_target: str, source_path: Path) -> Path | None:
@@ -148,6 +206,7 @@ def build_graph() -> dict:
     # First pass: register every note as a node.
     for note_path in notes:
         cid = claim_id_from_path(note_path)
+        rel = note_path.relative_to(DOCS_DIR)
         body = note_path.read_text(encoding="utf-8", errors="replace")
         raw_status, current_status = extract_status(body)
         nodes[cid] = {
@@ -156,7 +215,7 @@ def build_graph() -> dict:
             "title": extract_title(body),
             "current_status_raw": raw_status,
             "current_status": current_status,
-            "runner_path": extract_runner(body),
+            "runner_path": extract_runner(body, rel.as_posix()),
             "note_hash": hashlib.sha256(body.encode("utf-8")).hexdigest(),
             "deps": [],
         }
