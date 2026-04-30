@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:43:02.395385+00:00
+**Generated:** 2026-04-30T02:43:05.829343+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 204 |
 | support | 104 |
 | open | 24 |
-| unknown | 517 |
+| unknown | 516 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 376 |
+| ~~audited_conditional~~ | 377 |
 | ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 163 |
+| `audited_conditional` | 164 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1254 |
+| `unaudited` | 1253 |
 
 | criticality | count |
 |---|---:|
@@ -198,6 +198,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `dm_leptogenesis_transport_integral_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_transport_status_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_cascade_geometry_note_2026-04-14` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -1167,6 +1168,20 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** With the exact upstream leptogenesis package frozen, eta[H] factors as (s/n_gamma) * C_sph * d_N * epsilon_1 * kappa_axiom[H], so kappa_fit(K) is only a diagnostic comparator.  _(class `B`)_
 - **chain closes:** False — The factorization closes after the exact source package, projection law, and bookkeeping constants are supplied, but those upstream inputs are not derived or supplied as retained one-hop dependencies.
 - **rationale:** Issue: the transport decomposition depends on fixed exact_package inputs including gamma, E1, E2, K00, epsilon_1, and bookkeeping constants. Why this blocks: the runner correctly factors eta and demotes kappa_fit only conditional on those supplied values; it does not derive the exact source package or projection law from retained authorities in this audit bundle. Repair target: expose retained dependencies for the source package, projection law, and thermal/radiation bookkeeping, or derive them inside the runner before decomposition. Claim boundary until fixed: conditional transport decomposition for the supplied package, not an audited theorem-native decomposition from the single axiom.
+- **open / conditional deps cited:**
+  - `scripts/dm_leptogenesis_exact_common.py`
+- **auditor confidence:** high
+
+### `dm_leptogenesis_transport_integral_theorem_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_TRANSPORT_INTEGRAL_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_TRANSPORT_INTEGRAL_THEOREM_NOTE_2026-04-16.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** On normalized abundances, kappa_axiom[H] is defined by the direct Boltzmann transport solve and exact formal integral; on the E_H(z)=1 branch with K_H=47.23597962989828 it gives kappa_axiom=0.004829545290766509.  _(class `B`)_
+- **chain closes:** False — The direct solve/formal-integral agreement closes for the supplied exact_package K_H and constants, but those inputs are not derived from retained one-hop authorities here.
+- **rationale:** Issue: the theorem depends on supplied exact_package inputs, especially K_H, epsilon_1, and exact bookkeeping constants. Why this blocks: the runner verifies that the direct transport solve replaces kappa_fit on the specified reference branch, but it does not derive the branch, K_H, or package constants from retained inputs. Repair target: link retained source/projection/radiation dependencies or derive K_H and bookkeeping inside the runner before solving transport. Claim boundary until fixed: conditional direct-transport theorem for the supplied reference branch, not an audited theorem-native transport integral from primitives.
 - **open / conditional deps cited:**
   - `scripts/dm_leptogenesis_exact_common.py`
 - **auditor confidence:** high
