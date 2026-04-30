@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:29:18.213441+00:00
+**Generated:** 2026-04-30T01:29:57.800895+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 79 |
-| _proposed_retained_ | 5 |
+| **retained** | 80 |
+| _proposed_retained_ | 4 |
 | bounded | 205 |
 | support | 108 |
 | open | 24 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 79 |
+| `audited_clean` | 80 |
 | `audited_conditional` | 150 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1276 |
+| `unaudited` | 1275 |
 
 | criticality | count |
 |---|---:|
@@ -137,6 +137,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `growing_graph_static_control_audit_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `hadron_lane1_confinement_to_mass_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `hubble_lane5_two_gate_dependency_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -2344,6 +2345,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`
   - `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`
   - `MINIMAL_AXIOMS_2026-04-11.md`
+- **auditor confidence:** high
+
+### `hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28`
+
+- **Note:** [`HUBBLE_LANE5_C1_A4_PARITY_GATE_NO_GO_NOTE_2026-04-28.md`](../../docs/HUBBLE_LANE5_C1_A4_PARITY_GATE_NO_GO_NOTE_2026-04-28.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The parity-gate carrier theorem assumes P_A H_cell ≅ F(C^2) as input, and the bare Z2 parity structure has the same 2+2 signature for CAR, two-qubit spin, and ququart semantics, so it cannot force CAR.  _(class `A`)_
+- **chain closes:** True — The source quotes the relevant CAR-input assumption and the runner directly verifies that the parity Z2 data are not CAR-distinguishing. Within the stated A4 mechanism, the no-go follows without observed inputs or tuned parameters.
+- **rationale:** The runner constructs CAR, two-qubit spin, and ququart rank-four semantics, checks their shared 2+2 parity signature, verifies CAR anticommutation versus commuting spin behavior, and checks the half-zone Z2 partition. The source separately quotes the parity-gate theorem's CAR/Fock assumption, so the A4 route cannot derive the very CAR premise it requires. Residual risk is only scope drift: this clean verdict closes the A4 parity-gate route, not G1, G2, C1, or the need for A5/minimal-carrier analysis.
 - **auditor confidence:** high
 
 ### `hubble_lane5_two_gate_dependency_firewall_note_2026-04-27`

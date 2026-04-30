@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T01:29:17.970699+00:00",
-  "generated_at": "2026-04-30T01:29:16.100398+00:00",
-  "invalidation_run_at": "2026-04-30T01:29:17.898514+00:00",
+  "effective_status_computed_at": "2026-04-30T01:29:57.558808+00:00",
+  "generated_at": "2026-04-30T01:29:55.696245+00:00",
+  "invalidation_run_at": "2026-04-30T01:29:57.489311+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T01:29:17.754919+00:00",
+  "load_bearing_computed_at": "2026-04-30T01:29:57.343856+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -37609,14 +37609,21 @@
       "verdict_rationale": "Issue: the no-go's core rescaling algebra closes, but the stronger claim that the only on-package action-unit route is conditional on the Gauss-flux/Clifford-bridge/G1 chain is not established from registered one-hop authorities. Why this blocks: the audit packet can ratify the finite kappa-rescaling obstruction, but it cannot independently ratify the exclusivity of the source-unit route or the imported conditional bridge chain. Repair target: register the Target 3 phase-unit boundary, source-unit normalization support theorem, Clifford phase bridge, A1 no-go, g_bare authority, and A_min as dependencies, then make the runner verify their effective statuses and the precise implication chain. Claim boundary until fixed: safe as a conditional A2 obstruction showing g_bare=1 alone does not fix kappa; not safe as a fully retained no-go for every on-package action-unit closure route."
     },
     "hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T01:29:48.235258+00:00",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The source quotes the relevant CAR-input assumption and the runner directly verifies that the parity Z2 data are not CAR-distinguishing. Within the stated A4 mechanism, the no-go follows without observed inputs or tuned parameters.",
       "claim_id": "hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -37624,13 +37631,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The parity-gate carrier theorem assumes P_A H_cell \u2245 F(C^2) as input, and the bare Z2 parity structure has the same 2+2 signature for CAR, two-qubit spin, and ququart semantics, so it cannot force CAR.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "2d62f3319cf7f36bf1333f648d483390cc0aa476ba1e76598d193f68093c7c5d",
@@ -37638,16 +37645,16 @@
       "open_dependency_paths": [],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 19,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 19
       },
       "runner_path": "scripts/frontier_hubble_c1_a4_parity_gate_no_go.py",
       "title": "Lane 5 `(C1)` Gate \u2014 A4 Parity-Gate-from-A_min No-Go",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The runner constructs CAR, two-qubit spin, and ququart rank-four semantics, checks their shared 2+2 parity signature, verifies CAR anticommutation versus commuting spin behavior, and checks the half-zone Z2 partition. The source separately quotes the parity-gate theorem's CAR/Fock assumption, so the A4 route cannot derive the very CAR premise it requires. Residual risk is only scope drift: this clean verdict closes the A4 parity-gate route, not G1, G2, C1, or the need for A5/minimal-carrier analysis."
     },
     "hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28": {
       "audit_date": null,
