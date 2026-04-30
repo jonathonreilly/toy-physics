@@ -1,14 +1,15 @@
-# Neutrino Dirac Global Lift — Partial Theorem with Named Obstruction
+# Neutrino Dirac Global Lift — Bounded Conditional Theorem with Named Obstruction
 
 **Date:** 2026-04-28
-**Status:** support conditional theorem for Lane 4 gate isolation; no
-unconditional Dirac closure and no numerical neutrino-mass claim. Lifts the
-current-stack Majorana zero law (`mu_current = 0`) to a conditional global
-statement on the current framework content and identifies the **single
-load-bearing premise** that would make the lift unconditional: a **charge-2
+**Status:** bounded conditional theorem / Lane 4 no-go inventory entry; no
+unconditional Dirac closure, no retained global theorem, and no numerical
+neutrino-mass claim. Lifts the current-stack Majorana zero law
+(`mu_current = 0`) only under the named obstruction `(C2-X)`: a **charge-2
 primitive class exhaustion theorem** showing that no admissible framework
 extension can introduce a fermionic charge-`±2` carrier outside the current
-class.
+class. Per `docs/audit/AXIOM_MINIMALITY_POLICY.md`, `(C2-X)` must be closed
+from fixed `A_min`; it is not closed by amending axiom 3 or adding a new
+primitive axiom.
 **Lane:** 4 — Neutrino quantitative closure (route 4D)
 **Loop:** `neutrino-quantitative-20260428`
 
@@ -16,7 +17,7 @@ class.
 
 ## 0. Statement
 
-**Theorem (Conditional Dirac Global Lift).** Adopt:
+**Bounded conditional theorem (Dirac global lift under `(C2-X)`).** Adopt:
 
 - (P1) the retained current-stack Majorana zero law:
   `mu_current = 0` for the canonical one-generation Majorana block
@@ -131,10 +132,12 @@ openness:
 
 So (C2-X) is the explicit open obstruction.
 
-## 4. Candidate routes to retain (C2-X)
+## 4. No-go ledger for `(C2-X)`
 
-The lift becomes unconditional if (C2-X) is retained on the framework
-surface. Candidate routes:
+The bounded theorem stays conditional until `(C2-X)` is derived from fixed
+`A_min` or an explicit no-go boundary records why it cannot be derived. The
+new axiom-minimality policy rules out using an axiom-3 amendment or a new
+primitive axiom as the closing move.
 
 ### (R-X1) Anomaly-cancellation exhaustion
 
@@ -146,10 +149,9 @@ A direct proof that adding any charge-`±2` fermionic primitive to
 the retained content breaks anomaly cancellation would close (C2-X).
 
 **Route state:** the anomaly-cancellation work focuses on the
-SM matter content as already retained. An exhaustion direction
-("no admissible additional matter content has charge-`±2`") has
-not been articulated as a separate theorem. **Open structural
-target.**
+SM matter content as already retained. Cycle 3 falsifies this as a
+standalone closure route: a gauge-singlet `nu_R` Majorana mass passes the
+retained anomaly cancellations. **No-go for direct anomaly exhaustion.**
 
 ### (R-X2) Representation-theory constraint on `Cl(3)/Z^3` carriers
 
@@ -160,8 +162,8 @@ charge-`±2` representations are not realizable as primitives on
 this substrate would close (C2-X).
 
 **Route state:** not currently articulated. Would require an explicit
-representation classification on `Cl(3)/Z^3`'s admissible carrier
-class.
+representation classification on `Cl(3)/Z^3`'s admissible carrier class
+from fixed `A_min`.
 
 ### (R-X3) Finite-normal-grammar fermion-number `U(1)` rigidity
 
@@ -171,8 +173,10 @@ extension consistent with `Cl(3)` algebra **must preserve**
 fermion-number `U(1)` would extend (P3) globally and close (C2-X).
 
 **Route state:** the current normal-grammar finite-normal-grammar no-go
-gives the local result. A rigidity-style globalization is the
-natural extension. **Most direct candidate path.**
+gives the local result. Cycle 3 showed that a strict-axiom-3 shortcut
+would close the obstruction, but that shortcut is not available under the
+axiom-minimality policy. A rigidity-style derivation from fixed `A_min`
+remains a bounded residual.
 
 ### (R-X4) Schechter-Valle-side falsifier as empirical proxy
 
@@ -184,23 +188,43 @@ it sharpens the conditional theorem's empirical falsifier.
 **Route state:** experimental program; not a Lane-4-internal closure
 route.
 
+### (SR-1) Lorentz-onset incompatibility
+
+Candidate attack frame: show that any nonzero Pfaffian pairing `S` breaks
+the retained emergent-Lorentz dimension-6 onset, for example by introducing
+a lattice-level preferred frame. **Not closed here.**
+
+### (SR-2) Continuum-limit scalar 2-point incompatibility
+
+Candidate attack frame: show that the retained continuum-limit scalar
+2-point closure forces every admissible Pfaffian pairing to be trivial.
+The later SR-2 boundary note records this route as blocked on the current
+surface without a new typed coupling theorem. **Bounded no-go route.**
+
+### (SR-3) Stronger SM anomaly cluster forcing bilinear matter
+
+Candidate attack frame: sharpen the SM anomaly cluster so that admissible
+matter content is forced to remain bilinear-canonical. Cycle 3 already
+blocks direct anomaly exhaustion; this remains only a stronger future
+attack frame. **Not closed here.**
+
 ## 5. What this theorem closes and does not close
 
 **Closes (this cycle):**
 
-- A sharp **conditional Dirac global lift** on the retained content
+- A bounded **conditional Dirac global lift** on the retained content
   + (C2-X).
 - An explicit identification of (C2-X) as the load-bearing premise.
-- Four candidate retention routes for (C2-X), with (R-X3) flagged
-  as the most direct.
+- A no-go ledger for (C2-X), including the falsified direct anomaly
+  route and the named SR-1 / SR-2 / SR-3 attack frames.
 - Mirror of the hubble-h0 `(C1)` and `(C2)` gate-isolation pattern:
   a single residual premise named on a primitive algebraic block.
 
 **Does not close:**
 
 - The unconditional global lift. (C2-X) remains an open premise.
-- (R-X1), (R-X2), (R-X3), (R-X4). All four are hypothetical routes;
-  none is currently active as a Lane-4-internal cycle.
+- (R-X2), (R-X3), (R-X4), (SR-1), (SR-2), and (SR-3). All are
+  residual routes or bounded attack frames, not current closure.
 - Any neutrino mass numerically.
 
 ## 6. Falsifier (operational, conditional)
@@ -227,12 +251,12 @@ Before this cycle, Lane 4 was framed with seven derivation targets
 (Dirac vs Majorana global lift) was the cleanest Phase-1 candidate.
 
 After this cycle, target 4D reduces to a single open premise (C2-X)
-plus four candidate retention routes. The cycle output is:
+plus a bounded no-go ledger of candidate attack frames. The cycle output is:
 
-- the conditional theorem (support structure;
-  unconditional under (C2-X));
+- the bounded conditional theorem (conditional on deriving `(C2-X)`);
 - the named obstruction (C2-X);
-- the candidate routes (R-X1, R-X2, R-X3, R-X4).
+- the no-go ledger and candidate routes (R-X1, R-X2, R-X3, R-X4,
+  SR-1, SR-2, SR-3).
 
 Cycle 3 candidate per Deep Work Rules: **stretch attempt on the
 audit-quota counter trigger.** With Cycles 1 and 2 both closing as
@@ -261,11 +285,11 @@ the most direct attack.
 
 ## 9. Boundary
 
-This is a **conditional structural theorem** on a support/open Lane 4
-surface. It does not promote any input to retired status, does not retain any
+This is a **bounded conditional structural theorem** on an open Lane 4
+surface. It does not promote any input to retained status, does not retain any
 neutrino mass numerically, and does not unconditionally close 4D.
 It produces the conditional lift + the named obstruction (C2-X) +
-candidate routes for retaining (C2-X).
+a no-go ledger for the candidate attack frames.
 
 A runner is not authored: the proof is structural case-analysis on
 the retained Majorana cluster + the named open premise. No new
