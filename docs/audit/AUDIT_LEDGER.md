@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:57:03.382634+00:00
+**Generated:** 2026-04-30T02:58:02.681597+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 201 |
 | support | 101 |
 | open | 24 |
-| unknown | 504 |
+| unknown | 503 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 394 |
+| ~~audited_conditional~~ | 395 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 177 |
+| `audited_conditional` | 178 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1239 |
+| `unaudited` | 1238 |
 
 | criticality | count |
 |---|---:|
@@ -268,6 +268,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_brannen_geometry_dirac_support_note_2026-04-22` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `koide_explicit_calculations_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `koide_full_lattice_schur_inheritance_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
 | `koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -2956,6 +2957,22 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `scripts/frontier_koide_pointed_origin_exhaustion_theorem.py_not_registered_runner_dependency`
   - `scripts/frontier_koide_hostile_review_guard.py_not_registered_runner_dependency`
   - `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py_not_registered_runner_dependency`
+- **auditor confidence:** high
+
+### `koide_explicit_calculations_note`
+
+- **Note:** [`KOIDE_EXPLICIT_CALCULATIONS_NOTE.md`](../../docs/KOIDE_EXPLICIT_CALCULATIONS_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The note replaces citation-only support for |eta_AS(Z3,(1,2))|=2/9 and C_tau=1 with executed Lefschetz/Berry calculations, gauge-by-gauge Yukawa Casimir enumeration, and retained BZ/radian support cross-checks.  _(class `C`)_
+- **chain closes:** False — The explicit support calculations pass, but they remain support for cited components and do not derive the physical Brannen-phase bridge, the Q=2/3 source-law bridge, or the charged-lepton scale bridge.
+- **rationale:** Issue: the row executes useful support calculations but does not close the physical observables it supports. Why this blocks: the runners verify eta=2/9 arithmetic, C_tau=1, BZ machinery, and numerical Brannen convention support; the note explicitly leaves delta_physical=eta_APS, the Q source-law, and the overall scale bridge open. Repair target: add retained physical bridge theorems connecting these explicit calculations to the charged-lepton selected-line phase/source law/scale, with dependencies recorded. Claim boundary until fixed: citation-replacement support calculations for eta, Casimir, and BZ/radian checks, not theorem-grade Koide or charged-lepton closure.
+- **open / conditional deps cited:**
+  - `YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`
+  - `KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
+  - `KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md`
 - **auditor confidence:** high
 
 ### `koide_full_lattice_schur_inheritance_note_2026-04-18`
