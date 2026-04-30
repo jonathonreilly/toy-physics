@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 41,
-    "high": 257,
+    "high": 256,
     "leaf": 608,
     "medium": 340
   },
-  "generated_at": "2026-04-30T02:51:00.929855+00:00",
+  "generated_at": "2026-04-30T02:51:57.658691+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1165,25 +1165,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 31
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "yt_exact_schur_normal_form_uniqueness_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "yt_exact_coarse_grained_bridge_operator_note"
-      ],
-      "direct_in_degree": 10,
-      "load_bearing_score": 11.022,
-      "note_path": "docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_yt_exact_schur_normal_form_uniqueness.py",
-      "transitive_descendants": 64
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -26110,6 +26091,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 804,
-  "total_pending": 1246
+  "ready_count": 803,
+  "total_pending": 1245
 }
