@@ -18,11 +18,15 @@ forbidden_imports:
   - "continuum-QFT axioms (Wightman, OS) imported as primitive"
 science_branch: physics-loop/axiom-first-foundations-block01-20260429
 based_on: origin/main (37329240)
-cycle: 0
+cycle: 1
 block: 1
-active_route: null
-hard_residuals_attacked: []
-files_touched: []
+active_route: R2 (reflection positivity) — about to start
+hard_residuals_attacked:
+  - "spin-statistics on Cl(3) staggered surface (Cycle 1 / R1 — closed branch-local)"
+files_touched:
+  - "docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md"
+  - "scripts/axiom_first_spin_statistics_check.py"
+  - "outputs/axiom_first_spin_statistics_check_2026-04-29.txt"
 open_imports_at_start:
   - "spin-statistics on Cl(3) Grassmann lattice (used implicitly across DM/leptogenesis, Yukawa lanes)"
   - "reflection positivity for canonical staggered-Dirac action (used implicitly for Hilbert reconstruction)"
@@ -31,7 +35,7 @@ open_imports_at_start:
 no_go_routes_in_session: []
 review_findings: []
 pr_status: not-yet-pushed
-next_exact_action: "Begin Cycle 1 (Route R1: spin-statistics theorem)"
+next_exact_action: "Begin Cycle 2 (Route R2: reflection positivity for canonical staggered + Wilson plaquette action)"
 stop_condition: |
   12h budget exhausted, OR the three planned cycles plus a stretch attempt have
   produced reviewable artifacts AND the science branch is pushed with one PR
