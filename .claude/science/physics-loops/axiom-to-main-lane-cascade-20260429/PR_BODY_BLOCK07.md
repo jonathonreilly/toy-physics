@@ -1,23 +1,25 @@
-# [physics-loop] axiom-to-main-lane-cascade block 07: PMNS three-identity Q_Koide-from-V8 support lift (proposed_promoted, stacked on Block 1)
+# [physics-loop] axiom-to-main-lane-cascade block 07: PMNS three-identity Q_Koide-from-V8 support lift
 
 ## Summary
 
-Block 7 composes V8 (Block 1, Q_Koide = 2/3 on A_min) with the
-PMNS three-identity selector support package (2026-04-21). The PMNS
-chart constant Q_Koide = 2/3 lifts from "imported numeric value" to
-"V8-derived structural value on A_min", retiring one chart-side import.
+Block 7 composes V8 (Block 1, now support/audit-pending on main for
+Q_Koide = 2/3 on A_min) with the PMNS three-identity selector support
+package (2026-04-21). The PMNS chart constant Q_Koide = 2/3 lifts from
+"imported numeric value" to "V8-derived structural value on A_min",
+retiring one chart-side import at support tier.
 
 The three open gaps in the PMNS support proposal (proposed selector
 laws, basin uniqueness, broader PMNS/DM gate) are unchanged.
 
 ## Stacking note
 
-Stacked on `physics-loop/axiom-to-main-lane-cascade-20260429-block01-20260429`
-(PR #183). Block 1's audit ratification is prerequisite.
+Depends on merged Block 1 (PR #183). V8 is current on main as support
+and audit-pending; Block 1's audit ratification is prerequisite for any
+stronger tier.
 
 ## Status (per skill firewall fields)
 
-- `actual_current_surface_status: proposed_promoted` (support-grade lift)
+- `actual_current_surface_status: support`
 - `proposal_allowed: true`
 - `audit_required_before_effective_retained: true`
 - `bare_retained_allowed: false`
@@ -28,7 +30,7 @@ Stacked on `physics-loop/axiom-to-main-lane-cascade-20260429-block01-20260429`
 ## Composed chart
 
 ```text
-V8 (Block 1):    Q_Koide = 2/3 on A_min (proposed_retained)
+V8 (Block 1):    Q_Koide = 2/3 on A_min (support/audit-pending)
                  ⇒ chart constant Q_Koide V8-derived
                  ⇒ SELECTOR = √Q_Koide = √6/3 V8-derived
 
@@ -45,7 +47,7 @@ PMNS chart:      Tr(H) = Q_Koide      (retained chart identity)
 
 ## What is and is NOT closed
 
-### Closed
+### Support-tier lift recorded
 1. PMNS chart constant Q_Koide is now V8-derived (one import retired)
 2. SELECTOR = √Q_Koide = √6/3 also V8-derived
 3. PMNS three-identity numerical solution structurally V8-supported

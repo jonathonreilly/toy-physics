@@ -34,8 +34,8 @@ def main() -> int:
     print("=" * 72)
 
     v8 = read_doc("KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md")
-    audit("V8 (Block 1) note exists with proposed_retained Q closure",
-          "actual_current_surface_status: proposed_retained" in v8 and "Q = 2/3" in v8,
+    audit("V8 (Block 1) note exists with support Q record",
+          "actual_current_surface_status: support" in v8 and "Q = 2/3" in v8,
           "Block 1 prerequisite")
 
     pmns = read_doc("PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md")
@@ -62,8 +62,8 @@ def main() -> int:
           f"SELECTOR² = {SELECTOR_derived ** 2:.6f} = Q_Koide = {Q_Koide_V8:.6f}")
 
     own = read_doc("PMNS_THREE_IDENTITY_Q_KOIDE_FROM_V8_SUPPORT_LIFT_THEOREM_NOTE_2026-04-29.md")
-    audit("V1 actual_current_surface_status: proposed_promoted",
-          "actual_current_surface_status: proposed_promoted" in own, "support-grade lift")
+    audit("V1 actual_current_surface_status: support",
+          "actual_current_surface_status: support" in own, "support-grade lift")
     audit("V1 audit_required_before_effective_retained: true",
           "audit_required_before_effective_retained: true" in own, "firewall")
     audit("V1 bare_retained_allowed: false",

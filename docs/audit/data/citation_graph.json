@@ -6393,6 +6393,14 @@
       "to": "pmns_c3_character_holonomy_closure_note"
     },
     {
+      "from": "pmns_three_identity_q_koide_from_v8_support_lift_theorem_note_2026-04-29",
+      "to": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29"
+    },
+    {
+      "from": "pmns_three_identity_q_koide_from_v8_support_lift_theorem_note_2026-04-29",
+      "to": "pmns_selector_three_identity_support_note_2026-04-21"
+    },
+    {
       "from": "proton_lifetime_derived_note",
       "to": "bminusl_anomaly_freedom_theorem_note_2026-04-24"
     },
@@ -18293,7 +18301,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T11:29:30.055506+00:00",
+  "generated_at": "2026-04-30T11:33:38.119036+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32032,6 +32040,19 @@
       "runner_path": "scripts/frontier_pmns_three_flux_holonomy_closure.py",
       "title": "PMNS Three-Flux Holonomy Closure"
     },
+    "pmns_three_identity_q_koide_from_v8_support_lift_theorem_note_2026-04-29": {
+      "claim_id": "pmns_three_identity_q_koide_from_v8_support_lift_theorem_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support: V8-derived chart-constant lift, conditional on V8 (Block 1) ratification; PMNS selector laws and broader gate remain open.",
+      "deps": [
+        "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29",
+        "pmns_selector_three_identity_support_note_2026-04-21"
+      ],
+      "note_hash": "5a65b36033380666947477a9d97e20d9eb2bb8e29a0df9a3d610ca66869a5383",
+      "path": "docs/PMNS_THREE_IDENTITY_Q_KOIDE_FROM_V8_SUPPORT_LIFT_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_pmns_three_identity_q_koide_from_v8_support_lift.py",
+      "title": "PMNS Three-Identity Q_Koide-from-V8 Support Lift Theorem (V1)"
+    },
     "pmns_transfer_operator_dominant_mode_note": {
       "claim_id": "pmns_transfer_operator_dominant_mode_note",
       "current_status": "unknown",
@@ -41276,17 +41297,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4573,
+    "edge_count": 4575,
     "leaf_count": 736,
-    "node_count": 1673,
+    "node_count": 1674,
     "root_count": 1203,
-    "runners_with_path": 757,
+    "runners_with_path": 758,
     "status_counts": {
       "bounded": 253,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 175,
+      "support": 176,
       "unknown": 796
     }
   }
