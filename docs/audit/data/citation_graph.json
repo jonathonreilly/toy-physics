@@ -4773,6 +4773,30 @@
       "to": "koide_dweh_cyclic_compression_note_2026-04-18"
     },
     {
+      "from": "koide_delta_dimensionless_closure_via_v8_theorem_note_2026-04-29",
+      "to": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29"
+    },
+    {
+      "from": "koide_delta_dimensionless_closure_via_v8_theorem_note_2026-04-29",
+      "to": "koide_brannen_phase_reduction_theorem_note_2026-04-20"
+    },
+    {
+      "from": "koide_delta_dimensionless_closure_via_v8_theorem_note_2026-04-29",
+      "to": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25"
+    },
+    {
+      "from": "koide_delta_dimensionless_closure_via_v8_theorem_note_2026-04-29",
+      "to": "koide_q_delta_linking_relation_theorem_note_2026-04-20"
+    },
+    {
+      "from": "koide_delta_dimensionless_closure_via_v8_theorem_note_2026-04-29",
+      "to": "koide_q_eq_3delta_identity_note_2026-04-21"
+    },
+    {
+      "from": "koide_delta_dimensionless_closure_via_v8_theorem_note_2026-04-29",
+      "to": "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20"
+    },
+    {
       "from": "koide_full_lattice_schur_inheritance_note_2026-04-18",
       "to": "site_phase_cube_shift_intertwiner_note"
     },
@@ -18409,7 +18433,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T13:45:07.909058+00:00",
+  "generated_at": "2026-04-30T13:47:45.239671+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -28052,6 +28076,23 @@
       "path": "docs/KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_cyclic_wilson_descendant_law.py",
       "title": "Koide Cyclic Wilson-Descendant Law"
+    },
+    "koide_delta_dimensionless_closure_via_v8_theorem_note_2026-04-29": {
+      "claim_id": "koide_delta_dimensionless_closure_via_v8_theorem_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support: dimensionless \u03b4=2/9 composition, conditional on V8 (Block 1) ratification and radian-bridge postulate P.",
+      "deps": [
+        "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29",
+        "koide_brannen_phase_reduction_theorem_note_2026-04-20",
+        "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
+        "koide_q_delta_linking_relation_theorem_note_2026-04-20",
+        "koide_q_eq_3delta_identity_note_2026-04-21",
+        "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20"
+      ],
+      "note_hash": "09e2529ba1c333e3495b3ce8b1970bf73b6a6006cce7644e8f49a7b17163dc6f",
+      "path": "docs/KOIDE_DELTA_DIMENSIONLESS_CLOSURE_VIA_V8_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_koide_delta_dimensionless_closure_via_v8.py",
+      "title": "Koide \u03b4 Dimensionless Closure via V8 Theorem (V1)"
     },
     "koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24": {
       "claim_id": "koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24",
@@ -41630,17 +41671,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4602,
-    "leaf_count": 753,
-    "node_count": 1692,
+    "edge_count": 4608,
+    "leaf_count": 752,
+    "node_count": 1693,
     "root_count": 1216,
-    "runners_with_path": 776,
+    "runners_with_path": 777,
     "status_counts": {
       "bounded": 258,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 189,
+      "support": 190,
       "unknown": 796
     }
   }
