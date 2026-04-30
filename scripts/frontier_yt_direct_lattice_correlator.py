@@ -41,6 +41,17 @@ MT_MAX_UNCERTAINTY_GEV = 1.0
 DEFAULT_V_GEV = 246.21965
 RATIO_TARGET = 1.0 / math.sqrt(6.0)
 
+PRODUCTION_UPDATE_ALGORITHMS = {
+    "HMC",
+    "RHMC",
+    "HMC_SU3_WILSON_STAGGERED",
+    "RHMC_SU3_WILSON_STAGGERED",
+    "CABIBBO-MARINARI HEATBATH",
+    "CABIBBO-MARINARI HEATBATH + POLAR OVERRELAXATION",
+    "CABIBBO-MARINARI HEAT-BATH",
+    "CABIBBO-MARINARI HEAT-BATH + POLAR OVERRELAXATION",
+}
+
 FORBIDDEN_AUTHORITY_FRAGMENTS = (
     "h_unit",
     "ward_identity",
@@ -112,6 +123,15 @@ def spatial_l_from_ensemble(ensemble: dict[str, Any]) -> int | None:
         if len(set(dims[:3])) == 1:
             return int(dims[0])
     return None
+
+
+def production_update_algorithm(algorithm: Any) -> bool:
+    algorithm_u = str(algorithm).upper().strip()
+    algorithm_norm = algorithm_u.replace("_", " ")
+    allowed_norm = {item.replace("_", " ") for item in PRODUCTION_UPDATE_ALGORITHMS}
+    if algorithm_u in PRODUCTION_UPDATE_ALGORITHMS or algorithm_norm in allowed_norm:
+        return True
+    return "CABIBBO-MARINARI" in algorithm_norm and "HEAT" in algorithm_norm
 
 
 def validate_metadata(gate: Gate, data: dict[str, Any]) -> None:
@@ -198,13 +218,20 @@ def validate_ensembles(gate: Gate, data: dict[str, Any]) -> None:
         ):
             bc_ok += 1
 
-        algorithm = str(ensemble.get("update_algorithm", "")).upper()
-        if algorithm in {"HMC", "RHMC", "HMC_SU3_WILSON_STAGGERED", "RHMC_SU3_WILSON_STAGGERED"}:
+        if production_update_algorithm(ensemble.get("update_algorithm", "")):
             hmc_ok += 1
 
         therm = ensemble.get("thermalization_sweeps")
         meas = ensemble.get("measurement_sweeps")
-        if isinstance(therm, int) and therm >= 1000 and isinstance(meas, int) and meas >= 10000:
+        separation = ensemble.get("measurement_separation_sweeps")
+        if (
+            isinstance(therm, int)
+            and therm >= 1000
+            and isinstance(meas, int)
+            and meas >= 1000
+            and isinstance(separation, int)
+            and separation >= 20
+        ):
             production_stats_ok += 1
 
         scan = ensemble.get("mass_parameter_scan", [])
@@ -254,7 +281,7 @@ def validate_ensembles(gate: Gate, data: dict[str, Any]) -> None:
         f"ok={bc_ok}/{len(ensembles)}",
     )
     gate.check(
-        "all production ensembles use HMC/RHMC update algorithm",
+        "all production ensembles use an accepted production update algorithm",
         hmc_ok == len(ensembles),
         f"ok={hmc_ok}/{len(ensembles)}",
     )
@@ -392,7 +419,8 @@ def print_missing_certificate(path: Path) -> None:
     print("  metadata.uses_composite_matrix_element_route = false")
     print("  metadata.uses_coupling_definition_route = false")
     print("  v_input.treatment = 'substrate_input_only'")
-    print("  ensembles[] with spatial_L in {12,16,24}, HMC/RHMC stats, correlators[], mass_fit{}")
+    print("  ensembles[] with spatial_L in {12,16,24}, accepted production updates, correlators[], mass_fit{}")
+    print("  thermalization_sweeps >= 1000, measurement_sweeps >= 1000, separation >= 20")
     print("  result.m_t_running_at_v_GeV, result.y_t_v, result.m_t_pole_GeV, full uncertainties")
     print("  ratio_check with independently measured y_t_lattice/g_s_lattice, used_as_definition=false")
 

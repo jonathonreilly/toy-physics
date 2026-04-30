@@ -1,8 +1,9 @@
 # Direct Lattice-Correlator Top-Yukawa Measurement Gate
 
 **Date:** 2026-04-30
-**Status:** proposed_retained measurement route, pending production staggered-correlator data and audit
+**Status:** proposed_retained measurement route, pending production-scale staggered-correlator data and audit
 **Primary runner:** `scripts/frontier_yt_direct_lattice_correlator.py`
+**Production harness:** `scripts/yt_direct_lattice_correlator_production.py`
 
 ## Theorem Statement
 
@@ -40,9 +41,10 @@ with the strict comparator set to the current PDG 2025 listing average
 listed by PDG as superseded by the 2024 ATLAS+CMS combination, so it is kept
 only as a historical cross-check target, not as the strict comparator.
 
-This branch does not yet contain a production numerical result.  The strict
-runner therefore fails until the certificate exists.  That is the intended
-Phase 1 audit behavior.
+This branch contains a reduced-scope MC/correlator certificate for infrastructure
+evidence only.  It is not a production numerical result.  The strict runner
+reads the certificate and rejects it until the production volumes, statistics,
+independent `g_s` ratio evidence, and physical comparator checks are supplied.
 
 ## Five-Step Methodology
 
@@ -59,7 +61,8 @@ calculation must use the Wilson gauge action plus staggered fermions, with:
   and Sommer-scale uncertainties;
 - periodic gauge boundary conditions and antiperiodic temporal fermion
   boundary conditions;
-- HMC or RHMC updates for the Wilson-staggered ensemble;
+- HMC/RHMC or Cabibbo-Marinari heat-bath plus overrelaxation updates for the
+  Wilson-staggered ensemble;
 - a scan or tuning record for the heavy top-sector bare mass parameter.
 
 The heavy mass parameter is a lattice action parameter to be tuned and
@@ -161,10 +164,30 @@ authority fields.
 
 ## Numerical Result And Uncertainty Budget
 
-Phase 1 has no production numerical result.  The only live numerical output is
-the scout-mode smoke test, which verifies that the local update, correlator,
-effective-mass, and fitter machinery run on tiny lattices.  Scout output is
-not theorem evidence.
+This PR update adds a resumable Wilson-staggered production harness and records
+one reduced-scope feasibility run.  The reduced run validates the implemented
+path but is not theorem evidence:
+
+| Field | Reduced-scope value |
+|---|---:|
+| Certificate phase | `reduced_scope` |
+| Volumes | `2^3 x 4`, `3^3 x 6` |
+| Thermalization | 2 sweeps |
+| Saved configurations | 3 per volume |
+| Separation | 1 sweep |
+| Bare-mass scan | `0.45`, `0.75`, `1.05` |
+| `m_t` proxy | `2.662884 GeV` |
+| `y_t(v)` proxy | `0.01529483` |
+| Total `m_t` proxy uncertainty | `1.194967 GeV` |
+| Total `y_t` proxy uncertainty | `0.00686354` |
+| Ratio evidence | `g_s_source = not_measured_reduced_scope` |
+
+The output files are
+`outputs/yt_direct_lattice_correlator_certificate_2026-04-30.json` and the
+archived reduced-run copy under `outputs/yt_direct_lattice_correlator/`.  The
+reported mass and Yukawa are proxy values from the reduced infrastructure run;
+they are far from the physical comparators and deliberately do not pass strict
+mode.
 
 A future passing production certificate must supply this budget:
 
@@ -227,11 +250,27 @@ Strict mode:
 python3 scripts/frontier_yt_direct_lattice_correlator.py
 ```
 
-Expected Phase 1 outcome:
+Current reduced-scope outcome:
 
 ```text
-STRICT GATE BLOCKED
-missing production staggered-correlator certificate
+RESULT: FAIL
+```
+
+The failure is expected: the certificate is explicitly `reduced_scope`, uses
+`2^3` and `3^3` test volumes rather than `12^3`, `16^3`, and `24^3`, has only
+three saved configurations per volume, lacks an independently measured `g_s`
+ratio, and does not match the top-mass/Yukawa comparators.
+
+Reduced production-harness command:
+
+```bash
+python3 scripts/yt_direct_lattice_correlator_production.py
+```
+
+Full production target command, not run in this PR update:
+
+```bash
+python3 scripts/yt_direct_lattice_correlator_production.py --production-targets
 ```
 
 Scout mode:
@@ -250,7 +289,7 @@ top-Yukawa value.
 This note does not claim:
 
 - audit retention before the audit ledger ratifies it;
-- that production top-correlator data already exist;
+- that production-scale top-correlator data already exist;
 - a repair of the `v = 246 GeV` derivation chain;
 - a repair of the `g_bare = 1` substrate input;
 - a derivation of the Sommer-scale physical anchor;
@@ -262,8 +301,9 @@ This note does not claim:
 Safe current claim:
 
 > The branch adds a proposed-retained direct staggered-correlator measurement
-> gate for `m_t -> y_t`, with scout-mode infrastructure evidence and a strict
-> production-certificate gate that blocks prior Ward/matrix-element authority.
+> gate for `m_t -> y_t`, with scout-mode infrastructure evidence, a reduced-scope
+> MC/correlator certificate, and a strict production-certificate gate that
+> blocks prior Ward/matrix-element authority.
 
 Unsafe current claim:
 

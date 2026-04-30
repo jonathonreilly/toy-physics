@@ -1,0 +1,283 @@
+{
+  "ensembles": [
+    {
+      "a_fm": 0.0931098696461825,
+      "ape_smearing": {
+        "alpha": 0.5,
+        "steps": 1
+      },
+      "boundary_conditions": {
+        "fermion_time": "antiperiodic",
+        "gauge_spatial": "periodic",
+        "gauge_time": "periodic"
+      },
+      "correlators": [
+        {
+          "mean": 0.5814555116288339,
+          "stderr": 0.04568069198453346,
+          "tau": 0
+        },
+        {
+          "mean": 0.09142511885841216,
+          "stderr": 0.011914052316199342,
+          "tau": 1
+        },
+        {
+          "mean": 0.034764451789258514,
+          "stderr": 0.007486014439278274,
+          "tau": 2
+        },
+        {
+          "mean": 0.08629059668073728,
+          "stderr": 0.015956752127797274,
+          "tau": 3
+        }
+      ],
+      "dims": [
+        2,
+        2,
+        2,
+        4
+      ],
+      "effective_mass": [
+        {
+          "m_eff": 1.850014198705417,
+          "tau": 0
+        },
+        {
+          "m_eff": 0.9669248997145133,
+          "tau": 1
+        },
+        {
+          "m_eff": -0.9091252669422112,
+          "tau": 2
+        }
+      ],
+      "mass_fit": {
+        "chi2_dof": 4.350883444688275e-28,
+        "m_lat": 0.9669248997145168,
+        "m_lat_err": 0.25169677395021284,
+        "tau_max": 2,
+        "tau_min": 1
+      },
+      "mass_parameter_scan": [
+        {
+          "chi2_dof": 3.6397862765294977e-28,
+          "m_bare_lat": 0.45,
+          "m_fit_lat": 0.5961375995431162,
+          "m_fit_lat_err": 0.29756053105331826,
+          "max_cg_residual": 9.710109437049622e-09
+        },
+        {
+          "chi2_dof": 4.350883444688275e-28,
+          "m_bare_lat": 0.75,
+          "m_fit_lat": 0.9669248997145168,
+          "m_fit_lat_err": 0.25169677395021284,
+          "max_cg_residual": 9.467385492796809e-09
+        },
+        {
+          "chi2_dof": 4.614259929983983e-28,
+          "m_bare_lat": 1.05,
+          "m_fit_lat": 1.2915022006934436,
+          "m_fit_lat_err": 0.20247872850585769,
+          "max_cg_residual": 9.978219874146891e-09
+        }
+      ],
+      "measurement_separation_sweeps": 1,
+      "measurement_sweeps": 3,
+      "plaquette_history": [
+        0.6740894042786906,
+        0.5697092641807356
+      ],
+      "plaquette_mean": 0.37155663970379016,
+      "plaquette_measurements": [
+        0.4745834912916971,
+        0.41602725940596685,
+        0.22405916841370652
+      ],
+      "r0_over_a": 5.37,
+      "runtime_seconds": 0.21972203254699707,
+      "selected_mass_parameter": 0.75,
+      "spatial_L": 2,
+      "thermalization_sweeps": 2,
+      "time_L": 4,
+      "update_algorithm": "Cabibbo-Marinari heatbath + polar overrelaxation"
+    },
+    {
+      "a_fm": 0.0931098696461825,
+      "ape_smearing": {
+        "alpha": 0.5,
+        "steps": 1
+      },
+      "boundary_conditions": {
+        "fermion_time": "antiperiodic",
+        "gauge_spatial": "periodic",
+        "gauge_time": "periodic"
+      },
+      "correlators": [
+        {
+          "mean": 0.4803187366053517,
+          "stderr": 0.02145267782100291,
+          "tau": 0
+        },
+        {
+          "mean": 0.07224105415606515,
+          "stderr": 0.002054854300841418,
+          "tau": 1
+        },
+        {
+          "mean": 0.01060320191074649,
+          "stderr": 0.0005155622874374477,
+          "tau": 2
+        },
+        {
+          "mean": 0.0036625214706119797,
+          "stderr": 0.0001811851591764444,
+          "tau": 3
+        },
+        {
+          "mean": 0.01078558717114921,
+          "stderr": 0.00029801141945904805,
+          "tau": 4
+        },
+        {
+          "mean": 0.07057974482066041,
+          "stderr": 0.0031404644926823003,
+          "tau": 5
+        }
+      ],
+      "dims": [
+        3,
+        3,
+        3,
+        6
+      ],
+      "effective_mass": [
+        {
+          "m_eff": 1.8944414167056611,
+          "tau": 0
+        },
+        {
+          "m_eff": 1.9188524788608279,
+          "tau": 1
+        },
+        {
+          "m_eff": 1.0630041859473736,
+          "tau": 2
+        },
+        {
+          "m_eff": -1.080058885064715,
+          "tau": 3
+        },
+        {
+          "m_eff": -1.878532481104288,
+          "tau": 4
+        }
+      ],
+      "mass_fit": {
+        "chi2_dof": 57.615149323533174,
+        "m_lat": 1.5460696889987116,
+        "m_lat_err": 0.02759201128491956,
+        "tau_max": 3,
+        "tau_min": 1
+      },
+      "mass_parameter_scan": [
+        {
+          "chi2_dof": 18.35130788175139,
+          "m_bare_lat": 0.45,
+          "m_fit_lat": 1.0358552942755654,
+          "m_fit_lat_err": 0.03945878782604073,
+          "max_cg_residual": 9.876286738898597e-09
+        },
+        {
+          "chi2_dof": 57.615149323533174,
+          "m_bare_lat": 0.75,
+          "m_fit_lat": 1.5460696889987116,
+          "m_fit_lat_err": 0.02759201128491956,
+          "max_cg_residual": 8.743296927962915e-09
+        },
+        {
+          "chi2_dof": 88.05641752108191,
+          "m_bare_lat": 1.05,
+          "m_fit_lat": 2.0488266623880627,
+          "m_fit_lat_err": 0.024759886520719244,
+          "max_cg_residual": 9.877081248601228e-09
+        }
+      ],
+      "measurement_separation_sweeps": 1,
+      "measurement_sweeps": 3,
+      "plaquette_history": [
+        0.6673829041633813,
+        0.5466344855549735
+      ],
+      "plaquette_mean": 0.3123800773623545,
+      "plaquette_measurements": [
+        0.46885525535391775,
+        0.3169322814838428,
+        0.15135269524930306
+      ],
+      "r0_over_a": 5.37,
+      "runtime_seconds": 1.2621440887451172,
+      "selected_mass_parameter": 0.75,
+      "spatial_L": 3,
+      "thermalization_sweeps": 2,
+      "time_L": 6,
+      "update_algorithm": "Cabibbo-Marinari heatbath + polar overrelaxation"
+    }
+  ],
+  "metadata": {
+    "action": "Cl3Z3_SU3_Wilson_staggered",
+    "authority": "staggered_top_correlator_mass_extraction",
+    "created_utc": "2026-04-30T21:01:03Z",
+    "evidence_scope": "reduced run is infrastructure evidence only",
+    "g_bare": 1.0,
+    "phase": "reduced_scope",
+    "running_bridge": "reduced run uses no authoritative SM RGE; production certificate must supply 4/5-loop bridge",
+    "scale_anchor": "Sommer r0 = 0.5 fm external anchor; r0/a reference used for reduced run",
+    "uses_composite_matrix_element_route": false,
+    "uses_coupling_definition_route": false,
+    "uses_prior_ward_chain": false
+  },
+  "ratio_check": {
+    "g_s_lattice": 1.0,
+    "g_s_source": "not_measured_reduced_scope",
+    "ratio": 0.015294828000934716,
+    "uncertainty": 0.006863541849703395,
+    "used_as_definition": false,
+    "y_t_lattice": 0.015294828000934716
+  },
+  "result": {
+    "m_t_pole_GeV": 2.662884374323965,
+    "m_t_running_at_v_GeV": 2.662884374323965,
+    "mass_uncertainties_GeV": {
+      "finite_spacing": 0.5325768748647931,
+      "finite_volume": 0.8678864479399504,
+      "heavy_mass_tuning": 0.39943265614859474,
+      "matching": 0.26628843743239655,
+      "running_bridge": 0.26628843743239655,
+      "scale_setting": 0.13314421871619828,
+      "statistical": 0.2683072451207843,
+      "v_input": 0.0001
+    },
+    "reduced_scope_delta_to_pdg_GeV": -169.89711562567604,
+    "reduced_scope_delta_to_y_t_target": -0.9017051719990653,
+    "total_m_t_pole_uncertainty_GeV": 1.1949672361779302,
+    "total_y_t_uncertainty": 0.006863541849703395,
+    "uncertainties": {
+      "finite_spacing": 0.003058965600186944,
+      "finite_volume": 0.004984885590067604,
+      "heavy_mass_tuning": 0.0022942242001402074,
+      "matching": 0.001529482800093472,
+      "running_bridge": 0.001529482800093472,
+      "scale_setting": 0.000764741400046736,
+      "statistical": 0.001541078240232961,
+      "v_input": 5.743707142679697e-07
+    },
+    "y_t_v": 0.015294828000934716
+  },
+  "v_input": {
+    "source": "existing electroweak VEV chain",
+    "treatment": "substrate_input_only",
+    "v_GeV": 246.21965
+  }
+}
