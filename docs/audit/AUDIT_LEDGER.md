@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:28:31.663281+00:00
+**Generated:** 2026-04-30T19:28:38.042770+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,12 +33,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 182 |
-| `audited_conditional` | 404 |
+| `audited_conditional` | 405 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 888 |
+| `unaudited` | 887 |
 
 | criticality | count |
 |---|---:|
@@ -513,6 +513,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_distinct_shell_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_note_2026-04-20` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -5739,6 +5740,18 @@ Claim boundary until fixed: safe to claim the constant-lift obstruction Gamma_ca
 - **load-bearing step:** The full sparse-face target Hermitian block violates Cauchy interlacing against the selected retained 4x4 Wilson block, so no real or complex 3d compression of that ambient can reproduce the full target packet exactly.  _(class `A`)_
 - **chain closes:** True — The live runner constructs the selected 4x4 block and full sparse-face target block, computes their spectra, and verifies a direct Cauchy-interlacing violation with wide margins: mu1=0.087544 exceeds lambda2=0.004214 and mu2=0.235017 exceeds lambda3=0.023920.
 - **rationale:** The no-go closes on its stated finite-matrix boundary: full packet equality would require a 3d compression of the selected Hermitian 4x4 block to have the full target Hermitian block's eigenvalues, and the runner verifies that those eigenvalues violate the necessary Cauchy interlacing bounds. The fourth runner check also rules out rescuing the selected real slice by internal U(3) dressing because unitary similarity preserves the slice spectrum. This clean verdict is narrow: it certifies the exact full-packet impossibility for the runner-constructed selected 4x4 ambient and full sparse-face target block, not the independent physical retention of the surrounding gauge-vacuum selector program.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_note_2026-04-20`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_CLOSURE_ENDPOINT_NOTE_2026-04-20.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_CLOSURE_ENDPOINT_NOTE_2026-04-20.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** exact closure now proved on the retained `3d+1` ambient is:  _(class `B`)_
+- **chain closes:** False — No. The source row is author-declared unknown, so the audit packet does not assert a closed derivation to ratify.
+- **rationale:** Issue: the source note's own Status line is unknown, not a closed theorem/result tier. Why this blocks: a leaf audit cannot turn an explicitly unsettled source claim into a closed chain without an author reclassification and supporting derivation. Repair target: update the source note to a precise support/bounded/proposed_retained claim with a runner or cited theorem package. Claim boundary until fixed: safe to cite only as an unknown note in its current wording.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20`
