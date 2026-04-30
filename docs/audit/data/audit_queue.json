@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 472,
+    "leaf": 471,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:16:58.264945+00:00",
+  "generated_at": "2026-04-30T19:17:05.034960+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20369,25 +20369,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dirac_observable_panel_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "dirac_core_card_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DIRAC_OBSERVABLE_PANEL_NOTE.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_dirac_walk_3plus1d_v3.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21394,5 +21375,5 @@
     }
   ],
   "ready_count": 609,
-  "total_pending": 998
+  "total_pending": 997
 }
