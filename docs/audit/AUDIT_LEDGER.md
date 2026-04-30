@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:31:27.812483+00:00
+**Generated:** 2026-04-30T01:32:18.416168+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 81 |
-| _proposed_retained_ | 2 |
+| **retained** | 82 |
+| _proposed_retained_ | 1 |
 | bounded | 205 |
 | support | 108 |
 | open | 24 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 81 |
+| `audited_clean` | 82 |
 | `audited_conditional` | 151 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1273 |
+| `unaudited` | 1272 |
 
 | criticality | count |
 |---|---:|
@@ -165,6 +165,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -3722,6 +3723,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: the full closure depends on solved amplitudes and a solved shared phase on a bounded carrier surface. Why this blocks: matching CKM/J targets after fitting those carrier parameters is a numerical completion, not a framework-forced derivation of the projector amplitudes or phase. Repair target: derive a_u, a_d, and phi_shared from retained projector/support primitives and rerun a runner that computes them before comparing observables. Claim boundary until fixed: the note supports a bounded reduced closure on a fixed projector ray, not a retained quark CP theorem.
 - **open / conditional deps cited:**
   - `QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28`
+
+- **Note:** [`QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md`](../../docs/QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** In the reduced Route-2 family P(rho_E), shell normalization and the granted T-side data leave rho_E free; rho_E = 21/4 is equivalent to adding the missing E-center endpoint ratio -8/9, not derived by naturality alone.  _(class `A`)_
+- **chain closes:** True — The runner verifies the exact carrier columns, the rho_E-to-endpoint equivalences, admissible non-target natural choices, low-rational non-uniqueness, and the firewall that the live endpoint is comparator evidence rather than proof input. This closes the stated minimal Route-2 naturality no-go.
+- **rationale:** The no-go closes as exact rational/linear algebra on the stated reduced carrier family: multiple admissible rho_E values satisfy the allowed constraints, and selecting 21/4 requires the missing E-center ratio or live endpoint proximity. The runner explicitly separates comparator evidence from proof inputs and does not use observed quark masses or fitted Yukawa values. Residual risk is scope only: this does not rule out a future source-domain, tensor readout-map, or broader primitive deriving the E-center lift.
 - **auditor confidence:** high
 
 ### `quark_route2_exact_readout_map_note_2026-04-19`

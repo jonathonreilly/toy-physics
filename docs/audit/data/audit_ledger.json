@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T01:31:27.575423+00:00",
-  "generated_at": "2026-04-30T01:31:25.686614+00:00",
-  "invalidation_run_at": "2026-04-30T01:31:27.516313+00:00",
+  "effective_status_computed_at": "2026-04-30T01:32:18.180386+00:00",
+  "generated_at": "2026-04-30T01:32:16.333420+00:00",
+  "invalidation_run_at": "2026-04-30T01:32:18.121874+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T01:31:27.364257+00:00",
+  "load_bearing_computed_at": "2026-04-30T01:32:17.995371+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -67835,14 +67835,21 @@
       "verdict_rationale": "Issue: the full closure depends on solved amplitudes and a solved shared phase on a bounded carrier surface. Why this blocks: matching CKM/J targets after fitting those carrier parameters is a numerical completion, not a framework-forced derivation of the projector amplitudes or phase. Repair target: derive a_u, a_d, and phi_shared from retained projector/support primitives and rerun a runner that computes them before comparing observables. Claim boundary until fixed: the note supports a bounded reduced closure on a fixed projector ray, not a retained quark CP theorem."
     },
     "quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T01:32:09.748142+00:00",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The runner verifies the exact carrier columns, the rho_E-to-endpoint equivalences, admissible non-target natural choices, low-rational non-uniqueness, and the firewall that the live endpoint is comparator evidence rather than proof input. This closes the stated minimal Route-2 naturality no-go.",
       "claim_id": "quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -67850,13 +67857,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "In the reduced Route-2 family P(rho_E), shell normalization and the granted T-side data leave rho_E free; rho_E = 21/4 is equivalent to adding the missing E-center endpoint ratio -8/9, not derived by naturality alone.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "65acee4543e4074a2ef74139b4340a19f9c11330dd88d136aea02d47be93774b",
@@ -67864,16 +67871,16 @@
       "open_dependency_paths": [],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 28,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 28
       },
       "runner_path": "scripts/frontier_quark_route2_e_channel_readout_naturality_no_go.py",
       "title": "Quark Route-2 E-Channel Readout Naturality No-Go",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The no-go closes as exact rational/linear algebra on the stated reduced carrier family: multiple admissible rho_E values satisfy the allowed constraints, and selecting 21/4 requires the missing E-center ratio or live endpoint proximity. The runner explicitly separates comparator evidence from proof inputs and does not use observed quark masses or fitted Yukawa values. Residual risk is scope only: this does not rule out a future source-domain, tensor readout-map, or broader primitive deriving the E-center lift."
     },
     "quark_route2_exact_readout_map_note_2026-04-19": {
       "audit_date": "2026-04-29T12:47:55.420453+00:00",
