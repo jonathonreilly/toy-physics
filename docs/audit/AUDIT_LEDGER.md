@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:42:48.751604+00:00
+**Generated:** 2026-04-30T02:42:52.093339+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 204 |
 | support | 104 |
 | open | 24 |
-| unknown | 521 |
+| unknown | 520 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 48 |
 | ~~audited_renaming~~ | 72 |
-| ~~audited_conditional~~ | 435 |
+| ~~audited_conditional~~ | 436 |
 | ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 161 |
+| `audited_conditional` | 162 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1258 |
+| `unaudited` | 1257 |
 
 | criticality | count |
 |---|---:|
@@ -204,6 +204,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_odd_mixed_bridge_extension_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_neutrino_source_amplitude_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -1242,6 +1243,24 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `missing authority: bosonic normalization j = g_weak/sqrt(2)`
   - `missing authority: DM staircase conversion from y_eff to k_eff`
 - **auditor confidence:** 0.94
+
+### `dm_neutrino_source_amplitude_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Reusing the bosonic-bilinear selector principle, the source-oriented sharp selector is P_nu, whose centered selector part is (1/2) S_cls, so a_sel = 1/2; the swap-even source projector gives tau_E = tau_T = 1/2 and tau_+ = 1.  _(class `B`)_
+- **chain closes:** False — The amplitude arithmetic closes after the sharp-selector and weak-carrier premises are imported, but those upstream selector, carrier, swap-reduction, and transfer-coefficient theorems are not provided as audited one-hop dependencies.
+- **rationale:** Issue: the source amplitudes are fixed only after importing the sharp bosonic-bilinear selector principle, reduced selector class, neutrino-side branch sign, exact weak carrier, swap-even reduction, and c_odd/v_even transfer coefficient theorems. Why this blocks: the runner verifies text from those upstream notes and performs the projector arithmetic, but does not derive the selector principle or carrier/transfer inputs in this audit bundle. Repair target: add retained one-hop dependencies for the selector, carrier, swap-reduction, and transfer-coefficient notes, or make the runner derive those premises before assigning amplitudes. Claim boundary until fixed: conditional sharp-branch source-amplitude bookkeeping, not an audited axiom-first source-side closure.
+- **open / conditional deps cited:**
+  - `HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md`
+  - `S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md`
+  - `DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM_NOTE_2026-04-15.md`
+  - `DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`
+  - `DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`
+- **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16`
 

@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 41,
-    "high": 270,
+    "high": 269,
     "leaf": 608,
     "medium": 340
   },
-  "generated_at": "2026-04-30T02:42:48.593343+00:00",
+  "generated_at": "2026-04-30T02:42:51.931353+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1165,23 +1165,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 31
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 4,
-      "load_bearing_score": 8.714,
-      "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_source_amplitude_theorem.py",
-      "transitive_descendants": 104
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -26333,6 +26316,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 817,
-  "total_pending": 1259
+  "ready_count": 816,
+  "total_pending": 1258
 }
