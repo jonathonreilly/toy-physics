@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 41,
-    "high": 271,
+    "high": 270,
     "leaf": 608,
     "medium": 340
   },
-  "generated_at": "2026-04-30T02:42:45.099689+00:00",
+  "generated_at": "2026-04-30T02:42:48.593343+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1165,23 +1165,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 31
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_neutrino_odd_mixed_bridge_extension_note_2026-04-15",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 7.228,
-      "note_path": "docs/DM_NEUTRINO_ODD_MIXED_BRIDGE_EXTENSION_NOTE_2026-04-15.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_odd_mixed_bridge_extension.py",
-      "transitive_descendants": 105
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -26350,6 +26333,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 818,
-  "total_pending": 1260
+  "ready_count": 817,
+  "total_pending": 1259
 }

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:42:45.270257+00:00
+**Generated:** 2026-04-30T02:42:48.751604+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 204 |
 | support | 104 |
 | open | 24 |
-| unknown | 522 |
+| unknown | 521 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 48 |
 | ~~audited_renaming~~ | 72 |
-| ~~audited_conditional~~ | 434 |
+| ~~audited_conditional~~ | 435 |
 | ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 160 |
+| `audited_conditional` | 161 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1259 |
+| `unaudited` | 1258 |
 
 | criticality | count |
 |---|---:|
@@ -202,6 +202,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
+| `dm_neutrino_odd_mixed_bridge_extension_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -1206,6 +1207,23 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** On the Hermitian circulant family K = d I + c_even(S+S^2) + i c_odd(S-S^2), the exchange P23 leaves I and S+S^2 invariant and flips i(S-S^2), making c_odd the unique residual-Z2-odd slot.  _(class `C`)_
 - **chain closes:** False — The odd/even slot decomposition closes algebraically on the defined circulant family, but the family, right-Gram bridge, and standard leptogenesis CP-kernel interpretation are imported rather than audited as one-hop dependencies.
 - **rationale:** Issue: the local algebra identifies the unique odd slot, but the note's DM denominator-lane significance depends on imported authority-stack inputs: the DM minimal Z3 circulant CP tool, two-Higgs right-Gram bridge, exact weak-axis 1+2 split, and the standard CP tensor readout. Why this blocks: the runner proves the slot statement after those structures are supplied, not that the framework forces this family and CP readout. Repair target: add retained one-hop dependencies for the circulant CP tool, right-Gram bridge, and weak-axis split, or make the runner derive them before the slot decomposition. Claim boundary until fixed: exact conditional local slot theorem on the supplied Hermitian circulant family, not an audited DM denominator bridge closure.
+- **auditor confidence:** high
+
+### `dm_neutrino_odd_mixed_bridge_extension_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_ODD_MIXED_BRIDGE_EXTENSION_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_ODD_MIXED_BRIDGE_EXTENSION_NOTE_2026-04-15.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Assuming the odd-slot theorem, current-stack zero law, two-Higgs minimality theorem, and continuity sheet theorem, any future positive local DM activator must be a residual-Z2-odd non-additive mixed bridge with one real amplitude slot.  _(class `B`)_
+- **chain closes:** False — The extension-class conclusion follows only after importing multiple upstream local theorems; the runner checks their textual presence and the one-dimensional odd slot rather than independently proving the upstream minimality stack.
+- **rationale:** Issue: the minimal surviving extension class is conditional on four upstream results, including the current-stack zero law and two-Higgs minimality/continuity theorems, none of which are provided as retained one-hop dependencies in this audit bundle. Why this blocks: the runner validates that those notes state the needed premises and checks the one-amplitude odd class, but it does not independently prove the exhaustive 'any future positive activator must' conclusion. Repair target: make the four upstream theorems retained dependencies and add a proof/runner that the listed extension class exhausts the admissible positive local activators. Claim boundary until fixed: conditional extension-class bookkeeping for the supplied upstream stack, not an audited final positive-extension theorem.
+- **open / conditional deps cited:**
+  - `DM_NEUTRINO_ODD_CIRCULANT_Z2_SLOT_THEOREM_NOTE_2026-04-15.md`
+  - `DM_NEUTRINO_ODD_CIRCULANT_CURRENT_STACK_ZERO_LAW_NOTE_2026-04-15.md`
+  - `DM_NEUTRINO_TWO_HIGGS_MINIMALITY_THEOREM_NOTE_2026-04-15.md`
+  - `DM_NEUTRINO_TWO_HIGGS_CONTINUITY_SHEET_THEOREM_NOTE_2026-04-15.md`
 - **auditor confidence:** high
 
 ### `dm_neutrino_schur_suppression_theorem_note_2026-04-15`
