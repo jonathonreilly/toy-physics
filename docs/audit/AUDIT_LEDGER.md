@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:29:55.690415+00:00
+**Generated:** 2026-04-30T19:30:01.553401+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 308 |
+| bounded | 307 |
 | support | 272 |
 | open | 21 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 686 |
+| ~~audited_conditional~~ | 687 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 190 |
-| `audited_conditional` | 410 |
+| `audited_conditional` | 411 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 874 |
+| `unaudited` | 873 |
 
 | criticality | count |
 |---|---:|
@@ -539,6 +539,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `graviton_mass_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `gravity_clean_derivation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | E | - |
+| `gravity_observable_hierarchy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gravity_sign_audit_2026-04-10` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `growing_graph_frontier_architecture_transfer_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `grown_wavefield_failure_diagnosis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -6369,6 +6370,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 1 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
+
+### `gravity_observable_hierarchy_note`
+
+- **Note:** [`GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](../../docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** rescue the retained 3D barrier failure.  _(class `B`)_
+- **chain closes:** False — No. The runner exits zero, but the audit classifier records no A/B/C/D PASS checks for a load-bearing audit surface.
+- **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a bounded note with executable but unratified support.
+- **auditor confidence:** medium
 
 ### `gravity_sign_audit_2026-04-10`
 
