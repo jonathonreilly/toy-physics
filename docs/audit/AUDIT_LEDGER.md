@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T14:56:04.777136+00:00
+**Generated:** 2026-04-30T15:00:00.618253+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,22 +20,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 80 |
-| _proposed_retained_ | 3 |
+| _proposed_retained_ | 4 |
 | bounded | 201 |
-| support | 123 |
+| support | 124 |
 | open | 20 |
 | unknown | 445 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 465 |
+| ~~audited_conditional~~ | 463 |
 | ~~audited_failed~~ | 170 |
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 5 |
-| `audited_clean` | 83 |
-| `audited_conditional` | 230 |
+| `audit_in_progress` | 6 |
+| `audited_clean` | 84 |
+| `audited_conditional` | 228 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 12 |
@@ -101,6 +101,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | unknown | audit_in_progress | unknown | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | audit_in_progress | support | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | support | audit_in_progress | support | fresh_context | codex-gpt-5 | A | - |
+| `graph_first_selector_derivation_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | fresh_context | codex-current | A | - |
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -171,6 +172,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `scalar_3plus1_temporal_ratio_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
@@ -272,7 +274,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `generation_axiom_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
-| `graph_first_selector_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `graviton_mass_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -365,7 +366,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_general_r_derivation_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `s3_taste_cube_decomposition_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `s3_time_bilinear_tensor_action_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
-| `scalar_3plus1_temporal_ratio_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -2740,18 +2740,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** Issue: the row still presents a proposed-retained partial predictor even though the source note's lead update and the one-hop off-scaffold authority state that the advantage collapsed to 5/9 and the classifier program is closed. Why this blocks: the current packet contradicts the retained surface; at most the scaffolded 7/9 result remains historical finite evidence. Repair target: change the source status to bounded/retired or split out a historical scaffolded-observation note, then register and run the predictor/off-scaffold runners if a finite-result audit is desired. Claim boundary until fixed: safe to say free_coh was a scaffold-specific empirical predictor candidate that failed off-scaffold; not safe to retain it as a live global coherence predictor.
 - **open / conditional deps cited:**
   - `GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md`
-- **auditor confidence:** high
-
-### `graph_first_selector_derivation_note`
-
-- **Note:** [`GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md`](../../docs/GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:fresh-2026-04-27-graph_first_selector_derivation_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The first nontrivial even invariant V_sel(phi) = Tr H(phi)^4 - (1/8)(Tr H(phi)^2)^2 is treated as a selector potential whose normalized form F(p) has the three axis vertices as minima.  _(class `A`)_
-- **chain closes:** False — The finite graph algebra closes for the displayed invariant and its axis minima, but the note does not derive a source law or variational principle that selects this invariant with the positive sign as the physical selector potential.
-- **rationale:** Issue: The algebraic trace invariant is real and has axis minima, but the step from invariant to derived weak-axis selector assumes that this particular positive quartic is the potential/source law to minimize. Why this blocks: Without a retained theorem forcing that variational choice, the graph supplies an admissible axis-favoring invariant rather than a derived selector. Repair target: Derive the selector functional, coefficient sign, and normalization from the graph/taste axiom or an audited action principle, and update the runner so it constructs the selected variational functional rather than checking consequences after V_sel is chosen. Claim boundary until fixed: The note may claim that the canonical cube shifts admit an S3-symmetric quartic invariant whose normalized form has exactly the three axis minima with residual Z2 stabilizer.
 - **auditor confidence:** high
 
 ### `graph_first_su3_integration_note`
@@ -5428,15 +5416,13 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 
 - **Note:** [`SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md`](../../docs/SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
 - **current_status:** support
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** On the exact minimal 3+1 APBC block, K_sc(omega)=3+sin^2(omega), A_2=1/8, A_inf=1/(4 sqrt(3)), therefore A_inf/A_2=2/sqrt(3).  _(class `A`)_
-- **chain closes:** False — The finite-sum scalar ratio closes exactly, but the source row is current_status=support and the note keeps physical-observable insertion as support-level, so the audit lane cannot ratify it as audited_clean.
-- **rationale:** Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the exact scalar ratio may be used as a reusable support tool; the fourth-root physical insertion remains unratified.
-- **open / conditional deps cited:**
-  - `SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md`
-- **auditor confidence:** high
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-second-20260430-scalar-3plus1-drain2`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The associated intensive scalar coefficient is A(L_t) = (1 / (2 L_t)) sum_omega 1 / (3 + sin^2 omega), with endpoints A_2 = 1 / 8 and A_inf = 1 / (4 sqrt(3)), hence A_inf / A_2 = 2 / sqrt(3).  _(class `A`)_
+- **chain closes:** True — The scalar endpoint ratio follows by direct algebra/calculus from the stated kernel K_sc(omega) = 3 + sin^2(omega) and the stated APBC temporal average. The note explicitly keeps the fourth-root observable insertion at support level, so the clean closure is only for the scalar bridge endpoint ratio.
+- **rationale:** The load-bearing claim is the exact scalar ratio A_inf / A_2 = 2 / sqrt(3), not an observable-level plaquette insertion. Given the stated minimal 3+1 APBC scalar kernel and coefficient definition, the endpoints and ratio close as exact mathematics, and the runner's current output is numerically consistent with the note. The source note correctly marks the dimension-4 fourth-root observable insertion as only a support corollary, avoiding the missing physical-observable bridge.
+- **auditor confidence:** medium
 
 ### `second_grown_family_complex_note`
 

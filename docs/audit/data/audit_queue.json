@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 5,
+    "critical": 6,
     "high": 237,
     "leaf": 588,
     "medium": 347
   },
-  "generated_at": "2026-04-30T14:56:04.603440+00:00",
+  "generated_at": "2026-04-30T15:00:00.444395+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -91,6 +91,25 @@
       "ready": true,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py",
       "transitive_descendants": 295
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "audit_in_progress",
+      "blocker": "cross_confirmation_disagreement",
+      "claim_id": "graph_first_selector_derivation_note",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": "disagreement",
+      "current_status": "proposed_retained",
+      "deps": [
+        "graph_first_su3_integration_note"
+      ],
+      "direct_in_degree": 4,
+      "load_bearing_score": 10.195,
+      "note_path": "docs/GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_graph_first_selector_derivation.py",
+      "transitive_descendants": 292
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -24501,6 +24520,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 765,
-  "total_pending": 1177
+  "ready_count": 766,
+  "total_pending": 1178
 }
