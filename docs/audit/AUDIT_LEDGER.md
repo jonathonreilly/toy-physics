@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:57:20.963674+00:00
+**Generated:** 2026-04-30T18:57:29.786773+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 115 |
+| `audited_clean` | 116 |
 | `audited_conditional` | 316 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1044 |
+| `unaudited` | 1043 |
 
 | criticality | count |
 |---|---:|
@@ -166,6 +166,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -4715,6 +4716,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The parity-gate carrier theorem assumes P_A H_cell ≅ F(C^2) as input, and the bare Z2 parity structure has the same 2+2 signature for CAR, two-qubit spin, and ququart semantics, so it cannot force CAR.  _(class `A`)_
 - **chain closes:** True — The source quotes the relevant CAR-input assumption and the runner directly verifies that the parity Z2 data are not CAR-distinguishing. Within the stated A4 mechanism, the no-go follows without observed inputs or tuned parameters.
 - **rationale:** The runner constructs CAR, two-qubit spin, and ququart rank-four semantics, checks their shared 2+2 parity signature, verifies CAR anticommutation versus commuting spin behavior, and checks the half-zone Z2 partition. The source separately quotes the parity-gate theorem's CAR/Fock assumption, so the A4 route cannot derive the very CAR premise it requires. Residual risk is only scope drift: this clean verdict closes the A4 parity-gate route, not G1, G2, C1, or the need for A5/minimal-carrier analysis.
+- **auditor confidence:** high
+
+### `hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29`
+
+- **Note:** [`HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md`](../../docs/HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-ca82-linnaeus-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For every primitive axis i, P_A Gamma_i P_A = 0, so the compressed operators square to zero rather than to the identity on P_A H_cell.  _(class `C`)_
+- **chain closes:** True — The runner verifies the full-cell Jordan-Wigner generators are Clifford, but P_A is not reducing and their compression to the weight-one packet vanishes. This proves the direct restriction shortcut fails.
+- **rationale:** The note does not overclaim impossibility of an active-block Cl_4 theorem; it only blocks descent by direct restriction from the natural full-cell odd coframe. The runner checks the exact obstruction and also confirms that an intrinsic C^4 Clifford representation exists, so the failure is correctly localized to descent.
 - **auditor confidence:** high
 
 ### `hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28`
