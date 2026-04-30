@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:42:24.962709+00:00
+**Generated:** 2026-04-30T02:42:28.327206+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,8 +24,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 205 |
 | support | 105 |
 | open | 24 |
-| unknown | 527 |
-| ~~audited_decoration~~ | 4 |
+| unknown | 525 |
+| ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 48 |
 | ~~audited_renaming~~ | 72 |
 | ~~audited_conditional~~ | 429 |
@@ -36,11 +36,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
 | `audited_conditional` | 155 |
-| `audited_decoration` | 4 |
+| `audited_decoration` | 5 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1265 |
+| `unaudited` | 1264 |
 
 | criticality | count |
 |---|---:|
@@ -336,6 +336,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `z2_hw1_mass_matrix_parametrization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
+| `pmns_selector_unique_amplitude_slot_note` | unknown | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-gpt-5 | A | `pmns_selector_class_space_uniqueness_note` |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -3608,6 +3609,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: The PMNS selector package depends on two proposed selector equations, delta * q_+ = Q_Koide and det(H) = E2, plus a bounded numerical uniqueness search; the runner then checks that the recovered point fits NuFit bands. Why this blocks: a retained PMNS selector theorem cannot rest on unproved candidate laws or heuristic one-cluster evidence, even though the numerical packet is reproducible. Repair target: derive both selector equations from retained framework structure, prove basin uniqueness analytically on the relevant chamber, and then rerun the PMNS observable comparison without treating the selector laws as assumptions. Claim boundary until fixed: it is safe to keep this as a support proposal with exact chart identities, a reproducible candidate point, and a strong numerical PMNS fit; it is not safe to claim retained PMNS selector closure.
 - **open / conditional deps cited:**
   - `PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_PROPOSAL_README_2026-04-21.md`
+- **auditor confidence:** high
+
+### `pmns_selector_unique_amplitude_slot_note`
+
+- **Note:** [`PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md`](../../docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** ~~audited_decoration~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Assume the exact PMNS selector class-space uniqueness theorem; then every future microscopic bridge functional after reduction to X_red is B_red = a_sel S_cls for one real scalar amplitude a_sel.  _(class `A`)_
+- **chain closes:** True — Given the one-dimensional reduced selector class space, the one-amplitude statement follows by elementary linear algebra. It adds bookkeeping but no independent physical bridge or comparator beyond the parent uniqueness claim.
+- **rationale:** Issue: the note is an algebraic reduced-form restatement of the upstream PMNS selector class-space uniqueness theorem. Why this blocks: it adds no independent physical observable, comparator, or microscopic selector law; it only names the remaining scalar coordinate once the parent one-dimensionality is assumed. Repair target: box this as a corollary under the class-space uniqueness parent, or add a genuine derivation of the amplitude activation law. Claim boundary until fixed: the safe claim is that the parent one-dimensional class space has a single real coordinate, not a separately retained theorem-grade bridge result.
+- **open / conditional deps cited:**
+  - `PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md`
+- **decoration parent:** `pmns_selector_class_space_uniqueness_note`
 - **auditor confidence:** high
 
 ### `poisson_3d_self_field_note`
