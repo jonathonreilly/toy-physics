@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:29:13.663511+00:00
+**Generated:** 2026-04-30T19:29:19.501962+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,12 +33,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 186 |
-| `audited_conditional` | 407 |
+| `audited_conditional` | 408 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 881 |
+| `unaudited` | 880 |
 
 | criticality | count |
 |---|---:|
@@ -47,7 +47,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 381 |
 | `leaf` | 769 |
 
-- **Proposed claims demoted by upstream:** 130
+- **Proposed claims demoted by upstream:** 129
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -528,6 +528,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `generated_geometry_synthesis_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `generation_axiom_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
+| `global_coherence_held_out2_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `graviton_mass_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -6136,6 +6137,21 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** Issue: the source status says this is an exploratory DAG-ensemble path-sum result, not a staggered proposed_retained result, and the runner path recorded in the note/ledger does not exist at the declared location. Why this blocks: a claim that explicitly disclaims retained status and lacks its registered runner cannot be audit-ratified as proposed_retained, even though a moved script reproduces the bounded exploratory output. Repair target: re-scope the note/queue as bounded or support, update the runner path to `scripts/frontier_geometry_superposition.py`, preserve a current log, and build a separate staggered geometry-superposition harness before any retained promotion. Claim boundary until fixed: safely claim only the toy DAG path-sum signal from the moved script: normalized contrast 3.93%, centroid shift 0.0574, width change 0.0211, and detector phase differences up to about 0.323 rad; do not claim a retained staggered or BMV-style closure.
 - **open / conditional deps cited:**
   - `frontier_geometry_superposition.py`
+- **auditor confidence:** high
+
+### `global_coherence_held_out2_note`
+
+- **Note:** [`GLOBAL_COHERENCE_HELD_OUT2_NOTE.md`](../../docs/GLOBAL_COHERENCE_HELD_OUT2_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_failed~~  (reason: `inherited_from:global_coherence_predictor_note`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** > is now the governing result for the free_coh program. On an  _(class `B`)_
+- **chain closes:** False — No. One-hop dependencies are not all retained (global_coherence_off_scaffold_note=bounded, global_coherence_predictor_note=audited_failed), so the chain does not close under the leaf audit rule.
+- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (global_coherence_off_scaffold_note=bounded, global_coherence_predictor_note=audited_failed). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared proposed_retained tier with the upstream dependency condition attached.
+- **open / conditional deps cited:**
+  - `GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md`
+  - `GLOBAL_COHERENCE_PREDICTOR_NOTE.md`
 - **auditor confidence:** high
 
 ### `global_coherence_off_scaffold_note`

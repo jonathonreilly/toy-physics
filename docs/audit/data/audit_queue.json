@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 355,
+    "leaf": 354,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:29:13.509038+00:00",
+  "generated_at": "2026-04-30T19:29:19.338620+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -18542,26 +18542,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "global_coherence_held_out2_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "global_coherence_off_scaffold_note",
-        "global_coherence_predictor_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GLOBAL_COHERENCE_HELD_OUT2_NOTE.md",
-      "ready": false,
-      "runner_path": "scripts/global_coherence_held_out2.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -19356,5 +19336,5 @@
     }
   ],
   "ready_count": 499,
-  "total_pending": 881
+  "total_pending": 880
 }
