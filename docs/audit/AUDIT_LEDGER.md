@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T20:33:38.137661+00:00
+**Generated:** 2026-04-30T20:34:16.012467+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -346,7 +346,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `causal_field_reconciliation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_impact_parameter_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_moving_unification_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `causal_source_placement_robustness_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `causal_source_placement_robustness_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `central_band_born_dense_sweep_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `central_band_born_largen_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `central_band_collapse_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1794,12 +1794,12 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **current_status:** unknown
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** Causal Source Placement Robustness Note: diagnosed deeper boundary: family-aware source placement changes the causal ratios, but it does not restore a clean portable causal-field signal across all three families  _(class `B`)_
-- **chain closes:** False — No. The load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet, so the conclusion cannot be ratified from the source note alone.
-- **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **auditor:** `codex-audit-loop-stale-rationale-20260430-12`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Family-aware source placement changes the measured causal ratios, but no placement rule restores a clean portable causal-field law across all three families.  _(class `C`)_
+- **chain closes:** False — The primary runner is registered and exits 0, but its runtime output contains no classified A/B/C/D PASS lines. The deeper-boundary replay is therefore still not exposed as a load-bearing checked audit artifact.
+- **rationale:** The old missing-runner rationale is stale because scripts/causal_source_placement_robustness.py is now registered. The row remains conditional because the live runner emits zero classified A/B/C/D PASS lines under the audit-loop runtime check, so the source-placement robustness boundary is not yet audit-checkable under the load-bearing classifier. The safe citation boundary remains a bounded diagnostic, not a clean portable causal-field theorem.
 - **open / conditional deps cited:**
-  - `unregistered_or_missing_primary_runner_or_frozen_log`
+  - `runner_output_missing_classified_a_b_c_d_pass_lines:scripts/causal_source_placement_robustness.py`
 - **auditor confidence:** high
 
 ### `central_band_born_dense_sweep_note`
