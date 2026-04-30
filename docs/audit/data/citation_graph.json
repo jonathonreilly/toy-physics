@@ -18325,7 +18325,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T13:31:57.669497+00:00",
+  "generated_at": "2026-04-30T13:32:12.682264+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19828,6 +19828,16 @@
       "path": "docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_cluster_decomposition_check.py",
       "title": "Axiom-First Cluster Decomposition / Lieb\u2013Robinson Bound on Cl(3) \u2297 Z^3"
+    },
+    "axiom_first_cpt_theorem_stretch_note_2026-04-29": {
+      "claim_id": "axiom_first_cpt_theorem_stretch_note_2026-04-29",
+      "current_status": "bounded",
+      "current_status_raw": "bounded \u2014 branch-local stretch note on canonical A_min; fermion-sector runner passing; Wilson-plaquette SU(3) lift residual stated; audit-pending.",
+      "deps": [],
+      "note_hash": "c25afe3cec59c53fa3f8775c3695958a22f6f91c38c51a97a6cfdebf59a4ed6b",
+      "path": "docs/AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md",
+      "runner_path": "scripts/axiom_first_cpt_check.py",
+      "title": "Axiom-First CPT Theorem (Stretch Attempt) on Cl(3) \u2297 Z^3"
     },
     "axiom_first_reflection_positivity_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
@@ -40273,6 +40283,7 @@
     "audited_symmetry_synthesis_note",
     "axiom_change_proposal_2026-04-10",
     "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+    "axiom_first_cpt_theorem_stretch_note_2026-04-29",
     "axiom_first_reflection_positivity_theorem_note_2026-04-29",
     "axiom_first_spin_statistics_theorem_note_2026-04-29",
     "axiom_reduction_note",
@@ -41372,12 +41383,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4581,
-    "leaf_count": 740,
-    "node_count": 1678,
-    "root_count": 1206,
-    "runners_with_path": 762,
+    "leaf_count": 741,
+    "node_count": 1679,
+    "root_count": 1207,
+    "runners_with_path": 763,
     "status_counts": {
-      "bounded": 254,
+      "bounded": 255,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
