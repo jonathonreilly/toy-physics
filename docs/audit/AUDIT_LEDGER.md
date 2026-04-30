@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:03:51.643950+00:00
+**Generated:** 2026-04-30T03:04:34.884547+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 201 |
 | support | 101 |
 | open | 24 |
-| unknown | 500 |
+| unknown | 499 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 399 |
+| ~~audited_conditional~~ | 400 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 181 |
+| `audited_conditional` | 182 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1235 |
+| `unaudited` | 1234 |
 
 | criticality | count |
 |---|---:|
@@ -184,6 +184,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `area_law_quarter_broader_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `bh_entropy_rt_ratio_widom_no_go_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `causal_field_canonical_chain_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `charged_lepton_two_higgs_canonical_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `chiral_3plus1d_mixing_period_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `ckm_schur_complement_theorem` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -717,6 +718,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** A natural single-label selector from the unbased C3 quotient would need a C3-fixed label, but the C3 action on the three labels is free and no fixed singleton exists.  _(class `A`)_
 - **chain closes:** True — The no-go closes as finite C3 action algebra: unbased selected-line data can determine a sorted orbit but not a physical generation label. Based selectors exist only after extra basepoint/source/generation data are supplied.
 - **rationale:** The runner checks that Q and unordered ratios survive cyclic relabeling while the largest slot moves through all labels, and it enumerates invariant subsets to show no singleton selector exists. PDG masses are comparator-only. The clean verdict is limited to the unbased selected-line generation-selector no-go.
+- **auditor confidence:** high
+
+### `charged_lepton_two_higgs_canonical_reduction_note`
+
+- **Note:** [`CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`](../../docs/CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Assuming the charged-lepton sector is placed on a two-distinct-offset lane and the single-Higgs PMNS boundary has been accepted, the runner reduces every offset pair to A_e+B_e C, removes five phase directions, and counts the generic charged-lepton normal form as six positive moduli plus one phase.  _(class `B`)_
+- **chain closes:** False — The canonical support/counting calculation passes, but the note does not derive the charged-lepton-side branch selection, the seven quantities, or cross-sector relations, and its upstream single-Higgs/two-Higgs authorities are not recorded as dependencies.
+- **rationale:** Issue: the local two-Higgs charged-lepton reduction is valid under its stated branch assumptions, but the ledger row has no dependencies for the single-Higgs PMNS triviality theorem, neutrino two-Higgs escape theorem, or effective-offset support language it reuses. Why this blocks: the runner proves the normal form and parameter count only after the minimal charged-lepton lane is supplied; it does not select that lane in nature or derive the seven quantities. Repair target: add audited retained dependencies for the imported lepton-boundary/escape inputs and a separate selector if stronger closure is desired. Claim boundary until fixed: conditional exact normal-form/counting theorem for a supplied charged-lepton two-offset lane, not charged-lepton Yukawa or PMNS closure.
+- **open / conditional deps cited:**
+  - `Lepton single-Higgs PMNS triviality theorem`
+  - `Neutrino Dirac two-Higgs escape theorem`
+  - `charged-lepton effective Z3 offset support language`
 - **auditor confidence:** high
 
 ### `charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27`
