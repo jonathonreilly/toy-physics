@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:30:40.008105+00:00
+**Generated:** 2026-04-30T22:32:04.421039+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 82 |
 | _proposed_retained_ | 5 |
 | bounded | 278 |
-| support | 244 |
+| support | 243 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 747 |
+| ~~audited_conditional~~ | 748 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 215 |
-| `audited_conditional` | 469 |
+| `audited_conditional` | 470 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 788 |
+| `unaudited` | 787 |
 
 | criticality | count |
 |---|---:|
@@ -490,6 +490,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_pmns_cp_orientation_parity_reduction_note_2026-04-20` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_pmns_local_selector_family_no_go_theorem_note_2026-04-20` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_pns_attack_cascade_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4722,6 +4723,24 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** `scripts/frontier_dm_pmns_ne_seed_surface_exact_source_manifold_theorem_2026_04_20.py`  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 4 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21`
+
+- **Note:** [`DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md`](../../docs/DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-27`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Given the graph-first ordered-chain activation theorem, the physical affine Hermitian source chart, and the affine current-coordinate theorem, the graded current J_N(H)=J_chi(i[N,H]) supplies the remaining native delta law and closes the DM exact-target/source-map last mile on the hw=1 response family.  _(class `B`)_
+- **chain closes:** False — The local algebra and response-column reconstruction checks pass exactly, but the theorem is explicitly conditional on upstream ordered-chain/current-activation and active-affine source-chart authorities. Those authorities are not all audited clean, and the row does not register them as one-hop dependencies.
+- **rationale:** Issue: the runner proves the graded-current delta formula over supplied upstream structures, but the source advertises closure of the strict/native DM last mile while importing conditional authorities for the canonical ordered-chain activation and physical affine source chart. Why this blocks: exact recovery of delta and q_+ is only as strong as the imported N=diag(1,2,3), J_chi, active-affine chart, and hw=1 response-carrier reconstruction; the graph-first activation theorem and active-affine point-selection boundary are currently audited_conditional, so clean closure cannot propagate through this row. Repair target: audit-clean or inline the ordered-chain activation/cycle-frame/adjacent-chain path algebra and active-affine source-surface authorities, then register them as explicit dependencies and rerun this exact algebraic verifier. Claim boundary until fixed: conditional exact algebra that, given the supplied ordered-chain grading, affine chart, native current, and response-column carrier, J_N separates delta and recovers the affine active pair to machine/exact precision.
+- **open / conditional deps cited:**
+  - `DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
+  - `graph_first_cycle_frame_support_theorem`
+  - `adjacent_chain_path_algebra_authority`
+  - `hw1_response_carrier_reconstruction_authority`
 - **auditor confidence:** high
 
 ### `dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20`
