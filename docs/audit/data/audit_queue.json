@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 420,
+    "leaf": 419,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:22:29.775690+00:00",
+  "generated_at": "2026-04-30T19:22:35.762372+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13722,23 +13722,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_NEUTRINO_YUKAWA_CASCADE_CANDIDATE_NOTE_2026-04-14.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_yukawa_candidate.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20500,6 +20483,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 557,
-  "total_pending": 946
+  "ready_count": 556,
+  "total_pending": 945
 }

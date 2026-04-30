@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:22:29.931508+00:00
+**Generated:** 2026-04-30T19:22:35.946906+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 164 |
+| `audited_clean` | 165 |
 | `audited_conditional` | 364 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 946 |
+| `unaudited` | 945 |
 
 | criticality | count |
 |---|---:|
@@ -160,6 +160,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_neutrino_two_higgs_minimality_theorem_note_2026-04-15` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_neutrino_weak_matching_obstruction_note_2026-04-15` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `dm_neutrino_yukawa_cascade_candidate_note_2026-04-14` | support | ~~audited_clean~~ | support | cross_family | codex-current | D | - |
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `electric_sign_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `electrostatics_card_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -4266,6 +4267,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The registered runner returned nonzero, so the current executable chain is not cleanly reproducible.
 - **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a support note with non-clean executable support.
 - **auditor confidence:** medium
+
+### `dm_neutrino_yukawa_cascade_candidate_note_2026-04-14`
+
+- **Note:** [`DM_NEUTRINO_YUKAWA_CASCADE_CANDIDATE_NOTE_2026-04-14.md`](../../docs/DM_NEUTRINO_YUKAWA_CASCADE_CANDIDATE_NOTE_2026-04-14.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** This note remains useful as the pre-theorem intuition for why `k_B = 8` kept  _(class `D`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 1 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
 
 ### `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15`
 
