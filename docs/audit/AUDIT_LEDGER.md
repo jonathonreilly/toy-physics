@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T15:15:40.385235+00:00
+**Generated:** 2026-04-30T15:15:44.375494+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 9 |
-| `audited_clean` | 95 |
+| `audited_clean` | 96 |
 | `audited_conditional` | 283 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1103 |
+| `unaudited` | 1102 |
 
 | criticality | count |
 |---|---:|
@@ -128,6 +128,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `claude_complex_action_carryover_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `composite_source_additivity_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `cycle_break_slice_note_2026-04-10` | unknown | ~~audited_clean~~ | unknown | cross_family | codex-current | C | - |
 | `distance_law_3d_64_closure_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `distance_law_preserving_third_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -2256,6 +2257,18 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
+
+### `cycle_break_slice_note_2026-04-10`
+
+- **Note:** [`CYCLE_BREAK_SLICE_NOTE_2026-04-10.md`](../../docs/CYCLE_BREAK_SLICE_NOTE_2026-04-10.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** unknown  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** The matched frontier slice around the first larger-graph cycle-battery break records the stated finite replay boundary.  _(class `C`)_
+- **chain closes:** True — Yes. The registered runner completed successfully and checks the finite slice described by the source note.
+- **rationale:** The clean content is the finite cycle-break slice, not a universal repair. The runner completed successfully and the classified check surface is {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'total_pass': 0}. Residual risk is generalization outside the matched slice.
+- **auditor confidence:** medium
 
 ### `diamond_nv_phase_ramp_signal_budget_note`
 
