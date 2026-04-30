@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T15:16:26.467614+00:00
+**Generated:** 2026-04-30T15:16:30.790293+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,26 +21,26 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 80 |
 | _proposed_retained_ | 4 |
-| bounded | 181 |
+| bounded | 180 |
 | support | 123 |
 | open | 11 |
 | unknown | 409 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 529 |
+| ~~audited_conditional~~ | 530 |
 | ~~audited_failed~~ | 170 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 9 |
 | `audited_clean` | 96 |
-| `audited_conditional` | 294 |
+| `audited_conditional` | 295 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1091 |
+| `unaudited` | 1090 |
 
 | criticality | count |
 |---|---:|
@@ -298,6 +298,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dimension_selection_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dirac_decoherence_probe_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dirac_field_smoothing_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dirac_source_smoothing_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dispersion_relation_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_abcc_chamber_bound_derivation_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -2461,6 +2462,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **effective_status:** ~~audited_conditional~~  (reason: `self`)
 - **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
 - **load-bearing step:** Dirac Field Smoothing Note: Dirac Field Smoothing Note  _(class `B`)_
+- **chain closes:** False — No. The load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet, so the conclusion cannot be ratified from the source note alone.
+- **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **open / conditional deps cited:**
+  - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `dirac_source_smoothing_note`
+
+- **Note:** [`DIRAC_SOURCE_SMOOTHING_NOTE.md`](../../docs/DIRAC_SOURCE_SMOOTHING_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** Dirac Source Smoothing Note: bounded source-initialization scan on the historical Dirac 3+1D v3/v4 harnesses  _(class `B`)_
 - **chain closes:** False — No. The load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet, so the conclusion cannot be ratified from the source note alone.
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
