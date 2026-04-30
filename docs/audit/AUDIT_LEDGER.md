@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:43:09.170800+00:00
+**Generated:** 2026-04-30T02:44:04.586003+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,26 +21,26 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
-| bounded | 204 |
+| bounded | 203 |
 | support | 104 |
 | open | 24 |
 | unknown | 515 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 378 |
+| ~~audited_conditional~~ | 379 |
 | ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 165 |
+| `audited_conditional` | 166 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1252 |
+| `unaudited` | 1251 |
 
 | criticality | count |
 |---|---:|
@@ -323,6 +323,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_graph_portability_stress_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_layered_gauge_engineering_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_layered_gauge_phase_diagram_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `strong_cp_theta_zero_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | E | - |
 | `structured_chokepoint_bridge_extension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `taste_scalar_isotropy_theorem_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -4776,6 +4777,18 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 - **open / conditional deps cited:**
   - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
   - `STAGGERED_LAYERED_GAUGE_ENGINEERING_NOTE.md`
+- **auditor confidence:** high
+
+### `strong_cp_theta_zero_note`
+
+- **Note:** [`STRONG_CP_THETA_ZERO_NOTE.md`](../../docs/STRONG_CP_THETA_ZERO_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The retained Wilson-plus-staggered scalar-mass action surface is selected with no bare theta slot and real positive quark-mass orientation, so theta_bare = 0 and arg det(M_u M_d) = 0 inside that selected surface.  _(class `E`)_
+- **chain closes:** False — The algebraic and numerical runner checks close theta_eff = 0 inside the explicitly theta-free retained action surface, but the note does not derive that theta-free action surface and mass orientation as forced physical strong-sector inputs.
+- **rationale:** Issue: theta_eff = 0 relies on selecting a theta-free Wilson-plus-staggered scalar-mass action surface with real positive mass orientation. Why this blocks: the runner verifies determinant positivity, axial exit from the selected scalar-mass class, real effective action, and positive-weight theta-sum behavior after that surface is imposed; it does not derive that the physical strong sector must have no bare theta slot or that the selected mass orientation is forced by retained primitives. Repair target: add a retained theorem and runner deriving the action-surface/no-theta-slot selection and mass-orientation boundary from framework primitives rather than taking them as the retained surface definition. Claim boundary until fixed: bounded conditional theta_eff = 0 closure on the explicitly theta-free retained surface only, not a tier-ratifiable strong-CP solution beyond that selected surface.
 - **auditor confidence:** high
 
 ### `structured_chokepoint_bridge_extension_note`
