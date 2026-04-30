@@ -18365,7 +18365,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T19:36:20.012398+00:00",
+  "generated_at": "2026-04-30T20:10:13.280205+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -18378,7 +18378,7 @@
       ],
       "note_hash": "b1a2460b82f9c0f7474d7dc2fec8e3e3fe85ca486c3a232a4fc98066118db0a3",
       "path": "docs/3D_CORRECTION_MASTER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/dispersion_3d_lattice.py",
       "title": "3D Correction Master Note"
     },
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
@@ -20038,7 +20038,7 @@
       "deps": [],
       "note_hash": "7353c18d547e13a31f8f335e32fd342c301c9151ce0d129d35970de2cb9d72f8",
       "path": "docs/BH_ENTROPY_DERIVED_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_bh_entropy_derived.py",
       "title": "Bekenstein-Hawking Entropy Derived from Lattice Entanglement"
     },
     "bh_entropy_rt_ratio_widom_no_go_note": {
@@ -20143,7 +20143,7 @@
       ],
       "note_hash": "54fe36635dcf878733d2afdf7fbbd6268ee26ab24c78bd23587dc4f6a63d9535",
       "path": "docs/BORN_SCATTERING_COMPARISON_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gaussian_beam_eikonal.py",
       "title": "Born/Eikonal Scattering Comparison with Lattice Lensing"
     },
     "bound_state_selection_note": {
@@ -20188,7 +20188,7 @@
       "deps": [],
       "note_hash": "24f1995261a63a84b7ce8a74a48553ca242ece34fa043512ca96092cbc291d97",
       "path": "docs/BRANCH_SUMMARY_DISTRACTED_NAPIER.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_2d3d_continuum_check.py",
       "title": "Branch Summary: claude/distracted-napier"
     },
     "breakthrough_direction_memo_2026-04-10": {
@@ -21790,7 +21790,7 @@
       "deps": [],
       "note_hash": "315ca5b3a46bb492169000069cff4d9b3ac5462f9813019ba2f4212187841892",
       "path": "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md",
-      "runner_path": "scripts/frontier_color_projection_mc.py",
+      "runner_path": "scripts/frontier_complete_prediction_chain.py",
       "title": "Complete Prediction Chain: Cl(3) on Z^3"
     },
     "complex_action_note": {
@@ -22502,7 +22502,7 @@
       "deps": [],
       "note_hash": "3081d398a8590778432e4232208189d92a79203d47050fc52b9d09a88162fa0e",
       "path": "docs/DISTRACTED_NAPIER_RECONCILIATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gap_ln_born_check.py",
       "title": "Distracted Napier Reconciliation Note"
     },
     "dm_abcc_assumptions_audit_note_2026-04-19": {
@@ -22725,7 +22725,7 @@
       ],
       "note_hash": "77849f2b1557b73ac9b92873f7daade80428b297845ad511c2037a63087d3567",
       "path": "docs/DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py",
       "title": "DM Flagship Gate \u2014 Open-Gate Review"
     },
     "dm_full_closure_same_surface_converged_thermal_selector_support_note_2026-04-16": {
@@ -25193,7 +25193,7 @@
       "deps": [],
       "note_hash": "b3cffa0ec4c2647043e175be5782bd7a8b205c55ecc56aa0e1bdcd4b2170d116",
       "path": "docs/EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_emergent_geometry.py",
       "title": "Emergent Geometry from Matter-Coupled Growth"
     },
     "emergent_lorentz_invariance_note": {
@@ -25698,7 +25698,7 @@
       "deps": [],
       "note_hash": "9430f19abd45f7834af28cc1954405da8741e5c57287ea1931838f88d8e1aa95",
       "path": "docs/GAP_PHYSICS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gap_stability_perturbation.py",
       "title": "Gap-as-Physics: Investigation Note"
     },
     "gate_b_complex_action_falsifier_note": {
@@ -25728,7 +25728,7 @@
       "deps": [],
       "note_hash": "214c0a877b2100bef0f2262cf3298fcf0c9747790342b68870b3d50b67d37906",
       "path": "docs/GATE_B_DYNAMICS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_connectivity_tolerance.py",
       "title": "Gate B: Evolving Network Dynamics \u2014 Current Status"
     },
     "gate_b_farfield_note": {
@@ -26046,7 +26046,7 @@
       ],
       "note_hash": "34bc7d50f7a962b243b62563f3ec23d7cfc06d95b69e585046cbe4153ee2025b",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py",
       "title": "Gauge-Vacuum Plaquette Scalar-Bridge Support"
     },
     "gauge_vacuum_plaquette_connected_hierarchy_theorem_note": {
@@ -26481,7 +26481,7 @@
       "deps": [],
       "note_hash": "34767fcadc05d91cfb1a7bfc7735caf76b8e336368db2d6c3a478adc1a5a7c88",
       "path": "docs/GRAPH_LAPLACIAN_CORE_CARD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_graph_kg_16card.py",
       "title": "Graph Laplacian KG Core Card Note"
     },
     "graph_phase_diagram_scout_note": {
@@ -27063,7 +27063,7 @@
       "deps": [],
       "note_hash": "6be076d91a8f79af6895637075b4249a1bb6b1d840fcca4b0679bcdef176e6ed",
       "path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_higgs_mass_corrected_yt.py",
       "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking"
     },
     "higgs_mass_hierarchy_correction_note": {
@@ -27150,7 +27150,7 @@
       "deps": [],
       "note_hash": "9d63166997ebd1218bbff448687a2723fc93f12701f8f791d0ae911b3de8d30b",
       "path": "docs/HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md",
-      "runner_path": "scripts/frontier_koide_cone_variational_principle_survey.py",
+      "runner_path": "scripts/frontier_higgs_dressed_propagator_v1.py",
       "title": "Higher-Order Structural Theorems on the Charged-Lepton Sector"
     },
     "higher_symmetry_gravity_probe_note": {
@@ -27411,7 +27411,7 @@
       ],
       "note_hash": "53acecacd9bad26f204dc2122675ccfe49636c61c677d865cca0b1719dbf1470",
       "path": "docs/HW1_SECOND_ORDER_RETURN_SHAPE_THEOREM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_hw1_second_order_return_shape_theorem.py",
       "title": "hw=1 Second-Order-Return Shape Theorem"
     },
     "hypercharge_identification_note": {
@@ -27617,7 +27617,7 @@
       "deps": [],
       "note_hash": "dc46dcf64399586c4d8bceba014b691278ab99ef4becffac464d5e4f221698d4",
       "path": "docs/KOIDE_A1_LOOP_FINAL_STATUS_2026-04-22.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_a1_quartic_potential_derivation.py",
       "title": "Koide A1 Investigation \u2014 Final Theoretical Status"
     },
     "koide_a1_loop_investigation_summary": {
@@ -27707,7 +27707,7 @@
       "deps": [],
       "note_hash": "5973b0282274912d6737789966df8231763411bc8a1e704b3ad4f0dd661825d7",
       "path": "docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_brannen_callan_harvey_candidate.py",
       "title": "Koide Brannen Callan-Harvey Candidate Note (2026-04-22)"
     },
     "koide_brannen_geometry_dirac_support_note_2026-04-22": {
@@ -27717,7 +27717,7 @@
       "deps": [],
       "note_hash": "0631e480646e11e1feb74c944360d89906344174619afe32c9df59efa9956ea8",
       "path": "docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_brannen_route3_geometry_support.py",
       "title": "Koide Brannen Geometry / Dirac Support Note (2026-04-22)"
     },
     "koide_brannen_phase_reduction_theorem_note_2026-04-20": {
@@ -27915,7 +27915,7 @@
       "deps": [],
       "note_hash": "5a483296676d28e1baec72ce89b044daa1f46a65de17bff3f85735a730663feb",
       "path": "docs/KOIDE_EXPLICIT_CALCULATIONS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_eta_lefschetz_spectral_flow.py",
       "title": "Koide Lane Explicit Calculations"
     },
     "koide_frobenius_isotype_split_uniqueness_note_2026-04-21": {
@@ -28273,7 +28273,7 @@
       "deps": [],
       "note_hash": "8e8ebae8330c501d1f42023e466e9428205f7432ca7406d286e9fae0663806c6",
       "path": "docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_Q_eq_3delta_identity.py",
       "title": "Koide Support Package \u2014 `Q = 2/3` and `\u03b4 = 2/9`"
     },
     "koide_q_delta_linking_relation_theorem_note_2026-04-20": {
@@ -28435,7 +28435,7 @@
       "deps": [],
       "note_hash": "266c12d348483987b6625a0305c0581e1f70301943d984ec20a3523c36f75bff",
       "path": "docs/KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_q_bridge_single_primitive.py",
       "title": "Koide April 22 Second-Order `Q` Support Batch"
     },
     "koide_q_so2_phase_erasure_support_note_2026-04-25": {
@@ -28716,7 +28716,7 @@
       ],
       "note_hash": "69eed60f9313a6f07ff50c5f167a186a016f2fb083508ae58d6602d02cdacd19",
       "path": "docs/lanes/action-law/README.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_3plus1d_closure_card.py",
       "title": "Action-Law Lane"
     },
     "lanes.active_working_lanes_2026-04-26": {
@@ -28773,7 +28773,7 @@
       ],
       "note_hash": "38c3705067e7d9aaeeb6f131e00536123e9b8fa3eac0dc80e80a77c605d965cf",
       "path": "docs/lanes/coin-walks/README.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_chiral_bottleneck_card.py",
       "title": "Coin / Chiral Walks Lane"
     },
     "lanes.controls.readme": {
@@ -28785,7 +28785,7 @@
       ],
       "note_hash": "0ec702fffba44aacf21bd6cef4c7c8eebecab35cf9a87ad1fac8dba1fd658247",
       "path": "docs/lanes/controls/README.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_graph_kg_16card.py",
       "title": "Controls Lane"
     },
     "lanes.generated-geometry.readme": {
@@ -28799,7 +28799,7 @@
       ],
       "note_hash": "1a669c7c6089a1caa74bb49455300193e4e513f097e306daf2e0b68ced5bf4f7",
       "path": "docs/lanes/generated-geometry/README.md",
-      "runner_path": null,
+      "runner_path": "scripts/gate_b_grown_joint_package.py",
       "title": "Generated-Geometry Lane"
     },
     "lanes.mirror.readme": {
@@ -28812,7 +28812,7 @@
       ],
       "note_hash": "1f3eeb05ddf393d0c6e3d8b9673fffc039015978a305e2b3d1d48ade847f35dd",
       "path": "docs/lanes/mirror/README.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_2d_validation.py",
       "title": "Mirror Lane"
     },
     "lanes.moonshots.readme": {
@@ -28826,7 +28826,7 @@
       ],
       "note_hash": "990c6478b55b4eee67981d57a42fda39d9d41081ab003190bbd97aa07dc35b0a",
       "path": "docs/lanes/moonshots/README.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_emergent_schwarzschild.py",
       "title": "Moonshots Lane"
     },
     "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26": {
@@ -28999,7 +28999,7 @@
       ],
       "note_hash": "e8ab65ae56a15d8617e2547cd770ddb67ab70c881d0beab8edc0d22f554299d2",
       "path": "docs/lanes/ordered-lattice/README.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_dense_10prop.py",
       "title": "Ordered-Lattice Lane"
     },
     "lanes.readme": {
@@ -29033,7 +29033,7 @@
       ],
       "note_hash": "d33c5fe28c83005c4e3bc8c13cd7dabe69d8232a98e36104608a1b244ed37596",
       "path": "docs/lanes/staggered/README.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_17card.py",
       "title": "Staggered Lane"
     },
     "lattice_3d_dense_refinement_reconciliation_note": {
@@ -29640,7 +29640,7 @@
       "deps": [],
       "note_hash": "299d5eff11589c5039ed9ab81b1a20af95edd98b9028ac28f2beb6e3225408e9",
       "path": "docs/MAIN_OPEN_CUBIC_VALIDATION_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_newton_reproduction.py",
       "title": "Main Open-Cubic Validation"
     },
     "mass_mixing_subspace_disjointness_theorem_note": {
@@ -29654,7 +29654,7 @@
       ],
       "note_hash": "d617d08234c08e998c2e073845936f33822fedd19ed4174047eef19dfc74037a",
       "path": "docs/MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_mass_mixing_disjointness_theorem.py",
       "title": "Mass and Mixing Subspace Disjointness on the hw=1 Triplet"
     },
     "mass_spectrum_derived_note": {
@@ -29954,7 +29954,7 @@
       "deps": [],
       "note_hash": "2cf7873f03b8e1733fbb0a70ba507909570c0c0f1415e86d04ef72d3f80e53c3",
       "path": "docs/MIRROR_GRAVITY_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_gravity_fixed_anchor.py",
       "title": "Mirror Gravity Probe Note"
     },
     "mirror_grown_combined_note": {
@@ -29974,7 +29974,7 @@
       "deps": [],
       "note_hash": "d91b7954ae3bba41814916d3325616d09e9fa5b0f674081c65621b05e15dc570",
       "path": "docs/MIRROR_MUTUAL_INFORMATION_CANONICAL_FAMILIES_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_mutual_information_canonical_families.py",
       "title": null
     },
     "mirror_mutual_information_chokepoint_note": {
@@ -30008,7 +30008,7 @@
       "deps": [],
       "note_hash": "2a06714e82e6591183ea5d03f4d04a009553e679a865921a3ed9cfb11d935af2",
       "path": "docs/MIRROR_PROGRAM_SYNTHESIS.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_born_audit.py",
       "title": "Mirror Symmetry Program: Complete Synthesis"
     },
     "mirror_vs_central_head_to_head_note": {
@@ -31224,7 +31224,7 @@
       "deps": [],
       "note_hash": "1507f7af0d07c10f8e65f19ca70058375f89eb8c07e7001c7e5eaad32d9b570a",
       "path": "docs/OLLIVIER_EINSTEIN_PROXY_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_ollivier_einstein.py",
       "title": "Ollivier Curvature Proxy Note"
     },
     "omega_lambda_derivation_note": {
@@ -31259,7 +31259,7 @@
       ],
       "note_hash": "e1fc5ac663fcb33118881c0e58accdba8c660c7b18b17266c8f0e590bae58f77",
       "path": "docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_right_handed_sector.py",
       "title": "One-Generation Matter Closure Note"
     },
     "one_parameter_reduced_shell_law_note": {
@@ -31348,7 +31348,7 @@
       ],
       "note_hash": "639575962bba10339dfd7c290f7e1c18e24a8a696e298078f651f1f0eaa67f14",
       "path": "docs/PERIODIC_2D_WRAPAROUND_FIX_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_self_consistency_test.py",
       "title": "Periodic 2D Wraparound Fix Note (2026-04-11)"
     },
     "persistent_inertial_object_probe_note": {
@@ -33387,7 +33387,7 @@
       ],
       "note_hash": "29e9de85d9898843bf454da6c15c0af6b646572f406796ebf60da1bd2c6a8514",
       "path": "docs/publication/ci3_z3/FIGURE_PLAN.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_graph_first_su3_integration.py",
       "title": "Figure Plan"
     },
     "publication.ci3_z3.full_claim_ledger": {
@@ -35711,7 +35711,7 @@
       "deps": [],
       "note_hash": "2b7ab48a549356227997505be645663a889c673daa7b87924deb73575327138e",
       "path": "docs/SCALAR_KG_RERUN_NOTE_2026-04-10.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_scalar_kg_16card_v2.py",
       "title": "Scalar KG Rerun Note"
     },
     "scalar_selector_cycle13_meta_closure_status_note_2026-04-19": {
@@ -35731,7 +35731,7 @@
       "deps": [],
       "note_hash": "783918b9f655200b3c14830019c363a5ff10f23ded18c9c18a80aea12efec6ea",
       "path": "docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_moment_ratio_uniformity_theorem.py",
       "title": "Scalar-Selector this cycle-10 Science Review Note"
     },
     "scalar_selector_full_stack_recovery_note_2026-04-19": {
@@ -35781,7 +35781,7 @@
       "deps": [],
       "note_hash": "ff99030502123e76c74bfb06ba7e6c4b7ffaaa66ea3ecc7e950093745c977589",
       "path": "docs/SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_z3_joint_projector_identity.py",
       "title": "Scalar-Selector Synthesis"
     },
     "scalar_tensor_ray_magnitude_bridge_note_2026-04-19": {
@@ -35951,7 +35951,7 @@
       "deps": [],
       "note_hash": "4dd8de258165f6f9171567e3f2ced93ea825d686c833e183b41b41e179929de1",
       "path": "docs/SESSION_SUMMARY_2026-04-04.md",
-      "runner_path": null,
+      "runner_path": "scripts/dimensional_gravity_card.py",
       "title": "Session Summary: 2026-04-04"
     },
     "session_synthesis_2026-04-09": {
@@ -35961,7 +35961,7 @@
       "deps": [],
       "note_hash": "f3fc6fd02820ca5ea164d1d710c1d37d5617ae5f529847832fe2608f846da6d8",
       "path": "docs/SESSION_SYNTHESIS_2026-04-09.md",
-      "runner_path": "scripts/frontier_geodesic_gravity_test.py",
+      "runner_path": "scripts/frontier_lorentzian_closure_card.py",
       "title": "Session Synthesis \u2014 2026-04-09"
     },
     "session_synthesis_2026-04-10_final": {
@@ -36511,7 +36511,7 @@
       "deps": [],
       "note_hash": "a5487152c493e33547da64bf728aec132487c8350717a3028385c11d71f17409",
       "path": "docs/SPECTRAL_CLOSURE_2026-04-09.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_spectral_on_lattice.py",
       "title": "Spectral Question \u2014 Closed"
     },
     "spectral_symmetry_note": {
@@ -36521,7 +36521,7 @@
       "deps": [],
       "note_hash": "47af9fcfd2eda33dea84dc791c60d197ba3203671c4a7aec0cef46474fd1b52d",
       "path": "docs/SPECTRAL_SYMMETRY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/ceiling_formal_proof.py",
       "title": "Spectral Symmetry: Graph Discrete Symmetry Controls Decoherence"
     },
     "spectral_trajectory_theorem_2026-04-11": {
@@ -36591,7 +36591,7 @@
       "deps": [],
       "note_hash": "3e943c1a4d995244edde06717d2ca7214d6277ade6966389358a24d0c6e90563",
       "path": "docs/STAGGERED_FERMION_CARD_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_staggered_17card.py",
       "title": "Staggered Fermion + Parity-Coupled Gravity \u2014 Complete Card"
     },
     "staggered_geometry_superposition_note_2026-04-11": {
@@ -36884,7 +36884,7 @@
       "deps": [],
       "note_hash": "5c097372cd6c2e6e5ce1e13c06d3ecfe27e664d0121bb3df5802202a7cdf3aa8",
       "path": "docs/STRUCTURED_MIRROR_JOINT_VALIDATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/structured_mirror_joint_validation.py",
       "title": null
     },
     "structured_mirror_reconciliation_note": {
@@ -37138,7 +37138,7 @@
       ],
       "note_hash": "efe15883b88e97c5caaac5f05f0aa19632fe12608d88209b809f4302b0417af1",
       "path": "docs/THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_generation_fermi_point.py",
       "title": "Three-Generation / Chirality Boundary Note"
     },
     "three_generation_observable_theorem_note": {
@@ -37167,7 +37167,7 @@
       ],
       "note_hash": "308ca6f60e4a77379eb283a4d36c898085ec9b96931e574aa7cb19c577b1b3fe",
       "path": "docs/THREE_GENERATION_STRUCTURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_generation_fermi_point.py",
       "title": "Three-Generation Matter Structure Note"
     },
     "triple_stack_collapse_scaling_note": {
@@ -38536,7 +38536,7 @@
       "deps": [],
       "note_hash": "5373d33a1048817ec9d1c34adc3f9ed2bb3afa97e22edae770c7d9db38877006",
       "path": "docs/WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_wilson_two_body_open.py",
       "title": "Wilson Two-Body Open-Lattice Note"
     },
     "wilson_two_body_open_refined_note_2026-04-11": {
@@ -39285,7 +39285,7 @@
       "deps": [],
       "note_hash": "a3f417899b37d74eec8858ac51321dbdedeaf87f88c7a8053c78afdc0cccb7e2",
       "path": "docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_yt_ew_coupling_derivation.py",
       "title": "y_t Bridge: EW Coupling Derivation and Sensitivity Analysis"
     },
     "yt_ew_delta_r_retention_analysis_note_2026-04-18": {
@@ -41172,7 +41172,7 @@
     "leaf_count": 721,
     "node_count": 1655,
     "root_count": 1178,
-    "runners_with_path": 1172,
+    "runners_with_path": 1220,
     "status_counts": {
       "bounded": 446,
       "open": 48,

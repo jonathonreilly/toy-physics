@@ -37,14 +37,14 @@ PASS_COUNT = 0
 FAIL_COUNT = 0
 
 
-def check(name: str, condition: bool, detail: str = "") -> bool:
+def check(name: str, condition: bool, detail: str = "", cls: str = "C") -> bool:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
         PASS_COUNT += 1
     else:
         FAIL_COUNT += 1
-    msg = f"  [{status}] {name}"
+    msg = f"  [{cls}] {status}: {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)
@@ -205,6 +205,7 @@ def part3_the_canonical_ne_active_block_selects_the_middle_column(
         "That exact middle-column selection is the same near-closing column previously seen in the pair-interface diagnostic",
         abs(eta_vals[best_idx] - 0.9895125971972334) < 1e-8,
         f"eta/eta_obs={eta_vals[best_idx]:.12f}",
+        cls="D",
     )
 
     print()
@@ -254,7 +255,7 @@ def main() -> int:
     part4_bottom_line()
 
     print("\n" + "=" * 88)
-    print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
+    print(f"SUMMARY: classified_pass={PASS_COUNT} fail={FAIL_COUNT}")
     print("=" * 88)
     return 0 if FAIL_COUNT == 0 else 1
 
