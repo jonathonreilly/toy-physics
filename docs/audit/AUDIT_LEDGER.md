@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:32:04.421039+00:00
+**Generated:** 2026-04-30T22:33:55.819615+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 82 |
 | _proposed_retained_ | 5 |
 | bounded | 278 |
-| support | 243 |
+| support | 242 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 748 |
+| ~~audited_conditional~~ | 749 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 215 |
-| `audited_conditional` | 470 |
+| `audited_conditional` | 471 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 787 |
+| `unaudited` | 786 |
 
 | criticality | count |
 |---|---:|
@@ -499,6 +499,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_selector_shifted_doublet_imag_sign_support_theorem_note_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_selector_threshold_stabilization_support_theorem_note_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dm_split2_interval_certified_dominance_closure_theorem_note_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_note_2026-04-19` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -4862,6 +4863,24 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a support note whose executable closure is pending.
 - **auditor confidence:** medium
+
+### `dm_split2_interval_certified_dominance_closure_theorem_note_2026-04-21`
+
+- **Note:** [`DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`](../../docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-28`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Weyl-separated eigenvalue intervals, cofactor projector-row intervals, and the exact one-variable transport kernel certify eta/eta_obs < 1 on the entire CAP_BOX and ENDPOINT_BOX residual split-2 neighborhoods, closing the carrier-side dominance/completeness blocker.  _(class `B`)_
+- **chain closes:** False — The runner gives a reproducible interval certificate below transport closure on the two supplied boxes, but the theorem depends on upstream authorities for the split-2 affine chart, q_floor, residual-box localization, and active source-surface construction. Those inputs are not all audited clean or registered as one-hop dependencies.
+- **rationale:** Issue: the interval arithmetic closes the supplied CAP_BOX and ENDPOINT_BOX calculations, but the carrier-side closure claim imports the residual-box localization, split-2 affine/source chart, q_floor branch law, and transport surface from upstream branch machinery. Why this blocks: eta/eta_obs < 1 on the two boxes is only decisive if those boxes exhaust the residual carrier-side pressure and if the active-affine/q_floor source map is already clean; the relevant active-affine source-surface authority is audited_conditional, and the row has no registered dependencies. Repair target: audit-clean or inline the split-2 box localization, active-affine source-surface/q_floor construction, and response-to-transport functional authority, then register them as explicit dependencies and rerun this interval verifier. Claim boundary until fixed: conditional interval certificate that, given the supplied CAP_BOX/ENDPOINT_BOX, split-2 affine generators, and transport kernel, all rowwise eta upper bounds remain strictly below 1 with the stated margins.
+- **open / conditional deps cited:**
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md`
+  - `scripts/frontier_dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate.py`
+  - `residual_box_exhaustion_authority`
+- **auditor confidence:** high
 
 ### `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15`
 
