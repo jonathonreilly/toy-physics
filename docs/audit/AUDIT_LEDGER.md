@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:55:46.009365+00:00
+**Generated:** 2026-04-30T02:57:03.382634+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
-| bounded | 202 |
+| bounded | 201 |
 | support | 101 |
 | open | 24 |
 | unknown | 504 |
@@ -29,7 +29,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
 | ~~audited_conditional~~ | 394 |
-| ~~audited_failed~~ | 164 |
+| ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
@@ -37,10 +37,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 82 |
 | `audited_conditional` | 177 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 52 |
+| `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1240 |
+| `unaudited` | 1239 |
 
 | criticality | count |
 |---|---:|
@@ -383,6 +383,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `if_program_closing_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `inverse_problem_graph_requirements_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `kernel_vs_gravity_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `koide_axiom_native_support_batch_note_2026-04-22` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `localized_source_response_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_annular_tapered_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -2852,6 +2853,23 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `fractional_topology_no_go_probe_bundle_not_registered`
   - `equivariant_index_A1_no_go_authority_not_registered`
   - `minimal_heat_kernel_multitrace_no_go_authority_not_registered`
+- **auditor confidence:** high
+
+### `koide_axiom_native_support_batch_note_2026-04-22`
+
+- **Note:** [`KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md`](../../docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The batch advertises an integrated regression runner and support stack for the enlarged Koide lane, while maintaining that Q, delta, and v0 remain support-only and not closed.  _(class `C`)_
+- **chain closes:** False — The note's scoped support boundary is honest, but the listed integrated regression currently exits nonzero because frontier_koide_q_so2_phase_erasure_support.py fails 1 of 23 checks.
+- **rationale:** Issue: the executable support batch is stale relative to its integrated regression. Why this blocks: python3 scripts/frontier_koide_lane_regression.py reports TOTAL 380/381 and exits with failure; the failing subrunner is frontier_koide_q_so2_phase_erasure_support.py, where the onsite source-domain synthesis boundary check fails and the closeout prints KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT=FALSE. Repair target: update the stale source-domain prose/check or the support runner expectation, rerun the integrated regression to 381/381, and only then treat this as bounded support. Claim boundary until fixed: the batch remains a collection of candidate/support tools, but its integrated support-stack claim is not current.
+- **open / conditional deps cited:**
+  - `KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`
+  - `KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE_2026-04-25.md`
+  - `KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
+  - `KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md`
 - **auditor confidence:** high
 
 ### `koide_berry_phase_theorem_note_2026-04-19`

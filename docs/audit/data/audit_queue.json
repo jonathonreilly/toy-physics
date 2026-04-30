@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 41,
-    "high": 252,
+    "high": 251,
     "leaf": 608,
     "medium": 340
   },
-  "generated_at": "2026-04-30T02:55:45.826702+00:00",
+  "generated_at": "2026-04-30T02:57:03.168929+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1165,23 +1165,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 31
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_axiom_native_support_batch_note_2026-04-22",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 5,
-      "load_bearing_score": 8.522,
-      "note_path": "docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 64
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -26023,6 +26006,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 799,
-  "total_pending": 1241
+  "ready_count": 798,
+  "total_pending": 1240
 }
