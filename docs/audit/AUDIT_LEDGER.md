@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:57:29.786773+00:00
+**Generated:** 2026-04-30T18:57:39.438223+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
 | bounded | 346 |
-| support | 272 |
+| support | 271 |
 | open | 19 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 602 |
+| ~~audited_conditional~~ | 603 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 116 |
-| `audited_conditional` | 316 |
+| `audited_conditional` | 317 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1043 |
+| `unaudited` | 1042 |
 
 | criticality | count |
 |---|---:|
@@ -394,6 +394,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higher_order_structural_theorems_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_planck_c1_gate_audit_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `impact_parameter_lensing_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `impact_parameter_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4755,6 +4756,25 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **open / conditional deps cited:**
   - `HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md`
 - **auditor confidence:** high
+
+### `hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26`
+
+- **Note:** [`HUBBLE_LANE5_COSMIC_HISTORY_RATIO_NECESSITY_NO_GO_NOTE_2026-04-26.md`](../../docs/HUBBLE_LANE5_COSMIC_HISTORY_RATIO_NECESSITY_NO_GO_NOTE_2026-04-26.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-linnaeus-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** By §2 and §3, Lane 5 closure requires both a C1 absolute-scale premise and a C2 or C3 dimensionless-L premise.  _(class `B`)_
+- **chain closes:** False — The dimensional C1 necessity is plausible from the source note, but the stronger L/no-fourth-class taxonomy relies on unprovided cosmology and open-number authorities while ledger deps are empty. The full chain therefore does not close from the restricted inputs alone.
+- **rationale:** Issue: the no-go's exhaustive C1/C2/C3 closure taxonomy imports the open-number reduction theorem, bounded cosmology cascade, scale bridge, and Planck-lane status without ledger one-hop deps or a runner. Why this blocks: a hostile reviewer cannot verify from the restricted source note alone that no fourth L route exists or that every L derivation must pass through the listed cosmic-history ratios. Repair target: add the cited authorities as ledger deps or provide a self-contained structural theorem/runner establishing the exhaustive case split. Claim boundary until fixed: support-level program taxonomy and dimensional-analysis warning, not an audited closed no-go.
+- **open / conditional deps cited:**
+  - `MINIMAL_AXIOMS_2026-04-11.md`
+  - `COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md`
+  - `OMEGA_LAMBDA_DERIVATION_NOTE.md`
+  - `COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md`
+  - `OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md`
+  - `PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md`
+- **auditor confidence:** medium
 
 ### `hubble_lane5_planck_c1_gate_audit_note_2026-04-26`
 
