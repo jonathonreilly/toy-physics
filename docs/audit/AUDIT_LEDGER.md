@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:51:42.941527+00:00
+**Generated:** 2026-04-30T22:53:06.161374+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 219 |
+| `audited_clean` | 220 |
 | `audited_conditional` | 476 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 775 |
+| `unaudited` | 774 |
 
 | criticality | count |
 |---|---:|
@@ -302,6 +302,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_newton_reproduction_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `two_sign_comparison_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
+| `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_retardation_lab_prediction_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -11313,6 +11314,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `finite_atlas_transition_cocycle`
   - `chartwise_K_GR_nondegeneracy`
   - `global_source_field_pairing_patch`
+- **auditor confidence:** high
+
+### `universal_gr_lorentzian_signature_extension_note`
+
+- **Note:** [`UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md`](../../docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-40`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** On the Lorentzian class, H_D is no longer positive definite; H_D remains exactly nondegenerate; therefore K_GR(D) remains exactly nondegenerate, so F_* = K_GR(D)^-1 J exists uniquely.  _(class `A`)_
+- **chain closes:** True — At support scope, the note only extends the local algebra from positive definite to nondegenerate Lorentzian backgrounds. Nondegeneracy is preserved by the stated congruence-covariant Hessian and tensoring with the positive slice generator, while the note explicitly withholds the stronger global solution-class claim.
+- **rationale:** Clean at the declared support boundary. The result is an algebraic signature-class extension: positivity is not needed for the local bilinear form to be defined or nondegenerate, only for convexity, and the note does not promote this to global Lorentzian GR closure. Residual risk is scope drift: downstream rows must not cite this as a global solution theorem or as physical Lorentzian-background selection.
 - **auditor confidence:** high
 
 ### `universal_qg_canonical_refinement_net_note`
