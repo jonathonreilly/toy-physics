@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 237,
-    "leaf": 499,
+    "leaf": 498,
     "medium": 347
   },
-  "generated_at": "2026-04-30T15:16:55.935853+00:00",
+  "generated_at": "2026-04-30T15:16:59.524395+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -14924,23 +14924,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dispersion_high_p_tiebreaker_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DISPERSION_HIGH_P_TIEBREAKER_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "distance_law_breakpoint_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -23058,6 +23041,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 680,
-  "total_pending": 1092
+  "ready_count": 679,
+  "total_pending": 1091
 }
