@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 41,
-    "high": 272,
+    "high": 271,
     "leaf": 608,
     "medium": 340
   },
-  "generated_at": "2026-04-30T02:42:41.652090+00:00",
+  "generated_at": "2026-04-30T02:42:45.099689+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1165,23 +1165,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 31
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 7.228,
-      "note_path": "docs/DM_NEUTRINO_ODD_CIRCULANT_Z2_SLOT_THEOREM_NOTE_2026-04-15.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_odd_circulant_z2_slot_theorem.py",
-      "transitive_descendants": 105
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -26367,6 +26350,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 819,
-  "total_pending": 1261
+  "ready_count": 818,
+  "total_pending": 1260
 }

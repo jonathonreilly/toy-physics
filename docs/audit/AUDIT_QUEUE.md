@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T02:42:41.652090+00:00
-**Total pending:** 1261
-**Ready (all deps already at a stable tier):** 819
+**Generated:** 2026-04-30T02:42:45.099689+00:00
+**Total pending:** 1260
+**Ready (all deps already at a stable tier):** 818
 
 By criticality:
 - `critical`: 41
-- `high`: 272
+- `high`: 271
 - `medium`: 340
 - `leaf`: 608
 
@@ -57,14 +57,14 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 39 | `n_eff_from_three_generations_theorem_note_2026-04-24` | critical | 38 | 13.29 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_n_eff_from_three_generations.py` |
 | 40 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | critical | 38 | 12.79 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_matter_radiation_equality_structural_identity.py` |
 | 41 | `publication.ci3_z3.publication_matrix` | critical | 31 | 12.50 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 42 | `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15` | high | 105 | 7.23 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_odd_circulant_z2_slot_theorem.py` |
-| 43 | `dm_neutrino_odd_mixed_bridge_extension_note_2026-04-15` | high | 105 | 7.23 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_odd_mixed_bridge_extension.py` |
-| 44 | `dm_neutrino_source_amplitude_theorem_note_2026-04-15` | high | 104 | 8.71 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_source_amplitude_theorem.py` |
-| 45 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | high | 104 | 7.71 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_weak_triplet_coefficient_axiom_boundary.py` |
-| 46 | `dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16` | high | 103 | 7.70 | Y | fresh_context_or_stronger | `scripts/frontier_dm_leptogenesis_pmns_transport_extremal_source_candidate.py` |
-| 47 | `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16` | high | 103 | 7.20 | Y | fresh_context_or_stronger | `scripts/frontier_dm_leptogenesis_transport_decomposition_theorem.py` |
-| 48 | `dm_leptogenesis_transport_integral_theorem_note_2026-04-16` | high | 103 | 7.20 | Y | fresh_context_or_stronger | `scripts/frontier_dm_leptogenesis_transport_integral_theorem.py` |
-| 49 | `dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16` | high | 102 | 8.19 | Y | fresh_context_or_stronger | `scripts/frontier_dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem.py` |
-| 50 | `strong_cp_theta_zero_note` | high | 97 | 13.62 | Y | fresh_context_or_stronger | `scripts/frontier_strong_cp_theta_zero.py` |
+| 42 | `dm_neutrino_odd_mixed_bridge_extension_note_2026-04-15` | high | 105 | 7.23 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_odd_mixed_bridge_extension.py` |
+| 43 | `dm_neutrino_source_amplitude_theorem_note_2026-04-15` | high | 104 | 8.71 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_source_amplitude_theorem.py` |
+| 44 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | high | 104 | 7.71 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_weak_triplet_coefficient_axiom_boundary.py` |
+| 45 | `dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16` | high | 103 | 7.70 | Y | fresh_context_or_stronger | `scripts/frontier_dm_leptogenesis_pmns_transport_extremal_source_candidate.py` |
+| 46 | `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16` | high | 103 | 7.20 | Y | fresh_context_or_stronger | `scripts/frontier_dm_leptogenesis_transport_decomposition_theorem.py` |
+| 47 | `dm_leptogenesis_transport_integral_theorem_note_2026-04-16` | high | 103 | 7.20 | Y | fresh_context_or_stronger | `scripts/frontier_dm_leptogenesis_transport_integral_theorem.py` |
+| 48 | `dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16` | high | 102 | 8.19 | Y | fresh_context_or_stronger | `scripts/frontier_dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem.py` |
+| 49 | `strong_cp_theta_zero_note` | high | 97 | 13.62 | Y | fresh_context_or_stronger | `scripts/frontier_strong_cp_theta_zero.py` |
+| 50 | `dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17` | high | 84 | 9.91 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_source_surface_parity_compatible_observable_selector_theorem.py` |
 
 Full queue lives in `data/audit_queue.json`.
