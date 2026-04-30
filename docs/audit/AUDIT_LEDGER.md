@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T11:16:19.264430+00:00
+**Generated:** 2026-04-30T11:40:49.131163+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -28,36 +28,36 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 53 |
-| ~~audited_conditional~~ | 424 |
+| ~~audited_conditional~~ | 426 |
 | ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 191 |
+| `audited_conditional` | 192 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1185 |
+| `unaudited` | 1186 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 73 |
 | `high` | 333 |
-| `medium` | 383 |
-| `leaf` | 763 |
+| `medium` | 384 |
+| `leaf` | 764 |
 
 - **Proposed claims demoted by upstream:** 156
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
 
-- runners classified: 734
+- runners classified: 736
 - runners with (C) first-principles compute hits: 442
-- runners with (D) external comparator hits: 211
-- decoration candidates (no C, no D): 72
+- runners with (D) external comparator hits: 212
+- decoration candidates (no C, no D): 73
 
 ## Top 25 by load-bearing score (topology only)
 
@@ -65,30 +65,30 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | criticality | desc | score | audit_status | effective |
 |---:|---|---|---:|---:|---|---|
-| 1 | `alpha_s_derived_note` | critical | 238 | 28.90 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 111 | 28.81 | `unaudited` | ~~audited_conditional~~ |
-| 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 112 | 28.32 | `unaudited` | ~~audited_conditional~~ |
-| 4 | `yt_ward_identity_derivation_theorem` | critical | 285 | 27.66 | `audited_renaming` | ~~audited_renaming~~ |
-| 5 | `observable_principle_from_axiom_note` | critical | 227 | 25.83 | `audited_conditional` | ~~audited_conditional~~ |
+| 1 | `alpha_s_derived_note` | critical | 239 | 29.41 | `audited_conditional` | ~~audited_conditional~~ |
+| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 113 | 28.83 | `unaudited` | ~~audited_conditional~~ |
+| 3 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 112 | 28.82 | `unaudited` | ~~audited_conditional~~ |
+| 4 | `yt_ward_identity_derivation_theorem` | critical | 287 | 27.67 | `audited_renaming` | ~~audited_renaming~~ |
+| 5 | `observable_principle_from_axiom_note` | critical | 229 | 25.84 | `audited_conditional` | ~~audited_conditional~~ |
 | 6 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 99 | 23.64 | `unaudited` | ~~audited_conditional~~ |
 | 7 | `yt_ew_color_projection_theorem` | critical | 110 | 22.29 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `three_generation_observable_theorem_note` | critical | 276 | 21.61 | `unaudited` | ~~audited_conditional~~ |
-| 9 | `three_generation_structure_note` | critical | 246 | 20.95 | `unaudited` | ~~audited_conditional~~ |
-| 10 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 110 | 20.79 | `unaudited` | ~~audited_conditional~~ |
-| 11 | `one_generation_matter_closure_note` | critical | 240 | 20.41 | `unaudited` | ~~audited_conditional~~ |
-| 12 | `graph_first_su3_integration_note` | critical | 286 | 19.66 | `audited_clean` | **retained** |
+| 8 | `three_generation_observable_theorem_note` | critical | 278 | 21.62 | `unaudited` | ~~audited_conditional~~ |
+| 9 | `three_generation_structure_note` | critical | 247 | 20.95 | `unaudited` | ~~audited_conditional~~ |
+| 10 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 111 | 20.81 | `unaudited` | ~~audited_conditional~~ |
+| 11 | `one_generation_matter_closure_note` | critical | 241 | 20.42 | `unaudited` | ~~audited_conditional~~ |
+| 12 | `graph_first_su3_integration_note` | critical | 288 | 19.68 | `audited_clean` | **retained** |
 | 13 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 91 | 19.52 | `unaudited` | ~~audited_conditional~~ |
 | 14 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 41 | 18.39 | `audited_clean` | **retained** |
 | 15 | `minimal_axioms_2026-04-11` | critical | 103 | 17.70 | `unaudited` | ~~audited_renaming~~ |
-| 16 | `left_handed_charge_matching_note` | critical | 247 | 17.45 | `unaudited` | ~~audited_conditional~~ |
-| 17 | `anomaly_forces_time_theorem` | critical | 243 | 17.43 | `unaudited` | ~~audited_conditional~~ |
+| 16 | `left_handed_charge_matching_note` | critical | 248 | 17.46 | `unaudited` | ~~audited_conditional~~ |
+| 17 | `anomaly_forces_time_theorem` | critical | 244 | 17.44 | `unaudited` | ~~audited_conditional~~ |
 | 18 | `ckm_atlas_axiom_closure_note` | critical | 72 | 17.19 | `unaudited` | ~~audited_conditional~~ |
-| 19 | `native_gauge_closure_note` | critical | 282 | 16.64 | `unaudited` | ~~audited_conditional~~ |
-| 20 | `plaquette_self_consistency_note` | critical | 288 | 16.18 | `unaudited` | ~~audited_conditional~~ |
+| 19 | `native_gauge_closure_note` | critical | 284 | 16.66 | `unaudited` | ~~audited_conditional~~ |
+| 20 | `plaquette_self_consistency_note` | critical | 290 | 16.18 | `unaudited` | ~~audited_conditional~~ |
 | 21 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 116 | 15.87 | `unaudited` | ~~audited_renaming~~ |
-| 22 | `physical_lattice_necessity_note` | critical | 272 | 15.59 | `unaudited` | ~~audited_renaming~~ |
+| 22 | `physical_lattice_necessity_note` | critical | 274 | 15.60 | `unaudited` | ~~audited_renaming~~ |
 | 23 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 125 | 15.48 | `unaudited` | ~~audited_conditional~~ |
-| 24 | `site_phase_cube_shift_intertwiner_note` | critical | 279 | 15.13 | `audit_in_progress` | support |
+| 24 | `site_phase_cube_shift_intertwiner_note` | critical | 281 | 15.14 | `audit_in_progress` | support |
 | 25 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | critical | 124 | 14.97 | `unaudited` | ~~audited_conditional~~ |
 
 
@@ -227,6 +227,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_h025_farfield_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gate_b_strong_field_observable_split_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_scalar_temporal_completion_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_bridge_support_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -2045,6 +2046,22 @@ Repair target: supply and audit a theorem deriving the interacting plaquette exp
 Claim boundary until fixed: safe to claim the conditional exact temporal-completion law on the accepted Wilson local gauge-source class, not full plaquette observable closure.
 - **open / conditional deps cited:**
   - `observable_level_interacting_plaquette_to_local_response_reduction_missing`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_bridge_support_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The bridge is materially stronger, but not fully closed; the missing closure is the boundary character data rho_(p,q)(6) of the unmarked Wilson environment.  _(class `B`)_
+- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md, SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md, GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md.
+- **rationale:** Issue: The load-bearing step still imports unratified direct authority: GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md, SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md, GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
+- **open / conditional deps cited:**
+  - `GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md`
+  - `SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md`
+  - `GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_connected_hierarchy_theorem_note`

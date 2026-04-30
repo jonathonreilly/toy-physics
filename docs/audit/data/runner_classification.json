@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T11:16:18.805722+00:00",
+  "generated_at": "2026-04-30T11:40:48.642266+00:00",
   "per_claim": {
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "assert_count": 0,
@@ -1080,6 +1080,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "frontier_critical_exponents.py"
+    },
+    "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8.py"
     },
     "cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25": {
       "assert_count": 1,
@@ -6853,6 +6865,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_pmns_three_flux_holonomy_closure.py"
     },
+    "pmns_three_identity_q_koide_from_v8_support_lift_theorem_note_2026-04-29": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_pmns_three_identity_q_koide_from_v8_support_lift.py"
+    },
     "pmns_twisted_flux_transfer_holonomy_boundary_note": {
       "assert_count": 1,
       "counts": {
@@ -10696,6 +10720,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8.py": {
+      "assert_count": 0,
+      "claims": [
+        "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_dark_energy_eos.py": {
@@ -17678,6 +17717,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_pmns_three_identity_q_koide_from_v8_support_lift.py": {
+      "assert_count": 0,
+      "claims": [
+        "pmns_three_identity_q_koide_from_v8_support_lift_theorem_note_2026-04-29"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_pmns_twisted_flux_transfer_holonomy_boundary.py": {
       "assert_count": 1,
       "claims": [
@@ -20045,16 +20099,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 72,
+    "decoration_candidates": 73,
     "dominant_class_distribution": {
       "A": 6,
-      "B": 109,
+      "B": 111,
       "C": 358,
       "D": 121,
       "none": 140
     },
-    "runners_classified": 734,
+    "runners_classified": 736,
     "runners_with_C": 442,
-    "runners_with_D": 211
+    "runners_with_D": 212
   }
 }
