@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-30T19:16:05.204683+00:00",
+  "computed_at": "2026-04-30T19:16:11.496756+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -36,14 +36,13 @@
     "retained": 81,
     "support": 299
   },
-  "proposed_demoted_by_upstream_count": 132,
+  "proposed_demoted_by_upstream_count": 131,
   "proposed_demoted_by_upstream_examples": [
     "area_law_quarter_broader_no_go_note_2026-04-25",
     "atomic_hydrogen_helium_probe_note",
     "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
     "bh_entropy_rt_ratio_widom_no_go_note",
     "bminusl_anomaly_freedom_theorem_note_2026-04-24",
-    "causal_impact_parameter_note",
     "charged_lepton_koide_cone_algebraic_equivalence_note",
     "charged_lepton_mass_hierarchy_review_note_2026-04-17",
     "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
@@ -62,6 +61,7 @@
     "ckm_compound_magnitudes_circumradius_bridge_theorem_note_2026-04-25",
     "ckm_cp_product_alpha_s_cross_sector_extraction_theorem_note_2026-04-25",
     "ckm_cubic_bernoulli_koide_bridge_support_note_2026-04-25",
-    "ckm_ew_lattice_a4_bridge_retained_identity_note_2026-04-25"
+    "ckm_ew_lattice_a4_bridge_retained_identity_note_2026-04-25",
+    "ckm_first_row_magnitudes_theorem_note_2026-04-24"
   ]
 }

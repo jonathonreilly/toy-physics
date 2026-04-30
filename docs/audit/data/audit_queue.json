@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 480,
+    "leaf": 479,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:16:05.244652+00:00",
+  "generated_at": "2026-04-30T19:16:11.537107+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20481,26 +20481,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "causal_impact_parameter_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "causal_field_portability_note",
-        "causal_field_reconciliation_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/CAUSAL_IMPACT_PARAMETER_NOTE.md",
-      "ready": false,
-      "runner_path": "scripts/causal_impact_parameter_probe.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21552,5 +21532,5 @@
     }
   ],
   "ready_count": 614,
-  "total_pending": 1006
+  "total_pending": 1005
 }

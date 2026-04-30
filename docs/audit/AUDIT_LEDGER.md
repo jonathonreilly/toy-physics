@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:16:05.403013+00:00
+**Generated:** 2026-04-30T19:16:11.694837+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,12 +33,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 132 |
-| `audited_conditional` | 336 |
+| `audited_conditional` | 337 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1006 |
+| `unaudited` | 1005 |
 
 | criticality | count |
 |---|---:|
@@ -47,7 +47,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 381 |
 | `leaf` | 769 |
 
-- **Proposed claims demoted by upstream:** 132
+- **Proposed claims demoted by upstream:** 131
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -271,6 +271,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `causal_escape_window_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_field_canonical_chain_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_field_reconciliation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `causal_impact_parameter_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_moving_unification_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_source_placement_robustness_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `central_band_born_dense_sweep_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1547,6 +1548,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** False — No. The runner exits zero, but the audit classifier records no A/B/C/D PASS checks for a load-bearing audit surface.
 - **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a bounded note with executable but unratified support.
 - **auditor confidence:** medium
+
+### `causal_impact_parameter_note`
+
+- **Note:** [`CAUSAL_IMPACT_PARAMETER_NOTE.md`](../../docs/CAUSAL_IMPACT_PARAMETER_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** The finite-cone variant is the boundary.  _(class `B`)_
+- **chain closes:** False — No. One-hop dependencies are not all retained (causal_field_portability_note=support, causal_field_reconciliation_note=audited_conditional), so the chain does not close under the leaf audit rule.
+- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (causal_field_portability_note=support, causal_field_reconciliation_note=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared proposed_retained tier with the upstream dependency condition attached.
+- **open / conditional deps cited:**
+  - `CAUSAL_FIELD_PORTABILITY_NOTE.md`
+  - `CAUSAL_FIELD_RECONCILIATION_NOTE.md`
+- **auditor confidence:** high
 
 ### `causal_moving_unification_note`
 
