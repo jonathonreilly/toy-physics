@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-29T23:17:35.538697+00:00
+**Generated:** 2026-04-30T00:52:12.938014+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,25 +22,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 78 |
 | _proposed_retained_ | 12 |
 | bounded | 215 |
-| support | 115 |
-| open | 25 |
-| unknown | 565 |
+| support | 108 |
+| open | 24 |
+| unknown | 560 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 425 |
+| ~~audited_conditional~~ | 438 |
 | ~~audited_failed~~ | 89 |
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 14 |
+| `audit_in_progress` | 1 |
 | `audited_clean` | 78 |
-| `audited_conditional` | 132 |
+| `audited_conditional` | 145 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 50 |
-| `audited_numerical_match` | 7 |
-| `audited_renaming` | 8 |
-| `unaudited` | 1296 |
+| `audited_numerical_match` | 12 |
+| `audited_renaming` | 9 |
+| `unaudited` | 1290 |
 
 | criticality | count |
 |---|---:|
@@ -80,7 +80,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 13 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 94 | 23.57 | `unaudited` | ~~audited_conditional~~ |
 | 14 | `left_handed_charge_matching_note` | critical | 265 | 21.55 | `unaudited` | ~~audited_conditional~~ |
 | 15 | `anomaly_forces_time_theorem` | critical | 261 | 21.53 | `unaudited` | ~~audited_conditional~~ |
-| 16 | `minimal_axioms_2026-04-11` | critical | 109 | 21.28 | `unaudited` | ~~audited_renaming~~ |
+| 16 | `minimal_axioms_2026-04-11` | critical | 109 | 21.28 | `audited_renaming` | ~~audited_renaming~~ |
 | 17 | `ckm_atlas_axiom_closure_note` | critical | 75 | 21.25 | `unaudited` | ~~audited_conditional~~ |
 | 18 | `native_gauge_closure_note` | critical | 289 | 20.68 | `unaudited` | ~~audited_conditional~~ |
 | 19 | `plaquette_self_consistency_note` | critical | 294 | 20.20 | `unaudited` | ~~audited_conditional~~ |
@@ -97,19 +97,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
-| `gauge_vacuum_plaquette_framework_point_underdetermination_note` | support | audit_in_progress | support | - | - | - | - |
-| `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | unknown | audit_in_progress | unknown | - | - | - | - |
-| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open | audit_in_progress | open | - | - | - | - |
-| `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | unknown | audit_in_progress | unknown | - | - | - | - |
-| `gauge_vacuum_plaquette_perron_reduction_theorem_note` | support | audit_in_progress | support | - | - | - | - |
-| `gauge_vacuum_plaquette_reduction_existence_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
-| `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | audit_in_progress | support | - | - | - | - |
-| `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note` | support | audit_in_progress | support | - | - | - | - |
-| `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | support | audit_in_progress | support | - | - | - | - |
-| `gauge_vacuum_plaquette_spectral_measure_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
-| `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
-| `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | support | audit_in_progress | support | - | - | - | - |
-| `scalar_3plus1_temporal_ratio_note` | support | audit_in_progress | support | - | - | - | - |
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -223,8 +210,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `gauge_vacuum_plaquette_framework_point_underdetermination_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_perron_reduction_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_reduction_existence_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_spectral_measure_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `graph_first_selector_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -280,6 +279,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retarded_field_compact_refinement_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `s3_taste_cube_decomposition_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `s3_time_bilinear_tensor_action_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `scalar_3plus1_temporal_ratio_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -378,6 +378,11 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
+| `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
+| `quark_projector_ray_phase_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
+| `quark_up_amplitude_candidate_scan_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
+| `quark_up_amplitude_native_affine_no_go_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
+| `quark_up_amplitude_native_expression_scan_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `tensor_support_center_excess_law_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -385,6 +390,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `g_bare_rigidity_theorem_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `higgs_mass_from_axiom_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
+| `minimal_axioms_2026-04-11` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | E | - |
 | `s3_time_bilinear_tensor_primitive_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_qg_optional_textbook_comparison_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
@@ -1725,6 +1731,48 @@ Claim boundary until fixed: safe to claim the constant-lift obstruction Gamma_ca
   - `GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
+### `gauge_vacuum_plaquette_framework_point_underdetermination_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** There exist distinct real-analytic strictly increasing witness laws on [0,6] that share the exact closed onset jet through order beta^5 but produce different framework-point values, hence different candidate plaquettes after composition with P_1plaq.  _(class `A`)_
+- **chain closes:** False — The algebraic obstruction closes as a support theorem, but the source row is current_status=support, so it cannot be ratified as audited_clean by the audit lane.
+- **rationale:** Issue: the note's witness-law obstruction is framed on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: a clean audit here would promote a support row beyond its declared tier even though the note explicitly leaves analytic P(6) open. Repair target: if this exact obstruction is intended to be tier-ratified, update the source note boundary to proposed_retained/proposed_promoted and re-run a fresh audit. Claim boundary until fixed: the witness construction may be used as support-level evidence that the current finite jet does not force P(6), but it is not an audit-clean retained claim.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** If the full diagonal connected hierarchy truncated at finite order, K_L(t) would be a polynomial and therefore P_L(t)=K_L'(t)/N_plaq would be a polynomial with a finite limit at infinity, forcing it to be constant, contradicting P_L(0)=0 and lim P_L(t)=1.  _(class `A`)_
+- **chain closes:** False — The polynomial-truncation obstruction closes algebraically, but the source row is current_status=unknown, so the audit lane cannot ratify it as audited_clean.
+- **rationale:** Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: finite-order hierarchy truncation is ruled out as an exact obstruction, while explicit nonpolynomial closure of P(6) remains open.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_local_environment_factorization_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** After trivial-channel normalization the full mixed-kernel compression on the marked plaquette character sector is exactly D_beta^mix,norm chi_(p,q)=a_(p,q)(beta)^4 chi_(p,q).  _(class `A`)_
+- **chain closes:** False — The mixed-kernel localization argument closes algebraically, but the source row is current_status=open, so the audit lane cannot ratify it as audited_clean.
+- **rationale:** Issue: the derivation is presented on a source row with current_status=open, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the normalized mixed-kernel localization can be used as open/support structure, while residual environment data and P(6) remain open.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`
+- **auditor confidence:** high
+
 ### `gauge_vacuum_plaquette_mixed_cumulant_audit_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md)
@@ -1742,6 +1790,90 @@ Claim boundary until fixed: safe to claim the exact first nonlocal coefficient a
   - `nonperturbative_beta6_continuation_of_beta_eff_missing`
 - **auditor confidence:** high
 
+### `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Distinct admissible positive conjugation-symmetric residual source-sector environment operators R_A and R_B in T=M D_6^loc R M can induce different Perron moments for the same explicit source operator J.  _(class `A`)_
+- **chain closes:** False — The witness underdetermination closes inside the stated factorized class, but the source row is current_status=unknown, so the audit lane cannot ratify it as audited_clean.
+- **rationale:** Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the admissible-witness obstruction may be used to show current Jacobi data are not forced, but it is not a retained audit-clean claim.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_perron_reduction_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** By positivity improvement and the compact self-adjoint Perron-Jentzsch theorem, the transfer operator has one simple strictly positive Perron mode, and the large-derived-time trace state converges to that Perron expectation for bounded f(J).  _(class `A`)_
+- **chain closes:** False — The Perron reduction closes as an operator-theoretic support theorem, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.
+- **rationale:** Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the transfer-state problem is reduced to Perron/Jacobi data at support level; explicit beta=6 data remain open.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_reduction_existence_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Since P_1plaq is a bijection [0,infinity) to [0,1) and P_L(beta) lies in [0,1) for finite beta, beta_eff,L(beta):=P_1plaq^{-1}(P_L(beta)) is well-defined and unique.  _(class `A`)_
+- **chain closes:** False — The implicit existence/uniqueness construction closes, but the source row is current_status=unknown, so the audit lane cannot ratify it as audited_clean.
+- **rationale:** Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the exact implicit reduction law exists uniquely, but no explicit beta_eff(6) or P(6) closure is ratified.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_residual_environment_identification_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** K_beta^src = exp[(beta/2)J] D_beta^loc R_beta^env exp[(beta/2)J], where R_beta^env is exactly the compression of the unmarked spatial Wilson environment after the marked half-slice multipliers and local mixed-kernel factor are stripped.  _(class `A`)_
+- **chain closes:** False — The residual-environment identification closes as a support theorem, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.
+- **rationale:** Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the remaining object is identified as residual environment data at support level; explicit rho coefficients and P(6) remain open.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Combining the exact marked half-slice multipliers and the exact diagonal residual source-sector compression gives T_src(beta)=exp[(beta/2)J] D_beta exp[(beta/2)J], hence T_src(6)=exp(3J)D_6exp(3J).  _(class `A`)_
+- **chain closes:** False — The factorized source-sector matrix law closes structurally, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.
+- **rationale:** Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the factorized matrix law may be used as support; it does not compute the Wilson D_6 coefficients or ratify P(6).
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The residual environment operator is exactly normalized convolution by the boundary class function Z_beta^env/z_(0,0)^env, so R_beta^env chi_(p,q)=rho_(p,q)(beta) chi_(p,q).  _(class `A`)_
+- **chain closes:** False — The boundary-character representation closes as a support theorem, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.
+- **rationale:** Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the residual operator is represented by boundary character coefficients at support level; explicit beta=6 coefficients remain open.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`
+- **auditor confidence:** high
+
 ### `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md)
@@ -1757,6 +1889,48 @@ Repair target: compute and audit the full beta=6 tensor-transfer operator/Perron
 Claim boundary until fixed: safe to claim explicit positive tensor-transfer structure for the spatial environment, not full beta=6 plaquette closure.
 - **open / conditional deps cited:**
   - `full_beta6_tensor_transfer_perron_state_missing`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_spectral_measure_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Pushing the finite Wilson partition function forward by the continuous plaquette average A_L gives Z_L(beta)=Z_L(0) integral exp(beta N_plaq a) dmu_L(a), so the connected hierarchy is the tilted cumulant hierarchy of one compact measure.  _(class `A`)_
+- **chain closes:** False — The compact spectral-measure construction closes, but the source row is current_status=unknown, so the audit lane cannot ratify it as audited_clean.
+- **rationale:** Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the exact generating measure exists uniquely, but explicit beta=6 identification is not ratified.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_susceptibility_flow_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Differentiating the exact implicit reduction law P_L(beta)=P_1plaq(beta_eff,L(beta)) gives beta_eff,L'(beta)=chi_L(beta)/chi_1plaq(beta_eff,L(beta)).  _(class `A`)_
+- **chain closes:** False — The susceptibility-flow equation closes algebraically from the implicit law, but the source row is current_status=unknown, so the audit lane cannot ratify it as audited_clean.
+- **rationale:** Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the exact flow equation can be used as support/unknown-tier structure; the full susceptibility profile and P(6) remain open.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The plaquette source is exactly X=(chi_(1,0)+chi_(0,1))/6, and multiplication by X gives the six-neighbor SU(3) dominant-weight character recurrence, making the generating object the spectral measure of an explicit self-adjoint recurrence operator J in the transfer state.  _(class `A`)_
+- **chain closes:** False — The character-recurrence realization closes as a support theorem, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.
+- **rationale:** Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the explicit recurrence operator is support-level structure; beta=6 transfer-state identification remains open.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md`
 - **auditor confidence:** high
 
 ### `geometry_superposition_dag_ensemble_note_2026-04-11`
@@ -2773,6 +2947,37 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **rationale:** Issue: The source is explicitly a bounded moonshot trapping probe on a proposed_retained generated-geometry family, but its branch verdict says it produces a retained threshold. The live runner inserts an absorptive parameter alpha and measures escape fraction; it does not derive an absorbing horizon law or black-hole observable from retained inputs. Why this blocks: a hand-added absorption proxy with one finite family, four seeds, and three source positions cannot be ratified as a retained horizon/trapping theorem. Repair target: either correct the Status/current_status to bounded/proposed_bounded, or derive the absorption law from retained dynamics and show the threshold is a framework-native strong-field observable with clean weak-field reduction and audited dependencies. Claim boundary until fixed: it is safe to claim the live artifact reproduces alpha=0 weak-field recovery and a proxy escape threshold below 50% at alpha ~= 0.10 on this setup; it is not safe to call this a retained horizon theorem or full black-hole mechanism.
 - **auditor confidence:** high
 
+### `minimal_axioms_2026-04-11`
+
+- **Note:** [`MINIMAL_AXIOMS_2026-04-11.md`](../../docs/MINIMAL_AXIOMS_2026-04-11.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The source declares the package's minimal accepted input stack: local algebra Cl(3), spatial substrate Z^3, finite local Grassmann/staggered-Dirac dynamics, and canonical normalization/evaluation surface g_bare=1 with the plaquette/u0 and APBC hierarchy surfaces.  _(class `E`)_
+- **chain closes:** False — The memo records and names the current framework inputs rather than deriving them from the cited authorities, and many cited authorities are support, bounded, conditional, renaming, unknown, or otherwise not audit-retained after replay.
+- **rationale:** Issue: the load-bearing step is a declaration of accepted framework inputs and retained consequences, not a derivation from audit-clean one-hop authorities. Why this blocks: after dependency weakening, the memo imports g_bare, physical-lattice, observable, alpha_s/R_conn/YT/Higgs, and related surfaces whose effective statuses include support, proposed_retained, audited_conditional, audited_renaming, bounded, and unknown rather than a retained dependency chain. Repair target: replace the memo-level declarations with explicit retained theorem dependencies for each framework input, or keep the file as a framework index rather than a ratifiable derivation. Claim boundary until fixed: this file may summarize the current input stack and route readers to candidate authorities, but it cannot itself serve as an audit-clean derivation of those minimal axioms or quantitative consequences.
+- **open / conditional deps cited:**
+  - `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`
+  - `G_BARE_RIGIDITY_THEOREM_NOTE.md`
+  - `G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md`
+  - `G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md`
+  - `G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`
+  - `G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md`
+  - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
+  - `GENERATION_AXIOM_BOUNDARY_NOTE.md`
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `ALPHA_S_DERIVED_NOTE.md`
+  - `RCONN_DERIVED_NOTE.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`
+  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
+  - `YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md`
+  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
+  - `HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md`
+- **auditor confidence:** high
+
 ### `minimal_bidirectional_trapping_probe_note`
 
 - **Note:** [`MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md`](../../docs/MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md)
@@ -3297,6 +3502,35 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** The retained content is the Lane 3 firewall, not five-mass retention. The note's load-bearing step closes because the down-type formulas are ratios that preserve an arbitrary bottom anchor, the up-type branch remains partition/scalar-law selected, and the top Ward identity cannot be reused species-uniformly because the b reading overshoots by about 34.7x. The live runner confirms the relevant repo guardrails and comparator-only use of observed masses. Residual risk is downstream misuse: this audit does not ratify m_u, m_d, m_s, m_c, m_b, the 5/6 bridge, up-sector amplitude selection, or non-top Yukawa Ward identities.
 - **auditor confidence:** high
 
+### `quark_projector_parameter_audit_note_2026-04-19`
+
+- **Note:** [`QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`](../../docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** With a_d=1/sqrt(42), phi=-1/42 rad, and a solved up amplitude a_u, the exact-support anchor keeps CKM observables, quark ratios, J, and determinant neutrality within the stated tolerance band.  _(class `G`)_
+- **chain closes:** False — The source isolates exact-support-compatible pieces but still solves the up-sector amplitude and scores the result against CKM/J and quark-ratio comparators. The runner confirms the numerical quality and that obvious exact candidates do not reproduce the solved value at the same quality.
+- **rationale:** Issue: the remaining up-sector amplitude is solved against the target package rather than derived from the projector/support surface. Why this blocks: the exact ray, down amplitude, and support-angle probe narrow the fit but do not force the scalar a_u law. Repair target: provide a retained theorem deriving a_u before the observable comparison, with a runner that fails if that theorem is removed. Claim boundary until fixed: this is a bounded parameter audit that isolates one missing scalar law, not a retained reduced-parameter derivation.
+- **open / conditional deps cited:**
+  - `QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`
+  - `QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `quark_projector_ray_phase_completion_note_2026-04-18`
+
+- **Note:** [`QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`](../../docs/QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Adding one shared phase to the fixed projector-ray ansatz solves a_u, a_d, phi_shared and matches |V_us|, |V_cb|, |V_ub|, and J numerically while keeping arg det(M_u M_d)=0.  _(class `G`)_
+- **chain closes:** False — The runner verifies a bounded numerical closure with solved real amplitudes and a solved shared phase, but those parameters are not derived by the source note or its bounded dependency.
+- **rationale:** Issue: the full closure depends on solved amplitudes and a solved shared phase on a bounded carrier surface. Why this blocks: matching CKM/J targets after fitting those carrier parameters is a numerical completion, not a framework-forced derivation of the projector amplitudes or phase. Repair target: derive a_u, a_d, and phi_shared from retained projector/support primitives and rerun a runner that computes them before comparing observables. Claim boundary until fixed: the note supports a bounded reduced closure on a fixed projector ray, not a retained quark CP theorem.
+- **open / conditional deps cited:**
+  - `QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
 ### `quark_route2_exact_readout_map_note_2026-04-19`
 
 - **Note:** [`QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`](../../docs/QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md)
@@ -3313,6 +3547,52 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `scripts/frontier_quark_endpoint_readout_constraints.py`
   - `missing theorem deriving (beta_T/alpha_T, alpha_T/alpha_E, beta_E/alpha_E)=(-1,-2,21/4)`
 - **auditor confidence:** 0.91
+
+### `quark_up_amplitude_candidate_scan_note_2026-04-19`
+
+- **Note:** [`QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`](../../docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The scan evaluates exact candidates for a_u against anchored CKM/J and two-ratio-refit scores and identifies 7/9, sqrt(3/5), and related projector/support dressings as a short bounded shortlist.  _(class `G`)_
+- **chain closes:** False — The runner compares chosen candidate constants against the solved support-anchored target package and reports sub-percent numerical quality, but no candidate is derived as the framework-forced amplitude law. The note itself states that this is bounded compression, not retained derivation.
+- **rationale:** Issue: the claim is carried by comparator scoring of a curated/grammar candidate shortlist against a solved amplitude surface. Why this blocks: a short list of close numerical candidates does not derive the up-sector scalar or make one candidate load-bearing from retained primitives. Repair target: derive a unique a_u law from the projector/support constants and have the runner compute it independently before evaluating CKM/J. Claim boundary until fixed: the row may summarize bounded exact-candidate compression, not a retained quark-amplitude theorem.
+- **open / conditional deps cited:**
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `quark_up_amplitude_native_affine_no_go_note_2026-04-19`
+
+- **Note:** [`QUARK_UP_AMPLITUDE_NATIVE_AFFINE_NO_GO_NOTE_2026-04-19.md`](../../docs/QUARK_UP_AMPLITUDE_NATIVE_AFFINE_NO_GO_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The widened native affine scan finds laws that beat each external baseline separately but zero laws that beat both the 7/9 refit baseline and sqrt(3/5) anchored baseline at once.  _(class `G`)_
+- **chain closes:** False — The runner exhaustively checks the stated finite affine grammar, but the conclusion is still a comparator/baseline dominance result on bounded numerical axes. It does not supply a retained physical selection rule for a_u.
+- **rationale:** Issue: the negative result is a bounded scan over a selected affine grammar with dominance measured against numerical baselines. Why this blocks: even an exhaustive no-go inside that grammar does not derive the amplitude or prove the grammar is physically complete, and its dependencies are bounded/numerical. Repair target: derive the affine family as the complete native support law or produce a retained theorem selecting one amplitude before target comparison. Claim boundary until fixed: this row is a bounded affine-support no-go, not a retained quark-amplitude closure.
+- **open / conditional deps cited:**
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`
+  - `QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_up_amplitude_native_expression_scan_note_2026-04-19`
+
+- **Note:** [`QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md`](../../docs/QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The restricted native one-step scan finds different best native laws on the refit and anchored axes and no expression that beats both the 7/9 refit baseline and sqrt(3/5) anchored baseline at once.  _(class `G`)_
+- **chain closes:** False — The no-go is a bounded numerical dominance test over a restricted grammar and comparator baselines inherited from prior bounded scans. It sharpens the search surface but does not derive the missing amplitude law or close the quark branch.
+- **rationale:** Issue: the load-bearing negative result depends on selected comparator axes, external bounded baselines, and a restricted one-step grammar. Why this blocks: failing to beat both numerical baselines is not a retained derivation of the amplitude, and the dependencies remain bounded/numerical. Repair target: prove a native expression family is complete for the physical amplitude law, or derive the amplitude directly from retained primitives. Claim boundary until fixed: this is a bounded native-grammar no-go over the tested family.
+- **open / conditional deps cited:**
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`
+- **auditor confidence:** high
 
 ### `retained_cross_lane_consistency_support_note_2026-04-22`
 
@@ -3422,6 +3702,20 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
   - `missing authority: exact seven-site star support coordinates and A1 decoupling`
   - `missing runner: endpoint law for K_R on the canonical A1 family`
 - **auditor confidence:** 0.9
+
+### `scalar_3plus1_temporal_ratio_note`
+
+- **Note:** [`SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md`](../../docs/SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** On the exact minimal 3+1 APBC block, K_sc(omega)=3+sin^2(omega), A_2=1/8, A_inf=1/(4 sqrt(3)), therefore A_inf/A_2=2/sqrt(3).  _(class `A`)_
+- **chain closes:** False — The finite-sum scalar ratio closes exactly, but the source row is current_status=support and the note keeps physical-observable insertion as support-level, so the audit lane cannot ratify it as audited_clean.
+- **rationale:** Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the exact scalar ratio may be used as a reusable support tool; the fourth-root physical insertion remains unratified.
+- **open / conditional deps cited:**
+  - `SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md`
+- **auditor confidence:** high
 
 ### `second_grown_family_complex_note`
 

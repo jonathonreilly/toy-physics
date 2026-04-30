@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-29T23:17:35.259120+00:00",
-  "generated_at": "2026-04-29T23:17:33.167688+00:00",
-  "invalidation_run_at": "2026-04-29T23:17:35.192960+00:00",
+  "effective_status_computed_at": "2026-04-30T00:52:12.706976+00:00",
+  "generated_at": "2026-04-30T00:52:10.948902+00:00",
+  "invalidation_run_at": "2026-04-30T00:52:12.647201+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-29T23:17:35.054370+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:52:12.528336+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -15565,7 +15565,7 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_wilson_parent_correctness_audit_note_2026-04-18",
+      "effective_status_reason": "inherited_from:gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 6.992,
@@ -24836,7 +24836,7 @@
       ],
       "direct_in_degree": 3,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_wilson_to_dweh_structured_model_realization_theorem_note_2026-04-18",
+      "effective_status_reason": "inherited_from:gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 8.241,
@@ -30920,7 +30920,7 @@
       "auditor": null,
       "auditor_confidence": null,
       "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
+      "blocker": "cross_confirmation_disagreement",
       "chain_closes": null,
       "chain_closure_explanation": null,
       "claim_id": "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
@@ -30934,8 +30934,15 @@
           "load_bearing_step_class": "A",
           "verdict": "audited_clean"
         },
-        "second_audit": null,
-        "status": "awaiting_second"
+        "second_audit": {
+          "audit_date": "2026-04-30T00:42:51.164819+00:00",
+          "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+          "auditor_family": "codex-gpt-5",
+          "independence": "fresh_context",
+          "load_bearing_step_class": "C",
+          "verdict": "audited_clean"
+        },
+        "status": "disagreement"
       },
       "current_status": "unknown",
       "current_status_raw": "exact connected-cumulant hierarchy theorem for the Wilson",
@@ -31955,14 +31962,21 @@
       "verdict_rationale": null
     },
     "gauge_vacuum_plaquette_framework_point_underdetermination_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:46:15.044872+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The algebraic obstruction closes as a support theorem, but the source row is current_status=support, so it cannot be ratified as audited_clean by the audit lane.",
       "claim_id": "gauge_vacuum_plaquette_framework_point_underdetermination_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -31974,48 +31988,64 @@
           "load_bearing_step_class": "A",
           "verdict": "audited_clean"
         },
-        "second_audit": null,
-        "status": "awaiting_second"
+        "second_audit": {
+          "audit_date": "2026-04-30T00:45:23.854482+00:00",
+          "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+          "auditor_family": "codex-gpt-5",
+          "independence": "fresh_context",
+          "load_bearing_step_class": "A",
+          "verdict": "audited_clean"
+        },
+        "status": "confirmed"
       },
       "current_status": "support",
       "current_status_raw": "exact obstruction theorem on the current plaquette support stack;",
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "There exist distinct real-analytic strictly increasing witness laws on [0,6] that share the exact closed onset jet through order beta^5 but produce different framework-point values, hence different candidate plaquettes after composition with P_1plaq.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "0de2a57a7d97161c246f45ca4756a85c75071e6af81036cc600db8aa2a30d05c",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 7,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py",
       "title": "Gauge-Vacuum Plaquette Framework-Point Underdetermination",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note's witness-law obstruction is framed on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: a clean audit here would promote a support row beyond its declared tier even though the note explicitly leaves analytic P(6) open. Repair target: if this exact obstruction is intended to be tier-ratified, update the source note boundary to proposed_retained/proposed_promoted and re-run a fresh audit. Claim boundary until fixed: the witness construction may be used as support-level evidence that the current finite jet does not force P(6), but it is not an audit-clean retained claim."
     },
     "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:47:43.922365+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The polynomial-truncation obstruction closes algebraically, but the source row is current_status=unknown, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32035,40 +32065,49 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "If the full diagonal connected hierarchy truncated at finite order, K_L(t) would be a polynomial and therefore P_L(t)=K_L'(t)/N_plaq would be a polynomial with a finite limit at infinity, forcing it to be constant, contradicting P_L(0)=0 and lim P_L(t)=1.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "04c62366eae24937581ea5997e87dcfda14429bba9d2aaa842e566ca066b1059",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 7,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py",
       "title": "Gauge-Vacuum Plaquette Infinite-Hierarchy Obstruction",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: finite-order hierarchy truncation is ruled out as an exact obstruction, while explicit nonpolynomial closure of P(6) remains open."
     },
     "gauge_vacuum_plaquette_local_environment_factorization_theorem_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:47:47.395387+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The mixed-kernel localization argument closes algebraically, but the source row is current_status=open, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32088,30 +32127,32 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "open",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "open",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "After trivial-channel normalization the full mixed-kernel compression on the marked plaquette character sector is exactly D_beta^mix,norm chi_(p,q)=a_(p,q)(beta)^4 chi_(p,q).",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "3093688393831480fb86ba7ecac7dd11b81d801e12a9a5c62094388b281cc7fa",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 7,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py",
       "title": "Gauge-Vacuum Plaquette Local / Environment Factorization Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=open, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the normalized mixed-kernel localization can be used as open/support structure, while residual environment data and P(6) remain open."
     },
     "gauge_vacuum_plaquette_mixed_cumulant_audit_note": {
       "audit_date": "2026-04-28",
@@ -32164,14 +32205,21 @@
       "verdict_rationale": "Issue: the note closes the first nonlinear small-beta coefficient beta_eff(beta)=beta+beta^5/26244+O(beta^6), but explicitly does not close the full nonperturbative beta_eff(beta) or its beta=6 value.\nWhy this blocks: downstream plaquette or alpha_s claims need the framework-point reduction, not only the onset coefficient, so this support theorem cannot promote analytic plaquette closure.\nRepair target: derive and audit the full beta-dependent reduction law and its nonperturbative continuation/evaluation at beta=6 with a runner that computes the framework-point plaquette readout.\nClaim boundary until fixed: safe to claim the exact first nonlocal coefficient and beta_eff onset, not full plaquette observable closure."
     },
     "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:47:50.657288+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 15.209,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The witness underdetermination closes inside the stated factorized class, but the source row is current_status=unknown, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32191,40 +32239,49 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 6,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 15.209,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Distinct admissible positive conjugation-symmetric residual source-sector environment operators R_A and R_B in T=M D_6^loc R M can induce different Perron moments for the same explicit source operator J.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "3e12eea32274ae860df7726c5dfda8699564d27fcd57da8d5b93b58a3f6988fd",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 8,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 8
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py",
       "title": "Gauge-Vacuum Plaquette Perron/Jacobi Underdetermination",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the admissible-witness obstruction may be used to show current Jacobi data are not forced, but it is not a retained audit-clean claim."
     },
     "gauge_vacuum_plaquette_perron_reduction_theorem_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:47:53.916829+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The Perron reduction closes as an operator-theoretic support theorem, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "gauge_vacuum_plaquette_perron_reduction_theorem_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32244,40 +32301,49 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "By positivity improvement and the compact self-adjoint Perron-Jentzsch theorem, the transfer operator has one simple strictly positive Perron mode, and the large-derived-time trace state converges to that Perron expectation for bounded f(J).",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "b7431c6d0d6eb0b99f4d42eae14bd82801b2027f2c4cc6e10d1ec82f2395bfe5",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 8,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 8
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py",
       "title": "Gauge-Vacuum Plaquette Perron-State Reduction Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the transfer-state problem is reduced to Perron/Jacobi data at support level; explicit beta=6 data remain open."
     },
     "gauge_vacuum_plaquette_reduction_existence_theorem_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:47:57.454286+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The implicit existence/uniqueness construction closes, but the source row is current_status=unknown, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "gauge_vacuum_plaquette_reduction_existence_theorem_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32297,40 +32363,49 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Since P_1plaq is a bijection [0,infinity) to [0,1) and P_L(beta) lies in [0,1) for finite beta, beta_eff,L(beta):=P_1plaq^{-1}(P_L(beta)) is well-defined and unique.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "629a93d3fe545398e9db4800bb71398212e98c4743822e3a973c3b4bd78f546d",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 8,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 8
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py",
       "title": "Gauge-Vacuum Plaquette Reduction Existence and Uniqueness Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the exact implicit reduction law exists uniquely, but no explicit beta_eff(6) or P(6) closure is ratified."
     },
     "gauge_vacuum_plaquette_residual_environment_identification_theorem_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:48:00.782353+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The residual-environment identification closes as a support theorem, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32350,40 +32425,49 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "K_beta^src = exp[(beta/2)J] D_beta^loc R_beta^env exp[(beta/2)J], where R_beta^env is exactly the compression of the unmarked spatial Wilson environment after the marked half-slice multipliers and local mixed-kernel factor are stripped.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "fad5727d8365ac1f2de0a49496982c24fffed48305eee244867b12ed76497a40",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 7,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py",
       "title": "Gauge-Vacuum Plaquette Residual Environment Identification Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the remaining object is identified as residual environment data at support level; explicit rho coefficients and P(6) remain open."
     },
     "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:48:04.118029+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 15.209,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The factorized source-sector matrix law closes structurally, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32403,40 +32487,49 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 6,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 15.209,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Combining the exact marked half-slice multipliers and the exact diagonal residual source-sector compression gives T_src(beta)=exp[(beta/2)J] D_beta exp[(beta/2)J], hence T_src(6)=exp(3J)D_6exp(3J).",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "bc057ba26a11293bb93f03b73848b9aed51cbb531769dc48398135675e62cebb",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 7,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py",
       "title": "Gauge-Vacuum Plaquette Source-Sector Matrix-Element Factorization Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the factorized matrix law may be used as support; it does not compute the Wilson D_6 coefficients or ratify P(6)."
     },
     "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:48:07.471362+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The boundary-character representation closes as a support theorem, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32456,30 +32549,32 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The residual environment operator is exactly normalized convolution by the boundary class function Z_beta^env/z_(0,0)^env, so R_beta^env chi_(p,q)=rho_(p,q)(beta) chi_(p,q).",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "ff0016776547627249ad0ebb49ef7264834eca17f201cf27771c71e4b44bd696",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 7,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Character-Measure Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the residual operator is represented by boundary character coefficients at support level; explicit beta=6 coefficients remain open."
     },
     "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note": {
       "audit_date": "2026-04-28",
@@ -32575,14 +32670,21 @@
       "verdict_rationale": null
     },
     "gauge_vacuum_plaquette_spectral_measure_theorem_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:48:10.795090+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The compact spectral-measure construction closes, but the source row is current_status=unknown, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "gauge_vacuum_plaquette_spectral_measure_theorem_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32602,40 +32704,49 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Pushing the finite Wilson partition function forward by the continuous plaquette average A_L gives Z_L(beta)=Z_L(0) integral exp(beta N_plaq a) dmu_L(a), so the connected hierarchy is the tilted cumulant hierarchy of one compact measure.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "094d106e108052485ace117cfbae260096371acffb4b54ac59ff947a64194cf2",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 8,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 8
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py",
       "title": "Gauge-Vacuum Plaquette Spectral-Measure Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the exact generating measure exists uniquely, but explicit beta=6 identification is not ratified."
     },
     "gauge_vacuum_plaquette_susceptibility_flow_theorem_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:48:14.102210+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The susceptibility-flow equation closes algebraically from the implicit law, but the source row is current_status=unknown, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "gauge_vacuum_plaquette_susceptibility_flow_theorem_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32655,40 +32766,49 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Differentiating the exact implicit reduction law P_L(beta)=P_1plaq(beta_eff,L(beta)) gives beta_eff,L'(beta)=chi_L(beta)/chi_1plaq(beta_eff,L(beta)).",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "1175f2905dd4c262516677d5a6ba73aa0ed7ebae35cf7c47d4cbc0e4ec118528",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 8,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 8
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py",
       "title": "Gauge-Vacuum Plaquette Susceptibility-Flow Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the exact flow equation can be used as support/unknown-tier structure; the full susceptibility profile and P(6) remain open."
     },
     "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:48:17.358935+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 15.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The character-recurrence realization closes as a support theorem, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32708,30 +32828,32 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 7,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 15.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The plaquette source is exactly X=(chi_(1,0)+chi_(0,1))/6, and multiplication by X gives the six-neighbor SU(3) dominant-weight character recurrence, making the generating object the spectral measure of an explicit self-adjoint recurrence operator J in the transfer state.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "7e2bca8c11159306b029fa2062d372f39ff5a511fd4f46b249ec4233ee7887a9",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 9,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 9
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py",
       "title": "Gauge-Vacuum Plaquette Transfer-Operator / Character-Recurrence Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the explicit recurrence operator is support-level structure; beta=6 transfer-state identification remains open."
     },
     "generated_geometry_synthesis_note": {
       "audit_date": null,
@@ -49985,15 +50107,59 @@
       "verdict_rationale": "Issue: The source is explicitly a bounded moonshot trapping probe on a proposed_retained generated-geometry family, but its branch verdict says it produces a retained threshold. The live runner inserts an absorptive parameter alpha and measures escape fraction; it does not derive an absorbing horizon law or black-hole observable from retained inputs. Why this blocks: a hand-added absorption proxy with one finite family, four seeds, and three source positions cannot be ratified as a retained horizon/trapping theorem. Repair target: either correct the Status/current_status to bounded/proposed_bounded, or derive the absorption law from retained dynamics and show the threshold is a framework-native strong-field observable with clean weak-field reduction and audited dependencies. Claim boundary until fixed: it is safe to claim the live artifact reproduces alpha=0 weak-field recovery and a proxy escape threshold below 50% at alpha ~= 0.10 on this setup; it is not safe to call this a retained horizon theorem or full black-hole mechanism."
     },
     "minimal_axioms_2026-04-11": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T00:51:53.367416+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {
+          "alpha_s_derived_note": "audited_conditional",
+          "g_bare_dynamical_fixation_obstruction_note_2026-04-18": "audited_conditional",
+          "g_bare_rigidity_theorem_note": "audited_renaming",
+          "g_bare_structural_normalization_theorem_note_2026-04-18": "audited_renaming",
+          "g_bare_two_ward_closure_note_2026-04-18": "audited_renaming",
+          "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19": "support",
+          "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19": "support",
+          "generation_axiom_boundary_note": "proposed_retained",
+          "higgs_vacuum_explicit_systematic_note": "audited_renaming",
+          "observable_principle_from_axiom_note": "audited_conditional",
+          "physical_lattice_necessity_note": "audited_renaming",
+          "rconn_derived_note": "audited_conditional",
+          "yt_color_projection_correction_note": "audited_conditional",
+          "yt_ew_color_projection_theorem": "audited_conditional",
+          "yt_explicit_systematic_budget_note": "audited_conditional",
+          "yt_qfp_insensitivity_support_note": "audited_conditional",
+          "yt_ward_identity_derivation_theorem": "support",
+          "yt_zero_import_authority_note": "audited_conditional"
+        },
+        "deps": [
+          "alpha_s_derived_note",
+          "g_bare_dynamical_fixation_obstruction_note_2026-04-18",
+          "g_bare_rigidity_theorem_note",
+          "g_bare_structural_normalization_theorem_note_2026-04-18",
+          "g_bare_two_ward_closure_note_2026-04-18",
+          "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
+          "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
+          "generation_axiom_boundary_note",
+          "higgs_vacuum_explicit_systematic_note",
+          "observable_principle_from_axiom_note",
+          "physical_lattice_necessity_note",
+          "rconn_derived_note",
+          "yt_color_projection_correction_note",
+          "yt_ew_color_projection_theorem",
+          "yt_explicit_systematic_budget_note",
+          "yt_qfp_insensitivity_support_note",
+          "yt_ward_identity_derivation_theorem",
+          "yt_zero_import_authority_note"
+        ],
+        "load_bearing_score": 21.281,
+        "transitive_descendants": 109
+      },
+      "audit_status": "audited_renaming",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The memo records and names the current framework inputs rather than deriving them from the cited authorities, and many cited authorities are support, bounded, conditional, renaming, unknown, or otherwise not audit-retained after replay.",
       "claim_id": "minimal_axioms_2026-04-11",
       "criticality": "critical",
       "cross_confirmation": null,
@@ -50022,17 +50188,36 @@
       ],
       "direct_in_degree": 21,
       "effective_status": "audited_renaming",
-      "effective_status_reason": "inherited_from:g_bare_structural_normalization_theorem_note_2026-04-18",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "effective_status_reason": "self",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_renaming",
       "load_bearing_score": 21.281,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The source declares the package's minimal accepted input stack: local algebra Cl(3), spatial substrate Z^3, finite local Grassmann/staggered-Dirac dynamics, and canonical normalization/evaluation surface g_bare=1 with the plaquette/u0 and APBC hierarchy surfaces.",
+      "load_bearing_step_class": "E",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "b3af3af78cb351f23f54e09336a28431f84f581490a62d66347f54b0b9846473",
       "note_path": "docs/MINIMAL_AXIOMS_2026-04-11.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md",
+        "docs/G_BARE_RIGIDITY_THEOREM_NOTE.md",
+        "docs/G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md",
+        "docs/G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md",
+        "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
+        "docs/G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md",
+        "docs/PHYSICAL_LATTICE_NECESSITY_NOTE.md",
+        "docs/GENERATION_AXIOM_BOUNDARY_NOTE.md",
+        "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md",
+        "docs/ALPHA_S_DERIVED_NOTE.md",
+        "docs/RCONN_DERIVED_NOTE.md",
+        "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
+        "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
+        "docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md",
+        "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
+        "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
+        "docs/HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-29T23:17:15.568298+00:00",
@@ -50131,7 +50316,7 @@
       "runner_path": null,
       "title": "Minimal Framework Inputs",
       "transitive_descendants": 109,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the load-bearing step is a declaration of accepted framework inputs and retained consequences, not a derivation from audit-clean one-hop authorities. Why this blocks: after dependency weakening, the memo imports g_bare, physical-lattice, observable, alpha_s/R_conn/YT/Higgs, and related surfaces whose effective statuses include support, proposed_retained, audited_conditional, audited_renaming, bounded, and unknown rather than a retained dependency chain. Repair target: replace the memo-level declarations with explicit retained theorem dependencies for each framework input, or keep the file as a framework index rather than a ratifiable derivation. Claim boundary until fixed: this file may summarize the current input stack and route readers to candidate authorities, but it cannot itself serve as an audit-clean derivation of those minimal axioms or quantitative consequences."
     },
     "minimal_bidirectional_trapping_probe_note": {
       "audit_date": "2026-04-27",
@@ -66691,15 +66876,27 @@
       "verdict_rationale": null
     },
     "quark_projector_parameter_audit_note_2026-04-19": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T00:52:00.183309+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "quark_cp_carrier_completion_note_2026-04-18": "audited_numerical_match",
+          "quark_projector_ray_phase_completion_note_2026-04-18": "audited_numerical_match"
+        },
+        "deps": [
+          "quark_cp_carrier_completion_note_2026-04-18",
+          "quark_projector_ray_phase_completion_note_2026-04-18"
+        ],
+        "load_bearing_score": 12.024,
+        "transitive_descendants": 45
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source isolates exact-support-compatible pieces but still solves the up-sector amplitude and scores the result against CKM/J and quark-ratio comparators. The runner confirms the numerical quality and that obvious exact candidates do not reproduce the solved value at the same quality.",
       "claim_id": "quark_projector_parameter_audit_note_2026-04-19",
       "criticality": "high",
       "cross_confirmation": null,
@@ -66712,17 +66909,20 @@
       ],
       "direct_in_degree": 13,
       "effective_status": "audited_numerical_match",
-      "effective_status_reason": "inherited_from:quark_projector_ray_phase_completion_note_2026-04-18",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "effective_status_reason": "self",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 12.024,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "With a_d=1/sqrt(42), phi=-1/42 rad, and a solved up amplitude a_u, the exact-support anchor keeps CKM observables, quark ratios, J, and determinant neutrality within the stated tolerance band.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "5a799e192c15e027605f14c2355b4b5023ba5b85ce9cfce1aaaa0422a5633d6e",
       "note_path": "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md",
+        "docs/QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-29T11:40:10.272183+00:00",
@@ -66798,24 +66998,34 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 6,
+        "total_pass": 6
       },
       "runner_path": "scripts/frontier_quark_projector_parameter_audit.py",
       "title": "Quark Projector-Parameter Audit",
       "transitive_descendants": 45,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the remaining up-sector amplitude is solved against the target package rather than derived from the projector/support surface. Why this blocks: the exact ray, down amplitude, and support-angle probe narrow the fit but do not force the scalar a_u law. Repair target: provide a retained theorem deriving a_u before the observable comparison, with a runner that fails if that theorem is removed. Claim boundary until fixed: this is a bounded parameter audit that isolates one missing scalar law, not a retained reduced-parameter derivation."
     },
     "quark_projector_ray_phase_completion_note_2026-04-18": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T00:51:56.898235+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "quark_cp_carrier_completion_note_2026-04-18": "audited_numerical_match"
+        },
+        "deps": [
+          "quark_cp_carrier_completion_note_2026-04-18"
+        ],
+        "load_bearing_score": 10.055,
+        "transitive_descendants": 46
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies a bounded numerical closure with solved real amplitudes and a solved shared phase, but those parameters are not derived by the source note or its bounded dependency.",
       "claim_id": "quark_projector_ray_phase_completion_note_2026-04-18",
       "criticality": "high",
       "cross_confirmation": null,
@@ -66827,17 +67037,19 @@
       ],
       "direct_in_degree": 9,
       "effective_status": "audited_numerical_match",
-      "effective_status_reason": "inherited_from:quark_cp_carrier_completion_note_2026-04-18",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "effective_status_reason": "self",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 10.055,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Adding one shared phase to the fixed projector-ray ansatz solves a_u, a_d, phi_shared and matches |V_us|, |V_cb|, |V_ub|, and J numerically while keeping arg det(M_u M_d)=0.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "370b199a684fd2403401d6d92ff5575d6ec77c99ed323e175fb9f70a7814835a",
       "note_path": "docs/QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-29T11:40:10.272187+00:00",
@@ -66910,13 +67122,13 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 8,
+        "total_pass": 8
       },
       "runner_path": "scripts/frontier_quark_projector_ray_phase_completion.py",
       "title": "Reduced Quark Closure on a Fixed Projector Ray",
       "transitive_descendants": 46,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the full closure depends on solved amplitudes and a solved shared phase on a bounded carrier surface. Why this blocks: matching CKM/J targets after fitting those carrier parameters is a numerical completion, not a framework-forced derivation of the projector amplitudes or phase. Repair target: derive a_u, a_d, and phi_shared from retained projector/support primitives and rerun a runner that computes them before comparing observables. Claim boundary until fixed: the note supports a bounded reduced closure on a fixed projector ray, not a retained quark CP theorem."
     },
     "quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28": {
       "audit_date": null,
@@ -67396,15 +67608,27 @@
       "verdict_rationale": null
     },
     "quark_up_amplitude_candidate_scan_note_2026-04-19": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T00:52:03.497439+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "quark_projector_parameter_audit_note_2026-04-19": "audited_numerical_match",
+          "quark_projector_ray_phase_completion_note_2026-04-18": "audited_numerical_match"
+        },
+        "deps": [
+          "quark_projector_parameter_audit_note_2026-04-19",
+          "quark_projector_ray_phase_completion_note_2026-04-18"
+        ],
+        "load_bearing_score": 7.992,
+        "transitive_descendants": 44
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner compares chosen candidate constants against the solved support-anchored target package and reports sub-percent numerical quality, but no candidate is derived as the framework-forced amplitude law. The note itself states that this is bounded compression, not retained derivation.",
       "claim_id": "quark_up_amplitude_candidate_scan_note_2026-04-19",
       "criticality": "high",
       "cross_confirmation": null,
@@ -67417,17 +67641,20 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "audited_numerical_match",
-      "effective_status_reason": "inherited_from:quark_projector_parameter_audit_note_2026-04-19",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "effective_status_reason": "self",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 7.992,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The scan evaluates exact candidates for a_u against anchored CKM/J and two-ratio-refit scores and identifies 7/9, sqrt(3/5), and related projector/support dressings as a short bounded shortlist.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "d04347fd4815852878dbd6944b41b602d58f36f724f1708fb571041619b06118",
       "note_path": "docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
+        "docs/QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-29T11:40:10.272197+00:00",
@@ -67504,24 +67731,38 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 7,
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_quark_up_amplitude_candidate_scan.py",
       "title": "Quark Up-Amplitude Exact-Candidate Scan",
       "transitive_descendants": 44,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the claim is carried by comparator scoring of a curated/grammar candidate shortlist against a solved amplitude surface. Why this blocks: a short list of close numerical candidates does not derive the up-sector scalar or make one candidate load-bearing from retained primitives. Repair target: derive a unique a_u law from the projector/support constants and have the runner compute it independently before evaluating CKM/J. Claim boundary until fixed: the row may summarize bounded exact-candidate compression, not a retained quark-amplitude theorem."
     },
     "quark_up_amplitude_native_affine_no_go_note_2026-04-19": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T00:52:10.021962+00:00",
+      "audit_state_snapshot": {
+        "criticality": "medium",
+        "dep_effective_status": {
+          "quark_projector_parameter_audit_note_2026-04-19": "audited_numerical_match",
+          "quark_up_amplitude_candidate_scan_note_2026-04-19": "audited_numerical_match",
+          "quark_up_amplitude_native_expression_scan_note_2026-04-19": "audited_numerical_match"
+        },
+        "deps": [
+          "quark_projector_parameter_audit_note_2026-04-19",
+          "quark_up_amplitude_candidate_scan_note_2026-04-19",
+          "quark_up_amplitude_native_expression_scan_note_2026-04-19"
+        ],
+        "load_bearing_score": 6.858,
+        "transitive_descendants": 40
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner exhaustively checks the stated finite affine grammar, but the conclusion is still a comparator/baseline dominance result on bounded numerical axes. It does not supply a retained physical selection rule for a_u.",
       "claim_id": "quark_up_amplitude_native_affine_no_go_note_2026-04-19",
       "criticality": "medium",
       "cross_confirmation": null,
@@ -67535,17 +67776,21 @@
       ],
       "direct_in_degree": 3,
       "effective_status": "audited_numerical_match",
-      "effective_status_reason": "inherited_from:quark_projector_parameter_audit_note_2026-04-19",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "effective_status_reason": "self",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 6.858,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The widened native affine scan finds laws that beat each external baseline separately but zero laws that beat both the 7/9 refit baseline and sqrt(3/5) anchored baseline at once.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "758a98811d2ffa5556cc00f70678f4db0c5d2802bdeef3c6db823722aeb3bd54",
       "note_path": "docs/QUARK_UP_AMPLITUDE_NATIVE_AFFINE_NO_GO_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
+        "docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md",
+        "docs/QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-29T23:17:15.568745+00:00",
@@ -67598,24 +67843,36 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 7,
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_quark_up_amplitude_native_affine_no_go.py",
       "title": "Quark Up-Amplitude Native Affine No-Go",
       "transitive_descendants": 40,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the negative result is a bounded scan over a selected affine grammar with dominance measured against numerical baselines. Why this blocks: even an exhaustive no-go inside that grammar does not derive the amplitude or prove the grammar is physically complete, and its dependencies are bounded/numerical. Repair target: derive the affine family as the complete native support law or produce a retained theorem selecting one amplitude before target comparison. Claim boundary until fixed: this row is a bounded affine-support no-go, not a retained quark-amplitude closure."
     },
     "quark_up_amplitude_native_expression_scan_note_2026-04-19": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T00:52:06.763930+00:00",
+      "audit_state_snapshot": {
+        "criticality": "medium",
+        "dep_effective_status": {
+          "quark_projector_parameter_audit_note_2026-04-19": "audited_numerical_match",
+          "quark_up_amplitude_candidate_scan_note_2026-04-19": "audited_numerical_match"
+        },
+        "deps": [
+          "quark_projector_parameter_audit_note_2026-04-19",
+          "quark_up_amplitude_candidate_scan_note_2026-04-19"
+        ],
+        "load_bearing_score": 7.459,
+        "transitive_descendants": 43
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The no-go is a bounded numerical dominance test over a restricted grammar and comparator baselines inherited from prior bounded scans. It sharpens the search surface but does not derive the missing amplitude law or close the quark branch.",
       "claim_id": "quark_up_amplitude_native_expression_scan_note_2026-04-19",
       "criticality": "medium",
       "cross_confirmation": null,
@@ -67628,17 +67885,20 @@
       ],
       "direct_in_degree": 4,
       "effective_status": "audited_numerical_match",
-      "effective_status_reason": "inherited_from:quark_projector_parameter_audit_note_2026-04-19",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "effective_status_reason": "self",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 7.459,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The restricted native one-step scan finds different best native laws on the refit and anchored axes and no expression that beats both the 7/9 refit baseline and sqrt(3/5) anchored baseline at once.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "788878290e55a9164f83b1ffd4f76b8ecb83d03cfb1bd8319e0f7674e93f6c8e",
       "note_path": "docs/QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
+        "docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-29T11:40:10.272201+00:00",
@@ -67713,13 +67973,13 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 5,
+        "total_pass": 5
       },
       "runner_path": "scripts/frontier_quark_up_amplitude_native_expression_scan.py",
       "title": "Quark Up-Amplitude Native-Expression Scan",
       "transitive_descendants": 43,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the load-bearing negative result depends on selected comparator axes, external bounded baselines, and a restricted one-step grammar. Why this blocks: failing to beat both numerical baselines is not a retained derivation of the amplitude, and the dependencies remain bounded/numerical. Repair target: prove a native expression family is complete for the physical amplitude law, or derive the amplitude directly from retained primitives. Claim boundary until fixed: this is a bounded native-grammar no-go over the tested family."
     },
     "quark_up_amplitude_provenance_audit_note_2026-04-19": {
       "audit_date": null,
@@ -69983,14 +70243,21 @@
       "verdict_rationale": null
     },
     "scalar_3plus1_temporal_ratio_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:48:20.684716+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 15.214,
+        "transitive_descendants": 296
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The finite-sum scalar ratio closes exactly, but the source row is current_status=support and the note keeps physical-observable insertion as support-level, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "scalar_3plus1_temporal_ratio_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -70010,30 +70277,32 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 6,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 15.214,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the exact minimal 3+1 APBC block, K_sc(omega)=3+sin^2(omega), A_2=1/8, A_inf=1/(4 sqrt(3)), therefore A_inf/A_2=2/sqrt(3).",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "288ac06ac97f05b564487a78bf62e78d321e759a02debd758e714f61843a9fb8",
       "note_path": "docs/SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 5,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 5
       },
       "runner_path": "scripts/frontier_scalar_3plus1_temporal_ratio.py",
       "title": "Scalar `3+1` Temporal Ratio Theorem",
       "transitive_descendants": 296,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the exact scalar ratio may be used as a reusable support tool; the fourth-root physical insertion remains unratified."
     },
     "scalar_harmonic_tower_theorem_note_2026-04-24": {
       "audit_date": null,
