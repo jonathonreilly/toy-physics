@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:00:42.319465+00:00
+**Generated:** 2026-04-30T19:01:37.667197+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 117 |
+| `audited_clean` | 118 |
 | `audited_conditional` | 319 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1039 |
+| `unaudited` | 1038 |
 
 | criticality | count |
 |---|---:|
@@ -170,6 +170,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
+| `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `lattice_3d_dense_refinement_reconciliation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_3d_dense_window_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -5103,6 +5104,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **open / conditional deps cited:**
   - `KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`
   - `SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`
+- **auditor confidence:** high
+
+### `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24`
+
+- **Note:** [`KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO_NOTE_2026-04-24.md`](../../docs/KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO_NOTE_2026-04-24.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-ca82-local-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** In the finite Wilson realization, the zero-mode spin-lift character sector has multiplicity two, so the Wilson data select a rank-two character projector rather than a canonical rank-one Brannen endpoint line; the endpoint lift also remains offset by an unconstrained phase.  _(class `C`)_
+- **chain closes:** True — The support-tier no-go closes on its stated boundary. The runner verifies Wilson Hermiticity/equivariance, fixed sites, finite eta-proxy mismatch, a four-dimensional zero-mode space with multiplicity-two characters, a CP1 family of same-character lines, and the endpoint residual, with 14/14 passes.
+- **rationale:** The finite Wilson selected-eigenline route is correctly audited as a no-go boundary: current Wilson data leave a rank-two same-character zero-mode sector and an independent endpoint-lift offset, so the route does not close delta. This clean verdict covers the negative support claim only and does not supply the missing rank-one selected-line or endpoint-lift theorem.
 - **auditor confidence:** high
 
 ### `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24`
