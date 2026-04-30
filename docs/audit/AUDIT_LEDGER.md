@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T10:25:36.640469+00:00
+**Generated:** 2026-04-30T10:25:58.379353+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -23,13 +23,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | bounded | 196 |
 | support | 109 |
-| open | 21 |
+| open | 20 |
 | unknown | 492 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 53 |
 | ~~audited_conditional~~ | 423 |
-| ~~audited_failed~~ | 168 |
+| ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
@@ -37,10 +37,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 82 |
 | `audited_conditional` | 191 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 55 |
+| `audited_failed` | 56 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1234 |
+| `unaudited` | 1233 |
 
 | criticality | count |
 |---|---:|
@@ -378,6 +378,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `backreaction_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | open | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `critical_exponents_topology_note_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `distance_law_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -848,6 +849,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `missing authority: graph-first axis-selection procedure for identifying hw=1 tastes with SM generations`
   - `missing authority: physical taste-to-generation observable readout`
 - **auditor confidence:** 0.86
+
+### `cl4c_carrier_axiom_consequence_map_note_2026-04-28`
+
+- **Note:** [`CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md`](../../docs/CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md)
+- **current_status:** open
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-corrected-cl4c-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** The map treats Axiom* adoption as a separate extension of A_min that would discharge the Clifford coframe response and trigger the downstream C1/Planck/Lane-1 cascade.  _(class `B`)_
+- **chain closes:** False — No on its stated adoption-extension framing. The conditional downstream implications may still be reusable, but PR #196 changes the premise from 'add Axiom*' to 'Cl_4(C) is already A_min-derived on P_A', so the science-decision/consequence-map conclusion is stale.
+- **rationale:** Issue: the note's main surface is an Axiom* adoption map: it frames Cl_4(C) on P_A H_cell as an optional extension and says current-surface closure remains open unless that extension is chosen. Why this blocks: PR #196 supplies the corrected A_min-derived Cl_4(C) presence finding, so the map cannot be used as an adoption decision or as evidence that Axiom* is forced. Repair target: rewrite the map with the premise replaced by the derived Cl_4(C) theorem, then separately re-audit each downstream bridge before promoting C1/Planck/Lane-1 consequences on the actual surface. Claim boundary until fixed: the listed downstream implications may remain a useful conditional checklist, but the extension/adoption framing and current-status table are not reliable.
+- **open / conditional deps cited:**
+  - `AXIOM_STACK_MINIMALITY_CL4C_NO_GO_THEOREM_NOTE_2026-04-29.md`
+- **auditor confidence:** high
 
 ### `claude_complex_action_carryover_note`
 
