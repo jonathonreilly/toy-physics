@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:55:36.681954+00:00
+**Generated:** 2026-04-30T18:55:44.747958+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,25 +21,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 350 |
+| bounded | 349 |
 | support | 274 |
 | open | 20 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 595 |
+| ~~audited_conditional~~ | 596 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 109 |
-| `audited_conditional` | 309 |
+| `audited_conditional` | 310 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1057 |
+| `unaudited` | 1056 |
 
 | criticality | count |
 |---|---:|
@@ -409,6 +409,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_native_zero_section_nature_review_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_p_one_clock_3plus1_transport_reduction_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `koide_q_delta_linking_relation_theorem_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `koide_q_delta_readout_retention_split_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_selected_line_cyclic_response_bridge_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_selected_line_provenance_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -5203,6 +5204,21 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `selected_line_local_boundary_source_law_not_registered`
   - `based_endpoint_section_theorem_not_registered`
   - `retained_physical_source_boundary_origin_law_open`
+- **auditor confidence:** high
+
+### `koide_q_delta_linking_relation_theorem_note_2026-04-20`
+
+- **Note:** [`KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md`](../../docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-james-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Under equal-sector norm Q = 2/d and the radian-bridge dimensional identity delta = 2/d^2, division gives delta = Q/d at general d.  _(class `A`)_
+- **chain closes:** False — The algebraic linking relation closes under its stated premises, but the note explicitly leaves the radian-bridge postulate P and the underlying selection of Q as residual structure. The theorem is therefore conditional, not a derivation of either physical constant.
+- **rationale:** Issue: the relation depends on postulate P identifying a dimensionless character-algebra ratio with a Berry holonomy in radians, plus the equal-sector-norm input for Q. Why this blocks: the runner verifies the exact algebra and comparator consistency, but it does not derive the physical radian bridge or the sector-norm selection principle from Cl(3)/Z3 alone. Repair target: supply a retained theorem deriving P, or keep the result explicitly conditional on P and I1. Claim boundary until fixed: the note proves that Q and delta collapse to one relation if Q = 2/d and P supplies delta = 2/d^2.
+- **open / conditional deps cited:**
+  - `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
+  - `SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`
 - **auditor confidence:** high
 
 ### `koide_q_delta_readout_retention_split_no_go_note_2026-04-24`
