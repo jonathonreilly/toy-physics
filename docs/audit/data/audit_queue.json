@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 399,
+    "leaf": 398,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:24:43.538615+00:00",
+  "generated_at": "2026-04-30T19:24:49.291402+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -18705,28 +18705,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_note_2026-04-19",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [
-        "dm_wilson_direct_descendant_constructive_transport_plateau_schur_spectral_isotropy_selector_note_2026-04-19",
-        "dm_wilson_direct_descendant_constructive_transport_plateau_normalized_schur_determinant_selector_note_2026-04-19",
-        "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19",
-        "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_J_ISO_DERIVATION_AND_SCHUR_ISOTROPY_NO_GO_NOTE_2026-04-19.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_2026_04_19.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20126,5 +20104,5 @@
     }
   ],
   "ready_count": 540,
-  "total_pending": 925
+  "total_pending": 924
 }
