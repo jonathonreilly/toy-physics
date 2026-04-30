@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T10:31:05.664606+00:00",
+  "generated_at": "2026-04-30T11:16:18.805722+00:00",
   "per_claim": {
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "assert_count": 0,
@@ -5316,6 +5316,18 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_koide_q_op_locality_c3_fixed_source_support.py"
+    },
+    "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_koide_q_op_locality_source_domain_closure.py"
     },
     "koide_q_op_uniqueness_source_domain_support_note_2026-04-25": {
       "assert_count": 0,
@@ -15746,6 +15758,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_koide_q_op_locality_source_domain_closure.py": {
+      "assert_count": 0,
+      "claims": [
+        "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_koide_q_op_uniqueness_source_domain_support.py": {
       "assert_count": 0,
       "claims": [
@@ -20021,13 +20048,13 @@
     "decoration_candidates": 72,
     "dominant_class_distribution": {
       "A": 6,
-      "B": 108,
+      "B": 109,
       "C": 358,
       "D": 121,
       "none": 140
     },
-    "runners_classified": 733,
-    "runners_with_C": 441,
-    "runners_with_D": 210
+    "runners_classified": 734,
+    "runners_with_C": 442,
+    "runners_with_D": 211
   }
 }
