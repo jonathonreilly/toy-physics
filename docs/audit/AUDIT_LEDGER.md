@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:42:35.077681+00:00
+**Generated:** 2026-04-30T02:42:38.437297+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 204 |
 | support | 104 |
 | open | 24 |
-| unknown | 525 |
+| unknown | 524 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 48 |
 | ~~audited_renaming~~ | 72 |
-| ~~audited_conditional~~ | 431 |
+| ~~audited_conditional~~ | 432 |
 | ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 157 |
+| `audited_conditional` | 158 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1262 |
+| `unaudited` | 1261 |
 
 | criticality | count |
 |---|---:|
@@ -204,6 +204,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1261,6 +1262,23 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `scripts/frontier_dm_neutrino_positive_polar_h_cp_theorem.py`
   - `scripts/frontier_dm_neutrino_source_surface_carrier_normal_form.py`
 - **auditor confidence:** 0.9
+
+### `dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem_note_2026-04-16`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_CURRENT_BANK_BLINDNESS_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_CURRENT_BANK_BLINDNESS_THEOREM_NOTE_2026-04-16.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Two live-sheet points with identical current slot-bank signatures have different Z3 doublet blocks, so the current atlas slot/odd-bank does not determine the remaining microscopic datum.  _(class `B`)_
+- **chain closes:** False — The runner verifies the blindness/no-go once the live source-oriented sheet, intrinsic slot formula, CP pair, and Z3 block map are imported, but those structures are not provided as audited one-hop dependencies.
+- **rationale:** Issue: the no-go depends on imported source-surface and slot-bank machinery defining the live sheet, positive representative, intrinsic slot pair, CP pair, and K_Z doublet block. Why this blocks: the runner proves blindness for that supplied machinery, but does not derive the live-sheet parametrization or the current bank from retained one-hop authorities. Repair target: expose those source-surface and slot-bank theorems as retained dependencies, or make this runner derive the live-sheet model before testing blindness. Claim boundary until fixed: the note can claim a conditional current-bank blindness/no-go on the supplied live sheet, not an audited final boundary theorem from primitives.
+- **open / conditional deps cited:**
+  - `scripts/frontier_dm_neutrino_source_surface_active_affine_point_selection_boundary.py`
+  - `scripts/frontier_dm_neutrino_source_surface_active_half_plane_theorem.py`
+  - `scripts/frontier_dm_neutrino_source_surface_intrinsic_slot_theorem.py`
+  - `scripts/frontier_dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem.py`
+- **auditor confidence:** high
 
 ### `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15`
 
