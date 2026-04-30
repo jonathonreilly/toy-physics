@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:04:34.884547+00:00
+**Generated:** 2026-04-30T03:05:41.864353+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 201 |
 | support | 101 |
 | open | 24 |
-| unknown | 499 |
+| unknown | 498 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 400 |
+| ~~audited_conditional~~ | 401 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 182 |
+| `audited_conditional` | 183 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1234 |
+| `unaudited` | 1233 |
 
 | criticality | count |
 |---|---:|
@@ -316,6 +316,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_route2_exact_readout_map_note_2026-04-19` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `retardation_discriminator_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `retarded_field_compact_refinement_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `s3_cap_uniqueness_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `s3_taste_cube_decomposition_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `s3_time_bilinear_tensor_action_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `scalar_3plus1_temporal_ratio_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -4412,6 +4413,27 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The retarded field does not collapse to the instantaneous row on refinement, but the split is not uniformly one-directional across the compact and refined rows.  _(class `C`)_
 - **chain closes:** False — The runner reproduces a bounded two-family smoke-probe readout, but the proposed-retained surface is stronger than the evidence because the result is partial, row-sign-dependent, and not attached as an assertion runner in the ledger.
 - **rationale:** Issue: The script and frozen log support only partial survival of a retarded-vs-instantaneous centroid-shift split on two retained DAG-family parameter choices, with nonuniform row signs and sizable standard errors, while the audit queue exposes the row as proposed_retained. Why this blocks: a two-family smoke probe without assertion tolerances or a stated statistical/refinement theorem cannot establish a retained retarded-field law or a robust universal discriminator. Repair target: change the source status to bounded/support, or add a ledger-attached assertion runner plus a refinement theorem/statistical criterion showing noncollapse over a specified family class with tolerances. Claim boundary until fixed: it is safe to claim that the current script reproduces nonzero mean splits for the compact and refined families and that the refined split is not uniformly one-directional; it is not safe to claim retained universal retarded-field behavior from this probe.
+- **auditor confidence:** high
+
+### `s3_cap_uniqueness_note`
+
+- **Note:** [`S3_CAP_UNIQUENESS_NOTE.md`](../../docs/S3_CAP_UNIQUENESS_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The runner verifies finite cubical-ball boundary/link checks and then uses prior cap-link results plus van Kampen, Alexander/MCG(S2), Perelman, Moise, and PL closure-exclusion machinery to identify cone-capping as the unique closed simply connected PL closure.  _(class `B`)_
+- **chain closes:** False — The cap-map uniqueness package passes as a bounded topology argument, but the runner itself says KEEP BOUNDED rather than CLOSED because the result relies on external PL-topology infrastructure and an accepted exhaustiveness/classification premise.
+- **rationale:** Issue: the note's headline says the S3 cap-map step is CLOSED/retained at the paper bar, while the executable runner's own interpretation says STATUS: KEEP BOUNDED. Why this blocks: the proof is a valid bounded argument once standard topology and closure-exclusion machinery are accepted, but the framework does not derive those external inputs internally and the exhaustive alternative-closure classification is cited rather than constructed. Repair target: either relabel the note as bounded retained-support with explicit external-topology dependencies, or provide an internal constructive classification/exclusion proof sufficient for retained clean status. Claim boundary until fixed: bounded cap-map uniqueness conditional on accepted PL topology and simply-connected closure requirements, not a self-contained framework-forced compactification theorem.
+- **open / conditional deps cited:**
+  - `frontier_s3_cap_link_formal.py`
+  - `frontier_s3_pl_manifold.py`
+  - `PL closure classification/exclusion machinery`
+  - `Alexander trick and MCG(S2)`
+  - `van Kampen`
+  - `Perelman`
+  - `Moise`
+  - `Kawamoto-Smit homogeneity premise`
 - **auditor confidence:** high
 
 ### `s3_mass_matrix_no_go_note`
