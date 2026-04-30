@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:20:50.466203+00:00
+**Generated:** 2026-04-30T03:24:02.713230+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,26 +21,26 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
-| bounded | 198 |
+| bounded | 197 |
 | support | 100 |
 | open | 23 |
 | unknown | 492 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 53 |
-| ~~audited_conditional~~ | 420 |
+| ~~audited_conditional~~ | 421 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 189 |
+| `audited_conditional` | 190 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1227 |
+| `unaudited` | 1226 |
 
 | criticality | count |
 |---|---:|
@@ -251,6 +251,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `graviton_mass_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `gravity_clean_derivation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | E | - |
 | `gravity_sign_audit_2026-04-10` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `growing_graph_frontier_architecture_transfer_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `grown_wavefield_failure_diagnosis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -2467,6 +2468,24 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `Lichnerowicz TT spectrum on S3`
   - `topological mass/no-vDVZ interpretation`
   - `observed H0`
+- **auditor confidence:** high
+
+### `gravity_clean_derivation_note`
+
+- **Note:** [`GRAVITY_CLEAN_DERIVATION_NOTE.md`](../../docs/GRAVITY_CLEAN_DERIVATION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The chain sets L by imposing the physical self-consistency closure L^{-1}=G_0; with G_0=(-Delta_lat)^{-1}, this yields L=-Delta_lat and hence a Poisson/Green-function route to a 1/r potential and inverse-square force, provided the Born mass-density and weak-field test-mass response maps are also accepted.  _(class `E`)_
+- **chain closes:** False — The algebraic Poisson consequence is conditional on unregistered physical closure/source/response assumptions, and the ledger has no registered primary runner for the claim. An ad hoc run of the named script was stopped after it remained CPU-bound with no output for roughly two minutes.
+- **rationale:** Issue: the note is correctly narrowed as a bounded conditional weak-field gravity chain, but it still depends on imposed physical IF-conditions rather than audit-clean one-hop derivations. Why this blocks: L=G_0^{-1}=-Delta_lat follows once L^{-1}=G_0 is granted, and the Z^3 Green-function asymptotic is standard mathematics, but the framework has not registered clean dependencies deriving the self-consistency law, rho=|psi|^2 as gravitational mass density, or S=L(1-phi) as the weak-field test-mass response; no primary runner is registered, and the named runner was not a quick reproducible check in this audit pass. Repair target: register a deterministic primary runner and retained/support theorems for the closure condition, source map, test-mass response, and lattice Green-function normalization. Claim boundary until fixed: conditional weak-field Newton/Poisson chain in lattice units, not an audit-clean derivation of Newton gravity from the single axiom alone.
+- **open / conditional deps cited:**
+  - `self_consistency_L_inverse_equals_G0_theorem_not_registered`
+  - `rho_equals_abs_psi_squared_mass_density_bridge_not_registered`
+  - `weak_field_action_test_mass_response_not_registered`
+  - `lattice_green_function_normalization_runner_not_registered`
+  - `scripts/frontier_gravity_clean_derivation.py_not_registered_primary_runner`
 - **auditor confidence:** high
 
 ### `gravity_sign_audit_2026-04-10`
