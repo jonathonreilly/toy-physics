@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:20:52.019158+00:00
+**Generated:** 2026-04-30T00:20:55.294600+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 78 |
 | _proposed_retained_ | 12 |
 | bounded | 215 |
-| support | 113 |
+| support | 112 |
 | open | 24 |
 | unknown | 564 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 19 |
-| ~~audited_renaming~~ | 22 |
+| ~~audited_renaming~~ | 23 |
 | ~~audited_conditional~~ | 197 |
 | ~~audited_failed~~ | 341 |
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 10 |
+| `audit_in_progress` | 9 |
 | `audited_clean` | 78 |
 | `audited_conditional` | 133 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 12 |
-| `audited_renaming` | 9 |
+| `audited_renaming` | 10 |
 | `unaudited` | 1292 |
 
 | criticality | count |
@@ -100,7 +100,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | support | audit_in_progress | support | - | - | - | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
-| `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note` | support | audit_in_progress | support | - | - | - | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | support | audit_in_progress | support | - | - | - | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
@@ -387,6 +386,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `g_bare_rigidity_theorem_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
+| `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `higgs_mass_from_axiom_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `s3_time_bilinear_tensor_primitive_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -1785,6 +1785,20 @@ Claim boundary until fixed: safe to claim the exact first nonlocal coefficient a
 - **open / conditional deps cited:**
   - `GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`
   - `GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md`
+- **auditor confidence:** medium
+
+### `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `self`)
+- **auditor:** `codex-fresh-cross-confirm-20260430-session-b`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Strip off the two exact marked half-slice multipliers from the one-clock Wilson kernel and call the resulting central diagonal compression D_beta.  _(class `F`)_
+- **chain closes:** False — The factorized matrix law is exact once D_beta is defined as the stripped residual, but the Wilson residual diagonal data are not computed or independently derived.
+- **rationale:** Issue: T_src(beta)=exp[(beta/2)J] D_beta exp[(beta/2)J] is obtained by defining D_beta as the residual after stripping the two half-slice factors. Why this blocks: the claimed matrix-element closure is tautological unless the Wilson residual diagonal coefficients kappa_(p,q)(6) are constructed or independently constrained. Repair target: derive the residual Wilson source-sector compression and its diagonal character coefficients from the kernel. Claim boundary until fixed: for any positive diagonal D_beta, the displayed factorized matrix formula is valid.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md`
 - **auditor confidence:** medium
 
 ### `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`
