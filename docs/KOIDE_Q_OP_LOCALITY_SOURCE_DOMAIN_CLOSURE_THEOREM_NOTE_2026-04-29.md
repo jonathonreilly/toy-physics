@@ -1,10 +1,10 @@
 # Koide Q OP-Locality Source-Domain Structural Support Claim (V8)
 
 **Date:** 2026-04-29
-**Status (actual current surface):** `support` structural support claim on
-the actual current surface. This note documents the V8 axiom-to-readout
-chain as support evidence for the charged-lepton Koide `Q = 2/3`
-closure, but it does not promote that closure beyond support status.
+**Status:** support: structural Q=2/3 closure attempt, conditional on V8 §1.2 strict-reading inference and observable_principle_from_axiom retention.
+This note documents the V8 axiom-to-readout chain as support evidence
+for the charged-lepton Koide `Q = 2/3` closure, but it does not promote
+that closure beyond support status.
 Bare `retained` / `promoted` wording is NOT used.
 **Primary runner:** `scripts/frontier_koide_q_op_locality_source_domain_closure.py`
 **Supersedes (status only, not deletes):** the V4 / V7.3 conditional
@@ -173,7 +173,7 @@ reduced two-block carrier with exact source law
 3. Hence `Y_phys = I_2` (up to the common scale absorbed into the
    overall normalization), `z = 0`, `⟨Z⟩ = 0`, and `Q = 2/3`.
 
-**Status:** `support` structural claim on the actual current surface.
+**Status:** support: structural Q=2/3 closure attempt, conditional on V8 §1.2 strict-reading inference and observable_principle_from_axiom retention.
 Independent audit remains required before any stronger status claim
 could be made.
 
@@ -235,11 +235,12 @@ hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: true
 proposal_allowed_reason: |
-  All five chain pieces are retained authorities on main:
+  The note composes five one-hop authorities as cited inputs:
   OP (T1+T2), PHYSICAL_LATTICE_NECESSITY §9, ONSITE no-go,
   Canonical-descent Theorem 1, CRIT. The structural argument in §1.1
-  and §1.2 composes them into a single axiom-to-readout chain. No new
-  axiom is introduced; no observed mass is used as proof input.
+  and §1.2 remains conditional on the strict-reading inference and on
+  observable_principle_from_axiom retention. No new axiom is introduced;
+  no observed mass is used as proof input.
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -303,29 +304,13 @@ but keeps the result at support status.
 
 ---
 
-## 6. Cascade unlocked (proposed for later integration)
+## 6. Integration boundary
 
-If V8 is audit-ratified, the following PUBLICATION_MATRIX rows can be
-proposed for promotion (deferred to the later weaving review):
-
-- **line 192 (charged-lepton Koide bridge package):** lift Q residual
-  from open to retained corollary;
-- **line 166 (charged-lepton Koide support package Q=2/3, δ=2/9):**
-  Q half can be promoted; δ half awaits Block 2;
-- **line 167 (Q OP source-domain canonical descent):** lift from
-  "does not prove" to "proves under structural strict reading";
-- **line 168 (Q SO(2) phase erasure support):** unchanged role;
-- **line 158 (CKM Bernoulli 2/9 Koide-bridge support):** "no Koide
-  closure" qualifier removable for Q (δ pending);
-- **line 159 (CKM n/9 structural-family Koide-bridge support):** same;
-- **line 160 (CKM cubic Bernoulli Koide-bridge support):** same;
-- **line 161 (CKM Egyptian-fraction Bernoulli):** same;
-- **line 162 (CKM consecutive-primes / S_3):** same;
-- **line 157 (cross-sector Koide/CKM V_cb bridge):** Q half landed.
-
-Total: 9 publication-matrix rows directly affected. Repo-wide weaving
-is DEFERRED to later review and backpressure integration per the
-physics-loop skill's science-only rule.
+This support-tier note does not unlock downstream row changes or
+remove existing qualifiers from adjacent Koide / CKM scaffolding. Any
+later weaving pass must wait for a separately audited stronger result
+for the V8 §1.2 strict-reading inference and dependency-retention
+surface.
 
 ---
 
@@ -379,5 +364,6 @@ residuals are:
 - the overall lepton scale `v_0` (out of this loop's scope);
 - down-type quark cross-sector universality (Block 3 target).
 
-The Q half of the dimensionless Koide closure is now structurally on
-the A_min surface modulo audit ratification.
+The Q half of the dimensionless Koide closure is recorded here as
+support-tier structural evidence on the A_min surface, conditional on
+the §1.2 strict-reading inference and dependency-retention surface.

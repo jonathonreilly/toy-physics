@@ -1,5 +1,5 @@
 ========================================================================
-Koide Q OP-Locality Source-Domain Closure Theorem (V8) audit
+Koide Q OP-Locality Source-Domain structural support claim (V8)
 ========================================================================
 
 Section 1: retained authority audits
@@ -38,15 +38,15 @@ Section 3: V8 chain composition checks
 [PASS] forbidden import not used as proof input: m_mu — no observational mass enters proof
 [PASS] forbidden import not used as proof input: m_tau — no observational mass enters proof
 [PASS] forbidden import not used as proof input: Q_obs — no observational mass enters proof
-[PASS] actual_current_surface_status = proposed_retained — skill firewall field present
+[PASS] actual_current_surface_status = support — skill firewall field present
 [PASS] proposal_allowed: true — skill firewall field present
 [PASS] audit_required_before_effective_retained: true — skill firewall field present
 [PASS] bare_retained_allowed: false — skill firewall field present
 
-Q_L_EQ_2_OVER_3_PROPOSED_RETAINED_CHAIN_VERIFIED = True
+Q_L_EQ_2_OVER_3_SUPPORT_CHAIN_VERIFIED = True
 (This flag verifies the V8 chain authorities + algebraic identities. It does NOT replace the independent audit step required before the repo treats this as effective retained.)
 
 ========================================================================
 FAIL count: 0
 All chain authorities + algebraic identities verified.
-V8 audit-grade chain check PASSES. proposed_retained status is now eligible per the retained-proposal certificate.
+V8 audit-grade chain check PASSES. support status is kept while the strict-reading inference remains under review.

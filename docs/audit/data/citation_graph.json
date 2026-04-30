@@ -4845,6 +4845,26 @@
       "to": "koide_circulant_character_bridge_note_2026-04-18"
     },
     {
+      "from": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29",
+      "to": "physical_lattice_necessity_note"
+    },
+    {
+      "from": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29",
+      "to": "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25"
+    },
+    {
+      "from": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29",
+      "to": "koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25"
+    },
+    {
+      "from": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29",
+      "to": "koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25"
+    },
+    {
       "from": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
       "to": "observable_principle_from_axiom_note"
     },
@@ -18261,7 +18281,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T10:31:03.529074+00:00",
+  "generated_at": "2026-04-30T10:52:42.651245+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -28216,6 +28236,22 @@
       "path": "docs/KOIDE_Q_OP_LOCALITY_C3_FIXED_SOURCE_SUPPORT_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_koide_q_op_locality_c3_fixed_source_support.py",
       "title": "Koide Q OP-Locality / C3-Fixed Source Support Note"
+    },
+    "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29": {
+      "claim_id": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support: structural Q=2/3 closure attempt, conditional on V8 \u00a71.2 strict-reading inference and observable_principle_from_axiom retention.",
+      "deps": [
+        "observable_principle_from_axiom_note",
+        "physical_lattice_necessity_note",
+        "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25",
+        "koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25",
+        "koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25"
+      ],
+      "note_hash": "284703889c41ed979b06863e85310eb36193ef36895defad346e5134cbcc4ee0",
+      "path": "docs/KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_koide_q_op_locality_source_domain_closure.py",
+      "title": "Koide Q OP-Locality Source-Domain Structural Support Claim (V8)"
     },
     "koide_q_op_uniqueness_source_domain_support_note_2026-04-25": {
       "claim_id": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
@@ -41236,17 +41272,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4565,
-    "leaf_count": 735,
-    "node_count": 1673,
+    "edge_count": 4570,
+    "leaf_count": 736,
+    "node_count": 1674,
     "root_count": 1205,
-    "runners_with_path": 758,
+    "runners_with_path": 759,
     "status_counts": {
       "bounded": 253,
       "open": 43,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 172,
+      "support": 173,
       "unknown": 796
     }
   }
