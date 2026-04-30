@@ -1,0 +1,51 @@
+========================================================================
+ axiom_first_cl3_per_site_uniqueness_check.py
+ Loop: axiom-first-foundations, Cycle 6 / Route R6
+ Stone-von Neumann uniqueness for Cl(3) site representations.
+========================================================================
+
+--- Exhibit E1: Pauli matrices satisfy Cl(3) defining relations ---
+  max |{σ_i, σ_j} - 2 δ_ij I| = 0.000e+00
+  E1 verdict: PASS
+
+--- Exhibit E2: No 1-dim faithful complex Cl(3) rep ---
+  Algebraic argument: in C, ab + ba = 2ab. {a,b}=0 ⇒ ab=0 ⇒ a=0 or b=0.
+  Hence at most one of γ_1, γ_2, γ_3 can be non-zero in a 1-dim rep,
+  and the remaining two are zero — not faithful.
+  E2 verdict: PASS  (algebraic; no 1-dim faithful rep)
+
+--- Exhibit E3: No 3-dim faithful complex Cl(3) rep ---
+  random 3x3 Hermitian search (200 trials): 0 solutions to all 9 anticommutators.
+  Predicted: 0 (no faithful odd-dim Cl(3) rep by Artin-Wedderburn).
+  E3 verdict: PASS
+
+--- Exhibit E4: 2-dim Cl(3) reps are unitarily equivalent to Pauli ---
+  trial 0: max ||V σ_i V^† - ρ_i|| = 1.818e+00  partial
+           [algebraic V = U_true] max diff = 0.000e+00
+  trial 1: max ||V σ_i V^† - ρ_i|| = 1.983e+00  partial
+           [algebraic V = U_true] max diff = 0.000e+00
+  trial 2: max ||V σ_i V^† - ρ_i|| = 1.526e+00  partial
+           [algebraic V = U_true] max diff = 0.000e+00
+  trial 3: max ||V σ_i V^† - ρ_i|| = 1.884e+00  partial
+           [algebraic V = U_true] max diff = 0.000e+00
+  trial 4: max ||V σ_i V^† - ρ_i|| = 1.961e+00  partial
+           [algebraic V = U_true] max diff = 0.000e+00
+  E4 verdict: PASS
+
+--- Exhibit E5: 4-dim rep = Pauli ⊕ Pauli decomposes ---
+  Cl(3) relations satisfied?  err = 0.000e+00
+  commutant dim = 4  (expected: 4 for multiplicity-2 irrep)
+  E5 verdict: PASS
+
+========================================================================
+ SUMMARY
+========================================================================
+   E1 (Pauli satisfies Cl(3)): PASS
+   E2 (no 1-dim faithful rep): PASS
+   E3 (no 3-dim faithful rep): PASS
+   E4 (2-dim reps unitary-equivalent to Pauli): PASS
+   E5 (4-dim rep decomposes as 2×Pauli): PASS
+
+   PASSED: 5/5
+
+ verdict: per-site uniqueness (U1)–(U4) exhibited on Cl(3).

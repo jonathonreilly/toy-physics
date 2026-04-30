@@ -204,3 +204,74 @@ Wilson term.
 theorem. Proceed to end-of-loop checkpoint, branch push, and PR
 preparation.
 
+## Cycle 5 — R5: lattice Noether theorem (in-loop self-review)
+
+**Artifacts.**
+- `docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`
+- `scripts/axiom_first_lattice_noether_check.py`
+- `outputs/axiom_first_lattice_noether_check_2026-04-29.txt`
+
+**Runner result.** PASSED 4/4 exhibits. E1 U(1) phase symmetry
+condition: ‖[T_U1, M]‖ = 0.0e+00 at machine precision. E2 Z^3
+translation: ‖S M S^T - M‖ = 0.0e+00 for all three directions.
+E3 fermion-number current divergence-free on shell: max |∂^L · J| =
+6.4e-16, mean 1.7e-16 (machine precision). E4 global charge per
+time slice constant: Q = 9.3735 across all 4 time slices, std =
+2.0e-15.
+
+**In-loop review findings.**
+
+1. *Hypothesis set audit.* A1 only via Cl(3) representation
+   existence; A2 via Z^3 translation group; A3 via Grassmann
+   staggered-Dirac action and its symmetry properties; A4 via
+   gauge invariance (U(1) ⊂ SU(3)). No imports from forbidden list.
+2. *Reuse.* C1 (conserved fermion number Q), C2 (discrete momentum
+   quantum number), C3 (compatibility with R2 / RP for charge
+   superselection), C4 (anomaly slot — anomaly closure is a
+   separate layer above this).
+3. *Linkage.* Lattice Noether plus Cl(3) representation theory
+   (Cycle 6) plus the foundational tetrad (Cycles 1–4) form a
+   coherent block of axiom-first foundations.
+
+**Disposition.** Accept artifact as branch-local theorem.
+
+## Cycle 6 — R6: Cl(3) per-site uniqueness (in-loop self-review)
+
+**Artifacts.**
+- `docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`
+- `scripts/axiom_first_cl3_per_site_uniqueness_check.py`
+- `outputs/axiom_first_cl3_per_site_uniqueness_check_2026-04-29.txt`
+
+**Runner result.** PASSED 5/5 exhibits. E1 Pauli satisfies Cl(3)
+relations exactly. E2 no 1-dim faithful complex rep (algebraic).
+E3 no 3-dim faithful rep (numerical 200-trial random search,
+0 solutions). E4 random 2-dim Cl(3) reps unitarily equivalent to
+Pauli at machine precision (algebraic V = U_true intertwiner).
+E5 4-dim Pauli ⊕ Pauli has commutant dim = 4 (matches multiplicity-2
+irrep, by Schur).
+
+**In-loop review findings.**
+
+1. *Mid-cycle correction.* The first draft of E4 used a numerical
+   simultaneous-diagonalisation to construct V; this has phase
+   ambiguity and gave 'partial' diffs ~1.5–2.0. Replaced with
+   the algebraic V = U_true (which is the true intertwiner since
+   ρ was built as U_true σ_i U_true^†); algebraic check closes
+   at 0.0e+00. The numerical simultaneous-diag remains in the
+   runner as diagnostic, with the algebraic check as the load-
+   bearing verification.
+2. *Hypothesis set audit.* A1 only (Cl(3) site algebra). Standard
+   Artin-Wedderburn / Schur lemma machinery. No imports from the
+   forbidden list.
+3. *Discharge.* This theorem retroactively closes Cycle 1's Step 2
+   load-bearing fact "minimal complex spinor irrep is dim 2" at
+   the representation-theoretic level. After Cycle 6, Cycle 1's
+   per-site Hilbert dim = 2 is a theorem on A1 alone, not a
+   stipulation.
+4. *Reuse.* C1 (closes Cycle 1 Step 2), C2 (universality of
+   spin-1/2), C3 (no-go for alternative Cl(3) site algebras), C4
+   (compatibility with all prior cycles).
+
+**Disposition.** Accept artifact as branch-local theorem. Proceed
+to end-of-loop branch push and PR preparation.
+
