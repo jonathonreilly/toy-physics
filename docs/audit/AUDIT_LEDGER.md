@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T20:25:05.807682+00:00
+**Generated:** 2026-04-30T20:26:14.401954+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,19 +21,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 281 |
+| bounded | 282 |
 | support | 253 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 734 |
+| ~~audited_conditional~~ | 733 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 203 |
-| `audited_conditional` | 458 |
+| `audited_clean` | 204 |
+| `audited_conditional` | 457 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
@@ -123,6 +123,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `composite_source_additivity_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `cycle_battery_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `cycle_break_slice_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `dirac_core_card_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-gpt-5 | C | - |
 | `distance_law_3d_64_closure_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `distance_law_preserving_third_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_abcc_assumptions_audit_note_2026-04-19` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
@@ -406,7 +407,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `diamond_sensor_protocol_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `diamond_signal_budget_hardening_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dimension_selection_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `dirac_core_card_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dirac_decoherence_probe_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dirac_field_smoothing_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dirac_observable_panel_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -2975,13 +2975,13 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 
 - **Note:** [`DIRAC_CORE_CARD_NOTE.md`](../../docs/DIRAC_CORE_CARD_NOTE.md)
 - **current_status:** bounded
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** - `C6` explicit record-purity decoherence row passes on both tested geometries  _(class `B`)_
-- **chain closes:** False — No. The runner exits zero, but the audit classifier records no A/B/C/D PASS checks for a load-bearing audit surface.
-- **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a bounded note with executable but unratified support.
-- **auditor confidence:** medium
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop-round2-20260430-07`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The integrated DIR-3D core-card runner reports a bounded 12/16 result, with twelve retained positives and four named failures that remain the gravity/isotropy/k-achromaticity blockers.  _(class `C`)_
+- **chain closes:** True — The note's bounded scorecard matches the registered runner: C1-C8, C12, and C14-C16 pass, while C9-C11 and C13 fail. The note explicitly carries forward those failures instead of promoting the lane to full 3+1D closure.
+- **rationale:** The prior infrastructure blocker is resolved because the runner emits classified C-class PASS lines. The bounded inventory closes on its own terms: the runner reproduces the stated 12/16 integrated core-card score and the same four failures named by the note. This clean audit is limited to the scorecard/inventory claim and does not promote the Dirac lane beyond the note's bounded status because monotone gravity growth, distance law, strict isotropy, and fixed-theta k-achromaticity remain unresolved.
+- **auditor confidence:** high
 
 ### `dirac_decoherence_probe_note`
 
