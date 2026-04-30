@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:05:16.228977+00:00
+**Generated:** 2026-04-30T19:06:35.965977+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
 | bounded | 344 |
-| support | 270 |
+| support | 269 |
 | open | 17 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 608 |
+| ~~audited_conditional~~ | 609 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 122 |
-| `audited_conditional` | 322 |
+| `audited_conditional` | 323 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1031 |
+| `unaudited` | 1030 |
 
 | criticality | count |
 |---|---:|
@@ -400,6 +400,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higher_order_structural_theorems_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_eta_retirement_gate_audit_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_planck_c1_gate_audit_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -4767,6 +4768,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **open / conditional deps cited:**
   - `HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md`
 - **auditor confidence:** high
+
+### `hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27`
+
+- **Note:** [`HUBBLE_LANE5_C3_VACUUM_TOPOLOGY_NO_ACTIVE_ROUTE_NOTE_2026-04-27.md`](../../docs/HUBBLE_LANE5_C3_VACUUM_TOPOLOGY_NO_ACTIVE_ROUTE_NOTE_2026-04-27.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-c-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The framework's existing retained vacuum/topology content does not contain a C3 candidate; the C3 class is currently empty.  _(class `B`)_
+- **chain closes:** False — The no-go depends on cross-note verification of the Cycle 3 taxonomy and five candidate dispositions, but the ledger exposes no one-hop deps and there is no runner.
+- **rationale:** Issue: the empty-C3 conclusion rests on an unregistered survey of other framework notes rather than ledger-provided dependencies or an executable candidate audit. Why this blocks: a hostile reviewer cannot verify exhaustiveness or retained/current status of the five route dispositions from the restricted packet. Repair target: register the Cycle 3 taxonomy and candidate notes as deps, or add a runner/checklist that verifies each route disposition against the current retained surface. Claim boundary until fixed: this may stand as a support-level route taxonomy, not an audit-closed no-active-route theorem.
+- **auditor confidence:** medium
 
 ### `hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26`
 
