@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:09:07.960346+00:00
+**Generated:** 2026-04-30T19:10:03.239226+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,25 +21,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 341 |
+| bounded | 340 |
 | support | 267 |
 | open | 17 |
 | unknown | 47 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 614 |
+| ~~audited_conditional~~ | 615 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 126 |
-| `audited_conditional` | 327 |
+| `audited_conditional` | 328 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1021 |
+| `unaudited` | 1020 |
 
 | criticality | count |
 |---|---:|
@@ -332,6 +332,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `distance_law_breakpoint_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_chamber_bound_derivation_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -2861,6 +2862,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** Issue: the claim rests on selected finite H and velocity values from scripts/dm_continuum_limit_velocity.py, but that runner is not registered and the dependency is a bounded wave-retardation continuum note. Why this blocks: the finite negative is plausible and useful, yet it is still a numerical surface rather than a retained continuum-limit theorem or exhaustive no-go. Repair target: register the runner/log as the primary audit artifact, recompute the table with hard convergence thresholds, and narrow the status to bounded finite-sweep negative unless a theorem/extrapolation closes the continuum behavior. Claim boundary until fixed: safe as a bounded report that the tested Fam1 velocities do not converge by H=0.25; not safe as audit-clean retained continuum velocity science.
 - **open / conditional deps cited:**
   - `WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md`
+- **auditor confidence:** high
+
+### `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16`
+
+- **Note:** [`DM_FULL_CLOSURE_SAME_SURFACE_NUMERATOR_SELECTOR_BOUNDARY_NOTE_2026-04-16.md`](../../docs/DM_FULL_CLOSURE_SAME_SURFACE_NUMERATOR_SELECTOR_BOUNDARY_NOTE_2026-04-16.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-d-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The selector boundary rests on the claim that the current DM lane has no further exact scale-selection law, so the current bank gives an interval rather than a selector.  _(class `C`)_
+- **chain closes:** False — The endpoint and disjoint-output calculations close, but the restricted inputs do not prove the exhaustive absence of another current-bank scale-selection law. The runner records that absence as an asserted pass rather than deriving it.
+- **rationale:** Issue: the no-selector conclusion depends on an unproved current-bank completeness/absence premise. Why this blocks: disjoint endpoint images show an interval, but they do not by themselves exclude a separate exact selector elsewhere in the bank. Repair target: add a theorem and runner that enumerates the current-bank DM scale-selection data and proves no allowed selector exists. Claim boundary until fixed: the two endpoint images and their disjoint certified Omega_DM intervals are supported; theorem-grade no-selector closure remains conditional.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16`
