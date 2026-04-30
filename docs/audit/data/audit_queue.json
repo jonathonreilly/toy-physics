@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 49,
-    "high": 304,
+    "high": 303,
     "leaf": 615,
     "medium": 327
   },
-  "generated_at": "2026-04-30T00:51:59.643231+00:00",
+  "generated_at": "2026-04-30T00:52:02.960579+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5473,26 +5473,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_dark_energy_eos_retained_corollary.py",
       "transitive_descendants": 48
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "quark_projector_parameter_audit_note_2026-04-19",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "quark_projector_ray_phase_completion_note_2026-04-18",
-        "quark_cp_carrier_completion_note_2026-04-18"
-      ],
-      "direct_in_degree": 13,
-      "load_bearing_score": 12.024,
-      "note_path": "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_quark_projector_parameter_audit.py",
-      "transitive_descendants": 45
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -27055,5 +27035,5 @@
     }
   ],
   "ready_count": 844,
-  "total_pending": 1295
+  "total_pending": 1294
 }

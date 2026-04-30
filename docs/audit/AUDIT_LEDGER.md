@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:51:59.805702+00:00
+**Generated:** 2026-04-30T00:52:03.129513+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -38,9 +38,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 145 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 50 |
-| `audited_numerical_match` | 8 |
+| `audited_numerical_match` | 9 |
 | `audited_renaming` | 9 |
-| `unaudited` | 1294 |
+| `unaudited` | 1293 |
 
 | criticality | count |
 |---|---:|
@@ -378,6 +378,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
+| `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `tensor_support_center_excess_law_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
@@ -3496,6 +3497,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Absent those premises, the existing packet remains bounded companion support.  _(class `A`)_
 - **chain closes:** True — The claim is a negative boundary: the note does not derive non-top quark masses, but shows that the current package supplies bounded ratio/support surfaces, not absolute five-mass retention. The live runner verifies repo status guardrails, arbitrary bottom-anchor freedom for down-type ratios, up-type partition dependence, species-uniform Ward failure for m_b, and the safe open endpoint with PASS=17 FAIL=0.
 - **rationale:** The retained content is the Lane 3 firewall, not five-mass retention. The note's load-bearing step closes because the down-type formulas are ratios that preserve an arbitrary bottom anchor, the up-type branch remains partition/scalar-law selected, and the top Ward identity cannot be reused species-uniformly because the b reading overshoots by about 34.7x. The live runner confirms the relevant repo guardrails and comparator-only use of observed masses. Residual risk is downstream misuse: this audit does not ratify m_u, m_d, m_s, m_c, m_b, the 5/6 bridge, up-sector amplitude selection, or non-top Yukawa Ward identities.
+- **auditor confidence:** high
+
+### `quark_projector_parameter_audit_note_2026-04-19`
+
+- **Note:** [`QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`](../../docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** With a_d=1/sqrt(42), phi=-1/42 rad, and a solved up amplitude a_u, the exact-support anchor keeps CKM observables, quark ratios, J, and determinant neutrality within the stated tolerance band.  _(class `G`)_
+- **chain closes:** False — The source isolates exact-support-compatible pieces but still solves the up-sector amplitude and scores the result against CKM/J and quark-ratio comparators. The runner confirms the numerical quality and that obvious exact candidates do not reproduce the solved value at the same quality.
+- **rationale:** Issue: the remaining up-sector amplitude is solved against the target package rather than derived from the projector/support surface. Why this blocks: the exact ray, down amplitude, and support-angle probe narrow the fit but do not force the scalar a_u law. Repair target: provide a retained theorem deriving a_u before the observable comparison, with a runner that fails if that theorem is removed. Claim boundary until fixed: this is a bounded parameter audit that isolates one missing scalar law, not a retained reduced-parameter derivation.
+- **open / conditional deps cited:**
+  - `QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`
+  - `QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `quark_projector_ray_phase_completion_note_2026-04-18`

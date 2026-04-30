@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T00:51:59.586317+00:00",
-  "generated_at": "2026-04-30T00:51:57.834526+00:00",
-  "invalidation_run_at": "2026-04-30T00:51:59.527433+00:00",
+  "effective_status_computed_at": "2026-04-30T00:52:02.902666+00:00",
+  "generated_at": "2026-04-30T00:52:01.136043+00:00",
+  "invalidation_run_at": "2026-04-30T00:52:02.845653+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T00:51:59.409905+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:52:02.732556+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -66876,15 +66876,27 @@
       "verdict_rationale": null
     },
     "quark_projector_parameter_audit_note_2026-04-19": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T00:52:00.183309+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "quark_cp_carrier_completion_note_2026-04-18": "audited_numerical_match",
+          "quark_projector_ray_phase_completion_note_2026-04-18": "audited_numerical_match"
+        },
+        "deps": [
+          "quark_cp_carrier_completion_note_2026-04-18",
+          "quark_projector_ray_phase_completion_note_2026-04-18"
+        ],
+        "load_bearing_score": 12.024,
+        "transitive_descendants": 45
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source isolates exact-support-compatible pieces but still solves the up-sector amplitude and scores the result against CKM/J and quark-ratio comparators. The runner confirms the numerical quality and that obvious exact candidates do not reproduce the solved value at the same quality.",
       "claim_id": "quark_projector_parameter_audit_note_2026-04-19",
       "criticality": "high",
       "cross_confirmation": null,
@@ -66897,17 +66909,20 @@
       ],
       "direct_in_degree": 13,
       "effective_status": "audited_numerical_match",
-      "effective_status_reason": "inherited_from:quark_projector_ray_phase_completion_note_2026-04-18",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "effective_status_reason": "self",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 12.024,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "With a_d=1/sqrt(42), phi=-1/42 rad, and a solved up amplitude a_u, the exact-support anchor keeps CKM observables, quark ratios, J, and determinant neutrality within the stated tolerance band.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "5a799e192c15e027605f14c2355b4b5023ba5b85ce9cfce1aaaa0422a5633d6e",
       "note_path": "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md",
+        "docs/QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-29T11:40:10.272183+00:00",
@@ -66983,13 +66998,13 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 6,
+        "total_pass": 6
       },
       "runner_path": "scripts/frontier_quark_projector_parameter_audit.py",
       "title": "Quark Projector-Parameter Audit",
       "transitive_descendants": 45,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the remaining up-sector amplitude is solved against the target package rather than derived from the projector/support surface. Why this blocks: the exact ray, down amplitude, and support-angle probe narrow the fit but do not force the scalar a_u law. Repair target: provide a retained theorem deriving a_u before the observable comparison, with a runner that fails if that theorem is removed. Claim boundary until fixed: this is a bounded parameter audit that isolates one missing scalar law, not a retained reduced-parameter derivation."
     },
     "quark_projector_ray_phase_completion_note_2026-04-18": {
       "audit_date": "2026-04-30T00:51:56.898235+00:00",
