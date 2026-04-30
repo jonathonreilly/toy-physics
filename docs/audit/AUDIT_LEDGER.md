@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T21:49:52.703400+00:00
+**Generated:** 2026-04-30T21:51:00.730717+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 209 |
+| `audited_clean` | 210 |
 | `audited_conditional` | 457 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 807 |
+| `unaudited` | 806 |
 
 | criticality | count |
 |---|---:|
@@ -257,6 +257,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_minimal_scale_free_selector_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_no_hidden_source_audit_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
+| `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `lattice_3d_dense_refinement_reconciliation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -8268,6 +8269,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **open / conditional deps cited:**
   - `KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md`
   - `KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`
+- **auditor confidence:** high
+
+### `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25`
+
+- **Note:** [`KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md`](../../docs/KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-07`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The unique trace-preserving local descent from A=span(P_plus,P_perp) to D^C3=span(I) is E_loc(X)=Tr(X)I/3, equals diagonal compression on A, and erases the reduced traceless Z coordinate modulo common scalar background.  _(class `A`)_
+- **chain closes:** True — The runner verifies the projector algebra, diagonal compression, uniqueness from trace preservation, and quotient erasure exactly. The note explicitly keeps the physical source-domain law and retained Koide closure open.
+- **rationale:** The support-tier canonical-descent theorem closes on its stated scope: with scalar preservation, trace preservation, and strict onsite target fixed, the descent A -> D^C3 is uniquely Tr(X)I/3 and agrees with site-local diagonal compression. The runner verifies 55 checks including the boundary guardrails, projector algebra, uniqueness, and erasure of the reduced Z coordinate modulo common scalar. Residual risk is downstream overuse: this clean audit does not prove that the physical charged-lepton source-domain law must use onsite descent, nor does it retain native Q, delta, or full Koide closure.
 - **auditor confidence:** high
 
 ### `koide_selected_line_cyclic_response_bridge_note_2026-04-18`

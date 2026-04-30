@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 1,
-    "high": 231,
+    "high": 230,
     "leaf": 286,
     "medium": 289
   },
-  "generated_at": "2026-04-30T21:49:52.529824+00:00",
+  "generated_at": "2026-04-30T21:51:00.559491+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -249,23 +249,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 32
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 10,
-      "load_bearing_score": 10.285,
-      "note_path": "docs/KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_q_source_domain_canonical_descent.py",
-      "transitive_descendants": 38
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -18317,6 +18300,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 425,
-  "total_pending": 807
+  "ready_count": 424,
+  "total_pending": 806
 }
