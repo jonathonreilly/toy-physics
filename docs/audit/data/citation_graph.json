@@ -18325,7 +18325,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T13:32:40.539364+00:00",
+  "generated_at": "2026-04-30T13:32:57.620100+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19868,6 +19868,16 @@
       "path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
       "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action"
+    },
+    "axiom_first_spectrum_condition_theorem_note_2026-04-29": {
+      "claim_id": "axiom_first_spectrum_condition_theorem_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support \u2014 branch-local theorem note on A_min; runner passing; audit-pending.",
+      "deps": [],
+      "note_hash": "a6c511cccd69ada362439478689749a06530030ca03d117799dd719ef965a0c7",
+      "path": "docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/axiom_first_spectrum_condition_check.py",
+      "title": "Axiom-First Spectrum Condition (Lattice Analogue) on Cl(3) \u2297 Z^3"
     },
     "axiom_first_spin_statistics_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_spin_statistics_theorem_note_2026-04-29",
@@ -40307,6 +40317,7 @@
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
     "axiom_first_lattice_noether_theorem_note_2026-04-29",
     "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+    "axiom_first_spectrum_condition_theorem_note_2026-04-29",
     "axiom_first_spin_statistics_theorem_note_2026-04-29",
     "axiom_reduction_note",
     "b_independence_mechanism_note",
@@ -41405,16 +41416,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4581,
-    "leaf_count": 743,
-    "node_count": 1681,
-    "root_count": 1209,
-    "runners_with_path": 765,
+    "leaf_count": 744,
+    "node_count": 1682,
+    "root_count": 1210,
+    "runners_with_path": 766,
     "status_counts": {
       "bounded": 255,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 182,
+      "support": 183,
       "unknown": 795
     }
   }
