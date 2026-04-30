@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 304,
+    "leaf": 303,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:34:30.747968+00:00",
+  "generated_at": "2026-04-30T19:34:36.782065+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13548,23 +13548,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "koide_kappa_two_orbit_dimension_factorization_note_2026-04-19",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/KOIDE_KAPPA_TWO_ORBIT_DIMENSION_FACTORIZATION_NOTE_2026-04-19.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_kappa_two_orbit_dimension_factorization.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "koide_moment_ratio_uniformity_theorem_note_2026-04-19",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -18482,6 +18465,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 449,
-  "total_pending": 830
+  "ready_count": 448,
+  "total_pending": 829
 }
