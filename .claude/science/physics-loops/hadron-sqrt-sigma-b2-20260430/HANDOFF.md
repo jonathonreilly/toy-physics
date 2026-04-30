@@ -29,9 +29,9 @@ The landed result is negative/progress:
 - a resumable B5 Wilson/Creutz ladder runner now exists. Its smoke
   profile is verified; production `L=8,12,16` statistics remain to be
   accumulated before B5 can be promoted.
-- the first ten production intervals completed `L=8` with `1000/1000`
-  JSONL records after `10239` sweeps and advanced `L=12` to `76/1000`
-  JSONL records after `981` sweeps. This is a stronger checkpoint, but it
+- the first eleven production intervals completed `L=8` with `1000/1000`
+  JSONL records after `10239` sweeps and advanced `L=12` to `102/1000`
+  JSONL records after `1250` sweeps. This is a stronger checkpoint, but it
   is not B5 closure because `L=12` remains shallow and `L=16` is still
   missing.
 
