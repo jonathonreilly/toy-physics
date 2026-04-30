@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 1,
-    "high": 196,
+    "high": 195,
     "leaf": 286,
     "medium": 287
   },
-  "generated_at": "2026-04-30T22:56:52.087875+00:00",
+  "generated_at": "2026-04-30T22:57:54.879370+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -249,23 +249,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 32
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "universal_qg_canonical_smooth_geometric_action_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 5,
-      "load_bearing_score": 7.587,
-      "note_path": "docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 33
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -17692,6 +17675,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 387,
-  "total_pending": 770
+  "ready_count": 386,
+  "total_pending": 769
 }

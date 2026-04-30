@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:56:52.257467+00:00
+**Generated:** 2026-04-30T22:57:55.042920+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 83 |
 | _proposed_retained_ | 1 |
 | bounded | 274 |
-| support | 238 |
+| support | 237 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 753 |
+| ~~audited_conditional~~ | 754 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 220 |
-| `audited_conditional` | 480 |
+| `audited_conditional` | 481 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 770 |
+| `unaudited` | 769 |
 
 | criticality | count |
 |---|---:|
@@ -763,6 +763,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_qg_canonical_refinement_net_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `universal_qg_canonical_smooth_geometric_action_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_inverse_limit_closure_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_pl_field_interface_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_pl_sobolev_interface_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -11347,6 +11348,23 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
   - `UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`
   - `canonical_coarse_fine_refinement_splitting_runner`
+- **auditor confidence:** high
+
+### `universal_qg_canonical_smooth_geometric_action_note`
+
+- **Note:** [`UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md`](../../docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-45`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The weak/Gaussian continuum bridge and the Lorentzian Einstein/Regge stationary action family are the convex and Lorentzian sectors of the same exact smooth geometric/action family.  _(class `B`)_
+- **chain closes:** False — The shared B_D and K_GR(D) formulas support a project-native comparison only after the smooth weak/measure equivalence, positive-background local closure, and Lorentzian global stationary closure are established. Those upstream bridge rows are conditional, unaudited support, or audited as renaming in the current ledger.
+- **rationale:** Issue: the capstone identifies the positive-background weak/Gaussian sector and Lorentzian Einstein/Regge stationary sector as one smooth geometric/action family, but the required upstream smooth weak/measure equivalence, positive-background closure, and Lorentzian global closure are not audit-clean. Why this blocks: using the same congruence-covariant bilinear formula is a useful organizing observation, but it does not prove the imported smooth-realization and global-stationary bridge claims. Repair target: ratify or repair the smooth weak/measure, positive-background, and Lorentzian global atlas/solution rows, then re-audit this capstone. Claim boundary until fixed: safe as a conditional project-native comparison frame, not as closed smooth geometric/action equivalence.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md`
+  - `UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md`
+  - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
+  - `UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_qg_inverse_limit_closure_note`
