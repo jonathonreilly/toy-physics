@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:31:21.940147+00:00
+**Generated:** 2026-04-30T18:42:27.443752+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 105 |
+| `audited_clean` | 106 |
 | `audited_conditional` | 304 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1066 |
+| `unaudited` | 1065 |
 
 | criticality | count |
 |---|---:|
@@ -108,6 +108,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `axiom_first_spin_statistics_theorem_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `bmv_entanglement_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -1246,6 +1247,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `bmv_entanglement_note_2026-04-11`
+
+- **Note:** [`BMV_ENTANGLEMENT_NOTE_2026-04-11.md`](../../docs/BMV_ENTANGLEMENT_NOTE_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop:medium-sweep-2026-04-30-01`  (codex-current; independence=cross_family)
+- **load-bearing step:** On a fixed externally imposed geometry-branch superposition, the runner computes delta_S > 0 for every tested coupling and S_quantum saturates near ln(2).  _(class `C`)_
+- **chain closes:** True — The source is explicitly bounded to the externally imposed two-branch protocol, and the current runner recomputes the overlaps, entropy values, positive delta_S table, and norm conservation without one-hop dependencies.
+- **rationale:** The note's claim is narrow and matches the current runner output: a finite staggered-lattice protocol with an externally imposed source branch gives positive branch-mediated entanglement beyond the corresponding classical mixture. The note does not claim a full BMV witness or dynamically generated gravitational branch, so the main hidden-premise failure mode is already excluded by the source boundary. Residual risk is limited to the finite protocol and implementation assumptions, which are inside the declared bounded scope.
 - **auditor confidence:** high
 
 ### `born_lane_comparison_note`
