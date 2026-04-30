@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:49:04.731062+00:00
+**Generated:** 2026-04-30T02:49:52.724865+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,25 +22,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
 | bounded | 203 |
-| support | 104 |
+| support | 103 |
 | open | 24 |
 | unknown | 507 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 387 |
+| ~~audited_conditional~~ | 388 |
 | ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 170 |
+| `audited_conditional` | 171 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1247 |
+| `unaudited` | 1246 |
 
 | criticality | count |
 |---|---:|
@@ -276,6 +276,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_selected_line_cyclic_response_bridge_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_selected_line_provenance_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `koide_z3_scalar_potential_support_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
 | `lattice_complementarity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_nn_high_precision_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3143,6 +3144,22 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md`
   - `SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md`
 - **auditor confidence:** high
+
+### `koide_z3_scalar_potential_support_note_2026-04-19`
+
+- **Note:** [`KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md`](../../docs/KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** On the selected slice K_Z3^sel(m) = K_frozen + m T_m, the Clifford involution T_m^2 = I_3 fixes Tr(T_m^2)=3 and Tr(T_m^3)=1, giving V(m)=V0+(c1+c2/2)m+(3/2)m^2+(1/6)m^3.  _(class `A`)_
+- **chain closes:** False — The trace identities close as selected-slice algebra, but the selected-slice K_Z3 construction is imported from conditional upstream notes and this row has no runner verifying the coefficients end to end.
+- **rationale:** Issue: the scalar potential is derived only after importing the selected-slice frozen-bank/K_Z3 machinery and does not select the physical m_* point. Why this blocks: the note honestly records that V_eff's minimum misses m_* and that the PDG/transport observations are checks only, so it cannot support a framework-derived charged-lepton tower or selector law. Repair target: audit/retain the selected-slice frozen-bank and Z3 doublet-block construction, add a runner for the trace/potential coefficients, and derive the microscopic condition selecting m_* if the claim is to be promoted. Claim boundary until fixed: support-level selected-slice scalar-potential algebra with an explicit gap to the physical selected point.
+- **open / conditional deps cited:**
+  - `KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
+- **auditor confidence:** medium
 
 ### `kubo_continuum_limit_note`
 
