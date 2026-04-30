@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:57:03.692844+00:00
+**Generated:** 2026-04-30T18:57:12.114712+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 113 |
+| `audited_clean` | 114 |
 | `audited_conditional` | 316 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1046 |
+| `unaudited` | 1045 |
 
 | criticality | count |
 |---|---:|
@@ -162,6 +162,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graph_first_su3_integration_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `growing_graph_static_control_audit_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `hadron_lane1_confinement_to_mass_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -4646,6 +4647,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `scripts/mirror_chokepoint_joint.py_readout_not_registered_one_hop_dependency`
   - `scripts/higher_symmetry_dag.py_generator_family_not_registered_one_hop_dependency`
   - `runner_prints_diagnostics_without_hard_retention_assertions`
+- **auditor confidence:** high
+
+### `hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29`
+
+- **Note:** [`HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md`](../../docs/HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-ca82-linnaeus-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Bulk Grassmann/CAR structure descends to a rank-four boundary block only when the boundary projection is a reducing Clifford-module morphism for the selected modes.  _(class `C`)_
+- **chain closes:** True — The runner constructs explicit finite CAR projections with the same rank/trace data, one reducing and one nonreducing, and the nonreducing case fails CAR. That proves the stated A1 shortcut is under-specified.
+- **rationale:** The note is a negative boundary result, not a promoted CAR derivation. Its load-bearing finite-algebra obstruction is directly witnessed by the runner: rank-four support plus bulk CAR does not force compressed CAR unless the projection reduces the selected algebra. No external comparator or tuned numerical input is used.
 - **auditor confidence:** high
 
 ### `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28`
