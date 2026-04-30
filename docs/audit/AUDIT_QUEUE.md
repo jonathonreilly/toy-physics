@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T02:46:04.393139+00:00
-**Total pending:** 1251
-**Ready (all deps already at a stable tier):** 809
+**Generated:** 2026-04-30T02:47:06.667136+00:00
+**Total pending:** 1250
+**Ready (all deps already at a stable tier):** 808
 
 By criticality:
 - `critical`: 41
-- `high`: 262
+- `high`: 261
 - `medium`: 340
 - `leaf`: 608
 
@@ -57,14 +57,14 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 39 | `n_eff_from_three_generations_theorem_note_2026-04-24` | critical | 38 | 13.29 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_n_eff_from_three_generations.py` |
 | 40 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | critical | 38 | 12.79 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_matter_radiation_equality_structural_identity.py` |
 | 41 | `publication.ci3_z3.publication_matrix` | critical | 31 | 12.50 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 42 | `koide_selected_line_cyclic_response_bridge_note_2026-04-18` | high | 71 | 10.17 | Y | fresh_context_or_stronger | `scripts/frontier_koide_selected_line_cyclic_response_bridge.py` |
-| 43 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | high | 69 | 8.63 | Y | fresh_context_or_stronger | `scripts/frontier_koide_gamma_orbit_selector_bridge.py` |
-| 44 | `koide_full_lattice_schur_inheritance_note_2026-04-18` | high | 67 | 9.09 | Y | fresh_context_or_stronger | `scripts/frontier_koide_full_lattice_schur_inheritance.py` |
-| 45 | `koide_z3_scalar_potential_support_note_2026-04-19` | high | 65 | 8.54 | Y | fresh_context_or_stronger | - |
-| 46 | `koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24` | high | 64 | 11.02 | Y | fresh_context_or_stronger | - |
-| 47 | `yt_exact_schur_normal_form_uniqueness_note` | high | 64 | 11.02 | Y | fresh_context_or_stronger | `scripts/frontier_yt_exact_schur_normal_form_uniqueness.py` |
-| 48 | `koide_brannen_callan_harvey_candidate_note_2026-04-22` | high | 64 | 9.52 | Y | fresh_context_or_stronger | - |
-| 49 | `koide_brannen_geometry_dirac_support_note_2026-04-22` | high | 64 | 9.52 | Y | fresh_context_or_stronger | - |
-| 50 | `koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24` | high | 64 | 9.02 | Y | fresh_context_or_stronger | `scripts/frontier_koide_a1_cheeger_simons_rz_probe.py` |
+| 42 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | high | 69 | 8.63 | Y | fresh_context_or_stronger | `scripts/frontier_koide_gamma_orbit_selector_bridge.py` |
+| 43 | `koide_full_lattice_schur_inheritance_note_2026-04-18` | high | 67 | 9.09 | Y | fresh_context_or_stronger | `scripts/frontier_koide_full_lattice_schur_inheritance.py` |
+| 44 | `koide_z3_scalar_potential_support_note_2026-04-19` | high | 65 | 8.54 | Y | fresh_context_or_stronger | - |
+| 45 | `koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24` | high | 64 | 11.02 | Y | fresh_context_or_stronger | - |
+| 46 | `yt_exact_schur_normal_form_uniqueness_note` | high | 64 | 11.02 | Y | fresh_context_or_stronger | `scripts/frontier_yt_exact_schur_normal_form_uniqueness.py` |
+| 47 | `koide_brannen_callan_harvey_candidate_note_2026-04-22` | high | 64 | 9.52 | Y | fresh_context_or_stronger | - |
+| 48 | `koide_brannen_geometry_dirac_support_note_2026-04-22` | high | 64 | 9.52 | Y | fresh_context_or_stronger | - |
+| 49 | `koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24` | high | 64 | 9.02 | Y | fresh_context_or_stronger | `scripts/frontier_koide_a1_cheeger_simons_rz_probe.py` |
+| 50 | `koide_a1_derivation_status_note` | high | 64 | 8.52 | Y | fresh_context_or_stronger | `scripts/frontier_koide_a1_quartic_potential_derivation.py` |
 
 Full queue lives in `data/audit_queue.json`.

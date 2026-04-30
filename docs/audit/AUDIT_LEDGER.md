@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:46:04.555089+00:00
+**Generated:** 2026-04-30T02:47:06.842107+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 203 |
 | support | 104 |
 | open | 24 |
-| unknown | 514 |
+| unknown | 513 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 380 |
+| ~~audited_conditional~~ | 381 |
 | ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 167 |
+| `audited_conditional` | 168 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1250 |
+| `unaudited` | 1249 |
 
 | criticality | count |
 |---|---:|
@@ -271,6 +271,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_p_one_clock_3plus1_transport_reduction_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_q_delta_readout_retention_split_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `koide_selected_line_cyclic_response_bridge_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_selected_line_provenance_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_complementarity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3055,6 +3056,21 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `Koide_Q_support_route_value_Q_2_over_3_not_registered_one_hop_dependency`
   - `Koide_delta_APS_support_route_value_delta_2_over_9_not_registered_one_hop_dependency`
   - `same_Z3_p_equals_d_structural_bridge_not_registered_one_hop_dependency`
+- **auditor confidence:** high
+
+### `koide_selected_line_cyclic_response_bridge_note_2026-04-18`
+
+- **Note:** [`KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md`](../../docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The actual-route Berry phase theorem supplies the exact target delta = 2/9, and the selected-line scalar-phase bridge then fixes kappa_sel,* and the unique first-branch point m_*.  _(class `B`)_
+- **chain closes:** False — The cyclic-response algebra and first-branch uniqueness checks close after the Berry target delta = 2/9 is supplied, but that target is imported from a not-yet-retained actual-route phase theorem.
+- **rationale:** Issue: the selected-line point is fixed only after importing the actual-route Berry/Brannen-Zenczykowski phase offset delta = 2/9. Why this blocks: the runner hard-codes DELTA_TARGET = 2/9 and then verifies the scalar bridge, monotonicity, and unique m_*; it does not derive the phase offset or promote the actual-route Berry theorem. Repair target: retain/audit the actual-route Berry phase theorem that derives delta = 2/9 on the physical route, then rerun this bridge as a downstream corollary with that dependency recorded. Claim boundary until fixed: exact selected-line scalar-phase bridge and unique point for a supplied delta = 2/9 input, not an independent closure of the charged-lepton selected-line scalar law.
+- **open / conditional deps cited:**
+  - `KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`
+  - `KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md`
 - **auditor confidence:** high
 
 ### `koide_selected_line_provenance_note_2026-04-20`
