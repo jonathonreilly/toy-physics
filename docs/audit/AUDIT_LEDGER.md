@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T23:57:19.491487+00:00
+**Generated:** 2026-04-30T23:59:20.897026+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 86 |
 | _proposed_retained_ | 1 |
 | bounded | 272 |
-| support | 234 |
+| support | 233 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 761 |
+| ~~audited_conditional~~ | 762 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 224 |
-| `audited_conditional` | 483 |
+| `audited_conditional` | 484 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 768 |
+| `unaudited` | 767 |
 
 | criticality | count |
 |---|---:|
@@ -645,6 +645,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_cyclic_wilson_descendant_law_note_2026-04-18` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `koide_eigenvalue_q23_surface_theorem_note_2026-04-20` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `koide_explicit_calculations_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `koide_full_lattice_schur_inheritance_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
@@ -8078,6 +8079,22 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The cyclic average P_cyc(H_e) keeps exactly the diagonal sum, cyclic symmetric sum, and signed cyclic antisymmetric sum, with H_cyc = (r0/3)B0 + (r1/6)B1 + (r2/6)B2.  _(class `A`)_
 - **chain closes:** True — The note's scoped claim is the finite-dimensional algebraic compression of an already-given Hermitian target H_e. The runner verifies the projection formula, response reconstruction, and observed charged-lepton witness without needing a hidden selector or microscopic source-law derivation.
 - **rationale:** Clean within the note's declared support-level boundary. The compression theorem is an exact algebraic projection from Herm(3) to the cyclic three-channel subspace, and the note explicitly does not claim to derive the microscopic Wilson/lattice source law, the Koide selector, or the final lepton readout. Residual risk is citation hygiene rather than closure: downstream claims must not treat this support audit as a retained derivation of the three responses themselves.
+- **auditor confidence:** high
+
+### `koide_eigenvalue_q23_surface_theorem_note_2026-04-20`
+
+- **Note:** [`KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md`](../../docs/KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-ready-20260430-54`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** On the selected line, Q_eig(m, beta) is strictly increasing in beta and Q_eig = 2/3 therefore gives a one-real surface beta_q23(m), not a distinguished selected-line point m_*.  _(class `C`)_
+- **chain closes:** False — The monotonicity identity and sampled selected-line surface checks pass with classified A/C output. The row imports the selected-line H_sel(m), physical branch, m_* and beta-star witness machinery from conditional/unaudited authorities that are not registered as one-hop dependencies.
+- **rationale:** Issue: the eigenvalue Q=2/3 surface result is verified only after importing the current selected-line construction, physical branch interval, m_* point, and beta-star witness from unregistered conditional support. Why this blocks: the runner proves the abstract monotonicity formula and numerically samples the existing selected-line model, but it does not derive H_sel(m), the physical selected branch, or the framework-native beta candidates from retained one-hop inputs. Repair target: register and audit the selected-line cyclic response bridge, gamma-orbit/slot-route witness, and any H_sel source theorem as dependencies, then make the runner fail if those inputs are absent or non-retained. Claim boundary until fixed: conditional support/no-go: given the current selected-line H_sel(m) model, imposing Q_eig=2/3 produces a beta surface and still needs an independent beta law; it is not a closed retained derivation or retained no-go over Cl(3)/Z3 alone.
+- **open / conditional deps cited:**
+  - `KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md`
+  - `KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md`
+  - `KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md`
 - **auditor confidence:** high
 
 ### `koide_explicit_calculations_note`
