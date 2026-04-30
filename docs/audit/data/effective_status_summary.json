@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-30T11:42:25.831208+00:00",
+  "computed_at": "2026-04-30T11:42:29.414434+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -37,7 +37,7 @@
     "support": 110,
     "unknown": 442
   },
-  "proposed_demoted_by_upstream_count": 140,
+  "proposed_demoted_by_upstream_count": 139,
   "proposed_demoted_by_upstream_examples": [
     "area_law_quarter_broader_no_go_note_2026-04-25",
     "atomic_hydrogen_helium_probe_note",
@@ -60,9 +60,9 @@
     "ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25",
     "ckm_brocard_polynomial_vieta_structural_integers_theorem_note_2026-04-25",
     "ckm_brocard_q_polynomial_perfect_square_decomposition_theorem_note_2026-04-25",
-    "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25",
     "ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25",
     "ckm_compound_magnitudes_circumradius_bridge_theorem_note_2026-04-25",
-    "ckm_cp_product_alpha_s_cross_sector_extraction_theorem_note_2026-04-25"
+    "ckm_cp_product_alpha_s_cross_sector_extraction_theorem_note_2026-04-25",
+    "ckm_cubic_bernoulli_koide_bridge_support_note_2026-04-25"
   ]
 }
