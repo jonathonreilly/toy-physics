@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 3,
+    "critical": 2,
     "high": 234,
     "leaf": 571,
     "medium": 342
   },
-  "generated_at": "2026-04-30T11:42:56.545185+00:00",
+  "generated_at": "2026-04-30T11:42:59.958795+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,30 +23,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "transitive_descendants": 281
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24",
-        "cosmology_from_mass_spectrum_note",
-        "r_base_group_theory_derivation_theorem_note_2026-04-24",
-        "n_eff_from_three_generations_theorem_note_2026-04-24",
-        "dark_energy_eos_retained_corollary_theorem_note",
-        "three_generation_structure_note"
-      ],
-      "direct_in_degree": 15,
-      "load_bearing_score": 12.785,
-      "note_path": "docs/MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_matter_radiation_equality_structural_identity.py",
-      "transitive_descendants": 38
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24222,5 +24198,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1150
+  "total_pending": 1149
 }

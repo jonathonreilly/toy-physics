@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T11:42:56.705048+00:00
+**Generated:** 2026-04-30T11:43:00.114642+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -35,12 +35,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 229 |
+| `audited_conditional` | 230 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1149 |
+| `unaudited` | 1148 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 384 |
 | `leaf` | 764 |
 
-- **Proposed claims demoted by upstream:** 132
+- **Proposed claims demoted by upstream:** 131
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -323,6 +323,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `linear_response_second_order_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `local_zsym_predictor_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | A | - |
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `n_eff_from_three_generations_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | B | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -4251,6 +4252,25 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **open / conditional deps cited:**
   - `scripts/matter_inertial_closure.py_not_registered_primary_runner`
   - `logs/2026-04-07-matter-inertial-closure.txt_not_registered_primary_output`
+- **auditor confidence:** high
+
+### `matter_radiation_equality_structural_identity_theorem_note_2026-04-24`
+
+- **Note:** [`MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](../../docs/MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_failed~~  (reason: `inherited_from:n_eff_from_three_generations_theorem_note_2026-04-24`)
+- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Matter-radiation equality obeys 1+z_mr = Omega_m,0/Omega_r,0 on the admitted flat-FRW matter/radiation surface.  _(class `A`)_
+- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md, COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md, R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md, N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md, DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md, THREE_GENERATION_STRUCTURE_NOTE.md.
+- **rationale:** Issue: The load-bearing step still imports unratified direct authority: COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md, COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md, R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md, N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md, DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md, THREE_GENERATION_STRUCTURE_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
+- **open / conditional deps cited:**
+  - `COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md`
+  - `COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`
+  - `R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md`
+  - `N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md`
+  - `DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md`
+  - `THREE_GENERATION_STRUCTURE_NOTE.md`
 - **auditor confidence:** high
 
 ### `mesoscopic_surrogate_annular_tapered_sweep_note`
