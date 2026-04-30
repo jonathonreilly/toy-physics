@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T21:44:38.819199+00:00
+**Generated:** 2026-04-30T21:46:01.111194+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,25 +20,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 81 |
-| _proposed_retained_ | 8 |
+| _proposed_retained_ | 7 |
 | bounded | 282 |
 | support | 253 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 733 |
+| ~~audited_conditional~~ | 734 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 207 |
-| `audited_conditional` | 456 |
+| `audited_conditional` | 457 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 810 |
+| `unaudited` | 809 |
 
 | criticality | count |
 |---|---:|
@@ -508,6 +508,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `evolving_network_prototype_v4_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `evolving_network_prototype_v5_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `evolving_network_prototype_v6_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `exponent_derivation` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `family_companion_compare_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `field_equation_derivation_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -5138,6 +5139,20 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `su2_nonperturbative_matching_open`
   - `higgs_lambda_from_g5_condensate_open`
   - `source_note_stale_relative_to_registered_runner`
+- **auditor confidence:** high
+
+### `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26`
+
+- **Note:** [`EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md`](../../docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-04`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The one-Higgs-doublet tree-level mass matrix diagonalizes into a massless photon, M_W^2=g^2 v^2/4, M_Z^2=(g^2+g_Y^2)v^2/4, Q=T3+Y, e=g sin(theta_W)=g_Y cos(theta_W), and rho_tree=1.  _(class `A`)_
+- **chain closes:** False — The symbolic mass-matrix, charge, coupling, and scalar-Hessian algebra all pass, but the registered primary runner exits nonzero because a note-surface status guardrail expects wording not present in the current note. The proof artifact is therefore stale relative to the note and cannot support a clean retained audit until repaired.
+- **rationale:** Issue: the registered verifier reports TOTAL: PASS=45, FAIL=1 and exits nonzero; the failed check is the status-surface guardrail 'status is standalone EW/Higgs theorem', while the note instead describes the result as a structural guardrail. Why this blocks: a proposed-retained theorem cannot land clean while its own primary runner's expected verifier status is stale and the note promises 46/0 CLOSED. Repair target: align the runner's surface guardrail with the current note wording or update the note/runner pair, then rerun the exact mass-matrix proof. Claim boundary until fixed: the tree-level algebra appears to pass, but the audit status remains conditional on repairing the stale proof artifact.
+- **open / conditional deps cited:**
+  - `runner_exit_nonzero_stale_status_guardrail:scripts/frontier_ew_higgs_gauge_mass_diagonalization.py`
 - **auditor confidence:** high
 
 ### `exponent_derivation`

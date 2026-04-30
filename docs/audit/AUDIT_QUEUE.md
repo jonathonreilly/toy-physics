@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T21:44:38.645972+00:00
-**Total pending:** 810
-**Ready (all deps already at a stable tier):** 428
+**Generated:** 2026-04-30T21:46:00.939178+00:00
+**Total pending:** 809
+**Ready (all deps already at a stable tier):** 427
 
 By criticality:
 - `critical`: 1
-- `high`: 234
+- `high`: 233
 - `medium`: 289
 - `leaf`: 286
 
@@ -25,46 +25,46 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 7 | `neutrino_two_amplitude_last_mile_reduction_note` | high | 37 | 9.25 | Y | fresh_context_or_stronger | `scripts/frontier_neutrino_two_amplitude_last_mile.py` |
 | 8 | `pmns_right_conjugacy_invariant_no_go_note` | high | 37 | 8.75 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_right_conjugacy_invariant_nogo.py` |
 | 9 | `pmns_sigma_zero_nogo_note` | high | 37 | 8.75 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_sigma_zero_no_go.py` |
-| 10 | `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | high | 36 | 10.71 | Y | fresh_context_or_stronger | `scripts/frontier_ew_higgs_gauge_mass_diagonalization.py` |
-| 11 | `signed_gravity_response_lane_status_note_2026-04-26` | high | 36 | 9.21 | Y | fresh_context_or_stronger | `scripts/frontier_signed_gravity_response_lane_status.py` |
-| 12 | `single_axiom_hilbert_note` | high | 35 | 9.67 | Y | fresh_context_or_stronger | `scripts/frontier_single_axiom_hilbert.py` |
-| 13 | `universal_gr_lorentzian_global_atlas_closure_note` | high | 35 | 9.17 | Y | fresh_context_or_stronger | - |
-| 14 | `universal_qg_canonical_refinement_net_note` | high | 35 | 9.17 | Y | fresh_context_or_stronger | - |
-| 15 | `universal_qg_uv_finite_partition_note` | high | 35 | 8.67 | Y | fresh_context_or_stronger | - |
-| 16 | `bell_inequality_derived_note` | high | 35 | 8.17 | Y | fresh_context_or_stronger | `scripts/frontier_bell_inequality.py` |
-| 17 | `broad_gravity_derivation_note` | high | 35 | 8.17 | Y | fresh_context_or_stronger | - |
-| 18 | `ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26` | high | 34 | 10.13 | Y | fresh_context_or_stronger | `scripts/frontier_ckm_moduli_only_unitarity_jarlskog_area_certificate.py` |
-| 19 | `koide_q_so2_phase_erasure_support_note_2026-04-25` | high | 34 | 9.63 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_so2_phase_erasure_support.py` |
-| 20 | `sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26` | high | 34 | 9.63 | Y | fresh_context_or_stronger | `scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py` |
-| 21 | `newton_law_derived_note` | high | 34 | 9.13 | Y | fresh_context_or_stronger | `scripts/frontier_distance_law_definitive.py` |
-| 22 | `poisson_exhaustive_uniqueness_note` | high | 34 | 9.13 | Y | fresh_context_or_stronger | `scripts/frontier_poisson_exhaustive_uniqueness.py` |
-| 23 | `self_consistency_forces_poisson_note` | high | 34 | 9.13 | Y | fresh_context_or_stronger | `scripts/frontier_self_consistent_field_equation.py` |
-| 24 | `single_axiom_information_note` | high | 34 | 9.13 | Y | fresh_context_or_stronger | `scripts/frontier_single_axiom_information.py` |
-| 25 | `dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21` | high | 34 | 8.63 | Y | fresh_context_or_stronger | `scripts/frontier_dm_pmns_ordered_chain_graded_current_delta_closure_2026_04_21.py` |
-| 26 | `universal_gr_lorentzian_signature_extension_note` | high | 34 | 8.63 | Y | fresh_context_or_stronger | - |
-| 27 | `dm_split2_interval_certified_dominance_closure_theorem_note_2026-04-21` | high | 34 | 8.13 | Y | fresh_context_or_stronger | `scripts/frontier_dm_split2_interval_certified_dominance_closure_2026_04_21.py` |
-| 28 | `grav_decoherence_derived_note` | high | 34 | 7.63 | Y | fresh_context_or_stronger | `scripts/frontier_grav_decoherence_derived.py` |
-| 29 | `monopole_derived_note` | high | 34 | 7.63 | Y | fresh_context_or_stronger | `scripts/frontier_monopole_derived.py` |
-| 30 | `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | high | 33 | 9.59 | Y | fresh_context_or_stronger | `scripts/frontier_dm_wilson_direct_descendant_schur_feshbach_boundary_variational.py` |
-| 31 | `universal_qg_inverse_limit_closure_note` | high | 33 | 8.09 | Y | fresh_context_or_stronger | - |
-| 32 | `universal_qg_pl_field_interface_note` | high | 33 | 8.09 | Y | fresh_context_or_stronger | - |
-| 33 | `universal_qg_pl_sobolev_interface_note` | high | 33 | 8.09 | Y | fresh_context_or_stronger | - |
-| 34 | `universal_qg_pl_weak_form_note` | high | 33 | 8.09 | Y | fresh_context_or_stronger | - |
-| 35 | `koide_q_second_order_support_batch_note_2026-04-22` | high | 33 | 7.59 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_bridge_single_primitive.py` |
-| 36 | `koide_reviewer_stress_test_note_2026-04-21` | high | 33 | 7.59 | Y | fresh_context_or_stronger | `scripts/frontier_koide_reviewer_stress_test.py` |
-| 37 | `primordial_spectrum_note` | high | 33 | 7.59 | Y | fresh_context_or_stronger | `scripts/frontier_primordial_spectrum.py` |
-| 38 | `universal_qg_canonical_smooth_geometric_action_note` | high | 33 | 7.59 | Y | fresh_context_or_stronger | - |
-| 39 | `hubble_lane5_two_gate_dependency_firewall_note_2026-04-27` | high | 16 | 6.59 | Y | fresh_context_or_stronger | `scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py` |
-| 40 | `atomic_rydberg_dependency_firewall_note_2026-04-27` | high | 15 | 6.50 | Y | fresh_context_or_stronger | `scripts/frontier_atomic_rydberg_dependency_firewall.py` |
-| 41 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | high | 249 | 14.97 |  | fresh_context_or_stronger | - |
-| 42 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | high | 249 | 14.47 |  | fresh_context_or_stronger | - |
-| 43 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | high | 248 | 12.96 |  | fresh_context_or_stronger | `scripts/frontier_lh_anomaly_trace_catalog.py` |
-| 44 | `yt_zero_import_authority_note` | high | 205 | 11.19 |  | fresh_context_or_stronger | `scripts/frontier_yt_ward_identity_derivation.py` |
-| 45 | `neutrino_majorana_native_gaussian_no_go_note` | high | 180 | 10.00 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_native_gaussian_nogo.py` |
-| 46 | `neutrino_majorana_finite_normal_grammar_no_go_note` | high | 179 | 10.49 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py` |
-| 47 | `neutrino_majorana_pfaffian_extension_note` | high | 178 | 9.98 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_extension.py` |
-| 48 | `neutrino_majorana_pfaffian_axiom_boundary_note` | high | 177 | 7.98 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_axiom_boundary.py` |
-| 49 | `neutrino_majorana_pfaffian_no_forcing_theorem_note` | high | 176 | 9.97 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_no_forcing_theorem.py` |
-| 50 | `neutrino_majorana_current_atlas_nonrealization_note` | high | 176 | 8.97 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_current_atlas_nonrealization.py` |
+| 10 | `signed_gravity_response_lane_status_note_2026-04-26` | high | 36 | 9.21 | Y | fresh_context_or_stronger | `scripts/frontier_signed_gravity_response_lane_status.py` |
+| 11 | `single_axiom_hilbert_note` | high | 35 | 9.67 | Y | fresh_context_or_stronger | `scripts/frontier_single_axiom_hilbert.py` |
+| 12 | `universal_gr_lorentzian_global_atlas_closure_note` | high | 35 | 9.17 | Y | fresh_context_or_stronger | - |
+| 13 | `universal_qg_canonical_refinement_net_note` | high | 35 | 9.17 | Y | fresh_context_or_stronger | - |
+| 14 | `universal_qg_uv_finite_partition_note` | high | 35 | 8.67 | Y | fresh_context_or_stronger | - |
+| 15 | `bell_inequality_derived_note` | high | 35 | 8.17 | Y | fresh_context_or_stronger | `scripts/frontier_bell_inequality.py` |
+| 16 | `broad_gravity_derivation_note` | high | 35 | 8.17 | Y | fresh_context_or_stronger | - |
+| 17 | `ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26` | high | 34 | 10.13 | Y | fresh_context_or_stronger | `scripts/frontier_ckm_moduli_only_unitarity_jarlskog_area_certificate.py` |
+| 18 | `koide_q_so2_phase_erasure_support_note_2026-04-25` | high | 34 | 9.63 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_so2_phase_erasure_support.py` |
+| 19 | `sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26` | high | 34 | 9.63 | Y | fresh_context_or_stronger | `scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py` |
+| 20 | `newton_law_derived_note` | high | 34 | 9.13 | Y | fresh_context_or_stronger | `scripts/frontier_distance_law_definitive.py` |
+| 21 | `poisson_exhaustive_uniqueness_note` | high | 34 | 9.13 | Y | fresh_context_or_stronger | `scripts/frontier_poisson_exhaustive_uniqueness.py` |
+| 22 | `self_consistency_forces_poisson_note` | high | 34 | 9.13 | Y | fresh_context_or_stronger | `scripts/frontier_self_consistent_field_equation.py` |
+| 23 | `single_axiom_information_note` | high | 34 | 9.13 | Y | fresh_context_or_stronger | `scripts/frontier_single_axiom_information.py` |
+| 24 | `dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21` | high | 34 | 8.63 | Y | fresh_context_or_stronger | `scripts/frontier_dm_pmns_ordered_chain_graded_current_delta_closure_2026_04_21.py` |
+| 25 | `universal_gr_lorentzian_signature_extension_note` | high | 34 | 8.63 | Y | fresh_context_or_stronger | - |
+| 26 | `dm_split2_interval_certified_dominance_closure_theorem_note_2026-04-21` | high | 34 | 8.13 | Y | fresh_context_or_stronger | `scripts/frontier_dm_split2_interval_certified_dominance_closure_2026_04_21.py` |
+| 27 | `grav_decoherence_derived_note` | high | 34 | 7.63 | Y | fresh_context_or_stronger | `scripts/frontier_grav_decoherence_derived.py` |
+| 28 | `monopole_derived_note` | high | 34 | 7.63 | Y | fresh_context_or_stronger | `scripts/frontier_monopole_derived.py` |
+| 29 | `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | high | 33 | 9.59 | Y | fresh_context_or_stronger | `scripts/frontier_dm_wilson_direct_descendant_schur_feshbach_boundary_variational.py` |
+| 30 | `universal_qg_inverse_limit_closure_note` | high | 33 | 8.09 | Y | fresh_context_or_stronger | - |
+| 31 | `universal_qg_pl_field_interface_note` | high | 33 | 8.09 | Y | fresh_context_or_stronger | - |
+| 32 | `universal_qg_pl_sobolev_interface_note` | high | 33 | 8.09 | Y | fresh_context_or_stronger | - |
+| 33 | `universal_qg_pl_weak_form_note` | high | 33 | 8.09 | Y | fresh_context_or_stronger | - |
+| 34 | `koide_q_second_order_support_batch_note_2026-04-22` | high | 33 | 7.59 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_bridge_single_primitive.py` |
+| 35 | `koide_reviewer_stress_test_note_2026-04-21` | high | 33 | 7.59 | Y | fresh_context_or_stronger | `scripts/frontier_koide_reviewer_stress_test.py` |
+| 36 | `primordial_spectrum_note` | high | 33 | 7.59 | Y | fresh_context_or_stronger | `scripts/frontier_primordial_spectrum.py` |
+| 37 | `universal_qg_canonical_smooth_geometric_action_note` | high | 33 | 7.59 | Y | fresh_context_or_stronger | - |
+| 38 | `hubble_lane5_two_gate_dependency_firewall_note_2026-04-27` | high | 16 | 6.59 | Y | fresh_context_or_stronger | `scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py` |
+| 39 | `atomic_rydberg_dependency_firewall_note_2026-04-27` | high | 15 | 6.50 | Y | fresh_context_or_stronger | `scripts/frontier_atomic_rydberg_dependency_firewall.py` |
+| 40 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | high | 249 | 14.97 |  | fresh_context_or_stronger | - |
+| 41 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | high | 249 | 14.47 |  | fresh_context_or_stronger | - |
+| 42 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | high | 248 | 12.96 |  | fresh_context_or_stronger | `scripts/frontier_lh_anomaly_trace_catalog.py` |
+| 43 | `yt_zero_import_authority_note` | high | 205 | 11.19 |  | fresh_context_or_stronger | `scripts/frontier_yt_ward_identity_derivation.py` |
+| 44 | `neutrino_majorana_native_gaussian_no_go_note` | high | 180 | 10.00 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_native_gaussian_nogo.py` |
+| 45 | `neutrino_majorana_finite_normal_grammar_no_go_note` | high | 179 | 10.49 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py` |
+| 46 | `neutrino_majorana_pfaffian_extension_note` | high | 178 | 9.98 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_extension.py` |
+| 47 | `neutrino_majorana_pfaffian_axiom_boundary_note` | high | 177 | 7.98 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_axiom_boundary.py` |
+| 48 | `neutrino_majorana_pfaffian_no_forcing_theorem_note` | high | 176 | 9.97 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_no_forcing_theorem.py` |
+| 49 | `neutrino_majorana_current_atlas_nonrealization_note` | high | 176 | 8.97 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_current_atlas_nonrealization.py` |
+| 50 | `neutrino_majorana_charge_two_primitive_reduction_note` | high | 175 | 8.96 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_charge_two_primitive_reduction.py` |
 
 Full queue lives in `data/audit_queue.json`.

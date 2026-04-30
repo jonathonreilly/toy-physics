@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 1,
-    "high": 234,
+    "high": 233,
     "leaf": 286,
     "medium": 289
   },
-  "generated_at": "2026-04-30T21:44:38.645972+00:00",
+  "generated_at": "2026-04-30T21:46:00.939178+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -385,23 +385,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_pmns_sigma_zero_no_go.py",
       "transitive_descendants": 37
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 11,
-      "load_bearing_score": 10.709,
-      "note_path": "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_ew_higgs_gauge_mass_diagonalization.py",
-      "transitive_descendants": 36
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -18368,6 +18351,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 428,
-  "total_pending": 810
+  "ready_count": 427,
+  "total_pending": 809
 }
