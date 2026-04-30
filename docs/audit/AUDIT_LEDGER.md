@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:17:22.494833+00:00
+**Generated:** 2026-04-30T00:20:41.899950+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,25 +22,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 78 |
 | _proposed_retained_ | 12 |
 | bounded | 215 |
-| support | 115 |
+| support | 114 |
 | open | 25 |
 | unknown | 565 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 19 |
-| ~~audited_renaming~~ | 37 |
-| ~~audited_conditional~~ | 430 |
-| ~~audited_failed~~ | 89 |
+| ~~audited_renaming~~ | 21 |
+| ~~audited_conditional~~ | 195 |
+| ~~audited_failed~~ | 341 |
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 14 |
+| `audit_in_progress` | 13 |
 | `audited_clean` | 78 |
-| `audited_conditional` | 133 |
+| `audited_conditional` | 131 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 50 |
+| `audited_failed` | 51 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1290 |
+| `unaudited` | 1292 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 363 |
 | `leaf` | 795 |
 
-- **Proposed claims demoted by upstream:** 161
+- **Proposed claims demoted by upstream:** 162
 - **Citation cycles detected:** 139
 
 ### Runner classification (static heuristic)
@@ -65,31 +65,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | criticality | desc | score | audit_status | effective |
 |---:|---|---|---:|---:|---|---|
-| 1 | `alpha_s_derived_note` | critical | 245 | 32.94 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 32.84 | `unaudited` | ~~audited_conditional~~ |
-| 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 32.36 | `unaudited` | ~~audited_conditional~~ |
+| 1 | `alpha_s_derived_note` | critical | 245 | 32.94 | `unaudited` | ~~audited_failed~~ |
+| 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 32.84 | `unaudited` | ~~audited_failed~~ |
+| 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 32.36 | `unaudited` | ~~audited_failed~~ |
 | 4 | `yt_ward_identity_derivation_theorem` | critical | 290 | 31.68 | `unaudited` | support |
 | 5 | `observable_principle_from_axiom_note` | critical | 233 | 29.37 | `audited_conditional` | ~~audited_conditional~~ |
-| 6 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 102 | 27.69 | `unaudited` | ~~audited_conditional~~ |
+| 6 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 102 | 27.69 | `unaudited` | ~~audited_failed~~ |
 | 7 | `yt_ew_color_projection_theorem` | critical | 113 | 26.33 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `three_generation_observable_theorem_note` | critical | 281 | 25.64 | `unaudited` | ~~audited_conditional~~ |
-| 9 | `three_generation_structure_note` | critical | 264 | 25.05 | `unaudited` | ~~audited_conditional~~ |
-| 10 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 24.83 | `unaudited` | ~~audited_conditional~~ |
-| 11 | `one_generation_matter_closure_note` | critical | 258 | 24.52 | `unaudited` | ~~audited_conditional~~ |
+| 9 | `three_generation_structure_note` | critical | 264 | 25.05 | `unaudited` | ~~audited_failed~~ |
+| 10 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 24.83 | `unaudited` | ~~audited_failed~~ |
+| 11 | `one_generation_matter_closure_note` | critical | 258 | 24.52 | `unaudited` | ~~audited_failed~~ |
 | 12 | `graph_first_su3_integration_note` | critical | 293 | 23.70 | `audited_clean` | **retained** |
-| 13 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 94 | 23.57 | `unaudited` | ~~audited_conditional~~ |
+| 13 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 94 | 23.57 | `unaudited` | ~~audited_failed~~ |
 | 14 | `left_handed_charge_matching_note` | critical | 265 | 21.55 | `unaudited` | ~~audited_conditional~~ |
-| 15 | `anomaly_forces_time_theorem` | critical | 261 | 21.53 | `unaudited` | ~~audited_conditional~~ |
-| 16 | `minimal_axioms_2026-04-11` | critical | 109 | 21.28 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `ckm_atlas_axiom_closure_note` | critical | 75 | 21.25 | `unaudited` | ~~audited_conditional~~ |
+| 15 | `anomaly_forces_time_theorem` | critical | 261 | 21.53 | `unaudited` | ~~audited_failed~~ |
+| 16 | `minimal_axioms_2026-04-11` | critical | 109 | 21.28 | `unaudited` | ~~audited_failed~~ |
+| 17 | `ckm_atlas_axiom_closure_note` | critical | 75 | 21.25 | `unaudited` | ~~audited_failed~~ |
 | 18 | `native_gauge_closure_note` | critical | 289 | 20.68 | `unaudited` | ~~audited_conditional~~ |
-| 19 | `plaquette_self_consistency_note` | critical | 294 | 20.20 | `unaudited` | ~~audited_conditional~~ |
+| 19 | `plaquette_self_consistency_note` | critical | 294 | 20.20 | `unaudited` | ~~audited_failed~~ |
 | 20 | `site_phase_cube_shift_intertwiner_note` | critical | 284 | 19.16 | `unaudited` | support |
-| 21 | `physical_lattice_necessity_note` | critical | 278 | 19.12 | `unaudited` | ~~audited_renaming~~ |
-| 22 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | critical | 263 | 19.04 | `unaudited` | ~~audited_conditional~~ |
+| 21 | `physical_lattice_necessity_note` | critical | 278 | 19.12 | `unaudited` | ~~audited_failed~~ |
+| 22 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | critical | 263 | 19.04 | `unaudited` | ~~audited_failed~~ |
 | 23 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | critical | 263 | 18.54 | `unaudited` | ~~audited_conditional~~ |
 | 24 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 42 | 18.43 | `audited_clean` | **retained** |
-| 25 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 84 | 18.41 | `unaudited` | ~~audited_conditional~~ |
+| 25 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 84 | 18.41 | `unaudited` | ~~audited_failed~~ |
 
 
 ## Applied audits
@@ -97,7 +97,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
-| `gauge_vacuum_plaquette_framework_point_underdetermination_note` | support | audit_in_progress | support | - | - | - | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open | audit_in_progress | open | - | - | - | - |
 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | unknown | audit_in_progress | unknown | - | - | - | - |
@@ -188,7 +187,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_matrixfree_moving_source_fixed_beam_boundary_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_static_single_source_compare_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
-| `alpha_s_derived_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `area_law_quarter_broader_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `causal_field_canonical_chain_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -257,7 +255,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `linear_response_second_order_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `local_zsym_predictor_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `neutrino_majorana_current_stack_exhaustion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `newton_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -336,6 +333,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
+| `gauge_vacuum_plaquette_framework_point_underdetermination_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_portability_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `grown_transfer_basin_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -439,21 +437,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `accepted_plaquette_coupling_chain_parent_not_registered`
 - **auditor confidence:** high
-
-### `alpha_s_derived_note`
-
-- **Note:** [`ALPHA_S_DERIVED_NOTE.md`](../../docs/ALPHA_S_DERIVED_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-gpt-5.5-backlog-sweep-2026-04-29`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** alpha_s(v) = alpha_bare / u_0^2 = 0.1033, followed by the one-decade low-energy transfer alpha_s(M_Z) = 0.1181.  _(class `B`)_
-- **chain closes:** False — No. The chain reads the canonical plaquette value from the one-hop dependency and then invokes a retained v-to-M_Z running bridge/threshold infrastructure that is not supplied as a one-hop authority.
-- **rationale:** Issue: the restricted inputs do not include the retained low-energy running bridge needed to turn alpha_s(v) into alpha_s(M_Z), and the plaquette dependency itself says the exact analytic beta=6 insertion is not closed. Why this blocks: the note's 0.1181 result is reproducible by the runner, but in the fresh-look context it rests on an unsupplied bridge plus a proposed plaquette evaluation rather than a closed retained derivation. Repair target: cite and audit the running-bridge theorem/threshold map and close or explicitly scope the plaquette beta=6 insertion status. Claim boundary until fixed: alpha_s(M_Z)=0.1181 may be treated as a conditional same-surface numerical lane given the canonical plaquette and runner bridge, not as independently audited clean closure.
-- **open / conditional deps cited:**
-  - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md: proposed plaquette evaluation with explicit remaining analytic insertion gap`
-  - `missing one-hop dependency: retained low-energy running bridge from v to M_Z`
-- **auditor confidence:** 0.86
 
 ### `alt_connectivity_family_basin_note`
 
@@ -1731,6 +1714,18 @@ Claim boundary until fixed: safe to claim the constant-lift obstruction Gamma_ca
   - `GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
+### `gauge_vacuum_plaquette_framework_point_underdetermination_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-fresh-cross-confirm-20260430-session-b`  (codex-current; independence=fresh_context)
+- **load-bearing step:** There exist distinct real-analytic strictly increasing witness laws on [0,6] that share the exact closed onset jet through order beta^5 but produce different framework-point values.  _(class `A`)_
+- **chain closes:** False — The witnesses show finite-jet plus monotonicity underdetermination, but they are not shown to be realizable Wilson reduction laws compatible with the full hierarchy or compact spectral-measure constraints.
+- **rationale:** Issue: the witness beta_eff laws are arbitrary analytic monotone functions, not constructed from admissible Wilson source surfaces or compact plaquette spectral measures. Why this blocks: an obstruction to the current exact stack must exhibit two models satisfying all closed stack constraints, not only the finite onset jet. Repair target: prove the witnesses are realized by positive Wilson/spectral data satisfying the full stated structural stack, or weaken the claim to finite-jet underdetermination. Claim boundary until fixed: the finite beta^5 onset jet and monotonicity alone do not determine P(6).
+- **auditor confidence:** high
+
 ### `gauge_vacuum_plaquette_mixed_cumulant_audit_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md)
@@ -2777,33 +2772,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The live probe shows escape_fraction(alpha) falls below 50% by alpha=0.10 while the alpha=0 weak-field recovery check gives 3/3 TOWARD and F~M=1.00 on the tested generated-geometry family.  _(class `C`)_
 - **chain closes:** False — The bounded proxy computation closes, but the queued proposed_retained claim does not: the note itself calls this a bounded moonshot trapping probe, and the absorption parameter is an inserted proxy rather than a derived horizon mechanism.
 - **rationale:** Issue: The source is explicitly a bounded moonshot trapping probe on a proposed_retained generated-geometry family, but its branch verdict says it produces a retained threshold. The live runner inserts an absorptive parameter alpha and measures escape fraction; it does not derive an absorbing horizon law or black-hole observable from retained inputs. Why this blocks: a hand-added absorption proxy with one finite family, four seeds, and three source positions cannot be ratified as a retained horizon/trapping theorem. Repair target: either correct the Status/current_status to bounded/proposed_bounded, or derive the absorption law from retained dynamics and show the threshold is a framework-native strong-field observable with clean weak-field reduction and audited dependencies. Claim boundary until fixed: it is safe to claim the live artifact reproduces alpha=0 weak-field recovery and a proxy escape threshold below 50% at alpha ~= 0.10 on this setup; it is not safe to call this a retained horizon theorem or full black-hole mechanism.
-- **auditor confidence:** high
-
-### `minimal_axioms_2026-04-11`
-
-- **Note:** [`MINIMAL_AXIOMS_2026-04-11.md`](../../docs/MINIMAL_AXIOMS_2026-04-11.md)
-- **current_status:** unknown
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-20260430-standard`  (codex-current; independence=weak)
-- **load-bearing step:** The memo states that the current package uses g_bare = 1 plus the plaquette/u0 surface and then lists retained current consequences and safe quantitative results as following from that stack.  _(class `B`)_
-- **chain closes:** False — The memo is a cross-note aggregation, not a self-contained derivation, and several one-hop inputs are currently support, unaudited, audited_renaming, or audited_conditional.
-- **rationale:** Issue: The claimed minimal input stack and retained consequence list rely on upstream gauge-normalization, observable-principle, alpha_s/R_conn/Yukawa, and Higgs notes whose current audit/effective statuses are not clean retained inputs. Why this blocks: the memo cannot ratify those consequences by aggregation once the dependency surface has weakened. Repair target: re-audit or repair the upstream normalization and quantitative-bridge notes until their effective statuses are retained, then rerun this stack audit. Claim boundary until fixed: the file may serve as a current package map, but not as an audited-clean derivation of the listed retained quantitative package.
-- **open / conditional deps cited:**
-  - `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`
-  - `G_BARE_RIGIDITY_THEOREM_NOTE.md`
-  - `G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md`
-  - `G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md`
-  - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
-  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
-  - `ALPHA_S_DERIVED_NOTE.md`
-  - `RCONN_DERIVED_NOTE.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`
-  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
-  - `YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md`
-  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
-  - `HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md`
 - **auditor confidence:** high
 
 ### `minimal_bidirectional_trapping_probe_note`
