@@ -12,6 +12,10 @@ rules:
   - independence='weak' may not land audited_clean
   - independence='fresh_context' may land audited_clean when the audit was
     performed in a distinct clean-room session with the restricted audit inputs
+  - audited_clean records the audit verdict for any allowed current_status;
+    compute_effective_status.py only promotes clean proposed_* rows, so
+    support/bounded/open/unknown rows keep their declared tier unless later
+    re-tiered by the author
   - auditor identity must differ from author identity for audited_clean
   - the row's note_hash must match disk (otherwise the audit is stale)
   - fresh-context second passes over existing high/critical terminal verdicts
