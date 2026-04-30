@@ -289,8 +289,8 @@ theorem core.
 
 - charged-lepton bounded observational-pin package
   (explicit three-real PDG pin; no spare forecast beyond the pin)
-- retained YT/top transport lane
-- derived Higgs/vacuum lane with retention-decomposed budget
+- YT/top transport lane conditioned on the support-tier Ward identification
+- identification-conditioned Higgs/vacuum lane with retention-decomposed budget
 - cosmology lanes
 - bounded secondary prediction surface:
   - proton lifetime

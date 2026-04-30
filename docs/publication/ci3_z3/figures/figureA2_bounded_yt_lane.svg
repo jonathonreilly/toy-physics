@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
-  <title id="title">Figure A2. Derived Yukawa and Higgs transport lane</title>
-  <desc id="desc">Schematic of the exact UV Ward theorem, the current derived low-energy lane, the primary standard-method caveat, and the independent bridge cross-check budget.</desc>
+  <title id="title">Figure A2. Identification-conditioned Yukawa and Higgs transport lane</title>
+  <desc id="desc">Schematic of the support-tier UV Ward identification, the current identification-conditioned low-energy lane, the primary standard-method caveat, and the independent bridge cross-check budget.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#355c7d"/>
@@ -19,7 +19,7 @@
     </style>
   </defs>
   <rect class="bg" x="0" y="0" width="1200" height="760"/>
-  <text class="title" x="600" y="46" text-anchor="middle">Figure A2. Derived Yukawa / Top and Higgs / Vacuum Lane</text>
+  <text class="title" x="600" y="46" text-anchor="middle">Figure A2. Identification-Conditioned Yukawa / Top and Higgs / Vacuum Lane</text>
 
   <rect class="box exact" x="80" y="165" width="230" height="190"/>
   <text class="label" x="195" y="205" text-anchor="middle">Exact UV side</text>
@@ -33,7 +33,7 @@
   <text class="label" x="600" y="182" text-anchor="middle">Transport to low energy</text>
   <text class="body" x="600" y="220" text-anchor="middle">same-surface plaquette and $R_{conn}$ support</text>
   <text class="body" x="600" y="248" text-anchor="middle">Ward-primary matching and SM running</text>
-  <text class="body" x="600" y="276" text-anchor="middle">exact interacting bridge stack retained as cross-check</text>
+  <text class="body" x="600" y="276" text-anchor="middle">interacting bridge stack retained as cross-check</text>
   <text class="body" x="600" y="316" text-anchor="middle">not yet a fully framework-internal UV-to-IR theorem</text>
 
   <line class="arrow" x1="755" y1="260" x2="870" y2="260"/>

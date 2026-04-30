@@ -18437,7 +18437,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T18:17:51.032918+00:00",
+  "generated_at": "2026-04-30T18:33:32.396527+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32587,7 +32587,7 @@
       "current_status": "unknown",
       "current_status_raw": null,
       "deps": [],
-      "note_hash": "4a7835c73c1952e00778c89a50f8aae86ad93c3a7ededbe99055f4dc0679348e",
+      "note_hash": "cc773dc45bb520a3d7f9fa31b4a1f13c3869bbca32fde7817f5f03b16f832924",
       "path": "docs/publication/ci3_z3/ARXIV_DRAFT.md",
       "runner_path": null,
       "title": "Physics from $Cl(3)$ on $Z^3$:"
@@ -32756,7 +32756,7 @@
         "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
-      "note_hash": "f40e7d4a95bfa697c6489b2392945c3992d61237e1f87e844782fc06610f3149",
+      "note_hash": "b25a534803e816c05ed1d36c3958f32dbe5e58cc0571d42fec8a5dda8f01572c",
       "path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
       "runner_path": null,
       "title": "Manuscript Claims Surface"
@@ -33255,7 +33255,7 @@
         "lattice_complementarity_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "c5006f6b98dad6a92ad6a843abd83378cd08d6c96f3bb52c4793ad58de3b032b",
+      "note_hash": "4d5c6fac2004b7577f5f48b99aae133ca7ae61e2b1d54f2efa6de33760a97678",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -33536,7 +33536,7 @@
         "charged_lepton_two_higgs_canonical_reduction_note",
         "publication.ci3_z3.claims_table"
       ],
-      "note_hash": "62597d35bb23e35c21d575157af05d1436e36d977a0167da3cd0c16adb600e11",
+      "note_hash": "1911968a88f274cbb2180b01fba5f2e7c2f38a04de657a1d4b2e00753ad86b7a",
       "path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
       "runner_path": null,
       "title": "Derivation / Validation Map"
@@ -33616,7 +33616,7 @@
         "publication.ci3_z3.full_claim_ledger",
         "publication.ci3_z3.results_index"
       ],
-      "note_hash": "019fc1bbc1cb1deeb3f4f393ddee3ad0e8737c1d01cfaddeab9c241d331516e3",
+      "note_hash": "48fbe5ebe9ec7289b36385ad722753a1aad92eecaf9702c4534371de0209a2b8",
       "path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
       "runner_path": null,
       "title": "External Reviewer Guide"
@@ -33659,7 +33659,7 @@
         "work_history.ckm.ckm_mass_basis_nni_note",
         "work_history.ckm.jarlskog_phase_bound_note"
       ],
-      "note_hash": "5fc33da0ad553197ff8a33092828ccaa4977fba279935bdc93310791e97f2749",
+      "note_hash": "29e9de85d9898843bf454da6c15c0af6b646572f406796ebf60da1bd2c6a8514",
       "path": "docs/publication/ci3_z3/FIGURE_PLAN.md",
       "runner_path": null,
       "title": "Figure Plan"
@@ -33892,7 +33892,7 @@
         "koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25",
         "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25"
       ],
-      "note_hash": "4bd38a02f0d2a63448cf04c2e3cef2222bc4e53fb8650ea2af1bbc70dbac41d5",
+      "note_hash": "0b47cf617104eae882122afaf8c7e3329fff0900299641b9e34c0de61c3d592f",
       "path": "docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md",
       "runner_path": null,
       "title": "Full Claim Ledger"
@@ -33949,7 +33949,7 @@
         "publication.ci3_z3.publication_matrix",
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
-      "note_hash": "41fc2b970355eb0b260577c4ce08e6ef27e54c3a1dc980c23e13c5e8f441680c",
+      "note_hash": "8638ad0207f73d3814e6e93000d1b3df35e3349f7671d0dab08efa57d22d692e",
       "path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
       "runner_path": null,
       "title": "Inputs And Qualifiers"
@@ -34256,7 +34256,7 @@
         "gw_echo_null_result_note",
         "koide_reviewer_stress_test_note_2026-04-21"
       ],
-      "note_hash": "5e5af7d00a893e5b8e35bc8aeff6a1ee85f4695f8898419a0dfd55d3ae1afdf4",
+      "note_hash": "6fb3a10dabd16860e89c8c488752d7a9dc03fde37c7c0b260e011303c0f6126b",
       "path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
       "runner_path": null,
       "title": "Publication Matrix"
@@ -34335,7 +34335,7 @@
         "ckm_consecutive_primes_s3_koide_bridge_support_note_2026-04-25",
         "down_type_mass_ratio_ckm_dual_note"
       ],
-      "note_hash": "c56c4287f48544d458735667c24c2bae4f843bcf7dc45bc2930cfcdacd271103",
+      "note_hash": "cba42c1c5e299e8a75f6a70df2b0e8594afbbe5afae6f915d27b8147531f8b26",
       "path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
       "runner_path": null,
       "title": "Quantitative Summary Table"
@@ -34378,7 +34378,7 @@
         "single_axiom_information_note",
         "single_axiom_hilbert_note"
       ],
-      "note_hash": "e3e3c9047c1779bcc36ab9dc9b9afe89e94c2880882af16662c33081a5c00144",
+      "note_hash": "5f22f56ac05133b44082d724f95d372e5c8bb1dda14313d906e470d6fdb70d0f",
       "path": "docs/publication/ci3_z3/README.md",
       "runner_path": null,
       "title": "Cl(3) / Z^3 Publication Package"
@@ -34762,7 +34762,7 @@
         "ckm_atlas_axiom_closure_note",
         "ckm_thales_pinned_alpha_s_independent_ratios_theorem_note_2026-04-25"
       ],
-      "note_hash": "45832e742d252b2ad9a75637c172507907751f6910c5bc0070d67fadc06bd10f",
+      "note_hash": "4367afcca6aaf2fca1dd39491ce2da7dcb9197e707b26133abe7ae4096573422",
       "path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
       "runner_path": null,
       "title": "Results Index"
@@ -34829,7 +34829,7 @@
         "publication.ci3_z3.release_environment",
         "publication.ci3_z3.derivation_atlas"
       ],
-      "note_hash": "dbd839de644c8b3bf7625cbe92f12d0a4bdafcdb6cb877b3805548838b6fef65",
+      "note_hash": "dac1c1db08fe0af2ceaa710a162cbf1be3ce7634ca1ca9fda329688e4de525e5",
       "path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
       "runner_path": null,
       "title": "Science Map"
@@ -34927,7 +34927,7 @@
         "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15",
         "neutrino_retained_observable_bounds_theorem_note_2026-04-24"
       ],
-      "note_hash": "2ed04484c6e090b235e827a814feb332cc2eab1d5e6364f6fdc089f78de67c14",
+      "note_hash": "da0ee7416390e9d29dfa3b6852a93a523365cea5af70227a8d6bc7e1e8017450",
       "path": "docs/publication/ci3_z3/USABLE_DERIVED_VALUES_INDEX.md",
       "runner_path": null,
       "title": "Usable Derived Values Index"

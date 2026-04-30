@@ -29,15 +29,16 @@ surface, and exact $T=0$ confinement with bounded
 $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$.
 Quantitatively, the current package gives the canonical hierarchy evaluation
 $v=246.282818290129\,\mathrm{GeV}$, retains
-$\alpha_s(M_Z)=0.1181$ and electroweak normalization lanes, retains the exact
-lattice-scale Ward identity $y_t(M_{\mathrm{Pl}})/g_s(M_{\mathrm{Pl}})
-=1/\sqrt{6}$, carries a retained YT/top transport lane with canonical
-full-staggered-PT $\Delta_R=-3.77\% \pm 0.45\%$ and retained canonical
+$\alpha_s(M_Z)=0.1181$ and electroweak normalization lanes, records a
+support-tier lattice-scale Ward identification
+$y_t(M_{\mathrm{Pl}})/g_s(M_{\mathrm{Pl}})=1/\sqrt{6}$ (audited_renaming),
+carries a YT/top transport lane conditioned on that identification with
+canonical full-staggered-PT $\Delta_R=-3.77\% \pm 0.45\%$ and canonical
 $m_t(\mathrm{pole})=172.57 \pm 6.50\,\mathrm{GeV}$, promotes an algebraic CKM
 atlas/axiom package on the canonical tensor/projector surface with no
-quark-mass or fitted-CKM inputs, and keeps
-the Higgs/vacuum row derived while auditing it with an explicit
-retention-decomposed band.
+quark-mass or fitted-CKM inputs, and keeps the Higgs/vacuum row as an
+identification-conditioned follow-on with an explicit retention-decomposed
+band.
 The package is already predictive beyond retrospective comparison,
 including proton lifetime, the CKM-only neutron-EDM corollary with bounded
 continuation, vacuum criticality, and benchmark gravitational decoherence.
@@ -689,23 +690,24 @@ package fixes the full phase-dressed matrix rather than only the scalar
 readout. This is the controlling CKM theorem surface in the current manuscript
 [11,12].
 
-### 5.4 Exact lattice-scale Yukawa/gauge theorem plus explicit-systematic Yukawa/top and Higgs/vacuum
+### 5.4 Support-tier lattice-scale Yukawa/gauge identification plus explicit-systematic Yukawa/top and Higgs/vacuum
 
-The top-Yukawa/top-mass lane now has a retained lattice-scale authority
-surface. The current package does treat the canonical-surface ratio
+The top-Yukawa/top-mass lane now has a support-tier lattice-scale authority
+surface. The current package treats the canonical-surface ratio
 $y_t/g_s = 1/\sqrt{6}$
-as a retained Ward-identity theorem. What remains limited is the downstream
-transport from that exact lattice-scale theorem to the low-energy endpoint.
-On the current package surface the live retained transport readout is
+as a structural Ward identification (audited_renaming), not as a closed
+first-principles result. What remains limited is the downstream transport from
+that lattice-scale identification to the low-energy endpoint. On the current
+package surface the live transport readout is
 
 - $y_t(v)=0.9176$,
-- canonical retained $m_t^{\mathrm{pole}} = 172.57 \pm 6.50\,\mathrm{GeV}$ on
+- canonical $m_t^{\mathrm{pole}} = 172.57 \pm 6.50\,\mathrm{GeV}$ on
   the full-staggered-PT route,
-- explicit through-$2$-loop retained coverage
+- explicit through-$2$-loop coverage
   $172.57 \pm 6.9\,\mathrm{GeV}$ (structural) /
   $172.57 \pm 7.94\,\mathrm{GeV}$ (bound-constrained),
 - older $m_t^{\mathrm{pole}} = 173.10\,\mathrm{GeV}$ on the framework-side
-  $3$-loop route as a derived cross-check,
+  $3$-loop route as an identification-conditioned cross-check,
 
 with the current primary precision caveat carried by the retained UV-to-IR
 transport obstruction stack, canonical full-staggered-PT quadrature, and
@@ -713,11 +715,13 @@ explicit through-$2$-loop continuation envelopes, while the older
 Schur-bridge budget of $1.2147511\%$ conservative and $0.75500635\%$
 support-tight survives only as an independent cross-check budget.
 
-Those numbers are strong and zero-import on the accepted downstream transport
-surface. The current package now classifies the lane as retained quantitative:
-the exact lattice-scale Yukawa/gauge normalization is retained upstream, and
-the downstream transport lane is carried on `main` by the retained
-obstruction/quadrature stack rather than by the older generic bridge umbrella.
+Those numbers are strong on the accepted downstream transport surface, but the
+upstream normalization is an audited structural identification. The current
+package therefore classifies the lane as identification-conditioned
+quantitative support: the lattice-scale Yukawa/gauge normalization is
+support-tier upstream, and the downstream transport lane is carried on `main`
+by the obstruction/quadrature stack rather than by the older generic bridge
+umbrella.
 
 The Higgs/vacuum package then inherits that same YT-lane precision caveat:
 
@@ -728,13 +732,13 @@ The Higgs/vacuum package then inherits that same YT-lane precision caveat:
 
 The important point is not merely that the central values are competitive. It
 is that the whole route is now stated on one authority surface with one
-retained UV Ward theorem, one retained transport lane, and one honest
-derived Higgs/vacuum follow-on budget. The Higgs/vacuum lane is therefore best
-read as derived because it inherits the current retained YT lane rather than
-standing alone as a fully independent retained quantitative theorem row. The
-comparison surface is therefore the standard near-critical Standard Model
-literature [13,14], not a claim that the
-framework has already removed every quantitative caveat.
+support-tier UV Ward identification, one transport lane, and one honest
+identification-conditioned Higgs/vacuum follow-on budget. The Higgs/vacuum
+lane is therefore best read as identification-conditioned because it inherits
+the current YT identification boundary rather than standing alone as a fully
+independent retained quantitative theorem row. The comparison surface is
+therefore the standard near-critical Standard Model literature [13,14], not a
+claim that the framework has already removed every quantitative caveat.
 
 An additional exact support theorem now closes one cleaner question on the same
 taste block. The one-loop fermion Coleman-Weinberg Hessian is isotropic at the
@@ -765,8 +769,8 @@ The fastest way to read the quantitative package is Table 1.
 | Strong coupling | $\alpha_s(M_Z)=0.1181$ | retained standalone quantitative lane |
 | Electroweak normalization | $g_1(v)=0.4644$, $g_2(v)=0.6480$ | retained standalone quantitative lane |
 | CKM | $\lambda^2=\alpha_s(v)/2$, $A^2=2/3$, atlas-leading $|V_{ud}|_0=0.973824$, $|V_{us}|_0=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|_0=0.003913$, $\phi_s(B_s)=-0.03850\,\mathrm{rad}$, $\phi_s/\sin(2\beta_d)=-0.05165$, CP-product $\alpha_s$ estimator, kaon $\epsilon_K$ CKM factors $(2J_0,-J_0,-5\alpha_s(v)^2J_0/18)$, NLO protected $\bar\gamma=65.905^\circ$ | promoted algebraic package |
-| Top sector | $y_t(v)=0.9176$, $m_t^{\mathrm{pole}}=172.57 \pm 6.50\,\mathrm{GeV}$ | retained quantitative lane |
-| Higgs sector | $m_H=125.1\,\mathrm{GeV}$ with retention analysis $125.04 \pm 3.17\,\mathrm{GeV}$ | derived quantitative lane |
+| Top sector | $y_t(v)=0.9176$, $m_t^{\mathrm{pole}}=172.57 \pm 6.50\,\mathrm{GeV}$ | identification-conditioned quantitative support (YT Ward audited_renaming) |
+| Higgs sector | $m_H=125.1\,\mathrm{GeV}$ with retention analysis $125.04 \pm 3.17\,\mathrm{GeV}$ | identification-conditioned follow-on lane |
 | Confinement readout | $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$ | bounded quantitative readout on exact structural theorem |
 
 **Table 1.** Main retained and promoted quantitative outputs on the current
@@ -967,10 +971,11 @@ retained route to $PL\,S^3$ compactification / topology closure.*
 
 ### B.3 Figure A2
 
-![Figure A2. Retained YT transport lane and Higgs follow-on route](./figures/figureA2_bounded_yt_lane.svg)
+![Figure A2. Identification-conditioned YT transport lane and Higgs follow-on route](./figures/figureA2_bounded_yt_lane.svg)
 
-*Figure A2. Exact UV support, retained low-energy YT transport story, and the
-derived Higgs/vacuum follow-on outputs on the current package surface.*
+*Figure A2. Support-tier UV identification, low-energy YT transport story, and
+the identification-conditioned Higgs/vacuum follow-on outputs on the current
+package surface.*
 
 ### B.4 Figure A3
 

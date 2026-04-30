@@ -43,8 +43,9 @@ For the full package-capture inventory, use:
   identification chain
 - retained quantitative package:
   electroweak scale `v`, `alpha_s(M_Z)`, the coupling-chain identity
-  `alpha_LM^2 = alpha_bare alpha_s(v)`, electroweak normalization, retained
-  YT/top transport, and the promoted CKM atlas/axiom package, including the
+  `alpha_LM^2 = alpha_bare alpha_s(v)`, electroweak normalization, YT/top
+  transport conditioned on the support-tier Ward identification, and the
+  promoted CKM atlas/axiom package, including the
   standalone `lambda^2 = alpha_s(v)/2`, `A^2 = 2/3`, and
   `cos^2(delta_CKM) = 1/6` structural identities plus the rescaled atlas-triangle
   right-angle identity `alpha_0 = 90 deg`, atlas-leading first-row identities
