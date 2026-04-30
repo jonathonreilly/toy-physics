@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T21:51:00.730717+00:00
+**Generated:** 2026-04-30T21:52:17.865758+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 7 |
 | bounded | 282 |
-| support | 253 |
+| support | 252 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 734 |
+| ~~audited_conditional~~ | 735 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 210 |
-| `audited_conditional` | 457 |
+| `audited_conditional` | 458 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 806 |
+| `unaudited` | 805 |
 
 | criticality | count |
 |---|---:|
@@ -690,6 +690,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_target3_clifford_phase_bridge_theorem_note_2026-04-25` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `plaquette_self_consistency_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `pmns_selector_current_stack_zero_law_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
 | `poisson_3d_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `poisson_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -9534,6 +9535,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `retained_PMNS_pair_readout_authority_not_registered_one_hop_dependency`
   - `physical_active_passive_source_transfer_observables_authority_not_registered`
   - `lower_level_source_transfer_observables_to_PMNS_readout_theorem_not_registered`
+- **auditor confidence:** high
+
+### `pmns_selector_current_stack_zero_law_note`
+
+- **Note:** [`PMNS_SELECTOR_CURRENT_STACK_ZERO_LAW_NOTE.md`](../../docs/PMNS_SELECTOR_CURRENT_STACK_ZERO_LAW_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-08`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** On the current retained bank, the support-side and scalar observable banks project to zero on the unique reduced selector slot, so a_sel,current = 0.  _(class `B`)_
+- **chain closes:** False — The runner checks the scalar-slot projection algebra and searches upstream notes/atlas text, but the load-bearing current-bank premise depends on unaudited support notes and an audited-decoration unique-slot note. The zero-law is therefore not independently closed by the restricted audit packet.
+- **rationale:** Issue: the theorem imports the PMNS selector unique-amplitude slot, sector-exchange nonforcing, scalar-bridge nonrealization, and class-space uniqueness as current-bank inputs, but those upstream rows are audited_decoration or unaudited support rather than audit-clean retained authorities. Why this blocks: the runner verifies a hard-coded one-slot projection and text guardrails, not a self-contained derivation of the current PMNS bank from audited inputs. Repair target: audit or consolidate the upstream PMNS selector/class-space/scalar-bank notes, or register a runner that constructs the current bank directly from clean authorities. Claim boundary until fixed: safe as support for a current-stack diagnostic zero result, not as an audit-clean retained PMNS selector theorem.
+- **open / conditional deps cited:**
+  - `PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md:audited_decoration`
+  - `PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md:unaudited_support`
+  - `PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md:unaudited_support`
+  - `PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md:unaudited_support`
 - **auditor confidence:** high
 
 ### `pmns_selector_three_identity_support_note_2026-04-21`
