@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T00:23:13.431646+00:00",
-  "generated_at": "2026-04-30T00:23:11.656947+00:00",
-  "invalidation_run_at": "2026-04-30T00:23:13.368112+00:00",
+  "effective_status_computed_at": "2026-04-30T00:23:16.798916+00:00",
+  "generated_at": "2026-04-30T00:23:14.950499+00:00",
+  "invalidation_run_at": "2026-04-30T00:23:16.721104+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T00:23:13.245648+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:23:16.592640+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -32685,14 +32685,21 @@
       "verdict_rationale": null
     },
     "gauge_vacuum_plaquette_spectral_measure_theorem_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:23:14.057872+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-fresh-cross-confirm-20260430-session-b",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The fresh algebraic check closes within its stated scope, but current_status='unknown' is not eligible for audited_clean under the audit lane. It must stay conditional/support until the source claim is proposed for retention and re-confirmed.",
       "claim_id": "gauge_vacuum_plaquette_spectral_measure_theorem_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32712,13 +32719,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "unknown",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Since sum_p X_p(U) = N_plaq A_L(U), pushing forward Haar measure by A_L gives Z_L(beta)=Z_L(0) integral exp(beta N_plaq a) dmu_L(a).",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "094d106e108052485ace117cfbae260096371acffb4b54ac59ff947a64194cf2",
@@ -32726,16 +32733,16 @@
       "open_dependency_paths": [],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 8,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 8
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py",
       "title": "Gauge-Vacuum Plaquette Spectral-Measure Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The fresh cross-confirmation found an exact class-A closure, but the ledger row has current_status='unknown', so landing audited_clean would violate the audit-lane ratification gate. Why this blocks: audited_clean is reserved for proposed_retained/proposed_promoted rows and audit_lint rejects clean status on support/unknown rows. Repair target: if this claim is intended to be retained, update the source note to proposed_retained/proposed_promoted through the science lane and rerun a fresh-context cross-confirmation. Claim boundary until fixed: the bounded algebraic/support statement may be cited as support, but it is not an audit-ratified retained claim. Fresh-audit note: The compact pushforward measure, Laplace representation, cumulants, and Hausdorff uniqueness follow directly on the finite Wilson surface. The runner executed with SUMMARY: THEOREM PASS=6 SUPPORT=2 FAIL=0."
     },
     "gauge_vacuum_plaquette_susceptibility_flow_theorem_note": {
       "audit_date": null,
