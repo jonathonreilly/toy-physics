@@ -124,6 +124,14 @@ Current absolute-scale package rule:
   negatively; its positive primitive-CAR carrier route is now supplied by the
   proposed 2026-04-30 metric-compatible Clifford/CAR coframe-response
   derivation on `P_A H_cell`, rather than left as a separate bridge premise
+- the 2026-04-30 boundary-incidence no-go shows that oriented boundary faces,
+  normal cochains, and Noether flux/current language do not by themselves break
+  the Hodge-dual `P_1` / `P_3` tie; it is a proposed no-go audit target, not a
+  positive Planck pin
+- the 2026-04-30 link-local first-variation theorem proposes the missing
+  action-native `P_A` selector, but it remains a proposed-retained audit target
+  with effective conditional status until fresh audit accepts both the local
+  theorem and its upstream action/time/CPT authority rows
 - authority:
   [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md),
   [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md),
@@ -136,7 +144,9 @@ Current absolute-scale package rule:
   [AREA_LAW_PRIMITIVE_EDGE_ENTROPY_SELECTOR_NO_GO_NOTE_2026-04-25.md](../../AREA_LAW_PRIMITIVE_EDGE_ENTROPY_SELECTOR_NO_GO_NOTE_2026-04-25.md),
   [AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md](../../AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md),
   [PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md](../../PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md),
-  [PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md](../../PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md)
+  [PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md](../../PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md),
+  [PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md](../../PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md),
+  [PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md](../../PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md)
 
 - plaquette surface:
   - `<P> = 0.5934`
