@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T10:25:05.921255+00:00
+**Generated:** 2026-04-30T10:25:36.640469+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -23,13 +23,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | bounded | 196 |
 | support | 109 |
-| open | 22 |
+| open | 21 |
 | unknown | 492 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 53 |
 | ~~audited_conditional~~ | 423 |
-| ~~audited_failed~~ | 167 |
+| ~~audited_failed~~ | 168 |
 
 | audit_status | count |
 |---|---:|
@@ -37,10 +37,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 82 |
 | `audited_conditional` | 191 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 54 |
+| `audited_failed` | 55 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1235 |
+| `unaudited` | 1234 |
 
 | criticality | count |
 |---|---:|
@@ -395,6 +395,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_failure_derivation` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `h2t_h0125_narrow_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28` | open | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28` | open | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `if_program_closing_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `inverse_problem_graph_requirements_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `kernel_vs_gravity_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -2776,6 +2777,20 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The note asserts that the irreducible Cl_4(C) module on P_A H_cell is the minimal carrier axiom but is non-derivable from A_min, so closure requires either adding Axiom* or accepting G1/C1 as open.  _(class `B`)_
 - **chain closes:** False — No. PR #196 records a finite A_min-derived construction whose weight-preserving restriction to P_A is full M_4(C) and contains explicit Cl_4(C) generators, contradicting the note's non-derivability and forced-Axiom* conclusion.
 - **rationale:** Issue: the A5 equivalence checks for candidate carrier presentations are algebraically useful, but the audit's decisive step says Cl_4(C) on P_A H_cell is non-derivable from A_min and must be added as Axiom*. Why this blocks: the corrected PR #196 finding gives an A_min-derived full M_4(C) restriction on P_A with explicit Clifford generators, so the extension-or-open dichotomy is false. Repair target: split the surviving algebraic carrier-class equivalence from the failed non-derivability claim, then add a revised note/runner around the corrected A_min-derived operator-algebra route. Claim boundary until fixed: it remains safe to say Cl_4(C), two-mode CAR, and the strong parity-plus-triple presentation describe the same rank-four carrier class; it is not safe to say this class is a required new axiom.
+- **open / conditional deps cited:**
+  - `AXIOM_STACK_MINIMALITY_CL4C_NO_GO_THEOREM_NOTE_2026-04-29.md`
+- **auditor confidence:** high
+
+### `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28`
+
+- **Note:** [`HUBBLE_LANE5_C1_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md`](../../docs/HUBBLE_LANE5_C1_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md)
+- **current_status:** open
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-corrected-cl4c-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** The synthesis says none of the orthogonal premises independently forces Cl_4(C), so the only on-package route is an explicitly added carrier axiom or accepting G1/C1 as open on A_min.  _(class `B`)_
+- **chain closes:** False — No as a synthesis over the current surface. The individual alpha-epsilon no-go checks may still hold, but PR #196 supplies a separate A_min-derived Cl_4(C) route, so the exhaustive/non-derivability and forced-Axiom* conclusion is contradicted.
+- **rationale:** Issue: the fan-out runner verifies five specific premises do not force Cl_4(C), but the note upgrades those negative checks into an exhausted-current-surface conclusion that Cl_4(C) is non-derivable and only an added carrier axiom remains. Why this blocks: the corrected PR #196 finite algebra result is an explicit counterexample to the exhaustion claim, even though the five premise-specific no-gos can remain useful. Repair target: preserve alpha-epsilon as route-specific obstructions, remove the global non-derivability/Axiom* language, and add the corrected weight-preserving A_min operator-algebra route as a separate live/closed route. Claim boundary until fixed: safe as a five-premise fan-out no-go inventory; unsafe as an honest-stop proof that A_min lacks Cl_4(C) on P_A.
 - **open / conditional deps cited:**
   - `AXIOM_STACK_MINIMALITY_CL4C_NO_GO_THEOREM_NOTE_2026-04-29.md`
 - **auditor confidence:** high
