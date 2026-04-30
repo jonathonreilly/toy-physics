@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:27:06.136086+00:00
+**Generated:** 2026-04-30T01:27:48.095671+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,12 +21,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 78 |
 | _proposed_retained_ | 7 |
-| bounded | 206 |
+| bounded | 205 |
 | support | 108 |
 | open | 24 |
 | unknown | 538 |
 | ~~audited_decoration~~ | 4 |
-| ~~audited_numerical_match~~ | 46 |
+| ~~audited_numerical_match~~ | 47 |
 | ~~audited_renaming~~ | 42 |
 | ~~audited_conditional~~ | 444 |
 | ~~audited_failed~~ | 91 |
@@ -38,9 +38,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 149 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
-| `audited_numerical_match` | 18 |
+| `audited_numerical_match` | 19 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1279 |
+| `unaudited` | 1278 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 382 |
 | `leaf` | 797 |
 
-- **Proposed claims demoted by upstream:** 154
+- **Proposed claims demoted by upstream:** 153
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -381,6 +381,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_from_mass_hierarchy_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
+| `dm_continuum_limit_velocity_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `kubo_continuum_limit_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -1058,6 +1059,20 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `retained_affine_Hermitian_source_family_and_H_base_J_basin_coordinates_not_registered`
   - `five_route_assumptions_audit_boundary_for_pure_algebraic_A_BCC_not_registered_here`
   - `right_sensitive_microscopic_selector_law_later_same_day_stack_not_audited_in_this_claim`
+- **auditor confidence:** high
+
+### `dm_continuum_limit_velocity_note`
+
+- **Note:** [`DM_CONTINUUM_LIMIT_VELOCITY_NOTE.md`](../../docs/DM_CONTINUUM_LIMIT_VELOCITY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** At three velocities and three refinements, none of the dM values converge at the 5% threshold; last-step drifts are 16.4%, 9.3%, and 13.5%, while the H=0.25 values remain in a narrow band.  _(class `G`)_
+- **chain closes:** False — The negative conclusion is a selected numerical sweep imported from an unregistered runner/log, and its one-hop continuum authority is bounded. The audit packet cannot reproduce the table or promote the finite sweep to a retained theorem.
+- **rationale:** Issue: the claim rests on selected finite H and velocity values from scripts/dm_continuum_limit_velocity.py, but that runner is not registered and the dependency is a bounded wave-retardation continuum note. Why this blocks: the finite negative is plausible and useful, yet it is still a numerical surface rather than a retained continuum-limit theorem or exhaustive no-go. Repair target: register the runner/log as the primary audit artifact, recompute the table with hard convergence thresholds, and narrow the status to bounded finite-sweep negative unless a theorem/extrapolation closes the continuum behavior. Claim boundary until fixed: safe as a bounded report that the tested Fam1 velocities do not converge by H=0.25; not safe as audit-clean retained continuum velocity science.
+- **open / conditional deps cited:**
+  - `WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md`
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16`

@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T01:27:05.907253+00:00",
-  "generated_at": "2026-04-30T01:27:04.047798+00:00",
-  "invalidation_run_at": "2026-04-30T01:27:05.838870+00:00",
+  "effective_status_computed_at": "2026-04-30T01:27:47.855250+00:00",
+  "generated_at": "2026-04-30T01:27:46.010746+00:00",
+  "invalidation_run_at": "2026-04-30T01:27:47.788150+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T01:27:05.697138+00:00",
+  "load_bearing_computed_at": "2026-04-30T01:27:47.658735+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -15525,14 +15525,25 @@
       "verdict_rationale": null
     },
     "dm_continuum_limit_velocity_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T01:27:37.783685+00:00",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {
+          "wave_retardation_continuum_limit_note": "bounded"
+        },
+        "deps": [
+          "wave_retardation_continuum_limit_note"
+        ],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The negative conclusion is a selected numerical sweep imported from an unregistered runner/log, and its one-hop continuum authority is bounded. The audit packet cannot reproduce the table or promote the finite sweep to a retained theorem.",
       "claim_id": "dm_continuum_limit_velocity_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -15542,18 +15553,20 @@
         "wave_retardation_continuum_limit_note"
       ],
       "direct_in_degree": 0,
-      "effective_status": "bounded",
-      "effective_status_reason": "inherited_from:wave_retardation_continuum_limit_note",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "effective_status": "audited_numerical_match",
+      "effective_status_reason": "self",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "At three velocities and three refinements, none of the dM values converge at the 5% threshold; last-step drifts are 16.4%, 9.3%, and 13.5%, while the H=0.25 values remain in a narrow band.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "0c25ecf93a276380b88f8b58b80c758d8ed91eb9d4b2adaa0cfc962f5b010be9",
       "note_path": "docs/DM_CONTINUUM_LIMIT_VELOCITY_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368070+00:00",
@@ -15591,7 +15604,7 @@
       "runner_path": null,
       "title": "dM Continuum Limit Across Multiple v/c \u2014 Downgraded (3-Refinement Negative)",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the claim rests on selected finite H and velocity values from scripts/dm_continuum_limit_velocity.py, but that runner is not registered and the dependency is a bounded wave-retardation continuum note. Why this blocks: the finite negative is plausible and useful, yet it is still a numerical surface rather than a retained continuum-limit theorem or exhaustive no-go. Repair target: register the runner/log as the primary audit artifact, recompute the table with hard convergence thresholds, and narrow the status to bounded finite-sweep negative unless a theorem/extrapolation closes the continuum behavior. Claim boundary until fixed: safe as a bounded report that the tested Fam1 velocities do not converge by H=0.25; not safe as audit-clean retained continuum velocity science."
     },
     "dm_current_bank_quantitative_mapping_note_2026-04-21": {
       "audit_date": null,

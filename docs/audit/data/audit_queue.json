@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 44,
     "high": 281,
-    "leaf": 615,
+    "leaf": 614,
     "medium": 340
   },
-  "generated_at": "2026-04-30T01:27:05.969550+00:00",
+  "generated_at": "2026-04-30T01:27:47.915081+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -18326,25 +18326,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_continuum_limit_velocity_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "wave_retardation_continuum_limit_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_CONTINUUM_LIMIT_VELOCITY_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_current_bank_quantitative_mapping_note_2026-04-21",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -26692,6 +26673,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 840,
-  "total_pending": 1280
+  "ready_count": 839,
+  "total_pending": 1279
 }
