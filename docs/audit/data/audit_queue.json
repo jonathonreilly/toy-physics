@@ -3,9 +3,9 @@
     "critical": 0,
     "high": 237,
     "leaf": 486,
-    "medium": 325
+    "medium": 324
   },
-  "generated_at": "2026-04-30T18:56:45.301351+00:00",
+  "generated_at": "2026-04-30T18:56:54.055825+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -10162,23 +10162,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_staggered_newton_reproduction.py",
       "transitive_descendants": 15
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "unpromoted_branch_retainability_audit_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 2,
-      "load_bearing_score": 4.907,
-      "note_path": "docs/UNPROMOTED_BRANCH_RETAINABILITY_AUDIT_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 14
     },
     {
       "audit_independence_required": "any_non_self",
@@ -22283,6 +22266,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 656,
-  "total_pending": 1048
+  "ready_count": 655,
+  "total_pending": 1047
 }

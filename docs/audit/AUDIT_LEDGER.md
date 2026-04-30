@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:56:45.560620+00:00
+**Generated:** 2026-04-30T18:56:54.600006+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
 | bounded | 347 |
-| support | 273 |
+| support | 272 |
 | open | 19 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 600 |
+| ~~audited_conditional~~ | 601 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 113 |
-| `audited_conditional` | 314 |
+| `audited_conditional` | 315 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1048 |
+| `unaudited` | 1047 |
 
 | criticality | count |
 |---|---:|
@@ -500,6 +500,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `three_generation_observable_theorem_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `three_generation_structure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `unpromoted_branch_retainability_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `vector_sector_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_3plus1d_promotions_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -7899,6 +7900,27 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `STRONG_CP_THETA_ZERO_NOTE.md`
   - `CKM_NEUTRON_EDM_BOUND_NOTE.md`
 - **decoration parent:** `strong_cp_theta_zero_note`
+- **auditor confidence:** high
+
+### `unpromoted_branch_retainability_audit_note`
+
+- **Note:** [`UNPROMOTED_BRANCH_RETAINABILITY_AUDIT_NOTE.md`](../../docs/UNPROMOTED_BRANCH_RETAINABILITY_AUDIT_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-heisenberg-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Anything broader than the tested rows or observables should stay branch-side until a new script/log/note chain independently retains it.  _(class `B`)_
+- **chain closes:** False — The conclusion depends on status and output summaries across several branch lanes, but the ledger gives deps=0 and no runner output. A fresh auditor cannot verify the referenced rows, logs, statuses, or boundary characterizations from the allowed inputs.
+- **rationale:** Issue: the note summarizes promotion boundaries across wider-family, grown-transfer, graph-frontier, and persistent-object lanes without registered dependencies or a machine-checkable inventory. Why this blocks: the conservative no-overpromotion advice may be safe, but its factual premises cannot be audited from the source note alone. Repair target: register the cited notes, scripts, and logs as dependencies and add a runner that emits the current status/output inventory. Claim boundary until fixed: review-safe branch-boundary guidance, not a tier-ratifiable summary.
+- **open / conditional deps cited:**
+  - `H0125_WIDER_W4_NOTE.md`
+  - `H0125_WIDER_REPLAY_NOTE.md`
+  - `GATE_B_GROWN_JOINT_PACKAGE_NOTE.md`
+  - `GATE_B_GROWN_DISTANCE_LAW_NOTE.md`
+  - `GATE_B_NONLABEL_SIGN_GROWN_TRANSFER_NOTE.md`
+  - `GROWING_GRAPH_FRONTIER_EXPANSION_PROXY_NOTE.md`
+  - `GROWING_GRAPH_FRONTIER_ARCHITECTURE_TRANSFER_NOTE.md`
+  - `GROWING_GRAPH_DYNAMIC_LIMIT_DIAGNOSTIC_NOTE.md`
 - **auditor confidence:** high
 
 ### `valley_linear_continuum_synthesis_note`
