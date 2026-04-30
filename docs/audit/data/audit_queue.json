@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 237,
-    "leaf": 575,
+    "leaf": 574,
     "medium": 347
   },
-  "generated_at": "2026-04-30T15:12:19.495061+00:00",
+  "generated_at": "2026-04-30T15:12:23.095246+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -14924,23 +14924,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "anderson_phase_mu2_0001_note_2026-04-11",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/ANDERSON_PHASE_MU2_0001_NOTE_2026-04-11.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_anderson_phase_unscreened_periodic.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "architecture_portability_sweep_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -24350,6 +24333,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 756,
-  "total_pending": 1168
+  "ready_count": 755,
+  "total_pending": 1167
 }
