@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-29T23:17:35.259120+00:00",
-  "generated_at": "2026-04-29T23:17:33.167688+00:00",
-  "invalidation_run_at": "2026-04-29T23:17:35.192960+00:00",
+  "effective_status_computed_at": "2026-04-30T00:43:27.146603+00:00",
+  "generated_at": "2026-04-30T00:43:25.341855+00:00",
+  "invalidation_run_at": "2026-04-30T00:43:27.089375+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-29T23:17:35.054370+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:43:26.968595+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -30920,7 +30920,7 @@
       "auditor": null,
       "auditor_confidence": null,
       "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
+      "blocker": "cross_confirmation_disagreement",
       "chain_closes": null,
       "chain_closure_explanation": null,
       "claim_id": "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
@@ -30934,8 +30934,15 @@
           "load_bearing_step_class": "A",
           "verdict": "audited_clean"
         },
-        "second_audit": null,
-        "status": "awaiting_second"
+        "second_audit": {
+          "audit_date": "2026-04-30T00:42:51.164819+00:00",
+          "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+          "auditor_family": "codex-gpt-5",
+          "independence": "fresh_context",
+          "load_bearing_step_class": "C",
+          "verdict": "audited_clean"
+        },
+        "status": "disagreement"
       },
       "current_status": "unknown",
       "current_status_raw": "exact connected-cumulant hierarchy theorem for the Wilson",
