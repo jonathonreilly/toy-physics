@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:42:21.518737+00:00
+**Generated:** 2026-04-30T02:42:24.962709+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 205 |
 | support | 105 |
 | open | 24 |
-| unknown | 528 |
+| unknown | 527 |
 | ~~audited_decoration~~ | 4 |
 | ~~audited_numerical_match~~ | 48 |
 | ~~audited_renaming~~ | 72 |
-| ~~audited_conditional~~ | 428 |
+| ~~audited_conditional~~ | 429 |
 | ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 154 |
+| `audited_conditional` | 155 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1266 |
+| `unaudited` | 1265 |
 
 | criticality | count |
 |---|---:|
@@ -197,6 +197,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_leptogenesis_transport_status_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_cascade_geometry_note_2026-04-14` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -1131,6 +1132,20 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Among all positive off-seed sources on the same seed surface satisfying eta_{i_*} / eta_obs = 1, choose the one minimizing I_seed.  _(class `G`)_
 - **chain closes:** False — The optimizer closes the target because exact agreement with eta_obs is imposed as a constraint; the note itself calls this an invented post-axiom selector law rather than a derived law.
 - **rationale:** Issue: the load-bearing source is selected by minimizing a chosen information cost under the explicit constraint eta_{i_*}/eta_obs = 1. Why this blocks: the exact closure is built into the optimization target, so the runner verifies a calibrated/tuned source law rather than deriving the source from retained framework dynamics. Repair target: derive the information functional and closure constraint independently from retained microscopic dynamics, or remove the eta_obs equality as an imposed selector. Claim boundary until fixed: the note may report a least-deformed calibrated closure source for the PMNS-assisted branch, not an audited axiom-first leptogenesis prediction.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_transport_status_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** On the exact theorem-native radiation branch the direct transport solve gives eta/eta_obs = 0.188785929502, so the exact transport chain is closed while the DM gate remains open.  _(class `B`)_
+- **chain closes:** False — The runner verifies the transport solve after the source package, projection constants, exponents, and observational comparator are supplied, but it does not derive those inputs from retained one-hop authorities.
+- **rationale:** Issue: the status note's exact transport result depends on the fixed exact_package inputs such as k_A, k_B, gamma, E1, E2, K00, g_weak, eta_obs, and the radiation/thermal bookkeeping constants. Why this blocks: the runner computes a consistent transport value and a real undershoot only conditional on those supplied inputs; it does not derive the source package or projection law from retained authorities in the audit bundle. Repair target: expose retained source-package/projection/thermal-bookkeeping dependencies, or make the runner derive those inputs before solving transport. Claim boundary until fixed: the note can report a conditional transport-status computation and an open DM gate, not an audited standalone exact transport closure from the framework axiom.
+- **open / conditional deps cited:**
+  - `scripts/dm_leptogenesis_exact_common.py`
 - **auditor confidence:** high
 
 ### `dm_neutrino_cascade_geometry_note_2026-04-14`
