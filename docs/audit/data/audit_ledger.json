@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T01:27:47.855250+00:00",
-  "generated_at": "2026-04-30T01:27:46.010746+00:00",
-  "invalidation_run_at": "2026-04-30T01:27:47.788150+00:00",
+  "effective_status_computed_at": "2026-04-30T01:28:37.271464+00:00",
+  "generated_at": "2026-04-30T01:28:35.444720+00:00",
+  "invalidation_run_at": "2026-04-30T01:28:37.205675+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T01:27:47.658735+00:00",
+  "load_bearing_computed_at": "2026-04-30T01:28:37.079480+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -37506,14 +37506,21 @@
       "verdict_rationale": null
     },
     "hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T01:28:29.692405+00:00",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The source scopes the no-go to the two natural bulk axiom-3 Cl4/CAR realisations on H_cell, and the runner constructs both, verifies their Clifford relations, checks the P_A compression, and exhausts all 15 four-bilinear subsets. Within that stated scope, A1 is structurally falsified without external numerical or physical imports.",
       "claim_id": "hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -37521,13 +37528,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The natural bulk Cl4 generators shift Hamming weight by \u00b11, so P_A gamma_a P_A = 0 on the rank-four block, and no four compressed bilinears close a Clifford-Majorana algebra on P_A.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "c316aa478b764db361bafd8c70111f307a723ac1c271be3a45c52044bea8d66d",
@@ -37535,16 +37542,16 @@
       "open_dependency_paths": [],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 29,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 29
       },
       "runner_path": "scripts/frontier_hubble_c1_a1_grassmann_no_go.py",
       "title": "Lane 5 `(C1)` Gate \u2014 A1 Grassmann-from-axiom-3 No-Go",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The no-go closes as finite linear algebra on the explicitly defined Boolean/CAR H_cell setup. The runner computes the Clifford relations, Hamming-grade shifts, zero linear compressions, and exhaustive bilinear-subset obstruction; it does not tune a comparator or import observed values. Residual risk is only scope drift: the clean verdict covers the stated A1 projection/compression mechanism, not G1, C1, or other intrinsic P_A carrier routes."
     },
     "hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28": {
       "audit_date": null,

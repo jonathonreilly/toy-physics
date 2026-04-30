@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:27:48.095671+00:00
+**Generated:** 2026-04-30T01:28:37.495164+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 78 |
-| _proposed_retained_ | 7 |
+| **retained** | 79 |
+| _proposed_retained_ | 6 |
 | bounded | 205 |
 | support | 108 |
 | open | 24 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 78 |
+| `audited_clean` | 79 |
 | `audited_conditional` | 149 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1278 |
+| `unaudited` | 1277 |
 
 | criticality | count |
 |---|---:|
@@ -136,6 +136,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graph_first_su3_integration_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `growing_graph_static_control_audit_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `hadron_lane1_confinement_to_mass_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `hubble_lane5_two_gate_dependency_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -2311,6 +2312,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `scripts/mirror_chokepoint_joint.py_readout_not_registered_one_hop_dependency`
   - `scripts/higher_symmetry_dag.py_generator_family_not_registered_one_hop_dependency`
   - `runner_prints_diagnostics_without_hard_retention_assertions`
+- **auditor confidence:** high
+
+### `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28`
+
+- **Note:** [`HUBBLE_LANE5_C1_A1_GRASSMANN_NO_GO_NOTE_2026-04-28.md`](../../docs/HUBBLE_LANE5_C1_A1_GRASSMANN_NO_GO_NOTE_2026-04-28.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The natural bulk Cl4 generators shift Hamming weight by ±1, so P_A gamma_a P_A = 0 on the rank-four block, and no four compressed bilinears close a Clifford-Majorana algebra on P_A.  _(class `A`)_
+- **chain closes:** True — The source scopes the no-go to the two natural bulk axiom-3 Cl4/CAR realisations on H_cell, and the runner constructs both, verifies their Clifford relations, checks the P_A compression, and exhausts all 15 four-bilinear subsets. Within that stated scope, A1 is structurally falsified without external numerical or physical imports.
+- **rationale:** The no-go closes as finite linear algebra on the explicitly defined Boolean/CAR H_cell setup. The runner computes the Clifford relations, Hamming-grade shifts, zero linear compressions, and exhaustive bilinear-subset obstruction; it does not tune a comparator or import observed values. Residual risk is only scope drift: the clean verdict covers the stated A1 projection/compression mechanism, not G1, C1, or other intrinsic P_A carrier routes.
 - **auditor confidence:** high
 
 ### `hubble_lane5_two_gate_dependency_firewall_note_2026-04-27`
