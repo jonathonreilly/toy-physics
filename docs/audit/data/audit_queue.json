@@ -3,9 +3,9 @@
     "critical": 0,
     "high": 237,
     "leaf": 486,
-    "medium": 295
+    "medium": 294
   },
-  "generated_at": "2026-04-30T19:10:18.312599+00:00",
+  "generated_at": "2026-04-30T19:10:26.536730+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -8697,23 +8697,6 @@
       "note_path": "docs/PERSISTENT_OBJECT_EXACT_LATTICE_PARK_NOTE_2026-04-16.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_full_closure_same_surface_thermal_monotonicity_theorem_note_2026-04-17",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 2,
-      "load_bearing_score": 6.087,
-      "note_path": "docs/DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_MONOTONICITY_THEOREM_NOTE_2026-04-17.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_full_closure_same_surface_thermal_monotonicity_theorem.py",
       "transitive_descendants": 33
     },
     {
@@ -21773,6 +21756,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 625,
-  "total_pending": 1018
+  "ready_count": 624,
+  "total_pending": 1017
 }
