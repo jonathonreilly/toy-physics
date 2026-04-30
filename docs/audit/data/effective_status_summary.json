@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-30T13:47:45.374466+00:00",
+  "computed_at": "2026-04-30T14:42:47.247954+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -25,22 +25,23 @@
   ],
   "cycles_detected": 59,
   "effective_status_counts": {
-    "audited_conditional": 469,
+    "audited_conditional": 465,
     "audited_decoration": 5,
-    "audited_failed": 173,
+    "audited_failed": 170,
     "audited_numerical_match": 20,
     "audited_renaming": 41,
     "bounded": 198,
-    "open": 21,
-    "proposed_retained": 1,
-    "retained": 82,
-    "support": 121,
-    "unknown": 442
+    "open": 22,
+    "proposed_retained": 3,
+    "retained": 80,
+    "support": 124,
+    "unknown": 445
   },
-  "proposed_demoted_by_upstream_count": 131,
+  "proposed_demoted_by_upstream_count": 132,
   "proposed_demoted_by_upstream_examples": [
     "area_law_quarter_broader_no_go_note_2026-04-25",
     "atomic_hydrogen_helium_probe_note",
+    "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
     "bh_entropy_rt_ratio_widom_no_go_note",
     "bminusl_anomaly_freedom_theorem_note_2026-04-24",
     "causal_impact_parameter_note",
@@ -62,7 +63,6 @@
     "ckm_compound_magnitudes_circumradius_bridge_theorem_note_2026-04-25",
     "ckm_cp_product_alpha_s_cross_sector_extraction_theorem_note_2026-04-25",
     "ckm_cubic_bernoulli_koide_bridge_support_note_2026-04-25",
-    "ckm_ew_lattice_a4_bridge_retained_identity_note_2026-04-25",
-    "ckm_first_row_magnitudes_theorem_note_2026-04-24"
+    "ckm_ew_lattice_a4_bridge_retained_identity_note_2026-04-25"
   ]
 }

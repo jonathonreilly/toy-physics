@@ -253,11 +253,42 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
             )
             third_pass_blocker = "third_auditor_disagreement"
 
+    critical_second_pass = (
+        criticality == "critical"
+        and prior_cross_confirmation_status == "awaiting_second"
+    )
+    if critical_second_pass:
+        first = (prior_cross_confirmation or {}).get("first_audit") or {}
+        err = cross_confirmation_error(first, audit)
+        if err:
+            return False, err
+
+        second = audit_summary_from_blob(audit)
+        row["cross_confirmation"]["second_audit"] = second
+        matches = (
+            first.get("verdict") == second.get("verdict")
+            and first.get("load_bearing_step_class") == second.get("load_bearing_step_class")
+        )
+        if matches:
+            row["cross_confirmation"]["status"] = "confirmed"
+        else:
+            row["cross_confirmation"]["status"] = "disagreement"
+            row["audit_status"] = "audit_in_progress"
+            row["blocker"] = "cross_confirmation_disagreement"
+            rows[cid] = row
+            ledger["rows"] = rows
+            return True, (
+                "cross-confirmation disagreement recorded "
+                f"({first.get('verdict')!r}/{first.get('load_bearing_step_class')!r} vs "
+                f"{second.get('verdict')!r}/{second.get('load_bearing_step_class')!r}); "
+                "promote to third-auditor review"
+            )
+
     # Cross-confirmation flow for critical claims.
     # First audit on a critical claim with audited_clean lands as
     # audit_in_progress and waits for a second independent auditor.
     # Second matching audit promotes to audited_clean.
-    if verdict == "audited_clean" and criticality == "critical":
+    if verdict == "audited_clean" and criticality == "critical" and not critical_second_pass:
         prior = row.get("cross_confirmation") or {}
         first = prior.get("first_audit")
         if first is None:
