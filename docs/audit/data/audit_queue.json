@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 367,
+    "leaf": 366,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:28:00.732260+00:00",
+  "generated_at": "2026-04-30T19:28:06.711581+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13820,23 +13820,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "gate_b_nonlabel_sign_grown_transfer_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GATE_B_NONLABEL_SIGN_GROWN_TRANSFER_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/GATE_B_NONLABEL_SIGN_GROWN_TRANSFER.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "gate_b_poisson_self_gravity_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -19563,6 +19546,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 510,
-  "total_pending": 893
+  "ready_count": 509,
+  "total_pending": 892
 }
