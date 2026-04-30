@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:14:20.610468+00:00
+**Generated:** 2026-04-30T22:16:19.814323+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 7 |
-| bounded | 279 |
+| bounded | 278 |
 | support | 247 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 742 |
+| ~~audited_conditional~~ | 743 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 212 |
-| `audited_conditional` | 464 |
+| `audited_conditional` | 465 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 796 |
+| `unaudited` | 795 |
 
 | criticality | count |
 |---|---:|
@@ -343,6 +343,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bmv_bounded_negative_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `born_lane_comparison_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `branch_entanglement_robustness_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `broad_gravity_derivation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `broad_surrogate_point_source_compare_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `broken_graph_action_power_robustness_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_cone_speed_map_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1653,6 +1654,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `BMV_ENTANGLEMENT_NOTE_2026-04-11.md`
   - `BMV_THREEBODY_NOTE_2026-04-11.md`
+- **auditor confidence:** high
+
+### `broad_gravity_derivation_note`
+
+- **Note:** [`BROAD_GRAVITY_DERIVATION_NOTE.md`](../../docs/BROAD_GRAVITY_DERIVATION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-19`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The action S = kL(1-phi) is derived from the framework, so WEP and gravitational time dilation are promotable weak-field corollaries while geodesics, light bending, and the conformal metric remain bounded.  _(class `B`)_
+- **chain closes:** False — The runner supports a bounded weak-field/eikonal model surface, but the claimed derivation of S=kL(1-phi) still consumes the self-consistency closure condition, H+phi potential-coupling rule, eikonal/WKB limit, clock/readout identification, and continuum/null-geodesic steps. Those inputs are not registered as clean one-hop dependencies, and the live runner labels the time-dilation field-profile check bounded with large finite-lattice deviation.
+- **rationale:** Issue: the per-signature assessment over-promotes WEP and time dilation from a bounded weak-field/eikonal action surface whose key action and readout assumptions are not audited as retained inputs. Why this blocks: k-independence follows algebraically once S=kF(path,phi) is supplied, and the runner even shows it for a random field; the nontrivial physical content is the derivation and normalization of phi plus the phase/clock and potential-coupling bridge, which remain conditional. Repair target: register and audit the self-consistency Poisson chain, H+phi coupling theorem, eikonal action derivation, and clock/readout theorem, then rerun the per-signature bundle with those dependencies explicit. Claim boundary until fixed: bounded weak-field support for the listed signatures under the supplied Poisson/eikonal/continuum assumptions; no retained promotion of WEP or time dilation from this note alone.
+- **open / conditional deps cited:**
+  - `GRAVITY_CLEAN_DERIVATION_NOTE.md`
+  - `GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`
+  - `H_plus_phi_potential_coupling_theorem`
+  - `eikonal_WKB_action_bridge`
+  - `phase_clock_readout_identification`
 - **auditor confidence:** high
 
 ### `broad_surrogate_point_source_compare_note`
