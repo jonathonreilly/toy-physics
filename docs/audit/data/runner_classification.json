@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T23:00:11.486145+00:00",
+  "generated_at": "2026-04-30T23:37:49.414251+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -5209,6 +5209,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_finite_rank_source_to_metric_theorem.py"
     },
+    "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_first_order_coframe_unconditionality_no_go.py"
+    },
     "fixed_field_complex_grown_basin_v2_note": {
       "assert_count": 0,
       "counts": {
@@ -10309,6 +10321,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_planck_boundary_density_extension.py"
     },
+    "planck_boundary_orientation_incidence_no_go_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_planck_boundary_orientation_incidence_no_go.py"
+    },
     "planck_finite_response_no_go_note_2026-04-24": {
       "assert_count": 0,
       "counts": {
@@ -10321,6 +10345,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_planck_finite_response_nogo.py"
     },
+    "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_planck_link_local_first_variation_p_a_forcing.py"
+    },
     "planck_parent_source_hidden_character_no_go_note_2026-04-24": {
       "assert_count": 0,
       "counts": {
@@ -10332,6 +10368,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/frontier_planck_parent_source_hidden_character_nogo.py"
+    },
+    "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 5,
+        "B": 0,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py"
     },
     "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25": {
       "assert_count": 1,
@@ -13020,6 +13068,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_su2_weak_beta_coefficient_structural_closed_form.py"
+    },
+    "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_substrate_to_p_a_forcing.py"
     },
     "symmetry_generated_paired_chokepoint_note": {
       "assert_count": 0,
@@ -21391,6 +21451,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_first_order_coframe_unconditionality_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_fractional_charge_denominator_from_n_c.py": {
       "assert_count": 1,
       "claims": [
@@ -25171,6 +25246,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_planck_boundary_orientation_incidence_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "planck_boundary_orientation_incidence_no_go_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_planck_conditional_completion_audit.py": {
       "assert_count": 0,
       "claims": [
@@ -25201,6 +25291,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_planck_link_local_first_variation_p_a_forcing.py": {
+      "assert_count": 1,
+      "claims": [
+        "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_planck_parent_source_hidden_character_nogo.py": {
       "assert_count": 0,
       "claims": [
@@ -25214,6 +25319,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py": {
+      "assert_count": 1,
+      "claims": [
+        "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 5,
+        "B": 0,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_planck_primitive_coframe_boundary_carrier.py": {
@@ -27414,6 +27534,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_substrate_to_p_a_forcing.py": {
+      "assert_count": 2,
+      "claims": [
+        "substrate_to_p_a_forcing_theorem_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_taste_scalar_isotropy.py": {
@@ -32248,12 +32383,12 @@
     "dominant_class_distribution": {
       "A": 7,
       "B": 119,
-      "C": 442,
+      "C": 447,
       "D": 183,
       "none": 404
     },
-    "runners_classified": 1155,
-    "runners_with_C": 534,
+    "runners_classified": 1160,
+    "runners_with_C": 539,
     "runners_with_D": 284
   }
 }

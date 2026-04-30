@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T23:00:12.004877+00:00
+**Generated:** 2026-04-30T23:37:49.948080+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,40 +20,40 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 83 |
-| _proposed_retained_ | 1 |
-| bounded | 274 |
+| _proposed_retained_ | 4 |
+| bounded | 273 |
 | support | 237 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 754 |
+| ~~audited_conditional~~ | 757 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 220 |
-| `audited_conditional` | 481 |
+| `audited_conditional` | 480 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 769 |
+| `unaudited` | 775 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 73 |
-| `high` | 335 |
-| `medium` | 381 |
+| `critical` | 76 |
+| `high` | 333 |
+| `medium` | 385 |
 | `leaf` | 769 |
 
-- **Proposed claims demoted by upstream:** 128
+- **Proposed claims demoted by upstream:** 129
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1155
-- runners with (C) first-principles compute hits: 534
+- runners classified: 1160
+- runners with (C) first-principles compute hits: 539
 - runners with (D) external comparator hits: 284
 - decoration candidates (no C, no D): 81
 
@@ -63,31 +63,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | criticality | desc | score | audit_status | effective |
 |---:|---|---|---:|---:|---|---|
-| 1 | `alpha_s_derived_note` | critical | 243 | 29.43 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 28.86 | `audited_conditional` | ~~audited_conditional~~ |
-| 3 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 28.84 | `audited_conditional` | ~~audited_conditional~~ |
-| 4 | `graph_first_su3_integration_note` | critical | 293 | 27.70 | `audited_clean` | **retained** |
-| 5 | `yt_ward_identity_derivation_theorem` | critical | 291 | 27.69 | `audited_renaming` | ~~audited_renaming~~ |
-| 6 | `observable_principle_from_axiom_note` | critical | 234 | 26.38 | `audited_conditional` | ~~audited_conditional~~ |
-| 7 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 101 | 23.67 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `yt_ew_color_projection_theorem` | critical | 113 | 22.33 | `audited_conditional` | ~~audited_conditional~~ |
-| 9 | `three_generation_observable_theorem_note` | critical | 282 | 21.64 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `three_generation_structure_note` | critical | 250 | 20.97 | `audited_conditional` | ~~audited_conditional~~ |
-| 11 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 20.83 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `one_generation_matter_closure_note` | critical | 244 | 20.44 | `audited_conditional` | ~~audited_conditional~~ |
-| 13 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 93 | 19.55 | `audited_conditional` | ~~audited_conditional~~ |
-| 14 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 42 | 18.43 | `audited_clean` | **retained** |
-| 15 | `minimal_axioms_2026-04-11` | critical | 106 | 17.74 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `left_handed_charge_matching_note` | critical | 251 | 17.48 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `anomaly_forces_time_theorem` | critical | 247 | 17.45 | `audited_conditional` | ~~audited_conditional~~ |
-| 18 | `ckm_atlas_axiom_closure_note` | critical | 74 | 17.23 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `native_gauge_closure_note` | critical | 289 | 16.68 | `audited_conditional` | ~~audited_conditional~~ |
-| 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 120 | 16.42 | `audited_conditional` | ~~audited_conditional~~ |
-| 21 | `plaquette_self_consistency_note` | critical | 294 | 16.20 | `audited_conditional` | ~~audited_conditional~~ |
-| 22 | `physical_lattice_necessity_note` | critical | 278 | 15.62 | `audited_conditional` | ~~audited_conditional~~ |
-| 23 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 127 | 15.50 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `site_phase_cube_shift_intertwiner_note` | critical | 285 | 15.16 | `audited_clean` | support |
-| 25 | `cosmological_constant_spectral_gap_identity_theorem_note` | critical | 48 | 15.12 | `audited_conditional` | ~~audited_conditional~~ |
+| 1 | `alpha_s_derived_note` | critical | 256 | 33.51 | `audited_conditional` | ~~audited_conditional~~ |
+| 2 | `yt_ward_identity_derivation_theorem` | critical | 299 | 31.73 | `audited_renaming` | ~~audited_renaming~~ |
+| 3 | `observable_principle_from_axiom_note` | critical | 247 | 30.45 | `audited_conditional` | ~~audited_conditional~~ |
+| 4 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 28.86 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 28.84 | `audited_conditional` | ~~audited_conditional~~ |
+| 6 | `graph_first_su3_integration_note` | critical | 301 | 28.74 | `audited_clean` | **retained** |
+| 7 | `yt_ew_color_projection_theorem` | critical | 126 | 26.49 | `audited_conditional` | ~~audited_conditional~~ |
+| 8 | `three_generation_observable_theorem_note` | critical | 290 | 25.68 | `audited_conditional` | ~~audited_conditional~~ |
+| 9 | `three_generation_structure_note` | critical | 264 | 25.05 | `audited_conditional` | ~~audited_conditional~~ |
+| 10 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 101 | 23.67 | `audited_conditional` | ~~audited_conditional~~ |
+| 11 | `minimal_axioms_2026-04-11` | critical | 119 | 22.91 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `anomaly_forces_time_theorem` | critical | 261 | 22.53 | `audited_conditional` | ~~audited_conditional~~ |
+| 13 | `native_gauge_closure_note` | critical | 297 | 21.72 | `audited_conditional` | ~~audited_conditional~~ |
+| 14 | `left_handed_charge_matching_note` | critical | 265 | 21.55 | `audited_conditional` | ~~audited_conditional~~ |
+| 15 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 20.83 | `audited_conditional` | ~~audited_conditional~~ |
+| 16 | `one_generation_matter_closure_note` | critical | 244 | 20.44 | `audited_conditional` | ~~audited_conditional~~ |
+| 17 | `plaquette_self_consistency_note` | critical | 302 | 20.24 | `audited_conditional` | ~~audited_conditional~~ |
+| 18 | `physical_lattice_necessity_note` | critical | 286 | 19.66 | `audited_conditional` | ~~audited_conditional~~ |
+| 19 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 93 | 19.55 | `audited_conditional` | ~~audited_conditional~~ |
+| 20 | `site_phase_cube_shift_intertwiner_note` | critical | 293 | 19.20 | `audited_clean` | support |
+| 21 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | critical | 263 | 19.04 | `unaudited` | ~~audited_conditional~~ |
+| 22 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | critical | 263 | 18.54 | `unaudited` | ~~audited_conditional~~ |
+| 23 | `rconn_derived_note` | critical | 129 | 18.52 | `audited_conditional` | ~~audited_conditional~~ |
+| 24 | `higgs_mass_derived_note` | critical | 122 | 18.44 | `audited_conditional` | ~~audited_conditional~~ |
+| 25 | `higgs_vacuum_explicit_systematic_note` | critical | 121 | 18.43 | `audited_conditional` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -332,7 +332,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alternative_coupled_field_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `anomaly_forces_time_theorem` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `architecture_portability_sweep_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `area_law_native_car_semantics_tightening_note_2026-04-25` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `asymmetry_persistence_born_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `asymmetry_persistence_collapse_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -455,6 +454,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `dm_leptogenesis_pmns_microscopic_selector_reduction_theorem_note_2026-04-17` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | E | - |
 | `dm_leptogenesis_pmns_projector_interface_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -706,7 +706,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
-| `planck_target3_clifford_phase_bridge_theorem_note_2026-04-25` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `plaquette_self_consistency_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_selector_current_stack_zero_law_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -1236,23 +1235,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** By Baker's theorem, any nonzero finite von Neumann entropy from algebraic Schmidt probabilities is transcendental, so it cannot equal the algebraic value 1/4.  _(class `A`)_
 - **chain closes:** True — The note states a bounded number-theoretic no-go and does not claim a universal entropy impossibility. The runner checks rational/algebraic spectrum examples, the Baker-certificate conditions, the tuned binary selector, and the separation between algebraic trace fractions and von Neumann entropy values.
 - **rationale:** The bounded no-go closes on its stated surface: finite algebraic Schmidt spectra give zero entropy for product spectra or nonzero logarithmic linear forms that are transcendental by Baker's theorem, so exact 1/4 is excluded in that class. The runner verifies representative spectra, primitive m/16 binaries, the tuned non-algebraic two-level selector, and the finite algebraic Hamiltonian implication. Residual risk is downstream overstatement: the note does not rule out transcendental spectrum selectors, multipocket Widom mechanisms, or a justified non-von-Neumann primitive entropy functional.
-- **auditor confidence:** high
-
-### `area_law_native_car_semantics_tightening_note_2026-04-25`
-
-- **Note:** [`AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md`](../../docs/AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md)
-- **current_status:** unknown
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** Assuming the rank-four primitive active block carries an irreducible local Clifford-Majorana edge response, the runner constructs two CAR annihilators, four Majoranas, the full M_4(C) Clifford algebra, parity, and the 2/12+1/12 Widom coefficient, while also showing a rank-four commuting two-qubit semantics is not CAR.  _(class `B`)_
-- **chain closes:** False — The note precisely identifies the residual Target 2 statistics premise and checks its CAR consequences, but it does not derive the Clifford-Majorana edge response from rank four, locality, additivity, or bare Hilbert-flow semantics.
-- **rationale:** Issue: the tightening theorem is valid as a conditional equivalence, not a standalone area-law closure. Why this blocks: the load-bearing assumption is exactly the local irreducible Clifford-Majorana/CAR edge-statistics principle; the runner explicitly demonstrates that rank four alone also admits non-CAR two-qubit semantics. Repair target: audit or derive the primitive coframe/edge-statistics forcing theorem and register the primitive-CAR edge and parity-gate carrier dependencies. Claim boundary until fixed: exact reduction of the residual Target 2 premise to native Clifford-Majorana/CAR edge response, not a derivation of that response from the retained Hilbert-only surface.
-- **open / conditional deps cited:**
-  - `local irreducible Clifford-Majorana/CAR edge-statistics principle on P_A H_cell`
-  - `primitive metric-compatible coframe response forcing theorem`
-  - `area_law_primitive_car_edge_identification_theorem_note_2026-04-25`
-  - `area_law_primitive_parity_gate_carrier_theorem_note_2026-04-25`
 - **auditor confidence:** high
 
 ### `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25`
@@ -3862,6 +3844,24 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** On the canonical `N_e` sample this reproduces the same near-closing PMNS lift  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 14 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_pmns_microscopic_selector_reduction_theorem_note_2026-04-17`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_MICROSCOPIC_SELECTOR_REDUCTION_THEOREM_NOTE_2026-04-17.md`](../../docs/DM_LEPTOGENESIS_PMNS_MICROSCOPIC_SELECTOR_REDUCTION_THEOREM_NOTE_2026-04-17.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-medium-ready-20260430-46`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The remaining review-branch blocker is exactly a theorem-grade microscopic selector law on dW_e^H = Schur_Ee(D_-), equivalently the intrinsic 2-real Z_3 doublet-block point-selection law.  _(class `C`)_
+- **chain closes:** False — The runner now exits 0 with 21 classified checks and supports the reduction to a right-sensitive microscopic selector target. The reduction still imports conditional or unaudited upstream selector-bank, dW_e^H, and Z3 doublet-block rows, so the bounded row cannot be audit-clean as an independently closed theorem.
+- **rationale:** Issue: the note correctly identifies the remaining last-mile object, but it depends on upstream selector-bank and source-surface rows that are conditional or unaudited rather than retained/audit-clean. Why this blocks: the runner verifies the reduction under the current imported constructive chamber, dW_e^H, and Z3 doublet-block surfaces, but it does not independently derive or exhaust those inputs. Repair target: ratify the charged-source response reduction, selector-bank CP-sheet blindness/exhaustion, even-response boundary, oriented-phase sheet selector, and Z3 doublet-block closure rows, then re-audit this reduction. Claim boundary until fixed: safe as a bounded reduction/triage theorem for the remaining microscopic selector law, not as closure of the PMNS/leptogenesis gate.
+- **open / conditional deps cited:**
+  - `DM_LEPTOGENESIS_NE_CHARGED_SOURCE_RESPONSE_REDUCTION_NOTE_2026-04-16.md`
+  - `DM_LEPTOGENESIS_PMNS_SELECTOR_BANK_CP_SHEET_BLINDNESS_THEOREM_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md`
+  - `DM_LEPTOGENESIS_PMNS_EVEN_RESPONSE_SOLE_AXIOM_BOUNDARY_NOTE_2026-04-16.md`
+  - `DM_LEPTOGENESIS_PMNS_ORIENTED_PHASE_SHEET_SELECTOR_THEOREM_NOTE_2026-04-16.md`
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16`
@@ -9771,23 +9771,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `Gauss_asymptotic_monopole_readout_and_exterior_observability_additivity_source_charge_theorem_not_registered`
   - `primitive_boundary_Wald_carrier_identification_c_cell_equals_1_over_4_to_1_over_4G_lambda_not_registered_as_audited_clean`
   - `conventional_lP_squared_equals_Gphys_target_definition_external_not_a_CL3_derivation`
-- **auditor confidence:** high
-
-### `planck_target3_clifford_phase_bridge_theorem_note_2026-04-25`
-
-- **Note:** [`PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`](../../docs/PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md)
-- **current_status:** unknown
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** Under the explicit primitive metric-compatible Clifford/coframe response premise on the rank-four active block, the runner constructs Cl_4 generators, verifies irreducibility and CAR equivalence, excludes non-CAR rank-four readings by the coframe law, and checks c_Widom=c_cell=1/4 with source-unit natural-unit normalization.  _(class `B`)_
-- **chain closes:** False — The bridge closes the CAR/1/4 coefficient only on the stated coframe-response surface; it does not derive that coframe response from the retained Cl(3)/Z^3 input, does not independently close the primitive-CAR edge theorem or source-unit normalization, and does not derive an SI value of hbar.
-- **rationale:** Issue: the note is a correct conditional bridge, but its decisive metric-compatible active coframe response is an explicit premise rather than an audited derived consequence. Why this blocks: without that premise the earlier Hilbert-only rank-four ambiguity remains, while the Planck-unit conclusions also import primitive-CAR edge and source-unit normalization support. Repair target: audit or derive the active-block coframe-response forcing theorem, register the primitive-CAR edge and source-unit normalization dependencies, and keep SI hbar/metrology wording out of the structural claim. Claim boundary until fixed: conditional Target 3 Clifford/CAR bridge with c_Widom=c_cell=1/4 and natural-unit G_lat=a/l_P=1, not standalone Target 3 or SI hbar closure.
-- **open / conditional deps cited:**
-  - `primitive metric-compatible Clifford/coframe response on P_A H_cell`
-  - `primitive-CAR edge identification theorem`
-  - `source-unit normalization theorem`
-  - `Target 3 Hilbert-only boundary theorem remains the fallback without the coframe premise`
 - **auditor confidence:** high
 
 ### `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25`
