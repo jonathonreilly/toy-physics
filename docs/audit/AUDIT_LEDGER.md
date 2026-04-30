@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:30:45.550014+00:00
+**Generated:** 2026-04-30T01:31:27.812483+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 80 |
-| _proposed_retained_ | 3 |
+| **retained** | 81 |
+| _proposed_retained_ | 2 |
 | bounded | 205 |
 | support | 108 |
 | open | 24 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 80 |
+| `audited_clean` | 81 |
 | `audited_conditional` | 151 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1274 |
+| `unaudited` | 1273 |
 
 | criticality | count |
 |---|---:|
@@ -163,6 +163,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -3669,6 +3670,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `quark_projector_ray_phase_completion_note_2026-04-18: bounded/unaudited dependency`
   - `missing theorem: derivation of xi_u and xi_d complex 1-3 carriers`
 - **auditor confidence:** 0.94
+
+### `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28`
+
+- **Note:** [`QUARK_GENERATION_STRATIFIED_WARD_FREE_MATRIX_NO_GO_NOTE_2026-04-28.md`](../../docs/QUARK_GENERATION_STRATIFIED_WARD_FREE_MATRIX_NO_GO_NOTE_2026-04-28.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** One-Higgs gauge selection leaves Y_u and Y_d as arbitrary complex 3x3 matrices, and for fixed CKM V the choices Y_u=D_u and Y_d=V D_d allow arbitrary singular values, so CKM/top-Ward/generation structure do not determine non-top Yukawa ratios.  _(class `A`)_
+- **chain closes:** True — The no-go is a narrow free-matrix/linear-algebra obstruction. The runner verifies the gauge bookkeeping, generation-matrix freedom, top-Ward non-selector status, and explicit same-CKM/different-spectrum witness without importing observed quark masses or fitted entries.
+- **rationale:** The direct route is cleanly blocked: the permitted primitives select operator skeletons and a top-channel normalization, while the quark Yukawa singular values remain free variables under the same CKM left-mixing surface. The runner supplies an explicit two-spectrum witness with identical CKM and verifies the firewall against observed/fitted quark masses. Residual risk is only overstatement: this does not prove no future generation/source/readout primitive can derive non-top masses.
+- **auditor confidence:** high
 
 ### `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27`
 
