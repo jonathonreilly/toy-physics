@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T11:41:27.866895+00:00
+**Generated:** 2026-04-30T11:41:31.239696+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -35,12 +35,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 203 |
+| `audited_conditional` | 204 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1175 |
+| `unaudited` | 1174 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 384 |
 | `leaf` | 764 |
 
-- **Proposed claims demoted by upstream:** 150
+- **Proposed claims demoted by upstream:** 149
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -73,7 +73,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 6 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 99 | 23.64 | `unaudited` | ~~audited_conditional~~ |
 | 7 | `yt_ew_color_projection_theorem` | critical | 110 | 22.29 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `three_generation_observable_theorem_note` | critical | 278 | 21.62 | `audited_conditional` | ~~audited_conditional~~ |
-| 9 | `three_generation_structure_note` | critical | 247 | 20.95 | `unaudited` | ~~audited_conditional~~ |
+| 9 | `three_generation_structure_note` | critical | 247 | 20.95 | `audited_conditional` | ~~audited_conditional~~ |
 | 10 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 111 | 20.81 | `unaudited` | ~~audited_conditional~~ |
 | 11 | `one_generation_matter_closure_note` | critical | 241 | 20.42 | `unaudited` | ~~audited_conditional~~ |
 | 12 | `graph_first_su3_integration_note` | critical | 288 | 19.68 | `audited_clean` | **retained** |
@@ -364,6 +364,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `three_generation_observable_theorem_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `three_generation_structure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `vector_sector_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -5635,6 +5636,21 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`
   - `Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`
   - `GENERATION_AXIOM_BOUNDARY_NOTE.md`
+- **auditor confidence:** high
+
+### `three_generation_structure_note`
+
+- **Note:** [`THREE_GENERATION_STRUCTURE_NOTE.md`](../../docs/THREE_GENERATION_STRUCTURE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The note uses the three-generation observable theorem and physical-lattice necessity to read the three hw=1 sectors as the retained three-generation matter structure.  _(class `B`)_
+- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md, PHYSICAL_LATTICE_NECESSITY_NOTE.md.
+- **rationale:** Issue: The load-bearing step still imports unratified direct authority: THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md, PHYSICAL_LATTICE_NECESSITY_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
+- **open / conditional deps cited:**
+  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
+  - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
 - **auditor confidence:** high
 
 ### `triage_no_promotion_note`
