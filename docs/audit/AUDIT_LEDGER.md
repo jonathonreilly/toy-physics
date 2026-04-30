@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T15:15:18.339045+00:00
+**Generated:** 2026-04-30T15:15:22.157496+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 4 |
 | bounded | 186 |
 | support | 124 |
-| open | 12 |
+| open | 11 |
 | unknown | 419 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 512 |
+| ~~audited_conditional~~ | 513 |
 | ~~audited_failed~~ | 170 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 9 |
 | `audited_clean` | 95 |
-| `audited_conditional` | 277 |
+| `audited_conditional` | 278 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1109 |
+| `unaudited` | 1108 |
 
 | criticality | count |
 |---|---:|
@@ -273,6 +273,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_schur_complement_theorem` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `cosmological_constant_spectral_gap_identity_theorem_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -2020,6 +2021,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The note's load-bearing narrow claim is that the exact-lattice complex-action carryover survives on the retained grown row: gamma=0 reduction is exact, the Born proxy is machine-clean, weak-field F~M stays 1.000, and the gamma sweep has a TOWARD-to-AWAY crossover.  _(class `C`)_
 - **chain closes:** True — The live runner reproduces the retained grown-row replay in the source note, including seed-0 gamma=0 delta +2.460475e-01, Born proxy 1.456e-15, F~M = 1.000 for all checked gammas, and the two-seed gamma crossover between 0.10 and 0.20. The result is scoped only to drift=0.2, restore=0.7, seeds 0 and 1 on this runner-defined grown row.
 - **rationale:** The source note is intentionally narrow and the current runner recomputes each load-bearing quantity on the grown row rather than importing the table: exact gamma=0 reduction, one Born proxy, six weak-field F~M readouts, and six gamma-sweep rows match the note. The note explicitly excludes geometry-generic, continuum, and self-gravity-mechanism claims, so the clean result retains only the finite grown-row companion. Residual boundary: the Born check is a proxy on the grown graph and the runner path is not registered in the queue row.
+- **auditor confidence:** high
+
+### `clifford_bimodule_ray_saturation_future_target_note_2026-04-19`
+
+- **Note:** [`CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md`](../../docs/CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** Clifford Bimodule Ray-Saturation Theorem — Future Target: open / future mathematical target (status line rephrased 2026-04-28 per audit-lane verdict). This is a named research target; it is not a theorem, has no runner, has no proof, and is not part of the current publishable claim surface. Named and scoped as the concrete math target that, if proven,  _(class `B`)_
+- **chain closes:** False — No. The source note explicitly frames this as open, future, planning, or a stretch attempt rather than a closed theorem, so the conclusion cannot be ratified from the source note alone.
+- **rationale:** Issue: the source note explicitly frames this as open, future, planning, or a stretch attempt rather than a closed theorem. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **open / conditional deps cited:**
+  - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
 
 ### `complex_selectivity_predictor_note`
