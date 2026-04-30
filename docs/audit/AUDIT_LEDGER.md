@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T10:09:38.027946+00:00
+**Generated:** 2026-04-30T10:19:07.273265+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -29,7 +29,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 53 |
 | ~~audited_conditional~~ | 423 |
-| ~~audited_failed~~ | 165 |
+| ~~audited_failed~~ | 166 |
 
 | audit_status | count |
 |---|---:|
@@ -37,7 +37,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 82 |
 | `audited_conditional` | 191 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 53 |
+| `audited_failed` | 54 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
 | `unaudited` | 1235 |
@@ -47,16 +47,16 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `critical` | 73 |
 | `high` | 336 |
 | `medium` | 392 |
-| `leaf` | 797 |
+| `leaf` | 798 |
 
 - **Proposed claims demoted by upstream:** 156
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
 
-- runners classified: 734
-- runners with (C) first-principles compute hits: 440
-- runners with (D) external comparator hits: 209
+- runners classified: 735
+- runners with (C) first-principles compute hits: 441
+- runners with (D) external comparator hits: 210
 - decoration candidates (no C, no D): 72
 
 ## Top 25 by load-bearing score (topology only)
@@ -65,30 +65,30 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | criticality | desc | score | audit_status | effective |
 |---:|---|---|---:|---:|---|---|
-| 1 | `alpha_s_derived_note` | critical | 237 | 28.89 | `audited_conditional` | ~~audited_conditional~~ |
+| 1 | `alpha_s_derived_note` | critical | 238 | 28.90 | `audited_conditional` | ~~audited_conditional~~ |
 | 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 111 | 28.81 | `unaudited` | ~~audited_conditional~~ |
 | 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 112 | 28.32 | `unaudited` | ~~audited_conditional~~ |
-| 4 | `yt_ward_identity_derivation_theorem` | critical | 283 | 27.65 | `audited_renaming` | ~~audited_renaming~~ |
-| 5 | `observable_principle_from_axiom_note` | critical | 225 | 25.32 | `audited_conditional` | ~~audited_conditional~~ |
+| 4 | `yt_ward_identity_derivation_theorem` | critical | 284 | 27.66 | `audited_renaming` | ~~audited_renaming~~ |
+| 5 | `observable_principle_from_axiom_note` | critical | 226 | 25.33 | `audited_conditional` | ~~audited_conditional~~ |
 | 6 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 99 | 23.64 | `unaudited` | ~~audited_conditional~~ |
-| 7 | `yt_ew_color_projection_theorem` | critical | 109 | 22.28 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `three_generation_observable_theorem_note` | critical | 274 | 21.60 | `unaudited` | ~~audited_conditional~~ |
+| 7 | `yt_ew_color_projection_theorem` | critical | 110 | 22.29 | `audited_conditional` | ~~audited_conditional~~ |
+| 8 | `three_generation_observable_theorem_note` | critical | 275 | 21.61 | `unaudited` | ~~audited_conditional~~ |
 | 9 | `three_generation_structure_note` | critical | 246 | 20.95 | `unaudited` | ~~audited_conditional~~ |
 | 10 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 110 | 20.79 | `unaudited` | ~~audited_conditional~~ |
 | 11 | `one_generation_matter_closure_note` | critical | 240 | 20.41 | `unaudited` | ~~audited_conditional~~ |
-| 12 | `graph_first_su3_integration_note` | critical | 284 | 19.66 | `audited_clean` | **retained** |
+| 12 | `graph_first_su3_integration_note` | critical | 285 | 19.66 | `audited_clean` | **retained** |
 | 13 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 91 | 19.52 | `unaudited` | ~~audited_conditional~~ |
 | 14 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 41 | 18.39 | `audited_clean` | **retained** |
-| 15 | `left_handed_charge_matching_note` | critical | 247 | 17.45 | `unaudited` | ~~audited_conditional~~ |
-| 16 | `anomaly_forces_time_theorem` | critical | 243 | 17.43 | `unaudited` | ~~audited_conditional~~ |
-| 17 | `ckm_atlas_axiom_closure_note` | critical | 72 | 17.19 | `unaudited` | ~~audited_conditional~~ |
-| 18 | `minimal_axioms_2026-04-11` | critical | 102 | 17.19 | `unaudited` | ~~audited_renaming~~ |
-| 19 | `native_gauge_closure_note` | critical | 280 | 16.63 | `unaudited` | ~~audited_conditional~~ |
-| 20 | `plaquette_self_consistency_note` | critical | 286 | 16.16 | `unaudited` | ~~audited_conditional~~ |
+| 15 | `minimal_axioms_2026-04-11` | critical | 103 | 17.70 | `unaudited` | ~~audited_renaming~~ |
+| 16 | `left_handed_charge_matching_note` | critical | 247 | 17.45 | `unaudited` | ~~audited_conditional~~ |
+| 17 | `anomaly_forces_time_theorem` | critical | 243 | 17.43 | `unaudited` | ~~audited_conditional~~ |
+| 18 | `ckm_atlas_axiom_closure_note` | critical | 72 | 17.19 | `unaudited` | ~~audited_conditional~~ |
+| 19 | `native_gauge_closure_note` | critical | 281 | 16.64 | `unaudited` | ~~audited_conditional~~ |
+| 20 | `plaquette_self_consistency_note` | critical | 287 | 16.17 | `unaudited` | ~~audited_conditional~~ |
 | 21 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 116 | 15.87 | `unaudited` | ~~audited_renaming~~ |
 | 22 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 125 | 15.48 | `unaudited` | ~~audited_conditional~~ |
-| 23 | `site_phase_cube_shift_intertwiner_note` | critical | 277 | 15.12 | `audit_in_progress` | support |
-| 24 | `physical_lattice_necessity_note` | critical | 270 | 15.08 | `unaudited` | ~~audited_renaming~~ |
+| 23 | `site_phase_cube_shift_intertwiner_note` | critical | 278 | 15.12 | `audit_in_progress` | support |
+| 24 | `physical_lattice_necessity_note` | critical | 271 | 15.09 | `unaudited` | ~~audited_renaming~~ |
 | 25 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | critical | 124 | 14.97 | `unaudited` | ~~audited_conditional~~ |
 
 
@@ -376,6 +376,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | A | - |
 | `backreaction_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `critical_exponents_topology_note_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -603,6 +604,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Without these, the existing hydrogen/helium harness remains scaffold-only.  _(class `A`)_
 - **chain closes:** True — The claim is a negative boundary: the note does not derive the Rydberg scale, but shows that direct use of the retained electroweak-scale alpha with textbook m_e gives the wrong atomic energy and that m_e, alpha(0), and the nonrelativistic physical-unit limit remain required inputs. The live runner verifies the dependency sensitivity and current scaffold-only state with PASS=12 FAIL=0.
 - **rationale:** The retained content is the dependency firewall, not a Rydberg derivation. The note's load-bearing step closes because the standard formula is explicitly input-sensitive and direct substitution of alpha_EM(M_Z) gives -15.675 eV rather than the textbook -13.6057 eV, so the low-energy Coulomb coupling bridge is not a notation change. The live runner also confirms the current atomic scaffold imports textbook m_e and lacks an alpha(0) closure. Residual risk is downstream misuse: this audit does not ratify hydrogen, Lamb-shift, fine-structure, hyperfine, helium, or larger-atom predictions.
+- **auditor confidence:** high
+
+### `axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_STACK_MINIMALITY_CL4C_NO_GO_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_STACK_MINIMALITY_CL4C_NO_GO_THEOREM_NOTE_2026-04-29.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-cross-confirm-2026-04-30`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** O2/combined no-go asserts that the weight-preserving A_min-derived operator algebra on P_A H_cell is only the S_4 permutation algebra and therefore cannot contain four Hermitian Clifford generators.  _(class `A`)_
+- **chain closes:** False — No. Direct finite linear algebra on H_cell = (C^2)^tensor4 gives full M_16(C) from the local single-qubit Cl(3) generators; its Hamming-weight-preserving part restricts to full M_4(C) on P_A, so the claimed S_4-only obstruction does not hold.
+- **rationale:** Issue: the proof's O2 step identifies the weight-preserving A_min algebra on P_A H_cell with an S_4/permutation algebra, but the requested finite check finds dim Op(A_min)=256, dim weight-preserving=70, and dim restricted P_A algebra=16=M_4(C). The proposed gamma_1=X tensor X, gamma_2=X tensor Y, gamma_3=X tensor Z, gamma_4=Y tensor I have membership residuals below 1e-15 in the restricted algebra, are Hermitian, square to I, and satisfy the Cl_4(C) anticommutators exactly. Why this blocks: the theorem's conclusion requires dim restricted algebra <16 or otherwise no Clifford quadruple; the computation gives full M_4(C) and an explicit quadruple. Repair target: either prove the local generators sigma_i^(a) are not actually in Op(A_min), or revise the theorem/runner to compute the generated weight-preserving algebra and retire the forced-Axiom* conclusion if they are included. Claim boundary until fixed: the individual A1/A2/A4 route no-gos may remain route-specific, but the assembled global no-hidden-third-option minimality theorem and Axiom* forced corollary cannot be claimed.
+- **open / conditional deps cited:**
+  - `HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md`
+  - `HUBBLE_LANE5_C1_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md`
+  - `CL4C_CARRIER_AXIOM_CONSEQUENCE_MAP_NOTE_2026-04-28.md`
 - **auditor confidence:** high
 
 ### `backreaction_note`

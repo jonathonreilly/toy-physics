@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T10:09:37.522408+00:00",
+  "generated_at": "2026-04-30T10:19:06.688955+00:00",
   "per_claim": {
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "assert_count": 0,
@@ -216,6 +216,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_atomic_rydberg_dependency_firewall.py"
+    },
+    "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_axiom_stack_minimality_cl4c_no_go.py"
     },
     "bell_inequality_derived_note": {
       "assert_count": 2,
@@ -9654,6 +9666,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_axiom_stack_minimality_cl4c_no_go.py": {
+      "assert_count": 0,
+      "claims": [
+        "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_baryogenesis.py": {
@@ -20075,12 +20102,12 @@
     "dominant_class_distribution": {
       "A": 6,
       "B": 108,
-      "C": 357,
+      "C": 358,
       "D": 121,
       "none": 142
     },
-    "runners_classified": 734,
-    "runners_with_C": 440,
-    "runners_with_D": 209
+    "runners_classified": 735,
+    "runners_with_C": 441,
+    "runners_with_D": 210
   }
 }

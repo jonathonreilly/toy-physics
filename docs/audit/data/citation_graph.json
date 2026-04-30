@@ -189,6 +189,34 @@
       "to": "charged_lepton_koide_review_packet_2026-04-18"
     },
     {
+      "from": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
+      "to": "hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28"
+    },
+    {
+      "from": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
+      "to": "hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28"
+    },
+    {
+      "from": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
+      "to": "hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28"
+    },
+    {
+      "from": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
+      "to": "hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28"
+    },
+    {
+      "from": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
+      "to": "hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28"
+    },
+    {
+      "from": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
+      "to": "cl4c_carrier_axiom_consequence_map_note_2026-04-28"
+    },
+    {
       "from": "bh_entropy_rt_ratio_widom_no_go_note",
       "to": "bh_entropy_derived_note"
     },
@@ -18233,7 +18261,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T10:09:35.790192+00:00",
+  "generated_at": "2026-04-30T10:19:04.876703+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19736,6 +19764,24 @@
       "path": "docs/AXIOM_REDUCTION_NOTE.md",
       "runner_path": null,
       "title": "Axiom Reduction: Honest Minimal Assumption Inventory"
+    },
+    "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29": {
+      "claim_id": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
+      "current_status": "proposed_retained",
+      "current_status_raw": "`proposed_retained` axiom-stack minimality theorem.",
+      "deps": [
+        "minimal_axioms_2026-04-11",
+        "hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28",
+        "hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28",
+        "hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28",
+        "hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28",
+        "hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28",
+        "cl4c_carrier_axiom_consequence_map_note_2026-04-28"
+      ],
+      "note_hash": "b33b22592fe4b46f9df6f097dad2419f0babecee9cc04d9481c9ed2f2caccec5",
+      "path": "docs/AXIOM_STACK_MINIMALITY_CL4C_NO_GO_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_axiom_stack_minimality_cl4c_no_go.py",
+      "title": "Axiom-Stack Minimality: Cl_4(C) No-Go Theorem (V1)"
     },
     "b_independence_mechanism_note": {
       "claim_id": "b_independence_mechanism_note",
@@ -41190,16 +41236,16 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4558,
-    "leaf_count": 740,
-    "node_count": 1672,
+    "edge_count": 4565,
+    "leaf_count": 735,
+    "node_count": 1673,
     "root_count": 1205,
-    "runners_with_path": 757,
+    "runners_with_path": 758,
     "status_counts": {
       "bounded": 253,
       "open": 43,
       "proposed_promoted": 1,
-      "proposed_retained": 407,
+      "proposed_retained": 408,
       "support": 172,
       "unknown": 796
     }
