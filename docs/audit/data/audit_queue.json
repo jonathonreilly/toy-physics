@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 398,
+    "leaf": 397,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:24:49.291402+00:00",
+  "generated_at": "2026-04-30T19:24:55.257668+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -19204,29 +19204,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19",
-        "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19",
-        "dm_wilson_direct_descendant_constructive_transport_plateau_normalized_schur_determinant_selector_note_2026-04-19",
-        "dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_note_2026-04-19",
-        "dm_wilson_direct_descendant_constructive_transport_plateau_observable_affine_no_go_note_2026-04-19"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_WILSON_DIRECT_DESCENDANT_TRANSPORT_FIBER_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-19.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_2026_04_19.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_wilson_to_dweh_local_chain_path_algebra_current_bank_boundary_note_2026-04-18",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20104,5 +20081,5 @@
     }
   ],
   "ready_count": 540,
-  "total_pending": 924
+  "total_pending": 923
 }

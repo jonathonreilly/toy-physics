@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:24:49.530458+00:00
+**Generated:** 2026-04-30T19:24:55.422915+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,12 +33,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 173 |
-| `audited_conditional` | 377 |
+| `audited_conditional` | 378 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 924 |
+| `unaudited` | 923 |
 
 | criticality | count |
 |---|---:|
@@ -458,6 +458,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_note_2026-04-19` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_note_2026-04-19` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `down_type_mass_ratio_ckm_dual_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
 | `early_family_transfer_connectivity_diagnosis` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -4633,6 +4634,24 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** - boundary sensitivity, so the law vanishes whenever any one Schur channel  _(class `B`)_
 - **chain closes:** False — No. The source row is author-declared unknown, so the audit packet does not assert a closed derivation to ratify.
 - **rationale:** Issue: the source note's own Status line is unknown, not a closed theorem/result tier. Why this blocks: a leaf audit cannot turn an explicitly unsettled source claim into a closed chain without an author reclassification and supporting derivation. Repair target: update the source note to a precise support/bounded/proposed_retained claim with a runner or cited theorem package. Claim boundary until fixed: safe to cite only as an unknown note in its current wording.
+- **auditor confidence:** high
+
+### `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19`
+
+- **Note:** [`DM_WILSON_DIRECT_DESCENDANT_TRANSPORT_FIBER_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-19.md`](../../docs/DM_WILSON_DIRECT_DESCENDANT_TRANSPORT_FIBER_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** After the same-day spectral-completion theorem, the unresolved direct-descendant  _(class `B`)_
+- **chain closes:** False — No. One-hop dependencies are not all retained (dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19=audited_conditional, dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19=audited_conditional, dm_wilson_direct_descendant_constructive_transport_plateau_normalized_schur_determinant_selector_note_2026-04-19=audited_conditional), so the chain does not close under the leaf audit rule.
+- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19=audited_conditional, dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19=audited_conditional, dm_wilson_direct_descendant_constructive_transport_plateau_normalized_schur_determinant_selector_note_2026-04-19=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared support tier with the upstream dependency condition attached.
+- **open / conditional deps cited:**
+  - `DM_WILSON_DIRECT_DESCENDANT_TRANSPORT_FIBER_SPECTRAL_COMPLETION_THEOREM_NOTE_2026-04-19.md`
+  - `DM_WILSON_DIRECT_DESCENDANT_CANONICAL_TRANSPORT_COLUMN_FIBER_THEOREM_NOTE_2026-04-19.md`
+  - `DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_NORMALIZED_SCHUR_DETERMINANT_SELECTOR_NOTE_2026-04-19.md`
+  - `DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_J_ISO_DERIVATION_AND_SCHUR_ISOTROPY_NO_GO_NOTE_2026-04-19.md`
+  - `DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_OBSERVABLE_AFFINE_NO_GO_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19`
