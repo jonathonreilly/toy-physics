@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:55:29.717194+00:00
+**Generated:** 2026-04-30T18:55:36.681954+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,25 +21,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 351 |
+| bounded | 350 |
 | support | 274 |
 | open | 20 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 594 |
+| ~~audited_conditional~~ | 595 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 109 |
-| `audited_conditional` | 308 |
+| `audited_conditional` | 309 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1058 |
+| `unaudited` | 1057 |
 
 | criticality | count |
 |---|---:|
@@ -396,6 +396,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_berry_phase_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_brannen_callan_harvey_candidate_note_2026-04-22` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_brannen_geometry_dirac_support_note_2026-04-22` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
+| `koide_brannen_phase_reduction_theorem_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_explicit_calculations_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -4934,6 +4935,21 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`
   - `KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md`
   - `SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`
+- **auditor confidence:** high
+
+### `koide_brannen_phase_reduction_theorem_note_2026-04-20`
+
+- **Note:** [`KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md`](../../docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-james-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Given n_eff = 2 and d = 3, the Brannen normalization gives delta = n_eff/d^2 = Q/d = 2/9.  _(class `A`)_
+- **chain closes:** False — The algebraic reduction is exact, but the note itself says the physical Berry-holonomy value still depends on Q = 2/3 and the residual physical-base radian-bridge postulate P. Therefore the standalone physical derivation of delta = 2/9 does not close.
+- **rationale:** Issue: the proof converts structural ratios into the physical Brannen phase only after importing Q = 2/3 and the residual radian-bridge identification P. Why this blocks: without deriving I1 and P, the runner verifies exact conditional algebra, not a standalone Cl(3)/Z3 derivation of the observed phase. Repair target: derive the equal-sector Koide ratio and the physical-base radian bridge from retained structure, or mark them as explicit assumptions in the dependency ledger. Claim boundary until fixed: n_eff = 2 and d = 3 make delta = Q/d exact once Q and P are supplied.
+- **open / conditional deps cited:**
+  - `KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`
+  - `SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`
 - **auditor confidence:** high
 
 ### `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24`
