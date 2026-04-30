@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T00:48:16.759819+00:00",
-  "generated_at": "2026-04-30T00:48:15.029567+00:00",
-  "invalidation_run_at": "2026-04-30T00:48:16.704418+00:00",
+  "effective_status_computed_at": "2026-04-30T00:48:20.076627+00:00",
+  "generated_at": "2026-04-30T00:48:18.309267+00:00",
+  "invalidation_run_at": "2026-04-30T00:48:20.019540+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T00:48:16.590178+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:48:19.899511+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -15565,7 +15565,7 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_wilson_parent_correctness_audit_note_2026-04-18",
+      "effective_status_reason": "inherited_from:gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 6.992,
@@ -24836,7 +24836,7 @@
       ],
       "direct_in_degree": 3,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
+      "effective_status_reason": "inherited_from:gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 8.241,
@@ -32794,14 +32794,21 @@
       "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=unknown, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the exact flow equation can be used as support/unknown-tier structure; the full susceptibility profile and P(6) remain open."
     },
     "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:48:17.358935+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 15.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The character-recurrence realization closes as a support theorem, but the source row is current_status=support, so the audit lane cannot ratify it as audited_clean.",
       "claim_id": "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -32821,30 +32828,32 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 7,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 15.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The plaquette source is exactly X=(chi_(1,0)+chi_(0,1))/6, and multiplication by X gives the six-neighbor SU(3) dominant-weight character recurrence, making the generating object the spectral measure of an explicit self-adjoint recurrence operator J in the transfer state.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "7e2bca8c11159306b029fa2062d372f39ff5a511fd4f46b249ec4233ee7887a9",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 9,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 9
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py",
       "title": "Gauge-Vacuum Plaquette Transfer-Operator / Character-Recurrence Theorem",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the derivation is presented on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: granting audited_clean would promote a non-proposed support/unknown/open row beyond its declared source boundary and would blur the note's explicit remaining open work. Repair target: if this theorem is intended to be tier-ratified, update the source note to proposed_retained/proposed_promoted with the same claim boundary and run a fresh audit. Claim boundary until fixed: the explicit recurrence operator is support-level structure; beta=6 transfer-state identification remains open."
     },
     "generated_geometry_synthesis_note": {
       "audit_date": null,
