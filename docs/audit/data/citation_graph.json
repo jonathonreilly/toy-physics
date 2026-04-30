@@ -18325,7 +18325,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T13:32:25.433749+00:00",
+  "generated_at": "2026-04-30T13:32:40.539364+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19818,6 +19818,16 @@
       "path": "docs/AXIOM_CHANGE_PROPOSAL_2026-04-10.md",
       "runner_path": null,
       "title": "Axiom Update And Interpretation Change"
+    },
+    "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29": {
+      "claim_id": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support \u2014 branch-local theorem note on A_min; runner passing; audit-pending.",
+      "deps": [],
+      "note_hash": "c0ede1499e224cdc7db5ba20c005122d1023fd6a04c5903f394d9decb0e71c27",
+      "path": "docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/axiom_first_cl3_per_site_uniqueness_check.py",
+      "title": "Axiom-First Per-Site Uniqueness of the Cl(3) Spinor Module"
     },
     "axiom_first_cluster_decomposition_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
@@ -40292,6 +40302,7 @@
     "atomic_rydberg_dependency_firewall_note_2026-04-27",
     "audited_symmetry_synthesis_note",
     "axiom_change_proposal_2026-04-10",
+    "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
     "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
     "axiom_first_lattice_noether_theorem_note_2026-04-29",
@@ -41394,16 +41405,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4581,
-    "leaf_count": 742,
-    "node_count": 1680,
-    "root_count": 1208,
-    "runners_with_path": 764,
+    "leaf_count": 743,
+    "node_count": 1681,
+    "root_count": 1209,
+    "runners_with_path": 765,
     "status_counts": {
       "bounded": 255,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 181,
+      "support": 182,
       "unknown": 795
     }
   }
