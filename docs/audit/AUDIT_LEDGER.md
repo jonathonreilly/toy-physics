@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T11:54:22.775506+00:00
+**Generated:** 2026-04-30T12:14:50.117385+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,8 +33,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 82 |
+| `audited_clean` | 83 |
 | `audited_conditional` | 237 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
@@ -88,7 +87,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 21 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 116 | 15.87 | `audited_conditional` | ~~audited_conditional~~ |
 | 22 | `physical_lattice_necessity_note` | critical | 274 | 15.60 | `audited_conditional` | ~~audited_conditional~~ |
 | 23 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 125 | 15.48 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `site_phase_cube_shift_intertwiner_note` | critical | 281 | 15.14 | `audit_in_progress` | support |
+| 24 | `site_phase_cube_shift_intertwiner_note` | critical | 281 | 15.14 | `audited_clean` | support |
 | 25 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | critical | 124 | 14.97 | `audited_conditional` | ~~audited_conditional~~ |
 
 
@@ -96,7 +95,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `site_phase_cube_shift_intertwiner_note` | support | audit_in_progress | support | - | - | - | - |
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -169,6 +167,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_retardation_lab_prediction_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -5744,6 +5743,18 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 - **load-bearing step:** Static cone shape can mimic the c-dependent causal phase curve exactly, while static scheduling remains near-flat and does not reproduce the curve.  _(class `C`)_
 - **chain closes:** True — The current runner computes the causal, static-cone, and static-schedule curves across three families and shows zero RMSE for the static-cone mimic and nonzero scheduling mismatch.
 - **rationale:** The audited claim is the negative boundary: detector-line phase lag is not a unique causal-propagation discriminator because a static cone-shape field reproduces the same c-dependent curve in this model. The runner reproduces the note's table and the safe read, including exact zero controls and the static-scheduling mismatch. Residual risk is limited to the missing frozen log; the current executable artifact is sufficient for the scoped boundary result.
+- **auditor confidence:** high
+
+### `site_phase_cube_shift_intertwiner_note`
+
+- **Note:** [`SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`](../../docs/SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-crossconfirm-20260430-b`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Phi^dagger P_mu Phi = S_mu, with P_mu |X_alpha> = |X_(alpha xor e_mu)> on the BZ-corner subspace.  _(class `A`)_
+- **chain closes:** True — The note has no one-hop dependencies and the runner directly checks the finite Fourier/BZ-corner intertwiner identities. The safe boundary is narrow: it proves the exact taste-cube/BZ-corner operator bridge, not physical generation identification.
+- **rationale:** The load-bearing step is a finite-dimensional algebra/Fourier intertwiner, and the runner checks the bit-flip law, pulled-back operators, and joint eigensystem transfer without importing a physical-generation claim. Residual risk is limited to downstream over-reading: this clean result only covers the restricted C^8/BZ-corner bridge stated in the note.
 - **auditor confidence:** high
 
 ### `sixth_family_distance_law_third_vs_sixth_quick_note`

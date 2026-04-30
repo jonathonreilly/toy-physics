@@ -90,9 +90,14 @@ pre-audit bare `retained` is read as `proposed_retained` until audited.
 
 1. **`retained` is audit-only.** No author may directly write `retained` as
    `current_status`. The strongest author-settable state is
-   `proposed_retained`. Only the audit lane may grant `effective_status =
-   retained`, and only when this row's `audit_status = audited_clean` AND
-   every dependency's `effective_status = retained`.
+   `proposed_retained`. `audit_status = audited_clean` records the audit
+   verdict on the chain as written, regardless of author tier. Only proposed
+   rows can promote publication-facing status: the audit lane may grant
+   `effective_status = retained` only when this row's `current_status =
+   proposed_retained`, this row's `audit_status = audited_clean`, and every
+   dependency's `effective_status = retained`. A clean `support`, `bounded`,
+   `open`, or `unknown` row keeps that effective tier unless an author later
+   re-tiers the source note.
 
 2. **Inheritance is monotone-down.** A claim's `effective_status` cannot
    exceed the minimum of its dependencies' `effective_status`. One renaming
