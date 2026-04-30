@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-11  
 **Script:** `frontier_weak_coupling_battery.py`  
-**Status:** exploratory positive, not blocker closure
+**Status:** open - exploratory positive, not blocker closure
 
 ## Question
 

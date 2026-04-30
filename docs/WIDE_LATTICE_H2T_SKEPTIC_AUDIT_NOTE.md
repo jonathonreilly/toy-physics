@@ -1,8 +1,7 @@
 # Wide-Lattice `h^2+T` Skeptic Audit Note
 
 **Date:** 2026-04-06  
-**Status:** retainability audit of the most promotion-worthy wide-lattice
-distance-law replay
+**Status:** bounded - finite-lattice distance-law replay; not universal distance-law closure
 
 ## Audited Target
 

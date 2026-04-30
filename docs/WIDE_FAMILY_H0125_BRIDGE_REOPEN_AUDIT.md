@@ -1,8 +1,7 @@
 # Wide-Family `h = 0.125` Bridge Reopen Audit
 
 **Date:** 2026-04-06  
-**Status:** the current fixed bridge family and the first genuinely wider
-`phys_w = 4` family both resolve as bounded negatives for weak-field closure
+**Status:** bounded - current fixed bridge family and first wider `phys_w = 4` family both resolve as bounded negatives for weak-field closure
 
 This note is a narrow audit of the Claude-side claim that the wider fixed
 family behind the 3D dense `1/L^2 + h^2` lane can still complete the `h =

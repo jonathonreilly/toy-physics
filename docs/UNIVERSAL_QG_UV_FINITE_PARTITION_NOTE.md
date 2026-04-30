@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / UV-finiteness step
+**Status:** support - UV-finite partition-density bridge on the discrete route
 
 ## Verdict
 

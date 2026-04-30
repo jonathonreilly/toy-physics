@@ -1,9 +1,7 @@
 # Gauge-Vacuum Plaquette Susceptibility-Flow Theorem
 
 **Date:** 2026-04-16
-**Status:** exact nonperturbative flow theorem for the implicit plaquette
-reduction law on finite Wilson evaluation surfaces; explicit closure at
-`beta = 6` still open
+**Status:** support - exact nonperturbative flow theorem for the implicit plaquette reduction law on finite Wilson evaluation surfaces; explicit closure at `beta = 6` still open
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`
 
 ## Question

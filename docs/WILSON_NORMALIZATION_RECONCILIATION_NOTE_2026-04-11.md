@@ -1,7 +1,7 @@
 # Wilson Normalization / Comparison Reconciliation
 
 **Date:** 2026-04-11  
-**Status:** methodological control note  
+**Status:** support - methodological control note
 **Scope:** late-2026-04-11 Wilson Newton-strengthening batch
 
 ## Purpose

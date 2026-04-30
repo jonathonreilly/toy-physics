@@ -1,5 +1,7 @@
 # 3+1D Coupled-Coin Scan Note
 
+**Status:** open - exploratory scan; coupling helps but no clean 3+1D transport law yet
+
 This note records the first scan of a 3+1D chiral family that interpolates
 between the current factorized `2x2 ⊕ 2x2 ⊕ 2x2` coin and a fully coupled
 `6x6` unitary family.

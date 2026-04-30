@@ -1,10 +1,7 @@
 # Gauge-Vacuum Plaquette Perron/Jacobi Underdetermination
 
 **Date:** 2026-04-17
-**Status:** exact obstruction theorem inside the now-explicit factorized
-source-sector transfer class; after the normalized mixed-kernel part is fixed
-to the exact local Wilson marked-link factor, explicit `beta = 6` Perron /
-Jacobi data are still not forced
+**Status:** support - exact obstruction theorem inside the factorized source-sector transfer class; explicit `beta = 6` Perron / Jacobi data are still not forced
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`
 
 ## Question
