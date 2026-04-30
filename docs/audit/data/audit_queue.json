@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 41,
-    "high": 260,
+    "high": 259,
     "leaf": 608,
     "medium": 340
   },
-  "generated_at": "2026-04-30T02:48:10.807488+00:00",
+  "generated_at": "2026-04-30T02:49:04.561286+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1165,25 +1165,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 31
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_full_lattice_schur_inheritance_note_2026-04-18",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [
-        "site_phase_cube_shift_intertwiner_note"
-      ],
-      "direct_in_degree": 6,
-      "load_bearing_score": 9.087,
-      "note_path": "docs/KOIDE_FULL_LATTICE_SCHUR_INHERITANCE_NOTE_2026-04-18.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_full_lattice_schur_inheritance.py",
-      "transitive_descendants": 67
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -26163,6 +26144,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 807,
-  "total_pending": 1249
+  "ready_count": 806,
+  "total_pending": 1248
 }
