@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:10:16.410228+00:00
+**Generated:** 2026-04-30T03:11:06.239315+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,26 +21,26 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
-| bounded | 200 |
+| bounded | 199 |
 | support | 100 |
 | open | 24 |
 | unknown | 498 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 403 |
+| ~~audited_conditional~~ | 404 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 185 |
+| `audited_conditional` | 186 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1231 |
+| `unaudited` | 1230 |
 
 | criticality | count |
 |---|---:|
@@ -249,6 +249,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graph_first_selector_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `graviton_mass_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `gravity_sign_audit_2026-04-10` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `growing_graph_frontier_architecture_transfer_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `grown_wavefield_failure_diagnosis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -2422,6 +2423,24 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** Issue: `scripts/gravitomagnetic_portability.py` is a static report renderer with hard-coded delta(+v), delta(-v), odd-component, and residual values; it does not construct the three grown families, run zero/static controls, or propagate the signed moving-source observable. Why this blocks: the headline portability claim depends on exactly those computed rows, especially the third family that is not covered by the two clean dependencies, so the runner cannot distinguish a real portability result from copied constants. Repair target: replace the renderer with an executable probe that builds all three drift/restore families, recomputes exact zero and v=0 controls, runs +v/-v moving-source propagation, and derives the odd/residual table from live amplitudes. Claim boundary until fixed: the clean dependencies support only their own bounded signed-response results; this note may be treated as a static summary of alleged values, not as an audited three-family gravitomagnetic portability positive.
 - **open / conditional deps cited:**
   - `scripts/gravitomagnetic_portability.py`
+- **auditor confidence:** high
+
+### `graviton_mass_derived_note`
+
+- **Note:** [`GRAVITON_MASS_DERIVED_NOTE.md`](../../docs/GRAVITON_MASS_DERIVED_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Given an S3 radius R=c/H0 and the standard TT Lichnerowicz spectrum, the runner computes lambda_2^TT=6/R^2 and therefore m_g=sqrt(6) hbar H0/c^2=3.52e-33 eV, with Higuchi, Compton-range, observational-bound, and Lambda-relation checks passing.  _(class `B`)_
+- **chain closes:** False — The mass formula closes only as a bounded companion result: S3 topology, R=c/H0, the TT spectrum, and the no-vDVZ/topological-mass interpretation are supplied inputs rather than fully derived one-hop dependencies.
+- **rationale:** Issue: the runner verifies the advertised arithmetic and bound checks, but the theorem depends on unregistered upstream topology/cosmology and spin-2 spectral assumptions. Why this blocks: m_g is exact only after accepting S3, R=c/H0 from observed H0, the Lichnerowicz TT eigenvalue formula, and the qualitative claim that the effective compact-topology gap is not a Fierz-Pauli mass. Repair target: register audited dependencies for S3 topology, cosmology scale identification, TT spectrum authority, and a sharper vDVZ/topological-mass argument if promoted. Claim boundary until fixed: bounded conditional graviton-mass companion prediction, not an internally retained graviton-mass derivation.
+- **open / conditional deps cited:**
+  - `S3 topology closure`
+  - `R=c/H0 cosmology scale identification`
+  - `Lichnerowicz TT spectrum on S3`
+  - `topological mass/no-vDVZ interpretation`
+  - `observed H0`
 - **auditor confidence:** high
 
 ### `gravity_sign_audit_2026-04-10`
