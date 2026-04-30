@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:48:34.210823+00:00
+**Generated:** 2026-04-30T22:50:11.734066+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,25 +20,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 83 |
-| _proposed_retained_ | 2 |
+| _proposed_retained_ | 1 |
 | bounded | 276 |
 | support | 241 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 747 |
+| ~~audited_conditional~~ | 748 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 219 |
-| `audited_conditional` | 474 |
+| `audited_conditional` | 475 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 777 |
+| `unaudited` | 776 |
 
 | criticality | count |
 |---|---:|
@@ -584,6 +584,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `graviton_mass_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `gravity_clean_derivation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | E | - |
+| `gravity_full_self_consistency_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gravity_observable_hierarchy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gravity_reviewer_derivation_summary_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gravity_sign_audit_2026-04-10` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -6837,6 +6838,20 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `weak_field_action_test_mass_response_not_registered`
   - `lattice_green_function_normalization_runner_not_registered`
   - `scripts/frontier_gravity_clean_derivation.py_not_registered_primary_runner`
+- **auditor confidence:** high
+
+### `gravity_full_self_consistency_note`
+
+- **Note:** [`GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`](../../docs/GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-38`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The framework's self-consistency closure condition requires L^{-1} = G_0, which determines L = G_0^{-1} = H = -Delta_lat (Poisson).  _(class `A`)_
+- **chain closes:** False — The operator inversion L = G_0^{-1} = H is exact once the closure condition L^{-1}=G_0 is assumed, and the runner checks that algebra and sparsity. The audit packet does not derive that physical self-consistency condition from Cl(3) on Z^3 or an audited retained authority, so the proposed-retained conclusion remains conditional on that premise.
+- **rationale:** Issue: the decisive step is the unratified physical closure condition L^{-1}=G_0; the note itself says this is not a theorem of pure algebra, while no audited authority derives it from the framework axiom. Why this blocks: the runner verifies the exact inversion/sparsity consequences after that condition is imposed, but it cannot turn the condition into a retained theorem. Repair target: supply and audit a theorem deriving the field Green's function equals the propagator Green's function from Cl(3) on Z^3, and register/classify the primary runner. Claim boundary until fixed: safe as an exact conditional Poisson-forcing theorem given L^{-1}=G_0, not as unconditional full-framework closure.
+- **open / conditional deps cited:**
+  - `unratified_self_consistency_closure_condition:L^{-1}=G_0`
 - **auditor confidence:** high
 
 ### `gravity_law_cleanup_note`
