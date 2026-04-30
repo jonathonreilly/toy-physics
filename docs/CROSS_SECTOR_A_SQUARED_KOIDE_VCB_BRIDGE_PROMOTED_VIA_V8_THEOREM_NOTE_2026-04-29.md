@@ -1,17 +1,19 @@
-# Cross-Sector A²-Q_l-|V_cb| Bridge Promoted via V8 Theorem (V1)
+# Cross-Sector A²-Q_l-|V_cb| Bridge Support via V8 Composition (V1)
 
 **Date:** 2026-04-29
-**Status (actual current surface):** `proposed_retained` author proposal
-lifting the cross-sector A²-Q_l-|V_cb| bridge from "conditional support
-on Q_l = 2/3 charged-lepton target" (CROSS_SECTOR_A_SQUARED_KOIDE_VCB_BRIDGE_SUPPORT_NOTE_2026-04-25)
-to a structural identity on the A_min surface, by composing V8
-(Block 1, Koide Q closure) with the retained CKM atlas. Bare
-`retained` / `promoted` is NOT used.
+**Status:** support: cross-sector identity Q_l × α_s(v)² = 4|V_cb|² composition, conditional on V8 (Block 1) ratification.
+This note records the cross-sector A²-Q_l-|V_cb| bridge from
+"conditional support on Q_l = 2/3 charged-lepton target"
+(CROSS_SECTOR_A_SQUARED_KOIDE_VCB_BRIDGE_SUPPORT_NOTE_2026-04-25)
+as a support-tier structural identity on the A_min surface, by composing
+V8 (Block 1, Koide Q closure attempt) with the retained CKM atlas.
+Stronger headline tier language is NOT used.
 **Primary runner:** `scripts/frontier_cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8.py`
 
 **Cited authorities (one-hop deps):**
 - [KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md](KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md)
-  — V8 (Block 1, `proposed_retained` Q_l = 2/3 closure); load-bearing
+  — V8 (Block 1, support/audit-pending Q_l = 2/3 closure attempt);
+  load-bearing
   input.
 - [CROSS_SECTOR_A_SQUARED_KOIDE_VCB_BRIDGE_SUPPORT_NOTE_2026-04-25.md](CROSS_SECTOR_A_SQUARED_KOIDE_VCB_BRIDGE_SUPPORT_NOTE_2026-04-25.md)
   — original conditional bridge identity `Q_l × α_s(v)² = 4 |V_cb|²`.
@@ -37,11 +39,12 @@ charged-lepton Koide closure. CROSS_SECTOR_A_SQUARED_KOIDE_VCB_BRIDGE_SUPPORT
 (2026-04-25) recorded it as a conditional support corollary on the
 "Q_l = 2/3" lepton target.
 
-Block 1 (V8, 2026-04-29) closed Q_l = 2/3 as `proposed_retained` on the
-A_min surface via the OP-locality structural argument.
+Block 1 (V8, 2026-04-29) now records Q_l = 2/3 as support on the
+A_min surface via the OP-locality structural argument, audit pending.
 
-This V1 note composes the two: the cross-sector identity becomes a
-structural retained corollary on A_min modulo audit ratification of V8.
+This V1 note composes the two: the cross-sector identity is recorded as
+a support-tier structural composition on A_min modulo audit ratification
+of V8.
 
 ---
 
@@ -62,7 +65,7 @@ These are retained on `main` and use no observed quark mass.
 
 ### 1.2 V8 (Block 1, 2026-04-29) closure
 
-V8 closes Q_l = 2/3 as `proposed_retained` on A_min.
+V8 records Q_l = 2/3 as support on A_min, audit pending.
 
 ### 1.3 Composition
 
@@ -85,8 +88,8 @@ structural cross-sector constraint linking:
 - gauge-vacuum α_s(v) (retained ALPHA_S_DERIVED_NOTE)
 - CKM third-row |V_cb| (retained CKM_THIRD_ROW_MAGNITUDES_THEOREM)
 
-It is a structural framework prediction relating three retained quantities
-across three sectors.
+It is a structural framework prediction relating three registered
+quantities across three sectors.
 
 ---
 
@@ -117,13 +120,12 @@ The agreement is structural, not coincidental: both routes use the
 retained `A² = 2/3 = Q_l` identity (the V8 closure of Q_l = 2/3
 matches the retained CKM atlas A²-value structurally).
 
-**Status:** `proposed_retained` on the A_min surface modulo V8 audit
-ratification.
+**Status:** support on the A_min surface modulo V8 audit ratification.
 
 ### Proof
 
 **Step 1 (V8 Q_l closure).** By V8 (Block 1, 2026-04-29), `Q_l = 2/3`
-is `proposed_retained` on A_min via the OP-locality structural chain.
+is recorded as support on A_min via the OP-locality structural chain.
 
 **Step 2 (CKM atlas A²).** By WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM,
 `A² = N_pair/N_color = 2/3` is retained on the CKM atlas surface.
@@ -146,17 +148,18 @@ Rearranging: `Q_l × α_s(v)² = 4 |V_cb|²`. **QED.**
 ## 3. Status firewall fields
 
 ```yaml
-actual_current_surface_status: proposed_retained
+actual_current_surface_status: support
 conditional_surface_status: null
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: true
 proposal_allowed_reason: |
-  Composes V8 (Block 1 proposed_retained Q_l closure) with retained
-  CKM atlas to give a cross-sector structural identity. No new axiom,
-  no observed mass, no fitted CKM value. The cross-sector matching
-  Q_l = A² = 2/3 between V8 and CKM atlas is structural, not
-  coincidental.
+  Composes V8 (Block 1 support/audit-pending Q_l closure attempt) with
+  retained CKM atlas to give a cross-sector structural identity. No new
+  axiom, no observed mass, no fitted CKM value. The cross-sector
+  matching Q_l = A² = 2/3 between V8 and CKM atlas is structural, not
+  coincidental. The surface remains support until V8 and this
+  composition are independently ratified.
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 five_sixths_mechanism_status: bounded  # NOT closed by V1
@@ -167,10 +170,10 @@ common_scale_15_percent_gap_status: bounded  # NOT closed by V1
 
 ## 4. What is and is NOT closed
 
-### Closed by V1 (this note)
+### Support-tier composition recorded by V1 (this note)
 
 1. structural cross-sector identity `Q_l × α_s(v)² = 4 |V_cb|²` on A_min
-   (proposed_retained, modulo V8 audit);
+   (support, modulo V8 audit);
 2. dual-route derivation of `|V_cb| = α_s(v)/√6`: direct CKM atlas +
    V8-Koide cross-sector;
 3. structural matching `Q_l = A² = 2/3` between lepton (V8) and CKM
@@ -203,30 +206,24 @@ group-theoretic data + cyclic Z_3 structure. V1 makes this matching a
 load-bearing structural fact rather than an observation.
 
 **P2 (whether the bridge "closes" the quark mass-ratio lane).** No.
-V1 closes the cross-sector identity but does NOT close the 5/6
-mechanism or the +15% gap. The quark mass-ratio lane remains bounded;
-V1 only retires the conditional flag on the cross-sector identity.
+V1 records support for the cross-sector identity but does NOT close the
+5/6 mechanism or the +15% gap. The quark mass-ratio lane remains
+bounded; V1 only records a support-tier composition for the
+cross-sector identity.
 
-**P3 (rebased on Block 1).** This PR is stacked on Block 1
-(`physics-loop/axiom-to-main-lane-cascade-20260429-block01-20260429`,
-PR #183). Block 1's audit ratification is a prerequisite for V1's
-retained status.
+**P3 (rebased on Block 1).** This PR depends on merged Block 1
+(PR #183), whose V8 note is current on main as support/audit-pending.
+Block 1's audit ratification is a prerequisite for V1's stronger
+status.
 
 ---
 
-## 5. Cascade unlocked (proposed for later weaving)
+## 5. Integration boundary
 
-If V1 is audit-ratified (depends on Block 1 V8 audit first):
-
-- **line 157 (cross-sector Koide/CKM V_cb bridge support):** lift from
-  conditional support to retained corollary.
-- **line 158 (CKM Bernoulli 2/9 Koide-bridge support):** Q half landed
-  via Block 1+2; the cross-sector A²-identity adds a second route.
-- **line 159, 160, 161, 162 (CKM n/9 / cubic / Egyptian-fraction /
-  consecutive-primes / S_3 Koide-bridge supports):** all benefit from
-  the V8 + cross-sector A² landing.
-
-Repo-wide weaving deferred per skill.
+This support-tier note does not change downstream publication rows. Any
+later weaving must wait for independent audit ratification of V8 and
+this composition, and must continue to respect the bounded five-sixths
+mechanism and common-scale gap fields.
 
 ---
 
@@ -256,7 +253,7 @@ python3 scripts/frontier_cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8
 
 The runner audits:
 
-1. V8 (Block 1) note exists with proposed_retained + audit-required flag.
+1. V8 (Block 1) note exists with support status + audit-required flag.
 2. CROSS_SECTOR support note (2026-04-25) exists on disk.
 3. Retained CKM atlas: A² = 2/3, λ² = α_s(v)/2, |V_cb|² = α_s(v)²/6.
 4. Retained ALPHA_S_DERIVED.
@@ -274,7 +271,7 @@ Expected: PASS=N, FAIL=0.
 
 ## 8. Honest residual
 
-After V1 lands as `proposed_retained` (composed with V8):
+After V1 lands as support (composed with V8):
 
 - **5/6 mechanism:** bounded; needs non-perturbative exponentiation
   theorem.
@@ -284,7 +281,8 @@ After V1 lands as `proposed_retained` (composed with V8):
 - **Absolute scale m_b, y_b:** open.
 - **Down-type GST identity** as retained theorem: unchanged.
 
-The cross-sector identity itself is now structurally on A_min.
+The cross-sector identity itself is now support-tier structural evidence
+on A_min.
 
 ---
 
@@ -292,12 +290,11 @@ The cross-sector identity itself is now structurally on A_min.
 
 | Element | CROSS_SECTOR support (2026-04-25) | This V1 (2026-04-29) |
 |---|---|---|
-| Q_l × α_s(v)² = 4 |V_cb|² | conditional on Q_l = 2/3 target | proposed_retained via V8 |
-| Q_l source | open Koide support target | V8 (Block 1) closure |
+| Q_l × α_s(v)² = 4 |V_cb|² | conditional on Q_l = 2/3 target | support via V8 |
+| Q_l source | open Koide support target | V8 (Block 1) support/audit-pending closure attempt |
 | |V_cb| route count | 1 (CKM atlas only) | 2 (CKM atlas + V8 cross-sector) |
 | Q_l = A² matching | not yet structural | structural (both 2/3 from N_pair/N_color) |
-| Status | conditional support | proposed_retained |
+| Status | conditional support | support |
 | Audit required | yes (open Q) | yes (V8 audit pending) |
 
-V1 supersedes the conditional flag on the cross-sector identity by
-composing with V8.
+V1 records the support-tier cross-sector identity by composing with V8.

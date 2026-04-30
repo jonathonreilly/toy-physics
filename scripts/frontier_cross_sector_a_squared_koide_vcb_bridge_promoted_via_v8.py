@@ -1,7 +1,8 @@
-"""Runner: cross-sector A²-Q_l-|V_cb| bridge promoted via V8 (Block 3).
+"""Runner: cross-sector A²-Q_l-|V_cb| bridge support via V8 (Block 3).
 
 Audits the chain composing V8 (Block 1) with retained CKM atlas to give
-a structural cross-sector identity Q_l × α_s(v)² = 4 |V_cb|² on A_min.
+a support-tier structural cross-sector identity Q_l × α_s(v)² =
+4 |V_cb|² on A_min.
 """
 
 from __future__ import annotations
@@ -35,7 +36,7 @@ def read_doc(path_rel: str) -> str:
 
 def main() -> int:
     print("=" * 72)
-    print("Cross-Sector A²-Q_l-|V_cb| Bridge Promoted via V8 (Block 3) audit")
+    print("Cross-Sector A²-Q_l-|V_cb| Bridge Support via V8 (Block 3) audit")
     print("=" * 72)
 
     # ---- Section 1: V8 (Block 1) prerequisite -----------------------------
@@ -53,12 +54,12 @@ def main() -> int:
         "block 1 closure note found",
     )
     audit(
-        "V8 carries proposed_retained status",
-        "actual_current_surface_status: proposed_retained" in v8_text,
-        "V8 firewall: proposed_retained",
+        "V8 carries support status",
+        "actual_current_surface_status: support" in v8_text,
+        "V8 firewall: support",
     )
     audit(
-        "V8 closes Q_l = 2/3 on A_min",
+        "V8 records Q_l = 2/3 on A_min",
         ("Q = 2/3" in v8_text and "A_min" in v8_text),
         "V8 §2 theorem statement (Q_l in framework notation)",
     )
@@ -191,8 +192,8 @@ def main() -> int:
         "CROSS_SECTOR_A_SQUARED_KOIDE_VCB_BRIDGE_PROMOTED_VIA_V8_THEOREM_NOTE_2026-04-29.md"
     )
     audit(
-        "V1 carries actual_current_surface_status: proposed_retained",
-        "actual_current_surface_status: proposed_retained" in own_text,
+        "V1 carries actual_current_surface_status: support",
+        "actual_current_surface_status: support" in own_text,
         "V1 firewall",
     )
     audit(
@@ -241,21 +242,21 @@ def main() -> int:
     fail_count = len(AUDIT_FAILS)
     print(f"FAIL count: {fail_count}")
 
-    CROSS_SECTOR_BRIDGE_PROPOSED_RETAINED_CHAIN_VERIFIED = (
+    CROSS_SECTOR_BRIDGE_SUPPORT_COMPOSITION_VERIFIED = (
         fail_count == 0
         and Q_l == A_sq
         and np.isclose(lhs_num, rhs_num)
     )
     print(
-        f"CROSS_SECTOR_BRIDGE_PROPOSED_RETAINED_CHAIN_VERIFIED = "
-        f"{CROSS_SECTOR_BRIDGE_PROPOSED_RETAINED_CHAIN_VERIFIED}"
+        f"CROSS_SECTOR_BRIDGE_SUPPORT_COMPOSITION_VERIFIED = "
+        f"{CROSS_SECTOR_BRIDGE_SUPPORT_COMPOSITION_VERIFIED}"
     )
     print("FIVE_SIXTHS_MECHANISM_STATUS = bounded  # NOT closed by V1")
     print("COMMON_SCALE_15_PERCENT_GAP_STATUS = bounded  # NOT closed by V1")
     print(
         "(This flag verifies the V1 cross-sector chain authorities + "
         "algebraic identities. Independent audit required before the "
-        "repo treats this as effective retained.)"
+        "repo treats this as any stronger tier.)"
     )
 
     if fail_count == 0:
