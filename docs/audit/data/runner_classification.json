@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T19:36:22.773387+00:00",
+  "generated_at": "2026-04-30T19:57:57.414828+00:00",
   "per_claim": {
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "assert_count": 0,
@@ -9948,6 +9948,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/frontier_planck_parent_source_hidden_character_nogo.py"
+    },
+    "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 5,
+        "B": 0,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py"
     },
     "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25": {
       "assert_count": 1,
@@ -24427,6 +24439,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py": {
+      "assert_count": 1,
+      "claims": [
+        "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 5,
+        "B": 0,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_planck_primitive_coframe_boundary_carrier.py": {
       "assert_count": 1,
       "claims": [
@@ -31284,12 +31311,12 @@
     "dominant_class_distribution": {
       "A": 7,
       "B": 118,
-      "C": 431,
+      "C": 432,
       "D": 180,
       "none": 391
     },
-    "runners_classified": 1127,
-    "runners_with_C": 518,
+    "runners_classified": 1128,
+    "runners_with_C": 519,
     "runners_with_D": 278
   }
 }

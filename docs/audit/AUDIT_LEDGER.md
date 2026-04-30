@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:36:23.400760+00:00
+**Generated:** 2026-04-30T19:57:10.241555+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -27,33 +27,33 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 740 |
+| ~~audited_conditional~~ | 741 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 198 |
-| `audited_conditional` | 464 |
+| `audited_conditional` | 461 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 812 |
+| `unaudited` | 816 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 73 |
-| `high` | 335 |
+| `critical` | 76 |
+| `high` | 333 |
 | `medium` | 381 |
 | `leaf` | 769 |
 
-- **Proposed claims demoted by upstream:** 129
+- **Proposed claims demoted by upstream:** 133
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1127
-- runners with (C) first-principles compute hits: 518
+- runners classified: 1128
+- runners with (C) first-principles compute hits: 519
 - runners with (D) external comparator hits: 278
 - decoration candidates (no C, no D): 81
 
@@ -63,30 +63,30 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | criticality | desc | score | audit_status | effective |
 |---:|---|---|---:|---:|---|---|
-| 1 | `alpha_s_derived_note` | critical | 243 | 29.43 | `audited_conditional` | ~~audited_conditional~~ |
+| 1 | `alpha_s_derived_note` | critical | 255 | 29.50 | `audited_conditional` | ~~audited_conditional~~ |
 | 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 28.86 | `audited_conditional` | ~~audited_conditional~~ |
 | 3 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 28.84 | `audited_conditional` | ~~audited_conditional~~ |
-| 4 | `graph_first_su3_integration_note` | critical | 293 | 27.70 | `audited_clean` | **retained** |
-| 5 | `yt_ward_identity_derivation_theorem` | critical | 291 | 27.69 | `audited_renaming` | ~~audited_renaming~~ |
-| 6 | `observable_principle_from_axiom_note` | critical | 234 | 26.38 | `audited_conditional` | ~~audited_conditional~~ |
+| 4 | `graph_first_su3_integration_note` | critical | 300 | 28.23 | `audited_clean` | **retained** |
+| 5 | `yt_ward_identity_derivation_theorem` | critical | 298 | 27.72 | `audited_renaming` | ~~audited_renaming~~ |
+| 6 | `observable_principle_from_axiom_note` | critical | 246 | 26.45 | `audited_conditional` | ~~audited_conditional~~ |
 | 7 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 101 | 23.67 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `yt_ew_color_projection_theorem` | critical | 113 | 22.33 | `audited_conditional` | ~~audited_conditional~~ |
-| 9 | `three_generation_observable_theorem_note` | critical | 282 | 21.64 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `three_generation_structure_note` | critical | 250 | 20.97 | `audited_conditional` | ~~audited_conditional~~ |
+| 8 | `yt_ew_color_projection_theorem` | critical | 125 | 22.48 | `audited_conditional` | ~~audited_conditional~~ |
+| 9 | `three_generation_observable_theorem_note` | critical | 289 | 21.68 | `audited_conditional` | ~~audited_conditional~~ |
+| 10 | `three_generation_structure_note` | critical | 263 | 21.04 | `audited_conditional` | ~~audited_conditional~~ |
 | 11 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 20.83 | `audited_conditional` | ~~audited_conditional~~ |
 | 12 | `one_generation_matter_closure_note` | critical | 244 | 20.44 | `audited_conditional` | ~~audited_conditional~~ |
 | 13 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 93 | 19.55 | `audited_conditional` | ~~audited_conditional~~ |
 | 14 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 42 | 18.43 | `audited_clean` | **retained** |
-| 15 | `minimal_axioms_2026-04-11` | critical | 106 | 17.74 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `left_handed_charge_matching_note` | critical | 251 | 17.48 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `anomaly_forces_time_theorem` | critical | 247 | 17.45 | `audited_conditional` | ~~audited_conditional~~ |
+| 15 | `minimal_axioms_2026-04-11` | critical | 118 | 18.39 | `audited_conditional` | ~~audited_conditional~~ |
+| 16 | `anomaly_forces_time_theorem` | critical | 260 | 18.03 | `audited_conditional` | ~~audited_conditional~~ |
+| 17 | `left_handed_charge_matching_note` | critical | 264 | 17.55 | `audited_conditional` | ~~audited_conditional~~ |
 | 18 | `ckm_atlas_axiom_closure_note` | critical | 74 | 17.23 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `native_gauge_closure_note` | critical | 289 | 16.68 | `audited_conditional` | ~~audited_conditional~~ |
+| 19 | `native_gauge_closure_note` | critical | 296 | 17.21 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 120 | 16.42 | `audited_conditional` | ~~audited_conditional~~ |
-| 21 | `plaquette_self_consistency_note` | critical | 294 | 16.20 | `audited_conditional` | ~~audited_conditional~~ |
-| 22 | `physical_lattice_necessity_note` | critical | 278 | 15.62 | `audited_conditional` | ~~audited_conditional~~ |
+| 21 | `plaquette_self_consistency_note` | critical | 301 | 16.24 | `audited_conditional` | ~~audited_conditional~~ |
+| 22 | `physical_lattice_necessity_note` | critical | 285 | 15.66 | `audited_conditional` | ~~audited_conditional~~ |
 | 23 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 127 | 15.50 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `site_phase_cube_shift_intertwiner_note` | critical | 285 | 15.16 | `audited_clean` | support |
+| 24 | `site_phase_cube_shift_intertwiner_note` | critical | 292 | 15.20 | `audited_clean` | support |
 | 25 | `cosmological_constant_spectral_gap_identity_theorem_note` | critical | 48 | 15.12 | `audited_conditional` | ~~audited_conditional~~ |
 
 
@@ -310,7 +310,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alternative_coupled_field_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `anomaly_forces_time_theorem` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `architecture_portability_sweep_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `area_law_native_car_semantics_tightening_note_2026-04-25` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `asymmetry_persistence_born_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `asymmetry_persistence_collapse_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -681,14 +680,12 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
-| `planck_target3_clifford_phase_bridge_theorem_note_2026-04-25` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `plaquette_self_consistency_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
 | `poisson_3d_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `poisson_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `propagator_family_unification_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `publication.ci3_z3.publication_matrix` | unknown | ~~audited_conditional~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | B | - |
 | `quantum_horizon_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -1181,23 +1178,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
-- **auditor confidence:** high
-
-### `area_law_native_car_semantics_tightening_note_2026-04-25`
-
-- **Note:** [`AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md`](../../docs/AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md)
-- **current_status:** unknown
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** Assuming the rank-four primitive active block carries an irreducible local Clifford-Majorana edge response, the runner constructs two CAR annihilators, four Majoranas, the full M_4(C) Clifford algebra, parity, and the 2/12+1/12 Widom coefficient, while also showing a rank-four commuting two-qubit semantics is not CAR.  _(class `B`)_
-- **chain closes:** False — The note precisely identifies the residual Target 2 statistics premise and checks its CAR consequences, but it does not derive the Clifford-Majorana edge response from rank four, locality, additivity, or bare Hilbert-flow semantics.
-- **rationale:** Issue: the tightening theorem is valid as a conditional equivalence, not a standalone area-law closure. Why this blocks: the load-bearing assumption is exactly the local irreducible Clifford-Majorana/CAR edge-statistics principle; the runner explicitly demonstrates that rank four alone also admits non-CAR two-qubit semantics. Repair target: audit or derive the primitive coframe/edge-statistics forcing theorem and register the primitive-CAR edge and parity-gate carrier dependencies. Claim boundary until fixed: exact reduction of the residual Target 2 premise to native Clifford-Majorana/CAR edge response, not a derivation of that response from the retained Hilbert-only surface.
-- **open / conditional deps cited:**
-  - `local irreducible Clifford-Majorana/CAR edge-statistics principle on P_A H_cell`
-  - `primitive metric-compatible coframe response forcing theorem`
-  - `area_law_primitive_car_edge_identification_theorem_note_2026-04-25`
-  - `area_law_primitive_parity_gate_carrier_theorem_note_2026-04-25`
 - **auditor confidence:** high
 
 ### `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25`
@@ -9356,23 +9336,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `conventional_lP_squared_equals_Gphys_target_definition_external_not_a_CL3_derivation`
 - **auditor confidence:** high
 
-### `planck_target3_clifford_phase_bridge_theorem_note_2026-04-25`
-
-- **Note:** [`PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`](../../docs/PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md)
-- **current_status:** unknown
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** Under the explicit primitive metric-compatible Clifford/coframe response premise on the rank-four active block, the runner constructs Cl_4 generators, verifies irreducibility and CAR equivalence, excludes non-CAR rank-four readings by the coframe law, and checks c_Widom=c_cell=1/4 with source-unit natural-unit normalization.  _(class `B`)_
-- **chain closes:** False — The bridge closes the CAR/1/4 coefficient only on the stated coframe-response surface; it does not derive that coframe response from the retained Cl(3)/Z^3 input, does not independently close the primitive-CAR edge theorem or source-unit normalization, and does not derive an SI value of hbar.
-- **rationale:** Issue: the note is a correct conditional bridge, but its decisive metric-compatible active coframe response is an explicit premise rather than an audited derived consequence. Why this blocks: without that premise the earlier Hilbert-only rank-four ambiguity remains, while the Planck-unit conclusions also import primitive-CAR edge and source-unit normalization support. Repair target: audit or derive the active-block coframe-response forcing theorem, register the primitive-CAR edge and source-unit normalization dependencies, and keep SI hbar/metrology wording out of the structural claim. Claim boundary until fixed: conditional Target 3 Clifford/CAR bridge with c_Widom=c_cell=1/4 and natural-unit G_lat=a/l_P=1, not standalone Target 3 or SI hbar closure.
-- **open / conditional deps cited:**
-  - `primitive metric-compatible Clifford/coframe response on P_A H_cell`
-  - `primitive-CAR edge identification theorem`
-  - `source-unit normalization theorem`
-  - `Target 3 Hilbert-only boundary theorem remains the fallback without the coframe premise`
-- **auditor confidence:** high
-
 ### `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25`
 
 - **Note:** [`PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`](../../docs/PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md)
@@ -9540,239 +9503,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: The unification note imports SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE as a retained wavefield authority, but that source row is still unaudited while the synthesis has no runner or ledger-derived table. Why this blocks: the common-propagator taxonomy may be plausible, but a retained unification claim cannot depend on an unaudited load-bearing lane. Repair target: audit or repair the source-resolved wavefield mechanism note, then rebuild this synthesis from audit_ledger effective_status or add a small runner/table that only includes audit-clean lanes. Claim boundary until fixed: it is safe to say the already clean complex-action and electrostatics lanes share a fixed-propagator/scalar-coupling pattern, and that the source-resolved wavefield lane is a candidate member; it is not safe to retain the full three-lane propagator-family unification.
 - **open / conditional deps cited:**
   - `SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE.md`
-- **auditor confidence:** high
-
-### `publication.ci3_z3.publication_matrix`
-
-- **Note:** [`publication/ci3_z3/PUBLICATION_MATRIX.md`](../../docs/publication/ci3_z3/PUBLICATION_MATRIX.md)
-- **current_status:** unknown
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_failed~~  (reason: `inherited_from:publication.ci3_z3.claims_table`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430-rerun`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The matrix claims to capture every publication-relevant workstream exactly once with manuscript-capture dispositions that must be read through the audit ledger.  _(class `B`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: QUANTITATIVE_SUMMARY_TABLE.md, CLAIMS_TABLE.md, FULL_CLAIM_LEDGER.md, MINIMAL_AXIOMS_2026-04-11.md, SELF_CONSISTENCY_FORCES_POISSON_NOTE.md, POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md, NEWTON_LAW_DERIVED_NOTE.md, BROAD_GRAVITY_DERIVATION_NOTE.md, and 212 more direct blockers.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: QUANTITATIVE_SUMMARY_TABLE.md, CLAIMS_TABLE.md, FULL_CLAIM_LEDGER.md, MINIMAL_AXIOMS_2026-04-11.md, SELF_CONSISTENCY_FORCES_POISSON_NOTE.md, POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md, NEWTON_LAW_DERIVED_NOTE.md, BROAD_GRAVITY_DERIVATION_NOTE.md, and 212 more direct blockers. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
-- **open / conditional deps cited:**
-  - `publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md`
-  - `publication/ci3_z3/CLAIMS_TABLE.md`
-  - `publication/ci3_z3/FULL_CLAIM_LEDGER.md`
-  - `MINIMAL_AXIOMS_2026-04-11.md`
-  - `SELF_CONSISTENCY_FORCES_POISSON_NOTE.md`
-  - `POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md`
-  - `NEWTON_LAW_DERIVED_NOTE.md`
-  - `BROAD_GRAVITY_DERIVATION_NOTE.md`
-  - `RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md`
-  - `UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`
-  - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
-  - `UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md`
-  - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
-  - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
-  - `UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md`
-  - `UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md`
-  - `UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md`
-  - `UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md`
-  - `UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md`
-  - `UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md`
-  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md`
-  - `UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md`
-  - `UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md`
-  - `UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md`
-  - `UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md`
-  - `UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md`
-  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`
-  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md`
-  - `CONTINUUM_IDENTIFICATION_NOTE.md`
-  - `NATIVE_GAUGE_CLOSURE_NOTE.md`
-  - `CONFINEMENT_STRING_TENSION_NOTE.md`
-  - `HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md`
-  - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
-  - `LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`
-  - `HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`
-  - `ANOMALY_FORCES_TIME_THEOREM.md`
-  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
-  - `PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md`
-  - `PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md`
-  - `PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md`
-  - `PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md`
-  - `AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md`
-  - `PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`
-  - `S3_GENERAL_R_DERIVATION_NOTE.md`
-  - `S3_CAP_UNIQUENESS_NOTE.md`
-  - `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`
-  - `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
-  - `FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM_NOTE_2026-04-24.md`
-  - `BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md`
-  - `SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`
-  - `SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`
-  - `THREE_GENERATION_STRUCTURE_NOTE.md`
-  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
-  - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
-  - `THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md`
-  - `SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`
-  - `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`
-  - `Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`
-  - `CL3_SM_EMBEDDING_MASTER_NOTE.md`
-  - `CL3_SM_EMBEDDING_THEOREM.md`
-  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
-  - `CL3_TASTE_GENERATION_THEOREM.md`
-  - `CPT_EXACT_NOTE.md`
-  - `CHRONOLOGY_PROTECTION_OPERATIONAL_NO_PAST_SIGNALING_THEOREM_NOTE_2026-04-25.md`
-  - `SIGNED_GRAVITY_RESPONSE_LANE_STATUS_NOTE_2026-04-26.md`
-  - `BELL_INEQUALITY_DERIVED_NOTE.md`
-  - `EMERGENT_LORENTZ_INVARIANCE_NOTE.md`
-  - `LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md`
-  - `LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md`
-  - `LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`
-  - `ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md`
-  - `STRONG_CP_THETA_ZERO_NOTE.md`
-  - `EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md`
-  - `BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`
-  - `AREA_LAW_COEFFICIENT_GAP_NOTE.md`
-  - `AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md`
-  - `AREA_LAW_PRIMITIVE_EDGE_ENTROPY_SELECTOR_NO_GO_NOTE_2026-04-25.md`
-  - `AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md`
-  - `AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md`
-  - `AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md`
-  - `AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md`
-  - `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`
-  - `ALPHA_S_DERIVED_NOTE.md`
-  - `ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md`
-  - `RCONN_DERIVED_NOTE.md`
-  - `EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md`
-  - `W_MASS_DERIVED_NOTE.md`
-  - `SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md`
-  - `FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md`
-  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
-  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
-  - `YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`
-  - `YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md`
-  - `HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md`
-  - `HIGGS_MASS_DERIVED_NOTE.md`
-  - `HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md`
-  - `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`
-  - `PERSISTENT_OBJECT_EXACT_LATTICE_PARK_NOTE_2026-04-16.md`
-  - `PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md`
-  - `PERSISTENT_OBJECT_TOP4_MULTISTAGE_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md`
-  - `DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md`
-  - `DM_ABCC_RETAINED_MEASUREMENT_CLOSURE_THEOREM_NOTE_2026-04-21.md`
-  - `DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`
-  - `DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md`
-  - `DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md`
-  - `NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md`
-  - `NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md`
-  - `NEUTRINO_RETAINED_LANES_REVIEW_PACKET_2026-04-16.md`
-  - `NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md`
-  - `NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md`
-  - `NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE.md`
-  - `PMNS_SIGMA_ZERO_NOGO_NOTE.md`
-  - `PMNS_RIGHT_CONJUGACY_INVARIANT_NO_GO_NOTE.md`
-  - `CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`
-  - `R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md`
-  - `COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`
-  - `DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md`
-  - `DM_SU3_GAUGE_LOOP_OBSTRUCTION_NOTE_2026-04-25.md`
-  - `OMEGA_LAMBDA_DERIVATION_NOTE.md`
-  - `OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md`
-  - `COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md`
-  - `COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md`
-  - `COSMOLOGY_SINGLE_RATIO_INVERSE_RECONSTRUCTION_THEOREM_NOTE_2026-04-25.md`
-  - `HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md`
-  - `COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md`
-  - `HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md`
-  - `MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
-  - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_THALES_PINNED_ALPHA_S_INDEPENDENT_RATIOS_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_THALES_CROSS_SYSTEM_CP_RATIO_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_CP_PRODUCT_ALPHA_S_CROSS_SECTOR_EXTRACTION_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_BARRED_CIRCUMRADIUS_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_JARLSKOG_EXACT_NLO_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_MODULI_ONLY_UNITARITY_JARLSKOG_AREA_CERTIFICATE_THEOREM_NOTE_2026-04-26.md`
-  - `CKM_COMPOUND_MAGNITUDES_CIRCUMRADIUS_BRIDGE_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_MULTI_CHANNEL_ALPHA_S_EXTRACTION_CONSISTENCY_THEOREM_NOTE_2026-04-26.md`
-  - `CKM_BARRED_ORTHOCENTER_EULER_LINE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_BARRED_PEDOE_SIMILARITY_DEFICIT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_BARRED_NAPOLEON_TRIANGLES_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_BARRED_WEITZENBOCK_BROCARD_POLYNOMIAL_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_BROCARD_POLYNOMIAL_VIETA_STRUCTURAL_INTEGERS_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_BROCARD_Q_POLYNOMIAL_PERFECT_SQUARE_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_CLASSICAL_NUMBER_THEORY_INTEGER_CHARACTERIZATION_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_KAON_EPSILON_K_JARLSKOG_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_EW_LATTICE_A4_BRIDGE_RETAINED_IDENTITY_NOTE_2026-04-25.md`
-  - `EW_LATTICE_COS_SQ_THETA_W_COMPLEMENT_BRIDGE_THEOREM_NOTE_2026-04-26.md`
-  - `SU2_WEAK_BETA_COEFFICIENT_STRUCTURAL_CLOSED_FORM_THEOREM_NOTE_2026-04-26.md`
-  - `CROSS_SECTOR_A_SQUARED_KOIDE_VCB_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
-  - `CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
-  - `CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
-  - `CKM_CUBIC_BERNOULLI_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
-  - `CKM_EGYPTIAN_BERNOULLI_CLOSURES_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
-  - `CKM_CONSECUTIVE_PRIMES_S3_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
-  - `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`
-  - `CKM_DOWN_TYPE_SCALE_CONVENTION_SUPPORT_NOTE_2026-04-22.md`
-  - `QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md`
-  - `QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md`
-  - `QUARK_MASS_RATIO_FULL_SOLVE_NOTE_2026-04-18.md`
-  - `QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`
-  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
-  - `QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`
-  - `QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md`
-  - `QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md`
-  - `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`
-  - `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`
-  - `CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md`
-  - `KOIDE_A1_DERIVATION_STATUS_NOTE.md`
-  - `KOIDE_EXPLICIT_CALCULATIONS_NOTE.md`
-  - `KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md`
-  - `KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md`
-  - `KOIDE_Q23_OH_COVARIANCE_NOGO_NOTE_2026-04-22.md`
-  - `KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
-  - `KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`
-  - `KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md`
-  - `KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md`
-  - `KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md`
-  - `KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`
-  - `KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`
-  - `KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md`
-  - `KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md`
-  - `KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md`
-  - `KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md`
-  - `KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE_2026-04-25.md`
-  - `PRIMORDIAL_SPECTRUM_NOTE.md`
-  - `COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`
-  - `DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md`
-  - `GRAVITON_MASS_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`
-  - `GRAVITON_SPECTRAL_TOWER_THEOREM_NOTE_2026-04-24.md`
-  - `VECTOR_GAUGE_FIELD_KK_TOWER_THEOREM_NOTE_2026-04-24.md`
-  - `SCALAR_HARMONIC_TOWER_THEOREM_NOTE_2026-04-24.md`
-  - `GRAVITY_COSMOLOGY_TOWER_LAMBDA_SPECTRAL_BRIDGE_THEOREM_NOTE_2026-04-25.md`
-  - `COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md`
-  - `GRAVITON_MASS_DERIVED_NOTE.md`
-  - `BH_ENTROPY_DERIVED_NOTE.md`
-  - `GRAV_DECOHERENCE_DERIVED_NOTE.md`
-  - `CKM_NEUTRON_EDM_BOUND_NOTE.md`
-  - `UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md`
-  - `PROTON_LIFETIME_DERIVED_NOTE.md`
-  - `VACUUM_CRITICAL_STABILITY_NOTE.md`
-  - `MONOPOLE_DERIVED_NOTE.md`
-  - `GW_ECHO_NULL_RESULT_NOTE.md`
-  - `KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`
 - **auditor confidence:** high
 
 ### `quantum_horizon_note`
