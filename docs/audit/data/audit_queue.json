@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 354,
+    "leaf": 353,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:29:19.338620+00:00",
+  "generated_at": "2026-04-30T19:29:25.047103+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13837,23 +13837,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "graph_scalar_plus_spinor_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GRAPH_SCALAR_PLUS_SPINOR_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_graph_scalar_plus_spinor.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "graph_true_kg_vs_cn_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -19335,6 +19318,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 499,
-  "total_pending": 880
+  "ready_count": 498,
+  "total_pending": 879
 }

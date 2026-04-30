@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:29:19.501962+00:00
+**Generated:** 2026-04-30T19:29:25.203981+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 186 |
+| `audited_clean` | 187 |
 | `audited_conditional` | 408 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 880 |
+| `unaudited` | 879 |
 
 | criticality | count |
 |---|---:|
@@ -216,6 +216,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `global_coherence_off_scaffold_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `graph_first_selector_derivation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `graph_first_su3_integration_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
+| `graph_scalar_plus_spinor_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `growing_graph_static_control_audit_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `hadron_lane1_confinement_to_mass_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
@@ -6218,6 +6219,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md`
   - `BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md`
   - `EDGE_DELETION_BOUNDARY_SWEEP_NOTE.md`
+- **auditor confidence:** high
+
+### `graph_scalar_plus_spinor_note`
+
+- **Note:** [`GRAPH_SCALAR_PLUS_SPINOR_NOTE.md`](../../docs/GRAPH_SCALAR_PLUS_SPINOR_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** - the lane is therefore a one-way proof of concept, not a closed two-field theory  _(class `C`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 5 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
 ### `gravitomagnetic_note`
