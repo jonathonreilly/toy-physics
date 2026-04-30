@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 414,
+    "leaf": 413,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:23:08.407835+00:00",
+  "generated_at": "2026-04-30T19:23:14.592814+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13705,23 +13705,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_pmns_native_current_last_mile_reduction_2026_04_21.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20391,6 +20374,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 553,
-  "total_pending": 940
+  "ready_count": 552,
+  "total_pending": 939
 }
