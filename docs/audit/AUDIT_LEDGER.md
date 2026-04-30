@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:17:13.309687+00:00
+**Generated:** 2026-04-30T03:20:50.466203+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,26 +21,26 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
-| bounded | 199 |
+| bounded | 198 |
 | support | 100 |
 | open | 23 |
 | unknown | 492 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 53 |
-| ~~audited_conditional~~ | 419 |
+| ~~audited_conditional~~ | 420 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 190 |
+| `audited_conditional` | 189 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1226 |
+| `unaudited` | 1227 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 382 |
 | `leaf` | 797 |
 
-- **Proposed claims demoted by upstream:** 153
+- **Proposed claims demoted by upstream:** 155
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -182,8 +182,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alpha_s_derived_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `area_law_native_car_semantics_tightening_note_2026-04-25` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
-| `area_law_quarter_broader_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
-| `bh_entropy_rt_ratio_widom_no_go_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `bh_entropy_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `causal_field_canonical_chain_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `charged_lepton_two_higgs_canonical_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `chiral_3plus1d_mixing_period_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -592,20 +591,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `operational_primitive_boundary_entropy_theorem_open`
 - **auditor confidence:** high
 
-### `area_law_quarter_broader_no_go_note_2026-04-25`
-
-- **Note:** [`AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md`](../../docs/AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Under the single-interval fiber hypothesis, N_Gamma(q) <= 2 almost everywhere, so I_x <= 2(2*pi)^(d-1) and c_Widom <= 1/6; c_Widom = 1/4 would require average crossing count 3.  _(class `A`)_
-- **chain closes:** False — The local coarea/fiber-count no-go proof closes within the stated simple-fiber Widom assumptions, but the row's registered one-hop dependency is the bounded BH entropy lane, so retained propagation is not closed through the audit graph.
-- **rationale:** Issue: the simple-fiber no-go algebra is correct, but the claim is registered as depending on `bh_entropy_derived_note`, whose current/effective status is bounded rather than retained. Why this blocks: the audit graph cannot ratify this proposed-retained row as clean while its only registered one-hop dependency remains a bounded companion lane, even though the local fiber-count theorem itself excludes 1/4 inside the stated class. Repair target: either register and clean-audit the actual retained Widom/no-go and boundary-rank normalization authorities needed by this theorem, or remove the bounded BH companion from the load-bearing dependency set if it is only contextual. Claim boundary until fixed: it is safe to claim an exact conditional no-go for flat-cut simple-fiber Widom carriers and Schur/direct-sum descendants under consistent boundary-rank normalization: they have c_Widom <= 1/6 and cannot yield 1/4; the result does not rule out multi-pocket/multi-band, non-Fermi-liquid, gapped horizon-sector, or separately derived primitive-boundary carriers.
-- **open / conditional deps cited:**
-  - `BH_ENTROPY_DERIVED_NOTE.md_registered_dependency_effective_status_bounded`
-- **auditor confidence:** high
-
 ### `atomic_rydberg_dependency_firewall_note_2026-04-27`
 
 - **Note:** [`ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md`](../../docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md)
@@ -635,18 +620,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `high_G_live_runner_shows_unstable_away_behavior_not_smooth_threshold_table`
 - **auditor confidence:** high
 
-### `bh_entropy_rt_ratio_widom_no_go_note`
+### `bh_entropy_derived_note`
 
-- **Note:** [`BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`](../../docs/BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md)
-- **current_status:** _proposed_retained_
+- **Note:** [`BH_ENTROPY_DERIVED_NOTE.md`](../../docs/BH_ENTROPY_DERIVED_NOTE.md)
+- **current_status:** bounded
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** For the 2D square-lattice half-filled carrier with a straight cut, the Widom integral gives c_Widom = 1/6, so the lane's RT ratio cannot have exact asymptote 1/4 on that carrier.  _(class `A`)_
-- **chain closes:** False — The Widom integral evaluation and numerical tail checks close for the specified carrier, but the carrier is supplied by the one-hop BH entropy companion whose current status is bounded. The retained no-go status therefore depends on a bounded authority rather than a retained dependency chain.
-- **rationale:** Issue: the load-bearing no-go is computed correctly for the named free-fermion carrier, but that carrier and lane interpretation are inherited from docs/BH_ENTROPY_DERIVED_NOTE.md, which is explicitly bounded. Why this blocks: the audit lane cannot ratify a proposed-retained claim whose only one-hop authority is bounded, even when the downstream Widom calculation is internally consistent. Repair target: either promote the carrier-definition note through a clean audit, or scope this no-go as a retained mathematical statement conditional on the bounded carrier definition without presenting the carrier import as retained physics. Claim boundary until fixed: safe to say the current bounded BH entropy companion's RT-bond route asymptotes to 1/6 rather than 1/4 on its free-fermion carrier; not safe to present it as an audit-clean retained theorem chain.
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The bounded companion runner recomputes finite-L lattice entanglement and RT-ratio comparisons, while the Widom no-go runner verifies c_Widom=1/6 in 2D, a 3D value near 0.105, decreasing r(L), and an L>=32 fit c_inf=0.160108 that rejects 1/4 on the specified free-fermion carrier.  _(class `B`)_
+- **chain closes:** False — The bounded companion status is supported, but the lane does not close an exact Bekenstein-Hawking entropy derivation: the finite-L ~0.24 ratio is a small-lattice comparison and the asymptotic RT-bond coefficient on this carrier is the Widom value, not 1/4.
+- **rationale:** Issue: the current note is safe only as a bounded companion, not as an exact derivation despite the historical title. Why this blocks: the live companion runner passes 6/6 for finite-L comparison and species/gravity checks, but reports marginal 2D area-law fit quality and the no-go runner passes 11/0 showing the RT ratio drifts toward c_Widom=1/6 rather than 1/4. Repair target: if this lane is to be promoted, replace the free-fermion RT-bond carrier or supply an independent gravitational entropy normalization rather than relying on the small-L ratio. Claim boundary until fixed: bounded finite-L lattice-entanglement comparison plus retained Widom explanation for non-promotion, not a retained derivation of S_BH=A/(4 l_P^2).
 - **open / conditional deps cited:**
-  - `BH_ENTROPY_DERIVED_NOTE.md`
+  - `BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`
+  - `asymptotic Widom-Gioev-Klich free-fermion carrier analysis`
+  - `alternative carrier or gravitational entropy normalization required for promotion`
 - **auditor confidence:** high
 
 ### `causal_field_canonical_chain_note`
