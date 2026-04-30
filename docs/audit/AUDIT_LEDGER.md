@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:12:15.726989+00:00
+**Generated:** 2026-04-30T03:13:13.869914+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | bounded | 199 |
 | support | 100 |
-| open | 24 |
+| open | 23 |
 | unknown | 497 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 53 |
-| ~~audited_conditional~~ | 413 |
+| ~~audited_conditional~~ | 414 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 187 |
+| `audited_conditional` | 188 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1229 |
+| `unaudited` | 1228 |
 
 | criticality | count |
 |---|---:|
@@ -199,6 +199,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_transport_integral_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -1192,6 +1193,24 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `scripts/frontier_dm_leptogenesis_pmns_projector_interface.py`
   - `missing theorem deriving dW_e^H on E_e from Cl(3) on Z^3`
 - **auditor confidence:** 0.92
+
+### `dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_CONSTRUCTIVE_CONTINUITY_CLOSURE_THEOREM_NOTE_2026-04-17.md`](../../docs/DM_LEPTOGENESIS_PMNS_CONSTRUCTIVE_CONTINUITY_CLOSURE_THEOREM_NOTE_2026-04-17.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Given the fixed native N_e seed, constructive witness, PMNS transport eta readout, and projected-source triplet map, the runner uses a continuous interpolation and brent root to show eta_1 crosses 1 while gamma, E1, and E2 remain positive.  _(class `B`)_
+- **chain closes:** False — The existence point on the supplied constructive branch is verified, but the upstream seed/witness/response/readout stack and the selector law that would choose lambda_* are not closed by this note.
+- **rationale:** Issue: the continuity theorem is valid on the supplied branch but is not a selector or first-principles eta closure. Why this blocks: the runner imports the native N_e averages, constructive witness, canonical H interface, projected-response triplet, and eta-column map from upstream artifacts; it then proves an intermediate-value crossing, not that the framework uniquely selects that crossing or derives eta_obs. Repair target: register audited dependencies for the imported PMNS/leptogenesis stack and add a selector theorem for lambda_* if promoting beyond existence. Claim boundary until fixed: conditional constructive existence of an eta/eta_obs=1 point on the current PMNS branch, not full PMNS/leptogenesis closure.
+- **open / conditional deps cited:**
+  - `frontier_dm_leptogenesis_pmns_transport_extremal_source_candidate`
+  - `frontier_dm_leptogenesis_pmns_constructive_projected_source_selector_theorem`
+  - `frontier_dm_leptogenesis_ne_projected_source_law_derivation`
+  - `frontier_dm_leptogenesis_ne_projected_source_triplet_sign_theorem`
+  - `PMNS selector law for lambda_*`
+- **auditor confidence:** high
 
 ### `dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16`
 
