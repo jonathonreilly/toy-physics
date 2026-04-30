@@ -99,3 +99,53 @@ positive semi-definite.
 **Disposition.** Accept artifact as branch-local theorem. Continue to
 Cycle 3 (R3: cluster decomposition / Lieb–Robinson).
 
+## Cycle 3 — R3: cluster decomposition / Lieb–Robinson (in-loop self-review)
+
+**Artifacts.**
+- `docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`
+- `scripts/axiom_first_cluster_decomposition_check.py`
+- `outputs/axiom_first_cluster_decomposition_check_2026-04-29.txt`
+
+**Runner result.** PASSED 4/4 exhibits. E1 LR exponential envelope
+exhibited on a 1D free fermion lattice (24 sites): log₁₀ |U(t)_{0,d}|
+table covers (d, t) ∈ [0, 12] × [0, 4], with clear exponential decay
+in d outside the light cone (slope -2.48 at t=1.0, decay length 0.4).
+E2 connected `<n_0 n_d>` ground-state correlator decays from 8.4e-2
+at d=1 to 1.8e-5 at d=10, log-linear slope ≈ -0.86 (exponential due
+to the staggered mass gap). E3 100% of spacelike cells satisfy
+|U| < 0.05. E4 effective front velocity v_eff = 1.17, far below the
+LR-1972 conservative bound v_LR = 10.87 — exactly the expected
+ordering (LR is conservative; tighter Hastings 2010 / Bravyi-Hastings
+2011 bounds are not needed for the structural exhibit).
+
+**In-loop review findings.**
+
+1. *Hypothesis set audit.* Proof uses A1 (Cl(3) op-norm bound), A2
+   (lattice graph distance, Z_lat = 6, finite-range), A3 (Hermitian
+   Hamiltonian + finite per-site algebra), A4 (O(1) bound on J). No
+   imports from forbidden list. The Lieb-Robinson 1972 technique is
+   an elementary finite-lattice manipulation; standard external
+   references cited as theorem-grade lattice literature.
+2. *LR bound is conservative; runner shows this honestly.* The
+   LR-1972 constants give v_LR ≈ 10.87 for J=0.5, R=1, Z=2 in 1D;
+   the actual propagation front velocity for free fermions is
+   v_eff ≈ 1.17 (group velocity ≤ 2J for nearest-neighbour). The
+   theorem as stated provides the conservative envelope; the runner
+   reports both the predicted bound and the empirical front velocity,
+   and confirms v_eff < v_LR. This is the correct ordering: the
+   theorem provides an upper bound, not an equality.
+3. *Status.* Branch-local theorem. Promotion would require external
+   review-loop backpressure and integration outside this run.
+4. *Reuse.* C1 (mass-gap exponential decay), C2 (confinement
+   area-law lane support), C3 (microcausality on A_min), C4
+   (compatibility with R2 / RP). Confinement / area-law lanes that
+   silently assume exponential clustering can now cite this theorem.
+5. *Linkage.* Cycle 1 (spin-statistics) + Cycle 2 (RP) + Cycle 3
+   (LR/clustering) form the lattice analogue of the Wightman
+   axiom triple "spin-statistics + positivity-of-energy +
+   cluster-decomposition" — discharged as branch-local theorems on
+   A_min instead of imported as primitives.
+
+**Disposition.** Accept artifact as branch-local theorem. Proceed to
+stretch attempt (Cycle 4 / R4: CPT theorem).
+
