@@ -18325,7 +18325,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T13:32:12.682264+00:00",
+  "generated_at": "2026-04-30T13:32:25.433749+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19838,6 +19838,16 @@
       "path": "docs/AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_cpt_check.py",
       "title": "Axiom-First CPT Theorem (Stretch Attempt) on Cl(3) \u2297 Z^3"
+    },
+    "axiom_first_lattice_noether_theorem_note_2026-04-29": {
+      "claim_id": "axiom_first_lattice_noether_theorem_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support \u2014 branch-local theorem note on A_min; runner passing; audit-pending.",
+      "deps": [],
+      "note_hash": "48830647401175ba36d084ecb66f06c1e67b5e4f20128ce376cb38807ddf1ad2",
+      "path": "docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/axiom_first_lattice_noether_check.py",
+      "title": "Axiom-First Lattice Noether's Theorem on Cl(3) \u2297 Z^3"
     },
     "axiom_first_reflection_positivity_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
@@ -40284,6 +40294,7 @@
     "axiom_change_proposal_2026-04-10",
     "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
+    "axiom_first_lattice_noether_theorem_note_2026-04-29",
     "axiom_first_reflection_positivity_theorem_note_2026-04-29",
     "axiom_first_spin_statistics_theorem_note_2026-04-29",
     "axiom_reduction_note",
@@ -41383,16 +41394,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4581,
-    "leaf_count": 741,
-    "node_count": 1679,
-    "root_count": 1207,
-    "runners_with_path": 763,
+    "leaf_count": 742,
+    "node_count": 1680,
+    "root_count": 1208,
+    "runners_with_path": 764,
     "status_counts": {
       "bounded": 255,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 180,
+      "support": 181,
       "unknown": 795
     }
   }
