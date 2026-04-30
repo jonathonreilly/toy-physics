@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T15:15:29.748399+00:00
+**Generated:** 2026-04-30T15:15:33.274617+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,25 +22,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 80 |
 | _proposed_retained_ | 4 |
 | bounded | 185 |
-| support | 124 |
+| support | 123 |
 | open | 11 |
 | unknown | 418 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 515 |
+| ~~audited_conditional~~ | 516 |
 | ~~audited_failed~~ | 170 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 9 |
 | `audited_clean` | 95 |
-| `audited_conditional` | 280 |
+| `audited_conditional` | 281 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1106 |
+| `unaudited` | 1105 |
 
 | criticality | count |
 |---|---:|
@@ -277,6 +277,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `complex_selectivity_compare_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `composite_source_additivity_2d_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `connectivity_family_v2_elliptical_duplicate_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `cosmological_constant_spectral_gap_identity_theorem_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `cosmology_scale_identification_and_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -2114,6 +2115,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`
   - `scripts/canonical_plaquette_surface.py`
   - `standard_lattice_qcd_sommer_and_string_tension_inputs`
+- **auditor confidence:** high
+
+### `connectivity_family_v2_elliptical_duplicate_note`
+
+- **Note:** [`CONNECTIVITY_FAMILY_V2_ELLIPTICAL_DUPLICATE_NOTE.md`](../../docs/CONNECTIVITY_FAMILY_V2_ELLIPTICAL_DUPLICATE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** Connectivity Family V2 Elliptical Duplicate Note: support / diagnostic duplicate of the portable sign-law fixed point; the elliptical-shell slice sits inside the existing sign-portability invariant and is not a new tier-ratifiable family.  _(class `B`)_
+- **chain closes:** False — No. The load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet, so the conclusion cannot be ratified from the source note alone.
+- **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **open / conditional deps cited:**
+  - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
 
 ### `continuum_limit_note`
