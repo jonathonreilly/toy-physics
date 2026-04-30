@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 356,
+    "leaf": 355,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:29:07.086545+00:00",
+  "generated_at": "2026-04-30T19:29:13.509038+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13820,23 +13820,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "generated_geometry_synthesis_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GENERATED_GEOMETRY_SYNTHESIS_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/gate_b_farfield_harness.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "geometry_lane_head_to_head_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -19372,6 +19355,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 500,
-  "total_pending": 882
+  "ready_count": 499,
+  "total_pending": 881
 }
