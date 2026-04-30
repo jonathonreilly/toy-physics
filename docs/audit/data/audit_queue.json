@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 415,
+    "leaf": 414,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:23:02.235528+00:00",
+  "generated_at": "2026-04-30T19:23:08.407835+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -19426,27 +19426,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_pmns_local_selector_family_no_go_theorem_note_2026-04-20",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17",
-        "dm_neutrino_source_surface_active_curvature_23_symmetric_baseline_boundary_theorem_note_2026-04-17",
-        "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_PMNS_LOCAL_SELECTOR_FAMILY_NO_GO_THEOREM_NOTE_2026-04-20.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_dm_pmns_local_selector_family_no_go_theorem_2026_04_20.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_selector_branch_conclusion_note_2026-04-17",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20413,5 +20392,5 @@
     }
   ],
   "ready_count": 553,
-  "total_pending": 941
+  "total_pending": 940
 }
