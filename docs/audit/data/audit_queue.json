@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 35,
+    "critical": 34,
     "high": 234,
     "leaf": 571,
     "medium": 342
   },
-  "generated_at": "2026-04-30T11:41:06.739258+00:00",
+  "generated_at": "2026-04-30T11:41:10.109797+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,25 +23,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "transitive_descendants": 281
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "yt_ward_identity_derivation_theorem"
-      ],
-      "direct_in_degree": 8,
-      "load_bearing_score": 12.119,
-      "note_path": "docs/G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 277
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24954,5 +24935,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1182
+  "total_pending": 1181
 }
