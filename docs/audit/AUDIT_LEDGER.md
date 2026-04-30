@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:24:36.527919+00:00
+**Generated:** 2026-04-30T22:26:32.795114+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 82 |
 | _proposed_retained_ | 5 |
 | bounded | 278 |
-| support | 246 |
+| support | 245 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 745 |
+| ~~audited_conditional~~ | 746 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 214 |
-| `audited_conditional` | 467 |
+| `audited_conditional` | 468 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 791 |
+| `unaudited` | 790 |
 
 | criticality | count |
 |---|---:|
@@ -701,6 +701,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
 | `pmns_sigma_zero_nogo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `poisson_3d_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `poisson_exhaustive_uniqueness_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `poisson_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `propagator_family_unification_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quantum_horizon_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -9731,6 +9732,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `POISSON_SELF_FIELD_NOTE.md`
   - `GATE_B_POISSON_SELF_GRAVITY_NOTE.md`
+- **auditor confidence:** high
+
+### `poisson_exhaustive_uniqueness_note`
+
+- **Note:** [`POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md`](../../docs/POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-24`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Finite sampled tests of L_alpha = (-nabla^2)^alpha, anisotropic Laplacians, non-local operators, and higher-order stencils establish that the nearest-neighbor Poisson equation is the unique self-consistent gravity field equation on the 3D cubic framework surface.  _(class `B`)_
+- **chain closes:** False — The runner gives a reproducible finite-grid diagnostic and shows monotone beta(alpha) over the sampled family, anisotropic robustness, higher-order-stencil consistency, and non-local divergence. It does not by itself prove continuum alpha=1 uniqueness, exhaustive coverage of all local symmetric field operators, or that the non-local failures are physical rather than conditioning/regularization artifacts.
+- **rationale:** Issue: the source upgrades a finite N=16 sampled diagnostic into an exhaustive Poisson uniqueness theorem. Why this blocks: the live runner's own table has the beta=1 crossing closest to alpha=1.5 on the tested grid, so the Poisson alpha=1 conclusion relies on a continuum-limit finite-size-bias argument and an analytic Green-function/fractional-Laplacian theorem that are not proved or registered here; the non-local rejection also rests on observed divergence that could be numerical conditioning. Repair target: add/audit an analytic continuum theorem for beta(alpha) and the alpha=1 crossing, an explicit operator-family exhaustiveness theorem for local symmetric graph-compatible operators, and a finite-size/extrapolation runner showing the sampled crossing flows to alpha=1; separately regularize non-local alternatives or state their exclusion assumptions. Claim boundary until fixed: finite-grid support that beta(alpha) is monotone over the sampled fractional family, higher-order stencils agree, anisotropy is robust, and the tested non-local operators diverge in this implementation.
+- **open / conditional deps cited:**
+  - `continuum_fractional_laplacian_green_scaling_theorem`
+  - `operator_family_exhaustiveness_theorem`
+  - `finite_size_crossing_extrapolation_runner`
+  - `nonlocal_operator_regularization_stability_check`
 - **auditor confidence:** high
 
 ### `poisson_self_field_note`
