@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 474,
+    "leaf": 473,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:16:42.804767+00:00",
+  "generated_at": "2026-04-30T19:16:49.843183+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20405,26 +20405,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "cycle_break_frontier_note_2026-04-10",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "cycle_battery_note_2026-04-10",
-        "cycle_battery_scaled_note_2026-04-10"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/CYCLE_BREAK_FRONTIER_NOTE_2026-04-10.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_staggered_cycle_break_frontier.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21431,5 +21411,5 @@
     }
   ],
   "ready_count": 611,
-  "total_pending": 1000
+  "total_pending": 999
 }

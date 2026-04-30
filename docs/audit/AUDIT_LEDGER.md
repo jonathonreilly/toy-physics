@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:16:42.980768+00:00
+**Generated:** 2026-04-30T19:16:50.018383+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,12 +33,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 132 |
-| `audited_conditional` | 342 |
+| `audited_conditional` | 343 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1000 |
+| `unaudited` | 999 |
 
 | criticality | count |
 |---|---:|
@@ -323,6 +323,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cross_family_universality_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cycle_battery_scaled_note_2026-04-10` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `cycle_break_frontier_note_2026-04-10` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `decoherence_action_independence_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `decoherence_decision_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `decoherence_failure_analysis` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -2596,6 +2597,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (cycle_battery_note_2026-04-10=bounded). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
 - **open / conditional deps cited:**
   - `CYCLE_BATTERY_NOTE_2026-04-10.md`
+- **auditor confidence:** high
+
+### `cycle_break_frontier_note_2026-04-10`
+
+- **Note:** [`CYCLE_BREAK_FRONTIER_NOTE_2026-04-10.md`](../../docs/CYCLE_BREAK_FRONTIER_NOTE_2026-04-10.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** - where is the first real failure once we push beyond benign retained graphs?  _(class `B`)_
+- **chain closes:** False — No. One-hop dependencies are not all retained (cycle_battery_note_2026-04-10=bounded, cycle_battery_scaled_note_2026-04-10=audited_conditional), so the chain does not close under the leaf audit rule.
+- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (cycle_battery_note_2026-04-10=bounded, cycle_battery_scaled_note_2026-04-10=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
+- **open / conditional deps cited:**
+  - `CYCLE_BATTERY_NOTE_2026-04-10.md`
+  - `CYCLE_BATTERY_SCALED_NOTE_2026-04-10.md`
 - **auditor confidence:** high
 
 ### `cycle_break_slice_note_2026-04-10`
