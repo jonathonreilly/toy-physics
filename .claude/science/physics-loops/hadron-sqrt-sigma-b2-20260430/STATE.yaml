@@ -19,8 +19,8 @@ proposal_allowed: false
 proposal_allowed_reason: "B2/B5 remain open; production L=8,12,16 framework-side statistics and uncertainty budget are not yet accumulated."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-current_phase: cycle-8-production-checkpoint-complete
-cycles_completed: 8
+current_phase: cycle-9-production-checkpoint-complete
+cycles_completed: 9
 completed_phases:
   - cycle-1-complete
   - cycle-2-complete
@@ -30,8 +30,9 @@ completed_phases:
   - cycle-6-complete
   - cycle-7-production-checkpoint-complete
   - cycle-8-production-checkpoint-complete
+  - cycle-9-production-checkpoint-complete
 active_route: R3-B5-production-statistics-continue
-active_hard_residual: "B5 is compute-limited: production L=8 now has 259/1000 JSONL measurements, but L=12 and L=16 are missing; B5 remains non-closing until the production volume ladder and uncertainties are accumulated."
+active_hard_residual: "B5 is compute-limited: production L=8 now has 395/1000 JSONL measurements, but L=12 and L=16 are missing; B5 remains non-closing until the production volume ladder and uncertainties are accumulated."
 files_touched:
   - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/STATE.yaml
   - .claude/science/physics-loops/hadron-sqrt-sigma-b2-20260430/GOAL.md
@@ -91,6 +92,7 @@ claim_state_movement:
   - "Cycle 6: resumable B5 Wilson/Creutz ladder runner landed and smoke-verified; production L=8,12,16 statistics remain to be accumulated before any B5 promotion."
   - "Cycle 7: production-profile run accumulated 119 L=8 records; aggregator reports plaquette 0.59529430 +/- 0.00022027 and chi22 0.24520711 +/- 0.00411938, while B5 remains open because L=12 and L=16 are missing."
   - "Cycle 8: second production-profile run advanced to 259 L=8 records; aggregator reports plaquette 0.59537995 +/- 0.00013110 and chi22 0.25029828 +/- 0.00276516, while B5 remains open because L=12 and L=16 are missing."
+  - "Cycle 9: third production-profile run advanced to 395 L=8 records; aggregator reports plaquette 0.59501080 +/- 0.00010576 and chi22 0.25396337 +/- 0.00215057, while B5 remains open because L=12 and L=16 are missing."
 campaign_correction:
   - "2026-04-30T01:07:22Z: resumed after incorrect PR-checkpoint stop; user clarified the 12h campaign budget must continue."
   - "Repo-wide authority-surface weaving is being removed from this science PR; proposed integration belongs in HANDOFF until review."
