@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:27:41.935469+00:00
+**Generated:** 2026-04-30T19:27:47.973759+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 179 |
+| `audited_clean` | 180 |
 | `audited_conditional` | 399 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 896 |
+| `unaudited` | 895 |
 
 | criticality | count |
 |---|---:|
@@ -193,6 +193,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_nonlabel_connectivity_v1_distance_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `gate_b_nonlabel_connectivity_v1_h025_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `gate_b_nonlabel_connectivity_v1_joint_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
+| `gate_b_nonlabel_connectivity_v1_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `gate_b_v6_nearfield_comparator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | support | ~~audited_clean~~ | support | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -5519,6 +5520,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **effective_status:** bounded  (reason: `self`)
 - **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
 - **load-bearing step:** - this is a bounded companion, not a universal non-label connectivity theorem  _(class `D`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 1 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `gate_b_nonlabel_connectivity_v1_note`
+
+- **Note:** [`GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md`](../../docs/GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** - this is a bounded candidate, not a universal non-label connectivity theorem  _(class `D`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 1 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
