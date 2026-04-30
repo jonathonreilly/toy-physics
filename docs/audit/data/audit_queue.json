@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 426,
+    "leaf": 425,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:21:53.210738+00:00",
+  "generated_at": "2026-04-30T19:21:58.985255+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13705,23 +13705,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_neutrino_triplet_normalization_target_note_2026-04-15",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_NEUTRINO_TRIPLET_NORMALIZATION_TARGET_NOTE_2026-04-15.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_triplet_normalization_target.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_neutrino_two_higgs_closure_attacks_note_2026-04-15",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20602,6 +20585,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 563,
-  "total_pending": 952
+  "ready_count": 562,
+  "total_pending": 951
 }
