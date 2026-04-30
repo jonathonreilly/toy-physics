@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 311,
+    "leaf": 310,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:33:46.714720+00:00",
+  "generated_at": "2026-04-30T19:33:53.153333+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13548,23 +13548,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "open",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "hubble_lane5_c2_ckm_pmns_right_sensitive_selector_stretch_note_2026-04-29",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -18601,6 +18584,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 456,
-  "total_pending": 837
+  "ready_count": 455,
+  "total_pending": 836
 }

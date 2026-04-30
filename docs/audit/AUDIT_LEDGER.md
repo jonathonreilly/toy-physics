@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:33:46.890669+00:00
+**Generated:** 2026-04-30T19:33:53.326140+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,22 +23,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 8 |
 | bounded | 288 |
 | support | 258 |
-| open | 20 |
+| open | 19 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 721 |
+| ~~audited_conditional~~ | 722 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 192 |
-| `audited_conditional` | 445 |
+| `audited_conditional` | 446 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 837 |
+| `unaudited` | 836 |
 
 | criticality | count |
 |---|---:|
@@ -589,6 +589,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_eta_retirement_gate_audit_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -7241,6 +7242,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** C1 derived from current stack: false; C1 conditional route explicitly stated: true; remaining decision: human science judgment or new selector/metrology theorem.  _(class `B`)_
 - **chain closes:** False — The note's positive route depends on two explicit premises: a primitive active-block selector and a non-rescaling-invariant action-unit metrology map. The runner records those route states with hard-coded booleans rather than deriving them from registered one-hop dependencies.
 - **rationale:** Issue: the C1 route is conditional on new selector and metrology premises, and the row has no ledger dependencies for the A1/A2/A4/A5/A6 route-state claims it summarizes. Why this blocks: an explicit axiom boundary is not a derivation of C1 from the current stack. Repair target: derive the selector and metrology maps from retained primitives, or register the prior route notes as dependencies and keep C1 explicitly axiom-conditional. Claim boundary until fixed: safe as a carrier/metrology boundary inventory, not as an audited C1 closure.
+- **auditor confidence:** high
+
+### `hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28`
+
+- **Note:** [`HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md`](../../docs/HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** primitive boundary block `P_A H_cell ⊆ H_cell`.  _(class `B`)_
+- **chain closes:** False — No. The source row is author-declared open, so the audit packet does not assert a closed derivation to ratify.
+- **rationale:** Issue: the source note's own Status line is open, not a closed theorem/result tier. Why this blocks: a leaf audit cannot turn an explicitly unsettled source claim into a closed chain without an author reclassification and supporting derivation. Repair target: update the source note to a precise support/bounded/proposed_retained claim with a runner or cited theorem package. Claim boundary until fixed: safe to cite only as an open note in its current wording.
 - **auditor confidence:** high
 
 ### `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28`
