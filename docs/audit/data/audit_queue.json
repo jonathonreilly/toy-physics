@@ -3,9 +3,9 @@
     "critical": 1,
     "high": 201,
     "leaf": 287,
-    "medium": 289
+    "medium": 288
   },
-  "generated_at": "2026-04-30T22:44:46.811772+00:00",
+  "generated_at": "2026-04-30T22:48:34.049198+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7733,23 +7733,6 @@
       "note_path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 35
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "complete_prediction_chain_2026_04_15",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.67,
-      "note_path": "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_complete_prediction_chain.py",
       "transitive_descendants": 35
     },
     {
@@ -17831,6 +17814,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 395,
-  "total_pending": 778
+  "ready_count": 394,
+  "total_pending": 777
 }

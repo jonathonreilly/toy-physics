@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:44:47.000754+00:00
+**Generated:** 2026-04-30T22:48:34.210823+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,25 +20,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 83 |
-| _proposed_retained_ | 3 |
+| _proposed_retained_ | 2 |
 | bounded | 276 |
 | support | 241 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 748 |
-| ~~audited_failed~~ | 127 |
+| ~~audited_conditional~~ | 747 |
+| ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 219 |
 | `audited_conditional` | 474 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 59 |
+| `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 778 |
+| `unaudited` | 777 |
 
 | criticality | count |
 |---|---:|
@@ -796,6 +796,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `backreaction_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | open | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | A | - |
+| `complete_prediction_chain_2026_04_15` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | D | - |
 | `critical_exponents_topology_note_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `distance_law_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -2606,6 +2607,27 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the source note explicitly frames this as open, future, planning, or a stretch attempt rather than a closed theorem. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `complete_prediction_chain_2026_04_15`
+
+- **Note:** [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](../../docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-37`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Seven independent observables (v, alpha_s, sin^2(theta_W), 1/alpha_EM, y_t, m_t, m_H) plus one qualitative prediction (vacuum stability) from one axiom and one computed number; no free parameters, fits, or imports.  _(class `D`)_
+- **chain closes:** False — The package imports a support stack whose current audited states include conditional, decoration, renaming, and numerical-match rows, so the all-observables-from-one-input synthesis does not close from retained inputs. The live runner also hard-codes the promoted card and reports m_H(full 3-loop)=125.10 GeV while the source note repeatedly claims 129.7 GeV.
+- **rationale:** Issue: the complete-chain headline claims seven observables plus vacuum stability from one axiom and one computed plaquette with no imports, but its named support stack is not audit-clean and the live synthesis runner is stale relative to the source Higgs headline. Why this blocks: a hostile reviewer cannot ratify a package-level retained claim when required bridges are audited_conditional/audited_renaming/audited_numerical_match/audited_decoration and the runner emits no classified PASS checks while disagreeing with the note's 129.7 GeV Higgs claim. Repair target: ratify or repair the support stack rows, split the package into separately audited component claims, and update the synthesis runner/source so the same Higgs value and classified A/B/C/D checks are produced. Claim boundary until fixed: historical synthesis/status-card only; it may not be cited as a retained complete prediction chain.
+- **open / conditional deps cited:**
+  - `ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md`
+  - `RCONN_DERIVED_NOTE.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
+  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
+  - `HIGGS_MASS_FROM_AXIOM_NOTE.md`
+  - `EW_COUPLING_DERIVATION_NOTE.md`
+  - `HIGGS_MASS_DERIVED_NOTE.md`
 - **auditor confidence:** high
 
 ### `complex_selectivity_compare_note`
