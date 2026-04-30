@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:29:37.670943+00:00
+**Generated:** 2026-04-30T19:29:43.485866+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
 | bounded | 309 |
-| support | 273 |
+| support | 272 |
 | open | 21 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 684 |
+| ~~audited_conditional~~ | 685 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 189 |
-| `audited_conditional` | 408 |
+| `audited_conditional` | 409 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 877 |
+| `unaudited` | 876 |
 
 | criticality | count |
 |---|---:|
@@ -533,6 +533,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `generation_axiom_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `global_coherence_held_out2_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `gravitational_memory_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `graviton_mass_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `gravity_clean_derivation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | E | - |
@@ -6257,6 +6258,21 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** Correlation-matrix formalism for free fermions: the joint state is tracked via a 2N x 2N one-body density matrix. Time evolution uses Trotter steps with self-consistent Poisson coupling at each step. Cross-correlations between A and B are computed via the RPA (random phase approximation): the static density-density susceptibility chi = C(1-C) mediates gravit  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 6 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `gravitational_memory_note_2026-04-11`
+
+- **Note:** [`GRAVITATIONAL_MEMORY_NOTE_2026-04-11.md`](../../docs/GRAVITATIONAL_MEMORY_NOTE_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** - post-pulse offset appears late and accumulates after the field pulse has passed  _(class `B`)_
+- **chain closes:** False — No. One-hop dependencies are not all retained (memory_decay_diagnosis_2026-04-11=support, memory_mu2_geometry_sweep_note_2026-04-11=bounded), so the chain does not close under the leaf audit rule.
+- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (memory_decay_diagnosis_2026-04-11=support, memory_mu2_geometry_sweep_note_2026-04-11=bounded). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
+- **open / conditional deps cited:**
+  - `MEMORY_DECAY_DIAGNOSIS_2026-04-11.md`
+  - `MEMORY_MU2_GEOMETRY_SWEEP_NOTE_2026-04-11.md`
 - **auditor confidence:** high
 
 ### `gravitomagnetic_note`
