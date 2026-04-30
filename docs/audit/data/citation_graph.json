@@ -213,6 +213,30 @@
       "to": "bh_entropy_derived_note"
     },
     {
+      "from": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
+      "to": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25"
+    },
+    {
+      "from": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
+      "to": "planck_boundary_density_extension_theorem_note_2026-04-24"
+    },
+    {
+      "from": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
+      "to": "universal_gr_discrete_global_closure_note"
+    },
+    {
+      "from": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
+      "to": "universal_gr_lorentzian_global_atlas_closure_note"
+    },
+    {
+      "from": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
+      "to": "universal_qg_canonical_textbook_geometric_action_equivalence_note"
+    },
+    {
+      "from": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
+      "to": "planck_source_unit_normalization_support_theorem_note_2026-04-25"
+    },
+    {
       "from": "bminusl_anomaly_freedom_theorem_note_2026-04-24",
       "to": "one_generation_matter_closure_note"
     },
@@ -18301,7 +18325,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T11:47:37.366362+00:00",
+  "generated_at": "2026-04-30T11:52:03.486903+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19892,6 +19916,23 @@
       "path": "docs/BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md",
       "runner_path": "scripts/frontier_bh_entropy_rt_ratio_widom.py",
       "title": "BH Entropy RT-Ratio Widom No-Go Theorem"
+    },
+    "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29": {
+      "claim_id": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
+      "current_status": "bounded",
+      "current_status_raw": "bounded: S_BH=A/(4G_N) framework composition, conditional on Wald formula admission and gravitational boundary/action-density bridge premise.",
+      "deps": [
+        "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
+        "planck_boundary_density_extension_theorem_note_2026-04-24",
+        "universal_gr_discrete_global_closure_note",
+        "universal_gr_lorentzian_global_atlas_closure_note",
+        "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+        "planck_source_unit_normalization_support_theorem_note_2026-04-25"
+      ],
+      "note_hash": "e4242b7f198e89911e9621a31ba5381807ce5deb71bb58247446dee36ec86bb4",
+      "path": "docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_bh_quarter_wald_noether_framework_carrier.py",
+      "title": "BH 1/4 Carrier from Framework Wald-Noether Charge Boundary Note (V1)"
     },
     "bminusl_anomaly_freedom_theorem_note_2026-04-24": {
       "claim_id": "bminusl_anomaly_freedom_theorem_note_2026-04-24",
@@ -41297,13 +41338,13 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4575,
-    "leaf_count": 736,
-    "node_count": 1674,
+    "edge_count": 4581,
+    "leaf_count": 737,
+    "node_count": 1675,
     "root_count": 1203,
-    "runners_with_path": 758,
+    "runners_with_path": 759,
     "status_counts": {
-      "bounded": 253,
+      "bounded": 254,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
