@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T02:42:17.767478+00:00
-**Total pending:** 1268
-**Ready (all deps already at a stable tier):** 826
+**Generated:** 2026-04-30T02:42:21.346867+00:00
+**Total pending:** 1267
+**Ready (all deps already at a stable tier):** 825
 
 By criticality:
 - `critical`: 41
-- `high`: 279
+- `high`: 278
 - `medium`: 340
 - `leaf`: 608
 
@@ -57,14 +57,14 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 39 | `n_eff_from_three_generations_theorem_note_2026-04-24` | critical | 38 | 13.29 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_n_eff_from_three_generations.py` |
 | 40 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | critical | 38 | 12.79 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_matter_radiation_equality_structural_identity.py` |
 | 41 | `publication.ci3_z3.publication_matrix` | critical | 31 | 12.50 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 42 | `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | high | 109 | 10.78 | Y | fresh_context_or_stronger | - |
-| 43 | `dm_leptogenesis_transport_status_note_2026-04-16` | high | 107 | 13.26 | Y | fresh_context_or_stronger | `scripts/frontier_dm_leptogenesis_transport_status.py` |
-| 44 | `pmns_selector_unique_amplitude_slot_note` | high | 106 | 9.24 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_selector_unique_amplitude_slot.py` |
-| 45 | `higgs_mechanism_note` | high | 106 | 7.74 | Y | fresh_context_or_stronger | `scripts/frontier_higgs_mass_derived.py` |
-| 46 | `higgs_from_lattice_note` | high | 106 | 7.24 | Y | fresh_context_or_stronger | `scripts/frontier_higgs_mass_derived.py` |
-| 47 | `dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem_note_2026-04-16` | high | 105 | 10.23 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem.py` |
-| 48 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | high | 105 | 7.23 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_odd_circulant_current_stack_zero_law.py` |
-| 49 | `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15` | high | 105 | 7.23 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_odd_circulant_z2_slot_theorem.py` |
-| 50 | `dm_neutrino_odd_mixed_bridge_extension_note_2026-04-15` | high | 105 | 7.23 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_odd_mixed_bridge_extension.py` |
+| 42 | `dm_leptogenesis_transport_status_note_2026-04-16` | high | 107 | 13.26 | Y | fresh_context_or_stronger | `scripts/frontier_dm_leptogenesis_transport_status.py` |
+| 43 | `pmns_selector_unique_amplitude_slot_note` | high | 106 | 9.24 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_selector_unique_amplitude_slot.py` |
+| 44 | `higgs_mechanism_note` | high | 106 | 7.74 | Y | fresh_context_or_stronger | `scripts/frontier_higgs_mass_derived.py` |
+| 45 | `higgs_from_lattice_note` | high | 106 | 7.24 | Y | fresh_context_or_stronger | `scripts/frontier_higgs_mass_derived.py` |
+| 46 | `dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem_note_2026-04-16` | high | 105 | 10.23 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem.py` |
+| 47 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | high | 105 | 7.23 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_odd_circulant_current_stack_zero_law.py` |
+| 48 | `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15` | high | 105 | 7.23 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_odd_circulant_z2_slot_theorem.py` |
+| 49 | `dm_neutrino_odd_mixed_bridge_extension_note_2026-04-15` | high | 105 | 7.23 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_odd_mixed_bridge_extension.py` |
+| 50 | `dm_neutrino_source_amplitude_theorem_note_2026-04-15` | high | 104 | 8.71 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_source_amplitude_theorem.py` |
 
 Full queue lives in `data/audit_queue.json`.
