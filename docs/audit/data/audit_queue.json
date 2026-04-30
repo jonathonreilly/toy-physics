@@ -3,9 +3,9 @@
     "critical": 0,
     "high": 237,
     "leaf": 486,
-    "medium": 303
+    "medium": 302
   },
-  "generated_at": "2026-04-30T19:07:07.795467+00:00",
+  "generated_at": "2026-04-30T19:08:34.959803+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -9788,23 +9788,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py",
       "transitive_descendants": 16
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wilson_mu2_distance_sweep_note_2026-04-11",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 2,
-      "load_bearing_score": 5.0,
-      "note_path": "docs/WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_wilson_mu2_distance_sweep.py",
-      "transitive_descendants": 15
     },
     {
       "audit_independence_required": "any_non_self",
@@ -20029,25 +20012,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wilson_two_body_open_refined_note_2026-04-11",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "wilson_mu2_distance_sweep_note_2026-04-11"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/WILSON_TWO_BODY_OPEN_REFINED_NOTE_2026-04-11.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "work_history.yt.yt_unbounded_program_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21698,6 +21662,25 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "wilson_two_body_open_refined_note_2026-04-11",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "wilson_mu2_distance_sweep_note_2026-04-11"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/WILSON_TWO_BODY_OPEN_REFINED_NOTE_2026-04-11.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "work_history.cabibbo_jarlskog_route_note_2026-04-12",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21909,6 +21892,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 634,
-  "total_pending": 1026
+  "ready_count": 632,
+  "total_pending": 1025
 }

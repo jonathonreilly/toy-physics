@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:07:07.982091+00:00
+**Generated:** 2026-04-30T19:08:35.199255+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 343 |
+| bounded | 341 |
 | support | 268 |
 | open | 17 |
 | unknown | 49 |
@@ -29,17 +29,17 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
 | ~~audited_conditional~~ | 611 |
-| ~~audited_failed~~ | 119 |
+| ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 124 |
 | `audited_conditional` | 325 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 56 |
+| `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1026 |
+| `unaudited` | 1025 |
 
 | criticality | count |
 |---|---:|
@@ -604,6 +604,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `three_family_card_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `wilson_mu2_distance_sweep_note_2026-04-11` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `dm_continuum_limit_velocity_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -8496,6 +8497,18 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** The independent wide-lattice replay at h = 0.25, W = 12, L = 12 gives 10/10 TOWARD distance support, far-tail b^(-1.05) with R^2 = 0.990, and F~M exponent 1.000.  _(class `C`)_
 - **chain closes:** True — The live replay reproduces the frozen sanity checks, distance rows, peak/far-tail fits, and mass-scaling sweep. The note explicitly limits the result to a finite-lattice frontier replay and disclaims a continuum theorem or exact exponent proof.
 - **rationale:** The runner supports the retained frontier claim as scoped. It independently computes the wide ordered-3D h^2+T replay on main and reproduces Born approximately 4.82e-15, k=0 zero, 10/10 attractive distance rows, peak-tail exponent -0.95, far-tail exponent -1.05, and linear F~M scaling. This audit certifies only that finite-lattice replay, not an exact Newtonian exponent or continuum-limit theorem.
+- **auditor confidence:** high
+
+### `wilson_mu2_distance_sweep_note_2026-04-11`
+
+- **Note:** [`WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md`](../../docs/WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-b-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The steep open-lattice exponent at mu^2 = 0.22 is screening-controlled, and as screening is reduced the law approaches Newton-compatible d^-2 while the mutual-attraction channel remains present.  _(class `C`)_
+- **chain closes:** False — The registered runner's sweep surface does not match the note's numerical table: the runner uses mu^2 values 0.22, 0.05, 0.01, 0.005, and 0.001, while the note reports 0.10 and 0.0 and omits 0.005. There is no PASS/assertion surface tying the note's headline exponents to current registered output.
+- **rationale:** Issue: the load-bearing exponent table is stale relative to the registered runner surface and current output was not available from the long sweep during this restricted audit. Why this blocks: the conclusion that the exponent monotonically softens through the reported mu^2=0.10 and mu^2=0.0 points cannot be claimed from the current runner. Repair target: sync the note and runner sweep values, add assertions or stored current output for the fitted exponents, and rerun the registered script. Claim boundary until fixed: it may be cited only as an attempted Wilson distance-law calibration with unsynchronized numerics, not as an audited screening-control result.
 - **auditor confidence:** high
 
 ### `wilson_two_body_open_note_2026-04-11`
