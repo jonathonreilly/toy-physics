@@ -215,10 +215,7 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
             )
             terminal_second_pass_blocker = "cross_confirmation_disagreement"
 
-    third_pass = (
-        prior_cross_confirmation_status == "disagreement"
-        and row.get("blocker") == "cross_confirmation_disagreement"
-    )
+    third_pass = prior_cross_confirmation_status == "disagreement"
     if third_pass:
         if independence == "weak":
             return False, "third-auditor confirmation requires independence != 'weak'"
@@ -288,7 +285,12 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     # First audit on a critical claim with audited_clean lands as
     # audit_in_progress and waits for a second independent auditor.
     # Second matching audit promotes to audited_clean.
-    if verdict == "audited_clean" and criticality == "critical" and not critical_second_pass:
+    if (
+        verdict == "audited_clean"
+        and criticality == "critical"
+        and not critical_second_pass
+        and not third_pass
+    ):
         prior = row.get("cross_confirmation") or {}
         first = prior.get("first_audit")
         if first is None:

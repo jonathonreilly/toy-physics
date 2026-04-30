@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-30T15:54:36.718875+00:00",
+  "computed_at": "2026-04-30T17:15:52.033800+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -25,20 +25,21 @@
   ],
   "cycles_detected": 59,
   "effective_status_counts": {
-    "audited_conditional": 539,
+    "audited_conditional": 365,
     "audited_decoration": 5,
-    "audited_failed": 170,
+    "audited_failed": 362,
     "audited_numerical_match": 20,
-    "audited_renaming": 41,
+    "audited_renaming": 30,
     "bounded": 174,
     "open": 11,
-    "proposed_retained": 4,
-    "retained": 80,
-    "support": 123,
-    "unknown": 406
+    "proposed_retained": 3,
+    "retained": 81,
+    "support": 118,
+    "unknown": 404
   },
-  "proposed_demoted_by_upstream_count": 132,
+  "proposed_demoted_by_upstream_count": 153,
   "proposed_demoted_by_upstream_examples": [
+    "alpha_s_derived_note",
     "area_law_quarter_broader_no_go_note_2026-04-25",
     "atomic_hydrogen_helium_probe_note",
     "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
@@ -50,6 +51,8 @@
     "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
     "chiral_walk_synthesis_2026-04-10_addendum",
     "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
+    "ckm_atlas_axiom_closure_note",
+    "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
     "ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25",
     "ckm_barred_circumradius_exact_closed_form_theorem_note_2026-04-25",
     "ckm_barred_napoleon_triangles_exact_closed_form_theorem_note_2026-04-25",
@@ -57,12 +60,9 @@
     "ckm_barred_pedoe_similarity_deficit_closed_form_theorem_note_2026-04-25",
     "ckm_barred_triangle_pythagorean_rho_lambda_sum_rule_theorem_note_2026-04-25",
     "ckm_barred_weitzenbock_brocard_polynomial_closed_form_theorem_note_2026-04-25",
+    "ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25",
     "ckm_brocard_polynomial_vieta_structural_integers_theorem_note_2026-04-25",
     "ckm_brocard_q_polynomial_perfect_square_decomposition_theorem_note_2026-04-25",
-    "ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25",
-    "ckm_compound_magnitudes_circumradius_bridge_theorem_note_2026-04-25",
-    "ckm_cp_product_alpha_s_cross_sector_extraction_theorem_note_2026-04-25",
-    "ckm_cubic_bernoulli_koide_bridge_support_note_2026-04-25",
-    "ckm_ew_lattice_a4_bridge_retained_identity_note_2026-04-25"
+    "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25"
   ]
 }

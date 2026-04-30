@@ -161,10 +161,11 @@ def main() -> int:
                 )
             if criticality == "critical":
                 xc = row.get("cross_confirmation") or {}
-                if xc.get("status") != "confirmed":
+                xc_status = xc.get("status")
+                if xc_status not in {"confirmed", "third_confirmed_first", "third_confirmed_second"}:
                     errors.append(
-                        f"{cid}: critical claim requires cross_confirmation.status='confirmed'; "
-                        f"got {xc.get('status')!r}"
+                        f"{cid}: critical claim requires confirmed cross-confirmation; "
+                        f"got {xc_status!r}"
                     )
                 else:
                     first = xc.get("first_audit") or {}
@@ -183,6 +184,25 @@ def main() -> int:
                             f"{cid}: same-family critical cross-confirmation requires "
                             "second_audit.independence='fresh_context'"
                         )
+                    if xc_status in {"third_confirmed_first", "third_confirmed_second"}:
+                        third = xc.get("third_audit") or {}
+                        if not third:
+                            errors.append(f"{cid}: {xc_status} requires third_audit")
+                        elif third.get("auditor") in {first.get("auditor"), second.get("auditor")}:
+                            errors.append(
+                                f"{cid}: third audit reused auditor identity/session "
+                                f"{third.get('auditor')!r}"
+                            )
+                        elif (
+                            third.get("auditor_family")
+                            and third.get("auditor_family")
+                            in {first.get("auditor_family"), second.get("auditor_family")}
+                            and third.get("independence") != "fresh_context"
+                        ):
+                            errors.append(
+                                f"{cid}: same-family third audit requires "
+                                "third_audit.independence='fresh_context'"
+                            )
 
         # Criticality bump after audit (warn that re-audit may be needed).
         snap = row.get("audit_state_snapshot")
