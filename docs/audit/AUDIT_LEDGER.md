@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:10:03.239226+00:00
+**Generated:** 2026-04-30T19:10:10.564125+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,25 +21,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 340 |
+| bounded | 339 |
 | support | 267 |
 | open | 17 |
 | unknown | 47 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 615 |
+| ~~audited_conditional~~ | 616 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 126 |
-| `audited_conditional` | 328 |
+| `audited_conditional` | 329 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1020 |
+| `unaudited` | 1019 |
 
 | criticality | count |
 |---|---:|
@@ -333,6 +333,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_chamber_bound_derivation_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -2874,6 +2875,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The selector boundary rests on the claim that the current DM lane has no further exact scale-selection law, so the current bank gives an interval rather than a selector.  _(class `C`)_
 - **chain closes:** False — The endpoint and disjoint-output calculations close, but the restricted inputs do not prove the exhaustive absence of another current-bank scale-selection law. The runner records that absence as an asserted pass rather than deriving it.
 - **rationale:** Issue: the no-selector conclusion depends on an unproved current-bank completeness/absence premise. Why this blocks: disjoint endpoint images show an interval, but they do not by themselves exclude a separate exact selector elsewhere in the bank. Repair target: add a theorem and runner that enumerates the current-bank DM scale-selection data and proves no allowed selector exists. Claim boundary until fixed: the two endpoint images and their disjoint certified Omega_DM intervals are supported; theorem-grade no-selector closure remains conditional.
+- **auditor confidence:** high
+
+### `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17`
+
+- **Note:** [`DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md`](../../docs/DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-d-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The thermal layer is claimed to be closed at evaluation/bounding strength by combining exact integral representation, exact monotonicity, and exact positive-series/tail enclosures.  _(class `C`)_
+- **chain closes:** False — The runner certifies the current endpoint/root numerics, including the observed-target bracket, but the restricted ledger supplies no one-hop authorities for the component representation, monotonicity, and tail-enclosure theorems. The source note therefore imports those component closures as premises.
+- **rationale:** Issue: theorem-grade bounding closure relies on component theorems that are named but not provided as ledger dependencies in the restricted audit context. Why this blocks: the endpoint enclosures and unique-root interval are only as strong as the imported integral, monotonicity, and tail machinery. Repair target: register the component theorem notes as dependencies or inline the derivations with a runner that exposes those checks directly. Claim boundary until fixed: the current runner output supports narrow endpoint/root intervals conditional on the component closures.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16`
