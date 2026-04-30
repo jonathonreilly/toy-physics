@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T11:45:07.074676+00:00
+**Generated:** 2026-04-30T11:47:35.696142+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -35,12 +35,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 236 |
+| `audited_conditional` | 237 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1152 |
+| `unaudited` | 1151 |
 
 | criticality | count |
 |---|---:|
@@ -236,6 +236,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `down_type_mass_ratio_ckm_dual_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
 | `early_family_transfer_connectivity_diagnosis` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `emergent_lorentz_invariance_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `fine_h_family_universality_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1895,6 +1896,23 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `PMNS_GRAPH_FIRST_CYCLE_FRAME_SUPPORT_NOTE.md`
   - `DM_WILSON_TO_DWEH_LOCAL_CHAIN_PATH_ALGEBRA_TARGET_NOTE_2026-04-18.md`
   - `DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md`
+- **auditor confidence:** high
+
+### `down_type_mass_ratio_ckm_dual_note`
+
+- **Note:** [`DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`](../../docs/DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-critical-sweep-20260430-rerun`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The CKM dual lane uses m_d/m_s=alpha_s(v)/2 and m_s/m_b=[alpha_s(v)/sqrt(6)]^(6/5) as bounded bridge-conditioned mass-ratio formulas.  _(class `G`)_
+- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md, ALPHA_S_DERIVED_NOTE.md, CKM_ATLAS_AXIOM_CLOSURE_NOTE.md, CKM_FROM_MASS_HIERARCHY_NOTE.md.
+- **rationale:** Issue: The load-bearing step still imports unratified direct authority: QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md, ALPHA_S_DERIVED_NOTE.md, CKM_ATLAS_AXIOM_CLOSURE_NOTE.md, CKM_FROM_MASS_HIERARCHY_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
+- **open / conditional deps cited:**
+  - `QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md`
+  - `ALPHA_S_DERIVED_NOTE.md`
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `CKM_FROM_MASS_HIERARCHY_NOTE.md`
 - **auditor confidence:** high
 
 ### `early_family_transfer_connectivity_diagnosis`
