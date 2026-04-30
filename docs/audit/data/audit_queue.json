@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 295,
+    "leaf": 294,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:35:25.536008+00:00",
+  "generated_at": "2026-04-30T19:35:31.217949+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13548,23 +13548,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "lattice_3d_l2_numpy_h0125_bridge_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/LATTICE_3D_L2_NUMPY_H0125_BRIDGE_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/lattice_3d_l2_numpy_h0125_bridge.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "lattice_gravity_resolution_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -18329,6 +18312,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 440,
-  "total_pending": 821
+  "ready_count": 439,
+  "total_pending": 820
 }
