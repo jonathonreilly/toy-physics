@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:43:58.177147+00:00
+**Generated:** 2026-04-30T18:44:35.587623+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 107 |
+| `audited_clean` | 108 |
 | `audited_conditional` | 304 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1064 |
+| `unaudited` | 1063 |
 
 | criticality | count |
 |---|---:|
@@ -110,6 +110,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_first_spin_statistics_theorem_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `bmv_entanglement_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `bmv_threebody_note_2026-04-11` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `causal_field_portability_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -1361,6 +1362,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `CAUSAL_ESCAPE_WINDOW_NOTE.md_not_registered_one_hop`
   - `diamond_NV_lab_bridge_notes_not_registered_one_hop`
   - `causal_field_primary_runner_not_registered`
+- **auditor confidence:** high
+
+### `causal_field_portability_note`
+
+- **Note:** [`CAUSAL_FIELD_PORTABILITY_NOTE.md`](../../docs/CAUSAL_FIELD_PORTABILITY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop:medium-sweep-2026-04-30-03`  (codex-current; independence=cross_family)
+- **load-bearing step:** The runner-computed ratio spreads, forward-only spread 0.423 and dynamic(c=0.5)/instantaneous spread 0.352, diagnose a family boundary rather than cross-family portability.  _(class `C`)_
+- **chain closes:** True — The note is support-tier and its conclusion is the negative/boundary read of the current runner output. The runner recomputes the exact-null controls and the three-family instantaneous, forward, and dynamic ratios printed in the source note.
+- **rationale:** The support claim closes as a finite diagnostic: exact-null controls remain zero, while the forward-only and finite-cone ratios split across the three grown families. The note does not promote a cross-family portability law; it records the opposite boundary, which follows from the current runner output. The archived causal-field context is not needed as a live upstream theorem for this bounded family-boundary observation.
 - **auditor confidence:** high
 
 ### `causal_moving_unification_note`
