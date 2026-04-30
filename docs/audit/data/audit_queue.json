@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 1,
-    "high": 202,
+    "high": 201,
     "leaf": 287,
     "medium": 289
   },
-  "generated_at": "2026-04-30T22:43:27.885545+00:00",
+  "generated_at": "2026-04-30T22:44:46.811772+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -351,23 +351,6 @@
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "atomic_rydberg_dependency_firewall_note_2026-04-27",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 5,
-      "load_bearing_score": 6.5,
-      "note_path": "docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_atomic_rydberg_dependency_firewall.py",
-      "transitive_descendants": 15
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -17848,6 +17831,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 396,
-  "total_pending": 779
+  "ready_count": 395,
+  "total_pending": 778
 }

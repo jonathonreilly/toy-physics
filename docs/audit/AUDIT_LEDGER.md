@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:43:28.058863+00:00
+**Generated:** 2026-04-30T22:44:47.000754+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 82 |
-| _proposed_retained_ | 4 |
+| **retained** | 83 |
+| _proposed_retained_ | 3 |
 | bounded | 276 |
 | support | 241 |
 | open | 18 |
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 218 |
+| `audited_clean` | 219 |
 | `audited_conditional` | 474 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 779 |
+| `unaudited` | 778 |
 
 | criticality | count |
 |---|---:|
@@ -102,6 +102,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-gpt-5 | A | - |
 | `atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `atomic_lane2_physical_unit_limit_boundary_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `atomic_rydberg_dependency_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | D | - |
 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
@@ -1389,6 +1390,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `lanes/open_science/03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md`
   - `lanes/open_science/06_CHARGED_LEPTON_MASS_RETENTION_OPEN_LANE_2026-04-26.md`
   - `lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md`
+- **auditor confidence:** high
+
+### `atomic_rydberg_dependency_firewall_note_2026-04-27`
+
+- **Note:** [`ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md`](../../docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-36`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Under the current Lane 2 repo state, direct substitution of retained alpha_EM(M_Z) into the standard Rydberg formula misses the atomic scale by about 15%, while m_e and alpha(0) remain unretained; therefore a framework-derived Rydberg claim is blocked until those dependencies and the physical-unit atomic limit are retained.  _(class `D`)_
+- **chain closes:** True — The runner verifies the standard formula with textbook m_e and alpha(0), shows direct alpha_EM(M_Z) substitution shifts the ground-state energy by +15.21%, checks that Lane 2 marks framework m_e absent and scaffold-only, and confirms the usable derived values index has alpha_EM(M_Z) but no atomic alpha(0) closure.
+- **rationale:** Clean as an exact negative dependency firewall. The row does not claim hydrogen or the Rydberg constant is derived; it proves the opposite boundary under the current repo state. The registered runner exits 0 with 12/12 checks passing and shows that electron mass retention, low-energy alpha(0) or QED running from alpha_EM(M_Z), and the physical-unit nonrelativistic Schrodinger/Coulomb limit remain load-bearing. Residual risk is only downstream scope control: this retained firewall must not be cited as an atomic-scale prediction.
 - **auditor confidence:** high
 
 ### `audited_symmetry_synthesis_note`
