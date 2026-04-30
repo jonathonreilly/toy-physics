@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 438,
+    "leaf": 437,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:20:41.451546+00:00",
+  "generated_at": "2026-04-30T19:20:47.404329+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -12897,23 +12897,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.822,
-      "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ATOMIC_WITNESS_VOLUME_SELECTOR_NONREALIZATION_NOTE_2026-04-18.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization.py",
-      "transitive_descendants": 4
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20806,6 +20789,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 578,
-  "total_pending": 964
+  "ready_count": 577,
+  "total_pending": 963
 }
