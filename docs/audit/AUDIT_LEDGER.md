@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:19:19.226330+00:00
+**Generated:** 2026-04-30T22:20:36.619592+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,25 +20,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 82 |
-| _proposed_retained_ | 6 |
+| _proposed_retained_ | 5 |
 | bounded | 278 |
 | support | 247 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 743 |
+| ~~audited_conditional~~ | 744 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 214 |
-| `audited_conditional` | 465 |
+| `audited_conditional` | 466 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 793 |
+| `unaudited` | 792 |
 
 | criticality | count |
 |---|---:|
@@ -720,6 +720,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `single_axiom_hilbert_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `sixth_family_distance_law_third_vs_sixth_quick_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `source_resolved_generated_support_recovery_basin_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_propagating_green_pocket_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_wavefield_escalation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -10360,6 +10361,21 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
   - `SIXTH_FAMILY_SHEARED_NOTE.md`
   - `SIXTH_FAMILY_SHEARED_BOUNDARY_NOTE.md`
   - `DISTANCE_LAW_BREAKPOINT_NOTE.md`
+- **auditor confidence:** high
+
+### `sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26`
+
+- **Note:** [`SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md`](../../docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-22`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Gauge invariance of bar F_L S f_R with one Higgs doublet selects exactly bar Q_L tilde H u_R, bar Q_L H d_R, bar L_L H e_R, and bar L_L tilde H nu_R, leaving generation matrices free.  _(class `B`)_
+- **chain closes:** False — The runner verifies the local color, SU(2), doubled-hypercharge, neutral-Higgs-component, and generation-matrix bookkeeping, but exits nonzero because the EW Higgs authority is not on the expected clean/standalone-positive status surface. The row also imports the hypercharge table and one-Higgs EW bookkeeping as unregistered one-hop authorities, and those rows are not audited clean in the ledger.
+- **rationale:** Issue: the gauge-selection enumeration itself passes, but the proposed-retained theorem depends on upstream hypercharge and one-Higgs EW authority rows that are unaudited or audited_conditional, and the primary runner exits nonzero on the EW Higgs authority guardrail. Why this blocks: exact charge bookkeeping can be cited as conditional support, but retained audit status cannot propagate through unclean or unregistered inputs. Repair target: audit/repair the STANDARD_MODEL_HYPERCHARGE_UNIQUENESS and EW_HIGGS_GAUGE_MASS_DIAGONALIZATION authority rows, register them as dependencies, then rerun this gauge-selection runner. Claim boundary until fixed: conditional one-Higgs SM Dirac-Yukawa operator skeleton from the supplied charge table; no Yukawa values, flavor textures, CKM/PMNS entries, or top normalization.
+- **open / conditional deps cited:**
+  - `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
+  - `EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md`
 - **auditor confidence:** high
 
 ### `source_resolved_generated_support_recovery_basin_note`
