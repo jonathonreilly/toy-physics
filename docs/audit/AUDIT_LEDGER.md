@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:13:13.869914+00:00
+**Generated:** 2026-04-30T03:16:00.934346+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 199 |
 | support | 100 |
 | open | 23 |
-| unknown | 497 |
+| unknown | 493 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 53 |
-| ~~audited_conditional~~ | 414 |
+| ~~audited_conditional~~ | 418 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 188 |
+| `audited_conditional` | 189 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1228 |
+| `unaudited` | 1227 |
 
 | criticality | count |
 |---|---:|
@@ -308,6 +308,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `planck_target3_clifford_phase_bridge_theorem_note_2026-04-25` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
 | `poisson_3d_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4090,6 +4091,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `Gauss_asymptotic_monopole_readout_and_exterior_observability_additivity_source_charge_theorem_not_registered`
   - `primitive_boundary_Wald_carrier_identification_c_cell_equals_1_over_4_to_1_over_4G_lambda_not_registered_as_audited_clean`
   - `conventional_lP_squared_equals_Gphys_target_definition_external_not_a_CL3_derivation`
+- **auditor confidence:** high
+
+### `planck_target3_clifford_phase_bridge_theorem_note_2026-04-25`
+
+- **Note:** [`PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`](../../docs/PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Under the explicit primitive metric-compatible Clifford/coframe response premise on the rank-four active block, the runner constructs Cl_4 generators, verifies irreducibility and CAR equivalence, excludes non-CAR rank-four readings by the coframe law, and checks c_Widom=c_cell=1/4 with source-unit natural-unit normalization.  _(class `B`)_
+- **chain closes:** False — The bridge closes the CAR/1/4 coefficient only on the stated coframe-response surface; it does not derive that coframe response from the retained Cl(3)/Z^3 input, does not independently close the primitive-CAR edge theorem or source-unit normalization, and does not derive an SI value of hbar.
+- **rationale:** Issue: the note is a correct conditional bridge, but its decisive metric-compatible active coframe response is an explicit premise rather than an audited derived consequence. Why this blocks: without that premise the earlier Hilbert-only rank-four ambiguity remains, while the Planck-unit conclusions also import primitive-CAR edge and source-unit normalization support. Repair target: audit or derive the active-block coframe-response forcing theorem, register the primitive-CAR edge and source-unit normalization dependencies, and keep SI hbar/metrology wording out of the structural claim. Claim boundary until fixed: conditional Target 3 Clifford/CAR bridge with c_Widom=c_cell=1/4 and natural-unit G_lat=a/l_P=1, not standalone Target 3 or SI hbar closure.
+- **open / conditional deps cited:**
+  - `primitive metric-compatible Clifford/coframe response on P_A H_cell`
+  - `primitive-CAR edge identification theorem`
+  - `source-unit normalization theorem`
+  - `Target 3 Hilbert-only boundary theorem remains the fallback without the coframe premise`
 - **auditor confidence:** high
 
 ### `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25`
