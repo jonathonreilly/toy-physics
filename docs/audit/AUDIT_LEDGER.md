@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:02:30.403535+00:00
+**Generated:** 2026-04-30T01:17:08.570252+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 78 |
-| _proposed_retained_ | 21 |
+| _proposed_retained_ | 20 |
 | bounded | 215 |
 | support | 108 |
 | open | 24 |
@@ -28,18 +28,18 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 440 |
+| ~~audited_conditional~~ | 441 |
 | ~~audited_failed~~ | 89 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 78 |
-| `audited_conditional` | 145 |
+| `audited_conditional` | 146 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 12 |
-| `audited_renaming` | 9 |
+| `audited_renaming` | 8 |
 | `unaudited` | 1290 |
 
 | criticality | count |
@@ -82,7 +82,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 15 | `left_handed_charge_matching_note` | critical | 247 | 17.45 | `unaudited` | ~~audited_conditional~~ |
 | 16 | `anomaly_forces_time_theorem` | critical | 243 | 17.43 | `unaudited` | ~~audited_conditional~~ |
 | 17 | `ckm_atlas_axiom_closure_note` | critical | 72 | 17.19 | `unaudited` | ~~audited_conditional~~ |
-| 18 | `minimal_axioms_2026-04-11` | critical | 102 | 17.19 | `audited_renaming` | ~~audited_renaming~~ |
+| 18 | `minimal_axioms_2026-04-11` | critical | 102 | 17.19 | `unaudited` | ~~audited_renaming~~ |
 | 19 | `native_gauge_closure_note` | critical | 280 | 16.63 | `unaudited` | ~~audited_conditional~~ |
 | 20 | `plaquette_self_consistency_note` | critical | 286 | 16.16 | `unaudited` | ~~audited_conditional~~ |
 | 21 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 116 | 15.87 | `unaudited` | ~~audited_conditional~~ |
@@ -224,6 +224,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `generation_axiom_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `graph_first_selector_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -390,7 +391,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `g_bare_rigidity_theorem_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `higgs_mass_from_axiom_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
-| `minimal_axioms_2026-04-11` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | E | - |
 | `s3_time_bilinear_tensor_primitive_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_qg_optional_textbook_comparison_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
@@ -1933,6 +1933,24 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md`
 - **auditor confidence:** high
 
+### `generation_axiom_boundary_note`
+
+- **Note:** [`GENERATION_AXIOM_BOUNDARY_NOTE.md`](../../docs/GENERATION_AXIOM_BOUNDARY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** exact observable separation + no-proper-quotient closure + accepted Hilbert semantics already force the retained hw=1 triplet to be physically distinct species sectors of the accepted theory  _(class `F`)_
+- **chain closes:** False — The source note depends on accepted Hilbert semantics and stronger closure from other named notes, while the audit row provides no one-hop authorities. The runner checks exact algebraic/computational properties and then asserts the physical-species semantics as LOGICAL input rather than deriving that bridge in this packet.
+- **rationale:** Issue: the load-bearing physical-species conclusion imports accepted Hilbert semantics plus the stronger physical-lattice/observable closure from other notes that are not one-hop dependencies here. Why this blocks: the claim cannot be ratified from this note alone when the runner's decisive bridge is a LOGICAL assertion and the cited closure surfaces are themselves not retained in the effective ledger. Repair target: add explicit dependencies on the retained physical-lattice and three-generation observable theorems, and make the runner construct the physical-readout/no-quotient bridge rather than asserting it. Claim boundary until fixed: this remains a reduced-stack witness and consistency check for the generation boundary, not an independently retained closure theorem.
+- **open / conditional deps cited:**
+  - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
+  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
+  - `THREE_GENERATION_STRUCTURE_NOTE.md`
+  - `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`
+  - `ANOMALY_FORCES_TIME_THEOREM.md`
+- **auditor confidence:** high
+
 ### `geometry_superposition_dag_ensemble_note_2026-04-11`
 
 - **Note:** [`GEOMETRY_SUPERPOSITION_DAG_ENSEMBLE_NOTE_2026-04-11.md`](../../docs/GEOMETRY_SUPERPOSITION_DAG_ENSEMBLE_NOTE_2026-04-11.md)
@@ -2945,37 +2963,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The live probe shows escape_fraction(alpha) falls below 50% by alpha=0.10 while the alpha=0 weak-field recovery check gives 3/3 TOWARD and F~M=1.00 on the tested generated-geometry family.  _(class `C`)_
 - **chain closes:** False — The bounded proxy computation closes, but the queued proposed_retained claim does not: the note itself calls this a bounded moonshot trapping probe, and the absorption parameter is an inserted proxy rather than a derived horizon mechanism.
 - **rationale:** Issue: The source is explicitly a bounded moonshot trapping probe on a proposed_retained generated-geometry family, but its branch verdict says it produces a retained threshold. The live runner inserts an absorptive parameter alpha and measures escape fraction; it does not derive an absorbing horizon law or black-hole observable from retained inputs. Why this blocks: a hand-added absorption proxy with one finite family, four seeds, and three source positions cannot be ratified as a retained horizon/trapping theorem. Repair target: either correct the Status/current_status to bounded/proposed_bounded, or derive the absorption law from retained dynamics and show the threshold is a framework-native strong-field observable with clean weak-field reduction and audited dependencies. Claim boundary until fixed: it is safe to claim the live artifact reproduces alpha=0 weak-field recovery and a proxy escape threshold below 50% at alpha ~= 0.10 on this setup; it is not safe to call this a retained horizon theorem or full black-hole mechanism.
-- **auditor confidence:** high
-
-### `minimal_axioms_2026-04-11`
-
-- **Note:** [`MINIMAL_AXIOMS_2026-04-11.md`](../../docs/MINIMAL_AXIOMS_2026-04-11.md)
-- **current_status:** unknown
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The source declares the package's minimal accepted input stack: local algebra Cl(3), spatial substrate Z^3, finite local Grassmann/staggered-Dirac dynamics, and canonical normalization/evaluation surface g_bare=1 with the plaquette/u0 and APBC hierarchy surfaces.  _(class `E`)_
-- **chain closes:** False — The memo records and names the current framework inputs rather than deriving them from the cited authorities, and many cited authorities are support, bounded, conditional, renaming, unknown, or otherwise not audit-retained after replay.
-- **rationale:** Issue: the load-bearing step is a declaration of accepted framework inputs and retained consequences, not a derivation from audit-clean one-hop authorities. Why this blocks: after dependency weakening, the memo imports g_bare, physical-lattice, observable, alpha_s/R_conn/YT/Higgs, and related surfaces whose effective statuses include support, proposed_retained, audited_conditional, audited_renaming, bounded, and unknown rather than a retained dependency chain. Repair target: replace the memo-level declarations with explicit retained theorem dependencies for each framework input, or keep the file as a framework index rather than a ratifiable derivation. Claim boundary until fixed: this file may summarize the current input stack and route readers to candidate authorities, but it cannot itself serve as an audit-clean derivation of those minimal axioms or quantitative consequences.
-- **open / conditional deps cited:**
-  - `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`
-  - `G_BARE_RIGIDITY_THEOREM_NOTE.md`
-  - `G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md`
-  - `G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md`
-  - `G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`
-  - `G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md`
-  - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
-  - `GENERATION_AXIOM_BOUNDARY_NOTE.md`
-  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
-  - `ALPHA_S_DERIVED_NOTE.md`
-  - `RCONN_DERIVED_NOTE.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
-  - `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`
-  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
-  - `YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md`
-  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
-  - `HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md`
 - **auditor confidence:** high
 
 ### `minimal_bidirectional_trapping_probe_note`
