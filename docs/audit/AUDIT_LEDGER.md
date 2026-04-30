@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:35:09.265677+00:00
+**Generated:** 2026-04-30T22:36:21.649238+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 82 |
 | _proposed_retained_ | 5 |
 | bounded | 277 |
-| support | 242 |
+| support | 241 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 750 |
-| ~~audited_failed~~ | 122 |
+| ~~audited_conditional~~ | 746 |
+| ~~audited_failed~~ | 127 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 215 |
 | `audited_conditional` | 472 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 58 |
+| `audited_failed` | 59 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 785 |
+| `unaudited` | 784 |
 
 | criticality | count |
 |---|---:|
@@ -820,6 +820,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mesoscopic_surrogate_h025_constrained_localization_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `minimal_absorbing_horizon_probe_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `minimal_bidirectional_trapping_probe_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `monopole_derived_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | C | - |
 | `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -9099,6 +9100,24 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The boundary mirror family is a Born-clean, gravity-positive, decohering pocket through N=100, with canonical exponent fit alpha=-0.245 but no bounded asymptotic claim.  _(class `G`)_
 - **chain closes:** False — The claim is a finite fitted window on a selected mirror configuration, and the source itself reports a weak non-monotone fit with R^2=0.126. No primary runner or one-hop dependencies are registered in the ledger row.
 - **rationale:** Issue: the retained surface depends on a selected dense-boundary mirror parameter pocket and a weak descriptive fit, with no registered runner/log reproduction in the audit row. Why this blocks: finite fitted rows with poor monotonicity and R^2=0.126 do not establish a retained family theorem or asymptotic law. Repair target: register the mirror runner and canonical log as audit artifacts, recompute the retained rows, and either state this as bounded finite-window evidence or derive a stable pocket-selection/asymptotic criterion. Claim boundary until fixed: safe as a bounded report of the N=40..100 mirror pocket and gravity wall at N=120; not safe as proposed-retained mirror boundary science.
+- **auditor confidence:** high
+
+### `monopole_derived_note`
+
+- **Note:** [`MONOPOLE_DERIVED_NOTE.md`](../../docs/MONOPOLE_DERIVED_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-30`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The compact-lattice self-energy chain derives a runner-consistent magnetic monopole mass M_mono ~ 0.80 M_Planck on the current Planck-scale package pin, with Dirac quantization automatic and overclosure requiring inflation.  _(class `C`)_
+- **chain closes:** False — The live runner no longer reproduces the source headline. It computes alpha_EM^{-1}(M_Pl)=72.1 under its current one-loop branch and reports M_mono=1.43 M_Planck, while the note and parts of the runner synthesis still advertise the older 0.80 M_Planck value tied to alpha_EM^{-1}~40.
+- **rationale:** Issue: the source headline and current registered runner disagree on the monopole mass. The note claims M_mono ~ 0.80 M_Planck = 9.8e18 GeV using alpha_EM^{-1}(M_Pl) ~ 40, but the live runner computes alpha_EM^{-1}(M_Pl)=72.1, beta=5.738, and M_mono=1.43 M_Planck = 1.75e19 GeV; the runner's own synthesis also remains internally stale by labeling M ~ 0.8 M_Pl after printing 1.43 M_Pl. Why this blocks: the advertised derived mass and downstream overclosure numerics cannot be audited from a runner that now produces a different central value and contains inconsistent summary text. Repair target: choose and justify the Planck-scale alpha_EM input, update the note and runner summaries to one value, rerun the mass/overclosure tables, and separately validate the lattice self-energy coefficient and finite-volume Wilson-action cross-check. Claim boundary until fixed: compact U(1) cube-charge integrality and the Dirac product check are useful support; the sensitivity table shows a conditional ~0.79 M_Pl value if alpha_EM^{-1}=40 is imposed, but no current runner-consistent 0.80 M_Pl monopole mass theorem is available.
+- **open / conditional deps cited:**
+  - `alpha_EM_MPlanck_authority_or_pin`
+  - `lattice_monopole_self_energy_coefficient_authority`
+  - `Planck_scale_lattice_spacing_authority`
+  - `Wilson_action_monopole_core_model`
+  - `FRW_Kibble_overclosure_model`
 - **auditor confidence:** high
 
 ### `moonshot_other_testables_note`

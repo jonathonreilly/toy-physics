@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 1,
-    "high": 208,
+    "high": 207,
     "leaf": 287,
     "medium": 289
   },
-  "generated_at": "2026-04-30T22:35:09.074817+00:00",
+  "generated_at": "2026-04-30T22:36:21.469868+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -265,23 +265,6 @@
       "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 34
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "monopole_derived_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 5,
-      "load_bearing_score": 7.629,
-      "note_path": "docs/MONOPOLE_DERIVED_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_monopole_derived.py",
       "transitive_descendants": 34
     },
     {
@@ -17950,6 +17933,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 402,
-  "total_pending": 785
+  "ready_count": 401,
+  "total_pending": 784
 }
