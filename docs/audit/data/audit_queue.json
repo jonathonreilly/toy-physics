@@ -1,29 +1,12 @@
 {
   "by_criticality": {
     "critical": 0,
-    "high": 236,
+    "high": 235,
     "leaf": 286,
     "medium": 289
   },
-  "generated_at": "2026-04-30T21:42:01.549699+00:00",
+  "generated_at": "2026-04-30T21:43:03.779977+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 11,
-      "load_bearing_score": 10.959,
-      "note_path": "docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py",
-      "transitive_descendants": 43
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
@@ -18159,6 +18142,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 430,
-  "total_pending": 811
+  "ready_count": 429,
+  "total_pending": 810
 }

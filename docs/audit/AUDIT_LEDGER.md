@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T21:42:01.715410+00:00
+**Generated:** 2026-04-30T21:43:03.954825+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 206 |
+| `audited_clean` | 207 |
 | `audited_conditional` | 456 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 811 |
+| `unaudited` | 810 |
 
 | criticality | count |
 |---|---:|
@@ -254,6 +254,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `koide_q_minimal_scale_free_selector_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_no_hidden_source_audit_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
+| `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `lattice_3d_dense_refinement_reconciliation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -8179,6 +8180,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** On the normalized second-order carrier, every point has a unique reduced source K=Y^{-1}-I, K=0 iff Y=I_2, and any nonzero source is exactly the free selector parameter in disguise.  _(class `C`)_
 - **chain closes:** True — The runner verifies earlier carriers do not close Q, solves the normalized hidden-source relation, proves the zero-source point is unique, shows the nonzero source family reparameterizes the selector variable, and derives the datum-free K=0 consequence with 10/10 passes. The source note explicitly leaves physical source-freeness open.
 - **rationale:** The support audit closes on its stated boundary: no hidden nonzero source explains Q without importing the selector value, and K=0 is uniquely datum-free on the admitted normalized carrier. This does not prove retained charged-lepton physics forces the source-free carrier; that physical bridge remains outside this row.
+- **auditor confidence:** high
+
+### `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25`
+
+- **Note:** [`KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`](../../docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-02`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Strict onsite C3-invariant scalar source functions erase the Z coordinate, but the central/projected C3-commutant source grammar admits nonzero Z and therefore non-Koide Q values.  _(class `A`)_
+- **chain closes:** True — The runner verifies the finite-dimensional C3 algebra directly: onsite invariant diagonal sources are scalars, the projected Z source is C3-invariant but not onsite, the intersection is scalar, and z=-1/3 gives a live commutant counterdomain. The source note scopes this as conditional support/no-go and does not claim retained native Koide or delta closure.
+- **rationale:** The support-tier no-go synthesis closes on its stated boundary: onsite source grammar would force z=0 and Q=2/3, while the broader commutant/projected grammar still admits nonzero Z and a concrete non-Koide counterdomain. This is not algebraic decoration because the note is a negative/source-domain separation result that narrows the remaining theorem target. Residual risk is only downstream overuse: the clean audit does not retain the physical theorem that charged-lepton undeformed source data must be onsite rather than commutant/projected.
 - **auditor confidence:** high
 
 ### `koide_q_op_locality_c3_fixed_source_support_note_2026-04-27`
