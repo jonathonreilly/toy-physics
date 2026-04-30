@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 478,
+    "leaf": 477,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:16:17.376423+00:00",
+  "generated_at": "2026-04-30T19:16:23.339424+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -19728,26 +19728,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "chiral_walk_synthesis_2026-04-10_addendum",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "chiral_3plus1d_recurrence_note",
-        "chiral_3plus1d_mixing_period_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.5,
-      "note_path": "docs/CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_chiral_3plus1d_decoherence_sweep.py",
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "unified_program_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21515,5 +21495,5 @@
     }
   ],
   "ready_count": 613,
-  "total_pending": 1004
+  "total_pending": 1003
 }

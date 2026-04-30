@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:16:17.566892+00:00
+**Generated:** 2026-04-30T19:16:23.499658+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,12 +33,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 132 |
-| `audited_conditional` | 338 |
+| `audited_conditional` | 339 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1004 |
+| `unaudited` | 1003 |
 
 | criticality | count |
 |---|---:|
@@ -47,7 +47,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 381 |
 | `leaf` | 769 |
 
-- **Proposed claims demoted by upstream:** 131
+- **Proposed claims demoted by upstream:** 130
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -296,6 +296,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `chiral_bottleneck_card_proposal` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `chiral_layer_oscillation_2026-04-09` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `chiral_split_mass_gravity_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `chiral_walk_synthesis_2026-04-10_addendum` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `ckm_atlas_axiom_closure_note` | _proposed_promoted_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -2004,6 +2005,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `chiral_walk_synthesis_2026-04-10_addendum`
+
+- **Note:** [`CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md`](../../docs/CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** - **1+1D chiral:** the wide-lattice result remains strong. Exact lattice  _(class `B`)_
+- **chain closes:** False — No. One-hop dependencies are not all retained (chiral_3plus1d_recurrence_note=audited_conditional, chiral_3plus1d_mixing_period_note=audited_conditional), so the chain does not close under the leaf audit rule.
+- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (chiral_3plus1d_recurrence_note=audited_conditional, chiral_3plus1d_mixing_period_note=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared proposed_retained tier with the upstream dependency condition attached.
+- **open / conditional deps cited:**
+  - `CHIRAL_3PLUS1D_RECURRENCE_NOTE.md`
+  - `CHIRAL_3PLUS1D_MIXING_PERIOD_NOTE.md`
 - **auditor confidence:** high
 
 ### `ckm_atlas_axiom_closure_note`
