@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 476,
+    "leaf": 475,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:16:30.047033+00:00",
+  "generated_at": "2026-04-30T19:16:36.656795+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20444,29 +20444,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29",
-        "cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25",
-        "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
-        "alpha_s_derived_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/CROSS_SECTOR_A_SQUARED_KOIDE_VCB_BRIDGE_PROMOTED_VIA_V8_THEOREM_NOTE_2026-04-29.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21473,5 +21450,5 @@
     }
   ],
   "ready_count": 613,
-  "total_pending": 1002
+  "total_pending": 1001
 }
