@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 443,
+    "leaf": 442,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:20:11.013466+00:00",
+  "generated_at": "2026-04-30T19:20:17.086391+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13824,23 +13824,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_NEUTRINO_BREAKING_TRIPLET_AXIOM_LAW_ATTEMPT_NOTE_2026-04-15.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_breaking_triplet_axiom_law_attempt.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20893,6 +20876,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 582,
-  "total_pending": 969
+  "ready_count": 581,
+  "total_pending": 968
 }
