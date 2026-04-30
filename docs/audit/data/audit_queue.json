@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 237,
-    "leaf": 574,
+    "leaf": 573,
     "medium": 347
   },
-  "generated_at": "2026-04-30T15:12:23.095246+00:00",
+  "generated_at": "2026-04-30T15:12:26.591751+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -14924,23 +14924,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "architecture_portability_sweep_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/ARCHITECTURE_PORTABILITY_SWEEP_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "asymmetry_persistence_born_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -24333,6 +24316,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 755,
-  "total_pending": 1167
+  "ready_count": 754,
+  "total_pending": 1166
 }
