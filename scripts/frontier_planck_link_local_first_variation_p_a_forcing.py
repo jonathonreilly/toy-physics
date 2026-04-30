@@ -233,6 +233,16 @@ def third_composite_vector() -> np.ndarray:
     return vec
 
 
+def hodge_image_weights(star: np.ndarray, source_weight: int) -> set[int]:
+    weights: set[int] = set()
+    for col, bits in enumerate(BASIS):
+        if weight(bits) != source_weight:
+            continue
+        rows = np.flatnonzero(np.abs(star[:, col]) > TOL)
+        weights.update(weight(BASIS[int(row)]) for row in rows)
+    return weights
+
+
 def max_symmetry_error(p: np.ndarray) -> float:
     gens = spatial_generators()
     finite = [time_parity(), cpt_grading()]
@@ -351,12 +361,12 @@ def main() -> int:
     )
 
     p1_to_p3 = fro(star @ p1 @ star.conj().T - p3)
-    degree_preserved_by_star = False
+    star_image_weights = hodge_image_weights(star, 1)
     results.append(
         check(
             "4. Hodge duality is not an automorphism of the fundamental link-source domain",
-            p1_to_p3 < TOL and not degree_preserved_by_star,
-            f"*P1*=P3 error={p1_to_p3:.2e}; source degree 1 maps to degree 3",
+            p1_to_p3 < TOL and star_image_weights == {3},
+            f"*P1*=P3 error={p1_to_p3:.2e}; source degree 1 maps to weights={sorted(star_image_weights)}",
         )
     )
 

@@ -280,31 +280,44 @@ def main() -> int:
         )
     )
 
-    # A selector exists if we manually impose cochain normal primitivity, but
-    # that flag is exactly the missing premise. The runner must therefore keep
-    # it false for a substrate-only derivation.
+    p1_p3_distinct = fro(p1 - p3)
+    substrate_distinction_errors = {
+        "rank_gap": abs(one_rank - flux_rank),
+        "symmetry_gap": abs(p1_sym - p3_sym),
+        "hodge_gap": p1_to_p3,
+    }
+    substrate_selects_normal = (
+        substrate_distinction_errors["rank_gap"] > 0
+        or substrate_distinction_errors["symmetry_gap"] > TOL
+        or substrate_distinction_errors["hodge_gap"] > TOL
+    )
+    # A selector exists only after imposing cochain-normal primitivity; without
+    # that extra premise, the computed substrate tests leave P_1 and P_3 tied.
     imposed_cochain_normal_primitivity = False
-    would_select_p1_if_imposed = True
+    would_select_p1_if_imposed = p1_p3_distinct > 1.0 and not substrate_selects_normal
     results.append(
         check(
             "8. selecting P_1 requires an extra cochain-normal primitive flag",
             (not imposed_cochain_normal_primitivity) and would_select_p1_if_imposed,
-            "P1 selection works only after adding cochain-normal primitivity; substrate-only flag is false",
+            (
+                "P1 selection works only after adding cochain-normal primitivity; "
+                f"substrate distinction errors={substrate_distinction_errors}"
+            ),
         )
     )
 
     route_results = {
-        "oriented_cubical_boundary": "Hodge-dual P3 equivalent",
-        "variational_first_derivative_boundary_only": "depends on choosing u_a cochain variables",
-        "noether_current": "J one-form and *J flux form are equivalent",
-        "reflection_positive_time": "no P1/P3 carrier distinction supplied",
-        "intrinsic_active_module": "requires active block before Cl4 module",
+        "oriented_cubical_boundary": pairing_error < TOL and p1_to_p3 < TOL,
+        "variational_first_derivative_boundary_only": dual_poly_error < TOL and p1_local < TOL and p3_local < TOL,
+        "noether_current": current_flux_dual,
+        "reflection_positive_time": p1_sym < TOL and p3_sym < TOL and abs(p1_sym - p3_sym) < TOL,
+        "intrinsic_active_module": one_rank == flux_rank == 4 and p1_p3_distinct > 1.0,
     }
     results.append(
         check(
             "9. stuck fan-out exposes no substrate-only asymmetric selector",
             all(route_results.values()),
-            "; ".join(f"{k}: {v}" for k, v in route_results.items()),
+            "; ".join(f"{k}: {'PASS' if v else 'FAIL'}" for k, v in route_results.items()),
         )
     )
 
