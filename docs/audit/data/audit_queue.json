@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 9,
+    "critical": 8,
     "high": 234,
     "leaf": 571,
     "medium": 342
   },
-  "generated_at": "2026-04-30T11:42:36.278203+00:00",
+  "generated_at": "2026-04-30T11:42:39.707979+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,28 +23,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "transitive_descendants": 281
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "ckm_n9_structural_family_koide_bridge_support_note_2026-04-25",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-        "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
-        "ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25"
-      ],
-      "direct_in_degree": 16,
-      "load_bearing_score": 14.322,
-      "note_path": "docs/CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 79
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24381,5 +24359,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1156
+  "total_pending": 1155
 }
