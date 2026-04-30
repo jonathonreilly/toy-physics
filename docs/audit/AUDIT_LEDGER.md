@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T11:42:05.455193+00:00
+**Generated:** 2026-04-30T11:42:09.072301+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -35,12 +35,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 214 |
+| `audited_conditional` | 215 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1164 |
+| `unaudited` | 1163 |
 
 | criticality | count |
 |---|---:|
@@ -270,6 +270,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `grown_wavefield_failure_diagnosis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hierarchy_matsubara_decomposition_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_from_lattice_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `higgs_mass_derived_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
 | `higgs_mechanism_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `higher_order_structural_theorems_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -2900,6 +2901,22 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **open / conditional deps cited:**
   - `HIGGS_MASS_DERIVED_NOTE.md`
   - `scripts/frontier_higgs_mass_derived.py`
+- **auditor confidence:** high
+
+### `higgs_mass_derived_note`
+
+- **Note:** [`HIGGS_MASS_DERIVED_NOTE.md`](../../docs/HIGGS_MASS_DERIVED_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** For the accepted central input y_t(v)=0.9176, the full 3-loop runner gives m_H=125.1 GeV and the exact Higgs lane inherits the current YT-lane precision.  _(class `G`)_
+- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md, HIGGS_MECHANISM_NOTE.md, HIGGS_FROM_LATTICE_NOTE.md.
+- **rationale:** Issue: The load-bearing step still imports unratified direct authority: TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md, HIGGS_MECHANISM_NOTE.md, HIGGS_FROM_LATTICE_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
+- **open / conditional deps cited:**
+  - `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`
+  - `HIGGS_MECHANISM_NOTE.md`
+  - `HIGGS_FROM_LATTICE_NOTE.md`
 - **auditor confidence:** high
 
 ### `higgs_mass_from_axiom_note`

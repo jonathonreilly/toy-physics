@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 18,
+    "critical": 17,
     "high": 234,
     "leaf": 571,
     "medium": 342
   },
-  "generated_at": "2026-04-30T11:42:05.283156+00:00",
+  "generated_at": "2026-04-30T11:42:08.914389+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,27 +23,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "transitive_descendants": 281
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "higgs_mass_derived_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [
-        "taste_scalar_isotropy_theorem_note",
-        "higgs_mechanism_note",
-        "higgs_from_lattice_note"
-      ],
-      "direct_in_degree": 15,
-      "load_bearing_score": 14.241,
-      "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 106
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24594,5 +24573,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1165
+  "total_pending": 1164
 }
