@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:24:02.713230+00:00
+**Generated:** 2026-04-30T03:25:04.475062+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,14 +21,14 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
-| bounded | 197 |
+| bounded | 196 |
 | support | 100 |
 | open | 23 |
 | unknown | 492 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 53 |
-| ~~audited_conditional~~ | 421 |
+| ~~audited_conditional~~ | 422 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 382 |
 | `leaf` | 797 |
 
-- **Proposed claims demoted by upstream:** 155
+- **Proposed claims demoted by upstream:** 156
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -188,7 +188,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `chiral_3plus1d_mixing_period_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `ckm_schur_complement_theorem` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `continuum_identification_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `cosmology_scale_identification_and_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -220,6 +219,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `early_family_transfer_connectivity_diagnosis` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `emergent_lorentz_invariance_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `fine_h_family_universality_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `g_bare_derivation_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `gate_b_grown_distance_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -919,20 +919,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `standard_lattice_qcd_sommer_and_string_tension_inputs`
 - **auditor confidence:** high
 
-### `continuum_identification_note`
-
-- **Note:** [`CONTINUUM_IDENTIFICATION_NOTE.md`](../../docs/CONTINUUM_IDENTIFICATION_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The discrete-to-continuum chain for gravity is a 19-step exact identification ladder on one chosen canonical textbook target, all retained on main; the gauge sector is positioned through retained structural results plus a bounded EFT bridge.  _(class `B`)_
-- **chain closes:** False — The runner verifies presence of named notes and runners, but does not execute or audit the 19-step chain, the gauge authorities, or the EFT/universality bridge. The only ledger dependency supplied to this audit is the emergent Lorentz note, whose current status is bounded.
-- **rationale:** Issue: the claim imports a large continuum-identification authority stack and a gauge EFT bridge, but the audit packet registers only a bounded Lorentz dependency and the runner performs file-existence checks rather than theorem replay. Why this blocks: a hostile auditor cannot ratify the claimed continuum closure from this packet because the load-bearing chain status is summarized, not derived or provided as one-hop retained authorities. Repair target: register the actual 19 gravity authorities and gauge bridge authorities as ledger dependencies, require their effective statuses to be retained, and replace the audit runner with a replay/status check that verifies the load-bearing outputs rather than merely their files. Claim boundary until fixed: the note can serve as a continuum-identification index and bounded positioning statement, not as an audit-clean retained continuum theorem.
-- **open / conditional deps cited:**
-  - `EMERGENT_LORENTZ_INVARIANCE_NOTE.md`
-- **auditor confidence:** high
-
 ### `continuum_limit_note`
 
 - **Note:** [`CONTINUUM_LIMIT_NOTE.md`](../../docs/CONTINUUM_LIMIT_NOTE.md)
@@ -1620,6 +1606,22 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Using the same sign-coupled ordered-lattice propagator with an explicitly linear multi-source field, same-point opposite charges cancel, like charges reinforce, a dipole gives a reduced signed response, and doubling the source approximately doubles the response.  _(class `C`)_
 - **chain closes:** True — The live primary script reproduces the note's five printed replay cases to the shown precision: single +1, same-point +1/-1 null, symmetric +1/+1 reinforcement, +1/-1 dipole partial cancellation, and +2 source scaling. The closure is only for the explicit scalar source-superposition proxy and not for Maxwell, gauge, magnetic, or radiation structure.
 - **rationale:** The note's load-bearing claim is a finite compatibility probe, not a derivation of electromagnetism or of linear superposition from deeper retained axioms. Within that scope, the live runner recomputes the stated source combinations and matches the printed replay: exact same-point cancellation, reinforced like-pair shift, reduced signed dipole response, and nearly doubled +2 response. Residual boundary: downstream uses must treat the linear source field and scalar sign-coupled propagator as the tested setup, not as an audited Maxwell theory.
+- **auditor confidence:** high
+
+### `emergent_lorentz_invariance_note`
+
+- **Note:** [`EMERGENT_LORENTZ_INVARIANCE_NOTE.md`](../../docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** On the assumed CPT/parity-protected hierarchy surface a ~ 1/M_Planck, the runner verifies cubic Z3 staggered and Laplacian dispersion, leading O(a^2 p^4) dimension-6 anisotropy, unique l=4 cubic-harmonic angular structure, and Planck-suppressed observable Lorentz violation.  _(class `B`)_
+- **chain closes:** False — The structural-dispersion and cubic-harmonic checks close, but the observable Lorentz-invariance conclusion depends on unregistered bridge premises: exact CPT, exact/tree-level parity protection against lower-dimension LV, and the hierarchy-scale identification a ~ 1/M_Planck.
+- **rationale:** Issue: the registered runner passes the lattice dispersion and angular-structure checks, but the broad claim remains conditional on symmetry and scale bridges that are asserted rather than imported from audit-clean dependencies. Why this blocks: without one-hop ledger dependencies for CPT exactness, parity/operator-basis protection, and the Planck-scale lattice-spacing theorem, the runner's CPT/P/hierarchy checks are not independent derivations of the contested premises. Repair target: register and clean-audit those bridge notes, then update the runner to fail if any bridge is absent or conditional. Claim boundary until fixed: conditional structural theorem that cubic Z3 dispersions have leading dimension-6 l=4 anisotropy and are Planck-suppressed on the stated symmetry/scale surface, not a standalone Lorentz-invariance theorem from the lattice alone.
+- **open / conditional deps cited:**
+  - `CPT_EXACT_NOTE.md_not_registered_one_hop_dependency`
+  - `parity_operator_basis_dimension5_LV_no_go_theorem_not_registered`
+  - `hierarchy_scale_a_equals_planck_length_theorem_not_registered`
 - **auditor confidence:** high
 
 ### `equivalence_principle_harness_note`

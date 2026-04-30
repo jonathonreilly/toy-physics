@@ -5,7 +5,7 @@
     "leaf": 608,
     "medium": 340
   },
-  "generated_at": "2026-04-30T03:24:02.522013+00:00",
+  "generated_at": "2026-04-30T03:25:04.295664+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1165,23 +1165,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 31
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "emergent_lorentz_invariance_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 14,
-      "load_bearing_score": 12.322,
-      "note_path": "docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_emergent_lorentz_invariance.py",
-      "transitive_descendants": 39
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -5798,6 +5781,25 @@
       "note_path": "docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md",
       "ready": false,
       "runner_path": null,
+      "transitive_descendants": 32
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "continuum_identification_note",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "emergent_lorentz_invariance_note"
+      ],
+      "direct_in_degree": 8,
+      "load_bearing_score": 9.044,
+      "note_path": "docs/CONTINUUM_IDENTIFICATION_NOTE.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_continuum_identification_audit.py",
       "transitive_descendants": 32
     },
     {
@@ -25789,6 +25791,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 783,
+  "ready_count": 782,
   "total_pending": 1227
 }
