@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T00:15:41.232559+00:00",
-  "generated_at": "2026-04-30T00:15:39.436637+00:00",
-  "invalidation_run_at": "2026-04-30T00:15:41.175907+00:00",
+  "effective_status_computed_at": "2026-04-30T00:16:06.692862+00:00",
+  "generated_at": "2026-04-30T00:16:04.912131+00:00",
+  "invalidation_run_at": "2026-04-30T00:16:06.631016+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T00:15:41.052235+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:16:06.508777+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -66866,15 +66866,25 @@
       "verdict_rationale": null
     },
     "quark_projector_ray_phase_completion_note_2026-04-18": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T00:16:03.778927+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "quark_cp_carrier_completion_note_2026-04-18": "audited_numerical_match"
+        },
+        "deps": [
+          "quark_cp_carrier_completion_note_2026-04-18"
+        ],
+        "load_bearing_score": 10.055,
+        "transitive_descendants": 46
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop-20260430-standard",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner reproduces the bounded numerical fit, but the amplitudes and shared phase are solved against the CKM/J targets rather than derived from retained inputs.",
       "claim_id": "quark_projector_ray_phase_completion_note_2026-04-18",
       "criticality": "high",
       "cross_confirmation": null,
@@ -66886,17 +66896,19 @@
       ],
       "direct_in_degree": 9,
       "effective_status": "audited_numerical_match",
-      "effective_status_reason": "inherited_from:quark_cp_carrier_completion_note_2026-04-18",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "effective_status_reason": "self",
+      "independence": "weak",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 10.055,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Adding one shared phase closes the full quark package numerically with solved a_u, a_d, and phi_shared on the fixed projector ray.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "370b199a684fd2403401d6d92ff5575d6ec77c99ed323e175fb9f70a7814835a",
       "note_path": "docs/QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-29T11:40:10.272187+00:00",
@@ -66966,16 +66978,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 2,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 6,
+        "total_pass": 8
       },
       "runner_path": "scripts/frontier_quark_projector_ray_phase_completion.py",
       "title": "Reduced Quark Closure on a Fixed Projector Ray",
       "transitive_descendants": 46,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The full closure depends on fitted reduced amplitudes and a fitted shared phase on a projector ray, with upstream carrier completion already only a bounded numerical-match surface. Why this blocks: matching the atlas observables after solving these parameters is not a theorem forcing the quark CP carrier. Repair target: derive a_u, a_d, and phi_shared from retained projector/support inputs and have the runner construct them before comparing observables. Claim boundary until fixed: this remains a strong bounded numerical closure/compression of the carrier ansatz, not an audited-clean retained quark theorem."
     },
     "quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28": {
       "audit_date": null,
