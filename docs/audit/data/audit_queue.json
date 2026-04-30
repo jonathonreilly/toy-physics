@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 41,
-    "high": 255,
+    "high": 254,
     "leaf": 608,
     "medium": 340
   },
-  "generated_at": "2026-04-30T02:52:56.130006+00:00",
+  "generated_at": "2026-04-30T02:53:49.814142+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1165,23 +1165,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 31
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_brannen_geometry_dirac_support_note_2026-04-22",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 7,
-      "load_bearing_score": 9.522,
-      "note_path": "docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 64
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -26074,6 +26057,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 802,
-  "total_pending": 1244
+  "ready_count": 801,
+  "total_pending": 1243
 }

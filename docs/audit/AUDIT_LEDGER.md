@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:52:56.307590+00:00
+**Generated:** 2026-04-30T02:53:49.987414+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 202 |
 | support | 102 |
 | open | 24 |
-| unknown | 506 |
+| unknown | 505 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 391 |
+| ~~audited_conditional~~ | 392 |
 | ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 174 |
+| `audited_conditional` | 175 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1243 |
+| `unaudited` | 1242 |
 
 | criticality | count |
 |---|---:|
@@ -263,6 +263,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_berry_phase_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_brannen_callan_harvey_candidate_note_2026-04-22` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `koide_brannen_geometry_dirac_support_note_2026-04-22` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_full_lattice_schur_inheritance_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
@@ -2843,6 +2844,22 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`
   - `KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md`
   - `KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md`
+- **auditor confidence:** high
+
+### `koide_brannen_geometry_dirac_support_note_2026-04-22`
+
+- **Note:** [`KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`](../../docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The support stack verifies exact selected-line rotation geometry, a conditional Route-3 one-clock 2/9 Wilson-line law, and an L=3 Z3-equivariant Wilson-Dirac finite-lattice illustration of ambient eta = 2/9 per fixed site.  _(class `C`)_
+- **chain closes:** False — The geometry and finite-lattice support checks pass, but the physical theorem identifying the charged-lepton selected-line Brannen phase with the ambient APS/ABSS or Dirac quantity remains explicitly open.
+- **rationale:** Issue: the note strengthens support for recurring ambient 2/9 structures but does not derive the physical selected-line Brannen phase from them. Why this blocks: the runners verify selected-line geometry, Route-3 consistency, finite-lattice Wilson-Dirac plateaus, and the Callan-Harvey candidate, yet each still leaves the Berry/inflow or ambient-to-physical identification theorem open. Repair target: prove a retained map from the selected-line CP1 Berry phase to the ambient APS/ABSS/Dirac or anomaly-descent quantity, including regulator/continuum robustness and normalization. Claim boundary until fixed: support-level geometry/Dirac/anomaly illustrations for the Brannen lane, not closure of delta = 2/9 as a physical charged-lepton bridge.
+- **open / conditional deps cited:**
+  - `KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`
+  - `KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md`
+  - `SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`
 - **auditor confidence:** high
 
 ### `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24`
