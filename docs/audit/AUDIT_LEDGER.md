@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:23:14.770283+00:00
+**Generated:** 2026-04-30T19:23:21.633541+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 169 |
+| `audited_clean` | 170 |
 | `audited_conditional` | 366 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 939 |
+| `unaudited` | 938 |
 
 | criticality | count |
 |---|---:|
@@ -165,6 +165,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_pmns_asymptotic_source_no_go_note_2026-04-20` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_pmns_chamber_spectral_completeness_theorem_note_2026-04-20` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
+| `dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `electric_sign_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `electrostatics_card_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -4409,6 +4410,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** later same-day affine sharpening and ordered-chain graded-current closure  _(class `B`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 1 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified B-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20`
+
+- **Note:** [`DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md`](../../docs/DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** `scripts/frontier_dm_pmns_ne_seed_surface_exact_source_manifold_theorem_2026_04_20.py`  _(class `C`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 4 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
 ### `dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20`
