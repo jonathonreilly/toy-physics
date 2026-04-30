@@ -1,0 +1,83 @@
+========================================================================
+ axiom_first_reflection_positivity_check.py
+ Loop: axiom-first-foundations, Cycle 2 / Route R2
+ Exhibits structural content of reflection positivity for the
+ canonical CL3-on-Z3 staggered + Wilson + canonical-β action.
+========================================================================
+
+--- Exhibit E1: free staggered transfer matrix T = exp(-a_τ H_lat) ---
+  L_s = 4, dim = 16, mass = 0.3, r_W = 1.0, a_τ = 1.0
+  E1a Hermiticity: ||T - T†||_max = 9.930e-16
+  E1b spectrum of T:  min = 1.239e-01,  max = 8.069e+00,  #neg = 0
+  spectrum of H_lat:  min = -2.0881,  max = 2.0881
+  (note: T ≤ 1 bound requires ground-state subtraction; max(T) = 8.069e+00 reflects unsubtracted H_lat)
+  E1 verdict: PASS
+
+--- Exhibit E2: U(1) Wilson plaquette transfer matrix (single plaquette) ---
+  single plaquette, N_links = 4, dim_total = 2401, β = 1.0, m_trunc = ±3, a_τ = 1.0
+  E2a Hermiticity: ||T_G - T_G†||_max = 5.551e-17
+  E2b spectrum T_G: min = 1.485e-08,  max = 1.256e+00,  #neg = 0
+  spectrum H_E: min = -0.2276  (ground-state energy bound),  max = 18.0250
+  E2 verdict: PASS
+
+--- Exhibit E3: RP inequality on staggered-fermion observables ---
+  using ground state of H_lat as vacuum, E_0 = -2.088061
+  τ  observable                G(F,F)      Im G       OK
+  0  c_0^†                   +6.4367e-01  +0.00e+00  PASS
+  0  c_1^†                   +3.5633e-01  +0.00e+00  PASS
+  0  c_2^†                   +6.4367e-01  +0.00e+00  PASS
+  0  c_3^†                   +3.5633e-01  +0.00e+00  PASS
+  0  c_0^† c_1^†             +1.1468e-01  +0.00e+00  PASS
+  0  c_0^† c_2^†             +4.1432e-01  +0.00e+00  PASS
+  0  c_0^† c_3^†             +1.1468e-01  +0.00e+00  PASS
+  0  c_1^† c_2^†             +1.1468e-01  +0.00e+00  PASS
+  0  c_1^† c_3^†             +1.2697e-01  +0.00e+00  PASS
+  0  c_2^† c_3^†             +1.1468e-01  +0.00e+00  PASS
+  1  c_0^†                   +6.7265e-01  +0.00e+00  PASS
+  1  c_1^†                   +3.7237e-01  +0.00e+00  PASS
+  1  c_2^†                   +6.7265e-01  -5.55e-17  PASS
+  1  c_3^†                   +3.7237e-01  -2.78e-17  PASS
+  1  c_0^† c_1^†             +1.5520e-02  +1.08e-19  PASS
+  1  c_0^† c_2^†             +5.6072e-02  +3.47e-18  PASS
+  1  c_0^† c_3^†             +1.5520e-02  +0.00e+00  PASS
+  1  c_1^† c_2^†             +1.5520e-02  -1.08e-19  PASS
+  1  c_1^† c_3^†             +1.7183e-02  +0.00e+00  PASS
+  1  c_2^† c_3^†             +1.5520e-02  +0.00e+00  PASS
+  2  c_0^†                   +7.0293e-01  +2.78e-17  PASS
+  2  c_1^†                   +3.8913e-01  +1.39e-17  PASS
+  2  c_2^†                   +7.0293e-01  -5.55e-17  PASS
+  2  c_3^†                   +3.8913e-01  -2.78e-17  PASS
+  2  c_0^† c_1^†             +2.1004e-03  +0.00e+00  PASS
+  2  c_0^† c_2^†             +7.5885e-03  -4.34e-19  PASS
+  2  c_0^† c_3^†             +2.1004e-03  +1.36e-20  PASS
+  2  c_1^† c_2^†             +2.1004e-03  +1.36e-20  PASS
+  2  c_1^† c_3^†             +2.3255e-03  +0.00e+00  PASS
+  2  c_2^† c_3^†             +2.1004e-03  +1.36e-20  PASS
+  3  c_0^†                   +7.3457e-01  -2.78e-17  PASS
+  3  c_1^†                   +4.0664e-01  -1.39e-17  PASS
+  3  c_2^†                   +7.3457e-01  -2.78e-17  PASS
+  3  c_3^†                   +4.0664e-01  -1.39e-17  PASS
+  3  c_0^† c_1^†             +2.8426e-04  +0.00e+00  PASS
+  3  c_0^† c_2^†             +1.0270e-03  -1.08e-19  PASS
+  3  c_0^† c_3^†             +2.8426e-04  +0.00e+00  PASS
+  3  c_1^† c_2^†             +2.8426e-04  +3.39e-21  PASS
+  3  c_1^† c_3^†             +3.1472e-04  +0.00e+00  PASS
+  3  c_2^† c_3^†             +2.8426e-04  +0.00e+00  PASS
+  E3 verdict: PASS
+
+--- Exhibit E4: half-action factorisation gives positive Gram matrix ---
+  L_s = 3, basis size = 8
+  Gram-matrix spectrum: min = 1.920e-01,  max = 5.207e+00
+  E4 verdict: PASS
+
+========================================================================
+ SUMMARY
+========================================================================
+   E1: PASS
+   E2: PASS
+   E3: PASS
+   E4: PASS
+
+   PASSED: 4/4
+
+ verdict: structural RP exhibits (R1)–(R4) reproduced numerically.
