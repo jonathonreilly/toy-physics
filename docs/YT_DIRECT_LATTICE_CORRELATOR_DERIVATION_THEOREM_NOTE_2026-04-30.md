@@ -41,10 +41,11 @@ with the strict comparator set to the current PDG 2025 listing average
 listed by PDG as superseded by the 2024 ATLAS+CMS combination, so it is kept
 only as a historical cross-check target, not as the strict comparator.
 
-This branch contains a reduced-scope MC/correlator certificate for infrastructure
-evidence only.  It is not a production numerical result.  The strict runner
-reads the certificate and rejects it until the production volumes, statistics,
-independent `g_s` ratio evidence, and physical comparator checks are supplied.
+This branch contains reduced-scope and pilot MC/correlator certificates for
+infrastructure evidence only.  They are not production numerical results.  The
+strict runner reads the default reduced certificate and rejects it until the
+production volumes, statistics, independent `g_s` ratio evidence, and physical
+comparator checks are supplied.
 
 ## Five-Step Methodology
 
@@ -189,6 +190,32 @@ reported mass and Yukawa are proxy values from the reduced infrastructure run;
 they are far from the physical comparators and deliberately do not pass strict
 mode.
 
+This PR also records a bounded `12^3 x 24` pilot lane.  The pilot is a
+manageable unit of execution for PR #230 and is explicitly non-retained:
+
+| Field | Pilot value |
+|---|---:|
+| Certificate phase | `pilot` |
+| Volume | `12^3 x 24` |
+| Thermalization | 10 sweeps |
+| Saved configurations | 3 |
+| Separation | 2 sweeps |
+| Overrelaxation | 2 sweeps per heat-bath |
+| Bare-mass scan | `0.45`, `0.75`, `1.05` |
+| `m_t` proxy | `4.121892 GeV` |
+| `y_t(v)` proxy | `0.02367494` |
+| Total `m_t` proxy uncertainty | `1.201741 GeV` |
+| Total `y_t` proxy uncertainty | `0.00690245` |
+| Ratio evidence | `g_s_source = not_measured_pilot` |
+
+The pilot certificate is
+`outputs/yt_direct_lattice_correlator_pilot_certificate_2026-04-30.json`, with
+the per-volume artifact at
+`outputs/yt_direct_lattice_correlator_pilot/L12xT24/ensemble_measurement.json`.
+When pointed at the pilot certificate, strict mode rejects it as expected: it is
+`phase = pilot`, has only the `12^3 x 24` volume, has pilot statistics, has no
+independent `g_s`, and does not match physical comparators.
+
 ## Production-Scale Engineering Status
 
 The requested production campaign was benchmarked on the actual `12^3 x 24`
@@ -325,10 +352,16 @@ Reduced production-harness command:
 python3 scripts/yt_direct_lattice_correlator_production.py
 ```
 
+Pilot command:
+
+```bash
+python3 scripts/yt_direct_lattice_correlator_production.py --pilot-targets --engine numba --resume
+```
+
 Full production target command, not run in this PR update:
 
 ```bash
-python3 scripts/yt_direct_lattice_correlator_production.py --production-targets
+python3 scripts/yt_direct_lattice_correlator_production.py --production-targets --engine auto --resume
 ```
 
 Scout mode:
@@ -354,14 +387,15 @@ This note does not claim:
 - a bypass of the SM/QCD running and matching bridge;
 - a direct promotion of EW, top, Higgs, CKM, or `g_bare` downstream rows;
 - that the prior Ward-identity theorem is audit-clean;
-- that the scout-mode numerical mass is physical evidence.
+- that the scout, reduced, or pilot numerical masses are physical evidence.
 
 Safe current claim:
 
 > The branch adds a proposed-retained direct staggered-correlator measurement
-> gate for `m_t -> y_t`, with scout-mode infrastructure evidence, a reduced-scope
-> MC/correlator certificate, and a strict production-certificate gate that
-> blocks prior Ward/matrix-element authority.
+> gate for `m_t -> y_t`, with scout-mode infrastructure evidence, reduced-scope
+> and pilot MC/correlator certificates, a Numba production engine with resume
+> artifacts, and a strict production-certificate gate that blocks prior
+> Ward/matrix-element authority.
 
 Unsafe current claim:
 

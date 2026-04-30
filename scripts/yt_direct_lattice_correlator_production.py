@@ -51,6 +51,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = REPO_ROOT / "outputs" / "yt_direct_lattice_correlator"
 PRODUCTION_OUTPUT_DIR = REPO_ROOT / "outputs" / "yt_direct_lattice_correlator_production"
 DEFAULT_CERTIFICATE = REPO_ROOT / "outputs" / "yt_direct_lattice_correlator_certificate_2026-04-30.json"
+PILOT_OUTPUT_DIR = REPO_ROOT / "outputs" / "yt_direct_lattice_correlator_pilot"
+PILOT_CERTIFICATE = REPO_ROOT / "outputs" / "yt_direct_lattice_correlator_pilot_certificate_2026-04-30.json"
 
 NC = 3
 NDIM = 4
@@ -1075,22 +1077,49 @@ def load_volume_artifact(output_dir: Path, spatial_l: int, time_l: int) -> dict[
 def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]]) -> dict[str, Any]:
     result = combine_results(ensembles)
     ratio_y = result["y_t_v"]
-    # This is not a measured g_s in reduced scope; the strict runner should reject it.
+    phase = "production" if args.production_targets else "pilot" if args.pilot_targets else "reduced_scope"
+    evidence_scope = {
+        "production": "user-requested production targets",
+        "pilot": "bounded pilot run; infrastructure and scaling evidence only",
+        "reduced_scope": "reduced run is infrastructure evidence only",
+    }[phase]
+    ratio_source = args.g_s_source or f"not_measured_{phase}"
+    g_s_lattice = args.g_s_lattice
+    g_s_uncertainty = args.g_s_uncertainty
     ratio = None
-    if isinstance(ratio_y, float) and math.isfinite(ratio_y):
-        ratio = ratio_y / 1.0
+    ratio_uncertainty = None
+    if (
+        isinstance(ratio_y, float)
+        and math.isfinite(ratio_y)
+        and isinstance(g_s_lattice, float)
+        and math.isfinite(g_s_lattice)
+        and g_s_lattice > 0.0
+    ):
+        ratio = ratio_y / g_s_lattice
+        dy = result.get("total_y_t_uncertainty")
+        dg = g_s_uncertainty
+        rel2 = 0.0
+        if isinstance(dy, float) and math.isfinite(dy) and ratio_y != 0.0:
+            rel2 += (dy / ratio_y) ** 2
+        if isinstance(dg, float) and math.isfinite(dg):
+            rel2 += (dg / g_s_lattice) ** 2
+        ratio_uncertainty = abs(ratio) * math.sqrt(rel2) if rel2 > 0.0 else None
     return {
         "metadata": {
             "authority": "staggered_top_correlator_mass_extraction",
-            "phase": "production" if args.production_targets else "reduced_scope",
+            "phase": phase,
             "action": "Cl3Z3_SU3_Wilson_staggered",
             "g_bare": 1.0,
             "uses_prior_ward_chain": False,
             "uses_composite_matrix_element_route": False,
             "uses_coupling_definition_route": False,
-            "scale_anchor": "Sommer r0 = 0.5 fm external anchor; r0/a reference used for reduced run",
-            "running_bridge": "reduced run uses no authoritative SM RGE; production certificate must supply 4/5-loop bridge",
-            "evidence_scope": "reduced run is infrastructure evidence only" if not args.production_targets else "user-requested production targets",
+            "scale_anchor": f"Sommer r0 = 0.5 fm external anchor; r0/a reference used for {phase} run",
+            "running_bridge": (
+                "production certificate must supply authoritative 4/5-loop bridge"
+                if phase == "production"
+                else f"{phase} run uses no authoritative SM RGE; production certificate must supply 4/5-loop bridge"
+            ),
+            "evidence_scope": evidence_scope,
             "created_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         },
         "v_input": {
@@ -1102,10 +1131,10 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
         "result": result,
         "ratio_check": {
             "y_t_lattice": ratio_y,
-            "g_s_lattice": 1.0,
-            "g_s_source": "not_measured_reduced_scope",
+            "g_s_lattice": g_s_lattice,
+            "g_s_source": ratio_source,
             "ratio": ratio,
-            "uncertainty": result.get("total_y_t_uncertainty"),
+            "uncertainty": ratio_uncertainty,
             "used_as_definition": False,
         },
     }
@@ -1320,6 +1349,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--cg-maxiter", type=int, default=2000, help="CG max iterations.")
     parser.add_argument("--seed", type=int, default=20260430, help="Random seed.")
     parser.add_argument("--output", type=Path, default=DEFAULT_CERTIFICATE, help="Certificate JSON output path.")
+    parser.add_argument("--g-s-lattice", type=float, default=None, help="Independently measured lattice g_s for ratio check.")
+    parser.add_argument("--g-s-uncertainty", type=float, default=None, help="Uncertainty for --g-s-lattice.")
+    parser.add_argument(
+        "--g-s-source",
+        default=None,
+        help="Source label for g_s. Strict requires 'independent_direct_measurement'.",
+    )
     parser.add_argument(
         "--production-output-dir",
         type=Path,
@@ -1357,11 +1393,19 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Mark the run as production-targeted. This does not override strict validation thresholds.",
     )
+    parser.add_argument(
+        "--pilot-targets",
+        action="store_true",
+        help="Run a bounded 12^3 x 24 pilot lane. This is explicitly non-retained and strict should reject it.",
+    )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
+    if args.production_targets and args.pilot_targets:
+        raise SystemExit("--production-targets and --pilot-targets are mutually exclusive")
+
     if args.benchmark_production:
         return run_production_benchmark(args)
 
@@ -1370,12 +1414,25 @@ def main() -> int:
         warmup_seconds = warm_numba_kernels(args.seed)
         print(f"numba warmup/compile: {warmup_seconds:.6f}s")
 
+    output_was_default = args.output == DEFAULT_CERTIFICATE
+    output_dir_was_default = args.production_output_dir == PRODUCTION_OUTPUT_DIR
+
     if args.production_targets:
         args.volumes = args.volumes or "12x24,16x32,24x48"
         args.therm = 1000 if args.therm is None else args.therm
         args.measurements = 1000 if args.measurements is None else args.measurements
         args.separation = 20 if args.separation is None else args.separation
         args.overrelax = 4 if args.overrelax is None else args.overrelax
+    elif args.pilot_targets:
+        args.volumes = args.volumes or "12x24"
+        args.therm = 10 if args.therm is None else args.therm
+        args.measurements = 3 if args.measurements is None else args.measurements
+        args.separation = 2 if args.separation is None else args.separation
+        args.overrelax = 2 if args.overrelax is None else args.overrelax
+        if output_was_default:
+            args.output = PILOT_CERTIFICATE
+        if output_dir_was_default:
+            args.production_output_dir = PILOT_OUTPUT_DIR
     else:
         args.volumes = args.volumes or "2x4,3x6"
         args.therm = 2 if args.therm is None else args.therm
@@ -1397,7 +1454,9 @@ def main() -> int:
     print(f"masses={masses}")
     print(f"therm={args.therm}, measurements={args.measurements}, separation={args.separation}")
     print(f"output={args.output}")
-    if not args.production_targets:
+    if args.pilot_targets:
+        print("scope=pilot; strict runner is expected to reject this certificate")
+    elif not args.production_targets:
         print("scope=reduced; strict runner is expected to reject this certificate")
 
     ensembles = []
@@ -1408,7 +1467,7 @@ def main() -> int:
             print(f"  resume L={spatial_l}: loaded {artifact_path}")
         else:
             ensemble = run_volume(args, spatial_l, time_l, masses, rng)
-            if args.production_targets:
+            if args.production_targets or args.pilot_targets:
                 written = write_volume_artifact(args.production_output_dir, ensemble)
                 print(f"  wrote volume artifact: {written}")
         ensembles.append(ensemble)
@@ -1435,6 +1494,8 @@ def main() -> int:
         print(f"  archive copy    = {stamped}")
     if args.production_targets:
         print("\nThis production-targeted certificate is not retained evidence unless the strict runner passes.")
+    elif args.pilot_targets:
+        print("\nThis pilot certificate is not retained evidence and is expected to fail strict production validation.")
     else:
         print("\nThis reduced certificate is not retained evidence unless the strict runner passes.")
     return 0
