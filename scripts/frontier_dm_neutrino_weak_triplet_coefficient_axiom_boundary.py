@@ -51,14 +51,14 @@ PASS_COUNT = 0
 FAIL_COUNT = 0
 
 
-def check(name: str, condition: bool, detail: str = "") -> bool:
+def check(name: str, condition: bool, detail: str = "", cls: str = "B") -> bool:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
         PASS_COUNT += 1
     else:
         FAIL_COUNT += 1
-    msg = f"  [{status}] {name}"
+    msg = f"  [{status} ({cls})] {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)
@@ -66,7 +66,15 @@ def check(name: str, condition: bool, detail: str = "") -> bool:
 
 
 def read(rel: str) -> str:
-    return (ROOT / rel).read_text(encoding="utf-8")
+    path = ROOT / rel
+    if path.exists():
+        return path.read_text(encoding="utf-8")
+
+    filename = Path(rel).name
+    archived = sorted((ROOT / "archive_unlanded").glob(f"**/{filename}"))
+    if len(archived) == 1:
+        return archived[0].read_text(encoding="utf-8")
+    raise FileNotFoundError(path)
 
 
 def part1_axiom_means_only_cl3_on_z3() -> None:
@@ -142,6 +150,7 @@ def part3_the_exact_source_carrier_closes_the_even_leg() -> None:
         "The antisymmetric source mode lies in the kernel of the swap-fixed exact class",
         np.linalg.norm(m @ np.array([1.0, -1.0])) < 1e-12,
         f"kernel err={np.linalg.norm(m @ np.array([1.0,-1.0])):.2e}",
+        cls="A",
     )
     check(
         "The even bosonic-normalization theorem fixes v_even exactly",

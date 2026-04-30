@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T22:57:54.557014+00:00",
+  "generated_at": "2026-04-30T23:00:11.486145+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -4085,12 +4085,12 @@
       "assert_count": 1,
       "counts": {
         "A": 0,
-        "B": 1,
+        "B": 2,
         "C": 2,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": "C",
+      "dominant_class": "B",
       "runner": "scripts/frontier_dm_neutrino_weak_triplet_coefficient_axiom_boundary.py"
     },
     "dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15": {
@@ -20332,12 +20332,12 @@
       ],
       "counts": {
         "A": 0,
-        "B": 1,
+        "B": 2,
         "C": 2,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": "C",
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py": {
@@ -32247,8 +32247,8 @@
     "decoration_candidates": 81,
     "dominant_class_distribution": {
       "A": 7,
-      "B": 118,
-      "C": 443,
+      "B": 119,
+      "C": 442,
       "D": 183,
       "none": 404
     },
