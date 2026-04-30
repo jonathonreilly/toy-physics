@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 41,
-    "high": 248,
+    "high": 247,
     "leaf": 608,
     "medium": 340
   },
-  "generated_at": "2026-04-30T03:03:07.405803+00:00",
+  "generated_at": "2026-04-30T03:03:51.455144+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1165,23 +1165,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 31
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "lepton_single_higgs_pmns_triviality_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 7,
-      "load_bearing_score": 9.307,
-      "note_path": "docs/LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_lepton_single_higgs_pmns_triviality.py",
-      "transitive_descendants": 55
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -25955,6 +25938,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 795,
-  "total_pending": 1237
+  "ready_count": 794,
+  "total_pending": 1236
 }

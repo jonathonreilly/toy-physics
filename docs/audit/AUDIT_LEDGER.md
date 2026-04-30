@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:03:07.580048+00:00
+**Generated:** 2026-04-30T03:03:51.643950+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 201 |
 | support | 101 |
 | open | 24 |
-| unknown | 501 |
+| unknown | 500 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 398 |
+| ~~audited_conditional~~ | 399 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 180 |
+| `audited_conditional` | 181 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1236 |
+| `unaudited` | 1235 |
 
 | criticality | count |
 |---|---:|
@@ -287,6 +287,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_complementarity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_nn_high_precision_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `lepton_single_higgs_pmns_triviality_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `linear_response_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_second_order_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `local_zsym_predictor_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3515,6 +3516,22 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `logs/2026-04-07-lensing-deflection-sweep.txt_not_registered_primary_output`
   - `logs/2026-04-07-lensing-fine-asymptotic.txt_not_registered_primary_output`
   - `logs/2026-04-07-lensing-deflection-lane-lplus.txt_not_registered_primary_output`
+- **auditor confidence:** high
+
+### `lepton_single_higgs_pmns_triviality_note`
+
+- **Note:** [`LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md`](../../docs/LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Assuming the retained generation-charge structure and the neutrino monomial no-mixing theorem, the runner proves every single-offset lepton Yukawa support is monomial, so both lepton left-Grams are diagonal and |U_PMNS| can only be a permutation matrix, unlike observed PMNS magnitudes.  _(class `B`)_
+- **chain closes:** False — The single-Higgs lepton-sector obstruction passes on its stated support surface, but it relies on upstream matter-structure and neutrino no-mixing inputs not recorded as one-hop retained dependencies; it also leaves the actual non-monomial escape route and PMNS angles open.
+- **rationale:** Issue: the theorem is a correct conditional obstruction, but the ledger row has no dependencies for the one-generation matter closure, three-generation matter structure, or neutrino Dirac monomial no-mixing theorem it reuses. Why this blocks: the runner verifies monomial support and incompatibility with observed PMNS only after those support-surface premises are supplied. Repair target: add audited retained dependencies for those upstream inputs or derive them inside this note. Claim boundary until fixed: exact conditional no-go for full single-Higgs fixed-offset lepton Yukawa lanes, not a retained derivation of the actual PMNS-producing extension.
+- **open / conditional deps cited:**
+  - `One-generation matter closure`
+  - `Three-generation matter structure`
+  - `Neutrino Dirac monomial no-mixing theorem`
 - **auditor confidence:** high
 
 ### `linear_response_derivation_note`
