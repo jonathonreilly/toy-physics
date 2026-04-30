@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:33:32.881503+00:00
+**Generated:** 2026-04-30T19:33:39.464663+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 290 |
+| bounded | 289 |
 | support | 258 |
 | open | 20 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 719 |
+| ~~audited_conditional~~ | 720 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 192 |
-| `audited_conditional` | 443 |
+| `audited_conditional` | 444 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 839 |
+| `unaudited` | 838 |
 
 | criticality | count |
 |---|---:|
@@ -583,6 +583,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higgs_mechanism_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `higgs_vacuum_explicit_systematic_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `higher_dimension_status_2026-04-01` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `higher_order_structural_theorems_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7060,6 +7061,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `sigma_hier_observational_row_permutation_remains_open`
   - `branch_choice_A_BCC_or_basin_signature_condition_remains_open`
 - **auditor confidence:** high
+
+### `higher_dimension_status_2026-04-01`
+
+- **Note:** [`HIGHER_DIMENSION_STATUS_2026-04-01.md`](../../docs/HIGHER_DIMENSION_STATUS_2026-04-01.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** - **The stricter 4D unification pass is positive but still partial.**  _(class `B`)_
+- **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
+- **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a bounded note without audit-ratified executable closure.
+- **auditor confidence:** medium
 
 ### `higher_order_structural_theorems_note`
 
