@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:18:55.258196+00:00
+**Generated:** 2026-04-30T19:19:01.111540+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 140 |
+| `audited_clean` | 141 |
 | `audited_conditional` | 353 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 981 |
+| `unaudited` | 980 |
 
 | criticality | count |
 |---|---:|
@@ -135,6 +135,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_dple_dimension_parametric_extremum_theorem_note_2026-04-19` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `dm_full_closure_same_surface_thermal_monotonicity_theorem_note_2026-04-17` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
+| `dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `electric_sign_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -3391,6 +3392,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Once the full microscopic charge-preserving operator D is supplied, the chain D -> D_- -> dW_e^H -> H_e -> |U_e|^2^T -> selected transport column -> eta is algorithmic.  _(class `A`)_
 - **chain closes:** False — The runner verifies the algebraic downstream reduction for a supplied/constructed D, but it does not derive the microscopic value law of D from Cl(3) on Z^3. The near-closing eta result is therefore conditional on the missing D theorem.
 - **rationale:** Issue: the runner constructs or supplies a charge-preserving D arranged to reproduce the target charged block, then checks the downstream Schur/source/packet/eta algebra. Why this blocks: the note's own remaining target, the microscopic value law of D from the axiom, is not derived, so the PMNS-assisted near-closing value is not a first-principles result. Repair target: derive D from Cl(3) on Z^3 and make the runner build D from that law rather than from the target charged sample. Claim boundary until fixed: the note is a valid conditional reduction showing that D would be sufficient, not a microscopic DM prediction.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_NE_ACTIVE_COLUMN_AXIOM_BOUNDARY_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_NE_ACTIVE_COLUMN_AXIOM_BOUNDARY_NOTE_2026-04-16.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** **Script:** `scripts/frontier_dm_leptogenesis_ne_active_column_axiom_boundary.py`  _(class `C`)_
+- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 2 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
+- **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16`
