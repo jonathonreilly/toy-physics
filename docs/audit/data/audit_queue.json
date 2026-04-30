@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 19,
+    "critical": 18,
     "high": 234,
     "leaf": 571,
     "medium": 342
   },
-  "generated_at": "2026-04-30T11:42:01.740700+00:00",
+  "generated_at": "2026-04-30T11:42:05.283156+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,25 +23,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "transitive_descendants": 281
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-      ],
-      "direct_in_degree": 28,
-      "load_bearing_score": 20.807,
-      "note_path": "docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_ckm_atlas_triangle_right_angle.py",
-      "transitive_descendants": 111
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24613,5 +24594,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1166
+  "total_pending": 1165
 }
