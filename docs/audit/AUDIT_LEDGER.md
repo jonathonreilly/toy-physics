@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:55:29.855778+00:00
+**Generated:** 2026-04-30T22:56:07.978373+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 83 |
 | _proposed_retained_ | 1 |
 | bounded | 274 |
-| support | 240 |
+| support | 239 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 751 |
+| ~~audited_conditional~~ | 752 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 220 |
-| `audited_conditional` | 478 |
+| `audited_conditional` | 479 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 772 |
+| `unaudited` | 771 |
 
 | criticality | count |
 |---|---:|
@@ -765,6 +765,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_qg_canonical_refinement_net_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_inverse_limit_closure_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_pl_field_interface_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `universal_qg_pl_sobolev_interface_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_uv_finite_partition_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `unpromoted_branch_retainability_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -11390,6 +11391,23 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
   - `UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md`
+  - `UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_qg_pl_sobolev_interface_note`
+
+- **Note:** [`UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md`](../../docs/UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-43`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Each finite PL space lies canonically inside a project-native H^1-type field space on PL S^3 x R, and the directed PL ladder is already a nested first-order weak-field ladder.  _(class `B`)_
+- **chain closes:** False — The local finite-element Sobolev statement is standard after a PL field carrier and weak/Dirichlet form are fixed. The note imports those upstream closures, and the PL field interface is now conditional while the PL weak-form row is still unaudited support.
+- **rationale:** Issue: the Sobolev-interface note depends on an exact PL field carrier, PL weak/Dirichlet closure, abstract Gaussian completion, and canonical refinement net that are not all audit-clean. Why this blocks: finite PL functions do have piecewise gradients and finite energy, but that only gives the advertised project-native H^1-type Gaussian carrier after the imported directed field and weak-form systems are established. Repair target: ratify or repair the PL field interface, PL weak-form closure, refinement-net, and abstract Gaussian completion rows. Claim boundary until fixed: safe as a conditional finite-element Sobolev interface, not as a closed continuum/QG Sobolev theorem.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md`
+  - `UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
   - `UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md`
 - **auditor confidence:** high
 
