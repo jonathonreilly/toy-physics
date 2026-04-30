@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T02:53:49.814142+00:00
-**Total pending:** 1243
-**Ready (all deps already at a stable tier):** 801
+**Generated:** 2026-04-30T02:54:41.949641+00:00
+**Total pending:** 1242
+**Ready (all deps already at a stable tier):** 800
 
 By criticality:
 - `critical`: 41
-- `high`: 254
+- `high`: 253
 - `medium`: 340
 - `leaf`: 608
 
@@ -57,14 +57,14 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 39 | `n_eff_from_three_generations_theorem_note_2026-04-24` | critical | 38 | 13.29 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_n_eff_from_three_generations.py` |
 | 40 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | critical | 38 | 12.79 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_matter_radiation_equality_structural_identity.py` |
 | 41 | `publication.ci3_z3.publication_matrix` | critical | 31 | 12.50 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 42 | `koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24` | high | 64 | 9.02 | Y | fresh_context_or_stronger | `scripts/frontier_koide_a1_cheeger_simons_rz_probe.py` |
-| 43 | `koide_a1_derivation_status_note` | high | 64 | 8.52 | Y | fresh_context_or_stronger | `scripts/frontier_koide_a1_quartic_potential_derivation.py` |
-| 44 | `koide_axiom_native_support_batch_note_2026-04-22` | high | 64 | 8.52 | Y | fresh_context_or_stronger | - |
-| 45 | `koide_explicit_calculations_note` | high | 64 | 8.52 | Y | fresh_context_or_stronger | - |
-| 46 | `higher_order_structural_theorems_note` | high | 61 | 10.45 | Y | fresh_context_or_stronger | `scripts/frontier_koide_cone_variational_principle_survey.py` |
-| 47 | `neutrino_dirac_two_higgs_canonical_reduction_note` | high | 56 | 8.83 | Y | fresh_context_or_stronger | `scripts/frontier_neutrino_dirac_two_higgs_canonical_reduction.py` |
-| 48 | `lepton_single_higgs_pmns_triviality_note` | high | 55 | 9.31 | Y | fresh_context_or_stronger | `scripts/frontier_lepton_single_higgs_pmns_triviality.py` |
-| 49 | `charged_lepton_two_higgs_canonical_reduction_note` | high | 54 | 9.78 | Y | fresh_context_or_stronger | `scripts/frontier_charged_lepton_two_higgs_canonical_reduction.py` |
-| 50 | `s3_cap_uniqueness_note` | high | 50 | 12.17 | Y | fresh_context_or_stronger | `scripts/frontier_s3_cap_uniqueness.py` |
+| 42 | `koide_a1_derivation_status_note` | high | 64 | 8.52 | Y | fresh_context_or_stronger | `scripts/frontier_koide_a1_quartic_potential_derivation.py` |
+| 43 | `koide_axiom_native_support_batch_note_2026-04-22` | high | 64 | 8.52 | Y | fresh_context_or_stronger | - |
+| 44 | `koide_explicit_calculations_note` | high | 64 | 8.52 | Y | fresh_context_or_stronger | - |
+| 45 | `higher_order_structural_theorems_note` | high | 61 | 10.45 | Y | fresh_context_or_stronger | `scripts/frontier_koide_cone_variational_principle_survey.py` |
+| 46 | `neutrino_dirac_two_higgs_canonical_reduction_note` | high | 56 | 8.83 | Y | fresh_context_or_stronger | `scripts/frontier_neutrino_dirac_two_higgs_canonical_reduction.py` |
+| 47 | `lepton_single_higgs_pmns_triviality_note` | high | 55 | 9.31 | Y | fresh_context_or_stronger | `scripts/frontier_lepton_single_higgs_pmns_triviality.py` |
+| 48 | `charged_lepton_two_higgs_canonical_reduction_note` | high | 54 | 9.78 | Y | fresh_context_or_stronger | `scripts/frontier_charged_lepton_two_higgs_canonical_reduction.py` |
+| 49 | `s3_cap_uniqueness_note` | high | 50 | 12.17 | Y | fresh_context_or_stronger | `scripts/frontier_s3_cap_uniqueness.py` |
+| 50 | `s3_general_r_derivation_note` | high | 50 | 12.17 | Y | fresh_context_or_stronger | - |
 
 Full queue lives in `data/audit_queue.json`.

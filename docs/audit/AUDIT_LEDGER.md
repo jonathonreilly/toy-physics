@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:53:49.987414+00:00
+**Generated:** 2026-04-30T02:54:42.129316+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,25 +22,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
 | bounded | 202 |
-| support | 102 |
+| support | 101 |
 | open | 24 |
 | unknown | 505 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 392 |
+| ~~audited_conditional~~ | 393 |
 | ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 175 |
+| `audited_conditional` | 176 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1242 |
+| `unaudited` | 1241 |
 
 | criticality | count |
 |---|---:|
@@ -259,6 +259,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `impact_parameter_lensing_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `impact_parameter_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_berry_phase_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -2774,6 +2775,23 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md`
   - `KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`
   - `KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24`
+
+- **Note:** [`KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md`](../../docs/KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The Cheeger-Simons R/Z class can carry c=2/9 mod 1, but the canonical R/Z -> U(1) map is exp(2*pi*i*c), giving arg = 4*pi/9; the literal exp(i*c) convention is exactly postulate P restated.  _(class `B`)_
+- **chain closes:** False — The probe closes the Cheeger-Simons route no-go under the stated CS/RZ conventions, but it relies on parent radian-bridge framing and external differential-character facts and is support-level rather than a retained universal theorem.
+- **rationale:** Issue: the no-go is a support theorem for the Cheeger-Simons route, not an independently retained closure of every radian-bridge possibility. Why this blocks: the runner verifies the R/Z period inheritance obstruction and the absence of a retained 1-rad period, but it imports the parent O10/P_A1 framing, ABSS eta provenance, and standard CS functor conventions. Repair target: record/audit the parent radian-bridge irreducibility theorem and CS setup as dependencies, then state O13 as a retained subcase of the Lindemann/period-normalization wall. Claim boundary until fixed: Cheeger-Simons R/Z does not derive literal 2/9 radians under canonical conventions; postulate P remains required for that route.
+- **open / conditional deps cited:**
+  - `KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md`
+  - `KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md`
+  - `KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`
+  - `KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `koide_a1_physical_bridge_attempt_2026-04-22`
