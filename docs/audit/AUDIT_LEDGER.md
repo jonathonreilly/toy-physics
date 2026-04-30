@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:35:31.372357+00:00
+**Generated:** 2026-04-30T19:35:37.146058+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 285 |
+| bounded | 284 |
 | support | 251 |
 | open | 19 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 732 |
+| ~~audited_conditional~~ | 733 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 198 |
-| `audited_conditional` | 456 |
+| `audited_conditional` | 457 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 820 |
+| `unaudited` | 819 |
 
 | criticality | count |
 |---|---:|
@@ -641,6 +641,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_3d_l2_numpy_h0125_bridge_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `lattice_complementarity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `lattice_gravity_resolution_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_nn_high_precision_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `left_handed_charge_matching_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -8433,6 +8434,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **chain closes:** True — The named no-barrier runner and archived log reproduce the saved b rows, the k=0 zero control, and the far-field power-law fit. The note explicitly limits the claim to |delta| on the no-barrier ordered-lattice harness and excludes a signed attractive deflection law, the barrier geometry, and the mirror/random-connected family.
 - **rationale:** The finite ordered-lattice distance-magnitude claim closes on its own terms: the live runner exactly reproduces the seven b rows, k=0 gives +0.000000e+00, and the b>=7 fit is |delta| ~= 23.5071*b^(-1.052) with R^2=0.9850. This clean audit ratifies only the N=40, half-width-20, no-barrier ordered-lattice magnitude law and its stated scope limits; it does not ratify a signed attractive law, a barrier-harness law, a continuum theorem, or a rescue of the random-connected mirror-family distance claim.
 - **auditor confidence:** high
+
+### `lattice_gravity_resolution_note`
+
+- **Note:** [`LATTICE_GRAVITY_RESOLUTION_NOTE.md`](../../docs/LATTICE_GRAVITY_RESOLUTION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** Combined with prior results on the same lattice:  _(class `B`)_
+- **chain closes:** False — No. The runner exits zero, but the audit classifier records no A/B/C/D PASS checks for a load-bearing audit surface.
+- **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a bounded note with executable but unratified support.
+- **auditor confidence:** medium
 
 ### `lattice_nn_high_precision_note`
 
