@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T15:14:42.418787+00:00
+**Generated:** 2026-04-30T15:14:45.882611+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 4 |
 | bounded | 186 |
 | support | 124 |
-| open | 17 |
+| open | 16 |
 | unknown | 423 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 503 |
+| ~~audited_conditional~~ | 504 |
 | ~~audited_failed~~ | 170 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 9 |
 | `audited_clean` | 94 |
-| `audited_conditional` | 268 |
+| `audited_conditional` | 269 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1119 |
+| `unaudited` | 1118 |
 
 | criticality | count |
 |---|---:|
@@ -249,6 +249,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `central_band_dense_largen_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `central_band_layernorm_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `central_band_mass_window_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `charged_lepton_lane6_theorem_plan_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `charged_lepton_two_higgs_canonical_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `chiral_3plus1d_mixing_period_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `ckm_atlas_axiom_closure_note` | _proposed_promoted_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -1507,6 +1508,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the Brannen carrier Q=(c^2+2)/6 is independent of delta, and cyclic relabelings preserve Q and unordered ratios while moving the largest slot label.  _(class `A`)_
 - **chain closes:** True — The negative firewall closes: even granting the Q and Brannen support values, the data do not select a physical generation or tau-scale label. The note explicitly leaves Q source selection, selected-line endpoint/readout, and generation selection as residuals.
 - **rationale:** The runner verifies phase-erasure of Q, conditional status of the source and endpoint support, cyclic relabeling of the largest slot, and comparator-only use of PDG masses. That is sufficient for the no-go that Q plus Brannen phase support is not a standalone generation/tau-scale selector. It does not audit or retain native Q closure or delta/radian closure.
+- **auditor confidence:** high
+
+### `charged_lepton_lane6_theorem_plan_note_2026-04-28`
+
+- **Note:** [`CHARGED_LEPTON_LANE6_THEOREM_PLAN_NOTE_2026-04-28.md`](../../docs/CHARGED_LEPTON_LANE6_THEOREM_PLAN_NOTE_2026-04-28.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** Lane 6 Charged-Lepton Theorem Plan: Closure Roadmap with Phase Ordering: open branch-local theorem-plan note on  _(class `B`)_
+- **chain closes:** False — No. The source note explicitly frames this as open, future, planning, or a stretch attempt rather than a closed theorem, so the conclusion cannot be ratified from the source note alone.
+- **rationale:** Issue: the source note explicitly frames this as open, future, planning, or a stretch attempt rather than a closed theorem. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **open / conditional deps cited:**
+  - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
 
 ### `charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27`
