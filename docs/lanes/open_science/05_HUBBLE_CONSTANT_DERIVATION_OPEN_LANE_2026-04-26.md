@@ -28,6 +28,24 @@ The firewall blocks any numerical `H_0` closure unless a branch supplies both
 dimensionless cosmic-history or cosmic-`L` gate. Either side alone leaves a
 one-parameter family.
 
+## 2026-04-29 `(C1)` Carrier/Metrology Boundary Packet
+
+The current Lane 5 `(C1)` stretch sequence is now explicitly narrowed by a
+support boundary packet:
+
+- [HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md](../../HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md)
+- [HUBBLE_LANE5_C1_A2_ACTION_UNIT_METROLOGY_OBSTRUCTION_NOTE_2026-04-29.md](../../HUBBLE_LANE5_C1_A2_ACTION_UNIT_METROLOGY_OBSTRUCTION_NOTE_2026-04-29.md)
+- [HUBBLE_LANE5_C1_A4_PARITY_GATE_CAR_BOUNDARY_NOTE_2026-04-29.md](../../HUBBLE_LANE5_C1_A4_PARITY_GATE_CAR_BOUNDARY_NOTE_2026-04-29.md)
+- [HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md](../../HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md)
+- [HUBBLE_LANE5_C1_A6_BILINEAR_ACTIVE_BLOCK_SUPPORT_BOUNDARY_NOTE_2026-04-29.md](../../HUBBLE_LANE5_C1_A6_BILINEAR_ACTIVE_BLOCK_SUPPORT_BOUNDARY_NOTE_2026-04-29.md)
+- [HUBBLE_LANE5_C1_CARRIER_METROLOGY_AXIOM_AUDIT_NOTE_2026-04-29.md](../../HUBBLE_LANE5_C1_CARRIER_METROLOGY_AXIOM_AUDIT_NOTE_2026-04-29.md)
+
+Taken together, these notes do not derive `(C1)`. They close the current
+shortcut routes negatively and leave one explicit conditional boundary:
+Lane 5 still needs both an active-block selector that picks the intrinsic
+coframe/CAR response on `P_A H_cell` and a non-rescaling-invariant
+carrier-to-metrology map that fixes the dimensional action unit.
+
 ## 1. Missing-science framing
 
 The framework currently records
@@ -194,7 +212,8 @@ this lane.
    is `(C3)`: direct cosmic-`L` derivation; no active route currently exists.
 3. **5B: H_0 derivation from Omega_m / L plus absolute scale.** Requires
    `(C1)` Planck-scale absolute normalization in addition to `(C2)` or `(C3)`.
-   No single gate is sufficient.
+   The current 2026-04-29 packet closes the easy `(C1)` carrier/metrology
+   shortcuts negatively; no single gate is sufficient.
 
 **Phase 3:**
 

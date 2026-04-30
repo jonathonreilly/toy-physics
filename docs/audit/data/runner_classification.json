@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T02:13:07.687387+00:00",
+  "generated_at": "2026-04-30T10:31:05.664606+00:00",
   "per_claim": {
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "assert_count": 0,
@@ -216,6 +216,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_atomic_rydberg_dependency_firewall.py"
+    },
+    "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_axiom_stack_minimality_cl4c_no_go.py"
     },
     "bell_inequality_derived_note": {
       "assert_count": 2,
@@ -4273,6 +4285,54 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py"
     },
+    "hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_hadron_lane1_sqrt_sigma_b2_gate_repair.py"
+    },
+    "hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge.py"
+    },
+    "hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_hadron_lane1_sqrt_sigma_b5_framework_link_audit.py"
+    },
+    "hadron_lane1_sqrt_sigma_b5_ladder_budget_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_hadron_lane1_sqrt_sigma_b5_ladder_budget.py"
+    },
     "hierarchy_bosonic_bilinear_selector_note": {
       "assert_count": 0,
       "counts": {
@@ -4405,6 +4465,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_koide_cone_variational_principle_survey.py"
     },
+    "hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_hubble_lane5_c1_a1_grassmann_boundary_car_obstruction.py"
+    },
     "hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28": {
       "assert_count": 1,
       "counts": {
@@ -4416,6 +4488,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_hubble_c1_a1_grassmann_no_go.py"
+    },
+    "hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 14,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_hubble_lane5_c1_a2_action_unit_metrology_obstruction.py"
     },
     "hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28": {
       "assert_count": 1,
@@ -4429,6 +4513,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_hubble_c1_a2_action_unit_no_go.py"
     },
+    "hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29": {
+      "assert_count": 1,
+      "counts": {
+        "A": 4,
+        "B": 0,
+        "C": 8,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_hubble_lane5_c1_a4_parity_gate_car_boundary.py"
+    },
     "hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28": {
       "assert_count": 1,
       "counts": {
@@ -4441,6 +4537,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_hubble_c1_a4_parity_gate_no_go.py"
     },
+    "hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29": {
+      "assert_count": 1,
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py"
+    },
     "hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28": {
       "assert_count": 1,
       "counts": {
@@ -4452,6 +4560,30 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_hubble_c1_a5_minimal_carrier_axiom_audit.py"
+    },
+    "hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29": {
+      "assert_count": 1,
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py"
+    },
+    "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py"
     },
     "hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28": {
       "assert_count": 1,
@@ -9472,6 +9604,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_axiom_stack_minimality_cl4c_no_go.py": {
+      "assert_count": 0,
+      "claims": [
+        "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_baryogenesis.py": {
       "assert_count": 0,
       "claims": [
@@ -14351,6 +14498,66 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_hadron_lane1_sqrt_sigma_b2_gate_repair.py": {
+      "assert_count": 1,
+      "claims": [
+        "hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge.py": {
+      "assert_count": 1,
+      "claims": [
+        "hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_hadron_lane1_sqrt_sigma_b5_framework_link_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_hadron_lane1_sqrt_sigma_b5_ladder_budget.py": {
+      "assert_count": 1,
+      "claims": [
+        "hadron_lane1_sqrt_sigma_b5_ladder_budget_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_hierarchy_bosonic_bilinear_selector.py": {
       "assert_count": 0,
       "claims": [
@@ -14576,6 +14783,96 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_hubble_lane5_c1_a1_grassmann_boundary_car_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_hubble_lane5_c1_a2_action_unit_metrology_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 14,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_hubble_lane5_c1_a4_parity_gate_car_boundary.py": {
+      "assert_count": 1,
+      "claims": [
+        "hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29"
+      ],
+      "counts": {
+        "A": 4,
+        "B": 0,
+        "C": 8,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29"
+      ],
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_hubble_lane5_c1_a6_bilinear_active_block_support_boundary.py": {
+      "assert_count": 1,
+      "claims": [
+        "hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29"
+      ],
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
       "exists": true
     },
     "scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py": {
@@ -19721,16 +20018,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 71,
+    "decoration_candidates": 72,
     "dominant_class_distribution": {
       "A": 6,
-      "B": 107,
-      "C": 350,
-      "D": 120,
-      "none": 139
+      "B": 108,
+      "C": 358,
+      "D": 121,
+      "none": 140
     },
-    "runners_classified": 722,
-    "runners_with_C": 433,
-    "runners_with_D": 208
+    "runners_classified": 733,
+    "runners_with_C": 441,
+    "runners_with_D": 210
   }
 }
