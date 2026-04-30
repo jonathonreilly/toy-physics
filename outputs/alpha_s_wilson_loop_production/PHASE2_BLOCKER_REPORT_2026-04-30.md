@@ -168,6 +168,34 @@ full statistics because the measured three-volume campaign remains about
 `87` wall-clock hours before jackknife/bootstrap, plateau fitting,
 autocorrelation analysis, and RGE conversion.
 
+## Autocorrelation-Optimized Valid Plan
+
+A follow-up `12^3 x 24` pilot measured autocorrelation every sweep after
+thermalization.  The slowest tracked observable was the plaquette:
+
+```text
+tau_int = 1.0697 sweeps
+recommended separation = ceil(5 tau_int) = 6 sweeps
+recommended block size = ceil(10 tau_int) = 11 saved configurations
+```
+
+Using `500` saved configurations per volume, `separation=6`, and blocked
+jackknife/bootstrap on the actual production ensemble, the revised timeline is:
+
+```text
+12^3 x 24:  0.96 h
+16^3 x 32:  4.32 h
+24^3 x 48: 19.11 h
+Sequential: 24.39 h
+Ideal parallel wall: 19.11 h
+```
+
+The detailed plan is recorded in:
+
+```text
+outputs/alpha_s_wilson_loop_production/VALID_PRODUCTION_TIMELINE_2026-04-30.md
+```
+
 ## Audit Consequence
 
 The direct Wilson-loop alpha_s derivation remains a proposed-retained

@@ -211,6 +211,23 @@ Wilson-loop measurements, the current estimate is:
 | `24^3 x 48` | 62.21 h | 5.61 h | 67.83 h |
 | Total | 80.37 h | 7.07 h | 87.44 h |
 
+A follow-up `12^3 x 24` autocorrelation pilot measured the slowest tracked
+observable at `tau_int = 1.0697` sweeps and recommends
+`separation = ceil(5 tau_int) = 6` rather than the conservative fixed
+separation `50`.  With `500` saved configurations per volume, which satisfies
+the strict runner's `n_cfg >= 500` loop-statistics threshold, the revised
+valid-production estimate is:
+
+| Volume | Update wall time | Measurement wall time | Total estimate |
+|---|---:|---:|---:|
+| `12^3 x 24` | 0.51 h | 0.45 h | 0.96 h |
+| `16^3 x 32` | 2.89 h | 1.43 h | 4.32 h |
+| `24^3 x 48` | 11.85 h | 7.26 h | 19.11 h |
+| Sequential total | 15.25 h | 9.15 h | 24.39 h |
+
+The production run must still recompute autocorrelation and use blocked
+jackknife/bootstrap on the actual saved ensembles.
+
 The production evidence therefore remains absent.  The branch records the
 blocker in:
 

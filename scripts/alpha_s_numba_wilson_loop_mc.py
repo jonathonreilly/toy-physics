@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
 import time
 from pathlib import Path
 from typing import Any
@@ -25,7 +26,7 @@ from typing import Any
 import numpy as np
 
 try:
-    from numba import njit, prange
+    from numba import get_num_threads, njit, prange, set_num_threads
 except ImportError as exc:  # pragma: no cover - exercised only without numba.
     raise SystemExit("numba is required for this production MC backend") from exc
 
@@ -41,6 +42,19 @@ BETA = 6.0
 CF_SU3 = 4.0 / 3.0
 HB_PYTHON_US_PER_LINK = 182.5
 METROPOLIS_PYTHON_US_PER_LINK = 85.49
+
+
+def parse_int_list(text: str) -> list[int]:
+    vals = [int(part.strip()) for part in text.split(",") if part.strip()]
+    if not vals or any(v <= 0 for v in vals):
+        raise argparse.ArgumentTypeError("expected comma-separated positive integers")
+    return vals
+
+
+def configure_numba_threads(num_threads: int | None) -> int:
+    if num_threads is not None:
+        set_num_threads(num_threads)
+    return get_num_threads()
 
 
 def parse_dims(text: str) -> tuple[int, int, int, int]:
@@ -605,6 +619,7 @@ def warm_up_numba() -> None:
 
 
 def run_benchmark(args: argparse.Namespace) -> dict[str, Any]:
+    active_threads = configure_numba_threads(args.numba_threads)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     dims = args.dims
     fwd, bwd, parity = build_neighbors(dims)
@@ -644,6 +659,7 @@ def run_benchmark(args: argparse.Namespace) -> dict[str, Any]:
         "warmup_sweeps": args.warmup_sweeps,
         "overrelax_sweeps_per_heatbath": args.overrelax,
         "sweep_kernel": "serial" if args.serial else "checkerboard_parallel",
+        "numba_threads": active_threads,
         "links_per_sweep": links_per_sweep,
         "elapsed_seconds": elapsed,
         "compiled_us_per_link": us_per_link,
@@ -760,6 +776,7 @@ def analyze_ensemble(
 
 
 def run_ensemble(args: argparse.Namespace) -> dict[str, Any]:
+    active_threads = configure_numba_threads(args.numba_threads)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     dims = args.dims
     fwd, bwd, parity = build_neighbors(dims)
@@ -835,6 +852,7 @@ def run_ensemble(args: argparse.Namespace) -> dict[str, Any]:
         "separation_sweeps": args.separation,
         "overrelax_sweeps_per_heatbath": args.overrelax,
         "sweep_kernel": "serial" if args.serial else "checkerboard_parallel",
+        "numba_threads": active_threads,
         "elapsed_seconds": elapsed,
         "raw_wilson_loops": loop_array.tolist(),
         "analysis": analyze_ensemble(dims, loop_array, args.r0_anchor_fm),
@@ -866,6 +884,195 @@ def write_checkpoint(
     tmp.replace(path)
 
 
+def autocorrelation(values: np.ndarray, max_lag: int) -> list[float]:
+    x = np.asarray(values, dtype=np.float64)
+    x = x[np.isfinite(x)]
+    n = len(x)
+    if n < 3:
+        return []
+    x = x - float(np.mean(x))
+    var = float(np.dot(x, x) / n)
+    if var <= 0.0:
+        return [1.0] + [0.0] * min(max_lag, n - 1)
+    out = []
+    for lag in range(min(max_lag, n - 1) + 1):
+        out.append(float(np.dot(x[: n - lag], x[lag:]) / ((n - lag) * var)))
+    return out
+
+
+def integrated_autocorr_time(values: np.ndarray, max_lag: int, window_factor: float = 5.0) -> dict[str, Any]:
+    rho = autocorrelation(values, max_lag)
+    if not rho:
+        return {"tau_int": None, "window": None, "rho": []}
+
+    tau = 0.5
+    window = 0
+    for lag in range(1, len(rho)):
+        if rho[lag] <= 0.0:
+            window = lag - 1
+            break
+        tau += rho[lag]
+        window = lag
+        if lag >= window_factor * tau:
+            break
+    return {"tau_int": float(max(tau, 0.5)), "window": int(window), "rho": rho}
+
+
+def summarize_autocorr(series: dict[str, list[float]], max_lag: int) -> dict[str, Any]:
+    summaries: dict[str, Any] = {}
+    max_tau = 0.5
+    slowest = None
+    for name, values in series.items():
+        stat = integrated_autocorr_time(np.asarray(values, dtype=np.float64), max_lag)
+        summaries[name] = {k: v for k, v in stat.items() if k != "rho"}
+        summaries[name]["rho_first_10"] = stat.get("rho", [])[:10]
+        tau = stat.get("tau_int")
+        if isinstance(tau, float) and math.isfinite(tau) and tau > max_tau:
+            max_tau = tau
+            slowest = name
+    return {
+        "observables": summaries,
+        "max_tau_int": max_tau,
+        "slowest_observable": slowest,
+        "recommended_separation_ceil_5tau": int(max(1, math.ceil(5.0 * max_tau))),
+        "recommended_block_size_ceil_10tau": int(max(2, math.ceil(10.0 * max_tau))),
+    }
+
+
+def run_autocorr_pilot(args: argparse.Namespace) -> dict[str, Any]:
+    active_threads = configure_numba_threads(args.numba_threads)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    dims = args.dims
+    fwd, bwd, parity = build_neighbors(dims)
+    u = cold_links(dims)
+    seed_numba_rng(args.seed)
+    warm_up_numba()
+
+    print(
+        f"Autocorrelation pilot dims={dims}, therm={args.therm}, sweeps={args.sweeps}, "
+        f"measure_every={args.measure_every}, threads={active_threads}"
+    )
+    t0 = time.perf_counter()
+    for sweep in range(args.therm):
+        sweep_heatbath_overrelax_parallel(u, fwd, bwd, parity, BETA, args.overrelax)
+        if (sweep + 1) % max(1, args.progress_interval) == 0:
+            print(f"  therm {sweep + 1}/{args.therm}: plaquette={plaquette(u, fwd):.6f}")
+
+    series: dict[str, list[float]] = {"plaquette": []}
+    loop_keys = [(1, 1), (1, 2), (2, 1), (2, 2)]
+    if args.max_r >= 3 and args.max_t >= 3:
+        loop_keys.append((3, 3))
+    for r, t_extent in loop_keys:
+        if r <= args.max_r and t_extent <= args.max_t:
+            series[f"W{r}{t_extent}"] = []
+
+    measurements = 0
+    for sweep in range(args.sweeps):
+        sweep_heatbath_overrelax_parallel(u, fwd, bwd, parity, BETA, args.overrelax)
+        if (sweep + 1) % args.measure_every != 0:
+            continue
+        p = float(plaquette(u, fwd))
+        series["plaquette"].append(p)
+        measured_u = ape_smear_spatial(u, fwd, bwd, args.ape_alpha, args.ape_steps)
+        wl = measure_wilson_loops_parallel(measured_u, fwd, bwd, args.max_r, args.max_t)
+        for r, t_extent in loop_keys:
+            key = f"W{r}{t_extent}"
+            if key in series:
+                series[key].append(float(wl[r - 1, t_extent - 1]))
+        measurements += 1
+        if measurements % max(1, args.progress_interval) == 0:
+            print(f"  meas {measurements}: plaquette={p:.6f}, W11={series.get('W11', [float('nan')])[-1]:.6f}")
+
+    elapsed = time.perf_counter() - t0
+    summary = summarize_autocorr(series, min(args.max_lag, max(1, measurements // 2)))
+    result = {
+        "kind": "autocorrelation_pilot",
+        "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "dims": list(dims),
+        "beta": BETA,
+        "numba_threads": active_threads,
+        "therm_sweeps": args.therm,
+        "sweeps": args.sweeps,
+        "measure_every": args.measure_every,
+        "measurements": measurements,
+        "overrelax_sweeps_per_heatbath": args.overrelax,
+        "ape_smearing": {"steps": args.ape_steps, "alpha": args.ape_alpha},
+        "max_r": args.max_r,
+        "max_t": args.max_t,
+        "elapsed_seconds": elapsed,
+        "series": series,
+        "autocorrelation": summary,
+        "validity_note": (
+            "Pilot estimates decorrelation for production scheduling only; final production errors "
+            "must use blocking/jackknife on the actual saved ensemble."
+        ),
+    }
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps({k: result[k] for k in ["kind", "dims", "numba_threads", "elapsed_seconds", "autocorrelation"]}, indent=2))
+    return result
+
+
+def benchmark_once(
+    dims: tuple[int, int, int, int],
+    sweeps: int,
+    warmup_sweeps: int,
+    overrelax: int,
+    seed: int,
+) -> dict[str, Any]:
+    fwd, bwd, parity = build_neighbors(dims)
+    u = cold_links(dims)
+    seed_numba_rng(seed)
+    for _ in range(warmup_sweeps):
+        sweep_heatbath_overrelax_parallel(u, fwd, bwd, parity, BETA, overrelax)
+    links_per_sweep = math.prod(dims) * NDIM
+    t0 = time.perf_counter()
+    for _ in range(sweeps):
+        sweep_heatbath_overrelax_parallel(u, fwd, bwd, parity, BETA, overrelax)
+    elapsed = time.perf_counter() - t0
+    us_per_link = elapsed / (sweeps * links_per_sweep) * 1.0e6
+    return {
+        "threads": get_num_threads(),
+        "elapsed_seconds": elapsed,
+        "compiled_us_per_link": us_per_link,
+        "speedup_vs_pure_python_heatbath": HB_PYTHON_US_PER_LINK / us_per_link,
+    }
+
+
+def run_autotune(args: argparse.Namespace) -> dict[str, Any]:
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    warm_up_numba()
+    rows = []
+    for threads in args.thread_counts:
+        set_num_threads(threads)
+        row = benchmark_once(args.dims, args.sweeps, args.warmup_sweeps, args.overrelax, args.seed + threads)
+        rows.append(row)
+        print(
+            f"threads={threads}: {row['compiled_us_per_link']:.3f} us/link, "
+            f"{row['speedup_vs_pure_python_heatbath']:.2f}x"
+        )
+
+    best = min(rows, key=lambda r: r["compiled_us_per_link"])
+    result = {
+        "kind": "numba_thread_autotune",
+        "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "dims": list(args.dims),
+        "beta": BETA,
+        "sweeps": args.sweeps,
+        "warmup_sweeps": args.warmup_sweeps,
+        "overrelax_sweeps_per_heatbath": args.overrelax,
+        "host_cpu_count": os.cpu_count(),
+        "rows": rows,
+        "recommended_numba_threads": int(best["threads"]),
+        "recommended_us_per_link": float(best["compiled_us_per_link"]),
+        "recommended_speedup_vs_pure_python_heatbath": float(best["speedup_vs_pure_python_heatbath"]),
+    }
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(result, indent=2, sort_keys=True))
+    return result
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="cmd", required=True)
@@ -876,6 +1083,7 @@ def parse_args() -> argparse.Namespace:
     bench.add_argument("--warmup-sweeps", type=int, default=2)
     bench.add_argument("--overrelax", type=int, default=4)
     bench.add_argument("--serial", action="store_true", help="Use the serial sweep kernel instead of checkerboard parallel.")
+    bench.add_argument("--numba-threads", type=int, default=None, help="Set numba worker threads for this run.")
     bench.add_argument("--plaquette-interval", type=int, default=10)
     bench.add_argument("--seed", type=int, default=20260430)
     bench.add_argument("--output", type=Path, default=DEFAULT_BENCHMARK)
@@ -887,6 +1095,7 @@ def parse_args() -> argparse.Namespace:
     ens.add_argument("--separation", type=int, default=20)
     ens.add_argument("--overrelax", type=int, default=4)
     ens.add_argument("--serial", action="store_true", help="Use the serial sweep kernel instead of checkerboard parallel.")
+    ens.add_argument("--numba-threads", type=int, default=None, help="Set numba worker threads for this run.")
     ens.add_argument("--ape-steps", type=int, default=5)
     ens.add_argument("--ape-alpha", type=float, default=0.5)
     ens.add_argument("--max-r", type=int, default=8)
@@ -899,6 +1108,31 @@ def parse_args() -> argparse.Namespace:
     ens.add_argument("--checkpoint-every", type=int, default=10)
     ens.add_argument("--resume-checkpoint", action="store_true")
 
+    auto = sub.add_parser("autotune", help="Benchmark thread counts for one volume/update setting.")
+    auto.add_argument("--dims", type=parse_dims, required=True)
+    auto.add_argument("--thread-counts", type=parse_int_list, default=[1, 2, 4, 6, 8, 10])
+    auto.add_argument("--sweeps", type=int, default=8)
+    auto.add_argument("--warmup-sweeps", type=int, default=1)
+    auto.add_argument("--overrelax", type=int, default=3)
+    auto.add_argument("--seed", type=int, default=20260430)
+    auto.add_argument("--output", type=Path, default=OUTPUT_DIR / "numba_thread_autotune.json")
+
+    ac = sub.add_parser("autocorr-pilot", help="Estimate decorrelation for production scheduling.")
+    ac.add_argument("--dims", type=parse_dims, required=True)
+    ac.add_argument("--therm", type=int, default=50)
+    ac.add_argument("--sweeps", type=int, default=100)
+    ac.add_argument("--measure-every", type=int, default=1)
+    ac.add_argument("--overrelax", type=int, default=3)
+    ac.add_argument("--numba-threads", type=int, default=None, help="Set numba worker threads for this run.")
+    ac.add_argument("--ape-steps", type=int, default=2)
+    ac.add_argument("--ape-alpha", type=float, default=0.5)
+    ac.add_argument("--max-r", type=int, default=3)
+    ac.add_argument("--max-t", type=int, default=3)
+    ac.add_argument("--max-lag", type=int, default=40)
+    ac.add_argument("--progress-interval", type=int, default=10)
+    ac.add_argument("--seed", type=int, default=20260430)
+    ac.add_argument("--output", type=Path, default=OUTPUT_DIR / "autocorr_pilot.json")
+
     return parser.parse_args()
 
 
@@ -909,6 +1143,12 @@ def main() -> int:
         return 0 if result["speedup_target_pass"] else 2
     if args.cmd == "ensemble":
         run_ensemble(args)
+        return 0
+    if args.cmd == "autotune":
+        run_autotune(args)
+        return 0
+    if args.cmd == "autocorr-pilot":
+        run_autocorr_pilot(args)
         return 0
     raise AssertionError(args.cmd)
 

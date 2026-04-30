@@ -1,0 +1,44 @@
+{
+  "beta": 6.0,
+  "dims": [
+    12,
+    12,
+    12,
+    24
+  ],
+  "host_cpu_count": 10,
+  "kind": "numba_thread_autotune",
+  "overrelax_sweeps_per_heatbath": 3,
+  "recommended_numba_threads": 6,
+  "recommended_speedup_vs_pure_python_heatbath": 66.49949874529267,
+  "recommended_us_per_link": 2.7443815884840594,
+  "rows": [
+    {
+      "compiled_us_per_link": 3.4681410296697224,
+      "elapsed_seconds": 11.506459582597017,
+      "speedup_vs_pure_python_heatbath": 52.62185085287025,
+      "threads": 4
+    },
+    {
+      "compiled_us_per_link": 2.7443815884840594,
+      "elapsed_seconds": 9.105199459008873,
+      "speedup_vs_pure_python_heatbath": 66.49949874529267,
+      "threads": 6
+    },
+    {
+      "compiled_us_per_link": 3.119026491787489,
+      "elapsed_seconds": 10.348181333392859,
+      "speedup_vs_pure_python_heatbath": 58.51184671900966,
+      "threads": 8
+    },
+    {
+      "compiled_us_per_link": 2.8192271917793765,
+      "elapsed_seconds": 9.353519207797945,
+      "speedup_vs_pure_python_heatbath": 64.73405213036901,
+      "threads": 10
+    }
+  ],
+  "sweeps": 20,
+  "timestamp_utc": "2026-04-30T22:08:18Z",
+  "warmup_sweeps": 2
+}

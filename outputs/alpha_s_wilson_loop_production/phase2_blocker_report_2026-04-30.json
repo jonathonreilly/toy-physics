@@ -77,6 +77,22 @@
     "24^3x48": 67.83,
     "total": 87.44
   },
+  "autocorrelation_optimized_plan": {
+    "autocorr_pilot": "outputs/alpha_s_wilson_loop_production/autocorr_pilot_12x12x12x24_or3_2026-04-30.json",
+    "block_size_saved_configurations": 11,
+    "measurements_per_volume": 500,
+    "recommended_separation_sweeps": 6,
+    "strict_runner_n_cfg_requirement_satisfied": true,
+    "tau_int_slowest_observable": 1.0696639448773393,
+    "timeline_report": "outputs/alpha_s_wilson_loop_production/VALID_PRODUCTION_TIMELINE_2026-04-30.md",
+    "wall_time_hours": {
+      "12^3x24": 0.96,
+      "16^3x32": 4.32,
+      "24^3x48": 19.11,
+      "ideal_parallel": 19.11,
+      "sequential_total": 24.39
+    }
+  },
   "excluded_from_estimate": [
     "Wilson-loop measurement overhead for R,T=1..8",
     "APE/HYP smearing",

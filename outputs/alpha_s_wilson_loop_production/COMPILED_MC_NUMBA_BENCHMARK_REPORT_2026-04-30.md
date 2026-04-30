@@ -122,14 +122,24 @@ certificate.
 
 ## Recommended Production Commands
 
+A follow-up autocorrelation pilot on `12^3 x 24` measured
+`tau_int = 1.0697` sweeps for the slowest tracked observable and recommends
+`separation = ceil(5 tau_int) = 6`.  The revised strict-runner-compatible
+500-configuration timeline is documented in:
+
+```text
+outputs/alpha_s_wilson_loop_production/VALID_PRODUCTION_TIMELINE_2026-04-30.md
+```
+
 Run each volume with checkpointing.  Example for `12^3 x 24`:
 
 ```bash
+NUMBA_NUM_THREADS=6 \
 python3 scripts/alpha_s_numba_wilson_loop_mc.py ensemble \
   --dims 12,12,12,24 \
   --therm 1000 \
-  --measurements 400 \
-  --separation 50 \
+  --measurements 500 \
+  --separation 6 \
   --overrelax 3 \
   --ape-steps 5 \
   --max-r 8 \
