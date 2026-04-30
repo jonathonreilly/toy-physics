@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 13,
+    "critical": 12,
     "high": 234,
     "leaf": 571,
     "medium": 342
   },
-  "generated_at": "2026-04-30T11:42:22.556814+00:00",
+  "generated_at": "2026-04-30T11:42:25.871989+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23,28 +23,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_site_phase_cube_shift_intertwiner.py",
       "transitive_descendants": 281
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "ckm_third_row_magnitudes_theorem_note_2026-04-24",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-        "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
-        "alpha_s_derived_note"
-      ],
-      "direct_in_degree": 17,
-      "load_bearing_score": 14.875,
-      "note_path": "docs/CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_ckm_third_row_magnitudes.py",
-      "transitive_descendants": 82
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24470,5 +24448,5 @@
     }
   ],
   "ready_count": 746,
-  "total_pending": 1160
+  "total_pending": 1159
 }
