@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 408,
+    "leaf": 407,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:23:49.007308+00:00",
+  "generated_at": "2026-04-30T19:23:54.786706+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13705,23 +13705,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_selector_relative_action_recovered_projection_support_theorem_note_2026-04-21",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_SELECTOR_RELATIVE_ACTION_RECOVERED_PROJECTION_SUPPORT_THEOREM_NOTE_2026-04-21.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_selector_relative_action_recovered_projection_support_2026_04_21.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_selector_shifted_doublet_imag_sign_support_theorem_note_2026-04-21",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20289,6 +20272,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 547,
-  "total_pending": 934
+  "ready_count": 546,
+  "total_pending": 933
 }
