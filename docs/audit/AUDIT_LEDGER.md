@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:10:10.564125+00:00
+**Generated:** 2026-04-30T19:10:18.536141+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 126 |
+| `audited_clean` | 127 |
 | `audited_conditional` | 329 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1019 |
+| `unaudited` | 1018 |
 
 | criticality | count |
 |---|---:|
@@ -126,6 +126,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cycle_break_slice_note_2026-04-10` | unknown | ~~audited_clean~~ | unknown | cross_family | codex-current | C | - |
 | `distance_law_3d_64_closure_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `distance_law_preserving_third_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `electric_sign_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -2887,6 +2888,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The thermal layer is claimed to be closed at evaluation/bounding strength by combining exact integral representation, exact monotonicity, and exact positive-series/tail enclosures.  _(class `C`)_
 - **chain closes:** False — The runner certifies the current endpoint/root numerics, including the observed-target bracket, but the restricted ledger supplies no one-hop authorities for the component representation, monotonicity, and tail-enclosure theorems. The source note therefore imports those component closures as premises.
 - **rationale:** Issue: theorem-grade bounding closure relies on component theorems that are named but not provided as ledger dependencies in the restricted audit context. Why this blocks: the endpoint enclosures and unique-root interval are only as strong as the imported integral, monotonicity, and tail machinery. Repair target: register the component theorem notes as dependencies or inline the derivations with a runner that exposes those checks directly. Claim boundary until fixed: the current runner output supports narrow endpoint/root intervals conditional on the component closures.
+- **auditor confidence:** high
+
+### `dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16`
+
+- **Note:** [`DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_INTEGRAL_REPRESENTATION_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_INTEGRAL_REPRESENTATION_THEOREM_NOTE_2026-04-16.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-d-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the fixed x_f = 25 slice, the normalized thermal average is reduced to a continuum integral with prefactor 2/sqrt(pi) and exact low-order inverse-velocity moments.  _(class `C`)_
+- **chain closes:** True — For the scoped x_f = 25 slice, the note and runner close the normalization, change-of-variable prefactor, and two moment identities directly. No external comparator or selector law is being claimed.
+- **rationale:** The load-bearing step is a structural continuum-representation calculation on a fixed slice, and the current runner reproduces the denominator, prefactor, <1/v>, and <1/v^2> identities with PASS=5 FAIL=0. The clean audit is scoped to that representation only; it does not ratify the retained status of x_f = 25 or any downstream selector.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16`
