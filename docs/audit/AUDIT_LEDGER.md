@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T10:23:57.105481+00:00
+**Generated:** 2026-04-30T10:24:20.226589+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -2757,10 +2757,10 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Breaking the (S,kappa) degeneracy requires the Gauss-flux source-unit identification, which is conditional on the Clifford phase bridge and therefore on (G1), so A2 cannot close (G2) independently on A_min alone.  _(class `B`)_
-- **chain closes:** False — The runner directly verifies finite Hilbert-flow rescaling invariances and kappa dependence, but the decisive exclusivity/conditional-chain step is imported from named source-unit and Clifford-bridge authorities that are not one-hop dependencies. Several PASS lines encode those prior-authority assertions as logical checks.
-- **rationale:** Issue: the no-go's core rescaling algebra closes, but the stronger claim that the only on-package action-unit route is conditional on the Gauss-flux/Clifford-bridge/G1 chain is not established from registered one-hop authorities. Why this blocks: the audit packet can ratify the finite kappa-rescaling obstruction, but it cannot independently ratify the exclusivity of the source-unit route or the imported conditional bridge chain. Repair target: register the Target 3 phase-unit boundary, source-unit normalization support theorem, Clifford phase bridge, A1 no-go, g_bare authority, and A_min as dependencies, then make the runner verify their effective statuses and the precise implication chain. Claim boundary until fixed: safe as a conditional A2 obstruction showing g_bare=1 alone does not fix kappa; not safe as a fully retained no-go for every on-package action-unit closure route.
+- **auditor:** `codex-audit-loop-corrected-cl4c-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** Breaking the (S,kappa) degeneracy requires the Gauss-flux source-unit identification, while g_bare = 1 alone is only a dimensionless normalization and does not fix an absolute action quantum on P_A H_cell.  _(class `B`)_
+- **chain closes:** False — The finite rescaling obstruction for the g_bare-only A2 route closes, but the broader claim that current A_min leaves (G1)/(G2)/(C1) open no longer follows after PR #196's corrected Cl_4(C) presence finding. The safe result is only that A2 does not independently fix kappa without the source-unit/Clifford bridge chain.
+- **rationale:** Issue: the note correctly shows that finite Hilbert flow preserves the (S,kappa) rescaling degeneracy and that g_bare = 1 alone does not set an action unit, but it uses the old A1-only G1 obstruction to frame (G1), (G2), and (C1) as still open on A_min. Why this blocks: PR #196 gives an A_min-derived Cl_4(C) action on P_A, so the A2 audit cannot be used as evidence for forced Axiom* adoption or a current-surface G1 stop. Repair target: rewrite the implication sections around the corrected Cl_4(C) presence theorem and re-check whether the Gauss-flux/source-unit bridge closes once G1 is supplied. Claim boundary until fixed: A2 remains a conditional/g_bare-only no-go; it does not independently settle G2 or C1.
 - **open / conditional deps cited:**
   - `HUBBLE_LANE5_C1_A1_GRASSMANN_NO_GO_NOTE_2026-04-28.md`
   - `PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`
