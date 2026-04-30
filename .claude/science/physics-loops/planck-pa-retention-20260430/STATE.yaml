@@ -1,0 +1,26 @@
+slug: planck-pa-retention-20260430
+started_at: "2026-04-30"
+runtime_requested: "12h"
+branch: physics-loop/planck-pa-retention-block01-20260430
+worktree: /Users/jonBridger/CI3Z2-physics-loop-planck-pa-retention-20260430
+base: origin/claude/planck-primitive-clifford-majorana-edge-2026-04-30
+base_reason: "stacked on PR #228 because the residual theorem depends on its audit/no-go artifacts"
+target:
+  theorem: "active primitive boundary block / first-order orientation forcing for P_A"
+  desired_outcome: "audit-safe unconditional closure or hard global stop for this lane"
+status: hard_stop
+cooperative_lock:
+  attempted: true
+  result: unavailable
+  detail: "scripts/automation_lock.py points at /Users/jonreilly and exits with permission denied in this workspace"
+isolation:
+  method: dedicated_git_worktree_and_branch
+grounding_complete: true
+stretch_cycle_complete: true
+fanout_complete: true
+certificate: hard_stop_current_substrate_bank_does_not_force_P_A_or_first_order_carrier
+audit_pipeline:
+  mechanical_seed_run: true
+  new_claim_seeded: planck_boundary_orientation_incidence_no_go_note_2026-04-30
+  new_claim_audit_status: unaudited
+  audit_queue_ready: true

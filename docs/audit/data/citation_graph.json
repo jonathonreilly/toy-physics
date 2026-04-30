@@ -18421,7 +18421,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T21:57:37.385395+00:00",
+  "generated_at": "2026-04-30T22:20:23.262085+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -31688,6 +31688,16 @@
       "runner_path": "scripts/frontier_planck_boundary_density_extension.py",
       "title": "Planck Boundary-Density Extension Theorem"
     },
+    "planck_boundary_orientation_incidence_no_go_note_2026-04-30": {
+      "claim_id": "planck_boundary_orientation_incidence_no_go_note_2026-04-30",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary; audit pending",
+      "deps": [],
+      "note_hash": "487515efaade035e267ae1a553350bb696c36d393e529c5776949d4d5072450a",
+      "path": "docs/PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_planck_boundary_orientation_incidence_no_go.py",
+      "title": "Planck Boundary Orientation Incidence No-Go"
+    },
     "planck_finite_response_no_go_note_2026-04-24": {
       "claim_id": "planck_finite_response_no_go_note_2026-04-24",
       "current_status": "proposed_retained",
@@ -40882,6 +40892,7 @@
     "physics_first_attack_plan",
     "physics_qa_tracker",
     "planck_boundary_density_extension_theorem_note_2026-04-24",
+    "planck_boundary_orientation_incidence_no_go_note_2026-04-30",
     "planck_parent_source_hidden_character_no_go_note_2026-04-24",
     "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
     "planck_source_unit_normalization_support_theorem_note_2026-04-25",
@@ -41272,15 +41283,15 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4605,
-    "leaf_count": 721,
-    "node_count": 1658,
-    "root_count": 1178,
-    "runners_with_path": 1175,
+    "leaf_count": 722,
+    "node_count": 1659,
+    "root_count": 1179,
+    "runners_with_path": 1176,
     "status_counts": {
       "bounded": 446,
       "open": 48,
       "proposed_promoted": 1,
-      "proposed_retained": 374,
+      "proposed_retained": 375,
       "support": 378,
       "unknown": 411
     }
