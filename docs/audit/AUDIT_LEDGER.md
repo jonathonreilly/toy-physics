@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:52:03.129513+00:00
+**Generated:** 2026-04-30T00:52:06.393864+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -38,9 +38,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 145 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 50 |
-| `audited_numerical_match` | 9 |
+| `audited_numerical_match` | 10 |
 | `audited_renaming` | 9 |
-| `unaudited` | 1293 |
+| `unaudited` | 1292 |
 
 | criticality | count |
 |---|---:|
@@ -380,6 +380,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
+| `quark_up_amplitude_candidate_scan_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `tensor_support_center_excess_law_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -3544,6 +3545,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `scripts/frontier_quark_endpoint_readout_constraints.py`
   - `missing theorem deriving (beta_T/alpha_T, alpha_T/alpha_E, beta_E/alpha_E)=(-1,-2,21/4)`
 - **auditor confidence:** 0.91
+
+### `quark_up_amplitude_candidate_scan_note_2026-04-19`
+
+- **Note:** [`QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`](../../docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The scan evaluates exact candidates for a_u against anchored CKM/J and two-ratio-refit scores and identifies 7/9, sqrt(3/5), and related projector/support dressings as a short bounded shortlist.  _(class `G`)_
+- **chain closes:** False — The runner compares chosen candidate constants against the solved support-anchored target package and reports sub-percent numerical quality, but no candidate is derived as the framework-forced amplitude law. The note itself states that this is bounded compression, not retained derivation.
+- **rationale:** Issue: the claim is carried by comparator scoring of a curated/grammar candidate shortlist against a solved amplitude surface. Why this blocks: a short list of close numerical candidates does not derive the up-sector scalar or make one candidate load-bearing from retained primitives. Repair target: derive a unique a_u law from the projector/support constants and have the runner compute it independently before evaluating CKM/J. Claim boundary until fixed: the row may summarize bounded exact-candidate compression, not a retained quark-amplitude theorem.
+- **open / conditional deps cited:**
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
 
 ### `retained_cross_lane_consistency_support_note_2026-04-22`
 

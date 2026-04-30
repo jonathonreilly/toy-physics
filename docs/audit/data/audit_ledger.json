@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T00:52:02.902666+00:00",
-  "generated_at": "2026-04-30T00:52:01.136043+00:00",
-  "invalidation_run_at": "2026-04-30T00:52:02.845653+00:00",
+  "effective_status_computed_at": "2026-04-30T00:52:06.161097+00:00",
+  "generated_at": "2026-04-30T00:52:04.430656+00:00",
+  "invalidation_run_at": "2026-04-30T00:52:06.105146+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T00:52:02.732556+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:52:05.992316+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -67608,15 +67608,27 @@
       "verdict_rationale": null
     },
     "quark_up_amplitude_candidate_scan_note_2026-04-19": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T00:52:03.497439+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "quark_projector_parameter_audit_note_2026-04-19": "audited_numerical_match",
+          "quark_projector_ray_phase_completion_note_2026-04-18": "audited_numerical_match"
+        },
+        "deps": [
+          "quark_projector_parameter_audit_note_2026-04-19",
+          "quark_projector_ray_phase_completion_note_2026-04-18"
+        ],
+        "load_bearing_score": 7.992,
+        "transitive_descendants": 44
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner compares chosen candidate constants against the solved support-anchored target package and reports sub-percent numerical quality, but no candidate is derived as the framework-forced amplitude law. The note itself states that this is bounded compression, not retained derivation.",
       "claim_id": "quark_up_amplitude_candidate_scan_note_2026-04-19",
       "criticality": "high",
       "cross_confirmation": null,
@@ -67629,17 +67641,20 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "audited_numerical_match",
-      "effective_status_reason": "inherited_from:quark_projector_parameter_audit_note_2026-04-19",
-      "independence": null,
-      "intrinsic_status": "bounded",
+      "effective_status_reason": "self",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 7.992,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The scan evaluates exact candidates for a_u against anchored CKM/J and two-ratio-refit scores and identifies 7/9, sqrt(3/5), and related projector/support dressings as a short bounded shortlist.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "d04347fd4815852878dbd6944b41b602d58f36f724f1708fb571041619b06118",
       "note_path": "docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
+        "docs/QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-29T11:40:10.272197+00:00",
@@ -67716,13 +67731,13 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 7,
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_quark_up_amplitude_candidate_scan.py",
       "title": "Quark Up-Amplitude Exact-Candidate Scan",
       "transitive_descendants": 44,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the claim is carried by comparator scoring of a curated/grammar candidate shortlist against a solved amplitude surface. Why this blocks: a short list of close numerical candidates does not derive the up-sector scalar or make one candidate load-bearing from retained primitives. Repair target: derive a unique a_u law from the projector/support constants and have the runner compute it independently before evaluating CKM/J. Claim boundary until fixed: the row may summarize bounded exact-candidate compression, not a retained quark-amplitude theorem."
     },
     "quark_up_amplitude_native_affine_no_go_note_2026-04-19": {
       "audit_date": null,
