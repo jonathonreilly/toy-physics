@@ -36,6 +36,30 @@ The existing code does not include a production SU(3) heat-bath implementation,
 APE/HYP smearing infrastructure, autocorrelation analysis, or a production
 static-potential analysis pipeline.
 
+Follow-up inspection found `scripts/frontier_color_projection_mc.py`, which
+does contain a Cabibbo-Marinari-style SU(3) heat-bath routine for an existing
+`4^4` color-projection support calculation. That routine is still a pure-Python
+site/link loop and is not a replacement production engine for this task:
+
+- it is symmetric-`L^4` only, not the requested `L^3 x L_t` production shape;
+- it has no overrelaxation sweep;
+- it has no APE/HYP smearing or Wilson-loop/static-potential analysis;
+- it benchmarks slower per link than the Metropolis implementation used in
+  the first blocker estimate.
+
+Local compiled/JIT options available in the environment:
+
+```text
+numba: unavailable
+cupy: unavailable
+Cython/pybind11/meson: unavailable
+cffi: available
+clang: available
+```
+
+So a real replacement would require writing and validating a compiled C/CFFI
+or equivalent production kernel, not simply switching to existing repo code.
+
 ## Benchmark
 
 Command executed:
@@ -89,6 +113,19 @@ Total:      69.4 days
 This estimate excludes measurement overhead. Measuring all rectangular loops
 `R,T in {1,...,8}` over all origins and spatial orientations every saved
 configuration would add substantial runtime.
+
+Additional pure-Python heat-bath benchmark from `frontier_color_projection_mc.py`
+with `PYTHONPATH=scripts`:
+
+```text
+heatbath 4^4: 0.177s/sweep, 172.4 us/link, plaq=0.6969
+heatbath 6^4: 0.975s/sweep, 188.1 us/link, plaq=0.6989
+heatbath 8^4: 2.991s/sweep, 182.5 us/link, plaq=0.6988
+```
+
+At approximately `180 us/link`, the existing pure-Python heat-bath path would
+be roughly twice as slow as the Metropolis benchmark above. It therefore does
+not satisfy the requested `>=100x` speedup target.
 
 ## Audit Consequence
 

@@ -130,6 +130,14 @@ These are useful for scout/qualitative checks, but they are not a production
 Cabibbo-Marinari heat-bath / overrelaxation Wilson-loop pipeline with smearing,
 autocorrelation control, and static-potential plateau analysis.
 
+Follow-up inspection found `scripts/frontier_color_projection_mc.py`, which
+contains a Cabibbo-Marinari-style heat-bath routine for a `4^4`
+color-projection support calculation. That path is also a pure-Python
+site/link loop, is symmetric-`L^4` only, has no overrelaxation sweep, and has
+no Wilson-loop/static-potential analysis stack. It benchmarks at roughly
+`180 us/link`, slower than the Metropolis benchmark below, so it is not the
+requested production replacement.
+
 A benchmark on the requested first production volume used the array-backed
 Wilson Metropolis implementation:
 
@@ -155,6 +163,9 @@ gives the following sweep-only estimate:
 This excludes the expensive measurement pass for all Wilson loops
 `R,T in {1,...,8}`, APE/HYP smearing, jackknife/bootstrap analysis, plateau
 fitting, and any reruns needed for autocorrelation or failed plateaus.
+
+The environment check also found no `numba`, `cupy`, `Cython`, `pybind11`, or
+`meson`; only `cffi` and `clang` are available for a future compiled kernel.
 
 The production evidence therefore remains absent.  The branch records the
 blocker in:

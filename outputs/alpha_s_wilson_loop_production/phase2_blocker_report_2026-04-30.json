@@ -9,6 +9,15 @@
     "updated_links_per_sweep": 165888
   },
   "certificate_generated": false,
+  "compiled_or_jit_options": {
+    "Cython": "unavailable",
+    "clang": "available",
+    "cffi": "available",
+    "cupy": "unavailable",
+    "meson": "unavailable",
+    "numba": "unavailable",
+    "pybind11": "unavailable"
+  },
   "date": "2026-04-30",
   "estimated_sweep_only_wall_time_days": {
     "12^3x24": 3.4,
@@ -27,7 +36,34 @@
     "scripts/frontier_alpha_s_direct_wilson_loop.py",
     "scripts/frontier_plaquette_self_consistency.py",
     "scripts/frontier_g_bare_critical_feature_scan.py",
-    "scripts/frontier_confinement_string_tension.py"
+    "scripts/frontier_confinement_string_tension.py",
+    "scripts/frontier_color_projection_mc.py"
+  ],
+  "existing_pure_python_heatbath_benchmark": {
+    "4^4": {
+      "plaquette_after_one_sweep": 0.6969,
+      "seconds_per_sweep": 0.177,
+      "seconds_per_updated_link": 0.0001724
+    },
+    "6^4": {
+      "plaquette_after_one_sweep": 0.6989,
+      "seconds_per_sweep": 0.975,
+      "seconds_per_updated_link": 0.0001881
+    },
+    "8^4": {
+      "plaquette_after_one_sweep": 0.6988,
+      "seconds_per_sweep": 2.991,
+      "seconds_per_updated_link": 0.0001825
+    },
+    "source": "scripts/frontier_color_projection_mc.py"
+  },
+  "missing_production_features": [
+    "compiled or vectorized Cabibbo-Marinari heat-bath kernel",
+    "SU(3) overrelaxation sweeps",
+    "L^3 x L_t production geometry for heat-bath path",
+    "APE/HYP smearing",
+    "autocorrelation analysis",
+    "production Wilson-loop/static-potential pipeline"
   ],
   "phase2_status": "blocked",
   "reason": "Existing repo SU(3) Wilson MC infrastructure is small-volume pure-Python Metropolis code, not a production heat-bath/overrelaxation Wilson-loop pipeline.",
