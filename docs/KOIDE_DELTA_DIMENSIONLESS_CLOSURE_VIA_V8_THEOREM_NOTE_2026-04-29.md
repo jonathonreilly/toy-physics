@@ -100,8 +100,7 @@ On the A_min surface (with V8 closure of Q from Block 1):
    is now structurally forced rather than coincidental.
 
 **Status:** support for the DIMENSIONLESS reading on A_min, conditional
-on V8 (Block 1) ratification. Audit-required-before-effective-retained
-flag carried per skill.
+on V8 (Block 1) support. No effective-retained status is proposed here.
 
 The identification of dimensionless `2/9` with `2/9 rad` (postulate P)
 is NOT closed by this theorem.
@@ -145,13 +144,13 @@ actual_current_surface_status: support
 conditional_surface_status: null
 hypothetical_axiom_status: null
 admitted_observation_status: null
-proposal_allowed: true
+proposal_allowed: false
 proposal_allowed_reason: |
   Composes V8 (Block 1 support/audit-pending Q chain) with retained
-  Brannen phase reduction theorem and Plancherel identity. No new
-  axiom, no observed mass. The dimensionless δ = 2/9 composition
-  remains support-tier until V8 is ratified; postulate P remains open.
-audit_required_before_effective_retained: true
+  Brannen phase reduction theorem and Plancherel identity as support.
+  No new axiom, no observed mass. The dimensionless δ = 2/9 composition
+  remains support-tier; postulate P remains open.
+audit_required_before_effective_retained: false
 bare_retained_allowed: false
 radian_bridge_postulate_P_status: open  # not closed by this note
 literal_2_over_9_rad_pdg_match_status: support_grade_numerical_witness

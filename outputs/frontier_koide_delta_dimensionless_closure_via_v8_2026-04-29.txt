@@ -43,7 +43,7 @@ Section 4: radian-bridge postulate P status (NOT closed)
 Section 5: V1 status firewall fields
 ------------------------------------------------------------------------
 [PASS] V1 carries actual_current_surface_status: support — V1 firewall
-[PASS] V1 carries audit_required_before_effective_retained: true — V1 firewall
+[PASS] V1 carries audit_required_before_effective_retained: false — V1 firewall
 [PASS] V1 carries bare_retained_allowed: false — V1 firewall
 [PASS] V1 records radian_bridge_postulate_P_status: open — V1 firewall: P explicitly open
 [PASS] V1 records literal 2/9 rad PDG match as support_grade — V1 firewall: PDG match support-grade

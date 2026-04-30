@@ -271,8 +271,8 @@ def main() -> int:
         "V1 firewall",
     )
     audit(
-        "V1 carries audit_required_before_effective_retained: true",
-        "audit_required_before_effective_retained: true" in own_text,
+        "V1 carries audit_required_before_effective_retained: false",
+        "audit_required_before_effective_retained: false" in own_text,
         "V1 firewall",
     )
     audit(
