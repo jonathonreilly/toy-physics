@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T20:34:48.771155+00:00
+**Generated:** 2026-04-30T21:42:01.715410+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 205 |
+| `audited_clean` | 206 |
 | `audited_conditional` | 456 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 812 |
+| `unaudited` | 811 |
 
 | criticality | count |
 |---|---:|
@@ -249,6 +249,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_mru_demotion_note_2026-04-20` | support | ~~audited_clean~~ | support | cross_family | codex-current | D | - |
 | `koide_mru_weight_class_obstruction_theorem_note_2026-04-19` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_q23_oh_covariance_nogo_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
+| `koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_bridge_single_primitive_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `koide_q_minimal_scale_free_selector_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
@@ -8070,6 +8071,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The retained affine Hermitian chart is covariant under only {+I,-I} inside the 48-element O_h signed-permutation group, so the O_h cubic-invariance sub-route to spin-1/Q=2/3 is ruled out.  _(class `C`)_
 - **chain closes:** True — The runner enumerates all 48 O_h elements, computes individual stabilizers, verifies the joint pointwise stabilizer has size 2, and verifies the chart-span covariance group is exactly {+I,-I}. This closes the stated negative sub-route boundary while leaving the other spin-1 routes open.
 - **rationale:** The no-go closes on its stated support boundary: the retained chart does not carry O_h covariance beyond parity, so sub-route (a) is falsified. This audit does not close Q=2/3; it only removes the cubic-chart-invariance mechanism and preserves the note's open sub-routes (b) and (c).
+- **auditor confidence:** high
+
+### `koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25`
+
+- **Note:** [`KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`](../../docs/KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-01`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** On the admitted normalized reduced carrier with W_red = log det(I+K), K=0 iff Y=I_2 iff z=0 iff <Z>=0 iff Q=2/3.  _(class `A`)_
+- **chain closes:** True — The source note states the reduced carrier and source law as admitted support premises, then proves the equivalence by direct algebra. It does not claim the open physical theorem selecting the source-free reduced carrier or full native Koide closure.
+- **rationale:** The support-tier criterion theorem closes on its own stated scope: the runner verifies the upstream support-boundary statements and the algebraic source-response, Z-erasure, Q-equivalence, inverse-map, and hidden-source reconstruction checks. This is not a retained Koide closure audit; the note explicitly leaves physical source-free carrier selection, delta closure, and full dimensionless Koide closure open. Residual risk is downstream misuse of this clean support criterion as if it selected the physical charged-lepton carrier by itself.
 - **auditor confidence:** high
 
 ### `koide_q_bridge_single_primitive_note_2026-04-22`

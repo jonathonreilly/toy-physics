@@ -1,29 +1,12 @@
 {
   "by_criticality": {
     "critical": 0,
-    "high": 237,
+    "high": 236,
     "leaf": 286,
     "medium": 289
   },
-  "generated_at": "2026-04-30T20:34:48.594473+00:00",
+  "generated_at": "2026-04-30T21:42:01.549699+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 13,
-      "load_bearing_score": 11.959,
-      "note_path": "docs/KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_q_background_zero_z_erasure_criterion.py",
-      "transitive_descendants": 43
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
@@ -18176,6 +18159,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 431,
-  "total_pending": 812
+  "ready_count": 430,
+  "total_pending": 811
 }
