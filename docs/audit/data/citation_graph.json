@@ -18325,7 +18325,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T12:31:43.294055+00:00",
+  "generated_at": "2026-04-30T13:30:39.413625+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19818,6 +19818,16 @@
       "path": "docs/AXIOM_CHANGE_PROPOSAL_2026-04-10.md",
       "runner_path": null,
       "title": "Axiom Update And Interpretation Change"
+    },
+    "axiom_first_spin_statistics_theorem_note_2026-04-29": {
+      "claim_id": "axiom_first_spin_statistics_theorem_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support \u2014 branch-local theorem note on A_min; runner passing; audit-pending.",
+      "deps": [],
+      "note_hash": "cf781bfad36f6f4c9820886f5e4982b2d8776aab5dda3c93064bf09ce6674de4",
+      "path": "docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/axiom_first_spin_statistics_check.py",
+      "title": "Axiom-First Spin-Statistics Theorem on Cl(3) \u2297 Z^3"
     },
     "axiom_reduction_note": {
       "claim_id": "axiom_reduction_note",
@@ -40242,6 +40252,7 @@
     "atomic_rydberg_dependency_firewall_note_2026-04-27",
     "audited_symmetry_synthesis_note",
     "axiom_change_proposal_2026-04-10",
+    "axiom_first_spin_statistics_theorem_note_2026-04-29",
     "axiom_reduction_note",
     "b_independence_mechanism_note",
     "background_independence_note",
@@ -41339,16 +41350,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4581,
-    "leaf_count": 737,
-    "node_count": 1675,
-    "root_count": 1203,
-    "runners_with_path": 759,
+    "leaf_count": 738,
+    "node_count": 1676,
+    "root_count": 1204,
+    "runners_with_path": 760,
     "status_counts": {
       "bounded": 254,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 177,
+      "support": 178,
       "unknown": 795
     }
   }
