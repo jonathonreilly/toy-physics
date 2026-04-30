@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:21:31.359028+00:00
+**Generated:** 2026-04-30T01:22:22.169883+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,13 +20,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 78 |
-| _proposed_retained_ | 19 |
+| _proposed_retained_ | 15 |
 | bounded | 213 |
 | support | 108 |
 | open | 24 |
-| unknown | 550 |
+| unknown | 539 |
 | ~~audited_decoration~~ | 4 |
-| ~~audited_numerical_match~~ | 18 |
+| ~~audited_numerical_match~~ | 33 |
 | ~~audited_renaming~~ | 42 |
 | ~~audited_conditional~~ | 443 |
 | ~~audited_failed~~ | 89 |
@@ -38,9 +38,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 148 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 50 |
-| `audited_numerical_match` | 12 |
+| `audited_numerical_match` | 13 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1287 |
+| `unaudited` | 1286 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 382 |
 | `leaf` | 797 |
 
-- **Proposed claims demoted by upstream:** 150
+- **Proposed claims demoted by upstream:** 153
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -388,6 +388,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_up_amplitude_native_affine_no_go_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `quark_up_amplitude_native_expression_scan_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `tensor_support_center_excess_law_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
+| `wave_direct_dm_h025_two_point_synthesis_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
@@ -4580,6 +4581,26 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `no_ledger_runner_for_live_wave_direct_dm_family_scout`
   - `multi_seed_family_portability_batch_missing`
   - `null_linearity_and_continuum_control_stack_missing`
+- **auditor confidence:** high
+
+### `wave_direct_dm_h025_two_point_synthesis_note`
+
+- **Note:** [`WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md`](../../docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the current controlled Fam1 fine-H pair, the direct-dM matched-history effect survives in sign on both seeds, but the old coarse-H seed ordering is not refinement-stable.  _(class `G`)_
+- **chain closes:** False — The conclusion is read off a selected H=0.25, Fam1, S=0.004 two-seed numerical replay table. The ledger row has no one-hop dependencies or primary runner, so the audit packet cannot reproduce or independently derive the table values.
+- **rationale:** Issue: the proposed-retained result depends on a chosen two-point numerical surface at H=0.25, Fam1, S=0.004, with values imported from logs/prior notes that are not registered as one-hop authorities. Why this blocks: a finite selected replay table can support a bounded observation, but it does not close as a structural theorem or portability result from the audit packet. Repair target: register the control notes/log-producing runner as dependencies and add a reproducible runner that recomputes the two rows, then state an explicit statistical or structural criterion for promotion beyond the selected points. Claim boundary until fixed: safe as a bounded finite-replay observation that the two listed Fam1 seeds keep negative sign and reorder at H=0.25; not safe as independently retained direct-dM science.
+- **open / conditional deps cited:**
+  - `WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md`
+  - `WAVE_DIRECT_DM_H025_FEASIBILITY_NOTE.md`
+  - `WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md`
+  - `WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md`
+  - `WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md`
+  - `WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md`
+  - `WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md`
 - **auditor confidence:** high
 
 ### `wave_equation_self_field_note`

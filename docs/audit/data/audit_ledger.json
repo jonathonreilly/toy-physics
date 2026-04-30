@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T01:21:31.105613+00:00",
-  "generated_at": "2026-04-30T01:21:29.239978+00:00",
-  "invalidation_run_at": "2026-04-30T01:21:31.042952+00:00",
+  "effective_status_computed_at": "2026-04-30T01:22:21.941532+00:00",
+  "generated_at": "2026-04-30T01:22:20.093819+00:00",
+  "invalidation_run_at": "2026-04-30T01:22:21.878362+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T01:21:30.917013+00:00",
+  "load_bearing_computed_at": "2026-04-30T01:22:21.755089+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -26195,8 +26195,8 @@
       "load_bearing_score": 12.322,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
-      "max_descendant_status": "bounded",
-      "max_descendant_status_rank": 60,
+      "max_descendant_status": "unknown",
+      "max_descendant_status_rank": 30,
       "note_hash": "296429f41517fec385da2461b9423dec161f859714822611a94680e67a8d4973",
       "note_path": "docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md",
       "open_dependency_paths": [],
@@ -83824,8 +83824,8 @@
         "wave_direct_dm_h025_two_point_synthesis_note"
       ],
       "direct_in_degree": 4,
-      "effective_status": "proposed_retained",
-      "effective_status_reason": "self",
+      "effective_status": "audited_numerical_match",
+      "effective_status_reason": "inherited_from:wave_direct_dm_h025_two_point_synthesis_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 9.907,
@@ -84366,7 +84366,7 @@
         "wave_direct_dm_transfer_diagnostic_note"
       ],
       "direct_in_degree": 2,
-      "effective_status": "unknown",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "inherited_from:wave_direct_dm_h025_fam3_seed1_control_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -84435,7 +84435,7 @@
         "wave_direct_dm_transfer_diagnostic_note"
       ],
       "direct_in_degree": 3,
-      "effective_status": "unknown",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "inherited_from:wave_direct_dm_transfer_diagnostic_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -84509,7 +84509,7 @@
         "wave_direct_dm_h025_seed1_crossfamily_note"
       ],
       "direct_in_degree": 1,
-      "effective_status": "unknown",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "inherited_from:wave_direct_dm_seed_band_diagnosis_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -84580,8 +84580,8 @@
         "wave_direct_dm_h025_low_band_retention_note"
       ],
       "direct_in_degree": 1,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_numerical_match",
+      "effective_status_reason": "inherited_from:wave_direct_dm_h025_high_band_boundary_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 1.5,
@@ -84624,8 +84624,8 @@
         "wave_direct_dm_h025_two_point_synthesis_note"
       ],
       "direct_in_degree": 2,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_numerical_match",
+      "effective_status_reason": "inherited_from:wave_direct_dm_h025_low_band_retention_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 4.585,
@@ -84694,8 +84694,8 @@
         "wave_direct_dm_h025_two_point_synthesis_note"
       ],
       "direct_in_degree": 3,
-      "effective_status": "proposed_retained",
-      "effective_status_reason": "self",
+      "effective_status": "audited_numerical_match",
+      "effective_status_reason": "inherited_from:wave_direct_dm_h025_fam1_seed1_control_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 5.2,
@@ -84883,8 +84883,8 @@
         "wave_direct_dm_h025_fam2_two_point_synthesis_note"
       ],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
-      "effective_status_reason": "self",
+      "effective_status": "audited_numerical_match",
+      "effective_status_reason": "inherited_from:wave_direct_dm_h025_fam1_seed1_control_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 3.307,
@@ -84958,7 +84958,7 @@
         "wave_direct_dm_h025_fam3_seed1_control_note"
       ],
       "direct_in_degree": 1,
-      "effective_status": "unknown",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "inherited_from:wave_direct_dm_transfer_diagnostic_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -85010,14 +85010,21 @@
       "verdict_rationale": null
     },
     "wave_direct_dm_h025_two_point_synthesis_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-30T01:22:15.084807+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 12.5,
+        "transitive_descendants": 15
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The conclusion is read off a selected H=0.25, Fam1, S=0.004 two-seed numerical replay table. The ledger row has no one-hop dependencies or primary runner, so the audit packet cannot reproduce or independently derive the table values.",
       "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -85025,18 +85032,26 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 9,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 12.5,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the current controlled Fam1 fine-H pair, the direct-dM matched-history effect survives in sign on both seeds, but the old coarse-H seed ordering is not refinement-stable.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "6b03c214184b0785deb33f36b90bcf3f5c6097dec0c0dfe4284ff3393d445863",
       "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md",
+        "docs/WAVE_DIRECT_DM_H025_FEASIBILITY_NOTE.md",
+        "docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md",
+        "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
+        "docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md",
+        "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
+        "docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370119+00:00",
@@ -85099,7 +85114,7 @@
       "runner_path": null,
       "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note",
       "transitive_descendants": 15,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the proposed-retained result depends on a chosen two-point numerical surface at H=0.25, Fam1, S=0.004, with values imported from logs/prior notes that are not registered as one-hop authorities. Why this blocks: a finite selected replay table can support a bounded observation, but it does not close as a structural theorem or portability result from the audit packet. Repair target: register the control notes/log-producing runner as dependencies and add a reproducible runner that recomputes the two rows, then state an explicit statistical or structural criterion for promotion beyond the selected points. Claim boundary until fixed: safe as a bounded finite-replay observation that the two listed Fam1 seeds keep negative sign and reorder at H=0.25; not safe as independently retained direct-dM science."
     },
     "wave_direct_dm_matched_history_note": {
       "audit_date": null,
@@ -85197,8 +85212,8 @@
         "wave_direct_dm_seed_band_diagnosis_note"
       ],
       "direct_in_degree": 1,
-      "effective_status": "unknown",
-      "effective_status_reason": "inherited_from:wave_direct_dm_seed_band_diagnosis_note",
+      "effective_status": "audited_numerical_match",
+      "effective_status_reason": "inherited_from:wave_direct_dm_h025_fam1_seed1_control_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 1.5,
@@ -85274,7 +85289,7 @@
         "wave_direct_dm_h025_fam2_two_point_synthesis_note"
       ],
       "direct_in_degree": 2,
-      "effective_status": "unknown",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "inherited_from:wave_direct_dm_h025_high_band_boundary_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -85348,8 +85363,8 @@
         "wave_direct_dm_next_widening_recommendation"
       ],
       "direct_in_degree": 0,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_numerical_match",
+      "effective_status_reason": "inherited_from:wave_direct_dm_h025_fam3_seed0_control_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 0.0,
@@ -85392,7 +85407,7 @@
         "wave_direct_dm_h025_two_point_synthesis_note"
       ],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "inherited_from:wave_direct_dm_portability_batch_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -85487,7 +85502,7 @@
         "wave_direct_dm_h025_family_pair_synthesis_note"
       ],
       "direct_in_degree": 4,
-      "effective_status": "unknown",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "inherited_from:wave_direct_dm_seed_band_diagnosis_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",

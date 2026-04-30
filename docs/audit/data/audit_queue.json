@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 44,
-    "high": 283,
+    "high": 282,
     "leaf": 617,
     "medium": 344
   },
-  "generated_at": "2026-04-30T01:21:31.163712+00:00",
+  "generated_at": "2026-04-30T01:22:21.999172+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -2716,23 +2716,6 @@
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 32
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 9,
-      "load_bearing_score": 12.5,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 15
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -11907,25 +11890,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wave_direct_dm_h025_fam1_seed1_control_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "wave_direct_dm_h025_two_point_synthesis_note"
-      ],
-      "direct_in_degree": 4,
-      "load_bearing_score": 9.907,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 14
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -12232,26 +12196,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wave_direct_dm_h025_low_band_retention_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "wave_direct_dm_h025_fam1_seed1_control_note",
-        "wave_direct_dm_h025_two_point_synthesis_note"
-      ],
-      "direct_in_degree": 3,
-      "load_bearing_score": 5.2,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 12
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_leptogenesis_full_microscopic_reduction_note_2026-04-16",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -12281,26 +12225,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_2026_04_18.py",
       "transitive_descendants": 12
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wave_direct_dm_h025_high_band_boundary_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [
-        "wave_direct_dm_h025_low_band_retention_note",
-        "wave_direct_dm_h025_two_point_synthesis_note"
-      ],
-      "direct_in_degree": 2,
-      "load_bearing_score": 4.585,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 11
     },
     {
       "audit_independence_required": "any_non_self",
@@ -12441,28 +12365,6 @@
       "direct_in_degree": 1,
       "load_bearing_score": 3.307,
       "note_path": "docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 6
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wave_direct_dm_h025_seed1_crossfamily_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "wave_direct_dm_h025_fam1_seed1_control_note",
-        "wave_direct_dm_h025_fam2_seed1_control_note",
-        "wave_direct_dm_h025_two_point_synthesis_note",
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 3.307,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_SEED1_CROSSFAMILY_NOTE.md",
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 6
@@ -14536,6 +14438,25 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "wave_direct_dm_h025_fam1_seed1_control_note",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "wave_direct_dm_h025_two_point_synthesis_note"
+      ],
+      "direct_in_degree": 4,
+      "load_bearing_score": 9.907,
+      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 14
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "atomic_hydrogen_helium_probe_note",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -15178,6 +15099,26 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "wave_direct_dm_h025_low_band_retention_note",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "wave_direct_dm_h025_fam1_seed1_control_note",
+        "wave_direct_dm_h025_two_point_synthesis_note"
+      ],
+      "direct_in_degree": 3,
+      "load_bearing_score": 5.2,
+      "note_path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 12
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "ai_methodology.methodology_paper_source_packet_2026-04-25",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -15247,6 +15188,26 @@
       "note_path": "docs/DM_WILSON_DIRECT_DESCENDANT_MICROSCOPIC_VALUE_FRONTIER_THEOREM_NOTE_2026-04-18.md",
       "ready": false,
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_microscopic_value_frontier_theorem_2026_04_18.py",
+      "transitive_descendants": 11
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "wave_direct_dm_h025_high_band_boundary_note",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [
+        "wave_direct_dm_h025_low_band_retention_note",
+        "wave_direct_dm_h025_two_point_synthesis_note"
+      ],
+      "direct_in_degree": 2,
+      "load_bearing_score": 4.585,
+      "note_path": "docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md",
+      "ready": false,
+      "runner_path": null,
       "transitive_descendants": 11
     },
     {
@@ -15455,6 +15416,28 @@
       "note_path": "docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_OBSERVABLE_AFFINE_NO_GO_NOTE_2026-04-19.md",
       "ready": false,
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_constructive_transport_plateau_observable_affine_no_go_2026_04_19.py",
+      "transitive_descendants": 6
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "wave_direct_dm_h025_seed1_crossfamily_note",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "wave_direct_dm_h025_fam1_seed1_control_note",
+        "wave_direct_dm_h025_fam2_seed1_control_note",
+        "wave_direct_dm_h025_two_point_synthesis_note",
+        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 3.307,
+      "note_path": "docs/WAVE_DIRECT_DM_H025_SEED1_CROSSFAMILY_NOTE.md",
+      "ready": false,
+      "runner_path": null,
       "transitive_descendants": 6
     },
     {
@@ -26835,6 +26818,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 862,
-  "total_pending": 1288
+  "ready_count": 857,
+  "total_pending": 1287
 }
