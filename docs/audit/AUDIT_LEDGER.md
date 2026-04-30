@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T23:40:57.276361+00:00
+**Generated:** 2026-04-30T23:42:52.992886+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 85 |
-| _proposed_retained_ | 2 |
+| **retained** | 86 |
+| _proposed_retained_ | 1 |
 | bounded | 273 |
 | support | 237 |
 | open | 18 |
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 222 |
+| `audited_clean` | 223 |
 | `audited_conditional` | 480 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 773 |
+| `unaudited` | 772 |
 
 | criticality | count |
 |---|---:|
@@ -284,6 +284,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `nonlabel_grown_drift_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `packet_memory_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `persistent_inertial_object_probe_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -9724,6 +9725,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `primitive_c_cell_equals_one_fourth_theorem_not_registered`
   - `gravitational_boundary_action_carrier_identification_theorem_open`
+- **auditor confidence:** high
+
+### `planck_boundary_orientation_incidence_no_go_note_2026-04-30`
+
+- **Note:** [`PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md`](../../docs/PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-04-30-fresh-context`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Therefore the oriented face-incidence data are exactly the Hodge image of the normal one-form data: normal one-form carrier P_1 <--> oriented face/flux carrier P_3; the incidence pairing is perfect and identifies the two rank-four carriers, not selecting one.  _(class `A`)_
+- **chain closes:** True — Within the stated finite exterior-algebra boundary-incidence surface, the Hodge map sends P_1 to P_3, the face-incidence columns are exactly *e^a, and the incidence pairing is the identity. Those facts establish duality/equivalence rather than an asymmetric selector, so the negative no-go conclusion follows without a hidden P_A choice.
+- **rationale:** The exact negative claim closes over finite-dimensional exterior algebra: the runner constructs the Hodge map, face-incidence columns, perfect normal/face pairing, matching symmetry/locality tests, and the absence of an imposed cochain-normal selector. There are no ledger-listed dependencies and no external comparator or tuned numeric scale. The residual boundary is explicit: the no-go applies only to boundary-incidence-only language, not to a separate action-density theorem that derives one-link source variables.
 - **auditor confidence:** high
 
 ### `planck_finite_response_no_go_note_2026-04-24`
