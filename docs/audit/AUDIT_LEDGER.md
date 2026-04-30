@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:47:06.842107+00:00
+**Generated:** 2026-04-30T02:48:10.980179+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 203 |
 | support | 104 |
 | open | 24 |
-| unknown | 513 |
+| unknown | 509 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 381 |
+| ~~audited_conditional~~ | 385 |
 | ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 168 |
+| `audited_conditional` | 169 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1249 |
+| `unaudited` | 1248 |
 
 | criticality | count |
 |---|---:|
@@ -263,6 +263,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_berry_phase_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `koide_gamma_orbit_selector_bridge_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
 | `koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_dimensionless_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -2846,6 +2847,21 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `scripts/frontier_koide_pointed_origin_exhaustion_theorem.py_not_registered_runner_dependency`
   - `scripts/frontier_koide_hostile_review_guard.py_not_registered_runner_dependency`
   - `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py_not_registered_runner_dependency`
+- **auditor confidence:** high
+
+### `koide_gamma_orbit_selector_bridge_note_2026-04-18`
+
+- **Note:** [`KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md`](../../docs/KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Under the exact orbit-to-cyclic map r0 = u+v+w, r1 = 2u-v-w, r2 = sqrt(3)(v-w), the cyclic Koide selector 2 r0^2 = r1^2 + r2^2 pulls back to u^2+v^2+w^2 = 4(uv+uw+vw).  _(class `A`)_
+- **chain closes:** False — The symbolic pullback closes exactly, but the note explicitly does not derive the microscopic Gamma/orbit-return value law for the physical slots or the dynamical reason that the pulled-back cone should hold.
+- **rationale:** Issue: the bridge translates the Koide cone into orbit-slot coordinates but assumes a physical Gamma/orbit-return law that supplies the charged-lepton slot triple and a selector law enforcing the cone. Why this blocks: the runner proves the algebraic equivalence and checks the observed sqrt(m) witness, but it does not derive the orbit slots or the orbit-slot cone from retained framework primitives. Repair target: retain/audit the Gamma/orbit-return basis law and add a theorem deriving both the physical three-slot value law and the symmetric quadratic selector. Claim boundary until fixed: exact coordinate pullback of the Koide cone to proposed orbit-slot variables, not a derived Koide selector or charged-lepton mass law.
+- **open / conditional deps cited:**
+  - `KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md`
+  - `KOIDE_GAMMA_ORBIT_CYCLIC_RETURN_CANDIDATE_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20`
