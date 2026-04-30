@@ -295,7 +295,7 @@ def main() -> int:
 
     route_results = {
         "oriented_cubical_boundary": "Hodge-dual P3 equivalent",
-        "variational_first_derivative": "depends on choosing u_a cochain variables",
+        "variational_first_derivative_boundary_only": "depends on choosing u_a cochain variables",
         "noether_current": "J one-form and *J flux form are equivalent",
         "reflection_positive_time": "no P1/P3 carrier distinction supplied",
         "intrinsic_active_module": "requires active block before Cl4 module",

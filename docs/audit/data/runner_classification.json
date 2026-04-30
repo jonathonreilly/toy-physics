@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T22:20:34.077988+00:00",
+  "generated_at": "2026-04-30T22:44:59.298817+00:00",
   "per_claim": {
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "assert_count": 0,
@@ -9960,6 +9960,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/frontier_planck_finite_response_nogo.py"
+    },
+    "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_planck_link_local_first_variation_p_a_forcing.py"
     },
     "planck_parent_source_hidden_character_no_go_note_2026-04-24": {
       "assert_count": 0,
@@ -24490,6 +24502,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_planck_link_local_first_variation_p_a_forcing.py": {
+      "assert_count": 1,
+      "claims": [
+        "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_planck_parent_source_hidden_character_nogo.py": {
       "assert_count": 0,
       "claims": [
@@ -31392,12 +31419,12 @@
     "dominant_class_distribution": {
       "A": 7,
       "B": 118,
-      "C": 435,
+      "C": 436,
       "D": 180,
       "none": 391
     },
-    "runners_classified": 1131,
-    "runners_with_C": 522,
+    "runners_classified": 1132,
+    "runners_with_C": 523,
     "runners_with_D": 278
   }
 }

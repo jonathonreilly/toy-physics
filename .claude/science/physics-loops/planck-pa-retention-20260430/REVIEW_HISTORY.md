@@ -61,3 +61,47 @@ was not used as a load-bearing check.
 
 Mechanical audit pipeline completed with no lint errors. The new incidence
 no-go was seeded into the audit queue; no audit verdict was hand-assigned.
+
+## 2026-04-30 New Path Result
+
+After user direction to keep the loop open and find a new path, the route
+portfolio was reopened on the variational/source-domain branch.
+
+Added and ran:
+
+```text
+scripts/frontier_planck_link_local_first_variation_p_a_forcing.py
+```
+
+Result:
+
+```text
+Summary: PASS=8  FAIL=0
+Verdict: PASS.
+```
+
+Added note:
+
+```text
+docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md
+```
+
+Self-review disposition: `pass` as a positive intrinsic candidate, but not as
+effective retained on the current graph. The audit-pressure issue is explicit:
+the route stands only if the minimal finite Grassmann / staggered-Dirac
+link-source differential is accepted as retained action structure, not as an
+added observable-response premise.
+
+No downstream cascade was promoted.
+
+Mechanical audit pipeline was rerun. It seeded one new claim:
+
+```text
+claim_id: planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30
+audit_status: unaudited
+intrinsic_status: proposed_retained
+effective_status: audited_conditional
+```
+
+Pipeline lint result: no errors; five pre-existing warnings about stale
+criticality/cycles remain.

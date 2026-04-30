@@ -14,16 +14,30 @@ Possible PR outcomes:
      to the `P_1`/`P_3` Hodge-duality obstruction;
    - document that unconditional closure needs an additional structural input.
 
-Current recommended PR outcome: stop/negative stacked PR.
+Current recommended PR outcome: positive stacked repair PR, with the earlier
+incidence no-go retained as part of the route history.
 
 Include:
 
 - new incidence no-go note and runner;
-- loop pack showing hard stop;
+- new link-local first-variation theorem note and runner;
+- loop pack showing the route pivot from no-go to positive candidate;
 - mechanical audit pipeline update seeding the new claim into the queue.
 
 Do not include:
 
 - downstream Planck cascade promotion;
 - claims-table or manuscript updates;
-- a positive re-submission of PR #228.
+- a claim of audit-ratified retention before the audit verdict.
+
+PR #231 was opened as a draft hard-stop PR before the new route landed. It
+should be retitled and rewritten around:
+
+```text
+[physics-loop] planck-pa-retention: link-local P_A forcing candidate
+```
+
+The body should state that the hard-stop comment on PR #228 is superseded by
+this new action-differential candidate, pending audit, and that the current
+effective status remains conditional until upstream action/time/CPT authority
+rows are clean.

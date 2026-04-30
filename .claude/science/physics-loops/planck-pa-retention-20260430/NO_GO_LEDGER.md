@@ -77,3 +77,33 @@ The Hodge map gives an exact perfect pairing between them. Boundary incidence
 therefore identifies `P_1` and `P_3`; it does not choose `P_1`. A cochain-
 normal primitivity rule would select `P_A`, but that rule is the extra
 boundary/orientation premise.
+
+## Link-Local First-Variation Bypass
+
+Artifact:
+`docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md`
+
+Runner:
+`scripts/frontier_planck_link_local_first_variation_p_a_forcing.py`
+
+Result: positive intrinsic candidate; current audit graph effective status is
+conditional pending upstream authority cleanup/audit.
+
+This does not overturn the no-gos above. It bypasses their surface. The no-gos
+act on substrate symmetries, Hodge-dual boundary incidence, and abstract
+"first-order" language. The new route uses the accepted microscopic action
+surface:
+
+```text
+finite Grassmann / staggered-Dirac link-local action
+  -> source differential dS_link(du_a)
+  -> one-axis support P_1 = P_A.
+```
+
+The Hodge-dual `P_3` remains a valid face/flux representation, but it is not
+in the fundamental one-link source differential domain. It is a Hodge image or
+third-composite support.
+
+Audit pressure retained in the ledger: if the audit treats the action-source
+differential as an extra active-response premise rather than accepted
+microscopic action structure, this route demotes to conditional support.

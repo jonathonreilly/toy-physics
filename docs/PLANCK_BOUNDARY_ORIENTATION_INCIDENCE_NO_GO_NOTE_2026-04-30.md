@@ -171,7 +171,7 @@ The local number algebra is also preserved:
 Thus `P_3` is not a nonlocal or symmetry-breaking representation of boundary
 incidence. It is the local oriented-face representation.
 
-### 4. Variational First-Response Language Is The Same Premise
+### 4. Boundary-Only Variational Language Is The Same Premise
 
 The first homogeneous response polynomial
 
@@ -187,10 +187,15 @@ G_3(u) = sum_a product_{b != a} u_b
 
 maps to `P_3`. The runner verifies these two local projectors are Hodge-dual.
 
-Therefore "take the first derivative with respect to `u_a`" selects `P_1`
-only after `u_a` has already been chosen as the primitive cochain variable.
-That is a valid conditional coframe theorem, but it is not a substrate-only
-derivation of the cochain choice.
+Therefore, on the boundary-incidence surface alone, "take the first derivative
+with respect to `u_a`" selects `P_1` only after `u_a` has already been chosen
+as the primitive cochain variable. That is a valid conditional coframe theorem,
+but it is not a substrate-only derivation of the cochain choice.
+
+This no-go does not analyze the stronger route where the accepted microscopic
+staggered/Dirac action itself supplies the one-link source variables. That
+route is recorded separately in
+`PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md`.
 
 ### 5. Noether Current And Flux Language Does Not Rescue The Route
 
@@ -216,7 +221,7 @@ plausible after PR #228:
 | Route | Result |
 |---|---|
 | oriented cubical boundary | gives Hodge-dual `P_1`/`P_3` equivalence |
-| variational first derivative | selects `P_1` only after choosing cochain variables |
+| variational first derivative, boundary-only | selects `P_1` only after choosing cochain variables |
 | Noether current | one-form current and three-form flux are dual |
 | reflection-positive time | supplies no `P_1`/`P_3` carrier distinction |
 | intrinsic active module | needs an active rank-four block before `Cl_4(C)` can act |
@@ -246,8 +251,9 @@ or a physical boundary/action-density law that breaks the Hodge equivalence.
 ```
 
 Without such a theorem, the lane should stop as an unconditional-retention
-attempt. The honest claim boundary is a conditional coframe/CAR carrier plus
-audit-ratified no-go evidence that the missing selector is real.
+attempt. A later loop route proposes exactly that missing asymmetric theorem
+from the retained link-local action differential; this no-go remains valid on
+its boundary-incidence-only surface.
 
 ## Verification
 

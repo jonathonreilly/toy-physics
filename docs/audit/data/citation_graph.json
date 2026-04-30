@@ -6273,6 +6273,30 @@
       "to": "planck_parent_source_hidden_character_no_go_note_2026-04-24"
     },
     {
+      "from": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+      "to": "i3_zero_exact_theorem_note"
+    },
+    {
+      "from": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+      "to": "cpt_exact_note"
+    },
+    {
       "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
       "to": "substrate_to_p_a_forcing_theorem_note_2026-04-30"
     },
@@ -18421,7 +18445,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T22:20:23.262085+00:00",
+  "generated_at": "2026-04-30T22:44:47.985939+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -31693,7 +31717,7 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained exact negative boundary; audit pending",
       "deps": [],
-      "note_hash": "487515efaade035e267ae1a553350bb696c36d393e529c5776949d4d5072450a",
+      "note_hash": "bbf88d7af61646d5ac3e8febc5e32fbca86722fa9614e42260ff809f603157f1",
       "path": "docs/PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_planck_boundary_orientation_incidence_no_go.py",
       "title": "Planck Boundary Orientation Incidence No-Go"
@@ -31709,6 +31733,23 @@
       "path": "docs/PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_planck_finite_response_nogo.py",
       "title": "Planck Finite-Response No-Go Note"
+    },
+    "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30": {
+      "claim_id": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+      "current_status": "proposed_retained",
+      "current_status_raw": "intrinsic proposed_retained candidate; current audit graph effective",
+      "deps": [
+        "minimal_axioms_2026-04-11",
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note",
+        "anomaly_forces_time_theorem",
+        "i3_zero_exact_theorem_note",
+        "cpt_exact_note"
+      ],
+      "note_hash": "b826b5da38f674f359257bd9d6144708edbd28fb59c79ee8141bb7f8366f9bce",
+      "path": "docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_planck_link_local_first_variation_p_a_forcing.py",
+      "title": "Planck Link-Local First-Variation P_A Forcing Theorem"
     },
     "planck_parent_source_hidden_character_no_go_note_2026-04-24": {
       "claim_id": "planck_parent_source_hidden_character_no_go_note_2026-04-24",
@@ -41282,16 +41323,16 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4605,
-    "leaf_count": 722,
-    "node_count": 1659,
+    "edge_count": 4611,
+    "leaf_count": 723,
+    "node_count": 1660,
     "root_count": 1179,
-    "runners_with_path": 1176,
+    "runners_with_path": 1177,
     "status_counts": {
       "bounded": 446,
       "open": 48,
       "proposed_promoted": 1,
-      "proposed_retained": 375,
+      "proposed_retained": 376,
       "support": 378,
       "unknown": 411
     }

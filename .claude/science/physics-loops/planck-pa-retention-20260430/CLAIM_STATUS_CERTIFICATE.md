@@ -1,6 +1,6 @@
 # Claim Status Certificate
 
-Status: hard stop for unconditional closure on the current substrate bank.
+Status: positive candidate found; current audit graph still conditional.
 
 The positive Planck primitive Clifford-Majorana derivation is not certified by
 this loop at start. The live state entering the block is:
@@ -22,9 +22,7 @@ first-order-over-Hodge-dual forcing: not established
 
 ## Result
 
-No positive derivation landed.
-
-The stretch attempt added:
+The initial stretch attempt added an exact negative witness:
 
 ```text
 docs/PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md
@@ -49,24 +47,63 @@ Thus "boundary orientation" and "incidence" do not force `P_A` unless the
 normal/cochain representation is added as primitive. That is the missing
 first-order boundary-orientation premise, not a derived consequence.
 
-## Final Certificate
-
-The Planck primitive Clifford-Majorana edge lane remains:
+The user then requested a new path rather than accepting that stop. The next
+route moved off abstract boundary orientation and onto the retained microscopic
+action surface:
 
 ```text
-algebraic Cl_4(C)/CAR carrier: verified
-active P_A block: not substrate-forced
-first-order P_1 over Hodge-dual P_3: not substrate-forced
-oriented incidence repair: not substrate-forced
+docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md
+scripts/frontier_planck_link_local_first_variation_p_a_forcing.py
 ```
 
-Therefore the requested unconditional-retention target is not available from
-the current accepted substrate content. The hard stop condition is met for this
-theorem until a new upstream theorem derives one of:
+The runner reports:
 
-- normal cochain primitivity;
-- first-order response primitivity;
-- a physical gravitational boundary/action-density law that breaks the Hodge
-  equivalence;
-- an intrinsic active-block induction law that selects the block and coframe
-  basis without assuming `P_A`.
+```text
+Summary: PASS=8  FAIL=0
+Verdict: PASS.
+```
+
+The load-bearing move is:
+
+```text
+A_min finite Grassmann / staggered-Dirac link-local action
+  -> algebraic source differential dS_link(du_a)
+  -> support({dS_link(du_a)}) = P_1 H_cell = P_A H_cell.
+```
+
+This bypasses the Hodge no-go by source-domain degree: `P_3` is the Hodge-dual
+face/flux or third-composite sector, but it is not an image of the one-link
+source differential.
+
+## Final Certificate For This Block
+
+Actual current surface status:
+
+```yaml
+actual_current_surface_status: conditional-support
+conditional_surface_status: intrinsic proposed_retained candidate if upstream action/time/CPT authority is accepted as retained/base substrate content
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "runner-backed construction derives P_A as the support of the link-local action differential, but the current audit graph demotes the lane through conditional/support upstream authority rows"
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+review_loop_disposition: pass
+```
+
+Open audit pressure:
+
+- the audit must accept the finite Grassmann / staggered-Dirac link-source
+  domain from `MINIMAL_AXIOMS_2026-04-11.md` as retained substrate content;
+- if the audit treats "active primitive action-response block" as an additional
+  physical readout premise, the result demotes to conditional support;
+- no downstream Planck cascade may be promoted before audit ratification.
+
+Mechanical audit queue status:
+
+```text
+claim_id: planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30
+audit_status: unaudited
+intrinsic_status: proposed_retained
+effective_status: audited_conditional
+```

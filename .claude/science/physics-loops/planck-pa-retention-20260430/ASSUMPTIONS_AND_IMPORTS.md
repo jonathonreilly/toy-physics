@@ -7,6 +7,9 @@ present on the PR #228 surface:
 
 - local `Cl(3)` on `Z^3` and the finite Boolean/tensor primitive event cell
   from `MINIMAL_AXIOMS_2026-04-11.md`;
+- the finite Grassmann / staggered-Dirac microscopic action surface and its
+  local one-link lattice-operator source variables from
+  `MINIMAL_AXIOMS_2026-04-11.md`;
 - cubic `Cl(3)` bivector / spatial spin-lift content from
   `NATIVE_GAUGE_CLOSURE_NOTE.md`;
 - graph-first structural `SU(3)` context from
@@ -51,3 +54,19 @@ stated substrate symmetries -/-> first-order P_1 over Hodge-dual P_3
 Therefore any positive repair must add a genuinely derived asymmetric
 boundary/orientation/incidence law. Rephrasing `P_1` as "active" is not an
 allowed move.
+
+## New Candidate Import Audit
+
+The link-local first-variation route uses:
+
+```text
+A_min finite Grassmann / staggered-Dirac link-local action
+  + anomaly-forced time axis
+  + finite exterior event cell
+```
+
+It does not use an observed target value, fitted selector, or literature
+normalization. The open audit question is whether the action-source
+differential is already contained in the accepted microscopic action surface
+or whether it must be counted as a new active-response premise. The theorem
+note explicitly demotes to conditional support if the latter reading wins.
