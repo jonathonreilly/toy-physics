@@ -18325,7 +18325,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T12:11:40.428520+00:00",
+  "generated_at": "2026-04-30T12:30:35.403571+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -27339,10 +27339,10 @@
     },
     "hypercharge_identification_note": {
       "claim_id": "hypercharge_identification_note",
-      "current_status": "unknown",
-      "current_status_raw": null,
+      "current_status": "support",
+      "current_status_raw": "support: structural identification of the unique traceless commutant U(1) generator with Standard Model hypercharge within A_min; audit_status=audited_renaming. This note is an identification, not a first-principles derivation of Standard Model hypercharge.",
       "deps": [],
-      "note_hash": "9e76626e92fae836407aaf65e5d4774161f42808dc04070fc0eda54e679f241f",
+      "note_hash": "3d90ebe6897287a712103e2d98f267043038c83d57c6b5c7f8ec0687d435bf0f",
       "path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
       "runner_path": null,
       "title": "Hypercharge U(1)_Y Identification from the Commutant"
@@ -40078,12 +40078,12 @@
     "yt_ward_identity_derivation_theorem": {
       "claim_id": "yt_ward_identity_derivation_theorem",
       "current_status": "support",
-      "current_status_raw": "DERIVED as an EXACT algebraic tree-level identity from",
+      "current_status_raw": "support: structural identification of the unit-normalized H_unit-to-top matrix element with the Standard Model top Yukawa readout within A_min; audit_status=audited_renaming. This note is an identification, not a first-principles derivation of the Standard Model top Yukawa value.",
       "deps": [],
-      "note_hash": "548510ef15aa972473e04bb2b651759491c76c7524a88b7dbed34694780b7e2c",
+      "note_hash": "64a274d7be60121a2acb17eb9a36d1c7fb5cc356b505f38d9792157d32b1ed92",
       "path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
       "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
-      "title": "Ward-Identity Derivation Theorem: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)"
+      "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)"
     },
     "yt_zero_import_authority_note": {
       "claim_id": "yt_zero_import_authority_note",
@@ -41348,8 +41348,8 @@
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 176,
-      "unknown": 796
+      "support": 177,
+      "unknown": 795
     }
   }
 }

@@ -12,8 +12,10 @@ Checks (all hard rules from FRESH_LOOK_REQUIREMENTS.md and README.md):
      - No row has current_status = 'retained' or 'promoted' (these are
        audit-ratified only; authors may only declare proposed_*).
      - audit_status = audited_clean requires auditor and auditor_family set.
-     - audit_status = audited_clean with current_status not in
-       {proposed_retained, proposed_promoted} is illegal.
+     - audit_status = audited_clean records the audit verdict for any
+       allowed current_status. Only clean proposed_* rows may promote to
+       retained/promoted effective_status; clean non-proposed rows stay in
+       their declared tier unless demoted by dependencies.
      - effective_status = retained requires audit_status = audited_clean
        AND every dep's effective_status = retained.
      - independence = 'weak' cannot land audited_clean. Critical clean
@@ -139,16 +141,17 @@ def main() -> int:
                 errors.append(f"{cid}: audited_clean requires non-empty auditor")
             if not row.get("auditor_family"):
                 errors.append(f"{cid}: audited_clean requires auditor_family")
-            if cs not in {"proposed_retained", "proposed_promoted"}:
-                errors.append(
-                    f"{cid}: audited_clean with current_status={cs!r} is illegal "
-                    f"(audit_clean only ratifies proposed_retained / proposed_promoted)"
-                )
-            # Effective must be retained or promoted.
-            if e not in {"retained", "promoted"}:
+            # Effective status promotion is tier-gated: a clean audit may be
+            # recorded on support/bounded/open/unknown rows, but those rows do
+            # not become retained/promoted unless the author re-tiers them.
+            if cs in {"proposed_retained", "proposed_promoted"} and e not in {"retained", "promoted"}:
                 # Could be inherited demotion; warn rather than error.
                 warnings.append(
                     f"{cid}: audited_clean but effective_status={e!r} (likely demoted by upstream dep)"
+                )
+            if cs not in {"proposed_retained", "proposed_promoted"} and e in {"retained", "promoted"}:
+                errors.append(
+                    f"{cid}: audited_clean current_status={cs!r} must not promote to effective_status={e!r}"
                 )
             # Criticality-aware independence rules.
             criticality = row.get("criticality") or "leaf"

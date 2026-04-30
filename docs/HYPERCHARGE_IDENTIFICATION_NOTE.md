@@ -1,8 +1,30 @@
 # Hypercharge U(1)_Y Identification from the Commutant
 
+**Status:** support: structural identification of the unique traceless commutant U(1) generator with Standard Model hypercharge within A_min; audit_status=audited_renaming. This note is an identification, not a first-principles derivation of Standard Model hypercharge.
+
+## Audit boundary
+
+This note identifies the unique traceless U(1) direction in the
+commutant algebra `su(3) + u(1)` of `{SU(2)_weak, SWAP_23}` within
+A_min.
+
+The identified Standard Model construct is hypercharge on the
+left-handed doublet surface, with the conventional normalization shown
+below.
+
+This note does **not** claim to derive the numerical hypercharge
+normalization from first principles, to derive the existence of the
+Standard Model hypercharge construct independent of this identification,
+or to complete the full anomaly-canceling Standard Model spectrum.
+
+Audit history: the audit lane records `audit_status=audited_renaming`
+for `hypercharge_identification_note`, cross-confirmed as class F by
+`codex-audit-loop-round-2` and
+`codex-fresh-context-20260430-03-hypercharge`.
+
 ## Statement
 
-**Theorem.** The unique traceless U(1) direction in the commutant algebra
+**Identification.** The unique traceless U(1) direction in the commutant algebra
 su(3) + u(1) of {SU(2)\_weak, SWAP\_{23}} in End(C^8) matches the Standard
 Model hypercharge assignments on the left-handed doublet surface.
 
@@ -18,7 +40,7 @@ The taste space C^8 = (C^2)^{x3} carries two structures:
 The commutant of {SU(2), SWAP\_{23}} in End(C^8) is gl(3,C) + gl(1,C),
 established in `frontier_su3_commutant.py`. The mechanism:
 
-- SU(2) on factor 1 forces the commutant to be gl(4,C) on factors 2,3
+- SU(2) on factor 1 restricts the commutant to gl(4,C) on factors 2,3
   (by Schur's lemma).
 - SWAP\_{23} decomposes C^4 = C^2 x C^2 into Sym^2(C^2) = C^3 and
   Anti^2(C^2) = C^1.
@@ -44,7 +66,7 @@ This leaves a unique traceless generator (up to normalization):
 
     Y = a (P_sym - 3 P_anti)
 
-## Proof: This Matches Hypercharge
+## Structural check: matching the hypercharge pattern
 
 ### 1. Eigenvalue Matching
 
@@ -71,7 +93,8 @@ With T\_3 = sigma\_3/2 on the weak factor and Q = T\_3 + Y/2:
 | nu\_L | +1/2 | -1 | 0 |
 | e\_L | -1/2 | -1 | -1 |
 
-All charges match the Standard Model exactly.
+Under this identification, all listed charges match the Standard Model
+pattern exactly.
 
 ### 3. Uniqueness
 
@@ -105,18 +128,20 @@ This squared-trace arithmetic is now packaged as the standalone retained
 subtheorem
 `HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`.
 
-## Key Insight
+## Identification boundary
 
-The hypercharge identification is not an additional input or assumption.
-It is a **consequence** of three ingredients on the left-handed surface:
+The hypercharge identification is not added as an independent A_min
+input. It follows from three structural ingredients on the left-handed
+surface:
 
 1. C^8 = (C^2)^{x3} (taste space from the staggered lattice)
 2. SU(2)\_weak on factor 1 (from bipartite structure)
 3. SWAP\_{23} symmetry (from spatial permutation)
 
-The commutant algebra forces su(3) + u(1), and within that algebra the
-traceless U(1) generator is **unique up to normalization** and matches
-hypercharge.
+Within this setup, the commutant algebra isolates su(3) + u(1), and the
+traceless U(1) generator is **unique up to normalization**. The audit
+status records the final step as an identification with hypercharge, not
+a first-principles derivation of hypercharge itself.
 
 ## Files
 

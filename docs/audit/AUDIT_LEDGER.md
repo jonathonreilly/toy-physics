@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T12:11:43.090879+00:00
+**Generated:** 2026-04-30T12:30:38.518074+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,25 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
 | bounded | 196 |
-| support | 110 |
+| support | 112 |
 | open | 21 |
 | unknown | 442 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 20 |
-| ~~audited_renaming~~ | 40 |
-| ~~audited_conditional~~ | 469 |
+| ~~audited_renaming~~ | 25 |
+| ~~audited_conditional~~ | 482 |
 | ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 82 |
+| `audited_clean` | 83 |
 | `audited_conditional` | 237 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 12 |
-| `audited_renaming` | 10 |
-| `unaudited` | 1151 |
+| `audited_renaming` | 8 |
+| `unaudited` | 1153 |
 
 | criticality | count |
 |---|---:|
@@ -68,7 +67,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 1 | `alpha_s_derived_note` | critical | 239 | 29.41 | `audited_conditional` | ~~audited_conditional~~ |
 | 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 113 | 28.83 | `audited_conditional` | ~~audited_conditional~~ |
 | 3 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 112 | 28.82 | `audited_conditional` | ~~audited_conditional~~ |
-| 4 | `yt_ward_identity_derivation_theorem` | critical | 287 | 27.67 | `audited_renaming` | ~~audited_renaming~~ |
+| 4 | `yt_ward_identity_derivation_theorem` | critical | 287 | 27.67 | `unaudited` | support |
 | 5 | `observable_principle_from_axiom_note` | critical | 229 | 25.84 | `audited_conditional` | ~~audited_conditional~~ |
 | 6 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 99 | 23.64 | `audited_conditional` | ~~audited_conditional~~ |
 | 7 | `yt_ew_color_projection_theorem` | critical | 110 | 22.29 | `audited_conditional` | ~~audited_conditional~~ |
@@ -88,7 +87,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 21 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 116 | 15.87 | `audited_conditional` | ~~audited_conditional~~ |
 | 22 | `physical_lattice_necessity_note` | critical | 274 | 15.60 | `audited_conditional` | ~~audited_conditional~~ |
 | 23 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 125 | 15.48 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `site_phase_cube_shift_intertwiner_note` | critical | 281 | 15.14 | `audit_in_progress` | support |
+| 24 | `site_phase_cube_shift_intertwiner_note` | critical | 281 | 15.14 | `audited_clean` | support |
 | 25 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | critical | 124 | 14.97 | `audited_conditional` | ~~audited_conditional~~ |
 
 
@@ -96,7 +95,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `site_phase_cube_shift_intertwiner_note` | support | audit_in_progress | support | - | - | - | - |
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -169,6 +167,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_retardation_lab_prediction_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -493,13 +492,11 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `higgs_mass_from_axiom_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
-| `hypercharge_identification_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `s3_time_bilinear_tensor_primitive_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_qg_optional_textbook_comparison_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
-| `yt_ward_identity_derivation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
 
 
 ## Audit findings (full)
@@ -3302,21 +3299,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** The retained content is the two-gate firewall, not a numerical H_0 derivation. The note's load-bearing algebra closes: solving L = (H_inf/H_0)^2 gives H_0 = H_inf/sqrt(L), and the live runner verifies nonzero sensitivity to both H_inf and L plus explicit one-gate counterexample families. The structural lock is correctly treated as a dimensionless form invariant under common rescaling, not as a scalar H_0 prediction. Residual risk is downstream misuse: this audit does not ratify Omega_Lambda, R_Lambda, Planck normalization, or a numerical Hubble-tension resolution.
 - **auditor confidence:** high
 
-### `hypercharge_identification_note`
-
-- **Note:** [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](../../docs/HYPERCHARGE_IDENTIFICATION_NOTE.md)
-- **current_status:** unknown
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `self`)
-- **auditor:** `codex-fresh-context-20260430-03-hypercharge`  (codex-current; independence=fresh_context)
-- **load-bearing step:** With conventional normalization a = 1/3, the note identifies C^2 x Sym^2(C^2) as the left-handed quark doublet with Y=+1/3 and C^2 x Anti^2(C^2) as the left-handed lepton doublet with Y=-1.  _(class `F`)_
-- **chain closes:** False — The note closes elementary traceless-ratio algebra only after assuming the commutant decomposition and identifying abstract symmetric/antisymmetric sectors with SM quark/lepton doublets plus conventional hypercharge normalization.
-- **rationale:** Issue: The proof identifies abstract commutant eigenspaces with SM left-handed quark and lepton doublets, and fixes a=1/3, without a retained derivation of that physical readout. Why this blocks: The tracelessness algebra gives a unique 1:-3 ratio inside the assumed commutant, but it does not prove the sector/color/lepton/readout or physical hypercharge normalization identifications. Repair target: Supply a retained theorem deriving the SU(2)_weak carrier, SWAP_23 commutant, quark/lepton sector identification, and Q=T3+Y/2 normalization from independent inputs. Claim boundary until fixed: Assuming the commutant decomposition, sector identification, and conventional normalization, the traceless central U(1) has the SM left-doublet hypercharge ratio 1:-3.
-- **open / conditional deps cited:**
-  - `SU3_COMMUTANT_NOTE.md`
-  - `HYPERCHARGE_IDENTIFICATION_NOTE.md`
-- **auditor confidence:** 0.9
-
 ### `i3_zero_exact_theorem_note`
 
 - **Note:** [`I3_ZERO_EXACT_THEOREM_NOTE.md`](../../docs/I3_ZERO_EXACT_THEOREM_NOTE.md)
@@ -5746,6 +5728,18 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 - **rationale:** The audited claim is the negative boundary: detector-line phase lag is not a unique causal-propagation discriminator because a static cone-shape field reproduces the same c-dependent curve in this model. The runner reproduces the note's table and the safe read, including exact zero controls and the static-scheduling mismatch. Residual risk is limited to the missing frozen log; the current executable artifact is sufficient for the scoped boundary result.
 - **auditor confidence:** high
 
+### `site_phase_cube_shift_intertwiner_note`
+
+- **Note:** [`SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`](../../docs/SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-crossconfirm-20260430-b`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Phi^dagger P_mu Phi = S_mu, with P_mu |X_alpha> = |X_(alpha xor e_mu)> on the BZ-corner subspace.  _(class `A`)_
+- **chain closes:** True — The note has no one-hop dependencies and the runner directly checks the finite Fourier/BZ-corner intertwiner identities. The safe boundary is narrow: it proves the exact taste-cube/BZ-corner operator bridge, not physical generation identification.
+- **rationale:** The load-bearing step is a finite-dimensional algebra/Fourier intertwiner, and the runner checks the bit-flip law, pulled-back operators, and joint eigensystem transfer without importing a physical-generation claim. Residual risk is limited to downstream over-reading: this clean result only covers the restricted C^8/BZ-corner bridge stated in the note.
+- **auditor confidence:** high
+
 ### `sixth_family_distance_law_third_vs_sixth_quick_note`
 
 - **Note:** [`SIXTH_FAMILY_DISTANCE_LAW_THIRD_VS_SIXTH_QUICK_NOTE.md`](../../docs/SIXTH_FAMILY_DISTANCE_LAW_THIRD_VS_SIXTH_QUICK_NOTE.md)
@@ -6878,25 +6872,6 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
   - `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`
 - **auditor confidence:** high
-
-### `yt_ward_identity_derivation_theorem`
-
-- **Note:** [`YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](../../docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
-- **current_status:** support
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `self`)
-- **auditor:** `codex-fresh-context-20260430-01-yt-ward`  (codex-current; independence=fresh_context)
-- **load-bearing step:** On the canonical surface (g_bare = 1), y_t_bare is defined as the unit-norm-state matrix element of H_unit: y_t_bare := <0 | H_unit(0) | tbar_top,up t_top,up>.  _(class `E`)_
-- **chain closes:** False — The runner verifies algebraic coefficients, but the physical readout of the normalized composite matrix element as the Yukawa coupling and the common tadpole dressing are introduced rather than derived from allowed dependencies.
-- **rationale:** Issue: The load-bearing move defines y_t_bare as a unit-normalized H_unit-to-top matrix element and treats that definition as the physical Yukawa readout entering y_t(M_Pl) = g_s(M_Pl)/sqrt(6). Why this blocks: The algebraic 1/sqrt(6) overlap is computed, but the physical Yukawa identification and common tadpole normalization are imported rather than derived from allowed retained dependencies. Repair target: Provide a retained theorem or runner-checked derivation mapping the composite operator matrix element to the physical Yukawa vertex and proving its tadpole dressing, with D9/D15/D16/D17 supplied as verified one-hop dependencies. Claim boundary until fixed: The result supports an algebraic normalization/overlap for the chosen Q_L scalar singlet and Fierz coefficients, not a closed Ward-identity derivation of y_t(M_Pl) = g_s(M_Pl)/sqrt(6).
-- **open / conditional deps cited:**
-  - `MINIMAL_AXIOMS_2026-04-11.md`
-  - `NATIVE_GAUGE_CLOSURE.md`
-  - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
-  - `YUKAWA_COLOR_PROJECTION_THEOREM.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_VERTEX_POWER_DERIVATION.md`
-- **auditor confidence:** 0.9
 
 ### `yukawa_color_projection_theorem`
 
