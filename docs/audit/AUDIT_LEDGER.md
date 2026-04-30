@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:23:23.643610+00:00
+**Generated:** 2026-04-30T00:23:26.893709+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,20 +22,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 78 |
 | _proposed_retained_ | 12 |
 | bounded | 215 |
-| support | 109 |
+| support | 108 |
 | open | 24 |
 | unknown | 559 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 23 |
-| ~~audited_conditional~~ | 204 |
+| ~~audited_conditional~~ | 205 |
 | ~~audited_failed~~ | 342 |
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
 | `audited_clean` | 78 |
-| `audited_conditional` | 140 |
+| `audited_conditional` | 141 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 12 |
@@ -96,7 +95,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `scalar_3plus1_temporal_ratio_note` | support | audit_in_progress | support | - | - | - | - |
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -275,6 +273,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retarded_field_compact_refinement_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `s3_taste_cube_decomposition_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `s3_time_bilinear_tensor_action_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `scalar_3plus1_temporal_ratio_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3654,6 +3653,18 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
   - `missing authority: exact seven-site star support coordinates and A1 decoupling`
   - `missing runner: endpoint law for K_R on the canonical A1 family`
 - **auditor confidence:** 0.9
+
+### `scalar_3plus1_temporal_ratio_note`
+
+- **Note:** [`SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md`](../../docs/SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-fresh-cross-confirm-20260430-session-b`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For K_sc(omega)=3+sin^2(omega), the endpoint coefficients are A_2=1/8 and A_inf=1/(4 sqrt(3)), hence A_inf/A_2=2/sqrt(3).  _(class `A`)_
+- **chain closes:** False — The fresh algebraic check closes within its stated scope, but current_status='support' is not eligible for audited_clean under the audit lane. It must stay conditional/support until the source claim is proposed for retention and re-confirmed.
+- **rationale:** Issue: The fresh cross-confirmation found an exact class-A closure, but the ledger row has current_status='support', so landing audited_clean would violate the audit-lane ratification gate. Why this blocks: audited_clean is reserved for proposed_retained/proposed_promoted rows and audit_lint rejects clean status on support/unknown rows. Repair target: if this claim is intended to be retained, update the source note to proposed_retained/proposed_promoted through the science lane and rerun a fresh-context cross-confirmation. Claim boundary until fixed: the bounded algebraic/support statement may be cited as support, but it is not an audit-ratified retained claim. Fresh-audit note: The finite APBC endpoint calculation and continuum temporal average close exactly, while the dimension-4 physical insertion is only stated as support. The runner executed with SUMMARY: EXACT PASS=4 SUPPORT=1 FAIL=0.
+- **auditor confidence:** high
 
 ### `second_grown_family_complex_note`
 
