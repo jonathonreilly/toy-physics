@@ -1,16 +1,13 @@
-# BH 1/4 Carrier from Framework Wald-Noether Charge Theorem (V1)
+# BH 1/4 Carrier from Framework Wald-Noether Charge Boundary Note (V1)
 
 **Date:** 2026-04-29
-**Status (actual current surface):** `proposed_retained` author proposal
-deriving the Bekenstein-Hawking entropy coefficient `S_BH = A/(4G)` as a
-direct consequence of the framework's primitive-coframe boundary
-carrier theorem `c_cell = 1/4` composed with the Wald-Noether charge
-formula evaluated on the framework's retained discrete GR action
-surface. The chain forces `G_Newton,lat = 1` as a normalization match.
-The Wald formula is admitted as universal physics input on equal
-footing with Newton's law; the gravitational boundary/action density
-identification is the named bridge premise. Bare `retained` /
-`promoted` is NOT used.
+**Status:** bounded: S_BH=A/(4G_N) framework composition, conditional on Wald formula admission and gravitational boundary/action-density bridge premise.
+The composition depends on two admitted load-bearing inputs: the
+Wald-Noether entropy formula as an admitted universal physics input,
+and the gravitational boundary/action-density identification as an
+explicit bridge premise. The note records what would close
+`S_BH = A/4` if those two inputs were derived inside the framework; it
+does not propose closure at the ratified tier.
 **Primary runner:** `scripts/frontier_bh_quarter_wald_noether_framework_carrier.py`
 
 **Cited authorities (one-hop deps):**
@@ -52,12 +49,12 @@ The framework also has a retained discrete GR action surface
 with canonical-textbook Einstein-Hilbert equivalence
 (UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE).
 
-The Wald-Noether charge formula (admitted as universal physics input
-on equal footing with Newton's law) gives the Bekenstein-Hawking
+The Wald-Noether charge formula (admitted as universal physics input)
+gives the Bekenstein-Hawking
 entropy as `S_BH = A · c_cell` where c_cell is the leading coefficient
 of the gravitational Lagrangian.
 
-**Composing these three retained chains:**
+**Composing these chains with the two explicit admissions:**
 
 ```text
 S_BH = A · c_cell = A · (1/4) = A/4    (in framework lattice units a = 1)
@@ -69,9 +66,11 @@ spacing a is the framework's natural length scale and G_kernel =
 1/(4π) is the bare kernel normalization separated by
 PLANCK_SOURCE_UNIT_NORMALIZATION).
 
-This V1 note assembles these three retained surfaces + Wald formula
-into one structural chain producing the BH `1/4` coefficient as a
-proposed_retained framework consequence.
+This V1 note assembles the framework surfaces + Wald formula into one
+bounded structural composition. Its value is a sharp boundary: if the
+Wald-Noether input and the gravitational boundary/action-density bridge
+premise are later derived from framework primitives, this is the exact
+chain that would close the BH `1/4` coefficient.
 
 ---
 
@@ -167,9 +166,9 @@ and is separated by PLANCK_SOURCE_UNIT_NORMALIZATION.
 
 ---
 
-## 2. Theorem statement
+## 2. Boundary statement
 
-**Theorem (BH 1/4 Carrier from Framework Wald-Noether Charge).**
+**Boundary statement (BH 1/4 Carrier from Framework Wald-Noether Charge).**
 On the framework's retained discrete GR action surface (PL S³ × R)
 with admitted Wald-Noether charge formula:
 
@@ -180,11 +179,10 @@ with admitted Wald-Noether charge formula:
 3. Hence `S_BH = A/4` in framework lattice units, equivalent to the
    standard `S_BH = A/(4G_N)` with `G_Newton,lat = 1`.
 
-**Status:** `proposed_retained` modulo (a) audit ratification of the
-gravitational boundary/action density identification (the bridge
-premise from PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM §5)
-and (b) acceptance of Wald formula as admitted universal physics
-input on equal footing with Newton's law.
+**Status:** `bounded`, because the result has two admitted load-bearing
+inputs: (a) the gravitational boundary/action density identification
+(the bridge premise from PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM
+§5) and (b) the Wald formula as admitted universal physics input.
 
 ### Proof
 
@@ -228,17 +226,19 @@ to the standard `S_BH = A/(4G_N)`. **QED.**
 ## 3. Status firewall fields
 
 ```yaml
-actual_current_surface_status: proposed_retained
-conditional_surface_status: null
+actual_current_surface_status: bounded
+conditional_surface_status: bounded_if_wald_and_boundary_action_density_bridge_are_admitted
 hypothetical_axiom_status: null
 admitted_observation_status: null
-proposal_allowed: true
-proposal_allowed_reason: |
-  V1 composes 5 retained Planck/Universal-GR theorem notes with the
-  Wald-Noether formula (admitted universal physics input). The
-  composition is structural: c_cell = 1/4 from primitive carrier
-  theorem + Einstein-Hilbert equivalence + Wald formula give
-  S_BH = A/4 forcing G_Newton,lat = 1. No observed value enters.
+proposal_allowed: false
+proposal_blocker: two_admitted_load_bearing_inputs
+proposal_blocker_reason: |
+  The composition is structurally useful but not closure-grade: it
+  requires the Wald-Noether formula as an admitted universal physics
+  input and the gravitational boundary/action-density identification
+  as an explicit bridge premise. With those admissions, c_cell = 1/4
+  + Einstein-Hilbert equivalence + Wald formula give S_BH = A/4 and
+  force G_Newton,lat = 1. No observed value enters.
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 wald_formula_status: admitted_universal_physics_input
@@ -250,7 +250,7 @@ g_newton_lat_eq_1_status: forced_by_chain
 
 ## 4. What is and is NOT closed
 
-### Closed by V1 (this note)
+### Conditionally established by V1 (this note)
 
 1. structural composition of `c_cell = 1/4` (from primitive carrier
    theorem) with Wald-Noether formula (admitted) on the framework's
@@ -260,11 +260,10 @@ g_newton_lat_eq_1_status: forced_by_chain
 4. framework BH coefficient identified with primitive coframe
    boundary carrier coefficient.
 
-### NOT closed by V1 (carried forward)
+### NOT closed by V1 (load-bearing admissions carried forward)
 
 1. **Wald formula derivation** — admitted as universal physics input;
-   not derived from the framework. (On equal footing with Newton's
-   law.)
+   not derived from the framework.
 2. **Gravitational boundary/action density identification** — the
    bridge premise that the first-order coframe boundary carrier
    IS the gravitational boundary/action density. PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM
@@ -302,19 +301,17 @@ coefficients (and the Wald formula would naturally pick them up).
 
 ---
 
-## 5. Cascade unlocked (proposed for later weaving)
+## 5. Future closure condition
 
-If V1 audit-ratifies (depends on bridge-premise acceptance):
+If future work derives both admitted load-bearing inputs:
 
-- **PUBLICATION_MATRIX line 179 (Bekenstein-Hawking entropy):** lift
-  from "bounded BH area law target" to "retained S_BH = A/(4G_N)
-  via framework Wald-Noether composition + admitted Wald formula".
-- **Planck Targets 1-3:** the BH `1/4` coefficient becomes a
-  retained framework consequence (was bridge-conditioned support).
-- **MINIMAL_AXIOMS_2026-04-11.md:** §Note that Wald formula is the
-  admitted universal physics input on equal footing with Newton's law
-  (parallel structure to existing acceptance of Wald in the user's
-  memory).
+- **Bekenstein-Hawking entropy:** this composition gives the exact
+  chain from `c_cell = 1/4` to `S_BH = A/(4G_N)`.
+- **Planck Targets 1-3:** the BH `1/4` coefficient would become a
+  framework consequence rather than a bridge-conditioned boundary.
+- **Minimal axiom surface:** the Wald formula and the
+  gravitational boundary/action-density bridge would need to be
+  supplied or derived explicitly.
 
 Repo-wide weaving deferred.
 
@@ -354,7 +351,7 @@ Expected: PASS=N, FAIL=0.
 
 ## 7. Honest residual
 
-After V1 lands as `proposed_retained`:
+After V1 lands as `bounded`:
 
 - Wald formula remains admitted universal physics input (honest move,
   not closed).
@@ -364,11 +361,12 @@ After V1 lands as `proposed_retained`:
 - Hawking temperature (T_H = κ/2π) is unchanged by V1.
 - Higher-curvature corrections are not addressed.
 
-The BH entropy coefficient on the framework's leading-order surface
-is now structurally on A_min + admitted Wald + admitted gravitational
-boundary identification, modulo audit ratification.
+The BH entropy coefficient on the framework's leading-order surface is
+now structurally positioned on A_min + admitted Wald + admitted
+gravitational boundary identification. That is a bounded conditional
+composition, not closure at the ratified tier.
 
-This IS the chain referenced in the user's memory note from 2026-04-26
-("Planck Pin RETAINED Nature-grade ... sixth iteration adds structural
-BH derivation from framework's Wald-Noether charge"); V1 lands the
-explicit theorem note + runner that the memory note describes.
+This note preserves the useful science from the prior attempted closure:
+it identifies the exact chain that would close `S_BH = A/4` if Wald and
+the gravitational boundary/action-density bridge were derived rather
+than admitted.

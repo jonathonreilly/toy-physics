@@ -1,10 +1,10 @@
-"""Runner: BH 1/4 carrier from framework Wald-Noether charge (Block 5).
+"""Runner: BH 1/4 bounded Wald-Noether carrier composition (Block 5).
 
 Audits composition of framework's primitive-coframe boundary carrier
 theorem (c_cell = 1/4) with the framework's retained discrete GR action
 surface and the admitted Wald-Noether charge formula to derive
 S_BH = A · c_cell = A/4 in framework lattice units, forcing
-G_Newton,lat = 1.
+G_Newton,lat = 1 under two explicit load-bearing admissions.
 """
 
 from __future__ import annotations
@@ -38,7 +38,7 @@ def read_doc(path_rel: str) -> str:
 
 def main() -> int:
     print("=" * 72)
-    print("BH 1/4 Carrier from Framework Wald-Noether Charge (Block 5) audit")
+    print("BH 1/4 bounded Wald-Noether carrier composition (Block 5) audit")
     print("=" * 72)
 
     # ---- Section 1: chain authority audits --------------------------------
@@ -205,21 +205,27 @@ def main() -> int:
     # ---- Section 5: status firewall fields --------------------------------
 
     print()
-    print("Section 5: V1 status firewall fields")
+    print("Section 5: V1 bounded-status firewall fields")
     print("-" * 72)
 
     own_text = read_doc(
         "BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md"
     )
     audit(
-        "V1 carries actual_current_surface_status: proposed_retained",
-        "actual_current_surface_status: proposed_retained" in own_text,
-        "V1 firewall",
+        "V1 carries actual_current_surface_status: bounded",
+        "actual_current_surface_status: bounded" in own_text,
+        "V1 firewall: bounded boundary note",
+    )
+    audit(
+        "V1 blocks retained-tier proposal",
+        "proposal_allowed: false" in own_text
+        and "proposal_blocker: two_admitted_load_bearing_inputs" in own_text,
+        "V1 firewall: two load-bearing admissions block closure",
     )
     audit(
         "V1 carries audit_required_before_effective_retained: true",
         "audit_required_before_effective_retained: true" in own_text,
-        "V1 firewall",
+        "V1 firewall: independent audit still required before any effective retained status",
     )
     audit(
         "V1 carries bare_retained_allowed: false",
@@ -268,22 +274,22 @@ def main() -> int:
     fail_count = len(AUDIT_FAILS)
     print(f"FAIL count: {fail_count}")
 
-    BH_QUARTER_PROPOSED_RETAINED_CHAIN_VERIFIED = (
+    BH_QUARTER_BOUNDED_COMPOSITION_VERIFIED = (
         fail_count == 0
         and np.isclose(c_cell, 1 / 4)
         and (G_Newton_lat == [1] or G_Newton_lat == [sp.Integer(1)])
     )
     print(
-        f"BH_QUARTER_PROPOSED_RETAINED_CHAIN_VERIFIED = "
-        f"{BH_QUARTER_PROPOSED_RETAINED_CHAIN_VERIFIED}"
+        f"BH_QUARTER_BOUNDED_COMPOSITION_VERIFIED = "
+        f"{BH_QUARTER_BOUNDED_COMPOSITION_VERIFIED}"
     )
     print("WALD_FORMULA_STATUS = admitted_universal_physics_input")
     print("BRIDGE_PREMISE_STATUS = explicit_bridge_premise")
     print("G_NEWTON_LAT = 1 (forced by chain)")
     print(
         "(This flag verifies the V1 chain authorities + algebraic identities. "
-        "Independent audit required before the repo treats this as effective "
-        "retained.)"
+        "The result remains bounded because Wald and the gravitational "
+        "boundary/action-density bridge are admitted load-bearing inputs.)"
     )
 
     if fail_count == 0:

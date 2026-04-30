@@ -1,5 +1,5 @@
 ========================================================================
-BH 1/4 Carrier from Framework Wald-Noether Charge (Block 5) audit
+BH 1/4 bounded Wald-Noether carrier composition (Block 5) audit
 ========================================================================
 
 Section 1: 5 retained chain authority audits
@@ -29,10 +29,11 @@ Section 4: composition c_cell = 1/(4 G_N) ⇒ G_Newton,lat = 1
 [PASS] S_BH = A · c_cell = A/4 in framework lattice units — S_BH = A · 1/4 = A/4 (lattice units)
 [PASS] Match to standard S_BH = A/(4G_N) with G_Newton,lat = 1 — S_BH (framework) = A/4 = A/(4·G_Newton,lat) = standard form
 
-Section 5: V1 status firewall fields
+Section 5: V1 bounded-status firewall fields
 ------------------------------------------------------------------------
-[PASS] V1 carries actual_current_surface_status: proposed_retained — V1 firewall
-[PASS] V1 carries audit_required_before_effective_retained: true — V1 firewall
+[PASS] V1 carries actual_current_surface_status: bounded — V1 firewall: bounded boundary note
+[PASS] V1 blocks retained-tier proposal — V1 firewall: two load-bearing admissions block closure
+[PASS] V1 carries audit_required_before_effective_retained: true — V1 firewall: independent audit still required before any effective retained status
 [PASS] V1 carries bare_retained_allowed: false — V1 firewall
 [PASS] V1 records wald_formula_status: admitted_universal_physics_input — V1 firewall: Wald formula admitted
 [PASS] V1 records gravitational_boundary_action_density_identification_status: explicit_bridge_premise — V1 firewall: bridge premise named
@@ -46,10 +47,10 @@ Section 6: forbidden imports check
 
 ========================================================================
 FAIL count: 0
-BH_QUARTER_PROPOSED_RETAINED_CHAIN_VERIFIED = True
+BH_QUARTER_BOUNDED_COMPOSITION_VERIFIED = True
 WALD_FORMULA_STATUS = admitted_universal_physics_input
 BRIDGE_PREMISE_STATUS = explicit_bridge_premise
 G_NEWTON_LAT = 1 (forced by chain)
-(This flag verifies the V1 chain authorities + algebraic identities. Independent audit required before the repo treats this as effective retained.)
+(This flag verifies the V1 chain authorities + algebraic identities. The result remains bounded because Wald and the gravitational boundary/action-density bridge are admitted load-bearing inputs.)
 
 All Block 5 chain authorities + algebraic identities verified.

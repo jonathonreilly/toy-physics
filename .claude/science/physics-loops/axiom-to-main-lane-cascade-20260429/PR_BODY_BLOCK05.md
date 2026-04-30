@@ -1,9 +1,9 @@
-# [physics-loop] axiom-to-main-lane-cascade block 05: BH 1/4 carrier from framework Wald-Noether (proposed_retained)
+# [physics-loop] axiom-to-main-lane-cascade block 05: BH 1/4 carrier from framework Wald-Noether (bounded)
 
 ## Summary
 
 Block 5 composes the framework's primitive-coframe boundary carrier
-theorem (`c_cell = 1/4`, retained) with the framework's retained
+theorem (`c_cell = 1/4`) with the framework's retained
 discrete GR action surface (Einstein-Hilbert equivalent) and the
 admitted Wald-Noether charge formula to derive the Bekenstein-Hawking
 entropy coefficient `S_BH = A/(4G_N)`.
@@ -12,15 +12,14 @@ The composition forces `G_Newton,lat = 1` as a framework normalization
 match, with the Wald formula admitted as universal physics input on
 equal footing with Newton's law of gravity.
 
-This V1 lands the explicit theorem note + runner referenced in user
-memory `planck_target3_closed_2026_04_25.md` ("Planck Pin RETAINED
-Nature-grade ... sixth iteration adds structural BH derivation from
-framework's Wald-Noether charge").
+This V1 lands the explicit boundary note + runner that preserve the
+useful composition while marking both load-bearing admissions.
 
 ## Status (per skill firewall fields)
 
-- `actual_current_surface_status: proposed_retained`
-- `proposal_allowed: true`
+- `actual_current_surface_status: bounded`
+- `proposal_allowed: false`
+- `proposal_blocker: two_admitted_load_bearing_inputs`
 - `audit_required_before_effective_retained: true`
 - `bare_retained_allowed: false`
 - `wald_formula_status: admitted_universal_physics_input`
@@ -56,7 +55,7 @@ Composition:
 
 ## What is and is NOT closed
 
-### Closed
+### Conditionally established
 1. Structural composition `c_cell = 1/4 → S_BH = A/4`
 2. Framework normalization match `G_Newton,lat = 1` forced by chain
 3. Framework BH coefficient identified with primitive coframe carrier
@@ -67,16 +66,13 @@ Composition:
    explicit bridge premise (carried over from primitive-carrier theorem §5)
 3. **Hawking temperature** — kinematic side; T_H = κ/2π unchanged
 4. **Higher-curvature corrections** — Wald formula handles them but
-   framework's leading retained Lagrangian is EH
+   framework's leading Lagrangian is EH
 
-## Cascade unlocked (proposed for later weaving)
+## Future closure condition
 
-If V1 audit-ratifies:
-- PUBLICATION_MATRIX line 179 (Bekenstein-Hawking entropy): lift from
-  "bounded BH area law target" to "retained S_BH = A/(4G_N) via
-  framework Wald-Noether composition"
-- Planck Targets 1-3: BH 1/4 coefficient becomes retained framework
-  consequence
+If future work derives the Wald formula and the gravitational
+boundary/action-density bridge from framework primitives, this note
+already records the exact composition that would close `S_BH = A/4`.
 
 ## Verification
 
@@ -85,8 +81,8 @@ git checkout physics-loop/axiom-to-main-lane-cascade-20260429-block05-20260429
 python3 scripts/frontier_bh_quarter_wald_noether_framework_carrier.py
 ```
 
-PASS=N FAIL=0 verifies 5 retained chain authorities + algebraic
-composition + status firewall fields + no observational input.
+PASS=N FAIL=0 verifies chain authorities + algebraic composition +
+bounded status firewall fields + no observational input.
 
 ## Hostile-review pressure points
 
