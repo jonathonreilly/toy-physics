@@ -1,0 +1,45 @@
+========================================================================================
+LANE 1 SQRT(SIGMA) B5 PRODUCTION CHECKPOINT AGGREGATOR
+========================================================================================
+
+Question:
+  Does the current production ladder data close B5?
+
+Answer:
+  No. It is a useful L=8 checkpoint; L=12 and L=16 are still missing.
+
+----------------------------------------------------------------------------------------
+Part 1: production JSONL summary
+----------------------------------------------------------------------------------------
+  L=8: n=119, last_measurement=118, last_sweeps=1390, acceptance=0.416
+    plaquette: 0.59529430 +/- 0.00022027
+    W11: 0.59506316 +/- 0.00054371
+    W12: 0.38620555 +/- 0.00063071
+    W22: 0.19626793 +/- 0.00076104
+    chi22: 0.24520711 +/- 0.00411938
+  [PASS] production JSONL is non-empty  (records=119)
+  [PASS] all records come from the production profile
+  [PASS] L=8 has reached the checkpoint minimum  (L8 records=119, minimum=100)
+  [PASS] all primary observables are finite
+  [PASS] all non-null chi22 values are finite
+
+----------------------------------------------------------------------------------------
+Part 2: production closure gate
+----------------------------------------------------------------------------------------
+  required volumes: [8, 12, 16]
+  present volumes:  [8]
+  missing volumes:  [12, 16]
+  [PASS] L=8 production records exist
+  [PASS] L=12 and L=16 are still missing
+  [PASS] B5 closure gate remains open  (multi-volume production ladder incomplete)
+
+----------------------------------------------------------------------------------------
+Part 3: artifact checks
+----------------------------------------------------------------------------------------
+  [PASS] checkpoint note states no B5 promotion
+  [PASS] branch-local handoff includes production checkpoint aggregator
+  [PASS] claim-status certificate remains bounded support
+
+========================================================================================
+PASS=11 FAIL=0
+========================================================================================

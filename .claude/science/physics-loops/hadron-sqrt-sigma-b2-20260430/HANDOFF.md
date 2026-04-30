@@ -29,6 +29,9 @@ The landed result is negative/progress:
 - a resumable B5 Wilson/Creutz ladder runner now exists. Its smoke
   profile is verified; production `L=8,12,16` statistics remain to be
   accumulated before B5 can be promoted.
+- the first production interval produced `119` `L=8` JSONL records after
+  `1399` sweeps. This is a useful checkpoint, but it is not B5 closure
+  because `L=12` and `L=16` are still missing.
 
 Skill-correction checkpoint:
 
@@ -65,6 +68,9 @@ PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b5_resumable
 
 PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py
 # PASS=16 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b5_production_aggregator.py
+# PASS=11 FAIL=0
 ```
 
 Branch-local artifacts:
@@ -81,14 +87,15 @@ Branch-local artifacts:
   with `scripts/frontier_hadron_lane1_sqrt_sigma_b5_lowstat_scout.py`.
 - `docs/HADRON_LANE1_SQRT_SIGMA_B5_RESUMABLE_LADDER_NOTE_2026-04-30.md`
   with `scripts/frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder.py`.
+- `docs/HADRON_LANE1_SQRT_SIGMA_B5_PRODUCTION_CHECKPOINT_NOTE_2026-04-30.md`
+  with `scripts/frontier_hadron_lane1_sqrt_sigma_b5_production_aggregator.py`.
 
 ## Next Exact Action
 
 Pick one of two next blocks:
 
-1. Run the resumable B5 ladder with `--profile production` under repeated
-   wall-clock checkpoints until the `L=8,12,16` statistics can support or
-   reject the bridge with uncertainties.
+1. Resume the resumable B5 ladder from the local production checkpoint until
+   the `L=8` target is complete and `L=12,16` statistics can start.
 2. Retained-with-budget draft that chooses `r0`/`r1` as the Lane 1
    force-scale observable and keeps `sqrt(sigma)` as a bounded
    comparator, with static-potential convention split explicit.

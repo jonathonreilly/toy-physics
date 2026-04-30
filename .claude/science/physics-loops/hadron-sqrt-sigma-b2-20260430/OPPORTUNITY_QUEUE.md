@@ -6,8 +6,11 @@ review landability, and low repo-wide blast radius.
 
 ## 1. B5 Production Wilson/Creutz Statistics
 
-**Route:** run `frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder.py`
+**Route:** resume `frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder.py`
 with `--profile production` under wall-clock checkpoints.
+
+**Current checkpoint:** `L=8` has `119/1000` production measurements after
+`1399` sweeps. `L=12` and `L=16` have not started.
 
 **Why first:** it directly attacks the named active residual: the
 framework-to-standard-QCD bridge for imported `sqrt(sigma)` / static-energy

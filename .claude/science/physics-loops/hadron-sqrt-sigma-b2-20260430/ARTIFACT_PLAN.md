@@ -67,3 +67,14 @@ Status: complete in
 `docs/HADRON_LANE1_SQRT_SIGMA_B5_RESUMABLE_LADDER_NOTE_2026-04-30.md`
 with runner
 `scripts/frontier_hadron_lane1_sqrt_sigma_b5_resumable_ladder.py`.
+
+## Cycle 7
+
+- Run the production profile under the first wall-clock checkpoint.
+- Preserve JSONL production records for `L=8`.
+- Aggregate the checkpoint and keep B5 open until `L=12` and `L=16` exist.
+
+Status: complete in
+`docs/HADRON_LANE1_SQRT_SIGMA_B5_PRODUCTION_CHECKPOINT_NOTE_2026-04-30.md`
+with runner
+`scripts/frontier_hadron_lane1_sqrt_sigma_b5_production_aggregator.py`.

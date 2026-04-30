@@ -1,0 +1,44 @@
+========================================================================================
+LANE 1 SQRT(SIGMA) B5 RESUMABLE WILSON/CREUTZ LADDER
+========================================================================================
+
+Question:
+  Is there now a resumable compute path for the B5 production ladder?
+
+Answer:
+  Yes as executable infrastructure; no as B5 closure until production
+  L=8,12,16 statistics and uncertainties are actually accumulated.
+
+----------------------------------------------------------------------------------------
+Part 1: runner configuration checks
+----------------------------------------------------------------------------------------
+  profile=production
+  volumes=8,12,16
+  therm=200, measurements=1000, skip=10
+  max_seconds=1800.0
+  [PASS] production profile targets the first B5-closing volume class
+  [PASS] runner has wall-clock and checkpoint controls
+  [PASS] smoke profile stays below B5 closure scale
+
+----------------------------------------------------------------------------------------
+Part 2: resumable ladder smoke run
+----------------------------------------------------------------------------------------
+  L=8: sweeps=1399, measurements=119/1000, acc=0.416, status=checkpointed
+  [PASS] runner produced at least one JSONL measurement
+  [PASS] JSONL measurement schema is complete
+  [PASS] latest measurement has finite primary observables
+  [PASS] state checkpoint was written for each started volume
+  [PASS] checkpoint can be reloaded for resume
+  [PASS] resume counters advanced
+
+----------------------------------------------------------------------------------------
+Part 3: artifact checks
+----------------------------------------------------------------------------------------
+  [PASS] note labels the runner as append-only/resumable but not B5 closure
+  [PASS] branch-local handoff includes the resumable ladder runner
+  [PASS] claim-status certificate keeps B5 open rather than retained
+  [PASS] loop state advanced to cycle 6
+
+========================================================================================
+PASS=13 FAIL=0
+========================================================================================
