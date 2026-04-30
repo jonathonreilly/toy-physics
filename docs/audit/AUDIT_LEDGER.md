@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T18:56:37.645441+00:00
+**Generated:** 2026-04-30T18:56:45.560620+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
 | bounded | 347 |
-| support | 274 |
+| support | 273 |
 | open | 19 |
 | unknown | 49 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 599 |
+| ~~audited_conditional~~ | 600 |
 | ~~audited_failed~~ | 119 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 113 |
-| `audited_conditional` | 313 |
+| `audited_conditional` | 314 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1049 |
+| `unaudited` | 1048 |
 
 | criticality | count |
 |---|---:|
@@ -417,6 +417,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_q_delta_linking_relation_theorem_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `koide_q_delta_readout_retention_split_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `koide_q_op_locality_c3_fixed_source_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `koide_selected_line_cyclic_response_bridge_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_selected_line_provenance_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -5319,6 +5320,21 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `Koide_Q_support_route_value_Q_2_over_3_not_registered_one_hop_dependency`
   - `Koide_delta_APS_support_route_value_delta_2_over_9_not_registered_one_hop_dependency`
   - `same_Z3_p_equals_d_structural_bridge_not_registered_one_hop_dependency`
+- **auditor confidence:** high
+
+### `koide_q_op_locality_c3_fixed_source_support_note_2026-04-27`
+
+- **Note:** [`KOIDE_Q_OP_LOCALITY_C3_FIXED_SOURCE_SUPPORT_NOTE_2026-04-27.md`](../../docs/KOIDE_Q_OP_LOCALITY_C3_FIXED_SOURCE_SUPPORT_NOTE_2026-04-27.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-ca82-heisenberg-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** P_SOURCE implies a C3-fixed onsite scalar source J = sI, hence z = 0, and on the admitted criterion carrier z = 0 iff Q = 2/3.  _(class `A`)_
+- **chain closes:** False — The conditional algebra from P_SOURCE to z=0 to Q=2/3 closes. The physical source-selection premise and admitted charged-lepton carrier are not derived, so unconditional Koide closure does not close.
+- **rationale:** Issue: P_SOURCE, the claim that the physical undeformed charged-lepton scalar source is strict-onsite and C3-fixed, is assumed rather than derived. Why this blocks: retained Q=2/3 would require the physical source and carrier selection to be forced from retained primitives, not imposed as a conditional premise. Repair target: prove the charged-lepton physical source-selection theorem and carrier admission theorem, then make the runner construct them rather than check flags. Claim boundary until fixed: exact conditional support algebra only.
+- **open / conditional deps cited:**
+  - `KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md`
+  - `KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`
 - **auditor confidence:** high
 
 ### `koide_selected_line_cyclic_response_bridge_note_2026-04-18`
