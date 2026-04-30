@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:06:59.975121+00:00
+**Generated:** 2026-04-30T19:07:07.982091+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 123 |
+| `audited_clean` | 124 |
 | `audited_conditional` | 325 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1027 |
+| `unaudited` | 1026 |
 
 | criticality | count |
 |---|---:|
@@ -108,6 +108,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `axiom_first_spin_statistics_theorem_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `background_independence_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `bmv_entanglement_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `bmv_threebody_note_2026-04-11` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `causal_field_portability_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
@@ -1240,6 +1241,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `background_independence_note`
+
+- **Note:** [`BACKGROUND_INDEPENDENCE_NOTE.md`](../../docs/BACKGROUND_INDEPENDENCE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-c-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Although the graph topology is fixed, the effective geometry as measured by propagator Green's functions, spectral dimension, and connectivity changes in response to the gravitational field.  _(class `C`)_
+- **chain closes:** True — The registered runner recomputes the fixed N=20 setup and confirms non-uniform edge weights, changed effective distances, changed spectral dimension, and two-mass metric response.
+- **rationale:** The finite support claim closes because the runner constructs the Poisson field, propagator-weighted Laplacian, Green's-function distances, spectral dimension, and two-mass response on the stated substrate. The clean boundary is the stated effective-geometry diagnostic, not full background independence in the continuum GR sense. Residual risk is terminology: future use should preserve the support-level finite-model scope.
 - **auditor confidence:** high
 
 ### `backreaction_note`
