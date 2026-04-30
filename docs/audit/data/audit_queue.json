@@ -3,9 +3,9 @@
     "critical": 0,
     "high": 237,
     "leaf": 486,
-    "medium": 307
+    "medium": 306
   },
-  "generated_at": "2026-04-30T19:06:35.772873+00:00",
+  "generated_at": "2026-04-30T19:06:43.446406+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -9788,23 +9788,6 @@
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 21
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "weak_coupling_retention_note_2026-04-11",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 3,
-      "load_bearing_score": 5.67,
-      "note_path": "docs/WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_weak_coupling_retained.py",
-      "transitive_descendants": 17
     },
     {
       "audit_independence_required": "any_non_self",
@@ -21977,6 +21960,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 638,
-  "total_pending": 1030
+  "ready_count": 637,
+  "total_pending": 1029
 }

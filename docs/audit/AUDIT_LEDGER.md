@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:06:35.965977+00:00
+**Generated:** 2026-04-30T19:06:43.647904+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 122 |
+| `audited_clean` | 123 |
 | `audited_conditional` | 323 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1030 |
+| `unaudited` | 1029 |
 
 | criticality | count |
 |---|---:|
@@ -216,6 +216,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_matrixfree_fixed_beam_boundary_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_static_matrixfree_moving_source_fixed_beam_boundary_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_static_single_source_compare_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `weak_coupling_retention_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `accessible_prediction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `action_crossover_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -8442,6 +8443,18 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** At coarse H = 0.5, frozen-source comparator quality is source-position dependent: off-center z_phys = 3.0 already shows poor cached comparator agreement while on-axis z_phys = 0.0 is much better for dIeq.  _(class `C`)_
 - **chain closes:** True — The live runner reproduces both retained frozen-source tables, including all comparator shifts, relative mismatches, and static residuals. The note scopes the result as a smoke test rather than a continuum or all-source-position claim.
 - **rationale:** The runner supports the note's narrow diagnostic. For z_phys = 3.0, dS tracks dM closely while cached and Newton-style comparators are poor; for z_phys = 0.0, dIeq nearly matches dM while dN remains poor. This cleanly supports the bounded conclusion that the mismatch is not purely a moving-source artifact and that comparator quality depends on source position.
+- **auditor confidence:** high
+
+### `weak_coupling_retention_note_2026-04-11`
+
+- **Note:** [`WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md`](../../docs/WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-c-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** At weak coupling G=5,10, attractive parity coupling gives a larger shell-force TOWARD count than repulsive coupling on 60/60 audited runs, with minimum separation 10/40 and norm conservation.  _(class `C`)_
+- **chain closes:** True — The registered runner recomputes the finite audited surface and currently reports shell ordered 60/60, shell margin >= 10 on 60/60, and norm conserved 60/60. The closed claim is only the bounded finite-surface shell-force statement, not a universal irregular-graph theorem.
+- **rationale:** The load-bearing finite-surface diagnostic is computed directly by the runner across the stated graph families, sizes, seeds, and G values. Current output also shows width asymmetry 56/60, gap ratio 57/60, and shell strict split 47/60, but those are not needed for the narrowed shell-margin claim. Residual risk is scope creep: the audit does not close a theorem for all admissible irregular bipartite graphs or a stable secondary spectral-gap row.
 - **auditor confidence:** high
 
 ### `wide_lattice_h2t_distance_law_note`
