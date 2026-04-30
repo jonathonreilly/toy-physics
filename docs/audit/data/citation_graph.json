@@ -18373,7 +18373,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T13:39:32.460653+00:00",
+  "generated_at": "2026-04-30T13:41:05.339557+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19836,6 +19836,26 @@
       "path": "docs/ATOMIC_HYDROGEN_HELIUM_PROBE_NOTE.md",
       "runner_path": "scripts/frontier_atomic_hydrogen_helium_probe.py",
       "title": "Atomic Hydrogen and Helium Probe --- Standard-QM Scaffold Lane"
+    },
+    "atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29": {
+      "claim_id": "atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "no-go / conditional-support boundary for the current",
+      "deps": [],
+      "note_hash": "80e8670052c99877a167c3a0b0d79013f695046aae3ec761961603bb5e2516ed",
+      "path": "docs/ATOMIC_LANE2_ALPHA0_RUNNING_BRIDGE_BOUNDARY_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_atomic_lane2_alpha0_running_bridge_boundary.py",
+      "title": "Atomic Lane 2 Alpha(0) Running Bridge Boundary"
+    },
+    "atomic_lane2_physical_unit_limit_boundary_note_2026-04-29": {
+      "claim_id": "atomic_lane2_physical_unit_limit_boundary_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "no-go / conditional-support boundary for current Rydberg closure;",
+      "deps": [],
+      "note_hash": "721ab3064aeacace5377ffa226965486cad664832ab5fd7bb3fcd093e0045afa",
+      "path": "docs/ATOMIC_LANE2_PHYSICAL_UNIT_LIMIT_BOUNDARY_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_atomic_lane2_physical_unit_limit_boundary.py",
+      "title": "Atomic Lane 2 Physical-Unit Limit Boundary"
     },
     "atomic_rydberg_dependency_firewall_note_2026-04-27": {
       "claim_id": "atomic_rydberg_dependency_firewall_note_2026-04-27",
@@ -26967,6 +26987,16 @@
       "runner_path": null,
       "title": "3D `1/L^2 + h^2` Narrow `h=0.125` Bridge Note"
     },
+    "hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29": {
+      "claim_id": "hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29",
+      "current_status": "bounded",
+      "current_status_raw": "no-go / bounded-support boundary for the current B2 route; no",
+      "deps": [],
+      "note_hash": "9c593e404e84e438aa9bbed4e8b74f8cb901d4cc361d2f8f77237a967d2607e8",
+      "path": "docs/HADRON_LANE1_B2_DYNAMICAL_SCREENING_BOUNDARY_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_hadron_lane1_b2_dynamical_screening_boundary.py",
+      "title": "Hadron Lane 1 B2 Dynamical Screening Boundary"
+    },
     "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27": {
       "claim_id": "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27",
       "current_status": "support",
@@ -27406,6 +27436,16 @@
       "path": "docs/HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md",
       "runner_path": null,
       "title": "Hubble Lane 5 C1 Narrow Route No-Go Cluster"
+    },
+    "hubble_lane5_c2_ckm_pmns_right_sensitive_selector_stretch_note_2026-04-29": {
+      "claim_id": "hubble_lane5_c2_ckm_pmns_right_sensitive_selector_stretch_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "no-go / conditional-support boundary for the current `(C2)`",
+      "deps": [],
+      "note_hash": "b94c773236caf9c272b9e084ac58cd1dcd5258b71d5260cd73aba173e396431c",
+      "path": "docs/HUBBLE_LANE5_C2_CKM_PMNS_RIGHT_SENSITIVE_SELECTOR_STRETCH_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_hubble_lane5_c2_ckm_pmns_right_sensitive_selector_stretch.py",
+      "title": "Hubble Lane 5 C2 CKM/PMNS Right-Sensitive Selector Stretch"
     },
     "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27": {
       "claim_id": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
@@ -30444,6 +30484,16 @@
       "path": "docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py",
       "title": "Lane 4 Neutrino Dirac/Seesaw Fork No-Go"
+    },
+    "neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29": {
+      "claim_id": "neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact negative boundary for the SR-2 route; no",
+      "deps": [],
+      "note_hash": "bc2a401acf052a55287eab4ba78391780ef7856e6e7e0f268f2408000ec1c6b1",
+      "path": "docs/NEUTRINO_LANE4_SR2_PFAFFIAN_SCALAR_TWO_POINT_BOUNDARY_NOTE_2026-04-29.md",
+      "runner_path": "scripts/frontier_neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary.py",
+      "title": "Lane 4D SR-2 Pfaffian / Scalar Two-Point Boundary"
     },
     "neutrino_lane4_theorem_plan_note_2026-04-28": {
       "claim_id": "neutrino_lane4_theorem_plan_note_2026-04-28",
@@ -40401,6 +40451,8 @@
     "asymmetry_persistence_mass_scaling_note",
     "asymmetry_persistence_mass_window_note",
     "asymmetry_persistence_pilot_note",
+    "atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29",
+    "atomic_lane2_physical_unit_limit_boundary_note_2026-04-29",
     "atomic_rydberg_dependency_firewall_note_2026-04-27",
     "audited_symmetry_synthesis_note",
     "axiom_change_proposal_2026-04-10",
@@ -40814,6 +40866,7 @@
     "h0125_wider_w4_note",
     "h0125_wider_w4_probe_note",
     "h2t_h0125_narrow_bridge_note",
+    "hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29",
     "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27",
     "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
     "hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30",
@@ -40851,6 +40904,7 @@
     "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29",
     "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28",
     "hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30",
+    "hubble_lane5_c2_ckm_pmns_right_sensitive_selector_stretch_note_2026-04-29",
     "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
     "hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26",
     "hubble_lane5_eta_retirement_gate_audit_note_2026-04-26",
@@ -41044,6 +41098,7 @@
     "neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28",
     "neutrino_lane4_4f_sigma_m_nu_theorem_plan_note_2026-04-28",
     "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+    "neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29",
     "neutrino_lane4_theorem_plan_note_2026-04-28",
     "neutrino_lane4_workstream_closeout_note_2026-04-28",
     "neutrino_majorana_current_stack_exhaustion_note",
@@ -41509,16 +41564,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4593,
-    "leaf_count": 746,
-    "node_count": 1685,
-    "root_count": 1211,
-    "runners_with_path": 769,
+    "leaf_count": 751,
+    "node_count": 1690,
+    "root_count": 1216,
+    "runners_with_path": 774,
     "status_counts": {
-      "bounded": 256,
+      "bounded": 257,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 184,
+      "support": 188,
       "unknown": 796
     }
   }
