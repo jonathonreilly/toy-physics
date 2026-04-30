@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T01:29:57.558808+00:00",
-  "generated_at": "2026-04-30T01:29:55.696245+00:00",
-  "invalidation_run_at": "2026-04-30T01:29:57.489311+00:00",
+  "effective_status_computed_at": "2026-04-30T01:30:45.319306+00:00",
+  "generated_at": "2026-04-30T01:30:43.463577+00:00",
+  "invalidation_run_at": "2026-04-30T01:30:45.256032+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T01:29:57.343856+00:00",
+  "load_bearing_computed_at": "2026-04-30T01:30:45.128814+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -43435,7 +43435,7 @@
       "verdict_rationale": null
     },
     "koide_selected_line_provenance_note_2026-04-20": {
-      "audit_date": null,
+      "audit_date": "2026-04-30T01:30:37.794175+00:00",
       "audit_state_snapshot": {
         "criticality": "leaf",
         "dep_effective_status": {},
@@ -43443,13 +43443,13 @@
         "load_bearing_score": 0.0,
         "transitive_descendants": 0
       },
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the determinant, Hessian, convex minimizer, CP cross-check, and file presence, but the upstream selector/chart/half-plane/observable-principle theorems are not registered as one-hop dependencies. The proof therefore closes only conditional on those cited proposed-retained authorities.",
       "claim_id": "koide_selected_line_provenance_note_2026-04-20",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -43457,18 +43457,25 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The parity-compatible observable-selector theorem fixes the unique active-boundary minimizer at delta_* = q_+* = sqrt(6)/3, so H_sel(m) = H(m, sqrt(6)/3, sqrt(6)/3).",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "b3b2677e7a9dddcbe414422afdced071066164f2cef22fc5491d1d8fa0fd144d",
       "note_path": "docs/KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_PARITY_COMPATIBLE_DIAGONAL_BASELINE_THEOREM_NOTE_2026-04-17.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_PARITY_COMPATIBLE_OBSERVABLE_SELECTOR_THEOREM_NOTE_2026-04-17.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_CURVATURE_23_SYMMETRIC_BASELINE_BOUNDARY_THEOREM_NOTE_2026-04-17.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368869+00:00",
@@ -43530,16 +43537,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 12,
+        "B": 3,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 15
       },
       "runner_path": "scripts/frontier_koide_selected_line_provenance.py",
       "title": "Koide Selected-Line Provenance: Derivation of `H_sel(m) = H(m, \u221a6/3, \u221a6/3)`",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the selected-line values are derived from a cited upstream theorem stack, but that stack is not part of the audit row's one-hop dependencies and the runner checks file presence rather than audit-clean effective status. Why this blocks: the algebraic minimizer is correct once the affine chart, active chamber, parity-compatible baseline, scalar generator, and intrinsic-CP constants are granted; the packet does not independently ratify those grants. Repair target: register the cited provenance files as dependencies, ensure their effective statuses are retained, and have the runner consume generated outputs or verify audit-clean status for each load-bearing ingredient. Claim boundary until fixed: safe as conditional provenance for H_sel(m) given the named selector/active-surface authorities; not safe as a self-contained retained derivation from the single axiom."
     },
     "koide_selected_slice_frozen_bank_decomposition_note_2026-04-18": {
       "audit_date": null,

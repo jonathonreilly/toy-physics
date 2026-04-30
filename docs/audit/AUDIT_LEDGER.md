@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T01:29:57.800895+00:00
+**Generated:** 2026-04-30T01:30:45.550014+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 80 |
-| _proposed_retained_ | 4 |
+| _proposed_retained_ | 3 |
 | bounded | 205 |
 | support | 108 |
 | open | 24 |
@@ -28,19 +28,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 4 |
 | ~~audited_numerical_match~~ | 47 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 445 |
+| ~~audited_conditional~~ | 446 |
 | ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 80 |
-| `audited_conditional` | 150 |
+| `audited_conditional` | 151 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 8 |
-| `unaudited` | 1275 |
+| `unaudited` | 1274 |
 
 | criticality | count |
 |---|---:|
@@ -255,6 +255,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_p_one_clock_3plus1_transport_reduction_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_q_delta_readout_retention_split_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `koide_selected_line_provenance_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_complementarity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_nn_high_precision_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -2770,6 +2771,25 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `Koide_Q_support_route_value_Q_2_over_3_not_registered_one_hop_dependency`
   - `Koide_delta_APS_support_route_value_delta_2_over_9_not_registered_one_hop_dependency`
   - `same_Z3_p_equals_d_structural_bridge_not_registered_one_hop_dependency`
+- **auditor confidence:** high
+
+### `koide_selected_line_provenance_note_2026-04-20`
+
+- **Note:** [`KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md`](../../docs/KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The parity-compatible observable-selector theorem fixes the unique active-boundary minimizer at delta_* = q_+* = sqrt(6)/3, so H_sel(m) = H(m, sqrt(6)/3, sqrt(6)/3).  _(class `B`)_
+- **chain closes:** False — The runner verifies the determinant, Hessian, convex minimizer, CP cross-check, and file presence, but the upstream selector/chart/half-plane/observable-principle theorems are not registered as one-hop dependencies. The proof therefore closes only conditional on those cited proposed-retained authorities.
+- **rationale:** Issue: the selected-line values are derived from a cited upstream theorem stack, but that stack is not part of the audit row's one-hop dependencies and the runner checks file presence rather than audit-clean effective status. Why this blocks: the algebraic minimizer is correct once the affine chart, active chamber, parity-compatible baseline, scalar generator, and intrinsic-CP constants are granted; the packet does not independently ratify those grants. Repair target: register the cited provenance files as dependencies, ensure their effective statuses are retained, and have the runner consume generated outputs or verify audit-clean status for each load-bearing ingredient. Claim boundary until fixed: safe as conditional provenance for H_sel(m) given the named selector/active-surface authorities; not safe as a self-contained retained derivation from the single axiom.
+- **open / conditional deps cited:**
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_PARITY_COMPATIBLE_DIAGONAL_BASELINE_THEOREM_NOTE_2026-04-17.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_PARITY_COMPATIBLE_OBSERVABLE_SELECTOR_THEOREM_NOTE_2026-04-17.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_CURVATURE_23_SYMMETRIC_BASELINE_BOUNDARY_THEOREM_NOTE_2026-04-17.md`
 - **auditor confidence:** high
 
 ### `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20`
