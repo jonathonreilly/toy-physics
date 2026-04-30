@@ -3,9 +3,9 @@
     "critical": 4,
     "high": 195,
     "leaf": 286,
-    "medium": 285
+    "medium": 284
   },
-  "generated_at": "2026-04-30T23:49:25.277000+00:00",
+  "generated_at": "2026-04-30T23:52:31.444256+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6345,25 +6345,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "koide_cyclic_wilson_descendant_law_note_2026-04-18",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "koide_dweh_cyclic_compression_note_2026-04-18"
-      ],
-      "direct_in_degree": 4,
-      "load_bearing_score": 8.109,
-      "note_path": "docs/KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_cyclic_wilson_descendant_law.py",
-      "transitive_descendants": 68
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -7142,26 +7123,6 @@
       "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 37
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_circulant_wilson_target_note_2026-04-18",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "koide_cyclic_wilson_descendant_law_note_2026-04-18",
-        "koide_dweh_cyclic_compression_note_2026-04-18"
-      ],
-      "direct_in_degree": 2,
-      "load_bearing_score": 6.248,
-      "note_path": "docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_circulant_wilson_target.py",
       "transitive_descendants": 37
     },
     {
@@ -9952,6 +9913,26 @@
       "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_BRIDGE_NOTE_2026-04-18.md",
       "ready": false,
       "runner_path": "scripts/frontier_koide_circulant_character_bridge.py",
+      "transitive_descendants": 37
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "koide_circulant_wilson_target_note_2026-04-18",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [
+        "koide_cyclic_wilson_descendant_law_note_2026-04-18",
+        "koide_dweh_cyclic_compression_note_2026-04-18"
+      ],
+      "direct_in_degree": 2,
+      "load_bearing_score": 6.248,
+      "note_path": "docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_koide_circulant_wilson_target.py",
       "transitive_descendants": 37
     },
     {
@@ -17716,6 +17697,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 384,
-  "total_pending": 770
+  "ready_count": 382,
+  "total_pending": 769
 }
