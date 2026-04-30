@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:25:04.475062+00:00
+**Generated:** 2026-04-30T03:26:15.975329+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,25 +22,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
 | bounded | 196 |
-| support | 100 |
+| support | 99 |
 | open | 23 |
 | unknown | 492 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 53 |
-| ~~audited_conditional~~ | 422 |
+| ~~audited_conditional~~ | 423 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 190 |
+| `audited_conditional` | 191 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1226 |
+| `unaudited` | 1225 |
 
 | criticality | count |
 |---|---:|
@@ -308,6 +308,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `planck_target3_clifford_phase_bridge_theorem_note_2026-04-25` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -4097,6 +4098,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Because C(c_cell, delta)=c_cell is constant on the affine hidden-character fiber while p_Schur(c_cell, delta)=c_cell+delta varies, p_Schur=p_event holds iff delta=0 and no carrier-only function can recover the Schur scalar on that fiber.  _(class `A`)_
 - **chain closes:** True — The source note and runner prove the bounded no-go by an explicit two-point affine-fiber counterexample: identical carrier data produce different Schur scalars, so carrier commutation alone cannot force scalar equality.
 - **rationale:** The claim is scoped as a negative no-go for the unconstrained carrier-only parent-source scalar route, not as a positive Planck coefficient derivation. The load-bearing hidden-character fiber is explicit in the source note and the runner verifies the kernel, two-parent counterexample, carrier-only non-recoverability, equivalence of scalar equality to delta=0, and normalization sensitivity. Residual boundary: this clean audit does not rule out a future no-hidden-character law or a direct gravitational carrier-identification theorem; it only closes the carrier-only route without such an extra law.
+- **auditor confidence:** high
+
+### `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25`
+
+- **Note:** [`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`](../../docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Under the stated first-order coframe/worldtube carrier hypotheses, the runner verifies the 2^4 Boolean event-cell decomposition, selects the first homogeneous packet P_1=P_A, rejects the rank-equal Hodge-dual P_3 by first-order locality, and computes Tr((I_16/16)P_A)=1/4 while preserving non-closure flags.  _(class `B`)_
+- **chain closes:** False — The combinatorial first-order carrier theorem is verified as support, but the physical identification of gravitational boundary/action density with that first-order coframe carrier remains an explicit bridge premise and the note does not close the Planck minimal stack or SI constants.
+- **rationale:** Issue: the support theorem is internally correct on its stated coframe-carrier surface, but it is not a standalone Planck-scale derivation. Why this blocks: P_A is selected only after assuming first-order locality, axis additivity, coframe-slot symmetry, and unit primitive response; the runner explicitly confirms PLANCK_MINIMAL_STACK_CLOSURE=FALSE and names the residual boundary/action-density theorem target. Repair target: register and audit the physical theorem identifying gravitational boundary/action density with the first-order coframe/worldtube carrier, plus the finite-boundary extension and source-unit normalization dependencies if promoting the Planck lane. Claim boundary until fixed: positive support that first-order coframe carrier equals P_A and gives c_cell=1/4, not a minimal-stack derivation of a^{-1}=M_Pl or SI Planck constants.
+- **open / conditional deps cited:**
+  - `derive_gravitational_boundary_action_density_as_first_order_coframe_carrier`
+  - `PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md`
+  - `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`
+  - `source-unit normalization theorem for physical Planck interpretation`
 - **auditor confidence:** high
 
 ### `planck_source_unit_normalization_support_theorem_note_2026-04-25`

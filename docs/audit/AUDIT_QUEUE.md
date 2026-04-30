@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T03:25:04.295664+00:00
-**Total pending:** 1227
-**Ready (all deps already at a stable tier):** 782
+**Generated:** 2026-04-30T03:26:15.803147+00:00
+**Total pending:** 1226
+**Ready (all deps already at a stable tier):** 781
 
 By criticality:
 - `critical`: 41
-- `high`: 238
+- `high`: 237
 - `medium`: 340
 - `leaf`: 608
 
@@ -57,14 +57,14 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 39 | `n_eff_from_three_generations_theorem_note_2026-04-24` | critical | 38 | 13.29 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_n_eff_from_three_generations.py` |
 | 40 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | critical | 38 | 12.79 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_matter_radiation_equality_structural_identity.py` |
 | 41 | `publication.ci3_z3.publication_matrix` | critical | 31 | 12.50 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 42 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | high | 39 | 10.32 | Y | fresh_context_or_stronger | `scripts/frontier_planck_primitive_coframe_boundary_carrier.py` |
-| 43 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | high | 39 | 9.82 | Y | fresh_context_or_stronger | `scripts/frontier_area_law_algebraic_spectrum_entropy_no_go.py` |
-| 44 | `koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25` | high | 38 | 11.29 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_background_zero_z_erasure_criterion.py` |
-| 45 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | high | 38 | 10.29 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py` |
-| 46 | `koide_q_delta_closure_package_readme_2026-04-21` | high | 37 | 11.25 | Y | fresh_context_or_stronger | - |
-| 47 | `pmns_selector_current_stack_zero_law_note` | high | 37 | 8.75 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_selector_current_stack_zero_law.py` |
-| 48 | `cl3_color_automorphism_theorem` | high | 36 | 10.21 | Y | fresh_context_or_stronger | `scripts/verify_cl3_sm_embedding.py` |
-| 49 | `cpt_exact_note` | high | 36 | 9.21 | Y | fresh_context_or_stronger | - |
-| 50 | `neutrino_two_amplitude_last_mile_reduction_note` | high | 36 | 9.21 | Y | fresh_context_or_stronger | `scripts/frontier_neutrino_two_amplitude_last_mile.py` |
+| 42 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | high | 39 | 9.82 | Y | fresh_context_or_stronger | `scripts/frontier_area_law_algebraic_spectrum_entropy_no_go.py` |
+| 43 | `koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25` | high | 38 | 11.29 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_background_zero_z_erasure_criterion.py` |
+| 44 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | high | 38 | 10.29 | Y | fresh_context_or_stronger | `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py` |
+| 45 | `koide_q_delta_closure_package_readme_2026-04-21` | high | 37 | 11.25 | Y | fresh_context_or_stronger | - |
+| 46 | `pmns_selector_current_stack_zero_law_note` | high | 37 | 8.75 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_selector_current_stack_zero_law.py` |
+| 47 | `cl3_color_automorphism_theorem` | high | 36 | 10.21 | Y | fresh_context_or_stronger | `scripts/verify_cl3_sm_embedding.py` |
+| 48 | `cpt_exact_note` | high | 36 | 9.21 | Y | fresh_context_or_stronger | - |
+| 49 | `neutrino_two_amplitude_last_mile_reduction_note` | high | 36 | 9.21 | Y | fresh_context_or_stronger | `scripts/frontier_neutrino_two_amplitude_last_mile.py` |
+| 50 | `pmns_right_conjugacy_invariant_no_go_note` | high | 36 | 8.71 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_right_conjugacy_invariant_nogo.py` |
 
 Full queue lives in `data/audit_queue.json`.
