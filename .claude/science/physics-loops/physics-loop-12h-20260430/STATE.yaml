@@ -1,0 +1,33 @@
+slug: physics-loop-12h-20260430
+goal: "Single-session physics-loop campaign on /tmp/physics-loop-12h-20260430. Restart after worktree loss. Goal: produce 1-3 well-executed science blocks with claim-status certification and review PRs."
+target_status: best-honest-status
+mode: campaign
+runtime: session-bound
+deep_block: 90m
+session_start_utc: "2026-04-30T10:20:00Z"
+worktree: /tmp/physics-loop-12h-20260430
+base: origin/main
+base_commit_at_start: "78d41deb Merge pull request #196 (codex/audit-axiom-stack-minimality-cl4c-no-go-pr186)"
+lock_status: "branch-local supervisor lock; user explicitly authorized skip-permissions"
+campaign_history:
+  earlier_run_lost_to_worktree_deletion: true
+  hadron_block1_target_already_landed_on_main: true
+  current_block1_pivot: "Lane 2 alpha(M_Z) -> alpha(0) QED running dependency firewall"
+current_phase: block-1-execute
+blocks_completed: 0
+active_block_branch: "physics-loop/atomic-lane2-alpha-running-firewall-block01-20260430"
+active_route: "Lane 2 alpha-running dependency firewall — exact reduction theorem"
+active_hard_residual: "alpha(M_Z) -> alpha(0) running step depends on retained lepton masses (Lane 6), retained quark masses (Lane 3), and either hadronic R-ratio data or a Lane-1-substrate hadronic vacuum-polarization primitive."
+files_touched:
+  - .claude/science/physics-loops/physics-loop-12h-20260430/STATE.yaml
+open_imports:
+  - "m_e from framework (Lane 6)"
+  - "m_u, m_d, m_s, m_c, m_b from framework (Lane 3)"
+  - "hadronic R-ratio at low energies (Lane 1 dependent)"
+  - "QED beta function on framework substrate"
+no_go_routes_inherited:
+  - "ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27 — already exists; this block sharpens the alpha-running step"
+artifacts_landed: []
+claim_state_movement: []
+next_exact_action: "Author docs/ATOMIC_LANE2_QED_RUNNING_DEPENDENCY_FIREWALL_NOTE_2026-04-30.md and the paired runner; commit; push branch; open PR or write PR_BACKLOG."
+stop_condition: "session bound; user already accepted that 12-hour budget cannot be unattended in a single session"

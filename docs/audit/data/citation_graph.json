@@ -189,6 +189,26 @@
       "to": "charged_lepton_koide_review_packet_2026-04-18"
     },
     {
+      "from": "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30",
+      "to": "atomic_rydberg_dependency_firewall_note_2026-04-27"
+    },
+    {
+      "from": "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30",
+      "to": "lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26"
+    },
+    {
+      "from": "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30",
+      "to": "lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26"
+    },
+    {
+      "from": "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30",
+      "to": "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26"
+    },
+    {
+      "from": "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30",
+      "to": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26"
+    },
+    {
       "from": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
       "to": "minimal_axioms_2026-04-11"
     },
@@ -18373,7 +18393,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T13:41:05.339557+00:00",
+  "generated_at": "2026-04-30T13:43:12.860483+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19856,6 +19876,22 @@
       "path": "docs/ATOMIC_LANE2_PHYSICAL_UNIT_LIMIT_BOUNDARY_NOTE_2026-04-29.md",
       "runner_path": "scripts/frontier_atomic_lane2_physical_unit_limit_boundary.py",
       "title": "Atomic Lane 2 Physical-Unit Limit Boundary"
+    },
+    "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30": {
+      "claim_id": "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30",
+      "current_status": "support",
+      "current_status_raw": "support / exact reduction theorem (no claim promotion). This note",
+      "deps": [
+        "atomic_rydberg_dependency_firewall_note_2026-04-27",
+        "lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26",
+        "lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26",
+        "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26",
+        "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26"
+      ],
+      "note_hash": "a0abeeccc6121d2820ba000f69e4baf8212fe04b7f2daae9883f06582b370548",
+      "path": "docs/ATOMIC_LANE2_QED_RUNNING_DEPENDENCY_FIREWALL_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_atomic_lane2_qed_running_dependency_firewall.py",
+      "title": "Atomic Lane 2 \u2014 QED Running Dependency Firewall"
     },
     "atomic_rydberg_dependency_firewall_note_2026-04-27": {
       "claim_id": "atomic_rydberg_dependency_firewall_note_2026-04-27",
@@ -41563,17 +41599,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4593,
-    "leaf_count": 751,
-    "node_count": 1690,
+    "edge_count": 4598,
+    "leaf_count": 752,
+    "node_count": 1691,
     "root_count": 1216,
-    "runners_with_path": 774,
+    "runners_with_path": 775,
     "status_counts": {
       "bounded": 257,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 188,
+      "support": 189,
       "unknown": 796
     }
   }
