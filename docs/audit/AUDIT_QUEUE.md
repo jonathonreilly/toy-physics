@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-04-30T03:01:51.433274+00:00
-**Total pending:** 1238
-**Ready (all deps already at a stable tier):** 796
+**Generated:** 2026-04-30T03:03:07.405803+00:00
+**Total pending:** 1237
+**Ready (all deps already at a stable tier):** 795
 
 By criticality:
 - `critical`: 41
-- `high`: 249
+- `high`: 248
 - `medium`: 340
 - `leaf`: 608
 
@@ -57,14 +57,14 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 39 | `n_eff_from_three_generations_theorem_note_2026-04-24` | critical | 38 | 13.29 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_n_eff_from_three_generations.py` |
 | 40 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | critical | 38 | 12.79 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_matter_radiation_equality_structural_identity.py` |
 | 41 | `publication.ci3_z3.publication_matrix` | critical | 31 | 12.50 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 42 | `neutrino_dirac_two_higgs_canonical_reduction_note` | high | 56 | 8.83 | Y | fresh_context_or_stronger | `scripts/frontier_neutrino_dirac_two_higgs_canonical_reduction.py` |
-| 43 | `lepton_single_higgs_pmns_triviality_note` | high | 55 | 9.31 | Y | fresh_context_or_stronger | `scripts/frontier_lepton_single_higgs_pmns_triviality.py` |
-| 44 | `charged_lepton_two_higgs_canonical_reduction_note` | high | 54 | 9.78 | Y | fresh_context_or_stronger | `scripts/frontier_charged_lepton_two_higgs_canonical_reduction.py` |
-| 45 | `s3_cap_uniqueness_note` | high | 50 | 12.17 | Y | fresh_context_or_stronger | `scripts/frontier_s3_cap_uniqueness.py` |
-| 46 | `s3_general_r_derivation_note` | high | 50 | 12.17 | Y | fresh_context_or_stronger | - |
-| 47 | `cosmology_scale_identification_and_reduction_note` | high | 49 | 11.64 | Y | fresh_context_or_stronger | - |
-| 48 | `graviton_mass_derived_note` | high | 49 | 9.64 | Y | fresh_context_or_stronger | `scripts/frontier_graviton_mass_derived.py` |
-| 49 | `universal_gr_discrete_global_closure_note` | high | 48 | 10.62 | Y | fresh_context_or_stronger | - |
-| 50 | `dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17` | high | 46 | 8.55 | Y | fresh_context_or_stronger | `scripts/frontier_dm_leptogenesis_pmns_constructive_continuity_closure_theorem.py` |
+| 42 | `lepton_single_higgs_pmns_triviality_note` | high | 55 | 9.31 | Y | fresh_context_or_stronger | `scripts/frontier_lepton_single_higgs_pmns_triviality.py` |
+| 43 | `charged_lepton_two_higgs_canonical_reduction_note` | high | 54 | 9.78 | Y | fresh_context_or_stronger | `scripts/frontier_charged_lepton_two_higgs_canonical_reduction.py` |
+| 44 | `s3_cap_uniqueness_note` | high | 50 | 12.17 | Y | fresh_context_or_stronger | `scripts/frontier_s3_cap_uniqueness.py` |
+| 45 | `s3_general_r_derivation_note` | high | 50 | 12.17 | Y | fresh_context_or_stronger | - |
+| 46 | `cosmology_scale_identification_and_reduction_note` | high | 49 | 11.64 | Y | fresh_context_or_stronger | - |
+| 47 | `graviton_mass_derived_note` | high | 49 | 9.64 | Y | fresh_context_or_stronger | `scripts/frontier_graviton_mass_derived.py` |
+| 48 | `universal_gr_discrete_global_closure_note` | high | 48 | 10.62 | Y | fresh_context_or_stronger | - |
+| 49 | `dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17` | high | 46 | 8.55 | Y | fresh_context_or_stronger | `scripts/frontier_dm_leptogenesis_pmns_constructive_continuity_closure_theorem.py` |
+| 50 | `planck_target3_clifford_phase_bridge_theorem_note_2026-04-25` | high | 43 | 10.46 | Y | fresh_context_or_stronger | `scripts/frontier_planck_target3_clifford_phase_bridge.py` |
 
 Full queue lives in `data/audit_queue.json`.

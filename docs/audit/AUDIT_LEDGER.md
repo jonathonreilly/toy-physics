@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:01:51.623842+00:00
+**Generated:** 2026-04-30T03:03:07.580048+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 201 |
 | support | 101 |
 | open | 24 |
-| unknown | 502 |
-| ~~audited_decoration~~ | 6 |
+| unknown | 501 |
+| ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 396 |
+| ~~audited_conditional~~ | 398 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 179 |
+| `audited_conditional` | 180 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1237 |
+| `unaudited` | 1236 |
 
 | criticality | count |
 |---|---:|
@@ -291,6 +291,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `linear_response_second_order_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `local_zsym_predictor_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `neutrino_dirac_two_higgs_canonical_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `neutrino_majorana_current_stack_exhaustion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `neutrino_majorana_operator_axiom_first_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -3702,6 +3703,22 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The centered quadrupole keeps the centroid essentially pinned but opens a real width/tidal channel, and the width response grows with quadrupole separation.  _(class `C`)_
 - **chain closes:** True — The live probe reproduces the frozen controls and finite quadrupole rows: same-site and neutral controls are zero, the dipole mainly shifts centroid, and the centered quadrupoles give near-zero centroid change with positive width response at a = 1.0 and a = 2.0. The source explicitly excludes full tensor gravity and a general multipole theory.
 - **rationale:** The retained content is a narrow finite-runner claim, not a physical tidal-field theorem: the current runner recomputes the same-site cancellation, q_test = 0 inert control, dipole baseline, and two centered quadrupole width responses. The quadrupole rows support the stated shape-sensitive width channel while the note explicitly disclaims full tensor gravity, relativistic tidal fields, and a general multipole expansion. Residual risk is only finite-configuration scope, plus a harmless rounded-ratio mismatch where the prose says 1.969 and the live runner prints +1.968; the audit does not retain anything beyond the tested ordered-lattice configuration.
+- **auditor confidence:** high
+
+### `neutrino_dirac_two_higgs_canonical_reduction_note`
+
+- **Note:** [`NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`](../../docs/NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Assuming the neutrino two-Higgs escape theorem and the monomial charged-lepton boundary, the runner reduces every distinct-charge two-Higgs texture to A+B C, removes five phase directions, and counts the generic normal form as six positive moduli plus one invariant phase.  _(class `B`)_
+- **chain closes:** False — The local canonical-reduction/counting calculation passes, but the row does not close over recorded retained dependencies for the two-Higgs escape theorem or the single-Higgs PMNS/charged-lepton boundary, and it explicitly does not derive the seven quantities or PMNS observables.
+- **rationale:** Issue: the algebraic reduction is sound within its stated assumptions, but the ledger row has no one-hop dependencies for the upstream escape/boundary theorems it reuses. Why this blocks: the result is theorem-grade only after those inputs are accepted; the runner verifies the canonical support and parameter count, not the selection of the minimal lane or the seven axiom-side numbers. Repair target: add the two-Higgs escape and single-Higgs PMNS/monomial-boundary authorities as retained audited dependencies, or make this note derive those premises directly. Claim boundary until fixed: conditional exact normal-form/counting theorem for the supplied minimal two-Higgs neutrino lane, not full Dirac-neutrino closure.
+- **open / conditional deps cited:**
+  - `Neutrino Dirac two-Higgs escape theorem`
+  - `Lepton single-Higgs PMNS triviality theorem`
+  - `monomial charged-lepton boundary`
 - **auditor confidence:** high
 
 ### `neutrino_dirac_z3_support_trichotomy_note`
