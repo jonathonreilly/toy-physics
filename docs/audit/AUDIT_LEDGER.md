@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T23:46:29.260247+00:00
+**Generated:** 2026-04-30T23:49:25.470884+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 223 |
+| `audited_clean` | 224 |
 | `audited_conditional` | 481 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 771 |
+| `unaudited` | 770 |
 
 | criticality | count |
 |---|---:|
@@ -248,6 +248,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_berry_bundle_obstruction_theorem_note_2026-04-19` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
+| `koide_dweh_cyclic_compression_note_2026-04-18` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_hostile_review_guard_note_2026-04-24` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_kappa_two_orbit_dimension_factorization_note_2026-04-19` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
@@ -8047,6 +8048,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `scripts/frontier_koide_pointed_origin_exhaustion_theorem.py_not_registered_runner_dependency`
   - `scripts/frontier_koide_hostile_review_guard.py_not_registered_runner_dependency`
   - `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py_not_registered_runner_dependency`
+- **auditor confidence:** high
+
+### `koide_dweh_cyclic_compression_note_2026-04-18`
+
+- **Note:** [`KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md`](../../docs/KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-ready-20260430-50`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The cyclic average P_cyc(H_e) keeps exactly the diagonal sum, cyclic symmetric sum, and signed cyclic antisymmetric sum, with H_cyc = (r0/3)B0 + (r1/6)B1 + (r2/6)B2.  _(class `A`)_
+- **chain closes:** True — The note's scoped claim is the finite-dimensional algebraic compression of an already-given Hermitian target H_e. The runner verifies the projection formula, response reconstruction, and observed charged-lepton witness without needing a hidden selector or microscopic source-law derivation.
+- **rationale:** Clean within the note's declared support-level boundary. The compression theorem is an exact algebraic projection from Herm(3) to the cyclic three-channel subspace, and the note explicitly does not claim to derive the microscopic Wilson/lattice source law, the Koide selector, or the final lepton readout. Residual risk is citation hygiene rather than closure: downstream claims must not treat this support audit as a retained derivation of the three responses themselves.
 - **auditor confidence:** high
 
 ### `koide_explicit_calculations_note`

@@ -35,7 +35,7 @@ PASS_COUNT = 0
 FAIL_COUNT = 0
 
 
-def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT") -> bool:
+def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT", cls: str = "A") -> bool:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
@@ -43,7 +43,7 @@ def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT") -> 
     else:
         FAIL_COUNT += 1
     tag = f" [{kind}]" if kind != "EXACT" else ""
-    msg = f"  [{status}]{tag} {name}"
+    msg = f"  [{status} ({cls})]{tag} {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)
@@ -281,12 +281,14 @@ def part5_observed_witness() -> None:
         np.linalg.norm(h_obs - h_cyc) < 1e-10,
         detail=f"err={np.linalg.norm(h_obs - h_cyc):.2e}",
         kind="NUMERIC",
+        cls="D",
     )
     check(
         "Its Koide selector lives entirely on the compressed response triple",
         abs((2 * r0**2 - r1**2 - r2**2) / max(1.0, r0**2)) < 1e-4,
         detail=f"selector={(2 * r0**2 - r1**2 - r2**2):.10f}",
         kind="NUMERIC",
+        cls="D",
     )
 
 
