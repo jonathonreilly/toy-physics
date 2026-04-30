@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T10:19:06.688955+00:00",
+  "generated_at": "2026-04-30T10:31:05.664606+00:00",
   "per_claim": {
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "assert_count": 0,
@@ -288,18 +288,6 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_bmv_threebody.py"
-    },
-    "branch_summary_distracted_napier": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "runner": "lattice_2d3d_continuum_check.py"
     },
     "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26": {
       "assert_count": 1,
@@ -8173,30 +8161,6 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_jarlskog_derived.py"
     },
-    "work_history.dm.dm_leptogenesis_full_axiom_closure_note_2026-04-15": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "runner": "scripts/frontier_dm_leptogenesis_full_axiom_closure.py"
-    },
-    "work_history.dm.dm_leptogenesis_full_axiom_closure_note_2026-04-16": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "runner": "scripts/frontier_dm_leptogenesis_full_axiom_closure.py"
-    },
     "work_history.gw_echo_timing_route_note": {
       "assert_count": 0,
       "counts": {
@@ -8208,18 +8172,6 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_gw_echo_derived.py"
-    },
-    "work_history.repo.backlog.nature_backlog_2026-04-10": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "runner": "frontier_two_field_retarded_family_closure.py"
     },
     "yt_bottom_yukawa_retention_analysis_note_2026-04-18": {
       "assert_count": 1,
@@ -9310,8 +9262,7 @@
     "frontier_two_field_retarded_family_closure.py": {
       "assert_count": 0,
       "claims": [
-        "two_field_retarded_family_closure_note_2026-04-10",
-        "work_history.repo.backlog.nature_backlog_2026-04-10"
+        "two_field_retarded_family_closure_note_2026-04-10"
       ],
       "counts": {
         "A": 0,
@@ -9387,21 +9338,6 @@
       "assert_count": 0,
       "claims": [
         "weak_coupling_retention_note_2026-04-11"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": false
-    },
-    "lattice_2d3d_continuum_check.py": {
-      "assert_count": 0,
-      "claims": [
-        "branch_summary_distracted_napier"
       ],
       "counts": {
         "A": 0,
@@ -11169,22 +11105,6 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "exists": true
-    },
-    "scripts/frontier_dm_leptogenesis_full_axiom_closure.py": {
-      "assert_count": 0,
-      "claims": [
-        "work_history.dm.dm_leptogenesis_full_axiom_closure_note_2026-04-15",
-        "work_history.dm.dm_leptogenesis_full_axiom_closure_note_2026-04-16"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": false
     },
     "scripts/frontier_dm_leptogenesis_full_microscopic_reduction.py": {
       "assert_count": 1,
@@ -20104,9 +20024,9 @@
       "B": 108,
       "C": 358,
       "D": 121,
-      "none": 142
+      "none": 140
     },
-    "runners_classified": 735,
+    "runners_classified": 733,
     "runners_with_C": 441,
     "runners_with_D": 210
   }
