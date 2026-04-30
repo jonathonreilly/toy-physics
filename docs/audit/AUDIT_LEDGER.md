@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T20:32:23.336637+00:00
+**Generated:** 2026-04-30T20:32:58.059023+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -306,7 +306,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `action_power_3d_gravity_sign_closure_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `action_power_scaling_sweep_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `action_uniqueness_audit_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `action_uniqueness_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `action_uniqueness_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `adaptive_coevolving_geometry_no_go` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `ai_methodology.raw.prompts_session_04c820e1` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `ai_methodology.raw.prompts_session_9fc3990b_jonreilly` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -956,12 +956,12 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **current_status:** bounded
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** Action Universality: F∝M exponent = power of f in the action: bounded fixed-family universality-class result  _(class `B`)_
-- **chain closes:** False — No. The load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet, so the conclusion cannot be ratified from the source note alone.
-- **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **auditor:** `codex-audit-loop-stale-rationale-20260430-10`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** On the fixed ordered-lattice family, weak-field-linear phase-valley actions share a Newtonian-like F proportional to M mass-scaling class, while other tested action powers land in different mass-scaling classes.  _(class `C`)_
+- **chain closes:** False — The primary runner is now registered and exits 0, but its runtime output contains no classified A/B/C/D PASS lines. The bounded fixed-family universality-class computation is therefore still not exposed in an audit-checkable runner format.
+- **rationale:** The stale missing-runner rationale is resolved by the registered runner_path, but the audit remains conditional because running scripts/action_universality_probe.py emits zero classified A/B/C/D PASS lines. The source note may still be cited only as a bounded fixed-family universality-class replay; the runner output format does not yet support an audit-clean verdict under the load-bearing step classifier.
 - **open / conditional deps cited:**
-  - `unregistered_or_missing_primary_runner_or_frozen_log`
+  - `runner_output_missing_classified_a_b_c_d_pass_lines:scripts/action_universality_probe.py`
 - **auditor confidence:** high
 
 ### `adaptive_coevolving_geometry_no_go`
