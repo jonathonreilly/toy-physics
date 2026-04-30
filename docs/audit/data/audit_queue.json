@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 334,
+    "leaf": 333,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:31:22.626443+00:00",
+  "generated_at": "2026-04-30T19:31:28.713950+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13548,23 +13548,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "distracted_napier_reconciliation_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DISTRACTED_NAPIER_RECONCILIATION_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_abcc_basin_finite_search_support_note_2026-04-30",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -18992,6 +18975,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 479,
-  "total_pending": 860
+  "ready_count": 478,
+  "total_pending": 859
 }
