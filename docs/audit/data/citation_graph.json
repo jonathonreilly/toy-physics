@@ -18325,7 +18325,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T13:31:17.098477+00:00",
+  "generated_at": "2026-04-30T13:31:57.669497+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19818,6 +19818,16 @@
       "path": "docs/AXIOM_CHANGE_PROPOSAL_2026-04-10.md",
       "runner_path": null,
       "title": "Axiom Update And Interpretation Change"
+    },
+    "axiom_first_cluster_decomposition_theorem_note_2026-04-29": {
+      "claim_id": "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+      "current_status": "support",
+      "current_status_raw": "support \u2014 branch-local theorem note on A_min; runner passing; audit-pending.",
+      "deps": [],
+      "note_hash": "961bfd0db309b62aa1d176e83a989d0e0111c376fffbb94b5c8bbb1d3af11f14",
+      "path": "docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md",
+      "runner_path": "scripts/axiom_first_cluster_decomposition_check.py",
+      "title": "Axiom-First Cluster Decomposition / Lieb\u2013Robinson Bound on Cl(3) \u2297 Z^3"
     },
     "axiom_first_reflection_positivity_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
@@ -40262,6 +40272,7 @@
     "atomic_rydberg_dependency_firewall_note_2026-04-27",
     "audited_symmetry_synthesis_note",
     "axiom_change_proposal_2026-04-10",
+    "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
     "axiom_first_reflection_positivity_theorem_note_2026-04-29",
     "axiom_first_spin_statistics_theorem_note_2026-04-29",
     "axiom_reduction_note",
@@ -41361,16 +41372,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4581,
-    "leaf_count": 739,
-    "node_count": 1677,
-    "root_count": 1205,
-    "runners_with_path": 761,
+    "leaf_count": 740,
+    "node_count": 1678,
+    "root_count": 1206,
+    "runners_with_path": 762,
     "status_counts": {
       "bounded": 254,
       "open": 40,
       "proposed_promoted": 1,
       "proposed_retained": 408,
-      "support": 179,
+      "support": 180,
       "unknown": 795
     }
   }
