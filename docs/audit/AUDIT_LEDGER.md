@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:05:41.864353+00:00
+**Generated:** 2026-04-30T03:08:55.865571+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,25 +22,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 82 |
 | _proposed_retained_ | 1 |
 | bounded | 201 |
-| support | 101 |
+| support | 100 |
 | open | 24 |
 | unknown | 498 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 401 |
+| ~~audited_conditional~~ | 402 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 183 |
+| `audited_conditional` | 184 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1233 |
+| `unaudited` | 1232 |
 
 | criticality | count |
 |---|---:|
@@ -317,6 +317,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retardation_discriminator_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `retarded_field_compact_refinement_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `s3_cap_uniqueness_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `s3_general_r_derivation_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `s3_taste_cube_decomposition_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `s3_time_bilinear_tensor_action_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `scalar_3plus1_temporal_ratio_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -4434,6 +4435,25 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `Perelman`
   - `Moise`
   - `Kawamoto-Smit homogeneity premise`
+- **auditor confidence:** high
+
+### `s3_general_r_derivation_note`
+
+- **Note:** [`S3_GENERAL_R_DERIVATION_NOTE.md`](../../docs/S3_GENERAL_R_DERIVATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The live general-R runner verifies 88 checks: vertex links are S2 through R=10, H1/H2/H3/Euler checks through R=6, compact closed simply connected PL-manifold hypotheses, and then applies Perelman/Moise-style topology to conclude M_R is S3 for the cone-capped construction.  _(class `B`)_
+- **chain closes:** False — The general cone-capped S3 path is supported by the live runner, but the note's closed/two-independent-proof-path promotion does not fully close because one declared runner is missing and the uniqueness/selection step depends on the separately conditional cap-uniqueness package and external topology infrastructure.
+- **rationale:** Issue: the note advertises CLOSED status and three commands, but `scripts/frontier_s3_inductive_link.py` is absent, while the claimed recognition/shellability proof path is not reproducible from the current S3 script inventory. Why this blocks: `frontier_s3_general_r.py` passes 88/88 for the general Perelman-hypothesis route, and `frontier_s3_cap_uniqueness.py` passes 35/35, but the cap-uniqueness note is itself bounded/conditional and the note's stated independent computational proof inventory is stale. Repair target: update the command/proof-path list to live scripts, restore or replace the missing inductive/recognition/shellability artifacts, and make uniqueness/selection an audited dependency if claiming CLOSED. Claim boundary until fixed: conditional support for the cone-capped M_R ≅ S3 general-R theorem using standard topology with verified hypotheses, not a fully audited closed compactification/selection lane.
+- **open / conditional deps cited:**
+  - `scripts/frontier_s3_inductive_link.py (missing)`
+  - `S3_CAP_UNIQUENESS_NOTE.md`
+  - `Perelman PL Poincare theorem`
+  - `Moise TOP=PL in dimension 3`
+  - `Seifert-van Kampen`
+  - `closed-surface classification`
 - **auditor confidence:** high
 
 ### `s3_mass_matrix_no_go_note`
