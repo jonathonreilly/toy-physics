@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 403,
+    "leaf": 402,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:24:19.352699+00:00",
+  "generated_at": "2026-04-30T19:24:25.712669+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13705,23 +13705,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_strong_cp_gamma_transfer_no_go_note_2026-04-15",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_STRONG_CP_GAMMA_TRANSFER_NO_GO_NOTE_2026-04-15.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_strong_cp_gamma_transfer_nogo.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20204,6 +20187,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 542,
-  "total_pending": 929
+  "ready_count": 541,
+  "total_pending": 928
 }
