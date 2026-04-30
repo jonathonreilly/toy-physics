@@ -1,0 +1,41 @@
+slug: axiom-to-main-lane-cascade-20260429
+goal: "Convert as many areas as possible to retained status via first-principles axiom-to-main-lane derivations. Priority lanes: Koide Q+δ, quark mass ratios, CKM 5/6 mechanism, DM η, Planck/BH 1/4 carrier, Cl_4(C) module."
+target_status: best-honest-status
+mode: campaign
+runtime: 12h
+deep_block: 90m
+start_time_utc: "2026-04-30T00:25:00Z"
+hard_deadline_utc: "2026-04-30T12:25:00Z"
+checkpoint_interval: 30m
+campaign_branch_namespace: "physics-loop/axiom-to-main-lane-cascade-20260429"
+base: origin/main
+base_commit_at_start: "17789d49 audit: normalize replayed sweep surfaces"
+lock_status: unavailable
+lock_note: "scripts/automation_lock.py hardcodes /Users/jonreilly paths; this worktree is on /Users/jonBridger. Skipping per skill optionality. Branch-local supervisor lock active via single dedicated worktree."
+worktree: "/Users/jonBridger/Toy Physics/.claude/worktrees/confident-bohr-dd2668"
+worktree_branch: "claude/confident-bohr-dd2668"
+current_block: 0
+blocks_completed: 0
+cycles_completed: 0
+audit_grade_cycles_in_a_row: 0
+last_stretch_attempt_cycle: null
+last_stuck_fanout_cycle: null
+active_route: null
+active_hard_residual: null
+files_touched: []
+open_imports: []
+no_go_routes_inherited:
+  - "Charged-lepton: see charged-lepton-pickup-20260428 (gauge-anchor YT-analog excluded for colorless lepton; SU(2)/U(1) anchors closed; M3 EW-A4 false premise; combined no-go for single-cycle attemptable y_τ Ward identity routes)"
+  - "Hubble C1: A1 Grassmann, A2 g_bare action-unit, A4 parity gate, A5 minimal-carrier-axiom all closed; (G1) requires Cl_4(C) module axiom (Axiom*)"
+  - "DM: A-BCC selector closure remains open; current-bank selector closure still no; freezeout-bypass bounded"
+  - "Koide A1: fractional topology no-go, O13 Cheeger-Simons-Rz no-go, Δ-lattice Wilson selected-eigenline no-go, Δ-marked relative cobordism no-go, Q-Δ readout retention split no-go, Q-Δ residual cohomology obstruction no-go, Q on-site source-domain no-go synthesis, Q23 Oh-covariance no-go, selected-line local radian-bridge no-go"
+  - "Koide Z3 qubit radian bridge no-go (2026-04-20)"
+  - "Sigma m_ν: F3 cross-bound conditional; ~0.003 eV consistent admission window"
+  - "Plaquette: naive constant-lift law ruled out; finite-order connected-hierarchy truncation ruled out; finite-automorphism-only response, carrier-only parent-source scalar, simple-fiber Widom entropy-carrier all closed negatively"
+  - "Hadron Lane 1: chiral condensate banks-Casher scoping, sqrt(sigma) retention gate audit support — both bounded"
+no_go_routes_proven_in_workstream: []
+review_findings: []
+artifacts_landed: []
+claim_state_movement: []
+next_exact_action: "Build OPPORTUNITY_QUEUE.md, ASSUMPTIONS_AND_IMPORTS.md, ROUTE_PORTFOLIO.md. Then begin Block 1 = Koide Q canonical-descent closure attempt from minimal axiom premises."
+stop_condition: "runtime budget reached (12h hard deadline 2026-04-30T12:25:00Z), max cycles, OR refreshed OPPORTUNITY_QUEUE.md proves global queue exhaustion after documented stuck fan-out"

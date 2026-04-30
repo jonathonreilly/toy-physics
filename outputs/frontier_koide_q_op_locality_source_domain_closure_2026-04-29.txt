@@ -1,0 +1,52 @@
+========================================================================
+Koide Q OP-Locality Source-Domain structural support claim (V8)
+========================================================================
+
+Section 1: retained authority audits
+------------------------------------------------------------------------
+[PASS] OP Theorem 1 — unique additive CPT-even scalar generator clause — OP T1 uniqueness clause present on disk (substring 'unique additive')
+[PASS] OP Theorem 1 — multiplicative-to-additive functional equation — OP T1 functional-equation phrasing present
+[PASS] OP Theorem 2 — local scalar observables source-derivative clause — OP T2 source-derivative clause present
+[PASS] OP Theorem 2 — local projector basis P_x in source-domain — OP T2 names local projector basis P_x
+[PASS] PHYSICAL_LATTICE_NECESSITY §9 — locality is structural — one-axiom substrate-necessity §9 clause present
+[PASS] PHYSICAL_LATTICE_NECESSITY §9 — substrate is forced — substrate-necessity clause present
+[PASS] ONSITE no-go — Z is not an onsite diagonal source function — ONSITE no-go clause present on disk
+[PASS] Canonical-descent T1 — unique trace-preserving local descent — Canonical-descent T1 formula present on disk
+[PASS] CRIT — equivalence chain z = 0 ⇔ Q = 2/3 — CRIT equivalence clause present on disk
+
+Section 2: algebraic identities of the V8 chain (sympy / numpy)
+------------------------------------------------------------------------
+[PASS] Tr(Z_3D) = -1 (sympy/numpy) — computed trace = -1.000000
+[PASS] E_loc(sI + zZ) factor = (s − z/3) — sympy gives factor = s - 0.333333333333333*z
+[PASS] Z_3D has off-diagonal entries (cross-site via R) — ||Z_3D - diag(Z_3D)|| = 1.632993 (> 0 confirms non-onsite)
+[PASS] diag(Z_3D) = -1/3 · I (canonical-descent §3 onsite reduction) — diag(Z_3D) − (-1/3)I = 1.923e-16
+[PASS] K_Z(z) = Y_Z(z)^(-1) − I matches CRIT §3 — CRIT §3 dual source identity verified
+[PASS] Q(z) = 2/(3(1+z)) on Y_Z (CRIT §4) — sympy gives Q(z) = 2/(3*(z + 1))
+[PASS] Q(z = 0) = 2/3 on Y_Z(0) = I_2 — Q(0) = 2/3
+[PASS] Tr K_Z(z) symmetric combination matches CRIT direct compute — Tr K_Z = -2*z**2/(z**2 - 1)
+[PASS] E_loc^{(2)}(K_Z(0)) = 0 (descent collapses at z=0) — trace-zero descent verified at z=0
+
+Section 3: V8 chain composition checks
+------------------------------------------------------------------------
+[PASS] chain piece available: OP Theorem 1 (uniqueness) — verified in §1 above
+[PASS] chain piece available: OP Theorem 2 (locality / source-domain restriction) — verified in §1 above
+[PASS] chain piece available: PHYSICAL_LATTICE_NECESSITY §9 (locality is structural) — verified in §1 above
+[PASS] chain piece available: ONSITE no-go (Z ∉ span{P_x}) — verified in §1 above
+[PASS] chain piece available: Canonical-descent Theorem 1 (unique trace-preserving descent) — verified in §1 above
+[PASS] chain piece available: CRIT (equivalence chain to Q = 2/3) — verified in §1 above
+[PASS] forbidden import not used as proof input: m_e — no observational mass enters proof
+[PASS] forbidden import not used as proof input: m_mu — no observational mass enters proof
+[PASS] forbidden import not used as proof input: m_tau — no observational mass enters proof
+[PASS] forbidden import not used as proof input: Q_obs — no observational mass enters proof
+[PASS] actual_current_surface_status = support — skill firewall field present
+[PASS] proposal_allowed: true — skill firewall field present
+[PASS] audit_required_before_effective_retained: true — skill firewall field present
+[PASS] bare_retained_allowed: false — skill firewall field present
+
+Q_L_EQ_2_OVER_3_SUPPORT_CHAIN_VERIFIED = True
+(This flag verifies the V8 chain authorities + algebraic identities. It does NOT replace the independent audit step required before the repo treats this as effective retained.)
+
+========================================================================
+FAIL count: 0
+All chain authorities + algebraic identities verified.
+V8 audit-grade chain check PASSES. support status is kept while the strict-reading inference remains under review.
