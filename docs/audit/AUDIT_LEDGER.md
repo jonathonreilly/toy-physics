@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T02:42:58.897135+00:00
+**Generated:** 2026-04-30T02:43:02.395385+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 204 |
 | support | 104 |
 | open | 24 |
-| unknown | 518 |
+| unknown | 517 |
 | ~~audited_decoration~~ | 6 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 61 |
-| ~~audited_conditional~~ | 375 |
+| ~~audited_conditional~~ | 376 |
 | ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 162 |
+| `audited_conditional` | 163 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1255 |
+| `unaudited` | 1254 |
 
 | criticality | count |
 |---|---:|
@@ -197,6 +197,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_transport_status_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_cascade_geometry_note_2026-04-14` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -1154,6 +1155,20 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Choose the off-seed source that extremizes the exact flavored transport lift max_i eta_i / eta_obs on the fixed native seed surface, then use continuity to find eta/eta_obs = 1.  _(class `G`)_
 - **chain closes:** False — The runner constructs an overshooting source and an interpolated exact closure point, but the source is selected by optimizing a comparator involving eta_obs rather than by a retained microscopic law.
 - **rationale:** Issue: the load-bearing closure depends on selecting an off-seed source by extremizing eta/eta_obs and then locating an eta/eta_obs = 1 point by continuity. Why this blocks: the construction proves a calibrated positive candidate and existence of a closure point, but not that the framework derives this source selector independently of the target observational value. Repair target: derive the off-seed source law from retained microscopic dynamics without using eta_obs as the objective/comparator. Claim boundary until fixed: constructive PMNS-assisted closure candidate on a fixed seed surface, not an audited full-stack prediction.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_TRANSPORT_DECOMPOSITION_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_TRANSPORT_DECOMPOSITION_THEOREM_NOTE_2026-04-16.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** With the exact upstream leptogenesis package frozen, eta[H] factors as (s/n_gamma) * C_sph * d_N * epsilon_1 * kappa_axiom[H], so kappa_fit(K) is only a diagnostic comparator.  _(class `B`)_
+- **chain closes:** False — The factorization closes after the exact source package, projection law, and bookkeeping constants are supplied, but those upstream inputs are not derived or supplied as retained one-hop dependencies.
+- **rationale:** Issue: the transport decomposition depends on fixed exact_package inputs including gamma, E1, E2, K00, epsilon_1, and bookkeeping constants. Why this blocks: the runner correctly factors eta and demotes kappa_fit only conditional on those supplied values; it does not derive the exact source package or projection law from retained authorities in this audit bundle. Repair target: expose retained dependencies for the source package, projection law, and thermal/radiation bookkeeping, or derive them inside the runner before decomposition. Claim boundary until fixed: conditional transport decomposition for the supplied package, not an audited theorem-native decomposition from the single axiom.
+- **open / conditional deps cited:**
+  - `scripts/dm_leptogenesis_exact_common.py`
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_transport_status_note_2026-04-16`
