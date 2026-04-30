@@ -1,0 +1,57 @@
+========================================================================
+ axiom_first_spin_statistics_check.py
+ Loop: axiom-first-foundations, Cycle 1 / Route R1
+ Exhibits the four load-bearing facts of the spin-statistics
+ theorem on Cl(3) on Z^3.
+========================================================================
+
+--- Exhibit E1: pairwise anticommutators of fermion modes ---
+  N modes: 4, Hilbert dim: 16
+  max |off-diagonal anticommutator|: 0.000e+00
+  max |{c_i, c_i^†} - I|:           0.000e+00
+  E1 verdict: PASS
+
+--- Exhibit E2: per-site Hilbert space forces Grassmann (operator level) ---
+  E2a. bosonic CCR [a, a^†] = I in finite-dim truncation:
+     K=  2: tr([a,a^†])=+0.000  vs  tr(I)=+2.000  ||[a,a^†] - I||_max=2.000
+     K=  4: tr([a,a^†])=+0.000  vs  tr(I)=+4.000  ||[a,a^†] - I||_max=4.000
+     K=  8: tr([a,a^†])=+0.000  vs  tr(I)=+8.000  ||[a,a^†] - I||_max=8.000
+     K= 16: tr([a,a^†])=+0.000  vs  tr(I)=+16.000  ||[a,a^†] - I||_max=16.000
+     K= 32: tr([a,a^†])=+0.000  vs  tr(I)=+32.000  ||[a,a^†] - I||_max=32.000
+     → tr([a,a^†]) = 0 at every finite K, while tr(I) = K > 0;
+       hence [a,a^†] = I has NO finite-dim solution.  PASS
+  E2b. Grassmann CAR {c, c^†} - I  on 2-dim Fock: max dev = 0.000e+00
+     → 2-dim Fock matches Cl(3) minimal complex spinor irrep dim = 2.
+  context. H(M)=½(M+M†) on L=2, dim=3, |Λ|=8, m=0.3, r_W=1.0:
+     min eigval: +0.3000,  max: +6.3000,  #neg/zero/pos: 0/0/8
+     (Note: positive definite for canonical mass + Wilson; the spin-statistics
+      force is at the Hilbert-space level, not Gaussian convergence.)
+  E2 verdict: PASS
+
+--- Exhibit E3: det(M) vs Pfaffian of antisymmetrised quadratic form ---
+  (using a 1D toy block instead, |Λ|=2 too large for Pf recursion at dim=3)
+  N = 4
+  det(M)        = +1.856100e+00+0.000000e+00j
+  Pf(A)         = +1.856100e+00+0.000000e+00j
+  | |Pf| - |det| | / |det| = 2.393e-16
+  E3 verdict: PASS
+
+--- Exhibit E4: identical-fermion two-point antisymmetry ---
+  state: |ψ⟩ = (|1,1⟩ + |0,0⟩)/√2
+  <ψ| c_0 c_1 |ψ> = (-0.4999999999999999+0j)
+  <ψ| c_1 c_0 |ψ> = (0.4999999999999999+0j)
+  |val_xy| = |val_yx|? True
+  sum (should be 0):  0j
+  E4 verdict: PASS  (sign_flip=True, nontrivial=True)
+
+========================================================================
+ SUMMARY
+========================================================================
+   E1: PASS
+   E2: PASS
+   E3: PASS
+   E4: PASS
+
+   PASSED: 4/4
+
+ verdict: spin-statistics theorem (S1)–(S4) exhibited on Cl(3) on Z^3.
