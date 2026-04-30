@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T15:12:26.752238+00:00
+**Generated:** 2026-04-30T15:12:30.394021+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 196 |
 | support | 125 |
 | open | 17 |
-| unknown | 442 |
+| unknown | 441 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 473 |
+| ~~audited_conditional~~ | 474 |
 | ~~audited_failed~~ | 170 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 9 |
 | `audited_clean` | 86 |
-| `audited_conditional` | 238 |
+| `audited_conditional` | 239 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1157 |
+| `unaudited` | 1156 |
 
 | criticality | count |
 |---|---:|
@@ -209,6 +209,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `architecture_portability_sweep_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `area_law_native_car_semantics_tightening_note_2026-04-25` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `asymmetry_persistence_born_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `bh_entropy_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `causal_field_canonical_chain_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `charged_lepton_two_higgs_canonical_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -864,6 +865,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `canonical_primitive_edge_entropy_functional_class_exhaustiveness_not_registered`
   - `gapped_edge_Schmidt_spectrum_selector_open`
   - `operational_primitive_boundary_entropy_theorem_open`
+- **auditor confidence:** high
+
+### `asymmetry_persistence_born_note`
+
+- **Note:** [`ASYMMETRY_PERSISTENCE_BORN_NOTE.md`](../../docs/ASYMMETRY_PERSISTENCE_BORN_NOTE.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** Asymmetry Persistence Born Calibration Note: Asymmetry Persistence Born Calibration Note  _(class `B`)_
+- **chain closes:** False — No. The load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet, so the conclusion cannot be ratified from the source note alone.
+- **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **open / conditional deps cited:**
+  - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
 
 ### `backreaction_note`
