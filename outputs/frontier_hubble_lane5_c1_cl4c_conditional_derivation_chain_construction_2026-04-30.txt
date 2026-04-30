@@ -1,0 +1,52 @@
+========================================================================
+Lane 5 (C1) Cl_4(C)-conditional derivation chain construction runner
+========================================================================
+
+------------------------------------------------------------------------
+Arrow 1: Cl_4(C) -> metric-compatible coframe response on P_A H_cell
+------------------------------------------------------------------------
+[PASS] 1_rank_P_A_equals_four_and_c_cell_one_quarter: rank(P_A)=4, c_cell=0.250000000000, indices=[1, 2, 4, 8]
+[PASS] 2_pauli_generators_hermitian_and_unitary: all Hermitian=True, all unitary=True
+[PASS] 3_cl4_anticommutator_algebra_exact: worst residual=0.000e+00
+[PASS] 4_linear_coframe_response_metric_compatible: worst D(v)^2 residual on 64 random real coframe vectors=3.560e-15
+[PASS] 5_face_permutation_gauge_unitary_equivalence: swapped Cl_4 residual=0.000e+00, basis change norm=2.828e+00
+[PASS] 6_active_basis_phase_gauge_preserves_clifford_algebra: phase-rotated Cl_4 residual=0.000e+00, basis change norm=5.203e-01
+[PASS] 7_two_mode_CAR_pairing_exact: worst CAR residual=0.000e+00
+[PASS] 8_K_isomorphic_to_F_C_squared_unique_fock_vacuum: smallest singular value of [c_N; c_T]=0.000e+00 (vacuum), second smallest=1.000e+00 (no second vacuum)
+
+------------------------------------------------------------------------
+Arrow 2: coframe response -> (G1) closure (in natural phase units)
+------------------------------------------------------------------------
+[PASS] 9_spin_lift_periodicity_4pi_native_phase_unit: bivector^2=-I: True, U(2pi)=-I: True, U(4pi)=+I: True, eigvals(bivector)=[0.-1.j 0.-1.j 0.+1.j 0.+1.j]
+[PASS] 10_action_unit_rescaling_invariance_A2_boundary_witnessed: worst (S,kappa) common-rescale phase spread=0.000e+00
+[PASS] 11_native_phase_unit_4pi: ||U(4pi) - I|| = 4.899e-16
+
+------------------------------------------------------------------------
+Arrow 3: (G1) -> (C1) absolute-scale gate (in natural lattice units)
+------------------------------------------------------------------------
+[PASS] 12_c_widom_equals_one_quarter: <N_x>=3.0, c_Widom=0.250000000000
+[PASS] 13_c_widom_matches_c_cell: c_Widom=0.250000000000, c_cell=0.250000000000
+[PASS] 14_lambda_one_and_G_Newton_lat_one: lambda=1.000000000000, G_Newton,lat=1.000000000000
+[PASS] 15_a_over_l_P_equals_one_in_natural_units: l_P=1.000000000000, a/l_P=1.000000000000
+
+------------------------------------------------------------------------
+Arrow 4: (C1) -> H_0 [BLOCKED — (C2) orthogonality witness]
+------------------------------------------------------------------------
+[PASS] 16_Cl4_carrier_commutes_with_C2_yukawa_projector_on_orthogonal_factor: worst [Gamma_a tensor I, I tensor P_C2] norm=0.000e+00
+[PASS] 17_carrier_and_yukawa_algebras_act_on_disjoint_factors: worst commutator across disjoint factors=0.000e+00
+[PASS] 18_C2_residual_orthogonal_to_Cl4_carrier_axiom: worst ||U_carrier P_C2 U_carrier^dagger - P_C2|| under Cl_4 carrier transformations=5.160e-17
+
+------------------------------------------------------------------------
+Forbidden-import guard
+------------------------------------------------------------------------
+[PASS] forbidden_import_not_used_as_proof_input::H_0_obs: observed Hubble constant: not used as proof input
+[PASS] forbidden_import_not_used_as_proof_input::H_inf_obs: observed late-time de Sitter rate: not used as proof input
+[PASS] forbidden_import_not_used_as_proof_input::Lambda_obs: observed cosmological constant: not used as proof input
+[PASS] forbidden_import_not_used_as_proof_input::M_Pl_SI: SI Planck mass: not used as proof input
+[PASS] forbidden_import_not_used_as_proof_input::hbar_SI: SI reduced Planck constant: not used as proof input
+[PASS] forbidden_import_not_used_as_proof_input::G_SI: SI Newton constant: not used as proof input
+
+========================================================================
+TOTAL: PASS=24, FAIL=0
+========================================================================
+Conclusion: Conditional on Axiom* (the irreducible Cl_4(C) module on P_A H_cell), the four-arrow chain reaches (C1) face-equivariantly in natural lattice units. Numerical H_0 remains BLOCKED by the structurally orthogonal (C2) eta-retirement gate.
