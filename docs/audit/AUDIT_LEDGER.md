@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:08:51.157433+00:00
+**Generated:** 2026-04-30T19:08:58.454507+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 125 |
+| `audited_clean` | 126 |
 | `audited_conditional` | 326 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1023 |
+| `unaudited` | 1022 |
 
 | criticality | count |
 |---|---:|
@@ -169,6 +169,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
+| `hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
@@ -4798,6 +4799,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The wrapper identifies the irreducible Cl_4(C) module on P_A H_cell as the minimal carrier axiom required for (G1) closure after the earlier A1/A2/A4 attacks.  _(class `A`)_
 - **chain closes:** False — No. The wrapper belongs to the stale Axiom* minimality/exhaustion frame; Thread 1's failed verdict rejects the assembled forced-carrier narrative, so this source note cannot remain as an active support surface.
 - **rationale:** Issue: the note's load-bearing role is to support the stale Axiom* minimal-carrier narrative that the later audit failed, not merely to record a neutral open option. Why this blocks: keeping it active would preserve a failed wrapper frame as if it were still live support for (G1)/(C1) closure. Repair target: rebuild any future carrier-axiom analysis from a fresh proof surface that does not depend on the failed exhaustion/minimality frame. Claim boundary until fixed: the source note is retained only in archive recovery history, not as an active docs claim.
+- **auditor confidence:** high
+
+### `hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29`
+
+- **Note:** [`HUBBLE_LANE5_C1_A6_BILINEAR_ACTIVE_BLOCK_SUPPORT_BOUNDARY_NOTE_2026-04-29.md`](../../docs/HUBBLE_LANE5_C1_A6_BILINEAR_ACTIVE_BLOCK_SUPPORT_BOUNDARY_NOTE_2026-04-29.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-b-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Number-preserving bilinears on P_A H_cell generate M_4(C) and can host an intrinsic Cl_4 response, but they do not select the metric coframe basis or dimensional action unit.  _(class `C`)_
+- **chain closes:** True — The finite active-block construction computes the rank-four sector, the bilinear span, matrix-unit recovery, Cl_4 hosting, and non-uniqueness witnesses. The current runner reports PASS=9, FAIL=0 and directly supports the capacity-positive but selector-open boundary.
+- **rationale:** The support/boundary result closes: bilinears give full active algebra capacity, while permutation, phase, and action-rescaling witnesses show that existence is not selection. This is a no-go/support boundary rather than algebraic decoration, because it blocks a stronger C1 shortcut. Residual risk is the later selector/metrology theorem, which the note explicitly leaves open.
 - **auditor confidence:** high
 
 ### `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28`
