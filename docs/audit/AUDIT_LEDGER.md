@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T03:16:00.934346+00:00
+**Generated:** 2026-04-30T03:17:13.309687+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 199 |
 | support | 100 |
 | open | 23 |
-| unknown | 493 |
+| unknown | 492 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 49 |
 | ~~audited_renaming~~ | 53 |
-| ~~audited_conditional~~ | 418 |
+| ~~audited_conditional~~ | 419 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 82 |
-| `audited_conditional` | 189 |
+| `audited_conditional` | 190 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 10 |
-| `unaudited` | 1227 |
+| `unaudited` | 1226 |
 
 | criticality | count |
 |---|---:|
@@ -180,6 +180,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_single_source_compare_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alpha_s_derived_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `area_law_native_car_semantics_tightening_note_2026-04-25` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `area_law_quarter_broader_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `bh_entropy_rt_ratio_widom_no_go_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -552,6 +553,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The note's load-bearing finite claim is that the parity-rotated sector-transition connectivity family is a bounded positive signed-source candidate on the no-restore grown slice, with 10 of 15 drift/seed rows passing exact zero, neutral cancellation, sign orientation, and near-linear charge-response gates.  _(class `C`)_
 - **chain closes:** True — The live sign-sweep runner rebuilds the listed five-drift by three-seed grid, applies the alternative sector-transition connectivity, and reproduces 10/15 passing rows with drift coverage [0.0, 0.1, 0.2, 0.3, 0.5] and mean exponent 1.000035. The result closes only as a finite bounded positive candidate on this slice, not as seed-wide closure or a geometry-generic theorem.
 - **rationale:** The source note's bounded claim is exactly what the runner checks: zero-source response, neutral +/- cancellation, sign orientation, and a double-to-single charge exponent near one for each drift/seed row. The current output matches the archived note values, including 10/15 passing rows, the per-drift pass pattern, and mean exponent 1.000035, while the source explicitly rejects family-wide and geometry-generic closure. Residual boundary: this is a finite computational lane candidate, not an analytic classification of all structured connectivity families.
+- **auditor confidence:** high
+
+### `area_law_native_car_semantics_tightening_note_2026-04-25`
+
+- **Note:** [`AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md`](../../docs/AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md)
+- **current_status:** unknown
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Assuming the rank-four primitive active block carries an irreducible local Clifford-Majorana edge response, the runner constructs two CAR annihilators, four Majoranas, the full M_4(C) Clifford algebra, parity, and the 2/12+1/12 Widom coefficient, while also showing a rank-four commuting two-qubit semantics is not CAR.  _(class `B`)_
+- **chain closes:** False — The note precisely identifies the residual Target 2 statistics premise and checks its CAR consequences, but it does not derive the Clifford-Majorana edge response from rank four, locality, additivity, or bare Hilbert-flow semantics.
+- **rationale:** Issue: the tightening theorem is valid as a conditional equivalence, not a standalone area-law closure. Why this blocks: the load-bearing assumption is exactly the local irreducible Clifford-Majorana/CAR edge-statistics principle; the runner explicitly demonstrates that rank four alone also admits non-CAR two-qubit semantics. Repair target: audit or derive the primitive coframe/edge-statistics forcing theorem and register the primitive-CAR edge and parity-gate carrier dependencies. Claim boundary until fixed: exact reduction of the residual Target 2 premise to native Clifford-Majorana/CAR edge response, not a derivation of that response from the retained Hilbert-only surface.
+- **open / conditional deps cited:**
+  - `local irreducible Clifford-Majorana/CAR edge-statistics principle on P_A H_cell`
+  - `primitive metric-compatible coframe response forcing theorem`
+  - `area_law_primitive_car_edge_identification_theorem_note_2026-04-25`
+  - `area_law_primitive_parity_gate_carrier_theorem_note_2026-04-25`
 - **auditor confidence:** high
 
 ### `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25`
