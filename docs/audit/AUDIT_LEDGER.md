@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T22:36:21.649238+00:00
+**Generated:** 2026-04-30T22:37:43.462644+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 215 |
+| `audited_clean` | 216 |
 | `audited_conditional` | 472 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 784 |
+| `unaudited` | 783 |
 
 | criticality | count |
 |---|---:|
@@ -178,6 +178,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
+| `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | open | ~~audited_clean~~ | open | fresh_context | codex-gpt-5 | A | - |
 | `eigenvalue_anderson_phase_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `electric_sign_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `electrostatics_card_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -4959,6 +4960,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** - boundary sensitivity, so the law vanishes whenever any one Schur channel  _(class `B`)_
 - **chain closes:** False — No. The source row is author-declared unknown, so the audit packet does not assert a closed derivation to ratify.
 - **rationale:** Issue: the source note's own Status line is unknown, not a closed theorem/result tier. Why this blocks: a leaf audit cannot turn an explicitly unsettled source claim into a closed chain without an author reclassification and supporting derivation. Repair target: update the source note to a precise support/bounded/proposed_retained claim with a runner or cited theorem package. Claim boundary until fixed: safe to cite only as an unknown note in its current wording.
+- **auditor confidence:** high
+
+### `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25`
+
+- **Note:** [`DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md`](../../docs/DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md)
+- **current_status:** open
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-31`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** For a finite charged block D_-=[[A,B],[C,F]] with the stated invertibility and positivity hypotheses, the Schur block L_e is exactly the boundary Green compression inverse, obeys the Feshbach elimination identity, and is the positive Dirichlet boundary minimum; the theorem explicitly does not evaluate D_- or close the final DM selector lane.  _(class `A`)_
+- **chain closes:** True — The proof is finite-dimensional block algebra under explicit hypotheses, and the registered runner verifies the Schur factorization, block inverse, determinant response, Feshbach equation, positive Dirichlet minimum, trial upper certificates, Loewner monotonicity, package links, and negative closure flags with 42/42 passing checks.
+- **rationale:** Clean on the declared open-surface theorem: the source and runner prove exact Schur/Feshbach/Dirichlet boundary identities for supplied finite blocks with explicit invertibility and positivity assumptions. The note does not claim Wilson-native parent closure, does not evaluate the microscopic D_-, and does not select the final DM source point; the row remains current_status=open for those unresolved physics tasks. Residual risk is only scope management: downstream claims must not cite this as a DM-lane closure or microscopic evaluation theorem.
 - **auditor confidence:** high
 
 ### `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19`
