@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:30:38.130894+00:00
+**Generated:** 2026-04-30T19:30:44.147962+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,22 +23,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 8 |
 | bounded | 303 |
 | support | 270 |
-| open | 21 |
+| open | 20 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 693 |
+| ~~audited_conditional~~ | 694 |
 | ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 190 |
-| `audited_conditional` | 417 |
+| `audited_conditional` | 418 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 867 |
+| `unaudited` | 866 |
 
 | criticality | count |
 |---|---:|
@@ -549,6 +549,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `grown_wavefield_companion_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `grown_wavefield_failure_diagnosis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `h0125_wider_replay_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `h0125_wider_w4_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hierarchy_matsubara_decomposition_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_from_lattice_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `higgs_mass_derived_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
@@ -6555,6 +6556,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
+
+### `h0125_wider_w4_note`
+
+- **Note:** [`H0125_WIDER_W4_NOTE.md`](../../docs/H0125_WIDER_W4_NOTE.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
+- **load-bearing step:** as a bounded negative for weak-field closure; this probe asks whether widening  _(class `B`)_
+- **chain closes:** False — No. The source row is author-declared open, so the audit packet does not assert a closed derivation to ratify.
+- **rationale:** Issue: the source note's own Status line is open, not a closed theorem/result tier. Why this blocks: a leaf audit cannot turn an explicitly unsettled source claim into a closed chain without an author reclassification and supporting derivation. Repair target: update the source note to a precise support/bounded/proposed_retained claim with a runner or cited theorem package. Claim boundary until fixed: safe to cite only as an open note in its current wording.
+- **auditor confidence:** high
 
 ### `h2t_h0125_narrow_bridge_note`
 
