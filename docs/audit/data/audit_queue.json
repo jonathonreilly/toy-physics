@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 357,
+    "leaf": 356,
     "medium": 289
   },
-  "generated_at": "2026-04-30T19:29:01.352031+00:00",
+  "generated_at": "2026-04-30T19:29:07.086545+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13820,23 +13820,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "generated_geometry_synthesis_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -19389,6 +19372,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 501,
-  "total_pending": 883
+  "ready_count": 500,
+  "total_pending": 882
 }
