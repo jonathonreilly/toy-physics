@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T21:47:23.723197+00:00
+**Generated:** 2026-04-30T21:49:52.703400+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 208 |
+| `audited_clean` | 209 |
 | `audited_conditional` | 457 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 808 |
+| `unaudited` | 807 |
 
 | criticality | count |
 |---|---:|
@@ -99,6 +99,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_sign_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-gpt-5 | A | - |
 | `atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `atomic_lane2_physical_unit_limit_boundary_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
@@ -1185,6 +1186,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25`
+
+- **Note:** [`AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md`](../../docs/AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop-high-ready-20260430-06`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** By Baker's theorem, any nonzero finite von Neumann entropy from algebraic Schmidt probabilities is transcendental, so it cannot equal the algebraic value 1/4.  _(class `A`)_
+- **chain closes:** True — The note states a bounded number-theoretic no-go and does not claim a universal entropy impossibility. The runner checks rational/algebraic spectrum examples, the Baker-certificate conditions, the tuned binary selector, and the separation between algebraic trace fractions and von Neumann entropy values.
+- **rationale:** The bounded no-go closes on its stated surface: finite algebraic Schmidt spectra give zero entropy for product spectra or nonzero logarithmic linear forms that are transcendental by Baker's theorem, so exact 1/4 is excluded in that class. The runner verifies representative spectra, primitive m/16 binaries, the tuned non-algebraic two-level selector, and the finite algebraic Hamiltonian implication. Residual risk is downstream overstatement: the note does not rule out transcendental spectrum selectors, multipocket Widom mechanisms, or a justified non-von-Neumann primitive entropy functional.
 - **auditor confidence:** high
 
 ### `area_law_native_car_semantics_tightening_note_2026-04-25`
