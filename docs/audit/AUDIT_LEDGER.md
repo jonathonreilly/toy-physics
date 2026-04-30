@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T19:05:08.781646+00:00
+**Generated:** 2026-04-30T19:05:16.228977+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 121 |
+| `audited_clean` | 122 |
 | `audited_conditional` | 322 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1032 |
+| `unaudited` | 1031 |
 
 | criticality | count |
 |---|---:|
@@ -204,6 +204,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
+| `staggered_newton_reproduction_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `two_sign_comparison_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -7826,6 +7827,18 @@ Claim boundary until fixed: safe to claim C^8 ~= 4 A_1 + 2 E and no A_2 under ax
 - **load-bearing step:** On the open-cubic external-source staggered surface, the Newton-compatible exponent survives sensible trajectory readouts that suppress parity-scale beating, and fails only when the readout is made too coarse to resolve the local packet envelope.  _(class `C`)_
 - **chain closes:** True — The registered runner recomputes the stated open 3D staggered surface across raw, z2, cube2, and cube4 readouts; current output matches the note's exponents, toward signs, and cube4 failure mode. Closure is bounded to the specified external-source surface and readout-sensitivity question.
 - **rationale:** The C-class runner checks the load-bearing computational bridge rather than merely restating a definition: it evolves the packet, extracts early-time accelerations, and fits distance exponents across readouts and sizes. The clean verdict applies only to the bounded robustness statement; it does not promote a self-consistent two-body law, irregular-graph transfer, or a retained staggered trajectory card. Residual risk is confined to the calibrated surface choices such as sigma, distance window, and external 1/r source.
+- **auditor confidence:** high
+
+### `staggered_newton_reproduction_note_2026-04-11`
+
+- **Note:** [`STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md`](../../docs/STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-ca82-second-slice-a-fresh-2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The staggered architecture can reproduce a Newton-compatible 3D distance law on an open cubic lattice, but only when the trajectory observable is coarse-grained to suppress sublattice beating.  _(class `C`)_
+- **chain closes:** True — The registered runner constructs the stated open staggered Hamiltonian, evolves free and gravitating packets, and fits exact-force, raw-centroid, and blocked-centroid distance laws; current output matches the source note. The result closes only on the calibrated bounded surface with external source, d=3..6, sigma=1.30, and 2x2x2 blocked readout.
+- **rationale:** The runner computes the load-bearing trajectory response and reproduces the note's global blocked exponent of about -1.982 with all blocked rows toward the source. The note's caveats correctly prevent overpromotion: it imports the external 1/r source surface and does not claim both-masses closure, self-consistent two-body gravity, irregular transfer, or replacement of the force-based canonical card. Residual risk is the calibrated readout and finite-window choice, not a mismatch between note and runner.
 - **auditor confidence:** high
 
 ### `strong_cp_theta_zero_note`
