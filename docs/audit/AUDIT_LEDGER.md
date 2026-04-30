@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T00:43:27.389340+00:00
+**Generated:** 2026-04-30T00:46:24.775128+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,20 +22,20 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 78 |
 | _proposed_retained_ | 12 |
 | bounded | 215 |
-| support | 115 |
+| support | 114 |
 | open | 25 |
 | unknown | 565 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 425 |
+| ~~audited_conditional~~ | 426 |
 | ~~audited_failed~~ | 89 |
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 14 |
+| `audit_in_progress` | 13 |
 | `audited_clean` | 78 |
-| `audited_conditional` | 132 |
+| `audited_conditional` | 133 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 7 |
@@ -97,7 +97,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | unknown | audit_in_progress | unknown | - | - | - | - |
-| `gauge_vacuum_plaquette_framework_point_underdetermination_note` | support | audit_in_progress | support | - | - | - | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | unknown | audit_in_progress | unknown | - | - | - | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open | audit_in_progress | open | - | - | - | - |
 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | unknown | audit_in_progress | unknown | - | - | - | - |
@@ -223,6 +222,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `gauge_vacuum_plaquette_framework_point_underdetermination_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `graph_first_selector_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -1723,6 +1723,20 @@ Claim boundary until fixed: safe to claim the constant-lift obstruction Gamma_ca
   - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`
   - `GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md`
   - `GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_framework_point_underdetermination_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** There exist distinct real-analytic strictly increasing witness laws on [0,6] that share the exact closed onset jet through order beta^5 but produce different framework-point values, hence different candidate plaquettes after composition with P_1plaq.  _(class `A`)_
+- **chain closes:** False — The algebraic obstruction closes as a support theorem, but the source row is current_status=support, so it cannot be ratified as audited_clean by the audit lane.
+- **rationale:** Issue: the note's witness-law obstruction is framed on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: a clean audit here would promote a support row beyond its declared tier even though the note explicitly leaves analytic P(6) open. Repair target: if this exact obstruction is intended to be tier-ratified, update the source note boundary to proposed_retained/proposed_promoted and re-run a fresh audit. Claim boundary until fixed: the witness construction may be used as support-level evidence that the current finite jet does not force P(6), but it is not an audit-clean retained claim.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_mixed_cumulant_audit_note`

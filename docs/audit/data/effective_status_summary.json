@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-30T00:43:27.162213+00:00",
+  "computed_at": "2026-04-30T00:46:24.568202+00:00",
   "cycle_examples": [
     [
       "ckm_neutron_edm_bound_note",
@@ -26,7 +26,7 @@
   ],
   "cycles_detected": 139,
   "effective_status_counts": {
-    "audited_conditional": 425,
+    "audited_conditional": 426,
     "audited_decoration": 3,
     "audited_failed": 89,
     "audited_numerical_match": 19,
@@ -35,7 +35,7 @@
     "open": 25,
     "proposed_retained": 12,
     "retained": 78,
-    "support": 115,
+    "support": 114,
     "unknown": 565
   },
   "proposed_demoted_by_upstream_count": 161,

@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-30T00:43:27.146603+00:00",
-  "generated_at": "2026-04-30T00:43:25.341855+00:00",
-  "invalidation_run_at": "2026-04-30T00:43:27.089375+00:00",
+  "effective_status_computed_at": "2026-04-30T00:46:24.553250+00:00",
+  "generated_at": "2026-04-30T00:46:22.699854+00:00",
+  "invalidation_run_at": "2026-04-30T00:46:24.495361+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-30T00:43:26.968595+00:00",
+  "load_bearing_computed_at": "2026-04-30T00:46:24.372954+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -31962,14 +31962,21 @@
       "verdict_rationale": null
     },
     "gauge_vacuum_plaquette_framework_point_underdetermination_note": {
-      "audit_date": null,
-      "audit_status": "audit_in_progress",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
-      "blocker": "awaiting_cross_confirmation",
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "audit_date": "2026-04-30T00:46:15.044872+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.709,
+        "transitive_descendants": 295
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-gpt-5",
+      "blocker": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The algebraic obstruction closes as a support theorem, but the source row is current_status=support, so it cannot be ratified as audited_clean by the audit lane.",
       "claim_id": "gauge_vacuum_plaquette_framework_point_underdetermination_note",
       "criticality": "critical",
       "cross_confirmation": {
@@ -31981,38 +31988,47 @@
           "load_bearing_step_class": "A",
           "verdict": "audited_clean"
         },
-        "second_audit": null,
-        "status": "awaiting_second"
+        "second_audit": {
+          "audit_date": "2026-04-30T00:45:23.854482+00:00",
+          "auditor": "codex-audit-loop-fresh-context-d97a-20260430",
+          "auditor_family": "codex-gpt-5",
+          "independence": "fresh_context",
+          "load_bearing_step_class": "A",
+          "verdict": "audited_clean"
+        },
+        "status": "confirmed"
       },
       "current_status": "support",
       "current_status_raw": "exact obstruction theorem on the current plaquette support stack;",
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "support",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "support",
+      "independence": "fresh_context",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.709,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "There exist distinct real-analytic strictly increasing witness laws on [0,6] that share the exact closed onset jet through order beta^5 but produce different framework-point values, hence different candidate plaquettes after composition with P_1plaq.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "0de2a57a7d97161c246f45ca4756a85c75071e6af81036cc600db8aa2a30d05c",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md"
+      ],
       "previous_audits": [],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 7,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py",
       "title": "Gauge-Vacuum Plaquette Framework-Point Underdetermination",
       "transitive_descendants": 295,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note's witness-law obstruction is framed on a source row with current_status=support, while audit-clean ratification is legal only for proposed_retained/proposed_promoted rows. Why this blocks: a clean audit here would promote a support row beyond its declared tier even though the note explicitly leaves analytic P(6) open. Repair target: if this exact obstruction is intended to be tier-ratified, update the source note boundary to proposed_retained/proposed_promoted and re-run a fresh audit. Claim boundary until fixed: the witness construction may be used as support-level evidence that the current finite jet does not force P(6), but it is not an audit-clean retained claim."
     },
     "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note": {
       "audit_date": null,
