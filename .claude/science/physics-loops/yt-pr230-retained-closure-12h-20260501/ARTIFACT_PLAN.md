@@ -11,6 +11,9 @@ Completed in the current block:
 - `scripts/frontier_yt_vacuum_stability_stationarity_no_go.py`
 - `outputs/yt_vacuum_stability_stationarity_no_go_2026-05-01.json`
 - `docs/YT_VACUUM_STABILITY_STATIONARITY_NO_GO_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_pr230_physics_loop_assumption_audit.py`
+- `outputs/yt_pr230_physics_loop_assumption_audit_2026-05-01.json`
+- `docs/YT_PR230_PHYSICS_LOOP_ASSUMPTION_AUDIT_NOTE_2026-05-01.md`
 - updates to the direct-correlator theorem note and double-criticality selector
   note
 

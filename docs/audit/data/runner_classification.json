@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T01:36:57.542928+00:00",
+  "generated_at": "2026-05-01T01:49:29.482894+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14737,6 +14737,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_planck_double_criticality_selector.py"
     },
+    "yt_pr230_physics_loop_assumption_audit_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_physics_loop_assumption_audit.py"
+    },
     "yt_qfp_insensitivity_support_note": {
       "assert_count": 0,
       "counts": {
@@ -28804,6 +28816,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_physics_loop_assumption_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_physics_loop_assumption_audit_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_qfp_insensitivity.py": {
       "assert_count": 0,
       "claims": [
@@ -32528,13 +32555,13 @@
     "decoration_candidates": 84,
     "dominant_class_distribution": {
       "A": 7,
-      "B": 121,
+      "B": 122,
       "C": 445,
       "D": 186,
       "none": 404
     },
-    "runners_classified": 1163,
+    "runners_classified": 1164,
     "runners_with_C": 537,
-    "runners_with_D": 287
+    "runners_with_D": 288
   }
 }

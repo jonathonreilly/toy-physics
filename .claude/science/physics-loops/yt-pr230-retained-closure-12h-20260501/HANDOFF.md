@@ -20,6 +20,10 @@ selector.  `lambda(M_Pl)=0` plus local stability below the boundary gives
 `beta_lambda(M_Pl)<=0`, leaving a continuum of allowed `y_t`; stationarity is
 an added double-zero/multiple-point premise.
 
+After a process challenge, a formal assumption/route audit was added.  It
+checks the loop pack, assumption ledger, route fan-out, assumption sensitivity,
+artifact coverage, and the documented process gaps.
+
 Verification:
 
 ```bash
@@ -31,6 +35,9 @@ python3 scripts/frontier_yt_trace_anomaly_stationarity_no_go.py
 
 python3 scripts/frontier_yt_vacuum_stability_stationarity_no_go.py
 # SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_physics_loop_assumption_audit.py
+# SUMMARY: PASS=34 FAIL=0
 ```
 
 Next exact action: keep PR #230 honest as open/conditional.  Full retained
