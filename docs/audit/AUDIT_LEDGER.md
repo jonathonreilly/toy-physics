@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:09:09.172311+00:00
+**Generated:** 2026-05-01T23:11:50.846962+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 65 |
+| **retained_no_go** | 66 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 6 |
+| _proposed_no_go_ | 5 |
 | bounded | 163 |
 | support | 134 |
 | open | 6 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 314 |
+| `audited_clean` | 315 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 499 |
+| `unaudited` | 498 |
 
 | criticality | count |
 |---|---:|
@@ -362,6 +362,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_bimodule_norm_naturality_theorem_note_2026-04-19` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
+| `quark_c3_circulant_source_law_boundary_note_2026-04-28` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `quark_c3_oriented_ward_splitter_support_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_five_sixths_scale_selection_boundary_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
@@ -12874,6 +12875,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** There is no typed existing edge from the A1 support scalar to the physical quark Ward source ratio, so adding that edge would be new theorem content rather than latent support.  _(class `B`)_
 - **chain closes:** True — The runner verifies the authority surfaces, exact A1 algebra, support-face inventory, typed-edge graph, import firewall, and boundary classification with PASS=50 FAIL=0. Those checks support the source's no-go conclusion that current A1 support cannot be promoted into quark C3 Ward closure without a new typed bridge.
 - **rationale:** The no-go closes on the current-bank inventory: exact A1 scalar matches exist, but the typed path to the quark C3 source ratio is absent, and the runner verifies that adding that edge is precisely the missing theorem content. The note avoids forbidden imports from observed quark masses, fitted Yukawas, CKM mass input, or species-universal charged-lepton A1. Residual risk is inventory drift: if a later note supplies the typed bridge, this no-go should be re-audited.
+- **auditor confidence:** high
+
+### `quark_c3_circulant_source_law_boundary_note_2026-04-28`
+
+- **Note:** [`QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md`](../../docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-019de5cf`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The exact C3 Hermitian circulant family can realize an arbitrary real generation spectrum unless an additional selection theorem fixes its parameters; even granting A1 and P1, A1 only gives Q=2/3 for an amplitude triple and leaves scale, phase, species assignment, and quark Yukawa readout open.  _(class `A`)_
+- **chain closes:** True — The no-go boundary follows from exact linear-algebraic degree-of-freedom facts about Hermitian C3 circulants plus the algebraic consequence of A1. Since the claim is negative, it is enough that even under the granted stronger premises A1/P1 the required quark-sector source data remain unspecified.
+- **rationale:** The runner directly checks the load-bearing algebra: C3 order/unitarity, Hermitian circulant structure, eigenvalue formula, inverse Fourier realization of arbitrary real triples, A1 implying Q=2/3, and the remaining live phase/scale/species/readout degrees of freedom. The claim makes no retained quark-mass prediction and explicitly firewalls observed masses, CKM, fitted Yukawas, and charged-lepton import. The negative boundary therefore closes on its own terms.
 - **auditor confidence:** high
 
 ### `quark_c3_oriented_ward_splitter_support_note_2026-04-28`
