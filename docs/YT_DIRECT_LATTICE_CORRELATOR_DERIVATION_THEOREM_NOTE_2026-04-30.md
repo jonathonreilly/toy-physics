@@ -242,6 +242,56 @@ When pointed at the pilot certificate, strict mode rejects it as expected: it is
 `phase = pilot`, has only the `12^3 x 24` volume, has pilot statistics, has no
 independent `g_s`, and does not match physical comparators.
 
+This branch now also records a lightweight first-pass compute run, separate
+from the earlier three-configuration pilot.  It uses the same `12^3 x 24`
+volume but increases the statistics enough to exercise the correlator/fit path
+for a real overnight-scale pilot:
+
+```bash
+PYTHONUNBUFFERED=1 python3 scripts/yt_direct_lattice_correlator_production.py \
+  --pilot-targets \
+  --volumes 12x24 \
+  --masses 0.45,0.75,1.05 \
+  --therm 200 \
+  --measurements 100 \
+  --separation 10 \
+  --overrelax 2 \
+  --engine numba \
+  --resume \
+  --production-output-dir outputs/yt_direct_lattice_correlator_pilot_plus \
+  --output outputs/yt_direct_lattice_correlator_pilot_plus_certificate_2026-05-01.json
+```
+
+| Field | Pilot-plus value |
+|---|---:|
+| Certificate phase | `pilot` |
+| Volume | `12^3 x 24` |
+| Thermalization | 200 sweeps |
+| Saved configurations | 100 |
+| Separation | 10 sweeps |
+| Overrelaxation | 2 sweeps per heat-bath |
+| Bare-mass scan | `0.45`, `0.75`, `1.05` |
+| Selected bare mass | `0.75` |
+| Plateau window | `tau = 1..12` |
+| `chi^2/dof` | `0.318403` |
+| `m_lat` | `1.950165 +/- 0.000650` |
+| `m_t` proxy | `4.132970 GeV` |
+| `y_t(v)` proxy | `0.02373857` |
+| Total `m_t` proxy uncertainty | `1.204958 GeV` |
+| Total `y_t` proxy uncertainty | `0.00692093` |
+| Ratio evidence | `g_s_source = not_measured_pilot` |
+
+The pilot-plus artifacts are
+`outputs/yt_direct_lattice_correlator_pilot_plus_certificate_2026-05-01.json`
+and
+`outputs/yt_direct_lattice_correlator_pilot_plus/L12xT24/ensemble_measurement.json`.
+Strict mode rejects the pilot-plus certificate as expected: it is not
+`phase = production`, includes only the `12^3 x 24` volume, uses 200/100/10
+rather than 1000/1000/20 statistics, has no independent `g_s`, and does not
+match the physical top/Yukawa comparators.  Its value is as first-pass compute
+evidence that the gauge-update, staggered-Dirac, CG, correlator, mass-scan,
+and fit path can run at `12^3 x 24` with 100 saved configurations.
+
 ## Production-Scale Engineering Status
 
 The requested production campaign was benchmarked on the actual `12^3 x 24`

@@ -18509,7 +18509,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T02:23:07.547050+00:00",
+  "generated_at": "2026-05-01T04:38:19.401036+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39443,7 +39443,7 @@
         "yt_rge_only_selector_no_go_note_2026-05-01",
         "yt_pr230_queue_exhaustion_certificate_note_2026-05-01"
       ],
-      "note_hash": "237c930056de917712127f1f56c76023809c359e912539a2d88c8b0573c7ab86",
+      "note_hash": "0340d8631ce9ea89e0658ed25f9f75c99900b874fe433df5cca934fde745e0cf",
       "path": "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_direct_lattice_correlator.py",
       "title": "Direct Lattice-Correlator Top-Yukawa Measurement Gate"
