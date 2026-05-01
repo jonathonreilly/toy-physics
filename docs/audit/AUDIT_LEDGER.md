@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:11:50.846962+00:00
+**Generated:** 2026-05-01T23:14:06.284123+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 66 |
+| **retained_no_go** | 67 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 5 |
+| _proposed_no_go_ | 4 |
 | bounded | 163 |
 | support | 134 |
 | open | 6 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 315 |
+| `audited_clean` | 316 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 498 |
+| `unaudited` | 497 |
 
 | criticality | count |
 |---|---:|
@@ -367,6 +367,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_five_sixths_scale_selection_boundary_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_lane3_stuck_fanout_synthesis_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
@@ -12993,6 +12994,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Any S3-equivariant Hermitian Ward endomorphism on the hw=1 generation triplet lies in the two-dimensional commutant aI+bJ and therefore has at most a singlet eigenvalue plus a doubly-degenerate E eigenvalue.  _(class `C`)_
 - **chain closes:** True — The source states a finite representation-theoretic no-go and the runner verifies the S3 permutation representation, A1+E decomposition, commutant dimension, eigenvalue degeneracy, and the need for extra symmetry breaking. It does not claim retained quark Yukawa values.
 - **rationale:** The load-bearing no-go is a finite-dimensional Schur-commutant calculation, and the live runner returns TOTAL: PASS=44, FAIL=0 while checking the relevant authority surfaces and the reflection-breaking boundary. The conclusion is limited correctly: S3 equivariance alone cannot produce three generation-stratified Ward eigenvalues, so a future positive route must add a source/readout/symmetry-breaking primitive. Residual risk is only the usual support-tier boundary: this clean audit ratifies the negative representation-theory boundary, not any non-top quark mass prediction.
+- **auditor confidence:** high
+
+### `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28`
+
+- **Note:** [`QUARK_GENERATION_STRATIFIED_WARD_FREE_MATRIX_NO_GO_NOTE_2026-04-28.md`](../../docs/QUARK_GENERATION_STRATIFIED_WARD_FREE_MATRIX_NO_GO_NOTE_2026-04-28.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-019de5d1`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For arbitrary positive diagonal Yukawa singular-value matrices D_u and D_d and fixed CKM unitary V, the construction Y_u = D_u and Y_d = V D_d gives U_u^dag U_d = V while leaving the singular values equal to the freely chosen diagonal entries, so CKM mixing does not determine quark Yukawa eigenvalues.  _(class `A`)_
+- **chain closes:** True — The negative boundary closes as an exact linear-algebra obstruction: the allowed one-Higgs gauge skeleton admits arbitrary 3x3 Yukawa matrices, the top Ward normalization supplies no generation projector, and a fixed CKM matrix is compatible with independently varied Yukawa singular values. Therefore the listed support surface leaves the target non-top ratios unconstrained.
+- **rationale:** The proof is a clean no-go: it does not attempt to derive numerical masses, does not reuse the top Ward identity as a hidden species-uniform physical identification, and the runner checks the load-bearing CKM/singular-value witness plus the gauge-selection freedom and scope firewall.
 - **auditor confidence:** high
 
 ### `quark_issr1_bicac_forcing_theorem_note_2026-04-19`
