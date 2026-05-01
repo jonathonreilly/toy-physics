@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T16:36:35.023253+00:00
+**Generated:** 2026-05-01T16:39:27.580064+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 295 |
+| `audited_clean` | 296 |
 | `audited_conditional` | 593 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 566 |
+| `unaudited` | 565 |
 
 | criticality | count |
 |---|---:|
@@ -295,6 +295,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_weak_field_purity_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `legacy_exploratory_drivers_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `lensing_adjoint_kernel_reduced_model_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `lensing_beta_sweep_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `light_cone_framing_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `literature_backmatch_live_scan_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `main_open_cubic_validation_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -9996,6 +9997,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **chain closes:** True — The source makes only a bounded negative claim about the first reduced surrogate. The live H=0.35 runner reproduces the archived exact-edge/full-harness spot-check and the layer_signed/layer_abs failures against the exact edge series, with no cited dependencies needed.
 - **rationale:** The retained content is a bounded negative inside the stated harness, not a derivation of the reference lensing slope or a continuum physics claim. The live runner with --h 0.35 reproduces true_kubo=+5.972756 and exact_edge=+5.972756 at b=3 with |Delta|=4.228e-13, then shows the signed and absolute one-term-per-layer reductions miss the b=3..6 exact-edge series by about 98-100%. Because the note explicitly keeps the exact edge factorization as the reference object and rejects only the first reduced surrogate, the claim closes on its own terms.
 - **auditor confidence:** high
+
+### `lensing_beta_sweep_note`
+
+- **Note:** [`LENSING_BETA_SWEEP_NOTE.md`](../../docs/LENSING_BETA_SWEEP_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The beta=5 near-1/b result is an isolated coarse-grid spike because nearby beta=7 and beta=10 leave it and the H=0.35 refinement flips sign and lands at slope -0.7930.  _(class `C`)_
+- **chain closes:** True — For the bounded Fam1 b={3,4,5,6} numerical claim, the registered runner recomputes the coarse beta sweep and the beta=5 refinement check from the stated propagation/Kubo machinery. The result closes only as a fixed-family negative on the beta=5 rescue, not as a framework-level theorem about every narrow-beam or ray-optics limit.
+- **rationale:** The bounded negative claim closes because the current runner reproduces the decisive numbers: beta=5 at H=0.5 gives slope -1.0114 with ++++ signs, but beta=7 and beta=10 change to ---- and leave the near-1/b shape, while the H=0.35 beta=5 refinement gives kubo=[-0.034338, -0.02764, -0.023081, -0.01981], slope -0.7930, and signs=----. The clean verdict is scoped to that registered Fam1 sweep and refinement check. Residual limitations remain non-load-bearing for this bounded audit: the runner prints tables rather than classified PASS lines, source artifact links and old boundary text still mention missing registration, and the note does not establish a geometry-generic negative theorem or derive the adjoint-kernel interpretation as a one-hop dependency.
+- **auditor confidence:** medium
 
 ### `lensing_deflection_note`
 
