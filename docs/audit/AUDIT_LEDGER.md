@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:24:37.378139+00:00
+**Generated:** 2026-05-01T07:25:47.453585+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 189 |
+| bounded | 188 |
 | support | 163 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 858 |
+| ~~audited_conditional~~ | 859 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 277 |
-| `audited_conditional` | 588 |
+| `audited_conditional` | 589 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 570 |
+| `unaudited` | 569 |
 
 | criticality | count |
 |---|---:|
@@ -808,6 +808,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_two_amplitude_last_mile_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `newton_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `newton_law_derived_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `newton_persistent_pattern_control_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `nonlinear_born_gravity_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `observable_principle_from_axiom_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `oh_schur_boundary_action_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -11156,6 +11157,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `force_readout_gradient_bridge`
   - `lattice_green_asymptotic_authority`
 - **auditor confidence:** high
+
+### `newton_persistent_pattern_control_note_2026-04-11`
+
+- **Note:** [`NEWTON_PERSISTENT_PATTERN_CONTROL_NOTE_2026-04-11.md`](../../docs/NEWTON_PERSISTENT_PATTERN_CONTROL_NOTE_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The stricter persistent inertial-object probe finds no admissible class that meets the capture, carry, and shift thresholds, so the Newton persistent-pattern mass gap remains open.  _(class `C`)_
+- **chain closes:** False — The note states a bounded negative control result but provides no primary runner, frozen log, sweep grid, thresholds, or numerical output to verify the claimed absence of an admissible persistent inertial-object class. The audit can accept the safe boundary language, but not the negative control as a checked result.
+- **rationale:** Issue: the decisive negative probe is unauditable because the row has no runner_path and the note does not include the control parameters, thresholds, or frozen output. Why this blocks: a hostile reviewer cannot distinguish a genuine no-go sweep from an informal summary, and the absence of admissible classes is exactly the load-bearing result. Repair target: restore or register the persistent-pattern control runner and its frozen log, including the capture/carry/shift threshold definitions and sweep domain. Claim boundary until fixed: safe as a bounded qualitative warning that the Newton persistent-pattern route is not closed, not as a verified negative control theorem.
+- **auditor confidence:** medium
 
 ### `nonlabel_grown_basin_note`
 
