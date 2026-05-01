@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:59:27.928520+00:00
+**Generated:** 2026-05-01T21:00:38.741700+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 169 |
+| bounded | 168 |
 | support | 138 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 940 |
-| ~~audited_failed~~ | 83 |
+| ~~audited_failed~~ | 84 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 300 |
 | `audited_conditional` | 643 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 56 |
+| `audited_failed` | 57 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 521 |
+| `unaudited` | 520 |
 
 | criticality | count |
 |---|---:|
@@ -1079,6 +1079,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
+| `same_family_3d_closure_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
 | `second_grown_family_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `self_gravity_backreaction_closure_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `session_summary_2026-04-01_topology` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -13393,6 +13394,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `ANOMALY_FORCES_TIME_THEOREM.md`
   - `OH_SCHUR_BOUNDARY_ACTION_NOTE.md`
 - **auditor confidence:** high
+
+### `same_family_3d_closure_note`
+
+- **Note:** [`SAME_FAMILY_3D_CLOSURE_NOTE.md`](../../docs/SAME_FAMILY_3D_CLOSURE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims the same-family 3D closure is carried as a real script/log/note chain: the wrapper replays L=8 and L=10, carries the retained L=12 core row, and supports the ten-property bounded valley-linear closure card on one h=0.25 family.  _(class `B`)_
+- **chain closes:** False — The executable evidence is hard-coded documentation rather than a replay or assertion of the closure card, so the bounded claim fails on its current runner surface.
+- **rationale:** Issue: the current runner exits successfully but does not replay the load-bearing closure checks; it prints frozen constants for the core rows, same-h multi-L rows, and distance-tail companion, and never calls the live core-card computation functions present in the script. Why this blocks: the note's claim that the bounded closure is carried by a real replay wrapper is not true of the current executable artifact, so the audit cannot distinguish a valid same-family closure from hard-coded stale log values. Repair target: make the runner actually recompute or read-and-assert the frozen L=8/L=10/L=12 and W=10/W=12 rows, emit classified PASS lines, and fail on drift. Claim boundary until fixed: the script currently documents prior frozen numbers; it does not verify the ten-property same-family closure card.
+- **open / conditional deps cited:**
+  - `scripts/same_family_3d_closure.py`
+  - `logs/2026-04-04-same-family-3d-closure.txt`
 
 ### `scalar_3plus1_temporal_ratio_note`
 
