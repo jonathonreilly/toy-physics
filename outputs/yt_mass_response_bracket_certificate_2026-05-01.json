@@ -1,0 +1,56 @@
+{
+  "actual_current_surface_status": "bounded-support / reduced mass-response bracket",
+  "fail_count": 0,
+  "input_certificate": "outputs/yt_direct_lattice_correlator_mass_bracket_certificate_2026-05-01.json",
+  "mass_response": {
+    "bare_masses": [
+      1.0,
+      2.0,
+      4.0,
+      8.0,
+      16.0
+    ],
+    "central_slope_dE_dm_bare": 0.4084732514847505,
+    "fitted_energies": [
+      2.2388678542977765,
+      3.124669836494176,
+      4.270789850897408,
+      5.575509345402679,
+      6.9392249546945095
+    ],
+    "fitted_errors": [
+      0.0011953133418103922,
+      0.0007221353453026745,
+      0.00023641940940832978,
+      0.0004629539755596867,
+      0.02752805386396158
+    ],
+    "local_slopes_dE_dm_bare": [
+      0.8858019821963996,
+      0.5730600072016161,
+      0.32617987362631773,
+      0.1704644511614788
+    ],
+    "quadratic_derivative_at_selected": 0.494324152734135,
+    "relative_local_slope_spread": 1.463227248811531
+  },
+  "pass_count": 7,
+  "phase": "pilot",
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Reduced-scope data and bare-source response do not authorize retained proposal wording.",
+  "required_next_steps": [
+    "repeat as production response measurement on gauge ensembles",
+    "derive or measure scalar source-to-canonical-Higgs normalization",
+    "derive lattice-to-SM matching for the response observable"
+  ],
+  "selected_mass_parameter": 4.0,
+  "strict_non_claims": [
+    "not production data",
+    "not a physical y_t derivation",
+    "does not use H_unit matrix-element readout",
+    "does not use observed top mass or observed y_t",
+    "does not set scalar-source normalization or Z_match to one"
+  ],
+  "verdict": "The existing reduced 12^3 x 24 mass-bracket run already contains a data-backed Feynman-Hellmann-style response dE/dm_bare.  The response is positive and monotone, so the observable is viable.  It is not a physical top Yukawa readout because the run is reduced scope and because dE/dm_bare is a bare-source response; scalar source-to-Higgs normalization and lattice-to-SM matching remain open imports.",
+  "volume": "12^3x24"
+}

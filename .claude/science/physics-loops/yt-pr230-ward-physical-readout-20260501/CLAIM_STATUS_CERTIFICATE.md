@@ -22,6 +22,7 @@ sensitivity plus scalar LSZ normalization cancellation plus Feshbach
 operator-response boundary plus bridge-stack import audit, scalar spectral
 saturation no-go, large-Nc pole-dominance boundary, and production resource
 projection plus Feynman-Hellmann source-response route
+and reduced mass-response bracket certificate
 **PR:** #230 draft branch
 
 ```yaml
@@ -87,6 +88,8 @@ Allowed wording:
 - bounded-support Feynman-Hellmann source-response route; additive rest mass
   can cancel in top-energy slopes, but scalar source-to-Higgs normalization and
   production response data remain open;
+- bounded-support reduced mass-response bracket; existing correlator data show
+  positive `dE/dm_bare`, but this is not production `dE/dh` evidence;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
@@ -245,4 +248,10 @@ python3 scripts/frontier_yt_feynman_hellmann_source_response_route.py
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=24 FAIL=0
+
+python3 scripts/frontier_yt_mass_response_bracket_certificate.py
+# SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=25 FAIL=0
 ```

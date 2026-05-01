@@ -59,6 +59,7 @@ def main() -> int:
         "large_nc": load("outputs/yt_large_nc_pole_dominance_boundary_2026-05-01.json"),
         "production_resource": load("outputs/yt_production_resource_projection_2026-05-01.json"),
         "feynman_hellmann": load("outputs/yt_feynman_hellmann_source_response_route_2026-05-01.json"),
+        "mass_response": load("outputs/yt_mass_response_bracket_certificate_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -143,6 +144,11 @@ def main() -> int:
         "Feynman-Hellmann" in str(statuses["feynman_hellmann"])
         or "source-response" in str(statuses["feynman_hellmann"]),
         statuses["feynman_hellmann"],
+    )
+    report(
+        "mass-response-bracket-is-bare-source-only",
+        "mass-response" in str(statuses["mass_response"]),
+        statuses["mass_response"],
     )
     report(
         "finite-ladder-route-needs-ir-limit",
@@ -237,7 +243,8 @@ def main() -> int:
             "single-worker job, but it is not measurement evidence.  A "
             "Feynman-Hellmann top-energy response can remove additive rest "
             "mass, but still needs scalar source-to-Higgs normalization and "
-            "production response data.  Remaining closure requires production "
+            "production response data; the reduced mass-bracket response is "
+            "bare-source support only.  Remaining closure requires production "
             "evidence or a genuinely new scalar LSZ/heavy-matching theorem."
         ),
         "proposal_allowed": False,

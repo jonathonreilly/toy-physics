@@ -19,6 +19,7 @@
 | Lattice-HQET-to-SM top mass matching | HQET direct route | not derived on current surface | open import |
 | Nonzero-momentum production ensembles | kinetic route evidence | scout and reduced cold pilots only | unavailable for closure |
 | Feynman-Hellmann scalar-source response data | alternate observable route | synthetic support only | unavailable for closure |
+| Reduced mass-bracket `dE/dm_bare` response | lightweight response scout | bounded support | bare-source data; forbidden as physical `y_t` evidence |
 | Reduced cold-gauge momentum pilots | implementation support | bounded support | forbidden as strict evidence |
 | Scalar-channel contact coupling `G` | HS/RPA pole condition | not in `A_min` | forbidden unless derived from Wilson gauge ladder |
 | Scalar-channel Bethe-Salpeter kernel | interacting pole route | not yet retained | open import after ladder scout |

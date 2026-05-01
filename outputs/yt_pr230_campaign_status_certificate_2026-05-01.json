@@ -20,6 +20,7 @@
     "large_nc": "exact negative boundary / large-Nc pole dominance not PR230 closure",
     "legendre": "exact negative boundary / Legendre normalization freedom",
     "lsz_norm": "conditional-support / scalar LSZ normalization cancellation",
+    "mass_response": "bounded-support / reduced mass-response bracket",
     "momentum_harness": "bounded-support / momentum harness extension",
     "momentum_pilot": "bounded-support / momentum pilot scaling",
     "nonzero_momentum": "bounded-support / nonzero-momentum correlator scout",
@@ -31,7 +32,7 @@
     "static_mass": "exact negative boundary / static mass matching obstruction"
   },
   "fail_count": 0,
-  "pass_count": 24,
+  "pass_count": 25,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [
@@ -54,5 +55,5 @@
     "does not use observed top mass or y_t as proof input",
     "does not allow H_unit matrix-element definition as y_t readout"
   ],
-  "verdict": "The current PR #230 physics-loop campaign did not reach retained top-Yukawa closure.  It did retire the visible shortcut routes: Ward/H_unit, R_conn-only LSZ, Legendre normalization, free logdet bubble, contact HS/RPA, simplified ladder projector, same-1PI, finite ladder IR/zero-mode shortcut, and static/HQET without matching.  It also isolates a constructive heavy kinetic-mass route, a tiny nonzero-momentum correlator scout, and production harness momentum fields.  A bounded two-volume pilot has large finite-volume drift, so that route still needs production data and a derived matching theorem.  The free staggered action fixes its kinetic coefficient, but interacting renormalization remains open and is gauge-background sensitive.  A covariant scalar LSZ normalization model shows source scaling can cancel only if the interacting denominator and residue are derived together.  Exact Feshbach response preservation removes crossover distortion as the blocker but does not equate scalar and gauge residues.  The axiom-first bridge stack is bounded transport support with endpoint imports, not a missed PR #230 proof.  Spectral positivity and low-order curvature moments do not fix the isolated pole residue without saturation/continuum control; large-Nc pole dominance is not a finite-Nc proof at N_c=3.  The production resource projection makes the strict direct route concrete as a multi-day single-worker job, but it is not measurement evidence.  A Feynman-Hellmann top-energy response can remove additive rest mass, but still needs scalar source-to-Higgs normalization and production response data.  Remaining closure requires production evidence or a genuinely new scalar LSZ/heavy-matching theorem."
+  "verdict": "The current PR #230 physics-loop campaign did not reach retained top-Yukawa closure.  It did retire the visible shortcut routes: Ward/H_unit, R_conn-only LSZ, Legendre normalization, free logdet bubble, contact HS/RPA, simplified ladder projector, same-1PI, finite ladder IR/zero-mode shortcut, and static/HQET without matching.  It also isolates a constructive heavy kinetic-mass route, a tiny nonzero-momentum correlator scout, and production harness momentum fields.  A bounded two-volume pilot has large finite-volume drift, so that route still needs production data and a derived matching theorem.  The free staggered action fixes its kinetic coefficient, but interacting renormalization remains open and is gauge-background sensitive.  A covariant scalar LSZ normalization model shows source scaling can cancel only if the interacting denominator and residue are derived together.  Exact Feshbach response preservation removes crossover distortion as the blocker but does not equate scalar and gauge residues.  The axiom-first bridge stack is bounded transport support with endpoint imports, not a missed PR #230 proof.  Spectral positivity and low-order curvature moments do not fix the isolated pole residue without saturation/continuum control; large-Nc pole dominance is not a finite-Nc proof at N_c=3.  The production resource projection makes the strict direct route concrete as a multi-day single-worker job, but it is not measurement evidence.  A Feynman-Hellmann top-energy response can remove additive rest mass, but still needs scalar source-to-Higgs normalization and production response data; the reduced mass-bracket response is bare-source support only.  Remaining closure requires production evidence or a genuinely new scalar LSZ/heavy-matching theorem."
 }

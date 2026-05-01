@@ -124,6 +124,9 @@ Completed in block 1:
 - `scripts/frontier_yt_feynman_hellmann_source_response_route.py`
 - `outputs/yt_feynman_hellmann_source_response_route_2026-05-01.json`
 - `docs/YT_FEYNMAN_HELLMANN_SOURCE_RESPONSE_ROUTE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_mass_response_bracket_certificate.py`
+- `outputs/yt_mass_response_bracket_certificate_2026-05-01.json`
+- `docs/YT_MASS_RESPONSE_BRACKET_CERTIFICATE_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -138,7 +141,9 @@ Next artifact:
   continuum bound; the direct production route now has a concrete multi-day
   single-worker resource estimate but no production evidence certificate;
   Feynman-Hellmann scalar response cancels additive rest mass but still needs
-  scalar-source normalization and production response data
+  scalar-source normalization and production response data; the existing
+  reduced mass bracket yields a positive bare-source response but no physical
+  `dE/dh` readout
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

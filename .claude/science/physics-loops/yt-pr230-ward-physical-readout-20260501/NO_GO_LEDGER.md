@@ -404,6 +404,18 @@ the lattice source `s`; converting to the physical `dE/dh` Yukawa readout
 requires a scalar source-to-Higgs normalization theorem or direct scalar LSZ
 residue measurement.
 
+Reduced mass-bracket response is bare-source evidence only:
+
+```text
+python3 scripts/frontier_yt_mass_response_bracket_certificate.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+The existing reduced `12^3 x 24` mass scan gives positive local slopes
+`dE/dm_bare`, but this does not fix the physical scalar-source normalization or
+the lattice-to-SM matching.  It is a lightweight scout for a future production
+response route, not retained closure.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

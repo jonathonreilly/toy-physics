@@ -144,6 +144,11 @@ What changed:
   is with respect to a chosen lattice source; converting it to `dE/dh` requires
   scalar source-to-Higgs normalization, scalar LSZ residue, and production
   response data.
+- The mass-response bracket certificate extracts the same idea from existing
+  reduced `12^3 x 24` correlator data: fitted energies are monotone in
+  `m_bare` and give positive local `dE/dm_bare` slopes.  This is useful
+  lightweight evidence for the observable design, but it is reduced-scope and
+  bare-source only.
 
 The scientific result is narrower than closure:
 
