@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:35:52.034359+00:00
+**Generated:** 2026-05-01T07:37:20.425337+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 280 |
+| `audited_clean` | 281 |
 | `audited_conditional` | 589 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 566 |
+| `unaudited` | 565 |
 
 | criticality | count |
 |---|---:|
@@ -324,6 +324,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `nonlabel_grown_drift_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `ollivier_einstein_proxy_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `ordered_lattice_packet_reidentification_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `ordered_lattice_quasi_persistent_relaunch_2d_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `packet_memory_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `persistent_inertial_object_probe_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -11350,6 +11351,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The retained ordered-lattice family keeps the propagated packet re-identifiable, with best-shift score 1.000 and width ratios near 1 for valley-linear and spent-delay controls.  _(class `C`)_
 - **chain closes:** True — The current runner reproduces the frozen h=0.5, W=8, L=12 control: valley-linear has mean best-score 1.000 and width ratio 1.000, while spent-delay has mean best-score 1.000 and width ratio 0.997 to 0.994 across strengths. The note correctly limits the result to packet re-identification, not persistent inertial mass.
 - **rationale:** The load-bearing bounded control is current with the registered runner and the output supports the stated high similarity and near-fixed width ratios. The note does not overclaim centroid motion or a persistent-pattern inertial-response theorem; it uses the control only to show that a future probe can re-identify the packet. Residual risk is limited to future variants changing the packet shape or similarity score, which the note explicitly treats as a stop condition.
+- **auditor confidence:** high
+
+### `ordered_lattice_quasi_persistent_relaunch_2d_note`
+
+- **Note:** [`ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md`](../../docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The 2D ordered-lattice relaunch surrogate keeps capture at 0.344, carry overlap at 0.911, width near 1, and produces the stated field-induced and relaunch shifts without claiming persistent inertial mass.  _(class `C`)_
+- **chain closes:** True — The registered runner reproduces the frozen 2D values for valley-linear and spent-delay actions across all three weak field strengths. The source note explicitly scopes the result to a cross-family sanity check for relaunch-packet recognizability, not a persistent-particle theorem.
+- **rationale:** The load-bearing bounded diagnostic is current with the runner: the packet surrogate does not collapse on the 2D retained ordered family and the frozen capture/carry/shift/width numbers are reproduced. The note is careful that this only supports family-generic relaunch at the surrogate level and leaves the inertial-response claim open. Residual risk is that the surrogate remains weak, especially with capture only 0.344, but that limitation is part of the safe claim.
 - **auditor confidence:** high
 
 ### `packet_memory_note`
