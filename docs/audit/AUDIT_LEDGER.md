@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:40:17.001480+00:00
+**Generated:** 2026-05-01T03:41:59.861583+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 242 |
+| bounded | 241 |
 | support | 201 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 795 |
+| ~~audited_conditional~~ | 796 |
 | ~~audited_failed~~ | 154 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 231 |
-| `audited_conditional` | 525 |
+| `audited_conditional` | 526 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 706 |
+| `unaudited` | 705 |
 
 | criticality | count |
 |---|---:|
@@ -771,6 +771,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_endpoint_denominator_admissibility_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | B | `quark_projector_ray_phase_completion_note_2026-04-18` |
 | `quark_route2_exact_readout_map_note_2026-04-19` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `quark_up_amplitude_provenance_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `rconn_derived_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -11130,6 +11131,24 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `scripts/frontier_quark_endpoint_readout_constraints.py`
   - `missing theorem deriving (beta_T/alpha_T, alpha_T/alpha_E, beta_E/alpha_E)=(-1,-2,21/4)`
 - **auditor confidence:** 0.91
+
+### `quark_up_amplitude_provenance_audit_note_2026-04-19`
+
+- **Note:** [`QUARK_UP_AMPLITUDE_PROVENANCE_AUDIT_NOTE_2026-04-19.md`](../../docs/QUARK_UP_AMPLITUDE_PROVENANCE_AUDIT_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-quark_up_amplitude_provenance_audit_note_2026-04-19`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the existing atlas/support/tensor note stack, the five leading reduced up-amplitude candidates split into projector-native, support-native, scalar-comparison-native, and external empirical provenance classes.  _(class `B`)_
+- **chain closes:** False — The runner verifies the stated formula identities and checks snippets in the referenced atlas/support/tensor/candidate notes. The row does not register those upstream notes as dependencies, so the provenance classification is conditional on imported note-stack content rather than closed from this row alone.
+- **rationale:** Issue: the provenance split relies on cross-note atoms and candidate classifications from the CKM atlas, tensor support, S3 time tensor, candidate-scan, and native-expression notes, but none are registered dependencies for this row. Why this blocks: the audit can confirm that the runner reads and classifies the current note stack, but it cannot make the provenance result standalone or retained. Repair target: register and ratify the exact atlas/support/tensor and quark candidate/native notes as explicit dependencies, or restate this as a purely local inventory with all required excerpts embedded. Claim boundary until fixed: on the current note stack, the runner verifies the bounded provenance classification and keeps the up-amplitude law non-derived.
+- **open / conditional deps cited:**
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md`
+  - `S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md`
+  - `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`
+  - `QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md`
+- **auditor confidence:** high
 
 ### `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19`
 
