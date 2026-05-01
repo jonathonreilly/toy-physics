@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 287,
-    "medium": 213
+    "medium": 212
   },
-  "generated_at": "2026-05-01T03:45:43.923005+00:00",
+  "generated_at": "2026-05-01T03:47:48.118720+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6446,23 +6446,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_yt_bottom_yukawa_retention.py",
       "transitive_descendants": 7
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "hierarchy_spatial_bc_and_u0_scaling_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 3,
-      "load_bearing_score": 6.67,
-      "note_path": "docs/HIERARCHY_SPATIAL_BC_AND_U0_SCALING_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_hierarchy_spatial_bc_and_u0_scaling.py",
-      "transitive_descendants": 35
     },
     {
       "audit_independence_required": "any_non_self",
@@ -16620,6 +16603,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 308,
-  "total_pending": 703
+  "ready_count": 307,
+  "total_pending": 702
 }

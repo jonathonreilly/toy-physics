@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:45:44.162125+00:00
+**Generated:** 2026-05-01T03:47:48.351608+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 231 |
+| `audited_clean` | 232 |
 | `audited_conditional` | 528 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 703 |
+| `unaudited` | 702 |
 
 | criticality | count |
 |---|---:|
@@ -236,6 +236,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `hadron_lane1_confinement_to_mass_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `hard_geometry_local_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
+| `hierarchy_spatial_bc_and_u0_scaling_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
@@ -7430,6 +7431,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **open / conditional deps cited:**
   - `open theorem: physical EWSB order-parameter temporal averaging/normalization`
 - **auditor confidence:** 0.88
+
+### `hierarchy_spatial_bc_and_u0_scaling_note`
+
+- **Note:** [`HIERARCHY_SPATIAL_BC_AND_U0_SCALING_NOTE.md`](../../docs/HIERARCHY_SPATIAL_BC_AND_U0_SCALING_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-hierarchy_spatial_bc_and_u0_scaling_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** With temporal APBC fixed, spatial APBC and PBC have the same u0 exponent, but only spatial APBC gives a finite intensive 3+1 small-m coefficient, and the free-energy density depends on u0 only through m/u0.  _(class `C`)_
+- **chain closes:** True — The runner constructs the minimal-block Dirac matrices, verifies the exact determinant formulas against direct determinants, checks the u0 power and homogeneity, and proves the APBC finite-limit/PBC divergent-limit distinction. The note stays bounded and explicitly leaves the physical order-parameter selection to a later theorem.
+- **rationale:** The bounded claim closes on its stated domain: temporal APBC is assumed, and the runner independently verifies the determinant identities, the u0^(8Lt) exponent independence, the exact m/u0 homogeneity, the finite APBC intensive limit, and the divergent PBC coefficient. Residual risk is limited to the note's explicit boundary: this does not yet derive why the physical electroweak order parameter must use this intensive normalization. As a bounded support theorem for the minimal hierarchy block, the result is audit-clean.
+- **auditor confidence:** high
 
 ### `higgs_from_lattice_note`
 
