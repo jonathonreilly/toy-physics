@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:09:04.071170+00:00
+**Generated:** 2026-05-01T07:11:23.600092+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 190 |
+| bounded | 189 |
 | support | 165 |
 | open | 9 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 853 |
+| ~~audited_conditional~~ | 854 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 273 |
-| `audited_conditional` | 583 |
+| `audited_conditional` | 584 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 579 |
+| `unaudited` | 578 |
 
 | criticality | count |
 |---|---:|
@@ -781,6 +781,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `memory_decay_diagnosis_2026-04-11` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `mirror_gravity_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_program_synthesis` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `n_eff_from_three_generations_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `neutrino_axiom3_reading_stuck_fanout_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -10656,6 +10657,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **chain closes:** False — The claim is a finite fitted window on a selected mirror configuration, and the source itself reports a weak non-monotone fit with R^2=0.126. No primary runner or one-hop dependencies are registered in the ledger row.
 - **rationale:** Issue: the retained surface depends on a selected dense-boundary mirror parameter pocket and a weak descriptive fit, with no registered runner/log reproduction in the audit row. Why this blocks: finite fitted rows with poor monotonicity and R^2=0.126 do not establish a retained family theorem or asymptotic law. Repair target: register the mirror runner and canonical log as audit artifacts, recompute the retained rows, and either state this as bounded finite-window evidence or derive a stable pocket-selection/asymptotic criterion. Claim boundary until fixed: safe as a bounded report of the N=40..100 mirror pocket and gravity wall at N=120; not safe as proposed-retained mirror boundary science.
 - **auditor confidence:** high
+
+### `mirror_gravity_probe_note`
+
+- **Note:** [`MIRROR_GRAVITY_PROBE_NOTE.md`](../../docs/MIRROR_GRAVITY_PROBE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The strict mirror pocket is gravity-positive but does not show a cleaner mass window or cleaner distance law than the other hard-geometry lanes.  _(class `C`)_
+- **chain closes:** False — The fixed-anchor runner reproduces the mass-window fits, and the current distance sweep supports the peak/plateau interpretation, but the note's N=60 tail-fit claim depends on a missing tail log or unregistered runner parameters. The comparison to other hard-geometry lanes is also not registered as a one-hop authority here.
+- **rationale:** Issue: the load-bearing mirror-gravity conclusion includes a distance-tail fit and cross-lane ranking that are not fully reproduced by the registered audit context. Why this blocks: the fixed-anchor mass-window checks match, but the cited distance-sweep tail log is absent on disk and the current distance runner does not emit the stated N=60 tail fit. Repair target: restore/register the tail sweep artifact or runner arguments and cite the comparator hard-geometry lane results used for the ranking. Claim boundary until fixed: the mirror pocket has a reproducible positive but weakly structured fixed-anchor response and a peak/plateau distance sweep; the stronger claim that it is definitively not the best gravity-side lane remains conditional on the missing tail/comparator surface.
+- **auditor confidence:** medium
 
 ### `mirror_mutual_information_canonical_families_note`
 
