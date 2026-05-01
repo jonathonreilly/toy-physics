@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:33:30.098622+00:00
+**Generated:** 2026-05-01T20:35:29.756101+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 174 |
+| bounded | 173 |
 | support | 148 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 926 |
+| ~~audited_conditional~~ | 927 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 629 |
+| `audited_conditional` | 630 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 539 |
+| `unaudited` | 538 |
 
 | criticality | count |
 |---|---:|
@@ -865,6 +865,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_object_exact_lattice_park_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `persistent_record_sidebit_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `physical_lattice_necessity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -11689,6 +11690,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The corrected persistent-record refinement stack improves the residual-connection soft lane modestly, with side+packet+entry at N=18 and gamma=1.0 reaching purity 0.7213, but it still does not beat the node-label baseline at 0.7121.  _(class `C`)_
 - **chain closes:** True — Fresh runner executions reproduced both load-bearing checks: the corrected matched N=8,12,18 table for node, side+packet, and side+packet+entry variants, and the targeted N=18 gamma sweep showing gamma=1.0 beats exact trace while gamma=1.5 and 2.0 worsen.
 - **rationale:** Clean within the note's bounded refinement scope. The note does not claim a new raw decoherence winner; it claims the corrected first-hit side/packet/entry marker stack is a modest real improvement in the residual-connection architecture while still trailing node-label on the tested N=18 row. Current runner output reproduces the matched table and the targeted gamma sweep exactly, including node=0.7121 versus side+packet+entry gamma=1.0 at 0.7213 and worse results at gamma=1.5 and 2.0. Residual risk is the declared bounded two-seed matched slice and the lack of asymptotic or broader-geometry closure.
+- **auditor confidence:** high
+
+### `persistent_record_sidebit_note`
+
+- **Note:** [`PERSISTENT_RECORD_SIDEBIT_NOTE.md`](../../docs/PERSISTENT_RECORD_SIDEBIT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** One extra persistent packet-side bit modestly improves the soft-overlap persistent-record lane on the bounded N=8,12,18 slice, but still does not beat node-label on raw purity.  _(class `C`)_
+- **chain closes:** False — The matched-compare runner reproduces the table with seeds=2 and gamma=1.0, including side-bit soft values 0.8644, 0.5698, and 0.7287. The ledger row has no registered primary runner and the output has no classified PASS lines.
+- **rationale:** Issue: the finite side-bit result reproduces, but the row is missing runner registration and emits only a table, not classified PASS checks. Why this blocks: a hostile reviewer can rerun the matched comparison manually, but the audit lane cannot treat an unregistered command and unclassified table as a closed C-class check. Repair target: register `persistent_record_matched_compare.py --seeds 2 --gamma 1.0 --methods node,pr_trace,pr_soft,pr_side_trace,pr_side_soft` or a wrapper as the primary runner, and emit classified C PASS lines for the side-bit soft improvement and failure to beat node-label. Claim boundary until fixed: bounded evidence for a modest side-bit soft-overlap improvement, not a new raw-decoherence winner or persistent-mass theorem.
+- **open / conditional deps cited:**
+  - `scripts/persistent_record_matched_compare.py`
+  - `scripts/persistent_record_overlap_kernel.py`
 - **auditor confidence:** high
 
 ### `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30`
