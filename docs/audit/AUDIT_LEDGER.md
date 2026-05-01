@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:37:49.389216+00:00
+**Generated:** 2026-05-01T11:42:02.160480+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 302 |
+| `audited_clean` | 303 |
 | `audited_conditional` | 589 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 540 |
+| `unaudited` | 539 |
 
 | criticality | count |
 |---|---:|
@@ -355,6 +355,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_twisted_flux_transfer_holonomy_boundary_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `poisson_self_gravity_born_audit_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `poisson_self_gravity_loop_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `poisson_self_gravity_loop_v3_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -12460,6 +12461,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The Poisson-like self-gravity loop is a bounded positive control: exact epsilon=0 reduction holds, frozen terminal fields remain Born-linear to machine precision, nonzero rows preserve weak-field TOWARD sign with near-linear mass scaling, but the strict nonzero fixed-point loop does not converge and remains a small effect.  _(class `C`)_
 - **chain closes:** True — The registered runner reproduces the note's qualitative sweep: zero-epsilon reduction is exact, all nonzero epsilon rows are TOWARD with mean loop/inst about 1.010, mean escape rises mildly, frozen Born checks remain at machine precision, and nonzero rows have converged=0/4.
 - **rationale:** Clean within the note's bounded-control scope. The note explicitly does not claim a new backreaction mechanism; it claims the frozen-field propagation remains Born-linear and weak-field-like while the outer loop is small and nonconvergent. The current runner, executed on the Mac mini clean clone, reproduces that boundary: exact zero-epsilon reduction, machine-level frozen Born residuals, TOWARD sign across nonzero couplings, near-linear source-strength exponents, loop/inst around 1.010, and no strict convergence for nonzero epsilon. Residual risk is the declared narrow setup and the nonconvergent outer loop; machine-epsilon Born mean/max digits vary at the cancellation floor but do not affect the audited conclusion.
+- **auditor confidence:** high
+
+### `poisson_self_gravity_loop_v3_note`
+
+- **Note:** [`POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The strict read is that no retained positive survives the exact reduction and Born controls, so this lane remains a bounded no-go/control surface rather than a self-gravity mechanism.  _(class `C`)_
+- **chain closes:** True — The primary runner recomputes the exact lattice loop, reproducing the zero-epsilon identity, the small nonzero matched-null centroid/phase shifts, the nonconverged nonlinear rows, and the split between step-local and end-to-end Born behavior. Those current outputs support the note's bounded no-go/control conclusion.
+- **rationale:** The load-bearing claim is bounded and negative: the runner does not promote a self-gravity mechanism, it verifies a control surface with exact zero-coupling reduction and small unstable nonzero effects. The current runner output matches the source values for the sweep and Born audit, including nonconvergence and end-to-end Born drift. Residual risk is limited to the intentionally narrow exact-lattice family, which the note states explicitly.
 - **auditor confidence:** high
 
 ### `portable_card_extension_note`
