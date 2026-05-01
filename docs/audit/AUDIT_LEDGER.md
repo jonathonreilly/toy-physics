@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T22:54:22.180120+00:00
+**Generated:** 2026-05-01T22:55:34.682724+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,7 +24,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 10 |
 | bounded | 163 |
-| support | 134 |
+| support | 135 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
@@ -40,24 +40,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 504 |
+| `unaudited` | 505 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 91 |
 | `high` | 324 |
 | `medium` | 393 |
-| `leaf` | 763 |
+| `leaf` | 764 |
 
 - **Proposed claims demoted by upstream:** 138
 - **Citation cycles detected:** 61
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1170
+- runners classified: 1171
 - runners with (C) first-principles compute hits: 547
 - runners with (D) external comparator hits: 290
-- decoration candidates (no C, no D): 82
+- decoration candidates (no C, no D): 83
 
 ## Top 25 by load-bearing score (topology only)
 
@@ -65,8 +65,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | criticality | desc | score | audit_status | effective |
 |---:|---|---|---:|---:|---|---|
-| 1 | `alpha_s_derived_note` | critical | 259 | 29.52 | `unaudited` | ~~audited_conditional~~ |
-| 2 | `graph_first_su3_integration_note` | critical | 311 | 29.29 | `audited_clean` | **retained** |
+| 1 | `graph_first_su3_integration_note` | critical | 312 | 29.79 | `audited_clean` | **retained** |
+| 2 | `alpha_s_derived_note` | critical | 259 | 29.52 | `unaudited` | ~~audited_conditional~~ |
 | 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 117 | 28.88 | `audited_conditional` | ~~audited_conditional~~ |
 | 4 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 116 | 28.87 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `yt_ward_identity_derivation_theorem` | critical | 264 | 27.55 | `audited_renaming` | ~~audited_renaming~~ |
@@ -80,8 +80,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 13 | `one_generation_matter_closure_note` | critical | 246 | 20.45 | `audited_conditional` | ~~audited_conditional~~ |
 | 14 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 95 | 19.59 | `audited_conditional` | ~~audited_conditional~~ |
 | 15 | `anomaly_forces_time_theorem` | critical | 263 | 18.54 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `graph_first_selector_derivation_note` | critical | 310 | 18.28 | `audited_clean` | **retained** |
-| 17 | `native_gauge_closure_note` | critical | 307 | 17.77 | `audited_clean` | **retained** |
+| 16 | `graph_first_selector_derivation_note` | critical | 311 | 18.29 | `audited_clean` | **retained** |
+| 17 | `native_gauge_closure_note` | critical | 308 | 18.27 | `audited_clean` | **retained** |
 | 18 | `left_handed_charge_matching_note` | critical | 267 | 17.57 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `ckm_atlas_axiom_closure_note` | critical | 76 | 17.27 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `plaquette_self_consistency_note` | critical | 264 | 16.55 | `unaudited` | ~~audited_conditional~~ |
