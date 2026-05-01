@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T00:56:20.157360+00:00
+**Generated:** 2026-05-01T00:58:11.765222+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,7 +19,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 89 |
+| **retained** | 90 |
 | _proposed_retained_ | 1 |
 | bounded | 272 |
 | support | 231 |
@@ -27,13 +27,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 762 |
+| ~~audited_conditional~~ | 761 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 228 |
-| `audited_conditional` | 484 |
+| `audited_clean` | 229 |
+| `audited_conditional` | 483 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
@@ -125,6 +125,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `claude_complex_action_carryover_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `composite_source_additivity_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `cpt_exact_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `cycle_battery_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `cycle_break_slice_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dirac_core_card_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-gpt-5 | C | - |
@@ -415,7 +416,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cosmology_scale_identification_and_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `coupled_field_generated_family_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
-| `cpt_exact_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `cross_family_universality_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cycle_battery_scaled_note_2026-04-10` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -2837,14 +2837,12 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 
 - **Note:** [`CPT_EXACT_NOTE.md`](../../docs/CPT_EXACT_NOTE.md)
 - **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-clean-context-2026-05-01`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The physical Hermitian Hamiltonian claim and vanishing CPT-odd SME sector are carried by the bridge theorem, which lifts the D-level identities through H = iD using Theta_H = P K.  _(class `B`)_
-- **chain closes:** False — The CPT note depends on the Hermitian-Hamiltonian/SME bridge for the antiunitary i -> -i step, and that one-hop dependency is not yet audit-ratified.
-- **rationale:** Issue: the CPT note's load-bearing physical-Hamiltonian statement is delegated to the Hermitian-Hamiltonian/SME bridge, which is still unaudited at this point in the chain. Why this blocks: the D-level staggered identities do not by themselves prove the Hermitian CPT and SME-zero claim unless the antiunitary handling of H = iD is ratified. Repair target: audit the bridge theorem clean, then re-audit this CPT row with the bridge as a retained one-hop authority and a primary CPT runner if the row is meant to rely on one. Claim boundary until fixed: the note may state the free staggered D-level CPT structure and a conditional Hermitian lift, but not an audit-clean physical-Hamiltonian CPT/SME-zero theorem.
-- **open / conditional deps cited:**
-  - `PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md`
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-cpt_exact_note-reraudit-after-bridge`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For the free staggered Cl(3) Hamiltonian on even periodic Z^3 lattices, the D-level C/P identities plus the audited Hermitian lift H=iD give an antiunitary CPT representative preserving H, so the CPT-odd Hamiltonian/SME sector vanishes on that substrate.  _(class `A`)_
+- **chain closes:** True — The D-level runner verifies the exact C, P, CP, CPT identities and zero CPT-odd sector on even finite lattices; the now-clean bridge proves the antiunitary Hermitian lift by showing the naive CP K action flips H while the physical Theta_H=P K representative preserves H=iD.
+- **rationale:** Clean after bridge audit: the prior conditional blocker was the unaudited Hermitian-Hamiltonian/SME bridge, and that dependency is now audited_clean. The source claim is scoped to the free staggered Hamiltonian on even periodic lattices, with interactions, CKM-sector CP violation, and continuum CPT relation explicitly left outside the theorem. The D-level CPT runner gives PASS=53/FAIL=0 for the staggered identities, finite-lattice CPT preservation, Cl(3) automorphism checks, and zero CPT-odd SME sector; the bridge runner gives PASS=10/FAIL=0 and closes the antiunitary i -> -i step for H=iD. Within that stated boundary, the chain closes without a hidden physical-Hamiltonian premise.
 - **auditor confidence:** high
 
 ### `critical_exponents_topology_note_2026-04-10`
