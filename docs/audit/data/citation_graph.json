@@ -5441,6 +5441,22 @@
       "to": "higgs_vacuum_explicit_systematic_note"
     },
     {
+      "from": "minimal_bidirectional_trapping_probe_note",
+      "to": "gate_b_nonlabel_connectivity_v1_note"
+    },
+    {
+      "from": "minimal_bidirectional_trapping_probe_note",
+      "to": "gate_b_nonlabel_connectivity_v1_distance_note"
+    },
+    {
+      "from": "minimal_bidirectional_trapping_probe_note",
+      "to": "gate_b_nonlabel_connectivity_v1_joint_note"
+    },
+    {
+      "from": "minimal_bidirectional_trapping_probe_note",
+      "to": "gate_b_farfield_note"
+    },
+    {
       "from": "mirror_chokepoint_note",
       "to": "mirror_chokepoint_boundary_fit_note"
     },
@@ -18629,7 +18645,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T17:01:20.854016+00:00",
+  "generated_at": "2026-05-01T18:19:14.840070+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -26749,7 +26765,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
       "deps": [],
-      "note_hash": "f97073224c529b6d5d53c58b9973d21596f8e1f371017318414fbeeee36d691a",
+      "note_hash": "6dc473ef0b81a5433c753c65958e73773e47098fbf2a2bdb49a56ce12dd8d036",
       "path": "docs/GR_CLASS_EXPANSION_FINITE_RANK_TARGET_NOTE.md",
       "runner_path": "scripts/frontier_gr_class_expansion_finite_rank_target.py",
       "title": "Gravity Class Expansion Target: Finite-Rank Source-to-Metric on the Current Bridge Surface"
@@ -30230,8 +30246,13 @@
       "claim_id": "minimal_bidirectional_trapping_probe_note",
       "current_status": "bounded",
       "current_status_raw": "bounded moonshot trapping probe on the generated-geometry family",
-      "deps": [],
-      "note_hash": "742849b770740260e71109abfbdf0c7a777b7a66278fbf2aa70a905cff6988ca",
+      "deps": [
+        "gate_b_nonlabel_connectivity_v1_note",
+        "gate_b_nonlabel_connectivity_v1_distance_note",
+        "gate_b_nonlabel_connectivity_v1_joint_note",
+        "gate_b_farfield_note"
+      ],
+      "note_hash": "252bc60f4d5369ff25c9dc4af1acb85d9771cdcf93736993068681c9f1142852",
       "path": "docs/MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md",
       "runner_path": "scripts/minimal_bidirectional_trapping_probe.py",
       "title": "Minimal Bidirectional Trapping Probe"
@@ -31887,7 +31908,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded refinement tested",
       "deps": [],
-      "note_hash": "a09c90e3ded98c832f12db3e8eed350bb74a4d69c2f18a981ab3cfe70321636f",
+      "note_hash": "3d55184f9fcd78ba282d406952782ef1a8d3f236d416d74edb0aeb0994a12f41",
       "path": "docs/PERSISTENT_RECORD_SIDEBIT_NOTE.md",
       "runner_path": null,
       "title": "Persistent Record Side-Bit Note"
@@ -36990,7 +37011,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
       "deps": [],
-      "note_hash": "97117c34e3f1df3ecaba79ccb376a87d2f3b5f235a27bae2a44f910efdc7bcea",
+      "note_hash": "c817343cd1b450ac84dcd4fb86f7abd23f6a310ba1e6a4d3e99c0d75046deba6",
       "path": "docs/STAGGERED_FERMION_CARD_2026-04-11.md",
       "runner_path": "scripts/frontier_staggered_17card.py",
       "title": "Staggered Fermion + Parity-Coupled Gravity \u2014 Complete Card"
@@ -41105,7 +41126,6 @@
     "mesoscopic_surrogate_source_2d_note",
     "mesoscopic_surrogate_threshold_2d_note",
     "mesoscopic_surrogate_two_stage_2d_note",
-    "minimal_bidirectional_trapping_probe_note",
     "minimal_source_driven_field_probe_note",
     "mirror_2d_gravity_law_note",
     "mirror_2d_validation_note",
@@ -41586,10 +41606,10 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4657,
+    "edge_count": 4661,
     "leaf_count": 705,
     "node_count": 1663,
-    "root_count": 1171,
+    "root_count": 1170,
     "runners_with_path": 1233,
     "status_counts": {
       "bounded": 457,
