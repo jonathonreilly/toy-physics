@@ -3,9 +3,9 @@
     "critical": 8,
     "high": 195,
     "leaf": 216,
-    "medium": 136
+    "medium": 135
   },
-  "generated_at": "2026-05-01T20:02:35.406637+00:00",
+  "generated_at": "2026-05-01T20:04:13.499628+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6516,23 +6516,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_observable_grammar_exhaustion_obstruction.py",
       "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "gate_b_nonlabel_connectivity_v1_distance_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 2,
-      "load_bearing_score": 2.585,
-      "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/gate_b_nonlabel_connectivity_v1_distance.py",
-      "transitive_descendants": 2
     },
     {
       "audit_independence_required": "any_non_self",
@@ -14138,6 +14121,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 149,
-  "total_pending": 555
+  "ready_count": 148,
+  "total_pending": 554
 }

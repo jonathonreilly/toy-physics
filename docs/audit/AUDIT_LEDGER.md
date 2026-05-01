@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:02:35.695161+00:00
+**Generated:** 2026-05-01T20:04:13.759855+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 189 |
+| bounded | 188 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 912 |
+| ~~audited_conditional~~ | 913 |
 | ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 614 |
+| `audited_conditional` | 615 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 555 |
+| `unaudited` | 554 |
 
 | criticality | count |
 |---|---:|
@@ -656,6 +656,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_h025_joint_package_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_no_restore_farfield_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_no_restore_joint_package_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `gate_b_nonlabel_connectivity_v1_distance_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `gate_b_nonlabel_connectivity_v2_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_nonlabel_sign_grown_transfer_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_poisson_self_gravity_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -6616,6 +6617,21 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
+
+### `gate_b_nonlabel_connectivity_v1_distance_note`
+
+- **Note:** [`GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md`](../../docs/GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the retained h=0.5 no-restore grown family, the geometry-sector stencil keeps a positive declining far-field distance-law tail, with 12/12 TOWARD and tail b^(-0.53), R^2=0.992, while remaining a bounded companion rather than full Gate B closure.  _(class `C`)_
+- **chain closes:** False — The Mac mini rerun reproduces the note's exact-grid and geometry-sector distance-law rows, but the runner emits no classified PASS lines and the companion interpretation depends on the Gate B non-label/far-field context, including rows that are conditional. The bounded distance-law observation is current; the broader closure does not close.
+- **rationale:** Issue: the current runner reproduces the frozen distance-law companion table, but it has no classified PASS lines and relies on the surrounding Gate B non-label/far-field package. Why this blocks: the audit lane cannot classify the TOWARD fraction, declining-tail fit, and bounded-companion boundary from the runner output, and the related Gate B carrier rows are not clean. Repair target: add classified PASS lines for exact-grid control, geometry-sector TOWARD count, declining tail, R^2 comparison, and non-closure boundary; then re-audit after the companion Gate B rows are clean. Claim boundary until fixed: a bounded current-run distance-law companion on the tested no-restore family, not a universal non-label connectivity theorem.
+- **open / conditional deps cited:**
+  - `GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md`
+  - `GATE_B_FARFIELD_NOTE.md`
+- **auditor confidence:** high
 
 ### `gate_b_nonlabel_connectivity_v1_h025_note`
 
