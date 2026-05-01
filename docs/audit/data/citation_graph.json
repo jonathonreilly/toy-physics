@@ -18437,6 +18437,10 @@
       "to": "publication.ci3_z3.readme"
     },
     {
+      "from": "work_history.atomic.readme",
+      "to": "work_history.atomic.lane2_atomic_autoresearch_parking_note_2026-05-01"
+    },
+    {
       "from": "work_history.ckm.cabibbo_bound_note",
       "to": "work_history.ckm.ckm_mass_basis_nni_note"
     },
@@ -18585,7 +18589,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T12:12:50.803637+00:00",
+  "generated_at": "2026-05-01T14:58:30.798559+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19886,7 +19890,7 @@
     },
     "area_law_multipocket_selector_no_go_note_2026-04-25": {
       "claim_id": "area_law_multipocket_selector_no_go_note_2026-04-25",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "residual no-go for Planck Target 2",
       "deps": [
         "area_law_primitive_parity_gate_carrier_theorem_note_2026-04-25",
@@ -20919,10 +20923,10 @@
     },
     "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26": {
       "claim_id": "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained exact negative boundary for direct top-Ward lift.",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go exact negative boundary for direct top-Ward lift.",
       "deps": [],
-      "note_hash": "d95bb620b3c26f8629dde1222b57eb0288eff1a58942bf367f57027e9f5f212d",
+      "note_hash": "67988b75a578c0c6ceb9b6181196fb9c4813f996fd24a5b7ff18ee481e6332b5",
       "path": "docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md",
       "runner_path": "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py",
       "title": "Charged-Lepton Direct Ward Free-Yukawa No-Go"
@@ -21027,10 +21031,10 @@
     },
     "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27": {
       "claim_id": "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained exact negative boundary for the OP-local source",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go exact negative boundary for the OP-local source",
       "deps": [],
-      "note_hash": "1d18d30087ec880ede91fc7aaffaaf269fae55ba4b400f35279d3a5d7de60f06",
+      "note_hash": "80477d38e749b50e78d2e17a642c2f01142b37bf50598410a5c7aebd7844db34",
       "path": "docs/CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py",
       "title": "Charged-Lepton OP-Local Source / Selected-Line Selector No-Go"
@@ -21047,10 +21051,10 @@
     },
     "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27": {
       "claim_id": "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained exact negative boundary for the",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go exact negative boundary for the",
       "deps": [],
-      "note_hash": "af92b989db490b4571caefbfaf2667c9284b77aa13dca9d3d159acc91280c163",
+      "note_hash": "64711b01f1d7f318f6308415e220eae4aca57db80a86b91112a7930043c9e060",
       "path": "docs/CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py",
       "title": "Charged-Lepton Selected-Line Generation-Selector No-Go"
@@ -21067,10 +21071,10 @@
     },
     "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27": {
       "claim_id": "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained exact negative boundary for the scalar Type-B",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go exact negative boundary for the scalar Type-B",
       "deps": [],
-      "note_hash": "cd2304a5199a9a6c33484fbd72539e83d51b829ffc67d7f5031e921e170ca15d",
+      "note_hash": "3f996ed1a688ea8aefa33847ffa3b69f6676b77b955a0f1e65aee4e2e507cc25",
       "path": "docs/CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py",
       "title": "Charged-Lepton Type-B Radian Readout Generation-Selector No-Go"
@@ -22732,7 +22736,7 @@
     },
     "dm_abcc_assumptions_audit_note_2026-04-19": {
       "claim_id": "dm_abcc_assumptions_audit_note_2026-04-19",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "FULL NO-GO. All five candidate derivation routes for A-BCC fail.",
       "deps": [],
       "note_hash": "0b4f4a56bb1b937b634f8b108ce6b7adcfe609fb6ff4f573c96bc98f7f5f1e30",
@@ -23395,7 +23399,7 @@
     },
     "dm_leptogenesis_universal_yukawa_no_go_note_2026-04-15": {
       "claim_id": "dm_leptogenesis_universal_yukawa_no_go_note_2026-04-15",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact CP-kernel no-go on the current universal Dirac bridge",
       "deps": [
         "dm_neutrino_schur_suppression_theorem_note_2026-04-15",
@@ -23476,7 +23480,7 @@
     },
     "dm_neutrino_canonical_two_higgs_slot_no_go_note_2026-04-15": {
       "claim_id": "dm_neutrino_canonical_two_higgs_slot_no_go_note_2026-04-15",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact no-go theorem on the full admitted canonical two-Higgs",
       "deps": [
         "dm_neutrino_singlet_doublet_cp_slot_tool_note_2026-04-15",
@@ -23649,7 +23653,7 @@
     },
     "dm_neutrino_polar_aligned_core_no_go_note_2026-04-15": {
       "claim_id": "dm_neutrino_polar_aligned_core_no_go_note_2026-04-15",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact Hermitian-core no-go after the positive-polar-section bridge",
       "deps": [
         "dm_neutrino_postcanonical_polar_section_note_2026-04-15",
@@ -24384,7 +24388,7 @@
     },
     "dm_neutrino_two_higgs_23_symmetric_slot_no_go_note_2026-04-15": {
       "claim_id": "dm_neutrino_two_higgs_23_symmetric_slot_no_go_note_2026-04-15",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact no-go theorem on the simplest `2\u21943`-symmetric canonical",
       "deps": [
         "dm_neutrino_two_higgs_right_gram_bridge_note_2026-04-15",
@@ -24524,7 +24528,7 @@
     },
     "dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15": {
       "claim_id": "dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact no-go theorem on the physical leptogenesis tensor for the",
       "deps": [],
       "note_hash": "70dba9692389d9c319b648001fbfa93a19e9ed4cc571a60dd35272833b2834d7",
@@ -24557,7 +24561,7 @@
     },
     "dm_pmns_asymptotic_source_no_go_note_2026-04-20": {
       "claim_id": "dm_pmns_asymptotic_source_no_go_note_2026-04-20",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "new no-go theorem for the unbounded-basin family. Exact `chi^2 = 0`",
       "deps": [],
       "note_hash": "42c10d73c6e34eff365bc08098644357baba855f0ce171f0611e43accd00db07",
@@ -24577,7 +24581,7 @@
     },
     "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20": {
       "claim_id": "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "new exact reduction theorem plus a named-family no-go. The",
       "deps": [
         "dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20",
@@ -24600,7 +24604,7 @@
     },
     "dm_pmns_local_selector_family_no_go_theorem_note_2026-04-20": {
       "claim_id": "dm_pmns_local_selector_family_no_go_theorem_note_2026-04-20",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact no-go for the current exact local selector families on the",
       "deps": [
         "dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17",
@@ -24654,7 +24658,7 @@
     },
     "dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20": {
       "claim_id": "dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "honest no-go on the current theorem stack",
       "deps": [],
       "note_hash": "1975315a4c2c0d4f4c2edad2034aba5a634da891d9b7a92f255343562a977611",
@@ -24764,7 +24768,7 @@
     },
     "dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20": {
       "claim_id": "dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "no-go theorem for a named derivation family. Any `H`-intrinsic or",
       "deps": [],
       "note_hash": "5709ae47ce7ad920cfb52ce7cbc54225e156174afb9c9471c739c2a141755c30",
@@ -24840,7 +24844,7 @@
     },
     "dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19": {
       "claim_id": "dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact follow-on no-go on the DM source-fiber lane. The canonical",
       "deps": [
         "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19",
@@ -24978,7 +24982,7 @@
     },
     "dm_wilson_direct_descendant_constructive_transport_plateau_observable_affine_no_go_note_2026-04-19": {
       "claim_id": "dm_wilson_direct_descendant_constructive_transport_plateau_observable_affine_no_go_note_2026-04-19",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact no-go theorem for a named source-side plateau-breaker family.",
       "deps": [
         "dm_wilson_direct_descendant_constructive_transport_plateau_theorem_note_2026-04-19",
@@ -25138,7 +25142,7 @@
     },
     "dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19": {
       "claim_id": "dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact search-plus-no-go on the completed local spectral carrier",
       "deps": [
         "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19",
@@ -25683,10 +25687,10 @@
     },
     "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30": {
       "claim_id": "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30",
-      "current_status": "proposed_retained",
-      "current_status_raw": "audited_clean; proposed_retained no-go theorem ratified 2026-04-30",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go exact negative boundary; audit pending after status-tier relabel",
       "deps": [],
-      "note_hash": "28fb9990c5d2b2d6ad90df27ab7e68b11023399ffd62c65705e0641ae890a21e",
+      "note_hash": "45306d839462781c0256fa97f3683536e584d7d5fdcce2de99245fdec1a6a8f5",
       "path": "docs/FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_first_order_coframe_unconditionality_no_go.py",
       "title": "First-Order Coframe Unconditionality No-Go Theorem"
@@ -27449,10 +27453,10 @@
     },
     "hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28": {
       "claim_id": "hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained exact negative boundary note on",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go exact negative boundary note on",
       "deps": [],
-      "note_hash": "c316aa478b764db361bafd8c70111f307a723ac1c271be3a45c52044bea8d66d",
+      "note_hash": "42ee2d398d0688d435d7028cf025bef2fd481fcb56152a9c167c3218a5eecc48",
       "path": "docs/HUBBLE_LANE5_C1_A1_GRASSMANN_NO_GO_NOTE_2026-04-28.md",
       "runner_path": "scripts/frontier_hubble_c1_a1_grassmann_no_go.py",
       "title": "Lane 5 `(C1)` Gate \u2014 A1 Grassmann-from-axiom-3 No-Go"
@@ -27489,10 +27493,10 @@
     },
     "hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28": {
       "claim_id": "hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained exact negative boundary note on",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go exact negative boundary note on",
       "deps": [],
-      "note_hash": "2d62f3319cf7f36bf1333f648d483390cc0aa476ba1e76598d193f68093c7c5d",
+      "note_hash": "b4b29e402ea765bf1edbafad89ebd2595b8f3f18e9e5e4d92851973a2fd667fc",
       "path": "docs/HUBBLE_LANE5_C1_A4_PARITY_GATE_NO_GO_NOTE_2026-04-28.md",
       "runner_path": "scripts/frontier_hubble_c1_a4_parity_gate_no_go.py",
       "title": "Lane 5 `(C1)` Gate \u2014 A4 Parity-Gate-from-A_min No-Go"
@@ -27860,7 +27864,7 @@
     },
     "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24": {
       "claim_id": "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "**5 probes, all NO-GO.** The audit note's residual primitive",
       "deps": [],
       "note_hash": "9b20be774fb478aaaca9e0241ae2485417d89703fa5dbc3e39660db8ef195dfd",
@@ -27890,7 +27894,7 @@
     },
     "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24": {
       "claim_id": "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "**NO-GO.** The Cheeger-Simons differential-character functor does",
       "deps": [],
       "note_hash": "685b295b114edf1d84e8b19d00205b4ba691f2ea943fefa7633a9879c30f6f91",
@@ -28300,7 +28304,7 @@
     },
     "koide_hostile_review_guard_note_2026-04-24": {
       "claim_id": "koide_hostile_review_guard_note_2026-04-24",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "reusable reviewer guard for the 2026-04-24 Koide no-go /",
       "deps": [],
       "note_hash": "c3536063039b40ebf321b289152c201861356707ab023ebe0456c2ccf14eab0d",
@@ -28496,7 +28500,7 @@
     },
     "koide_q23_oh_covariance_nogo_note_2026-04-22": {
       "claim_id": "koide_q23_oh_covariance_nogo_note_2026-04-22",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "**NO-GO** on sub-route (a) of the spin-1 structural attack. Sharpens the remaining structural question.",
       "deps": [],
       "note_hash": "c0fddc0379f8b094cf9aa67d167abce666d411c27b8e77f276cfd38536eb149b",
@@ -28758,7 +28762,7 @@
     },
     "koide_selected_line_local_radian_bridge_no_go_note_2026-04-20": {
       "claim_id": "koide_selected_line_local_radian_bridge_no_go_note_2026-04-20",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "**No-go.** On the actual selected-line `CP^1` base, the canonical",
       "deps": [],
       "note_hash": "159b67877e98b8f86c2427e499f937311e006a98c47639e1a929d9701046f03e",
@@ -28793,7 +28797,7 @@
     },
     "koide_selected_slice_spectral_completion_and_minimal_local_spectral_law_no_go_note_2026-04-20": {
       "claim_id": "koide_selected_slice_spectral_completion_and_minimal_local_spectral_law_no_go_note_2026-04-20",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact spectral-completion theorem plus exact low-complexity no-go",
       "deps": [],
       "note_hash": "0b9a94093d25cd055e6315ae75bc8271f78d2790f56ec12bc359e361526748af",
@@ -28849,7 +28853,7 @@
     },
     "koide_weighted_character_source_axis_theorem_note_2026-04-20": {
       "claim_id": "koide_weighted_character_source_axis_theorem_note_2026-04-20",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact no-go sharpening on the charged-lepton observable-principle /",
       "deps": [
         "koide_microscopic_scalar_selector_target_note_2026-04-18",
@@ -30623,17 +30627,17 @@
     },
     "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27": {
       "claim_id": "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained exact negative boundary for Lane 4 claim",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go exact negative boundary for Lane 4 claim",
       "deps": [],
-      "note_hash": "3013eab6814007da2c698f302fb60b1e43ef111e985e379c315619f3de935d04",
+      "note_hash": "c8eab104ee69e0d4532998f9cb0f55e5f19b436b73f4a5fde820fcd1aefc8d62",
       "path": "docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py",
       "title": "Lane 4 Neutrino Dirac/Seesaw Fork No-Go"
     },
     "neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29": {
       "claim_id": "neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "no-go / exact negative boundary for the SR-2 route; no",
       "deps": [],
       "note_hash": "bc2a401acf052a55287eab4ba78391780ef7856e6e7e0f268f2408000ec1c6b1",
@@ -30942,7 +30946,7 @@
     },
     "neutrino_majorana_no_stationary_scale_theorem_note": {
       "claim_id": "neutrino_majorana_no_stationary_scale_theorem_note",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact scale-selection no-go on the admitted Majorana source class",
       "deps": [
         "neutrino_majorana_local_pfaffian_uniqueness_note",
@@ -31756,7 +31760,7 @@
     },
     "persistent_object_readout_taper_note": {
       "claim_id": "persistent_object_readout_taper_note",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "robust no-go for detector/readout localization on the compact repeated-update source object",
       "deps": [],
       "note_hash": "5c23911da2797f516422df1d8055e908a9e937a914d59aa1e21df98f79aea8e1",
@@ -31898,22 +31902,22 @@
     },
     "planck_boundary_orientation_incidence_no_go_note_2026-04-30": {
       "claim_id": "planck_boundary_orientation_incidence_no_go_note_2026-04-30",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained exact negative boundary; audit pending",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go exact negative boundary; audit pending",
       "deps": [],
-      "note_hash": "bbf88d7af61646d5ac3e8febc5e32fbca86722fa9614e42260ff809f603157f1",
+      "note_hash": "03a2f7629bbcddaff7bd87836162bf9eacde516f88342e52fe95dfdfb540a77e",
       "path": "docs/PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_planck_boundary_orientation_incidence_no_go.py",
       "title": "Planck Boundary Orientation Incidence No-Go"
     },
     "planck_finite_response_no_go_note_2026-04-24": {
       "claim_id": "planck_finite_response_no_go_note_2026-04-24",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained no-go / blocker closeout for the Planck-scale lane",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go / blocker closeout for the Planck-scale lane",
       "deps": [
         "planck_parent_source_hidden_character_no_go_note_2026-04-24"
       ],
-      "note_hash": "b2c8c75cb369789960bba8708c810ca1efba1b05c418533767caaa22e6367956",
+      "note_hash": "e1972ed2365880fde841f1ea6ae8ef92e8eb9578681fdab4c1bf70503cb85a75",
       "path": "docs/PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_planck_finite_response_nogo.py",
       "title": "Planck Finite-Response No-Go Note"
@@ -31937,10 +31941,10 @@
     },
     "planck_parent_source_hidden_character_no_go_note_2026-04-24": {
       "claim_id": "planck_parent_source_hidden_character_no_go_note_2026-04-24",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained no-go / blocker closeout for the Planck-scale lane",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go / blocker closeout for the Planck-scale lane",
       "deps": [],
-      "note_hash": "74d54e134c8007c973b047ea4e488d06c3f9dfd38643d142ef36ad33afb92319",
+      "note_hash": "147a469cd007380e96a0f832841ddeadd574b45cd379a7497164e8b10de1f511",
       "path": "docs/PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_planck_parent_source_hidden_character_nogo.py",
       "title": "Planck Parent-Source Hidden-Character No-Go Note"
@@ -32040,10 +32044,10 @@
     },
     "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25": {
       "claim_id": "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained Target 3 boundary theorem; positive dimensionless phase",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go Target 3 boundary theorem; positive dimensionless phase",
       "deps": [],
-      "note_hash": "701054bee248fe8193e94d3c6b5f2e40eaceb5ee62d7e15caf8cb9bbbe12101e",
+      "note_hash": "c34c08fcbf4f9c47616832e0df7969bc0e30327f22e90c94b9b282118986f6de",
       "path": "docs/PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_planck_target3_phase_unit_edge_statistics.py",
       "title": "Planck Target 3 Phase-Unit / Edge-Statistics Boundary Note"
@@ -32289,7 +32293,7 @@
     },
     "pmns_right_conjugacy_invariant_no_go_note": {
       "claim_id": "pmns_right_conjugacy_invariant_no_go_note",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact current-bank no-go theorem on intrinsic right-sensitive PMNS",
       "deps": [],
       "note_hash": "9b84b6e8a48cb5c08b7f93ec78c08150921be0a4ac78aa9402b8e465f3ff0241",
@@ -35095,10 +35099,10 @@
     },
     "quark_c3_circulant_source_law_boundary_note_2026-04-28": {
       "claim_id": "quark_c3_circulant_source_law_boundary_note_2026-04-28",
-      "current_status": "support",
-      "current_status_raw": "exact support/boundary theorem for Lane 3 target 3C. This",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go exact boundary theorem for Lane 3 target 3C. The",
       "deps": [],
-      "note_hash": "d8d2bf8b6f88e71fe1ec66a6c52a133066a1be8bda58910fca970d076fb92592",
+      "note_hash": "f489ff5e90003394d8f038bca2a099c5cb85f7b14b8a1bce268e7be489f7183a",
       "path": "docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md",
       "runner_path": "scripts/frontier_quark_c3_circulant_source_law_boundary.py",
       "title": "Quark `C3` Circulant Source-Law Boundary Note"
@@ -35145,7 +35149,7 @@
     },
     "quark_endpoint_denominator_admissibility_note_2026-04-19": {
       "claim_id": "quark_endpoint_denominator_admissibility_note_2026-04-19",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact denominator-admissibility theorem / no-go on the current",
       "deps": [],
       "note_hash": "1d2b5442cc3ecbaa18479f7474b413c7523c39618f41cb762a366e2f0eaf0946",
@@ -35201,10 +35205,10 @@
     },
     "quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28": {
       "claim_id": "quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained exact negative boundary for Lane 3 target 3C.",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go exact negative boundary for Lane 3 target 3C.",
       "deps": [],
-      "note_hash": "2f9805a79258d0e24f67b11461fc1cca1f76bce737514d1670f55adb7c90cbbb",
+      "note_hash": "5f7d2e99117eef29b69b2a6622c3ad40167ee3143b719cccacc7664dc6375a03",
       "path": "docs/QUARK_GENERATION_STRATIFIED_WARD_FREE_MATRIX_NO_GO_NOTE_2026-04-28.md",
       "runner_path": "scripts/frontier_quark_generation_stratified_ward_free_matrix_no_go.py",
       "title": "Quark Generation-Stratified Ward Free-Matrix No-Go"
@@ -35369,10 +35373,10 @@
     },
     "quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28": {
       "claim_id": "quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained exact negative boundary for Lane 3 target 3B.",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go exact negative boundary for Lane 3 target 3B.",
       "deps": [],
-      "note_hash": "65acee4543e4074a2ef74139b4340a19f9c11330dd88d136aea02d47be93774b",
+      "note_hash": "b489c4245c4b5099e4a35c757f0f8bf0da7c166df41809feaf84ace1b25c618c",
       "path": "docs/QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md",
       "runner_path": "scripts/frontier_quark_route2_e_channel_readout_naturality_no_go.py",
       "title": "Quark Route-2 E-Channel Readout Naturality No-Go"
@@ -35411,7 +35415,7 @@
     },
     "quark_route2_source_domain_bridge_no_go_note_2026-04-28": {
       "claim_id": "quark_route2_source_domain_bridge_no_go_note_2026-04-28",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact current-bank no-go / exact negative boundary for Lane 3",
       "deps": [],
       "note_hash": "ae4928b89e4b03edaa63812863f0d0c12e63dd6592f5e41092f9d9b36a5b6181",
@@ -35421,7 +35425,7 @@
     },
     "quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28": {
       "claim_id": "quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact no-go / boundary theorem for Lane 3 targets 3B and 3C.",
       "deps": [],
       "note_hash": "00ebaff4a46feaa1827929ba683e44c545673086b0ab3fa95c56a47101ba9398",
@@ -35431,7 +35435,7 @@
     },
     "quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28": {
       "claim_id": "quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "exact no-go / boundary theorem for Lane 3 target 3B. This",
       "deps": [],
       "note_hash": "4ba99db187f3ddf2adfb04cf99118843b3dfc1d50bdee64a85dfda7bc8f67b8a",
@@ -37302,10 +37306,10 @@
     },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "claim_id": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
-      "current_status": "proposed_retained",
-      "current_status_raw": "audited_clean; proposed_retained no-go theorem ratified 2026-04-30",
+      "current_status": "proposed_no_go",
+      "current_status_raw": "proposed_no_go exact negative boundary; audit pending after status-tier relabel",
       "deps": [],
-      "note_hash": "5fc42d433cdbc8fc5b286b92d144da797089e322094773a9c788bf0e69641d7b",
+      "note_hash": "3dcbf8e952f2ef73063f72603d4d856a630ee64ed975be9cf1a2ed56188993af",
       "path": "docs/SUBSTRATE_TO_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_substrate_to_p_a_forcing.py",
       "title": "Substrate-To-P_A Forcing No-Go Theorem"
@@ -38922,12 +38926,24 @@
       "runner_path": null,
       "title": "Hydrogen / Helium Atomic Companion Note"
     },
+    "work_history.atomic.lane2_atomic_autoresearch_parking_note_2026-05-01": {
+      "claim_id": "work_history.atomic.lane2_atomic_autoresearch_parking_note_2026-05-01",
+      "current_status": "unknown",
+      "current_status_raw": "parked Autoresearch work-history packet; not audit-ratified science",
+      "deps": [],
+      "note_hash": "63b0b9cd580b07bb484ad562ed782182e4673673a72dc804cf9dee30bbfb80ac",
+      "path": "docs/work_history/atomic/LANE2_ATOMIC_AUTORESEARCH_PARKING_NOTE_2026-05-01.md",
+      "runner_path": null,
+      "title": "Lane 2 Atomic Autoresearch Parking Note"
+    },
     "work_history.atomic.readme": {
       "claim_id": "work_history.atomic.readme",
       "current_status": "unknown",
       "current_status_raw": null,
-      "deps": [],
-      "note_hash": "2b6f132d7d9f1b7fbd84b02d2360fee5d0ecb4d502435e299b7a67fb10e5e1ad",
+      "deps": [
+        "work_history.atomic.lane2_atomic_autoresearch_parking_note_2026-05-01"
+      ],
+      "note_hash": "772f18727bdd1df976c508234ca9c4cc25b17bacfa9ecbe4aac9cd5e5f000c5d",
       "path": "docs/work_history/atomic/README.md",
       "runner_path": null,
       "title": "Atomic Work History"
@@ -40054,7 +40070,7 @@
     },
     "yt_p2_taste_staircase_beta_functions_note_2026-04-17": {
       "claim_id": "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
-      "current_status": "support",
+      "current_status": "proposed_no_go",
       "current_status_raw": "NO-GO for per-step perturbative beta functions.",
       "deps": [],
       "note_hash": "6f5fa202efdd6c29b131acea75f56110272fc472142c9a3fc69c1f9859578dfd",
@@ -41451,7 +41467,7 @@
     "wilson_normalization_reconciliation_note_2026-04-11",
     "wilson_two_body_open_note_2026-04-11",
     "work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18",
-    "work_history.atomic.readme",
+    "work_history.atomic.lane2_atomic_autoresearch_parking_note_2026-05-01",
     "work_history.ckm.ckm_mass_basis_nni_note",
     "work_history.dm.dm_leptogenesis_full_axiom_closure_note_2026-04-15",
     "work_history.dm.dm_leptogenesis_full_axiom_closure_note_2026-04-16",
@@ -41509,18 +41525,19 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4646,
+    "edge_count": 4647,
     "leaf_count": 705,
-    "node_count": 1661,
+    "node_count": 1662,
     "root_count": 1173,
     "runners_with_path": 1227,
     "status_counts": {
       "bounded": 455,
       "open": 48,
+      "proposed_no_go": 47,
       "proposed_promoted": 1,
-      "proposed_retained": 370,
-      "support": 376,
-      "unknown": 411
+      "proposed_retained": 355,
+      "support": 344,
+      "unknown": 412
     }
   }
 }

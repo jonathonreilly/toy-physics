@@ -8,7 +8,16 @@ The propagation rule (from FRESH_LOOK_REQUIREMENTS.md):
 Intrinsic status mapping:
   - current_status=proposed_retained + audit_status=audited_clean -> retained
   - current_status=proposed_promoted + audit_status=audited_clean -> promoted
+  - current_status=proposed_no_go    + audit_status=audited_clean -> retained_no_go
+    (author declared a no-go theorem and the audit ratified it; symmetric
+    path to `retained` for negative results — Coleman-Mandula, Kochen-Specker,
+    Weinberg-Witten style claims born as no-gos rather than failed positives)
   - current_status=proposed_*        + audit_status=unaudited     -> proposed_*
+  - audit_status=audited_failed AND note in archive_unlanded/      -> retained_no_go
+    (legacy path: a positive claim failed audit and was archived. The audit
+    verdict stays as audited_failed but the project-level interpretation
+    lifts to retained_no_go. Going forward, prefer the proposed_no_go
+    direct path above for new no-go theorems.)
   - current_status=proposed_*        + audit_status=audited_<fail> -> audited_<fail>
   - current_status in {support, bounded, open}                    -> as declared
   - current_status=unknown                                        -> unknown
@@ -29,10 +38,16 @@ LEDGER_PATH = DATA_DIR / "audit_ledger.json"
 SUMMARY_PATH = DATA_DIR / "effective_status_summary.json"
 
 # Strength rank: higher = stronger publication-facing tier.
+# retained_no_go sits at the same tier as retained: both are audit-ratified,
+# durable scientific commitments. A retained no-go is a negative theorem
+# (Coleman-Mandula, Kochen-Specker, Weinberg-Witten) that downstream rows
+# can cite without weakening.
 RANK = {
     "retained": 100,
+    "retained_no_go": 100,
     "promoted": 90,
     "proposed_retained": 80,
+    "proposed_no_go": 80,
     "proposed_promoted": 70,
     "bounded": 60,
     "support": 50,
@@ -48,6 +63,7 @@ RANK = {
 AUDIT_PROMOTION = {
     "proposed_retained": "retained",
     "proposed_promoted": "promoted",
+    "proposed_no_go": "retained_no_go",
 }
 
 # Verdicts that override the proposed tier and become the intrinsic status.
@@ -63,6 +79,17 @@ TERMINAL_AUDIT_STATUSES = {
 def intrinsic_status(row: dict) -> str:
     cs = row.get("current_status") or "unknown"
     a = row.get("audit_status") or "unaudited"
+    if a == "audited_failed":
+        # Terminal failed audits whose notes have been moved to archive_unlanded/
+        # are retained as no-go theorems, not active failures. The audit verdict
+        # stays as audited_failed (faithful to what Codex said about the
+        # original positive claim), but the effective_status lifts to
+        # retained_no_go to reflect that the project has accepted this lane is
+        # closed and built it into institutional memory.
+        note_path = row.get("note_path") or ""
+        if note_path.startswith("archive_unlanded/"):
+            if (REPO_ROOT / note_path).exists():
+                return "retained_no_go"
     if a in TERMINAL_AUDIT_STATUSES:
         return a
     if a == "audited_clean":
@@ -162,7 +189,10 @@ def summarize(rows: dict[str, dict]) -> dict:
 
     proposed_demoted_by_upstream = []
     for cid, r in rows.items():
-        if r.get("intrinsic_status") in {"proposed_retained", "proposed_promoted", "retained", "promoted"}:
+        if r.get("intrinsic_status") in {
+            "proposed_retained", "proposed_promoted", "proposed_no_go",
+            "retained", "promoted", "retained_no_go",
+        }:
             if r.get("effective_status") != r.get("intrinsic_status"):
                 if r.get("effective_status_reason", "").startswith("inherited_from:"):
                     proposed_demoted_by_upstream.append(cid)

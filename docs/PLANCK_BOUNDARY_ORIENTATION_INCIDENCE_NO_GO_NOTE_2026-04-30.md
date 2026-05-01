@@ -1,7 +1,7 @@
 # Planck Boundary Orientation Incidence No-Go
 
 **Date:** 2026-04-30
-**Status:** proposed_retained exact negative boundary; audit pending
+**Status:** proposed_no_go exact negative boundary; audit pending
 **Runner:** `scripts/frontier_planck_boundary_orientation_incidence_no_go.py`
 **Loop:** `physics-loop/planck-pa-retention-block01-20260430`
 

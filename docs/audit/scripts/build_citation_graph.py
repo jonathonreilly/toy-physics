@@ -32,11 +32,13 @@ SKIP_PREFIXES = ("audit/",)
 # Status normalization: maps raw status text fragments to the audit lane's
 # normalized vocabulary. Order matters; first match wins.
 STATUS_PATTERNS = [
+    (re.compile(r"\bproposed[_ -]no[_ -]?go\b", re.IGNORECASE), "proposed_no_go"),
     (re.compile(r"\bproposed[_ -]retained\b", re.IGNORECASE), "proposed_retained"),
     (re.compile(r"\bproposed[_ -]promoted\b", re.IGNORECASE), "proposed_promoted"),
     # The audit lane treats every author-declared "retained" as
     # "proposed_retained" until audited. This is the load-bearing
     # interpretation rule from FRESH_LOOK_REQUIREMENTS.md.
+    (re.compile(r"\bretained[_ -]no[_ -]?go\b", re.IGNORECASE), "proposed_no_go"),
     (re.compile(r"\bretained\b", re.IGNORECASE), "proposed_retained"),
     (re.compile(r"\bpromoted\b", re.IGNORECASE), "proposed_promoted"),
     (re.compile(r"\bsuperseded_by\b", re.IGNORECASE), "support"),
@@ -47,7 +49,10 @@ STATUS_PATTERNS = [
     (re.compile(r"\b(open|scaffold|planning)\b", re.IGNORECASE), "open"),
     (re.compile(r"\baccepted\b", re.IGNORECASE), "support"),
     (re.compile(r"\bderived\b", re.IGNORECASE), "support"),
-    (re.compile(r"\bno-?go\b", re.IGNORECASE), "support"),
+    # A bare "no-go" or "nogo" Status line (no other tier word matched
+    # earlier) is treated as proposed_no_go pending audit, parallel to how
+    # bare "retained" is read as proposed_retained.
+    (re.compile(r"\bno-?go\b", re.IGNORECASE), "proposed_no_go"),
 ]
 
 STATUS_LINE_RE = re.compile(

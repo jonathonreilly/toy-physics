@@ -1,7 +1,7 @@
 # Charged-Lepton Type-B Radian Readout Generation-Selector No-Go
 
 **Date:** 2026-04-27
-**Status:** proposed_retained exact negative boundary for the scalar Type-B
+**Status:** proposed_no_go exact negative boundary for the scalar Type-B
 radian readout plus source route
 
 This is not retained charged-lepton mass closure.

@@ -1,7 +1,7 @@
 # Lane 4 Neutrino Dirac/Seesaw Fork No-Go
 
 **Date:** 2026-04-27
-**Status:** proposed_retained exact negative boundary for Lane 4 claim
+**Status:** proposed_no_go exact negative boundary for Lane 4 claim
 accounting. This is not full neutrino closure, not a global no-go against
 Majorana neutrinos, and not a global no-go against Dirac neutrinos.
 **Script:** `scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py`

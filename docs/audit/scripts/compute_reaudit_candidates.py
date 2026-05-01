@@ -26,8 +26,8 @@ LEDGER_PATH = DATA_DIR / "audit_ledger.json"
 CANDIDATES_JSON = DATA_DIR / "reaudit_candidates.json"
 
 CRITICALITY_RANK = {"critical": 3, "high": 2, "medium": 1, "leaf": 0}
-RATIFIED_DEP_STATUSES = {"retained", "promoted"}
-ELIGIBLE_CURRENT_STATUSES = {"proposed_retained", "proposed_promoted"}
+RATIFIED_DEP_STATUSES = {"retained", "promoted", "retained_no_go"}
+ELIGIBLE_CURRENT_STATUSES = {"proposed_retained", "proposed_promoted", "proposed_no_go"}
 ELIGIBLE_AUDIT_STATUSES = {
     "audited_conditional",
     "audited_renaming",
@@ -36,10 +36,13 @@ ELIGIBLE_AUDIT_STATUSES = {
     "audited_failed",
 }
 
+# Must stay in sync with compute_effective_status.py RANK.
 STATUS_RANK = {
     "retained": 100,
+    "retained_no_go": 100,
     "promoted": 90,
     "proposed_retained": 80,
+    "proposed_no_go": 80,
     "proposed_promoted": 70,
     "bounded": 60,
     "support": 50,

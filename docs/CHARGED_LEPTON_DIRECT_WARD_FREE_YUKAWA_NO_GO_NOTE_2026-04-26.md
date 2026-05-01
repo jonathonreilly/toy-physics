@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-26
 
-**Status:** proposed_retained exact negative boundary for direct top-Ward lift.
+**Status:** proposed_no_go exact negative boundary for direct top-Ward lift.
 This note
 blocks a direct lift of the retained top Ward identity to a charged-lepton
 `y_tau` theorem using only one-Higgs gauge selection and the existing top
