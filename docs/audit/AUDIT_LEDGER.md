@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:41:56.238027+00:00
+**Generated:** 2026-05-01T06:43:17.841469+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,13 +21,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 194 |
+| bounded | 193 |
 | support | 167 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 846 |
+| ~~audited_conditional~~ | 847 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
@@ -624,7 +624,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_distinct_shell_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_note_2026-04-20` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -846,6 +845,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_time_tensorized_schur_primitive_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_time_theta_to_slice_coupling_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_time_transfer_matrix_bridge_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -6892,18 +6892,6 @@ Claim boundary until fixed: safe to claim the constant-lift obstruction Gamma_ca
 - **rationale:** The no-go closes on its stated finite-matrix boundary: full packet equality would require a 3d compression of the selected Hermitian 4x4 block to have the full target Hermitian block's eigenvalues, and the runner verifies that those eigenvalues violate the necessary Cauchy interlacing bounds. The fourth runner check also rules out rescuing the selected real slice by internal U(3) dressing because unitary similarity preserves the slice spectrum. This clean verdict is narrow: it certifies the exact full-packet impossibility for the runner-constructed selected 4x4 ambient and full sparse-face target block, not the independent physical retention of the surrounding gauge-vacuum selector program.
 - **auditor confidence:** high
 
-### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_note_2026-04-20`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_CLOSURE_ENDPOINT_NOTE_2026-04-20.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_CLOSURE_ENDPOINT_NOTE_2026-04-20.md)
-- **current_status:** unknown
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** exact closure now proved on the retained `3d+1` ambient is:  _(class `B`)_
-- **chain closes:** False — No. The source row is author-declared unknown, so the audit packet does not assert a closed derivation to ratify.
-- **rationale:** Issue: the source note's own Status line is unknown, not a closed theorem/result tier. Why this blocks: a leaf audit cannot turn an explicitly unsettled source claim into a closed chain without an author reclassification and supporting derivation. Repair target: update the source note to a precise support/bounded/proposed_retained claim with a runner or cited theorem package. Claim boundary until fixed: safe to cite only as an unknown note in its current wording.
-- **auditor confidence:** high
-
 ### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md)
@@ -12423,6 +12411,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Vector, tensor-shear, and mixed perturbations keep the current scalar shell/Schur boundary data fixed while activating independent 3+1 Einstein tensor channels, so no completion principle factoring only through that scalar data can determine the full metric.  _(class `C`)_
 - **chain closes:** True — The runner constructs same-scalar-data probes on both the O_h and finite-rank classes, verifies scalar-action invariance, and verifies nonzero independent tensorial residual channels. The note's no-go is limited to scalar-trace-only completions and does not claim a positive tensor-valued GR law.
 - **rationale:** The no-go closes at the stated scope: scalar shell/Schur data are invariant across the constructed perturbation families, while vector and traceless spatial Einstein residual channels change. That is enough to rule out completion principles that factor only through the current scalar data on this branch. Residual risk is outside the claim boundary: a genuinely tensor-valued matching law may still exist and is explicitly left open.
+- **auditor confidence:** high
+
+### `science_3plus1_line_law_known_limits_note_2026-04-20`
+
+- **Note:** [`SCIENCE_3PLUS1_LINE_LAW_KNOWN_LIMITS_NOTE_2026-04-20.md`](../../docs/SCIENCE_3PLUS1_LINE_LAW_KNOWN_LIMITS_NOTE_2026-04-20.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The strongest exact closure now proved on this retained ambient is: canonical Wilson branch -> canonical retained real slice -> canonical internal reduced-packet dressing -> exact reduced projected-source packet -> exact live DM target.  _(class `B`)_
+- **chain closes:** False — The scope caveats are explicit, but the note has no primary runner or parsed audited dependencies for the Wilson/Perron branch, retained slice selector, Givens solve, reduced-packet closure, full-packet no-go, or live-target reproduction.
+- **rationale:** Issue: the note asserts a multi-step exact closure chain and a structural full-packet no-go without registering the theorem/proof/runner dependencies that establish those steps. Why this blocks: a clean audit cannot verify canonical branch selection, rho1 slice selection, exact reduced-packet solve, least-distortion internal dressing, compression-interlacing obstruction, or exact live-target reproduction from this source note alone. Repair target: add explicit audited dependency edges or a primary runner/proof bundle for each step of the closure chain and no-go. Claim boundary until fixed: the row may serve as a bounded reviewer-scope inventory of claimed limits and remaining objections, not as a clean audited line-law closure theorem.
+- **open / conditional deps cited:**
+  - `science_3plus1_line_law_known_limits_note_2026-04-20 -> missing audited Wilson/Perron, rho1, complex-Givens, reduced-packet, interlacing-no-go, and live-target dependencies`
 - **auditor confidence:** high
 
 ### `second_grown_family_complex_note`
