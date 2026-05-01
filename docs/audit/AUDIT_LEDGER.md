@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:25:09.862193+00:00
+**Generated:** 2026-05-01T01:26:28.533036+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,22 +23,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | bounded | 271 |
 | support | 230 |
-| open | 18 |
+| open | 17 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 763 |
+| ~~audited_conditional~~ | 764 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 485 |
+| `audited_conditional` | 486 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 762 |
+| `unaudited` | 761 |
 
 | criticality | count |
 |---|---:|
@@ -639,6 +639,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_a1_derivation_status_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_loop_final_status_2026-04-22` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `koide_a1_loop_investigation_summary` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -7841,6 +7842,26 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a bounded note without audit-ratified executable closure.
 - **auditor confidence:** medium
+
+### `koide_a1_loop_investigation_summary`
+
+- **Note:** [`KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md`](../../docs/KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-koide_a1_loop_investigation_summary`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims that the A1/Koide Q=2/3 condition has been extensively characterized by loop-local runners and structural matches, but remains unclosed axiom-natively pending a new structural lemma or primitive.  _(class `B`)_
+- **chain closes:** False — The row honestly states that A1 remains open, but the claimed saturation of route searches, PASS totals, external literature scan, and retained-framework matches are not tied to a primary runner or declared dependencies.
+- **rationale:** Issue: the open-status boundary is appropriate, but the note's stronger investigation claims are not independently auditable from this row: it lists 8 A1-focused runners, 181/181 PASS totals, multiple retained-framework equivalences, a one-loop QFT exclusion, and an external-literature scan without a registered primary runner or dependency list. Why this blocks: the audit can accept the safe boundary that A1 remains open, but cannot verify comprehensive route saturation or the exact scope of the listed candidate closures from the note alone. Repair target: register the loop-summary regression or a manifest runner that executes the named A1 scripts and records their classified outputs, and declare the cited Koide review, Cl3-SM embedding, charged-lepton equivalence, structural no-go, and higher-order theorem notes as dependencies. Claim boundary until fixed: an open investigation summary identifying candidate A1 closure routes and the current missing structural lemma; not a closed proof that the search landscape is exhaustive or that any 1/2 identity derives A1.
+- **open / conditional deps cited:**
+  - `KOIDE_A1_DERIVATION_STATUS_NOTE.md`
+  - `CL3_SM_EMBEDDING_THEOREM.md`
+  - `CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`
+  - `STRUCTURAL_NO_GO_SURVEY_NOTE.md`
+  - `HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md`
+  - `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
+  - `CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md`
+- **auditor confidence:** high
 
 ### `koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24`
 
