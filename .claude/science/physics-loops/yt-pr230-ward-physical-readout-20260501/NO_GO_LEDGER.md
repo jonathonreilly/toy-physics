@@ -112,6 +112,26 @@ python3 scripts/frontier_yt_scalar_ladder_kernel_scout.py
 # SUMMARY: PASS=6 FAIL=0
 ```
 
+The full-staggered PT formula layer can supply `D_psi`, `D_gluon`, and the
+shared scalar/gauge kinematic factor, but it cannot be used wholesale because
+the same runner also carries old alpha/plaquette/H_unit surfaces that are
+forbidden as PR #230 proof inputs:
+
+```text
+python3 scripts/frontier_yt_scalar_ladder_kernel_input_audit.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The scalar ladder pole criterion is not invariant under scalar
+projector/source normalization.  Raw versus zero-momentum-normalized
+point-split scalar choices differ by a factor of 16 and can flip
+`lambda_max >= 1`:
+
+```text
+python3 scripts/frontier_yt_scalar_ladder_projector_normalization_obstruction.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

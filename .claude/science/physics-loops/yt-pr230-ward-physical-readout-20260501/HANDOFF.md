@@ -39,6 +39,14 @@ What changed:
   theorem is derived from Wilson gauge exchange.
 - A finite scalar-channel ladder scout now exists.  It shows the eigenvalue
   machinery but also shows mass/IR/projector sensitivity.
+- The full-staggered PT formula layer has been audited for PR #230 reuse:
+  `D_psi`, `D_gluon`, and the scalar/gauge kinematic form factor are usable as
+  formulas, while alpha/plaquette/`H_unit` surfaces remain forbidden proof
+  inputs.
+- The scalar ladder projector-normalization obstruction is now explicit:
+  source rescaling changes `lambda_max` quadratically, and raw versus
+  zero-momentum-normalized point-split projectors can flip the scout pole
+  criterion.
 
 The scientific result is narrower than closure:
 
@@ -47,9 +55,10 @@ Current PR #230 status: open / conditional-support.
 The normalization 1/sqrt(6) is not the hard blocker.
 The hard blockers are now sharply separated.  For retained closure, PR #230
 needs either strict physical measurement evidence or a real interacting
-scalar-channel Bethe-Salpeter/pole-residue theorem.  The normalization
-arithmetic, SSB bookkeeping, free source bubble, contact HS rewrite, and
-wording around the old Ward note are not enough.
+scalar-channel Bethe-Salpeter/projector/pole-residue theorem.  The normalization
+arithmetic, SSB bookkeeping, free source bubble, kinematic scalar/gauge
+factorization, contact HS rewrite, and wording around the old Ward note are not
+enough.
 ```
 
 Exact next action:
@@ -58,15 +67,16 @@ Exact next action:
 Package this PR #230 update.  The remaining positive options are now:
 
 1. strict direct physical measurement at a suitable top/heavy-quark scale;
-2. scalar pole-residue/common-dressing theorem from retained dynamics;
+2. scalar projector/pole-residue/common-dressing theorem from retained
+   dynamics;
 3. a newly derived Planck stationarity selector.
 ```
 
 Acceptance target for the next block:
 
-1. Derive the exact scalar-channel Wilson-staggered ladder kernel and scalar
-   projector.
-2. Control the IR and finite-volume limits.
-3. Prove or disprove eigenvalue crossing on the retained surface.
+1. Derive the exact scalar-channel Wilson-staggered scalar projector/source
+   normalization.
+2. Derive the scalar ladder kernel with controlled IR and finite-volume limits.
+3. Prove or disprove eigenvalue crossing on the current authority surface.
 4. If crossing is proven, compute the pole residue from the eigenvalue
    derivative and re-run the Ward physical-readout repair audit.

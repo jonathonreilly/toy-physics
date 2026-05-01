@@ -1,0 +1,52 @@
+{
+  "actual_current_surface_status": "exact-support / input audit",
+  "allowed_reuse": [
+    "D_psi_full formula",
+    "D_gluon_full formula",
+    "local scalar source form factor",
+    "point-split scalar kinematic form factor as an algebraic formula only",
+    "gauge vertex kinematic form factor as an algebraic formula only",
+    "color factor C_F = 4/3"
+  ],
+  "fail_count": 0,
+  "forbidden_reuse": [
+    "CANONICAL_ALPHA_LM or alpha_LM bridge",
+    "CANONICAL_PLAQUETTE or u0/tadpole normalization",
+    "H_unit-to-top matrix-element readout",
+    "old yt_ward_identity theorem as physical y_t authority",
+    "observed top/Higgs/Yukawa values as selectors"
+  ],
+  "numerical_sanity_checks": {
+    "conserved_vector_mean": -5.551115123125783e-17,
+    "d_gluon_range": [
+      0.6089637399097059,
+      15.391036260090294
+    ],
+    "d_psi_range": [
+      0.585786437626905,
+      3.414213562373095
+    ],
+    "gauge_weight_mean": 0.23618546797896728,
+    "scalar_gauge_kinematic_max_abs_delta": 0.0,
+    "scalar_to_gauge_weight_ratio": 9.016392175714188,
+    "scalar_weight_mean": 2.1295408055029545
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The scalar pole residue, projector, and kernel limiting theorem remain open imports.",
+  "still_missing": [
+    "exact scalar-channel Bethe-Salpeter kernel from Wilson gauge exchange",
+    "scalar color/taste/spin projector independent of H_unit readout",
+    "IR and finite-volume limiting theorem for the kernel",
+    "eigenvalue-crossing theorem",
+    "pole residue from derivative of the inverse scalar two-point function",
+    "common scalar/gauge dressing theorem or direct residue measurement"
+  ],
+  "strict_non_claims": [
+    "not a y_t derivation",
+    "not a retained scalar pole theorem",
+    "does not use alpha_LM or plaquette normalization",
+    "does not define y_t through H_unit matrix elements"
+  ],
+  "verdict": "The repo contains the staggered and Wilson kinematic formulae needed to build a scalar-channel ladder attempt.  The point-split scalar and gauge kinematic factors match exactly in the existing formula code, but that equality is not a physical pole-residue or common-dressing theorem because the scalar bubble and gauge dressing use different denominators and require different LSZ readouts.  The audited/legacy alpha_LM, plaquette, u0, and H_unit surfaces are present in the source runner but are classified here as forbidden proof inputs for PR #230 closure."
+}

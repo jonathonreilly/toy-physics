@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-2-stretch
-blocks_completed: 14
+current_phase: campaign-block-3-projector-normalization
+blocks_completed: 16
 active_route: "scalar-channel Bethe-Salpeter kernel theorem"
-active_hard_residual: "derive exact Wilson-staggered scalar ladder kernel, eigenvalue crossing, and pole residue without contact-G or H_unit readout import"
+active_hard_residual: "derive exact Wilson-staggered scalar projector/source normalization and LSZ pole residue without contact-G, alpha_LM, plaquette, or H_unit readout import"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -66,12 +66,19 @@ files_touched:
   - "scripts/frontier_yt_scalar_ladder_kernel_scout.py"
   - "docs/YT_SCALAR_LADDER_KERNEL_SCOUT_NOTE_2026-05-01.md"
   - "outputs/yt_scalar_ladder_kernel_scout_2026-05-01.json"
+  - "scripts/frontier_yt_scalar_ladder_kernel_input_audit.py"
+  - "docs/YT_SCALAR_LADDER_KERNEL_INPUT_AUDIT_NOTE_2026-05-01.md"
+  - "outputs/yt_scalar_ladder_kernel_input_audit_2026-05-01.json"
+  - "scripts/frontier_yt_scalar_ladder_projector_normalization_obstruction.py"
+  - "docs/YT_SCALAR_LADDER_PROJECTOR_NORMALIZATION_OBSTRUCTION_NOTE_2026-05-01.md"
+  - "outputs/yt_scalar_ladder_projector_normalization_obstruction_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
   - "SSB VEV division as a functional readout, not symbol identification"
   - "Q_L to q_R chirality/species selector"
   - "physical scalar carrier uniqueness"
+  - "scalar projector/source normalization"
   - "scalar LSZ / Z_phi external-leg bridge"
   - "common tadpole/dressing proof without alpha_LM or plaquette dependence"
 no_go_routes_inherited:
@@ -96,6 +103,8 @@ claim_state_movement:
   - "ran stuck fan-out across free-bubble, finite-volume near-match, HS/RPA contact, common dressing, and direct/HQET frames"
   - "blocked contact HS/RPA closure unless a scalar-channel Wilson-gauge kernel theorem supplies the pole condition"
   - "built a finite scalar-channel ladder-kernel scout; machinery works but pole criterion is mass/IR/projector sensitive"
+  - "audited full-staggered PT formula inputs: D_psi, D_gluon, scalar/gauge kinematic factors are available, while alpha_LM/plaquette/H_unit remain forbidden proof inputs"
+  - "proved the scalar ladder pole criterion is projector/source-normalization sensitive; raw vs zero-momentum-normalized point-split projectors can flip lambda_max >= 1"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -104,5 +113,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Derive the exact scalar-channel Wilson-staggered ladder kernel/projector and control the IR/finite-volume limit, or pivot to fine-scale/HQET direct measurement if the kernel route stalls."
+next_exact_action: "Derive the scalar projector/source normalization and LSZ residue from the interacting Wilson-staggered scalar two-point function, or pivot to fine-scale/HQET direct measurement if this route stalls."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

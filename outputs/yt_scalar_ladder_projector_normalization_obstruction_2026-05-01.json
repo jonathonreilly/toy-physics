@@ -1,0 +1,37 @@
+{
+  "actual_current_surface_status": "exact negative boundary / projector-normalization obstruction",
+  "fail_count": 0,
+  "lambda_max_by_projector": {
+    "local": 0.6094811732041618,
+    "point_split_raw": 6.795902611879486,
+    "point_split_zero_momentum_normalized": 0.42474391324246785,
+    "uniform_scale:0.5": 0.15237029330104046,
+    "uniform_scale:2.0": 2.4379246928166474
+  },
+  "parameters": {
+    "grid_size_4d": 4,
+    "ir_mu_sq": 0.2,
+    "mass": 0.5
+  },
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The scalar projector/source normalization is not fixed by the current retained surface.",
+  "ratios": {
+    "point_split_raw_over_zero_momentum_normalized": 16.0,
+    "uniform_scale_2_over_local": 4.0,
+    "uniform_scale_half_over_local": 0.25
+  },
+  "required_next_theorem": [
+    "derive a scalar projector from the Cl(3)/Z^3 Wilson-staggered substrate",
+    "fix source normalization without H_unit matrix-element authority",
+    "derive the scalar LSZ residue from the interacting two-point function",
+    "then re-run the eigenvalue/pole criterion with that fixed projector"
+  ],
+  "strict_non_claims": [
+    "not a y_t derivation",
+    "not a production measurement",
+    "does not use alpha_LM or plaquette normalization",
+    "does not define y_t through H_unit matrix elements"
+  ],
+  "verdict": "The scalar ladder pole criterion is not invariant under admissible source/projector normalizations.  Uniform source rescaling changes lambda_max quadratically, and raw versus zero-momentum-normalized point-split scalar projectors differ by a factor of sixteen.  The same finite kernel can pass or fail the lambda_max >= 1 scout pole criterion depending only on this unproven normalization.  Therefore the shared point-split/gauge kinematic factor does not close PR #230; a scalar projector and LSZ residue theorem is still required."
+}

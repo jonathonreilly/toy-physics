@@ -50,12 +50,19 @@ Completed in block 1:
 - `scripts/frontier_yt_scalar_ladder_kernel_scout.py`
 - `outputs/yt_scalar_ladder_kernel_scout_2026-05-01.json`
 - `docs/YT_SCALAR_LADDER_KERNEL_SCOUT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_ladder_kernel_input_audit.py`
+- `outputs/yt_scalar_ladder_kernel_input_audit_2026-05-01.json`
+- `docs/YT_SCALAR_LADDER_KERNEL_INPUT_AUDIT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_ladder_projector_normalization_obstruction.py`
+- `outputs/yt_scalar_ladder_projector_normalization_obstruction_2026-05-01.json`
+- `docs/YT_SCALAR_LADDER_PROJECTOR_NORMALIZATION_OBSTRUCTION_NOTE_2026-05-01.md`
 
 Next artifact:
 
-- exact scalar-channel Bethe-Salpeter kernel theorem, fine-scale/HQET direct
-  measurement certificate, or another retained-positive route from the queue
+- scalar projector/source-normalization theorem from the interacting scalar
+  two-point function, fine-scale/HQET direct measurement certificate, or
+  another retained-positive route from the queue
 
 Goal for next artifact: either produce physical measurement evidence at a
-suitable scale/heavy-quark treatment, or derive the scalar pole-residue/common-
-dressing theorem that the Ward route still lacks.
+suitable scale/heavy-quark treatment, or derive the scalar projector,
+pole-residue, and common-dressing theorem that the Ward route still lacks.

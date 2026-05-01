@@ -51,6 +51,13 @@ Review checks performed:
   is the next theorem.
 - Ladder-kernel scout review: bounded-support only; explicit mass, IR, and
   simplified projector dependence prevent retained-proposal wording.
+- Scalar ladder input-audit review: formula-level `D_psi`, `D_gluon`, and
+  scalar/gauge kinematic equality are allowed as exact support, while
+  alpha_LM, plaquette, `u0`, and `H_unit` surfaces are explicitly forbidden as
+  proof inputs.
+- Projector-normalization review: the same finite kernel can cross or fail the
+  pole criterion under source/projector normalization changes, so the note is
+  an exact negative boundary against using kinematic equality as LSZ readout.
 
 ## Review-Loop Backpressure — Campaign Block 2
 
@@ -96,3 +103,5 @@ Open review risk:
 
 - The next positive theorem must not smuggle in the physical Higgs carrier by
   simply renaming the scalar source.  It needs a functional readout theorem.
+- The next scalar-ladder theorem must also derive the scalar projector/source
+  normalization before using an eigenvalue crossing as physical evidence.

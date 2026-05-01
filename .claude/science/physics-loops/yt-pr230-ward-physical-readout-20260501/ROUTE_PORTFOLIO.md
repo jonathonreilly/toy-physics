@@ -68,6 +68,12 @@ pole route, but the contact version needs an extra scalar-channel coupling.
 The constructive successor is the full scalar-channel Bethe-Salpeter ladder
 kernel theorem.
 
+Projector update: the full-staggered PT formula layer supplies exact
+staggered/Wilson kinematics, including a shared scalar/gauge point-split factor,
+but the ladder pole criterion changes under scalar source/projector
+normalization.  Therefore R7 still needs a scalar LSZ/source-normalization
+theorem before R8 can be load-bearing.
+
 ## R8. Scalar-Channel Bethe-Salpeter Kernel Theorem
 
 Score: 10/18. Hard-residual pressure: 4.
@@ -77,7 +83,8 @@ projector, IR/finite-volume limit, eigenvalue crossing, and pole-residue
 derivative.  A finite scout exists and shows the machinery, but also shows
 strong dependence on mass and IR/projector choices.
 
-Current status: bounded support / scout only.
+Current status: bounded support / scout only, with an exact negative boundary
+against treating point-split/gauge kinematic equality as physical LSZ readout.
 
 ## R4. Chirality and Right-Handed Selector Theorem
 
