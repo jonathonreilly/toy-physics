@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 287,
-    "medium": 159
+    "medium": 158
   },
-  "generated_at": "2026-05-01T05:15:03.135485+00:00",
+  "generated_at": "2026-05-01T05:16:18.750367+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6547,23 +6547,6 @@
       "note_path": "docs/EQUIVALENCE_PRINCIPLE_NOTE.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_q_second_order_reviewer_stress_test_note_2026-04-22",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.587,
-      "note_path": "docs/KOIDE_Q_SECOND_ORDER_REVIEWER_STRESS_TEST_NOTE_2026-04-22.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_q_second_order_reviewer_stress_test.py",
       "transitive_descendants": 33
     },
     {
@@ -15702,6 +15685,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 253,
-  "total_pending": 649
+  "ready_count": 252,
+  "total_pending": 648
 }

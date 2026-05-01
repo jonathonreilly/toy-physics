@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:15:03.378478+00:00
+**Generated:** 2026-05-01T05:16:18.989832+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 218 |
-| support | 182 |
+| support | 181 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 818 |
+| ~~audited_conditional~~ | 819 |
 | ~~audited_failed~~ | 163 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 246 |
-| `audited_conditional` | 549 |
+| `audited_conditional` | 550 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 75 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 649 |
+| `unaudited` | 648 |
 
 | criticality | count |
 |---|---:|
@@ -706,6 +706,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_delta_readout_retention_split_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_q_normalized_second_order_effective_action_theorem_2026-04-22` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_q_op_locality_c3_fixed_source_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `koide_q_second_order_reviewer_stress_test_note_2026-04-22` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `koide_scale_selector_reparameterization_theorem_note_2026-04-20` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_cyclic_response_bridge_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -9284,6 +9285,22 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The reduced two-slot source law W_red = log det(I+K) is the exact restriction of the original observable principle to the normalized second-order block algebra, and its dual effective action is exact on that carrier.  _(class `A`)_
 - **chain closes:** True — The runner verifies the split-preserving source family, exact determinant restriction, pure-block coefficient uniqueness, dual action, and contrast with the unreduced vector-slot determinant.
 - **rationale:** The support theorem closes at its stated scope: once the normalized two-generator second-order block algebra is admitted, W_red = log det(I+K) and the dual effective action follow exactly. This clean audit does not prove that this reduced carrier is the physical charged-lepton observable carrier, nor does it close the Q = 2/3 source law. Residual risk: physical identification of the reduced carrier remains open.
+- **auditor confidence:** high
+
+### `koide_q_second_order_reviewer_stress_test_note_2026-04-22`
+
+- **Note:** [`KOIDE_Q_SECOND_ORDER_REVIEWER_STRESS_TEST_NOTE_2026-04-22.md`](../../docs/KOIDE_Q_SECOND_ORDER_REVIEWER_STRESS_TEST_NOTE_2026-04-22.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** If one accepts the retained Gamma_1/T_1 observable-carrier grammar, the second-order route has exact quotient/factorization, exact reduced source law, zero-source response, and exact Q = 2/3 on the admitted carrier.  _(class `B`)_
+- **chain closes:** False — The runner passes the branch-local stress tests, but the source note explicitly conditions the result on the admitted Gamma_1/T_1 grammar and says it does not discharge the remaining physical/source-law bridge. The named upstream observable and hierarchy grammar rows are not clean retained inputs.
+- **rationale:** Issue: the stress test succeeds only after granting the upstream observable-principle, hierarchy bilinear selector, and charged-lepton readout grammar. Why this blocks: those authorities are conditional/not clean in the current audit surface, and the note itself says this support packet does not close the physical/source-law bridge. Repair target: cleanly ratify the Gamma_1/T_1 observable-carrier grammar and the charged-lepton readout stack, then re-audit this stress test as downstream support. Claim boundary until fixed: the executable objection pack supports internal algebra on the admitted second-order carrier, but it cannot close Koide Q from retained inputs by itself.
+- **open / conditional deps cited:**
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md`
+  - `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`
 - **auditor confidence:** high
 
 ### `koide_q_second_order_support_batch_note_2026-04-22`
