@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:11:21.695363+00:00
+**Generated:** 2026-05-01T06:14:21.436048+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 203 |
+| bounded | 202 |
 | support | 170 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 840 |
+| ~~audited_conditional~~ | 841 |
 | ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 255 |
-| `audited_conditional` | 571 |
+| `audited_conditional` | 572 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 612 |
+| `unaudited` | 611 |
 
 | criticality | count |
 |---|---:|
@@ -889,6 +889,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_qg_uv_finite_partition_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `unpromoted_branch_retainability_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `up_sector_partition_revisit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `valley_linear_action_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `vector_sector_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_3plus1d_promotions_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -13711,6 +13712,20 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`
   - `UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md`
 - **auditor confidence:** high
+
+### `valley_linear_action_note`
+
+- **Note:** [`VALLEY_LINEAR_ACTION_NOTE.md`](../../docs/VALLEY_LINEAR_ACTION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the fixed 3D ordered-lattice 1/L^2 family at h = 0.25, the valley-linear action S = L(1-f) improves the tested mass-law exponent and distance-tail slope relative to spent-delay while preserving Born and the TOWARD gravity sign on the retained window.  _(class `C`)_
+- **chain closes:** False — The saved log matches the note's table, but the registered runner is a heavy numerical artifact: the frozen log reports about 228s total runtime and the current audit run did not complete within a 90s cap, so the standard audit loop cannot replay the load-bearing comparison directly.
+- **rationale:** Issue: the load-bearing valley-linear action comparison depends on scripts/valley_linear_same_harness_compare.py, whose saved log matches the note but whose current run exceeds the audit-loop wall-time budget. Why this blocks: the note is appropriately bounded, but audited_clean requires a current registered runner or exact proof path that can replay the Born, k=0, F~M, gravity-sign, and tail-slope comparison under standard audit conditions. Repair target: provide a fast primary runner, cached deterministic fixture, or explicitly slow-runner workflow that reproduces the two-action table and classified C checks. Claim boundary until fixed: the row supports a bounded frozen same-harness action-fork comparison, not a clean replayed theorem or promoted convergence claim.
+- **open / conditional deps cited:**
+  - `valley_linear_action_note -> scripts/valley_linear_same_harness_compare.py (registered runner exceeds audit-loop wall-time budget)`
+- **auditor confidence:** medium
 
 ### `valley_linear_continuum_synthesis_note`
 

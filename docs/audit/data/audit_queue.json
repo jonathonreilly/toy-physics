@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 276,
+    "leaf": 275,
     "medium": 133
   },
-  "generated_at": "2026-05-01T06:11:21.416607+00:00",
+  "generated_at": "2026-05-01T06:14:21.176239+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9975,23 +9975,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "valley_linear_action_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.822,
-      "note_path": "docs/VALLEY_LINEAR_ACTION_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/valley_linear_same_harness_compare.py",
-      "transitive_descendants": 4
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "valley_linear_wide_tail_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -15073,6 +15056,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 216,
-  "total_pending": 612
+  "ready_count": 215,
+  "total_pending": 611
 }
