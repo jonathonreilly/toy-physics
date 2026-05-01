@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:14:37.774246+00:00
+**Generated:** 2026-05-01T03:15:42.865851+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,12 +21,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 250 |
+| bounded | 249 |
 | support | 205 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 12 |
-| ~~audited_renaming~~ | 49 |
+| ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 792 |
 | ~~audited_failed~~ | 146 |
 
@@ -37,8 +37,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 9 |
-| `audited_renaming` | 16 |
-| `unaudited` | 720 |
+| `audited_renaming` | 17 |
+| `unaudited` | 719 |
 
 | criticality | count |
 |---|---:|
@@ -934,6 +934,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_oriented_cycle_channel_value_law_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
 | `s3_time_bilinear_tensor_primitive_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `s3_time_constructed_support_tensor_primitive_note` | bounded | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
+| `s3_time_tensor_primitive_prototype_note` | bounded | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
 | `star_supported_bridge_class_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
 | `universal_qg_optional_textbook_comparison_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -11172,6 +11173,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: the load-bearing object Xi_R^(0) is introduced by definition as a derivative of the bounded prototype with respect to delta_A1. Why this blocks: the note can safely name a candidate comparison surface, but without a runner or declared upstream authorities it does not derive an exact tensor-valued support observable, verify the endpoint values, or prove the claimed minimality/survival beyond the scalar/rank-one no-go. Repair target: register the bounded prototype and exact support-scalar/no-go authorities, add a runner that computes the endpoint Jacobian and reconstructs Theta_R^(0) from delta_A1, and classify the PASS lines. Claim boundary until fixed: constructed notation/candidate primitive for future Route-2 comparisons; not an audited tensor primitive theorem.
 - **open / conditional deps cited:**
   - `S3_TIME_TENSOR_PRIMITIVE_PROTOTYPE_NOTE.md`
+  - `TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md`
+- **auditor confidence:** high
+
+### `s3_time_tensor_primitive_prototype_note`
+
+- **Note:** [`S3_TIME_TENSOR_PRIMITIVE_PROTOTYPE_NOTE.md`](../../docs/S3_TIME_TENSOR_PRIMITIVE_PROTOTYPE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-s3_time_tensor_primitive_prototype_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Define the bounded Route-2 tensor prototype Theta_R^(0)(q) = (gamma_E(q), gamma_T(q)) on A1 x {E_x, T1x} as the first working comparison surface for the missing tensor primitive.  _(class `E`)_
+- **chain closes:** False — The note defines a bounded prototype and reports endpoint/affine-fit data, but it has no registered runner and no declared dependencies for the tensor frontier, endpoint extraction, or exact support scalar law.
+- **rationale:** Issue: the load-bearing contribution is the definition of Theta_R^(0) as a bounded prototype/comparison surface, plus unverified endpoint coefficients and affine dependence claims. Why this blocks: a prototype definition is useful staging, but without a runner or declared upstream tensor-frontier authorities it does not derive the exact Route-2 tensor observable, certify the endpoint values, or prove the affine support law. Repair target: register the primitive-chain/support-scalar authorities and add a runner that recomputes gamma_E/gamma_T endpoint values and the affine residuals against the stated baselines. Claim boundary until fixed: bounded naming of the current tensor-prototype comparison surface; not an audited tensor primitive theorem or endpoint coefficient law.
+- **open / conditional deps cited:**
+  - `S3_TIME_PRIMITIVE_CHAIN_NOTE.md`
   - `TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md`
 - **auditor confidence:** high
 
