@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:38:37.909257+00:00
+**Generated:** 2026-05-01T23:42:53.008381+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,23 +23,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
 | bounded | 163 |
-| support | 134 |
+| support | 133 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 958 |
-| ~~audited_failed~~ | 85 |
+| ~~audited_failed~~ | 86 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 324 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 56 |
+| `audited_failed` | 57 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 489 |
+| `unaudited` | 488 |
 
 | criticality | count |
 |---|---:|
@@ -1120,6 +1120,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `second_grown_family_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `self_gravity_backreaction_closure_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `session_summary_2026-04-01_topology` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
+| `seventh_family_diagonal_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `shapiro_complex_interaction_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `shapiro_diamond_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | F | - |
 | `shapiro_diamond_frequency_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | F | - |
@@ -14053,6 +14054,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The bounded historical claim is supported by the legacy frontier_axioms_16card.py proxy harness returning 16/16 on cubic, random geometric, and growing graphs while the note explicitly limits C11 to KG-like spectrum/CN scalar dynamics, C12 to an AB proxy, and the runner to historical control evidence rather than current-main evidence.  _(class `B`)_
 - **chain closes:** True — The provided source note, runner summary, and current runner output agree on the material facts: the legacy proxy harness reports 16/16 for all three graph families, norm drift near machine precision, KG/AB caveats, and an explicit guardrail not to cite the harness as current-main evidence. Because the claim is only support/historical synthesis and not promotion of a live physics result, the chain closes at that declared tier.
 - **rationale:** The support boundary is internally accurate. Issue: the primary runner is explicitly legacy and cannot support a current-main graph-axiom or staggered successor claim. Why this does not block this row: the note states that limitation directly and frames itself as historical synthesis/support. Repair target: any re-promotion must be audited against current runner-backed claims such as corrected graph-KG and force-based staggered cards. Claim boundary until fixed: historical support note only, with C11 as KG-like spectrum/CN scalar control and C12 as AB proxy.
+- **auditor confidence:** high
+
+### `seventh_family_diagonal_boundary_note`
+
+- **Note:** [`SEVENTH_FAMILY_DIAGONAL_BOUNDARY_NOTE.md`](../../docs/SEVENTH_FAMILY_DIAGONAL_BOUNDARY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note's boundary read depends on the exact sweep summary that the diagonal-stripe scout is seed-selective, with only a narrow subset of rows passing the zero-source, neutral-cancellation, sign, and weak-field F~M gates.  _(class `B`)_
+- **chain closes:** False — The current SEVENTH_FAMILY_DIAGONAL_SWEEP.py run preserves the qualitative boundary read but reports 7/18 passing rows, not the note's 6/18 count. Because the exact pass count is part of the stated sweep summary, the note is stale relative to the current runner output.
+- **rationale:** Issue: The exact sweep count is stale: the note says passing rows are 6/18, while the current diagonal sweep reports 7/18 and includes drift=0.50, seed=1 as a pass. Why this blocks: an audit-clean boundary note must have current numerical row counts, especially when the count is the load-bearing evidence for selectivity. Repair target: update the note's pass count and any derived summary from the current sweep output, or attach the exact runner as the ledger runner. Claim boundary until fixed: the qualitative conclusion remains safe as a diagnosed seed-selective pocket, not family-wide seventh-family closure.
 - **auditor confidence:** high
 
 ### `shapiro_complex_interaction_note`
