@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:37:55.856528+00:00
+**Generated:** 2026-05-01T05:38:48.485956+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 212 |
-| support | 176 |
+| support | 175 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 828 |
+| ~~audited_conditional~~ | 829 |
 | ~~audited_failed~~ | 166 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 250 |
-| `audited_conditional` | 559 |
+| `audited_conditional` | 560 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 78 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 632 |
+| `unaudited` | 631 |
 
 | criticality | count |
 |---|---:|
@@ -860,6 +860,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_block_constraint_interpretation_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_casimir_block_localization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `universal_gr_invariant_nonlinear_completion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_tensor_variational_candidate_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | E | - |
 | `universal_qg_canonical_refinement_net_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -13192,6 +13193,20 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md`
   - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
   - `S3_ANOMALY_SPACETIME_LIFT_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_gr_invariant_nonlinear_completion_note`
+
+- **Note:** [`UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md`](../../docs/UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** For every positive invariant background D = diag(a,b,b,b), the exact Hessian weights give K_GR^iso(D) = M_D ⊗ Lambda_R and hence an exact nonlinear family of covariant quadratic boundary actions.  _(class `B`)_
+- **chain closes:** False — The algebraic form is plausible within the invariant family, but the note imports the all-orders observable generator, the positive slice generator, and the prior glue law without ledger dependencies, runner output, or proof artifact in this row.
+- **rationale:** Issue: the invariant-family nonlinear completion relies on unregistered upstream closure of W_iso(a,b), Lambda_R, and the isotropic glue law, and this row has no runner/proof artifact verifying the Hessian weights or strict-convexity identity across the positive family. Why this blocks: the conclusion is not just differentiating log a + 3 log b; it also asserts that the resulting family is the GR/Regge glue operator over the direct universal route. Repair target: register the cited observable/slice/glue authorities and add a runner that samples symbolic or exact positive (a,b), constructs M_D and Lambda_R, verifies positive definiteness and the completion identity, and records the scope as invariant-family only. Claim boundary until fixed: this remains support for an invariant-background nonlinear-completion route, not an audited closed nonlinear GR theorem.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_gr_lorentzian_global_atlas_closure_note`
