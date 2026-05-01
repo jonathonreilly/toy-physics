@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:36:52.755559+00:00
+**Generated:** 2026-05-01T05:37:55.856528+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 212 |
-| support | 177 |
+| support | 176 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 827 |
+| ~~audited_conditional~~ | 828 |
 | ~~audited_failed~~ | 166 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 250 |
-| `audited_conditional` | 558 |
+| `audited_conditional` | 559 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 78 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 633 |
+| `unaudited` | 632 |
 
 | criticality | count |
 |---|---:|
@@ -858,6 +858,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `three_generation_observable_theorem_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `three_generation_structure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_gr_block_constraint_interpretation_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `universal_gr_casimir_block_localization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_tensor_variational_candidate_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | E | - |
@@ -13159,6 +13160,20 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: the load-bearing Hamiltonian/momentum constraint interpretation depends on an unregistered universal-stack input and on the still-open identification of the block-localized universal Hessian with the Einstein/Regge constraint operator. Why this blocks: an exact lapse/shift/trace/shear block split does not by itself prove that the A1 and j=1 blocks are the physical GR constraint operators with the required normalization and sign conventions. Repair target: register the cited block-localization authorities and add a theorem/runner deriving the Einstein/Regge constraint-operator identification on the E ⊕ T1 complement. Claim boundary until fixed: the note may be used as support for a canonical universal block split and a provisional constraint-sector reading, not as a closed GR constraint derivation.
 - **open / conditional deps cited:**
   - `UNIVERSAL_GR_BLOCK_CONSTRAINT_INTERPRETATION_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_gr_casimir_block_localization_note`
+
+- **Note:** [`UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md`](../../docs/UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the 8D complement of Pi_A1, the SO(3) Casimir has spectrum -2 with multiplicity 3 and -6 with multiplicity 5, canonically splitting the complement into shift and traceless-shear blocks.  _(class `B`)_
+- **chain closes:** False — The claimed Casimir spectrum and spectral projectors are the right kind of exact algebraic object, but this row has no registered dependencies or runner/proof artifact exposing the universal representation matrices and projector construction.
+- **rationale:** Issue: the exact Casimir spectrum, multiplicities, and spectral projectors are asserted from an unregistered universal stack with no executable or cited proof artifact in this ledger row. Why this blocks: the canonical lapse/shift/trace/shear localization depends on those projectors being computed from the stated universal SO(3) representation, not merely named. Repair target: register the upstream universal representation/quotient-kernel authority and add a runner or proof note that constructs Pi_A1, C, the -2/-6 eigenspaces, and the four orthogonal complete projectors. Claim boundary until fixed: the note remains support for the intended universal block-localization route, but not an audited closed theorem that canonical block localization is already established.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_gr_discrete_global_closure_note`
