@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:11:08.104321+00:00
+**Generated:** 2026-05-01T03:12:10.773323+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 251 |
-| support | 207 |
+| support | 206 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 12 |
 | ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 790 |
+| ~~audited_conditional~~ | 791 |
 | ~~audited_failed~~ | 146 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 230 |
-| `audited_conditional` | 517 |
+| `audited_conditional` | 518 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 9 |
 | `audited_renaming` | 15 |
-| `unaudited` | 723 |
+| `unaudited` | 722 |
 
 | criticality | count |
 |---|---:|
@@ -744,6 +744,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_lower_level_end_to_end_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_oriented_cycle_reduced_channel_nonselection_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `pmns_oriented_cycle_selection_structure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_right_polar_section_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_scalar_bridge_nonrealization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_sector_exchange_nonforcing_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -10456,6 +10457,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `scripts/frontier_pmns_oriented_cycle_selection_structure.py`
   - `scripts/pmns_lower_level_utils.py`
   - `scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py`
+- **auditor confidence:** high
+
+### `pmns_oriented_cycle_selection_structure_note`
+
+- **Note:** [`PMNS_ORIENTED_CYCLE_SELECTION_STRUCTURE_NOTE.md`](../../docs/PMNS_ORIENTED_CYCLE_SELECTION_STRUCTURE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_oriented_cycle_selection_structure_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Exact C3 covariance collapses the oriented-cycle coefficients to sigma C, the sole-axiom free point sets sigma=0, and the graph-first residual antiunitary symmetry reduces the channel to c1=conjugate(c3), c2 real.  _(class `A`)_
+- **chain closes:** False — The algebraic reductions pass, but the note depends on an imported oriented-cycle readout law and imposed graph-first residual symmetry that are not registered as dependencies or independently closed here.
+- **rationale:** Issue: the runner verifies the C3-fixed locus, free-point sigma=0, and residual antiunitary fixed locus, but the row has deps=[] while importing the oriented-cycle value-law/readout and lower-level CYCLE/I3 machinery. Why this blocks: the selection structure is algebraically correct once those carrier/readout inputs and the graph-first residual action are accepted, but this note does not derive their physical or ledger authority and one imported readout is an audited renaming. Repair target: register the oriented-cycle readout and graph-first residual-selection authorities as dependencies, or derive the carrier/readout and residual action inside this note. Claim boundary until fixed: exact algebraic selection-structure lemma for the encoded cycle channel; not a closed PMNS value-selection theorem.
+- **open / conditional deps cited:**
+  - `PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md`
+  - `scripts/pmns_lower_level_utils.py`
+  - `scripts/frontier_pmns_oriented_cycle_selection_structure.py`
 - **auditor confidence:** high
 
 ### `pmns_right_conjugacy_invariant_no_go_note`
