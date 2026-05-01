@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 8,
     "high": 195,
-    "leaf": 193,
+    "leaf": 192,
     "medium": 133
   },
-  "generated_at": "2026-05-01T20:47:55.139693+00:00",
+  "generated_at": "2026-05-01T20:49:56.075634+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10117,23 +10117,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "quasi_persistent_relaunch_probe_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -13694,6 +13677,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 123,
-  "total_pending": 529
+  "ready_count": 122,
+  "total_pending": 528
 }

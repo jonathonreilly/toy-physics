@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-01T20:47:55.091307+00:00",
+  "computed_at": "2026-05-01T20:49:56.021042+00:00",
   "cycle_examples": [
     [
       "alpha_s_derived_note",
@@ -27,7 +27,7 @@
   ],
   "cycles_detected": 61,
   "effective_status_counts": {
-    "audited_conditional": 932,
+    "audited_conditional": 933,
     "audited_decoration": 5,
     "audited_failed": 83,
     "audited_numerical_match": 26,
@@ -38,7 +38,7 @@
     "proposed_retained": 1,
     "retained": 76,
     "retained_no_go": 54,
-    "support": 142
+    "support": 141
   },
   "proposed_demoted_by_upstream_count": 140,
   "proposed_demoted_by_upstream_examples": [

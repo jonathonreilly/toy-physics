@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:47:55.380817+00:00
+**Generated:** 2026-05-01T20:49:56.318798+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 173 |
-| support | 142 |
+| support | 141 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 932 |
+| ~~audited_conditional~~ | 933 |
 | ~~audited_failed~~ | 83 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 300 |
-| `audited_conditional` | 635 |
+| `audited_conditional` | 636 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 529 |
+| `unaudited` | 528 |
 
 | criticality | count |
 |---|---:|
@@ -917,6 +917,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_route2_exact_readout_map_note_2026-04-19` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `quark_strc_observable_principle_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quark_up_amplitude_provenance_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `rconn_derived_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -12969,6 +12970,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: the runner artifact is stale relative to the source note. The note advertises PASS=10 FAIL=0 and lists T10 det-phase-neutrality compatibility as a checked theorem step, but the current runner exits with PASS=9 FAIL=0, emits only unclassified PASS lines, and explicitly does not re-check T10. Why this blocks: the load-bearing theorem statement depends on the advertised det-phase compatibility and current executable evidence no longer matches the note's claimed verification surface. Repair target: either restore an executable T10 det-phase neutrality check and classified PASS output, or narrow the note and audit target to the nine RPSR/scalar-tensor algebra checks that the current runner actually performs. Claim boundary until fixed: T1-T9 reproduce the stated algebraic RPSR and scalar/tensor support identities; the full ten-check theorem closure advertised by the note is not current.
 - **open / conditional deps cited:**
   - `scripts/frontier_quark_up_amplitude_rpsr_conditional.py`
+
+### `quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28`
+
+- **Note:** [`QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md`](../../docs/QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The theorem claims the existing STRC/RPSR package supplies exact retained support for the reduced up-sector amplitude a_u = sqrt(5/6) * (1 - 48/(49 sqrt(42))), but that no typed readout edge currently promotes that reduced amplitude to physical up-type Yukawa ratios or non-top masses.  _(class `B`)_
+- **chain closes:** False — The amplitude algebra is reproducible, but the no-readout boundary is conditional on an explicit typed-edge inventory and repaired upstream RPSR verification.
+- **rationale:** Issue: the exact reduced-amplitude algebra is checked, but the mass-retention boundary depends on the claim that the current support bank lacks a typed amplitude-to-Yukawa readout, and the runner verifies that absence using a hand-constructed toy edge graph plus string checks rather than an enumerated dependency/readout inventory. The note also imports the upstream RPSR theorem surface, whose current runner output is stale relative to its advertised PASS=10 verification. Why this blocks: absence of a readout edge is the load-bearing boundary claim, and it cannot be ratified as closed from a synthetic graph or stale upstream verification surface. Repair target: add a generated typed-edge inventory over the cited Lane 3 notes, register the upstream dependencies in the ledger, and repair or narrow the stale RPSR runner surface. Claim boundary until fixed: the runner supports the reduced-amplitude algebra and the note correctly does not itself promote a_u to m_u/m_c, m_c/m_t, or non-top Yukawa closure.
+- **open / conditional deps cited:**
+  - `QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`
+  - `scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py`
 
 ### `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19`
 
