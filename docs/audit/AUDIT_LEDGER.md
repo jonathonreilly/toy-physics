@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:13:13.916177+00:00
+**Generated:** 2026-05-01T05:14:05.742701+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 220 |
+| bounded | 219 |
 | support | 182 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 818 |
-| ~~audited_failed~~ | 162 |
+| ~~audited_failed~~ | 163 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 246 |
 | `audited_conditional` | 549 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 74 |
+| `audited_failed` | 75 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 651 |
+| `unaudited` | 650 |
 
 | criticality | count |
 |---|---:|
@@ -913,6 +913,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `global_coherence_predictor_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
+| `gr_class_expansion_finite_rank_target_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_portability_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `grown_transfer_basin_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `h0125_failure_derivation` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -7100,6 +7101,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** Issue: the row still presents a proposed-retained partial predictor even though the source note's lead update and the one-hop off-scaffold authority state that the advantage collapsed to 5/9 and the classifier program is closed. Why this blocks: the current packet contradicts the retained surface; at most the scaffolded 7/9 result remains historical finite evidence. Repair target: change the source status to bounded/retired or split out a historical scaffolded-observation note, then register and run the predictor/off-scaffold runners if a finite-result audit is desired. Claim boundary until fixed: safe to say free_coh was a scaffold-specific empirical predictor candidate that failed off-scaffold; not safe to retain it as a live global coherence predictor.
 - **open / conditional deps cited:**
   - `GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md`
+- **auditor confidence:** high
+
+### `gr_class_expansion_finite_rank_target_note`
+
+- **Note:** [`GR_CLASS_EXPANSION_FINITE_RANK_TARGET_NOTE.md`](../../docs/GR_CLASS_EXPANSION_FINITE_RANK_TARGET_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The smallest honest widening beyond the current restricted gravity class is the exact finite-rank source-to-metric closure with exact boundary action and bounded scalar metric reduction.  _(class `C`)_
+- **chain closes:** False — The primary runner does not execute in the repository checkout: it hard-codes /private/tmp/physics-review-active and raises FileNotFoundError before loading the finite-rank source-to-metric module. With no current runner output, the class-expansion target cannot be audited as checked on this branch.
+- **rationale:** Issue: the registered primary runner is stale and exits nonzero because it imports frontier_finite_rank_source_to_metric_theorem.py from /private/tmp/physics-review-active instead of the current repo. Why this blocks: the note's support claim depends on the runner confirming finite-rank source renormalization, boundary-action stationarity, scalar metric residual reduction, and nonzero 3+1 residual, but none of those checks run. Repair target: update the runner to resolve ROOT from its own repo path and rerun it to regenerate current output. Claim boundary until fixed: the source note may still describe the intended finite-rank widening target, but this audit cannot ratify it from a broken primary runner.
 - **auditor confidence:** high
 
 ### `graph_first_selector_derivation_note`
