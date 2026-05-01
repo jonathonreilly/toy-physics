@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:22:32.042579+00:00
+**Generated:** 2026-05-01T03:25:14.259023+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 246 |
+| bounded | 245 |
 | support | 204 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 13 |
+| ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 51 |
 | ~~audited_conditional~~ | 790 |
 | ~~audited_failed~~ | 150 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 520 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 67 |
-| `audited_numerical_match` | 10 |
+| `audited_numerical_match` | 11 |
 | `audited_renaming` | 18 |
-| `unaudited` | 714 |
+| `unaudited` | 713 |
 
 | criticality | count |
 |---|---:|
@@ -924,6 +924,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `mirror_chokepoint_boundary_fit_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
+| `quark_e_channel_endpoint_quotient_law_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `tensor_support_center_excess_law_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `wave_direct_dm_h025_seed0_crossfamily_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -10978,6 +10979,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** False — The allowed inputs verify a numerical optimizer found free complex carriers matching the target surface, but do not derive xi_u or xi_d or justify them as physical carriers.
 - **rationale:** Issue: The claimed completion is produced by solving large free complex carriers xi_u and xi_d against the CKM/mass-ratio target surface. Why this blocks: The runner verifies a tuned numerical match on an expanded ansatz, but the carriers are solved rather than derived and are not perturbative; the chain does not establish retained physical closure. Repair target: Provide an independent derivation or retained upstream theorem fixing xi_u and xi_d, including carrier normalization/readout and determinant-neutral constraint, then have the runner test that derived point rather than fit it. Claim boundary until fixed: Bounded numerical support that such an extended carrier surface can fit the listed targets.
 - **auditor confidence:** 0.91
+
+### `quark_e_channel_endpoint_quotient_law_note_2026-04-19`
+
+- **Note:** [`QUARK_E_CHANNEL_ENDPOINT_QUOTIENT_LAW_NOTE_2026-04-19.md`](../../docs/QUARK_E_CHANNEL_ENDPOINT_QUOTIENT_LAW_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-quark_e_channel_endpoint_quotient_law_note_2026-04-19`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Inside a controlled low-rational endpoint class, gamma_E(center)/gamma_E(shell) is best rationalized by 15/8, implying r_E=21/4 and D_E=21/8 near the live bounded endpoint branch.  _(class `G`)_
+- **chain closes:** False — The runner verifies the endpoint algebra and nearest-rational scan, but the 15/8 quotient and 21/8 denominator are selected by proximity within a chosen rational class rather than derived from exact tensor machinery.
+- **rationale:** Issue: the row's positive content is a bounded low-rational rationalization of the live E-channel endpoint quotient and anchored denominator, not an exact derivation. Why this blocks: the runner passes and the endpoint identities are real, but 15/8 is chosen because it is nearest in the declared numerator/denominator search class, while the shell-multiplicity bridge a_T/a_E=-2 and T-channel r_T=-1 remain candidates/imported premises. Repair target: derive gamma_E(center)/gamma_E(shell)=15/8 and a_T/a_E=-2 from the Route-2 tensor support observable or another retained theorem, then have the runner verify that derivation instead of a nearest-rational scan. Claim boundary until fixed: useful bounded numerical endpoint-law candidate on the current anchored branch; not an audited exact quark E-channel readout primitive.
+- **open / conditional deps cited:**
+  - `scripts/frontier_quark_endpoint_readout_constraints.py`
+  - `scripts/frontier_quark_projector_parameter_audit.py`
+  - `scripts/frontier_quark_up_amplitude_candidate_scan.py`
+- **auditor confidence:** high
 
 ### `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28`
 
