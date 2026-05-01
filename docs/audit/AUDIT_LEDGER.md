@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T12:05:40.354388+00:00
+**Generated:** 2026-05-01T12:08:30.750642+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 310 |
+| `audited_clean` | 311 |
 | `audited_conditional` | 591 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 530 |
+| `unaudited` | 529 |
 
 | criticality | count |
 |---|---:|
@@ -364,6 +364,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_c3_circulant_source_law_boundary_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_c3_oriented_ward_splitter_support_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
+| `quark_five_sixths_scale_selection_boundary_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -12784,6 +12785,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `QUARK_ENDPOINT_READOUT_CONSTRAINTS_NOTE_2026-04-19.md`
   - `QUARK_E_CHANNEL_ENDPOINT_QUOTIENT_LAW_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_five_sixths_scale_selection_boundary_note_2026-04-28`
+
+- **Note:** [`QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md`](../../docs/QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Because the inherited one-loop transport factor between the threshold-local and common-scale comparators is nontrivial, the same fixed exponent cannot be an exact scale-blind theorem on both surfaces; a retained 3A proof still requires an independent scale-selection or RG-covariant transport theorem.  _(class `B`)_
+- **chain closes:** True — The runner verifies the exact SU(3) identity C_F - T_F = 5/6, the CKM-atlas input, the sharp threshold-local bounded match, the material common-scale mismatch, and the scale-blind obstruction with PASS=34 FAIL=0. Those checks support the note's boundary claim without promoting retained down-type masses.
+- **rationale:** The boundary theorem closes as support: exact Casimir algebra plus the retained CKM value gives a sharp bounded threshold-local match, but the same exponent fails materially on the common-scale comparator because the one-loop transport factor is nontrivial. The runner verifies that the threshold-local surface is much closer while also showing the match is not exact and still depends on a comparator convention. Residual risk is exactly the stated open target: a non-perturbative 5/6 exponentiation mechanism plus scale-selection or RG-covariant transport theorem is still required before any retained down-type mass-ratio closure.
 - **auditor confidence:** high
 
 ### `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28`
