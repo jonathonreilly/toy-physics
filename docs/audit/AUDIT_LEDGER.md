@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:23:34.291221+00:00
+**Generated:** 2026-05-01T01:25:09.862193+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
-| bounded | 272 |
+| bounded | 271 |
 | support | 230 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 762 |
+| ~~audited_conditional~~ | 763 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 484 |
+| `audited_conditional` | 485 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 763 |
+| `unaudited` | 762 |
 
 | criticality | count |
 |---|---:|
@@ -646,6 +646,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_brannen_callan_harvey_candidate_note_2026-04-22` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_brannen_geometry_dirac_support_note_2026-04-22` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `koide_brannen_phase_reduction_theorem_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `koide_cl3_selector_gap_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `koide_cyclic_wilson_descendant_law_note_2026-04-18` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -7998,6 +7999,22 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **open / conditional deps cited:**
   - `KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`
   - `SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`
+- **auditor confidence:** high
+
+### `koide_cl3_selector_gap_note_2026-04-19`
+
+- **Note:** [`KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md`](../../docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-koide_cl3_selector_gap_note_2026-04-19`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims that the Cl(3) doublet/Kramers, baryon Schur-complement, SU(3)-modified-coupling, and eigenvalue-degeneracy routes have been sharpened enough to show no Cl(3)-algebraic selector currently derives the physical m_* point.  _(class `B`)_
+- **chain closes:** False — The note honestly records the selector gap, but its exact/numerical route-exhaustion claims rely on undeclared Cl(3)-SM embedding, frozen H matrix, Koide selected point, and scan computations with no runner or dependency surface.
+- **rationale:** Issue: the note is useful bounded gap bookkeeping, but the claimed route exhaustion is not independently auditable from this row. It imports the Cl(3)->SM embedding, H_frozen entries, E1/SELECTOR cancellation, baryon coupling symmetry, SU(3) coupling variants, eigenvalue scans, and the physical m_* witness without declared dependencies or a runner; the open-routes section also says the full 4x4 microscopic block calculation is not yet formally proved. Why this blocks: the audit cannot distinguish an exhausted Cl(3)-algebraic no-go from an inventory of tried ansatz routes, and the file ends with an incomplete boundary sentence, so the scoped claim boundary is not fully recorded in-source. Repair target: add/register a runner that reconstructs the doublet structure, m_DA, GAMMA=1/2 cancellation, Schur-complement claim, coupling-variant scans, and eigenvalue-degeneracy check from explicit inputs, or declare the charged-lepton/Koide selector and Cl(3)-SM embedding authorities as dependencies. Claim boundary until fixed: bounded support that the listed candidate routes do not presently derive m_*; not a closed theorem that all Cl(3)-algebraic selector routes are exhausted.
+- **open / conditional deps cited:**
+  - `KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md`
+  - `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`
+  - `charged_lepton_koide_review_packet_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `koide_cyclic_wilson_descendant_law_note_2026-04-18`
