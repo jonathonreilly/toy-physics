@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:14:06.284123+00:00
+**Generated:** 2026-05-01T23:17:12.546056+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 67 |
+| **retained_no_go** | 68 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 4 |
+| _proposed_no_go_ | 3 |
 | bounded | 163 |
 | support | 134 |
 | open | 6 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 316 |
+| `audited_clean` | 317 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 497 |
+| `unaudited` | 496 |
 
 | criticality | count |
 |---|---:|
@@ -370,6 +370,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_lane3_stuck_fanout_synthesis_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
+| `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `s3_boundary_link_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -13128,6 +13129,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md`
 - **auditor confidence:** 0.86
+
+### `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28`
+
+- **Note:** [`QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md`](../../docs/QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-019de5d4`  (codex-current; independence=fresh_context)
+- **load-bearing step:** With granted beta_T/alpha_T=-1 and alpha_T/alpha_E=-2, the reduced readout family P(rho_E)=[[1,0,rho_E,0],[0,-2,0,2]] maps E-shell to (1,0) and E-center to (1+rho_E/6,0), so shell normalization and channelwise linearity impose no equation selecting rho_E; rho_E=21/4 only follows if an additional E-center endpoint ratio such as gamma_T(center)/gamma_E(center)=-8/9 is supplied.  _(class `A`)_
+- **chain closes:** True — Within the supplied restricted Route-2 carrier/readout premises, the no-go is an exact algebraic freedom argument: the allowed map contains rho_E as an unconstrained parameter, all rho_E preserve the shell condition, and the target value is shown to be equivalent to adding a missing center-ratio primitive rather than deriving from the granted inputs.
+- **rationale:** The negative boundary closes on the stated premises. The runner checks the reduced family, shell/center images, target q_E=15/8 equivalence, non-uniqueness under naturality frames, and comparator firewall. No hidden observed-mass or endpoint selector is needed for the no-go; the result is that 21/4 is not forced without adding a new primitive.
+- **auditor confidence:** high
 
 ### `quark_route2_exact_readout_map_note_2026-04-19`
 
