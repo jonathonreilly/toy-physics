@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:43:31.199930+00:00
+**Generated:** 2026-05-01T07:46:06.216855+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 283 |
+| `audited_clean` | 284 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 562 |
+| `unaudited` | 561 |
 
 | criticality | count |
 |---|---:|
@@ -329,6 +329,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `packet_memory_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `persistent_inertial_object_probe_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `persistent_object_adaptive_readout_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `persistent_object_adaptive_readout_v2_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -11429,6 +11430,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The entropy-guided adaptive contour preserves weak-field sign and near-linear F~M scaling while reducing detector support relative to the broad readout on the compact repeated-update source object.  _(class `C`)_
 - **chain closes:** True — The current registered runner reproduces the zero-source reduction and frozen broad/adaptive readout table, including adaptive F~M=1.04 at each step, TOWARD=12/12, support fraction 0.264, capture 0.351, and mean delta 1.972e-02. The note explicitly leaves inertial-mass closure and detector localization unsolved.
 - **rationale:** The bounded positive readout claim is current with the runner and the output supports each frozen number used in the note. The adaptive contour is materially different from fixed windows/tapers and improves detector support while preserving the tested sign and near-linear mass-scaling class. Residual risk is exactly the stated boundary: the readout remains detector-side and does not produce a persistent localized inertial object.
+- **auditor confidence:** high
+
+### `persistent_object_adaptive_readout_v2_note`
+
+- **Note:** [`PERSISTENT_OBJECT_ADAPTIVE_READOUT_V2_NOTE.md`](../../docs/PERSISTENT_OBJECT_ADAPTIVE_READOUT_V2_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The frontier-shell v2 readout localizes harder but fails the weak-field sign and near-linear mass-scaling checks, so it is not a viable readout-localization route on the retained family.  _(class `C`)_
+- **chain closes:** True — The registered runner reproduces the zero-source reduction and the frozen no-go table: frontier-shell TOWARD=2/12, F~M=0.74,1.78,1.78, capture=0.003, support fraction=0.241, and mean delta=-8.877e-04. Those current outputs support the bounded negative claim.
+- **rationale:** The note is a bounded no-go, and the current runner verifies exactly why v2 fails: localization improves, but the sign, mass-scaling class, and capture collapse. The note does not claim inertial-mass closure or a successful field equation; it preserves v1 as the better detector-side bridge and freezes v2 as too selective. Residual risk is limited to future readout architectures, which the source explicitly leaves open.
 - **auditor confidence:** high
 
 ### `persistent_object_blended_readout_transfer_sweep_note_2026-04-16`
