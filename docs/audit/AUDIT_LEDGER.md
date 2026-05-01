@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:13:41.262609+00:00
+**Generated:** 2026-05-01T07:15:16.287865+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 189 |
-| support | 164 |
+| support | 163 |
 | open | 9 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 855 |
+| ~~audited_conditional~~ | 856 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 274 |
-| `audited_conditional` | 585 |
+| `audited_conditional` | 586 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 576 |
+| `unaudited` | 575 |
 
 | criticality | count |
 |---|---:|
@@ -785,6 +785,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_gravity_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_program_synthesis` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `mirror_vs_central_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `moving_source_cross_family_replay_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `n_eff_from_three_generations_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `neutrino_axiom3_reading_stuck_fanout_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_global_lift_partial_theorem_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -10762,6 +10763,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The note claims a narrow proposed-retained extension: the moving-source centroid-bias observable survives on two portable grown families under exact zero-source and matched static controls.  _(class `C`)_
 - **chain closes:** True — The live runner exactly reproduces the source-note table: both families have zero-source static and moving baselines at 0.000e+00, v=0 matched-static deltas at +0.000000e+00, and signed delta_y vs static responses that flip with v on both drift/restore families. The runner itself states the correct boundary: this is a bounded moving-source proxy on grown geometries, not a wave theory.
 - **rationale:** The finite extension closes on its own terms: the runner builds both named portable grown families, applies exact zero-source and v=0 static controls, and reproduces the signed moving-source centroid-bias rows with six seeds per velocity. This clean audit is narrow: it certifies only the two displayed drift/restore family cards, the signed delta_y-vs-static pattern, exact zero baselines, and flat v=0 control; it does not certify a wave theory, asymptotic portability law, or broader class of generated families.
+- **auditor confidence:** high
+
+### `moving_source_cross_family_replay_note`
+
+- **Note:** [`MOVING_SOURCE_CROSS_FAMILY_REPLAY_NOTE.md`](../../docs/MOVING_SOURCE_CROSS_FAMILY_REPLAY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** No second-family moving-source replay is retained yet; the existing portable grown-row log remains the only frozen moving-source evidence and this row is duplicate/closure support.  _(class `B`)_
+- **chain closes:** False — The cited portability log supports the existence of one narrow moving-source proxy, but the row has no registered dependencies for the referenced notes and no runner or inventory artifact proving the absence of any second-family replay. The closure diagnosis is therefore useful but not fully auditable from the provided context.
+- **rationale:** Issue: the load-bearing duplicate/closure diagnosis imports a repo-wide negative inventory without registered one-hop authorities. Why this blocks: the audit can verify the cited moving-source portability log exists and has the stated controls, but cannot verify from this row alone that no distinct second-family replay is retained elsewhere. Repair target: register the moving-source and vector-extension notes as dependencies and/or generate an inventory runner for second-family replay candidates. Claim boundary until fixed: this is support for avoiding duplicate promotion, not an audited theorem about the complete moving-source evidence surface.
 - **auditor confidence:** high
 
 ### `multipole_tidal_response_note`
