@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:56:22.763628+00:00
+**Generated:** 2026-05-01T02:58:23.638314+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 256 |
+| bounded | 255 |
 | support | 211 |
-| open | 15 |
+| open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 12 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 783 |
+| ~~audited_conditional~~ | 785 |
 | ~~audited_failed~~ | 144 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 230 |
-| `audited_conditional` | 511 |
+| `audited_conditional` | 512 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 9 |
 | `audited_renaming` | 14 |
-| `unaudited` | 732 |
+| `unaudited` | 731 |
 
 | criticality | count |
 |---|---:|
@@ -799,6 +799,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `three_generation_structure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `universal_gr_tensor_variational_candidate_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | E | - |
 | `universal_qg_canonical_refinement_net_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_canonical_smooth_geometric_action_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_inverse_limit_closure_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -11970,6 +11971,22 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** On the Lorentzian class, H_D is no longer positive definite; H_D remains exactly nondegenerate; therefore K_GR(D) remains exactly nondegenerate, so F_* = K_GR(D)^-1 J exists uniquely.  _(class `A`)_
 - **chain closes:** True — At support scope, the note only extends the local algebra from positive definite to nondegenerate Lorentzian backgrounds. Nondegeneracy is preserved by the stated congruence-covariant Hessian and tensoring with the positive slice generator, while the note explicitly withholds the stronger global solution-class claim.
 - **rationale:** Clean at the declared support boundary. The result is an algebraic signature-class extension: positivity is not needed for the local bilinear form to be defined or nondegenerate, only for convexity, and the note does not promote this to global Lorentzian GR closure. Residual risk is scope drift: downstream rows must not cite this as a global solution theorem or as physical Lorentzian-background selection.
+- **auditor confidence:** high
+
+### `universal_gr_tensor_variational_candidate_note`
+
+- **Note:** [`UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md`](../../docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-universal_gr_tensor_variational_candidate_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Given an exact scalar source generator W[J] and a lifted background metric source g_*, define the tensor-valued variational candidate by S_GR^cand[h] := 1/2 D^2 W[g_*](h,h) on symmetric 3+1 metric perturbations.  _(class `E`)_
+- **chain closes:** False — The note defines a plausible Hessian candidate, but it has no runner and depends on undeclared upstream scalar-observable, 3+1 lift, and tensor-quotient uniqueness inputs, including an audited-conditional observable-principle row.
+- **rationale:** Issue: the load-bearing object S_GR^cand[h] is introduced by definition as the metric-source Hessian of W at g_*, while the row declares deps=[] and has no registered runner for the Hessian/quotient checks. The scalar observable principle it imports is audited_conditional, and the tensor quotient uniqueness and curvature-localization blocker surfaces are unaudited. Why this blocks: a clean tensor variational candidate theorem requires audited inputs for W[J], the exact 3+1 lift/background source g_*, and the claimed symmetric quotient uniqueness/nondegeneracy; otherwise the note establishes only a conditional definition of the next object in the route. Repair target: declare the observable-principle, 3+1 lift, tensor-quotient uniqueness, and curvature-localization boundary notes as dependencies, register a runner that classifies Hessian symmetry/quotient-rank checks, and keep the Einstein/Regge identification explicitly out of scope until supplied. Claim boundary until fixed: conditional definition of a Hessian variational candidate on the assumed lifted background; not an independently audited tensor-valued GR action or curvature-dynamics theorem.
+- **open / conditional deps cited:**
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md`
+  - `UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_qg_canonical_refinement_net_note`
