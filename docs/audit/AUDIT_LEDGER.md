@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:16:44.851518+00:00
+**Generated:** 2026-05-01T03:18:00.915309+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 248 |
-| support | 205 |
+| support | 204 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 792 |
+| ~~audited_conditional~~ | 793 |
 | ~~audited_failed~~ | 146 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 230 |
-| `audited_conditional` | 519 |
+| `audited_conditional` | 520 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 10 |
 | `audited_renaming` | 17 |
-| `unaudited` | 718 |
+| `unaudited` | 717 |
 
 | criticality | count |
 |---|---:|
@@ -502,6 +502,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_triplet_normalization_target_note_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_two_higgs_closure_attacks_note_2026-04-15` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `dm_neutrino_weak_even_swap_reduction_theorem_note_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_weak_vector_theorem_note_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -4726,6 +4727,22 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The registered runner returned nonzero, so the current executable chain is not cleanly reproducible.
 - **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a support note with non-clean executable support.
 - **auditor confidence:** medium
+
+### `dm_neutrino_weak_even_swap_reduction_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM_NOTE_2026-04-15.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-dm_neutrino_weak_even_swap_reduction_theorem_note_2026-04-15`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Because the exact weak carrier is closed under E/T column swap and carries no exact E/T-distinguishing datum, any exact linear even-response readout built only from that carrier must satisfy M_even = M_even P_ET and hence M_even = v_even [1,1].  _(class `A`)_
+- **chain closes:** False — The fixed-point linear algebra passes, but the conclusion is conditional on the imported exact-carrier authority and the unproved rule that an exact readout must descend to the swap quotient.
+- **rationale:** Issue: the runner verifies the column-swap algebra and equal-column matrix form, but the row has deps=[] while reading S3-time tensor primitive/prototype notes, and the critical physical premise is that every exact even-response readout built from the current carrier must be swap-invariant. Why this blocks: the algebra M=M P_ET => equal columns is correct, but the audit cannot infer that all admissible exact readouts must quotient the E/T labels without a retained readout-invariance theorem. Repair target: register the exact weak-carrier and bounded prototype notes as dependencies, and add a theorem/runner check deriving the swap-quotient requirement for admissible exact even readouts. Claim boundary until fixed: conditional reduction of the even map to v_even[1,1] under the current exact carrier and swap-quotient premise; not a closed derivation of the even-response law.
+- **open / conditional deps cited:**
+  - `S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md`
+  - `S3_TIME_TENSOR_PRIMITIVE_PROTOTYPE_NOTE.md`
+  - `S3_TIME_CONSTRUCTED_SUPPORT_TENSOR_PRIMITIVE_NOTE.md`
+- **auditor confidence:** high
 
 ### `dm_neutrino_weak_matching_obstruction_note_2026-04-15`
 

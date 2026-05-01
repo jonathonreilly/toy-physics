@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 287,
-    "medium": 228
+    "medium": 227
   },
-  "generated_at": "2026-05-01T03:16:44.612397+00:00",
+  "generated_at": "2026-05-01T03:18:00.652091+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6446,23 +6446,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_yt_bottom_yukawa_retention.py",
       "transitive_descendants": 7
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_neutrino_weak_even_swap_reduction_theorem_note_2026-04-15",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.748,
-      "note_path": "docs/DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM_NOTE_2026-04-15.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_weak_even_swap_reduction_theorem.py",
-      "transitive_descendants": 37
     },
     {
       "audit_independence_required": "any_non_self",
@@ -16875,6 +16858,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 323,
-  "total_pending": 718
+  "ready_count": 322,
+  "total_pending": 717
 }
