@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:02:29.365890+00:00
+**Generated:** 2026-05-01T07:03:31.766116+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 267 |
+| `audited_clean` | 268 |
 | `audited_conditional` | 583 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 585 |
+| `unaudited` | 584 |
 
 | criticality | count |
 |---|---:|
@@ -303,6 +303,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `main_open_cubic_validation_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_backreaction_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `mesoscopic_surrogate_localization_frontier_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -10498,6 +10499,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The h=0.25 constrained localization replay shows the best annulus remains below the broad topN=196 control under the same support/capture floors, with meaningful improvement over topN=False.  _(class `C`)_
 - **chain closes:** False — The finite bounded-negative result closes numerically, but the row is queued as proposed_retained only because the Status line describes a final localization attempt on a proposed_retained family. The note itself does not supply a retained theorem.
 - **rationale:** Issue: The source is a final constrained localization control sweep on one h=0.25 ordered-lattice family, but the audit queue records it as proposed_retained because the Status line mentions the proposed_retained family being tested. Why this blocks: the runner can close the bounded negative comparison, but it cannot turn a finite single-family localization sweep into a retained theorem about localized inertial sources. Repair target: correct the Status/current_status to bounded/proposed_bounded, or provide a separate retained theorem deriving the broad-source frontier beyond this finite h=0.25 sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces topN 196 as overall best admissible, annulus 1:6 as best annulus with capture2=0.916 and score=0.9947, and meaningful improvement over topN=False; it is not safe to present this note as a retained localization theorem.
+- **auditor confidence:** high
+
+### `mesoscopic_surrogate_localization_frontier_note`
+
+- **Note:** [`MESOSCOPIC_SURROGATE_LOCALIZATION_FRONTIER_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_LOCALIZATION_FRONTIER_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** There is no single sharp collapse threshold; the 3D surrogate shows a localization/strength frontier where smaller sources are stable but weak and broader sources are stronger while remaining mesoscopic and multistage-stable.  _(class `C`)_
+- **chain closes:** True — The registered frontier runner recomputes the topN sweep and reproduces the note's compact and stronger mesoscopic corner values. The note's conclusion is limited to a bounded localization/strength frontier and explicitly avoids persistent-mass closure.
+- **rationale:** The runner directly checks the load-bearing frontier claim: the current output matches the frozen topN=9, topN=196, and topN=256 captures, deltas, ratios, scores, and width ratios, and the full sweep supports the stated tradeoff. The note does not overclaim a collapse threshold or localized persistent object. Residual risk is limited to future source families that might beat this frontier, which the note leaves as the next search target.
 - **auditor confidence:** high
 
 ### `minimal_absorbing_horizon_probe_note`
