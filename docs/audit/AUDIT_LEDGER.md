@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:04:44.415594+00:00
+**Generated:** 2026-05-01T11:06:45.037972+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 297 |
+| `audited_clean` | 298 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 545 |
+| `unaudited` | 544 |
 
 | criticality | count |
 |---|---:|
@@ -350,6 +350,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `pmns_c3_character_mode_reduction_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `pmns_right_conjugacy_invariant_no_go_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
+| `pmns_selector_three_identity_support_proposal_readme_2026-04-21` | support | ~~audited_clean~~ | support | cross_family | codex-current | D | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -12302,6 +12303,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: The PMNS selector package depends on two proposed selector equations, delta * q_+ = Q_Koide and det(H) = E2, plus a bounded numerical uniqueness search; the runner then checks that the recovered point fits NuFit bands. Why this blocks: a retained PMNS selector theorem cannot rest on unproved candidate laws or heuristic one-cluster evidence, even though the numerical packet is reproducible. Repair target: derive both selector equations from retained framework structure, prove basin uniqueness analytically on the relevant chamber, and then rerun the PMNS observable comparison without treating the selector laws as assumptions. Claim boundary until fixed: it is safe to keep this as a support proposal with exact chart identities, a reproducible candidate point, and a strong numerical PMNS fit; it is not safe to claim retained PMNS selector closure.
 - **open / conditional deps cited:**
   - `PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_PROPOSAL_README_2026-04-21.md`
+- **auditor confidence:** high
+
+### `pmns_selector_three_identity_support_proposal_readme_2026-04-21`
+
+- **Note:** [`PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_PROPOSAL_README_2026-04-21.md`](../../docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_PROPOSAL_README_2026-04-21.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The proposed three-identity affine-Hermitian PMNS selector system solves to the reported chamber point and yields PMNS observables inside the runner's NuFit 5.3 normal-ordering comparison bands, while remaining a support proposal rather than retained closure.  _(class `D`)_
+- **chain closes:** True — The registered runner completes with PASS=19 FAIL=0, reproducing the exact chart identities, the solution (m, delta, q_+)=(2/3, 0.933051..., 0.714502...), the quoted PMNS observables, and the bounded one-cluster multi-start result.
+- **rationale:** Clean within the note's support-proposal boundary. The note explicitly does not claim the selector equations are retained-derived or that PMNS closure is solved; it claims this small proposed law gives a concrete interior chamber point with a strong numerical PMNS comparison and bounded uniqueness evidence. The current runner reproduces the reported solution, determinant/Koide identities, NuFit-band checks, negative sin(delta_CP), Jarlskog band, and one-cluster search result. Residual risk is exactly the note's stated gap: delta*q_+=Q_Koide and det(H)=E2 remain proposed selector identities, not retained framework derivations.
 - **auditor confidence:** high
 
 ### `pmns_selector_unique_amplitude_slot_note`
