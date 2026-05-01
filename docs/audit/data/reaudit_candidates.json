@@ -14,15 +14,17 @@
     "audited_renaming"
   ],
   "eligible_current_statuses": [
+    "proposed_no_go",
     "proposed_promoted",
     "proposed_retained"
   ],
-  "generated_at": "2026-05-01T12:13:59.732005+00:00",
+  "generated_at": "2026-05-01T14:34:53.945918+00:00",
   "policy": "reaudit_unblocked_by_ratified_dependencies_v1",
   "policy_summary": "Non-clean audited proposed claims whose current one-hop dependencies are all retained/promoted and whose audit-time dependency snapshot contains at least one dependency that has since become retained/promoted.",
   "ratified_dependency_statuses": [
     "promoted",
-    "retained"
+    "retained",
+    "retained_no_go"
   ],
   "total_candidates": 0
 }

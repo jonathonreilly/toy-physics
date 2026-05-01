@@ -5,7 +5,7 @@
     "leaf": 205,
     "medium": 137
   },
-  "generated_at": "2026-05-01T12:13:59.676770+00:00",
+  "generated_at": "2026-05-01T14:34:53.911013+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -419,6 +419,25 @@
       "ready": true,
       "runner_path": "scripts/frontier_planck_parent_source_hidden_character_nogo.py",
       "transitive_descendants": 42
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "planck_finite_response_no_go_note_2026-04-24",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_no_go",
+      "deps": [
+        "planck_parent_source_hidden_character_no_go_note_2026-04-24"
+      ],
+      "direct_in_degree": 9,
+      "load_bearing_score": 9.892,
+      "note_path": "docs/PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_planck_finite_response_nogo.py",
+      "transitive_descendants": 41
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -2958,25 +2977,6 @@
       "note_path": "docs/AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md",
       "ready": false,
       "runner_path": "scripts/frontier_area_law_quarter_broader_no_go.py",
-      "transitive_descendants": 41
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "planck_finite_response_no_go_note_2026-04-24",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_no_go",
-      "deps": [
-        "planck_parent_source_hidden_character_no_go_note_2026-04-24"
-      ],
-      "direct_in_degree": 9,
-      "load_bearing_score": 9.892,
-      "note_path": "docs/PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_planck_finite_response_nogo.py",
       "transitive_descendants": 41
     },
     {
@@ -13996,6 +13996,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 147,
+  "ready_count": 148,
   "total_pending": 548
 }
