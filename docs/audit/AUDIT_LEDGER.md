@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:32:22.411182+00:00
+**Generated:** 2026-05-01T02:34:50.975908+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 90 |
 | _proposed_retained_ | 2 |
-| bounded | 260 |
+| bounded | 259 |
 | support | 211 |
 | open | 15 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 775 |
+| ~~audited_conditional~~ | 776 |
 | ~~audited_failed~~ | 144 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 507 |
+| `audited_conditional` | 508 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 14 |
-| `unaudited` | 734 |
+| `unaudited` | 733 |
 
 | criticality | count |
 |---|---:|
@@ -736,6 +736,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_current_bank_value_selection_nogo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_lower_level_end_to_end_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `pmns_right_polar_section_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_scalar_bridge_nonrealization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_sector_exchange_nonforcing_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_sector_orientation_orbit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -10321,6 +10322,26 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** If I(Y)=F(Y^dag Y) with F(U K U^dag)=F(K) for all U in U(3), then I is constant on the exact right orbit Y -> Y U^dag, while the admitted selector and sheet-fixing data vary along that orbit.  _(class `C`)_
 - **chain closes:** True — The no-go closes as a support-tier conditional theorem: conjugacy invariance makes F(K) orbit-constant by definition, and the runner exhibits right-orbit samples where the target right-Gram selector and |K12| sheet datum vary while K's conjugacy invariants are unchanged. The result only excludes right-conjugacy-invariant completions under the admitted-data assumptions; it does not derive a canonical right frame or positive PMNS closure.
 - **rationale:** The support-tier no-go is an exact orbit-blindness argument, not a positive PMNS derivation. A right-conjugacy-invariant functional of K is necessarily constant on K's conjugacy orbit, while the runner constructs same-orbit samples where the admitted selector score and |K12| sheet datum change without changing spectral/trace signatures. Residual risk is downstream overuse: this does not validate the admitted right-Gram route itself, the scalar-bank no-go chain, or any canonical right-frame law.
+- **auditor confidence:** high
+
+### `pmns_right_polar_section_note`
+
+- **Note:** [`PMNS_RIGHT_POLAR_SECTION_NOTE.md`](../../docs/PMNS_RIGHT_POLAR_SECTION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_right_polar_section_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For full-rank Y, the positive polar factor Y_+(H)=H^(1/2) is the unique positive Hermitian right-orbit representative; comparing upper off-diagonal support in H_nu^(1/2) and H_e^(1/2) gives a branch selector on the assumed generic one-sided patch, while remaining sheet-even because it factors through H.  _(class `A`)_
+- **chain closes:** False — The polar-section algebra is valid generically, but the PMNS branch/sheet handoff relies on undeclared inputs, including missing inverse-problem/right-frame/sheet notes and a failed quadratic-sheet row; the runner also emits unclassified PASS lines.
+- **rationale:** Issue: the runner completes with PASS=19/FAIL=0, but the PASS lines are unclassified and the ledger row has deps=[] while the theorem assumes selected-branch Hermitian inverse-problem theorems, branch-conditioned quadratic-sheet closure, branch sheet nonforcing, right-frame orbit obstruction, right-conjugacy no-go, and intrinsic-boundary/reviewer-packet bank text. Several of those authority surfaces are missing from the ledger or absent as files, and the branch-conditioned quadratic-sheet closure row is currently audited_failed. Why this blocks: the generic polar decomposition Y_+(H)=H^(1/2) is a true local algebraic section, but the stronger PMNS claim that it cleanly realizes the reduced branch selector and isolates only a residual sheet datum cannot be audited without those branch/sheet/Hermitian-data inputs. Repair target: declare and restore the inverse-problem, branch-sheet, right-frame, right-conjugacy, and intrinsic-boundary dependencies; resolve the failed quadratic-sheet row; and update the runner with classified A/B PASS lines separating polar algebra from cross-note bank checks. Claim boundary until fixed: generic full-rank polar-section algebra and sampled branch-support behavior from H; not an independently audited PMNS endpoint theorem about branch readability and residual sheet closure.
+- **open / conditional deps cited:**
+  - `NEUTRINO_DIRAC_TWO_HIGGS_OBSERVABLE_INVERSE_PROBLEM_NOTE.md`
+  - `CHARGED_LEPTON_TWO_HIGGS_OBSERVABLE_INVERSE_PROBLEM_NOTE.md`
+  - `PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md`
+  - `PMNS_BRANCH_SHEET_NONFORCING_NOTE.md`
+  - `PMNS_RIGHT_FRAME_ORBIT_OBSTRUCTION_NOTE.md`
+  - `PMNS_RIGHT_CONJUGACY_INVARIANT_NO_GO_NOTE.md`
+  - `PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE.md`
 - **auditor confidence:** high
 
 ### `pmns_scalar_bridge_nonrealization_note`
