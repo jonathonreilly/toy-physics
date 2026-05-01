@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:34:50.975908+00:00
+**Generated:** 2026-05-01T02:39:17.269586+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 90 |
 | _proposed_retained_ | 2 |
-| bounded | 259 |
+| bounded | 258 |
 | support | 211 |
 | open | 15 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 16 |
+| ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 776 |
+| ~~audited_conditional~~ | 780 |
 | ~~audited_failed~~ | 144 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 508 |
+| `audited_conditional` | 509 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 64 |
-| `audited_numerical_match` | 12 |
+| `audited_numerical_match` | 10 |
 | `audited_renaming` | 14 |
-| `unaudited` | 733 |
+| `unaudited` | 734 |
 
 | criticality | count |
 |---|---:|
@@ -47,7 +47,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 386 |
 | `leaf` | 769 |
 
-- **Proposed claims demoted by upstream:** 129
+- **Proposed claims demoted by upstream:** 131
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -700,6 +700,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lepton_single_higgs_pmns_triviality_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `linear_response_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_second_order_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `linear_response_true_kubo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `local_zsym_predictor_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -905,8 +906,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_continuum_limit_velocity_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
-| `kubo_continuum_limit_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
-| `kubo_range_of_validity_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `mirror_chokepoint_boundary_fit_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
@@ -8965,35 +8964,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
 - **auditor confidence:** medium
 
-### `kubo_continuum_limit_note`
-
-- **Note:** [`KUBO_CONTINUUM_LIMIT_NOTE.md`](../../docs/KUBO_CONTINUUM_LIMIT_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_numerical_match~~
-- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** At H in {0.5, 0.35, 0.25} with physical parameters held approximately constant, kubo_true goes 7.062 -> 5.973 -> 5.986, so the continuum-limit value is kubo_true ≈ +5.986 with 0.2% last-step drift.  _(class `G`)_
-- **chain closes:** False — The positive continuum value is inferred from three selected numerical refinements on Fam1 and no primary runner is registered in the audit row. Both one-hop authorities are bounded conditional notes, so the result cannot close as an independent retained continuum theorem.
-- **rationale:** Issue: the claim depends on a selected three-point refinement sweep with fixed program conventions, Fam1 geometry, regularizer 0.1, kH=2.5, and approximate physical-parameter matching, while the runner/log that produce the values are not registered as the primary audit runner. Why this blocks: a finite numerical convergence pattern can support a bounded observation, but it is not a retained continuum theorem without a reproducible runner, registered dependencies, and an explicit convergence/error criterion. Repair target: register scripts/kubo_continuum_limit.py as the primary runner, have it recompute the table with pass/fail thresholds, and close or narrow the bounded Kubo and wave-retardation dependencies. Claim boundary until fixed: safe as a bounded numerical report that this Fam1 setup shows last-step stability near +5.986; not safe as a general retained continuum-limit result.
-- **open / conditional deps cited:**
-  - `WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md`
-  - `LINEAR_RESPONSE_TRUE_KUBO_NOTE.md`
-- **auditor confidence:** high
-
-### `kubo_range_of_validity_note`
-
-- **Note:** [`KUBO_RANGE_OF_VALIDITY_NOTE.md`](../../docs/KUBO_RANGE_OF_VALIDITY_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_numerical_match~~
-- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** On a linearity-regime subset of 15/41 families selected by |measured/(kubo_true*s)-1| < 0.10 at all four strengths, measured F~M = 1.0048 ± 0.0069 and all 15 satisfy the 0.10 F~M band.  _(class `G`)_
-- **chain closes:** False — The conclusion is a finite-battery subset readout whose data-producing runner is not registered as the primary audit runner. Its one-hop Kubo authority is bounded conditional, so the retained range-of-validity claim does not close from clean dependencies.
-- **rationale:** Issue: the result depends on a selected 15/41-family linearity subset and imported battery measurements, with the listed runner/log outside the audit row and a bounded conditional Kubo dependency. Why this blocks: the note gives useful non-tautological evidence for the linear-response subset, but a selected finite subset and unregistered computation cannot be ratified as a retained theorem about the full range of validity. Repair target: register scripts/kubo_range_of_validity.py as the primary runner, recompute the family table with hard thresholds, and keep the claim scoped to the exact subset unless a theorem derives the selection boundary. Claim boundary until fixed: safe as bounded numerical evidence that the first-order Kubo formula predicts F~M near 1 on the listed linearity-regime subset; not safe as audit-clean retained validity range.
-- **open / conditional deps cited:**
-  - `LINEAR_RESPONSE_TRUE_KUBO_NOTE.md`
-- **auditor confidence:** high
-
 ### `lanes.ordered-lattice.readme`
 
 - **Note:** [`lanes/ordered-lattice/README.md`](../../docs/lanes/ordered-lattice/README.md)
@@ -9393,6 +9363,24 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **chain closes:** False — The live runner reproduces the second-order null result, but the note extrapolates that finite computation into a boundary claim about the Taylor-expansion approach and higher Taylor orders without a convergence/no-go theorem.
 - **rationale:** Issue: The runner verifies that the specific second-order correction does not improve the 44-family battery, but the note also claims a broader boundary of the Kubo-Taylor approach and says the failing nonlinearities are not fixed by more Taylor terms at s=0. Why this blocks: a second-order replay cannot rule out third or higher orders, prove non-analyticity, or establish that all Taylor expansions around s=0 fail for the structural families. Repair target: either narrow the source claim to the computed second-order null result, or add a theorem/computation bounding the Taylor remainder or demonstrating non-convergence/non-analyticity for the failing families, with the first-order and range-of-validity inputs explicitly audited. Claim boundary until fixed: it is safe to claim the live artifact reproduces +0 growth in the linearity-regime subset (15/44 to 15/44), sum |residual| worsening from 5.6090 to 5.7221 at s=0.008, and the listed per-family second-order pathologies; it is not safe to claim a retained no-go for all higher Taylor terms from this note alone.
 - **auditor confidence:** high
+
+### `linear_response_true_kubo_note`
+
+- **Note:** [`LINEAR_RESPONSE_TRUE_KUBO_NOTE.md`](../../docs/LINEAR_RESPONSE_TRUE_KUBO_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-linear_response_true_kubo_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Differentiating the specified path-sum propagator exp(i k L(1-s/r_edge)) at s=0 gives a parallel perturbation recurrence B_j and hence d(cz)/ds = T^{-1} sum_j (z_j-cz_free) 2 Re(A_j^* B_j) for the specified propagator and field profile.  _(class `A`)_
+- **chain closes:** False — The symbolic first-order recurrence is plausible for the specified propagator, but the registered runner did not complete within the audit-loop wall-time window in this environment and provides no classified PASS lines for the derivative or 44-family numerical battery.
+- **rationale:** Issue: the note's analytic derivative formula is plausible for the specified propagator/field, but the registered runner scripts/linear_response_true_kubo.py exceeded the 60s audit-loop expectation with no emitted output in this environment and had to be stopped, so the 44-family correlation/sign-agreement battery and deterministic thresholds were not verified in this audit pass. Why this blocks: a clean audit would need the runner to regenerate the dataset/log and check the recurrence derivative plus reported correlations, sign counts, scaffold exclusions, and residual cases under hard thresholds, with classified PASS lines. Repair target: make the runner audit-sized or mark it explicitly slow with a reason, emit A/B/C/D PASS lines, and wire deterministic checks for the reported r/sign/ratio claims and log regeneration. Claim boundary until fixed: conditional first-order symbolic response formula for the specified path-sum propagator and 1/r_edge field; the reported 44-family numerical agreement remains unratified by this audit run.
+- **open / conditional deps cited:**
+  - `scripts/linear_response_true_kubo.py`
+  - `logs/2026-04-07-linear-response-true-kubo.txt`
+  - `scripts/universality_classifier.py`
+  - `scripts/independent_generators_heldout.py`
+  - `scripts/global_coherence_off_scaffold.py`
+- **auditor confidence:** medium
 
 ### `local_zsym_predictor_note`
 
