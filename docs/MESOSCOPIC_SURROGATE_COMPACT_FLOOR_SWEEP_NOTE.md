@@ -1,7 +1,7 @@
 # Mesoscopic Surrogate Compact Floor Sweep Note
 
 **Date:** 2026-04-04  
-**Status:** constrained compact-family control sweep for the proposed_retained 3D surrogate lane
+**Status:** bounded constrained compact-family control sweep for the 3D surrogate lane
 
 ## Artifact chain
 

@@ -1,7 +1,7 @@
 # Minimal Absorbing Horizon Probe
 
 **Date:** 2026-04-05  
-**Status:** bounded moonshot trapping probe on the proposed_retained generated-geometry family
+**Status:** bounded moonshot trapping probe on the generated-geometry family
 
 ## Artifact chain
 

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:12:02.273602+00:00
+**Generated:** 2026-05-01T11:49:15.523463+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,25 +20,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 91 |
-| _proposed_retained_ | 1 |
-| bounded | 188 |
-| support | 162 |
+| _proposed_retained_ | 2 |
+| bounded | 198 |
+| support | 163 |
 | open | 8 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 858 |
-| ~~audited_failed~~ | 175 |
+| ~~audited_conditional~~ | 861 |
+| ~~audited_failed~~ | 160 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 296 |
 | `audited_conditional` | 588 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 84 |
+| `audited_failed` | 72 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 550 |
+| `unaudited` | 562 |
 
 | criticality | count |
 |---|---:|
@@ -54,7 +54,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 - runners classified: 1162
 - runners with (C) first-principles compute hits: 541
-- runners with (D) external comparator hits: 285
+- runners with (D) external comparator hits: 286
 - decoration candidates (no C, no D): 81
 
 ## Top 25 by load-bearing score (topology only)
@@ -671,7 +671,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `generated_geometry_synthesis_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `generation_axiom_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `global_coherence_held_out2_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `global_coherence_held_out2_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `grav_decoherence_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `gravitational_wave_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -988,9 +988,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `backreaction_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | open | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | A | - |
-| `complete_prediction_chain_2026_04_15` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | D | - |
 | `critical_exponents_topology_note_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `dimensional_gravity_table` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `distance_law_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `dm_leptogenesis_exact_kernel_closure_note_2026-04-15` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | D | - |
@@ -1002,29 +1000,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
-| `geometry_superposition_dag_ensemble_note_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `global_coherence_predictor_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
 | `gr_class_expansion_finite_rank_target_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_portability_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `grown_transfer_basin_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `h0125_failure_derivation` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `h2t_h0125_narrow_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `hierarchy_effective_potential_endpoint_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | D | - |
 | `hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28` | open | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | A | - |
 | `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28` | open | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | A | - |
 | `if_program_closing_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `inverse_problem_graph_requirements_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `kernel_vs_gravity_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `koide_axiom_native_support_batch_note_2026-04-22` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lepton_shared_higgs_universality_underdetermination_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `light_cone_framing_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
-| `localized_source_response_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `lorentz_violation_derived_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `mesoscopic_surrogate_annular_tapered_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `mesoscopic_surrogate_compact_floor_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `mesoscopic_surrogate_h025_constrained_localization_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `minimal_absorbing_horizon_probe_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `minimal_bidirectional_trapping_probe_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `monopole_derived_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | C | - |
 | `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -2926,27 +2914,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
 
-### `complete_prediction_chain_2026_04_15`
-
-- **Note:** [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](../../docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-high-ready-20260430-37`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Seven independent observables (v, alpha_s, sin^2(theta_W), 1/alpha_EM, y_t, m_t, m_H) plus one qualitative prediction (vacuum stability) from one axiom and one computed number; no free parameters, fits, or imports.  _(class `D`)_
-- **chain closes:** False — The package imports a support stack whose current audited states include conditional, decoration, renaming, and numerical-match rows, so the all-observables-from-one-input synthesis does not close from retained inputs. The live runner also hard-codes the promoted card and reports m_H(full 3-loop)=125.10 GeV while the source note repeatedly claims 129.7 GeV.
-- **rationale:** Issue: the complete-chain headline claims seven observables plus vacuum stability from one axiom and one computed plaquette with no imports, but its named support stack is not audit-clean and the live synthesis runner is stale relative to the source Higgs headline. Why this blocks: a hostile reviewer cannot ratify a package-level retained claim when required bridges are audited_conditional/audited_renaming/audited_numerical_match/audited_decoration and the runner emits no classified PASS checks while disagreeing with the note's 129.7 GeV Higgs claim. Repair target: ratify or repair the support stack rows, split the package into separately audited component claims, and update the synthesis runner/source so the same Higgs value and classified A/B/C/D checks are produced. Claim boundary until fixed: historical synthesis/status-card only; it may not be cited as a retained complete prediction chain.
-- **open / conditional deps cited:**
-  - `ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `RCONN_DERIVED_NOTE.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
-  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
-  - `HIGGS_MASS_FROM_AXIOM_NOTE.md`
-  - `EW_COUPLING_DERIVATION_NOTE.md`
-  - `HIGGS_MASS_DERIVED_NOTE.md`
-- **auditor confidence:** high
-
 ### `complex_selectivity_compare_note`
 
 - **Note:** [`COMPLEX_SELECTIVITY_COMPARE_NOTE.md`](../../docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md)
@@ -3481,20 +3448,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
-- **auditor confidence:** high
-
-### `dimensional_gravity_table`
-
-- **Note:** [`DIMENSIONAL_GRAVITY_TABLE.md`](../../docs/DIMENSIONAL_GRAVITY_TABLE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** F∝M = 1.00 is universal across all dimensions, all h values, all parameter variations.  _(class `C`)_
-- **chain closes:** False — The note presents finite dimensional table entries and width-limited companions, but the load-bearing universal mass-scaling statement is not derived from those finite tests and has no registered runner or audited dependency chain.
-- **rationale:** Issue: the table elevates finite tested entries into a universal F∝M=1.00 statement across all dimensions, h values, and parameter variations. Why this blocks: finite 2D/3D/4D rows, including explicitly width-limited 4D companions, do not prove universality; this row also has no registered runner or explicit audited dependencies to reproduce the quoted numbers. Repair target: replace the universal statement with a bounded tested-window claim, or provide a theorem/runner suite spanning the stated dimensions, h values, parameter variations, kernels, fields, actions, and measures. Claim boundary until fixed: the note may inventory finite dimensional valley-linear observations, especially the width-limited 4D status, but it cannot be cited as a clean universal dimensional gravity or mass-scaling table.
-- **open / conditional deps cited:**
-  - `dimensional_gravity_table -> missing theorem or runner suite for universal F~M across all dimensions/h/parameter variations`
 - **auditor confidence:** high
 
 ### `dirac_core_card_note`
@@ -7298,26 +7251,12 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
 - **auditor confidence:** medium
 
-### `geometry_superposition_dag_ensemble_note_2026-04-11`
-
-- **Note:** [`GEOMETRY_SUPERPOSITION_DAG_ENSEMBLE_NOTE_2026-04-11.md`](../../docs/GEOMETRY_SUPERPOSITION_DAG_ENSEMBLE_NOTE_2026-04-11.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** This is a real bounded path-sum geometry-superposition signal, but it is not a staggered proposed_retained result and not part of the current staggered headline package.  _(class `C`)_
-- **chain closes:** False — The source note explicitly disclaims proposed-retained status, while the audit queue classified it as proposed_retained because the phrase appears in a negative sentence. The declared runner path `frontier_geometry_superposition.py` is also stale; only a moved script under `scripts/` reproduces the bounded exploratory numbers.
-- **rationale:** Issue: the source status says this is an exploratory DAG-ensemble path-sum result, not a staggered proposed_retained result, and the runner path recorded in the note/ledger does not exist at the declared location. Why this blocks: a claim that explicitly disclaims retained status and lacks its registered runner cannot be audit-ratified as proposed_retained, even though a moved script reproduces the bounded exploratory output. Repair target: re-scope the note/queue as bounded or support, update the runner path to `scripts/frontier_geometry_superposition.py`, preserve a current log, and build a separate staggered geometry-superposition harness before any retained promotion. Claim boundary until fixed: safely claim only the toy DAG path-sum signal from the moved script: normalized contrast 3.93%, centroid shift 0.0574, width change 0.0211, and detector phase differences up to about 0.323 rad; do not claim a retained staggered or BMV-style closure.
-- **open / conditional deps cited:**
-  - `frontier_geometry_superposition.py`
-- **auditor confidence:** high
-
 ### `global_coherence_held_out2_note`
 
 - **Note:** [`GLOBAL_COHERENCE_HELD_OUT2_NOTE.md`](../../docs/GLOBAL_COHERENCE_HELD_OUT2_NOTE.md)
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_failed~~  (reason: `inherited_from:global_coherence_predictor_note`)
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
 - **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
 - **load-bearing step:** > is now the governing result for the free_coh program. On an  _(class `B`)_
 - **chain closes:** False — No. One-hop dependencies are not all retained (global_coherence_off_scaffold_note=bounded, global_coherence_predictor_note=audited_failed), so the chain does not close under the leaf audit rule.
@@ -7337,20 +7276,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** On nine off-scaffold generators, the frozen free_coh >= 7.96e-04 rule scores 5/9, matching the old two-property rule on the same batch.  _(class `D`)_
 - **chain closes:** True — The current runner reproduces the finite off-scaffold table, L2 accuracy 5/9, old-rule accuracy 5/9, and pre-committed structural baseline 8/9. This closes the finite bounded negative, not a universal simple-classifier exclusion theorem.
 - **rationale:** The finite off-scaffold comparison closes from the source note and current runner output. The safe claim is bounded to this nine-generator hand-specified batch, one frozen free_coh threshold, and one old two-property comparator. Residual risk is only scope drift: the result should not be read as excluding all scalar metrics or all simple classifiers.
-- **auditor confidence:** high
-
-### `global_coherence_predictor_note`
-
-- **Note:** [`GLOBAL_COHERENCE_PREDICTOR_NOTE.md`](../../docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The single-property free_coh >= 7.96e-04 rule improves cross-generator accuracy from 6/9 to 7/9 on scaffolded data, but the 2026-04-07 off-scaffold update says the advantage disappears and the classifier lane is closed.  _(class `G`)_
-- **chain closes:** False — The proposed-retained partial-positive claim is stale relative to the note's own update and its one-hop off-scaffold dependency. The source now says the revival was scaffold-specific and kept for record, not a live retained predictor theorem.
-- **rationale:** Issue: the row still presents a proposed-retained partial predictor even though the source note's lead update and the one-hop off-scaffold authority state that the advantage collapsed to 5/9 and the classifier program is closed. Why this blocks: the current packet contradicts the retained surface; at most the scaffolded 7/9 result remains historical finite evidence. Repair target: change the source status to bounded/retired or split out a historical scaffolded-observation note, then register and run the predictor/off-scaffold runners if a finite-result audit is desired. Claim boundary until fixed: safe to say free_coh was a scaffold-specific empirical predictor candidate that failed off-scaffold; not safe to retain it as a live global coherence predictor.
-- **open / conditional deps cited:**
-  - `GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md`
 - **auditor confidence:** high
 
 ### `gr_class_expansion_finite_rank_target_note`
@@ -7829,18 +7754,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
-
-### `h2t_h0125_narrow_bridge_note`
-
-- **Note:** [`H2T_H0125_NARROW_BRIDGE_NOTE.md`](../../docs/H2T_H0125_NARROW_BRIDGE_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The narrow h=0.125 bridge claim does not currently survive on main: the reduced family lacks enough TOWARD points for F~M, and the bridge family reaches h=0.125 with F~M about 0.50 rather than near 1.  _(class `C`)_
-- **chain closes:** False — The live reduced-family runner reproduces the bounded negative table through h=0.125, but the source status and final verdict explicitly reject rather than retain the narrow h=0.125 bridge claim. The row is in the proposed-retained queue only because the status line mentions a proposed_retained claim that the note is auditing down.
-- **rationale:** Issue: the source is not a proposed-retained bridge result; it is explicitly a bounded negative for a proposed-retained h=0.125 bridge claim. Why this blocks: applying a retained/proposed-retained audit result would promote the opposite of the note's own final verdict, and the reproduced reduced-family runner gives AWAY/no-F~M rows rather than a retained h=0.125 bridge. Repair target: change the note status/ledger classification to bounded negative, or if a retained negative theorem is intended, declare that status and include the focused h=0.125 single-row decision artifact plus the limit-diagnosis scripts/logs in the artifact chain. Claim boundary until fixed: safely claim only the bounded negative: Born is clean where measured, the reduced family reaches h=0.125 but has no TOWARD/F~M bridge, and the focused bridge row does not meet the F~M near-1 bar.
-- **auditor confidence:** high
 
 ### `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29`
 
@@ -8633,22 +8546,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The in-sample classifier rule (avg_deg >= 10.415 and reach_frac >= 0.859) is applied without refit to nine scripted independent generator families, yielding only 2/9 full-battery passes, 4/9 hard-coded prediction accuracy, and 6/9 no-refit rule accuracy.  _(class `C`)_
 - **chain closes:** True — The live runner rebuilds the nine named generator families, applies the same five-condition battery and frozen rule, and reproduces the negative table: only E1_er_p005 and E2_er_p020 pass, hard-coded predictions score 4/9, and the no-refit classifier rule scores 6/9.
 - **rationale:** The finite negative result closes on its own terms: the checked-in runner contains the nine generator constructors, the hard-coded prediction dictionary, the five-condition battery, and the frozen avg_deg/reach_frac rule, and live replay matches the source note's pass/fail and accuracy claims. The decisive rule failures R1, R3, and X1 all satisfy the frozen structural thresholds but fail the actual battery, while only the two Erdős-Rényi families pass the full package. This clean verdict is narrow: it certifies this deterministic nine-family held-out replay and the checked-in prediction table, not an exhaustive statistical theorem over all independent generator laws or independent timestamp proof beyond the artifact chain.
-- **auditor confidence:** high
-
-### `inverse_problem_graph_requirements_note`
-
-- **Note:** [`INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md`](../../docs/INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The retained family is robust to several natural perturbations, but heavy 70% edge deletion is too much and can reverse the sign, so the graph requirement is a bounded tested-perturbation statement rather than a universal theorem.  _(class `C`)_
-- **chain closes:** False — The live runner reproduces the finite mixed perturbation table, including baseline/asymmetry/jitter/sparse TOWARD rows and a heavy_delete_70 AWAY row. That closes a bounded harness result, but not the proposed-retained queue interpretation or a retained inverse-problem theorem.
-- **rationale:** Issue: the source status is explicitly `bounded graph-requirements harness`, and the live runner is mixed: heavy 70% edge deletion flips AWAY even though Born and controls remain clean. Why this blocks: the queued proposed-retained interpretation would promote a graph-requirements theorem, but the source and runner only support a bounded perturbation-slice result, with one tested perturbation failing. Repair target: change the row status/classification to bounded, or produce a theorem/runner that states the exact graph-perturbation class for which Newton+Born survive and audits the cited derivation inputs. Claim boundary until fixed: safely claim only the finite harness output: baseline, asym_zpos_removed, jitter_0.5h, and sparse_nn_only are TOWARD; heavy_delete_70 is AWAY; Born is machine-clean and k=0/no-field controls are zero on all tested rows.
-- **open / conditional deps cited:**
-  - `NEWTON_DERIVATION_NOTE.md`
-  - `ACTION_UNIQUENESS_NOTE.md`
-  - `PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`
 - **auditor confidence:** high
 
 ### `inverse_problem_note`
@@ -10347,30 +10244,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `no_multiple_testing_or_global_search_certificate`
 - **auditor confidence:** high
 
-### `localized_source_response_sweep_note`
-
-- **Note:** [`LOCALIZED_SOURCE_RESPONSE_SWEEP_NOTE.md`](../../docs/LOCALIZED_SOURCE_RESPONSE_SWEEP_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The live sweep shows no smaller source-response family beats the broad topN=196 control under the stated support/capture floors on the single h=0.25 ordered-lattice setup.  _(class `C`)_
-- **chain closes:** False — The bounded numerical result closes, but the audit row is a parser false positive: the source Status line declares a bounded sweep on a proposed_retained family, not a proposed_retained claim.
-- **rationale:** Issue: The audit queue treats this note as proposed_retained because the Status line says it is a bounded sweep on the proposed_retained 3D h=0.25 family, but the note's actual claim is explicitly bounded and negative. Why this blocks: the audit lane cannot ratify a retained claim that the source note does not make; doing so would promote a single-family source-response control sweep into retained physics. Repair target: rewrite the Status line so the parser records this as bounded/proposed_bounded, or author a separate proposed_retained theorem with a load-bearing derivation beyond this single h=0.25 sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces the bounded result that topN=169 remains admissible but does not beat broad topN=196, and that localized persistent-inertial response remains open; it is not safe to present this note as a retained source-response theorem.
-- **auditor confidence:** high
-
-### `lorentz_violation_derived_note`
-
-- **Note:** [`LORENTZ_VIOLATION_DERIVED_NOTE.md`](../../docs/LORENTZ_VIOLATION_DERIVED_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note's first-principles Lorentz-violation derivation is supposed to be checked by scripts/frontier_lorentz_derived.py with 29 independent checks of the cubic-lattice symmetry, dispersion expansion, suppression, angular harmonic, CPT, and bounds comparisons.  _(class `C`)_
-- **chain closes:** False — The registered primary runner path does not exist in the current checkout, so no classified checks can be run for the derivation. Without the script output, the note's step-by-step claims and experimental comparison are not auditable from the current repo state.
-- **rationale:** Issue: the registered runner scripts/frontier_lorentz_derived.py is missing, and Python exits with file-not-found before any checks run. Why this blocks: the note relies on that runner for the cubic-group construction, dispersion expansion, angular harmonic, CPT, and experimental-bound checks; prose alone is not a current executable audit artifact. Repair target: restore or re-register the primary runner and ensure it exits 0 with classified PASS lines from the current checkout. Claim boundary until fixed: the note remains a bounded companion narrative, but the current audit cannot ratify its derived LV checks.
-- **auditor confidence:** high
-
 ### `main_open_cubic_validation_2026-04-11`
 
 - **Note:** [`MAIN_OPEN_CUBIC_VALIDATION_2026-04-11.md`](../../docs/MAIN_OPEN_CUBIC_VALIDATION_2026-04-11.md)
@@ -10486,18 +10359,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **rationale:** Issue: the scout recommendation rests on uncited prior bounded results about h=0.5 localization, the 2D threshold scan, and the 3D h=0.25 family. Why this blocks: without one-hop authorities or a reproduction artifact, the audit cannot verify that h=0.25 is the cheapest plausible next target or that the other lanes are exhausted. Repair target: register the cited mesoscopic notes/results as dependencies or attach a runner/log that reproduces the family comparison and compact-floor check. Claim boundary until fixed: the note may guide planning, but it is not an audited closure of the alternate-family selection.
 - **auditor confidence:** high
 
-### `mesoscopic_surrogate_annular_tapered_sweep_note`
-
-- **Note:** [`MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The bounded sweep shows annular, hollow-square, and tapered localized source families do not beat the admissible topN source-control frontier under the stated support/capture floors.  _(class `C`)_
-- **chain closes:** False — The bounded negative conclusion is reproduced, but the audit row is a parser false positive: the source Status declares a bounded localization sweep on a proposed_retained surrogate family, not a proposed_retained claim. The live runner also reports a different topN tie representative than the frozen note while preserving the same frontier conclusion.
-- **rationale:** Issue: The source note is explicitly a bounded localization sweep, but the queue records it as proposed_retained because the Status line mentions the proposed_retained 3D mesoscopic surrogate family being tested. The current runner also returns topN 121 as the best overall tie representative, while the note names topN 225; this does not change the frontier result but makes the frozen row stale at the exact-row level. Why this blocks: a retained audit cannot ratify a bounded single-family control sweep, and the exact frozen best-row statement is not current with the runner. Repair target: rewrite the Status line so the parser records bounded/proposed_bounded status and update the note/log or tie-break rule for the topN best-row representative; a retained theorem would need a derivation beyond this finite sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces that no non-degenerate annular, hollow-square, or tapered family beats the admissible topN frontier under the floors; it is not safe to present this as a retained localization theorem or to rely on the stale topN 225 best-row wording without qualification.
-- **auditor confidence:** high
-
 ### `mesoscopic_surrogate_backreaction_note`
 
 - **Note:** [`MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md)
@@ -10508,30 +10369,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The broad relaunch surrogate can source a weak additive field and supports bounded one-step two-body symmetry, while still not producing a self-maintaining localized inertial object.  _(class `C`)_
 - **chain closes:** True — The registered harness recomputes the same-site additivity, disjoint-source additivity, and one-step two-body symmetry rows, and the current mean/max summaries match the note. The note's limitations are explicit: broad surrogate, one-step weak-field only, no persistent-mass closure.
 - **rationale:** The runner checks the load-bearing bounded source/backreaction claim directly and reproduces the frozen same-shape additivity, disjoint additivity, and one-step two-body symmetry values. The note does not upgrade the result into persistent mass or localized inertial-object closure, so the audited claim closes within the stated mesoscopic-surrogate boundary. Residual risk is limited to whether later stages remain stable, which the note leaves open.
-- **auditor confidence:** high
-
-### `mesoscopic_surrogate_compact_floor_sweep_note`
-
-- **Note:** [`MESOSCOPIC_SURROGATE_COMPACT_FLOOR_SWEEP_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_COMPACT_FLOOR_SWEEP_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The compact-floor sweep shows compact Gaussian and tapered candidates can pass the floors, but the best compact survivor does not meaningfully improve on the broad topN benchmark under the same support/capture constraints.  _(class `C`)_
-- **chain closes:** False — The finite negative control-sweep result closes numerically, but the audit row is a parser/status false positive: the source describes a constrained sweep for a proposed_retained lane, not a proposed_retained theorem.
-- **rationale:** Issue: The queue records this as proposed_retained because the Status line mentions the proposed_retained 3D surrogate lane, while the note itself is a narrow constrained compact-family control sweep. Why this blocks: a finite h=0.5 ordered-lattice comparison cannot be ratified as a retained theorem merely because it informs a proposed_retained lane; promoting it would inflate bounded provenance into retained physics. Repair target: rewrite the Status/current_status as bounded or proposed_bounded, or author a separate retained theorem deriving the compact-source frontier beyond this finite sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces topN 49 with capture2=1.000, score=0.9994, best compact tapered radius 2 with capture2=0.638, score=1.0000, and meaningful improvement over topN=False; it is not safe to present this note as a retained compact-source theorem.
-- **auditor confidence:** high
-
-### `mesoscopic_surrogate_h025_constrained_localization_note`
-
-- **Note:** [`MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The h=0.25 constrained localization replay shows the best annulus remains below the broad topN=196 control under the same support/capture floors, with meaningful improvement over topN=False.  _(class `C`)_
-- **chain closes:** False — The finite bounded-negative result closes numerically, but the row is queued as proposed_retained only because the Status line describes a final localization attempt on a proposed_retained family. The note itself does not supply a retained theorem.
-- **rationale:** Issue: The source is a final constrained localization control sweep on one h=0.25 ordered-lattice family, but the audit queue records it as proposed_retained because the Status line mentions the proposed_retained family being tested. Why this blocks: the runner can close the bounded negative comparison, but it cannot turn a finite single-family localization sweep into a retained theorem about localized inertial sources. Repair target: correct the Status/current_status to bounded/proposed_bounded, or provide a separate retained theorem deriving the broad-source frontier beyond this finite h=0.25 sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces topN 196 as overall best admissible, annulus 1:6 as best annulus with capture2=0.916 and score=0.9947, and meaningful improvement over topN=False; it is not safe to present this note as a retained localization theorem.
 - **auditor confidence:** high
 
 ### `mesoscopic_surrogate_localization_frontier_note`
@@ -10592,18 +10429,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** On the retained 2D companion family, the broad surrogate survives two sourced-response stages as a stable mesoscopic source control, with stage-2 matching stage-1 to printed precision.  _(class `C`)_
 - **chain closes:** True — The registered 2D two-stage runner recomputes the topN captures, centroids, spreads, ratios, total-variation values, and carry, and the current output matches the note. The note explicitly remains a bounded control and not a persistent-mass theorem.
 - **rationale:** The runner verifies the load-bearing two-stage stability claim directly: topN=9, 25, and 49+ reproduce the stated captures, ratios, and carry=1.000, with stage-2 rows matching stage-1 to print precision. The note preserves the key limitation that the object remains broad/mesoscopic and does not become a localized inertial mass. Residual risk is the separate question of support sensitivity on other families.
-- **auditor confidence:** high
-
-### `minimal_absorbing_horizon_probe_note`
-
-- **Note:** [`MINIMAL_ABSORBING_HORIZON_PROBE_NOTE.md`](../../docs/MINIMAL_ABSORBING_HORIZON_PROBE_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The live probe shows escape_fraction(alpha) falls below 50% by alpha=0.10 while the alpha=0 weak-field recovery check gives 3/3 TOWARD and F~M=1.00 on the tested generated-geometry family.  _(class `C`)_
-- **chain closes:** False — The bounded proxy computation closes, but the queued proposed_retained claim does not: the note itself calls this a bounded moonshot trapping probe, and the absorption parameter is an inserted proxy rather than a derived horizon mechanism.
-- **rationale:** Issue: The source is explicitly a bounded moonshot trapping probe on a proposed_retained generated-geometry family, but its branch verdict says it produces a retained threshold. The live runner inserts an absorptive parameter alpha and measures escape fraction; it does not derive an absorbing horizon law or black-hole observable from retained inputs. Why this blocks: a hand-added absorption proxy with one finite family, four seeds, and three source positions cannot be ratified as a retained horizon/trapping theorem. Repair target: either correct the Status/current_status to bounded/proposed_bounded, or derive the absorption law from retained dynamics and show the threshold is a framework-native strong-field observable with clean weak-field reduction and audited dependencies. Claim boundary until fixed: it is safe to claim the live artifact reproduces alpha=0 weak-field recovery and a proxy escape threshold below 50% at alpha ~= 0.10 on this setup; it is not safe to call this a retained horizon theorem or full black-hole mechanism.
 - **auditor confidence:** high
 
 ### `minimal_axioms_2026-04-11`

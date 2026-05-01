@@ -1,7 +1,7 @@
 # Mesoscopic Surrogate h=0.25 Constrained Localization Note
 
 **Date:** 2026-04-05  
-**Status:** final constrained localization attempt on the proposed_retained 3D `h=0.25` family; broad `topN` remains the best admissible control
+**Status:** bounded final constrained localization attempt on the 3D `h=0.25` family; broad `topN` remains the best admissible control
 
 ## Artifact chain
 

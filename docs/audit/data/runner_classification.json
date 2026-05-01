@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T11:12:01.538814+00:00",
+  "generated_at": "2026-05-01T11:49:14.660047+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -6786,7 +6786,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 2,
+        "C": 5,
         "D": 2
       },
       "decoration_candidate": false,
@@ -8935,11 +8935,11 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 12
       },
       "decoration_candidate": false,
-      "dominant_class": null,
-      "runner": "scripts/frontier_lorentz_derived.py"
+      "dominant_class": "D",
+      "runner": "scripts/frontier_lorentz_violation.py"
     },
     "main_open_cubic_validation_2026-04-11": {
       "assert_count": 0,
@@ -22536,7 +22536,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 2,
+        "C": 5,
         "D": 2
       },
       "decoration_candidate": false,
@@ -24295,21 +24295,6 @@
       "dominant_class": "C",
       "exists": true
     },
-    "scripts/frontier_lorentz_derived.py": {
-      "assert_count": 0,
-      "claims": [
-        "lorentz_violation_derived_note"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": false
-    },
     "scripts/frontier_lorentz_kernel_positive_closure.py": {
       "assert_count": 1,
       "claims": [
@@ -24323,6 +24308,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_lorentz_violation.py": {
+      "assert_count": 0,
+      "claims": [
+        "lorentz_violation_derived_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 12
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_mass_mixing_disjointness_theorem.py": {
@@ -32438,11 +32438,11 @@
       "A": 7,
       "B": 119,
       "C": 449,
-      "D": 183,
-      "none": 404
+      "D": 184,
+      "none": 403
     },
     "runners_classified": 1162,
     "runners_with_C": 541,
-    "runners_with_D": 285
+    "runners_with_D": 286
   }
 }

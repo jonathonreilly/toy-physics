@@ -243,7 +243,7 @@ def part4_current_bank_records_the_post_selector_endpoint() -> None:
 
     note = read("docs/PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md")
     atlas = read("docs/publication/ci3_z3/DERIVATION_ATLAS.md")
-    last_mile = read("docs/NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md")
+    last_mile = read("docs/NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md")
     packet = read("docs/publication/ci3_z3/NEUTRINO_DIRAC_PMNS_BOUNDARY_PACKET_2026-04-15.md")
 
     check("The new note states explicit quadratic reconstruction on the selected branch",

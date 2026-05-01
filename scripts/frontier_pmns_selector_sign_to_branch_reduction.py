@@ -62,9 +62,9 @@ def part2_after_sign_selection_only_the_branch_conditioned_coefficients_remain()
     print("PART 2: AFTER SIGN SELECTION, ONLY THE BRANCH-CONDITIONED COEFFICIENTS REMAIN")
     print("=" * 88)
 
-    last_mile = read("docs/NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md")
-    nu_inv = read("docs/NEUTRINO_DIRAC_TWO_HIGGS_OBSERVABLE_INVERSE_PROBLEM_NOTE.md")
-    e_inv = read("docs/CHARGED_LEPTON_TWO_HIGGS_OBSERVABLE_INVERSE_PROBLEM_NOTE.md")
+    last_mile = read("docs/NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md")
+    nu_inv = read("docs/NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md")
+    e_inv = read("docs/CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md")
 
     check("The last-mile note records 7 quantities on the neutrino-side branch",
           "neutrino-side minimal branch" in last_mile and "`7` real quantities" in last_mile)

@@ -26,7 +26,16 @@ This is the exact version of the earlier numerical compression argument.
 from __future__ import annotations
 
 import math
+import os
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from canonical_plaquette_surface import (
+    CANONICAL_ALPHA_BARE,
+    CANONICAL_ALPHA_LM,
+    CANONICAL_PLAQUETTE,
+    CANONICAL_U0,
+)
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
