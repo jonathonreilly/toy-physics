@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:23:08.436557+00:00
+**Generated:** 2026-05-01T07:24:37.378139+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 276 |
+| `audited_clean` | 277 |
 | `audited_conditional` | 588 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 571 |
+| `unaudited` | 570 |
 
 | criticality | count |
 |---|---:|
@@ -318,6 +318,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
 | `neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `nonlabel_grown_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `nonlabel_grown_drift_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `packet_memory_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -10965,6 +10966,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** At least one additional positive premise is required: a nonzero charge-2 Majorana primitive or equivalent admitted Majorana/seesaw extension, or a separate tiny Dirac `Y_nu` activation law on the surviving Dirac lane.  _(class `A`)_
 - **chain closes:** True — The claim is a negative boundary: the note does not close neutrino masses, but separates the current-stack mu_current=0 surface from the nonzero invertible seesaw benchmark and from a direct one-Higgs Dirac reading of y_nu^eff. The live runner verifies the non-invertibility, direct-Dirac overshoot, benchmark status, and remaining fork with PASS=10 FAIL=0.
 - **rationale:** The retained content is the fork no-go, not full neutrino quantitative closure. The note's load-bearing algebra closes because the current-stack Majorana zero law has det(M_R)=0 while the type-I seesaw benchmark uses a nonzero invertible M_R, so the two surfaces cannot be silently identified. The direct Dirac route also fails on its own terms: y_nu^eff v/sqrt(2) gives about 1.16e9 eV, while the benchmark meV scale would require a separate Yukawa of about 2.9e-13. Residual risk is downstream misuse: this audit does not ratify a final no-go against Majorana or Dirac neutrinos, the solar gap, PMNS quantities, or full Lane 4 mass closure.
+- **auditor confidence:** high
+
+### `neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29`
+
+- **Note:** [`NEUTRINO_LANE4_SR2_PFAFFIAN_SCALAR_TWO_POINT_BOUNDARY_NOTE_2026-04-29.md`](../../docs/NEUTRINO_LANE4_SR2_PFAFFIAN_SCALAR_TWO_POINT_BOUNDARY_NOTE_2026-04-29.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The scalar two-point expressions have no mu input, so the same scalar two-point signature is compatible with both mu = 0 and mu != 0 while the Pfaffian sector differs.  _(class `C`)_
+- **chain closes:** True — The runner reproduces the same-current-data witness: scalar two-point and normal source-response signatures are mu-blind, Pfaffian signatures vary with mu, and charge-sector checks show normal sources are charge zero while the pairing seed carries charge -2. That directly blocks the implication that scalar two-point closure alone forces mu = 0.
+- **rationale:** The note claims a negative boundary, not a Dirac-global or numerical neutrino result: SR-2 cannot close C2-X from free-scalar two-point data alone. The runner checks the relevant current surface by verifying the cited authority text and constructing nonzero-mu witnesses with identical scalar and normal signatures but distinct Pfaffian sectors. Residual risk is limited to future typed scalar-to-Pfaffian coupling theorems, which the note explicitly leaves open.
 - **auditor confidence:** high
 
 ### `neutrino_lane4_theorem_plan_note_2026-04-28`
