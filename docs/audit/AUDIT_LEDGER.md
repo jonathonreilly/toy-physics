@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:59:31.816070+00:00
+**Generated:** 2026-05-01T02:00:51.333173+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
-| bounded | 263 |
+| bounded | 262 |
 | support | 224 |
 | open | 16 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 772 |
+| ~~audited_conditional~~ | 773 |
 | ~~audited_failed~~ | 136 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 499 |
+| `audited_conditional` | 500 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 61 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 747 |
+| `unaudited` | 746 |
 
 | criticality | count |
 |---|---:|
@@ -734,6 +734,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `plaquette_self_consistency_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `pmns_commutant_eigenoperator_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_selector_current_stack_zero_law_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
@@ -10229,6 +10230,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md`
   - `GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md`
   - `SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md`
+- **auditor confidence:** high
+
+### `pmns_commutant_eigenoperator_selector_note`
+
+- **Note:** [`PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md`](../../docs/PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_commutant_eigenoperator_selector_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** A projected non-Cl(3) commutant generator on the hw=1 corner orbit has a nonzero C3-odd Fourier mode, which the note interprets as a branch/orientation selector, while the C3-even mode is interpreted as the passive offset class and the route is too small to fix the active 5-real source.  _(class `A`)_
+- **chain closes:** False — The runner verifies the corner-commutant and Fourier algebra, but the mapping from those modes to PMNS selector semantics and the active-source boundary is asserted without declared dependencies or a retained physical bridge.
+- **rationale:** Issue: the runner provides a coherent algebraic check (PASS=17/FAIL=0) that a projected non-Cl(3) commutant generator distinguishes the corners and has nonzero C3-odd Fourier content. However, the step from even/odd Fourier modes to passive offset class and branch/orientation selector is a physical/semantic PMNS identification, and the active 5-real source boundary is asserted with deps=[]. Why this blocks: the algebraic orbit split is not by itself a retained PMNS selector law unless the hw=1 triplet, projected commutant route, passive-offset meaning, and active-source boundary are declared/audited inputs. Repair target: declare the PMNS generation-boundary, corner-orbit, and active-source boundary authorities, or narrow the note to a pure algebraic commutant/Fourier decomposition. Claim boundary until fixed: bounded algebraic evidence for a C3-even/C3-odd corner-profile split; not an independently closed native PMNS selector theorem.
 - **auditor confidence:** high
 
 ### `pmns_hw1_source_transfer_boundary_note`
