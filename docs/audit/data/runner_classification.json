@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T02:31:16.037434+00:00",
+  "generated_at": "2026-05-01T02:32:21.779100+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -9314,11 +9314,11 @@
       "runner": "scripts/frontier_n_eff_from_three_generations.py"
     },
     "native_gauge_closure_note": {
-      "assert_count": 0,
+      "assert_count": 2,
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 11,
+        "C": 8,
         "D": 0
       },
       "decoration_candidate": false,
@@ -25151,14 +25151,14 @@
       "exists": true
     },
     "scripts/frontier_non_abelian_gauge.py": {
-      "assert_count": 0,
+      "assert_count": 2,
       "claims": [
         "native_gauge_closure_note"
       ],
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 11,
+        "C": 8,
         "D": 0
       },
       "decoration_candidate": false,

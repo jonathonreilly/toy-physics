@@ -5,12 +5,12 @@
     "leaf": 286,
     "medium": 244
   },
-  "generated_at": "2026-05-01T02:31:16.404722+00:00",
+  "generated_at": "2026-05-01T02:32:22.151294+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
       "criticality_rank": 3,
