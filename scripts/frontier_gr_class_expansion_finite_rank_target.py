@@ -19,7 +19,7 @@ from pathlib import Path
 import numpy as np
 
 
-ROOT = Path("/private/tmp/physics-review-active")
+ROOT = Path(__file__).resolve().parent.parent
 
 
 @dataclass

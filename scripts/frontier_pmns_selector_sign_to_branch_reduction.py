@@ -62,19 +62,22 @@ def part2_after_sign_selection_only_the_branch_conditioned_coefficients_remain()
     print("PART 2: AFTER SIGN SELECTION, ONLY THE BRANCH-CONDITIONED COEFFICIENTS REMAIN")
     print("=" * 88)
 
-    last_mile = read("docs/NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md")
-    nu_inv = read("docs/NEUTRINO_DIRAC_TWO_HIGGS_OBSERVABLE_INVERSE_PROBLEM_NOTE.md")
-    e_inv = read("docs/CHARGED_LEPTON_TWO_HIGGS_OBSERVABLE_INVERSE_PROBLEM_NOTE.md")
+    last_mile = read("docs/NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md")
+    nu_inv = read("docs/NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md")
+    e_inv = read("docs/CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md")
 
-    check("The last-mile note records 7 quantities on the neutrino-side branch",
-          "neutrino-side minimal branch" in last_mile and "`7` real quantities" in last_mile)
-    check("The last-mile note records 3 + 7 quantities on the charged-lepton-side branch",
-          "`3` neutrino Dirac mass moduli plus\n  `7` charged-lepton-branch quantities" in last_mile
-          or "`3` neutrino Dirac mass moduli plus `7`" in last_mile)
-    check("The neutrino-side inverse problem note says the seven-coordinate map is well-posed",
-          "seven-coordinate observable grammar" in nu_inv and "full Jacobian rank" in nu_inv)
-    check("The charged-lepton-side inverse problem note says its seven-coordinate map is well-posed",
-          "seven-coordinate observable grammar" in e_inv and "full Jacobian rank" in e_inv)
+    check("The two-amplitude last-mile note keeps sole-axiom closure separate",
+          "Only two amplitudes remain" in last_mile and "`(J_chi, mu)`" in last_mile)
+    check("The neutrino-side canonical reduction records the seven remaining quantities",
+          "minimal surviving neutrino-side extension class" in nu_inv
+          and ("seven real axiom-side numbers" in nu_inv
+               or "exactly `7` real physical parameters" in nu_inv))
+    check("The charged-lepton-side canonical reduction records the seven remaining quantities",
+          "minimal surviving\ncharged-lepton-side extension class" in e_inv
+          and "exactly\n**seven real physical quantities**" in e_inv)
+    check("The two canonical reductions keep selector realization outside their claims",
+          "does **not** derive the seven numbers" in nu_inv
+          and "a selector choosing the charged-lepton-side branch" in e_inv)
 
     print()
     print("  So after a nonzero selector amplitude chooses the branch, the")
@@ -110,9 +113,9 @@ def main() -> int:
     print()
     print("Atlas / axiom inputs reused:")
     print("  - PMNS selector unique amplitude slot")
-    print("  - Full neutrino closure last-mile reduction")
-    print("  - Neutrino Dirac two-Higgs observable inverse problem")
-    print("  - Charged-lepton two-Higgs observable inverse problem")
+    print("  - Neutrino two-amplitude last-mile boundary")
+    print("  - Neutrino Dirac two-Higgs canonical reduction")
+    print("  - Charged-lepton two-Higgs canonical reduction")
     print()
     print("Question:")
     print("  If the unique reduced selector amplitude becomes nonzero, what")

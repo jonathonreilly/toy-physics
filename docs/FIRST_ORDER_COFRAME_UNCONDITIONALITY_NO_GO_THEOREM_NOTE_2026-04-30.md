@@ -1,7 +1,7 @@
 # First-Order Coframe Unconditionality No-Go Theorem
 
 **Date:** 2026-04-30
-**Status:** audited_clean; proposed_no_go theorem ratified 2026-04-30
+**Status:** proposed_no_go exact negative boundary; audit pending after status-tier relabel
 **Runner:** `scripts/frontier_first_order_coframe_unconditionality_no_go.py`
 
 ## Purpose
@@ -34,10 +34,9 @@ preserving the relevant substrate structure. Therefore first-order coframe
 selection is an additional boundary/orientation law unless it is derived by a
 stronger theorem not currently in the retained bank.
 
-## Audit Verdict
+## Review Note
 
-Fresh-context audit returned `audited_clean`. The load-bearing step is the
-explicit Hodge-complement witness:
+The load-bearing step is the explicit Hodge-complement witness:
 
 ```text
 * P_1 *^{-1} = P_3.

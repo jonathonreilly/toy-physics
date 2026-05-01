@@ -69,7 +69,7 @@ def main() -> int:
     graph_selector = read("docs/GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md")
     bilinear_selector = read("docs/HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md")
     ckm_selector = read("docs/CKM_FROM_MASS_HIERARCHY_NOTE.md")
-    higgs_qh = read("docs/NEUTRINO_HIGGS_Z3_UNDERDETERMINATION_NOTE.md")
+    higgs_qh = read("docs/HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md")
     pmns_nonselection = read("docs/PMNS_MINIMAL_BRANCH_NONSELECTION_NOTE.md")
     atlas = read("docs/publication/ci3_z3/DERIVATION_ATLAS.md")
 
@@ -88,8 +88,9 @@ def main() -> int:
     print("\n" + "=" * 88)
     print("PART 2: THE PMNS SELECTOR QUESTION LIVES ON A DIFFERENT EXACT DATA SET")
     print("=" * 88)
-    check("The Higgs-side theorem still leaves q_H underdetermined in {0,+1,-1}",
-          "`q_H in {0,+1,-1}`" in higgs_qh or "q_H in {0,+1,-1}" in higgs_qh)
+    check("The Higgs-side theorem treats q_H in {0,+1,-1} as a definite-Z_3 class (gauge-redundant for PMNS)",
+          "q_H in {0,+1,-1}" in higgs_qh or "q_H \\in {0,+1,-1}" in higgs_qh
+          or "q_H ∈ {0, ±1}" in higgs_qh or "q_H \\in \\{0, \\pm1\\}" in higgs_qh)
     check("The PMNS boundary theorem still isolates but does not select the minimal branches",
           "current exact bank isolates the minimal neutrino-side and" in pmns_nonselection
           and "charged-lepton-side PMNS-producing branches" in pmns_nonselection

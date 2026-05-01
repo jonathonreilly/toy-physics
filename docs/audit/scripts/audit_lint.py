@@ -27,6 +27,8 @@ Checks (all hard rules from FRESH_LOOK_REQUIREMENTS.md and README.md):
            archive_unlanded/ (legacy path: a positive claim failed audit and
            was archived).
        Both paths represent ratified negative results, not active failures.
+     - source Status lines must not self-assign audited_clean; audit verdicts
+       live in the ledger.
      - independence = 'weak' cannot land audited_clean. Critical clean
        confirmations must be cross-family, strong/external, or same-family
        fresh_context from a distinct restricted-input session.
@@ -82,6 +84,7 @@ RAW_FORBIDDEN_TIER_RE = re.compile(
     r"(?<!proposed_)\b(?:retained|promoted)\b",
     re.IGNORECASE,
 )
+RAW_FORBIDDEN_AUDIT_CLEAN_RE = re.compile(r"\baudited_clean\b", re.IGNORECASE)
 
 
 def load_json(path: Path):
@@ -139,6 +142,12 @@ def main() -> int:
             msg = (
                 f"{cid}: source note Status line contains bare 'retained' or 'promoted'; "
                 f"use proposed_retained / proposed_promoted (raw={raw!r})"
+            )
+            (errors if strict else warnings).append(msg)
+        if raw and RAW_FORBIDDEN_AUDIT_CLEAN_RE.search(raw):
+            msg = (
+                f"{cid}: source note Status line contains audit verdict 'audited_clean'; "
+                f"keep audit verdicts in docs/audit/data/audit_ledger.json (raw={raw!r})"
             )
             (errors if strict else warnings).append(msg)
         if a not in ALLOWED_AUDIT_STATUSES:

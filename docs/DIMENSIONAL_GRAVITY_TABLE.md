@@ -1,6 +1,6 @@
 # Dimensional Gravity Table
 
-**Status:** bounded - bounded or caveated result note
+**Status:** bounded inventory of finite-tested entries; this is not a universal F∝M theorem across all dimensions, h values, or parameter variations. The bolded "1.00" entries are point-tested results on the listed family/parameter rows, not universality claims.
 **Date:** 2026-04-04
 **Action:** Valley-linear S = L(1-f)
 **Kernel:** 1/L^(d-1) with h^(d-1) measure
