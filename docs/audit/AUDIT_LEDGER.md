@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T21:09:27.672613+00:00
+**Generated:** 2026-05-01T21:10:28.423527+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 166 |
+| bounded | 165 |
 | support | 135 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 945 |
+| ~~audited_conditional~~ | 946 |
 | ~~audited_failed~~ | 85 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 301 |
-| `audited_conditional` | 648 |
+| `audited_conditional` | 649 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 513 |
+| `unaudited` | 512 |
 
 | criticality | count |
 |---|---:|
@@ -944,6 +944,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_selector_proof_chains_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `scalar_selector_remaining_open_imports_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `scalar_selector_reviewer_package_2026-04-20` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `scalar_selector_synthesis_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13530,6 +13531,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `Koide theta theorem runners`
   - `DM PMNS theorem runners`
   - `quark a_u theorem runners`
+
+### `scalar_selector_synthesis_note_2026-04-19`
+
+- **Note:** [`SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md`](../../docs/SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The synthesis note summarizes four scalar-selector gates and their route-history status, while the registered runner verifies only the Koide/DM shared C3 joint-projector identity and CKM-ray separateness.  _(class `B`)_
+- **chain closes:** False — The registered runner closes only the joint-projector subclaim; the note's broad synthesis imports unregistered and superseded route surfaces.
+- **rationale:** Issue: the joint-projector runner passes and supports the narrow C3 isotypic-decomposition identity, but the note is a broad route-history synthesis across Koide kappa/theta, DM A-BCC, and quark a_u, with later supersession/correction caveats and many unregistered theorem dependencies. Why this blocks: the multi-lane synthesis and meta-axiom accounting cannot be ratified from the joint-projector runner alone. Repair target: keep this as historical synthesis or split current claims into per-lane rows with registered theorem notes and runners. Claim boundary until fixed: the shared C3 projector identity is executable support; the four-gate synthesis remains conditional route history.
+- **open / conditional deps cited:**
+  - `Koide kappa/theta theorem stacks`
+  - `DM A-BCC theorem stacks`
+  - `quark a_u theorem stacks`
+  - `current scalar-selector package status notes`
 
 ### `scalar_trace_tensor_no_go_note`
 
