@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T16:28:25.276523+00:00
+**Generated:** 2026-05-01T16:30:02.678226+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 199 |
-| support | 150 |
+| support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 877 |
+| ~~audited_conditional~~ | 878 |
 | ~~audited_failed~~ | 103 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 294 |
-| `audited_conditional` | 591 |
+| `audited_conditional` | 592 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 569 |
+| `unaudited` | 568 |
 
 | criticality | count |
 |---|---:|
@@ -476,6 +476,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `complete_prediction_chain_2026_04_15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `complex_selectivity_compare_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `composite_source_additivity_2d_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -2831,6 +2832,26 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the source note explicitly frames this as open, future, planning, or a stretch attempt rather than a closed theorem. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `complete_prediction_chain_2026_04_15`
+
+- **Note:** [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](../../docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** This document is the single authority for the Cl(3) on Z^3 prediction chain, absorbing the listed YT, Higgs, color-projection, and EW-coupling support stack.  _(class `B`)_
+- **chain closes:** False — The note is an inventory of upstream prediction surfaces and explicitly says it is not an independent strong derivation claim. The listed support stack contains conditional and decoration audit states, and the runner prints a package synthesis card rather than checking the upstream derivations.
+- **rationale:** Issue: the row presents a package-level prediction inventory as the complete chain while importing the YT, Higgs, color-projection, R_conn, and alpha_LM support surfaces. Why this blocks: those listed authorities are not audit-clean as a set, and the primary runner is a synthesis/printout runner with no PASS/FAIL verification of the load-bearing upstream bridges; it cannot ratify the absorbed package as a closed derivation. Repair target: register the listed support-stack rows as dependencies and re-audit this inventory after the R_conn/color-projection/YT/Higgs bridge rows are audit-clean, or narrow the row to a non-authoritative dashboard over conditional inputs. Claim boundary until fixed: useful support inventory of current package numbers, not an audit-clean complete prediction chain.
+- **open / conditional deps cited:**
+  - `RCONN_DERIVED_NOTE.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
+  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
+  - `HIGGS_MASS_FROM_AXIOM_NOTE.md`
+  - `HIGGS_MASS_DERIVED_NOTE.md`
+  - `ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md`
 - **auditor confidence:** high
 
 ### `complex_selectivity_compare_note`
