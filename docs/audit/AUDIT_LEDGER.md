@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:05:29.265893+00:00
+**Generated:** 2026-05-01T06:11:21.695363+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 204 |
+| bounded | 203 |
 | support | 170 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 839 |
+| ~~audited_conditional~~ | 840 |
 | ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 255 |
-| `audited_conditional` | 570 |
+| `audited_conditional` | 571 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 613 |
+| `unaudited` | 612 |
 
 | criticality | count |
 |---|---:|
@@ -863,6 +863,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_layered_gauge_phase_diagram_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strong_cp_theta_zero_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | E | - |
 | `structured_chokepoint_bridge_extension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `structured_mirror_reconciliation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `taste_scalar_isotropy_theorem_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13040,6 +13041,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** True — The current runner reproduces the three-row diagnostic table with the stated Born, k=0, gravity, and pur_cl values. The closure is finite and readout-specific, with no asymptotic or architecture-level bridge theorem.
 - **rationale:** The bounded finite card closes from the source note and current runner output. It does not derive the graph parameters, enforce hard assertions in code, or establish readout-independent survival, but the current note explicitly narrows away from those stronger claims. Residual risk is scope drift if the word bridge is later treated as architecture-level closure.
 - **auditor confidence:** high
+
+### `structured_mirror_reconciliation_note`
+
+- **Note:** [`STRUCTURED_MIRROR_RECONCILIATION_NOTE.md`](../../docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** So the canonical structured-growth validator is not Born-clean.  _(class `B`)_
+- **chain closes:** False — The note's bounded conclusion is consistent with the frozen joint-validation log, but the cited current validator is a zero-byte script and the reconciliation harness does not complete under the 60s audit cap, so the computational support is not presently replayable from registered/current artifacts.
+- **rationale:** Issue: the load-bearing not-Born-clean conclusion relies on a saved joint-validation log while scripts/structured_mirror_joint_validation.py is zero bytes in the current checkout, and scripts/structured_mirror_reconciliation.py exceeded the 60s audit cap with no registered primary runner. Why this blocks: the note can record the historical bounded reconciliation, but the audit cannot verify that the current committed validator and reconciliation harness reproduce the cited Born-sensitivity result. Repair target: restore or replace the structured_mirror_joint_validation.py runner, register a primary runner for this row, and ensure the runner emits the canonical O(1e-1) Born table plus the harness-comparison output within the audit wall-time budget. Claim boundary until fixed: the row may be used as a bounded warning that the frozen log did not show structured-growth Born cleanliness, not as a clean current replay of the structured-mirror Born reconciliation.
+- **open / conditional deps cited:**
+  - `structured_mirror_reconciliation_note -> scripts/structured_mirror_joint_validation.py (zero-byte cited validator)`
+  - `structured_mirror_reconciliation_note -> scripts/structured_mirror_reconciliation.py (60s audit timeout, unregistered)`
+- **auditor confidence:** medium
 
 ### `substrate_to_p_a_forcing_theorem_note_2026-04-30`
 
