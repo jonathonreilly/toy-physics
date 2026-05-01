@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T16:39:27.580064+00:00
+**Generated:** 2026-05-01T18:15:32.950635+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -35,12 +35,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 296 |
-| `audited_conditional` | 593 |
+| `audited_conditional` | 594 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 565 |
+| `unaudited` | 564 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 391 |
 | `leaf` | 763 |
 
-- **Proposed claims demoted by upstream:** 143
+- **Proposed claims demoted by upstream:** 142
 - **Citation cycles detected:** 61
 
 ### Runner classification (static heuristic)
@@ -922,6 +922,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `strong_cp_theta_zero_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | E | - |
 | `structured_chokepoint_bridge_extension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `structured_mirror_reconciliation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `su2_witten_z2_anomaly_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `taste_scalar_isotropy_theorem_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13671,6 +13672,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `structured_mirror_reconciliation_note -> scripts/structured_mirror_joint_validation.py (zero-byte cited validator)`
   - `structured_mirror_reconciliation_note -> scripts/structured_mirror_reconciliation.py (60s audit timeout, unregistered)`
 - **auditor confidence:** medium
+
+### `su2_witten_z2_anomaly_theorem_note_2026-04-24`
+
+- **Note:** [`SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`](../../docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-cbc9`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The retained one-generation content contributes Q_L as three color copies of one SU(2) doublet and L_L as one lepton SU(2) doublet, so N_D(one generation)=3+1=4 and N_D(three generations)=3*4=12.  _(class `B`)_
+- **chain closes:** False — The parity arithmetic closes once the matter content, N_c=3, and three-generation structure are accepted, but the retained-chain closure depends on left-handed charge matching and three-generation structure rows whose effective status is currently audited_conditional.
+- **rationale:** Issue: the Witten count imports the retained Q_L/L_L doublet surface and the three-generation replication as upstream inputs, while those dependencies are currently audited_conditional rather than retained. Why this blocks: the note proves only that the supplied retained matter surface has even SU(2) Weyl-doublet parity; it does not independently close the conditional upstream matter-content and generation premises. Repair target: clean audits or replacement theorems for the left-handed charge/doublet content and three-generation structure, plus runner coverage that derives or verifies those inputs rather than hard-coding them. Claim boundary until fixed: standard Witten parity arithmetic on the stated matter surface is correct, but the framework-level retained anomaly-freedom claim remains conditional on the upstream matter/generation closures.
+- **open / conditional deps cited:**
+  - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
+  - `THREE_GENERATION_STRUCTURE_NOTE.md`
+- **auditor confidence:** high
 
 ### `symmetry_head_to_head_note`
 
