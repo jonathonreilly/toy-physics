@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:21:35.373754+00:00
+**Generated:** 2026-05-01T06:23:12.805942+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 198 |
+| bounded | 197 |
 | support | 170 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 845 |
-| ~~audited_failed~~ | 169 |
+| ~~audited_conditional~~ | 844 |
+| ~~audited_failed~~ | 171 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 255 |
 | `audited_conditional` | 575 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 81 |
+| `audited_failed` | 82 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 608 |
+| `unaudited` | 607 |
 
 | criticality | count |
 |---|---:|
@@ -936,6 +936,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | open | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | A | - |
 | `complete_prediction_chain_2026_04_15` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | D | - |
 | `critical_exponents_topology_note_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `dimensional_gravity_table` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `distance_law_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `dm_leptogenesis_exact_kernel_closure_note_2026-04-15` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | D | - |
@@ -3410,6 +3411,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `dimensional_gravity_table`
+
+- **Note:** [`DIMENSIONAL_GRAVITY_TABLE.md`](../../docs/DIMENSIONAL_GRAVITY_TABLE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** F∝M = 1.00 is universal across all dimensions, all h values, all parameter variations.  _(class `C`)_
+- **chain closes:** False — The note presents finite dimensional table entries and width-limited companions, but the load-bearing universal mass-scaling statement is not derived from those finite tests and has no registered runner or audited dependency chain.
+- **rationale:** Issue: the table elevates finite tested entries into a universal F∝M=1.00 statement across all dimensions, h values, and parameter variations. Why this blocks: finite 2D/3D/4D rows, including explicitly width-limited 4D companions, do not prove universality; this row also has no registered runner or explicit audited dependencies to reproduce the quoted numbers. Repair target: replace the universal statement with a bounded tested-window claim, or provide a theorem/runner suite spanning the stated dimensions, h values, parameter variations, kernels, fields, actions, and measures. Claim boundary until fixed: the note may inventory finite dimensional valley-linear observations, especially the width-limited 4D status, but it cannot be cited as a clean universal dimensional gravity or mass-scaling table.
+- **open / conditional deps cited:**
+  - `dimensional_gravity_table -> missing theorem or runner suite for universal F~M across all dimensions/h/parameter variations`
 - **auditor confidence:** high
 
 ### `dirac_core_card_note`
