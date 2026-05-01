@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Scalar-Bridge Support
 
 **Date:** 2026-04-16
-**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, exact infinite-hierarchy obstruction, exact equivalent spectral generating object, exact framework-point underdetermination theorem, exact transfer-operator / character-recurrence realization, exact Perron-state reduction theorem, exact source-sector matrix-element factorization theorem, exact local/environment factorization theorem, exact residual-environment identification theorem, exact spatial-environment character-measure theorem, exact spatial-environment structural transfer theorem, exact spatial-environment tensor-transfer theorem, and exact Perron/Jacobi underdetermination theorem inside that sharpened class; the remaining open object is the explicit `beta = 6` tensor-transfer Perron / boundary data for `Z_6^env` beyond the already-fixed normalized mixed-kernel local factor
-**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py`, `scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py`, `scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py`, `scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py`, `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py`, `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py`, `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`
+**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, exact infinite-hierarchy obstruction, exact equivalent spectral generating object, exact framework-point underdetermination theorem, exact transfer-operator / character-recurrence realization, exact Perron-state reduction theorem, exact source-sector matrix-element factorization theorem, exact local/environment factorization theorem, exact residual-environment identification theorem, exact spatial-environment character-measure theorem, exact spatial-environment structural transfer theorem, exact spatial-environment tensor-transfer theorem, exact Perron/Jacobi underdetermination theorem inside that sharpened class, plus explicit source-sector reference Perron solve theorem with two structural rho-input choices (`rho = 1` giving `P_loc(6) = 0.4524071590` and `rho = delta_{(p,q),(0,0)}` giving `P_triv(6) = 0.4225317396`, both computed from `c_lambda(6)` and `SU(3)` intertwiners alone with super-polynomial NMAX truncation tail bound) and explicit no-go on closed-form `rho_(p,q)(6)` exhibited via three distinct admissible parametric families; the rho values in the reference solves are structural input and not derived from any physical 3D Wilson environment, and the remaining open object is the explicit boundary character measure `Z_6^env` of the unmarked 3D spatial Wilson environment, equivalently the Perron eigenvector of the positive tensor-transfer operator on a 3D `SU(3)` lattice gauge network with one boundary plaquette
+**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py`, `scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py`, `scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py`, `scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py`, `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py`, `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py`, `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`, `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py`
 
 ## Question
 
@@ -375,17 +375,48 @@ data.” It is:
 
 ## Remaining gap
 
-The remaining theorem-grade gap is now narrower:
+The remaining theorem-grade gap is now sharply localized.
 
-> explicitly identify the `beta = 6` boundary character data
-> `rho_(p,q)(6)` of `Z_6^env` on
-> the now-explicit
-> factorized source sector
-> `T_src(6) = exp(3 J) D_6^loc C_(Z_6^env) exp(3 J)`,
-> equivalently the exact Perron eigenvector / spectral measure of that
-> factorized operator,
-> and thereby the explicit nonperturbative form of the already-proved implicit
-> reduction law
+The new explicit source-sector reference Perron solve theorem on
+`main`,
+[`GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md`](./GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md),
+provides two explicit Perron solves at structural reference choices of
+the residual environment, computed from `c_lambda(6)` and `SU(3)`
+intertwiners alone:
+
+- structural reference solve A (input `rho = 1`, equivalent to
+  `R_6^env = I` and `Z_6^env(W) = delta(W, e)`):
+  `P_loc(6) = 0.4524071590`;
+- structural reference solve B (input `rho = delta_{(p,q),(0,0)}`,
+  equivalent to `R_6^env = P_(0,0)` and `Z_6^env(W) = const`):
+  `P_triv(6) = 0.4225317396`,
+
+both with NMAX = 7 / MODE_MAX = 200 convergence controls and a
+super-polynomial truncation tail bound (geometric drift-ratio `≈ 69`,
+truncation-edge `a^4 < 1e-15`). The rho values in those reference
+solves are structural input — not derived from any physical 3D Wilson
+environment — and the note does not claim either reference corresponds
+to the physical environment.
+
+The same theorem records an exact no-go: three distinct admissible
+parametric families (`exp(-tau(p+q))`, one-plaquette environment
+ansatz `c_(p,q)(beta_env) / c_(0,0)(beta_env)`, tube-power ansatz
+`(c_(p,q)(6) / c_(0,0)(6))^k`) all use only `c_lambda(6)` and `SU(3)`
+intertwiners and yet produce strictly different `P(6)` values, so
+`c_lambda(6)` and `SU(3)` intertwiners do not, by themselves, fix
+`rho_(p,q)(6)` on the source sector.
+
+The remaining theorem-grade target is therefore the boundary character
+measure of the unmarked 3D spatial Wilson environment with marked-
+plaquette boundary:
+
+> explicitly evaluate the boundary character coefficients
+> `rho_(p,q)(6)` of `Z_6^env(W)` for the actual physical 3D spatial
+> Wilson environment, equivalently the Perron eigenvector of the
+> explicit positive tensor-transfer operator built from `c_lambda(6)`
+> and `SU(3)` intertwiners on a 3D `SU(3)` lattice gauge network with
+> one marked-plaquette boundary, and thereby the explicit
+> nonperturbative form of the already-proved implicit reduction law
 > `P(beta) = P_1plaq(beta_eff(beta))`
 > at the framework point `beta = 6`.
 
@@ -414,8 +445,17 @@ Current clean read:
 - exact local/environment factorization: closed
 - exact spatial-environment tensor-transfer class: closed
 - exact Perron/Jacobi underdetermination inside that factorized class: closed
-- explicit residual source-sector environment / physical-vacuum reduction:
-  still open
+- explicit source-sector reference Perron solves at `beta = 6` from
+  `c_lambda(6)` and `SU(3)` intertwiners alone, at two structural
+  rho-input choices (`R_6^env = I` and `R_6^env = P_(0,0)`): closed,
+  with NMAX/MODE_MAX convergence controls and super-polynomial
+  truncation tail bound; the rho values in those reference solves are
+  structural input rather than derived from a physical 3D Wilson
+  environment
+- exact no-go that `c_lambda(6)` and `SU(3)` intertwiners do not, by
+  themselves, fix `rho_(p,q)(6)`: closed
+- explicit boundary character measure `Z_6^env` of the actual physical
+  3D spatial Wilson environment / physical-vacuum reduction: still open
 - canonical plaquette on the live package: still `0.5934`
 
 So there is **not** yet a basis for repo-wide numeric migration or for removing
@@ -440,6 +480,7 @@ python3 scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py
 python3 scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py
 python3 scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py
+python3 scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py
 ```
 
 Expected summary:
@@ -460,3 +501,4 @@ Expected summary:
 - local/environment factorization runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
 - spatial-environment tensor-transfer runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
 - Perron/Jacobi underdetermination runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
+- tensor-transfer Perron solve runner: `THEOREM PASS=6 SUPPORT=3 FAIL=0`

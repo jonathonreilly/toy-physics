@@ -4273,6 +4273,10 @@
       "to": "gauge_vacuum_plaquette_constant_lift_obstruction_note"
     },
     {
+      "from": "gauge_vacuum_plaquette_bridge_support_note",
+      "to": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+    },
+    {
       "from": "gauge_vacuum_plaquette_distinct_shell_theorem_note",
       "to": "gauge_vacuum_plaquette_mixed_cumulant_audit_note"
     },
@@ -4291,6 +4295,34 @@
     {
       "from": "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
       "to": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "gauge_vacuum_plaquette_constant_lift_obstruction_note"
     },
     {
       "from": "global_coherence_held_out2_note",
@@ -6467,6 +6499,10 @@
     {
       "from": "plaquette_self_consistency_note",
       "to": "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note"
+    },
+    {
+      "from": "plaquette_self_consistency_note",
+      "to": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
     },
     {
       "from": "plaquette_self_consistency_note",
@@ -18457,7 +18493,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T02:01:40.824720+00:00",
+  "generated_at": "2026-05-01T02:03:23.989403+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -26145,13 +26181,14 @@
     "gauge_vacuum_plaquette_bridge_support_note": {
       "claim_id": "gauge_vacuum_plaquette_bridge_support_note",
       "current_status": "support",
-      "current_status_raw": "exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, exact infinite-hierarchy obstruction, exact equivalent spectral generating object, exact framework-point underdetermination theorem, exact transfer-operator / character-recurrence realization, exact Perron-state reduction theorem, exact source-sector matrix-element factorization theorem, exact local/environment factorization theorem, exact residual-environment identification theorem, exact spatial-environment character-measure theorem, exact spatial-environment structural transfer theorem, exact spatial-environment tensor-transfer theorem, and exact Perron/Jacobi underdetermination theorem inside that sharpened class; the remaining open object is the explicit `beta = 6` tensor-transfer Perron / boundary data for `Z_6^env` beyond the already-fixed normalized mixed-kernel local factor",
+      "current_status_raw": "exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, exact infinite-hierarchy obstruction, exact equivalent spectral generating object, exact framework-point underdetermination theorem, exact transfer-operator / character-recurrence realization, exact Perron-state reduction theorem, exact source-sector matrix-element factorization theorem, exact local/environment factorization theorem, exact residual-environment identification theorem, exact spatial-environment character-measure theorem, exact spatial-environment structural transfer theorem, exact spatial-environment tensor-transfer theorem, exact Perron/Jacobi underdetermination theorem inside that sharpened class, plus explicit source-sector reference Perron solve theorem with two structural rho-input choices (`rho = 1` giving `P_loc(6) = 0.4524071590` and `rho = delta_{(p,q),(0,0)}` giving `P_triv(6) = 0.4225317396`, both computed from `c_lambda(6)` and `SU(3)` intertwiners alone with super-polynomial NMAX truncation tail bound) and explicit no-go on closed-form `rho_(p,q)(6)` exhibited via three distinct admissible parametric families; the rho values in the reference solves are structural input and not derived from any physical 3D Wilson environment, and the remaining open object is the explicit boundary character measure `Z_6^env` of the unmarked 3D spatial Wilson environment, equivalently the Perron eigenvector of the positive tensor-transfer operator on a 3D `SU(3)` lattice gauge network with one boundary plaquette",
       "deps": [
         "gauge_scalar_temporal_completion_theorem_note",
         "scalar_3plus1_temporal_ratio_note",
-        "gauge_vacuum_plaquette_constant_lift_obstruction_note"
+        "gauge_vacuum_plaquette_constant_lift_obstruction_note",
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
       ],
-      "note_hash": "34bc7d50f7a962b243b62563f3ec23d7cfc06d95b69e585046cbe4153ee2025b",
+      "note_hash": "937a69d024b5ba8a0b372bdb96f740805994c422ee81f966752c249cd8332e26",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py",
       "title": "Gauge-Vacuum Plaquette Scalar-Bridge Support"
@@ -26453,6 +26490,24 @@
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py",
       "title": "Gauge-Vacuum Plaquette Susceptibility-Flow Theorem"
+    },
+    "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note": {
+      "claim_id": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "current_status": "support",
+      "current_status_raw": "support \u2014 explicit source-sector Perron solves at two",
+      "deps": [
+        "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
+        "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
+        "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
+        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+        "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
+        "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
+        "gauge_vacuum_plaquette_constant_lift_obstruction_note"
+      ],
+      "note_hash": "d32a28f0fe668a9971911e79925bb541a76f1a8a4c1c763955bded77fe118eb9",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py",
+      "title": "Gauge-Vacuum Plaquette Source-Sector Reference Perron Solve"
     },
     "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note": {
       "claim_id": "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
@@ -31905,11 +31960,12 @@
         "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
         "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
         "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
         "gauge_scalar_temporal_completion_theorem_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "scalar_3plus1_temporal_ratio_note"
       ],
-      "note_hash": "a399a5b20c6761fdd34e4c268fd5e1fcd38726b4c4836e67731ce52587e569db",
+      "note_hash": "96a0c97d83889ae1dc8af1ef1fd85790367f3161859047c1877118ac7c64be5d",
       "path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
       "runner_path": "scripts/frontier_plaquette_self_consistency.py",
       "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant"
@@ -41349,17 +41405,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4614,
+    "edge_count": 4623,
     "leaf_count": 721,
-    "node_count": 1661,
+    "node_count": 1662,
     "root_count": 1180,
-    "runners_with_path": 1226,
+    "runners_with_path": 1227,
     "status_counts": {
       "bounded": 446,
       "open": 48,
       "proposed_promoted": 1,
       "proposed_retained": 380,
-      "support": 375,
+      "support": 376,
       "unknown": 411
     }
   }
