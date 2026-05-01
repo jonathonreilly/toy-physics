@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:08:59.612405+00:00
+**Generated:** 2026-05-01T04:11:31.604503+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 239 |
-| support | 194 |
+| support | 193 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 803 |
+| ~~audited_conditional~~ | 804 |
 | ~~audited_failed~~ | 156 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 534 |
+| `audited_conditional` | 535 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 695 |
+| `unaudited` | 694 |
 
 | criticality | count |
 |---|---:|
@@ -621,6 +621,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_wider_w4_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `h0125_wider_w4_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hadron_mass_lane1_theorem_plan_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hard_geometry_gravity_window_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7394,6 +7395,26 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** Absent those premises, `sqrt(sigma)` can be used only as a bounded scale comparator or support input.  _(class `A`)_
 - **chain closes:** True — The claim is a negative boundary: the note does not derive hadron masses, but shows that confinement plus one bounded string-tension scale leaves channel-dependent coefficients and the GMOR/nucleon inputs unretained. The live runner verifies the repo guardrails, the coefficient separation, the GMOR dependencies, and the safe open endpoint with PASS=16 FAIL=0.
 - **rationale:** The retained content is the firewall itself, not a hadron-mass derivation. The note's load-bearing step is the exact underdetermination that a single bounded scale leaves independent dimensionless spectral coefficients and cannot supply the GMOR or nucleon-correlator inputs. The live runner confirms the current repository boundary and uses observed hadron masses only to expose coefficient freedom. Residual risk is downstream misuse: this audit does not ratify any pion, proton, neutron, or spectrum mass prediction.
+- **auditor confidence:** high
+
+### `hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30`
+
+- **Note:** [`HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md`](../../docs/HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30`  (codex-current; independence=fresh_context)
+- **load-bearing step:** A single multiplicative quenched-to-dynamical screening factor is not a retained closure object until the full-QCD observable is defined and bridged through B2a/B2b.  _(class `B`)_
+- **chain closes:** False — The gate split is a useful methodological repair, but it depends on unregistered Lane 1/string-tension authorities, external string-breaking/static-energy facts, and a runner that reads rendered audit history. The source note also expects PASS=16 while the current runner contains 15 executable check calls.
+- **rationale:** Issue: the B2 gate-repair note depends on unregistered framework and external-lattice inputs, and its runner is not fresh-context clean because it reads docs/audit/AUDIT_LEDGER.md as evidence; the note's expected PASS=16 artifact is also stale against the current 15 runner checks. Why this blocks: the gate split is plausible, but the audit cannot treat prior audit-ledger text or unregistered external literature as a closed derivation of the repaired retention gate. Repair target: register the Lane 1 gate audit, confinement/string-tension note, alpha_s note, lane file, external static-energy/string-breaking authorities, and replace the audit-ledger runner assertion with direct dependency-status inputs; refresh the expected PASS count after rerun. Claim boundary until fixed: this is a conditional gate-repair/inventory note for the sqrt(sigma) lane, not a retained B2 closure or audit-clean promotion path.
+- **open / conditional deps cited:**
+  - `HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md`
+  - `CONFINEMENT_STRING_TENSION_NOTE.md`
+  - `ALPHA_S_DERIVED_NOTE.md`
+  - `MINIMAL_AXIOMS_2026-04-11.md`
+  - `lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md`
+  - `PROHIBITED_AUDIT_HISTORY_DEPENDENCY: audit/AUDIT_LEDGER.md`
+  - `EXTERNAL_LITERATURE: full-QCD string breaking/static-energy scale references`
 - **auditor confidence:** high
 
 ### `hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27`
