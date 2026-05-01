@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T19:45:45.122131+00:00
+**Generated:** 2026-05-01T20:02:35.695161+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 192 |
+| bounded | 189 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 909 |
+| ~~audited_conditional~~ | 912 |
 | ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 613 |
+| `audited_conditional` | 614 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 556 |
+| `unaudited` | 555 |
 
 | criticality | count |
 |---|---:|
@@ -647,6 +647,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_complex_action_falsifier_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_connectivity_tolerance_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_dynamics_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `gate_b_farfield_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `gate_b_grown_distance_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gate_b_grown_joint_package_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_grown_propagating_field_radical_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -6395,6 +6396,24 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a bounded note without audit-ratified executable closure.
 - **auditor confidence:** medium
+
+### `gate_b_farfield_note`
+
+- **Note:** [`GATE_B_FARFIELD_NOTE.md`](../../docs/GATE_B_FARFIELD_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** In the far field (z >= 3), the h=0.5 grown-geometry lattice gives 36/36 TOWARD gravity with F proportional to M at 1.00 across the tested drift/restore rows, while near-field and full Gate B remain open.  _(class `C`)_
+- **chain closes:** False — The primary harness was rerun on the Mac mini and reproduces the far-field table, but the runner emits no classified PASS lines and the note's companion-transfer/refinement statements cite rows that are currently audited_conditional. The main far-field bounded result is supported; the broader Gate B transfer package is not clean.
+- **rationale:** Issue: the far-field harness reproduces the table after a slow Mac mini run, but its output is unclassified and the note also imports companion distance-law, joint-package, and h=0.25 refinement rows that are not audit-clean. Why this blocks: the audit lane cannot classify the 36/36 TOWARD and F~M checks from the runner output, and the combined transfer/read-through claims inherit conditional companion authorities. Repair target: add classified PASS lines for each drift/restore far-field row, F~M scaling, near-field boundary, and companion-scope boundary; keep companion rows separate until clean. Claim boundary until fixed: a bounded current-run far-field positive on the tested h=0.5 generated geometry, not a clean full Gate B theorem.
+- **open / conditional deps cited:**
+  - `GATE_B_GROWN_DISTANCE_LAW_NOTE.md`
+  - `GATE_B_GROWN_JOINT_PACKAGE_NOTE.md`
+  - `GATE_B_H025_FARFIELD_NOTE.md`
+  - `GATE_B_H025_DISTANCE_LAW_NOTE.md`
+  - `GATE_B_H025_JOINT_PACKAGE_NOTE.md`
+- **auditor confidence:** high
 
 ### `gate_b_grown_distance_law_note`
 

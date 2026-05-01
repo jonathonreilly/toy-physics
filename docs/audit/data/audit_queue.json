@@ -3,9 +3,9 @@
     "critical": 8,
     "high": 195,
     "leaf": 216,
-    "medium": 137
+    "medium": 136
   },
-  "generated_at": "2026-05-01T19:45:44.890729+00:00",
+  "generated_at": "2026-05-01T20:02:35.406637+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6521,23 +6521,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "gate_b_farfield_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 2,
-      "load_bearing_score": 2.585,
-      "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/gate_b_farfield_harness.py",
-      "transitive_descendants": 2
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "gate_b_nonlabel_connectivity_v1_distance_note",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -10272,50 +10255,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "minimal_absorbing_horizon_probe_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "gate_b_nonlabel_connectivity_v1_note",
-        "gate_b_nonlabel_connectivity_v1_distance_note",
-        "gate_b_nonlabel_connectivity_v1_joint_note",
-        "gate_b_farfield_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/MINIMAL_ABSORBING_HORIZON_PROBE_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/minimal_absorbing_horizon_probe.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "minimal_bidirectional_trapping_probe_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "gate_b_nonlabel_connectivity_v1_note",
-        "gate_b_nonlabel_connectivity_v1_distance_note",
-        "gate_b_nonlabel_connectivity_v1_joint_note",
-        "gate_b_farfield_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/minimal_bidirectional_trapping_probe.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "mirror_grown_combined_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -13552,6 +13491,50 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "minimal_absorbing_horizon_probe_note",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "gate_b_nonlabel_connectivity_v1_note",
+        "gate_b_nonlabel_connectivity_v1_distance_note",
+        "gate_b_nonlabel_connectivity_v1_joint_note",
+        "gate_b_farfield_note"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/MINIMAL_ABSORBING_HORIZON_PROBE_NOTE.md",
+      "ready": false,
+      "runner_path": "scripts/minimal_absorbing_horizon_probe.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "minimal_bidirectional_trapping_probe_note",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "gate_b_nonlabel_connectivity_v1_note",
+        "gate_b_nonlabel_connectivity_v1_distance_note",
+        "gate_b_nonlabel_connectivity_v1_joint_note",
+        "gate_b_farfield_note"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md",
+      "ready": false,
+      "runner_path": "scripts/minimal_bidirectional_trapping_probe.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "neutrino_majorana_continuum_bridge_transplant_obstruction_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14155,6 +14138,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 152,
-  "total_pending": 556
+  "ready_count": 149,
+  "total_pending": 555
 }
