@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:29:37.371370+00:00
+**Generated:** 2026-05-01T04:31:11.059228+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 227 |
+| bounded | 226 |
 | support | 192 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 21 |
+| ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 808 |
 | ~~audited_failed~~ | 159 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 539 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
-| `audited_numerical_match` | 18 |
+| `audited_numerical_match` | 19 |
 | `audited_renaming` | 18 |
-| `unaudited` | 682 |
+| `unaudited` | 681 |
 
 | criticality | count |
 |---|---:|
@@ -959,6 +959,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_moment_closure_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_bridge_nonlocal_corrections_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_bridge_uv_class_uniqueness_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
+| `yt_constructive_uv_bridge_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -13460,6 +13461,25 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `R_conn_8_9_not_derived_from_CMT_partition_identity`
   - `SU3_beta6_scalar_channel_R_conn_measurement_missing`
   - `standard_lattice_matching_and_SM_running_precision_caveat`
+- **auditor confidence:** high
+
+### `yt_constructive_uv_bridge_note`
+
+- **Note:** [`YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`](../../docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-yt_constructive_uv_bridge_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Independent logistic, erf, and smoothstep UV-localized bridge families can be tuned in the same narrow UV window to reproduce the accepted y_t(v)=0.9176 endpoint within 0.0252%.  _(class `G`)_
+- **chain closes:** False — The runner verifies that three selected profile families have near-target best fits in a common UV window, but the bridge class is selected by endpoint matching and by an already-assumed UV localization window. It does not derive why the exact interacting bridge belongs to that class.
+- **rationale:** Issue: the constructive UV bridge class is built by scanning profile families and choosing best fits to the accepted y_t endpoint. Why this blocks: the runner passes and shows useful shape stability, but the result is still endpoint-conditioned curve construction, not a structural theorem deriving the bridge profile or UV window from the microscopic operator. Repair target: derive the UV-localized bridge family from the exact interacting lattice bridge, or prove the forced UV window and bridge shape constraints independently of y_t endpoint fitting. Claim boundary until fixed: this is bounded numerical evidence for a stable candidate bridge class, not an audit-clean y_t bridge derivation.
+- **open / conditional deps cited:**
+  - `YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md`
+  - `YT_EW_COUPLING_BRIDGE_NOTE.md`
+  - `YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`
+  - `TARGET_CONDITIONED_INPUT: TARGET_YT_PHYS = 0.9176`
+  - `PROFILE_FAMILY_SCAN: logistic / erf / smoothstep`
+  - `HYPOTHESIS: bridge confined to narrow UV window`
 - **auditor confidence:** high
 
 ### `yt_ew_color_projection_theorem`
