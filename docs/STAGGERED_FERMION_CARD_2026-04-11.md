@@ -90,7 +90,7 @@ DT=0.12, MASS=0.3, G=8.0, mu2=0.22, N_ITER=15
 | **Score** | **9/9** | **9/9** | **9/9** |
 
 B2 was previously marginal on layered_cycle; the current runner reports `R^2=0.991249 PASS`,
-lifting layered_cycle to 9/9. (Parity coupling introduces mild nonlinearity
+lifting layered_cycle to 9/9. Parity coupling still introduces mild nonlinearity
 in force-vs-source because (m+Phi)*epsilon couples mass and field multiplicatively.
 
 ## 3. Self-Gravity Probe (frontier_staggered_self_gravity.py)

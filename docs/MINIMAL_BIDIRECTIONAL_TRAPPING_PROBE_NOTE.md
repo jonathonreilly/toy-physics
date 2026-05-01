@@ -62,10 +62,10 @@ The honest limitation is equally important:
 
 Read this together with:
 
-- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md)
-- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md)
-- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md)
-- [`docs/GATE_B_FARFIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_FARFIELD_NOTE.md)
+- [`GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md`](GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md)
+- [`GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md`](GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md)
+- [`GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md`](GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md)
+- [`GATE_B_FARFIELD_NOTE.md`](GATE_B_FARFIELD_NOTE.md)
 
 The retained weak-field story remains intact, and the new trapping branch adds
 a qualitatively new strong-field observable: a no-return threshold.
@@ -74,4 +74,4 @@ a qualitatively new strong-field observable: a no-return threshold.
 
 This branch is **viable** as a moonshot direction.
 It is not a full black-hole theory, but it is no longer just a narrative idea:
-it produces a retained threshold and reduces back to the weak-field lane.
+it produces a bounded threshold and reduces back to the weak-field lane.

@@ -21,7 +21,7 @@ The goal was to test the next sharper question from the matched comparison:
 
 The existing persistent-record script now supports:
 
-- [persistent_record_overlap_kernel.py](/Users/jonreilly/Projects/Physics/scripts/persistent_record_overlap_kernel.py)
+- [`persistent_record_overlap_kernel.py`](../scripts/persistent_record_overlap_kernel.py)
   with `--side-bit`
 
 The side bit is implemented as one additional persistent marker cell:
@@ -32,11 +32,11 @@ The side bit is implemented as one additional persistent marker cell:
 
 The matched harness now also supports side-bit variants:
 
-- [persistent_record_matched_compare.py](/Users/jonreilly/Projects/Physics/scripts/persistent_record_matched_compare.py)
+- [`persistent_record_matched_compare.py`](../scripts/persistent_record_matched_compare.py)
 
 Relevant log:
 
-- [2026-04-03-persistent-record-sidebit-matched-compare.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-03-persistent-record-sidebit-matched-compare.txt)
+- [`2026-04-03-persistent-record-sidebit-matched-compare.txt`](../logs/2026-04-03-persistent-record-sidebit-matched-compare.txt)
 
 ## Matched result (`2` seeds, `gamma = 1.0`)
 
