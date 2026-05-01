@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:47:48.351608+00:00
+**Generated:** 2026-05-01T03:50:41.802810+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 239 |
-| support | 201 |
+| support | 200 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 798 |
+| ~~audited_conditional~~ | 799 |
 | ~~audited_failed~~ | 154 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 528 |
+| `audited_conditional` | 529 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 702 |
+| `unaudited` | 701 |
 
 | criticality | count |
 |---|---:|
@@ -823,6 +823,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_qg_pl_field_interface_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_pl_sobolev_interface_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_pl_weak_form_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `universal_qg_projective_schur_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `universal_qg_uv_finite_partition_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `unpromoted_branch_retainability_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `up_sector_partition_revisit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -12558,6 +12559,22 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
   - `UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md`
   - `UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_qg_projective_schur_closure_note`
+
+- **Note:** [`UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-universal_qg_projective_schur_closure_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Because the positive-background route is symmetric positive definite, integrating out fine modes by Schur complement gives K_eff=A-BC^-1B^T and preserves the stationary and covariance sectors exactly.  _(class `A`)_
+- **chain closes:** False — The Schur-complement formulas are algebraically correct for a finite SPD Gaussian block operator. The note does not prove or register the upstream positive-background SPD action, UV-finite partition theorem, or canonical refinement-net inputs, so the projective closure is conditional on those premises.
+- **rationale:** Issue: the projective Schur closure assumes a finite SPD Gaussian gravity partition family and a positive-background local action, but those upstream inputs are not registered as dependencies and no runner checks the block identities. Why this blocks: Schur marginalization preserves the family only if the fine block C is invertible/SPD and the starting partition theorem is valid. Repair target: register and ratify the positive-background local closure, UV-finite partition, and canonical refinement-net notes, and add a finite block-Gaussian runner checking partition, stationary, covariance, and associativity identities. Claim boundary until fixed: conditional on an SPD finite Gaussian gravity block family, the Schur complement gives the stated exact projective coarse-graining algebra.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md`
+  - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_qg_uv_finite_partition_note`
