@@ -5,7 +5,7 @@
     "leaf": 255,
     "medium": 133
   },
-  "generated_at": "2026-05-01T06:54:59.020351+00:00",
+  "generated_at": "2026-05-01T06:56:28.028256+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9975,25 +9975,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "work_history.gw_echo_timing_route_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "gw_echo_null_result_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/work_history/GW_ECHO_TIMING_ROUTE_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_gw_echo_derived.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "legacy_exploratory_drivers_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -13871,6 +13852,26 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "frozen_stars_rigorous_note",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "gw_echo_null_result_note",
+        "work_history.gw_echo_timing_route_note"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/FROZEN_STARS_RIGOROUS_NOTE.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_frozen_stars_rigorous.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "gauge_matter_closure_gates_2026-04-12",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14726,6 +14727,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 192,
+  "ready_count": 191,
   "total_pending": 591
 }

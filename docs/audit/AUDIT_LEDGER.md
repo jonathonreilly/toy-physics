@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:54:59.271753+00:00
+**Generated:** 2026-05-01T06:56:28.298366+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 191 |
-| support | 167 |
+| support | 166 |
 | open | 9 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 850 |
+| ~~audited_conditional~~ | 851 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
@@ -599,7 +599,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `four_d_distance_width_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `fourth_family_complex_boundary_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `frozen_stars_rigorous_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `g_bare_derivation_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `g_bare_rigidity_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | F | - |
 | `g_bare_structural_normalization_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -922,6 +921,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wilson_two_body_open_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `work_history.gw_echo_timing_route_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `work_history.potential_publication_discoveries_log` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_bridge_endpoint_shift_bound_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_bridge_rearrangement_principle_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -6296,21 +6296,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
 - **auditor confidence:** medium
-
-### `frozen_stars_rigorous_note`
-
-- **Note:** [`FROZEN_STARS_RIGOROUS_NOTE.md`](../../docs/FROZEN_STARS_RIGOROUS_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** **Bounded claim:** Lattice Fermi pressure resists gravitational collapse on all  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (gw_echo_null_result_note=bounded, work_history.gw_echo_timing_route_note=support), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (gw_echo_null_result_note=bounded, work_history.gw_echo_timing_route_note=support). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `GW_ECHO_NULL_RESULT_NOTE.md`
-  - `work_history/GW_ECHO_TIMING_ROUTE_NOTE.md`
-- **auditor confidence:** high
 
 ### `g_bare_derivation_note`
 
@@ -14433,6 +14418,20 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **chain closes:** False — The second auditor's renaming reading holds because the algebraic mass-ratio chain closes only for normalized NNI coefficients; the physical identification of those coefficients with CKM observables is asserted, not derived from allowed inputs. The first numerical-match verdict missed the symbol-to-observable bridge.
 - **rationale:** The second auditor's renaming reading holds because the algebraic mass-ratio chain closes only for normalized NNI coefficients; the physical identification of those coefficients with CKM observables is asserted, not derived from allowed inputs. The first numerical-match verdict missed the symbol-to-observable bridge.
 - **auditor confidence:** judicial
+
+### `work_history.gw_echo_timing_route_note`
+
+- **Note:** [`work_history/GW_ECHO_TIMING_ROUTE_NOTE.md`](../../docs/work_history/GW_ECHO_TIMING_ROUTE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Prediction: t_echo = 67.66 ms, f_echo = 14.8 Hz for the GW150914 remnant, while the note is marked as historical route work superseded by the current null-result companion.  _(class `C`)_
+- **chain closes:** False — The registered runner reproduces the naive timing-family arithmetic, but the one-hop null-result note says that timing alone is not the accepted observable prediction because amplitude suppression makes detectable echoes effectively zero. The positive echo-prediction reading therefore does not close from the current dependency surface.
+- **rationale:** Issue: the runner verifies the historical round-trip timing formula, not the current observable echo claim. Why this blocks: the direct dependency states that the accepted framework reading is no detectable echoes and that the old 67.66 ms timing surface is superseded by amplitude-suppression analysis. Repair target: keep this row explicitly historical or add a separate audited derivation showing nonzero reflection/amplitude survives the null-result barrier. Claim boundary until fixed: the note supports the existence of an old timing-family calculation, not a current positive GW150914 echo prediction.
+- **open / conditional deps cited:**
+  - `GW_ECHO_NULL_RESULT_NOTE.md`
+- **auditor confidence:** high
 
 ### `work_history.potential_publication_discoveries_log`
 
