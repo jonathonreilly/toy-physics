@@ -144,6 +144,62 @@ def compute_projected_commutant(comm_basis, projector, subspace_dim):
     return [Vh[i].reshape(subspace_dim, subspace_dim) for i in range(rank)]
 
 
+def retained_triplet_operator_bridge():
+    """Construct the exact observable/no-quotient bridge on H_hw=1.
+
+    This is the reduced boundary runner's local copy of the physical-readout
+    bridge: translations separate the three hw=1 sectors, the induced C3 cycle
+    connects them, and those operators generate M_3(C).  Hence no proper
+    quotient can preserve the exact retained observable algebra.
+    """
+    tx = np.diag([-1.0, +1.0, +1.0]).astype(complex)
+    ty = np.diag([+1.0, -1.0, +1.0]).astype(complex)
+    tz = np.diag([+1.0, +1.0, -1.0]).astype(complex)
+    c3 = np.array(
+        [[0.0, 0.0, 1.0], [1.0, 0.0, 0.0], [0.0, 1.0, 0.0]],
+        dtype=complex,
+    )
+    ident = np.eye(3, dtype=complex)
+    chars = [(-1, +1, +1), (+1, -1, +1), (+1, +1, -1)]
+    projectors = []
+    for signs in chars:
+        p = ident.copy()
+        for sign, op in zip(signs, (tx, ty, tz)):
+            p = p @ (ident + sign * op) / 2.0
+        projectors.append(p)
+
+    words = [ident, tx, ty, tz, c3, c3 @ c3]
+    basis = []
+    changed = True
+    while changed:
+        changed = False
+        for left in list(words):
+            for right in list(words):
+                candidate = left @ right
+                vec = candidate.reshape(-1)
+                if not basis:
+                    basis.append(candidate)
+                    changed = True
+                    continue
+                mat = np.stack([b.reshape(-1) for b in basis], axis=1)
+                coeffs, *_ = np.linalg.lstsq(mat, vec, rcond=None)
+                if np.linalg.norm(mat @ coeffs - vec) > 1e-10:
+                    basis.append(candidate)
+                    words.append(candidate)
+                    changed = True
+    algebra_dim = len(basis)
+
+    comm_constraints = [
+        np.kron(op.T, ident) - np.kron(ident, op)
+        for op in (tx, ty, tz, c3)
+    ]
+    constraint = np.vstack(comm_constraints)
+    _, svals, vh = np.linalg.svd(constraint, full_matrices=True)
+    tol = 1e-10 * max(1.0, svals[0])
+    comm_dim = int(np.sum(svals < tol) + max(0, vh.shape[0] - len(svals)))
+    return chars, projectors, algebra_dim, comm_dim
+
+
 # =============================================================================
 # PART 1: WITH THE AXIOM, GENERATION PHYSICALITY IS CLOSED
 # =============================================================================
@@ -172,6 +228,20 @@ def part1_with_axiom():
     check("exact_translation_spectrum_is_physical_observable_data", True,
           "distinct translation characters on the accepted Hilbert surface are physical observable distinctions",
           kind="LOGICAL")
+
+    chars, triplet_projectors, triplet_alg_dim, triplet_comm_dim = retained_triplet_operator_bridge()
+    check("hw1_translation_characters_pairwise_distinct", len(set(chars)) == 3,
+          f"characters={chars}", kind="EXACT")
+    check("hw1_translation_projectors_are_rank_one",
+          all(np.linalg.matrix_rank(p, tol=1e-10) == 1 for p in triplet_projectors),
+          "three exact rank-one observable projectors on H_hw=1", kind="EXACT")
+    check("hw1_retained_observable_algebra_is_full_M3",
+          triplet_alg_dim == 9,
+          f"generated algebra dimension={triplet_alg_dim}", kind="EXACT")
+    check("hw1_retained_observable_commutant_is_scalar",
+          triplet_comm_dim == 1,
+          f"commutant dimension={triplet_comm_dim}; no proper exact quotient kernel can be invariant",
+          kind="EXACT")
 
     # --- Step (b): 3 hw=1 corners are 3 physical species ---
     print("\n  Step (b): 3 hw=1 corners give 3 retained species sectors")
@@ -344,7 +414,8 @@ def part1_with_axiom():
     print("    (e) EWSB gives them different masses (1+2 exact)")
     print("    (f) Therefore: the retained triplet already has physical-species")
     print("        semantics inside the accepted theory. QED.\n")
-    check("part1_triplet_physicality_closed_on_hilbert_surface", True,
+    check("part1_triplet_physicality_closed_on_hilbert_surface",
+          triplet_alg_dim == 9 and triplet_comm_dim == 1,
           "exact observable separation + no-rooting/no-quotient closure give triplet physical-species semantics",
           kind="LOGICAL")
 

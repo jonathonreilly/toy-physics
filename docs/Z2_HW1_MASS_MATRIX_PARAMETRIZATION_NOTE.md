@@ -1,10 +1,12 @@
 # Z_2 `hw=1` Mass-Matrix Parametrization Note
 
 **Date:** 2026-04-17
-**Status:** exact support theorem on the residual axis-selected carrier
+**Status:** proposed_retained exact structural theorem on the residual
+axis-selected carrier; audit pending
 **Script:** `scripts/frontier_z2_hw1_mass_matrix_parametrization.py`
-**Authority role:** canonical normal-form note for residual `Z_2`-invariant
-Hermitian operators on the `hw=1` triplet
+**Authority role:** canonical normal-form theorem for residual
+`Z_2`-invariant Hermitian operators on the `hw=1` triplet; not a standalone
+mass-hierarchy theorem
 
 ## Safe statement
 
@@ -54,9 +56,11 @@ eigenvalues, while the exact `S_3`-invariant locus is the subspace
 ## Why it matters on `main`
 
 This is the exact post-`S_3` support tool complementary to the
-`S_3` mass-matrix no-go. It does not claim a derived flavor hierarchy. Its
-safe role is to expose the full residual `Z_2` Hermitian normal form available
-on the retained carrier once one leaves the exact unbroken `S_3` class.
+`S_3` mass-matrix no-go. It does not claim a derived flavor hierarchy or
+select a point in the five-real-parameter family. Its safe retained-grade role
+is narrower: it exposes the full residual `Z_2` Hermitian normal form
+available on the retained carrier once one leaves the exact unbroken `S_3`
+class.
 
 ## Verification
 

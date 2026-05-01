@@ -1,8 +1,8 @@
 # Generation Axiom Boundary Note
 
 **Date:** 2026-04-16
-**Status:** exact support theorem on the proposed_retained three-generation surface and
-legacy reduced-stack witness for the old explicit-substrate boundary
+**Status:** proposed_retained exact boundary theorem on the three-generation
+surface plus legacy reduced-stack witness; audit pending
 **Script:** `scripts/frontier_generation_axiom_boundary.py`
 **Authority role:** canonical main-branch tool note for the physical-lattice / taste-artifact boundary
 
@@ -23,14 +23,8 @@ More precisely:
 - on the older reduced five-item implementation memo that substrate premise is
   still listed explicitly; this note now serves mainly as a witness for that
   reduced-stack fact
-- the newer
-  `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
-  now closes the stronger retained-package point that this regulator reading is
-  **not** an equivalent reading of the same accepted framework stack and that,
-  once the retained matter closure plus live `alpha_s(v)`/`v` package are
-  imposed, the physical-lattice reading is the unique surviving interpretation;
-  on the accepted one-axiom Hilbert/locality/information surface it goes
-  further and derives substrate physicality itself
+- the separate physical-lattice necessity lane carries the stronger substrate
+  closure; this boundary note does not use that lane as a load-bearing input
 
 ## Why this belongs in the toolbox
 
@@ -48,30 +42,26 @@ It is directly reusable for:
 
 ## Relation to the retained matter stack
 
-This note supports but does not replace:
+This note supports but does not replace the generation-structure,
+physical-lattice, one-generation matter-closure, and anomaly-forced-time
+surfaces. Those notes carry their own retained claim surfaces.
 
-- `THREE_GENERATION_STRUCTURE_NOTE.md`
-- `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
-- `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
-- `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`
-- `ANOMALY_FORCES_TIME_THEOREM.md`
-
-Those notes carry the retained claim surfaces.
-This note now isolates the older reduced-stack witness after the stronger
-one-axiom closure result, so the physical interpretation stays clean and
-reusable without deleting the historical logical step.
+This note now isolates the older reduced-stack witness and locally reconstructs
+the exact retained `hw=1` observable algebra. That keeps the physical
+interpretation reusable without turning this boundary note into a downstream
+dependency cycle.
 
 The clean current division of labor is:
 
 - this note:
   reduced-stack witness showing why the substrate premise looked explicit on
-  the old five-item memo
-- `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`:
-  exact retained-generation no-proper-quotient theorem
-- `PHYSICAL_LATTICE_NECESSITY_NOTE.md`:
-  exact no-same-stack / no-same-surface regulator reinterpretation closure,
-  exact retained observable-species semantics on the accepted Hilbert surface,
-  retained-package conditional necessity, and accepted one-axiom substrate
+  the old five-item memo, plus a local construction of the exact `M_3(C)`
+  retained-observable algebra on `H_hw=1`
+- downstream retained-generation notes:
+  consume this local boundary witness when they state no-proper-quotient
+  conclusions
+- the separate physical-lattice necessity lane:
+  carries the no-same-stack regulator boundary and accepted one-axiom substrate
   necessity
 
 ## Validation
@@ -79,8 +69,7 @@ The clean current division of labor is:
 - primary runner:
   [frontier_generation_axiom_boundary.py](./../scripts/frontier_generation_axiom_boundary.py)
 
-Current main-branch runner state:
+Current branch runner state:
 
-- `frontier_generation_axiom_boundary.py`: `PASS=31`, `FAIL=0`;
-  reduced-stack witness only, with the stronger live closure now carried by
-  `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
+- `frontier_generation_axiom_boundary.py`: `PASS=35`, `FAIL=0`;
+  reduced-stack witness plus local `M_3(C)` observable-algebra construction
