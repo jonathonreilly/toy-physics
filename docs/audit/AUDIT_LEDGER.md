@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:59:47.150152+00:00
+**Generated:** 2026-05-01T07:00:39.168172+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 191 |
-| support | 166 |
+| support | 165 |
 | open | 9 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 851 |
+| ~~audited_conditional~~ | 852 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 266 |
-| `audited_conditional` | 581 |
+| `audited_conditional` | 582 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 588 |
+| `unaudited` | 587 |
 
 | criticality | count |
 |---|---:|
@@ -768,6 +768,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `linear_response_true_kubo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `local_zsym_predictor_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mass_spectrum_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `matched_2d_4d_decoherence_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `memory_decay_diagnosis_2026-04-11` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -10363,6 +10364,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `NEUTRINO_MASS_DERIVED_NOTE.md`
   - `COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`
   - `QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md`
+- **auditor confidence:** high
+
+### `matched_2d_4d_decoherence_note`
+
+- **Note:** [`MATCHED_2D_4D_DECOHERENCE_NOTE.md`](../../docs/MATCHED_2D_4D_DECOHERENCE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The matched comparison does not support a clean 4D flattens-the-ceiling claim, based on the reported pur_min table and per-seed exponent fits.  _(class `C`)_
+- **chain closes:** False — The note reports a specific numerical sweep and exponent comparison, but no runner, log, or dependency artifact is registered for reproducing the table. The audit cannot verify the measured pur_min values or fitted alpha values from the supplied context.
+- **rationale:** Issue: the load-bearing matched 2D-vs-4D numerical table and exponent fits are presented without a registered runner or frozen output. Why this blocks: the conclusion that the dimensional escape framing should stay provisional depends on those exact measured values and seed/radius choices. Repair target: register the matched-sweep runner or attach a frozen log that reproduces the pur_min table, degree matching, and alpha fits. Claim boundary until fixed: the note may serve as a cautionary support memo, but not as an audited numerical refutation or validation of the 4D ceiling claim.
 - **auditor confidence:** high
 
 ### `matter_inertial_closure_note`
