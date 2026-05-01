@@ -81,19 +81,29 @@ the dominant-weight character basis.
 
 From the exact theorems already on `main`:
 
-- the source-sector matrix-element factorization theorem closes
-  `T_src(6) = exp(3 J) D_6 exp(3 J)`;
-- the local/environment factorization theorem closes
-  `D_beta^mix,norm chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q)`;
-- the residual-environment identification theorem identifies the
-  remaining open factor as `R_beta^env` after stripping the local
-  marked-link factor;
-- the spatial-environment character-measure theorem realizes
-  `R_beta^env = C_(Z_beta^env)` with eigenvalues
+- the source-sector matrix-element factorization theorem
+  [GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md)
+  closes `T_src(6) = exp(3 J) D_6 exp(3 J)`;
+- the local/environment factorization theorem
+  [GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md)
+  closes `D_beta^mix,norm chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q)`;
+- the residual-environment identification theorem
+  [GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md)
+  identifies the remaining open factor as `R_beta^env` after stripping
+  the local marked-link factor;
+- the spatial-environment character-measure theorem
+  [GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md)
+  realizes `R_beta^env = C_(Z_beta^env)` with eigenvalues
   `rho_(p,q)(beta)` and `rho_(0,0)(beta) = 1`;
-- the spatial-environment tensor-transfer theorem identifies these as
-  the boundary amplitudes of an explicit positive tensor-transfer
-  operator built from `c_lambda(beta)` and `SU(3)` intertwiners.
+- the spatial-environment structural transfer theorem
+  [GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md)
+  gives the positive transfer-operator carrier for that boundary
+  class-function problem;
+- the spatial-environment tensor-transfer theorem
+  [GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md)
+  identifies these as the boundary amplitudes of an explicit positive
+  tensor-transfer operator built from `c_lambda(beta)` and `SU(3)`
+  intertwiners.
 
 So the explicit factorized source-sector operator at `beta = 6` is
 

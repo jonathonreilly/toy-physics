@@ -4298,6 +4298,30 @@
     },
     {
       "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
       "to": "gauge_vacuum_plaquette_constant_lift_obstruction_note"
     },
     {
@@ -18469,7 +18493,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T01:48:36.229514+00:00",
+  "generated_at": "2026-05-01T01:48:48.001335+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -26472,9 +26496,15 @@
       "current_status": "support",
       "current_status_raw": "support \u2014 explicit source-sector Perron solves at two",
       "deps": [
+        "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
+        "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
+        "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
+        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+        "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
+        "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note"
       ],
-      "note_hash": "d2287f56f5e5e941a330f623f86961a5b2f86f19c1c9e17ccf4014d1983d1ccb",
+      "note_hash": "d32a28f0fe668a9971911e79925bb541a76f1a8a4c1c763955bded77fe118eb9",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py",
       "title": "Gauge-Vacuum Plaquette Source-Sector Reference Perron Solve"
@@ -41375,7 +41405,7 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4617,
+    "edge_count": 4623,
     "leaf_count": 721,
     "node_count": 1662,
     "root_count": 1180,
