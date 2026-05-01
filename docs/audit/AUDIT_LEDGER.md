@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:43:47.104233+00:00
+**Generated:** 2026-05-01T03:45:44.162125+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 240 |
+| bounded | 239 |
 | support | 201 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 797 |
+| ~~audited_conditional~~ | 798 |
 | ~~audited_failed~~ | 154 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 231 |
-| `audited_conditional` | 527 |
+| `audited_conditional` | 528 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 704 |
+| `unaudited` | 703 |
 
 | criticality | count |
 |---|---:|
@@ -360,6 +360,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bh_entropy_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `bmv_bounded_negative_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `born_lane_comparison_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `bound_state_selection_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `branch_entanglement_robustness_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `broad_gravity_derivation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `broad_surrogate_point_source_compare_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1756,6 +1757,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `bound_state_selection_note`
+
+- **Note:** [`BOUND_STATE_SELECTION_NOTE.md`](../../docs/BOUND_STATE_SELECTION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-bound_state_selection_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The finite-lattice Coulomb Hamiltonian survey is interpreted as selecting d=3 as the highest dimension with stable atomic bound states and chemistry-like multiple levels.  _(class `D`)_
+- **chain closes:** False — The script reproduces a bounded finite-lattice diagnostic, but it does not emit classified PASS/FAIL checks and does not prove the continuum fall-to-center or chemistry selection criteria. The conclusion relies on anthropic interpretation and known dimension-dependent Coulomb physics beyond the modest lattice data.
+- **rationale:** Issue: the d=3 selection is inferred from a finite-lattice numerical survey plus the external criterion that stable chemistry requires multiple bound levels in a dimension high enough for complex structure. Why this blocks: the runner supports the bounded diagnostic but does not establish a continuum theorem or a fully classified audit check, and it leaves d=4/d=5 fall-to-center as an interpreted trend rather than an analytic result. Repair target: add classified runner checks and a continuum/partial-wave argument for the d>=4 instability, or keep this explicitly as a numerical anthropology diagnostic. Claim boundary until fixed: the current script gives bounded evidence that the tested lattice Coulomb models make d=3 the highest robust multi-level bound-state dimension among d=2..5 under the stated criteria.
+- **open / conditional deps cited:**
+  - `scripts/frontier_bound_state_selection.py`
 - **auditor confidence:** high
 
 ### `branch_entanglement_robustness_note_2026-04-11`
