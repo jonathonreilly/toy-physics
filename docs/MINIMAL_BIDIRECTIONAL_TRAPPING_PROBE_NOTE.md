@@ -1,12 +1,13 @@
 # Minimal Bidirectional Trapping Probe
 
 **Date:** 2026-04-05  
-**Status:** bounded moonshot trapping probe on the proposed_retained generated-geometry family
+**Status:** bounded moonshot trapping probe on the generated-geometry family
+**Last verified:** 2026-05-01 — runner exits 0 with branch verdict "viable"; the previously-absent frozen log was regenerated as `logs/2026-04-05-minimal-bidirectional-trapping-probe.txt`
 
 ## Artifact chain
 
-- [`scripts/minimal_bidirectional_trapping_probe.py`](/Users/jonreilly/Projects/Physics/scripts/minimal_bidirectional_trapping_probe.py)
-- [`logs/2026-04-05-minimal-bidirectional-trapping-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-minimal-bidirectional-trapping-probe.txt)
+- [`scripts/minimal_bidirectional_trapping_probe.py`](../scripts/minimal_bidirectional_trapping_probe.py)
+- [`logs/2026-04-05-minimal-bidirectional-trapping-probe.txt`](../logs/2026-04-05-minimal-bidirectional-trapping-probe.txt)
 
 ## Question
 

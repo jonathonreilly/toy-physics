@@ -6,6 +6,7 @@
 **Role:** direct universal route / theorem step
 **Purpose:** isolate the unique symmetric `3+1` quotient kernel carried by the
 exact tensor-valued variational candidate
+**Script:** `scripts/frontier_universal_gr_tensor_quotient_uniqueness.py` (PASS=8 FAIL=0 on current main; ROOT now relative, route-2 dep refreshed)
 
 ## Verdict
 

@@ -1,7 +1,7 @@
 # Tensor Block Closure Test
 
 **Date:** 2026-04-14  
-**Script:** `scripts/frontier_tensor_block_closure_test.py`  
+**Script:** `scripts/frontier_tensor_block_closure_test.py` (PASS=6 FAIL=0 on current main; classified PASS lines for the bounded no-go now emitted: local sufficiency on each family, cross-family kernel/eta/a_star mismatches, non-universality)
 **Status:** bounded - bounded or caveated result note
 
 ## Question

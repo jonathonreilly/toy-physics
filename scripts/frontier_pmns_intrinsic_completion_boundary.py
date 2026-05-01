@@ -106,13 +106,16 @@ def part2_current_bank_still_does_not_make_the_completion_intrinsic() -> None:
 
     zero = read("docs/PMNS_SELECTOR_CURRENT_STACK_ZERO_LAW_NOTE.md")
     polar = read("docs/PMNS_RIGHT_POLAR_SECTION_NOTE.md")
-    sheet = read("docs/PMNS_BRANCH_SHEET_NONFORCING_NOTE.md")
+    # PMNS_BRANCH_SHEET_NONFORCING_NOTE was split: the "same Hermitian matrix"
+    # claim now lives in PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE
+    # and the "sheet-even" framing in PMNS_RIGHT_POLAR_SECTION_NOTE.
+    sheet_closure = read("docs/PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md")
 
     check("The current-stack selector amplitude is still exactly zero", "a_sel,current = 0" in zero)
     check("The polar-section theorem says the generic full-rank right orbit already has Y_+(H) = H^(1/2)",
           "Y_+(H)" in polar and "H^(1/2)" in polar)
     check("The sheet-nonforcing theorem says H-based retained observables are sheet-even",
-          "same Hermitian matrix" in sheet and "sheet-even" in sheet)
+          "same Hermitian matrix" in sheet_closure and "sheet-even" in polar)
 
     print()
     print("  So even with exact branch Hermitian grammars, the current bank")
@@ -129,7 +132,10 @@ def part3_the_minimal_missing_intrinsic_object_is_now_sharp() -> None:
     core = read("docs/PMNS_EWSB_RESIDUAL_Z2_HERMITIAN_CORE_NOTE.md")
     seed = read("docs/PMNS_EWSB_WEAK_AXIS_Z3_SEED_NOTE.md")
     spectral = read("docs/PMNS_EWSB_RESIDUAL_Z2_SPECTRAL_PRIMITIVE_NOTE.md")
-    nonforcing = read("docs/PMNS_EWSB_ALIGNMENT_NONFORCING_NOTE.md")
+    # PMNS_EWSB_ALIGNMENT_NONFORCING_NOTE was merged into the parent
+    # PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE (see lines around "EWSB
+    # alignment nonforcing"); the alignment-nonforcing claim now lives there.
+    nonforcing = note
     slots = read("docs/PMNS_EWSB_BREAKING_SLOT_NONREALIZATION_NOTE.md")
     atlas = read("docs/publication/ci3_z3/DERIVATION_ATLAS.md")
 

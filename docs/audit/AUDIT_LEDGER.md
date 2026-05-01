@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T16:15:55.367383+00:00
+**Generated:** 2026-05-01T17:01:23.538942+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 199 |
-| support | 152 |
+| bounded | 209 |
+| support | 156 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 875 |
-| ~~audited_failed~~ | 103 |
+| ~~audited_conditional~~ | 885 |
+| ~~audited_failed~~ | 79 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 292 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 66 |
+| `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 572 |
+| `unaudited` | 585 |
 
 | criticality | count |
 |---|---:|
@@ -54,10 +54,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1165
-- runners with (C) first-principles compute hits: 544
+- runners classified: 1167
+- runners with (C) first-principles compute hits: 545
 - runners with (D) external comparator hits: 288
-- decoration candidates (no C, no D): 81
+- decoration candidates (no C, no D): 82
 
 ## Top 25 by load-bearing score (topology only)
 
@@ -992,18 +992,15 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `distance_law_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | unknown | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
-| `emergent_geometry_growth_note_2026-04-10` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `fifth_family_complex_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `fifth_family_radial_fm_transfer_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `fifth_family_radial_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
-| `gr_class_expansion_finite_rank_target_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_portability_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `grown_transfer_basin_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `h0125_failure_derivation` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `hierarchy_effective_potential_endpoint_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | D | - |
 | `hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28` | open | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
 | `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28` | open | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
 | `if_program_closing_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -1011,16 +1008,11 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_axiom_native_support_batch_note_2026-04-22` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `lepton_shared_higgs_universality_underdetermination_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `minimal_bidirectional_trapping_probe_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `monopole_derived_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | C | - |
 | `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
-| `persistent_record_sidebit_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `pmns_branch_conditioned_quadratic_sheet_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `pmns_intrinsic_completion_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `pmns_minimal_branch_nonselection_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `pmns_selector_bank_nonrealization_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `pmns_selector_minimal_microscopic_extension_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `pmns_selector_sign_to_branch_reduction_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `second_grown_family_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -1039,15 +1031,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_nonlocal_closure_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_results_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_scale_closure_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `staggered_fermion_card_2026-04-11` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `tensor_block_closure_test_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `testable_predictions_map_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `three_family_card_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
-| `universal_gr_a1_invariant_section_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
-| `universal_gr_tensor_quotient_uniqueness_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
-| `wilson_mu2_distance_sweep_note_2026-04-11` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `architecture_note_directional_measure` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `bell_inequality_derived_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
@@ -5746,21 +5733,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a bounded note with executable but unratified support.
 - **auditor confidence:** medium
 
-### `emergent_geometry_growth_note_2026-04-10`
-
-- **Note:** [`EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md`](../../docs/EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** This remains a real exploratory geometry result: the growth rule changes the coarse graph geometry in a matter-correlated way.  _(class `C`)_
-- **chain closes:** False — The registered runner exits 0, but its current output no longer matches the note's initial table: matter-coupled d_eff is 1.64 rather than 2.03, the control is 1.55 rather than 1.54, and the current primary runner does not reproduce the later hardened v2/k=4 sweep claims.
-- **rationale:** Issue: the note's load-bearing current-output table is stale relative to scripts/frontier_emergent_geometry.py. The note quotes matter-coupled d_eff=2.03, control d_eff=1.54, central density 108/unit^2, and clustering 5.43x, while the current runner reports matter d_eff=1.64, control d_eff=1.55, peak listed density about 72.28, and clustering 7.68x; it also does not run the later v2/k=4 hardened sweep claims quoted in the note. Why this blocks: the claimed coarse-geometry difference and hardened retained-window interpretation cannot be audited from the current primary runner output. Repair target: update the note to the current runner output or restore/register the runner suite that reproduces both the initial table and the v2/k=4 multi-seed sweep with classified checks. Claim boundary until fixed: the current primary runner supports at most a matter-density clustering diagnostic, not the quoted d_eff lift or clean hardened emergent-geometry growth synthesis.
-- **open / conditional deps cited:**
-  - `emergent_geometry_growth_note_2026-04-10 -> scripts/frontier_emergent_geometry.py (current output stale relative to note table)`
-  - `emergent_geometry_growth_note_2026-04-10 -> frontier_emergent_geometry_v2/k4 sweep (quoted but not primary-runner covered)`
-- **auditor confidence:** high
-
 ### `emergent_lorentz_invariance_note`
 
 - **Note:** [`EMERGENT_LORENTZ_INVARIANCE_NOTE.md`](../../docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
@@ -7170,18 +7142,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** The finite off-scaffold comparison closes from the source note and current runner output. The safe claim is bounded to this nine-generator hand-specified batch, one frozen free_coh threshold, and one old two-property comparator. Residual risk is only scope drift: the result should not be read as excluding all scalar metrics or all simple classifiers.
 - **auditor confidence:** high
 
-### `gr_class_expansion_finite_rank_target_note`
-
-- **Note:** [`GR_CLASS_EXPANSION_FINITE_RANK_TARGET_NOTE.md`](../../docs/GR_CLASS_EXPANSION_FINITE_RANK_TARGET_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The smallest honest widening beyond the current restricted gravity class is the exact finite-rank source-to-metric closure with exact boundary action and bounded scalar metric reduction.  _(class `C`)_
-- **chain closes:** False — The primary runner does not execute in the repository checkout: it hard-codes /private/tmp/physics-review-active and raises FileNotFoundError before loading the finite-rank source-to-metric module. With no current runner output, the class-expansion target cannot be audited as checked on this branch.
-- **rationale:** Issue: the registered primary runner is stale and exits nonzero because it imports frontier_finite_rank_source_to_metric_theorem.py from /private/tmp/physics-review-active instead of the current repo. Why this blocks: the note's support claim depends on the runner confirming finite-rank source renormalization, boundary-action stationarity, scalar metric residual reduction, and nonzero 3+1 residual, but none of those checks run. Repair target: update the runner to resolve ROOT from its own repo path and rerun it to regenerate current output. Claim boundary until fixed: the source note may still describe the intended finite-rank widening target, but this audit cannot ratify it from a broken primary runner.
-- **auditor confidence:** high
-
 ### `graph_first_selector_derivation_note`
 
 - **Note:** [`GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md`](../../docs/GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md)
@@ -7846,20 +7806,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** Using the same residual ratio R, the dimension-4 inverse compression R^(-1/4) ~= 0.96468 is in the right few-percent range for the observed prefactor C_obs = v_obs/v_pred ~= 0.96692, while the 1/16 root is too small.  _(class `G`)_
 - **chain closes:** False — The runner reproduces the stated numerical comparison, but the conclusion depends on a chosen diagnostic condensate ratio and comparison to the observed electroweak prefactor. The note does not derive the dimension-4 order parameter, sign, placement, or determinant-to-VEV map from retained inputs.
 - **rationale:** Issue: the support result is a numerical closeness claim: at the runner's chosen diagnostic inputs, R^(-1/4) lies near the observed v_obs/v_pred prefactor and R^(-1/16) does not. Why this blocks clean closure: the comparison does not derive the physical order parameter or the correction's sign/placement; it shows that one dimension choice has the right magnitude. Repair target: derive the intensive effective-potential/free-energy density and determinant-to-VEV map, including why this residual ratio enters with the inverse fourth root. Claim boundary until fixed: the note is useful bounded diagnostic evidence that dimension-4 compression has the right scale, not a theorem proving the hierarchy normalization.
-- **auditor confidence:** high
-
-### `hierarchy_effective_potential_endpoint_note`
-
-- **Note:** [`HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md`](../../docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:2026-05-01-hierarchy_effective_potential_endpoint_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The note claims the exact dimension-4 endpoint factor C_inf^(4D)=(3/4)^(1/8) places the observed hierarchy prefactor inside the exact temporal endpoint band.  _(class `D`)_
-- **chain closes:** False — The registered runner exits nonzero before verifying the observed-prefactor endpoint-band check because CANONICAL_ALPHA_BARE is undefined.
-- **rationale:** Issue: scripts/frontier_hierarchy_effective_potential_endpoint.py currently crashes in PART 4 with NameError: CANONICAL_ALPHA_BARE is not defined, after the small-m and endpoint coefficient checks pass. Why this blocks: the note's comparison between the exact dimension-4 temporal endpoint factor and the observed hierarchy prefactor is load-bearing, but the registered runner does not execute that check on current main. Repair target: import or define the canonical alpha/plaquette/u0/alpha_LM constants used by the endpoint-band comparison, rerun the script to PASS=all, and classify the PASS lines; if the repaired constants change C_obs, update the claim accordingly. Claim boundary until fixed: exact small-m/APBC endpoint algebra appears supported by the earlier runner sections, but the hierarchy-prefactor endpoint-band claim is not audited.
-- **open / conditional deps cited:**
-  - `scripts/frontier_hierarchy_effective_potential_endpoint.py`
 - **auditor confidence:** high
 
 ### `hierarchy_matsubara_decomposition_note`
@@ -10279,18 +10225,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md`
 - **auditor confidence:** high
 
-### `minimal_bidirectional_trapping_probe_note`
-
-- **Note:** [`MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md`](../../docs/MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The live bidirectional trapping probe shows escape_fraction(alpha) falls below 50% by alpha=0.10 while alpha=0 recovers 3/3 TOWARD and F~M=1.00 on the tested geometry-sector family.  _(class `C`)_
-- **chain closes:** False — The live proxy computation reproduces the table, but the named frozen log is missing and the queued proposed_retained claim overpromotes a hand-added trapping parameter into a retained no-return threshold.
-- **rationale:** Issue: The source names logs/2026-04-05-minimal-bidirectional-trapping-probe.txt, but that frozen artifact is absent, and the note's branch verdict says the proxy produces a retained threshold even though the Status calls it a bounded moonshot probe. Why this blocks: a live rerun of a hand-added alpha trapping proxy can support bounded evidence, but missing frozen output plus no derivation of the trapping law prevents retained ratification. Repair target: restore or regenerate the frozen log, correct the Status/current_status to bounded/proposed_bounded, or derive the trapping parameter from retained dynamics and audit the weak-field dependencies. Claim boundary until fixed: it is safe to claim the live runner reproduces alpha=0 weak-field recovery and escape below 50% at alpha ~= 0.10 on this finite setup; it is not safe to call this a retained no-return or black-hole threshold theorem.
-- **auditor confidence:** high
-
 ### `minimal_source_driven_field_probe_note`
 
 - **Note:** [`MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`](../../docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md)
@@ -11269,20 +11203,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Clean within the note's bounded refinement scope. The note does not claim a new raw decoherence winner; it claims the corrected first-hit side/packet/entry marker stack is a modest real improvement in the residual-connection architecture while still trailing node-label on the tested N=18 row. Current runner output reproduces the matched table and the targeted gamma sweep exactly, including node=0.7121 versus side+packet+entry gamma=1.0 at 0.7213 and worse results at gamma=1.5 and 2.0. Residual risk is the declared bounded two-seed matched slice and the lack of asymptotic or broader-geometry closure.
 - **auditor confidence:** high
 
-### `persistent_record_sidebit_note`
-
-- **Note:** [`PERSISTENT_RECORD_SIDEBIT_NOTE.md`](../../docs/PERSISTENT_RECORD_SIDEBIT_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The side-bit matched comparison table is supposed to quantify the bounded improvement of the soft-overlap persistent-record lane against the node-label baseline.  _(class `C`)_
-- **chain closes:** False — The current matched-comparison runner no longer reproduces the note's quoted side-bit table values or detector-sector counts.
-- **rationale:** Issue: the source note's matched side-bit table is stale relative to the current runner. The note reports side-bit gamma=1.0 purities of 0.5685 at N=12 and 0.7270 at N=18 with side-bit detector-sector counts 9.5, 37.5, 121.0; the current runner returns 0.5698 at N=12 and 0.7287 at N=18 with counts 9.5, 37.5, 123.0. Why this blocks: the exact bounded numerical comparison is the load-bearing evidence for the note, so the quoted table cannot be audited clean against the current harness even though the qualitative modest-improvement read mostly remains. Repair target: refresh the side-bit note and frozen log from the current persistent_record_matched_compare.py output, or explicitly mark the note as superseded by the corrected refinement note. Claim boundary until fixed: the current runner still supports the weaker qualitative statement that the side bit modestly improves the soft-overlap lane but does not beat node-label on this bounded slice.
-- **open / conditional deps cited:**
-  - `scripts/persistent_record_matched_compare.py current output diverges from PERSISTENT_RECORD_SIDEBIT_NOTE.md`
-- **auditor confidence:** high
-
 ### `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30`
 
 - **Note:** [`PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md`](../../docs/PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md)
@@ -11401,22 +11321,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `PMNS_CORNER_TRANSPORT_ACTIVE_BLOCK_NOTE.md`
 - **auditor confidence:** medium
-
-### `pmns_branch_conditioned_quadratic_sheet_closure_note`
-
-- **Note:** [`PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md`](../../docs/PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:2026-05-01-pmns_branch_conditioned_quadratic_sheet_closure_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Once a future selector sign chooses the active minimal PMNS branch, the selected two-Higgs coefficients reconstruct from Hermitian data by one explicit quadratic equation plus rational back-substitution, leaving one residual Z2 sheet bit.  _(class `A`)_
-- **chain closes:** False — The runner exits nonzero on current main because it tries to read docs/NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md, which is absent; its earlier PASS lines are also unclassified.
-- **rationale:** Issue: the runner does not complete on current main. After the local quadratic reconstruction sections, it crashes in the bank-records check with FileNotFoundError for docs/NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md. The runner's preceding PASS output is also unclassified, so there are no auditable A/B/C/D PASS lines. Why this blocks: the row's validation explicitly depends on current-bank/atlas/packet consistency, but the registered runner cannot verify that surface and exits nonzero. Repair target: update the runner to point at the current last-mile note path or remove that stale file dependency, add classified PASS lines for the quadratic algebra and bank-record checks, and declare the selector sign-to-branch and two-Higgs inverse-problem authorities as dependencies. Claim boundary until fixed: the first three runner sections provide some algebraic evidence for a quadratic two-sheet reconstruction, but the registered audit artifact is broken and the row cannot be treated as closed.
-- **open / conditional deps cited:**
-  - `publication/ci3_z3/DERIVATION_ATLAS.md`
-  - `NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md`
-  - `publication/ci3_z3/NEUTRINO_DIRAC_PMNS_BOUNDARY_PACKET_2026-04-15.md`
-- **auditor confidence:** high
 
 ### `pmns_c3_character_holonomy_closure_note`
 
@@ -11708,18 +11612,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md`
 - **auditor confidence:** high
 
-### `pmns_selector_bank_nonrealization_note`
-
-- **Note:** [`PMNS_SELECTOR_BANK_NONREALIZATION_NOTE.md`](../../docs/PMNS_SELECTOR_BANK_NONREALIZATION_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** None of the existing exact selector tools realizes the missing PMNS branch selector on the lepton Higgs-Z3 / PMNS branch datum.  _(class `B`)_
-- **chain closes:** False — The primary runner crashes before reaching its checks because it references a missing source note path, so the current-bank nonrealization claim is not auditable from the registered runner.
-- **rationale:** Issue: the primary runner exits nonzero with FileNotFoundError for docs/NEUTRINO_HIGGS_Z3_UNDERDETERMINATION_NOTE.md before producing any PASS checks. Why this blocks: the note's current-bank nonrealization claim relies on comparing existing selector-tool domains against the PMNS selector datum, but the registered verification artifact is stale/broken. Repair target: update the runner to the current note path or dependency source for the Higgs-Z3 underdetermination input, then rerun and ensure it reaches the selector-domain checks. Claim boundary until fixed: the row is not an audited current-bank nonrealization theorem.
-- **auditor confidence:** high
-
 ### `pmns_selector_class_space_uniqueness_note`
 
 - **Note:** [`PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md`](../../docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md)
@@ -11800,23 +11692,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `publication/ci3_z3/DERIVATION_ATLAS.md`
   - `PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md`
   - `PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md`
-- **auditor confidence:** high
-
-### `pmns_selector_sign_to_branch_reduction_note`
-
-- **Note:** [`PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md`](../../docs/PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:2026-05-01-pmns_selector_sign_to_branch_reduction_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Given B_red = a_sel(chi_N_nu - chi_N_e), sign(a_sel) selects N_nu for positive sign, N_e for negative sign, and leaves the branch unresolved at zero, after which the remaining task is the cited branch-conditioned coefficient problem.  _(class `A`)_
-- **chain closes:** False — The sign-to-branch algebra itself is trivial, but the runner exits nonzero before the coefficient-handoff checks because the cited last-mile note is missing, and the runner's other coefficient inverse-problem note paths are absent as well.
-- **rationale:** Issue: the registered runner exits nonzero with FileNotFoundError for docs/NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md after only three unclassified PASS lines, and the other two coefficient-handoff files named by the runner, docs/NEUTRINO_DIRAC_TWO_HIGGS_OBSERVABLE_INVERSE_PROBLEM_NOTE.md and docs/CHARGED_LEPTON_TWO_HIGGS_OBSERVABLE_INVERSE_PROBLEM_NOTE.md, are also absent from docs/ and have no ledger rows. Why this blocks: the theorem's second half claims a handoff to an already-known branch-conditioned finite-dimensional inverse problem, but the required authority artifacts are missing, so the current repository cannot substantiate or rerun that load-bearing handoff. Repair target: restore or replace the last-mile and two inverse-problem notes, register them in the ledger/deps, then update the runner to read the current paths and emit classified A/B PASS lines. Claim boundary until fixed: only the local sign convention for B_red = a_sel(chi_N_nu - chi_N_e) is supported; the claimed reduction to existing branch-conditioned coefficient closure fails in the current repo state.
-- **open / conditional deps cited:**
-  - `PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md`
-  - `NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md`
-  - `NEUTRINO_DIRAC_TWO_HIGGS_OBSERVABLE_INVERSE_PROBLEM_NOTE.md`
-  - `CHARGED_LEPTON_TWO_HIGGS_OBSERVABLE_INVERSE_PROBLEM_NOTE.md`
 - **auditor confidence:** high
 
 ### `pmns_selector_three_identity_support_note_2026-04-21`
@@ -13348,22 +13223,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** The bounded force-based staggered 17-card claim closes. scripts/frontier_staggered_17card.py reports 1D n=61 SCORE 17/17 with C1=1.2804e-15, C4 R^2=0.917492, C5 +5.7496e-05, and C17 6/6; 3D n=9, n=11, and n=13 each report SCORE 17/17 with the same C17 family-coverage qualifier described in the note. The note explicitly states that the card is force-based, not the repo-wide centroid card, and limits portability/growth/cosmology claims to separate probes.
 - **auditor confidence:** high
 
-### `staggered_fermion_card_2026-04-11`
-
-- **Note:** [`STAGGERED_FERMION_CARD_2026-04-11.md`](../../docs/STAGGERED_FERMION_CARD_2026-04-11.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Complete Score Summary: TOTAL ~183/190 rows, with the canonical 17-card, cycle battery, self-gravity, retarded closure, iterative closure, two-field wave, graph portability, and critical-exponent harnesses summarized together.  _(class `C`)_
-- **chain closes:** False — The registered canonical 17-card reproduces the 1D and 3D 17/17 rows, but the directly named companion scripts no longer match the note's cycle-battery and retarded-closure score/value tables, so the complete-card synthesis is stale.
-- **rationale:** Issue: the canonical frontier_staggered_17card.py output matches the note, but the complete-card summary is stale relative to directly named companion harnesses. Current frontier_staggered_cycle_battery.py reports layered_cycle B2 R^2=0.991249 PASS and SCORE 9/9, while the note records R^2=0.985 FAIL and 8/9. Current frontier_two_field_retarded_family_closure.py reports growing R5 30/30 TOWARD and SCORE 9/9, while the note records 25/30 TOWARD FAIL and 8/9. Several companion numeric values also drift. Why this blocks: the row is not just the canonical 17-card; it presents a complete multi-harness score surface, and that surface is no longer current. Repair target: update the note's companion tables and total score summary from the current scripts, or split the clean canonical 17-card from the stale multi-harness synthesis. Claim boundary until fixed: the canonical 17-card subclaim remains runner-supported, but the complete staggered-fermion card note as written is not a clean current audit surface.
-- **open / conditional deps cited:**
-  - `staggered_fermion_card_2026-04-11 -> frontier_staggered_cycle_battery.py (current layered_cycle score/value stale relative to note)`
-  - `staggered_fermion_card_2026-04-11 -> frontier_two_field_retarded_family_closure.py (current growing stability/score stale relative to note)`
-  - `staggered_fermion_card_2026-04-11 -> complete multi-harness score summary requires refresh`
-- **auditor confidence:** high
-
 ### `staggered_geometry_superposition_note_2026-04-11`
 
 - **Note:** [`STAGGERED_GEOMETRY_SUPERPOSITION_NOTE_2026-04-11.md`](../../docs/STAGGERED_GEOMETRY_SUPERPOSITION_NOTE_2026-04-11.md)
@@ -13622,18 +13481,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `bounded_scalar_only_thermal_cubic_estimate`
 - **auditor confidence:** high
 
-### `tensor_block_closure_test_note`
-
-- **Note:** [`TENSOR_BLOCK_CLOSURE_TEST_NOTE.md`](../../docs/TENSOR_BLOCK_CLOSURE_TEST_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The minimal rank-two tensor block is locally sufficient on each audited family, but the fitted K_tensor, eta coefficient, and a_star differ strongly across O_h and finite-rank families, so no single universal closure theorem is supported.  _(class `C`)_
-- **chain closes:** False — The runner output is consistent with the note's negative conclusion, but the registered primary runner exits nonzero and emits no PASS checks because it treats the expected no-universal-closure result as process failure. That makes the row non-ratifiable by the audit runner contract.
-- **rationale:** Issue: scripts/frontier_tensor_block_closure_test.py exits with code 1 and no classified PASS lines even though the source note is framed around the negative/no-go outcome. Why this blocks: audit-loop cannot distinguish an expected no-go success from a broken runner when the process exits nonzero and reports no PASS checks. Repair target: change the runner so the expected bounded no-go returns exit 0 and emits classified PASS lines for local sufficiency, cross-family kernel mismatch, eta mismatch, a_star mismatch, and non-universality. Claim boundary until fixed: the printed numbers support the intended bounded no-go, but the current runner artifact is not audit-compatible.
-- **auditor confidence:** high
-
 ### `tensor_matching_completion_theorem_note`
 
 - **Note:** [`TENSOR_MATCHING_COMPLETION_THEOREM_NOTE.md`](../../docs/TENSOR_MATCHING_COMPLETION_THEOREM_NOTE.md)
@@ -13814,27 +13661,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `KERNEL_VS_GRAVITY_NOTE.md`
 - **auditor confidence:** high
 
-### `universal_gr_a1_invariant_section_note`
-
-- **Note:** [`UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md`](../../docs/UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:2026-05-01-universal_gr_a1_invariant_section_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The localization orbit contains an exact invariant rank-2 A1 projector onto lapse h_00 and spatial trace tr(h_ij), while the complementary channels remain frame-dependent.  _(class `C`)_
-- **chain closes:** False — The source-cited A1 runner is not registered in the ledger, is non-hermetic because it reads /Users/jonreilly/Projects/Physics instead of the current worktree, and currently exits nonzero with one failed blocker-note check. Therefore the note's own verification path does not close on current repo content.
-- **rationale:** Issue: the note claims an exact A1 invariant section and cites a runner, but the ledger has no runner_path; the discovered runner scripts/frontier_universal_gr_a1_invariant_section.py reads an absolute external project root and exits with PASS=9 FAIL=1 on the current environment. Why this blocks: a hostile audit cannot accept a source-cited numerical/inventory verification that is unregistered, non-hermetic, and currently failing one of its own blocker-consistency checks. Repair target: make the runner repo-relative, register it on this claim, update its blocker-note predicates or the relevant blocker notes so the check is current, then rerun and refresh the source verification numbers. Claim boundary until fixed: the A1 projector candidate is plausible support, but this row is not an audited exact invariant-section closure on current repo content.
-- **open / conditional deps cited:**
-  - `scripts/frontier_universal_gr_a1_invariant_section.py`
-  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
-  - `S3_ANOMALY_SPACETIME_LIFT_NOTE.md`
-  - `UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md`
-  - `UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md`
-  - `UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md`
-  - `UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md`
-  - `NON_HERMETIC_RUNNER_ROOT: /Users/jonreilly/Projects/Physics`
-- **auditor confidence:** high
-
 ### `universal_gr_block_constraint_interpretation_note`
 
 - **Note:** [`UNIVERSAL_GR_BLOCK_CONSTRAINT_INTERPRETATION_NOTE.md`](../../docs/UNIVERSAL_GR_BLOCK_CONSTRAINT_INTERPRETATION_NOTE.md)
@@ -13999,25 +13825,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** Without a covariant 3+1 polarization-frame/projector bundle or induced Pi_curv map, the observable principle remains scalar-only at the closure level and the direct universal route cannot close full GR.  _(class `B`)_
 - **chain closes:** False — The blocker imports exact scalar-generator, 3+1 lift, tensor-candidate, quotient-kernel, and A1-selector claims, but those authorities are not registered as one-hop dependencies and no runner is attached. The audit cannot verify the claimed minimal missing primitive from this note alone.
 - **rationale:** Issue: the route-blocker conclusion depends on uncited upstream exact-stack results and an unregistered computation/argument for quotient-kernel uniqueness and the A1 selector. Why this blocks: the note does not itself prove that these are the complete available ingredients or that no tensor-valued GR action follows without the stated projector-bundle primitive. Repair target: cite the scalar-generator, 3+1 lift, tensor-candidate, quotient-kernel, and selector notes and register any runner that checks the finite-prototype nondegeneracy/selector claims. Claim boundary until fixed: this remains a bounded route diagnosis identifying a plausible missing primitive, not an audited closure of the tensor-action no-go.
-- **auditor confidence:** high
-
-### `universal_gr_tensor_quotient_uniqueness_note`
-
-- **Note:** [`UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md`](../../docs/UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:2026-05-01-universal_gr_tensor_quotient_uniqueness_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** On the symmetric 3+1 perturbation quotient, the tensor-valued Hessian candidate is the unique bilinear lift of the scalar generator at quadratic order and has no hidden prototype null directions.  _(class `C`)_
-- **chain closes:** False — The source-cited runner is not registered in the ledger and currently crashes before producing PASS lines because it reads an absolute external project path and cannot find S3_TIME_SPACETIME_OBSERVABLE_ROUTE_NOTE.md there. The claimed prototype uniqueness is therefore not verified on current repo content.
-- **rationale:** Issue: the tensor quotient uniqueness note relies on a source-cited audit runner, but the ledger has no runner_path and the discovered runner scripts/frontier_universal_gr_tensor_quotient_uniqueness.py hard-codes /Users/jonreilly/Projects/Physics and exits nonzero with FileNotFoundError before any checks run. Why this blocks: a bounded uniqueness claim whose own verification cannot execute on the current worktree cannot be audit-closed, even if the intended finite Hessian calculation may be repairable. Repair target: make the runner repo-relative, register it on this row, update the route-2 authority path to the current note name, and rerun until it produces classified PASS lines. Claim boundary until fixed: this remains an unverified bounded tensor-quotient uniqueness candidate, not an audited closure of the symmetric 3+1 quotient kernel.
-- **open / conditional deps cited:**
-  - `scripts/frontier_universal_gr_tensor_quotient_uniqueness.py`
-  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
-  - `S3_TIME_SPACETIME_OBSERVABLE_ROUTE_NOTE.md`
-  - `UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md`
-  - `UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md`
-  - `NON_HERMETIC_RUNNER_ROOT: /Users/jonreilly/Projects/Physics`
 - **auditor confidence:** high
 
 ### `universal_gr_tensor_variational_candidate_note`
@@ -14605,18 +14412,6 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** The independent wide-lattice replay at h = 0.25, W = 12, L = 12 gives 10/10 TOWARD distance support, far-tail b^(-1.05) with R^2 = 0.990, and F~M exponent 1.000.  _(class `C`)_
 - **chain closes:** True — The live replay reproduces the frozen sanity checks, distance rows, peak/far-tail fits, and mass-scaling sweep. The note explicitly limits the result to a finite-lattice frontier replay and disclaims a continuum theorem or exact exponent proof.
 - **rationale:** The runner supports the retained frontier claim as scoped. It independently computes the wide ordered-3D h^2+T replay on main and reproduces Born approximately 4.82e-15, k=0 zero, 10/10 attractive distance rows, peak-tail exponent -0.95, far-tail exponent -1.05, and linear F~M scaling. This audit certifies only that finite-lattice replay, not an exact Newtonian exponent or continuum-limit theorem.
-- **auditor confidence:** high
-
-### `wilson_mu2_distance_sweep_note_2026-04-11`
-
-- **Note:** [`WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md`](../../docs/WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-ca82-second-slice-b-fresh-2026-04-30`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The steep open-lattice exponent at mu^2 = 0.22 is screening-controlled, and as screening is reduced the law approaches Newton-compatible d^-2 while the mutual-attraction channel remains present.  _(class `C`)_
-- **chain closes:** False — The registered runner's sweep surface does not match the note's numerical table: the runner uses mu^2 values 0.22, 0.05, 0.01, 0.005, and 0.001, while the note reports 0.10 and 0.0 and omits 0.005. There is no PASS/assertion surface tying the note's headline exponents to current registered output.
-- **rationale:** Issue: the load-bearing exponent table is stale relative to the registered runner surface and current output was not available from the long sweep during this restricted audit. Why this blocks: the conclusion that the exponent monotonically softens through the reported mu^2=0.10 and mu^2=0.0 points cannot be claimed from the current runner. Repair target: sync the note and runner sweep values, add assertions or stored current output for the fitted exponents, and rerun the registered script. Claim boundary until fixed: it may be cited only as an attempted Wilson distance-law calibration with unsynchronized numerics, not as an audited screening-control result.
 - **auditor confidence:** high
 
 ### `wilson_normalization_reconciliation_note_2026-04-11`

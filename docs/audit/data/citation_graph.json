@@ -18629,7 +18629,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T16:15:52.181638+00:00",
+  "generated_at": "2026-05-01T17:01:20.854016+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25474,7 +25474,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
       "deps": [],
-      "note_hash": "b3cffa0ec4c2647043e175be5782bd7a8b205c55ecc56aa0e1bdcd4b2170d116",
+      "note_hash": "eadc2732670dff1e964aed5c14d623645164495c953f078e45c9d5b7e51c715f",
       "path": "docs/EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md",
       "runner_path": "scripts/frontier_emergent_geometry.py",
       "title": "Emergent Geometry from Matter-Coupled Growth"
@@ -26749,7 +26749,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
       "deps": [],
-      "note_hash": "abdbb2987168a0fb9c3fc90aff34a92094478d339ede3a8c9403eef624e49030",
+      "note_hash": "f97073224c529b6d5d53c58b9973d21596f8e1f371017318414fbeeee36d691a",
       "path": "docs/GR_CLASS_EXPANSION_FINITE_RANK_TARGET_NOTE.md",
       "runner_path": "scripts/frontier_gr_class_expansion_finite_rank_target.py",
       "title": "Gravity Class Expansion Target: Finite-Rank Source-to-Metric on the Current Bridge Surface"
@@ -27319,7 +27319,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
       "deps": [],
-      "note_hash": "f7ef5090c6d62116c1ce5d8d63b2dd0112effe11314d3ff5aba5bbcfc02980b2",
+      "note_hash": "01cc8cbe0ad93a0e071b2bc94263f305453e549d81c121cdbd8a5c958294b434",
       "path": "docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md",
       "runner_path": "scripts/frontier_hierarchy_effective_potential_endpoint.py",
       "title": "Hierarchy Effective-Potential Endpoint Note"
@@ -30228,10 +30228,10 @@
     },
     "minimal_bidirectional_trapping_probe_note": {
       "claim_id": "minimal_bidirectional_trapping_probe_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "bounded moonshot trapping probe on the proposed_retained generated-geometry family",
+      "current_status": "bounded",
+      "current_status_raw": "bounded moonshot trapping probe on the generated-geometry family",
       "deps": [],
-      "note_hash": "0240cd461ba36b4e613a80b825724b20e2738ee5b6c62be3d826a99d58abe7be",
+      "note_hash": "742849b770740260e71109abfbdf0c7a777b7a66278fbf2aa70a905cff6988ca",
       "path": "docs/MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md",
       "runner_path": "scripts/minimal_bidirectional_trapping_probe.py",
       "title": "Minimal Bidirectional Trapping Probe"
@@ -31887,7 +31887,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded refinement tested",
       "deps": [],
-      "note_hash": "0840d6609eaf2338cb3782e35673ccc5878a7a497588099714466e03fa20b110",
+      "note_hash": "a09c90e3ded98c832f12db3e8eed350bb74a4d69c2f18a981ab3cfe70321636f",
       "path": "docs/PERSISTENT_RECORD_SIDEBIT_NOTE.md",
       "runner_path": null,
       "title": "Persistent Record Side-Bit Note"
@@ -32154,7 +32154,7 @@
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
       "deps": [],
-      "note_hash": "6ef9bcf209e8a95f115823c67f9a8c0202840592b27004b143918b1df3b0f008",
+      "note_hash": "5d2940b434049143849e55b8639bf6eef5de0b696dd246e4ecd6fa6a756ffd99",
       "path": "docs/PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md",
       "runner_path": "scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py",
       "title": "PMNS Branch-Conditioned Quadratic-Sheet Closure"
@@ -32405,7 +32405,7 @@
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
       "deps": [],
-      "note_hash": "97045726b47e2b9bc251eee0a5537eca6b9a5d67068b57b888883756a4eb92e1",
+      "note_hash": "9fb2f5dee254ecc1e9cf9c5cabc6ba18b86466c3a1c3599e200a07d857273702",
       "path": "docs/PMNS_SELECTOR_BANK_NONREALIZATION_NOTE.md",
       "runner_path": "scripts/frontier_pmns_selector_bank_nonrealization.py",
       "title": "PMNS Selector-Bank Nonrealization"
@@ -32465,7 +32465,7 @@
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
       "deps": [],
-      "note_hash": "ccb62bac98ecd043b75a494b15336519efd87801ea85007c4662661afc857726",
+      "note_hash": "25fde797ba8c3b5edf3549dc67a1433056d7817bf14f1553a4c7938ebeaf1f90",
       "path": "docs/PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md",
       "runner_path": "scripts/frontier_pmns_selector_sign_to_branch_reduction.py",
       "title": "PMNS Selector Sign-To-Branch Reduction"
@@ -36990,7 +36990,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
       "deps": [],
-      "note_hash": "3e943c1a4d995244edde06717d2ca7214d6277ade6966389358a24d0c6e90563",
+      "note_hash": "97117c34e3f1df3ecaba79ccb376a87d2f3b5f235a27bae2a44f910efdc7bcea",
       "path": "docs/STAGGERED_FERMION_CARD_2026-04-11.md",
       "runner_path": "scripts/frontier_staggered_17card.py",
       "title": "Staggered Fermion + Parity-Coupled Gravity \u2014 Complete Card"
@@ -37440,7 +37440,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
       "deps": [],
-      "note_hash": "f7b3a956231f4aabbf03fbd3ea025d3127f5832c351947c7febde08b2b4264ed",
+      "note_hash": "60197bf19ec265757a74087428cbdad306957a125195dc500b68fb522252a8f0",
       "path": "docs/TENSOR_BLOCK_CLOSURE_TEST_NOTE.md",
       "runner_path": "scripts/frontier_tensor_block_closure_test.py",
       "title": "Tensor Block Closure Test"
@@ -37690,9 +37690,9 @@
       "current_status": "support",
       "current_status_raw": "support - exact A1 invariant section",
       "deps": [],
-      "note_hash": "249b5618fdd92d439fad1cc29906841dbb822ceb5d4121ce53cb4fc1a3e13dbc",
+      "note_hash": "f82605e9e01c32830494c3d720ee6fe9d9cc3587a26a745bde096dc635c64aa6",
       "path": "docs/UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_a1_invariant_section.py",
       "title": "Universal GR A1 Invariant Section on `PL S^3 x R`"
     },
     "universal_gr_axiom_first_route_memo": {
@@ -37939,9 +37939,9 @@
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
       "deps": [],
-      "note_hash": "57dc788909c9b345b22572a3a311abf3c00269517053eef9cbae14a552aa5ae3",
+      "note_hash": "400861ebb8224b7dfe3a36e3ffd33f718183bda9867c43f0750bda83512ccad8",
       "path": "docs/UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_tensor_quotient_uniqueness.py",
       "title": "Universal GR Tensor Quotient Uniqueness Candidate on `PL S^3 x R`"
     },
     "universal_gr_tensor_variational_candidate_note": {
@@ -38913,7 +38913,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded companion calibration note",
       "deps": [],
-      "note_hash": "59aa7b3edda2f633a7c1931f6f5ceec5a4b4938057d14151f1b256fe5d1ce022",
+      "note_hash": "fc8252df49a4a7a5c69d6b3e54b500887915fa56b108da8923584ca69831f1a5",
       "path": "docs/WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md",
       "runner_path": "scripts/frontier_wilson_mu2_distance_sweep.py",
       "title": "Wilson `mu^2` Distance Sweep Note"
@@ -41590,13 +41590,13 @@
     "leaf_count": 705,
     "node_count": 1663,
     "root_count": 1171,
-    "runners_with_path": 1231,
+    "runners_with_path": 1233,
     "status_counts": {
-      "bounded": 456,
+      "bounded": 457,
       "open": 48,
       "proposed_no_go": 47,
       "proposed_promoted": 1,
-      "proposed_retained": 356,
+      "proposed_retained": 355,
       "support": 343,
       "unknown": 412
     }
