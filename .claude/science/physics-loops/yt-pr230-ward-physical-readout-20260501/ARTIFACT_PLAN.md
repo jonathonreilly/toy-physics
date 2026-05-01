@@ -68,12 +68,15 @@ Completed in block 1:
 - `scripts/frontier_yt_free_scalar_two_point_pole_absence.py`
 - `outputs/yt_free_scalar_two_point_pole_absence_2026-05-01.json`
 - `docs/YT_FREE_SCALAR_TWO_POINT_POLE_ABSENCE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_same_1pi_scalar_pole_boundary.py`
+- `outputs/yt_same_1pi_scalar_pole_boundary_2026-05-01.json`
+- `docs/YT_SAME_1PI_SCALAR_POLE_BOUNDARY_NOTE_2026-05-01.md`
 
 Next artifact:
 
-- interacting scalar denominator theorem from Wilson gauge exchange, a new
-  independent observable fixing the heavy matching mass, fine-scale direct
-  measurement certificate, or another retained-positive route from the queue
+- production evidence, a new scalar LSZ/canonical normalization theorem, a new
+  independent observable fixing the heavy matching mass, or another
+  retained-positive route from the queue
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

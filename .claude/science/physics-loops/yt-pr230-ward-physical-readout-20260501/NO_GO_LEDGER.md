@@ -171,6 +171,16 @@ python3 scripts/frontier_yt_free_scalar_two_point_pole_absence.py
 # SUMMARY: PASS=6 FAIL=0
 ```
 
+The same-1PI route is not a hidden PR #230 closure: the existing same-1PI notes
+use `H_unit`/Rep-B matrix-element data and are audited conditional, and a fixed
+four-fermion exchange coefficient constrains only `y^2 D_phi`, not `y` and the
+scalar LSZ residue separately:
+
+```text
+python3 scripts/frontier_yt_same_1pi_scalar_pole_boundary.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

@@ -61,6 +61,9 @@ What changed:
 - The free momentum-dependent scalar source bubble is also bounded: it is
   finite and positive with no inverse-curvature zero, so an isolated scalar pole
   requires an interacting denominator or production evidence.
+- The same-1PI route is also bounded: a fixed four-fermion coefficient controls
+  `y^2 D_phi`, not `y` and scalar LSZ normalization separately, and the existing
+  same-1PI notes still depend on H_unit/Rep-B matrix-element data.
 
 The scientific result is narrower than closure:
 
@@ -72,8 +75,8 @@ needs either strict physical measurement evidence with a valid heavy-mass
 matching bridge or a real interacting scalar-channel
 Bethe-Salpeter/projector/pole-residue theorem.  The normalization arithmetic,
 SSB bookkeeping, free source bubble, source Legendre transform, kinematic
-scalar/gauge factorization, static rephasing, contact HS rewrite, and wording
-around the old Ward note are not enough.
+scalar/gauge factorization, static rephasing, same-1PI coefficient equality,
+contact HS rewrite, and wording around the old Ward note are not enough.
 ```
 
 Exact next action:

@@ -71,6 +71,10 @@ Review checks performed:
 - Free scalar two-point review: the runner tests the exact free logdet bubble
   and only concludes absence of a free inverse-curvature zero; it does not
   claim interacting scalar poles are impossible.
+- Same-1PI boundary review: the artifact distinguishes fixed four-fermion
+  exchange coefficient from separately normalized scalar vertex and propagator,
+  and it treats the existing same-1PI notes as conditional rather than PR230
+  closure authorities.
 
 ## Review-Loop Backpressure — Campaign Block 2
 
@@ -126,3 +130,5 @@ Open review risk:
   naming convention rather than by residue or kinetic normalization.
 - A free-bubble theorem cannot be accepted as Higgs-carrier closure unless it
   introduces and derives an interacting denominator or a canonical kinetic term.
+- A same-1PI theorem cannot be accepted as a top-Yukawa readout unless the
+  scalar pole residue is fixed independently of the four-fermion coefficient.

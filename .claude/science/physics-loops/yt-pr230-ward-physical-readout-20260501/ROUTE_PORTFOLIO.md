@@ -84,6 +84,10 @@ and finite with no inverse-curvature zero on the scanned surfaces.  The route
 therefore needs an interacting scalar denominator, not only the free source
 curvature.
 
+Same-1PI update: the four-fermion coefficient equality fixes `y^2 D_phi`.
+It does not separately normalize the scalar vertex and scalar pole residue, and
+the existing same-1PI notes still rely on H_unit/Rep-B matrix-element data.
+
 ## R8. Scalar-Channel Bethe-Salpeter Kernel Theorem
 
 Score: 10/18. Hard-residual pressure: 4.

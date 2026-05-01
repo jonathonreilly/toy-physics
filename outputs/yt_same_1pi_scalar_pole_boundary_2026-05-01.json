@@ -1,0 +1,43 @@
+{
+  "actual_current_surface_status": "exact negative boundary / same-1PI not PR230 closure",
+  "exchange_rescaling_models": [
+    {
+      "D_phi_normalization": 4.0,
+      "gamma4_exchange": 0.16666666666666666,
+      "kappa": 0.5,
+      "y_vertex": 0.2041241452319315
+    },
+    {
+      "D_phi_normalization": 1.0,
+      "gamma4_exchange": 0.16666666666666666,
+      "kappa": 1.0,
+      "y_vertex": 0.408248290463863
+    },
+    {
+      "D_phi_normalization": 0.25,
+      "gamma4_exchange": 0.16666666666666666,
+      "kappa": 2.0,
+      "y_vertex": 0.816496580927726
+    }
+  ],
+  "fail_count": 0,
+  "ledger_statuses": {
+    "rep_b": "audited_conditional",
+    "same_1pi": "audited_conditional",
+    "ward": "audited_renaming"
+  },
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The same-1PI route does not independently fix scalar LSZ/pole normalization.",
+  "required_next_theorem": [
+    "derive scalar pole residue/canonical normalization independently of H_unit matrix elements",
+    "then use any same-1PI coefficient only after y and D_phi are separately normalized"
+  ],
+  "strict_non_claims": [
+    "does not reject the same-1PI g_bare support route in its own scope",
+    "does not promote PR230",
+    "does not define y_t through H_unit",
+    "does not use observed top mass or Yukawa values"
+  ],
+  "verdict": "The existing same-1PI route is not a hidden PR #230 top-Yukawa closure.  Its current notes use H_unit/Rep-B matrix-element data and are audited conditional.  More basically, a four-fermion coefficient fixes y^2 D_phi, not the separately normalized physical scalar vertex y and scalar pole residue D_phi.  A scalar pole/LSZ normalization theorem is still required."
+}

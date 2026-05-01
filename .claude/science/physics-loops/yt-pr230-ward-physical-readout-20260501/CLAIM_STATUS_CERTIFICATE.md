@@ -9,8 +9,9 @@ certificate, direct-measurement scale requirements, key-blocker closure
 attempt, scalar source two-point stretch, stuck fan-out, HS/RPA pole-condition
 attempt, scalar ladder-kernel scout, scalar ladder kernel input audit,
 scalar ladder projector-normalization obstruction, HQET direct-route
-requirements, static mass matching obstruction, and Legendre kappa
-gauge-freedom obstruction, and free scalar two-point pole absence
+requirements, static mass matching obstruction, Legendre kappa gauge-freedom
+obstruction, free scalar two-point pole absence, and same-1PI scalar-pole
+boundary
 **PR:** #230 draft branch
 
 ```yaml
@@ -39,6 +40,8 @@ Allowed wording:
   alone;
 - exact negative boundary for extracting a scalar pole from the free logdet
   source bubble alone;
+- exact negative boundary for using same-1PI/four-fermion coefficient equality
+  as a scalar LSZ/Yukawa readout;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
@@ -115,5 +118,8 @@ python3 scripts/frontier_yt_legendre_kappa_gauge_freedom.py
 # SUMMARY: PASS=6 FAIL=0
 
 python3 scripts/frontier_yt_free_scalar_two_point_pole_absence.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_same_1pi_scalar_pole_boundary.py
 # SUMMARY: PASS=6 FAIL=0
 ```

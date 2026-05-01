@@ -86,3 +86,15 @@ On the scanned finite Wilson-staggered source surfaces `Pi(p)` is finite and
 `Gamma_free^(2)(p)` has no zero.  The free logdet source curvature therefore
 does not supply an isolated Higgs-carrier pole; an interacting denominator or
 production measurement is required.
+
+Same-1PI boundary:
+
+```text
+Gamma^(4) = y^2 D_phi
+y -> kappa y
+D_phi -> D_phi / kappa^2
+```
+
+A same-four-fermion coefficient can remain fixed while the scalar vertex and
+scalar propagator normalization vary.  Same-1PI equality is not enough until
+the scalar pole residue/canonical normalization is independently fixed.
