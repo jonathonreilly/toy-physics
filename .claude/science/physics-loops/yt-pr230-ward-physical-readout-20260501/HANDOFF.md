@@ -64,6 +64,11 @@ What changed:
 - The same-1PI route is also bounded: a fixed four-fermion coefficient controls
   `y^2 D_phi`, not `y` and scalar LSZ normalization separately, and the existing
   same-1PI notes still depend on H_unit/Rep-B matrix-element data.
+- The campaign status certificate now collects the current PR #230 route
+  certificates and verifies that none authorizes retained-proposal wording.
+  The live status is still open; the remaining routes are production evidence,
+  a new scalar LSZ/canonical-normalization theorem, or a new heavy-matching
+  observable/theorem.
 
 The scientific result is narrower than closure:
 
@@ -92,7 +97,7 @@ Package this PR #230 update.  The remaining positive options are now:
 3. a newly derived Planck stationarity selector.
 ```
 
-Acceptance target for the next block:
+Acceptance target for the next scalar Bethe-Salpeter block:
 
 1. Derive the exact scalar-channel Wilson-staggered scalar projector/source
    normalization.

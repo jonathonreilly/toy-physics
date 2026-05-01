@@ -181,6 +181,18 @@ python3 scripts/frontier_yt_same_1pi_scalar_pole_boundary.py
 # SUMMARY: PASS=6 FAIL=0
 ```
 
+Campaign-status synthesis:
+
+```text
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The synthesis does not create a new no-go theorem by itself.  It records that
+the current analytic shortcut set has not authorized retained-proposal wording.
+Remaining routes are production evidence, a scalar LSZ/canonical-normalization
+theorem, or a heavy-matching observable/theorem.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

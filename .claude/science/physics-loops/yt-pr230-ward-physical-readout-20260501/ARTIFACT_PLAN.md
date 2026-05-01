@@ -71,12 +71,15 @@ Completed in block 1:
 - `scripts/frontier_yt_same_1pi_scalar_pole_boundary.py`
 - `outputs/yt_same_1pi_scalar_pole_boundary_2026-05-01.json`
 - `docs/YT_SAME_1PI_SCALAR_POLE_BOUNDARY_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md`
 
 Next artifact:
 
-- production evidence, a new scalar LSZ/canonical normalization theorem, a new
-  independent observable fixing the heavy matching mass, or another
-  retained-positive route from the queue
+- scalar-channel Bethe-Salpeter projector/kernel theorem attempt, because the
+  status certificate leaves this as the highest-ranked analytic route after
+  the current shortcut routes were retired
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

@@ -1,0 +1,42 @@
+{
+  "actual_current_surface_status": "open / campaign exhausted for current analytic shortcuts",
+  "certificate_statuses": {
+    "direct_scale": "scale requirement / direct measurement route open",
+    "free_bubble": "exact negative boundary / free source pole absence",
+    "hqet": "route requirement / HQET shortcut no-go",
+    "hs_rpa": "exact negative boundary / HS-RPA contact route open only with new kernel theorem",
+    "key_blocker": "open / key blocker not closed",
+    "ladder_input": "exact-support / input audit",
+    "ladder_scout": "bounded-support / ladder-kernel scout",
+    "legendre": "exact negative boundary / Legendre normalization freedom",
+    "projector_norm": "exact negative boundary / projector-normalization obstruction",
+    "same_1pi": "exact negative boundary / same-1PI not PR230 closure",
+    "source_two_point": "exact-support / open bridge",
+    "static_mass": "exact negative boundary / static mass matching obstruction"
+  },
+  "fail_count": 0,
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
+  "remaining_routes": [
+    {
+      "needed": "fine-scale relativistic top campaign or validated heavy-quark treatment with matching",
+      "route": "strict production direct measurement"
+    },
+    {
+      "needed": "interacting scalar two-point denominator, isolated pole/canonical kinetic term, residue kappa_H",
+      "route": "new scalar LSZ/canonical normalization theorem"
+    },
+    {
+      "needed": "static additive mass and lattice-HQET-to-SM top mass matching without observed top calibration",
+      "route": "new heavy-matching observable/theorem"
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained closure",
+    "does not demote PR230's scout/proposed evidence",
+    "does not use observed top mass or y_t as proof input",
+    "does not allow H_unit matrix-element definition as y_t readout"
+  ],
+  "verdict": "The current PR #230 physics-loop campaign did not reach retained top-Yukawa closure.  It did retire the visible shortcut routes: Ward/H_unit, R_conn-only LSZ, Legendre normalization, free logdet bubble, contact HS/RPA, simplified ladder projector, same-1PI, and static/HQET without matching.  Remaining closure requires production evidence or a genuinely new scalar LSZ/heavy-matching theorem."
+}

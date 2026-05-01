@@ -75,6 +75,10 @@ Review checks performed:
   exchange coefficient from separately normalized scalar vertex and propagator,
   and it treats the existing same-1PI notes as conditional rather than PR230
   closure authorities.
+- Campaign status review: the summary certificate only aggregates already
+  generated certificates, verifies that none allows retained-proposal wording,
+  and narrows the remaining route list.  It does not create a new authority or
+  claim that the campaign reached closure.
 
 ## Review-Loop Backpressure — Campaign Block 2
 
@@ -132,3 +136,26 @@ Open review risk:
   introduces and derives an interacting denominator or a canonical kinetic term.
 - A same-1PI theorem cannot be accepted as a top-Yukawa readout unless the
   scalar pole residue is fixed independently of the four-fermion coefficient.
+
+## Review-Loop Backpressure — Campaign Status Checkpoint
+
+Local review-loop disposition for the campaign-status certificate:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The certificate is a checkpoint, not a stop condition while campaign runtime
+remains.

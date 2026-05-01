@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-8-same-1pi-boundary
-blocks_completed: 21
-active_route: "same-1PI / one-gluon-exchange scalar coefficient repair"
-active_hard_residual: "separate four-fermion coefficient equality from scalar LSZ residue and physical Yukawa readout"
+current_phase: campaign-status-checkpoint
+blocks_completed: 22
+active_route: "campaign status certificate"
+active_hard_residual: "remaining closure requires production evidence, new scalar LSZ/canonical-normalization theorem, or new heavy-matching observable"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -87,6 +87,9 @@ files_touched:
   - "scripts/frontier_yt_same_1pi_scalar_pole_boundary.py"
   - "docs/YT_SAME_1PI_SCALAR_POLE_BOUNDARY_NOTE_2026-05-01.md"
   - "outputs/yt_same_1pi_scalar_pole_boundary_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -126,6 +129,7 @@ claim_state_movement:
   - "proved the Legendre transform preserves a source/field rescaling freedom; it cannot select kappa_H without a pole-residue or kinetic normalization theorem"
   - "proved the free Wilson-staggered logdet scalar bubble is finite and has no inverse-curvature zero; a pole requires an interacting denominator or production measurement"
   - "proved same-1PI/four-fermion coefficient equality fixes y^2 D_phi, not y and scalar LSZ residue separately; existing same-1PI notes remain H_unit/Rep-B conditional"
+  - "certified campaign status: every current analytic shortcut remains open; remaining routes are production evidence, new scalar LSZ theorem, or new heavy-matching theorem"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -134,5 +138,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Classify remaining PR230 closure as production-evidence/new-theorem only unless a genuinely new scalar LSZ or heavy-matching observable is found."
+next_exact_action: "Choose one remaining route explicitly: production/fine-scale compute, scalar LSZ theorem, or heavy-matching observable theorem."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

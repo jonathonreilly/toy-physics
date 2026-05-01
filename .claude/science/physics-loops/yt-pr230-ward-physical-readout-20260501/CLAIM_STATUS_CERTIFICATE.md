@@ -10,8 +10,8 @@ attempt, scalar source two-point stretch, stuck fan-out, HS/RPA pole-condition
 attempt, scalar ladder-kernel scout, scalar ladder kernel input audit,
 scalar ladder projector-normalization obstruction, HQET direct-route
 requirements, static mass matching obstruction, Legendre kappa gauge-freedom
-obstruction, free scalar two-point pole absence, and same-1PI scalar-pole
-boundary
+obstruction, free scalar two-point pole absence, same-1PI scalar-pole
+boundary, and campaign status certificate
 **PR:** #230 draft branch
 
 ```yaml
@@ -122,4 +122,7 @@ python3 scripts/frontier_yt_free_scalar_two_point_pole_absence.py
 
 python3 scripts/frontier_yt_same_1pi_scalar_pole_boundary.py
 # SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=8 FAIL=0
 ```

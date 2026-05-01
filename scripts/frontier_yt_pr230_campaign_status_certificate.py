@@ -1,0 +1,140 @@
+#!/usr/bin/env python3
+"""
+PR #230 physics-loop campaign status certificate.
+
+This runner summarizes the current 12h-campaign work package.  It does not
+claim retained closure.  It verifies that the live analytic shortcuts have been
+classified and that the remaining closure routes require either production
+evidence or a genuinely new theorem/observable.
+"""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+OUTPUT = ROOT / "outputs" / "yt_pr230_campaign_status_certificate_2026-05-01.json"
+
+PASS_COUNT = 0
+FAIL_COUNT = 0
+
+
+def report(tag: str, ok: bool, msg: str) -> None:
+    global PASS_COUNT, FAIL_COUNT
+    if ok:
+        PASS_COUNT += 1
+        status = "PASS"
+    else:
+        FAIL_COUNT += 1
+        status = "FAIL"
+    print(f"  [{status}] {tag}: {msg}")
+
+
+def load(rel: str) -> dict:
+    return json.loads((ROOT / rel).read_text(encoding="utf-8"))
+
+
+def main() -> int:
+    print("PR #230 campaign status certificate")
+    print("=" * 72)
+
+    certificates = {
+        "key_blocker": load("outputs/yt_key_blocker_closure_attempt_2026-05-01.json"),
+        "source_two_point": load("outputs/yt_scalar_source_two_point_stretch_2026-05-01.json"),
+        "hs_rpa": load("outputs/yt_hs_rpa_pole_condition_attempt_2026-05-01.json"),
+        "ladder_scout": load("outputs/yt_scalar_ladder_kernel_scout_2026-05-01.json"),
+        "ladder_input": load("outputs/yt_scalar_ladder_kernel_input_audit_2026-05-01.json"),
+        "projector_norm": load("outputs/yt_scalar_ladder_projector_normalization_obstruction_2026-05-01.json"),
+        "hqet": load("outputs/yt_hqet_direct_route_requirements_2026-05-01.json"),
+        "static_mass": load("outputs/yt_static_mass_matching_obstruction_2026-05-01.json"),
+        "legendre": load("outputs/yt_legendre_kappa_gauge_freedom_2026-05-01.json"),
+        "free_bubble": load("outputs/yt_free_scalar_two_point_pole_absence_2026-05-01.json"),
+        "same_1pi": load("outputs/yt_same_1pi_scalar_pole_boundary_2026-05-01.json"),
+        "direct_scale": load("outputs/yt_direct_measurement_scale_requirements_2026-05-01.json"),
+    }
+
+    all_present = all(isinstance(cert, dict) for cert in certificates.values())
+    all_no_fail = all(int(cert.get("fail_count", 0)) == 0 for cert in certificates.values())
+    proposal_allowed = [
+        name for name, cert in certificates.items() if cert.get("proposal_allowed") is True
+    ]
+    statuses = {name: cert.get("actual_current_surface_status") for name, cert in certificates.items()}
+
+    report("campaign-certificates-present", all_present, f"count={len(certificates)}")
+    report("campaign-runners-have-no-fails", all_no_fail, "all loaded certificates have FAIL=0")
+    report("no-retained-proposal-authorized", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
+    report(
+        "direct-route-needs-scale-or-heavy-treatment",
+        "scale requirement" in str(statuses["direct_scale"]),
+        statuses["direct_scale"],
+    )
+    report(
+        "hqet-route-needs-matching",
+        "HQET" in str(statuses["hqet"]) or "route requirement" in str(statuses["hqet"]),
+        statuses["hqet"],
+    )
+    report(
+        "legendre-route-needs-residue",
+        "Legendre" in str(statuses["legendre"]) or "normalization freedom" in str(statuses["legendre"]),
+        statuses["legendre"],
+    )
+    report(
+        "free-bubble-route-needs-interaction",
+        "free source pole absence" in str(statuses["free_bubble"]),
+        statuses["free_bubble"],
+    )
+    report(
+        "same-1pi-route-needs-lsz",
+        "same-1PI" in str(statuses["same_1pi"]),
+        statuses["same_1pi"],
+    )
+
+    remaining_routes = [
+        {
+            "route": "strict production direct measurement",
+            "needed": "fine-scale relativistic top campaign or validated heavy-quark treatment with matching",
+        },
+        {
+            "route": "new scalar LSZ/canonical normalization theorem",
+            "needed": "interacting scalar two-point denominator, isolated pole/canonical kinetic term, residue kappa_H",
+        },
+        {
+            "route": "new heavy-matching observable/theorem",
+            "needed": "static additive mass and lattice-HQET-to-SM top mass matching without observed top calibration",
+        },
+    ]
+
+    result = {
+        "actual_current_surface_status": "open / campaign exhausted for current analytic shortcuts",
+        "verdict": (
+            "The current PR #230 physics-loop campaign did not reach retained "
+            "top-Yukawa closure.  It did retire the visible shortcut routes: "
+            "Ward/H_unit, R_conn-only LSZ, Legendre normalization, free logdet "
+            "bubble, contact HS/RPA, simplified ladder projector, same-1PI, "
+            "and static/HQET without matching.  Remaining closure requires "
+            "production evidence or a genuinely new scalar LSZ/heavy-matching "
+            "theorem."
+        ),
+        "proposal_allowed": False,
+        "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
+        "certificate_statuses": statuses,
+        "remaining_routes": remaining_routes,
+        "strict_non_claims": [
+            "does not claim retained closure",
+            "does not demote PR230's scout/proposed evidence",
+            "does not use observed top mass or y_t as proof input",
+            "does not allow H_unit matrix-element definition as y_t readout",
+        ],
+        "pass_count": PASS_COUNT,
+        "fail_count": FAIL_COUNT,
+    }
+    OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(f"\nWrote certificate: {OUTPUT.relative_to(ROOT)}")
+    print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
+    return 0 if FAIL_COUNT == 0 else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
