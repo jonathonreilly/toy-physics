@@ -55,11 +55,11 @@ M1_VCD_SQ = Magnitude("|V_cd|^2", Fraction(1, 2), 1)
 M2_VCB_SQ = Magnitude("|V_cb|^2", Fraction(1, 6), 2)
 
 
-def check(name: str, condition: bool, detail: str = "") -> None:
+def check(name: str, condition: bool, detail: str = "", cls: str = "D") -> None:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     suffix = f" ({detail})" if detail else ""
-    print(f"  [{status}] {name}{suffix}")
+    print(f"  [{status} ({cls})] {name}{suffix}")
     if condition:
         PASS_COUNT += 1
     else:
