@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T21:54:58.458044+00:00
+**Generated:** 2026-05-01T22:18:23.353314+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 54 |
+| **retained_no_go** | 55 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 19 |
+| _proposed_no_go_ | 18 |
 | bounded | 163 |
 | support | 133 |
 | open | 6 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 302 |
+| `audited_clean` | 303 |
 | `audited_conditional` | 653 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 507 |
+| `unaudited` | 506 |
 
 | criticality | count |
 |---|---:|
@@ -336,6 +336,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_record_overlap_kernel_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_record_refinement_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `pmns_c3_character_mode_reduction_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `pmns_corner_transport_active_block_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
 | `pmns_right_conjugacy_invariant_no_go_note` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
@@ -11804,6 +11805,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `NATIVE_GAUGE_CLOSURE_NOTE.md`
   - `ANOMALY_FORCES_TIME_THEOREM.md`
   - `CPT_EXACT_NOTE.md`
+- **auditor confidence:** high
+
+### `planck_parent_source_hidden_character_no_go_note_2026-04-24`
+
+- **Note:** [`PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md`](../../docs/PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The hidden direction `(0,1)` is invisible to the carrier map but visible to the Schur/event scalar equality, so the carrier-level diagram alone cannot force the scalar equality.  _(class `A`)_
+- **chain closes:** True — The note constructs an explicit affine hidden-character fiber with identical carrier data and different Schur scalars. With no cited dependencies, that counterexample is enough to prove the carrier-only route cannot force Schur/event scalar equality.
+- **rationale:** The load-bearing step is an exact algebraic counterexample: two parent-source points share the same carrier projection while the Schur scalar shifts with the hidden character. The runner checks the nontrivial carrier kernel, equal carrier data with unequal Schur scalars, equivalence of equality to delta = 0, and the Planck-normalization shift. Residual risk is limited to whether later positive work derives a no-hidden-character law; that is outside this no-go claim and is stated as the repair target for the positive route.
 - **auditor confidence:** high
 
 ### `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25`
