@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T16:06:42.450767+00:00
+**Generated:** 2026-05-01T16:14:07.358051+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 200 |
+| bounded | 199 |
 | support | 153 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 873 |
+| ~~audited_conditional~~ | 874 |
 | ~~audited_failed~~ | 103 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 292 |
-| `audited_conditional` | 588 |
+| `audited_conditional` | 589 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 574 |
+| `unaudited` | 573 |
 
 | criticality | count |
 |---|---:|
@@ -975,6 +975,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p2_taste_staircase_beta_functions_note_2026-04-17` | _proposed_no_go_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_p2_taste_staircase_transport_note_2026-04-17` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_p2_v_matching_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `yt_qfp_insensitivity_support_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yukawa_color_projection_theorem` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
@@ -15137,6 +15138,23 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
   - `YT_ZERO_IMPORT_CHAIN_NOTE.md`
+- **auditor confidence:** high
+
+### `yt_qfp_insensitivity_support_note`
+
+- **Note:** [`YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`](../../docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The SM RGE and the exact lattice taste-staircase RG flow both satisfy conditions (i)-(iv). Therefore: y_t(v; SM RGE) = y_t(v; lattice) + O(3%).  _(class `B`)_
+- **chain closes:** False — The runner verifies bounded insensitivity inside the chosen smooth beta-coefficient perturbation family, but the note does not derive that the exact lattice taste-staircase RG flow is in that family with only few-percent coefficient drift. The relevant Ward, boundary, and taste-staircase authorities are not audit-clean independent inputs for this bridge.
+- **rationale:** Issue: the load-bearing corollary identifies the unknown exact lattice taste-staircase RG flow with the smooth QFP surrogate family tested by the runner, with an O(3%) coefficient-drift envelope. Why this blocks: the runner cleanly checks sensitivity after imposing that family of perturbations, but it does not compute the actual lattice RG flow or prove that the taste-staircase corrections satisfy the assumed smoothness, gauge-anchor, Ward-BC, and few-percent coefficient bounds; the cited Ward/boundary/taste-staircase support remains open, partial, or identification-level. Repair target: an audit-clean lattice taste-staircase RG theorem or runner that derives the beta-function deformation class from the lattice blocking dynamics and proves it lies within the QFP sensitivity envelope. Claim boundary until fixed: this is strong bounded support that the backward-Ward prediction is insensitive to plausible surrogate-flow changes, not an audit-ratified proof that the exact lattice RG and SM surrogate agree at v to O(3%).
+- **open / conditional deps cited:**
+  - `YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `YT_BOUNDARY_THEOREM.md`
+  - `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`
 - **auditor confidence:** high
 
 ### `yt_schur_stability_gap_note`
