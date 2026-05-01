@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:18:29.228443+00:00
+**Generated:** 2026-05-01T07:20:04.549781+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,22 +23,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | bounded | 189 |
 | support | 163 |
-| open | 9 |
+| open | 8 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 856 |
+| ~~audited_conditional~~ | 857 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 275 |
-| `audited_conditional` | 586 |
+| `audited_conditional` | 587 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 574 |
+| `unaudited` | 573 |
 
 | criticality | count |
 |---|---:|
@@ -792,6 +792,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_dirac_global_lift_partial_theorem_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_dirac_two_higgs_canonical_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `neutrino_lane4_4f_phase2_attack_frame_fanout_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_lane4_theorem_plan_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_lane4_workstream_closeout_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_majorana_current_stack_exhaustion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -10903,6 +10904,23 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `neutrino mass reduction to Dirac lane authority`
   - `single Higgs doublet definite Z3 charge condition`
 - **auditor confidence:** 0.96
+
+### `neutrino_lane4_4f_phase2_attack_frame_fanout_note_2026-04-28`
+
+- **Note:** [`NEUTRINO_LANE4_4F_PHASE2_ATTACK_FRAME_FANOUT_NOTE_2026-04-28.md`](../../docs/NEUTRINO_LANE4_4F_PHASE2_ATTACK_FRAME_FANOUT_NOTE_2026-04-28.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** F3 and F1 are identified as the strongest single-cycle Phase-2 attack frames while F2 and F4-F6 are treated as distant or speculative.  _(class `B`)_
+- **chain closes:** False — The note is honest that it does not retain an input or close 4F-beta, but the ranking of attack frames depends on upstream Lane 5, DM-cluster, and cosmology status claims that are not registered as one-hop dependencies for this row. With no runner or dependency snapshot, the audit cannot independently verify the fan-out ordering as more than a branch-local planning judgment.
+- **rationale:** Issue: the strongest-frame classification rests on unregistered cross-note status claims about Lane 5 gates, DM retained content, and cosmology open-number inputs. Why this blocks: without those one-hop authorities or a deterministic decision runner, the audit cannot establish that F1/F3 are objectively the strongest Phase-2 routes rather than a qualitative synthesis. Repair target: register the cited upstream notes as dependencies and provide either a decision table whose criteria are checked against those sources or downscope the row to an informal work-log artifact. Claim boundary until fixed: safe as an open stuck-fan-out handoff that identifies plausible next attack frames, not as a verified ordering or retained Phase-2 result.
+- **open / conditional deps cited:**
+  - `HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md`
+  - `HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md`
+  - `DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md`
+  - `COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md`
+- **auditor confidence:** medium
 
 ### `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27`
 
