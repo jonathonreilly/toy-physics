@@ -57,6 +57,24 @@ EXCLUDED_SOURCE_PATTERNS = (
     "docs/NATURE_RANKED_DIRECTIONS_2026-04-11.md",
     "docs/NEXT_CHUNK_RECOMMENDATION.md",
     "docs/PAPER_OUTLINE_2026-04-12.md",
+    # Non-claim planning/session/status artifacts identified during
+    # unknown-row triage.
+    "docs/EXPERIMENT_BACKMATCH_QUERY_PACK_NOTE.md",
+    "docs/GRAPH_DIRAC_REQUIREMENTS_2026-04-10.md",
+    "docs/GRAVITY_DESIGN_BLUEPRINT.md",
+    "docs/KOIDE_A1_CLOSURE_RECOMMENDATION_2026-04-22.md",
+    "docs/KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md",
+    "docs/PHYSICS_CRITIC_TRACKER.md",
+    "docs/PHYSICS_FIRST_ATTACK_PLAN.md",
+    "docs/PHYSICS_QA_TRACKER.md",
+    "docs/REOPENED_LANE_CHECKLIST.md",
+    "docs/REPO_SUBMISSION_CONSOLIDATION_PLAN_2026-04-12.md",
+    "docs/SCALING_TARGETS.md",
+    "docs/SESSION_SUMMARY_*.md",
+    "docs/SESSION_SYNTHESIS_*.md",
+    "docs/WRITING_VOICE_GUIDE_2026-04-25.md",
+    "docs/YT_RETENTION_LANDING_READINESS_2026-04-18.md",
+    "docs/YT_RETENTION_MASTER_MANIFEST_2026-04-18.md",
     ".claude/**",
 )
 

@@ -1,5 +1,6 @@
 # Primordial Power Spectrum from Graph Growth
 
+**Status:** bounded - bounded or caveated result note
 **Current publication disposition:** bounded/conditional cosmology companion
 only. Not on the retained flagship claim surface.
 

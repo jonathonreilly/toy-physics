@@ -1,5 +1,6 @@
 # Self-Consistency Preference for Poisson Field Equation
 
+**Status:** bounded - bounded or caveated result note
 ## Status: review hold; bounded operator-preference result
 
 ## Context

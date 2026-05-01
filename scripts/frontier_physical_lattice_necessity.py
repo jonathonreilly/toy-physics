@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 """
-Physical-lattice necessity / fixed-surface no-regulator-reinterpretation boundary
-=================================================================================
+Physical-lattice necessity / no-same-stack regulator boundary
+=============================================================
 
 STATUS:
-  - CLOSED on the framework boundary: no same-stack / no-same-surface
-    regulator reinterpretation survives on the accepted package surface.
+  - CLOSED on the framework boundary: no same-stack regulator
+    reinterpretation survives on the accepted package surface.
   - CLOSED on the accepted Hilbert surface: exact observable-sector semantics
     force the retained `hw=1` triplet to be physically distinct species
     sectors of the accepted theory.
-  - CLOSED on the retained-package boundary: preserving the retained matter
-    and live quantitative package forces the physical-lattice reading.
+  - SUPPORT DIAGNOSTIC on the retained-package boundary: preserving the
+    retained matter and live quantitative package forces the physical-lattice
+    reading if the live quantitative package is imposed.
   - CLOSED on the accepted one-axiom framework surface: graph/locality
     semantics plus fixed-stack nonequivalence force substrate physicality.
 
@@ -22,23 +23,21 @@ ANSWER:
   The accepted `Cl(3) / Z^3` package can no longer be dismissed as merely an
   equivalent regulator reading of the same theory surface. Regulator
   reinterpretation requires extra structure not present in the accepted
-  minimal stack and it does not preserve the accepted fixed quantitative
-  surface:
+  minimal stack:
 
     1. a continuum-limit / line-of-constant-physics family,
     2. path-integral/rooting or continuum-removal machinery,
     3. an external renormalization / universality / EFT interpretation layer.
-    4. a deformation away from the canonical `g_bare = 1`, `beta = 6`,
-       plaquette/hierarchy surface.
-
-  That closes the anti-regulator question on the current package surface.
+  The older fixed-surface calculation remains as a support diagnostic, not as
+  a load-bearing premise for this no-`g_bare` route. That closes the
+  anti-regulator question on the current package surface.
   It also closes the narrower but important semantics step that the exact
   retained `hw=1` sectors are already physically distinct species sectors on
   the accepted Hilbert surface, because exact observables separate them and no
   proper exact quotient preserving that observable algebra exists.
-  It also closes the stronger conditional statement that the retained package
-  contract itself forces the physical-lattice reading as the unique surviving
-  interpretation.
+  It also keeps the stronger retained-package statement as a conditional
+  support diagnostic: if the live quantitative package contract is imposed,
+  the physical-lattice reading is the unique surviving interpretation.
   And on the accepted one-axiom Hilbert/locality/information surface it now
   derives the physical-lattice substrate reading itself, rather than leaving
   it as a separate live premise.
@@ -166,7 +165,6 @@ def part1_fixed_accepted_stack(minimal_text: str, plaquette_text: str) -> bool:
         "1. **Local algebra:** the physical local algebra is `Cl(3)`.",
         "2. **Spatial substrate:** the physical spatial substrate is the cubic lattice",
         "3. **Microscopic dynamics:** the package works with the finite local",
-        "4. **Canonical normalization and evaluation surface:** the current package uses",
     ]
     all_inputs_present = True
     for idx, snippet in enumerate(expected_inputs, start=1):
@@ -185,7 +183,7 @@ def part1_fixed_accepted_stack(minimal_text: str, plaquette_text: str) -> bool:
     canonical_surface = check(
         "canonical_normalization_surface_is_explicit",
         "`g_bare = 1`" in accepted_stack and "plaquette / `u_0` surface" in accepted_stack,
-        "the accepted stack fixes canonical normalization/evaluation rather than a tunable family",
+        "support diagnostic only: the accepted stack also exposes canonical normalization/evaluation rather than a tunable family",
     )
     fixed_beta = check(
         "fixed_gauge_surface_beta6",
@@ -215,8 +213,6 @@ def part1_fixed_accepted_stack(minimal_text: str, plaquette_text: str) -> bool:
     return (
         all_inputs_present
         and no_separate_physical_input
-        and canonical_surface
-        and fixed_beta
         and no_continuum_family
         and no_rooting_machinery
         and no_renorm_layer
@@ -460,23 +456,23 @@ def part6_conclusion(
     minimal_text: str,
 ) -> tuple[bool, bool]:
     print("=" * 88)
-    print("PART 6: SAME-STACK NONEQUIVALENCE AND RESIDUAL OPEN BOUNDARY")
+    print("PART 6: SAME-STACK NONEQUIVALENCE AND SUPPORT DIAGNOSTICS")
     print("=" * 88)
     print()
 
-    no_same_stack_regulator = (
-        fixed_stack
-        and generation_closed
-        and regulator_needs_extra
-        and fixed_surface_rigid
-        and cross_lane_rigid
-    )
+    no_same_stack_regulator = fixed_stack and generation_closed and regulator_needs_extra
     no_separate_live_input = "Physical-lattice reading:" not in minimal_text
+    fixed_surface_support_ready = fixed_surface_rigid and cross_lane_rigid
 
     check(
         "no_same_stack_regulator_reinterpretation",
         no_same_stack_regulator,
-        "regulator reinterpretation requires extra structure, cannot preserve the accepted fixed quantitative surface, and cannot preserve both accepted alpha_s(v) and v except at the canonical point",
+        "regulator reinterpretation requires extra continuum/rooting/RG structure absent from the accepted stack; fixed-surface diagnostics are support-only",
+    )
+    check(
+        "fixed_surface_support_diagnostic_passed",
+        fixed_surface_support_ready,
+        "optional diagnostic: the fixed-surface and invariant-collapse checks still pass, but they are not load-bearing for no-same-stack closure",
     )
     check(
         "live_minimal_stack_has_no_separate_physical_lattice_input",
@@ -606,7 +602,7 @@ def part8_package_internal_necessity(
     cross_lane_rigid: bool,
 ) -> bool:
     print("=" * 88)
-    print("PART 8: RETAINED-PACKAGE NECESSITY")
+    print("PART 8: RETAINED-PACKAGE SUPPORT DIAGNOSTIC")
     print("=" * 88)
     print()
 
@@ -625,7 +621,7 @@ def part8_package_internal_necessity(
     physical_lattice_is_unique_survivor = check(
         "physical_lattice_reading_is_unique_package_survivor",
         fixed_stack and regulator_reading_breaks_contract,
-        "once the retained package contract is imposed, only the physical-lattice reading survives as an admissible interpretation",
+        "support diagnostic: once the retained quantitative package contract is imposed, only the physical-lattice reading survives as an admissible interpretation",
         kind="LOGICAL",
     )
 
@@ -634,6 +630,7 @@ def part8_package_internal_necessity(
         print("  CONDITIONAL NECESSITY RESULT:")
         print("    on the retained package contract, the physical-lattice")
         print("    reading is forced as the unique surviving interpretation.")
+        print("    This is not used as the no-g_bare load-bearing route.")
         print()
 
     return retained_contract_named and regulator_reading_breaks_contract and physical_lattice_is_unique_survivor
@@ -703,7 +700,7 @@ def part9_one_axiom_substrate_necessity(
 
 def main() -> int:
     print("=" * 88)
-    print("PHYSICAL-LATTICE NECESSITY / FIXED-SURFACE NO-REGULATOR-REINTERPRETATION")
+    print("PHYSICAL-LATTICE NECESSITY / NO-SAME-STACK REGULATOR BOUNDARY")
     print("=" * 88)
     print()
     print("Question:")
@@ -777,16 +774,13 @@ def main() -> int:
     print("    - the retained generation surface is already quotient-closed")
     print("    - regulator reinterpretation requires extra structure absent from")
     print("      that accepted stack")
-    print("    - any regulator-family deformation also leaves the accepted")
-    print("      canonical quantitative surface (`g_bare = 1`, `beta = 6`,")
-    print("      plaquette/hierarchy chain)")
-    print("    - even allowing compensating u0 motion, preserving both")
-    print("      accepted alpha_s(v) and v forces the canonical point")
+    print("    - fixed-surface and invariant-collapse calculations pass as")
+    print("      support diagnostics, not as load-bearing premises")
     print("    - exact observable-sector semantics already force the")
     print("      retained hw=1 triplet to be physically distinct species")
     print("      sectors on the accepted Hilbert surface")
-    print("    - once the retained package contract is imposed, the")
-    print("      physical-lattice reading is the unique survivor")
+    print("    - conditional on the retained quantitative package contract,")
+    print("      the physical-lattice reading is the unique survivor")
     print("    - on the accepted one-axiom framework surface, the")
     print("      graph/locality object is already physical and the")
     print("      substrate reading is derived rather than separately asserted")
@@ -795,7 +789,7 @@ def main() -> int:
     print(
         "  CLOSED STATUS: "
         + (
-            "NO SAME-STACK / NO-SAME-SURFACE REGULATOR REINTERPRETATION"
+            "NO SAME-STACK REGULATOR REINTERPRETATION"
             if no_same_stack_regulator
             else "NOT ESTABLISHED"
         )
@@ -809,9 +803,9 @@ def main() -> int:
         )
     )
     print(
-        "  RETAINED PACKAGE STATUS: "
+        "  PACKAGE-DIAGNOSTIC STATUS: "
         + (
-            "PHYSICAL-LATTICE READING FORCED"
+            "CONDITIONAL PHYSICAL-LATTICE NECESSITY DIAGNOSTIC PASSED"
             if package_internal_necessity
             else "NOT ESTABLISHED"
         )

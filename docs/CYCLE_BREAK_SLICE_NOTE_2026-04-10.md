@@ -1,5 +1,6 @@
 # Cycle-Break Frontier Slice Note
 
+**Status:** bounded - finite frontier boundary probe
 **Date:** 2026-04-10  
 **Script:** `frontier_staggered_cycle_break_slice.py`
 

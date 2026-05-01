@@ -1,5 +1,6 @@
 # Universal GR Block Normalization Note
 
+**Status:** support - structural or confirmatory support note
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Scope:** direct universal block split only  

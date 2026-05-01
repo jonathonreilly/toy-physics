@@ -1,7 +1,7 @@
 # Derivation: Decoherence Exponent vs Dimension
 
 **Date:** 2026-04-03
-**Status:** Semi-analytical argument; useful as a frontier hypothesis, not yet
+**Status:** bounded - bounded or caveated result note
 an established theorem.
 
 ## The observation

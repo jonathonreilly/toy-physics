@@ -1,6 +1,6 @@
 # PMNS Graph-First Axis Alignment
 
-**Status:** exact positive partial theorem on a graph-native PMNS route  
+**Status:** bounded - bounded or caveated result note
 **Script:** [`frontier_pmns_graph_first_axis_alignment.py`](../scripts/frontier_pmns_graph_first_axis_alignment.py)
 
 ## Question

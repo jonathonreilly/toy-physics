@@ -1,8 +1,7 @@
 # Up-Sector Partition Revisit on the Newer Quark Package
 
 **Date:** 2026-04-19  
-**Status:** exact obstruction theorem for the old CP-orthogonal interior
-partition, plus a bounded phase-deformed edge update  
+**Status:** bounded - exact obstruction theorem for the old CP-orthogonal interior partition, plus a bounded phase-deformed edge update
 **Primary runner:** `scripts/frontier_up_sector_partition_revisit.py`
 
 ## Safe statement

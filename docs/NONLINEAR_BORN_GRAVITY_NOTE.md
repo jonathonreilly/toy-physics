@@ -1,5 +1,6 @@
 # Nonlinear Propagator Breaks Born Rule and Gravity Simultaneously
 
+**Status:** support - structural or confirmatory support note
 ## Result
 
 A nonlinear modification to the path-sum propagator simultaneously

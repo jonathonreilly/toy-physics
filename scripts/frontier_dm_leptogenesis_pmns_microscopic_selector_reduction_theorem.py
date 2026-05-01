@@ -76,14 +76,14 @@ PASS_COUNT = 0
 FAIL_COUNT = 0
 
 
-def check(name: str, condition: bool, detail: str = "") -> bool:
+def check(name: str, condition: bool, detail: str = "", cls: str = "C") -> bool:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
         PASS_COUNT += 1
     else:
         FAIL_COUNT += 1
-    msg = f"  [{status}] {name}"
+    msg = f"  [{status} ({cls})] {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)
@@ -282,20 +282,24 @@ def part6_the_notes_record_the_same_last_mile_object() -> None:
         "`dW_e^H` is the exact charged-sector Schur pushforward" in dwh_note
         and "What is now the right target:" in dwh_note
         and "`dW_e^H`" in dwh_note,
+        cls="B",
     )
     check(
         "The selector-bank blindness note records the remaining PMNS problem as a D_- / dW_e^H sign-law problem",
         "`D_- / dW_e^H` sign-law problem" in blind_note,
+        cls="B",
     )
     check(
         "The Z3 full-closure boundary note records the remaining source object as the right-sensitive 2-real doublet-block law",
         "(delta, q_+)" in z3_note and "doublet-block law" in z3_note,
+        cls="B",
     )
     check(
         "The new note records the unified last-mile reduction to a right-sensitive microscopic selector on dW_e^H / the Z3 doublet block",
         "right-sensitive microscopic selector law" in note
         and "dW_e^H = Schur_Ee(D_-)" in note
         and "`Z_3` doublet-block point-selection law" in note,
+        cls="B",
     )
 
 

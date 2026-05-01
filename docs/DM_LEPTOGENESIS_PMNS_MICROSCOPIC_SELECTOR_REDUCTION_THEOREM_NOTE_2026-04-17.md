@@ -1,5 +1,6 @@
 # DM Leptogenesis PMNS Microscopic Selector Reduction Theorem
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-17  
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_microscopic_selector_reduction_theorem.py`
 

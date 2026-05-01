@@ -1,7 +1,7 @@
 # PMNS Right Polar Section Note
 
 **Date:** 2026-04-15
-**Status:** exact generic conditional theorem on intrinsic PMNS completion
+**Status:** bounded - bounded or caveated result note
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_pmns_right_polar_section.py`

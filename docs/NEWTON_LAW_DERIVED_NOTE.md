@@ -1,5 +1,6 @@
 # Newton's Law Derived from Cl(3) on Z^3
 
+**Status:** support - structural or confirmatory support note
 ## Status
 
 **Closed** on the retained framework surface.

@@ -1,5 +1,6 @@
 # Matched 2D vs 4D Decoherence Note
 
+**Status:** support - structural or confirmatory support note
 **Date:** 2026-04-03
 **Purpose:** Test whether the current 4D decoherence claim survives a degree-matched comparison against the 2D modular family.
 

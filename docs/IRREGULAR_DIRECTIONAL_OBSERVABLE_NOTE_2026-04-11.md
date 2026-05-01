@@ -1,5 +1,6 @@
 # Irregular-Graph Directional Observable Probe
 
+**Status:** support - structural or confirmatory support note
 **Date:** 2026-04-11  
 **Script:** `frontier_irregular_directional_observable.py`
 **Status on current `main`: historical blocker surface for the off-center /

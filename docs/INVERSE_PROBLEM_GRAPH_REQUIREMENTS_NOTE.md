@@ -1,12 +1,12 @@
 # Inverse Problem Graph Requirements Note
 
 **Date:** 2026-04-04  
-**Status:** bounded graph-requirements harness on the proposed_retained 3D valley-linear family
+**Status:** bounded graph-requirements harness on the 3D valley-linear family
 
 ## Artifact chain
 
-- Script: [`scripts/inverse_problem_graph_requirements.py`](/Users/jonreilly/Projects/Physics/scripts/inverse_problem_graph_requirements.py)
-- Log: [`logs/2026-04-04-inverse-problem-graph-requirements.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-inverse-problem-graph-requirements.txt)
+- Script: [`scripts/inverse_problem_graph_requirements.py`](../scripts/inverse_problem_graph_requirements.py)
+- Log: [`logs/2026-04-04-inverse-problem-graph-requirements.txt`](../logs/2026-04-04-inverse-problem-graph-requirements.txt)
 
 This note turns the earlier doc-only inverse-problem claim into a real,
 bounded harness on the retained 3D valley-linear family.
@@ -63,9 +63,9 @@ The honest conclusion is narrower:
 
 Read this with:
 
-- [`docs/NEWTON_DERIVATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md)
-- [`docs/ACTION_UNIQUENESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_UNIQUENESS_NOTE.md)
-- [`docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md)
+- [`docs/NEWTON_DERIVATION_NOTE.md`](NEWTON_DERIVATION_NOTE.md)
+- [`docs/ACTION_UNIQUENESS_NOTE.md`](ACTION_UNIQUENESS_NOTE.md)
+- [`docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`](PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md)
 
 The inverse problem is now narrower than the derivation:
 

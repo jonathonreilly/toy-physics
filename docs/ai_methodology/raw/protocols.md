@@ -285,7 +285,7 @@ Read, in order:
 ### What changed
 - added a direct data-bearing Shapiro scaling replay chain:
   - `/Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_direct_replay.py`
-  - `/Users/jonreilly/Projects/Physics/docs/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`
   - `/Users/jonreilly/Projects/Physics/logs/2026-04-08-shapiro-scaling-direct-replay.txt`
 - converted
   `/Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_probe.py`
@@ -321,7 +321,7 @@ Read, in order:
 ### Files/logs changed
 - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
 - `/Users/jonreilly/Projects/Physics/docs/SHAPIRO_SCALING_NOTE.md`
-- `/Users/jonreilly/Projects/Physics/docs/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`
 - `/Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_probe.py`
 - `/Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_direct_replay.py`
 - `/Users/jonreilly/Projects/Physics/logs/2026-04-08-shapiro-scaling-direct-replay.txt`
@@ -1240,7 +1240,7 @@ Read, in order:
 - the canonical repo at `/Users/jonreilly/Projects/Physics` was initially
   synced before this step:
   - `git status --short --branch` reported `## main...origin/main` plus
-    modified `docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`, modified
+    modified `archive_unlanded/testable-ranking-stale-wrappers-2026-04-30/TESTABLE_PREDICTIONS_MAP_NOTE.md`, modified
     `logs/physics_autopilot_handoff.md`, and several unrelated untracked draft
     notes / probes
   - `git rev-list --left-right --count origin/main...main` returned `0 0`
@@ -1288,7 +1288,7 @@ Read, in order:
   - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md`
   - `/Users/jonreilly/Projects/Physics/logs/2026-04-05-directional-b-geometry-normalized-overlap-map-n12.txt`
 - left unrelated user/local changes untouched:
-  - `/Users/jonreilly/Projects/Physics/docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/archive_unlanded/testable-ranking-stale-wrappers-2026-04-30/TESTABLE_PREDICTIONS_MAP_NOTE.md`
   - `/Users/jonreilly/Projects/Physics/docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md`
   - `/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PREDICTION_CARD_NOTE.md`
   - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_DIAMOND_SENSOR_BRAINSTORM_NOTE.md`
@@ -1356,7 +1356,7 @@ Read, in order:
   before this step:
   - `git status --short --branch` reported `## main...origin/main` plus
     modified `logs/physics_autopilot_handoff.md`, modified
-    `docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`, and several unrelated untracked
+    `archive_unlanded/testable-ranking-stale-wrappers-2026-04-30/TESTABLE_PREDICTIONS_MAP_NOTE.md`, and several unrelated untracked
     draft notes / probes
   - `git rev-list --left-right --count origin/main...main` returned `0 0`
   - `git log --oneline --decorate -n 8` showed synced head `eb01dc7`
@@ -1398,7 +1398,7 @@ Read, in order:
   - `/Users/jonreilly/Projects/Physics/docs/GATE_B_V6_NEARFIELD_COMPARATOR_NOTE.md`
   - `/Users/jonreilly/Projects/Physics/docs/GATE_B_DYNAMICS_NOTE.md`
 - left unrelated user/local changes untouched:
-  - `/Users/jonreilly/Projects/Physics/docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/archive_unlanded/testable-ranking-stale-wrappers-2026-04-30/TESTABLE_PREDICTIONS_MAP_NOTE.md`
   - `/Users/jonreilly/Projects/Physics/docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md`
   - `/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PREDICTION_CARD_NOTE.md`
   - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_DIAMOND_SENSOR_BRAINSTORM_NOTE.md`
@@ -1465,7 +1465,7 @@ Read, in order:
   this step:
   - `git status --short --branch` reported `## main...origin/main` plus
     modified `AUTOPILOT_WORKLOG.md`, modified
-    `docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`, modified
+    `archive_unlanded/testable-ranking-stale-wrappers-2026-04-30/TESTABLE_PREDICTIONS_MAP_NOTE.md`, modified
     `logs/physics_autopilot_handoff.md`, and several unrelated untracked draft
     notes / probes
   - `git rev-list --left-right --count origin/main...main` returned `0 0`
@@ -1499,7 +1499,7 @@ Read, in order:
   - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md`
   - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`
 - left unrelated user/local changes untouched:
-  - `/Users/jonreilly/Projects/Physics/docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/archive_unlanded/testable-ranking-stale-wrappers-2026-04-30/TESTABLE_PREDICTIONS_MAP_NOTE.md`
   - `/Users/jonreilly/Projects/Physics/docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md`
   - `/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PREDICTION_CARD_NOTE.md`
   - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_DIAMOND_SENSOR_BRAINSTORM_NOTE.md`
@@ -18338,7 +18338,6 @@ Goal:
 Concrete deliverables:
 
 - [LITERATURE_POSITIONING_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LITERATURE_POSITIONING_NOTE.md)
-- [PAPER_SCOPE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/PAPER_SCOPE_NOTE.md)
 - explicit future comparisons to:
   - quantum measure / Sorkin
   - open quantum systems / collision models
@@ -18500,4 +18499,3 @@ Current freeze scope:
 ## /Users/jonBridger/Toy Physics/.claude/worktrees/quizzical-shockley-537438/docs/publication/ci3_z3/AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md
 
 *MISSING*
-

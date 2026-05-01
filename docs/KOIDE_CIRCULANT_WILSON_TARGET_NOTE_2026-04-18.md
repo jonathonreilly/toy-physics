@@ -1,7 +1,7 @@
 # Koide Circulant Wilson-Target Note
 
 **Date:** 2026-04-18
-**Status:** constructive target reduction on the charged-lepton Koide lane
+**Status:** support - structural or confirmatory support note
 **Runner:** `scripts/frontier_koide_circulant_wilson_target.py`
 
 ## Question

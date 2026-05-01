@@ -1,5 +1,6 @@
 # Two-Sign Comparison Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-10  
 **Script:** `frontier_two_sign_comparison.py`
 

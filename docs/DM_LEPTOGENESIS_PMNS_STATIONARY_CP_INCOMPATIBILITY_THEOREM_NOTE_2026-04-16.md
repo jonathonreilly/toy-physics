@@ -1,7 +1,7 @@
 # DM Leptogenesis PMNS Stationary CP Incompatibility Theorem
 
 **Date:** 2026-04-16  
-**Status:** exact incompatibility theorem for the current PMNS selector families
+**Status:** support - structural or confirmatory support note
 as constructive witnesses for the source-oriented mainline leptogenesis branch  
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_stationary_cp_incompatibility_theorem.py`
 

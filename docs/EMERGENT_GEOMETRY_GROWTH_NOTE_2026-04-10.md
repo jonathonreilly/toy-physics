@@ -1,7 +1,7 @@
 # Emergent Geometry from Matter-Coupled Growth
 
 **Date:** 2026-04-10  
-**Status:** exploratory mixed, partial reopen at high `G` only  
+**Status:** bounded - bounded or caveated result note
 **Scripts:** `frontier_emergent_geometry.py`, `frontier_emergent_geometry_v2.py`
 
 ## Question
@@ -20,13 +20,20 @@ control?
 
 ## Current outputs
 
-Initial single-seed growth result:
+Initial single-seed growth result (frozen 2026-04-10 numbers; current
+runner produces values in the same qualitative direction but slightly
+different specific numbers — see live runner output for the current pass):
 
 | Metric | Matter-coupled growth | Uniform-growth control |
 | --- | ---: | ---: |
-| Effective dimension `d_eff` | `2.03` (`R²=0.9839`) | `1.54` (`R²=0.9440`) |
-| Central node density | `108 / unit²` | `11 / unit²` |
-| Parent-node clustering | `5.43x` above uniform | N/A |
+| Effective dimension `d_eff` | ~`1.6-2.0` (`R²>0.97`) | ~`1.5-1.6` (`R²>0.95`) |
+| Peak shell-bin density | order `10^2 / unit²` | order `10^1 / unit²` |
+| Parent-node clustering | several-x above uniform | N/A |
+
+The qualitative finding survives: the matter-coupled grown graph has a higher
+effective dimension and a denser peak shell than the uniform control. The
+exact numerics drift across runs because the growth rule has stochastic seed
+dependence (see the multi-seed audit below).
 
 Follow-up audit on the stronger `v2` probe, before hardening the growth rule:
 

@@ -1,5 +1,6 @@
 # PMNS Three-Flux Holonomy Closure
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16  
 **Script:** `scripts/frontier_pmns_three_flux_holonomy_closure.py`
 

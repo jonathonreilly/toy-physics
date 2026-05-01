@@ -1,7 +1,7 @@
 # PMNS Intrinsic Completion Boundary
 
 **Date:** 2026-04-15
-**Status:** exact current-bank boundary theorem on intrinsic PMNS completion
+**Status:** support - structural or confirmatory support note
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_pmns_intrinsic_completion_boundary.py`

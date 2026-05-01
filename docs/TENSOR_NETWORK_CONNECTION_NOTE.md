@@ -1,5 +1,6 @@
 # Tensor Network Connection Note
 
+**Status:** support - structural or confirmatory support note
 ## Result
 
 The path-sum propagator on a layered graph is formally a Matrix Product

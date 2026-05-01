@@ -1,13 +1,13 @@
 # Fifth Family Complex Boundary Note
 
 **Date:** 2026-04-06  
-**Status:** diagnosed selectivity boundary on the radial-shell fifth-family slice
+**Status:** support - structural or confirmatory support note
 
 ## Artifact Chain
 
 - [`scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py`](/Users/jonreilly/Projects/Physics/scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py)
 - [`logs/2026-04-06-fifth-family-complex-targeted.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-06-fifth-family-complex-targeted.txt)
-- [`docs/FIFTH_FAMILY_COMPLEX_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/FIFTH_FAMILY_COMPLEX_NOTE.md)
+- [`archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_COMPLEX_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_COMPLEX_NOTE.md)
 
 ## Boundary Rows
 

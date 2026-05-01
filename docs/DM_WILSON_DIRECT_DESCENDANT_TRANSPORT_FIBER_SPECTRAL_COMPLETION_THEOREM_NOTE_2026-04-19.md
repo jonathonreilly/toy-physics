@@ -1,7 +1,7 @@
 # DM Wilson Direct-Descendant Transport-Fiber Spectral Completion Theorem
 
 **Date:** 2026-04-19
-**Status:** exact local sharpening of the same-day canonical transport-column
+**Status:** support - structural or confirmatory support note
 fiber theorem. The remaining `3`-real source ambiguity above the canonical
 favored transport column is already an explicit microscopic spectral object,
 not an undifferentiated source-side blur.

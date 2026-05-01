@@ -14,7 +14,7 @@ Relevant branch-side anchors include:
 - `scripts/bmv_gravitational_entanglement.py`
 - `scripts/distance_law_h2T_continuum.py`
 - `scripts/complex_action_harness.py`
-- `docs/BACKREACTION_NOTE.md`
+- `archive_unlanded/poisson-self-consistency-stale-runners-2026-04-30/BACKREACTION_NOTE.md`
 - `docs/ASSUMPTION_DERIVATION_LEDGER.md`
 
 ## 0. Artifact-chain audit
@@ -25,7 +25,7 @@ The branch is uneven in an important way:
   retained-looking chain on the branch:
   - notes: `docs/COMPLEX_ACTION_NOTE.md`,
     `docs/CONTINUUM_LIMIT_NOTE.md`, `docs/CONTINUUM_CONVERGENCE_NOTE.md`,
-    `docs/DISTANCE_LAW_NOTE.md`
+    `archive_unlanded/gravity-distance-law-stale-runners-2026-04-30/DISTANCE_LAW_NOTE.md`
   - logs: `logs/2026-04-05-complex-action-harness.txt`,
     `logs/2026-04-05-complex-action-grown.txt`,
     `logs/2026-04-05-h2-T-numpy-continuum.txt`,
@@ -136,7 +136,7 @@ These are the claims that are too strong for the current evidence chain.
 
 - **A universal continuum / asymptotic steepening claim**
   - any `-1.5`-style distance-law story is not yet mainline-safe
-  - the branch-side `docs/DISTANCE_LAW_NOTE.md` overreaches relative to the
+  - the branch-side `archive_unlanded/gravity-distance-law-stale-runners-2026-04-30/DISTANCE_LAW_NOTE.md` overreaches relative to the
     artifact chain: it cites the wide script, but the note itself does not
     anchor a matching retained log and the fit is still window-sensitive
   - the branch evidence is still finite-lattice and window-sensitive

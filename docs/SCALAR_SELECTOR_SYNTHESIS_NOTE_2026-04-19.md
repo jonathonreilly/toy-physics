@@ -1,5 +1,6 @@
 # Scalar-Selector Synthesis
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-19
 **Scope:** Publishable synthesis of four Tier-1 Standard Model
 scalar-selector gates: Koide `kappa`, Koide doublet-phase (Koide
@@ -48,7 +49,7 @@ the historical route language below:
   basins `{Basin 1, Basin N, Basin P, Basin 2, Basin X}`, with active-chamber
   chart `{Basin 1, Basin 2, Basin X}`. Any older "four-basin" or
   `{Basin 1, Basin X}` phrasing below is pre-completeness bookkeeping. See
-  `docs/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`.
+  `archive_unlanded/dm-abcc-finite-search-salvage-2026-04-30/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`.
 
 ---
 

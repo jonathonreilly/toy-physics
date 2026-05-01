@@ -1,13 +1,13 @@
 # Shapiro Scaling Note
 
 **Date:** 2026-04-08  
-**Status:** direct data-bearing replay; reconstruction-only anchor chain closed
+**Status:** support - structural or confirmatory support note
 
 ## Pointer
 
 The canonical scaling replay is now the direct replay note:
 
-- [`docs/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md)
+- [`archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md)
 
 ## Why
 

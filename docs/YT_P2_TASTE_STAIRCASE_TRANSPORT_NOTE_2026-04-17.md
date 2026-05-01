@@ -1,15 +1,7 @@
 # Taste-Staircase Transport Theorem (P2 Narrowing)
 
 **Date:** 2026-04-17
-**Status:** PARTIAL result. Structural preservation of the Ward ratio
-`y_t/g_s = 1/sqrt(6)` on every rung of the 16-step taste staircase is
-derived from existing retained theorems (Ward, Hierarchy, Boundary
-Selection). The framework-native transport closes the 17 decades
-`M_Pl -> v` on the LATTICE side. What remains OPEN is the single
-EFT matching jump at `v` between the last lattice rung (Ward ratio
-1/sqrt(6)) and the SM EFT (ratio ~0.806 from Pendleton-Ross focusing).
-P2 is narrowed from "17 decades of 2-loop SM RGE surrogate" to
-"one EFT matching coefficient at v", but not closed.
+**Status:** support - partial Ward-ratio transport result; the single EFT matching jump at `v` remains open
 **Script:** `scripts/frontier_yt_p2_taste_staircase_transport.py`
 
 ---

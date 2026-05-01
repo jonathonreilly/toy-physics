@@ -1,7 +1,7 @@
 # DM Current-Bank Quantitative Mapping
 
 **Date:** 2026-04-21
-**Status:** public mapping item closed. This note closes the
+**Status:** support - structural or confirmatory support note
 quantitative mapping item only; the full DM closure package uses this note
 alongside the same-day A-BCC, selector-packet, split-2, and ordered-chain
 current theorems.

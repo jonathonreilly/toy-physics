@@ -1,5 +1,6 @@
 # DM Full Closure Same-Surface Thermal Series/Tail Support
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-17  
 **Branch:** `codex/dm-thermal-review-2026-04-17`  
 **Script:** `scripts/frontier_dm_full_closure_same_surface_thermal_series_tail_support.py`

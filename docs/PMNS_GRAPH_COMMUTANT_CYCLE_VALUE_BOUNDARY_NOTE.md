@@ -1,7 +1,7 @@
 # PMNS Graph-Commutant Cycle Value Boundary
 
 **Date:** 2026-04-16  
-**Status:** theorem-grade boundary for the graph-native projected-commutant route  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_pmns_graph_commutant_cycle_value_boundary.py`
 
 ## Question
@@ -47,13 +47,15 @@ selection.
 
 This boundary is compatible with the current exact package:
 
-1. the graph-first route derives alignment, but not the values
-2. the projected commutant route derives selectors, but not the reduced cycle
-   coefficients
-3. the native oriented-cycle observable law reads the coefficients exactly once
-   an active block is already supplied
-4. the reduced-channel no-go remains correct: the current exact bank does not
-   select a unique reduced-channel point
+1. the [graph-first axis alignment](PMNS_GRAPH_FIRST_AXIS_ALIGNMENT_NOTE.md)
+   route derives alignment, but not the values
+2. the [projected commutant eigenoperator selector](PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md)
+   derives selectors, but not the reduced cycle coefficients
+3. the [native oriented-cycle channel value law](PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md)
+   reads the coefficients exactly once an active block is already supplied
+4. the [reduced-channel nonselection theorem](PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md)
+   remains correct: the current exact bank does not select a unique
+   reduced-channel point
 
 ## Honest next target
 

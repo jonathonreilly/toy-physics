@@ -1,6 +1,6 @@
 # DM Leptogenesis PMNS Reduction-Exhaustion Theorem
 
-**Status:** exact review-scope reduction theorem on the refreshed DM branch  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_reduction_exhaustion_theorem.py`
 
 ## Question

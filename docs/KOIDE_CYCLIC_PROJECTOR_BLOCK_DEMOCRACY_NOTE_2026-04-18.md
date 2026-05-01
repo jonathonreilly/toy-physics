@@ -1,7 +1,7 @@
 # Koide Cyclic-Projector Block Democracy
 
 **Date:** 2026-04-18
-**Status:** fresh axiom-first selector candidate on the charged-lepton Koide
+**Status:** bounded - bounded or caveated result note
 lane
 **Runner:** `scripts/frontier_koide_cyclic_projector_block_democracy.py`
 

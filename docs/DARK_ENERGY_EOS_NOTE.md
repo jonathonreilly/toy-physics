@@ -1,5 +1,6 @@
 # Dark Energy Equation of State from Graph Spectral Gap
 
+**Status:** bounded - bounded or caveated result note
 **Script:** `scripts/frontier_dark_energy_eos.py`
 **PStack:** `frontier-dark-energy-eos`
 **Date:** 2026-04-12

@@ -1,5 +1,6 @@
 # Action Normalization: Self-Consistency Fixes the Coupling Coefficient
 
+**Status:** bounded - bounded or caveated result note
 **Script:** `scripts/frontier_action_normalization.py`
 **Date:** 2026-04-12
 

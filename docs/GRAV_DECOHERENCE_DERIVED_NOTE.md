@@ -1,5 +1,6 @@
 # Gravitational Decoherence Rate -- Derived from Framework Axioms
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-13
 **Script:** `scripts/frontier_grav_decoherence_derived.py`
 **Depends on:** `frontier_newton_derived.py` (lattice Green's function), `frontier_dm_coulomb_from_lattice.py` (subtracted Fourier integral)

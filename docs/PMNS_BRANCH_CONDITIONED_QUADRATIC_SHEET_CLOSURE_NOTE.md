@@ -1,11 +1,11 @@
 # PMNS Branch-Conditioned Quadratic-Sheet Closure
 
 **Date:** 2026-04-15
-**Status:** exact branch-conditioned coefficient-reconstruction theorem on the
+**Status:** support - structural or confirmatory support note
 minimal PMNS branches
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`
-**Script:** `scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py`
+**Script:** `scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py` (PASS=22 FAIL=0 on current main; the runner now reads `NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md` for the last-mile dep)
 
 ## Question
 

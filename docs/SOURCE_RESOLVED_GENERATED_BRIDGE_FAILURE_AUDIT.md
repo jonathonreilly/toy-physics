@@ -1,7 +1,7 @@
 # Source-Resolved Generated Bridge Failure Audit
 
 **Date:** 2026-04-05  
-**Status:** adversarial synthesis of the current compact generated-family bridge
+**Status:** support - structural or confirmatory support note
 
 ## Scope
 

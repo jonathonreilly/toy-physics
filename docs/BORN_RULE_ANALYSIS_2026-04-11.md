@@ -1,5 +1,6 @@
 # Born Rule Negative — What It Teaches
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-11
 
 ## The Result

@@ -20,7 +20,7 @@ bookkeeping. For current branch-facing status, apply two corrections first:
   `{Basin 1, Basin N, Basin P, Basin 2, Basin X}`, and the active-chamber
   chart is `{Basin 1, Basin 2, Basin X}`. Any older "four-basin" or
   `{Basin 1, Basin X}` language below predates the completeness theorem. See
-  `docs/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`.
+  `archive_unlanded/dm-abcc-finite-search-salvage-2026-04-30/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`.
 - DM A-BCC `σ_hier`: the `σ_hier = (2,1,0)` ambiguity is no longer open on
   the review branch. The active-chamber completeness + parity-reduction +
   upper-octant/source-cubic stack closes the hierarchy-permutation ambiguity
@@ -71,7 +71,7 @@ Step 9  — ambient-S^2 monopole story retires: actual positive projectivized
            runner verified]
 ```
 
-**Status:** the Brannen-Zenczykowski phase offset supplies `delta = 2/9` (†); the actual-route Berry
+**Status:** bounded - bounded or caveated result note
 theorem supplies its geometric meaning as a canonical Pancharatnam–Berry
 holonomy on the physical selected line. Together they eliminate the
 previously separate `m_* / kappa_sel,*` imports as derived

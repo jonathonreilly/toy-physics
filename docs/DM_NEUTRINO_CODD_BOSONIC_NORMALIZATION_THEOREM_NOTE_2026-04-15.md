@@ -1,7 +1,7 @@
 # DM Neutrino `c_odd` Bosonic Normalization Theorem
 
 **Date:** 2026-04-15  
-**Status:** exact single-axiom normalization theorem for the odd transfer coefficient  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_neutrino_codd_bosonic_normalization_theorem.py`
 
 ## Framework sentence

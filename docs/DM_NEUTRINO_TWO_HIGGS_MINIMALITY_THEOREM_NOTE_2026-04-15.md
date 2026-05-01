@@ -1,7 +1,7 @@
 # DM Neutrino Two-Higgs Minimality Theorem
 
 **Date:** 2026-04-15  
-**Status:** exact DM-side minimality theorem on the local neutrino flavor lane  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_neutrino_two_higgs_minimality_theorem.py`
 
 ## Question

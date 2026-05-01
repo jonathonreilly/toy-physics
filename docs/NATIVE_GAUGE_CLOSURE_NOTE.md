@@ -1,21 +1,31 @@
 # Native Gauge Closure Note: Graph-First Gauge Closure on Z^3
 
 **Date:** 2026-04-12
-**Status:** proposed_retained exact native `SU(2)` + proposed_retained structural `SU(3)`; bounded abelian factor (`+1/3`, `-1` on the left-handed surface)
+**Status:** proposed_retained audit target: exact native cubic `Cl(3)` / `SU(2)` plus ledger-ratified graph-first selector and structural `SU(3)` dependencies; bounded hypercharge-like left-handed abelian surface only
 **Claim boundary authority:** this note
 **Primary runner:** `scripts/frontier_non_abelian_gauge.py`
 
 This note is the publication-facing aggregator for the gauge-structure
-backbone. The two sub-claims it depends on are:
+backbone. The fresh audit packet has a narrow boundary:
+
+- exact native cubic `Cl(3)` / `SU(2)` is checked directly by the primary
+  runner;
+- the graph-first selector and graph-first structural `SU(3)` claims are
+  imported only through their ledger-ratified notes and runners;
+- the abelian factor is bounded to the left-handed `+1/3` / `-1` eigenvalue
+  surface, not a full anomaly-complete `U(1)_Y` theorem.
+
+The two load-bearing graph-first sub-claims are:
 
 - [graph-first weak-axis selector derivation](GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md)
   (runner: `scripts/frontier_graph_first_selector_derivation.py`)
 - [graph-first `SU(3)` integration theorem](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
   (runner: `scripts/frontier_graph_first_su3_integration.py`)
 
-Each sub-claim has its own status, runner, and audit row. This aggregator
-inherits its `effective_status` from those dependencies plus the SU(2)
-result computed by the primary runner above.
+Each sub-claim has its own status, runner, and audit row. In the current
+ledger, both dependencies are audit-ratified with `effective_status = retained`.
+This aggregator asks the fresh audit to combine those retained dependencies
+with the native `SU(2)` result computed by the primary runner above.
 
 ---
 
@@ -42,9 +52,10 @@ following chain, which is entirely determined by graph topology:
 
 This result is not new in isolation — staggered fermion taste algebras are
 well-studied (Kogut & Susskind 1975, Golterman & Smit 1984, Sharpe 2006).
-The contribution is connecting it to the framework's single-axiom derivation
-chain: the same Cl(3) that produces SU(2) also produces gravity (via
-self-consistent Poisson), the Born rule (via unitarity), and d=3 selection.
+The retained boundary here is narrower: the cubic taste algebra supplies an
+exact native `Cl(3)` / `SU(2)` structure on the `Z^3` graph surface. Gravity,
+Born-rule, dimensional-selection, and phenomenology claims are separate audit
+lanes and are not ratified by this note.
 
 ### What is retained for publication
 
@@ -52,7 +63,8 @@ self-consistent Poisson), the Born rule (via unitarity), and d=3 selection.
   chiral structure
 - The mechanism is topological (bipartite → Z₂ → Cl(3) → su(2))
 - No free parameters or choices involved
-- U(1) from edge phases is also confirmed (Coulomb law, R²=0.9995)
+- this section does not identify the abelian factor or any downstream
+  phenomenology
 
 ---
 
@@ -102,18 +114,24 @@ depend on a hand-chosen tensor-factor presentation.
 - derived graph-first weak-axis selector on the canonical cube-shift surface
 - structural `su(3)` closure from the selected graph axis plus residual cubic
   swap
-- unique traceless abelian direction with eigenvalues `+1/3` on the
-  `6`-dimensional symmetric/weak-doublet block and `-1` on the
-  `2`-dimensional antisymmetric/weak-doublet block
+
+### Bounded left-handed abelian corollary
+
+On the same selected-axis graph surface, the unique traceless abelian
+direction has eigenvalues `+1/3` on the `6`-dimensional
+symmetric/weak-doublet block and `-1` on the `2`-dimensional
+antisymmetric/weak-doublet block. This is the only abelian statement carried
+by this note.
 
 ### What remains bounded
 
-- the abelian factor is still best described as **hypercharge-like** or
-  left-handed charge matching until the anomaly-complete chiral completion
-  theorem is written cleanly
+- the abelian factor is described as **hypercharge-like** or left-handed
+  charge matching only
+- anomaly-complete `U(1)_Y` closure belongs to a separate chiral matter
+  completion theorem
 - downstream phenomenology remains separate from this structural closure
-- this note closes the gauge-structure backbone, not the full Standard Model
-  matter-completion story
+- this note is an audit target for the gauge-structure backbone, not the full
+  Standard Model matter-completion story
 
 ### Prior art that must be cited
 
@@ -134,7 +152,8 @@ gauge lane on `main`.
   - derived graph-first weak-axis selector
   - structural graph-first `su(3)` closure
 - still bounded:
-  - abelian factor as hypercharge-like / left-handed matched
+  - abelian factor as hypercharge-like / left-handed matched only
+  - anomaly-complete `U(1)_Y`
   - all downstream phenomenology
 - do not treat broader CI(3) / `Z^3` derivation memos or phenomenology notes as
   retention authority unless they are separately promoted with bounded wording

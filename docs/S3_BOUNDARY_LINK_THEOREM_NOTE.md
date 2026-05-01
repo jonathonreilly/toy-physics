@@ -1,6 +1,6 @@
 # S^3 Boundary-Link Disk Theorem
 
-**Status:** EXACT -- proved for all R >= 2, no external citation required
+**Status:** support - structural or confirmatory support note
 **Type:** Constructive combinatorial proof + computational verification (R=2..10)
 **Date:** 2026-04-13
 **Script:** `frontier_s3_boundary_link_theorem.py`

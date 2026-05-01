@@ -1,7 +1,7 @@
 # Chiral Walk Architecture — Complete Synthesis
 
 **Date:** 2026-04-09
-**Status:** Overnight synthesis. See `CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md` for the narrowed 3+1D status.
+**Status:** bounded - bounded or caveated result note
 
 > Update 2026-04-10: the overnight 1+1D and 2+1D results still stand, and the
 > 3+1D closure card at its tested operating point still stands, but the later

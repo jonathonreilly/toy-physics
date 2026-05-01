@@ -1,9 +1,8 @@
 # Planck Target 3 Clifford Phase Bridge Theorem
 
 **Date:** 2026-04-25
-**Status:** conditional structural Target 3 bridge on the primitive
-Clifford/coframe response; not a standalone retained closure of Target 3 and
-not an SI decimal derivation of `hbar`
+**Status:** support / conditional Target 3 bridge; 2026-04-30 carrier
+identification audited_renaming; not an SI decimal derivation of `hbar`
 **Runner:** `scripts/frontier_planck_target3_clifford_phase_bridge.py`
 
 ## Purpose
@@ -21,19 +20,23 @@ packet uses the time-locked primitive event coframe
 E = span(t, x, y, z).
 ```
 
-This note records the positive bridge under one explicit additional premise:
-the active primitive boundary response realizes the metric-compatible
-Clifford coframe response on the rank-four block. Under that premise the active
-primitive boundary block carries the irreducible complex `Cl_4` module, which
-is equivalent to two complex CAR modes. Therefore the last Target 2 carrier
-premise is reduced to the primitive Clifford/coframe response, not to a fitted
-entropy axiom.
+This note originally recorded the positive bridge under one explicit additional
+premise: the active primitive boundary response realizes the
+metric-compatible Clifford coframe response on the rank-four block. The
+2026-04-30 theorem
+[PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md](./PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md)
+was audited as `audited_renaming`: it constructs a valid `Cl_4(C)` / CAR
+carrier, but it does not force the retained substrate action to preserve
+`P_A H_cell` and induce that carrier.
 
-The distinction is important: the current retained `Cl(3)/Z^3` input does not
-by itself prove that this four-axis active block carries the metric-compatible
-complex `Cl_4` response. If the coframe-response premise is not accepted or
-derived separately, the surface falls back to the stripped Hilbert-only
-boundary no-go.
+Under the explicit response premise, the active primitive boundary block carries
+the irreducible complex `Cl_4` module, which is equivalent to two complex CAR
+modes. Therefore the last Target 2 carrier premise remains the
+metric-compatible Clifford coframe response, not a fitted entropy axiom.
+
+The distinction remains important: the stripped Hilbert-only surface still
+does not force CAR. Since the 2026-04-30 construction was not audit-ratified,
+this note keeps its original conditional reading.
 
 ## Import ledger
 
@@ -42,7 +45,7 @@ boundary no-go.
 | local `Cl(3)` on `Z^3` | native spatial Clifford/coframe algebra | accepted framework input |
 | time-locked primitive event cell `C^2_t otimes C^2_x otimes C^2_y otimes C^2_z` | four-axis primitive event coframe | retained Planck packet |
 | `P_A H_cell`, `rank(P_A)=4` | active primitive boundary block | retained Planck packet |
-| metric-compatible Clifford response `D(v)^2=||v||^2 I` | primitive active-block coframe response needed for the bridge | explicit structural premise; native candidate, not yet independently forced |
+| metric-compatible Clifford response `D(v)^2=||v||^2 I` | primitive active-block coframe response needed for the bridge | explicit conditional premise; the 2026-04-30 construction was audited_renaming |
 | source-unit normalization theorem | maps `c_cell=1/4` to `G_Newton,lat=1` and `a/l_P=1` | retained support theorem |
 
 No measured value of `G`, `hbar`, `l_P`, or `M_Pl` is imported.
@@ -84,9 +87,10 @@ that is metric-compatible:
 D(v)^2 = ||v||^2 I_K
 ```
 
-for every primitive coframe vector `v`. This is the bridge premise. It is a
-native algebraic coframe hypothesis, not an entropy-coefficient fit, but it is
-not proved here from rank four or from the bare Hilbert-flow axioms alone.
+for every primitive coframe vector `v`. This remains the bridge premise. The
+2026-04-30 theorem constructs a valid carrier but was audited as not deriving
+the substrate-to-`P_A` forcing step. The response is still not proved from rank
+four or from the bare Hilbert-flow axioms alone.
 
 Then:
 
@@ -332,7 +336,8 @@ Safe wording:
 > fixed without an entropy fit, and its exact coefficient equals the Planck
 > primitive trace, `c_Widom=c_cell=1/4`. With the source-unit normalization
 > support theorem this gives `G_Newton,lat=1` and `a/l_P=1` in natural
-> phase/action units on that same conditional carrier surface.
+> phase/action units. The 2026-04-30 attempt to derive the carrier from the
+> substrate was audited as `audited_renaming`, so this remains conditional.
 
 Unsafe wording:
 

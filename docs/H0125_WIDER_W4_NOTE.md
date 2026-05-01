@@ -1,5 +1,6 @@
 # Wider `h = 0.125` Family (`phys_w = 4`) Note
 
+**Status:** open - open or unresolved claim state
 **Date:** 2026-04-06
 
 This note tracks the first genuinely wider continuation of the retained dense

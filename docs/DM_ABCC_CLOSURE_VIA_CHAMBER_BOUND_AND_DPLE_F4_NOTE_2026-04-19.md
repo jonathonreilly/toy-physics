@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19
 **Lane:** Dark-matter A-BCC basin-selector.
-**Status:** **closed at axiom level conditional on DPLE acceptance** — the
+**Status:** bounded - bounded or caveated result note
 A-BCC selection of Basin 1 from the four derived basins `{1, N, P, X}` is
 the unique survivor of the conjunction `(C1) ∩ (C2)` with both ingredients
 already retained on branch / main.

@@ -1,5 +1,6 @@
 # `S^3` + Anomaly-Forced Time: Transfer-Matrix Bridge Candidate
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-14  
 **Purpose:** bounded transfer-matrix / discrete-action bridge from the retained `S^3` + anomaly-forced-time stack to slice dynamics on `PL S^3 x R`
 

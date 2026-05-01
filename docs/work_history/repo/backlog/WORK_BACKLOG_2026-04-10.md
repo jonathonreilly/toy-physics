@@ -38,7 +38,7 @@ This backlog is ordered by value to the main project, not by ease.
 - Frozen narrow positive:
   [`frontier_staggered_backreaction_green_closure.py`](../scripts/frontier_staggered_backreaction_green_closure.py)
   and
-  [`STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md`](../../../STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md)
+  [`STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md`](../../../../archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md)
   now give a graph-native direct Green map (`resistance_yukawa`) that cuts the
   retained cycle-bearing mean gap from `8.899e-01` to `9.889e-02` and the
   layered holdout gap from `8.759e-01` to `1.680e-02`, while preserving the

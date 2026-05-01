@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / refinement-projective theorem
+**Status:** support - projective Schur coarse-graining closure
 
 ## Verdict
 

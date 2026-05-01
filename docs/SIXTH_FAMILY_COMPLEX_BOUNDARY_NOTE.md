@@ -1,5 +1,6 @@
 # Sixth Family Complex Boundary Note
 
+**Status:** bounded - bounded or caveated result note
 ## Scope
 This note freezes the targeted complex-action probe for the retained sixth-family sheared basin.
 

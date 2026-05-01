@@ -1,7 +1,7 @@
 # Lattice Symmetry Unification Decision Note
 
 **Date:** 2026-04-03  
-**Status:** negative on the standard-strength dense ordered-lattice symmetry window
+**Status:** bounded - bounded or caveated result note
 
 This note records the canonical decision test for whether the ordered lattice +
 explicit symmetry line can move from a same-family two-harness bridge to a true

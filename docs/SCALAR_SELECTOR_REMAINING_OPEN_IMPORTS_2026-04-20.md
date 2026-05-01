@@ -1,5 +1,6 @@
 # Scalar-Selector Cycle 1 — Remaining Open Imports
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-20
 **Scope:** Each still-open import on the remaining flagship scalar-selector
 lanes (Koide θ, Koide κ, plus the supporting selected-line and bounded quark
@@ -57,7 +58,7 @@ physical Brannen-phase bridge by itself.
   block-total Frobenius measure. See
   `docs/KOIDE_MRU_DEMOTION_NOTE_2026-04-20.md`.
 - **Basin enumeration completeness closed.** Basin enumeration completeness is now certified in
-  `docs/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`.
+  `archive_unlanded/dm-abcc-finite-search-salvage-2026-04-30/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`.
   The corrected full χ²=0 chart is five basins
   `{Basin 1, Basin N, Basin P, Basin 2, Basin X}`; the active-chamber chart is
   `{Basin 1, Basin 2, Basin X}`.

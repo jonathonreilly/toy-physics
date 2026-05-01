@@ -1,5 +1,6 @@
 # PMNS Active Four-Real Source From Transport
 
+**Status:** open - open or unresolved claim state
 ## Question
 Once the active transport / response profile is derived at lower level, does the
 remaining four-real active orbit-breaking source still need a separate theorem

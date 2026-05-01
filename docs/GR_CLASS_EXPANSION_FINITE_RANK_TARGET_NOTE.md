@@ -1,8 +1,8 @@
 # Gravity Class Expansion Target: Finite-Rank Source-to-Metric on the Current Bridge Surface
 
 **Date:** 2026-04-14  
-**Script:** `scripts/frontier_gr_class_expansion_finite_rank_target.py`  
-**Status:** exact widening candidate beyond the current star-supported/static-conformal restricted class; not full GR
+**Script:** `scripts/frontier_gr_class_expansion_finite_rank_target.py` (PASS=4 FAIL=0 on current main; the prior machine-local import path was repaired to a relative `Path(__file__).parent.parent` ROOT)
+**Status:** bounded - bounded or caveated result note
 
 ## Question
 

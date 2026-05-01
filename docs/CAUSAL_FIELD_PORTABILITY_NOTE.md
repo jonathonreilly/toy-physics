@@ -1,14 +1,14 @@
 # Causal Field Portability Note
 
 **Date:** 2026-04-06  
-**Status:** diagnosed family boundary: exact-null survives, but the forward-only and finite-cone ratios do not stay portable across all three families
+**Status:** support - structural or confirmatory support note
 
 ## Artifact Chain
 
 - [`scripts/causal_field_portability_probe.py`](/Users/jonreilly/Projects/Physics/scripts/causal_field_portability_probe.py)
 - [`logs/2026-04-06-causal-field-portability-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-06-causal-field-portability-probe.txt)
 - causal propagating-field context:
-  - [`docs/CAUSAL_PROPAGATING_FIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CAUSAL_PROPAGATING_FIELD_NOTE.md)
+  - [`archive_unlanded/causal-field-stale-runners-2026-04-30/CAUSAL_PROPAGATING_FIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/causal-field-stale-runners-2026-04-30/CAUSAL_PROPAGATING_FIELD_NOTE.md)
 
 ## Question
 

@@ -1,5 +1,6 @@
 # Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion `3d+1` Exact-Solve Doublet Theorem
 
+**Status:** bounded - bounded or caveated result note
 ## Statement
 
 On the selected least-positive-bulk Wilson branch, the retained `3d+1`

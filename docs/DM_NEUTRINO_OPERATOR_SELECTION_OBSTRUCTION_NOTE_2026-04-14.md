@@ -1,5 +1,6 @@
 # DM Neutrino Operator Selection Obstruction Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-14
 **Branch:** `codex/dm-across-the-line`
 

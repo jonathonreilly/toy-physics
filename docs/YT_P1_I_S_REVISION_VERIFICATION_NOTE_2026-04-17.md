@@ -1,7 +1,7 @@
 # P1 I_S Revision Verification Note (Critical Review of the 3x Upward Revision Claim)
 
 **Date:** 2026-04-17
-**Status:** critical-review verification layer on top of the prior P1 citation note
+**Status:** support - critical-review verification layer on top of the prior P1 citation note
 (`docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`).
 **Verdict (up front, Abstract §0):** the cited-literature upward revision of P1 from
 the packaged `1.92%` nominal to `~5.77%` is **structurally honest but semantically

@@ -1,5 +1,6 @@
 # Background Independence: Effective Geometry Differs from Input Graph
 
+**Status:** support - structural or confirmatory support note
 ## Result
 
 On a fixed cubic lattice (N=20, uniform 6-neighbor connectivity), the

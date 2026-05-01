@@ -1,7 +1,7 @@
 # Planck Parent-Source Hidden-Character No-Go Note
 
 **Date:** 2026-04-24
-**Status:** proposed_retained no-go / blocker closeout for the Planck-scale lane
+**Status:** proposed_no_go / blocker closeout for the Planck-scale lane
 **Runner:** `scripts/frontier_planck_parent_source_hidden_character_nogo.py`
 
 ## Purpose

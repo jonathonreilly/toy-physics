@@ -1,5 +1,6 @@
 # PMNS Sigma-Zero No-Go
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16  
 **Script:** `scripts/frontier_pmns_sigma_zero_no_go.py`
 

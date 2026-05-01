@@ -1,5 +1,6 @@
 # Route 2 Readout to Slice Coupling
 
+**Status:** support - conditional readout-to-slice coupling family
 **Date:** 2026-04-19  
 **Purpose:** state the current exact status of the Route-2
 `Theta_R -> Lambda_R` coupling problem after the exact bilinear carrier and

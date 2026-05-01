@@ -1,5 +1,6 @@
 # QNM Hardening Feasibility Note
 
+**Status:** support - structural or confirmatory support note
 **Date:** 2026-04-05  
 **Scope:** decide whether any exact-lattice self-consistent spectral claim can
 be made review-safely from the current code/branch context
@@ -12,7 +13,7 @@ enough.
 Relevant branch-side anchor:
 
 - `claude/distracted-napier:scripts/qnm_scaling.py`
-- `claude/distracted-napier:docs/BACKREACTION_NOTE.md`
+- `claude/distracted-napier:archive_unlanded/poisson-self-consistency-stale-runners-2026-04-30/BACKREACTION_NOTE.md`
 
 Relevant current `main` context:
 

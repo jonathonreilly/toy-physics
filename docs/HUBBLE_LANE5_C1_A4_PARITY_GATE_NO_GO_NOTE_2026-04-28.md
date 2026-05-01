@@ -1,7 +1,7 @@
 # Lane 5 `(C1)` Gate — A4 Parity-Gate-from-A_min No-Go
 
 **Date:** 2026-04-28
-**Status:** proposed_retained exact negative boundary note on
+**Status:** proposed_no_go exact negative boundary note on
 `frontier/hubble-c1-absolute-scale-gate-20260428`. Cycle 4 of the
 (C1) gate loop. Stretch-attempt cycle. Closes the audit's `A4`
 attack frame (parity-gate carrier ⇒ CAR semantics on `P_A H_cell`).

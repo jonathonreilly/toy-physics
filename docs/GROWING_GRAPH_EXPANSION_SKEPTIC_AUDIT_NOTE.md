@@ -1,7 +1,7 @@
 # Growing Graph Expansion Skeptic Audit Note
 
 **Date:** 2026-04-06  
-**Status:** retain as graph-distance proxy; demote cosmology-flavored headline
+**Status:** bounded - bounded or caveated result note
 
 ## Audited target
 

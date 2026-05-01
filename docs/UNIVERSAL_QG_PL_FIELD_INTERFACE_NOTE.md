@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / project-native continuum-interface theorem
+**Status:** support - canonical PL field interface
 
 ## Verdict
 

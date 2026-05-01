@@ -1,6 +1,6 @@
 # Architecture Note: Directional Path Measure
 
-**Status:** provisional lead candidate for unitary propagator
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-05
 
 ## Propagator

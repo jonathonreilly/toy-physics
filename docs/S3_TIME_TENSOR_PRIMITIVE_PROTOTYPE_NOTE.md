@@ -1,5 +1,6 @@
 # Route 2 Tensor Primitive Prototype on `A1 x {E_x, T1x}`
 
+**Status:** bounded - tensor primitive prototype
 **Date:** 2026-04-14  
 **Purpose:** define the current bounded prototype for the first missing Route-2
 primitive and extract its endpoint data cleanly from the existing tensor

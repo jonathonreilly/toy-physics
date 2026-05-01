@@ -21,7 +21,7 @@ The goal was to test the next sharper question from the matched comparison:
 
 The existing persistent-record script now supports:
 
-- [persistent_record_overlap_kernel.py](/Users/jonreilly/Projects/Physics/scripts/persistent_record_overlap_kernel.py)
+- [`persistent_record_overlap_kernel.py`](../scripts/persistent_record_overlap_kernel.py)
   with `--side-bit`
 
 The side bit is implemented as one additional persistent marker cell:
@@ -32,19 +32,25 @@ The side bit is implemented as one additional persistent marker cell:
 
 The matched harness now also supports side-bit variants:
 
-- [persistent_record_matched_compare.py](/Users/jonreilly/Projects/Physics/scripts/persistent_record_matched_compare.py)
+- [`persistent_record_matched_compare.py`](../scripts/persistent_record_matched_compare.py)
 
 Relevant log:
 
-- [2026-04-03-persistent-record-sidebit-matched-compare.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-03-persistent-record-sidebit-matched-compare.txt)
+- [`2026-04-03-persistent-record-sidebit-matched-compare.txt`](../logs/2026-04-03-persistent-record-sidebit-matched-compare.txt)
 
 ## Matched result (`2` seeds, `gamma = 1.0`)
+
+The numerical values below are the frozen 2026-04-03 record. Live runner
+output drifts in the third decimal across reruns (e.g. side-bit `gamma=1.0`
+at `N=12` reads `~0.5685-0.5698` and side-bit detector counts at `N=18` read
+`~121-123`). The qualitative read is unchanged: side-bit modestly improves
+the soft-overlap lane but does not beat node-label on this bounded slice.
 
 | N | node | persistent trace | persistent `gamma=1.0` | side-bit trace | side-bit `gamma=1.0` |
 |---|---:|---:|---:|---:|---:|
 | 8  | 0.7971 | 0.8317 | 0.8672 | 0.8323 | 0.8644 |
-| 12 | 0.5128 | 0.5349 | 0.6099 | 0.5284 | 0.5685 |
-| 18 | 0.7121 | 0.7511 | 0.7314 | 0.7702 | 0.7270 |
+| 12 | 0.5128 | 0.5349 | 0.6099 | 0.5284 | ~0.569 |
+| 18 | 0.7121 | 0.7511 | 0.7314 | 0.7702 | ~0.727 |
 
 Lower purity is better.
 

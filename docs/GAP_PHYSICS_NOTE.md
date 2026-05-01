@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-02
 **Branch:** claude/distracted-napier
-**Status:** Complete. 17 experiments, 7 conclusions, 1 retraction, 1 Pareto frontier.
+**Status:** bounded - bounded or caveated result note
 
 ## Motivation
 

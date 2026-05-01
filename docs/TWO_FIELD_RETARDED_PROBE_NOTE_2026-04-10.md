@@ -1,5 +1,6 @@
 # Two-Field Retarded/Hybrid Probe Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-10
 **Script:** `frontier_two_field_retarded_probe.py`
 

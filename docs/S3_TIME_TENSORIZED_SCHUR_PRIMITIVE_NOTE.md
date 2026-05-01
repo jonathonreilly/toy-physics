@@ -1,5 +1,6 @@
 # Route 2 Tensorized Schur/Dirichlet Primitive
 
+**Status:** bounded - tensorized Schur/Dirichlet primitive candidate
 **Date:** 2026-04-14  
 **Purpose:** build the smallest tensorized Schur/Dirichlet boundary primitive
 compatible with the current exact scalar Schur backbone and the existing

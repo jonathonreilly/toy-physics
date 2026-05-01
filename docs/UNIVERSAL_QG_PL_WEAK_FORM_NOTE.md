@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / project-native weak-form theorem
+**Status:** support - canonical PL weak-form closure
 
 ## Verdict
 

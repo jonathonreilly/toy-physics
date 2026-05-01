@@ -1,7 +1,7 @@
 # Scalar KG Rerun Note
 
 **Date:** 2026-04-10  
-**Status:** rerun of the scalar Klein-Gordon reference scripts that are actually
+**Status:** bounded - bounded or caveated result note
 present on `frontier/spot-checks`
 
 This note records the measured branch state after rerunning the scalar-KG

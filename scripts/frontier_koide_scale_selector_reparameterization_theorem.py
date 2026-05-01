@@ -49,7 +49,7 @@ PDG_SQRT = np.sqrt(PDG_MASSES)
 PDG_DIR = PDG_SQRT / np.linalg.norm(PDG_SQRT)
 
 
-def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT") -> bool:
+def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT", cls: str = "A") -> bool:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
@@ -57,7 +57,7 @@ def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT") -> 
     else:
         FAIL_COUNT += 1
     tag = f" [{kind}]" if kind != "EXACT" else ""
-    msg = f"  [{status}]{tag} {name}"
+    msg = f"  [{status} ({cls})]{tag} {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)
@@ -139,6 +139,7 @@ def part1_exact_reparameterization_identity() -> None:
         abs(q_native - 2.0 / 3.0) > 1.0e-2,
         detail=f"Q_native={q_native:.12f}",
         kind="NUMERIC",
+        cls="C",
     )
     check(
         "The completed triple does satisfy Koide because u_small is defined that way",
@@ -151,6 +152,7 @@ def part1_exact_reparameterization_identity() -> None:
         abs(x00 - u_star) > 1.0,
         detail=f"x00={x00:.12f}, u_small={u_star:.12f}",
         kind="NUMERIC",
+        cls="C",
     )
 
 
@@ -185,18 +187,21 @@ def part2_unique_near_miss_crossing() -> float:
         sign_changes == 1,
         detail=f"sign changes={sign_changes}",
         kind="NUMERIC",
+        cls="C",
     )
     check(
         "The scale crossing is close to but distinct from the current physical point",
         gap < 5.0e-4 and gap > 1.0e-6,
         detail=f"gap={gap:.4e}",
         kind="NUMERIC",
+        cls="C",
     )
     check(
         "The near-miss point still tracks the observed sqrt-mass direction extremely well",
         cs > 0.999999998,
         detail=f"cos-sim={cs:.12f}",
         kind="NUMERIC",
+        cls="D",
     )
     return m_prod
 
@@ -234,12 +239,14 @@ def part3_trace_targets_are_weaker(m_prod: float) -> None:
         best_gap > prod_gap,
         detail=f"best trace gap={best_gap:.4e} ({best_label}) vs product gap={prod_gap:.4e}",
         kind="NUMERIC",
+        cls="C",
     )
     check(
         "But even the product near-miss still does not equal the current selector point",
         prod_gap > 1.0e-6,
         detail=f"product gap={prod_gap:.4e}",
         kind="NUMERIC",
+        cls="C",
     )
 
 
@@ -258,12 +265,14 @@ def part4_product_vs_kappa(m_prod: float) -> None:
         gap < 1.0e-4,
         detail=f"|kappa_prod-kappa_*|={gap:.4e}",
         kind="NUMERIC",
+        cls="C",
     )
     check(
         "But the scale crossing is not exactly the same condition as kappa = kappa_*",
         gap > 1.0e-6,
         detail=f"kappa gap={gap:.4e}",
         kind="NUMERIC",
+        cls="C",
     )
 
 

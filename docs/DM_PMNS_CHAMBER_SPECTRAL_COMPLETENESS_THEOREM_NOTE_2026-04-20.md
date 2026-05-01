@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-20  
 **Lane:** DM A-BCC / open import `I11`  
-**Status:** closed on this branch for the **active chamber**. The compact
+**Status:** support - structural or confirmatory support note
 `chi^2 = 0` chamber set is exactly three points:
 
 - Basin 1 on `sigma = (2,1,0)`

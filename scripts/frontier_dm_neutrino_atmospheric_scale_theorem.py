@@ -57,14 +57,14 @@ DM2_31_OBS = 2.453e-3
 M3_OBS = math.sqrt(DM2_31_OBS)
 
 
-def check(name: str, condition: bool, detail: str = "") -> bool:
+def check(name: str, condition: bool, detail: str = "", cls: str = "C") -> bool:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
         PASS_COUNT += 1
     else:
         FAIL_COUNT += 1
-    msg = f"  [{status}] {name}"
+    msg = f"  [{status} ({cls})] {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)
@@ -129,11 +129,13 @@ def main() -> int:
         "The exact chain predicts the atmospheric mass scale without fitting m_3",
         abs(m3 - M3_OBS) / M3_OBS < 0.05,
         f"m3={m3:.6e} eV vs obs {M3_OBS:.6e} eV",
+        cls="D",
     )
     check(
         "The diagonal atmospheric gap lands within 5% of observation",
         abs(dm31 - DM2_31_OBS) / DM2_31_OBS < 0.05,
         f"Dm31={dm31:.6e} vs obs {DM2_31_OBS:.6e}",
+        cls="D",
     )
     check(
         "The solar gap remains a separate full-matrix question",

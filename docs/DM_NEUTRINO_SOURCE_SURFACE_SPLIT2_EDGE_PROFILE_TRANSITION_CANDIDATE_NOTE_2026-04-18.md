@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Split-2 Edge-Profile Transition Candidate
 
 **Date:** 2026-04-18  
-**Status:** compact-branch carrier-side refinement candidate  
+**Status:** bounded - bounded or caveated result note
 **Primary runner:** `scripts/frontier_dm_neutrino_source_surface_split2_edge_profile_transition_candidate.py`
 
 ## Question

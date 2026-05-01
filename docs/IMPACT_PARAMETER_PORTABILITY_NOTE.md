@@ -11,7 +11,7 @@
   - [`docs/IMPACT_PARAMETER_LENSING_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/IMPACT_PARAMETER_LENSING_NOTE.md)
   - [`logs/2026-04-06-impact-parameter-lensing-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-06-impact-parameter-lensing-probe.txt)
 - broader portability context:
-  - [`docs/PORTABLE_CARD_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PORTABLE_CARD_EXTENSION_NOTE.md)
+  - [`archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_CARD_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_CARD_EXTENSION_NOTE.md)
   - [`docs/IMPACT_PARAMETER_PORTABILITY_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/IMPACT_PARAMETER_PORTABILITY_EXTENSION_NOTE.md)
 
 ## Question

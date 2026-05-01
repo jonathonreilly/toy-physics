@@ -1,7 +1,7 @@
 # Shapiro Unique Discriminator V2 Note
 
 **Date:** 2026-04-06  
-**Status:** boundary result - detector-line phase lag is portable, but a static cone-shape proxy reproduces it exactly
+**Status:** support - structural or confirmatory support note
 
 ## Artifact Chain
 
@@ -10,8 +10,8 @@
 - retained Shapiro chain:
   - [`docs/SHAPIRO_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SHAPIRO_DELAY_NOTE.md)
   - [`docs/SHAPIRO_FAMILY_PORTABILITY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SHAPIRO_FAMILY_PORTABILITY_NOTE.md)
-  - [`docs/SHAPIRO_COMPLEX_INTERACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SHAPIRO_COMPLEX_INTERACTION_NOTE.md)
-  - [`docs/SHAPIRO_DIAMOND_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SHAPIRO_DIAMOND_BRIDGE_NOTE.md)
+  - [`archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_COMPLEX_INTERACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_COMPLEX_INTERACTION_NOTE.md)
+  - [`archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_DIAMOND_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_DIAMOND_BRIDGE_NOTE.md)
   - [`docs/SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md)
 
 ## Question

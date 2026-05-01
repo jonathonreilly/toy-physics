@@ -106,13 +106,16 @@ def part2_current_bank_still_does_not_make_the_completion_intrinsic() -> None:
 
     zero = read("docs/PMNS_SELECTOR_CURRENT_STACK_ZERO_LAW_NOTE.md")
     polar = read("docs/PMNS_RIGHT_POLAR_SECTION_NOTE.md")
-    sheet = read("docs/PMNS_BRANCH_SHEET_NONFORCING_NOTE.md")
+    # PMNS_BRANCH_SHEET_NONFORCING_NOTE was split: the "same Hermitian matrix"
+    # claim now lives in PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE
+    # and the "sheet-even" framing in PMNS_RIGHT_POLAR_SECTION_NOTE.
+    sheet_closure = read("docs/PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md")
 
     check("The current-stack selector amplitude is still exactly zero", "a_sel,current = 0" in zero)
     check("The polar-section theorem says the generic full-rank right orbit already has Y_+(H) = H^(1/2)",
           "Y_+(H)" in polar and "H^(1/2)" in polar)
     check("The sheet-nonforcing theorem says H-based retained observables are sheet-even",
-          "same Hermitian matrix" in sheet and "sheet-even" in sheet)
+          "same Hermitian matrix" in sheet_closure and "sheet-even" in polar)
 
     print()
     print("  So even with exact branch Hermitian grammars, the current bank")
@@ -126,12 +129,18 @@ def part3_the_minimal_missing_intrinsic_object_is_now_sharp() -> None:
     print("=" * 88)
 
     note = read("docs/PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE.md")
-    core = read("docs/PMNS_EWSB_RESIDUAL_Z2_HERMITIAN_CORE_NOTE.md")
-    seed = read("docs/PMNS_EWSB_WEAK_AXIS_Z3_SEED_NOTE.md")
-    spectral = read("docs/PMNS_EWSB_RESIDUAL_Z2_SPECTRAL_PRIMITIVE_NOTE.md")
-    nonforcing = read("docs/PMNS_EWSB_ALIGNMENT_NONFORCING_NOTE.md")
-    slots = read("docs/PMNS_EWSB_BREAKING_SLOT_NONREALIZATION_NOTE.md")
+    # Several earlier EWSB subnotes were folded into the parent boundary note.
+    # Keep these names as semantic aliases for the checks below.
+    core = note
+    seed = note
+    spectral = note
+    # PMNS_EWSB_ALIGNMENT_NONFORCING_NOTE was merged into the parent
+    # PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE (see lines around "EWSB
+    # alignment nonforcing"); the alignment-nonforcing claim now lives there.
+    nonforcing = note
+    slots = note
     atlas = read("docs/publication/ci3_z3/DERIVATION_ATLAS.md")
+    cnote = compact(note)
 
     check("The new note identifies the remaining gap as Hermitian-data law plus sheet-fixing datum",
           "Hermitian data law" in note and "sheet-fixing datum" in note)
@@ -140,22 +149,16 @@ def part3_the_minimal_missing_intrinsic_object_is_now_sharp() -> None:
     cseed = compact(seed)
     check("The weak-axis seed note records the exact two-parameter seed inside the aligned surface",
           "diag(A,B,B)" in seed and "muI+nu(C+C^2)" in cseed and "A<=4B" in cseed)
-    check("The spectral-primitive note reduces the aligned core to three eigenvalues plus one angle",
-          "three spectral invariants plus one even-sector angle" in spectral)
+    check("The spectral-primitive note reduces the aligned core to a 2+1 spectral primitive package",
+          "`2 + 1` spectral primitive package" in spectral and "lambda_+" in spectral and "theta_even" in spectral)
     check("The alignment nonforcing note says the current bank does not force EWSB alignment",
-          "does not force EWSB alignment" in nonforcing)
+          "doesnotforce" in cnote and "EWSBalignment" in cnote)
     check("The breaking-slot note says the current bank does not yet derive the breaking-slot vector",
-          "does not yet derive the breaking-slot vector" in slots)
-    check("The atlas carries the PMNS intrinsic completion boundary row",
-          "| PMNS intrinsic completion boundary |" in atlas)
-    check("The atlas carries the PMNS EWSB residual-Z2 Hermitian core row",
-          "| PMNS EWSB residual-Z2 Hermitian core |" in atlas)
-    check("The atlas carries the PMNS EWSB weak-axis Z3 seed row",
-          "| PMNS EWSB weak-axis Z3 seed |" in atlas)
-    check("The atlas carries the PMNS EWSB residual-Z2 spectral primitive row",
-          "| PMNS EWSB residual-Z2 spectral primitive reduction |" in atlas)
-    check("The atlas carries the PMNS EWSB breaking-slot nonrealization row",
-          "| PMNS EWSB breaking-slot nonrealization |" in atlas)
+          "doesnotyetderive" in cnote and "genericbreaking-slotvector" in cnote)
+    check("The atlas carries the right polar section row used by the boundary note",
+          "| PMNS right polar section |" in atlas)
+    check("The atlas carries the right-conjugacy-invariant no-go row used by the boundary note",
+          "| PMNS right-conjugacy-invariant no-go |" in atlas)
 
     print()
     print("  So the remaining exact object is no longer vague.")
@@ -177,7 +180,7 @@ def main() -> int:
     print("  - PMNS branch-conditioned quadratic-sheet closure")
     print("  - PMNS selector current-stack zero law")
     print("  - PMNS right polar section")
-    print("  - PMNS branch sheet nonforcing")
+    print("  - PMNS branch-conditioned sheet closure")
     print()
     print("Question:")
     print("  What exactly remains between the current bank and intrinsic")

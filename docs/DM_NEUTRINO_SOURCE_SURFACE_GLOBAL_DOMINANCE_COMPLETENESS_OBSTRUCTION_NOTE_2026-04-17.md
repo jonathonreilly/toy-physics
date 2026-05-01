@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Global Dominance Completeness Obstruction
 
 **Date:** 2026-04-17
-**Status:** exact obstruction note for the carrier side of the top-down selector
+**Status:** support - structural or confirmatory support note
 attack; publishable even without selector closure
 **Primary runner:** `scripts/frontier_dm_neutrino_source_surface_global_dominance_completeness_obstruction.py`
 

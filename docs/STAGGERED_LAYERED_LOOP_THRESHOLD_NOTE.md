@@ -1,6 +1,6 @@
 # Staggered Layered Loop Threshold Note
 
-**Status:** threshold map for native gauge/current closure on sparse layered graphs
+**Status:** bounded - bounded or caveated result note
 
 This note freezes the minimal nearby layered loop geometry that closes native
 gauge/current on the retained staggered graph transport law without losing the

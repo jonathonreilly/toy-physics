@@ -1,5 +1,6 @@
 # DM Full Closure Same-Surface Converged Thermal Selector Support
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16  
 **Branch:** `codex/dm-thermal-review-2026-04-17`  
 **Script:** `scripts/frontier_dm_full_closure_same_surface_converged_thermal_selector_support.py`

@@ -1,5 +1,6 @@
 # Science 3+1 Line Law: Known Limits Note
 
+**Status:** bounded - bounded or caveated result note
 Date: 2026-04-20
 
 ## Purpose

@@ -1,5 +1,6 @@
 # Channel-Count Guard Canonical Note
 
+**Status:** bounded - bounded or caveated result note
 Date: 2026-04-02
 
 This note is the canonical writeup for the dense-prune gravity-repair guard.

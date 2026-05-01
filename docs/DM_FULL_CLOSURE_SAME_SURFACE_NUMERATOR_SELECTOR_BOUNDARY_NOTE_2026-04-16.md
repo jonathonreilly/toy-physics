@@ -1,5 +1,6 @@
 # DM Full Closure Same-Surface Numerator Selector Boundary
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-16  
 **Branch:** `codex/dm-thermal-review-2026-04-17`  
 **Script:** `scripts/frontier_dm_full_closure_same_surface_numerator_selector_boundary.py`

@@ -35,7 +35,7 @@ Why this is superseded:
 - the very large `N_half` claim is therefore not review-safe as a canonical
   result
 
-Status:
+**Status:** support - structural or confirmatory support note
 - keep as branch history only
 - do **not** promote as a main claim without rerunning on the corrected harness
 

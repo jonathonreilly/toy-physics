@@ -1,7 +1,7 @@
 # Koide `dW_e^H` Cyclic Compression Note
 
 **Date:** 2026-04-18
-**Status:** positive constructive compression theorem on the charged-lepton
+**Status:** support - structural or confirmatory support note
 Koide lane
 **Runner:** `scripts/frontier_koide_dweh_cyclic_compression.py`
 

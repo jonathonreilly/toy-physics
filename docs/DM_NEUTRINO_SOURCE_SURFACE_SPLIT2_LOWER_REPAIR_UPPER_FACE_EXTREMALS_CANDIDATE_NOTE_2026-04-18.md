@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Split-2 Lower-Repair Upper-Face Extremals Candidate
 
 **Date:** 2026-04-18  
-**Status:** positive-path carrier reduction candidate on the tested split-2
+**Status:** bounded - bounded or caveated result note
 lower-repair box  
 **Primary runner:** `scripts/frontier_dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate.py`
 

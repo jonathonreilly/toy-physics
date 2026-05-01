@@ -1,5 +1,6 @@
 # Branch-Mediated Entanglement on a Staggered Lattice
 
+**Status:** bounded - bounded or caveated result note
 ## Status
 
 `bounded companion`

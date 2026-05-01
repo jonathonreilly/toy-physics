@@ -1,5 +1,6 @@
 # Scalar-Selector Cycle 1 — Reviewer Package
 
+**Status:** open - open or unresolved claim state
 **Date:** 2026-04-20
 **Scope:** Historical public handoff note for the scalar-selector
 cycle. This is useful route-history context, but it is **not** the current

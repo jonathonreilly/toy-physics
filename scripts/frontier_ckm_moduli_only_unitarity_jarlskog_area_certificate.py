@@ -72,7 +72,13 @@ def audit_note_status() -> None:
     status = " ".join(status_match.group(1).split()) if status_match else ""
 
     print(f"  Status (extracted): {status!r}")
-    check("note is scoped as standalone positive CKM theorem", "standalone positive ckm theorem" in status.lower())
+    status_lower = status.lower()
+    check(
+        "note is scoped as proposed-retained CKM algebraic certificate",
+        "proposed_retained" in status_lower
+        and "model-independent algebraic certificate" in status_lower
+        and "3x3 ckm" in status_lower,
+    )
     check("note explicitly avoids retained-lane promotion", "does not modify, promote, or close" in status.lower())
     check("note declares no new numerical CKM prediction", "any new numerical ckm prediction" in text.lower())
 

@@ -1,7 +1,7 @@
 # Gauge-Vacuum Plaquette First Symmetric Three-Sample Minimal Positive Completion
 
 **Date:** 2026-04-19  
-**Status:** exact constructive first-sector upgrade on the named `beta = 6`
+**Status:** support - structural or confirmatory support note
 three-sample seam; the local Wilson triple still fails the retained positive
 cone, but there is one unique smallest adjoint-only positive completion  
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py`

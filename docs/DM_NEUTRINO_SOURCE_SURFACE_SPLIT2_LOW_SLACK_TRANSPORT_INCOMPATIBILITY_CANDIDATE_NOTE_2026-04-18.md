@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Split-2 Low-Slack Transport Incompatibility Candidate
 
 **Date:** 2026-04-18  
-**Status:** tested broad split-2 low-slack box stays transport-incompatible under the lower-repair constraint; not flagship closure
+**Status:** bounded - bounded or caveated result note
 
 ## Question
 

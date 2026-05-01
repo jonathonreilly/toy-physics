@@ -1,13 +1,13 @@
 # Impact-Parameter Portability Extension Note
 
 **Date:** 2026-04-06  
-**Status:** diagnosed boundary, not a broader portability win
+**Status:** support - structural or confirmatory support note
 
 ## Artifact Chain
 
 - [`docs/IMPACT_PARAMETER_LENSING_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/IMPACT_PARAMETER_LENSING_NOTE.md)
 - [`docs/DISTANCE_LAW_PORTABILITY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PORTABILITY_NOTE.md)
-- [`docs/PORTABLE_CARD_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PORTABLE_CARD_EXTENSION_NOTE.md)
+- [`archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_CARD_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_CARD_EXTENSION_NOTE.md)
 - [`docs/DISTANCE_LAW_PRESERVING_THIRD_FAMILY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PRESERVING_THIRD_FAMILY_NOTE.md)
 - [`logs/2026-04-06-impact-parameter-portability-extension.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-06-impact-parameter-portability-extension.txt)
 

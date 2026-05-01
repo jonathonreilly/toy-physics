@@ -258,7 +258,7 @@ investigation:
 - PNS is observationally grounded and weaker than A-BCC verbatim.
 - This is the maximal reduction available from Cl(3)/Z³ + topology alone.
 
-Status: **CONDITIONAL THEOREM** (gated on PNS). Not a full axiom-free
+**Status:** bounded - bounded or caveated result note
 closure (the assumptions audit's no-go results stand: Cl(3)/Z³ algebra
 alone cannot determine the sign of det(H_base + J)). The residual axiom
 cost is 1 (PNS), reduced from the prior 1 (A-BCC verbatim) in content

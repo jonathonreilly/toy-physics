@@ -1,5 +1,6 @@
 # Bound State Selection: Stable Matter Only at d <= 3
 
+**Status:** bounded - bounded or caveated result note
 ## Question
 
 Does the d-dimensional Coulomb potential V(r) = -1/r^{d-2} support

@@ -1,5 +1,6 @@
 # Three-Body Branch Entanglement on a Staggered Lattice
 
+**Status:** support - structural or confirmatory support note
 ## Status
 
 `bounded companion (corrected interpretation)`

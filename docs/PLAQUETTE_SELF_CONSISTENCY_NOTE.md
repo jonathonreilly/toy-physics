@@ -139,6 +139,22 @@ The live repo now also carries a materially stronger exact support stack:
   Perron moments or Jacobi coefficients until the explicit
   `beta = 6` tensor-transfer matrix elements generating the boundary
   character data are fixed
+- explicit source-sector reference Perron solve theorem with explicit
+  no-go on closed-form `rho_(p,q)(6)`: two structural reference choices
+  of the residual environment (input rho = 1 and input
+  rho = delta_{(p,q),(0,0)}) give explicit Perron data
+  `P_loc(6) = 0.4524071590`, `P_triv(6) = 0.4225317396` from
+  `c_lambda(6)` and `SU(3)` intertwiners alone, with super-polynomial
+  NMAX truncation tail bound; three distinct admissible parametric
+  rho families produce strictly different `P(6)` and demonstrate the
+  no-go that local Wilson data does not fix `rho_(p,q)(6)`; the rho
+  values in the reference solves are structural input, NOT derived
+  from any physical 3D Wilson environment, and the note does not claim
+  either reference corresponds to the physical environment; the missing
+  object is the boundary character measure of the unmarked 3D spatial
+  Wilson environment with marked-plaquette boundary, equivalently the
+  Perron eigenvector of the explicit positive tensor-transfer operator
+  on a 3D `SU(3)` lattice gauge network with one boundary plaquette
 - exact scalar `3+1` bridge endpoint ratio
   `A_inf / A_2 = 2 / sqrt(3)`
 - exact plaquette four-link coupling map
@@ -175,6 +191,7 @@ Current authorities for that support stack:
 - [GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md)
 - [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](./GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md)
 - [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](./SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
@@ -198,6 +215,7 @@ Current support runners:
 - `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py`
 - `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py`
 - `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`
+- `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py`
 - `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`
 - `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`
 - `scripts/frontier_scalar_3plus1_temporal_ratio.py`

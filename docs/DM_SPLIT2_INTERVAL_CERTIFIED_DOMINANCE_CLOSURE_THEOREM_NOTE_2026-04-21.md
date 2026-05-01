@@ -1,7 +1,7 @@
 # DM Split-2 Interval-Certified Dominance Closure Theorem
 
 **Date:** 2026-04-21
-**Status:** package-surface theorem note
+**Status:** support - structural or confirmatory support note
 **Primary runner:** `scripts/frontier_dm_split2_interval_certified_dominance_closure_2026_04_21.py`
 
 ## Claim

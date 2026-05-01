@@ -36,8 +36,10 @@ CRITICALITY_RANK = {"critical": 3, "high": 2, "medium": 1, "leaf": 0}
 # values are stable enough that the auditor can take them as inputs.
 READY_DEP_STATUSES = {
     "retained",
+    "retained_no_go",
     "promoted",
     "proposed_retained",
+    "proposed_no_go",
     "proposed_promoted",
     "bounded",
     "support",

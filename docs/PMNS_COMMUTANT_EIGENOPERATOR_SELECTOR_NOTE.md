@@ -1,7 +1,7 @@
 # PMNS Commutant Eigenoperator Selector
 
 **Date:** 2026-04-16  
-**Status:** positive native selector law from the projected commutant route, but not full microscopic closure  
+**Status:** bounded - bounded or caveated result note
 **Script:** `scripts/frontier_pmns_commutant_eigenoperator_selector.py`
 
 ## Question

@@ -1,6 +1,6 @@
 # Mirror Mutual Information Note
 
-**Status:** legacy note, superseded by the exact chokepoint artifact chain
+**Status:** superseded_by [MIRROR_MUTUAL_INFORMATION_CANONICAL_FAMILIES_NOTE.md](MIRROR_MUTUAL_INFORMATION_CANONICAL_FAMILIES_NOTE.md)
 
 The canonical mirror MI artifact is now frozen in:
 

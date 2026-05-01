@@ -1,5 +1,6 @@
 # Universal GR Lambda Bypass on `PL S^3 x R`
 
+**Status:** support - lambda-bypass candidate
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal bypass route / candidate note  

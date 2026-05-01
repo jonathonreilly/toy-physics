@@ -1,9 +1,7 @@
 # Gauge-Vacuum Plaquette Connected-Hierarchy Theorem
 
 **Date:** 2026-04-16
-**Status:** exact connected-cumulant hierarchy theorem for the Wilson
-plaquette reduction law on finite evaluation surfaces; explicit closure at
-`beta = 6` still open
+**Status:** support - exact connected-cumulant hierarchy theorem for the Wilson plaquette reduction law on finite evaluation surfaces; explicit closure at `beta = 6` still open
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`
 
 ## Question

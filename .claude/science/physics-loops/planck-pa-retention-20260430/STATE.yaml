@@ -1,0 +1,35 @@
+slug: planck-pa-retention-20260430
+started_at: "2026-04-30"
+runtime_requested: "12h"
+branch: physics-loop/planck-pa-retention-block01-20260430
+worktree: /Users/jonBridger/CI3Z2-physics-loop-planck-pa-retention-20260430
+base: origin/claude/planck-primitive-clifford-majorana-edge-2026-04-30
+base_reason: "stacked on PR #228 because the residual theorem depends on its audit/no-go artifacts"
+target:
+  theorem: "active primitive boundary block / first-order orientation forcing for P_A"
+  desired_outcome: "audit-safe unconditional closure or hard global stop for this lane"
+status: positive_route_found_audit_pending
+cooperative_lock:
+  attempted: true
+  result: unavailable
+  detail: "scripts/automation_lock.py points at /Users/jonreilly and exits with permission denied in this workspace"
+isolation:
+  method: dedicated_git_worktree_and_branch
+grounding_complete: true
+stretch_cycle_complete: true
+fanout_complete: true
+certificate: positive_candidate_current_effective_conditional
+audit_pipeline:
+  mechanical_seed_run: true
+  new_claim_seeded: planck_boundary_orientation_incidence_no_go_note_2026-04-30
+  new_claim_audit_status: unaudited
+  audit_queue_ready: true
+latest_positive_route:
+  note: docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md
+  runner: scripts/frontier_planck_link_local_first_variation_p_a_forcing.py
+  status: intrinsic_proposed_retained_candidate_effective_conditional
+  verification: "PASS=8 FAIL=0"
+  audit_claim_id: planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30
+  audit_status: unaudited
+  effective_status: audited_conditional
+  claim_boundary: "selects P_A from link-local action differential if audit accepts A_min source-domain/time/CPT authority as retained/base substrate content; no downstream cascade before audit"

@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Split-2 Low-Slack Upper-m Ridge Candidate
 
 **Date:** 2026-04-18  
-**Status:** coarse tested-grid positive-path reduction on split-2 low-slack; not flagship closure
+**Status:** bounded - bounded or caveated result note
 
 ## Question
 

@@ -1,5 +1,6 @@
 # Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion `3d+1` `rho1` Orientation Theorem
 
+**Status:** bounded - bounded or caveated result note
 ## Statement
 
 The exact retained-line doublet on the selected Wilson branch already splits

@@ -1,7 +1,7 @@
 # PMNS Corner Transport Active Block
 
 **Date:** 2026-04-16  
-**Status:** positive native transport law on the active hw=1 block, but not full microscopic closure  
+**Status:** bounded - bounded or caveated result note
 **Script:** `scripts/frontier_pmns_corner_transport_active_block.py`
 
 ## Question
@@ -39,12 +39,23 @@ Its C3 orbit moments are:
 
 The native outputs are:
 
-- `xbar = Re(t_even)`
-- `ybar = Re(t_fwd)`
-- branch bit = `0` if `Re(t_fwd) >= Re(t_bwd)`, else `1`
+- `xbar = Re(t_even)`  (exact for any δ; t_even = xbar)
+- `ybar = Re(t_fwd)`   (exact on the aligned weak-axis patch δ = 0)
+- branch bit = `0` if `Im(t_fwd) >= Im(t_bwd)`, else `1`
 
-So the transport route fixes the seed pair and branch orientation exactly on
-the active microscopic block.
+The branch bit is read from the **C3-odd, CP-odd imaginary** asymmetry of the
+forward vs backward cycle amplitude. With T_act = diag(x) + diag(y_eff) C and
+y_eff = (y_1, y_2, y_3 e^{iδ}), the only nonzero off-diagonal entries lie on
+the forward cycle, so t_bwd = 0 and Im(t_fwd) = y_3 sin(δ) / 3. This
+quantity flips sign under δ → −δ — the operational definition of branch
+orientation. The corresponding real-part comparison Re(t_fwd) vs Re(t_bwd)
+does **not** flip under δ → −δ (cos is even) and is therefore not a branch
+selector. Earlier drafts of this note used the Re comparison; the runner has
+always used the Im comparison and the runner is the authoritative
+implementation. The note now matches the runner.
+
+So the transport route fixes the seed pair (in the aligned patch) and the
+branch orientation exactly on the active microscopic block.
 
 ## Boundary
 

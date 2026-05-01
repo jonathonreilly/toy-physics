@@ -1,7 +1,7 @@
 # PMNS Oriented Cycle Channel Value Law
 
 **Date:** 2026-04-16  
-**Status:** exact native observable/value law  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_pmns_oriented_cycle_channel_value_law.py`
 
 ## Question

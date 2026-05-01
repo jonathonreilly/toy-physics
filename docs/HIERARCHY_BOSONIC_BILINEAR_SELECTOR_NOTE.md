@@ -1,5 +1,6 @@
 # Hierarchy Bosonic-Bilinear Selector Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-13  
 **Script:** `scripts/frontier_hierarchy_bosonic_bilinear_selector.py`
 

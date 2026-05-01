@@ -1,7 +1,7 @@
 # DM Neutrino Source-Surface Bundle-Window Trichotomy Candidate
 
 **Date:** 2026-04-18  
-**Status:** broad exact-bundle trichotomy on endpoint / split-1 / split-2; not flagship closure  
+**Status:** bounded - bounded or caveated result note
 **Primary runner:** `scripts/frontier_dm_neutrino_source_surface_bundle_window_trichotomy_candidate.py`
 
 ## Question

@@ -17,7 +17,18 @@ Checks (all hard rules from FRESH_LOOK_REQUIREMENTS.md and README.md):
        retained/promoted effective_status; clean non-proposed rows stay in
        their declared tier unless demoted by dependencies.
      - effective_status = retained requires audit_status = audited_clean
-       AND every dep's effective_status = retained.
+       AND every dep's effective_status is `retained` or `retained_no_go`
+       (a no-go theorem is a durable, audit-ratified commitment).
+     - effective_status = retained_no_go has two paths:
+       (a) author declares current_status = proposed_no_go and audit_status =
+           audited_clean ratifies it (the symmetric path to `retained` for
+           negative theorems, born as no-gos rather than failed positives).
+       (b) audit_status = audited_failed AND the note has been moved to
+           archive_unlanded/ (legacy path: a positive claim failed audit and
+           was archived).
+       Both paths represent ratified negative results, not active failures.
+     - source Status lines must not self-assign audited_clean; audit verdicts
+       live in the ledger.
      - independence = 'weak' cannot land audited_clean. Critical clean
        confirmations must be cross-family, strong/external, or same-family
        fresh_context from a distinct restricted-input session.
@@ -56,13 +67,14 @@ ALLOWED_AUDIT_STATUSES = {
 ALLOWED_CURRENT_STATUSES = {
     "proposed_retained",
     "proposed_promoted",
+    "proposed_no_go",
     "support",
     "bounded",
     "open",
     "unknown",
 }
 RATIFIED_BY_AUDIT_ONLY = {"retained", "promoted"}
-ALLOWED_INDEPENDENCE = {"weak", "fresh_context", "cross_family", "strong", "external", None}
+ALLOWED_INDEPENDENCE = {"weak", "fresh_context", "cross_family", "strong", "external", "judicial_review", None}
 
 # After relabel, the raw Status: text on a source note must not contain
 # the bare ratified-tier words; only the audit lane may grant them.
@@ -72,6 +84,7 @@ RAW_FORBIDDEN_TIER_RE = re.compile(
     r"(?<!proposed_)\b(?:retained|promoted)\b",
     re.IGNORECASE,
 )
+RAW_FORBIDDEN_AUDIT_CLEAN_RE = re.compile(r"\baudited_clean\b", re.IGNORECASE)
 
 
 def load_json(path: Path):
@@ -131,6 +144,12 @@ def main() -> int:
                 f"use proposed_retained / proposed_promoted (raw={raw!r})"
             )
             (errors if strict else warnings).append(msg)
+        if raw and RAW_FORBIDDEN_AUDIT_CLEAN_RE.search(raw):
+            msg = (
+                f"{cid}: source note Status line contains audit verdict 'audited_clean'; "
+                f"keep audit verdicts in docs/audit/data/audit_ledger.json (raw={raw!r})"
+            )
+            (errors if strict else warnings).append(msg)
         if a not in ALLOWED_AUDIT_STATUSES:
             errors.append(f"{cid}: audit_status={a!r} not in allowed set")
         if ind not in ALLOWED_INDEPENDENCE:
@@ -144,12 +163,14 @@ def main() -> int:
             # Effective status promotion is tier-gated: a clean audit may be
             # recorded on support/bounded/open/unknown rows, but those rows do
             # not become retained/promoted unless the author re-tiers them.
-            if cs in {"proposed_retained", "proposed_promoted"} and e not in {"retained", "promoted"}:
+            PROPOSED_TIERS = {"proposed_retained", "proposed_promoted", "proposed_no_go"}
+            RATIFIED_TIERS = {"retained", "promoted", "retained_no_go"}
+            if cs in PROPOSED_TIERS and e not in RATIFIED_TIERS:
                 # Could be inherited demotion; warn rather than error.
                 warnings.append(
                     f"{cid}: audited_clean but effective_status={e!r} (likely demoted by upstream dep)"
                 )
-            if cs not in {"proposed_retained", "proposed_promoted"} and e in {"retained", "promoted"}:
+            if cs not in PROPOSED_TIERS and e in RATIFIED_TIERS:
                 errors.append(
                     f"{cid}: audited_clean current_status={cs!r} must not promote to effective_status={e!r}"
                 )
@@ -161,10 +182,11 @@ def main() -> int:
                 )
             if criticality == "critical":
                 xc = row.get("cross_confirmation") or {}
-                if xc.get("status") != "confirmed":
+                xc_status = xc.get("status")
+                if xc_status not in {"confirmed", "third_confirmed_first", "third_confirmed_second"}:
                     errors.append(
-                        f"{cid}: critical claim requires cross_confirmation.status='confirmed'; "
-                        f"got {xc.get('status')!r}"
+                        f"{cid}: critical claim requires confirmed cross-confirmation; "
+                        f"got {xc_status!r}"
                     )
                 else:
                     first = xc.get("first_audit") or {}
@@ -183,6 +205,25 @@ def main() -> int:
                             f"{cid}: same-family critical cross-confirmation requires "
                             "second_audit.independence='fresh_context'"
                         )
+                    if xc_status in {"third_confirmed_first", "third_confirmed_second"}:
+                        third = xc.get("third_audit") or {}
+                        if not third:
+                            errors.append(f"{cid}: {xc_status} requires third_audit")
+                        elif third.get("auditor") in {first.get("auditor"), second.get("auditor")}:
+                            errors.append(
+                                f"{cid}: third audit reused auditor identity/session "
+                                f"{third.get('auditor')!r}"
+                            )
+                        elif (
+                            third.get("auditor_family")
+                            and third.get("auditor_family")
+                            in {first.get("auditor_family"), second.get("auditor_family")}
+                            and third.get("independence") not in {"fresh_context", "judicial_review"}
+                        ):
+                            errors.append(
+                                f"{cid}: same-family third audit requires "
+                                "fresh_context or judicial_review independence"
+                            )
 
         # Criticality bump after audit (warn that re-audit may be needed).
         snap = row.get("audit_state_snapshot")
@@ -211,11 +252,15 @@ def main() -> int:
                 warnings.append(f"{cid}: dangling dep {d!r} (no ledger row)")
 
     # Effective-status propagation sanity.
+    # A retained row's deps must themselves be retained or retained_no_go
+    # (a no-go theorem is a durable, audit-ratified scientific commitment;
+    # depending on one is fine).
+    RATIFIED_DEP_OK = {"retained", "retained_no_go"}
     for cid, row in rows.items():
         if row.get("effective_status") == "retained":
             for d in row.get("deps", []):
                 d_eff = rows.get(d, {}).get("effective_status")
-                if d_eff != "retained":
+                if d_eff not in RATIFIED_DEP_OK:
                     errors.append(
                         f"{cid}: effective_status=retained but dep {d!r} has effective_status={d_eff!r}"
                     )

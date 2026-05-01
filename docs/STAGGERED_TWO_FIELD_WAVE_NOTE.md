@@ -1,5 +1,6 @@
 # Staggered Two-Field Wave Coupling — Rerun-Corrected Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-10
 **Script:** `frontier_two_field_wave.py`
 **Status on current `main`:** bounded wave-field result after the 2026-04-18

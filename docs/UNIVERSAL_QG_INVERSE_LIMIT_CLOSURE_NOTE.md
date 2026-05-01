@@ -1,5 +1,6 @@
 # Universal QG Inverse-Limit Closure on `PL S^3 x R`
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / inverse-limit theorem
 

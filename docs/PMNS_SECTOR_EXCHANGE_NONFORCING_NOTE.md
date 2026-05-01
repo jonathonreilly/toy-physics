@@ -1,7 +1,7 @@
 # PMNS Sector-Exchange Nonforcing
 
 **Date:** 2026-04-15
-**Status:** exact current-bank theorem on non-forcing of the residual
+**Status:** support - structural or confirmatory support note
 one-sided PMNS orientation bit by the present support-side bank
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`

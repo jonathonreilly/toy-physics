@@ -1,5 +1,6 @@
 # Holographic Boundary-Law Probe (Bounded Companion Note)
 
+**Status:** bounded - bounded or caveated result note
 ## Status
 
 `bounded companion`

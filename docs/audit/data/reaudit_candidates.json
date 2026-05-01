@@ -1,0 +1,30 @@
+{
+  "by_criticality": {
+    "critical": 0,
+    "high": 0,
+    "leaf": 0,
+    "medium": 0
+  },
+  "candidates": [],
+  "eligible_audit_statuses": [
+    "audited_conditional",
+    "audited_decoration",
+    "audited_failed",
+    "audited_numerical_match",
+    "audited_renaming"
+  ],
+  "eligible_current_statuses": [
+    "proposed_no_go",
+    "proposed_promoted",
+    "proposed_retained"
+  ],
+  "generated_at": "2026-05-01T22:21:09.545678+00:00",
+  "policy": "reaudit_unblocked_by_ratified_dependencies_v1",
+  "policy_summary": "Non-clean audited proposed claims whose current one-hop dependencies are all retained/promoted and whose audit-time dependency snapshot contains at least one dependency that has since become retained/promoted.",
+  "ratified_dependency_statuses": [
+    "promoted",
+    "retained",
+    "retained_no_go"
+  ],
+  "total_candidates": 0
+}

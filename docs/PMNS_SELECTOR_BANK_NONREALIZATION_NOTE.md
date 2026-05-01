@@ -1,11 +1,11 @@
 # PMNS Selector-Bank Nonrealization
 
 **Date:** 2026-04-15
-**Status:** exact current-bank theorem on the existing selector toolkit versus
+**Status:** support - structural or confirmatory support note
 the remaining PMNS selector gap
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`
-**Script:** `scripts/frontier_pmns_selector_bank_nonrealization.py`
+**Script:** `scripts/frontier_pmns_selector_bank_nonrealization.py` (PASS=10 FAIL=0 on current main; the runner now reads `HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md` for the q_H datum, accepts both ASCII and unicode q_H notation)
 
 ## Question
 

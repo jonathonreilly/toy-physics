@@ -8,7 +8,7 @@
 - [`scripts/shapiro_complex_interaction.py`](/Users/jonreilly/Projects/Physics/scripts/shapiro_complex_interaction.py)
 - [`logs/2026-04-06-shapiro-complex-interaction.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-06-shapiro-complex-interaction.txt)
 - [`docs/SHAPIRO_DIAMOND_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SHAPIRO_DIAMOND_BRIDGE_NOTE.md)
-- [`docs/CAUSAL_PROPAGATING_FIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CAUSAL_PROPAGATING_FIELD_NOTE.md)
+- [`archive_unlanded/causal-field-stale-runners-2026-04-30/CAUSAL_PROPAGATING_FIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/causal-field-stale-runners-2026-04-30/CAUSAL_PROPAGATING_FIELD_NOTE.md)
 - [`docs/CAUSAL_FIELD_RECONCILIATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CAUSAL_FIELD_RECONCILIATION_NOTE.md)
 - [`docs/CAUSAL_MOVING_UNIFICATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CAUSAL_MOVING_UNIFICATION_NOTE.md)
 - [`docs/CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_NOTE.md)

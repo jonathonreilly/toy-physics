@@ -39,15 +39,16 @@ class Check:
     ok: bool
     detail: str
     status: str
+    cls: str = "A"
 
 
 CHECKS: list[Check] = []
 
 
-def record(name: str, ok: bool, detail: str, status: str = "EXACT") -> None:
-    CHECKS.append(Check(name=name, ok=ok, detail=detail, status=status))
+def record(name: str, ok: bool, detail: str, status: str = "EXACT", cls: str = "A") -> None:
+    CHECKS.append(Check(name=name, ok=ok, detail=detail, status=status, cls=cls))
     tag = "PASS" if ok else "FAIL"
-    print(f"[{status}] {tag}: {name}")
+    print(f"[{tag} ({cls})] [{status}] {name}")
     if detail:
         print(f"    {detail}")
 

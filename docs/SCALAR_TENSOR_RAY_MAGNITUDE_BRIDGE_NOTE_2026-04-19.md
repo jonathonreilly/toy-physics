@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19
 **Lane:** Quark CKM atlas / 1 (+) 5 projector-ray geometry.
-**Status:** Structural identity supporting RPSR; not a standalone
+**Status:** support - structural or confirmatory support note
 theorem. Retained inside `CKM_ATLAS_AXIOM_CLOSURE_NOTE`.
 
 ---

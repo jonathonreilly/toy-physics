@@ -1,5 +1,6 @@
 # B-Independence Mechanism Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-01  
 **Scope:** review-safe mechanism note for why the corrected linear path-sum
 force stays flat/topological on the current retained DAG families.

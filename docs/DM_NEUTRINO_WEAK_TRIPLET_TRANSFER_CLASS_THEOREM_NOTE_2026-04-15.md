@@ -1,7 +1,7 @@
 # DM Neutrino Weak-Triplet Transfer-Class Theorem
 
 **Date:** 2026-04-15  
-**Status:** exact transfer-class theorem for the remaining weak-to-triplet DM law  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py`
 
 ## Framework sentence

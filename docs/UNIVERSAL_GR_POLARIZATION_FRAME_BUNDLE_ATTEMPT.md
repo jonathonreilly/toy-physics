@@ -1,5 +1,6 @@
 # Universal GR Polarization-Frame Bundle Attempt on `PL S^3 x R`
 
+**Status:** open - polarization-frame bundle attempt blocked by complement-frame ambiguity
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / attempt note  

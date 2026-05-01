@@ -596,10 +596,26 @@ def test_radiation(N: int = 51, dt: float = 0.5, n_steps: int = 120):
     else:
         p_fit = float('nan')
 
-    passed = not math.isnan(gamma) and -1.5 < gamma < -0.5
-    status = "PASS" if passed else "PARTIAL"
-    print(f"\n  Status: {status}")
-    return gamma, passed
+    # Honest classification: gamma ~ -1.0 ± 0.2 is true 1/r radiation;
+    # outside that, the box is contaminated by near-field, absorbing-BC
+    # back-reflection, or static far-field. We do NOT claim 1/r radiation
+    # at the lenient -1.5 < gamma < -0.5 window; that bin only certifies
+    # "non-static far-field present", not "1/r gravitational radiation".
+    radiation_strict = (
+        not math.isnan(gamma) and -1.2 < gamma < -0.8
+    )
+    nonstatic_loose = (
+        not math.isnan(gamma) and -1.8 < gamma < -0.2
+    )
+    if radiation_strict:
+        print(f"\n  [PASS] gamma in [-1.2, -0.8] -> consistent with 1/r radiation")
+    else:
+        print(f"\n  [FAIL strict] gamma = {gamma:.3f} NOT in [-1.2, -0.8] -> does NOT establish 1/r radiation in this box")
+    if nonstatic_loose:
+        print(f"  [PASS loose] gamma in [-1.8, -0.2] -> non-static far-field present")
+    passed_strict = radiation_strict
+    passed_loose = nonstatic_loose
+    return gamma, passed_strict, passed_loose
 
 
 # ============================================================================
@@ -725,14 +741,40 @@ def test_propagator_coupling(N: int = 25, dt: float = 0.5, n_steps: int = 200):
         alpha_diff = abs(alpha_wave - alpha_poisson)
         print(f"  Wave-Poisson alpha difference: {alpha_diff:.3f}")
 
+    # Three orthogonal claims, classified separately:
+    #   (i)  mass-linearity     beta ~ 1.0
+    #   (ii) Newton-like distance     alpha ~ -1.0  (claim NOT supported by current data)
+    #   (iii) wave/Poisson agreement (the wave-equation upgrade does not
+    #         disrupt the propagator scaling)
     passed_mass = not math.isnan(beta_wave) and abs(beta_wave - 1.0) < 0.3
-    passed_dist = not math.isnan(alpha_wave) and abs(alpha_wave - (-1.0)) < 0.5
-    passed_agree = (not math.isnan(beta_wave) and not math.isnan(beta_poisson)
-                    and abs(beta_wave - beta_poisson) < 0.3)
-    passed = passed_mass or (passed_agree and passed_dist)
-    status = "PASS" if passed else "PARTIAL"
-    print(f"\n  Status: {status}")
-    return beta_wave, alpha_wave, beta_poisson, alpha_poisson, passed
+    passed_newton_distance = (
+        not math.isnan(alpha_wave) and abs(alpha_wave - (-1.0)) < 0.3
+    )
+    passed_agree = (
+        not math.isnan(beta_wave) and not math.isnan(beta_poisson)
+        and abs(beta_wave - beta_poisson) < 0.1
+        and not math.isnan(alpha_wave) and not math.isnan(alpha_poisson)
+        and abs(alpha_wave - alpha_poisson) < 0.3
+    )
+
+    print()
+    if passed_mass:
+        print(f"  [PASS] mass-linearity (|beta - 1.0| < 0.3): beta = {beta_wave:.3f}")
+    else:
+        print(f"  [FAIL] mass-linearity:  beta = {beta_wave:.3f}")
+    if passed_newton_distance:
+        print(f"  [PASS] Newton-like distance (|alpha - (-1)| < 0.3): alpha = {alpha_wave:.3f}")
+    else:
+        print(f"  [FAIL] Newton-like distance:  alpha = {alpha_wave:.3f}  (NOT 1/r-like)")
+    if passed_agree:
+        print(f"  [PASS] wave/Poisson agreement: dbeta = {abs(beta_wave-beta_poisson):.3f},"
+              f" dalpha = {abs(alpha_wave-alpha_poisson):.3f}")
+    else:
+        print(f"  [FAIL] wave/Poisson agreement: dbeta = {abs(beta_wave-beta_poisson):.3f},"
+              f" dalpha = {abs(alpha_wave-alpha_poisson):.3f}")
+
+    return (beta_wave, alpha_wave, beta_poisson, alpha_poisson,
+            passed_mass, passed_newton_distance, passed_agree)
 
 
 # ============================================================================
@@ -766,20 +808,28 @@ def main():
     results['retardation_asymmetry'] = asym
     results['test3_pass'] = pass3
 
-    # Test 4: Radiation
-    gamma, pass4 = test_radiation(N=51, dt=0.5, n_steps=120)
+    # Test 4: Radiation (split into strict 1/r-radiation claim and a loose
+    # non-static-far-field claim — the strict claim is what the prose used
+    # to over-assert).
+    gamma, pass4_strict, pass4_loose = test_radiation(N=51, dt=0.5, n_steps=120)
     results['radiation_exponent'] = gamma
-    results['test4_pass'] = pass4
+    results['test4_radiation_1_over_r_pass'] = pass4_strict
+    results['test4_nonstatic_pass'] = pass4_loose
 
-    # Test 5: Propagator coupling
-    beta_w, alpha_w5, beta_p, alpha_p5, pass5 = test_propagator_coupling(
+    # Test 5: Propagator coupling (split into mass linearity, Newton-like
+    # distance law, and wave/Poisson agreement — the Newton-distance claim
+    # is what the prose used to over-assert).
+    (beta_w, alpha_w5, beta_p, alpha_p5,
+     pass5_mass, pass5_newton, pass5_agree) = test_propagator_coupling(
         N=21, dt=0.5, n_steps=150
     )
     results['beta_wave'] = beta_w
     results['alpha_wave_prop'] = alpha_w5
     results['beta_poisson'] = beta_p
     results['alpha_poisson_prop'] = alpha_p5
-    results['test5_pass'] = pass5
+    results['test5_mass_pass'] = pass5_mass
+    results['test5_newton_distance_pass'] = pass5_newton
+    results['test5_wave_poisson_agree_pass'] = pass5_agree
 
     t_total = time.time() - t_start
 
@@ -792,30 +842,52 @@ def main():
     print(f"  Tests passed: {n_pass}/{n_total}")
     print(f"  Total time: {t_total:.1f}s")
     print()
-    print(f"  Test 1 - Wavefront speed:     c = {results['wave_speed']:.3f}  "
-          f"(expect 1.0)  {'PASS' if results['test1_pass'] else 'PARTIAL'}")
-    print(f"  Test 2 - Newton recovery:     alpha = {results['alpha_wave_steady']:.3f}  "
-          f"(expect -1.0) {'PASS' if results['test2_pass'] else 'PARTIAL'}")
-    print(f"  Test 3 - Retardation asym:    ratio = {results['retardation_asymmetry']:.3f}  "
-          f"(expect > 1)  {'PASS' if results['test3_pass'] else 'PARTIAL'}")
-    print(f"  Test 4 - Radiation decay:     gamma = {results['radiation_exponent']:.3f}  "
-          f"(expect -1.0) {'PASS' if results['test4_pass'] else 'PARTIAL'}")
-    print(f"  Test 5 - Propagator coupling: beta = {results['beta_wave']:.3f}, "
-          f"alpha = {results['alpha_wave_prop']:.3f}  "
-          f"{'PASS' if results['test5_pass'] else 'PARTIAL'}")
+    def _bit(b: bool) -> str:
+        return "PASS" if b else "FAIL"
+
+    print(f"  Test 1 - Wavefront speed:           c = {results['wave_speed']:.3f}  "
+          f"(expect 1.0)  {_bit(results['test1_pass'])}")
+    print(f"  Test 2 - Newton recovery (steady):  alpha = {results['alpha_wave_steady']:.3f}  "
+          f"(expect -1.0)  {_bit(results['test2_pass'])}")
+    print(f"  Test 3 - Retardation asymmetry:     ratio = {results['retardation_asymmetry']:.3f}  "
+          f"(expect > 1)  {_bit(results['test3_pass'])}")
+    print(f"  Test 4a- 1/r radiation (strict):    gamma = {results['radiation_exponent']:.3f}  "
+          f"(expect ~-1.0, |.| < 0.2) {_bit(results['test4_radiation_1_over_r_pass'])}")
+    print(f"  Test 4b- non-static far-field:      gamma = {results['radiation_exponent']:.3f}  "
+          f"(expect != -2)  {_bit(results['test4_nonstatic_pass'])}")
+    print(f"  Test 5a- propagator mass linearity: beta = {results['beta_wave']:.3f}  "
+          f"(expect ~1.0)  {_bit(results['test5_mass_pass'])}")
+    print(f"  Test 5b- Newton-like distance law:  alpha = {results['alpha_wave_prop']:.3f}  "
+          f"(expect ~-1.0)  {_bit(results['test5_newton_distance_pass'])}")
+    print(f"  Test 5c- wave/Poisson agreement:    "
+          f"|dbeta|, |dalpha| small  {_bit(results['test5_wave_poisson_agree_pass'])}")
     print()
 
-    if n_pass >= 4:
-        print("  CONCLUSION: Wave equation gravity works.")
-        print("  Promoting Poisson to d'Alembertian produces gravitational waves")
-        print("  while recovering Newton at low frequency. The propagator coupling")
-        print("  preserves mass and distance laws.")
-    elif n_pass >= 2:
-        print("  CONCLUSION: Partial success.")
-        print("  Some wave equation features emerge but not all.")
-    else:
-        print("  CONCLUSION: Wave equation needs further investigation.")
-        print("  The lattice discretization may need refinement.")
+    n_strict_pass = sum(1 for k in (
+        'test1_pass', 'test2_pass', 'test3_pass',
+        'test4_radiation_1_over_r_pass', 'test4_nonstatic_pass',
+        'test5_mass_pass', 'test5_newton_distance_pass', 'test5_wave_poisson_agree_pass',
+    ) if results.get(k))
+    n_total_strict = 8
+    n_fail = n_total_strict - n_strict_pass
+
+    print(f"  CONCLUSION:")
+    if results['test1_pass'] and results['test2_pass']:
+        print("  - Finite-speed wavefront propagation: ESTABLISHED.")
+        print("  - Static-limit Newton recovery (alpha ~ -1.0): ESTABLISHED.")
+    if results['test3_pass']:
+        print("  - Qualitative retardation from a moving source: ESTABLISHED.")
+    if not results['test4_radiation_1_over_r_pass']:
+        print("  - 1/r gravitational radiation: NOT cleanly established by this runner;")
+        print(f"    measured radiation exponent gamma = {results['radiation_exponent']:.3f}")
+        print("    is closer to a near-field / boundary-mixed regime than to pure 1/r.")
+    if not results['test5_newton_distance_pass']:
+        print("  - Propagator distance law alpha ~ -1.0 (Newton-like): NOT established;")
+        print(f"    measured alpha = {results['alpha_wave_prop']:.3f} is closer to -2 (force-like).")
+    if results['test5_wave_poisson_agree_pass']:
+        print("  - Wave/Poisson agreement on the propagator scaling: ESTABLISHED.")
+    print()
+    print(f"  PASS={n_strict_pass} FAIL={n_fail}  (strict, claim-by-claim)")
 
     print()
     return results

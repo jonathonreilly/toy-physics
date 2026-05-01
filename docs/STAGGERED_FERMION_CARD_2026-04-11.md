@@ -1,5 +1,6 @@
 # Staggered Fermion + Parity-Coupled Gravity — Complete Card
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-11 (parity coupling rewrite)
 **Coupling:** `H_diag = (m + Phi) * epsilon(x)` — scalar 1x1 in spin-taste
 **Reference:** Zache et al. (Quantum 2020), Dempsey et al. (arXiv:2501.10862)
@@ -78,7 +79,7 @@ DT=0.12, MASS=0.3, G=8.0, mu2=0.22, N_ITER=15
 | Row | random_geo (36) | growing (48) | layered_cycle (24) |
 |-----|-----------------|--------------|---------------------|
 | B1 Zero-source | F=0, Phi=0 PASS | F=0, Phi=0 PASS | F=0, Phi=0 PASS |
-| B2 Linearity | R^2=0.991 PASS | R^2=0.997 PASS | R^2=0.985 FAIL |
+| B2 Linearity | R^2=0.991 PASS | R^2=0.9999 PASS | R^2=0.991 PASS |
 | B3 Additivity | res=2e-16 PASS | res=2e-16 PASS | res=2e-16 PASS |
 | B4 Force | +1.87e-2 TW PASS | +3.42e-3 TW PASS | +5.83e-2 TW PASS |
 | B5 Iter stab | 15/15 TW PASS | 15/15 TW PASS | 15/15 TW PASS |
@@ -86,9 +87,10 @@ DT=0.12, MASS=0.3, G=8.0, mu2=0.22, N_ITER=15
 | B7 Families | 3/3 TW PASS | 3/3 TW PASS | 3/3 TW PASS |
 | B8 Gauge | sin R^2=1.00 PASS | sin R^2=0.95 PASS | sin R^2=0.97 PASS |
 | B9 G_eff | 58.7 | 129.6 | 29.2 |
-| **Score** | **9/9** | **9/9** | **8/9** |
+| **Score** | **9/9** | **9/9** | **9/9** |
 
-B2 marginal on layered_cycle: parity coupling introduces mild nonlinearity
+B2 was previously marginal on layered_cycle; the current runner reports `R^2=0.991249 PASS`,
+lifting layered_cycle to 9/9. Parity coupling still introduces mild nonlinearity
 in force-vs-source because (m+Phi)*epsilon couples mass and field multiplicatively.
 
 ## 3. Self-Gravity Probe (frontier_staggered_self_gravity.py)

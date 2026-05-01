@@ -1,7 +1,7 @@
 # DM Wilson Direct-Descendant Constructive Positive Closure Manifold Theorem
 
 **Date:** 2026-04-18  
-**Status:** exact local manifold theorem on the constructive positive exact
+**Status:** support - structural or confirmatory support note
 closure set  
 **Script:** `scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_2026_04_18.py`
 

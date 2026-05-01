@@ -1,7 +1,7 @@
 # Shapiro QA Retest Note
 
 **Date:** 2026-04-06  
-**Status:** clean replay discipline confirmed; no concrete code defect found
+**Status:** bounded - bounded or caveated result note
 
 ## Scope
 
@@ -12,9 +12,9 @@ Focused QA pass on the Shapiro-phase lane:
 - retained notes:
   - `docs/SHAPIRO_DELAY_NOTE.md`
   - `docs/SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md`
-  - `docs/SHAPIRO_COMPLEX_INTERACTION_NOTE.md`
+  - `archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_COMPLEX_INTERACTION_NOTE.md`
   - `docs/SHAPIRO_FAMILY_PORTABILITY_NOTE.md`
-  - `docs/SHAPIRO_DIAMOND_BRIDGE_NOTE.md`
+  - `archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_DIAMOND_BRIDGE_NOTE.md`
 
 The goal was to replay the smallest controls, check for source-placement or
 static-shape loopholes, and only file a tracker issue if a concrete defect

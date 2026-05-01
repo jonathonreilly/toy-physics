@@ -1,7 +1,7 @@
 # DM Neutrino Triplet Even-Response Theorem
 
 **Date:** 2026-04-15  
-**Status:** exact response-form theorem for the DM breaking triplet  
+**Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_neutrino_triplet_even_response_theorem.py`
 
 ## Question

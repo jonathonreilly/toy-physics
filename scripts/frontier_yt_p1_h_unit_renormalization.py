@@ -75,7 +75,7 @@ PASS_COUNT = 0
 FAIL_COUNT = 0
 
 
-def check(name: str, condition: bool, detail: str = "") -> bool:
+def check(name: str, condition: bool, detail: str = "", cls: str = "C") -> bool:
     global PASS_COUNT, FAIL_COUNT
     if condition:
         PASS_COUNT += 1
@@ -83,7 +83,7 @@ def check(name: str, condition: bool, detail: str = "") -> bool:
     else:
         FAIL_COUNT += 1
         status = "FAIL"
-    msg = f"  [{status}] {name}"
+    msg = f"  [{status} ({cls})] {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)

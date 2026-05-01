@@ -1,0 +1,76 @@
+==============================================================================
+LANE 2 ATOMIC NR COULOMB SCALE BRIDGE
+==============================================================================
+Question:
+  Does the existing dimensionless lattice Coulomb companion supply a
+  physical-unit nonrelativistic Coulomb bridge by itself?
+Answer:
+  No. It supplies an exact conditional scale bridge. Absolute eV output
+  still needs mu/m_e, alpha(0), and the physical unit map.
+
+Part 1: repo surfaces used for the bridge
+  [PASS] required surface exists: docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md
+  [PASS] required surface exists: docs/ATOMIC_HYDROGEN_HELIUM_PROBE_NOTE.md
+  [PASS] required surface exists: docs/work_history/atomic/HYDROGEN_HELIUM_ATOMIC_COMPANION_NOTE_2026-04-18.md
+  [PASS] required surface exists: scripts/frontier_atomic_hydrogen_lattice_companion.py
+  [PASS] lattice companion names H_g
+  [PASS] lattice companion keeps absolute eV blocked
+  [PASS] lattice companion records Rydberg ratio target
+
+Part 2: dimensionless Coulomb scaling
+  [PASS] g=0.25 gives E_1/E_1 = 1/1
+  [PASS] g=0.25 gives E_2/E_1 = 1/4
+  [PASS] g=0.25 gives E_3/E_1 = 1/9
+  [PASS] g=0.25 gives E_4/E_1 = 1/16
+  [PASS] g=0.25 gives E_5/E_1 = 1/25
+  [PASS] g=0.25 gives E_6/E_1 = 1/36
+  [PASS] g=1 gives E_1/E_1 = 1/1
+  [PASS] g=1 gives E_2/E_1 = 1/4
+  [PASS] g=1 gives E_3/E_1 = 1/9
+  [PASS] g=1 gives E_4/E_1 = 1/16
+  [PASS] g=1 gives E_5/E_1 = 1/25
+  [PASS] g=1 gives E_6/E_1 = 1/36
+  [PASS] g=2.5 gives E_1/E_1 = 1/1
+  [PASS] g=2.5 gives E_2/E_1 = 1/4
+  [PASS] g=2.5 gives E_3/E_1 = 1/9
+  [PASS] g=2.5 gives E_4/E_1 = 1/16
+  [PASS] g=2.5 gives E_5/E_1 = 1/25
+  [PASS] g=2.5 gives E_6/E_1 = 1/36
+
+Part 3: exact physical-unit scale identity
+  [PASS] scale map cancels arbitrary g=0.4 for n=1
+  [PASS] scale map cancels arbitrary g=0.4 for n=2
+  [PASS] scale map cancels arbitrary g=0.4 for n=3
+  [PASS] scale map cancels arbitrary g=0.4 for n=4
+  [PASS] scale map cancels arbitrary g=1.3 for n=1
+  [PASS] scale map cancels arbitrary g=1.3 for n=2
+  [PASS] scale map cancels arbitrary g=1.3 for n=3
+  [PASS] scale map cancels arbitrary g=1.3 for n=4
+  [PASS] scale map cancels arbitrary g=2 for n=1
+  [PASS] scale map cancels arbitrary g=2 for n=2
+  [PASS] scale map cancels arbitrary g=2 for n=3
+  [PASS] scale map cancels arbitrary g=2 for n=4
+  [PASS] physical energy is independent of arbitrary dimensionless g once a is mapped
+
+Part 4: missing physical unit map remains an underdetermination
+  Same dimensionless lambda_1 = -g^2/4 with mu=1 and different a:
+    a= 0.5 eV^-1 -> E=-0.500000 eV
+    a= 1.0 eV^-1 -> E=-0.125000 eV
+    a= 2.0 eV^-1 -> E=-0.031250 eV
+  [PASS] energy scales as 1/a^2 when the physical lattice spacing is free
+  [PASS] changing a without the bridge changes the absolute eV scale
+  [PASS] same dimensionless lattice spectrum does not determine one absolute energy
+
+Part 5: hydrogen comparator, not a proof input
+  comparator 1/alpha(0) = 137.035999084
+  comparator m_e c^2    = 510998.95000 eV
+  -m_e alpha(0)^2/2     = -13.605693123 eV
+  scaffold Hartree/2    = -13.605693123 eV
+  [PASS] comparator constants reproduce the scaffold Rydberg scale
+
+==============================================================================
+SUMMARY: PASS=42 FAIL=0
+STATUS: exact conditional support plus underdetermination boundary.
+NOT CLAIMED: retained alpha(0), retained m_e, retained Rydberg closure,
+or framework-derived physical lattice spacing.
+==============================================================================

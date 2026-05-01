@@ -87,22 +87,27 @@ current canonical same-surface evaluated constants on `main`.
 Current absolute-scale package rule:
 
 - on the accepted physical-lattice reading, the package currently carries
-  `a^(-1) = M_Pl` as an explicit Planck-scale pin
-- that pin is not yet derived from the minimal accepted theorem stack
+  `a^(-1) = M_Pl` as an explicit Planck-scale fallback pin
+- the attempted same-surface structural derivation from the 2026-04-30
+  primitive Clifford-Majorana note was audited as `audited_renaming`: it
+  verifies the candidate `Cl_4(C)` / `F(C^2)` carrier algebra, but does not
+  force that carrier as the substrate-restricted action on `P_A H_cell`
 - the 2026-04-24 conditional-completion packet derives `c_cell = 1/4` and
   the unique additive finite-boundary density extension, then gives
   `a/l_P = 1` after the primitive boundary count is accepted as the
-  gravitational boundary/action carrier; that carrier identification is still
-  the explicit Planck-lane condition
+  gravitational boundary/action carrier; the missing primitive Clifford/CAR
+  edge-statistics carrier identification remains conditional after the
+  2026-04-30 audit
 - the 2026-04-25 primitive coframe boundary-carrier support theorem identifies
   `P_A` as the unique first-order coframe-slot carrier on the time-locked
   primitive Boolean event cell under the stated locality/additivity/symmetry
   hypotheses, explaining the `c_cell = 1/4` carrier provenance without closing
   the physical gravitational boundary/action density identification
 - the 2026-04-25 source-unit normalization support theorem sharpens that same
-  conditional packet by separating the retained bare Green coefficient
-  `G_kernel = 1/(4 pi)` from the conditional physical Newton coefficient
-  `G_Newton,lat = 1`; equivalently, the bare delta-source label is
+  packet by separating the retained bare Green coefficient
+  `G_kernel = 1/(4 pi)` from the natural-unit physical Newton coefficient
+  `G_Newton,lat = 1` on the primitive Clifford/CAR carrier surface;
+  equivalently, the bare delta-source label is
   `q_bare = 4 pi M_phys` on the same carrier surface
 - the finite-automorphism-only response route is closed negatively; finite
   primitive-cell automorphisms have no infinitesimal metric/coframe response
@@ -116,9 +121,17 @@ Current absolute-scale package rule:
   `c_Widom <= 1/6`, not `1/4`
 - the 2026-04-25 area-law selector packet closes the multipocket-selector,
   primitive finite-edge entropy, and algebraic finite-Schmidt-spectrum shortcuts
-  negatively; its positive primitive-CAR carrier route is conditional on the
-  metric-compatible Clifford/CAR coframe response on `P_A H_cell`, which is a
-  sharp remaining bridge premise rather than a minimal-stack retained closure
+  negatively; its positive primitive-CAR carrier route is now supplied by the
+  proposed 2026-04-30 metric-compatible Clifford/CAR coframe-response
+  derivation on `P_A H_cell`, rather than left as a separate bridge premise
+- the 2026-04-30 boundary-incidence no-go shows that oriented boundary faces,
+  normal cochains, and Noether flux/current language do not by themselves break
+  the Hodge-dual `P_1` / `P_3` tie; it is a proposed no-go audit target, not a
+  positive Planck pin
+- the 2026-04-30 link-local first-variation theorem proposes the missing
+  action-native `P_A` selector, but it remains a proposed-retained audit target
+  with effective conditional status until fresh audit accepts both the local
+  theorem and its upstream action/time/CPT authority rows
 - authority:
   [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md),
   [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md),
@@ -130,7 +143,10 @@ Current absolute-scale package rule:
   [AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md](../../AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md),
   [AREA_LAW_PRIMITIVE_EDGE_ENTROPY_SELECTOR_NO_GO_NOTE_2026-04-25.md](../../AREA_LAW_PRIMITIVE_EDGE_ENTROPY_SELECTOR_NO_GO_NOTE_2026-04-25.md),
   [AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md](../../AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md),
-  [PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md](../../PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md)
+  [PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md](../../PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md),
+  [PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md](../../PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md),
+  [PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md](../../PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md),
+  [PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md](../../PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md)
 
 - plaquette surface:
   - `<P> = 0.5934`
@@ -155,7 +171,7 @@ Current absolute-scale package rule:
   - exact support identity `alpha_3(bare)/alpha_em(bare) = 2d + 3 = 9`
     at `d = 3`
   - authority:
-    [FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md](../../FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md)
+    [FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md](../../../archive_unlanded/framework-bare-alpha-assumed-input-salvage-2026-04-30/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md)
   - qualifier:
     this reuses the retained EW-normalization bookkeeping and the reviewed
     `Cl(3)->SM` support counts; it does not promote that support packet into
@@ -178,6 +194,11 @@ packaging. Use:
 
 These rows are still on the paper surface, but their interpretation uses a
 bridge layer beyond the exact structural core.
+
+The Planck-pin row remains bridge-conditioned. The attempted 2026-04-30
+same-surface derivation in
+[PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md](../../PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md)
+was audited as `audited_renaming`, so it does not remove the carrier bridge.
 
 - `alpha_s(M_Z)` and the `M_Z` EW rows:
   - same-surface derived framework values plus the retained running bridge
@@ -289,8 +310,8 @@ theorem core.
 
 - charged-lepton bounded observational-pin package
   (explicit three-real PDG pin; no spare forecast beyond the pin)
-- retained YT/top transport lane
-- derived Higgs/vacuum lane with retention-decomposed budget
+- YT/top transport lane conditioned on the support-tier Ward identification
+- identification-conditioned Higgs/vacuum lane with retention-decomposed budget
 - cosmology lanes
 - bounded secondary prediction surface:
   - proton lifetime

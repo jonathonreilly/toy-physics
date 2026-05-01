@@ -1,5 +1,6 @@
 # Universal GR Blockwise Einstein/Regge Identification Note
 
+**Status:** support - structural or confirmatory support note
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / blockwise identification note  

@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-11  
 **Script:** `frontier_geometry_superposition.py`  
-**Status:** exploratory path-sum result, not a staggered proposed_retained result
+**Status:** bounded exploratory path-sum result on a DAG ensemble; not on the staggered release surface
 
 ## Question
 

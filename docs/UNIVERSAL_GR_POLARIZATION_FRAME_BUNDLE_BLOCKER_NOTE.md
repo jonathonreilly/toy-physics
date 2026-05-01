@@ -1,5 +1,6 @@
 # Universal GR Polarization-Frame Bundle Blocker Note
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / blocker note  

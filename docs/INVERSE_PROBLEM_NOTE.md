@@ -1,5 +1,6 @@
 # Inverse Problem: What Does Newton+Born Require of the Network?
 
+**Status:** support - structural graph-requirements diagnostic
 **Date:** 2026-04-04
 
 ## Answer: almost nothing.

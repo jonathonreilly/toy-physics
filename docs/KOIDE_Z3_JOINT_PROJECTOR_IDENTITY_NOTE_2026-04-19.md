@@ -1,5 +1,6 @@
 # Koide / Z_3 Joint Projector Identity
 
+**Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-19
 **Scope:** Structural identity on `C^3` showing that the charged-lepton
 Koide isotypic decomposition and the DM neutrino source-surface Z_3
