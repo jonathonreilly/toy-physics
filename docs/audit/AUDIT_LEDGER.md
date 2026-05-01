@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:48:03.888166+00:00
+**Generated:** 2026-05-01T01:48:55.268662+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
-| bounded | 269 |
+| bounded | 268 |
 | support | 227 |
 | open | 17 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 769 |
+| ~~audited_conditional~~ | 770 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 491 |
+| `audited_conditional` | 492 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 756 |
+| `unaudited` | 755 |
 
 | criticality | count |
 |---|---:|
@@ -710,6 +710,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_majorana_current_stack_exhaustion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `neutrino_majorana_lower_level_pairing_nogo_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `neutrino_majorana_nur_character_boundary_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `neutrino_majorana_nur_charge2_primitive_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `neutrino_majorana_operator_axiom_first_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `neutrino_two_amplitude_last_mile_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -9677,6 +9678,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** Because the retained nu_R support is one-dimensional, every projected microscopic operator is scalar on that support, so transfer/response data lift only to diagonal Nambu blocks and cannot generate the off-diagonal charge-2 Majorana primitive.  _(class `A`)_
 - **chain closes:** False — The runner verifies the rank-1-line algebra and scalar Nambu-lift obstruction, but it hard-codes the retained nu_R projector and canonical charge-2 primitive while the row declares no upstream dependencies for those inputs.
 - **rationale:** Issue: the runner successfully checks the algebraic boundary (PASS=6/FAIL=0), but the decisive inputs are imported rather than derived in this row: the unique anomaly-fixed rank-1 nu_R support, the retained lower-level transfer/response lane, and the canonical charge-2 Majorana primitive. Why this blocks: once those inputs are assumed, scalarity and zero anomalous block follow, but a clean audit needs the imported support/primitive authorities declared and audited or reconstructed by the runner. Repair target: declare the nu_R support/anomaly-fixing authority, lower-level transfer/response authority, and charge-2 Nambu primitive authority as dependencies, or extend the runner to derive those objects from declared retained inputs. Claim boundary until fixed: bounded algebraic obstruction conditional on the retained rank-1 nu_R line and canonical off-diagonal primitive; not an independently closed Majorana no-go from the current row alone.
+- **auditor confidence:** high
+
+### `neutrino_majorana_nur_charge2_primitive_reduction_note`
+
+- **Note:** [`NEUTRINO_MAJORANA_NUR_CHARGE2_PRIMITIVE_REDUCTION_NOTE.md`](../../docs/NEUTRINO_MAJORANA_NUR_CHARGE2_PRIMITIVE_REDUCTION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-neutrino_majorana_nur_charge2_primitive_reduction_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the doubled nu_R line, the charge-(+2) adjoint eigenspace is exactly the one-dimensional E12 slot, whose antisymmetric Nambu completion is m J2 and whose phase is removable by local nu_R rephasing, leaving mu J2 with mu >= 0.  _(class `A`)_
+- **chain closes:** False — The runner verifies the local doubled-line linear algebra, but it assumes the retained one-line nu_R lane, the charge action, Nambu/antisymmetry completion rule, and rephasing freedom without declared dependencies.
+- **rationale:** Issue: the runner checks the reduction cleanly as algebra (PASS=11/FAIL=0), but the row imports the retained one-line nu_R lane, doubled-line charge operator, Nambu antisymmetry/completion rule, and local rephasing action rather than deriving or declaring them. Why this blocks: the claim that every future Majorana reopening reduces to one real mu J2 source slot is only closed after those structural inputs are available; the current row proves the reduction conditional on them. Repair target: declare the nu_R lane/charge, Nambu completion, and local rephasing authorities as dependencies, or extend the runner to construct those objects from declared retained inputs. Claim boundary until fixed: bounded algebraic normal-form reduction for an assumed doubled nu_R line; not an independently closed sole-axiom Majorana reopening theorem.
 - **auditor confidence:** high
 
 ### `neutrino_majorana_operator_axiom_first_note`
