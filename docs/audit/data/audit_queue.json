@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 8,
     "high": 195,
-    "leaf": 188,
+    "leaf": 187,
     "medium": 133
   },
-  "generated_at": "2026-05-01T20:55:36.189520+00:00",
+  "generated_at": "2026-05-01T20:56:51.290065+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10134,23 +10134,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "retarded_field_harness_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/RETARDED_FIELD_HARNESS_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/retarded_field_harness.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "s3_time_primitive_chain_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -13609,6 +13592,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 118,
-  "total_pending": 524
+  "ready_count": 117,
+  "total_pending": 523
 }

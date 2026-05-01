@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:55:36.423157+00:00
+**Generated:** 2026-05-01T20:56:51.516661+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 170 |
+| bounded | 169 |
 | support | 140 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 937 |
+| ~~audited_conditional~~ | 938 |
 | ~~audited_failed~~ | 83 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 300 |
-| `audited_conditional` | 640 |
+| `audited_conditional` | 641 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 524 |
+| `unaudited` | 523 |
 
 | criticality | count |
 |---|---:|
@@ -927,6 +927,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retarded_field_causality_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `retarded_field_compact_refinement_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `retarded_field_delay_proxy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `retarded_field_harness_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `s3_anomaly_spacetime_lift_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_cap_uniqueness_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `s3_general_r_derivation_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -13137,6 +13138,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `scripts/retarded_field_delay_proxy_probe.py`
   - `scripts/causal_field_gravity.py`
+
+### `retarded_field_harness_note`
+
+- **Note:** [`RETARDED_FIELD_HARNESS_NOTE.md`](../../docs/RETARDED_FIELD_HARNESS_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The retarded-field harness claims that finite-speed scheduling changes detector deflection relative to the instantaneous baseline and that oscillating-source rows produce the frozen frequency-dependent deflection and tail-decay fingerprints.  _(class `C`)_
+- **chain closes:** False — The frozen values reproduce locally, but clean auditability is conditional on asserted/classified runner checks and explicit harness boundaries.
+- **rationale:** Issue: the runner reproduces the frozen deflection, ratio, oscillating-source, and tail-decay values, but it contains no PASS/FAIL assertions or classified load-bearing checks. Why this blocks: a reporting table can drift without failing, and the clean audit chain needs explicit tolerances for the finite-speed ratio and frequency/tail fingerprint rows. Repair target: add assertions for the frozen h/W/L/s/c readouts and tail-decay rows, emit classified PASS lines, and register any shared retarded-field or lattice-harness dependencies. Claim boundary until fixed: the local replay supports a bounded retarded-field frequency-fingerprint artifact on this harness, not a self-consistent gravitational-wave sector or spectroscopy theorem.
+- **open / conditional deps cited:**
+  - `scripts/retarded_field_harness.py`
 
 ### `s3_anomaly_spacetime_lift_note`
 
