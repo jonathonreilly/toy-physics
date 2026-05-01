@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T15:38:38.869101+00:00
+**Generated:** 2026-05-01T15:54:32.559681+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 201 |
-| support | 156 |
+| support | 155 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 869 |
+| ~~audited_conditional~~ | 870 |
 | ~~audited_failed~~ | 103 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 292 |
-| `audited_conditional` | 584 |
+| `audited_conditional` | 585 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 578 |
+| `unaudited` | 577 |
 
 | criticality | count |
 |---|---:|
@@ -972,6 +972,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p2_taste_staircase_beta_functions_note_2026-04-17` | _proposed_no_go_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_p2_taste_staircase_transport_note_2026-04-17` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_p2_v_matching_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `yukawa_color_projection_theorem` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `pmns_selector_unique_amplitude_slot_note` | unknown | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-gpt-5 | A | `pmns_selector_class_space_uniqueness_note` |
@@ -15130,6 +15131,21 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
 - **chain closes:** False — The algebraic 1/sqrt(6) overlap and same-channel coefficient checks close, but the target Yukawa readout is introduced by definition as the H_unit-to-top matrix element. The runner confirms coefficient consistency after that identification; it does not derive the physical Yukawa readout map itself.
 - **rationale:** Issue: The load-bearing move defines y_t_bare as the H_unit matrix element and then identifies that matrix element with the top Yukawa readout. Why this blocks: The source note and runner verify the scalar-singlet algebra, Clebsch-Gordan normalization, Fierz coefficients, and tadpole cancellation, but they do not derive the physical observable bridge from independent retained inputs. Repair target: Supply a retained theorem and runner check constructing the map from the composite H_unit matrix element to the SM top Yukawa vertex/readout, including the common tadpole dressing. Claim boundary until fixed: The note supports a tree-level structural identification/algebraic normalization on the canonical surface, not a first-principles derivation of the physical top Yukawa coupling.
 - **auditor confidence:** 0.88
+
+### `yukawa_color_projection_theorem`
+
+- **Note:** [`YUKAWA_COLOR_PROJECTION_THEOREM.md`](../../docs/YUKAWA_COLOR_PROJECTION_THEOREM.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Therefore Z_phi^{phys} / Z_phi^{lattice} = R_conn = (N_c^2 - 1)/N_c^2 = 8/9, so y_t^{phys} = y_t^{Ward} * sqrt(8/9).  _(class `B`)_
+- **chain closes:** False — The note depends on R_conn and EW color-projection authorities that are currently audit-conditional, and it adds a physical scalar wave-function matching bridge from connected color trace to Higgs Z_phi. The runner assumes the sqrt(8/9) factor and verifies downstream numerical consequences rather than deriving that bridge from an audit-clean parent theorem.
+- **rationale:** Issue: the load-bearing step identifies the physical Higgs scalar wave-function renormalization ratio with the connected color-trace fraction R_conn and then applies sqrt(8/9) to y_t. Why this blocks: R_conn and the related EW color-projection route are not audit-clean upstream, and the extra claim that only the connected color flow supplies the physical Higgs self-energy while the complementary piece is absorbed into VEV normalization is a physical matching theorem, not a consequence checked by the runner. Repair target: an audit-clean scalar matching theorem or runner that constructs the lattice bilinear-to-continuum Higgs Z_phi map without inserting sqrt(8/9), plus clean upstream R_conn status. Claim boundary until fixed: the note remains strong support/numerical evidence for the sqrt(8/9) ansatz, not an audit-ratified Yukawa color-projection theorem.
+- **open / conditional deps cited:**
+  - `RCONN_DERIVED_NOTE.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+- **auditor confidence:** high
 
 ### `z2_hw1_mass_matrix_parametrization_note`
 
