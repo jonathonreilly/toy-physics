@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T21:00:38.741700+00:00
+**Generated:** 2026-05-01T21:02:17.465243+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 300 |
+| `audited_clean` | 301 |
 | `audited_conditional` | 643 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 520 |
+| `unaudited` | 519 |
 
 | criticality | count |
 |---|---:|
@@ -362,6 +362,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `s3_taste_cube_decomposition_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `scalar_3plus1_temporal_ratio_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
+| `scalar_kg_rerun_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `scalar_trace_tensor_no_go_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `self_consistency_forces_poisson_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-gpt-5 | C | - |
 | `self_consistency_structured_null_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -13420,6 +13421,17 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** True — The scalar endpoint ratio follows by direct algebra/calculus from the stated kernel K_sc(omega) = 3 + sin^2(omega) and the stated APBC temporal average. The note explicitly keeps the fourth-root observable insertion at support level, so the clean closure is only for the scalar bridge endpoint ratio.
 - **rationale:** The load-bearing claim is the exact scalar ratio A_inf / A_2 = 2 / sqrt(3), not an observable-level plaquette insertion. Given the stated minimal 3+1 APBC scalar kernel and coefficient definition, the endpoints and ratio close as exact mathematics, and the runner's current output is numerically consistent with the note. The source note correctly marks the dimension-4 fourth-root observable insertion as only a support corollary, avoiding the missing physical-observable bridge.
 - **auditor confidence:** medium
+
+### `scalar_kg_rerun_note_2026-04-10`
+
+- **Note:** [`SCALAR_KG_RERUN_NOTE_2026-04-10.md`](../../docs/SCALAR_KG_RERUN_NOTE_2026-04-10.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note records the current scalar-KG rerun state: frontier_scalar_kg_16card_v2.py returns 13/16 with C12-C14 failing, while frontier_scalar_kg_full_suite.py returns 28/38 applicable measures and 20 N/A, so scalar KG is a bounded reference architecture rather than a literal 16/16 axiom-derived closure.  _(class `C`)_
+- **chain closes:** True — The note's measured rerun claims close against the current scripts, and its safe interpretation matches the runner outputs.
+- **rationale:** The current primary runner reproduces the note's 13/16 result and the named C12-C14 failures, and the secondary full-suite runner reproduces the stated 28/38 applicable score with 20 N/A measures. The note does not promote scalar KG as an axiom-derived theorem; it explicitly frames the lane as a reference architecture/ceiling test and preserves the strict-card failures. Residual risk is limited to the bounded/reference status and the usual runner-output formatting, not the claim boundary being audited.
 
 ### `scalar_trace_tensor_no_go_note`
 
