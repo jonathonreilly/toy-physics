@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T21:08:13.314540+00:00
+**Generated:** 2026-05-01T21:09:27.672613+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -25,22 +25,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_no_go_ | 19 |
 | bounded | 166 |
 | support | 135 |
-| open | 7 |
+| open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 944 |
+| ~~audited_conditional~~ | 945 |
 | ~~audited_failed~~ | 85 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 301 |
-| `audited_conditional` | 647 |
+| `audited_conditional` | 648 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 514 |
+| `unaudited` | 513 |
 
 | criticality | count |
 |---|---:|
@@ -943,6 +943,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_selector_cycle1_science_review_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `scalar_selector_proof_chains_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `scalar_selector_remaining_open_imports_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `scalar_selector_reviewer_package_2026-04-20` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13513,6 +13514,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `DM sigma/A-BCC closeout stacks`
   - `quark provenance theorem stacks`
   - `structured open-import inventory checker`
+
+### `scalar_selector_reviewer_package_2026-04-20`
+
+- **Note:** [`SCALAR_SELECTOR_REVIEWER_PACKAGE_2026-04-20.md`](../../docs/SCALAR_SELECTOR_REVIEWER_PACKAGE_2026-04-20.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The reviewer package summarizes scalar-selector package status across Koide kappa/theta, DM PMNS, and quark a_u while stating it is historical handoff context and not the current primary claim surface; the registered runner verifies only the Koide kappa spectrum-operator bridge.  _(class `B`)_
+- **chain closes:** False — The registered runner verifies the kappa bridge subset, but the full package summary imports unregistered and superseding surfaces.
+- **rationale:** Issue: the Koide kappa bridge runner passes, but the note is a broad historical reviewer package whose DM/quark/Koide-theta package-status claims depend on many unregistered theorem notes and on a current claim surface explicitly located elsewhere. Why this blocks: the row cannot be audited clean from one kappa bridge runner, and the note itself tells the reader not to treat it as the authoritative current package status. Repair target: keep this as historical handoff context or split/register the current package claims with per-lane dependencies and runners. Claim boundary until fixed: the spectrum-operator kappa bridge is executable support; the multi-lane reviewer package status remains conditional/open.
+- **open / conditional deps cited:**
+  - `publication/ci3_z3 package status documents`
+  - `Koide theta theorem runners`
+  - `DM PMNS theorem runners`
+  - `quark a_u theorem runners`
 
 ### `scalar_trace_tensor_no_go_note`
 
