@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:34:07.398286+00:00
+**Generated:** 2026-05-01T04:35:07.119488+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 225 |
+| bounded | 224 |
 | support | 192 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 23 |
+| ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 808 |
 | ~~audited_failed~~ | 159 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 539 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
-| `audited_numerical_match` | 20 |
+| `audited_numerical_match` | 21 |
 | `audited_renaming` | 18 |
-| `unaudited` | 680 |
+| `unaudited` | 679 |
 
 | criticality | count |
 |---|---:|
@@ -961,6 +961,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_uv_class_uniqueness_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_constructive_uv_bridge_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_exact_interacting_bridge_transport_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
+| `yt_interacting_bridge_locality_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -13545,6 +13546,18 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `missing authority: derivation of nonlocal exact-bridge tail`
   - `missing authority: structural bridge ambiguity closed on tested Schur-bridge scale`
 - **auditor confidence:** 0.9
+
+### `yt_interacting_bridge_locality_note`
+
+- **Note:** [`YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md`](../../docs/YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Only a tightly UV-localized correction window preserves the accepted low-energy endpoint inside this smooth bridge family.  _(class `G`)_
+- **chain closes:** False — The scan establishes a target-conditioned locality pattern inside the chosen smooth bridge family, but it does not independently derive the endpoint inputs, the bridge family, or the accepted low-energy target from retained premises in this note.
+- **rationale:** Issue: the locality conclusion is obtained by scanning a chosen smooth bridge family and selecting profiles that preserve the accepted y_t(v) endpoint. Why this blocks: the result narrows the viable family numerically, but it does not prove that the exact interacting lattice bridge is forced into that UV-localized window. Repair target: derive the endpoint data, bridge family, and UV-localization condition from an operator-level interacting bridge theorem, then use the runner as a consequence check rather than a target scan. Claim boundary until fixed: the note supports a controlled numerical locality proxy for the selected family only.
+- **auditor confidence:** high
 
 ### `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18`
 
