@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:42:38.121893+00:00
+**Generated:** 2026-05-01T04:43:44.395110+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 232 |
+| `audited_clean` | 233 |
 | `audited_conditional` | 544 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 673 |
+| `unaudited` | 672 |
 
 | criticality | count |
 |---|---:|
@@ -148,6 +148,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_analytic_stationary_classification_theorem_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `dm_leptogenesis_pmns_breaking_triplet_source_law_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `dm_leptogenesis_pmns_microscopic_d_last_mile_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_multistart_selector_support_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_observable_relative_action_law_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
@@ -4004,6 +4005,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** **Script:** `scripts/frontier_dm_leptogenesis_pmns_analytic_stationary_classification_theorem.py`  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 5 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_pmns_breaking_triplet_source_law_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_BREAKING_TRIPLET_SOURCE_LAW_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_PMNS_BREAKING_TRIPLET_SOURCE_LAW_NOTE_2026-04-16.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Once the active charged-sector values are supplied, the charged-sector bridge to the mainline CP channels is an explicit algebraic law for gamma, E1, and E2.  _(class `A`)_
+- **chain closes:** True — The note does not claim to derive the off-seed values; within the supplied active-family boundary, the runner exactly reconstructs the breaking-triplet grammar and verifies the gamma, E1, and E2 formulas.
+- **rationale:** The bounded support claim closes at its stated boundary: supplied active charged-sector data algebraically determine gamma, E1, and E2, and the runner verifies those identities to numerical precision. The note explicitly does not derive the off-seed five-real values from Cl(3) on Z^3, so clean audit here does not promote the downstream PMNS or leptogenesis source law. Residual risk: the physical source-selection theorem remains open outside this algebraic mapping.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17`
