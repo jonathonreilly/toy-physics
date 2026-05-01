@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:51:13.177544+00:00
+**Generated:** 2026-05-01T20:53:27.743320+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 172 |
-| support | 141 |
+| support | 140 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 934 |
+| ~~audited_conditional~~ | 935 |
 | ~~audited_failed~~ | 83 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 300 |
-| `audited_conditional` | 637 |
+| `audited_conditional` | 638 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 527 |
+| `unaudited` | 526 |
 
 | criticality | count |
 |---|---:|
@@ -922,6 +922,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quasi_persistent_relaunch_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `rconn_derived_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `reproduction_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `retardation_discriminator_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `retarded_field_compact_refinement_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `s3_anomaly_spacetime_lift_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13044,6 +13045,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `YUKAWA_COLOR_PROJECTION_THEOREM.md`
 - **auditor confidence:** high
+
+### `reproduction_audit_note`
+
+- **Note:** [`REPRODUCTION_AUDIT_NOTE.md`](../../docs/REPRODUCTION_AUDIT_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The default reproduction harness prints the canonical/exploratory inventory and verifies a bounded cross-family retained comparison by running the exact 2D mirror validation and structured chokepoint bridge checks.  _(class `B`)_
+- **chain closes:** False — The default harness passes, but the clean audit chain is conditional on explicit dependency registration and classified runner output.
+- **rationale:** Issue: the default harness runs successfully and contains internal assertions, but the note's load-bearing reproduction claim depends on invoked retained scripts that are not registered as ledger dependencies, and the runner emits only an unclassified final PASS rather than classified load-bearing PASS lines. Why this blocks: a clean audit needs the invoked comparison surfaces to be explicit one-hop dependencies and the runner output to identify which checks are cross-script inventory checks versus numerical/comparator checks. Repair target: register the mirror 2D and structured chokepoint harness dependencies and emit classified PASS lines for the inventory, mirror retained-row, Born-drift, and structured-bridge checks. Claim boundary until fixed: the current default harness passes locally and supports the operational statement that these two retained-family replay checks remain reproducible through the documented entry point.
+- **open / conditional deps cited:**
+  - `scripts/reproduction_audit_harness.py`
+  - `scripts/mirror_2d_validation.py`
+  - `scripts/structured_chokepoint_bridge.py`
 
 ### `retained_cross_lane_consistency_support_note_2026-04-22`
 
