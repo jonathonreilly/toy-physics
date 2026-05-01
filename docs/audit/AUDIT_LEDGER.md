@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T21:11:55.916094+00:00
+**Generated:** 2026-05-01T21:12:56.477608+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 165 |
+| bounded | 164 |
 | support | 134 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 947 |
+| ~~audited_conditional~~ | 948 |
 | ~~audited_failed~~ | 85 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 301 |
-| `audited_conditional` | 650 |
+| `audited_conditional` | 651 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 511 |
+| `unaudited` | 510 |
 
 | criticality | count |
 |---|---:|
@@ -946,6 +946,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_selector_reviewer_package_2026-04-20` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `scalar_selector_synthesis_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `scalar_tensor_ray_magnitude_bridge_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `scaling_failure_mechanisms` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13575,6 +13576,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** True — The runner constructs same-scalar-data probes on both the O_h and finite-rank classes, verifies scalar-action invariance, and verifies nonzero independent tensorial residual channels. The note's no-go is limited to scalar-trace-only completions and does not claim a positive tensor-valued GR law.
 - **rationale:** The no-go closes at the stated scope: scalar shell/Schur data are invariant across the constructed perturbation families, while vector and traceless spatial Einstein residual channels change. That is enough to rule out completion principles that factor only through the current scalar data on this branch. Residual risk is outside the claim boundary: a genuinely tensor-valued matching law may still exist and is explicitly left open.
 - **auditor confidence:** high
+
+### `scaling_failure_mechanisms`
+
+- **Note:** [`SCALING_FAILURE_MECHANISMS.md`](../../docs/SCALING_FAILURE_MECHANISMS.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note attributes gravity scaling failure to phase-valley saturation and decoherence size failure to environment-label sharing, with reduced variables Q_sat and environment entropy H and a reported entropy/purity correlation r=-0.89.  _(class `B`)_
+- **chain closes:** False — The mechanism inventory is conditional on missing quantitative artifacts and executable checks.
+- **rationale:** Issue: the note is a qualitative mechanism diagnosis with no runner, no registered dependencies, and no cited artifact for the quantitative correlation/readout claims. Why this blocks: the reduced saturation model, environment-entropy explanation, and r=-0.89 vs r=0.24 comparison cannot be verified from the row alone. Repair target: attach the scaling/decoherence logs or scripts that compute Q_sat, H, purity, and the reported correlations, and emit asserted runner checks. Claim boundary until fixed: the note is bounded hypothesis/triage guidance for two different failure modes, not an audited mechanism theorem.
+- **open / conditional deps cited:**
+  - `gravity scaling logs/scripts for Q_sat`
+  - `decoherence entropy/purity correlation script`
 
 ### `science_3plus1_line_law_known_limits_note_2026-04-20`
 
