@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:55:05.469775+00:00
+**Generated:** 2026-05-01T05:56:13.453666+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 208 |
+| bounded | 207 |
 | support | 170 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 835 |
+| ~~audited_conditional~~ | 836 |
 | ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 252 |
-| `audited_conditional` | 566 |
+| `audited_conditional` | 567 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 620 |
+| `unaudited` | 619 |
 
 | criticality | count |
 |---|---:|
@@ -524,6 +524,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
 | `dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_split2_edge_transport_lane_obstruction_candidate_note_2026-04-18` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `dm_neutrino_source_surface_split2_low_slack_transport_incompatibility_candidate_note_2026-04-18` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate_note_2026-04-18` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -4912,6 +4913,20 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** Issue: the transport-incompatibility conclusion rests on an unregistered numerical scan of the split-2 edge. Why this blocks: without the runner or interval certificate, the audit cannot verify the stated max eta ratio, packet-distance minimum, leakage-asymmetry minimum, or dominant-entry bound over the full edge interval. Repair target: register a runner that reconstructs the edge parameterization, scans or certifies the full interval, and emits the endpoint/maximum/minimum values used in the note. Claim boundary until fixed: this is bounded numerical evidence that the tested split-2 edge does not realize the preferred transport lane, not an audited exact-carrier obstruction theorem.
 - **open / conditional deps cited:**
   - `DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_TRANSPORT_LANE_OBSTRUCTION_CANDIDATE_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_split2_low_slack_transport_incompatibility_candidate_note_2026-04-18`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_TRANSPORT_INCOMPATIBILITY_CANDIDATE_NOTE_2026-04-18.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_TRANSPORT_INCOMPATIBILITY_CANDIDATE_NOTE_2026-04-18.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the tested broad split-2 low-slack box, no lower-repair sample reaches eta/eta_obs >= 1 and the closest tested packet lane remains at least about 0.233468501596 from the preferred quotient.  _(class `C`)_
+- **chain closes:** False — The note presents a coarse scan and seeded global-search refinement, but the row has no registered runner or interval certificate, and the note explicitly says it is a numerical incompatibility candidate rather than exact-carrier closure.
+- **rationale:** Issue: the transport-incompatibility conclusion is a numerical search result without a registered reproduction path. Why this blocks: seeded global searches can miss narrow compatible lanes, and without the runner the audit cannot verify the penalty setup, search coverage, eta/eta_obs maximum, or packet-distance lower bound over the residual split-2 low-slack box. Repair target: register the coarse and seeded global-search runner, record seeds/tolerances, and ideally add interval-style exclusion or dominance certification on the exact carrier. Claim boundary until fixed: this is bounded evidence that no compatible lower-repair lane was visible in the tested search, not an audited exclusion theorem.
+- **open / conditional deps cited:**
+  - `DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_TRANSPORT_INCOMPATIBILITY_CANDIDATE_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate_note_2026-04-18`

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 284,
+    "leaf": 283,
     "medium": 133
   },
-  "generated_at": "2026-05-01T05:55:05.228850+00:00",
+  "generated_at": "2026-05-01T05:56:13.099732+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9924,23 +9924,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_neutrino_source_surface_split2_low_slack_transport_incompatibility_candidate_note_2026-04-18",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.822,
-      "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_TRANSPORT_INCOMPATIBILITY_CANDIDATE_NOTE_2026-04-18.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 4
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_neutrino_source_surface_split2_low_slack_upper_m_ridge_candidate_note_2026-04-18",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -15209,6 +15192,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 224,
-  "total_pending": 620
+  "ready_count": 223,
+  "total_pending": 619
 }
