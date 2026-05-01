@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T22:42:02.455406+00:00
+**Generated:** 2026-05-01T22:43:38.754023+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 12 |
 | bounded | 163 |
-| support | 138 |
+| support | 137 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 951 |
+| ~~audited_conditional~~ | 952 |
 | ~~audited_failed~~ | 85 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 309 |
-| `audited_conditional` | 652 |
+| `audited_conditional` | 653 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 509 |
+| `unaudited` | 508 |
 
 | criticality | count |
 |---|---:|
@@ -822,6 +822,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lensing_finite_path_explanation_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `lensing_k_sweep_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `lepton_shared_higgs_universality_collapse_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `lepton_shared_higgs_universality_underdetermination_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lepton_single_higgs_pmns_triviality_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `linear_response_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -10289,6 +10290,21 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`
   - `CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`
   - `UNREGISTERED: shared-Higgs universality theorem`
+- **auditor confidence:** high
+
+### `lepton_shared_higgs_universality_underdetermination_note`
+
+- **Note:** [`LEPTON_SHARED_HIGGS_UNIVERSALITY_UNDERDETERMINATION_NOTE.md`](../../docs/LEPTON_SHARED_HIGGS_UNIVERSALITY_UNDERDETERMINATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The current exact stack admits universal and non-universal lepton assignments, and the current atlas contains no retained inter-sector bridge theorem selecting among them.  _(class `B`)_
+- **chain closes:** False — The runner constructs admissible assignment examples, but the retained-stack/atlas-selection part is a cross-note catalog claim with no formal one-hop dependencies attached to this row.
+- **rationale:** Issue: the load-bearing underdetermination claim imports named current-stack/atlas authorities and absence of a retained universality bridge, but this row declares no one-hop dependencies for those authorities. Why this blocks: a hostile audit packet can verify the constructive examples and the runner's string checks, but cannot certify a clean retained-stack theorem without the exact upstream theorem rows and their audit states wired into the ledger. Repair target: declare the Higgs-Z3 gauge-redundancy, single-Higgs triviality, two-Higgs escape, shared-Higgs universality-collapse, atlas/gates source rows, or an equivalent generated catalog artifact as dependencies, then re-audit their effective statuses and the bridge-absence check. Claim boundary until fixed: safe as support for current-stack underdetermination examples and selector work remaining explicit; not audit-clean as a dependency-closed retained-stack universality nonselection theorem.
+- **open / conditional deps cited:**
+  - `publication/ci3_z3/DERIVATION_ATLAS.md`
+  - `GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md`
 - **auditor confidence:** high
 
 ### `lepton_single_higgs_pmns_triviality_note`
