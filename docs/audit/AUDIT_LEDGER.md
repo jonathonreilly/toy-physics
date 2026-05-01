@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:32:15.300220+00:00
+**Generated:** 2026-05-01T06:35:22.645755+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 196 |
+| bounded | 195 |
 | support | 168 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 845 |
-| ~~audited_failed~~ | 173 |
+| ~~audited_conditional~~ | 844 |
+| ~~audited_failed~~ | 175 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 257 |
 | `audited_conditional` | 577 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 83 |
+| `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 602 |
+| `unaudited` | 601 |
 
 | criticality | count |
 |---|---:|
@@ -1002,6 +1002,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_nonlocal_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_results_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_scale_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `staggered_fermion_card_2026-04-11` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `tensor_block_closure_test_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `testable_predictions_map_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `three_family_card_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -12971,6 +12972,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `cycle_force_gap_now_9.624e-01_not_8.767e-01`
   - `layered_force_gap_now_8.822e-01_not_8.759e-01`
   - `runner_has_no_assertions_for_exact_diagnostics`
+- **auditor confidence:** high
+
+### `staggered_fermion_card_2026-04-11`
+
+- **Note:** [`STAGGERED_FERMION_CARD_2026-04-11.md`](../../docs/STAGGERED_FERMION_CARD_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Complete Score Summary: TOTAL ~183/190 rows, with the canonical 17-card, cycle battery, self-gravity, retarded closure, iterative closure, two-field wave, graph portability, and critical-exponent harnesses summarized together.  _(class `C`)_
+- **chain closes:** False — The registered canonical 17-card reproduces the 1D and 3D 17/17 rows, but the directly named companion scripts no longer match the note's cycle-battery and retarded-closure score/value tables, so the complete-card synthesis is stale.
+- **rationale:** Issue: the canonical frontier_staggered_17card.py output matches the note, but the complete-card summary is stale relative to directly named companion harnesses. Current frontier_staggered_cycle_battery.py reports layered_cycle B2 R^2=0.991249 PASS and SCORE 9/9, while the note records R^2=0.985 FAIL and 8/9. Current frontier_two_field_retarded_family_closure.py reports growing R5 30/30 TOWARD and SCORE 9/9, while the note records 25/30 TOWARD FAIL and 8/9. Several companion numeric values also drift. Why this blocks: the row is not just the canonical 17-card; it presents a complete multi-harness score surface, and that surface is no longer current. Repair target: update the note's companion tables and total score summary from the current scripts, or split the clean canonical 17-card from the stale multi-harness synthesis. Claim boundary until fixed: the canonical 17-card subclaim remains runner-supported, but the complete staggered-fermion card note as written is not a clean current audit surface.
+- **open / conditional deps cited:**
+  - `staggered_fermion_card_2026-04-11 -> frontier_staggered_cycle_battery.py (current layered_cycle score/value stale relative to note)`
+  - `staggered_fermion_card_2026-04-11 -> frontier_two_field_retarded_family_closure.py (current growing stability/score stale relative to note)`
+  - `staggered_fermion_card_2026-04-11 -> complete multi-harness score summary requires refresh`
 - **auditor confidence:** high
 
 ### `staggered_graph_failure_map_note`

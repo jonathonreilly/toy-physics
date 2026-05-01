@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 266,
+    "leaf": 265,
     "medium": 133
   },
-  "generated_at": "2026-05-01T06:32:15.033493+00:00",
+  "generated_at": "2026-05-01T06:35:22.384779+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9975,23 +9975,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "staggered_fermion_card_2026-04-11",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.5,
-      "note_path": "docs/STAGGERED_FERMION_CARD_2026-04-11.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_staggered_17card.py",
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "born_rule_analysis_2026-04-11",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14906,6 +14889,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 205,
-  "total_pending": 602
+  "ready_count": 204,
+  "total_pending": 601
 }
