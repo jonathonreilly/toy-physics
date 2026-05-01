@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:46:35.683699+00:00
+**Generated:** 2026-05-01T05:48:31.184842+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 251 |
+| `audited_clean` | 252 |
 | `audited_conditional` | 563 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 624 |
+| `unaudited` | 623 |
 
 | criticality | count |
 |---|---:|
@@ -344,6 +344,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `weak_coupling_retention_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `yt_microscopic_schur_class_admissibility_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `yt_schur_stability_gap_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `z2_hw1_mass_matrix_parametrization_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `abcc_cp_phase_no_go_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `accessible_prediction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -14455,6 +14456,18 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `missing bound: taste-staircase beta-coefficient mismatch is O(few %) over [v, M_Pl]`
   - `scripts/frontier_yt_qfp_insensitivity.py: current audit run terminated before final summary after multi-minute stall`
 - **auditor confidence:** 0.88
+
+### `yt_schur_stability_gap_note`
+
+- **Note:** [`YT_SCHUR_STABILITY_GAP_NOTE.md`](../../docs/YT_SCHUR_STABILITY_GAP_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the current scanned package envelope, the admissible exact Schur class has no normal-form escape inside the unit branch-budget radius and remains in class through the tested radius 3.535534.  _(class `C`)_
+- **chain closes:** True — The runner scans 3,468 admissible operators, finds no out-of-class examples, verifies worst response gap 5.940312e-03 inside the conservative budget, and confirms the first sampled escape is beyond the unit radius because no escape is found in the scanned envelope.
+- **rationale:** The bounded stability claim closes for the current scanned envelope: the runner computes the admissible Schur-class perturbation scan from the package data and all sampled operators remain inside the normal-form class with no escape found before or beyond unit radius. Residual risk is the standard bounded one: this does not prove a continuum stability theorem over every possible perturbation direction, but it supports the note's current-tested-scale claim that the class is not knife-edge fragile.
+- **auditor confidence:** high
 
 ### `yt_ssb_matching_gap_analysis_note_2026-04-18`
 
