@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:26:19.183500+00:00
+**Generated:** 2026-05-01T11:32:30.930096+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 301 |
+| `audited_clean` | 302 |
 | `audited_conditional` | 588 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 542 |
+| `unaudited` | 541 |
 
 | criticality | count |
 |---|---:|
@@ -354,6 +354,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_sole_axiom_hw1_source_transfer_boundary_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `pmns_twisted_flux_transfer_holonomy_boundary_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `poisson_self_gravity_born_audit_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `poisson_self_gravity_loop_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -12446,6 +12447,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The Poisson-like self-gravity loop preserves Born at the frozen propagation-step level but not end-to-end through the full nonlinear iterated loop at the tested nonzero coupling.  _(class `C`)_
 - **chain closes:** True — The registered runner reproduces the exact zero-coupling reduction and the representative nonzero row: step-local Born 8.834e-16 versus end-to-end Born 6.830e-05, with both nonzero loop convergence flags false as reported.
 - **rationale:** Clean within the note's bounded audit scope. The note does not claim a universal theorem; it separates frozen-step Born behavior from full nonlinear-loop end-to-end behavior on one exact lattice family and one representative nonzero coupling. Current runner output matches the frozen row exactly, including exact epsilon=0 recovery, machine-clean step-local Born, and nonzero end-to-end Born drift. Residual risk is the stated narrowness: one lattice family, one coupling/source row, and no universal self-gravity Born-safety theorem.
+- **auditor confidence:** high
+
+### `poisson_self_gravity_loop_note`
+
+- **Note:** [`POISSON_SELF_GRAVITY_LOOP_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_LOOP_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The Poisson-like self-gravity loop is a bounded positive control: exact epsilon=0 reduction holds, frozen terminal fields remain Born-linear to machine precision, nonzero rows preserve weak-field TOWARD sign with near-linear mass scaling, but the strict nonzero fixed-point loop does not converge and remains a small effect.  _(class `C`)_
+- **chain closes:** True — The registered runner reproduces the note's qualitative sweep: zero-epsilon reduction is exact, all nonzero epsilon rows are TOWARD with mean loop/inst about 1.010, mean escape rises mildly, frozen Born checks remain at machine precision, and nonzero rows have converged=0/4.
+- **rationale:** Clean within the note's bounded-control scope. The note explicitly does not claim a new backreaction mechanism; it claims the frozen-field propagation remains Born-linear and weak-field-like while the outer loop is small and nonconvergent. The current runner, executed on the Mac mini clean clone, reproduces that boundary: exact zero-epsilon reduction, machine-level frozen Born residuals, TOWARD sign across nonzero couplings, near-linear source-strength exponents, loop/inst around 1.010, and no strict convergence for nonzero epsilon. Residual risk is the declared narrow setup and the nonconvergent outer loop; machine-epsilon Born mean/max digits vary at the cancellation floor but do not affect the audited conclusion.
 - **auditor confidence:** high
 
 ### `portable_card_extension_note`
