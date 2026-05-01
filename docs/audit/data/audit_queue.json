@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 242,
+    "leaf": 241,
     "medium": 133
   },
-  "generated_at": "2026-05-01T07:11:23.337426+00:00",
+  "generated_at": "2026-05-01T07:12:40.121302+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10009,25 +10009,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "mirror_mutual_information_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "mirror_mutual_information_canonical_families_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/MIRROR_MUTUAL_INFORMATION_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/mirror_mutual_information_chokepoint.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "mirror_vs_central_head_to_head_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14506,6 +14487,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 178,
-  "total_pending": 578
+  "ready_count": 177,
+  "total_pending": 577
 }

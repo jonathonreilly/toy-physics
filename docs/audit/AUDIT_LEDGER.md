@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:11:23.600092+00:00
+**Generated:** 2026-05-01T07:12:40.369749+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 273 |
+| `audited_clean` | 274 |
 | `audited_conditional` | 584 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 578 |
+| `unaudited` | 577 |
 
 | criticality | count |
 |---|---:|
@@ -311,6 +311,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `minimal_source_driven_field_probe_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `mirror_mutual_information_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `multipole_tidal_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
@@ -10680,6 +10681,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** S4 mirror is the strongest scalable MI lane in this extension, while the exact chokepoint MI chain remains the synthesis-grade retained result.  _(class `C`)_
 - **chain closes:** True — The registered runner exits 0 and reproduces the note's S4 mirror, S4 random, strict-mirror, and original-mirror MI tables, including the corrected N=80 S4 mirror value and the caveat that this extension is broader rather than more canonical.
 - **rationale:** The bounded MI extension closes against scripts/mirror_mutual_information_canonical_families.py. Current output matches the note's S4 mirror values N=25 0.7213±0.073, N=40 0.5956±0.067, N=60 0.5248±0.067, N=80 0.2559±0.047; matched S4 random is lower at each retained row; strict mirror reproduces N=15 0.9196±0.033 and N=25 0.6578±0.091 before failing at larger N. The note keeps the exact chokepoint chain as the synthesis-grade result and treats this as a bounded extension.
+- **auditor confidence:** high
+
+### `mirror_mutual_information_note`
+
+- **Note:** [`MIRROR_MUTUAL_INFORMATION_NOTE.md`](../../docs/MIRROR_MUTUAL_INFORMATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** This file is superseded by MIRROR_MUTUAL_INFORMATION_CANONICAL_FAMILIES_NOTE.md and should not be treated as the canonical mirror MI result.  _(class `B`)_
+- **chain closes:** True — The source note is a pointer/supersession notice, and its registered dependency is the canonical families note, which is already audited clean and remains bounded. The row does not assert independent MI numerics beyond directing readers to the canonical artifacts.
+- **rationale:** The claim surface is administrative: use the canonical mirror MI artifacts and do not treat this older note as synthesis-grade. That pointer closes from the source note and its clean canonical dependency. Residual risk is only future documentation drift if the canonical MI artifacts move.
 - **auditor confidence:** high
 
 ### `mirror_program_synthesis`
