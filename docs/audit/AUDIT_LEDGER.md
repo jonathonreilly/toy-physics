@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:52:37.647476+00:00
+**Generated:** 2026-05-01T05:53:57.680101+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 210 |
+| bounded | 209 |
 | support | 170 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 833 |
+| ~~audited_conditional~~ | 834 |
 | ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 252 |
-| `audited_conditional` | 564 |
+| `audited_conditional` | 565 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 622 |
+| `unaudited` | 621 |
 
 | criticality | count |
 |---|---:|
@@ -435,6 +435,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `composite_source_additivity_2d_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `connectivity_family_v2_elliptical_duplicate_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `continuum_convergence_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cosmological_constant_spectral_gap_identity_theorem_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -2916,6 +2917,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `continuum_convergence_note`
+
+- **Note:** [`CONTINUUM_CONVERGENCE_NOTE.md`](../../docs/CONTINUUM_CONVERGENCE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note synthesizes the current ordered-lattice evidence as: original 3D 1/L fails under refinement, while 1/L^(d-1) is the strongest empirical persistence candidate but remains bounded and under review.  _(class `B`)_
+- **chain closes:** False — The note is appropriately caveated, but it depends on multiple unregistered scripts and bounded unaudited note authorities, including the L2 tail stats and transfer-norm notes, and has no primary runner for the synthesis.
+- **rationale:** Issue: the convergence summary imports several bounded/unaudited artifacts and scripts without a registered runner or dependency chain for the synthesis. Why this blocks: even though the prose is review-safe and explicitly avoids claiming a completed continuum theorem, the audit cannot independently verify the 2D/3D/4D persistence, transfer-norm reconciliation, and tail-exponent corrections from this row alone. Repair target: register the cited lattice runners/notes as dependencies and add a synthesis runner that reproduces the refinement, tail, transfer-norm, and O5-refutation statements. Claim boundary until fixed: this is bounded review guidance for the ordered-lattice branch, not an audited closed continuum-convergence theorem.
+- **open / conditional deps cited:**
+  - `LATTICE_3D_L2_TAIL_STATS_NOTE.md`
+  - `LATTICE_KERNEL_TRANSFER_NORM_NOTE.md`
+  - `CONTINUUM_CONVERGENCE_NOTE.md`
 - **auditor confidence:** high
 
 ### `continuum_limit_note`
