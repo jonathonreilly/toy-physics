@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:06:42.453442+00:00
+**Generated:** 2026-05-01T05:08:41.788139+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 244 |
+| `audited_clean` | 245 |
 | `audited_conditional` | 547 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 74 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 655 |
+| `unaudited` | 654 |
 
 | criticality | count |
 |---|---:|
@@ -157,6 +157,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_observable_relative_action_law_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_off_seed_triplet_sign_boundary_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `dm_leptogenesis_pmns_oriented_phase_sheet_selector_theorem_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
+| `dm_leptogenesis_pmns_reduced_surface_selector_support_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_relative_action_stationarity_theorem_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_sole_axiom_boundary_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_stationary_cp_incompatibility_theorem_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
@@ -4236,6 +4237,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — The pair-to-projector algebra closes conditional on a supplied Hermitian pair. The stronger route-choice claim depends on an imported PMNS pair law/carrier and a physical N1 transport-column selection that are not registered as deps and are explicitly left open.
 - **rationale:** Issue: the PMNS Hermitian pair law and the physical transport column are imported or left open, while the ledger registers no one-hop PMNS authority. Why this blocks: the eta lifts are diagnostics from hard-coded sample pairs, not an axiom-side theorem selecting the physical flavored projector. Repair target: register and audit the PMNS pair-law authority plus a theorem selecting the transport-relevant column, with a runner that computes the selected column from that law. Claim boundary until fixed: the algebraic pair-to-projector interface and sample diagnostic lift are support only.
 - **auditor confidence:** high
+
+### `dm_leptogenesis_pmns_reduced_surface_selector_support_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_REDUCED_SURFACE_SELECTOR_SUPPORT_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_PMNS_REDUCED_SURFACE_SELECTOR_SUPPORT_NOTE_2026-04-16.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The runner performs a deterministic compact-chart search plus local polishing on the exact reduced surface, recovers three stationary closure branches, and finds the lower branch uniquely lowest on that reduced search surface with a finite action gap.  _(class `C`)_
+- **chain closes:** True — The note's live claim is bounded support, not theorem-grade global certification. In that scoped form, the runner constructs the reduced chart, runs the constrained search, recovers the stated three branches, verifies the low branch closure, finite gap, and local Hessian positivity, while openly retaining the limitation that known anchors/local polishing prevent promotion to a global theorem.
+- **rationale:** The audit is clean only for the bounded support claim actually stated in the note. The runner exits 0 and supplies seven PASS checks showing that, on the reduced chart used here, the branch set, low-branch closure, action gap, uniqueness within the current search, and positive tangent Hessian all match the written support statement. Residual risk remains exactly where the note says it does: known branch anchors and local polishing do not constitute an independent theorem-grade global-minimum certificate over a larger admissible domain.
+- **auditor confidence:** medium
 
 ### `dm_leptogenesis_pmns_relative_action_stationarity_theorem_note_2026-04-16`
 
