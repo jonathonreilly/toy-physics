@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:08:41.788139+00:00
+**Generated:** 2026-05-01T05:10:15.754216+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 220 |
-| support | 184 |
+| support | 183 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 816 |
+| ~~audited_conditional~~ | 817 |
 | ~~audited_failed~~ | 162 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 245 |
-| `audited_conditional` | 547 |
+| `audited_conditional` | 548 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 74 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 654 |
+| `unaudited` | 653 |
 
 | criticality | count |
 |---|---:|
@@ -489,6 +489,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_microscopic_selector_reduction_theorem_note_2026-04-17` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | E | - |
 | `dm_leptogenesis_pmns_projector_interface_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `dm_leptogenesis_pmns_reduction_exhaustion_theorem_note_2026-04-16` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | E | - |
 | `dm_leptogenesis_projection_theorem_note_2026-04-15` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4249,6 +4250,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** True — The note's live claim is bounded support, not theorem-grade global certification. In that scoped form, the runner constructs the reduced chart, runs the constrained search, recovers the stated three branches, verifies the low branch closure, finite gap, and local Hessian positivity, while openly retaining the limitation that known anchors/local polishing prevent promotion to a global theorem.
 - **rationale:** The audit is clean only for the bounded support claim actually stated in the note. The runner exits 0 and supplies seven PASS checks showing that, on the reduced chart used here, the branch set, low-branch closure, action gap, uniqueness within the current search, and positive tangent Hessian all match the written support statement. Residual risk remains exactly where the note says it does: known branch anchors and local polishing do not constitute an independent theorem-grade global-minimum certificate over a larger admissible domain.
 - **auditor confidence:** medium
+
+### `dm_leptogenesis_pmns_reduction_exhaustion_theorem_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_REDUCTION_EXHAUSTION_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_PMNS_REDUCTION_EXHAUSTION_THEOREM_NOTE_2026-04-16.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The full PMNS-assisted baryogenesis map factors exactly as D -> D_- -> dW_e^H -> H_e -> |U_e|^2^T -> i_* -> eta, so there is no additional passive-sector or transport state outside the reduced seed surface.  _(class `B`)_
+- **chain closes:** False — The runner verifies the active chart, sample/current factorization checks, and that currently found closure branches lie on the fixed seed surface, but the source note has no registered upstream authorities for the full D-lane factorization, one-sided PMNS packet theorem, or transport-functional reduction. Those inputs are named/imported rather than proved in this note.
+- **rationale:** Issue: the theorem-level conclusion that every admissible closure component already lives on S_seed depends on an exact reduction chain that is not cited as a dependency or proved here. Why this blocks: the runner confirms chart invertibility, current branch membership, and imported factorization behavior, but it does not rule out all outside components from first principles in this row. Repair target: register the one-sided PMNS packet theorem, flavored transport column-functional theorem, D-lane factorization, and active-chart surjectivity proof as dependencies, or include their proofs here. Claim boundary until fixed: the current branch evidence supports the reduced-surface framing, but the exhaustion of all admissible components remains conditional on the missing reduction authorities.
+- **auditor confidence:** high
 
 ### `dm_leptogenesis_pmns_relative_action_stationarity_theorem_note_2026-04-16`
 
