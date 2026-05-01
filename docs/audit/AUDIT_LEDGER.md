@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:31:00.080883+00:00
+**Generated:** 2026-05-01T20:32:32.402873+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 175 |
+| bounded | 174 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 924 |
+| ~~audited_conditional~~ | 925 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 627 |
+| `audited_conditional` | 628 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 541 |
+| `unaudited` | 540 |
 
 | criticality | count |
 |---|---:|
@@ -830,6 +830,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `mirror_2d_gravity_law_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `mirror_gravity_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `mirror_grown_combined_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_program_synthesis` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `mirror_vs_central_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `moving_source_cross_family_replay_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -10700,6 +10701,20 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **chain closes:** False — The fixed-anchor runner reproduces the mass-window fits, and the current distance sweep supports the peak/plateau interpretation, but the note's N=60 tail-fit claim depends on a missing tail log or unregistered runner parameters. The comparison to other hard-geometry lanes is also not registered as a one-hop authority here.
 - **rationale:** Issue: the load-bearing mirror-gravity conclusion includes a distance-tail fit and cross-lane ranking that are not fully reproduced by the registered audit context. Why this blocks: the fixed-anchor mass-window checks match, but the cited distance-sweep tail log is absent on disk and the current distance runner does not emit the stated N=60 tail fit. Repair target: restore/register the tail sweep artifact or runner arguments and cite the comparator hard-geometry lane results used for the ranking. Claim boundary until fixed: the mirror pocket has a reproducible positive but weakly structured fixed-anchor response and a peak/plateau distance sweep; the stronger claim that it is definitively not the best gravity-side lane remains conditional on the missing tail/comparator surface.
 - **auditor confidence:** medium
+
+### `mirror_grown_combined_note`
+
+- **Note:** [`MIRROR_GROWN_COMBINED_NOTE.md`](../../docs/MIRROR_GROWN_COMBINED_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The grown mirror scaffold remains Born-safe where it runs, but it does not approximate the retained mirror/Z2xZ2 joint benefit and is only an exploratory negative control.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the finite grown-scout table and weak joint performance. The comparison to retained mirror/Z2xZ2 benefits is imported without one-hop dependencies, and the runner has no classified PASS lines for the negative-control conclusion.
+- **rationale:** Issue: the finite grown-mirror table reproduces, but the row relies on uncited retained mirror/Z2xZ2 comparison targets and unclassified runner output. Why this blocks: a hostile reviewer can accept the scout's numbers while rejecting the stronger 'does not approximate retained benefit' comparison as not closed inside this row's allowed inputs. Repair target: add classified C PASS lines for the grown-scout metrics and cite/register the mirror and Z2xZ2 comparison rows, or narrow the note to a standalone finite negative control. Claim boundary until fixed: this is bounded exploratory evidence that this grown mirror scaffold is not a successor lane, not a theorem about all generated symmetry scaffolds.
+- **open / conditional deps cited:**
+  - `scripts/mirror_grown_combined.py`
+- **auditor confidence:** high
 
 ### `mirror_mutual_information_canonical_families_note`
 
