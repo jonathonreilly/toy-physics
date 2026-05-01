@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T19:26:07.962815+00:00
+**Generated:** 2026-05-01T19:29:37.377495+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 205 |
+| bounded | 204 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 897 |
-| ~~audited_failed~~ | 79 |
+| ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 295 |
 | `audited_conditional` | 606 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 53 |
+| `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 566 |
+| `unaudited` | 565 |
 
 | criticality | count |
 |---|---:|
@@ -1027,6 +1027,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_axiom_native_support_batch_note_2026-04-22` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `lepton_shared_higgs_universality_underdetermination_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `lorentz_violation_derived_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `monopole_derived_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | C | - |
 | `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `pmns_intrinsic_completion_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -10185,6 +10186,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `metric_universe_for_node_level_classifier_search_not_defined`
   - `only_local_z_asym_added_to_fixed_3_property_AND_search`
   - `no_multiple_testing_or_global_search_certificate`
+- **auditor confidence:** high
+
+### `lorentz_violation_derived_note`
+
+- **Note:** [`LORENTZ_VIOLATION_DERIVED_NOTE.md`](../../docs/LORENTZ_VIOLATION_DERIVED_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The standard lattice kinetic term Taylor-expands to E^2 = m^2 + p^2 - (a^2/12) sum_i p_i^4 + O(a^4 p^6), giving a dimension-6 Lorentz-violating cubic harmonic suppressed as (E/E_Planck)^2.  _(class `C`)_
+- **chain closes:** False — The registered runner uses the nonstandard (2/a^2) sin^2(pa/2) kinetic normalization while the note's load-bearing expansion uses the standard (4/a^2) normalization. Its own numerical expansion check prints a large residual instead of the note's claimed sub-percent agreement, so the computation does not support the stated derivation.
+- **rationale:** Issue: the note's load-bearing p^4 Lorentz-violation coefficient and claimed numerical verification are stale relative to the registered runner, which computes with the old half-normalized kinetic term and shows a large low-momentum residual. Why this blocks: the bounded conclusion depends on deriving the dimension-6 coefficient, cubic angular fingerprint, and SME comparisons from that expansion; the current runner neither verifies the expansion nor emits classified checks for the claimed 29 validations. Repair target: register and run the standard-normalization derived script, or fix this runner so the exact dispersion, Taylor expansion, cubic harmonic decomposition, and bound comparisons are asserted with classified PASS lines. Claim boundary until fixed: at most a motivation that a Planck-scale cubic lattice could generate CPT-even dimension-6 Lorentz-violating terms, not the specific coefficient/table as audited support.
 - **auditor confidence:** high
 
 ### `main_open_cubic_validation_2026-04-11`
