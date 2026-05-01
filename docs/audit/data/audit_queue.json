@@ -3,9 +3,9 @@
     "critical": 8,
     "high": 196,
     "leaf": 286,
-    "medium": 245
+    "medium": 244
   },
-  "generated_at": "2026-05-01T02:29:41.388977+00:00",
+  "generated_at": "2026-05-01T02:31:16.404722+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6466,23 +6466,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_yt_bottom_yukawa_retention.py",
       "transitive_descendants": 7
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "pmns_lower_level_end_to_end_closure_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 3,
-      "load_bearing_score": 6.785,
-      "note_path": "docs/PMNS_LOWER_LEVEL_END_TO_END_CLOSURE_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 38
     },
     {
       "audit_independence_required": "any_non_self",
@@ -17160,6 +17143,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 343,
-  "total_pending": 735
+  "ready_count": 342,
+  "total_pending": 734
 }
