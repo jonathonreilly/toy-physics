@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:58:34.782771+00:00
+**Generated:** 2026-05-01T04:59:43.130610+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 222 |
-| support | 186 |
+| support | 185 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 814 |
-| ~~audited_failed~~ | 160 |
+| ~~audited_failed~~ | 161 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 243 |
 | `audited_conditional` | 545 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 72 |
+| `audited_failed` | 73 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 660 |
+| `unaudited` | 659 |
 
 | criticality | count |
 |---|---:|
@@ -931,6 +931,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `pmns_corner_transport_active_block_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `pmns_graph_commutant_cycle_value_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
+| `pmns_minimal_branch_nonselection_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `pmns_selector_sign_to_branch_reduction_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -10956,6 +10957,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `scripts/frontier_pmns_lower_level_end_to_end_closure.py`
   - `scripts/pmns_lower_level_utils.py`
+- **auditor confidence:** high
+
+### `pmns_minimal_branch_nonselection_note`
+
+- **Note:** [`PMNS_MINIMAL_BRANCH_NONSELECTION_NOTE.md`](../../docs/PMNS_MINIMAL_BRANCH_NONSELECTION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The current atlas/package isolates the minimal PMNS-producing branches but does not select among them or derive their seven canonical quantities.  _(class `B`)_
+- **chain closes:** False — The runner confirms the two branch-isolation rows, but it exits nonzero because four publication-control checks for blocker/open/frozen state no longer match the current repo surface.
+- **rationale:** Issue: the row's current-atlas nonselection claim is stale relative to the publication controls checked by its primary runner; the runner reports 3 PASS and 4 FAIL and exits nonzero. Why this blocks: the note's load-bearing claim is about the current package state, so failed atlas/validation/matrix/claims-table checks prevent the audit from ratifying it. Repair target: update the note and runner against the current DERIVATION_ATLAS, DERIVATION_VALIDATION_MAP, PUBLICATION_MATRIX, CLAIMS_TABLE, and gate-note language, or replace brittle text checks with ledger-backed current-state checks. Claim boundary until fixed: branch isolation may still be supported, but this row is not an audited current-atlas nonselection theorem.
 - **auditor confidence:** high
 
 ### `pmns_oriented_cycle_channel_value_law_note`
