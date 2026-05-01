@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T22:36:00.194000+00:00
+**Generated:** 2026-05-01T22:37:58.751462+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 58 |
+| **retained_no_go** | 59 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 15 |
+| _proposed_no_go_ | 14 |
 | bounded | 163 |
 | support | 138 |
 | open | 6 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 306 |
+| `audited_clean` | 307 |
 | `audited_conditional` | 652 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 512 |
+| `unaudited` | 511 |
 
 | criticality | count |
 |---|---:|
@@ -198,6 +198,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `equivalence_principle_harness_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `evolving_network_prototype_v3_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `fixed_field_complex_grown_basin_v2_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fixed_field_family_unification_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fixed_field_grown_transfer_scout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -6199,6 +6200,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The finite-rank Woodbury/Dyson identity produces the exact renormalized exterior field, the same shell trace is stationary for the Schur boundary action, and shell averaging gives only a bounded scalar/isotropic metric reduction with the tensorial 3+1 map explicitly left open.  _(class `C`)_
 - **chain closes:** True — For the bounded claim actually made, the runner verifies the exact finite-rank field reconstruction, exterior harmonicity, Schur boundary-action stationarity, and a strongly improved coarse scalar/isotropic residual while preserving the stated blocker that full tensorial 3+1 closure is missing. The note does not overclaim full nonlinear GR.
 - **rationale:** The scoped architecture closes at the grade stated in the note: exact finite-rank source-to-exterior and exact boundary-action stationarity, followed by bounded coarse scalar/isotropic metric evidence. The runner exits 0 and reproduces the stated R_match=5.0 residual improvement while explicitly reporting the nonzero direct 3+1 residual as a blocker. Residual risk is the acknowledged missing tensorial matching/completion principle, which is outside this row's bounded claim boundary.
+- **auditor confidence:** high
+
+### `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30`
+
+- **Note:** [`FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md`](../../docs/FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-agent-first-order-coframe-no-go-20260501`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The explicit Hodge-complement witness * P_1 *^{-1} = P_3, with the same map preserving the listed spin/time/CPT/local substrate tests.  _(class `A`)_
+- **chain closes:** True — The source note gives a self-contained algebraic counterexample: P_1 and P_3 are distinct rank-four sectors exchanged by the Hodge complement, and the runner verifies preservation of the listed substrate structure. With no one-hop dependencies, the negative conclusion closes as a no-go for unconditional first-order selection from those symmetries alone.
+- **rationale:** The claim is a negative boundary theorem, not a positive physical identification. Its load-bearing step is exact algebra on the granted Boolean coframe cell, and the runner checks the contested witness rather than hard-coding the conclusion after the fact. The clean result only supports the stated no-go: it does not derive or rule out an additional first-order boundary/orientation law.
 - **auditor confidence:** high
 
 ### `fixed_field_complex_grown_basin_v2_note`
