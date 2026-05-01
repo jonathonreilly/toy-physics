@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T22:33:49.820951+00:00
+**Generated:** 2026-05-01T22:36:00.194000+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 57 |
+| **retained_no_go** | 58 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 16 |
+| _proposed_no_go_ | 15 |
 | bounded | 163 |
 | support | 138 |
 | open | 6 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 305 |
+| `audited_clean` | 306 |
 | `audited_conditional` | 652 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 513 |
+| `unaudited` | 512 |
 
 | criticality | count |
 |---|---:|
@@ -310,6 +310,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `multipole_tidal_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | B | - |
 | `neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
+| `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `newtonian_distance_law_confirmed` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `nonlabel_grown_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -11019,6 +11020,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `CHARGED_LEPTON_Y_TAU_M3_PREMISE_SELF_CORRECTION_NOTE_2026-04-28.md`
   - `NEUTRINO_LANE4_4A_M_LIGHTEST_WARD_IDENTITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md`
 - **auditor confidence:** medium
+
+### `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27`
+
+- **Note:** [`NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md`](../../docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-agent-neutrino-lane4-fork-20260501`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The current-stack Majorana law gives mu_current = 0, so the current right-handed Majorana matrix is non-invertible, while the diagonal seesaw benchmark requires a nonzero invertible right-handed Majorana spectrum; separately, y_nu^eff v/sqrt(2) is GeV-scale rather than meV-scale.  _(class `A`)_
+- **chain closes:** True — The no-go closes as an algebraic incompatibility among the explicitly assumed surfaces: zero Majorana matrix cannot support a type-I seesaw inverse, and the retained local coefficient cannot be reused as the tiny Dirac Yukawa. The claim is only a negative boundary, not a positive neutrino-mass closure.
+- **rationale:** The runner passes 10 checks and directly exercises the load-bearing fork: zero determinant on the current-stack Majorana surface, nonzero determinant on the seesaw benchmark surface, and the order-of-magnitude failure of the direct Dirac reading. This is not a definition-as-derivation or tuned numerical match; it is an exact incompatibility claim under stated assumptions. The note also keeps the claim boundary narrow by saying Lane 4 remains open and by not asserting a global no-go against Dirac or Majorana neutrino masses.
+- **auditor confidence:** high
 
 ### `neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29`
 
