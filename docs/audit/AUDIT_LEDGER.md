@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:35:22.645755+00:00
+**Generated:** 2026-05-01T06:36:37.544494+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 195 |
+| bounded | 194 |
 | support | 168 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 844 |
+| ~~audited_conditional~~ | 845 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 257 |
-| `audited_conditional` | 577 |
+| `audited_conditional` | 578 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 601 |
+| `unaudited` | 600 |
 
 | criticality | count |
 |---|---:|
@@ -388,6 +388,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bh_entropy_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `bmv_bounded_negative_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `born_lane_comparison_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `born_rule_analysis_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `bound_state_selection_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `branch_entanglement_robustness_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `broad_gravity_derivation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -1895,6 +1896,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
+
+### `born_rule_analysis_2026-04-11`
+
+- **Note:** [`BORN_RULE_ANALYSIS_2026-04-11.md`](../../docs/BORN_RULE_ANALYSIS_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Self-consistent gravity does NOT select alpha=2 (Born rule). Lower alpha is more stable. The test measured Banach fixed-point convergence of the Hartree iteration, not anything about quantum measurement.  _(class `B`)_
+- **chain closes:** False — The interpretation is plausible and bounded, but the row provides no registered runner, audited dependency, or formal proof artifact for the alpha-sweep, fixed-point convergence ranking, or measurement/dynamics separation claim.
+- **rationale:** Issue: the note states a negative Born-rule result and a Banach-contraction diagnosis for the Hartree alpha loop without a primary runner, exact alpha-sweep output, or formal proof dependency. Why this blocks: the audit cannot verify that the measured Lyapunov/convergence ranking or the theorem-level interpretation follows from the restricted inputs. Repair target: register the Hartree alpha-sweep runner and/or add a proof note deriving the Lipschitz/contraction ordering and explicitly separating the measurement postulate from the gravitational dynamics map. Claim boundary until fixed: the row may be used as conditional interpretation of why a self-consistency test would not select Born alpha=2, not as a clean no-go theorem for deriving the Born rule.
+- **open / conditional deps cited:**
+  - `born_rule_analysis_2026-04-11 -> missing Hartree alpha-sweep runner/proof for Banach-contraction diagnosis`
+- **auditor confidence:** medium
 
 ### `bound_state_selection_note`
 
