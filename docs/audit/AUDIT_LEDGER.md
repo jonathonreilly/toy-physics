@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:18:21.710666+00:00
+**Generated:** 2026-05-01T05:19:23.758297+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 246 |
+| `audited_clean` | 247 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 646 |
+| `unaudited` | 645 |
 
 | criticality | count |
 |---|---:|
@@ -308,6 +308,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `pmns_c3_character_mode_reduction_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `pmns_right_conjugacy_invariant_no_go_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -10977,6 +10978,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md`
   - `PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md`
   - `UNREGISTERED: retained hw=1 triplet / coordinate-cycle authority`
+- **auditor confidence:** high
+
+### `pmns_c3_character_mode_reduction_note`
+
+- **Note:** [`PMNS_C3_CHARACTER_MODE_REDUCTION_NOTE.md`](../../docs/PMNS_C3_CHARACTER_MODE_REDUCTION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the graph-first reduced forward-cycle channel, the C3-character modes are z0 = w, z1 = u - i v, z2 = u + i v, so the remaining value problem is one real trivial amplitude plus one complex nontrivial character amplitude chi, and the current sole-axiom routes annihilate chi exactly.  _(class `A`)_
+- **chain closes:** True — The note only sharpens the remaining blocker; it does not claim to solve the PMNS value-selection problem. The runner verifies the exact character transform, conjugacy on the graph-first antiunitary slice, chi=0 for the current free/source-transfer/scalar routes, and target-coordinate circularity guards.
+- **rationale:** The support claim closes as stated: the residual reduced-channel degrees of freedom are exactly w and chi, and the current sole-axiom routes tested by the runner all annihilate the nontrivial C3 character amplitude. The result is not a PMNS value-selection theorem; it cleanly identifies the missing source law that would be needed next. Residual risk is limited to the admitted upstream graph-first/hw=1 response-family framing, which this note does not attempt to prove or promote.
 - **auditor confidence:** high
 
 ### `pmns_c3_nontrivial_current_boundary_note`

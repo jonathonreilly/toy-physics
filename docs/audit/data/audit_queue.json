@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 287,
-    "medium": 156
+    "medium": 155
   },
-  "generated_at": "2026-05-01T05:18:21.409941+00:00",
+  "generated_at": "2026-05-01T05:19:23.504555+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6547,23 +6547,6 @@
       "note_path": "docs/EQUIVALENCE_PRINCIPLE_NOTE.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "pmns_c3_character_mode_reduction_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.587,
-      "note_path": "docs/PMNS_C3_CHARACTER_MODE_REDUCTION_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_pmns_c3_character_mode_reduction.py",
       "transitive_descendants": 33
     },
     {
@@ -15651,6 +15634,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 250,
-  "total_pending": 646
+  "ready_count": 249,
+  "total_pending": 645
 }
