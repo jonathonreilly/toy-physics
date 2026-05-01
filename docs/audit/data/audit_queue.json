@@ -5,7 +5,7 @@
     "leaf": 286,
     "medium": 279
   },
-  "generated_at": "2026-05-01T00:45:11.978072+00:00",
+  "generated_at": "2026-05-01T00:46:50.262624+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -26,12 +26,12 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
+      "audit_status": "audit_in_progress",
+      "blocker": "awaiting_cross_confirmation",
       "claim_id": "s3_taste_cube_decomposition_note",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": null,
+      "cross_confirmation_status": "awaiting_second",
       "current_status": "proposed_retained",
       "deps": [],
       "direct_in_degree": 10,
