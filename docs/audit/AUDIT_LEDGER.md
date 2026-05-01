@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:40:36.371644+00:00
+**Generated:** 2026-05-01T05:41:48.829956+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 212 |
-| support | 173 |
+| support | 172 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 831 |
-| ~~audited_failed~~ | 166 |
+| ~~audited_failed~~ | 167 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 250 |
 | `audited_conditional` | 562 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 78 |
+| `audited_failed` | 79 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 629 |
+| `unaudited` | 628 |
 
 | criticality | count |
 |---|---:|
@@ -984,6 +984,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `universal_gr_a1_invariant_section_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
+| `universal_gr_positive_background_extension_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `universal_gr_positive_background_local_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `universal_gr_tensor_quotient_uniqueness_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `wilson_mu2_distance_sweep_note_2026-04-11` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
@@ -13265,6 +13266,20 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** On the Lorentzian class, H_D is no longer positive definite; H_D remains exactly nondegenerate; therefore K_GR(D) remains exactly nondegenerate, so F_* = K_GR(D)^-1 J exists uniquely.  _(class `A`)_
 - **chain closes:** True — At support scope, the note only extends the local algebra from positive definite to nondegenerate Lorentzian backgrounds. Nondegeneracy is preserved by the stated congruence-covariant Hessian and tensoring with the positive slice generator, while the note explicitly withholds the stronger global solution-class claim.
 - **rationale:** Clean at the declared support boundary. The result is an algebraic signature-class extension: positivity is not needed for the local bilinear form to be defined or nondegenerate, only for convexity, and the note does not promote this to global Lorentzian GR closure. Residual risk is scope drift: downstream rows must not cite this as a global solution theorem or as physical Lorentzian-background selection.
+- **auditor confidence:** high
+
+### `universal_gr_positive_background_extension_note`
+
+- **Note:** [`UNIVERSAL_GR_POSITIVE_BACKGROUND_EXTENSION_NOTE.md`](../../docs/UNIVERSAL_GR_POSITIVE_BACKGROUND_EXTENSION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note defines H_D by B_D(h,k) = -Tr(D^-1 h D^-1 k), then claims K_GR(D) = H_D ⊗ Lambda_R is symmetric positive definite for every positive-symmetric background.  _(class `A`)_
+- **chain closes:** False — For any nonzero symmetric h and positive D, B_D(h,h) = -Tr(D^-1 h D^-1 h) is negative, so the Hessian operator induced by this bilinear form is negative definite; tensoring it with a symmetric positive definite Lambda_R cannot produce a symmetric positive definite K_GR(D) without an extra minus sign or sign convention not stated in the note.
+- **rationale:** Issue: the load-bearing positive-definiteness and unique-minimum claim contradicts the note's own Hessian sign. Why this blocks: with B_D(h,h) = -Tr(D^-1 h D^-1 h), H_D is negative definite on nonzero symmetric perturbations, so K_GR(D) = H_D ⊗ Lambda_R is negative definite if Lambda_R is positive definite; the stated convex boundary action and exact stationary minimum do not follow. Repair target: either define the glued operator using -H_D with a derived sign convention, or restate the family as a negative Hessian/concave quadratic and redo the completion identity accordingly, with a runner checking sample positive backgrounds. Claim boundary until fixed: the orthogonal covariance and principal-basis weight formulas may remain algebraic support, but the positive-background SPD glued-family and convex-completion conclusion are not valid as written.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_GR_POSITIVE_BACKGROUND_EXTENSION_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_gr_positive_background_local_closure_note`

@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 287,
-    "medium": 139
+    "medium": 138
   },
-  "generated_at": "2026-05-01T05:40:36.012468+00:00",
+  "generated_at": "2026-05-01T05:41:48.577293+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6545,23 +6545,6 @@
       "direct_in_degree": 1,
       "load_bearing_score": 5.587,
       "note_path": "docs/EQUIVALENCE_PRINCIPLE_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "universal_gr_positive_background_extension_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.587,
-      "note_path": "docs/UNIVERSAL_GR_POSITIVE_BACKGROUND_EXTENSION_NOTE.md",
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 33
@@ -15362,6 +15345,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 233,
-  "total_pending": 629
+  "ready_count": 232,
+  "total_pending": 628
 }
