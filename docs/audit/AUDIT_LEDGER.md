@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T21:02:17.465243+00:00
+**Generated:** 2026-05-01T21:03:22.504112+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 168 |
-| support | 138 |
+| support | 137 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 940 |
+| ~~audited_conditional~~ | 941 |
 | ~~audited_failed~~ | 84 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 301 |
-| `audited_conditional` | 643 |
+| `audited_conditional` | 644 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 519 |
+| `unaudited` | 518 |
 
 | criticality | count |
 |---|---:|
@@ -939,6 +939,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_time_tensorized_schur_primitive_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_time_theta_to_slice_coupling_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_time_transfer_matrix_bridge_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `scalar_selector_cycle13_meta_closure_status_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13432,6 +13433,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The note records the current scalar-KG rerun state: frontier_scalar_kg_16card_v2.py returns 13/16 with C12-C14 failing, while frontier_scalar_kg_full_suite.py returns 28/38 applicable measures and 20 N/A, so scalar KG is a bounded reference architecture rather than a literal 16/16 axiom-derived closure.  _(class `C`)_
 - **chain closes:** True — The note's measured rerun claims close against the current scripts, and its safe interpretation matches the runner outputs.
 - **rationale:** The current primary runner reproduces the note's 13/16 result and the named C12-C14 failures, and the secondary full-suite runner reproduces the stated 28/38 applicable score with 20 N/A measures. The note does not promote scalar KG as an axiom-derived theorem; it explicitly frames the lane as a reference architecture/ceiling test and preserves the strict-card failures. Residual risk is limited to the bounded/reference status and the usual runner-output formatting, not the claim boundary being audited.
+
+### `scalar_selector_cycle13_meta_closure_status_note_2026-04-19`
+
+- **Note:** [`SCALAR_SELECTOR_CYCLE13_META_CLOSURE_STATUS_NOTE_2026-04-19.md`](../../docs/SCALAR_SELECTOR_CYCLE13_META_CLOSURE_STATUS_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims the same-day scalar-selector meta-closure compresses four routes to two meta-principles, DIM-UNIQ and STRC, while still not providing full reviewer-grade object derivations or a 4 -> 0 closure.  _(class `B`)_
+- **chain closes:** False — The meta-accounting is plausible branch guidance, but it is conditional on unregistered upstream theorem surfaces and lacks executable verification.
+- **rationale:** Issue: the meta-closure accounting depends on upstream MRU, Berry, DPLE, STRC/RPSR, and DIM-UNIQ theorem surfaces, but this row has no registered dependencies and no runner; the status preface also blurs the cautious body by mentioning reviewer-grade derivations while the body says reviewer-grade closures remain zero. Why this blocks: the 4 -> 2 accounting and BACT target cannot be independently checked from the note alone. Repair target: register the four route notes and the DIM-UNIQ/STRC theorem notes as dependencies, add a structured accounting checker for the route-to-meta-principle compression, and clarify the status line to match the reviewer-bar caveat. Claim boundary until fixed: the note is support-level branch triage identifying DIM-UNIQ + STRC as the current obstruction map.
+- **open / conditional deps cited:**
+  - `MRU/Berry/DPLE/STRC theorem surfaces`
+  - `DIM-UNIQ and BACT accounting notes`
 
 ### `scalar_trace_tensor_no_go_note`
 
