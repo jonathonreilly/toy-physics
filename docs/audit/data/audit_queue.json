@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 204,
-    "medium": 134
+    "medium": 133
   },
-  "generated_at": "2026-05-01T11:32:30.719311+00:00",
+  "generated_at": "2026-05-01T11:37:49.158096+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6568,23 +6568,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_observable_grammar_exhaustion_obstruction.py",
       "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "work_history.potential_publication_discoveries_log",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "open",
-      "deps": [],
-      "direct_in_degree": 2,
-      "load_bearing_score": 2.585,
-      "note_path": "docs/work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 2
     },
     {
       "audit_independence_required": "any_non_self",
@@ -13875,6 +13858,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 141,
-  "total_pending": 541
+  "ready_count": 140,
+  "total_pending": 540
 }

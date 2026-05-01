@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:32:30.930096+00:00
+**Generated:** 2026-05-01T11:37:49.389216+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,22 +23,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | bounded | 187 |
 | support | 160 |
-| open | 8 |
+| open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 858 |
+| ~~audited_conditional~~ | 859 |
 | ~~audited_failed~~ | 178 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 302 |
-| `audited_conditional` | 588 |
+| `audited_conditional` | 589 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 541 |
+| `unaudited` | 540 |
 
 | criticality | count |
 |---|---:|
@@ -969,6 +969,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `work_history.gw_echo_timing_route_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `work_history.potential_publication_discoveries_log` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_bridge_endpoint_shift_bound_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_bridge_rearrangement_principle_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_bridge_variational_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -15099,6 +15100,20 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **open / conditional deps cited:**
   - `GW_ECHO_NULL_RESULT_NOTE.md`
 - **auditor confidence:** high
+
+### `work_history.potential_publication_discoveries_log`
+
+- **Note:** [`work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](../../docs/work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Every item should point to a retained note or runner.  _(class `B`)_
+- **chain closes:** False — The source is a historical planning inventory, and the ledger row provides no one-hop authorities or runner that verifies the retained/bounded status of each evidence item. The table can remain an inventory, but its inclusion rule is conditional on cross-note evidence that is not closed in this audit context.
+- **rationale:** Issue: the inclusion rule requires every listed discovery to point to retained note evidence or a runner, but this audit row exposes no registered one-hop authorities or primary runner to verify those status labels. Why this blocks: without those inputs, the inventory cannot be audited as a closed claim rather than as a planning list. Repair target: either gate this work-history inventory out of the audit ledger or register/verify the cited evidence notes and runners item by item. Claim boundary until fixed: use this file only as historical paper-planning inventory, not as an audit-ratified discovery ledger.
+- **open / conditional deps cited:**
+  - `work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`
+- **auditor confidence:** medium
 
 ### `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11`
 
