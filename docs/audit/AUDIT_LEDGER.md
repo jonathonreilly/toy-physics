@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T10:44:05.534321+00:00
+**Generated:** 2026-05-01T10:46:26.608614+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 294 |
+| `audited_clean` | 295 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 551 |
+| `unaudited` | 550 |
 
 | criticality | count |
 |---|---:|
@@ -340,6 +340,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_readout_taper_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `persistent_object_top3_multistage_probe_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `persistent_record_matched_compare_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -11616,6 +11617,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The top4 multistage floor transfers across 11 of 13 widened local-pocket rows, with the only failed rows being source0.75 and source1.00 and the residual inward-source boundary lying between source_z=1.00 and 1.25.  _(class `C`)_
 - **chain closes:** True — Current runner executions covered all 13 listed rows: the completed source-side output showed baseline plus source1.25/source1.50/source2.50/source2.75 admissible and source0.75/source1.00 inadmissible, while the width/length slice completed at 6/6 admissible. Combined, this reproduces the note's 11/13 widened-pocket pattern.
 - **rationale:** Clean within the note's bounded transfer-sweep scope. The load-bearing claim is the exact-lattice top4 multistage floor's tested local-pocket transfer pattern, not matter closure or full local-pocket universality. The current runner output reproduces the reported residual inward boundary: source0.75 and source1.00 fail, source1.25 and source1.50 pass, both outward-source rows pass, and all width/length rows pass. The source1.00 miss is the reported exponent miss at stage_alpha=[1.11,1.11,1.11]. Residual risk is exactly the stated boundary: this remains a finite widened-pocket sweep below persistent inertial-mass closure.
+- **auditor confidence:** high
+
+### `persistent_record_matched_compare_note`
+
+- **Note:** [`PERSISTENT_RECORD_MATCHED_COMPARE_NOTE.md`](../../docs/PERSISTENT_RECORD_MATCHED_COMPARE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On matched generated DAGs, seeds, k-band, and post-barrier setup, the persistent-record lane is competitive and beats the entangling-env lane, but it is not the raw purity winner over node-label or graph-memory scars on the tested bounded slice.  _(class `C`)_
+- **chain closes:** True — Fresh runner executions reproduced both matched tables: the full N=8,12 two-seed comparison including scar and the fast N=8,12,18 two-seed comparison without scar. The reported purity rankings and persistent-record gamma rows match the source note.
+- **rationale:** Clean within the note's bounded comparison scope. The note explicitly rejects the strong raw-purity-winner claim and keeps the safe claim to matched small-slice competitiveness plus explicit residual branch-overlap structure. Current runner output reproduces the full N=8,12 table and the fast N=8,12,18 table, including node-label beating persistent records at N=12 and N=18 while persistent trace/gamma=1.0 remain materially better than the entangling-env row. Residual risk is the declared bounded slice: two seeds, selected N values, selected k band, and no asymptotic or closure claim.
 - **auditor confidence:** high
 
 ### `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30`
