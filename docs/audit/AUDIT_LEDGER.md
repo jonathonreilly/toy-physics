@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:36:26.777408+00:00
+**Generated:** 2026-05-01T04:37:58.988932+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 224 |
-| support | 191 |
+| support | 190 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 809 |
+| ~~audited_conditional~~ | 810 |
 | ~~audited_failed~~ | 159 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 540 |
+| `audited_conditional` | 541 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 18 |
-| `unaudited` | 678 |
+| `unaudited` | 677 |
 
 | criticality | count |
 |---|---:|
@@ -623,6 +623,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
+| `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hadron_mass_lane1_theorem_plan_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hard_geometry_gravity_window_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7443,6 +7444,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The B2 bridge can be made much more explicit using modern static-energy data, but it remains bounded and needs a declared force-scale or finite-window-tension observable, the convention split as an uncertainty, and a B5 framework-to-standard-QCD residual.  _(class `D`)_
 - **chain closes:** False — The runner confirms useful external static-energy/force-scale inputs, but it also confirms that neither a unique sigma scheme nor the B5 framework-to-standard-QCD link is closed.
 - **rationale:** Issue: the bridge relies on external static-energy/force-scale values while the unique sigma scheme and B5 framework-to-standard-QCD link remain open. Why this blocks: the note can bound and improve the B2 bridge, but it cannot promote sqrt(sigma) to retained closure from the current inputs. Repair target: choose and justify a force-scale or finite-window-tension observable, carry the convention split as an explicit uncertainty, and close the B5 framework-to-standard-QCD residual. Claim boundary until fixed: the note remains a support scout showing modern static-energy inputs are useful but not sufficient for retained B2.
+- **auditor confidence:** high
+
+### `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30`
+
+- **Note:** [`HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md`](../../docs/HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** B5 is structurally supported but not retained: current framework-side evidence is small-volume consistency, and imported static-energy and string-tension constants must remain bounded bridge inputs until a large-volume Wilson/Creutz/force-scale ladder or equivalent theorem lands.  _(class `B`)_
+- **chain closes:** False — The runner verifies the current-surface no-go, but the B5 bridge itself remains open because large-volume/asymptotic framework-side Wilson, Creutz, or force-scale evidence with uncertainty is missing.
+- **rationale:** Issue: the current B5 surface stops at structural SU(3), beta=6 support, and small-volume consistency checks, while the large-volume/asymptotic framework-to-standard-QCD bridge remains absent. Why this blocks: standard lattice-QCD static-energy and string-tension constants cannot be imported as retained framework quantities without that ladder or an equivalent theorem. Repair target: run or prove a framework-side Wilson/Creutz/force-scale ladder with finite-volume/asymptotic uncertainty, or otherwise derive the standard-QCD observable equivalence. Claim boundary until fixed: the note cleanly identifies a current-surface no-go, but the B5 bridge remains conditional/open for downstream sigma imports.
 - **auditor confidence:** high
 
 ### `hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27`
