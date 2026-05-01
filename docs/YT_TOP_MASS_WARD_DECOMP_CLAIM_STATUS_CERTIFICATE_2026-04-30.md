@@ -13,8 +13,11 @@
 ## Status
 
 ```yaml
-actual_current_surface_status: no-go / exact-negative-boundary
-conditional_surface_status: null
+actual_current_surface_status: no-go / bounded-negative-boundary
+conditional_surface_status: >
+  W-I (WTI structural) and W-IV (4-fermion definitional) are unconditional.
+  W-II (HS) and W-III (source-functional) are conditional on D9 + D17 retained.
+  W-V (SDE/BHL gap equation) is blocked by plaquette/alpha_LM forbidden set.
 hypothetical_axiom_status: >
   Conditional on: permitting D17 as a definition source (rather than only
   a consistency check), the Ward route gives exact y_t_bare = 1/sqrt(6).

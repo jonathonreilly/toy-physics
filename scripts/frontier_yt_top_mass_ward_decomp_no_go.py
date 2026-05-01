@@ -238,11 +238,11 @@ check(
 
 # W-IV-3: Combined: OGE four-fermion coefficient = g^2 * (-1/(2*N_c)) * 1
 #          = -G_eff = -1/6 (dimensionless part of Gamma^(4) coefficient)
-oге_4f_coeff = g_bare**2 * color_fierz_singlet_coeff * c_S_abs  # = -1/6
+oge_4f_coeff = g_bare**2 * color_fierz_singlet_coeff * c_S_abs  # = -1/6
 check(
     "W-IV-3: OGE four-fermion coefficient = -G_eff = -1/6",
-    abs(oге_4f_coeff - (-G_eff_expected)) < 1e-12,
-    f"OGE 4f coeff={oге_4f_coeff:.8f}, -G_eff={-G_eff_expected:.8f}"
+    abs(oge_4f_coeff - (-G_eff_expected)) < 1e-12,
+    f"OGE 4f coeff={oge_4f_coeff:.8f}, -G_eff={-G_eff_expected:.8f}"
 )
 
 # W-IV-4: This coefficient is a four-fermion coupling constant, NOT a Yukawa.
@@ -315,7 +315,10 @@ if FAIL == 0:
     print("  All authorized routes (WTI, HS, source-functional, Fierz)")
     print("  require this identification at the same obstruction node.")
     print()
-    print("Claim status: no-go / exact-negative-boundary")
+    print("Claim status: no-go / bounded-negative-boundary")
+    print("W-I/IV: unconditional obstruction.")
+    print("W-II/III: conditional on D9+D17 retained.")
+    print("W-V (SDE/BHL): blocked by plaquette/alpha_LM dependency.")
     print("Ward route cannot be made audit-clean without H_unit or equivalent.")
 else:
     print(f"WARNING: {FAIL} checks failed.  See stderr for details.")

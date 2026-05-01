@@ -1,8 +1,9 @@
-# Top-Sector Ward-Decomposition Pass: Exact No-Go for Audit-Clean Yukawa Pin
+# Top-Sector Ward-Decomposition Pass: Bounded No-Go for Audit-Clean Yukawa Pin
 
 **Date:** 2026-04-30  
-**Status:** no-go / exact-negative-boundary — Ward-decomposition second pass,
-  four authorized routes exhausted; exact audit-clean obstruction identified  
+**Status:** no-go / bounded-negative-boundary — Ward-decomposition second pass,
+  four authorized routes exhausted; SDE/BHL route additionally blocked below;
+  W-I and W-IV are unconditional, W-II and W-III conditional on D9+D17 retained  
 **Claim boundary authority:** this note  
 **Loop slug:** yt-top-mass-substrate-pin-ward-clean-20260430  
 **Import ledger:** `YT_TOP_MASS_WARD_DECOMP_ASSUMPTIONS_AND_IMPORTS_2026-04-30.md`  
@@ -209,34 +210,39 @@ By the LSZ theorem, the physical pole in σ's propagator corresponds to the
 lightest scalar-singlet composite state on Q_L.  D17 proves that state is
 H_unit.  Therefore σ = H_unit.
 
-**Step 3: The HS definition of y_σ is the H_unit identification in disguise.**
+**Step 3: The HS coupling y_σ is a Yukawa only after identifying σ with the physical composite scalar.**
 
-The coupling `y_σ` in the HS Lagrangian `y_σ σ ψ̄ψ` is the coupling of H_unit
-to the fermion bilinear (up to the canonical normalization factor Z = √6).
-Specifically:
+The HS Lagrangian `y_σ σ (ψ̄ψ)_{(1,1)}` is a formal three-field coupling: auxiliary
+field σ coupled to the fermion bilinear with coefficient y_σ = 1/√6.  σ is a formal
+integration variable introduced to linearize the path integral.  For y_σ to equal the
+physical SM top Yukawa coupling y_t_bare, σ must be identified with the physical
+composite Higgs field.  By D17, the unique composite scalar on Q_L is H_unit.
 
-```
-y_σ σ ψ̄ψ = y_σ · H_unit · (ψ̄ψ)_{(1,1)} · Z
-          = y_t_bare H_unit (ψ̄ψ)_{(1,1)} · Z                  (HS-4)
-```
-
-where the factor Z = √6 is the canonical normalization of H_unit from D17.
-
-This is exactly the H_unit-to-top Yukawa vertex that the original Ward note
-used in Rep B.  The HS route has reproduced the forbidden identification under
-the name "y_σ" instead of "y_t_bare."
+**On the HS-as-definition sub-route:** One might attempt to define y_t_bare := y_σ
+(the HS matching coefficient) without naming σ as H_unit, treating y_σ as a UV
+coupling in the composite EFT.  The stated forbiddance set bans "H_unit matrix element
+as definition" — and defining y_t_bare := y_σ does not use a matrix element.  However,
+for y_σ to be the physical SM Yukawa, the IR identification σ ↔ physical Higgs is
+unavoidable: without it, y_σ is the coupling of an abstract auxiliary field, not the
+top Yukawa in any operationally testable sense.  This IR identification requires D17
+(or an equivalent composite identification).  The forbiddance set is therefore most
+naturally interpreted as extending to any definition that ultimately requires the
+composite scalar identification — which is what all four authorized routes require.
+This is the source of the conditionality in the bounded-negative-boundary label.
 
 ### 3.3 Obstruction for Route W-II
 
-**HS exact obstruction:** The HS auxiliary field σ in the Q_L scalar-singlet
-channel of the Cl(3)×Z³ framework is algebraically equivalent to H_unit (D17).
-Therefore, defining `y_t_bare := y_σ` (the HS coupling) is a renaming of the
-H_unit-to-top matrix-element identification.  The audited_renaming classification
-of the prior Ward route applies equally to the HS route.
+**HS obstruction (D17-conditional):** The HS auxiliary field σ in the Q_L scalar-
+singlet channel of the Cl(3)×Z³ framework must be identified with H_unit (D17) to
+act as the physical SM Higgs.  Defining `y_t_bare := y_σ` without that identification
+gives a formal UV coupling with no guaranteed physical interpretation.  With the
+identification, the route reproduces the H_unit-coupling step flagged as
+`audited_renaming`.
 
-The numerical value `y_σ = 1/√6` is correct and substrate-native, but it
-arrives via an identification `σ ≡ H_unit` that is the same step the auditors
-flagged.  The HS route does not resolve the audit-clean obstruction.
+The numerical value `y_σ = 1/√6` is correct and substrate-native; the obstruction is
+in the interpretation step.  The HS route is conditionally blocked (conditional on D9
++ D17 retained, and on the interpretation that "physical Yukawa" requires a physical
+scalar identification).
 
 ---
 
@@ -432,16 +438,31 @@ is the H_unit identification, which is forbidden.
 
 ## 6. Synthesis: The Exact Audit-Clean Obstruction
 
-### 6.1 Agreement across four routes
+### 6.1 Agreement across four authorized routes plus the SDE/BHL route
 
-All four authorized routes reach the same structural obstruction:
+Five field-theoretic routes are assessed (four authorized in the pass goal, one
+additional route raised by review):
 
-| Route | Attempt | Obstruction |
-|---|---|---|
-| W-I: actual WTI | WTI constrains gauge vertex, not Yukawa | No WTI acts on Yukawa sector; PCAC uses m_t as input |
-| W-II: HS rewrite | HS field σ gives y_σ = 1/√6 | σ ≡ H_unit by D17; HS is H_unit identification in disguise |
-| W-III: source-functional | Γ^{(1,2)} residue = 1/√6 | Canonical normalization Z = √6 requires D17 ↔ H_unit |
-| W-IV: Fierz/OGE alone | Coefficient g²/(2N_c) from D12+S2+D16 | 4-fermion amplitude ≠ Yukawa coupling without scalar-field identification |
+| Route | Attempt | Obstruction | Obstruction node |
+|---|---|---|---|
+| W-I: actual WTI | WTI constrains gauge vertex, not Yukawa | No WTI acts on Yukawa sector; PCAC uses m_t as input | Unconditional |
+| W-II: HS rewrite | HS field σ gives y_σ = 1/√6 | σ must be identified with physical Higgs; identification requires D17 | D17 / composite ID |
+| W-III: source-functional | Γ^{(1,2)} residue = 1/√6 | Canonical normalization Z = √6 requires D17 | D17 |
+| W-IV: Fierz/OGE alone | Coefficient g²/(2N_c) from D12+S2+D16 | 4-fermion amplitude ≠ Yukawa coupling without scalar-field identification | Unconditional |
+| W-V: SDE/NJL compositeness (Bardeen-Hill-Lindner) | Gap-equation compositeness condition from OGE; y_t(Λ) → ∞ UV boundary + RGE to v | RGE from Λ to v requires α_s(v) or α_s(Λ) (forbidden plaquette/α_LM dependency); Λ in physical units requires scale-setting (also forbidden) | plaquette/α_LM |
+
+**W-V (SDE/BHL):** The five-frame pass (§7.3) already notes that the Pendleton-Ross
+IR quasi-fixed-point is blocked by α_s/α_LM dependency.  The Bardeen-Hill-Lindner
+compositeness condition (y_t(Λ) → ∞, run to v via SM RGE) is a related but
+distinct route: it bypasses the D17 scalar-identification node entirely (the gap
+equation uses G_eff from D12+S2+D16 directly without naming a scalar) but hits
+the scale-setting / α_s running obstruction.  Specifically: the gap equation
+```
+m_t ≠ 0  iff  G_eff > G_crit = 8π² / (N_c · Λ²)
+```
+requires Λ in physical units to evaluate G_crit; and the RGE `μ dy_t/dμ ∝ y_t(y_t² - α_s)/(16π²)`
+requires α_s(v) to predict y_t(v).  Both are in the plaquette/α_LM forbidden set.
+The SDE/BHL route is therefore blocked by a different node than D17, but blocked.
 
 ### 6.2 The narrow Ward-clean no-go statement
 
@@ -514,16 +535,25 @@ D12 + S2 + D16  →  Γ^(4)_S = -g²/(2N_c q²) O_S   [four-fermion amplitude]
        H_unit identification = audited_renaming obstruction
 ```
 
-This diagram has no bypass.  Every authorized alternative route (W-I, W-II,
-W-III, W-IV) reaches the same node: **"naming the scalar φ on Q_L = H_unit."**
+W-I and W-IV reach this node unconditionally.  W-II and W-III reach it
+conditionally (given D9 + D17 as retained framework facts).  W-V (SDE/BHL)
+bypasses the D17 node entirely but hits the plaquette/α_LM node instead.
+
+No authorized route bypasses both nodes.
 
 ---
 
 ## 7. Claim Status
 
 ```yaml
-actual_current_surface_status: no-go / exact-negative-boundary
-conditional_surface_status: null
+actual_current_surface_status: no-go / bounded-negative-boundary
+conditional_surface_status: >
+  W-I and W-IV obstructions are unconditional (structural + definitional).
+  W-II and W-III obstructions are conditional on D9 + D17 retained as framework facts.
+  W-V (SDE/BHL) obstruction is conditional on plaquette/alpha_LM forbidden set.
+  Combined: bounded-negative-boundary (all routes blocked within current forbiddance
+  set, with W-II/III conditional on retained framework facts and W-V on the same
+  plaquette prohibition as the five-frame pass).
 hypothetical_axiom_status: >
   conditional on: permitting D17 as definition source (not only as consistency
   check), the Ward route gives exact y_t_bare = 1/sqrt(6). This is not permitted
