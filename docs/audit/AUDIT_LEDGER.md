@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:20:15.483451+00:00
+**Generated:** 2026-05-01T02:21:32.499260+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 2 |
 | bounded | 261 |
-| support | 215 |
+| support | 214 |
 | open | 16 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 45 |
-| ~~audited_conditional~~ | 772 |
+| ~~audited_conditional~~ | 773 |
 | ~~audited_failed~~ | 143 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 229 |
-| `audited_conditional` | 504 |
+| `audited_conditional` | 505 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 12 |
-| `unaudited` | 739 |
+| `unaudited` | 738 |
 
 | criticality | count |
 |---|---:|
@@ -742,6 +742,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_selector_class_space_uniqueness_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_selector_current_stack_zero_law_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `pmns_selector_nonuniversal_support_reduction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `pmns_selector_sector_odd_reduction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
 | `pmns_sigma_zero_nogo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `pmns_transfer_operator_dominant_mode_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -10375,6 +10376,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `LEPTON_SHARED_HIGGS_UNIVERSALITY_UNDERDETERMINATION_NOTE.md`
   - `PMNS_SELECTOR_SECTOR_ODD_REDUCTION_NOTE.md`
   - `UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md`
+- **auditor confidence:** high
+
+### `pmns_selector_sector_odd_reduction_note`
+
+- **Note:** [`PMNS_SELECTOR_SECTOR_ODD_REDUCTION_NOTE.md`](../../docs/PMNS_SELECTOR_SECTOR_ODD_REDUCTION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_selector_sector_odd_reduction_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the reduced one-sided PMNS surface, any branch-distinguishing scalar can be replaced, for selector purposes, by its nonzero sector-odd part under sigma: (Y_nu, Y_e) -> (Y_e, Y_nu).  _(class `A`)_
+- **chain closes:** False — The antisymmetrization argument is exact on the assumed two-orientation surface, but the row declares no dependencies for the support-side nonforcing and scalar-bridge nonrealization inputs, both imported obstruction notes are themselves conditional, and the runner emits unclassified PASS lines.
+- **rationale:** Issue: the runner's parity checks complete with PASS=10/FAIL=0, but the PASS lines are unclassified and the row has deps=[] while the theorem assumes PMNS sector-exchange nonforcing, PMNS scalar bridge nonrealization, and an atlas obstruction-row check; those imported obstruction notes are currently audited_conditional. Why this blocks: a clean reduction to a sector-odd mixed bridge requires the reduced one-sided surface, support-bank nonforcing, and scalar-bank nonrealization to be declared and cleanly audited before this note can use them as premises. Repair target: declare the two obstruction notes and atlas/current-bank surface as dependencies, resolve or retain their conditional blockers explicitly, and classify the runner's antisymmetrization, support-bank, and scalar-bank checks as A/B PASS lines. Claim boundary until fixed: support-level algebra showing that a branch-distinguishing scalar on the assumed two-orientation surface has a nonzero sector-odd part; not an independently audited theorem that the PMNS selector must be a sector-odd mixed bridge from retained primitives.
+- **open / conditional deps cited:**
+  - `publication/ci3_z3/DERIVATION_ATLAS.md`
+  - `PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md`
+  - `PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md`
 - **auditor confidence:** high
 
 ### `pmns_selector_three_identity_support_note_2026-04-21`
