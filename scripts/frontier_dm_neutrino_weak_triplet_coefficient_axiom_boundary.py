@@ -171,7 +171,17 @@ def part4_the_current_single_axiom_boundary_is_exact() -> None:
     print("PART 4: THE CURRENT SINGLE-AXIOM BOUNDARY IS EXACT")
     print("=" * 88)
 
-    boundary = read("docs/DM_NEUTRINO_WEAK_TRIPLET_COEFFICIENT_AXIOM_BOUNDARY_NOTE_2026-04-15.md")
+    # Stale-path: the boundary note (this runner's own note) was moved to
+    # `archive_unlanded/dm-neutrino-stale-runners-2026-04-30/` because the
+    # broader DM trim retired the runner-as-canonical-claim pairing for this
+    # row. The substring checks below verify the historical note content,
+    # which the archive preserves verbatim. Redirect the read to the archive
+    # location so this runner remains a self-contained verification of its
+    # own load-bearing source-amplitude / benchmark-bounded content.
+    boundary = read(
+        "archive_unlanded/dm-neutrino-stale-runners-2026-04-30/"
+        "DM_NEUTRINO_WEAK_TRIPLET_COEFFICIENT_AXIOM_BOUNDARY_NOTE_2026-04-15.md"
+    )
 
     check(
         "The boundary note records that the live gap is now source amplitudes rather than transfer coefficients",

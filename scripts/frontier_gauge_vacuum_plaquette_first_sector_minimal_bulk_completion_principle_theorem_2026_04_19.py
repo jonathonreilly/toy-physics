@@ -127,7 +127,16 @@ def main() -> int:
 
     truncated_note = read("docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TRUNCATED_ENVIRONMENT_PACKET_NOTE_2026-04-19.md")
     extension_note = read("docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_ZERO_EXTENSION_FACTORIZED_CLASS_THEOREM_NOTE_2026-04-19.md")
-    tail_note = read("docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TAIL_UNDERDETERMINATION_THEOREM_NOTE_2026-04-19.md")
+    # Stale-path: the tail-underdetermination note was moved to
+    # `archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/`
+    # because its dedicated runner (declared but missing on disk) blocked an
+    # audit of THAT note. The substring checks below verify historical
+    # tail-underdetermination content that the archive preserves verbatim.
+    # Redirect to the archive location.
+    tail_note = read(
+        "archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/"
+        "GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TAIL_UNDERDETERMINATION_THEOREM_NOTE_2026-04-19.md"
+    )
 
     rho_ret, z00 = retained_packet()
     _jmat, weights, index = build_recurrence_matrix(5)

@@ -1,0 +1,28 @@
+slug: audit-stale-path-dm-cluster-20260501
+goal: "Cluster fix: 8 runners reference notes deleted by commit d2e754fdc (Trim DM package). Surgical removal of stale read() calls + corresponding check() lines."
+target_status: audit-hygiene-cleanup
+mode: campaign
+runtime: 5h
+session_start_utc: "2026-05-01T18:30:00Z"
+worktree: /tmp/physics-loop-12h-20260430
+base: origin/main
+base_commit_at_start: "fda230e33"
+active_block_branch: "physics-loop/audit-stale-path-dm-cluster-block01-20260501"
+files_to_touch:
+  - scripts/frontier_dm_neutrino_breaking_triplet_axiom_law_attempt.py
+  - scripts/frontier_dm_neutrino_triplet_normalization_target.py
+  - scripts/frontier_dm_neutrino_triplet_character_source_theorem.py
+  - scripts/frontier_dm_neutrino_triplet_even_response_theorem.py
+  - scripts/frontier_dm_neutrino_breaking_triplet_cp_theorem.py
+  - scripts/frontier_dm_neutrino_veven_bosonic_normalization_theorem.py
+  - scripts/frontier_dm_leptogenesis_projection_theorem.py
+  - scripts/frontier_dm_leptogenesis_washout_axiom_boundary.py
+deleted_notes_referenced:
+  - docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md (deleted in d2e754fdc)
+  - docs/DM_LEPTOGENESIS_NOTE.md (deleted in d2e754fdc)
+  - docs/DM_LEPTOGENESIS_BENCHMARK_DECOMPOSITION_NOTE_2026-04-15.md (deleted in d2e754fdc)
+  - docs/DM_LEPTOGENESIS_EXACT_KERNEL_AUDIT_NOTE_2026-04-15.md (deleted in d2e754fdc)
+relocated_notes:
+  - docs/DM_LEPTOGENESIS_FULL_AXIOM_CLOSURE_NOTE_2026-04-16.md -> docs/work_history/dm/DM_LEPTOGENESIS_FULL_AXIOM_CLOSURE_NOTE_2026-04-16.md
+next_exact_action: "Inspect each runner; remove read() + dependent check() lines for deleted notes; redirect read() for relocated notes; re-run each runner; verify PASS=N FAIL=0; commit + PR."
+stop_condition: "all 8 runners pass with FAIL=0; one cluster PR opened"

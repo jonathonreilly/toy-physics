@@ -99,7 +99,17 @@ def main() -> int:
     print("=" * 88)
 
     half_plane_note = read("docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md")
-    completeness_note = read("docs/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md")
+    # Stale-path: the completeness note was moved to
+    # `archive_unlanded/dm-abcc-finite-search-salvage-2026-04-30/` because
+    # the underlying completeness claim was a finite multistart enumeration
+    # rather than a covering proof, per the DM-ABCC salvage trim. The
+    # substring checks below verify the historical enumeration / chamber
+    # content that the archive preserves verbatim. Redirect to the archive
+    # location.
+    completeness_note = read(
+        "archive_unlanded/dm-abcc-finite-search-salvage-2026-04-30/"
+        "DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md"
+    )
     source_cubic_note = read("docs/DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md")
 
     data = basin_data()

@@ -1,11 +1,25 @@
 # Lepton Shared-Higgs Universality Underdetermination
 
-**Date:** 2026-04-15
+**Date:** 2026-04-15 (publication-state references narrowed 2026-05-01)
 **Status:** support - structural or confirmatory support note
 non-universality on the lepton Yukawa lanes
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_lepton_shared_higgs_universality_underdetermination.py`
+(`PASS = 19, FAIL = 0`)
+
+**2026-05-01 publication-state note:** The
+`HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17`
+upgraded `q_H = 0` from CONDITIONAL to GAUGE (retained), so the
+"Neutrino Higgs `Z_3` underdetermination" row this note formerly
+listed as an input has been removed from the atlas (the
+underdetermination it tracked was on `q_H` specifically, which is now
+gauge-redundant for PMNS observables). The shared-Higgs
+**universality** question on the lepton Yukawa lanes is a different
+and still-open question; it is now tracked through the live gates
+note (`GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md`) under "CKM Higgs-Z_3
+universality". This note's underdetermination claim therefore still
+holds verbatim against the current retained stack.
 
 ## Question
 
@@ -33,7 +47,9 @@ shared-Higgs universality.
 
 This theorem reuses:
 
-- `Neutrino Higgs Z_3 underdetermination`
+- `Higgs Z_3 charge PMNS gauge-redundancy theorem` (2026-04-17;
+  replaces the previous `Neutrino Higgs Z_3 underdetermination` input
+  by upgrading `q_H` to GAUGE-retained on PMNS observables)
 - `Lepton single-Higgs PMNS triviality theorem`
 - `Neutrino Dirac two-Higgs escape theorem`
 - `Lepton shared-Higgs universality collapse`

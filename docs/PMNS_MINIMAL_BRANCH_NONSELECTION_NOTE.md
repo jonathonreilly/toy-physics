@@ -1,11 +1,29 @@
 # PMNS Minimal-Branch Current-Atlas Nonselection Theorem
 
-**Date:** 2026-04-15
+**Date:** 2026-04-15 (publication-state references narrowed 2026-05-01)
 **Status:** support - structural or confirmatory support note
 PMNS-producing branches
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_pmns_minimal_branch_nonselection.py`
+(`PASS = 8, FAIL = 0`)
+
+**2026-05-01 publication-state note:** The
+`HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17`
+upgraded `q_H = 0` to GAUGE (retained), the CKM lane was promoted to
+retained quantitative closure, and the PMNS boundary packet was
+rewritten as a thin redirect to the live retained-lane packet. The
+publication-control wording the previous runner asserted ("CKM /
+quantitative flavor open", "frozen-out exact review packet",
+validation-map "Higgs `Z_3` universality" blocker line) was therefore
+rotated out. The note's actual claim — branch isolation without
+selection — is preserved by the live atlas rows for "PMNS
+minimal-branch nonselection", "Neutrino Dirac two-Higgs canonical
+reduction", "Charged-lepton two-Higgs canonical reduction", and the
+companion "Lepton shared-Higgs universality underdetermination" plus
+"Lepton shared-Higgs universality collapse" rows; the live gates note
+keeps the universality lane open. The runner is narrowed to assert
+against that current state; the underlying theorem is unchanged.
 
 ## Question
 

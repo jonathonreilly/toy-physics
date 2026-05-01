@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T22:19:54.300354+00:00",
+  "generated_at": "2026-05-01T22:49:40.729666+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -468,6 +468,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_atomic_rydberg_dependency_firewall.py"
+    },
+    "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 24,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_right_handed_sector.py"
     },
     "audited_symmetry_synthesis_note": {
       "assert_count": 0,
@@ -2016,6 +2028,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/dispersion_all_families.py"
+    },
+    "cross_lane_dependency_map_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_cross_lane_dependency_map.py"
     },
     "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29": {
       "assert_count": 0,
@@ -5946,7 +5970,7 @@
       "counts": {
         "A": 0,
         "B": 1,
-        "C": 14,
+        "C": 16,
         "D": 0
       },
       "decoration_candidate": false,
@@ -5994,7 +6018,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 11,
+        "C": 13,
         "D": 0
       },
       "decoration_candidate": false,
@@ -9397,6 +9421,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary.py"
     },
+    "neutrino_lane4_sr2_premise_audit_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_neutrino_lane4_sr2_premise_audit.py"
+    },
     "neutrino_majorana_adjacent_singlet_placement_theorem_note": {
       "assert_count": 1,
       "counts": {
@@ -11100,6 +11136,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_graph_first_su3_integration.py"
+    },
+    "qcd_low_energy_running_bridge_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 21
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_qcd_low_energy_running_bridge.py"
     },
     "qnm_hardening_feasibility_note": {
       "assert_count": 0,
@@ -18259,6 +18307,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_cross_lane_dependency_map.py": {
+      "assert_count": 1,
+      "claims": [
+        "cross_lane_dependency_map_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_cross_sector_a_squared_koide_vcb_bridge.py": {
       "assert_count": 1,
       "claims": [
@@ -21900,7 +21963,7 @@
       "counts": {
         "A": 0,
         "B": 1,
-        "C": 14,
+        "C": 16,
         "D": 0
       },
       "decoration_candidate": false,
@@ -21960,7 +22023,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 11,
+        "C": 13,
         "D": 0
       },
       "decoration_candidate": false,
@@ -24577,6 +24640,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_neutrino_lane4_sr2_premise_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "neutrino_lane4_sr2_premise_audit_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_neutrino_majorana_adjacent_singlet_placement_theorem.py": {
       "assert_count": 1,
       "claims": [
@@ -26153,6 +26231,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_qcd_low_energy_running_bridge.py": {
+      "assert_count": 1,
+      "claims": [
+        "qcd_low_energy_running_bridge_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 21
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_quark_bicac_endpoint_obstruction_theorem.py": {
       "assert_count": 2,
       "claims": [
@@ -26848,6 +26941,7 @@
     "scripts/frontier_right_handed_sector.py": {
       "assert_count": 0,
       "claims": [
+        "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01",
         "one_generation_matter_closure_note"
       ],
       "counts": {
@@ -32584,13 +32678,13 @@
     "decoration_candidates": 82,
     "dominant_class_distribution": {
       "A": 7,
-      "B": 120,
+      "B": 122,
       "C": 453,
-      "D": 184,
+      "D": 185,
       "none": 403
     },
-    "runners_classified": 1167,
-    "runners_with_C": 545,
-    "runners_with_D": 288
+    "runners_classified": 1170,
+    "runners_with_C": 547,
+    "runners_with_D": 290
   }
 }

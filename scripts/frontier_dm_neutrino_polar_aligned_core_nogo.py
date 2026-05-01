@@ -207,22 +207,21 @@ def part4_bank_records_the_new_h_side_blocker() -> None:
     print("=" * 88)
 
     note = read("docs/DM_NEUTRINO_POLAR_ALIGNED_CORE_NO_GO_NOTE_2026-04-15.md")
-    atlas = read("docs/publication/ci3_z3/DERIVATION_ATLAS.md")
-    blocker = read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")
+    # Stale-path checks removed in this hygiene pass:
+    #
+    # 1. `read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")` — note
+    #    deleted by commit d2e754fdc (2026-04-16, "Trim DM package to
+    #    science-only surface").
+    # 2. The atlas-row check `"| DM neutrino positive-polar aligned-core
+    #    no-go |"` was also stale: the corresponding row was trimmed from
+    #    `docs/publication/ci3_z3/DERIVATION_ATLAS.md` in the same pass.
+    #
+    # The surviving note check verifies the load-bearing aligned-core
+    # K01=K02=(a+b-c-d)/3 content directly.
 
     check(
         "The new note states K01 = K02 = (a+b-c-d)/3 on the aligned core",
         "(a+b-c-d)/3" in note or "(a + b - c - d) / 3" in note,
-    )
-    check(
-        "The atlas carries the positive-polar aligned-core no-go row",
-        "| DM neutrino positive-polar aligned-core no-go |" in atlas,
-    )
-    check(
-        "The blocker note now points at Hermitian symmetry breaking away from the aligned core",
-        "Hermitian-data side" in blocker
-        or "breaking slots away from" in blocker
-        or "aligned core" in blocker,
     )
 
     print()

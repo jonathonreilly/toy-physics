@@ -193,15 +193,15 @@ def part3_the_branch_records_the_even_response_form_cleanly() -> None:
     print("=" * 88)
 
     note = read("docs/DM_NEUTRINO_BREAKING_TRIPLET_CP_THEOREM_NOTE_2026-04-15.md")
-    blocker = read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")
+    # Stale-path check removed: `read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")`
+    # — note deleted by commit d2e754fdc (2026-04-16, "Trim DM package to
+    # science-only surface"). The blocker check it backed referenced now-retired
+    # blocker content; the surviving CP-theorem-note check verifies the same
+    # E1/E2 channel content directly.
 
     check(
         "The CP theorem note records E1 and E2 explicitly",
         "delta + rho" in note and "A + b - c - d" in note,
-    )
-    check(
-        "The blocker note points at the even response channels rather than a generic deformation",
-        "delta + rho" in blocker and "A + b - c - d" in blocker,
     )
 
 
