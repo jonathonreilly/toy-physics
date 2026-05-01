@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T10:59:06.742143+00:00
+**Generated:** 2026-05-01T11:01:03.401949+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 188 |
+| bounded | 187 |
 | support | 162 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 860 |
-| ~~audited_failed~~ | 175 |
+| ~~audited_failed~~ | 176 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 84 |
+| `audited_failed` | 85 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 548 |
+| `unaudited` | 547 |
 
 | criticality | count |
 |---|---:|
@@ -1031,6 +1031,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `minimal_bidirectional_trapping_probe_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `monopole_derived_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | C | - |
 | `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `persistent_record_sidebit_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `pmns_corner_transport_active_block_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `pmns_graph_commutant_cycle_value_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
@@ -11655,6 +11656,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The corrected persistent-record refinement stack improves the residual-connection soft lane modestly, with side+packet+entry at N=18 and gamma=1.0 reaching purity 0.7213, but it still does not beat the node-label baseline at 0.7121.  _(class `C`)_
 - **chain closes:** True — Fresh runner executions reproduced both load-bearing checks: the corrected matched N=8,12,18 table for node, side+packet, and side+packet+entry variants, and the targeted N=18 gamma sweep showing gamma=1.0 beats exact trace while gamma=1.5 and 2.0 worsen.
 - **rationale:** Clean within the note's bounded refinement scope. The note does not claim a new raw decoherence winner; it claims the corrected first-hit side/packet/entry marker stack is a modest real improvement in the residual-connection architecture while still trailing node-label on the tested N=18 row. Current runner output reproduces the matched table and the targeted gamma sweep exactly, including node=0.7121 versus side+packet+entry gamma=1.0 at 0.7213 and worse results at gamma=1.5 and 2.0. Residual risk is the declared bounded two-seed matched slice and the lack of asymptotic or broader-geometry closure.
+- **auditor confidence:** high
+
+### `persistent_record_sidebit_note`
+
+- **Note:** [`PERSISTENT_RECORD_SIDEBIT_NOTE.md`](../../docs/PERSISTENT_RECORD_SIDEBIT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The side-bit matched comparison table is supposed to quantify the bounded improvement of the soft-overlap persistent-record lane against the node-label baseline.  _(class `C`)_
+- **chain closes:** False — The current matched-comparison runner no longer reproduces the note's quoted side-bit table values or detector-sector counts.
+- **rationale:** Issue: the source note's matched side-bit table is stale relative to the current runner. The note reports side-bit gamma=1.0 purities of 0.5685 at N=12 and 0.7270 at N=18 with side-bit detector-sector counts 9.5, 37.5, 121.0; the current runner returns 0.5698 at N=12 and 0.7287 at N=18 with counts 9.5, 37.5, 123.0. Why this blocks: the exact bounded numerical comparison is the load-bearing evidence for the note, so the quoted table cannot be audited clean against the current harness even though the qualitative modest-improvement read mostly remains. Repair target: refresh the side-bit note and frozen log from the current persistent_record_matched_compare.py output, or explicitly mark the note as superseded by the corrected refinement note. Claim boundary until fixed: the current runner still supports the weaker qualitative statement that the side bit modestly improves the soft-overlap lane but does not beat node-label on this bounded slice.
+- **open / conditional deps cited:**
+  - `scripts/persistent_record_matched_compare.py current output diverges from PERSISTENT_RECORD_SIDEBIT_NOTE.md`
 - **auditor confidence:** high
 
 ### `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30`
