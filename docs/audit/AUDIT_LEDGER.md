@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T00:46:50.664745+00:00
+**Generated:** 2026-05-01T00:48:47.288218+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 86 |
-| _proposed_retained_ | 7 |
+| **retained** | 87 |
+| _proposed_retained_ | 6 |
 | bounded | 272 |
 | support | 231 |
 | open | 18 |
@@ -32,8 +32,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
-| `audited_clean` | 225 |
+| `audit_in_progress` | 1 |
+| `audited_clean` | 226 |
 | `audited_conditional` | 481 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
@@ -96,7 +96,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `s3_taste_cube_decomposition_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
-| `z2_hw1_mass_matrix_parametrization_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -322,6 +321,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_single_source_compare_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `weak_coupling_retention_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `z2_hw1_mass_matrix_parametrization_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `abcc_cp_phase_no_go_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `accessible_prediction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `action_crossover_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
@@ -12195,3 +12195,15 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_EW_COLOR_PROJECTION_THEOREM.md: declared dependency missing from ledger deps`
   - `missing theorem: scalar Z_phi physical matching bridge from connected color trace to LSZ Yukawa factor`
 - **auditor confidence:** 0.88
+
+### `z2_hw1_mass_matrix_parametrization_note`
+
+- **Note:** [`Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`](../../docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-clean-context-2026-05-01-crosscheck`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Every Z_2-invariant Hermitian operator on V_1 has the five-real-parameter form M(a,b,c,d) with the stated sign eigenvector and 2 x 2 trivial block.  _(class `A`)_
+- **chain closes:** True — The statement closes as finite-dimensional linear algebra over the explicitly defined carrier and Z_2 swap action. It does not derive the physical residual subgroup or a mass hierarchy, and the note keeps that boundary explicit.
+- **rationale:** The load-bearing step is the classification of the commutant of the axis-swap Z_2 action inside Hermitian operators on the stated triplet. The runner checks invariance, real dimension, sign eigenvector, block reduction, closed-form spectrum, generic splitting, and the S_3-locus collapse without hard-coding a numerical target. Residual risk is limited to the explicitly bounded physical use of this normal form; the audit does not ratify a derived hierarchy or a derivation of the residual subgroup itself.
+- **auditor confidence:** high

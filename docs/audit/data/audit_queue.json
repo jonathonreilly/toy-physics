@@ -1,29 +1,12 @@
 {
   "by_criticality": {
-    "critical": 8,
+    "critical": 7,
     "high": 197,
     "leaf": 286,
     "medium": 279
   },
-  "generated_at": "2026-05-01T00:46:50.262624+00:00",
+  "generated_at": "2026-05-01T00:48:47.064568+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "z2_hw1_mass_matrix_parametrization_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 11,
-      "load_bearing_score": 13.675,
-      "note_path": "docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_z2_hw1_mass_matrix_parametrization.py",
-      "transitive_descendants": 288
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audit_in_progress",
@@ -17718,6 +17701,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 382,
-  "total_pending": 770
+  "ready_count": 381,
+  "total_pending": 769
 }
