@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:43:44.395110+00:00
+**Generated:** 2026-05-01T04:44:55.213611+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 233 |
+| `audited_clean` | 234 |
 | `audited_conditional` | 544 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 672 |
+| `unaudited` | 671 |
 
 | criticality | count |
 |---|---:|
@@ -149,6 +149,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_analytic_stationary_classification_theorem_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_breaking_triplet_source_law_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
+| `dm_leptogenesis_pmns_cp_bridge_boundary_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `dm_leptogenesis_pmns_microscopic_d_last_mile_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_multistart_selector_support_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_observable_relative_action_law_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
@@ -4056,6 +4057,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `scripts/frontier_dm_leptogenesis_pmns_cp_bridge_boundary.py`
   - `scripts/frontier_dm_leptogenesis_pmns_projector_interface.py`
   - `scripts/frontier_dm_neutrino_breaking_triplet_cp_theorem.py`
+- **auditor confidence:** high
+
+### `dm_leptogenesis_pmns_cp_bridge_boundary_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_CP_BRIDGE_BOUNDARY_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_PMNS_CP_BRIDGE_BOUNDARY_NOTE_2026-04-16.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The canonical near-closing PMNS sample decomposes exactly on the same breaking-triplet grammar but lands on the opposite CP sign pattern from the exact source-oriented mainline package.  _(class `B`)_
+- **chain closes:** True — The runner reconstructs the PMNS sample in the breaking-triplet grammar, computes its CP pair, and compares it to the imported exact mainline package; the claimed boundary follows at the note's support scope.
+- **rationale:** The support claim closes: within the supplied PMNS sample and mainline package inputs, the runner verifies that the PMNS sample is on the same grammar but has the opposite CP orientation sheet. This clean audit does not promote the PMNS route because the note explicitly says it is not yet a constructive mainline CP witness. Residual risk: a future source-selection theorem could choose different off-seed charged-sector values, which would be a new claim rather than a contradiction of this boundary row.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_pmns_microscopic_d_last_mile_note_2026-04-16`

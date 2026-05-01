@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 287,
-    "medium": 182
+    "medium": 181
   },
-  "generated_at": "2026-05-01T04:43:44.159868+00:00",
+  "generated_at": "2026-05-01T04:44:54.968637+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6531,23 +6531,6 @@
       "ready": true,
       "runner_path": "scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py",
       "transitive_descendants": 35
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_leptogenesis_pmns_cp_bridge_boundary_note_2026-04-16",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 2,
-      "load_bearing_score": 6.087,
-      "note_path": "docs/DM_LEPTOGENESIS_PMNS_CP_BRIDGE_BOUNDARY_NOTE_2026-04-16.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_leptogenesis_pmns_cp_bridge_boundary.py",
-      "transitive_descendants": 33
     },
     {
       "audit_independence_required": "any_non_self",
@@ -16093,6 +16076,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 276,
-  "total_pending": 672
+  "ready_count": 275,
+  "total_pending": 671
 }
