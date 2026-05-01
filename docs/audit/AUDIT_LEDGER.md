@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T22:37:58.751462+00:00
+**Generated:** 2026-05-01T22:40:03.123463+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 59 |
+| **retained_no_go** | 60 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 14 |
+| _proposed_no_go_ | 13 |
 | bounded | 163 |
 | support | 138 |
 | open | 6 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 307 |
+| `audited_clean` | 308 |
 | `audited_conditional` | 652 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 511 |
+| `unaudited` | 510 |
 
 | criticality | count |
 |---|---:|
@@ -382,6 +382,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `staggered_newton_reproduction_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
+| `substrate_to_p_a_forcing_theorem_note_2026-04-30` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `tensor_block_closure_test_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `tensor_matching_completion_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `tensor_source_map_eta_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -14588,6 +14589,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
   - `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`
   - `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
+- **auditor confidence:** high
+
+### `substrate_to_p_a_forcing_theorem_note_2026-04-30`
+
+- **Note:** [`SUBSTRATE_TO_P_A_FORCING_THEOREM_NOTE_2026-04-30.md`](../../docs/SUBSTRATE_TO_P_A_FORCING_THEOREM_NOTE_2026-04-30.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-agent-substrate-to-pa-no-go-20260501`  (codex-current; independence=fresh_context)
+- **load-bearing step:** P_3 violates none of the stated constraints (a)-(e). It is not P_A, so uniqueness fails.  _(class `A`)_
+- **chain closes:** True — The explicit P_3 projector is rank four, tensor-local, complex-linear, and equivariant under the same spin/time/CPT actions while distinct from P_A. A single admitted non-P_A witness is sufficient to refute uniqueness from the stated constraints.
+- **rationale:** The claim is a finite-dimensional no-go, not a positive carrier identification. The load-bearing step is an explicit algebraic counterexample: the runner constructs the substrate actions, verifies P_A, verifies non-P_A P_3 under the same constraints, and enumerates 17 rank-four local equivariant projector classes. No external comparator, tuned value, open dependency, or symbol renaming is needed for the negative conclusion.
 - **auditor confidence:** high
 
 ### `symmetry_head_to_head_note`
