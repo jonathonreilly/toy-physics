@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-30T23:59:20.897026+00:00
+**Generated:** 2026-05-01T00:01:31.613055+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 86 |
 | _proposed_retained_ | 1 |
 | bounded | 272 |
-| support | 233 |
+| support | 232 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 762 |
+| ~~audited_conditional~~ | 763 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 224 |
-| `audited_conditional` | 484 |
+| `audited_conditional` | 485 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 767 |
+| `unaudited` | 766 |
 
 | criticality | count |
 |---|---:|
@@ -661,6 +661,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_delta_linking_relation_theorem_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `koide_q_delta_readout_retention_split_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_q_op_locality_c3_fixed_source_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `koide_scale_selector_reparameterization_theorem_note_2026-04-20` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_cyclic_response_bridge_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_selected_line_provenance_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_theta_hierarchy_open_scalar_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -8613,6 +8614,22 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The reviewer stress-test enumerates the main internal objections to the Koide Q AM-GM support route and delta ambient-APS support route, and each objection is answered by executable symbolic/numeric checks or explicit scoped premises while leaving the physical bridges open.  _(class `A`)_
 - **chain closes:** True — The registered runner exits 0 with 34/34 checks passing: AM-GM uniqueness/global maximum, tangent-weight/eta identities, positivity/interior checks, PL/smooth/Morse-Bott conditions, independence clustering, Peter-Weyl decoupling, spacetime-lift decoupling, and retained-kinematics scope are all checked on the support surface declared by the note.
 - **rationale:** Clean on the declared internal reviewer-stress-test scope. The runner verifies the stated objections against the AM-GM Koide-Q support chain and ambient-APS delta support chain, and the note explicitly preserves the remaining physical/source-law bridge for Q, the Brannen-phase bridge for delta, and separate PMNS/quark/sign lanes. This audit does not promote Q=2/3 or delta=2/9 to closure; it only ratifies that the listed internal support-chain objections are executable and pass under the stated retained-kinematics premises.
+- **auditor confidence:** high
+
+### `koide_scale_selector_reparameterization_theorem_note_2026-04-20`
+
+- **Note:** [`KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md`](../../docs/KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-ready-20260430-55`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The slot u_small(v,w) used in the scale condition is exactly the Koide-completing root, so Q(u_small^2, v^2, w^2) = 2/3 identically before forming u_small v w.  _(class `A`)_
+- **chain closes:** False — The reparameterization identity closes algebraically and the runner now emits classified A/C/D checks. The row still imports the selected-line H_sel(m), physical point m_*, and kappa/beta witness machinery from unregistered conditional support authorities.
+- **rationale:** Issue: the reparameterization no-go is algebraically correct, but the note's selected-line near-miss and physical-point comparisons depend on unregistered conditional selected-line inputs. Why this blocks: the runner proves u_small is the Koide-completing root and samples the current H_sel(m) branch, but it does not derive H_sel(m), m_*, selected_line_slots, or the kappa witness from retained one-hop authorities. Repair target: register and audit the selected-line cyclic response bridge, gamma-orbit/slot-route witness, and H_sel source theorem; make the runner fail if those inputs are absent or non-retained. Claim boundary until fixed: conditional support/no-go: given the current selected-line model, u v w = 1 is a near-miss reparameterization on an already Koide-completed cone, not a native derivation of Q = 2/3.
+- **open / conditional deps cited:**
+  - `KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md`
+  - `KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md`
+  - `KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md`
 - **auditor confidence:** high
 
 ### `koide_selected_line_cyclic_response_bridge_note_2026-04-18`
