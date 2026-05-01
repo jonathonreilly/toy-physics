@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T19:23:46.404430+00:00
+**Generated:** 2026-05-01T19:26:07.962815+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 206 |
+| bounded | 205 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 896 |
+| ~~audited_conditional~~ | 897 |
 | ~~audited_failed~~ | 79 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 295 |
-| `audited_conditional` | 605 |
+| `audited_conditional` | 606 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 567 |
+| `unaudited` | 566 |
 
 | criticality | count |
 |---|---:|
@@ -675,6 +675,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `generation_axiom_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `global_coherence_held_out2_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `gr_class_expansion_finite_rank_target_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `grav_decoherence_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `gravitational_wave_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7201,6 +7202,21 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** On nine off-scaffold generators, the frozen free_coh >= 7.96e-04 rule scores 5/9, matching the old two-property rule on the same batch.  _(class `D`)_
 - **chain closes:** True — The current runner reproduces the finite off-scaffold table, L2 accuracy 5/9, old-rule accuracy 5/9, and pre-committed structural baseline 8/9. This closes the finite bounded negative, not a universal simple-classifier exclusion theorem.
 - **rationale:** The finite off-scaffold comparison closes from the source note and current runner output. The safe claim is bounded to this nine-generator hand-specified batch, one frozen free_coh threshold, and one old two-property comparator. Residual risk is only scope drift: the result should not be read as excluding all scalar metrics or all simple classifiers.
+- **auditor confidence:** high
+
+### `gr_class_expansion_finite_rank_target_note`
+
+- **Note:** [`GR_CLASS_EXPANSION_FINITE_RANK_TARGET_NOTE.md`](../../docs/GR_CLASS_EXPANSION_FINITE_RANK_TARGET_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The smallest honest class-expansion target beyond the current restricted class is exact finite-rank source-to-metric closure on the current bridge surface, with exact microscopic boundary action and bounded scalar metric reduction.  _(class `B`)_
+- **chain closes:** False — The runner verifies exact finite-rank source renormalization, boundary-action stationarity, a vacuum-close coarse scalar exterior metric, and a nonzero direct 3+1 residual. But the statement that this is the next honest class-expansion target depends on the current restricted gravity/Route-2 bridge stack and the finite-rank theorem surface, which are not clean one-hop dependencies in this row.
+- **rationale:** Issue: the finite-rank runner checks pass, but the load-bearing conclusion is a stack-level route-selection claim: it assumes the current restricted gravity bridge, exact finite-rank source-to-exterior closure, and Route-2 tensor/carrier boundary are the relevant comparison surface. Why this blocks: the row does not register those upstream surfaces as clean one-hop dependencies, and the runner demonstrates a candidate widening route rather than proving exhaustively that no smaller or better class expansion exists. Repair target: register and ratify the finite-rank source-to-metric theorem plus the current restricted/Route-2 bridge inputs, then keep this runner as the finite-rank widening target check. Claim boundary until fixed: the current packet supports finite-rank source-to-metric as a promising bounded widening target and explicitly rules out full tensor GR closure on this surface via the nonzero direct 3+1 residual.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md`
+  - `UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md`
 - **auditor confidence:** high
 
 ### `graph_first_selector_derivation_note`
