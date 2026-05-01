@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T16:05:00.276703+00:00
+**Generated:** 2026-05-01T16:06:42.450767+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 201 |
+| bounded | 200 |
 | support | 153 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 872 |
+| ~~audited_conditional~~ | 873 |
 | ~~audited_failed~~ | 103 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 292 |
-| `audited_conditional` | 587 |
+| `audited_conditional` | 588 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 575 |
+| `unaudited` | 574 |
 
 | criticality | count |
 |---|---:|
@@ -702,6 +702,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hard_geometry_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hierarchy_bosonic_bilinear_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hierarchy_matsubara_decomposition_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `higgs_from_lattice_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `higgs_mass_derived_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
 | `higgs_mass_from_axiom_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
 | `higgs_mass_hierarchy_correction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7883,6 +7884,20 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** With temporal APBC fixed, spatial APBC and PBC have the same u0 exponent, but only spatial APBC gives a finite intensive 3+1 small-m coefficient, and the free-energy density depends on u0 only through m/u0.  _(class `C`)_
 - **chain closes:** True — The runner constructs the minimal-block Dirac matrices, verifies the exact determinant formulas against direct determinants, checks the u0 power and homogeneity, and proves the APBC finite-limit/PBC divergent-limit distinction. The note stays bounded and explicitly leaves the physical order-parameter selection to a later theorem.
 - **rationale:** The bounded claim closes on its stated domain: temporal APBC is assumed, and the runner independently verifies the determinant identities, the u0^(8Lt) exponent independence, the exact m/u0 homogeneity, the finite APBC intensive limit, and the divergent PBC coefficient. Residual risk is limited to the note's explicit boundary: this does not yet derive why the physical electroweak order parameter must use this intensive normalization. As a bounded support theorem for the minimal hierarchy block, the result is audit-clean.
+- **auditor confidence:** high
+
+### `higgs_from_lattice_note`
+
+- **Note:** [`HIGGS_FROM_LATTICE_NOTE.md`](../../docs/HIGGS_FROM_LATTICE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Use HIGGS_MASS_DERIVED_NOTE.md for the current Higgs authority boundary; this note exists only to summarize the current bounded quantitative posture.  _(class `B`)_
+- **chain closes:** False — The note honestly bounds itself to quantitative support, but its authority boundary is delegated to HIGGS_MASS_DERIVED_NOTE.md, whose ledger row is conditional and whose registered dependencies include the Higgs support notes. The shared primary runner demonstrates bounded behavior but exits nonzero after explicit failures on the clean gauge/Yukawa/full-derivation surfaces.
+- **rationale:** Issue: the note's bounded quantitative posture is routed through HIGGS_MASS_DERIVED_NOTE.md rather than through an audit-clean, non-circular bounded-Higgs theorem. Why this blocks: the source statement is appropriately limited, but the cited authority is still audited-conditional and the shared runner exits nonzero with failures on alpha_s running, y_t crossing, and full m_H derivation; the audit can verify bounded support, not closed quantitative authority. Repair target: separate a bounded-Higgs support theorem/runner whose PASS/FAIL surface matches only the bounded claim, and register the non-circular dependencies needed for that boundary. Claim boundary until fixed: this remains bounded quantitative Higgs support and should not be used as an exact Higgs-mass or retained flagship surface.
+- **open / conditional deps cited:**
+  - `HIGGS_MASS_DERIVED_NOTE.md`
 - **auditor confidence:** high
 
 ### `higgs_mass_derived_note`
