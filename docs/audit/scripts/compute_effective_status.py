@@ -9,6 +9,11 @@ Intrinsic status mapping:
   - current_status=proposed_retained + audit_status=audited_clean -> retained
   - current_status=proposed_promoted + audit_status=audited_clean -> promoted
   - current_status=proposed_*        + audit_status=unaudited     -> proposed_*
+  - audit_status=audited_failed AND note in archive_unlanded/      -> retained_no_go
+    (the claim was tested, the original positive framing failed audit, and
+    the note was archived; this is a ratified negative result / no-go theorem,
+    not an active failure to fix. Sits at the same tier as `retained` for
+    propagation: depending on a retained no-go does not weaken downstream)
   - current_status=proposed_*        + audit_status=audited_<fail> -> audited_<fail>
   - current_status in {support, bounded, open}                    -> as declared
   - current_status=unknown                                        -> unknown
@@ -29,8 +34,13 @@ LEDGER_PATH = DATA_DIR / "audit_ledger.json"
 SUMMARY_PATH = DATA_DIR / "effective_status_summary.json"
 
 # Strength rank: higher = stronger publication-facing tier.
+# retained_no_go sits at the same tier as retained: both are audit-ratified,
+# durable scientific commitments. A retained no-go is a negative theorem
+# (Coleman-Mandula, Kochen-Specker, Weinberg-Witten) that downstream rows
+# can cite without weakening.
 RANK = {
     "retained": 100,
+    "retained_no_go": 100,
     "promoted": 90,
     "proposed_retained": 80,
     "proposed_promoted": 70,
@@ -63,6 +73,17 @@ TERMINAL_AUDIT_STATUSES = {
 def intrinsic_status(row: dict) -> str:
     cs = row.get("current_status") or "unknown"
     a = row.get("audit_status") or "unaudited"
+    if a == "audited_failed":
+        # Terminal failed audits whose notes have been moved to archive_unlanded/
+        # are retained as no-go theorems, not active failures. The audit verdict
+        # stays as audited_failed (faithful to what Codex said about the
+        # original positive claim), but the effective_status lifts to
+        # retained_no_go to reflect that the project has accepted this lane is
+        # closed and built it into institutional memory.
+        note_path = row.get("note_path") or ""
+        if note_path.startswith("archive_unlanded/"):
+            if (REPO_ROOT / note_path).exists():
+                return "retained_no_go"
     if a in TERMINAL_AUDIT_STATUSES:
         return a
     if a == "audited_clean":

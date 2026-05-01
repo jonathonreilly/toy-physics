@@ -21,8 +21,12 @@ RUNNER_PATH = DATA_DIR / "runner_classification.json"
 OUTPUT_PATH = REPO_ROOT / "docs" / "audit" / "AUDIT_LEDGER.md"
 
 # Sort effective_status from strongest to weakest for the headline table.
+# retained_no_go is at the same tier as retained (both are audit-ratified,
+# durable scientific commitments — one positive, one a no-go theorem) but
+# displayed separately so reviewers can see the negative-result inventory.
 STATUS_DISPLAY_ORDER = [
     "retained",
+    "retained_no_go",
     "promoted",
     "proposed_retained",
     "proposed_promoted",
@@ -40,7 +44,7 @@ STATUS_DISPLAY_ORDER = [
 
 def render_status_badge(s: str) -> str:
     """Visual differentiation for proposed vs ratified vs failure tiers."""
-    if s == "retained" or s == "promoted":
+    if s in {"retained", "promoted", "retained_no_go"}:
         return f"**{s}**"
     if s.startswith("proposed_"):
         return f"_{s}_"  # italic = unratified
@@ -198,10 +202,15 @@ def main() -> int:
     out.append("")
     out.append("## Reading rule")
     out.append("")
-    out.append("- **Bold** = audit-ratified (`retained`, `promoted`).")
+    out.append("- **Bold** = audit-ratified (`retained`, `promoted`, `retained_no_go`).")
     out.append("- _Italic_ = author-proposed but not yet audit-ratified "
                "(`proposed_retained`, `proposed_promoted`).")
-    out.append("- ~~Strikethrough~~ = audit returned a failure verdict.")
+    out.append("- ~~Strikethrough~~ = audit returned a failure verdict on an "
+               "active claim (`audited_failed`, `audited_conditional`, etc.). "
+               "Note: an `audited_failed` row whose note has been moved to "
+               "`archive_unlanded/` is lifted to `retained_no_go` in "
+               "`effective_status` — that is a ratified negative result, not "
+               "an active failure.")
     out.append("- Plain = `support`, `bounded`, `open`, or `unknown`.")
     out.append("")
     out.append("Publication-facing tables MUST read `effective_status`, not `current_status`.")

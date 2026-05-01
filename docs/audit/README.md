@@ -74,11 +74,20 @@ Three parallel fields per claim:
     a structural identity
 - `effective_status` — derived. The publication-facing tables read this:
   - `retained` — `current_status = proposed_retained` AND `audit_status =
-    audited_clean` AND every dependency's `effective_status = retained`.
+    audited_clean` AND every dependency's `effective_status` is `retained`
+    or `retained_no_go`.
+  - `retained_no_go` — `audit_status = audited_failed` AND the note has been
+    moved to `archive_unlanded/`. The original positive claim failed audit;
+    the project has accepted the lane is closed and archived the note as a
+    durable negative-result theorem (Coleman-Mandula style). Sits at the
+    same tier as `retained` for downstream propagation: depending on a
+    no-go theorem does not weaken downstream rows.
   - `proposed_retained` — author has proposed retained, audit not yet clean
     (or upstream not yet ratified). Honest pending state.
   - `support` / `bounded` / `open` — as declared, or demoted by audit verdict.
-  - `audited_<failure_mode>` — terminal state from a failed audit.
+  - `audited_<failure_mode>` — terminal state from a failed audit on an
+    **active** claim (note still in `docs/`). Distinct from `retained_no_go`
+    which represents an archived no-go.
 
 The landing migration rewrites legacy source-note Status lines from bare
 `retained` / `promoted` to `proposed_retained` /

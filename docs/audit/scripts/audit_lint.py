@@ -17,7 +17,12 @@ Checks (all hard rules from FRESH_LOOK_REQUIREMENTS.md and README.md):
        retained/promoted effective_status; clean non-proposed rows stay in
        their declared tier unless demoted by dependencies.
      - effective_status = retained requires audit_status = audited_clean
-       AND every dep's effective_status = retained.
+       AND every dep's effective_status is `retained` or `retained_no_go`
+       (a no-go theorem is a durable, audit-ratified commitment).
+     - effective_status = retained_no_go is automatically computed from
+       audit_status = audited_failed when the note has been moved to
+       archive_unlanded/. It represents a ratified negative result, not an
+       active failure.
      - independence = 'weak' cannot land audited_clean. Critical clean
        confirmations must be cross-family, strong/external, or same-family
        fresh_context from a distinct restricted-input session.
@@ -231,11 +236,15 @@ def main() -> int:
                 warnings.append(f"{cid}: dangling dep {d!r} (no ledger row)")
 
     # Effective-status propagation sanity.
+    # A retained row's deps must themselves be retained or retained_no_go
+    # (a no-go theorem is a durable, audit-ratified scientific commitment;
+    # depending on one is fine).
+    RATIFIED_DEP_OK = {"retained", "retained_no_go"}
     for cid, row in rows.items():
         if row.get("effective_status") == "retained":
             for d in row.get("deps", []):
                 d_eff = rows.get(d, {}).get("effective_status")
-                if d_eff != "retained":
+                if d_eff not in RATIFIED_DEP_OK:
                     errors.append(
                         f"{cid}: effective_status=retained but dep {d!r} has effective_status={d_eff!r}"
                     )
