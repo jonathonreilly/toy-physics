@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 4,
+    "critical": 7,
     "high": 196,
     "leaf": 286,
     "medium": 270
   },
-  "generated_at": "2026-05-01T01:48:03.459483+00:00",
+  "generated_at": "2026-05-01T01:48:39.391829+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -72,6 +72,87 @@
       "ready": false,
       "runner_path": "scripts/frontier_lh_anomaly_trace_catalog.py",
       "transitive_descendants": 262
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [
+        "gauge_vacuum_plaquette_constant_lift_obstruction_note"
+      ],
+      "direct_in_degree": 2,
+      "load_bearing_score": 9.039,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py",
+      "transitive_descendants": 262
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_bridge_support_note",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [
+        "gauge_scalar_temporal_completion_theorem_note",
+        "scalar_3plus1_temporal_ratio_note",
+        "gauge_vacuum_plaquette_constant_lift_obstruction_note",
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+      ],
+      "direct_in_degree": 5,
+      "load_bearing_score": 10.533,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py",
+      "transitive_descendants": 261
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "plaquette_self_consistency_note",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "gauge_vacuum_plaquette_bridge_support_note",
+        "gauge_vacuum_plaquette_distinct_shell_theorem_note",
+        "gauge_vacuum_plaquette_mixed_cumulant_audit_note",
+        "gauge_vacuum_plaquette_reduction_existence_theorem_note",
+        "gauge_vacuum_plaquette_susceptibility_flow_theorem_note",
+        "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
+        "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note",
+        "gauge_vacuum_plaquette_spectral_measure_theorem_note",
+        "gauge_vacuum_plaquette_framework_point_underdetermination_note",
+        "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
+        "gauge_vacuum_plaquette_perron_reduction_theorem_note",
+        "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
+        "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
+        "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
+        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+        "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
+        "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
+        "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+        "gauge_scalar_temporal_completion_theorem_note",
+        "gauge_vacuum_plaquette_constant_lift_obstruction_note",
+        "scalar_3plus1_temporal_ratio_note"
+      ],
+      "direct_in_degree": 16,
+      "load_bearing_score": 16.028,
+      "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_plaquette_self_consistency.py",
+      "transitive_descendants": 260
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -17479,5 +17560,5 @@
     }
   ],
   "ready_count": 368,
-  "total_pending": 756
+  "total_pending": 759
 }

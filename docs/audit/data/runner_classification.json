@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T01:48:03.009663+00:00",
+  "generated_at": "2026-05-01T01:48:39.055593+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -6168,6 +6168,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py"
+    },
+    "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 24,
+        "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py"
     },
     "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note": {
       "assert_count": 1,
@@ -22093,6 +22105,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 24,
+        "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py": {
       "assert_count": 1,
       "claims": [
@@ -32410,12 +32437,12 @@
     "dominant_class_distribution": {
       "A": 7,
       "B": 119,
-      "C": 448,
+      "C": 449,
       "D": 183,
       "none": 404
     },
-    "runners_classified": 1161,
-    "runners_with_C": 540,
-    "runners_with_D": 284
+    "runners_classified": 1162,
+    "runners_with_C": 541,
+    "runners_with_D": 285
   }
 }

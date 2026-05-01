@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-01T01:48:03.356596+00:00",
+  "computed_at": "2026-05-01T01:48:39.346846+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -25,7 +25,7 @@
   ],
   "cycles_detected": 59,
   "effective_status_counts": {
-    "audited_conditional": 769,
+    "audited_conditional": 770,
     "audited_decoration": 5,
     "audited_failed": 129,
     "audited_numerical_match": 16,
@@ -36,7 +36,7 @@
     "retained": 90,
     "support": 227
   },
-  "proposed_demoted_by_upstream_count": 128,
+  "proposed_demoted_by_upstream_count": 129,
   "proposed_demoted_by_upstream_examples": [
     "area_law_quarter_broader_no_go_note_2026-04-25",
     "atomic_hydrogen_helium_probe_note",

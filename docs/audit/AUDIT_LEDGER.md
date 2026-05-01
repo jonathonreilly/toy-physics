@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:48:03.888166+00:00
+**Generated:** 2026-05-01T01:48:39.620026+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -27,34 +27,34 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 769 |
+| ~~audited_conditional~~ | 770 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 491 |
+| `audited_conditional` | 489 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 756 |
+| `unaudited` | 759 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 70 |
+| `critical` | 71 |
 | `high` | 339 |
 | `medium` | 386 |
 | `leaf` | 769 |
 
-- **Proposed claims demoted by upstream:** 128
+- **Proposed claims demoted by upstream:** 129
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1161
-- runners with (C) first-principles compute hits: 540
-- runners with (D) external comparator hits: 284
+- runners classified: 1162
+- runners with (C) first-principles compute hits: 541
+- runners with (D) external comparator hits: 285
 - decoration candidates (no C, no D): 81
 
 ## Top 25 by load-bearing score (topology only)
@@ -83,7 +83,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 18 | `left_handed_charge_matching_note` | critical | 265 | 17.55 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `ckm_atlas_axiom_closure_note` | critical | 74 | 17.23 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 120 | 16.42 | `audited_conditional` | ~~audited_conditional~~ |
-| 21 | `plaquette_self_consistency_note` | critical | 260 | 16.03 | `audited_conditional` | ~~audited_conditional~~ |
+| 21 | `plaquette_self_consistency_note` | critical | 260 | 16.03 | `unaudited` | ~~audited_conditional~~ |
 | 22 | `physical_lattice_necessity_note` | critical | 286 | 15.66 | `audited_conditional` | ~~audited_conditional~~ |
 | 23 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 127 | 15.50 | `audited_conditional` | ~~audited_conditional~~ |
 | 24 | `site_phase_cube_shift_intertwiner_note` | critical | 290 | 15.19 | `audited_clean` | support |
@@ -568,7 +568,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_poisson_self_gravity_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_strong_field_observable_split_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_scalar_temporal_completion_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
-| `gauge_vacuum_plaquette_bridge_support_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_distinct_shell_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -726,7 +725,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
-| `plaquette_self_consistency_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_selector_current_stack_zero_law_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
@@ -6148,22 +6146,6 @@ Claim boundary until fixed: safe to claim the conditional exact temporal-complet
   - `observable_level_interacting_plaquette_to_local_response_reduction_missing`
 - **auditor confidence:** high
 
-### `gauge_vacuum_plaquette_bridge_support_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The bridge is materially stronger, but not fully closed; the missing closure is the boundary character data rho_(p,q)(6) of the unmarked Wilson environment.  _(class `B`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md, SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md, GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md, SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md, GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
-- **open / conditional deps cited:**
-  - `GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md`
-  - `SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md`
-- **auditor confidence:** high
-
 ### `gauge_vacuum_plaquette_connected_hierarchy_theorem_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md)
@@ -10063,40 +10045,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The boundary theorem shows that finite Hilbert/unitary flow supplies only U(1) phase data, is invariant under common action/action-quantum rescalings, and that the same rank-four active block supports both CAR/Majorana and non-CAR two-qubit or ququart semantics, so Hilbert flow alone cannot force an absolute action unit or primitive CAR edge statistics.  _(class `C`)_
 - **chain closes:** True — The runner passes 27/27 checks and closes the stated boundary claim. It verifies phase periodicity, dependence only on S/kappa, rescaling invariance, inverse H/t scaling, scalar-action global phases, finite commutator trace obstruction, a valid two-mode CAR realization on C^4, Clifford/Majorana generation of M_4(C), CAR parity grading, and explicit non-CAR two-qubit and ququart semantics on the same rank-four Hilbert block with the same allowed unitary flow. These countermodels establish the no-go/boundary theorem without requiring a positive Target 2 or Target 3 closure.
 - **rationale:** Clean for the bounded Target 3 statement. The positive part is exactly the native dimensionless U(1) phase unit. The negative parts are established by invariance and counterexample: amplitudes depend only on S/kappa, finite matrices cannot realize a nonzero exact canonical commutator by trace, and the rank-four block admits both CAR and non-CAR semantics while satisfying the same Hilbert-flow axioms. This clean audit does not derive hbar, a physical dimensional action unit, primitive CAR statistics, Target 2 c=1/4 unconditionality, or the later Clifford/coframe bridge; it only certifies that the current one-axiom Hilbert-flow surface is insufficient without additional edge-statistics/action-unit structure.
-- **auditor confidence:** high
-
-### `plaquette_self_consistency_note`
-
-- **Note:** [`PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](../../docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The plaquette expectation <P>(beta=6, SU(3), 4D) ~= 0.5934 is claimed as a uniquely determined observable of the axiom-defined Wilson partition function.  _(class `C`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md, GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md, GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md, GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md, GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md, GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md, GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md, GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md, and 13 more direct blockers.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md, GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md, GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md, GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md, GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md, GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md, GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md, GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md, and 13 more direct blockers. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
-- **open / conditional deps cited:**
-  - `GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md`
-  - `GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md`
-  - `SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md`
 - **auditor confidence:** high
 
 ### `pmns_hw1_source_transfer_boundary_note`
