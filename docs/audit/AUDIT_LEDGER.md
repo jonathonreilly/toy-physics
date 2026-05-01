@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:09:50.137056+00:00
+**Generated:** 2026-05-01T03:11:08.104321+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 251 |
-| support | 208 |
+| support | 207 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 12 |
 | ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 789 |
+| ~~audited_conditional~~ | 790 |
 | ~~audited_failed~~ | 146 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 230 |
-| `audited_conditional` | 516 |
+| `audited_conditional` | 517 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 9 |
 | `audited_renaming` | 15 |
-| `unaudited` | 724 |
+| `unaudited` | 723 |
 
 | criticality | count |
 |---|---:|
@@ -743,6 +743,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_graph_first_cycle_frame_support_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_lower_level_end_to_end_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `pmns_oriented_cycle_reduced_channel_nonselection_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_right_polar_section_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_scalar_bridge_nonrealization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_sector_exchange_nonforcing_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -10438,6 +10439,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `scripts/frontier_pmns_oriented_cycle_channel_value_law.py`
   - `scripts/pmns_lower_level_utils.py`
+- **auditor confidence:** high
+
+### `pmns_oriented_cycle_reduced_channel_nonselection_note`
+
+- **Note:** [`PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md`](../../docs/PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_oriented_cycle_reduced_channel_nonselection_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** There exist two distinct reduced-channel points satisfying the same residual antiunitary symmetry, the same canonical support, the same native readout law, and the same lower-level active response realization; therefore the current exact bank does not select a unique reduced-channel value.  _(class `A`)_
+- **chain closes:** False — The counterexample algebra passes, but the statement is conditional on imported oriented-cycle and selection-structure machinery that is not registered as ledger dependencies and is not independently closed in this row.
+- **rationale:** Issue: the runner constructs distinct reduced-channel points and verifies the nonselection pattern, but the row has deps=[] while importing the oriented-cycle value-law, selection-structure, and lower-level response utilities as the current exact bank. Why this blocks: the no-go is only as strong as that imported bank specification, and one of those imported readout laws is itself a coefficient-definition/renaming rather than an independently retained physical observable. Repair target: register the oriented-cycle value-law, residual selection-structure, and lower-level active-response authorities as dependencies, then state the no-go as conditional on their exact constraint set or derive that constraint set in this note. Claim boundary until fixed: algebraic nonselection counterexample for the encoded reduced-channel constraints; not a standalone proof that the full current PMNS bank lacks every value-selection law.
+- **open / conditional deps cited:**
+  - `PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md`
+  - `scripts/frontier_pmns_oriented_cycle_selection_structure.py`
+  - `scripts/pmns_lower_level_utils.py`
+  - `scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py`
 - **auditor confidence:** high
 
 ### `pmns_right_conjugacy_invariant_no_go_note`
