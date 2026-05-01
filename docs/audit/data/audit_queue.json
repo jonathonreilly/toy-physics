@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 192,
-    "leaf": 174,
+    "leaf": 173,
     "medium": 130
   },
-  "generated_at": "2026-05-01T22:52:46.859201+00:00",
+  "generated_at": "2026-05-01T22:54:21.914372+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9835,42 +9835,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "audit_dm_runner_stale_path_cleanup_note_2026-05-01",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/AUDIT_DM_RUNNER_STALE_PATH_CLEANUP_NOTE_2026-05-01.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "audit_dm_gv_runner_stale_path_cleanup_block_two_note_2026-05-01",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "audit_dm_runner_stale_path_cleanup_note_2026-05-01"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/AUDIT_DM_GV_RUNNER_STALE_PATH_CLEANUP_BLOCK_TWO_NOTE_2026-05-01.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -12190,6 +12154,25 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "audit_dm_gv_runner_stale_path_cleanup_block_two_note_2026-05-01",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [
+        "audit_dm_runner_stale_path_cleanup_note_2026-05-01"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/AUDIT_DM_GV_RUNNER_STALE_PATH_CLEANUP_BLOCK_TWO_NOTE_2026-05-01.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -13317,6 +13300,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 95,
-  "total_pending": 505
+  "ready_count": 93,
+  "total_pending": 504
 }

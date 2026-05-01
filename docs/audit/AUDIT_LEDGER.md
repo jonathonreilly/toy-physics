@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T22:52:47.321507+00:00
+**Generated:** 2026-05-01T22:54:22.180120+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 10 |
 | bounded | 163 |
-| support | 136 |
+| support | 134 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 955 |
+| ~~audited_conditional~~ | 957 |
 | ~~audited_failed~~ | 85 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 309 |
-| `audited_conditional` | 656 |
+| `audited_conditional` | 657 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 505 |
+| `unaudited` | 504 |
 
 | criticality | count |
 |---|---:|
@@ -430,6 +430,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `asymmetry_persistence_mass_scaling_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `asymmetry_persistence_mass_window_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `asymmetry_persistence_pilot_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `audit_dm_runner_stale_path_cleanup_note_2026-05-01` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `audited_symmetry_synthesis_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_change_proposal_2026-04-10` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1685,6 +1686,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Under the current Lane 2 repo state, direct substitution of retained alpha_EM(M_Z) into the standard Rydberg formula misses the atomic scale by about 15%, while m_e and alpha(0) remain unretained; therefore a framework-derived Rydberg claim is blocked until those dependencies and the physical-unit atomic limit are retained.  _(class `D`)_
 - **chain closes:** True — The runner verifies the standard formula with textbook m_e and alpha(0), shows direct alpha_EM(M_Z) substitution shifts the ground-state energy by +15.21%, checks that Lane 2 marks framework m_e absent and scaffold-only, and confirms the usable derived values index has alpha_EM(M_Z) but no atomic alpha(0) closure.
 - **rationale:** Clean as an exact negative dependency firewall. The row does not claim hydrogen or the Rydberg constant is derived; it proves the opposite boundary under the current repo state. The registered runner exits 0 with 12/12 checks passing and shows that electron mass retention, low-energy alpha(0) or QED running from alpha_EM(M_Z), and the physical-unit nonrelativistic Schrodinger/Coulomb limit remain load-bearing. Residual risk is only downstream scope control: this retained firewall must not be cited as an atomic-scale prediction.
+- **auditor confidence:** high
+
+### `audit_dm_runner_stale_path_cleanup_note_2026-05-01`
+
+- **Note:** [`AUDIT_DM_RUNNER_STALE_PATH_CLEANUP_NOTE_2026-05-01.md`](../../docs/AUDIT_DM_RUNNER_STALE_PATH_CLEANUP_NOTE_2026-05-01.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The cleanup removed stale read() calls from eight DM-cluster runners, each affected runner now passes, and no load-bearing physics check was removed.  _(class `B`)_
+- **chain closes:** False — The note has no registered primary runner, so the audit packet cannot verify the eight-runner pass matrix or the claim that only stale-path checks were removed.
+- **rationale:** Issue: the load-bearing hygiene claim is a multi-file/multi-runner verification, but this row has no registered primary runner or dependency artifact that executes the stated 69 PASS / 0 FAIL matrix. Why this blocks: a hostile auditor cannot certify from the note alone that no load-bearing physics check was removed or that all listed runners pass in the restricted audit environment. Repair target: add a compact registered hygiene runner that checks the stale paths are absent, executes or samples the eight affected runners, and asserts the no-new-physics boundary. Claim boundary until fixed: safe as a support note documenting intended stale-path cleanup; not audit-clean proof that the cleanup is complete and physics-neutral.
 - **auditor confidence:** high
 
 ### `audited_symmetry_synthesis_note`
