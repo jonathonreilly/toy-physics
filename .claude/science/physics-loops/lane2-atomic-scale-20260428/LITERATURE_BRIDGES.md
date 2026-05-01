@@ -1,6 +1,6 @@
 # Lane 2 Literature Bridges
 
-**Updated:** 2026-05-01T11:33:43Z
+**Updated:** 2026-05-01T11:40:23Z
 
 No new external literature was imported at loop start.
 
@@ -82,3 +82,14 @@ repo's existing Planck package surfaces as package-context inputs:
 The decimal `M_Pl = 1.2209e19 GeV` is used only in the comparator section to
 show the scale of the false `g=1` Planck-spacing route. It is not used to
 derive a retained Rydberg value.
+
+## Block 01 Alpha(0) Threshold-Moment Usage
+
+The threshold-moment no-go reuses the already-recorded standard one-loop QED
+running bridge and decoupling logic. It introduces no new external literature
+values.
+
+The comparator values `1/alpha(0) = 137.035999084` and `M_Z = 91.1876 GeV`
+are used only to compute the hidden effective threshold moment that would be
+required to fit the low-energy coupling. They are not used as framework-derived
+inputs.

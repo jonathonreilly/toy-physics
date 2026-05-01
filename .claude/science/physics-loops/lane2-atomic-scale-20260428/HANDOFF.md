@@ -1,6 +1,6 @@
 # Lane 2 Physics Loop Handoff
 
-**Updated:** 2026-05-01T11:36:45Z
+**Updated:** 2026-05-01T11:40:23Z
 **Loop slug:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Branch:** `physics-loop/lane2-atomic-scale-block01-20260428`  
@@ -8,7 +8,7 @@
 
 ## Current Status
 
-Block 01 has four coherent artifacts. Lane 2 remains open/scaffold-only:
+Block 01 has five coherent artifacts. Lane 2 remains open/scaffold-only:
 the existing hydrogen/helium harness succeeds with textbook inputs, but the
 repo has not retained `m_e`, `alpha(0)`, threshold-resolved QED transport, or
 a framework-native physical-unit nonrelativistic Coulomb/Schrodinger limit.
@@ -18,6 +18,12 @@ that the current Planck/source-unit package is not an atomic unit-map closure:
 on any fixed lattice length anchor the atomic coupling remains
 `g_atomic = 2 mu a_lat Z alpha(0)`, so missing `mu` and `alpha(0)` remain
 load-bearing. No retained Rydberg closure is claimed.
+
+Loop 4 also added a fifth coherent artifact: an `alpha(0)` threshold-moment
+no-go. It reduces the QED-running gate to the exact one-loop prerequisite
+`T_EM = sum_f N_c Q_f^2 log(M_Z/m_f^eff)` plus finite/hadronic matching. The
+repo retains the weights and `b_QED=32/3`; it does not retain the threshold
+moment.
 
 The default automation lock path is unavailable for this SSH user:
 
@@ -240,13 +246,56 @@ Artifact commit/push checkpoint:
 origin/physics-loop/lane2-atomic-scale-block01-20260428
 ```
 
+## Alpha(0) Threshold-Moment Route
+
+Completed route: one-loop threshold-moment reduction/no-go.
+
+Question:
+
+```text
+Can Lane 2 retain alpha(0) from alpha_EM(M_Z) and b_QED=32/3 alone?
+```
+
+Honest movement achieved: exact reduction/no-go boundary. The artifact proves
+that retained charge/count weights are not enough: threshold-resolved transport
+needs the weighted threshold moment and finite/hadronic matching.
+
+Artifacts:
+
+- `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_ALPHA0_THRESHOLD_MOMENT_NO_GO_NOTE_2026-05-01.md`
+- `scripts/frontier_atomic_alpha0_threshold_moment_no_go.py`
+- `.claude/science/physics-loops/lane2-atomic-scale-20260428/logs/atomic_alpha0_threshold_moment_no_go_2026-05-01.log`
+
+Key result:
+
+```text
+1/alpha_low
+  = 1/alpha(M_Z)
+    + (2 / 3 pi) T_EM
+    + Delta_match
+T_EM = sum_f N_c Q_f^2 log(M_Z/m_f^eff)
+```
+
+Verification:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_atomic_alpha0_threshold_moment_no_go.py -> SUMMARY: PASS=25 FAIL=0
+python3 -m py_compile scripts/frontier_atomic_alpha0_threshold_moment_no_go.py -> pass
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> PASS=17 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py -> PASS=42 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_planck_unit_firewall.py -> SUMMARY: PASS=31 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py -> PASS=43 FAIL=0
+```
+
+Review-loop emulation found no blocker. Guardrail: the comparator effective
+threshold near `0.366 GeV` is a hidden selector, not a derivation.
+
 ## Next Exact Action
 
 The next science action for the continuing supervisor is route selection across:
 
-1. a sharper no-go showing current Lane 2 cannot retain `alpha(0)` transport
-   without charged-threshold and hadronic inputs;
-2. endpoint packaging if no new non-overlapping route passes the dramatic-step
+1. endpoint packaging if no new non-overlapping route passes the dramatic-step
    gate after this checkpoint;
-3. dependency hardening only if it creates a reviewable theorem prerequisite,
+2. dependency hardening only if it creates a reviewable theorem prerequisite,
    not retained Rydberg promotion.

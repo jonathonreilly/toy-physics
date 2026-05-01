@@ -1,6 +1,6 @@
 # Lane 2 Artifact Plan
 
-**Updated:** 2026-05-01T11:33:43Z
+**Updated:** 2026-05-01T11:40:23Z
 
 ## Block 01 Artifact
 
@@ -135,6 +135,36 @@ Verification results:
 
 - `PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py`
   -> `PASS=43 FAIL=0`
+
+## Block 01 Alpha(0) Threshold-Moment Artifact
+
+Create a paired note and runner:
+
+- note: `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_ALPHA0_THRESHOLD_MOMENT_NO_GO_NOTE_2026-05-01.md`
+- runner: `scripts/frontier_atomic_alpha0_threshold_moment_no_go.py`
+- log: `.claude/science/physics-loops/lane2-atomic-scale-20260428/logs/atomic_alpha0_threshold_moment_no_go_2026-05-01.log`
+
+**Status:** complete. Runner and note created; log captured.
+
+## Alpha(0) Threshold-Moment Claims Tested
+
+1. Retained charges/counts fix the QED weights and `b_QED=32/3`.
+2. One-loop threshold-resolved transport depends on the weighted threshold
+   moment `T_EM`, not only on the sum of weights.
+3. Missing finite/hadronic matching also shifts low-energy inverse coupling.
+4. The `alpha(0)` comparator can be hit by a hidden effective threshold, which
+   is a selector rather than a derivation.
+
+## Alpha(0) Threshold-Moment Verification
+
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_alpha0_threshold_moment_no_go.py`
+  -> `SUMMARY: PASS=25 FAIL=0`
+- `python3 -m py_compile scripts/frontier_atomic_alpha0_threshold_moment_no_go.py`
+  -> pass
+- prior guardrails all passed after the artifact:
+  dependency firewall `PASS=12 FAIL=0`, QED firewall `PASS=17 FAIL=0`, NR
+  bridge `PASS=42 FAIL=0`, Planck-unit firewall `PASS=31 FAIL=0`, fan-out
+  `PASS=43 FAIL=0`.
 - `python3 -m py_compile scripts/frontier_atomic_rydberg_gate_factorization_fanout.py`
   -> pass
 - `PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py`

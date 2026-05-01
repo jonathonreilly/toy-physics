@@ -1,6 +1,6 @@
 # Lane 2 Assumptions And Imports
 
-**Updated:** 2026-05-01T11:33:43Z
+**Updated:** 2026-05-01T11:40:23Z
 **Loop:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Claim boundary:** open/scaffold-only unless a later artifact retires the listed blockers.
@@ -23,6 +23,7 @@
 | Rydberg product `mu alpha(0)^2` | The single product fixed by an absolute Coulomb energy after the standard map is admitted | exact factorization support / not a derivation of the gates | `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_RYDBERG_GATE_FACTORIZATION_FANOUT_NOTE_2026-05-01.md`, `scripts/frontier_atomic_rydberg_gate_factorization_fanout.py` | yes | yes as a dependency boundary | derive `mu` and `alpha(0)` independently, or explicitly demote to a fitted product | open; the product cannot retire the separate mass and coupling gates |
 | Planck/source-unit lattice anchor | Possible fixed physical-lattice length context for the atomic coordinate | package pin / conditional Planck support context | `docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md`, `docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md`, `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_PLANCK_UNIT_MAP_FIREWALL_NOTE_2026-05-01.md` | yes if used in unit-map route | not sufficient alone | derive the atomic effective coupling map on the same surface | length/source context only; not an atomic Rydberg closure |
 | `g_atomic = 2 mu a_lat Z alpha(0)` | Dimensionless coupling needed to put the atomic Coulomb problem on a fixed lattice length anchor | exact conditional bridge | `scripts/frontier_atomic_planck_unit_firewall.py` | yes | yes | retain `mu`, retain `alpha(0)`, and derive the low-energy kinetic/coupling map | open; Planck unit does not determine it |
+| `T_EM = sum_f N_c Q_f^2 log(M_Z/m_f^eff)` | Weighted threshold moment needed for one-loop `alpha_EM(M_Z) -> alpha(0)` transport | exact reduction / exposed prerequisite | `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_ALPHA0_THRESHOLD_MOMENT_NO_GO_NOTE_2026-05-01.md`, `scripts/frontier_atomic_alpha0_threshold_moment_no_go.py` | yes | yes for `alpha(0)` route | derive charged-threshold and hadronic matching moment, or prove target-status insensitivity | open; charges/counts fix weights, not logs or matching |
 
 ## Immediate Audit Result
 
@@ -86,3 +87,21 @@ that identifies the finite-box companion's convenient `g=1` with the Planck
 lattice coupling is an exact no-go: with comparator electron mass and
 Planck spacing it would require a non-atomic low-energy coupling and gives a
 super-Planckian atomic energy scale.
+
+## Block 01 Alpha(0) Threshold-Moment Update
+
+`scripts/frontier_atomic_alpha0_threshold_moment_no_go.py` proves the sharper
+one-loop reduction for the QED-running gate:
+
+```text
+1/alpha_low
+  = 1/alpha(M_Z)
+    + (2 / 3 pi) T_EM
+    + Delta_match,
+T_EM = sum_f N_c Q_f^2 log(M_Z/m_f^eff).
+```
+
+The retained charge/count surface fixes `sum_f N_c Q_f^2 = 8` and therefore
+`b_QED = 32/3`; it does not fix `T_EM` or `Delta_match`. The exact open
+import for any future Lane 2 `alpha(0)` route is now a threshold/matching
+moment theorem or an exact insensitivity theorem.

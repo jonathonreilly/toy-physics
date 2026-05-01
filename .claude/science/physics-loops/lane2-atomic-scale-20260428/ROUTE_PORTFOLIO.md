@@ -1,6 +1,6 @@
 # Lane 2 Route Portfolio
 
-**Updated:** 2026-05-01T11:33:43Z
+**Updated:** 2026-05-01T11:40:23Z
 **Loop:** `lane2-atomic-scale-20260428`  
 **Selection policy:** choose the route most likely to move claim state without touching Lane 4 or Lane 6.
 
@@ -133,3 +133,26 @@ Next candidate routes:
    dramatic-step gate after checkpoint review;
 3. Lane 5 pivot only if Lane 2 reaches a genuine stop and the pivot can stay
    independent of active Lane 4/Lane 6 work.
+
+## Block 01 Alpha(0) Threshold-Moment Result
+
+Completed route: threshold-moment reduction/no-go for `alpha(0)` transport.
+
+The route sharpened the prior QED firewall from "threshold data are needed"
+to an exact one-loop prerequisite:
+
+```text
+T_EM = sum_f N_c Q_f^2 log(M_Z/m_f^eff)
+Delta_match = finite/hadronic matching term.
+```
+
+The retained repo surface supplies the weights and `b_QED=32/3`, but not
+`T_EM` or `Delta_match`. This is a reviewable theorem prerequisite for any
+future retained `alpha(0)` route.
+
+Next candidate routes:
+
+1. checkpoint and package Block 01 for review if no further Lane 2 route
+   passes the dramatic-step gate;
+2. no Lane 4/Lane 6 pivot; Lane 5 only if the supervisor decides Lane 2 has
+   genuinely stopped before deadline and the pivot remains independent.

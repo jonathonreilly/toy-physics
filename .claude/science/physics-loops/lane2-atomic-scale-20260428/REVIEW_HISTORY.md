@@ -1,6 +1,6 @@
 # Lane 2 Review History
 
-**Updated:** 2026-05-01T11:33:43Z
+**Updated:** 2026-05-01T11:40:23Z
 
 ## Pre-Artifact Review Baseline
 
@@ -127,5 +127,35 @@ python3 -m py_compile scripts/frontier_atomic_planck_unit_firewall.py -> pass
 PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0
 PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> PASS=17 FAIL=0
 PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py -> PASS=42 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py -> PASS=43 FAIL=0
+```
+
+## Block 01 Alpha(0) Threshold-Moment Review-Loop Emulation
+
+- **Scope:** `scripts/frontier_atomic_alpha0_threshold_moment_no_go.py` and
+  `notes/ATOMIC_ALPHA0_THRESHOLD_MOMENT_NO_GO_NOTE_2026-05-01.md`.
+- **Finding 1:** The reduction uses synthetic threshold logs before the
+  `alpha(0)` comparator target moment appears.
+- **Disposition 1:** pass; no observed low-energy coupling is used as a proof
+  input.
+- **Finding 2:** The artifact correctly distinguishes weights (`N_c Q_f^2`,
+  retained) from threshold logs and matching terms (open).
+- **Disposition 2:** pass; it sharpens the prerequisite without promoting it.
+- **Finding 3:** The comparator effective threshold near `0.366 GeV` is
+  labeled as a hidden selector / non-derivation context.
+- **Disposition 3:** pass.
+- **Finding 4:** The artifact does not derive charged-lepton masses, quark
+  thresholds, or hadronic vacuum polarization.
+- **Disposition 4:** pass; Lane 6/Lane 1/Lane 3 appear only as dependencies.
+
+Verification recorded:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_atomic_alpha0_threshold_moment_no_go.py -> SUMMARY: PASS=25 FAIL=0
+python3 -m py_compile scripts/frontier_atomic_alpha0_threshold_moment_no_go.py -> pass
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> PASS=17 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py -> PASS=42 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_planck_unit_firewall.py -> SUMMARY: PASS=31 FAIL=0
 PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py -> PASS=43 FAIL=0
 ```
