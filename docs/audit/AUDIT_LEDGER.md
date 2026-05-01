@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:04:13.759855+00:00
+**Generated:** 2026-05-01T20:05:33.673303+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 188 |
+| bounded | 187 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 913 |
+| ~~audited_conditional~~ | 914 |
 | ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 615 |
+| `audited_conditional` | 616 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 554 |
+| `unaudited` | 553 |
 
 | criticality | count |
 |---|---:|
@@ -657,6 +657,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_no_restore_farfield_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_no_restore_joint_package_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_nonlabel_connectivity_v1_distance_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `gate_b_nonlabel_connectivity_v1_joint_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `gate_b_nonlabel_connectivity_v2_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_nonlabel_sign_grown_transfer_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_poisson_self_gravity_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -6643,6 +6644,21 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** - this is still not a full Gate B closure or a universal theorem  _(class `D`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 1 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `gate_b_nonlabel_connectivity_v1_joint_note`
+
+- **Note:** [`GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md`](../../docs/GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the no-restore grown family, the geometry-sector stencil keeps the Born / d_TV / MI / decoherence package in the same qualitative regime as the exact grid, but only as a bounded companion comparison.  _(class `C`)_
+- **chain closes:** False — The Mac mini rerun reproduces the exact-grid and geometry-sector joint-package values, but the runner emits no classified PASS lines and the companion is tied to the conditional Gate B non-label/far-field package. The bounded comparison is current; full Gate B/non-label closure is not.
+- **rationale:** Issue: the runner reproduces the joint-package table, but it provides descriptive metrics without classified PASS lines and depends on the surrounding Gate B non-label/far-field context. Why this blocks: a clean audit would need explicit threshold checks for Born cleanliness, d_TV/MI/decoherence qualitative agreement, and the bounded-companion boundary, plus clean related Gate B rows. Repair target: add classified PASS lines for each joint observable and the non-closure boundary; re-audit after the Gate B non-label base and far-field rows are clean. Claim boundary until fixed: a bounded current-run joint-package companion on the tested no-restore family, not a universal non-label connectivity theorem.
+- **open / conditional deps cited:**
+  - `GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md`
+  - `GATE_B_FARFIELD_NOTE.md`
 - **auditor confidence:** high
 
 ### `gate_b_nonlabel_connectivity_v2_note`
