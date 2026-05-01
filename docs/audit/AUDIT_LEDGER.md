@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T16:14:07.358051+00:00
+**Generated:** 2026-05-01T16:15:55.367383+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 199 |
-| support | 153 |
+| support | 152 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 874 |
+| ~~audited_conditional~~ | 875 |
 | ~~audited_failed~~ | 103 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 292 |
-| `audited_conditional` | 589 |
+| `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 573 |
+| `unaudited` | 572 |
 
 | criticality | count |
 |---|---:|
@@ -969,6 +969,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_color_projection_correction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_exact_coarse_grained_bridge_operator_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `yt_explicit_systematic_budget_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p1_i_s_revision_verification_note_2026-04-17` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -14996,6 +14997,23 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
 - **load-bearing step:** On the forced UV window, the exact interacting bridge is well described by a positive local affine transport kernel plus a small explicit higher-order and nonlocal remainder.  _(class `G`)_
 - **chain closes:** False — The runner verifies the stated transport budget on the accepted UV-localized bridge/profile, but the forced window, stable saddle, and endpoint kernel are assumed rather than derived from independent retained inputs in this note.
 - **rationale:** Issue: the transport budget is validated on the accepted UV-localized bridge/profile and forced window, with the saddle and endpoint kernel selected as inputs rather than independently derived here. Why this blocks: the note can support a bounded, calibrated transport match, but not an audit-clean theorem that the exact interacting bridge must take this form from retained premises alone. Repair target: derive the forced UV window, stable saddle/profile, and endpoint response kernel from independent retained inputs, then rerun the transport-budget checks without target-conditioned selection. Claim boundary until fixed: the current result is a controlled numerical transport match on the selected viable branch family.
+- **auditor confidence:** high
+
+### `yt_explicit_systematic_budget_note`
+
+- **Note:** [`YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md`](../../docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** the exact-bridge tail accounting remains valid and should now be read as the residual budget of the independent Schur-bridge cross-check path.  _(class `B`)_
+- **chain closes:** False — The note correctly adds the named residual-tail numbers and propagates them to y_t and m_t, but the tail values and bridge-closure premises are imported from other YT bridge surfaces rather than derived here. Those upstream bridge-tail rows are not audit-clean independent inputs, so this accounting note remains conditional on them.
+- **rationale:** Issue: the load-bearing residual budget is an arithmetic roll-up of imported exact-bridge tail values, not a local derivation of those tails. Why this blocks: the runner verifies nonnegativity, ordering, dominance, and propagation once the tail constants are hard-coded, but it does not derive the higher-order local tail, the nonlocal tail, or the structural-closure premises; the upstream bridge-tail notes are numerical-match/conditional surfaces. Repair target: register the bridge-tail sources as dependencies and ratify or repair the higher-order, nonlocal, and Schur-closure inputs, or narrow this row explicitly to pure bookkeeping over conditional inputs. Claim boundary until fixed: this remains useful support accounting for the Schur-bridge cross-check budget, not an audit-clean residual-budget theorem.
+- **open / conditional deps cited:**
+  - `YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md`
+  - `YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md`
+  - `YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`
+  - `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`
 - **auditor confidence:** high
 
 ### `yt_interacting_bridge_locality_note`
