@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:06:26.941246+00:00
+**Generated:** 2026-05-01T02:07:48.007374+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 2 |
 | bounded | 261 |
-| support | 223 |
+| support | 222 |
 | open | 16 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
-| ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 772 |
+| ~~audited_renaming~~ | 45 |
+| ~~audited_conditional~~ | 770 |
 | ~~audited_failed~~ | 138 |
 
 | audit_status | count |
@@ -38,8 +38,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_decoration` | 5 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 12 |
-| `audited_renaming` | 11 |
-| `unaudited` | 747 |
+| `audited_renaming` | 12 |
+| `unaudited` | 746 |
 
 | criticality | count |
 |---|---:|
@@ -908,6 +908,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higgs_mass_from_axiom_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `hypercharge_identification_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
+| `oh_static_constraint_lift_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
 | `s3_time_bilinear_tensor_primitive_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_qg_optional_textbook_comparison_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -9935,6 +9936,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `general_Einstein_Regge_extension_beyond_current_static_conformal_bridge_missing`
   - `non_Oh_strong_field_closure_missing`
   - `fully_nonlinear_GR_closure_missing`
+- **auditor confidence:** high
+
+### `oh_static_constraint_lift_note`
+
+- **Note:** [`OH_STATIC_CONSTRAINT_LIFT_NOTE.md`](../../docs/OH_STATIC_CONSTRAINT_LIFT_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-oh_static_constraint_lift_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Given the exact same-charge bridge psi=1+phi_ext and chi=1-phi_ext=alpha psi, define rho=sigma_R/(2 pi psi^5) and S=0.5 rho(1/alpha-1), after which the two local static conformal constraints are satisfied identically.  _(class `E`)_
+- **chain closes:** False — The runner verifies the algebraic inversion of the constraint equations, but rho and S are defined to make those constraints true, and the imported shell/bridge sources are not declared dependencies.
+- **rationale:** Issue: the local residual checks pass (PASS=8/FAIL=0), but the load-bearing shell-to-3+1 lift is obtained by defining rho and S as the algebraic inverse of the two static conformal constraints. That proves consistency of a chosen representation, not an independently derived stress-energy law or Einstein/Regge lift. The row also has deps=[] while loading the same-source metric, coarse-grained exterior law, and sewing-shell source surfaces. Why this blocks: a physical shell-to-3+1 theorem needs rho and S derived from an independent source/stress principle or retained bridge theorem, not only introduced so the constraints are identities. Repair target: declare the imported bridge/shell authorities and derive the shell density/stress from an independent variational, Regge, or stress-energy construction before checking the constraints. Claim boundary until fixed: algebraic definition of local rho/S fields that satisfy the static conformal constraint pair on the current bridge surface; not an independently closed physical 3+1 lift.
+- **open / conditional deps cited:**
+  - `scripts/frontier_same_source_metric_ansatz_scan.py`
+  - `scripts/frontier_coarse_grained_exterior_law.py`
+  - `scripts/frontier_sewing_shell_source.py`
+  - `scripts/_frontier_loader.py`
 - **auditor confidence:** high
 
 ### `omega_lambda_matter_bridge_theorem_note_2026-04-22`
