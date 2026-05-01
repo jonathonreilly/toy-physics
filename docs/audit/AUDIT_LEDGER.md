@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T18:39:01.359021+00:00
+**Generated:** 2026-05-01T18:41:13.678602+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 208 |
-| support | 151 |
+| support | 150 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 892 |
+| ~~audited_conditional~~ | 893 |
 | ~~audited_failed~~ | 79 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 294 |
-| `audited_conditional` | 601 |
+| `audited_conditional` | 602 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 572 |
+| `unaudited` | 571 |
 
 | criticality | count |
 |---|---:|
@@ -990,6 +990,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p2_taste_staircase_transport_note_2026-04-17` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_p2_v_matching_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_qfp_insensitivity_support_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `yt_zero_import_chain_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yukawa_color_projection_theorem` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
@@ -15234,6 +15235,24 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
 - **chain closes:** False — The algebraic 1/sqrt(6) overlap and same-channel coefficient checks close, but the target Yukawa readout is introduced by definition as the H_unit-to-top matrix element. The runner confirms coefficient consistency after that identification; it does not derive the physical Yukawa readout map itself.
 - **rationale:** Issue: The load-bearing move defines y_t_bare as the H_unit matrix element and then identifies that matrix element with the top Yukawa readout. Why this blocks: The source note and runner verify the scalar-singlet algebra, Clebsch-Gordan normalization, Fierz coefficients, and tadpole cancellation, but they do not derive the physical observable bridge from independent retained inputs. Repair target: Supply a retained theorem and runner check constructing the map from the composite H_unit matrix element to the SM top Yukawa vertex/readout, including the common tadpole dressing. Claim boundary until fixed: The note supports a tree-level structural identification/algebraic normalization on the canonical surface, not a first-principles derivation of the physical top Yukawa coupling.
 - **auditor confidence:** 0.88
+
+### `yt_zero_import_chain_note`
+
+- **Note:** [`YT_ZERO_IMPORT_CHAIN_NOTE.md`](../../docs/YT_ZERO_IMPORT_CHAIN_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Every ingredient in the y_t chain is asserted to trace to Cl(3) on Z^3, so m_t, alpha_s(M_Z), sin^2(theta_W), and v are derived with zero SM observable imports at the v-scale.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the advertised numerical chain and comparator checks, but it hard-codes or imports the plaquette surface, CMT/hierarchy inputs, color projection, Ward boundary, QFP/RGE treatment, and threshold infrastructure without those bridge notes being registered as clean one-hop dependencies. The zero-import conclusion therefore remains conditional on ratifying the upstream bridge stack, not just rerunning this synthesis script.
+- **rationale:** Issue: the runner returns PASS=14/FAIL=0 for the current numerical chain, but the load-bearing zero-import claim relies on several unratified bridge inputs: the canonical plaquette surface, coupling map, hierarchy insertion, color projection, Ward boundary, QFP/RGE treatment, and v-to-M_Z threshold infrastructure. Why this blocks: a synthesis script that labels ingredients DERIVED does not by itself prove those bridges from Cl(3)/Z^3 or make the observational matches independent of the selected normalization stack. Repair target: register the bridge notes as one-hop dependencies, ratify them, and split the runner checks between derivation inputs and comparator-only checks. Claim boundary until fixed: the current script is a reproducible y_t synthesis and comparator packet, not an audited zero-import derivation theorem.
+- **open / conditional deps cited:**
+  - `YT_EFT_BRIDGE_THEOREM.md`
+  - `YT_BOUNDARY_THEOREM.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
+  - `HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md`
+- **auditor confidence:** high
 
 ### `yukawa_color_projection_theorem`
 
