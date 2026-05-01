@@ -143,6 +143,9 @@ Completed in block 1:
 - `scripts/frontier_yt_fh_production_protocol_certificate.py`
 - `outputs/yt_fh_production_protocol_certificate_2026-05-01.json`
 - `docs/YT_FH_PRODUCTION_PROTOCOL_CERTIFICATE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_same_source_scalar_two_point_lsz_measurement.py`
+- `outputs/yt_same_source_scalar_two_point_lsz_measurement_2026-05-01.json`
+- `docs/YT_SAME_SOURCE_SCALAR_TWO_POINT_LSZ_MEASUREMENT_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -167,7 +170,9 @@ Next artifact:
   harness now supports scalar-source shifts and emits `dE/ds`, but this is
   bounded-support until production data and `kappa_s` exist; the
   Feynman-Hellmann production protocol is now specified but still needs the
-  scalar two-point LSZ/canonical-normalization measurement
+  scalar two-point LSZ/canonical-normalization measurement; the same-source
+  `C_ss(q)`/`Gamma_ss(q)` primitive is executable but no controlled pole or
+  residue theorem is derived
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

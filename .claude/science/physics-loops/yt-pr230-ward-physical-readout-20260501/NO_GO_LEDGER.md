@@ -480,6 +480,27 @@ not a closure theorem.  The physical conversion still requires a scalar
 two-point LSZ/canonical-normalization measurement for `kappa_s`, plus any
 lattice-to-SM response matching.
 
+Same-source scalar two-point LSZ measurement primitive is bounded support:
+
+```text
+python3 scripts/frontier_yt_same_source_scalar_two_point_lsz_measurement.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+For the same additive source used in `dE_top/ds`, the executable measurement
+object is now explicit:
+
+```text
+C_ss(q) = Tr[S V_q S V_-q]
+Gamma_ss(q) = 1 / C_ss(q)
+```
+
+A true LSZ bridge would derive an isolated pole and compute
+`dGamma_ss/dp^2` at that pole.  The reduced cold primitive does not close the
+route: no measured mode has a controlled pole, the finite residue proxy is
+mass-dependent, and source rescaling changes inverse curvature until canonical
+normalization is derived.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

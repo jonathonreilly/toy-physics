@@ -43,3 +43,16 @@ Adds a Feynman-Hellmann production protocol certificate:
   two-point LSZ/canonical-normalization measurement;
 - still no retained closure and no physical `dE/dh` without derived `kappa_s`.
 ```
+
+Latest scalar-LSZ measurement checkpoint text for PR #230:
+
+```text
+Adds a same-source scalar two-point LSZ measurement primitive:
+- computes `C_ss(q)=Tr[S V_q S V_-q]` and `Gamma_ss(q)=1/C_ss(q)` for the
+  same additive scalar source used in `dE_top/ds`;
+- validator passes `PASS=8 FAIL=0`; campaign status now consumes 35 route
+  certificates and reports `PASS=31 FAIL=0`;
+- this identifies the measurement object needed to fix `kappa_s`, but the
+  reduced cold primitive has no controlled scalar pole/continuum limit and
+  does not authorize physical `dE/dh` or retained closure.
+```

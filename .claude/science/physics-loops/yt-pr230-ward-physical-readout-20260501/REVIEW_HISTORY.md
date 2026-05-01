@@ -740,3 +740,28 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The protocol is production-grade as an observable design, but not evidence or
 closure.  It names the same-source scalar two-point LSZ/canonical-normalization
 measurement as the required `kappa_s` fixer.
+
+## Review-Loop Backpressure — Same-Source Scalar Two-Point LSZ Measurement
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_same_source_scalar_two_point_lsz_measurement.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_same_source_scalar_two_point_lsz_measurement.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The runner identifies the same-source scalar LSZ measurement object but does
+not derive `kappa_s`: the tiny cold calculation has no controlled pole and no
+finite-volume/IR continuum theorem.

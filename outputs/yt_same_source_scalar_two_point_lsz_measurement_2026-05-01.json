@@ -1,0 +1,214 @@
+{
+  "actual_current_surface_status": "bounded-support / same-source scalar two-point LSZ measurement primitive",
+  "fail_count": 0,
+  "finite_residue_proxy_relative_spread": 2.193791181372722,
+  "geometry": {
+    "colors": 3,
+    "spatial_L": 3,
+    "time_L": 6
+  },
+  "mass_rows": [
+    {
+      "finite_difference_dGamma_dp_hat_sq": -1.3608363957726637,
+      "finite_residue_proxy": 0.7348421919831253,
+      "has_inverse_zero_on_measured_modes": false,
+      "mass": 0.55,
+      "mode_rows": [
+        {
+          "C_ss_imag": 0.0,
+          "C_ss_real": -0.28866162351406005,
+          "Gamma_ss_imag": -0.0,
+          "Gamma_ss_real": -3.4642637556955758,
+          "mode": [
+            0,
+            0,
+            0
+          ],
+          "p_hat_sq": 0.0
+        },
+        {
+          "C_ss_imag": 9.594519965896414e-18,
+          "C_ss_real": -0.1325069678856247,
+          "Gamma_ss_imag": -5.46444197125771e-16,
+          "Gamma_ss_real": -7.546772943013567,
+          "mode": [
+            1,
+            0,
+            0
+          ],
+          "p_hat_sq": 2.9999999999999996
+        },
+        {
+          "C_ss_imag": 3.1981733219654716e-18,
+          "C_ss_real": -0.014337123716481085,
+          "Gamma_ss_imag": -1.5558865645131775e-14,
+          "Gamma_ss_real": -69.7489970635087,
+          "mode": [
+            1,
+            1,
+            0
+          ],
+          "p_hat_sq": 5.999999999999999
+        },
+        {
+          "C_ss_imag": 0.0,
+          "C_ss_real": 0.09357596821974234,
+          "Gamma_ss_imag": 0.0,
+          "Gamma_ss_real": 10.68650444152202,
+          "mode": [
+            1,
+            1,
+            1
+          ],
+          "p_hat_sq": 8.999999999999998
+        }
+      ]
+    },
+    {
+      "finite_difference_dGamma_dp_hat_sq": -6.066074866390869,
+      "finite_residue_proxy": 0.164851245991128,
+      "has_inverse_zero_on_measured_modes": false,
+      "mass": 0.75,
+      "mode_rows": [
+        {
+          "C_ss_imag": 0.0,
+          "C_ss_real": -0.14023340106513799,
+          "Gamma_ss_imag": -0.0,
+          "Gamma_ss_real": -7.130968744996087,
+          "mode": [
+            0,
+            0,
+            0
+          ],
+          "p_hat_sq": 0.0
+        },
+        {
+          "C_ss_imag": 9.13763806275849e-19,
+          "C_ss_real": -0.039480136079036283,
+          "Gamma_ss_imag": -5.862416500725865e-16,
+          "Gamma_ss_real": -25.32919334416869,
+          "mode": [
+            1,
+            0,
+            0
+          ],
+          "p_hat_sq": 2.9999999999999996
+        },
+        {
+          "C_ss_imag": 0.0,
+          "C_ss_real": 0.047356841505748884,
+          "Gamma_ss_imag": 0.0,
+          "Gamma_ss_real": 21.116273134022357,
+          "mode": [
+            1,
+            1,
+            0
+          ],
+          "p_hat_sq": 5.999999999999999
+        },
+        {
+          "C_ss_imag": 7.538551401775754e-18,
+          "C_ss_real": 0.13549689856131755,
+          "Gamma_ss_imag": -4.106096872926098e-16,
+          "Gamma_ss_real": 7.380242725979898,
+          "mode": [
+            1,
+            1,
+            1
+          ],
+          "p_hat_sq": 8.999999999999998
+        }
+      ]
+    },
+    {
+      "finite_difference_dGamma_dp_hat_sq": 22.50469112666882,
+      "finite_residue_proxy": 0.04443517995299061,
+      "has_inverse_zero_on_measured_modes": false,
+      "mass": 0.95,
+      "mode_rows": [
+        {
+          "C_ss_imag": 0.0,
+          "C_ss_real": -0.04712653644469356,
+          "Gamma_ss_imag": -0.0,
+          "Gamma_ss_real": -21.2194673201493,
+          "mode": [
+            0,
+            0,
+            0
+          ],
+          "p_hat_sq": 0.0
+        },
+        {
+          "C_ss_imag": -5.02570093451717e-18,
+          "C_ss_real": 0.02160078862550506,
+          "Gamma_ss_imag": 1.077103475117628e-14,
+          "Gamma_ss_real": 46.29460605985715,
+          "mode": [
+            1,
+            0,
+            0
+          ],
+          "p_hat_sq": 2.9999999999999996
+        },
+        {
+          "C_ss_imag": 4.568819031379245e-18,
+          "C_ss_real": 0.08594031576404461,
+          "Gamma_ss_imag": -6.18600214298917e-16,
+          "Gamma_ss_real": 11.635982380441478,
+          "mode": [
+            1,
+            1,
+            0
+          ],
+          "p_hat_sq": 5.999999999999999
+        },
+        {
+          "C_ss_imag": 6.624787595499905e-18,
+          "C_ss_real": 0.15526534832059802,
+          "Gamma_ss_imag": -2.7480388903196333e-16,
+          "Gamma_ss_real": 6.440587103409323,
+          "mode": [
+            1,
+            1,
+            1
+          ],
+          "p_hat_sq": 8.999999999999998
+        }
+      ]
+    }
+  ],
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No isolated scalar pole, continuum/IR control, or canonical LSZ normalization is derived.",
+  "required_next_steps": [
+    "measure C_ss(q) on production gauge ensembles for the same source shifts used in dE_top/ds",
+    "derive or observe an isolated Higgs-channel pole in the controlled finite-volume/IR limit",
+    "compute dGamma_ss/dp^2 at the pole and match it to canonical Higgs kinetic normalization",
+    "only then convert dE_top/ds to physical dE_top/dh"
+  ],
+  "source_scale_rows": [
+    {
+      "C_ss_zero_mode_scaled": -0.035058350266284496,
+      "Gamma_ss_zero_mode_scaled": -28.52387497998435,
+      "source_scale": 0.5
+    },
+    {
+      "C_ss_zero_mode_scaled": -0.14023340106513799,
+      "Gamma_ss_zero_mode_scaled": -7.130968744996087,
+      "source_scale": 1.0
+    },
+    {
+      "C_ss_zero_mode_scaled": -0.5609336042605519,
+      "Gamma_ss_zero_mode_scaled": -1.7827421862490218,
+      "source_scale": 2.0
+    }
+  ],
+  "strict_non_claims": [
+    "not production evidence",
+    "not a physical y_t derivation",
+    "does not use H_unit or yt_ward_identity",
+    "does not use observed top mass or observed y_t",
+    "does not set kappa_s to one"
+  ],
+  "verdict": "The same scalar source used by the Feynman-Hellmann response route has an executable two-point measurement object: C_ss(q)=Tr[S V_q S V_-q] and Gamma_ss(q)=1/C_ss(q).  A true scalar LSZ bridge would fix kappa_s by proving an isolated pole and computing dGamma_ss/dp^2 at that pole for the same source.  The reduced cold lattice primitive does not close PR #230: it has no pole on the measured modes, its finite residue proxy is mass-dependent, and source rescaling changes inverse curvature unless canonical normalization is separately derived."
+}

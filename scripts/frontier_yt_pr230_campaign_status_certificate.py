@@ -65,6 +65,7 @@ def main() -> int:
         "source_to_higgs_lsz": load("outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"),
         "scalar_source_response_harness": load("outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json"),
         "fh_production_protocol": load("outputs/yt_fh_production_protocol_certificate_2026-05-01.json"),
+        "same_source_scalar_two_point": load("outputs/yt_same_source_scalar_two_point_lsz_measurement_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -184,6 +185,12 @@ def main() -> int:
         statuses["fh_production_protocol"],
     )
     report(
+        "same-source-scalar-two-point-needs-pole-and-continuum",
+        "same-source scalar two-point" in str(statuses["same_source_scalar_two_point"])
+        or "bounded-support" in str(statuses["same_source_scalar_two_point"]),
+        statuses["same_source_scalar_two_point"],
+    )
+    report(
         "finite-ladder-route-needs-ir-limit",
         "zero-mode" in str(statuses["ladder_ir_zero_mode"]),
         statuses["ladder_ir_zero_mode"],
@@ -294,7 +301,10 @@ def main() -> int:
             "LSZ/heavy-matching theorem.  The production Feynman-Hellmann "
             "protocol is now specified: common-ensemble symmetric source "
             "shifts, correlated dE/ds fits, and a separate scalar two-point "
-            "LSZ measurement to determine kappa_s."
+            "LSZ measurement to determine kappa_s.  The same-source scalar "
+            "two-point object C_ss(q) is now executable on a tiny exact lattice, "
+            "but the reduced primitive has no controlled pole/continuum limit "
+            "and its finite residue proxy is mass-dependent."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",

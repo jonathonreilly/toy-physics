@@ -27,6 +27,7 @@ gauge no-go plus canonical scalar-normalization import audit
 plus source-to-Higgs LSZ closure attempt
 plus scalar-source response harness extension
 plus Feynman-Hellmann production protocol certificate
+plus same-source scalar two-point LSZ measurement primitive
 **PR:** #230 draft branch
 
 ```yaml
@@ -106,6 +107,9 @@ Allowed wording:
 - bounded-support Feynman-Hellmann production protocol: common-ensemble
   symmetric source shifts and correlated `dE/ds` fits are specified, but
   scalar LSZ/canonical-normalization and response matching remain open;
+- bounded-support same-source scalar two-point measurement: `C_ss(q)` and
+  `Gamma_ss(q)` are executable for the source used in `dE/ds`, but no
+  controlled pole/continuum LSZ residue is derived;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
@@ -300,4 +304,10 @@ python3 scripts/frontier_yt_fh_production_protocol_certificate.py
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=30 FAIL=0
+
+python3 scripts/frontier_yt_same_source_scalar_two_point_lsz_measurement.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=31 FAIL=0
 ```

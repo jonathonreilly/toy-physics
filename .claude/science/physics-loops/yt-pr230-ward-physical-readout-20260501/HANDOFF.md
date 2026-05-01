@@ -174,6 +174,11 @@ What changed:
   source shifts on the same saved gauge configurations, fit correlated
   `dE_top/ds`, and separately measure/derive `kappa_s` from the same-source
   scalar two-point LSZ/canonical-normalization problem.
+- The same-source scalar two-point measurement primitive now computes
+  `C_ss(q)=Tr[S V_q S V_-q]` and `Gamma_ss(q)=1/C_ss(q)` for the additive
+  source used in `dE_top/ds`.  It identifies the LSZ measurement object, but
+  the reduced cold primitive has no controlled scalar pole and does not fix
+  `kappa_s`.
 
 The scientific result is narrower than closure:
 
@@ -222,4 +227,5 @@ Acceptance target for the next scalar-response block:
 3. Keep reduced source-response runs as scouts only until production and
    matching certificates exist.
 
-The protocol block completed item 1.  Items 2 and 3 remain active.
+The protocol block completed item 1.  The same-source two-point block reduces
+item 2 to the controlled-pole/residue theorem.  Items 2 and 3 remain active.

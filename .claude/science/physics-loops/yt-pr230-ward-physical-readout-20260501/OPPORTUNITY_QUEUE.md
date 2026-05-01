@@ -64,7 +64,9 @@ probability.
    derived `kappa_s`, not setting `kappa_s = 1`.  The production protocol is
    now specified: common-ensemble symmetric source shifts, correlated slope
    fits, and a same-source scalar two-point LSZ/canonical-normalization
-   measurement for `kappa_s`.
+   measurement for `kappa_s`.  The same-source two-point object is now
+   executable as `C_ss(q)=Tr[S V_q S V_-q]`; closure still requires a
+   controlled pole/continuum limit and canonical residue.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the
