@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:35:07.119488+00:00
+**Generated:** 2026-05-01T04:36:26.777408+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 224 |
-| support | 192 |
+| support | 191 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 808 |
+| ~~audited_conditional~~ | 809 |
 | ~~audited_failed~~ | 159 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 539 |
+| `audited_conditional` | 540 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 18 |
-| `unaudited` | 679 |
+| `unaudited` | 678 |
 
 | criticality | count |
 |---|---:|
@@ -622,6 +622,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_wider_w4_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hadron_mass_lane1_theorem_plan_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hard_geometry_gravity_window_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7430,6 +7431,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md`
   - `PROHIBITED_AUDIT_HISTORY_DEPENDENCY: audit/AUDIT_LEDGER.md`
   - `EXTERNAL_LITERATURE: full-QCD string breaking/static-energy scale references`
+- **auditor confidence:** high
+
+### `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30`
+
+- **Note:** [`HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md`](../../docs/HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The B2 bridge can be made much more explicit using modern static-energy data, but it remains bounded and needs a declared force-scale or finite-window-tension observable, the convention split as an uncertainty, and a B5 framework-to-standard-QCD residual.  _(class `D`)_
+- **chain closes:** False — The runner confirms useful external static-energy/force-scale inputs, but it also confirms that neither a unique sigma scheme nor the B5 framework-to-standard-QCD link is closed.
+- **rationale:** Issue: the bridge relies on external static-energy/force-scale values while the unique sigma scheme and B5 framework-to-standard-QCD link remain open. Why this blocks: the note can bound and improve the B2 bridge, but it cannot promote sqrt(sigma) to retained closure from the current inputs. Repair target: choose and justify a force-scale or finite-window-tension observable, carry the convention split as an explicit uncertainty, and close the B5 framework-to-standard-QCD residual. Claim boundary until fixed: the note remains a support scout showing modern static-energy inputs are useful but not sufficient for retained B2.
 - **auditor confidence:** high
 
 ### `hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27`

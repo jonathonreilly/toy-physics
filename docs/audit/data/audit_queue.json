@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 287,
-    "medium": 189
+    "medium": 188
   },
-  "generated_at": "2026-05-01T04:35:06.866299+00:00",
+  "generated_at": "2026-05-01T04:36:26.366569+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6531,23 +6531,6 @@
       "ready": true,
       "runner_path": "scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py",
       "transitive_descendants": 35
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.629,
-      "note_path": "docs/HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge.py",
-      "transitive_descendants": 34
     },
     {
       "audit_independence_required": "any_non_self",
@@ -16212,6 +16195,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 283,
-  "total_pending": 679
+  "ready_count": 282,
+  "total_pending": 678
 }
