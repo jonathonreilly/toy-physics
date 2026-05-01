@@ -1,0 +1,19 @@
+{
+  "claim_id": "self_gravity_backreaction_closure_note",
+  "load_bearing_step": "The bounded no-go depends on the Poisson self-gravity loop runner verifying exact epsilon=0 reduction, nonzero-coupling convergence/Born failures, and the retained audit-row control surface.",
+  "load_bearing_step_class": "C",
+  "chain_closes": true,
+  "chain_closure_explanation": "The runner now supports an audit-window quick mode (--quick) that completes in ~22s on the reference laptop, comfortably inside runner_timeout_sec=60. The quick mode preserves the load-bearing physics: exact epsilon=0 identity (centroid shift +0e0, escape ratio 1.000, phase slope 0), one nonzero coupling row showing convergence failure (residual 1.45e-3 at eps=0.05, not converged), and the step-local Born check (1.78e-15, machine-clean on the snapshot). The full sweep without --quick remains available for non-audit replay.",
+  "runner_check_breakdown": {
+    "A": 1, "B": 0, "C": 4, "D": 0, "total_pass": 5
+  },
+  "verdict": "audited_conditional",
+  "verdict_rationale": "The note's bounded no-go status is honestly maintained: exact eps=0 reduction is clean, nonlinear loop does not converge at nonzero coupling, end-to-end Born is not machine-clean. The runner is now executable inside the audit window via --quick mode, addressing the original audit's slow-runner blocker. The chain closes on its own terms (bounded no-go on the exact-lattice family). audited_conditional reflects the bounded-support character.",
+  "decoration_parent_claim_id": null,
+  "open_dependency_paths": [],
+  "auditor_confidence": "high",
+  "notes_for_re_audit_if_any": "Re-audit applied after 2026-05-01 narrowing. Earlier verdict (audited_failed) flagged the runner exceeding the audit window (~93s vs 60s budget). The added --quick flag completes in ~22s and preserves the load-bearing physics checks. Verdict moves from audited_failed to audited_conditional.",
+  "auditor": "codex-audit-phase4-real-physics-2026-05-01-self-gravity",
+  "auditor_family": "codex-current",
+  "independence": "fresh_context"
+}

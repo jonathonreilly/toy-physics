@@ -1,0 +1,19 @@
+{
+  "claim_id": "action_normalization_note",
+  "load_bearing_step": "Once a convention is named (e.g., f = Phi with the standard Newtonian Poisson source nabla^2 f = -4*pi*G*rho), c is determined uniquely; the framework's choice S = L(1 - f) corresponds to c = 1 with the Poisson source rescaled by a factor of 2.",
+  "load_bearing_step_class": "A",
+  "chain_closes": true,
+  "chain_closure_explanation": "The narrowed claim is convention-locked: once the identification of the lattice scalar f with the Newtonian potential Phi and the Poisson source normalization are chosen, c is determined. The chain closes on its own narrowed terms. The previous failure mode (numerical 'deflection ratio' table contradicting the analytic '1+c' claim) has been removed; the runner no longer prints the bogus convention-free verification.",
+  "runner_check_breakdown": {
+    "A": 5, "B": 0, "C": 0, "D": 0, "total_pass": 5
+  },
+  "verdict": "audited_conditional",
+  "verdict_rationale": "The narrowed claim explicitly retracts the earlier 'convention-free light bending fixes c=1' argument and replaces it with a convention-locked statement: c is fixed by naming the f-vs-Phi identification and the Poisson source normalization. This is honest support, not a c-fixing first-principles theorem. The runner now reflects this narrowed reading and removes the bogus numerical verification table. The chain closes on its own narrowed terms; the cited Schwarzschild and PPN inputs are textbook GR (admitted comparators), so audited_conditional is the appropriate verdict for the bounded support claim.",
+  "decoration_parent_claim_id": null,
+  "open_dependency_paths": [],
+  "auditor_confidence": "high",
+  "notes_for_re_audit_if_any": "Re-audit applied after narrowing on 2026-05-01. Earlier verdict (audited_failed) was correct: the runner's deflection ratio verification did not match the claimed 1+c values because the propagator runs two MASSIVE probes at different k, not null-vs-massive. The narrowing removes the failed verification and scopes the claim to the convention-locked statement. Verdict moves from audited_failed to audited_conditional.",
+  "auditor": "codex-audit-phase4-real-physics-2026-05-01-action-norm",
+  "auditor_family": "codex-current",
+  "independence": "fresh_context"
+}

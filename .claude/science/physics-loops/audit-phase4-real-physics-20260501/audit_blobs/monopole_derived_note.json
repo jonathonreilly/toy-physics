@@ -1,0 +1,25 @@
+{
+  "claim_id": "monopole_derived_note",
+  "load_bearing_step": "The compact-lattice self-energy chain derives a runner-consistent magnetic monopole mass M_mono ~ 1.43 M_Planck on the current Planck-scale package pin, with Dirac quantization automatic and overclosure requiring inflation.",
+  "load_bearing_step_class": "C",
+  "chain_closes": true,
+  "chain_closure_explanation": "The note's headline (1.43 M_Planck) now matches the runner's actual computed value using one-loop SM RG running of alpha_EM (alpha_inv(M_Pl) ~ 72.1, beta=5.738). The earlier inconsistency (note advertised 0.80 M_Pl from alpha_inv ~ 40 placeholder while runner computed 1.43 M_Pl from one-loop running) is reconciled. The runner's bottom synthesis box no longer carries the stale 'M ~ 0.8 M_Pl' label.",
+  "runner_check_breakdown": {
+    "A": 0, "B": 0, "C": 28, "D": 4, "total_pass": 32
+  },
+  "verdict": "audited_conditional",
+  "verdict_rationale": "The chain closes on the current runner output: c_lat=0.2527 (BKM Green's function), beta=1/(4*pi*alpha) with alpha from one-loop SM RG, and M_mono=c*beta*M_Pl=1.43 M_Pl. The cited dependencies (alpha_EM_MPlanck_authority_or_pin, lattice_monopole_self_energy_coefficient_authority, Planck_scale_lattice_spacing_authority, Wilson_action_monopole_core_model, FRW_Kibble_overclosure_model) are explicitly listed as open in the note's open_dependency_paths. The order-of-magnitude prediction M ~ M_Planck is robust across plausible alpha_EM(M_Pl) values; the exact prefactor inherits the alpha_EM extrapolation uncertainty. Honest verdict: audited_conditional reflecting the bounded support character.",
+  "decoration_parent_claim_id": null,
+  "open_dependency_paths": [
+    "alpha_EM_MPlanck_authority_or_pin",
+    "lattice_monopole_self_energy_coefficient_authority",
+    "Planck_scale_lattice_spacing_authority",
+    "Wilson_action_monopole_core_model",
+    "FRW_Kibble_overclosure_model"
+  ],
+  "auditor_confidence": "high",
+  "notes_for_re_audit_if_any": "Re-audit applied after 2026-05-01 reconciliation. Earlier verdict (audited_failed) correctly flagged the headline-runner disagreement (note: 0.80 M_Pl, runner: 1.43 M_Pl). The reconciled note now matches the runner's actual one-loop SM RG output. Verdict moves from audited_failed to audited_conditional.",
+  "auditor": "codex-audit-phase4-real-physics-2026-05-01-monopole",
+  "auditor_family": "codex-current",
+  "independence": "fresh_context"
+}

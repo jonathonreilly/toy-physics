@@ -1,0 +1,45 @@
+slug: audit-phase4-real-physics-20260501
+goal: Resolve 4 audit_failed rows by FIX/NARROW/ACCEPT (genuine physics judgment)
+target_status: best-honest-status
+runtime: ~2h scoped session
+cycles_completed: 1
+active_route: row-by-row demotion / narrowing
+started_at: 2026-05-01
+
+rows:
+  - claim_id: koide_axiom_native_support_batch_note_2026-04-22
+    action: re-audit (stale audit; fix already on main at 5097b492)
+    code_change: none
+    runner_state: integrated 381/381, subrunner 23/23
+  - claim_id: action_normalization_note
+    action: NARROW
+    code_change:
+      - scripts/frontier_action_normalization.py (Test 3 and Test 5 narrowed)
+      - docs/ACTION_NORMALIZATION_NOTE.md (full retraction of the "convention-free" claim)
+    runner_state: runs in ~40s, prints honest narrowed verdict
+  - claim_id: monopole_derived_note
+    action: NARROW (reconciliation)
+    code_change:
+      - scripts/frontier_monopole_derived.py (synthesis + assumptions text)
+      - docs/MONOPOLE_DERIVED_NOTE.md (full reconciliation note)
+    runner_state: runs in <1s, headline now 1.43 M_Pl
+  - claim_id: self_gravity_backreaction_closure_note
+    action: NARROW (slow-runner annotation + --quick mode)
+    code_change:
+      - scripts/poisson_self_gravity_loop_v3.py (added --quick flag)
+      - docs/SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md (slow-runner annotation)
+    runner_state: --quick runs in ~22s; full sweep ~90s
+
+actual_current_surface_status: bounded
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "audit-row maintenance; not a retained-grade promotion"
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+
+next_action:
+  - run audit pipeline: bash docs/audit/scripts/run_pipeline.sh
+  - apply fresh-context audits where needed
+  - push branch and open PR

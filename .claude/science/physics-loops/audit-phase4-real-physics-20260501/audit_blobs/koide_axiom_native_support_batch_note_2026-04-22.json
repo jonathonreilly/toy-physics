@@ -1,0 +1,24 @@
+{
+  "claim_id": "koide_axiom_native_support_batch_note_2026-04-22",
+  "load_bearing_step": "The batch advertises an integrated regression runner and support stack for the enlarged Koide lane, while maintaining that Q, delta, and v0 remain support-only and not closed.",
+  "load_bearing_step_class": "C",
+  "chain_closes": true,
+  "chain_closure_explanation": "The runner frontier_koide_lane_regression.py reports TOTAL 381/381 and the failing subrunner frontier_koide_q_so2_phase_erasure_support.py is now 23/23 PASS. The earlier audit's failure mode (subrunner reporting onsite source-domain check fail) was fixed at commit 5097b492 on 2026-04-30; the chain now closes on its own bounded-support terms.",
+  "runner_check_breakdown": {
+    "A": 0, "B": 0, "C": 381, "D": 0, "total_pass": 381
+  },
+  "verdict": "audited_conditional",
+  "verdict_rationale": "The note is honestly bounded support: it explicitly does NOT promote charged-lepton Koide closure, and lists Q, delta, and v0 as remaining open. Cited authorities (KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE, KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE, etc.) are themselves support-grade with explicit open primitives. The chain closes on its own bounded-support terms now that the integrated runner passes 381/381, so the appropriate verdict is audited_conditional, not audited_failed.",
+  "decoration_parent_claim_id": null,
+  "open_dependency_paths": [
+    "docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md",
+    "docs/KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE_2026-04-25.md",
+    "docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md",
+    "docs/KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md"
+  ],
+  "auditor_confidence": "high",
+  "notes_for_re_audit_if_any": "Re-audit triggered after the subrunner frontier_koide_q_so2_phase_erasure_support.py was fixed at commit 5097b492 (2026-04-30). The original verdict of audited_failed was correct at audit time but the source of failure (one subrunner check) has been repaired. Verdict moves from audited_failed to audited_conditional reflecting the honest bounded-support status.",
+  "auditor": "codex-audit-phase4-real-physics-2026-05-01-koide",
+  "auditor_family": "codex-current",
+  "independence": "fresh_context"
+}

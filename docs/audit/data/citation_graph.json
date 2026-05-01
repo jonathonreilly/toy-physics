@@ -18645,7 +18645,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T18:46:05.079945+00:00",
+  "generated_at": "2026-05-01T18:50:48.128548+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -18714,12 +18714,12 @@
     "action_normalization_note": {
       "claim_id": "action_normalization_note",
       "current_status": "bounded",
-      "current_status_raw": "bounded - bounded or caveated result note",
+      "current_status_raw": "bounded - convention-locked support, not a c-fixing first-principles theorem",
       "deps": [],
-      "note_hash": "aa323875151f1dff61e10debb58ba4a1fbac49b9ad395592911f3894cab5ecab",
+      "note_hash": "b65106069786a76138ded4e77f2495230e70f030239fdb6f6834337efa965497",
       "path": "docs/ACTION_NORMALIZATION_NOTE.md",
       "runner_path": "scripts/frontier_action_normalization.py",
-      "title": "Action Normalization: Self-Consistency Fixes the Coupling Coefficient"
+      "title": "Action Normalization: Convention-Locked Coupling Coefficient"
     },
     "action_power_3d_gravity_sign_closure_note": {
       "claim_id": "action_power_3d_gravity_sign_closure_note",
@@ -30396,9 +30396,9 @@
     "monopole_derived_note": {
       "claim_id": "monopole_derived_note",
       "current_status": "support",
-      "current_status_raw": "Derived -- `M_mono ~ 0.80 M_Planck` on the current Planck-scale package pin",
+      "current_status_raw": "Derived -- `M_mono ~ 1.43 M_Planck` on the current Planck-scale package pin",
       "deps": [],
-      "note_hash": "37acc5f884c4f26d551de7d89b6390dffefce3a00063656e35586e3e184695fb",
+      "note_hash": "388b8e2a7cabb4bbf3ba9addad191dadf828284c43acce06cbdfb70ab8e26e89",
       "path": "docs/MONOPOLE_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_monopole_derived.py",
       "title": "Magnetic Monopole Mass: First-Principles Derivation"
@@ -36311,7 +36311,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded no-go on the exact-lattice Poisson-like backreaction lane under strict reduction/Born controls",
       "deps": [],
-      "note_hash": "20ea2304ec9941bfea5f407043bf26855fb6056736025cf47e39e413d0561503",
+      "note_hash": "3646b166d19a58a702fc65ccf682de3561d501d77a6eff68518ae95d811c4d9b",
       "path": "docs/SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md",
       "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
       "title": "Self-Gravity Backreaction Closure Note"

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T18:46:07.643029+00:00",
+  "generated_at": "2026-05-01T18:50:50.085204+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -67,7 +67,7 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 2
+        "D": 1
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -16702,7 +16702,7 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 2
+        "D": 1
       },
       "decoration_candidate": false,
       "dominant_class": "D",
