@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:54:22.507085+00:00
+**Generated:** 2026-05-01T01:55:35.262515+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
-| bounded | 266 |
+| bounded | 265 |
 | support | 225 |
 | open | 17 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 774 |
+| ~~audited_conditional~~ | 775 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 496 |
+| `audited_conditional` | 497 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 751 |
+| `unaudited` | 750 |
 
 | criticality | count |
 |---|---:|
@@ -454,6 +454,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_basin_finite_search_support_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_chamber_bound_derivation_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `dm_candidate_mass_window_theorem_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `dm_chamber_signature_structure_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -3589,6 +3590,21 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** identification)**Status:** RETAINED THEOREM. Sylvester's law of inertia proves that any  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 14 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `dm_candidate_mass_window_theorem_note_2026-04-19`
+
+- **Note:** [`DM_CANDIDATE_MASS_WINDOW_THEOREM_NOTE_2026-04-19.md`](../../docs/DM_CANDIDATE_MASS_WINDOW_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-dm_candidate_mass_window_theorem_note_2026-04-19`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The framework M1 mass from the ALPHA_LM k_B=8 power law lies above the Davidson-Ibarra leptogenesis bound, while the one-flavor transport target eta/eta_obs=1 would require a non-integer ALPHA_LM power k approximately 7.44 between the k=7 and k=8 mass nodes.  _(class `D`)_
+- **chain closes:** False — The runner verifies the mass-window arithmetic, but the row declares no dependencies for the exact DM package, prior transport eta ratio, or the external Davidson-Ibarra lower bound, and the external comparator is hard-coded rather than cited or classified separately.
+- **rationale:** Issue: the runner checks the stated mass spectrum and target-mass inversion (PASS=15/FAIL=0), but the row has deps=[] while it imports dm_leptogenesis_exact_common.py, relies on the prior transport-status eta/eta_obs value, and hard-codes the Davidson-Ibarra lower bound M_DI=2.4e8 GeV as an external viability comparator. Why this blocks: the framework mass-window arithmetic is only auditable after the upstream exact package, transport result, and external bound authority are declared; without those, the theorem is a correct-looking characterization over imported inputs, not a closed derivation. Repair target: declare the exact DM package/transport-status surface and the Davidson-Ibarra bound authority, and classify the bound comparison as an external-comparator check distinct from the internal ALPHA_LM power-law arithmetic. Claim boundary until fixed: bounded support that the current imported one-flavor DM/leptogenesis package is above a standard viability bound and has a non-integer mass-shift gap; not an independently audited closure of the DM/leptogenesis gate.
+- **open / conditional deps cited:**
+  - `scripts/dm_leptogenesis_exact_common.py`
+  - `scripts/frontier_dm_leptogenesis_transport_status.py`
 - **auditor confidence:** high
 
 ### `dm_chamber_signature_structure_note_2026-04-19`
