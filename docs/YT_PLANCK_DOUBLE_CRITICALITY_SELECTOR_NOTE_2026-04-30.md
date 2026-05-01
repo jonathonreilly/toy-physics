@@ -155,6 +155,14 @@ scalar-trace no-gos, the lattice Noether note does not provide a quantum
 energy-momentum trace theorem, and scalar trace zero would not isolate
 `beta_lambda=0` without a new operator-independence/conformal-boundary theorem.
 
+Fourth follow-up status:
+[YT_VACUUM_STABILITY_STATIONARITY_NO_GO_NOTE_2026-05-01.md](YT_VACUUM_STABILITY_STATIONARITY_NO_GO_NOTE_2026-05-01.md)
+tests the weaker vacuum-stability route.  It closes negatively as a selector:
+`lambda(M_Pl)=0` plus one-sided local stability below the upper boundary gives
+only `beta_lambda(M_Pl) <= 0`, not the equality `beta_lambda(M_Pl)=0`.  Thus
+vacuum stability supplies a family/bound unless an additional double-zero or
+multiple-point tangency theorem is added.
+
 Promising attack frames:
 
 1. boundary-action stationarity of the taste scalar at the Planck surface;
@@ -166,6 +174,9 @@ Promising attack frames:
    without adding a new selector.
 5. quantum EMT / trace-anomaly stationarity, now closed negatively on the
    current authority surface unless new conformal-boundary structure is added.
+6. one-sided vacuum stability at the high-scale boundary, now closed
+   negatively as a unique selector because it gives an inequality rather than
+   stationarity.
 
 Until that premise is derived, this is a conditional selector and a route
 portfolio upgrade, not a retained-grade theorem.

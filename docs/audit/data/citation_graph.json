@@ -7889,6 +7889,10 @@
       "to": "yt_trace_anomaly_stationarity_no_go_note_2026-05-01"
     },
     {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "yt_vacuum_stability_stationarity_no_go_note_2026-05-01"
+    },
+    {
       "from": "yt_eft_bridge_theorem",
       "to": "yt_zero_import_authority_note"
     },
@@ -8421,6 +8425,10 @@
       "to": "yt_trace_anomaly_stationarity_no_go_note_2026-05-01"
     },
     {
+      "from": "yt_planck_double_criticality_selector_note_2026-04-30",
+      "to": "yt_vacuum_stability_stationarity_no_go_note_2026-05-01"
+    },
+    {
       "from": "yt_right_handed_species_dependence_note_2026-04-18",
       "to": "one_generation_matter_closure_note"
     },
@@ -8575,6 +8583,14 @@
     {
       "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
       "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
+      "to": "vacuum_critical_stability_note"
+    },
+    {
+      "from": "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
+      "to": "higgs_mass_derived_note"
     },
     {
       "from": "yt_vertex_power_derivation",
@@ -18429,7 +18445,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T01:32:07.720182+00:00",
+  "generated_at": "2026-05-01T01:36:51.040768+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39340,9 +39356,10 @@
         "yt_planck_double_criticality_selector_note_2026-04-30",
         "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01",
         "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
-        "yt_trace_anomaly_stationarity_no_go_note_2026-05-01"
+        "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
+        "yt_vacuum_stability_stationarity_no_go_note_2026-05-01"
       ],
-      "note_hash": "cf86d260afd723dd1765542287fa13c93d6d63212304e50d1187edfbe65a69a9",
+      "note_hash": "0299f548e03d6e12017b7a5257828ebfa54ab006a08e267c6df38f2994b3e952",
       "path": "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_direct_lattice_correlator.py",
       "title": "Direct Lattice-Correlator Top-Yukawa Measurement Gate"
@@ -39912,9 +39929,10 @@
       "deps": [
         "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01",
         "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
-        "yt_trace_anomaly_stationarity_no_go_note_2026-05-01"
+        "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
+        "yt_vacuum_stability_stationarity_no_go_note_2026-05-01"
       ],
-      "note_hash": "03117e39106e49cbbced2f237e2a9f2cfd1dd060187bce79017f335d46dba2b5",
+      "note_hash": "f0e1f07a7202667211f78a8a82f5b67048fac6fd270dc6a8776385058b3743d2",
       "path": "docs/YT_PLANCK_DOUBLE_CRITICALITY_SELECTOR_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_planck_double_criticality_selector.py",
       "title": "YT Planck Double-Criticality Selector Note"
@@ -39978,7 +39996,7 @@
         "physical_lattice_necessity_note",
         "minimal_axioms_2026-04-11"
       ],
-      "note_hash": "d8e57672fcf02e98ef3a2106091c823549dbc86b38511486cbd2adfa90039ee8",
+      "note_hash": "c08b15557bc94c049e8acc49583ca54d532a137c5a0e40e88c9219bb2f4ae96f",
       "path": "docs/YT_SCALE_STATIONARITY_SUBSTRATE_NO_GO_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_scale_stationarity_substrate_no_go.py",
       "title": "YT Scale-Stationarity Substrate No-Go Note"
@@ -40088,7 +40106,7 @@
       "current_status": "support",
       "current_status_raw": "no-go / exact-negative-boundary on the current substrate surface",
       "deps": [],
-      "note_hash": "c88161e06b7893f64626db2feaedf2a5cc81d39f487d4662a2ea790a94eda438",
+      "note_hash": "dfe04b380950c83f17a792472292439ddf069c98b7176695e9db969dc428a735",
       "path": "docs/YT_TRACE_ANOMALY_STATIONARITY_NO_GO_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_trace_anomaly_stationarity_no_go.py",
       "title": "YT Trace-Anomaly Stationarity No-Go Note"
@@ -40130,6 +40148,19 @@
       "path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_uv_to_ir_transport_obstruction.py",
       "title": "YT UV-to-IR Transport Master Obstruction Theorem Note"
+    },
+    "yt_vacuum_stability_stationarity_no_go_note_2026-05-01": {
+      "claim_id": "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact-negative-boundary on the current substrate surface",
+      "deps": [
+        "vacuum_critical_stability_note",
+        "higgs_mass_derived_note"
+      ],
+      "note_hash": "339a895522281845013d813461b7186c0e82c82378b6a8bd61d8713ae45dae23",
+      "path": "docs/YT_VACUUM_STABILITY_STATIONARITY_NO_GO_NOTE_2026-05-01.md",
+      "runner_path": "scripts/frontier_yt_vacuum_stability_stationarity_no_go.py",
+      "title": "YT Vacuum-Stability Stationarity No-Go Note"
     },
     "yt_vertex_power_derivation": {
       "claim_id": "yt_vertex_power_derivation",
@@ -41391,17 +41422,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4607,
+    "edge_count": 4611,
     "leaf_count": 728,
-    "node_count": 1668,
+    "node_count": 1669,
     "root_count": 1187,
-    "runners_with_path": 1232,
+    "runners_with_path": 1233,
     "status_counts": {
       "bounded": 447,
       "open": 48,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 380,
+      "support": 381,
       "unknown": 419
     }
   }

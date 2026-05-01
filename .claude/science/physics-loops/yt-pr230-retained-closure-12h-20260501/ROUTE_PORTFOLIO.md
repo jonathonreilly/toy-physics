@@ -48,10 +48,16 @@ theorem forcing `beta_lambda=0`.
 
 Adopt `beta_lambda(M_Pl)=0` as an explicit new selector.
 
-Status: conditional support only.
+Status: conditional support only.  The weaker one-sided vacuum-stability route
+is closed negatively in
+`docs/YT_VACUUM_STABILITY_STATIONARITY_NO_GO_NOTE_2026-05-01.md`.
 
 Usefulness: gives a fast non-MC `y_t(v)` readout, but does not satisfy the
 user's full retained-closure target.
+
+Reason the weaker route fails: `lambda(M_Pl)=0` plus local stability below the
+upper boundary gives `beta_lambda(M_Pl)<=0`, not equality.  Equality is the
+extra tangency/double-zero premise.
 
 ## R6: Direct MC
 

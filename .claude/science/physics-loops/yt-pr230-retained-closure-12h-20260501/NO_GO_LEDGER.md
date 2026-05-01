@@ -21,3 +21,12 @@ Closed by `docs/YT_TRACE_ANOMALY_STATIONARITY_NO_GO_NOTE_2026-05-01.md` and
 The Noether note explicitly closes translation and `U(1)` currents and defers
 full EMT/anomaly closure.  Existing anomaly-trace catalogues are gauge and
 hypercharge trace arithmetic, not quantum stress-tensor trace identities.
+
+## One-sided vacuum stability does not imply beta stationarity
+
+Closed by `docs/YT_VACUUM_STABILITY_STATIONARITY_NO_GO_NOTE_2026-05-01.md` and
+`scripts/frontier_yt_vacuum_stability_stationarity_no_go.py`.
+
+At an upper boundary with `lambda(M_Pl)=0`, local nonnegativity below the
+boundary gives `beta_lambda(M_Pl)<=0`, not equality.  Equality is a separate
+double-zero/multiple-point premise.

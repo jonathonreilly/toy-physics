@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T01:32:14.542865+00:00",
+  "generated_at": "2026-05-01T01:36:57.542928+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14905,6 +14905,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_uv_to_ir_transport_obstruction.py"
     },
+    "yt_vacuum_stability_stationarity_no_go_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_vacuum_stability_stationarity_no_go.py"
+    },
     "yt_vertex_power_derivation": {
       "assert_count": 1,
       "counts": {
@@ -28932,6 +28944,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_vacuum_stability_stationarity_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_vacuum_stability_stationarity_no_go_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_ward_identity_derivation.py": {
       "assert_count": 0,
       "claims": [
@@ -32503,11 +32530,11 @@
       "A": 7,
       "B": 121,
       "C": 445,
-      "D": 185,
+      "D": 186,
       "none": 404
     },
-    "runners_classified": 1162,
+    "runners_classified": 1163,
     "runners_with_C": 537,
-    "runners_with_D": 286
+    "runners_with_D": 287
   }
 }

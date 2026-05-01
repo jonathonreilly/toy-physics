@@ -374,6 +374,13 @@ trace catalogues and scalar-trace gravity no-gos, but no quantum
 energy-momentum trace theorem with operator independence that would isolate
 `beta_lambda(M_Pl)=0`.
 
+Vacuum-stability follow-up status:
+[YT_VACUUM_STABILITY_STATIONARITY_NO_GO_NOTE_2026-05-01.md](YT_VACUUM_STABILITY_STATIONARITY_NO_GO_NOTE_2026-05-01.md)
+checks whether `lambda(M_Pl)=0` plus one-sided local stability below the
+boundary can force `beta_lambda(M_Pl)=0`.  It cannot: the local condition is
+`beta_lambda(M_Pl) <= 0`, which leaves a continuum of allowed `y_t` values.
+The equality requires an added double-zero or multiple-point tangency theorem.
+
 A future passing production certificate must supply this budget:
 
 | Component | Required content |

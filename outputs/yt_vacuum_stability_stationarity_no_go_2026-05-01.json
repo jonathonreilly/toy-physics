@@ -1,0 +1,73 @@
+{
+  "actual_current_surface_status": "no-go / exact-negative-boundary",
+  "authority_boundary": {
+    "higgs_inherits_yt": true,
+    "higgs_lambda_boundary": true,
+    "selector_conditional": true,
+    "vacuum_bounded": true,
+    "vacuum_inherits_yt": true
+  },
+  "fail_count": 0,
+  "inequality_boundary": {
+    "g1_MPl": 0.6166064056,
+    "g2_MPl": 0.506356441,
+    "local_condition": "lambda(M_Pl)=0 and lambda below M_Pl nonnegative implies beta_lambda(M_Pl)<=0, not equality",
+    "samples": [
+      {
+        "beta_lambda_one_loop_at_zero": 0.0472308738560631,
+        "lambda_below_taylor": -4.7230873856063106e-05,
+        "locally_stable_below": false,
+        "name": "below_selector",
+        "yt": 0.3500685922456097
+      },
+      {
+        "beta_lambda_one_loop_at_zero": 5.551115123125783e-17,
+        "lambda_below_taylor": -5.551115123125783e-20,
+        "locally_stable_below": true,
+        "name": "at_selector",
+        "yt": 0.3889651024951219
+      },
+      {
+        "beta_lambda_one_loop_at_zero": -0.06373901877464055,
+        "lambda_below_taylor": 6.373901877464055e-05,
+        "locally_stable_below": true,
+        "name": "above_selector_10pct",
+        "yt": 0.42786161274463413
+      },
+      {
+        "beta_lambda_one_loop_at_zero": -0.55793959011415,
+        "lambda_below_taylor": 0.00055793959011415,
+        "locally_stable_below": true,
+        "name": "above_selector_50pct",
+        "yt": 0.5834476537426828
+      }
+    ],
+    "y_star": 0.3889651024951219
+  },
+  "pass_count": 13,
+  "remaining_open_premise": "a new multiple-point/double-zero theorem or explicit Planck tangency selector",
+  "routes": [
+    {
+      "reason": "Local stability below M_Pl gives beta_lambda<=0, not beta_lambda=0.",
+      "route": "one_sided_vacuum_stability",
+      "status": "blocked"
+    },
+    {
+      "reason": "Adding tangency beta_lambda=0 is exactly the missing selector.",
+      "route": "critical_tangent",
+      "status": "conditional_extra_premise"
+    },
+    {
+      "reason": "Would need an added theorem that the Planck boundary is a double zero.",
+      "route": "multiple_point_degeneracy",
+      "status": "conditional_extra_premise"
+    },
+    {
+      "reason": "Using observed near-criticality would be an admitted comparator, not substrate proof.",
+      "route": "observed_vacuum_criticality",
+      "status": "forbidden_as_derivation"
+    }
+  ],
+  "target": "derive beta_lambda(M_Pl)=0 from lambda(M_Pl)=0 plus one-sided vacuum stability",
+  "verdict": "One-sided vacuum stability at a lambda=0 upper boundary gives a local inequality beta_lambda(M_Pl)<=0.  It does not force the stationary equality beta_lambda(M_Pl)=0 and therefore does not select a unique y_t."
+}

@@ -6,7 +6,9 @@
 
 2. **Multiple-point selector consequence map.**
    Package what would follow if `beta_lambda(M_Pl)=0` is accepted as a new
-   explicit selector.  Expected status: conditional support, not retained.
+   explicit selector.  The weaker one-sided stability interpretation is closed
+   negatively in `docs/YT_VACUUM_STABILITY_STATIONARITY_NO_GO_NOTE_2026-05-01.md`.
+   Expected status: conditional support, not retained.
 
 3. **Direct MC feasibility tightening.**
    Improve the production runner bottleneck notes only if a physics closure
