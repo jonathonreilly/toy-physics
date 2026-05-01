@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:47:21.024853+00:00
+**Generated:** 2026-05-01T11:56:48.739902+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 304 |
+| `audited_clean` | 305 |
 | `audited_conditional` | 591 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 536 |
+| `unaudited` | 535 |
 
 | criticality | count |
 |---|---:|
@@ -357,6 +357,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `poisson_self_gravity_loop_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `poisson_self_gravity_loop_v3_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `qnm_control_hardening_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
+| `qnm_hardening_feasibility_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -12590,6 +12591,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** It does not promote a quasi-normal mode result; it only freezes the control program that would be required before any QNM-style escape-spectrum claim could be reviewed safely.  _(class `A`)_
 - **chain closes:** True — The note's claim is a scope restriction and control checklist, not a positive spectral theorem. It explicitly denies a QNM/escape-spectrum result and therefore closes as a bounded control-program note without needing a numerical runner.
 - **rationale:** The source note is audit-clean only for its narrow boundary: QNM remains a hardening target and no quasi-normal-mode or escape-spectrum result is asserted. It does not attempt to derive or validate any spectral observable, and its listed five controls are stated as future prerequisites rather than achieved results. Residual risk is that this clean verdict must not be reused as evidence for a positive QNM lane; it ratifies only the bounded control-program framing.
+- **auditor confidence:** high
+
+### `qnm_hardening_feasibility_note`
+
+- **Note:** [`QNM_HARDENING_FEASIBILITY_NOTE.md`](../../docs/QNM_HARDENING_FEASIBILITY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The branch QNM harness suggests a G-dependent escape spectrum on a self-consistent field family, but it is not yet safe to call it a retained exact-lattice spectral law.  _(class `C`)_
+- **chain closes:** True — The runner recomputes exploratory peak tables across G, s, and fixed G*s partitions but does not include the frozen null, matched fixed-field control, Born audit, Nyquist exclusion, or stability pack. That current output supports the note's support-level feasibility verdict that the lane remains exploratory rather than retained.
+- **rationale:** The note is clean for its conservative support claim: it does not promote a QNM spectral law and instead identifies the missing controls needed before review-safe promotion. The current runner output supplies exploratory peak sweeps, including persistent k=6.5 structure, but no frozen null, matched control, Born audit, or refinement pack. Residual risk is bounded because this clean verdict ratifies only the hardening/feasibility boundary, not any retained QNM result.
 - **auditor confidence:** high
 
 ### `quantum_horizon_note`
