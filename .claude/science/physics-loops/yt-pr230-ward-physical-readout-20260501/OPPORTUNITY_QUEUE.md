@@ -38,3 +38,6 @@
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 5. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`
    is derived rather than assumed.
+6. **Existing bridge-stack promotion.** Closed negatively for PR230 retained
+   closure.  The bridge stack is bounded transport support and imports accepted
+   endpoints/surfaces.

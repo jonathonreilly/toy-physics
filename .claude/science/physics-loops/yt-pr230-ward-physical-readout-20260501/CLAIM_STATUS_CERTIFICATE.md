@@ -72,6 +72,9 @@ Allowed wording:
   responses but does not equate distinct scalar and gauge residues;
 - refreshed retained-closure route certificate; strict production/matching and
   microscopic scalar residue/common-dressing remain the shortest honest routes;
+- exact negative boundary for the existing bridge stack as PR230 closure;
+  transport support imports accepted endpoints/surfaces and is not a direct
+  y_t proof;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
@@ -200,4 +203,10 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
 # SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_bridge_stack_import_audit.py
+# SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=20 FAIL=0
 ```

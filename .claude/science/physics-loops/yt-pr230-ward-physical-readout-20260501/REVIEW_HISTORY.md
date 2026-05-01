@@ -437,6 +437,31 @@ python3 scripts/frontier_yt_retained_closure_route_certificate.py
 The refreshed certificate includes the new LSZ, Feshbach, and interacting
 kinetic checks.  It remains a route certificate rather than closure evidence.
 
+## Review-Loop Backpressure — Bridge Stack Import Audit
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_bridge_stack_import_audit.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_bridge_stack_import_audit.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+This closes the strongest current "auditor missed an existing proof" route.
+The bridge stack is useful support but imports endpoint/surface data and is
+not retained closure for PR230.
+
 ## Review-Loop Backpressure — Momentum Pilot Scaling
 
 Local review-loop disposition:

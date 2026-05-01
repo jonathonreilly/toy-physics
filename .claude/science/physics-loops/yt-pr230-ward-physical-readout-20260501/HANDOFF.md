@@ -121,6 +121,10 @@ What changed:
   newer LSZ covariance, Feshbach response, and interacting kinetic sensitivity
   checks.  It now passes `PASS=12 FAIL=0` and still authorizes no retained
   proposal wording.
+- The axiom-first / constructive UV bridge stack has been audited as the main
+  possible missed proof.  It is not PR230 closure: it is bounded transport
+  support, imports accepted `y_t(v)` or accepted plaquette/`u_0` surfaces, and
+  its ledger rows are bounded, unaudited, or audited conditional.
 
 The scientific result is narrower than closure:
 

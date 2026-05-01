@@ -345,6 +345,18 @@ The refreshed certificate includes LSZ normalization cancellation, Feshbach
 operator response, and interacting kinetic sensitivity.  It still finds no
 retained-proposal route on the current surface.
 
+Existing bridge stack is not a missed PR230 proof:
+
+```text
+python3 scripts/frontier_yt_bridge_stack_import_audit.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+The axiom-first / constructive UV bridge stack remains bounded transport
+support.  It imports an accepted endpoint or accepted plaquette/`u_0` surface
+and its ledger rows are bounded, unaudited, or audited conditional.  It cannot
+replace the direct measurement or scalar-residue theorem.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

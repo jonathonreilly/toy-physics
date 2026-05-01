@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-19-retained-closure-certificate-refresh
-blocks_completed: 33
-active_route: "retained-closure route certificate refresh"
-active_hard_residual: "fold LSZ covariance, Feshbach response, and interacting kinetic sensitivity into the shortest-route certificate"
+current_phase: campaign-rerun-block-20-bridge-stack-import-audit
+blocks_completed: 34
+active_route: "axiom-first / constructive bridge stack import audit"
+active_hard_residual: "check whether existing YT bridge stack is a missed retained proof"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -126,6 +126,9 @@ files_touched:
   - "scripts/frontier_yt_feshbach_operator_response_boundary.py"
   - "docs/YT_FESHBACH_OPERATOR_RESPONSE_BOUNDARY_NOTE_2026-05-01.md"
   - "outputs/yt_feshbach_operator_response_boundary_2026-05-01.json"
+  - "scripts/frontier_yt_bridge_stack_import_audit.py"
+  - "docs/YT_BRIDGE_STACK_IMPORT_AUDIT_NOTE_2026-05-01.md"
+  - "outputs/yt_bridge_stack_import_audit_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -179,6 +182,7 @@ claim_state_movement:
   - "showed scalar source normalization cancels in a covariant LSZ proxy only when the scalar kernel and residue transform together; the interacting denominator and derivative remain open"
   - "proved exact Feshbach response preservation is operator-specific: it removes crossover distortion as the blocker but does not equate scalar and gauge microscopic residues"
   - "refreshed the retained-closure route certificate: newer support narrows but does not close the remaining production/matching or microscopic scalar-residue routes"
+  - "audited the axiom-first / constructive UV bridge stack as a possible missed proof; it is bounded transport support with endpoint/surface imports, not PR230 closure"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -187,5 +191,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Attack the microscopic interacting scalar residue/common-dressing theorem directly, or begin a strict measurement/matching production plan; certificate refresh confirms no shortcut closure."
+next_exact_action: "Continue microscopic scalar residue/common-dressing theorem attack or strict measurement/matching plan; bridge-stack route is now closed as non-closure."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

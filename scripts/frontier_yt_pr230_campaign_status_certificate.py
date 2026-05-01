@@ -54,6 +54,7 @@ def main() -> int:
         "same_1pi": load("outputs/yt_same_1pi_scalar_pole_boundary_2026-05-01.json"),
         "lsz_norm": load("outputs/yt_scalar_lsz_normalization_cancellation_2026-05-01.json"),
         "feshbach_response": load("outputs/yt_feshbach_operator_response_boundary_2026-05-01.json"),
+        "bridge_stack": load("outputs/yt_bridge_stack_import_audit_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -112,6 +113,11 @@ def main() -> int:
         "Feshbach response boundary" in str(statuses["feshbach_response"])
         or "exact support" in str(statuses["feshbach_response"]),
         statuses["feshbach_response"],
+    )
+    report(
+        "bridge-stack-not-pr230-closure",
+        "bridge stack not PR230 closure" in str(statuses["bridge_stack"]),
+        statuses["bridge_stack"],
     )
     report(
         "finite-ladder-route-needs-ir-limit",
@@ -196,7 +202,9 @@ def main() -> int:
             "normalization model shows source scaling can cancel only if the "
             "interacting denominator and residue are derived together.  Exact "
             "Feshbach response preservation removes crossover distortion as the "
-            "blocker but does not equate scalar and gauge residues.  Remaining "
+            "blocker but does not equate scalar and gauge residues.  The "
+            "axiom-first bridge stack is bounded transport support with endpoint "
+            "imports, not a missed PR #230 proof.  Remaining "
             "closure requires production "
             "evidence or a genuinely new scalar LSZ/heavy-matching theorem."
         ),

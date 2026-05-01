@@ -1,0 +1,153 @@
+{
+  "actual_current_surface_status": "exact negative boundary / bridge stack not PR230 closure",
+  "fail_count": 0,
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Bridge stack uses bounded/conditional transport and endpoint imports; it does not derive y_t from A_min.",
+  "status_rows": {
+    "yt_axiom_first_microscopic_bridge_theorem": {
+      "audit_status": "unaudited",
+      "effective_status": "audited_conditional",
+      "runner_path": null
+    },
+    "yt_bridge_action_invariant_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_action_invariant.py"
+    },
+    "yt_bridge_endpoint_shift_bound_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_endpoint_shift_bound.py"
+    },
+    "yt_bridge_hessian_selector_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_hessian_selector.py"
+    },
+    "yt_bridge_higher_order_corrections_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_higher_order_corrections.py"
+    },
+    "yt_bridge_moment_closure_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_moment_closure.py"
+    },
+    "yt_bridge_nonlocal_corrections_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_nonlocal_corrections.py"
+    },
+    "yt_bridge_operator_closure_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_operator_closure.py"
+    },
+    "yt_bridge_rearrangement_principle_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_rearrangement_principle.py"
+    },
+    "yt_bridge_uv_class_uniqueness_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_uv_class_uniqueness.py"
+    },
+    "yt_bridge_variational_selector_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_variational_selector.py"
+    },
+    "yt_constructive_uv_bridge_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_constructive_uv_bridge.py"
+    },
+    "yt_exact_interacting_bridge_transport_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_exact_interacting_bridge_transport.py"
+    }
+  },
+  "strict_non_claims": [
+    "does not demote the bridge stack as support",
+    "does not use observed or accepted y_t endpoint as proof input",
+    "does not use alpha_LM/plaquette/u0 as PR230 proof input",
+    "does not define y_t through H_unit matrix elements"
+  ],
+  "text_checks": {
+    "accepted_endpoint_import": true,
+    "plaquette_u0_import": true,
+    "self_nonclosure": true
+  },
+  "unaudited_or_conditional": {
+    "yt_axiom_first_microscopic_bridge_theorem": {
+      "audit_status": "unaudited",
+      "effective_status": "audited_conditional",
+      "runner_path": null
+    },
+    "yt_bridge_action_invariant_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_action_invariant.py"
+    },
+    "yt_bridge_endpoint_shift_bound_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_endpoint_shift_bound.py"
+    },
+    "yt_bridge_hessian_selector_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_hessian_selector.py"
+    },
+    "yt_bridge_higher_order_corrections_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_higher_order_corrections.py"
+    },
+    "yt_bridge_moment_closure_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_moment_closure.py"
+    },
+    "yt_bridge_nonlocal_corrections_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_nonlocal_corrections.py"
+    },
+    "yt_bridge_operator_closure_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_operator_closure.py"
+    },
+    "yt_bridge_rearrangement_principle_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_rearrangement_principle.py"
+    },
+    "yt_bridge_uv_class_uniqueness_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_uv_class_uniqueness.py"
+    },
+    "yt_bridge_variational_selector_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_bridge_variational_selector.py"
+    },
+    "yt_constructive_uv_bridge_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_constructive_uv_bridge.py"
+    },
+    "yt_exact_interacting_bridge_transport_note": {
+      "audit_status": "unaudited",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_exact_interacting_bridge_transport.py"
+    }
+  },
+  "verdict": "The axiom-first / constructive UV bridge stack is not a missed retained top-Yukawa proof.  Its own notes classify it as bounded support, it imports the accepted y_t(v) endpoint or accepted plaquette/u0 surfaces, and audit ledger rows are bounded, unaudited, or audited conditional.  It can support transport once a boundary is supplied; it cannot replace the direct correlator measurement or microscopic scalar-residue theorem in PR #230."
+}

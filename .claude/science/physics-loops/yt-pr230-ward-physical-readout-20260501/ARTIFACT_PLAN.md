@@ -109,6 +109,9 @@ Completed in block 1:
 - `scripts/frontier_yt_feshbach_operator_response_boundary.py`
 - `outputs/yt_feshbach_operator_response_boundary_2026-05-01.json`
 - `docs/YT_FESHBACH_OPERATOR_RESPONSE_BOUNDARY_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_bridge_stack_import_audit.py`
+- `outputs/yt_bridge_stack_import_audit_2026-05-01.json`
+- `docs/YT_BRIDGE_STACK_IMPORT_AUDIT_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -116,7 +119,8 @@ Next artifact:
   kinetic-renormalization/matching theorem, or real production/statistics;
   reduced momentum pilots, free-action support, fixed-background sensitivity,
   LSZ source-scaling covariance, and exact Feshbach response preservation are
-  not closure evidence
+  not closure evidence; the existing bridge stack is bounded transport support
+  with endpoint imports, not closure evidence
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,
