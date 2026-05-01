@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:43:17.841469+00:00
+**Generated:** 2026-05-01T06:45:07.347985+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 259 |
+| `audited_clean` | 260 |
 | `audited_conditional` | 578 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 598 |
+| `unaudited` | 597 |
 
 | criticality | count |
 |---|---:|
@@ -326,6 +326,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_3plus1_temporal_ratio_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `scalar_trace_tensor_no_go_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `self_consistency_forces_poisson_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-gpt-5 | C | - |
+| `self_consistency_structured_null_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
@@ -12463,6 +12464,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** On the tested 3D nearest-neighbor cubic-lattice surface, unscreened Poisson is the best-supported operator in the finite sweep: it converges with attractive monotone near-Newtonian fields, the tested non-screened alternatives fail the same physics checks, screened variants drift away from beta=1, and susceptibility correlates with the Poisson Green profile.  _(class `C`)_
 - **chain closes:** True — The source note explicitly scopes itself to a bounded finite-lattice/tested-family preference result and disclaims full uniqueness. The restored runner exits 0 and reproduces the stated Poisson convergence, alternative-operator comparison, susceptibility correlation, screened-Poisson drift, and N=24 confirmation.
 - **rationale:** Clean as a bounded operator-preference result only: the note does not claim retained Poisson uniqueness, and its caveats match the runner surface. The live runner exits 0 after runner restoration and verifies that Poisson converges on N=20 and N=24 with attractive monotone fields, tested non-screened alternatives do not share the same physically correct profile, screened Poisson with positive mu^2 drifts away from beta=1, and the susceptibility profile is strongly correlated with the Poisson Green profile. Residual risk is the stated bounded scope: finite lattices, tested operator family, small-perturbation susceptibility, and ordered cubic graph only.
+- **auditor confidence:** high
+
+### `self_consistency_structured_null_note_2026-04-11`
+
+- **Note:** [`SELF_CONSISTENCY_STRUCTURED_NULL_NOTE_2026-04-11.md`](../../docs/SELF_CONSISTENCY_STRUCTURED_NULL_NOTE_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the corrected 10x10 periodic staggered torus, iterative backreaction is distinguished from matched static structured nulls, with the cleanest surviving separation in width contraction.  _(class `C`)_
+- **chain closes:** True — The registered runner exits 0 and reproduces the note's SelfConsist, StaticInit, ShiftedNull, and PhaseNull sign-margin, width-ratio, boundary-alpha, and sigma-separation values; the source keeps the conclusion fixed-surface and non-universal.
+- **rationale:** The bounded structured-null claim closes against scripts/frontier_self_consistency_test.py. Current output matches SelfConsist sign margin +30, width 0.3554, alpha 0.145434; StaticInit +40, 0.3563, 0.159548; ShiftedNull +11, 0.4847, 0.134795; PhaseNull +21.4+/-31.1, 0.4012+/-0.0186, 0.131728+/-0.011976; and the stated width/alpha separations. The note explicitly limits the result to a fixed 10x10 periodic surface and does not claim architecture-wide closure. Plot generation failed locally due missing matplotlib, but the numerical runner output needed for the audit completed.
 - **auditor confidence:** high
 
 ### `self_gravity_backreaction_closure_note`
