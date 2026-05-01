@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T00:55:06.248311+00:00
+**Generated:** 2026-05-01T00:56:20.157360+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 88 |
-| _proposed_retained_ | 2 |
+| **retained** | 89 |
+| _proposed_retained_ | 1 |
 | bounded | 272 |
 | support | 231 |
 | open | 18 |
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 227 |
+| `audited_clean` | 228 |
 | `audited_conditional` | 484 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 765 |
+| `unaudited` | 764 |
 
 | criticality | count |
 |---|---:|
@@ -286,6 +286,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `nonlabel_grown_drift_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `packet_memory_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `persistent_inertial_object_probe_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -9807,6 +9808,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `inward_source_directional_law_open`
   - `direction_independent_transfer_law_open`
   - `self_maintaining_inertial_mass_or_matter_closure_open`
+- **auditor confidence:** high
+
+### `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30`
+
+- **Note:** [`PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md`](../../docs/PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-clean-context-2026-05-01`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For H = iD, the naive CP K action flips H, while the Hermitian Hamiltonian antiunitary representative Theta_H = P K preserves H and makes the CPT-odd Hamiltonian sector vanish.  _(class `A`)_
+- **chain closes:** True — The bridge closes as exact algebra over the explicitly constructed free staggered D operator, the C/P spectral-flip identities, and the antiunitary action K(i) = -i. The claim boundary stays within the free Hermitian Hamiltonian and its lattice CPT-odd bilinear sectors.
+- **rationale:** The note directly addresses the prior Hermitization gap rather than assuming it away: it shows naive CP K flips H and then constructs Theta_H = P K to compensate the antiunitary i -> -i step. The runner checks Hermitization, D-level C/P/CP identities, the naive failure mode, the physical Hermitian CPT lift, and full plus direction-resolved CPT-odd sectors for even periodic lattices. Residual risk is bounded to the stated free Hamiltonian substrate; this audit does not ratify interacting CKM-sector CP violation, continuum CPT theorem replacement, or full gauge-sector CPT.
 - **auditor confidence:** high
 
 ### `physical_lattice_necessity_note`
