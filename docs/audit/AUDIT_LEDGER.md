@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T15:59:36.185374+00:00
+**Generated:** 2026-05-01T16:05:00.276703+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 201 |
-| support | 154 |
+| support | 153 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 871 |
+| ~~audited_conditional~~ | 872 |
 | ~~audited_failed~~ | 103 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 292 |
-| `audited_conditional` | 586 |
+| `audited_conditional` | 587 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 576 |
+| `unaudited` | 575 |
 
 | criticality | count |
 |---|---:|
@@ -705,6 +705,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higgs_mass_derived_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
 | `higgs_mass_from_axiom_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
 | `higgs_mass_hierarchy_correction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `higgs_mechanism_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `higgs_vacuum_explicit_systematic_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `higher_dimension_status_2026-04-01` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7929,6 +7930,20 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a bounded note without audit-ratified executable closure.
 - **auditor confidence:** medium
+
+### `higgs_mechanism_note`
+
+- **Note:** [`HIGGS_MECHANISM_NOTE.md`](../../docs/HIGGS_MECHANISM_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Use HIGGS_MASS_DERIVED_NOTE.md for the current Higgs authority boundary; this note exists only to support the mechanism-level claim.  _(class `B`)_
+- **chain closes:** False — The note delegates its authority boundary to HIGGS_MASS_DERIVED_NOTE.md, but that authority row is conditional and its registered dependencies include higgs_mechanism_note, so the support route is circular rather than audit-clean. The primary runner supports some mechanism/naturalness checks but exits nonzero with explicit failures on the gauge-running and exact-derivation surfaces.
+- **rationale:** Issue: the load-bearing authority rule points from HIGGS_MECHANISM_NOTE.md to HIGGS_MASS_DERIVED_NOTE.md, while the cited authority is itself audited-conditional and depends back on higgs_mechanism_note. Why this blocks: the mechanism-level statement may be honest support, but the audit chain does not close from an independent one-hop authority, and the primary runner exits nonzero after recording explicit failures for alpha_s running, the y_t crossing, and full Higgs derivation. Repair target: split the mechanism-only CW/naturalness runner from the exact-mass checks, and provide an audit-clean non-circular mechanism theorem or authority note for the scalar order-parameter/Higgs identification. Claim boundary until fixed: the note can be cited as mechanism-level support for CW EWSB and naturalness bookkeeping, not as an audit-ratified Higgs mechanism derivation.
+- **open / conditional deps cited:**
+  - `HIGGS_MASS_DERIVED_NOTE.md`
+- **auditor confidence:** high
 
 ### `higgs_vacuum_explicit_systematic_note`
 
