@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:30:37.474838+00:00
+**Generated:** 2026-05-01T06:32:15.300220+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 256 |
+| `audited_clean` | 257 |
 | `audited_conditional` | 577 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 83 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 603 |
+| `unaudited` | 602 |
 
 | criticality | count |
 |---|---:|
@@ -328,6 +328,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
 | `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
+| `source_resolved_generated_architecture_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `staggered_newton_reproduction_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
@@ -12716,6 +12717,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
   - `EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md`
+- **auditor confidence:** high
+
+### `source_resolved_generated_architecture_bridge_note`
+
+- **Note:** [`SOURCE_RESOLVED_GENERATED_ARCHITECTURE_BRIDGE_NOTE.md`](../../docs/SOURCE_RESOLVED_GENERATED_ARCHITECTURE_BRIDGE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Support recovery plus a causal parent-averaged field is better, but the weak-field mass law improves without fully closing.  _(class `C`)_
+- **chain closes:** True — The registered runner exits 0 and reproduces the note's exact zero-source, TOWARD-count, N_eff, and fitted-exponent table; the source note keeps the result bounded and does not claim generated-family closure.
+- **rationale:** The bounded bridge claim closes against the current runner. scripts/source_resolved_generated_architecture_bridge.py reproduces baseline/static 4/16 TOWARD, F~M=0.199, N_eff=2.69; baseline/causal 3/16, -0.308, 2.50; tweak/static 9/16, -0.316, 5.31; and tweak/causal 9/16, 0.444, 5.67, with all zero-source shifts at 0. The note's limitation that the weak-field mass law does not cleanly close is explicit, so the clean audit only certifies the bounded bridge result.
 - **auditor confidence:** high
 
 ### `source_resolved_generated_support_recovery_basin_note`
