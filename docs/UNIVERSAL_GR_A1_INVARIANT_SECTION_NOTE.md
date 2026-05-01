@@ -6,6 +6,7 @@
 **Role:** direct universal route / selector note  
 **Purpose:** isolate the strongest exact projector candidate latent in the
 current universal stack before attempting full curvature localization
+**Script:** `scripts/frontier_universal_gr_a1_invariant_section.py` (PASS=10 FAIL=0 on current main; ROOT now relative)
 
 ## Verdict
 

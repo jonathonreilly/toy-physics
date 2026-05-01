@@ -2,7 +2,7 @@
 
 **Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-13  
-**Script:** `scripts/frontier_hierarchy_effective_potential_endpoint.py`
+**Script:** `scripts/frontier_hierarchy_effective_potential_endpoint.py` (SCORECARD 7/0 on current main; the prior `NameError: CANONICAL_ALPHA_BARE` in PART 4 was repaired by importing from `canonical_plaquette_surface`)
 
 ## Question
 

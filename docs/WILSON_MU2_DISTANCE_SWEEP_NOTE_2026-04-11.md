@@ -3,7 +3,7 @@
 **Date:** 2026-04-11  
 **Status:** bounded companion calibration note
 
-**Script:** `scripts/frontier_wilson_mu2_distance_sweep.py`
+**Script:** `scripts/frontier_wilson_mu2_distance_sweep.py` (current main reproduces the table to within ~0.5% drift in the 3rd-decimal exponent: `-3.315` vs noted `-3.290` at `mu^2=0.22`, `-1.992` vs `-1.996` at `mu^2=0.01`, `-1.871` vs `-1.872` at `mu^2=0.001` — qualitative monotone softening preserved)
 
 **Anchor notes/scripts:**
 - `docs/WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md`

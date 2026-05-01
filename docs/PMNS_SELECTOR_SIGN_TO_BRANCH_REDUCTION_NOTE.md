@@ -5,7 +5,7 @@
 branch-conditioned coefficient derivation
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`
-**Script:** `scripts/frontier_pmns_selector_sign_to_branch_reduction.py`
+**Script:** `scripts/frontier_pmns_selector_sign_to_branch_reduction.py` (PASS=10 FAIL=0 on current main; the runner deps were renamed to `NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md`, `NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`, `CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`)
 
 ## Question
 

@@ -1,12 +1,13 @@
 # Minimal Bidirectional Trapping Probe
 
 **Date:** 2026-04-05  
-**Status:** bounded moonshot trapping probe on the proposed_retained generated-geometry family
+**Status:** bounded moonshot trapping probe on the generated-geometry family
+**Last verified:** 2026-05-01 — runner exits 0 with branch verdict "viable"; the previously-absent frozen log was regenerated as `logs/2026-04-05-minimal-bidirectional-trapping-probe.txt`
 
 ## Artifact chain
 
-- [`scripts/minimal_bidirectional_trapping_probe.py`](/Users/jonreilly/Projects/Physics/scripts/minimal_bidirectional_trapping_probe.py)
-- [`logs/2026-04-05-minimal-bidirectional-trapping-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-minimal-bidirectional-trapping-probe.txt)
+- [`scripts/minimal_bidirectional_trapping_probe.py`](../scripts/minimal_bidirectional_trapping_probe.py)
+- [`logs/2026-04-05-minimal-bidirectional-trapping-probe.txt`](../logs/2026-04-05-minimal-bidirectional-trapping-probe.txt)
 
 ## Question
 
@@ -61,10 +62,10 @@ The honest limitation is equally important:
 
 Read this together with:
 
-- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md)
-- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md)
-- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md)
-- [`docs/GATE_B_FARFIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_FARFIELD_NOTE.md)
+- [`GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md`](GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md)
+- [`GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md`](GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md)
+- [`GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md`](GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md)
+- [`GATE_B_FARFIELD_NOTE.md`](GATE_B_FARFIELD_NOTE.md)
 
 The retained weak-field story remains intact, and the new trapping branch adds
 a qualitatively new strong-field observable: a no-return threshold.
@@ -73,4 +74,4 @@ a qualitatively new strong-field observable: a no-return threshold.
 
 This branch is **viable** as a moonshot direction.
 It is not a full black-hole theory, but it is no longer just a narrative idea:
-it produces a retained threshold and reduces back to the weak-field lane.
+it produces a bounded threshold and reduces back to the weak-field lane.
