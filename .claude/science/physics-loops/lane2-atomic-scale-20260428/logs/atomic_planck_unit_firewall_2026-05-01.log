@@ -1,0 +1,76 @@
+========================================================================================
+LANE 2 ATOMIC PLANCK-UNIT MAP FIREWALL
+========================================================================================
+Question:
+  Does the current Planck/source-unit package close the atomic
+  physical-unit Coulomb/Schrodinger map?
+Answer:
+  No. It supplies at most a gravitational lattice length/source unit on
+  its conditional carrier surface. Atomic closure still needs
+  mu/reduced mass, alpha(0), and the effective low-energy coupling map.
+
+----------------------------------------------------------------------------------------
+Part 1: repo grounding
+----------------------------------------------------------------------------------------
+  [PASS] required surface exists: docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md
+  [PASS] required surface exists: docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md
+  [PASS] required surface exists: scripts/frontier_planck_source_unit_normalization_support_theorem.py
+  [PASS] required surface exists: scripts/frontier_atomic_nr_coulomb_scale_bridge.py
+  [PASS] required surface exists: scripts/frontier_atomic_rydberg_gate_factorization_fanout.py
+  [PASS] Planck status keeps absolute a^(-1)=M_Pl as package pin / conditional program
+  [PASS] source-unit theorem is conditional support, not a generic atomic unit map
+  [PASS] Lane 2 still names mass, alpha(0), and physical-unit Coulomb gates
+  [PASS] atomic lattice companion keeps g free and absolute eV scale blocked
+  [PASS] loop assumption ledger keeps the atomic unit map open
+  [PASS] prior scale bridge already isolated the admitted map
+
+----------------------------------------------------------------------------------------
+Part 2: synthetic Planck-length split
+----------------------------------------------------------------------------------------
+  [PASS] matched g reproduces Coulomb energy for synthetic M=17, n=1  (g=7.058824e-02)
+  [PASS] matched g reproduces Coulomb energy for synthetic M=101, n=2  (g=3.049505e-02)
+  [PASS] matched g reproduces Coulomb energy for synthetic M=509, n=3  (g=3.760314e-03)
+  [PASS] dimensionless atomic g is linear in mu at factor 0.5
+  [PASS] dimensionless atomic g is linear in alpha at factor 0.5
+  [PASS] dimensionless atomic g is linear in mu at factor 2
+  [PASS] dimensionless atomic g is linear in alpha at factor 2
+  [PASS] dimensionless atomic g is linear in mu at factor 3
+  [PASS] dimensionless atomic g is linear in alpha at factor 3
+  [PASS] setting g=1 at the synthetic short lattice scale imposes a new alpha selector  (alpha_implied=6.928571)
+  [PASS] direct g=1 at fixed lattice scale is not the matched atomic map  (E_g1/E_matched=2.841e+03)
+
+----------------------------------------------------------------------------------------
+Part 3: Planck source-unit support does not select atomic g
+----------------------------------------------------------------------------------------
+  [PASS] Planck source-unit algebra selects G_Newton,lat=1 on its carrier surface
+  same synthetic mu and alpha with different absolute lattice anchors:
+    M_lat=    10.0 -> g_atomic=1.000000e-01
+    M_lat=   100.0 -> g_atomic=1.000000e-02
+    M_lat=  1000.0 -> g_atomic=1.000000e-03
+  [PASS] absolute lattice anchor changes g_atomic unless mu and alpha are supplied
+  [PASS] g_atomic scales as 1/M_lat, not as a pure Planck-source constant
+  [PASS] G_Newton,lat=1 does not imply the electromagnetic g_atomic=1 map  (alpha_from_g1=10.000000, supplied alpha=0.100000)
+
+----------------------------------------------------------------------------------------
+Part 4: comparator-only hydrogen/Planck scale check
+----------------------------------------------------------------------------------------
+  comparator M_Pl              = 1.2209e+19 GeV
+  comparator m_e               = 510998.95000 eV
+  comparator 1/alpha(0)        = 137.035999084
+  matched Planck-lattice g     = 6.108509e-25
+  Bohr radius in lattice sites = 3.274121e+24
+  matched E_1                  = -13.605693123 eV
+  direct g=1 at Planck spacing = -3.646281e+49 eV
+  alpha implied by g=1         = 1.194621e+22
+  [PASS] if comparator m_e and alpha(0) are supplied, tiny g reproduces Bohr energy
+  [PASS] comparator constants reproduce the Rydberg scale
+  [PASS] Planck lattice anchor implies an enormous atomic radius in lattice sites  (g=6.109e-25, r0_sites=3.274e+24)
+  [PASS] direct g=1 at Planck spacing is catastrophically non-atomic  (|E_g1|/Rydberg=2.680e+48)
+  [PASS] g=1 at Planck spacing would require a non-atomic low-energy coupling  (alpha_implied=1.195e+22)
+
+========================================================================================
+SUMMARY: PASS=31 FAIL=0
+STATUS: exact negative boundary / conditional-support firewall.
+NOT CLAIMED: retained m_e, retained alpha(0), retained Rydberg closure,
+or a framework-native atomic kinetic/unit-map theorem.
+========================================================================================
