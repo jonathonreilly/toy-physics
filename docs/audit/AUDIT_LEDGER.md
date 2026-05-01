@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:01:12.400045+00:00
+**Generated:** 2026-05-01T04:04:15.419664+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 239 |
-| support | 197 |
+| support | 196 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 800 |
+| ~~audited_conditional~~ | 801 |
 | ~~audited_failed~~ | 156 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 531 |
+| `audited_conditional` | 532 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 698 |
+| `unaudited` | 697 |
 
 | criticality | count |
 |---|---:|
@@ -621,6 +621,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_wider_w4_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `h0125_wider_w4_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `hadron_mass_lane1_theorem_plan_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hard_geometry_gravity_window_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hard_geometry_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hierarchy_bosonic_bilinear_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -7387,6 +7388,26 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `CONFINEMENT_STRING_TENSION_NOTE.md`
   - `ALPHA_S_DERIVED_NOTE.md`
   - `HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md`
+  - `MINIMAL_AXIOMS_2026-04-11.md`
+- **auditor confidence:** high
+
+### `hadron_mass_lane1_theorem_plan_support_note_2026-04-27`
+
+- **Note:** [`HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md`](../../docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-hadron_mass_lane1_theorem_plan_support_note_2026-04-27`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note maps Lane 1 hadron-mass closure into five targets and orders them by Lane-3 quark-mass dependencies, with sqrt(sigma) and Sigma/f_pi as Lane-1-internal parallel routes.  _(class `B`)_
+- **chain closes:** False — The roadmap is internally coherent as a planning note, but it relies on lane files and upstream confinement, alpha_s, SU(3), quark-mass, and axiom authorities that are not registered as dependencies. No runner checks the dependency map or phase ordering.
+- **rationale:** Issue: the Lane-1 roadmap depends on unregistered lane files and upstream framework/quark-mass authorities. Why this blocks: the note can organize work, but it cannot independently close the dependency map or promote any hadron target from the source text alone. Repair target: register the Lane 1/Lane 3 lane files, confinement string-tension note, alpha_s note, graph-first SU(3) note, quark-mass packet, and minimal axioms as dependencies, and add a small consistency runner for the target/dependency table if this roadmap is to be used as a gate. Claim boundary until fixed: this is a useful conditional planning map, not an audited hadron-mass theorem or retained dependency closure.
+- **open / conditional deps cited:**
+  - `lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md`
+  - `lanes/open_science/03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md`
+  - `CONFINEMENT_STRING_TENSION_NOTE.md`
+  - `ALPHA_S_DERIVED_NOTE.md`
+  - `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`
+  - `QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md`
   - `MINIMAL_AXIOMS_2026-04-11.md`
 - **auditor confidence:** high
 
