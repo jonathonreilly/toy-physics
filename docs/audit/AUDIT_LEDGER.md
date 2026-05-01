@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:18:48.718715+00:00
+**Generated:** 2026-05-01T06:20:09.920877+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 200 |
+| bounded | 199 |
 | support | 170 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 843 |
+| ~~audited_conditional~~ | 844 |
 | ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 255 |
-| `audited_conditional` | 574 |
+| `audited_conditional` | 575 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 609 |
+| `unaudited` | 608 |
 
 | criticality | count |
 |---|---:|
@@ -421,6 +421,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `chiral_bottleneck_card_proposal` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `chiral_layer_oscillation_2026-04-09` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `chiral_split_mass_gravity_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `chiral_walk_synthesis_2026-04-09` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `chiral_walk_synthesis_2026-04-10_addendum` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `ckm_atlas_axiom_closure_note` | _proposed_promoted_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -2502,6 +2503,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `chiral_walk_synthesis_2026-04-09`
+
+- **Note:** [`CHIRAL_WALK_SYNTHESIS_2026-04-09.md`](../../docs/CHIRAL_WALK_SYNTHESIS_2026-04-09.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained chiral results show that attraction can emerge under a particular transport law and boundary regime. They do not show that distortion alone guarantees attraction.  _(class `B`)_
+- **chain closes:** False — The note is appropriately caveated as a bounded mechanism synthesis, but it gives many exact closure-card, Born, F~M, gauge, distance-law, and convergence numbers without a registered runner, parsed dependencies, or explicit artifact links in the restricted source note.
+- **rationale:** Issue: the load-bearing chiral-walk synthesis and its numerical table are not tied to a primary runner, parsed dependency edges, or explicit cited artifact logs in this row. Why this blocks: the audit can read the caveats, but cannot verify the overnight closure-card numbers, gauge checks, distance-law fits, or narrowed 3+1D basin claims from the restricted inputs. Repair target: register the chiral-walk synthesis runner or split the synthesis into explicit dependencies on the relevant audited closure-card, gauge, distance-law, convergence, and carrier-k rows, with current replay logs for the exact numbers quoted. Claim boundary until fixed: the note can serve as a bounded orientation summary and warning against universal 3+1D/chromaticity overclaiming, not as a clean audited synthesis of the chiral transport evidence.
+- **open / conditional deps cited:**
+  - `chiral_walk_synthesis_2026-04-09 -> missing registered runner or explicit audited artifact dependencies for the quoted chiral-walk numerical table`
 - **auditor confidence:** high
 
 ### `chiral_walk_synthesis_2026-04-10_addendum`
