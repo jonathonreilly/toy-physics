@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:31:34.813163+00:00
+**Generated:** 2026-05-01T03:33:26.154914+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 244 |
+| bounded | 243 |
 | support | 203 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 51 |
-| ~~audited_conditional~~ | 791 |
+| ~~audited_conditional~~ | 792 |
 | ~~audited_failed~~ | 150 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 231 |
-| `audited_conditional` | 521 |
+| `audited_conditional` | 522 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 67 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 711 |
+| `unaudited` | 710 |
 
 | criticality | count |
 |---|---:|
@@ -770,6 +770,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_endpoint_denominator_admissibility_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | B | `quark_projector_ray_phase_completion_note_2026-04-18` |
 | `quark_route2_exact_readout_map_note_2026-04-19` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `rconn_derived_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `retardation_discriminator_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -11110,6 +11111,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `scripts/frontier_quark_endpoint_readout_constraints.py`
   - `missing theorem deriving (beta_T/alpha_T, alpha_T/alpha_E, beta_E/alpha_E)=(-1,-2,21/4)`
 - **auditor confidence:** 0.91
+
+### `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19`
+
+- **Note:** [`QUARK_UP_AMPLITUDE_SQRT7_COUNTEREXAMPLE_SIMPLIFICATION_NOTE_2026-04-19.md`](../../docs/QUARK_UP_AMPLITUDE_SQRT7_COUNTEREXAMPLE_SIMPLIFICATION_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the bounded denominator grammar, the runner finds 17 exact denominators that beat the direct sqrt(7) anchored law and compresses them to sqrt(42/5) and 2 + sqrt(5/6) as representatives.  _(class `B`)_
+- **chain closes:** False — The finite grammar enumeration and the algebraic comparison close once the exact-support quark anchor and scoring surface are granted. The note imports that anchor as already fixed elsewhere but registers no upstream dependency deriving it, so the bounded counterexample classification does not close from this row alone.
+- **rationale:** Issue: the counterexample scan is conditioned on the exact-support anchor, projector magnitude, delta_A1, and CKM+J scoring surface being valid inputs, but those upstream authorities are not registered as dependencies for this row. Why this blocks: without that anchor/readout chain, the fact that two exact denominators beat sqrt(7) in the bounded grammar is only a conditional search result, not an independently closed claim. Repair target: cite and ratify the quark up-amplitude candidate-scan/provenance and projector-parameter anchor notes, or include a retained derivation of the anchor in this row. Claim boundary until fixed: within the stated bounded grammar and granted anchor, the runner verifies the stated beater count and representative compression.
+- **open / conditional deps cited:**
+  - `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`
+  - `QUARK_UP_AMPLITUDE_PROVENANCE_AUDIT_NOTE_2026-04-19.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+- **auditor confidence:** high
 
 ### `r_base_group_theory_derivation_theorem_note_2026-04-24`
 
