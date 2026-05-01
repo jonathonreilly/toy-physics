@@ -3,9 +3,9 @@
     "critical": 4,
     "high": 196,
     "leaf": 286,
-    "medium": 267
+    "medium": 266
   },
-  "generated_at": "2026-05-01T01:51:58.168273+00:00",
+  "generated_at": "2026-05-01T01:53:07.671789+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6359,23 +6359,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_yt_bottom_yukawa_retention.py",
       "transitive_descendants": 7
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 3,
-      "load_bearing_score": 7.144,
-      "note_path": "docs/DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_TRIPLET_SIGN_THEOREM_NOTE_2026-04-16.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_leptogenesis_ne_projected_source_triplet_sign_theorem.py",
-      "transitive_descendants": 49
     },
     {
       "audit_independence_required": "any_non_self",
@@ -17427,6 +17410,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 365,
-  "total_pending": 753
+  "ready_count": 364,
+  "total_pending": 752
 }

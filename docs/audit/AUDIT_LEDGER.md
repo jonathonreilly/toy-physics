@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:51:58.384280+00:00
+**Generated:** 2026-05-01T01:53:07.877526+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
 | bounded | 266 |
-| support | 227 |
+| support | 226 |
 | open | 17 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 772 |
+| ~~audited_conditional~~ | 773 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 494 |
+| `audited_conditional` | 495 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 753 |
+| `unaudited` | 752 |
 
 | criticality | count |
 |---|---:|
@@ -463,6 +463,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_pmns_microscopic_selector_reduction_theorem_note_2026-04-17` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | E | - |
@@ -3845,6 +3846,22 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `scripts/frontier_dm_leptogenesis_pmns_projector_interface.py`
   - `missing theorem deriving dW_e^H on E_e from Cl(3) on Z^3`
 - **auditor confidence:** 0.92
+
+### `dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_TRIPLET_SIGN_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_TRIPLET_SIGN_THEOREM_NOTE_2026-04-16.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The baryogenesis triplet channels gamma, E1, and E2 are exact linear functionals of the projected Hermitian response pack dW_e^H, so the live constructive gate can be stated directly as gamma > 0, E1 > 0, E2 > 0 on that pack.  _(class `C`)_
+- **chain closes:** False — The runner verifies the linear formulas against imported PMNS/projected-source helper modules, but those upstream definitions are not declared as dependencies, and one runner PASS label conflates the constructive target with the canonical sample that actually has E1<0 and E2<0.
+- **rationale:** Issue: the exact linear bridge from dW_e^H responses to gamma, E1, and E2 is runner-checked (PASS=12/FAIL=0), but the row has deps=[] while the runner imports the projected-source law derivation, PMNS CP bridge boundary, and PMNS projector interface as the source of the Hermitian pack and triplet coordinates. One PASS label also says the constructive gate is gamma>0,E1>0,E2>0 while the condition being checked is the canonical comparator miss gamma>0,E1<0,E2<0. Why this blocks: the formulas cannot be cleanly audited without the upstream coordinate definitions and endpoint construction as declared one-hop authorities, and the runner label should not obscure which sign system is target versus comparator miss. Repair target: declare the three imported helper surfaces as dependencies and tighten the runner output so the target gate and canonical-sample sign read are separate classified checks. Claim boundary until fixed: support-level bridge showing the projected-source sign formulas conditional on the imported DM/PMNS endpoint definitions; not an independently closed baryogenesis constructive theorem.
+- **open / conditional deps cited:**
+  - `scripts/frontier_dm_leptogenesis_ne_projected_source_law_derivation.py`
+  - `scripts/frontier_dm_leptogenesis_pmns_cp_bridge_boundary.py`
+  - `scripts/frontier_dm_leptogenesis_pmns_projector_interface.py`
+- **auditor confidence:** high
 
 ### `dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16`
 
