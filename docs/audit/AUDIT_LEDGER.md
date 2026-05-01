@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:18:59.834670+00:00
+**Generated:** 2026-05-01T02:20:15.483451+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 2 |
 | bounded | 261 |
-| support | 216 |
+| support | 215 |
 | open | 16 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 45 |
-| ~~audited_conditional~~ | 771 |
+| ~~audited_conditional~~ | 772 |
 | ~~audited_failed~~ | 143 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 229 |
-| `audited_conditional` | 503 |
+| `audited_conditional` | 504 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 12 |
-| `unaudited` | 740 |
+| `unaudited` | 739 |
 
 | criticality | count |
 |---|---:|
@@ -741,6 +741,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_sector_orientation_orbit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_selector_class_space_uniqueness_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_selector_current_stack_zero_law_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `pmns_selector_nonuniversal_support_reduction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
 | `pmns_sigma_zero_nogo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `pmns_transfer_operator_dominant_mode_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -10356,6 +10357,24 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md:unaudited_support`
   - `PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md:unaudited_support`
   - `PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md:unaudited_support`
+- **auditor confidence:** high
+
+### `pmns_selector_nonuniversal_support_reduction_note`
+
+- **Note:** [`PMNS_SELECTOR_NONUNIVERSAL_SUPPORT_REDUCTION_NOTE.md`](../../docs/PMNS_SELECTOR_NONUNIVERSAL_SUPPORT_REDUCTION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_selector_nonuniversal_support_reduction_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Because U_1 and U_2 are sigma-fixed universal classes and any sector-odd selector satisfies F_-(sigma x) = -F_-(x), the selector must vanish on the universal locus and can be nonzero only on the non-universal orbit.  _(class `A`)_
+- **chain closes:** False — The fixed-point/antisymmetry implication is exact on the reduced branch-class surface, but the row declares no dependencies for the imported universality-collapse, underdetermination, sector-odd, GR A1, or atlas checks, and the runner emits unclassified PASS lines.
+- **rationale:** Issue: the runner's fixed-locus and antisymmetric-part checks complete with PASS=14/FAIL=0, but the PASS lines are unclassified and the ledger row has deps=[] while the theorem assumes lepton shared-Higgs universality collapse, lepton shared-Higgs underdetermination, PMNS selector sector-odd reduction, a Universal A1 structural analogy, and an atlas surface check. Why this blocks: the non-universal support conclusion follows only after the reduced universal/non-universal class surface and sector-odd selector premise are accepted as audited inputs; the note does not derive those inputs on its own. Repair target: declare the imported universality, sector-odd, GR structural, and atlas/current-bank inputs as dependencies, and classify the runner's local symmetry checks versus cross-note checks with A/B PASS lines. Claim boundary until fixed: support-level evidence that a sector-odd selector on the stated reduced class surface vanishes on sigma-fixed universal classes; not an independently audited theorem that any future PMNS selector is forced onto the non-universal locus from retained primitives.
+- **open / conditional deps cited:**
+  - `publication/ci3_z3/DERIVATION_ATLAS.md`
+  - `LEPTON_SHARED_HIGGS_UNIVERSALITY_COLLAPSE_NOTE.md`
+  - `LEPTON_SHARED_HIGGS_UNIVERSALITY_UNDERDETERMINATION_NOTE.md`
+  - `PMNS_SELECTOR_SECTOR_ODD_REDUCTION_NOTE.md`
+  - `UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md`
 - **auditor confidence:** high
 
 ### `pmns_selector_three_identity_support_note_2026-04-21`
