@@ -13,3 +13,7 @@ Current reopen target on `main`:
   continuum/volume control, helium beyond Hartree/Jastrow, and any future
   multi-electron extension
 - do not use it to relaunch rejected branch-local EW authority claims
+- use
+  [LANE2_ATOMIC_AUTORESEARCH_PARKING_NOTE_2026-05-01.md](LANE2_ATOMIC_AUTORESEARCH_PARKING_NOTE_2026-05-01.md)
+  as the parked Autoresearch process/runner handoff for the 2026-05-01 Lane 2
+  atomic audit block

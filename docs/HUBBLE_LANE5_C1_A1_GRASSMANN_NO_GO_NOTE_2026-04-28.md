@@ -1,7 +1,7 @@
 # Lane 5 `(C1)` Gate — A1 Grassmann-from-axiom-3 No-Go
 
 **Date:** 2026-04-28
-**Status:** proposed_retained exact negative boundary note on
+**Status:** proposed_no_go exact negative boundary note on
 `frontier/hubble-c1-absolute-scale-gate-20260428`. Cycle 2 of the
 (C1) gate loop. Stretch-attempt cycle. Closes the audit's highest-
 rated single-cycle attack frame `A1` (Grassmann-from-axiom-3 ⇒ CAR

@@ -1,7 +1,7 @@
 # Substrate-To-P_A Forcing No-Go Theorem
 
 **Date:** 2026-04-30
-**Status:** audited_clean; proposed_retained no-go theorem ratified 2026-04-30
+**Status:** proposed_no_go exact negative boundary; audit pending after status-tier relabel
 **Runner:** `scripts/frontier_substrate_to_p_a_forcing.py`
 
 ## Purpose
@@ -23,10 +23,9 @@ Hamming-weight-three projector and additional local equivariant rank-four
 sums. Therefore the boundary-block selection remains an additional structural
 choice unless a stronger first-order boundary/orientation law is supplied.
 
-## Audit Verdict
+## Review Note
 
-Fresh-context audit returned `audited_clean`. The load-bearing step is the
-explicit counterexample:
+The load-bearing step is the explicit counterexample:
 
 ```text
 P_3 violates none of the stated constraints (a)-(e).

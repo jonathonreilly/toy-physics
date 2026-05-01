@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-01T14:35:19.694098+00:00",
+  "computed_at": "2026-05-01T15:26:04.643217+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -27,17 +27,20 @@
   "effective_status_counts": {
     "audited_conditional": 871,
     "audited_decoration": 5,
-    "audited_failed": 148,
+    "audited_failed": 103,
     "audited_numerical_match": 26,
     "audited_renaming": 51,
     "bounded": 199,
     "open": 7,
+    "proposed_no_go": 19,
     "proposed_retained": 1,
-    "retained": 91,
-    "support": 165
+    "retained": 76,
+    "retained_no_go": 54,
+    "support": 152
   },
-  "proposed_demoted_by_upstream_count": 133,
+  "proposed_demoted_by_upstream_count": 141,
   "proposed_demoted_by_upstream_examples": [
+    "area_law_multipocket_selector_no_go_note_2026-04-25",
     "area_law_quarter_broader_no_go_note_2026-04-25",
     "atomic_hydrogen_helium_probe_note",
     "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
@@ -61,7 +64,6 @@
     "ckm_cp_product_alpha_s_cross_sector_extraction_theorem_note_2026-04-25",
     "ckm_cubic_bernoulli_koide_bridge_support_note_2026-04-25",
     "ckm_ew_lattice_a4_bridge_retained_identity_note_2026-04-25",
-    "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-    "ckm_jarlskog_exact_nlo_closed_form_theorem_note_2026-04-25"
+    "ckm_first_row_magnitudes_theorem_note_2026-04-24"
   ]
 }

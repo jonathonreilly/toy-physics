@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-28
 
-**Status:** proposed_retained exact negative boundary for Lane 3 target 3C.
+**Status:** proposed_no_go exact negative boundary for Lane 3 target 3C.
 This note blocks a direct derivation of generation-stratified non-top quark
 Yukawa Ward identities from the currently retained one-Higgs gauge-selection
 surface, the retained top-channel Ward theorem, the retained three-generation

@@ -1,0 +1,71 @@
+========================================================================================
+LANE 2 MASSIVE NONRELATIVISTIC KINETIC-LIMIT BRIDGE
+========================================================================================
+Question:
+  Does the retained Lorentz/dispersion surface close the physical-unit
+  Schrodinger kinetic prefactor for atomic Lane 2?
+Answer:
+  It gives exact conditional support once a massive one-particle sector
+  and mass m are supplied. The atomic prefactor remains mass-gated.
+
+----------------------------------------------------------------------------------------
+Part 1: repo grounding
+----------------------------------------------------------------------------------------
+  [PASS] required surface exists: docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md
+  [PASS] required surface exists: docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md
+  [PASS] required surface exists: scripts/frontier_lorentz_boost_3plus1d.py
+  [PASS] required surface exists: scripts/frontier_atomic_nr_coulomb_scale_bridge.py
+  [PASS] canonical harness index carries the Lorentz support packet
+  [PASS] emergent Lorentz note records infrared dispersion support
+  [PASS] 3+1D boost runner uses a massive lattice-to-continuum dispersion
+  [PASS] Lane 2 keeps the physical-unit Schrodinger limit as an open gate
+  [PASS] loop assumption ledger keeps kinetic prefactor and mass open
+
+----------------------------------------------------------------------------------------
+Part 2: continuum massive nonrelativistic expansion
+----------------------------------------------------------------------------------------
+  [PASS] K=E-m approaches p^2/(2m) for p/m=0.03  (rel_error=2.249e-04, expected~2.250e-04)
+  [PASS] K=E-m approaches p^2/(2m) for p/m=0.05  (rel_error=6.242e-04, expected~6.250e-04)
+  [PASS] K=E-m approaches p^2/(2m) for p/m=0.08  (rel_error=1.595e-03, expected~1.600e-03)
+  [PASS] kinetic p^2 coefficient is fixed by the mass  (coeff=7.1421430000e-02, 1/(2m)=7.1428571429e-02)
+
+----------------------------------------------------------------------------------------
+Part 3: lattice dispersion inherits the same NR prefactor at small a p
+----------------------------------------------------------------------------------------
+  [PASS] lattice massive dispersion gives NR kinetic term for p/m=0.03, a*m=0.2  (rel_error=2.279e-04)
+  [PASS] lattice massive dispersion gives NR kinetic term for p/m=0.04, a*m=0.1  (rel_error=4.010e-04)
+  [PASS] lattice massive dispersion gives NR kinetic term for p/m=0.05, a*m=0.05  (rel_error=6.247e-04)
+  [PASS] refining the lattice spacing improves the massive dispersion bridge  (|fine-cont|=1.434e-09, |coarse-cont|=2.294e-08)
+
+----------------------------------------------------------------------------------------
+Part 4: the kinetic prefactor is still mass-gated
+----------------------------------------------------------------------------------------
+  m=1.0 -> kinetic coefficient K/p^2=0.500000
+  m=2.0 -> kinetic coefficient K/p^2=0.250000
+  m=5.0 -> kinetic coefficient K/p^2=0.100000
+  [PASS] different masses give different Schrodinger kinetic prefactors
+  [PASS] mass shell alone without retained m_e does not pick the atomic prefactor
+  comparator electron coefficient 1/(2 m_e) = 9.784755917796e-07 eV^-1
+  [PASS] electron comparator gives the expected tiny atomic kinetic coefficient
+
+----------------------------------------------------------------------------------------
+Part 5: Lane 2 consequence
+----------------------------------------------------------------------------------------
+  Conditional support:
+    retained massive low-energy dispersion + rest-energy subtraction
+      -> Schrodinger kinetic prefactor p^2/(2m).
+
+  Still open for retained Rydberg:
+    - retained electron/reduced mass m;
+    - retained alpha(0) and threshold moment;
+    - retained Coulomb potential/coupling in the same low-energy sector;
+    - finite nuclear mass/proton inputs for physical hydrogen.
+  [PASS] conditional NR kinetic bridge is isolated
+  [PASS] no electron mass or Rydberg closure is claimed
+
+========================================================================================
+SUMMARY: PASS=22 FAIL=0
+STATUS: exact conditional kinetic support plus mass-gate boundary.
+NOT CLAIMED: retained m_e, retained alpha(0), retained Coulomb sector,
+or retained Rydberg closure.
+========================================================================================
