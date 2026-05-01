@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-01T02:52:58.308419+00:00",
+  "computed_at": "2026-05-01T02:54:32.142007+00:00",
   "criticality_counts": {
     "critical": 71,
     "high": 340,
@@ -114,6 +114,12 @@
       "transitive_descendants": 42
     },
     {
+      "claim_id": "graph_first_selector_derivation_note",
+      "criticality": "critical",
+      "load_bearing_score": 18.214,
+      "transitive_descendants": 296
+    },
+    {
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
       "load_bearing_score": 17.7,
@@ -160,12 +166,6 @@
       "criticality": "critical",
       "load_bearing_score": 15.185,
       "transitive_descendants": 290
-    },
-    {
-      "claim_id": "cosmological_constant_spectral_gap_identity_theorem_note",
-      "criticality": "critical",
-      "load_bearing_score": 15.115,
-      "transitive_descendants": 48
     }
   ]
 }
