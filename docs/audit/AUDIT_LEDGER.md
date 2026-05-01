@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T18:41:13.678602+00:00
+**Generated:** 2026-05-01T18:42:56.050047+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 208 |
-| support | 150 |
+| support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 893 |
+| ~~audited_conditional~~ | 894 |
 | ~~audited_failed~~ | 79 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 294 |
-| `audited_conditional` | 602 |
+| `audited_conditional` | 603 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 571 |
+| `unaudited` | 570 |
 
 | criticality | count |
 |---|---:|
@@ -934,6 +934,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `third_grown_family_sign_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `three_generation_observable_theorem_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `three_generation_structure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `universal_gr_a1_invariant_section_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `universal_gr_block_constraint_interpretation_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_casimir_block_localization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -13869,6 +13870,25 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: The note combines two different surfaces as one unified basin: NONLABEL_GROWN_BASIN_TARGETED still gives 3/3 signed-source rows with exact zero/neutral controls, but complex_action_kernel_vs_gravity is a fixed-row kernel/generic-vs-gravity separation test, not a nearby basin; the actual FIXED_FIELD_COMPLEX_GROWN_BASIN runner gives exact gamma=0 + Born proxy survivors 0/2. Why this blocks: the claim that one grown connectivity family supports both couplings across a small nearby basin with exact controls is not computed by the supplied runners and is contradicted by the available complex-basin runner. Repair target: provide a single unified runner over the same drift/restore neighborhood and seed set, with explicit zero/neutral/gamma=0/Born assertions for both coupling surfaces, or split the note into separate retained/failed components. Claim boundary until fixed: safe to claim the signed-source non-label basin currently passes 3/3 at restore 0.60/0.70/0.80, and the kernel-vs-gravity fixed-row runner separates absorption from gravity-specific deflection; not safe to claim a unified two-coupling basin.
 - **open / conditional deps cited:**
   - `KERNEL_VS_GRAVITY_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_gr_a1_invariant_section_note`
+
+- **Note:** [`UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md`](../../docs/UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The current universal stack supplies an exact rank-2 A1 projector Pi_A1 onto lapse h_00 and spatial trace tr(h_ij), while the complementary E plus T1 channels remain frame-dependent.  _(class `B`)_
+- **chain closes:** False — The runner verifies the projector rank, sampled frame-invariance of the A1 coordinates, and frame-dependence of the complement, but the conclusion is stated as a property of a multi-note universal stack whose observable, lift, variational, quotient, and blocker inputs are not clean one-hop dependencies for this row. The exact local projector result is therefore conditional on ratifying and wiring that stack.
+- **rationale:** Issue: the A1 projector invariance is reproduced, but the row's load-bearing claim imports the current universal-GR stack rather than deriving all of it in this audit packet. Why this blocks: text checks against upstream notes plus a sampled prototype projector test do not ratify the scalar generator, PL S^3 x R lift, tensor-valued variational candidate, quotient-kernel uniqueness, or blocker structure as clean one-hop inputs. Repair target: register and audit-clean the universal stack dependencies, then keep this runner as the A1 projector and complement-frame-dependence check. Claim boundary until fixed: conditional on the current universal stack, the prototype contains an exact rank-2 A1 projector onto lapse and spatial trace, but not a full canonical curvature-localization bundle.
+- **open / conditional deps cited:**
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `S3_ANOMALY_SPACETIME_LIFT_NOTE.md`
+  - `UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md`
+  - `UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md`
+  - `UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md`
+  - `UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_gr_block_constraint_interpretation_note`
