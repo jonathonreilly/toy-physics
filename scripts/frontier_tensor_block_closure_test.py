@@ -212,9 +212,15 @@ def main() -> int:
           f"(at least one of kernel/eta/a_star differs by >=5%)" if non_universal else
           f"  [BOUNDED] FAIL: cross-family agreement <5% on all metrics")
 
-    # The audit lane treats expected no-go outcomes with classified PASS lines
-    # as the success path; exit 0 in either branch.
-    return 0
+    classified_ok = (
+        oh_local_ok
+        and fr_local_ok
+        and k_rel >= 0.05
+        and eta_rel >= 0.05
+        and a_rel >= 0.05
+        and non_universal
+    )
+    return 0 if classified_ok else 1
 
 
 if __name__ == "__main__":

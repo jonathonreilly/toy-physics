@@ -5,8 +5,8 @@
 
 ## Artifact chain
 
-- Script: [`scripts/mesoscopic_surrogate_h025_constrained_localization.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_h025_constrained_localization.py)
-- Log: [`logs/2026-04-05-mesoscopic-surrogate-h025-constrained-localization.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-mesoscopic-surrogate-h025-constrained-localization.txt)
+- Script: [`scripts/mesoscopic_surrogate_h025_constrained_localization.py`](../scripts/mesoscopic_surrogate_h025_constrained_localization.py)
+- Log: [`logs/2026-04-05-mesoscopic-surrogate-h025-constrained-localization.txt`](../logs/2026-04-05-mesoscopic-surrogate-h025-constrained-localization.txt)
 
 This is the last non-degenerate localization attempt on the retained `h=0.25`
 ordered-lattice mesoscopic surrogate lane.
@@ -77,10 +77,10 @@ This is the last clean boundary for the mesoscopic localization lane:
 
 Read this with:
 
-- [`MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md)
-- [`BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md)
-- [`MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md)
-- [`MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md)
+- [`MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md`](MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md)
+- [`BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md`](BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md)
+- [`MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md`](MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md)
+- [`MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md`](MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md)
 
 Together they now say:
 

@@ -250,10 +250,10 @@ def part4_current_bank_records_the_post_selector_endpoint() -> None:
           "explicit quadratic" in note.lower() and "rationally" in note.lower() and "Z_2" in note)
     check("The atlas carries the branch-conditioned quadratic-sheet closure row",
           "| PMNS branch-conditioned quadratic-sheet closure |" in atlas)
-    check("The last-mile note records the new post-selector explicit-sheet endpoint",
-          "quadratic-sheet" in last_mile and "explicit algebraic reconstruction" in last_mile)
-    check("The reviewer packet now records the branch-conditioned quadratic-sheet closure",
-          "quadratic-sheet" in packet and "one residual `Z_2` sheet" in packet)
+    check("The two-amplitude last-mile note keeps sole-axiom closure separate",
+          "Only two amplitudes remain" in last_mile and "`(J_chi, mu)`" in last_mile)
+    check("The reviewer packet records the residual selected-branch sheet boundary",
+          "residual selected-branch `Z_2` sheet" in packet)
 
     print()
     print("  So the coefficient side is now closed as far as the current bank")
@@ -268,9 +268,9 @@ def main() -> int:
     print()
     print("Atlas / axiom inputs reused:")
     print("  - PMNS selector sign-to-branch reduction")
-    print("  - neutrino two-Higgs observable inverse problem")
-    print("  - charged-lepton two-Higgs observable inverse problem")
-    print("  - full neutrino closure last-mile reduction")
+    print("  - neutrino two-Higgs canonical reduction")
+    print("  - charged-lepton two-Higgs canonical reduction")
+    print("  - neutrino two-amplitude last-mile boundary")
     print()
     print("Question:")
     print("  Once a future selector sign chooses the active minimal PMNS branch,")

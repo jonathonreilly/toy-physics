@@ -10,8 +10,8 @@ continuum closure.
 
 ## Artifact chain
 
-- [`scripts/lattice_3d_l2_numpy_h0125_audit.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_audit.py)
-- [`scripts/lattice_3d_l2_numpy_h0125_bridge.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_bridge.py)
+- [`scripts/lattice_3d_l2_numpy_h0125_audit.py`](../scripts/lattice_3d_l2_numpy_h0125_audit.py)
+- [`scripts/lattice_3d_l2_numpy_h0125_bridge.py`](../scripts/lattice_3d_l2_numpy_h0125_bridge.py)
 
 ## Question
 

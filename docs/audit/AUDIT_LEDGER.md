@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:49:15.523463+00:00
+**Generated:** 2026-05-01T12:11:22.464105+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,32 +20,32 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 91 |
-| _proposed_retained_ | 2 |
+| _proposed_retained_ | 1 |
 | bounded | 198 |
 | support | 163 |
 | open | 8 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 861 |
+| ~~audited_conditional~~ | 862 |
 | ~~audited_failed~~ | 160 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 296 |
-| `audited_conditional` | 588 |
+| `audited_clean` | 293 |
+| `audited_conditional` | 587 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 72 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 562 |
+| `unaudited` | 566 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 71 |
 | `high` | 339 |
-| `medium` | 386 |
-| `leaf` | 768 |
+| `medium` | 391 |
+| `leaf` | 763 |
 
 - **Proposed claims demoted by upstream:** 133
 - **Citation cycles detected:** 59
@@ -302,10 +302,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `literature_backmatch_live_scan_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `main_open_cubic_validation_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
-| `mesoscopic_surrogate_backreaction_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_localization_frontier_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
-| `mesoscopic_surrogate_localization_sweep_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
-| `mesoscopic_surrogate_multistage_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_source_2d_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_two_stage_2d_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `minimal_source_driven_field_probe_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -431,7 +428,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bound_state_selection_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `branch_entanglement_robustness_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `broad_gravity_derivation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
-| `broad_surrogate_point_source_compare_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `broken_graph_action_power_robustness_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_cone_speed_map_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_distance_tail_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1993,20 +1989,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `H_plus_phi_potential_coupling_theorem`
   - `eikonal_WKB_action_bridge`
   - `phase_clock_readout_identification`
-- **auditor confidence:** high
-
-### `broad_surrogate_point_source_compare_note`
-
-- **Note:** [`BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md`](../../docs/BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** Broad Surrogate Point Source Compare Note: bounded interpretive diagnostic comparing broad-source and point-source representations on the upstream 3D ordered-lattice surrogate lane; not a tier-ratifiable persistent-mass, inertial-response, or geometry-generic theorem.  _(class `B`)_
-- **chain closes:** False — No. The load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet, so the conclusion cannot be ratified from the source note alone.
-- **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
-- **open / conditional deps cited:**
-  - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
 
 ### `broken_graph_action_power_robustness_note`
@@ -10359,18 +10341,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **rationale:** Issue: the scout recommendation rests on uncited prior bounded results about h=0.5 localization, the 2D threshold scan, and the 3D h=0.25 family. Why this blocks: without one-hop authorities or a reproduction artifact, the audit cannot verify that h=0.25 is the cheapest plausible next target or that the other lanes are exhausted. Repair target: register the cited mesoscopic notes/results as dependencies or attach a runner/log that reproduces the family comparison and compact-floor check. Claim boundary until fixed: the note may guide planning, but it is not an audited closure of the alternate-family selection.
 - **auditor confidence:** high
 
-### `mesoscopic_surrogate_backreaction_note`
-
-- **Note:** [`MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** bounded  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The broad relaunch surrogate can source a weak additive field and supports bounded one-step two-body symmetry, while still not producing a self-maintaining localized inertial object.  _(class `C`)_
-- **chain closes:** True — The registered harness recomputes the same-site additivity, disjoint-source additivity, and one-step two-body symmetry rows, and the current mean/max summaries match the note. The note's limitations are explicit: broad surrogate, one-step weak-field only, no persistent-mass closure.
-- **rationale:** The runner checks the load-bearing bounded source/backreaction claim directly and reproduces the frozen same-shape additivity, disjoint additivity, and one-step two-body symmetry values. The note does not upgrade the result into persistent mass or localized inertial-object closure, so the audited claim closes within the stated mesoscopic-surrogate boundary. Residual risk is limited to whether later stages remain stable, which the note leaves open.
-- **auditor confidence:** high
-
 ### `mesoscopic_surrogate_localization_frontier_note`
 
 - **Note:** [`MESOSCOPIC_SURROGATE_LOCALIZATION_FRONTIER_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_LOCALIZATION_FRONTIER_NOTE.md)
@@ -10381,30 +10351,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** There is no single sharp collapse threshold; the 3D surrogate shows a localization/strength frontier where smaller sources are stable but weak and broader sources are stronger while remaining mesoscopic and multistage-stable.  _(class `C`)_
 - **chain closes:** True — The registered frontier runner recomputes the topN sweep and reproduces the note's compact and stronger mesoscopic corner values. The note's conclusion is limited to a bounded localization/strength frontier and explicitly avoids persistent-mass closure.
 - **rationale:** The runner directly checks the load-bearing frontier claim: the current output matches the frozen topN=9, topN=196, and topN=256 captures, deltas, ratios, scores, and width ratios, and the full sweep supports the stated tradeoff. The note does not overclaim a collapse threshold or localized persistent object. Residual risk is limited to future source families that might beat this frontier, which the note leaves as the next search target.
-- **auditor confidence:** high
-
-### `mesoscopic_surrogate_localization_sweep_note`
-
-- **Note:** [`MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** bounded  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** More localized families do not obviously beat the broad top-N control on the retained 3D family; near-point-source cases score well only by collapsing to very small support/capture.  _(class `C`)_
-- **chain closes:** True — The current localization-family sweep output matches the note and frozen log for the best scored rows and the topN/square/Gaussian tradeoff table. The conclusion is bounded to this retained 3D family and does not claim persistent-mass closure.
-- **rationale:** The sweep computation reproduces the load-bearing facts: square radius 0 and Gaussian sigma 0.5 achieve score 1.0000 with low capture, while non-degenerate localized rows do not dominate the broad topN tradeoff. The note's safe read stays within that bounded negative result and explicitly avoids broader surrogate-lane failure or promotion. Residual risk is that a future localized family could beat this frontier, which the note leaves open.
-- **auditor confidence:** high
-
-### `mesoscopic_surrogate_multistage_note`
-
-- **Note:** [`MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** bounded  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The broad topN=196 surrogate survives a second sourced-response stage on the retained 3D ordered-lattice family with high shape similarity and same-order centroid response, while remaining only a mesoscopic control.  _(class `C`)_
-- **chain closes:** True — The registered multistage runner recomputes the two-stage capture, centroid-shift, best-shift, score, and width-ratio values, and the current output matches the note. The note's limitations exclude sharp localization and persistent-mass closure.
-- **rationale:** The runner checks the load-bearing two-stage sourced-response claim directly and reproduces the frozen stage-1/stage-2 capture, delta ratio, best-shift score, and width ratio. The claim remains bounded to the broad mesoscopic surrogate and does not assert a localized inertial object or persistent-mass theorem. Residual risk is the open localization/persistence step, which the note correctly leaves for future work.
 - **auditor confidence:** high
 
 ### `mesoscopic_surrogate_source_2d_note`

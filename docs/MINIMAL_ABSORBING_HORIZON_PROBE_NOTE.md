@@ -5,8 +5,8 @@
 
 ## Artifact chain
 
-- [`scripts/minimal_absorbing_horizon_probe.py`](/Users/jonreilly/Projects/Physics/scripts/minimal_absorbing_horizon_probe.py)
-- [`logs/2026-04-05-minimal-absorbing-horizon-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-minimal-absorbing-horizon-probe.txt)
+- [`scripts/minimal_absorbing_horizon_probe.py`](../scripts/minimal_absorbing_horizon_probe.py)
+- [`logs/2026-04-05-minimal-absorbing-horizon-probe.txt`](../logs/2026-04-05-minimal-absorbing-horizon-probe.txt)
 
 ## Question
 
@@ -62,10 +62,10 @@ The honest limitation is equally important:
 
 Read this together with:
 
-- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md)
-- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md)
-- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md)
-- [`docs/GATE_B_FARFIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_FARFIELD_NOTE.md)
+- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md`](GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md)
+- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md`](GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md)
+- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md`](GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md)
+- [`docs/GATE_B_FARFIELD_NOTE.md`](GATE_B_FARFIELD_NOTE.md)
 
 The retained weak-field story remains intact, and the new absorptive branch
 adds a qualitatively new strong-field observable: a trapping threshold.

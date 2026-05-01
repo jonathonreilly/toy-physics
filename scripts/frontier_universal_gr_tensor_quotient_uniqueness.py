@@ -143,9 +143,11 @@ def main() -> int:
             "observable principle gives the exact scalar generator",
         ),
         Check(
-            "route-2 kinematic lift is exact",
-            has(r2, "O_lift = 1"),
-            "route-2 gives the exact PL S^3 x R selector",
+            "route-2 background and slice generator are exact",
+            has(r2, "exact background")
+            and has(r2, "PL S^3 x R")
+            and has(r2, "Lambda_R"),
+            "route-2 tensor primitive gives the exact background and slice generator",
         ),
         Check(
             "variational note states the exact tensor candidate",
