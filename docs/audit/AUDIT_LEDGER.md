@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:28:20.533190+00:00
+**Generated:** 2026-05-01T04:29:37.371370+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 228 |
+| bounded | 227 |
 | support | 192 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 807 |
+| ~~audited_conditional~~ | 808 |
 | ~~audited_failed~~ | 159 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 538 |
+| `audited_conditional` | 539 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 18 |
-| `unaudited` | 683 |
+| `unaudited` | 682 |
 
 | criticality | count |
 |---|---:|
@@ -852,6 +852,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `work_history.potential_publication_discoveries_log` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_bridge_endpoint_shift_bound_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_bridge_rearrangement_principle_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `yt_bridge_variational_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `yt_color_projection_correction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_exact_coarse_grained_bridge_operator_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -13421,6 +13422,25 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`
   - `TARGET_CONDITIONED_FILTER: |dev| < 0.10% around TARGET_YT_PHYS = 0.9176`
   - `PROFILE_FAMILY_SCAN: logistic / erf / smoothstep`
+- **auditor confidence:** high
+
+### `yt_bridge_variational_selector_note`
+
+- **Note:** [`YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md`](../../docs/YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-yt_bridge_variational_selector_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** If the microscopic bridge selector is a positive local quadratic action on the forced UV window, then the fixed-moment minimizer is unique and proportional to the affine response kernel.  _(class `A`)_
+- **chain closes:** False — The variational minimizer is an algebraic consequence of the positive-local-quadratic assumption and the runner verifies the numerical band match, but the microscopic origin of that selector is explicitly not derived. Upstream weighted-moment and bridge-family inputs are also unregistered dependencies.
+- **rationale:** Issue: the selector closes only under the explicit assumption that the microscopic bridge supplies a positive local quadratic action on the forced UV window. Why this blocks: the runner passes and the constrained minimizer matches the observed best-family moment band, but the note does not derive that positive local quadratic selector from the exact interacting lattice bridge. Repair target: prove the exact bridge induces this positive local quadratic action, and register/audit the weighted-moment and constructive-bridge inputs. Claim boundary until fixed: this is a valid conditional variational selector, not an audit-clean microscopic y_t bridge selector theorem.
+- **open / conditional deps cited:**
+  - `YT_BRIDGE_MOMENT_CLOSURE_NOTE.md`
+  - `YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md`
+  - `YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`
+  - `YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`
+  - `HYPOTHESIS: positive local quadratic microscopic bridge selector`
+  - `TARGET_CONDITIONED_INPUT: best-family J_aff band`
 - **auditor confidence:** high
 
 ### `yt_color_projection_correction_note`
