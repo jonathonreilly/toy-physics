@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:45:21.093048+00:00
+**Generated:** 2026-05-01T01:46:45.275833+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
 | bounded | 270 |
-| support | 228 |
+| support | 227 |
 | open | 17 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 767 |
+| ~~audited_conditional~~ | 768 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 489 |
+| `audited_conditional` | 490 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 758 |
+| `unaudited` | 757 |
 
 | criticality | count |
 |---|---:|
@@ -708,6 +708,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_lane4_theorem_plan_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_lane4_workstream_closeout_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_majorana_current_stack_exhaustion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `neutrino_majorana_lower_level_pairing_nogo_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `neutrino_majorana_operator_axiom_first_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `neutrino_two_amplitude_last_mile_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -9652,6 +9653,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `NEUTRINO_MAJORANA_Z3_NONACTIVATION_THEOREM_NOTE.md: named authority missing from ledger deps`
   - `NEUTRINO_MAJORANA_OBSERVABLE_PRINCIPLE_OBSTRUCTION_NOTE.md: named authority missing from ledger deps`
 - **auditor confidence:** 0.91
+
+### `neutrino_majorana_lower_level_pairing_nogo_note`
+
+- **Note:** [`NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md`](../../docs/NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-neutrino_majorana_lower_level_pairing_nogo_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the retained charge-preserving lower-level transport / Green / source-response layer, the induced Nambu response has zero anomalous block on the unique Delta L=2 Majorana channel.  _(class `C`)_
+- **chain closes:** False — The source note states the lower-level zero-anomalous-block result but provides no derivation, no declared dependencies, and no primary runner for the Nambu/source-response computation.
+- **rationale:** Issue: the note asserts that the induced Nambu response has zero anomalous block on the unique Delta L=2 Majorana channel, but the row has deps=[] and no runner, and the lower-level transport, Green, source-response, and retained-grammar boundary inputs are not supplied as auditable authorities. Why this blocks: a clean no-go requires either an explicit derivation in the note or a runner/dependency chain that constructs the anomalous block and shows it vanishes; the current row only states the result. Repair target: declare the lower-level charge-preserving transport, Green/source-response, and Majorana-channel boundary authorities as dependencies and add a runner that builds the Nambu block and emits a classified PASS for the zero anomalous block. Claim boundary until fixed: support-level statement of the intended lower-level Majorana no-go, not an independently audited dynamical theorem.
+- **auditor confidence:** high
 
 ### `neutrino_majorana_operator_axiom_first_note`
 
