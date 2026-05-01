@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T19:40:05.465675+00:00
+**Generated:** 2026-05-01T19:41:31.803808+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 201 |
+| bounded | 197 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 900 |
+| ~~audited_conditional~~ | 904 |
 | ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 608 |
+| `audited_conditional` | 609 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 561 |
+| `unaudited` | 560 |
 
 | criticality | count |
 |---|---:|
@@ -843,6 +843,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `one_generation_matter_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `one_parameter_reduced_shell_law_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `persistent_inertial_response_readiness_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_object_exact_lattice_park_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -11138,6 +11139,27 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** No top-N class met the capture/carry/shift thresholds, so the honest read is broad-surrogate steering, not a closed persistent-mass object.  _(class `C`)_
 - **chain closes:** True — The live probe reproduces the relaunch sweep and the threshold test: every top-N row fails at least one admissibility threshold, and the leading surrogate is broad topN=361 with rel_shift_err 0.271.
 - **rationale:** The retained claim is a negative diagnostic, not a positive persistent-mass theorem. The live runner recomputes the full top-N sweep, finds no admissible class under capture >= 0.80, carry >= 0.90, and rel_shift_err <= 0.05, and identifies only a broad topN=361 surrogate with capture 0.839, carry 0.954, and rel_shift_err 0.271. Residual risk is threshold/scope risk only; this clean audit retains the no-go/broad-surrogate read and explicitly does not retain persistent inertial mass closure.
+- **auditor confidence:** high
+
+### `persistent_inertial_response_readiness_note`
+
+- **Note:** [`PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`](../../docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The codebase is not yet ready for a real persistent or quasi-persistent inertial-response experiment because no retained ordered-lattice object simultaneously remains localized, sources a field with a well-defined strength, and has separately measurable inertial response.  _(class `B`)_
+- **chain closes:** False — The note is a cross-note readiness synthesis with no registered runner and depends on many surrogate/localization artifacts that are currently unaudited or otherwise not clean. Its negative boundary is plausible and explicitly caveated, but the readiness ranking cannot be tier-ratified until those cited artifacts are audited or the synthesis is rebuilt by a registered runner.
+- **rationale:** Issue: the readiness conclusion is an index over many surrogate, relaunch, localization, and threshold notes, but those cited artifacts are not audit-clean and this note has no primary runner asserting the summary criteria. Why this blocks: even though the note now avoids claiming a persistent-mass theorem, the ranking of what is ready versus blocked still imports unratified cross-note results. Repair target: audit or repair the cited surrogate/localization authorities, then add a registered readiness runner that checks the three stated criteria and emits classified PASS/FAIL lines. Claim boundary until fixed: this is a useful support-level map of open work, not an audited readiness theorem.
+- **open / conditional deps cited:**
+  - `MESOSCOPIC_SURROGATE_COMPACT_FLOOR_SWEEP_NOTE.md`
+  - `LOCALIZED_SOURCE_RESPONSE_SWEEP_NOTE.md`
+  - `BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md`
+  - `MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md`
+  - `MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md`
+  - `MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md`
+  - `MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md`
+  - `MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md`
 - **auditor confidence:** high
 
 ### `persistent_object_adaptive_readout_note`
