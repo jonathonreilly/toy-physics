@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:27:41.918926+00:00
+**Generated:** 2026-05-01T02:29:41.631866+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,25 +21,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 90 |
 | _proposed_retained_ | 2 |
-| bounded | 261 |
+| bounded | 260 |
 | support | 212 |
 | open | 15 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 773 |
+| ~~audited_conditional~~ | 774 |
 | ~~audited_failed~~ | 144 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 229 |
-| `audited_conditional` | 505 |
+| `audited_conditional` | 506 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 14 |
-| `unaudited` | 735 |
+| `unaudited` | 734 |
 
 | criticality | count |
 |---|---:|
@@ -735,6 +735,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_c3_nontrivial_current_boundary_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_commutant_eigenoperator_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `pmns_current_bank_value_selection_nogo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_scalar_bridge_nonrealization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_sector_exchange_nonforcing_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -10260,6 +10261,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** A projected non-Cl(3) commutant generator on the hw=1 corner orbit has a nonzero C3-odd Fourier mode, which the note interprets as a branch/orientation selector, while the C3-even mode is interpreted as the passive offset class and the route is too small to fix the active 5-real source.  _(class `A`)_
 - **chain closes:** False — The runner verifies the corner-commutant and Fourier algebra, but the mapping from those modes to PMNS selector semantics and the active-source boundary is asserted without declared dependencies or a retained physical bridge.
 - **rationale:** Issue: the runner provides a coherent algebraic check (PASS=17/FAIL=0) that a projected non-Cl(3) commutant generator distinguishes the corners and has nonzero C3-odd Fourier content. However, the step from even/odd Fourier modes to passive offset class and branch/orientation selector is a physical/semantic PMNS identification, and the active 5-real source boundary is asserted with deps=[]. Why this blocks: the algebraic orbit split is not by itself a retained PMNS selector law unless the hw=1 triplet, projected commutant route, passive-offset meaning, and active-source boundary are declared/audited inputs. Repair target: declare the PMNS generation-boundary, corner-orbit, and active-source boundary authorities, or narrow the note to a pure algebraic commutant/Fourier decomposition. Claim boundary until fixed: bounded algebraic evidence for a C3-even/C3-odd corner-profile split; not an independently closed native PMNS selector theorem.
+- **auditor confidence:** high
+
+### `pmns_current_bank_value_selection_nogo_note`
+
+- **Note:** [`PMNS_CURRENT_BANK_VALUE_SELECTION_NOGO_NOTE.md`](../../docs/PMNS_CURRENT_BANK_VALUE_SELECTION_NOGO_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_current_bank_value_selection_nogo_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** After free and scalar routes are rejected, the runner constructs distinct reduced oriented-cycle points that are both realized on the lower-level active response chain and read by the same native observable law, so the current checked bank has not selected a unique value.  _(class `B`)_
+- **chain closes:** False — The runner gives plausible counterexamples inside the checked helper stack, but the no-go depends on several undeclared unaudited PMNS subclaims and on an inventory claim about the current exact bank; its PASS lines are unclassified.
+- **rationale:** Issue: the runner completes with PASS=12/FAIL=0, but the PASS lines are unclassified and the row has deps=[] while importing lower-level end-to-end closure, oriented-cycle value law, oriented-cycle reduced-channel nonselection, uniform scalar deformation boundary, and helper-stack current-bank assumptions. Why this blocks: a clean no-go that the current exact bank contains no positive value-selection law requires all imported subclaims and the bank-boundary inventory to be declared/audited; otherwise the runner only shows that the particular checked free/scalar/oriented-cycle routes do not select a unique value. Repair target: declare the imported PMNS subclaims as dependencies, classify the runner's rejection, construction, realization, and circularity checks as A/B lines, and make the current-bank exhaustiveness criterion explicit. Claim boundary until fixed: bounded evidence that the checked current helper stack realizes at least two distinct reduced oriented-cycle points without selecting between them; not an independently audited exhaustive no-go for every current-bank value-selection law.
+- **open / conditional deps cited:**
+  - `PMNS_LOWER_LEVEL_END_TO_END_CLOSURE_NOTE.md`
+  - `PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md`
+  - `PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md`
+  - `PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md`
 - **auditor confidence:** high
 
 ### `pmns_hw1_source_transfer_boundary_note`
