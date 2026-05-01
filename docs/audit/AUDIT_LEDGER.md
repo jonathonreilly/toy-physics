@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:15:48.722710+00:00
+**Generated:** 2026-05-01T20:16:56.380693+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 181 |
+| bounded | 180 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 918 |
+| ~~audited_conditional~~ | 919 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 621 |
+| `audited_conditional` | 622 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 547 |
+| `unaudited` | 546 |
 
 | criticality | count |
 |---|---:|
@@ -822,6 +822,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mesoscopic_surrogate_backreaction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `mesoscopic_surrogate_localization_sweep_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `mesoscopic_surrogate_multistage_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `mesoscopic_surrogate_threshold_2d_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `mirror_2d_gravity_law_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `mirror_gravity_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -10515,6 +10516,20 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** In the retained 2D ordered-lattice family, the broad surrogate remains a meaningful mesoscopic source control but does not behave like a true point source because distributed support materially reduces response amplitude.  _(class `C`)_
 - **chain closes:** True — The registered 2D source runner recomputes the topN capture, centroid/spread, and distributed-vs-point response ratios, and the current output matches the note. The note is explicitly a bounded companion check and not a persistent-mass theorem.
 - **rationale:** The runner directly verifies the source-support/load-bearing comparison: topN=9 gives ratio about 0.655, topN=25 about 0.372, and topN=49+ about 0.117 while preserving downstream shape. The note's conclusion is appropriately bounded to a mesoscopic source-control interpretation and does not claim mass-like point-source behavior. Residual risk is only the separate 3D generalization, which the note marks as future work.
+- **auditor confidence:** high
+
+### `mesoscopic_surrogate_threshold_2d_note`
+
+- **Note:** [`MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Every scanned topN value stayed stable, so this 2D control does not show a sharp localization threshold in the scanned range.  _(class `C`)_
+- **chain closes:** False — The frozen log supports the finite topN sweep, including topN=1 stability, but there is no registered runner or classified PASS output that can reproduce the sweep inside the audit lane. The claim therefore remains bounded to the frozen artifact rather than audit-closed computation.
+- **rationale:** Issue: the finite threshold-sweep conclusion is supported by a frozen log, but the ledger row has no primary runner and no classified PASS checks. Why this blocks: a hostile reviewer can accept the logged table as a bounded artifact while still rejecting it as an audit-reproducible computation. Repair target: register the threshold-sweep runner, make it reproduce the scanned topN table, and emit classified C PASS lines for all-stable, carry>=0.99, and <=1% stage-ratio criteria. Claim boundary until fixed: this is a bounded 2D frozen-log result showing no sharp support threshold over the listed topN values, not a persistent-mass or inertial-response theorem.
+- **open / conditional deps cited:**
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-threshold-2d.txt`
 - **auditor confidence:** high
 
 ### `mesoscopic_surrogate_two_stage_2d_note`
