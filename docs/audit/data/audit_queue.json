@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 269,
+    "leaf": 268,
     "medium": 133
   },
-  "generated_at": "2026-05-01T06:26:57.499429+00:00",
+  "generated_at": "2026-05-01T06:28:50.665829+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9975,23 +9975,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.5,
-      "note_path": "docs/HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "mirror_program_synthesis",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14957,6 +14940,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 208,
-  "total_pending": 605
+  "ready_count": 207,
+  "total_pending": 604
 }

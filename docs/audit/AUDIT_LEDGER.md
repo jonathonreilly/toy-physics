@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:26:57.789371+00:00
+**Generated:** 2026-05-01T06:28:50.931023+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 196 |
-| support | 170 |
+| support | 169 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 843 |
+| ~~audited_conditional~~ | 844 |
 | ~~audited_failed~~ | 173 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 256 |
-| `audited_conditional` | 575 |
+| `audited_conditional` | 576 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 83 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 605 |
+| `unaudited` | 604 |
 
 | criticality | count |
 |---|---:|
@@ -682,6 +682,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_eta_retirement_gate_audit_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -8377,6 +8378,20 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **chain closes:** False — No. The source row is author-declared open, so the audit packet does not assert a closed derivation to ratify.
 - **rationale:** Issue: the source note's own Status line is open, not a closed theorem/result tier. Why this blocks: a leaf audit cannot turn an explicitly unsettled source claim into a closed chain without an author reclassification and supporting derivation. Repair target: update the source note to a precise support/bounded/proposed_retained claim with a runner or cited theorem package. Claim boundary until fixed: safe to cite only as an open note in its current wording.
 - **auditor confidence:** high
+
+### `hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30`
+
+- **Note:** [`HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md`](../../docs/HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** These five observations are route-local no-gos only. They must not be read as an exhaustive no-hidden-route theorem, as a forced-Axiom* minimality theorem, or as closure of (G1) / (C1).  _(class `B`)_
+- **chain closes:** False — The boundary language is appropriate, but the route-local no-go observations rely on unstated proof surfaces and unregistered/audited inputs for the S4, Hamming-weight, Holevo, Stinespring, and finite type-I cyclicity claims.
+- **rationale:** Issue: the note salvages five route-local no-go observations from an archived wrapper, but this row has no primary runner, no explicit audited dependency edges, and no self-contained proofs for the algebraic/information-theoretic route exclusions. Why this blocks: the audit can accept the narrow boundary as a caution, but cannot certify that each named route fails to force Cl_4(C) from the restricted inputs alone. Repair target: attach explicit proof notes or audited dependencies for the S4 permutation-unitary, Hamming-weight Clifford obstruction, information-theoretic indistinguishability, Stinespring projection, and finite type-I cyclicity claims. Claim boundary until fixed: the row may be cited as conditional support inventory of possible narrow route blockers, not as clean no-go evidence or any global exhaustion/minimality result.
+- **open / conditional deps cited:**
+  - `hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30 -> missing audited proof/dependency surfaces for five route-local Cl4 no-go observations`
+- **auditor confidence:** medium
 
 ### `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28`
 
