@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:32:20.078520+00:00
+**Generated:** 2026-05-01T05:35:39.068736+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 249 |
+| `audited_clean` | 250 |
 | `audited_conditional` | 557 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 78 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 635 |
+| `unaudited` | 634 |
 
 | criticality | count |
 |---|---:|
@@ -329,6 +329,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `substrate_to_p_a_forcing_theorem_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `tensor_matching_completion_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `tensor_source_map_eta_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `two_sign_comparison_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -12973,6 +12974,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `higher_order_tensor_scalar_ratio_corrections_open`
   - `graph_growth_inflaton_field_potential_mapping_open`
   - `current_CMB_r_bounds_and_projected_sensitivities_observational_status_not_registered`
+- **auditor confidence:** high
+
+### `tensor_source_map_eta_note`
+
+- **Note:** [`TENSOR_SOURCE_MAP_ETA_NOTE.md`](../../docs/TENSOR_SOURCE_MAP_ETA_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The restricted eta = d(G_0i, G_ij^TF)/d(eps_vec, eps_tf) source-to-channel Jacobian is rank two on the exact local O_h and finite-rank restricted families while the scalar Schur action is unchanged.  _(class `C`)_
+- **chain closes:** True — The runner directly recomputes the two response matrices from vector, tensor, and mixed probes, verifies scalar blindness, positive determinant/rank two in both families, and local additivity. The source note keeps the result bounded to the audited restricted class and does not claim the microscopic K_tensor derivation or full nonlinear GR closure.
+- **rationale:** The bounded claim closes on the presented restricted computation: eta is constructed from finite-difference responses of the non-scalar Einstein channels, not introduced as a definition alone, and the current runner reproduces the matrices, rank-two checks, scalar blindness, and mixed-probe additivity. The evidence supports the stated restricted source-map and non-scalar two-channel boundary, while the note explicitly leaves K_tensor, broader class extension, and full nonlinear GR open.
 - **auditor confidence:** high
 
 ### `tensor_support_center_excess_law_note`
