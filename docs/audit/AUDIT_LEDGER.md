@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:49:40.053089+00:00
+**Generated:** 2026-05-01T04:51:10.163398+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 238 |
+| `audited_clean` | 239 |
 | `audited_conditional` | 544 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 667 |
+| `unaudited` | 666 |
 
 | criticality | count |
 |---|---:|
@@ -159,6 +159,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_oriented_phase_sheet_selector_theorem_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `dm_leptogenesis_pmns_relative_action_stationarity_theorem_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_sole_axiom_boundary_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `dm_leptogenesis_pmns_stationary_cp_incompatibility_theorem_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `dm_lepton_synthesis_note_2026-04-19` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
@@ -4239,6 +4240,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** **Script:** `scripts/frontier_dm_leptogenesis_pmns_sole_axiom_boundary.py`  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 2 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_pmns_stationary_cp_incompatibility_theorem_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_STATIONARY_CP_INCOMPATIBILITY_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_PMNS_STATIONARY_CP_INCOMPATIBILITY_THEOREM_NOTE_2026-04-16.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The current PMNS selector families determine transport classes, not a constructive mainline CP sign choice, because their selector observables are delta-even while gamma and the CP sheet are delta-odd.  _(class `A`)_
+- **chain closes:** True — The runner verifies parity-even closure/action for the current stationary and minimum-information selector families, while gamma and the CP pair flip under delta -> -delta.
+- **rationale:** The support claim closes at its stated scope: the current PMNS stationary and minimum-information selector families are even under delta -> -delta, while the charged-sector CP bridge is odd through gamma. The note explicitly limits the no-go to the current selector families and does not rule out every conceivable PMNS-inspired charged-sector law. Residual risk: a new selector family that breaks the delta parity must be audited as a separate claim.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16`
