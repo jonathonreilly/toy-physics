@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:13:24.503364+00:00
+**Generated:** 2026-05-01T04:14:55.472989+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 237 |
-| support | 193 |
+| support | 192 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 806 |
-| ~~audited_failed~~ | 156 |
+| ~~audited_conditional~~ | 805 |
+| ~~audited_failed~~ | 158 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
 | `audited_conditional` | 536 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 69 |
+| `audited_failed` | 70 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 693 |
+| `unaudited` | 692 |
 
 | criticality | count |
 |---|---:|
@@ -932,6 +932,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `three_family_card_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `universal_gr_a1_invariant_section_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `universal_gr_positive_background_local_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `wilson_mu2_distance_sweep_note_2026-04-11` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -12506,6 +12507,27 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: The note combines two different surfaces as one unified basin: NONLABEL_GROWN_BASIN_TARGETED still gives 3/3 signed-source rows with exact zero/neutral controls, but complex_action_kernel_vs_gravity is a fixed-row kernel/generic-vs-gravity separation test, not a nearby basin; the actual FIXED_FIELD_COMPLEX_GROWN_BASIN runner gives exact gamma=0 + Born proxy survivors 0/2. Why this blocks: the claim that one grown connectivity family supports both couplings across a small nearby basin with exact controls is not computed by the supplied runners and is contradicted by the available complex-basin runner. Repair target: provide a single unified runner over the same drift/restore neighborhood and seed set, with explicit zero/neutral/gamma=0/Born assertions for both coupling surfaces, or split the note into separate retained/failed components. Claim boundary until fixed: safe to claim the signed-source non-label basin currently passes 3/3 at restore 0.60/0.70/0.80, and the kernel-vs-gravity fixed-row runner separates absorption from gravity-specific deflection; not safe to claim a unified two-coupling basin.
 - **open / conditional deps cited:**
   - `KERNEL_VS_GRAVITY_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_gr_a1_invariant_section_note`
+
+- **Note:** [`UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md`](../../docs/UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-universal_gr_a1_invariant_section_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The localization orbit contains an exact invariant rank-2 A1 projector onto lapse h_00 and spatial trace tr(h_ij), while the complementary channels remain frame-dependent.  _(class `C`)_
+- **chain closes:** False — The source-cited A1 runner is not registered in the ledger, is non-hermetic because it reads /Users/jonreilly/Projects/Physics instead of the current worktree, and currently exits nonzero with one failed blocker-note check. Therefore the note's own verification path does not close on current repo content.
+- **rationale:** Issue: the note claims an exact A1 invariant section and cites a runner, but the ledger has no runner_path; the discovered runner scripts/frontier_universal_gr_a1_invariant_section.py reads an absolute external project root and exits with PASS=9 FAIL=1 on the current environment. Why this blocks: a hostile audit cannot accept a source-cited numerical/inventory verification that is unregistered, non-hermetic, and currently failing one of its own blocker-consistency checks. Repair target: make the runner repo-relative, register it on this claim, update its blocker-note predicates or the relevant blocker notes so the check is current, then rerun and refresh the source verification numbers. Claim boundary until fixed: the A1 projector candidate is plausible support, but this row is not an audited exact invariant-section closure on current repo content.
+- **open / conditional deps cited:**
+  - `scripts/frontier_universal_gr_a1_invariant_section.py`
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `S3_ANOMALY_SPACETIME_LIFT_NOTE.md`
+  - `UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md`
+  - `UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md`
+  - `UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md`
+  - `UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md`
+  - `NON_HERMETIC_RUNNER_ROOT: /Users/jonreilly/Projects/Physics`
 - **auditor confidence:** high
 
 ### `universal_gr_discrete_global_closure_note`
