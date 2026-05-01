@@ -1,0 +1,51 @@
+{
+  "actual_current_surface_status": "exact negative boundary / canonical scalar normalization import audit",
+  "fail_count": 0,
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Existing EW/Higgs notes assume or structure the canonical scalar field; they do not derive it from the PR230 source.",
+  "required_next_theorem": [
+    "derive source-to-canonical-Higgs normalization from the Cl(3)/Z^3 source functional",
+    "or measure scalar LSZ residue / physical response directly",
+    "then feed that bridge into the Feynman-Hellmann or direct-correlator route"
+  ],
+  "status_rows": {
+    "ew_higgs_gauge_mass": {
+      "audit_status": "unaudited",
+      "effective_status": "proposed_retained",
+      "ledger_key": "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
+      "verdict_rationale": null
+    },
+    "observable_principle": {
+      "audit_status": "audited_conditional",
+      "effective_status": "audited_conditional",
+      "ledger_key": "observable_principle_from_axiom_note",
+      "verdict_rationale": "Issue: the note proves the log|det(D+J)| source-response result only after adding scalar additivity, CPT-even phase blindness, continuity, and normalization assumptions, and its electroweak-scale consequence imports the current hierarchy baseline rather than deriving that normalization here.\nWhy this blocks: downstream proposed-retained/promoted claims need a bare-axiom observable bridge; this row supplies a conditional scalar-source rule, not a standalone derivation of the physical scalar observable principle.\nRepair target: either derive the scalar-observable selection assumptions and hierarchy normalization chain from the accepted axiom package with a runner that excludes competing generators, or narrow the claim to an explicit conditional source-response theorem.\nClaim boundary until fixed: safe to claim finite-block log|det| curvature and the Lt=4 selector under the stated scalar-observable assumptions, not axiom-only observable closure or electroweak-scale derivation."
+    },
+    "rconn": {
+      "audit_status": "audited_conditional",
+      "effective_status": "audited_conditional",
+      "ledger_key": "rconn_derived_note",
+      "verdict_rationale": "Issue: The load-bearing step still imports unratified direct authority: YUKAWA_COLOR_PROJECTION_THEOREM.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row."
+    },
+    "sm_one_higgs_yukawa_selection": {
+      "audit_status": "unaudited",
+      "effective_status": "proposed_retained",
+      "ledger_key": "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
+      "verdict_rationale": null
+    },
+    "yt_ew_color_projection": {
+      "audit_status": "audited_conditional",
+      "effective_status": "audited_conditional",
+      "ledger_key": "yt_ew_color_projection_theorem",
+      "verdict_rationale": "Issue: the theorem promotes a universal package-level 9/8 EW coupling correction from R_conn, but the one-hop matching dependency only supplies bounded large-N_c/OZI support and explicitly does not prove the exact coefficient equality; the runner measures R_conn=0.888337 +/- 0.001896, not the continuum EW current matching factor. Why this blocks: agreement of the sibling connected-trace observable with 8/9 does not prove that the physical EW vacuum polarization must read exactly the connected trace rather than the full trace plus a nonzero disconnected coefficient, and the dependency graph is circular between this note, RCONN_DERIVED_NOTE, and the OZI support note. Repair target: derive the EW current matching rule directly from the lattice-to-continuum path-integral/current normalization, or add a dedicated runner computing Pi_EW^phys/Pi_EW^lattice including the disconnected topology and its coefficient; also break and clean the circular Rconn/OZI dependencies. Claim boundary until fixed: safe to claim leading-order R_conn=8/9+O(1/N_c^4) with MC support and that a universal 9/8 factor would preserve sin^2(theta_W); not safe to claim the retained physical EW couplings are independently derived by an exact 9/8 color-projection theorem."
+    }
+  },
+  "strict_non_claims": [
+    "does not demote EW structural guardrails",
+    "does not use H_unit matrix-element readout",
+    "does not use observed top mass or observed y_t",
+    "does not use alpha_LM/plaquette/u0 as proof input"
+  ],
+  "verdict": "The strongest existing EW/Higgs surfaces do not supply the missing PR #230 scalar source normalization.  The EW gauge-mass note starts after a canonical Higgs doublet and kinetic term have been supplied; the SM one-Higgs note selects allowed monomials but leaves Yukawa matrices free; the observable-principle row is audited conditional; and the color-projection/R_conn rows do not derive scalar LSZ normalization.  No hidden retained current-surface theorem fixes kappa_s."
+}

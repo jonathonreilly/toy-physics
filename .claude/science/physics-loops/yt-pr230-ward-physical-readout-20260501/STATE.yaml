@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-26-source-reparametrization-gauge
-blocks_completed: 40
-active_route: "source-reparametrization gauge no-go"
-active_hard_residual: "prove or rule out closure from source-only analytic routes without canonical scalar normalization"
+current_phase: campaign-rerun-block-27-canonical-scalar-normalization-import-audit
+blocks_completed: 41
+active_route: "canonical scalar normalization import audit"
+active_hard_residual: "test whether existing EW/Higgs structural notes already fix the PR230 scalar source normalization"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -147,6 +147,9 @@ files_touched:
   - "scripts/frontier_yt_source_reparametrization_gauge_no_go.py"
   - "docs/YT_SOURCE_REPARAMETRIZATION_GAUGE_NO_GO_NOTE_2026-05-01.md"
   - "outputs/yt_source_reparametrization_gauge_no_go_2026-05-01.json"
+  - "scripts/frontier_yt_canonical_scalar_normalization_import_audit.py"
+  - "docs/YT_CANONICAL_SCALAR_NORMALIZATION_IMPORT_AUDIT_NOTE_2026-05-01.md"
+  - "outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -207,6 +210,7 @@ claim_state_movement:
   - "opened a Feynman-Hellmann scalar-response route; additive rest mass cancels in energy slopes, but scalar source-to-Higgs normalization and production response data remain open"
   - "extracted a reduced mass-bracket response dE/dm_bare from existing correlator data; the observable is viable but remains bare-source and reduced-scope"
   - "proved a source-reparametrization gauge boundary: source-only curvature, same-1PI products, and Feynman-Hellmann slopes cannot fix physical y_t without canonical scalar normalization"
+  - "audited the strongest EW/Higgs canonical scalar surfaces; they assume or structure a canonical doublet and do not derive the PR230 source-to-Higgs normalization"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null

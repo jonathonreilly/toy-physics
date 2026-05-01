@@ -23,7 +23,7 @@ operator-response boundary plus bridge-stack import audit, scalar spectral
 saturation no-go, large-Nc pole-dominance boundary, and production resource
 projection plus Feynman-Hellmann source-response route
 and reduced mass-response bracket certificate plus source-reparametrization
-gauge no-go
+gauge no-go plus canonical scalar-normalization import audit
 **PR:** #230 draft branch
 
 ```yaml
@@ -93,6 +93,8 @@ Allowed wording:
   positive `dE/dm_bare`, but this is not production `dE/dh` evidence;
 - exact negative boundary for source-only analytic closure under scalar-source
   reparametrization; canonical scalar normalization remains required;
+- exact negative boundary that existing EW/Higgs structural notes do not hide a
+  retained PR230 source-to-canonical-Higgs normalization theorem;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
@@ -263,4 +265,10 @@ python3 scripts/frontier_yt_source_reparametrization_gauge_no_go.py
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=26 FAIL=0
+
+python3 scripts/frontier_yt_canonical_scalar_normalization_import_audit.py
+# SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=27 FAIL=0
 ```

@@ -25,6 +25,7 @@
 | Scalar-channel Bethe-Salpeter kernel | interacting pole route | not yet retained | open import after ladder scout |
 | IR / finite-volume kernel limit | needed for ladder eigenvalue crossing | not yet fixed | open import |
 | Full-staggered PT formula layer | supplies `D_psi`, `D_gluon`, scalar/gauge kinematics | exact support only | formulas reusable; old alpha/plaquette/H_unit surfaces forbidden |
+| EW/Higgs canonical doublet notes | structural guardrails | proposed/unaudited or conditional parents | may not be used as PR230 source-normalization closure |
 
 Minimal allowed premise set for the current stretch attempt:
 

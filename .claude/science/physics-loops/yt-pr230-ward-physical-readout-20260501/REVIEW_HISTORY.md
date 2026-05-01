@@ -638,3 +638,29 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The boundary is exact for source-only routes, not a no-go against future
 closure.  It says the next positive theorem must derive canonical scalar
 normalization / LSZ residue or measure the physical response directly.
+
+## Review-Loop Backpressure — Canonical Scalar-Normalization Import Audit
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_canonical_scalar_normalization_import_audit.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_canonical_scalar_normalization_import_audit.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The audit is limited to PR230 source normalization.  It does not demote the EW
+structural notes; it only records that those notes start after canonical Higgs
+bookkeeping has been supplied and therefore cannot repair the source
+normalization bridge.

@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=26 FAIL=0
+# SUMMARY: PASS=27 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -51,6 +51,7 @@ The certificate consumes the PR-local route certificates for:
 - Feynman-Hellmann source-response route;
 - mass-response bracket certificate;
 - source-reparametrization gauge no-go;
+- canonical scalar-normalization import audit;
 - scalar ladder IR / zero-mode obstruction;
 - heavy kinetic-mass route scout;
 - nonzero-momentum correlator scout;
@@ -89,6 +90,7 @@ visible shortcut routes:
 | Feynman-Hellmann source response | additive rest mass cancels, scalar source normalization remains open |
 | mass-response bracket | reduced data show positive `dE/dm_bare`, not physical `dE/dh` |
 | source-reparametrization gauge | source-only analytic routes need canonical scalar normalization |
+| canonical scalar normalization import audit | existing EW/Higgs notes assume or structure canonical `H`, not derive source `kappa_s` |
 | current-scale direct MC | `am_top = 81.423`, not a useful relativistic top run |
 | HQET/static shortcut | removes rest mass, therefore needs matching |
 | heavy kinetic mass | cancels additive rest mass, but needs nonzero-momentum data and matching |

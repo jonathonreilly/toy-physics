@@ -51,10 +51,15 @@
    source-response design, not more reduced bare-source evidence.  The
    source-reparametrization gauge no-go means this route must derive or measure
    canonical scalar normalization before claiming physical `y_t`.
-5. **Clean parent repair for chirality selector.** The selector arithmetic is
+5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
+   blocker after the source-reparametrization audit. Existing EW/Higgs
+   structural notes do not provide it; a new theorem must derive the
+   source-to-Higgs bridge from the Cl(3)/Z^3 source functional or measure the
+   scalar residue directly.
+6. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
-6. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`
+7. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`
    is derived rather than assumed.
-7. **Existing bridge-stack promotion.** Closed negatively for PR230 retained
+8. **Existing bridge-stack promotion.** Closed negatively for PR230 retained
    closure.  The bridge stack is bounded transport support and imports accepted
    endpoints/surfaces.

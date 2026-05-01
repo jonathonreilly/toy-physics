@@ -154,6 +154,11 @@ What changed:
   covariant under scalar source rescaling.  They cannot produce a physical
   Yukawa readout unless a canonical scalar normalization / LSZ residue is
   derived or directly measured.
+- The canonical scalar-normalization import audit checks the strongest existing
+  EW/Higgs candidates.  They do not hide the missing theorem: the EW gauge-mass
+  note assumes canonical `|D H|^2`, the SM one-Higgs note leaves Yukawa values
+  free, observable-principle remains audited conditional, and `R_conn`/EW color
+  projection do not derive scalar LSZ.
 
 The scientific result is narrower than closure:
 

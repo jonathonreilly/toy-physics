@@ -428,6 +428,18 @@ covariant under `h = kappa s`.  Setting `kappa = 1` is a hidden normalization
 choice unless derived from scalar LSZ/canonical kinetic data or directly
 measured.
 
+Existing EW/Higgs notes do not supply hidden `kappa_s` closure:
+
+```text
+python3 scripts/frontier_yt_canonical_scalar_normalization_import_audit.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+The EW Higgs gauge-mass note assumes a canonical Higgs doublet and kinetic
+term; the SM one-Higgs selection note leaves Yukawa matrices arbitrary; the
+observable-principle row is audited conditional; and `R_conn`/EW color
+projection do not derive scalar LSZ normalization.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate
