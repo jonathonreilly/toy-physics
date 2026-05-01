@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:46:43.239953+00:00
+**Generated:** 2026-05-01T02:52:58.792843+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 90 |
-| _proposed_retained_ | 2 |
+| **retained** | 91 |
+| _proposed_retained_ | 1 |
 | bounded | 257 |
 | support | 211 |
 | open | 15 |
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 229 |
+| `audited_clean` | 230 |
 | `audited_conditional` | 510 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 9 |
 | `audited_renaming` | 14 |
-| `unaudited` | 734 |
+| `unaudited` | 733 |
 
 | criticality | count |
 |---|---:|
@@ -79,7 +79,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 14 | `minimal_axioms_2026-04-11` | critical | 119 | 18.91 | `audited_conditional` | ~~audited_conditional~~ |
 | 15 | `anomaly_forces_time_theorem` | critical | 261 | 18.53 | `audited_conditional` | ~~audited_conditional~~ |
 | 16 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 42 | 18.43 | `audited_clean` | **retained** |
-| 17 | `native_gauge_closure_note` | critical | 293 | 17.70 | `unaudited` | _proposed_retained_ |
+| 17 | `native_gauge_closure_note` | critical | 293 | 17.70 | `audited_clean` | **retained** |
 | 18 | `left_handed_charge_matching_note` | critical | 265 | 17.55 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `ckm_atlas_axiom_closure_note` | critical | 74 | 17.23 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 120 | 16.42 | `audited_conditional` | ~~audited_conditional~~ |
@@ -282,6 +282,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `multipole_tidal_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `native_gauge_closure_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
 | `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `nonlabel_grown_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `nonlabel_grown_drift_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -9616,6 +9617,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md`
   - `NEUTRINO_MASS_DERIVED_NOTE.md`
   - `MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
+- **auditor confidence:** high
+
+### `native_gauge_closure_note`
+
+- **Note:** [`NATIVE_GAUGE_CLOSURE_NOTE.md`](../../docs/NATIVE_GAUGE_CLOSURE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** This aggregator asks the fresh audit to combine those retained dependencies with the native `SU(2)` result computed by the primary runner above.  _(class `B`)_
+- **chain closes:** True — The note is an aggregator rather than an independent re-proof of the graph-first selector or graph-first SU(3) dependencies. It closes by directly checking the native cubic `Cl(3)` / `SU(2)` algebra and by importing only one-hop dependency rows that are already audit-clean with `effective_status = retained`.
+- **rationale:** Issue: none. Why this closes: the native `Cl(3)` / `SU(2)` step is exact finite-dimensional algebra checked directly by the runner, and the graph-first selector plus graph-first structural `SU(3)` steps are imported only through dependency rows that are currently `audited_clean` with `effective_status = retained`. Repair target: no repair needed for the stated boundary; future work is only cross-confirmation and maintaining dependency/hash stability. Claim boundary until fixed: the note remains bounded to graph-structure closure and the left-handed `+1/3` / `-1` abelian eigenvalue surface, not anomaly-complete `U(1)_Y` or downstream phenomenology.
 - **auditor confidence:** high
 
 ### `neutrino_axiom3_reading_stuck_fanout_note_2026-04-28`
