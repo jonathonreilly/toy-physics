@@ -388,6 +388,12 @@ stationarity is granted.  It is not: the selected `y_t(M_Pl)` depends on the
 electroweak gauge boundary values, so retained authority for those inputs and
 the running bridge remains part of the import ledger.
 
+Scale-anchor sensitivity follow-up:
+[YT_PLANCK_SELECTOR_SCALE_ANCHOR_SENSITIVITY_NOTE_2026-05-01.md](YT_PLANCK_SELECTOR_SCALE_ANCHOR_SENSITIVITY_NOTE_2026-05-01.md)
+checks the dimensional endpoint assumptions.  It finds that varying the
+`M_Pl/v` running interval moves the one-loop selector value, so scale-setting
+and SM RGE bridge conventions remain explicit inputs to the non-MC route.
+
 A future passing production certificate must supply this budget:
 
 | Component | Required content |

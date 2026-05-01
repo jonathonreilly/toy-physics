@@ -171,6 +171,13 @@ electroweak gauge boundary data.  It does not: at one loop the selected
 weak-scale gauge inputs moves the selected value.  Therefore the route also
 requires retained authority for the gauge boundary data and running bridge.
 
+Scale-anchor follow-up:
+[YT_PLANCK_SELECTOR_SCALE_ANCHOR_SENSITIVITY_NOTE_2026-05-01.md](YT_PLANCK_SELECTOR_SCALE_ANCHOR_SENSITIVITY_NOTE_2026-05-01.md)
+checks whether the selector is invariant under dimensional endpoint choices.
+It is not: changing the `M_Pl/v` running interval moves the one-loop selected
+boundary value.  The effect is smaller than the stationarity blocker, but it
+confirms that endpoint anchors and the SM RGE bridge are explicit imports.
+
 Promising attack frames:
 
 1. boundary-action stationarity of the taste scalar at the Planck surface;
@@ -187,6 +194,9 @@ Promising attack frames:
    stationarity.
 7. gauge-input sensitivity, now recorded as an assumption boundary: criticality
    is a family unless the electroweak gauge boundary data are fixed upstream.
+8. scale-anchor sensitivity, now recorded as an assumption boundary: the
+   criticality readout depends on the `M_Pl/v` running interval and bridge
+   convention.
 
 Until that premise is derived, this is a conditional selector and a route
 portfolio upgrade, not a retained-grade theorem.

@@ -33,6 +33,10 @@ The gauge-input sensitivity route was also tested.  Even if Planck
 stationarity is granted, the selector needs fixed electroweak gauge boundary
 data; without them, it is a family rather than a unique `y_t` derivation.
 
+The dimensional-anchor sensitivity route was tested next.  Changing the
+`M_Pl/v` running interval moves the one-loop selected boundary value, so
+scale-setting and RGE bridge conventions remain explicit imports.
+
 Verification:
 
 ```bash
@@ -50,6 +54,9 @@ python3 scripts/frontier_yt_pr230_physics_loop_assumption_audit.py
 
 python3 scripts/frontier_yt_planck_selector_gauge_input_sensitivity.py
 # SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_planck_selector_scale_anchor_sensitivity.py
+# SUMMARY: PASS=7 FAIL=0
 ```
 
 Next exact action: keep PR #230 honest as open/conditional.  Full retained

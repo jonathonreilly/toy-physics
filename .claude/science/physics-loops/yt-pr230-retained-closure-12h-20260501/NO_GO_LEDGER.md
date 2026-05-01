@@ -39,3 +39,13 @@ and `scripts/frontier_yt_planck_selector_gauge_input_sensitivity.py`.
 This is an assumption boundary rather than a no-go against the selector:
 `beta_lambda(M_Pl)=0` selects `y_t` only after electroweak gauge boundary data
 are fixed.  Without those inputs, the route is a family.
+
+## Planck selector is scale-anchor sensitive
+
+Recorded by
+`docs/YT_PLANCK_SELECTOR_SCALE_ANCHOR_SENSITIVITY_NOTE_2026-05-01.md` and
+`scripts/frontier_yt_planck_selector_scale_anchor_sensitivity.py`.
+
+The non-MC selector uses the `M_Pl/v` running interval.  Changing the endpoint
+anchors changes the selected one-loop boundary value.  This is an assumption
+boundary for retained closure, not the primary blocker.

@@ -1,0 +1,91 @@
+{
+  "actual_current_surface_status": "conditional-support / assumption-sensitivity boundary",
+  "claim_boundary": {
+    "additional_import": "dimensional endpoint anchors and SM RGE bridge",
+    "blocking_import": "derive beta_lambda(M_Pl)=0 from the Cl(3)/Z^3 substrate",
+    "selector_open": true
+  },
+  "fail_count": 0,
+  "pass_count": 7,
+  "remaining_open_imports": [
+    "beta_lambda(M_Pl)=0 stationarity selector",
+    "retained dimensional endpoint anchors",
+    "retained SM RGE bridge and scheme choice"
+  ],
+  "scale_anchor_sensitivity": {
+    "canonical_yt_pl_one_loop": 0.38775697510727863,
+    "planck_decade_max_relative_shift": 0.001962571172172527,
+    "reduced_planck_relative_shift": 0.0012608914010022944,
+    "samples": [
+      {
+        "case": "canonical",
+        "g1_pl_one_loop": 0.6144603892330002,
+        "g2_pl_one_loop": 0.5048656002967586,
+        "g3_pl_one_loop": 0.48920445703435433,
+        "log_interval": 38.44222451516312,
+        "m_pl_gev": 1.2209e+19,
+        "relative_yt_shift": 0.0,
+        "v_gev": 246.28281829012906,
+        "yt_pl_one_loop": 0.38775697510727863
+      },
+      {
+        "case": "reduced_planck_mass",
+        "g1_pl_one_loop": 0.6049735296619302,
+        "g2_pl_one_loop": 0.5090781527756363,
+        "g3_pl_one_loop": 0.49779253823341985,
+        "log_interval": 36.829997887010954,
+        "m_pl_gev": 2.435e+18,
+        "relative_yt_shift": 0.0012608914010022944,
+        "v_gev": 246.28281829012906,
+        "yt_pl_one_loop": 0.38824589454287006
+      },
+      {
+        "case": "planck_x0p1",
+        "g1_pl_one_loop": 0.601043463570797,
+        "g2_pl_one_loop": 0.510914503409566,
+        "g3_pl_one_loop": 0.5016108621583444,
+        "log_interval": 36.139639422169076,
+        "m_pl_gev": 1.2209e+18,
+        "relative_yt_shift": 0.001962571172172527,
+        "v_gev": 246.28281829012906,
+        "yt_pl_one_loop": 0.388517975768433
+      },
+      {
+        "case": "planck_x10",
+        "g1_pl_one_loop": 0.6288178961522172,
+        "g2_pl_one_loop": 0.49902657777632875,
+        "g3_pl_one_loop": 0.4776752909236228,
+        "log_interval": 40.74480960815717,
+        "m_pl_gev": 1.2209e+20,
+        "relative_yt_shift": -0.0008413738606623961,
+        "v_gev": 246.28281829012906,
+        "yt_pl_one_loop": 0.38743072652413385
+      },
+      {
+        "case": "v_minus_5pct",
+        "g1_pl_one_loop": 0.6147695854030067,
+        "g2_pl_one_loop": 0.5047332881228587,
+        "g3_pl_one_loop": 0.4889384728497018,
+        "log_interval": 38.49351780955067,
+        "m_pl_gev": 1.2209e+19,
+        "relative_yt_shift": -3.1240324305173745e-05,
+        "v_gev": 233.9686773756226,
+        "yt_pl_one_loop": 0.3877448614536247
+      },
+      {
+        "case": "v_plus_5pct",
+        "g1_pl_one_loop": 0.6141667144567399,
+        "g2_pl_one_loop": 0.5049915522012721,
+        "g3_pl_one_loop": 0.4894578643514608,
+        "log_interval": 38.39343435099369,
+        "m_pl_gev": 1.2209e+19,
+        "relative_yt_shift": 3.0231422098885483e-05,
+        "v_gev": 258.59695920463554,
+        "yt_pl_one_loop": 0.3877686975520649
+      }
+    ],
+    "v_5pct_max_relative_shift": 3.1240324305173745e-05
+  },
+  "target": "test whether Planck double-criticality is invariant under dimensional/running anchor choices",
+  "verdict": "The one-loop selector changes when the M_Pl/v running interval is changed.  Thus dimensional endpoint anchors and the SM RGE bridge remain explicit imports for the non-MC criticality route."
+}
