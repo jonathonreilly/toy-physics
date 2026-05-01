@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:53:07.877526+00:00
+**Generated:** 2026-05-01T01:54:22.507085+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
 | bounded | 266 |
-| support | 226 |
+| support | 225 |
 | open | 17 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 773 |
+| ~~audited_conditional~~ | 774 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 495 |
+| `audited_conditional` | 496 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 752 |
+| `unaudited` | 751 |
 
 | criticality | count |
 |---|---:|
@@ -815,6 +815,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p1_i_s_revision_verification_note_2026-04-17` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_p2_taste_staircase_beta_functions_note_2026-04-17` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `yt_p2_taste_staircase_transport_note_2026-04-17` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_p2_v_matching_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_qfp_insensitivity_support_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `yukawa_color_projection_theorem` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -12400,6 +12401,26 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
   - `YT_ZERO_IMPORT_CHAIN_NOTE.md`
   - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
+  - `scripts/canonical_plaquette_surface.py`
+- **auditor confidence:** high
+
+### `yt_p2_taste_staircase_transport_note_2026-04-17`
+
+- **Note:** [`YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md`](../../docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-yt_p2_taste_staircase_transport_note_2026-04-17`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Across the 16 taste-staircase rungs, the lattice-side Ward ratio y_t/g_s remains exactly 1/sqrt(6), while a uniform u_0^{-1/32} per-rung dressing reproduces the CMT endpoint and reduces P2 to one open matching coefficient at v.  _(class `C`)_
+- **chain closes:** False — The runner verifies the partial staircase numerics, but the row declares no dependencies for the hierarchy, Ward, boundary, zero-import/coupling-map, canonical plaquette, and QFP-support inputs, and the uniform per-rung dressing/matching interpretation remains a conditional prescription.
+- **rationale:** Issue: the runner verifies the advertised partial result (PASS=12/FAIL=0), but the row has deps=[] while the note explicitly imports the hierarchy theorem, boundary/taste-staircase selection, zero-import coupling-map surface, Ward identity theorem, QFP support, and canonical plaquette constants. The key new per-rung dressing u_0^{-1/32} is justified as the minimal uniform prescription, not derived from an audited blocked-plaquette theorem, and the QFP/matching language remains an open residual rather than closure. Why this blocks: clean audit of the P2 narrowing requires the imported foundations to be declared and audited, and requires a retained derivation of the uniform rung distribution or a narrower claim that treats it as an ansatz. Repair target: declare the cited authority notes and canonical-surface script as dependencies; separate the exact Ward-ratio preservation from the conditional uniform-dressing prescription and matching-coefficient/QFP assumptions. Claim boundary until fixed: support-level partial P2 narrowing on the lattice side, conditional on the imported retained surfaces and the uniform CMT dressing prescription; not a closed replacement for the SM-side matching step.
+- **open / conditional deps cited:**
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `YT_BOUNDARY_THEOREM.md`
+  - `YT_ZERO_IMPORT_CHAIN_NOTE.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
+  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
   - `scripts/canonical_plaquette_surface.py`
 - **auditor confidence:** high
 
