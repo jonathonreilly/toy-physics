@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:19:35.878441+00:00
+**Generated:** 2026-05-01T04:20:49.531359+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 234 |
+| bounded | 233 |
 | support | 192 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 16 |
+| ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 806 |
 | ~~audited_failed~~ | 159 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 537 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
-| `audited_numerical_match` | 13 |
+| `audited_numerical_match` | 14 |
 | `audited_renaming` | 18 |
-| `unaudited` | 689 |
+| `unaudited` | 688 |
 
 | criticality | count |
 |---|---:|
@@ -952,6 +952,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `tensor_support_center_excess_law_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `wave_direct_dm_h025_seed0_crossfamily_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `yt_bridge_action_invariant_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
+| `yt_bridge_hessian_selector_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -13298,6 +13299,26 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`
   - `HYPOTHESIS: forced UV window x >= 0.95`
   - `HYPOTHESIS: quasi-local stability and additive residual decomposition`
+- **auditor confidence:** high
+
+### `yt_bridge_hessian_selector_note`
+
+- **Note:** [`YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md`](../../docs/YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-yt_bridge_hessian_selector_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The viable UV bridge family induces a positive local stiffness profile on the forced UV window, so the family-averaged local-Hessian selector reproduces the family-averaged bridge profile with gap 0.003443.  _(class `G`)_
+- **chain closes:** False — The runner verifies a target-conditioned stiffness reconstruction on selected bridge families, but it assumes the forced UV window, accepted SM-like saddle, quasi-local stability, and viable family selection. It does not derive the exact interacting bridge Hessian from first principles or registered dependencies.
+- **rationale:** Issue: the positive local Hessian selector is inferred from near-target UV-localized bridge profiles, not derived directly from the exact interacting bridge action. Why this blocks: the runner passes and shows a positive kernel/stiffness plus a small family-average selector/profile gap, but the construction depends on selected logistic/erf/smoothstep families, the accepted endpoint, and unregistered stability/locality assumptions. Repair target: derive the Hessian kernel and positivity from the exact interacting bridge operator on the forced UV window, then use the numerical family scan only as a check. Claim boundary until fixed: this is a bounded numerical support result for a local-Hessian selector, not an audit-clean microscopic derivation of the selector.
+- **open / conditional deps cited:**
+  - `YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md`
+  - `YT_BRIDGE_MOMENT_CLOSURE_NOTE.md`
+  - `YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`
+  - `YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`
+  - `YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md`
+  - `TARGET_CONDITIONED_INPUT: TARGET_YT_PHYS = 0.9176`
+  - `PROFILE_FAMILY_SELECTION: logistic / erf / smoothstep UV-localized bridges`
 - **auditor confidence:** high
 
 ### `yt_color_projection_correction_note`
