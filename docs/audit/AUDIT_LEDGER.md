@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:53:27.743320+00:00
+**Generated:** 2026-05-01T20:54:32.948325+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 172 |
+| bounded | 171 |
 | support | 140 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 935 |
+| ~~audited_conditional~~ | 936 |
 | ~~audited_failed~~ | 83 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 300 |
-| `audited_conditional` | 638 |
+| `audited_conditional` | 639 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 526 |
+| `unaudited` | 525 |
 
 | criticality | count |
 |---|---:|
@@ -924,6 +924,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `rconn_derived_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `reproduction_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `retardation_discriminator_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `retarded_field_causality_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `retarded_field_compact_refinement_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `s3_anomaly_spacetime_lift_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_cap_uniqueness_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -13095,6 +13096,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** False — The artifact chain computes a nonzero delayed-vs-instantaneous phase difference for the implemented toy harness, but the retained/general discriminator claim is not backed by a fast assertion runner or a theorem excluding all instantaneous emulator models.
 - **rationale:** Issue: The source and frozen log show a delayed-source toy harness with nonzero frequency- and delay-dependent phase differences, but the canonical script has no PASS/FAIL assertion contract and the live audit run did not complete the full global-delay/family/seed sections before interruption after more than ten minutes. Why this blocks: a finite parameter sweep in one implemented propagation model does not by itself prove a retained, portable observable or rule out all instantaneous responses with memory, phase offsets, or fitted transfer functions. Repair target: add a fast deterministic runner with explicit assertions for the nulls, delay law, family/seed robustness, and global-delay fit residual, and add a theorem specifying the model class in which no instantaneous/static response can reproduce the first-harmonic delayed-response observable. Claim boundary until fixed: it is safe to claim that the frozen harness output and partial live run show a delayed-vs-instantaneous phase difference for the stated oscillating-source model and parameters; it is not safe to claim a retained general finite-propagation discriminator across physical response models.
 - **auditor confidence:** medium
+
+### `retarded_field_causality_probe_note`
+
+- **Note:** [`RETARDED_FIELD_CAUSALITY_PROBE_NOTE.md`](../../docs/RETARDED_FIELD_CAUSALITY_PROBE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the compact generated 3D DAG family with four seeds, finite propagation speeds change the detector centroid-shift observable relative to the instantaneous weak-field lane, while c = inf reproduces the instantaneous limit.  _(class `C`)_
+- **chain closes:** False — The numeric table is reproducible, but the audit chain is conditional on asserted/classified runner checks and explicit harness dependencies.
+- **rationale:** Issue: the current runner reproduces the frozen c-table, including the c=inf reduction, but it is a reporting script with no PASS/FAIL assertions or classified load-bearing checks, and the generated-DAG propagation harness is not registered as a dependency. Why this blocks: the bounded finite-speed observable can drift silently unless the runner asserts the baseline, deltas, and reduction error; clean audit also needs the imposed-field/DAG harness boundary explicit. Repair target: add executable assertions for the frozen shift table and c=inf reduction tolerance, emit classified PASS lines, and register the causal_field_gravity harness or its note as a dependency. Claim boundary until fixed: the local run supports the bounded field-scheduling statement on this compact family, not a self-consistent causal gravity or wave-theory result.
+- **open / conditional deps cited:**
+  - `scripts/retarded_field_causality_probe.py`
+  - `scripts/causal_field_gravity.py`
 
 ### `retarded_field_compact_refinement_note`
 
