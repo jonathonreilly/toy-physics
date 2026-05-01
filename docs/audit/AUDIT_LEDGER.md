@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:19:23.758297+00:00
+**Generated:** 2026-05-01T05:20:21.993265+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,22 +23,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | bounded | 217 |
 | support | 180 |
-| open | 11 |
+| open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 820 |
+| ~~audited_conditional~~ | 821 |
 | ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 247 |
-| `audited_conditional` | 551 |
+| `audited_conditional` | 552 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 645 |
+| `unaudited` | 644 |
 
 | criticality | count |
 |---|---:|
@@ -814,6 +814,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `rconn_derived_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `retardation_discriminator_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `retarded_field_compact_refinement_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `s3_anomaly_spacetime_lift_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_cap_uniqueness_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `s3_general_r_derivation_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `s3_time_bilinear_tensor_action_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -11865,6 +11866,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** False — The runner reproduces a bounded two-family smoke-probe readout, but the proposed-retained surface is stronger than the evidence because the result is partial, row-sign-dependent, and not attached as an assertion runner in the ledger.
 - **rationale:** Issue: The script and frozen log support only partial survival of a retarded-vs-instantaneous centroid-shift split on two retained DAG-family parameter choices, with nonuniform row signs and sizable standard errors, while the audit queue exposes the row as proposed_retained. Why this blocks: a two-family smoke probe without assertion tolerances or a stated statistical/refinement theorem cannot establish a retained retarded-field law or a robust universal discriminator. Repair target: change the source status to bounded/support, or add a ledger-attached assertion runner plus a refinement theorem/statistical criterion showing noncollapse over a specified family class with tolerances. Claim boundary until fixed: it is safe to claim that the current script reproduces nonzero mean splits for the compact and refined families and that the refined split is not uniformly one-directional; it is not safe to claim retained universal retarded-field behavior from this probe.
 - **auditor confidence:** high
+
+### `s3_anomaly_spacetime_lift_note`
+
+- **Note:** [`S3_ANOMALY_SPACETIME_LIFT_NOTE.md`](../../docs/S3_ANOMALY_SPACETIME_LIFT_NOTE.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** S^3 topology plus anomaly-forced time gives the kinematic background candidate PL S^3 x R, but no exact theorem turns that background into the required tensor/metric dynamics.  _(class `B`)_
+- **chain closes:** False — The note correctly states the dynamic blocker, but its kinematic input relies on upstream S^3 and anomaly-forced-time results that are not registered as dependencies here. It also describes a companion runner result even though this ledger row has no primary runner path.
+- **rationale:** Issue: the route's kinematic premise imports exact S^3 compactification and anomaly-forced time as reusable tools without a registered dependency path, and the claimed companion runner is not registered in the ledger. Why this blocks: the note's main conclusion is intentionally open, but the audit still cannot verify the kinematic input chain or the stated runner result from this row alone. Repair target: register the S^3 and anomaly-time authorities as dependencies and add/register the companion runner, or remove the runner-result claim. Claim boundary until fixed: the note is a useful open route survey identifying the missing dynamics theorem; it is not an audited spacetime-lift closure.
+- **open / conditional deps cited:**
+  - `FULL_GR_AXIOM_FIRST_PATHS_NOTE.md`
+- **auditor confidence:** medium
 
 ### `s3_boundary_link_theorem_note`
 
