@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:31:11.059228+00:00
+**Generated:** 2026-05-01T04:34:07.398286+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 226 |
+| bounded | 225 |
 | support | 192 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 22 |
+| ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 808 |
 | ~~audited_failed~~ | 159 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 539 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
-| `audited_numerical_match` | 19 |
+| `audited_numerical_match` | 20 |
 | `audited_renaming` | 18 |
-| `unaudited` | 681 |
+| `unaudited` | 680 |
 
 | criticality | count |
 |---|---:|
@@ -960,6 +960,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_nonlocal_corrections_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_bridge_uv_class_uniqueness_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_constructive_uv_bridge_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
+| `yt_exact_interacting_bridge_transport_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -13515,6 +13516,18 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md`
   - `YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md`
   - `YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md`
+- **auditor confidence:** high
+
+### `yt_exact_interacting_bridge_transport_note`
+
+- **Note:** [`YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`](../../docs/YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the forced UV window, the exact interacting bridge is well described by a positive local affine transport kernel plus a small explicit higher-order and nonlocal remainder.  _(class `G`)_
+- **chain closes:** False — The runner verifies the stated transport budget on the accepted UV-localized bridge/profile, but the forced window, stable saddle, and endpoint kernel are assumed rather than derived from independent retained inputs in this note.
+- **rationale:** Issue: the transport budget is validated on the accepted UV-localized bridge/profile and forced window, with the saddle and endpoint kernel selected as inputs rather than independently derived here. Why this blocks: the note can support a bounded, calibrated transport match, but not an audit-clean theorem that the exact interacting bridge must take this form from retained premises alone. Repair target: derive the forced UV window, stable saddle/profile, and endpoint response kernel from independent retained inputs, then rerun the transport-budget checks without target-conditioned selection. Claim boundary until fixed: the current result is a controlled numerical transport match on the selected viable branch family.
 - **auditor confidence:** high
 
 ### `yt_explicit_systematic_budget_note`
