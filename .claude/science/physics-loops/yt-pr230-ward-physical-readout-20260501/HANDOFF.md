@@ -159,6 +159,11 @@ What changed:
   note assumes canonical `|D H|^2`, the SM one-Higgs note leaves Yukawa values
   free, observable-principle remains audited conditional, and `R_conn`/EW color
   projection do not derive scalar LSZ.
+- The explicit source-to-Higgs / LSZ closure attempt lists every allowed
+  premise that could fix `kappa_s`.  None does.  The named open theorem is now
+  precise: derive an isolated scalar pole, its residue / inverse-propagator
+  derivative, and the match to the canonical kinetic normalization used by
+  `v`, without forbidden imports.
 
 The scientific result is narrower than closure:
 

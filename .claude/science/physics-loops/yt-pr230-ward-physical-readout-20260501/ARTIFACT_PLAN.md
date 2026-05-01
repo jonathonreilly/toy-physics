@@ -133,6 +133,9 @@ Completed in block 1:
 - `scripts/frontier_yt_canonical_scalar_normalization_import_audit.py`
 - `outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json`
 - `docs/YT_CANONICAL_SCALAR_NORMALIZATION_IMPORT_AUDIT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_source_to_higgs_lsz_closure_attempt.py`
+- `outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json`
+- `docs/YT_SOURCE_TO_HIGGS_LSZ_CLOSURE_ATTEMPT_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -152,7 +155,8 @@ Next artifact:
   `dE/dh` readout; source-only analytic routes have an exact
   reparametrization gauge unless canonical scalar normalization is derived; the
   existing EW/Higgs structural notes assume or structure canonical `H` but do
-  not supply the PR230 source-to-Higgs bridge
+  not supply the PR230 source-to-Higgs bridge; the explicit closure attempt
+  finds no allowed current-surface premise that fixes `kappa_s`
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

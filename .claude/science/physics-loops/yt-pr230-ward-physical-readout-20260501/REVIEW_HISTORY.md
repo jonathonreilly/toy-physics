@@ -664,3 +664,27 @@ The audit is limited to PR230 source normalization.  It does not demote the EW
 structural notes; it only records that those notes start after canonical Higgs
 bookkeeping has been supplied and therefore cannot repair the source
 normalization bridge.
+
+## Review-Loop Backpressure — Source-to-Higgs LSZ Closure Attempt
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_source_to_higgs_lsz_closure_attempt.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_source_to_higgs_lsz_closure_attempt.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The closure attempt does not authorize proposal wording.  It is useful because
+it names the exact missing theorem and blocks the remaining shortcuts.

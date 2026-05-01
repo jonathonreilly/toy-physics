@@ -1,0 +1,81 @@
+{
+  "actual_current_surface_status": "open / source-to-Higgs LSZ closure attempt blocked",
+  "allowed_closers": [],
+  "candidates": [
+    {
+      "allowed": true,
+      "fixes_kappa_s": false,
+      "premise": "logdet additive scalar generator",
+      "reason": "fixes source-response functional form but remains covariant under source coordinate rescaling"
+    },
+    {
+      "allowed": true,
+      "fixes_kappa_s": false,
+      "premise": "SSB relation m = y v / sqrt(2)",
+      "reason": "valid after canonical Higgs field is supplied; does not map lattice source s to h"
+    },
+    {
+      "allowed": false,
+      "fixes_kappa_s": false,
+      "premise": "EW Higgs gauge-mass diagonalization",
+      "reason": "structural note assumes canonical |D H|^2 and is proposed/unaudited; no source bridge"
+    },
+    {
+      "allowed": false,
+      "fixes_kappa_s": false,
+      "premise": "SM one-Higgs gauge selection",
+      "reason": "selects monomial pattern but explicitly leaves Yukawa matrices free"
+    },
+    {
+      "allowed": true,
+      "fixes_kappa_s": false,
+      "premise": "same-1PI / four-fermion product",
+      "reason": "fixes y^2 D_phi only; invariant under y -> kappa y, D_phi -> D_phi/kappa^2"
+    },
+    {
+      "allowed": true,
+      "fixes_kappa_s": false,
+      "premise": "Feynman-Hellmann dE/ds response",
+      "reason": "observable slope is with respect to the lattice source coordinate s"
+    },
+    {
+      "allowed": false,
+      "fixes_kappa_s": false,
+      "premise": "R_conn / color projection",
+      "reason": "audited conditional and not a scalar source-to-Higgs normalization theorem"
+    },
+    {
+      "allowed": false,
+      "fixes_kappa_s": false,
+      "premise": "H_unit matrix element",
+      "reason": "forbidden audited-renaming route"
+    },
+    {
+      "allowed": false,
+      "fixes_kappa_s": false,
+      "premise": "observed top mass or observed y_t",
+      "reason": "external comparator cannot be proof selector"
+    }
+  ],
+  "fail_count": 0,
+  "forbidden_closers": [],
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The source-to-canonical-Higgs / scalar LSZ theorem remains open.",
+  "required_open_theorem": {
+    "must_prove": [
+      "the scalar source creates an isolated physical Higgs-channel pole",
+      "the pole residue / inverse-propagator derivative fixes kappa_s",
+      "the source field matches the canonical kinetic normalization used by v",
+      "the proof does not use H_unit, observed top/y_t, alpha_LM, plaquette/u0, or reduced pilot data"
+    ],
+    "name": "source-to-canonical-Higgs LSZ theorem"
+  },
+  "strict_non_claims": [
+    "does not claim retained closure",
+    "does not demote direct production route",
+    "does not use H_unit matrix-element readout",
+    "does not use observed top mass or observed y_t"
+  ],
+  "verdict": "No allowed current-surface premise fixes the scalar source normalization kappa_s.  The logdet source generator, SSB identity, same-1PI product, and Feynman-Hellmann response are all useful but source-reparametrization covariant.  Existing EW/Higgs structural notes, R_conn/color projection, H_unit, and observed targets cannot be used as clean proof inputs for this bridge.  PR #230 retained closure still requires the named source-to-canonical-Higgs LSZ theorem or direct production physical-response evidence."
+}

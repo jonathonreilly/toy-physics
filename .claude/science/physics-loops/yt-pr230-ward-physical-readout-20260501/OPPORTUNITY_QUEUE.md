@@ -55,7 +55,9 @@
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the
    source-to-Higgs bridge from the Cl(3)/Z^3 source functional or measure the
-   scalar residue directly.
+   scalar residue directly. The explicit closure attempt found no allowed
+   current-surface premise that fixes `kappa_s`, so this remains a genuinely
+   new-theorem target rather than a packaging task.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 7. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`

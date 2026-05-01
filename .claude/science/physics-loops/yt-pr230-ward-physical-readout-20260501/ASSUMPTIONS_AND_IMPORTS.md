@@ -149,6 +149,15 @@ Any route that sets `kappa_s = 1` without deriving canonical scalar
 normalization is importing a hidden normalization.  This includes source
 curvature, same-1PI, and Feynman-Hellmann response routes.
 
+Explicit closure attempt result:
+
+```text
+allowed current-surface premises fixing kappa_s = []
+```
+
+The missing theorem must derive the isolated scalar pole, residue derivative,
+and match to canonical Higgs kinetic normalization.
+
 Refreshed `A_min` for the positive-closure rerun:
 
 ```text

@@ -440,6 +440,18 @@ term; the SM one-Higgs selection note leaves Yukawa matrices arbitrary; the
 observable-principle row is audited conditional; and `R_conn`/EW color
 projection do not derive scalar LSZ normalization.
 
+Explicit source-to-Higgs / LSZ closure attempt remains open:
+
+```text
+python3 scripts/frontier_yt_source_to_higgs_lsz_closure_attempt.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+Allowed current-surface premises do not fix `kappa_s`.  Forbidden or
+conditional premises are explicitly excluded.  The required theorem is an
+actual scalar-pole/LSZ source-to-canonical-Higgs bridge or direct physical
+response measurement.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate
