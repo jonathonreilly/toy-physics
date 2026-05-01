@@ -2553,6 +2553,10 @@
       "to": "n_eff_from_three_generations_theorem_note_2026-04-24"
     },
     {
+      "from": "cpt_exact_note",
+      "to": "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
+    },
+    {
       "from": "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29",
       "to": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29"
     },
@@ -6243,26 +6247,6 @@
     {
       "from": "periodic_2d_wraparound_fix_note_2026-04-11",
       "to": "bmv_threebody_note_2026-04-11"
-    },
-    {
-      "from": "physical_lattice_necessity_note",
-      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
-    },
-    {
-      "from": "physical_lattice_necessity_note",
-      "to": "g_bare_rigidity_theorem_note"
-    },
-    {
-      "from": "physical_lattice_necessity_note",
-      "to": "g_bare_two_ward_closure_note_2026-04-18"
-    },
-    {
-      "from": "physical_lattice_necessity_note",
-      "to": "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19"
-    },
-    {
-      "from": "physical_lattice_necessity_note",
-      "to": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19"
     },
     {
       "from": "physics_critic_tracker",
@@ -18473,7 +18457,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T00:31:29.714619+00:00",
+  "generated_at": "2026-05-01T00:32:53.975796+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -22156,10 +22140,12 @@
     },
     "cpt_exact_note": {
       "claim_id": "cpt_exact_note",
-      "current_status": "support",
-      "current_status_raw": "support - structural or confirmatory support note",
-      "deps": [],
-      "note_hash": "f7269be553f471109102d50923a9137a6657f4a05c3b596e31ff8917e4bf3992",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact staggered CPT theorem; audit pending",
+      "deps": [
+        "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
+      ],
+      "note_hash": "3afa404d43a363c2dde5dd7c210c3aaa95d92fa696759bab6ceac344f83b7826",
       "path": "docs/CPT_EXACT_NOTE.md",
       "runner_path": null,
       "title": "CPT Exact Preservation in the Cl(3) Staggered Framework"
@@ -26491,9 +26477,9 @@
     "generation_axiom_boundary_note": {
       "claim_id": "generation_axiom_boundary_note",
       "current_status": "proposed_retained",
-      "current_status_raw": "exact support theorem on the proposed_retained three-generation surface and",
+      "current_status_raw": "proposed_retained exact boundary theorem on the three-generation",
       "deps": [],
-      "note_hash": "49c19fe5447dfc9e4e3d48eb16528f696302c85ead7cd28e31be86f9358d6ac9",
+      "note_hash": "1bef781440d3e9d8758df2c6db5f0dd3e9d65d2b069441580edd6550a969132b",
       "path": "docs/GENERATION_AXIOM_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_generation_axiom_boundary.py",
       "title": "Generation Axiom Boundary Note"
@@ -31682,21 +31668,25 @@
       "runner_path": null,
       "title": "Persistent Record Side-Bit Note"
     },
+    "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30": {
+      "claim_id": "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained bridge theorem; audit pending",
+      "deps": [],
+      "note_hash": "6f9b3ea0f2dfb70af139b595377fabd4d20c862fc6272ae8e88ae25e60cda446",
+      "path": "docs/PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_physical_hermitian_hamiltonian_and_sme_bridge.py",
+      "title": "Physical Hermitian Hamiltonian And SME Bridge"
+    },
     "physical_lattice_necessity_note": {
       "claim_id": "physical_lattice_necessity_note",
       "current_status": "proposed_retained",
-      "current_status_raw": "exact support theorem on the framework boundary; proposed_retained",
-      "deps": [
-        "g_bare_structural_normalization_theorem_note_2026-04-18",
-        "g_bare_rigidity_theorem_note",
-        "g_bare_two_ward_closure_note_2026-04-18",
-        "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
-        "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19"
-      ],
-      "note_hash": "862730226c1b8602fe87fc91863d80a90e2829f0302d8506dc02fb1d454bc385",
+      "current_status_raw": "proposed_retained no-g_bare-load physical-lattice necessity",
+      "deps": [],
+      "note_hash": "604fbbc8a6a18e2cb89d54692178565b40ef3fe3321f40263fbea829b63aba04",
       "path": "docs/PHYSICAL_LATTICE_NECESSITY_NOTE.md",
       "runner_path": "scripts/frontier_physical_lattice_necessity.py",
-      "title": "Physical-Lattice Necessity / Fixed-Surface No-Regulator-Reinterpretation Note"
+      "title": "Physical-Lattice Necessity / No-Same-Stack Regulator Boundary Note"
     },
     "physics_critic_tracker": {
       "claim_id": "physics_critic_tracker",
@@ -35739,10 +35729,10 @@
     },
     "s3_taste_cube_decomposition_note": {
       "claim_id": "s3_taste_cube_decomposition_note",
-      "current_status": "support",
-      "current_status_raw": "exact support theorem on the full taste cube",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact structural theorem on the full taste cube;",
       "deps": [],
-      "note_hash": "c52d97c3fb5ae3f42dc502f0f260ac510df11a577e782a54bf5a1f03bd08ba10",
+      "note_hash": "5bb04c12f0e491285cab8e807b153d88e053c48f6a211c495c73deaee2f9b2bf",
       "path": "docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md",
       "runner_path": "scripts/frontier_s3_action_taste_cube_decomposition.py",
       "title": "S_3 Taste-Cube Decomposition Note"
@@ -40166,10 +40156,10 @@
     },
     "z2_hw1_mass_matrix_parametrization_note": {
       "claim_id": "z2_hw1_mass_matrix_parametrization_note",
-      "current_status": "support",
-      "current_status_raw": "exact support theorem on the residual axis-selected carrier",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact structural theorem on the residual",
       "deps": [],
-      "note_hash": "476c1b38cbf81d48275a8ed12afabb5e4534144c03dee3569eed07e5ab9eff64",
+      "note_hash": "75e78e6855ad4fba097dac601825bce0dae0e311413b26f354b9431f03ce7d36",
       "path": "docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md",
       "runner_path": "scripts/frontier_z2_hw1_mass_matrix_parametrization.py",
       "title": "Z_2 `hw=1` Mass-Matrix Parametrization Note"
@@ -40373,7 +40363,6 @@
     "cosmology_scale_identification_and_reduction_note",
     "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
     "coupled_field_generated_family_probe_note",
-    "cpt_exact_note",
     "cross_family_universality_note",
     "cycle_battery_note_2026-04-10",
     "cycle_break_slice_note_2026-04-10",
@@ -40965,6 +40954,8 @@
     "persistent_record_overlap_kernel_note",
     "persistent_record_refinement_note",
     "persistent_record_sidebit_note",
+    "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30",
+    "physical_lattice_necessity_note",
     "physics_first_attack_plan",
     "physics_qa_tracker",
     "planck_boundary_density_extension_theorem_note_2026-04-24",
@@ -41358,17 +41349,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4618,
+    "edge_count": 4614,
     "leaf_count": 721,
-    "node_count": 1660,
-    "root_count": 1179,
-    "runners_with_path": 1225,
+    "node_count": 1661,
+    "root_count": 1180,
+    "runners_with_path": 1226,
     "status_counts": {
       "bounded": 446,
       "open": 48,
       "proposed_promoted": 1,
-      "proposed_retained": 376,
-      "support": 378,
+      "proposed_retained": 380,
+      "support": 375,
       "unknown": 411
     }
   }

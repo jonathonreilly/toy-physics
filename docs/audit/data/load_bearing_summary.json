@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-05-01T00:31:32.344069+00:00",
+  "computed_at": "2026-05-01T00:32:57.109586+00:00",
   "criticality_counts": {
-    "critical": 76,
-    "high": 334,
+    "critical": 70,
+    "high": 340,
     "leaf": 836,
-    "medium": 414
+    "medium": 415
   },
   "flagship_signal_used": false,
-  "node_count": 1660,
+  "node_count": 1661,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -38,14 +38,14 @@
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 28.738,
-      "transitive_descendants": 301
+      "load_bearing_score": 28.719,
+      "transitive_descendants": 297
     },
     {
       "claim_id": "yt_ward_identity_derivation_theorem",
       "criticality": "critical",
-      "load_bearing_score": 27.729,
-      "transitive_descendants": 299
+      "load_bearing_score": 27.307,
+      "transitive_descendants": 223
     },
     {
       "claim_id": "observable_principle_from_axiom_note",
@@ -68,8 +68,8 @@
     {
       "claim_id": "three_generation_observable_theorem_note",
       "criticality": "critical",
-      "load_bearing_score": 21.685,
-      "transitive_descendants": 290
+      "load_bearing_score": 21.67,
+      "transitive_descendants": 287
     },
     {
       "claim_id": "three_generation_structure_note",
@@ -116,8 +116,8 @@
     {
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 17.719,
-      "transitive_descendants": 297
+      "load_bearing_score": 17.7,
+      "transitive_descendants": 293
     },
     {
       "claim_id": "left_handed_charge_matching_note",
@@ -140,8 +140,8 @@
     {
       "claim_id": "plaquette_self_consistency_note",
       "criticality": "critical",
-      "load_bearing_score": 16.243,
-      "transitive_descendants": 302
+      "load_bearing_score": 16.028,
+      "transitive_descendants": 260
     },
     {
       "claim_id": "physical_lattice_necessity_note",
@@ -158,8 +158,8 @@
     {
       "claim_id": "site_phase_cube_shift_intertwiner_note",
       "criticality": "critical",
-      "load_bearing_score": 15.2,
-      "transitive_descendants": 293
+      "load_bearing_score": 15.185,
+      "transitive_descendants": 290
     },
     {
       "claim_id": "cosmological_constant_spectral_gap_identity_theorem_note",
