@@ -1,81 +1,12 @@
 {
   "by_criticality": {
-    "critical": 12,
+    "critical": 9,
     "high": 195,
     "leaf": 216,
     "medium": 158
   },
-  "generated_at": "2026-05-01T18:19:18.272239+00:00",
+  "generated_at": "2026-05-01T18:27:20.555495+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "graph_first_su3_integration_note",
-        "left_handed_charge_matching_note"
-      ],
-      "direct_in_degree": 13,
-      "load_bearing_score": 14.544,
-      "note_path": "docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 263
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
-        "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
-        "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
-        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
-        "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
-        "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
-        "gauge_vacuum_plaquette_constant_lift_obstruction_note"
-      ],
-      "direct_in_degree": 2,
-      "load_bearing_score": 9.044,
-      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py",
-      "transitive_descendants": 263
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "left_handed_charge_matching_note",
-        "hypercharge_identification_note",
-        "graph_first_su3_integration_note",
-        "native_gauge_closure_note",
-        "su2_witten_z2_anomaly_theorem_note_2026-04-24",
-        "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
-      ],
-      "direct_in_degree": 10,
-      "load_bearing_score": 13.039,
-      "note_path": "docs/LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_lh_anomaly_trace_catalog.py",
-      "transitive_descendants": 262
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -14604,5 +14535,5 @@
     }
   ],
   "ready_count": 178,
-  "total_pending": 581
+  "total_pending": 578
 }

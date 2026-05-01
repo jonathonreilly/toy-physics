@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T18:19:18.589275+00:00
+**Generated:** 2026-05-01T18:27:20.844652+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -28,19 +28,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
-| ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 887 |
+| ~~audited_renaming~~ | 47 |
+| ~~audited_conditional~~ | 888 |
 | ~~audited_failed~~ | 79 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 293 |
-| `audited_conditional` | 593 |
+| `audited_conditional` | 596 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 581 |
+| `unaudited` | 578 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 395 |
 | `leaf` | 759 |
 
-- **Proposed claims demoted by upstream:** 142
+- **Proposed claims demoted by upstream:** 140
 - **Citation cycles detected:** 61
 
 ### Runner classification (static heuristic)
@@ -666,6 +666,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `generated_geometry_synthesis_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `generation_axiom_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -792,6 +793,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lensing_finite_path_explanation_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `lepton_shared_higgs_universality_collapse_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `lepton_single_higgs_pmns_triviality_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `linear_response_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_second_order_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_true_kubo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -919,6 +921,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_chokepoint_bridge_extension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `structured_mirror_reconciliation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `taste_scalar_isotropy_theorem_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7063,6 +7066,24 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** The contention is clean exact flow versus conditional status because the row is unknown. The theorem only differentiates the implicit reduction law and identifies the remaining susceptibility profile; it does not claim that profile or P(6) is closed, so the first clean/A reading is correct and the second status-based conditional is not.
 - **auditor confidence:** judicial
 
+### `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-cbc9`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** In Theorems 1 and 2 the rho values are structural input choices, and the runner computes the resulting Perron eigenvector and P(6) from local Wilson data; Theorem 3 shows local Wilson data and SU(3) intertwiners do not by themselves fix rho_(p,q)(6).  _(class `C`)_
+- **chain closes:** False — The reference Perron computations and no-go close for explicitly chosen rho inputs, but the chain does not close as a physical plaquette/environment solve because the actual 3D spatial-environment rho remains open and multiple one-hop environment dependencies are open, conditional, or renaming.
+- **rationale:** Issue: the runner computes Perron data only after rho is chosen as an input, while the physical boundary character data rho_(p,q)(6) is explicitly the missing 3D spatial Wilson environment object, and the one-hop environment dependencies include open, conditional, and renaming statuses. Why this blocks: the note supports explicit reference solves and a local-input no-go, but it cannot be cited as a closed physical beta=6 plaquette/environment Perron solve. Repair target: clean the residual-environment identification/transfer dependencies and evaluate the actual 3D tensor-transfer Perron state or boundary character coefficients instead of supplying structural reference rho choices. Claim boundary until fixed: retain only support-level reference Perron numbers for rho=1 and rho=delta plus the no-go that local Wilson data alone does not determine the physical rho.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`
+  - `GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`
+  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md`
+  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`
+  - `GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md`
+- **auditor confidence:** high
+
 ### `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md)
@@ -9982,6 +10003,23 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `One-generation matter closure`
   - `Three-generation matter structure`
   - `Neutrino Dirac monomial no-mixing theorem`
+- **auditor confidence:** high
+
+### `lh_anomaly_trace_catalog_theorem_note_2026-04-25`
+
+- **Note:** [`LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`](../../docs/LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-cbc9`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Using retained multiplicities and hypercharges for Q_L and L_L, the note computes the five traces C1-C5: Tr[Y]=0, Tr[Y^3]=-16/9, Tr[SU(3)^2Y]=1/3, Tr[SU(2)^2Y]=0, and N_D=4.  _(class `B`)_
+- **chain closes:** False — The fraction arithmetic closes after the Q_L/L_L multiplicities and hypercharges are supplied, but those values are imported from upstream rows that are currently audited_conditional or audited_renaming, and the companion SU(2)/SU(3) anomaly rows are also conditional.
+- **rationale:** Issue: the trace catalog treats the retained left-handed multiplicities and hypercharge assignments as inputs, while left_handed_charge_matching_note is audited_conditional and hypercharge_identification_note is audited_renaming; the SU(2) Witten and SU(3)^3 companion anomaly rows it cites are also conditional. Why this blocks: the runner verifies exact arithmetic on the supplied table, but it does not derive the left-handed content or hypercharge identification needed for a retained-chain theorem. Repair target: clean or replace the left-handed charge/content and hypercharge-identification inputs, then re-audit the companion anomaly rows. Claim boundary until fixed: the five rational/integer trace values are correct for the stated Q_L + L_L table, but the catalog remains conditional as framework-retained anomaly data.
+- **open / conditional deps cited:**
+  - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
+  - `HYPERCHARGE_IDENTIFICATION_NOTE.md`
+  - `SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`
+  - `SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`
 - **auditor confidence:** high
 
 ### `light_cone_framing_note`
@@ -13493,6 +13531,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
   - `THREE_GENERATION_STRUCTURE_NOTE.md`
+- **auditor confidence:** high
+
+### `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24`
+
+- **Note:** [`SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`](../../docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-cbc9`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The only SU(3)-charged retained fields are Q_L, u_R^c, and d_R^c, giving SU(3)^3 anomaly index 2 - 1 - 1 = 0.  _(class `B`)_
+- **chain closes:** False — The anomaly-index arithmetic closes once the retained one-generation color matter content is supplied, but the note imports that content through a conditional left-handed charge-matching dependency and through right-handed completion authorities that are cited in prose but not present in the row's one-hop ledger dependencies.
+- **rationale:** Issue: the cancellation step assumes the retained Q_L plus u_R^c/d_R^c color matter surface, while left_handed_charge_matching_note is currently audited_conditional and the right-handed completion authorities named by the source note are not in this audit row's one-hop dependency packet. Why this blocks: the note and runner verify that the supplied matter table has zero SU(3)^3 index, but they do not independently close the framework claim that this is the retained one-generation color content. Repair target: clean or replace the left-handed charge-matching and right-handed completion inputs, and register the right-handed completion dependency/runner so the audit packet covers the imported anti-fundamental fields. Claim boundary until fixed: standard SU(3)^3 anomaly arithmetic on the stated matter table is correct; framework-level retained color-anomaly cancellation remains conditional on the upstream matter-completion closure.
+- **open / conditional deps cited:**
+  - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
+  - `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`
+  - `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
 - **auditor confidence:** high
 
 ### `symmetry_head_to_head_note`
