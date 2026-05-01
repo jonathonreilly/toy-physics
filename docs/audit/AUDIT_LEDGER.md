@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:58:40.189287+00:00
+**Generated:** 2026-05-01T06:59:47.150152+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 265 |
+| `audited_clean` | 266 |
 | `audited_conditional` | 581 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 589 |
+| `unaudited` | 588 |
 
 | criticality | count |
 |---|---:|
@@ -300,6 +300,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `legacy_exploratory_drivers_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `lensing_adjoint_kernel_reduced_model_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `literature_backmatch_live_scan_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
+| `main_open_cubic_validation_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -10331,6 +10332,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The note's first-principles Lorentz-violation derivation is supposed to be checked by scripts/frontier_lorentz_derived.py with 29 independent checks of the cubic-lattice symmetry, dispersion expansion, suppression, angular harmonic, CPT, and bounds comparisons.  _(class `C`)_
 - **chain closes:** False — The registered primary runner path does not exist in the current checkout, so no classified checks can be run for the derivation. Without the script output, the note's step-by-step claims and experimental comparison are not auditable from the current repo state.
 - **rationale:** Issue: the registered runner scripts/frontier_lorentz_derived.py is missing, and Python exits with file-not-found before any checks run. Why this blocks: the note relies on that runner for the cubic-group construction, dispersion expansion, angular harmonic, CPT, and experimental-bound checks; prose alone is not a current executable audit artifact. Repair target: restore or re-register the primary runner and ensure it exits 0 with classified PASS lines from the current checkout. Claim boundary until fixed: the note remains a bounded companion narrative, but the current audit cannot ratify its derived LV checks.
+- **auditor confidence:** high
+
+### `main_open_cubic_validation_2026-04-11`
+
+- **Note:** [`MAIN_OPEN_CUBIC_VALIDATION_2026-04-11.md`](../../docs/MAIN_OPEN_CUBIC_VALIDATION_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The newly promoted open-cubic staggered subset is scientifically consistent on main, supporting only the bounded external-source d^-2 reproduction, blocking-sensitivity, and 3D sign-split surfaces stated in the note.  _(class `C`)_
+- **chain closes:** True — The current outputs of the three listed scripts reproduce the note's exact-force, blocked-trajectory, blocking-sensitivity, and 3D contraction/sign-split summaries within print precision. The note explicitly excludes broader staggered both-masses or self-consistent two-body closure.
+- **rationale:** The validation claim closes for its bounded scope: all three referenced reruns match the frozen note summaries, including the global exponents, per-side blocked fits, blocking-scheme sensitivity, width ratios, core excess values, and 20/20 vs 0/20 field-side sign split. The note does not overstate these checks into broader Newton closure or two-body closure. Residual risk is limited to the promoted upstream notes' own scopes, not to stale validation output here.
 - **auditor confidence:** high
 
 ### `mass_spectrum_derived_note`
