@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T18:30:53.998331+00:00
+**Generated:** 2026-05-01T18:33:30.160976+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 209 |
-| support | 153 |
+| support | 152 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 889 |
+| ~~audited_conditional~~ | 890 |
 | ~~audited_failed~~ | 79 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 293 |
-| `audited_conditional` | 598 |
+| `audited_conditional` | 599 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 576 |
+| `unaudited` | 575 |
 
 | criticality | count |
 |---|---:|
@@ -845,6 +845,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `pmns_branch_conditioned_quadratic_sheet_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_c3_character_holonomy_closure_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `pmns_c3_nontrivial_current_boundary_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_commutant_eigenoperator_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -11416,6 +11417,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `PMNS_CORNER_TRANSPORT_ACTIVE_BLOCK_NOTE.md`
 - **auditor confidence:** medium
+
+### `pmns_branch_conditioned_quadratic_sheet_closure_note`
+
+- **Note:** [`PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md`](../../docs/PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Assume the exact PMNS selector sign-to-branch reduction theorem and the two-Higgs inverse-problem theorems; then the selected two-Higgs branch coefficients reconstruct from Hermitian data by one quadratic equation plus rational back-substitution, leaving one residual Z_2 sheet bit.  _(class `A`)_
+- **chain closes:** False — The runner verifies the algebraic quadratic reconstruction and the text/atlas packet references, but the theorem is explicitly conditioned on upstream PMNS selector and two-Higgs inverse-problem inputs that are not registered as clean one-hop dependencies here. The result closes as a post-selector algebraic support statement only after those upstream branch-selection and inverse-problem authorities are ratified and wired into the audit graph.
+- **rationale:** Issue: the quadratic-sheet reconstruction itself is reproduced, but the theorem is framed as conditional on the PMNS selector sign-to-branch reduction plus neutrino/charged-lepton two-Higgs inverse-problem inputs, and those inputs are not audit-clean one-hop dependencies for this row. Why this blocks: without ratified upstream branch-selection and inverse-problem authorities, the row cannot by itself close the post-selector coefficient theorem from the audit packet. Repair target: register the cited PMNS selector and two-Higgs inverse-problem notes as dependencies and ratify them, then keep this runner as the algebraic reconstruction check. Claim boundary until fixed: given a selected minimal PMNS branch and valid branch Hermitian data, the coefficients reconstruct algebraically up to one residual Z_2 sheet bit.
+- **open / conditional deps cited:**
+  - `PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md`
+  - `NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`
+  - `CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`
+  - `NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md`
+- **auditor confidence:** high
 
 ### `pmns_c3_character_holonomy_closure_note`
 
