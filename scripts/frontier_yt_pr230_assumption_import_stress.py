@@ -54,10 +54,12 @@ def main() -> int:
 
     required_terms = [
         "H_unit-to-top matrix-element definition",
+        "yt_ward_identity as y_t authority",
         "observed top mass / observed y_t as proof selectors",
         "alpha_LM / plaquette / u0 as load-bearing normalization",
         "c2 = 1 unless derived",
         "Z_match = 1 unless derived",
+        "kappa_s = 1 unless derived",
         "Reduced cold-gauge momentum pilots",
     ]
     missing_terms = [term for term in required_terms if term not in text]
@@ -91,12 +93,13 @@ def main() -> int:
         "actual_current_surface_status": "open / assumption-import stress complete",
         "verdict": (
             "The refreshed PR #230 assumption exercise is explicit: H_unit, "
-            "observed top/y_t, alpha_LM/plaquette/u0, reduced cold pilots, "
-            "undetermined c2, and undetermined Z_match are forbidden as proof "
-            "shortcuts.  No current route certificate authorizes retained "
-            "proposal wording.  Positive closure still requires production "
-            "evidence plus heavy matching, or an independent scalar pole/LSZ "
-            "theorem."
+            "yt_ward_identity, observed top/y_t, alpha_LM/plaquette/u0, "
+            "reduced cold pilots, undetermined c2, undetermined Z_match, and "
+            "kappa_s = 1 are forbidden as proof shortcuts unless the relevant "
+            "normalization or matching theorem is derived.  No current route "
+            "certificate authorizes retained proposal wording.  Positive "
+            "closure still requires production evidence plus heavy matching, "
+            "or an independent scalar pole/LSZ theorem."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
@@ -109,6 +112,8 @@ def main() -> int:
             "not a production measurement",
             "does not use observed top mass as calibration",
             "does not define y_t through H_unit matrix elements",
+            "does not use yt_ward_identity as y_t authority",
+            "does not set kappa_s to one without scalar LSZ/canonical normalization",
         ],
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

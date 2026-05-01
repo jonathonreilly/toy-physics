@@ -452,6 +452,21 @@ conditional premises are explicitly excluded.  The required theorem is an
 actual scalar-pole/LSZ source-to-canonical-Higgs bridge or direct physical
 response measurement.
 
+Scalar-source response harness support is bounded, not closure:
+
+```text
+python3 scripts/frontier_yt_scalar_source_response_harness_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The production harness now accepts explicit uniform scalar-source shifts and
+emits `scalar_source_response_analysis` with a finite `dE/ds` slope on a
+reduced smoke certificate.  This advances the Feynman-Hellmann observable
+route, but it is not physical `dE/dh`: the source coordinate is `s` in
+`m_bare + s`, and `h = kappa_s s` remains open.  Setting `kappa_s = 1` remains
+forbidden unless derived by scalar LSZ/canonical normalization, and the smoke
+run is reduced-scope rather than production evidence.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

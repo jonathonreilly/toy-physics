@@ -5,10 +5,12 @@
 | `g_bare = 1` canonical surface | substrate input | existing minimal-axiom surface | allowed as substrate input |
 | `N_c = 3`, `N_iso = 2` | structural counts | retained/structural in repo | allowed for arithmetic |
 | Old Ward `H_unit` matrix-element readout | forbidden shortcut | `audited_renaming` | may be cited only as the failure mode |
+| `yt_ward_identity` as `y_t` authority | forbidden shortcut | same audited-renaming class as the old Ward route | may be cited only as failed/forbidden authority |
 | Source / HS / Legendre normalization | physical readout bridge | `audited_renaming` via SSB matching note | open import |
 | Chirality projection and right-handed selector | trilinear map | `audited_failed` via Class 5 ledger row | open import |
 | Physical scalar carrier uniqueness | maps source scalar to Higgs fluctuation | `audited_failed` on current ledger row | open import |
 | Scalar LSZ / `Z_phi` external leg | physical vertex normalization | `audited_conditional` | open import |
+| `kappa_s = 1` source-to-Higgs normalization | forbidden shortcut unless derived | not fixed by current retained surface | must be derived by scalar LSZ/canonical normalization |
 | Scalar projector/source normalization | needed for ladder pole criterion and residue | not fixed by current retained surface | open import |
 | Common tadpole/dressing | needed to compare gauge and scalar readouts | not clean after Ward audit | open import |
 | Observed `m_t`, observed `y_t` | comparator only | external observation | forbidden as proof input |
@@ -176,6 +178,7 @@ Forbidden in A_min =
   reduced cold-gauge pilot values as production evidence
   c2 = 1 unless derived from the action in the same route
   Z_match = 1 unless derived as a matching theorem
+  kappa_s = 1 unless derived by scalar LSZ/canonical normalization
 ```
 
 Positive-closure candidates left after the assumption exercise:

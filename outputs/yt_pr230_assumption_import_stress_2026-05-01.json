@@ -16,7 +16,9 @@
     "not a y_t derivation",
     "not a production measurement",
     "does not use observed top mass as calibration",
-    "does not define y_t through H_unit matrix elements"
+    "does not define y_t through H_unit matrix elements",
+    "does not use yt_ward_identity as y_t authority",
+    "does not set kappa_s to one without scalar LSZ/canonical normalization"
   ],
-  "verdict": "The refreshed PR #230 assumption exercise is explicit: H_unit, observed top/y_t, alpha_LM/plaquette/u0, reduced cold pilots, undetermined c2, and undetermined Z_match are forbidden as proof shortcuts.  No current route certificate authorizes retained proposal wording.  Positive closure still requires production evidence plus heavy matching, or an independent scalar pole/LSZ theorem."
+  "verdict": "The refreshed PR #230 assumption exercise is explicit: H_unit, yt_ward_identity, observed top/y_t, alpha_LM/plaquette/u0, reduced cold pilots, undetermined c2, undetermined Z_match, and kappa_s = 1 are forbidden as proof shortcuts unless the relevant normalization or matching theorem is derived.  No current route certificate authorizes retained proposal wording.  Positive closure still requires production evidence plus heavy matching, or an independent scalar pole/LSZ theorem."
 }

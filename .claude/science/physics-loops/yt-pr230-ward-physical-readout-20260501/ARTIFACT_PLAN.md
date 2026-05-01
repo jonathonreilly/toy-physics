@@ -136,6 +136,10 @@ Completed in block 1:
 - `scripts/frontier_yt_source_to_higgs_lsz_closure_attempt.py`
 - `outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json`
 - `docs/YT_SOURCE_TO_HIGGS_LSZ_CLOSURE_ATTEMPT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_source_response_harness_certificate.py`
+- `outputs/yt_direct_lattice_correlator_scalar_source_response_smoke_2026-05-01.json`
+- `outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json`
+- `docs/YT_SCALAR_SOURCE_RESPONSE_HARNESS_EXTENSION_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -156,7 +160,9 @@ Next artifact:
   reparametrization gauge unless canonical scalar normalization is derived; the
   existing EW/Higgs structural notes assume or structure canonical `H` but do
   not supply the PR230 source-to-Higgs bridge; the explicit closure attempt
-  finds no allowed current-surface premise that fixes `kappa_s`
+  finds no allowed current-surface premise that fixes `kappa_s`; the production
+  harness now supports scalar-source shifts and emits `dE/ds`, but this is
+  bounded-support until production data and `kappa_s` exist
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

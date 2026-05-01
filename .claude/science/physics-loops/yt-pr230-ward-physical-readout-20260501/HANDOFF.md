@@ -164,6 +164,12 @@ What changed:
   precise: derive an isolated scalar pole, its residue / inverse-propagator
   derivative, and the match to the canonical kinetic normalization used by
   `v`, without forbidden imports.
+- The scalar-source response harness extension now makes the
+  Feynman-Hellmann route executable inside the production harness:
+  `--scalar-source-shifts` emits `scalar_source_response_analysis` and a
+  finite reduced-smoke `dE/ds` slope.  This is bounded support only.  It does
+  not derive `dE/dh`, and `kappa_s = 1` remains forbidden until scalar
+  LSZ/canonical normalization is derived.
 
 The scientific result is narrower than closure:
 
@@ -202,3 +208,12 @@ Acceptance target for the next heavy-kinetic block:
 2. If pursuing closure rather than engineering, derive the interacting kinetic
    coefficient and lattice-HQET/NRQCD-to-SM matching import.
 3. Otherwise pivot back to the scalar LSZ/pole-residue theorem.
+
+Acceptance target for the next scalar-response block:
+
+1. Design the production `dE/ds` source-response protocol using the new
+   `--scalar-source-shifts` harness path.
+2. Derive or measure the scalar source-to-canonical-Higgs normalization
+   `kappa_s`; do not set `kappa_s = 1`.
+3. Keep reduced source-response runs as scouts only until production and
+   matching certificates exist.

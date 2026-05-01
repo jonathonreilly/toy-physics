@@ -48,6 +48,7 @@ The stress test explicitly forbids:
 - reduced cold-gauge pilot values as production evidence;
 - `c2 = 1` unless derived from the action in the same route;
 - `Z_match = 1` unless derived as a matching theorem.
+- `kappa_s = 1` unless derived by scalar LSZ/canonical normalization.
 
 ## Consequence
 
@@ -67,3 +68,6 @@ Positive closure still requires one of:
 - This note is not a production measurement.
 - This note does not use observed top mass as calibration.
 - This note does not define `y_t` through an `H_unit` matrix element.
+- This note does not use `yt_ward_identity` as `y_t` authority.
+- This note does not set `kappa_s = 1` without deriving scalar LSZ/canonical
+  normalization.

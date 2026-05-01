@@ -748,6 +748,12 @@ def parse_momentum_modes(spec: str | None) -> list[tuple[int, int, int]]:
     return modes
 
 
+def parse_float_list(spec: str | None) -> list[float]:
+    if not spec:
+        return []
+    return [float(x) for x in spec.split(",") if x.strip()]
+
+
 def spatial_p_hat_sq(nvec: tuple[int, int, int], spatial_l: int) -> float:
     return sum((2.0 * math.sin(math.pi * n / spatial_l)) ** 2 for n in nvec)
 
@@ -879,6 +885,28 @@ def fit_energy_from_effective(corr: np.ndarray) -> dict[str, Any]:
     }
 
 
+def fit_first_positive_effective(corr: np.ndarray) -> dict[str, Any]:
+    for tau in range(len(corr) - 1):
+        if corr[tau] > 0.0 and corr[tau + 1] > 0.0:
+            value = math.log(corr[tau] / corr[tau + 1])
+            return {
+                "tau_min": int(tau),
+                "tau_max": int(tau + 1),
+                "m_lat": float(value),
+                "m_lat_err": 0.0,
+                "chi2_dof": 0.0,
+                "effective_energy_samples": [{"tau": int(tau), "m_eff": float(value)}],
+            }
+    return {
+        "tau_min": 0,
+        "tau_max": max(0, len(corr) - 1),
+        "m_lat": float("nan"),
+        "m_lat_err": float("nan"),
+        "chi2_dof": float("nan"),
+        "effective_energy_samples": [],
+    }
+
+
 def fit_momentum_energies(
     momentum_measurements: dict[str, list[list[float]]],
     spatial_l: int,
@@ -933,6 +961,70 @@ def fit_momentum_energies(
     return {"energy_fits": energy_fits, "kinetic_mass_fits": kinetic_fits}
 
 
+def fit_scalar_source_response(
+    source_measurements: dict[float, list[list[float]]],
+    base_mass: float,
+) -> dict[str, Any]:
+    energy_fits = []
+    for source_shift, rows in sorted(source_measurements.items()):
+        arr = np.asarray(rows, dtype=float)
+        if arr.size == 0:
+            continue
+        mean, err = jackknife_mean_err(arr)
+        fit = fit_mass(mean, err)
+        if not math.isfinite(float(fit.get("m_lat", float("nan")))):
+            fit = fit_energy_from_effective(mean)
+        if not math.isfinite(float(fit.get("m_lat", float("nan")))):
+            fit = fit_first_positive_effective(mean)
+        energy_fits.append(
+            {
+                "source_shift_lat": float(source_shift),
+                "effective_bare_mass_lat": float(base_mass + source_shift),
+                "energy_lat": fit["m_lat"],
+                "energy_lat_err": fit["m_lat_err"],
+                "chi2_dof": fit["chi2_dof"],
+                "tau_min": fit["tau_min"],
+                "tau_max": fit["tau_max"],
+                "correlator": [
+                    {"tau": tau, "mean": float(c), "stderr": float(e)}
+                    for tau, (c, e) in enumerate(zip(mean, err))
+                ],
+            }
+        )
+
+    finite = [
+        row
+        for row in energy_fits
+        if math.isfinite(float(row["source_shift_lat"]))
+        and math.isfinite(float(row["energy_lat"]))
+    ]
+    slope = float("nan")
+    slope_err = float("nan")
+    fit_kind = "unavailable"
+    if len(finite) >= 2:
+        shifts = np.asarray([row["source_shift_lat"] for row in finite], dtype=float)
+        energies = np.asarray([row["energy_lat"] for row in finite], dtype=float)
+        weights = []
+        for row in finite:
+            err = float(row.get("energy_lat_err", 0.0) or 0.0)
+            weights.append(1.0 / max(err * err, 1.0e-12))
+        coeffs, cov = np.polyfit(shifts, energies, deg=1, w=np.sqrt(weights), cov="unscaled")
+        slope = float(coeffs[0])
+        slope_err = float(math.sqrt(max(cov[0, 0], 0.0))) if cov.shape == (2, 2) else float("nan")
+        fit_kind = "linear_dE_ds"
+
+    return {
+        "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
+        "base_bare_mass_lat": float(base_mass),
+        "physical_higgs_normalization": "not_derived",
+        "energy_fits": energy_fits,
+        "slope_dE_ds_lat": slope,
+        "slope_dE_ds_lat_err": slope_err,
+        "fit_kind": fit_kind,
+        "strict_limit": "dE/ds is not dE/dh until kappa_s is derived by scalar LSZ/canonical normalization",
+    }
+
+
 def physical_mass_gev(m_lat: float) -> float:
     a_inv = R0_OVER_A_BETA6_REFERENCE * HBARC_GEV_FM / R0_FM
     return m_lat * a_inv
@@ -955,6 +1047,9 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
 
     measurements: dict[float, list[list[float]]] = {m: [] for m in masses}
     momentum_measurements: dict[float, dict[str, list[list[float]]]] = {m: {} for m in masses}
+    source_response_measurements: dict[float, dict[float, list[list[float]]]] = {
+        m: {s: [] for s in args.scalar_source_shifts_parsed} for m in masses
+    }
     cg_residuals: dict[float, list[float]] = {m: [] for m in masses}
     plaquettes = []
     for cfg in range(args.measurements):
@@ -976,6 +1071,18 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
             for key, corr in measured.get("momentum_correlators", {}).items():
                 momentum_measurements[mass].setdefault(key, []).append(corr)
             cg_residuals[mass].append(float(measured["max_cg_residual"]))
+            for source_shift in args.scalar_source_shifts_parsed:
+                if abs(source_shift) < 1.0e-15:
+                    source_response_measurements[mass][source_shift].append(measured["correlator"])
+                    continue
+                shifted = measure_correlator(
+                    meas_gauge,
+                    mass + source_shift,
+                    args.cg_rtol,
+                    args.cg_maxiter,
+                    [],
+                )
+                source_response_measurements[mass][source_shift].append(shifted["correlator"])
         print(f"  meas L={spatial_l} cfg={cfg + 1}/{args.measurements} plaquette={plaquettes[-1]:.6f}")
 
     mass_scan = []
@@ -983,6 +1090,11 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
     selected_mass = masses[len(masses) // 2]
     correlator_rows = []
     selected_momentum_analysis: dict[str, Any] = {"energy_fits": {}, "kinetic_mass_fits": {}}
+    selected_source_response_analysis: dict[str, Any] = {
+        "source_coordinate": "disabled",
+        "energy_fits": [],
+        "slope_dE_ds_lat": float("nan"),
+    }
     for mass in masses:
         arr = np.asarray(measurements[mass], dtype=float)
         mean, err = jackknife_mean_err(arr)
@@ -1004,6 +1116,11 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
                 momentum_measurements[mass],
                 spatial_l,
             )
+            if args.scalar_source_shifts_parsed:
+                selected_source_response_analysis = fit_scalar_source_response(
+                    source_response_measurements[mass],
+                    mass,
+                )
 
     if selected_fit is None:
         selected_fit = mass_scan[len(mass_scan) // 2]
@@ -1033,6 +1150,7 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
         "selected_mass_parameter": selected_mass,
         "correlators": correlator_rows,
         "momentum_analysis": selected_momentum_analysis,
+        "scalar_source_response_analysis": selected_source_response_analysis,
         "effective_mass": effective_mass(np.array([r["mean"] for r in correlator_rows])),
         "mass_fit": selected_fit,
         "runtime_seconds": elapsed,
@@ -1053,6 +1171,9 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
 
     measurements: dict[float, list[list[float]]] = {m: [] for m in masses}
     momentum_measurements: dict[float, dict[str, list[list[float]]]] = {m: {} for m in masses}
+    source_response_measurements: dict[float, dict[float, list[list[float]]]] = {
+        m: {s: [] for s in args.scalar_source_shifts_parsed} for m in masses
+    }
     cg_residuals: dict[float, list[float]] = {m: [] for m in masses}
     plaquettes = []
     for cfg in range(args.measurements):
@@ -1075,6 +1196,18 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
             for key, corr in measured.get("momentum_correlators", {}).items():
                 momentum_measurements[mass].setdefault(key, []).append(corr)
             cg_residuals[mass].append(float(measured["max_cg_residual"]))
+            for source_shift in args.scalar_source_shifts_parsed:
+                if abs(source_shift) < 1.0e-15:
+                    source_response_measurements[mass][source_shift].append(measured["correlator"])
+                    continue
+                shifted = measure_correlator(
+                    meas_gauge,
+                    mass + source_shift,
+                    args.cg_rtol,
+                    args.cg_maxiter,
+                    [],
+                )
+                source_response_measurements[mass][source_shift].append(shifted["correlator"])
         print(f"  meas L={spatial_l} cfg={cfg + 1}/{args.measurements} plaquette={plaquettes[-1]:.6f}")
 
     mass_scan = []
@@ -1082,6 +1215,11 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
     selected_mass = masses[len(masses) // 2]
     correlator_rows = []
     selected_momentum_analysis: dict[str, Any] = {"energy_fits": {}, "kinetic_mass_fits": {}}
+    selected_source_response_analysis: dict[str, Any] = {
+        "source_coordinate": "disabled",
+        "energy_fits": [],
+        "slope_dE_ds_lat": float("nan"),
+    }
     for mass in masses:
         arr = np.asarray(measurements[mass], dtype=float)
         mean, err = jackknife_mean_err(arr)
@@ -1103,6 +1241,11 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
                 momentum_measurements[mass],
                 spatial_l,
             )
+            if args.scalar_source_shifts_parsed:
+                selected_source_response_analysis = fit_scalar_source_response(
+                    source_response_measurements[mass],
+                    mass,
+                )
 
     if selected_fit is None:
         selected_fit = mass_scan[len(mass_scan) // 2]
@@ -1132,6 +1275,7 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         "selected_mass_parameter": selected_mass,
         "correlators": correlator_rows,
         "momentum_analysis": selected_momentum_analysis,
+        "scalar_source_response_analysis": selected_source_response_analysis,
         "effective_mass": effective_mass(np.array([r["mean"] for r in correlator_rows])),
         "mass_fit": selected_fit,
         "runtime_seconds": elapsed,
@@ -1272,6 +1416,12 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                 if phase == "production"
                 else f"{phase} run uses no authoritative SM RGE; production certificate must supply 4/5-loop bridge"
             ),
+            "scalar_source_response": {
+                "enabled": bool(getattr(args, "scalar_source_shifts_parsed", [])),
+                "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
+                "physical_higgs_normalization": "not_derived",
+                "used_as_physical_yukawa_readout": False,
+            },
             "evidence_scope": evidence_scope,
             "created_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         },
@@ -1500,6 +1650,15 @@ def parse_args() -> argparse.Namespace:
             "analysis, e.g. '0,0,0;1,0,0;1,1,0'."
         ),
     )
+    parser.add_argument(
+        "--scalar-source-shifts",
+        default="",
+        help=(
+            "Optional comma-separated uniform scalar source shifts s applied as "
+            "m_bare + s for Feynman-Hellmann dE/ds response analysis.  This "
+            "does not define the physical Higgs normalization."
+        ),
+    )
     parser.add_argument("--therm", type=int, default=None, help="Thermalization sweeps.")
     parser.add_argument("--measurements", type=int, default=None, help="Saved configurations per volume.")
     parser.add_argument("--separation", type=int, default=None, help="Sweeps between saved configurations.")
@@ -1607,6 +1766,7 @@ def main() -> int:
     volumes = parse_volume_spec(args.volumes)
     masses = [float(x) for x in args.masses.split(",") if x.strip()]
     args.momentum_modes_parsed = parse_momentum_modes(args.momentum_modes)
+    args.scalar_source_shifts_parsed = parse_float_list(args.scalar_source_shifts)
     rng = np.random.default_rng(args.seed)
 
     print("=" * 78)
@@ -1616,6 +1776,8 @@ def main() -> int:
     print(f"masses={masses}")
     if args.momentum_modes_parsed:
         print(f"momentum_modes={args.momentum_modes_parsed}")
+    if args.scalar_source_shifts_parsed:
+        print(f"scalar_source_shifts={args.scalar_source_shifts_parsed}")
     print(f"therm={args.therm}, measurements={args.measurements}, separation={args.separation}")
     print(f"output={args.output}")
     if args.pilot_targets:

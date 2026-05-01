@@ -1,0 +1,250 @@
+{
+  "ensembles": [
+    {
+      "a_fm": 0.0931098696461825,
+      "ape_smearing": {
+        "alpha": 0.5,
+        "steps": 0
+      },
+      "boundary_conditions": {
+        "fermion_time": "antiperiodic",
+        "gauge_spatial": "periodic",
+        "gauge_time": "periodic"
+      },
+      "correlators": [
+        {
+          "mean": 0.49826989619377154,
+          "stderr": 0.0,
+          "tau": 0
+        },
+        {
+          "mean": 0.2214532871972318,
+          "stderr": 0.0,
+          "tau": 1
+        },
+        {
+          "mean": 0.0,
+          "stderr": 0.0,
+          "tau": 2
+        },
+        {
+          "mean": 0.2214532871972318,
+          "stderr": 0.0,
+          "tau": 3
+        }
+      ],
+      "dims": [
+        2,
+        2,
+        2,
+        4
+      ],
+      "effective_mass": [
+        {
+          "m_eff": 0.8109302162163288,
+          "tau": 0
+        }
+      ],
+      "mass_fit": {
+        "chi2_dof": NaN,
+        "m_lat": NaN,
+        "m_lat_err": NaN,
+        "tau_max": 2,
+        "tau_min": 1
+      },
+      "mass_parameter_scan": [
+        {
+          "chi2_dof": NaN,
+          "m_bare_lat": 0.75,
+          "m_fit_lat": NaN,
+          "m_fit_lat_err": NaN,
+          "max_cg_residual": 1.0770745408287617e-16
+        }
+      ],
+      "measurement_separation_sweeps": 0,
+      "measurement_sweeps": 1,
+      "momentum_analysis": {
+        "energy_fits": {},
+        "kinetic_mass_fits": {}
+      },
+      "plaquette_history": [],
+      "plaquette_mean": 1.0,
+      "plaquette_measurements": [
+        1.0
+      ],
+      "r0_over_a": 5.37,
+      "runtime_seconds": 0.004488945007324219,
+      "scalar_source_response_analysis": {
+        "base_bare_mass_lat": 0.75,
+        "energy_fits": [
+          {
+            "chi2_dof": 0.0,
+            "correlator": [
+              {
+                "mean": 0.49949272291404645,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.23432760504505837,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 0.23432760504505837,
+                "stderr": 0.0,
+                "tau": 3
+              }
+            ],
+            "effective_bare_mass_lat": 0.73,
+            "energy_lat": 0.7568728714404902,
+            "energy_lat_err": 0.0,
+            "source_shift_lat": -0.02,
+            "tau_max": 1,
+            "tau_min": 0
+          },
+          {
+            "chi2_dof": 0.0,
+            "correlator": [
+              {
+                "mean": 0.49826989619377154,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.2214532871972318,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 0.2214532871972318,
+                "stderr": 0.0,
+                "tau": 3
+              }
+            ],
+            "effective_bare_mass_lat": 0.75,
+            "energy_lat": 0.8109302162163288,
+            "energy_lat_err": 0.0,
+            "source_shift_lat": 0.0,
+            "tau_max": 1,
+            "tau_min": 0
+          },
+          {
+            "chi2_dof": 0.0,
+            "correlator": [
+              {
+                "mean": 0.4963872277833247,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.2093047848639419,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 0.2093047848639419,
+                "stderr": 0.0,
+                "tau": 3
+              }
+            ],
+            "effective_bare_mass_lat": 0.77,
+            "energy_lat": 0.8635648328510758,
+            "energy_lat_err": 0.0,
+            "source_shift_lat": 0.02,
+            "tau_max": 1,
+            "tau_min": 0
+          }
+        ],
+        "fit_kind": "linear_dE_ds",
+        "physical_higgs_normalization": "not_derived",
+        "slope_dE_ds_lat": 2.6672990352646395,
+        "slope_dE_ds_lat_err": 3.535533905932738e-05,
+        "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
+        "strict_limit": "dE/ds is not dE/dh until kappa_s is derived by scalar LSZ/canonical normalization"
+      },
+      "selected_mass_parameter": 0.75,
+      "spatial_L": 2,
+      "thermalization_sweeps": 0,
+      "time_L": 4,
+      "update_algorithm": "Cabibbo-Marinari heatbath + polar overrelaxation",
+      "update_engine": "python"
+    }
+  ],
+  "metadata": {
+    "action": "Cl3Z3_SU3_Wilson_staggered",
+    "authority": "staggered_top_correlator_mass_extraction",
+    "created_utc": "2026-05-01T20:38:38Z",
+    "evidence_scope": "reduced run is infrastructure evidence only",
+    "g_bare": 1.0,
+    "phase": "reduced_scope",
+    "running_bridge": "reduced_scope run uses no authoritative SM RGE; production certificate must supply 4/5-loop bridge",
+    "scalar_source_response": {
+      "enabled": true,
+      "physical_higgs_normalization": "not_derived",
+      "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
+      "used_as_physical_yukawa_readout": false
+    },
+    "scale_anchor": "Sommer r0 = 0.5 fm external anchor; r0/a reference used for reduced_scope run",
+    "uses_composite_matrix_element_route": false,
+    "uses_coupling_definition_route": false,
+    "uses_prior_ward_chain": false
+  },
+  "ratio_check": {
+    "g_s_lattice": null,
+    "g_s_source": "not_measured_reduced_scope",
+    "ratio": null,
+    "uncertainty": null,
+    "used_as_definition": false,
+    "y_t_lattice": NaN
+  },
+  "result": {
+    "m_t_pole_GeV": NaN,
+    "m_t_running_at_v_GeV": NaN,
+    "mass_uncertainties_GeV": {
+      "finite_spacing": NaN,
+      "finite_volume": NaN,
+      "heavy_mass_tuning": NaN,
+      "matching": NaN,
+      "running_bridge": NaN,
+      "scale_setting": NaN,
+      "statistical": NaN,
+      "v_input": 0.0001
+    },
+    "reduced_scope_delta_to_pdg_GeV": null,
+    "reduced_scope_delta_to_y_t_target": null,
+    "total_m_t_pole_uncertainty_GeV": 0.0001,
+    "total_y_t_uncertainty": 5.743707142679697e-07,
+    "uncertainties": {
+      "finite_spacing": null,
+      "finite_volume": null,
+      "heavy_mass_tuning": null,
+      "matching": null,
+      "running_bridge": null,
+      "scale_setting": null,
+      "statistical": null,
+      "v_input": 5.743707142679697e-07
+    },
+    "y_t_v": NaN
+  },
+  "v_input": {
+    "source": "existing electroweak VEV chain",
+    "treatment": "substrate_input_only",
+    "v_GeV": 246.21965
+  }
+}

@@ -1,5 +1,13 @@
 # Opportunity Queue
 
+2026-05-01 rerun priority override: the active user campaign ranks
+source-to-canonical-Higgs / scalar LSZ first, Feynman-Hellmann physical
+response second, scalar Bethe-Salpeter / pole residue third, and heavy kinetic
+/ matching fourth.  The older heavy-kinetic ranking remains a viable route
+because it has concrete harness support, but it must not displace the requested
+LSZ/physical-response attack unless route refresh shows higher closure
+probability.
+
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.
    Current-scale relativistic production is not enough because `am_top =
@@ -50,7 +58,10 @@
    `dE/dm_bare`, so the next useful engineering step is a production
    source-response design, not more reduced bare-source evidence.  The
    source-reparametrization gauge no-go means this route must derive or measure
-   canonical scalar normalization before claiming physical `y_t`.
+   canonical scalar normalization before claiming physical `y_t`.  The
+   production harness now supports explicit scalar-source shifts and emits a
+   `dE/ds` analysis; the next step is production source-response data plus a
+   derived `kappa_s`, not setting `kappa_s = 1`.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the

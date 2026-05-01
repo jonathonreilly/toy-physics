@@ -63,6 +63,7 @@ def main() -> int:
         "source_reparametrization": load("outputs/yt_source_reparametrization_gauge_no_go_2026-05-01.json"),
         "canonical_scalar_import": load("outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json"),
         "source_to_higgs_lsz": load("outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"),
+        "scalar_source_response_harness": load("outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -170,6 +171,12 @@ def main() -> int:
         statuses["source_to_higgs_lsz"],
     )
     report(
+        "scalar-source-response-harness-needs-kappa",
+        "scalar source response harness" in str(statuses["scalar_source_response_harness"])
+        or "bounded-support" in str(statuses["scalar_source_response_harness"]),
+        statuses["scalar_source_response_harness"],
+    )
+    report(
         "finite-ladder-route-needs-ir-limit",
         "zero-mode" in str(statuses["ladder_ir_zero_mode"]),
         statuses["ladder_ir_zero_mode"],
@@ -232,6 +239,10 @@ def main() -> int:
             "route": "new heavy-matching observable/theorem",
             "needed": "nonzero-momentum kinetic-mass correlators plus lattice-HQET/NRQCD-to-SM top mass matching without observed top calibration",
         },
+        {
+            "route": "Feynman-Hellmann source-response measurement",
+            "needed": "production dE/ds data plus scalar LSZ/canonical-Higgs normalization kappa_s and response matching",
+        },
     ]
 
     result = {
@@ -268,8 +279,12 @@ def main() -> int:
             "canonical scalar normalization, and the strongest existing "
             "EW/Higgs structural notes do not supply that hidden proof.  "
             "The explicit source-to-Higgs LSZ closure attempt finds no allowed "
-            "premise that fixes kappa_s.  Remaining closure requires production "
-            "evidence or a genuinely new scalar LSZ/heavy-matching theorem."
+            "premise that fixes kappa_s.  The harness now supports explicit "
+            "uniform scalar-source shifts and emits dE/ds response analysis, "
+            "which advances the Feynman-Hellmann measurement route but still "
+            "does not convert to physical dE/dh without kappa_s.  Remaining "
+            "closure requires production evidence or a genuinely new scalar "
+            "LSZ/heavy-matching theorem."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
