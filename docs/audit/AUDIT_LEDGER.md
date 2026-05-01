@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:00:53.498125+00:00
+**Generated:** 2026-05-01T23:03:05.764971+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 62 |
+| **retained_no_go** | 63 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 9 |
+| _proposed_no_go_ | 8 |
 | bounded | 163 |
 | support | 134 |
 | open | 6 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 310 |
+| `audited_clean` | 311 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 503 |
+| `unaudited` | 502 |
 
 | criticality | count |
 |---|---:|
@@ -117,6 +117,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `causal_field_portability_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `charged_lepton_radiative_tau_selector_firewall_note_2026-04-26` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `chiral_3plus1d_coupled_coin_note` | open | ~~audited_clean~~ | open | cross_family | codex-current | C | - |
 | `ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
@@ -2407,6 +2408,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the source note explicitly frames this as open, future, planning, or a stretch attempt rather than a closed theorem. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27`
+
+- **Note:** [`CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md`](../../docs/CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-019de5c7`  (codex-current; independence=fresh_context)
+- **load-bearing step:** A C3-natural selector from unbased quotient data to one generation label would have to return a label fixed by the C3 action, but the action 0 -> 1 -> 2 -> 0 is free, so no invariant singleton exists; only the full orbit is invariant, and choosing one of three based selectors is an extra basepoint law.  _(class `A`)_
+- **chain closes:** True — The claimed result is a negative boundary, not a positive charged-lepton mass derivation. Given the supplied premises that the OP-local C3-fixed onsite source reduces to J=sI and that selected-line data are unbased up to cyclic relabeling, the finite C3 action argument exactly blocks a natural single-label generation selector. The runner directly checks the scalar-source algebra, preservation under relabeling, movement of the heaviest slot through all labels, absence of a fixed singleton, and comparator-only isolation from PDG masses.
+- **rationale:** The no-go closes on its own terms: the load-bearing obstruction is exact finite-group algebra over the stated C3 action and the stated unbased selected-line orbit. There is no hidden physical identification of tau/e/mu, and the runner checks that the proof does not use PDG masses or observed hierarchy labels as inputs.
 - **auditor confidence:** high
 
 ### `charged_lepton_radiative_tau_selector_firewall_note_2026-04-26`
