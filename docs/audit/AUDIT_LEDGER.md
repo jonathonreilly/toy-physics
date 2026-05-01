@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T16:15:55.367383+00:00
+**Generated:** 2026-05-01T16:25:22.634924+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 292 |
+| `audited_clean` | 293 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 572 |
+| `unaudited` | 571 |
 
 | criticality | count |
 |---|---:|
@@ -294,6 +294,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_weak_field_purity_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `legacy_exploratory_drivers_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `lensing_adjoint_kernel_reduced_model_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `light_cone_framing_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `literature_backmatch_live_scan_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `main_open_cubic_validation_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -10024,6 +10025,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `One-generation matter closure`
   - `Three-generation matter structure`
   - `Neutrino Dirac monomial no-mixing theorem`
+- **auditor confidence:** high
+
+### `light_cone_framing_note`
+
+- **Note:** [`LIGHT_CONE_FRAMING_NOTE.md`](../../docs/LIGHT_CONE_FRAMING_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Substituting back yields the closed-form maximum v_max(m) = sqrt(m^2 + 1) - m, with v_max(m) <= 1 for all m >= 0 and equality only in the strict massless limit.  _(class `A`)_
+- **chain closes:** True — Within the note's stated scope, the calculus from E^2 = m^2 + sin^2(k) to v_max(m) is explicit and the runner numerically validates the corrected maximum, subluminal bound, and mass limits. The note also explicitly excludes deriving a Lieb-Robinson constant for the separate Crank-Nicolson operator.
+- **rationale:** The scoped support claim closes: starting from the stated staggered Dirac dispersion, the maximum group velocity formula follows by ordinary calculus and the runner verifies the formula and subluminal behavior across the tested mass range. The residual risk is intentionally outside this row's boundary: it does not provide the operator-norm Lieb-Robinson constant for the specific Crank-Nicolson kernel used elsewhere, and the note says that would require a separate calculation.
 - **auditor confidence:** high
 
 ### `linear_response_derivation_note`
