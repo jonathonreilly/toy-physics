@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:07:48.007374+00:00
+**Generated:** 2026-05-01T02:08:55.288162+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,13 +22,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 2 |
 | bounded | 261 |
-| support | 222 |
+| support | 221 |
 | open | 16 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 45 |
-| ~~audited_conditional~~ | 770 |
-| ~~audited_failed~~ | 138 |
+| ~~audited_conditional~~ | 766 |
+| ~~audited_failed~~ | 143 |
 
 | audit_status | count |
 |---|---:|
@@ -36,10 +36,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 229 |
 | `audited_conditional` | 498 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 62 |
+| `audited_failed` | 63 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 12 |
-| `unaudited` | 746 |
+| `unaudited` | 745 |
 
 | criticality | count |
 |---|---:|
@@ -867,6 +867,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `minimal_bidirectional_trapping_probe_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `monopole_derived_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | C | - |
 | `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `pmns_branch_conditioned_quadratic_sheet_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `second_grown_family_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -10197,6 +10198,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The boundary theorem shows that finite Hilbert/unitary flow supplies only U(1) phase data, is invariant under common action/action-quantum rescalings, and that the same rank-four active block supports both CAR/Majorana and non-CAR two-qubit or ququart semantics, so Hilbert flow alone cannot force an absolute action unit or primitive CAR edge statistics.  _(class `C`)_
 - **chain closes:** True — The runner passes 27/27 checks and closes the stated boundary claim. It verifies phase periodicity, dependence only on S/kappa, rescaling invariance, inverse H/t scaling, scalar-action global phases, finite commutator trace obstruction, a valid two-mode CAR realization on C^4, Clifford/Majorana generation of M_4(C), CAR parity grading, and explicit non-CAR two-qubit and ququart semantics on the same rank-four Hilbert block with the same allowed unitary flow. These countermodels establish the no-go/boundary theorem without requiring a positive Target 2 or Target 3 closure.
 - **rationale:** Clean for the bounded Target 3 statement. The positive part is exactly the native dimensionless U(1) phase unit. The negative parts are established by invariance and counterexample: amplitudes depend only on S/kappa, finite matrices cannot realize a nonzero exact canonical commutator by trace, and the rank-four block admits both CAR and non-CAR semantics while satisfying the same Hilbert-flow axioms. This clean audit does not derive hbar, a physical dimensional action unit, primitive CAR statistics, Target 2 c=1/4 unconditionality, or the later Clifford/coframe bridge; it only certifies that the current one-axiom Hilbert-flow surface is insufficient without additional edge-statistics/action-unit structure.
+- **auditor confidence:** high
+
+### `pmns_branch_conditioned_quadratic_sheet_closure_note`
+
+- **Note:** [`PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md`](../../docs/PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_branch_conditioned_quadratic_sheet_closure_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Once a future selector sign chooses the active minimal PMNS branch, the selected two-Higgs coefficients reconstruct from Hermitian data by one explicit quadratic equation plus rational back-substitution, leaving one residual Z2 sheet bit.  _(class `A`)_
+- **chain closes:** False — The runner exits nonzero on current main because it tries to read docs/NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md, which is absent; its earlier PASS lines are also unclassified.
+- **rationale:** Issue: the runner does not complete on current main. After the local quadratic reconstruction sections, it crashes in the bank-records check with FileNotFoundError for docs/NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md. The runner's preceding PASS output is also unclassified, so there are no auditable A/B/C/D PASS lines. Why this blocks: the row's validation explicitly depends on current-bank/atlas/packet consistency, but the registered runner cannot verify that surface and exits nonzero. Repair target: update the runner to point at the current last-mile note path or remove that stale file dependency, add classified PASS lines for the quadratic algebra and bank-record checks, and declare the selector sign-to-branch and two-Higgs inverse-problem authorities as dependencies. Claim boundary until fixed: the first three runner sections provide some algebraic evidence for a quadratic two-sheet reconstruction, but the registered audit artifact is broken and the row cannot be treated as closed.
+- **open / conditional deps cited:**
+  - `publication/ci3_z3/DERIVATION_ATLAS.md`
+  - `NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md`
+  - `publication/ci3_z3/NEUTRINO_DIRAC_PMNS_BOUNDARY_PACKET_2026-04-15.md`
 - **auditor confidence:** high
 
 ### `pmns_commutant_eigenoperator_selector_note`
