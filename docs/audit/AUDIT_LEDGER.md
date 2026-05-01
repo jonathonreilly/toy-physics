@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:05:15.019768+00:00
+**Generated:** 2026-05-01T03:06:25.845200+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 252 |
-| support | 211 |
+| support | 210 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 12 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 787 |
-| ~~audited_failed~~ | 145 |
+| ~~audited_failed~~ | 146 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 230 |
 | `audited_conditional` | 514 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 65 |
+| `audited_failed` | 66 |
 | `audited_numerical_match` | 9 |
 | `audited_renaming` | 14 |
-| `unaudited` | 728 |
+| `unaudited` | 727 |
 
 | criticality | count |
 |---|---:|
@@ -884,6 +884,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `pmns_corner_transport_active_block_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
+| `pmns_graph_commutant_cycle_value_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
 | `pmns_selector_sign_to_branch_reduction_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -10339,6 +10340,24 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md`
   - `PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md`
   - `PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md`
+- **auditor confidence:** high
+
+### `pmns_graph_commutant_cycle_value_boundary_note`
+
+- **Note:** [`PMNS_GRAPH_COMMUTANT_CYCLE_VALUE_BOUNDARY_NOTE.md`](../../docs/PMNS_GRAPH_COMMUTANT_CYCLE_VALUE_BOUNDARY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_graph_commutant_cycle_value_boundary_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims the graph-first/projected-commutant route fixes the selector bundle (tau,q) but remains value-blind on the reduced forward-cycle family, consistent with the existing bank.  _(class `B`)_
+- **chain closes:** False — The registered runner exits nonzero on current main: its current-bank check for the commutant note's partial-closure language fails, so the note is stale or the runner is checking the wrong authority text.
+- **rationale:** Issue: scripts/frontier_pmns_graph_commutant_cycle_value_boundary.py exits with PASS=24 FAIL=1; the failing check is 'The commutant note says the route is only partial' in the current-bank status section. Why this blocks: the note's boundary claim is explicitly tied to compatibility with the existing PMNS bank, but the registered runner no longer verifies that cross-note authority on current main, and the ledger row declares deps=[] while the runner reads four PMNS authority notes. Repair target: update the commutant authority text or the runner's authority check so they agree, register the one-hop PMNS dependencies, and emit classified PASS/FAIL lines for the graph selector, commutant selector, reduced-channel nonselection, and bank-status checks. Claim boundary until fixed: the computational examples support value-blindness of the tested route, but the row cannot be treated as audited while its primary runner exits nonzero against the current bank.
+- **open / conditional deps cited:**
+  - `PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md`
+  - `PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md`
+  - `PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md`
+  - `PMNS_GRAPH_FIRST_AXIS_ALIGNMENT_NOTE.md`
+  - `scripts/frontier_pmns_graph_commutant_cycle_value_boundary.py`
 - **auditor confidence:** high
 
 ### `pmns_hw1_source_transfer_boundary_note`
