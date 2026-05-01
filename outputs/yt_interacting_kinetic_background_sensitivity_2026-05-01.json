@@ -1,0 +1,719 @@
+{
+  "actual_current_surface_status": "bounded-support / interacting kinetic background sensitivity",
+  "fail_count": 0,
+  "mass": 2.0,
+  "pass_count": 6,
+  "pmin_mkin_values": [
+    39.75414682935592,
+    46.79257668088535,
+    12.102165911079233
+  ],
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Interacting kinetic coefficient depends on gauge dynamics; no production ensemble or matching theorem is present.",
+  "relative_spread": 1.0549660814217534,
+  "rows": [
+    {
+      "label": "cold",
+      "max_cg_residual": 2.136267639756967e-16,
+      "momentum_analysis": {
+        "energy_fits": {
+          "0,0,0": {
+            "chi2_dof": 0.007575649810240056,
+            "correlator": [
+              {
+                "mean": 0.15669383880628823,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.0068261484921998605,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.00030289552776648944,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 1.520083922885935e-05,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 1.520083922885935e-05,
+                "stderr": 0.0,
+                "tau": 5
+              },
+              {
+                "mean": 0.00030289552776648944,
+                "stderr": 0.0,
+                "tau": 6
+              },
+              {
+                "mean": 0.0068261484921998605,
+                "stderr": 0.0,
+                "tau": 7
+              }
+            ],
+            "effective_energy_samples": [
+              {
+                "m_eff": 3.115127929936756,
+                "tau": 1
+              },
+              {
+                "m_eff": 2.9920373144517396,
+                "tau": 2
+              }
+            ],
+            "energy_lat": 3.0535826221942477,
+            "energy_lat_err": 0.061545307742508104,
+            "momentum_mode": [
+              0,
+              0,
+              0
+            ],
+            "p_hat_sq": 0.0,
+            "tau_max": 3,
+            "tau_min": 1
+          },
+          "1,0,0": {
+            "chi2_dof": 0.046576552229392054,
+            "correlator": [
+              {
+                "mean": 0.14218156078628388,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.006730128570806352,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.0002658699630025942,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 1.4251683857704468e-05,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 1.4251683857704468e-05,
+                "stderr": 0.0,
+                "tau": 5
+              },
+              {
+                "mean": 0.0002658699630025942,
+                "stderr": 0.0,
+                "tau": 6
+              },
+              {
+                "mean": 0.006730128570806352,
+                "stderr": 0.0,
+                "tau": 7
+              }
+            ],
+            "effective_energy_samples": [
+              {
+                "m_eff": 3.2313421982302413,
+                "tau": 1
+              },
+              {
+                "m_eff": 2.9261322631711346,
+                "tau": 2
+              }
+            ],
+            "energy_lat": 3.078737230700688,
+            "energy_lat_err": 0.15260496752955333,
+            "momentum_mode": [
+              1,
+              0,
+              0
+            ],
+            "p_hat_sq": 1.9999999999999996,
+            "tau_max": 3,
+            "tau_min": 1
+          },
+          "1,1,0": {
+            "chi2_dof": 0.12360565461094418,
+            "correlator": [
+              {
+                "mean": 0.1280934017408679,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.006639298785504005,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.00023282551997431305,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 1.3423682797107947e-05,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 1.3423682797107947e-05,
+                "stderr": 0.0,
+                "tau": 5
+              },
+              {
+                "mean": 0.00023282551997431305,
+                "stderr": 0.0,
+                "tau": 6
+              },
+              {
+                "mean": 0.006639298785504005,
+                "stderr": 0.0,
+                "tau": 7
+              }
+            ],
+            "effective_energy_samples": [
+              {
+                "m_eff": 3.35047230056912,
+                "tau": 1
+              },
+              {
+                "m_eff": 2.8532688118224216,
+                "tau": 2
+              }
+            ],
+            "energy_lat": 3.101870556195771,
+            "energy_lat_err": 0.24860174437334925,
+            "momentum_mode": [
+              1,
+              1,
+              0
+            ],
+            "p_hat_sq": 3.999999999999999,
+            "tau_max": 3,
+            "tau_min": 1
+          }
+        },
+        "kinetic_mass_fits": {
+          "1,0,0": {
+            "delta_e_lat": 0.025154608506440468,
+            "delta_e_lat_err": 0.16454817233812125,
+            "m_kin_lat": 39.75414682935592,
+            "m_kin_lat_err": 260.0506464633304,
+            "momentum_mode": [
+              1,
+              0,
+              0
+            ]
+          },
+          "1,1,0": {
+            "delta_e_lat": 0.048287934001523425,
+            "delta_e_lat_err": 0.25610672035421506,
+            "m_kin_lat": 41.41821432942031,
+            "m_kin_lat_err": 219.6715029162593,
+            "momentum_mode": [
+              1,
+              1,
+              0
+            ]
+          }
+        }
+      },
+      "plaquette": 1.0
+    },
+    {
+      "label": "constant_spatial_phase_theta_0_25",
+      "max_cg_residual": 7.951539181177769e-12,
+      "momentum_analysis": {
+        "energy_fits": {
+          "0,0,0": {
+            "chi2_dof": 0.007339271888455412,
+            "correlator": [
+              {
+                "mean": 0.1565421067618201,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.006803883729504161,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.00030084212650972767,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 1.5015416446871248e-05,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 1.5015416446871248e-05,
+                "stderr": 0.0,
+                "tau": 5
+              },
+              {
+                "mean": 0.00030084212650972767,
+                "stderr": 0.0,
+                "tau": 6
+              },
+              {
+                "mean": 0.006803883729504161,
+                "stderr": 0.0,
+                "tau": 7
+              }
+            ],
+            "effective_energy_samples": [
+              {
+                "m_eff": 3.1186632343125282,
+                "tau": 1
+              },
+              {
+                "m_eff": 2.997508194066937,
+                "tau": 2
+              }
+            ],
+            "energy_lat": 3.0580857141897324,
+            "energy_lat_err": 0.0605775201227956,
+            "momentum_mode": [
+              0,
+              0,
+              0
+            ],
+            "p_hat_sq": 0.0,
+            "tau_max": 3,
+            "tau_min": 1
+          },
+          "1,0,0": {
+            "chi2_dof": 0.046966450454502005,
+            "correlator": [
+              {
+                "mean": 0.14201497433587815,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.00672274832819092,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.00026521831786801257,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 1.421558753914774e-05,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 1.421558753914774e-05,
+                "stderr": 0.0,
+                "tau": 5
+              },
+              {
+                "mean": 0.00026521831786801257,
+                "stderr": 0.0,
+                "tau": 6
+              },
+              {
+                "mean": 0.006722748328190919,
+                "stderr": 0.0,
+                "tau": 7
+              }
+            ],
+            "effective_energy_samples": [
+              {
+                "m_eff": 3.2326989994912396,
+                "tau": 1
+              },
+              {
+                "m_eff": 2.9262142512426457,
+                "tau": 2
+              }
+            ],
+            "energy_lat": 3.0794566253669426,
+            "energy_lat_err": 0.15324237412429695,
+            "momentum_mode": [
+              1,
+              0,
+              0
+            ],
+            "p_hat_sq": 1.9999999999999996,
+            "tau_max": 3,
+            "tau_min": 1
+          },
+          "1,1,0": {
+            "chi2_dof": 0.12425133162252253,
+            "correlator": [
+              {
+                "mean": 0.12794315906024703,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.006632118412208582,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.00023226245507640417,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 1.3390652266043993e-05,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 1.3390652266043993e-05,
+                "stderr": 0.0,
+                "tau": 5
+              },
+              {
+                "mean": 0.00023226245507640417,
+                "stderr": 0.0,
+                "tau": 6
+              },
+              {
+                "mean": 0.00663211841220858,
+                "stderr": 0.0,
+                "tau": 7
+              }
+            ],
+            "effective_energy_samples": [
+              {
+                "m_eff": 3.351811547189828,
+                "tau": 1
+              },
+              {
+                "m_eff": 2.85331113270149,
+                "tau": 2
+              }
+            ],
+            "energy_lat": 3.102561339945659,
+            "energy_lat_err": 0.2492502072441691,
+            "momentum_mode": [
+              1,
+              1,
+              0
+            ],
+            "p_hat_sq": 3.999999999999999,
+            "tau_max": 3,
+            "tau_min": 1
+          }
+        },
+        "kinetic_mass_fits": {
+          "1,0,0": {
+            "delta_e_lat": 0.02137091117721024,
+            "delta_e_lat_err": 0.16478125248789288,
+            "m_kin_lat": 46.79257668088535,
+            "m_kin_lat_err": 360.79600577978687,
+            "momentum_mode": [
+              1,
+              0,
+              0
+            ]
+          },
+          "1,1,0": {
+            "delta_e_lat": 0.04447562575592645,
+            "delta_e_lat_err": 0.25650594877212685,
+            "m_kin_lat": 44.96845105621693,
+            "m_kin_lat_err": 259.34823865745966,
+            "momentum_mode": [
+              1,
+              1,
+              0
+            ]
+          }
+        }
+      },
+      "plaquette": 1.0
+    },
+    {
+      "label": "random_projected_eps_0_05",
+      "max_cg_residual": 3.774661642604641e-11,
+      "momentum_analysis": {
+        "energy_fits": {
+          "0,0,0": {
+            "chi2_dof": 2.097335729521907,
+            "correlator": [
+              {
+                "mean": 0.1569061026071861,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.006839143626874419,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.00030322739111402473,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 1.5079977518896112e-05,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 5.775341688172797e-08,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 1.5095064182625384e-05,
+                "stderr": 0.0,
+                "tau": 5
+              },
+              {
+                "mean": 0.0003029160117755173,
+                "stderr": 0.0,
+                "tau": 6
+              },
+              {
+                "mean": 0.0068362792868478205,
+                "stderr": 0.0,
+                "tau": 7
+              }
+            ],
+            "effective_energy_samples": [
+              {
+                "m_eff": 3.115934812255344,
+                "tau": 1
+              },
+              {
+                "m_eff": 3.001115117984314,
+                "tau": 2
+              },
+              {
+                "m_eff": 5.564940636336667,
+                "tau": 3
+              }
+            ],
+            "energy_lat": 3.8939968555254416,
+            "energy_lat_err": 0.8361291227081112,
+            "momentum_mode": [
+              0,
+              0,
+              0
+            ],
+            "p_hat_sq": 0.0,
+            "tau_max": 4,
+            "tau_min": 1
+          },
+          "1,0,0": {
+            "chi2_dof": 2.4141983336185513,
+            "correlator": [
+              {
+                "mean": 0.14240905595914807,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.0067159531955478914,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.00026553807382738274,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 1.4084689795961512e-05,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 4.426154536539285e-08,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 1.4097161687685253e-05,
+                "stderr": 0.0,
+                "tau": 5
+              },
+              {
+                "mean": 0.00026538625595446205,
+                "stderr": 0.0,
+                "tau": 6
+              },
+              {
+                "mean": 0.0067216342056300735,
+                "stderr": 0.0,
+                "tau": 7
+              }
+            ],
+            "effective_energy_samples": [
+              {
+                "m_eff": 3.230482814429795,
+                "tau": 1
+              },
+              {
+                "m_eff": 2.9366698572769425,
+                "tau": 2
+              },
+              {
+                "m_eff": 5.76272740671751,
+                "tau": 3
+              }
+            ],
+            "energy_lat": 3.9766266928080825,
+            "energy_lat_err": 0.8970689928165227,
+            "momentum_mode": [
+              1,
+              0,
+              0
+            ],
+            "p_hat_sq": 1.9999999999999996,
+            "tau_max": 4,
+            "tau_min": 1
+          },
+          "1,1,0": {
+            "chi2_dof": 2.5897945876698882,
+            "correlator": [
+              {
+                "mean": 0.1283702106611697,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.00660619148684126,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.00023208357255322416,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 1.318696786167197e-05,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 3.743595566589267e-08,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 1.3165657734817422e-05,
+                "stderr": 0.0,
+                "tau": 5
+              },
+              {
+                "mean": 0.00023233766384090913,
+                "stderr": 0.0,
+                "tau": 6
+              },
+              {
+                "mean": 0.006611483650886391,
+                "stderr": 0.0,
+                "tau": 7
+              }
+            ],
+            "effective_energy_samples": [
+              {
+                "m_eff": 3.348665059013919,
+                "tau": 1
+              },
+              {
+                "m_eff": 2.8678684746222554,
+                "tau": 2
+              },
+              {
+                "m_eff": 5.86435271365241,
+                "tau": 3
+              }
+            ],
+            "energy_lat": 4.026962082429528,
+            "energy_lat_err": 0.9291204779557006,
+            "momentum_mode": [
+              1,
+              1,
+              0
+            ],
+            "p_hat_sq": 3.999999999999999,
+            "tau_max": 4,
+            "tau_min": 1
+          }
+        },
+        "kinetic_mass_fits": {
+          "1,0,0": {
+            "delta_e_lat": 0.08262983728264084,
+            "delta_e_lat_err": 1.226313454102778,
+            "m_kin_lat": 12.102165911079233,
+            "m_kin_lat_err": 179.6088358467375,
+            "momentum_mode": [
+              1,
+              0,
+              0
+            ]
+          },
+          "1,1,0": {
+            "delta_e_lat": 0.13296522690408663,
+            "delta_e_lat_err": 1.2499507079870251,
+            "m_kin_lat": 15.04152661990855,
+            "m_kin_lat_err": 141.39912581296494,
+            "momentum_mode": [
+              1,
+              1,
+              0
+            ]
+          }
+        }
+      },
+      "plaquette": 0.9766775999452896
+    }
+  ],
+  "strict_non_claims": [
+    "not a production measurement",
+    "not a y_t derivation",
+    "does not use observed top mass as calibration",
+    "does not define y_t through H_unit matrix elements"
+  ],
+  "verdict": "The free kinetic coefficient is not enough to certify the interacting top kinetic readout.  On small admissible gauge backgrounds, the momentum-projected kinetic proxy changes before ensemble averaging.  Therefore the interacting c2/kinetic renormalization is a real dynamical observable requiring ensemble measurement or a retained interacting theorem."
+}

@@ -8,8 +8,9 @@
    needs a `1/M` action term, gauge-ensemble data, and lattice-HQET/NRQCD-to-SM
    matching; the matching shortcut is explicitly blocked, and the reduced
    small-volume pilot has large finite-volume drift.  The free-action kinetic
-   coefficient is exact support, but interacting kinetic renormalization and
-   SM matching remain open.
+   coefficient is exact support, but fixed-background scans show the kinetic
+   proxy is gauge-background sensitive.  Interacting kinetic renormalization
+   and SM matching remain open.
 2. **Scalar-channel Bethe-Salpeter projector and limiting theorem.** The
    source-bubble stretch, HS/RPA contact attempt, input audit, and
    projector-normalization obstruction show the exact next analytic object:

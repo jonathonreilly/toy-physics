@@ -17,7 +17,8 @@ plus nonzero-momentum correlator scout
 and momentum harness extension certificate
 and heavy kinetic matching obstruction
 and momentum pilot scaling certificate plus assumption/import stress and free
-staggered kinetic-coefficient support
+staggered kinetic-coefficient support plus interacting kinetic background
+sensitivity
 **PR:** #230 draft branch
 
 ```yaml
@@ -61,6 +62,8 @@ Allowed wording:
 - open assumption/import stress certificate forbidding shortcut imports;
 - exact support for the free Wilson-staggered kinetic coefficient, not
   interacting closure;
+- bounded-support interacting kinetic background sensitivity; free `c2` is not
+  an interacting stand-in without ensemble evidence or a theorem;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
@@ -168,4 +171,10 @@ python3 scripts/frontier_yt_pr230_assumption_import_stress.py
 
 python3 scripts/frontier_yt_free_staggered_kinetic_coefficient.py
 # SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_interacting_kinetic_background_sensitivity.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=17 FAIL=0
 ```

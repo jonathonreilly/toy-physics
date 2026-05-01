@@ -101,6 +101,11 @@ What changed:
 - The free Wilson-staggered kinetic coefficient is now exact support:
   `M_kin^free = m sqrt(1+m^2)`.  This is a positive route movement, but it
   leaves interacting kinetic renormalization and SM matching open.
+- The interacting kinetic background sensitivity block shows that the
+  nonzero-momentum kinetic proxy changes across small fixed SU(3) gauge
+  backgrounds.  Therefore the free kinetic coefficient cannot be used as a
+  zero-import interacting `c2` replacement; this route needs ensemble evidence
+  or a retained interacting kinetic/matching theorem.
 
 The scientific result is narrower than closure:
 
@@ -123,8 +128,8 @@ Exact next action:
 Package this PR #230 update.  The remaining positive options are now:
 
 1. strict direct physical measurement at a suitable top/heavy-quark scale with
-   additive-mass/matching control supplied by an independent observable or
-   theorem;
+   additive-mass/interacting-kinetic/matching control supplied by an
+   independent observable or theorem;
 2. scalar projector/pole-residue/common-dressing theorem from retained
    dynamics;
 3. a newly derived Planck stationarity selector.

@@ -336,6 +336,32 @@ coefficient is useful exact support, but the review boundary remains open
 because interacting kinetic renormalization and lattice-to-SM matching are not
 derived.
 
+## Review-Loop Backpressure — Interacting Kinetic Background Sensitivity
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_interacting_kinetic_background_sensitivity.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_interacting_kinetic_background_sensitivity.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The fixed-background scan is intentionally not production evidence.  Its
+review purpose is to block the hidden assumption that the free kinetic
+coefficient can replace the interacting kinetic coefficient without an
+ensemble or theorem.
+
 ## Review-Loop Backpressure — Momentum Pilot Scaling
 
 Local review-loop disposition:

@@ -60,6 +60,7 @@ def main() -> int:
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "assumption_stress": load("outputs/yt_pr230_assumption_import_stress_2026-05-01.json"),
         "free_kinetic": load("outputs/yt_free_staggered_kinetic_coefficient_2026-05-01.json"),
+        "interacting_kinetic": load("outputs/yt_interacting_kinetic_background_sensitivity_2026-05-01.json"),
         "direct_scale": load("outputs/yt_direct_measurement_scale_requirements_2026-05-01.json"),
     }
 
@@ -142,6 +143,11 @@ def main() -> int:
         "free staggered kinetic coefficient" in str(statuses["free_kinetic"]),
         statuses["free_kinetic"],
     )
+    report(
+        "interacting-kinetic-needs-ensemble-or-theorem",
+        "interacting kinetic" in str(statuses["interacting_kinetic"]),
+        statuses["interacting_kinetic"],
+    )
 
     remaining_routes = [
         {
@@ -172,7 +178,7 @@ def main() -> int:
             "finite-volume drift, so that route still needs production data "
             "and a derived matching theorem.  The free staggered action fixes "
             "its kinetic coefficient, but interacting renormalization remains "
-            "open.  Remaining "
+            "open and is gauge-background sensitive.  Remaining "
             "closure requires production "
             "evidence or a genuinely new scalar LSZ/heavy-matching theorem."
         ),

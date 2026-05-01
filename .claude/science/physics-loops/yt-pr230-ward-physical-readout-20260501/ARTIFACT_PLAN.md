@@ -100,12 +100,15 @@ Completed in block 1:
 - `scripts/frontier_yt_free_staggered_kinetic_coefficient.py`
 - `outputs/yt_free_staggered_kinetic_coefficient_2026-05-01.json`
 - `docs/YT_FREE_STAGGERED_KINETIC_COEFFICIENT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_interacting_kinetic_background_sensitivity.py`
+- `outputs/yt_interacting_kinetic_background_sensitivity_2026-05-01.json`
+- `docs/YT_INTERACTING_KINETIC_BACKGROUND_SENSITIVITY_NOTE_2026-05-01.md`
 
 Next artifact:
 
-- interacting kinetic-renormalization theorem, scalar LSZ theorem attempt, or
-  real production/statistics; reduced momentum pilots and free-action support
-  are not closure evidence
+- scalar LSZ theorem attempt, interacting kinetic-renormalization/matching
+  theorem, or real production/statistics; reduced momentum pilots, free-action
+  support, and fixed-background sensitivity are not closure evidence
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

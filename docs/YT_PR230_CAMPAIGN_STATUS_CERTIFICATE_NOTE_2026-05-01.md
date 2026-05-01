@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=16 FAIL=0
+# SUMMARY: PASS=17 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -50,6 +50,7 @@ The certificate consumes the PR-local route certificates for:
 - momentum pilot scaling certificate;
 - assumption/import stress certificate;
 - free staggered kinetic-coefficient support;
+- interacting kinetic background sensitivity;
 - direct measurement scale requirements.
 
 All loaded runner certificates have `FAIL=0`.  None authorizes a retained
@@ -79,6 +80,7 @@ visible shortcut routes:
 | momentum pilot scaling | small cold-volume pilot has large finite-volume drift |
 | assumption/import stress | no shortcut authorizes retained proposal wording |
 | free kinetic coefficient | free `c2` fixed, interacting matching still open |
+| interacting kinetic sensitivity | fixed gauge backgrounds change kinetic proxy |
 
 ## Remaining Honest Routes
 

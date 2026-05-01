@@ -294,6 +294,19 @@ python3 scripts/frontier_yt_free_staggered_kinetic_coefficient.py
 The free action fixes `M_kin^free = m sqrt(1+m^2)`, but the interacting kinetic
 renormalization and lattice-to-SM matching import remain open.
 
+Interacting kinetic background sensitivity blocks the free-c2 shortcut:
+
+```text
+python3 scripts/frontier_yt_interacting_kinetic_background_sensitivity.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+On three small fixed backgrounds at `m=2.0`, the `p_min` kinetic proxy changes
+from `39.7541468294` to `46.7925766809` to `12.1021659111`, with relative
+spread `1.05497`.  Therefore the free kinetic coefficient is not sufficient to
+certify the interacting top kinetic readout.  The route still needs production
+ensemble measurement or a retained interacting kinetic/matching theorem.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate
