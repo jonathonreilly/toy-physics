@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:46:00.988914+00:00
+**Generated:** 2026-05-01T04:47:12.234819+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 235 |
+| `audited_clean` | 236 |
 | `audited_conditional` | 544 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 670 |
+| `unaudited` | 669 |
 
 | criticality | count |
 |---|---:|
@@ -152,6 +152,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_cp_bridge_boundary_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `dm_leptogenesis_pmns_even_response_sole_axiom_boundary_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `dm_leptogenesis_pmns_microscopic_d_last_mile_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `dm_leptogenesis_pmns_minimal_a13_sheet_selector_theorem_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `dm_leptogenesis_pmns_multistart_selector_support_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_observable_relative_action_law_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_leptogenesis_pmns_relative_action_stationarity_theorem_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -4112,6 +4113,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md`
   - `DM_LEPTOGENESIS_PMNS_EVEN_RESPONSE_SOLE_AXIOM_BOUNDARY_NOTE_2026-04-16.md`
   - `DM_LEPTOGENESIS_PMNS_ORIENTED_PHASE_SHEET_SELECTOR_THEOREM_NOTE_2026-04-16.md`
+- **auditor confidence:** high
+
+### `dm_leptogenesis_pmns_minimal_a13_sheet_selector_theorem_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_MINIMAL_A13_SHEET_SELECTOR_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_PMNS_MINIMAL_A13_SHEET_SELECTOR_THEOREM_NOTE_2026-04-16.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** After quotienting by current exact even PMNS data, the residual sheet selector is exactly sign(A13) = sign(2 gamma).  _(class `A`)_
+- **chain closes:** True — The runner verifies that the witness pair agrees on the even data and current selector objectives, differs only by the A13/gamma sign, and that A13 is recovered at the Schur-side D_- level.
+- **rationale:** The support claim closes: after the stated quotient by exact even data, the runner verifies that sign(A13), equivalently sign(2 gamma), is the remaining selector distinguishing the constructive witness from its CP-flipped partner. This clean audit does not derive a microscopic law forcing A13 > 0; it only identifies the minimal residual selector object. Residual risk: any future claim that the sign is selected from Cl(3)/Z^3 requires a separate derivation and audit.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16`
