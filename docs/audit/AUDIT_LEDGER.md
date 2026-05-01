@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:20:55.831856+00:00
+**Generated:** 2026-05-01T03:22:32.042579+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 247 |
+| bounded | 246 |
 | support | 204 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 51 |
-| ~~audited_conditional~~ | 793 |
-| ~~audited_failed~~ | 146 |
+| ~~audited_conditional~~ | 790 |
+| ~~audited_failed~~ | 150 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 231 |
 | `audited_conditional` | 520 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 66 |
+| `audited_failed` | 67 |
 | `audited_numerical_match` | 10 |
 | `audited_renaming` | 18 |
-| `unaudited` | 715 |
+| `unaudited` | 714 |
 
 | criticality | count |
 |---|---:|
@@ -873,6 +873,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `grown_transfer_basin_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `h0125_failure_derivation` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `h2t_h0125_narrow_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `hierarchy_effective_potential_endpoint_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | D | - |
 | `hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28` | open | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | A | - |
 | `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28` | open | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | A | - |
 | `if_program_closing_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -7359,6 +7360,20 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** This note records the local hard-geometry pilot that asked whether a  _(class `D`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 2 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `hierarchy_effective_potential_endpoint_note`
+
+- **Note:** [`HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md`](../../docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-hierarchy_effective_potential_endpoint_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims the exact dimension-4 endpoint factor C_inf^(4D)=(3/4)^(1/8) places the observed hierarchy prefactor inside the exact temporal endpoint band.  _(class `D`)_
+- **chain closes:** False — The registered runner exits nonzero before verifying the observed-prefactor endpoint-band check because CANONICAL_ALPHA_BARE is undefined.
+- **rationale:** Issue: scripts/frontier_hierarchy_effective_potential_endpoint.py currently crashes in PART 4 with NameError: CANONICAL_ALPHA_BARE is not defined, after the small-m and endpoint coefficient checks pass. Why this blocks: the note's comparison between the exact dimension-4 temporal endpoint factor and the observed hierarchy prefactor is load-bearing, but the registered runner does not execute that check on current main. Repair target: import or define the canonical alpha/plaquette/u0/alpha_LM constants used by the endpoint-band comparison, rerun the script to PASS=all, and classify the PASS lines; if the repaired constants change C_obs, update the claim accordingly. Claim boundary until fixed: exact small-m/APBC endpoint algebra appears supported by the earlier runner sections, but the hierarchy-prefactor endpoint-band claim is not audited.
+- **open / conditional deps cited:**
+  - `scripts/frontier_hierarchy_effective_potential_endpoint.py`
 - **auditor confidence:** high
 
 ### `hierarchy_matsubara_decomposition_note`
