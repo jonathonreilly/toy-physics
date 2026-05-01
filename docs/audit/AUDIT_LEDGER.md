@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:42:53.008381+00:00
+**Generated:** 2026-05-01T23:43:27.352309+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 76 |
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
-| bounded | 163 |
+| bounded | 162 |
 | support | 133 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 958 |
-| ~~audited_failed~~ | 86 |
+| ~~audited_failed~~ | 87 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 324 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 57 |
+| `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 488 |
+| `unaudited` | 487 |
 
 | criticality | count |
 |---|---:|
@@ -1121,6 +1121,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `self_gravity_backreaction_closure_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `session_summary_2026-04-01_topology` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `seventh_family_diagonal_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `seventh_family_diagonal_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `shapiro_complex_interaction_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `shapiro_diamond_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | F | - |
 | `shapiro_diamond_frequency_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | F | - |
@@ -14066,6 +14067,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The note's boundary read depends on the exact sweep summary that the diagonal-stripe scout is seed-selective, with only a narrow subset of rows passing the zero-source, neutral-cancellation, sign, and weak-field F~M gates.  _(class `B`)_
 - **chain closes:** False — The current SEVENTH_FAMILY_DIAGONAL_SWEEP.py run preserves the qualitative boundary read but reports 7/18 passing rows, not the note's 6/18 count. Because the exact pass count is part of the stated sweep summary, the note is stale relative to the current runner output.
 - **rationale:** Issue: The exact sweep count is stale: the note says passing rows are 6/18, while the current diagonal sweep reports 7/18 and includes drift=0.50, seed=1 as a pass. Why this blocks: an audit-clean boundary note must have current numerical row counts, especially when the count is the load-bearing evidence for selectivity. Repair target: update the note's pass count and any derived summary from the current sweep output, or attach the exact runner as the ledger runner. Claim boundary until fixed: the qualitative conclusion remains safe as a diagnosed seed-selective pocket, not family-wide seventh-family closure.
+- **auditor confidence:** high
+
+### `seventh_family_diagonal_note`
+
+- **Note:** [`SEVENTH_FAMILY_DIAGONAL_NOTE.md`](../../docs/SEVENTH_FAMILY_DIAGONAL_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note freezes the diagonal-stripe scout as a seed-selective boundary pocket by citing exact zero-source and neutral-cancellation gates, selective sign orientation and weak-field response, and a stated sweep result of 6/18 passing rows.  _(class `B`)_
+- **chain closes:** False — The current SEVENTH_FAMILY_DIAGONAL_SWEEP.py run supports the qualitative seed-selective boundary but reports 7/18 passing rows, not the note's stated 6/18 count. The exact count is part of the note's load-bearing sweep result, so the note is stale relative to the current local runner.
+- **rationale:** Issue: The sweep result is numerically stale: the note states passing rows are 6/18 while the current diagonal sweep reports 7/18, with drift=0.50, seed=1 also passing. Why this blocks: a bounded note whose evidence surface is an exact row count cannot be audit-clean when that count disagrees with the runner. Repair target: update the pass count and summary from scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py and preferably attach that runner in the audit ledger. Claim boundary until fixed: the diagonal-stripe construction remains a seed-selective boundary pocket, not broad seventh-family closure.
 - **auditor confidence:** high
 
 ### `shapiro_complex_interaction_note`
