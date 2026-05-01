@@ -30,7 +30,11 @@ probability.
    derive the Wilson-staggered scalar projector/source normalization, ladder
    kernel, gauge-zero-mode treatment, IR/finite-volume limiting order,
    eigenvalue crossing, and pole residue.  The finite-ladder IR/zero-mode
-   obstruction blocks using a finite eigenvalue crossing directly.
+   obstruction blocks using a finite eigenvalue crossing directly.  The
+   same-source Bethe-Salpeter kernel/residue degeneracy also blocks using
+   finite Euclidean samples plus a granted pole: denominator remainders that
+   vanish on the measured samples can still move `dGamma/dp^2` and `kappa_s`
+   at `N_c=3`.
 3. **Full scalar pole-residue/common-dressing theorem.** The current analytic
    surface is underdetermined, and the key-blocker closure attempt found no
    existing repo authority that supplies it.  The Legendre transform itself
@@ -48,7 +52,9 @@ probability.
    Spectral positivity and low-order moments are insufficient; this route needs
    pole saturation, continuum control, or direct residue measurement.  Large
    `N_c` pole dominance is also insufficient at physical `N_c=3` without a
-   finite-`N_c` continuum bound.
+   finite-`N_c` continuum bound.  Finite same-source samples likewise do not
+   bound the derivative of the interacting denominator unless the denominator
+   theorem or a production pole-residue measurement supplies that bound.
 4. **Feynman-Hellmann scalar-response route.** Energy slopes with respect to a
    uniform scalar source bypass the absolute heavy rest-mass ambiguity.  This
    is a promising alternate measurement design, but it still requires
@@ -66,7 +72,8 @@ probability.
    fits, and a same-source scalar two-point LSZ/canonical-normalization
    measurement for `kappa_s`.  The same-source two-point object is now
    executable as `C_ss(q)=Tr[S V_q S V_-q]`; closure still requires a
-   controlled pole/continuum limit and canonical residue.
+   controlled pole/continuum limit and canonical residue.  A finite-mode
+   Bethe-Salpeter interpolation cannot supply that residue by itself.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the

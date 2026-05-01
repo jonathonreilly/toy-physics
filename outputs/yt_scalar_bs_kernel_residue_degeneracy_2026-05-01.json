@@ -1,0 +1,153 @@
+{
+  "actual_current_surface_status": "exact negative boundary / scalar Bethe-Salpeter pole-residue degeneracy",
+  "deformation_definition": "Gamma_eta(x)=Gamma_ref(x)+eta*dGamma_ref(x_pole)*(x-x_pole)*prod_i(x-x_i)/prod_i(x_pole-x_i)",
+  "fail_count": 0,
+  "full_eta_kappa_proxy_relative_spread": 0.25726483074570944,
+  "gamma_samples": [
+    -7.130968744996087,
+    -25.32919334416869,
+    21.116273134022357,
+    7.380242725979898
+  ],
+  "nc3_kappa_proxy_relative_spread": 0.11145618000168242,
+  "nc3_residue_proxy_relative_spread": 0.2222222222222223,
+  "pass_count": 6,
+  "pole_x_granted_for_no_go": -1.0,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No retained theorem fixes the interacting Bethe-Salpeter/RPA denominator derivative or bounds finite-Nc pole-residue remainders.",
+  "reference_dGamma_dp2_at_pole": -2.009629777387069,
+  "reference_polynomial_coefficients": [
+    -0.12455390946719061,
+    1.4714445187822869,
+    -1.804788201642922,
+    -10.531755374888537,
+    -7.130968744996219
+  ],
+  "required_next_theorem": [
+    "derive the interacting scalar-channel Bethe-Salpeter/RPA denominator rather than fitting it",
+    "derive the scalar source/projector normalization in the same denominator",
+    "prove the finite-volume, gauge-zero-mode, and IR limiting order",
+    "prove or measure pole saturation/continuum bounds at Nc=3",
+    "compute dGamma_ss/dp^2 at the pole before converting dE_top/ds to dE_top/dh"
+  ],
+  "rows": [
+    {
+      "LSZ_residue_proxy": 0.6634721222467853,
+      "dGamma_dp2_at_pole": -1.5072223330403016,
+      "eta": -0.25,
+      "eta_in_units_of_1_over_Nc_sq": -2.25,
+      "kappa_s_proxy": 0.8145379808497486,
+      "pole_residual": -8.171241461241152e-14,
+      "sample_max_abs_error": 1.3145040611561853e-13
+    },
+    {
+      "LSZ_residue_proxy": 0.5598046031457252,
+      "dGamma_dp2_at_pole": -1.7863375798996166,
+      "eta": -0.1111111111111111,
+      "eta_in_units_of_1_over_Nc_sq": -1.0,
+      "kappa_s_proxy": 0.7482009109495424,
+      "pole_residual": -8.171241461241152e-14,
+      "sample_max_abs_error": 1.3145040611561853e-13
+    },
+    {
+      "LSZ_residue_proxy": 0.497604091685089,
+      "dGamma_dp2_at_pole": -2.009629777387069,
+      "eta": 0.0,
+      "eta_in_units_of_1_over_Nc_sq": 0.0,
+      "kappa_s_proxy": 0.7054105837631649,
+      "pole_residual": -8.171241461241152e-14,
+      "sample_max_abs_error": 1.3145040611561853e-13
+    },
+    {
+      "LSZ_residue_proxy": 0.44784368251658013,
+      "dGamma_dp2_at_pole": -2.232921974874521,
+      "eta": 0.1111111111111111,
+      "eta_in_units_of_1_over_Nc_sq": 1.0,
+      "kappa_s_proxy": 0.6692112390841775,
+      "pole_residual": -8.171241461241152e-14,
+      "sample_max_abs_error": 1.3145040611561853e-13
+    },
+    {
+      "LSZ_residue_proxy": 0.3980832733480712,
+      "dGamma_dp2_at_pole": -2.512037221733836,
+      "eta": 0.25,
+      "eta_in_units_of_1_over_Nc_sq": 2.25,
+      "kappa_s_proxy": 0.6309384069368984,
+      "pole_residual": -8.171241461241152e-14,
+      "sample_max_abs_error": 1.3145040611561853e-13
+    }
+  ],
+  "source_certificate": "outputs/yt_same_source_scalar_two_point_lsz_measurement_2026-05-01.json",
+  "source_mass_row": {
+    "finite_difference_dGamma_dp_hat_sq": -6.066074866390869,
+    "finite_residue_proxy": 0.164851245991128,
+    "has_inverse_zero_on_measured_modes": false,
+    "mass": 0.75,
+    "mode_rows": [
+      {
+        "C_ss_imag": 0.0,
+        "C_ss_real": -0.14023340106513799,
+        "Gamma_ss_imag": -0.0,
+        "Gamma_ss_real": -7.130968744996087,
+        "mode": [
+          0,
+          0,
+          0
+        ],
+        "p_hat_sq": 0.0
+      },
+      {
+        "C_ss_imag": 9.13763806275849e-19,
+        "C_ss_real": -0.039480136079036283,
+        "Gamma_ss_imag": -5.862416500725865e-16,
+        "Gamma_ss_real": -25.32919334416869,
+        "mode": [
+          1,
+          0,
+          0
+        ],
+        "p_hat_sq": 2.9999999999999996
+      },
+      {
+        "C_ss_imag": 0.0,
+        "C_ss_real": 0.047356841505748884,
+        "Gamma_ss_imag": 0.0,
+        "Gamma_ss_real": 21.116273134022357,
+        "mode": [
+          1,
+          1,
+          0
+        ],
+        "p_hat_sq": 5.999999999999999
+      },
+      {
+        "C_ss_imag": 7.538551401775754e-18,
+        "C_ss_real": 0.13549689856131755,
+        "Gamma_ss_imag": -4.106096872926098e-16,
+        "Gamma_ss_real": 7.380242725979898,
+        "mode": [
+          1,
+          1,
+          1
+        ],
+        "p_hat_sq": 8.999999999999998
+      }
+    ]
+  },
+  "strict_non_claims": [
+    "not a y_t derivation",
+    "not production evidence",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t",
+    "does not use alpha_LM, plaquette, or u0",
+    "does not set kappa_s, c2, or Z_match to one"
+  ],
+  "verdict": "The same-source scalar two-point object can be embedded in analytic Bethe-Salpeter denominator families that preserve all currently measured Euclidean Gamma_ss(q) samples and preserve a granted isolated pole, while changing dGamma/dp^2 at that pole.  The LSZ residue and kappa_s therefore remain underdetermined until PR #230 derives the interacting scalar-channel kernel, finite-volume/IR limit, and pole-residue derivative.  At Nc=3, natural 1/Nc^2-sized denominator remainders already move the kappa proxy by more than five percent without changing the finite samples.",
+  "x_samples": [
+    0.0,
+    2.9999999999999996,
+    5.999999999999999,
+    8.999999999999998
+  ]
+}

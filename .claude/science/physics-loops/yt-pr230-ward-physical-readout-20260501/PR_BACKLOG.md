@@ -56,3 +56,17 @@ Adds a same-source scalar two-point LSZ measurement primitive:
   reduced cold primitive has no controlled scalar pole/continuum limit and
   does not authorize physical `dE/dh` or retained closure.
 ```
+
+Latest scalar Bethe-Salpeter residue checkpoint text for PR #230:
+
+```text
+Adds a scalar Bethe-Salpeter kernel/residue degeneracy certificate:
+- preserves all currently measured same-source `Gamma_ss(q)` finite-mode
+  values and a granted scalar pole while moving `dGamma/dp^2` at the pole;
+- validator passes `PASS=6 FAIL=0`; campaign status now consumes 36 route
+  certificates and reports `PASS=32 FAIL=0`;
+- natural `1/N_c^2` denominator remainders at `N_c=3` move the `kappa_s`
+  proxy without changing the finite samples;
+- still no retained closure: the interacting denominator, finite-volume/IR
+  limit, and pole-residue derivative remain open.
+```

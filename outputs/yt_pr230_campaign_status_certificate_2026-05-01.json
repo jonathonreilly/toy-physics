@@ -3,6 +3,7 @@
   "certificate_statuses": {
     "assumption_stress": "open / assumption-import stress complete",
     "bridge_stack": "exact negative boundary / bridge stack not PR230 closure",
+    "bs_kernel_residue_degeneracy": "exact negative boundary / scalar Bethe-Salpeter pole-residue degeneracy",
     "canonical_scalar_import": "exact negative boundary / canonical scalar normalization import audit",
     "direct_scale": "scale requirement / direct measurement route open",
     "feshbach_response": "exact support / Feshbach response boundary",
@@ -38,7 +39,7 @@
     "static_mass": "exact negative boundary / static mass matching obstruction"
   },
   "fail_count": 0,
-  "pass_count": 31,
+  "pass_count": 32,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

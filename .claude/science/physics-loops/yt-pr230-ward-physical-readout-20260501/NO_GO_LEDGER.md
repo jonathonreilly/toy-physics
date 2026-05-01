@@ -501,6 +501,22 @@ route: no measured mode has a controlled pole, the finite residue proxy is
 mass-dependent, and source rescaling changes inverse curvature until canonical
 normalization is derived.
 
+Scalar Bethe-Salpeter finite-sample pole-residue shortcut is blocked:
+
+```text
+python3 scripts/frontier_yt_scalar_bs_kernel_residue_degeneracy.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+Even granting an isolated scalar pole, finite same-source Euclidean samples do
+not fix the LSZ residue.  Analytic denominator deformations can preserve every
+measured `Gamma_ss(q)` value and the granted pole location while changing
+`dGamma/dp^2` at the pole.  At physical `N_c=3`, natural `1/N_c^2` denominator
+remainders already move the `kappa_s` proxy by more than five percent without
+changing the finite samples.  The route still needs a retained interacting
+denominator theorem, finite-volume/IR/zero-mode limiting order, and a
+finite-`N_c` pole-residue bound or production residue measurement.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

@@ -179,6 +179,12 @@ What changed:
   source used in `dE_top/ds`.  It identifies the LSZ measurement object, but
   the reduced cold primitive has no controlled scalar pole and does not fix
   `kappa_s`.
+- The scalar Bethe-Salpeter kernel/residue degeneracy block shows that even if
+  an isolated scalar pole is granted, finite same-source Euclidean samples do
+  not fix the pole derivative.  Analytic denominator deformations can preserve
+  every measured `Gamma_ss(q)` value and the pole location while moving
+  `dGamma/dp^2`; natural `1/N_c^2` remainders at `N_c=3` move the `kappa_s`
+  proxy by more than five percent.
 
 The scientific result is narrower than closure:
 
@@ -205,7 +211,7 @@ Package this PR #230 update.  The remaining positive options are now:
    independent observable or theorem; current single-worker projection is
    multi-day, not 12-hour foreground closure;
 2. interacting scalar denominator/pole-residue/common-dressing theorem from
-   retained dynamics;
+   retained dynamics, including a finite-`N_c=3` pole-residue bound;
 3. Feynman-Hellmann scalar-response production measurement plus a derived
    scalar-source normalization bridge;
 4. a newly derived Planck stationarity selector.

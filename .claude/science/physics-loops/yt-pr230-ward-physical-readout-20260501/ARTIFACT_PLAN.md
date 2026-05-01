@@ -146,6 +146,9 @@ Completed in block 1:
 - `scripts/frontier_yt_same_source_scalar_two_point_lsz_measurement.py`
 - `outputs/yt_same_source_scalar_two_point_lsz_measurement_2026-05-01.json`
 - `docs/YT_SAME_SOURCE_SCALAR_TWO_POINT_LSZ_MEASUREMENT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_bs_kernel_residue_degeneracy.py`
+- `outputs/yt_scalar_bs_kernel_residue_degeneracy_2026-05-01.json`
+- `docs/YT_SCALAR_BS_KERNEL_RESIDUE_DEGENERACY_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -172,9 +175,10 @@ Next artifact:
   Feynman-Hellmann production protocol is now specified but still needs the
   scalar two-point LSZ/canonical-normalization measurement; the same-source
   `C_ss(q)`/`Gamma_ss(q)` primitive is executable but no controlled pole or
-  residue theorem is derived
+  residue theorem is derived; finite same-source samples plus a granted
+  Bethe-Salpeter pole do not fix the pole derivative or `kappa_s` at `N_c=3`
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,
-pole-residue, zero-mode/IR limiting order, and common-dressing theorem that the
-Ward route still lacks.
+interacting denominator, pole-residue, zero-mode/IR limiting order, and
+finite-`N_c=3` continuum bound that the Ward route still lacks.

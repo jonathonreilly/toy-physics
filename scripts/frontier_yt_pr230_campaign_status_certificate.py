@@ -66,6 +66,7 @@ def main() -> int:
         "scalar_source_response_harness": load("outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json"),
         "fh_production_protocol": load("outputs/yt_fh_production_protocol_certificate_2026-05-01.json"),
         "same_source_scalar_two_point": load("outputs/yt_same_source_scalar_two_point_lsz_measurement_2026-05-01.json"),
+        "bs_kernel_residue_degeneracy": load("outputs/yt_scalar_bs_kernel_residue_degeneracy_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -189,6 +190,12 @@ def main() -> int:
         "same-source scalar two-point" in str(statuses["same_source_scalar_two_point"])
         or "bounded-support" in str(statuses["same_source_scalar_two_point"]),
         statuses["same_source_scalar_two_point"],
+    )
+    report(
+        "bs-kernel-residue-degeneracy-needs-denominator-theorem",
+        "Bethe-Salpeter" in str(statuses["bs_kernel_residue_degeneracy"])
+        or "pole-residue degeneracy" in str(statuses["bs_kernel_residue_degeneracy"]),
+        statuses["bs_kernel_residue_degeneracy"],
     )
     report(
         "finite-ladder-route-needs-ir-limit",
