@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:58:29.873780+00:00
+**Generated:** 2026-05-01T12:00:10.685198+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 306 |
+| `audited_clean` | 307 |
 | `audited_conditional` | 591 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 534 |
+| `unaudited` | 533 |
 
 | criticality | count |
 |---|---:|
@@ -360,6 +360,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `qnm_hardening_feasibility_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_bimodule_norm_naturality_theorem_note_2026-04-19` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
+| `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -12674,6 +12675,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Applying affine naturality with b = 0 and t = a gives D_a = a D_1 + (1-a) D_0 = a Id_I, hence U_a = (1-a) Id_I.  _(class `A`)_
 - **chain closes:** True — Given the note's explicitly stated bimodule assumptions, the proof is an algebraic consequence of endpoint normalization and affine naturality on a one-real-dimensional channel. The runner verifies complementarity, endpoints, affine naturality, uniqueness of the normalized kappa profile, and the physical-point BICAC identity.
 - **rationale:** The theorem closes as a conditional structural support result: under the three named assumptions, the normalized affine family is forced to D_a=a Id_I and U_a=(1-a) Id_I. The source explicitly states that NORM naturality is added structure and is no longer load-bearing for Quark closure, so this clean audit does not promote a retained physics derivation. Residual risk is exactly the stated caveat: deriving the naturality assumptions from retained quark-side physics remains open.
+- **auditor confidence:** high
+
+### `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28`
+
+- **Note:** [`QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md`](../../docs/QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** There is no typed existing edge from the A1 support scalar to the physical quark Ward source ratio, so adding that edge would be new theorem content rather than latent support.  _(class `B`)_
+- **chain closes:** True — The runner verifies the authority surfaces, exact A1 algebra, support-face inventory, typed-edge graph, import firewall, and boundary classification with PASS=50 FAIL=0. Those checks support the source's no-go conclusion that current A1 support cannot be promoted into quark C3 Ward closure without a new typed bridge.
+- **rationale:** The no-go closes on the current-bank inventory: exact A1 scalar matches exist, but the typed path to the quark C3 source ratio is absent, and the runner verifies that adding that edge is precisely the missing theorem content. The note avoids forbidden imports from observed quark masses, fitted Yukawas, CKM mass input, or species-universal charged-lepton A1. Residual risk is inventory drift: if a later note supplies the typed bridge, this no-go should be re-audited.
 - **auditor confidence:** high
 
 ### `quark_cp_carrier_completion_note_2026-04-18`
