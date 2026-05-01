@@ -56,6 +56,7 @@ def main() -> int:
         "feshbach_response": load("outputs/yt_feshbach_operator_response_boundary_2026-05-01.json"),
         "bridge_stack": load("outputs/yt_bridge_stack_import_audit_2026-05-01.json"),
         "spectral_saturation": load("outputs/yt_scalar_spectral_saturation_no_go_2026-05-01.json"),
+        "large_nc": load("outputs/yt_large_nc_pole_dominance_boundary_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -124,6 +125,11 @@ def main() -> int:
         "spectral-positivity-needs-saturation-theorem",
         "spectral saturation no-go" in str(statuses["spectral_saturation"]),
         statuses["spectral_saturation"],
+    )
+    report(
+        "large-nc-pole-dominance-needs-finite-nc-bound",
+        "large-Nc pole dominance" in str(statuses["large_nc"]),
+        statuses["large_nc"],
     )
     report(
         "finite-ladder-route-needs-ir-limit",
@@ -212,7 +218,8 @@ def main() -> int:
             "axiom-first bridge stack is bounded transport support with endpoint "
             "imports, not a missed PR #230 proof.  Spectral positivity and "
             "low-order curvature moments do not fix the isolated pole residue "
-            "without saturation/continuum control.  Remaining "
+            "without saturation/continuum control; large-Nc pole dominance is "
+            "not a finite-Nc proof at N_c=3.  Remaining "
             "closure requires production "
             "evidence or a genuinely new scalar LSZ/heavy-matching theorem."
         ),

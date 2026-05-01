@@ -486,6 +486,31 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The result blocks only the shortcut from positivity and low-order moments to
 pole residue.  It leaves open a real pole-saturation or continuum-bound theorem.
 
+## Review-Loop Backpressure — Large-Nc Pole Dominance
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_large_nc_pole_dominance_boundary.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_large_nc_pole_dominance_boundary.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The result blocks only the shortcut from asymptotic pole dominance to finite
+`N_c=3` residue closure.  It leaves open a genuine finite-`N_c` continuum-bound
+theorem.
+
 ## Review-Loop Backpressure — Momentum Pilot Scaling
 
 Local review-loop disposition:

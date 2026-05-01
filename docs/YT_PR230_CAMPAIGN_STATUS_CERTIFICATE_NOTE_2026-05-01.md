@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=21 FAIL=0
+# SUMMARY: PASS=22 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -46,6 +46,7 @@ The certificate consumes the PR-local route certificates for:
 - Feshbach operator-response boundary;
 - bridge-stack import audit;
 - scalar spectral-saturation no-go;
+- large-`N_c` pole-dominance boundary;
 - scalar ladder IR / zero-mode obstruction;
 - heavy kinetic-mass route scout;
 - nonzero-momentum correlator scout;
@@ -79,6 +80,7 @@ visible shortcut routes:
 | Feshbach operator response | exact projection preserves responses but does not prove scalar/gauge residue equality |
 | axiom-first / constructive bridge stack | bounded transport support; imports accepted endpoints/surfaces |
 | scalar spectral saturation | positivity and low-order moments do not fix pole residue |
+| large-`N_c` pole dominance | not a finite-`N_c=3` continuum bound |
 | current-scale direct MC | `am_top = 81.423`, not a useful relativistic top run |
 | HQET/static shortcut | removes rest mass, therefore needs matching |
 | heavy kinetic mass | cancels additive rest mass, but needs nonzero-momentum data and matching |

@@ -129,6 +129,9 @@ What changed:
   source-curvature data do not determine the isolated scalar pole residue.
   Multiple positive pole-plus-continuum models share `C(0)` and `C'(0)` while
   changing the canonical Yukawa proxy.
+- The large-`N_c` pole-dominance block shows asymptotic pole dominance is not
+  enough at physical `N_c=3`.  A natural `1/N_c^2` continuum allowance shifts
+  the canonical Yukawa proxy by more than five percent.
 
 The scientific result is narrower than closure:
 

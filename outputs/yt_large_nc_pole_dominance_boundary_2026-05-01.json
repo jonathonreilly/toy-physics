@@ -1,0 +1,51 @@
+{
+  "actual_current_surface_status": "exact negative boundary / large-Nc pole dominance not PR230 closure",
+  "fail_count": 0,
+  "n_c": 3,
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite-Nc continuum suppression is not derived from the current retained surface.",
+  "required_next_theorem": [
+    "derive scalar-channel pole saturation at N_c=3",
+    "or derive a finite-Nc continuum fraction bound strong enough for the target uncertainty",
+    "or measure the scalar pole residue directly"
+  ],
+  "rows": [
+    {
+      "continuum_fraction": 0.1111111111111111,
+      "label": "optimistic_1_over_Nc2",
+      "pole_fraction": 0.8888888888888888,
+      "relative_shift_from_unit_pole": 0.057190958417936644,
+      "y_over_g_proxy": 0.3849001794597506
+    },
+    {
+      "continuum_fraction": 0.3333333333333333,
+      "label": "looser_1_over_Nc",
+      "pole_fraction": 0.6666666666666667,
+      "relative_shift_from_unit_pole": 0.18350341907227397,
+      "y_over_g_proxy": 0.33333333333333337
+    },
+    {
+      "continuum_fraction": 0.05555555555555555,
+      "label": "half_of_1_over_Nc2",
+      "pole_fraction": 0.9444444444444444,
+      "relative_shift_from_unit_pole": 0.02817468419244995,
+      "y_over_g_proxy": 0.39674602380793617
+    },
+    {
+      "continuum_fraction": 0.01,
+      "label": "one_percent",
+      "pole_fraction": 0.99,
+      "relative_shift_from_unit_pole": 0.005012562893380035,
+      "y_over_g_proxy": 0.4062019202317981
+    }
+  ],
+  "source_ratio": 0.4082482904638631,
+  "strict_non_claims": [
+    "does not reject large-Nc support as intuition",
+    "does not use observed top/Higgs/Yukawa values",
+    "does not define y_t through H_unit matrix elements",
+    "does not use alpha_LM/plaquette/u0 as proof input"
+  ],
+  "verdict": "Large-Nc pole dominance is conditional support, not retained closure at N_c=3.  A natural 1/N_c^2 continuum allowance shifts the canonical Yukawa proxy by more than five percent, and a 1/N_c allowance shifts it much more.  A sub-percent PR #230 closure would need a retained finite-Nc theorem bounding the continuum fraction at about the percent level or better."
+}

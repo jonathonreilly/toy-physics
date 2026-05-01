@@ -35,7 +35,9 @@
    The refreshed retained-closure route certificate keeps this as the shortest
    analytic route.
    Spectral positivity and low-order moments are insufficient; this route needs
-   pole saturation, continuum control, or direct residue measurement.
+   pole saturation, continuum control, or direct residue measurement.  Large
+   `N_c` pole dominance is also insufficient at physical `N_c=3` without a
+   finite-`N_c` continuum bound.
 4. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 5. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`

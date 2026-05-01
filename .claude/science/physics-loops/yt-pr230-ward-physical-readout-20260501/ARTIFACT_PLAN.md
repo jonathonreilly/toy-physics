@@ -115,6 +115,9 @@ Completed in block 1:
 - `scripts/frontier_yt_scalar_spectral_saturation_no_go.py`
 - `outputs/yt_scalar_spectral_saturation_no_go_2026-05-01.json`
 - `docs/YT_SCALAR_SPECTRAL_SATURATION_NO_GO_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_large_nc_pole_dominance_boundary.py`
+- `outputs/yt_large_nc_pole_dominance_boundary_2026-05-01.json`
+- `docs/YT_LARGE_NC_POLE_DOMINANCE_BOUNDARY_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -125,7 +128,8 @@ Next artifact:
   not closure evidence; the existing bridge stack is bounded transport support
   with endpoint imports, not closure evidence; spectral positivity and
   low-order curvature data are not closure evidence without pole saturation or
-  continuum control
+  continuum control; large-`N_c` pole dominance is not a finite-`N_c=3`
+  continuum bound
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

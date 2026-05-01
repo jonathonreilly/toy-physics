@@ -77,6 +77,8 @@ Allowed wording:
   y_t proof;
 - exact negative boundary for scalar spectral saturation from positivity and
   low-order curvature alone;
+- exact negative boundary for large-`N_c` pole dominance as finite-`N_c=3`
+  closure;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
@@ -217,4 +219,10 @@ python3 scripts/frontier_yt_scalar_spectral_saturation_no_go.py
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=21 FAIL=0
+
+python3 scripts/frontier_yt_large_nc_pole_dominance_boundary.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=22 FAIL=0
 ```

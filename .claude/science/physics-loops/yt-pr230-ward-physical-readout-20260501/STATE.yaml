@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-21-scalar-spectral-saturation-no-go
-blocks_completed: 35
-active_route: "scalar spectral saturation / continuum control"
-active_hard_residual: "test whether positivity and low-order source-curvature data fix the scalar pole residue"
+current_phase: campaign-rerun-block-22-large-nc-pole-dominance-boundary
+blocks_completed: 36
+active_route: "large-Nc pole dominance / finite-Nc continuum bound"
+active_hard_residual: "test whether large-Nc pole dominance supplies scalar pole saturation at physical Nc=3"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -132,6 +132,9 @@ files_touched:
   - "scripts/frontier_yt_scalar_spectral_saturation_no_go.py"
   - "docs/YT_SCALAR_SPECTRAL_SATURATION_NO_GO_NOTE_2026-05-01.md"
   - "outputs/yt_scalar_spectral_saturation_no_go_2026-05-01.json"
+  - "scripts/frontier_yt_large_nc_pole_dominance_boundary.py"
+  - "docs/YT_LARGE_NC_POLE_DOMINANCE_BOUNDARY_NOTE_2026-05-01.md"
+  - "outputs/yt_large_nc_pole_dominance_boundary_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -187,6 +190,7 @@ claim_state_movement:
   - "refreshed the retained-closure route certificate: newer support narrows but does not close the remaining production/matching or microscopic scalar-residue routes"
   - "audited the axiom-first / constructive UV bridge stack as a possible missed proof; it is bounded transport support with endpoint/surface imports, not PR230 closure"
   - "proved scalar spectral positivity plus fixed low-order curvature does not determine the isolated pole residue; pole saturation or continuum control remains an open theorem"
+  - "proved large-Nc pole dominance is not finite-Nc closure at Nc=3; even a 1/Nc^2 continuum allowance shifts the Yukawa proxy by about 5.7%"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -195,5 +199,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Continue microscopic scalar pole-saturation/continuum-control theorem attack or strict measurement/matching plan."
+next_exact_action: "Continue finite-Nc scalar continuum-control theorem attack or strict measurement/matching plan."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."
