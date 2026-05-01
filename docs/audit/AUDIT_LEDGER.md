@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:41:47.950277+00:00
+**Generated:** 2026-05-01T01:45:21.093048+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
 | bounded | 270 |
-| support | 229 |
+| support | 228 |
 | open | 17 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 766 |
+| ~~audited_conditional~~ | 767 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 488 |
+| `audited_conditional` | 489 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 759 |
+| `unaudited` | 758 |
 
 | criticality | count |
 |---|---:|
@@ -808,6 +808,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p1_i_s_revision_verification_note_2026-04-17` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `yt_p2_taste_staircase_beta_functions_note_2026-04-17` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_p2_v_matching_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_qfp_insensitivity_support_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `yukawa_color_projection_theorem` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -12287,6 +12288,27 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
   - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
   - `scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py`
+  - `scripts/canonical_plaquette_surface.py`
+- **auditor confidence:** high
+
+### `yt_p2_taste_staircase_beta_functions_note_2026-04-17`
+
+- **Note:** [`YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md`](../../docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-yt_p2_taste_staircase_beta_functions_note_2026-04-17`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims that replacing the P2 taste staircase by explicit per-step 1-loop beta functions with n_taste=16-k fails to reproduce the retained g_s and y_t target factors, so the staircase remains non-perturbative and prior partial P2/v-matching surfaces remain the live boundary.  _(class `C`)_
+- **chain closes:** False — The runner computes the intended null result, but the row imports retained target factors and prior P2/Ward/boundary/coupling-map authorities without dependencies, and the note/runner text contains an AF-threshold inconsistency for b_3(n)=(33-2n)/3.
+- **rationale:** Issue: the runner gives a useful computed no-go (PASS=12/FAIL=0) for the attempted per-step 1-loop n_taste beta ladder, but the row is not self-contained: it imports the retained g_s/y_t target factors, hierarchy theorem, Ward identity, boundary selection, zero-import coupling map, QFP envelope, and prior P2 transport/v-matching notes with deps=[]. It also states an inconsistent AF threshold: for b_3(n)=(33-2n)/3, AF is lost at n>=17, not n_taste>33/4=8.25, even though the printed sequence uses the correct positive b_3 values through n=16. Why this blocks: a clean audit would require the no-go target and boundary conditions to be declared/audited dependencies, and the threshold arithmetic must be internally consistent before the no-go is treated as a closed support theorem. Repair target: declare the cited P2 transport, v-matching, Ward, boundary, observable-principle, zero-import-chain, QFP-support, and canonical-surface authorities as dependencies; correct the AF-threshold wording/runner label; keep the no-go scoped to the explicit 1-loop n_taste substitution tested by the runner. Claim boundary until fixed: support-level computed evidence that this particular per-step perturbative beta-function ladder does not close P2; not an audited closure of P2 or a proof about all non-perturbative staircase mechanisms.
+- **open / conditional deps cited:**
+  - `YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md`
+  - `YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `YT_BOUNDARY_THEOREM.md`
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `YT_ZERO_IMPORT_CHAIN_NOTE.md`
+  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
   - `scripts/canonical_plaquette_surface.py`
 - **auditor confidence:** high
 
