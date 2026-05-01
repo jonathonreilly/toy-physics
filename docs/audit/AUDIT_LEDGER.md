@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:00:39.168172+00:00
+**Generated:** 2026-05-01T07:01:26.900527+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 191 |
+| bounded | 190 |
 | support | 165 |
 | open | 9 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 852 |
+| ~~audited_conditional~~ | 853 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 266 |
-| `audited_conditional` | 582 |
+| `audited_conditional` | 583 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 587 |
+| `unaudited` | 586 |
 
 | criticality | count |
 |---|---:|
@@ -772,6 +772,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `memory_decay_diagnosis_2026-04-11` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `mesoscopic_surrogate_alternate_family_scout_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `mirror_program_synthesis` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `n_eff_from_three_generations_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -10436,6 +10437,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The memory failure is not primarily a Yukawa-range artifact: mu^2 matters, but geometry scaling matters more, and the old screening-alone diagnosis is too strong.  _(class `C`)_
 - **chain closes:** True — The registered runner exits 0 and reproduces the scaled-geometry decay and fixed-geometry survival/strengthening tables exactly, including the mu^2=0 and mu^2=0.22 anchor values quoted in the note.
 - **rationale:** The bounded diagnosis closes against scripts/frontier_memory_mu2_size_sweep.py. The current output matches the note's scaled-geometry rows, including N=61 mu2=0 memory +0.020854 vs mu2=0.22 +0.016780 and N=121 mu2=0 +0.001767 vs mu2=0.22 +0.000865, and it matches the fixed-geometry rows, including N=81 mu2=0 +0.231199 vs mu2=0.22 +0.244260 and N=121 mu2=0 +2.580905 vs mu2=0.22 +2.599619. The note does not promote a publication-grade memory claim; it only narrows the failure mode.
+- **auditor confidence:** high
+
+### `mesoscopic_surrogate_alternate_family_scout_note`
+
+- **Note:** [`MESOSCOPIC_SURROGATE_ALTERNATE_FAMILY_SCOUT_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_ALTERNATE_FAMILY_SCOUT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** If localization is worth trying again, the retained 3D h=0.25 ordered-lattice family is the cheapest plausible target, while h=0.5 and the 2D threshold lane should not keep being swept.  _(class `B`)_
+- **chain closes:** False — The recommendation imports frozen conclusions from multiple mesoscopic-surrogate lanes, but the row has no registered dependencies and no runner or frozen log for those comparisons. The audit cannot verify the ranking of h=0.25 versus h=0.5 and 2D from this note alone.
+- **rationale:** Issue: the scout recommendation rests on uncited prior bounded results about h=0.5 localization, the 2D threshold scan, and the 3D h=0.25 family. Why this blocks: without one-hop authorities or a reproduction artifact, the audit cannot verify that h=0.25 is the cheapest plausible next target or that the other lanes are exhausted. Repair target: register the cited mesoscopic notes/results as dependencies or attach a runner/log that reproduces the family comparison and compact-floor check. Claim boundary until fixed: the note may guide planning, but it is not an audited closure of the alternate-family selection.
 - **auditor confidence:** high
 
 ### `mesoscopic_surrogate_annular_tapered_sweep_note`
