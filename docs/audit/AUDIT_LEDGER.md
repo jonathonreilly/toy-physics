@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:42:27.370760+00:00
+**Generated:** 2026-05-01T20:43:58.061054+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 299 |
+| `audited_clean` | 300 |
 | `audited_conditional` | 634 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 532 |
+| `unaudited` | 531 |
 
 | criticality | count |
 |---|---:|
@@ -357,6 +357,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_lane3_stuck_fanout_synthesis_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
+| `quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `s3_boundary_link_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `s3_taste_cube_decomposition_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -12908,6 +12909,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `scripts/frontier_quark_endpoint_readout_constraints.py`
   - `missing theorem deriving (beta_T/alpha_T, alpha_T/alpha_E, beta_E/alpha_E)=(-1,-2,21/4)`
 - **auditor confidence:** 0.91
+
+### `quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28`
+
+- **Note:** [`QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md`](../../docs/QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained R_conn=8/9 conditionally implies rho_E=21/4 only if the additional source-domain bridge gamma_T(center)/gamma_E(center)=-R_conn is supplied; the existing Route-2 carrier does not supply that bridge.  _(class `B`)_
+- **chain closes:** True — The runner verifies the exact rational bridge algebra, the live bounded comparator, and the import-boundary witness with PASS=26, FAIL=0. The note correctly withholds retained m_u/m_c closure and treats R_conn as a conditional bridge target.
+- **rationale:** The support no-go closes as stated: imposing c_TE=-R_conn gives q_E=15/8 and rho_E=21/4 exactly, but rho_E=0 and rho_E=21/4 differ only at the E-center lift, and no checked Route-2 or R_conn authority supplies that typed identification. The runner also verifies that the live endpoint numbers are only close bounded comparators, not exact theorem inputs. This clean audit is limited to the import-boundary result and does not ratify non-top quark masses.
+- **auditor confidence:** high
 
 ### `quark_up_amplitude_provenance_audit_note_2026-04-19`
 
