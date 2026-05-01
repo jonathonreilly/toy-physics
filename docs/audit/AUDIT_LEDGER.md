@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:48:49.018333+00:00
+**Generated:** 2026-05-01T23:49:41.038675+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,23 +23,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
 | bounded | 162 |
-| support | 132 |
+| support | 131 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 959 |
-| ~~audited_failed~~ | 87 |
+| ~~audited_failed~~ | 88 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 325 |
 | `audited_conditional` | 659 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 58 |
+| `audited_failed` | 59 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 485 |
+| `unaudited` | 484 |
 
 | criticality | count |
 |---|---:|
@@ -1129,6 +1129,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_diamond_frequency_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | F | - |
 | `shapiro_five_family_portability_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `shapiro_scaling_direct_replay_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
+| `shapiro_scaling_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `source_resolved_retarded_green_pocket_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `source_resolved_transverse_propagating_green_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_capture_closure_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -14231,6 +14232,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `SHAPIRO_EXPERIMENTAL_CARD.md`
   - `SHAPIRO_DIAMOND_FREQUENCY_BRIDGE_NOTE.md`
+- **auditor confidence:** high
+
+### `shapiro_scaling_note`
+
+- **Note:** [`SHAPIRO_SCALING_NOTE.md`](../../docs/SHAPIRO_SCALING_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims that the earlier reconstruction-only Shapiro scaling lane is closed because the canonical scaling replay is now the direct replay note, which freezes the s, b, k laws and exact controls from repo data.  _(class `B`)_
+- **chain closes:** False — The pointer target SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md is in archive_unlanded and its ledger row is already audited_failed/effective retained_no_go. A support note cannot cleanly close the scaling lane by pointing to an archived failed replay artifact, even though the current replay script still prints the direct tables.
+- **rationale:** Issue: The note's closure step relies on archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md, but that direct replay row is already audited_failed and effective retained_no_go. Why this blocks: an archived failed replay artifact cannot serve as the canonical closure surface for the active scaling lane, even if the script prints the frozen s, b, k tables. Repair target: create or identify an active audit-clean scaling replay with a primary runner and clean upstream Shapiro dependencies, then update this pointer. Claim boundary until fixed: safe as historical routing to the attempted direct replay; not safe as a claim that the Shapiro scaling lane is closed.
+- **open / conditional deps cited:**
+  - `archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`
+  - `SHAPIRO_EXPERIMENTAL_CARD.md`
+  - `SHAPIRO_DELAY_NOTE.md`
 - **auditor confidence:** high
 
 ### `shapiro_static_discriminator_note`
