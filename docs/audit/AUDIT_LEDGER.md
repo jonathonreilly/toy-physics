@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:45:16.926189+00:00
+**Generated:** 2026-05-01T05:46:35.683699+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 250 |
+| `audited_clean` | 251 |
 | `audited_conditional` | 563 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 625 |
+| `unaudited` | 624 |
 
 | criticality | count |
 |---|---:|
@@ -343,6 +343,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_single_source_compare_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `weak_coupling_retention_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `yt_microscopic_schur_class_admissibility_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `z2_hw1_mass_matrix_parametrization_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `abcc_cp_phase_no_go_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `accessible_prediction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -14307,6 +14308,18 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
 - **load-bearing step:** Only a tightly UV-localized correction window preserves the accepted low-energy endpoint inside this smooth bridge family.  _(class `G`)_
 - **chain closes:** False — The scan establishes a target-conditioned locality pattern inside the chosen smooth bridge family, but it does not independently derive the endpoint inputs, the bridge family, or the accepted low-energy target from retained premises in this note.
 - **rationale:** Issue: the locality conclusion is obtained by scanning a chosen smooth bridge family and selecting profiles that preserve the accepted y_t(v) endpoint. Why this blocks: the result narrows the viable family numerically, but it does not prove that the exact interacting lattice bridge is forced into that UV-localized window. Repair target: derive the endpoint data, bridge family, and UV-localization condition from an operator-level interacting bridge theorem, then use the runner as a consequence check rather than a target scan. Claim boundary until fixed: the note supports a controlled numerical locality proxy for the selected family only.
+- **auditor confidence:** high
+
+### `yt_microscopic_schur_class_admissibility_note`
+
+- **Note:** [`YT_MICROSCOPIC_SCHUR_CLASS_ADMISSIBILITY_NOTE.md`](../../docs/YT_MICROSCOPIC_SCHUR_CLASS_ADMISSIBILITY_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Within the current tested microscopic locality tube, every surviving exact Schur reduction in the constructed local positive family lands in the same Schur normal-form class and stays inside the conservative endpoint budget.  _(class `C`)_
+- **chain closes:** True — The runner constructs 576 local positive microscopic bridge operators, reduces them exactly by Schur complement, and verifies that all surviving reductions remain in the Schur class, inside the response budget, and on the stated nonlocal-tail scale. The note keeps the endpoint-budget removal and outside-tube universality claims explicitly out of scope.
+- **rationale:** The bounded claim closes for the current finite tested-scale package: the runner performs the Schur reductions from constructed microscopic operators rather than hard-coding the conclusion, and all five checks pass with max response gap 5.144895e-03 below the 1.214751e-02 budget. Residual risk is scoped, not hidden: the audit does not certify zero endpoint budget, unbounded y_t, or all conceivable microscopic realizations outside the tested locality tube.
 - **auditor confidence:** high
 
 ### `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18`
