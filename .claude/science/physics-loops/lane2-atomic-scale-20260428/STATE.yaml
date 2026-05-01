@@ -61,7 +61,8 @@ review_findings:
   - "Block 01 review-loop emulation: pass; comparator alpha(0) appears only after the abstract underdetermination proof and does not drive the theorem."
 pr_status: "not opened"
 commit_status:
-  latest_commit: "c65957ea lane2 atomic: add QED threshold firewall"
+  artifact_commit: "c65957ea lane2 atomic: add QED threshold firewall"
+  checkpoint_metadata: "committed after artifact commit; branch pushed to origin"
   pushed_to: "origin/physics-loop/lane2-atomic-scale-block01-20260428"
   pushed_at: "2026-05-01T11:02:23Z"
 next_exact_action: "Next supervisor loop should attempt physical-unit nonrelativistic Coulomb/Schrodinger stretch or threshold-resolved QED fan-out without Lane 4/Lane 6 overlap."
