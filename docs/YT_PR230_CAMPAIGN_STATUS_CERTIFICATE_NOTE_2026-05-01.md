@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=23 FAIL=0
+# SUMMARY: PASS=24 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -48,6 +48,7 @@ The certificate consumes the PR-local route certificates for:
 - scalar spectral-saturation no-go;
 - large-`N_c` pole-dominance boundary;
 - production resource projection;
+- Feynman-Hellmann source-response route;
 - scalar ladder IR / zero-mode obstruction;
 - heavy kinetic-mass route scout;
 - nonzero-momentum correlator scout;
@@ -83,6 +84,7 @@ visible shortcut routes:
 | scalar spectral saturation | positivity and low-order moments do not fix pole residue |
 | large-`N_c` pole dominance | not a finite-`N_c=3` continuum bound |
 | production resource projection | direct route is a planned multi-day production job, not 12-hour foreground evidence |
+| Feynman-Hellmann source response | additive rest mass cancels, scalar source normalization remains open |
 | current-scale direct MC | `am_top = 81.423`, not a useful relativistic top run |
 | HQET/static shortcut | removes rest mass, therefore needs matching |
 | heavy kinetic mass | cancels additive rest mass, but needs nonzero-momentum data and matching |

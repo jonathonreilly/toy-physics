@@ -58,6 +58,7 @@ def main() -> int:
         "spectral_saturation": load("outputs/yt_scalar_spectral_saturation_no_go_2026-05-01.json"),
         "large_nc": load("outputs/yt_large_nc_pole_dominance_boundary_2026-05-01.json"),
         "production_resource": load("outputs/yt_production_resource_projection_2026-05-01.json"),
+        "feynman_hellmann": load("outputs/yt_feynman_hellmann_source_response_route_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -136,6 +137,12 @@ def main() -> int:
         "production-resource-projection-not-evidence",
         "production resource projection" in str(statuses["production_resource"]),
         statuses["production_resource"],
+    )
+    report(
+        "feynman-hellmann-still-needs-source-normalization",
+        "Feynman-Hellmann" in str(statuses["feynman_hellmann"])
+        or "source-response" in str(statuses["feynman_hellmann"]),
+        statuses["feynman_hellmann"],
     )
     report(
         "finite-ladder-route-needs-ir-limit",
@@ -227,9 +234,11 @@ def main() -> int:
             "without saturation/continuum control; large-Nc pole dominance is "
             "not a finite-Nc proof at N_c=3.  The production resource "
             "projection makes the strict direct route concrete as a multi-day "
-            "single-worker job, but it is not measurement evidence.  Remaining "
-            "closure requires production evidence or a genuinely new scalar "
-            "LSZ/heavy-matching theorem."
+            "single-worker job, but it is not measurement evidence.  A "
+            "Feynman-Hellmann top-energy response can remove additive rest "
+            "mass, but still needs scalar source-to-Higgs normalization and "
+            "production response data.  Remaining closure requires production "
+            "evidence or a genuinely new scalar LSZ/heavy-matching theorem."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",

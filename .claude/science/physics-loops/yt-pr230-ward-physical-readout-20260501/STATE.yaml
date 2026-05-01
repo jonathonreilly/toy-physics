@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-23-production-resource-projection
-blocks_completed: 37
-active_route: "direct production resource projection"
-active_hard_residual: "convert the existing mass-bracket benchmark into a strict-campaign resource estimate without treating it as evidence"
+current_phase: campaign-rerun-block-24-feynman-hellmann-source-response
+blocks_completed: 38
+active_route: "Feynman-Hellmann scalar source response"
+active_hard_residual: "test whether top-energy response to a uniform scalar source avoids additive mass and scalar-normalization blockers"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -138,6 +138,9 @@ files_touched:
   - "scripts/frontier_yt_production_resource_projection.py"
   - "docs/YT_PRODUCTION_RESOURCE_PROJECTION_NOTE_2026-05-01.md"
   - "outputs/yt_production_resource_projection_2026-05-01.json"
+  - "scripts/frontier_yt_feynman_hellmann_source_response_route.py"
+  - "docs/YT_FEYNMAN_HELLMANN_SOURCE_RESPONSE_ROUTE_NOTE_2026-05-01.md"
+  - "outputs/yt_feynman_hellmann_source_response_route_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -195,6 +198,7 @@ claim_state_movement:
   - "proved scalar spectral positivity plus fixed low-order curvature does not determine the isolated pole residue; pole saturation or continuum control remains an open theorem"
   - "proved large-Nc pole dominance is not finite-Nc closure at Nc=3; even a 1/Nc^2 continuum allowance shifts the Yukawa proxy by about 5.7%"
   - "converted the existing direct mass-bracket benchmark into a production resource projection; strict direct closure is a planned multi-day compute job, not a 12-hour foreground certificate"
+  - "opened a Feynman-Hellmann scalar-response route; additive rest mass cancels in energy slopes, but scalar source-to-Higgs normalization and production response data remain open"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null

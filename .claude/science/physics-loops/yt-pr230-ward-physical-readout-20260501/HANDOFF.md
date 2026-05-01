@@ -138,6 +138,12 @@ What changed:
   `228.48` single-worker hours.  This keeps the direct route actionable as a
   planned production job, but it is not production evidence and cannot make the
   strict runner pass.
+- The Feynman-Hellmann scalar-response block opens a distinct observable route:
+  top-energy slopes with respect to a uniform scalar source cancel additive
+  rest-mass shifts.  The route still does not close PR #230 because the slope
+  is with respect to a chosen lattice source; converting it to `dE/dh` requires
+  scalar source-to-Higgs normalization, scalar LSZ residue, and production
+  response data.
 
 The scientific result is narrower than closure:
 
@@ -165,7 +171,9 @@ Package this PR #230 update.  The remaining positive options are now:
    multi-day, not 12-hour foreground closure;
 2. interacting scalar denominator/pole-residue/common-dressing theorem from
    retained dynamics;
-3. a newly derived Planck stationarity selector.
+3. Feynman-Hellmann scalar-response production measurement plus a derived
+   scalar-source normalization bridge;
+4. a newly derived Planck stationarity selector.
 ```
 
 Acceptance target for the next heavy-kinetic block:

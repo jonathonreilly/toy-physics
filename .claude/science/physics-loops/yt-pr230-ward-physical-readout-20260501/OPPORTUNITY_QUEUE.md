@@ -41,10 +41,15 @@
    pole saturation, continuum control, or direct residue measurement.  Large
    `N_c` pole dominance is also insufficient at physical `N_c=3` without a
    finite-`N_c` continuum bound.
-4. **Clean parent repair for chirality selector.** The selector arithmetic is
+4. **Feynman-Hellmann scalar-response route.** Energy slopes with respect to a
+   uniform scalar source bypass the absolute heavy rest-mass ambiguity.  This
+   is a promising alternate measurement design, but it still requires
+   production response data and a scalar source-to-canonical-Higgs
+   normalization / LSZ residue bridge before it can produce physical `y_t`.
+5. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
-5. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`
+6. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`
    is derived rather than assumed.
-6. **Existing bridge-stack promotion.** Closed negatively for PR230 retained
+7. **Existing bridge-stack promotion.** Closed negatively for PR230 retained
    closure.  The bridge stack is bounded transport support and imports accepted
    endpoints/surfaces.

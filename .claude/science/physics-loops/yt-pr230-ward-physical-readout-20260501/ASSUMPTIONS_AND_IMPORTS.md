@@ -18,6 +18,7 @@
 | Heavy kinetic-action coefficient `c2` | converts `E(p)-E(0)` into a lattice kinetic mass | not derived on current surface | open import |
 | Lattice-HQET-to-SM top mass matching | HQET direct route | not derived on current surface | open import |
 | Nonzero-momentum production ensembles | kinetic route evidence | scout and reduced cold pilots only | unavailable for closure |
+| Feynman-Hellmann scalar-source response data | alternate observable route | synthetic support only | unavailable for closure |
 | Reduced cold-gauge momentum pilots | implementation support | bounded support | forbidden as strict evidence |
 | Scalar-channel contact coupling `G` | HS/RPA pole condition | not in `A_min` | forbidden unless derived from Wilson gauge ladder |
 | Scalar-channel Bethe-Salpeter kernel | interacting pole route | not yet retained | open import after ladder scout |
@@ -121,6 +122,19 @@ reduced-statistics kinetic-mass proxy cannot be promoted to a physical top mass
 or `y_t` theorem.  It is allowed only as implementation support until the
 matching theorem or production evidence with independently derived matching is
 available.
+
+Feynman-Hellmann source-response route:
+
+```text
+dE_top/ds = scalar-source response
+h = kappa_s s
+dE_top/dh = (dE_top/ds) / kappa_s
+```
+
+The response route cancels additive rest-mass shifts in energy slopes, but it
+does not fix `kappa_s`.  Therefore it remains blocked by the same scalar
+source-to-Higgs normalization / LSZ residue import unless that bridge is
+derived or measured on production ensembles.
 
 Refreshed `A_min` for the positive-closure rerun:
 

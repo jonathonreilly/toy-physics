@@ -391,6 +391,19 @@ three-volume, three-mass strict protocol to about `228.48` single-worker hours.
 This is planning support for the direct route, not production data, matching
 evidence, or strict-runner certification.
 
+Feynman-Hellmann source response moves but does not close the blocker:
+
+```text
+python3 scripts/frontier_yt_feynman_hellmann_source_response_route.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+Energy slopes `dE/ds` with respect to a uniform scalar source can cancel the
+additive heavy rest-mass ambiguity.  They still depend on the normalization of
+the lattice source `s`; converting to the physical `dE/dh` Yukawa readout
+requires a scalar source-to-Higgs normalization theorem or direct scalar LSZ
+residue measurement.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

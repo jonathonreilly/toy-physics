@@ -121,6 +121,9 @@ Completed in block 1:
 - `scripts/frontier_yt_production_resource_projection.py`
 - `outputs/yt_production_resource_projection_2026-05-01.json`
 - `docs/YT_PRODUCTION_RESOURCE_PROJECTION_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_feynman_hellmann_source_response_route.py`
+- `outputs/yt_feynman_hellmann_source_response_route_2026-05-01.json`
+- `docs/YT_FEYNMAN_HELLMANN_SOURCE_RESPONSE_ROUTE_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -133,7 +136,9 @@ Next artifact:
   low-order curvature data are not closure evidence without pole saturation or
   continuum control; large-`N_c` pole dominance is not a finite-`N_c=3`
   continuum bound; the direct production route now has a concrete multi-day
-  single-worker resource estimate but no production evidence certificate
+  single-worker resource estimate but no production evidence certificate;
+  Feynman-Hellmann scalar response cancels additive rest mass but still needs
+  scalar-source normalization and production response data
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

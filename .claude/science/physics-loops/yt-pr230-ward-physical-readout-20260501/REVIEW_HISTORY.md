@@ -562,3 +562,29 @@ The projection is a scheduling artifact, not a strict certificate.  It uses the
 actual `12^3 x 24` numba mass-bracket runtime to show the full requested
 three-volume, three-mass campaign is multi-day single-worker compute; it does
 not replace production data, matching, or strict validation.
+
+## Review-Loop Backpressure — Feynman-Hellmann Source Response
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_feynman_hellmann_source_response_route.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_feynman_hellmann_source_response_route.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The route is a real alternate observable but not closure.  The review firewall
+is the same source-normalization issue: an energy slope with respect to lattice
+source `s` is not a physical Yukawa until `s` is matched to the canonical Higgs
+field or the scalar LSZ residue is measured.

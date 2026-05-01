@@ -1,0 +1,61 @@
+{
+  "actual_current_surface_status": "bounded-support / Feynman-Hellmann source-response route",
+  "additive_mass_rows": [
+    {
+      "additive_mass": 5.0,
+      "slope": 0.40824829046399386,
+      "slope_error": 1.3078427230084344e-13,
+      "subtracted_slope": 0.40824829046393873,
+      "subtracted_slope_error": 7.566169912820442e-14
+    },
+    {
+      "additive_mass": 50.0,
+      "slope": 0.40824829046171696,
+      "slope_error": 2.146116617751659e-12,
+      "subtracted_slope": 0.4082482904621542,
+      "subtracted_slope_error": 1.708855279503041e-12
+    },
+    {
+      "additive_mass": 500.0,
+      "slope": 0.40824829045682187,
+      "slope_error": 7.0412009556264366e-12,
+      "subtracted_slope": 0.4082482904550461,
+      "subtracted_slope_error": 8.816947172363143e-12
+    }
+  ],
+  "fail_count": 0,
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Scalar source normalization and production response data remain open imports.",
+  "required_next_theorem_or_evidence": [
+    "derive the scalar source-to-canonical-Higgs normalization",
+    "or measure the scalar LSZ residue directly on production ensembles",
+    "and measure the Feynman-Hellmann top response on gauge ensembles"
+  ],
+  "source_rescaling_rows": [
+    {
+      "kappa_source": 0.75,
+      "physical_slope_if_h_equals_kappa_s": 0.5443310539518175,
+      "same_lattice_slope": 0.4082482904638631
+    },
+    {
+      "kappa_source": 1.0,
+      "physical_slope_if_h_equals_kappa_s": 0.4082482904638631,
+      "same_lattice_slope": 0.4082482904638631
+    },
+    {
+      "kappa_source": 1.25,
+      "physical_slope_if_h_equals_kappa_s": 0.32659863237109044,
+      "same_lattice_slope": 0.4082482904638631
+    }
+  ],
+  "strict_non_claims": [
+    "not a production measurement",
+    "not a y_t derivation",
+    "does not define y_t via H_unit",
+    "does not import observed top mass or observed y_t",
+    "does not set Z_match or scalar-source normalization to one"
+  ],
+  "true_scalar_charge_in_synthetic_test": 0.4082482904638631,
+  "verdict": "A Feynman-Hellmann scalar-source response is a viable alternate observable route because an energy slope dE/ds can be extracted without relying on the absolute additive rest mass.  However, the slope is with respect to the chosen lattice scalar source.  A rescaling of that source changes the physical dE/dh Yukawa readout unless the source-to-Higgs normalization or scalar LSZ residue is derived.  The route is therefore bounded support, not PR #230 retained closure."
+}

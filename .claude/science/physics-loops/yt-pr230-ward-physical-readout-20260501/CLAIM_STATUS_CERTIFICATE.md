@@ -21,7 +21,7 @@ staggered kinetic-coefficient support plus interacting kinetic background
 sensitivity plus scalar LSZ normalization cancellation plus Feshbach
 operator-response boundary plus bridge-stack import audit, scalar spectral
 saturation no-go, large-Nc pole-dominance boundary, and production resource
-projection
+projection plus Feynman-Hellmann source-response route
 **PR:** #230 draft branch
 
 ```yaml
@@ -84,6 +84,9 @@ Allowed wording:
 - bounded-support production resource projection; the direct route is a
   concrete planned multi-day compute campaign, not a 12-hour foreground
   production certificate;
+- bounded-support Feynman-Hellmann source-response route; additive rest mass
+  can cancel in top-energy slopes, but scalar source-to-Higgs normalization and
+  production response data remain open;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
@@ -236,4 +239,10 @@ python3 scripts/frontier_yt_production_resource_projection.py
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=23 FAIL=0
+
+python3 scripts/frontier_yt_feynman_hellmann_source_response_route.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=24 FAIL=0
 ```
