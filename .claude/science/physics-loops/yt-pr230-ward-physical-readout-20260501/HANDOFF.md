@@ -191,6 +191,12 @@ What changed:
   same additive scalar source used by `dE_top/ds`.  This is production-facing
   measurement support, not closure: reduced smoke output is not production
   evidence and no controlled pole/canonical-Higgs normalization is derived.
+- The joint Feynman-Hellmann/scalar-LSZ harness certificate now shows the
+  production harness can emit both required observables in one run:
+  `dE_top/ds` from symmetric source shifts and same-source `C_ss(q)` /
+  `Gamma_ss(q)` for `kappa_s`.  This defines the exact production measurement
+  bundle; it remains bounded support until production data and a controlled
+  scalar-pole/canonical-LSZ normalization exist.
 
 The scientific result is narrower than closure:
 
@@ -241,5 +247,5 @@ Acceptance target for the next scalar-response block:
 
 The protocol block completed item 1.  The same-source two-point block reduces
 item 2 to the controlled-pole/residue theorem, and the harness extension makes
-that measurement executable on future production ensembles.  Items 2 and 3
-remain active.
+that measurement executable on future production ensembles.  The joint harness
+block verifies the combined command path.  Items 2 and 3 remain active.

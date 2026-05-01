@@ -153,6 +153,10 @@ Completed in block 1:
 - `outputs/yt_direct_lattice_correlator_scalar_two_point_lsz_smoke_2026-05-01.json`
 - `outputs/yt_scalar_two_point_harness_certificate_2026-05-01.json`
 - `docs/YT_SCALAR_TWO_POINT_HARNESS_EXTENSION_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_fh_lsz_joint_harness_certificate.py`
+- `outputs/yt_direct_lattice_correlator_fh_lsz_joint_smoke_2026-05-01.json`
+- `outputs/yt_fh_lsz_joint_harness_certificate_2026-05-01.json`
+- `docs/YT_FH_LSZ_JOINT_HARNESS_CERTIFICATE_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -183,7 +187,9 @@ Next artifact:
   Bethe-Salpeter pole do not fix the pole derivative or `kappa_s` at `N_c=3`;
   the production harness now has a stochastic same-source scalar two-point
   estimator, but the smoke output is reduced-scope support rather than pole
-  or LSZ closure evidence
+  or LSZ closure evidence; the joint harness path now emits both `dE/ds` and
+  `C_ss(q)` in one reduced certificate, defining the production measurement
+  bundle while leaving production evidence and `kappa_s` open
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

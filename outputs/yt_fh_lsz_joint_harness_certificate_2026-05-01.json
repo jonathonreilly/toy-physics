@@ -1,0 +1,234 @@
+{
+  "actual_current_surface_status": "bounded-support / joint Feynman-Hellmann scalar-LSZ harness",
+  "exact_next_action": [
+    "run the joint harness on production saved gauge ensembles with common random/source control",
+    "fit correlated dE_top/ds from symmetric source shifts",
+    "fit Gamma_ss(q) across enough momentum points to isolate the scalar pole",
+    "compute dGamma_ss/dp^2 at that pole and derive kappa_s by canonical-Higgs LSZ normalization",
+    "only then convert dE_top/ds to physical dE_top/dh"
+  ],
+  "fail_count": 0,
+  "input_certificate": "outputs/yt_direct_lattice_correlator_fh_lsz_joint_smoke_2026-05-01.json",
+  "joint_analysis_summaries": [
+    {
+      "scalar_source_response_analysis": {
+        "base_bare_mass_lat": 0.75,
+        "energy_fits": [
+          {
+            "chi2_dof": 1025324416498.0831,
+            "correlator": [
+              {
+                "mean": 0.3833695240848314,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.06544303495937029,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.007112561749502095,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 0.009233670758312577,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 0.007112561749502095,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 0.06544303495937029,
+                "stderr": 0.0,
+                "tau": 5
+              }
+            ],
+            "effective_bare_mass_lat": 0.73,
+            "energy_lat": 0.9791617004405158,
+            "energy_lat_err": 7.071067811865466e-07,
+            "source_shift_lat": -0.02,
+            "tau_max": 3,
+            "tau_min": 1
+          },
+          {
+            "chi2_dof": 994605706579.5288,
+            "correlator": [
+              {
+                "mean": 0.3790476156473251,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.0628415955018212,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.0067682919520219145,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 0.008387600547057636,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 0.0067682919520219145,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 0.0628415955018212,
+                "stderr": 0.0,
+                "tau": 5
+              }
+            ],
+            "effective_bare_mass_lat": 0.75,
+            "energy_lat": 1.0069313565102522,
+            "energy_lat_err": 7.071067811865466e-07,
+            "source_shift_lat": 0.0,
+            "tau_max": 3,
+            "tau_min": 1
+          },
+          {
+            "chi2_dof": 965731192939.8151,
+            "correlator": [
+              {
+                "mean": 0.3746594446349116,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.06035222458178626,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.0064368531784570375,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 0.007621971704840614,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 0.0064368531784570375,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 0.06035222458178626,
+                "stderr": 0.0,
+                "tau": 5
+              }
+            ],
+            "effective_bare_mass_lat": 0.77,
+            "energy_lat": 1.0345813590295947,
+            "energy_lat_err": 7.071067811865466e-07,
+            "source_shift_lat": 0.02,
+            "tau_max": 3,
+            "tau_min": 1
+          }
+        ],
+        "fit_kind": "linear_dE_ds",
+        "physical_higgs_normalization": "not_derived",
+        "slope_dE_ds_lat": 1.3854914647269727,
+        "slope_dE_ds_lat_err": 3.535533905932738e-05,
+        "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
+        "strict_limit": "dE/ds is not dE/dh until kappa_s is derived by scalar LSZ/canonical normalization"
+      },
+      "scalar_two_point_lsz_analysis": {
+        "estimator": "Z2 stochastic trace estimator; production evidence requires saved ensembles and controlled statistics",
+        "finite_difference_residue_proxy": {
+          "available": true,
+          "dGamma_dp_hat_sq": -4.9724486747869365,
+          "finite_residue_proxy": 0.2011081592597532,
+          "reference_modes": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        "measurement_object": "C_ss(q)=Tr[S V_q S V_-q], Gamma_ss(q)=1/C_ss(q)",
+        "mode_rows": {
+          "0,0,0": {
+            "C_ss_imag": 0.02030889976660573,
+            "C_ss_imag_config_stderr": 0.0,
+            "C_ss_real": -0.14224059910643777,
+            "C_ss_real_config_stderr": 0.0,
+            "Gamma_ss_imag": -0.9837276682051356,
+            "Gamma_ss_real": -6.889886428666129,
+            "configuration_count": 1,
+            "momentum_mode": [
+              0,
+              0,
+              0
+            ],
+            "p_hat_sq": 0.0
+          },
+          "1,0,0": {
+            "C_ss_imag": 0.016890483169199333,
+            "C_ss_imag_config_stderr": 0.0,
+            "C_ss_real": -0.03843342054076931,
+            "C_ss_real_config_stderr": 0.0,
+            "Gamma_ss_imag": -9.583708333322761,
+            "Gamma_ss_real": -21.807232453026938,
+            "configuration_count": 1,
+            "momentum_mode": [
+              1,
+              0,
+              0
+            ],
+            "p_hat_sq": 2.9999999999999996
+          }
+        },
+        "physical_higgs_normalization": "not_derived",
+        "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
+        "strict_limit": "finite-mode stochastic C_ss(q) is not kappa_s until an isolated pole, dGamma/dp^2 at the pole, and canonical Higgs normalization are derived"
+      },
+      "selected_mass_parameter": 0.75,
+      "volume": "3^3x6"
+    }
+  ],
+  "pass_count": 10,
+  "phase": "reduced_scope",
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Joint observable plumbing is present, but kappa_s and production pole/response evidence remain open.",
+  "scalar_source_response_metadata": {
+    "enabled": true,
+    "physical_higgs_normalization": "not_derived",
+    "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
+    "used_as_physical_yukawa_readout": false
+  },
+  "scalar_two_point_lsz_metadata": {
+    "enabled": true,
+    "measurement_object": "C_ss(q)=Tr[S V_q S V_-q] for the same additive scalar source",
+    "noise_vectors_per_configuration": 2,
+    "physical_higgs_normalization": "not_derived",
+    "used_as_physical_yukawa_readout": false
+  },
+  "strict_non_claims": [
+    "not production evidence",
+    "not retained or proposed_retained y_t closure",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t",
+    "does not set kappa_s, c2, or Z_match to one"
+  ],
+  "verdict": "The production harness can now emit the paired physical-response observables needed for the kappa_s route: dE_top/ds from symmetric source shifts and same-source C_ss(q)/Gamma_ss(q) for scalar LSZ normalization.  This defines the exact production measurement bundle.  It is not retained closure because the run is reduced scope and the physical conversion still requires production data, controlled scalar-pole isolation, dGamma/dp^2 at the pole, and canonical Higgs normalization."
+}

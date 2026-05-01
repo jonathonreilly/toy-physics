@@ -85,3 +85,17 @@ Adds a scalar two-point production-harness extension:
   retained closure; production data, controlled pole/IR limits, and canonical
   Higgs normalization remain open.
 ```
+
+Latest joint FH/LSZ harness checkpoint text for PR #230:
+
+```text
+Adds a joint Feynman-Hellmann / scalar-LSZ harness certificate:
+- one reduced smoke run now emits both `dE_top/ds` and same-source
+  `C_ss(q)`/`Gamma_ss(q)`;
+- validator passes `PASS=10 FAIL=0`; campaign status now consumes 38 route
+  certificates and reports `PASS=34 FAIL=0`;
+- this defines the exact production observable bundle for the physical-response
+  route;
+- still no retained closure: production statistics, controlled scalar-pole
+  isolation, `dGamma/dp^2`, and canonical-Higgs `kappa_s` remain open.
+```

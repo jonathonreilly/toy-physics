@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-33-scalar-two-point-production-harness
-blocks_completed: 47
-active_route: "Feynman-Hellmann / same-source scalar two-point production measurement"
-active_hard_residual: "production harness can estimate C_ss(q), but kappa_s still needs production pole isolation, dGamma/dp^2, finite-volume/IR control, and canonical-Higgs normalization"
+current_phase: campaign-rerun-block-34-joint-fh-lsz-harness
+blocks_completed: 48
+active_route: "joint Feynman-Hellmann / scalar-LSZ production measurement bundle"
+active_hard_residual: "joint dE/ds and C_ss(q) observables are executable, but production data plus controlled scalar pole, dGamma/dp^2, finite-volume/IR control, and canonical-Higgs kappa_s remain open"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -170,6 +170,10 @@ files_touched:
   - "docs/YT_SCALAR_TWO_POINT_HARNESS_EXTENSION_NOTE_2026-05-01.md"
   - "outputs/yt_direct_lattice_correlator_scalar_two_point_lsz_smoke_2026-05-01.json"
   - "outputs/yt_scalar_two_point_harness_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_fh_lsz_joint_harness_certificate.py"
+  - "docs/YT_FH_LSZ_JOINT_HARNESS_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_direct_lattice_correlator_fh_lsz_joint_smoke_2026-05-01.json"
+  - "outputs/yt_fh_lsz_joint_harness_certificate_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -238,6 +242,7 @@ claim_state_movement:
   - "computed the same-source scalar two-point object C_ss(q)=Tr[S V_q S V_-q] and inverse curvature Gamma_ss(q) on a tiny exact cold lattice; the measurement object is identified but no controlled pole/continuum LSZ normalization is derived"
   - "proved finite same-source Euclidean samples plus a granted scalar pole do not fix the Bethe-Salpeter inverse-propagator derivative; natural 1/Nc^2 denominator remainders at Nc=3 move the kappa_s proxy without changing the finite samples"
   - "extended the production harness with a Z2 stochastic same-source scalar two-point estimator for C_ss(q)=Tr[S V_q S V_-q]; this makes the kappa_s LSZ measurement production-facing but remains bounded support until production pole/residue/canonical-normalization control exists"
+  - "validated the joint Feynman-Hellmann/scalar-LSZ harness path: one reduced smoke emits dE_top/ds and same-source C_ss(q)/Gamma_ss(q), defining the exact production measurement bundle while leaving kappa_s and production pole control open"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null

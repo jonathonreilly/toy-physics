@@ -530,6 +530,19 @@ the Feynman-Hellmann/LSZ route, but the reduced smoke certificate is not
 production evidence and does not derive a scalar pole, `dGamma/dp^2` at the
 pole, or canonical Higgs normalization.  `kappa_s = 1` remains forbidden.
 
+Joint Feynman-Hellmann / scalar-LSZ harness support is bounded:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_joint_harness_certificate.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+The harness can emit `dE_top/ds` and same-source `C_ss(q)`/`Gamma_ss(q)` in the
+same reduced run.  This defines the exact production measurement bundle, but
+the smoke output is not production evidence and cannot convert `dE/ds` to
+`dE/dh` without `kappa_s` from a controlled scalar pole and canonical LSZ
+normalization.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

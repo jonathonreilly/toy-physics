@@ -76,7 +76,9 @@ probability.
    Bethe-Salpeter interpolation cannot supply that residue by itself.  The
    production harness now has a stochastic `C_ss(q)` estimator, so the next
    positive move is a production joint `dE/ds` plus `C_ss(q)` run and a
-   controlled pole/residue fit, not another reduced smoke sample.
+   controlled pole/residue fit, not another reduced smoke sample.  The joint
+   harness smoke verifies this combined command path; remaining work is
+   production data and the scalar pole/canonical normalization theorem.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the

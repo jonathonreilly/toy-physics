@@ -818,3 +818,30 @@ The harness extension turns the same-source scalar two-point object into a
 production-facing stochastic estimator.  It remains bounded support because
 the smoke run is reduced-scope and does not supply a controlled pole,
 finite-volume/IR limit, or canonical Higgs normalization.
+
+## Review-Loop Backpressure — Joint Feynman-Hellmann / Scalar-LSZ Harness
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/yt_direct_lattice_correlator_production.py scripts/frontier_yt_fh_lsz_joint_harness_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/yt_direct_lattice_correlator_production.py --volumes 3x6 --masses 0.75 --therm 0 --measurements 1 --separation 0 --ape-steps 0 --engine python --scalar-source-shifts=-0.02,0.0,0.02 --scalar-two-point-modes '0,0,0;1,0,0' --scalar-two-point-noises 2 --output outputs/yt_direct_lattice_correlator_fh_lsz_joint_smoke_2026-05-01.json
+python3 scripts/frontier_yt_fh_lsz_joint_harness_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The joint harness certificate proves the observable bundle can be emitted in a
+single run.  It is not closure: the reduced smoke output supplies neither
+production statistics nor the scalar pole/canonical-LSZ theorem needed to
+derive `kappa_s`.
