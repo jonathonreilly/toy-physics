@@ -1,7 +1,8 @@
 # Direct Wilson-Loop `alpha_s(M_Z)` Derivation Gate
 
 **Date:** 2026-04-30
-**Status:** proposed_retained measurement route, pending production Wilson-loop data and audit
+**Status:** proposed_retained measurement route; production certificate
+complete, strict runner passing, pending audit ratification
 **Primary runner:** `scripts/frontier_alpha_s_direct_wilson_loop.py`
 
 ## Theorem Statement
@@ -18,10 +19,9 @@ to `M_Z` should give
 alpha_s(M_Z) = 0.1181 +/- total_direct_Wilson_loop_uncertainty.
 ```
 
-This note does not yet claim that the candidate theorem has landed.  The
-strict runner currently requires a production Wilson-loop/static-potential
-certificate and fails if that certificate is absent.  That failure is the
-correct audit behavior until the measurement exists.
+This note records a strict-passing production certificate for the direct
+Wilson-loop/static-potential route.  It remains `proposed_retained`: the audit
+ledger, not this note, decides whether the theorem is ratified.
 
 The current comparator is the PDG 2025 world average
 `alpha_s(M_Z) = 0.1180 +/- 0.0009`; PDG also reports a restricted combination
@@ -112,10 +112,93 @@ and `alpha_bare_over_u0_squared`.
 
 ## Numerical Result And Uncertainty Budget
 
-No retained direct Wilson-loop numerical result is currently present in this
-branch.  The strict gate is therefore blocked, not promoted.
+The 2026-05-01 replacement production run uses unsmeared rectangular Wilson
+loops on three already-thermalized `beta = 6`, `g_bare = 1` Wilson ensembles.
+An APE-smeared pilot was rejected because its `R >= 2` long-`T` tails were
+less stable in this backend; the retained certificate therefore uses raw
+Wilson loops, which are the direct static-potential observable.
 
-## Phase 2 Production Attempt: Blocked, No Certificate
+Certificate:
+
+```text
+outputs/alpha_s_direct_wilson_loop_certificate_2026-04-30.json
+```
+
+Strict runner result:
+
+```text
+PASS=18  FAIL=0
+```
+
+Direct result:
+
+```text
+alpha_s(M_Z) = 0.1179962733 +/- 0.0067923686
+```
+
+This is inside the runner's one-PDG-sigma central-value window around
+`0.1180 +/- 0.0009`, but the direct uncertainty is still dominated by
+fixed-substrate scale-setting residuals.  No pre-audit retained status is
+claimed.
+
+Production inputs used by the certificate:
+
+| Volume | Saved Wilson-loop configurations | Measurement cadence | Notes |
+|---|---:|---:|---|
+| `12^3 x 24` | 500 | separation 6, 4 overrelaxation sweeps / heat-bath sweep | unsmeared `R <= 4`, `T <= 6` |
+| `16^3 x 32` | 500 | separation 6, 4 overrelaxation sweeps / heat-bath sweep | unsmeared `R <= 4`, `T <= 6` |
+| `24^3 x 48` | 500 | separation 1, 4 overrelaxation sweeps / heat-bath sweep | unsmeared `R <= 4`, `T <= 6` |
+
+The certificate builder uses blocked jackknife errors with block size `11`
+for the saved Wilson-loop configurations.
+
+Per-volume static-potential plateaus:
+
+| Volume | `V(1)` | `V(2)` | `V(3)` | `V(4)` | Plateau passes |
+|---|---:|---:|---:|---:|---:|
+| `12^3 x 24` | 0.413395 | 0.609563 | 0.713650 | 0.781118 | 4/4 |
+| `16^3 x 32` | 0.413410 | 0.609443 | 0.714788 | 0.793395 | 4/4 |
+| `24^3 x 48` | 0.412744 | 0.607600 | 0.711605 | 0.793594 | 4/4 |
+
+The scale setting uses a fixed-`g_bare` global Sommer fit with volume-specific
+additive constants and common Cornell `sigma` and Coulomb coefficient:
+
+| Quantity | Value |
+|---|---:|
+| global `r0/a` | 5.0056762542 |
+| global `a` from `r0 = 0.5 fm` | 0.0998866036 fm |
+| Cornell `sigma` | 0.0544856367 |
+| Cornell Coulomb coefficient `e` | 0.2847645839 |
+
+Per-volume independent `r0/a` values are kept as diagnostics and feed the
+finite-spacing/fixed-substrate residual:
+
+```text
+12^3 x 24: 5.3255995278
+16^3 x 32: 4.9090949907
+24^3 x 48: 4.8293276704
+```
+
+The running analysis excludes on-axis `R/a < 2` points as cutoff-dominated
+diagnostics and averages the global Cornell force-scheme values over
+`R/a in [2.0, 3.5]` before applying the four-loop `N_f = 5` bridge to `M_Z`.
+
+Uncertainty budget:
+
+| Component | Value |
+|---|---:|
+| Statistical / scaling-window stderr | 0.0009356182 |
+| Finite volume | 0.0005000000 |
+| Finite spacing / fixed-substrate residual | 0.0062624069 |
+| Scale setting | 0.0023599255 |
+| Running bridge | 0.0004731818 |
+| Total | 0.0067923686 |
+
+The existing `alpha_LM/u_0` route gives `0.1181` and is recorded only as a
+consistency diagnostic.  The direct result differs from that value by
+`0.0001037267`.
+
+## Phase 2 Production Infrastructure
 
 On 2026-04-30, Phase 2 was scoped against the existing framework MC
 infrastructure.  The repository currently has small-volume pure-gauge
@@ -228,8 +311,7 @@ valid-production estimate is:
 The production run must still recompute autocorrelation and use blocked
 jackknife/bootstrap on the actual saved ensembles.
 
-The production evidence therefore remains absent.  The branch records the
-blocker in:
+The earlier production-planning blocker is recorded in:
 
 ```text
 outputs/alpha_s_wilson_loop_production/PHASE2_BLOCKER_REPORT_2026-04-30.md
@@ -237,9 +319,11 @@ outputs/alpha_s_wilson_loop_production/phase2_blocker_report_2026-04-30.json
 outputs/alpha_s_wilson_loop_production/COMPILED_MC_NUMBA_BENCHMARK_REPORT_2026-04-30.md
 ```
 
-No production certificate was generated, no direct `alpha_s(M_Z)` value is
-claimed, and the strict runner must continue to fail until real production
-Wilson-loop/static-potential data exist.
+The first APE-smeared production certificate existed but failed the strict
+static-potential and running-coupling checks: its long-`T` tails for `R > 1`
+were too noisy and produced `SUMMARY: PASS=8 FAIL=6`.  That failed certificate
+was not promoted.  The current certificate replaces it with the unsmeared
+Wilson-loop production data summarized above and passes strict mode.
 
 Required uncertainty budget for a future passing certificate:
 
@@ -304,17 +388,18 @@ python3 scripts/frontier_alpha_s_direct_wilson_loop.py
 Expected current outcome:
 
 ```text
-STRICT GATE BLOCKED
-missing production Wilson-loop/static-potential certificate
+SUMMARY: PASS=18  FAIL=0
+Strict gate passed: direct Wilson-loop alpha_s route is ready for audit.
 ```
 
-This is intentional.  A passing result requires production data at:
+The passing result uses the certificate at:
 
 ```text
 outputs/alpha_s_direct_wilson_loop_certificate_2026-04-30.json
 ```
 
-or a supplied `--certificate` path with the same schema.
+or a supplied `--certificate` path with the same schema whose static-potential,
+Sommer-scale, running-coupling, and final `alpha_s(M_Z)` checks pass.
 
 For infrastructure smoke only, run:
 
@@ -327,15 +412,15 @@ Wilson-loop values on multiple volumes.  It is useful for checking that the
 local Monte Carlo machinery runs, but it is not a static-potential production
 measurement and cannot certify `alpha_s(M_Z)`.
 
-## Claim Boundary Until Data Exist
+## Claim Boundary Pending Audit
 
 Safe current claim:
 
-The framework now has an audit-visible direct Wilson-loop alpha_s retention
-gate that blocks the known `alpha_LM/u_0` decoration route from serving as
-authority.
+The framework now has an audit-visible direct Wilson-loop alpha_s production
+certificate and strict gate passing without using the known `alpha_LM/u_0`
+decoration route as authority.
 
 Unsafe current claim:
 
-That `alpha_s(M_Z) = 0.1181` has already been directly measured from
-framework Wilson loops at retained grade.
+That the theorem is retained.  The current status is `proposed_retained`;
+audit ratification is still required.

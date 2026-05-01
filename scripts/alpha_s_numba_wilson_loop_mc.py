@@ -483,6 +483,28 @@ def ape_smear_spatial(u: np.ndarray, fwd: np.ndarray, bwd: np.ndarray, alpha: fl
     return smeared
 
 
+@njit(cache=True, parallel=True)
+def ape_smear_spatial_parallel(
+    u: np.ndarray,
+    fwd: np.ndarray,
+    bwd: np.ndarray,
+    alpha: float,
+    steps: int,
+) -> np.ndarray:
+    smeared = u.copy()
+    vol = u.shape[0]
+    for _ in range(steps):
+        nxt = smeared.copy()
+        for item in prange(vol * 3):
+            site = item // 3
+            mu = item - 3 * site
+            staple = spatial_staple_sum(smeared, fwd, bwd, site, mu)
+            candidate = (1.0 - alpha) * smeared[site, mu] + (alpha / 4.0) * staple
+            nxt[site, mu] = project_su3_rows(candidate)
+        smeared = nxt
+    return smeared
+
+
 @njit(cache=True)
 def wilson_loop_at(
     u: np.ndarray,
@@ -605,6 +627,37 @@ def measure_wilson_loops_parallel(
     return out
 
 
+@njit(cache=True, parallel=True)
+def measure_wilson_loops_subsample_parallel(
+    u: np.ndarray,
+    fwd: np.ndarray,
+    bwd: np.ndarray,
+    max_r: int,
+    max_t: int,
+    origin_stride: int,
+    origin_offset: int,
+) -> np.ndarray:
+    out = np.zeros((max_r, max_t), dtype=np.float64)
+    vol = u.shape[0]
+    stride = max(1, origin_stride)
+    offset = origin_offset % stride
+    if offset >= vol:
+        offset = 0
+    n_origins = (vol - 1 - offset) // stride + 1
+    time_dir = 3
+    n_paths = n_origins * 3
+    for r in range(1, max_r + 1):
+        for t_extent in range(1, max_t + 1):
+            total = 0.0
+            for path in prange(n_paths):
+                origin_index = path // 3
+                site = offset + origin_index * stride
+                spatial_dir = path - 3 * origin_index
+                total += wilson_loop_at_fast(u, fwd, bwd, site, r, t_extent, spatial_dir, time_dir)
+            out[r - 1, t_extent - 1] = total / n_paths
+    return out
+
+
 def warm_up_numba() -> None:
     dims = (2, 2, 2, 4)
     fwd, bwd, parity = build_neighbors(dims)
@@ -615,6 +668,9 @@ def warm_up_numba() -> None:
     _ = plaquette(u, fwd)
     us = ape_smear_spatial(u, fwd, bwd, 0.5, 1)
     _ = measure_wilson_loops(us, fwd, bwd, 1, 1)
+    usp = ape_smear_spatial_parallel(u, fwd, bwd, 0.5, 1)
+    _ = measure_wilson_loops_parallel(usp, fwd, bwd, 1, 1)
+    _ = measure_wilson_loops_subsample_parallel(usp, fwd, bwd, 1, 1, 2, 0)
     _ = measure_wilson_loops_parallel(us, fwd, bwd, 1, 1)
 
 
@@ -783,18 +839,19 @@ def run_ensemble(args: argparse.Namespace) -> dict[str, Any]:
     loops = []
     therm_done = False
     completed_measurements = 0
-    if args.resume_checkpoint and args.checkpoint_npz.exists():
-        chk = np.load(args.checkpoint_npz, allow_pickle=False)
+    resume_path = args.resume_source_npz if args.resume_source_npz is not None else args.checkpoint_npz
+    if args.resume_checkpoint and resume_path.exists():
+        chk = np.load(resume_path, allow_pickle=False)
         saved_dims = tuple(int(x) for x in chk["dims"].tolist())
         if saved_dims != dims:
             raise ValueError(f"checkpoint dims {saved_dims} do not match requested dims {dims}")
         u = chk["u"]
         therm_done = bool(chk["therm_done"])
-        if "loops" in chk:
+        if "loops" in chk and not args.resume_ignore_loops:
             loop_array = chk["loops"]
             loops = [loop_array[i].copy() for i in range(loop_array.shape[0])]
             completed_measurements = len(loops)
-        print(f"Resumed checkpoint {args.checkpoint_npz}: therm_done={therm_done}, completed={completed_measurements}")
+        print(f"Resumed checkpoint {resume_path}: therm_done={therm_done}, completed={completed_measurements}")
     else:
         u = cold_links(dims)
     seed_numba_rng(args.seed)
@@ -815,15 +872,38 @@ def run_ensemble(args: argparse.Namespace) -> dict[str, Any]:
         therm_done = True
         write_checkpoint(args.checkpoint_npz, dims, u, np.asarray(loops, dtype=np.float64), therm_done)
 
+    if args.branch_decorrelation > 0:
+        for sweep in range(args.branch_decorrelation):
+            if args.serial:
+                sweep_heatbath_overrelax(u, fwd, bwd, parity, BETA, args.overrelax)
+            else:
+                sweep_heatbath_overrelax_parallel(u, fwd, bwd, parity, BETA, args.overrelax)
+            if (sweep + 1) % max(1, args.progress_interval) == 0:
+                print(f"  branch {sweep + 1}/{args.branch_decorrelation}: plaquette={plaquette(u, fwd):.6f}")
+        write_checkpoint(args.checkpoint_npz, dims, u, np.asarray(loops, dtype=np.float64), therm_done)
+
     for cfg in range(completed_measurements, args.measurements):
         for _ in range(args.separation):
             if args.serial:
                 sweep_heatbath_overrelax(u, fwd, bwd, parity, BETA, args.overrelax)
             else:
                 sweep_heatbath_overrelax_parallel(u, fwd, bwd, parity, BETA, args.overrelax)
-        measured_u = ape_smear_spatial(u, fwd, bwd, args.ape_alpha, args.ape_steps)
+        if args.serial:
+            measured_u = ape_smear_spatial(u, fwd, bwd, args.ape_alpha, args.ape_steps)
+        else:
+            measured_u = ape_smear_spatial_parallel(u, fwd, bwd, args.ape_alpha, args.ape_steps)
         if args.serial:
             wl = measure_wilson_loops(measured_u, fwd, bwd, args.max_r, args.max_t)
+        elif args.origin_stride > 1:
+            wl = measure_wilson_loops_subsample_parallel(
+                measured_u,
+                fwd,
+                bwd,
+                args.max_r,
+                args.max_t,
+                args.origin_stride,
+                cfg,
+            )
         else:
             wl = measure_wilson_loops_parallel(measured_u, fwd, bwd, args.max_r, args.max_t)
         loops.append(wl)
@@ -844,6 +924,18 @@ def run_ensemble(args: argparse.Namespace) -> dict[str, Any]:
             "uses_plaquette_as_running_coupling_input": False,
             "update_algorithm": "numba_compiled_cabibbo_marinari_heatbath_plus_su2_subgroup_overrelaxation",
             "ape_smearing": {"steps": args.ape_steps, "alpha": args.ape_alpha},
+            "origin_sampling": {
+                "method": "stratified_translational_origin_subsample"
+                if args.origin_stride > 1
+                else "full_translational_average",
+                "stride": args.origin_stride,
+            },
+            "replica": {
+                "id": args.replica_id,
+                "resume_source_checkpoint": str(resume_path) if args.resume_checkpoint else None,
+                "resume_ignore_loops": args.resume_ignore_loops,
+                "branch_decorrelation_sweeps": args.branch_decorrelation,
+            },
         },
         "dims": list(dims),
         "beta": BETA,
@@ -973,7 +1065,7 @@ def run_autocorr_pilot(args: argparse.Namespace) -> dict[str, Any]:
             continue
         p = float(plaquette(u, fwd))
         series["plaquette"].append(p)
-        measured_u = ape_smear_spatial(u, fwd, bwd, args.ape_alpha, args.ape_steps)
+        measured_u = ape_smear_spatial_parallel(u, fwd, bwd, args.ape_alpha, args.ape_steps)
         wl = measure_wilson_loops_parallel(measured_u, fwd, bwd, args.max_r, args.max_t)
         for r, t_extent in loop_keys:
             key = f"W{r}{t_extent}"
@@ -1100,6 +1192,12 @@ def parse_args() -> argparse.Namespace:
     ens.add_argument("--ape-alpha", type=float, default=0.5)
     ens.add_argument("--max-r", type=int, default=8)
     ens.add_argument("--max-t", type=int, default=8)
+    ens.add_argument(
+        "--origin-stride",
+        type=int,
+        default=1,
+        help="Use every nth translational origin per configuration; offsets cycle by configuration.",
+    )
     ens.add_argument("--r0-anchor-fm", type=float, default=0.5)
     ens.add_argument("--progress-interval", type=int, default=10)
     ens.add_argument("--seed", type=int, default=20260430)
@@ -1107,6 +1205,10 @@ def parse_args() -> argparse.Namespace:
     ens.add_argument("--checkpoint-npz", type=Path, default=OUTPUT_DIR / "ensemble_checkpoint.npz")
     ens.add_argument("--checkpoint-every", type=int, default=10)
     ens.add_argument("--resume-checkpoint", action="store_true")
+    ens.add_argument("--resume-source-npz", type=Path, default=None)
+    ens.add_argument("--resume-ignore-loops", action="store_true")
+    ens.add_argument("--branch-decorrelation", type=int, default=0)
+    ens.add_argument("--replica-id", default="primary")
 
     auto = sub.add_parser("autotune", help="Benchmark thread counts for one volume/update setting.")
     auto.add_argument("--dims", type=parse_dims, required=True)

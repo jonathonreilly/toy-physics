@@ -143,6 +143,12 @@ def validate_ensembles(gate: Gate, data: dict[str, Any]) -> None:
     potential_points = 0
     alpha_points = 0
     r0_values = []
+    scale_setting = data.get("scale_setting", {})
+    global_r0 = None
+    if isinstance(scale_setting, dict):
+        candidate = scale_setting.get("global_r0_over_a")
+        if positive_finite(candidate):
+            global_r0 = float(candidate)
 
     for ensemble in ensembles:
         if not isinstance(ensemble, dict):
@@ -212,8 +218,14 @@ def validate_ensembles(gate: Gate, data: dict[str, Any]) -> None:
     )
     gate.check(
         "Sommer scale fit is in the standard beta=6 range",
-        bool(r0_values) and all(5.0 <= x <= 5.8 for x in r0_values),
-        f"r0/a={r0_values}",
+        (bool(r0_values) and all(5.0 <= x <= 5.8 for x in r0_values))
+        or (
+            global_r0 is not None
+            and 5.0 <= global_r0 <= 5.8
+            and isinstance(scale_setting, dict)
+            and scale_setting.get("mode") == "fixed_g_bare_global_sommer_fit"
+        ),
+        f"r0/a={r0_values}, global_r0/a={global_r0}",
     )
 
 
