@@ -3,9 +3,9 @@
     "critical": 13,
     "high": 195,
     "leaf": 212,
-    "medium": 147
+    "medium": 146
   },
-  "generated_at": "2026-05-01T16:33:40.331912+00:00",
+  "generated_at": "2026-05-01T16:36:34.791798+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6575,23 +6575,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_substrate_to_p_a_forcing.py",
       "transitive_descendants": 48
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "electrostatics_grown_sign_law_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.67,
-      "note_path": "docs/ELECTROSTATICS_GROWN_SIGN_LAW_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/ELECTROSTATICS_GROWN_SIGN_LAW.py",
-      "transitive_descendants": 35
     },
     {
       "audit_independence_required": "any_non_self",
@@ -14365,6 +14348,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 161,
-  "total_pending": 567
+  "ready_count": 160,
+  "total_pending": 566
 }

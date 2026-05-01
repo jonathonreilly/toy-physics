@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T16:33:40.560487+00:00
+**Generated:** 2026-05-01T16:36:35.023253+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 294 |
+| `audited_clean` | 295 |
 | `audited_conditional` | 593 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 567 |
+| `unaudited` | 566 |
 
 | criticality | count |
 |---|---:|
@@ -192,6 +192,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `eigenvalue_anderson_phase_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `electric_sign_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `electrostatics_card_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `electrostatics_grown_sign_law_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `electrostatics_superposition_proxy_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `emergent_product_law_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `equivalence_principle_harness_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -5758,6 +5759,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** True — The frozen log is present and the live named runner reproduces the note's numerical surface exactly to the printed precision for all five target observables. The closure is only for the finite scalar electrostatic-like card, with Maxwell, gauge, magnetic, and radiation claims explicitly excluded.
 - **rationale:** The source note makes a bounded scalar sign-law claim and keeps the physical scope explicit: it does not assert a vector field, Maxwell equations, magnetic effects, or radiation. The live runner recomputes the stated ordered-lattice card and matches the frozen result: like/unlike signs are antisymmetric, the same-node +1/-1 source cancels to zero, the dipole orientation reverses the response sign, the fitted charge exponent is 1.000, and the screening ratio is 0.018. Residual risk is only the stated finite-probe scope, not a break in the presented chain.
 - **auditor confidence:** high
+
+### `electrostatics_grown_sign_law_note`
+
+- **Note:** [`ELECTROSTATICS_GROWN_SIGN_LAW_NOTE.md`](../../docs/ELECTROSTATICS_GROWN_SIGN_LAW_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The same sign-coupled propagator still supports like/unlike sign response on the retained grown row, with same-point neutral cancellation and approximately linear response in source charge.  _(class `C`)_
+- **chain closes:** True — For the bounded fixed-row claim, the registered runner constructs the drift=0.2, restore=0.7 grown geometry, computes the listed source cases, and reproduces the frozen signs, neutral cancellation, and +1/+2 charge exponent. The note explicitly excludes full electromagnetism, Maxwell/radiation, and geometry-generic scope, so the audited-clean result is only for this narrow numerical companion.
+- **rationale:** The load-bearing bounded statement closes because the current registered runner deterministically recomputes the fixed grown-row source cases: single +1 is AWAY, single -1 is TOWARD, same-point +1/-1 cancels to printed zero, the dipole partially cancels, and +2 has charge exponent 1.000 relative to +1. Residual risk is limited to audit ergonomics: the runner prints tables rather than classified PASS lines, and stale source-note boundary text still says the runner is unregistered, but the ledger now supplies the registered runner used for this audit. This clean audit does not promote the row beyond its bounded fixed-geometry claim and does not ratify full electromagnetism or a geometry-generic theorem.
+- **auditor confidence:** medium
 
 ### `electrostatics_superposition_proxy_note`
 
