@@ -1,36 +1,12 @@
 {
   "by_criticality": {
-    "critical": 10,
+    "critical": 9,
     "high": 195,
     "leaf": 212,
     "medium": 145
   },
-  "generated_at": "2026-05-01T18:21:52.983460+00:00",
+  "generated_at": "2026-05-01T18:24:06.305868+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "left_handed_charge_matching_note",
-        "hypercharge_identification_note",
-        "graph_first_su3_integration_note",
-        "native_gauge_closure_note",
-        "su2_witten_z2_anomaly_theorem_note_2026-04-24",
-        "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
-      ],
-      "direct_in_degree": 10,
-      "load_bearing_score": 13.039,
-      "note_path": "docs/LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_lh_anomaly_trace_catalog.py",
-      "transitive_descendants": 262
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -14265,5 +14241,5 @@
     }
   ],
   "ready_count": 159,
-  "total_pending": 562
+  "total_pending": 561
 }

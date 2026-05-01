@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T18:21:53.323995+00:00
+**Generated:** 2026-05-01T18:24:06.615557+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -35,12 +35,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 296 |
-| `audited_conditional` | 596 |
+| `audited_conditional` | 597 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 562 |
+| `unaudited` | 561 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 391 |
 | `leaf` | 763 |
 
-- **Proposed claims demoted by upstream:** 141
+- **Proposed claims demoted by upstream:** 140
 - **Citation cycles detected:** 61
 
 ### Runner classification (static heuristic)
@@ -797,6 +797,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lensing_finite_path_explanation_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `lepton_shared_higgs_universality_collapse_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `lepton_single_higgs_pmns_triviality_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `linear_response_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_second_order_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_true_kubo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -10108,6 +10109,23 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `One-generation matter closure`
   - `Three-generation matter structure`
   - `Neutrino Dirac monomial no-mixing theorem`
+- **auditor confidence:** high
+
+### `lh_anomaly_trace_catalog_theorem_note_2026-04-25`
+
+- **Note:** [`LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`](../../docs/LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-cbc9`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Using retained multiplicities and hypercharges for Q_L and L_L, the note computes the five traces C1-C5: Tr[Y]=0, Tr[Y^3]=-16/9, Tr[SU(3)^2Y]=1/3, Tr[SU(2)^2Y]=0, and N_D=4.  _(class `B`)_
+- **chain closes:** False — The fraction arithmetic closes after the Q_L/L_L multiplicities and hypercharges are supplied, but those values are imported from upstream rows that are currently audited_conditional or audited_renaming, and the companion SU(2)/SU(3) anomaly rows are also conditional.
+- **rationale:** Issue: the trace catalog treats the retained left-handed multiplicities and hypercharge assignments as inputs, while left_handed_charge_matching_note is audited_conditional and hypercharge_identification_note is audited_renaming; the SU(2) Witten and SU(3)^3 companion anomaly rows it cites are also conditional. Why this blocks: the runner verifies exact arithmetic on the supplied table, but it does not derive the left-handed content or hypercharge identification needed for a retained-chain theorem. Repair target: clean or replace the left-handed charge/content and hypercharge-identification inputs, then re-audit the companion anomaly rows. Claim boundary until fixed: the five rational/integer trace values are correct for the stated Q_L + L_L table, but the catalog remains conditional as framework-retained anomaly data.
+- **open / conditional deps cited:**
+  - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
+  - `HYPERCHARGE_IDENTIFICATION_NOTE.md`
+  - `SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`
+  - `SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`
 - **auditor confidence:** high
 
 ### `light_cone_framing_note`

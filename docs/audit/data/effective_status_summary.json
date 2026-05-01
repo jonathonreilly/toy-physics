@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-01T18:21:52.916413+00:00",
+  "computed_at": "2026-05-01T18:24:06.249180+00:00",
   "cycle_examples": [
     [
       "alpha_s_derived_note",
@@ -40,7 +40,7 @@
     "retained_no_go": 54,
     "support": 149
   },
-  "proposed_demoted_by_upstream_count": 141,
+  "proposed_demoted_by_upstream_count": 140,
   "proposed_demoted_by_upstream_examples": [
     "alpha_s_derived_note",
     "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
