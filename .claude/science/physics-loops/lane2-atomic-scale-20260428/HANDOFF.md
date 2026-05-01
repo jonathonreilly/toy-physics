@@ -1,6 +1,6 @@
 # Lane 2 Physics Loop Handoff
 
-**Updated:** 2026-05-01T11:47:19Z
+**Updated:** 2026-05-01T11:51:36Z
 **Loop slug:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Branch:** `physics-loop/lane2-atomic-scale-block01-20260428`  
@@ -354,15 +354,15 @@ only as a comparator; no Lane 6 charged-lepton mass work was performed.
 Artifact commit/push checkpoint:
 
 ```text
-pending commit/push
+b84f711b lane2 atomic: add massive NR kinetic bridge
+origin/physics-loop/lane2-atomic-scale-block01-20260428
 ```
 
 ## Next Exact Action
 
 The next science action for the continuing supervisor is:
 
-1. commit and push the massive NR kinetic bridge;
-2. perform endpoint packaging if checkpoint review agrees all viable
+1. perform endpoint packaging if checkpoint review agrees all viable
    non-overlapping Lane 2 routes are blocked after the deep-work/fan-out rule;
-3. otherwise continue only if a new reviewable theorem prerequisite appears
+2. otherwise continue only if a new reviewable theorem prerequisite appears
    without Lane 4/Lane 6 overlap.
