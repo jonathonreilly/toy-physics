@@ -18493,7 +18493,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T10:48:31.084531+00:00",
+  "generated_at": "2026-05-01T11:11:58.941576+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -29717,7 +29717,7 @@
       "current_status": "unknown",
       "current_status_raw": "public comparison note",
       "deps": [],
-      "note_hash": "859406731838a0cb005110ba195adf1847d21ea1bdf78f2dc2ce2fee56c8b300",
+      "note_hash": "ceff5b15fd9574cf3531f1030f8015846de7b02e97fbd575ab53639f183f3290",
       "path": "docs/LITERATURE_POSITIONING_NOTE.md",
       "runner_path": null,
       "title": "Literature Positioning Note"
@@ -31483,16 +31483,6 @@
       "path": "docs/PAPER_OUTLINE_2026-04-12.md",
       "runner_path": null,
       "title": "Paper Outline: \"Physics from Cl(3) on Z\u00b3\""
-    },
-    "paper_scope_note": {
-      "claim_id": "paper_scope_note",
-      "current_status": "support",
-      "current_status_raw": "support - structural or confirmatory support note",
-      "deps": [],
-      "note_hash": "e2e12e1874e62d25e411947671f91eace1897c31365553b9c961a269c5870083",
-      "path": "docs/PAPER_SCOPE_NOTE.md",
-      "runner_path": null,
-      "title": "Paper Scope Note"
     },
     "periodic_2d_wraparound_fix_note_2026-04-11": {
       "claim_id": "periodic_2d_wraparound_fix_note_2026-04-11",
@@ -38940,7 +38930,7 @@
         "work_history.repo.review_feedback.publication_discovery_audit_2026-04-11",
         "repo.controlled_vocabulary"
       ],
-      "note_hash": "9fa74d13617b9c57488c91d45884b47560e85620369ca98146a10d41f34d5156",
+      "note_hash": "b47f83b079e23631d431c292f4c12ea634ee5e788dd9939708e6997413b6982c",
       "path": "docs/work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md",
       "runner_path": null,
       "title": "Historical Potential Publication Discoveries Log"
@@ -39012,7 +39002,7 @@
       "current_status": "unknown",
       "current_status_raw": "repo-facing backlog note",
       "deps": [],
-      "note_hash": "b2f880b12476824b44ee3e609a79940146efe745c1078a926e38463791c5296a",
+      "note_hash": "121d8ac7faf6e83c6fd7b2e7d56685e9d4011478e32cafb04068779816a06484",
       "path": "docs/work_history/repo/backlog/REVIEW_HARDENING_BACKLOG.md",
       "runner_path": null,
       "title": "Review Hardening Backlog"
@@ -40988,7 +40978,6 @@
     "ordered_lattice_quasi_persistent_relaunch_note",
     "packet_memory_note",
     "paper_outline_2026-04-12",
-    "paper_scope_note",
     "persistent_inertial_object_probe_note",
     "persistent_inertial_response_readiness_note",
     "persistent_object_adaptive_readout_note",
@@ -41406,16 +41395,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4623,
-    "leaf_count": 721,
-    "node_count": 1662,
-    "root_count": 1180,
+    "leaf_count": 720,
+    "node_count": 1661,
+    "root_count": 1179,
     "runners_with_path": 1227,
     "status_counts": {
       "bounded": 446,
       "open": 48,
       "proposed_promoted": 1,
       "proposed_retained": 380,
-      "support": 376,
+      "support": 375,
       "unknown": 411
     }
   }

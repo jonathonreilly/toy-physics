@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T10:48:34.059891+00:00
+**Generated:** 2026-05-01T11:12:02.273602+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,29 +23,29 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | bounded | 188 |
 | support | 162 |
-| open | 7 |
+| open | 8 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 860 |
+| ~~audited_conditional~~ | 858 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 296 |
-| `audited_conditional` | 590 |
+| `audited_conditional` | 588 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 549 |
+| `unaudited` | 550 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 71 |
 | `high` | 339 |
 | `medium` | 386 |
-| `leaf` | 769 |
+| `leaf` | 768 |
 
 - **Proposed claims demoted by upstream:** 133
 - **Citation cycles detected:** 59
@@ -834,7 +834,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `one_generation_matter_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `one_parameter_reduced_shell_law_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
-| `paper_scope_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_object_exact_lattice_park_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -964,7 +963,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `work_history.gw_echo_timing_route_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `work_history.potential_publication_discoveries_log` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_bridge_endpoint_shift_bound_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_bridge_rearrangement_principle_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_bridge_variational_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -11405,21 +11403,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** The retained surface is a finite computational memory claim: at the tested NL values and packet offsets, detector overlaps remain distinguishable, packet identity changes the imposed-field deflection, and width/centroid rows reproduce the stated partial shape result. The live runner matches the frozen source numbers, and the source explicitly excludes Tier C inertial response and persistent localized-object closure. Residual risk is finite-configuration and asymptotic-scope risk only; this clean audit does not retain the unsupported NL-to-infinity extrapolation as a theorem or any claim of persistent inertial mass.
 - **auditor confidence:** high
 
-### `paper_scope_note`
-
-- **Note:** [`PAPER_SCOPE_NOTE.md`](../../docs/PAPER_SCOPE_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The recommended paper scope is a bounded same-family action-law comparison on the retained 3D ordered-lattice family, claiming valley-linear preserves Born/k=0 and improves the tested mass-law/distance-tail behavior relative to spent-delay without asserting universal gravity.  _(class `B`)_
-- **chain closes:** False — The note is conservative about what not to claim, but the positive scope recommendation imports ordered-lattice valley-linear/spent-delay artifact results without registered dependencies or a runner. In restricted context, the audit cannot verify the named Born, k=0, exponent, and distance-tail premises.
-- **rationale:** Issue: the paper-scope recommendation depends on unregistered ordered-lattice action-fork results and replay logs. Why this blocks: the row itself is editorial guidance, and without one-hop dependencies the audit cannot establish that the stated safe claim shape is backed by current retained artifacts. Repair target: register the valley-linear/spent-delay comparison, refinement replay, and negative-control notes/logs as dependencies or convert this row to a non-audited editorial index. Claim boundary until fixed: safe as conservative paper-framing advice, not as an independently audited summary of the ordered-lattice result.
-- **open / conditional deps cited:**
-  - `VALLEY_LINEAR_WIDE_TAIL_NOTE.md`
-  - `NEWTONIAN_DISTANCE_LAW_CONFIRMED.md`
-- **auditor confidence:** medium
-
 ### `persistent_inertial_object_probe_note`
 
 - **Note:** [`PERSISTENT_INERTIAL_OBJECT_PROBE_NOTE.md`](../../docs/PERSISTENT_INERTIAL_OBJECT_PROBE_NOTE.md)
@@ -14992,18 +14975,6 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **rationale:** Issue: the runner verifies the historical round-trip timing formula, not the current observable echo claim. Why this blocks: the direct dependency states that the accepted framework reading is no detectable echoes and that the old 67.66 ms timing surface is superseded by amplitude-suppression analysis. Repair target: keep this row explicitly historical or add a separate audited derivation showing nonzero reflection/amplitude survives the null-result barrier. Claim boundary until fixed: the note supports the existence of an old timing-family calculation, not a current positive GW150914 echo prediction.
 - **open / conditional deps cited:**
   - `GW_ECHO_NULL_RESULT_NOTE.md`
-- **auditor confidence:** high
-
-### `work_history.potential_publication_discoveries_log`
-
-- **Note:** [`work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](../../docs/work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
-- **current_status:** open
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-ca82-singer-fresh-2026-04-30`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The Whole-Repo Ledger lists discoveries worth preserving and says every item should point to a retained note or runner.  _(class `B`)_
-- **chain closes:** False — The ledger row has deps=[] and no runner, while the note's entries depend on many referenced evidence notes and their statuses. The inventory cannot be verified from the restricted packet.
-- **rationale:** Issue: the inventory asserts many cross-note discovery/status entries without providing those notes as audit dependencies. Why this blocks: a reviewer cannot verify that the entries satisfy the inclusion and maintenance rules from this source alone. Repair target: register the intended evidence notes as deps or split the log into auditable per-discovery claims with runners/status sources. Claim boundary until fixed: it is usable only as an open historical planning inventory, not as a ratified claim ledger.
 - **auditor confidence:** high
 
 ### `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11`
