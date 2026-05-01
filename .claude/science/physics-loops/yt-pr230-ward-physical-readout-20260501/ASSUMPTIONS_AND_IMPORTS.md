@@ -14,6 +14,8 @@
 | Observed `m_t`, observed `y_t` | comparator only | external observation | forbidden as proof input |
 | `alpha_LM` / plaquette normalization | prior quantitative bridge | audited non-clean in this lane | forbidden as load-bearing proof input |
 | Production MC data | direct-measurement route evidence | not complete | unavailable for closure |
+| Static heavy-quark additive mass | HQET direct route | not derived on current surface | open import |
+| Lattice-HQET-to-SM top mass matching | HQET direct route | not derived on current surface | open import |
 | Scalar-channel contact coupling `G` | HS/RPA pole condition | not in `A_min` | forbidden unless derived from Wilson gauge ladder |
 | Scalar-channel Bethe-Salpeter kernel | interacting pole route | not yet retained | open import after ladder scout |
 | IR / finite-volume kernel limit | needed for ladder eigenvalue crossing | not yet fixed | open import |
@@ -37,3 +39,14 @@ lambda_max[F_ps] / lambda_max[F_ps/4] = 16
 Therefore the ladder pole criterion cannot be made load-bearing until the
 scalar projector/source normalization and scalar LSZ residue are derived from
 the interacting Wilson-staggered scalar two-point function.
+
+Direct-route HQET import boundary:
+
+```text
+C_static(t) / C_static(0) = exp(-E_residual t)
+```
+
+The static rephasing removes the absolute heavy rest mass from the normalized
+correlator.  A heavy/top-integrated direct route still needs an additive-mass
+renormalization and lattice-HQET-to-SM matching theorem before it can determine
+`m_t` and `y_t`.

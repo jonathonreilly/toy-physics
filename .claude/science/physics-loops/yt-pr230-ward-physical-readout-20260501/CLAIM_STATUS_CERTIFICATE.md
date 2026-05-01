@@ -7,17 +7,18 @@ LSZ residue bridge obstruction, chirality selector support, and common dressing
 obstruction, current-surface scalar pole-residue no-go, retained-closure route
 certificate, direct-measurement scale requirements, key-blocker closure
 attempt, scalar source two-point stretch, stuck fan-out, HS/RPA pole-condition
-attempt, scalar ladder-kernel scout, scalar ladder kernel input audit, and
-scalar ladder projector-normalization obstruction
+attempt, scalar ladder-kernel scout, scalar ladder kernel input audit,
+scalar ladder projector-normalization obstruction, and HQET direct-route
+requirements
 **PR:** #230 draft branch
 
 ```yaml
 actual_current_surface_status: open / exact-support plus exact negative boundaries
-conditional_surface_status: "Tree-level normalizations meet at 1/sqrt(6) if the physical-readout bridges are repaired; scalar source curvature and scalar/gauge kinematics are exact support but still lack interacting projector, pole-residue, and common-dressing theorems."
+conditional_surface_status: "Tree-level normalizations meet at 1/sqrt(6) if the physical-readout bridges are repaired; scalar source curvature and scalar/gauge kinematics are exact support but still lack interacting projector, pole-residue, common-dressing, and heavy-mass matching theorems."
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Open imports remain: scalar projector/source normalization, scalar-channel ladder kernel/eigenvalue crossing, scalar carrier, scalar LSZ residue, chirality selector, and common dressing."
+proposal_allowed_reason: "Open imports remain: scalar projector/source normalization, scalar-channel ladder kernel/eigenvalue crossing, scalar carrier, scalar LSZ residue, chirality selector, common dressing, and HQET/static heavy-mass matching."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -30,6 +31,7 @@ Allowed wording:
 - bounded-support scalar source curvature and ladder-kernel scout;
 - exact-support input audit for reusable staggered/Wilson formulae;
 - exact negative boundary for scalar source/projector normalization shortcut;
+- route requirement / no-go for HQET as a zero-import absolute-mass shortcut;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
@@ -95,4 +97,7 @@ python3 scripts/frontier_yt_scalar_ladder_kernel_input_audit.py
 
 python3 scripts/frontier_yt_scalar_ladder_projector_normalization_obstruction.py
 # SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_hqet_direct_route_requirements.py
+# SUMMARY: PASS=7 FAIL=0
 ```

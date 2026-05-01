@@ -132,6 +132,16 @@ python3 scripts/frontier_yt_scalar_ladder_projector_normalization_obstruction.py
 # SUMMARY: PASS=6 FAIL=0
 ```
 
+The HQET/static direct route removes the numerical `am_top >> 1` cutoff by
+rephasing away the absolute heavy rest mass.  The normalized static correlator
+therefore cannot determine the absolute top mass or `y_t` without an additive
+mass and lattice-HQET-to-SM matching theorem:
+
+```text
+python3 scripts/frontier_yt_hqet_direct_route_requirements.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

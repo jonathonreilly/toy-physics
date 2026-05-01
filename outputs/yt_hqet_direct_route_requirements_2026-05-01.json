@@ -1,0 +1,106 @@
+{
+  "actual_current_surface_status": "route requirement / HQET shortcut no-go",
+  "current_scale": {
+    "a_fm": 0.0931098696461825,
+    "a_inv_GeV": 2.119291769496,
+    "am_top_physical": 81.4234276203684
+  },
+  "fail_count": 0,
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Absolute m_top is underdetermined without a heavy-mass matching theorem or external calibration.",
+  "required_for_hqet_closure": [
+    "derive or measure the static additive mass renormalization",
+    "derive lattice-HQET-to-SM top mass matching at the chosen scale",
+    "propagate matching uncertainty into y_t = sqrt(2) m_t / v",
+    "keep v as substrate input and avoid H_unit/Ward readout authority"
+  ],
+  "residual_energy_lat": 0.25,
+  "static_countermodels": [
+    {
+      "am_abs": 47.18557465250834,
+      "m_abs_GeV": 100.0,
+      "normalized_static_correlator": [
+        1.0,
+        0.7788007830714049,
+        0.6065306597126334,
+        0.4723665527410147,
+        0.36787944117144233
+      ],
+      "y_from_mass_and_v": 0.5743707142679697
+    },
+    {
+      "am_abs": 81.4234276203684,
+      "m_abs_GeV": 172.56,
+      "normalized_static_correlator": [
+        1.0,
+        0.7788007830714049,
+        0.6065306597126334,
+        0.4723665527410147,
+        0.36787944117144233
+      ],
+      "y_from_mass_and_v": 0.9911341045408086
+    },
+    {
+      "am_abs": 117.96393663127085,
+      "m_abs_GeV": 250.0,
+      "normalized_static_correlator": [
+        1.0,
+        0.7788007830714049,
+        0.6065306597126334,
+        0.4723665527410147,
+        0.36787944117144233
+      ],
+      "y_from_mass_and_v": 1.4359267856699243
+    }
+  ],
+  "strict_non_claims": [
+    "does not reject HQET as an engineering strategy",
+    "does not certify direct y_t measurement",
+    "does not use observed top mass as proof input",
+    "does not define y_t through H_unit matrix elements"
+  ],
+  "t_values": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "unsubtracted_correlator_examples": [
+    {
+      "am_abs": 47.18557465250834,
+      "m_abs_GeV": 100.0,
+      "unsubtracted_correlator": [
+        1.0,
+        2.506061257143884e-21,
+        6.280343024557583e-42,
+        1.5738924335417486e-62,
+        3.944270850610909e-83
+      ]
+    },
+    {
+      "am_abs": 81.4234276203684,
+      "m_abs_GeV": 172.56,
+      "unsubtracted_correlator": [
+        1.0,
+        3.3859540987006604e-36,
+        1.1464685158507802e-71,
+        3.881889770276157e-107,
+        1.3143900578370904e-142
+      ]
+    },
+    {
+      "am_abs": 117.96393663127085,
+      "m_abs_GeV": 250.0,
+      "unsubtracted_correlator": [
+        1.0,
+        4.5744579206583586e-52,
+        2.0925665267873994e-103,
+        9.572357522966899e-155,
+        4.3788346690310803e-206
+      ]
+    }
+  ],
+  "verdict": "A static/HQET correlator can remove the numerical am_top cutoff problem, but the same rephasing removes the absolute heavy mass from the normalized correlator.  The absolute top mass and y_t then require an independent matching/additive-mass theorem or a measured calibration.  HQET is therefore a possible production strategy, not retained closure by itself."
+}

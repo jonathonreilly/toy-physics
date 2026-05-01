@@ -58,6 +58,9 @@ Review checks performed:
 - Projector-normalization review: the same finite kernel can cross or fail the
   pole criterion under source/projector normalization changes, so the note is
   an exact negative boundary against using kinematic equality as LSZ readout.
+- HQET direct-route review: the static normalized correlator is intentionally
+  held fixed while absolute heavy masses vary; this proves an import boundary
+  for absolute `m_t`, not a rejection of HQET as an engineering method.
 
 ## Review-Loop Backpressure — Campaign Block 2
 
@@ -105,3 +108,5 @@ Open review risk:
   simply renaming the scalar source.  It needs a functional readout theorem.
 - The next scalar-ladder theorem must also derive the scalar projector/source
   normalization before using an eigenvalue crossing as physical evidence.
+- The next HQET/direct theorem must derive additive mass and matching rather
+  than calibrating the static mass to the observed top.

@@ -106,3 +106,9 @@ the cleanest empirical route but is too large for the current foreground loop
 and does not repair the Ward proof.
 
 Current status: parked as production evidence route, not PR #230 closure today.
+
+Update: the HQET/static shortcut was checked.  It can remove the numerical
+`am_top >> 1` cutoff in the correlator, but only by rephasing away the absolute
+heavy rest mass.  Absolute `m_t` and `y_t` then require static additive-mass and
+lattice-HQET-to-SM matching.  This is a production strategy, not a current
+closure route.

@@ -47,6 +47,10 @@ What changed:
   source rescaling changes `lambda_max` quadratically, and raw versus
   zero-momentum-normalized point-split projectors can flip the scout pole
   criterion.
+- The HQET/static direct-route shortcut is now bounded: it removes the
+  numerical `am_top >> 1` problem by rephasing away the absolute heavy rest
+  mass, so absolute `m_t` and `y_t` still need a static additive-mass and
+  lattice-HQET-to-SM matching theorem.
 
 The scientific result is narrower than closure:
 
@@ -54,11 +58,12 @@ The scientific result is narrower than closure:
 Current PR #230 status: open / conditional-support.
 The normalization 1/sqrt(6) is not the hard blocker.
 The hard blockers are now sharply separated.  For retained closure, PR #230
-needs either strict physical measurement evidence or a real interacting
-scalar-channel Bethe-Salpeter/projector/pole-residue theorem.  The normalization
-arithmetic, SSB bookkeeping, free source bubble, kinematic scalar/gauge
-factorization, contact HS rewrite, and wording around the old Ward note are not
-enough.
+needs either strict physical measurement evidence with a valid heavy-mass
+matching bridge or a real interacting scalar-channel
+Bethe-Salpeter/projector/pole-residue theorem.  The normalization arithmetic,
+SSB bookkeeping, free source bubble, kinematic scalar/gauge factorization,
+static rephasing, contact HS rewrite, and wording around the old Ward note are
+not enough.
 ```
 
 Exact next action:
@@ -66,7 +71,8 @@ Exact next action:
 ```text
 Package this PR #230 update.  The remaining positive options are now:
 
-1. strict direct physical measurement at a suitable top/heavy-quark scale;
+1. strict direct physical measurement at a suitable top/heavy-quark scale with
+   additive-mass/matching control;
 2. scalar projector/pole-residue/common-dressing theorem from retained
    dynamics;
 3. a newly derived Planck stationarity selector.

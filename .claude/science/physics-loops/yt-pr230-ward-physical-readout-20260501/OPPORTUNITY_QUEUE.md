@@ -1,8 +1,10 @@
 # Opportunity Queue
 
-1. **Fine-scale or HQET/top-integrated direct measurement.** This bypasses the
-   Ward/H-unit readout trap.  Current-scale production is not enough because
-   `am_top = 81.423`; retained closure needs a suitable scale/heavy treatment.
+1. **Fine-scale direct measurement or HQET with matching theorem.** This
+   bypasses the Ward/H-unit readout trap.  Current-scale relativistic production
+   is not enough because `am_top = 81.423`; HQET removes that numerical problem
+   but still needs static additive-mass and lattice-HQET-to-SM matching to
+   determine absolute `m_t`.
 2. **Scalar-channel Bethe-Salpeter projector and kernel theorem.** The
    source-bubble stretch, HS/RPA contact attempt, input audit, and
    projector-normalization obstruction show the exact next analytic object:
