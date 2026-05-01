@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:35:29.756101+00:00
+**Generated:** 2026-05-01T20:36:44.850180+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 297 |
+| `audited_clean` | 298 |
 | `audited_conditional` | 630 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 538 |
+| `unaudited` | 537 |
 
 | criticality | count |
 |---|---:|
@@ -354,6 +354,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_c3_oriented_ward_splitter_support_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_five_sixths_scale_selection_boundary_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
+| `quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `s3_boundary_link_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -12751,6 +12752,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Because the inherited one-loop transport factor between the threshold-local and common-scale comparators is nontrivial, the same fixed exponent cannot be an exact scale-blind theorem on both surfaces; a retained 3A proof still requires an independent scale-selection or RG-covariant transport theorem.  _(class `B`)_
 - **chain closes:** True — The runner verifies the exact SU(3) identity C_F - T_F = 5/6, the CKM-atlas input, the sharp threshold-local bounded match, the material common-scale mismatch, and the scale-blind obstruction with PASS=34 FAIL=0. Those checks support the note's boundary claim without promoting retained down-type masses.
 - **rationale:** The boundary theorem closes as support: exact Casimir algebra plus the retained CKM value gives a sharp bounded threshold-local match, but the same exponent fails materially on the common-scale comparator because the one-loop transport factor is nontrivial. The runner verifies that the threshold-local surface is much closer while also showing the match is not exact and still depends on a comparator convention. Residual risk is exactly the stated open target: a non-perturbative 5/6 exponentiation mechanism plus scale-selection or RG-covariant transport theorem is still required before any retained down-type mass-ratio closure.
+- **auditor confidence:** high
+
+### `quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28`
+
+- **Note:** [`QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md`](../../docs/QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Any S3-equivariant Hermitian Ward endomorphism on the hw=1 generation triplet lies in the two-dimensional commutant aI+bJ and therefore has at most a singlet eigenvalue plus a doubly-degenerate E eigenvalue.  _(class `C`)_
+- **chain closes:** True — The source states a finite representation-theoretic no-go and the runner verifies the S3 permutation representation, A1+E decomposition, commutant dimension, eigenvalue degeneracy, and the need for extra symmetry breaking. It does not claim retained quark Yukawa values.
+- **rationale:** The load-bearing no-go is a finite-dimensional Schur-commutant calculation, and the live runner returns TOTAL: PASS=44, FAIL=0 while checking the relevant authority surfaces and the reflection-breaking boundary. The conclusion is limited correctly: S3 equivariance alone cannot produce three generation-stratified Ward eigenvalues, so a future positive route must add a source/readout/symmetry-breaking primitive. Residual risk is only the usual support-tier boundary: this clean audit ratifies the negative representation-theory boundary, not any non-top quark mass prediction.
 - **auditor confidence:** high
 
 ### `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27`
