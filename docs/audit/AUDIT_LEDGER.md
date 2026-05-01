@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:50:01.305480+00:00
+**Generated:** 2026-05-01T01:51:58.384280+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
-| bounded | 267 |
+| bounded | 266 |
 | support | 227 |
 | open | 17 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 771 |
+| ~~audited_conditional~~ | 772 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 493 |
+| `audited_conditional` | 494 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 754 |
+| `unaudited` | 753 |
 
 | criticality | count |
 |---|---:|
@@ -421,6 +421,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cycle_battery_scaled_note_2026-04-10` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cycle_break_frontier_note_2026-04-10` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dark_energy_eos_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `decoherence_action_independence_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `decoherence_decision_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `decoherence_failure_analysis` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -2972,6 +2973,23 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — Yes. The registered runner completed successfully and checks the finite slice described by the source note.
 - **rationale:** The clean content is the finite cycle-break slice, not a universal repair. The runner completed successfully and the classified check surface is {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'total_pass': 0}. Residual risk is generalization outside the matched slice.
 - **auditor confidence:** medium
+
+### `dark_energy_eos_note`
+
+- **Note:** [`DARK_ENERGY_EOS_NOTE.md`](../../docs/DARK_ENERGY_EOS_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-dark_energy_eos_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** If dark energy is the fixed S^3 graph spectral gap Lambda = 3/R^2 with R fixed thereafter, then rho_Lambda is constant and the equation of state is w = -1 exactly, with lattice corrections suppressed by (l_P/R_H)^2.  _(class `A`)_
+- **chain closes:** False — The w=-1 algebra follows from a fixed Lambda premise, but the row declares no dependencies for the S^3 spectral-gap identification, fixed-radius selection, scale-reduction/coincidence surfaces, or DESI comparator inputs; the registered runner also emits no classified PASS lines.
+- **rationale:** Issue: the note's local algebra from constant Lambda to w=-1 is straightforward, but the load-bearing premises are imported: S^3 topology, Lambda=lambda_1=3/R^2 as dark energy, the fixed de Sitter/vacuum radius selection, scale-reduction/coincidence interpretation, and hard-coded DESI comparator context. The runner exits 0 but has no classified PASS lines, so its many numerical sections are not audit-classified. Why this blocks: a clean audit would require the spectral-gap/fixed-radius authorities and comparator surfaces to be declared and audited, and the runner must expose classified checks for the load-bearing steps rather than only narrative output. Repair target: declare the spectral-gap, cosmology scale-identification, Omega_Lambda, and expansion/model-selection surfaces as dependencies; update scripts/frontier_dark_energy_eos.py to emit A/B/C/D PASS lines for the constant-Lambda derivation, lattice correction estimate, model rejection checks, and comparator claims. Claim boundary until fixed: bounded companion prediction conditional on the fixed S^3 spectral-gap dark-energy identification; not an independently closed derivation of dark energy or current observational status.
+- **open / conditional deps cited:**
+  - `scripts/frontier_cosmological_constant_spectral_gap.py`
+  - `scripts/frontier_cosmology_scale_identification.py`
+  - `scripts/frontier_omega_lambda_derivation.py`
+  - `scripts/frontier_cosmological_expansion.py`
+- **auditor confidence:** high
 
 ### `decoherence_action_independence_note`
 
