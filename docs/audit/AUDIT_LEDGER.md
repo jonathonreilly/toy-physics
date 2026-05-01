@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:26:15.945895+00:00
+**Generated:** 2026-05-01T04:28:20.533190+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 229 |
+| bounded | 228 |
 | support | 192 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 20 |
+| ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 807 |
 | ~~audited_failed~~ | 159 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 538 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
-| `audited_numerical_match` | 17 |
+| `audited_numerical_match` | 18 |
 | `audited_renaming` | 18 |
-| `unaudited` | 684 |
+| `unaudited` | 683 |
 
 | criticality | count |
 |---|---:|
@@ -957,6 +957,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_higher_order_corrections_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_bridge_moment_closure_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_bridge_nonlocal_corrections_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
+| `yt_bridge_uv_class_uniqueness_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -13399,6 +13400,27 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`
   - `ACCEPTED_BRIDGE_PROFILE: logistic center=0.975 width=0.020`
   - `HYPOTHESIS: nonnegative bridge-surplus action`
+- **auditor confidence:** high
+
+### `yt_bridge_uv_class_uniqueness_note`
+
+- **Note:** [`YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md`](../../docs/YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-yt_bridge_uv_class_uniqueness_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Within the scanned constructive bridge family, after endpoint/nonlocal/higher-order filtering, all six survivors fall inside the same intrinsic UV-centered class with c2 >= 0.97 and a tight J_aff band.  _(class `G`)_
+- **chain closes:** False — The runner verifies the broad-family scan certificate, but the survivor class is selected by target endpoint closeness and by support hypotheses imported from unregistered rearrangement, moment, Hessian, higher-order, and nonlocal notes. It is not a theorem over the full microscopic bridge space.
+- **rationale:** Issue: the UV-class uniqueness result is a target-conditioned scan certificate inside a proxy constructive family. Why this blocks: the runner passes and shows no survivor leaves the intrinsic UV-centered class, but candidates survive only after endpoint closeness, nonlocal, and higher-order filters tied to the current bridge stack; the exact microscopic bridge is not derived to lie in this scanned family. Repair target: derive the intrinsic UV class directly from the exact interacting bridge operator, or prove the proxy family and endpoint/support filters are forced independently of the y_t target. Claim boundary until fixed: this is useful bounded numerical evidence for uniqueness within the scanned family, not an audit-clean bridge-class uniqueness theorem.
+- **open / conditional deps cited:**
+  - `YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md`
+  - `YT_BRIDGE_MOMENT_CLOSURE_NOTE.md`
+  - `YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md`
+  - `YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md`
+  - `YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md`
+  - `YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`
+  - `TARGET_CONDITIONED_FILTER: |dev| < 0.10% around TARGET_YT_PHYS = 0.9176`
+  - `PROFILE_FAMILY_SCAN: logistic / erf / smoothstep`
 - **auditor confidence:** high
 
 ### `yt_color_projection_correction_note`
