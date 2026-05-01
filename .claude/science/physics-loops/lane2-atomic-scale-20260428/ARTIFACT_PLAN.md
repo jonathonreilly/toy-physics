@@ -1,6 +1,6 @@
 # Lane 2 Artifact Plan
 
-**Updated:** 2026-05-01T11:23:11Z
+**Updated:** 2026-05-01T11:33:43Z
 
 ## Block 01 Artifact
 
@@ -158,3 +158,48 @@ product hides the separate gates and therefore cannot support retained closure.
 Third hostile-review question: does the fan-out satisfy the deep-work stop
 rule? Disposition: yes for the current no-route-passes boundary. It records
 five orthogonal frames and keeps the next exact action on a single gate.
+
+## Block 01 Planck-Unit Artifact
+
+Create a paired note and runner:
+
+- note: `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_PLANCK_UNIT_MAP_FIREWALL_NOTE_2026-05-01.md`
+- runner: `scripts/frontier_atomic_planck_unit_firewall.py`
+- log: `.claude/science/physics-loops/lane2-atomic-scale-20260428/logs/atomic_planck_unit_firewall_2026-05-01.log`
+
+**Status:** complete. Runner and note created; log captured.
+
+## Planck-Unit Claims Tested
+
+1. The current Planck/source-unit package is gravitational source/unit support,
+   not an atomic low-energy Coulomb coupling.
+2. On a fixed lattice length anchor, the atomic dimensionless coupling is
+   `g_atomic = 2 mu a_lat Z alpha(0)`.
+3. Missing `mu` and `alpha(0)` therefore remain load-bearing even if
+   `a_lat = 1/M_Pl` is admitted as package context.
+4. Directly setting the finite-box companion's `g=1` at Planck spacing is
+   an exact no-go, not a Rydberg route.
+
+## Planck-Unit Verification
+
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_planck_unit_firewall.py`
+- `python3 -m py_compile scripts/frontier_atomic_planck_unit_firewall.py`
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py`
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py`
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py`
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py`
+
+Verification results:
+
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_planck_unit_firewall.py`
+  -> `SUMMARY: PASS=31 FAIL=0`
+- `python3 -m py_compile scripts/frontier_atomic_planck_unit_firewall.py`
+  -> pass
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py`
+  -> `PASS=12 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py`
+  -> `PASS=17 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py`
+  -> `PASS=42 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py`
+  -> `PASS=43 FAIL=0`

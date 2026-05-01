@@ -1,6 +1,6 @@
 # Lane 2 Review History
 
-**Updated:** 2026-05-01T11:23:11Z
+**Updated:** 2026-05-01T11:33:43Z
 
 ## Pre-Artifact Review Baseline
 
@@ -99,4 +99,33 @@ python3 -m py_compile scripts/frontier_atomic_rydberg_gate_factorization_fanout.
 PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0
 PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> PASS=17 FAIL=0
 PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py -> PASS=42 FAIL=0
+```
+
+## Block 01 Planck-Unit Review-Loop Emulation
+
+- **Scope:** `scripts/frontier_atomic_planck_unit_firewall.py` and
+  `notes/ATOMIC_PLANCK_UNIT_MAP_FIREWALL_NOTE_2026-05-01.md`.
+- **Finding 1:** The proof first uses synthetic masses, couplings, lattice
+  anchors, and energy levels. Planck/hydrogen comparator values appear only
+  after the exact map split is checked.
+- **Disposition 1:** pass; no Rydberg target fit is used.
+- **Finding 2:** The artifact could be overread as a demotion of the Planck
+  source-unit theorem. The note correctly keeps that theorem as conditional
+  gravitational support and says only that it is not an atomic coupling map.
+- **Disposition 2:** pass; no repo-wide Planck authority surface is changed.
+- **Finding 3:** Direct `g=1` at Planck spacing is treated as a no-go, not as
+  a new atomic prediction.
+- **Disposition 3:** pass; this blocks a hidden cross-sector selector.
+- **Finding 4:** Lane 6 remains only an upstream mass dependency.
+- **Disposition 4:** pass; no charged-lepton/Koide work was performed.
+
+Verification recorded:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_atomic_planck_unit_firewall.py -> SUMMARY: PASS=31 FAIL=0
+python3 -m py_compile scripts/frontier_atomic_planck_unit_firewall.py -> pass
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> PASS=17 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py -> PASS=42 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py -> PASS=43 FAIL=0
 ```

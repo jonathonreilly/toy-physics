@@ -1,6 +1,6 @@
 # Lane 2 Assumptions And Imports
 
-**Updated:** 2026-05-01T11:23:11Z
+**Updated:** 2026-05-01T11:33:43Z
 **Loop:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Claim boundary:** open/scaffold-only unless a later artifact retires the listed blockers.
@@ -21,6 +21,8 @@
 | Continuum Coulomb spectrum `lambda_n = -g^2/(4 n^2)` | Algebraic bridge between dimensionless lattice scaling and Bohr formula | admitted standard Coulomb theorem / exact support bridge | `scripts/frontier_atomic_nr_coulomb_scale_bridge.py` | yes for the scale theorem | yes for the stretch artifact only | replace with framework-native spectral theorem if demanded by review | allowed support bridge; not framework-native by itself |
 | Physical length map `a = g/(2 mu Z alpha)` | Converts dimensionless lattice coordinate to physical units | admitted unit map in the stretch theorem | `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_NR_COULOMB_SCALE_BRIDGE_STRETCH_NOTE_2026-05-01.md` | yes | yes for retained physical-unit closure | derive kinetic normalization/unit map from framework or keep as open bridge | exact conditional map; still open as framework-native retention |
 | Rydberg product `mu alpha(0)^2` | The single product fixed by an absolute Coulomb energy after the standard map is admitted | exact factorization support / not a derivation of the gates | `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_RYDBERG_GATE_FACTORIZATION_FANOUT_NOTE_2026-05-01.md`, `scripts/frontier_atomic_rydberg_gate_factorization_fanout.py` | yes | yes as a dependency boundary | derive `mu` and `alpha(0)` independently, or explicitly demote to a fitted product | open; the product cannot retire the separate mass and coupling gates |
+| Planck/source-unit lattice anchor | Possible fixed physical-lattice length context for the atomic coordinate | package pin / conditional Planck support context | `docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md`, `docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md`, `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_PLANCK_UNIT_MAP_FIREWALL_NOTE_2026-05-01.md` | yes if used in unit-map route | not sufficient alone | derive the atomic effective coupling map on the same surface | length/source context only; not an atomic Rydberg closure |
+| `g_atomic = 2 mu a_lat Z alpha(0)` | Dimensionless coupling needed to put the atomic Coulomb problem on a fixed lattice length anchor | exact conditional bridge | `scripts/frontier_atomic_planck_unit_firewall.py` | yes | yes | retain `mu`, retain `alpha(0)`, and derive the low-energy kinetic/coupling map | open; Planck unit does not determine it |
 
 ## Immediate Audit Result
 
@@ -66,3 +68,21 @@ The new import boundary is that a single Rydberg-scale number constrains only
 the product `mu alpha(0)^2` after the standard map is supplied. It does not
 derive retained `mu`, retained `alpha(0)`, or the framework-native unit map.
 The honest status remains open with exact gate-factorization support.
+
+## Block 01 Planck-Unit Map Update
+
+`scripts/frontier_atomic_planck_unit_firewall.py` proves that the current
+Planck/source-unit package does not close the Lane 2 atomic physical-unit map.
+Even if the package pin `a_lat = 1/M_Pl` is used as a length anchor, the atomic
+dimensionless coupling is still
+
+```text
+g_atomic = 2 mu a_lat Z alpha(0).
+```
+
+Current Lane 2 has not retained `mu` or `alpha(0)`, so the Planck unit moves
+the unit-map problem into `g_atomic` rather than retiring it. The direct route
+that identifies the finite-box companion's convenient `g=1` with the Planck
+lattice coupling is an exact no-go: with comparator electron mass and
+Planck spacing it would require a non-atomic low-energy coupling and gives a
+super-Planckian atomic energy scale.

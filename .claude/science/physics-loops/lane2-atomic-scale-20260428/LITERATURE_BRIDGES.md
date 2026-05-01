@@ -1,6 +1,6 @@
 # Lane 2 Literature Bridges
 
-**Updated:** 2026-05-01T11:23:11Z
+**Updated:** 2026-05-01T11:33:43Z
 
 No new external literature was imported at loop start.
 
@@ -70,3 +70,15 @@ The comparator values in the falsifier section remain comparator-only:
 
 They are printed after synthetic theorem checks and are not used to derive a
 framework parameter.
+
+## Block 01 Planck-Unit Usage
+
+The Planck-unit map firewall imports no new external literature. It uses the
+repo's existing Planck package surfaces as package-context inputs:
+
+- `docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md`;
+- `docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md`.
+
+The decimal `M_Pl = 1.2209e19 GeV` is used only in the comparator section to
+show the scale of the false `g=1` Planck-spacing route. It is not used to
+derive a retained Rydberg value.

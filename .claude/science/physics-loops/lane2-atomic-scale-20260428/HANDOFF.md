@@ -1,6 +1,6 @@
 # Lane 2 Physics Loop Handoff
 
-**Updated:** 2026-05-01T11:26:48Z
+**Updated:** 2026-05-01T11:33:43Z
 **Loop slug:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Branch:** `physics-loop/lane2-atomic-scale-block01-20260428`  
@@ -8,16 +8,16 @@
 
 ## Current Status
 
-Block 01 has three coherent artifacts. Lane 2 remains open/scaffold-only:
+Block 01 has four coherent artifacts. Lane 2 remains open/scaffold-only:
 the existing hydrogen/helium harness succeeds with textbook inputs, but the
 repo has not retained `m_e`, `alpha(0)`, threshold-resolved QED transport, or
 a framework-native physical-unit nonrelativistic Coulomb/Schrodinger limit.
 
-Loop 3 added a third coherent artifact: a Rydberg gate-factorization and
-stuck-fan-out packet. It proves that current Lane 2 closure factorizes into
-three independent gates: mass/reduced mass, low-energy `alpha(0)`, and the
-framework-native physical-unit/kinetic map. No retained Rydberg closure is
-claimed.
+Loop 4 added a fourth coherent artifact: a Planck-unit map firewall. It proves
+that the current Planck/source-unit package is not an atomic unit-map closure:
+on any fixed lattice length anchor the atomic coupling remains
+`g_atomic = 2 mu a_lat Z alpha(0)`, so missing `mu` and `alpha(0)` remain
+load-bearing. No retained Rydberg closure is claimed.
 
 The default automation lock path is unavailable for this SSH user:
 
@@ -186,13 +186,60 @@ dd7682fd lane2 atomic: checkpoint Rydberg fanout state
 origin/physics-loop/lane2-atomic-scale-block01-20260428
 ```
 
+## Planck-Unit Map Route
+
+Completed route: Planck/source-unit map firewall.
+
+Question:
+
+```text
+Does the current Planck/source-unit package close the Lane 2 atomic
+physical-unit map?
+```
+
+Honest movement achieved: exact negative boundary / conditional support. The
+artifact shows that Planck length/source-unit support is not a substitute for
+the atomic low-energy coupling and kinetic/reduced-mass map.
+
+Artifacts:
+
+- `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_PLANCK_UNIT_MAP_FIREWALL_NOTE_2026-05-01.md`
+- `scripts/frontier_atomic_planck_unit_firewall.py`
+- `.claude/science/physics-loops/lane2-atomic-scale-20260428/logs/atomic_planck_unit_firewall_2026-05-01.log`
+
+Key result:
+
+```text
+a_lat = 1/M_Pl  (if admitted as package context)
+g_atomic = 2 mu a_lat Z alpha(0)
+```
+
+So `a_lat` does not determine the dimensionless atomic coupling without
+`mu` and `alpha(0)`. Directly setting the finite-box companion's `g=1` at
+Planck spacing is an exact no-go, not a Rydberg route.
+
+Verification:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_atomic_planck_unit_firewall.py -> SUMMARY: PASS=31 FAIL=0
+python3 -m py_compile scripts/frontier_atomic_planck_unit_firewall.py -> pass
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> PASS=17 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py -> PASS=42 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py -> PASS=43 FAIL=0
+```
+
+Review-loop emulation found no blocker. Guardrail: do not use this result to
+demote the Planck support theorem; it only says that the theorem is
+gravitational source/unit support and not an atomic low-energy coupling map.
+
 ## Next Exact Action
 
 The next science action for the continuing supervisor is route selection across:
 
-1. framework-native kinetic normalization / physical unit map for
-   `a = g/(2 mu Z alpha)`;
-2. a sharper no-go showing current Lane 2 cannot retain `alpha(0)` transport
+1. a sharper no-go showing current Lane 2 cannot retain `alpha(0)` transport
    without charged-threshold and hadronic inputs;
+2. endpoint packaging if no new non-overlapping route passes the dramatic-step
+   gate after this checkpoint;
 3. dependency hardening only if it creates a reviewable theorem prerequisite,
    not retained Rydberg promotion.

@@ -1,6 +1,6 @@
 # Lane 2 Route Portfolio
 
-**Updated:** 2026-05-01T11:23:11Z
+**Updated:** 2026-05-01T11:33:43Z
 **Loop:** `lane2-atomic-scale-20260428`  
 **Selection policy:** choose the route most likely to move claim state without touching Lane 4 or Lane 6.
 
@@ -107,3 +107,29 @@ Next candidate routes:
    alone without charged-threshold and hadronic inputs;
 3. if both fail, continue dependency hardening only as branch-local review
    surface, not retained Rydberg promotion.
+
+## Block 01 Planck-Unit Map Result
+
+Completed route: Planck/source-unit map firewall.
+
+The route tested whether current Planck-scale source-unit support could close
+the physical-unit side of Lane 2. It does not. The exact split is:
+
+```text
+a_lat = 1/M_Pl  (package pin / conditional Planck support context)
+g_atomic = 2 mu a_lat Z alpha(0)
+```
+
+So a Planck length anchor still requires the missing atomic `mu` and
+`alpha(0)` inputs to define the dimensionless Coulomb coupling. Treating
+the old finite-box `g=1` companion value as the Planck-lattice atomic coupling
+is an exact no-go.
+
+Next candidate routes:
+
+1. sharper `alpha(0)` transport no-go from Lane 2 alone, focused on charged
+   threshold/hadronic input dependence without working Lane 6/Lane 1 closure;
+2. endpoint package and PR creation if no new non-overlapping route passes the
+   dramatic-step gate after checkpoint review;
+3. Lane 5 pivot only if Lane 2 reaches a genuine stop and the pivot can stay
+   independent of active Lane 4/Lane 6 work.
