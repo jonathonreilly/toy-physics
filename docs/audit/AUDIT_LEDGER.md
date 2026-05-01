@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T22:43:38.754023+00:00
+**Generated:** 2026-05-01T22:44:52.169297+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 12 |
 | bounded | 163 |
-| support | 137 |
+| support | 136 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 952 |
+| ~~audited_conditional~~ | 953 |
 | ~~audited_failed~~ | 85 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 309 |
-| `audited_conditional` | 653 |
+| `audited_conditional` | 654 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 508 |
+| `unaudited` | 507 |
 
 | criticality | count |
 |---|---:|
@@ -892,6 +892,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_graph_first_cycle_frame_support_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_lower_level_end_to_end_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `pmns_minimal_branch_nonselection_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `pmns_oriented_cycle_reduced_channel_nonselection_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_oriented_cycle_selection_structure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_right_polar_section_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -12092,6 +12093,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `scripts/frontier_pmns_lower_level_end_to_end_closure.py`
   - `scripts/pmns_lower_level_utils.py`
+- **auditor confidence:** high
+
+### `pmns_minimal_branch_nonselection_note`
+
+- **Note:** [`PMNS_MINIMAL_BRANCH_NONSELECTION_NOTE.md`](../../docs/PMNS_MINIMAL_BRANCH_NONSELECTION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The current atlas/package isolates both minimal PMNS-producing branches but contains no retained Higgs-multiplicity selector, shared-Higgs universality theorem, or exact bridge constraining their seven canonical quantities.  _(class `B`)_
+- **chain closes:** False — The runner verifies current atlas/gates strings, but the row declares no one-hop dependencies for the branch-reduction, PMNS packet, publication-control, or gates authorities it imports.
+- **rationale:** Issue: the nonselection theorem depends on current-atlas/package rows and live gates state, but this audit row has deps=[] and no dependency-closed packet for those authorities. Why this blocks: a string-check runner can confirm the current rendered catalog contains or omits specific rows, but a clean retained-stack nonselection theorem needs the upstream branch-reduction, PMNS boundary, universality-collapse, universality-underdetermination, and gates/catalog artifacts wired and audited. Repair target: declare the exact source rows or generated catalog artifact as one-hop dependencies and re-audit against their effective statuses and bridge-absence predicates. Claim boundary until fixed: safe as support that the current rendered atlas has both minimal branches listed and no selector row; not audit-clean as a dependency-closed theorem that the exact bank lacks any selector or seven-quantity bridge.
+- **open / conditional deps cited:**
+  - `publication/ci3_z3/DERIVATION_ATLAS.md`
+  - `GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md`
 - **auditor confidence:** high
 
 ### `pmns_oriented_cycle_channel_value_law_note`
