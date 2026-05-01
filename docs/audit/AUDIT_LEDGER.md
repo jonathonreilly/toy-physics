@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:25:06.060840+00:00
+**Generated:** 2026-05-01T06:26:57.789371+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 255 |
+| `audited_clean` | 256 |
 | `audited_conditional` | 575 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 83 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 606 |
+| `unaudited` | 605 |
 
 | criticality | count |
 |---|---:|
@@ -239,6 +239,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `global_coherence_off_scaffold_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `graph_first_selector_derivation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `graph_first_su3_integration_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
+| `graph_laplacian_core_card_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `graph_scalar_plus_spinor_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `graph_true_kg_vs_cn_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `gravitational_entanglement_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
@@ -7345,6 +7346,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** Imposing the residual swap restricts the weak-su(2) commutant to operators preserving the 3 \oplus 1 base split, so Comm(su(2)_weak, tau) is gl(3) \oplus gl(1) and its compact semisimple part is su(3).  _(class `C`)_
 - **chain closes:** True — The note states the selected-axis cube projection, constructs the fiber Pauli generators and complementary-axis swap, and the runner independently verifies the resulting joint commutant and embedded su(3) closure for all three selected axes. No one-hop dependencies are required for this bounded structural claim.
 - **rationale:** The load-bearing construction is not a symbol rename or tuned numerical comparator: it builds graph-native shift, parity, projection, residual swap, commutant dimension, block ranks, and explicit su(3) generators directly from the 3-cube with a selected axis. The live runner reports PASS=111 FAIL=0, and the classified runner checks are first-principles structural computations. Residual risk is limited to the upstream existence/selection of the weak axis, which this note explicitly treats as an input boundary rather than deriving here.
+- **auditor confidence:** high
+
+### `graph_laplacian_core_card_note`
+
+- **Note:** [`GRAPH_LAPLACIAN_CORE_CARD_NOTE.md`](../../docs/GRAPH_LAPLACIAN_CORE_CARD_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The graph-Laplacian lane is promising, but not a perfect card: the checked-in graph core card now reruns to 13/16, with C1, C13, and C14 failing.  _(class `C`)_
+- **chain closes:** True — The registered runner exits 0 and exactly reproduces the note's 13/16 score and named pass/fail pattern, including the Born, carrier-k, and split mass/gravity failures; the note's interpretation stays bounded and does not promote the lane to a perfect card.
+- **rationale:** The load-bearing bounded card claim closes: scripts/frontier_graph_kg_16card.py currently reports C1 Born=1.9943 FAIL, C13 k-achrom CV=1.078596 same_sign=False FAIL, C14 split m/g same_sign=False FAIL, and a total SCORE of 13/16, matching the source note. Residual risk is limited to the note's stated boundary: the gauge row remains only an AB proxy and the lane is not a replacement for retained lanes, but those caveats are explicit and the current runner supports the bounded claim.
 - **auditor confidence:** high
 
 ### `graph_phase_diagram_scout_note`

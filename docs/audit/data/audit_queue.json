@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 270,
+    "leaf": 269,
     "medium": 133
   },
-  "generated_at": "2026-05-01T06:25:05.784851+00:00",
+  "generated_at": "2026-05-01T06:26:57.499429+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9975,23 +9975,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "graph_laplacian_core_card_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.5,
-      "note_path": "docs/GRAPH_LAPLACIAN_CORE_CARD_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_graph_kg_16card.py",
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14974,6 +14957,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 209,
-  "total_pending": 606
+  "ready_count": 208,
+  "total_pending": 605
 }
