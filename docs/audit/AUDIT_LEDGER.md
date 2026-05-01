@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:44:57.120363+00:00
+**Generated:** 2026-05-01T20:47:55.380817+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 173 |
-| support | 143 |
+| support | 142 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 932 |
-| ~~audited_failed~~ | 82 |
+| ~~audited_failed~~ | 83 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 300 |
 | `audited_conditional` | 635 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 55 |
+| `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 530 |
+| `unaudited` | 529 |
 
 | criticality | count |
 |---|---:|
@@ -1070,6 +1070,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_selector_minimal_microscopic_extension_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
+| `quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `second_grown_family_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `self_gravity_backreaction_closure_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `session_summary_2026-04-01_topology` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -12955,6 +12956,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`
   - `QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md`
 - **auditor confidence:** high
+
+### `quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The theorem claims the RPSR relation derives a_u = sin_d*(1 - 48*rho/49) = 0.7748865611 from the retained unit ray, scalar/tensor support, a_d=rho, STRC collinearity, and the NLO rho/49 correction, with the runner reported as PASS=10 FAIL=0 including det-phase neutrality compatibility.  _(class `C`)_
+- **chain closes:** False — The current executable evidence does not match the note's stated PASS=10 theorem closure, so the advertised chain fails on its own terms.
+- **rationale:** Issue: the runner artifact is stale relative to the source note. The note advertises PASS=10 FAIL=0 and lists T10 det-phase-neutrality compatibility as a checked theorem step, but the current runner exits with PASS=9 FAIL=0, emits only unclassified PASS lines, and explicitly does not re-check T10. Why this blocks: the load-bearing theorem statement depends on the advertised det-phase compatibility and current executable evidence no longer matches the note's claimed verification surface. Repair target: either restore an executable T10 det-phase neutrality check and classified PASS output, or narrow the note and audit target to the nine RPSR/scalar-tensor algebra checks that the current runner actually performs. Claim boundary until fixed: T1-T9 reproduce the stated algebraic RPSR and scalar/tensor support identities; the full ten-check theorem closure advertised by the note is not current.
+- **open / conditional deps cited:**
+  - `scripts/frontier_quark_up_amplitude_rpsr_conditional.py`
 
 ### `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19`
 
