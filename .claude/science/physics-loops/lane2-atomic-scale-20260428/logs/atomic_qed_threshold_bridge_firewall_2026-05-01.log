@@ -1,0 +1,85 @@
+========================================================================================
+LANE 2 ATOMIC QED THRESHOLD BRIDGE FIREWALL
+========================================================================================
+
+Question:
+  Can current retained alpha_EM(M_Z) plus structural b_QED determine alpha(0)?
+
+Answer:
+  No. Threshold-resolved QED transport remains a load-bearing import.
+
+----------------------------------------------------------------------------------------
+Part 1: current repo surface
+----------------------------------------------------------------------------------------
+  [PASS] Lane 2 explicitly remains scaffold-only before retained dependencies land
+  [PASS] usable derived values carry alpha_EM(M_Z)=1/127.67
+  [PASS] usable derived values do not carry alpha(0) as a retained value
+  [PASS] existing Rydberg firewall already marks alpha(0) transport as load-bearing
+  [PASS] repo beta-coefficient note exposes b_QED=32/3 as an asymptotic ingredient
+
+----------------------------------------------------------------------------------------
+Part 2: retained charge/count surface gives asymptotic b_QED
+----------------------------------------------------------------------------------------
+  N_color = 3, N_gen = 3
+  Q_u = 2/3, Q_d = -1/3, Q_e = -1
+  Sum_f N_c Q_f^2 over charged Dirac fermions = 8
+  b_QED from charges = (4/3) * Sum Q^2 = 32/3
+  b_QED S1 form      = (2/3) * (N_color + 1)^2 = 32/3
+  [PASS] retained charge spectrum specializes to Q_u=2/3
+  [PASS] retained charge spectrum specializes to Q_d=-1/3
+  [PASS] per-SM charged spectrum gives Sum N_c Q_f^2 = 8
+  [PASS] b_QED from charges equals 32/3
+  [PASS] b_QED from charges equals S1 closed form
+
+----------------------------------------------------------------------------------------
+Part 3: same alpha(M_Z) and same b_QED do not determine alpha(0)
+----------------------------------------------------------------------------------------
+  all charged thresholds at high endpoint          active_log= 0.00  1/alpha_low=127.670000
+  effective thresholds halfway through interval    active_log= 5.00  1/alpha_low=136.158264
+  all charged species active for full interval     active_log=10.00  1/alpha_low=144.646527
+
+  Per-unit-log threshold sensitivity = b_QED/(2 pi) = 1.697653
+  Spread across same-alpha(M_Z), same-b_QED models = 16.976527
+  [PASS] low-energy alpha is nonunique without threshold placement  (spread=16.977 in 1/alpha over log interval 10.0)
+  [PASS] threshold locations are numerically load-bearing  (d(1/alpha)/dlog=1.698)
+  [PASS] underdetermination proof does not use observed alpha(0)  (only alpha(M_Z), b_QED, and threshold placement were varied)
+
+----------------------------------------------------------------------------------------
+Part 4: physical-scale illustration, comparator only
+----------------------------------------------------------------------------------------
+  Comparator M_Z                 = 91.1876 GeV
+  Comparator m_e                 = 0.00051099895 GeV
+  log(M_Z/m_e)                   = 12.092062
+  repo 1/alpha_EM(M_Z)           = 127.670000
+  comparator 1/alpha(0)          = 137.035999084
+  no-transport 1/alpha           = 127.670000
+  all-active b_QED to m_e        = 148.198122
+  active log needed to hit comparator = 5.517029
+  fitted effective threshold          = 0.366371 GeV
+  [PASS] no-transport and all-active transport bracket the comparator  (alpha(0) could be fit by choosing an effective threshold)
+  [PASS] comparator-matching active log is an internal selector, not retained data  (required_log=5.517)
+  [PASS] using all-threshold b_QED down to m_e overshoots alpha(0)  (overshoot=11.162 in 1/alpha)
+
+  Interpretation:
+    The retained b_QED coefficient is necessary for a QED running bridge,
+    but using it without threshold data is equivalent to choosing a hidden
+    effective threshold. That is a fitted selector, not a derivation.
+
+----------------------------------------------------------------------------------------
+Part 5: Lane 2 consequence
+----------------------------------------------------------------------------------------
+  Exact dependency consequence:
+    alpha_EM(M_Z) + b_QED(asymptotic) is not a retained alpha(0) bridge.
+
+  A future retained Rydberg theorem still needs:
+    1. retained electron mass or charged-lepton activation law;
+    2. threshold-resolved QED decoupling from alpha(M_Z) to alpha(0);
+    3. retained physical-unit nonrelativistic Coulomb/Schrodinger limit.
+
+  This runner moves Lane 2 by sharpening the dependency firewall,
+  not by closing the Rydberg scale.
+  [PASS] honest post-run Lane 2 status is open, not retained Rydberg closure  (alpha(0), m_e, and physical-unit NR limit remain open)
+
+========================================================================================
+PASS=17 FAIL=0
+========================================================================================
