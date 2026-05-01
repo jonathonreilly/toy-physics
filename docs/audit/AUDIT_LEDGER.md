@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:26:37.137695+00:00
+**Generated:** 2026-05-01T03:31:34.813163+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 245 |
+| bounded | 244 |
 | support | 203 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 14 |
+| ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 51 |
 | ~~audited_conditional~~ | 791 |
 | ~~audited_failed~~ | 150 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 521 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 67 |
-| `audited_numerical_match` | 11 |
+| `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 712 |
+| `unaudited` | 711 |
 
 | criticality | count |
 |---|---:|
@@ -926,6 +926,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_chokepoint_boundary_fit_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `quark_e_channel_endpoint_quotient_law_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
+| `quark_endpoint_ratio_chain_law_note_2026-04-19` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `tensor_support_center_excess_law_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `wave_direct_dm_h025_seed0_crossfamily_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -11010,6 +11011,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `QUARK_ENDPOINT_READOUT_CONSTRAINTS_NOTE_2026-04-19.md`
   - `scripts/frontier_quark_endpoint_denominator_admissibility.py`
+- **auditor confidence:** high
+
+### `quark_endpoint_ratio_chain_law_note_2026-04-19`
+
+- **Note:** [`QUARK_ENDPOINT_RATIO_CHAIN_LAW_NOTE_2026-04-19.md`](../../docs/QUARK_ENDPOINT_RATIO_CHAIN_LAW_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-quark_endpoint_ratio_chain_law_note_2026-04-19`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Inside the same low-rational endpoint class, the live endpoint ratios are nearest to 5/6, -2, and -8/9, and those selected candidates force gamma_E(center)/gamma_E(shell)=15/8.  _(class `G`)_
+- **chain closes:** False — The downstream multiplication to 15/8, r_E=21/4, and D_E=21/8 is exact after the three rationals are selected. The note does not derive the exact endpoint ratio chain from a retained Route-2 tensor readout; it selects nearest small-rational candidates from live endpoint data.
+- **rationale:** Issue: the load-bearing ratio chain {5/6, -2, -8/9} is selected as the nearest small-rational package to the live endpoint ratios, not derived from a retained Route-2 tensor readout theorem. Why this blocks: the exact 15/8, 21/4, and 21/8 conclusions follow only after accepting that tuned small-rational selection. Repair target: derive the endpoint ratio chain from the Route-2 tensor observable and register the endpoint-readout constraints as cited dependencies. Claim boundary until fixed: the note supports a bounded numerically sharp candidate whose downstream algebra is exact after the ratio choices are granted.
+- **open / conditional deps cited:**
+  - `QUARK_ENDPOINT_READOUT_CONSTRAINTS_NOTE_2026-04-19.md`
+  - `QUARK_E_CHANNEL_ENDPOINT_QUOTIENT_LAW_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28`
