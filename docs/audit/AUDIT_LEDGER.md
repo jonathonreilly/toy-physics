@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:23:48.998387+00:00
+**Generated:** 2026-05-01T02:26:02.054729+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 2 |
 | bounded | 261 |
-| support | 213 |
+| support | 212 |
 | open | 16 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
-| ~~audited_renaming~~ | 45 |
+| ~~audited_renaming~~ | 46 |
 | ~~audited_conditional~~ | 773 |
 | ~~audited_failed~~ | 144 |
 
@@ -38,8 +38,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_decoration` | 5 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 12 |
-| `audited_renaming` | 12 |
-| `unaudited` | 737 |
+| `audited_renaming` | 13 |
+| `unaudited` | 736 |
 
 | criticality | count |
 |---|---:|
@@ -919,6 +919,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `oh_static_constraint_lift_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
 | `s3_time_bilinear_tensor_primitive_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
+| `star_supported_bridge_class_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
 | `universal_qg_optional_textbook_comparison_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
@@ -11589,6 +11590,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The staggered architecture can reproduce a Newton-compatible 3D distance law on an open cubic lattice, but only when the trajectory observable is coarse-grained to suppress sublattice beating.  _(class `C`)_
 - **chain closes:** True — The registered runner constructs the stated open staggered Hamiltonian, evolves free and gravitating packets, and fits exact-force, raw-centroid, and blocked-centroid distance laws; current output matches the source note. The result closes only on the calibrated bounded surface with external source, d=3..6, sigma=1.30, and 2x2x2 blocked readout.
 - **rationale:** The runner computes the load-bearing trajectory response and reproduces the note's global blocked exponent of about -1.982 with all blocked rows toward the source. The note's caveats correctly prevent overpromotion: it imports the external 1/r source surface and does not claim both-masses closure, self-consistent two-body gravity, irregular transfer, or replacement of the force-based canonical card. Residual risk is the calibrated readout and finite-window choice, not a mismatch between note and runner.
+- **auditor confidence:** high
+
+### `star_supported_bridge_class_note`
+
+- **Note:** [`STAR_SUPPORTED_BRIDGE_CLASS_NOTE.md`](../../docs/STAR_SUPPORTED_BRIDGE_CLASS_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-star_supported_bridge_class_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For each star-supported finite-rank sample, define rho = sigma_R/(2 pi psi^5), S = 0.5 rho(1/alpha - 1), and the Schur boundary source from the same trace flux, then the static conformal constraints and boundary-action stationarity hold on the current R=4 bridge surface.  _(class `E`)_
+- **chain closes:** False — The runner verifies sampled algebraic consistency after defining the density/stress and boundary source from the target constraints/flux, but it does not independently derive those physical source laws or prove the full star-supported finite-rank class claim.
+- **rationale:** Issue: the load-bearing bridge closure defines rho and S pointwise from sigma_R, psi, and alpha, and defines the Schur source j from the same trace flux whose stationarity is then checked; the runner samples five random star-supported finite-rank fields while the note claims exact extension to the full class, and the row has deps=[] despite importing the finite-rank, O_h static-lift, and Schur-boundary action surfaces. Why this blocks: satisfying constraints after solving for rho/S and j is a definition-as-derivation pattern, not an independent derivation of physical shell density, stress trace, or microscopic boundary source for the full class. Repair target: declare the finite-rank, static-lift, and Schur-boundary dependencies, then prove an independent source/stress/action law for the whole star-supported finite-rank class or demote the note to bounded sampled sanity checks with classified runner output. Claim boundary until fixed: sampled star-supported finite-rank fields satisfy the algebraic bridge identities and Schur stationarity under the displayed definitions on the current bridge surface; not an audited exact bridge-side closure theorem for the full source class.
+- **open / conditional deps cited:**
+  - `FINITE_RANK_SOURCE_TO_METRIC_THEOREM_NOTE.md`
+  - `OH_STATIC_CONSTRAINT_LIFT_NOTE.md`
+  - `OH_SCHUR_BOUNDARY_ACTION_NOTE.md`
 - **auditor confidence:** high
 
 ### `strong_cp_theta_zero_note`
