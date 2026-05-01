@@ -1,7 +1,7 @@
 # 3D `1/L^2 + h^2` Narrow `h=0.125` Bridge Note
 
 **Date:** 2026-04-05
-**Status:** bounded negative for a proposed_retained narrow `h=0.125` bridge claim
+**Status:** bounded negative for a narrow `h=0.125` bridge claim
 
 This note is intentionally narrower than the broader `h^2+T` distance-law
 frontier. It asks only whether the current dense 3D numpy family can support a
@@ -10,8 +10,8 @@ continuum closure.
 
 ## Artifact chain
 
-- [`scripts/lattice_3d_l2_numpy_h0125_audit.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_audit.py)
-- [`scripts/lattice_3d_l2_numpy_h0125_bridge.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_bridge.py)
+- [`scripts/lattice_3d_l2_numpy_h0125_audit.py`](../scripts/lattice_3d_l2_numpy_h0125_audit.py)
+- [`scripts/lattice_3d_l2_numpy_h0125_bridge.py`](../scripts/lattice_3d_l2_numpy_h0125_bridge.py)
 
 ## Question
 

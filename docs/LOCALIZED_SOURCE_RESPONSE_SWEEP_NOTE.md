@@ -1,12 +1,12 @@
 # Localized Source-Response Sweep Note
 
 **Date:** 2026-04-05  
-**Status:** bounded source-response sweep on the proposed_retained 3D `h=0.25` family
+**Status:** bounded source-response sweep on the 3D `h=0.25` family
 
 ## Artifact chain
 
-- Script: [`scripts/localized_source_response_sweep.py`](/Users/jonreilly/Projects/Physics/scripts/localized_source_response_sweep.py)
-- Log: [`logs/2026-04-05-localized-source-response-sweep.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-localized-source-response-sweep.txt)
+- Script: [`scripts/localized_source_response_sweep.py`](../scripts/localized_source_response_sweep.py)
+- Log: [`logs/2026-04-05-localized-source-response-sweep.txt`](../logs/2026-04-05-localized-source-response-sweep.txt)
 
 This sweep asks a narrow question:
 
@@ -73,10 +73,10 @@ So the best retained read is:
 
 Read this with:
 
-- [`MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md)
-- [`MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md)
-- [`MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md)
-- [`PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md)
+- [`MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md`](MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md)
+- [`MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md`](MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md)
+- [`MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md`](MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md)
+- [`PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`](PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md)
 
 Together they now say:
 

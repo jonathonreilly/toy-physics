@@ -4677,6 +4677,18 @@
       "to": "bminusl_anomaly_freedom_theorem_note_2026-04-24"
     },
     {
+      "from": "inverse_problem_graph_requirements_note",
+      "to": "newton_derivation_note"
+    },
+    {
+      "from": "inverse_problem_graph_requirements_note",
+      "to": "action_uniqueness_note"
+    },
+    {
+      "from": "inverse_problem_graph_requirements_note",
+      "to": "persistent_inertial_response_readiness_note"
+    },
+    {
       "from": "irregular_directional_observable_note_2026-04-11",
       "to": "irregular_sign_core_packet_gate_note"
     },
@@ -5185,6 +5197,22 @@
       "to": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
     },
     {
+      "from": "localized_source_response_sweep_note",
+      "to": "mesoscopic_surrogate_backreaction_note"
+    },
+    {
+      "from": "localized_source_response_sweep_note",
+      "to": "mesoscopic_surrogate_multistage_note"
+    },
+    {
+      "from": "localized_source_response_sweep_note",
+      "to": "mesoscopic_surrogate_h025_constrained_localization_note"
+    },
+    {
+      "from": "localized_source_response_sweep_note",
+      "to": "persistent_inertial_response_readiness_note"
+    },
+    {
       "from": "lorentz_boost_covariance_2d_theorem_note",
       "to": "emergent_lorentz_invariance_note"
     },
@@ -5263,6 +5291,70 @@
     {
       "from": "matter_self_focusing_note",
       "to": "matter_inertial_closure_note"
+    },
+    {
+      "from": "mesoscopic_surrogate_annular_tapered_sweep_note",
+      "to": "mesoscopic_surrogate_localization_sweep_note"
+    },
+    {
+      "from": "mesoscopic_surrogate_annular_tapered_sweep_note",
+      "to": "mesoscopic_surrogate_localization_frontier_note"
+    },
+    {
+      "from": "mesoscopic_surrogate_annular_tapered_sweep_note",
+      "to": "mesoscopic_surrogate_threshold_2d_note"
+    },
+    {
+      "from": "mesoscopic_surrogate_annular_tapered_sweep_note",
+      "to": "persistent_inertial_response_readiness_note"
+    },
+    {
+      "from": "mesoscopic_surrogate_compact_floor_sweep_note",
+      "to": "mesoscopic_surrogate_localization_sweep_note"
+    },
+    {
+      "from": "mesoscopic_surrogate_compact_floor_sweep_note",
+      "to": "mesoscopic_surrogate_multistage_note"
+    },
+    {
+      "from": "mesoscopic_surrogate_compact_floor_sweep_note",
+      "to": "mesoscopic_surrogate_backreaction_note"
+    },
+    {
+      "from": "mesoscopic_surrogate_compact_floor_sweep_note",
+      "to": "broad_surrogate_point_source_compare_note"
+    },
+    {
+      "from": "mesoscopic_surrogate_h025_constrained_localization_note",
+      "to": "mesoscopic_surrogate_backreaction_note"
+    },
+    {
+      "from": "mesoscopic_surrogate_h025_constrained_localization_note",
+      "to": "broad_surrogate_point_source_compare_note"
+    },
+    {
+      "from": "mesoscopic_surrogate_h025_constrained_localization_note",
+      "to": "mesoscopic_surrogate_multistage_note"
+    },
+    {
+      "from": "mesoscopic_surrogate_h025_constrained_localization_note",
+      "to": "mesoscopic_surrogate_annular_tapered_sweep_note"
+    },
+    {
+      "from": "minimal_absorbing_horizon_probe_note",
+      "to": "gate_b_nonlabel_connectivity_v1_note"
+    },
+    {
+      "from": "minimal_absorbing_horizon_probe_note",
+      "to": "gate_b_nonlabel_connectivity_v1_distance_note"
+    },
+    {
+      "from": "minimal_absorbing_horizon_probe_note",
+      "to": "gate_b_nonlabel_connectivity_v1_joint_note"
+    },
+    {
+      "from": "minimal_absorbing_horizon_probe_note",
+      "to": "gate_b_farfield_note"
     },
     {
       "from": "minimal_axioms_2026-04-11",
@@ -18493,7 +18585,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T12:08:27.627984+00:00",
+  "generated_at": "2026-05-01T12:12:50.803637+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21916,10 +22008,10 @@
     },
     "complete_prediction_chain_2026_04_15": {
       "claim_id": "complete_prediction_chain_2026_04_15",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained - explicit strong derivation claim pending audit",
+      "current_status": "support",
+      "current_status_raw": "support - inventory of the prediction chain composed of upstream proposed and audited rows; this row is not itself a strong derivation claim independent of those upstream rows",
       "deps": [],
-      "note_hash": "315ca5b3a46bb492169000069cff4d9b3ac5462f9813019ba2f4212187841892",
+      "note_hash": "d9b79c9fbf7928333646521c8d4f060c71e2e65328ccf30ba318000128af762c",
       "path": "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md",
       "runner_path": "scripts/frontier_complete_prediction_chain.py",
       "title": "Complete Prediction Chain: Cl(3) on Z^3"
@@ -22419,9 +22511,9 @@
     "dimensional_gravity_table": {
       "claim_id": "dimensional_gravity_table",
       "current_status": "bounded",
-      "current_status_raw": "bounded - bounded or caveated result note",
+      "current_status_raw": "bounded inventory of finite-tested entries; this is not a universal F\u221dM theorem across all dimensions, h values, or parameter variations. The bolded \"1.00\" entries are point-tested results on the listed family/parameter rows, not universality claims.",
       "deps": [],
-      "note_hash": "3563c1a4460b9c39ab18534bc52bbca0f9a14abe7d91681501900b617dbdc0d3",
+      "note_hash": "b8a6a3d00374fe212b519042f787eb4dcb54fc62646c9563e1362189748e9055",
       "path": "docs/DIMENSIONAL_GRAVITY_TABLE.md",
       "runner_path": null,
       "title": "Dimensional Gravity Table"
@@ -26551,10 +26643,10 @@
     },
     "geometry_superposition_dag_ensemble_note_2026-04-11": {
       "claim_id": "geometry_superposition_dag_ensemble_note_2026-04-11",
-      "current_status": "proposed_retained",
-      "current_status_raw": "exploratory path-sum result, not a staggered proposed_retained result",
+      "current_status": "bounded",
+      "current_status_raw": "bounded exploratory path-sum result on a DAG ensemble; not on the staggered release surface",
       "deps": [],
-      "note_hash": "d3a374b73beb151022c20890747de8978b5b3345b8085b4dcc5c39f6113c520b",
+      "note_hash": "d64cbe6b74afe4e7efb3a4c661c93f3dd1b0f90488334a7c1e65277e044be8ad",
       "path": "docs/GEOMETRY_SUPERPOSITION_DAG_ENSEMBLE_NOTE_2026-04-11.md",
       "runner_path": "scripts/frontier_geometry_superposition.py",
       "title": "Geometry Superposition on a DAG Ensemble"
@@ -26584,12 +26676,12 @@
     },
     "global_coherence_predictor_note": {
       "claim_id": "global_coherence_predictor_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained partial \u2014 single-property `free_coh \u2265 7.96e-04` improves cross-generator accuracy from 6/9 = 66.7% to **7/9 = 77.8%** while keeping in-sample at 92.3%. The classifier program is alive but still empirical and the cross-generator gap is not closed.",
+      "current_status": "bounded",
+      "current_status_raw": "bounded - historical scaffold-specific evidence. The 2026-04-07 off-scaffold lane reversed the advantage to 5/9 = 55.6%, exactly matching the prior rule, so the original 7/9 = 77.8% revival was scaffold-specific. The classifier program is closed; this note is kept as historical finite evidence only.",
       "deps": [
         "global_coherence_off_scaffold_note"
       ],
-      "note_hash": "f5ea18884cef03886e1df49b272783fb6ff16993e1d8469e84bcbaa57b2f58f6",
+      "note_hash": "2f240a64449669d4761bdbe4619d820372a17e16ed9c03724599c2dd37c6061e",
       "path": "docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md",
       "runner_path": "scripts/global_coherence_predictor.py",
       "title": "Global Free-Beam Coherence Predictor \u2014 Modest Revival"
@@ -27016,10 +27108,10 @@
     },
     "h2t_h0125_narrow_bridge_note": {
       "claim_id": "h2t_h0125_narrow_bridge_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "bounded negative for a proposed_retained narrow `h=0.125` bridge claim",
+      "current_status": "bounded",
+      "current_status_raw": "bounded negative for a narrow `h=0.125` bridge claim",
       "deps": [],
-      "note_hash": "01415acce021b1cbd4f519a6756ffb6d8826f93fd5dc7715f4c3895a476ce740",
+      "note_hash": "0635d0cb260832e8f56020099ae8578df7303addf0193b33bcc0f452aa47ea58",
       "path": "docs/H2T_H0125_NARROW_BRIDGE_NOTE.md",
       "runner_path": "scripts/lattice_3d_l2_numpy_h0125_audit.py",
       "title": "3D `1/L^2 + h^2` Narrow `h=0.125` Bridge Note"
@@ -27668,10 +27760,14 @@
     },
     "inverse_problem_graph_requirements_note": {
       "claim_id": "inverse_problem_graph_requirements_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "bounded graph-requirements harness on the proposed_retained 3D valley-linear family",
-      "deps": [],
-      "note_hash": "b5313db5bb6b61eadd53b1a31d2be3e5304df9d7b68fd560ca6d7b83f57c2f9e",
+      "current_status": "bounded",
+      "current_status_raw": "bounded graph-requirements harness on the 3D valley-linear family",
+      "deps": [
+        "newton_derivation_note",
+        "action_uniqueness_note",
+        "persistent_inertial_response_readiness_note"
+      ],
+      "note_hash": "ae89e3c5a562c8406f6243707dc87268cb6be73973954f84719f8319f413e860",
       "path": "docs/INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md",
       "runner_path": "scripts/inverse_problem_graph_requirements.py",
       "title": "Inverse Problem Graph Requirements Note"
@@ -29734,10 +29830,15 @@
     },
     "localized_source_response_sweep_note": {
       "claim_id": "localized_source_response_sweep_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "bounded source-response sweep on the proposed_retained 3D `h=0.25` family",
-      "deps": [],
-      "note_hash": "99522e0ab264de5324faa0a08942ff6a234972bccfb2548eab459d6a92476084",
+      "current_status": "bounded",
+      "current_status_raw": "bounded source-response sweep on the 3D `h=0.25` family",
+      "deps": [
+        "mesoscopic_surrogate_backreaction_note",
+        "mesoscopic_surrogate_multistage_note",
+        "mesoscopic_surrogate_h025_constrained_localization_note",
+        "persistent_inertial_response_readiness_note"
+      ],
+      "note_hash": "800dbf9bfb1072ede04279af33001ba1bc28d1c23872e756a9ef8ab2e7e9bbbd",
       "path": "docs/LOCALIZED_SOURCE_RESPONSE_SWEEP_NOTE.md",
       "runner_path": "scripts/localized_source_response_sweep.py",
       "title": "Localized Source-Response Sweep Note"
@@ -29790,9 +29891,9 @@
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
       "deps": [],
-      "note_hash": "0282fd37ff279312e190b5d4d31f7f7378f00df3ba85d40c377937d165e01fc7",
+      "note_hash": "311236909cbb13b7ad4e97f1d98943f292cac883179a258cf2a217a13ac62303",
       "path": "docs/LORENTZ_VIOLATION_DERIVED_NOTE.md",
-      "runner_path": "scripts/frontier_lorentz_derived.py",
+      "runner_path": "scripts/frontier_lorentz_violation.py",
       "title": "Lorentz Violation Derived from Cubic Lattice Structure"
     },
     "main_open_cubic_validation_2026-04-11": {
@@ -29910,10 +30011,15 @@
     },
     "mesoscopic_surrogate_annular_tapered_sweep_note": {
       "claim_id": "mesoscopic_surrogate_annular_tapered_sweep_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "bounded localization sweep on the proposed_retained 3D mesoscopic surrogate",
-      "deps": [],
-      "note_hash": "b0166a8fa81061129ec8da9f8490afdf855dae825ac8c9f39527c3a94d38b0e7",
+      "current_status": "bounded",
+      "current_status_raw": "bounded localization sweep on the 3D mesoscopic surrogate family",
+      "deps": [
+        "mesoscopic_surrogate_localization_sweep_note",
+        "mesoscopic_surrogate_localization_frontier_note",
+        "mesoscopic_surrogate_threshold_2d_note",
+        "persistent_inertial_response_readiness_note"
+      ],
+      "note_hash": "cefb8e41969e43569a2a50a79b741bd736f0431ac83140d235d53f14df586ad3",
       "path": "docs/MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md",
       "runner_path": "scripts/mesoscopic_surrogate_annular_tapered_sweep.py",
       "title": "Mesoscopic Surrogate Annular / Tapered Sweep Note"
@@ -29930,20 +30036,30 @@
     },
     "mesoscopic_surrogate_compact_floor_sweep_note": {
       "claim_id": "mesoscopic_surrogate_compact_floor_sweep_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "constrained compact-family control sweep for the proposed_retained 3D surrogate lane",
-      "deps": [],
-      "note_hash": "f3ecb1bf5529e192dc4d28fba460941920dabff799b7b048657c7bff2b72ddf9",
+      "current_status": "bounded",
+      "current_status_raw": "bounded constrained compact-family control sweep for the 3D surrogate lane",
+      "deps": [
+        "mesoscopic_surrogate_localization_sweep_note",
+        "mesoscopic_surrogate_multistage_note",
+        "mesoscopic_surrogate_backreaction_note",
+        "broad_surrogate_point_source_compare_note"
+      ],
+      "note_hash": "e673c4b606ac53736b67796cb4fa1764d3f3ecc5d419ced2991f8baf50ea3a9b",
       "path": "docs/MESOSCOPIC_SURROGATE_COMPACT_FLOOR_SWEEP_NOTE.md",
       "runner_path": "scripts/mesoscopic_surrogate_compact_floor_sweep.py",
       "title": "Mesoscopic Surrogate Compact Floor Sweep Note"
     },
     "mesoscopic_surrogate_h025_constrained_localization_note": {
       "claim_id": "mesoscopic_surrogate_h025_constrained_localization_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "final constrained localization attempt on the proposed_retained 3D `h=0.25` family; broad `topN` remains the best admissible control",
-      "deps": [],
-      "note_hash": "66daab5c192f52b4e5ae8f40b92a28e4ed888f1ee8a84ce6ef150c5fa61f7187",
+      "current_status": "bounded",
+      "current_status_raw": "bounded final constrained localization attempt on the 3D `h=0.25` family; broad `topN` remains the best admissible control",
+      "deps": [
+        "mesoscopic_surrogate_backreaction_note",
+        "broad_surrogate_point_source_compare_note",
+        "mesoscopic_surrogate_multistage_note",
+        "mesoscopic_surrogate_annular_tapered_sweep_note"
+      ],
+      "note_hash": "111ef62209cc78c2439645a54331947fbe9249f069508062c9ceddbd97c1cc40",
       "path": "docs/MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md",
       "runner_path": "scripts/mesoscopic_surrogate_h025_constrained_localization.py",
       "title": "Mesoscopic Surrogate h=0.25 Constrained Localization Note"
@@ -30010,10 +30126,15 @@
     },
     "minimal_absorbing_horizon_probe_note": {
       "claim_id": "minimal_absorbing_horizon_probe_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "bounded moonshot trapping probe on the proposed_retained generated-geometry family",
-      "deps": [],
-      "note_hash": "eff5044937f47b5c30ce471f78f72796560655fc7074268e06d71b2c47e800de",
+      "current_status": "bounded",
+      "current_status_raw": "bounded moonshot trapping probe on the generated-geometry family",
+      "deps": [
+        "gate_b_nonlabel_connectivity_v1_note",
+        "gate_b_nonlabel_connectivity_v1_distance_note",
+        "gate_b_nonlabel_connectivity_v1_joint_note",
+        "gate_b_farfield_note"
+      ],
+      "note_hash": "1d82202c175ace1875ef519cd1a6a16fb920ef01e252a2e11d10aa70abdc14ae",
       "path": "docs/MINIMAL_ABSORBING_HORIZON_PROBE_NOTE.md",
       "runner_path": "scripts/minimal_absorbing_horizon_probe.py",
       "title": "Minimal Absorbing Horizon Probe"
@@ -40772,7 +40893,6 @@
     "impact_parameter_portability_note",
     "independent_generators_heldout_note",
     "interest_map",
-    "inverse_problem_graph_requirements_note",
     "inverse_problem_note",
     "k_dependence_review_safe_note",
     "koide_a1_closure_recommendation_2026-04-22",
@@ -40891,7 +41011,6 @@
     "literature_backmatch_live_scan_note",
     "literature_positioning_note",
     "local_zsym_predictor_note",
-    "localized_source_response_sweep_note",
     "lorentz_violation_derived_note",
     "main_open_cubic_validation_2026-04-11",
     "mass_spectrum_derived_note",
@@ -40900,17 +41019,13 @@
     "memory_decay_diagnosis_2026-04-11",
     "memory_mu2_geometry_sweep_note_2026-04-11",
     "mesoscopic_surrogate_alternate_family_scout_note",
-    "mesoscopic_surrogate_annular_tapered_sweep_note",
     "mesoscopic_surrogate_backreaction_note",
-    "mesoscopic_surrogate_compact_floor_sweep_note",
-    "mesoscopic_surrogate_h025_constrained_localization_note",
     "mesoscopic_surrogate_localization_frontier_note",
     "mesoscopic_surrogate_localization_sweep_note",
     "mesoscopic_surrogate_multistage_note",
     "mesoscopic_surrogate_source_2d_note",
     "mesoscopic_surrogate_threshold_2d_note",
     "mesoscopic_surrogate_two_stage_2d_note",
-    "minimal_absorbing_horizon_probe_note",
     "minimal_bidirectional_trapping_probe_note",
     "minimal_source_driven_field_probe_note",
     "mirror_2d_gravity_law_note",
@@ -41394,17 +41509,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4623,
-    "leaf_count": 720,
+    "edge_count": 4646,
+    "leaf_count": 705,
     "node_count": 1661,
-    "root_count": 1179,
+    "root_count": 1173,
     "runners_with_path": 1227,
     "status_counts": {
-      "bounded": 446,
+      "bounded": 455,
       "open": 48,
       "proposed_promoted": 1,
-      "proposed_retained": 380,
-      "support": 375,
+      "proposed_retained": 370,
+      "support": 376,
       "unknown": 411
     }
   }
