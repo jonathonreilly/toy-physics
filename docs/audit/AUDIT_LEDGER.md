@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:10:15.754216+00:00
+**Generated:** 2026-05-01T05:11:39.837942+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 220 |
-| support | 183 |
+| support | 182 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 817 |
+| ~~audited_conditional~~ | 818 |
 | ~~audited_failed~~ | 162 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 245 |
-| `audited_conditional` | 548 |
+| `audited_conditional` | 549 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 74 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 653 |
+| `unaudited` | 652 |
 
 | criticality | count |
 |---|---:|
@@ -537,6 +537,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_selector_relative_action_recovered_branch_separation_support_theorem_note_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_selector_relative_action_recovered_projection_support_theorem_note_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_selector_shifted_doublet_imag_sign_support_theorem_note_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dm_selector_shifted_relative_action_recovered_packet_closure_theorem_note_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_selector_threshold_stabilization_support_theorem_note_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_split2_interval_certified_dominance_closure_theorem_note_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -5297,6 +5298,24 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The registered runner returned nonzero, so the current executable chain is not cleanly reproducible.
 - **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a support note with non-clean executable support.
 - **auditor confidence:** medium
+
+### `dm_selector_shifted_relative_action_recovered_packet_closure_theorem_note_2026-04-21`
+
+- **Note:** [`DM_SELECTOR_SHIFTED_RELATIVE_ACTION_RECOVERED_PACKET_CLOSURE_THEOREM_NOTE_2026-04-21.md`](../../docs/DM_SELECTOR_SHIFTED_RELATIVE_ACTION_RECOVERED_PACKET_CLOSURE_THEOREM_NOTE_2026-04-21.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The current-package selector residue is closed because the shifted same-law packet selector, the recovered projection, the threshold selector, the positive shifted-imaginary doublet side, and the companion exact-target source-cubic theorem all select the same preferred recovered lift 0.  _(class `B`)_
+- **chain closes:** False — The runner verifies the local shifted-LogDet minimizer checks on the recovered bank, but the conclusion depends on several named upstream selector/projection/sign/exact-target notes, including support-tier and already-conditional rows. It also remains explicitly conditional on the PMNS target surface rather than a pure target-free global sign/source-chart theorem.
+- **rationale:** Issue: the packet-local shifted relative-action checks pass, but the claimed closure stack imports the exact scalar law, recovered projection, shifted doublet sign, and exact-target source-cubic results as upstream authorities. Why this blocks: three of the named upstream selector/support rows are already conditional, and all named authorities are support-tier rather than retained theorem inputs; the runner reads note text and verifies local consistency after granting those surfaces. Repair target: promote or repair the projection, branch-separation, shifted-sign, and exact-target/source-map authorities, and register them as dependencies so this row's closure path is explicit. Claim boundary until fixed: on the current recovered packet, the shifted LogDet/Bregman sweep uniquely selects lift 0 and agrees with the positive Im(K_Z3[1,2]) side, but package-level selector residue closure remains conditional on the upstream selector stack.
+- **open / conditional deps cited:**
+  - `DM_LEPTOGENESIS_PMNS_OBSERVABLE_RELATIVE_ACTION_LAW_NOTE_2026-04-16.md`
+  - `DM_SELECTOR_RELATIVE_ACTION_RECOVERED_BRANCH_SEPARATION_SUPPORT_THEOREM_NOTE_2026-04-21.md`
+  - `DM_SELECTOR_RELATIVE_ACTION_RECOVERED_PROJECTION_SUPPORT_THEOREM_NOTE_2026-04-21.md`
+  - `DM_SELECTOR_SHIFTED_DOUBLET_IMAG_SIGN_SUPPORT_THEOREM_NOTE_2026-04-21.md`
+  - `DM_ABCC_EXACT_TARGET_SURFACE_SOURCE_CUBIC_CLOSURE_THEOREM_NOTE_2026-04-21.md`
+- **auditor confidence:** high
 
 ### `dm_selector_threshold_stabilization_support_theorem_note_2026-04-21`
 
