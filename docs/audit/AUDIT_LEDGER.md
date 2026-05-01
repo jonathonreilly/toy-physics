@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:06:25.845200+00:00
+**Generated:** 2026-05-01T03:07:30.098429+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 252 |
+| bounded | 251 |
 | support | 210 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 12 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 787 |
+| ~~audited_conditional~~ | 788 |
 | ~~audited_failed~~ | 146 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 230 |
-| `audited_conditional` | 514 |
+| `audited_conditional` | 515 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 9 |
 | `audited_renaming` | 14 |
-| `unaudited` | 727 |
+| `unaudited` | 726 |
 
 | criticality | count |
 |---|---:|
@@ -739,6 +739,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_c3_nontrivial_current_boundary_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_commutant_eigenoperator_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_current_bank_value_selection_nogo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `pmns_graph_first_axis_alignment_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_lower_level_end_to_end_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_right_polar_section_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -10358,6 +10359,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md`
   - `PMNS_GRAPH_FIRST_AXIS_ALIGNMENT_NOTE.md`
   - `scripts/frontier_pmns_graph_commutant_cycle_value_boundary.py`
+- **auditor confidence:** high
+
+### `pmns_graph_first_axis_alignment_note`
+
+- **Note:** [`PMNS_GRAPH_FIRST_AXIS_ALIGNMENT_NOTE.md`](../../docs/PMNS_GRAPH_FIRST_AXIS_ALIGNMENT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_graph_first_axis_alignment_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Pushing the graph-first selected axis onto the active Hermitian triplet lane forces P_23 H P_23 = H and hence H = [[a,b,b],[b,c,d],[b,d,c]].  _(class `F`)_
+- **chain closes:** False — The algebraic Z2-invariant core follows after the active-lane bridge is imposed, but the note does not derive the map from the graph-selected hw=1 axis to the active Hermitian PMNS carrier.
+- **rationale:** Issue: the runner verifies 16 algebraic checks for the selector, residual Z2, and aligned-core form, but the load-bearing step is the unproved bridge that pushes the graph-first selected axis onto the active Hermitian triplet lane. Why this blocks: once P23 invariance is assumed the core form is ordinary algebra, but the note does not derive why that graph stabilizer is the PMNS active-carrier constraint or which lepton sector carries it. Repair target: add a retained carrier/transport theorem deriving the active Hermitian lane and its P23 action from the graph-first hw=1 selector, then classify the runner PASS lines for the selector and bridge checks. Claim boundary until fixed: partial algebraic alignment law conditional on the active-lane identification; not a closed PMNS microscopic value or sector-selection theorem.
+- **open / conditional deps cited:**
+  - `scripts/frontier_pmns_graph_first_axis_alignment.py`
 - **auditor confidence:** high
 
 ### `pmns_hw1_source_transfer_boundary_note`
