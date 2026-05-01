@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T18:46:08.206577+00:00
+**Generated:** 2026-05-01T19:23:46.404430+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 207 |
+| bounded | 206 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 895 |
+| ~~audited_conditional~~ | 896 |
 | ~~audited_failed~~ | 79 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 295 |
-| `audited_conditional` | 604 |
+| `audited_conditional` | 605 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 568 |
+| `unaudited` | 567 |
 
 | criticality | count |
 |---|---:|
@@ -617,6 +617,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `em_gravity_coexistence_2x2_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `emergent_lorentz_invariance_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `emergent_product_law_audit_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `equivalence_principle_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `evolving_network_prototype_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `evolving_network_prototype_v2_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `evolving_network_prototype_v4_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -5844,6 +5845,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** On the fixed ordered 3D family, global amplitude rescaling leaves the detector centroid shift invariant for both valley-linear and spent-delay actions, while normalized packet shape changes the response strongly.  _(class `C`)_
 - **chain closes:** True — The live named harness reproduces the note's amplitude-invariance values and packet-shape relative spreads for both actions to the printed precision. The chain closes only for the test-particle amplitude-level statement and the explicit negative boundary that shape/composition dependence remains.
 - **rationale:** The note is careful not to claim a full equivalence principle or persistent-pattern inertial-mass law. The live runner supports the bounded result: both actions are invariant under global amplitude scaling to machine precision, and both actions show large packet-shape spreads of about 159.21% and 155.21%. The referenced frozen log is absent from this worktree, but the live finite computation closes the narrow claim and the note itself preserves the open persistent-pattern boundary.
+- **auditor confidence:** high
+
+### `equivalence_principle_note`
+
+- **Note:** [`EQUIVALENCE_PRINCIPLE_NOTE.md`](../../docs/EQUIVALENCE_PRINCIPLE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** A uniform-field deflection sweep on the lattice produces force responses that scale near-linearly with both field strength and source strength, with exponents 1.008 and 0.998, while layer scaling is sub-quadratic at 1.14.  _(class `C`)_
+- **chain closes:** False — The source correctly disclaims a derivation of m_inertial = m_gravitational, but the bounded numerical scaffold itself is not reproducible from the audit packet because there is no registered runner, fit table, force observable definition, uncertainty model, or mass-extraction theorem. The safe content is a reported bounded scaffold, not an audited equivalence-principle or force-law result.
+- **rationale:** Issue: the note reports near-unity field/source exponents and sub-quadratic layer scaling, but provides no registered primary runner, fit data, force observable definition, uncertainty model, or theorem identifying the response coefficients with inertial and gravitational mass. Why this blocks: a hostile auditor cannot reproduce the bounded exponents or turn beam-deflection linearity into equality of masses from the current packet. Repair target: add a registered sweep runner with fit tables and uncertainties, define the lattice force observable, and derive the inertial-mass and gravitational-source normalization maps from retained inputs. Claim boundary until fixed: a bounded historical scaffold reports near-linear field/source response and explicitly does not establish a retained equivalence principle.
 - **auditor confidence:** high
 
 ### `evolving_network_prototype_note`
