@@ -1,6 +1,6 @@
 # Lane 2 Physics Loop Handoff
 
-**Updated:** 2026-05-01T11:40:23Z
+**Updated:** 2026-05-01T11:42:45Z
 **Loop slug:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Branch:** `physics-loop/lane2-atomic-scale-block01-20260428`  
@@ -290,6 +290,13 @@ PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fa
 
 Review-loop emulation found no blocker. Guardrail: the comparator effective
 threshold near `0.366 GeV` is a hidden selector, not a derivation.
+
+Artifact commit/push checkpoint:
+
+```text
+069010e4 lane2 atomic: add alpha0 threshold moment no-go
+origin/physics-loop/lane2-atomic-scale-block01-20260428
+```
 
 ## Next Exact Action
 
