@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:17:12.546056+00:00
+**Generated:** 2026-05-01T23:19:17.505696+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 68 |
+| **retained_no_go** | 69 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 3 |
+| _proposed_no_go_ | 2 |
 | bounded | 163 |
 | support | 134 |
 | open | 6 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 317 |
+| `audited_clean` | 318 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 496 |
+| `unaudited` | 495 |
 
 | criticality | count |
 |---|---:|
@@ -372,6 +372,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_lane3_stuck_fanout_synthesis_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
+| `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `s3_boundary_link_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `s3_taste_cube_decomposition_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -13169,6 +13170,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The retained R_conn=8/9 conditionally implies rho_E=21/4 only if the additional source-domain bridge gamma_T(center)/gamma_E(center)=-R_conn is supplied; the existing Route-2 carrier does not supply that bridge.  _(class `B`)_
 - **chain closes:** True — The runner verifies the exact rational bridge algebra, the live bounded comparator, and the import-boundary witness with PASS=26, FAIL=0. The note correctly withholds retained m_u/m_c closure and treats R_conn as a conditional bridge target.
 - **rationale:** The support no-go closes as stated: imposing c_TE=-R_conn gives q_E=15/8 and rho_E=21/4 exactly, but rho_E=0 and rho_E=21/4 differ only at the E-center lift, and no checked Route-2 or R_conn authority supplies that typed identification. The runner also verifies that the live endpoint numbers are only close bounded comparators, not exact theorem inputs. This clean audit is limited to the import-boundary result and does not ratify non-top quark masses.
+- **auditor confidence:** high
+
+### `quark_route2_source_domain_bridge_no_go_note_2026-04-28`
+
+- **Note:** [`QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md`](../../docs/QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-019de5d6`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The current exact Route-2 support bank plus retained SU(3) color-projection bank has no typed edge or path identifying R_conn=8/9 with c_TE=gamma_T(center)/gamma_E(center)=-8/9; only if that bridge is added as a new premise does the exact endpoint algebra force q_E=15/8 and beta_E/alpha_E=21/4.  _(class `A`)_
+- **chain closes:** True — As a no-go, the chain closes because the negative boundary is established on the supplied typed-edge inventory: the existing exact algebra is checked conditionally, and the missing source-domain bridge remains absent even after granting the stated T-side premises and SU(3) value. The result is not a derivation of the up-type scalar law, but a clean current-bank non-derivability boundary.
+- **rationale:** The claim is a negative no-go rather than a positive physical identification. The load-bearing step is the finite typed-graph absence of a current-bank bridge from SU(3) R_conn to the Route-2 E/T center endpoint ratio, with exact conditional algebra showing what would follow if the bridge were added. The runner directly checks both the conditional algebra and the missing typed path, while blocking untyped promotion and comparator-only/numerical routes. No hidden physical identification is used to close the no-go.
 - **auditor confidence:** high
 
 ### `quark_strc_observable_principle_note_2026-04-19`
