@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T21:04:27.185813+00:00
+**Generated:** 2026-05-01T21:05:42.489201+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 168 |
-| support | 136 |
+| support | 135 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 942 |
-| ~~audited_failed~~ | 84 |
+| ~~audited_failed~~ | 85 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 301 |
 | `audited_conditional` | 645 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 57 |
+| `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 517 |
+| `unaudited` | 516 |
 
 | criticality | count |
 |---|---:|
@@ -1083,6 +1083,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `same_family_3d_closure_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
+| `scalar_selector_full_stack_recovery_note_2026-04-19` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
 | `second_grown_family_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `self_gravity_backreaction_closure_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `session_summary_2026-04-01_topology` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -13464,6 +13465,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`
   - `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
   - `QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`
+
+### `scalar_selector_full_stack_recovery_note_2026-04-19`
+
+- **Note:** [`SCALAR_SELECTOR_FULL_STACK_RECOVERY_NOTE_2026-04-19.md`](../../docs/SCALAR_SELECTOR_FULL_STACK_RECOVERY_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The recovery note claims to provide the full-stack per-lane status after recovery, including a final axiom-accounting table where Koide kappa, Koide theta, DM A-BCC, and quark a_u have no residues and reviewer-bar all-four-gate closure is achieved, while also saying the current package read is narrower and this note is route history rather than the current claim surface.  _(class `B`)_
+- **chain closes:** False — The Berry subclaim has executable support, but the full-stack recovery/accounting claim is contradictory and lacks the required per-lane dependency checks.
+- **rationale:** Issue: the registered Berry runner passes for the selected-line Berry subclaim, but the note's broad full-stack recovery/status claim is internally inconsistent and unsupported by this row's dependency surface. The top-level caveat says the current package read is narrower and that this is route history, while §5 states all four gates are closed with zero named residues; the row has no registered dependencies or executed runners for the MRU, DM, and quark closure assertions. Why this blocks: a hostile reviewer cannot ratify a full-stack zero-residue accounting from one Berry runner and a document that gives conflicting current-status readings. Repair target: split the route-history inventory from current package status, remove or reconcile the §5 zero-residue closure table, and register/run the cited per-lane theorem dependencies if any full-stack accounting remains. Claim boundary until fixed: the Berry selected-line runner currently passes and supports the narrow geometric-identification subclaim; the all-gates-closed recovery accounting does not close.
+- **open / conditional deps cited:**
+  - `scripts/frontier_koide_berry_phase_theorem.py`
+  - `MRU/DM/quark recovered theorem runners`
+  - `full-stack status reconciliation`
 
 ### `scalar_trace_tensor_no_go_note`
 
