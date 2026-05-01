@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:07:11.837714+00:00
+**Generated:** 2026-05-01T04:08:59.612405+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 239 |
-| support | 195 |
+| support | 194 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 802 |
+| ~~audited_conditional~~ | 803 |
 | ~~audited_failed~~ | 156 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 533 |
+| `audited_conditional` | 534 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 696 |
+| `unaudited` | 695 |
 
 | criticality | count |
 |---|---:|
@@ -620,6 +620,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_wider_replay_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `h0125_wider_w4_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `h0125_wider_w4_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hadron_mass_lane1_theorem_plan_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hard_geometry_gravity_window_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7361,6 +7362,26 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** `sqrt(sigma)` status upgrade and no hadron-mass claim.  _(class `D`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 10 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27`
+
+- **Note:** [`HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING_SUPPORT_NOTE_2026-04-27.md`](../../docs/HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING_SUPPORT_NOTE_2026-04-27.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Retaining Sigma from Banks-Casher requires retained rho_Dirac(0) in the chiral and thermodynamic limits, but current framework content has only L=4,6 finite-volume data and no structural identity fixing rho_Dirac(0).  _(class `B`)_
+- **chain closes:** False — The G_BARE scan supports the finite-volume obstruction, but the note depends on unregistered framework authorities, external Banks-Casher/chRMT conventions, and an inventory claim that no current structural Sigma identity exists. No runner checks the scoping table or the absence claim.
+- **rationale:** Issue: the Banks-Casher Sigma no-go depends on unregistered lattice-scan/framework authorities and on a broad absence claim over current framework content. Why this blocks: the note correctly scopes a plausible obstruction, but the audit cannot verify from declared deps and runner output that no structural rho_Dirac(0) identity exists anywhere in the framework. Repair target: register the G_BARE scan, confinement/string-tension note, minimal axioms, Lane 1 roadmap, and the admitted Banks-Casher/chRMT conventions as explicit inputs, and add a small runner or inventory check for the finite-volume rho(0) table and closure-gate classification. Claim boundary until fixed: this is a useful conditional Lane-1 scoping no-go for Sigma retention, not a closed theorem retiring the Banks-Casher route.
+- **open / conditional deps cited:**
+  - `G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md`
+  - `CONFINEMENT_STRING_TENSION_NOTE.md`
+  - `MINIMAL_AXIOMS_2026-04-11.md`
+  - `HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md`
+  - `HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md`
+  - `EXTERNAL_CONVENTION: Banks-Casher relation`
+  - `EXTERNAL_CONVENTION: chiral random-matrix universality`
 - **auditor confidence:** high
 
 ### `hadron_lane1_confinement_to_mass_firewall_note_2026-04-27`
