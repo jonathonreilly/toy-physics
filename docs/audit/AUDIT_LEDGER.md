@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:28:28.677520+00:00
+**Generated:** 2026-05-01T01:32:13.519094+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
-| bounded | 270 |
+| bounded | 271 |
 | support | 230 |
-| open | 17 |
+| open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 765 |
+| ~~audited_conditional~~ | 763 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 487 |
+| `audited_conditional` | 485 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 760 |
+| `unaudited` | 762 |
 
 | criticality | count |
 |---|---:|
@@ -639,7 +639,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_a1_derivation_status_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_loop_final_status_2026-04-22` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `koide_a1_loop_investigation_summary` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -667,7 +666,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_delta_linking_relation_theorem_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `koide_q_delta_readout_retention_split_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_q_op_locality_c3_fixed_source_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
-| `koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `koide_scale_selector_reparameterization_theorem_note_2026-04-20` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_cyclic_response_bridge_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_selected_line_provenance_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7844,26 +7842,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a bounded note without audit-ratified executable closure.
 - **auditor confidence:** medium
 
-### `koide_a1_loop_investigation_summary`
-
-- **Note:** [`KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md`](../../docs/KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md)
-- **current_status:** open
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:2026-05-01-koide_a1_loop_investigation_summary`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The note claims that the A1/Koide Q=2/3 condition has been extensively characterized by loop-local runners and structural matches, but remains unclosed axiom-natively pending a new structural lemma or primitive.  _(class `B`)_
-- **chain closes:** False — The row honestly states that A1 remains open, but the claimed saturation of route searches, PASS totals, external literature scan, and retained-framework matches are not tied to a primary runner or declared dependencies.
-- **rationale:** Issue: the open-status boundary is appropriate, but the note's stronger investigation claims are not independently auditable from this row: it lists 8 A1-focused runners, 181/181 PASS totals, multiple retained-framework equivalences, a one-loop QFT exclusion, and an external-literature scan without a registered primary runner or dependency list. Why this blocks: the audit can accept the safe boundary that A1 remains open, but cannot verify comprehensive route saturation or the exact scope of the listed candidate closures from the note alone. Repair target: register the loop-summary regression or a manifest runner that executes the named A1 scripts and records their classified outputs, and declare the cited Koide review, Cl3-SM embedding, charged-lepton equivalence, structural no-go, and higher-order theorem notes as dependencies. Claim boundary until fixed: an open investigation summary identifying candidate A1 closure routes and the current missing structural lemma; not a closed proof that the search landscape is exhaustive or that any 1/2 identity derives A1.
-- **open / conditional deps cited:**
-  - `KOIDE_A1_DERIVATION_STATUS_NOTE.md`
-  - `CL3_SM_EMBEDDING_THEOREM.md`
-  - `CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`
-  - `STRUCTURAL_NO_GO_SURVEY_NOTE.md`
-  - `HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md`
-  - `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
-  - `CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md`
-- **auditor confidence:** high
-
 ### `koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24`
 
 - **Note:** [`KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md`](../../docs/KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md)
@@ -8641,27 +8619,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The unique trace-preserving local descent from A=span(P_plus,P_perp) to D^C3=span(I) is E_loc(X)=Tr(X)I/3, equals diagonal compression on A, and erases the reduced traceless Z coordinate modulo common scalar background.  _(class `A`)_
 - **chain closes:** True — The runner verifies the projector algebra, diagonal compression, uniqueness from trace preservation, and quotient erasure exactly. The note explicitly keeps the physical source-domain law and retained Koide closure open.
 - **rationale:** The support-tier canonical-descent theorem closes on its stated scope: with scalar preservation, trace preservation, and strict onsite target fixed, the descent A -> D^C3 is uniquely Tr(X)I/3 and agrees with site-local diagonal compression. The runner verifies 55 checks including the boundary guardrails, projector algebra, uniqueness, and erasure of the reduced Z coordinate modulo common scalar. Residual risk is downstream overuse: this clean audit does not prove that the physical charged-lepton source-domain law must use onsite descent, nor does it retain native Q, delta, or full Koide closure.
-- **auditor confidence:** high
-
-### `koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20`
-
-- **Note:** [`KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md`](../../docs/KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:2026-05-01-koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The note claims that exact qubit-lattice-dimension, A-select, anomaly-arithmetic, Fourier, and CPC identities form a bounded candidate support route for Koide Q=2/3 and Brannen delta=2/9, while leaving canonical closure to reviewer acceptance of the structural bridge.  _(class `B`)_
-- **chain closes:** False — The runner verifies 62 algebraic identities, but the load-bearing bridge accepts A-select, hypercharge/anomaly assignments, CPC/FP2 phase structure, and physical-lattice/Koide-selector inputs that are not declared as dependencies and are hard-coded into the runner.
-- **rationale:** Issue: the primary runner exits cleanly with PASS=62/FAIL=0, but it verifies algebraic consistency after importing the contested bridge inputs: SELECTOR=sqrt(6)/3, Q=2/3, delta=2/9, retained hypercharge/anomaly values, CPC/FP2 phase equivalence, and the physical Cl(3)/Z^3 interpretation. Why this blocks: with deps=[] the row cannot audit as a closed derivation of Q or delta; the runner's own header says it does not adjudicate whether the structural bridge is strong enough to retire canonical open imports, and the note explicitly leaves the reviewer decision open. It also references a Brannen delta quantization note path that is not present under that name. Repair target: declare the A-select provenance, anomaly/hypercharge, Berry/CPC/FP2, no-go, and Koide review authorities as dependencies, and separate exact algebra checks from bridge-acceptance claims in the runner output. Claim boundary until fixed: bounded support that many exact identities converge on 2/3 and 2/9 after the listed bridge inputs are accepted; not an audited closure of the Koide or Brannen imports.
-- **open / conditional deps cited:**
-  - `ANOMALY_FORCES_TIME_THEOREM.md`
-  - `HYPERCHARGE_IDENTIFICATION_NOTE.md`
-  - `KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md`
-  - `KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md`
-  - `KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`
-  - `KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`
-  - `KOIDE_C3_SINGLET_EXTENSION_REDUCTION_THEOREM_NOTE_2026-04-20.md`
-  - `CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `koide_reviewer_stress_test_note_2026-04-21`
