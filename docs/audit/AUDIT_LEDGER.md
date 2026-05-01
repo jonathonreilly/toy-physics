@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T00:37:48.135621+00:00
+**Generated:** 2026-05-01T00:45:12.179072+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,14 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
+| `audit_in_progress` | 1 |
 | `audited_clean` | 225 |
 | `audited_conditional` | 481 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 770 |
+| `unaudited` | 769 |
 
 | criticality | count |
 |---|---:|
@@ -94,6 +95,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
+| `z2_hw1_mass_matrix_parametrization_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
