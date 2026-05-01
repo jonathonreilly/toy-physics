@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:21:32.499260+00:00
+**Generated:** 2026-05-01T02:23:48.998387+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,13 +22,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 2 |
 | bounded | 261 |
-| support | 214 |
+| support | 213 |
 | open | 16 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 45 |
 | ~~audited_conditional~~ | 773 |
-| ~~audited_failed~~ | 143 |
+| ~~audited_failed~~ | 144 |
 
 | audit_status | count |
 |---|---:|
@@ -36,10 +36,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 229 |
 | `audited_conditional` | 505 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 63 |
+| `audited_failed` | 64 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 12 |
-| `unaudited` | 738 |
+| `unaudited` | 737 |
 
 | criticality | count |
 |---|---:|
@@ -875,6 +875,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `monopole_derived_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | C | - |
 | `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
+| `pmns_selector_sign_to_branch_reduction_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `second_grown_family_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -10392,6 +10393,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `publication/ci3_z3/DERIVATION_ATLAS.md`
   - `PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md`
   - `PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md`
+- **auditor confidence:** high
+
+### `pmns_selector_sign_to_branch_reduction_note`
+
+- **Note:** [`PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md`](../../docs/PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_selector_sign_to_branch_reduction_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Given B_red = a_sel(chi_N_nu - chi_N_e), sign(a_sel) selects N_nu for positive sign, N_e for negative sign, and leaves the branch unresolved at zero, after which the remaining task is the cited branch-conditioned coefficient problem.  _(class `A`)_
+- **chain closes:** False — The sign-to-branch algebra itself is trivial, but the runner exits nonzero before the coefficient-handoff checks because the cited last-mile note is missing, and the runner's other coefficient inverse-problem note paths are absent as well.
+- **rationale:** Issue: the registered runner exits nonzero with FileNotFoundError for docs/NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md after only three unclassified PASS lines, and the other two coefficient-handoff files named by the runner, docs/NEUTRINO_DIRAC_TWO_HIGGS_OBSERVABLE_INVERSE_PROBLEM_NOTE.md and docs/CHARGED_LEPTON_TWO_HIGGS_OBSERVABLE_INVERSE_PROBLEM_NOTE.md, are also absent from docs/ and have no ledger rows. Why this blocks: the theorem's second half claims a handoff to an already-known branch-conditioned finite-dimensional inverse problem, but the required authority artifacts are missing, so the current repository cannot substantiate or rerun that load-bearing handoff. Repair target: restore or replace the last-mile and two inverse-problem notes, register them in the ledger/deps, then update the runner to read the current paths and emit classified A/B PASS lines. Claim boundary until fixed: only the local sign convention for B_red = a_sel(chi_N_nu - chi_N_e) is supported; the claimed reduction to existing branch-conditioned coefficient closure fails in the current repo state.
+- **open / conditional deps cited:**
+  - `PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md`
+  - `NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md`
+  - `NEUTRINO_DIRAC_TWO_HIGGS_OBSERVABLE_INVERSE_PROBLEM_NOTE.md`
+  - `CHARGED_LEPTON_TWO_HIGGS_OBSERVABLE_INVERSE_PROBLEM_NOTE.md`
 - **auditor confidence:** high
 
 ### `pmns_selector_three_identity_support_note_2026-04-21`
