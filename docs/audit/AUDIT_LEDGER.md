@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:10:09.328882+00:00
+**Generated:** 2026-05-01T20:11:42.876124+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 184 |
+| bounded | 183 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 917 |
+| ~~audited_conditional~~ | 918 |
 | ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 619 |
+| `audited_conditional` | 620 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 550 |
+| `unaudited` | 549 |
 
 | criticality | count |
 |---|---:|
@@ -941,6 +941,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_layered_gauge_phase_diagram_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strong_cp_theta_zero_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | E | - |
 | `structured_chokepoint_bridge_extension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `structured_mirror_bornsafe_scan_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `structured_mirror_reconciliation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -13846,6 +13847,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** True — The current runner reproduces the three-row diagnostic table with the stated Born, k=0, gravity, and pur_cl values. The closure is finite and readout-specific, with no asymptotic or architecture-level bridge theorem.
 - **rationale:** The bounded finite card closes from the source note and current runner output. It does not derive the graph parameters, enforce hard assertions in code, or establish readout-independent survival, but the current note explicitly narrows away from those stronger claims. Residual risk is scope drift if the word bridge is later treated as architecture-level closure.
 - **auditor confidence:** high
+
+### `structured_mirror_bornsafe_scan_note`
+
+- **Note:** [`STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md`](../../docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The scanned structured-mirror linear-propagator family contains no Born-safe pocket; the best near-Born candidate remains at Born 8.79e-03 on the 6-seed confirmation, far above the machine-precision Born threshold.  _(class `C`)_
+- **chain closes:** False — The best-candidate confirmation command reproduces the note's negative row, but the ledger has no registered runner_path and a routine audit did not rerun the entire broad grid. The bounded negative is supported for the named confirmation row, but not fully mechanically closed from the ledger surface.
+- **rationale:** Issue: the note's key 6-seed near-Born candidate failure reproduces, but the row lacks a registered primary runner and the full broad scan is not captured by classified PASS lines. Why this blocks: a clean audit would need the ledger runner to rerun or otherwise certify both the broad scan and the best-candidate confirmation, with explicit thresholds for Born safety and coexistence. Repair target: register scripts/structured_mirror_bornsafe_scan.py, add a cheap confirmation mode or archived broad-scan manifest, and emit classified PASS lines for no Born-safe pocket, best-candidate confirmation, k=0 control, and bounded negative scope. Claim boundary until fixed: a bounded negative control supported by the reproduced best-candidate row, not a clean exhaustive structured-mirror no-go.
+- **open / conditional deps cited:**
+  - `scripts/structured_mirror_bornsafe_scan.py`
+- **auditor confidence:** medium
 
 ### `structured_mirror_reconciliation_note`
 

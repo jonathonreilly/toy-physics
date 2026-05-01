@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 8,
     "high": 195,
-    "leaf": 214,
+    "leaf": 213,
     "medium": 133
   },
-  "generated_at": "2026-05-01T20:10:09.069772+00:00",
+  "generated_at": "2026-05-01T20:11:42.642388+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9913,23 +9913,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "structured_mirror_bornsafe_scan_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.822,
-      "note_path": "docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 4
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dimensional_gravity_table",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14053,6 +14036,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 144,
-  "total_pending": 550
+  "ready_count": 143,
+  "total_pending": 549
 }
