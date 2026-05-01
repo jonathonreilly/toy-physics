@@ -3,9 +3,9 @@
     "critical": 8,
     "high": 195,
     "leaf": 216,
-    "medium": 145
+    "medium": 144
   },
-  "generated_at": "2026-05-01T19:31:23.248027+00:00",
+  "generated_at": "2026-05-01T19:33:04.224218+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6478,23 +6478,6 @@
       "note_path": "docs/PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md",
       "ready": true,
       "runner_path": "scripts/frontier_planck_boundary_orientation_incidence_no_go.py",
-      "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wave_equation_gravity_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.587,
-      "note_path": "docs/WAVE_EQUATION_GRAVITY_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_wave_equation_gravity.py",
       "transitive_descendants": 33
     },
     {
@@ -14291,6 +14274,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 165,
-  "total_pending": 564
+  "ready_count": 164,
+  "total_pending": 563
 }

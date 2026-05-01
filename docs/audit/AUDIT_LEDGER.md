@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T19:31:23.507469+00:00
+**Generated:** 2026-05-01T19:33:04.517826+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 296 |
+| `audited_clean` | 297 |
 | `audited_conditional` | 606 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 564 |
+| `unaudited` | 563 |
 
 | criticality | count |
 |---|---:|
@@ -379,6 +379,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `wave_equation_gravity_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `wave_retardation_lab_prediction_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_static_boundary_sensitivity_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_static_direct_probe_fine_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -14541,6 +14542,18 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **chain closes:** False — The old third sample sided with the first numerical-match verdict, but judicial review favors the second: the note depends on a missing artifact-chain provenance and the current runner did not complete under the audit timeout, so the numerical synthesis is conditional rather than independently closed. The selected H=0.25 values can remain a reported narrow synthesis, not an audit-clean numerical theorem.
 - **rationale:** The old third sample sided with the first numerical-match verdict, but judicial review favors the second: the note depends on a missing artifact-chain provenance and the current runner did not complete under the audit timeout, so the numerical synthesis is conditional rather than independently closed. The selected H=0.25 values can remain a reported narrow synthesis, not an audit-clean numerical theorem.
 - **auditor confidence:** judicial
+
+### `wave_equation_gravity_note`
+
+- **Note:** [`WAVE_EQUATION_GRAVITY_NOTE.md`](../../docs/WAVE_EQUATION_GRAVITY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The lattice d'Alembertian upgrade establishes finite-speed propagation, static-limit Poisson/Newton recovery, qualitative retardation, mass-linearity, and wave/Poisson propagator-scaling agreement, while not establishing a clean 1/r radiation tail or Newton-like propagator distance law.  _(class `C`)_
+- **chain closes:** True — The runner computes the wave evolution, static comparison, moving-source asymmetry, radiation exponent, and propagator exponents directly; its six passes and two disclosed failures match the narrowed support-tier claim. The note no longer claims the failed 1/r radiation tail or Newton-like propagator distance law as established.
+- **rationale:** The narrowed support claim closes against the registered runner: finite-speed wavefront propagation, static-limit behavior, qualitative retardation, propagator mass-linearity, and wave/Poisson scaling agreement are computed and reported as passes. The two negative results are also represented honestly in the source note, so they do not contradict the current claim boundary. Residual risk is that this is only support-level finite-box numerics, not a retained gravitational-radiation or continuum Newton-distance theorem.
+- **auditor confidence:** high
 
 ### `wave_equation_self_field_note`
 
