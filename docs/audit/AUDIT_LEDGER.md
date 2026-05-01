@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:43:58.061054+00:00
+**Generated:** 2026-05-01T20:44:57.120363+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 173 |
-| support | 144 |
+| support | 143 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 931 |
+| ~~audited_conditional~~ | 932 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 300 |
-| `audited_conditional` | 634 |
+| `audited_conditional` | 635 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 531 |
+| `unaudited` | 530 |
 
 | criticality | count |
 |---|---:|
@@ -915,6 +915,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_jts_residue_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | B | `quark_projector_ray_phase_completion_note_2026-04-18` |
 | `quark_route2_exact_readout_map_note_2026-04-19` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `quark_strc_observable_principle_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quark_up_amplitude_provenance_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -12920,6 +12921,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The retained R_conn=8/9 conditionally implies rho_E=21/4 only if the additional source-domain bridge gamma_T(center)/gamma_E(center)=-R_conn is supplied; the existing Route-2 carrier does not supply that bridge.  _(class `B`)_
 - **chain closes:** True — The runner verifies the exact rational bridge algebra, the live bounded comparator, and the import-boundary witness with PASS=26, FAIL=0. The note correctly withholds retained m_u/m_c closure and treats R_conn as a conditional bridge target.
 - **rationale:** The support no-go closes as stated: imposing c_TE=-R_conn gives q_E=15/8 and rho_E=21/4 exactly, but rho_E=0 and rho_E=21/4 differ only at the E-center lift, and no checked Route-2 or R_conn authority supplies that typed identification. The runner also verifies that the live endpoint numbers are only close bounded comparators, not exact theorem inputs. This clean audit is limited to the import-boundary result and does not ratify non-top quark masses.
+- **auditor confidence:** high
+
+### `quark_strc_observable_principle_note_2026-04-19`
+
+- **Note:** [`QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md`](../../docs/QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** This note is a superseded route-history framing of STRC-LO; the actual STRC-LO derivation should be cited from the separate collinearity theorem note.  _(class `B`)_
+- **chain closes:** False — The runner verifies algebraic consequences and rule-outs after setting a_u_LO = sin_d(1-rho), but it does not derive STRC-LO. The source itself now narrows the row to support/history and points to the collinearity theorem as the primary derivation.
+- **rationale:** Issue: the runner reproduces STRC/RPSR identities, but it assumes the STRC relation rather than deriving it, and the note is explicitly superseded as a primary source. Why this blocks: a hostile reviewer cannot use this row to ratify STRC-LO; at most it documents route history and algebraic consequences under the assumed observable-principle framing. Repair target: cite the STRC-LO collinearity theorem for derivation and keep this row as a historical support note, or remove primary-source language from the older body. Claim boundary until fixed: route-history support only; not a derivation of STRC-LO and not a retained observable-principle claim.
+- **open / conditional deps cited:**
+  - `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
+  - `scripts/frontier_quark_strc_observable_principle.py`
 - **auditor confidence:** high
 
 ### `quark_up_amplitude_provenance_audit_note_2026-04-19`
