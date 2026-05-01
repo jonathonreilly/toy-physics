@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T18:33:30.160976+00:00
+**Generated:** 2026-05-01T18:35:29.892906+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 209 |
-| support | 152 |
+| support | 151 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 890 |
+| ~~audited_conditional~~ | 891 |
 | ~~audited_failed~~ | 79 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 293 |
-| `audited_conditional` | 599 |
+| `audited_conditional` | 600 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 575 |
+| `unaudited` | 574 |
 
 | criticality | count |
 |---|---:|
@@ -864,6 +864,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_selector_current_stack_zero_law_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `pmns_selector_nonuniversal_support_reduction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_selector_sector_odd_reduction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `pmns_selector_sign_to_branch_reduction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
 | `pmns_sigma_zero_nogo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `pmns_transfer_operator_dominant_mode_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -11817,6 +11818,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `publication/ci3_z3/DERIVATION_ATLAS.md`
   - `PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md`
   - `PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md`
+- **auditor confidence:** high
+
+### `pmns_selector_sign_to_branch_reduction_note`
+
+- **Note:** [`PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md`](../../docs/PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Using the reduced selector basis S_cls = chi_N_nu - chi_N_e, the exact reduced realization is B_red = a_sel S_cls, so sign(a_sel) selects the neutrino-side or charged-lepton-side branch and leaves only the branch-conditioned coefficient problem.  _(class `B`)_
+- **chain closes:** False — The sign algebra closes once the unique-amplitude-slot and last-mile/inverse-problem inputs are granted, but those inputs are not audit-clean one-hop dependencies for this row. The runner checks the sign behavior and text handoff, not a retained derivation of the microscopic bridge or the upstream coefficient authorities.
+- **rationale:** Issue: the row's sign-to-branch reduction depends on the unique selector amplitude slot and branch-conditioned inverse-problem stack, but those upstream authorities are not audit-clean dependencies here. Why this blocks: the runner verifies that positive/negative a_sel selects opposite branch weights and that the notes contain the expected handoff language, but it does not derive a nonzero microscopic bridge or ratify the upstream PMNS selector/inverse-problem inputs. Repair target: register and ratify the unique-amplitude-slot, last-mile, and two-Higgs inverse-problem notes, then use this runner as the branch-sign handoff check. Claim boundary until fixed: conditional on a valid nonzero reduced selector B_red = a_sel S_cls, the sign of a_sel removes the branch ambiguity and hands off to the selected branch's coefficient problem.
+- **open / conditional deps cited:**
+  - `PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md`
+  - `NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md`
+  - `NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`
+  - `CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`
 - **auditor confidence:** high
 
 ### `pmns_selector_three_identity_support_note_2026-04-21`
