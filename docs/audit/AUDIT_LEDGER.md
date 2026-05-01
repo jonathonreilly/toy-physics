@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:55:35.262515+00:00
+**Generated:** 2026-05-01T01:56:48.117563+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
-| bounded | 265 |
+| bounded | 263 |
 | support | 225 |
 | open | 17 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 775 |
+| ~~audited_conditional~~ | 777 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 497 |
+| `audited_conditional` | 498 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 750 |
+| `unaudited` | 749 |
 
 | criticality | count |
 |---|---:|
@@ -627,6 +627,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higher_order_structural_theorems_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `higher_symmetry_gravity_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `holographic_probe_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7474,6 +7475,20 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `scripts/mirror_chokepoint_joint.py_readout_not_registered_one_hop_dependency`
   - `scripts/higher_symmetry_dag.py_generator_family_not_registered_one_hop_dependency`
   - `runner_prints_diagnostics_without_hard_retention_assertions`
+- **auditor confidence:** high
+
+### `holographic_probe_note_2026-04-11`
+
+- **Note:** [`HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md`](../../docs/HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-holographic_probe_note_2026-04-11`  (codex-current; independence=fresh_context)
+- **load-bearing step:** In the corrected minimum-image Dirac-sea correlation-matrix rerun on 2D periodic staggered lattices, entropy and Schmidt rank fit boundary size more cleanly than volume, with self-gravity preserving the boundary preference and reducing the fitted boundary-law coefficient by about 12%.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the finite-lattice fit table, but it emits no classified PASS lines, imports periodic_geometry.py without a declared dependency, and the result remains a bounded finite-size probe rather than a theorem about holography.
+- **rationale:** Issue: the runner output matches the note's rerun numbers, but it has zero classified PASS lines, depends on scripts/periodic_geometry.py without a declared dependency, and reports optional plot generation failed because matplotlib is unavailable. The claimed boundary-law preference is also a finite-size correlation-matrix probe on sides 8,10,12,14, not a proof of holography or a continuum quantum-gravity result. Why this blocks: clean audit requires classified runner checks for the boundary-vs-volume regressions and helper geometry, and the claim must remain bounded to the tested lattice construction. Repair target: add classified PASS checks for the regression comparisons and coefficient shift, declare the periodic geometry helper, and make plotting optional or restore its dependency if artifacts are part of the evidence. Claim boundary until fixed: bounded numerical probe that the tested 2D periodic Dirac-sea construction favors boundary scaling over volume scaling; not an audited holographic theorem.
+- **open / conditional deps cited:**
+  - `scripts/periodic_geometry.py`
 - **auditor confidence:** high
 
 ### `hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29`
