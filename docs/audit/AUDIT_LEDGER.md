@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:28:50.931023+00:00
+**Generated:** 2026-05-01T06:30:37.474838+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 196 |
-| support | 169 |
+| support | 168 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 844 |
+| ~~audited_conditional~~ | 845 |
 | ~~audited_failed~~ | 173 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 256 |
-| `audited_conditional` | 576 |
+| `audited_conditional` | 577 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 83 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 604 |
+| `unaudited` | 603 |
 
 | criticality | count |
 |---|---:|
@@ -763,6 +763,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `mirror_program_synthesis` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `n_eff_from_three_generations_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `neutrino_axiom3_reading_stuck_fanout_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_global_lift_partial_theorem_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -10488,6 +10489,20 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The boundary mirror family is a Born-clean, gravity-positive, decohering pocket through N=100, with canonical exponent fit alpha=-0.245 but no bounded asymptotic claim.  _(class `G`)_
 - **chain closes:** False — The claim is a finite fitted window on a selected mirror configuration, and the source itself reports a weak non-monotone fit with R^2=0.126. No primary runner or one-hop dependencies are registered in the ledger row.
 - **rationale:** Issue: the retained surface depends on a selected dense-boundary mirror parameter pocket and a weak descriptive fit, with no registered runner/log reproduction in the audit row. Why this blocks: finite fitted rows with poor monotonicity and R^2=0.126 do not establish a retained family theorem or asymptotic law. Repair target: register the mirror runner and canonical log as audit artifacts, recompute the retained rows, and either state this as bounded finite-window evidence or derive a stable pocket-selection/asymptotic criterion. Claim boundary until fixed: safe as a bounded report of the N=40..100 mirror pocket and gravity wall at N=120; not safe as proposed-retained mirror boundary science.
+- **auditor confidence:** high
+
+### `mirror_program_synthesis`
+
+- **Note:** [`MIRROR_PROGRAM_SYNTHESIS.md`](../../docs/MIRROR_PROGRAM_SYNTHESIS.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Exact y -> -y symmetry in the graph edge structure forces the transfer matrix product to maintain rank-2 (one singular value per symmetry sector). Slit A and slit B map to different sectors and cannot converge.  _(class `B`)_
+- **chain closes:** False — The registered runner cleanly verifies only the mirror Born subclaim; the synthesis also relies on rank/ceiling, MI, gravity, scaling, exact-2D validation, and grown-lane status claims without parsed audited dependency edges in this row.
+- **rationale:** Issue: scripts/mirror_born_audit.py currently supports the Born-clean mirror-generator subclaim, but the load-bearing mirror-program synthesis also asserts rank-2 sector preservation, MI/decoherence scaling, mass scaling, gravity, exact-2D validation strength, and grown-lane harness sensitivity without explicit audited dependencies in this row. Why this blocks: a clean audit of the complete synthesis would need each cited result to be tied to current audited runners or dependency rows, not just the Born audit. Repair target: add explicit ledger dependencies or split the synthesis into separately audited Born, MI, ceiling/rank, gravity, exact-2D, and structured-growth rows. Claim boundary until fixed: the row can be cited as conditional program synthesis with a clean Born-audit subresult, not as a clean audited mirror-program theorem.
+- **open / conditional deps cited:**
+  - `mirror_program_synthesis -> rank/ceiling, MI/decoherence, gravity, exact-2D, and structured-growth claims not covered by primary runner or explicit audited deps`
 - **auditor confidence:** high
 
 ### `monopole_derived_note`
