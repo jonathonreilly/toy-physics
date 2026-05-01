@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:13:16.908424+00:00
+**Generated:** 2026-05-01T02:15:37.565975+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 2 |
 | bounded | 261 |
-| support | 219 |
+| support | 218 |
 | open | 16 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 45 |
-| ~~audited_conditional~~ | 768 |
+| ~~audited_conditional~~ | 769 |
 | ~~audited_failed~~ | 143 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 229 |
-| `audited_conditional` | 500 |
+| `audited_conditional` | 501 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 12 |
-| `unaudited` | 743 |
+| `unaudited` | 742 |
 
 | criticality | count |
 |---|---:|
@@ -737,6 +737,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_commutant_eigenoperator_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_scalar_bridge_nonrealization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `pmns_sector_exchange_nonforcing_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_selector_current_stack_zero_law_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
 | `pmns_sigma_zero_nogo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -10283,6 +10284,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
   - `PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md`
   - `publication/ci3_z3/DERIVATION_ATLAS.md`
+- **auditor confidence:** high
+
+### `pmns_sector_exchange_nonforcing_note`
+
+- **Note:** [`PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md`](../../docs/PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_sector_exchange_nonforcing_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the reduced one-sided PMNS surface, sector exchange swaps the neutrino-oriented and charged-lepton-oriented realizations while the retained support-side descriptors see only the unordered pair {monomial lane, active two-Higgs lane}, so the current support-side bank cannot force the residual orientation bit tau in Z_2.  _(class `A`)_
+- **chain closes:** False — The runner demonstrates sigma-even descriptor algebra on toy reduced branches, but its PASS lines are unclassified and the row declares no dependencies for the imported nonselection, universality, orbit-reduction, or atlas/current-bank absence checks.
+- **rationale:** Issue: the runner's local sector-exchange/descriptor checks complete with PASS=11/FAIL=0, but the PASS lines are unclassified and the row has deps=[] while the theorem-level claim assumes PMNS minimal-branch nonselection, lepton shared-Higgs universality underdetermination, PMNS sector-orientation orbit reduction, and an atlas/current-bank absence check. Why this blocks: a clean current-bank nonforcing theorem requires those imported support-bank boundaries to be declared/audited, and the runner should expose classified checks separating local sigma-even algebra from text/atlas absence checks. Repair target: declare the three imported PMNS support notes and atlas/current-bank surface as dependencies, and update the runner to emit A/B/C/D PASS lines for the descriptor involution and bank-absence checks. Claim boundary until fixed: support-level evidence that the displayed reduced descriptors are sigma-even and do not by themselves choose the sector orientation; not an independently audited impossibility theorem for all support-side selectors.
+- **open / conditional deps cited:**
+  - `publication/ci3_z3/DERIVATION_ATLAS.md`
+  - `PMNS_MINIMAL_BRANCH_NONSELECTION_NOTE.md`
+  - `LEPTON_SHARED_HIGGS_UNIVERSALITY_UNDERDETERMINATION_NOTE.md`
+  - `PMNS_SECTOR_ORIENTATION_ORBIT_NOTE.md`
 - **auditor confidence:** high
 
 ### `pmns_selector_current_stack_zero_law_note`
