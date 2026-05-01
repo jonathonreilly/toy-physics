@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:48:31.184842+00:00
+**Generated:** 2026-05-01T05:52:37.647476+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 211 |
+| bounded | 210 |
 | support | 170 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 832 |
+| ~~audited_conditional~~ | 833 |
 | ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 252 |
-| `audited_conditional` | 563 |
+| `audited_conditional` | 564 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 623 |
+| `unaudited` | 622 |
 
 | criticality | count |
 |---|---:|
@@ -377,6 +377,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `b_independence_mechanism_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `beyond_lattice_qcd_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `bh_entropy_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `bmv_bounded_negative_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1711,6 +1712,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `b_independence_mechanism_note`
+
+- **Note:** [`B_INDEPENDENCE_MECHANISM_NOTE.md`](../../docs/B_INDEPENDENCE_MECHANISM_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The flat distance law is best read as a structural feature of the current linear path-sum architecture driven by a broad graph-wide phase-valley field, rather than by path scrambling or an overly local field kernel.  _(class `C`)_
+- **chain closes:** False — The cited diagnostics reproduce the stated pattern, but they are finite mechanism diagnostics and the note explicitly does not derive the phase-valley mechanism from first principles or prove a universal theorem over graph families.
+- **rationale:** Issue: the note upgrades finite diagnostic patterns into a causal mechanism read without a derivation that the broad graph-averaged field structurally forces b-independence. Why this blocks: path-channel preservation and localized-field failures make the phase-valley explanation plausible, but they do not exclude all alternate mechanisms or prove the structural statement across retained DAG families. Repair target: register the diagnostic scripts as the primary runner and add a theorem/runner that derives the flat/topological response from field support, graph connectivity, and path-sum phase accumulation. Claim boundary until fixed: the note is valid bounded support for the current mechanism interpretation, not an audited closed mechanism theorem.
+- **open / conditional deps cited:**
+  - `B_INDEPENDENCE_MECHANISM_NOTE.md`
 - **auditor confidence:** high
 
 ### `background_independence_note`
