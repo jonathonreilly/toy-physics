@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T12:11:22.464105+00:00
+**Generated:** 2026-05-01T12:12:53.781350+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 198 |
-| support | 163 |
-| open | 8 |
+| bounded | 196 |
+| support | 160 |
+| open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 862 |
-| ~~audited_failed~~ | 160 |
+| ~~audited_conditional~~ | 865 |
+| ~~audited_failed~~ | 163 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 293 |
-| `audited_conditional` | 587 |
+| `audited_clean` | 308 |
+| `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 72 |
+| `audited_failed` | 75 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 566 |
+| `unaudited` | 545 |
 
 | criticality | count |
 |---|---:|
@@ -339,6 +339,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_record_matched_compare_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_record_overlap_kernel_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `persistent_record_refinement_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -346,7 +347,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `pmns_c3_character_mode_reduction_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `pmns_right_conjugacy_invariant_no_go_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
+| `pmns_selector_three_identity_support_proposal_readme_2026-04-21` | support | ~~audited_clean~~ | support | cross_family | codex-current | D | - |
+| `pmns_sole_axiom_hw1_source_transfer_boundary_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `pmns_twisted_flux_transfer_holonomy_boundary_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `poisson_self_gravity_born_audit_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `poisson_self_gravity_loop_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `poisson_self_gravity_loop_v3_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
+| `qnm_control_hardening_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
+| `qnm_hardening_feasibility_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `quark_bimodule_norm_naturality_theorem_note_2026-04-19` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
+| `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
+| `quark_c3_circulant_source_law_boundary_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
+| `quark_c3_oriented_ward_splitter_support_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
+| `quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
+| `quark_five_sixths_scale_selection_boundary_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -863,6 +878,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `poisson_3d_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `poisson_exhaustive_uniqueness_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `poisson_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `poisson_self_gravity_mechanism_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `portable_package_hierarchy_classifier_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `primordial_spectrum_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `propagator_family_unification_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quantum_horizon_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -959,6 +976,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `work_history.gw_echo_timing_route_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `work_history.potential_publication_discoveries_log` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_bridge_endpoint_shift_bound_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_bridge_rearrangement_principle_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_bridge_variational_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -1012,11 +1030,14 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `minimal_bidirectional_trapping_probe_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `monopole_derived_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | C | - |
 | `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `persistent_record_sidebit_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `pmns_corner_transport_active_block_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `pmns_graph_commutant_cycle_value_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
+| `pmns_intrinsic_completion_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `pmns_minimal_branch_nonselection_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `pmns_selector_bank_nonrealization_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `pmns_selector_minimal_microscopic_extension_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `pmns_selector_sign_to_branch_reduction_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -11398,6 +11419,32 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Clean within the note's bounded pilot scope. The note does not claim asymptotic solution or closure; it claims the persistent-record overlap-kernel lane is scientifically live on the N=8,12,18 probe while retaining nonzero branch overlap. The current runner reproduces the exact reported table and fit summary, including the N=18 rebound that prevents a stronger claim. Residual risk is the declared small-N bounded setup and the absence of broader seed or asymptotic stress testing.
 - **auditor confidence:** high
 
+### `persistent_record_refinement_note`
+
+- **Note:** [`PERSISTENT_RECORD_REFINEMENT_NOTE.md`](../../docs/PERSISTENT_RECORD_REFINEMENT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The corrected persistent-record refinement stack improves the residual-connection soft lane modestly, with side+packet+entry at N=18 and gamma=1.0 reaching purity 0.7213, but it still does not beat the node-label baseline at 0.7121.  _(class `C`)_
+- **chain closes:** True — Fresh runner executions reproduced both load-bearing checks: the corrected matched N=8,12,18 table for node, side+packet, and side+packet+entry variants, and the targeted N=18 gamma sweep showing gamma=1.0 beats exact trace while gamma=1.5 and 2.0 worsen.
+- **rationale:** Clean within the note's bounded refinement scope. The note does not claim a new raw decoherence winner; it claims the corrected first-hit side/packet/entry marker stack is a modest real improvement in the residual-connection architecture while still trailing node-label on the tested N=18 row. Current runner output reproduces the matched table and the targeted gamma sweep exactly, including node=0.7121 versus side+packet+entry gamma=1.0 at 0.7213 and worse results at gamma=1.5 and 2.0. Residual risk is the declared bounded two-seed matched slice and the lack of asymptotic or broader-geometry closure.
+- **auditor confidence:** high
+
+### `persistent_record_sidebit_note`
+
+- **Note:** [`PERSISTENT_RECORD_SIDEBIT_NOTE.md`](../../docs/PERSISTENT_RECORD_SIDEBIT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The side-bit matched comparison table is supposed to quantify the bounded improvement of the soft-overlap persistent-record lane against the node-label baseline.  _(class `C`)_
+- **chain closes:** False — The current matched-comparison runner no longer reproduces the note's quoted side-bit table values or detector-sector counts.
+- **rationale:** Issue: the source note's matched side-bit table is stale relative to the current runner. The note reports side-bit gamma=1.0 purities of 0.5685 at N=12 and 0.7270 at N=18 with side-bit detector-sector counts 9.5, 37.5, 121.0; the current runner returns 0.5698 at N=12 and 0.7287 at N=18 with counts 9.5, 37.5, 123.0. Why this blocks: the exact bounded numerical comparison is the load-bearing evidence for the note, so the quoted table cannot be audited clean against the current harness even though the qualitative modest-improvement read mostly remains. Repair target: refresh the side-bit note and frozen log from the current persistent_record_matched_compare.py output, or explicitly mark the note as superseded by the corrected refinement note. Claim boundary until fixed: the current runner still supports the weaker qualitative statement that the side bit modestly improves the soft-overlap lane but does not beat node-label on this bounded slice.
+- **open / conditional deps cited:**
+  - `scripts/persistent_record_matched_compare.py current output diverges from PERSISTENT_RECORD_SIDEBIT_NOTE.md`
+- **auditor confidence:** high
+
 ### `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30`
 
 - **Note:** [`PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md`](../../docs/PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md)
@@ -11730,6 +11777,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `lower_level_source_transfer_observables_to_PMNS_readout_theorem_not_registered`
 - **auditor confidence:** high
 
+### `pmns_intrinsic_completion_boundary_note`
+
+- **Note:** [`PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE.md`](../../docs/PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The runner is supposed to verify that the current PMNS bank leaves the remaining intrinsic-completion gap at the selected-branch Hermitian-data law plus one residual sheet-fixing datum.  _(class `C`)_
+- **chain closes:** False — The registered runner exits nonzero before completing the current-bank boundary checks because it tries to read a missing file, docs/PMNS_BRANCH_SHEET_NONFORCING_NOTE.md.
+- **rationale:** Issue: the registered runner is stale or broken: scripts/frontier_pmns_intrinsic_completion_boundary.py raises FileNotFoundError for docs/PMNS_BRANCH_SHEET_NONFORCING_NOTE.md during Part 2. Why this blocks: the load-bearing boundary claim depends on current-bank cross-checks beyond the local Hermitian reconstruction demo, and the runner never reaches those checks or the final PASS/FAIL summary. Repair target: update the runner and note artifact chain to reference the extant sheet/nonforcing theorem file, or restore the missing note, then rerun the full boundary checker to completion. Claim boundary until fixed: the runner's Part 1 Hermitian reconstruction examples pass, but the broader intrinsic-completion boundary is not currently auditable from the registered runner.
+- **open / conditional deps cited:**
+  - `scripts/frontier_pmns_intrinsic_completion_boundary.py references missing PMNS_BRANCH_SHEET_NONFORCING_NOTE.md`
+- **auditor confidence:** high
+
 ### `pmns_lower_level_end_to_end_closure_note`
 
 - **Note:** [`PMNS_LOWER_LEVEL_END_TO_END_CLOSURE_NOTE.md`](../../docs/PMNS_LOWER_LEVEL_END_TO_END_CLOSURE_NOTE.md)
@@ -11935,6 +11996,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md:unaudited_support`
 - **auditor confidence:** high
 
+### `pmns_selector_minimal_microscopic_extension_note`
+
+- **Note:** [`PMNS_SELECTOR_MINIMAL_MICROSCOPIC_EXTENSION_NOTE.md`](../../docs/PMNS_SELECTOR_MINIMAL_MICROSCOPIC_EXTENSION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims the minimal surviving PMNS selector extension class is a non-additive sector-sensitive mixed bridge with one real amplitude slot, and that this row is carried in the derivation atlas.  _(class `B`)_
+- **chain closes:** False — The registered runner exits with PASS=9 FAIL=1 because the derivation atlas does not contain the required `PMNS selector minimal microscopic extension` row.
+- **rationale:** Issue: the note's atlas-placement claim is stale relative to the current derivation atlas. The runner verifies the internal cross-note selector reductions, but fails the atlas check: `| PMNS selector minimal microscopic extension |` is absent from docs/publication/ci3_z3/DERIVATION_ATLAS.md. Why this blocks: atlas placement is part of the note's stated artifact/status surface, and the registered runner exits nonzero, so the complete support note cannot be audited clean. Repair target: either add/restore the atlas row for this note and runner, or revise the note and runner if this boundary has been superseded by the existing sector-odd/current-stack rows. Claim boundary until fixed: the current runner supports the internal extension-class reduction checks, but not the claimed atlas registration.
+- **open / conditional deps cited:**
+  - `publication/ci3_z3/DERIVATION_ATLAS.md lacks PMNS selector minimal microscopic extension row`
+- **auditor confidence:** high
+
 ### `pmns_selector_nonuniversal_support_reduction_note`
 
 - **Note:** [`PMNS_SELECTOR_NONUNIVERSAL_SUPPORT_REDUCTION_NOTE.md`](../../docs/PMNS_SELECTOR_NONUNIVERSAL_SUPPORT_REDUCTION_NOTE.md)
@@ -12000,6 +12075,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_PROPOSAL_README_2026-04-21.md`
 - **auditor confidence:** high
 
+### `pmns_selector_three_identity_support_proposal_readme_2026-04-21`
+
+- **Note:** [`PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_PROPOSAL_README_2026-04-21.md`](../../docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_PROPOSAL_README_2026-04-21.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The proposed three-identity affine-Hermitian PMNS selector system solves to the reported chamber point and yields PMNS observables inside the runner's NuFit 5.3 normal-ordering comparison bands, while remaining a support proposal rather than retained closure.  _(class `D`)_
+- **chain closes:** True — The registered runner completes with PASS=19 FAIL=0, reproducing the exact chart identities, the solution (m, delta, q_+)=(2/3, 0.933051..., 0.714502...), the quoted PMNS observables, and the bounded one-cluster multi-start result.
+- **rationale:** Clean within the note's support-proposal boundary. The note explicitly does not claim the selector equations are retained-derived or that PMNS closure is solved; it claims this small proposed law gives a concrete interior chamber point with a strong numerical PMNS comparison and bounded uniqueness evidence. The current runner reproduces the reported solution, determinant/Koide identities, NuFit-band checks, negative sin(delta_CP), Jarlskog band, and one-cluster search result. Residual risk is exactly the note's stated gap: delta*q_+=Q_Koide and det(H)=E2 remain proposed selector identities, not retained framework derivations.
+- **auditor confidence:** high
+
 ### `pmns_selector_unique_amplitude_slot_note`
 
 - **Note:** [`PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md`](../../docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md)
@@ -12034,6 +12121,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md`
 - **auditor confidence:** high
 
+### `pmns_sole_axiom_hw1_source_transfer_boundary_note`
+
+- **Note:** [`PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md`](../../docs/PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The canonical sole-axiom hw=1 source/transfer construction yields only the trivial free active/passive pack and is exactly rejected by the retained PMNS closure stack.  _(class `C`)_
+- **chain closes:** True — The registered runner completes with PASS=16 FAIL=0, checking native projectors, graph-first transfer, trivial active/passive source columns, closure-stack rejection, and a circularity guard.
+- **rationale:** Clean within the note's bounded negative scope. The note does not claim PMNS closure; it closes a specific escape hatch by showing that native source insertion plus graph-first transfer still produces a trivial hw=1 pack. The current runner verifies the exact projector/frame identities, reconstructs the trivial source-derived blocks, confirms the retained closure stack rejects the pack as not on a one-sided minimal PMNS class, and checks that no PMNS-side value targets are taken as inputs. Residual risk is the declared scope: this rules out the canonical hw=1 source/transfer route, not every possible nontrivial PMNS bridge.
+- **auditor confidence:** high
+
 ### `pmns_transfer_operator_dominant_mode_note`
 
 - **Note:** [`PMNS_TRANSFER_OPERATOR_DOMINANT_MODE_NOTE.md`](../../docs/PMNS_TRANSFER_OPERATOR_DOMINANT_MODE_NOTE.md)
@@ -12044,6 +12143,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** On the aligned hw=1 active patch, the transfer kernel T_seed=xbar I + ybar(C+C^2) has a dominant symmetric mode and a degenerate orthogonal mode whose eigenvalues reconstruct xbar and ybar exactly, while the projection remains blind to the 5-real off-seed source.  _(class `A`)_
 - **chain closes:** False — The runner verifies the circulant-kernel eigenvalue algebra, but the identification of this hard-coded kernel with the native PMNS transfer operator and the boundary to the active off-seed source are asserted without declared dependencies.
 - **rationale:** Issue: the runner gives a correct algebraic check (PASS=10/FAIL=0) for a 3x3 circulant transfer kernel and shows the aligned seed pair can be reconstructed from its modes. What is not closed in this row is the physical/native identification: that this specific kernel is the hw=1 PMNS transfer law, that xbar/ybar are the active seed pair, and that the 5-real off-seed source is the relevant missing carrier. Why this blocks: the eigenvalue identities are exact, but clean audit of the selector law needs the PMNS active-patch and transfer-kernel construction as declared retained inputs. Repair target: declare the active-patch/weak-axis seed and transfer-operator authorities, or narrow the note to the pure circulant-kernel algebra. Claim boundary until fixed: support-level algebraic seed-pair reconstruction conditional on the imported PMNS transfer-kernel interpretation; not an independently closed microscopic PMNS value law.
+- **auditor confidence:** high
+
+### `pmns_twisted_flux_transfer_holonomy_boundary_note`
+
+- **Note:** [`PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md`](../../docs/PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The twisted flux transfer kernel exactly recovers (xbar, ybar, phi), but a single flux holonomy has a two-real kernel on the three-real reduced PMNS oriented-cycle carrier and therefore does not select a unique PMNS point.  _(class `C`)_
+- **chain closes:** True — The registered runner completes with PASS=16 FAIL=0, verifying exact fluxed spectral/holonomy recovery, demonstrating the two-real kernel on the reduced carrier, and checking the circularity guard.
+- **rationale:** Clean within the note's support-boundary scope. The note does not claim full PMNS value selection; it records a partial positive value law for the fluxed transfer carrier and the remaining one-holonomy obstruction on the reduced PMNS cycle family. The current runner verifies Hermiticity, Fourier diagonalization, exact recovery of xbar/ybar/phi, two independent kernel directions for the one-angle holonomy, shared holonomy for distinct reduced-channel points, and no PMNS target inputs. Residual risk is the declared one-holonomy limitation: further dynamics or an admitted extension would still be needed for positive PMNS selection.
 - **auditor confidence:** high
 
 ### `pmns_uniform_scalar_deformation_boundary_note`
@@ -12109,6 +12220,58 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `GATE_B_POISSON_SELF_GRAVITY_NOTE.md`
 - **auditor confidence:** high
 
+### `poisson_self_gravity_born_audit_note`
+
+- **Note:** [`POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The Poisson-like self-gravity loop preserves Born at the frozen propagation-step level but not end-to-end through the full nonlinear iterated loop at the tested nonzero coupling.  _(class `C`)_
+- **chain closes:** True — The registered runner reproduces the exact zero-coupling reduction and the representative nonzero row: step-local Born 8.834e-16 versus end-to-end Born 6.830e-05, with both nonzero loop convergence flags false as reported.
+- **rationale:** Clean within the note's bounded audit scope. The note does not claim a universal theorem; it separates frozen-step Born behavior from full nonlinear-loop end-to-end behavior on one exact lattice family and one representative nonzero coupling. Current runner output matches the frozen row exactly, including exact epsilon=0 recovery, machine-clean step-local Born, and nonzero end-to-end Born drift. Residual risk is the stated narrowness: one lattice family, one coupling/source row, and no universal self-gravity Born-safety theorem.
+- **auditor confidence:** high
+
+### `poisson_self_gravity_loop_note`
+
+- **Note:** [`POISSON_SELF_GRAVITY_LOOP_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_LOOP_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The Poisson-like self-gravity loop is a bounded positive control: exact epsilon=0 reduction holds, frozen terminal fields remain Born-linear to machine precision, nonzero rows preserve weak-field TOWARD sign with near-linear mass scaling, but the strict nonzero fixed-point loop does not converge and remains a small effect.  _(class `C`)_
+- **chain closes:** True — The registered runner reproduces the note's qualitative sweep: zero-epsilon reduction is exact, all nonzero epsilon rows are TOWARD with mean loop/inst about 1.010, mean escape rises mildly, frozen Born checks remain at machine precision, and nonzero rows have converged=0/4.
+- **rationale:** Clean within the note's bounded-control scope. The note explicitly does not claim a new backreaction mechanism; it claims the frozen-field propagation remains Born-linear and weak-field-like while the outer loop is small and nonconvergent. The current runner, executed on the Mac mini clean clone, reproduces that boundary: exact zero-epsilon reduction, machine-level frozen Born residuals, TOWARD sign across nonzero couplings, near-linear source-strength exponents, loop/inst around 1.010, and no strict convergence for nonzero epsilon. Residual risk is the declared narrow setup and the nonconvergent outer loop; machine-epsilon Born mean/max digits vary at the cancellation floor but do not affect the audited conclusion.
+- **auditor confidence:** high
+
+### `poisson_self_gravity_loop_v3_note`
+
+- **Note:** [`POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The strict read is that no retained positive survives the exact reduction and Born controls, so this lane remains a bounded no-go/control surface rather than a self-gravity mechanism.  _(class `C`)_
+- **chain closes:** True — The primary runner recomputes the exact lattice loop, reproducing the zero-epsilon identity, the small nonzero matched-null centroid/phase shifts, the nonconverged nonlinear rows, and the split between step-local and end-to-end Born behavior. Those current outputs support the note's bounded no-go/control conclusion.
+- **rationale:** The load-bearing claim is bounded and negative: the runner does not promote a self-gravity mechanism, it verifies a control surface with exact zero-coupling reduction and small unstable nonzero effects. The current runner output matches the source values for the sweep and Born audit, including nonconvergence and end-to-end Born drift. Residual risk is limited to the intentionally narrow exact-lattice family, which the note states explicitly.
+- **auditor confidence:** high
+
+### `poisson_self_gravity_mechanism_note`
+
+- **Note:** [`POISSON_SELF_GRAVITY_MECHANISM_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_MECHANISM_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The exact-lattice Poisson-like backreaction loop is a useful sanity check and an honest audit target, but it does not yet beat the bounded-control status.  _(class `B`)_
+- **chain closes:** False — The conclusion is a cross-note summary of three Poisson self-gravity control notes, but this ledger row has no registered one-hop dependencies. The companion script exits successfully but only prints a hard-coded MechanismVerdict rather than recomputing the hard-bar criteria.
+- **rationale:** Issue: the mechanism summary depends on upstream Poisson loop/Born evidence, but those evidence notes are not registered as one-hop dependencies here, and the companion runner prints a hard-coded verdict. Why this blocks: the bounded control-only conclusion is plausible, but this row does not independently re-derive or expose the evidence chain needed for an audit-clean mechanism checkpoint. Repair target: register the three evidence notes as dependencies and replace or supplement the summary runner with a harness that recomputes the four hard-bar criteria. Claim boundary until fixed: the note may be used as a control-only narrative pointer, not as an independently audited mechanism result.
+- **open / conditional deps cited:**
+  - `POISSON_SELF_GRAVITY_LOOP_NOTE.md`
+  - `POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE.md`
+  - `POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md`
+- **auditor confidence:** high
+
 ### `portable_card_extension_note`
 
 - **Note:** [`archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_CARD_EXTENSION_NOTE.md`](../../archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_CARD_EXTENSION_NOTE.md)
@@ -12143,6 +12306,26 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `COMPLEX_SELECTIVITY_COMPARE_NOTE.md`
 - **auditor confidence:** high
 
+### `portable_package_hierarchy_classifier_note`
+
+- **Note:** [`PORTABLE_PACKAGE_HIERARCHY_CLASSIFIER_NOTE.md`](../../docs/PORTABLE_PACKAGE_HIERARCHY_CLASSIFIER_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The retained evidence supports one nested read: broad portable weak-field package, stricter distance tail, and narrower complex-action branch.  _(class `B`)_
+- **chain closes:** False — The classifier is a cross-note synthesis of several portable-package, distance-tail, and complex-action cards, but this ledger row has no registered one-hop dependencies. The runner exits successfully, yet it renders hard-coded rows rather than verifying the cited card statuses or recomputing the hierarchy.
+- **rationale:** Issue: the nested hierarchy is asserted from multiple evidence cards, but the audit row exposes no registered dependencies and the runner only prints a constant table. Why this blocks: a hostile reviewer cannot tell from this row whether the broad, distance-tail, and complex-action layers are actually closed by audited upstream cards. Repair target: register the cited cards as one-hop dependencies and make the classifier runner verify their status/closure boundaries or compute the hierarchy from structured inputs. Claim boundary until fixed: use this as a review-safe support summary, not as an independently audited hierarchy theorem.
+- **open / conditional deps cited:**
+  - `SIGN_PORTABILITY_INVARIANT_NOTE.md`
+  - `archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_PACKAGE_EXTENSION_NOTE.md`
+  - `archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_CARD_EXTENSION_NOTE.md`
+  - `DISTANCE_LAW_PORTABILITY_NOTE.md`
+  - `DISTANCE_LAW_BREAKPOINT_NOTE.md`
+  - `COMPLEX_ACTION_NOTE.md`
+  - `COMPLEX_SELECTIVITY_COMPARE_NOTE.md`
+- **auditor confidence:** high
+
 ### `primordial_spectrum_note`
 
 - **Note:** [`PRIMORDIAL_SPECTRUM_NOTE.md`](../../docs/PRIMORDIAL_SPECTRUM_NOTE.md)
@@ -12173,6 +12356,30 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: The unification note imports SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE as a retained wavefield authority, but that source row is still unaudited while the synthesis has no runner or ledger-derived table. Why this blocks: the common-propagator taxonomy may be plausible, but a retained unification claim cannot depend on an unaudited load-bearing lane. Repair target: audit or repair the source-resolved wavefield mechanism note, then rebuild this synthesis from audit_ledger effective_status or add a small runner/table that only includes audit-clean lanes. Claim boundary until fixed: it is safe to say the already clean complex-action and electrostatics lanes share a fixed-propagator/scalar-coupling pattern, and that the source-resolved wavefield lane is a candidate member; it is not safe to retain the full three-lane propagator-family unification.
 - **open / conditional deps cited:**
   - `SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE.md`
+- **auditor confidence:** high
+
+### `qnm_control_hardening_note`
+
+- **Note:** [`QNM_CONTROL_HARDENING_NOTE.md`](../../docs/QNM_CONTROL_HARDENING_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** It does not promote a quasi-normal mode result; it only freezes the control program that would be required before any QNM-style escape-spectrum claim could be reviewed safely.  _(class `A`)_
+- **chain closes:** True — The note's claim is a scope restriction and control checklist, not a positive spectral theorem. It explicitly denies a QNM/escape-spectrum result and therefore closes as a bounded control-program note without needing a numerical runner.
+- **rationale:** The source note is audit-clean only for its narrow boundary: QNM remains a hardening target and no quasi-normal-mode or escape-spectrum result is asserted. It does not attempt to derive or validate any spectral observable, and its listed five controls are stated as future prerequisites rather than achieved results. Residual risk is that this clean verdict must not be reused as evidence for a positive QNM lane; it ratifies only the bounded control-program framing.
+- **auditor confidence:** high
+
+### `qnm_hardening_feasibility_note`
+
+- **Note:** [`QNM_HARDENING_FEASIBILITY_NOTE.md`](../../docs/QNM_HARDENING_FEASIBILITY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The branch QNM harness suggests a G-dependent escape spectrum on a self-consistent field family, but it is not yet safe to call it a retained exact-lattice spectral law.  _(class `C`)_
+- **chain closes:** True — The runner recomputes exploratory peak tables across G, s, and fixed G*s partitions but does not include the frozen null, matched fixed-field control, Born audit, Nyquist exclusion, or stability pack. That current output supports the note's support-level feasibility verdict that the lane remains exploratory rather than retained.
+- **rationale:** The note is clean for its conservative support claim: it does not promote a QNM spectral law and instead identifies the missing controls needed before review-safe promotion. The current runner output supplies exploratory peak sweeps, including persistent k=6.5 structure, but no frozen null, matched control, Born audit, or refinement pack. Residual risk is bounded because this clean verdict ratifies only the hardening/feasibility boundary, not any retained QNM result.
 - **auditor confidence:** high
 
 ### `quantum_horizon_note`
@@ -12233,6 +12440,66 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
+### `quark_bimodule_norm_naturality_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Applying affine naturality with b = 0 and t = a gives D_a = a D_1 + (1-a) D_0 = a Id_I, hence U_a = (1-a) Id_I.  _(class `A`)_
+- **chain closes:** True — Given the note's explicitly stated bimodule assumptions, the proof is an algebraic consequence of endpoint normalization and affine naturality on a one-real-dimensional channel. The runner verifies complementarity, endpoints, affine naturality, uniqueness of the normalized kappa profile, and the physical-point BICAC identity.
+- **rationale:** The theorem closes as a conditional structural support result: under the three named assumptions, the normalized affine family is forced to D_a=a Id_I and U_a=(1-a) Id_I. The source explicitly states that NORM naturality is added structure and is no longer load-bearing for Quark closure, so this clean audit does not promote a retained physics derivation. Residual risk is exactly the stated caveat: deriving the naturality assumptions from retained quark-side physics remains open.
+- **auditor confidence:** high
+
+### `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28`
+
+- **Note:** [`QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md`](../../docs/QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** There is no typed existing edge from the A1 support scalar to the physical quark Ward source ratio, so adding that edge would be new theorem content rather than latent support.  _(class `B`)_
+- **chain closes:** True — The runner verifies the authority surfaces, exact A1 algebra, support-face inventory, typed-edge graph, import firewall, and boundary classification with PASS=50 FAIL=0. Those checks support the source's no-go conclusion that current A1 support cannot be promoted into quark C3 Ward closure without a new typed bridge.
+- **rationale:** The no-go closes on the current-bank inventory: exact A1 scalar matches exist, but the typed path to the quark C3 source ratio is absent, and the runner verifies that adding that edge is precisely the missing theorem content. The note avoids forbidden imports from observed quark masses, fitted Yukawas, CKM mass input, or species-universal charged-lepton A1. Residual risk is inventory drift: if a later note supplies the typed bridge, this no-go should be re-audited.
+- **auditor confidence:** high
+
+### `quark_c3_circulant_source_law_boundary_note_2026-04-28`
+
+- **Note:** [`QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md`](../../docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** C3 circulant support plus A1/P1 does not become retained quark Ward closure until a quark-specific source/readout theorem supplies species phases, relative scales, and the amplitude-vs-Yukawa dictionary.  _(class `B`)_
+- **chain closes:** True — The runner verifies exact Hermitian C3 circulant carrier algebra, the inverse map showing representation rather than prediction, the A1 relation and its residual phase/scale freedom, the P1 parent/readout boundary, and the quark-sector species boundary with PASS=43 FAIL=0. These checks support the note's support-level boundary conclusion.
+- **rationale:** The note closes as a support/boundary theorem: C3 circulants are exact hierarchy carriers, but without A1/P1 closure plus quark-specific species source/readout laws they are not predictive non-top quark Ward identities. The runner confirms no observed quark masses, fitted Yukawas, CKM mass input, or species-universal charged-lepton import is used. Residual risk is intentionally exposed by the note: Lane 3 remains open until the missing source/readout theorem is supplied.
+- **auditor confidence:** high
+
+### `quark_c3_oriented_ward_splitter_support_note_2026-04-28`
+
+- **Note:** [`QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md`](../../docs/QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The oriented C3 primitive gives exact Fourier-mode strata, but a future 3C closure still needs a source/readout theorem explaining why those strata, or a derived transform of them, are the physical quark Yukawa Ward channels.  _(class `A`)_
+- **chain closes:** True — The runner verifies the retained C3 cycle, reflection action, Hermitian C3-invariant normal form, Fourier eigenvalue splitting, and diagonal-generation readout boundary with PASS=51 FAIL=0. These exact checks establish the support/boundary claim while leaving the physical quark source/readout law open.
+- **rationale:** The support theorem closes: oriented C3 supplies an exact local splitter primitive for the S3 doublet, and the runner verifies the normal form and boundary conditions without importing observed masses, fitted Yukawas, CKM data, or nearest-rational selectors. The note correctly stops short of retained quark-mass closure because the Ward coefficients and physical readout remain free. Residual risk is the stated open Lane 3 task: deriving the source/readout theorem that maps these strata to quark Yukawa channels.
+- **auditor confidence:** high
+
+### `quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28`
+
+- **Note:** [`QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md`](../../docs/QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The positive-parent square-root dictionary is exact, but the current bank does not derive a physical quark positive parent and does not identify the square-root spectrum with quark Yukawa amplitudes.  _(class `B`)_
+- **chain closes:** True — The runner verifies exact positive-parent algebra, non-predictivity without parent/readout selection, the missing typed-edge graph, import firewall, and boundary classification with PASS=54 FAIL=0. These checks support the current-bank no-go that P1 remains support-only for Lane 3.
+- **rationale:** The no-go closes: finite-dimensional square-root algebra is exact, but by itself it can represent arbitrary positive generation-amplitude triples once a parent is supplied. The runner verifies that the current bank lacks both the physical quark positive parent and the readout theorem from square-root spectrum to quark Yukawa amplitudes, while excluding observed masses, fitted Yukawas, CKM mass input, and charged-lepton parent import. Residual risk is only future drift: a later parent/readout theorem would reopen this boundary.
+- **auditor confidence:** high
+
 ### `quark_cp_carrier_completion_note_2026-04-18`
 
 - **Note:** [`QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md`](../../docs/QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md)
@@ -12289,6 +12556,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `QUARK_ENDPOINT_READOUT_CONSTRAINTS_NOTE_2026-04-19.md`
   - `QUARK_E_CHANNEL_ENDPOINT_QUOTIENT_LAW_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_five_sixths_scale_selection_boundary_note_2026-04-28`
+
+- **Note:** [`QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md`](../../docs/QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Because the inherited one-loop transport factor between the threshold-local and common-scale comparators is nontrivial, the same fixed exponent cannot be an exact scale-blind theorem on both surfaces; a retained 3A proof still requires an independent scale-selection or RG-covariant transport theorem.  _(class `B`)_
+- **chain closes:** True — The runner verifies the exact SU(3) identity C_F - T_F = 5/6, the CKM-atlas input, the sharp threshold-local bounded match, the material common-scale mismatch, and the scale-blind obstruction with PASS=34 FAIL=0. Those checks support the note's boundary claim without promoting retained down-type masses.
+- **rationale:** The boundary theorem closes as support: exact Casimir algebra plus the retained CKM value gives a sharp bounded threshold-local match, but the same exponent fails materially on the common-scale comparator because the one-loop transport factor is nontrivial. The runner verifies that the threshold-local surface is much closer while also showing the match is not exact and still depends on a comparator convention. Residual risk is exactly the stated open target: a non-perturbative 5/6 exponentiation mechanism plus scale-selection or RG-covariant transport theorem is still required before any retained down-type mass-ratio closure.
 - **auditor confidence:** high
 
 ### `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28`
@@ -14747,6 +15026,20 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **open / conditional deps cited:**
   - `GW_ECHO_NULL_RESULT_NOTE.md`
 - **auditor confidence:** high
+
+### `work_history.potential_publication_discoveries_log`
+
+- **Note:** [`work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](../../docs/work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Every item should point to a retained note or runner.  _(class `B`)_
+- **chain closes:** False — The source is a historical planning inventory, and the ledger row provides no one-hop authorities or runner that verifies the retained/bounded status of each evidence item. The table can remain an inventory, but its inclusion rule is conditional on cross-note evidence that is not closed in this audit context.
+- **rationale:** Issue: the inclusion rule requires every listed discovery to point to retained note evidence or a runner, but this audit row exposes no registered one-hop authorities or primary runner to verify those status labels. Why this blocks: without those inputs, the inventory cannot be audited as a closed claim rather than as a planning list. Repair target: either gate this work-history inventory out of the audit ledger or register/verify the cited evidence notes and runners item by item. Claim boundary until fixed: use this file only as historical paper-planning inventory, not as an audit-ratified discovery ledger.
+- **open / conditional deps cited:**
+  - `work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`
+- **auditor confidence:** medium
 
 ### `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11`
 
