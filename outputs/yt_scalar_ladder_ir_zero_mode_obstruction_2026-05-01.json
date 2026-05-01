@@ -1,0 +1,502 @@
+{
+  "actual_current_surface_status": "exact negative boundary / scalar ladder IR zero-mode obstruction",
+  "fail_count": 0,
+  "parameters": {
+    "color_factor": 1.3333333333333333,
+    "ir_mu_sq_values": [
+      0.05,
+      0.1,
+      0.2,
+      0.5
+    ],
+    "mass": 0.5,
+    "projectors": [
+      "local",
+      "point_split_zero_momentum_normalized"
+    ],
+    "sizes": [
+      3,
+      4,
+      5
+    ]
+  },
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The scalar ladder pole criterion depends on open IR/zero-mode and finite-volume limiting imports.",
+  "required_next_theorem": [
+    "derive the gauge fixing and zero-mode treatment for the scalar-channel ladder kernel",
+    "prove the finite-volume and IR limiting order",
+    "derive the scalar projector/source normalization independently",
+    "prove eigenvalue crossing in that fixed limit",
+    "compute the pole residue from the inverse two-point derivative"
+  ],
+  "scan": [
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.05,
+      "lambda_max": 5.268494488314889,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "local",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.05,
+      "lambda_max": 0.1008311665200808,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.1,
+      "lambda_max": 2.6357158282519224,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "local",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.1,
+      "lambda_max": 0.09963492638114961,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.2,
+      "lambda_max": 1.3206653170957787,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "local",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.2,
+      "lambda_max": 0.09734075447750924,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.5,
+      "lambda_max": 0.5352091826751035,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.5,
+      "lambda_max": 0.0911479376900047,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.05,
+      "lambda_max": 1.8506430211060865,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "local",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.05,
+      "lambda_max": 0.23925475889991035,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.1,
+      "lambda_max": 1.0212037689132938,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "local",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.1,
+      "lambda_max": 0.23693882953105874,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.2,
+      "lambda_max": 0.6094811732041618,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.2,
+      "lambda_max": 0.2324826134846698,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.5,
+      "lambda_max": 0.36244264422748185,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.5,
+      "lambda_max": 0.2203357737056144,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.05,
+      "lambda_max": 0.6836758987691174,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.05,
+      "lambda_max": 0.06784776083712762,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.1,
+      "lambda_max": 0.3434367889818484,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.1,
+      "lambda_max": 0.06708368317297697,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.2,
+      "lambda_max": 0.1753182721793733,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.2,
+      "lambda_max": 0.06563497623354211,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.5,
+      "lambda_max": 0.08396796913873886,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.5,
+      "lambda_max": 0.06180497836926788,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.05,
+      "lambda_max": 5.268059327145159,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.05,
+      "lambda_max": 0.06661954772667589,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.1,
+      "lambda_max": 2.6348547442621073,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.1,
+      "lambda_max": 0.06571280415865945,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.2,
+      "lambda_max": 1.3189808887058905,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.2,
+      "lambda_max": 0.06397865827931898,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.5,
+      "lambda_max": 0.5312923477348197,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 3,
+      "ir_mu_sq": 0.5,
+      "lambda_max": 0.05933123902837478,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.05,
+      "lambda_max": 1.6685678954712113,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.05,
+      "lambda_max": 0.0824176014838229,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.1,
+      "lambda_max": 0.8372240046145369,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.1,
+      "lambda_max": 0.0814826810783221,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.2,
+      "lambda_max": 0.42474391324246785,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.2,
+      "lambda_max": 0.07969466173720055,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.5,
+      "lambda_max": 0.18702334370409296,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.5,
+      "lambda_max": 0.07489063243011351,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.05,
+      "lambda_max": 0.6832300172816435,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.05,
+      "lambda_max": 0.03216389713497027,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.1,
+      "lambda_max": 0.3424383397384599,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.1,
+      "lambda_max": 0.031640178150479654,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.2,
+      "lambda_max": 0.17279680219285998,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.2,
+      "lambda_max": 0.0306668139282827,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "removed"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.5,
+      "lambda_max": 0.07305634437447767,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "included"
+    },
+    {
+      "grid_size_4d": 5,
+      "ir_mu_sq": 0.5,
+      "lambda_max": 0.02820831642401568,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "zero_mode": "removed"
+    }
+  ],
+  "strict_non_claims": [
+    "not a y_t derivation",
+    "not a production measurement",
+    "not a retained Bethe-Salpeter pole theorem",
+    "does not define y_t through H_unit matrix elements",
+    "does not use observed top/Higgs/Yukawa values as selectors"
+  ],
+  "verdict": "Holding the scalar source fixed, the finite Wilson-exchange ladder pole criterion is not stable under the still-undderived IR and gauge-zero-mode prescription.  The same kernel crosses or fails lambda_max >= 1 depending on whether the q=0 mode is retained; the same prescription also crosses or fails under finite-volume and IR-regulator changes.  Therefore the scalar-channel Bethe-Salpeter route cannot close PR #230 until it derives the gauge fixing / zero-mode treatment, finite-volume and IR limits, and pole-residue readout.",
+  "witnesses": {
+    "finite_volume_flip": {
+      "N3_included": 1.3206653170957787,
+      "N5_included": 0.1753182721793733,
+      "ir_mu_sq": 0.2,
+      "projector": "local"
+    },
+    "fixed_source_zero_mode_flip": {
+      "grid_size_4d": 4,
+      "included": 1.0212037689132938,
+      "ir_mu_sq": 0.1,
+      "projector": "local",
+      "removed": 0.23693882953105874
+    },
+    "ir_regulator_flip": {
+      "grid_size_4d": 4,
+      "mu2_0_10_included": 1.0212037689132938,
+      "mu2_0_20_included": 0.6094811732041618,
+      "projector": "local"
+    },
+    "normalized_point_split_zero_mode_flip": {
+      "grid_size_4d": 3,
+      "included": 1.3189808887058905,
+      "ir_mu_sq": 0.2,
+      "removed": 0.06397865827931898
+    }
+  }
+}

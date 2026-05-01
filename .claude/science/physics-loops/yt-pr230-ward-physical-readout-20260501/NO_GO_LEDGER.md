@@ -193,6 +193,39 @@ the current analytic shortcut set has not authorized retained-proposal wording.
 Remaining routes are production evidence, a scalar LSZ/canonical-normalization
 theorem, or a heavy-matching observable/theorem.
 
+Finite scalar ladder IR/zero-mode shortcut blocked:
+
+```text
+python3 scripts/frontier_yt_scalar_ladder_ir_zero_mode_obstruction.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+Holding the scalar source fixed, the same finite Wilson-exchange ladder pole
+test flips under the open zero-mode prescription:
+
+```text
+N=4, m=0.50, mu_IR^2=0.10, zero mode included: lambda_max = 1.02120376891
+N=4, m=0.50, mu_IR^2=0.10, zero mode removed:  lambda_max = 0.236938829531
+```
+
+The same finite prescription also flips under volume and IR-regulator changes.
+Therefore a finite `lambda_max >= 1` scalar ladder witness cannot close PR #230
+until the gauge-zero-mode, finite-volume/IR limiting order, projector, and LSZ
+residue are derived.
+
+Heavy kinetic-mass route is constructive but still open:
+
+```text
+python3 scripts/frontier_yt_heavy_kinetic_mass_route.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+The additive static rest mass cancels in nonzero-momentum splittings
+`E(p)-E(0)`, so this route avoids the static zero-momentum no-go.  It is not a
+closure proof because pure static correlators have no kinetic splitting and the
+route still requires a `1/M` kinetic action term, nonzero-momentum data, and a
+lattice-HQET/NRQCD-to-SM matching theorem.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

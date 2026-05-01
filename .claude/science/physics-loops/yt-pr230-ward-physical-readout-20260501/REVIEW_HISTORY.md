@@ -79,6 +79,15 @@ Review checks performed:
   generated certificates, verifies that none allows retained-proposal wording,
   and narrows the remaining route list.  It does not create a new authority or
   claim that the campaign reached closure.
+- Scalar ladder IR/zero-mode review: the runner holds the source fixed and
+  changes only zero-mode, IR, and finite-volume prescriptions.  The finite
+  `lambda_max >= 1` pole test flips under those changes, so the artifact is an
+  exact boundary on finite ladder witnesses, not a claim that scalar poles are
+  impossible.
+- Heavy kinetic-mass route review: the runner varies additive rest-mass shifts
+  and verifies that `E(p)-E(0)` recovers `M_kin` in a synthetic dispersion.  The
+  route is constructive support only; it explicitly requires a `1/M` kinetic
+  action term, production nonzero-momentum correlators, and a matching theorem.
 
 ## Review-Loop Backpressure — Campaign Block 2
 
@@ -136,6 +145,12 @@ Open review risk:
   introduces and derives an interacting denominator or a canonical kinetic term.
 - A same-1PI theorem cannot be accepted as a top-Yukawa readout unless the
   scalar pole residue is fixed independently of the four-fermion coefficient.
+- A scalar Bethe-Salpeter theorem cannot be accepted from a finite ladder scout
+  unless it derives the gauge-zero-mode treatment and finite-volume/IR limiting
+  order before applying `lambda_max >= 1`.
+- A heavy-kinetic theorem cannot be accepted if it calibrates the matching mass
+  from the observed top; the matching bridge must be derived or independently
+  measured.
 
 ## Review-Loop Backpressure — Campaign Status Checkpoint
 
@@ -159,3 +174,51 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 
 The certificate is a checkpoint, not a stop condition while campaign runtime
 remains.
+
+## Review-Loop Backpressure — Scalar Ladder IR / Zero-Mode Block
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_scalar_ladder_ir_zero_mode_obstruction.py
+python3 scripts/frontier_yt_scalar_ladder_ir_zero_mode_obstruction.py
+```
+
+The result blocks a finite-eigenvalue shortcut only.  It leaves open a genuine
+scalar-channel theorem with derived zero-mode, IR, volume, projector, and LSZ
+residue.
+
+## Review-Loop Backpressure — Heavy Kinetic-Mass Route
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_heavy_kinetic_mass_route.py
+python3 scripts/frontier_yt_heavy_kinetic_mass_route.py
+```
+
+This route is now the most concrete lightweight compute successor: measure
+nonzero-momentum correlator splittings rather than zero-momentum static
+energies.

@@ -1,0 +1,441 @@
+{
+  "actual_current_surface_status": "bounded-support / heavy kinetic-mass route",
+  "fail_count": 0,
+  "parameters": {
+    "additive_shifts": [
+      0.0,
+      3.0,
+      17.0
+    ],
+    "m_kin_values": [
+      5.0,
+      20.0,
+      80.0
+    ],
+    "momentum_modes": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        2,
+        0,
+        0
+      ]
+    ],
+    "spatial_lattice_size": 24
+  },
+  "pass_count": 6,
+  "precision_witness": {
+    "delta_e": 0.00042592603754698644,
+    "m_kin": 80.0,
+    "momentum_mode": [
+      1,
+      0,
+      0
+    ],
+    "required_abs_energy_precision_for_1pct_mkin": 4.259260375469864e-06
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No production nonzero-momentum correlator data or retained heavy-action matching theorem is present.",
+  "required_next_artifacts": [
+    "implement nonzero-momentum top/HQET correlator measurement",
+    "include or derive the 1/M kinetic operator on the Cl(3)/Z^3 substrate",
+    "extract E(p)-E(0) with bootstrap/jackknife errors",
+    "derive matching from lattice M_kin to SM top mass without observed top calibration",
+    "propagate M_kin through y_t = sqrt(2) m_t / v with v as substrate input"
+  ],
+  "scan": [
+    {
+      "additive_shift": 0.0,
+      "delta_e": 0.00681019054493001,
+      "extracted_m_kin": 5.003409741053272,
+      "input_m_kin": 5.0,
+      "momentum_mode": [
+        1,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.0681483474218634,
+      "relative_error": 0.0006819482106543262,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 0.0,
+      "delta_e": 0.013611092695347358,
+      "extracted_m_kin": 5.006824135813751,
+      "input_m_kin": 5.0,
+      "momentum_mode": [
+        1,
+        1,
+        0
+      ],
+      "p_hat_sq": 0.1362966948437268,
+      "relative_error": 0.0013648271627502595,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 0.0,
+      "delta_e": 0.026723122473387772,
+      "extracted_m_kin": 5.013433454454282,
+      "input_m_kin": 5.0,
+      "momentum_mode": [
+        2,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.26794919243112264,
+      "relative_error": 0.002686690890856447,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 3.0,
+      "delta_e": 0.006810190544929817,
+      "extracted_m_kin": 5.003409741053414,
+      "input_m_kin": 5.0,
+      "momentum_mode": [
+        1,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.0681483474218634,
+      "relative_error": 0.0006819482106827479,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 3.0,
+      "delta_e": 0.013611092695347438,
+      "extracted_m_kin": 5.006824135813722,
+      "input_m_kin": 5.0,
+      "momentum_mode": [
+        1,
+        1,
+        0
+      ],
+      "p_hat_sq": 0.1362966948437268,
+      "relative_error": 0.0013648271627443975,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 3.0,
+      "delta_e": 0.026723122473387484,
+      "extracted_m_kin": 5.013433454454336,
+      "input_m_kin": 5.0,
+      "momentum_mode": [
+        2,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.26794919243112264,
+      "relative_error": 0.0026866908908672825,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 17.0,
+      "delta_e": 0.006810190544928929,
+      "extracted_m_kin": 5.003409741054066,
+      "input_m_kin": 5.0,
+      "momentum_mode": [
+        1,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.0681483474218634,
+      "relative_error": 0.0006819482108131325,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 17.0,
+      "delta_e": 0.013611092695349214,
+      "extracted_m_kin": 5.006824135813069,
+      "input_m_kin": 5.0,
+      "momentum_mode": [
+        1,
+        1,
+        0
+      ],
+      "p_hat_sq": 0.1362966948437268,
+      "relative_error": 0.0013648271626138353,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 17.0,
+      "delta_e": 0.026723122473388372,
+      "extracted_m_kin": 5.013433454454169,
+      "input_m_kin": 5.0,
+      "momentum_mode": [
+        2,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.26794919243112264,
+      "relative_error": 0.002686690890833887,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 0.0,
+      "delta_e": 0.001703636119964455,
+      "extracted_m_kin": 20.00085189062711,
+      "input_m_kin": 20.0,
+      "momentum_mode": [
+        1,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.0681483474218634,
+      "relative_error": 4.259453135553315e-05,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 0.0,
+      "delta_e": 0.0034071271087646494,
+      "extracted_m_kin": 20.001703853829074,
+      "input_m_kin": 20.0,
+      "momentum_mode": [
+        1,
+        1,
+        0
+      ],
+      "p_hat_sq": 0.1362966948437268,
+      "relative_error": 8.5192691453706e-05,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 0.0,
+      "delta_e": 0.006697607986251121,
+      "extracted_m_kin": 20.003349925911603,
+      "input_m_kin": 20.0,
+      "momentum_mode": [
+        2,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.26794919243112264,
+      "relative_error": 0.00016749629558017177,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 3.0,
+      "delta_e": 0.0017036361199647132,
+      "extracted_m_kin": 20.000851890624077,
+      "input_m_kin": 20.0,
+      "momentum_mode": [
+        1,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.0681483474218634,
+      "relative_error": 4.259453120383228e-05,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 3.0,
+      "delta_e": 0.0034071271087645627,
+      "extracted_m_kin": 20.001703853829586,
+      "input_m_kin": 20.0,
+      "momentum_mode": [
+        1,
+        1,
+        0
+      ],
+      "p_hat_sq": 0.1362966948437268,
+      "relative_error": 8.519269147928554e-05,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 3.0,
+      "delta_e": 0.006697607986251075,
+      "extracted_m_kin": 20.00334992591174,
+      "input_m_kin": 20.0,
+      "momentum_mode": [
+        2,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.26794919243112264,
+      "relative_error": 0.0001674962955869219,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 17.0,
+      "delta_e": 0.0017036361199629368,
+      "extracted_m_kin": 20.00085189064493,
+      "input_m_kin": 20.0,
+      "momentum_mode": [
+        1,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.0681483474218634,
+      "relative_error": 4.259453224655374e-05,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 17.0,
+      "delta_e": 0.003407127108765451,
+      "extracted_m_kin": 20.00170385382437,
+      "input_m_kin": 20.0,
+      "momentum_mode": [
+        1,
+        1,
+        0
+      ],
+      "p_hat_sq": 0.1362966948437268,
+      "relative_error": 8.519269121851636e-05,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 17.0,
+      "delta_e": 0.006697607986250631,
+      "extracted_m_kin": 20.003349925913067,
+      "input_m_kin": 20.0,
+      "momentum_mode": [
+        2,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.26794919243112264,
+      "relative_error": 0.00016749629565335767,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 0.0,
+      "delta_e": 0.0004259260375494255,
+      "extracted_m_kin": 80.00021296415261,
+      "input_m_kin": 80.0,
+      "momentum_mode": [
+        1,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.0681483474218634,
+      "relative_error": 2.6620519076203665e-06,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 0.0,
+      "delta_e": 0.0008518498074244095,
+      "extracted_m_kin": 80.00042592943907,
+      "input_m_kin": 80.0,
+      "momentum_mode": [
+        1,
+        1,
+        0
+      ],
+      "p_hat_sq": 0.1362966948437268,
+      "relative_error": 5.324117988436683e-06,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 0.0,
+      "delta_e": 0.001674664924186283,
+      "extracted_m_kin": 80.00083734999069,
+      "input_m_kin": 80.0,
+      "momentum_mode": [
+        2,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.26794919243112264,
+      "relative_error": 1.046687488361897e-05,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 3.0,
+      "delta_e": 0.00042592603754965097,
+      "extracted_m_kin": 80.00021296411026,
+      "input_m_kin": 80.0,
+      "momentum_mode": [
+        1,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.0681483474218634,
+      "relative_error": 2.6620513782660284e-06,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 3.0,
+      "delta_e": 0.0008518498074243652,
+      "extracted_m_kin": 80.00042592944322,
+      "input_m_kin": 80.0,
+      "momentum_mode": [
+        1,
+        1,
+        0
+      ],
+      "p_hat_sq": 0.1362966948437268,
+      "relative_error": 5.324118040306303e-06,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 3.0,
+      "delta_e": 0.0016746649241858869,
+      "extracted_m_kin": 80.00083735000962,
+      "input_m_kin": 80.0,
+      "momentum_mode": [
+        2,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.26794919243112264,
+      "relative_error": 1.0466875120229701e-05,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 17.0,
+      "delta_e": 0.00042592603754698644,
+      "extracted_m_kin": 80.00021296461072,
+      "input_m_kin": 80.0,
+      "momentum_mode": [
+        1,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.0681483474218634,
+      "relative_error": 2.6620576340619094e-06,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 17.0,
+      "delta_e": 0.0008518498074252534,
+      "extracted_m_kin": 80.0004259293598,
+      "input_m_kin": 80.0,
+      "momentum_mode": [
+        1,
+        1,
+        0
+      ],
+      "p_hat_sq": 0.1362966948437268,
+      "relative_error": 5.324116997584838e-06,
+      "spatial_lattice_size": 24
+    },
+    {
+      "additive_shift": 17.0,
+      "delta_e": 0.0016746649241881073,
+      "extracted_m_kin": 80.00083734990355,
+      "input_m_kin": 80.0,
+      "momentum_mode": [
+        2,
+        0,
+        0
+      ],
+      "p_hat_sq": 0.26794919243112264,
+      "relative_error": 1.0466873794356957e-05,
+      "spatial_lattice_size": 24
+    }
+  ],
+  "strict_non_claims": [
+    "not a production measurement",
+    "not a y_t derivation",
+    "does not use observed top mass as calibration",
+    "does not define y_t through H_unit matrix elements"
+  ],
+  "verdict": "A nonzero-momentum kinetic-mass observable can cancel the static additive rest-mass ambiguity: E(p)-E(0) is invariant under the additive shift that blocks zero-momentum HQET.  This gives PR #230 a concrete heavy-matching route.  It is not closure, because pure static correlators have no kinetic splitting and a top-like heavy mass on L=24 gives very small delta_e, so the route requires a 1/M kinetic action term, nonzero-momentum correlator production data, and a lattice-HQET/NRQCD-to-SM matching theorem."
+}

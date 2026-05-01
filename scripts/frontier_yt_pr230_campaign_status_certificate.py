@@ -52,6 +52,8 @@ def main() -> int:
         "legendre": load("outputs/yt_legendre_kappa_gauge_freedom_2026-05-01.json"),
         "free_bubble": load("outputs/yt_free_scalar_two_point_pole_absence_2026-05-01.json"),
         "same_1pi": load("outputs/yt_same_1pi_scalar_pole_boundary_2026-05-01.json"),
+        "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
+        "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "direct_scale": load("outputs/yt_direct_measurement_scale_requirements_2026-05-01.json"),
     }
 
@@ -90,6 +92,17 @@ def main() -> int:
         "same-1PI" in str(statuses["same_1pi"]),
         statuses["same_1pi"],
     )
+    report(
+        "finite-ladder-route-needs-ir-limit",
+        "zero-mode" in str(statuses["ladder_ir_zero_mode"]),
+        statuses["ladder_ir_zero_mode"],
+    )
+    report(
+        "heavy-kinetic-route-needs-data-and-matching",
+        "heavy kinetic" in str(statuses["heavy_kinetic"])
+        or "bounded-support" in str(statuses["heavy_kinetic"]),
+        statuses["heavy_kinetic"],
+    )
 
     remaining_routes = [
         {
@@ -102,7 +115,7 @@ def main() -> int:
         },
         {
             "route": "new heavy-matching observable/theorem",
-            "needed": "static additive mass and lattice-HQET-to-SM top mass matching without observed top calibration",
+            "needed": "nonzero-momentum kinetic-mass correlators plus lattice-HQET/NRQCD-to-SM top mass matching without observed top calibration",
         },
     ]
 
@@ -113,9 +126,11 @@ def main() -> int:
             "top-Yukawa closure.  It did retire the visible shortcut routes: "
             "Ward/H_unit, R_conn-only LSZ, Legendre normalization, free logdet "
             "bubble, contact HS/RPA, simplified ladder projector, same-1PI, "
-            "and static/HQET without matching.  Remaining closure requires "
-            "production evidence or a genuinely new scalar LSZ/heavy-matching "
-            "theorem."
+            "finite ladder IR/zero-mode shortcut, and static/HQET without "
+            "matching.  It also isolates a constructive heavy kinetic-mass "
+            "route, but that route still needs nonzero-momentum production "
+            "data and matching.  Remaining closure requires production "
+            "evidence or a genuinely new scalar LSZ/heavy-matching theorem."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",

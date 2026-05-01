@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=8 FAIL=0
+# SUMMARY: PASS=10 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -42,6 +42,8 @@ The certificate consumes the PR-local route certificates for:
 - Legendre normalization boundary;
 - free scalar two-point pole absence;
 - same-1PI scalar-pole boundary;
+- scalar ladder IR / zero-mode obstruction;
+- heavy kinetic-mass route scout;
 - direct measurement scale requirements.
 
 All loaded runner certificates have `FAIL=0`.  None authorizes a retained
@@ -60,9 +62,11 @@ visible shortcut routes:
 | free logdet bubble | finite curvature, no scalar pole denominator |
 | contact HS/RPA | needs scalar coupling or kernel theorem |
 | simplified ladder | projector/source normalization sensitive |
+| finite ladder eigenvalue | IR/zero-mode and finite-volume prescription sensitive |
 | same-1PI | fixes `y^2 D_phi`, not `y` and residue separately |
 | current-scale direct MC | `am_top = 81.423`, not a useful relativistic top run |
 | HQET/static shortcut | removes rest mass, therefore needs matching |
+| heavy kinetic mass | cancels additive rest mass, but needs nonzero-momentum data and matching |
 
 ## Remaining Honest Routes
 
@@ -75,8 +79,8 @@ visible shortcut routes:
    term, and residue `kappa_H`.
 
 3. New heavy-matching observable/theorem:
-   static additive mass and lattice-HQET-to-SM top mass matching without
-   observed top calibration.
+   nonzero-momentum kinetic-mass correlators plus lattice-HQET/NRQCD-to-SM top
+   mass matching without observed top calibration.
 
 ## Non-Claims
 

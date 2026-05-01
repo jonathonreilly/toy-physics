@@ -1,15 +1,17 @@
 # Opportunity Queue
 
-1. **Fine-scale direct measurement or HQET with matching theorem.** This
-   bypasses the Ward/H-unit readout trap.  Current-scale relativistic production
-   is not enough because `am_top = 81.423`; HQET removes that numerical problem
-   but still needs static additive-mass and lattice-HQET-to-SM matching to
-   determine absolute `m_t`.
-2. **Scalar-channel Bethe-Salpeter projector and kernel theorem.** The
+1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
+   readout trap and cancels the static additive mass through `E(p)-E(0)`.
+   Current-scale relativistic production is not enough because `am_top =
+   81.423`; the kinetic route still needs a `1/M` action term, nonzero-momentum
+   correlator production/scout data, and lattice-HQET/NRQCD-to-SM matching.
+2. **Scalar-channel Bethe-Salpeter projector and limiting theorem.** The
    source-bubble stretch, HS/RPA contact attempt, input audit, and
    projector-normalization obstruction show the exact next analytic object:
    derive the Wilson-staggered scalar projector/source normalization, ladder
-   kernel, eigenvalue crossing, and pole residue.
+   kernel, gauge-zero-mode treatment, IR/finite-volume limiting order,
+   eigenvalue crossing, and pole residue.  The finite-ladder IR/zero-mode
+   obstruction blocks using a finite eigenvalue crossing directly.
 3. **Full scalar pole-residue/common-dressing theorem.** The current analytic
    surface is underdetermined, and the key-blocker closure attempt found no
    existing repo authority that supplies it.  The Legendre transform itself

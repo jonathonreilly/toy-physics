@@ -69,6 +69,16 @@ What changed:
   The live status is still open; the remaining routes are production evidence,
   a new scalar LSZ/canonical-normalization theorem, or a new heavy-matching
   observable/theorem.
+- The scalar ladder IR/zero-mode obstruction now shows that even holding the
+  scalar source fixed, the finite Wilson-exchange ladder pole test can flip
+  under the open gauge-zero-mode, IR-regulator, and finite-volume prescription.
+  A finite `lambda_max >= 1` witness is therefore not load-bearing until a
+  limiting theorem fixes those choices.
+- The heavy kinetic-mass scout supplies the constructive route around the
+  static additive-mass obstruction: use nonzero-momentum energy differences
+  `E(p)-E(0)` to extract `M_kin`.  This cancels the additive shift, but pure
+  static correlators have no kinetic splitting and a top-like heavy mass needs
+  very high energy-splitting precision plus a matching theorem.
 
 The scientific result is narrower than closure:
 
@@ -78,10 +88,11 @@ The normalization 1/sqrt(6) is not the hard blocker.
 The hard blockers are now sharply separated.  For retained closure, PR #230
 needs either strict physical measurement evidence with a valid heavy-mass
 matching bridge or a real interacting scalar-channel
-Bethe-Salpeter/projector/pole-residue theorem.  The normalization arithmetic,
-SSB bookkeeping, free source bubble, source Legendre transform, kinematic
-scalar/gauge factorization, static rephasing, same-1PI coefficient equality,
-contact HS rewrite, and wording around the old Ward note are not enough.
+Bethe-Salpeter/projector/pole-residue theorem with controlled zero-mode and
+IR/finite-volume limits.  The normalization arithmetic, SSB bookkeeping, free
+source bubble, source Legendre transform, kinematic scalar/gauge factorization,
+static rephasing, same-1PI coefficient equality, finite ladder eigenvalue
+scouts, contact HS rewrite, and wording around the old Ward note are not enough.
 ```
 
 Exact next action:
@@ -97,11 +108,11 @@ Package this PR #230 update.  The remaining positive options are now:
 3. a newly derived Planck stationarity selector.
 ```
 
-Acceptance target for the next scalar Bethe-Salpeter block:
+Acceptance target for the next heavy-kinetic block:
 
-1. Derive the exact scalar-channel Wilson-staggered scalar projector/source
-   normalization.
-2. Derive the scalar ladder kernel with controlled IR and finite-volume limits.
-3. Prove or disprove eigenvalue crossing on the current authority surface.
-4. If crossing is proven, compute the pole residue from the eigenvalue
-   derivative and re-run the Ward physical-readout repair audit.
+1. Implement a nonzero-momentum correlator scout that extracts `E(p)-E(0)`.
+2. Decide whether the current staggered/Wilson action supplies a usable
+   `1/M` kinetic term for the top-scale route.
+3. Derive or bound the lattice-HQET/NRQCD-to-SM matching import.
+4. If the matching import closes, propagate `M_kin` to `y_t = sqrt(2)m_t/v`;
+   otherwise record the precise production/matching requirement.
