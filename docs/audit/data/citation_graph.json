@@ -229,6 +229,10 @@
       "to": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26"
     },
     {
+      "from": "audit_dm_gv_runner_stale_path_cleanup_block_two_note_2026-05-01",
+      "to": "audit_dm_runner_stale_path_cleanup_note_2026-05-01"
+    },
+    {
       "from": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
       "to": "minimal_axioms_2026-04-11"
     },
@@ -2567,6 +2571,58 @@
     {
       "from": "cpt_exact_note",
       "to": "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
+    },
+    {
+      "from": "cross_lane_dependency_map_note_2026-04-30",
+      "to": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27"
+    },
+    {
+      "from": "cross_lane_dependency_map_note_2026-04-30",
+      "to": "hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30"
+    },
+    {
+      "from": "cross_lane_dependency_map_note_2026-04-30",
+      "to": "atomic_rydberg_dependency_firewall_note_2026-04-27"
+    },
+    {
+      "from": "cross_lane_dependency_map_note_2026-04-30",
+      "to": "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30"
+    },
+    {
+      "from": "cross_lane_dependency_map_note_2026-04-30",
+      "to": "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27"
+    },
+    {
+      "from": "cross_lane_dependency_map_note_2026-04-30",
+      "to": "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27"
+    },
+    {
+      "from": "cross_lane_dependency_map_note_2026-04-30",
+      "to": "neutrino_lane4_theorem_plan_note_2026-04-28"
+    },
+    {
+      "from": "cross_lane_dependency_map_note_2026-04-30",
+      "to": "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27"
+    },
+    {
+      "from": "cross_lane_dependency_map_note_2026-04-30",
+      "to": "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29"
+    },
+    {
+      "from": "cross_lane_dependency_map_note_2026-04-30",
+      "to": "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26"
+    },
+    {
+      "from": "cross_lane_dependency_map_note_2026-04-30",
+      "to": "charged_lepton_y_tau_m3_premise_self_correction_note_2026-04-28"
+    },
+    {
+      "from": "cross_lane_dependency_map_note_2026-04-30",
+      "to": "lanes.open_science.readme"
+    },
+    {
+      "from": "cross_lane_dependency_map_note_2026-04-30",
+      "to": "lanes.active_working_lanes_2026-04-26"
     },
     {
       "from": "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29",
@@ -5543,6 +5599,34 @@
     {
       "from": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
       "to": "pmns_right_polar_section_note"
+    },
+    {
+      "from": "neutrino_lane4_sr2_premise_audit_note_2026-04-30",
+      "to": "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28"
+    },
+    {
+      "from": "neutrino_lane4_sr2_premise_audit_note_2026-04-30",
+      "to": "lorentz_boost_covariance_2d_theorem_note"
+    },
+    {
+      "from": "neutrino_lane4_sr2_premise_audit_note_2026-04-30",
+      "to": "lorentz_boost_covariance_3plus1d_theorem_note"
+    },
+    {
+      "from": "neutrino_lane4_sr2_premise_audit_note_2026-04-30",
+      "to": "neutrino_majorana_pfaffian_no_forcing_theorem_note"
+    },
+    {
+      "from": "neutrino_lane4_sr2_premise_audit_note_2026-04-30",
+      "to": "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30"
+    },
+    {
+      "from": "neutrino_lane4_sr2_premise_audit_note_2026-04-30",
+      "to": "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26"
+    },
+    {
+      "from": "neutrino_lane4_sr2_premise_audit_note_2026-04-30",
+      "to": "neutrino_lane4_workstream_closeout_note_2026-04-28"
     },
     {
       "from": "neutrino_majorana_adjacent_singlet_placement_theorem_note",
@@ -18645,7 +18729,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T22:21:06.061519+00:00",
+  "generated_at": "2026-05-01T22:29:35.953154+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -20161,6 +20245,38 @@
       "path": "docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_atomic_rydberg_dependency_firewall.py",
       "title": "Atomic Rydberg Dependency Firewall"
+    },
+    "audit_dm_gv_runner_stale_path_cleanup_block_two_note_2026-05-01": {
+      "claim_id": "audit_dm_gv_runner_stale_path_cleanup_block_two_note_2026-05-01",
+      "current_status": "support",
+      "current_status_raw": "support / audit-hygiene cleanup. Companion to",
+      "deps": [
+        "audit_dm_runner_stale_path_cleanup_note_2026-05-01"
+      ],
+      "note_hash": "9e37942e39d20011163391611109ddedb867506ede48f1bf30d010de915ec150",
+      "path": "docs/AUDIT_DM_GV_RUNNER_STALE_PATH_CLEANUP_BLOCK_TWO_NOTE_2026-05-01.md",
+      "runner_path": null,
+      "title": "Audit DM + Gauge-Vacuum Runner Stale-Path Cleanup (Block Two)"
+    },
+    "audit_dm_runner_stale_path_cleanup_note_2026-05-01": {
+      "claim_id": "audit_dm_runner_stale_path_cleanup_note_2026-05-01",
+      "current_status": "support",
+      "current_status_raw": "support / audit-hygiene cleanup. This note does **not** propose",
+      "deps": [],
+      "note_hash": "f90a0e80282addd84d760ba2218aa4af9be5442b7c3fd62833b830323c705c29",
+      "path": "docs/AUDIT_DM_RUNNER_STALE_PATH_CLEANUP_NOTE_2026-05-01.md",
+      "runner_path": null,
+      "title": "Audit DM Runner Stale-Path Cleanup"
+    },
+    "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01": {
+      "claim_id": "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01",
+      "current_status": "support",
+      "current_status_raw": "support / audit-cohort assessment. This note is a navigation",
+      "deps": [],
+      "note_hash": "5d92113867f7e77321a20861391dc33d570184009072d94038ec2d9d54617a47",
+      "path": "docs/AUDIT_LHF_LEVERAGE_MAP_FOR_RETAINED_PROMOTION_NOTE_2026-05-01.md",
+      "runner_path": "scripts/frontier_right_handed_sector.py",
+      "title": "Audit Low-Hanging-Fruit Leverage Map for Retained Promotion"
     },
     "audited_symmetry_synthesis_note": {
       "claim_id": "audited_symmetry_synthesis_note",
@@ -22361,6 +22477,30 @@
       "path": "docs/CROSS_FAMILY_UNIVERSALITY_NOTE.md",
       "runner_path": "scripts/dispersion_all_families.py",
       "title": "Cross-Family Consistency: Dispersion + Lensing at H=0.5 (Conditional)"
+    },
+    "cross_lane_dependency_map_note_2026-04-30": {
+      "claim_id": "cross_lane_dependency_map_note_2026-04-30",
+      "current_status": "support",
+      "current_status_raw": "support-only synthesis; no claim promotion. This note is a",
+      "deps": [
+        "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
+        "hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30",
+        "atomic_rydberg_dependency_firewall_note_2026-04-27",
+        "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30",
+        "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
+        "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+        "neutrino_lane4_theorem_plan_note_2026-04-28",
+        "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
+        "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29",
+        "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26",
+        "charged_lepton_y_tau_m3_premise_self_correction_note_2026-04-28",
+        "lanes.open_science.readme",
+        "lanes.active_working_lanes_2026-04-26"
+      ],
+      "note_hash": "a234c3b425c5b6db0042f253ba05cafdf8aa492762032fc49c841b70caf394e7",
+      "path": "docs/CROSS_LANE_DEPENDENCY_MAP_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_cross_lane_dependency_map.py",
+      "title": "Cross-Lane Dependency Map for the Six Critical Open Science Lanes"
     },
     "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29": {
       "claim_id": "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29",
@@ -29800,7 +29940,7 @@
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
       "deps": [],
-      "note_hash": "d1b607ec0313556b49092d1861295717caa1111461480675830f2aa2fa933be8",
+      "note_hash": "aab3150f6d9ca3850d6d9a966a3d805b24d34b7e1f140137d94a901ee2c59917",
       "path": "docs/LEPTON_SHARED_HIGGS_UNIVERSALITY_UNDERDETERMINATION_NOTE.md",
       "runner_path": "scripts/frontier_lepton_shared_higgs_universality_underdetermination.py",
       "title": "Lepton Shared-Higgs Universality Underdetermination"
@@ -30719,6 +30859,24 @@
       "path": "docs/NEUTRINO_LANE4_SR2_PFAFFIAN_SCALAR_TWO_POINT_BOUNDARY_NOTE_2026-04-29.md",
       "runner_path": "scripts/frontier_neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary.py",
       "title": "Lane 4D SR-2 Pfaffian / Scalar Two-Point Boundary"
+    },
+    "neutrino_lane4_sr2_premise_audit_note_2026-04-30": {
+      "claim_id": "neutrino_lane4_sr2_premise_audit_note_2026-04-30",
+      "current_status": "support",
+      "current_status_raw": "support / premise-audit (named obstruction). This note does **not**",
+      "deps": [
+        "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
+        "lorentz_boost_covariance_2d_theorem_note",
+        "lorentz_boost_covariance_3plus1d_theorem_note",
+        "neutrino_majorana_pfaffian_no_forcing_theorem_note",
+        "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30",
+        "lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
+        "neutrino_lane4_workstream_closeout_note_2026-04-28"
+      ],
+      "note_hash": "3c207c652d3ddb65b15ec714e9828a94eb58fdef7712fba6939e6875e683ad6e",
+      "path": "docs/NEUTRINO_LANE4_SR2_PREMISE_AUDIT_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_neutrino_lane4_sr2_premise_audit.py",
+      "title": "Neutrino Lane 4 \u2014 SR-2 Premise Audit"
     },
     "neutrino_lane4_theorem_plan_note_2026-04-28": {
       "claim_id": "neutrino_lane4_theorem_plan_note_2026-04-28",
@@ -32336,7 +32494,7 @@
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
       "deps": [],
-      "note_hash": "bc9fc3924e537d2d7cdc4a8ef2189a927fa55d70e327c79cba746c9870624773",
+      "note_hash": "60b86d25cc4fe4a6ae47983c91317f1a50449c47e3cd750fc995ac53c60d5a25",
       "path": "docs/PMNS_MINIMAL_BRANCH_NONSELECTION_NOTE.md",
       "runner_path": "scripts/frontier_pmns_minimal_branch_nonselection.py",
       "title": "PMNS Minimal-Branch Current-Atlas Nonselection Theorem"
@@ -40541,6 +40699,8 @@
     "atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29",
     "atomic_lane2_physical_unit_limit_boundary_note_2026-04-29",
     "atomic_rydberg_dependency_firewall_note_2026-04-27",
+    "audit_dm_runner_stale_path_cleanup_note_2026-05-01",
+    "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01",
     "audited_symmetry_synthesis_note",
     "axiom_change_proposal_2026-04-10",
     "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
@@ -41606,18 +41766,18 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4661,
-    "leaf_count": 705,
-    "node_count": 1663,
-    "root_count": 1170,
-    "runners_with_path": 1233,
+    "edge_count": 4682,
+    "leaf_count": 707,
+    "node_count": 1668,
+    "root_count": 1172,
+    "runners_with_path": 1236,
     "status_counts": {
       "bounded": 457,
       "open": 48,
       "proposed_no_go": 47,
       "proposed_promoted": 1,
       "proposed_retained": 355,
-      "support": 343,
+      "support": 348,
       "unknown": 412
     }
   }

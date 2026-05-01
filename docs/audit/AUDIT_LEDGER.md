@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T22:21:09.761760+00:00
+**Generated:** 2026-05-01T22:29:39.176620+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 76 |
+| **retained** | 75 |
 | **retained_no_go** | 57 |
-| _proposed_retained_ | 1 |
+| _proposed_retained_ | 2 |
 | _proposed_no_go_ | 16 |
 | bounded | 163 |
-| support | 133 |
+| support | 138 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
@@ -34,29 +34,29 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 305 |
-| `audited_conditional` | 653 |
+| `audited_clean` | 304 |
+| `audited_conditional` | 652 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 58 |
+| `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 504 |
+| `unaudited` | 513 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 90 |
-| `high` | 321 |
-| `medium` | 395 |
-| `leaf` | 759 |
+| `high` | 324 |
+| `medium` | 393 |
+| `leaf` | 763 |
 
 - **Proposed claims demoted by upstream:** 140
 - **Citation cycles detected:** 61
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1167
-- runners with (C) first-principles compute hits: 545
-- runners with (D) external comparator hits: 288
+- runners classified: 1169
+- runners with (C) first-principles compute hits: 546
+- runners with (D) external comparator hits: 289
 - decoration candidates (no C, no D): 82
 
 ## Top 25 by load-bearing score (topology only)
@@ -65,31 +65,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | criticality | desc | score | audit_status | effective |
 |---:|---|---|---:|---:|---|---|
-| 1 | `alpha_s_derived_note` | critical | 257 | 29.51 | `unaudited` | ~~audited_conditional~~ |
-| 2 | `graph_first_su3_integration_note` | critical | 309 | 29.28 | `audited_clean` | **retained** |
-| 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 28.86 | `audited_conditional` | ~~audited_conditional~~ |
-| 4 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 28.84 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `yt_ward_identity_derivation_theorem` | critical | 262 | 27.54 | `audited_renaming` | ~~audited_renaming~~ |
-| 6 | `observable_principle_from_axiom_note` | critical | 292 | 26.70 | `audited_conditional` | ~~audited_conditional~~ |
-| 7 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 101 | 23.67 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `yt_ew_color_projection_theorem` | critical | 259 | 23.52 | `audited_conditional` | ~~audited_conditional~~ |
-| 9 | `three_generation_observable_theorem_note` | critical | 300 | 21.73 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `three_generation_structure_note` | critical | 264 | 21.05 | `audited_conditional` | ~~audited_conditional~~ |
-| 11 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 20.83 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `minimal_axioms_2026-04-11` | critical | 257 | 20.51 | `audited_conditional` | ~~audited_conditional~~ |
-| 13 | `one_generation_matter_closure_note` | critical | 244 | 20.44 | `audited_conditional` | ~~audited_conditional~~ |
-| 14 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 93 | 19.55 | `audited_conditional` | ~~audited_conditional~~ |
-| 15 | `anomaly_forces_time_theorem` | critical | 261 | 18.53 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `graph_first_selector_derivation_note` | critical | 308 | 18.27 | `audited_clean` | **retained** |
-| 17 | `native_gauge_closure_note` | critical | 305 | 17.76 | `audited_clean` | **retained** |
-| 18 | `left_handed_charge_matching_note` | critical | 265 | 17.55 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `ckm_atlas_axiom_closure_note` | critical | 74 | 17.23 | `audited_conditional` | ~~audited_conditional~~ |
-| 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 120 | 16.42 | `audited_conditional` | ~~audited_conditional~~ |
-| 21 | `plaquette_self_consistency_note` | critical | 261 | 16.03 | `unaudited` | ~~audited_conditional~~ |
-| 22 | `physical_lattice_necessity_note` | critical | 299 | 15.73 | `audited_conditional` | ~~audited_conditional~~ |
-| 23 | `rconn_derived_note` | critical | 262 | 15.54 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `higgs_mass_derived_note` | critical | 258 | 15.52 | `audited_conditional` | ~~audited_conditional~~ |
-| 25 | `higgs_vacuum_explicit_systematic_note` | critical | 257 | 15.51 | `audited_conditional` | ~~audited_conditional~~ |
+| 1 | `alpha_s_derived_note` | critical | 259 | 29.52 | `unaudited` | ~~audited_conditional~~ |
+| 2 | `graph_first_su3_integration_note` | critical | 311 | 29.29 | `audited_clean` | **retained** |
+| 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 117 | 28.88 | `audited_conditional` | ~~audited_conditional~~ |
+| 4 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 116 | 28.87 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `yt_ward_identity_derivation_theorem` | critical | 264 | 27.55 | `audited_renaming` | ~~audited_renaming~~ |
+| 6 | `observable_principle_from_axiom_note` | critical | 294 | 26.70 | `audited_conditional` | ~~audited_conditional~~ |
+| 7 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 103 | 23.70 | `audited_conditional` | ~~audited_conditional~~ |
+| 8 | `yt_ew_color_projection_theorem` | critical | 261 | 23.53 | `audited_conditional` | ~~audited_conditional~~ |
+| 9 | `three_generation_observable_theorem_note` | critical | 302 | 21.74 | `audited_conditional` | ~~audited_conditional~~ |
+| 10 | `three_generation_structure_note` | critical | 266 | 21.06 | `audited_conditional` | ~~audited_conditional~~ |
+| 11 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 115 | 20.86 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `minimal_axioms_2026-04-11` | critical | 259 | 20.52 | `audited_conditional` | ~~audited_conditional~~ |
+| 13 | `one_generation_matter_closure_note` | critical | 246 | 20.45 | `audited_conditional` | ~~audited_conditional~~ |
+| 14 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 95 | 19.59 | `audited_conditional` | ~~audited_conditional~~ |
+| 15 | `anomaly_forces_time_theorem` | critical | 263 | 18.54 | `audited_conditional` | ~~audited_conditional~~ |
+| 16 | `graph_first_selector_derivation_note` | critical | 310 | 18.28 | `audited_clean` | **retained** |
+| 17 | `native_gauge_closure_note` | critical | 307 | 17.77 | `audited_clean` | **retained** |
+| 18 | `left_handed_charge_matching_note` | critical | 267 | 17.57 | `audited_conditional` | ~~audited_conditional~~ |
+| 19 | `ckm_atlas_axiom_closure_note` | critical | 76 | 17.27 | `audited_conditional` | ~~audited_conditional~~ |
+| 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 122 | 16.44 | `audited_conditional` | ~~audited_conditional~~ |
+| 21 | `plaquette_self_consistency_note` | critical | 263 | 16.04 | `unaudited` | ~~audited_conditional~~ |
+| 22 | `physical_lattice_necessity_note` | critical | 301 | 15.74 | `audited_conditional` | ~~audited_conditional~~ |
+| 23 | `rconn_derived_note` | critical | 264 | 15.55 | `audited_conditional` | ~~audited_conditional~~ |
+| 24 | `higgs_mass_derived_note` | critical | 260 | 15.53 | `audited_conditional` | ~~audited_conditional~~ |
+| 25 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 129 | 15.52 | `audited_conditional` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -358,7 +358,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_five_sixths_scale_selection_boundary_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
-| `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_lane3_stuck_fanout_synthesis_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `s3_boundary_link_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
@@ -426,7 +425,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `asymmetry_persistence_mass_scaling_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `asymmetry_persistence_mass_window_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `asymmetry_persistence_pilot_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `atomic_lane2_qed_running_dependency_firewall_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `audited_symmetry_synthesis_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_change_proposal_2026-04-10` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1084,12 +1082,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `kernel_vs_gravity_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `koide_axiom_native_support_batch_note_2026-04-22` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `lepton_shared_higgs_universality_underdetermination_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `lorentz_violation_derived_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `monopole_derived_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | C | - |
 | `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `pmns_intrinsic_completion_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `pmns_minimal_branch_nonselection_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `pmns_selector_minimal_microscopic_extension_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -1668,24 +1664,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Atomic Lane 2 Physical-Unit Limit Boundary: the current atomic lane still lacks the named bridge needed for a framework-derived Rydberg/atomic-scale closure.  _(class `C`)_
 - **chain closes:** True — Yes. The note is a negative boundary claim, and the registered runner completed successfully while checking the missing bridge/dependency sensitivity rather than asserting an atomic prediction.
 - **rationale:** The clean content is the no-go/dependency boundary, not an atomic-scale prediction. The source note explicitly denies Rydberg closure, and the runner completed successfully with the classified PASS surface {'A': 0, 'B': 1, 'C': 0, 'D': 0, 'total_pass': 1}. Residual risk is downstream misuse as a positive atomic prediction.
-- **auditor confidence:** high
-
-### `atomic_lane2_qed_running_dependency_firewall_note_2026-04-30`
-
-- **Note:** [`ATOMIC_LANE2_QED_RUNNING_DEPENDENCY_FIREWALL_NOTE_2026-04-30.md`](../../docs/ATOMIC_LANE2_QED_RUNNING_DEPENDENCY_FIREWALL_NOTE_2026-04-30.md)
-- **current_status:** support
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_failed~~  (reason: `inherited_from:lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** `alpha(M_Z) -> alpha(0)` running step as its own reduction theorem and exposes  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (atomic_rydberg_dependency_firewall_note_2026-04-27=proposed_retained, lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26=audited_failed, lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26=audited_conditional), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (atomic_rydberg_dependency_firewall_note_2026-04-27=proposed_retained, lanes.open_science.02_atomic_scale_program_open_lane_2026-04-26=audited_failed, lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared support tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md`
-  - `lanes/open_science/02_ATOMIC_SCALE_PROGRAM_OPEN_LANE_2026-04-26.md`
-  - `lanes/open_science/03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md`
-  - `lanes/open_science/06_CHARGED_LEPTON_MASS_RETENTION_OPEN_LANE_2026-04-26.md`
-  - `lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md`
 - **auditor confidence:** high
 
 ### `atomic_rydberg_dependency_firewall_note_2026-04-27`
@@ -10296,18 +10274,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `UNREGISTERED: shared-Higgs universality theorem`
 - **auditor confidence:** high
 
-### `lepton_shared_higgs_universality_underdetermination_note`
-
-- **Note:** [`LEPTON_SHARED_HIGGS_UNIVERSALITY_UNDERDETERMINATION_NOTE.md`](../../docs/LEPTON_SHARED_HIGGS_UNIVERSALITY_UNDERDETERMINATION_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The current atlas contains no retained inter-sector bridge theorem forcing shared-Higgs universality or forcing its failure, so the present exact answer is underdetermination.  _(class `B`)_
-- **chain closes:** False — The runner's constructive grammar checks pass, but it exits nonzero because the atlas/validation/PMNS-packet checks used to support the current-stack claim no longer match the repo surface.
-- **rationale:** Issue: the row's current-stack underdetermination claim relies on atlas/publication-control state that the primary runner can no longer verify; the runner reports 17 PASS and 3 FAIL and exits nonzero. Why this blocks: the algebraic examples still show admissible universal and non-universal assignments, but the note's load-bearing claim about the current retained/publication surface is stale relative to the checked artifacts. Repair target: update the note and runner against the current DERIVATION_ATLAS, DERIVATION_VALIDATION_MAP, and PMNS packet wording, or replace the artifact checks with robust current ledger/atlas tests. Claim boundary until fixed: the constructive examples remain suggestive support, but this row is not an audited current-stack theorem.
-- **auditor confidence:** high
-
 ### `lepton_single_higgs_pmns_triviality_note`
 
 - **Note:** [`LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md`](../../docs/LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md)
@@ -12071,18 +12037,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `scripts/pmns_lower_level_utils.py`
 - **auditor confidence:** high
 
-### `pmns_minimal_branch_nonselection_note`
-
-- **Note:** [`PMNS_MINIMAL_BRANCH_NONSELECTION_NOTE.md`](../../docs/PMNS_MINIMAL_BRANCH_NONSELECTION_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The current atlas/package isolates the minimal PMNS-producing branches but does not select among them or derive their seven canonical quantities.  _(class `B`)_
-- **chain closes:** False — The runner confirms the two branch-isolation rows, but it exits nonzero because four publication-control checks for blocker/open/frozen state no longer match the current repo surface.
-- **rationale:** Issue: the row's current-atlas nonselection claim is stale relative to the publication controls checked by its primary runner; the runner reports 3 PASS and 4 FAIL and exits nonzero. Why this blocks: the note's load-bearing claim is about the current package state, so failed atlas/validation/matrix/claims-table checks prevent the audit from ratifying it. Repair target: update the note and runner against the current DERIVATION_ATLAS, DERIVATION_VALIDATION_MAP, PUBLICATION_MATRIX, CLAIMS_TABLE, and gate-note language, or replace brittle text checks with ledger-backed current-state checks. Claim boundary until fixed: branch isolation may still be supported, but this row is not an audited current-atlas nonselection theorem.
-- **auditor confidence:** high
-
 ### `pmns_oriented_cycle_channel_value_law_note`
 
 - **Note:** [`PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md`](../../docs/PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md)
@@ -12900,18 +12854,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
   - `QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`
   - `QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md`
-- **auditor confidence:** high
-
-### `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27`
-
-- **Note:** [`QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md`](../../docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop:fresh-2026-04-28-quark_lane3_bounded_companion_retention_firewall_note_2026-04-27`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Absent those premises, the existing packet remains bounded companion support.  _(class `A`)_
-- **chain closes:** True — The claim is a negative boundary: the note does not derive non-top quark masses, but shows that the current package supplies bounded ratio/support surfaces, not absolute five-mass retention. The live runner verifies repo status guardrails, arbitrary bottom-anchor freedom for down-type ratios, up-type partition dependence, species-uniform Ward failure for m_b, and the safe open endpoint with PASS=17 FAIL=0.
-- **rationale:** The retained content is the Lane 3 firewall, not five-mass retention. The note's load-bearing step closes because the down-type formulas are ratios that preserve an arbitrary bottom anchor, the up-type branch remains partition/scalar-law selected, and the top Ward identity cannot be reused species-uniformly because the b reading overshoots by about 34.7x. The live runner confirms the relevant repo guardrails and comparator-only use of observed masses. Residual risk is downstream misuse: this audit does not ratify m_u, m_d, m_s, m_c, m_b, the 5/6 bridge, up-sector amplitude selection, or non-top Yukawa Ward identities.
 - **auditor confidence:** high
 
 ### `quark_lane3_stuck_fanout_synthesis_2026-04-28`

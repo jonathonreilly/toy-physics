@@ -230,7 +230,15 @@ def part4_the_bank_records_the_new_polar_section_endpoint() -> None:
     note = read("docs/PMNS_RIGHT_POLAR_SECTION_NOTE.md")
     atlas = read("docs/publication/ci3_z3/DERIVATION_ATLAS.md")
     packet = read("docs/publication/ci3_z3/NEUTRINO_DIRAC_PMNS_BOUNDARY_PACKET_2026-04-15.md")
-    intrinsic = read("docs/PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE.md")
+    # PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE was archived 2026-05-01 because
+    # its EWSB-aligned dependency chain never landed and the publication
+    # surface superseded it. The "Hermitian-data law plus sheet-fixing datum"
+    # claim is preserved as retained_no_go institutional memory at the
+    # archive path below.
+    intrinsic = read(
+        "archive_unlanded/pmns-publication-state-supersession-2026-05-01/"
+        "PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE.md"
+    )
 
     check("The new note identifies Y_+(H) = H^(1/2) as the canonical positive section",
           "Y_+(H)" in note and "H^(1/2)" in note)
@@ -238,7 +246,7 @@ def part4_the_bank_records_the_new_polar_section_endpoint() -> None:
           "| PMNS right polar section |" in atlas)
     check("The reviewer packet records that the positive polar section makes the branch intrinsically readable from H",
           "positive polar section" in packet and "sheet-even" in packet)
-    check("The intrinsic-boundary note now says the remaining gap is Hermitian-data law plus sheet-fixing datum",
+    check("The archived intrinsic-boundary note records the remaining gap as Hermitian-data law plus sheet-fixing datum",
           "selected-branch Hermitian data law" in intrinsic and "sheet-fixing datum" in intrinsic)
 
     print()
