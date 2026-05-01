@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T18:37:17.123511+00:00
+**Generated:** 2026-05-01T18:39:01.359021+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 209 |
+| bounded | 208 |
 | support | 151 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 891 |
+| ~~audited_conditional~~ | 892 |
 | ~~audited_failed~~ | 79 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 294 |
-| `audited_conditional` | 600 |
+| `audited_conditional` | 601 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 573 |
+| `unaudited` | 572 |
 
 | criticality | count |
 |---|---:|
@@ -903,6 +903,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_unique_discriminator_v2_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sigma_hier_uniqueness_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
+| `sign_portability_invariant_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `single_axiom_hilbert_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `single_axiom_information_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `sixth_family_distance_law_third_vs_sixth_quick_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -13022,6 +13023,27 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md`
   - `DM_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md`
   - `NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md`
+- **auditor confidence:** high
+
+### `sign_portability_invariant_note`
+
+- **Note:** [`SIGN_PORTABILITY_INVARIANT_NOTE.md`](../../docs/SIGN_PORTABILITY_INVARIANT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Across the retained sign-law basins, the portable quantity is the signed-control fixed point: exact zero-source cancellation, neutral same-point cancellation, plus/minus antisymmetry, and weak-field response pinned near unit slope.  _(class `B`)_
+- **chain closes:** False — The registered runner prints the comparison table, but it hard-codes the family rows rather than reading registered family notes, checking their audit status, or recomputing shared sign-law thresholds. Without those one-hop dependencies and assertions, the proposed portability invariant remains a conditional cross-family summary.
+- **rationale:** Issue: the row claims a cross-family signed-control invariant, but the runner only renders hard-coded family summaries and the family/holdout notes are not registered as one-hop audit dependencies. Why this blocks: a hostile auditor still cannot verify compatible protocols, retained status, threshold tolerances, or that the order-parameter label is independent of filtering passing rows. Repair target: add the named family notes as dependencies and make the runner assert common zero-source, neutral-cancellation, antisymmetry, unit-slope, and basin/seed exclusion thresholds from those packets. Claim boundary until fixed: this is a conditional comparison summary across reported sign-law families, not an audited portability theorem or independent order parameter.
+- **open / conditional deps cited:**
+  - `archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md`
+  - `ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md`
+  - `SECOND_GROWN_FAMILY_SIGN_NOTE.md`
+  - `THIRD_GROWN_FAMILY_SIGN_NOTE.md`
+  - `FOURTH_FAMILY_QUADRANT_NOTE.md`
+  - `archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_NOTE.md`
+  - `archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_FM_TRANSFER_NOTE.md`
+  - `FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md`
 - **auditor confidence:** high
 
 ### `signed_gravity_response_lane_status_note_2026-04-26`
