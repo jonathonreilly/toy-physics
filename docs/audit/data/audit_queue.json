@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 287,
-    "medium": 197
+    "medium": 196
   },
-  "generated_at": "2026-05-01T04:22:13.012811+00:00",
+  "generated_at": "2026-05-01T04:23:40.137496+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6531,23 +6531,6 @@
       "ready": true,
       "runner_path": "scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py",
       "transitive_descendants": 35
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "yt_bridge_moment_closure_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 2,
-      "load_bearing_score": 6.129,
-      "note_path": "docs/YT_BRIDGE_MOMENT_CLOSURE_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_yt_bridge_moment_closure.py",
-      "transitive_descendants": 34
     },
     {
       "audit_independence_required": "any_non_self",
@@ -16348,6 +16331,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 291,
-  "total_pending": 687
+  "ready_count": 290,
+  "total_pending": 686
 }

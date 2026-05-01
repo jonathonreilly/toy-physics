@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:22:13.329952+00:00
+**Generated:** 2026-05-01T04:23:40.471243+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 232 |
+| bounded | 231 |
 | support | 192 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 18 |
+| ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 806 |
 | ~~audited_failed~~ | 159 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 537 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
-| `audited_numerical_match` | 15 |
+| `audited_numerical_match` | 16 |
 | `audited_renaming` | 18 |
-| `unaudited` | 687 |
+| `unaudited` | 686 |
 
 | criticality | count |
 |---|---:|
@@ -954,6 +954,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_action_invariant_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_bridge_hessian_selector_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_bridge_higher_order_corrections_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
+| `yt_bridge_moment_closure_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -13339,6 +13340,25 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `TARGET_CONDITIONED_INPUT: TARGET_YT_PHYS = 0.9176`
   - `PROFILE_SELECTION: logistic center=0.975 width=0.020`
   - `PROBE_WINDOW_SELECTION: |delta| <= 0.10 amplitude tube`
+- **auditor confidence:** high
+
+### `yt_bridge_moment_closure_note`
+
+- **Note:** [`YT_BRIDGE_MOMENT_CLOSURE_NOTE.md`](../../docs/YT_BRIDGE_MOMENT_CLOSURE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-yt_bridge_moment_closure_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the viable UV-localized window, the accepted response kernel is nearly affine, so near-target rows collapse to the response-weighted moment band J_aff = I2 * (a c2 + b).  _(class `G`)_
+- **chain closes:** False — The runner verifies the affine-kernel/moment-band collapse on the proxy bridge scan, but the viable and near-target rows are selected using the accepted y_t endpoint and chosen profile families. The exact interacting bridge does not derive the weighted moment band from declared dependencies.
+- **rationale:** Issue: the two-moment closure is a target-conditioned proxy-family collapse, not an independently derived bridge selection rule. Why this blocks: the runner passes and shows the response kernel is nearly affine plus near-target J_aff is narrow, but rows enter the argument through |dev| cuts around the accepted y_t endpoint and through selected logistic/erf/smoothstep bridge families. Repair target: derive the response-weighted moment band from the exact interacting bridge operator or prove the endpoint/proxy-family selection is forced independently. Claim boundary until fixed: this is useful bounded numerical evidence that the bridge problem reduces to moment selection on the current scan, not an audit-clean moment-closure theorem.
+- **open / conditional deps cited:**
+  - `YT_BRIDGE_ACTION_INVARIANT_NOTE.md`
+  - `YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md`
+  - `YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`
+  - `YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`
+  - `TARGET_CONDITIONED_INPUT: TARGET_YT_PHYS = 0.9176`
+  - `PROFILE_FAMILY_SELECTION: logistic / erf / smoothstep UV-localized bridges`
 - **auditor confidence:** high
 
 ### `yt_color_projection_correction_note`
