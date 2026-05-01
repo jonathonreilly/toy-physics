@@ -6669,6 +6669,22 @@
       "to": "dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16"
     },
     {
+      "from": "pmns_graph_commutant_cycle_value_boundary_note",
+      "to": "pmns_graph_first_axis_alignment_note"
+    },
+    {
+      "from": "pmns_graph_commutant_cycle_value_boundary_note",
+      "to": "pmns_commutant_eigenoperator_selector_note"
+    },
+    {
+      "from": "pmns_graph_commutant_cycle_value_boundary_note",
+      "to": "pmns_oriented_cycle_channel_value_law_note"
+    },
+    {
+      "from": "pmns_graph_commutant_cycle_value_boundary_note",
+      "to": "pmns_oriented_cycle_reduced_channel_nonselection_note"
+    },
+    {
       "from": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
       "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
     },
@@ -7375,6 +7391,10 @@
     {
       "from": "universal_gr_axiom_first_route_memo",
       "to": "universal_gr_polarization_frame_bundle_blocker_note"
+    },
+    {
+      "from": "universal_gr_positive_background_extension_note",
+      "to": "universal_gr_positive_background_local_closure_note"
     },
     {
       "from": "universal_qg_abstract_gaussian_completion_note",
@@ -18585,7 +18605,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T12:12:50.803637+00:00",
+  "generated_at": "2026-05-01T14:35:17.421536+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -23035,13 +23055,13 @@
     },
     "dm_leptogenesis_exact_kernel_closure_note_2026-04-15": {
       "claim_id": "dm_leptogenesis_exact_kernel_closure_note_2026-04-15",
-      "current_status": "support",
-      "current_status_raw": "exact-kernel closure on the refreshed `main`-derived DM lane",
+      "current_status": "bounded",
+      "current_status_raw": "bounded - exact source-and-CP-channel package closed; exact-kernel eta closure does NOT land at percent-level on the consistent benchmark",
       "deps": [],
-      "note_hash": "c68aa6340025d90f3b16faa51a191f64eb66cff91259b8a581bbca713c5b35e7",
+      "note_hash": "c662db5249a8eabd40d2c797f28c0201cbf67a1ee874fd97f9447652db244d24",
       "path": "docs/DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_leptogenesis_exact_kernel_closure.py",
-      "title": "DM Leptogenesis Exact-Kernel Closure"
+      "title": "DM Leptogenesis Exact-Kernel Closure (claim narrowed 2026-05-01)"
     },
     "dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16": {
       "claim_id": "dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16",
@@ -29763,9 +29783,9 @@
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
       "deps": [],
-      "note_hash": "01a6cd2d3392497b0ff78e68f8633b5acb6a80b2ded9b361f6d7e0c100a89b78",
+      "note_hash": "7c14a58ecb8ba68107cba70f5f00445dacee4b9346ae04e7c65dca81a7f5c82e",
       "path": "docs/LIGHT_CONE_FRAMING_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/light_cone_staggered_dispersion.py",
       "title": "Light Cone Framing \u2014 Lieb-Robinson is Standard Lattice QFT"
     },
     "linear_response_derivation_note": {
@@ -32146,7 +32166,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
       "deps": [],
-      "note_hash": "a1edafb89779f91986d7f894dd5a75cabc772022069deabfcaf8d2f8fee9f3e7",
+      "note_hash": "6b82fb4a1788310560135fd5a10cc6131be8799d253ba8be9ba9a77160759863",
       "path": "docs/PMNS_CORNER_TRANSPORT_ACTIVE_BLOCK_NOTE.md",
       "runner_path": "scripts/frontier_pmns_corner_transport_active_block.py",
       "title": "PMNS Corner Transport Active Block"
@@ -32191,8 +32211,13 @@
       "claim_id": "pmns_graph_commutant_cycle_value_boundary_note",
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
-      "deps": [],
-      "note_hash": "9d787da2d39e60075bb3db1305ee611a548ef52f7a8e014d66e6bdc36fe75c57",
+      "deps": [
+        "pmns_graph_first_axis_alignment_note",
+        "pmns_commutant_eigenoperator_selector_note",
+        "pmns_oriented_cycle_channel_value_law_note",
+        "pmns_oriented_cycle_reduced_channel_nonselection_note"
+      ],
+      "note_hash": "f260a83577fa7287b6b07e29f5da083c70d9d03fa902c4770b6aa1aa36c9a3bf",
       "path": "docs/PMNS_GRAPH_COMMUTANT_CYCLE_VALUE_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_pmns_graph_commutant_cycle_value_boundary.py",
       "title": "PMNS Graph-Commutant Cycle Value Boundary"
@@ -37830,11 +37855,13 @@
     "universal_gr_positive_background_extension_note": {
       "claim_id": "universal_gr_positive_background_extension_note",
       "current_status": "support",
-      "current_status_raw": "support - positive-background extension",
-      "deps": [],
-      "note_hash": "269f245a0a23f0e9401ea56d58d01182105cda3225053a6f34f11bdf261d48d7",
+      "current_status_raw": "support - positive-background extension (sign character corrected 2026-05-01)",
+      "deps": [
+        "universal_gr_positive_background_local_closure_note"
+      ],
+      "note_hash": "e6c6d953b5f24987c8a09e0d3d6638a4550935dbcfa58f3918abb68ef942b062",
       "path": "docs/UNIVERSAL_GR_POSITIVE_BACKGROUND_EXTENSION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/universal_gr_positive_background_local_closure.py",
       "title": "Universal GR Positive-Background Extension on `PL S^3 x R`"
     },
     "universal_gr_positive_background_local_closure_note": {
@@ -37842,9 +37869,9 @@
       "current_status": "support",
       "current_status_raw": "support - structural or confirmatory support note",
       "deps": [],
-      "note_hash": "7ca439bac31c3d8e9776117d1f6ccf46544b83518e6c8cc1cada42f515885108",
+      "note_hash": "75cfd2315c86b494b9cb6d09212a7bac0ba0203dbc3c8994175d9bbe2ec82341",
       "path": "docs/UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/universal_gr_positive_background_local_closure.py",
       "title": "Universal GR Positive-Background Local Closure on `PL S^3 x R`"
     },
     "universal_gr_supermetric_normal_form_note": {
@@ -38664,9 +38691,9 @@
     "wave_equation_gravity_note": {
       "claim_id": "wave_equation_gravity_note",
       "current_status": "support",
-      "current_status_raw": "support - finite wave-equation gravity test battery passed",
+      "current_status_raw": "support - finite-speed wave propagation + static-limit Newton recovery established; 1/r radiation tail and Newton-like propagator distance law NOT cleanly established on the current finite box",
       "deps": [],
-      "note_hash": "e4f7b88beaab43c312ec26661ccbf1030fb49b465bdc40e6d9e387fb91219853",
+      "note_hash": "8eb034e1f6125fbbeedca9f63a00296b4191e76f9ac1a11e29bedf9fdd64ed4a",
       "path": "docs/WAVE_EQUATION_GRAVITY_NOTE.md",
       "runner_path": "scripts/frontier_wave_equation_gravity.py",
       "title": "Wave Equation Gravity: Promoting Poisson to d'Alembertian"
@@ -39665,9 +39692,9 @@
     "yt_exact_hessian_selector_uniqueness_note": {
       "claim_id": "yt_exact_hessian_selector_uniqueness_note",
       "current_status": "bounded",
-      "current_status_raw": "bounded support theorem",
+      "current_status_raw": "bounded support theorem (selector DIRECTION uniqueness; selector SHAPE drift bounded but above branch budget)",
       "deps": [],
-      "note_hash": "2ec292ffa77d7e248f1c4813746b0014a9f810f093ab8eee3eff9aadc75345b8",
+      "note_hash": "e059f45f8a8793481b64b31689c5886b48dceb859b1d4e3f984ce5f81521074b",
       "path": "docs/YT_EXACT_HESSIAN_SELECTOR_UNIQUENESS_NOTE.md",
       "runner_path": "scripts/frontier_yt_exact_hessian_selector_uniqueness.py",
       "title": "Exact Hessian Selector Uniqueness Note"
@@ -40306,7 +40333,7 @@
       "current_status": "support",
       "current_status_raw": "DERIVED (zero SM imports)",
       "deps": [],
-      "note_hash": "8c0694491b9cc46d9e2f659e00a6e7fa7c9eadfb4a448bf6dd5535ddf285d586",
+      "note_hash": "c0bb2cb49c91786a63a1d39e1353e7f6d1e114281ce30b6ae2bc2899bc174c98",
       "path": "docs/YT_ZERO_IMPORT_CHAIN_NOTE.md",
       "runner_path": "scripts/frontier_yt_zero_import_chain.py",
       "title": "Zero-Import y_t Derivation: Definitive Authority Note"
@@ -41132,7 +41159,6 @@
     "pmns_commutant_eigenoperator_selector_note",
     "pmns_corner_transport_active_block_note",
     "pmns_current_bank_value_selection_nogo_note",
-    "pmns_graph_commutant_cycle_value_boundary_note",
     "pmns_graph_first_axis_alignment_note",
     "pmns_graph_first_cycle_frame_support_note",
     "pmns_hw1_source_transfer_boundary_note",
@@ -41396,7 +41422,6 @@
     "universal_gr_lorentzian_signature_extension_note",
     "universal_gr_polarization_frame_bundle_attempt",
     "universal_gr_polarization_frame_bundle_blocker_note",
-    "universal_gr_positive_background_extension_note",
     "universal_gr_positive_background_local_closure_note",
     "universal_gr_supermetric_normal_form_note",
     "universal_gr_tensor_action_blocker_note",
@@ -41509,17 +41534,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4646,
+    "edge_count": 4651,
     "leaf_count": 705,
     "node_count": 1661,
-    "root_count": 1173,
-    "runners_with_path": 1227,
+    "root_count": 1171,
+    "runners_with_path": 1230,
     "status_counts": {
-      "bounded": 455,
+      "bounded": 456,
       "open": 48,
       "proposed_promoted": 1,
       "proposed_retained": 370,
-      "support": 376,
+      "support": 375,
       "unknown": 411
     }
   }
