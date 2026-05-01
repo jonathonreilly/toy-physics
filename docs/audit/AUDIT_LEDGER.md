@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:05:38.734371+00:00
+**Generated:** 2026-05-01T05:06:42.453442+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 221 |
+| bounded | 220 |
 | support | 184 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 815 |
+| ~~audited_conditional~~ | 816 |
 | ~~audited_failed~~ | 162 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 244 |
-| `audited_conditional` | 546 |
+| `audited_conditional` | 547 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 74 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 656 |
+| `unaudited` | 655 |
 
 | criticality | count |
 |---|---:|
@@ -479,6 +479,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `dm_leptogenesis_hrad_theorem_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -3947,6 +3948,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Once the full microscopic charge-preserving operator D is supplied, the chain D -> D_- -> dW_e^H -> H_e -> |U_e|^2^T -> selected transport column -> eta is algorithmic.  _(class `A`)_
 - **chain closes:** False — The runner verifies the algebraic downstream reduction for a supplied/constructed D, but it does not derive the microscopic value law of D from Cl(3) on Z^3. The near-closing eta result is therefore conditional on the missing D theorem.
 - **rationale:** Issue: the runner constructs or supplies a charge-preserving D arranged to reproduce the target charged block, then checks the downstream Schur/source/packet/eta algebra. Why this blocks: the note's own remaining target, the microscopic value law of D from the axiom, is not derived, so the PMNS-assisted near-closing value is not a first-principles result. Repair target: derive D from Cl(3) on Z^3 and make the runner build D from that law rather than from the target charged sample. Claim boundary until fixed: the note is a valid conditional reduction showing that D would be sufficient, not a microscopic DM prediction.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_hrad_theorem_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_HRAD_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_HRAD_THEOREM_NOTE_2026-04-16.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The axiom geometry Z^3 is intrinsically flat, so the homogeneous/isotropic spatial slice has exact k = 0; the retained Poisson/Newton chain then gives the flat Friedmann law and H_rad(T) = sqrt(4*pi^3*g_*/45) T^2 / M_Pl.  _(class `B`)_
+- **chain closes:** False — The runner verifies zero Regge deficit, downstream Friedmann/radiation arithmetic, and the normalized E_H(z)=1 branch, but the note has no registered dependency proving the microscopic Z^3-to-FLRW k=0 bridge or the cited Poisson/Newton-to-Friedmann chain. It also relies on imported g_*, M_Pl, and electroweak-scale constants from the shared package.
+- **rationale:** Issue: the claim's closure depends on unregistered bridge inputs: Z^3 Regge flatness must be shown to select the cosmological FLRW k=0 branch, and the Poisson/Newton-to-Friedmann authority path is named but not cited in the ledger row. Why this blocks: the runner checks the selected branch and its algebra after those premises are imposed, so it cannot by itself prove that the transport solver is theorem-native rather than conditionally branch-selected. Repair target: register or add theorem-grade dependencies for the Z^3-to-FLRW curvature map, the flat Friedmann derivation, and the exact spectrum/scale inputs used by the common package. Claim boundary until fixed: conditional on those bridges, the H_rad(T), m_*, K, and E_H(z)=1 arithmetic is internally consistent and runner-checked.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16`
