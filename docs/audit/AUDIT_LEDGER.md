@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:16:36.813533+00:00
+**Generated:** 2026-05-01T04:18:23.360329+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 236 |
+| bounded | 235 |
 | support | 192 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 15 |
+| ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 805 |
 | ~~audited_failed~~ | 159 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 536 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
-| `audited_numerical_match` | 12 |
+| `audited_numerical_match` | 13 |
 | `audited_renaming` | 18 |
-| `unaudited` | 691 |
+| `unaudited` | 690 |
 
 | criticality | count |
 |---|---:|
@@ -950,6 +950,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `tensor_support_center_excess_law_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `wave_direct_dm_h025_seed0_crossfamily_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
+| `yt_bridge_action_invariant_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -13258,6 +13259,25 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `staggered_3D_cubic_source_mass_scaling_and_attraction_artifact_not_registered`
   - `Wilson_3D_cubic_source_mass_scaling_and_attraction_artifact_not_registered`
   - `2D_random_geometric_control_row_artifact_not_registered`
+- **auditor confidence:** high
+
+### `yt_bridge_action_invariant_note`
+
+- **Note:** [`YT_BRIDGE_ACTION_INVARIANT_NOTE.md`](../../docs/YT_BRIDGE_ACTION_INVARIANT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-yt_bridge_action_invariant_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Inside the viable UV-localized bridge scan, the low-energy endpoint deviation is almost perfectly correlated with the normalized gauge-surplus action I2, and near-target rows collapse into a narrow I2 band.  _(class `G`)_
+- **chain closes:** False — The runner verifies a strong numerical scan correlation, but the viable class is selected by proximity to the accepted endpoint and by chosen bridge profile families. The upstream bridge/no-go authorities are also not declared as dependencies.
+- **rationale:** Issue: the action-invariant result is a target-conditioned numerical scan over selected UV-localized bridge families, not a structural derivation of I2 or the UV centroid. Why this blocks: the runner passes and shows corr(action_2, endpoint deviation)=0.999889 with a narrow near-target I2 band, but those rows are filtered by |dev| relative to the accepted y_t endpoint and depend on unregistered upstream bridge assumptions. Repair target: derive the bridge action invariant and centroid from the exact interacting bridge operator, register the constructive UV bridge/no-go/EW-bridge inputs, and show the invariant is selected before using the physical endpoint filter. Claim boundary until fixed: this is a useful bounded numerical reduction of the bridge search space, not an audited structural y_t bridge closure.
+- **open / conditional deps cited:**
+  - `YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`
+  - `YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md`
+  - `YT_EW_COUPLING_BRIDGE_NOTE.md`
+  - `YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md`
+  - `TARGET_CONDITIONED_INPUT: TARGET_YT_PHYS = 0.9176`
+  - `PROFILE_FAMILY_SELECTION: logistic / erf / smoothstep UV-localized bridges`
 - **auditor confidence:** high
 
 ### `yt_color_projection_correction_note`
