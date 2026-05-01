@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:03:31.766116+00:00
+**Generated:** 2026-05-01T07:04:50.205432+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 268 |
+| `audited_clean` | 269 |
 | `audited_conditional` | 583 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 584 |
+| `unaudited` | 583 |
 
 | criticality | count |
 |---|---:|
@@ -304,6 +304,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_backreaction_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_localization_frontier_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `mesoscopic_surrogate_localization_sweep_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -10511,6 +10512,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** There is no single sharp collapse threshold; the 3D surrogate shows a localization/strength frontier where smaller sources are stable but weak and broader sources are stronger while remaining mesoscopic and multistage-stable.  _(class `C`)_
 - **chain closes:** True — The registered frontier runner recomputes the topN sweep and reproduces the note's compact and stronger mesoscopic corner values. The note's conclusion is limited to a bounded localization/strength frontier and explicitly avoids persistent-mass closure.
 - **rationale:** The runner directly checks the load-bearing frontier claim: the current output matches the frozen topN=9, topN=196, and topN=256 captures, deltas, ratios, scores, and width ratios, and the full sweep supports the stated tradeoff. The note does not overclaim a collapse threshold or localized persistent object. Residual risk is limited to future source families that might beat this frontier, which the note leaves as the next search target.
+- **auditor confidence:** high
+
+### `mesoscopic_surrogate_localization_sweep_note`
+
+- **Note:** [`MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** More localized families do not obviously beat the broad top-N control on the retained 3D family; near-point-source cases score well only by collapsing to very small support/capture.  _(class `C`)_
+- **chain closes:** True — The current localization-family sweep output matches the note and frozen log for the best scored rows and the topN/square/Gaussian tradeoff table. The conclusion is bounded to this retained 3D family and does not claim persistent-mass closure.
+- **rationale:** The sweep computation reproduces the load-bearing facts: square radius 0 and Gaussian sigma 0.5 achieve score 1.0000 with low capture, while non-degenerate localized rows do not dominate the broad topN tradeoff. The note's safe read stays within that bounded negative result and explicitly avoids broader surrogate-lane failure or promotion. Residual risk is that a future localized family could beat this frontier, which the note leaves open.
 - **auditor confidence:** high
 
 ### `minimal_absorbing_horizon_probe_note`
