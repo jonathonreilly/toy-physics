@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T19:41:31.803808+00:00
+**Generated:** 2026-05-01T19:42:33.433158+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 197 |
+| bounded | 195 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 904 |
+| ~~audited_conditional~~ | 906 |
 | ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 609 |
+| `audited_conditional` | 610 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 560 |
+| `unaudited` | 559 |
 
 | criticality | count |
 |---|---:|
@@ -812,6 +812,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `memory_decay_diagnosis_2026-04-11` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `mesoscopic_surrogate_localization_sweep_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `mirror_gravity_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_program_synthesis` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -10330,6 +10331,20 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** There is no single sharp collapse threshold; the 3D surrogate shows a localization/strength frontier where smaller sources are stable but weak and broader sources are stronger while remaining mesoscopic and multistage-stable.  _(class `C`)_
 - **chain closes:** True — The registered frontier runner recomputes the topN sweep and reproduces the note's compact and stronger mesoscopic corner values. The note's conclusion is limited to a bounded localization/strength frontier and explicitly avoids persistent-mass closure.
 - **rationale:** The runner directly checks the load-bearing frontier claim: the current output matches the frozen topN=9, topN=196, and topN=256 captures, deltas, ratios, scores, and width ratios, and the full sweep supports the stated tradeoff. The note does not overclaim a collapse threshold or localized persistent object. Residual risk is limited to future source families that might beat this frontier, which the note leaves as the next search target.
+- **auditor confidence:** high
+
+### `mesoscopic_surrogate_localization_sweep_note`
+
+- **Note:** [`MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** More localized source families do not obviously beat the broad top-N control on the retained 3D family; near-point-source winners match the shift score only by collapsing capture/support, so top-N remains the least-bad mesoscopic source control.  _(class `B`)_
+- **chain closes:** False — The frozen log supports the stated comparison, but the row has no registered runner, no classified PASS lines, and no current reproducible script path in the audit ledger. The claim therefore depends on a frozen artifact rather than a rerunnable audit surface.
+- **rationale:** Issue: the table and safe read are consistent with the cited frozen log, but there is no primary runner registered for this note. Why this blocks: the audit lane cannot verify that the localization-family sweep still reproduces the reported score/capture tradeoff or classify its load-bearing checks from a current run. Repair target: restore or register the sweep runner that produced the log and emit classified PASS lines for top-N baseline, degenerate point-source exclusions, non-degenerate localized rows, and the broad-control comparison. Claim boundary until fixed: this is a bounded frozen-log summary, not a fully auditable current localization result.
+- **open / conditional deps cited:**
+  - `logs/2026-04-04-mesoscopic-surrogate-localization-family-sweep.txt`
 - **auditor confidence:** high
 
 ### `mesoscopic_surrogate_source_2d_note`
