@@ -1,0 +1,67 @@
+{
+  "actual_current_surface_status": "exact negative boundary / open bridge",
+  "countermodels": [
+    {
+      "common_dressing": true,
+      "gauge_dressing": 1.0,
+      "measured_y_over_g": 0.4082482904638631,
+      "scalar_dressing": 1.0,
+      "source_ratio": 0.4082482904638631
+    },
+    {
+      "common_dressing": false,
+      "gauge_dressing": 1.0,
+      "measured_y_over_g": 0.3674234614174768,
+      "scalar_dressing": 0.9,
+      "source_ratio": 0.4082482904638631
+    },
+    {
+      "common_dressing": false,
+      "gauge_dressing": 0.95,
+      "measured_y_over_g": 0.47270854685289415,
+      "scalar_dressing": 1.1,
+      "source_ratio": 0.4082482904638631
+    },
+    {
+      "common_dressing": false,
+      "gauge_dressing": 1.05,
+      "measured_y_over_g": 0.38880789567986956,
+      "scalar_dressing": 1.0,
+      "source_ratio": 0.4082482904638631
+    }
+  ],
+  "fail_count": 0,
+  "non_claims": [
+    "does not use alpha_LM or plaquette normalization as proof input",
+    "does not deny the tree-level 1/sqrt(6) source ratio",
+    "does not promote the Ward theorem",
+    "does not use observed top mass or observed Yukawa as input"
+  ],
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Common dressing remains an open bridge; this is not y_t closure.",
+  "required_new_theorem": "derive equality of scalar and gauge dressing factors from a retained symmetry/dynamics theorem, or carry their ratio as measured input",
+  "status_rows": {
+    "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24": {
+      "audit_status": "audited_decoration",
+      "effective_status": "audited_decoration",
+      "verdict_rationale": "Issue: The load-bearing step is exact algebra from the definitions alpha_LM = alpha_bare/u_0 and alpha_s(v) = alpha_bare/u_0^2, but the row presents this bookkeeping corollary as a separate proposed-retained theorem and registers no parent dependency or primary runner. Why this blocks: A definition-level geometric-mean identity adds no independent observable, comparator, falsifiability, or new physical bridge beyond the upstream plaquette/coupling surface, so it should not inflate the retained claim surface as a standalone theorem. Repair target: Box this identity under the retained plaquette/coupling-chain parent, or re-promote only if it is shown to be genuine compression used load-bearing by downstream claims with an explicit parent dependency. Claim boundary until fixed: It is safe to state the exact identity as a bookkeeping corollary of the accepted coupling definitions and to use it to avoid double-counting alpha_LM and alpha_s(v) as independent knobs."
+    },
+    "gauge_vacuum_plaquette_bridge_support_note": {
+      "audit_status": "audited_conditional",
+      "effective_status": "audited_conditional",
+      "verdict_rationale": "Issue: The load-bearing step still imports unratified direct authority: GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md, SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md, GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row."
+    },
+    "plaquette_self_consistency_note": {
+      "audit_status": "audited_conditional",
+      "effective_status": "audited_conditional",
+      "verdict_rationale": "Issue: The load-bearing step still imports unratified direct authority: GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md, GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md, GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md, GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md, GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md, GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md, GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md, GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md, and 13 more direct blockers. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row."
+    },
+    "yt_ward_identity_derivation_theorem": {
+      "audit_status": "audited_renaming",
+      "effective_status": "audited_renaming",
+      "verdict_rationale": "Issue: The load-bearing move defines y_t_bare as the H_unit matrix element and then identifies that matrix element with the top Yukawa readout. Why this blocks: The source note and runner verify the scalar-singlet algebra, Clebsch-Gordan normalization, Fierz coefficients, and tadpole cancellation, but they do not derive the physical observable bridge from independent retained inputs. Repair target: Supply a retained theorem and runner check constructing the map from the composite H_unit matrix element to the SM top Yukawa vertex/readout, including the common tadpole dressing. Claim boundary until fixed: The note supports a tree-level structural identification/algebraic normalization on the canonical surface, not a first-principles derivation of the physical top Yukawa coupling."
+    }
+  },
+  "verdict": "The current Ward/readout surface does not derive common scalar and gauge dressing.  Distinct scalar and gauge dressing factors preserve the same tree-level 1/sqrt(6) source ratio while changing the measured y/g ratio.  A retained theorem equating those dressing factors is required; alpha_LM or plaquette normalization cannot be used as a hidden proof input in PR #230."
+}

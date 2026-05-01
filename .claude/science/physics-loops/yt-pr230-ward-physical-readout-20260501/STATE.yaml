@@ -1,0 +1,73 @@
+slug: yt-pr230-ward-physical-readout-20260501
+goal: "Repair or rule out the Ward physical-readout route for PR #230 top Yukawa closure."
+target_status: best-honest-status
+mode: run
+runtime_budget_requested: "4h"
+date: "2026-05-01"
+worktree: "/Users/jonBridger/Documents/New project 2"
+branch: "claude/yt-direct-lattice-correlator-2026-04-30"
+repo_lock:
+  default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
+  workspace_lock_status: "acquired"
+  workspace_lock_path: "logs/physics_worker_lock.json"
+current_phase: block-1-packaged
+blocks_completed: 6
+active_route: "Ward physical-readout repair"
+active_hard_residual: "derive source/HS normalization, chirality selector, scalar carrier, LSZ leg, and common dressing without H_unit matrix-element definition"
+files_touched:
+  - "scripts/frontier_yt_pr230_global_proof_audit.py"
+  - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
+  - "scripts/frontier_yt_ward_operator_matching_candidate.py"
+  - "docs/YT_PR230_GLOBAL_YT_PROOF_AUDIT_NOTE_2026-05-01.md"
+  - "docs/YT_WARD_PHYSICAL_READOUT_REPAIR_AUDIT_NOTE_2026-05-01.md"
+  - "docs/YT_WARD_OPERATOR_MATCHING_CANDIDATE_NOTE_2026-05-01.md"
+  - "outputs/yt_pr230_global_proof_audit_2026-05-01.json"
+  - "outputs/yt_ward_physical_readout_repair_audit_2026-05-01.json"
+  - "outputs/yt_ward_operator_matching_candidate_2026-05-01.json"
+  - "scripts/frontier_yt_source_higgs_legendre_ssb_bridge.py"
+  - "docs/YT_SOURCE_HIGGS_LEGENDRE_SSB_BRIDGE_NOTE_2026-05-01.md"
+  - "outputs/yt_source_higgs_legendre_ssb_bridge_2026-05-01.json"
+  - "scripts/frontier_yt_source_higgs_kappa_residue_obstruction.py"
+  - "docs/YT_SOURCE_HIGGS_KAPPA_RESIDUE_OBSTRUCTION_NOTE_2026-05-01.md"
+  - "outputs/yt_source_higgs_kappa_residue_obstruction_2026-05-01.json"
+  - "scripts/frontier_yt_scalar_lsz_residue_bridge.py"
+  - "docs/YT_SCALAR_LSZ_RESIDUE_BRIDGE_NOTE_2026-05-01.md"
+  - "outputs/yt_scalar_lsz_residue_bridge_2026-05-01.json"
+  - "scripts/frontier_yt_chirality_selector_bridge.py"
+  - "docs/YT_CHIRALITY_SELECTOR_BRIDGE_NOTE_2026-05-01.md"
+  - "outputs/yt_chirality_selector_bridge_2026-05-01.json"
+  - "scripts/frontier_yt_common_dressing_obstruction.py"
+  - "docs/YT_COMMON_DRESSING_OBSTRUCTION_NOTE_2026-05-01.md"
+  - "outputs/yt_common_dressing_obstruction_2026-05-01.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
+open_imports:
+  - "source/HS/Legendre normalization"
+  - "SSB VEV division as a functional readout, not symbol identification"
+  - "Q_L to q_R chirality/species selector"
+  - "physical scalar carrier uniqueness"
+  - "scalar LSZ / Z_phi external-leg bridge"
+  - "common tadpole/dressing proof without alpha_LM or plaquette dependence"
+no_go_routes_inherited:
+  - "direct production lattice correlator: production compute not complete"
+  - "top mass cutoff substrate pin: bounded obstruction"
+  - "beta_lambda(M_Pl)=0 Planck selector: current-surface no-go"
+  - "Ward decomposition without physical readout map: audited_renaming"
+claim_state_movement:
+  - "proved no existing hidden retained y_t proof in current repo ledger"
+  - "converted Ward repair into executable open-import checklist"
+  - "added conditional operator-matching candidate showing normalization arithmetic is not the remaining hard blocker"
+  - "reduced the SSB VEV-division substep: canonical doublet y is recovered by sqrt(2) m/v with no extra factor"
+  - "proved kappa_H = 1 is not selected by counts plus SSB alone; scalar two-point residue/LSZ theorem is required"
+  - "proved R_conn channel arithmetic is not enough to derive scalar LSZ residue"
+  - "isolated the chirality/right-handed selector as conditional gauge-arithmetic support with non-clean parents"
+  - "proved common scalar/gauge dressing is not enforced by current Ward/gauge identities"
+actual_current_surface_status: "open / conditional-support"
+conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+next_exact_action: "Package PR #230 update; remaining positive route is a true scalar pole-residue/common-dressing theorem or production MC."
+stop_condition: "User runtime budget exhausted, or source/SSB theorem reaches honest closure/no-go and is packaged."

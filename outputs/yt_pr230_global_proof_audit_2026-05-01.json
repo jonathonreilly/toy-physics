@@ -1,0 +1,514 @@
+{
+  "actual_current_surface_status": "open / no existing audited-retained y_t closure found",
+  "effective_counts": {
+    "audited_conditional": 28,
+    "audited_failed": 14,
+    "audited_renaming": 13,
+    "bounded": 19,
+    "open": 3,
+    "support": 12,
+    "unknown": 6
+  },
+  "fail_count": 0,
+  "named_status": {
+    "yt_boundary_theorem": {
+      "audit_status": "unaudited",
+      "current_status": "open",
+      "effective_status": "audited_renaming",
+      "load_bearing_step": null,
+      "verdict_rationale": null
+    },
+    "yt_color_projection_correction_note": {
+      "audit_status": "audited_conditional",
+      "current_status": "support",
+      "effective_status": "audited_conditional",
+      "load_bearing_step": "The physical Yukawa readout is y_t(physical) = y_t(Ward) * sqrt(R_conn) with R_conn = (N_c^2 - 1)/N_c^2 = 8/9 applied to the scalar channel.",
+      "verdict_rationale": "Issue: the sqrt(8/9) Yukawa correction produces a strong numerical support packet, but the note explicitly says the required R_conn = 8/9 bridge is not yet derived from the CMT partition-function identity alone and needs the same lattice measurement that would close the EW color-projection correction.\nWhy this blocks: downstream proposed-retained/promoted rows cannot cite this as a theorem-grade zero-import y_t or top-mass derivation; the load-bearing scalar-channel projection remains conditional on the unclosed R_conn bridge and standard matching/running caveats.\nRepair target: compute and audit R_conn on the SU(3) beta=6 lattice in the scalar channel, then rerun the full Yukawa/pole-mass chain with that measured bridge and explicit matching-order uncertainty.\nClaim boundary until fixed: safe to claim quantitative support that sqrt(8/9) improves the live y_t/top/Higgs readout and is not double-counted with Ward matching, not a closed theorem-grade Yukawa prediction."
+    },
+    "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30": {
+      "audit_status": "unaudited",
+      "current_status": "proposed_retained",
+      "effective_status": "audited_conditional",
+      "load_bearing_step": null,
+      "verdict_rationale": null
+    },
+    "yt_eft_bridge_theorem": {
+      "audit_status": "unaudited",
+      "current_status": "open",
+      "effective_status": "audited_renaming",
+      "load_bearing_step": null,
+      "verdict_rationale": null
+    },
+    "yt_planck_double_criticality_selector_note_2026-04-30": {
+      "audit_status": "unaudited",
+      "current_status": "support",
+      "effective_status": "audited_conditional",
+      "load_bearing_step": null,
+      "verdict_rationale": null
+    },
+    "yt_top_mass_cutoff_obstruction_note_2026-05-01": {
+      "audit_status": "unaudited",
+      "current_status": "bounded",
+      "effective_status": "bounded",
+      "load_bearing_step": null,
+      "verdict_rationale": null
+    },
+    "yt_ward_identity_derivation_theorem": {
+      "audit_status": "audited_renaming",
+      "current_status": "support",
+      "effective_status": "audited_renaming",
+      "load_bearing_step": "On the canonical surface (g_bare = 1), the framework's bare Yukawa coupling y_t_bare is DEFINED as the unit-norm-state matrix element of the H_unit operator between the vacuum and a single top-pair state.",
+      "verdict_rationale": "Issue: The load-bearing move defines y_t_bare as the H_unit matrix element and then identifies that matrix element with the top Yukawa readout. Why this blocks: The source note and runner verify the scalar-singlet algebra, Clebsch-Gordan normalization, Fierz coefficients, and tadpole cancellation, but they do not derive the physical observable bridge from independent retained inputs. Repair target: Supply a retained theorem and runner check constructing the map from the composite H_unit matrix element to the SM top Yukawa vertex/readout, including the common tadpole dressing. Claim boundary until fixed: The note supports a tree-level structural identification/algebraic normalization on the canonical surface, not a first-principles derivation of the physical top Yukawa coupling."
+    },
+    "yt_zero_import_authority_note": {
+      "audit_status": "unaudited",
+      "current_status": "support",
+      "effective_status": "audited_renaming",
+      "load_bearing_step": null,
+      "verdict_rationale": null
+    },
+    "yt_zero_import_chain_note": {
+      "audit_status": "unaudited",
+      "current_status": "support",
+      "effective_status": "support",
+      "load_bearing_step": null,
+      "verdict_rationale": null
+    },
+    "yukawa_color_projection_theorem": {
+      "audit_status": "audited_conditional",
+      "current_status": "support",
+      "effective_status": "audited_conditional",
+      "load_bearing_step": "For the physical scalar, Z_phi^{phys}/Z_phi^{lattice}=R_conn=(N_c^2-1)/N_c^2=8/9, so y_t^{phys}=y_t^{Ward} sqrt(8/9).",
+      "verdict_rationale": "Issue: the decisive physical identification of scalar wave-function renormalization with the connected color-trace ratio is not closed inside the restricted inputs, and the note's declared dependencies are missing from the ledger deps for this claim. Why this blocks: the runner confirms that applying sqrt(8/9) improves m_t and related comparisons, but it does not independently derive R_conn or prove that this connected trace is the scalar LSZ factor. Repair target: add and audit the R_conn and EW/color-projection authorities as explicit one-hop deps, and supply a theorem-grade scalar-Z_phi matching bridge rather than a hard-coded channel factor. Claim boundary until fixed: the sqrt(8/9) Yukawa correction remains a conditional quantitative support lane, not an audited-clean derivation."
+    }
+  },
+  "pass_count": 9,
+  "proof_like_docs": [
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_CLASS_6_C3_BREAKING_OPERATOR_NOTE_2026-04-18.md",
+      "status": "framework-native retention analysis. **Outcome B refined (proposed_retained",
+      "title": "# YT Class #6 \u2014 C_{3[111]}-Breaking Operator Retention Analysis Note"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md",
+      "status": "DERIVED quantitative support on the live YT lane -- zero SM",
+      "title": "# Color-Singlet Projection Correction to y_t"
+    },
+    {
+      "contains_beta_lambda": true,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md",
+      "status": "proposed_retained measurement route / calibrated readout unless",
+      "title": "# Direct Lattice-Correlator Top-Yukawa Measurement Gate"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
+      "status": "proposed_retained EW normalization lane on `main`",
+      "title": "# Color-Singlet Projection Theorem for EW Couplings"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md",
+      "status": "proposed_retained **analysis-only** note applying the YT P1 three-channel",
+      "title": "# YT EW \u0394_R Retention Analysis Note (Lattice-to-MSbar Matching for g_1(v), g_2(v))"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_FLAGSHIP_BOUNDARY_NOTE.md",
+      "status": "DERIVED quantitative lane",
+      "title": "# y_t Flagship Boundary Note"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md",
+      "status": "framework-native retention analysis. **Outcome D refined (proposed_retained",
+      "title": "# Generation-Hierarchy Primitive Retention Analysis Note"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md",
+      "status": "proposed_retained retention-analysis **no-go** note. This note investigates",
+      "title": "# H_unit Flavor-Column Decomposition Retention Analysis Note"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md",
+      "status": "proposed_retained **full staggered-PT 4D BZ quadrature** of the",
+      "title": "# P1 BZ Quadrature Full Staggered-PT Note (4D Kawamoto\u2013Smit Quadrature)"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md",
+      "status": "proposed_retained **numerical 4D BZ quadrature** of the four",
+      "title": "# P1 BZ Quadrature Numerical Note (4D Grid Evaluation of the Four Lattice-PT Integrals)"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
+      "status": "proposed_retained structural sub-theorem \u2014 the 1-loop lattice-to-MSbar",
+      "title": "# P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md",
+      "status": "proposed_retained citation-and-bound computation of the `C_F`",
+      "title": "# P1 \u0394_1 BZ-Computation Note (C_F Channel of the Ward-Ratio 1-Loop Correction)"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": true,
+      "path": "docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md",
+      "status": "proposed_retained **citation-and-bound** computation of the C_A",
+      "title": "# P1 \u0394_2 (C_A Channel) BZ Computation Note"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": true,
+      "path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
+      "status": "proposed_retained citation-and-bound computation of the T_F n_f",
+      "title": "# P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": true,
+      "path": "docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md",
+      "status": "proposed_retained **2-loop structural extension** of the P1 ratio",
+      "title": "# P1 \u0394_R 2-Loop Structural Extension Theorem Note (Color-Tensor Retention + Loop-Geometric Bound)"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": true,
+      "path": "docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md",
+      "status": "proposed_retained **literature-cited master assembly theorem** on the P1",
+      "title": "# P1 \u0394_R Master Assembly Theorem Note (Three-Channel Ratio Correction Roll-Up)"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_P1_DELTA_R_SM_RGE_CROSSCHECK_NOTE_2026-04-18.md",
+      "status": "Cross-validation of the proposed_retained `\u0394_R` at `M_Pl` against a SECOND",
+      "title": "# P1 \u0394_R SM-RGE Cross-Validation Note"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md",
+      "status": "proposed_retained framework-native **symbolic reduction** of the 1-loop",
+      "title": "# P1 H_unit 1-Loop Renormalization: Framework-Native Symbolic Reduction"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": true,
+      "path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
+      "status": "proposed_retained citation-and-bound layer on top of the prior P1 symbolic decomposition. The framework-specific value of the 1-loop Brillouin-zone integral `I_S` for the composite scalar bilinear `H_unit = (1/sqrt(N_c N_iso)) \u03a3 \u03c8\u0304\u03c8` on the tadpole-improved Wilson-plaquette + staggered-Dirac canonical surface is not re-derived here. Its published-literature range for the closest analogue (tadpole-improved staggered scalar density on Wilson plaquette action at `\u03b2 \u2243 6`) is cited, the associated framework-specific P1 contribution is recomputed at `\u03b1_LM = 0.0907`, and the outcome is compared to the packaged `1.92%` nominal that the obstruction budget currently carries.",
+      "title": "# P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md",
+      "status": "proposed_retained structural sub-theorem \u2014 a framework-native geometric upper bound on the loop-expansion tail of the lattice-to-MSbar matching `\u0394_R^{total}` for the Yukawa/gauge ratio at `M_Pl`, using only proposed_retained SU(3) Casimir quantities and the proposed_retained canonical coupling `\u03b1_LM`. No literature value of the 2-loop matching coefficient is imported as a derivation input.",
+      "title": "# P1 Loop-Expansion Geometric Tail Bound on the Lattice-to-MSbar Matching at M_Pl"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": true,
+      "path": "docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md",
+      "status": "proposed_retained structural sub-theorem. **Definitive verdict:",
+      "title": "# P1 Rep-A vs Rep-B 1-Loop Cancellation Sub-Theorem Note (Ward-Identity Ratio Stability)"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": true,
+      "path": "docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md",
+      "status": "proposed_retained structural sub-theorem \u2014 **definitive no-go",
+      "title": "# P1 Shared-Fierz Shortcut No-Go Sub-Theorem Note"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md",
+      "status": "proposed_retained structural sub-theorem \u2014 a framework-native geometric upper bound on the loop-expansion tail of the integrated SM-RGE transport of `y_t` from `M_Pl` to `v` (`F_yt`), hence on the v-matching coefficient `M = \u221au_0 \u00b7 F_yt \u00b7 \u221a(8/9)` that closes the P2 taste-staircase residual. Uses only proposed_retained SU(3) Casimir quantities, the proposed_retained SM light-flavor count, and the proposed_retained canonical-surface coupling `\u03b1_LM`. No literature value of the 3-loop or higher SM RGE integrated contribution is imported as a derivation input.",
+      "title": "# P2 F_yt Loop-Expansion Geometric Tail Bound on the v-Matching Coefficient M"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md",
+      "status": "PARTIAL closure via Path C (color projection * 1-loop SM RGE on y_t * CMT endpoint). The matching coefficient `M = 1.9734` decomposes framework-natively into three proposed_retained factors. The 1-loop evaluation gives `M = 1.926`, within 2.4% of the target, bounded by the proposed_retained QFP Insensitivity 3% envelope. The residual 2.4% is accounted for by the proposed_retained 1-loop vs. 2-loop SM RGE truncation shift explicitly quantified in `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`.",
+      "title": "# P2 v-Matching Theorem: Framework-Native Decomposition of M"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md",
+      "status": "proposed_retained structural sub-theorem \u2014 a framework-native geometric upper bound on the K_n tail of the MSbar-to-pole mass conversion series at `alpha_s(m_t) = 0.1079`, using only proposed_retained SU(3) Casimir quantities and the proposed_retained running-coupling anchor. No literature value of K_4 is imported as a derivation input.",
+      "title": "# P3 K-Series Geometric Tail Bound on the MSbar-to-Pole Conversion"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md",
+      "status": "proposed_retained **framework-native** structural sub-theorem \u2014 the",
+      "title": "# P3 MSbar-to-Pole K_1 Framework-Native Derivation Note (1-loop Casimir)"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
+      "status": "proposed_retained structural sub-theorem \u2014 the two-loop color-tensor",
+      "title": "# P3 MSbar-to-Pole K_2 Color-Tensor Retention Theorem (2-loop structural skeleton)"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md",
+      "status": "proposed_retained structural cite-and-verify of the four 2-loop on-shell QCD integrals `{I_FF, I_FA, I_Fl, I_Fh}` that enter the K_2 color-tensor decomposition; citation-and-verification layer on top of the prior K_2 color-factor retention.",
+      "title": "# P3 MSbar-to-Pole K_2 Two-Loop Integral Citation Note"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
+      "status": "proposed_retained structural sub-theorem \u2014 the three-loop color-tensor skeleton of the MSbar-to-pole mass conversion coefficient `K_3` is proposed_retained as exact SU(3) Casimir algebra; individual three-loop integral primitives (`K_FFF`, `K_FFA`, ..., `K_Fhh`) remain outside the retention scope by design.",
+      "title": "# P3 MSbar-to-Pole K_3 Color-Tensor Retention Theorem (3-loop structural skeleton)"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": true,
+      "path": "docs/YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md",
+      "status": "**MATCHING GAP CLOSED** on the proposed_retained tree-level canonical",
+      "title": "# Yukawa SSB Matching-Gap Analysis Note"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": true,
+      "path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
+      "status": "proposed_retained **master obstruction theorem** on the YT",
+      "title": "# YT UV-to-IR Transport Master Obstruction Theorem Note"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
+      "status": "DERIVED quantitative authority surface (zero external observables)",
+      "title": "# y_t Lane: Zero-Import Authority"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": false,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_ZERO_IMPORT_CHAIN_NOTE.md",
+      "status": "DERIVED (zero SM imports)",
+      "title": "# Zero-Import y_t Derivation: Definitive Authority Note"
+    }
+  ],
+  "retained_y_t_rows": {},
+  "route_buckets": {
+    "color_projection": {
+      "yt_color_projection_correction_note": {
+        "audit_status": "audited_conditional",
+        "current_status": "support",
+        "effective_status": "audited_conditional",
+        "verdict_rationale": "Issue: the sqrt(8/9) Yukawa correction produces a strong numerical support packet, but the note explicitly says the required R_conn = 8/9 bridge is not yet derived from the CMT partition-function identity alone and needs the same lattice measurement that would close the EW color-projection correction.\nWhy this blocks: downstream proposed-retained/promoted rows cannot cite this as a theorem-grade z"
+      },
+      "yt_ew_color_projection_theorem": {
+        "audit_status": "audited_conditional",
+        "current_status": "proposed_retained",
+        "effective_status": "audited_conditional",
+        "verdict_rationale": "Issue: the theorem promotes a universal package-level 9/8 EW coupling correction from R_conn, but the one-hop matching dependency only supplies bounded large-N_c/OZI support and explicitly does not prove the exact coefficient equality; the runner measures R_conn=0.888337 +/- 0.001896, not the continuum EW current matching factor. Why this blocks: agreement of the sibling connected-trace observable"
+      },
+      "yukawa_color_projection_theorem": {
+        "audit_status": "audited_conditional",
+        "current_status": "support",
+        "effective_status": "audited_conditional",
+        "verdict_rationale": "Issue: the decisive physical identification of scalar wave-function renormalization with the connected color-trace ratio is not closed inside the restricted inputs, and the note's declared dependencies are missing from the ledger deps for this claim. Why this blocks: the runner confirms that applying sqrt(8/9) improves m_t and related comparisons, but it does not independently derive R_conn or pro"
+      }
+    },
+    "direct_correlator": {
+      "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30": {
+        "audit_status": "unaudited",
+        "current_status": "proposed_retained",
+        "effective_status": "audited_conditional",
+        "verdict_rationale": ""
+      },
+      "yt_top_mass_cutoff_obstruction_note_2026-05-01": {
+        "audit_status": "unaudited",
+        "current_status": "bounded",
+        "effective_status": "bounded",
+        "verdict_rationale": ""
+      }
+    },
+    "p1_p2_p3_matching": {
+      "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18": {
+        "audit_status": "audited_conditional",
+        "current_status": "proposed_retained",
+        "effective_status": "audited_conditional",
+        "verdict_rationale": "Issue: The load-bearing step still imports unratified direct authority: YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md, YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md, YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md, YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_H_UNIT_R"
+      },
+      "yt_p2_v_matching_theorem_note_2026-04-17": {
+        "audit_status": "audited_conditional",
+        "current_status": "proposed_retained",
+        "effective_status": "audited_conditional",
+        "verdict_rationale": "Issue: the proposed M closure depends on a selected mixed-scheme factorization M = sqrt(u_0) * F_yt * sqrt(8/9), a QFP 3% support envelope, and a 2-loop primary-chain value that the runner cites rather than derives. Why this blocks: a retained v-matching theorem must prove the lattice-to-SM endpoint map, color-projection factor, and RGE transport as one coherent bridge, and must compute the quanti"
+      },
+      "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17": {
+        "audit_status": "unaudited",
+        "current_status": "proposed_retained",
+        "effective_status": "audited_failed",
+        "verdict_rationale": ""
+      },
+      "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17": {
+        "audit_status": "unaudited",
+        "current_status": "proposed_retained",
+        "effective_status": "audited_failed",
+        "verdict_rationale": ""
+      },
+      "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17": {
+        "audit_status": "unaudited",
+        "current_status": "proposed_retained",
+        "effective_status": "audited_failed",
+        "verdict_rationale": ""
+      }
+    },
+    "planck_selector": {
+      "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01": {
+        "audit_status": "unaudited",
+        "current_status": "support",
+        "effective_status": "audited_conditional",
+        "verdict_rationale": ""
+      },
+      "yt_planck_double_criticality_selector_note_2026-04-30": {
+        "audit_status": "unaudited",
+        "current_status": "support",
+        "effective_status": "audited_conditional",
+        "verdict_rationale": ""
+      },
+      "yt_scale_stationarity_substrate_no_go_note_2026-05-01": {
+        "audit_status": "unaudited",
+        "current_status": "support",
+        "effective_status": "audited_conditional",
+        "verdict_rationale": ""
+      },
+      "yt_trace_anomaly_stationarity_no_go_note_2026-05-01": {
+        "audit_status": "unaudited",
+        "current_status": "support",
+        "effective_status": "support",
+        "verdict_rationale": ""
+      },
+      "yt_vacuum_stability_stationarity_no_go_note_2026-05-01": {
+        "audit_status": "unaudited",
+        "current_status": "support",
+        "effective_status": "audited_conditional",
+        "verdict_rationale": ""
+      }
+    },
+    "schur_bridge": {
+      "yt_bridge_endpoint_shift_bound_note": {
+        "audit_status": "unaudited",
+        "current_status": "bounded",
+        "effective_status": "bounded",
+        "verdict_rationale": ""
+      },
+      "yt_bridge_hessian_selector_note": {
+        "audit_status": "unaudited",
+        "current_status": "bounded",
+        "effective_status": "bounded",
+        "verdict_rationale": ""
+      },
+      "yt_bridge_uv_class_uniqueness_note": {
+        "audit_status": "unaudited",
+        "current_status": "bounded",
+        "effective_status": "bounded",
+        "verdict_rationale": ""
+      },
+      "yt_exact_schur_normal_form_uniqueness_note": {
+        "audit_status": "audited_conditional",
+        "current_status": "bounded",
+        "effective_status": "audited_conditional",
+        "verdict_rationale": "Issue: normal-form uniqueness is proved only inside the current tested Schur coarse-operator class and its intrinsic local/nonlocal remainder budgets. Why this blocks: the runner samples 300 admissible SPD perturbations and verifies affine/budget stability, but it imports the bounded coarse bridge object and does not derive microscopic membership of the interacting bridge in that admissible class."
+      }
+    },
+    "ward_zero_import": {
+      "yt_boundary_theorem": {
+        "audit_status": "unaudited",
+        "current_status": "open",
+        "effective_status": "audited_renaming",
+        "verdict_rationale": ""
+      },
+      "yt_eft_bridge_theorem": {
+        "audit_status": "unaudited",
+        "current_status": "open",
+        "effective_status": "audited_renaming",
+        "verdict_rationale": ""
+      },
+      "yt_ward_identity_derivation_theorem": {
+        "audit_status": "audited_renaming",
+        "current_status": "support",
+        "effective_status": "audited_renaming",
+        "verdict_rationale": "Issue: The load-bearing move defines y_t_bare as the H_unit matrix element and then identifies that matrix element with the top Yukawa readout. Why this blocks: The source note and runner verify the scalar-singlet algebra, Clebsch-Gordan normalization, Fierz coefficients, and tadpole cancellation, but they do not derive the physical observable bridge from independent retained inputs. Repair target"
+      },
+      "yt_zero_import_authority_note": {
+        "audit_status": "unaudited",
+        "current_status": "support",
+        "effective_status": "audited_renaming",
+        "verdict_rationale": ""
+      },
+      "yt_zero_import_chain_note": {
+        "audit_status": "unaudited",
+        "current_status": "support",
+        "effective_status": "support",
+        "verdict_rationale": ""
+      }
+    }
+  },
+  "verdict": "Review of all docs/YT*.md notes plus the audit ledger found no existing retained top-Yukawa proof that the auditor missed.  The proof-looking zero-import/Ward/color-projection stack still routes through audited_renaming or audited_conditional nodes; the direct correlator route is cutoff-obstructed at the current scale; and the Planck selector remains conditional on beta_lambda(M_Pl)=0.",
+  "yt_doc_count": 103,
+  "yt_ledger_row_count": 95
+}

@@ -1,0 +1,55 @@
+{
+  "actual_current_surface_status": "exact negative boundary / open bridge",
+  "constants": {
+    "n_color": 3,
+    "n_iso": 2,
+    "source_coefficient": 0.4082482904638631
+  },
+  "countermodels": [
+    {
+      "doublet_yukawa": 0.20412414523193154,
+      "kappa_H": 0.5,
+      "mass_at_v_equals_1": 0.14433756729740646,
+      "recovered_yukawa": 0.20412414523193154,
+      "source_coefficient": 0.4082482904638631,
+      "ssb_identity_holds": true
+    },
+    {
+      "doublet_yukawa": 0.3849001794597506,
+      "kappa_H": 0.9428090415820634,
+      "mass_at_v_equals_1": 0.27216552697590873,
+      "recovered_yukawa": 0.38490017945975064,
+      "source_coefficient": 0.4082482904638631,
+      "ssb_identity_holds": true
+    },
+    {
+      "doublet_yukawa": 0.4082482904638631,
+      "kappa_H": 1.0,
+      "mass_at_v_equals_1": 0.2886751345948129,
+      "recovered_yukawa": 0.4082482904638631,
+      "source_coefficient": 0.4082482904638631,
+      "ssb_identity_holds": true
+    },
+    {
+      "doublet_yukawa": 0.8164965809277261,
+      "kappa_H": 2.0,
+      "mass_at_v_equals_1": 0.5773502691896258,
+      "recovered_yukawa": 0.8164965809277261,
+      "source_coefficient": 0.4082482904638631,
+      "ssb_identity_holds": true
+    }
+  ],
+  "fail_count": 0,
+  "forbidden_definition_hits": [],
+  "non_claims": [
+    "does not derive kappa_H = 1",
+    "does not identify the source scalar with H_unit by definition",
+    "does not use observed top mass or observed Yukawa as input",
+    "does not promote the Ward theorem"
+  ],
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The runner proves a missing normalization condition, not retained top-Yukawa closure.",
+  "required_new_theorem": "derive the scalar source two-point residue and prove that the canonical Higgs-doublet normalization gives kappa_H = 1, or carry the measured/derived kappa_H as a separate physical input",
+  "verdict": "The current source/count/SSB data do not derive kappa_H = 1.  Different kappa_H values preserve the same group-count coefficient and the same SSB identity while producing different doublet Yukawa readouts.  A scalar two-point residue or equivalent LSZ theorem is required to select kappa_H."
+}

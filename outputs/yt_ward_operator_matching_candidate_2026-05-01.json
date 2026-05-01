@@ -1,0 +1,83 @@
+{
+  "actual_current_surface_status": "conditional-support / open",
+  "computed_factors": {
+    "candidate_trilinear_coefficient": 0.40824829046386296,
+    "chirality_decomposition_coefficient": 1.0,
+    "hs_residue_amplitude": 0.4082482904638631,
+    "scalar_singlet_normalization": 0.4082482904638631,
+    "sm_ssb_yukawa_readout_factor": 1.0,
+    "target_1_over_sqrt_6": 0.4082482904638631,
+    "trilinear_component_projection": 0.40824829046386296
+  },
+  "conditional_surface_status": "If the listed source, chirality, scalar-carrier, LSZ, and dressing bridges are independently repaired, the tree-level operator map has the required 1/sqrt(6) normalization.",
+  "constants": {
+    "g_bare": 1.0,
+    "n_color": 3,
+    "n_iso": 2
+  },
+  "dependencies": {
+    "chirality_projection_and_right_handed_selector": {
+      "effective_status": "audited_failed",
+      "ledger_key": "yt_class_5_non_ql_yukawa_vertex_note_2026-04-18",
+      "required_repair": "derive the Q_L-to-q_R chirality/species selector without using the old matrix-element identification"
+    },
+    "common_tadpole_dressing": {
+      "effective_status": "audited_renaming",
+      "ledger_key": "yt_ward_identity_derivation_theorem",
+      "required_repair": "prove common dressing for gauge and scalar readouts without alpha_LM or plaquette normalization as a load-bearing input"
+    },
+    "physical_scalar_uniqueness": {
+      "effective_status": "audited_failed",
+      "ledger_key": "yt_h_unit_flavor_column_decomposition_note_2026-04-18",
+      "required_repair": "prove the scalar carrier selected by the source functional is the physical Higgs fluctuation, not only a named composite"
+    },
+    "scalar_lsz_external_leg": {
+      "effective_status": "audited_conditional",
+      "ledger_key": "yukawa_color_projection_theorem",
+      "required_repair": "derive the scalar Z_phi/LSZ matching bridge as a physical external-leg theorem"
+    },
+    "source_or_hs_normalization": {
+      "effective_status": "audited_renaming",
+      "ledger_key": "yt_ssb_matching_gap_analysis_note_2026-04-18",
+      "required_repair": "derive the Legendre/HS source normalization and VEV division as a functional derivative of the retained action"
+    }
+  },
+  "fail_count": 0,
+  "forbidden_definition_hits": [],
+  "non_claims": [
+    "does not define the top Yukawa by a H_unit matrix element",
+    "does not promote the Ward theorem",
+    "does not close the scalar LSZ/color-projection bridge",
+    "does not use observed top mass or Yukawa values as proof inputs"
+  ],
+  "open_imports": {
+    "chirality_projection_and_right_handed_selector": {
+      "effective_status": "audited_failed",
+      "ledger_key": "yt_class_5_non_ql_yukawa_vertex_note_2026-04-18",
+      "required_repair": "derive the Q_L-to-q_R chirality/species selector without using the old matrix-element identification"
+    },
+    "common_tadpole_dressing": {
+      "effective_status": "audited_renaming",
+      "ledger_key": "yt_ward_identity_derivation_theorem",
+      "required_repair": "prove common dressing for gauge and scalar readouts without alpha_LM or plaquette normalization as a load-bearing input"
+    },
+    "physical_scalar_uniqueness": {
+      "effective_status": "audited_failed",
+      "ledger_key": "yt_h_unit_flavor_column_decomposition_note_2026-04-18",
+      "required_repair": "prove the scalar carrier selected by the source functional is the physical Higgs fluctuation, not only a named composite"
+    },
+    "scalar_lsz_external_leg": {
+      "effective_status": "audited_conditional",
+      "ledger_key": "yukawa_color_projection_theorem",
+      "required_repair": "derive the scalar Z_phi/LSZ matching bridge as a physical external-leg theorem"
+    },
+    "source_or_hs_normalization": {
+      "effective_status": "audited_renaming",
+      "ledger_key": "yt_ssb_matching_gap_analysis_note_2026-04-18",
+      "required_repair": "derive the Legendre/HS source normalization and VEV division as a functional derivative of the retained action"
+    }
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The runner still has open imports and is not a retained proposal."
+}

@@ -1,0 +1,65 @@
+{
+  "actual_current_surface_status": "exact negative boundary / open bridge",
+  "constants": {
+    "R_conn": 0.8888888888888888,
+    "n_color": 3,
+    "source_y": 0.4082482904638631
+  },
+  "countermodels": [
+    {
+      "lsz_factor": 0.6666666666666666,
+      "pole_residue": 0.4444444444444444,
+      "residue_scale": 0.5,
+      "same_R_conn": 0.8888888888888888,
+      "y_after_lsz": 0.2721655269759087
+    },
+    {
+      "lsz_factor": 0.9428090415820634,
+      "pole_residue": 0.8888888888888888,
+      "residue_scale": 1.0,
+      "same_R_conn": 0.8888888888888888,
+      "y_after_lsz": 0.3849001794597506
+    },
+    {
+      "lsz_factor": 1.3333333333333333,
+      "pole_residue": 1.7777777777777777,
+      "residue_scale": 2.0,
+      "same_R_conn": 0.8888888888888888,
+      "y_after_lsz": 0.5443310539518174
+    }
+  ],
+  "fail_count": 0,
+  "ledger_status": {
+    "rconn_derived_note": {
+      "audit_status": "audited_conditional",
+      "effective_status": "audited_conditional",
+      "verdict_rationale": "Issue: The load-bearing step still imports unratified direct authority: YUKAWA_COLOR_PROJECTION_THEOREM.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row."
+    },
+    "yt_color_projection_correction_note": {
+      "audit_status": "audited_conditional",
+      "effective_status": "audited_conditional",
+      "verdict_rationale": "Issue: the sqrt(8/9) Yukawa correction produces a strong numerical support packet, but the note explicitly says the required R_conn = 8/9 bridge is not yet derived from the CMT partition-function identity alone and needs the same lattice measurement that would close the EW color-projection correction.\nWhy this blocks: downstream proposed-retained/promoted rows cannot cite this as a theorem-grade zero-import y_t or top-mass derivation; the load-bearing scalar-channel projection remains conditional on the unclosed R_conn bridge and standard matching/running caveats.\nRepair target: compute and audit R_conn on the SU(3) beta=6 lattice in the scalar channel, then rerun the full Yukawa/pole-mass chain with that measured bridge and explicit matching-order uncertainty.\nClaim boundary until fixed: safe to claim quantitative support that sqrt(8/9) improves the live y_t/top/Higgs readout and is not double-counted with Ward matching, not a closed theorem-grade Yukawa prediction."
+    },
+    "yt_ew_color_projection_theorem": {
+      "audit_status": "audited_conditional",
+      "effective_status": "audited_conditional",
+      "verdict_rationale": "Issue: the theorem promotes a universal package-level 9/8 EW coupling correction from R_conn, but the one-hop matching dependency only supplies bounded large-N_c/OZI support and explicitly does not prove the exact coefficient equality; the runner measures R_conn=0.888337 +/- 0.001896, not the continuum EW current matching factor. Why this blocks: agreement of the sibling connected-trace observable with 8/9 does not prove that the physical EW vacuum polarization must read exactly the connected trace rather than the full trace plus a nonzero disconnected coefficient, and the dependency graph is circular between this note, RCONN_DERIVED_NOTE, and the OZI support note. Repair target: derive the EW current matching rule directly from the lattice-to-continuum path-integral/current normalization, or add a dedicated runner computing Pi_EW^phys/Pi_EW^lattice including the disconnected topology and its coefficient; also break and clean the circular Rconn/OZI dependencies. Claim boundary until fixed: safe to claim leading-order R_conn=8/9+O(1/N_c^4) with MC support and that a universal 9/8 factor would preserve sin^2(theta_W); not safe to claim the retained physical EW couplings are independently derived by an exact 9/8 color-projection theorem."
+    },
+    "yukawa_color_projection_theorem": {
+      "audit_status": "audited_conditional",
+      "effective_status": "audited_conditional",
+      "verdict_rationale": "Issue: the decisive physical identification of scalar wave-function renormalization with the connected color-trace ratio is not closed inside the restricted inputs, and the note's declared dependencies are missing from the ledger deps for this claim. Why this blocks: the runner confirms that applying sqrt(8/9) improves m_t and related comparisons, but it does not independently derive R_conn or prove that this connected trace is the scalar LSZ factor. Repair target: add and audit the R_conn and EW/color-projection authorities as explicit one-hop deps, and supply a theorem-grade scalar-Z_phi matching bridge rather than a hard-coded channel factor. Claim boundary until fixed: the sqrt(8/9) Yukawa correction remains a conditional quantitative support lane, not an audited-clean derivation."
+    }
+  },
+  "non_claims": [
+    "does not reject R_conn = 8/9 as channel arithmetic",
+    "does not derive scalar Z_phi",
+    "does not promote the Ward theorem",
+    "does not use observed y_t or m_t as input"
+  ],
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This is a bridge obstruction, not retained y_t closure.",
+  "required_new_theorem": "derive the scalar pole residue Z_phi from the retained source two-point function and prove how it enters the Yukawa LSZ factor",
+  "verdict": "R_conn = 8/9 is a channel-ratio arithmetic statement.  It does not by itself determine the physical scalar LSZ pole residue.  The same R_conn can coexist with different scalar two-point residues, giving different external-leg factors.  A scalar pole-residue theorem is required before the Ward readout can be audit-clean."
+}

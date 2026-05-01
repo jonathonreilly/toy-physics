@@ -1,0 +1,92 @@
+{
+  "actual_current_surface_status": "open / Ward physical-readout repair not closed",
+  "clean_requirements": {
+    "absence_of_extra_factors": false,
+    "chirality_projection": false,
+    "h_unit_physical_scalar_uniqueness": false,
+    "lsz_scalar_external_leg": false,
+    "source_or_hs_normalization": false
+  },
+  "closure_allowed": false,
+  "fail_count": 0,
+  "next_positive_target": "write a new operator-matching theorem that derives the source/HS normalization, chirality projection, scalar LSZ factor, and absence of extra factors in one runner-checked chain without y_t_bare := <0|H_unit|tt> as a definition",
+  "pass_count": 12,
+  "repair_requirements": {
+    "absence_of_extra_factors": {
+      "audit_clean": false,
+      "candidate_docs": [
+        "YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md"
+      ],
+      "current_status": "audited_renaming",
+      "evidence_terms": [
+        "absence",
+        "extra factors"
+      ]
+    },
+    "chirality_projection": {
+      "audit_clean": false,
+      "candidate_docs": [
+        "YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md"
+      ],
+      "current_status": "audited_failed",
+      "evidence_terms": [
+        "chirality",
+        "Q_L",
+        "q_R",
+        "trilinear"
+      ]
+    },
+    "h_unit_physical_scalar_uniqueness": {
+      "audit_clean": false,
+      "candidate_docs": [
+        "YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md",
+        "YT_WARD_IDENTITY_DERIVATION_THEOREM.md"
+      ],
+      "current_status": "audited_failed",
+      "evidence_terms": [
+        "D17",
+        "unique",
+        "H_unit"
+      ]
+    },
+    "lsz_scalar_external_leg": {
+      "audit_clean": false,
+      "candidate_docs": [
+        "YUKAWA_COLOR_PROJECTION_THEOREM.md",
+        "YT_COLOR_PROJECTION_CORRECTION_NOTE.md"
+      ],
+      "current_status": "audited_conditional",
+      "evidence_terms": [
+        "LSZ",
+        "external leg",
+        "Z_phi"
+      ]
+    },
+    "source_or_hs_normalization": {
+      "audit_clean": false,
+      "candidate_docs": [
+        "YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md",
+        "YT_TOP_MASS_WARD_DECOMP_NO_GO_NOTE_2026-04-30.md"
+      ],
+      "current_status": "audited_renaming",
+      "evidence_terms": [
+        "Hubbard-Stratonovich",
+        "source",
+        "Legendre"
+      ]
+    }
+  },
+  "term_coverage": {
+    "absence_of_extra_factors": true,
+    "chirality_projection": true,
+    "h_unit_physical_scalar_uniqueness": true,
+    "lsz_scalar_external_leg": true,
+    "source_or_hs_normalization": true
+  },
+  "verdict": "The repo contains prose and arithmetic for the Ward physical-readout repair, but the current audit surface does not close it.  The old Ward theorem remains audited_renaming; the SSB/source matching note is audited_renaming; chirality/H_unit support is failed or conditional; and the scalar LSZ/color-projection bridge remains audited_conditional.",
+  "ward_status": {
+    "effective_status": "audited_renaming",
+    "load_bearing_step": "On the canonical surface (g_bare = 1), the framework's bare Yukawa coupling y_t_bare is DEFINED as the unit-norm-state matrix element of the H_unit operator between the vacuum and a single top-pair state.",
+    "verdict_rationale": "Issue: The load-bearing move defines y_t_bare as the H_unit matrix element and then identifies that matrix element with the top Yukawa readout. Why this blocks: The source note and runner verify the scalar-singlet algebra, Clebsch-Gordan normalization, Fierz coefficients, and tadpole cancellation, but they do not derive the physical observable bridge from independent retained inputs. Repair target: Supply a retained theorem and runner check constructing the map from the composite H_unit matrix element to the SM top Yukawa vertex/readout, including the common tadpole dressing. Claim boundary until fixed: The note supports a tree-level structural identification/algebraic normalization on the canonical surface, not a first-principles derivation of the physical top Yukawa coupling."
+  }
+}

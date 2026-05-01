@@ -1,0 +1,51 @@
+{
+  "actual_current_surface_status": "exact subderivation / open bridge",
+  "computed": {
+    "conditional_kappa_H": 1.0,
+    "conditional_yukawa": 0.4082482904638631,
+    "n_color": 3,
+    "n_iso": 2,
+    "ssb_checks": [
+      {
+        "mass_from_doublet": 0.2886751345948129,
+        "mass_over_v": 0.2886751345948129,
+        "physical_h_vertex": 0.2886751345948129,
+        "recovered_doublet_yukawa": 0.4082482904638631,
+        "v": 1.0
+      },
+      {
+        "mass_from_doublet": 0.5773502691896258,
+        "mass_over_v": 0.2886751345948129,
+        "physical_h_vertex": 0.2886751345948129,
+        "recovered_doublet_yukawa": 0.4082482904638631,
+        "v": 2.0
+      },
+      {
+        "mass_from_doublet": 71.01408311032398,
+        "mass_over_v": 0.2886751345948129,
+        "physical_h_vertex": 0.2886751345948129,
+        "recovered_doublet_yukawa": 0.4082482904638631,
+        "v": 246.0
+      }
+    ],
+    "tree_coefficient": 0.4082482904638631
+  },
+  "conditional_surface_status": "If the scalar source creates the canonical Higgs doublet with kappa_H = 1 and the other readout bridges are clean, SSB preserves the 1/sqrt(6) doublet Yukawa coefficient.",
+  "fail_count": 0,
+  "forbidden_definition_hits": [],
+  "non_claims": [
+    "does not derive kappa_H",
+    "does not identify a scalar source with H_unit",
+    "does not promote the Ward theorem",
+    "does not use observed top mass or observed Yukawa as input"
+  ],
+  "open_imports": {
+    "chirality_and_species_selector": "connect the scalar-bilinear source to Q_L H q_R with the retained right-handed species assignments",
+    "lsz_residue": "derive the scalar external-leg factor from the pole residue",
+    "scalar_carrier_map": "prove the canonical scalar field selected by the source is the physical Higgs doublet fluctuation",
+    "source_to_canonical_higgs_normalization": "derive kappa_H from the Legendre transform/two-point residue of the scalar source, not by naming the source field"
+  },
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "SSB algebra is exact, but kappa_H and the source/canonical-field bridge remain open."
+}

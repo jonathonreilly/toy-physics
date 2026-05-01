@@ -1,0 +1,62 @@
+{
+  "actual_current_surface_status": "conditional-support / open",
+  "candidates": [
+    {
+      "gauge_invariant": false,
+      "hypercharge_sum": 2.0,
+      "term": "Qbar_L H u_R"
+    },
+    {
+      "gauge_invariant": true,
+      "hypercharge_sum": 1.1102230246251565e-16,
+      "term": "Qbar_L H d_R"
+    },
+    {
+      "gauge_invariant": true,
+      "hypercharge_sum": 0.0,
+      "term": "Qbar_L H_tilde u_R"
+    },
+    {
+      "gauge_invariant": false,
+      "hypercharge_sum": -2.0,
+      "term": "Qbar_L H_tilde d_R"
+    }
+  ],
+  "dependency_status": {
+    "anomaly_forces_time_theorem": "audited_conditional",
+    "one_generation_matter_closure_note": "audited_conditional",
+    "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26": "proposed_retained",
+    "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24": "audited_conditional",
+    "yt_class_5_non_ql_yukawa_vertex_note_2026-04-18": "audited_failed"
+  },
+  "fail_count": 0,
+  "forbidden_definition_hits": [],
+  "hypercharge_convention": {
+    "Y(H)": 1.0,
+    "Y(H_tilde)": -1.0,
+    "Y(Qbar_L)": -0.3333333333333333,
+    "Y(d_R)": -0.6666666666666666,
+    "Y(u_R)": 1.3333333333333333
+  },
+  "invariant_terms": [
+    "Qbar_L H d_R",
+    "Qbar_L H_tilde u_R"
+  ],
+  "non_claims": [
+    "does not derive the parent hypercharge/matter authorities",
+    "does not derive scalar LSZ normalization",
+    "does not identify the Yukawa by a H_unit matrix element",
+    "does not promote the Ward theorem"
+  ],
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The selector depends on non-clean matter/hypercharge/chirality parents and does not address scalar residue normalization.",
+  "unclean_dependencies": {
+    "anomaly_forces_time_theorem": "audited_conditional",
+    "one_generation_matter_closure_note": "audited_conditional",
+    "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26": "proposed_retained",
+    "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24": "audited_conditional",
+    "yt_class_5_non_ql_yukawa_vertex_note_2026-04-18": "audited_failed"
+  },
+  "verdict": "Conditional on the matter/hypercharge parents, gauge invariance uniquely selects Qbar_L H_tilde u_R for the up component and Qbar_L H d_R for the down component.  This repairs the selector arithmetic, but the current parent rows are not clean enough to close the Ward physical-readout theorem."
+}
