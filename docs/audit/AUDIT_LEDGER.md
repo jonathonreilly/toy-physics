@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:48:12.259501+00:00
+**Generated:** 2026-05-01T23:48:49.018333+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 324 |
+| `audited_clean` | 325 |
 | `audited_conditional` | 659 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 486 |
+| `unaudited` | 485 |
 
 | criticality | count |
 |---|---:|
@@ -388,6 +388,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `self_gravity_failure_diagnosis` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `self_gravity_scaling_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
 | `session_synthesis_2026-04-10_graph_axioms` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
+| `shapiro_qa_retest_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
 | `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
@@ -14203,6 +14204,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `SIGN_PORTABILITY_INVARIANT_NOTE.md`
   - `FOURTH_FAMILY_QUADRANT_NOTE.md`
   - `FIFTH_FAMILY_RADIAL_NOTE.md`
+- **auditor confidence:** high
+
+### `shapiro_qa_retest_note`
+
+- **Note:** [`SHAPIRO_QA_RETEST_NOTE.md`](../../docs/SHAPIRO_QA_RETEST_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The QA note claims that the canonical phase-lag replay matches the retained table, the exact zero controls survive, and the static-cone boundary remains the already documented lookalike rather than a new source-placement defect.  _(class `B`)_
+- **chain closes:** True — The current shapiro_phase_lag_probe.py output reproduces the stated c-dependent phase table and exact instantaneous zero control, and shapiro_static_discriminator.py reproduces the exact static-cone mimic with a near-flat static-scheduling proxy. That supports the bounded QA conclusion that no new tracker-worthy defect was found in this retest.
+- **rationale:** This is a bounded QA/retest note, not a re-ratification of the whole Shapiro physics package. The two current replays match the note's material claims: phase-lag rows are current, zero controls survive, static cone shape exactly mimics the causal curve, and static scheduling does not. Residual risk is confined to the upstream physics status of the Shapiro package; the QA discipline claim itself closes.
 - **auditor confidence:** high
 
 ### `shapiro_scaling_direct_replay_note`
