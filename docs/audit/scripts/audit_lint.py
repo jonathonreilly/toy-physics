@@ -19,10 +19,14 @@ Checks (all hard rules from FRESH_LOOK_REQUIREMENTS.md and README.md):
      - effective_status = retained requires audit_status = audited_clean
        AND every dep's effective_status is `retained` or `retained_no_go`
        (a no-go theorem is a durable, audit-ratified commitment).
-     - effective_status = retained_no_go is automatically computed from
-       audit_status = audited_failed when the note has been moved to
-       archive_unlanded/. It represents a ratified negative result, not an
-       active failure.
+     - effective_status = retained_no_go has two paths:
+       (a) author declares current_status = proposed_no_go and audit_status =
+           audited_clean ratifies it (the symmetric path to `retained` for
+           negative theorems, born as no-gos rather than failed positives).
+       (b) audit_status = audited_failed AND the note has been moved to
+           archive_unlanded/ (legacy path: a positive claim failed audit and
+           was archived).
+       Both paths represent ratified negative results, not active failures.
      - independence = 'weak' cannot land audited_clean. Critical clean
        confirmations must be cross-family, strong/external, or same-family
        fresh_context from a distinct restricted-input session.
@@ -61,6 +65,7 @@ ALLOWED_AUDIT_STATUSES = {
 ALLOWED_CURRENT_STATUSES = {
     "proposed_retained",
     "proposed_promoted",
+    "proposed_no_go",
     "support",
     "bounded",
     "open",
@@ -149,12 +154,14 @@ def main() -> int:
             # Effective status promotion is tier-gated: a clean audit may be
             # recorded on support/bounded/open/unknown rows, but those rows do
             # not become retained/promoted unless the author re-tiers them.
-            if cs in {"proposed_retained", "proposed_promoted"} and e not in {"retained", "promoted"}:
+            PROPOSED_TIERS = {"proposed_retained", "proposed_promoted", "proposed_no_go"}
+            RATIFIED_TIERS = {"retained", "promoted", "retained_no_go"}
+            if cs in PROPOSED_TIERS and e not in RATIFIED_TIERS:
                 # Could be inherited demotion; warn rather than error.
                 warnings.append(
                     f"{cid}: audited_clean but effective_status={e!r} (likely demoted by upstream dep)"
                 )
-            if cs not in {"proposed_retained", "proposed_promoted"} and e in {"retained", "promoted"}:
+            if cs not in PROPOSED_TIERS and e in RATIFIED_TIERS:
                 errors.append(
                     f"{cid}: audited_clean current_status={cs!r} must not promote to effective_status={e!r}"
                 )

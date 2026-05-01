@@ -1,7 +1,7 @@
 # Substrate-To-P_A Forcing No-Go Theorem
 
 **Date:** 2026-04-30
-**Status:** audited_clean; proposed_retained no-go theorem ratified 2026-04-30
+**Status:** audited_clean; proposed_no_go theorem ratified 2026-04-30
 **Runner:** `scripts/frontier_substrate_to_p_a_forcing.py`
 
 ## Purpose

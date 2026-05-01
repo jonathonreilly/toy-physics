@@ -29,6 +29,7 @@ STATUS_DISPLAY_ORDER = [
     "retained_no_go",
     "promoted",
     "proposed_retained",
+    "proposed_no_go",
     "proposed_promoted",
     "bounded",
     "support",

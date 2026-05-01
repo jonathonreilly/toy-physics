@@ -1,7 +1,7 @@
 # Charged-Lepton OP-Local Source / Selected-Line Selector No-Go
 
 **Date:** 2026-04-27
-**Status:** proposed_retained exact negative boundary for the OP-local source
+**Status:** proposed_no_go exact negative boundary for the OP-local source
 plus selected-line generation-selector route
 
 This is not retained charged-lepton mass closure.

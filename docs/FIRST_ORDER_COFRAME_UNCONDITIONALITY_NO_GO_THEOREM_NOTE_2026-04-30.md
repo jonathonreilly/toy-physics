@@ -1,7 +1,7 @@
 # First-Order Coframe Unconditionality No-Go Theorem
 
 **Date:** 2026-04-30
-**Status:** audited_clean; proposed_retained no-go theorem ratified 2026-04-30
+**Status:** audited_clean; proposed_no_go theorem ratified 2026-04-30
 **Runner:** `scripts/frontier_first_order_coframe_unconditionality_no_go.py`
 
 ## Purpose

@@ -58,7 +58,11 @@ Three parallel fields per claim:
 - `current_status` — what the source note declares. Authors may set:
   - `proposed_retained` — "I have done the science work and believe this
     should be retained, pending audit." This is the strongest tier an
-    author may self-assign.
+    author may self-assign for a positive claim.
+  - `proposed_no_go` — "I have proven a no-go theorem and believe it
+    should be retained as such, pending audit." Symmetric to
+    `proposed_retained` but for negative-result theorems
+    (Coleman-Mandula, Kochen-Specker, Weinberg-Witten style).
   - `proposed_promoted`, `proposed_bounded` — same idea for those tiers.
   - `support`, `open` — unchanged; these do not require audit ratification.
 - `audit_status` — what the audit found. Set only by the audit lane:
@@ -76,12 +80,19 @@ Three parallel fields per claim:
   - `retained` — `current_status = proposed_retained` AND `audit_status =
     audited_clean` AND every dependency's `effective_status` is `retained`
     or `retained_no_go`.
-  - `retained_no_go` — `audit_status = audited_failed` AND the note has been
-    moved to `archive_unlanded/`. The original positive claim failed audit;
-    the project has accepted the lane is closed and archived the note as a
-    durable negative-result theorem (Coleman-Mandula style). Sits at the
-    same tier as `retained` for downstream propagation: depending on a
-    no-go theorem does not weaken downstream rows.
+  - `retained_no_go` — two paths to this tier:
+    - **(a) Direct path**: `current_status = proposed_no_go` AND
+      `audit_status = audited_clean`. Author declared a no-go theorem and
+      the audit ratified it. Symmetric to how `proposed_retained +
+      audited_clean -> retained`.
+    - **(b) Legacy path**: `audit_status = audited_failed` AND the note has
+      been moved to `archive_unlanded/`. The original positive claim failed
+      audit; the project archived the note and the failure record is
+      lifted to `retained_no_go` for project-level interpretation.
+
+    Either way, sits at the same tier as `retained` for downstream
+    propagation: depending on a no-go theorem does not weaken downstream
+    rows.
   - `proposed_retained` — author has proposed retained, audit not yet clean
     (or upstream not yet ratified). Honest pending state.
   - `support` / `bounded` / `open` — as declared, or demoted by audit verdict.
