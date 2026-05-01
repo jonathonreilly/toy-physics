@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:18:23.360329+00:00
+**Generated:** 2026-05-01T04:19:35.878441+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 235 |
+| bounded | 234 |
 | support | 192 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 805 |
+| ~~audited_conditional~~ | 806 |
 | ~~audited_failed~~ | 159 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 536 |
+| `audited_conditional` | 537 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 18 |
-| `unaudited` | 690 |
+| `unaudited` | 689 |
 
 | criticality | count |
 |---|---:|
@@ -850,6 +850,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `work_history.potential_publication_discoveries_log` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `yt_bridge_endpoint_shift_bound_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_color_projection_correction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_exact_coarse_grained_bridge_operator_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -13278,6 +13279,25 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md`
   - `TARGET_CONDITIONED_INPUT: TARGET_YT_PHYS = 0.9176`
   - `PROFILE_FAMILY_SELECTION: logistic / erf / smoothstep UV-localized bridges`
+- **auditor confidence:** high
+
+### `yt_bridge_endpoint_shift_bound_note`
+
+- **Note:** [`YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md`](../../docs/YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-yt_bridge_endpoint_shift_bound_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** By the additive residual hypothesis and triangle inequality, |y_exact - y_loc| / y_loc is bounded by r_ho + r_nl, giving the conservative 1.2147511% endpoint-shift budget.  _(class `B`)_
+- **chain closes:** False — The runner verifies the arithmetic bound, but the local selector, higher-order ratio, nonlocal ratios, forced UV window, and additivity/stability hypotheses are imported from unregistered upstream branch notes. The target-in-interval checks are comparator sanity checks, not a derivation of the endpoint.
+- **rationale:** Issue: the endpoint-shift bound closes only after accepting unregistered upstream bridge-control hypotheses and correction ratios. Why this blocks: the runner passes and the triangle-inequality arithmetic is internally consistent, but it does not derive y_loc=0.917605, r_ho, r_nl, the forced UV window, quasi-local stability, or additive residual decomposition from declared dependencies. Repair target: register and audit the Hessian/local selector, higher-order correction, nonlocal correction, constructive UV bridge, and forced-window hypotheses, then rerun the endpoint-bound check over those clean inputs. Claim boundary until fixed: this is a valid conditional bounded-support budget for the bridge endpoint shift, not an audit-clean y_t closure theorem.
+- **open / conditional deps cited:**
+  - `YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md`
+  - `YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md`
+  - `YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md`
+  - `YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`
+  - `HYPOTHESIS: forced UV window x >= 0.95`
+  - `HYPOTHESIS: quasi-local stability and additive residual decomposition`
 - **auditor confidence:** high
 
 ### `yt_color_projection_correction_note`
