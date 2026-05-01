@@ -18437,6 +18437,10 @@
       "to": "publication.ci3_z3.readme"
     },
     {
+      "from": "work_history.atomic.readme",
+      "to": "work_history.atomic.lane2_atomic_autoresearch_parking_note_2026-05-01"
+    },
+    {
       "from": "work_history.ckm.cabibbo_bound_note",
       "to": "work_history.ckm.ckm_mass_basis_nni_note"
     },
@@ -18585,7 +18589,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T14:56:22.412107+00:00",
+  "generated_at": "2026-05-01T14:58:30.798559+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -38922,12 +38926,24 @@
       "runner_path": null,
       "title": "Hydrogen / Helium Atomic Companion Note"
     },
+    "work_history.atomic.lane2_atomic_autoresearch_parking_note_2026-05-01": {
+      "claim_id": "work_history.atomic.lane2_atomic_autoresearch_parking_note_2026-05-01",
+      "current_status": "unknown",
+      "current_status_raw": "parked Autoresearch work-history packet; not audit-ratified science",
+      "deps": [],
+      "note_hash": "63b0b9cd580b07bb484ad562ed782182e4673673a72dc804cf9dee30bbfb80ac",
+      "path": "docs/work_history/atomic/LANE2_ATOMIC_AUTORESEARCH_PARKING_NOTE_2026-05-01.md",
+      "runner_path": null,
+      "title": "Lane 2 Atomic Autoresearch Parking Note"
+    },
     "work_history.atomic.readme": {
       "claim_id": "work_history.atomic.readme",
       "current_status": "unknown",
       "current_status_raw": null,
-      "deps": [],
-      "note_hash": "2b6f132d7d9f1b7fbd84b02d2360fee5d0ecb4d502435e299b7a67fb10e5e1ad",
+      "deps": [
+        "work_history.atomic.lane2_atomic_autoresearch_parking_note_2026-05-01"
+      ],
+      "note_hash": "772f18727bdd1df976c508234ca9c4cc25b17bacfa9ecbe4aac9cd5e5f000c5d",
       "path": "docs/work_history/atomic/README.md",
       "runner_path": null,
       "title": "Atomic Work History"
@@ -41451,7 +41467,7 @@
     "wilson_normalization_reconciliation_note_2026-04-11",
     "wilson_two_body_open_note_2026-04-11",
     "work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18",
-    "work_history.atomic.readme",
+    "work_history.atomic.lane2_atomic_autoresearch_parking_note_2026-05-01",
     "work_history.ckm.ckm_mass_basis_nni_note",
     "work_history.dm.dm_leptogenesis_full_axiom_closure_note_2026-04-15",
     "work_history.dm.dm_leptogenesis_full_axiom_closure_note_2026-04-16",
@@ -41509,9 +41525,9 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4646,
+    "edge_count": 4647,
     "leaf_count": 705,
-    "node_count": 1661,
+    "node_count": 1662,
     "root_count": 1173,
     "runners_with_path": 1227,
     "status_counts": {
@@ -41521,7 +41537,7 @@
       "proposed_promoted": 1,
       "proposed_retained": 355,
       "support": 344,
-      "unknown": 411
+      "unknown": 412
     }
   }
 }
