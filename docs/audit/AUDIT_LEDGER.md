@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:14:05.742701+00:00
+**Generated:** 2026-05-01T05:15:03.378478+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 219 |
+| bounded | 218 |
 | support | 182 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 25 |
+| ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 818 |
 | ~~audited_failed~~ | 163 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 549 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 75 |
-| `audited_numerical_match` | 22 |
+| `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 650 |
+| `unaudited` | 649 |
 
 | criticality | count |
 |---|---:|
@@ -973,6 +973,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bell_inequality_derived_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
+| `hierarchy_dimensional_compression_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `mirror_chokepoint_boundary_fit_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
@@ -7782,6 +7783,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `HIERARCHY_SPATIAL_BC_AND_U0_SCALING_NOTE.md`
   - `HIGGS_MASS_HIERARCHY_CORRECTION_NOTE.md`
   - `scripts/canonical_plaquette_surface.py`
+- **auditor confidence:** high
+
+### `hierarchy_dimensional_compression_note`
+
+- **Note:** [`HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md`](../../docs/HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Using the same residual ratio R, the dimension-4 inverse compression R^(-1/4) ~= 0.96468 is in the right few-percent range for the observed prefactor C_obs = v_obs/v_pred ~= 0.96692, while the 1/16 root is too small.  _(class `G`)_
+- **chain closes:** False — The runner reproduces the stated numerical comparison, but the conclusion depends on a chosen diagnostic condensate ratio and comparison to the observed electroweak prefactor. The note does not derive the dimension-4 order parameter, sign, placement, or determinant-to-VEV map from retained inputs.
+- **rationale:** Issue: the support result is a numerical closeness claim: at the runner's chosen diagnostic inputs, R^(-1/4) lies near the observed v_obs/v_pred prefactor and R^(-1/16) does not. Why this blocks clean closure: the comparison does not derive the physical order parameter or the correction's sign/placement; it shows that one dimension choice has the right magnitude. Repair target: derive the intensive effective-potential/free-energy density and determinant-to-VEV map, including why this residual ratio enters with the inverse fourth root. Claim boundary until fixed: the note is useful bounded diagnostic evidence that dimension-4 compression has the right scale, not a theorem proving the hierarchy normalization.
 - **auditor confidence:** high
 
 ### `hierarchy_effective_potential_endpoint_note`
