@@ -92,6 +92,9 @@ What changed:
   retained closure yet: a measured `E(p)-E(0)` fixes a kinetic combination, and
   changing `c2` or the lattice-to-SM matching factor changes the inferred SM
   top mass without changing the measured splitting.
+- A bounded two-volume momentum pilot now exists.  It emits finite kinetic
+  proxies, but the `p_min` proxy has relative spread `0.805501`, so reduced
+  cold-gauge pilots are exhausted as closure evidence.
 
 The scientific result is narrower than closure:
 
@@ -124,8 +127,6 @@ Package this PR #230 update.  The remaining positive options are now:
 Acceptance target for the next heavy-kinetic block:
 
 1. Implement a nonzero-momentum correlator scout that extracts `E(p)-E(0)`.
-2. If continuing the kinetic route, run a bounded momentum-enabled pilot to
-   measure scaling and error bars.
-3. If pursuing closure rather than engineering, derive `c2` and the
+2. If pursuing closure rather than engineering, derive `c2` and the
    lattice-HQET/NRQCD-to-SM matching import.
-4. Otherwise pivot back to the scalar LSZ/pole-residue theorem.
+3. Otherwise pivot back to the scalar LSZ/pole-residue theorem.

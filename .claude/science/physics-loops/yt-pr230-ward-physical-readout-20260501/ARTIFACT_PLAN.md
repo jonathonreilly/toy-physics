@@ -90,12 +90,16 @@ Completed in block 1:
 - `scripts/frontier_yt_heavy_kinetic_matching_obstruction.py`
 - `outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json`
 - `docs/YT_HEAVY_KINETIC_MATCHING_OBSTRUCTION_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_momentum_pilot_scaling_certificate.py`
+- `outputs/yt_direct_lattice_correlator_momentum_pilot_certificate_2026-05-01.json`
+- `outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json`
+- `docs/YT_MOMENTUM_PILOT_SCALING_NOTE_2026-05-01.md`
 
 Next artifact:
 
-- bounded momentum-enabled pilot or scalar LSZ theorem attempt, because the
-  kinetic matching route is now blocked unless `c2` and lattice-to-SM matching
-  are derived
+- production/statistics for the momentum route, scalar LSZ theorem attempt, or
+  matching theorem attempt; reduced momentum pilots are now exhausted as
+  closure evidence
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

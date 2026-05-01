@@ -1,0 +1,42 @@
+{
+  "actual_current_surface_status": "bounded-support / momentum pilot scaling",
+  "fail_count": 0,
+  "pass_count": 6,
+  "per_volume": [
+    {
+      "dims": [
+        4,
+        4,
+        4,
+        8
+      ],
+      "pmin_delta_e_lat": 0.025154608506440468,
+      "pmin_m_kin_lat": 39.75414682935592,
+      "pmin_m_kin_lat_err": 260.0506464633304,
+      "selected_mass_parameter": 2.0
+    },
+    {
+      "dims": [
+        6,
+        6,
+        6,
+        12
+      ],
+      "pmin_delta_e_lat": 0.029540119916192875,
+      "pmin_m_kin_lat": 16.926133049511325,
+      "pmin_m_kin_lat_err": 20.54308698175418,
+      "selected_mass_parameter": 2.0
+    }
+  ],
+  "pilot_certificate": "outputs/yt_direct_lattice_correlator_momentum_pilot_certificate_2026-05-01.json",
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Reduced-scope cold-gauge pilot with large finite-volume drift and no matching theorem.",
+  "relative_spread": 0.8055010959236927,
+  "strict_non_claims": [
+    "not a production measurement",
+    "not a y_t derivation",
+    "does not use observed top mass as calibration",
+    "does not define y_t through H_unit matrix elements"
+  ],
+  "verdict": "The momentum-enabled harness runs on two small cold volumes and emits finite kinetic-mass proxies, but the p_min kinetic proxy has large volume drift.  This supports the implementation route while confirming that the current pilot is not production evidence."
+}

@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=13 FAIL=0
+# SUMMARY: PASS=14 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -47,6 +47,7 @@ The certificate consumes the PR-local route certificates for:
 - nonzero-momentum correlator scout;
 - momentum-harness extension certificate;
 - heavy kinetic-matching obstruction;
+- momentum pilot scaling certificate;
 - direct measurement scale requirements.
 
 All loaded runner certificates have `FAIL=0`.  None authorizes a retained
@@ -73,6 +74,7 @@ visible shortcut routes:
 | nonzero-momentum scout | method runs on cold gauge, still needs production ensembles and matching |
 | momentum harness extension | certificate fields exist, smoke run is reduced-scope only |
 | heavy kinetic matching | `c2` and lattice-to-SM matching remain load-bearing |
+| momentum pilot scaling | two-volume cold pilot has large finite-volume drift |
 
 ## Remaining Honest Routes
 

@@ -16,6 +16,7 @@ obstruction, and heavy kinetic-mass route scout
 plus nonzero-momentum correlator scout
 and momentum harness extension certificate
 and heavy kinetic matching obstruction
+and momentum pilot scaling certificate
 **PR:** #230 draft branch
 
 ```yaml
@@ -55,6 +56,7 @@ Allowed wording:
   only by a reduced-scope smoke certificate;
 - exact negative boundary for using kinetic energy splittings as SM top mass
   without deriving `c2` and lattice-to-SM matching;
+- bounded-support momentum-enabled cold pilot with large finite-volume drift;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
@@ -137,7 +139,7 @@ python3 scripts/frontier_yt_same_1pi_scalar_pole_boundary.py
 # SUMMARY: PASS=6 FAIL=0
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=13 FAIL=0
+# SUMMARY: PASS=14 FAIL=0
 
 python3 scripts/frontier_yt_scalar_ladder_ir_zero_mode_obstruction.py
 # SUMMARY: PASS=7 FAIL=0
@@ -153,4 +155,7 @@ python3 scripts/frontier_yt_momentum_harness_extension_certificate.py
 
 python3 scripts/frontier_yt_heavy_kinetic_matching_obstruction.py
 # SUMMARY: PASS=5 FAIL=0
+
+python3 scripts/frontier_yt_momentum_pilot_scaling_certificate.py
+# SUMMARY: PASS=6 FAIL=0
 ```

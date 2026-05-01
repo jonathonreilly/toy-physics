@@ -262,6 +262,17 @@ the inferred `m_t` and `y_t` without changing the correlator.  Therefore the
 kinetic route requires a retained matching theorem or independent production
 matching evidence.
 
+Reduced momentum pilot does not certify closure:
+
+```text
+python3 scripts/frontier_yt_momentum_pilot_scaling_certificate.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+The two-volume cold pilot gives finite `M_kin` proxies but relative spread
+`0.805501`; it confirms the implementation route and rejects reduced-scope
+pilot data as strict evidence.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

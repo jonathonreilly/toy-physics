@@ -57,6 +57,7 @@ def main() -> int:
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
         "momentum_harness": load("outputs/yt_momentum_harness_extension_certificate_2026-05-01.json"),
         "heavy_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
+        "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "direct_scale": load("outputs/yt_direct_measurement_scale_requirements_2026-05-01.json"),
     }
 
@@ -123,6 +124,12 @@ def main() -> int:
         "matching" in str(statuses["heavy_matching"]),
         statuses["heavy_matching"],
     )
+    report(
+        "momentum-pilot-needs-production",
+        "momentum pilot" in str(statuses["momentum_pilot"])
+        or "bounded-support" in str(statuses["momentum_pilot"]),
+        statuses["momentum_pilot"],
+    )
 
     remaining_routes = [
         {
@@ -149,8 +156,9 @@ def main() -> int:
             "finite ladder IR/zero-mode shortcut, and static/HQET without "
             "matching.  It also isolates a constructive heavy kinetic-mass "
             "route, a tiny nonzero-momentum correlator scout, and production "
-            "harness momentum fields, but that route still needs production "
-            "data and a derived matching theorem.  Remaining "
+            "harness momentum fields.  A bounded two-volume pilot has large "
+            "finite-volume drift, so that route still needs production data "
+            "and a derived matching theorem.  Remaining "
             "closure requires production "
             "evidence or a genuinely new scalar LSZ/heavy-matching theorem."
         ),
