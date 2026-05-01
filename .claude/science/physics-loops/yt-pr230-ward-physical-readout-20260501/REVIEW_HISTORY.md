@@ -88,6 +88,15 @@ Review checks performed:
   and verifies that `E(p)-E(0)` recovers `M_kin` in a synthetic dispersion.  The
   route is constructive support only; it explicitly requires a `1/M` kinetic
   action term, production nonzero-momentum correlators, and a matching theorem.
+- Nonzero-momentum correlator scout review: the runner imports the production
+  harness primitives, solves the cold-gauge staggered propagator, and measures
+  even momentum-projected correlators.  The result is methodology support only
+  because it has no gauge ensemble, statistics, top-scale matching, or physical
+  production certificate.
+- Momentum-harness extension review: the production harness now carries
+  optional momentum modes and certificate fields, and the smoke validation
+  runner verifies finite kinetic proxies.  The smoke certificate is
+  reduced-scope and must remain rejected by strict production validation.
 
 ## Review-Loop Backpressure — Campaign Block 2
 
@@ -222,3 +231,51 @@ python3 scripts/frontier_yt_heavy_kinetic_mass_route.py
 This route is now the most concrete lightweight compute successor: measure
 nonzero-momentum correlator splittings rather than zero-momentum static
 energies.
+
+## Review-Loop Backpressure — Nonzero-Momentum Correlator Scout
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_nonzero_momentum_correlator_scout.py
+python3 scripts/frontier_yt_nonzero_momentum_correlator_scout.py
+```
+
+The scout validates the measurement primitive and should be promoted into the
+production harness only as an optional kinetic-mass route, not as a substitute
+for production evidence.
+
+## Review-Loop Backpressure — Momentum Harness Extension
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/yt_direct_lattice_correlator_production.py scripts/frontier_yt_momentum_harness_extension_certificate.py
+python3 scripts/yt_direct_lattice_correlator_production.py --volumes 4x8 --masses 2.0 --therm 0 --measurements 1 --separation 0 --overrelax 0 --ape-steps 0 --momentum-modes '0,0,0;1,0,0;1,1,0' --output outputs/yt_direct_lattice_correlator_momentum_harness_smoke_2026-05-01.json --production-output-dir outputs/yt_direct_lattice_correlator_momentum_smoke --engine python
+python3 scripts/frontier_yt_momentum_harness_extension_certificate.py
+```
+
+The extension is ready for pilot/production use, but no current result is
+strict evidence.

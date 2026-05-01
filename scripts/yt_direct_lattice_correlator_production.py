@@ -729,10 +729,43 @@ def solve_propagator_normal_eq(D: sparse.csr_matrix, source_index: int, rtol: fl
     return sol, int(info), residual
 
 
-def measure_correlator(gauge: GaugeField, mass: float, rtol: float, maxiter: int) -> dict[str, Any]:
+def momentum_key(nvec: tuple[int, int, int]) -> str:
+    return ",".join(str(n) for n in nvec)
+
+
+def parse_momentum_modes(spec: str | None) -> list[tuple[int, int, int]]:
+    if not spec:
+        return []
+    modes: list[tuple[int, int, int]] = []
+    for part in spec.split(";"):
+        part = part.strip()
+        if not part:
+            continue
+        vals = [int(x) for x in part.split(",")]
+        if len(vals) != 3:
+            raise ValueError(f"momentum mode must have three integer components: {part!r}")
+        modes.append((vals[0], vals[1], vals[2]))
+    return modes
+
+
+def spatial_p_hat_sq(nvec: tuple[int, int, int], spatial_l: int) -> float:
+    return sum((2.0 * math.sin(math.pi * n / spatial_l)) ** 2 for n in nvec)
+
+
+def measure_correlator(
+    gauge: GaugeField,
+    mass: float,
+    rtol: float,
+    maxiter: int,
+    momentum_modes: list[tuple[int, int, int]] | None = None,
+) -> dict[str, Any]:
     D = build_staggered_dirac(gauge, mass)
     geom = gauge.geom
     corr = np.zeros(geom.time_l, dtype=float)
+    momentum_corrs = {
+        momentum_key(nvec): np.zeros(geom.time_l, dtype=float)
+        for nvec in (momentum_modes or [])
+    }
     infos: list[int] = []
     residuals: list[float] = []
     source_site = geom.site_index((0, 0, 0, 0))
@@ -742,13 +775,20 @@ def measure_correlator(gauge: GaugeField, mass: float, rtol: float, maxiter: int
         infos.append(info)
         residuals.append(residual)
         for site in range(geom.volume):
-            t = geom.site_coords(site)[0]
+            t, x, y, z = geom.site_coords(site)
             block = sol[site * NC:(site + 1) * NC]
-            corr[t] += float(np.vdot(block, block).real)
+            density = float(np.vdot(block, block).real)
+            corr[t] += density
+            for nvec in (momentum_modes or []):
+                phase_arg = (nvec[0] * x + nvec[1] * y + nvec[2] * z) / geom.spatial_l
+                momentum_corrs[momentum_key(nvec)][t] += math.cos(2.0 * math.pi * phase_arg) * density
     corr /= NC
+    for key in momentum_corrs:
+        momentum_corrs[key] /= NC
     return {
         "mass": mass,
         "correlator": corr.tolist(),
+        "momentum_correlators": {key: value.tolist() for key, value in momentum_corrs.items()},
         "cg_infos": infos,
         "cg_residuals": residuals,
         "max_cg_residual": max(residuals) if residuals else None,
@@ -810,6 +850,89 @@ def effective_mass(corr: np.ndarray) -> list[dict[str, float]]:
     return rows
 
 
+def fit_energy_from_effective(corr: np.ndarray) -> dict[str, Any]:
+    estimates = []
+    max_tau = min(3, len(corr) - 2)
+    for tau in range(1, max_tau + 1):
+        if corr[tau] > 0.0 and corr[tau + 1] > 0.0:
+            estimates.append((tau, math.log(corr[tau] / corr[tau + 1])))
+    if not estimates:
+        return {
+            "tau_min": 1,
+            "tau_max": max_tau,
+            "m_lat": float("nan"),
+            "m_lat_err": float("nan"),
+            "chi2_dof": float("nan"),
+            "effective_energy_samples": [],
+        }
+    values = np.asarray([value for _tau, value in estimates], dtype=float)
+    err = float(np.std(values, ddof=1) / math.sqrt(len(values))) if len(values) > 1 else 0.0
+    return {
+        "tau_min": int(estimates[0][0]),
+        "tau_max": int(estimates[-1][0] + 1),
+        "m_lat": float(np.mean(values)),
+        "m_lat_err": err,
+        "chi2_dof": 0.0 if len(values) <= 1 else float(np.var(values, ddof=1)),
+        "effective_energy_samples": [
+            {"tau": int(tau), "m_eff": float(value)} for tau, value in estimates
+        ],
+    }
+
+
+def fit_momentum_energies(
+    momentum_measurements: dict[str, list[list[float]]],
+    spatial_l: int,
+) -> dict[str, Any]:
+    energy_fits = {}
+    for key, rows in momentum_measurements.items():
+        arr = np.asarray(rows, dtype=float)
+        mean, err = jackknife_mean_err(arr)
+        fit = fit_energy_from_effective(mean)
+        nvec = tuple(int(x) for x in key.split(","))
+        energy_fits[key] = {
+            "momentum_mode": list(nvec),
+            "p_hat_sq": spatial_p_hat_sq(nvec, spatial_l),
+            "energy_lat": fit["m_lat"],
+            "energy_lat_err": fit["m_lat_err"],
+            "chi2_dof": fit["chi2_dof"],
+            "tau_min": fit["tau_min"],
+            "tau_max": fit["tau_max"],
+            "effective_energy_samples": fit["effective_energy_samples"],
+            "correlator": [
+                {"tau": tau, "mean": float(c), "stderr": float(e)}
+                for tau, (c, e) in enumerate(zip(mean, err))
+            ],
+        }
+
+    zero = energy_fits.get("0,0,0")
+    kinetic_fits = {}
+    if zero is not None and math.isfinite(float(zero["energy_lat"])):
+        e0 = float(zero["energy_lat"])
+        e0_err = float(zero.get("energy_lat_err", 0.0) or 0.0)
+        for key, fit in energy_fits.items():
+            if key == "0,0,0":
+                continue
+            energy = float(fit["energy_lat"])
+            delta_e = energy - e0
+            if delta_e > 0.0:
+                p2 = float(fit["p_hat_sq"])
+                m_kin = p2 / (2.0 * delta_e)
+                de_err = math.sqrt(e0_err * e0_err + float(fit.get("energy_lat_err", 0.0) or 0.0) ** 2)
+                m_kin_err = abs(m_kin) * de_err / delta_e if delta_e > 0.0 else float("nan")
+            else:
+                m_kin = float("nan")
+                m_kin_err = float("nan")
+                de_err = float("nan")
+            kinetic_fits[key] = {
+                "momentum_mode": fit["momentum_mode"],
+                "delta_e_lat": delta_e,
+                "delta_e_lat_err": de_err,
+                "m_kin_lat": m_kin,
+                "m_kin_lat_err": m_kin_err,
+            }
+    return {"energy_fits": energy_fits, "kinetic_mass_fits": kinetic_fits}
+
+
 def physical_mass_gev(m_lat: float) -> float:
     a_inv = R0_OVER_A_BETA6_REFERENCE * HBARC_GEV_FM / R0_FM
     return m_lat * a_inv
@@ -831,6 +954,7 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
         print(f"  therm L={spatial_l} sweep={sweep + 1}/{args.therm} plaquette={plaquette_history[-1]:.6f}")
 
     measurements: dict[float, list[list[float]]] = {m: [] for m in masses}
+    momentum_measurements: dict[float, dict[str, list[list[float]]]] = {m: {} for m in masses}
     cg_residuals: dict[float, list[float]] = {m: [] for m in masses}
     plaquettes = []
     for cfg in range(args.measurements):
@@ -841,8 +965,16 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
         plaquettes.append(gauge.plaquette())
         meas_gauge = ape_smear_spatial(gauge, args.ape_alpha, args.ape_steps) if args.ape_steps else gauge
         for mass in masses:
-            measured = measure_correlator(meas_gauge, mass, args.cg_rtol, args.cg_maxiter)
+            measured = measure_correlator(
+                meas_gauge,
+                mass,
+                args.cg_rtol,
+                args.cg_maxiter,
+                args.momentum_modes_parsed,
+            )
             measurements[mass].append(measured["correlator"])
+            for key, corr in measured.get("momentum_correlators", {}).items():
+                momentum_measurements[mass].setdefault(key, []).append(corr)
             cg_residuals[mass].append(float(measured["max_cg_residual"]))
         print(f"  meas L={spatial_l} cfg={cfg + 1}/{args.measurements} plaquette={plaquettes[-1]:.6f}")
 
@@ -850,6 +982,7 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
     selected_fit: dict[str, Any] | None = None
     selected_mass = masses[len(masses) // 2]
     correlator_rows = []
+    selected_momentum_analysis: dict[str, Any] = {"energy_fits": {}, "kinetic_mass_fits": {}}
     for mass in masses:
         arr = np.asarray(measurements[mass], dtype=float)
         mean, err = jackknife_mean_err(arr)
@@ -867,6 +1000,10 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
             selected_fit = fit
             for tau, (c, e) in enumerate(zip(mean, err)):
                 correlator_rows.append({"tau": tau, "mean": float(c), "stderr": float(e)})
+            selected_momentum_analysis = fit_momentum_energies(
+                momentum_measurements[mass],
+                spatial_l,
+            )
 
     if selected_fit is None:
         selected_fit = mass_scan[len(mass_scan) // 2]
@@ -895,6 +1032,7 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
         "mass_parameter_scan": mass_scan,
         "selected_mass_parameter": selected_mass,
         "correlators": correlator_rows,
+        "momentum_analysis": selected_momentum_analysis,
         "effective_mass": effective_mass(np.array([r["mean"] for r in correlator_rows])),
         "mass_fit": selected_fit,
         "runtime_seconds": elapsed,
@@ -914,6 +1052,7 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         print(f"  therm L={spatial_l} sweep={sweep + 1}/{args.therm} plaquette={plaquette_history[-1]:.6f}")
 
     measurements: dict[float, list[list[float]]] = {m: [] for m in masses}
+    momentum_measurements: dict[float, dict[str, list[list[float]]]] = {m: {} for m in masses}
     cg_residuals: dict[float, list[float]] = {m: [] for m in masses}
     plaquettes = []
     for cfg in range(args.measurements):
@@ -925,8 +1064,16 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         gauge_view = gauge_field_from_array(geom, u)
         meas_gauge = ape_smear_spatial(gauge_view, args.ape_alpha, args.ape_steps) if args.ape_steps else gauge_view
         for mass in masses:
-            measured = measure_correlator(meas_gauge, mass, args.cg_rtol, args.cg_maxiter)
+            measured = measure_correlator(
+                meas_gauge,
+                mass,
+                args.cg_rtol,
+                args.cg_maxiter,
+                args.momentum_modes_parsed,
+            )
             measurements[mass].append(measured["correlator"])
+            for key, corr in measured.get("momentum_correlators", {}).items():
+                momentum_measurements[mass].setdefault(key, []).append(corr)
             cg_residuals[mass].append(float(measured["max_cg_residual"]))
         print(f"  meas L={spatial_l} cfg={cfg + 1}/{args.measurements} plaquette={plaquettes[-1]:.6f}")
 
@@ -934,6 +1081,7 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
     selected_fit: dict[str, Any] | None = None
     selected_mass = masses[len(masses) // 2]
     correlator_rows = []
+    selected_momentum_analysis: dict[str, Any] = {"energy_fits": {}, "kinetic_mass_fits": {}}
     for mass in masses:
         arr = np.asarray(measurements[mass], dtype=float)
         mean, err = jackknife_mean_err(arr)
@@ -951,6 +1099,10 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
             selected_fit = fit
             for tau, (c, e) in enumerate(zip(mean, err)):
                 correlator_rows.append({"tau": tau, "mean": float(c), "stderr": float(e)})
+            selected_momentum_analysis = fit_momentum_energies(
+                momentum_measurements[mass],
+                spatial_l,
+            )
 
     if selected_fit is None:
         selected_fit = mass_scan[len(mass_scan) // 2]
@@ -979,6 +1131,7 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         "mass_parameter_scan": mass_scan,
         "selected_mass_parameter": selected_mass,
         "correlators": correlator_rows,
+        "momentum_analysis": selected_momentum_analysis,
         "effective_mass": effective_mass(np.array([r["mean"] for r in correlator_rows])),
         "mass_fit": selected_fit,
         "runtime_seconds": elapsed,
@@ -1339,6 +1492,14 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--volumes", default=None, help="Comma-separated Ls x Lt list, e.g. 12x24,16x32,24x48.")
     parser.add_argument("--masses", default="0.45,0.75,1.05", help="Comma-separated staggered bare masses.")
+    parser.add_argument(
+        "--momentum-modes",
+        default="",
+        help=(
+            "Optional semicolon-separated spatial momentum triplets for kinetic-mass "
+            "analysis, e.g. '0,0,0;1,0,0;1,1,0'."
+        ),
+    )
     parser.add_argument("--therm", type=int, default=None, help="Thermalization sweeps.")
     parser.add_argument("--measurements", type=int, default=None, help="Saved configurations per volume.")
     parser.add_argument("--separation", type=int, default=None, help="Sweeps between saved configurations.")
@@ -1445,6 +1606,7 @@ def main() -> int:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     volumes = parse_volume_spec(args.volumes)
     masses = [float(x) for x in args.masses.split(",") if x.strip()]
+    args.momentum_modes_parsed = parse_momentum_modes(args.momentum_modes)
     rng = np.random.default_rng(args.seed)
 
     print("=" * 78)
@@ -1452,6 +1614,8 @@ def main() -> int:
     print("=" * 78)
     print(f"volumes={volumes}")
     print(f"masses={masses}")
+    if args.momentum_modes_parsed:
+        print(f"momentum_modes={args.momentum_modes_parsed}")
     print(f"therm={args.therm}, measurements={args.measurements}, separation={args.separation}")
     print(f"output={args.output}")
     if args.pilot_targets:

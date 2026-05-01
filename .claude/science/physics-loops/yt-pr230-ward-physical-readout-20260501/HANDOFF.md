@@ -79,6 +79,15 @@ What changed:
   `E(p)-E(0)` to extract `M_kin`.  This cancels the additive shift, but pure
   static correlators have no kinetic splitting and a top-like heavy mass needs
   very high energy-splitting precision plus a matching theorem.
+- The nonzero-momentum correlator scout now reuses the production harness
+  Dirac/CG primitives and constructs cos-projected momentum correlators on a
+  tiny cold gauge field.  The extracted energy splittings are ordered and give
+  finite kinetic-mass proxies, so the next engineering step is production
+  support for momentum projection plus matching.
+- The production harness now has optional `--momentum-modes` support and emits
+  `momentum_analysis` certificate fields.  A reduced-scope `4^3 x 8` smoke run
+  produced finite kinetic-mass proxies, but the validation runner explicitly
+  keeps this at bounded-support status.
 
 The scientific result is narrower than closure:
 

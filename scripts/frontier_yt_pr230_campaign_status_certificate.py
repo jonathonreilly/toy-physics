@@ -54,6 +54,8 @@ def main() -> int:
         "same_1pi": load("outputs/yt_same_1pi_scalar_pole_boundary_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
+        "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
+        "momentum_harness": load("outputs/yt_momentum_harness_extension_certificate_2026-05-01.json"),
         "direct_scale": load("outputs/yt_direct_measurement_scale_requirements_2026-05-01.json"),
     }
 
@@ -103,6 +105,18 @@ def main() -> int:
         or "bounded-support" in str(statuses["heavy_kinetic"]),
         statuses["heavy_kinetic"],
     )
+    report(
+        "nonzero-momentum-scout-needs-production-and-matching",
+        "nonzero-momentum" in str(statuses["nonzero_momentum"])
+        or "bounded-support" in str(statuses["nonzero_momentum"]),
+        statuses["nonzero_momentum"],
+    )
+    report(
+        "momentum-harness-extension-needs-production",
+        "momentum harness" in str(statuses["momentum_harness"])
+        or "bounded-support" in str(statuses["momentum_harness"]),
+        statuses["momentum_harness"],
+    )
 
     remaining_routes = [
         {
@@ -128,8 +142,10 @@ def main() -> int:
             "bubble, contact HS/RPA, simplified ladder projector, same-1PI, "
             "finite ladder IR/zero-mode shortcut, and static/HQET without "
             "matching.  It also isolates a constructive heavy kinetic-mass "
-            "route, but that route still needs nonzero-momentum production "
-            "data and matching.  Remaining closure requires production "
+            "route, a tiny nonzero-momentum correlator scout, and production "
+            "harness momentum fields, but that route still needs production "
+            "data and matching.  Remaining "
+            "closure requires production "
             "evidence or a genuinely new scalar LSZ/heavy-matching theorem."
         ),
         "proposal_allowed": False,

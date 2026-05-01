@@ -1,0 +1,328 @@
+{
+  "actual_current_surface_status": "bounded-support / nonzero-momentum correlator scout",
+  "fail_count": 0,
+  "geometry": {
+    "momentum_modes": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "spatial_lattice_size": 4,
+    "time_lattice_size": 8
+  },
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The scout uses a tiny cold gauge field and lacks production statistics plus a retained heavy matching bridge.",
+  "required_next_artifacts": [
+    "add production-mode momentum projection to the direct-correlator harness",
+    "measure nonzero-momentum top/HQET correlators over gauge ensembles",
+    "extract E(p)-E(0) with statistical/systematic uncertainties",
+    "derive matching from lattice kinetic mass to SM top mass"
+  ],
+  "runs": [
+    {
+      "cg_infos": [
+        0,
+        0,
+        0
+      ],
+      "correlators": {
+        "0,0,0": [
+          0.7058823529411764,
+          0.29411764705882365,
+          0.11764705882352938,
+          0.05882352941176469,
+          0.0,
+          0.05882352941176469,
+          -0.11764705882352938,
+          0.29411764705882365
+        ],
+        "1,0,0": [
+          0.40816326530612257,
+          0.18367346938775508,
+          0.04081632653061225,
+          0.020408163265306114,
+          0.0,
+          0.020408163265306114,
+          -0.04081632653061225,
+          0.18367346938775508
+        ],
+        "1,1,0": [
+          0.28865979381443313,
+          0.134020618556701,
+          0.020618556701030924,
+          0.010309278350515464,
+          0.0,
+          0.010309278350515465,
+          -0.020618556701030924,
+          0.134020618556701
+        ]
+      },
+      "energies": {
+        "0,0,0": {
+          "effective_energy_samples": [
+            0.9162907318741558,
+            0.6931471805599453
+          ],
+          "energy": 0.8047189562170505,
+          "max_imag_abs": 0.0,
+          "momentum_mode": [
+            0,
+            0,
+            0
+          ],
+          "p_hat_sq": 0.0
+        },
+        "1,0,0": {
+          "effective_energy_samples": [
+            1.504077396776274,
+            0.6931471805599457
+          ],
+          "energy": 1.0986122886681098,
+          "max_imag_abs": 0.0,
+          "momentum_mode": [
+            1,
+            0,
+            0
+          ],
+          "p_hat_sq": 1.9999999999999996
+        },
+        "1,1,0": {
+          "effective_energy_samples": [
+            1.8718021769015913,
+            0.6931471805599451
+          ],
+          "energy": 1.2824746787307681,
+          "max_imag_abs": 0.0,
+          "momentum_mode": [
+            1,
+            1,
+            0
+          ],
+          "p_hat_sq": 3.999999999999999
+        }
+      },
+      "kinetic_masses": {
+        "1,0,0": {
+          "delta_e": 0.2938933324510593,
+          "m_kin_lat": 3.402595056036275
+        },
+        "1,1,0": {
+          "delta_e": 0.4777557225137177,
+          "m_kin_lat": 4.186239757583593
+        }
+      },
+      "mass": 1.0,
+      "max_cg_residual": 2.6404200066621905e-16
+    },
+    {
+      "cg_infos": [
+        0,
+        0,
+        0
+      ],
+      "correlators": {
+        "0,0,0": [
+          0.4472049689440994,
+          0.10559006211180125,
+          0.024844720496894405,
+          0.006211180124223601,
+          0.0,
+          0.006211180124223601,
+          -0.024844720496894405,
+          0.10559006211180125
+        ],
+        "1,0,0": [
+          0.36514522821576767,
+          0.08713692946058091,
+          0.016597510373443987,
+          0.004149377593360997,
+          0.0,
+          0.004149377593360997,
+          -0.016597510373443987,
+          0.08713692946058091
+        ],
+        "1,1,0": [
+          0.30860534124629085,
+          0.07418397626112759,
+          0.011869436201780412,
+          0.002967359050445103,
+          0.0,
+          0.002967359050445103,
+          -0.011869436201780412,
+          0.07418397626112759
+        ]
+      },
+      "energies": {
+        "0,0,0": {
+          "effective_energy_samples": [
+            1.4469189829363256,
+            1.3862943611198906
+          ],
+          "energy": 1.416606672028108,
+          "max_imag_abs": 0.0,
+          "momentum_mode": [
+            0,
+            0,
+            0
+          ],
+          "p_hat_sq": 0.0
+        },
+        "1,0,0": {
+          "effective_energy_samples": [
+            1.658228076603532,
+            1.3862943611198906
+          ],
+          "energy": 1.5222612188617113,
+          "max_imag_abs": 0.0,
+          "momentum_mode": [
+            1,
+            0,
+            0
+          ],
+          "p_hat_sq": 1.9999999999999996
+        },
+        "1,1,0": {
+          "effective_energy_samples": [
+            1.8325814637483102,
+            1.3862943611198906
+          ],
+          "energy": 1.6094379124341005,
+          "max_imag_abs": 0.0,
+          "momentum_mode": [
+            1,
+            1,
+            0
+          ],
+          "p_hat_sq": 3.999999999999999
+        }
+      },
+      "kinetic_masses": {
+        "1,0,0": {
+          "delta_e": 0.1056545468336032,
+          "m_kin_lat": 9.464807998986673
+        },
+        "1,1,0": {
+          "delta_e": 0.19283124040599242,
+          "m_kin_lat": 10.3717633916016
+        }
+      },
+      "mass": 2.0,
+      "max_cg_residual": 2.136267639756967e-16
+    },
+    {
+      "cg_infos": [
+        0,
+        0,
+        0
+      ],
+      "correlators": {
+        "0,0,0": [
+          0.19611613151538448,
+          0.019419342434542956,
+          0.0019227071699549434,
+          0.00019227071699549436,
+          0.0,
+          0.00019227071699549436,
+          -0.0019227071699549434,
+          0.019419342434542956
+        ],
+        "1,0,0": [
+          0.18871283603491507,
+          0.018693252626411125,
+          0.0017803097708037566,
+          0.00017803097708037562,
+          0.0,
+          0.00017803097708037562,
+          -0.0017803097708037566,
+          0.018693252626411125
+        ],
+        "1,1,0": [
+          0.1818482393768526,
+          0.018019507356725098,
+          0.001653165809601569,
+          0.00016531658096015692,
+          0.0,
+          0.00016531658096015692,
+          -0.001653165809601569,
+          0.018019507356725098
+        ]
+      },
+      "energies": {
+        "0,0,0": {
+          "effective_energy_samples": [
+            2.312535424774023,
+            2.3025850929940455
+          ],
+          "energy": 2.3075602588840343,
+          "max_imag_abs": 0.0,
+          "momentum_mode": [
+            0,
+            0,
+            0
+          ],
+          "p_hat_sq": 0.0
+        },
+        "1,0,0": {
+          "effective_energy_samples": [
+            2.351375258927306,
+            2.302585092994046
+          ],
+          "energy": 2.326980175960676,
+          "max_imag_abs": 0.0,
+          "momentum_mode": [
+            1,
+            0,
+            0
+          ],
+          "p_hat_sq": 1.9999999999999996
+        },
+        "1,1,0": {
+          "effective_energy_samples": [
+            2.3887627910147247,
+            2.3025850929940455
+          ],
+          "energy": 2.3456739420043853,
+          "max_imag_abs": 0.0,
+          "momentum_mode": [
+            1,
+            1,
+            0
+          ],
+          "p_hat_sq": 3.999999999999999
+        }
+      },
+      "kinetic_masses": {
+        "1,0,0": {
+          "delta_e": 0.019419917076641813,
+          "m_kin_lat": 51.49352574748093
+        },
+        "1,1,0": {
+          "delta_e": 0.038113683120351016,
+          "m_kin_lat": 52.47459275149633
+        }
+      },
+      "mass": 5.0,
+      "max_cg_residual": 2.265634420452e-11
+    }
+  ],
+  "strict_non_claims": [
+    "not a production measurement",
+    "not a y_t derivation",
+    "does not use observed top mass as calibration",
+    "does not define y_t through H_unit matrix elements"
+  ],
+  "verdict": "The existing PR #230 production harness can be reused to construct momentum-projected staggered correlators.  On a tiny cold gauge field, nonzero-momentum energies order correctly and produce finite kinetic-mass estimates from E(p)-E(0).  This is methodology support for the heavy kinetic-mass route, not retained closure: it uses no production ensemble, no gauge statistics, and no lattice-HQET/NRQCD matching theorem."
+}

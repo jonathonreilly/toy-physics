@@ -1,0 +1,39 @@
+{
+  "actual_current_surface_status": "bounded-support / momentum harness extension",
+  "fail_count": 0,
+  "kinetic_mass_fits": {
+    "1,0,0": {
+      "delta_e_lat": 0.025154608506440468,
+      "delta_e_lat_err": 0.16454817233812125,
+      "m_kin_lat": 39.75414682935592,
+      "m_kin_lat_err": 260.0506464633304,
+      "momentum_mode": [
+        1,
+        0,
+        0
+      ]
+    },
+    "1,1,0": {
+      "delta_e_lat": 0.048287934001523425,
+      "delta_e_lat_err": 0.25610672035421506,
+      "m_kin_lat": 41.41821432942031,
+      "m_kin_lat_err": 219.6715029162593,
+      "momentum_mode": [
+        1,
+        1,
+        0
+      ]
+    }
+  },
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Reduced-scope smoke run only; no production statistics or matching theorem.",
+  "smoke_certificate": "outputs/yt_direct_lattice_correlator_momentum_harness_smoke_2026-05-01.json",
+  "strict_non_claims": [
+    "not a production measurement",
+    "not a y_t derivation",
+    "does not use observed top mass as calibration",
+    "does not define y_t through H_unit matrix elements"
+  ],
+  "verdict": "The direct-correlator production harness now emits momentum-analysis fields and finite kinetic-mass proxies in a reduced-scope smoke run. This is implementation support only; it is not production evidence and does not supply heavy-action matching."
+}

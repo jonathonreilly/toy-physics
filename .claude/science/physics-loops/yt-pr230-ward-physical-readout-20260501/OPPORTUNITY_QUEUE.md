@@ -3,8 +3,10 @@
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.
    Current-scale relativistic production is not enough because `am_top =
-   81.423`; the kinetic route still needs a `1/M` action term, nonzero-momentum
-   correlator production/scout data, and lattice-HQET/NRQCD-to-SM matching.
+   81.423`; the cold-gauge scout validates the measurement primitive.  The
+   production harness now carries momentum-analysis fields.  The route still
+   needs a `1/M` action term, gauge-ensemble data, and lattice-HQET/NRQCD-to-SM
+   matching.
 2. **Scalar-channel Bethe-Salpeter projector and limiting theorem.** The
    source-bubble stretch, HS/RPA contact attempt, input audit, and
    projector-normalization obstruction show the exact next analytic object:

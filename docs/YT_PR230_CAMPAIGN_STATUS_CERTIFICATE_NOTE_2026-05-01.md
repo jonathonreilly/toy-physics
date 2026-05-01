@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=10 FAIL=0
+# SUMMARY: PASS=12 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -44,6 +44,8 @@ The certificate consumes the PR-local route certificates for:
 - same-1PI scalar-pole boundary;
 - scalar ladder IR / zero-mode obstruction;
 - heavy kinetic-mass route scout;
+- nonzero-momentum correlator scout;
+- momentum-harness extension certificate;
 - direct measurement scale requirements.
 
 All loaded runner certificates have `FAIL=0`.  None authorizes a retained
@@ -67,6 +69,8 @@ visible shortcut routes:
 | current-scale direct MC | `am_top = 81.423`, not a useful relativistic top run |
 | HQET/static shortcut | removes rest mass, therefore needs matching |
 | heavy kinetic mass | cancels additive rest mass, but needs nonzero-momentum data and matching |
+| nonzero-momentum scout | method runs on cold gauge, still needs production ensembles and matching |
+| momentum harness extension | certificate fields exist, smoke run is reduced-scope only |
 
 ## Remaining Honest Routes
 

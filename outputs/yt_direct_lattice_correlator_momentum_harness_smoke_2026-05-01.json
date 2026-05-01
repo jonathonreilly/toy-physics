@@ -1,0 +1,395 @@
+{
+  "ensembles": [
+    {
+      "a_fm": 0.0931098696461825,
+      "ape_smearing": {
+        "alpha": 0.5,
+        "steps": 0
+      },
+      "boundary_conditions": {
+        "fermion_time": "antiperiodic",
+        "gauge_spatial": "periodic",
+        "gauge_time": "periodic"
+      },
+      "correlators": [
+        {
+          "mean": 0.15669383880628823,
+          "stderr": 0.0,
+          "tau": 0
+        },
+        {
+          "mean": 0.0068261484921998605,
+          "stderr": 0.0,
+          "tau": 1
+        },
+        {
+          "mean": 0.00030289552776648944,
+          "stderr": 0.0,
+          "tau": 2
+        },
+        {
+          "mean": 1.520083922885935e-05,
+          "stderr": 0.0,
+          "tau": 3
+        },
+        {
+          "mean": 0.0,
+          "stderr": 0.0,
+          "tau": 4
+        },
+        {
+          "mean": 1.520083922885935e-05,
+          "stderr": 0.0,
+          "tau": 5
+        },
+        {
+          "mean": 0.00030289552776648944,
+          "stderr": 0.0,
+          "tau": 6
+        },
+        {
+          "mean": 0.0068261484921998605,
+          "stderr": 0.0,
+          "tau": 7
+        }
+      ],
+      "dims": [
+        4,
+        4,
+        4,
+        8
+      ],
+      "effective_mass": [
+        {
+          "m_eff": 3.1335332260268345,
+          "tau": 0
+        },
+        {
+          "m_eff": 3.115127929936756,
+          "tau": 1
+        },
+        {
+          "m_eff": 2.9920373144517396,
+          "tau": 2
+        },
+        {
+          "m_eff": -2.99203731445174,
+          "tau": 5
+        },
+        {
+          "m_eff": -3.115127929936756,
+          "tau": 6
+        }
+      ],
+      "mass_fit": {
+        "chi2_dof": 6.431770310200271e-15,
+        "m_lat": 2.9920373144518635,
+        "m_lat_err": 6.65415429662763e-06,
+        "tau_max": 4,
+        "tau_min": 2
+      },
+      "mass_parameter_scan": [
+        {
+          "chi2_dof": 6.431770310200271e-15,
+          "m_bare_lat": 2.0,
+          "m_fit_lat": 2.9920373144518635,
+          "m_fit_lat_err": 6.65415429662763e-06,
+          "max_cg_residual": 2.136267639756967e-16
+        }
+      ],
+      "measurement_separation_sweeps": 0,
+      "measurement_sweeps": 1,
+      "momentum_analysis": {
+        "energy_fits": {
+          "0,0,0": {
+            "chi2_dof": 0.007575649810240056,
+            "correlator": [
+              {
+                "mean": 0.15669383880628823,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.0068261484921998605,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.00030289552776648944,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 1.520083922885935e-05,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 1.520083922885935e-05,
+                "stderr": 0.0,
+                "tau": 5
+              },
+              {
+                "mean": 0.00030289552776648944,
+                "stderr": 0.0,
+                "tau": 6
+              },
+              {
+                "mean": 0.0068261484921998605,
+                "stderr": 0.0,
+                "tau": 7
+              }
+            ],
+            "effective_energy_samples": [
+              {
+                "m_eff": 3.115127929936756,
+                "tau": 1
+              },
+              {
+                "m_eff": 2.9920373144517396,
+                "tau": 2
+              }
+            ],
+            "energy_lat": 3.0535826221942477,
+            "energy_lat_err": 0.061545307742508104,
+            "momentum_mode": [
+              0,
+              0,
+              0
+            ],
+            "p_hat_sq": 0.0,
+            "tau_max": 3,
+            "tau_min": 1
+          },
+          "1,0,0": {
+            "chi2_dof": 0.046576552229392054,
+            "correlator": [
+              {
+                "mean": 0.14218156078628388,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.006730128570806352,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.0002658699630025942,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 1.4251683857704468e-05,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 1.4251683857704468e-05,
+                "stderr": 0.0,
+                "tau": 5
+              },
+              {
+                "mean": 0.0002658699630025942,
+                "stderr": 0.0,
+                "tau": 6
+              },
+              {
+                "mean": 0.006730128570806352,
+                "stderr": 0.0,
+                "tau": 7
+              }
+            ],
+            "effective_energy_samples": [
+              {
+                "m_eff": 3.2313421982302413,
+                "tau": 1
+              },
+              {
+                "m_eff": 2.9261322631711346,
+                "tau": 2
+              }
+            ],
+            "energy_lat": 3.078737230700688,
+            "energy_lat_err": 0.15260496752955333,
+            "momentum_mode": [
+              1,
+              0,
+              0
+            ],
+            "p_hat_sq": 1.9999999999999996,
+            "tau_max": 3,
+            "tau_min": 1
+          },
+          "1,1,0": {
+            "chi2_dof": 0.12360565461094418,
+            "correlator": [
+              {
+                "mean": 0.1280934017408679,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.006639298785504005,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.00023282551997431305,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 1.3423682797107947e-05,
+                "stderr": 0.0,
+                "tau": 3
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 4
+              },
+              {
+                "mean": 1.3423682797107947e-05,
+                "stderr": 0.0,
+                "tau": 5
+              },
+              {
+                "mean": 0.00023282551997431305,
+                "stderr": 0.0,
+                "tau": 6
+              },
+              {
+                "mean": 0.006639298785504005,
+                "stderr": 0.0,
+                "tau": 7
+              }
+            ],
+            "effective_energy_samples": [
+              {
+                "m_eff": 3.35047230056912,
+                "tau": 1
+              },
+              {
+                "m_eff": 2.8532688118224216,
+                "tau": 2
+              }
+            ],
+            "energy_lat": 3.101870556195771,
+            "energy_lat_err": 0.24860174437334925,
+            "momentum_mode": [
+              1,
+              1,
+              0
+            ],
+            "p_hat_sq": 3.999999999999999,
+            "tau_max": 3,
+            "tau_min": 1
+          }
+        },
+        "kinetic_mass_fits": {
+          "1,0,0": {
+            "delta_e_lat": 0.025154608506440468,
+            "delta_e_lat_err": 0.16454817233812125,
+            "m_kin_lat": 39.75414682935592,
+            "m_kin_lat_err": 260.0506464633304,
+            "momentum_mode": [
+              1,
+              0,
+              0
+            ]
+          },
+          "1,1,0": {
+            "delta_e_lat": 0.048287934001523425,
+            "delta_e_lat_err": 0.25610672035421506,
+            "m_kin_lat": 41.41821432942031,
+            "m_kin_lat_err": 219.6715029162593,
+            "momentum_mode": [
+              1,
+              1,
+              0
+            ]
+          }
+        }
+      },
+      "plaquette_history": [],
+      "plaquette_mean": 1.0,
+      "plaquette_measurements": [
+        1.0
+      ],
+      "r0_over_a": 5.37,
+      "runtime_seconds": 0.03388214111328125,
+      "selected_mass_parameter": 2.0,
+      "spatial_L": 4,
+      "thermalization_sweeps": 0,
+      "time_L": 8,
+      "update_algorithm": "Cabibbo-Marinari heatbath + polar overrelaxation",
+      "update_engine": "python"
+    }
+  ],
+  "metadata": {
+    "action": "Cl3Z3_SU3_Wilson_staggered",
+    "authority": "staggered_top_correlator_mass_extraction",
+    "created_utc": "2026-05-01T16:59:11Z",
+    "evidence_scope": "reduced run is infrastructure evidence only",
+    "g_bare": 1.0,
+    "phase": "reduced_scope",
+    "running_bridge": "reduced_scope run uses no authoritative SM RGE; production certificate must supply 4/5-loop bridge",
+    "scale_anchor": "Sommer r0 = 0.5 fm external anchor; r0/a reference used for reduced_scope run",
+    "uses_composite_matrix_element_route": false,
+    "uses_coupling_definition_route": false,
+    "uses_prior_ward_chain": false
+  },
+  "ratio_check": {
+    "g_s_lattice": null,
+    "g_s_source": "not_measured_reduced_scope",
+    "ratio": null,
+    "uncertainty": null,
+    "used_as_definition": false,
+    "y_t_lattice": 0.03642084730500954
+  },
+  "result": {
+    "m_t_pole_GeV": 6.341000054542749,
+    "m_t_running_at_v_GeV": 6.341000054542749,
+    "mass_uncertainties_GeV": {
+      "finite_spacing": 1.2682000109085498,
+      "finite_volume": 0.0,
+      "heavy_mass_tuning": 0.9511500081814124,
+      "matching": 0.6341000054542749,
+      "running_bridge": 0.6341000054542749,
+      "scale_setting": 0.31705000272713746,
+      "statistical": 1.4102094433799381e-05,
+      "v_input": 0.0001
+    },
+    "reduced_scope_delta_to_pdg_GeV": -166.21899994545726,
+    "reduced_scope_delta_to_y_t_target": -0.8805791526949905,
+    "total_m_t_pole_uncertainty_GeV": 1.8487033169208944,
+    "total_y_t_uncertainty": 0.01061841044609419,
+    "uncertainties": {
+      "finite_spacing": 0.007284169461001908,
+      "finite_volume": 0.0,
+      "heavy_mass_tuning": 0.005463127095751431,
+      "matching": 0.003642084730500954,
+      "running_bridge": 0.003642084730500954,
+      "scale_setting": 0.001821042365250477,
+      "statistical": 8.09983005261571e-08,
+      "v_input": 5.743707142679697e-07
+    },
+    "y_t_v": 0.03642084730500954
+  },
+  "v_input": {
+    "source": "existing electroweak VEV chain",
+    "treatment": "substrate_input_only",
+    "v_GeV": 246.21965
+  }
+}

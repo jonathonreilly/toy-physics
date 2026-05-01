@@ -80,12 +80,19 @@ Completed in block 1:
 - `scripts/frontier_yt_heavy_kinetic_mass_route.py`
 - `outputs/yt_heavy_kinetic_mass_route_2026-05-01.json`
 - `docs/YT_HEAVY_KINETIC_MASS_ROUTE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_nonzero_momentum_correlator_scout.py`
+- `outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json`
+- `docs/YT_NONZERO_MOMENTUM_CORRELATOR_SCOUT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_momentum_harness_extension_certificate.py`
+- `outputs/yt_direct_lattice_correlator_momentum_harness_smoke_2026-05-01.json`
+- `outputs/yt_momentum_harness_extension_certificate_2026-05-01.json`
+- `docs/YT_DIRECT_CORRELATOR_MOMENTUM_HARNESS_EXTENSION_NOTE_2026-05-01.md`
 
 Next artifact:
 
-- lightweight nonzero-momentum correlator scout or heavy-action matching
-  theorem attempt, because the kinetic-mass route cancels the static additive
-  mass but needs an actual observable implementation and matching bridge
+- heavy-action matching theorem attempt or bounded momentum-enabled pilot,
+  because production-harness support now exists but still lacks production
+  ensemble evidence and matching
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

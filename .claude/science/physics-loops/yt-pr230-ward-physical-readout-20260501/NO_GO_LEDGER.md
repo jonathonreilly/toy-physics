@@ -226,6 +226,29 @@ closure proof because pure static correlators have no kinetic splitting and the
 route still requires a `1/M` kinetic action term, nonzero-momentum data, and a
 lattice-HQET/NRQCD-to-SM matching theorem.
 
+Nonzero-momentum correlator primitive now exists but remains scout-only:
+
+```text
+python3 scripts/frontier_yt_nonzero_momentum_correlator_scout.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+The tiny cold-gauge scout reuses the production harness Dirac builder and CG
+solve, then constructs even momentum-projected correlators.  It validates the
+observable machinery, but it cannot certify `m_t` or `y_t` without gauge
+ensembles, production statistics, and matching.
+
+Momentum-harness extension remains smoke-only:
+
+```text
+python3 scripts/frontier_yt_momentum_harness_extension_certificate.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+The production harness can now emit momentum-analysis fields, but the current
+certificate is a one-configuration cold-gauge smoke artifact.  It is not
+production evidence and does not remove the heavy-action matching import.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate
