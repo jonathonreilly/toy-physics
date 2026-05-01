@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:54:12.310317+00:00
+**Generated:** 2026-05-01T03:59:28.225087+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 239 |
-| support | 199 |
+| support | 198 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 800 |
-| ~~audited_failed~~ | 154 |
+| ~~audited_conditional~~ | 799 |
+| ~~audited_failed~~ | 156 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
 | `audited_conditional` | 530 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 68 |
+| `audited_failed` | 69 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 700 |
+| `unaudited` | 699 |
 
 | criticality | count |
 |---|---:|
@@ -929,6 +929,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_positive_background_local_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `wilson_mu2_distance_sweep_note_2026-04-11` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `yt_zero_import_chain_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `architecture_note_directional_measure` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `bell_inequality_derived_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
@@ -13333,6 +13334,21 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
 - **chain closes:** False — The algebraic 1/sqrt(6) overlap and same-channel coefficient checks close, but the target Yukawa readout is introduced by definition as the H_unit-to-top matrix element. The runner confirms coefficient consistency after that identification; it does not derive the physical Yukawa readout map itself.
 - **rationale:** Issue: The load-bearing move defines y_t_bare as the H_unit matrix element and then identifies that matrix element with the top Yukawa readout. Why this blocks: The source note and runner verify the scalar-singlet algebra, Clebsch-Gordan normalization, Fierz coefficients, and tadpole cancellation, but they do not derive the physical observable bridge from independent retained inputs. Repair target: Supply a retained theorem and runner check constructing the map from the composite H_unit matrix element to the SM top Yukawa vertex/readout, including the common tadpole dressing. Claim boundary until fixed: The note supports a tree-level structural identification/algebraic normalization on the canonical surface, not a first-principles derivation of the physical top Yukawa coupling.
 - **auditor confidence:** 0.88
+
+### `yt_zero_import_chain_note`
+
+- **Note:** [`YT_ZERO_IMPORT_CHAIN_NOTE.md`](../../docs/YT_ZERO_IMPORT_CHAIN_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-yt_zero_import_chain_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The backward Ward scan fixes y_t(v) by requiring y_t(M_Pl)=g_lattice/sqrt(6), then claims the Ward identity is matched at M_Pl and predicts m_t=169.51 GeV.  _(class `C`)_
+- **chain closes:** False — The runner matches y_t(M_Pl) to the constant target YT_PL, but its own Ward verification prints g_s(M_Pl)/sqrt(6)=0.198854 while y_t(M_Pl)=0.435769, with ratio 2.19139982. Thus the stated Ward identity is not actually verified against the evolved high-scale gauge coupling.
+- **rationale:** Issue: the central Ward-boundary match is internally inconsistent in the runner output: y_t(M_Pl) equals the fixed target 0.435769, but the same run reports g_s(M_Pl)/sqrt(6)=0.198854, so y_t/(g_s/sqrt(6))=2.19139982. Why this blocks: the top-mass prediction is obtained by choosing y_t(v) to hit the fixed target, not by satisfying the printed evolved Ward identity at M_Pl. Repair target: define which high-scale gauge coupling enters the Ward identity, make the runner check y_t(M_Pl) against that actual value, and rederive the backward scan after that correction. Claim boundary until fixed: the script is a numerical pipeline with several near-observable matches, but not a closed zero-import y_t derivation.
+- **open / conditional deps cited:**
+  - `scripts/frontier_yt_zero_import_chain.py`
+  - `scripts/canonical_plaquette_surface.py`
+- **auditor confidence:** high
 
 ### `yukawa_color_projection_theorem`
 
