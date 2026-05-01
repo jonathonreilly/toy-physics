@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:31:13.186699+00:00
+**Generated:** 2026-05-01T05:32:20.078520+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 248 |
+| `audited_clean` | 249 |
 | `audited_conditional` | 557 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 78 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 636 |
+| `unaudited` | 635 |
 
 | criticality | count |
 |---|---:|
@@ -328,6 +328,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_newton_reproduction_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `substrate_to_p_a_forcing_theorem_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `tensor_matching_completion_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `two_sign_comparison_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -12941,6 +12942,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The minimal rank-two tensor block is locally sufficient on each audited family, but the fitted K_tensor, eta coefficient, and a_star differ strongly across O_h and finite-rank families, so no single universal closure theorem is supported.  _(class `C`)_
 - **chain closes:** False — The runner output is consistent with the note's negative conclusion, but the registered primary runner exits nonzero and emits no PASS checks because it treats the expected no-universal-closure result as process failure. That makes the row non-ratifiable by the audit runner contract.
 - **rationale:** Issue: scripts/frontier_tensor_block_closure_test.py exits with code 1 and no classified PASS lines even though the source note is framed around the negative/no-go outcome. Why this blocks: audit-loop cannot distinguish an expected no-go success from a broken runner when the process exits nonzero and reports no PASS checks. Repair target: change the runner so the expected bounded no-go returns exit 0 and emits classified PASS lines for local sufficiency, cross-family kernel mismatch, eta mismatch, a_star mismatch, and non-universality. Claim boundary until fixed: the printed numbers support the intended bounded no-go, but the current runner artifact is not audit-compatible.
+- **auditor confidence:** high
+
+### `tensor_matching_completion_theorem_note`
+
+- **Note:** [`TENSOR_MATCHING_COMPLETION_THEOREM_NOTE.md`](../../docs/TENSOR_MATCHING_COMPLETION_THEOREM_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Same scalar Schur data across scalar/vector/tensor/mixed probes but independent G_0i and traceless G_ij channels force at least one shift-like and one traceless-shear boundary coordinate beyond the scalar trace; the mixed probe is locally additive in those two channels.  _(class `C`)_
+- **chain closes:** True — The runner verifies scalar-action invariance, independent vector and traceless-shear channels, and bounded local additivity on both O_h and finite-rank families. The note leaves the microscopic source-to-channel map and tensor kernel open, so the clean audit is only for localizing the minimal missing tensor data.
+- **rationale:** The support claim closes at its stated boundary: scalar Schur data cannot distinguish the tensor sectors, two non-scalar coordinates are required on the tested families, and mixed perturbations are locally additive in those channels. The runner exits 0 with seven checks and the note does not claim to derive K_tensor, eta, extension beyond the audited class, or full nonlinear GR. Residual risk is exactly the open microscopic source-to-channel law and tensor boundary kernel.
 - **auditor confidence:** high
 
 ### `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22`

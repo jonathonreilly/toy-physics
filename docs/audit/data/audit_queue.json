@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 287,
-    "medium": 146
+    "medium": 145
   },
-  "generated_at": "2026-05-01T05:31:12.887887+00:00",
+  "generated_at": "2026-05-01T05:32:19.815512+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6547,23 +6547,6 @@
       "note_path": "docs/EQUIVALENCE_PRINCIPLE_NOTE.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "tensor_matching_completion_theorem_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.587,
-      "note_path": "docs/TENSOR_MATCHING_COMPLETION_THEOREM_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_tensor_matching_completion_theorem.py",
       "transitive_descendants": 33
     },
     {
@@ -15481,6 +15464,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 240,
-  "total_pending": 636
+  "ready_count": 239,
+  "total_pending": 635
 }
