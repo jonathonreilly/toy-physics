@@ -60,6 +60,7 @@ def main() -> int:
         "production_resource": load("outputs/yt_production_resource_projection_2026-05-01.json"),
         "feynman_hellmann": load("outputs/yt_feynman_hellmann_source_response_route_2026-05-01.json"),
         "mass_response": load("outputs/yt_mass_response_bracket_certificate_2026-05-01.json"),
+        "source_reparametrization": load("outputs/yt_source_reparametrization_gauge_no_go_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -149,6 +150,11 @@ def main() -> int:
         "mass-response-bracket-is-bare-source-only",
         "mass-response" in str(statuses["mass_response"]),
         statuses["mass_response"],
+    )
+    report(
+        "source-reparametrization-gauge-blocks-source-only-closure",
+        "source reparametrization" in str(statuses["source_reparametrization"]),
+        statuses["source_reparametrization"],
     )
     report(
         "finite-ladder-route-needs-ir-limit",
@@ -244,8 +250,11 @@ def main() -> int:
             "Feynman-Hellmann top-energy response can remove additive rest "
             "mass, but still needs scalar source-to-Higgs normalization and "
             "production response data; the reduced mass-bracket response is "
-            "bare-source support only.  Remaining closure requires production "
-            "evidence or a genuinely new scalar LSZ/heavy-matching theorem."
+            "bare-source support only.  The source-reparametrization gauge "
+            "boundary shows source-only analytic routes cannot close without "
+            "canonical scalar normalization.  Remaining closure requires "
+            "production evidence or a genuinely new scalar LSZ/heavy-matching "
+            "theorem."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",

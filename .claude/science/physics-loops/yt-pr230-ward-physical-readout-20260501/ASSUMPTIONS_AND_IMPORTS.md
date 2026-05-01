@@ -137,6 +137,17 @@ does not fix `kappa_s`.  Therefore it remains blocked by the same scalar
 source-to-Higgs normalization / LSZ residue import unless that bridge is
 derived or measured on production ensembles.
 
+Source-reparametrization gauge boundary:
+
+```text
+source-only products are covariant under h = kappa_s s
+y^2 D_phi and response identities do not determine kappa_s
+```
+
+Any route that sets `kappa_s = 1` without deriving canonical scalar
+normalization is importing a hidden normalization.  This includes source
+curvature, same-1PI, and Feynman-Hellmann response routes.
+
 Refreshed `A_min` for the positive-closure rerun:
 
 ```text

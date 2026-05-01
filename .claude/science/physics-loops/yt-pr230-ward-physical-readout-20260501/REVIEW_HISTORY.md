@@ -613,3 +613,28 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The reduced mass-bracket response uses real PR230 correlator data, but the
 claim boundary is unchanged: it is `dE/dm_bare`, not a physical `dE/dh`, and it
 is not production scope.
+
+## Review-Loop Backpressure — Source-Reparametrization Gauge
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_source_reparametrization_gauge_no_go.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_source_reparametrization_gauge_no_go.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The boundary is exact for source-only routes, not a no-go against future
+closure.  It says the next positive theorem must derive canonical scalar
+normalization / LSZ residue or measure the physical response directly.

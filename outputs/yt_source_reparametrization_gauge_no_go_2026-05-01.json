@@ -1,0 +1,68 @@
+{
+  "actual_current_surface_status": "exact negative boundary / source reparametrization gauge",
+  "base_values": {
+    "curvature": 2.5,
+    "four_fermion_product": 0.1333333333333334,
+    "scalar_charge": 0.4082482904638631,
+    "scalar_propagator": 0.8,
+    "source_ratio": 0.4082482904638631
+  },
+  "fail_count": 0,
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The source normalization kappa is a gauge freedom on the current source-functional surface.",
+  "rows": [
+    {
+      "curvature_in_lattice_source": 0.625,
+      "four_fermion_product": 0.1333333333333334,
+      "kappa_source_to_physical_field": 0.5,
+      "physical_y_readout_if_kappa_known": 0.4082482904638631,
+      "propagator_in_lattice_source": 3.2,
+      "slope_in_lattice_source": 0.20412414523193154,
+      "wrong_readout_if_kappa_set_to_one": 0.20412414523193154
+    },
+    {
+      "curvature_in_lattice_source": 1.40625,
+      "four_fermion_product": 0.13333333333333336,
+      "kappa_source_to_physical_field": 0.75,
+      "physical_y_readout_if_kappa_known": 0.4082482904638631,
+      "propagator_in_lattice_source": 1.4222222222222223,
+      "slope_in_lattice_source": 0.3061862178478973,
+      "wrong_readout_if_kappa_set_to_one": 0.3061862178478973
+    },
+    {
+      "curvature_in_lattice_source": 2.5,
+      "four_fermion_product": 0.1333333333333334,
+      "kappa_source_to_physical_field": 1.0,
+      "physical_y_readout_if_kappa_known": 0.4082482904638631,
+      "propagator_in_lattice_source": 0.8,
+      "slope_in_lattice_source": 0.4082482904638631,
+      "wrong_readout_if_kappa_set_to_one": 0.4082482904638631
+    },
+    {
+      "curvature_in_lattice_source": 3.90625,
+      "four_fermion_product": 0.13333333333333336,
+      "kappa_source_to_physical_field": 1.25,
+      "physical_y_readout_if_kappa_known": 0.408248290463863,
+      "propagator_in_lattice_source": 0.512,
+      "slope_in_lattice_source": 0.5103103630798288,
+      "wrong_readout_if_kappa_set_to_one": 0.5103103630798288
+    },
+    {
+      "curvature_in_lattice_source": 5.625,
+      "four_fermion_product": 0.13333333333333336,
+      "kappa_source_to_physical_field": 1.5,
+      "physical_y_readout_if_kappa_known": 0.4082482904638631,
+      "propagator_in_lattice_source": 0.35555555555555557,
+      "slope_in_lattice_source": 0.6123724356957946,
+      "wrong_readout_if_kappa_set_to_one": 0.6123724356957946
+    }
+  ],
+  "strict_non_claims": [
+    "does not rule out a future scalar LSZ theorem",
+    "does not use H_unit matrix-element readout",
+    "does not use observed top mass or observed y_t",
+    "does not use alpha_LM/plaquette/u0 as proof input"
+  ],
+  "verdict": "Source-functional routes are covariant under scalar-source reparametrization.  The same source-response products can be held fixed while the readout obtained by setting the source normalization to one varies.  Therefore PR #230 cannot close from source curvature, same-1PI products, or Feynman-Hellmann slopes alone.  A canonical scalar field normalization, scalar LSZ residue, or direct physical response measurement is required."
+}

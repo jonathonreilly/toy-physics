@@ -416,6 +416,18 @@ The existing reduced `12^3 x 24` mass scan gives positive local slopes
 the lattice-to-SM matching.  It is a lightweight scout for a future production
 response route, not retained closure.
 
+Source-only analytic closure blocked by reparametrization gauge:
+
+```text
+python3 scripts/frontier_yt_source_reparametrization_gauge_no_go.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+Source curvature, same-1PI products, and Feynman-Hellmann slopes remain
+covariant under `h = kappa s`.  Setting `kappa = 1` is a hidden normalization
+choice unless derived from scalar LSZ/canonical kinetic data or directly
+measured.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

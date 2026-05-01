@@ -127,6 +127,9 @@ Completed in block 1:
 - `scripts/frontier_yt_mass_response_bracket_certificate.py`
 - `outputs/yt_mass_response_bracket_certificate_2026-05-01.json`
 - `docs/YT_MASS_RESPONSE_BRACKET_CERTIFICATE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_source_reparametrization_gauge_no_go.py`
+- `outputs/yt_source_reparametrization_gauge_no_go_2026-05-01.json`
+- `docs/YT_SOURCE_REPARAMETRIZATION_GAUGE_NO_GO_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -143,7 +146,8 @@ Next artifact:
   Feynman-Hellmann scalar response cancels additive rest mass but still needs
   scalar-source normalization and production response data; the existing
   reduced mass bracket yields a positive bare-source response but no physical
-  `dE/dh` readout
+  `dE/dh` readout; source-only analytic routes have an exact
+  reparametrization gauge unless canonical scalar normalization is derived
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

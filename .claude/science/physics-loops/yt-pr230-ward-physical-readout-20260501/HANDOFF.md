@@ -149,6 +149,11 @@ What changed:
   `m_bare` and give positive local `dE/dm_bare` slopes.  This is useful
   lightweight evidence for the observable design, but it is reduced-scope and
   bare-source only.
+- The source-reparametrization gauge block formalizes the hard boundary:
+  source curvature, same-1PI products, and Feynman-Hellmann slopes are
+  covariant under scalar source rescaling.  They cannot produce a physical
+  Yukawa readout unless a canonical scalar normalization / LSZ residue is
+  derived or directly measured.
 
 The scientific result is narrower than closure:
 

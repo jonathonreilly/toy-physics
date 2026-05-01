@@ -48,7 +48,9 @@
    normalization / LSZ residue bridge before it can produce physical `y_t`.
    The existing reduced mass-bracket run already gives positive
    `dE/dm_bare`, so the next useful engineering step is a production
-   source-response design, not more reduced bare-source evidence.
+   source-response design, not more reduced bare-source evidence.  The
+   source-reparametrization gauge no-go means this route must derive or measure
+   canonical scalar normalization before claiming physical `y_t`.
 5. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 6. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`
