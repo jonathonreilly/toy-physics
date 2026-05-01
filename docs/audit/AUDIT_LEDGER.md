@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T21:16:01.854829+00:00
+**Generated:** 2026-05-01T21:54:58.458044+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 301 |
+| `audited_clean` | 302 |
 | `audited_conditional` | 653 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 508 |
+| `unaudited` | 507 |
 
 | criticality | count |
 |---|---:|
@@ -366,6 +366,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_trace_tensor_no_go_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `self_consistency_forces_poisson_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-gpt-5 | C | - |
 | `self_consistency_structured_null_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `self_gravity_born_hardening_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-gpt-5 | C | - |
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
@@ -13697,6 +13698,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The bounded no-go depends on the Poisson self-gravity loop runner verifying exact epsilon=0 reduction, nonzero-coupling convergence/Born failures, and the retained audit-row control surface.  _(class `C`)_
 - **chain closes:** False — The primary runner did not complete in the audit window: it remained silent for roughly 2m20s and had to be killed. Without current runner output, the bounded no-go's exact reduction and Born-control claims cannot be audited from this checkout.
 - **rationale:** Issue: the registered primary runner exceeded the normal audit-loop runner window and produced no output before being killed after roughly 2m20s. Why this blocks: the note's bounded no-go relies on exact epsilon=0 identity, convergence failure, and Born-audit measurements that must come from the runner; none were available in the current run. Repair target: make scripts/poisson_self_gravity_loop_v3.py complete within the audit window, add an explicit slow-runner annotation with rationale, or split/cache the expensive checks into a reviewable runner artifact. Claim boundary until fixed: the note remains an intended bounded no-go, but its current audit artifact is not executable enough to ratify.
+- **auditor confidence:** high
+
+### `self_gravity_born_hardening_note`
+
+- **Note:** [`SELF_GRAVITY_BORN_HARDENING_NOTE.md`](../../docs/SELF_GRAVITY_BORN_HARDENING_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-continuation`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The exact zero-coupling reduction is explicit, the snapshot Born check is explicit, and the end-to-end Born check is explicit, but together they still do not justify promoting the lane to a retained self-gravity/backreaction mechanism.  _(class `C`)_
+- **chain closes:** True — The note is a bounded no-go, not a positive retained mechanism claim. With no cited dependencies, the current runner directly reproduces the zero-epsilon identity, the nonzero-coupling non-convergence, and the non-machine-clean end-to-end Born audit that support that bounded conclusion.
+- **rationale:** The bounded claim surface is narrow: it asserts that the exact zero-coupling identity survives while the nonzero self-gravity/backreaction lane does not promote under strict reduction and Born controls. The current runner recomputes those controls from the stated lattice setup and matches the note's reported values, including zero-epsilon identity, failed nonlinear convergence for nonzero couplings, and nonzero end-to-end Born residual. No upstream dependency or hidden retained mechanism is needed for this bounded no-go read; residual risk is only that the runner is slow and has unclassified output lines, not that the stated bounded conclusion overreaches the computed evidence.
 - **auditor confidence:** high
 
 ### `self_gravity_entropy_note_2026-04-11`
