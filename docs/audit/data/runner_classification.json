@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T20:25:05.287865+00:00",
+  "generated_at": "2026-05-01T00:52:11.929718+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14233,6 +14233,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_yt_constructive_uv_bridge.py"
     },
+    "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30": {
+      "assert_count": 4,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_direct_lattice_correlator.py"
+    },
     "yt_eft_bridge_theorem": {
       "assert_count": 0,
       "counts": {
@@ -14701,6 +14713,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_p3_msbar_to_pole_k3.py"
     },
+    "yt_planck_double_criticality_selector_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 15
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_planck_double_criticality_selector.py"
+    },
     "yt_qfp_insensitivity_support_note": {
       "assert_count": 0,
       "counts": {
@@ -14748,6 +14772,90 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_ssb_matching_gap.py"
+    },
+    "yt_top_mass_substrate_pin_claim_status_certificate_2026-04-30": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_top_mass_substrate_pin_no_go.py"
+    },
+    "yt_top_mass_substrate_pin_handoff_2026-04-30": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_top_mass_substrate_pin_no_go.py"
+    },
+    "yt_top_mass_substrate_pin_no_go_note_2026-04-30": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_top_mass_substrate_pin_no_go.py"
+    },
+    "yt_top_mass_ward_decomp_assumptions_and_imports_2026-04-30": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py"
+    },
+    "yt_top_mass_ward_decomp_claim_status_certificate_2026-04-30": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py"
+    },
+    "yt_top_mass_ward_decomp_handoff_2026-04-30": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py"
+    },
+    "yt_top_mass_ward_decomp_no_go_note_2026-04-30": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py"
     },
     "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17": {
       "assert_count": 1,
@@ -28032,6 +28140,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_yt_direct_lattice_correlator.py": {
+      "assert_count": 4,
+      "claims": [
+        "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_eft_bridge.py": {
       "assert_count": 0,
       "claims": [
@@ -28603,6 +28726,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_planck_double_criticality_selector.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_planck_double_criticality_selector_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 15
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_qfp_insensitivity.py": {
       "assert_count": 0,
       "claims": [
@@ -28661,6 +28799,41 @@
       },
       "decoration_candidate": true,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_top_mass_substrate_pin_no_go.py": {
+      "assert_count": 2,
+      "claims": [
+        "yt_top_mass_substrate_pin_claim_status_certificate_2026-04-30",
+        "yt_top_mass_substrate_pin_handoff_2026-04-30",
+        "yt_top_mass_substrate_pin_no_go_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_top_mass_ward_decomp_no_go.py": {
+      "assert_count": 2,
+      "claims": [
+        "yt_top_mass_ward_decomp_assumptions_and_imports_2026-04-30",
+        "yt_top_mass_ward_decomp_claim_status_certificate_2026-04-30",
+        "yt_top_mass_ward_decomp_handoff_2026-04-30",
+        "yt_top_mass_ward_decomp_no_go_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_yt_uv_to_ir_transport_obstruction.py": {
@@ -32248,12 +32421,12 @@
     "dominant_class_distribution": {
       "A": 7,
       "B": 118,
-      "C": 443,
-      "D": 183,
+      "C": 445,
+      "D": 185,
       "none": 404
     },
-    "runners_classified": 1155,
-    "runners_with_C": 534,
-    "runners_with_D": 284
+    "runners_classified": 1159,
+    "runners_with_C": 537,
+    "runners_with_D": 286
   }
 }

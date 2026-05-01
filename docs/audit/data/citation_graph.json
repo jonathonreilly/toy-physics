@@ -7853,6 +7853,22 @@
       "to": "structural_no_go_survey_note"
     },
     {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "yt_top_mass_substrate_pin_no_go_note_2026-04-30"
+    },
+    {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "yt_planck_double_criticality_selector_note_2026-04-30"
+    },
+    {
       "from": "yt_eft_bridge_theorem",
       "to": "yt_zero_import_authority_note"
     },
@@ -18365,7 +18381,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-30T20:25:02.638669+00:00",
+  "generated_at": "2026-05-01T00:52:05.885708+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39252,6 +39268,21 @@
       "runner_path": "scripts/frontier_yt_constructive_uv_bridge.py",
       "title": "Constructive UV-Localized Bridge Class for `y_t`"
     },
+    "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30": {
+      "claim_id": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained measurement route / calibrated readout unless",
+      "deps": [
+        "yt_top_mass_substrate_pin_no_go_note_2026-04-30",
+        "graph_first_su3_integration_note",
+        "minimal_axioms_2026-04-11",
+        "yt_planck_double_criticality_selector_note_2026-04-30"
+      ],
+      "note_hash": "d307c5edbc49ce8c38efe4d1091ca414f0ffe54d6d1f59f67d85b222d5dd7875",
+      "path": "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_yt_direct_lattice_correlator.py",
+      "title": "Direct Lattice-Correlator Top-Yukawa Measurement Gate"
+    },
     "yt_eft_bridge_theorem": {
       "claim_id": "yt_eft_bridge_theorem",
       "current_status": "open",
@@ -39810,6 +39841,16 @@
       "runner_path": "scripts/frontier_yt_p3_msbar_to_pole_k3.py",
       "title": "P3 MSbar-to-Pole K_3 Color-Tensor Retention Theorem (3-loop structural skeleton)"
     },
+    "yt_planck_double_criticality_selector_note_2026-04-30": {
+      "claim_id": "yt_planck_double_criticality_selector_note_2026-04-30",
+      "current_status": "support",
+      "current_status_raw": "conditional-support / open selector route",
+      "deps": [],
+      "note_hash": "3926667d90ba2624e4e36a361e6f0f0fd474651542d1306441d18d82488f5ae5",
+      "path": "docs/YT_PLANCK_DOUBLE_CRITICALITY_SELECTOR_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_yt_planck_double_criticality_selector.py",
+      "title": "YT Planck Double-Criticality Selector Note"
+    },
     "yt_qfp_insensitivity_support_note": {
       "claim_id": "yt_qfp_insensitivity_support_note",
       "current_status": "bounded",
@@ -39878,6 +39919,86 @@
       "path": "docs/YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_ssb_matching_gap.py",
       "title": "Yukawa SSB Matching-Gap Analysis Note"
+    },
+    "yt_top_mass_substrate_pin_assumptions_and_imports_2026-04-30": {
+      "claim_id": "yt_top_mass_substrate_pin_assumptions_and_imports_2026-04-30",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "f4e265f49ba95dbb4af83f47a3ea5adaa92c6f0cca3b5a79fc939e62aaae1491",
+      "path": "docs/YT_TOP_MASS_SUBSTRATE_PIN_ASSUMPTIONS_AND_IMPORTS_2026-04-30.md",
+      "runner_path": null,
+      "title": "Assumptions and Imports Ledger"
+    },
+    "yt_top_mass_substrate_pin_claim_status_certificate_2026-04-30": {
+      "claim_id": "yt_top_mass_substrate_pin_claim_status_certificate_2026-04-30",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "a11da746395b11eacad41f7b35158fc8ca8b2c5f0a53ef847fe2e08d781c4a07",
+      "path": "docs/YT_TOP_MASS_SUBSTRATE_PIN_CLAIM_STATUS_CERTIFICATE_2026-04-30.md",
+      "runner_path": "scripts/frontier_yt_top_mass_substrate_pin_no_go.py",
+      "title": "Claim Status Certificate"
+    },
+    "yt_top_mass_substrate_pin_handoff_2026-04-30": {
+      "claim_id": "yt_top_mass_substrate_pin_handoff_2026-04-30",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "c15f873b9b5519bc8d2aaed2b2d6619b0a237d769b35aa5757ee9f561f877c71",
+      "path": "docs/YT_TOP_MASS_SUBSTRATE_PIN_HANDOFF_2026-04-30.md",
+      "runner_path": "scripts/frontier_yt_top_mass_substrate_pin_no_go.py",
+      "title": "Handoff Note \u2014 Top-Sector Bare-Mass Substrate Pin No-Go"
+    },
+    "yt_top_mass_substrate_pin_no_go_note_2026-04-30": {
+      "claim_id": "yt_top_mass_substrate_pin_no_go_note_2026-04-30",
+      "current_status": "support",
+      "current_status_raw": "exact-negative-boundary / no-go \u2014 five-frame stuck fan-out, no",
+      "deps": [],
+      "note_hash": "8f56d2a0e1856997a621b58943a409f744e8ea4f0d93f5f387369ea5d923bf00",
+      "path": "docs/YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_yt_top_mass_substrate_pin_no_go.py",
+      "title": "Top-Sector Bare-Mass Substrate Pin: Five-Frame No-Go Theorem"
+    },
+    "yt_top_mass_ward_decomp_assumptions_and_imports_2026-04-30": {
+      "claim_id": "yt_top_mass_ward_decomp_assumptions_and_imports_2026-04-30",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "225ffa4e388eed743f3a3f2d6eef263a6de95f96dc3bbe19be2a403b36570db5",
+      "path": "docs/YT_TOP_MASS_WARD_DECOMP_ASSUMPTIONS_AND_IMPORTS_2026-04-30.md",
+      "runner_path": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py",
+      "title": "Assumptions and Imports Ledger \u2014 Ward-Decomposition Pass"
+    },
+    "yt_top_mass_ward_decomp_claim_status_certificate_2026-04-30": {
+      "claim_id": "yt_top_mass_ward_decomp_claim_status_certificate_2026-04-30",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "3b82d8b905ea144aa5b20f164a4cad644f98efec0f66e069eac082efdf0756c2",
+      "path": "docs/YT_TOP_MASS_WARD_DECOMP_CLAIM_STATUS_CERTIFICATE_2026-04-30.md",
+      "runner_path": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py",
+      "title": "Claim Status Certificate \u2014 Ward-Decomposition Pass"
+    },
+    "yt_top_mass_ward_decomp_handoff_2026-04-30": {
+      "claim_id": "yt_top_mass_ward_decomp_handoff_2026-04-30",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "3d153e118c871164d82250f6950e06073f0793ce2a3a221deca91cd9ced4c470",
+      "path": "docs/YT_TOP_MASS_WARD_DECOMP_HANDOFF_2026-04-30.md",
+      "runner_path": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py",
+      "title": "Handoff Note \u2014 Ward-Decomposition Pass (Second Pass, PR #230)"
+    },
+    "yt_top_mass_ward_decomp_no_go_note_2026-04-30": {
+      "claim_id": "yt_top_mass_ward_decomp_no_go_note_2026-04-30",
+      "current_status": "bounded",
+      "current_status_raw": "no-go / bounded-negative-boundary \u2014 Ward-decomposition second pass,",
+      "deps": [],
+      "note_hash": "7727089a40ee1d5d7f9f4d2da16d6686a6fc6ae0102d3769d526254792f63e00",
+      "path": "docs/YT_TOP_MASS_WARD_DECOMP_NO_GO_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py",
+      "title": "Top-Sector Ward-Decomposition Pass: Bounded No-Go for Audit-Clean Yukawa Pin"
     },
     "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17": {
       "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
@@ -41156,11 +41277,20 @@
     "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
     "yt_p2_taste_staircase_transport_note_2026-04-17",
     "yt_p2_v_matching_theorem_note_2026-04-17",
+    "yt_planck_double_criticality_selector_note_2026-04-30",
     "yt_qfp_insensitivity_support_note",
     "yt_retention_landing_readiness_2026-04-18",
     "yt_retention_master_manifest_2026-04-18",
     "yt_schur_stability_gap_note",
     "yt_ssb_matching_gap_analysis_note_2026-04-18",
+    "yt_top_mass_substrate_pin_assumptions_and_imports_2026-04-30",
+    "yt_top_mass_substrate_pin_claim_status_certificate_2026-04-30",
+    "yt_top_mass_substrate_pin_handoff_2026-04-30",
+    "yt_top_mass_substrate_pin_no_go_note_2026-04-30",
+    "yt_top_mass_ward_decomp_assumptions_and_imports_2026-04-30",
+    "yt_top_mass_ward_decomp_claim_status_certificate_2026-04-30",
+    "yt_top_mass_ward_decomp_handoff_2026-04-30",
+    "yt_top_mass_ward_decomp_no_go_note_2026-04-30",
     "yt_ward_identity_derivation_theorem",
     "yt_zero_import_chain_note",
     "yukawa_color_projection_theorem",
@@ -41168,18 +41298,18 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4591,
-    "leaf_count": 721,
-    "node_count": 1655,
-    "root_count": 1178,
-    "runners_with_path": 1220,
+    "edge_count": 4595,
+    "leaf_count": 729,
+    "node_count": 1665,
+    "root_count": 1187,
+    "runners_with_path": 1229,
     "status_counts": {
-      "bounded": 446,
+      "bounded": 447,
       "open": 48,
       "proposed_promoted": 1,
-      "proposed_retained": 372,
-      "support": 375,
-      "unknown": 413
+      "proposed_retained": 373,
+      "support": 377,
+      "unknown": 419
     }
   }
 }

@@ -1,0 +1,87 @@
+{
+  "comparators_not_proof_inputs": {
+    "mh_gev": 125.25,
+    "mt_pole_gev": 172.56,
+    "one_over_sqrt_6": 0.4082482904638631,
+    "yt_v": 0.9176
+  },
+  "fail_count": 0,
+  "inputs": {
+    "alpha_s_v": 0.1033,
+    "g1_v": 0.464,
+    "g2_v": 0.648,
+    "g3_v": 1.1393445854803115,
+    "m_pl_gev": 1.2209e+19,
+    "v_gev": 246.28281829012906
+  },
+  "pass_count": 19,
+  "results": [
+    {
+      "beta_lambda_pl": 1.757642358781206e-19,
+      "g1_pl": 0.6144603892329987,
+      "g1_v": 0.4639999999999998,
+      "g2_pl": 0.504865600296759,
+      "g2_v": 0.6479999999999998,
+      "g3_pl": 0.4892044570343275,
+      "g3_v": 1.1393445854803073,
+      "lambda_v": 0.12752519218342823,
+      "loop_order": 1,
+      "max_gauge_residual": 4.218847493575595e-15,
+      "mh_pred_gev": 124.3790129175531,
+      "mt_running_v_proxy_gev": 156.84021792680983,
+      "yt_pl": 0.3877569751072785,
+      "yt_v": 0.9006132253056819
+    },
+    {
+      "beta_lambda_pl": -1.0122806049341418e-16,
+      "g1_pl": 0.6165315984788852,
+      "g1_v": 0.46400000000000025,
+      "g2_pl": 0.5063704539526036,
+      "g2_v": 0.6480000000007129,
+      "g3_pl": 0.48710919595828756,
+      "g3_v": 1.1393445854796218,
+      "lambda_v": 0.13445269635375431,
+      "loop_order": 2,
+      "max_gauge_residual": 7.12874204111813e-13,
+      "mh_pred_gev": 127.71263651097011,
+      "mt_running_v_proxy_gev": 161.08041381765216,
+      "yt_pl": 0.38860737546729496,
+      "yt_v": 0.9249614221371952
+    },
+    {
+      "beta_lambda_pl": -5.320976271356789e-17,
+      "g1_pl": 0.616606405644556,
+      "g1_v": 0.4640000000000005,
+      "g2_pl": 0.5063564409818467,
+      "g2_v": 0.6480000000006826,
+      "g3_pl": 0.4871205008109257,
+      "g3_v": 1.139344585479654,
+      "lambda_v": 0.13156450945409578,
+      "loop_order": 3,
+      "max_gauge_residual": 6.825651155395462e-13,
+      "mh_pred_gev": 126.33348828773134,
+      "mt_running_v_proxy_gev": 160.3685841182678,
+      "yt_pl": 0.3887468134258789,
+      "yt_v": 0.9208739294653213
+    }
+  ],
+  "selector_premises": {
+    "beta_lambda_m_pl": 0.0,
+    "lambda_m_pl": 0.0
+  },
+  "status": {
+    "actual_current_surface_status": "conditional-support / open selector route",
+    "bare_retained_allowed": false,
+    "blocking_import": "derive beta_lambda(M_Pl)=0 from the Cl(3)/Z^3 substrate",
+    "proposal_allowed": false
+  },
+  "summary": {
+    "loop_1_to_3_yt_relative_spread": 0.02200160468371954,
+    "loop_2_to_3_yt_relative_spread": 0.004438710382698313,
+    "mh_3loop_gev": 126.33348828773134,
+    "mh_abs_deviation_from_comparator_gev": 1.0834882877313419,
+    "yt_over_g3_3loop": 0.8082488311274517,
+    "yt_v_3loop": 0.9208739294653213,
+    "yt_v_relative_deviation_from_comparator": 0.0035679266187024256
+  }
+}

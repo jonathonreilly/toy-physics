@@ -15,25 +15,25 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 38,
+      "max_transitive_descendants": 39,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
           "current_status": "proposed_retained",
-          "effective_status": "audited_renaming",
+          "effective_status": "audited_conditional",
           "note_path": "docs/MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
           "title": "Matter-Radiation Equality Structural Identity Theorem",
-          "transitive_descendants": 38
+          "transitive_descendants": 39
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "n_eff_from_three_generations_theorem_note_2026-04-24",
           "current_status": "proposed_retained",
           "effective_status": "audited_conditional",
           "note_path": "docs/N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md",
           "title": "N_eff From Retained Three Generations",
-          "transitive_descendants": 38
+          "transitive_descendants": 39
         }
       ],
       "requires_lemma_extraction": false
@@ -52,7 +52,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 37,
+      "max_transitive_descendants": 38,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -61,7 +61,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md",
           "title": "1+1D SO(1,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 37
+          "transitive_descendants": 38
         },
         {
           "audit_status": "unaudited",
@@ -70,7 +70,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 37
+          "transitive_descendants": 38
         }
       ],
       "requires_lemma_extraction": false
@@ -89,7 +89,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 36,
+      "max_transitive_descendants": 37,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -98,7 +98,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md",
           "title": "Discrete Evanescent-Barrier Amplitude Suppression on `Cl(3)/Z^3`",
-          "transitive_descendants": 36
+          "transitive_descendants": 37
         },
         {
           "audit_status": "unaudited",
@@ -107,7 +107,7 @@
           "effective_status": "bounded",
           "note_path": "docs/GW_ECHO_NULL_RESULT_NOTE.md",
           "title": "GW Echo Null Result Note",
-          "transitive_descendants": 36
+          "transitive_descendants": 37
         }
       ],
       "requires_lemma_extraction": false
@@ -126,7 +126,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 36,
+      "max_transitive_descendants": 37,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -135,16 +135,16 @@
           "effective_status": "audited_renaming",
           "note_path": "docs/QUARK_UP_AMPLITUDE_TENSOR_ENDPOINT_BRIDGE_NOTE_2026-04-19.md",
           "title": "Quark Up-Amplitude Tensor-Endpoint Bridge",
-          "transitive_descendants": 36
+          "transitive_descendants": 37
         },
         {
           "audit_status": "unaudited",
           "claim_id": "quark_up_amplitude_tensor_endpoint_resolution_note_2026-04-19",
           "current_status": "bounded",
-          "effective_status": "audited_numerical_match",
+          "effective_status": "audited_conditional",
           "note_path": "docs/QUARK_UP_AMPLITUDE_TENSOR_ENDPOINT_RESOLUTION_NOTE_2026-04-19.md",
           "title": "Quark Up-Amplitude Tensor-Endpoint Resolution",
-          "transitive_descendants": 36
+          "transitive_descendants": 37
         }
       ],
       "requires_lemma_extraction": false
@@ -163,7 +163,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 36,
+      "max_transitive_descendants": 37,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -172,7 +172,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md",
           "title": "Restricted Strong-Field Closure on the Exact `O_h` Shell Class",
-          "transitive_descendants": 36
+          "transitive_descendants": 37
         },
         {
           "audit_status": "unaudited",
@@ -181,7 +181,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md",
           "title": "Discrete Evanescent-Barrier Amplitude Suppression on `Cl(3)/Z^3`",
-          "transitive_descendants": 36
+          "transitive_descendants": 37
         }
       ],
       "requires_lemma_extraction": false
@@ -200,25 +200,25 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 36,
+      "max_transitive_descendants": 37,
       "nodes": [
         {
           "audit_status": "unaudited",
           "claim_id": "work_history.ckm.cabibbo_bound_note",
           "current_status": "bounded",
-          "effective_status": "audited_numerical_match",
+          "effective_status": "audited_renaming",
           "note_path": "docs/work_history/ckm/CABIBBO_BOUND_NOTE.md",
           "title": "Historical Cabibbo Bound Note",
-          "transitive_descendants": 36
+          "transitive_descendants": 37
         },
         {
           "audit_status": "unaudited",
           "claim_id": "work_history.ckm.jarlskog_phase_bound_note",
           "current_status": "bounded",
-          "effective_status": "audited_numerical_match",
+          "effective_status": "audited_renaming",
           "note_path": "docs/work_history/ckm/JARLSKOG_PHASE_BOUND_NOTE.md",
           "title": "Historical Jarlskog Phase Bound Note",
-          "transitive_descendants": 36
+          "transitive_descendants": 37
         }
       ],
       "requires_lemma_extraction": false
@@ -237,7 +237,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 35,
+      "max_transitive_descendants": 36,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -246,7 +246,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
-          "transitive_descendants": 35
+          "transitive_descendants": 36
         },
         {
           "audit_status": "unaudited",
@@ -255,7 +255,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_RETAINED_LANES_REVIEW_PACKET_2026-04-16.md",
           "title": "Neutrino Retained Lanes Support Packet (2026-04-16)",
-          "transitive_descendants": 35
+          "transitive_descendants": 36
         }
       ],
       "requires_lemma_extraction": false
@@ -274,7 +274,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -283,7 +283,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -292,7 +292,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
           "title": "Derivation / Validation Map",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -311,7 +311,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -320,7 +320,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -329,7 +329,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md",
           "title": "Full Claim Ledger",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -348,7 +348,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -357,7 +357,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -366,7 +366,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -385,7 +385,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -394,7 +394,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
           "title": "Derivation / Validation Map",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -403,7 +403,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
           "title": "Derivation Atlas",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -422,16 +422,16 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -440,7 +440,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -459,7 +459,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -468,16 +468,16 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
           "title": "Quantitative Summary Table",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -496,7 +496,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -505,7 +505,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
           "title": "Results Index",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -514,7 +514,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
           "title": "Science Map",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -533,7 +533,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -542,7 +542,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
           "title": "Science Map",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -551,7 +551,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/REPRODUCE.md",
           "title": "Reproduce Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -574,7 +574,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -583,7 +583,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -592,7 +592,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
           "title": "Derivation / Validation Map",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -601,7 +601,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
           "title": "Derivation Atlas",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -624,7 +624,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -633,7 +633,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -642,7 +642,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -651,7 +651,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
           "title": "External Reviewer Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -674,16 +674,16 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -692,7 +692,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -701,7 +701,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
           "title": "Derivation / Validation Map",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -724,16 +724,16 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -742,7 +742,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -751,7 +751,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md",
           "title": "Full Claim Ledger",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -774,16 +774,16 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -792,7 +792,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -801,7 +801,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -824,7 +824,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -833,16 +833,16 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
           "title": "Quantitative Summary Table",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -851,7 +851,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -874,7 +874,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -883,7 +883,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
           "title": "Results Index",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -892,7 +892,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
           "title": "Science Map",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -901,7 +901,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/REPRODUCE.md",
           "title": "Reproduce Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -928,7 +928,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -937,7 +937,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -946,7 +946,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -955,16 +955,16 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
           "title": "External Reviewer Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
           "claim_id": "publication.ci3_z3.inputs_and_qualifiers_note",
           "current_status": "unknown",
-          "effective_status": "audited_failed",
+          "effective_status": "audited_conditional",
           "note_path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
           "title": "Inputs And Qualifiers",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -991,7 +991,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1000,7 +1000,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1009,7 +1009,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1018,7 +1018,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
           "title": "External Reviewer Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1027,7 +1027,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md",
           "title": "What This Paper Does Not Claim",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -1054,7 +1054,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1063,7 +1063,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1072,7 +1072,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
           "title": "External Reviewer Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1081,7 +1081,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
           "title": "Results Index",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1090,7 +1090,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
           "title": "Science Map",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -1117,16 +1117,16 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1135,7 +1135,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1144,7 +1144,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
           "title": "Derivation / Validation Map",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1153,7 +1153,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
           "title": "Derivation Atlas",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -1180,16 +1180,16 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1198,7 +1198,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1207,7 +1207,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1216,7 +1216,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
           "title": "External Reviewer Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -1243,7 +1243,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1252,16 +1252,16 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
           "title": "Quantitative Summary Table",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1270,7 +1270,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1279,7 +1279,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
           "title": "Derivation / Validation Map",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -1306,7 +1306,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1315,16 +1315,16 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
           "title": "Quantitative Summary Table",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1333,7 +1333,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1342,7 +1342,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md",
           "title": "Full Claim Ledger",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -1373,7 +1373,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1382,7 +1382,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1391,7 +1391,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1400,7 +1400,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
           "title": "External Reviewer Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1409,7 +1409,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
           "title": "Results Index",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1418,7 +1418,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
           "title": "Science Map",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -1449,16 +1449,16 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1467,7 +1467,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1476,7 +1476,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1485,16 +1485,16 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
           "title": "External Reviewer Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
           "claim_id": "publication.ci3_z3.inputs_and_qualifiers_note",
           "current_status": "unknown",
-          "effective_status": "audited_failed",
+          "effective_status": "audited_conditional",
           "note_path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
           "title": "Inputs And Qualifiers",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -1525,16 +1525,16 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1543,7 +1543,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1552,7 +1552,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1561,7 +1561,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
           "title": "External Reviewer Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1570,7 +1570,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
           "title": "Results Index",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -1601,16 +1601,16 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1619,7 +1619,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1628,7 +1628,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1637,7 +1637,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
           "title": "External Reviewer Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1646,7 +1646,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md",
           "title": "What This Paper Does Not Claim",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -1677,7 +1677,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1686,16 +1686,16 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
           "title": "Quantitative Summary Table",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1704,7 +1704,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1713,7 +1713,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1722,7 +1722,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
           "title": "External Reviewer Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -1753,7 +1753,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1762,7 +1762,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/README.md",
           "title": "Cl(3) / Z^3 Publication Package",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1771,16 +1771,16 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
           "title": "Quantitative Summary Table",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1789,7 +1789,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1798,7 +1798,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -1833,16 +1833,16 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1851,7 +1851,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1860,7 +1860,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1869,7 +1869,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
           "title": "External Reviewer Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1878,7 +1878,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
           "title": "Results Index",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1887,7 +1887,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
           "title": "Science Map",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -1922,7 +1922,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1931,7 +1931,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/README.md",
           "title": "Cl(3) / Z^3 Publication Package",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1940,16 +1940,16 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
           "title": "Quantitative Summary Table",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1958,7 +1958,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1967,7 +1967,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -1976,7 +1976,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
           "title": "External Reviewer Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -2015,7 +2015,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2024,16 +2024,16 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
           "title": "Quantitative Summary Table",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -2042,7 +2042,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -2051,7 +2051,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -2060,7 +2060,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
           "title": "External Reviewer Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -2069,7 +2069,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
           "title": "Results Index",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -2078,7 +2078,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
           "title": "Science Map",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -2121,7 +2121,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 31,
+      "max_transitive_descendants": 32,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2130,7 +2130,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/README.md",
           "title": "Cl(3) / Z^3 Publication Package",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -2139,16 +2139,16 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
           "title": "Quantitative Summary Table",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "publication.ci3_z3.publication_matrix",
           "current_status": "unknown",
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
           "title": "Publication Matrix",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -2157,7 +2157,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
           "title": "Manuscript Claims Surface",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -2166,7 +2166,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
           "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -2175,7 +2175,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
           "title": "External Reviewer Guide",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -2184,7 +2184,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
           "title": "Results Index",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         },
         {
           "audit_status": "unaudited",
@@ -2193,7 +2193,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
           "title": "Science Map",
-          "transitive_descendants": 31
+          "transitive_descendants": 32
         }
       ],
       "requires_lemma_extraction": false
@@ -2212,7 +2212,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 15,
+      "max_transitive_descendants": 16,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2221,16 +2221,16 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/IRREGULAR_SIGN_CORE_PACKET_GATE_NOTE.md",
           "title": "Irregular Sign Core-Packet Gate Note",
-          "transitive_descendants": 15
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
           "claim_id": "irregular_directional_observable_note_2026-04-11",
-          "current_status": "unknown",
-          "effective_status": "unknown",
+          "current_status": "support",
+          "effective_status": "support",
           "note_path": "docs/IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md",
           "title": "Irregular-Graph Directional Observable Probe",
-          "transitive_descendants": 15
+          "transitive_descendants": 16
         }
       ],
       "requires_lemma_extraction": false
@@ -2255,7 +2255,7 @@
           "audit_status": "unaudited",
           "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
           "current_status": "proposed_retained",
-          "effective_status": "proposed_retained",
+          "effective_status": "audited_conditional",
           "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
           "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
           "transitive_descendants": 14
@@ -2264,7 +2264,7 @@
           "audit_status": "unaudited",
           "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
           "current_status": "proposed_retained",
-          "effective_status": "proposed_retained",
+          "effective_status": "audited_conditional",
           "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
           "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
           "transitive_descendants": 14
@@ -2286,7 +2286,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 12,
+      "max_transitive_descendants": 13,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2295,7 +2295,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md",
           "title": "AI Accountability And Disclosure Note",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2304,7 +2304,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/AI_METHODOLOGY_NOTE_2026-04-25.md",
           "title": "AI Methodology Note \u2014 Cl(3)/Z^3 Framework",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         }
       ],
       "requires_lemma_extraction": false
@@ -2323,7 +2323,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 12,
+      "max_transitive_descendants": 13,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2332,7 +2332,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/README.md",
           "title": "AI Methodology Lane",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2341,7 +2341,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/METHODOLOGY_PAPER_SOURCE_PACKET_2026-04-25.md",
           "title": "AI Theoretical Physics Methodology Paper Source Packet",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         }
       ],
       "requires_lemma_extraction": false
@@ -2360,7 +2360,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 12,
+      "max_transitive_descendants": 13,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2369,7 +2369,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/AI_METHODOLOGY_NOTE_2026-04-25.md",
           "title": "AI Methodology Note \u2014 Cl(3)/Z^3 Framework",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2378,7 +2378,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/README.md",
           "title": "AI Methodology Lane",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         }
       ],
       "requires_lemma_extraction": false
@@ -2397,7 +2397,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 12,
+      "max_transitive_descendants": 13,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2406,16 +2406,16 @@
           "effective_status": "audited_failed",
           "note_path": "docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md",
           "title": "Active Working Lanes",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
           "claim_id": "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26",
           "current_status": "open",
-          "effective_status": "audited_conditional",
+          "effective_status": "audited_failed",
           "note_path": "docs/lanes/open_science/06_CHARGED_LEPTON_MASS_RETENTION_OPEN_LANE_2026-04-26.md",
           "title": "Lane 6 \u2014 Charged-Lepton Mass Retention (Full Closure)",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         }
       ],
       "requires_lemma_extraction": false
@@ -2438,7 +2438,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 12,
+      "max_transitive_descendants": 13,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2447,7 +2447,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md",
           "title": "AI Accountability And Disclosure Note",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2456,7 +2456,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/AI_METHODOLOGY_NOTE_2026-04-25.md",
           "title": "AI Methodology Note \u2014 Cl(3)/Z^3 Framework",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2465,7 +2465,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/README.md",
           "title": "AI Methodology Lane",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         }
       ],
       "requires_lemma_extraction": false
@@ -2488,7 +2488,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 12,
+      "max_transitive_descendants": 13,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2497,7 +2497,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/README.md",
           "title": "AI Methodology Lane",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2506,7 +2506,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/CANONICAL_HARNESS_INDEX.md",
           "title": "Canonical Harness Index",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2515,7 +2515,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md",
           "title": "Active Working Lanes",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         }
       ],
       "requires_lemma_extraction": false
@@ -2538,7 +2538,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 12,
+      "max_transitive_descendants": 13,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2547,7 +2547,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/AI_METHODOLOGY_NOTE_2026-04-25.md",
           "title": "AI Methodology Note \u2014 Cl(3)/Z^3 Framework",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2556,7 +2556,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/README.md",
           "title": "AI Methodology Lane",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": null,
@@ -2588,7 +2588,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 12,
+      "max_transitive_descendants": 13,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2597,7 +2597,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/AI_METHODOLOGY_NOTE_2026-04-25.md",
           "title": "AI Methodology Note \u2014 Cl(3)/Z^3 Framework",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2606,7 +2606,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/README.md",
           "title": "AI Methodology Lane",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2615,7 +2615,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/METHODOLOGY_PAPER_SOURCE_PACKET_2026-04-25.md",
           "title": "AI Theoretical Physics Methodology Paper Source Packet",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         }
       ],
       "requires_lemma_extraction": false
@@ -2642,7 +2642,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 12,
+      "max_transitive_descendants": 13,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2651,7 +2651,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md",
           "title": "AI Accountability And Disclosure Note",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2660,7 +2660,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/AI_METHODOLOGY_NOTE_2026-04-25.md",
           "title": "AI Methodology Note \u2014 Cl(3)/Z^3 Framework",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2669,7 +2669,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/README.md",
           "title": "AI Methodology Lane",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": null,
@@ -2705,7 +2705,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 12,
+      "max_transitive_descendants": 13,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2714,7 +2714,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md",
           "title": "AI Accountability And Disclosure Note",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2723,7 +2723,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/AI_METHODOLOGY_NOTE_2026-04-25.md",
           "title": "AI Methodology Note \u2014 Cl(3)/Z^3 Framework",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2732,7 +2732,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/README.md",
           "title": "AI Methodology Lane",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         },
         {
           "audit_status": "unaudited",
@@ -2741,7 +2741,7 @@
           "effective_status": "audited_failed",
           "note_path": "docs/ai_methodology/METHODOLOGY_PAPER_SOURCE_PACKET_2026-04-25.md",
           "title": "AI Theoretical Physics Methodology Paper Source Packet",
-          "transitive_descendants": 12
+          "transitive_descendants": 13
         }
       ],
       "requires_lemma_extraction": false
@@ -2803,7 +2803,7 @@
           "audit_status": "unaudited",
           "claim_id": "wave_direct_dm_seed_band_diagnosis_note",
           "current_status": "proposed_retained",
-          "effective_status": "unknown",
+          "effective_status": "audited_conditional",
           "note_path": "docs/WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md",
           "title": "Wave Direct-dM Seed-Band Diagnosis",
           "transitive_descendants": 9
@@ -2812,7 +2812,7 @@
           "audit_status": "unaudited",
           "claim_id": "wave_direct_dm_portability_batch_note",
           "current_status": "proposed_retained",
-          "effective_status": "unknown",
+          "effective_status": "audited_conditional",
           "note_path": "docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md",
           "title": "Wave Direct-dM Portability Batch",
           "transitive_descendants": 9
@@ -2840,7 +2840,7 @@
           "audit_status": "unaudited",
           "claim_id": "work_history.repo.lane_status_board",
           "current_status": "unknown",
-          "effective_status": "audited_failed",
+          "effective_status": "audited_conditional",
           "note_path": "docs/work_history/repo/LANE_STATUS_BOARD.md",
           "title": "Historical Lane Status Board",
           "transitive_descendants": 8
@@ -2877,7 +2877,7 @@
           "audit_status": "unaudited",
           "claim_id": "work_history.repo.lane_status_board",
           "current_status": "unknown",
-          "effective_status": "audited_failed",
+          "effective_status": "audited_conditional",
           "note_path": "docs/work_history/repo/LANE_STATUS_BOARD.md",
           "title": "Historical Lane Status Board",
           "transitive_descendants": 8
@@ -2955,7 +2955,7 @@
           "audit_status": "unaudited",
           "claim_id": "work_history.repo.lane_status_board",
           "current_status": "unknown",
-          "effective_status": "audited_failed",
+          "effective_status": "audited_conditional",
           "note_path": "docs/work_history/repo/LANE_STATUS_BOARD.md",
           "title": "Historical Lane Status Board",
           "transitive_descendants": 8
@@ -3000,8 +3000,8 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
-          "current_status": "unknown",
-          "effective_status": "unknown",
+          "current_status": "support",
+          "effective_status": "audited_conditional",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
           "transitive_descendants": 3
@@ -3009,8 +3009,8 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
-          "current_status": "unknown",
-          "effective_status": "unknown",
+          "current_status": "bounded",
+          "effective_status": "support",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Microscopic Positive-Probe Representation Theorem",
           "transitive_descendants": 3
@@ -3037,8 +3037,8 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
-          "current_status": "unknown",
-          "effective_status": "unknown",
+          "current_status": "bounded",
+          "effective_status": "support",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Microscopic Positive-Probe Representation Theorem",
           "transitive_descendants": 3
@@ -3046,8 +3046,8 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_observable_grammar_exhaustion_obstruction_note_2026-04-17",
-          "current_status": "unknown",
-          "effective_status": "unknown",
+          "current_status": "support",
+          "effective_status": "support",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_OBSERVABLE_GRAMMAR_EXHAUSTION_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Observable-Grammar Exhaustion Obstruction",
           "transitive_descendants": 3
@@ -3075,7 +3075,7 @@
           "audit_status": "unaudited",
           "claim_id": "kubo_continuum_limit_families_note",
           "current_status": "proposed_retained",
-          "effective_status": "bounded",
+          "effective_status": "audited_numerical_match",
           "note_path": "docs/KUBO_CONTINUUM_LIMIT_FAMILIES_NOTE.md",
           "title": "Kubo Continuum Limit \u2014 Family Portability (Partial, Later Narrowed)",
           "transitive_descendants": 1
@@ -3112,7 +3112,7 @@
           "audit_status": "unaudited",
           "claim_id": "publication.ci3_z3.figure_captions",
           "current_status": "unknown",
-          "effective_status": "audited_conditional",
+          "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/FIGURE_CAPTIONS.md",
           "title": "Figure Captions",
           "transitive_descendants": 1
@@ -3121,7 +3121,7 @@
           "audit_status": "unaudited",
           "claim_id": "publication.ci3_z3.figure_plan",
           "current_status": "unknown",
-          "effective_status": "audited_conditional",
+          "effective_status": "audited_failed",
           "note_path": "docs/publication/ci3_z3/FIGURE_PLAN.md",
           "title": "Figure Plan",
           "transitive_descendants": 1
@@ -3130,7 +3130,7 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-04-30T01:02:30.467260+00:00",
+  "generated_at": "2026-05-01T00:51:21.776470+00:00",
   "length_counts": {
     "2": 30,
     "3": 12,
@@ -3145,5 +3145,5 @@
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-04-30T01:02:28.055171+00:00"
+  "source_graph_generated_at": "2026-04-30T20:25:02.638669+00:00"
 }

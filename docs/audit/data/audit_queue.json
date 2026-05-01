@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 286,
+    "leaf": 296,
     "medium": 289
   },
-  "generated_at": "2026-04-30T20:25:05.636112+00:00",
+  "generated_at": "2026-05-01T00:52:13.493487+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -803,11 +803,11 @@
         "yt_explicit_systematic_budget_note"
       ],
       "direct_in_degree": 7,
-      "load_bearing_score": 11.187,
+      "load_bearing_score": 11.193,
       "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
       "ready": false,
       "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
-      "transitive_descendants": 205
+      "transitive_descendants": 206
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -1776,11 +1776,11 @@
         "rconn_derived_note"
       ],
       "direct_in_degree": 1,
-      "load_bearing_score": 7.345,
+      "load_bearing_score": 7.358,
       "note_path": "docs/EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md",
       "ready": false,
       "runner_path": "scripts/frontier_color_projection_mc.py",
-      "transitive_descendants": 114
+      "transitive_descendants": 115
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -1823,11 +1823,11 @@
         "yt_explicit_systematic_budget_note"
       ],
       "direct_in_degree": 1,
-      "load_bearing_score": 7.281,
+      "load_bearing_score": 7.294,
       "note_path": "docs/YT_FLAGSHIP_BOUNDARY_NOTE.md",
       "ready": false,
       "runner_path": null,
-      "transitive_descendants": 109
+      "transitive_descendants": 110
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -1851,6 +1851,26 @@
       "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_PARITY_SPLIT_THEOREM_NOTE_2026-04-17.md",
       "ready": false,
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_z3_parity_split_theorem.py",
+      "transitive_descendants": 108
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "g_bare_dynamical_fixation_obstruction_note_2026-04-18",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "g_bare_derivation_note",
+        "plaquette_self_consistency_note"
+      ],
+      "direct_in_degree": 4,
+      "load_bearing_score": 8.768,
+      "note_path": "docs/G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_g_bare_critical_feature_scan.py",
       "transitive_descendants": 108
     },
     {
@@ -1899,26 +1919,6 @@
       "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_INFO_GEOMETRIC_SELECTION_OBSTRUCTION_NOTE_2026-04-17.md",
       "ready": false,
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_info_geometric_selection_obstruction.py",
-      "transitive_descendants": 107
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "g_bare_dynamical_fixation_obstruction_note_2026-04-18",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "g_bare_derivation_note",
-        "plaquette_self_consistency_note"
-      ],
-      "direct_in_degree": 4,
-      "load_bearing_score": 8.755,
-      "note_path": "docs/G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_g_bare_critical_feature_scan.py",
       "transitive_descendants": 107
     },
     {
@@ -13548,6 +13548,40 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_planck_double_criticality_selector_note_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 1,
+      "load_bearing_score": 1.5,
+      "note_path": "docs/YT_PLANCK_DOUBLE_CRITICALITY_SELECTOR_NOTE_2026-04-30.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_planck_double_criticality_selector.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_top_mass_substrate_pin_no_go_note_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 1,
+      "load_bearing_score": 1.5,
+      "note_path": "docs/YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_top_mass_substrate_pin_no_go.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "legacy_exploratory_drivers_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -16627,6 +16661,125 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_top_mass_substrate_pin_assumptions_and_imports_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_TOP_MASS_SUBSTRATE_PIN_ASSUMPTIONS_AND_IMPORTS_2026-04-30.md",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_top_mass_substrate_pin_claim_status_certificate_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_TOP_MASS_SUBSTRATE_PIN_CLAIM_STATUS_CERTIFICATE_2026-04-30.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_top_mass_substrate_pin_no_go.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_top_mass_substrate_pin_handoff_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_TOP_MASS_SUBSTRATE_PIN_HANDOFF_2026-04-30.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_top_mass_substrate_pin_no_go.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_top_mass_ward_decomp_assumptions_and_imports_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_TOP_MASS_WARD_DECOMP_ASSUMPTIONS_AND_IMPORTS_2026-04-30.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_top_mass_ward_decomp_claim_status_certificate_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_TOP_MASS_WARD_DECOMP_CLAIM_STATUS_CERTIFICATE_2026-04-30.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_top_mass_ward_decomp_handoff_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_TOP_MASS_WARD_DECOMP_HANDOFF_2026-04-30.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_top_mass_ward_decomp_no_go_note_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_TOP_MASS_WARD_DECOMP_NO_GO_NOTE_2026-04-30.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "mirror_mutual_information_chokepoint_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -18156,6 +18309,28 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "yt_top_mass_substrate_pin_no_go_note_2026-04-30",
+        "graph_first_su3_integration_note",
+        "minimal_axioms_2026-04-11",
+        "yt_planck_double_criticality_selector_note_2026-04-30"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_yt_direct_lattice_correlator.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_p1_bz_quadrature_2_loop_full_staggered_pt_note_2026-04-18",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -18176,6 +18351,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 431,
-  "total_pending": 812
+  "ready_count": 440,
+  "total_pending": 822
 }

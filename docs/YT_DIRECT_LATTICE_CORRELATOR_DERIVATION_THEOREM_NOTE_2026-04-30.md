@@ -305,6 +305,48 @@ fixed by a non-MC substrate pin rather than by matching the observed top mass.
 The paired substrate-pin no-go note records that no such pin was found in the
 Ward-forbidden route classes explored here.
 
+## Non-MC Route Reset: Planck Double-Criticality Selector
+
+Because the production-correlator route remains a long compute campaign and
+does not by itself pin the heavy top mass parameter, this branch also records
+a separate physics-loop reset:
+[YT_PLANCK_DOUBLE_CRITICALITY_SELECTOR_NOTE_2026-04-30.md](YT_PLANCK_DOUBLE_CRITICALITY_SELECTOR_NOTE_2026-04-30.md).
+
+That route does not try to derive the top mass from the top sector.  It uses
+the Higgs-sector Planck boundary-value problem
+
+```text
+lambda(M_Pl) = 0
+beta_lambda(M_Pl) = 0
+```
+
+to select `y_t(M_Pl)`, then runs the full SM RGE system down to `v`.  The
+3-loop readout is:
+
+```text
+y_t(v) = 0.9208739295
+m_H    = 126.333488 GeV
+```
+
+This is numerically promising, but it is not a closed derivation.  The new
+load-bearing premise is exactly `beta_lambda(M_Pl)=0`; the note does not prove
+that the `Cl(3)/Z^3` substrate forces beta-function stationarity.  It also
+does not use the top mass, the `H_unit` matrix element, the old Ward theorem,
+or `y_t/g_s=1/sqrt(6)` as an input.  The accepted `y_t`, Higgs mass, top mass,
+and `1/sqrt(6)` values are comparators only.
+
+The practical conclusion is that there is now a smaller non-MC hard problem:
+
+```text
+derive or rule out beta_lambda(M_Pl)=0 from the substrate boundary surface.
+```
+
+If that premise is derived, the criticality selector becomes a plausible
+non-MC replacement candidate for a month-scale production lattice campaign.  If
+it is not derived, it remains conditional support and the direct-correlator
+lane remains a calibrated readout until production data and an independent
+mass-parameter pin are supplied.
+
 A future passing production certificate must supply this budget:
 
 | Component | Required content |
