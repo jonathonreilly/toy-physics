@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:58:23.638314+00:00
+**Generated:** 2026-05-01T03:01:29.097612+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 255 |
+| bounded | 254 |
 | support | 211 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 12 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 785 |
+| ~~audited_conditional~~ | 786 |
 | ~~audited_failed~~ | 144 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 230 |
-| `audited_conditional` | 512 |
+| `audited_conditional` | 513 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 9 |
 | `audited_renaming` | 14 |
-| `unaudited` | 731 |
+| `unaudited` | 730 |
 
 | criticality | count |
 |---|---:|
@@ -703,6 +703,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `linear_response_second_order_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_true_kubo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `local_zsym_predictor_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `mass_spectrum_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -9398,6 +9399,25 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The live sweep shows no smaller source-response family beats the broad topN=196 control under the stated support/capture floors on the single h=0.25 ordered-lattice setup.  _(class `C`)_
 - **chain closes:** False — The bounded numerical result closes, but the audit row is a parser false positive: the source Status line declares a bounded sweep on a proposed_retained family, not a proposed_retained claim.
 - **rationale:** Issue: The audit queue treats this note as proposed_retained because the Status line says it is a bounded sweep on the proposed_retained 3D h=0.25 family, but the note's actual claim is explicitly bounded and negative. Why this blocks: the audit lane cannot ratify a retained claim that the source note does not make; doing so would promote a single-family source-response control sweep into retained physics. Repair target: rewrite the Status line so the parser records this as bounded/proposed_bounded, or author a separate proposed_retained theorem with a load-bearing derivation beyond this single h=0.25 sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces the bounded result that topN=169 remains admissible but does not beat broad topN=196, and that localized persistent-inertial response remains open; it is not safe to present this note as a retained source-response theorem.
+- **auditor confidence:** high
+
+### `mass_spectrum_derived_note`
+
+- **Note:** [`MASS_SPECTRUM_DERIVED_NOTE.md`](../../docs/MASS_SPECTRUM_DERIVED_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-mass_spectrum_derived_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note bundles the five phases of the mass-spectrum attack into a single reviewer entry point and presents the mass-spectrum lane as mixed bounded/conditional closure across quarks, charged leptons, neutrinos, and cosmology.  _(class `B`)_
+- **chain closes:** False — The bundle does not close independently: it has no registered primary runner, declares no ledger dependencies, and its phase authorities include conditional, unaudited, and failed audit states.
+- **rationale:** Issue: the note is an index/bundle over five phase lanes, has runner_path=None, and declares deps=[] while its phase authorities are mixed: down-type is audited_conditional, up-type/neutrino/cosmology phase notes are unaudited with effective conditional status, and the charged-lepton review is effective audited_failed; the quark review packet is conditional and references this bundle, creating an index cycle. Why this blocks: the bundle adds no independent derivation or primary runner capable of auditing the mass spectrum as one theorem, and its headline derived status inherits all upstream conditional/failed phase blockers. Repair target: declare the phase notes as dependencies, register an index runner only if it checks deterministic phase outputs and statuses, break the quark packet <-> mass-spectrum bundle cycle, and keep this row as a review index until phase rows independently close. Claim boundary until fixed: reviewer-entry summary of the current mixed-status mass-spectrum attack; not an independently audited mass-spectrum derivation or ToE parameter-count theorem.
+- **open / conditional deps cited:**
+  - `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`
+  - `UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md`
+  - `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`
+  - `NEUTRINO_MASS_DERIVED_NOTE.md`
+  - `COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`
+  - `QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `matter_inertial_closure_note`
