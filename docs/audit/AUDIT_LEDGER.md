@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:05:45.374196+00:00
+**Generated:** 2026-05-01T07:06:35.112332+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 270 |
+| `audited_clean` | 271 |
 | `audited_conditional` | 583 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 582 |
+| `unaudited` | 581 |
 
 | criticality | count |
 |---|---:|
@@ -306,6 +306,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mesoscopic_surrogate_localization_frontier_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_localization_sweep_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_multistage_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `mesoscopic_surrogate_source_2d_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -10537,6 +10538,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The broad topN=196 surrogate survives a second sourced-response stage on the retained 3D ordered-lattice family with high shape similarity and same-order centroid response, while remaining only a mesoscopic control.  _(class `C`)_
 - **chain closes:** True — The registered multistage runner recomputes the two-stage capture, centroid-shift, best-shift, score, and width-ratio values, and the current output matches the note. The note's limitations exclude sharp localization and persistent-mass closure.
 - **rationale:** The runner checks the load-bearing two-stage sourced-response claim directly and reproduces the frozen stage-1/stage-2 capture, delta ratio, best-shift score, and width ratio. The claim remains bounded to the broad mesoscopic surrogate and does not assert a localized inertial object or persistent-mass theorem. Residual risk is the open localization/persistence step, which the note correctly leaves for future work.
+- **auditor confidence:** high
+
+### `mesoscopic_surrogate_source_2d_note`
+
+- **Note:** [`MESOSCOPIC_SURROGATE_SOURCE_2D_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_SOURCE_2D_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** In the retained 2D ordered-lattice family, the broad surrogate remains a meaningful mesoscopic source control but does not behave like a true point source because distributed support materially reduces response amplitude.  _(class `C`)_
+- **chain closes:** True — The registered 2D source runner recomputes the topN capture, centroid/spread, and distributed-vs-point response ratios, and the current output matches the note. The note is explicitly a bounded companion check and not a persistent-mass theorem.
+- **rationale:** The runner directly verifies the source-support/load-bearing comparison: topN=9 gives ratio about 0.655, topN=25 about 0.372, and topN=49+ about 0.117 while preserving downstream shape. The note's conclusion is appropriately bounded to a mesoscopic source-control interpretation and does not claim mass-like point-source behavior. Residual risk is only the separate 3D generalization, which the note marks as future work.
 - **auditor confidence:** high
 
 ### `minimal_absorbing_horizon_probe_note`
