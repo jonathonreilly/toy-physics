@@ -140,3 +140,17 @@ Adds a scalar pole determinant gate:
 - still no retained closure: interacting `K(x)`, finite-volume/IR control, or
   production pole-derivative data remain open.
 ```
+
+Latest scalar ladder eigen-derivative checkpoint text for PR #230:
+
+```text
+Adds a scalar ladder eigen-derivative gate:
+- matrix Bethe-Salpeter pole condition `lambda_max=1` is only a crossing
+  witness;
+- holding the crossing fixed while varying `dK/dp^2` moves
+  `d lambda_max/dp^2`, the LSZ residue proxy, and the FH/LSZ readout factor;
+- validator passes `PASS=7 FAIL=0`; campaign status now consumes 42 route
+  certificates and reports `PASS=38 FAIL=0`;
+- still no retained closure: total-momentum kernel derivative or production
+  pole-derivative data remain open.
+```

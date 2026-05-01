@@ -166,6 +166,9 @@ Completed in block 1:
 - `scripts/frontier_yt_scalar_pole_determinant_gate.py`
 - `outputs/yt_scalar_pole_determinant_gate_2026-05-01.json`
 - `docs/YT_SCALAR_POLE_DETERMINANT_GATE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_ladder_eigen_derivative_gate.py`
+- `outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json`
+- `docs/YT_SCALAR_LADDER_EIGEN_DERIVATIVE_GATE_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -205,7 +208,8 @@ Next artifact:
   exact source-rescaling-safe formula, so the remaining analytic target is the
   same-source scalar pole and derivative; the determinant gate identifies that
   derivative as an interacting-kernel derivative `K'(x_pole)` or production
-  pole measurement
+  pole measurement; the ladder eigen-derivative gate gives the matrix version:
+  `lambda_max=1` is not enough without `d lambda_max/dp^2`
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

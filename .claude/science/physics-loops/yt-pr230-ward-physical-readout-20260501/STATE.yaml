@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-37-scalar-pole-determinant-gate
-blocks_completed: 51
-active_route: "same-source scalar pole determinant / denominator gate"
-active_hard_residual: "retained closure now needs the interacting scalar-channel K(x), K'(pole), finite-volume/IR control, or production pole-derivative data"
+current_phase: campaign-rerun-block-38-scalar-ladder-eigen-derivative-gate
+blocks_completed: 52
+active_route: "scalar Bethe-Salpeter eigenvalue derivative gate"
+active_hard_residual: "a finite lambda_max=1 crossing is not enough; retained closure needs d lambda/dp^2 from the momentum-dependent scalar ladder kernel or production pole-derivative data"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -183,6 +183,9 @@ files_touched:
   - "scripts/frontier_yt_scalar_pole_determinant_gate.py"
   - "docs/YT_SCALAR_POLE_DETERMINANT_GATE_NOTE_2026-05-01.md"
   - "outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"
+  - "scripts/frontier_yt_scalar_ladder_eigen_derivative_gate.py"
+  - "docs/YT_SCALAR_LADDER_EIGEN_DERIVATIVE_GATE_NOTE_2026-05-01.md"
+  - "outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -255,6 +258,7 @@ claim_state_movement:
   - "projected the joint FH/LSZ production resource budget: a modest four-momentum, sixteen-noise scalar-LSZ plan is about 15.8889x the existing three-mass direct projection, roughly 3630 single-worker hours before pole-fit tuning"
   - "proved the same-source Feynman-Hellmann/scalar-LSZ readout formula is source-rescaling invariant: y_proxy=(dE_top/ds)*sqrt(dGamma_ss/dp^2 at the pole)=dE_top/ds/sqrt(Res[C_ss]); this identifies how kappa_s is measured but still needs production pole data"
   - "isolated the scalar pole determinant gate: D(x)=1-K(x)Pi(x)=0 gives the pole, but D'(pole) depends on K'(pole), so pole location alone does not fix the LSZ residue or FH/LSZ readout"
+  - "isolated the matrix Bethe-Salpeter derivative gate: lambda_max(pole)=1 is only a pole-location test; d lambda_max/dp^2 controls the LSZ residue and varies with the momentum-dependent ladder kernel"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null

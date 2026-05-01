@@ -583,6 +583,19 @@ Therefore pole naming or contact tuning cannot close PR #230 without an
 interacting scalar-channel kernel theorem or production pole-derivative
 measurement.
 
+Scalar ladder eigenvalue crossing is not yet an LSZ residue theorem:
+
+```text
+python3 scripts/frontier_yt_scalar_ladder_eigen_derivative_gate.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+The matrix Bethe-Salpeter pole condition `lambda_max=1` fixes only a crossing.
+Holding that crossing fixed while varying the momentum derivative of the ladder
+kernel changes `d lambda_max/dp^2`, the residue proxy, and the FH/LSZ readout
+factor.  The route still needs a momentum-dependent kernel theorem or
+production pole-derivative data.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

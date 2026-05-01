@@ -350,4 +350,10 @@ python3 scripts/frontier_yt_scalar_pole_determinant_gate.py
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=37 FAIL=0
+
+python3 scripts/frontier_yt_scalar_ladder_eigen_derivative_gate.py
+# SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=38 FAIL=0
 ```

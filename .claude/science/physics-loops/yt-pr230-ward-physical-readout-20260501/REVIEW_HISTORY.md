@@ -922,3 +922,28 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The determinant gate names the remaining scalar-pole theorem exactly.  It does
 not close the route because the interacting scalar-channel kernel `K(x)`, its
 derivative at the pole, or production pole-derivative data are still absent.
+
+## Review-Loop Backpressure — Scalar Ladder Eigen-Derivative Gate
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_scalar_ladder_eigen_derivative_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_scalar_ladder_eigen_derivative_gate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The eigen-derivative gate is exact support.  It shows that even a finite
+`lambda_max=1` scalar ladder witness cannot fix the LSZ residue without the
+momentum derivative of the scalar-channel kernel.

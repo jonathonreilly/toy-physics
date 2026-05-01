@@ -1,0 +1,70 @@
+{
+  "M0_at_pole": [
+    [
+      0.86,
+      0.28
+    ],
+    [
+      0.28,
+      0.44
+    ]
+  ],
+  "actual_current_surface_status": "exact-support / scalar ladder eigen-derivative gate",
+  "determinant_gate_certificate": "outputs/yt_scalar_pole_determinant_gate_2026-05-01.json",
+  "fail_count": 0,
+  "pass_count": 7,
+  "pole_eigenvector": [
+    0.8944271909999159,
+    0.4472135954999579
+  ],
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The eigen-derivative gate is exact support, but the momentum-dependent kernel derivative remains open.",
+  "required_next_theorem": [
+    "derive the total-momentum dependence of the scalar Bethe-Salpeter kernel K(k,k';p)",
+    "fix the finite-volume, gauge-zero-mode, and IR prescription before differentiating",
+    "compute d lambda_max / d p^2 at the scalar pole",
+    "combine that derivative with the same-source FH/LSZ invariant readout"
+  ],
+  "rows": [
+    {
+      "FH_LSZ_readout_factor_proxy": 0.1414213562373095,
+      "LSZ_residue_proxy": 50.0,
+      "case": "flat",
+      "denominator_derivative_proxy": -0.02,
+      "lambda_at_pole": 1.0,
+      "lambda_prime_at_pole": 0.02
+    },
+    {
+      "FH_LSZ_readout_factor_proxy": 0.2683281572999748,
+      "LSZ_residue_proxy": 13.888888888888888,
+      "case": "mild_positive",
+      "denominator_derivative_proxy": -0.07200000000000001,
+      "lambda_at_pole": 1.0,
+      "lambda_prime_at_pole": 0.07200000000000001
+    },
+    {
+      "FH_LSZ_readout_factor_proxy": 0.469041575982343,
+      "LSZ_residue_proxy": 4.545454545454546,
+      "case": "steep_positive",
+      "denominator_derivative_proxy": -0.22,
+      "lambda_at_pole": 1.0,
+      "lambda_prime_at_pole": 0.22
+    },
+    {
+      "FH_LSZ_readout_factor_proxy": 0.2,
+      "LSZ_residue_proxy": 25.0,
+      "case": "negative",
+      "denominator_derivative_proxy": 0.04,
+      "lambda_at_pole": 1.0,
+      "lambda_prime_at_pole": -0.04
+    }
+  ],
+  "strict_non_claims": [
+    "not production evidence",
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit or yt_ward_identity",
+    "does not use observed top mass or observed y_t"
+  ],
+  "verdict": "A scalar Bethe-Salpeter pole criterion lambda_max=1 is not enough to fix the LSZ residue.  Holding the candidate pole eigenvalue fixed, different momentum derivatives of the ladder kernel move d lambda/dp^2, the residue proxy, and the FH/LSZ readout factor.  Therefore PR #230 still needs a retained momentum-dependent scalar-channel kernel theorem or production finite-difference eigenvalue/pole-derivative data."
+}

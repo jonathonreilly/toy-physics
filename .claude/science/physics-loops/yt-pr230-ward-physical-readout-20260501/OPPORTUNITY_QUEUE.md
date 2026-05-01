@@ -94,7 +94,9 @@ probability.
    theorem reduces this to proving or measuring the same-source scalar pole
    residue; it does not license `kappa_s = 1`.  The scalar pole determinant
    gate further reduces the analytic object to the interacting denominator
-   `D(x)=1-K(x)Pi(x)` and especially `K'(x_pole)`.
+   `D(x)=1-K(x)Pi(x)` and especially `K'(x_pole)`.  The matrix ladder version
+   needs `d lambda_max/dp^2` at the crossing, so a finite eigenvalue witness is
+   not yet a residue theorem.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 7. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`

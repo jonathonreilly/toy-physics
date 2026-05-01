@@ -34,6 +34,7 @@
     "projector_norm": "exact negative boundary / projector-normalization obstruction",
     "same_1pi": "exact negative boundary / same-1PI not PR230 closure",
     "same_source_scalar_two_point": "bounded-support / same-source scalar two-point LSZ measurement primitive",
+    "scalar_ladder_eigen_derivative": "exact-support / scalar ladder eigen-derivative gate",
     "scalar_pole_determinant_gate": "exact-support / scalar pole determinant gate",
     "scalar_source_response_harness": "bounded-support / scalar source response harness extension",
     "scalar_two_point_harness": "bounded-support / scalar two-point production-harness extension",
@@ -44,7 +45,7 @@
     "static_mass": "exact negative boundary / static mass matching obstruction"
   },
   "fail_count": 0,
-  "pass_count": 37,
+  "pass_count": 38,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

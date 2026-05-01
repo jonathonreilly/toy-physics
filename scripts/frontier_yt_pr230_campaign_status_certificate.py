@@ -72,6 +72,7 @@ def main() -> int:
         "fh_lsz_joint_resource": load("outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json"),
         "fh_lsz_invariant_readout": load("outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json"),
         "scalar_pole_determinant_gate": load("outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"),
+        "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -231,6 +232,12 @@ def main() -> int:
         "determinant gate" in str(statuses["scalar_pole_determinant_gate"])
         or "exact-support" in str(statuses["scalar_pole_determinant_gate"]),
         statuses["scalar_pole_determinant_gate"],
+    )
+    report(
+        "scalar-ladder-eigen-derivative-gate-still-needs-momentum-kernel",
+        "eigen-derivative gate" in str(statuses["scalar_ladder_eigen_derivative"])
+        or "exact-support" in str(statuses["scalar_ladder_eigen_derivative"]),
+        statuses["scalar_ladder_eigen_derivative"],
     )
     report(
         "finite-ladder-route-needs-ir-limit",

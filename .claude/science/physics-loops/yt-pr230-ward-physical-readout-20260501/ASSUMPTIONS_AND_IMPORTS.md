@@ -166,6 +166,16 @@ The pole location fixes only `K(x_pole)`, not the LSZ residue.  The interacting
 kernel derivative `K'(x_pole)` or a direct production pole-derivative
 measurement remains load-bearing.
 
+Matrix ladder eigen-derivative gate:
+
+```text
+lambda_max(pole) = 1
+LSZ residue needs d lambda_max / d p^2 at the crossing
+```
+
+A finite eigenvalue crossing is not enough unless the total-momentum
+dependence of the scalar Bethe-Salpeter kernel is derived or measured.
+
 Source-reparametrization gauge boundary:
 
 ```text

@@ -213,6 +213,10 @@ What changed:
   pole needs `D(x_pole)=0`, but the LSZ derivative contains
   `K'(x_pole)`.  Holding the pole location fixed while changing `K'(x_pole)`
   changes the residue, so pole naming is not enough.
+- The scalar ladder eigen-derivative gate gives the matrix version: a finite
+  `lambda_max(pole)=1` witness is only a pole-location condition.  The residue
+  and FH/LSZ readout need `d lambda_max/dp^2`, which varies with the
+  momentum-dependent ladder kernel even when the pole eigenvalue is fixed.
 
 The scientific result is narrower than closure:
 
@@ -272,3 +276,5 @@ existence/control of the same-source scalar pole and derivative, not a separate
 source naming convention.
 The determinant-gate block says the exact analytic object is now the
 interacting scalar-channel kernel `K(x)` and its derivative at the pole.
+The eigen-derivative block says the same in matrix language: derive or measure
+the total-momentum derivative of the scalar Bethe-Salpeter kernel.
