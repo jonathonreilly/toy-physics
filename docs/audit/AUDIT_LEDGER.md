@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T21:06:58.772646+00:00
+**Generated:** 2026-05-01T21:08:13.314540+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 167 |
+| bounded | 166 |
 | support | 135 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 943 |
+| ~~audited_conditional~~ | 944 |
 | ~~audited_failed~~ | 85 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 301 |
-| `audited_conditional` | 646 |
+| `audited_conditional` | 647 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 515 |
+| `unaudited` | 514 |
 
 | criticality | count |
 |---|---:|
@@ -942,6 +942,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_selector_cycle13_meta_closure_status_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `scalar_selector_cycle1_science_review_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `scalar_selector_proof_chains_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `scalar_selector_remaining_open_imports_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13496,6 +13497,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `KOIDE_MRU_DEMOTION_NOTE_2026-04-20.md`
   - `DM_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md`
   - `per-lane theorem runners referenced in the proof chains`
+
+### `scalar_selector_remaining_open_imports_2026-04-20`
+
+- **Note:** [`SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`](../../docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note inventories the scalar-selector package's remaining open imports: the Koide physical/source-law bridge for Q=2/3, the physical Brannen-phase bridge for delta=2/9, and the selected-line witness as downstream of the Brannen bridge, while also listing several closed housekeeping/support updates.  _(class `B`)_
+- **chain closes:** False — The row is conditional because it is a no-runner, multi-lane status inventory whose claims depend on unregistered upstream theorem surfaces.
+- **rationale:** Issue: the note is a broad package-status inventory with no registered runner or ledger dependencies, and it imports many theorem/runner counts for Koide, DM, quark, and support closeouts. Why this blocks: the open-import list and closed-item table are plausible support bookkeeping, but the audit cannot verify the claimed closures, no-go reductions, or runner counts from this row alone. Repair target: split the open-import register into per-lane rows or register the cited theorem notes/runners as one-hop dependencies and add a structured inventory checker. Claim boundary until fixed: the note can be used as bounded package triage identifying live Koide source-law and Brannen-phase bridges, not as an independently audited closure ledger.
+- **open / conditional deps cited:**
+  - `Koide Q/delta theorem stacks`
+  - `DM sigma/A-BCC closeout stacks`
+  - `quark provenance theorem stacks`
+  - `structured open-import inventory checker`
 
 ### `scalar_trace_tensor_no_go_note`
 
