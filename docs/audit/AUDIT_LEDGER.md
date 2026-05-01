@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:07:47.890270+00:00
+**Generated:** 2026-05-01T07:09:04.071170+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 272 |
+| `audited_clean` | 273 |
 | `audited_conditional` | 583 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 580 |
+| `unaudited` | 579 |
 
 | criticality | count |
 |---|---:|
@@ -308,6 +308,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mesoscopic_surrogate_multistage_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_source_2d_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_two_stage_2d_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `minimal_source_driven_field_probe_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -10618,6 +10619,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The live bidirectional trapping probe shows escape_fraction(alpha) falls below 50% by alpha=0.10 while alpha=0 recovers 3/3 TOWARD and F~M=1.00 on the tested geometry-sector family.  _(class `C`)_
 - **chain closes:** False — The live proxy computation reproduces the table, but the named frozen log is missing and the queued proposed_retained claim overpromotes a hand-added trapping parameter into a retained no-return threshold.
 - **rationale:** Issue: The source names logs/2026-04-05-minimal-bidirectional-trapping-probe.txt, but that frozen artifact is absent, and the note's branch verdict says the proxy produces a retained threshold even though the Status calls it a bounded moonshot probe. Why this blocks: a live rerun of a hand-added alpha trapping proxy can support bounded evidence, but missing frozen output plus no derivation of the trapping law prevents retained ratification. Repair target: restore or regenerate the frozen log, correct the Status/current_status to bounded/proposed_bounded, or derive the trapping parameter from retained dynamics and audit the weak-field dependencies. Claim boundary until fixed: it is safe to claim the live runner reproduces alpha=0 weak-field recovery and escape below 50% at alpha ~= 0.10 on this finite setup; it is not safe to call this a retained no-return or black-hole threshold theorem.
+- **auditor confidence:** high
+
+### `minimal_source_driven_field_probe_note`
+
+- **Note:** [`MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`](../../docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The smallest source-driven local field rule preserves TOWARD sign and exact zero-source reduction on the tested 3D lattice, but fails full weak-field recovery because the source-driven F~M exponent drops to 0.64.  _(class `C`)_
+- **chain closes:** True — The registered runner recomputes the zero-source dynamic shift, instantaneous and source-driven deflections, ratios, field maxima, and fitted mass exponents, and the current output matches the note. The conclusion is explicitly bounded as a partial survival plus failed linear scaling at this calibration.
+- **rationale:** The runner verifies the load-bearing result directly: zero-source reduction is exact, all source-driven rows remain TOWARD, and the dynamic scaling exponent is 0.64 rather than near-linear. The note does not claim clean self-consistent field dynamics; it records a bounded calibration hierarchy/no-go at stronger calibration. Residual risk is addressed by the companion recovery sweep, not by this note alone.
 - **auditor confidence:** high
 
 ### `mirror_2d_validation_note`
