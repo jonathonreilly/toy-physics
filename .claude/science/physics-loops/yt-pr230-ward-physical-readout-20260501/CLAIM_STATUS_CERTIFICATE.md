@@ -75,6 +75,8 @@ Allowed wording:
 - exact negative boundary for the existing bridge stack as PR230 closure;
   transport support imports accepted endpoints/surfaces and is not a direct
   y_t proof;
+- exact negative boundary for scalar spectral saturation from positivity and
+  low-order curvature alone;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
@@ -209,4 +211,10 @@ python3 scripts/frontier_yt_bridge_stack_import_audit.py
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=20 FAIL=0
+
+python3 scripts/frontier_yt_scalar_spectral_saturation_no_go.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=21 FAIL=0
 ```

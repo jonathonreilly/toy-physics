@@ -357,6 +357,17 @@ support.  It imports an accepted endpoint or accepted plaquette/`u_0` surface
 and its ledger rows are bounded, unaudited, or audited conditional.  It cannot
 replace the direct measurement or scalar-residue theorem.
 
+Scalar spectral saturation is not supplied by positivity/low moments:
+
+```text
+python3 scripts/frontier_yt_scalar_spectral_saturation_no_go.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+Positive pole-plus-continuum spectral models can share the same `C(0)` and
+`C'(0)` while carrying different isolated pole residues.  Therefore a future
+scalar LSZ route must prove pole saturation or continuum control.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

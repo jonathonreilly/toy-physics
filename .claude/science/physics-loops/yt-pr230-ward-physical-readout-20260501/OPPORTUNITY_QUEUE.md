@@ -34,6 +34,8 @@
    scalar/gauge dressing.
    The refreshed retained-closure route certificate keeps this as the shortest
    analytic route.
+   Spectral positivity and low-order moments are insufficient; this route needs
+   pole saturation, continuum control, or direct residue measurement.
 4. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 5. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`

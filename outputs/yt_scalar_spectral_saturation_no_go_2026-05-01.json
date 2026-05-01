@@ -1,0 +1,95 @@
+{
+  "actual_current_surface_status": "exact negative boundary / scalar spectral saturation no-go",
+  "fail_count": 0,
+  "models": [
+    {
+      "C0": 3.5555555555555554,
+      "C0_error": 0.0,
+      "C1": -1.8117283950617284,
+      "C1_error": 0.0,
+      "all_weights_positive": true,
+      "canonical_y_proxy_relative_to_reference": 0.6324555320336759,
+      "continuum_weights": [
+        6.371428571428572,
+        1.5285714285714223
+      ],
+      "pole_residue": 0.2
+    },
+    {
+      "C0": 3.5555555555555554,
+      "C0_error": 0.0,
+      "C1": -1.8117283950617287,
+      "C1_error": 2.220446049250313e-16,
+      "all_weights_positive": true,
+      "canonical_y_proxy_relative_to_reference": 0.8366600265340756,
+      "continuum_weights": [
+        5.685714285714287,
+        3.264285714285707
+      ],
+      "pole_residue": 0.35
+    },
+    {
+      "C0": 3.5555555555555554,
+      "C0_error": 0.0,
+      "C1": -1.8117283950617284,
+      "C1_error": 0.0,
+      "all_weights_positive": true,
+      "canonical_y_proxy_relative_to_reference": 1.0,
+      "continuum_weights": [
+        5.0,
+        4.999999999999997
+      ],
+      "pole_residue": 0.5
+    },
+    {
+      "C0": 3.5555555555555554,
+      "C0_error": 0.0,
+      "C1": -1.8117283950617284,
+      "C1_error": 0.0,
+      "all_weights_positive": true,
+      "canonical_y_proxy_relative_to_reference": 1.140175425099138,
+      "continuum_weights": [
+        4.314285714285714,
+        6.7357142857142875
+      ],
+      "pole_residue": 0.65
+    },
+    {
+      "C0": 3.5555555555555554,
+      "C0_error": 0.0,
+      "C1": -1.8117283950617284,
+      "C1_error": 0.0,
+      "all_weights_positive": true,
+      "canonical_y_proxy_relative_to_reference": 1.2649110640673518,
+      "continuum_weights": [
+        3.6285714285714286,
+        8.471428571428572
+      ],
+      "pole_residue": 0.8
+    }
+  ],
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Pole saturation and continuum control remain open imports.",
+  "strict_non_claims": [
+    "does not rule out a future scalar pole theorem",
+    "does not use observed top/Higgs/Yukawa values",
+    "does not define y_t through H_unit matrix elements",
+    "does not use alpha_LM/plaquette/u0 as proof input"
+  ],
+  "target_moments": {
+    "C0": 3.5555555555555554,
+    "C1": -1.8117283950617284,
+    "masses_sq": [
+      1.0,
+      2.0,
+      9.0
+    ],
+    "reference_weights": [
+      0.5,
+      5.0,
+      5.0
+    ]
+  },
+  "verdict": "Positive scalar spectral representations and fixed low-order source-curvature data do not determine the isolated scalar pole residue.  Multiple positive pole-plus-continuum models have the same C(0) and C'(0) but different pole residues and therefore different canonical Yukawa proxies.  PR #230 still needs a retained pole-saturation/continuum-bound theorem or direct measurement of the pole residue."
+}

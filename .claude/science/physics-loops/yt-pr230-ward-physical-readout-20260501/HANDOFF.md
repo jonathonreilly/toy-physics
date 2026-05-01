@@ -125,6 +125,10 @@ What changed:
   possible missed proof.  It is not PR230 closure: it is bounded transport
   support, imports accepted `y_t(v)` or accepted plaquette/`u_0` surfaces, and
   its ledger rows are bounded, unaudited, or audited conditional.
+- The scalar spectral-saturation block shows positivity and fixed low-order
+  source-curvature data do not determine the isolated scalar pole residue.
+  Multiple positive pole-plus-continuum models share `C(0)` and `C'(0)` while
+  changing the canonical Yukawa proxy.
 
 The scientific result is narrower than closure:
 

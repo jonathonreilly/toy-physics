@@ -112,6 +112,9 @@ Completed in block 1:
 - `scripts/frontier_yt_bridge_stack_import_audit.py`
 - `outputs/yt_bridge_stack_import_audit_2026-05-01.json`
 - `docs/YT_BRIDGE_STACK_IMPORT_AUDIT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_spectral_saturation_no_go.py`
+- `outputs/yt_scalar_spectral_saturation_no_go_2026-05-01.json`
+- `docs/YT_SCALAR_SPECTRAL_SATURATION_NO_GO_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -120,7 +123,9 @@ Next artifact:
   reduced momentum pilots, free-action support, fixed-background sensitivity,
   LSZ source-scaling covariance, and exact Feshbach response preservation are
   not closure evidence; the existing bridge stack is bounded transport support
-  with endpoint imports, not closure evidence
+  with endpoint imports, not closure evidence; spectral positivity and
+  low-order curvature data are not closure evidence without pole saturation or
+  continuum control
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,
