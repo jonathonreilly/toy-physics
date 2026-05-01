@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:42:43.877530+00:00
+**Generated:** 2026-05-01T05:44:13.260548+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 212 |
-| support | 171 |
+| support | 170 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 832 |
-| ~~audited_failed~~ | 167 |
+| ~~audited_failed~~ | 168 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 250 |
 | `audited_conditional` | 563 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 79 |
+| `audited_failed` | 80 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 627 |
+| `unaudited` | 626 |
 
 | criticality | count |
 |---|---:|
@@ -988,6 +988,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_positive_background_extension_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `universal_gr_positive_background_local_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `universal_gr_tensor_quotient_uniqueness_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
+| `wave_equation_gravity_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | D | - |
 | `wilson_mu2_distance_sweep_note_2026-04-11` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_zero_import_chain_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
@@ -13684,6 +13685,20 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **chain closes:** False — The old third sample sided with the first numerical-match verdict, but judicial review favors the second: the note depends on a missing artifact-chain provenance and the current runner did not complete under the audit timeout, so the numerical synthesis is conditional rather than independently closed. The selected H=0.25 values can remain a reported narrow synthesis, not an audit-clean numerical theorem.
 - **rationale:** The old third sample sided with the first numerical-match verdict, but judicial review favors the second: the note depends on a missing artifact-chain provenance and the current runner did not complete under the audit timeout, so the numerical synthesis is conditional rather than independently closed. The selected H=0.25 values can remain a reported narrow synthesis, not an audit-clean numerical theorem.
 - **auditor confidence:** judicial
+
+### `wave_equation_gravity_note`
+
+- **Note:** [`WAVE_EQUATION_GRAVITY_NOTE.md`](../../docs/WAVE_EQUATION_GRAVITY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The runner battery is claimed to show that promoting Poisson to a d'Alembertian produces gravitational waves, recovers Newton at low frequency, and preserves the propagator mass and distance laws.  _(class `D`)_
+- **chain closes:** False — The runner exits 0, but its own diagnostics do not support the full prose claim: the radiation exponent is -0.583 rather than near -1 and is not between 1/r and 1/r^2, the frequency scaling is omega^-0.04 despite a printed expectation of omega^1-2, and the propagator distance exponent is -2.069 despite the runner's expected alpha ~ -1.0 line.
+- **rationale:** Issue: the runner/prose contract is stale or over-permissive for the radiation and propagator claims. Why this blocks: accepting gamma=-0.583 as evidence for 1/r gravitational radiation and alpha=-2.069 as preserved Newtonian distance behavior lets the battery pass while missing its own stated physical comparators. Repair target: tighten the runner thresholds to the claimed observables, separate near-field finite-box artifacts from far-field radiation, and update the note to the current measured exponents if they remain. Claim boundary until fixed: the runner gives support for a finite-speed leapfrog disturbance and approximate static-field behavior, but it does not auditably establish gravitational radiation or preserved Newtonian propagator distance laws.
+- **open / conditional deps cited:**
+  - `WAVE_EQUATION_GRAVITY_NOTE.md`
+- **auditor confidence:** high
 
 ### `wave_equation_self_field_note`
 
