@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T12:00:10.685198+00:00
+**Generated:** 2026-05-01T12:01:54.559610+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 307 |
+| `audited_clean` | 308 |
 | `audited_conditional` | 591 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 533 |
+| `unaudited` | 532 |
 
 | criticality | count |
 |---|---:|
@@ -361,6 +361,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_bimodule_norm_naturality_theorem_note_2026-04-19` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
+| `quark_c3_circulant_source_law_boundary_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -12687,6 +12688,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** There is no typed existing edge from the A1 support scalar to the physical quark Ward source ratio, so adding that edge would be new theorem content rather than latent support.  _(class `B`)_
 - **chain closes:** True — The runner verifies the authority surfaces, exact A1 algebra, support-face inventory, typed-edge graph, import firewall, and boundary classification with PASS=50 FAIL=0. Those checks support the source's no-go conclusion that current A1 support cannot be promoted into quark C3 Ward closure without a new typed bridge.
 - **rationale:** The no-go closes on the current-bank inventory: exact A1 scalar matches exist, but the typed path to the quark C3 source ratio is absent, and the runner verifies that adding that edge is precisely the missing theorem content. The note avoids forbidden imports from observed quark masses, fitted Yukawas, CKM mass input, or species-universal charged-lepton A1. Residual risk is inventory drift: if a later note supplies the typed bridge, this no-go should be re-audited.
+- **auditor confidence:** high
+
+### `quark_c3_circulant_source_law_boundary_note_2026-04-28`
+
+- **Note:** [`QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md`](../../docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** C3 circulant support plus A1/P1 does not become retained quark Ward closure until a quark-specific source/readout theorem supplies species phases, relative scales, and the amplitude-vs-Yukawa dictionary.  _(class `B`)_
+- **chain closes:** True — The runner verifies exact Hermitian C3 circulant carrier algebra, the inverse map showing representation rather than prediction, the A1 relation and its residual phase/scale freedom, the P1 parent/readout boundary, and the quark-sector species boundary with PASS=43 FAIL=0. These checks support the note's support-level boundary conclusion.
+- **rationale:** The note closes as a support/boundary theorem: C3 circulants are exact hierarchy carriers, but without A1/P1 closure plus quark-specific species source/readout laws they are not predictive non-top quark Ward identities. The runner confirms no observed quark masses, fitted Yukawas, CKM mass input, or species-universal charged-lepton import is used. Residual risk is intentionally exposed by the note: Lane 3 remains open until the missing source/readout theorem is supplied.
 - **auditor confidence:** high
 
 ### `quark_cp_carrier_completion_note_2026-04-18`
