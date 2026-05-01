@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=9 FAIL=0
+# SUMMARY: PASS=12 FAIL=0
 ```
 
 The runner verifies:
@@ -31,6 +31,9 @@ The runner verifies:
 | Ward physical-readout repair is closed | no |
 | scalar pole residue is derived on current analytic surface | no |
 | key-blocker closure attempt found retained authority | no |
+| LSZ source-normalization cancellation is closure | no |
+| Feshbach response preservation proves common dressing | no |
+| interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
 | prior non-MC queue is exhausted | yes |
 
@@ -49,8 +52,10 @@ This route bypasses the Ward/H-unit definition trap and does not require the
 analytic scalar-residue theorem.  It is the cleanest retained-closure route if
 the compute and scale problem are solved.
 
-Current blocker: existing certificates are reduced-scope or pilot, and the
-mass-bracket run exposed a current-scale cutoff obstruction.
+Current blocker: existing certificates are reduced-scope or pilot, the
+mass-bracket run exposed a current-scale cutoff obstruction, and the
+interacting kinetic coefficient/matching bridge still needs ensemble evidence
+or a theorem.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 
@@ -65,9 +70,9 @@ Then re-run the Ward physical-readout repair audit.  This is the direct
 analytic repair of the audit's physical-readout objection.
 
 Current blocker: the current algebraic surface underdetermines the pole
-residue and dressing.  The branch now has explicit countermodel certificates
-showing that group counts, `R_conn`, SSB bookkeeping, and WTI alone are not
-enough.
+residue and dressing.  Source-normalization covariance and exact Feshbach
+response preservation are now controlled, but neither derives the microscopic
+interacting scalar denominator, pole residue, or scalar/gauge equality.
 
 ### Route 3: New Selector Theorem
 

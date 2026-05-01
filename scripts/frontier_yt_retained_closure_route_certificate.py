@@ -51,6 +51,9 @@ def main() -> int:
         "ward_repair_audit": "outputs/yt_ward_physical_readout_repair_audit_2026-05-01.json",
         "scalar_pole_residue_no_go": "outputs/yt_scalar_pole_residue_current_surface_no_go_2026-05-01.json",
         "key_blocker_closure_attempt": "outputs/yt_key_blocker_closure_attempt_2026-05-01.json",
+        "lsz_normalization_cancellation": "outputs/yt_scalar_lsz_normalization_cancellation_2026-05-01.json",
+        "feshbach_response_boundary": "outputs/yt_feshbach_operator_response_boundary_2026-05-01.json",
+        "interacting_kinetic_sensitivity": "outputs/yt_interacting_kinetic_background_sensitivity_2026-05-01.json",
     }
     certificates = {name: load_json(path) for name, path in required_certificates.items()}
 
@@ -88,6 +91,21 @@ def main() -> int:
     key_blocker_has_no_retained_authority = (
         certificates["key_blocker_closure_attempt"].get("retained_authorities") == []
     )
+    lsz_norm_conditional = (
+        certificates["lsz_normalization_cancellation"].get("actual_current_surface_status")
+        == "conditional-support / scalar LSZ normalization cancellation"
+        and certificates["lsz_normalization_cancellation"].get("proposal_allowed") is False
+    )
+    feshbach_boundary_not_common_dressing = (
+        certificates["feshbach_response_boundary"].get("actual_current_surface_status")
+        == "exact support / Feshbach response boundary"
+        and certificates["feshbach_response_boundary"].get("proposal_allowed") is False
+    )
+    interacting_kinetic_still_open = (
+        certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status")
+        == "bounded-support / interacting kinetic background sensitivity"
+        and certificates["interacting_kinetic_sensitivity"].get("proposal_allowed") is False
+    )
     beta_blocked = "no-go" in certificates["beta_lambda_no_go"].get("actual_current_surface_status", "")
     queue_text = (
         certificates["queue_exhaustion"].get("actual_current_surface_status", "")
@@ -111,6 +129,21 @@ def main() -> int:
         key_blocker_has_no_retained_authority,
         "no retained authority supplies pole residue plus common dressing",
     )
+    report(
+        "lsz-normalization-cancellation-not-closure",
+        lsz_norm_conditional,
+        certificates["lsz_normalization_cancellation"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "feshbach-response-boundary-not-common-dressing",
+        feshbach_boundary_not_common_dressing,
+        certificates["feshbach_response_boundary"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "interacting-kinetic-route-still-needs-ensemble-or-theorem",
+        interacting_kinetic_still_open,
+        certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status", ""),
+    )
     report("planck-beta-route-blocked-on-current-surface", beta_blocked, certificates["beta_lambda_no_go"].get("actual_current_surface_status", ""))
     report("prior-route-queue-exhausted", queue_open, "queue exhaustion certificate says no full retained closure")
 
@@ -119,7 +152,8 @@ def main() -> int:
             "route": "direct_measurement",
             "retained_closure_condition": (
                 "run strict production correlator evidence on a physically suitable "
-                "scale/heavy-quark treatment, produce a production certificate, and "
+                "scale/heavy-quark treatment, derive or measure the interacting "
+                "kinetic/matching bridge, produce a production certificate, and "
                 "pass scripts/frontier_yt_direct_lattice_correlator.py"
             ),
             "why_shortest": "It bypasses Ward/H_unit and scalar-pole analytic normalization.",
@@ -133,7 +167,7 @@ def main() -> int:
                 "re-run the Ward physical-readout repair audit"
             ),
             "why_shortest": "It directly repairs the audit's physical-readout objection.",
-            "current_blocker": "current algebraic surface underdetermines pole residue and dressing",
+            "current_blocker": "source scaling and Feshbach projection are controlled, but the interacting scalar denominator/residue and common dressing are still not derived",
         },
         {
             "route": "new_selector_or_axiom",
@@ -153,7 +187,10 @@ def main() -> int:
             "All tested non-MC shortcuts are blocked or conditional.  The shortest "
             "honest retained routes are: strict direct physical measurement, a new "
             "scalar pole-residue/common-dressing theorem, or a newly derived "
-            "Planck stationarity selector.  The first two preserve the current "
+            "Planck stationarity selector.  Newer support shows source-scaling "
+            "and Feshbach projection are not the hard blockers; the hard blockers "
+            "are the microscopic interacting scalar residue/common dressing and "
+            "heavy kinetic/matching evidence.  The first two preserve the current "
             "claim posture; the third requires a new theorem and cannot be merely "
             "assumed."
         ),
@@ -164,9 +201,10 @@ def main() -> int:
         "closure_routes": closure_routes,
         "exact_next_action": (
             "Do not run more small pilot MC for closure.  Either implement a "
-            "physically suitable strict measurement plan, or start the scalar "
-            "two-point residue theorem from the retained action and expect that "
-            "it may require real correlator data."
+            "physically suitable strict measurement plan with interacting kinetic "
+            "matching, or start the microscopic interacting scalar denominator / "
+            "residue theorem from the retained action and expect that it may "
+            "require real correlator data."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-18-feshbach-operator-response-boundary
-blocks_completed: 32
-active_route: "Feshbach operator-response boundary"
-active_hard_residual: "test whether exact crossover response preservation supplies scalar/gauge common dressing"
+current_phase: campaign-rerun-block-19-retained-closure-certificate-refresh
+blocks_completed: 33
+active_route: "retained-closure route certificate refresh"
+active_hard_residual: "fold LSZ covariance, Feshbach response, and interacting kinetic sensitivity into the shortest-route certificate"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -178,6 +178,7 @@ claim_state_movement:
   - "measured small fixed-gauge-background kinetic-proxy sensitivity; free c2 cannot be used as an interacting stand-in without production ensemble evidence or an interacting theorem"
   - "showed scalar source normalization cancels in a covariant LSZ proxy only when the scalar kernel and residue transform together; the interacting denominator and derivative remain open"
   - "proved exact Feshbach response preservation is operator-specific: it removes crossover distortion as the blocker but does not equate scalar and gauge microscopic residues"
+  - "refreshed the retained-closure route certificate: newer support narrows but does not close the remaining production/matching or microscopic scalar-residue routes"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -186,5 +187,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Attack the microscopic interacting scalar residue/common-dressing theorem directly; Feshbach projection and source-scaling covariance do not close it."
+next_exact_action: "Attack the microscopic interacting scalar residue/common-dressing theorem directly, or begin a strict measurement/matching production plan; certificate refresh confirms no shortcut closure."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

@@ -117,6 +117,10 @@ What changed:
   consistently.  This rules out crossover distortion as the main blocker, but
   it does not derive equality of the underlying scalar and gauge microscopic
   residues.
+- The retained-closure route certificate has been refreshed to include the
+  newer LSZ covariance, Feshbach response, and interacting kinetic sensitivity
+  checks.  It now passes `PASS=12 FAIL=0` and still authorizes no retained
+  proposal wording.
 
 The scientific result is narrower than closure:
 

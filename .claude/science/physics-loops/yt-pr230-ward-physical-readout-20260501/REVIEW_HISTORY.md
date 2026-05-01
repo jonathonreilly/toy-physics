@@ -414,6 +414,29 @@ preserves projected responses and therefore removes crossover distortion as a
 candidate blocker, while leaving microscopic scalar/gauge residue equality
 undetermined.
 
+## Review-Loop Backpressure — Retained-Closure Certificate Refresh
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+```
+
+The refreshed certificate includes the new LSZ, Feshbach, and interacting
+kinetic checks.  It remains a route certificate rather than closure evidence.
+
 ## Review-Loop Backpressure — Momentum Pilot Scaling
 
 Local review-loop disposition:

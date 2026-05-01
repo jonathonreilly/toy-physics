@@ -334,6 +334,17 @@ scalar/gauge response ratio while Feshbach errors remain at numerical zero.
 Thus crossover response preservation cannot replace a microscopic scalar
 residue/common-dressing theorem.
 
+Retained-closure route certificate refreshed:
+
+```text
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+The refreshed certificate includes LSZ normalization cancellation, Feshbach
+operator response, and interacting kinetic sensitivity.  It still finds no
+retained-proposal route on the current surface.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

@@ -11,6 +11,8 @@
    coefficient is exact support, but fixed-background scans show the kinetic
    proxy is gauge-background sensitive.  Interacting kinetic renormalization
    and SM matching remain open.
+   The refreshed retained-closure route certificate keeps this as a shortest
+   honest route only with strict ensemble evidence and matching.
 2. **Scalar-channel Bethe-Salpeter projector and limiting theorem.** The
    source-bubble stretch, HS/RPA contact attempt, input audit, and
    projector-normalization obstruction show the exact next analytic object:
@@ -30,6 +32,8 @@
    residue theorem, not field naming.  Exact Feshbach projection preserves
    projected responses but is operator-specific; it does not supply common
    scalar/gauge dressing.
+   The refreshed retained-closure route certificate keeps this as the shortest
+   analytic route.
 4. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 5. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`
