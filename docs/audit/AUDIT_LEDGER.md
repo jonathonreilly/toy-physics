@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:09:54.957673+00:00
+**Generated:** 2026-05-01T02:11:23.315216+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 2 |
 | bounded | 261 |
-| support | 220 |
+| support | 219 |
 | open | 16 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 45 |
-| ~~audited_conditional~~ | 767 |
+| ~~audited_conditional~~ | 768 |
 | ~~audited_failed~~ | 143 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 229 |
-| `audited_conditional` | 499 |
+| `audited_conditional` | 500 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 12 |
-| `unaudited` | 744 |
+| `unaudited` | 743 |
 
 | criticality | count |
 |---|---:|
@@ -736,6 +736,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_c3_nontrivial_current_boundary_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_commutant_eigenoperator_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `pmns_scalar_bridge_nonrealization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_selector_current_stack_zero_law_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
 | `pmns_sigma_zero_nogo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -10268,6 +10269,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** If I(Y)=F(Y^dag Y) with F(U K U^dag)=F(K) for all U in U(3), then I is constant on the exact right orbit Y -> Y U^dag, while the admitted selector and sheet-fixing data vary along that orbit.  _(class `C`)_
 - **chain closes:** True — The no-go closes as a support-tier conditional theorem: conjugacy invariance makes F(K) orbit-constant by definition, and the runner exhibits right-orbit samples where the target right-Gram selector and |K12| sheet datum vary while K's conjugacy invariants are unchanged. The result only excludes right-conjugacy-invariant completions under the admitted-data assumptions; it does not derive a canonical right frame or positive PMNS closure.
 - **rationale:** The support-tier no-go is an exact orbit-blindness argument, not a positive PMNS derivation. A right-conjugacy-invariant functional of K is necessarily constant on K's conjugacy orbit, while the runner constructs same-orbit samples where the admitted selector score and |K12| sheet datum change without changing spectral/trace signatures. Residual risk is downstream overuse: this does not validate the admitted right-Gram route itself, the scalar-bank no-go chain, or any canonical right-frame law.
+- **auditor confidence:** high
+
+### `pmns_scalar_bridge_nonrealization_note`
+
+- **Note:** [`PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md`](../../docs/PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_scalar_bridge_nonrealization_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For independent lepton blocks D=D_nu⊕D_e, the retained scalar generator W[J]=log|det(D+J)|-log|det D| is additive and has zero mixed local-source curvature across the blocks, so the current additive scalar grammar cannot realize a PMNS sector-selector bridge.  _(class `A`)_
+- **chain closes:** False — The runner verifies the block-additivity algebra, but the row declares no dependencies for the observable-principle additivity authority, PMNS sector-exchange nonforcing theorem, or atlas/current-bank absence check.
+- **rationale:** Issue: the local determinant/block-additivity checks pass (PASS=8/FAIL=0), but the row has deps=[] while the claim explicitly relies on the observable-principle note, the PMNS sector-exchange nonforcing theorem, and a current-bank/atlas absence check. Why this blocks: the algebra shows this particular additive block-diagonal scalar generator is blind to mixed lepton-sector curvature, but a clean no-go over the current scalar bank requires the imported scalar grammar and sector-exchange boundary to be declared and audited. Repair target: declare the observable-principle and PMNS sector-exchange authorities as dependencies, and keep the atlas absence check separate from the mathematical block-additivity proof. Claim boundary until fixed: support-level no-go for the displayed additive log-det scalar generator on independent lepton blocks; not an independently audited theorem about all current-bank scalar selector bridges.
+- **open / conditional deps cited:**
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md`
+  - `publication/ci3_z3/DERIVATION_ATLAS.md`
 - **auditor confidence:** high
 
 ### `pmns_selector_current_stack_zero_law_note`
