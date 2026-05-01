@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:17:09.798757+00:00
+**Generated:** 2026-05-01T06:18:48.718715+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 201 |
+| bounded | 200 |
 | support | 170 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 842 |
+| ~~audited_conditional~~ | 843 |
 | ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 255 |
-| `audited_conditional` | 573 |
+| `audited_conditional` | 574 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 610 |
+| `unaudited` | 609 |
 
 | criticality | count |
 |---|---:|
@@ -351,6 +351,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `z2_hw1_mass_matrix_parametrization_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `abcc_cp_phase_no_go_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `accessible_prediction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `action_architecture_matrix_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `action_crossover_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `action_geometry_bridge_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1077,6 +1078,27 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Accessible Predictions: Where the Framework Differs from GR: Does NOT depend on lattice spacing. Tests quantum nature of gravity.  _(class `B`)_
 - **chain closes:** False — No. The rho=|psi|^2 gravitational-source law and born-gravity cross-constraint are used as framework premises rather than derived in this audit packet, so the conclusion cannot be ratified from the source note alone.
 - **rationale:** Issue: the rho=|psi|^2 gravitational-source law and Born-gravity cross-constraint are used as framework premises rather than derived in this audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **auditor confidence:** high
+
+### `action_architecture_matrix_note`
+
+- **Note:** [`ACTION_ARCHITECTURE_MATRIX_NOTE.md`](../../docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The project should be described as a set of retained, architecture-aware results rather than a single settled theorem.  _(class `B`)_
+- **chain closes:** False — The bounded architecture-split framing is appropriate, but the matrix depends on cited rows that are conditional, unaudited, support-tier, or effectively failed, and this row has no primary runner or parsed dependency edge to certify the synthesis.
+- **rationale:** Issue: the load-bearing architecture matrix is a cross-note synthesis over action_crossover_note, valley_linear_action_note, valley_linear_mirror_transfer_note, reproduction_audit_note, valley_linear_repro_note, valley_linear_robustness_note, evolving_network_prototype_v2_note, evolving_network_prototype_v3_note, and canonical_harness_index, but several of those inputs are audited_conditional, unaudited, support-tier, or effectively failed, and this row has no registered runner. Why this blocks: a clean synthesis cannot treat the cited lanes as retained artifact chains until the cited support rows themselves have clean or bounded-audited status and the dependency edges are explicit. Repair target: audit or repair the cited source rows, add explicit dependency edges/runner registration for the matrix, and restate any retained-language against audit-effective statuses. Claim boundary until fixed: the note may serve as a bounded orientation map emphasizing that no universal action theorem is closed, but not as a clean retained architecture synthesis.
+- **open / conditional deps cited:**
+  - `action_architecture_matrix_note -> action_crossover_note (audited_conditional)`
+  - `action_architecture_matrix_note -> valley_linear_action_note (audited_conditional)`
+  - `action_architecture_matrix_note -> valley_linear_mirror_transfer_note (unaudited)`
+  - `action_architecture_matrix_note -> reproduction_audit_note (support/unaudited)`
+  - `action_architecture_matrix_note -> valley_linear_repro_note (unaudited)`
+  - `action_architecture_matrix_note -> valley_linear_robustness_note (unaudited)`
+  - `action_architecture_matrix_note -> evolving_network_prototype_v2_note (audited_conditional)`
+  - `action_architecture_matrix_note -> canonical_harness_index (effective audited_failed)`
 - **auditor confidence:** high
 
 ### `action_crossover_note`
