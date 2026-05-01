@@ -1,48 +1,11 @@
 {
   "by_criticality": {
-    "critical": 1,
+    "critical": 0,
     "high": 0,
     "leaf": 0,
     "medium": 0
   },
-  "candidates": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audited_conditional",
-      "candidate_reason": "all_deps_ratified_after_audit_time_dependency_strengthening",
-      "claim_id": "left_handed_charge_matching_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "current_dep_effective_status": {
-        "graph_first_selector_derivation_note": "retained",
-        "graph_first_su3_integration_note": "retained"
-      },
-      "current_status": "proposed_retained",
-      "deps": [
-        "graph_first_selector_derivation_note",
-        "graph_first_su3_integration_note"
-      ],
-      "direct_in_degree": 19,
-      "effective_status": "audited_conditional",
-      "generated_order": 1,
-      "improved_dependencies": [
-        {
-          "after_effective_status": "retained",
-          "before_effective_status": "audited_conditional",
-          "claim_id": "graph_first_selector_derivation_note",
-          "rank_delta": 90
-        }
-      ],
-      "load_bearing_score": 17.555,
-      "note_hash": "28f7ea2e62d8f4ff540838e8bd9eaee4f85e26b597301fd57dee3e930ada7279",
-      "note_path": "docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md",
-      "reraudit_after_claim_ids": [
-        "graph_first_selector_derivation_note"
-      ],
-      "runner_path": "scripts/frontier_graph_first_su3_integration.py",
-      "transitive_descendants": 265
-    }
-  ],
+  "candidates": [],
   "eligible_audit_statuses": [
     "audited_conditional",
     "audited_decoration",
@@ -54,12 +17,12 @@
     "proposed_promoted",
     "proposed_retained"
   ],
-  "generated_at": "2026-05-01T02:11:23.142716+00:00",
+  "generated_at": "2026-05-01T02:13:16.736282+00:00",
   "policy": "reaudit_unblocked_by_ratified_dependencies_v1",
   "policy_summary": "Non-clean audited proposed claims whose current one-hop dependencies are all retained/promoted and whose audit-time dependency snapshot contains at least one dependency that has since become retained/promoted.",
   "ratified_dependency_statuses": [
     "promoted",
     "retained"
   ],
-  "total_candidates": 1
+  "total_candidates": 0
 }

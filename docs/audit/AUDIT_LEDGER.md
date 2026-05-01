@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:11:23.315216+00:00
+**Generated:** 2026-05-01T02:13:16.908424+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -697,7 +697,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_nn_rg_gravity_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_nn_rg_reconciliation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_synthesis_guard_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `left_handed_charge_matching_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `left_handed_charge_matching_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | F | - |
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lepton_single_higgs_pmns_triviality_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `linear_response_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -9296,13 +9296,11 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** On the graph-first selected-axis surface, the abelian factor is claimed to give the safe left-handed Standard Model charge pattern Q_L:(2,3)_{+1/3} and L_L:(2,1)_{-1}.  _(class `B`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
-- **open / conditional deps cited:**
-  - `GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md`
-- **auditor confidence:** high
+- **auditor:** `codex-audit-loop:2026-05-01-left_handed_charge_matching_note-reraudit-after-graph_first_selector_derivation_note`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** On that same selected-axis surface, the unique traceless abelian direction gives the left-handed eigenvalue pattern `+1/3` on the quark-doublet block and `-1` on the lepton-doublet block. The charge formula `Q = T_3 + Y/2` then matches the left-handed doublet charges on the safe retained surface.  _(class `F`)_
+- **chain closes:** False — The runner closes the structural projector/eigenvalue calculation, but the physical readout as Standard Model left-handed charge still imports the hypercharge formula and quark/lepton block identification beyond the two graph-first dependencies. The source note itself excludes a full anomaly-complete U(1)_Y derivation from this claim boundary.
+- **rationale:** Issue: the charge-matching step identifies the structural 3+1 abelian eigenspaces with the Standard Model Q_L/L_L hypercharge readout using Q = T_3 + Y/2, but that physical matter/hypercharge bridge is not derived in the allowed graph-first dependencies. Why this blocks: the current inputs prove a traceless U(1)-like eigenvalue ratio on the selected-axis surface, not an anomaly-complete or independently normalized physical charge theorem. Repair target: a retained theorem deriving the matter assignment, U(1)_Y normalization/readout, and anomaly-complete chiral completion from the graph-first surface. Claim boundary until fixed: the selected-axis surface has a structural 3+1 split with a traceless abelian direction whose normalized eigenvalues have the left-handed SM ratio +1/3:-1.
+- **auditor confidence:** medium
 
 ### `lensing_adjoint_kernel_reduced_model_note`
 
