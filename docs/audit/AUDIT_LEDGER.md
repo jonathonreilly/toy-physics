@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:39:20.522781+00:00
+**Generated:** 2026-05-01T20:40:28.932188+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 173 |
-| support | 146 |
+| support | 145 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 929 |
+| ~~audited_conditional~~ | 930 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 298 |
-| `audited_conditional` | 632 |
+| `audited_conditional` | 633 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 535 |
+| `unaudited` | 534 |
 
 | criticality | count |
 |---|---:|
@@ -909,6 +909,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_endpoint_denominator_admissibility_note_2026-04-19` | _proposed_no_go_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `quark_issr1_bicac_forcing_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `quark_jts_affine_physical_carrier_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `quark_jts_physical_point_closure_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | B | `quark_projector_ray_phase_completion_note_2026-04-18` |
 | `quark_route2_exact_readout_map_note_2026-04-19` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `quark_up_amplitude_provenance_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -12798,6 +12799,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
   - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_jts_physical_point_closure_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_JTS_PHYSICAL_POINT_CLOSURE_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_JTS_PHYSICAL_POINT_CLOSURE_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The shell-normalized carrier forces a_u_phys = sin_d(1-rho), and the physical perturbation satisfies Pi(psi_phys)=Pi(p), with kappa=1 uniquely satisfying the JTS condition.  _(class `C`)_
+- **chain closes:** False — The runner verifies the physical-point arithmetic and uniqueness with PASS=12, FAIL=0. The theorem depends on companion shell-normalization and ISSR1/JTS inputs that are named in prose but not represented as ledger dependencies, and the runner PASS lines are not A/B/C/D classified.
+- **rationale:** Issue: the physical-point JTS calculation reproduces, but it imports the shell-normalized carrier, ISSR1 projection, and companion route closures as upstream facts without dependency edges or classified runner PASS lines. Why this blocks: a hostile reviewer can accept the arithmetic given those inputs, but cannot treat this row alone as a closed theorem packet from retained carrier data. Repair target: add explicit dependencies for the JTS residue, ISSR1 forcing, shell-normalization, endpoint obstruction, and downstream synthesis inputs, and classify the runner PASS lines by load-bearing step class. Claim boundary until fixed: given the imported shell-normalization and ISSR1 inputs, the physical point satisfies JTS uniquely at kappa=1; general full-cone JTS remains open as the note says.
+- **open / conditional deps cited:**
+  - `QUARK_JTS_RESIDUE_NOTE_2026-04-19.md`
+  - `QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`
+  - `QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`
+  - `QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27`
