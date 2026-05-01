@@ -1,29 +1,12 @@
 {
   "by_criticality": {
-    "critical": 5,
+    "critical": 4,
     "high": 197,
     "leaf": 286,
     "medium": 279
   },
-  "generated_at": "2026-05-01T00:51:39.973641+00:00",
+  "generated_at": "2026-05-01T00:53:24.013301+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "physical_lattice_necessity_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 15,
-      "load_bearing_score": 15.665,
-      "note_path": "docs/PHYSICAL_LATTICE_NECESSITY_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_physical_lattice_necessity.py",
-      "transitive_descendants": 286
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -17667,6 +17650,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 379,
-  "total_pending": 767
+  "ready_count": 378,
+  "total_pending": 766
 }

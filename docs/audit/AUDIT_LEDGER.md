@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T00:51:40.168090+00:00
+**Generated:** 2026-05-01T00:53:24.230339+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,25 +20,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 88 |
-| _proposed_retained_ | 4 |
+| _proposed_retained_ | 3 |
 | bounded | 272 |
 | support | 231 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 760 |
+| ~~audited_conditional~~ | 761 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 227 |
-| `audited_conditional` | 482 |
+| `audited_conditional` | 483 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 767 |
+| `unaudited` | 766 |
 
 | criticality | count |
 |---|---:|
@@ -84,7 +84,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 19 | `ckm_atlas_axiom_closure_note` | critical | 74 | 17.23 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 120 | 16.42 | `audited_conditional` | ~~audited_conditional~~ |
 | 21 | `plaquette_self_consistency_note` | critical | 260 | 16.03 | `audited_conditional` | ~~audited_conditional~~ |
-| 22 | `physical_lattice_necessity_note` | critical | 286 | 15.66 | `unaudited` | _proposed_retained_ |
+| 22 | `physical_lattice_necessity_note` | critical | 286 | 15.66 | `audited_conditional` | ~~audited_conditional~~ |
 | 23 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 127 | 15.50 | `audited_conditional` | ~~audited_conditional~~ |
 | 24 | `site_phase_cube_shift_intertwiner_note` | critical | 290 | 15.19 | `audited_clean` | support |
 | 25 | `cosmological_constant_spectral_gap_identity_theorem_note` | critical | 48 | 15.12 | `audited_conditional` | ~~audited_conditional~~ |
@@ -713,6 +713,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `one_generation_matter_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `physical_lattice_necessity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -9791,6 +9792,30 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `inward_source_directional_law_open`
   - `direction_independent_transfer_law_open`
   - `self_maintaining_inertial_mass_or_matter_closure_open`
+- **auditor confidence:** high
+
+### `physical_lattice_necessity_note`
+
+- **Note:** [`PHYSICAL_LATTICE_NECESSITY_NOTE.md`](../../docs/PHYSICAL_LATTICE_NECESSITY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-physical_lattice_necessity_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims that no same-stack regulator reinterpretation survives on the accepted Cl(3)/Z^3 package surface, that exact observable-sector semantics force the retained hw=1 triplet to be physically distinct species sectors, and that the accepted one-axiom Hilbert/locality/information surface forces substrate physicality.  _(class `B`)_
+- **chain closes:** False — The runner passes, but the load-bearing theorem is assembled from many upstream notes and semantic authorities not declared as ledger dependencies; several are already conditional, unaudited, or failed, so this row cannot close as an independent no-dependency theorem.
+- **rationale:** Issue: the proof and runner depend on an undeclared upstream surface: minimal axioms, plaquette/canonical values, three-generation observable closure, generation/chirality boundary notes, continuum-identification text, single-axiom Hilbert/information notes, one-generation matter closure, anomaly-forced time, and a publication derived-values index. Why this blocks: the ledger row has deps=[], and multiple runner-read authorities are audited_conditional, unaudited/effectively conditional, or effective failed; the runner mostly verifies that those source texts contain the required premises and then performs limited algebra/parameter checks, so the physical-lattice necessity theorem is conditional on those authorities rather than closed by this row. Repair target: declare and audit the actual dependency surface, then re-audit after the one-axiom semantics, retained-generation observable closure, chirality/continuum boundary, and fixed quantitative package authorities are clean or explicitly scoped as conditional support. Claim boundary until fixed: the no-same-stack framing and beta/u0 invariant diagnostics remain useful support checks, but physical-lattice necessity and substrate physicality should be treated as conditional on the accepted upstream semantic and package-contract inputs.
+- **open / conditional deps cited:**
+  - `MINIMAL_AXIOMS_2026-04-11.md`
+  - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md`
+  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
+  - `GENERATION_AXIOM_BOUNDARY_NOTE.md`
+  - `THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md`
+  - `CONTINUUM_IDENTIFICATION_NOTE.md`
+  - `SINGLE_AXIOM_HILBERT_NOTE.md`
+  - `SINGLE_AXIOM_INFORMATION_NOTE.md`
+  - `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`
+  - `ANOMALY_FORCES_TIME_THEOREM.md`
+  - `publication/ci3_z3/USABLE_DERIVED_VALUES_INDEX.md`
 - **auditor confidence:** high
 
 ### `planck_boundary_density_extension_theorem_note_2026-04-24`
