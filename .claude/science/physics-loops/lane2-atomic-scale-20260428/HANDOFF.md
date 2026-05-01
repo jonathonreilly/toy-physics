@@ -1,6 +1,6 @@
 # Lane 2 Physics Loop Handoff
 
-**Updated:** 2026-05-01T11:23:11Z
+**Updated:** 2026-05-01T11:26:48Z
 **Loop slug:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Branch:** `physics-loop/lane2-atomic-scale-block01-20260428`  
@@ -182,6 +182,8 @@ Artifact commit:
 
 ```text
 3abb8b5e lane2 atomic: add Rydberg gate fanout
+dd7682fd lane2 atomic: checkpoint Rydberg fanout state
+origin/physics-loop/lane2-atomic-scale-block01-20260428
 ```
 
 ## Next Exact Action
