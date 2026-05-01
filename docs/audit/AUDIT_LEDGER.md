@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:40:23.423030+00:00
+**Generated:** 2026-05-01T01:41:47.950277+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
 | bounded | 270 |
-| support | 230 |
+| support | 229 |
 | open | 17 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 765 |
+| ~~audited_conditional~~ | 766 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 487 |
+| `audited_conditional` | 488 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 760 |
+| `unaudited` | 759 |
 
 | criticality | count |
 |---|---:|
@@ -807,6 +807,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_explicit_systematic_budget_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `yt_p1_i_s_revision_verification_note_2026-04-17` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_p2_v_matching_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_qfp_insensitivity_support_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `yukawa_color_projection_theorem` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -12268,6 +12269,25 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
   - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+- **auditor confidence:** high
+
+### `yt_p1_i_s_revision_verification_note_2026-04-17`
+
+- **Note:** [`YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md`](../../docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-yt_p1_i_s_revision_verification_note_2026-04-17`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims that the packaged 1.92% P1 value is a continuum vertex-correction magnitude, while the cited staggered scalar-density I_S bracket gives a distinct lattice-matching P1 range of about 3.85%-9.62% with central 5.77%, so the upward revision is semantically A+C rather than a convention mismatch.  _(class `B`)_
+- **chain closes:** False — The runner verifies the arithmetic and semantic bookkeeping around the cited values, but it does not rederive I_S or the cited literature bracket and the row declares no dependencies for the inherited citation, Ward, packaged-delta, or symbolic-reduction authorities.
+- **rationale:** Issue: the runner cleanly reproduces the packaged 1.924% value, the alpha/(2pi)=2 alpha/(4pi) convention identity, and the cited I_S=[4,10] P1 range, but the load-bearing claim that I_S is a genuine staggered scalar-density lattice-to-MSbar BZ matching coefficient distinct from the packaged continuum vertex heuristic is inherited from undeclared upstream notes and literature. Why this blocks: with deps=[] the row hard-codes the cited I_S bracket and the semantic labels rather than deriving the BZ integral or making the citation note, UV bridge note, Ward theorem, canonical surface, and symbolic I_1=I_S reduction auditable dependencies. Repair target: declare those authorities as dependencies and/or add a runner that reconstructs the lattice scalar-density matching integral or parses a curated citation table into the I_S bracket. Claim boundary until fixed: support-level critical-review arithmetic that, given the cited I_S bracket and packaged delta_PT definition, rejects a pure convention-mismatch explanation and reports the corresponding P1 range; not a framework-native derivation of the revised P1 coefficient.
+- **open / conditional deps cited:**
+  - `YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`
+  - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
+  - `scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py`
+  - `scripts/canonical_plaquette_surface.py`
 - **auditor confidence:** high
 
 ### `yt_p2_v_matching_theorem_note_2026-04-17`
