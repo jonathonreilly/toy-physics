@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T22:29:39.176620+00:00
+**Generated:** 2026-05-01T22:30:39.215868+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -29,7 +29,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 950 |
+| ~~audited_conditional~~ | 951 |
 | ~~audited_failed~~ | 85 |
 
 | audit_status | count |
@@ -40,23 +40,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 513 |
+| `unaudited` | 514 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 90 |
+| `critical` | 91 |
 | `high` | 324 |
 | `medium` | 393 |
 | `leaf` | 763 |
 
-- **Proposed claims demoted by upstream:** 140
+- **Proposed claims demoted by upstream:** 138
 - **Citation cycles detected:** 61
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1169
-- runners with (C) first-principles compute hits: 546
-- runners with (D) external comparator hits: 289
+- runners classified: 1170
+- runners with (C) first-principles compute hits: 547
+- runners with (D) external comparator hits: 290
 - decoration candidates (no C, no D): 82
 
 ## Top 25 by load-bearing score (topology only)
@@ -84,8 +84,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 17 | `native_gauge_closure_note` | critical | 307 | 17.77 | `audited_clean` | **retained** |
 | 18 | `left_handed_charge_matching_note` | critical | 267 | 17.57 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `ckm_atlas_axiom_closure_note` | critical | 76 | 17.27 | `audited_conditional` | ~~audited_conditional~~ |
-| 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 122 | 16.44 | `audited_conditional` | ~~audited_conditional~~ |
-| 21 | `plaquette_self_consistency_note` | critical | 263 | 16.04 | `unaudited` | ~~audited_conditional~~ |
+| 20 | `plaquette_self_consistency_note` | critical | 264 | 16.55 | `unaudited` | ~~audited_conditional~~ |
+| 21 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 122 | 16.44 | `audited_conditional` | ~~audited_conditional~~ |
 | 22 | `physical_lattice_necessity_note` | critical | 301 | 15.74 | `audited_conditional` | ~~audited_conditional~~ |
 | 23 | `rconn_derived_note` | critical | 264 | 15.55 | `audited_conditional` | ~~audited_conditional~~ |
 | 24 | `higgs_mass_derived_note` | critical | 260 | 15.53 | `audited_conditional` | ~~audited_conditional~~ |

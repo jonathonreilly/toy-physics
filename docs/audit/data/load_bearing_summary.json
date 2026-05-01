@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-05-01T22:29:38.720832+00:00",
+  "computed_at": "2026-05-01T22:30:38.730279+00:00",
   "criticality_counts": {
-    "critical": 90,
+    "critical": 91,
     "high": 325,
     "leaf": 831,
     "medium": 422
   },
   "flagship_signal_used": false,
-  "node_count": 1668,
+  "node_count": 1669,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -132,16 +132,16 @@
       "transitive_descendants": 76
     },
     {
+      "claim_id": "plaquette_self_consistency_note",
+      "criticality": "critical",
+      "load_bearing_score": 16.55,
+      "transitive_descendants": 264
+    },
+    {
       "claim_id": "r_base_group_theory_derivation_theorem_note_2026-04-24",
       "criticality": "critical",
       "load_bearing_score": 16.443,
       "transitive_descendants": 122
-    },
-    {
-      "claim_id": "plaquette_self_consistency_note",
-      "criticality": "critical",
-      "load_bearing_score": 16.044,
-      "transitive_descendants": 263
     },
     {
       "claim_id": "physical_lattice_necessity_note",
