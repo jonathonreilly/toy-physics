@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:36:44.850180+00:00
+**Generated:** 2026-05-01T20:38:06.763618+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 173 |
-| support | 148 |
+| support | 147 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 927 |
+| ~~audited_conditional~~ | 928 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 298 |
-| `audited_conditional` | 630 |
+| `audited_conditional` | 631 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 537 |
+| `unaudited` | 536 |
 
 | criticality | count |
 |---|---:|
@@ -907,6 +907,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `quark_endpoint_denominator_admissibility_note_2026-04-19` | _proposed_no_go_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `quark_issr1_bicac_forcing_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | B | `quark_projector_ray_phase_completion_note_2026-04-18` |
 | `quark_route2_exact_readout_map_note_2026-04-19` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `quark_up_amplitude_provenance_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -12764,6 +12765,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Any S3-equivariant Hermitian Ward endomorphism on the hw=1 generation triplet lies in the two-dimensional commutant aI+bJ and therefore has at most a singlet eigenvalue plus a doubly-degenerate E eigenvalue.  _(class `C`)_
 - **chain closes:** True — The source states a finite representation-theoretic no-go and the runner verifies the S3 permutation representation, A1+E decomposition, commutant dimension, eigenvalue degeneracy, and the need for extra symmetry breaking. It does not claim retained quark Yukawa values.
 - **rationale:** The load-bearing no-go is a finite-dimensional Schur-commutant calculation, and the live runner returns TOTAL: PASS=44, FAIL=0 while checking the relevant authority surfaces and the reflection-breaking boundary. The conclusion is limited correctly: S3 equivariance alone cannot produce three generation-stratified Ward eigenvalues, so a future positive route must add a source/readout/symmetry-breaking primitive. Residual risk is only the usual support-tier boundary: this clean audit ratifies the negative representation-theory boundary, not any non-top quark mass prediction.
+- **auditor confidence:** high
+
+### `quark_issr1_bicac_forcing_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** JTS is derived on the exact affine physical carrier, and exact 1(+)5 completeness supplies a_u + a_d sin_d = sin_d, so Pi(psi_phys)=Pi(p) at kappa=1.  _(class `C`)_
+- **chain closes:** False — The runner verifies the local algebra and returns PASS=13, FAIL=0. The note's own executive summary says two retained ingredients are load-bearing, but the companion theorem and residue notes are not ledger dependencies on this row.
+- **rationale:** Issue: the algebraic forcing check reproduces, but the claimed ISSR1 closure imports the affine-carrier JTS theorem and exact 1(+)5 completeness/pinning identity as retained ingredients without explicit dependency edges. Why this blocks: a hostile reviewer can accept the runner's finite algebra while still rejecting the packet as closed from this row alone because its load-bearing theorem inputs are external. Repair target: add the companion JTS theorem and residue/completeness notes as ledger dependencies, or narrow this row to a conditional calculation given those ingredients. Claim boundary until fixed: given the imported carrier and completeness theorems, kappa=1 closes ISSR1; the row does not independently prove those upstream ingredients.
+- **open / conditional deps cited:**
+  - `QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`
+  - `QUARK_JTS_RESIDUE_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27`
