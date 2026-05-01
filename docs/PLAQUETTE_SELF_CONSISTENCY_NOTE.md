@@ -1,8 +1,44 @@
 # Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant
 
-**Date:** 2026-04-15  
-**Status:** proposed_retained evaluation theorem (no free parameter), with exact bridge-support stack
+**Date:** 2026-04-15 (status amended 2026-05-01)
+**Status:** bounded - same-surface evaluation theorem on a bounded analytic
+            scope: `<P>(beta=6, SU(3), 4D)` is a uniquely determined
+            partition-function observable (structural claim) and the
+            canonical numerical value `0.5934` is the MC-evaluated readout
+            on that surface (numerical claim). The exact analytic
+            framework-point insertion at `beta = 6` is **not** closed by
+            this note; the bridge-support stack documented below sharpens
+            the residual gap without removing it. Author tier on
+            2026-05-01 amended from `proposed_retained` to `bounded`.
 **Script:** `scripts/frontier_plaquette_self_consistency.py`
+
+## Status amendment 2026-05-01 (audit-driven scope sharpening)
+
+The 2026-04-30 Codex audit pass returned `audited_conditional` on this row
+with the rationale that the load-bearing step "still imports unratified
+direct authority" from the bridge-support stack and that the explicit
+analytic `beta = 6` insertion remains open. Subsequent audit feedback on
+the downstream `ALPHA_S_DERIVED_NOTE.md` (2026-04-29) phrased the same
+point downstream:
+
+> the plaquette dependency itself says the exact analytic beta=6 insertion
+> is not closed.
+
+The honest response is to scope this note explicitly bounded rather than
+to assert `proposed_retained` over an open analytic insertion. The Status
+line above now reads `bounded`. The narrower structural claim of the note
+- that `<P>(beta=6, SU(3), 4D)` is a uniquely defined observable of the
+retained partition function and is therefore not a free parameter -
+remains in force as the bounded same-surface claim. The numerical value
+`0.5934` remains the canonical MC-evaluated reuse number for downstream
+lanes, with the explicit caveat that it is bounded by the MC evaluation
+envelope, not by an analytic theorem. Downstream lanes should read this
+row as `bounded` and structure their own audit packets accordingly. The
+matching downstream bridge that closes the v -> M_Z transfer under the
+same bounded discipline lives in
+`QCD_LOW_ENERGY_RUNNING_BRIDGE_NOTE_2026-05-01.md` (referenced by file
+path rather than as a one-hop link to avoid a citation back-edge into
+the downstream consumer).
 
 ## Framework-point context
 
@@ -279,16 +315,58 @@ with the understanding that the number is:
 - not imported from experiment
 - not a free parameter
 
-## Scope
+## Scope (bounded by construction)
 
 This note does **not** by itself upgrade the plaquette to a fully analytic
 physical-vacuum theorem at the framework point `beta = 6`. It does not migrate
 the full repo-wide numeric package from the historical same-surface value
-`0.5934` to an analytic replacement.
+`0.5934` to an analytic replacement. The audit ledger's verdict on the
+exact `beta = 6` insertion is therefore explicitly carried forward as the
+defining bounded scope of this note.
 
-It claims the narrower and sufficient point needed by the package:
+It claims the narrower and sufficient point needed by the package, scoped
+as `bounded` and not as `proposed_retained`:
 
 > the plaquette is a uniquely determined observable of the retained theory,
 > Monte Carlo is same-surface evaluation of that observable rather than
 > parameter fitting, and the exact bridge-support stack materially narrows the
 > remaining analytic insertion gap without yet closing it.
+
+### Explicit window of the bounded analytic insertion
+
+The bridge-support stack pins the analytic candidate at
+
+```text
+P(6) = 0.593530679977098,
+```
+
+`+0.022%` above the canonical same-surface value `0.5934`. That candidate
+is **not** the same-surface plaquette: it is the current best analytic
+upper-bound estimate from the closed implicit-reduction-law lane plus
+the explicit Perron reference solves. The honest analytic window is
+therefore
+
+```text
+0.5934 <= <P>(beta = 6) <= 0.59353,
+```
+
+bounded below by the canonical MC-evaluated readout and above by the
+analytic candidate from the support stack. Closure of this window
+(removal of the strict-inequality slack) is open work and is the
+target of the upstream support stack listed under "Exact bridge-support
+stack on `main`".
+
+### Boundary against downstream lanes
+
+Downstream consumers (notably the lane recorded in
+`ALPHA_S_DERIVED_NOTE.md`) must read this row as `bounded`.
+Effective-status propagation therefore caps any rows that depend on
+`<P>` at `bounded` until the analytic insertion gap is closed. The
+`QCD_LOW_ENERGY_RUNNING_BRIDGE_NOTE_2026-05-01.md` lane runs under the
+same `bounded` discipline so that `alpha_s(M_Z) = 0.1181` inherits a
+documented one-hop running bridge and a documented upstream plaquette
+dependency, with both contributors explicitly bounded rather than
+spuriously `proposed_retained`. Both downstream notes are mentioned by
+file path rather than as one-hop markdown links, since they are
+downstream consumers of this plaquette claim and turning them into
+graph deps would create citation cycles.

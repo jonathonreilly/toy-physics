@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T22:29:38.611217+00:00",
+  "generated_at": "2026-05-01T22:30:38.624448+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -11136,6 +11136,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_graph_first_su3_integration.py"
+    },
+    "qcd_low_energy_running_bridge_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 21
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_qcd_low_energy_running_bridge.py"
     },
     "qnm_hardening_feasibility_note": {
       "assert_count": 0,
@@ -26219,6 +26231,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_qcd_low_energy_running_bridge.py": {
+      "assert_count": 1,
+      "claims": [
+        "qcd_low_energy_running_bridge_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 21
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_quark_bicac_endpoint_obstruction_theorem.py": {
       "assert_count": 2,
       "claims": [
@@ -32653,11 +32680,11 @@
       "A": 7,
       "B": 122,
       "C": 453,
-      "D": 184,
+      "D": 185,
       "none": 403
     },
-    "runners_classified": 1169,
-    "runners_with_C": 546,
-    "runners_with_D": 289
+    "runners_classified": 1170,
+    "runners_with_C": 547,
+    "runners_with_D": 290
   }
 }
