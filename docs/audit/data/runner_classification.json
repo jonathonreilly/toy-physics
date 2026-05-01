@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T02:10:11.695239+00:00",
+  "generated_at": "2026-05-01T02:12:33.205842+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14989,6 +14989,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_ward_identity_derivation.py"
     },
+    "yt_ward_ratio_stationarity_no_go_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_ward_ratio_stationarity_no_go.py"
+    },
     "yt_zero_import_authority_note": {
       "assert_count": 0,
       "counts": {
@@ -29084,6 +29096,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_ward_ratio_stationarity_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_ward_ratio_stationarity_no_go_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_zero_import_chain.py": {
       "assert_count": 0,
       "claims": [
@@ -32636,13 +32663,13 @@
     "decoration_candidates": 86,
     "dominant_class_distribution": {
       "A": 7,
-      "B": 124,
+      "B": 125,
       "C": 445,
       "D": 187,
       "none": 404
     },
-    "runners_classified": 1167,
+    "runners_classified": 1168,
     "runners_with_C": 537,
-    "runners_with_D": 289
+    "runners_with_D": 290
   }
 }

@@ -7909,6 +7909,10 @@
       "to": "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01"
     },
     {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "yt_ward_ratio_stationarity_no_go_note_2026-05-01"
+    },
+    {
       "from": "yt_eft_bridge_theorem",
       "to": "yt_zero_import_authority_note"
     },
@@ -8455,6 +8459,10 @@
     {
       "from": "yt_planck_double_criticality_selector_note_2026-04-30",
       "to": "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01"
+    },
+    {
+      "from": "yt_planck_double_criticality_selector_note_2026-04-30",
+      "to": "yt_ward_ratio_stationarity_no_go_note_2026-05-01"
     },
     {
       "from": "yt_right_handed_species_dependence_note_2026-04-18",
@@ -18473,7 +18481,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T02:10:05.747227+00:00",
+  "generated_at": "2026-05-01T02:12:26.302618+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39400,9 +39408,10 @@
         "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
         "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
         "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
-        "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01"
+        "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01",
+        "yt_ward_ratio_stationarity_no_go_note_2026-05-01"
       ],
-      "note_hash": "538e272836a929ae387c99cb78e03ca708e932079f946e958c94725794000ed4",
+      "note_hash": "280fb93aa11461646a881342d427e1eb466f8dd4fd7a52c4335972a3bdfde9dd",
       "path": "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_direct_lattice_correlator.py",
       "title": "Direct Lattice-Correlator Top-Yukawa Measurement Gate"
@@ -39976,9 +39985,10 @@
         "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
         "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
         "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
-        "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01"
+        "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01",
+        "yt_ward_ratio_stationarity_no_go_note_2026-05-01"
       ],
-      "note_hash": "74fa912873fcd7a5e3987a77df4c85ca97d99ed1292bc48228b6c48f2d4b54cb",
+      "note_hash": "92a8e5e471753db21fd9956787763b3ab19d9daf9d5663d157b6252d788873f3",
       "path": "docs/YT_PLANCK_DOUBLE_CRITICALITY_SELECTOR_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_planck_double_criticality_selector.py",
       "title": "YT Planck Double-Criticality Selector Note"
@@ -40270,6 +40280,16 @@
       "path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
       "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
       "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)"
+    },
+    "yt_ward_ratio_stationarity_no_go_note_2026-05-01": {
+      "claim_id": "yt_ward_ratio_stationarity_no_go_note_2026-05-01",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact-negative-boundary",
+      "deps": [],
+      "note_hash": "aaf537386b3675250cd89c5a4d769416ec9def345a5017f5cac4b165f4447cee",
+      "path": "docs/YT_WARD_RATIO_STATIONARITY_NO_GO_NOTE_2026-05-01.md",
+      "runner_path": "scripts/frontier_yt_ward_ratio_stationarity_no_go.py",
+      "title": "YT Ward-Ratio Stationarity No-Go Note"
     },
     "yt_zero_import_authority_note": {
       "claim_id": "yt_zero_import_authority_note",
@@ -41506,23 +41526,24 @@
     "yt_top_mass_ward_decomp_no_go_note_2026-04-30",
     "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
     "yt_ward_identity_derivation_theorem",
+    "yt_ward_ratio_stationarity_no_go_note_2026-05-01",
     "yt_zero_import_chain_note",
     "yukawa_color_projection_theorem",
     "z2_hw1_mass_matrix_parametrization_note"
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4618,
+    "edge_count": 4620,
     "leaf_count": 730,
-    "node_count": 1674,
-    "root_count": 1191,
-    "runners_with_path": 1237,
+    "node_count": 1675,
+    "root_count": 1192,
+    "runners_with_path": 1238,
     "status_counts": {
       "bounded": 447,
       "open": 50,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 384,
+      "support": 385,
       "unknown": 419
     }
   }

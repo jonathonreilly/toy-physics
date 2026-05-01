@@ -1,0 +1,23 @@
+{
+  "actual_current_surface_status": "no-go / exact-negative-boundary",
+  "fail_count": 0,
+  "firewall": {
+    "ratio_is_posterior": true,
+    "ward_forbidden": true
+  },
+  "numeric": {
+    "beta_lambda_at_y_star": -2.7755575615628914e-17,
+    "beta_lambda_at_y_ward": 0.12795483815467723,
+    "g1_pl": 0.616606405644556,
+    "g2_pl": 0.5063564409818467,
+    "g3_pl": 0.4871205008109257,
+    "g3_relative_gap": 0.9559144549926278,
+    "g3_required_for_ward_stationarity": 0.9527660288593377,
+    "y_star": 0.38896510249386823,
+    "y_ward": 0.19886611170596125
+  },
+  "pass_count": 7,
+  "remaining_open_premise": "beta_lambda(M_Pl)=0 remains independent of any future Ward-ratio repair",
+  "target": "test whether y_t/g_s=1/sqrt(6) implies beta_lambda(M_Pl)=0",
+  "verdict": "The Ward ratio does not imply Planck quartic beta stationarity. At the selector's Planck gauge point, y_t=g3/sqrt(6) differs substantially from the beta_lambda=0 value."
+}

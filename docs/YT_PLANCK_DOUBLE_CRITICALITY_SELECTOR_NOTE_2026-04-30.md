@@ -185,6 +185,13 @@ boundary as a perturbative SM beta-vector fixed point.  It cannot: the
 one-loop SM gauge beta functions have only the Gaussian fixed point, and full
 one-loop beta-vector stationarity forces `y_t=0`, not the selector value.
 
+Ward-ratio follow-up:
+[YT_WARD_RATIO_STATIONARITY_NO_GO_NOTE_2026-05-01.md](YT_WARD_RATIO_STATIONARITY_NO_GO_NOTE_2026-05-01.md)
+tests the tempting shortcut from the old Ward ratio to Planck stationarity.
+It fails: at the selector's Planck gauge point, `y_t=g_3/sqrt(6)` gives a
+nonzero `beta_lambda(lambda=0)`, and making the Ward ratio coincide with
+stationarity would require a very different `g_3(M_Pl)`.
+
 Promising attack frames:
 
 1. boundary-action stationarity of the taste scalar at the Planck surface;
@@ -207,6 +214,8 @@ Promising attack frames:
 9. perturbative SM fixed-point / asymptotic-safety reading, now closed
    negatively on the current surface: full beta-vector stationarity gives the
    Gaussian point.
+10. Ward-ratio shortcut, now closed negatively: even a repaired Ward ratio
+    would not by itself imply Planck quartic beta stationarity.
 
 Until that premise is derived, this is a conditional selector and a route
 portfolio upgrade, not a retained-grade theorem.

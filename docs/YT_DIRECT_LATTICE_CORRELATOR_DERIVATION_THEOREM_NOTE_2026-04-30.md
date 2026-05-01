@@ -400,6 +400,12 @@ checks the asymptotic-safety-style shortcut.  The perturbative SM beta-vector
 fixed point is Gaussian at one loop and forces `y_t=0`; partial beta
 conditions would be extra selectors, not a substrate derivation.
 
+Ward-ratio stationarity follow-up:
+[YT_WARD_RATIO_STATIONARITY_NO_GO_NOTE_2026-05-01.md](YT_WARD_RATIO_STATIONARITY_NO_GO_NOTE_2026-05-01.md)
+checks whether the old `y_t/g_s=1/sqrt(6)` ratio could imply
+`beta_lambda(M_Pl)=0`.  It does not.  This keeps the Planck-stationarity
+blocker independent of the Ward/H-unit audited-renaming blocker.
+
 A future passing production certificate must supply this budget:
 
 | Component | Required content |

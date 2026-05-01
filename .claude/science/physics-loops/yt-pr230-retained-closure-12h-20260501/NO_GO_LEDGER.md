@@ -58,3 +58,12 @@ Closed by `docs/YT_ASYMPTOTIC_SAFETY_FIXED_POINT_NO_GO_NOTE_2026-05-01.md` and
 At one loop the SM gauge beta-vector has only the Gaussian fixed point.  Full
 beta-vector stationarity therefore forces `y_t=0`.  Partial beta conditions
 are added selectors unless new UV fixed-point structure is supplied.
+
+## Ward ratio does not imply Planck beta stationarity
+
+Closed by `docs/YT_WARD_RATIO_STATIONARITY_NO_GO_NOTE_2026-05-01.md` and
+`scripts/frontier_yt_ward_ratio_stationarity_no_go.py`.
+
+At the selector's Planck gauge point, `y_t=g_3/sqrt(6)` gives nonzero
+`beta_lambda(lambda=0)`.  Therefore the Planck stationarity blocker is
+independent of any future Ward-ratio repair.
