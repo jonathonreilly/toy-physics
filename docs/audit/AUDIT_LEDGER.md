@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:50:41.802810+00:00
+**Generated:** 2026-05-01T03:54:12.310317+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 239 |
-| support | 200 |
+| support | 199 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 799 |
+| ~~audited_conditional~~ | 800 |
 | ~~audited_failed~~ | 154 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 529 |
+| `audited_conditional` | 530 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 701 |
+| `unaudited` | 700 |
 
 | criticality | count |
 |---|---:|
@@ -486,6 +486,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_cascade_geometry_note_2026-04-14` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
+| `dm_neutrino_hermitian_bridge_carrier_note_2026-04-15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_odd_mixed_bridge_extension_note_2026-04-15` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -4301,6 +4302,23 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** Issue: the proof starts from the retained local post-EWSB Higgs family M(phi), the exact selector V_sel, the 3+1 completed chirality surface, and a weak-axis branch convention, but these inputs are not present as one-hop retained dependencies in the ledger. Why this blocks: the runner proves the algebra after those structures are chosen, not that the framework forces those structures from retained primitives. Repair target: add retained dependencies or an integrated derivation for the Higgs family, selector, 3+1 chirality operator, and weak-axis convention before the Gamma_1 selection step. Claim boundary until fixed: the note can claim a conditional local-operator selection result within that retained family, not an audited standalone Dirac bridge theorem.
 - **open / conditional deps cited:**
   - `DM_NEUTRINO_WEAK_VECTOR_THEOREM_NOTE_2026-04-15.md`
+- **auditor confidence:** high
+
+### `dm_neutrino_hermitian_bridge_carrier_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-dm_neutrino_hermitian_bridge_carrier_note_2026-04-15`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Once the denominator is expressed on the active Hermitian branch, the minimal DM-side carrier is the 4+3 package B_H,min=(A,B,u,v,delta,rho,gamma), optionally extended by (a_sel,e).  _(class `B`)_
+- **chain closes:** False — The runner verifies the Hermitian reconstruction and 4+3 rank decomposition, plus the selector extension. The missing step is the upstream physical bridge that puts the DM denominator on this active Hermitian PMNS carrier in the first place.
+- **rationale:** Issue: the algebraic carrier decomposition is checked, but the note assumes the DM denominator has already been transported onto the active Hermitian neutrino/PMNS branch. Why this blocks: without a clean upstream bridge for that transport, the tuple B_H,min is an exact coordinate carrier for the assumed Hermitian grammar, not a closed DM-side physical carrier theorem. Repair target: register and ratify the active Hermitian source-surface/Dirac bridge and carrier-side conclusion notes that justify the transplant. Claim boundary until fixed: conditional on the active Hermitian branch, the runner verifies the 4+3 minimal carrier and its selector extension exactly.
+- **open / conditional deps cited:**
+  - `DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md`
+  - `PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md`
+  - `DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15`
