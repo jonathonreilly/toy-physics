@@ -1,6 +1,6 @@
 # Lane 2 Physics Loop Handoff
 
-**Updated:** 2026-05-01T11:52:52Z
+**Updated:** 2026-05-01T11:54:20Z
 **Loop slug:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Branch:** `physics-loop/lane2-atomic-scale-block01-20260428`  
@@ -38,6 +38,15 @@ blocked after the required deep-work and stuck-fan-out rules. The run created
 closure remains unjustified without new retained premises for mass/reduced
 mass, low-energy `alpha(0)` threshold/matching transport, and the
 physical-unit Schrodinger/Coulomb sector.
+
+Review PR opened:
+
+```text
+https://github.com/jonathonreilly/cl3-lattice-framework/pull/238
+title: [physics-loop] lane2-atomic-scale-20260428 block01 open
+base: main
+head: physics-loop/lane2-atomic-scale-block01-20260428
+```
 
 The default automation lock path is unavailable for this SSH user:
 
@@ -367,9 +376,9 @@ origin/physics-loop/lane2-atomic-scale-block01-20260428
 
 ## Next Exact Action
 
-The next science action for the continuing supervisor is:
+The next science action is:
 
-1. commit and push the `STOP_REQUESTED` / PR-body package;
-2. open the Block 01 review PR with `gh pr create`;
-3. after PR creation, do not merge; reviewer should evaluate whether the
+1. review PR #238;
+2. do not merge during the loop;
+3. reviewer should evaluate whether the
    open/no-go boundary is accepted as the narrowest honest status.
