@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:08:11.066804+00:00
+**Generated:** 2026-05-01T11:09:44.669879+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 299 |
+| `audited_clean` | 300 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 543 |
+| `unaudited` | 542 |
 
 | criticality | count |
 |---|---:|
@@ -352,6 +352,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_right_conjugacy_invariant_no_go_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
 | `pmns_selector_three_identity_support_proposal_readme_2026-04-21` | support | ~~audited_clean~~ | support | cross_family | codex-current | D | - |
 | `pmns_sole_axiom_hw1_source_transfer_boundary_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `pmns_twisted_flux_transfer_holonomy_boundary_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -12374,6 +12375,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** On the aligned hw=1 active patch, the transfer kernel T_seed=xbar I + ybar(C+C^2) has a dominant symmetric mode and a degenerate orthogonal mode whose eigenvalues reconstruct xbar and ybar exactly, while the projection remains blind to the 5-real off-seed source.  _(class `A`)_
 - **chain closes:** False — The runner verifies the circulant-kernel eigenvalue algebra, but the identification of this hard-coded kernel with the native PMNS transfer operator and the boundary to the active off-seed source are asserted without declared dependencies.
 - **rationale:** Issue: the runner gives a correct algebraic check (PASS=10/FAIL=0) for a 3x3 circulant transfer kernel and shows the aligned seed pair can be reconstructed from its modes. What is not closed in this row is the physical/native identification: that this specific kernel is the hw=1 PMNS transfer law, that xbar/ybar are the active seed pair, and that the 5-real off-seed source is the relevant missing carrier. Why this blocks: the eigenvalue identities are exact, but clean audit of the selector law needs the PMNS active-patch and transfer-kernel construction as declared retained inputs. Repair target: declare the active-patch/weak-axis seed and transfer-operator authorities, or narrow the note to the pure circulant-kernel algebra. Claim boundary until fixed: support-level algebraic seed-pair reconstruction conditional on the imported PMNS transfer-kernel interpretation; not an independently closed microscopic PMNS value law.
+- **auditor confidence:** high
+
+### `pmns_twisted_flux_transfer_holonomy_boundary_note`
+
+- **Note:** [`PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md`](../../docs/PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The twisted flux transfer kernel exactly recovers (xbar, ybar, phi), but a single flux holonomy has a two-real kernel on the three-real reduced PMNS oriented-cycle carrier and therefore does not select a unique PMNS point.  _(class `C`)_
+- **chain closes:** True — The registered runner completes with PASS=16 FAIL=0, verifying exact fluxed spectral/holonomy recovery, demonstrating the two-real kernel on the reduced carrier, and checking the circularity guard.
+- **rationale:** Clean within the note's support-boundary scope. The note does not claim full PMNS value selection; it records a partial positive value law for the fluxed transfer carrier and the remaining one-holonomy obstruction on the reduced PMNS cycle family. The current runner verifies Hermiticity, Fourier diagonalization, exact recovery of xbar/ybar/phi, two independent kernel directions for the one-angle holonomy, shared holonomy for distinct reduced-channel points, and no PMNS target inputs. Residual risk is the declared one-holonomy limitation: further dynamics or an admitted extension would still be needed for positive PMNS selection.
 - **auditor confidence:** high
 
 ### `pmns_uniform_scalar_deformation_boundary_note`
