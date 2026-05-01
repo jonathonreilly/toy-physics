@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T22:18:23.353314+00:00
+**Generated:** 2026-05-01T22:19:54.947138+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 55 |
+| **retained_no_go** | 56 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 18 |
+| _proposed_no_go_ | 17 |
 | bounded | 163 |
 | support | 133 |
 | open | 6 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 303 |
+| `audited_clean` | 304 |
 | `audited_conditional` | 653 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 506 |
+| `unaudited` | 505 |
 
 | criticality | count |
 |---|---:|
@@ -336,6 +336,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_record_overlap_kernel_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_record_refinement_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `planck_finite_response_no_go_note_2026-04-24` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `pmns_c3_character_mode_reduction_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `pmns_corner_transport_active_block_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
@@ -11788,6 +11789,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `primitive_c_cell_equals_one_fourth_theorem_not_registered`
   - `gravitational_boundary_action_carrier_identification_theorem_open`
+- **auditor confidence:** high
+
+### `planck_finite_response_no_go_note_2026-04-24`
+
+- **Note:** [`PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md`](../../docs/PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The finite frame has an open identity neighborhood containing no nontrivial transformation, so finite automorphisms alone have zero infinitesimal tangent while local metric/coframe response requires nonzero symmetric directions.  _(class `A`)_
+- **chain closes:** True — The no-go follows from exact finite-group geometry: signed permutations in the four-axis frame have a positive Frobenius identity gap, so they cannot generate arbitrarily small metric/coframe perturbations. The one cited dependency is the already-clean hidden-character no-go and is not needed to bridge the finite-response obstruction.
+- **rationale:** The load-bearing step is an exact algebraic/topological obstruction for a finite signed-permutation group, not a numerical fit or a hidden physical identification. The runner checks the group order, nearest nonidentity distance, absence of a small nontrivial identity neighborhood, mismatch with the ten-dimensional linearized metric-response space, a small perturbation outside the finite orbit, and the finite-dimensional trace obstruction to a canonical commutator. Residual risk is only the separate positive Planck route through a realified response surface and carrier-identification theorem, which the note explicitly leaves open.
 - **auditor confidence:** high
 
 ### `planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30`

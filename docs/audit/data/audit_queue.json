@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 8,
-    "high": 194,
+    "high": 193,
     "leaf": 171,
     "medium": 133
   },
-  "generated_at": "2026-05-01T22:18:23.074374+00:00",
+  "generated_at": "2026-05-01T22:19:54.709113+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -412,25 +412,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 32
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "planck_finite_response_no_go_note_2026-04-24",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_no_go",
-      "deps": [
-        "planck_parent_source_hidden_character_no_go_note_2026-04-24"
-      ],
-      "direct_in_degree": 9,
-      "load_bearing_score": 9.892,
-      "note_path": "docs/PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_planck_finite_response_nogo.py",
-      "transitive_descendants": 41
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13303,6 +13284,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 100,
-  "total_pending": 506
+  "ready_count": 99,
+  "total_pending": 505
 }
