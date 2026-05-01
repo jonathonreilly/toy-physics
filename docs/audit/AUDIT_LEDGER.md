@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T19:29:37.377495+00:00
+**Generated:** 2026-05-01T19:31:23.507469+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 295 |
+| `audited_clean` | 296 |
 | `audited_conditional` | 606 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 565 |
+| `unaudited` | 564 |
 
 | criticality | count |
 |---|---:|
@@ -372,6 +372,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `staggered_newton_reproduction_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
+| `tensor_block_closure_test_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `tensor_matching_completion_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `tensor_source_map_eta_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `two_sign_comparison_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
@@ -13746,6 +13747,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `bounded_gauge_only_taste_scalar_split_model`
   - `bounded_scalar_only_thermal_cubic_estimate`
+- **auditor confidence:** high
+
+### `tensor_block_closure_test_note`
+
+- **Note:** [`TENSOR_BLOCK_CLOSURE_TEST_NOTE.md`](../../docs/TENSOR_BLOCK_CLOSURE_TEST_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The current restricted strong-field class admits a minimal rank-two tensor completion locally on each audited family, but the source-to-channel map and tensor kernel remain family-sensitive, so a universal tensor completion law is still missing.  _(class `C`)_
+- **chain closes:** True — The runner constructs the exact local O_h and finite-rank families, fits the same rank-two tensor block on both, verifies local mixed-pulse additivity, and then directly computes kernel, eta, and a_star mismatches above the declared thresholds. That supports the bounded no-go statement as a computational result on the two tested families.
+- **rationale:** The bounded claim closes because the runner computes the load-bearing family comparison rather than assuming the non-universality conclusion. It verifies local rank-two sufficiency on both families and independently measures kernel, eta, and completion-amplitude disagreement, so the safe conclusion is exactly the note's bounded no-go: local tensor blocks exist, but no single universal tensor completion law is established. Residual risk is scope, not closure: the audit only ratifies the two-family restricted-class test, not any stronger full gravity theorem.
 - **auditor confidence:** high
 
 ### `tensor_matching_completion_theorem_note`
