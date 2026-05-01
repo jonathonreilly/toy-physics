@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T22:30:39.215868+00:00
+**Generated:** 2026-05-01T22:33:49.820951+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,9 +19,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 75 |
+| **retained** | 76 |
 | **retained_no_go** | 57 |
-| _proposed_retained_ | 2 |
+| _proposed_retained_ | 1 |
 | _proposed_no_go_ | 16 |
 | bounded | 163 |
 | support | 138 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 304 |
+| `audited_clean` | 305 |
 | `audited_conditional` | 652 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 514 |
+| `unaudited` | 513 |
 
 | criticality | count |
 |---|---:|
@@ -358,6 +358,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_five_sixths_scale_selection_boundary_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_lane3_stuck_fanout_synthesis_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `s3_boundary_link_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
@@ -12854,6 +12855,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
   - `QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`
   - `QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27`
+
+- **Note:** [`QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md`](../../docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-agent-quark-lane3-firewall-20260501`  (codex-current; independence=fresh_context)
+- **load-bearing step:** No retained five-mass closure follows unless down-type bridge/scale, up-type partition/amplitude, and species-differentiated Yukawa premises are supplied.  _(class `A`)_
+- **chain closes:** True — The note is a negative retention-boundary claim, not a positive quark-mass derivation. Given the stated missing premises and the runner's guardrail checks, the conclusion that the five non-top masses remain bounded/open rather than retained follows without importing a hidden mass theorem.
+- **rationale:** The load-bearing step is a logical firewall over the current support surface: ratios, CKM closure, and top-channel Ward structure do not by themselves supply absolute five-mass retention. The runner does not prove new quark masses; it checks the negative boundary with repo-state guardrails, algebraic ratio invariance, and comparator no-go/sensitivity checks, all passing with PASS=17 FAIL=0. This is clean only as a retained negative boundary that blocks overpromotion, not as a retained derivation of m_u, m_d, m_s, m_c, or m_b.
 - **auditor confidence:** high
 
 ### `quark_lane3_stuck_fanout_synthesis_2026-04-28`
