@@ -320,6 +320,20 @@ canonical `vertex/sqrt(Z_inverse)` proxy is invariant.  This repairs only the
 source-normalization bookkeeping.  It does not derive the interacting
 denominator, pole location, or residue derivative needed for PR #230 closure.
 
+Exact Feshbach response preservation does not derive common dressing:
+
+```text
+python3 scripts/frontier_yt_feshbach_operator_response_boundary.py
+# SUMMARY: PASS=5 FAIL=0
+```
+
+Schur/Feshbach projection preserves low-energy responses for projected scalar
+and gauge sources, and it preserves their response ratio.  But it is
+operator-specific: rescaling the microscopic scalar source changes the
+scalar/gauge response ratio while Feshbach errors remain at numerical zero.
+Thus crossover response preservation cannot replace a microscopic scalar
+residue/common-dressing theorem.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

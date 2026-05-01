@@ -112,6 +112,11 @@ What changed:
   canonical `vertex/sqrt(Z_inverse)` proxy is invariant.  This removes source
   naming as the final blocker but leaves the interacting denominator, pole
   location, finite-volume/IR limit, and residue derivative open.
+- The Feshbach operator-response block shows exact low-energy projection
+  preserves both scalar and gauge responses when operators are transformed
+  consistently.  This rules out crossover distortion as the main blocker, but
+  it does not derive equality of the underlying scalar and gauge microscopic
+  residues.
 
 The scientific result is narrower than closure:
 

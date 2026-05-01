@@ -27,7 +27,9 @@
    Same-1PI coefficient equality cannot replace this because it fixes only
    `y^2 D_phi`.  Source scaling itself can cancel in a covariant LSZ
    construction, so the hard blocker is now the interacting denominator and
-   residue theorem, not field naming.
+   residue theorem, not field naming.  Exact Feshbach projection preserves
+   projected responses but is operator-specific; it does not supply common
+   scalar/gauge dressing.
 4. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 5. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`

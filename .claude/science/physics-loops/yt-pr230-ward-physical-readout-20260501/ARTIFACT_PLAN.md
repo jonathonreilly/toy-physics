@@ -106,13 +106,17 @@ Completed in block 1:
 - `scripts/frontier_yt_scalar_lsz_normalization_cancellation.py`
 - `outputs/yt_scalar_lsz_normalization_cancellation_2026-05-01.json`
 - `docs/YT_SCALAR_LSZ_NORMALIZATION_CANCELLATION_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_feshbach_operator_response_boundary.py`
+- `outputs/yt_feshbach_operator_response_boundary_2026-05-01.json`
+- `docs/YT_FESHBACH_OPERATOR_RESPONSE_BOUNDARY_NOTE_2026-05-01.md`
 
 Next artifact:
 
 - interacting scalar denominator/residue theorem, interacting
   kinetic-renormalization/matching theorem, or real production/statistics;
   reduced momentum pilots, free-action support, fixed-background sensitivity,
-  and LSZ source-scaling covariance are not closure evidence
+  LSZ source-scaling covariance, and exact Feshbach response preservation are
+  not closure evidence
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

@@ -388,6 +388,32 @@ theorem would make source normalization cancel, and therefore sharpens the
 remaining blocker to the interacting denominator, pole location,
 finite-volume/IR limit, and inverse-propagator derivative.
 
+## Review-Loop Backpressure — Feshbach Operator Response Boundary
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_feshbach_operator_response_boundary.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_feshbach_operator_response_boundary.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The result is not a retained closure bridge.  It confirms exact projection
+preserves projected responses and therefore removes crossover distortion as a
+candidate blocker, while leaving microscopic scalar/gauge residue equality
+undetermined.
+
 ## Review-Loop Backpressure — Momentum Pilot Scaling
 
 Local review-loop disposition:

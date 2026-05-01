@@ -1,0 +1,99 @@
+{
+  "actual_current_surface_status": "exact support / Feshbach response boundary",
+  "dressing_countermodels": [
+    {
+      "effective_scalar_over_gauge_response_abs": 1.334408901680119,
+      "feshbach_ratio_error": 1.2212453270876722e-15,
+      "full_scalar_over_gauge_response_abs": 1.3344089016801184,
+      "scalar_source_scale": 0.75
+    },
+    {
+      "effective_scalar_over_gauge_response_abs": 2.372282491875767,
+      "feshbach_ratio_error": 1.5543122344752192e-15,
+      "full_scalar_over_gauge_response_abs": 2.372282491875766,
+      "scalar_source_scale": 1.0
+    },
+    {
+      "effective_scalar_over_gauge_response_abs": 3.7066913935558867,
+      "feshbach_ratio_error": 3.66205343881779e-15,
+      "full_scalar_over_gauge_response_abs": 3.7066913935558836,
+      "scalar_source_scale": 1.25
+    }
+  ],
+  "fail_count": 0,
+  "pass_count": 5,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Feshbach covariance preserves responses but does not equate distinct microscopic scalar and gauge residues.",
+  "required_next_theorem": [
+    "derive the microscopic scalar source/residue from the retained interacting substrate",
+    "derive equality to the gauge response or carry a measured scalar/gauge dressing ratio",
+    "avoid importing the audited_renaming gauge-crossover theorem as retained authority"
+  ],
+  "rows": [
+    {
+      "effective_scalar_over_gauge_response": [
+        1.5506661872582927,
+        -1.795315737399449
+      ],
+      "full_scalar_over_gauge_response": [
+        1.5506661872582912,
+        -1.795315737399449
+      ],
+      "operator_errors": {
+        "gauge": 5.721958498152797e-17,
+        "scalar": 1.0007415106216802e-16
+      },
+      "ratio_error": 1.5543122344752192e-15,
+      "z": [
+        3.0,
+        0.4
+      ]
+    },
+    {
+      "effective_scalar_over_gauge_response": [
+        2.806404685981625,
+        0.018371957843626833
+      ],
+      "full_scalar_over_gauge_response": [
+        2.806404685981624,
+        0.018371957843626968
+      ],
+      "operator_errors": {
+        "gauge": 2.7755575615628914e-17,
+        "scalar": 1.1188630228279524e-16
+      },
+      "ratio_error": 8.984259995986552e-16,
+      "z": [
+        4.0,
+        0.8
+      ]
+    },
+    {
+      "effective_scalar_over_gauge_response": [
+        1.4753139956362955,
+        0.12577533111370828
+      ],
+      "full_scalar_over_gauge_response": [
+        1.4753139956362962,
+        0.12577533111370826
+      ],
+      "operator_errors": {
+        "gauge": 1.0007415106216802e-16,
+        "scalar": 5.551115123125783e-17
+      },
+      "ratio_error": 6.667118051786499e-16,
+      "z": [
+        5.0,
+        1.2
+      ]
+    }
+  ],
+  "strict_non_claims": [
+    "not a retained y_t derivation",
+    "not a production measurement",
+    "does not use observed top/Higgs/Yukawa values",
+    "does not define y_t through H_unit matrix elements",
+    "does not promote the gauge crossover companion theorem"
+  ],
+  "verdict": "Exact Schur/Feshbach projection preserves low-energy operator responses, including scalar/gauge response ratios, when both operators are projected consistently.  This means crossover projection is not by itself a scalar/gauge dressing distortion.  But the identity is operator-specific: changing the microscopic scalar source changes the scalar/gauge response ratio while Feshbach preservation remains exact.  Therefore this route does not derive the common scalar/gauge dressing needed for PR #230."
+}
