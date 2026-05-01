@@ -1,0 +1,142 @@
+========================================================================================
+LANE 2 ATOMIC RYDBERG GATE FACTORIZATION FAN-OUT
+========================================================================================
+
+Question:
+  After the QED-threshold firewall and NR scale bridge, does any
+  non-overlapping attack frame close retained Rydberg/atomic scale?
+
+Answer:
+  No. The current branch can honestly add exact gate-factorization support
+  and a stuck-fan-out synthesis, while keeping retained closure open.
+
+----------------------------------------------------------------------------------------
+Part 1: repo and loop grounding
+----------------------------------------------------------------------------------------
+  [PASS] required prior surface exists: scripts/frontier_atomic_rydberg_dependency_firewall.py
+  [PASS] required prior surface exists: scripts/frontier_atomic_qed_threshold_bridge_firewall.py
+  [PASS] required prior surface exists: scripts/frontier_atomic_nr_coulomb_scale_bridge.py
+  [PASS] required prior surface exists: .claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_QED_THRESHOLD_BRIDGE_FIREWALL_NOTE_2026-05-01.md
+  [PASS] required prior surface exists: .claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_NR_COULOMB_SCALE_BRIDGE_STRETCH_NOTE_2026-05-01.md
+  [PASS] Lane 2 open stub marks atomic content scaffold-only
+  [PASS] Lane 2 open stub names the three Rydberg prerequisites
+  [PASS] atomic scaffold imports textbook physical units
+  [PASS] 2026-04-27 firewall keeps direct alpha(M_Z) substitution blocked
+  [PASS] loop assumption ledger records alpha(0), m_e, and physical unit map as open
+  [PASS] loop no-go ledger already blocks direct substitution and unit-map promotion
+
+----------------------------------------------------------------------------------------
+Part 2: synthetic gate factorization
+----------------------------------------------------------------------------------------
+  [PASS] synthetic scale bridge agrees for mu=5, alpha=0.2, Z=1, n=1
+  [PASS] synthetic scale bridge agrees for mu=5, alpha=0.2, Z=1, n=2
+  [PASS] synthetic scale bridge agrees for mu=5, alpha=0.2, Z=1, n=3
+  [PASS] synthetic scale bridge agrees for mu=5, alpha=0.2, Z=1, n=4
+  [PASS] synthetic scale bridge agrees for mu=11, alpha=0.07, Z=2, n=1
+  [PASS] synthetic scale bridge agrees for mu=11, alpha=0.07, Z=2, n=2
+  [PASS] synthetic scale bridge agrees for mu=11, alpha=0.07, Z=2, n=3
+  [PASS] synthetic scale bridge agrees for mu=11, alpha=0.07, Z=2, n=4
+  [PASS] synthetic scale bridge agrees for mu=101, alpha=0.011, Z=3, n=1
+  [PASS] synthetic scale bridge agrees for mu=101, alpha=0.011, Z=3, n=2
+  [PASS] synthetic scale bridge agrees for mu=101, alpha=0.011, Z=3, n=3
+  [PASS] synthetic scale bridge agrees for mu=101, alpha=0.011, Z=3, n=4
+  [PASS] mass gate is linearly load-bearing at scale 0.5
+  [PASS] alpha gate is quadratically load-bearing at scale 0.5
+  [PASS] mass gate is linearly load-bearing at scale 2
+  [PASS] alpha gate is quadratically load-bearing at scale 2
+  [PASS] mass gate is linearly load-bearing at scale 3
+  [PASS] alpha gate is quadratically load-bearing at scale 3
+  [PASS] Rydberg energy alone fixes only the product mu*alpha^2  (mu=7, alpha=0.13 and mu=23.4676, alpha=0.071)
+  [PASS] without the physical unit map, the same dimensionless eigenvalue has arbitrary eV scale
+
+----------------------------------------------------------------------------------------
+Part 3: QED threshold frame
+----------------------------------------------------------------------------------------
+  retained charge/count b_QED = 32/3
+  same alpha(M_Z), active_log=0  -> 1/alpha_low=127.670000
+  same alpha(M_Z), active_log=5  -> 1/alpha_low=136.158264
+  same alpha(M_Z), active_log=10 -> 1/alpha_low=144.646527
+  [PASS] retained charge/count frame gives b_QED=32/3
+  [PASS] same alpha(M_Z) and same b_QED leave alpha(0) threshold-underdetermined
+
+----------------------------------------------------------------------------------------
+Part 4: comparator-only falsifiers
+----------------------------------------------------------------------------------------
+  comparator alpha(0) Rydberg E_1      = -13.605693123 eV
+  direct alpha(M_Z) substitution E_1   = -15.675171292 eV
+  relative direct-substitution shift   = +15.21%
+  m_e needed to hide alpha(M_Z) use    = 443535.497664 eV
+  relative hidden m_e shift            = -13.20%
+  log(M_Z/m_e) comparator              = 12.092062
+  active log needed to hit alpha(0)    = 5.517029
+  [PASS] textbook comparator constants reproduce Rydberg scale
+  [PASS] direct alpha(M_Z) substitution is experimentally falsified at order 10 percent  (shift=+15.21%)
+  [PASS] a hidden mass adjustment could absorb the alpha error, so mass and alpha gates are independent  (hidden m_e shift=-13.20%)
+  [PASS] a hidden effective threshold could fit alpha(0), so threshold data are load-bearing
+
+----------------------------------------------------------------------------------------
+Part 5: stuck fan-out synthesis
+----------------------------------------------------------------------------------------
+  A. minimal Coulomb algebra
+    premise: standard NR Coulomb spectrum plus the branch-local scale bridge
+    forbidden: observed Rydberg target; fitted alpha or mass
+    attempt: factor E_n = -mu (Z alpha)^2/(2 n^2)
+    result: only the product mu*alpha^2 is fixed by an energy scale; mu and alpha remain separate retained gates
+    next prerequisite: retained mu/m_e and retained alpha(0), not one fitted product
+
+  B. QED running bridge
+    premise: retained alpha_EM(M_Z) and structural b_QED=32/3
+    forbidden: chosen effective threshold fitted to alpha(0)
+    attempt: run alpha downward with varied threshold placement
+    result: same high endpoint and same b_QED produce different low-energy couplings
+    next prerequisite: threshold-resolved QED decoupling with charged thresholds and hadronic handling
+
+  C. charged-lepton mass gate
+    premise: Lane 2 may record but not work Lane 6/Koide/V0 closure
+    forbidden: deriving y_e or editing charged-lepton branches in this loop
+    attempt: use the atomic scaffold with m_e as retained input
+    result: m_e is absent from Lane 2 and remains an upstream dependency
+    next prerequisite: reviewed Lane 6 electron-mass retention, or an explicit admitted non-derivation comparator
+
+  D. physical-unit kinetic map
+    premise: dimensionless lattice Coulomb companion H_g=-Delta_x-g/r
+    forbidden: choosing lattice spacing from -13.6 eV
+    attempt: map H_g to the physical one-body Hamiltonian
+    result: the exact map works only after a=g/(2 mu Z alpha) is supplied; it is not framework-native yet
+    next prerequisite: retained kinetic normalization/physical length-time unit theorem
+
+  E. scaffold falsifier
+    premise: existing standard-QM hydrogen/helium harness and 2026-04-27 firewall
+    forbidden: treating textbook inputs as framework outputs
+    attempt: compare scaffold success with direct high-scale-alpha substitution
+    result: scaffold success is conditional, while direct alpha(M_Z) fails by order 15 percent
+    next prerequisite: substitute retained upstream gates only after they exist
+
+  [PASS] fan-out covers five orthogonal frames
+  [PASS] no fan-out frame supports retained Rydberg closure on current inputs
+  [PASS] fan-out preserves the alpha(0) transport prerequisite
+  [PASS] fan-out preserves the mass prerequisite
+  [PASS] fan-out preserves the physical-unit prerequisite
+
+----------------------------------------------------------------------------------------
+Part 6: honest Lane 2 status
+----------------------------------------------------------------------------------------
+  Claim-state movement:
+    exact boundary/support packet for gate factorization and stuck fan-out
+
+  Can claim:
+    current Lane 2 Rydberg closure factorizes into independent gates;
+    scaffold success and retained Rydberg closure are now sharply separated;
+    future work has three actionable theorem prerequisites.
+
+  Cannot claim:
+    retained Rydberg constant;
+    retained alpha(0);
+    retained electron/reduced mass;
+    framework-native physical-unit Schrodinger/Coulomb limit.
+  [PASS] narrowest honest status is open with exact gate-factorization support  (not retained atomic-scale closure)
+
+========================================================================================
+PASS=43 FAIL=0
+STATUS: open with exact gate-factorization support; no retained Rydberg closure.
+========================================================================================
