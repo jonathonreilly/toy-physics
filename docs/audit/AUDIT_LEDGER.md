@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:17:15.773161+00:00
+**Generated:** 2026-05-01T05:18:21.710666+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 217 |
-| support | 181 |
+| support | 180 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 819 |
+| ~~audited_conditional~~ | 820 |
 | ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 246 |
-| `audited_conditional` | 550 |
+| `audited_conditional` | 551 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 647 |
+| `unaudited` | 646 |
 
 | criticality | count |
 |---|---:|
@@ -760,6 +760,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_two_amplitude_last_mile_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `newton_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `newton_law_derived_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `nonlinear_born_gravity_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `observable_principle_from_axiom_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `oh_schur_boundary_action_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -10589,6 +10590,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** All checked rows across seeds 0, 1, 2 pass, so the geometry-sector / non-label architecture survives the nearest drift neighborhood at fixed restore = 0.7.  _(class `C`)_
 - **chain closes:** True — The live full sweep reproduces the 3 by 3 drift/seed table: every row has zero baseline, neutral cancellation, opposite signed response, double-charge response, and exponent near 1.0. The source keeps the conclusion to a narrow local drift basin and cites the now-clean restore-basin anchor.
 - **rationale:** The load-bearing claim is finite and runner-backed: at restore = 0.7, drifts 0.15, 0.20, and 0.25 pass for seeds 0, 1, and 2 under the stated zero, neutral, sign, and charge-scaling checks. The live sweep reproduces all nine rows, and the directly named restore-basin anchor is already audited_clean for its own fixed neighborhood. Residual risk is only the declared local-sweep scope; this does not retain a family-wide transfer theorem, multi-restore/multi-drift basin, or architecture-independent non-label law.
+- **auditor confidence:** high
+
+### `nonlinear_born_gravity_note`
+
+- **Note:** [`NONLINEAR_BORN_GRAVITY_NOTE.md`](../../docs/NONLINEAR_BORN_GRAVITY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** In the tested linear/quadratic/cubic lattice propagators, the linear propagator has I_3 = 0 and attractive gravity, while the two nonlinear propagators have I_3 != 0 and repulsive gravity.  _(class `C`)_
+- **chain closes:** False — The runner verifies the stated correlation for the specific toy propagators and lattice setup, but it does not prove the general theorem that Born-rule validity and attractive Newtonian gravity are both forced by linear amplitude superposition. The causal/general claim remains broader than the finite tested family.
+- **rationale:** Issue: the executable evidence is a finite toy-model stress test over three propagator choices, while the prose interprets it as a general link between Born-rule linearity and attractive gravity. Why this blocks: a finite simulation cannot rule over arbitrary nonlinear propagator deformations or prove the physical diamond-NV/gravity implication without a general theorem connecting the propagator nonlinearity to the gravitational source law. Repair target: either narrow the note to the tested propagator family, or add a theorem deriving the force-sign/Born-rule correlation for the admissible propagator class. Claim boundary until fixed: the tested linear/quadratic/cubic models show the reported correlation; the broad causal conclusion remains conditional.
 - **auditor confidence:** high
 
 ### `observable_principle_from_axiom_note`
