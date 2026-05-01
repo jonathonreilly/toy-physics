@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:49:56.318798+00:00
+**Generated:** 2026-05-01T20:51:13.177544+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 173 |
+| bounded | 172 |
 | support | 141 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 933 |
+| ~~audited_conditional~~ | 934 |
 | ~~audited_failed~~ | 83 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 300 |
-| `audited_conditional` | 636 |
+| `audited_conditional` | 637 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 528 |
+| `unaudited` | 527 |
 
 | criticality | count |
 |---|---:|
@@ -919,6 +919,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_up_amplitude_provenance_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `quasi_persistent_relaunch_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `rconn_derived_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `retardation_discriminator_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -13000,6 +13001,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `QUARK_UP_AMPLITUDE_PROVENANCE_AUDIT_NOTE_2026-04-19.md`
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
 - **auditor confidence:** high
+
+### `quasi_persistent_relaunch_probe_note`
+
+- **Note:** [`QUASI_PERSISTENT_RELAUNCH_PROBE_NOTE.md`](../../docs/QUASI_PERSISTENT_RELAUNCH_PROBE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the retained h=0.5, W=8, L=6 ordered-lattice segment, the best square-window and top-N relaunch surrogates reproduce the frozen capture, TV-distance, and relative-delta-error metrics while remaining broad enough to avoid persistent-mass closure.  _(class `C`)_
+- **chain closes:** False — The numerical result is reproducible, but the audit chain is conditional on adding an asserted/classified runner surface and explicit retained-family dependencies.
+- **rationale:** Issue: the current runner reproduces the frozen numerical table, but it is a reporting script with no PASS/FAIL assertions and no classified load-bearing checks; the ordered-lattice harness and retained-family assumptions are also not registered as ledger dependencies. Why this blocks: a clean audit needs an executable check surface that would fail on changed surrogate metrics or changed family assumptions, not just a printed table matching the note by inspection. Repair target: add explicit assertions for the frozen best square/top-N metrics and thresholds, emit classified PASS lines for the simulation checks, and register the ordered-lattice/control dependencies. Claim boundary until fixed: the current run reproduces the bounded quasi-persistent surrogate metrics and supports the modest statement that broad mesoscopic compression can preserve downstream response, without persistent inertial-mass closure.
+- **open / conditional deps cited:**
+  - `scripts/quasi_persistent_relaunch_probe.py`
+  - `scripts/two_body_momentum_harness.py`
 
 ### `r_base_group_theory_derivation_theorem_note_2026-04-24`
 
