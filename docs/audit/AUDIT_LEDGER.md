@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:41:59.861583+00:00
+**Generated:** 2026-05-01T03:43:47.104233+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 241 |
+| bounded | 240 |
 | support | 201 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 796 |
+| ~~audited_conditional~~ | 797 |
 | ~~audited_failed~~ | 154 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 231 |
-| `audited_conditional` | 526 |
+| `audited_conditional` | 527 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 705 |
+| `unaudited` | 704 |
 
 | criticality | count |
 |---|---:|
@@ -619,6 +619,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_wider_w4_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hard_geometry_gravity_window_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hard_geometry_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `hierarchy_bosonic_bilinear_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hierarchy_matsubara_decomposition_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_from_lattice_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `higgs_mass_derived_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
@@ -7369,6 +7370,22 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** This note records the local hard-geometry pilot that asked whether a  _(class `D`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 2 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `hierarchy_bosonic_bilinear_selector_note`
+
+- **Note:** [`HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md`](../../docs/HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-hierarchy_bosonic_bilinear_selector_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Because the physical EWSB order parameter is taken to be a local bosonic CPT-even bilinear, the APBC temporal support is forced to the unique minimal resolved sign-and-conjugation closed orbit Lt=4.  _(class `B`)_
+- **chain closes:** False — The APBC orbit enumeration and the Lt=4 correction are verified by the runner. The bridge from the physical EWSB order parameter to this specific local bosonic CPT-even bilinear selector, and the hierarchy baseline M_Pl*alpha_LM^16, are imported assumptions rather than registered clean dependencies here.
+- **rationale:** Issue: the exact Lt=4 orbit result follows only after accepting the physical-order-parameter identification and the imported hierarchy baseline. Why this blocks: the runner checks the APBC orbit combinatorics and the numerical hierarchy value, but it does not derive that EWSB must use this bosonic bilinear selector from retained inputs. Repair target: provide a retained theorem identifying the EWSB order parameter with the local bosonic CPT-even bilinear selector and register the baseline alpha_LM hierarchy input as a clean dependency. Claim boundary until fixed: on the exact minimal APBC block and granted order-parameter identification, Lt=4 is the unique minimal resolved orbit and gives the stated bounded hierarchy value.
+- **open / conditional deps cited:**
+  - `HIERARCHY_SPATIAL_BC_AND_U0_SCALING_NOTE.md`
+  - `HIGGS_MASS_HIERARCHY_CORRECTION_NOTE.md`
+  - `scripts/canonical_plaquette_surface.py`
 - **auditor confidence:** high
 
 ### `hierarchy_effective_potential_endpoint_note`
