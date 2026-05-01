@@ -12,8 +12,10 @@
    kernel, eigenvalue crossing, and pole residue.
 3. **Full scalar pole-residue/common-dressing theorem.** The current analytic
    surface is underdetermined, and the key-blocker closure attempt found no
-   existing repo authority that supplies it.  A positive route needs the actual
-   interacting scalar source two-point function or a new retained symmetry.
+   existing repo authority that supplies it.  The Legendre transform itself
+   leaves a source/field rescaling freedom, so a positive route needs the actual
+   momentum-dependent interacting scalar source two-point function or a new
+   retained symmetry.
 4. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 5. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`

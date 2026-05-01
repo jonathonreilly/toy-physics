@@ -62,3 +62,15 @@ am0 + delta_m = constant
 The subtracted correlator is invariant under changes in the absolute rest mass;
 the residual-mass decomposition is nonunique until a matching condition fixes
 the physical sum.
+
+Legendre normalization boundary:
+
+```text
+W_k(J) = W(k J)
+phi_k = dW_k/dJ = k phi
+Gamma_k(phi_k) = Gamma(phi_k/k)
+```
+
+The source Legendre transform is exact, but it is covariant under source/field
+rescaling.  It does not select `kappa_H = 1` without an additional physical
+pole-residue or canonical kinetic normalization condition.

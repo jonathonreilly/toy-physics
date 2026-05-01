@@ -8,8 +8,9 @@ obstruction, current-surface scalar pole-residue no-go, retained-closure route
 certificate, direct-measurement scale requirements, key-blocker closure
 attempt, scalar source two-point stretch, stuck fan-out, HS/RPA pole-condition
 attempt, scalar ladder-kernel scout, scalar ladder kernel input audit,
-scalar ladder projector-normalization obstruction, and HQET direct-route
-requirements, and static mass matching obstruction
+scalar ladder projector-normalization obstruction, HQET direct-route
+requirements, static mass matching obstruction, and Legendre kappa
+gauge-freedom obstruction
 **PR:** #230 draft branch
 
 ```yaml
@@ -34,6 +35,8 @@ Allowed wording:
 - route requirement / no-go for HQET as a zero-import absolute-mass shortcut;
 - exact negative boundary for static residual-mass matching without an
   independent physical matching condition;
+- exact negative boundary for selecting `kappa_H` from the Legendre transform
+  alone;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
@@ -104,5 +107,8 @@ python3 scripts/frontier_yt_hqet_direct_route_requirements.py
 # SUMMARY: PASS=7 FAIL=0
 
 python3 scripts/frontier_yt_static_mass_matching_obstruction.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_legendre_kappa_gauge_freedom.py
 # SUMMARY: PASS=6 FAIL=0
 ```

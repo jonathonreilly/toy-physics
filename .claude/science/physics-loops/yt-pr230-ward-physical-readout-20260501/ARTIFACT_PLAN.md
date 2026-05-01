@@ -62,13 +62,15 @@ Completed in block 1:
 - `scripts/frontier_yt_static_mass_matching_obstruction.py`
 - `outputs/yt_static_mass_matching_obstruction_2026-05-01.json`
 - `docs/YT_STATIC_MASS_MATCHING_OBSTRUCTION_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_legendre_kappa_gauge_freedom.py`
+- `outputs/yt_legendre_kappa_gauge_freedom_2026-05-01.json`
+- `docs/YT_LEGENDRE_KAPPA_GAUGE_FREEDOM_NOTE_2026-05-01.md`
 
 Next artifact:
 
-- scalar projector/source-normalization theorem from the interacting scalar
-  two-point function, a new independent observable fixing the heavy matching
-  mass, fine-scale direct measurement certificate, or another retained-positive
-  route from the queue
+- momentum-dependent scalar two-point pole/kinetic normalization theorem, a new
+  independent observable fixing the heavy matching mass, fine-scale direct
+  measurement certificate, or another retained-positive route from the queue
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

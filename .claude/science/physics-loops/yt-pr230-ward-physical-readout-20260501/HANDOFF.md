@@ -54,6 +54,10 @@ What changed:
 - The formal static matching obstruction is now explicit: `am0 + delta_m` is
   nonunique after rephasing, and the same subtracted correlator supports
   different absolute top masses.
+- The Legendre/source route is now bounded at the normalization level:
+  source/field rescaling preserves the Legendre transform while changing
+  curvature and `y_readout`, so `kappa_H` needs a pole-residue or canonical
+  kinetic theorem.
 
 The scientific result is narrower than closure:
 
@@ -64,9 +68,9 @@ The hard blockers are now sharply separated.  For retained closure, PR #230
 needs either strict physical measurement evidence with a valid heavy-mass
 matching bridge or a real interacting scalar-channel
 Bethe-Salpeter/projector/pole-residue theorem.  The normalization arithmetic,
-SSB bookkeeping, free source bubble, kinematic scalar/gauge factorization,
-static rephasing, contact HS rewrite, and wording around the old Ward note are
-not enough.
+SSB bookkeeping, free source bubble, source Legendre transform, kinematic
+scalar/gauge factorization, static rephasing, contact HS rewrite, and wording
+around the old Ward note are not enough.
 ```
 
 Exact next action:

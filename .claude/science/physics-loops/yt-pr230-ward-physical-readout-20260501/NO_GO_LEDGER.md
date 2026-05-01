@@ -152,6 +152,16 @@ python3 scripts/frontier_yt_static_mass_matching_obstruction.py
 # SUMMARY: PASS=6 FAIL=0
 ```
 
+The source Legendre transform itself cannot select `kappa_H = 1`: source/field
+rescaling preserves the Legendre relation while changing curvature and the
+Yukawa readout.  A pole-residue or canonical kinetic normalization theorem is
+still required:
+
+```text
+python3 scripts/frontier_yt_legendre_kappa_gauge_freedom.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

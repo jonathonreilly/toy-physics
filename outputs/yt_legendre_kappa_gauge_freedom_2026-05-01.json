@@ -1,0 +1,56 @@
+{
+  "actual_current_surface_status": "exact negative boundary / Legendre normalization freedom",
+  "base_chi": 2.75,
+  "fail_count": 0,
+  "models": [
+    {
+      "chi_k": 0.6875,
+      "gamma_second_derivative": 1.4545454545454546,
+      "kappa": 0.5,
+      "legendre_identity_residual": 0.0,
+      "phi_k_at_probe": 0.1375,
+      "y_readout": 0.20412414523193154
+    },
+    {
+      "chi_k": 2.444444444444444,
+      "gamma_second_derivative": 0.4090909090909091,
+      "kappa": 0.9428090415820634,
+      "legendre_identity_residual": 0.0,
+      "phi_k_at_probe": 0.4888888888888889,
+      "y_readout": 0.3849001794597506
+    },
+    {
+      "chi_k": 2.75,
+      "gamma_second_derivative": 0.36363636363636365,
+      "kappa": 1.0,
+      "legendre_identity_residual": 0.0,
+      "phi_k_at_probe": 0.55,
+      "y_readout": 0.4082482904638631
+    },
+    {
+      "chi_k": 11.0,
+      "gamma_second_derivative": 0.09090909090909091,
+      "kappa": 2.0,
+      "legendre_identity_residual": 0.0,
+      "phi_k_at_probe": 2.2,
+      "y_readout": 0.8164965809277261
+    }
+  ],
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "kappa_H remains a field-normalization freedom without a residue/kinetic condition.",
+  "required_next_theorem": [
+    "derive momentum-dependent scalar two-point function",
+    "identify a physical scalar pole or canonical kinetic term",
+    "fix kappa_H from the residue/kinetic normalization",
+    "then compute y_t = c_source * kappa_H with v as substrate input"
+  ],
+  "source_tree_coefficient": 0.4082482904638631,
+  "strict_non_claims": [
+    "does not derive kappa_H = 1",
+    "does not identify the source scalar with H_unit",
+    "does not use observed y_t or m_t",
+    "does not promote the Ward theorem"
+  ],
+  "verdict": "The Legendre transform is covariant under source/operator rescaling. Changing kappa preserves Gamma = J phi - W while changing the two-point curvature and the Yukawa readout.  Therefore the source-to-canonical-Higgs normalization kappa_H is not selected by the Legendre transform alone; a pole-residue or canonical kinetic normalization theorem is required."
+}

@@ -64,6 +64,10 @@ Review checks performed:
 - Static mass matching review: the runner separates raw and subtracted
   correlators and then varies the `am0 + delta_m` decomposition, so the result
   targets only the missing absolute-mass matching condition.
+- Legendre normalization review: all tested `kappa` choices satisfy the
+  Legendre identity while changing curvature and the Yukawa readout, so the
+  artifact blocks only the source-normalization shortcut and leaves a
+  pole/kinetic theorem as the positive target.
 
 ## Review-Loop Backpressure — Campaign Block 2
 
@@ -115,3 +119,5 @@ Open review risk:
   than calibrating the static mass to the observed top.
 - A static matching theorem cannot be accepted if it simply chooses the
   residual mass that reproduces `172.56 GeV`.
+- A Legendre/source theorem cannot be accepted if it fixes `kappa_H` by a field
+  naming convention rather than by residue or kinetic normalization.
