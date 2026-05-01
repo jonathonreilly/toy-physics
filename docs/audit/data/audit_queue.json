@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 271,
+    "leaf": 270,
     "medium": 133
   },
-  "generated_at": "2026-05-01T06:23:12.528628+00:00",
+  "generated_at": "2026-05-01T06:25:05.784851+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9975,23 +9975,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "emergent_geometry_growth_note_2026-04-10",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.5,
-      "note_path": "docs/EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_emergent_geometry.py",
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "graph_laplacian_core_card_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14991,6 +14974,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 210,
-  "total_pending": 607
+  "ready_count": 209,
+  "total_pending": 606
 }

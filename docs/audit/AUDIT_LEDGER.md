@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:23:12.805942+00:00
+**Generated:** 2026-05-01T06:25:06.060840+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 197 |
+| bounded | 196 |
 | support | 170 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 844 |
-| ~~audited_failed~~ | 171 |
+| ~~audited_conditional~~ | 843 |
+| ~~audited_failed~~ | 173 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 255 |
 | `audited_conditional` | 575 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 82 |
+| `audited_failed` | 83 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 607 |
+| `unaudited` | 606 |
 
 | criticality | count |
 |---|---:|
@@ -941,6 +941,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `dm_leptogenesis_exact_kernel_closure_note_2026-04-15` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | D | - |
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | unknown | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | B | - |
+| `emergent_geometry_growth_note_2026-04-10` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `fifth_family_complex_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `fifth_family_radial_fm_transfer_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `fifth_family_radial_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -5818,6 +5819,21 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The runner exits zero, but the audit classifier records no A/B/C/D PASS checks for a load-bearing audit surface.
 - **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a bounded note with executable but unratified support.
 - **auditor confidence:** medium
+
+### `emergent_geometry_growth_note_2026-04-10`
+
+- **Note:** [`EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md`](../../docs/EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** This remains a real exploratory geometry result: the growth rule changes the coarse graph geometry in a matter-correlated way.  _(class `C`)_
+- **chain closes:** False — The registered runner exits 0, but its current output no longer matches the note's initial table: matter-coupled d_eff is 1.64 rather than 2.03, the control is 1.55 rather than 1.54, and the current primary runner does not reproduce the later hardened v2/k=4 sweep claims.
+- **rationale:** Issue: the note's load-bearing current-output table is stale relative to scripts/frontier_emergent_geometry.py. The note quotes matter-coupled d_eff=2.03, control d_eff=1.54, central density 108/unit^2, and clustering 5.43x, while the current runner reports matter d_eff=1.64, control d_eff=1.55, peak listed density about 72.28, and clustering 7.68x; it also does not run the later v2/k=4 hardened sweep claims quoted in the note. Why this blocks: the claimed coarse-geometry difference and hardened retained-window interpretation cannot be audited from the current primary runner output. Repair target: update the note to the current runner output or restore/register the runner suite that reproduces both the initial table and the v2/k=4 multi-seed sweep with classified checks. Claim boundary until fixed: the current primary runner supports at most a matter-density clustering diagnostic, not the quoted d_eff lift or clean hardened emergent-geometry growth synthesis.
+- **open / conditional deps cited:**
+  - `emergent_geometry_growth_note_2026-04-10 -> scripts/frontier_emergent_geometry.py (current output stale relative to note table)`
+  - `emergent_geometry_growth_note_2026-04-10 -> frontier_emergent_geometry_v2/k4 sweep (quoted but not primary-runner covered)`
+- **auditor confidence:** high
 
 ### `emergent_lorentz_invariance_note`
 
