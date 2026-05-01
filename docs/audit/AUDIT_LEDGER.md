@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T09:39:52.675679+00:00
+**Generated:** 2026-05-01T09:43:20.420910+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 291 |
+| `audited_clean` | 292 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 554 |
+| `unaudited` | 553 |
 
 | criticality | count |
 |---|---:|
@@ -337,6 +337,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_multistage_floor_sweep_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_readout_localization_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `persistent_object_readout_taper_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -11557,6 +11558,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The peak-centered localized detector readout sharply reduces detector effective support but fails to preserve the weak-field mass-scaling class: broad readout has F~M exponents near 1, while localized readout has exponents near 0 and only about 3.8% capture.  _(class `C`)_
 - **chain closes:** True — The registered runner reproduces the zero-source reduction, broad readout N_eff=497.319 with step-wise F~M exponents 1.00,1.00,1.00, and localized readout N_eff=8.992 with exponents -0.00,-0.00,-0.00 and capture 0.038.
 - **rationale:** Clean within the declared bounded-negative scope. The note does not claim detector/readout localization succeeds; it claims the tested peak-centered 3x3 window shrinks support but loses the weak-field mass law and captures too little detector mass. The current runner computes the broad and localized readouts from the exact lattice setup and reproduces the frozen reduction check, support sizes, TOWARD counts, capture fraction, and F~M exponents. Residual risk is only the note's stated narrow setup: one lattice family, one top3 repeated-update source object, and one peak-centered localization rule.
+- **auditor confidence:** high
+
+### `persistent_object_readout_taper_note`
+
+- **Note:** [`PERSISTENT_OBJECT_READOUT_TAPER_NOTE.md`](../../docs/PERSISTENT_OBJECT_READOUT_TAPER_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Hard and Gaussian-localized detector readouts shrink support while preserving sign, but all tested localized/tapered readouts collapse the weak-field F~M exponent away from 1.  _(class `C`)_
+- **chain closes:** True — The registered runner reproduces the zero-source reduction and the frozen broad, hard-window, and Gaussian taper rows; broad readout stays at F~M=1.00 while hard and Gaussian readouts have step-wise F~M near 0 even for the softest tested taper.
+- **rationale:** Clean within the support/no-go scope. The note does not promote a localized readout; it records that hard and soft localized detector readouts reduce support but do not preserve the weak-field mass law. Current runner output matches the frozen table: broad readout has F~M exponents 1.00,1.00,1.00, while hard, sigma=1.5, sigma=2.5, and sigma=4.0 localized/tapered readouts all have exponents near 0 despite TOWARD=12/12. Residual risk is limited to the stated family of one lattice setup, one compact source object, and the tested hard/Gaussian readout rules.
 - **auditor confidence:** high
 
 ### `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16`
