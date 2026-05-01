@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:25:14.259023+00:00
+**Generated:** 2026-05-01T03:26:37.137695+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 245 |
-| support | 204 |
+| support | 203 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 51 |
-| ~~audited_conditional~~ | 790 |
+| ~~audited_conditional~~ | 791 |
 | ~~audited_failed~~ | 150 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 231 |
-| `audited_conditional` | 520 |
+| `audited_conditional` | 521 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 67 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 18 |
-| `unaudited` | 713 |
+| `unaudited` | 712 |
 
 | criticality | count |
 |---|---:|
@@ -767,6 +767,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quantum_horizon_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `quark_endpoint_denominator_admissibility_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | B | `quark_projector_ray_phase_completion_note_2026-04-18` |
 | `quark_route2_exact_readout_map_note_2026-04-19` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -10994,6 +10995,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `scripts/frontier_quark_endpoint_readout_constraints.py`
   - `scripts/frontier_quark_projector_parameter_audit.py`
   - `scripts/frontier_quark_up_amplitude_candidate_scan.py`
+- **auditor confidence:** high
+
+### `quark_endpoint_denominator_admissibility_note_2026-04-19`
+
+- **Note:** [`QUARK_ENDPOINT_DENOMINATOR_ADMISSIBILITY_NOTE_2026-04-19.md`](../../docs/QUARK_ENDPOINT_DENOMINATOR_ADMISSIBILITY_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-quark_endpoint_denominator_admissibility_note_2026-04-19`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Given the live endpoint atoms, projecting to pure support denominator slots yields the generator class {6, 7, sqrt(6), sqrt(7)} and the realized class {6, 7, 42, sqrt(6), sqrt(7), sqrt(42)}, so sqrt(7) is unique only in the pure seven-only irrational generator subclass.  _(class `A`)_
+- **chain closes:** False — The denominator-class algebra passes, but the endpoint atom set is imported as the current live surface rather than derived or registered as a dependency in this row.
+- **rationale:** Issue: the runner verifies the denominator grammar and sqrt(7) no-go over the hard-coded live endpoint atoms, but the row has deps=[] and does not derive those atoms from an audited endpoint-readout authority. Why this blocks: the uniqueness/no-go is exact once the atom set and admissibility rules are granted, but it is not a standalone theorem about the quark endpoint lane without the upstream endpoint-readout constraints. Repair target: register the endpoint-readout constraints note or derive the atom set inside this note, then keep the current runner as the denominator-class proof. Claim boundary until fixed: exact conditional no-go over the stated endpoint atoms; not an independently closed denominator theorem for the quark endpoint primitive.
+- **open / conditional deps cited:**
+  - `QUARK_ENDPOINT_READOUT_CONSTRAINTS_NOTE_2026-04-19.md`
+  - `scripts/frontier_quark_endpoint_denominator_admissibility.py`
 - **auditor confidence:** high
 
 ### `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28`
