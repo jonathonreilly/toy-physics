@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T21:05:42.489201+00:00
+**Generated:** 2026-05-01T21:06:58.772646+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 168 |
+| bounded | 167 |
 | support | 135 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 942 |
+| ~~audited_conditional~~ | 943 |
 | ~~audited_failed~~ | 85 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 301 |
-| `audited_conditional` | 645 |
+| `audited_conditional` | 646 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 516 |
+| `unaudited` | 515 |
 
 | criticality | count |
 |---|---:|
@@ -941,6 +941,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_time_transfer_matrix_bridge_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `scalar_selector_cycle13_meta_closure_status_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `scalar_selector_cycle1_science_review_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `scalar_selector_proof_chains_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13480,6 +13481,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `scripts/frontier_koide_berry_phase_theorem.py`
   - `MRU/DM/quark recovered theorem runners`
   - `full-stack status reconciliation`
+
+### `scalar_selector_proof_chains_2026-04-19`
+
+- **Note:** [`SCALAR_SELECTOR_PROOF_CHAINS_2026-04-19.md`](../../docs/SCALAR_SELECTOR_PROOF_CHAINS_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The file presents historical proof chains for Koide theta, Koide kappa, DM A-BCC, and quark a_u, with a supersession note requiring later corrections before using it as current branch-facing status.  _(class `B`)_
+- **chain closes:** False — The row is conditional because it is superseded route bookkeeping with no executable or one-hop dependency surface.
+- **rationale:** Issue: the row has no registered runner or dependencies, and the proof-chain document is explicitly superseded while still preserving older all-gates-closed/zero-residue language. Why this blocks: the chains cannot be audited as current closure evidence from the note alone, and the reader must apply later corrections from separate theorem/status notes. Repair target: either archive this as historical bookkeeping outside the active audit surface, or split each chain into current per-lane rows with registered theorem dependencies and runners. Claim boundary until fixed: the file is bounded historical route inventory, not an auditable current proof of all four scalar-selector closures.
+- **open / conditional deps cited:**
+  - `KOIDE_MRU_DEMOTION_NOTE_2026-04-20.md`
+  - `DM_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md`
+  - `per-lane theorem runners referenced in the proof chains`
 
 ### `scalar_trace_tensor_no_go_note`
 
