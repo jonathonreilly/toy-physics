@@ -70,7 +70,7 @@ F_DFT = (1.0 / SQRT3) * np.array([[1, 1, 1],
                                    [1, OMEGA, OMEGA.conjugate()]], dtype=complex)
 
 
-def check(label: str, cond: bool, detail: str = "", kind: str = "EXACT") -> None:
+def check(label: str, cond: bool, detail: str = "", kind: str = "EXACT", cls: str = "A") -> None:
     global PASS, FAIL
     status = "PASS" if cond else "FAIL"
     if cond:
@@ -78,7 +78,7 @@ def check(label: str, cond: bool, detail: str = "", kind: str = "EXACT") -> None
     else:
         FAIL += 1
     tag = f" [{kind}]" if kind != "EXACT" else ""
-    msg = f"  [{status}]{tag} {label}"
+    msg = f"  [{status} ({cls})]{tag} {label}"
     if detail:
         msg += f"  ({detail})"
     print(msg)
