@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 8,
     "high": 195,
-    "leaf": 204,
+    "leaf": 203,
     "medium": 133
   },
-  "generated_at": "2026-05-01T20:32:32.183279+00:00",
+  "generated_at": "2026-05-01T20:33:29.870548+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10015,23 +10015,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "mirror_vs_lattice_program_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/MIRROR_VS_LATTICE_PROGRAM_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "persistent_record_sidebit_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -13881,6 +13864,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 134,
-  "total_pending": 540
+  "ready_count": 133,
+  "total_pending": 539
 }

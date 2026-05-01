@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:32:32.402873+00:00
+**Generated:** 2026-05-01T20:33:30.098622+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 174 |
-| support | 149 |
+| support | 148 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 925 |
+| ~~audited_conditional~~ | 926 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 628 |
+| `audited_conditional` | 629 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 540 |
+| `unaudited` | 539 |
 
 | criticality | count |
 |---|---:|
@@ -833,6 +833,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_grown_combined_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_program_synthesis` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `mirror_vs_central_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `mirror_vs_lattice_program_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `moving_source_cross_family_replay_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `n_eff_from_three_generations_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `neutrino_axiom3_reading_stuck_fanout_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -10764,6 +10765,29 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** Dense central-band + layer norm remains the best joint coexistence lane, while mirror chokepoint is a bounded challenger with stronger small-N gravity but weaker decoherence/range.  _(class `B`)_
 - **chain closes:** False — The script and note reproduce a fixed summary table, but they do not register the underlying dense central-band and mirror artifact rows as dependencies. The audit cannot verify the lane ranking from one-hop inputs alone.
 - **rationale:** Issue: the head-to-head ranking depends on hard-coded values imported from other lane notes without registered dependencies. Why this blocks: the runner prints the comparison but does not recompute or verify the central-band and mirror rows, retained ranges, or purity metric caveat from auditable inputs. Repair target: cite the source rows for the dense central-band and mirror chokepoint artifacts, or replace the script with one that reads those frozen outputs directly. Claim boundary until fixed: the note is useful comparison support, not an independently audited ranking theorem.
+- **auditor confidence:** high
+
+### `mirror_vs_lattice_program_note`
+
+- **Note:** [`MIRROR_VS_LATTICE_PROGRAM_NOTE.md`](../../docs/MIRROR_VS_LATTICE_PROGRAM_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note ranks mirror as the flagship coexistence lane, ordered lattice as the strongest secondary law-side branch, and NN refinement as a bounded frontier bridge while keeping the continuum question open.  _(class `B`)_
+- **chain closes:** False — The row is a cross-program index whose ranking depends on many external notes, but the ledger row has no dependency edges and no runner. Its own text narrows it to support/navigation rather than a tier-ratified comparison theorem.
+- **rationale:** Issue: the flagship/secondary/frontier ranking imports multiple authority notes without ledger deps or a registered comparison runner. Why this blocks: a hostile reviewer cannot verify the ranking from this row alone, and the row's own status says it inherits down from unaudited, conditional, or failed cited authorities. Repair target: make the cited authority list into explicit dependencies, remove failed inputs from any ratified comparison, and optionally add a runner that asserts the ranking criteria from the audit ledger. Claim boundary until fixed: this is a support/navigation index and wording guide, not a tier-ratified cross-program comparison theorem.
+- **open / conditional deps cited:**
+  - `AUDITED_SYMMETRY_SYNTHESIS_NOTE.md`
+  - `UNIFIED_PROGRAM_NOTE.md`
+  - `MIRROR_2D_VALIDATION_NOTE.md`
+  - `MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md`
+  - `LATTICE_FAMILY_VALIDATION_NOTE.md`
+  - `LATTICE_DISTANCE_LAW_NOTE.md`
+  - `LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md`
+  - `archive_unlanded/lattice-dense-spent-delay-window-salvage-2026-04-30/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`
+  - `LATTICE_NN_CONTINUUM_NOTE.md`
+  - `LATTICE_SYNTHESIS_GUARD_NOTE.md`
 - **auditor confidence:** high
 
 ### `monopole_derived_note`
