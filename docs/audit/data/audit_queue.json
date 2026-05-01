@@ -5,7 +5,7 @@
     "leaf": 272,
     "medium": 133
   },
-  "generated_at": "2026-05-01T06:20:09.645753+00:00",
+  "generated_at": "2026-05-01T06:21:35.064505+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9975,23 +9975,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "continuum_bridge_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.5,
-      "note_path": "docs/CONTINUUM_BRIDGE_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dimensional_gravity_table",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -13554,6 +13537,26 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "lanes.ordered-lattice.readme",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "continuum_bridge_note",
+        "structured_chokepoint_bridge_note"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 2.085,
+      "note_path": "docs/lanes/ordered-lattice/README.md",
+      "ready": false,
+      "runner_path": "scripts/lattice_3d_dense_10prop.py",
+      "transitive_descendants": 2
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "lanes.staggered.readme",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -15005,6 +15008,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 212,
+  "ready_count": 211,
   "total_pending": 608
 }

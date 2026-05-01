@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:20:09.920877+00:00
+**Generated:** 2026-05-01T06:21:35.373754+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,13 +21,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 199 |
+| bounded | 198 |
 | support | 170 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 844 |
+| ~~audited_conditional~~ | 845 |
 | ~~audited_failed~~ | 169 |
 
 | audit_status | count |
@@ -47,7 +47,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 386 |
 | `leaf` | 769 |
 
-- **Proposed claims demoted by upstream:** 132
+- **Proposed claims demoted by upstream:** 133
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -440,6 +440,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `composite_source_additivity_2d_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `connectivity_family_v2_elliptical_duplicate_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `continuum_bridge_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `continuum_convergence_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -733,7 +734,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `koide_z3_scalar_potential_support_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
-| `lanes.ordered-lattice.readme` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_3d_l2_numpy_h0125_bridge_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
@@ -2965,6 +2965,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `continuum_bridge_note`
+
+- **Note:** [`CONTINUUM_BRIDGE_NOTE.md`](../../docs/CONTINUUM_BRIDGE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained results are: Phase-valley gravity (survives on DAGs AND lattices), Born rule (exact, mathematical, all architectures), CL bath decoherence floor, 3D mass scaling continuum limit, cross-family robustness, distance law on lattice, and lattice continuum limit.  _(class `B`)_
+- **chain closes:** False — The note is a bounded synthesis over many numerical lanes, but this row has no registered runner, parsed dependencies, or explicit one-hop artifact chain that lets the audit verify the quoted finite-size, asymptotic, and lattice-continuum claims.
+- **rationale:** Issue: the continuum/asymptotic bridge asserts survival, partial-survival, retraction, and structural-limitation conclusions across many DAG and lattice artifacts without a primary runner or explicit audited dependency edges in this row. Why this blocks: a clean audit cannot verify the quoted N-scaling tables, Born rows, mass-scaling convergence, emergence windows, lattice refinement results, or retained-results summary from the restricted source note alone. Repair target: split or register explicit runners/dependencies for the DAG size-growth, emergence, lattice refinement, kernel, and distance-tail artifacts, then restate the synthesis against their audited effective statuses. Claim boundary until fixed: the note can be used as a bounded roadmap of the continuum questions and caveats, not as a clean audited continuum/asymptotic bridge.
+- **open / conditional deps cited:**
+  - `continuum_bridge_note -> missing registered runner or explicit audited dependencies for the multi-lane continuum/asymptotic synthesis`
 - **auditor confidence:** high
 
 ### `continuum_convergence_note`
@@ -9710,21 +9724,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md`
   - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
 - **auditor confidence:** medium
-
-### `lanes.ordered-lattice.readme`
-
-- **Note:** [`lanes/ordered-lattice/README.md`](../../docs/lanes/ordered-lattice/README.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-high-ready-20260430-39`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The ordered-lattice lane remains a historical proposed-retained major program covering the dense spent-delay branch, nearest-neighbor refinement bridge, and structured chokepoint/generated-symmetry bridge.  _(class `B`)_
-- **chain closes:** False — The README is a lane-level inventory whose direct dependencies are bounded rather than retained, including an unaudited continuum bridge and a bounded structured-chokepoint card. The registered runner prints a 10-property diagnostic card but the classifier finds no A/B/C/D PASS assertions, so it does not by itself ratify a proposed-retained program claim.
-- **rationale:** Issue: the row is a lane README/historical program claim, not a closed theorem, and it depends on bounded ordered-lattice bridge notes while the registered runner emits diagnostics with no classified A/B/C/D PASS lines. Why this blocks: a proposed-retained lane-wide claim cannot be ratified from bounded one-hop inputs or from an unclassified diagnostic card. Repair target: split any retained ordered-lattice theorem into a narrow source note with retained dependencies and a classified runner, and separately audit the continuum bridge. Claim boundary until fixed: safe as a bounded historical lane index and diagnostic runner entry point only.
-- **open / conditional deps cited:**
-  - `CONTINUUM_BRIDGE_NOTE.md`
-  - `STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`
-- **auditor confidence:** high
 
 ### `lattice_3d_dense_refinement_reconciliation_note`
 
