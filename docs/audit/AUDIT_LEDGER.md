@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T19:34:30.852816+00:00
+**Generated:** 2026-05-01T19:40:05.465675+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 203 |
+| bounded | 201 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 898 |
+| ~~audited_conditional~~ | 900 |
 | ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 607 |
+| `audited_conditional` | 608 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 562 |
+| `unaudited` | 561 |
 
 | criticality | count |
 |---|---:|
@@ -977,6 +977,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_retardation_continuum_limit_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `wave_retarded_gravity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_static_matrixfree_shared_geometry_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `wilson_mu2_distance_sweep_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `wilson_normalization_reconciliation_note_2026-04-11` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `wilson_two_body_open_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -14756,6 +14757,21 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** The independent wide-lattice replay at h = 0.25, W = 12, L = 12 gives 10/10 TOWARD distance support, far-tail b^(-1.05) with R^2 = 0.990, and F~M exponent 1.000.  _(class `C`)_
 - **chain closes:** True — The live replay reproduces the frozen sanity checks, distance rows, peak/far-tail fits, and mass-scaling sweep. The note explicitly limits the result to a finite-lattice frontier replay and disclaims a continuum theorem or exact exponent proof.
 - **rationale:** The runner supports the retained frontier claim as scoped. It independently computes the wide ordered-3D h^2+T replay on main and reproduces Born approximately 4.82e-15, k=0 zero, 10/10 attractive distance rows, peak-tail exponent -0.95, far-tail exponent -1.05, and linear F~M scaling. This audit certifies only that finite-lattice replay, not an exact Newtonian exponent or continuum-limit theorem.
+- **auditor confidence:** high
+
+### `wilson_mu2_distance_sweep_note_2026-04-11`
+
+- **Note:** [`WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md`](../../docs/WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** As screening is reduced, the open-lattice Wilson mutual-channel distance exponent softens monotonically toward Newton-compatible d^-2 behavior, so the steep mu^2=0.22 exponent is screening-controlled rather than a fixed universality class.  _(class `C`)_
+- **chain closes:** False — The current runner supports the qualitative monotone softening trend on its five executed mu^2 values, but it does not execute the note's full table (mu^2=0.10 and mu^2=0.0 are absent), emits no classified PASS lines, and the source note explicitly anchors to Wilson notes whose audit state is not clean. The calibration is therefore supported as a current-run trend but not fully audited as the tabled distance-law claim.
+- **rationale:** Issue: the registered runner exits successfully and reproduces the monotone softening trend, but its sweep grid is stale relative to the note's table and emits no classified PASS lines; two table rows in the note are not currently rerun. Why this blocks: the exact calibration surface and the claimed clean-row table cannot be audited from the current runner output, and the note's anchor Wilson rows are not clean audit inputs. Repair target: align the note and runner on the same mu^2 grid, add classified PASS lines for attraction cleanliness, monotone exponent softening, near-d^-2 approach, and table reproduction, then re-audit with the anchor Wilson rows clean or with the calibration made self-contained. Claim boundary until fixed: the current runner supports a five-point bounded trend that screening softens the exponent, not a fully audited Wilson distance-law calibration table or Newton closure.
+- **open / conditional deps cited:**
+  - `WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md`
+  - `WILSON_TWO_BODY_OPEN_REFINED_NOTE_2026-04-11.md`
 - **auditor confidence:** high
 
 ### `wilson_normalization_reconciliation_note_2026-04-11`
