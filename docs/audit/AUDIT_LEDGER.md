@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:26:02.054729+00:00
+**Generated:** 2026-05-01T02:27:41.918926+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 2 |
 | bounded | 261 |
 | support | 212 |
-| open | 16 |
+| open | 15 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
-| ~~audited_renaming~~ | 46 |
+| ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 773 |
 | ~~audited_failed~~ | 144 |
 
@@ -38,8 +38,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_decoration` | 5 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 12 |
-| `audited_renaming` | 13 |
-| `unaudited` | 736 |
+| `audited_renaming` | 14 |
+| `unaudited` | 735 |
 
 | criticality | count |
 |---|---:|
@@ -918,6 +918,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hypercharge_identification_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `oh_static_constraint_lift_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
+| `pmns_active_four_real_source_from_transport_note` | open | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
 | `s3_time_bilinear_tensor_primitive_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `star_supported_bridge_class_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
 | `universal_qg_optional_textbook_comparison_note` | unknown | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
@@ -10206,6 +10207,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** True — The runner passes 27/27 checks and closes the stated boundary claim. It verifies phase periodicity, dependence only on S/kappa, rescaling invariance, inverse H/t scaling, scalar-action global phases, finite commutator trace obstruction, a valid two-mode CAR realization on C^4, Clifford/Majorana generation of M_4(C), CAR parity grading, and explicit non-CAR two-qubit and ququart semantics on the same rank-four Hilbert block with the same allowed unitary flow. These countermodels establish the no-go/boundary theorem without requiring a positive Target 2 or Target 3 closure.
 - **rationale:** Clean for the bounded Target 3 statement. The positive part is exactly the native dimensionless U(1) phase unit. The negative parts are established by invariance and counterexample: amplitudes depend only on S/kappa, finite matrices cannot realize a nonzero exact canonical commutator by trace, and the rank-four block admits both CAR and non-CAR semantics while satisfying the same Hilbert-flow axioms. This clean audit does not derive hbar, a physical dimensional action unit, primitive CAR statistics, Target 2 c=1/4 unconditionality, or the later Clifford/coframe bridge; it only certifies that the current one-axiom Hilbert-flow surface is insufficient without additional edge-statistics/action-unit structure.
 - **auditor confidence:** high
+
+### `pmns_active_four_real_source_from_transport_note`
+
+- **Note:** [`PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md`](../../docs/PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md)
+- **current_status:** open
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_active_four_real_source_from_transport_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Once the non-averaged lower-level active transport/response profile is already available, define xbar from the C3-even diagonal mean, sigma from the forward-cycle complex mean, and the four-real source (xi_1, xi_2, rho_1, rho_2) as the centered residual active block.  _(class `E`)_
+- **chain closes:** False — The note gives a residual-coordinate decomposition after assuming the full non-averaged active profile; it has no runner, no declared dependency deriving that profile, and the nearby corner-transport note is only bounded and says averaged transport is blind to the breaking source.
+- **rationale:** Issue: the claimed disappearance of the four-real source is obtained by defining the residual coordinates from an already-available non-averaged active block, but the row has no runner and deps=[] and does not provide the lower-level active transport/response theorem that supplies that full block. Why this blocks: reading xi/rho as centered residual coordinates is bookkeeping, not a derivation that the source is forced by Cl(3) on Z^3 or by the current bounded corner-transport route. Repair target: add the actual lower-level non-averaged transport/response theorem as a dependency and a runner that reconstructs the active block and classified residual coordinates from it; otherwise state the result as a coordinate decomposition conditional on a supplied active block. Claim boundary until fixed: if the full non-averaged active block is given, it can be decomposed into xbar, sigma, and four centered real residual coordinates; not an audited theorem eliminating the active source as a separate derived object.
+- **open / conditional deps cited:**
+  - `PMNS_CORNER_TRANSPORT_ACTIVE_BLOCK_NOTE.md`
+- **auditor confidence:** medium
 
 ### `pmns_branch_conditioned_quadratic_sheet_closure_note`
 
