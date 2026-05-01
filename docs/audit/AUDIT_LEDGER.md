@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:08:34.343941+00:00
+**Generated:** 2026-05-01T20:10:09.328882+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 185 |
+| bounded | 184 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 916 |
+| ~~audited_conditional~~ | 917 |
 | ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 618 |
+| `audited_conditional` | 619 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 551 |
+| `unaudited` | 550 |
 
 | criticality | count |
 |---|---:|
@@ -822,6 +822,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mesoscopic_surrogate_localization_sweep_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `mesoscopic_surrogate_multistage_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `mirror_2d_gravity_law_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `mirror_gravity_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_program_synthesis` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `mirror_vs_central_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -10538,6 +10539,20 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The smallest source-driven local field rule preserves TOWARD sign and exact zero-source reduction on the tested 3D lattice, but fails full weak-field recovery because the source-driven F~M exponent drops to 0.64.  _(class `C`)_
 - **chain closes:** True — The registered runner recomputes the zero-source dynamic shift, instantaneous and source-driven deflections, ratios, field maxima, and fitted mass exponents, and the current output matches the note. The conclusion is explicitly bounded as a partial survival plus failed linear scaling at this calibration.
 - **rationale:** The runner verifies the load-bearing result directly: zero-source reduction is exact, all source-driven rows remain TOWARD, and the dynamic scaling exponent is 0.64 rather than near-linear. The note does not claim clean self-consistent field dynamics; it records a bounded calibration hierarchy/no-go at stronger calibration. Residual risk is addressed by the companion recovery sweep, not by this note alone.
+- **auditor confidence:** high
+
+### `mirror_2d_gravity_law_note`
+
+- **Note:** [`MIRROR_2D_GRAVITY_LAW_NOTE.md`](../../docs/MIRROR_2D_GRAVITY_LAW_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The exact 2D mirror cleanup found no clean promoted mass law and no clean promoted distance law: the best mass fits weaken with size and the distance-tail fits are absent or low quality.  _(class `C`)_
+- **chain closes:** False — The cited cleanup script reproduces the note's bounded null-result table, but the audit ledger has no registered runner_path for this row and the script emits no classified PASS lines. The null result is supported, but the row is not mechanically auditable from its ledger registration.
+- **rationale:** Issue: the source note's narrowed bounded null result matches the cleanup script output, but the row has no registered primary runner and the script output is unclassified. Why this blocks: a fresh audit sweep cannot discover or classify the load-bearing cleanup checks from the ledger alone, so the supported no-law result remains tied to an unregistered script/log artifact. Repair target: register scripts/mirror_2d_gravity_law_cleanup.py as the runner and add classified PASS lines for no clean mass law, no clean distance law, retained bounded pocket, and non-promotion boundary. Claim boundary until fixed: a bounded null-result supported by a cited script, not a fully audit-clean mechanically reproducible row.
+- **open / conditional deps cited:**
+  - `scripts/mirror_2d_gravity_law_cleanup.py`
 - **auditor confidence:** high
 
 ### `mirror_2d_validation_note`
