@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T15:54:32.559681+00:00
+**Generated:** 2026-05-01T15:59:36.185374+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 201 |
-| support | 155 |
+| support | 154 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 870 |
+| ~~audited_conditional~~ | 871 |
 | ~~audited_failed~~ | 103 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 292 |
-| `audited_conditional` | 585 |
+| `audited_conditional` | 586 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 577 |
+| `unaudited` | 576 |
 
 | criticality | count |
 |---|---:|
@@ -703,6 +703,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hierarchy_bosonic_bilinear_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hierarchy_matsubara_decomposition_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_mass_derived_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
+| `higgs_mass_from_axiom_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
 | `higgs_mass_hierarchy_correction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `higgs_vacuum_explicit_systematic_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -7897,6 +7898,24 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`
   - `HIGGS_MECHANISM_NOTE.md`
   - `HIGGS_FROM_LATTICE_NOTE.md`
+- **auditor confidence:** high
+
+### `higgs_mass_from_axiom_note`
+
+- **Note:** [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](../../docs/HIGGS_MASS_FROM_AXIOM_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** This curvature is the dimensionless ratio (m_H / v)^2 in lattice units, since the VEV v is the natural scale of the scalar field: (m_H / v)^2 = 4 / (u_0^2 * N_taste).  _(class `F`)_
+- **chain closes:** False — The determinant algebra gives a taste-sector curvature, but the note does not derive the physical normalization map that turns that curvature into the observed Higgs mass ratio. Several cited support paths are absent by exact path, and the live Higgs/EW-color support notes remain conditional rather than audit-clean inputs.
+- **rationale:** Issue: the load-bearing step identifies the per-taste lattice curvature with the physical ratio (m_H/v)^2 and then uses that bridge to claim m_H = v/(2u_0). Why this blocks: the source note supplies dimensional and consistency arguments, but not an audit-clean theorem deriving the lattice-curvature-to-physical-Higgs-mass normalization; exact cited paths for taste polynomial, degeneracy, and hierarchy inputs are missing, while the live EW-color and Higgs authority notes are still conditional. Repair target: provide an audit-clean scalar normalization theorem, with registered one-hop dependencies, that derives the Higgs-channel curvature-to-mass map without relying on the downstream RGE/comparator runner. Claim boundary until fixed: the note remains support for the N_c-cancellation and auxiliary Higgs-mass route, not an audit-ratified Higgs-mass derivation from the axiom.
+- **open / conditional deps cited:**
+  - `TASTE_POLYNOMIAL_NOTE.md`
+  - `DM_AMGM_SATURATION_NOTE.md`
+  - `HIERARCHY_THEOREM.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `HIGGS_MASS_DERIVED_NOTE.md`
 - **auditor confidence:** high
 
 ### `higgs_mass_hierarchy_correction_note`
