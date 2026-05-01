@@ -208,6 +208,11 @@ What changed:
   dE_top/ds / sqrt(Res[C_ss])`.  This retires the `kappa_s = 1` shortcut as
   unnecessary and forbidden: `kappa_s` is measured by the pole overlap.  It is
   exact support only, because the same-source production pole data are absent.
+- The scalar pole determinant gate localizes the remaining theorem to the
+  interacting denominator.  In one-channel notation, `D(x)=1-K(x)Pi(x)` and a
+  pole needs `D(x_pole)=0`, but the LSZ derivative contains
+  `K'(x_pole)`.  Holding the pole location fixed while changing `K'(x_pole)`
+  changes the residue, so pole naming is not enough.
 
 The scientific result is narrower than closure:
 
@@ -265,3 +270,5 @@ job or a scalar pole theorem, not more reduced foreground smoke.
 The invariant-readout theorem says the exact scalar theorem target is now the
 existence/control of the same-source scalar pole and derivative, not a separate
 source naming convention.
+The determinant-gate block says the exact analytic object is now the
+interacting scalar-channel kernel `K(x)` and its derivative at the pole.

@@ -92,7 +92,9 @@ probability.
    current-surface premise that fixes `kappa_s`, so this remains a genuinely
    new-theorem target rather than a packaging task.  The invariant-readout
    theorem reduces this to proving or measuring the same-source scalar pole
-   residue; it does not license `kappa_s = 1`.
+   residue; it does not license `kappa_s = 1`.  The scalar pole determinant
+   gate further reduces the analytic object to the interacting denominator
+   `D(x)=1-K(x)Pi(x)` and especially `K'(x_pole)`.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 7. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`

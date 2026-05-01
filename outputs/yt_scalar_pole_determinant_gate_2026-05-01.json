@@ -1,0 +1,79 @@
+{
+  "actual_current_surface_status": "exact-support / scalar pole determinant gate",
+  "fail_count": 0,
+  "fh_lsz_invariant_readout_certificate": "outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json",
+  "pass_count": 7,
+  "pole_condition": {
+    "bubble": "Pi(x)",
+    "denominator": "D(x)=1-K(x) Pi(x)",
+    "inverse_propagator_derivative": "dGamma_ss/dp^2 at pole = D'(x_pole)/Pi(x_pole) up to sign convention",
+    "kernel_derivative_term": "D'(x_pole) = -K'(x_pole) Pi(x_pole) - K(x_pole) Pi'(x_pole)",
+    "pole": "D(x_pole)=0"
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The determinant gate is exact support, but K(x), K'(pole), and production pole data remain open.",
+  "required_next_theorem": [
+    "derive the interacting scalar-channel K(x) from the retained Wilson-staggered dynamics",
+    "fix the gauge-zero-mode, finite-volume, and IR limiting order for K(x)",
+    "prove D(x_pole)=0 for a physical scalar pole",
+    "compute D'(x_pole) or measure it on production ensembles",
+    "insert that derivative into the FH/LSZ invariant readout formula"
+  ],
+  "rows": [
+    {
+      "C_ss_residue_proxy": 2.5471929876281165,
+      "D_at_pole": 0.0,
+      "D_prime_at_pole": 0.6320683229813664,
+      "FH_LSZ_readout_factor_sqrt_dGamma": 0.6265692463609436,
+      "dGamma_dp2_at_pole_proxy": 0.3925890204853208,
+      "kernel_derivative_at_pole": -0.3
+    },
+    {
+      "C_ss_residue_proxy": 5.192403998317341,
+      "D_at_pole": 0.0,
+      "D_prime_at_pole": 0.31006832298136644,
+      "FH_LSZ_readout_factor_sqrt_dGamma": 0.43884965590201935,
+      "dGamma_dp2_at_pole_proxy": 0.19258902048532078,
+      "kernel_derivative_at_pole": -0.1
+    },
+    {
+      "C_ss_residue_proxy": 10.800416666666665,
+      "D_at_pole": 0.0,
+      "D_prime_at_pole": 0.14906832298136646,
+      "FH_LSZ_readout_factor_sqrt_dGamma": 0.3042844400972892,
+      "dGamma_dp2_at_pole_proxy": 0.09258902048532079,
+      "kernel_derivative_at_pole": 0.0
+    },
+    {
+      "C_ss_residue_proxy": 134.934929724102,
+      "D_at_pole": 0.0,
+      "D_prime_at_pole": -0.01193167701863354,
+      "FH_LSZ_readout_factor_sqrt_dGamma": 0.0860870461491113,
+      "dGamma_dp2_at_pole_proxy": 0.007410979514679218,
+      "kernel_derivative_at_pole": 0.1
+    },
+    {
+      "C_ss_residue_proxy": 4.821345535033388,
+      "D_at_pole": 0.0,
+      "D_prime_at_pole": -0.33393167701863347,
+      "FH_LSZ_readout_factor_sqrt_dGamma": 0.4554239557979786,
+      "dGamma_dp2_at_pole_proxy": 0.20741097951467918,
+      "kernel_derivative_at_pole": 0.3
+    }
+  ],
+  "strict_non_claims": [
+    "not production evidence",
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t"
+  ],
+  "toy_parameters": {
+    "K_at_pole_fixed_by_pole_location": 0.6211180124223603,
+    "Pi_at_pole": 1.6099999999999999,
+    "Pi_prime_at_pole": -0.24,
+    "pole_x": -1.0
+  },
+  "verdict": "The same-source scalar LSZ blocker is now localized to the interacting denominator.  A free source bubble has no determinant zero.  A scalar-channel RPA/Bethe-Salpeter denominator can create a pole through D(x)=1-K(x)Pi(x)=0, but the LSZ residue is governed by D'(x_pole).  Keeping the pole location fixed while varying K'(x_pole) changes the residue and the FH/LSZ readout factor.  Thus PR #230 needs a retained kernel theorem or production pole-derivative measurement; pole naming alone is not closure."
+}

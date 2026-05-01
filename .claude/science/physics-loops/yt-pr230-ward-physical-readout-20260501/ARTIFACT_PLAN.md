@@ -163,6 +163,9 @@ Completed in block 1:
 - `scripts/frontier_yt_fh_lsz_invariant_readout_theorem.py`
 - `outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json`
 - `docs/YT_FH_LSZ_INVARIANT_READOUT_THEOREM_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_pole_determinant_gate.py`
+- `outputs/yt_scalar_pole_determinant_gate_2026-05-01.json`
+- `docs/YT_SCALAR_POLE_DETERMINANT_GATE_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -200,7 +203,9 @@ Next artifact:
   `3630` single-worker hours, so the foreground route is a theorem or
   scheduled production; the FH/LSZ invariant readout theorem now gives the
   exact source-rescaling-safe formula, so the remaining analytic target is the
-  same-source scalar pole and derivative
+  same-source scalar pole and derivative; the determinant gate identifies that
+  derivative as an interacting-kernel derivative `K'(x_pole)` or production
+  pole measurement
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

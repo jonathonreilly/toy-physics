@@ -897,3 +897,28 @@ The theorem is useful exact support: it gives a source-rescaling-invariant
 physical-response readout and shows why `kappa_s = 1` is both unnecessary and
 forbidden.  It is not closure because it still requires same-source production
 pole data and the pole derivative.
+
+## Review-Loop Backpressure — Scalar Pole Determinant Gate
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_scalar_pole_determinant_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_scalar_pole_determinant_gate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The determinant gate names the remaining scalar-pole theorem exactly.  It does
+not close the route because the interacting scalar-channel kernel `K(x)`, its
+derivative at the pole, or production pole-derivative data are still absent.

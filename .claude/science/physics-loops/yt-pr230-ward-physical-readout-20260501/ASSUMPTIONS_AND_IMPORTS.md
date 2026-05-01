@@ -153,6 +153,19 @@ two-point function use the same source coordinate.  It does not set
 load-bearing open import is now the actual scalar pole, pole derivative, and
 canonical-Higgs match.
 
+Scalar pole determinant gate:
+
+```text
+C_ss(x) = Pi(x) / D(x)
+D(x) = 1 - K(x) Pi(x)
+D(x_pole) = 0
+D'(x_pole) = -K'(x_pole) Pi(x_pole) - K(x_pole) Pi'(x_pole)
+```
+
+The pole location fixes only `K(x_pole)`, not the LSZ residue.  The interacting
+kernel derivative `K'(x_pole)` or a direct production pole-derivative
+measurement remains load-bearing.
+
 Source-reparametrization gauge boundary:
 
 ```text

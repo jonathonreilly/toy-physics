@@ -126,3 +126,17 @@ Adds a Feynman-Hellmann / scalar-LSZ invariant readout theorem:
 - still no retained closure because production response, isolated pole,
   pole derivative, and canonical-Higgs matching remain open.
 ```
+
+Latest scalar pole determinant-gate checkpoint text for PR #230:
+
+```text
+Adds a scalar pole determinant gate:
+- isolates the denominator condition `D(x)=1-K(x)Pi(x)` and pole condition
+  `D(x_pole)=0`;
+- shows pole location fixes `K(x_pole)` but not `K'(x_pole)`, which controls
+  the LSZ residue through `D'(x_pole)`;
+- validator passes `PASS=7 FAIL=0`; campaign status now consumes 41 route
+  certificates and reports `PASS=37 FAIL=0`;
+- still no retained closure: interacting `K(x)`, finite-volume/IR control, or
+  production pole-derivative data remain open.
+```

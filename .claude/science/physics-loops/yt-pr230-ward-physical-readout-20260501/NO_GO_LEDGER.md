@@ -570,6 +570,19 @@ present, the invariant readout is
 shortcut but does not supply the missing pole, derivative, or production
 response data.
 
+Scalar pole determinant gate is exact support, not closure:
+
+```text
+python3 scripts/frontier_yt_scalar_pole_determinant_gate.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+In one-channel form `C_ss = Pi/D` with `D=1-K Pi`.  A pole location fixes
+`K(x_pole)` but not `K'(x_pole)`, and `D'(x_pole)` controls the LSZ residue.
+Therefore pole naming or contact tuning cannot close PR #230 without an
+interacting scalar-channel kernel theorem or production pole-derivative
+measurement.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

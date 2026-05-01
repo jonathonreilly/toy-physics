@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=36 FAIL=0
+# SUMMARY: PASS=37 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -61,6 +61,7 @@ The certificate consumes the PR-local route certificates for:
 - joint Feynman-Hellmann / scalar-LSZ harness certificate;
 - joint Feynman-Hellmann / scalar-LSZ resource projection;
 - Feynman-Hellmann / scalar-LSZ invariant readout theorem;
+- scalar pole determinant gate;
 - scalar ladder IR / zero-mode obstruction;
 - heavy kinetic-mass route scout;
 - nonzero-momentum correlator scout;
@@ -109,6 +110,7 @@ visible shortcut routes:
 | joint Feynman-Hellmann / scalar-LSZ harness | `dE/ds` and same-source `C_ss(q)` can be emitted together, but production data and `kappa_s` remain open |
 | joint Feynman-Hellmann / scalar-LSZ resource projection | modest LSZ noise/momentum plan projects to about 3630 single-worker hours; planning only, not evidence |
 | Feynman-Hellmann / scalar-LSZ invariant readout | exact formula avoids `kappa_s = 1` shortcut, but still needs same-source production pole data |
+| scalar pole determinant gate | exact denominator condition identifies `K(x)` and `K'(pole)` as load-bearing open inputs |
 | current-scale direct MC | `am_top = 81.423`, not a useful relativistic top run |
 | HQET/static shortcut | removes rest mass, therefore needs matching |
 | heavy kinetic mass | cancels additive rest mass, but needs nonzero-momentum data and matching |
