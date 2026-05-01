@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:03:28.074164+00:00
+**Generated:** 2026-05-01T02:05:05.156644+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
-| bounded | 262 |
+| bounded | 261 |
 | support | 223 |
 | open | 16 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 42 |
-| ~~audited_conditional~~ | 774 |
-| ~~audited_failed~~ | 136 |
+| ~~audited_conditional~~ | 773 |
+| ~~audited_failed~~ | 138 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
 | `audited_conditional` | 499 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 61 |
+| `audited_failed` | 62 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 748 |
+| `unaudited` | 747 |
 
 | criticality | count |
 |---|---:|
@@ -827,6 +827,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_selector_unique_amplitude_slot_note` | unknown | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-gpt-5 | A | `pmns_selector_class_space_uniqueness_note` |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
+| `action_normalization_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | D | - |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `backreaction_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -967,6 +968,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `action_normalization_note`
+
+- **Note:** [`ACTION_NORMALIZATION_NOTE.md`](../../docs/ACTION_NORMALIZATION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-action_normalization_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The coefficient c in S=L(1-c f) is fixed to c=1 because only c=1 gives the observed factor-of-2 light bending once G is fixed as Newton's constant.  _(class `D`)_
+- **chain closes:** False — The runner emits no classified PASS lines and its own metric/deflection logic is inconsistent: it says gamma=1 for all c under Phi=c f/2, while the numerical deflection ratios do not match the claimed theory ratio 1+c.
+- **rationale:** Issue: the load-bearing normalization argument does not close on its own terms. The runner first shows a rescaling degeneracy in c and G, then says PPN gamma=1 for all c if Phi=c f/2, but still concludes that light bending convention-free fixes c=1; its printed numerical deflection ratios for c=0.5,1,2 are about 0.35,0.19,0.13, not the claimed 1+c values 1.5,2,3. The runner also emits zero classified PASS lines. Why this blocks: the central claim that observation uniquely fixes c=1 depends on a coherent metric normalization and light-bending comparator, but the current derivation mixes convention choices and unsupported printed formulas. Repair target: state one fixed normalization for f and G, derive the weak-field metric and null/massive deflection ratio from that normalization, add classified runner checks whose measured quantities match the analytic prediction, and cite the external light-bending/Schwarzschild authority. Claim boundary until fixed: a bounded discussion of the c-G rescaling degeneracy, not an audited proof that self-consistency plus light bending uniquely fixes c=1.
 - **auditor confidence:** high
 
 ### `action_power_3d_gravity_sign_closure_note`
