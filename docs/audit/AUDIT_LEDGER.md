@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T21:03:22.504112+00:00
+**Generated:** 2026-05-01T21:04:27.185813+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 168 |
-| support | 137 |
+| support | 136 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 941 |
+| ~~audited_conditional~~ | 942 |
 | ~~audited_failed~~ | 84 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 301 |
-| `audited_conditional` | 644 |
+| `audited_conditional` | 645 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 518 |
+| `unaudited` | 517 |
 
 | criticality | count |
 |---|---:|
@@ -940,6 +940,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_time_theta_to_slice_coupling_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_time_transfer_matrix_bridge_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `scalar_selector_cycle13_meta_closure_status_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `scalar_selector_cycle1_science_review_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13447,6 +13448,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `MRU/Berry/DPLE/STRC theorem surfaces`
   - `DIM-UNIQ and BACT accounting notes`
+
+### `scalar_selector_cycle1_science_review_note_2026-04-19`
+
+- **Note:** [`SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md`](../../docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note's decision table claims MRU, Berry, DPLE, and STRC/RPSR have distinct science outcomes: MRU is support with a missing measure law, Berry is an obstruction against the old closure route, DPLE is support on the open DM gate, and the quark STRC/RPSR gate is now closed on the branch.  _(class `B`)_
+- **chain closes:** False — The MRU subclaim closes under the runner, but the full review table imports unregistered Berry, DPLE, and quark surfaces.
+- **rationale:** Issue: the registered runner strongly verifies the MRU reduced-carrier algebra with 26 classified A PASS checks, but the row is a broad science-review synthesis whose load-bearing table also depends on Berry obstruction, DPLE/DM, and quark STRC/RPSR theorem surfaces that are not registered as dependencies or checked by this runner. Why this blocks: the full per-gate decision table cannot be ratified from the MRU runner alone. Repair target: split the review note into per-lane audited rows or register all cited theorem notes/runners as dependencies and add a synthesis checker that verifies each table entry against those sources. Claim boundary until fixed: the MRU slice is executable and algebraically supported; the cross-lane closure decision table remains conditional branch triage.
+- **open / conditional deps cited:**
+  - `KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`
+  - `DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`
+  - `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
+  - `QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`
 
 ### `scalar_trace_tensor_no_go_note`
 
