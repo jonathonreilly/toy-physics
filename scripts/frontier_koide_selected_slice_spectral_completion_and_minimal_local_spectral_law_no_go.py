@@ -57,7 +57,7 @@ SELECTOR = SQRT6 / 3.0
 CENTER = 4.0 * SQRT2 / 9.0
 
 
-def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT") -> bool:
+def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT", cls: str = "A") -> bool:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
@@ -65,8 +65,7 @@ def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT") -> 
     else:
         FAIL_COUNT += 1
     tag = f" [{kind}]" if kind != "EXACT" else ""
-    msg = f"  [{status}]{name and tag and ''}"
-    msg = f"  [{status}]{tag} {name}" if kind != "EXACT" else f"  [{status}] {name}"
+    msg = f"  [{status} ({cls})]{tag} {name}" if kind != "EXACT" else f"  [{status} ({cls})] {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)
@@ -177,6 +176,7 @@ def part1_exact_selected_slice_spectral_completion() -> tuple[float, float, floa
         ok_numeric,
         detail=f"max err={max_err:.2e}",
         kind="NUMERIC",
+        cls="C",
     )
     return det_center, tr2_center, gap_sq_center
 
@@ -205,6 +205,7 @@ def part2_reflection_symmetry_and_spectral_collapse(
         ok_reflection,
         detail=f"max reflected-spectral err={max_err:.2e}",
         kind="NUMERIC",
+        cls="C",
     )
 
     scales = [1.0, 2.0, 3.0]
@@ -223,12 +224,14 @@ def part2_reflection_symmetry_and_spectral_collapse(
         ok_shifted,
         detail="(D_c-D, Q-Q_c, Gap^2-Gap_c^2) = (x^2, 2 x^2, 4 x^2)",
         kind="NUMERIC",
+        cls="C",
     )
     check(
         "So the completed selected-slice spectral data identify only one scalar x^2, not an oriented point on the line",
         ok_reflection and ok_shifted,
         detail="spectral completion is exact but sign-blind",
         kind="NUMERIC",
+        cls="C",
     )
 
 
@@ -250,12 +253,14 @@ def part3_minimal_local_spectral_law_no_go() -> None:
         bool(np.all(x_vals < 0.0)) and m_zero < CENTER,
         detail=f"m_pos={m_pos:.12f}, m_0={m_zero:.12f}, center={CENTER:.12f}",
         kind="NUMERIC",
+        cls="C",
     )
     check(
         "Therefore the canonical raw spectral scalars are strictly monotone on the full physical branch",
         bool(np.all(np.diff(dets) > 0.0)) and bool(np.all(np.diff(tr2s) < 0.0)) and bool(np.all(np.diff(gap_sqs) < 0.0)),
         detail="D increases; Q and Gap^2 decrease",
         kind="NUMERIC",
+        cls="C",
     )
 
     packet = {
@@ -284,6 +289,7 @@ def part3_minimal_local_spectral_law_no_go() -> None:
         and gap_order[-1][0] != "m_phys",
         detail="the physical point is interior in every raw spectral ordering",
         kind="NUMERIC",
+        cls="C",
     )
 
     alpha = sp.symbols("alpha", real=True)
@@ -307,6 +313,7 @@ def part3_minimal_local_spectral_law_no_go() -> None:
         bool(np.all(x_vals < 0.0)),
         detail="x never vanishes on the branch; affine laws are constant or monotone there",
         kind="NUMERIC",
+        cls="C",
     )
 
     a_exp, b_exp, c_exp = sp.symbols("a b c", integer=True, nonnegative=True)
@@ -321,6 +328,7 @@ def part3_minimal_local_spectral_law_no_go() -> None:
         bool(np.all(np.diff((xs - CENTER) ** 2) < 0.0)),
         detail="x^2 decreases strictly from threshold to the unphased endpoint",
         kind="NUMERIC",
+        cls="C",
     )
     check(
         "Scale-normalized spectral laws add no new selector content because the selected-slice trace is already fixed",

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T00:01:31.613055+00:00
+**Generated:** 2026-05-01T00:04:01.720557+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 86 |
 | _proposed_retained_ | 1 |
 | bounded | 272 |
-| support | 232 |
+| support | 231 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 763 |
+| ~~audited_conditional~~ | 764 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 224 |
-| `audited_conditional` | 485 |
+| `audited_conditional` | 486 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 766 |
+| `unaudited` | 765 |
 
 | criticality | count |
 |---|---:|
@@ -664,6 +664,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_scale_selector_reparameterization_theorem_note_2026-04-20` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_cyclic_response_bridge_note_2026-04-18` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_selected_line_provenance_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `koide_selected_slice_spectral_completion_and_minimal_local_spectral_law_no_go_note_2026-04-20` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `koide_theta_hierarchy_open_scalar_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_z3_scalar_potential_support_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
@@ -8676,6 +8677,23 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_PARITY_COMPATIBLE_DIAGONAL_BASELINE_THEOREM_NOTE_2026-04-17.md`
   - `DM_NEUTRINO_SOURCE_SURFACE_PARITY_COMPATIBLE_OBSERVABLE_SELECTOR_THEOREM_NOTE_2026-04-17.md`
   - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_CURVATURE_23_SYMMETRIC_BASELINE_BOUNDARY_THEOREM_NOTE_2026-04-17.md`
+- **auditor confidence:** high
+
+### `koide_selected_slice_spectral_completion_and_minimal_local_spectral_law_no_go_note_2026-04-20`
+
+- **Note:** [`KOIDE_SELECTED_SLICE_SPECTRAL_COMPLETION_AND_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-20.md`](../../docs/KOIDE_SELECTED_SLICE_SPECTRAL_COMPLETION_AND_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-20.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-ready-20260430-56`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The completed selected-slice 2x2 spectral data collapse to the sign-blind coordinate x^2, so affine, coefficient-free monomial, and trace-normalized local spectral laws are constant or monotone on the physical branch and cannot select an interior point.  _(class `A`)_
+- **chain closes:** False — The exact spectral-completion and low-complexity no-go algebra closes inside the selected-slice model, with classified A/C runner output. The selected slice, physical branch, and frozen-bank/source-surface construction are imported from conditional authorities that are not one-hop dependencies.
+- **rationale:** Issue: the spectral-completion no-go is valid within the selected-slice 2x2 model, but the note treats the selected slice and physical branch as retained inputs without registering their conditional authorities. Why this blocks: the runner verifies the x^2 collapse and monotonicity after importing active_affine_h, kz_from_h, and selected-line bridge functions; it does not derive the frozen-bank selected slice or physical first branch from retained one-hop inputs. Repair target: register and audit the selected-slice frozen-bank decomposition, selected-line cyclic response bridge, and source-surface active affine / Z3 doublet-block authorities; make the runner fail if those inputs are absent or non-retained. Claim boundary until fixed: conditional support/no-go: given the current selected-slice 2x2 model, intrinsic spectral data are sign-blind and low-complexity local spectral laws cannot pick the interior physical point.
+- **open / conditional deps cited:**
+  - `KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md`
+  - `KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md`
 - **auditor confidence:** high
 
 ### `koide_theta_hierarchy_open_scalar_note_2026-04-19`
