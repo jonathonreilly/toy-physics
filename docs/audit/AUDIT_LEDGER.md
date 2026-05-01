@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:18:49.091561+00:00
+**Generated:** 2026-05-01T20:27:16.686142+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 179 |
+| bounded | 178 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 920 |
+| ~~audited_conditional~~ | 921 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 623 |
+| `audited_conditional` | 624 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 545 |
+| `unaudited` | 544 |
 
 | criticality | count |
 |---|---:|
@@ -683,6 +683,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `generation_axiom_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `global_coherence_held_out2_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `global_coherence_predictor_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gr_class_expansion_finite_rank_target_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `grav_decoherence_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -7327,6 +7328,21 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** On nine off-scaffold generators, the frozen free_coh >= 7.96e-04 rule scores 5/9, matching the old two-property rule on the same batch.  _(class `D`)_
 - **chain closes:** True — The current runner reproduces the finite off-scaffold table, L2 accuracy 5/9, old-rule accuracy 5/9, and pre-committed structural baseline 8/9. This closes the finite bounded negative, not a universal simple-classifier exclusion theorem.
 - **rationale:** The finite off-scaffold comparison closes from the source note and current runner output. The safe claim is bounded to this nine-generator hand-specified batch, one frozen free_coh threshold, and one old two-property comparator. Residual risk is only scope drift: the result should not be read as excluding all scalar metrics or all simple classifiers.
+- **auditor confidence:** high
+
+### `global_coherence_predictor_note`
+
+- **Note:** [`GLOBAL_COHERENCE_PREDICTOR_NOTE.md`](../../docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The off-scaffold held-out lane reversed this lane's advantage, so the original 7/9 revival was scaffold-specific and this note is historical finite evidence only.  _(class `B`)_
+- **chain closes:** False — The primary runner reproduces the old scaffolded 7/9 free_coh revival, and the one-hop off-scaffold note supplies the later 5/9 reversal. However that dependency is itself bounded and the primary runner emits no classified PASS lines, so the current scoped conclusion remains conditional rather than audit-clean.
+- **rationale:** Issue: the note's current claim depends on a bounded off-scaffold reversal note, while its own runner only reproduces the earlier scaffolded 7/9 predictor revival and emits no classified PASS lines. Why this blocks: a hostile reviewer can verify the historical scaffolded run but cannot promote the reversal/scaffold-specific conclusion beyond the bounded dependency and unclassified runner output. Repair target: add classified C/B PASS lines for the scaffolded 7/9 result and the off-scaffold 5/9 supersession, or split the historical scaffolded result from the later reversal note. Claim boundary until fixed: this row is historical finite evidence for a scaffolded predictor improvement that was later boxed in by the bounded off-scaffold test.
+- **open / conditional deps cited:**
+  - `GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md`
+  - `scripts/global_coherence_predictor.py`
 - **auditor confidence:** high
 
 ### `gr_class_expansion_finite_rank_target_note`

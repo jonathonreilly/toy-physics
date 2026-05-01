@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 8,
     "high": 195,
-    "leaf": 209,
+    "leaf": 208,
     "medium": 133
   },
-  "generated_at": "2026-05-01T20:18:48.853231+00:00",
+  "generated_at": "2026-05-01T20:27:16.446757+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9947,25 +9947,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "global_coherence_predictor_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "global_coherence_off_scaffold_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/global_coherence_predictor.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -13968,6 +13949,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 139,
-  "total_pending": 545
+  "ready_count": 138,
+  "total_pending": 544
 }
