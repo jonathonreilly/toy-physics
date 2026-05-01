@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:15:42.865851+00:00
+**Generated:** 2026-05-01T03:16:44.851518+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 249 |
+| bounded | 248 |
 | support | 205 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 12 |
+| ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 792 |
 | ~~audited_failed~~ | 146 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 519 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
-| `audited_numerical_match` | 9 |
+| `audited_numerical_match` | 10 |
 | `audited_renaming` | 17 |
-| `unaudited` | 719 |
+| `unaudited` | 718 |
 
 | criticality | count |
 |---|---:|
@@ -914,6 +914,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `wilson_mu2_distance_sweep_note_2026-04-11` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `architecture_note_directional_measure` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `bell_inequality_derived_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -1279,6 +1280,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`
   - `SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`
   - `LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`
+- **auditor confidence:** high
+
+### `architecture_note_directional_measure`
+
+- **Note:** [`ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`](../../docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-architecture_note_directional_measure`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The propagator is modified by a directional factor exp(-beta theta^2) with beta=0.8, which is claimed to prevent gravity CLT saturation while preserving interference, Born-rule, and k=0 checks.  _(class `G`)_
+- **chain closes:** False — The row has no registered runner and the central beta=0.8 directional weight is empirically chosen rather than derived from the axioms or graph geometry.
+- **rationale:** Issue: the load-bearing directional propagator uses beta=0.8 as an empirically chosen parameter and the note reports smoke-test/pass tables without a registered runner or declared dependencies. Why this blocks: the claimed preservation of unitary tests and gravity behavior is a calibrated architecture choice, not a derivation from Cl(3) on Z^3 or intrinsic graph geometry. Repair target: register the test runner/snapshots that reproduce the 2D/3D constraints, derive or independently select beta from graph geometry, and separate the tuned unitary-layer evidence from downstream gravity/decoherence diagnostics. Claim boundary until fixed: bounded empirical path-measure architecture record; not an audited retained unitary layer or axiom-derived directional law.
 - **auditor confidence:** high
 
 ### `architecture_portability_sweep_note`
