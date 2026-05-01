@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:39:38.379067+00:00
+**Generated:** 2026-05-01T05:40:36.371644+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 212 |
-| support | 174 |
+| support | 173 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 830 |
+| ~~audited_conditional~~ | 831 |
 | ~~audited_failed~~ | 166 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 250 |
-| `audited_conditional` | 561 |
+| `audited_conditional` | 562 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 78 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 630 |
+| `unaudited` | 629 |
 
 | criticality | count |
 |---|---:|
@@ -862,6 +862,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_invariant_nonlinear_completion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_isotropic_glue_operator_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `universal_gr_isotropic_schur_localization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_tensor_variational_candidate_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | E | - |
 | `universal_qg_canonical_refinement_net_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -13222,6 +13223,20 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: the load-bearing no-remaining-covariant-freedom step is asserted rather than derived from registered inputs. Why this blocks: compatibility of M_D, Lambda_R, and canonical projectors does not by itself prove that K_GR^iso(D) = M_D ⊗ Lambda_R is the unique Einstein/Regge operator, especially on shift and shear sectors where normalization/sign and possible block couplings must be excluded. Repair target: register the exact inputs and add a theorem or runner constructing the allowed covariant quadratic operator space and proving only the stated tensor product remains. Claim boundary until fixed: this is support for the intended isotropic gluing route and candidate operator on the invariant background, not an audited closed Einstein/Regge glue-operator theorem.
 - **open / conditional deps cited:**
   - `UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_gr_isotropic_schur_localization_note`
+
+- **Note:** [`UNIVERSAL_GR_ISOTROPIC_SCHUR_LOCALIZATION_NOTE.md`](../../docs/UNIVERSAL_GR_ISOTROPIC_SCHUR_LOCALIZATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** For D = diag(a,b,b,b), the universal Hessian commutes with the lapse, shift, trace, and shear projectors and has exact block coefficients -a^-2, -(ab)^-1, -b^-2, and -b^-2 with all cross-block leakages zero.  _(class `B`)_
+- **chain closes:** False — The stated Schur-localization and coefficient formulas would be an exact algebraic closure if the universal representation, projectors, and Hessian computation were registered, but this row has no dependencies or runner/proof artifact exposing those inputs.
+- **rationale:** Issue: the vanishing leakage and closed-form Hessian coefficients are asserted from unregistered universal-route ingredients. Why this blocks: a hostile audit cannot verify that the fixed SO(3) background, canonical projectors, and D^2W Hessian actually produce the stated block form, nor can it check the sign/normalization convention that the note itself leaves for the final Einstein/Regge identification. Repair target: register the universal representation and projectors, and add a runner or proof that constructs H on diag(a,b,b,b), verifies all commutators/leakages, and derives the four coefficients. Claim boundary until fixed: support for the invariant-background Schur-localization route, not an audited closed localization theorem or GR operator match.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_GR_ISOTROPIC_SCHUR_LOCALIZATION_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_gr_lorentzian_global_atlas_closure_note`
