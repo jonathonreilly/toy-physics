@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:05:11.544325+00:00
+**Generated:** 2026-05-01T23:07:23.136475+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 64 |
+| **retained_no_go** | 65 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 7 |
+| _proposed_no_go_ | 6 |
 | bounded | 163 |
 | support | 134 |
 | open | 6 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 312 |
+| `audited_clean` | 313 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 501 |
+| `unaudited` | 500 |
 
 | criticality | count |
 |---|---:|
@@ -120,6 +120,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `charged_lepton_radiative_tau_selector_firewall_note_2026-04-26` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | C | - |
+| `charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `chiral_3plus1d_coupled_coin_note` | open | ~~audited_clean~~ | open | cross_family | codex-current | C | - |
 | `ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `cl3_color_automorphism_theorem` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
@@ -2461,6 +2462,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `Lepton single-Higgs PMNS triviality theorem`
   - `Neutrino Dirac two-Higgs escape theorem`
   - `charged-lepton effective Z3 offset support language`
+- **auditor confidence:** high
+
+### `charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27`
+
+- **Note:** [`CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md`](../../docs/CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-019de5cb`  (codex-current; independence=fresh_context)
+- **load-bearing step:** A selector from scalar quotient data to one generation label would have to pick a C3-fixed label, but the C3 action 0 -> 1 -> 2 -> 0 on generation labels is free, so no fixed singleton label exists; only based maps exist and those require extra basepoint/source/generation data.  _(class `A`)_
+- **chain closes:** True — The negative result closes as an exact group-action obstruction from the supplied premises: scalar Q/delta/z data are invariant under cyclic relabeling, while the target generation labels form a free C3 orbit. Therefore invariant scalar data cannot canonically select one physical generation label without additional based data. The runner directly checks the scalar invariance, carrier relabeling behavior, free action, absence of invariant singleton, and existence of only based maps.
+- **rationale:** The claim is a narrow no-go, not a positive charged-lepton mass closure. Its load-bearing step is exact algebra over the supplied C3 action and scalar-readout premise, and the runner checks the obstruction directly. No PDG masses, observed hierarchy label, or hidden physical generation identification are used as derivation input.
 - **auditor confidence:** high
 
 ### `charged_lepton_y_tau_m3_premise_self_correction_note_2026-04-28`
