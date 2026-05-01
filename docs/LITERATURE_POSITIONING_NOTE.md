@@ -113,9 +113,6 @@ What is missing relative to that literature:
 - a fully closed asymptotic / continuum bridge
 - universality across graph families without new companion-harness wording
 
-This is the literature context for
-[`PAPER_SCOPE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PAPER_SCOPE_NOTE.md).
-
 ## What this note is not claiming
 
 This note is **not** claiming equivalence to those frameworks.

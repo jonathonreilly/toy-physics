@@ -309,7 +309,6 @@ Goal:
 Concrete deliverables:
 
 - [LITERATURE_POSITIONING_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LITERATURE_POSITIONING_NOTE.md)
-- [PAPER_SCOPE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/PAPER_SCOPE_NOTE.md)
 - explicit future comparisons to:
   - quantum measure / Sorkin
   - open quantum systems / collision models
