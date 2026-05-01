@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T16:30:02.678226+00:00
+**Generated:** 2026-05-01T16:33:40.560487+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 199 |
+| bounded | 198 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 878 |
+| ~~audited_conditional~~ | 879 |
 | ~~audited_failed~~ | 103 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 294 |
-| `audited_conditional` | 592 |
+| `audited_conditional` | 593 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 568 |
+| `unaudited` | 567 |
 
 | criticality | count |
 |---|---:|
@@ -477,6 +477,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `complete_prediction_chain_2026_04_15` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `complex_action_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | E | - |
 | `complex_selectivity_compare_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `composite_source_additivity_2d_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -2852,6 +2853,18 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `HIGGS_MASS_FROM_AXIOM_NOTE.md`
   - `HIGGS_MASS_DERIVED_NOTE.md`
   - `ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md`
+- **auditor confidence:** high
+
+### `complex_action_note`
+
+- **Note:** [`COMPLEX_ACTION_NOTE.md`](../../docs/COMPLEX_ACTION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The action is S = L(1 - f) + i * gamma * L * f, with the imaginary term read as field-dependent amplitude decay or growth and gamma=0 recovering the real-action propagator.  _(class `E`)_
+- **chain closes:** False — The runner reproduces the gamma sweep, Born-linearity behavior, mass-scaling samples, and gamma=0 reduction, but the imaginary action term and free gamma are introduced rather than derived from retained inputs. The absorption-biased centroid/escape behavior is therefore a conditional model behavior, not a closed horizon/gravity unification theorem.
+- **rationale:** Issue: the load-bearing step is the introduced complex-action ansatz S = L(1-f) + i*gamma*L*f plus a free gamma parameter, while the horizon interpretation is represented only by absorption-biased escape/centroid behavior in one setup. Why this blocks: the current inputs do not derive the imaginary term, fix gamma from Cl(3)/Z^3 or the gravity chain, or test horizon-specific observables such as photon-sphere, Schwarzschild, Hawking, or causal-horizon behavior. Repair target: derive gamma or the imaginary action term from retained primitives and add asserted runner checks for horizon-specific observables across resolution/geometry. Claim boundary until fixed: a conditional one-parameter complex-kernel model where gamma=0 reduces to the real-action propagator and positive gamma produces the listed absorption-biased numerical behavior while preserving linear Born behavior.
 - **auditor confidence:** high
 
 ### `complex_selectivity_compare_note`
