@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 287,
-    "medium": 150
+    "medium": 149
   },
-  "generated_at": "2026-05-01T05:24:06.322349+00:00",
+  "generated_at": "2026-05-01T05:25:03.414326+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6547,23 +6547,6 @@
       "note_path": "docs/EQUIVALENCE_PRINCIPLE_NOTE.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "scalar_trace_tensor_no_go_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.587,
-      "note_path": "docs/SCALAR_TRACE_TENSOR_NO_GO_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_scalar_trace_tensor_nogo.py",
       "transitive_descendants": 33
     },
     {
@@ -15549,6 +15532,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 244,
-  "total_pending": 640
+  "ready_count": 243,
+  "total_pending": 639
 }

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:24:06.597911+00:00
+**Generated:** 2026-05-01T05:25:03.699996+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 247 |
+| `audited_clean` | 248 |
 | `audited_conditional` | 556 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 640 |
+| `unaudited` | 639 |
 
 | criticality | count |
 |---|---:|
@@ -318,6 +318,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `s3_taste_cube_decomposition_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `scalar_3plus1_temporal_ratio_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
+| `scalar_trace_tensor_no_go_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `self_consistency_forces_poisson_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-gpt-5 | C | - |
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -12094,6 +12095,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** True — The scalar endpoint ratio follows by direct algebra/calculus from the stated kernel K_sc(omega) = 3 + sin^2(omega) and the stated APBC temporal average. The note explicitly keeps the fourth-root observable insertion at support level, so the clean closure is only for the scalar bridge endpoint ratio.
 - **rationale:** The load-bearing claim is the exact scalar ratio A_inf / A_2 = 2 / sqrt(3), not an observable-level plaquette insertion. Given the stated minimal 3+1 APBC scalar kernel and coefficient definition, the endpoints and ratio close as exact mathematics, and the runner's current output is numerically consistent with the note. The source note correctly marks the dimension-4 fourth-root observable insertion as only a support corollary, avoiding the missing physical-observable bridge.
 - **auditor confidence:** medium
+
+### `scalar_trace_tensor_no_go_note`
+
+- **Note:** [`SCALAR_TRACE_TENSOR_NO_GO_NOTE.md`](../../docs/SCALAR_TRACE_TENSOR_NO_GO_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Vector, tensor-shear, and mixed perturbations keep the current scalar shell/Schur boundary data fixed while activating independent 3+1 Einstein tensor channels, so no completion principle factoring only through that scalar data can determine the full metric.  _(class `C`)_
+- **chain closes:** True — The runner constructs same-scalar-data probes on both the O_h and finite-rank classes, verifies scalar-action invariance, and verifies nonzero independent tensorial residual channels. The note's no-go is limited to scalar-trace-only completions and does not claim a positive tensor-valued GR law.
+- **rationale:** The no-go closes at the stated scope: scalar shell/Schur data are invariant across the constructed perturbation families, while vector and traceless spatial Einstein residual channels change. That is enough to rule out completion principles that factor only through the current scalar data on this branch. Residual risk is outside the claim boundary: a genuinely tensor-valued matching law may still exist and is explicitly left open.
+- **auditor confidence:** high
 
 ### `second_grown_family_complex_note`
 
