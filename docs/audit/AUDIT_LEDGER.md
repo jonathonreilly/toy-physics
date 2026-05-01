@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:52:44.551492+00:00
+**Generated:** 2026-05-01T23:59:28.717554+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 326 |
+| `audited_clean` | 327 |
 | `audited_conditional` | 660 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 482 |
+| `unaudited` | 481 |
 
 | criticality | count |
 |---|---:|
@@ -393,6 +393,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `sigma_mnu_f3_stuck_fanout_synthesis_note_2026-04-28` | open | ~~audited_clean~~ | open | fresh_context | codex-current | B | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
 | `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
+| `sixth_family_complex_boundary_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -14403,6 +14404,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Phi^dagger P_mu Phi = S_mu, with P_mu |X_alpha> = |X_(alpha xor e_mu)> on the BZ-corner subspace.  _(class `A`)_
 - **chain closes:** True — The note has no one-hop dependencies and the runner directly checks the finite Fourier/BZ-corner intertwiner identities. The safe boundary is narrow: it proves the exact taste-cube/BZ-corner operator bridge, not physical generation identification.
 - **rationale:** The load-bearing step is a finite-dimensional algebra/Fourier intertwiner, and the runner checks the bit-flip law, pulled-back operators, and joint eigensystem transfer without importing a physical-generation claim. Residual risk is limited to downstream over-reading: this clean result only covers the restricted C^8/BZ-corner bridge stated in the note.
+- **auditor confidence:** high
+
+### `sixth_family_complex_boundary_note`
+
+- **Note:** [`SIXTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`](../../docs/SIXTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the retained sixth-family sheared anchor row drift=0.20, seed=2, the complex-action targeted probe preserves the gamma=0 sign-law anchor and Born proxy but has t01=0 and t05=0, so no TOWARD-to-AWAY complex-action companion survives on this slice.  _(class `B`)_
+- **chain closes:** True — The current SIXTH_FAMILY_COMPLEX_TARGETED.py output matches the note: sign-law passing rows are 1/1, retained complex companions are 0, born is 0.000e+00, g0=-3.870601e-06, d01=-4.056664e-06, d05=-4.800909e-06, fm0=fm05=1.000, and both t01 and t05 are zero. This supports the bounded conclusion that the complex-action branch is a diagnosed boundary on the tested retained row.
+- **rationale:** The note is a bounded negative boundary, not a positive complex-action retention claim. Its numerical readout is current with the targeted runner and the conclusion is conservative: exact anchors and weak-field linearity survive, but the required directional crossover does not. Residual risk is only that the ledger row has no primary runner attached; the matching local script provides the current evidence surface.
 - **auditor confidence:** high
 
 ### `sixth_family_distance_law_third_vs_sixth_quick_note`
