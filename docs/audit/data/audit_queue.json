@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 231,
+    "leaf": 230,
     "medium": 133
   },
-  "generated_at": "2026-05-01T07:34:18.271371+00:00",
+  "generated_at": "2026-05-01T07:35:51.752051+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10026,23 +10026,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "ordered_lattice_packet_reidentification_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/ordered_lattice_packet_reidentification.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "ordered_lattice_quasi_persistent_relaunch_2d_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14317,6 +14300,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 167,
-  "total_pending": 567
+  "ready_count": 166,
+  "total_pending": 566
 }
