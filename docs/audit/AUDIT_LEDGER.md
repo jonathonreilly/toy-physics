@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:12:10.773323+00:00
+**Generated:** 2026-05-01T03:13:19.800034+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 251 |
-| support | 206 |
+| support | 205 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 12 |
 | ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 791 |
+| ~~audited_conditional~~ | 792 |
 | ~~audited_failed~~ | 146 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 230 |
-| `audited_conditional` | 518 |
+| `audited_conditional` | 519 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 9 |
 | `audited_renaming` | 15 |
-| `unaudited` | 722 |
+| `unaudited` | 721 |
 
 | criticality | count |
 |---|---:|
@@ -756,6 +756,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
 | `pmns_sigma_zero_nogo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `pmns_transfer_operator_dominant_mode_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `pmns_uniform_scalar_deformation_boundary_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `poisson_3d_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `poisson_exhaustive_uniqueness_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `poisson_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -10702,6 +10703,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** On the aligned hw=1 active patch, the transfer kernel T_seed=xbar I + ybar(C+C^2) has a dominant symmetric mode and a degenerate orthogonal mode whose eigenvalues reconstruct xbar and ybar exactly, while the projection remains blind to the 5-real off-seed source.  _(class `A`)_
 - **chain closes:** False — The runner verifies the circulant-kernel eigenvalue algebra, but the identification of this hard-coded kernel with the native PMNS transfer operator and the boundary to the active off-seed source are asserted without declared dependencies.
 - **rationale:** Issue: the runner gives a correct algebraic check (PASS=10/FAIL=0) for a 3x3 circulant transfer kernel and shows the aligned seed pair can be reconstructed from its modes. What is not closed in this row is the physical/native identification: that this specific kernel is the hw=1 PMNS transfer law, that xbar/ybar are the active seed pair, and that the 5-real off-seed source is the relevant missing carrier. Why this blocks: the eigenvalue identities are exact, but clean audit of the selector law needs the PMNS active-patch and transfer-kernel construction as declared retained inputs. Repair target: declare the active-patch/weak-axis seed and transfer-operator authorities, or narrow the note to the pure circulant-kernel algebra. Claim boundary until fixed: support-level algebraic seed-pair reconstruction conditional on the imported PMNS transfer-kernel interpretation; not an independently closed microscopic PMNS value law.
+- **auditor confidence:** high
+
+### `pmns_uniform_scalar_deformation_boundary_note`
+
+- **Note:** [`PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md`](../../docs/PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_uniform_scalar_deformation_boundary_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** A uniform local scalar condensate keeps each hw=1 triplet generation-scalar, induces only scalar response profiles, and the retained PMNS closure stack rejects those scalar profiles as not one-sided minimal PMNS.  _(class `C`)_
+- **chain closes:** False — The uniform-scalar computation and closure-stack rejection pass in the runner, but the closure stack and active-source machinery are imported rather than registered or independently established in this row.
+- **rationale:** Issue: the runner verifies 22 checks for the scalar Hamiltonian, scalar response profiles, and rejection by the retained PMNS closure stack, but the row has deps=[] while relying on frontier_pmns_lower_level_end_to_end_closure.py and frontier_pmns_active_four_real_source_from_transport.py. Why this blocks: the negative boundary closes only relative to that imported closure-stack definition and its one-sided-minimal PMNS criterion; the note does not itself derive or register those authorities. Repair target: register the lower-level PMNS closure stack and active four-real source theorem as dependencies, and classify runner PASS lines for the Hamiltonian, response, and closure rejection steps. Claim boundary until fixed: conditional no-go for uniform scalar/Coleman-Weinberg deformations against the encoded retained PMNS closure stack; not a standalone proof against every admitted PMNS extension.
+- **open / conditional deps cited:**
+  - `scripts/frontier_pmns_lower_level_end_to_end_closure.py`
+  - `scripts/frontier_pmns_active_four_real_source_from_transport.py`
+  - `scripts/pmns_lower_level_utils.py`
+  - `scripts/frontier_pmns_uniform_scalar_deformation_boundary.py`
 - **auditor confidence:** high
 
 ### `poisson_3d_self_field_note`
