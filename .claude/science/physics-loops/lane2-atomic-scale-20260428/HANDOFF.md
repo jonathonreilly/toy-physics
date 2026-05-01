@@ -1,6 +1,6 @@
 # Lane 2 Physics Loop Handoff
 
-**Updated:** 2026-05-01T11:51:36Z
+**Updated:** 2026-05-01T11:52:52Z
 **Loop slug:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Branch:** `physics-loop/lane2-atomic-scale-block01-20260428`  
@@ -31,6 +31,13 @@ bridge. It proves that retained Lorentz/dispersion support gives
 mass `m` are supplied. This sharpens the kinetic side of the Schrodinger gate
 but does not derive `m_e`, reduced mass, `alpha(0)`, the Coulomb sector, or the
 Rydberg scale.
+
+Endpoint review found that all viable non-overlapping Lane 2 routes are now
+blocked after the required deep-work and stuck-fan-out rules. The run created
+`STOP_REQUESTED`; the stop reason is that retained Rydberg/atomic-scale
+closure remains unjustified without new retained premises for mass/reduced
+mass, low-energy `alpha(0)` threshold/matching transport, and the
+physical-unit Schrodinger/Coulomb sector.
 
 The default automation lock path is unavailable for this SSH user:
 
@@ -362,7 +369,7 @@ origin/physics-loop/lane2-atomic-scale-block01-20260428
 
 The next science action for the continuing supervisor is:
 
-1. perform endpoint packaging if checkpoint review agrees all viable
-   non-overlapping Lane 2 routes are blocked after the deep-work/fan-out rule;
-2. otherwise continue only if a new reviewable theorem prerequisite appears
-   without Lane 4/Lane 6 overlap.
+1. commit and push the `STOP_REQUESTED` / PR-body package;
+2. open the Block 01 review PR with `gh pr create`;
+3. after PR creation, do not merge; reviewer should evaluate whether the
+   open/no-go boundary is accepted as the narrowest honest status.
