@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:25:03.699996+00:00
+**Generated:** 2026-05-01T05:28:30.593484+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 214 |
+| bounded | 213 |
 | support | 179 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 825 |
-| ~~audited_failed~~ | 164 |
+| ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 248 |
 | `audited_conditional` | 556 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 76 |
+| `audited_failed` | 77 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 639 |
+| `unaudited` | 638 |
 
 | criticality | count |
 |---|---:|
@@ -955,6 +955,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `second_grown_family_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `self_gravity_backreaction_closure_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `session_summary_2026-04-01_topology` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `shapiro_complex_interaction_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `shapiro_diamond_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | F | - |
@@ -12144,6 +12145,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** On the tested 3D nearest-neighbor cubic-lattice surface, unscreened Poisson is the best-supported operator in the finite sweep: it converges with attractive monotone near-Newtonian fields, the tested non-screened alternatives fail the same physics checks, screened variants drift away from beta=1, and susceptibility correlates with the Poisson Green profile.  _(class `C`)_
 - **chain closes:** True — The source note explicitly scopes itself to a bounded finite-lattice/tested-family preference result and disclaims full uniqueness. The restored runner exits 0 and reproduces the stated Poisson convergence, alternative-operator comparison, susceptibility correlation, screened-Poisson drift, and N=24 confirmation.
 - **rationale:** Clean as a bounded operator-preference result only: the note does not claim retained Poisson uniqueness, and its caveats match the runner surface. The live runner exits 0 after runner restoration and verifies that Poisson converges on N=20 and N=24 with attractive monotone fields, tested non-screened alternatives do not share the same physically correct profile, screened Poisson with positive mu^2 drifts away from beta=1, and the susceptibility profile is strongly correlated with the Poisson Green profile. Residual risk is the stated bounded scope: finite lattices, tested operator family, small-perturbation susceptibility, and ordered cubic graph only.
+- **auditor confidence:** high
+
+### `self_gravity_backreaction_closure_note`
+
+- **Note:** [`SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md`](../../docs/SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The bounded no-go depends on the Poisson self-gravity loop runner verifying exact epsilon=0 reduction, nonzero-coupling convergence/Born failures, and the retained audit-row control surface.  _(class `C`)_
+- **chain closes:** False — The primary runner did not complete in the audit window: it remained silent for roughly 2m20s and had to be killed. Without current runner output, the bounded no-go's exact reduction and Born-control claims cannot be audited from this checkout.
+- **rationale:** Issue: the registered primary runner exceeded the normal audit-loop runner window and produced no output before being killed after roughly 2m20s. Why this blocks: the note's bounded no-go relies on exact epsilon=0 identity, convergence failure, and Born-audit measurements that must come from the runner; none were available in the current run. Repair target: make scripts/poisson_self_gravity_loop_v3.py complete within the audit window, add an explicit slow-runner annotation with rationale, or split/cache the expensive checks into a reviewable runner artifact. Claim boundary until fixed: the note remains an intended bounded no-go, but its current audit artifact is not executable enough to ratify.
 - **auditor confidence:** high
 
 ### `self_gravity_entropy_note_2026-04-11`
