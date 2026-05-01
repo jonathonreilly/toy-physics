@@ -17,7 +17,7 @@
     "proposed_promoted",
     "proposed_retained"
   ],
-  "generated_at": "2026-05-01T04:20:49.317717+00:00",
+  "generated_at": "2026-05-01T04:22:13.065552+00:00",
   "policy": "reaudit_unblocked_by_ratified_dependencies_v1",
   "policy_summary": "Non-clean audited proposed claims whose current one-hop dependencies are all retained/promoted and whose audit-time dependency snapshot contains at least one dependency that has since become retained/promoted.",
   "ratified_dependency_statuses": [

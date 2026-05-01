@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:20:49.531359+00:00
+**Generated:** 2026-05-01T04:22:13.329952+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 233 |
+| bounded | 232 |
 | support | 192 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 17 |
+| ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 806 |
 | ~~audited_failed~~ | 159 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 537 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
-| `audited_numerical_match` | 14 |
+| `audited_numerical_match` | 15 |
 | `audited_renaming` | 18 |
-| `unaudited` | 688 |
+| `unaudited` | 687 |
 
 | criticality | count |
 |---|---:|
@@ -953,6 +953,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_direct_dm_h025_seed0_crossfamily_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `yt_bridge_action_invariant_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_bridge_hessian_selector_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
+| `yt_bridge_higher_order_corrections_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -13319,6 +13320,25 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md`
   - `TARGET_CONDITIONED_INPUT: TARGET_YT_PHYS = 0.9176`
   - `PROFILE_FAMILY_SELECTION: logistic / erf / smoothstep UV-localized bridges`
+- **auditor confidence:** high
+
+### `yt_bridge_higher_order_corrections_note`
+
+- **Note:** [`YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md`](../../docs/YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-yt_bridge_higher_order_corrections_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the 10% amplitude tube around the best constructive UV bridge, the cubic-plus-quartic tail is only 7.123842e-3 of the quadratic term, so the local-Hessian selector remains dominant there.  _(class `G`)_
+- **chain closes:** False — The runner verifies the polynomial fit and hierarchy on the selected bridge profile, but the bridge profile itself is chosen by near-target endpoint matching and the 10% amplitude tube is a bounded probe window. The exact microscopic source of the selector and correction hierarchy is not derived from declared dependencies.
+- **rationale:** Issue: the higher-order correction ratio is measured around a target-selected constructive UV bridge and a chosen local amplitude tube. Why this blocks: the runner passes and the fourth-order amplitude fit is numerically stable, but the result is a bounded scan/probe of the viable family rather than a derivation of the exact bridge's local expansion coefficients. Repair target: derive the cubic/quartic correction bounds from the exact interacting bridge action or show the 10% tube and selected profile are forced independently of the y_t endpoint match. Claim boundary until fixed: this is a useful bounded numerical correction budget for the current bridge selector, not an audit-clean higher-order theorem.
+- **open / conditional deps cited:**
+  - `YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md`
+  - `YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`
+  - `YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`
+  - `TARGET_CONDITIONED_INPUT: TARGET_YT_PHYS = 0.9176`
+  - `PROFILE_SELECTION: logistic center=0.975 width=0.020`
+  - `PROBE_WINDOW_SELECTION: |delta| <= 0.10 amplitude tube`
 - **auditor confidence:** high
 
 ### `yt_color_projection_correction_note`
