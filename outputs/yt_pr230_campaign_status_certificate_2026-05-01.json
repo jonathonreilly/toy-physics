@@ -4,6 +4,7 @@
     "direct_scale": "scale requirement / direct measurement route open",
     "free_bubble": "exact negative boundary / free source pole absence",
     "heavy_kinetic": "bounded-support / heavy kinetic-mass route",
+    "heavy_matching": "exact negative boundary / heavy kinetic matching obstruction",
     "hqet": "route requirement / HQET shortcut no-go",
     "hs_rpa": "exact negative boundary / HS-RPA contact route open only with new kernel theorem",
     "key_blocker": "open / key blocker not closed",
@@ -19,7 +20,7 @@
     "static_mass": "exact negative boundary / static mass matching obstruction"
   },
   "fail_count": 0,
-  "pass_count": 12,
+  "pass_count": 13,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [
@@ -42,5 +43,5 @@
     "does not use observed top mass or y_t as proof input",
     "does not allow H_unit matrix-element definition as y_t readout"
   ],
-  "verdict": "The current PR #230 physics-loop campaign did not reach retained top-Yukawa closure.  It did retire the visible shortcut routes: Ward/H_unit, R_conn-only LSZ, Legendre normalization, free logdet bubble, contact HS/RPA, simplified ladder projector, same-1PI, finite ladder IR/zero-mode shortcut, and static/HQET without matching.  It also isolates a constructive heavy kinetic-mass route, a tiny nonzero-momentum correlator scout, and production harness momentum fields, but that route still needs production data and matching.  Remaining closure requires production evidence or a genuinely new scalar LSZ/heavy-matching theorem."
+  "verdict": "The current PR #230 physics-loop campaign did not reach retained top-Yukawa closure.  It did retire the visible shortcut routes: Ward/H_unit, R_conn-only LSZ, Legendre normalization, free logdet bubble, contact HS/RPA, simplified ladder projector, same-1PI, finite ladder IR/zero-mode shortcut, and static/HQET without matching.  It also isolates a constructive heavy kinetic-mass route, a tiny nonzero-momentum correlator scout, and production harness momentum fields, but that route still needs production data and a derived matching theorem.  Remaining closure requires production evidence or a genuinely new scalar LSZ/heavy-matching theorem."
 }

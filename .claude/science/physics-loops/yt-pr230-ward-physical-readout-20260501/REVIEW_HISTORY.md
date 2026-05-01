@@ -97,6 +97,10 @@ Review checks performed:
   optional momentum modes and certificate fields, and the smoke validation
   runner verifies finite kinetic proxies.  The smoke certificate is
   reduced-scope and must remain rejected by strict production validation.
+- Heavy kinetic matching review: the runner varies `c2`, `M0`, and matching
+  factors while holding the measured splitting fixed.  It blocks only the
+  shortcut from kinetic splitting to SM top mass; it does not reject the kinetic
+  route once matching is independently derived.
 
 ## Review-Loop Backpressure — Campaign Block 2
 
@@ -279,3 +283,26 @@ python3 scripts/frontier_yt_momentum_harness_extension_certificate.py
 
 The extension is ready for pilot/production use, but no current result is
 strict evidence.
+
+## Review-Loop Backpressure — Heavy Kinetic Matching Obstruction
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_heavy_kinetic_matching_obstruction.py
+python3 scripts/frontier_yt_heavy_kinetic_matching_obstruction.py
+```
+
+The route remains actionable only as production evidence plus a matching
+theorem.

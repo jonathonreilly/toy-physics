@@ -56,6 +56,7 @@ def main() -> int:
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
         "momentum_harness": load("outputs/yt_momentum_harness_extension_certificate_2026-05-01.json"),
+        "heavy_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
         "direct_scale": load("outputs/yt_direct_measurement_scale_requirements_2026-05-01.json"),
     }
 
@@ -117,6 +118,11 @@ def main() -> int:
         or "bounded-support" in str(statuses["momentum_harness"]),
         statuses["momentum_harness"],
     )
+    report(
+        "heavy-kinetic-route-needs-matching-theorem",
+        "matching" in str(statuses["heavy_matching"]),
+        statuses["heavy_matching"],
+    )
 
     remaining_routes = [
         {
@@ -144,7 +150,7 @@ def main() -> int:
             "matching.  It also isolates a constructive heavy kinetic-mass "
             "route, a tiny nonzero-momentum correlator scout, and production "
             "harness momentum fields, but that route still needs production "
-            "data and matching.  Remaining "
+            "data and a derived matching theorem.  Remaining "
             "closure requires production "
             "evidence or a genuinely new scalar LSZ/heavy-matching theorem."
         ),

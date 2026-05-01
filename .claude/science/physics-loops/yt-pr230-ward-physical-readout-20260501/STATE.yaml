@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-12-momentum-harness-extension
-blocks_completed: 26
-active_route: "production harness momentum-projection extension"
-active_hard_residual: "carry kinetic-mass evidence fields in PR230 certificates without treating smoke data as production evidence"
+current_phase: campaign-block-13-heavy-kinetic-matching-obstruction
+blocks_completed: 27
+active_route: "heavy kinetic-action and lattice-to-SM matching"
+active_hard_residual: "derive or bound c2/action normalization and matching from lattice M_kin to SM top mass"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -103,6 +103,9 @@ files_touched:
   - "docs/YT_DIRECT_CORRELATOR_MOMENTUM_HARNESS_EXTENSION_NOTE_2026-05-01.md"
   - "outputs/yt_direct_lattice_correlator_momentum_harness_smoke_2026-05-01.json"
   - "outputs/yt_momentum_harness_extension_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_heavy_kinetic_matching_obstruction.py"
+  - "docs/YT_HEAVY_KINETIC_MATCHING_OBSTRUCTION_NOTE_2026-05-01.md"
+  - "outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -147,6 +150,7 @@ claim_state_movement:
   - "isolated a constructive heavy kinetic-mass route: E(p)-E(0) cancels additive static mass, but needs 1/M action, nonzero-momentum correlator data, and matching"
   - "implemented a cold-gauge nonzero-momentum staggered-correlator scout reusing the PR230 production harness; kinetic splittings are finite and ordered but not production evidence"
   - "extended the direct-correlator production harness with optional momentum modes and kinetic-mass certificate fields; smoke output remains reduced-scope"
+  - "proved kinetic energy splittings still require c2/action normalization and lattice-to-SM matching; same splitting supports different M0 and y_t without that theorem"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -155,5 +159,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Derive or bound the heavy-action matching theorem for converting lattice kinetic mass to SM top mass, or run a bounded pilot with momentum modes enabled."
+next_exact_action: "Run a bounded momentum-enabled pilot for empirical scaling, or pivot back to scalar LSZ theorem; retained closure still needs production evidence plus matching or scalar pole-residue theorem."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

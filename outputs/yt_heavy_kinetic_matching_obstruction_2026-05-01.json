@@ -1,0 +1,59 @@
+{
+  "actual_current_surface_status": "exact negative boundary / heavy kinetic matching obstruction",
+  "equivalent_kinetic_action_pairs": [
+    {
+      "c2": 0.5,
+      "delta_e": 0.05,
+      "m0_lat": 10.0,
+      "measured_mkin_if_c2_assumed_1": 20.0
+    },
+    {
+      "c2": 1.0,
+      "delta_e": 0.05,
+      "m0_lat": 20.0,
+      "measured_mkin_if_c2_assumed_1": 20.0
+    },
+    {
+      "c2": 2.0,
+      "delta_e": 0.05,
+      "m0_lat": 40.0,
+      "measured_mkin_if_c2_assumed_1": 20.0
+    }
+  ],
+  "fail_count": 0,
+  "matching_factor_countermodels": [
+    {
+      "m_t_sm_GeV": 36.023,
+      "y_t_from_v_input": 0.20690556240075075,
+      "z_match": 0.85
+    },
+    {
+      "m_t_sm_GeV": 42.38,
+      "y_t_from_v_input": 0.2434183087067656,
+      "z_match": 1.0
+    },
+    {
+      "m_t_sm_GeV": 48.737,
+      "y_t_from_v_input": 0.27993105501278037,
+      "z_match": 1.15
+    }
+  ],
+  "measured_mkin_lat_if_c2_is_one": 20.0,
+  "p_hat_sq": 2.0,
+  "pass_count": 5,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The kinetic-action coefficient and lattice-to-SM matching factor remain open imports.",
+  "required_next_theorem": [
+    "derive the heavy kinetic-action coefficient c2 on the Cl(3)/Z^3 substrate",
+    "derive lattice-HQET/NRQCD-to-SM mass matching without observed top calibration",
+    "combine with production E(p)-E(0) data and uncertainty propagation"
+  ],
+  "strict_non_claims": [
+    "not a production measurement",
+    "not a y_t derivation",
+    "does not use observed top mass as calibration",
+    "does not define y_t through H_unit matrix elements"
+  ],
+  "target_delta_e": 0.05,
+  "verdict": "A nonzero-momentum correlator can measure an energy splitting, but the splitting fixes c2/M0 rather than an SM pole mass unless the kinetic-action coefficient c2 is retained.  Even after a lattice M_kin is extracted, a lattice-to-SM matching factor changes the resulting m_t and y_t while leaving the measured splitting fixed.  Thus the kinetic route is real but not retained closure without a matching theorem or production evidence plus independently derived matching."
+}

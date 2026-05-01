@@ -87,12 +87,15 @@ Completed in block 1:
 - `outputs/yt_direct_lattice_correlator_momentum_harness_smoke_2026-05-01.json`
 - `outputs/yt_momentum_harness_extension_certificate_2026-05-01.json`
 - `docs/YT_DIRECT_CORRELATOR_MOMENTUM_HARNESS_EXTENSION_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_heavy_kinetic_matching_obstruction.py`
+- `outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json`
+- `docs/YT_HEAVY_KINETIC_MATCHING_OBSTRUCTION_NOTE_2026-05-01.md`
 
 Next artifact:
 
-- heavy-action matching theorem attempt or bounded momentum-enabled pilot,
-  because production-harness support now exists but still lacks production
-  ensemble evidence and matching
+- bounded momentum-enabled pilot or scalar LSZ theorem attempt, because the
+  kinetic matching route is now blocked unless `c2` and lattice-to-SM matching
+  are derived
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

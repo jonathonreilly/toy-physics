@@ -88,6 +88,10 @@ What changed:
   `momentum_analysis` certificate fields.  A reduced-scope `4^3 x 8` smoke run
   produced finite kinetic-mass proxies, but the validation runner explicitly
   keeps this at bounded-support status.
+- The heavy kinetic matching obstruction shows why the kinetic route is not
+  retained closure yet: a measured `E(p)-E(0)` fixes a kinetic combination, and
+  changing `c2` or the lattice-to-SM matching factor changes the inferred SM
+  top mass without changing the measured splitting.
 
 The scientific result is narrower than closure:
 
@@ -120,8 +124,8 @@ Package this PR #230 update.  The remaining positive options are now:
 Acceptance target for the next heavy-kinetic block:
 
 1. Implement a nonzero-momentum correlator scout that extracts `E(p)-E(0)`.
-2. Decide whether the current staggered/Wilson action supplies a usable
-   `1/M` kinetic term for the top-scale route.
-3. Derive or bound the lattice-HQET/NRQCD-to-SM matching import.
-4. If the matching import closes, propagate `M_kin` to `y_t = sqrt(2)m_t/v`;
-   otherwise record the precise production/matching requirement.
+2. If continuing the kinetic route, run a bounded momentum-enabled pilot to
+   measure scaling and error bars.
+3. If pursuing closure rather than engineering, derive `c2` and the
+   lattice-HQET/NRQCD-to-SM matching import.
+4. Otherwise pivot back to the scalar LSZ/pole-residue theorem.

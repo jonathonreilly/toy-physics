@@ -6,7 +6,7 @@
    81.423`; the cold-gauge scout validates the measurement primitive.  The
    production harness now carries momentum-analysis fields.  The route still
    needs a `1/M` action term, gauge-ensemble data, and lattice-HQET/NRQCD-to-SM
-   matching.
+   matching; the matching shortcut is explicitly blocked.
 2. **Scalar-channel Bethe-Salpeter projector and limiting theorem.** The
    source-bubble stretch, HS/RPA contact attempt, input audit, and
    projector-normalization obstruction show the exact next analytic object:

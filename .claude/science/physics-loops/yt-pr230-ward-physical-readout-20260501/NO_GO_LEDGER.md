@@ -249,6 +249,19 @@ The production harness can now emit momentum-analysis fields, but the current
 certificate is a one-configuration cold-gauge smoke artifact.  It is not
 production evidence and does not remove the heavy-action matching import.
 
+Kinetic-to-SM matching shortcut blocked:
+
+```text
+python3 scripts/frontier_yt_heavy_kinetic_matching_obstruction.py
+# SUMMARY: PASS=5 FAIL=0
+```
+
+The same measured splitting can be represented by different `c2, M0` pairs.
+Even with a lattice `M_kin`, changing the lattice-to-SM matching factor changes
+the inferred `m_t` and `y_t` without changing the correlator.  Therefore the
+kinetic route requires a retained matching theorem or independent production
+matching evidence.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate
