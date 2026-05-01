@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T22:44:52.169297+00:00
+**Generated:** 2026-05-01T22:49:41.351011+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,25 +22,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 76 |
 | **retained_no_go** | 61 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 12 |
+| _proposed_no_go_ | 11 |
 | bounded | 163 |
 | support | 136 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 953 |
+| ~~audited_conditional~~ | 954 |
 | ~~audited_failed~~ | 85 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 309 |
-| `audited_conditional` | 654 |
+| `audited_conditional` | 655 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 507 |
+| `unaudited` | 506 |
 
 | criticality | count |
 |---|---:|
@@ -745,6 +745,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higher_symmetry_gravity_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `holographic_probe_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28` | _proposed_no_go_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `hubble_lane5_c1_a2_action_unit_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -8334,6 +8335,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** Bulk Grassmann/CAR structure descends to a rank-four boundary block only when the boundary projection is a reducing Clifford-module morphism for the selected modes.  _(class `C`)_
 - **chain closes:** True — The runner constructs explicit finite CAR projections with the same rank/trace data, one reducing and one nonreducing, and the nonreducing case fails CAR. That proves the stated A1 shortcut is under-specified.
 - **rationale:** The note is a negative boundary result, not a promoted CAR derivation. Its load-bearing finite-algebra obstruction is directly witnessed by the runner: rank-four support plus bulk CAR does not force compressed CAR unless the projection reduces the selected algebra. No external comparator or tuned numerical input is used.
+- **auditor confidence:** high
+
+### `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28`
+
+- **Note:** [`HUBBLE_LANE5_C1_A1_GRASSMANN_NO_GO_NOTE_2026-04-28.md`](../../docs/HUBBLE_LANE5_C1_A1_GRASSMANN_NO_GO_NOTE_2026-04-28.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-fresh-agent-hubble-c1-a1-grassmann-no-go-20260501`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The proof relies on the claim that gamma_a maps P_A=P_1 into P_0 plus P_2 so P_A gamma_a P_A=0, and that the surviving compressed bilinears cannot furnish four Cl_4(C) generators.  _(class `A`)_
+- **chain closes:** False — The linear-compression obstruction closes for the two constructed JW/CAR realizations, but the note's broader no-go over any bulk-axiom-3 Cl_4(C) action is not established. The runner checks basis four-subsets of the six compressed bilinears, not arbitrary Hermitian linear combinations or all even bulk-Clifford elements.
+- **rationale:** Issue: the note promotes a verified obstruction for the displayed JW/CAR generators and basis bilinear subsets into a universal no-go for any bulk-axiom-3 Cl_4(C) action on P_A H_cell. Why this blocks: without an exhaustiveness lemma for admissible bulk actions and for arbitrary compressed even-Clifford combinations, the stated no-go is stronger than the computation. Repair target: prove that the two realizations and checked bilinear basis subsets exhaust all relevant candidates, or extend the runner to certify the full compressed even algebra. Claim boundary until fixed: P_A is not preserved by the two displayed natural linear Majorana actions, their linear compressions vanish, and no checked four-bilinear basis subset closes Cl_4(C).
 - **auditor confidence:** high
 
 ### `hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29`
