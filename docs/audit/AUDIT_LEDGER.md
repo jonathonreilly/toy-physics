@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T12:03:59.219148+00:00
+**Generated:** 2026-05-01T12:05:40.354388+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 309 |
+| `audited_clean` | 310 |
 | `audited_conditional` | 591 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 531 |
+| `unaudited` | 530 |
 
 | criticality | count |
 |---|---:|
@@ -363,6 +363,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_c3_circulant_source_law_boundary_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_c3_oriented_ward_splitter_support_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
+| `quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -12713,6 +12714,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The oriented C3 primitive gives exact Fourier-mode strata, but a future 3C closure still needs a source/readout theorem explaining why those strata, or a derived transform of them, are the physical quark Yukawa Ward channels.  _(class `A`)_
 - **chain closes:** True — The runner verifies the retained C3 cycle, reflection action, Hermitian C3-invariant normal form, Fourier eigenvalue splitting, and diagonal-generation readout boundary with PASS=51 FAIL=0. These exact checks establish the support/boundary claim while leaving the physical quark source/readout law open.
 - **rationale:** The support theorem closes: oriented C3 supplies an exact local splitter primitive for the S3 doublet, and the runner verifies the normal form and boundary conditions without importing observed masses, fitted Yukawas, CKM data, or nearest-rational selectors. The note correctly stops short of retained quark-mass closure because the Ward coefficients and physical readout remain free. Residual risk is the stated open Lane 3 task: deriving the source/readout theorem that maps these strata to quark Yukawa channels.
+- **auditor confidence:** high
+
+### `quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28`
+
+- **Note:** [`QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md`](../../docs/QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The positive-parent square-root dictionary is exact, but the current bank does not derive a physical quark positive parent and does not identify the square-root spectrum with quark Yukawa amplitudes.  _(class `B`)_
+- **chain closes:** True — The runner verifies exact positive-parent algebra, non-predictivity without parent/readout selection, the missing typed-edge graph, import firewall, and boundary classification with PASS=54 FAIL=0. These checks support the current-bank no-go that P1 remains support-only for Lane 3.
+- **rationale:** The no-go closes: finite-dimensional square-root algebra is exact, but by itself it can represent arbitrary positive generation-amplitude triples once a parent is supplied. The runner verifies that the current bank lacks both the physical quark positive parent and the readout theorem from square-root spectrum to quark Yukawa amplitudes, while excluding observed masses, fitted Yukawas, CKM mass input, and charged-lepton parent import. Residual risk is only future drift: a later parent/readout theorem would reopen this boundary.
 - **auditor confidence:** high
 
 ### `quark_cp_carrier_completion_note_2026-04-18`
