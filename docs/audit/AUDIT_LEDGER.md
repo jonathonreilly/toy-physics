@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:40:28.932188+00:00
+**Generated:** 2026-05-01T20:41:20.651491+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 173 |
-| support | 145 |
+| support | 144 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 930 |
+| ~~audited_conditional~~ | 931 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 298 |
-| `audited_conditional` | 633 |
+| `audited_conditional` | 634 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 534 |
+| `unaudited` | 533 |
 
 | criticality | count |
 |---|---:|
@@ -910,6 +910,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_issr1_bicac_forcing_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `quark_jts_affine_physical_carrier_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `quark_jts_physical_point_closure_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `quark_jts_residue_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | B | `quark_projector_ray_phase_completion_note_2026-04-18` |
 | `quark_route2_exact_readout_map_note_2026-04-19` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `quark_up_amplitude_provenance_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -12816,6 +12817,24 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`
   - `QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`
   - `QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_jts_residue_note_2026-04-19`
+
+- **Note:** [`QUARK_JTS_RESIDUE_NOTE_2026-04-19.md`](../../docs/QUARK_JTS_RESIDUE_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The original JTS residue Pert(p) ?= J^1_p(Sect(B)) is now said to be closed by the affine physical carrier A_p=p+H_(1+5), while Route-2 readout ambiguity remains a separate non-load-bearing realization problem.  _(class `B`)_
+- **chain closes:** False — This row is a support synthesis note that depends on companion JTS, ISSR1, STRC, and Route-2 notes, but it has no registered runner and no ledger dependency edges. The closure claim therefore cannot be checked from this row alone.
+- **rationale:** Issue: the note summarizes that the JTS residue is resolved by companion theorem packets, but the row itself has no primary runner and no explicit dependencies for those packets. Why this blocks: a hostile reviewer cannot ratify the residue status from this synthesis note alone; it must inherit the audit state of the companion JTS/ISSR1/STRC and Route-2 notes. Repair target: add dependency edges to the companion notes and/or make this a generated synthesis from their audit states. Claim boundary until fixed: useful support index for the JTS residue status, with Route-2 still open, not an independently audited closure theorem.
+- **open / conditional deps cited:**
+  - `QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`
+  - `QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`
+  - `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
+  - `QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`
+  - `QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27`
