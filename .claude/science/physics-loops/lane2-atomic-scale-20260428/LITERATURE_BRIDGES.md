@@ -1,6 +1,6 @@
 # Lane 2 Literature Bridges
 
-**Updated:** 2026-05-01T11:10:40Z
+**Updated:** 2026-05-01T11:23:11Z
 
 No new external literature was imported at loop start.
 
@@ -54,3 +54,19 @@ Hartree/2 appear only as comparator values already used by the repo scaffold.
 This source context is used as scale-identity support; it does not provide
 derivation closure for retained `m_e`, retained `alpha(0)`, the physical unit
 map, or the Rydberg claim.
+
+## Block 01 Fan-Out Usage
+
+The Rydberg gate-factorization fan-out reuses the same admitted standard
+Coulomb spectrum and one-loop running context already recorded above. No new
+external literature value or theorem was imported.
+
+The comparator values in the falsifier section remain comparator-only:
+
+- `1/alpha(0) = 137.035999084`;
+- `m_e c^2 = 510998.95000 eV`;
+- `E_R = 13.605693122994 eV`;
+- `M_Z = 91.1876 GeV`.
+
+They are printed after synthetic theorem checks and are not used to derive a
+framework parameter.

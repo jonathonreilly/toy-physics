@@ -1,6 +1,6 @@
 # Lane 2 Route Portfolio
 
-**Updated:** 2026-05-01T11:10:40Z
+**Updated:** 2026-05-01T11:23:11Z
 **Loop:** `lane2-atomic-scale-20260428`  
 **Selection policy:** choose the route most likely to move claim state without touching Lane 4 or Lane 6.
 
@@ -75,3 +75,35 @@ Next candidate routes:
    surfaces for a derivation of the physical map `a = g/(2 mu Z alpha)`;
 3. stuck fan-out across algebraic, atlas-reuse, variational, no-go, and
    falsifier frames if neither route passes the dramatic-step gate.
+
+## Block 01 Stuck Fan-Out Result
+
+Completed route: Rydberg gate factorization and five-frame stuck fan-out.
+
+The fan-out result is exact boundary/support, not closure:
+
+```text
+E_n = -mu (Z alpha)^2 / (2 n^2)
+```
+
+fixes only the product `mu alpha(0)^2` after the standard map is admitted.
+Without the map, the dimensionless lattice companion still has the free
+physical scale `a`. The fan-out frames preserve three separate open gates:
+mass/reduced mass, threshold-resolved `alpha(0)`, and framework-native
+kinetic/unit normalization.
+
+Frame outcomes:
+
+1. minimal Coulomb algebra: no closure; product-only degeneracy;
+2. QED running: no closure; threshold placement remains load-bearing;
+3. charged-lepton mass: no closure; Lane 6 dependency recorded only;
+4. physical-unit kinetic map: no closure; conditional map is not native yet;
+5. scaffold falsifier: no closure; textbook-input success remains scaffold.
+
+Next candidate routes:
+
+1. framework-native kinetic/unit-map search on current action surfaces;
+2. sharper no-go that `alpha(0)` transport cannot be retained from Lane 2
+   alone without charged-threshold and hadronic inputs;
+3. if both fail, continue dependency hardening only as branch-local review
+   surface, not retained Rydberg promotion.

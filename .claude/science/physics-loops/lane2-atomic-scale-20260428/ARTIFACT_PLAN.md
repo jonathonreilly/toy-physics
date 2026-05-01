@@ -1,6 +1,6 @@
 # Lane 2 Artifact Plan
 
-**Updated:** 2026-05-01T11:10:40Z
+**Updated:** 2026-05-01T11:23:11Z
 
 ## Block 01 Artifact
 
@@ -100,3 +100,61 @@ left free.
 Second hostile-review question: does this close the physical-unit
 Schrodinger limit? Disposition: no. It supplies an exact conditional scale
 identity. The framework-native kinetic normalization/unit map remains open.
+
+## Block 01 Fan-Out Artifact
+
+Create a paired note and runner:
+
+- note: `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_RYDBERG_GATE_FACTORIZATION_FANOUT_NOTE_2026-05-01.md`
+- runner: `scripts/frontier_atomic_rydberg_gate_factorization_fanout.py`
+- log: `.claude/science/physics-loops/lane2-atomic-scale-20260428/logs/atomic_rydberg_gate_factorization_fanout_2026-05-01.log`
+
+**Status:** complete. Runner and note created; log captured.
+
+## Fan-Out Claims Tested
+
+1. Current Rydberg closure factorizes into separate mass, `alpha(0)`, and
+   physical-unit/kinetic-map gates.
+2. A single Rydberg-scale number constrains only the product
+   `mu alpha(0)^2` after the standard map is admitted.
+3. Without the physical unit map, the dimensionless lattice eigenvalue remains
+   an arbitrary eV scale.
+4. Five orthogonal stuck-fan-out frames do not close retained Rydberg scale on
+   current inputs.
+5. Lane 2 remains open with exact gate-factorization support.
+
+## Fan-Out Verification
+
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py`
+- `python3 -m py_compile scripts/frontier_atomic_rydberg_gate_factorization_fanout.py`
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py`
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py`
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py`
+
+Verification results:
+
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py`
+  -> `PASS=43 FAIL=0`
+- `python3 -m py_compile scripts/frontier_atomic_rydberg_gate_factorization_fanout.py`
+  -> pass
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py`
+  -> `PASS=12 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py`
+  -> `PASS=17 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py`
+  -> `PASS=42 FAIL=0`
+
+## Fan-Out Review-Loop Emulation
+
+Primary hostile-review question: does the fan-out use the observed Rydberg
+value to prove the factorization? Disposition: no. The theorem checks use
+synthetic `mu`, `alpha`, `Z`, `g`, and `a` values before comparator values are
+printed.
+
+Second hostile-review question: does product factorization demote the separate
+`m_e` and `alpha(0)` gates? Disposition: no. It proves the opposite: a fitted
+product hides the separate gates and therefore cannot support retained closure.
+
+Third hostile-review question: does the fan-out satisfy the deep-work stop
+rule? Disposition: yes for the current no-route-passes boundary. It records
+five orthogonal frames and keeps the next exact action on a single gate.

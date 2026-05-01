@@ -1,6 +1,6 @@
 # Lane 2 Review History
 
-**Updated:** 2026-05-01T11:10:40Z
+**Updated:** 2026-05-01T11:23:11Z
 
 ## Pre-Artifact Review Baseline
 
@@ -66,4 +66,37 @@ PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py ->
 python3 -m py_compile scripts/frontier_atomic_nr_coulomb_scale_bridge.py -> pass
 PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0
 PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> PASS=17 FAIL=0
+```
+
+## Block 01 Fan-Out Review-Loop Emulation
+
+- **Scope:** `scripts/frontier_atomic_rydberg_gate_factorization_fanout.py`
+  and
+  `notes/ATOMIC_RYDBERG_GATE_FACTORIZATION_FANOUT_NOTE_2026-05-01.md`.
+- **Finding 1:** The gate-factorization proof uses synthetic inputs before
+  any hydrogen comparator appears.
+- **Disposition 1:** pass; no observed Rydberg target is used as a proof
+  input.
+- **Finding 2:** The result could be overread as a way to fit the product
+  `mu alpha(0)^2`, but the note explicitly rejects product-fitting as retained
+  closure.
+- **Disposition 2:** pass; the artifact strengthens the mass and coupling
+  gates instead of retiring them.
+- **Finding 3:** The stuck fan-out covers five independent frames: Coulomb
+  algebra, QED running, charged mass, physical-unit kinetic map, and scaffold
+  falsifier.
+- **Disposition 3:** pass; no frame closes retained Rydberg scale on current
+  inputs.
+- **Finding 4:** The artifact preserves Lane 4/Lane 6 collision avoidance.
+  Lane 6 appears only as an upstream dependency record.
+- **Disposition 4:** pass.
+
+Verification recorded:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py -> PASS=43 FAIL=0
+python3 -m py_compile scripts/frontier_atomic_rydberg_gate_factorization_fanout.py -> pass
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> PASS=17 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py -> PASS=42 FAIL=0
 ```

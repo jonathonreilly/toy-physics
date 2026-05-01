@@ -1,6 +1,6 @@
 # Lane 2 Physics Loop Handoff
 
-**Updated:** 2026-05-01T11:14:54Z
+**Updated:** 2026-05-01T11:23:11Z
 **Loop slug:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Branch:** `physics-loop/lane2-atomic-scale-block01-20260428`  
@@ -8,10 +8,16 @@
 
 ## Current Status
 
-Block 01 has two coherent artifacts. Lane 2 remains open/scaffold-only:
+Block 01 has three coherent artifacts. Lane 2 remains open/scaffold-only:
 the existing hydrogen/helium harness succeeds with textbook inputs, but the
 repo has not retained `m_e`, `alpha(0)`, threshold-resolved QED transport, or
 a framework-native physical-unit nonrelativistic Coulomb/Schrodinger limit.
+
+Loop 3 added a third coherent artifact: a Rydberg gate-factorization and
+stuck-fan-out packet. It proves that current Lane 2 closure factorizes into
+three independent gates: mass/reduced mass, low-energy `alpha(0)`, and the
+framework-native physical-unit/kinetic map. No retained Rydberg closure is
+claimed.
 
 The default automation lock path is unavailable for this SSH user:
 
@@ -127,13 +133,64 @@ Commit/push checkpoint:
 origin/physics-loop/lane2-atomic-scale-block01-20260428
 ```
 
+## Fan-Out Route
+
+Completed route: Rydberg gate factorization and stuck fan-out.
+
+Question:
+
+```text
+After the QED-threshold firewall and NR scale bridge, does any current
+non-overlapping Lane 2 frame close retained Rydberg/atomic scale?
+```
+
+Honest movement achieved: exact gate-factorization support and a five-frame
+stuck-fan-out synthesis, not retained Rydberg closure.
+
+Artifacts:
+
+- `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_RYDBERG_GATE_FACTORIZATION_FANOUT_NOTE_2026-05-01.md`
+- `scripts/frontier_atomic_rydberg_gate_factorization_fanout.py`
+- `.claude/science/physics-loops/lane2-atomic-scale-20260428/logs/atomic_rydberg_gate_factorization_fanout_2026-05-01.log`
+
+Key result:
+
+```text
+E_n = -mu (Z alpha)^2 / (2 n^2)
+```
+
+fixes only the product `mu alpha(0)^2` after the standard physical map is
+admitted. It does not derive retained `mu/m_e`, retained `alpha(0)`, or the
+framework-native unit/kinetic map. Without the physical map, the
+dimensionless lattice eigenvalue still has arbitrary eV scale.
+
+Verification:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py -> PASS=43 FAIL=0
+python3 -m py_compile scripts/frontier_atomic_rydberg_gate_factorization_fanout.py -> pass
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> PASS=17 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py -> PASS=42 FAIL=0
+```
+
+Review-loop emulation found no blocker. Guardrail: a product fit
+`mu alpha(0)^2` is not retained closure and must not be used to hide the
+separate mass/coupling gates.
+
+Artifact commit:
+
+```text
+3abb8b5e lane2 atomic: add Rydberg gate fanout
+```
+
 ## Next Exact Action
 
-The next science action for the continuing supervisor is a stuck fan-out or
-route-selection pass across:
+The next science action for the continuing supervisor is route selection across:
 
-1. threshold-resolved QED transport without Lane 6/Lane 1 closure overlap;
-2. framework-native kinetic normalization / physical unit map for
+1. framework-native kinetic normalization / physical unit map for
    `a = g/(2 mu Z alpha)`;
-3. a no-go theorem showing the current repo cannot make either route
-   framework-native without charged-threshold and unit-map imports.
+2. a sharper no-go showing current Lane 2 cannot retain `alpha(0)` transport
+   without charged-threshold and hadronic inputs;
+3. dependency hardening only if it creates a reviewable theorem prerequisite,
+   not retained Rydberg promotion.

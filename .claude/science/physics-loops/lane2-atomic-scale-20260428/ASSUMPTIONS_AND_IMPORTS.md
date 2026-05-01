@@ -1,6 +1,6 @@
 # Lane 2 Assumptions And Imports
 
-**Updated:** 2026-05-01T11:10:40Z
+**Updated:** 2026-05-01T11:23:11Z
 **Loop:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Claim boundary:** open/scaffold-only unless a later artifact retires the listed blockers.
@@ -20,6 +20,7 @@
 | Dimensionless lattice Coulomb Hamiltonian `H_g = -Delta_x - g/|x|` | Coupling-relative atomic companion and input to the scale-bridge stretch | bounded support / retained-operator-surface companion | `docs/work_history/atomic/HYDROGEN_HELIUM_ATOMIC_COMPANION_NOTE_2026-04-18.md`, `scripts/frontier_atomic_hydrogen_lattice_companion.py` | yes for the physical-unit stretch | yes as a conditional bridge surface | prove exact scaling to physical Hamiltonian and isolate remaining unit inputs | usable for exact conditional scale algebra; not absolute eV closure |
 | Continuum Coulomb spectrum `lambda_n = -g^2/(4 n^2)` | Algebraic bridge between dimensionless lattice scaling and Bohr formula | admitted standard Coulomb theorem / exact support bridge | `scripts/frontier_atomic_nr_coulomb_scale_bridge.py` | yes for the scale theorem | yes for the stretch artifact only | replace with framework-native spectral theorem if demanded by review | allowed support bridge; not framework-native by itself |
 | Physical length map `a = g/(2 mu Z alpha)` | Converts dimensionless lattice coordinate to physical units | admitted unit map in the stretch theorem | `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_NR_COULOMB_SCALE_BRIDGE_STRETCH_NOTE_2026-05-01.md` | yes | yes for retained physical-unit closure | derive kinetic normalization/unit map from framework or keep as open bridge | exact conditional map; still open as framework-native retention |
+| Rydberg product `mu alpha(0)^2` | The single product fixed by an absolute Coulomb energy after the standard map is admitted | exact factorization support / not a derivation of the gates | `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_RYDBERG_GATE_FACTORIZATION_FANOUT_NOTE_2026-05-01.md`, `scripts/frontier_atomic_rydberg_gate_factorization_fanout.py` | yes | yes as a dependency boundary | derive `mu` and `alpha(0)` independently, or explicitly demote to a fitted product | open; the product cannot retire the separate mass and coupling gates |
 
 ## Immediate Audit Result
 
@@ -53,3 +54,15 @@ This partially sharpens the nonrelativistic Coulomb/Schrodinger gate: once
 `mu/m_e`, `alpha(0)`, and a physical unit map are supplied, the dimensionless
 companion needs no fitted Rydberg target. It does not retire those inputs and
 does not make the physical unit map framework-native.
+
+## Block 01 Fan-Out Update
+
+`scripts/frontier_atomic_rydberg_gate_factorization_fanout.py` proves the
+current gate factorization and records the required stuck fan-out. The fan-out
+checks five non-overlapping frames: minimal Coulomb algebra, QED running,
+charged-lepton mass, physical-unit kinetic map, and scaffold falsifier.
+
+The new import boundary is that a single Rydberg-scale number constrains only
+the product `mu alpha(0)^2` after the standard map is supplied. It does not
+derive retained `mu`, retained `alpha(0)`, or the framework-native unit map.
+The honest status remains open with exact gate-factorization support.
