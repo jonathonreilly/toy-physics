@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:19:19.277132+00:00
+**Generated:** 2026-05-01T03:20:55.831856+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 230 |
+| `audited_clean` | 231 |
 | `audited_conditional` | 520 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 10 |
 | `audited_renaming` | 18 |
-| `unaudited` | 716 |
+| `unaudited` | 715 |
 
 | criticality | count |
 |---|---:|
@@ -268,6 +268,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_reviewer_stress_test_note_2026-04-21` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `koide_taste_cube_cyclic_source_descent_note_2026-04-18` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `lattice_3d_dense_refinement_reconciliation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -8921,6 +8922,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md`
   - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
   - `DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md`
+- **auditor confidence:** high
+
+### `koide_taste_cube_cyclic_source_descent_note_2026-04-18`
+
+- **Note:** [`KOIDE_TASTE_CUBE_CYCLIC_SOURCE_DESCENT_NOTE_2026-04-18.md`](../../docs/KOIDE_TASTE_CUBE_CYCLIC_SOURCE_DESCENT_NOTE_2026-04-18.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-koide_taste_cube_cyclic_source_descent_note_2026-04-18`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Because the T1 projector commutes with the full taste-cube C3[111] cycle, P1 A8(X) P1 = A3(P1 X P1), so full-cube averaging and T1 compression land in the same cyclic B0,B1,B2 response bundle.  _(class `A`)_
+- **chain closes:** True — The restricted-input proof closes as a support theorem: the runner checks the descent identity exactly on all 64 full-cube matrix units and verifies the canonical orbit channels and Schur-compatible response factorization into r0,r1,r2.
+- **rationale:** The note's claim is bounded to a carrier-reduction/support theorem, not a Koide value-selection theorem. Within that boundary, the algebra closes: T1 is invariant under the full C3 cycle, the full-cube average descends exactly to the T1 cyclic projector on every matrix-unit source, canonical full-cube orbit sources reduce to B0/B1/B2, and Schur-compatible responses factor through the same three response coordinates. Residual risk is only downstream: the note still does not derive the microscopic full-cube source law, the Koide selector, or the mass readout primitive.
 - **auditor confidence:** high
 
 ### `koide_theta_hierarchy_open_scalar_note_2026-04-19`
