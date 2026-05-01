@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:56:28.298366+00:00
+**Generated:** 2026-05-01T06:57:36.754496+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 263 |
+| `audited_clean` | 264 |
 | `audited_conditional` | 581 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 591 |
+| `unaudited` | 590 |
 
 | criticality | count |
 |---|---:|
@@ -297,6 +297,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_symmetry_unification_decision_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `lattice_weak_field_mass_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_weak_field_purity_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `legacy_exploratory_drivers_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `lensing_adjoint_kernel_reduced_model_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -10120,6 +10121,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **chain closes:** False — The runner closes the structural projector/eigenvalue calculation, but the physical readout as Standard Model left-handed charge still imports the hypercharge formula and quark/lepton block identification beyond the two graph-first dependencies. The source note itself excludes a full anomaly-complete U(1)_Y derivation from this claim boundary.
 - **rationale:** Issue: the charge-matching step identifies the structural 3+1 abelian eigenspaces with the Standard Model Q_L/L_L hypercharge readout using Q = T_3 + Y/2, but that physical matter/hypercharge bridge is not derived in the allowed graph-first dependencies. Why this blocks: the current inputs prove a traceless U(1)-like eigenvalue ratio on the selected-axis surface, not an anomaly-complete or independently normalized physical charge theorem. Repair target: a retained theorem deriving the matter assignment, U(1)_Y normalization/readout, and anomaly-complete chiral completion from the graph-first surface. Claim boundary until fixed: the selected-axis surface has a structural 3+1 split with a traceless abelian direction whose normalized eigenvalues have the left-handed SM ratio +1/3:-1.
 - **auditor confidence:** medium
+
+### `legacy_exploratory_drivers_note`
+
+- **Note:** [`LEGACY_EXPLORATORY_DRIVERS_NOTE.md`](../../docs/LEGACY_EXPLORATORY_DRIVERS_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The listed legacy *_test.py scripts are historical experiment drivers, while docs/START_HERE.md, docs/UNIFIED_PROGRAM_NOTE.md, and README.md are the canonical entry points for current project state.  _(class `B`)_
+- **chain closes:** True — The note is an administrative routing/inventory note rather than a physics theorem, and the listed canonical files and legacy driver paths exist in the repository. It does not ask the audit lane to ratify any result printed only by those exploratory drivers.
+- **rationale:** The claim surface is narrow: do not treat the named older drivers as current retained harnesses, and use the named entry-point files for current project orientation. Those file references resolve in the repository, and the note explicitly prevents rather than asserts a physics closure claim. Residual risk is limited to future documentation drift if canonical entry points are renamed.
+- **auditor confidence:** high
 
 ### `lensing_adjoint_kernel_reduced_model_note`
 
