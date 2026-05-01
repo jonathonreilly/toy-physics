@@ -1,0 +1,29 @@
+{
+  "actual_current_surface_status": "no-go / exact-negative-boundary",
+  "authority_boundary": {
+    "has_su3_no_fixed_point": true,
+    "selector_conditional": true,
+    "selector_premise_open": true
+  },
+  "fail_count": 0,
+  "full_fixed_point": {
+    "beta_g1": "41*g1**3/10",
+    "beta_g2": "-19*g2**3/6",
+    "beta_g3": "-7*g3**3",
+    "beta_lambda_at_lambda_zero": "-3*(-9*g1**4 - 30*g1**2*g2**2 - 75*g2**4 + 400*y**4)/200",
+    "beta_lambda_at_zero_gauge": "-6*y**4",
+    "beta_y": "y*(-17*g1**2/20 - 9*g2**2/4 - 8*g3**2 + 9*y**2/2)",
+    "beta_y_at_zero_gauge": "9*y**3/2",
+    "full_solution_y": "[{y: 0}]",
+    "gauge_solution": "[{g1: 0, g2: 0, g3: 0}]"
+  },
+  "partial_fixed_point": {
+    "compatibility_condition": "(427*g1**4 + 3690*g1**2*g2**2 + 21760*g1**2*g3**2 + 2025*g2**4 + 57600*g2**2*g3**2 + 102400*g3**4)/32400",
+    "y2_from_beta_y_zero": "17*g1**2/90 + g2**2/2 + 16*g3**2/9",
+    "y4_from_beta_lambda_zero": "g2**4/8 + (3*g1**2 + 5*g2**2)**2/400"
+  },
+  "pass_count": 8,
+  "remaining_open_premise": "a non-SM UV fixed-point theorem or new asymptotic-safety structure beyond the current substrate",
+  "target": "derive beta_lambda(M_Pl)=0 from a perturbative SM fixed point/asymptotic-safety route",
+  "verdict": "The one-loop SM beta-vector has only the Gaussian gauge fixed point in the perturbative subsystem.  Imposing full beta-vector vanishing then forces y_t=0, not the PR #230 selector value. Partial beta conditions are extra selectors, not substrate closure."
+}

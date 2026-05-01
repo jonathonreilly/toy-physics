@@ -16,6 +16,8 @@ Next PR body update should add:
 - `frontier_yt_planck_selector_gauge_input_sensitivity.py`;
 - `YT_PLANCK_SELECTOR_SCALE_ANCHOR_SENSITIVITY_NOTE_2026-05-01.md`;
 - `frontier_yt_planck_selector_scale_anchor_sensitivity.py`;
+- `YT_ASYMPTOTIC_SAFETY_FIXED_POINT_NO_GO_NOTE_2026-05-01.md`;
+- `frontier_yt_asymptotic_safety_fixed_point_no_go.py`;
 - `YT_PR230_REVIEW_BACKPRESSURE_PASS_NOTE_2026-05-01.md`;
 - certificate path and `PASS=24 FAIL=0`;
 - trace-anomaly certificate path and `PASS=14 FAIL=0`;
@@ -23,5 +25,6 @@ Next PR body update should add:
 - assumption-audit certificate path and `PASS=34 FAIL=0`;
 - gauge-input sensitivity certificate path and `PASS=8 FAIL=0`;
 - scale-anchor sensitivity certificate path and `PASS=7 FAIL=0`;
+- asymptotic-safety fixed-point no-go certificate path and `PASS=8 FAIL=0`;
 - honest status: no full retained closure; non-MC Planck criticality remains
   conditional on an added stationarity selector.

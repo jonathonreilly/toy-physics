@@ -7605,6 +7605,10 @@
       "to": "alpha_s_derived_note"
     },
     {
+      "from": "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01",
+      "to": "g_bare_derivation_note"
+    },
+    {
       "from": "yt_axiom_first_microscopic_bridge_theorem",
       "to": "yt_color_projection_correction_note"
     },
@@ -7899,6 +7903,10 @@
     {
       "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
       "to": "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01"
+    },
+    {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01"
     },
     {
       "from": "yt_eft_bridge_theorem",
@@ -8443,6 +8451,10 @@
     {
       "from": "yt_planck_double_criticality_selector_note_2026-04-30",
       "to": "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01"
+    },
+    {
+      "from": "yt_planck_double_criticality_selector_note_2026-04-30",
+      "to": "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01"
     },
     {
       "from": "yt_right_handed_species_dependence_note_2026-04-18",
@@ -18461,7 +18473,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T02:07:22.920823+00:00",
+  "generated_at": "2026-05-01T02:10:05.747227+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39089,6 +39101,18 @@
       "runner_path": null,
       "title": "Writing Voice Guide"
     },
+    "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01": {
+      "claim_id": "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact-negative-boundary on the current SM-bridge surface",
+      "deps": [
+        "g_bare_derivation_note"
+      ],
+      "note_hash": "958fe5e4e47364011fb1f301c2d946703975b0314f89a973b50c5f639ff55227",
+      "path": "docs/YT_ASYMPTOTIC_SAFETY_FIXED_POINT_NO_GO_NOTE_2026-05-01.md",
+      "runner_path": "scripts/frontier_yt_asymptotic_safety_fixed_point_no_go.py",
+      "title": "YT Asymptotic-Safety Fixed-Point No-Go Note"
+    },
     "yt_axiom_first_microscopic_bridge_theorem": {
       "claim_id": "yt_axiom_first_microscopic_bridge_theorem",
       "current_status": "unknown",
@@ -39375,9 +39399,10 @@
         "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
         "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
         "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
-        "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01"
+        "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
+        "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01"
       ],
-      "note_hash": "4a78489a39534a87cf73a6041aed29716189f57fbb40b25c362fc8f225cc9ec7",
+      "note_hash": "538e272836a929ae387c99cb78e03ca708e932079f946e958c94725794000ed4",
       "path": "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_direct_lattice_correlator.py",
       "title": "Direct Lattice-Correlator Top-Yukawa Measurement Gate"
@@ -39950,9 +39975,10 @@
         "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
         "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
         "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
-        "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01"
+        "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
+        "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01"
       ],
-      "note_hash": "d9ab5435930e8654babd43c28a87f9cf16e440a4d1cc95f85651791219c8bb1c",
+      "note_hash": "74fa912873fcd7a5e3987a77df4c85ca97d99ed1292bc48228b6c48f2d4b54cb",
       "path": "docs/YT_PLANCK_DOUBLE_CRITICALITY_SELECTOR_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_planck_double_criticality_selector.py",
       "title": "YT Planck Double-Criticality Selector Note"
@@ -41486,17 +41512,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4615,
+    "edge_count": 4618,
     "leaf_count": 730,
-    "node_count": 1673,
+    "node_count": 1674,
     "root_count": 1191,
-    "runners_with_path": 1236,
+    "runners_with_path": 1237,
     "status_counts": {
       "bounded": 447,
       "open": 50,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 383,
+      "support": 384,
       "unknown": 419
     }
   }

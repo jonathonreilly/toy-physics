@@ -49,3 +49,12 @@ Recorded by
 The non-MC selector uses the `M_Pl/v` running interval.  Changing the endpoint
 anchors changes the selected one-loop boundary value.  This is an assumption
 boundary for retained closure, not the primary blocker.
+
+## Perturbative SM fixed point does not supply the selector
+
+Closed by `docs/YT_ASYMPTOTIC_SAFETY_FIXED_POINT_NO_GO_NOTE_2026-05-01.md` and
+`scripts/frontier_yt_asymptotic_safety_fixed_point_no_go.py`.
+
+At one loop the SM gauge beta-vector has only the Gaussian fixed point.  Full
+beta-vector stationarity therefore forces `y_t=0`.  Partial beta conditions
+are added selectors unless new UV fixed-point structure is supplied.

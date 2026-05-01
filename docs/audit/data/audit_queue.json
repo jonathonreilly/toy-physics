@@ -3,9 +3,9 @@
     "critical": 0,
     "high": 237,
     "leaf": 297,
-    "medium": 296
+    "medium": 297
   },
-  "generated_at": "2026-05-01T02:07:31.207097+00:00",
+  "generated_at": "2026-05-01T02:10:13.410366+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -12651,6 +12651,25 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [
+        "g_bare_derivation_note"
+      ],
+      "direct_in_degree": 2,
+      "load_bearing_score": 3.322,
+      "note_path": "docs/YT_ASYMPTOTIC_SAFETY_FIXED_POINT_NO_GO_NOTE_2026-05-01.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_yt_asymptotic_safety_fixed_point_no_go.py",
+      "transitive_descendants": 4
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -12835,7 +12854,8 @@
         "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
         "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
         "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
-        "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01"
+        "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
+        "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01"
       ],
       "direct_in_degree": 2,
       "load_bearing_score": 3.0,
@@ -18478,7 +18498,8 @@
         "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
         "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
         "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
-        "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01"
+        "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
+        "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01"
       ],
       "direct_in_degree": 0,
       "load_bearing_score": 0.0,
@@ -18512,5 +18533,5 @@
     }
   ],
   "ready_count": 444,
-  "total_pending": 830
+  "total_pending": 831
 }

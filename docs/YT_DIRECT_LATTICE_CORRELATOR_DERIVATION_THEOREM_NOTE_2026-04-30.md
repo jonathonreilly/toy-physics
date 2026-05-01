@@ -394,6 +394,12 @@ checks the dimensional endpoint assumptions.  It finds that varying the
 `M_Pl/v` running interval moves the one-loop selector value, so scale-setting
 and SM RGE bridge conventions remain explicit inputs to the non-MC route.
 
+Fixed-point follow-up:
+[YT_ASYMPTOTIC_SAFETY_FIXED_POINT_NO_GO_NOTE_2026-05-01.md](YT_ASYMPTOTIC_SAFETY_FIXED_POINT_NO_GO_NOTE_2026-05-01.md)
+checks the asymptotic-safety-style shortcut.  The perturbative SM beta-vector
+fixed point is Gaussian at one loop and forces `y_t=0`; partial beta
+conditions would be extra selectors, not a substrate derivation.
+
 A future passing production certificate must supply this budget:
 
 | Component | Required content |

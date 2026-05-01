@@ -178,6 +178,13 @@ It is not: changing the `M_Pl/v` running interval moves the one-loop selected
 boundary value.  The effect is smaller than the stationarity blocker, but it
 confirms that endpoint anchors and the SM RGE bridge are explicit imports.
 
+Fixed-point follow-up:
+[YT_ASYMPTOTIC_SAFETY_FIXED_POINT_NO_GO_NOTE_2026-05-01.md](YT_ASYMPTOTIC_SAFETY_FIXED_POINT_NO_GO_NOTE_2026-05-01.md)
+tests whether `beta_lambda(M_Pl)=0` can be obtained by treating the Planck
+boundary as a perturbative SM beta-vector fixed point.  It cannot: the
+one-loop SM gauge beta functions have only the Gaussian fixed point, and full
+one-loop beta-vector stationarity forces `y_t=0`, not the selector value.
+
 Promising attack frames:
 
 1. boundary-action stationarity of the taste scalar at the Planck surface;
@@ -197,6 +204,9 @@ Promising attack frames:
 8. scale-anchor sensitivity, now recorded as an assumption boundary: the
    criticality readout depends on the `M_Pl/v` running interval and bridge
    convention.
+9. perturbative SM fixed-point / asymptotic-safety reading, now closed
+   negatively on the current surface: full beta-vector stationarity gives the
+   Gaussian point.
 
 Until that premise is derived, this is a conditional selector and a route
 portfolio upgrade, not a retained-grade theorem.

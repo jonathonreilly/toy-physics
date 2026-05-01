@@ -37,6 +37,10 @@ The dimensional-anchor sensitivity route was tested next.  Changing the
 `M_Pl/v` running interval moves the one-loop selected boundary value, so
 scale-setting and RGE bridge conventions remain explicit imports.
 
+The perturbative fixed-point route was tested next.  Full one-loop SM
+beta-vector stationarity gives only the Gaussian gauge point and forces
+`y_t=0`; partial beta conditions are extra selectors, not closure.
+
 Verification:
 
 ```bash
@@ -57,6 +61,9 @@ python3 scripts/frontier_yt_planck_selector_gauge_input_sensitivity.py
 
 python3 scripts/frontier_yt_planck_selector_scale_anchor_sensitivity.py
 # SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_asymptotic_safety_fixed_point_no_go.py
+# SUMMARY: PASS=8 FAIL=0
 ```
 
 Next exact action: keep PR #230 honest as open/conditional.  Full retained
