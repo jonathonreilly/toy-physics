@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:56:14.850213+00:00
+**Generated:** 2026-05-01T08:35:53.242443+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 285 |
+| `audited_clean` | 286 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 560 |
+| `unaudited` | 559 |
 
 | criticality | count |
 |---|---:|
@@ -331,6 +331,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_adaptive_readout_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_adaptive_readout_v2_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `persistent_object_compact_inertial_probe_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -11467,6 +11468,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The exact-lattice top3 object plus one retained blended readout architecture transfers across the tested nearby exact-family neighborhood.  _(class `C`)_
 - **chain closes:** False — The transfer runner reproduces the six-case finite sweep, but the retained-readout conclusion depends on a scan-selected blend, chosen gates, fixed per-case field calibration, and an unratified detector/readout-to-inertial-response interpretation.
 - **rationale:** Issue: the note elevates the scan-selected blend=0.25 readout and top3 compact object to a retained local transfer architecture after a finite nearby-family sweep. Why this blocks: the live runners reproduce the table, but they do not derive the readout blend, source kernel, field-max calibration, top3 object selection, or overlap/alpha/drift gates from retained primitives, and they do not establish a persistent inertial-mass or matter-closure observable. Repair target: provide a theorem or registered computation deriving the readout architecture and admissibility gates independently of the pass/fail scan, plus a persistence/inertial-response bridge that makes the detector shift a retained physical observable rather than a local diagnostic. Claim boundary until fixed: it is safe to claim that, in the frozen exact-lattice setup with h=0.25, Green-like source kernel, field max 0.02, three updates, and blend=0.25, top3 passes all six tested nearby cases while top2 passes only 1/6; this is a bounded local compact-object response transfer regime, not retained matter or inertial-mass closure.
+- **auditor confidence:** high
+
+### `persistent_object_compact_inertial_probe_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_COMPACT_INERTIAL_PROBE_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_COMPACT_INERTIAL_PROBE_NOTE_2026-04-16.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The transferable top3 compact repeated-update object carries a stable weak-field response across nearby exact-family slices, but the transfer remains readout-dependent because top3 broad and top3 adaptive each pass only 3/4 cases with complementary misses.  _(class `C`)_
+- **chain closes:** True — The registered runner reproduces the frozen pass matrix: top3 broad 3/4, top3 adaptive 3/4, top2 broad 1/4, and top2 adaptive 0/4. It also reproduces the source1.5 broad drift miss and the length7 adaptive exponent miss, supporting the note's bounded readout-dependent interpretation.
+- **rationale:** The compact-object-plus-response claim is current with the primary runner and remains bounded to the exact-lattice nearby-family sweep. The output supports a real top3 compact response lane while showing that no single retained readout is family-dominant. Residual risk is operational and interpretive: the runner is slow, taking about 389 seconds locally, and the result still falls short of readout-invariant persistent inertial mass or matter closure.
 - **auditor confidence:** high
 
 ### `persistent_object_exact_lattice_park_note_2026-04-16`
