@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 287,
-    "medium": 204
+    "medium": 203
   },
-  "generated_at": "2026-05-01T04:11:31.384293+00:00",
+  "generated_at": "2026-05-01T04:13:24.183169+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6536,23 +6536,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "pmns_c3_character_holonomy_closure_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 2,
-      "load_bearing_score": 6.129,
-      "note_path": "docs/PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_pmns_c3_character_holonomy_closure.py",
-      "transitive_descendants": 34
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "universal_gr_a1_invariant_section_note",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -7380,25 +7363,6 @@
       "note_path": "docs/PMNS_C3_CHARACTER_MODE_REDUCTION_NOTE.md",
       "ready": true,
       "runner_path": "scripts/frontier_pmns_c3_character_mode_reduction.py",
-      "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "pmns_three_flux_holonomy_closure_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "pmns_c3_character_holonomy_closure_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.587,
-      "note_path": "docs/PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_pmns_three_flux_holonomy_closure.py",
       "transitive_descendants": 33
     },
     {
@@ -9355,6 +9319,25 @@
       "note_path": "docs/KUBO_RANGE_OF_VALIDITY_NOTE.md",
       "ready": false,
       "runner_path": "scripts/kubo_range_of_validity.py",
+      "transitive_descendants": 33
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "pmns_three_flux_holonomy_closure_note",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "pmns_c3_character_holonomy_closure_note"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 5.587,
+      "note_path": "docs/PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_pmns_three_flux_holonomy_closure.py",
       "transitive_descendants": 33
     },
     {
@@ -16467,6 +16450,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 299,
-  "total_pending": 694
+  "ready_count": 297,
+  "total_pending": 693
 }

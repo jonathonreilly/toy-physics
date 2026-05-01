@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:11:31.604503+00:00
+**Generated:** 2026-05-01T04:13:24.503364+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 239 |
+| bounded | 237 |
 | support | 193 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 804 |
+| ~~audited_conditional~~ | 806 |
 | ~~audited_failed~~ | 156 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 535 |
+| `audited_conditional` | 536 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 694 |
+| `unaudited` | 693 |
 
 | criticality | count |
 |---|---:|
@@ -748,6 +748,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `pmns_c3_character_holonomy_closure_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `pmns_c3_nontrivial_current_boundary_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_commutant_eigenoperator_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_current_bank_value_selection_nogo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -10554,6 +10555,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `publication/ci3_z3/DERIVATION_ATLAS.md`
   - `NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md`
   - `publication/ci3_z3/NEUTRINO_DIRAC_PMNS_BOUNDARY_PACKET_2026-04-15.md`
+- **auditor confidence:** high
+
+### `pmns_c3_character_holonomy_closure_note`
+
+- **Note:** [`PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md`](../../docs/PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_c3_character_holonomy_closure_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The projected coordinate-cycle unitary on the hw=1 triplet has the exact C3 characters, and those three character holonomies form an invertible design matrix for (u,v,w).  _(class `C`)_
+- **chain closes:** False — The runner verifies the finite C3-character reconstruction, but the ledger row declares no dependencies while the computation imports prior PMNS oriented-cycle/three-flux/twisted-flux machinery. One imported value-law authority is already audit-demoted and the other imported PMNS rows are not declared as dependencies.
+- **rationale:** Issue: the native C3-character closure is algebraically checked, but it rests on unregistered upstream PMNS helper theorems and a prior oriented-cycle value-law authority that is not audit-clean. Why this blocks: the runner can reconstruct reduced coordinates once the hw=1 triplet, projected coordinate cycle, reduced family, and three-flux machinery are accepted, but the note does not independently derive or register those inputs. Repair target: register the oriented-cycle channel value law, three-flux holonomy closure, twisted-flux boundary, and hw=1 triplet/coordinate-cycle authority as dependencies, then re-audit after those inputs are clean or explicitly bounded. Claim boundary until fixed: this is a conditional bounded closure of the reduced PMNS readout family, not a sole-axiom PMNS value derivation.
+- **open / conditional deps cited:**
+  - `PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md`
+  - `PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md`
+  - `PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md`
+  - `UNREGISTERED: retained hw=1 triplet / coordinate-cycle authority`
 - **auditor confidence:** high
 
 ### `pmns_c3_nontrivial_current_boundary_note`
