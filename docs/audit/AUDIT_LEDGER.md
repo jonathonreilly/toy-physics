@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:18:00.915309+00:00
+**Generated:** 2026-05-01T03:19:19.277132+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,12 +21,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 248 |
+| bounded | 247 |
 | support | 204 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 13 |
-| ~~audited_renaming~~ | 50 |
+| ~~audited_renaming~~ | 51 |
 | ~~audited_conditional~~ | 793 |
 | ~~audited_failed~~ | 146 |
 
@@ -37,8 +37,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 10 |
-| `audited_renaming` | 17 |
-| `unaudited` | 717 |
+| `audited_renaming` | 18 |
+| `unaudited` | 716 |
 
 | criticality | count |
 |---|---:|
@@ -930,6 +930,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
 | `higgs_mass_from_axiom_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `hypercharge_identification_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
+| `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `oh_static_constraint_lift_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | E | - |
 | `pmns_active_four_real_source_from_transport_note` | open | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
@@ -8190,6 +8191,20 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md`
   - `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`
   - `charged_lepton_koide_review_packet_2026-04-18.md`
+- **auditor confidence:** high
+
+### `koide_cyclic_projector_block_democracy_note_2026-04-18`
+
+- **Note:** [`KOIDE_CYCLIC_PROJECTOR_BLOCK_DEMOCRACY_NOTE_2026-04-18.md`](../../docs/KOIDE_CYCLIC_PROJECTOR_BLOCK_DEMOCRACY_NOTE_2026-04-18.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-koide_cyclic_projector_block_democracy_note_2026-04-18`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Demand equal cyclic block power E_+ = E_perp on the scalar/traceless cyclic split, which is exactly equivalent to 2 r0^2 = r1^2 + r2^2, the Koide selector equation.  _(class `F`)_
+- **chain closes:** False — The runner verifies the cyclic algebra and the observed Koide witness, but the equal-block-power condition is the Koide selector restated in cyclic-projector language rather than derived from a microscopic source law.
+- **rationale:** Issue: the note's fresh selector candidate is to impose equal block power on the cyclic 1+2 split, and the runner proves this is algebraically equivalent to the existing Koide equation. Why this blocks: the construction gives a cleaner coordinate/restatement of the target relation and reproduces the observed charged-lepton witness, but it does not derive the microscopic cyclic response source law or the dynamical reason equal block power must hold. Repair target: add a retained theorem deriving equal cyclic block power from Cl(3) on Z^3 or from a specified admitted dynamics, with a runner that checks the derivation rather than only the equivalence to Koide. Claim boundary until fixed: useful cyclic-projector wording of the Koide selector candidate; not an audited first-principles Koide derivation.
+- **open / conditional deps cited:**
+  - `scripts/frontier_koide_cyclic_projector_block_democracy.py`
 - **auditor confidence:** high
 
 ### `koide_cyclic_wilson_descendant_law_note_2026-04-18`
