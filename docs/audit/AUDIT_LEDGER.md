@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:21:48.955886+00:00
+**Generated:** 2026-05-01T07:23:08.436557+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,22 +23,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | bounded | 189 |
 | support | 163 |
-| open | 8 |
+| open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 857 |
+| ~~audited_conditional~~ | 858 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 276 |
-| `audited_conditional` | 587 |
+| `audited_conditional` | 588 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 572 |
+| `unaudited` | 571 |
 
 | criticality | count |
 |---|---:|
@@ -794,6 +794,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_dirac_two_higgs_canonical_reduction_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `neutrino_lane4_4f_phase2_attack_frame_fanout_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `neutrino_lane4_4f_sigma_m_nu_theorem_plan_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_lane4_theorem_plan_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_lane4_workstream_closeout_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_majorana_current_stack_exhaustion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -10934,6 +10935,25 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **chain closes:** True — The current runner symbolically derives the stated functional form from P1-P3, checks equivalent forms, and verifies the stated limiting and round-trip cases. The note explicitly keeps h, Ω_b, Ω_DM, T_CMB/C_ν, and the cosmology layer in admitted/open support scope, so no numerical retention is being inferred.
 - **rationale:** The load-bearing step is an algebraic consequence of the stated matter-budget split, open-number reduction, and neutrino-relic convention, and the runner reproduces that algebra plus equivalent-form and limiting-case checks. The note is explicit that the result is support-level and that numerical Σm_ν retention remains blocked on admitted/open inputs h, Ω_b, and Ω_DM. Residual risk is not hidden physics in this row but the fact that the runner named in the note is not registered as the ledger primary runner.
 - **auditor confidence:** high
+
+### `neutrino_lane4_4f_sigma_m_nu_theorem_plan_note_2026-04-28`
+
+- **Note:** [`NEUTRINO_LANE4_4F_SIGMA_M_NU_THEOREM_PLAN_NOTE_2026-04-28.md`](../../docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_THEOREM_PLAN_NOTE_2026-04-28.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The plan decomposes Lane 4F into 4F-alpha structural functional-form support and 4F-beta numerical retention, identifying h, Ω_b, and Ω_DM as the load-bearing admitted/open inputs for numerical Σm_ν closure.  _(class `B`)_
+- **chain closes:** False — The note is properly scoped as an open roadmap, but its dependency ordering, retained/admitted/open status audit, and closed-route inventory depend on many cross-lane authorities that are not registered as one-hop dependencies for this row. With no runner and no dependency snapshot, the audit cannot verify the roadmap as a closed restricted-context result.
+- **rationale:** Issue: the theorem-plan decomposition and Phase-1/Phase-2 ordering import status claims from cosmology, Hubble, N_eff, matter-radiation, charged-lepton, and neutrino-lane notes without ledger dependencies or a runner. Why this blocks: the audit can read the roadmap boundary, but cannot independently verify that the cited routes are closed/open in the way the plan asserts. Repair target: register the cited authorities as dependencies and provide either a mechanical dependency/status table or a runner-free proof packet limited to those authorities. Claim boundary until fixed: safe as an open branch-local roadmap identifying intended 4F work, not as a verified dependency theorem or closure of any Σm_ν subtarget.
+- **open / conditional deps cited:**
+  - `COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md`
+  - `HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md`
+  - `N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md`
+  - `MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
+  - `CHARGED_LEPTON_Y_TAU_M3_PREMISE_SELF_CORRECTION_NOTE_2026-04-28.md`
+  - `NEUTRINO_LANE4_4A_M_LIGHTEST_WARD_IDENTITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md`
+- **auditor confidence:** medium
 
 ### `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27`
 
