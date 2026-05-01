@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-29-scalar-source-response-harness-extension
-blocks_completed: 43
-active_route: "Feynman-Hellmann physical-response harness support"
-active_hard_residual: "measure dE/ds with explicit scalar source shifts while keeping dE/dh blocked until kappa_s is derived"
+current_phase: campaign-rerun-block-30-fh-production-protocol
+blocks_completed: 44
+active_route: "Feynman-Hellmann physical-response production protocol"
+active_hard_residual: "production dE/ds is specified, but physical dE/dh still needs kappa_s from scalar LSZ/canonical normalization"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -157,6 +157,9 @@ files_touched:
   - "docs/YT_SCALAR_SOURCE_RESPONSE_HARNESS_EXTENSION_NOTE_2026-05-01.md"
   - "outputs/yt_direct_lattice_correlator_scalar_source_response_smoke_2026-05-01.json"
   - "outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_fh_production_protocol_certificate.py"
+  - "docs/YT_FH_PRODUCTION_PROTOCOL_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_fh_production_protocol_certificate_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -221,6 +224,7 @@ claim_state_movement:
   - "audited the strongest EW/Higgs canonical scalar surfaces; they assume or structure a canonical doublet and do not derive the PR230 source-to-Higgs normalization"
   - "ran the explicit source-to-Higgs/LSZ closure attempt; no allowed current-surface premise fixes kappa_s, so the named LSZ theorem remains open"
   - "extended the production harness with explicit uniform scalar-source shifts and a dE/ds response analysis; this advances the Feynman-Hellmann measurement route but still requires kappa_s before physical dE/dh"
+  - "specified the production Feynman-Hellmann protocol: common-ensemble symmetric source shifts, correlated dE/ds fits, and a separate scalar two-point LSZ/canonical-normalization measurement to determine kappa_s"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -229,5 +233,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Run production-grade scalar source-response design or derive scalar LSZ/canonical normalization kappa_s; do not convert dE/ds to dE/dh until kappa_s is derived."
+next_exact_action: "Attack the scalar two-point LSZ/canonical-normalization measurement for kappa_s or pivot to scalar Bethe-Salpeter pole-residue/finite-volume control."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

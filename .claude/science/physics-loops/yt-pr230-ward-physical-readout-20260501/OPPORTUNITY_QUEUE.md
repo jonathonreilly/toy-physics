@@ -61,7 +61,10 @@ probability.
    canonical scalar normalization before claiming physical `y_t`.  The
    production harness now supports explicit scalar-source shifts and emits a
    `dE/ds` analysis; the next step is production source-response data plus a
-   derived `kappa_s`, not setting `kappa_s = 1`.
+   derived `kappa_s`, not setting `kappa_s = 1`.  The production protocol is
+   now specified: common-ensemble symmetric source shifts, correlated slope
+   fits, and a same-source scalar two-point LSZ/canonical-normalization
+   measurement for `kappa_s`.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the

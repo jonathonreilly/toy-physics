@@ -64,6 +64,7 @@ def main() -> int:
         "canonical_scalar_import": load("outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json"),
         "source_to_higgs_lsz": load("outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"),
         "scalar_source_response_harness": load("outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json"),
+        "fh_production_protocol": load("outputs/yt_fh_production_protocol_certificate_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -177,6 +178,12 @@ def main() -> int:
         statuses["scalar_source_response_harness"],
     )
     report(
+        "fh-production-protocol-needs-production-and-kappa",
+        "Feynman-Hellmann production protocol" in str(statuses["fh_production_protocol"])
+        or "bounded-support" in str(statuses["fh_production_protocol"]),
+        statuses["fh_production_protocol"],
+    )
+    report(
         "finite-ladder-route-needs-ir-limit",
         "zero-mode" in str(statuses["ladder_ir_zero_mode"]),
         statuses["ladder_ir_zero_mode"],
@@ -284,7 +291,10 @@ def main() -> int:
             "which advances the Feynman-Hellmann measurement route but still "
             "does not convert to physical dE/dh without kappa_s.  Remaining "
             "closure requires production evidence or a genuinely new scalar "
-            "LSZ/heavy-matching theorem."
+            "LSZ/heavy-matching theorem.  The production Feynman-Hellmann "
+            "protocol is now specified: common-ensemble symmetric source "
+            "shifts, correlated dE/ds fits, and a separate scalar two-point "
+            "LSZ measurement to determine kappa_s."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",

@@ -715,3 +715,28 @@ The harness extension is a real observable-route improvement: `dE/ds` can now
 be emitted by the production harness.  It does not convert that response to
 physical `dE/dh`; `kappa_s = 1` remains forbidden unless derived from scalar
 LSZ/canonical normalization.
+
+## Review-Loop Backpressure — Feynman-Hellmann Production Protocol
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_production_protocol_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_production_protocol_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The protocol is production-grade as an observable design, but not evidence or
+closure.  It names the same-source scalar two-point LSZ/canonical-normalization
+measurement as the required `kappa_s` fixer.

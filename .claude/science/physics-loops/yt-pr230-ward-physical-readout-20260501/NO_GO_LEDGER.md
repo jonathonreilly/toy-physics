@@ -467,6 +467,19 @@ route, but it is not physical `dE/dh`: the source coordinate is `s` in
 forbidden unless derived by scalar LSZ/canonical normalization, and the smoke
 run is reduced-scope rather than production evidence.
 
+Feynman-Hellmann production protocol is specified but remains open:
+
+```text
+python3 scripts/frontier_yt_fh_production_protocol_certificate.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The protocol uses common-ensemble symmetric source shifts and correlated
+`dE_top/ds` fits across the strict PR230 volumes.  This is a production design,
+not a closure theorem.  The physical conversion still requires a scalar
+two-point LSZ/canonical-normalization measurement for `kappa_s`, plus any
+lattice-to-SM response matching.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

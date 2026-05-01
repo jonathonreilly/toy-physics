@@ -30,3 +30,16 @@ Adds a scalar-source response harness checkpoint:
 - `kappa_s = 1` remains forbidden unless derived by scalar LSZ/canonical
   normalization.
 ```
+
+Latest protocol checkpoint text for PR #230:
+
+```text
+Adds a Feynman-Hellmann production protocol certificate:
+- common-ensemble symmetric source shifts and correlated `dE_top/ds` fits are
+  now specified for the strict PR230 volumes;
+- validator passes `PASS=9 FAIL=0`; campaign status now consumes 34 route
+  certificates and reports `PASS=30 FAIL=0`;
+- the protocol identifies the required `kappa_s` fixer: same-source scalar
+  two-point LSZ/canonical-normalization measurement;
+- still no retained closure and no physical `dE/dh` without derived `kappa_s`.
+```

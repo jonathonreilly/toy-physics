@@ -170,6 +170,10 @@ What changed:
   finite reduced-smoke `dE/ds` slope.  This is bounded support only.  It does
   not derive `dE/dh`, and `kappa_s = 1` remains forbidden until scalar
   LSZ/canonical normalization is derived.
+- The Feynman-Hellmann production protocol is now specified: measure symmetric
+  source shifts on the same saved gauge configurations, fit correlated
+  `dE_top/ds`, and separately measure/derive `kappa_s` from the same-source
+  scalar two-point LSZ/canonical-normalization problem.
 
 The scientific result is narrower than closure:
 
@@ -217,3 +221,5 @@ Acceptance target for the next scalar-response block:
    `kappa_s`; do not set `kappa_s = 1`.
 3. Keep reduced source-response runs as scouts only until production and
    matching certificates exist.
+
+The protocol block completed item 1.  Items 2 and 3 remain active.

@@ -140,6 +140,9 @@ Completed in block 1:
 - `outputs/yt_direct_lattice_correlator_scalar_source_response_smoke_2026-05-01.json`
 - `outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json`
 - `docs/YT_SCALAR_SOURCE_RESPONSE_HARNESS_EXTENSION_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_fh_production_protocol_certificate.py`
+- `outputs/yt_fh_production_protocol_certificate_2026-05-01.json`
+- `docs/YT_FH_PRODUCTION_PROTOCOL_CERTIFICATE_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -162,7 +165,9 @@ Next artifact:
   not supply the PR230 source-to-Higgs bridge; the explicit closure attempt
   finds no allowed current-surface premise that fixes `kappa_s`; the production
   harness now supports scalar-source shifts and emits `dE/ds`, but this is
-  bounded-support until production data and `kappa_s` exist
+  bounded-support until production data and `kappa_s` exist; the
+  Feynman-Hellmann production protocol is now specified but still needs the
+  scalar two-point LSZ/canonical-normalization measurement
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

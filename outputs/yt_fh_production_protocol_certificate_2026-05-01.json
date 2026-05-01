@@ -1,0 +1,52 @@
+{
+  "actual_current_surface_status": "bounded-support / Feynman-Hellmann production protocol",
+  "fail_count": 0,
+  "inputs": {
+    "fh_scout": "bounded-support / Feynman-Hellmann source-response route",
+    "harness": "bounded-support / scalar source response harness extension",
+    "mass_response": "bounded-support / reduced mass-response bracket",
+    "production_resource": "bounded support / production resource projection"
+  },
+  "kappa_s_measurement": {
+    "allowed_measurement": "measure the scalar source two-point function for the same source, derive an isolated Higgs-channel pole, and compute the inverse-propagator derivative / canonical residue",
+    "forbidden_shortcuts": [
+      "H_unit matrix-element readout",
+      "yt_ward_identity as authority",
+      "observed top mass or observed y_t as selector",
+      "alpha_LM / plaquette / u0 normalization as load-bearing proof",
+      "kappa_s = 1 without scalar LSZ/canonical normalization",
+      "Z_match = 1 without a matching theorem"
+    ],
+    "needed_to_convert": "dE_top/dh = (dE_top/ds) / kappa_s"
+  },
+  "pass_count": 9,
+  "projected_extra_correlator_factor": 3,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Protocol lacks production response data and scalar LSZ/canonical normalization kappa_s.",
+  "protocol": {
+    "fit_rule": "fit E_top(s) per volume, then jointly fit dE/ds with finite-volume and source-window systematics",
+    "measurement_rule": "measure all source shifts on the same saved gauge configurations for correlated slope fits",
+    "observable": "common-ensemble finite-difference slope dE_top/ds",
+    "saved_configurations_per_volume": 1000,
+    "source_coordinate": "uniform additive lattice scalar source s in m_bare + s",
+    "source_shifts_lat": [
+      -0.01,
+      0.0,
+      0.01
+    ],
+    "strict_rejection_rule": "reduced or cold-gauge runs remain scouts only",
+    "volumes": [
+      "12^3x24",
+      "16^3x32",
+      "24^3x48"
+    ]
+  },
+  "strict_non_claims": [
+    "not production data",
+    "not a physical y_t derivation",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity as authority",
+    "does not set kappa_s or Z_match to one"
+  ],
+  "verdict": "The Feynman-Hellmann response route is now production-specifiable: measure E_top(s) at symmetric uniform scalar-source shifts on the same gauge ensembles and fit dE_top/ds with correlated errors.  This bypasses additive rest-mass ambiguity, but it still does not supply physical dE_top/dh.  A scalar two-point LSZ/canonical normalization measurement or theorem must derive kappa_s, and any lattice-to-SM response matching must be derived rather than set to one."
+}
