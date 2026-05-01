@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:17:30.876825+00:00
+**Generated:** 2026-05-01T02:18:59.834670+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 2 |
 | bounded | 261 |
-| support | 217 |
+| support | 216 |
 | open | 16 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 45 |
-| ~~audited_conditional~~ | 770 |
+| ~~audited_conditional~~ | 771 |
 | ~~audited_failed~~ | 143 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 229 |
-| `audited_conditional` | 502 |
+| `audited_conditional` | 503 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 12 |
-| `unaudited` | 741 |
+| `unaudited` | 740 |
 
 | criticality | count |
 |---|---:|
@@ -739,6 +739,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_scalar_bridge_nonrealization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_sector_exchange_nonforcing_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_sector_orientation_orbit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `pmns_selector_class_space_uniqueness_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_selector_current_stack_zero_law_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
 | `pmns_sigma_zero_nogo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -10321,6 +10322,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PMNS_SELECTOR_BANK_NONREALIZATION_NOTE.md`
   - `UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md`
   - `UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md`
+- **auditor confidence:** high
+
+### `pmns_selector_class_space_uniqueness_note`
+
+- **Note:** [`PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md`](../../docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_selector_class_space_uniqueness_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On X_red = {U_1, U_2, N_nu, N_e}, vanishing on U_1 and U_2 plus sector-odd exchange F_-(N_e) = -F_-(N_nu) leaves a one-dimensional real selector space spanned by chi_N_nu - chi_N_e.  _(class `A`)_
+- **chain closes:** False — The nullspace calculation is correct once the reduced class surface, sector-odd parity, and non-universal support assumptions are granted, but the row declares no dependencies for those imported reductions or the structural/atlas checks, and the runner emits unclassified PASS lines.
+- **rationale:** Issue: the runner's local rank/nullspace checks complete with PASS=12/FAIL=0, but all PASS lines are unclassified and the ledger row has deps=[] while the theorem assumes PMNS selector sector-odd reduction, PMNS selector non-universal support reduction, an atlas row check, and a Majorana one-slot structural analogy. Why this blocks: the one-dimensional selector-class conclusion is clean linear algebra only after the reduced surface and support/parity premises have been independently audited and declared; without those inputs the note does not itself derive the PMNS selector class space. Repair target: declare the sector-odd reduction, non-universal-support reduction, atlas/current-bank surface, and any structural Majorana analogy used by the runner as dependencies, then classify the runner's algebra and cross-note checks as A/B lines. Claim boundary until fixed: support-level reduction showing that, if the imported parity and support constraints are accepted, the reduced class-level selector space is span_R{chi_N_nu - chi_N_e}; not an independently audited PMNS selector uniqueness theorem from retained primitives.
+- **open / conditional deps cited:**
+  - `publication/ci3_z3/DERIVATION_ATLAS.md`
+  - `PMNS_SELECTOR_SECTOR_ODD_REDUCTION_NOTE.md`
+  - `PMNS_SELECTOR_NONUNIVERSAL_SUPPORT_REDUCTION_NOTE.md`
+  - `NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md`
 - **auditor confidence:** high
 
 ### `pmns_selector_current_stack_zero_law_note`
