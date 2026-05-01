@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:06:54.087053+00:00
+**Generated:** 2026-05-01T20:08:34.343941+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 186 |
+| bounded | 185 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 915 |
+| ~~audited_conditional~~ | 916 |
 | ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 617 |
+| `audited_conditional` | 618 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 552 |
+| `unaudited` | 551 |
 
 | criticality | count |
 |---|---:|
@@ -792,6 +792,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_l2_tail_stats_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_complementarity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_gravity_resolution_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `lattice_kernel_transfer_norm_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `lattice_nn_continuum_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_nn_deterministic_rescale_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_nn_distance_law_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -9869,6 +9870,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **chain closes:** False — No. The runner exits zero, but the audit classifier records no A/B/C/D PASS checks for a load-bearing audit surface.
 - **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a bounded note with executable but unratified support.
 - **auditor confidence:** medium
+
+### `lattice_kernel_transfer_norm_note`
+
+- **Note:** [`LATTICE_KERNEL_TRANSFER_NORM_NOTE.md`](../../docs/LATTICE_KERNEL_TRANSFER_NORM_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** With h^2 normalization over h = {1.0, 0.5, 0.25, 0.125}, p=1.5 is closest to marginal measured transfer-norm scaling, while p=2.0, 2.5, and 3.0 drift more strongly; this is a bounded local warning, not a promoted kernel law.  _(class `C`)_
+- **chain closes:** False — Running the script with the four h-values named in the note reproduces the reported slopes and ranking, but the registered runner's default invocation only uses three h-values and the output emits no classified PASS lines. The bounded discriminator is supported, but the audit surface is not self-contained from the registered path alone.
+- **rationale:** Issue: the note's exact slope table is reproducible only when the runner is invoked with the four h-values named in the prose; the default registered runner invocation gives a three-spacing table and no classified PASS lines. Why this blocks: the audit lane cannot rerun the registered primary path and recover the note's load-bearing table without extra command-line knowledge, nor can it classify the marginality checks. Repair target: make the four-spacing sweep the runner default or record the exact command in the note/runner registration, and emit classified PASS lines for table reproduction, p=1.5 marginality ranking, p=2.0 non-selection, and bounded-not-promoted scope. Claim boundary until fixed: a bounded local transfer-norm discriminator reproducible with explicit arguments, not a clean kernel-power theorem.
+- **auditor confidence:** high
 
 ### `lattice_nn_continuum_note`
 
