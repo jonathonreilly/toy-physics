@@ -185,6 +185,12 @@ What changed:
   every measured `Gamma_ss(q)` value and the pole location while moving
   `dGamma/dp^2`; natural `1/N_c^2` remainders at `N_c=3` move the `kappa_s`
   proxy by more than five percent.
+- The production harness now has a stochastic same-source scalar two-point
+  estimator.  `--scalar-two-point-modes` plus `--scalar-two-point-noises`
+  emits `C_ss(q)`, `Gamma_ss(q)`, and a finite-difference residue proxy for the
+  same additive scalar source used by `dE_top/ds`.  This is production-facing
+  measurement support, not closure: reduced smoke output is not production
+  evidence and no controlled pole/canonical-Higgs normalization is derived.
 
 The scientific result is narrower than closure:
 
@@ -234,4 +240,6 @@ Acceptance target for the next scalar-response block:
    matching certificates exist.
 
 The protocol block completed item 1.  The same-source two-point block reduces
-item 2 to the controlled-pole/residue theorem.  Items 2 and 3 remain active.
+item 2 to the controlled-pole/residue theorem, and the harness extension makes
+that measurement executable on future production ensembles.  Items 2 and 3
+remain active.

@@ -149,6 +149,10 @@ Completed in block 1:
 - `scripts/frontier_yt_scalar_bs_kernel_residue_degeneracy.py`
 - `outputs/yt_scalar_bs_kernel_residue_degeneracy_2026-05-01.json`
 - `docs/YT_SCALAR_BS_KERNEL_RESIDUE_DEGENERACY_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_two_point_harness_certificate.py`
+- `outputs/yt_direct_lattice_correlator_scalar_two_point_lsz_smoke_2026-05-01.json`
+- `outputs/yt_scalar_two_point_harness_certificate_2026-05-01.json`
+- `docs/YT_SCALAR_TWO_POINT_HARNESS_EXTENSION_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -176,7 +180,10 @@ Next artifact:
   scalar two-point LSZ/canonical-normalization measurement; the same-source
   `C_ss(q)`/`Gamma_ss(q)` primitive is executable but no controlled pole or
   residue theorem is derived; finite same-source samples plus a granted
-  Bethe-Salpeter pole do not fix the pole derivative or `kappa_s` at `N_c=3`
+  Bethe-Salpeter pole do not fix the pole derivative or `kappa_s` at `N_c=3`;
+  the production harness now has a stochastic same-source scalar two-point
+  estimator, but the smoke output is reduced-scope support rather than pole
+  or LSZ closure evidence
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

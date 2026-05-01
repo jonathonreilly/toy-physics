@@ -718,15 +718,19 @@ def build_staggered_dirac(gauge: GaugeField, mass: float) -> sparse.csr_matrix:
     return sparse.csr_matrix((vals, (rows, cols)), shape=(n, n), dtype=complex)
 
 
-def solve_propagator_normal_eq(D: sparse.csr_matrix, source_index: int, rtol: float, maxiter: int) -> tuple[np.ndarray, int, float]:
-    rhs = np.zeros(D.shape[0], dtype=complex)
-    rhs[source_index] = 1.0
+def solve_vector_normal_eq(D: sparse.csr_matrix, rhs: np.ndarray, rtol: float, maxiter: int) -> tuple[np.ndarray, int, float]:
     dh = D.getH()
     normal = dh @ D
     b = dh @ rhs
     sol, info = cg(normal, b, rtol=rtol, atol=0.0, maxiter=maxiter)
     residual = float(np.linalg.norm(normal @ sol - b) / max(np.linalg.norm(b), 1.0e-30))
     return sol, int(info), residual
+
+
+def solve_propagator_normal_eq(D: sparse.csr_matrix, source_index: int, rtol: float, maxiter: int) -> tuple[np.ndarray, int, float]:
+    rhs = np.zeros(D.shape[0], dtype=complex)
+    rhs[source_index] = 1.0
+    return solve_vector_normal_eq(D, rhs, rtol, maxiter)
 
 
 def momentum_key(nvec: tuple[int, int, int]) -> str:
@@ -756,6 +760,74 @@ def parse_float_list(spec: str | None) -> list[float]:
 
 def spatial_p_hat_sq(nvec: tuple[int, int, int], spatial_l: int) -> float:
     return sum((2.0 * math.sin(math.pi * n / spatial_l)) ** 2 for n in nvec)
+
+
+def phase_vector(geom: Geometry, nvec: tuple[int, int, int]) -> np.ndarray:
+    phases = np.empty(geom.volume * NC, dtype=np.complex128)
+    for site in range(geom.volume):
+        _t, x, y, z = geom.site_coords(site)
+        phase_arg = (nvec[0] * x + nvec[1] * y + nvec[2] * z) / geom.spatial_l
+        phase = np.exp(2.0j * math.pi * phase_arg)
+        for color in range(NC):
+            phases[site * NC + color] = phase
+    return phases
+
+
+def stochastic_scalar_two_point(
+    gauge: GaugeField,
+    mass: float,
+    rtol: float,
+    maxiter: int,
+    modes: list[tuple[int, int, int]],
+    noise_vectors: int,
+    rng: np.random.Generator,
+) -> dict[str, Any]:
+    D = build_staggered_dirac(gauge, mass)
+    geom = gauge.geom
+    n = geom.volume * NC
+    accum: dict[str, list[complex]] = {momentum_key(mode): [] for mode in modes}
+    infos: list[int] = []
+    residuals: list[float] = []
+    phases = {momentum_key(mode): phase_vector(geom, mode) for mode in modes}
+    for _noise in range(noise_vectors):
+        real = 2 * rng.integers(0, 2, size=n) - 1
+        imag = 2 * rng.integers(0, 2, size=n) - 1
+        eta = (real + 1j * imag).astype(np.complex128) / math.sqrt(2.0)
+        for mode in modes:
+            key = momentum_key(mode)
+            phase = phases[key]
+            y, info_y, residual_y = solve_vector_normal_eq(D, np.conj(phase) * eta, rtol, maxiter)
+            x, info_x, residual_x = solve_vector_normal_eq(D, phase * y, rtol, maxiter)
+            accum[key].append(complex(np.vdot(eta, x) / n))
+            infos.extend([info_y, info_x])
+            residuals.extend([residual_y, residual_x])
+
+    mode_rows = {}
+    for mode in modes:
+        key = momentum_key(mode)
+        values = np.asarray(accum[key], dtype=np.complex128)
+        mean = complex(np.mean(values)) if values.size else complex(float("nan"), float("nan"))
+        stderr = float(np.std(values.real, ddof=1) / math.sqrt(values.size)) if values.size > 1 else 0.0
+        gamma = 1.0 / mean if abs(mean) > 1.0e-30 else complex(float("nan"), float("nan"))
+        mode_rows[key] = {
+            "momentum_mode": list(mode),
+            "p_hat_sq": spatial_p_hat_sq(mode, geom.spatial_l),
+            "noise_vectors": int(noise_vectors),
+            "C_ss_real": float(mean.real),
+            "C_ss_imag": float(mean.imag),
+            "C_ss_real_noise_stderr": stderr,
+            "Gamma_ss_real": float(gamma.real),
+            "Gamma_ss_imag": float(gamma.imag),
+        }
+    return {
+        "mass": mass,
+        "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
+        "estimator": "Z2 stochastic trace for Tr[S V_q S V_-q] normalized by volume*colors",
+        "mode_rows": mode_rows,
+        "cg_infos": infos,
+        "cg_residuals": residuals,
+        "max_cg_residual": max(residuals) if residuals else None,
+    }
 
 
 def measure_correlator(
@@ -1025,6 +1097,66 @@ def fit_scalar_source_response(
     }
 
 
+def fit_scalar_two_point_lsz(
+    scalar_two_point_measurements: dict[str, list[dict[str, Any]]],
+    spatial_l: int,
+) -> dict[str, Any]:
+    mode_rows = {}
+    for key, rows in scalar_two_point_measurements.items():
+        if not rows:
+            continue
+        real_values = np.asarray([float(row["C_ss_real"]) for row in rows], dtype=float)
+        imag_values = np.asarray([float(row["C_ss_imag"]) for row in rows], dtype=float)
+        c_mean = complex(float(np.mean(real_values)), float(np.mean(imag_values)))
+        real_err = float(np.std(real_values, ddof=1) / math.sqrt(len(real_values))) if len(real_values) > 1 else 0.0
+        imag_err = float(np.std(imag_values, ddof=1) / math.sqrt(len(imag_values))) if len(imag_values) > 1 else 0.0
+        gamma = 1.0 / c_mean if abs(c_mean) > 1.0e-30 else complex(float("nan"), float("nan"))
+        nvec = tuple(int(x) for x in key.split(","))
+        mode_rows[key] = {
+            "momentum_mode": list(nvec),
+            "p_hat_sq": spatial_p_hat_sq(nvec, spatial_l),
+            "configuration_count": len(rows),
+            "C_ss_real": float(c_mean.real),
+            "C_ss_imag": float(c_mean.imag),
+            "C_ss_real_config_stderr": real_err,
+            "C_ss_imag_config_stderr": imag_err,
+            "Gamma_ss_real": float(gamma.real),
+            "Gamma_ss_imag": float(gamma.imag),
+        }
+
+    sorted_rows = sorted(mode_rows.values(), key=lambda row: (float(row["p_hat_sq"]), row["momentum_mode"]))
+    finite_difference = {
+        "available": False,
+        "dGamma_dp_hat_sq": float("nan"),
+        "finite_residue_proxy": float("nan"),
+    }
+    if len(sorted_rows) >= 2 and abs(float(sorted_rows[0]["p_hat_sq"])) < 1.0e-15:
+        first = None
+        for row in sorted_rows[1:]:
+            if float(row["p_hat_sq"]) > 0.0:
+                first = row
+                break
+        if first is not None:
+            delta_p = float(first["p_hat_sq"]) - float(sorted_rows[0]["p_hat_sq"])
+            derivative = (float(first["Gamma_ss_real"]) - float(sorted_rows[0]["Gamma_ss_real"])) / delta_p
+            finite_difference = {
+                "available": True,
+                "reference_modes": [sorted_rows[0]["momentum_mode"], first["momentum_mode"]],
+                "dGamma_dp_hat_sq": derivative,
+                "finite_residue_proxy": 1.0 / abs(derivative) if abs(derivative) > 1.0e-30 else float("nan"),
+            }
+
+    return {
+        "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
+        "measurement_object": "C_ss(q)=Tr[S V_q S V_-q], Gamma_ss(q)=1/C_ss(q)",
+        "estimator": "Z2 stochastic trace estimator; production evidence requires saved ensembles and controlled statistics",
+        "physical_higgs_normalization": "not_derived",
+        "mode_rows": mode_rows,
+        "finite_difference_residue_proxy": finite_difference,
+        "strict_limit": "finite-mode stochastic C_ss(q) is not kappa_s until an isolated pole, dGamma/dp^2 at the pole, and canonical Higgs normalization are derived",
+    }
+
+
 def physical_mass_gev(m_lat: float) -> float:
     a_inv = R0_OVER_A_BETA6_REFERENCE * HBARC_GEV_FM / R0_FM
     return m_lat * a_inv
@@ -1049,6 +1181,9 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
     momentum_measurements: dict[float, dict[str, list[list[float]]]] = {m: {} for m in masses}
     source_response_measurements: dict[float, dict[float, list[list[float]]]] = {
         m: {s: [] for s in args.scalar_source_shifts_parsed} for m in masses
+    }
+    scalar_two_point_measurements: dict[float, dict[str, list[dict[str, Any]]]] = {
+        m: {momentum_key(mode): [] for mode in args.scalar_two_point_modes_parsed} for m in masses
     }
     cg_residuals: dict[float, list[float]] = {m: [] for m in masses}
     plaquettes = []
@@ -1083,6 +1218,18 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
                     [],
                 )
                 source_response_measurements[mass][source_shift].append(shifted["correlator"])
+            if args.scalar_two_point_modes_parsed and args.scalar_two_point_noises > 0:
+                scalar_two_point = stochastic_scalar_two_point(
+                    meas_gauge,
+                    mass,
+                    args.cg_rtol,
+                    args.cg_maxiter,
+                    args.scalar_two_point_modes_parsed,
+                    args.scalar_two_point_noises,
+                    rng,
+                )
+                for key, row in scalar_two_point["mode_rows"].items():
+                    scalar_two_point_measurements[mass].setdefault(key, []).append(row)
         print(f"  meas L={spatial_l} cfg={cfg + 1}/{args.measurements} plaquette={plaquettes[-1]:.6f}")
 
     mass_scan = []
@@ -1094,6 +1241,11 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
         "source_coordinate": "disabled",
         "energy_fits": [],
         "slope_dE_ds_lat": float("nan"),
+    }
+    selected_scalar_two_point_analysis: dict[str, Any] = {
+        "source_coordinate": "disabled",
+        "mode_rows": {},
+        "physical_higgs_normalization": "not_derived",
     }
     for mass in masses:
         arr = np.asarray(measurements[mass], dtype=float)
@@ -1120,6 +1272,11 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
                 selected_source_response_analysis = fit_scalar_source_response(
                     source_response_measurements[mass],
                     mass,
+                )
+            if args.scalar_two_point_modes_parsed and args.scalar_two_point_noises > 0:
+                selected_scalar_two_point_analysis = fit_scalar_two_point_lsz(
+                    scalar_two_point_measurements[mass],
+                    spatial_l,
                 )
 
     if selected_fit is None:
@@ -1151,6 +1308,7 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
         "correlators": correlator_rows,
         "momentum_analysis": selected_momentum_analysis,
         "scalar_source_response_analysis": selected_source_response_analysis,
+        "scalar_two_point_lsz_analysis": selected_scalar_two_point_analysis,
         "effective_mass": effective_mass(np.array([r["mean"] for r in correlator_rows])),
         "mass_fit": selected_fit,
         "runtime_seconds": elapsed,
@@ -1160,6 +1318,7 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
 def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, masses: list[float]) -> dict[str, Any]:
     geom = Geometry(spatial_l, time_l)
     u = cold_link_array(geom)
+    scalar_rng = np.random.default_rng(args.seed + 1000003 * spatial_l + 9176 * time_l)
     t0 = time.time()
     plaquette_history = []
     for sweep in range(args.therm):
@@ -1173,6 +1332,9 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
     momentum_measurements: dict[float, dict[str, list[list[float]]]] = {m: {} for m in masses}
     source_response_measurements: dict[float, dict[float, list[list[float]]]] = {
         m: {s: [] for s in args.scalar_source_shifts_parsed} for m in masses
+    }
+    scalar_two_point_measurements: dict[float, dict[str, list[dict[str, Any]]]] = {
+        m: {momentum_key(mode): [] for mode in args.scalar_two_point_modes_parsed} for m in masses
     }
     cg_residuals: dict[float, list[float]] = {m: [] for m in masses}
     plaquettes = []
@@ -1208,6 +1370,18 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
                     [],
                 )
                 source_response_measurements[mass][source_shift].append(shifted["correlator"])
+            if args.scalar_two_point_modes_parsed and args.scalar_two_point_noises > 0:
+                scalar_two_point = stochastic_scalar_two_point(
+                    meas_gauge,
+                    mass,
+                    args.cg_rtol,
+                    args.cg_maxiter,
+                    args.scalar_two_point_modes_parsed,
+                    args.scalar_two_point_noises,
+                    scalar_rng,
+                )
+                for key, row in scalar_two_point["mode_rows"].items():
+                    scalar_two_point_measurements[mass].setdefault(key, []).append(row)
         print(f"  meas L={spatial_l} cfg={cfg + 1}/{args.measurements} plaquette={plaquettes[-1]:.6f}")
 
     mass_scan = []
@@ -1219,6 +1393,11 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         "source_coordinate": "disabled",
         "energy_fits": [],
         "slope_dE_ds_lat": float("nan"),
+    }
+    selected_scalar_two_point_analysis: dict[str, Any] = {
+        "source_coordinate": "disabled",
+        "mode_rows": {},
+        "physical_higgs_normalization": "not_derived",
     }
     for mass in masses:
         arr = np.asarray(measurements[mass], dtype=float)
@@ -1245,6 +1424,11 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
                 selected_source_response_analysis = fit_scalar_source_response(
                     source_response_measurements[mass],
                     mass,
+                )
+            if args.scalar_two_point_modes_parsed and args.scalar_two_point_noises > 0:
+                selected_scalar_two_point_analysis = fit_scalar_two_point_lsz(
+                    scalar_two_point_measurements[mass],
+                    spatial_l,
                 )
 
     if selected_fit is None:
@@ -1276,6 +1460,7 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         "correlators": correlator_rows,
         "momentum_analysis": selected_momentum_analysis,
         "scalar_source_response_analysis": selected_source_response_analysis,
+        "scalar_two_point_lsz_analysis": selected_scalar_two_point_analysis,
         "effective_mass": effective_mass(np.array([r["mean"] for r in correlator_rows])),
         "mass_fit": selected_fit,
         "runtime_seconds": elapsed,
@@ -1419,6 +1604,14 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
             "scalar_source_response": {
                 "enabled": bool(getattr(args, "scalar_source_shifts_parsed", [])),
                 "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
+                "physical_higgs_normalization": "not_derived",
+                "used_as_physical_yukawa_readout": False,
+            },
+            "scalar_two_point_lsz": {
+                "enabled": bool(getattr(args, "scalar_two_point_modes_parsed", []))
+                and int(getattr(args, "scalar_two_point_noises", 0)) > 0,
+                "measurement_object": "C_ss(q)=Tr[S V_q S V_-q] for the same additive scalar source",
+                "noise_vectors_per_configuration": int(getattr(args, "scalar_two_point_noises", 0)),
                 "physical_higgs_normalization": "not_derived",
                 "used_as_physical_yukawa_readout": False,
             },
@@ -1659,6 +1852,22 @@ def parse_args() -> argparse.Namespace:
             "does not define the physical Higgs normalization."
         ),
     )
+    parser.add_argument(
+        "--scalar-two-point-modes",
+        default="",
+        help=(
+            "Optional semicolon-separated spatial momentum triplets for a "
+            "same-source scalar two-point stochastic trace estimate, e.g. "
+            "'0,0,0;1,0,0'. This is a kappa_s measurement primitive, not a "
+            "physical Higgs normalization by itself."
+        ),
+    )
+    parser.add_argument(
+        "--scalar-two-point-noises",
+        type=int,
+        default=0,
+        help="Z2 noise vectors per configuration for --scalar-two-point-modes. Zero disables the estimator.",
+    )
     parser.add_argument("--therm", type=int, default=None, help="Thermalization sweeps.")
     parser.add_argument("--measurements", type=int, default=None, help="Saved configurations per volume.")
     parser.add_argument("--separation", type=int, default=None, help="Sweeps between saved configurations.")
@@ -1767,6 +1976,7 @@ def main() -> int:
     masses = [float(x) for x in args.masses.split(",") if x.strip()]
     args.momentum_modes_parsed = parse_momentum_modes(args.momentum_modes)
     args.scalar_source_shifts_parsed = parse_float_list(args.scalar_source_shifts)
+    args.scalar_two_point_modes_parsed = parse_momentum_modes(args.scalar_two_point_modes)
     rng = np.random.default_rng(args.seed)
 
     print("=" * 78)
@@ -1778,6 +1988,11 @@ def main() -> int:
         print(f"momentum_modes={args.momentum_modes_parsed}")
     if args.scalar_source_shifts_parsed:
         print(f"scalar_source_shifts={args.scalar_source_shifts_parsed}")
+    if args.scalar_two_point_modes_parsed and args.scalar_two_point_noises > 0:
+        print(
+            f"scalar_two_point_modes={args.scalar_two_point_modes_parsed}, "
+            f"noise_vectors={args.scalar_two_point_noises}"
+        )
     print(f"therm={args.therm}, measurements={args.measurements}, separation={args.separation}")
     print(f"output={args.output}")
     if args.pilot_targets:

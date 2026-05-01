@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=32 FAIL=0
+# SUMMARY: PASS=33 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -57,6 +57,7 @@ The certificate consumes the PR-local route certificates for:
 - Feynman-Hellmann production protocol certificate;
 - same-source scalar two-point LSZ measurement primitive;
 - scalar Bethe-Salpeter kernel / residue degeneracy;
+- scalar two-point production-harness extension;
 - scalar ladder IR / zero-mode obstruction;
 - heavy kinetic-mass route scout;
 - nonzero-momentum correlator scout;
@@ -101,6 +102,7 @@ visible shortcut routes:
 | Feynman-Hellmann production protocol | common-ensemble symmetric source shifts and correlated `dE/ds` fits are specified; `kappa_s` remains required |
 | same-source scalar two-point LSZ measurement | `C_ss(q)` / `Gamma_ss(q)` object is executable, but no controlled pole/continuum limit fixes `kappa_s` |
 | scalar Bethe-Salpeter kernel / residue degeneracy | finite same-source samples and a granted pole do not fix `dGamma/dp^2`; denominator remainders move `kappa_s` at `N_c=3` |
+| scalar two-point production harness | stochastic same-source `C_ss(q)` estimator is production-facing, but smoke output is reduced-scope and not a pole/LSZ theorem |
 | current-scale direct MC | `am_top = 81.423`, not a useful relativistic top run |
 | HQET/static shortcut | removes rest mass, therefore needs matching |
 | heavy kinetic mass | cancels additive rest mass, but needs nonzero-momentum data and matching |

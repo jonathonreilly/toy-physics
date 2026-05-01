@@ -73,7 +73,10 @@ probability.
    measurement for `kappa_s`.  The same-source two-point object is now
    executable as `C_ss(q)=Tr[S V_q S V_-q]`; closure still requires a
    controlled pole/continuum limit and canonical residue.  A finite-mode
-   Bethe-Salpeter interpolation cannot supply that residue by itself.
+   Bethe-Salpeter interpolation cannot supply that residue by itself.  The
+   production harness now has a stochastic `C_ss(q)` estimator, so the next
+   positive move is a production joint `dE/ds` plus `C_ss(q)` run and a
+   controlled pole/residue fit, not another reduced smoke sample.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the

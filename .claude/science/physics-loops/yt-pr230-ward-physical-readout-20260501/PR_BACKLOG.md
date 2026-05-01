@@ -70,3 +70,18 @@ Adds a scalar Bethe-Salpeter kernel/residue degeneracy certificate:
 - still no retained closure: the interacting denominator, finite-volume/IR
   limit, and pole-residue derivative remain open.
 ```
+
+Latest scalar two-point harness checkpoint text for PR #230:
+
+```text
+Adds a scalar two-point production-harness extension:
+- `yt_direct_lattice_correlator_production.py` now accepts
+  `--scalar-two-point-modes` and `--scalar-two-point-noises`;
+- smoke output emits stochastic estimates of same-source `C_ss(q)` and
+  `Gamma_ss(q)` plus a finite-difference residue proxy;
+- validator passes `PASS=9 FAIL=0`; campaign status now consumes 37 route
+  certificates and reports `PASS=33 FAIL=0`;
+- this is production-facing support for the `kappa_s` measurement, not
+  retained closure; production data, controlled pole/IR limits, and canonical
+  Higgs normalization remain open.
+```

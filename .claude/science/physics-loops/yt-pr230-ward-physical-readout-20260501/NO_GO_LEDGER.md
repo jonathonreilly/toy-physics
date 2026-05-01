@@ -517,6 +517,19 @@ changing the finite samples.  The route still needs a retained interacting
 denominator theorem, finite-volume/IR/zero-mode limiting order, and a
 finite-`N_c` pole-residue bound or production residue measurement.
 
+Scalar two-point harness extension is production support, not closure:
+
+```text
+python3 scripts/frontier_yt_scalar_two_point_harness_certificate.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The production harness can now emit stochastic estimates of the same-source
+`C_ss(q)` and `Gamma_ss(q)` object.  This removes an engineering blocker for
+the Feynman-Hellmann/LSZ route, but the reduced smoke certificate is not
+production evidence and does not derive a scalar pole, `dGamma/dp^2` at the
+pole, or canonical Higgs normalization.  `kappa_s = 1` remains forbidden.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

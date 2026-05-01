@@ -1,0 +1,93 @@
+{
+  "actual_current_surface_status": "bounded-support / scalar two-point production-harness extension",
+  "analysis_summaries": [
+    {
+      "analysis": {
+        "estimator": "Z2 stochastic trace estimator; production evidence requires saved ensembles and controlled statistics",
+        "finite_difference_residue_proxy": {
+          "available": true,
+          "dGamma_dp_hat_sq": -4.9724486747869365,
+          "finite_residue_proxy": 0.2011081592597532,
+          "reference_modes": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        "measurement_object": "C_ss(q)=Tr[S V_q S V_-q], Gamma_ss(q)=1/C_ss(q)",
+        "mode_rows": {
+          "0,0,0": {
+            "C_ss_imag": 0.02030889976660573,
+            "C_ss_imag_config_stderr": 0.0,
+            "C_ss_real": -0.14224059910643777,
+            "C_ss_real_config_stderr": 0.0,
+            "Gamma_ss_imag": -0.9837276682051356,
+            "Gamma_ss_real": -6.889886428666129,
+            "configuration_count": 1,
+            "momentum_mode": [
+              0,
+              0,
+              0
+            ],
+            "p_hat_sq": 0.0
+          },
+          "1,0,0": {
+            "C_ss_imag": 0.016890483169199333,
+            "C_ss_imag_config_stderr": 0.0,
+            "C_ss_real": -0.03843342054076931,
+            "C_ss_real_config_stderr": 0.0,
+            "Gamma_ss_imag": -9.583708333322761,
+            "Gamma_ss_real": -21.807232453026938,
+            "configuration_count": 1,
+            "momentum_mode": [
+              1,
+              0,
+              0
+            ],
+            "p_hat_sq": 2.9999999999999996
+          }
+        },
+        "physical_higgs_normalization": "not_derived",
+        "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
+        "strict_limit": "finite-mode stochastic C_ss(q) is not kappa_s until an isolated pole, dGamma/dp^2 at the pole, and canonical Higgs normalization are derived"
+      },
+      "selected_mass_parameter": 0.75,
+      "volume": "3^3x6"
+    }
+  ],
+  "fail_count": 0,
+  "input_certificate": "outputs/yt_direct_lattice_correlator_scalar_two_point_lsz_smoke_2026-05-01.json",
+  "pass_count": 9,
+  "phase": "reduced_scope",
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The harness emits finite C_ss/Gamma_ss estimates only; kappa_s still requires a controlled pole and canonical LSZ normalization.",
+  "required_next_steps": [
+    "run the stochastic C_ss(q) estimator on production gauge ensembles for the same source used in dE_top/ds",
+    "measure enough nonzero momentum points to fit the inverse denominator and isolate a pole",
+    "derive finite-volume, IR, and gauge-zero-mode limits before using dGamma/dp^2",
+    "match the pole residue to the canonical Higgs kinetic normalization rather than setting kappa_s = 1"
+  ],
+  "scalar_two_point_metadata": {
+    "enabled": true,
+    "measurement_object": "C_ss(q)=Tr[S V_q S V_-q] for the same additive scalar source",
+    "noise_vectors_per_configuration": 2,
+    "physical_higgs_normalization": "not_derived",
+    "used_as_physical_yukawa_readout": false
+  },
+  "strict_non_claims": [
+    "not production evidence",
+    "not a physical y_t derivation",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t",
+    "does not set kappa_s, c2, or Z_match to one"
+  ],
+  "verdict": "The direct-correlator production harness now has a stochastic same-source scalar two-point estimator for C_ss(q)=Tr[S V_q S V_-q].  This turns the kappa_s LSZ measurement object into a production-facing observable that can be run on saved gauge ensembles.  It is not retained closure because the smoke run is reduced-scope, the estimator has no controlled pole/continuum limit here, and the canonical Higgs normalization remains not derived."
+}

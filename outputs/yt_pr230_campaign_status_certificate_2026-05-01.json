@@ -32,6 +32,7 @@
     "same_1pi": "exact negative boundary / same-1PI not PR230 closure",
     "same_source_scalar_two_point": "bounded-support / same-source scalar two-point LSZ measurement primitive",
     "scalar_source_response_harness": "bounded-support / scalar source response harness extension",
+    "scalar_two_point_harness": "bounded-support / scalar two-point production-harness extension",
     "source_reparametrization": "exact negative boundary / source reparametrization gauge",
     "source_to_higgs_lsz": "open / source-to-Higgs LSZ closure attempt blocked",
     "source_two_point": "exact-support / open bridge",
@@ -39,7 +40,7 @@
     "static_mass": "exact negative boundary / static mass matching obstruction"
   },
   "fail_count": 0,
-  "pass_count": 32,
+  "pass_count": 33,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

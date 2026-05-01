@@ -316,4 +316,12 @@ python3 scripts/frontier_yt_scalar_bs_kernel_residue_degeneracy.py
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=32 FAIL=0
+
+python3 scripts/yt_direct_lattice_correlator_production.py --volumes 3x6 --masses 0.75 --therm 0 --measurements 1 --separation 0 --ape-steps 0 --engine python --scalar-two-point-modes '0,0,0;1,0,0' --scalar-two-point-noises 2 --output outputs/yt_direct_lattice_correlator_scalar_two_point_lsz_smoke_2026-05-01.json
+
+python3 scripts/frontier_yt_scalar_two_point_harness_certificate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=33 FAIL=0
 ```
