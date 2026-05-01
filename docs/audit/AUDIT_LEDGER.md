@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:03:05.764971+00:00
+**Generated:** 2026-05-01T23:05:11.544325+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 63 |
+| **retained_no_go** | 64 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 8 |
+| _proposed_no_go_ | 7 |
 | bounded | 163 |
 | support | 134 |
 | open | 6 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 311 |
+| `audited_clean` | 312 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 502 |
+| `unaudited` | 501 |
 
 | criticality | count |
 |---|---:|
@@ -119,6 +119,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `charged_lepton_radiative_tau_selector_firewall_note_2026-04-26` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | C | - |
 | `chiral_3plus1d_coupled_coin_note` | open | ~~audited_clean~~ | open | cross_family | codex-current | C | - |
 | `ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `cl3_color_automorphism_theorem` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
@@ -2432,6 +2433,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The electroweak charged-lepton Casimir vector is (1, 1, 1) across e, mu, tau, so the radiative alpha_LM/(4pi) scale is generation-blind and cannot select tau without an extra primitive.  _(class `A`)_
 - **chain closes:** True — The no-go closes because the radiative factor is identical under generation relabeling. The note preserves the tau numerical match as support/comparator only and does not turn it into a standalone y_tau theorem.
 - **rationale:** The runner checks that the Casimir and radiative y value are identical for all three charged-lepton generations, and that applying the same rule universally cannot fit electron and muon masses. The PDG tau agreement is explicitly fenced as comparator-only. The audited-clean result is only the standalone tau-selector no-go, not charged-lepton mass closure.
+- **auditor confidence:** high
+
+### `charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27`
+
+- **Note:** [`CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md`](../../docs/CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-019de5c9`  (codex-current; independence=fresh_context)
+- **load-bearing step:** A natural single-label selector from the unbased C3 quotient to {0,1,2} would have to return a label fixed by every C3 relabeling, but the C3 action on the label set is free, so no invariant singleton exists; only the full orbit is invariant.  _(class `C`)_
+- **chain closes:** True — The no-go closes as an exact finite-group obstruction from the supplied premises: the orbit data are unbased, C3 relabeling preserves the granted Koide/selected-line support data, and the C3 action on generation labels has no fixed label. No PDG mass identification or tuned numerical comparator is used in the proof step.
+- **rationale:** The runner directly checks the load-bearing obstruction: rotations preserve Q/unordered ratios, move the largest slot, the label action is free, no fixed singleton exists, only the full orbit is invariant, and based selectors require an extra basepoint. The claim is explicitly bounded as a no-go for unbased selected-line data and does not overclaim retained mass closure or a tau-generation selector.
 - **auditor confidence:** high
 
 ### `charged_lepton_two_higgs_canonical_reduction_note`
