@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:21:14.557560+00:00
+**Generated:** 2026-05-01T23:23:12.316438+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,9 +20,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 70 |
+| **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 1 |
 | bounded | 163 |
 | support | 134 |
 | open | 6 |
@@ -34,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 319 |
+| `audited_clean` | 320 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 494 |
+| `unaudited` | 493 |
 
 | criticality | count |
 |---|---:|
@@ -374,6 +373,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
+| `quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `s3_boundary_link_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `s3_taste_cube_decomposition_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -13195,6 +13195,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The C3 normal form can represent any ordered positive top-normalized up-type ratio triple, while RPSR supplies only one scalar constraint; the exhibited product and middle-gap families preserve that scalar and exact C3 representation while leaving a free ratio parameter, so the two-ratio readout is underdetermined absent a new coefficient/source law and channel assignment.  _(class `A`)_
 - **chain closes:** True — The negative boundary follows by exact finite-dimensional algebra and rank counting from the supplied premises. Granting exact RPSR, exact C3[111], positivity, ordering, and top-scale normalization still leaves a one-parameter family of admissible two-ratio points under any one-scalar identification shown, and C3 represents every member by the inverse eigenvalue map.
 - **rationale:** This is a no-go/boundary theorem, not a positive numerical readout. The runner checks the load-bearing algebra: C3 carrier surjectivity over real triples, two independent ratio coordinates, and residual one-parameter families after imposing the single RPSR scalar. It also checks that forbidden mass inputs, fitted values, CKM inputs, hidden C3 source laws, and channel assignments are not used. The claimed non-closure therefore closes cleanly on its own terms.
+- **auditor confidence:** high
+
+### `quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28`
+
+- **Note:** [`QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md`](../../docs/QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-019de5d9`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For fixed a_u in (0,1), the admissible family R_{p,q}(a_u;y_t)=y_t*(a_u^(p+q),a_u^q,1) with p,q>0 gives y_u/y_c=a_u^p and y_c/y_t=a_u^q, so the same scalar supports a continuum of ordered scale-covariant ratio pairs and does not determine p or q.  _(class `A`)_
+- **chain closes:** True — The no-go closes internally: granting the exact scalar, positivity, ordering, top-scale normalization, and scale covariance, the displayed two-parameter power family is an explicit admissible counterfamily. Since different positive p,q values preserve the premises while changing the two ratios, the ratios are underdetermined unless an additional readout theorem fixes the exponents or equivalent functions.
+- **rationale:** This is a negative boundary theorem, not a retained mass-ratio prediction. The load-bearing step is exact algebra over an admissible continuum and the runner directly checks scalar domain, ordering, scale covariance, distinct ratio outputs, fit-capacity versus prediction, and absence of hidden mass/fitting/top-reuse imports. The conclusion follows even after granting the stated premises.
 - **auditor confidence:** high
 
 ### `quark_strc_observable_principle_note_2026-04-19`
