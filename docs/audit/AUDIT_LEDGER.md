@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:58:28.901672+00:00
+**Generated:** 2026-05-01T20:59:27.928520+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 169 |
-| support | 139 |
+| support | 138 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 939 |
+| ~~audited_conditional~~ | 940 |
 | ~~audited_failed~~ | 83 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 300 |
-| `audited_conditional` | 642 |
+| `audited_conditional` | 643 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 522 |
+| `unaudited` | 521 |
 
 | criticality | count |
 |---|---:|
@@ -934,6 +934,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_time_bilinear_tensor_action_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `s3_time_primitive_chain_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `s3_time_spacetime_tensor_primitive_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `s3_time_tensor_build_memo` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `s3_time_tensorized_schur_primitive_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_time_theta_to_slice_coupling_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_time_transfer_matrix_bridge_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13319,6 +13320,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `ANOMALY_FORCES_TIME_THEOREM.md`
   - `OH_SCHUR_BOUNDARY_ACTION_NOTE.md`
 - **auditor confidence:** high
+
+### `s3_time_tensor_build_memo`
+
+- **Note:** [`S3_TIME_TENSOR_BUILD_MEMO.md`](../../docs/S3_TIME_TENSOR_BUILD_MEMO.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The memo claims the Route-2 tensor carrier K_R and slice backbone are already exact, and that the remaining constructive target is the E-channel readout map entry beta_E/alpha_E rather than another tensor primitive.  _(class `B`)_
+- **chain closes:** False — The routing conclusion is conditional on unregistered upstream theorem blocks and lacks an executable audit surface.
+- **rationale:** Issue: the memo depends on upstream exact carrier, readout-reduction, endpoint-ratio, and time-coupling theorem blocks, but no dependencies or runner are registered for this row. Why this blocks: the claim that the tensor carrier is no longer missing and that beta_E/alpha_E is the smallest remaining primitive cannot be ratified from the memo alone. Repair target: register the cited Route-2 theorem notes as one-hop dependencies and add a structured checker for the readout triple/equivalence and induced time-coupling obstruction. Claim boundary until fixed: the memo is support-level routing guidance for the next Route-2 derivation target.
+- **open / conditional deps cited:**
+  - `Route-2 exact carrier/readout/time theorem notes`
+  - `readout triple equivalence checker`
 
 ### `s3_time_tensor_primitive_prototype_note`
 
