@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:56:48.739902+00:00
+**Generated:** 2026-05-01T11:58:29.873780+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 305 |
+| `audited_clean` | 306 |
 | `audited_conditional` | 591 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 535 |
+| `unaudited` | 534 |
 
 | criticality | count |
 |---|---:|
@@ -359,6 +359,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `qnm_control_hardening_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
 | `qnm_hardening_feasibility_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `quark_bimodule_norm_naturality_theorem_note_2026-04-19` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -12661,6 +12662,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
   - `QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_bimodule_norm_naturality_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Applying affine naturality with b = 0 and t = a gives D_a = a D_1 + (1-a) D_0 = a Id_I, hence U_a = (1-a) Id_I.  _(class `A`)_
+- **chain closes:** True — Given the note's explicitly stated bimodule assumptions, the proof is an algebraic consequence of endpoint normalization and affine naturality on a one-real-dimensional channel. The runner verifies complementarity, endpoints, affine naturality, uniqueness of the normalized kappa profile, and the physical-point BICAC identity.
+- **rationale:** The theorem closes as a conditional structural support result: under the three named assumptions, the normalized affine family is forced to D_a=a Id_I and U_a=(1-a) Id_I. The source explicitly states that NORM naturality is added structure and is no longer load-bearing for Quark closure, so this clean audit does not promote a retained physics derivation. Residual risk is exactly the stated caveat: deriving the naturality assumptions from retained quark-side physics remains open.
 - **auditor confidence:** high
 
 ### `quark_cp_carrier_completion_note_2026-04-18`
