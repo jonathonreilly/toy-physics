@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T22:19:54.947138+00:00
+**Generated:** 2026-05-01T22:21:09.761760+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 56 |
+| **retained_no_go** | 57 |
 | _proposed_retained_ | 1 |
-| _proposed_no_go_ | 17 |
+| _proposed_no_go_ | 16 |
 | bounded | 163 |
 | support | 133 |
 | open | 6 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 304 |
+| `audited_clean` | 305 |
 | `audited_conditional` | 653 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 505 |
+| `unaudited` | 504 |
 
 | criticality | count |
 |---|---:|
@@ -338,6 +338,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | A | - |
+| `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `pmns_c3_character_mode_reduction_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `pmns_corner_transport_active_block_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
 | `pmns_right_conjugacy_invariant_no_go_note` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
@@ -11867,6 +11868,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `Gauss_asymptotic_monopole_readout_and_exterior_observability_additivity_source_charge_theorem_not_registered`
   - `primitive_boundary_Wald_carrier_identification_c_cell_equals_1_over_4_to_1_over_4G_lambda_not_registered_as_audited_clean`
   - `conventional_lP_squared_equals_Gphys_target_definition_external_not_a_CL3_derivation`
+- **auditor confidence:** high
+
+### `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25`
+
+- **Note:** [`PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`](../../docs/PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md)
+- **current_status:** _proposed_no_go_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The one-axiom surface cannot fix an absolute action quantum because amplitudes depend only on S/kappa, and it cannot derive primitive CAR edge statistics because the same rank-four Hilbert block supports CAR and non-CAR semantics under the same Hilbert-flow axioms.  _(class `A`)_
+- **chain closes:** True — The note proves two exact underdeterminations from the stated Hilbert-flow surface: common rescaling leaves phase amplitudes invariant, and rank-four matrix/Hilbert data do not select CAR grading over two-qubit or ququart semantics. With no cited dependencies, those countermodels close the negative boundary claim.
+- **rationale:** The load-bearing step is algebraic underdetermination, not a tuned comparator or a physical bridge import. The runner checks U(1) phase periodicity, S/kappa and H/t rescaling invariance, scalar global-phase shifts, the finite commutator trace obstruction, explicit CAR realization on the rank-four block, explicit non-CAR two-qubit and ququart realizations on the same block, and identical matrix-flow admissibility. Residual risk is only the separate positive route that adds a Clifford/coframe or metrology principle; the note explicitly excludes such added structure from the one-axiom surface being audited.
 - **auditor confidence:** high
 
 ### `pmns_active_four_real_source_from_transport_note`
