@@ -138,14 +138,34 @@ derive the separate scale-stationarity condition `beta_lambda(M_Pl)=0`.  The
 double-criticality selector therefore remains conditional on a new substrate
 scale-stationarity theorem or an explicit new selector premise.
 
+Second follow-up status:
+[YT_SCALE_STATIONARITY_SUBSTRATE_NO_GO_NOTE_2026-05-01.md](YT_SCALE_STATIONARITY_SUBSTRATE_NO_GO_NOTE_2026-05-01.md)
+attacks the narrower route through fixed-lattice symmetries.  It closes that
+route negatively: `Z^3` has no nontrivial continuous dilation automorphism, the
+current lattice Noether theorem supplies translation and `U(1)` currents but
+not a scale current, and the physical-lattice note treats continuum/RG
+families as extra structure.  Thus the missing premise cannot be recovered
+from current same-surface lattice scale symmetry.
+
+Third follow-up status:
+[YT_TRACE_ANOMALY_STATIONARITY_NO_GO_NOTE_2026-05-01.md](YT_TRACE_ANOMALY_STATIONARITY_NO_GO_NOTE_2026-05-01.md)
+tests the trace-anomaly route.  It also closes negatively on the current
+surface: existing trace artifacts are gauge/hypercharge trace catalogues or
+scalar-trace no-gos, the lattice Noether note does not provide a quantum
+energy-momentum trace theorem, and scalar trace zero would not isolate
+`beta_lambda=0` without a new operator-independence/conformal-boundary theorem.
+
 Promising attack frames:
 
 1. boundary-action stationarity of the taste scalar at the Planck surface;
 2. multiple-point / vacuum-degeneracy interpretation of the composite-Higgs
    critical surface;
-3. exact scale-current stationarity at the physical lattice cutoff;
+3. exact scale-current stationarity at the physical lattice cutoff, now closed
+   negatively on the current fixed-lattice symmetry surface;
 4. no-go proof showing `lambda(M_Pl)=0` does not imply `beta_lambda(M_Pl)=0`
    without adding a new selector.
+5. quantum EMT / trace-anomaly stationarity, now closed negatively on the
+   current authority surface unless new conformal-boundary structure is added.
 
 Until that premise is derived, this is a conditional selector and a route
 portfolio upgrade, not a retained-grade theorem.

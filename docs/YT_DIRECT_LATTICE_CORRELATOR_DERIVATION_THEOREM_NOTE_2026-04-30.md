@@ -356,6 +356,24 @@ scale-stationarity selector in the SM RGE bridge, not a consequence of
 the double-criticality route cannot currently be used to claim retained
 closure for PR #230.
 
+Additional physics-loop status:
+[YT_SCALE_STATIONARITY_SUBSTRATE_NO_GO_NOTE_2026-05-01.md](YT_SCALE_STATIONARITY_SUBSTRATE_NO_GO_NOTE_2026-05-01.md)
+then tests whether fixed `Cl(3)/Z^3` lattice symmetries themselves supply the
+missing scale-stationarity theorem.  That route also closes negatively on the
+current surface: `Z^3` has no continuous dilation automorphism, the current
+lattice Noether theorem supplies translation and `U(1)` currents but not a
+scale current, and introducing an RG scale family is extra bridge structure.
+The non-MC criticality route therefore remains conditional on an added Planck
+stationarity selector, not retained closure.
+
+Trace-anomaly follow-up status:
+[YT_TRACE_ANOMALY_STATIONARITY_NO_GO_NOTE_2026-05-01.md](YT_TRACE_ANOMALY_STATIONARITY_NO_GO_NOTE_2026-05-01.md)
+checks whether existing trace/anomaly artifacts can force the same condition.
+They cannot on the current surface: the repo has gauge/hypercharge anomaly
+trace catalogues and scalar-trace gravity no-gos, but no quantum
+energy-momentum trace theorem with operator independence that would isolate
+`beta_lambda(M_Pl)=0`.
+
 A future passing production certificate must supply this budget:
 
 | Component | Required content |
@@ -485,7 +503,9 @@ Safe current claim:
 > non-MC top-mass substrate-pin blocker.  The follow-on structured no-go packet
 > finds no Ward-forbidden non-MC pin in the explored route classes, so the lane
 > is a calibrated readout unless the Ward identity is re-permitted and
-> independently re-audited.
+> independently re-audited.  The separate non-MC Planck criticality reset is
+> numerically promising but remains conditional because the current fixed
+> substrate and trace/anomaly surfaces do not derive `beta_lambda(M_Pl)=0`.
 
 Unsafe current claim:
 

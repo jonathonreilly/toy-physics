@@ -7881,6 +7881,14 @@
       "to": "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01"
     },
     {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "yt_scale_stationarity_substrate_no_go_note_2026-05-01"
+    },
+    {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "yt_trace_anomaly_stationarity_no_go_note_2026-05-01"
+    },
+    {
       "from": "yt_eft_bridge_theorem",
       "to": "yt_zero_import_authority_note"
     },
@@ -8405,6 +8413,14 @@
       "to": "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01"
     },
     {
+      "from": "yt_planck_double_criticality_selector_note_2026-04-30",
+      "to": "yt_scale_stationarity_substrate_no_go_note_2026-05-01"
+    },
+    {
+      "from": "yt_planck_double_criticality_selector_note_2026-04-30",
+      "to": "yt_trace_anomaly_stationarity_no_go_note_2026-05-01"
+    },
+    {
       "from": "yt_right_handed_species_dependence_note_2026-04-18",
       "to": "one_generation_matter_closure_note"
     },
@@ -8435,6 +8451,22 @@
     {
       "from": "yt_right_handed_species_dependence_note_2026-04-18",
       "to": "yukawa_color_projection_theorem"
+    },
+    {
+      "from": "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
+      "to": "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01"
+    },
+    {
+      "from": "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
+      "from": "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
+      "to": "physical_lattice_necessity_note"
+    },
+    {
+      "from": "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
+      "to": "minimal_axioms_2026-04-11"
     },
     {
       "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
@@ -18397,7 +18429,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T01:01:15.074125+00:00",
+  "generated_at": "2026-05-01T01:32:07.720182+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39306,9 +39338,11 @@
         "graph_first_su3_integration_note",
         "minimal_axioms_2026-04-11",
         "yt_planck_double_criticality_selector_note_2026-04-30",
-        "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01"
+        "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01",
+        "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
+        "yt_trace_anomaly_stationarity_no_go_note_2026-05-01"
       ],
-      "note_hash": "248ff11e920ac68503ed883a1d7da90b960595b5535a46cef61e08cff3853859",
+      "note_hash": "cf86d260afd723dd1765542287fa13c93d6d63212304e50d1187edfbe65a69a9",
       "path": "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_direct_lattice_correlator.py",
       "title": "Direct Lattice-Correlator Top-Yukawa Measurement Gate"
@@ -39876,9 +39910,11 @@
       "current_status": "support",
       "current_status_raw": "conditional-support / open selector route",
       "deps": [
-        "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01"
+        "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01",
+        "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
+        "yt_trace_anomaly_stationarity_no_go_note_2026-05-01"
       ],
-      "note_hash": "5ff076466d4419cedaed05cd980a445e43c160dc26d9c50f69799c316d4dccdb",
+      "note_hash": "03117e39106e49cbbced2f237e2a9f2cfd1dd060187bce79017f335d46dba2b5",
       "path": "docs/YT_PLANCK_DOUBLE_CRITICALITY_SELECTOR_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_planck_double_criticality_selector.py",
       "title": "YT Planck Double-Criticality Selector Note"
@@ -39931,6 +39967,21 @@
       "path": "docs/YT_RIGHT_HANDED_SPECIES_DEPENDENCE_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_right_handed_species_dependence.py",
       "title": "Right-Handed Sector Species-Dependence Retention Analysis Note (Candidate Class #4)"
+    },
+    "yt_scale_stationarity_substrate_no_go_note_2026-05-01": {
+      "claim_id": "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact-negative-boundary on the current substrate surface",
+      "deps": [
+        "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01",
+        "axiom_first_lattice_noether_theorem_note_2026-04-29",
+        "physical_lattice_necessity_note",
+        "minimal_axioms_2026-04-11"
+      ],
+      "note_hash": "d8e57672fcf02e98ef3a2106091c823549dbc86b38511486cbd2adfa90039ee8",
+      "path": "docs/YT_SCALE_STATIONARITY_SUBSTRATE_NO_GO_NOTE_2026-05-01.md",
+      "runner_path": "scripts/frontier_yt_scale_stationarity_substrate_no_go.py",
+      "title": "YT Scale-Stationarity Substrate No-Go Note"
     },
     "yt_schur_stability_gap_note": {
       "claim_id": "yt_schur_stability_gap_note",
@@ -40031,6 +40082,16 @@
       "path": "docs/YT_TOP_MASS_WARD_DECOMP_NO_GO_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py",
       "title": "Top-Sector Ward-Decomposition Pass: Bounded No-Go for Audit-Clean Yukawa Pin"
+    },
+    "yt_trace_anomaly_stationarity_no_go_note_2026-05-01": {
+      "claim_id": "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact-negative-boundary on the current substrate surface",
+      "deps": [],
+      "note_hash": "c88161e06b7893f64626db2feaedf2a5cc81d39f487d4662a2ea790a94eda438",
+      "path": "docs/YT_TRACE_ANOMALY_STATIONARITY_NO_GO_NOTE_2026-05-01.md",
+      "runner_path": "scripts/frontier_yt_trace_anomaly_stationarity_no_go.py",
+      "title": "YT Trace-Anomaly Stationarity No-Go Note"
     },
     "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17": {
       "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
@@ -41322,6 +41383,7 @@
     "yt_top_mass_ward_decomp_claim_status_certificate_2026-04-30",
     "yt_top_mass_ward_decomp_handoff_2026-04-30",
     "yt_top_mass_ward_decomp_no_go_note_2026-04-30",
+    "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
     "yt_ward_identity_derivation_theorem",
     "yt_zero_import_chain_note",
     "yukawa_color_projection_theorem",
@@ -41329,17 +41391,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4599,
-    "leaf_count": 729,
-    "node_count": 1666,
-    "root_count": 1186,
-    "runners_with_path": 1230,
+    "edge_count": 4607,
+    "leaf_count": 728,
+    "node_count": 1668,
+    "root_count": 1187,
+    "runners_with_path": 1232,
     "status_counts": {
       "bounded": 447,
       "open": 48,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 378,
+      "support": 380,
       "unknown": 419
     }
   }

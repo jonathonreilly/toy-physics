@@ -1,0 +1,38 @@
+slug: yt-pr230-retained-closure-12h-20260501
+goal: "Run PR #230 physics-loop campaign for retained closure or strongest honest blocker."
+mode: campaign
+runtime_requested: "12h"
+target_status: "best-honest-status; full retained closure only if all imports close"
+current_branch: "claude/yt-direct-lattice-correlator-2026-04-30"
+pr: 230
+actual_current_surface_status: "open / no full retained closure"
+conditional_surface_status: "Planck double-criticality remains conditional if beta_lambda(M_Pl)=0 is adopted or later derived."
+hypothetical_axiom_status: "Planck scale-stationarity selector beta_lambda(M_Pl)=0."
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "Open import remains: beta_lambda(M_Pl)=0 is not derived; direct correlator strict production data are absent."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+active_route: "fixed-lattice scale-stationarity no-go"
+active_hard_residual: "derive beta_lambda(M_Pl)=0 from Cl(3)/Z^3 without adding a stationarity axiom"
+files_touched:
+  - "scripts/frontier_yt_scale_stationarity_substrate_no_go.py"
+  - "docs/YT_SCALE_STATIONARITY_SUBSTRATE_NO_GO_NOTE_2026-05-01.md"
+  - "outputs/yt_scale_stationarity_substrate_no_go_2026-05-01.json"
+  - "scripts/frontier_yt_trace_anomaly_stationarity_no_go.py"
+  - "docs/YT_TRACE_ANOMALY_STATIONARITY_NO_GO_NOTE_2026-05-01.md"
+  - "outputs/yt_trace_anomaly_stationarity_no_go_2026-05-01.json"
+  - "docs/YT_PLANCK_DOUBLE_CRITICALITY_SELECTOR_NOTE_2026-04-30.md"
+  - "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md"
+open_imports:
+  - "production three-volume direct-correlator data, if the MC route is used"
+  - "independent top mass parameter pin, if the direct-correlator route is to be derivational"
+  - "new scale-current/trace-stationarity theorem, if Planck double-criticality is to close non-MC"
+no_go_routes:
+  - "lambda(M_Pl)=0 implies beta_lambda(M_Pl)=0"
+  - "finite source response implies SM RG tangent"
+  - "fixed Z^3 lattice automorphism supplies continuous dilation"
+  - "current lattice Noether theorem supplies scale current"
+  - "current trace/anomaly surfaces supply beta_lambda(M_Pl)=0"
+next_exact_action: "Probe multiple-point/Planck-stationarity as an explicit selector consequence map; otherwise mark PR #230 as honest open/conditional."
+stop_condition: "12h budget exhausted, user interruption, or genuine closure with no open imports."

@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-01T01:01:28.610481+00:00",
+  "computed_at": "2026-05-01T01:32:16.168282+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -23,9 +23,9 @@
       "publication.ci3_z3.derivation_atlas"
     ]
   ],
-  "cycles_detected": 60,
+  "cycles_detected": 61,
   "effective_status_counts": {
-    "audited_conditional": 736,
+    "audited_conditional": 738,
     "audited_decoration": 5,
     "audited_failed": 122,
     "audited_numerical_match": 15,
