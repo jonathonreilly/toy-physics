@@ -1,6 +1,6 @@
 # Lane 2 Artifact Plan
 
-**Updated:** 2026-05-01T11:40:23Z
+**Updated:** 2026-05-01T11:47:19Z
 
 ## Block 01 Artifact
 
@@ -135,6 +135,50 @@ Verification results:
 
 - `PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py`
   -> `PASS=43 FAIL=0`
+
+## Block 01 Massive NR Limit Artifact
+
+Create a paired note and runner:
+
+- note: `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_MASSIVE_NR_LIMIT_BRIDGE_NOTE_2026-05-01.md`
+- runner: `scripts/frontier_atomic_massive_nr_limit_bridge.py`
+- log: `.claude/science/physics-loops/lane2-atomic-scale-20260428/logs/atomic_massive_nr_limit_bridge_2026-05-01.log`
+
+**Status:** complete. Runner and note created; log captured.
+
+## Massive NR Limit Claims Tested
+
+1. Massive relativistic dispersion plus rest-energy subtraction gives the
+   nonrelativistic kinetic prefactor `p^2/(2m)`.
+2. The same result is inherited by the massive lattice dispersion in the
+   small-momentum/small-spacing regime.
+3. The kinetic prefactor remains mass-gated; Lorentz/dispersion support does
+   not pick retained `m_e` or reduced mass.
+4. Lane 2 remains open without retained `alpha(0)` and a retained Coulomb
+   potential/coupling in the same low-energy sector.
+
+## Massive NR Limit Verification
+
+- `PYTHONPATH=scripts python3 scripts/frontier_atomic_massive_nr_limit_bridge.py`
+  -> `SUMMARY: PASS=22 FAIL=0`
+- `python3 -m py_compile scripts/frontier_atomic_massive_nr_limit_bridge.py`
+  -> pass
+- prior guardrails passed after the artifact:
+  dependency firewall `PASS=12 FAIL=0`, QED firewall `PASS=17 FAIL=0`,
+  alpha(0) threshold-moment `PASS=25 FAIL=0`, Planck-unit firewall
+  `PASS=31 FAIL=0`, fan-out `PASS=43 FAIL=0`.
+
+## Massive NR Limit Review-Loop Emulation
+
+Primary hostile-review question: does the artifact use the electron mass or
+Rydberg energy to prove the kinetic prefactor? Disposition: no. The theorem
+checks use synthetic masses and momenta before the electron-mass comparator is
+printed.
+
+Second hostile-review question: does Lorentz support close the full atomic
+Schrodinger/Coulomb limit? Disposition: no. The result only supplies
+conditional kinetic support; retained mass, retained `alpha(0)`, and retained
+Coulomb coupling remain open.
 
 ## Block 01 Alpha(0) Threshold-Moment Artifact
 

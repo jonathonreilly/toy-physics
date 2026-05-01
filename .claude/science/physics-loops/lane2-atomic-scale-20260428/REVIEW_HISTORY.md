@@ -1,6 +1,6 @@
 # Lane 2 Review History
 
-**Updated:** 2026-05-01T11:40:23Z
+**Updated:** 2026-05-01T11:47:19Z
 
 ## Pre-Artifact Review Baseline
 
@@ -127,6 +127,36 @@ python3 -m py_compile scripts/frontier_atomic_planck_unit_firewall.py -> pass
 PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0
 PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> PASS=17 FAIL=0
 PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py -> PASS=42 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py -> PASS=43 FAIL=0
+```
+
+## Block 01 Massive NR Limit Review-Loop Emulation
+
+- **Scope:** `scripts/frontier_atomic_massive_nr_limit_bridge.py` and
+  `notes/ATOMIC_MASSIVE_NR_LIMIT_BRIDGE_NOTE_2026-05-01.md`.
+- **Finding 1:** The nonrelativistic expansion checks use synthetic masses
+  and momenta before the electron-mass comparator appears.
+- **Disposition 1:** pass; no observed atomic mass or Rydberg target is used
+  as a proof input.
+- **Finding 2:** The artifact could be overread as a derivation of the full
+  physical-unit Schrodinger/Coulomb limit. The note and runner restrict the
+  claim to the kinetic prefactor conditional on a retained massive
+  one-particle sector.
+- **Disposition 2:** pass; retained `m_e`/reduced mass, `alpha(0)`, and the
+  Coulomb coupling remain open.
+- **Finding 3:** The Lorentz support packet is used only as admitted
+  dispersion support. No Lane 6 charged-lepton closure work is performed.
+- **Disposition 3:** pass.
+
+Verification recorded:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_atomic_massive_nr_limit_bridge.py -> SUMMARY: PASS=22 FAIL=0
+python3 -m py_compile scripts/frontier_atomic_massive_nr_limit_bridge.py -> pass
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> PASS=17 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_alpha0_threshold_moment_no_go.py -> SUMMARY: PASS=25 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_planck_unit_firewall.py -> SUMMARY: PASS=31 FAIL=0
 PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py -> PASS=43 FAIL=0
 ```
 

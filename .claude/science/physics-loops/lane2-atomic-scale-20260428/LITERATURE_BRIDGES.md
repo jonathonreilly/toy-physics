@@ -1,6 +1,6 @@
 # Lane 2 Literature Bridges
 
-**Updated:** 2026-05-01T11:40:23Z
+**Updated:** 2026-05-01T11:47:19Z
 
 No new external literature was imported at loop start.
 
@@ -93,3 +93,19 @@ The comparator values `1/alpha(0) = 137.035999084` and `M_Z = 91.1876 GeV`
 are used only to compute the hidden effective threshold moment that would be
 required to fit the low-energy coupling. They are not used as framework-derived
 inputs.
+
+## Block 01 Massive NR Limit Usage
+
+The massive NR kinetic bridge uses the standard relativistic dispersion
+expansion
+
+```text
+E^2 = m^2 + p^2,
+E - m = p^2/(2m) + O(p^4/m^3).
+```
+
+This is recorded as admitted standard bridge context connected to the repo's
+existing Lorentz/dispersion support packet. It introduces no new external
+constants. The electron mass value `m_e c^2 = 510998.95000 eV` appears only as
+a comparator to show the scale of `1/(2m_e)`; it is not treated as retained
+Lane 2 output.

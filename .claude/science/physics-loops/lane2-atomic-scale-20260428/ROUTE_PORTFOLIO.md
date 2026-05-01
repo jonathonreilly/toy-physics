@@ -1,6 +1,6 @@
 # Lane 2 Route Portfolio
 
-**Updated:** 2026-05-01T11:40:23Z
+**Updated:** 2026-05-01T11:47:19Z
 **Loop:** `lane2-atomic-scale-20260428`  
 **Selection policy:** choose the route most likely to move claim state without touching Lane 4 or Lane 6.
 
@@ -152,7 +152,35 @@ future retained `alpha(0)` route.
 
 Next candidate routes:
 
-1. checkpoint and package Block 01 for review if no further Lane 2 route
+1. framework-native kinetic-limit check from retained Lorentz/dispersion
+   surfaces;
+2. checkpoint and package Block 01 for review if no further Lane 2 route
    passes the dramatic-step gate;
-2. no Lane 4/Lane 6 pivot; Lane 5 only if the supervisor decides Lane 2 has
+3. no Lane 4/Lane 6 pivot; Lane 5 only if the supervisor decides Lane 2 has
    genuinely stopped before deadline and the pivot remains independent.
+
+## Block 01 Massive NR Limit Result
+
+Completed route: massive nonrelativistic kinetic-limit bridge.
+
+The route tested whether retained Lorentz/dispersion support can close the
+physical-unit Schrodinger kinetic prefactor. It gives an exact conditional
+bridge:
+
+```text
+E^2 = m^2 + p^2
+E - m = p^2/(2m) + O(p^4/m^3).
+```
+
+This is useful because it isolates one part of the physical-unit
+Schrodinger-limit gate. It is not retained atomic closure. The prefactor is
+mass-gated, and the current Lane 2 surface still lacks retained
+electron/reduced mass, retained `alpha(0)`, and a retained low-energy Coulomb
+potential/coupling on the same surface.
+
+Next candidate routes:
+
+1. endpoint package and review PR if checkpoint review agrees all
+   non-overlapping Lane 2 routes are blocked after the deep-work/fan-out rule;
+2. dependency hardening only if a new theorem prerequisite can be made
+   executable without Lane 4/Lane 6 overlap.

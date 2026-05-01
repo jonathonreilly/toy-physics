@@ -1,6 +1,6 @@
 # Lane 2 Physics Loop Handoff
 
-**Updated:** 2026-05-01T11:42:45Z
+**Updated:** 2026-05-01T11:47:19Z
 **Loop slug:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Branch:** `physics-loop/lane2-atomic-scale-block01-20260428`  
@@ -8,10 +8,10 @@
 
 ## Current Status
 
-Block 01 has five coherent artifacts. Lane 2 remains open/scaffold-only:
+Block 01 has six coherent artifacts. Lane 2 remains open/scaffold-only:
 the existing hydrogen/helium harness succeeds with textbook inputs, but the
 repo has not retained `m_e`, `alpha(0)`, threshold-resolved QED transport, or
-a framework-native physical-unit nonrelativistic Coulomb/Schrodinger limit.
+a framework-native physical-unit nonrelativistic Schrodinger/Coulomb sector.
 
 Loop 4 added a fourth coherent artifact: a Planck-unit map firewall. It proves
 that the current Planck/source-unit package is not an atomic unit-map closure:
@@ -24,6 +24,13 @@ no-go. It reduces the QED-running gate to the exact one-loop prerequisite
 `T_EM = sum_f N_c Q_f^2 log(M_Z/m_f^eff)` plus finite/hadronic matching. The
 repo retains the weights and `b_QED=32/3`; it does not retain the threshold
 moment.
+
+Loop 4 then added a sixth coherent artifact: a massive nonrelativistic kinetic
+bridge. It proves that retained Lorentz/dispersion support gives
+`E - m = p^2/(2m) + O(p^4/m^3)` only after a massive one-particle sector and
+mass `m` are supplied. This sharpens the kinetic side of the Schrodinger gate
+but does not derive `m_e`, reduced mass, `alpha(0)`, the Coulomb sector, or the
+Rydberg scale.
 
 The default automation lock path is unavailable for this SSH user:
 
@@ -298,11 +305,64 @@ Artifact commit/push checkpoint:
 origin/physics-loop/lane2-atomic-scale-block01-20260428
 ```
 
+## Massive NR Limit Route
+
+Completed route: massive nonrelativistic kinetic-limit bridge.
+
+Question:
+
+```text
+Does retained Lorentz/dispersion support close the physical-unit Schrodinger
+kinetic prefactor for atomic Lane 2?
+```
+
+Honest movement achieved: exact conditional kinetic support plus a mass-gate
+boundary. This is not retained Rydberg closure.
+
+Artifacts:
+
+- `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_MASSIVE_NR_LIMIT_BRIDGE_NOTE_2026-05-01.md`
+- `scripts/frontier_atomic_massive_nr_limit_bridge.py`
+- `.claude/science/physics-loops/lane2-atomic-scale-20260428/logs/atomic_massive_nr_limit_bridge_2026-05-01.log`
+
+Key result:
+
+```text
+E^2 = m^2 + p^2
+E - m = p^2/(2m) + O(p^4/m^3)
+```
+
+The kinetic prefactor is fixed once `m` is fixed. Current Lane 2 does not
+retain the electron/reduced mass or the low-energy Coulomb coupling on the
+same surface, so the route cannot close the atomic scale.
+
+Verification:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_atomic_massive_nr_limit_bridge.py -> SUMMARY: PASS=22 FAIL=0
+python3 -m py_compile scripts/frontier_atomic_massive_nr_limit_bridge.py -> pass
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> PASS=17 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_alpha0_threshold_moment_no_go.py -> SUMMARY: PASS=25 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_planck_unit_firewall.py -> SUMMARY: PASS=31 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_gate_factorization_fanout.py -> PASS=43 FAIL=0
+```
+
+Review-loop emulation found no blocker. Guardrail: the electron mass appears
+only as a comparator; no Lane 6 charged-lepton mass work was performed.
+
+Artifact commit/push checkpoint:
+
+```text
+pending commit/push
+```
+
 ## Next Exact Action
 
-The next science action for the continuing supervisor is route selection across:
+The next science action for the continuing supervisor is:
 
-1. endpoint packaging if no new non-overlapping route passes the dramatic-step
-   gate after this checkpoint;
-2. dependency hardening only if it creates a reviewable theorem prerequisite,
-   not retained Rydberg promotion.
+1. commit and push the massive NR kinetic bridge;
+2. perform endpoint packaging if checkpoint review agrees all viable
+   non-overlapping Lane 2 routes are blocked after the deep-work/fan-out rule;
+3. otherwise continue only if a new reviewable theorem prerequisite appears
+   without Lane 4/Lane 6 overlap.

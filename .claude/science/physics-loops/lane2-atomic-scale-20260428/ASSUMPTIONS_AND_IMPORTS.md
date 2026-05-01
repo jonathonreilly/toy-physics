@@ -1,6 +1,6 @@
 # Lane 2 Assumptions And Imports
 
-**Updated:** 2026-05-01T11:40:23Z
+**Updated:** 2026-05-01T11:47:19Z
 **Loop:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Claim boundary:** open/scaffold-only unless a later artifact retires the listed blockers.
@@ -24,6 +24,8 @@
 | Planck/source-unit lattice anchor | Possible fixed physical-lattice length context for the atomic coordinate | package pin / conditional Planck support context | `docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md`, `docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md`, `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_PLANCK_UNIT_MAP_FIREWALL_NOTE_2026-05-01.md` | yes if used in unit-map route | not sufficient alone | derive the atomic effective coupling map on the same surface | length/source context only; not an atomic Rydberg closure |
 | `g_atomic = 2 mu a_lat Z alpha(0)` | Dimensionless coupling needed to put the atomic Coulomb problem on a fixed lattice length anchor | exact conditional bridge | `scripts/frontier_atomic_planck_unit_firewall.py` | yes | yes | retain `mu`, retain `alpha(0)`, and derive the low-energy kinetic/coupling map | open; Planck unit does not determine it |
 | `T_EM = sum_f N_c Q_f^2 log(M_Z/m_f^eff)` | Weighted threshold moment needed for one-loop `alpha_EM(M_Z) -> alpha(0)` transport | exact reduction / exposed prerequisite | `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_ALPHA0_THRESHOLD_MOMENT_NO_GO_NOTE_2026-05-01.md`, `scripts/frontier_atomic_alpha0_threshold_moment_no_go.py` | yes | yes for `alpha(0)` route | derive charged-threshold and hadronic matching moment, or prove target-status insensitivity | open; charges/counts fix weights, not logs or matching |
+| Massive relativistic dispersion `E^2 = m^2 + p^2` | Conditional bridge to the Schrodinger kinetic prefactor after rest-energy subtraction | exact conditional support bridge | `docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md`, `docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md`, `scripts/frontier_atomic_massive_nr_limit_bridge.py` | yes for kinetic-limit route | not sufficient alone | retain the low-energy one-particle mass sector and Coulomb coupling on the same surface | usable bridge; atomic prefactor remains mass-gated |
+| Schrodinger kinetic prefactor `1/(2m)` | Physical-unit kinetic normalization in the atomic Hamiltonian | exact conditional consequence / open retained input | `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_MASSIVE_NR_LIMIT_BRIDGE_NOTE_2026-05-01.md` | yes | yes | derive retained `m_e`/reduced mass without Lane 6 collision, or keep as admitted bridge/comparator | open; Lorentz support does not pick electron mass |
 
 ## Immediate Audit Result
 
@@ -105,3 +107,19 @@ The retained charge/count surface fixes `sum_f N_c Q_f^2 = 8` and therefore
 `b_QED = 32/3`; it does not fix `T_EM` or `Delta_match`. The exact open
 import for any future Lane 2 `alpha(0)` route is now a threshold/matching
 moment theorem or an exact insensitivity theorem.
+
+## Block 01 Massive NR Limit Update
+
+`scripts/frontier_atomic_massive_nr_limit_bridge.py` proves the conditional
+kinetic bridge from the retained Lorentz/dispersion support surface:
+
+```text
+E^2 = m^2 + p^2
+E - m = p^2/(2m) + O(p^4/m^3).
+```
+
+This sharpens the physical-unit Schrodinger-limit gate by isolating the
+kinetic prefactor. It does not retire the mass gate: different retained masses
+produce different kinetic prefactors, and Lane 2 still lacks retained
+electron/reduced mass, retained `alpha(0)`, and a retained Coulomb coupling in
+the same low-energy sector.
