@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T22:55:34.682724+00:00
+**Generated:** 2026-05-01T22:58:14.288173+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 10 |
 | bounded | 163 |
-| support | 135 |
+| support | 134 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 957 |
+| ~~audited_conditional~~ | 958 |
 | ~~audited_failed~~ | 85 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 309 |
-| `audited_conditional` | 657 |
+| `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 505 |
+| `unaudited` | 504 |
 
 | criticality | count |
 |---|---:|
@@ -431,6 +431,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `asymmetry_persistence_mass_window_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `asymmetry_persistence_pilot_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `audit_dm_runner_stale_path_cleanup_note_2026-05-01` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `audited_symmetry_synthesis_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_change_proposal_2026-04-10` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1698,6 +1699,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The cleanup removed stale read() calls from eight DM-cluster runners, each affected runner now passes, and no load-bearing physics check was removed.  _(class `B`)_
 - **chain closes:** False — The note has no registered primary runner, so the audit packet cannot verify the eight-runner pass matrix or the claim that only stale-path checks were removed.
 - **rationale:** Issue: the load-bearing hygiene claim is a multi-file/multi-runner verification, but this row has no registered primary runner or dependency artifact that executes the stated 69 PASS / 0 FAIL matrix. Why this blocks: a hostile auditor cannot certify from the note alone that no load-bearing physics check was removed or that all listed runners pass in the restricted audit environment. Repair target: add a compact registered hygiene runner that checks the stale paths are absent, executes or samples the eight affected runners, and asserts the no-new-physics boundary. Claim boundary until fixed: safe as a support note documenting intended stale-path cleanup; not audit-clean proof that the cleanup is complete and physics-neutral.
+- **auditor confidence:** high
+
+### `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01`
+
+- **Note:** [`AUDIT_LHF_LEVERAGE_MAP_FOR_RETAINED_PROMOTION_NOTE_2026-05-01.md`](../../docs/AUDIT_LHF_LEVERAGE_MAP_FOR_RETAINED_PROMOTION_NOTE_2026-05-01.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note ranks critical/high audit blockers by downstream impact and separates runner stale-path bugs from substantive science blockers using 2026-05-01 audit-ledger generation and PR #246/#247 outcomes.  _(class `B`)_
+- **chain closes:** False — The registered runner verifies a right-handed-sector physics script, not the audit-leverage map. The note imports audit ledger, PR, and campaign state without declaring those generated artifacts as dependencies or providing a dedicated verifier.
+- **rationale:** Issue: the registered runner is not a verifier for this audit-strategy note, and the load-bearing ranking imports audit ledger/PR state not in one-hop dependencies. Why this blocks: a clean audit cannot certify the leverage table or PR fix status from an unrelated right-handed-sector runner. Repair target: register a compact audit-strategy runner that consumes the exact ledger/queue JSON fields and PR-fix artifacts to regenerate the cohort tables, or declare generated audit data as dependencies. Claim boundary until fixed: safe as a support/navigation memo, not audit-clean leverage-map synthesis.
+- **open / conditional deps cited:**
+  - `audit/data/audit_ledger.json`
+  - `audit/AUDIT_QUEUE.md`
 - **auditor confidence:** high
 
 ### `audited_symmetry_synthesis_note`
