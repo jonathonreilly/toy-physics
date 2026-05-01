@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 280,
+    "leaf": 279,
     "medium": 133
   },
-  "generated_at": "2026-05-01T06:00:32.580112+00:00",
+  "generated_at": "2026-05-01T06:01:40.996396+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9924,23 +9924,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "lattice_family_validation_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.822,
-      "note_path": "docs/LATTICE_FAMILY_VALIDATION_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/lattice_family_validation.py",
-      "transitive_descendants": 4
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "lattice_field_strength_unification_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -15141,6 +15124,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 220,
-  "total_pending": 616
+  "ready_count": 219,
+  "total_pending": 615
 }

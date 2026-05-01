@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:00:32.866558+00:00
+**Generated:** 2026-05-01T06:01:41.253459+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 252 |
+| `audited_clean` | 253 |
 | `audited_conditional` | 570 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 616 |
+| `unaudited` | 615 |
 
 | criticality | count |
 |---|---:|
@@ -290,6 +290,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_nyquist_diffraction_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_3d_tapered_refinement_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `lattice_family_validation_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `lattice_nn_mass_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_weak_field_mass_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_weak_field_purity_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -9819,6 +9820,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** On the ordered 2D no-barrier lattice with N=40 and half-width 20, the detector-centroid magnitude follows |delta| ~= 23.5071*b^(-1.052) with R^2=0.9850 on the far-field window b>=7, while the k=0 control is zero.  _(class `C`)_
 - **chain closes:** True — The named no-barrier runner and archived log reproduce the saved b rows, the k=0 zero control, and the far-field power-law fit. The note explicitly limits the claim to |delta| on the no-barrier ordered-lattice harness and excludes a signed attractive deflection law, the barrier geometry, and the mirror/random-connected family.
 - **rationale:** The finite ordered-lattice distance-magnitude claim closes on its own terms: the live runner exactly reproduces the seven b rows, k=0 gives +0.000000e+00, and the b>=7 fit is |delta| ~= 23.5071*b^(-1.052) with R^2=0.9850. This clean audit ratifies only the N=40, half-width-20, no-barrier ordered-lattice magnitude law and its stated scope limits; it does not ratify a signed attractive law, a barrier-harness law, a continuum theorem, or a rescue of the random-connected mirror-family distance claim.
+- **auditor confidence:** high
+
+### `lattice_family_validation_note`
+
+- **Note:** [`LATTICE_FAMILY_VALIDATION_NOTE.md`](../../docs/LATTICE_FAMILY_VALIDATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The ordered 2D lattice family supports a same-family two-harness bridge: a Born-clean barrier coexistence card and a no-barrier far-field |delta| ~= 23.5071 * b^(-1.052), R^2 = 0.9850 distance-law magnitude fit.  _(class `C`)_
+- **chain closes:** True — The registered runner recomputes the barrier metrics and no-barrier fit exactly as quoted, including Born 2.98e-16, k=0 control zero, gravity sign, and the b >= 7 fit. The note explicitly avoids claiming one-card unification, mass law, large-N purity scaling, or a promoted theorem.
+- **rationale:** The scoped support claim closes: the runner independently rebuilds the regular 2D lattice family, emits the barrier joint-card numbers and the no-barrier distance-law fit, and those outputs match the note. Residual risk is already in the source boundary: this is not a same-slit attractive-gravity card, retained mass-law card, large-N purity scaling result, or all-properties one-family unification.
 - **auditor confidence:** high
 
 ### `lattice_gravity_resolution_note`
