@@ -347,6 +347,15 @@ it is not derived, it remains conditional support and the direct-correlator
 lane remains a calibrated readout until production data and an independent
 mass-parameter pin are supplied.
 
+Follow-up physics-loop status:
+[YT_BETA_LAMBDA_PLANCK_STATIONARITY_NO_GO_NOTE_2026-05-01.md](YT_BETA_LAMBDA_PLANCK_STATIONARITY_NO_GO_NOTE_2026-05-01.md)
+proves that the current substrate surface does not derive
+`beta_lambda(M_Pl)=0`.  The condition is a codimension-one
+scale-stationarity selector in the SM RGE bridge, not a consequence of
+`lambda(M_Pl)=0`, finite source response, or taste-scalar isotropy.  Therefore
+the double-criticality route cannot currently be used to claim retained
+closure for PR #230.
+
 A future passing production certificate must supply this budget:
 
 | Component | Required content |

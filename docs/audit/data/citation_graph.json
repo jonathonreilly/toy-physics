@@ -7681,6 +7681,14 @@
       "to": "yt_bridge_uv_class_uniqueness_note"
     },
     {
+      "from": "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01",
+      "to": "yt_planck_double_criticality_selector_note_2026-04-30"
+    },
+    {
+      "from": "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
       "from": "yt_bottom_yukawa_retention_analysis_note_2026-04-18",
       "to": "yt_ward_identity_derivation_theorem"
     },
@@ -7867,6 +7875,10 @@
     {
       "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
       "to": "yt_planck_double_criticality_selector_note_2026-04-30"
+    },
+    {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01"
     },
     {
       "from": "yt_eft_bridge_theorem",
@@ -8387,6 +8399,10 @@
     {
       "from": "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17",
       "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
+    },
+    {
+      "from": "yt_planck_double_criticality_selector_note_2026-04-30",
+      "to": "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01"
     },
     {
       "from": "yt_right_handed_species_dependence_note_2026-04-18",
@@ -18381,7 +18397,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T00:52:05.885708+00:00",
+  "generated_at": "2026-05-01T01:01:15.074125+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39039,6 +39055,19 @@
       "runner_path": null,
       "title": "Axiom-First Microscopic Bridge Theorem"
     },
+    "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01": {
+      "claim_id": "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact-negative-boundary on the current substrate surface",
+      "deps": [
+        "yt_planck_double_criticality_selector_note_2026-04-30",
+        "observable_principle_from_axiom_note"
+      ],
+      "note_hash": "d7dfa760211a163061fd9bc3cfec252bdc9c9c71b19545c2af51cfca4d344dc9",
+      "path": "docs/YT_BETA_LAMBDA_PLANCK_STATIONARITY_NO_GO_NOTE_2026-05-01.md",
+      "runner_path": "scripts/frontier_yt_beta_lambda_planck_stationarity_no_go.py",
+      "title": "YT Beta-Lambda Planck Stationarity No-Go Note"
+    },
     "yt_bottom_yukawa_retention_analysis_note_2026-04-18": {
       "claim_id": "yt_bottom_yukawa_retention_analysis_note_2026-04-18",
       "current_status": "unknown",
@@ -39276,9 +39305,10 @@
         "yt_top_mass_substrate_pin_no_go_note_2026-04-30",
         "graph_first_su3_integration_note",
         "minimal_axioms_2026-04-11",
-        "yt_planck_double_criticality_selector_note_2026-04-30"
+        "yt_planck_double_criticality_selector_note_2026-04-30",
+        "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01"
       ],
-      "note_hash": "d307c5edbc49ce8c38efe4d1091ca414f0ffe54d6d1f59f67d85b222d5dd7875",
+      "note_hash": "248ff11e920ac68503ed883a1d7da90b960595b5535a46cef61e08cff3853859",
       "path": "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_direct_lattice_correlator.py",
       "title": "Direct Lattice-Correlator Top-Yukawa Measurement Gate"
@@ -39845,8 +39875,10 @@
       "claim_id": "yt_planck_double_criticality_selector_note_2026-04-30",
       "current_status": "support",
       "current_status_raw": "conditional-support / open selector route",
-      "deps": [],
-      "note_hash": "3926667d90ba2624e4e36a361e6f0f0fd474651542d1306441d18d82488f5ae5",
+      "deps": [
+        "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01"
+      ],
+      "note_hash": "5ff076466d4419cedaed05cd980a445e43c160dc26d9c50f69799c316d4dccdb",
       "path": "docs/YT_PLANCK_DOUBLE_CRITICALITY_SELECTOR_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_planck_double_criticality_selector.py",
       "title": "YT Planck Double-Criticality Selector Note"
@@ -41277,7 +41309,6 @@
     "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
     "yt_p2_taste_staircase_transport_note_2026-04-17",
     "yt_p2_v_matching_theorem_note_2026-04-17",
-    "yt_planck_double_criticality_selector_note_2026-04-30",
     "yt_qfp_insensitivity_support_note",
     "yt_retention_landing_readiness_2026-04-18",
     "yt_retention_master_manifest_2026-04-18",
@@ -41298,17 +41329,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4595,
+    "edge_count": 4599,
     "leaf_count": 729,
-    "node_count": 1665,
-    "root_count": 1187,
-    "runners_with_path": 1229,
+    "node_count": 1666,
+    "root_count": 1186,
+    "runners_with_path": 1230,
     "status_counts": {
       "bounded": 447,
       "open": 48,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 377,
+      "support": 378,
       "unknown": 419
     }
   }

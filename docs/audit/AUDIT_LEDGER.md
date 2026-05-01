@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T00:52:13.864376+00:00
+**Generated:** 2026-05-01T01:01:29.164656+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -28,7 +28,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 735 |
+| ~~audited_conditional~~ | 736 |
 | ~~audited_failed~~ | 122 |
 
 | audit_status | count |
@@ -39,24 +39,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 822 |
+| `unaudited` | 823 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 73 |
 | `high` | 335 |
-| `medium` | 381 |
-| `leaf` | 779 |
+| `medium` | 383 |
+| `leaf` | 778 |
 
 - **Proposed claims demoted by upstream:** 130
-- **Citation cycles detected:** 59
+- **Citation cycles detected:** 60
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1159
+- runners classified: 1160
 - runners with (C) first-principles compute hits: 537
 - runners with (D) external comparator hits: 286
-- decoration candidates (no C, no D): 81
+- decoration candidates (no C, no D): 82
 
 ## Top 25 by load-bearing score (topology only)
 
@@ -69,7 +69,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 3 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 28.84 | `audited_conditional` | ~~audited_conditional~~ |
 | 4 | `graph_first_su3_integration_note` | critical | 294 | 28.20 | `audited_clean` | **retained** |
 | 5 | `yt_ward_identity_derivation_theorem` | critical | 292 | 27.70 | `audited_renaming` | ~~audited_renaming~~ |
-| 6 | `observable_principle_from_axiom_note` | critical | 235 | 26.38 | `audited_conditional` | ~~audited_conditional~~ |
+| 6 | `observable_principle_from_axiom_note` | critical | 237 | 26.89 | `audited_conditional` | ~~audited_conditional~~ |
 | 7 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 101 | 23.67 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `yt_ew_color_projection_theorem` | critical | 114 | 22.34 | `audited_conditional` | ~~audited_conditional~~ |
 | 9 | `three_generation_observable_theorem_note` | critical | 283 | 21.65 | `audited_conditional` | ~~audited_conditional~~ |

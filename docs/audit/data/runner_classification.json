@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T00:52:11.929718+00:00",
+  "generated_at": "2026-05-01T01:01:26.970739+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14017,6 +14017,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_gw_echo_derived.py"
     },
+    "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_beta_lambda_planck_stationarity_no_go.py"
+    },
     "yt_bottom_yukawa_retention_analysis_note_2026-04-18": {
       "assert_count": 1,
       "counts": {
@@ -27869,6 +27881,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_beta_lambda_planck_stationarity_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_bottom_yukawa_retention.py": {
       "assert_count": 1,
       "claims": [
@@ -32417,15 +32444,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 81,
+    "decoration_candidates": 82,
     "dominant_class_distribution": {
       "A": 7,
-      "B": 118,
+      "B": 119,
       "C": 445,
       "D": 185,
       "none": 404
     },
-    "runners_classified": 1159,
+    "runners_classified": 1160,
     "runners_with_C": 537,
     "runners_with_D": 286
   }

@@ -1,0 +1,54 @@
+{
+  "actual_current_surface_status": "no-go / exact-negative-boundary",
+  "authority_boundary": {
+    "has_inherited_yt_residual": true,
+    "has_lambda_boundary": true,
+    "observable_mentions_beta": false,
+    "selector_flags_open": true,
+    "taste_mentions_beta": false,
+    "vacuum_inherits_yt": true
+  },
+  "fail_count": 0,
+  "pass_count": 20,
+  "remaining_open_premise": "derive a substrate scale-stationarity theorem, or adopt it explicitly as a new conditional selector",
+  "routes": [
+    {
+      "reason": "lambda(M_Pl)=0 sets a boundary value only; one-loop beta at lambda=0 is not identically zero.",
+      "route": "lambda_boundary",
+      "status": "blocked"
+    },
+    {
+      "reason": "log|det(D+J)| supplies source derivatives but no renormalized SM RG tangent.",
+      "route": "finite_source_response",
+      "status": "blocked"
+    },
+    {
+      "reason": "isotropy of the scalar Hessian does not relate y_t to electroweak gauge couplings.",
+      "route": "taste_isotropy",
+      "status": "blocked"
+    },
+    {
+      "reason": "would imply the needed condition if accepted, but is exactly the missing selector premise.",
+      "route": "multiple_point_or_scale_stationarity",
+      "status": "conditional"
+    },
+    {
+      "reason": "re-enters the audited_renaming route and still is not beta_lambda stationarity.",
+      "route": "ward_or_h_unit",
+      "status": "forbidden_for_this_pr"
+    }
+  ],
+  "substrate_vs_rge": {
+    "missing_selector": "a substrate theorem forcing scale-stationarity of the renormalized quartic",
+    "rge_boundary": "SM beta_lambda is an imported EFT vector field, not the finite source coefficient itself",
+    "source_generator": "W[J] = log |det(D+J)|"
+  },
+  "symbolic": {
+    "beta_1": "-3*(-9*g1**4 - 30*g1**2*g2**2 + 120*g1**2*lambda - 75*g2**4 + 600*g2**2*lambda - 1600*lambda**2 - 800*lambda*y**2 + 400*y**4)/200",
+    "beta_at_lambda_zero": "-3*(-9*g1**4 - 30*g1**2*g2**2 - 75*g2**4 + 400*y**4)/200",
+    "condition_y4": "3*(3*g1**4 + 10*g1**2*g2**2 + 25*g2**4)/400",
+    "derivative_y": "-24*y**3"
+  },
+  "target": "derive beta_lambda(M_Pl)=0 from current Cl(3)/Z^3 substrate premises",
+  "verdict": "The current substrate derives lambda(M_Pl)=0 and finite scalar source-response data, but beta_lambda(M_Pl)=0 is an additional codimension-one scale-stationarity selector in the SM RGE bridge."
+}

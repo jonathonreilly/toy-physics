@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-05-01T00:52:12.407119+00:00",
+  "computed_at": "2026-05-01T01:01:27.593749+00:00",
   "criticality_counts": {
     "critical": 73,
     "high": 336,
-    "leaf": 846,
-    "medium": 410
+    "leaf": 845,
+    "medium": 412
   },
   "flagship_signal_used": false,
-  "node_count": 1665,
+  "node_count": 1666,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -50,8 +50,8 @@
     {
       "claim_id": "observable_principle_from_axiom_note",
       "criticality": "critical",
-      "load_bearing_score": 26.383,
-      "transitive_descendants": 235
+      "load_bearing_score": 26.895,
+      "transitive_descendants": 237
     },
     {
       "claim_id": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",

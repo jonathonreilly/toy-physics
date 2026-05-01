@@ -130,6 +130,14 @@ The next useful physics-loop target is narrow:
 derive or rule out beta_lambda(M_Pl)=0 from the Cl(3)/Z^3 substrate
 ```
 
+Follow-up status:
+[YT_BETA_LAMBDA_PLANCK_STATIONARITY_NO_GO_NOTE_2026-05-01.md](YT_BETA_LAMBDA_PLANCK_STATIONARITY_NO_GO_NOTE_2026-05-01.md)
+rules this out on the current surface.  The current substrate derives the
+`lambda(M_Pl)=0` boundary and finite scalar source response, but it does not
+derive the separate scale-stationarity condition `beta_lambda(M_Pl)=0`.  The
+double-criticality selector therefore remains conditional on a new substrate
+scale-stationarity theorem or an explicit new selector premise.
+
 Promising attack frames:
 
 1. boundary-action stationarity of the taste scalar at the Planck surface;
