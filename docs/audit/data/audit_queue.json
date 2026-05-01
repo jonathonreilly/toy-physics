@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 287,
-    "medium": 243
+    "medium": 242
   },
-  "generated_at": "2026-05-01T02:54:32.379037+00:00",
+  "generated_at": "2026-05-01T02:56:22.534861+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6446,23 +6446,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_yt_bottom_yukawa_retention.py",
       "transitive_descendants": 7
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "neutrino_sole_axiom_full_closure_boundary_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 4,
-      "load_bearing_score": 7.248,
-      "note_path": "docs/NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_neutrino_sole_axiom_full_closure_boundary.py",
-      "transitive_descendants": 37
     },
     {
       "audit_independence_required": "any_non_self",
@@ -17130,6 +17113,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 338,
-  "total_pending": 733
+  "ready_count": 337,
+  "total_pending": 732
 }

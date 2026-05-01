@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:54:32.611455+00:00
+**Generated:** 2026-05-01T02:56:22.763628+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 257 |
+| bounded | 256 |
 | support | 211 |
 | open | 15 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 12 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 782 |
+| ~~audited_conditional~~ | 783 |
 | ~~audited_failed~~ | 144 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 230 |
-| `audited_conditional` | 510 |
+| `audited_conditional` | 511 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 9 |
 | `audited_renaming` | 14 |
-| `unaudited` | 733 |
+| `unaudited` | 732 |
 
 | criticality | count |
 |---|---:|
@@ -719,6 +719,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_majorana_nur_charge2_primitive_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `neutrino_majorana_operator_axiom_first_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `neutrino_sole_axiom_full_closure_boundary_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_two_amplitude_last_mile_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `newton_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `newton_law_derived_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -9820,6 +9821,24 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** A_min axiom 3 is under-specified on the admissibility of Pfaffian / charge-+/-2 substrate extensions; the strict reading closes C2-X, while the permissive reading does not.  _(class `C`)_
 - **chain closes:** False — The note identifies a sharper substrate-class obstruction, but it does not derive the strict reading from fixed A_min. Its own boundary says unconditional C2-X and the Dirac global lift remain unclosed.
 - **rationale:** Issue: the claimed route to U(1)_V rigidity requires an extra substrate-admissibility decision excluding Pfaffian or charge-+/-2 extensions. Why this blocks: without that theorem or policy premise as retained input, the global Dirac lift cannot follow from fixed A_min. Repair target: prove substrate-class admissibility from A_min, or supply a retained no-go theorem for Pfaffian/pairing extensions. Claim boundary until fixed: stretch-attempt inventory with one falsified route and a named obstruction, not C2-X closure.
+- **auditor confidence:** high
+
+### `neutrino_sole_axiom_full_closure_boundary_note`
+
+- **Note:** [`NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md`](../../docs/NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-neutrino_sole_axiom_full_closure_boundary_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note bundles PMNS free/scalar rejection, reduced oriented-cycle realization-without-selection, and Majorana charge-preserving lower-level zero-pairing to conclude that Cl(3) on Z^3 alone does not currently close the retained neutrino lane.  _(class `B`)_
+- **chain closes:** False — The runner passes constructed helper-stack checks, but the bundle depends on undeclared PMNS and Majorana boundary rows that are conditional or unaudited, and its PASS lines are unclassified.
+- **rationale:** Issue: the runner completes with PASS=12/FAIL=0, but the row has deps=[] while importing PMNS current-bank value-selection no-go, lower-level end-to-end closure, oriented-cycle value law, uniform scalar deformation boundary, and Majorana lower-level pairing no-go; several are audited_conditional and others are unaudited, and the runner emits no classified PASS lines. Why this blocks: a clean sole-axiom full-closure no-go requires the imported PMNS/Majorana boundary theorems and the current-bank exhaustiveness claim to be declared and audited before this bundle can close from them. Repair target: declare the PMNS and Majorana boundary notes as dependencies, classify the runner's rejection/realization/pairing/circularity checks as A/B lines, and resolve the conditional/unaudited upstream blockers or narrow the note to a bundle inventory. Claim boundary until fixed: bounded current-bank evidence that the checked free/scalar PMNS routes and charge-preserving Majorana lower-level route do not provide full positive neutrino closure; not an independently audited theorem that the sole axiom exhaustively fails to close retained neutrino science.
+- **open / conditional deps cited:**
+  - `PMNS_CURRENT_BANK_VALUE_SELECTION_NOGO_NOTE.md`
+  - `PMNS_LOWER_LEVEL_END_TO_END_CLOSURE_NOTE.md`
+  - `PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md`
+  - `PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md`
+  - `NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md`
 - **auditor confidence:** high
 
 ### `neutrino_two_amplitude_last_mile_reduction_note`
