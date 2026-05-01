@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T18:35:29.892906+00:00
+**Generated:** 2026-05-01T18:37:17.123511+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 293 |
+| `audited_clean` | 294 |
 | `audited_conditional` | 600 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 574 |
+| `unaudited` | 573 |
 
 | criticality | count |
 |---|---:|
@@ -243,6 +243,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `hadron_lane1_confinement_to_mass_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `hard_geometry_local_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
+| `hierarchy_effective_potential_endpoint_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `hierarchy_spatial_bc_and_u0_scaling_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
@@ -7848,6 +7849,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** Using the same residual ratio R, the dimension-4 inverse compression R^(-1/4) ~= 0.96468 is in the right few-percent range for the observed prefactor C_obs = v_obs/v_pred ~= 0.96692, while the 1/16 root is too small.  _(class `G`)_
 - **chain closes:** False — The runner reproduces the stated numerical comparison, but the conclusion depends on a chosen diagnostic condensate ratio and comparison to the observed electroweak prefactor. The note does not derive the dimension-4 order parameter, sign, placement, or determinant-to-VEV map from retained inputs.
 - **rationale:** Issue: the support result is a numerical closeness claim: at the runner's chosen diagnostic inputs, R^(-1/4) lies near the observed v_obs/v_pred prefactor and R^(-1/16) does not. Why this blocks clean closure: the comparison does not derive the physical order parameter or the correction's sign/placement; it shows that one dimension choice has the right magnitude. Repair target: derive the intensive effective-potential/free-energy density and determinant-to-VEV map, including why this residual ratio enters with the inverse fourth root. Claim boundary until fixed: the note is useful bounded diagnostic evidence that dimension-4 compression has the right scale, not a theorem proving the hierarchy normalization.
+- **auditor confidence:** high
+
+### `hierarchy_effective_potential_endpoint_note`
+
+- **Note:** [`HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md`](../../docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The APBC endpoint coefficients are A_2 = 1/(8 u_0^2), A_inf = 1/(4 sqrt(3) u_0^2), so the full dimension-4 temporal endpoint factor is C_inf^(4D) = (A_2/A_inf)^(1/4) = (3/4)^(1/8).  _(class `C`)_
+- **chain closes:** True — The registered runner derives the small-m coefficient from the stated free-energy density, verifies the exact APBC endpoint formulas, checks the condensate endpoint ratio, and confirms that the observed prefactor lies within the exact endpoint band. The source does not claim the full hierarchy theorem or physical selection of the endpoint, so the clean result is bounded to the exact endpoint-normalization algebra and comparator-band statement.
+- **rationale:** The bounded endpoint claim closes: the current runner verifies the small-m effective-potential coefficient, A_2, A_4, A_inf, the Lt->infinity condensate ratio, and the dimension-4 endpoint factor C_inf=(3/4)^(1/8), with SCORECARD 7/0. The observed prefactor check is correctly presented as lying inside the endpoint band, not as a derivation of the electroweak scale. Residual risk remains exactly where the note says it remains: the physical selection/insertion of this temporal normalization into the det-to-v map is not derived here.
 - **auditor confidence:** high
 
 ### `hierarchy_matsubara_decomposition_note`
