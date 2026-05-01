@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T19:43:48.888013+00:00
+**Generated:** 2026-05-01T19:44:37.541012+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 194 |
+| bounded | 193 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 907 |
+| ~~audited_conditional~~ | 908 |
 | ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 611 |
+| `audited_conditional` | 612 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 558 |
+| `unaudited` | 557 |
 
 | criticality | count |
 |---|---:|
@@ -814,6 +814,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `mesoscopic_surrogate_backreaction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `mesoscopic_surrogate_localization_sweep_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `mesoscopic_surrogate_multistage_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `mirror_gravity_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_program_synthesis` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -10360,6 +10361,22 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **rationale:** Issue: the table and safe read are consistent with the cited frozen log, but there is no primary runner registered for this note. Why this blocks: the audit lane cannot verify that the localization-family sweep still reproduces the reported score/capture tradeoff or classify its load-bearing checks from a current run. Repair target: restore or register the sweep runner that produced the log and emit classified PASS lines for top-N baseline, degenerate point-source exclusions, non-degenerate localized rows, and the broad-control comparison. Claim boundary until fixed: this is a bounded frozen-log summary, not a fully auditable current localization result.
 - **open / conditional deps cited:**
   - `logs/2026-04-04-mesoscopic-surrogate-localization-family-sweep.txt`
+- **auditor confidence:** high
+
+### `mesoscopic_surrogate_multistage_note`
+
+- **Note:** [`MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The broad mesoscopic surrogate survives a second sourced-response stage with high best-shift score, same-order centroid shift, and bounded width change, while remaining only a broad control rather than a persistent-mass theorem.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the reported capture, delta ratio, best-shift score, and width ratio, but it emits no classified PASS lines and depends on the broad-surrogate/backreaction chain, which is not clean. The bounded current-run result is supported, but not independently audit-clean.
+- **rationale:** Issue: the multistage script's numbers agree with the note, but the runner provides only descriptive output and the source interpretation depends on conditional/unaudited broad-surrogate inputs. Why this blocks: the audit lane cannot classify the load-bearing threshold checks for capture, score, width ratio, and non-closure of persistent mass, and the upstream source-object chain is not yet clean. Repair target: emit classified PASS lines for second-stage survival, delta-scale retention, shape similarity, bounded width change, and non-persistent-mass boundary; then re-audit after the broad surrogate/backreaction authorities are clean. Claim boundary until fixed: a bounded current-run two-stage surrogate result, not a clean mesoscopic-source theorem.
+- **open / conditional deps cited:**
+  - `MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md`
+  - `BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md`
+  - `QUASI_PERSISTENT_RELAUNCH_PROBE_NOTE.md`
 - **auditor confidence:** high
 
 ### `mesoscopic_surrogate_source_2d_note`
