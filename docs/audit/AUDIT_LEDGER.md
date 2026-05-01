@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T09:44:37.947109+00:00
+**Generated:** 2026-05-01T10:41:47.684020+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -315,7 +315,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `moving_source_retarded_portability_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `multipole_tidal_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
-| `native_gauge_closure_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
+| `native_gauge_closure_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | B | - |
 | `neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
@@ -10848,10 +10848,10 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **current_status:** _proposed_retained_
 - **audit_status:** ~~audited_clean~~
 - **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** This aggregator asks the fresh audit to combine those retained dependencies with the native `SU(2)` result computed by the primary runner above.  _(class `B`)_
-- **chain closes:** True — The note is an aggregator rather than an independent re-proof of the graph-first selector or graph-first SU(3) dependencies. It closes by directly checking the native cubic `Cl(3)` / `SU(2)` algebra and by importing only one-hop dependency rows that are already audit-clean with `effective_status = retained`.
-- **rationale:** Issue: none. Why this closes: the native `Cl(3)` / `SU(2)` step is exact finite-dimensional algebra checked directly by the runner, and the graph-first selector plus graph-first structural `SU(3)` steps are imported only through dependency rows that are currently `audited_clean` with `effective_status = retained`. Repair target: no repair needed for the stated boundary; future work is only cross-confirmation and maintaining dependency/hash stability. Claim boundary until fixed: the note remains bounded to graph-structure closure and the left-handed `+1/3` / `-1` abelian eigenvalue surface, not anomaly-complete `U(1)_Y` or downstream phenomenology.
+- **auditor:** `codex-audit-loop:2026-05-01-native_gauge_closure_note-fresh-context`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Each sub-claim has its own status, runner, and audit row. In the current ledger, both dependencies are audit-ratified with `effective_status = retained`. This aggregator asks the fresh audit to combine those retained dependencies with the native `SU(2)` result computed by the primary runner above.  _(class `B`)_
+- **chain closes:** True — The note's bounded claim is a graph-structure aggregator: native cubic `Cl(3)`/`SU(2)` is computed directly by the primary runner, while selector and structural `su(3)` closure are imported as retained one-hop dependencies. The note does not claim anomaly-complete `U(1)_Y` or downstream phenomenology.
+- **rationale:** The claimed observable is the bounded algebraic gauge-structure surface: exact native cubic `Cl(3)`/`SU(2)`, graph-first selector, structural graph-first `su(3)`, and the left-handed `+1/3`/`-1` abelian eigenvalue surface. The primary runner computes the native Clifford/SU(2), chiral-parity, and bounded abelian eigenvalue checks directly; it imports the contested selector and `su(3)` bridge only by verifying that the declared one-hop dependencies are currently audit-clean and retained. Because both upstream dependencies are currently retained, the composite claim closes as a cross-note aggregation rather than a hidden definition or physical bridge. The clean verdict is bounded to this structural algebraic surface and does not ratify full gauge dynamics, anomaly-complete hypercharge, or phenomenology.
 - **auditor confidence:** high
 
 ### `neutrino_axiom3_reading_stuck_fanout_note_2026-04-28`
