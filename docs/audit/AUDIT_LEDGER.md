@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:35:39.068736+00:00
+**Generated:** 2026-05-01T05:36:52.755559+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 212 |
-| support | 178 |
+| support | 177 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 826 |
+| ~~audited_conditional~~ | 827 |
 | ~~audited_failed~~ | 166 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 250 |
-| `audited_conditional` | 557 |
+| `audited_conditional` | 558 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 78 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 634 |
+| `unaudited` | 633 |
 
 | criticality | count |
 |---|---:|
@@ -857,6 +857,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `third_grown_family_sign_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `three_generation_observable_theorem_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `three_generation_structure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `universal_gr_block_constraint_interpretation_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_tensor_variational_candidate_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | E | - |
@@ -13144,6 +13145,20 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md`
   - `UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md`
   - `NON_HERMETIC_RUNNER_ROOT: /Users/jonreilly/Projects/Physics`
+- **auditor confidence:** high
+
+### `universal_gr_block_constraint_interpretation_note`
+
+- **Note:** [`UNIVERSAL_GR_BLOCK_CONSTRAINT_INTERPRETATION_NOTE.md`](../../docs/UNIVERSAL_GR_BLOCK_CONSTRAINT_INTERPRETATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The A1 core is identified as the Hamiltonian block and the j=1 complement block as the momentum block in the universal 3+1 decomposition.  _(class `B`)_
+- **chain closes:** False — The note imports a six-step universal stack and a canonical block-localization result, but the ledger row has no explicit dependencies or runner and the note itself leaves the operator-level Einstein/Regge constraint identification open.
+- **rationale:** Issue: the load-bearing Hamiltonian/momentum constraint interpretation depends on an unregistered universal-stack input and on the still-open identification of the block-localized universal Hessian with the Einstein/Regge constraint operator. Why this blocks: an exact lapse/shift/trace/shear block split does not by itself prove that the A1 and j=1 blocks are the physical GR constraint operators with the required normalization and sign conventions. Repair target: register the cited block-localization authorities and add a theorem/runner deriving the Einstein/Regge constraint-operator identification on the E ⊕ T1 complement. Claim boundary until fixed: the note may be used as support for a canonical universal block split and a provisional constraint-sector reading, not as a closed GR constraint derivation.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_GR_BLOCK_CONSTRAINT_INTERPRETATION_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_gr_discrete_global_closure_note`
