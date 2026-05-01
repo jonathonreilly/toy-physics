@@ -292,6 +292,46 @@ match the physical top/Yukawa comparators.  Its value is as first-pass compute
 evidence that the gauge-update, staggered-Dirac, CG, correlator, mass-scan,
 and fit path can run at `12^3 x 24` with 100 saved configurations.
 
+The next lightweight pass scanned heavier bare masses to test whether the
+physical top target is even reachable at the current scale before launching a
+multi-week production run:
+
+```bash
+PYTHONUNBUFFERED=1 python3 scripts/yt_direct_lattice_correlator_production.py \
+  --pilot-targets \
+  --volumes 12x24 \
+  --masses 1,2,4,8,16 \
+  --therm 50 \
+  --measurements 25 \
+  --separation 5 \
+  --overrelax 2 \
+  --engine numba \
+  --resume \
+  --production-output-dir outputs/yt_direct_lattice_correlator_mass_bracket \
+  --output outputs/yt_direct_lattice_correlator_mass_bracket_certificate_2026-05-01.json
+```
+
+At the current Sommer-scale conversion, `1` lattice mass unit is
+`2.119291769496 GeV`, so the physical top target `172.56 GeV` would require
+`m_lat ~= 81.423428`.  The bracket scan instead found:
+
+| `m_bare` | fitted `m_lat` | `chi^2/dof` | proxy GeV |
+|---:|---:|---:|---:|
+| 1 | 2.238868 | 0.256191 | 4.744814 |
+| 2 | 3.124670 | 0.075137 | 6.622087 |
+| 4 | 4.270790 | 0.021292 | 9.051050 |
+| 8 | 5.575509 | 0.000000 | 11.816131 |
+| 16 | 6.939225 | 0.000000 | 14.706242 |
+
+The paired obstruction note
+[YT_TOP_MASS_CUTOFF_OBSTRUCTION_NOTE_2026-05-01.md](YT_TOP_MASS_CUTOFF_OBSTRUCTION_NOTE_2026-05-01.md)
+and runner `scripts/frontier_yt_top_mass_cutoff_obstruction.py` record this as
+bounded cutoff-obstruction evidence, not a retained no-go.  The conclusion is
+that full production at the current `a ~= 0.093 fm` scale should not be treated
+as the next automatic step for a direct relativistic top-correlator
+measurement.  The route needs a much finer scale, an explicit heavy-quark
+effective/top-integrated treatment, or a different selector.
+
 ## Production-Scale Engineering Status
 
 The requested production campaign was benchmarked on the actual `12^3 x 24`

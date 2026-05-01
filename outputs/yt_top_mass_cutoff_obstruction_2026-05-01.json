@@ -1,0 +1,67 @@
+{
+  "actual_current_surface_status": "bounded cutoff obstruction / pilot compute evidence",
+  "certificate": "outputs/yt_direct_lattice_correlator_mass_bracket_certificate_2026-05-01.json",
+  "fail_count": 0,
+  "gev_per_lattice_unit": 2.119291769496,
+  "mass_scan": [
+    {
+      "chi2_dof": 0.25619107364486265,
+      "m_bare_lat": 1.0,
+      "m_fit_gev": 4.744814216602447,
+      "m_fit_lat": 2.2388678542977765,
+      "m_fit_lat_err": 0.0011953133418103922,
+      "max_cg_residual": 7.352624526162231e-09
+    },
+    {
+      "chi2_dof": 0.07513714793324906,
+      "m_bare_lat": 2.0,
+      "m_fit_gev": 6.622087066874519,
+      "m_fit_lat": 3.124669836494176,
+      "m_fit_lat_err": 0.0007221353453026745,
+      "max_cg_residual": 5.777807492192575e-09
+    },
+    {
+      "chi2_dof": 0.021291941149989883,
+      "m_bare_lat": 4.0,
+      "m_fit_gev": 9.051049780253926,
+      "m_fit_lat": 4.270789850897408,
+      "m_fit_lat_err": 0.00023641940940832978,
+      "max_cg_residual": 2.2491534525000327e-09
+    },
+    {
+      "chi2_dof": 1.273553005839427e-08,
+      "m_bare_lat": 8.0,
+      "m_fit_gev": 11.816131066459928,
+      "m_fit_lat": 5.575509345402679,
+      "m_fit_lat_err": 0.0004629539755596867,
+      "max_cg_residual": 7.443966828049817e-09
+    },
+    {
+      "chi2_dof": 1.2133024870903023e-09,
+      "m_bare_lat": 16.0,
+      "m_fit_gev": 14.706242333165326,
+      "m_fit_lat": 6.9392249546945095,
+      "m_fit_lat_err": 0.02752805386396158,
+      "max_cg_residual": 1.4520276973985346e-09
+    }
+  ],
+  "max_scan_row": {
+    "chi2_dof": 1.2133024870903023e-09,
+    "m_bare_lat": 16.0,
+    "m_fit_gev": 14.706242333165326,
+    "m_fit_lat": 6.9392249546945095,
+    "m_fit_lat_err": 0.02752805386396158,
+    "max_cg_residual": 1.4520276973985346e-09
+  },
+  "open_route": "requires a much finer scale, heavy-quark effective treatment, or a different y_t selector",
+  "pass_count": 8,
+  "pdg_mt_gev": 172.56,
+  "slopes": [
+    0.8858019821963996,
+    0.5730600072016161,
+    0.32617987362631773,
+    0.1704644511614788
+  ],
+  "target_m_lat": 81.4234276203684,
+  "verdict": "At the current Sommer scale, the physical top target would require a lattice mass around 81.4.  The pilot mass scan up to bare mass 16 only reaches fitted lattice mass about 6.94 and shows sublinear response.  Full production at this scale is therefore not a near path to a direct physical top measurement."
+}

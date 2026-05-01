@@ -7878,6 +7878,10 @@
     },
     {
       "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "yt_top_mass_cutoff_obstruction_note_2026-05-01"
+    },
+    {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
       "to": "yt_planck_double_criticality_selector_note_2026-04-30"
     },
     {
@@ -18509,7 +18513,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T04:38:19.401036+00:00",
+  "generated_at": "2026-05-01T11:07:00.639764+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39429,6 +39433,7 @@
         "yt_top_mass_substrate_pin_no_go_note_2026-04-30",
         "graph_first_su3_integration_note",
         "minimal_axioms_2026-04-11",
+        "yt_top_mass_cutoff_obstruction_note_2026-05-01",
         "yt_planck_double_criticality_selector_note_2026-04-30",
         "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01",
         "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
@@ -39443,7 +39448,7 @@
         "yt_rge_only_selector_no_go_note_2026-05-01",
         "yt_pr230_queue_exhaustion_certificate_note_2026-05-01"
       ],
-      "note_hash": "0340d8631ce9ea89e0658ed25f9f75c99900b874fe433df5cca934fde745e0cf",
+      "note_hash": "ffa08d0084cd81a785d749bedabb7d7729bd4ed569b41d2a925d1442cfbf0c26",
       "path": "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_direct_lattice_correlator.py",
       "title": "Direct Lattice-Correlator Top-Yukawa Measurement Gate"
@@ -40192,6 +40197,16 @@
       "path": "docs/YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_ssb_matching_gap.py",
       "title": "Yukawa SSB Matching-Gap Analysis Note"
+    },
+    "yt_top_mass_cutoff_obstruction_note_2026-05-01": {
+      "claim_id": "yt_top_mass_cutoff_obstruction_note_2026-05-01",
+      "current_status": "bounded",
+      "current_status_raw": "bounded cutoff obstruction / pilot compute evidence",
+      "deps": [],
+      "note_hash": "5d0cbb92efaf7613e99785a721e014f33adf1f76fdc06d1eaf6fbeb0ccfdc97d",
+      "path": "docs/YT_TOP_MASS_CUTOFF_OBSTRUCTION_NOTE_2026-05-01.md",
+      "runner_path": "scripts/frontier_yt_top_mass_cutoff_obstruction.py",
+      "title": "YT Top-Mass Cutoff Obstruction Note"
     },
     "yt_top_mass_substrate_pin_assumptions_and_imports_2026-04-30": {
       "claim_id": "yt_top_mass_substrate_pin_assumptions_and_imports_2026-04-30",
@@ -41595,6 +41610,7 @@
     "yt_rge_only_selector_no_go_note_2026-05-01",
     "yt_schur_stability_gap_note",
     "yt_ssb_matching_gap_analysis_note_2026-04-18",
+    "yt_top_mass_cutoff_obstruction_note_2026-05-01",
     "yt_top_mass_substrate_pin_assumptions_and_imports_2026-04-30",
     "yt_top_mass_substrate_pin_claim_status_certificate_2026-04-30",
     "yt_top_mass_substrate_pin_handoff_2026-04-30",
@@ -41612,13 +41628,13 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4627,
+    "edge_count": 4628,
     "leaf_count": 730,
-    "node_count": 1679,
-    "root_count": 1195,
-    "runners_with_path": 1242,
+    "node_count": 1680,
+    "root_count": 1196,
+    "runners_with_path": 1243,
     "status_counts": {
-      "bounded": 447,
+      "bounded": 448,
       "open": 51,
       "proposed_promoted": 1,
       "proposed_retained": 373,

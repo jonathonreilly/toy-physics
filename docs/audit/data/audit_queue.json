@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 299,
+    "leaf": 300,
     "medium": 300
   },
-  "generated_at": "2026-05-01T04:38:23.105960+00:00",
+  "generated_at": "2026-05-01T11:07:03.606301+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13795,6 +13795,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_top_mass_cutoff_obstruction_note_2026-05-01",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [],
+      "direct_in_degree": 1,
+      "load_bearing_score": 1.5,
+      "note_path": "docs/YT_TOP_MASS_CUTOFF_OBSTRUCTION_NOTE_2026-05-01.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_top_mass_cutoff_obstruction.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_top_mass_substrate_pin_no_go_note_2026-04-30",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -18582,6 +18599,7 @@
         "yt_top_mass_substrate_pin_no_go_note_2026-04-30",
         "graph_first_su3_integration_note",
         "minimal_axioms_2026-04-11",
+        "yt_top_mass_cutoff_obstruction_note_2026-05-01",
         "yt_planck_double_criticality_selector_note_2026-04-30",
         "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01",
         "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
@@ -18627,6 +18645,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 448,
-  "total_pending": 836
+  "ready_count": 449,
+  "total_pending": 837
 }
