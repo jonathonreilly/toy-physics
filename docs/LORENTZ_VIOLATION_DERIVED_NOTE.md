@@ -1,6 +1,6 @@
 # Lorentz Violation Derived from Cubic Lattice Structure
 
-**Script:** `scripts/frontier_lorentz_derived.py`
+**Script:** `scripts/frontier_lorentz_violation.py`
 **PStack:** `frontier-lorentz-violation-derived`
 **Status:** bounded - bounded or caveated result note
 

@@ -23,7 +23,7 @@ from typing import Sequence
 import numpy as np
 
 
-ROOT = Path("/Users/jonreilly/Projects/Physics")
+ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 
 OBSERVABLE = DOCS / "OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md"
@@ -240,11 +240,12 @@ def main() -> int:
             f"invariant coordinates = {a1_selector}",
         ),
         Check(
-            "frame-dependent orbit remains exact on the universal blockers",
-            has(curv, "associated family of candidate localizations")
-            and has(curv, "polarization-frame orbit")
-            and has(fb, "distinguished connection"),
-            "blocker notes still state that only the localization orbit is exact",
+            "frame-dependent complement remains governed by the universal blockers",
+            has(curv, "exact `Pi_A1` invariant section")
+            and has(curv, "exact Casimir block localization")
+            and has(fb, "distinguished connection")
+            and has(fb, "frame-dependent"),
+            "blocker notes keep the A1 section exact while leaving full frame selection open",
         ),
         Check(
             "A1 note records the exact invariant section",

@@ -17,11 +17,11 @@ from pathlib import Path
 from typing import Iterable, Sequence
 
 
-ROOT = Path("/Users/jonreilly/Projects/Physics")
+ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 
 OBSERVABLE = DOCS / "OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md"
-ROUTE2 = DOCS / "S3_TIME_SPACETIME_OBSERVABLE_ROUTE_NOTE.md"
+ROUTE2 = DOCS / "S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md"
 BLOCKER = DOCS / "UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md"
 VARIATIONAL = DOCS / "UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md"
 UNIQUENESS = DOCS / "UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md"
@@ -143,9 +143,11 @@ def main() -> int:
             "observable principle gives the exact scalar generator",
         ),
         Check(
-            "route-2 kinematic lift is exact",
-            has(r2, "O_lift = 1"),
-            "route-2 gives the exact PL S^3 x R selector",
+            "route-2 background and slice generator are exact",
+            has(r2, "exact background")
+            and has(r2, "PL S^3 x R")
+            and has(r2, "Lambda_R"),
+            "route-2 tensor primitive gives the exact background and slice generator",
         ),
         Check(
             "variational note states the exact tensor candidate",

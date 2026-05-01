@@ -60,11 +60,11 @@ DYNKIN_SU3_FUND = Fraction(1, 2)
 DYNKIN_SU2_FUND = Fraction(1, 2)
 
 
-def check(name: str, condition: bool, detail: str = "") -> None:
+def check(name: str, condition: bool, detail: str = "", cls: str = "A") -> None:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     suffix = f" ({detail})" if detail else ""
-    print(f"  [{status}] {name}{suffix}")
+    print(f"  [{status} ({cls})] {name}{suffix}")
     if condition:
         PASS_COUNT += 1
     else:
@@ -150,21 +150,25 @@ def audit_authority() -> None:
         "ANOMALY_FORCES_TIME parent note exists on main",
         "Tr[Y" in parent or "anomaly" in parent.lower(),
         "parent theorem",
+        cls="B",
     )
     check(
         "LH-content -16/9 cubic-trace value is referenced upstream",
         "-16/9" in parent or "16/9" in parent,
         "parent inline value",
+        cls="B",
     )
     check(
         "LEFT_HANDED_CHARGE_MATCHING note exists on main",
         "left" in lh_charge.lower() or "Q_L" in lh_charge,
         "LH content authority",
+        cls="B",
     )
     check(
         "HYPERCHARGE_IDENTIFICATION note exists on main",
         "hypercharge" in hypercharge_id.lower() or "Y" in hypercharge_id,
         "Y assignment authority",
+        cls="B",
     )
 
 
@@ -259,11 +263,11 @@ def audit_role_in_solve() -> None:
 def audit_status_boundary() -> None:
     banner("Status boundary")
 
-    check("catalog records LH-only arithmetic identities", True)
-    check("catalog does not solve for RH hypercharges (handled in companion theorem)", True)
-    check("catalog does not assert full anomaly cancellation (handled in companions)", True)
-    check("catalog does not introduce BSM matter content", True)
-    check("catalog does not derive the LH content itself", True)
+    check("catalog records LH-only arithmetic identities", True, cls="B")
+    check("catalog does not solve for RH hypercharges (handled in companion theorem)", True, cls="B")
+    check("catalog does not assert full anomaly cancellation (handled in companions)", True, cls="B")
+    check("catalog does not introduce BSM matter content", True, cls="B")
+    check("catalog does not derive the LH content itself", True, cls="B")
 
 
 def main() -> int:

@@ -51,7 +51,7 @@ PDG_SQRT = np.sqrt(np.array([0.51099895, 105.6583755, 1776.86], dtype=float))
 PDG_DIR = PDG_SQRT / np.linalg.norm(PDG_SQRT)
 
 
-def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT") -> bool:
+def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT", cls: str = "A") -> bool:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
@@ -59,7 +59,7 @@ def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT") -> 
     else:
         FAIL_COUNT += 1
     tag = f" [{kind}]" if kind != "EXACT" else ""
-    msg = f"  [{status}]{tag} {name}"
+    msg = f"  [{status} ({cls})]{tag} {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)
@@ -195,24 +195,28 @@ def part2_selected_line_surface_uniqueness() -> None:
         strict_top_gap > 1.0e-3,
         detail=f"min top-gap={strict_top_gap:.6e}",
         kind="NUMERIC",
+        cls="C",
     )
     check(
         "For every tested selected-line spectrum, dQ_eig/dbeta stays strictly positive on beta in [0.02, 2]",
         monotone_ok and derivative_min > 0.0,
         detail=f"min derivative={derivative_min:.6e}",
         kind="NUMERIC",
+        cls="C",
     )
     check(
         "Hence each selected-line point has one unique beta with Q_eig = 2/3",
         endpoint_ok and len(curve) == len(ms),
         detail=f"{len(curve)} unique roots on {len(ms)} tested m values",
         kind="NUMERIC",
+        cls="C",
     )
     check(
         "The eigenvalue condition is a dense one-real surface beta_q23(m), not a singled-out point",
         float(np.max(betas) - np.min(betas)) > 0.1,
         detail=f"beta range=[{np.min(betas):.6f}, {np.max(betas):.6f}]",
         kind="NUMERIC",
+        cls="C",
     )
 
 
@@ -253,6 +257,7 @@ def part3_no_framework_beta_closure() -> None:
         best_gap > 4.0e-2,
         detail=f"best gap={best_gap:.4e}",
         kind="NUMERIC",
+        cls="C",
     )
 
     h = h_sel(M_STAR_SEL)
@@ -264,6 +269,7 @@ def part3_no_framework_beta_closure() -> None:
         abs(beta_q23 - beta_star) > 1.0e-2,
         detail=f"|beta_q23-beta_star|={abs(beta_q23-beta_star):.6f}",
         kind="NUMERIC",
+        cls="C",
     )
 
 

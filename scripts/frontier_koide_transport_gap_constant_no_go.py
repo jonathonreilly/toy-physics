@@ -25,7 +25,7 @@ ETA_RATIO_EXACT = 0.188785929502
 SQRT6 = math.sqrt(6.0)
 
 
-def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT") -> bool:
+def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT", cls: str = "A") -> bool:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
@@ -33,7 +33,7 @@ def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT") -> 
     else:
         FAIL_COUNT += 1
     tag = f" [{kind}]" if kind != "EXACT" else ""
-    msg = f"  [{status}]{tag} {name}"
+    msg = f"  [{status} ({cls})]{tag} {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)
@@ -54,6 +54,7 @@ def main() -> int:
         rel_gap > 1.0e-2,
         detail=f"1/eta_ratio={transport_gap:.8f}, 4pi/sqrt(6)={koide_geometry:.8f}, rel_gap={rel_gap:.4%}",
         kind="NUMERIC",
+        cls="B",
     )
     m_samples = [-1.25, -1.00, -0.75, -0.50, -0.25]
     transport_values = [1.0 / ETA_RATIO_EXACT for _ in m_samples]

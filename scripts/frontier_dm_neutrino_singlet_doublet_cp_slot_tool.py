@@ -71,14 +71,14 @@ UZ3 = (1.0 / np.sqrt(3.0)) * np.array(
 )
 
 
-def check(name: str, condition: bool, detail: str = "") -> bool:
+def check(name: str, condition: bool, detail: str = "", cls: str = "C") -> bool:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
         PASS_COUNT += 1
     else:
         FAIL_COUNT += 1
-    msg = f"  [{status}] {name}"
+    msg = f"  [{status} ({cls})] {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)

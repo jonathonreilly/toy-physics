@@ -18338,7 +18338,6 @@ Goal:
 Concrete deliverables:
 
 - [LITERATURE_POSITIONING_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LITERATURE_POSITIONING_NOTE.md)
-- [PAPER_SCOPE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/PAPER_SCOPE_NOTE.md)
 - explicit future comparisons to:
   - quantum measure / Sorkin
   - open quantum systems / collision models
@@ -18500,4 +18499,3 @@ Current freeze scope:
 ## /Users/jonBridger/Toy Physics/.claude/worktrees/quizzical-shockley-537438/docs/publication/ci3_z3/AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md
 
 *MISSING*
-

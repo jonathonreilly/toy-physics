@@ -43,6 +43,7 @@ class Check:
     ok: bool
     detail: str
     status: str = "EXACT"
+    cls: str = "A"
 
 
 CHECKS: list[Check] = []
@@ -80,10 +81,10 @@ NONLOCAL_RATIO_OP = 5.023669e-3
 CONSERVATIVE_REL_BUDGET = HIGHER_ORDER_RATIO + NONLOCAL_RATIO_OP
 
 
-def record(name: str, ok: bool, detail: str, status: str = "EXACT") -> None:
-    CHECKS.append(Check(name=name, ok=ok, detail=detail, status=status))
+def record(name: str, ok: bool, detail: str, status: str = "EXACT", cls: str = "A") -> None:
+    CHECKS.append(Check(name=name, ok=ok, detail=detail, status=status, cls=cls))
     tag = "PASS" if ok else "FAIL"
-    print(f"[{status}] {tag}: {name}")
+    print(f"[{tag} ({cls})] [{status}] {name}")
     if detail:
         print(f"    {detail}")
 
@@ -410,18 +411,21 @@ def main() -> int:
         aff_rel_l2 < 1.0e-2,
         f"affine residual L2 ratio={aff_rel_l2:.6e}",
         status="BOUNDED",
+        cls="C",
     )
     record(
         "the nonlocal tail of the exact coarse normal form stays at the measured package scale",
         abs(nonlocal_ratio - NONLOCAL_RATIO_OP) < 5.0e-4,
         f"normal-form nonlocal ratio={nonlocal_ratio:.6e}, package ratio={NONLOCAL_RATIO_OP:.6e}",
         status="BOUNDED",
+        cls="C",
     )
     record(
         "the normal-form response stays inside the current conservative endpoint budget",
         response_target_rel < CONSERVATIVE_REL_BUDGET,
         f"response/accepted-kernel L2={response_target_rel:.6e}, budget={CONSERVATIVE_REL_BUDGET:.6e}",
         status="BOUNDED",
+        cls="C",
     )
 
     print()

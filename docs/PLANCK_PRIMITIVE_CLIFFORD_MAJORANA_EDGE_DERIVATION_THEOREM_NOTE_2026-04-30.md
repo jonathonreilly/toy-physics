@@ -1,305 +1,518 @@
 # Planck Primitive Clifford-Majorana Edge Derivation Theorem
 
 **Date:** 2026-04-30
-**Status:** proposed_retained; pending audit ratification
+**Status:** audited_renaming audit verdict; chain does not close
 **Runner:** `scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py`
+
+## Purpose
+
+The Planck Target 3 Clifford bridge identified one explicit remaining premise:
+the active primitive boundary response on the rank-four packet must be the
+metric-compatible Clifford coframe response. In
+`PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`, that
+premise is stated as
+
+```text
+D(v)^2 = ||v||^2 I_K
+```
+
+on `K = P_A H_cell ~= C^4`, and is explicitly marked as "native candidate,
+not yet independently forced."
+
+This note records the attempted construction. It uses the retained native
+`Cl(3)` / `SU(2)` bivector content, the graph-first structural `SU(3)`
+surface, and the anomaly-forced `3+1` time-axis closure to construct an
+explicit complex `Cl_4(C)` module on the primitive packet. Audit accepted the
+algebraic construction but rejected the claimed derivation of that carrier
+from the supplied substrate inputs.
+
+This is not a Hilbert-rank-only argument. The Hilbert-only no-go in
+`PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`
+remains valid if the Clifford substrate content is stripped away.
+
+## Audit Outcome
+
+Fresh-context audit returned `audited_renaming`. The algebraic construction is
+correct as an explicit `Cl_4(C)` / two-mode CAR representation, and the runner
+still verifies all eight construction checks. The derivation does not close as
+a retained substrate theorem because the load-bearing step identifies
+
+```text
+rank(P_A H_cell) = 4
+```
+
+with the irreducible complex `Cl_4` module by dimension and representation
+theory, but does not prove that the retained event-cell substrate action
+restricts invariantly and uniquely to that module on `P_A H_cell`.
+
+The missing step is therefore:
+
+```text
+retained Cl(3)+time event-cell action
+  -> invariant active P_A block
+  -> induced Cl_4(C) generators on that block.
+```
+
+Until that substrate-to-packet forcing theorem is supplied, the primitive
+Clifford-Majorana edge algebra remains a carrier assignment for the Planck
+chain, not a derived consequence of the cited upstream content.
+
+The follow-up no-go
+[SUBSTRATE_TO_P_A_FORCING_THEOREM_NOTE_2026-04-30.md](./SUBSTRATE_TO_P_A_FORCING_THEOREM_NOTE_2026-04-30.md)
+tests the missing step directly. It finds that the stated substrate symmetries
+do not uniquely force `P_A`: the Hamming-weight-three projector and additional
+rank-four local equivariant sums satisfy the same spin/time/CPT/Born/locality
+checks. Therefore the repair target requires an additional first-order
+boundary/orientation principle, not only the symmetries listed in PR #228.
+
+The next repair attempt is also negative and has now been audited clean:
+[FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md](./FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md)
+checks whether the retained substrate symmetries force the first-order coframe
+carrier over its Hodge-dual third-order carrier. They do not. The oriented
+Hodge-complement map exchanges `P_1` and `P_3` while preserving the same
+spin-lift, time-parity, CPT, complex-Hilbert, and tensor-local number-algebra
+structure. Thus a first-order boundary/orientation law remains an additional
+input unless it is derived by a stronger theorem not currently in the retained
+bank.
+
+## Upstream Authorities
+
+The construction cites these existing framework authorities:
+
+- [MINIMAL_AXIOMS_2026-04-11.md](./MINIMAL_AXIOMS_2026-04-11.md): the accepted
+  local `Cl(3)` on `Z^3` plus finite Grassmann / staggered-Dirac partition
+  surface.
+- [NATIVE_GAUGE_CLOSURE_NOTE.md](./NATIVE_GAUGE_CLOSURE_NOTE.md): native cubic
+  `Cl(3)` gives exact `SU(2)` through the spatial Clifford / bivector
+  subalgebra.
+- [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](./GRAPH_FIRST_SU3_INTEGRATION_NOTE.md):
+  graph-first structural `SU(3)` integration on the selected-axis surface.
+- [ANOMALY_FORCES_TIME_THEOREM.md](./ANOMALY_FORCES_TIME_THEOREM.md):
+  anomaly cancellation plus chirality and single-clock evolution force one
+  temporal dimension, giving the `3+1` coframe.
+- [I3_ZERO_EXACT_THEOREM_NOTE.md](./I3_ZERO_EXACT_THEOREM_NOTE.md): exact
+  Hilbert-surface `I_3=0` / pairwise-interference anchor. It is cited as the
+  quantum-content surface, not as a CAR-statistics derivation.
+
+The theorem does not use `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`, does not
+use `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`, and does not use any
+`alpha_LM = alpha_bare/u_0` decoration chain.
 
 ## Theorem Statement
 
-Candidate theorem under audit:
-
-On the retained `Cl(3)/Z^3` substrate, with the retained cubic Clifford
-bivector content, the anomaly-forced `3+1` coframe, and the complex Hilbert
-surface used by the Born-rule / `I_3=0` package, the active primitive boundary
-block
+Let
 
 ```text
-K = P_A H_cell ~= C^4
+H_cell ~= C^2_t otimes C^2_x otimes C^2_y otimes C^2_z ~= C^16
 ```
 
-carries the irreducible complex `Cl_4(C)` module generated by the primitive
-coframe axes
+be the time-locked primitive event cell, and let `P_A` be the Hamming-weight
+one primitive boundary packet:
 
 ```text
-(t, n, tau_1, tau_2).
+K = P_A H_cell,        dim K = rank(P_A) = 4.
 ```
 
-Equivalently, there are four Hermitian generators
+For a selected oriented primitive face, write the primitive coframe as
+
+```text
+(t, n, tau_1, tau_2),
+```
+
+where `n` is the face normal and `tau_1,tau_2` are tangent axes. On the
+retained `Cl(3)/Z^3` framework, with native `SU(2)` supplied by cubic
+`Cl(3)` bivectors and the time axis supplied by anomaly-forced `3+1` closure,
+the active primitive block carries four Hermitian generators
 
 ```text
 Gamma_t, Gamma_n, Gamma_tau1, Gamma_tau2 in End(K)
 ```
 
-with
+obeying
 
 ```text
-{Gamma_a, Gamma_b} = 2 delta_ab I_K,
+{Gamma_a, Gamma_b} = 2 delta_ab I_K.
 ```
 
-and these generators span `M_4(C)`. The oriented complex pairs
+The generated algebra is
+
+```text
+<Gamma_t, Gamma_n, Gamma_tau1, Gamma_tau2> = End(K) ~= M_4(C),
+```
+
+so `K` is the irreducible complex `Cl_4(C)` module. The oriented pairings
+
+```text
+c_N = (Gamma_t + i Gamma_n) / 2,
+c_T = (Gamma_tau1 + i Gamma_tau2) / 2
+```
+
+then obey the two-mode CAR relations:
+
+```text
+{c_a, c_b} = 0,
+{c_a, c_b^dagger} = delta_ab I_K.
+```
+
+Therefore
+
+```text
+K ~= F(C^2)
+```
+
+as the primitive Clifford-Majorana edge carrier.
+
+## Four-Step Derivation Chain
+
+### 1. Retained Bivector Content
+
+The load-bearing spatial input is not a chosen two-qubit factorization. It is
+the retained cubic Clifford content:
+
+```text
+Cl(3) = span(1, e_i, e_i e_j, e_1 e_2 e_3).
+```
+
+The spatial bivectors
+
+```text
+B_1 = -i e_2 e_3,
+B_2 = -i e_3 e_1,
+B_3 = -i e_1 e_2
+```
+
+are Hermitian on the complex spinor representation and satisfy
+
+```text
+[B_i, B_j] = 2 i epsilon_ijk B_k.
+```
+
+Thus `T_i = B_i/2` generate the retained native `su(2)`. This is the same
+`Cl(3)` / staggered-taste content recorded in
+[NATIVE_GAUGE_CLOSURE_NOTE.md](./NATIVE_GAUGE_CLOSURE_NOTE.md), not a new
+edge-statistics postulate.
+
+On the primitive face, the spatial axes are `(n,tau_1,tau_2)`. Their bivectors
+are the retained spatial `Cl(3)` even subalgebra restricted to that face.
+Duality by the spatial pseudoscalar recovers the spatial coframe generators,
+so the bivector data are not external to the coframe response.
+
+### 2. Extension By The Anomaly-Forced Time Axis
+
+[ANOMALY_FORCES_TIME_THEOREM.md](./ANOMALY_FORCES_TIME_THEOREM.md) supplies a
+single time axis from anomaly cancellation, chirality, and one-clock
+codimension-1 evolution. Add this orthogonal generator to the retained spatial
+triple:
+
+```text
+Gamma_t^2 = I,
+{Gamma_t, Gamma_n} = {Gamma_t, Gamma_tau1} = {Gamma_t, Gamma_tau2} = 0.
+```
+
+The complexified primitive coframe algebra is therefore
+
+```text
+Cl_4(C) ~= M_4(C).
+```
+
+The framework's Wick-rotated lattice calculation surface uses the Euclidean
+Clifford anticommutator for the local primitive block. Lorentzian signature is
+recovered at the continuum interpretation layer; the local complex Clifford
+module class is unchanged after complexification.
+
+### 3. Primitive Packet Restriction
+
+The active primitive boundary packet is the Hamming-weight-one packet in the
+four-axis event cell:
+
+```text
+rank(P_A) = C(4,1) = 4.
+```
+
+The unique irreducible complex `Cl_4` module has dimension `4`. Since
+`Cl_4(C) ~= M_4(C)` has complex dimension `16`, a faithful active
+representation cannot fit in dimensions `1`, `2`, or `3`, and an `8`-dimensional
+faithful representation is a reducible two-copy module with non-scalar
+commutant. The rank-four primitive packet is therefore exactly the
+irreducible module, with no active spectator sector.
+
+Metric compatibility is now not an added response law. It is the Clifford
+anticommutator applied to the constructed primitive coframe:
+
+```text
+D(v) = sum_a v_a Gamma_a,
+D(v)^2 = ||v||^2 I_K.
+```
+
+Polarization gives
+
+```text
+D(u)D(v) + D(v)D(u) = 2 <u,v> I_K.
+```
+
+This is the premise required by the old Target 3 bridge, constructed from the
+retained spatial Clifford content plus the anomaly-forced time axis.
+
+### 4. CAR Fock-Space Identification
+
+Pair the four Majorana generators by the oriented normal/tangent decomposition:
+
+```text
+(t,n),        (tau_1,tau_2).
+```
+
+Then
 
 ```text
 c_N = (Gamma_t + i Gamma_n)/2,
 c_T = (Gamma_tau1 + i Gamma_tau2)/2
 ```
 
-therefore realize the two-mode CAR Fock space
+satisfy
 
 ```text
-K ~= F(C^2),
+{c_N,c_N} = {c_T,c_T} = {c_N,c_T} = 0,
+{c_N,c_N^dagger} = {c_T,c_T^dagger} = I,
+{c_N,c_T^dagger} = 0.
 ```
 
-with
+Thus the rank-four packet is
 
 ```text
-{c_a,c_b}=0,
-{c_a,c_b^dagger}=delta_ab I_K.
+K ~= F(C^2).
 ```
 
-If the audit ratifies this candidate theorem as clean, it removes the residual
-primitive Clifford-Majorana edge-statistics premise from the Planck-pin
-conditional chain. This note does not pre-promote that cascade.
+A reversal of the tangent orientation conjugates the tangent pairing
+`c_T <-> c_T^dagger` or applies an equivalent Bogoliubov/unitary
+transformation. It does not change the CAR algebra or the primitive Fock-space
+carrier.
 
-## Import And Audit Discipline
+## Explicit Matrix Construction
 
-The intended retained or audit-clean support surface is:
-
-- [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
-  for the graph-first retained gauge-structure surface around which this
-  package is organized;
-- [PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md](PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md)
-  for the Hilbert-only boundary theorem showing that rank four alone does not
-  force CAR;
-- [I3_ZERO_EXACT_THEOREM_NOTE.md](I3_ZERO_EXACT_THEOREM_NOTE.md) for the exact
-  `I_3=0` Hilbert-surface statement.
-
-The following files are cited for specific structural facts, not for their
-broader conditional claim surfaces:
-
-- [NATIVE_GAUGE_CLOSURE_NOTE.md](NATIVE_GAUGE_CLOSURE_NOTE.md): the cubic
-  `Cl(3)` / bivector / `su(2)` content;
-- [ANOMALY_FORCES_TIME_THEOREM.md](ANOMALY_FORCES_TIME_THEOREM.md): the
-  codimension-one time-axis content of the `3+1` package.
-
-The audit question is deliberately left live: the runner verifies the algebraic
-construction, while the audit decides whether the cited substrate content
-really forces this primitive active-block response without adding a hidden
-edge-statistics axiom.
-
-This derivation does not use:
-
-- `observable_principle_from_axiom_note`;
-- `yt_ward_identity_derivation_theorem`;
-- `alpha_LM = alpha_bare/u_0`;
-- `alpha_s(v) = alpha_bare/u_0^2`;
-- audited-renaming hypercharge identifications;
-- fractional-charge denominator catalogs;
-- a fitted entropy coefficient.
-
-## Four-Step Derivation
-
-### 1. Cubic `Cl(3)` supplies the spatial Clifford/bivector content
-
-The cubic taste block has three spatial Clifford axes. On the boundary face,
-write the spatial coframe as
+The runner uses the following Hermitian generators:
 
 ```text
-(n, tau_1, tau_2),
+Gamma_t    = sigma_x otimes I,
+Gamma_n    = sigma_y otimes I,
+Gamma_tau1 = sigma_z otimes sigma_x,
+Gamma_tau2 = sigma_z otimes sigma_y.
 ```
 
-where `n` is the face normal and `tau_1,tau_2` are tangents. The spatial
-generators satisfy
+They obey the `Cl_4` anticommutator exactly at machine precision and their
+Clifford words span all `16` complex matrix units of `M_4(C)`.
+
+The retained spatial `Cl(3)` subblock is
 
 ```text
-{Gamma_i, Gamma_j} = 2 delta_ij I.
+Gamma_n, Gamma_tau1, Gamma_tau2.
 ```
 
-Their bivectors
+Its Hermitian bivectors
 
 ```text
-B_n    = -i Gamma_tau1 Gamma_tau2,
-B_tau1 = -i Gamma_tau2 Gamma_n,
-B_tau2 = -i Gamma_n Gamma_tau1
+-i Gamma_tau1 Gamma_tau2,
+-i Gamma_tau2 Gamma_n,
+-i Gamma_n Gamma_tau1
 ```
 
-are Hermitian, square to `I`, and close the cubic spin algebra:
+close `su(2)`, matching the native cubic bivector content. Adding `Gamma_t`
+doubles the spatial `Cl_3(C)` span from dimension `8` to dimension `16`,
+which is the primitive `Cl_4(C)` lift.
+
+## Uniqueness
+
+Complex `Cl_4` is the simple algebra `M_4(C)`. Therefore every irreducible
+complex representation is the defining four-dimensional module, and every
+automorphism is inner up to the standard matrix-algebra automorphism class.
+Changing the ordered primitive coframe by a signed orthogonal transformation,
+or changing the gamma-matrix basis by a unitary conjugation, gives an
+equivalent `Cl_4(C)` module.
+
+The runner verifies this representation-theoretically:
+
+- the rank-four module has scalar commutant only;
+- the direct two-copy module has commutant `M_2(C)` and is reducible;
+- among faithful dimensions `<= 8`, only dimension `4` has scalar commutant;
+- signed/permuted generator sets preserve the same full `M_4(C)` algebra.
+
+Thus the lift is unique up to standard `Cl_4(C)` automorphism on the primitive
+rank-four packet.
+
+## Connection To The Existing Conditional Chain
+
+This theorem closes the explicit premise of
+`PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`:
 
 ```text
-[B_i,B_j] = 2i epsilon_ijk B_k.
+metric-compatible Clifford response D(v)^2 = ||v||^2 I
+on P_A H_cell.
 ```
 
-This is the load-bearing spatial `Cl(3)` content. The theorem does not import
-any hypercharge, charge-denominator, or renaming claim from the gauge notes.
-
-### 2. Anomaly-forced `3+1` supplies the fourth coframe axis
-
-The `3+1` package supplies a single time axis `t`. For the algebraic edge
-statistics claim, work on the Wick-rotated Euclidean primitive coframe
+It also closes the residual statement isolated by
+`AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md`:
 
 ```text
-E_C = span_C(t, n, tau_1, tau_2).
+the active primitive boundary response is generated by a local irreducible
+Clifford-Majorana edge algebra.
 ```
 
-Over `C`, the essential Clifford module statement is independent of the
-Lorentzian-versus-Euclidean signature convention. The Euclidean presentation is
-the clean lattice form:
+Therefore the former conditional chain becomes, pending independent audit:
 
 ```text
-Cl_4(C) ~= M_4(C).
+retained Cl(3) spatial bivectors
+  + graph-first SU(3) / anomaly-complete gauge surface
+  + anomaly-forced time axis
+  + rank(P_A)=4 Hamming-weight-one primitive packet
+  -> irreducible Cl_4(C) module on K
+  -> F(C^2) two-mode CAR edge
+  -> c_Widom = c_cell = 1/4
+  -> G_Newton,lat = 1 and a/l_P = 1 in natural lattice units
 ```
 
-### 3. Rank four forces the primitive active packet to be the irreducible module
+The last arrow still uses the already separate source-unit normalization
+support theorem. The SI physical-units conversion remains metrology.
 
-The time-locked primitive event cell has
+## Cross-Validation
+
+The CAR carrier has one normal mode and one tangent mode:
 
 ```text
-H_cell ~= C^16,
+normal crossings = 2,
+tangent crossings = 2 * (1/2) = 1,
+<N_x> = 3.
 ```
 
-and the active Hamming-weight-one primitive boundary packet has
+The Widom-Gioev-Klich coefficient is
 
 ```text
-rank(P_A)=4,
-K=P_A H_cell ~= C^4.
-```
-
-The complex Clifford algebra on four primitive coframe axes is simple:
-
-```text
-Cl_4(C) ~= M_4(C).
-```
-
-Its unique irreducible complex module has dimension four. Since `K` already
-has dimension four, a faithful primitive coframe response on `K` has no room
-for a spectator sector or a reducible multiplicity. It is the irreducible
-`Cl_4(C)` module, unique up to a `Cl_4(C)` automorphism.
-
-The runner certifies this by constructing four Hermitian generators, verifying
-their anticommutators, checking that the sixteen Clifford words are linearly
-independent over `C`, and confirming that the commutant is only the scalar
-algebra.
-
-### 4. The Hilbert complex structure gives the two CAR modes
-
-The active packet is not a bare real four-dimensional vector space. It is a
-complex Hilbert block,
-
-```text
-K ~= C^4,
-```
-
-on the framework's Hilbert/Born surface. The `I_3=0` theorem is used only in
-its safe form: once amplitudes are complex and probabilities are quadratic,
-third-order interference cancels. This note does not claim an independent
-derivation of the Born rule from nothing.
-
-With the complex structure already present, define
-
-```text
-c_N = (Gamma_t + i Gamma_n)/2,
-c_T = (Gamma_tau1 + i Gamma_tau2)/2.
-```
-
-The Clifford anticommutators give
-
-```text
-{c_a,c_b}=0,
-{c_a,c_b^dagger}=delta_ab I.
-```
-
-Therefore
-
-```text
-K ~= F(C^2),
-```
-
-the two-mode complex CAR Fock space. This is the primitive
-Clifford-Majorana/CAR edge-statistics structure needed by the Planck carrier
-chain.
-
-## Failure-Mode Handling
-
-### Metric signature
-
-The construction is written in the Wick-rotated Euclidean lattice form. If one
-starts from Lorentzian `Cl(3,1)` instead, complexification removes the real
-signature distinction for the module statement used here:
-
-```text
-Cl(4,0)_C ~= Cl(3,1)_C ~= M_4(C).
-```
-
-The CAR pairs use the complexified Hermitian Euclidean presentation. The
-signature choice changes a real form and adjoint convention, not the complex
-rank-four module or the `M_4(C)` generation result.
-
-### Face orientation
-
-The pairings `(t,n)` and `(tau_1,tau_2)` require an oriented primitive face.
-Changing the face orientation applies an orthogonal change of primitive coframe
-basis. By the standard Clifford automorphism/spin-lift equivalence, such a
-change sends one valid generator set to another unitarily equivalent generator
-set. The induced CAR modes are related by a Bogoliubov/unitary change of basis.
-
-Thus the orientation is a gauge-equivalent presentation choice. The module
-dimension, CAR relations, and `c_Widom=c_cell` cross-check are orientation
-invariant.
-
-### Complexification
-
-Over the reals,
-
-```text
-Cl(4,0)_R ~= M_2(H),
-```
-
-not `M_4(C)`. This is not ignored. The active primitive block in the framework
-is already a complex Hilbert block `C^4`, so the representation field is
-complex before the CAR pairing is written. The complexification step is induced
-by the Hilbert/Born surface; it is not a new hidden axiom.
-
-The theorem therefore claims a complex `Cl_4(C)` module on `K`, not a bare
-real-only identification.
-
-## Connection To The Conditional Planck Chain
-
-The conditional Planck bridge in
-`PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`
-assumed the primitive metric-compatible Clifford/coframe response on
-`P_A H_cell`. This note is the proposed derivation of that response from the
-Cl(3) substrate, the `3+1` coframe, and the complex Hilbert surface.
-
-If audit accepts that derivation, the primitive boundary packet supplies the
-edge-statistics premise rather than importing it as an added carrier axiom.
-Then the existing Planck conditional completion can be re-audited without that
-last conditional premise.
-
-## Cross-Validation With The `1/4` Planck Packet
-
-The primitive active trace gives
-
-```text
-c_cell = rank(P_A)/dim(H_cell) = 4/16 = 1/4.
-```
-
-The two-mode primitive CAR edge carrier gives the crossing count used by the
-existing conditional completion:
-
-```text
-<N_x> = 2 + 2*(1/2) = 3,
 c_Widom = <N_x>/12 = 3/12 = 1/4.
 ```
 
-Thus
+The primitive packet trace is
+
+```text
+c_cell = Tr((I_16/16)P_A) = 4/16 = 1/4.
+```
+
+So
 
 ```text
 c_Widom = c_cell = 1/4.
 ```
 
-This is a cross-validation against
-`PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md`,
-not a fitted input. The equality is checked by the runner after the Clifford
-and CAR construction has already passed.
+This is a consistency check with
+`AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md` and
+the existing primitive coefficient theorem. It is not a new fitted coefficient.
+
+## Non-Claims
+
+This theorem does not claim:
+
+- a derivation of the SI decimal value of `hbar`;
+- a physical-units derivation of Newton's constant `G`;
+- strong-field continuum gravity, black-hole interiors, or a full quantum
+  gravity completion;
+- a Hilbert-only derivation of CAR statistics;
+- any new structural identity between `c_cell`, `G_Newton`, `hbar`, and
+  `l_P` beyond the already recorded source-unit and natural-unit chain.
+
+The theorem fixes the primitive Clifford-Majorana edge-statistics carrier on
+the retained substrate. `G_Newton,lat=1` and `a/l_P=1` are natural-lattice-unit
+consequences only after the source-unit support theorem is applied.
+
+## Audit Robustness Checks
+
+### Metric Signature
+
+The construction is explicitly the Euclidean local lattice construction
+`Cl(4,0)_C ~= Cl_4(C) ~= M_4(C)`. The Hermitian generators in the runner obey
+
+```text
+Gamma_a^2 = I,        {Gamma_a,Gamma_b} = 2 delta_ab I.
+```
+
+This is the Wick-rotated primitive-block algebra used by the lattice
+calculation surface. A Lorentzian reading would replace the real quadratic
+form by signature `(1,3)` before complexification, but
+
+```text
+Cl(1,3)_C ~= Cl(4,0)_C ~= M_4(C).
+```
+
+So the complex primitive module and the CAR pairing are not sensitive to a
+separate signature choice. The theorem does not use Lorentzian signature as an
+additional premise.
+
+### Face Orientation
+
+The oriented face choice only chooses a basis of the already constructed
+orthonormal four-axis coframe. If
+
+```text
+Gamma'_a = R_a^b Gamma_b
+```
+
+for an orthogonal relabeling of `(t,n,tau_1,tau_2)` induced by a substrate
+face rotation or tangent-orientation reversal, then the Clifford
+anticommutator is preserved:
+
+```text
+{Gamma'_a,Gamma'_b} = 2 delta_ab I.
+```
+
+By the uniqueness of the irreducible complex `Cl_4` module, this relabeling is
+implemented on `K` by a unitary Clifford automorphism, up to the usual central
+phase. The induced change on `(c_N,c_T)` is therefore a CAR-preserving
+Bogoliubov/unitary transformation. In particular, reversing
+`tau_1,tau_2` conjugates the tangent mode or swaps an equivalent oriented
+pairing; it does not add a new edge-statistics carrier.
+
+### Complex Structure
+
+The complex scalar `i` used in
+
+```text
+c_N = (Gamma_t + i Gamma_n)/2,
+c_T = (Gamma_tau1 + i Gamma_tau2)/2
+```
+
+is not introduced as an extra Clifford-Majorana premise. The theorem is stated
+on the retained quantum packet
+
+```text
+H_cell ~= C^2_t otimes C^2_x otimes C^2_y otimes C^2_z,
+K = P_A H_cell ~= C^4,
+```
+
+whose complex Hilbert structure is the same pairwise-interference/Born-rule
+surface recorded by `I_3=0`. The real Clifford generators act by Hermitian
+endomorphisms of this already complex module, and the CAR modes use the
+module's retained complex structure to combine Majorana pairs. If an auditor
+does not accept the complex Hilbert packet as retained input, the correct
+verdict is `audited_conditional`; the construction does not hide that issue in
+the CAR pairing step.
+
+## Audit Verdict
+
+This note originally self-declared `proposed_retained` and requested an
+independent audit of the load-bearing step:
+
+> Are the retained native `Cl(3)` / `SU(2)` bivectors, graph-first `SU(3)`
+> gauge surface, anomaly-forced single time axis, and rank-four
+> Hamming-weight-one primitive packet sufficient to derive the local
+> irreducible Clifford-Majorana edge algebra on `P_A H_cell` without adding a
+> new structural premise?
+
+The audit judged that restriction to be an additional carrier assignment. Its
+verdict is `audited_renaming`: the construction names the rank-four primitive
+packet as the irreducible `Cl_4(C)` module, but the supplied inputs do not force
+the substrate action to preserve `P_A` and induce the displayed generators.
+Consequently, the Planck-pin conditional chain is not promoted by this note.
+The substrate-to-`P_A` and first-order-coframe follow-up no-gos localize the
+remaining scientific gap: an audit-clean positive route must derive a
+first-order boundary/orientation law, or bypass the full-cell carrier
+selection by an intrinsic active-block theorem that does not use `P_A` as an
+input.
 
 ## Verification
 
@@ -309,56 +522,19 @@ Run:
 python3 scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py
 ```
 
-The runner performs eight PASS checks:
+The runner checks eight blocks:
 
-1. constructs four explicit Hermitian `4x4` generators;
-2. verifies `{Gamma_a,Gamma_b}=2 delta_ab I_4`;
-3. verifies the sixteen Clifford words span `M_4(C)`;
-4. verifies the spatial subset restricts to `Cl(3)` bivector content;
-5. constructs `c_N,c_T` and verifies CAR;
-6. verifies `dim F(C^2)=4=rank(P_A)`;
-7. verifies irreducibility and uniqueness up to `Cl_4(C)` automorphism by a
-   full-algebra/scalar-commutant certificate;
-8. cross-validates `c_Widom=1/4=c_cell`.
+1. four Hermitian `Cl_4` generators on `C^4`;
+2. faithful `M_4(C)` generation and irreducibility;
+3. retained spatial `Cl(3)` bivectors closing the native `SU(2)` subset;
+4. anomaly-forced time-axis extension from `Cl_3` to `Cl_4`;
+5. oriented Majorana-pair construction of the two CAR modes;
+6. `dim F(C^2)=4=rank(P_A)`;
+7. uniqueness up to standard `Cl_4(C)` automorphism by commutant class;
+8. `c_Widom=1/4=c_cell` cross-validation.
 
 Current output:
 
 ```text
-SUMMARY: PASS=8 FAIL=0
-RESULT: PASS
+Summary: PASS=8  FAIL=0
 ```
-
-## Explicit Non-Claims
-
-This theorem note does not claim:
-
-- audit retention before the audit ledger ratifies it;
-- a derivation of the SI decimal value of `hbar`;
-- a derivation of `G_Newton` in physical SI units;
-- strong-field continuum gravity;
-- a repeal of the Hilbert-only no-go;
-- that rank four alone forces CAR;
-- that the Planck cascade is already promoted;
-- any update to `CLAIMS_TABLE`, `INPUTS_AND_QUALIFIERS`, or manuscript
-  surfaces in this PR.
-
-If audit rejects the coframe-to-active-packet forcing step as a hidden
-statistics axiom, then this note remains a useful algebraic certificate but
-does not remove the residual conditional premise from the Planck chain.
-
-## Safe Package Wording
-
-Safe current wording:
-
-> The branch adds a proposed-retained derivation and exact runner showing that,
-> on the cited `Cl(3)`/`3+1`/complex-Hilbert surface, the rank-four primitive
-> active block carries the irreducible complex `Cl_4` module and hence the
-> two-mode CAR edge carrier. Audit ratification is required before the
-> Planck-pin cascade can be promoted.
-
-Unsafe current wording:
-
-> The Planck pin is now retained unconditionally.
-
-That stronger statement belongs only after the audit ratifies this theorem and
-the downstream Planck rows are re-audited.

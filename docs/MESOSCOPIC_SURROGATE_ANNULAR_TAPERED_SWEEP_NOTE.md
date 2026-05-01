@@ -1,15 +1,14 @@
 # Mesoscopic Surrogate Annular / Tapered Sweep Note
 
 **Date:** 2026-04-04  
-**Status:** bounded localization sweep on the proposed_retained 3D mesoscopic surrogate
-family
+**Status:** bounded localization sweep on the 3D mesoscopic surrogate family
 
 ## Artifact chain
 
 - Script:
-  [`scripts/mesoscopic_surrogate_annular_tapered_sweep.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_annular_tapered_sweep.py)
+  [`scripts/mesoscopic_surrogate_annular_tapered_sweep.py`](../scripts/mesoscopic_surrogate_annular_tapered_sweep.py)
 - Log:
-  [`logs/2026-04-04-mesoscopic-surrogate-annular-tapered-sweep.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-annular-tapered-sweep.txt)
+  [`logs/2026-04-04-mesoscopic-surrogate-annular-tapered-sweep.txt`](../logs/2026-04-04-mesoscopic-surrogate-annular-tapered-sweep.txt)
 
 This sweep asks a narrow question:
 
@@ -86,10 +85,10 @@ So this is a bounded negative result, not a new localization breakthrough.
 
 This note should be read with:
 
-- [`MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md)
-- [`MESOSCOPIC_SURROGATE_LOCALIZATION_FRONTIER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_LOCALIZATION_FRONTIER_NOTE.md)
-- [`MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md)
-- [`PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md)
+- [`MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md`](MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md)
+- [`MESOSCOPIC_SURROGATE_LOCALIZATION_FRONTIER_NOTE.md`](MESOSCOPIC_SURROGATE_LOCALIZATION_FRONTIER_NOTE.md)
+- [`MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md`](MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md)
+- [`PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`](PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md)
 
 Together, these notes say:
 

@@ -45,14 +45,14 @@ PASS = 0
 FAIL = 0
 
 
-def check(label, cond, detail=""):
+def check(label, cond, detail="", cls="A"):
     global PASS, FAIL
     status = "PASS" if cond else "FAIL"
     if cond:
         PASS += 1
     else:
         FAIL += 1
-    print(f"[{status}] {label}" + (f"  ({detail})" if detail else ""))
+    print(f"[{status} ({cls})] {label}" + (f"  ({detail})" if detail else ""))
 
 
 # ---------------------------------------------------------------------------
@@ -258,6 +258,7 @@ check(
     "Route 1 target P_m is the same scalar as (dagger)",
     True,
     "established by Route 1's isotypic decomposition (60/60 PASS)",
+    cls="B",
 )
 
 # Route from the circulant-character note: A1 (equipartition 3a^2 = 6|b|^2).
@@ -361,6 +362,7 @@ check(
     "OBSERVATIONAL: PDG charged-lepton masses give kappa ≈ 2 (sub-percent)",
     abs(kappa_observed - 2) / 2 < 0.01,
     f"kappa_observed = {kappa_observed:.6f}",
+    cls="D",
 )
 
 

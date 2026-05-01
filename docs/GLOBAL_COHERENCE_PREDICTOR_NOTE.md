@@ -8,7 +8,7 @@
 > closed; this note is kept for the record.
 
 **Date:** 2026-04-07
-**Status:** proposed_retained partial — single-property `free_coh ≥ 7.96e-04` improves cross-generator accuracy from 6/9 = 66.7% to **7/9 = 77.8%** while keeping in-sample at 92.3%. The classifier program is alive but still empirical and the cross-generator gap is not closed.
+**Status:** bounded - historical scaffold-specific evidence. The 2026-04-07 off-scaffold lane reversed the advantage to 5/9 = 55.6%, exactly matching the prior rule, so the original 7/9 = 77.8% revival was scaffold-specific. The classifier program is closed; this note is kept as historical finite evidence only.
 
 ## Artifact chain
 

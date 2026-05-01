@@ -50,7 +50,7 @@ PASS_COUNT = 0
 FAIL_COUNT = 0
 
 
-def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT") -> bool:
+def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT", cls: str = "A") -> bool:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
@@ -58,7 +58,7 @@ def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT") -> 
     else:
         FAIL_COUNT += 1
     tag = f" [{kind}]" if kind != "EXACT" else ""
-    msg = f"  [{status}]{tag} {name}"
+    msg = f"  [{status} ({cls})]{tag} {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)
@@ -282,24 +282,28 @@ def part5_observed_charged_lepton_witness() -> None:
         np.linalg.norm(h_rec - h_obs) < 1e-10,
         detail=f"err={np.linalg.norm(h_rec - h_obs):.2e}",
         kind="NUMERIC",
+        cls="D",
     )
     check(
         "The cyclic descendant spectrum reproduces the observed sqrt(m) triple",
         np.max(np.abs(np.sort(evals) - np.sort(amps))) < 1e-10,
         detail=f"evals={np.round(np.sort(evals), 9)}",
         kind="NUMERIC",
+        cls="D",
     )
     check(
         "Observed charged leptons satisfy the response-space Koide equation to PDG precision",
         abs(ratio - 1.0) < 1e-4,
         detail=f"(r1^2+r2^2)/(2 r0^2)={ratio:.10f}",
         kind="NUMERIC",
+        cls="D",
     )
     check(
         "So the observed target is one scale r0 and one phase arg(r1 + i r2) inside the cyclic Wilson law",
         True,
         detail=f"r0={r0:.6f}, phase={phase:.6f} rad",
         kind="NUMERIC",
+        cls="D",
     )
 
 

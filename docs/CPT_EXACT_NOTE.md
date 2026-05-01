@@ -1,10 +1,18 @@
 # CPT Exact Preservation in the Cl(3) Staggered Framework
 
-**Status:** support - structural or confirmatory support note
+**Status:** proposed_retained exact staggered CPT theorem; audit pending
+after Hermitian-Hamiltonian bridge
+**Bridge:** [PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md](./PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md)
 ## Status
 
 EXACT theorem on even periodic lattices. All checks pass on `L = 4, 6, 8`
 (`PASS=53 FAIL=0`), and the runner now rejects odd `L`.
+
+The original runner proves the `D`-level identities for the real
+anti-Hermitian staggered hopping operator. The physical Hermitian Hamiltonian
+claim is now carried by the bridge note above, which explicitly handles the
+antiunitary `i -> -i` step in `H = iD` and verifies the SME-zero sector on the
+Hermitian lift. Audit ratification is still pending.
 
 ## Theorem / Claim
 
@@ -34,6 +42,8 @@ violated, CP is preserved at tree level, and CPT is exactly preserved.
 1. Cl(3) staggered framework on Z^3 with periodic boundary conditions.
 2. Even lattice size L (required for parity to be well-defined).
 3. No additional interactions beyond the free staggered Hamiltonian.
+4. The physical-Hamiltonian statement uses the bridge theorem's Hermitian
+   lift `H = iD` and antiunitary representative `Theta_H = P K`.
 
 ## What Is Actually Proved
 
@@ -53,7 +63,8 @@ violated, CP is preserved at tree level, and CPT is exactly preserved.
    - [CPT, H] = 0 verified numerically to machine precision on L = 4, 6, 8.
    - All residuals are exactly 0.00e+00 (not just small -- identically zero).
 
-5. **SME coefficients**: The CPT-odd part of H vanishes identically:
+5. **SME coefficients**: The CPT-odd part of the Hermitian Hamiltonian
+   vanishes identically by the bridge theorem:
    - H^{odd} = (H - CPT*H*(CPT)^{-1})/2 = 0.
    - All direction-resolved a_mu coefficients = 0.
    - The Frobenius norm ||H^{odd}|| = 0 at every lattice size tested.

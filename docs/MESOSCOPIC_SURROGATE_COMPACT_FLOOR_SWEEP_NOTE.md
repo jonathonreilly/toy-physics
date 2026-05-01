@@ -1,12 +1,12 @@
 # Mesoscopic Surrogate Compact Floor Sweep Note
 
 **Date:** 2026-04-04  
-**Status:** constrained compact-family control sweep for the proposed_retained 3D surrogate lane
+**Status:** bounded constrained compact-family control sweep for the 3D surrogate lane
 
 ## Artifact chain
 
-- Script: [`scripts/mesoscopic_surrogate_compact_floor_sweep.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_compact_floor_sweep.py)
-- Log: [`logs/2026-04-04-mesoscopic-surrogate-compact-floor-sweep.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-compact-floor-sweep.txt)
+- Script: [`scripts/mesoscopic_surrogate_compact_floor_sweep.py`](../scripts/mesoscopic_surrogate_compact_floor_sweep.py)
+- Log: [`logs/2026-04-04-mesoscopic-surrogate-compact-floor-sweep.txt`](../logs/2026-04-04-mesoscopic-surrogate-compact-floor-sweep.txt)
 
 This sweep is the follow-up to the localization-family negative result.
 It asks a tighter question:
@@ -74,10 +74,10 @@ The expected outcomes are:
 
 Read this with:
 
-- [`MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md)
-- [`MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md)
-- [`MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md)
-- [`BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md)
+- [`MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md`](MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md)
+- [`MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md`](MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md)
+- [`MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md`](MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md)
+- [`BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md`](BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md)
 
 ## Best next move
 

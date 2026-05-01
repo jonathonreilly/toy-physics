@@ -1,9 +1,8 @@
 # Area-Law Primitive CAR Edge Identification Theorem Note
 
 **Date:** 2026-04-25
-**Status:** Target 2 bridge theorem conditional on primitive complex-CAR edge
-semantics; the Target 3 Clifford phase bridge supplies a sufficient coframe
-response premise
+**Status:** support / conditional Target 2 bridge; 2026-04-30 carrier
+identification audited_renaming
 **Runner:** `scripts/frontier_area_law_primitive_car_edge_identification.py`
 
 ## Purpose
@@ -170,19 +169,22 @@ second by no duplicate normal channel. The remaining minimal local tangent
 response is the self-dual Laplacian-gated channel, giving the Bekenstein-
 Hawking coefficient.
 
-## What this closes, and what remains conditional
+## What this closes, and audit fallback
 
 This note closes the carrier-identification step relative to the
 primitive-CAR edge axioms. It upgrades the earlier parity-gate theorem from
 "a candidate multipocket selector" to "the unique minimal local-CAR edge
 carrier."
 
-The remaining question is exactly whether the primitive-CAR edge axioms are
+The remaining question was exactly whether the primitive-CAR edge axioms are
 accepted as native `Cl(3)/Z^3` horizon semantics. The Target 3 Clifford phase
-bridge supplies a sufficient metric-compatible coframe response, but that
-response remains the explicit bridge premise. If it is rejected or stripped
-away, this result remains a sharp conditional theorem and the retained no-go
-packet still describes the selector-free surface.
+bridge supplies a sufficient metric-compatible coframe response, and the
+2026-04-30 primitive Clifford-Majorana edge derivation attempted to derive
+that response from retained spatial `Cl(3)` bivectors plus the anomaly-forced
+time axis. Audit returned `audited_renaming`: the carrier algebra is verified,
+but the substrate-to-`P_A` forcing step is not derived. This result therefore
+remains a sharp conditional theorem, and the retained no-go packet still
+describes the selector-free surface.
 
 [AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md](./AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md)
 tightens this question further: primitive-CAR semantics are equivalent to
@@ -194,6 +196,11 @@ states the sufficient coframe-response bridge: metric-compatible primitive
 coframe response forces the complex `Cl_4` relations on `P_A H_cell`, and the
 rank-four irreducible module is equivalent to the two-mode CAR carrier. On a
 stripped Hilbert-only surface the conditional wording still applies.
+
+[PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md](./PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md)
+is the audited-renaming construction of that coframe response: useful as an
+explicit carrier model, but not a derivation of the carrier from the supplied
+substrate content.
 
 ## Relation to retained no-gos
 
