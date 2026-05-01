@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:22:13.450626+00:00
+**Generated:** 2026-05-01T05:23:07.860211+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 215 |
-| support | 180 |
+| support | 179 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 823 |
+| ~~audited_conditional~~ | 824 |
 | ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 247 |
-| `audited_conditional` | 554 |
+| `audited_conditional` | 555 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 642 |
+| `unaudited` | 641 |
 
 | criticality | count |
 |---|---:|
@@ -820,6 +820,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_time_bilinear_tensor_action_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `s3_time_spacetime_tensor_primitive_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_time_tensorized_schur_primitive_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `s3_time_theta_to_slice_coupling_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -12051,6 +12052,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `S3_GENERAL_R_DERIVATION_NOTE.md`
   - `ANOMALY_FORCES_TIME_THEOREM.md`
   - `OH_SCHUR_BOUNDARY_ACTION_NOTE.md`
+- **auditor confidence:** high
+
+### `s3_time_theta_to_slice_coupling_note`
+
+- **Note:** [`S3_TIME_THETA_TO_SLICE_COUPLING_NOTE.md`](../../docs/S3_TIME_THETA_TO_SLICE_COUPLING_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Once an admissible readout map P_R is chosen, Xi_P(t; c) = (P_R c) ⊗ exp(-t Lambda_R) u_* gives an exact conditional readout-to-slice coupling family, but the unique readout map is not yet derived.  _(class `B`)_
+- **chain closes:** False — The note's own conclusion is conditional: P_R must be chosen, and the endpoint readout ratios are not derived. The row also has no registered runner despite referring to a new runner that demonstrates the non-uniqueness obstruction.
+- **rationale:** Issue: the construction is exact only after an admissible readout map P_R is supplied, and the note says that map is not uniquely derived. Why this blocks: different admissible maps produce different spacetime tensors on the same slice backbone, so the current row cannot claim a unique Theta_R -> Lambda_R coupling theorem. Repair target: derive the readout endpoint ratios or register the obstruction runner and upstream exact carrier/slice dependencies so the conditional family is mechanically auditable. Claim boundary until fixed: Route 2 has a conditional coupling family and a sharpened uniqueness obstruction, not a unique exact coupling law.
 - **auditor confidence:** high
 
 ### `scalar_3plus1_temporal_ratio_note`

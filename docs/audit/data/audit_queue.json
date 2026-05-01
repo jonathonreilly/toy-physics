@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 287,
-    "medium": 152
+    "medium": 151
   },
-  "generated_at": "2026-05-01T05:22:13.190152+00:00",
+  "generated_at": "2026-05-01T05:23:07.614919+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6545,23 +6545,6 @@
       "direct_in_degree": 1,
       "load_bearing_score": 5.587,
       "note_path": "docs/EQUIVALENCE_PRINCIPLE_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 33
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "s3_time_theta_to_slice_coupling_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.587,
-      "note_path": "docs/S3_TIME_THETA_TO_SLICE_COUPLING_NOTE.md",
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 33
@@ -15583,6 +15566,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 246,
-  "total_pending": 642
+  "ready_count": 245,
+  "total_pending": 641
 }
