@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:01:29.097612+00:00
+**Generated:** 2026-05-01T03:03:54.687371+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 254 |
+| bounded | 253 |
 | support | 211 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 12 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 786 |
+| ~~audited_conditional~~ | 787 |
 | ~~audited_failed~~ | 144 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 230 |
-| `audited_conditional` | 513 |
+| `audited_conditional` | 514 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 9 |
 | `audited_renaming` | 14 |
-| `unaudited` | 730 |
+| `unaudited` | 729 |
 
 | criticality | count |
 |---|---:|
@@ -728,6 +728,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `oh_schur_boundary_action_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `one_generation_matter_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `one_parameter_reduced_shell_law_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `physical_lattice_necessity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -10026,6 +10027,24 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
   - `ANOMALY_FORCES_TIME_THEOREM.md`
 - **auditor confidence:** high
+
+### `one_parameter_reduced_shell_law_note`
+
+- **Note:** [`ONE_PARAMETER_REDUCED_SHELL_LAW_NOTE.md`](../../docs/ONE_PARAMETER_REDUCED_SHELL_LAW_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-one_parameter_reduced_shell_law_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims that on the reduced shell surface the sewing-shell law is fixed entirely by total charge, sigma_red(Q) = Q * (k_rad + c_aniso * m_orb), with no extra family-dependent anisotropic amplitude.  _(class `C`)_
+- **chain closes:** False — The runner numerically checks the reduced-source invariance, but the exact theorem still depends on undeclared predecessor primitives and machine-precision Green-solve equality rather than an exact/symbolic proof or a classified audit runner surface.
+- **rationale:** Issue: the runner produces seven PASS checks for the reduced shell calculation, but none are A/B/C/D classified, and the source note declares deps=[] while relying on already-established radial DtN, anisotropic shell-sector, exact local O_h, and finite-rank source-family primitives. Why this blocks: the bounded reduced law is numerically supported, but the claimed exact one-parameter theorem is not auditable as closed from the note alone because the exact source-class/projection machinery and the numeric-to-exact step are implicit. Repair target: register the upstream gravity-shell dependency notes or include their exact constructions, update the runner to emit classified PASS lines for the lattice compute, and add an exact or certified-error proof that the machine-precision equalities force the stated theorem. Claim boundary until fixed: evidence for a one-parameter reduced-shell law on the tested star-supported source class; not a closed exact theorem for the gravity matching program.
+- **open / conditional deps cited:**
+  - `scripts/frontier_star_shell_projector.py`
+  - `scripts/frontier_same_source_metric_ansatz_scan.py`
+  - `scripts/frontier_coarse_grained_exterior_law.py`
+  - `scripts/frontier_sewing_shell_source.py`
+  - `scripts/frontier_radial_shell_matching_law.py`
+- **auditor confidence:** medium
 
 ### `packet_memory_note`
 
