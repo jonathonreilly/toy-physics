@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:25:47.453585+00:00
+**Generated:** 2026-05-01T07:31:38.241024+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 277 |
+| `audited_clean` | 278 |
 | `audited_conditional` | 589 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 569 |
+| `unaudited` | 568 |
 
 | criticality | count |
 |---|---:|
@@ -319,6 +319,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `newtonian_distance_law_confirmed` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `nonlabel_grown_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `nonlabel_grown_drift_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `packet_memory_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -11169,6 +11170,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **chain closes:** False — The note states a bounded negative control result but provides no primary runner, frozen log, sweep grid, thresholds, or numerical output to verify the claimed absence of an admissible persistent inertial-object class. The audit can accept the safe boundary language, but not the negative control as a checked result.
 - **rationale:** Issue: the decisive negative probe is unauditable because the row has no runner_path and the note does not include the control parameters, thresholds, or frozen output. Why this blocks: a hostile reviewer cannot distinguish a genuine no-go sweep from an informal summary, and the absence of admissible classes is exactly the load-bearing result. Repair target: restore or register the persistent-pattern control runner and its frozen log, including the capture/carry/shift threshold definitions and sweep domain. Claim boundary until fixed: safe as a bounded qualitative warning that the Newton persistent-pattern route is not closed, not as a verified negative control theorem.
 - **auditor confidence:** medium
+
+### `newtonian_distance_law_confirmed`
+
+- **Note:** [`NEWTONIAN_DISTANCE_LAW_CONFIRMED.md`](../../docs/NEWTONIAN_DISTANCE_LAW_CONFIRMED.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The review-safe claim is that the widened W=12, h=0.25 replay gives a bounded finite-lattice far-tail fit of b^(-1.17) on z >= 5, not a universal Newton theorem.  _(class `C`)_
+- **chain closes:** True — The current primary runner completed locally and reproduces the frozen bounded replay: Born=4.82e-15, k=0=+0.000000, 9/9 toward rows, peak-tail b^(-1.07), and far-tail b^(-1.17) with R^2=0.997. The note explicitly redirects away from the historical headline toward bounded finite-lattice wording.
+- **rationale:** The source note is a historical-headline wrapper whose operative claim is the bounded replay result, not universal Newtonian confirmation. The current runner reproduces the cited finite-lattice wide-tail values and the note states the correct boundary that this is a strong replay but not a universal theorem. Residual risk is operational: the replay is genuinely slow at about 127 seconds, so future audit automation should treat it as a slow runner rather than a missing result.
+- **auditor confidence:** high
 
 ### `nonlabel_grown_basin_note`
 
