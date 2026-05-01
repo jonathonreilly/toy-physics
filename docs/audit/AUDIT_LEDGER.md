@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:39:07.223028+00:00
+**Generated:** 2026-05-01T04:40:10.136988+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 224 |
+| bounded | 223 |
 | support | 189 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 24 |
+| ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 811 |
 | ~~audited_failed~~ | 159 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 542 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
-| `audited_numerical_match` | 21 |
+| `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 676 |
+| `unaudited` | 675 |
 
 | criticality | count |
 |---|---:|
@@ -961,6 +961,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_higher_order_corrections_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_bridge_moment_closure_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_bridge_nonlocal_corrections_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
+| `yt_bridge_operator_closure_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `yt_bridge_uv_class_uniqueness_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_constructive_uv_bridge_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_exact_interacting_bridge_transport_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -13424,6 +13425,18 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`
   - `TARGET_CONDITIONED_INPUT: TARGET_YT_PHYS = 0.9176`
   - `PROFILE_FAMILY_SELECTION: logistic / erf / smoothstep UV-localized bridges`
+- **auditor confidence:** high
+
+### `yt_bridge_operator_closure_note`
+
+- **Note:** [`YT_BRIDGE_OPERATOR_CLOSURE_NOTE.md`](../../docs/YT_BRIDGE_OPERATOR_CLOSURE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The unresolved bridge is not plausibly being absorbed into wide EW-side operator ambiguity.  _(class `G`)_
+- **chain closes:** False — The runner shows this within the selected diffuse/localized profile scan against the accepted y_t(v) target, but it does not derive a full operator theorem or exhaust all higher-operator families.
+- **rationale:** Issue: the claimed operator-closure support is a target-conditioned numerical scan over representative bridge profiles and a wide electroweak input window. Why this blocks: the scan narrows the plausible bridge mechanism, but it does not prove that all electroweak-side operator freedom is excluded or that the exact interacting bridge is uniquely UV-localized. Repair target: derive an operator-level bridge theorem or an exhaustive bound over the allowed higher-operator family independent of the accepted y_t(v) target. Claim boundary until fixed: the note supports a bounded numerical proxy that broad EW-side deformations do not rescue the tested diffuse bridge family.
 - **auditor confidence:** high
 
 ### `yt_bridge_rearrangement_principle_note`
