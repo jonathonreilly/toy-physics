@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:35:18.926104+00:00
+**Generated:** 2026-05-01T03:37:01.004111+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 243 |
+| bounded | 242 |
 | support | 202 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 51 |
-| ~~audited_conditional~~ | 793 |
+| ~~audited_conditional~~ | 794 |
 | ~~audited_failed~~ | 150 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 231 |
-| `audited_conditional` | 523 |
+| `audited_conditional` | 524 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 67 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 709 |
+| `unaudited` | 708 |
 
 | criticality | count |
 |---|---:|
@@ -820,6 +820,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_qg_pl_weak_form_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_uv_finite_partition_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `unpromoted_branch_retainability_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `up_sector_partition_revisit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `vector_sector_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_3plus1d_promotions_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -12518,6 +12519,23 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `GROWING_GRAPH_FRONTIER_EXPANSION_PROXY_NOTE.md`
   - `GROWING_GRAPH_FRONTIER_ARCHITECTURE_TRANSFER_NOTE.md`
   - `GROWING_GRAPH_DYNAMIC_LIMIT_DIAGNOSTIC_NOTE.md`
+- **auditor confidence:** high
+
+### `up_sector_partition_revisit_note_2026-04-19`
+
+- **Note:** [`UP_SECTOR_PARTITION_REVISIT_NOTE_2026-04-19.md`](../../docs/UP_SECTOR_PARTITION_REVISIT_NOTE_2026-04-19.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-up_sector_partition_revisit_note_2026-04-19`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Retained Phase 1 down exactness saturates the old CP-orthogonal sums, forcing the old interior partition to the edge, while newer quark surfaces map only to a bounded phase-deformed interference edge.  _(class `B`)_
+- **chain closes:** False — The algebraic obstruction and bounded phase windows are verified once the Phase 1 down exactness, newer quark solve surfaces, and up-sector authority note are imported. This row registers no dependencies for those inputs, so the obstruction is conditional on external upstream claims rather than closed from this note alone.
+- **rationale:** Issue: the claimed obstruction and phase-edge replacement rely on retained Phase 1 down exactness, newer quark solve surfaces, and the old up-sector authority note, but the ledger row has no registered dependencies. Why this blocks: without those upstream claims, the runner only shows that the imported constants and surfaces imply the obstruction and bounded windows. Repair target: cite and ratify the quark mass-ratio full solve, projector-parameter, projector-ray phase, and up-type authority notes as explicit dependencies. Claim boundary until fixed: granted those upstream surfaces, the old orthogonal interior partition is obstructed and the bounded phase-deformed edge window is reproduced by the runner.
+- **open / conditional deps cited:**
+  - `QUARK_MASS_RATIO_FULL_SOLVE_NOTE_2026-04-18.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`
+  - `UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md`
 - **auditor confidence:** high
 
 ### `valley_linear_continuum_synthesis_note`
