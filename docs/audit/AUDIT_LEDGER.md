@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:59:28.225087+00:00
+**Generated:** 2026-05-01T04:01:12.400045+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 239 |
-| support | 198 |
+| support | 197 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 799 |
+| ~~audited_conditional~~ | 800 |
 | ~~audited_failed~~ | 156 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 530 |
+| `audited_conditional` | 531 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 699 |
+| `unaudited` | 698 |
 
 | criticality | count |
 |---|---:|
@@ -620,6 +620,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_wider_replay_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `h0125_wider_w4_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `h0125_wider_w4_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hard_geometry_gravity_window_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hard_geometry_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hierarchy_bosonic_bilinear_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -7370,6 +7371,23 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** Absent those premises, `sqrt(sigma)` can be used only as a bounded scale comparator or support input.  _(class `A`)_
 - **chain closes:** True — The claim is a negative boundary: the note does not derive hadron masses, but shows that confinement plus one bounded string-tension scale leaves channel-dependent coefficients and the GMOR/nucleon inputs unretained. The live runner verifies the repo guardrails, the coefficient separation, the GMOR dependencies, and the safe open endpoint with PASS=16 FAIL=0.
 - **rationale:** The retained content is the firewall itself, not a hadron-mass derivation. The note's load-bearing step is the exact underdetermination that a single bounded scale leaves independent dimensionless spectral coefficients and cannot supply the GMOR or nucleon-correlator inputs. The live runner confirms the current repository boundary and uses observed hadron masses only to expose coefficient freedom. Residual risk is downstream misuse: this audit does not ratify any pion, proton, neutron, or spectrum mass prediction.
+- **auditor confidence:** high
+
+### `hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27`
+
+- **Note:** [`HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md`](../../docs/HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note decomposes the 5.6% sqrt(sigma) gap into five EFT-bridge contributions and identifies quenched-to-dynamical screening plus the framework-SU(3) bridge as the load-bearing retention gates.  _(class `B`)_
+- **chain closes:** False — The note is an honest support/gate audit, but it relies on the confinement string-tension derivation, alpha_s retention, lane roadmap, and external lattice-QCD/PDG bridge inputs without registering them as dependencies. No runner checks the budget arithmetic or the claimed dominance of B2/B5.
+- **rationale:** Issue: the residual-budget decomposition depends on unregistered source notes and imported lattice-QCD/Sommer-scale/PDG inputs, with no runner or one-hop dependencies. Why this blocks: a hostile auditor cannot verify from this row alone that the 5.6% gap is dominated by B2 and bounded by B5 rather than by the selected Method 2 assumptions. Repair target: register the confinement string-tension, alpha_s, lane-roadmap, and minimal-axiom authorities as dependencies, and add a small budget runner reproducing the bridge contribution table. Claim boundary until fixed: this is a useful conditional retention-gate map for sqrt(sigma), not an audited closure or promotion of the hadron Lane 1 derivation.
+- **open / conditional deps cited:**
+  - `CONFINEMENT_STRING_TENSION_NOTE.md`
+  - `ALPHA_S_DERIVED_NOTE.md`
+  - `HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md`
+  - `MINIMAL_AXIOMS_2026-04-11.md`
 - **auditor confidence:** high
 
 ### `hard_geometry_gravity_window_note`
