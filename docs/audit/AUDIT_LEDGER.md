@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:42:03.247555+00:00
+**Generated:** 2026-05-01T02:46:43.239953+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,22 +21,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 90 |
 | _proposed_retained_ | 2 |
-| bounded | 258 |
+| bounded | 257 |
 | support | 211 |
 | open | 15 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 13 |
+| ~~audited_numerical_match~~ | 12 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 780 |
+| ~~audited_conditional~~ | 782 |
 | ~~audited_failed~~ | 144 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 509 |
+| `audited_conditional` | 510 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 64 |
-| `audited_numerical_match` | 10 |
+| `audited_numerical_match` | 9 |
 | `audited_renaming` | 14 |
 | `unaudited` | 734 |
 
@@ -47,7 +47,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 386 |
 | `leaf` | 769 |
 
-- **Proposed claims demoted by upstream:** 131
+- **Proposed claims demoted by upstream:** 132
 - **Citation cycles detected:** 59
 
 ### Runner classification (static heuristic)
@@ -813,6 +813,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_direct_dm_h025_two_point_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | B | - |
 | `wave_equation_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_radiation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `wave_retardation_continuum_limit_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `wave_retarded_gravity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_static_matrixfree_shared_geometry_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wilson_normalization_reconciliation_note_2026-04-11` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -903,7 +904,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
-| `dm_continuum_limit_velocity_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `mirror_chokepoint_boundary_fit_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -3647,20 +3647,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
 - **auditor confidence:** medium
-
-### `dm_continuum_limit_velocity_note`
-
-- **Note:** [`DM_CONTINUUM_LIMIT_VELOCITY_NOTE.md`](../../docs/DM_CONTINUUM_LIMIT_VELOCITY_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_numerical_match~~
-- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** At three velocities and three refinements, none of the dM values converge at the 5% threshold; last-step drifts are 16.4%, 9.3%, and 13.5%, while the H=0.25 values remain in a narrow band.  _(class `G`)_
-- **chain closes:** False — The negative conclusion is a selected numerical sweep imported from an unregistered runner/log, and its one-hop continuum authority is bounded. The audit packet cannot reproduce the table or promote the finite sweep to a retained theorem.
-- **rationale:** Issue: the claim rests on selected finite H and velocity values from scripts/dm_continuum_limit_velocity.py, but that runner is not registered and the dependency is a bounded wave-retardation continuum note. Why this blocks: the finite negative is plausible and useful, yet it is still a numerical surface rather than a retained continuum-limit theorem or exhaustive no-go. Repair target: register the runner/log as the primary audit artifact, recompute the table with hard convergence thresholds, and narrow the status to bounded finite-sweep negative unless a theorem/extrapolation closes the continuum behavior. Claim boundary until fixed: safe as a bounded report that the tested Fam1 velocities do not converge by H=0.25; not safe as audit-clean retained continuum velocity science.
-- **open / conditional deps cited:**
-  - `WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md`
-- **auditor confidence:** high
 
 ### `dm_current_bank_quantitative_mapping_note_2026-04-21`
 
@@ -12296,6 +12282,22 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `strict_lightcone_evidence_imported_from_Lane_5_not_registered_dependency`
   - `finite_domain_reflection_and_asymptotic_fit_window_not_proven`
   - `Born_residual_headline_stale_relative_to_live_runner`
+- **auditor confidence:** high
+
+### `wave_retardation_continuum_limit_note`
+
+- **Note:** [`WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md`](../../docs/WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-wave_retardation_continuum_limit_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The H=0.50/0.35/0.25 sweep keeps approximate physical parameters fixed and shows dM drifting monotonically by about 14%, while cached/equilibrated/Newton c=infinity comparators oscillate and the relative gaps do not converge at the tested refinements.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the reported three-refinement numerical battery, but it is slow, emits no classified PASS lines or threshold checks, and the conclusion remains comparator- and finite-refinement-dependent rather than an analytic continuum limit.
+- **rationale:** Issue: the registered runner completes and reproduces the note's refinement tables, but it takes well beyond the 60s audit-loop expectation, emits no A/B/C/D PASS lines, and does not enforce hard pass/fail thresholds for convergence; the sweep also uses only three H values with integer-rounded physical parameters and no audited discrete static-comparator theorem. Why this blocks: the data support a bounded negative statement about the tested comparators at H >= 0.25, but they do not prove a continuum-limit no-go or a physical retardation magnitude theorem. Repair target: either mark the runner explicitly slow with a reason or split/cache the deterministic battery, add classified threshold checks for dM stability and comparator nonconvergence, and derive or register the correct discrete static comparator. Claim boundary until fixed: the tested runner shows a stable retarded-field signal and nonconvergent c=infinity comparator magnitudes over the three reported refinements; not an audited continuum-limit theorem for wave retardation magnitude.
+- **open / conditional deps cited:**
+  - `scripts/wave_retardation_continuum_limit.py`
+  - `logs/2026-04-07-wave-retardation-continuum-limit.txt`
+  - `WAVE_RETARDATION_LAB_PREDICTION_NOTE.md`
 - **auditor confidence:** high
 
 ### `wave_retardation_lab_prediction_note`
