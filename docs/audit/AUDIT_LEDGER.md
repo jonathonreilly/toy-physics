@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T09:11:09.361541+00:00
+**Generated:** 2026-05-01T09:23:59.301977+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 288 |
+| `audited_clean` | 289 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 557 |
+| `unaudited` | 556 |
 
 | criticality | count |
 |---|---:|
@@ -334,6 +334,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_compact_inertial_probe_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_compact_update_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_green_scout_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -11518,6 +11519,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The repeated self-consistent Green-like source object survives three updates with positive weak-field response and F~M=1.00 while remaining broad rather than sharply localized.  _(class `C`)_
 - **chain closes:** True — The registered runner reproduces the zero-source reduction and frozen scout table: source N_eff stays about 4.788, detector N_eff stays about 497, all deltas are positive, and each update step has F~M=1.00 with 4/4 TOWARD. The note correctly keeps the claim at bounded quasi-persistent source-object scope.
 - **rationale:** The bounded Green-scout claim is current with the primary runner and the output supports repeated source-object survival plus weak-field linear response. The object remains broad, with source N_eff near 4.788 out of 5 and detector response still broad, so the note does not claim a persistent inertial object or mass theorem. Residual risk is limited to the stated minimal exact-lattice loop rather than a hidden closure claim.
+- **auditor confidence:** high
+
+### `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_INWARD_BOUNDARY_FLOOR_DIAGNOSIS_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_INWARD_BOUNDARY_FLOOR_DIAGNOSIS_NOTE_2026-04-16.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Broadening the compact-object floor from top4 to top5/top6/top8 does not reopen the inward-source boundary: source0.75 and source1.00 remain closed, while source1.25 and source1.50 remain admissible.  _(class `C`)_
+- **chain closes:** True — The current runner was executed on the four inward-source rows for top_keep=4,5,6,8 and reproduced the same 2/4 admissible split at every width, with the same closed and open rows reported by the note.
+- **rationale:** Clean within the note's bounded scope. The load-bearing claim is not matter closure or pocket universality; it is the narrower statement that widening the compact-object floor across top4/top5/top6/top8 does not repair the two residual inward-source misses. The current runner computes the multistage cases for each width and reproduces the frozen 2/4 totals and the same row-level split: source0.75 and source1.00 remain closed, while source1.25 and source1.50 remain admissible. Residual risk is the declared bounded exact-lattice setting and the continued directional/source-placement limit, not a mismatch in the audited floor-width claim.
 - **auditor confidence:** high
 
 ### `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16`
