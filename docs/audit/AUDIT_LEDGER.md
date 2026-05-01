@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:44:13.260548+00:00
+**Generated:** 2026-05-01T05:45:16.926189+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 212 |
+| bounded | 211 |
 | support | 170 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 832 |
-| ~~audited_failed~~ | 168 |
+| ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 250 |
 | `audited_conditional` | 563 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 80 |
+| `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 626 |
+| `unaudited` | 625 |
 
 | criticality | count |
 |---|---:|
@@ -991,6 +991,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_equation_gravity_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | D | - |
 | `wilson_mu2_distance_sweep_note_2026-04-11` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `yt_exact_hessian_selector_uniqueness_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `yt_zero_import_chain_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `architecture_note_directional_measure` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `bell_inequality_derived_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
@@ -14252,6 +14253,20 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md`
   - `YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md`
   - `YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md`
+- **auditor confidence:** high
+
+### `yt_exact_hessian_selector_uniqueness_note`
+
+- **Note:** [`YT_EXACT_HESSIAN_SELECTOR_UNIQUENESS_NOTE.md`](../../docs/YT_EXACT_HESSIAN_SELECTOR_UNIQUENESS_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Across the full admissible exact Schur coarse-operator class, the local Hessian selector shape stays unique on the current tested scale.  _(class `C`)_
+- **chain closes:** False — The registered runner exits 1 and reports that selector relative L2 drift is 7.198640e-02, above the 2.5e-02 uniqueness threshold and above the branch budget, with selector correlation 0.997408979 below the 0.999 threshold.
+- **rationale:** Issue: the current runner falsifies the selector-uniqueness checks that the note presents as passed. Why this blocks: if admissible Schur coarse operators can move the selector shape by 7.20e-02, above both the note's threshold and the branch budget, then the claim that selector ambiguity is no longer live does not follow. Repair target: either tighten the admissible class until the uniqueness inequalities actually pass, or demote/rewrite the note to state the measured selector variability and explain the remaining ambiguity. Claim boundary until fixed: the tested class remains SPD across sampled operators, but selector-shape uniqueness is not established.
+- **open / conditional deps cited:**
+  - `YT_EXACT_HESSIAN_SELECTOR_UNIQUENESS_NOTE.md`
 - **auditor confidence:** high
 
 ### `yt_exact_interacting_bridge_transport_note`
