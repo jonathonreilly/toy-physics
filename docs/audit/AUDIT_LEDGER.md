@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:56:48.117563+00:00
+**Generated:** 2026-05-01T01:58:10.857969+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,22 +23,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | bounded | 263 |
 | support | 225 |
-| open | 17 |
+| open | 16 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 777 |
+| ~~audited_conditional~~ | 778 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 498 |
+| `audited_conditional` | 499 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 749 |
+| `unaudited` | 748 |
 
 | criticality | count |
 |---|---:|
@@ -466,6 +466,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `dm_leptogenesis_pmns_constructive_projected_source_selector_theorem_note_2026-04-16` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_leptogenesis_pmns_microscopic_selector_reduction_theorem_note_2026-04-17` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | E | - |
 | `dm_leptogenesis_pmns_projector_interface_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -3921,6 +3922,27 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `frontier_dm_leptogenesis_ne_projected_source_law_derivation`
   - `frontier_dm_leptogenesis_ne_projected_source_triplet_sign_theorem`
   - `PMNS selector law for lambda_*`
+- **auditor confidence:** high
+
+### `dm_leptogenesis_pmns_constructive_projected_source_selector_theorem_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_CONSTRUCTIVE_PROJECTED_SOURCE_SELECTOR_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_PMNS_CONSTRUCTIVE_PROJECTED_SOURCE_SELECTOR_THEOREM_NOTE_2026-04-16.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-dm_leptogenesis_pmns_constructive_projected_source_selector_theorem_note_2026-04-16`  (codex-current; independence=fresh_context)
+- **load-bearing step:** An explicit fixed native N_e seed-surface witness has gamma > 0, E1 > 0, E2 > 0, eta/eta_obs > 1, and saturates the current transport-extremal value, so the constructive sign chamber is nonempty and not transport-inferior on this branch.  _(class `C`)_
+- **chain closes:** False — The runner verifies the hard-coded constructive witness, but the row declares no dependencies for the imported PMNS/DM transport, projector, Schur-map, triplet, and CP helper surfaces, and the source note explicitly leaves the microscopic selector law open.
+- **rationale:** Issue: the runner verifies a concrete constructive witness (PASS=15/FAIL=0), but the row has deps=[] while it imports the transport-extremal candidate, full microscopic reduction, projected-source law, triplet-sign theorem, active projector reduction, CP bridge, projector interface, and breaking-triplet CP theorem. The witness establishes nonemptiness of the chamber, but the note's own remaining problem is to derive the microscopic selector law that uniquely chooses this sheet. Why this blocks: a clean audit would require the imported PMNS/DM definitions and transport map as declared audited authorities, and would still need to preserve the open boundary around selector-law derivation. Repair target: declare the imported helper/theorem surfaces as dependencies and split the audited claim into witness existence versus unresolved selector law. Claim boundary until fixed: open-gate constructive witness showing compatibility of the sign chamber with current transport extremality, conditional on the imported PMNS/DM machinery; not a closed microscopic selector theorem.
+- **open / conditional deps cited:**
+  - `scripts/frontier_dm_leptogenesis_pmns_transport_extremal_source_candidate.py`
+  - `scripts/frontier_dm_leptogenesis_full_microscopic_reduction.py`
+  - `scripts/frontier_dm_leptogenesis_ne_projected_source_law_derivation.py`
+  - `scripts/frontier_dm_leptogenesis_ne_projected_source_triplet_sign_theorem.py`
+  - `scripts/frontier_dm_leptogenesis_pmns_active_projector_reduction.py`
+  - `scripts/frontier_dm_leptogenesis_pmns_cp_bridge_boundary.py`
+  - `scripts/frontier_dm_leptogenesis_pmns_projector_interface.py`
+  - `scripts/frontier_dm_neutrino_breaking_triplet_cp_theorem.py`
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_pmns_microscopic_d_last_mile_note_2026-04-16`
