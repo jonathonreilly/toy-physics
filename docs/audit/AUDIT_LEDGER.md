@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T18:18:25.567166+00:00
+**Generated:** 2026-05-01T18:21:53.323995+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -28,19 +28,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
-| ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 879 |
+| ~~audited_renaming~~ | 47 |
+| ~~audited_conditional~~ | 880 |
 | ~~audited_failed~~ | 103 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 296 |
-| `audited_conditional` | 595 |
+| `audited_conditional` | 596 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 563 |
+| `unaudited` | 562 |
 
 | criticality | count |
 |---|---:|
@@ -670,6 +670,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `generated_geometry_synthesis_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `generation_axiom_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7143,6 +7144,24 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **chain closes:** True — The contention is clean exact flow versus conditional status because the row is unknown. The theorem only differentiates the implicit reduction law and identifies the remaining susceptibility profile; it does not claim that profile or P(6) is closed, so the first clean/A reading is correct and the second status-based conditional is not.
 - **rationale:** The contention is clean exact flow versus conditional status because the row is unknown. The theorem only differentiates the implicit reduction law and identifies the remaining susceptibility profile; it does not claim that profile or P(6) is closed, so the first clean/A reading is correct and the second status-based conditional is not.
 - **auditor confidence:** judicial
+
+### `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-cbc9`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** In Theorems 1 and 2 the rho values are structural input choices, and the runner computes the resulting Perron eigenvector and P(6) from local Wilson data; Theorem 3 shows local Wilson data and SU(3) intertwiners do not by themselves fix rho_(p,q)(6).  _(class `C`)_
+- **chain closes:** False — The reference Perron computations and no-go close for explicitly chosen rho inputs, but the chain does not close as a physical plaquette/environment solve because the actual 3D spatial-environment rho remains open and multiple one-hop environment dependencies are open, conditional, or renaming.
+- **rationale:** Issue: the runner computes Perron data only after rho is chosen as an input, while the physical boundary character data rho_(p,q)(6) is explicitly the missing 3D spatial Wilson environment object, and the one-hop environment dependencies include open, conditional, and renaming statuses. Why this blocks: the note supports explicit reference solves and a local-input no-go, but it cannot be cited as a closed physical beta=6 plaquette/environment Perron solve. Repair target: clean the residual-environment identification/transfer dependencies and evaluate the actual 3D tensor-transfer Perron state or boundary character coefficients instead of supplying structural reference rho choices. Claim boundary until fixed: retain only support-level reference Perron numbers for rho=1 and rho=delta plus the no-go that local Wilson data alone does not determine the physical rho.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`
+  - `GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`
+  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md`
+  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`
+  - `GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md`
+- **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note`
 
