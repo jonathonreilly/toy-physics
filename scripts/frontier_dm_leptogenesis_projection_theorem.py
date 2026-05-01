@@ -185,7 +185,16 @@ def part4_the_runner_surface_now_has_an_exact_denominator_divide() -> None:
     reduced = read("scripts/frontier_dm_leptogenesis.py")
     exact_kernel = read("scripts/frontier_dm_leptogenesis_exact_kernel_closure.py")
     full_axiom = read("scripts/frontier_dm_leptogenesis_transport_status.py")
-    full_axiom_note = read("docs/DM_LEPTOGENESIS_FULL_AXIOM_CLOSURE_NOTE_2026-04-16.md")
+    # Stale-path: `read("docs/DM_LEPTOGENESIS_FULL_AXIOM_CLOSURE_NOTE_2026-04-16.md")`
+    # — the note was relocated to
+    # `docs/work_history/dm/DM_LEPTOGENESIS_FULL_AXIOM_CLOSURE_NOTE_2026-04-16.md`
+    # by commit d2e754fdc / d328018df ("Restore main and add ..." / "Trim DM
+    # package to science-only surface", 2026-04-16/17). Redirected the read()
+    # to the new location so the K00 projection-law check still verifies the
+    # historical authority surface.
+    full_axiom_note = read(
+        "docs/work_history/dm/DM_LEPTOGENESIS_FULL_AXIOM_CLOSURE_NOTE_2026-04-16.md"
+    )
 
     check(
         "The old reduced runner still states (Y^dag Y)11 = y0^2 on the reduced Z3 texture benchmark",

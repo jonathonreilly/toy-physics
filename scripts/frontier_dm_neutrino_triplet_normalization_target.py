@@ -106,16 +106,21 @@ def part3_the_target_must_live_in_gamma_and_the_even_response_channels() -> None
     print("PART 3: THE TARGET MUST LIVE IN GAMMA AND THE EVEN RESPONSE CHANNELS")
     print("=" * 88)
 
-    blocker = read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")
-    note = read("docs/DM_LEPTOGENESIS_BENCHMARK_DECOMPOSITION_NOTE_2026-04-15.md")
-
-    check(
-        "The branch records that the 0.30 shortfall is mainly CP-kernel suppression",
-        "CP-kernel suppression" in note and "27.7%" in note,
-    )
-    check(
-        "So the remaining normalization law must populate gamma and the two even response channels",
-        "delta + rho" in blocker and "A + b - c - d" in blocker and "gamma" in blocker,
+    # Stale-path checks were removed in this hygiene pass:
+    #
+    # 1. `read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")` — note
+    #    deleted by commit d2e754fdc (2026-04-16, "Trim DM package to
+    #    science-only surface").
+    # 2. `read("docs/DM_LEPTOGENESIS_BENCHMARK_DECOMPOSITION_NOTE_2026-04-15.md")` —
+    #    same deletion commit.
+    #
+    # The two `check()` calls that consumed those notes verified historical
+    # CP-kernel-suppression and triplet-channel content that is no longer
+    # canonical on the trimmed DM surface. Removing them keeps the runner
+    # narrowly verifying the surviving normalization-target arithmetic from
+    # parts 1 and 2.
+    print(
+        "  [INFO] Stale-path checks against trimmed DM notes removed; see runner header."
     )
 
 

@@ -181,20 +181,21 @@ def part4_bank_records_the_triplet_endpoint() -> None:
     print("=" * 88)
 
     note = read("docs/DM_NEUTRINO_BREAKING_TRIPLET_CP_THEOREM_NOTE_2026-04-15.md")
-    atlas = read("docs/publication/ci3_z3/DERIVATION_ATLAS.md")
-    blocker = read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")
+    # Stale-path checks removed in this hygiene pass:
+    #
+    # 1. `read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")` — note
+    #    deleted by commit d2e754fdc (2026-04-16, "Trim DM package to
+    #    science-only surface").
+    # 2. The atlas-row check `"| DM neutrino breaking-triplet CP theorem |"`
+    #    was also stale: the row was trimmed from
+    #    `docs/publication/ci3_z3/DERIVATION_ATLAS.md` in the same pass.
+    #
+    # The surviving note check verifies the load-bearing exact triplet
+    # formulas directly.
 
     check(
         "The note states the exact triplet formulas",
         "delta + rho" in note and "A + b - c - d" in note and "gamma" in note,
-    )
-    check(
-        "The atlas carries the breaking-triplet CP theorem row",
-        "| DM neutrino breaking-triplet CP theorem |" in atlas,
-    )
-    check(
-        "The blocker note now points at gamma and the two interference channels",
-        "delta + rho" in blocker or "A + b - c - d" in blocker,
     )
 
 

@@ -166,15 +166,14 @@ def part3_the_branch_records_gamma_as_the_unique_character_odd_transfer_slot() -
     print("=" * 88)
 
     note = read("docs/DM_NEUTRINO_BREAKING_TRIPLET_CP_THEOREM_NOTE_2026-04-15.md")
-    blocker = read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")
+    # Stale-path check removed: `read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")`
+    # — note deleted by commit d2e754fdc (2026-04-16, "Trim DM package to
+    # science-only surface"). The phase-fixed-triplet check it backed
+    # referenced now-retired blocker content; removing it is hygiene.
 
     check(
         "The triplet CP note records gamma as the mandatory CP-odd source",
         "mandatory CP-odd source" in note and "`gamma`" in note,
-    )
-    check(
-        "The blocker note carries the phase-fixed triplet-side object",
-        "phi = 2 pi / 3" in blocker and "gamma" in blocker,
     )
 
 
