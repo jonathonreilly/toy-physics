@@ -26,10 +26,20 @@ Completed in block 1:
 - `scripts/frontier_yt_common_dressing_obstruction.py`
 - `outputs/yt_common_dressing_obstruction_2026-05-01.json`
 - `docs/YT_COMMON_DRESSING_OBSTRUCTION_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_pole_residue_current_surface_no_go.py`
+- `outputs/yt_scalar_pole_residue_current_surface_no_go_2026-05-01.json`
+- `docs/YT_SCALAR_POLE_RESIDUE_CURRENT_SURFACE_NO_GO_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_retained_closure_route_certificate.py`
+- `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
+- `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_direct_measurement_scale_requirements.py`
+- `outputs/yt_direct_measurement_scale_requirements_2026-05-01.json`
+- `docs/YT_DIRECT_MEASUREMENT_SCALE_REQUIREMENTS_NOTE_2026-05-01.md`
 
 Next artifact:
 
 - production MC strict certificate, or a true scalar pole-residue theorem
 
-Goal for next artifact: either produce physical measurement evidence or derive
-the scalar pole-residue/common-dressing theorem that the Ward route still lacks.
+Goal for next artifact: either produce physical measurement evidence at a
+suitable scale/heavy-quark treatment, or derive the scalar pole-residue/common-
+dressing theorem that the Ward route still lacks.

@@ -1,0 +1,109 @@
+{
+  "actual_current_surface_status": "exact negative boundary / retained closure unavailable on current analytic surface",
+  "fail_count": 0,
+  "models": [
+    {
+      "gauge_dressing": 1.0,
+      "label": "unit-residue-common-dressing",
+      "physical_y_over_g": 0.4082482904638631,
+      "scalar_dressing": 1.0,
+      "scalar_lsz_factor": 1.0,
+      "scalar_pole_residue": 1.0,
+      "visible_signature": {
+        "R_conn_channel_ratio": 0.8888888888888888,
+        "n_color": 3,
+        "n_iso": 2,
+        "one_higgs_selector": "Qbar_L H_tilde u_R",
+        "source_coefficient": 0.4082482904638631,
+        "ssb_identity": "sqrt(2)*m/v returns the canonical doublet coefficient"
+      }
+    },
+    {
+      "gauge_dressing": 1.0,
+      "label": "rconn-residue-common-dressing",
+      "physical_y_over_g": 0.3849001794597506,
+      "scalar_dressing": 1.0,
+      "scalar_lsz_factor": 0.9428090415820634,
+      "scalar_pole_residue": 0.8888888888888888,
+      "visible_signature": {
+        "R_conn_channel_ratio": 0.8888888888888888,
+        "n_color": 3,
+        "n_iso": 2,
+        "one_higgs_selector": "Qbar_L H_tilde u_R",
+        "source_coefficient": 0.4082482904638631,
+        "ssb_identity": "sqrt(2)*m/v returns the canonical doublet coefficient"
+      }
+    },
+    {
+      "gauge_dressing": 1.0,
+      "label": "half-residue-common-dressing",
+      "physical_y_over_g": 0.2886751345948129,
+      "scalar_dressing": 1.0,
+      "scalar_lsz_factor": 0.7071067811865476,
+      "scalar_pole_residue": 0.5,
+      "visible_signature": {
+        "R_conn_channel_ratio": 0.8888888888888888,
+        "n_color": 3,
+        "n_iso": 2,
+        "one_higgs_selector": "Qbar_L H_tilde u_R",
+        "source_coefficient": 0.4082482904638631,
+        "ssb_identity": "sqrt(2)*m/v returns the canonical doublet coefficient"
+      }
+    },
+    {
+      "gauge_dressing": 1.0,
+      "label": "unit-residue-noncommon-dressing",
+      "physical_y_over_g": 0.3674234614174768,
+      "scalar_dressing": 0.9,
+      "scalar_lsz_factor": 1.0,
+      "scalar_pole_residue": 1.0,
+      "visible_signature": {
+        "R_conn_channel_ratio": 0.8888888888888888,
+        "n_color": 3,
+        "n_iso": 2,
+        "one_higgs_selector": "Qbar_L H_tilde u_R",
+        "source_coefficient": 0.4082482904638631,
+        "ssb_identity": "sqrt(2)*m/v returns the canonical doublet coefficient"
+      }
+    },
+    {
+      "gauge_dressing": 0.95,
+      "label": "rconn-residue-noncommon-dressing",
+      "physical_y_over_g": 0.4456738920060271,
+      "scalar_dressing": 1.1,
+      "scalar_lsz_factor": 0.9428090415820634,
+      "scalar_pole_residue": 0.8888888888888888,
+      "visible_signature": {
+        "R_conn_channel_ratio": 0.8888888888888888,
+        "n_color": 3,
+        "n_iso": 2,
+        "one_higgs_selector": "Qbar_L H_tilde u_R",
+        "source_coefficient": 0.4082482904638631,
+        "ssb_identity": "sqrt(2)*m/v returns the canonical doublet coefficient"
+      }
+    }
+  ],
+  "nonclean_parents": {
+    "plaquette_self_consistency_note": "audited_conditional",
+    "rconn_derived_note": "audited_conditional",
+    "yt_color_projection_correction_note": "audited_conditional",
+    "yt_ward_identity_derivation_theorem": "audited_renaming",
+    "yukawa_color_projection_theorem": "audited_conditional"
+  },
+  "parent_status": {
+    "plaquette_self_consistency_note": "audited_conditional",
+    "rconn_derived_note": "audited_conditional",
+    "yt_color_projection_correction_note": "audited_conditional",
+    "yt_ward_identity_derivation_theorem": "audited_renaming",
+    "yukawa_color_projection_theorem": "audited_conditional"
+  },
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This proves the current analytic surface is underdetermined for retained y_t closure.",
+  "required_for_retained_closure": [
+    "derive scalar pole residue Z_phi from the retained source two-point function",
+    "derive equality or measured value of scalar/gauge dressing ratio",
+    "or replace analytic Ward readout with strict production correlator measurement"
+  ],
+  "verdict": "The current retained algebraic surface cannot derive the physical top-Yukawa readout.  It fixes the tree-level source coefficient and some channel arithmetic, but it does not fix the scalar pole residue or relative scalar/gauge dressing.  Models with identical current-visible signatures produce distinct physical y_t/g_s readouts.  Retained closure therefore requires either a new scalar two-point residue/common-dressing theorem or direct physical measurement evidence."
+}

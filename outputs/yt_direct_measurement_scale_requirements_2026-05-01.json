@@ -1,0 +1,45 @@
+{
+  "actual_current_surface_status": "scale requirement / direct measurement route open",
+  "closure_recommendation": [
+    "do not spend production compute at the current scale for retained top closure",
+    "choose fine-scale direct measurement if the framework allows scale variation/matching",
+    "or build a heavy-top effective correlator/matching theorem and strict certificate"
+  ],
+  "current_scale": {
+    "a_fm": 0.0931098696461825,
+    "a_inv_GeV": 2.119291769496,
+    "am_top_physical": 81.4234276203684
+  },
+  "fail_count": 0,
+  "pass_count": 7,
+  "targets": [
+    {
+      "physical_extent_fm_L12": 0.013722321307371346,
+      "physical_extent_fm_L16": 0.018296428409828463,
+      "physical_extent_fm_L24": 0.027444642614742693,
+      "refinement_factor_vs_current": 81.4234276203684,
+      "required_a_fm": 0.001143526775614279,
+      "required_a_inv_GeV": 172.56,
+      "target_am_top": 1.0
+    },
+    {
+      "physical_extent_fm_L12": 0.006861160653685673,
+      "physical_extent_fm_L16": 0.009148214204914231,
+      "physical_extent_fm_L24": 0.013722321307371346,
+      "refinement_factor_vs_current": 162.8468552407368,
+      "required_a_fm": 0.0005717633878071395,
+      "required_a_inv_GeV": 345.12,
+      "target_am_top": 0.5
+    },
+    {
+      "physical_extent_fm_L12": 0.0034305803268428366,
+      "physical_extent_fm_L16": 0.004574107102457116,
+      "physical_extent_fm_L24": 0.006861160653685673,
+      "refinement_factor_vs_current": 325.6937104814736,
+      "required_a_fm": 0.00028588169390356973,
+      "required_a_inv_GeV": 690.24,
+      "target_am_top": 0.25
+    }
+  ],
+  "verdict": "At the current certificate scale, a physical top corresponds to am_t = 81.423.  A relativistic direct correlator with am_t <= 1 requires about an 81x finer inverse lattice spacing; am_t <= 0.5 requires about 163x.  Therefore the retained direct measurement route needs a fine-scale campaign or a heavy-quark/top-integrated effective treatment before strict production is meaningful."
+}

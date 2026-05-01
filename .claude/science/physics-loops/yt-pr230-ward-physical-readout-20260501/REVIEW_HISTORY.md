@@ -29,6 +29,15 @@ Review checks performed:
 - Common dressing review: the countermodels vary scalar and gauge dressing
   separately while preserving the tree-level source ratio, which targets only
   the missing equality theorem and does not reuse alpha_LM or plaquette input.
+- Scalar pole-residue current-surface review: the models hold all current
+  visible algebraic data fixed and vary only the missing pole-residue/dressing
+  data, so the no-go targets underdetermination rather than the tree-level
+  `1/sqrt(6)` arithmetic.
+- Closure route certificate review: the route list separates retained closure
+  from new-premise/admitted-selector paths and keeps PR #230 draft/open.
+- Direct measurement scale review: the calculation uses the existing
+  mass-bracket certificate scale and does not claim production evidence; it
+  blocks current-scale production as a closure strategy.
 
 Open review risk:
 

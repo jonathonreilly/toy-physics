@@ -4,7 +4,8 @@
 **Artifacts:** global proof audit, Ward repair audit, operator-matching
 candidate, source/Higgs SSB bridge reduction, kappa residue obstruction, scalar
 LSZ residue bridge obstruction, chirality selector support, and common dressing
-obstruction  
+obstruction, current-surface scalar pole-residue no-go, retained-closure route
+certificate, and direct-measurement scale requirements
 **PR:** #230 draft branch
 
 ```yaml
@@ -58,4 +59,13 @@ PYTHONPATH=scripts python3 scripts/frontier_yt_chirality_selector_bridge.py
 
 PYTHONPATH=scripts python3 scripts/frontier_yt_common_dressing_obstruction.py
 # SUMMARY: PASS=6 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_yt_scalar_pole_residue_current_surface_no_go.py
+# SUMMARY: PASS=7 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=7 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_yt_direct_measurement_scale_requirements.py
+# SUMMARY: PASS=7 FAIL=0
 ```

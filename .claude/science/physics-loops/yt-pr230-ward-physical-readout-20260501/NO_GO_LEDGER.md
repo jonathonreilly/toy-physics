@@ -52,6 +52,20 @@ scripts/frontier_yt_common_dressing_obstruction.py
 # SUMMARY: PASS=6 FAIL=0
 ```
 
+The full current analytic surface underdetermines the physical readout:
+
+```text
+scripts/frontier_yt_scalar_pole_residue_current_surface_no_go.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+Retained closure is not currently reached:
+
+```text
+scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

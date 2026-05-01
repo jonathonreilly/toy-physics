@@ -19,24 +19,35 @@ What changed:
   terms, conditional on non-clean matter/hypercharge parents.
 - Common scalar/gauge dressing was shown to be an extra theorem: the current
   Ward/gauge identities do not force `Z_scalar = Z_gauge`.
+- The stronger scalar pole-residue current-surface no-go shows that identical
+  current-visible algebraic data can produce distinct physical `y_t/g_s`
+  readouts when pole residue/dressing vary.
+- A retained-closure route certificate now records the shortest honest closure
+  routes.
+- The direct measurement route now has a scale requirement: current scale gives
+  `am_top = 81.423`, so a relativistic direct measurement needs roughly `81x`
+  finer inverse lattice spacing for `am_top <= 1`, or an HQET/top-integrated
+  route.
 
 The scientific result is narrower than closure:
 
 ```text
 Current PR #230 status: open / conditional-support.
 The normalization 1/sqrt(6) is not the hard blocker.
-The hard blockers are now sharply separated: scalar pole-residue normalization,
-scalar carrier identification, non-clean parent repair for chirality, and
-common dressing.  The normalization arithmetic and SSB bookkeeping are not the
-hard part.
+The hard blockers are now sharply separated.  For retained closure, PR #230
+needs either strict physical measurement evidence or a real scalar two-point
+pole-residue/common-dressing theorem.  The normalization arithmetic, SSB
+bookkeeping, and wording around the old Ward note are not enough.
 ```
 
 Exact next action:
 
 ```text
-Package this PR #230 update.  The remaining positive options are now either a
-real scalar pole-residue/common-dressing theorem or the direct production MC
-measurement route.
+Package this PR #230 update.  The remaining positive options are now:
+
+1. strict direct physical measurement at a suitable top/heavy-quark scale;
+2. scalar pole-residue/common-dressing theorem from retained dynamics;
+3. a newly derived Planck stationarity selector.
 ```
 
 Acceptance target for the next block:

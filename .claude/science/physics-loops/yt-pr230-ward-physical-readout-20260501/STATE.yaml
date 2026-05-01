@@ -11,7 +11,7 @@ repo_lock:
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
 current_phase: block-1-packaged
-blocks_completed: 6
+blocks_completed: 9
 active_route: "Ward physical-readout repair"
 active_hard_residual: "derive source/HS normalization, chirality selector, scalar carrier, LSZ leg, and common dressing without H_unit matrix-element definition"
 files_touched:
@@ -39,6 +39,15 @@ files_touched:
   - "scripts/frontier_yt_common_dressing_obstruction.py"
   - "docs/YT_COMMON_DRESSING_OBSTRUCTION_NOTE_2026-05-01.md"
   - "outputs/yt_common_dressing_obstruction_2026-05-01.json"
+  - "scripts/frontier_yt_scalar_pole_residue_current_surface_no_go.py"
+  - "docs/YT_SCALAR_POLE_RESIDUE_CURRENT_SURFACE_NO_GO_NOTE_2026-05-01.md"
+  - "outputs/yt_scalar_pole_residue_current_surface_no_go_2026-05-01.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_direct_measurement_scale_requirements.py"
+  - "docs/YT_DIRECT_MEASUREMENT_SCALE_REQUIREMENTS_NOTE_2026-05-01.md"
+  - "outputs/yt_direct_measurement_scale_requirements_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -61,6 +70,9 @@ claim_state_movement:
   - "proved R_conn channel arithmetic is not enough to derive scalar LSZ residue"
   - "isolated the chirality/right-handed selector as conditional gauge-arithmetic support with non-clean parents"
   - "proved common scalar/gauge dressing is not enforced by current Ward/gauge identities"
+  - "proved the current analytic surface underdetermines scalar pole residue and physical y/g readout"
+  - "certified the shortest honest retained-closure routes"
+  - "computed direct-measurement scale requirements: current scale gives am_top=81.423, requiring 81x+ refinement for am_top<=1"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -69,5 +81,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Package PR #230 update; remaining positive route is a true scalar pole-residue/common-dressing theorem or production MC."
+next_exact_action: "Choose between fine-scale/HQET direct measurement and scalar two-point residue/common-dressing theorem; current-scale production is not a retained-closure path."
 stop_condition: "User runtime budget exhausted, or source/SSB theorem reaches honest closure/no-go and is packaged."

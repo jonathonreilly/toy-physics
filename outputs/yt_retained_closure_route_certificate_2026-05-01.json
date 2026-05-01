@@ -1,0 +1,63 @@
+{
+  "actual_current_surface_status": "open / retained closure not yet reached",
+  "closure_routes": [
+    {
+      "current_blocker": "existing certificates are reduced-scope/pilot; mass-bracket shows current scale cutoff obstruction",
+      "retained_closure_condition": "run strict production correlator evidence on a physically suitable scale/heavy-quark treatment, produce a production certificate, and pass scripts/frontier_yt_direct_lattice_correlator.py",
+      "route": "direct_measurement",
+      "why_shortest": "It bypasses Ward/H_unit and scalar-pole analytic normalization."
+    },
+    {
+      "current_blocker": "current algebraic surface underdetermines pole residue and dressing",
+      "retained_closure_condition": "derive scalar source two-point pole residue, scalar carrier map, and common scalar/gauge dressing from retained dynamics, then re-run the Ward physical-readout repair audit",
+      "route": "analytic_scalar_residue",
+      "why_shortest": "It directly repairs the audit's physical-readout objection."
+    },
+    {
+      "current_blocker": "all current stationarity shortcuts are no-go/conditional",
+      "retained_closure_condition": "derive beta_lambda(M_Pl)=0 or explicitly add a new selector/premise; the latter is not retained closure under the current one-axiom surface",
+      "route": "new_selector_or_axiom",
+      "why_shortest": "It can reproduce numerical y_t if the selector is accepted."
+    }
+  ],
+  "direct_certificates": [
+    {
+      "exists": true,
+      "path": "outputs/yt_direct_lattice_correlator_certificate_2026-04-30.json",
+      "phase": "reduced_scope",
+      "strict_pass": null
+    },
+    {
+      "exists": true,
+      "path": "outputs/yt_direct_lattice_correlator_pilot_certificate_2026-04-30.json",
+      "phase": "pilot",
+      "strict_pass": null
+    },
+    {
+      "exists": true,
+      "path": "outputs/yt_direct_lattice_correlator_pilot_plus_certificate_2026-05-01.json",
+      "phase": "pilot",
+      "strict_pass": null
+    },
+    {
+      "exists": true,
+      "path": "outputs/yt_direct_lattice_correlator_mass_bracket_certificate_2026-05-01.json",
+      "phase": "pilot",
+      "strict_pass": null
+    }
+  ],
+  "exact_next_action": "Do not run more small pilot MC for closure.  Either implement a physically suitable strict measurement plan, or start the scalar two-point residue theorem from the retained action and expect that it may require real correlator data.",
+  "fail_count": 0,
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No route currently satisfies retained-proposal conditions.",
+  "required_certificates": {
+    "beta_lambda_no_go": "outputs/yt_beta_lambda_planck_stationarity_no_go_2026-05-01.json",
+    "direct_cutoff_obstruction": "outputs/yt_top_mass_cutoff_obstruction_2026-05-01.json",
+    "global_proof_audit": "outputs/yt_pr230_global_proof_audit_2026-05-01.json",
+    "queue_exhaustion": "outputs/yt_pr230_queue_exhaustion_certificate_2026-05-01.json",
+    "scalar_pole_residue_no_go": "outputs/yt_scalar_pole_residue_current_surface_no_go_2026-05-01.json",
+    "ward_repair_audit": "outputs/yt_ward_physical_readout_repair_audit_2026-05-01.json"
+  },
+  "verdict": "The current PR #230 surface has no retained top-Yukawa closure.  All tested non-MC shortcuts are blocked or conditional.  The shortest honest retained routes are: strict direct physical measurement, a new scalar pole-residue/common-dressing theorem, or a newly derived Planck stationarity selector.  The first two preserve the current claim posture; the third requires a new theorem and cannot be merely assumed."
+}
