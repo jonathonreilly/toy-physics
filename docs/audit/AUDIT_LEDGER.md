@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:29:36.774487+00:00
+**Generated:** 2026-05-01T05:31:13.186699+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 213 |
+| bounded | 212 |
 | support | 178 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 826 |
-| ~~audited_failed~~ | 165 |
+| ~~audited_failed~~ | 166 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 248 |
 | `audited_conditional` | 557 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 77 |
+| `audited_failed` | 78 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 637 |
+| `unaudited` | 636 |
 
 | criticality | count |
 |---|---:|
@@ -971,6 +971,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_nonlocal_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_results_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_scale_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `tensor_block_closure_test_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `testable_predictions_map_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `three_family_card_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -12928,6 +12929,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `bounded_gauge_only_taste_scalar_split_model`
   - `bounded_scalar_only_thermal_cubic_estimate`
+- **auditor confidence:** high
+
+### `tensor_block_closure_test_note`
+
+- **Note:** [`TENSOR_BLOCK_CLOSURE_TEST_NOTE.md`](../../docs/TENSOR_BLOCK_CLOSURE_TEST_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The minimal rank-two tensor block is locally sufficient on each audited family, but the fitted K_tensor, eta coefficient, and a_star differ strongly across O_h and finite-rank families, so no single universal closure theorem is supported.  _(class `C`)_
+- **chain closes:** False — The runner output is consistent with the note's negative conclusion, but the registered primary runner exits nonzero and emits no PASS checks because it treats the expected no-universal-closure result as process failure. That makes the row non-ratifiable by the audit runner contract.
+- **rationale:** Issue: scripts/frontier_tensor_block_closure_test.py exits with code 1 and no classified PASS lines even though the source note is framed around the negative/no-go outcome. Why this blocks: audit-loop cannot distinguish an expected no-go success from a broken runner when the process exits nonzero and reports no PASS checks. Repair target: change the runner so the expected bounded no-go returns exit 0 and emits classified PASS lines for local sufficiency, cross-family kernel mismatch, eta mismatch, a_star mismatch, and non-universality. Claim boundary until fixed: the printed numbers support the intended bounded no-go, but the current runner artifact is not audit-compatible.
 - **auditor confidence:** high
 
 ### `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22`
