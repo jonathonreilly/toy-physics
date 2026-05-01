@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 264,
+    "leaf": 263,
     "medium": 133
   },
-  "generated_at": "2026-05-01T06:37:55.959351+00:00",
+  "generated_at": "2026-05-01T06:39:47.206654+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9975,23 +9975,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "memory_mu2_geometry_sweep_note_2026-04-11",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/MEMORY_MU2_GEOMETRY_SWEEP_NOTE_2026-04-11.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_memory_mu2_size_sweep.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "mirror_mutual_information_canonical_families_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14875,6 +14858,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 202,
-  "total_pending": 600
+  "ready_count": 201,
+  "total_pending": 599
 }
