@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:01:41.253459+00:00
+**Generated:** 2026-05-01T06:03:26.056559+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 253 |
+| `audited_clean` | 254 |
 | `audited_conditional` | 570 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 615 |
+| `unaudited` | 614 |
 
 | criticality | count |
 |---|---:|
@@ -291,6 +291,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_tapered_refinement_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_family_validation_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `lattice_field_strength_unification_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `lattice_nn_mass_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_weak_field_mass_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_weak_field_purity_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -9832,6 +9833,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** The ordered 2D lattice family supports a same-family two-harness bridge: a Born-clean barrier coexistence card and a no-barrier far-field |delta| ~= 23.5071 * b^(-1.052), R^2 = 0.9850 distance-law magnitude fit.  _(class `C`)_
 - **chain closes:** True — The registered runner recomputes the barrier metrics and no-barrier fit exactly as quoted, including Born 2.98e-16, k=0 control zero, gravity sign, and the b >= 7 fit. The note explicitly avoids claiming one-card unification, mass law, large-N purity scaling, or a promoted theorem.
 - **rationale:** The scoped support claim closes: the runner independently rebuilds the regular 2D lattice family, emits the barrier joint-card numbers and the no-barrier distance-law fit, and those outputs match the note. Residual risk is already in the source boundary: this is not a same-slit attractive-gravity card, retained mass-law card, large-N purity scaling result, or all-properties one-family unification.
+- **auditor confidence:** high
+
+### `lattice_field_strength_unification_note`
+
+- **Note:** [`LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md`](../../docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The ordered-lattice symmetry line is reopened by a narrow weak-field one-card pocket centered on max_dy = 5, narrow/wide-center slits, and strengths 5e-4 to 1e-3, while remaining bounded rather than a blanket lattice theorem.  _(class `C`)_
+- **chain closes:** True — The registered runner recomputes the 3 x 3 x 8 sweep, finds 72/72 Born-clean rows, four retained weak-field rows, and reproduces the canonical reopening row with positive gravity at all tested b and a decaying barrier-harness fit. The note keeps the standard-strength negative result and the non-flagship, narrow-pocket boundary explicit.
+- **rationale:** The scoped bounded claim closes: the runner directly performs the field-strength sweep and identifies the same four retained weak-field rows and canonical reopening row described in the note. Residual risk is not hidden; the result does not displace exact mirror, does not claim a blanket lattice unification theorem, and only supports a narrow weak-field ordered-lattice pocket.
 - **auditor confidence:** high
 
 ### `lattice_gravity_resolution_note`
