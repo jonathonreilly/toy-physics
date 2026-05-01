@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:49:41.038675+00:00
+**Generated:** 2026-05-01T23:50:57.480109+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,23 +23,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
 | bounded | 162 |
-| support | 131 |
+| support | 130 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 959 |
+| ~~audited_conditional~~ | 960 |
 | ~~audited_failed~~ | 88 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 325 |
-| `audited_conditional` | 659 |
+| `audited_conditional` | 660 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 484 |
+| `unaudited` | 483 |
 
 | criticality | count |
 |---|---:|
@@ -984,6 +984,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_unique_discriminator_v2_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sigma_hier_uniqueness_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
+| `sigma_mnu_f3_dm_cross_bound_audit_note_2026-04-28` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sign_portability_invariant_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `single_axiom_hilbert_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `single_axiom_information_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -14294,6 +14295,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md`
   - `DM_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md`
   - `NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md`
+- **auditor confidence:** high
+
+### `sigma_mnu_f3_dm_cross_bound_audit_note_2026-04-28`
+
+- **Note:** [`SIGMA_MNU_F3_DM_CROSS_BOUND_AUDIT_NOTE_2026-04-28.md`](../../docs/SIGMA_MNU_F3_DM_CROSS_BOUND_AUDIT_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The F3 cross-bound combines the support-level Σmν functional form with the current-bank Ω_DM interval to produce a closed-form Σmν interval conditional on admitted (L, Ω_b, h), revealing negative Σmν at Planck-style admissions and positive regions only on a subregion of the admission grid.  _(class `B`)_
+- **chain closes:** False — The runner reproduces the note's 14 checks and numbers, including [-0.1610, -0.0761] eV at Planck-style admissions and 198/462 positive grid points. The chain remains conditional because Ω_DM, cosmology open-number reduction, and the Hubble/Lane-5 admission surface are not audit-clean retained dependencies.
+- **rationale:** Issue: The cross-bound uses conditional/open inputs: the DM thermal-bounding Ω_DM interval is audited_conditional, cosmology open-number reduction is not audit-clean, and the (L, Ω_b, h) admission surface includes an open Hubble/Lane-5 gate. Why this blocks: the algebra and runner identify a real structural tension, but they do not close numerical Σmν retention from retained framework inputs. Repair target: audit-clean or replace the Ω_DM selector, cosmology matter-budget bridge, and Hubble admission inputs, then rerun the cross-bound. Claim boundary until fixed: safe as support-level structural tension mapping; not safe as retained numerical Σmν prediction.
+- **open / conditional deps cited:**
+  - `DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md`
+  - `COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md`
+  - `HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md`
 - **auditor confidence:** high
 
 ### `sign_portability_invariant_note`
