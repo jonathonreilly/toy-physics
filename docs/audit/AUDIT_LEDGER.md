@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:16:56.380693+00:00
+**Generated:** 2026-05-01T20:18:49.091561+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 180 |
+| bounded | 179 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 919 |
+| ~~audited_conditional~~ | 920 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 622 |
+| `audited_conditional` | 623 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 546 |
+| `unaudited` | 545 |
 
 | criticality | count |
 |---|---:|
@@ -933,6 +933,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_wavefield_mechanism_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_wavefield_v2_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `staggered_fermion_card_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_failure_map_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_gauge_closure_results_2026-04-10` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -13685,6 +13686,26 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The current retained harness at scripts/frontier_staggered_17card.py is self-contained and reruns to 17/17 for 1D n=61 and 3D n=9, n=11, and n=13, with the documented 3D family-coverage gate.  _(class `C`)_
 - **chain closes:** True — The registered runner was executed during this audit session and reproduces the note's 1D and 3D 17/17 score surface, including the 4/6 C17 family coverage qualifier for n=11 and n=13.
 - **rationale:** The bounded force-based staggered 17-card claim closes. scripts/frontier_staggered_17card.py reports 1D n=61 SCORE 17/17 with C1=1.2804e-15, C4 R^2=0.917492, C5 +5.7496e-05, and C17 6/6; 3D n=9, n=11, and n=13 each report SCORE 17/17 with the same C17 family-coverage qualifier described in the note. The note explicitly states that the card is force-based, not the repo-wide centroid card, and limits portability/growth/cosmology claims to separate probes.
+- **auditor confidence:** high
+
+### `staggered_fermion_card_2026-04-11`
+
+- **Note:** [`STAGGERED_FERMION_CARD_2026-04-11.md`](../../docs/STAGGERED_FERMION_CARD_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The complete card summarizes parity-coupled staggered-gravity behavior as roughly 183/190 passing rows across the canonical 17-card plus cycle, self-gravity, retarded, iterative, wave, portability, and critical-exponent harnesses.  _(class `C`)_
+- **chain closes:** False — The registered primary runner reproduces the canonical 17-card portion, including 17/17 on 1D and 3D sizes, but it does not execute the additional harnesses that support the complete-card total. Those broader sections therefore remain outside the current primary-runner audit surface.
+- **rationale:** Issue: the live primary runner verifies the canonical 17-card subset, but the note's complete-card conclusion also imports results from cycle, self-gravity, retarded, iterative, wave, portability, and critical-exponent harnesses that were not run as the registered audit runner for this row. Why this blocks: a hostile reviewer can accept the reproduced 17-card numbers while rejecting the aggregate 183/190 card as not covered by the row's primary classified check surface. Repair target: either split the card into separately audited rows or register an aggregate runner that executes all named harnesses and emits classified C PASS lines for each section score and caveat. Claim boundary until fixed: the canonical 17-card parity-coupled staggered result is reproduced; the broader complete-card aggregate remains conditional on the unexecuted companion harnesses.
+- **open / conditional deps cited:**
+  - `scripts/frontier_staggered_cycle_battery.py`
+  - `scripts/frontier_staggered_self_gravity.py`
+  - `scripts/frontier_two_field_retarded_family_closure.py`
+  - `scripts/frontier_staggered_iterative_closure.py`
+  - `scripts/frontier_two_field_wave.py`
+  - `scripts/frontier_staggered_graph_portability.py`
+  - `scripts/frontier_critical_exponents.py`
 - **auditor confidence:** high
 
 ### `staggered_geometry_superposition_note_2026-04-11`
