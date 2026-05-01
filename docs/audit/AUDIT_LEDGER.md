@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T21:10:28.423527+00:00
+**Generated:** 2026-05-01T21:11:55.916094+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 165 |
-| support | 135 |
+| support | 134 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 946 |
+| ~~audited_conditional~~ | 947 |
 | ~~audited_failed~~ | 85 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 301 |
-| `audited_conditional` | 649 |
+| `audited_conditional` | 650 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 512 |
+| `unaudited` | 511 |
 
 | criticality | count |
 |---|---:|
@@ -945,6 +945,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_selector_remaining_open_imports_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `scalar_selector_reviewer_package_2026-04-20` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `scalar_selector_synthesis_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `scalar_tensor_ray_magnitude_bridge_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13547,6 +13548,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `DM A-BCC theorem stacks`
   - `quark a_u theorem stacks`
   - `current scalar-selector package status notes`
+
+### `scalar_tensor_ray_magnitude_bridge_note_2026-04-19`
+
+- **Note:** [`SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md`](../../docs/SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims the scalar-comparison ray has magnitude squared 1/7, the tensor ray has magnitude squared 1/6, and their squared-magnitude ratio gives the support bridge supp = 6/7 on the common 1(+)5 CKM direction.  _(class `A`)_
+- **chain closes:** False — The algebraic ratio is correct, but clean closure is conditional on fixing the displayed formula and registering the retained input surfaces.
+- **rationale:** Issue: runner checks T8 and T9 reproduce the scalar-ray magnitude squared 1/7 and the scalar/tensor ratio 6/7, but the note's summary equation includes an extra '* (7/6)' factor that would make the displayed formula algebraically false if read literally; the row also imports CKM-atlas/projector values without registered dependencies. Why this blocks: the identity is simple enough to verify, but a clean audit cannot ratify a source note whose displayed load-bearing formula is internally garbled and whose retained inputs are not one-hop dependencies. Repair target: correct the displayed formula to supp = (1/7)/(1/6) = 6/7, register the CKM atlas/projector inputs, and preferably give this identity its own classified runner checks. Claim boundary until fixed: the exact squared-magnitude ratio itself is supported by the current runner's T8/T9 checks.
+- **open / conditional deps cited:**
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `scripts/frontier_quark_up_amplitude_rpsr_conditional.py`
 
 ### `scalar_trace_tensor_no_go_note`
 
