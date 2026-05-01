@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:41:48.829956+00:00
+**Generated:** 2026-05-01T05:42:43.877530+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 212 |
-| support | 172 |
+| support | 171 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 831 |
+| ~~audited_conditional~~ | 832 |
 | ~~audited_failed~~ | 167 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 250 |
-| `audited_conditional` | 562 |
+| `audited_conditional` | 563 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 79 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 628 |
+| `unaudited` | 627 |
 
 | criticality | count |
 |---|---:|
@@ -864,6 +864,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_isotropic_glue_operator_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_isotropic_schur_localization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `universal_gr_supermetric_normal_form_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_tensor_variational_candidate_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | E | - |
 | `universal_qg_canonical_refinement_net_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_canonical_smooth_geometric_action_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -13292,6 +13293,20 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** From B_D(h,k)=-Tr(D^-1 h D^-1 k), the note asserts that K_GR(D)=H_D tensor Lambda_R is symmetric positive definite for each positive-symmetric D.  _(class `A`)_
 - **chain closes:** False — For positive-symmetric D and real symmetric nonzero h, Tr(D^-1 h D^-1 h) is nonnegative, so the displayed B_D(h,h) with the leading minus sign is non-positive rather than positive. The claimed positive-definiteness of H_D and K_GR(D) therefore does not follow from the displayed bilinear form.
 - **rationale:** Issue: the note's displayed bilinear form has a leading minus sign, so B_D(h,h) is non-positive on the symmetric tangent directions it uses to claim a positive-background closure. Why this blocks: the unique stationary solution and completion identity require K_GR(D) to be positive definite, but the sign shown gives the opposite definiteness unless an additional sign convention or field-space metric is supplied. Repair target: either correct the sign/operator convention and prove H_D is positive definite, or restate the action with the negative-definite operator and show the stationary point is a maximum rather than a positive local minimum. Claim boundary until fixed: the note can at most identify a candidate quadratic local action form, not an exact positive-background SPD closure theorem.
+- **auditor confidence:** high
+
+### `universal_gr_supermetric_normal_form_note`
+
+- **Note:** [`UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md`](../../docs/UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On D = diag(a,b,b,b), the universal Hessian is B(h,k) = -Tr(D^-1 h D^-1 k), giving block weights -a^-2, -(ab)^-1, -b^-2, and -b^-2 with no cross-block leakage.  _(class `B`)_
+- **chain closes:** False — The formula is sign-consistent and properly scoped to local normal form, but this row does not register the upstream scalar generator, 3+1 lift, block-localization, or Schur-localization inputs, and it has no runner/proof artifact verifying the block weights.
+- **rationale:** Issue: the local supermetric normal form is asserted from an unregistered universal-route stack. Why this blocks: the note's formula is coherent, but an audit cannot verify from this row that the lifted invariant background, canonical projectors, and D^2W Hessian actually yield the stated no-leakage block weights. Repair target: register the upstream generator/lift/projector/localization authorities and add a runner or proof deriving B(h,k) and the four block coefficients on diag(a,b,b,b). Claim boundary until fixed: support for the local isotropic supermetric-normal-form route, with the final Einstein/Regge gluing correctly left open.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_gr_tensor_quotient_uniqueness_note`
