@@ -1,6 +1,6 @@
 # Lane 2 Assumptions And Imports
 
-**Updated:** 2026-05-01T10:53:48Z  
+**Updated:** 2026-05-01T11:10:40Z
 **Loop:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Claim boundary:** open/scaffold-only unless a later artifact retires the listed blockers.
@@ -17,6 +17,9 @@
 | Existing hydrogen/helium eigensolver | Numerical scaffold for substitution once inputs are retained | bounded exploratory scaffold | `docs/ATOMIC_HYDROGEN_HELIUM_PROBE_NOTE.md`, `scripts/frontier_atomic_hydrogen_helium_probe.py` | yes as future harness | yes for verification, not as derivation | substitute retained inputs after upstream gates close | scaffold success separated from closure |
 | Existing Rydberg firewall | Negative boundary separating alpha(M_Z) from alpha(0) and textbook inputs | exact negative boundary on current surface | `docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md`, `scripts/frontier_atomic_rydberg_dependency_firewall.py` | yes as no-go memory | yes for honest status | refine into actionable threshold theorem if possible | active baseline |
 | Literature / textbook QFT beta-function formulae | Standard form of one-loop gauge running and decoupling logic | literature theorem / admitted standard bridge | already used by `docs/SU2_WEAK_BETA_COEFFICIENT_STRUCTURAL_CLOSED_FORM_THEOREM_NOTE_2026-04-26.md` | yes for running-route proof shape | yes if a QED bridge is attempted | record as bridge, not framework derivation | allowed as standard theorem context |
+| Dimensionless lattice Coulomb Hamiltonian `H_g = -Delta_x - g/|x|` | Coupling-relative atomic companion and input to the scale-bridge stretch | bounded support / retained-operator-surface companion | `docs/work_history/atomic/HYDROGEN_HELIUM_ATOMIC_COMPANION_NOTE_2026-04-18.md`, `scripts/frontier_atomic_hydrogen_lattice_companion.py` | yes for the physical-unit stretch | yes as a conditional bridge surface | prove exact scaling to physical Hamiltonian and isolate remaining unit inputs | usable for exact conditional scale algebra; not absolute eV closure |
+| Continuum Coulomb spectrum `lambda_n = -g^2/(4 n^2)` | Algebraic bridge between dimensionless lattice scaling and Bohr formula | admitted standard Coulomb theorem / exact support bridge | `scripts/frontier_atomic_nr_coulomb_scale_bridge.py` | yes for the scale theorem | yes for the stretch artifact only | replace with framework-native spectral theorem if demanded by review | allowed support bridge; not framework-native by itself |
+| Physical length map `a = g/(2 mu Z alpha)` | Converts dimensionless lattice coordinate to physical units | admitted unit map in the stretch theorem | `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_NR_COULOMB_SCALE_BRIDGE_STRETCH_NOTE_2026-05-01.md` | yes | yes for retained physical-unit closure | derive kinetic normalization/unit map from framework or keep as open bridge | exact conditional map; still open as framework-native retention |
 
 ## Immediate Audit Result
 
@@ -33,3 +36,20 @@ transport prerequisite.
 `alpha(0)`. The newly exposed load-bearing import is threshold-resolved QED
 decoupling: charged thresholds and hadronic/vacuum-polarization handling must
 be supplied or shown irrelevant before `alpha(0)` can be treated as retained.
+
+## Block 01 Stretch Update
+
+`scripts/frontier_atomic_nr_coulomb_scale_bridge.py` proves the exact
+conditional physical-unit scale identity:
+
+```text
+H_g = -Delta_x - g/|x|
+g = 2 mu a Z alpha
+E = lambda / (2 mu a^2)
+=> E_n = -mu (Z alpha)^2 / (2 n^2)
+```
+
+This partially sharpens the nonrelativistic Coulomb/Schrodinger gate: once
+`mu/m_e`, `alpha(0)`, and a physical unit map are supplied, the dimensionless
+companion needs no fitted Rydberg target. It does not retire those inputs and
+does not make the physical unit map framework-native.

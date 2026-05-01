@@ -1,6 +1,6 @@
 # Lane 2 Review History
 
-**Updated:** 2026-05-01T10:53:48Z
+**Updated:** 2026-05-01T11:10:40Z
 
 ## Pre-Artifact Review Baseline
 
@@ -38,4 +38,32 @@ Verification recorded:
 PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> PASS=17 FAIL=0
 python3 -m py_compile scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> pass
 PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0
+```
+
+## Block 01 Stretch Review-Loop Emulation
+
+- **Scope:** `scripts/frontier_atomic_nr_coulomb_scale_bridge.py` and
+  `notes/ATOMIC_NR_COULOMB_SCALE_BRIDGE_STRETCH_NOTE_2026-05-01.md`.
+- **Finding 1:** The scale identity is proved with symbolic/synthetic
+  parameter choices before any hydrogen comparator values appear.
+- **Disposition 1:** pass; no Rydberg target fit is used.
+- **Finding 2:** The runner explicitly varies the physical unit `a` and shows
+  that the same dimensionless eigenvalue maps to different eV energies.
+- **Disposition 2:** pass; the underdetermination boundary is executable.
+- **Finding 3:** The artifact could be overread as a retained
+  physical-unit Schrodinger derivation, but the note marks the standard
+  physical Hamiltonian and unit map as admitted bridge context.
+- **Disposition 3:** acceptable as exact conditional support; do not promote
+  to retained closure.
+- **Finding 4:** The new artifact preserves the prior Rydberg and QED
+  threshold firewalls.
+- **Disposition 4:** pass.
+
+Verification recorded:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_atomic_nr_coulomb_scale_bridge.py -> PASS=42 FAIL=0
+python3 -m py_compile scripts/frontier_atomic_nr_coulomb_scale_bridge.py -> pass
+PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0
+PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall.py -> PASS=17 FAIL=0
 ```

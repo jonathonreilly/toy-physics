@@ -1,6 +1,6 @@
 # Lane 2 Route Portfolio
 
-**Updated:** 2026-05-01T10:53:48Z  
+**Updated:** 2026-05-01T11:10:40Z
 **Loop:** `lane2-atomic-scale-20260428`  
 **Selection policy:** choose the route most likely to move claim state without touching Lane 4 or Lane 6.
 
@@ -45,3 +45,33 @@ The next high-value routes are:
 2. deeper threshold-resolved QED transport theorem if the route can avoid
    charged-lepton/hadronic closure overlap;
 3. stuck fan-out if both routes are blocked.
+
+## Block 01 Stretch Result
+
+Completed route: physical-unit nonrelativistic Coulomb scale bridge.
+
+The stretch produced an exact conditional support theorem plus a no-go
+boundary:
+
+```text
+H_g = -Delta_x - g/|x|
+g = 2 mu a Z alpha
+E = lambda / (2 mu a^2)
+=> E_n = -mu (Z alpha)^2 / (2 n^2)
+```
+
+This means the dimensionless lattice companion has the right scaling bridge
+once `mu/m_e`, `alpha(0)`, and the physical unit map are supplied. It also
+proves that without the physical unit map `a`, the same dimensionless
+eigenvalue maps to different eV energies. The route therefore moves Lane 2 by
+isolating the exact scale identity and keeping absolute Rydberg closure open.
+
+Next candidate routes:
+
+1. threshold-resolved QED fan-out: try to prove whether threshold data can be
+   made insensitive enough for a bounded `alpha(0)` support statement without
+   touching Lane 6/Lane 1 closure;
+2. framework-native kinetic normalization route: search retained action/unit
+   surfaces for a derivation of the physical map `a = g/(2 mu Z alpha)`;
+3. stuck fan-out across algebraic, atlas-reuse, variational, no-go, and
+   falsifier frames if neither route passes the dramatic-step gate.

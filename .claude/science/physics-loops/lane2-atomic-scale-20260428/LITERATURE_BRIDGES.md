@@ -1,6 +1,6 @@
 # Lane 2 Literature Bridges
 
-**Updated:** 2026-05-01T10:53:48Z
+**Updated:** 2026-05-01T11:10:40Z
 
 No new external literature was imported at loop start.
 
@@ -24,3 +24,33 @@ form as an admitted standard QFT bridge:
 This bridge is used only to prove threshold sensitivity and underdetermination.
 It does not derive `alpha(0)`. `M_Z`, `m_e`, and `1/alpha(0)` appear only in
 the physical-scale comparator section of the note/runner.
+
+## Block 01 Stretch Usage
+
+The nonrelativistic Coulomb scale-bridge stretch uses the standard continuum
+Coulomb spectrum
+
+```text
+lambda_n = -g^2 / (4 n^2)
+```
+
+and the standard coordinate-scaling relation between
+
+```text
+H_g = -Delta_x - g/|x|
+```
+
+and
+
+```text
+H_phys = -(1 / 2 mu) Delta_r - Z alpha / r.
+```
+
+This is recorded as an admitted standard bridge / exact support context, not
+as a framework-native derivation of the physical Hamiltonian. The hydrogen
+numbers `m_e c^2 = 510998.95000 eV`, `1/alpha(0) = 137.035999084`, and
+Hartree/2 appear only as comparator values already used by the repo scaffold.
+
+This source context is used as scale-identity support; it does not provide
+derivation closure for retained `m_e`, retained `alpha(0)`, the physical unit
+map, or the Rydberg claim.

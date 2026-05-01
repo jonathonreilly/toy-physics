@@ -1,6 +1,6 @@
 # Lane 2 No-Go Ledger
 
-**Updated:** 2026-05-01T10:53:48Z  
+**Updated:** 2026-05-01T11:10:40Z
 **Loop:** `lane2-atomic-scale-20260428`
 
 | Route | Prior / current artifact | Verdict | Why it is blocked | Reopen condition |
@@ -10,3 +10,5 @@
 | Promote Lane 2 through Lane 6 electron-mass closure during this run | User collision-avoidance constraint | out of scope | Lane 6/Koide/V0 is active elsewhere and must not be worked here. | Only record dependency; do not modify Lane 6 artifacts or branches. |
 | Use asymptotic gauge beta coefficients as a complete low-energy atomic bridge | Candidate under test in this block | suspected no-go | `b_QED` is above-threshold structural support; alpha(0) needs threshold-resolved decoupling and charged-mass/hadronic inputs. | A runner/note must show either a retained threshold theorem or exact insensitivity to missing thresholds. |
 | Promote `alpha_EM(M_Z) + b_QED=32/3` to `alpha(0)` | `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_QED_THRESHOLD_BRIDGE_FIREWALL_NOTE_2026-05-01.md`, `scripts/frontier_atomic_qed_threshold_bridge_firewall.py` | no-go / exact negative boundary | The same high endpoint and same asymptotic coefficient yield different low-energy inverse couplings when threshold placement changes; comparator `alpha(0)` can be hit only by choosing a hidden effective threshold. | Provide retained threshold-resolved QED transport or prove threshold insensitivity at the target status. |
+| Treat dimensionless lattice Coulomb ratios as an absolute physical-unit Rydberg scale | `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_NR_COULOMB_SCALE_BRIDGE_STRETCH_NOTE_2026-05-01.md`, `scripts/frontier_atomic_nr_coulomb_scale_bridge.py` | no-go / underdetermination boundary | The same dimensionless eigenvalue maps to different eV energies when the physical lattice spacing `a` is free; absolute energy scales as `1/a^2`. | Supply retained `mu/m_e`, retained `alpha(0)`, and a framework-native physical unit map `a = g/(2 mu Z alpha)`, or keep the claim conditional. |
+| Claim the physical-unit nonrelativistic Schrodinger limit is fully retained from the scale bridge | `.claude/science/physics-loops/lane2-atomic-scale-20260428/notes/ATOMIC_NR_COULOMB_SCALE_BRIDGE_STRETCH_NOTE_2026-05-01.md` | not closed / conditional support only | The bridge proves exact scaling once the standard physical Hamiltonian and unit map are admitted; it does not derive the kinetic prefactor, reduced mass, or low-energy coupling from Lane 2 primitives. | Derive the kinetic normalization/unit map from the framework substrate, or explicitly admit it as a bridge outside retained closure. |
