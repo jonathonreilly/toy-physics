@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T02:08:55.288162+00:00
+**Generated:** 2026-05-01T02:09:54.957673+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 2 |
 | bounded | 261 |
-| support | 221 |
+| support | 220 |
 | open | 16 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 45 |
-| ~~audited_conditional~~ | 766 |
+| ~~audited_conditional~~ | 767 |
 | ~~audited_failed~~ | 143 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 229 |
-| `audited_conditional` | 498 |
+| `audited_conditional` | 499 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 12 |
-| `unaudited` | 745 |
+| `unaudited` | 744 |
 
 | criticality | count |
 |---|---:|
@@ -733,6 +733,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `pmns_c3_nontrivial_current_boundary_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_commutant_eigenoperator_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_selector_current_stack_zero_law_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -10214,6 +10215,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `publication/ci3_z3/DERIVATION_ATLAS.md`
   - `NEUTRINO_FULL_CLOSURE_LAST_MILE_REDUCTION_NOTE.md`
   - `publication/ci3_z3/NEUTRINO_DIRAC_PMNS_BOUNDARY_PACKET_2026-04-15.md`
+- **auditor confidence:** high
+
+### `pmns_c3_nontrivial_current_boundary_note`
+
+- **Note:** [`PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md`](../../docs/PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_c3_nontrivial_current_boundary_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The reduced graph-first PMNS family can be summarized by the nontrivial C3-character current J_chi=(h0+omega h1+omega^2 h2)/3, which is identified with chi=u+i v, and all currently retained sole-axiom routes are said to annihilate that current.  _(class `A`)_
+- **chain closes:** False — The note provides no runner, dependencies, or derivation for the current-bank annihilation claims; it states a Fourier-current reduction and route boundary without auditable support.
+- **rationale:** Issue: the row has deps=[] and runner_path=None. The Fourier definition of J_chi may be a valid local algebraic projection, but the note does not supply the underlying h_j construction, the reduced graph-first PMNS family authority, or evidence that the free, hw=1 source/transfer, and scalar routes all force J_chi=0. Why this blocks: the central boundary claim is about what all currently retained routes can or cannot produce, and that requires declared route authorities or a runner that evaluates the current on those routes. Repair target: add/register a runner that computes J_chi on the claimed route classes and declare the graph-first PMNS reduction plus free/source-transfer/scalar route notes as dependencies. Claim boundary until fixed: support-level naming of a candidate nontrivial C3 Fourier current; not an independently audited smallest-source boundary theorem.
 - **auditor confidence:** high
 
 ### `pmns_commutant_eigenoperator_selector_note`
