@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:56:51.516661+00:00
+**Generated:** 2026-05-01T20:58:28.901672+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 169 |
-| support | 140 |
+| support | 139 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 938 |
+| ~~audited_conditional~~ | 939 |
 | ~~audited_failed~~ | 83 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 300 |
-| `audited_conditional` | 641 |
+| `audited_conditional` | 642 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 523 |
+| `unaudited` | 522 |
 
 | criticality | count |
 |---|---:|
@@ -932,6 +932,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_cap_uniqueness_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `s3_general_r_derivation_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `s3_time_bilinear_tensor_action_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `s3_time_primitive_chain_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `s3_time_spacetime_tensor_primitive_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_time_tensorized_schur_primitive_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_time_theta_to_slice_coupling_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13288,6 +13289,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `S3_TIME_TENSOR_PRIMITIVE_PROTOTYPE_NOTE.md`
   - `TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md`
 - **auditor confidence:** high
+
+### `s3_time_primitive_chain_note`
+
+- **Note:** [`S3_TIME_PRIMITIVE_CHAIN_NOTE.md`](../../docs/S3_TIME_PRIMITIVE_CHAIN_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims the current Route-2 stack already has the exact PL S^3 x R scaffold, Lambda_R, T_R, and bilinear carrier K_R, so the smallest remaining primitive is the exact readout map P_R to the two-channel Route-2 readout, with beta_E/alpha_E = 21/4 as the sharp remaining entry after granting the T-side candidates.  _(class `B`)_
+- **chain closes:** False — The synthesis does not close from the row alone; it depends on unregistered upstream theorem blocks and lacks an executable audit surface.
+- **rationale:** Issue: the note is a route-status synthesis with no registered runner and no ledger dependencies for the exact background, carrier, endpoint-ratio, or readout/time-coupling theorem blocks it imports. Why this blocks: the claimed primitive ranking and reduction to beta_E/alpha_E = 21/4 depend on upstream exact-stack results that are not available as one-hop audit inputs and are not executable here. Repair target: register the cited Route-2 theorem notes as dependencies and add a runner or structured checker that verifies the endpoint-ratio reduction and the dependency ordering from those inputs. Claim boundary until fixed: the note is useful support guidance for the next Route-2 target, but it is conditional on the upstream exact-stack/readout-reduction surfaces.
+- **open / conditional deps cited:**
+  - `Route-2 exact background/carrier/readout theorem notes`
+  - `exact endpoint-ratio reduction runner`
 
 ### `s3_time_spacetime_tensor_primitive_note`
 
