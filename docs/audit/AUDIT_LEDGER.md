@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:15:16.287865+00:00
+**Generated:** 2026-05-01T07:18:29.228443+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 274 |
+| `audited_clean` | 275 |
 | `audited_conditional` | 586 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 575 |
+| `unaudited` | 574 |
 
 | criticality | count |
 |---|---:|
@@ -313,6 +313,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_mutual_information_canonical_families_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mirror_mutual_information_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `moving_source_retarded_portability_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `multipole_tidal_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
 | `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -10775,6 +10776,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** No second-family moving-source replay is retained yet; the existing portable grown-row log remains the only frozen moving-source evidence and this row is duplicate/closure support.  _(class `B`)_
 - **chain closes:** False — The cited portability log supports the existence of one narrow moving-source proxy, but the row has no registered dependencies for the referenced notes and no runner or inventory artifact proving the absence of any second-family replay. The closure diagnosis is therefore useful but not fully auditable from the provided context.
 - **rationale:** Issue: the load-bearing duplicate/closure diagnosis imports a repo-wide negative inventory without registered one-hop authorities. Why this blocks: the audit can verify the cited moving-source portability log exists and has the stated controls, but cannot verify from this row alone that no distinct second-family replay is retained elsewhere. Repair target: register the moving-source and vector-extension notes as dependencies and/or generate an inventory runner for second-family replay candidates. Claim boundary until fixed: this is support for avoiding duplicate promotion, not an audited theorem about the complete moving-source evidence surface.
+- **auditor confidence:** high
+
+### `moving_source_retarded_portability_note`
+
+- **Note:** [`MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md`](../../docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The moving-source rows do not collapse into the matched static-field replay because the final-layer detector centroid y bias flips sign with v while the zero-source baseline remains exactly zero.  _(class `C`)_
+- **chain closes:** True — The current primary runner reproduces the frozen zero baseline, matched v=0 static control, signed velocity sweep, and note values from the stated portable grown row. Within the note's bounded proxy scope, the directional centroid observable is computed rather than imported or renamed.
+- **rationale:** The load-bearing claim is narrow: a bounded moving-source proxy on one portable grown row leaves a signed centroid-y response after an exact zero-source baseline and matched static-field control. The runner computes the baseline, control, and signed moving-source rows and its current output matches the frozen values in the note. The note does not claim a universal wave theory or external comparator, so the remaining risk is limited to the stated toy-row scope rather than a hidden broader physical identification.
 - **auditor confidence:** high
 
 ### `multipole_tidal_response_note`
