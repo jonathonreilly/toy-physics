@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:06:45.037972+00:00
+**Generated:** 2026-05-01T11:08:11.066804+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 298 |
+| `audited_clean` | 299 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 544 |
+| `unaudited` | 543 |
 
 | criticality | count |
 |---|---:|
@@ -351,6 +351,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_c3_character_mode_reduction_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `pmns_right_conjugacy_invariant_no_go_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
 | `pmns_selector_three_identity_support_proposal_readme_2026-04-21` | support | ~~audited_clean~~ | support | cross_family | codex-current | D | - |
+| `pmns_sole_axiom_hw1_source_transfer_boundary_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -12349,6 +12350,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md`
   - `PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md`
   - `PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md`
+- **auditor confidence:** high
+
+### `pmns_sole_axiom_hw1_source_transfer_boundary_note`
+
+- **Note:** [`PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md`](../../docs/PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The canonical sole-axiom hw=1 source/transfer construction yields only the trivial free active/passive pack and is exactly rejected by the retained PMNS closure stack.  _(class `C`)_
+- **chain closes:** True — The registered runner completes with PASS=16 FAIL=0, checking native projectors, graph-first transfer, trivial active/passive source columns, closure-stack rejection, and a circularity guard.
+- **rationale:** Clean within the note's bounded negative scope. The note does not claim PMNS closure; it closes a specific escape hatch by showing that native source insertion plus graph-first transfer still produces a trivial hw=1 pack. The current runner verifies the exact projector/frame identities, reconstructs the trivial source-derived blocks, confirms the retained closure stack rejects the pack as not on a one-sided minimal PMNS class, and checks that no PMNS-side value targets are taken as inputs. Residual risk is the declared scope: this rules out the canonical hw=1 source/transfer route, not every possible nontrivial PMNS bridge.
 - **auditor confidence:** high
 
 ### `pmns_transfer_operator_dominant_mode_note`
