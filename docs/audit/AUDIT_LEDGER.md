@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:44:01.345126+00:00
+**Generated:** 2026-05-01T11:45:46.094500+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 186 |
-| support | 160 |
+| support | 159 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 860 |
+| ~~audited_conditional~~ | 861 |
 | ~~audited_failed~~ | 178 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 303 |
-| `audited_conditional` | 590 |
+| `audited_conditional` | 591 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 538 |
+| `unaudited` | 537 |
 
 | criticality | count |
 |---|---:|
@@ -875,6 +875,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `poisson_exhaustive_uniqueness_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `poisson_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `poisson_self_gravity_mechanism_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `portable_package_hierarchy_classifier_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `primordial_spectrum_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `propagator_family_unification_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quantum_horizon_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -12523,6 +12524,26 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `SIGN_PORTABILITY_INVARIANT_NOTE.md`
   - `DISTANCE_LAW_PORTABILITY_NOTE.md`
+  - `COMPLEX_SELECTIVITY_COMPARE_NOTE.md`
+- **auditor confidence:** high
+
+### `portable_package_hierarchy_classifier_note`
+
+- **Note:** [`PORTABLE_PACKAGE_HIERARCHY_CLASSIFIER_NOTE.md`](../../docs/PORTABLE_PACKAGE_HIERARCHY_CLASSIFIER_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The retained evidence supports one nested read: broad portable weak-field package, stricter distance tail, and narrower complex-action branch.  _(class `B`)_
+- **chain closes:** False — The classifier is a cross-note synthesis of several portable-package, distance-tail, and complex-action cards, but this ledger row has no registered one-hop dependencies. The runner exits successfully, yet it renders hard-coded rows rather than verifying the cited card statuses or recomputing the hierarchy.
+- **rationale:** Issue: the nested hierarchy is asserted from multiple evidence cards, but the audit row exposes no registered dependencies and the runner only prints a constant table. Why this blocks: a hostile reviewer cannot tell from this row whether the broad, distance-tail, and complex-action layers are actually closed by audited upstream cards. Repair target: register the cited cards as one-hop dependencies and make the classifier runner verify their status/closure boundaries or compute the hierarchy from structured inputs. Claim boundary until fixed: use this as a review-safe support summary, not as an independently audited hierarchy theorem.
+- **open / conditional deps cited:**
+  - `SIGN_PORTABILITY_INVARIANT_NOTE.md`
+  - `archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_PACKAGE_EXTENSION_NOTE.md`
+  - `archive_unlanded/portability-stale-extension-wrappers-2026-04-30/PORTABLE_CARD_EXTENSION_NOTE.md`
+  - `DISTANCE_LAW_PORTABILITY_NOTE.md`
+  - `DISTANCE_LAW_BREAKPOINT_NOTE.md`
+  - `COMPLEX_ACTION_NOTE.md`
   - `COMPLEX_SELECTIVITY_COMPARE_NOTE.md`
 - **auditor confidence:** high
 

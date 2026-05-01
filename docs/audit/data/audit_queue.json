@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 202,
+    "leaf": 201,
     "medium": 133
   },
-  "generated_at": "2026-05-01T11:44:01.130431+00:00",
+  "generated_at": "2026-05-01T11:45:45.878122+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10043,23 +10043,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "portable_package_hierarchy_classifier_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/PORTABLE_PACKAGE_HIERARCHY_CLASSIFIER_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/portable_package_hierarchy_classifier.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "qnm_control_hardening_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -13824,6 +13807,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 138,
-  "total_pending": 538
+  "ready_count": 137,
+  "total_pending": 537
 }
