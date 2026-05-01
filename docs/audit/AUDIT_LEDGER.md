@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:25:05.738080+00:00
+**Generated:** 2026-05-01T04:26:15.945895+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 230 |
+| bounded | 229 |
 | support | 192 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 806 |
+| ~~audited_conditional~~ | 807 |
 | ~~audited_failed~~ | 159 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 537 |
+| `audited_conditional` | 538 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 18 |
-| `unaudited` | 685 |
+| `unaudited` | 684 |
 
 | criticality | count |
 |---|---:|
@@ -851,6 +851,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `work_history.potential_publication_discoveries_log` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_bridge_endpoint_shift_bound_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `yt_bridge_rearrangement_principle_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_color_projection_correction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_exact_coarse_grained_bridge_operator_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -13379,6 +13380,25 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`
   - `TARGET_CONDITIONED_INPUT: TARGET_YT_PHYS = 0.9176`
   - `PROFILE_FAMILY_SELECTION: logistic / erf / smoothstep UV-localized bridges`
+- **auditor confidence:** high
+
+### `yt_bridge_rearrangement_principle_note`
+
+- **Note:** [`YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md`](../../docs/YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-yt_bridge_rearrangement_principle_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The linearized endpoint response kernel K(tau) is positive and monotone increasing toward the IR, so fixed positive surplus has minimal endpoint leverage when placed as far toward the UV as allowed.  _(class `C`)_
+- **chain closes:** False — The runner verifies the response-kernel ordering around the accepted bridge, but the accepted bridge, positive-surplus premise, UV-localized constructive class, and earlier no-go inputs are not registered dependencies. The exact interacting bridge is not derived from declared inputs here.
+- **rationale:** Issue: the rearrangement principle is proven only around the accepted bridge/background and imported positive-surplus bridge class. Why this blocks: the runner passes and the monotone positive kernel supports UV localization, but the accepted bridge profile, positivity of the surplus, and earlier no-go/constructive inputs are assumed from unregistered upstream notes. Repair target: register and audit the constructive UV bridge, diffuse/EW no-go inputs, action-invariant input, and exact interacting bridge background, then rerun the kernel-ordering proof over those clean inputs. Claim boundary until fixed: this is a solid conditional rearrangement principle for the current bridge model, not an audit-clean derivation that the exact bridge must be UV-localized.
+- **open / conditional deps cited:**
+  - `YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`
+  - `YT_BRIDGE_ACTION_INVARIANT_NOTE.md`
+  - `YT_EW_COUPLING_BRIDGE_NOTE.md`
+  - `YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`
+  - `ACCEPTED_BRIDGE_PROFILE: logistic center=0.975 width=0.020`
+  - `HYPOTHESIS: nonnegative bridge-surplus action`
 - **auditor confidence:** high
 
 ### `yt_color_projection_correction_note`
