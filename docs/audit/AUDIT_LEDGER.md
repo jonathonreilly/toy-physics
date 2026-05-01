@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:11:39.837942+00:00
+**Generated:** 2026-05-01T05:13:13.916177+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 245 |
+| `audited_clean` | 246 |
 | `audited_conditional` | 549 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 74 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 652 |
+| `unaudited` | 651 |
 
 | criticality | count |
 |---|---:|
@@ -198,6 +198,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `emergent_product_law_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `equivalence_principle_harness_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `evolving_network_prototype_v3_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
+| `finite_rank_source_to_metric_theorem_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `fixed_field_complex_grown_basin_v2_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fixed_field_family_unification_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -5906,6 +5907,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `live_runner_output_not_completed_in_audit_window`
   - `title_uses_universality_while_claim_disclaims_universality`
 - **auditor confidence:** medium
+
+### `finite_rank_source_to_metric_theorem_note`
+
+- **Note:** [`FINITE_RANK_SOURCE_TO_METRIC_THEOREM_NOTE.md`](../../docs/FINITE_RANK_SOURCE_TO_METRIC_THEOREM_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The finite-rank Woodbury/Dyson identity produces the exact renormalized exterior field, the same shell trace is stationary for the Schur boundary action, and shell averaging gives only a bounded scalar/isotropic metric reduction with the tensorial 3+1 map explicitly left open.  _(class `C`)_
+- **chain closes:** True — For the bounded claim actually made, the runner verifies the exact finite-rank field reconstruction, exterior harmonicity, Schur boundary-action stationarity, and a strongly improved coarse scalar/isotropic residual while preserving the stated blocker that full tensorial 3+1 closure is missing. The note does not overclaim full nonlinear GR.
+- **rationale:** The scoped architecture closes at the grade stated in the note: exact finite-rank source-to-exterior and exact boundary-action stationarity, followed by bounded coarse scalar/isotropic metric evidence. The runner exits 0 and reproduces the stated R_match=5.0 residual improvement while explicitly reporting the nonzero direct 3+1 residual as a blocker. Residual risk is the acknowledged missing tensorial matching/completion principle, which is outside this row's bounded claim boundary.
+- **auditor confidence:** high
 
 ### `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30`
 
