@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T00:31:32.246802+00:00",
+  "generated_at": "2026-05-01T00:32:56.980180+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -6198,7 +6198,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 16,
+        "C": 20,
         "D": 0
       },
       "decoration_candidate": false,
@@ -10297,12 +10297,24 @@
       "dominant_class": null,
       "runner": "scripts/persistent_record_overlap_kernel.py"
     },
+    "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_physical_hermitian_hamiltonian_and_sme_bridge.py"
+    },
     "physical_lattice_necessity_note": {
       "assert_count": 0,
       "counts": {
         "A": 0,
         "B": 14,
-        "C": 21,
+        "C": 19,
         "D": 1
       },
       "decoration_candidate": false,
@@ -22104,7 +22116,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 16,
+        "C": 20,
         "D": 0
       },
       "decoration_candidate": false,
@@ -25216,6 +25228,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_physical_hermitian_hamiltonian_and_sme_bridge.py": {
+      "assert_count": 1,
+      "claims": [
+        "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_physical_lattice_necessity.py": {
       "assert_count": 0,
       "claims": [
@@ -25224,7 +25251,7 @@
       "counts": {
         "A": 0,
         "B": 14,
-        "C": 21,
+        "C": 19,
         "D": 1
       },
       "decoration_candidate": false,
@@ -32383,12 +32410,12 @@
     "dominant_class_distribution": {
       "A": 7,
       "B": 119,
-      "C": 447,
+      "C": 448,
       "D": 183,
       "none": 404
     },
-    "runners_classified": 1160,
-    "runners_with_C": 539,
+    "runners_classified": 1161,
+    "runners_with_C": 540,
     "runners_with_D": 284
   }
 }

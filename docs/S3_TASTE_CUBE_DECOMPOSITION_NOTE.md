@@ -1,10 +1,12 @@
 # S_3 Taste-Cube Decomposition Note
 
 **Date:** 2026-04-17
-**Status:** exact support theorem on the full taste cube
+**Status:** proposed_retained exact structural theorem on the full taste cube;
+audit pending
 **Script:** `scripts/frontier_s3_action_taste_cube_decomposition.py`
-**Authority role:** canonical representation-theoretic support note for
-axis-permutation symmetry on `C^8 = (C^2)^{\otimes 3}`
+**Authority role:** canonical representation-theoretic theorem for
+axis-permutation symmetry on `C^8 = (C^2)^{\otimes 3}`; not a standalone
+physical-flavor theorem
 
 ## Safe statement
 
@@ -23,9 +25,10 @@ C^8 ~= 4 A_1 + 2 E
 
 and the sign irrep `A_2` does not occur
 
-This is a full-cube support theorem. It does not by itself prove any flavor
-claim. Its safe role is to fix the exact `S_3` carrier content that later
-generation and flavor tools are allowed to use.
+This is a full-cube structural theorem. It does not by itself prove any flavor
+or mass-hierarchy claim. Its safe retained-grade role is narrower: it fixes the
+exact `S_3` carrier content that later generation and flavor tools are allowed
+to use as an input.
 
 ## Classical results applied
 
@@ -42,7 +45,7 @@ generation and flavor tools are allowed to use.
 ## Why it matters on `main`
 
 This theorem sharpens the repo's axis-symmetry language into an exact
-representation statement. It supplies a clean canonical support tool for the
+representation statement. It supplies a canonical structural input for the
 retained three-generation lane and for future bounded flavor work built on the
 full taste cube rather than only on the retained `hw=1` triplet.
 

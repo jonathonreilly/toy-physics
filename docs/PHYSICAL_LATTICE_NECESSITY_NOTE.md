@@ -1,11 +1,10 @@
-# Physical-Lattice Necessity / Fixed-Surface No-Regulator-Reinterpretation Note
+# Physical-Lattice Necessity / No-Same-Stack Regulator Boundary Note
 
 **Date:** 2026-04-16
-**Status:** exact support theorem on the framework boundary; proposed_retained
-no-same-stack / no-same-surface regulator reinterpretation closure, exact
-retained observable-species semantics on the accepted Hilbert surface,
-retained-package conditional necessity, and accepted one-axiom substrate
-necessity
+**Status:** proposed_retained no-g_bare-load physical-lattice necessity
+theorem; audit pending. Load-bearing route is the no-same-stack regulator
+boundary plus accepted Hilbert/locality/information substrate semantics, not
+the `g_bare` theorem chain.
 **Script:** `scripts/frontier_physical_lattice_necessity.py`
 **Authority role:** canonical support note for the physical-lattice /
 regulator boundary on the current `main` branch
@@ -17,7 +16,7 @@ three-generation observable theorem?
 
 There are four different targets:
 
-1. **No-same-stack / no-same-surface regulator reinterpretation.**
+1. **No-same-stack regulator reinterpretation.**
    Can the current accepted framework stack be re-read as an ordinary regulator
    theory without adding new structure?
 2. **Observable-species semantics.**
@@ -32,22 +31,21 @@ There are four different targets:
    Can the physical-lattice reading itself be derived from a smaller set of
    accepted inputs?
 
-The current package now closes the first target cleanly, it closes the second
-on the accepted Hilbert surface, it closes the third conditionally on the
-retained package contract, and it now closes the fourth on the accepted
-one-axiom Hilbert/locality/information surface.
+The current package now closes the first target without the `g_bare` theorem
+chain, closes the second on the accepted Hilbert surface, keeps the third as a
+support diagnostic conditional on the live quantitative package, and closes the
+fourth on the accepted one-axiom Hilbert/locality/information surface.
 
 ## Safe statement
 
 On the accepted `Cl(3)` / `Z^3` package surface, regulator reinterpretation is
-not an equivalent reading of the same theory, and it cannot preserve the same
-fixed quantitative surface.
+not an equivalent reading of the same theory.
 
 More precisely:
 
 - the accepted minimal stack fixes a physical `Z^3` substrate, finite local
-  staggered-Dirac dynamics, and a fixed canonical normalization/evaluation
-  surface;
+  staggered-Dirac dynamics, and the accepted Hilbert/locality/information
+  substrate semantics;
 - the retained three-generation observable theorem removes the last exact
   retained-surface quotient/rooting loophole on the `hw=1` triplet;
 - any regulator reinterpretation still requires extra structure not present in
@@ -55,20 +53,14 @@ More precisely:
   - a continuum-limit family,
   - path-integral/rooting or continuum-removal machinery,
   - an external renormalization / universality / EFT interpretation layer.
-- once that family is introduced, it no longer preserves the accepted
-  canonical quantitative surface:
-  - `g_bare = 1`,
-  - Wilson `beta = 6`,
-  - the accepted same-surface plaquette theorem at `beta = 6`,
-  - the downstream plaquette / `u_0` / `alpha_s(v)` / `v` chain.
-- even if one allows compensating `u_0` motion, any regulator-style family
-  that tries to preserve the live package invariants `alpha_s(v)` and `v`
-  is trivial: it collapses to the single canonical point
-  `beta = 6`, `u_0 = u_{0,\mathrm{can}}`.
+- once that family is introduced, it is no longer the same fixed accepted
+  framework surface. The older quantitative invariant-collapse argument is
+  retained only as a support diagnostic, not as a load-bearing premise.
 
 Therefore regulator reinterpretation is **not** a mere restatement of the
 accepted framework. It is a different theory package obtained by adjoining
-extra structure and by leaving the accepted fixed evaluation surface.
+extra structure. The older fixed-evaluation-surface calculation remains an
+optional consistency diagnostic, not part of the load-bearing route.
 
 In addition, the retained `hw=1` triplet is no longer physical only by
 declaration. The accepted Hilbert surface already provides:
@@ -81,15 +73,10 @@ declaration. The accepted Hilbert surface already provides:
 So the retained triplet already carries physical-species semantics on the
 accepted Hilbert surface.
 
-Moreover, once the retained package contract is imposed
-
-- physical triplet species structure,
-- no proper exact quotient/rooting on the retained `hw=1` generation surface,
-- accepted `alpha_s(v)`,
-- accepted `v`,
-
-the physical-lattice reading is the unique surviving interpretation on the
-current package surface.
+Moreover, on the accepted one-axiom Hilbert/locality/information surface, the
+graph/locality object is already part of the physical state-space structure.
+Specializing that surface to the current `Cl(3)` on `Z^3` package forces the
+substrate-level physical-lattice reading without invoking the `g_bare` chain.
 
 What remains narrow is not a live theorem gap but a scoping point:
 
@@ -115,44 +102,33 @@ That loophole is now closed. The remaining issue is not a retained-surface
 generation loophole. The remaining issue is whether the whole framework can be
 reinterpreted as regulator lattice QFT without changing the theory.
 
-This note shows the answer is **no** on the current accepted stack, and it
-shows why in the stronger sense that the regulator-family reading does not
-preserve the current quantitative package surface. It also upgrades the
-physical-lattice reading from a bare premise to a retained-package necessity
-statement: once the live retained package is fixed, no alternative surviving
-interpretation remains.
+This note shows the answer is **no** on the current accepted stack. It also
+upgrades the physical-lattice reading from a bare premise on the accepted
+one-axiom Hilbert/locality/information surface: once graph and unitary are one
+irreducible physical object, the `Z^3` graph in the specialized package is not
+an auxiliary regulator mesh.
 
 ## The theorem
 
-> **Physical-Lattice No-Same-Stack / No-Same-Surface
-> Regulator-Reinterpretation Theorem.**
+> **Physical-Lattice No-Same-Stack Regulator-Reinterpretation Theorem.**
 > Fix the current accepted minimal framework stack:
 >
 > 1. local algebra `Cl(3)`,
 > 2. spatial substrate `Z^3`,
 > 3. finite local Grassmann / staggered-Dirac dynamics,
-> 4. fixed canonical normalization/evaluation surface (`g_bare = 1`,
->    accepted plaquette / `u_0` surface, and minimal APBC hierarchy block where
->    applicable).
+> 4. accepted Hilbert/locality/information substrate semantics.
 >
 > On that accepted stack:
 >
 > - the retained `hw=1` generation surface is already exact and irreducible,
 >   so no proper exact quotient / rooting / reduction survives there;
-> - the gauge surface is fixed at the Wilson plaquette action with
->   `g_bare^2 = 1`, hence `beta = 6`;
-> - the accepted quantitative surface is fixed at the canonical
->   `beta = 6` plaquette / `u_0` / hierarchy chain;
 > - no continuum-limit family, rooting machinery, or renormalization/EFT
 >   reinterpretation layer belongs to the accepted stack itself.
 >
 > Therefore any regulator reading requires adjoining extra structure not
-> licensed by that stack, and any regulator-family deformation leaves the
-> accepted canonical quantitative surface. Moreover, preserving the accepted
-> live package invariants `alpha_s(v)` and `v` forces the canonical point
-> `beta = 6`, `u_0 = u_{0,\mathrm{can}}`. So on the retained package contract,
-> the physical-lattice reading is the unique surviving interpretation. It is
-> not an equivalent reading of the same accepted framework surface.
+> licensed by that stack. It is not an equivalent reading of the same accepted
+> framework surface. The fixed quantitative surface gives a separate diagnostic
+> check, but it is not a load-bearing premise of this theorem.
 >
 > Separately, the retained `hw=1` triplet already has physical-species
 > semantics on the accepted Hilbert surface: exact translations separate the
@@ -170,10 +146,7 @@ The current minimal accepted input stack explicitly fixes:
 
 - `Cl(3)` as the local algebra,
 - `Z^3` as the physical spatial substrate,
-- finite local staggered-Dirac dynamics,
-- the physical-lattice reading,
-- canonical normalization/evaluation through `g_bare = 1` and the accepted
-  plaquette / `u_0` surface.
+- finite local staggered-Dirac dynamics.
 
 This is not a statement about a tunable regulator family. It is a statement
 about one fixed theory surface.
@@ -202,7 +175,7 @@ requires new ingredients not present in the accepted stack, including:
 Those ingredients may be mathematically respectable, but they are **extra**.
 They are not already contained in the accepted framework inputs.
 
-### 4. Regulator reinterpretation also leaves the accepted quantitative surface
+### 4. Support Diagnostic: regulator reinterpretation also leaves the accepted evaluation surface
 
 The accepted package is not only a fixed logical stack. It is also a fixed
 canonical evaluation surface:
@@ -212,7 +185,8 @@ canonical evaluation surface:
 - the accepted same-surface plaquette theorem at `beta = 6`,
 - the downstream canonical `u_0`, `alpha_LM`, `alpha_s(v)`, and `v`.
 
-The first point is exact already. For Wilson `SU(3)` one has
+This section is an evaluation-surface diagnostic, not the load-bearing
+substrate-necessity argument. For Wilson `SU(3)` one has
 
 `beta = 2 N_c / g_bare^2 = 6 / g_bare^2`,
 
@@ -230,7 +204,7 @@ accepted result is the same-surface plaquette theorem on the retained `beta=6`
 surface. Once a continuum family is introduced, the accepted package is no
 longer being read on that fixed quantitative surface.
 
-### 5. Cross-lane invariant preservation collapses to the canonical point
+### 5. Support Diagnostic: cross-lane invariant preservation collapses to the canonical point
 
 **Superseded as primary g_bare justification.** The argument in this
 section uses `alpha_s(v)` and `v` as observational invariants to force the
@@ -239,22 +213,11 @@ without observational input. It is retained here only as a consistency
 diagnostic showing that no regulator-family deformation preserves both
 live package invariants away from `beta = 6`.
 
-The non-circular g_bare fixation now lives at two independent retained routes:
-
-- [G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md](G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md)
-  together with
-  [G_BARE_RIGIDITY_THEOREM_NOTE.md](G_BARE_RIGIDITY_THEOREM_NOTE.md)
-  (operator-algebra / structural-normalization route)
-- [G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md](G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md)
-  with
-  [G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md)
-  and
-  [G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md)
-  (1PI amplitude route)
-
-Those notes derive `g_bare = 1` from retained structural content without
-using `alpha_s(v)` or `v` as inputs, which is the cleaner closure. This
-section is kept for the regulator-family diagnostic only.
+The non-circular `g_bare` fixation is deliberately not cited as a load-bearing
+dependency here. This section is kept for the regulator-family diagnostic only:
+if a separate audit accepts the `g_bare` routes, this diagnostic becomes an
+additional consistency route, but the headline physical-lattice necessity
+claim below does not depend on it.
 
 The boundary can be sharpened further without freezing `u_0` by hand.
 Write
@@ -305,10 +268,10 @@ the two-invariant collapse above.
 ### 6. Therefore the regulator reading is not the same theory
 
 Because the accepted stack is fixed and the regulator reading requires added
-structure while also leaving the accepted canonical quantitative surface, the
-regulator reading is not a mere change of words. It is a different theory
-package, and any family preserving the accepted `alpha_s(v)` and `v` invariants
-collapses to the trivial canonical point.
+structure, the regulator reading is not a mere change of words. It is a
+different theory package. The fixed-surface and cross-lane invariant-collapse
+calculations in the support diagnostics above give additional checks, but they
+are not needed for the same-stack nonequivalence conclusion.
 
 This closes the anti-regulator question on the current package surface:
 
@@ -343,10 +306,10 @@ step before the later one-axiom substrate-necessity upgrade; the remaining
 question at this stage is only whether the substrate itself is fundamental
 rather than a regulator-family surrogate.
 
-### 8. Retained-package conditional necessity
+### 8. Support Diagnostic: retained-package conditional necessity
 
-The next stronger consequence is a real necessity theorem on the retained
-package contract.
+The next stronger consequence is a diagnostic on the retained package
+contract, not the load-bearing no-`g_bare` theorem route.
 
 If one requires the current retained package contract
 
@@ -363,7 +326,8 @@ then the regulator reading does not survive. The previous sections show:
   invariants `alpha_s(v)` and `v` except at the canonical point.
 
 Therefore the physical-lattice reading is forced as the unique surviving
-interpretation **on the retained package contract**.
+interpretation **on the retained package contract**, conditional on the
+quantitative package inputs used in this diagnostic.
 
 That is stronger than an objection handler. It is a conditional necessity
 result on the current package surface.
@@ -393,7 +357,7 @@ Specializing that accepted framework to the current package gives:
 - the graph is `Z^3`;
 - the local algebra is `Cl(3)`;
 - the retained `hw=1` sectors already have physical-species semantics;
-- no same-stack / no-same-surface regulator reinterpretation survives.
+- no same-stack regulator reinterpretation survives.
 
 Therefore the substrate-level physical-lattice reading is no longer a separate
 live premise on the accepted one-axiom framework surface. It is forced by the
@@ -406,14 +370,15 @@ This note now closes a stronger exact point than the older audit did:
 - the physical-lattice reading is not merely a stylistic interpretation choice
   over the same accepted stack;
 - regulator reinterpretation is not same-stack equivalent;
-- regulator-family deformation is not same-surface equivalent on the accepted
-  canonical quantitative chain;
+- regulator-family deformation leaves the accepted canonical quantitative
+  surface as a support diagnostic, not as a load-bearing premise;
 - exact observable-sector semantics already force the retained `hw=1` triplet
   to be physically distinct species sectors on the accepted Hilbert surface;
-- any regulator-style family preserving the accepted live package invariants
+- the older invariant-collapse calculation still shows that any
+  regulator-style family preserving the accepted live package invariants
   `alpha_s(v)` and `v` is trivial at the canonical point
   `beta = 6`, `u_0 = u_{0,\mathrm{can}}`;
-- once the retained matter closure and live quantitative package are imposed,
+- conditional on the retained matter closure and live quantitative package,
   the physical-lattice reading is the unique surviving interpretation;
 - on the accepted one-axiom Hilbert/locality/information surface, the
   physical-lattice substrate reading itself is derived rather than separately
@@ -435,11 +400,11 @@ This note does **not** claim:
 
 The honest boundary is now:
 
-- **closed:** no same-stack / no-same-surface regulator reinterpretation;
+- **closed:** no same-stack regulator reinterpretation;
 - **closed:** triplet physical-species semantics on the accepted Hilbert
   surface;
-- **closed:** retained-package conditional necessity of the physical-lattice
-  reading;
+- **support diagnostic:** retained-package conditional necessity of the
+  physical-lattice reading;
 - **closed:** substrate-level physical-lattice reading on the accepted
   one-axiom framework surface;
 - **still scoped:** the derivation uses the accepted one-axiom framework
@@ -447,9 +412,8 @@ The honest boundary is now:
 
 ## Promotion rule
 
-This note supports the live package now because the no-same-stack /
-no-same-surface regulator reinterpretation theorem is strong enough to be
-reusable across:
+This note supports the live package now because the no-same-stack regulator
+reinterpretation theorem is strong enough to be reusable across:
 
 - three-generation defenses,
 - anti-rooting arguments,
@@ -457,15 +421,15 @@ reusable across:
 - any future lane that depends on the physical-lattice reading of the retained
   matter/gauge surface.
 
-It also exposes reusable fixed-surface subtools:
+It also exposes reusable support diagnostics:
 
 - no nontrivial regulator-style family preserving accepted `alpha_s(v)` and
-  `v`;
+  `v`, conditional on the quantitative package surface;
 - the one-parameter corollary that on the canonical `u_0` surface,
   `alpha_s(v; beta) / alpha_s(v; 6) = 6 / beta` and
   `v(beta) / v(6) = (6 / beta)^16`.
-- the retained-package necessity statement that the physical-lattice reading is
-  the unique surviving interpretation once the retained package contract is
+- the retained-package necessity diagnostic that the physical-lattice reading
+  is the unique surviving interpretation once the retained package contract is
   imposed.
 - the one-axiom substrate-necessity statement that the graph/locality object is
   already physical on the accepted Hilbert/information surface, so the
@@ -478,8 +442,8 @@ It also exposes reusable fixed-surface subtools:
 Current runner state:
 
 - `frontier_physical_lattice_necessity.py`:
-  `THEOREM/COMPUTE PASS=10`, `SUPPORT=31`, `FAIL=0`;
-  exact no-same-stack / no-same-surface regulator reinterpretation closure,
-  exact retained observable-species semantics on the accepted Hilbert surface,
-  retained-package conditional necessity, and accepted one-axiom substrate
-  necessity
+  `THEOREM/COMPUTE PASS=10`, `SUPPORT=35`, `FAIL=0`;
+  exact no-same-stack regulator reinterpretation closure, exact retained
+  observable-species semantics on the accepted Hilbert surface,
+  retained-package conditional necessity as a support diagnostic, and accepted
+  one-axiom substrate necessity
