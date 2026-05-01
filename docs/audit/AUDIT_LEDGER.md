@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T21:12:56.477608+00:00
+**Generated:** 2026-05-01T21:14:49.972892+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 164 |
-| support | 134 |
+| support | 133 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 948 |
+| ~~audited_conditional~~ | 949 |
 | ~~audited_failed~~ | 85 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 301 |
-| `audited_conditional` | 651 |
+| `audited_conditional` | 652 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 510 |
+| `unaudited` | 509 |
 
 | criticality | count |
 |---|---:|
@@ -948,6 +948,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_tensor_ray_magnitude_bridge_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `scaling_failure_mechanisms` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `second_grown_family_complex_boundary_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -13604,6 +13605,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `science_3plus1_line_law_known_limits_note_2026-04-20 -> missing audited Wilson/Perron, rho1, complex-Givens, reduced-packet, interlacing-no-go, and live-target dependencies`
 - **auditor confidence:** high
+
+### `second_grown_family_complex_boundary_note`
+
+- **Note:** [`SECOND_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md`](../../docs/SECOND_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims the tightened second grown-family complex-action window preserves the anchor Born/weak-field guards but fails the desired TOWARD -> AWAY crossover because the response is already AWAY at gamma=0 and remains AWAY at gamma=0.1 and gamma=0.5.  _(class `C`)_
+- **chain closes:** False — The diagnostic result reproduces, but clean audit closure is conditional on asserted runner checks and explicit harness dependencies.
+- **rationale:** Issue: the runner recomputes the tightened window and reproduces the negative crossover result, but it emits a report rather than asserted/classified PASS lines and imports unregistered grown-family harnesses. Why this blocks: the boundary diagnosis is credible but could drift without failing, and the audit row does not expose the underlying family/growth dependencies. Repair target: add assertions for the anchor Born/F~M guards and crossover failure, emit classified PASS lines, and register the grown-family complex and gate-B harness dependencies. Claim boundary until fixed: the current local replay supports a diagnosed response-sign/crossover boundary, not a retained broad complex-action basin.
+- **open / conditional deps cited:**
+  - `scripts/SECOND_GROWN_FAMILY_COMPLEX_QUICK.py`
+  - `scripts/SECOND_GROWN_FAMILY_COMPLEX.py`
+  - `scripts/GATE_B_NONLABEL_SIGN_GROWN_TRANSFER.py`
+  - `scripts/gate_b_no_restore_farfield.py`
 
 ### `second_grown_family_complex_note`
 
