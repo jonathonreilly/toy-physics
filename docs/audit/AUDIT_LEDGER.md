@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T09:23:59.301977+00:00
+**Generated:** 2026-05-01T09:37:51.943148+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 289 |
+| `audited_clean` | 290 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 556 |
+| `unaudited` | 555 |
 
 | criticality | count |
 |---|---:|
@@ -335,6 +335,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_compact_update_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_green_scout_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `persistent_object_multistage_floor_sweep_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -11531,6 +11532,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Broadening the compact-object floor from top4 to top5/top6/top8 does not reopen the inward-source boundary: source0.75 and source1.00 remain closed, while source1.25 and source1.50 remain admissible.  _(class `C`)_
 - **chain closes:** True — The current runner was executed on the four inward-source rows for top_keep=4,5,6,8 and reproduced the same 2/4 admissible split at every width, with the same closed and open rows reported by the note.
 - **rationale:** Clean within the note's bounded scope. The load-bearing claim is not matter closure or pocket universality; it is the narrower statement that widening the compact-object floor across top4/top5/top6/top8 does not repair the two residual inward-source misses. The current runner computes the multistage cases for each width and reproduces the frozen 2/4 totals and the same row-level split: source0.75 and source1.00 remain closed, while source1.25 and source1.50 remain admissible. Residual risk is the declared bounded exact-lattice setting and the continued directional/source-placement limit, not a mismatch in the audited floor-width claim.
+- **auditor confidence:** high
+
+### `persistent_object_multistage_floor_sweep_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The multistage floor sweep separates top3 from broader compact-object floors on the stable widened rows: top3 is admissible on 0/5 cases, while top4, top5, and top6 are each admissible on 5/5 cases.  _(class `C`)_
+- **chain closes:** True — Fresh runner executions for top_keep=3,4,5,6 reproduced the note's frozen summary exactly: top3 failed all five stable widened-regime rows, while top4, top5, and top6 passed all five rows.
+- **rationale:** Clean within the declared bounded scope. The load-bearing claim is a first-principles exact-lattice runner result about the first self-maintaining compact-object floor on the stable widened branch, not a claim of matter closure or full-pocket universality. Current executions of the registered runner reproduced top3 at 0/5 and top4/top5/top6 at 5/5, with top3 failing by sub-threshold stage overlap and the broader floors clearing overlap, carry, alpha, direction, and drift gates. Residual risk is confined to the note's stated boundaries: this does not prove beyond-pocket transfer, inertial-mass closure, or matter closure.
 - **auditor confidence:** high
 
 ### `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16`
