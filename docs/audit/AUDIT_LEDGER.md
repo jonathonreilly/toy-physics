@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:57:23.984607+00:00
+**Generated:** 2026-05-01T04:58:34.782771+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 222 |
-| support | 187 |
+| support | 186 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 814 |
-| ~~audited_failed~~ | 159 |
+| ~~audited_failed~~ | 160 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 243 |
 | `audited_conditional` | 545 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 71 |
+| `audited_failed` | 72 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 661 |
+| `unaudited` | 660 |
 
 | criticality | count |
 |---|---:|
@@ -918,6 +918,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `kernel_vs_gravity_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `koide_axiom_native_support_batch_note_2026-04-22` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `lepton_shared_higgs_universality_underdetermination_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `light_cone_framing_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `localized_source_response_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_annular_tapered_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -9797,6 +9798,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`
   - `CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`
   - `UNREGISTERED: shared-Higgs universality theorem`
+- **auditor confidence:** high
+
+### `lepton_shared_higgs_universality_underdetermination_note`
+
+- **Note:** [`LEPTON_SHARED_HIGGS_UNIVERSALITY_UNDERDETERMINATION_NOTE.md`](../../docs/LEPTON_SHARED_HIGGS_UNIVERSALITY_UNDERDETERMINATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The current atlas contains no retained inter-sector bridge theorem forcing shared-Higgs universality or forcing its failure, so the present exact answer is underdetermination.  _(class `B`)_
+- **chain closes:** False — The runner's constructive grammar checks pass, but it exits nonzero because the atlas/validation/PMNS-packet checks used to support the current-stack claim no longer match the repo surface.
+- **rationale:** Issue: the row's current-stack underdetermination claim relies on atlas/publication-control state that the primary runner can no longer verify; the runner reports 17 PASS and 3 FAIL and exits nonzero. Why this blocks: the algebraic examples still show admissible universal and non-universal assignments, but the note's load-bearing claim about the current retained/publication surface is stale relative to the checked artifacts. Repair target: update the note and runner against the current DERIVATION_ATLAS, DERIVATION_VALIDATION_MAP, and PMNS packet wording, or replace the artifact checks with robust current ledger/atlas tests. Claim boundary until fixed: the constructive examples remain suggestive support, but this row is not an audited current-stack theorem.
 - **auditor confidence:** high
 
 ### `lepton_single_higgs_pmns_triviality_note`
