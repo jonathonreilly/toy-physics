@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:40:10.136988+00:00
+**Generated:** 2026-05-01T04:41:31.850347+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 223 |
-| support | 189 |
+| support | 188 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 811 |
+| ~~audited_conditional~~ | 812 |
 | ~~audited_failed~~ | 159 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 542 |
+| `audited_conditional` | 543 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 675 |
+| `unaudited` | 674 |
 
 | criticality | count |
 |---|---:|
@@ -650,6 +650,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hubble_lane5_eta_retirement_gate_audit_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hubble_lane5_planck_c1_gate_audit_note_2026-04-26` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hubble_lane5_two_gate_dependency_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `hubble_lane5_workstream_status_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `impact_parameter_lensing_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `impact_parameter_portability_extension_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `impact_parameter_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -8034,6 +8035,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md`
   - `HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md`
   - `HUBBLE_LANE5_C3_VACUUM_TOPOLOGY_NO_ACTIVE_ROUTE_NOTE_2026-04-27.md`
+- **auditor confidence:** high
+
+### `hubble_lane5_workstream_status_note_2026-04-27`
+
+- **Note:** [`HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md`](../../docs/HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Lane 5 closure requires retaining premises from both (C1) the absolute-scale axiom and one of {(C2) cosmic-history-ratio retirement, (C3) direct cosmic-L derivation}; no fourth class exists and no single class is sufficient.  _(class `B`)_
+- **chain closes:** False — The registered runner verifies only the separate structural-lock theorem, while the status note's two-gate synthesis relies on multiple upstream workstream artifacts that are not registered as dependencies for this row.
+- **rationale:** Issue: the note's load-bearing two-gate Lane 5 closure map is a cross-artifact synthesis, but this row has no registered dependencies and its runner validates only the Cycle 1 structural-lock theorem. Why this blocks: the audit can confirm the runner's five structural-lock checks, but not the broader claim that the listed C1/C2/C3 taxonomy exhausts Lane 5 closure. Repair target: register the Cycle 2-5 artifacts as dependencies and add a dedicated runner or formal checklist for the two-gate/no-fourth-class synthesis. Claim boundary until fixed: the note remains a support/status surface summarizing the workstream, not an audited closure theorem.
 - **auditor confidence:** high
 
 ### `hypercharge_identification_note`
