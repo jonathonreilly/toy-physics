@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:14:21.436048+00:00
+**Generated:** 2026-05-01T06:17:09.798757+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 202 |
+| bounded | 201 |
 | support | 170 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 841 |
+| ~~audited_conditional~~ | 842 |
 | ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 255 |
-| `audited_conditional` | 572 |
+| `audited_conditional` | 573 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 611 |
+| `unaudited` | 610 |
 
 | criticality | count |
 |---|---:|
@@ -891,6 +891,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `up_sector_partition_revisit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `valley_linear_action_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `valley_linear_wide_tail_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `vector_sector_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_3plus1d_promotions_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_direct_dm_family_scout_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -13747,6 +13748,20 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `asymptotic_bridge_slice_dependence_open`
   - `4D_tail_law_transfer_norm_Gate_B_and_UV_completion_open`
 - **auditor confidence:** high
+
+### `valley_linear_wide_tail_note`
+
+- **Note:** [`VALLEY_LINEAR_WIDE_TAIL_NOTE.md`](../../docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the widened h = 0.25, W = 12 replay for the 3D valley-linear branch, the no-barrier distance tail is better resolved and the far-tail fit on the tested z >= 5 window is b^(-1.17) with high R^2.  _(class `C`)_
+- **chain closes:** False — The frozen replay log matches the note's Born, k=0, 9/9 TOWARD support, peak-tail, and far-tail values, but the registered replay is a slow 461k-node numerical artifact and did not complete under a 90s audit cap.
+- **rationale:** Issue: the load-bearing wide-tail replay depends on scripts/valley_linear_wide_tail_replay.py, whose saved log matches the note but whose current run exceeds the audit-loop wall-time budget. Why this blocks: audited_clean would require current replay of the Born sanity checks and no-barrier tail fits from a registered runner under standard audit conditions, or an explicit accepted slow-runner protocol. Repair target: provide a fast deterministic primary runner, reduced fixture, or documented slow-runner path that reproduces Born=4.82e-15, k=0, 9/9 TOWARD rows, and the z>=5 b^(-1.17), R^2=0.997 fit. Claim boundary until fixed: the row supports a bounded frozen finite-lattice wide-tail replay, not a clean universal theorem or clean current replay under the audit loop.
+- **open / conditional deps cited:**
+  - `valley_linear_wide_tail_note -> scripts/valley_linear_wide_tail_replay.py (registered runner exceeds audit-loop wall-time budget)`
+- **auditor confidence:** medium
 
 ### `vector_magnetic_extension_note`
 
