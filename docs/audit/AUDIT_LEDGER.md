@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:54:32.948325+00:00
+**Generated:** 2026-05-01T20:55:36.423157+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 171 |
+| bounded | 170 |
 | support | 140 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 936 |
+| ~~audited_conditional~~ | 937 |
 | ~~audited_failed~~ | 83 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 300 |
-| `audited_conditional` | 639 |
+| `audited_conditional` | 640 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 525 |
+| `unaudited` | 524 |
 
 | criticality | count |
 |---|---:|
@@ -926,6 +926,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retardation_discriminator_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `retarded_field_causality_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `retarded_field_compact_refinement_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `retarded_field_delay_proxy_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `s3_anomaly_spacetime_lift_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_cap_uniqueness_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `s3_general_r_derivation_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -13122,6 +13123,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** False — The runner reproduces a bounded two-family smoke-probe readout, but the proposed-retained surface is stronger than the evidence because the result is partial, row-sign-dependent, and not attached as an assertion runner in the ledger.
 - **rationale:** Issue: The script and frozen log support only partial survival of a retarded-vs-instantaneous centroid-shift split on two retained DAG-family parameter choices, with nonuniform row signs and sizable standard errors, while the audit queue exposes the row as proposed_retained. Why this blocks: a two-family smoke probe without assertion tolerances or a stated statistical/refinement theorem cannot establish a retained retarded-field law or a robust universal discriminator. Repair target: change the source status to bounded/support, or add a ledger-attached assertion runner plus a refinement theorem/statistical criterion showing noncollapse over a specified family class with tolerances. Claim boundary until fixed: it is safe to claim that the current script reproduces nonzero mean splits for the compact and refined families and that the refined split is not uniformly one-directional; it is not safe to claim retained universal retarded-field behavior from this probe.
 - **auditor confidence:** high
+
+### `retarded_field_delay_proxy_note`
+
+- **Note:** [`RETARDED_FIELD_DELAY_PROXY_NOTE.md`](../../docs/RETARDED_FIELD_DELAY_PROXY_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the generated 3D DAG family with seeds=6, the retarded-field blend produces the frozen intermediate-layer phase-lag table while mix=0 recovers the instantaneous baseline exactly.  _(class `C`)_
+- **chain closes:** False — The frozen replay is reproducible, but clean closure is conditional on an asserted/classified runner and explicit harness dependencies.
+- **rationale:** Issue: the runner reproduces the frozen phase-lag and amp-ratio table, including exact mix=0 recovery, but it reports values rather than asserting the table or emitting classified PASS lines; the causal DAG/field harness is also not registered as a dependency. Why this blocks: the load-bearing bounded claim could silently drift if the phase-lag values, seed count, or weak-field recovery changed, and the runner does not currently expose those as auditable checks. Repair target: add explicit assertions/tolerances for the frozen table, seed count, and mix=0 recovery; emit classified PASS lines; and register the causal_field_gravity harness dependency. Claim boundary until fixed: the current local replay supports a compact retarded-field delay proxy on this generated DAG family, not a gravitational-wave or universal delay law.
+- **open / conditional deps cited:**
+  - `scripts/retarded_field_delay_proxy_probe.py`
+  - `scripts/causal_field_gravity.py`
 
 ### `s3_anomaly_spacetime_lift_note`
 
