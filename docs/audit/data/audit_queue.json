@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 256,
+    "leaf": 255,
     "medium": 133
   },
-  "generated_at": "2026-05-01T06:53:51.488551+00:00",
+  "generated_at": "2026-05-01T06:54:59.020351+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9975,23 +9975,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "weak_coupling_sign_sensitivity_note_2026-04-11",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "open",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/WEAK_COUPLING_SIGN_SENSITIVITY_NOTE_2026-04-11.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_weak_coupling_battery.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "work_history.gw_echo_timing_route_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14743,6 +14726,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 193,
-  "total_pending": 592
+  "ready_count": 192,
+  "total_pending": 591
 }

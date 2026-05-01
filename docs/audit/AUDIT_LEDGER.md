@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:53:51.768528+00:00
+**Generated:** 2026-05-01T06:54:59.271753+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 262 |
+| `audited_clean` | 263 |
 | `audited_conditional` | 581 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 592 |
+| `unaudited` | 591 |
 
 | criticality | count |
 |---|---:|
@@ -352,6 +352,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_matrixfree_moving_source_fixed_beam_boundary_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_static_single_source_compare_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `weak_coupling_retention_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
+| `weak_coupling_sign_sensitivity_note_2026-04-11` | open | ~~audited_clean~~ | open | cross_family | codex-current | C | - |
 | `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `yt_microscopic_schur_class_admissibility_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `yt_schur_stability_gap_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -14331,6 +14332,18 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** At weak coupling G=5,10, attractive parity coupling gives a larger shell-force TOWARD count than repulsive coupling on 60/60 audited runs, with minimum separation 10/40 and norm conservation.  _(class `C`)_
 - **chain closes:** True — The registered runner recomputes the finite audited surface and currently reports shell ordered 60/60, shell margin >= 10 on 60/60, and norm conserved 60/60. The closed claim is only the bounded finite-surface shell-force statement, not a universal irregular-graph theorem.
 - **rationale:** The load-bearing finite-surface diagnostic is computed directly by the runner across the stated graph families, sizes, seeds, and G values. Current output also shows width asymmetry 56/60, gap ratio 57/60, and shell strict split 47/60, but those are not needed for the narrowed shell-margin claim. Residual risk is scope creep: the audit does not close a theorem for all admissible irregular bipartite graphs or a stable secondary spectral-gap row.
+- **auditor confidence:** high
+
+### `weak_coupling_sign_sensitivity_note_2026-04-11`
+
+- **Note:** [`WEAK_COUPLING_SIGN_SENSITIVITY_NOTE_2026-04-11.md`](../../docs/WEAK_COUPLING_SIGN_SENSITIVITY_NOTE_2026-04-11.md)
+- **current_status:** open
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The weak-coupling regime has 14/15 runs with w_asym < 1 at both G=5 and G=10, with mean width effects of 9.5% and 13.5%, while still not closing the off-lattice sign-selection blocker.  _(class `C`)_
+- **chain closes:** True — The registered runner recomputes the full three-family, five-seed battery at G=5 and G=10, and the current output matches the note's reported counts, mean effects, borderline growing cases, and non-universal shell-force caveats. The note's claim is explicitly limited to an exploratory sign-sensitive regime rather than retained blocker closure.
+- **rationale:** The computation checks the load-bearing weak-coupling sign-sensitivity claim directly: both operating points reproduce 14/15 width-asymmetry successes and the quoted mean effects, including the stated failures/caveats. The note does not overstate this as a universal directional observable or blocker closure, so the derivation closes for the declared open exploratory scope. Residual risk is the note's own limitation that larger/diverse retained-family freezing is still required before promotion.
 - **auditor confidence:** high
 
 ### `wide_lattice_h2t_distance_law_note`
