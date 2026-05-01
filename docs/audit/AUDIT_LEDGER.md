@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:38:06.763618+00:00
+**Generated:** 2026-05-01T20:39:20.522781+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 173 |
-| support | 147 |
+| support | 146 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 928 |
+| ~~audited_conditional~~ | 929 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 298 |
-| `audited_conditional` | 631 |
+| `audited_conditional` | 632 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 536 |
+| `unaudited` | 535 |
 
 | criticality | count |
 |---|---:|
@@ -908,6 +908,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `quark_endpoint_denominator_admissibility_note_2026-04-19` | _proposed_no_go_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `quark_issr1_bicac_forcing_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `quark_jts_affine_physical_carrier_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | B | `quark_projector_ray_phase_completion_note_2026-04-18` |
 | `quark_route2_exact_readout_map_note_2026-04-19` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `quark_up_amplitude_provenance_audit_note_2026-04-19` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -12780,6 +12781,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`
   - `QUARK_JTS_RESIDUE_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_jts_affine_physical_carrier_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Because {p,e5} is a basis of H_(1+5), Pert(p)=H_(1+5), and psi -> j^1_0(eps -> p + eps psi) is a canonical bijection from Pert(p) to J^1_p(A_p).  _(class `C`)_
+- **chain closes:** False — The shared runner verifies the affine-carrier linear algebra and returns PASS=13, FAIL=0. The theorem's physical-carrier provenance imports retained CL3/CKM/bimodule facts and parameter atoms that are named in prose but not represented as one-hop ledger dependencies.
+- **rationale:** Issue: the affine-plane/JTS identification is algebraically verified, but the note's claim that this is the retained physical-route carrier depends on uncited retained carrier and CKM-atlas inputs. Why this blocks: a hostile reviewer can accept Pert(p)=H_(1+5) and the jet bijection given those inputs, but cannot derive the physical carrier provenance from this row alone. Repair target: add explicit dependencies for the CL3/CKM carrier, projector ray, H_(1+5), and quark projector parameter atoms, or narrow this note to a conditional affine-linear theorem given those inputs. Claim boundary until fixed: the local JTS linear algebra closes; the physical retained-carrier interpretation is conditional on upstream provenance.
+- **open / conditional deps cited:**
+  - `CL3_SM_EMBEDDING_THEOREM.md`
+  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27`
