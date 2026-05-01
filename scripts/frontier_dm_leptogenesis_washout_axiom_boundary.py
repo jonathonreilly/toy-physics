@@ -229,19 +229,22 @@ def part3_the_old_099_benchmark_is_not_physically_consistent_once_projection_is_
     print("=" * 88)
 
     closure = read("scripts/frontier_dm_leptogenesis_exact_kernel_closure.py")
-    audit = read("docs/DM_LEPTOGENESIS_EXACT_KERNEL_AUDIT_NOTE_2026-04-15.md")
+    # Stale checks removed in this hygiene pass:
+    #
+    # 1. `read("docs/DM_LEPTOGENESIS_EXACT_KERNEL_AUDIT_NOTE_2026-04-15.md")`
+    #    — note deleted by commit d2e754fdc (2026-04-16, "Trim DM package to
+    #    science-only surface").
+    # 2. Substring check `"m_tilde_eV = Y0_SQ * V_EW**2 / M1 * 1e9"` —
+    #    documented an intermediate-state bug in the closure runner that has
+    #    since been refactored. The current closure runner uses
+    #    `pkg.m_tilde_exact_eV` (computed as part of the exact leptogenesis
+    #    package) instead of the explicit raw formula. The closure-uses-K00
+    #    check (epsilon_1 / k00) survives below and is the load-bearing item
+    #    for this part.
 
     check(
         "The earlier exact-kernel runner already divided epsilon_1 by K00",
         "/ k00" in closure,
-    )
-    check(
-        "But that same runner still used the pre-projection m_tilde without K00",
-        "m_tilde_eV = Y0_SQ * V_EW**2 / M1 * 1e9" in closure,
-    )
-    check(
-        "The earlier audit already recorded that washout / thermal modelling was still retained",
-        "retained thermal dilution" in audit and "retained strong-washout fit" in audit,
     )
 
 

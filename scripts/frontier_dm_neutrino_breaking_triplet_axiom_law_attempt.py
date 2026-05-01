@@ -275,25 +275,23 @@ def part5_bank_records_the_boundary_cleanly() -> None:
     print("=" * 88)
 
     note = read("docs/DM_NEUTRINO_BREAKING_TRIPLET_AXIOM_LAW_ATTEMPT_NOTE_2026-04-15.md")
-    blocker = read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")
-    lepto = read("docs/DM_LEPTOGENESIS_NOTE.md")
-    atlas = read("docs/publication/ci3_z3/DERIVATION_ATLAS.md")
+    # Stale-path checks were removed in this hygiene pass:
+    #
+    # 1. `read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")` — note
+    #    deleted by commit d2e754fdc (2026-04-16, "Trim DM package to
+    #    science-only surface").
+    # 2. `read("docs/DM_LEPTOGENESIS_NOTE.md")` — same deletion commit.
+    # 3. The atlas-row check `"| DM neutrino breaking-triplet axiom-law
+    #    boundary |"` was also stale: the corresponding row was trimmed from
+    #    `docs/publication/ci3_z3/DERIVATION_ATLAS.md` in the same pass.
+    #
+    # Removing them is audit hygiene consistent with the original trim
+    # commit's intent. The surviving note check verifies the load-bearing
+    # claim (no positive current-stack value law is available) directly.
 
     check(
         "The new note states that no positive axiom-side triplet value law is currently derivable",
         "No positive current-stack value law is available." in note,
-    )
-    check(
-        "The blocker note records the triplet as the live last-mile object",
-        "gamma" in blocker and "delta + rho" in blocker and "A + b - c - d" in blocker,
-    )
-    check(
-        "The leptogenesis note records the 0.30 benchmark as CP-kernel suppression",
-        "0.30" in lepto and "Davidson-Ibarra" in lepto,
-    )
-    check(
-        "The atlas carries the DM triplet axiom-boundary row",
-        "| DM neutrino breaking-triplet axiom-law boundary |" in atlas,
     )
 
 

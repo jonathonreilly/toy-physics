@@ -204,17 +204,15 @@ def part4_the_branch_surface_records_the_new_closure_point() -> None:
     print("PART 4: THE BRANCH SURFACE RECORDS THE NEW CLOSURE POINT")
     print("=" * 88)
 
-    blocker = read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")
-    lepto = read("docs/DM_LEPTOGENESIS_NOTE.md")
-
-    check(
-        "The blocker note still records E1 and E2 as the two exact even channels",
-        "delta + rho" in blocker and "A + b - c - d" in blocker,
-    )
-    check(
-        "The leptogenesis note still records that the benchmark remains bounded on the current reduced kernel",
-        "eta = 1.81e-10" in lepto and "0.30" in lepto,
-    )
+    # Stale-path checks were removed in this hygiene pass:
+    #
+    # 1. `read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")` — note
+    #    deleted by commit d2e754fdc (2026-04-16, "Trim DM package to
+    #    science-only surface").
+    # 2. `read("docs/DM_LEPTOGENESIS_NOTE.md")` — same deletion commit.
+    #
+    # The surviving informational check on this theorem's scope is preserved
+    # below; the load-bearing v_even closure is verified by parts 1-3.
     check(
         "So this theorem closes the even coefficient vector, not yet the benchmark source amplitudes",
         True,
