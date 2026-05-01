@@ -22,6 +22,12 @@ Next PR body update should add:
 - `frontier_yt_ward_ratio_stationarity_no_go.py`;
 - `YT_QFP_SELECTOR_NO_GO_NOTE_2026-05-01.md`;
 - `frontier_yt_qfp_selector_no_go.py`;
+- `YT_OBSERVED_MASS_INVERSION_NO_GO_NOTE_2026-05-01.md`;
+- `frontier_yt_observed_mass_inversion_no_go.py`;
+- `YT_RGE_ONLY_SELECTOR_NO_GO_NOTE_2026-05-01.md`;
+- `frontier_yt_rge_only_selector_no_go.py`;
+- `YT_PR230_QUEUE_EXHAUSTION_CERTIFICATE_NOTE_2026-05-01.md`;
+- `frontier_yt_pr230_queue_exhaustion_certificate.py`;
 - `YT_PR230_REVIEW_BACKPRESSURE_PASS_NOTE_2026-05-01.md`;
 - certificate path and `PASS=24 FAIL=0`;
 - trace-anomaly certificate path and `PASS=14 FAIL=0`;
@@ -32,5 +38,8 @@ Next PR body update should add:
 - asymptotic-safety fixed-point no-go certificate path and `PASS=8 FAIL=0`;
 - Ward-ratio stationarity no-go certificate path and `PASS=7 FAIL=0`;
 - QFP selector no-go certificate path and `PASS=7 FAIL=0`;
+- observed-comparator inversion no-go certificate path and `PASS=8 FAIL=0`;
+- RGE-only selector no-go certificate path and `PASS=7 FAIL=0`;
+- queue-exhaustion certificate path and `PASS=33 FAIL=0`;
 - honest status: no full retained closure; non-MC Planck criticality remains
   conditional on an added stationarity selector.

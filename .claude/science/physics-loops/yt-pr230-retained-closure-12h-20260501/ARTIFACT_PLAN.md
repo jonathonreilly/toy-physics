@@ -30,11 +30,21 @@ Completed in the current block:
 - `outputs/yt_qfp_selector_no_go_2026-05-01.json`
 - `docs/YT_QFP_SELECTOR_NO_GO_NOTE_2026-05-01.md`
 - `docs/YT_PR230_REVIEW_BACKPRESSURE_PASS_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_observed_mass_inversion_no_go.py`
+- `outputs/yt_observed_mass_inversion_no_go_2026-05-01.json`
+- `docs/YT_OBSERVED_MASS_INVERSION_NO_GO_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_rge_only_selector_no_go.py`
+- `outputs/yt_rge_only_selector_no_go_2026-05-01.json`
+- `docs/YT_RGE_ONLY_SELECTOR_NO_GO_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_pr230_queue_exhaustion_certificate.py`
+- `outputs/yt_pr230_queue_exhaustion_certificate_2026-05-01.json`
+- `docs/YT_PR230_QUEUE_EXHAUSTION_CERTIFICATE_NOTE_2026-05-01.md`
 - updates to the direct-correlator theorem note and double-criticality selector
   note
 
 Remaining if campaign continues:
 
-- no current positive route remains without adding a new stationarity premise;
+- no current positive route remains without production evidence, an independent
+  mass pin, a new stationarity premise, or a re-audited Ward definition route;
 - PR body update with the new no-go and honest closure boundary;
 - audit pipeline and commit/push after each coherent block.

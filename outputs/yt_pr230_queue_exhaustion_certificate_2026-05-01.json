@@ -1,0 +1,119 @@
+{
+  "actual_current_surface_status": "open / queue exhausted for current non-MC PR230 routes",
+  "artifacts": {
+    "beta_lambda_no_go": true,
+    "direct_correlator_gate": true,
+    "fixed_point_no_go": true,
+    "gauge_input_sensitivity": true,
+    "observed_inversion_no_go": true,
+    "planck_selector": true,
+    "qfp_no_go": true,
+    "rge_only_no_go": true,
+    "scale_anchor_sensitivity": true,
+    "scale_stationarity_no_go": true,
+    "top_mass_pin_no_go": true,
+    "trace_anomaly_no_go": true,
+    "vacuum_stability_no_go": true,
+    "ward_decomp_no_go": true,
+    "ward_ratio_no_go": true
+  },
+  "claim_firewall": {
+    "checks": {
+      "bare_retained_blocked": true,
+      "direct_certificate_not_production": true,
+      "open_imports_recorded": true,
+      "proposal_blocked": true,
+      "state_open_status": true
+    },
+    "direct_certificate_phase": "reduced_scope"
+  },
+  "fail_count": 0,
+  "pass_count": 33,
+  "remaining_positive_routes": [
+    "complete production direct-correlator campaign and supply an independent heavy top-sector mass parameter pin",
+    "derive beta_lambda(M_Pl)=0 from new substrate scale/trace boundary structure",
+    "adopt beta_lambda(M_Pl)=0 as an explicit selector premise and keep the result conditional",
+    "re-permit and independently re-audit the old Ward/H_unit route as a definition source rather than a derivation"
+  ],
+  "runners": {
+    "assumption_audit": {
+      "fail_count": 0,
+      "pass_count": 34,
+      "path": "outputs/yt_pr230_physics_loop_assumption_audit_2026-05-01.json",
+      "status": "open / no full retained closure"
+    },
+    "beta_lambda_no_go": {
+      "fail_count": 0,
+      "pass_count": 20,
+      "path": "outputs/yt_beta_lambda_planck_stationarity_no_go_2026-05-01.json",
+      "status": "no-go / exact-negative-boundary"
+    },
+    "fixed_point_no_go": {
+      "fail_count": 0,
+      "pass_count": 8,
+      "path": "outputs/yt_asymptotic_safety_fixed_point_no_go_2026-05-01.json",
+      "status": "no-go / exact-negative-boundary"
+    },
+    "gauge_input_sensitivity": {
+      "fail_count": 0,
+      "pass_count": 8,
+      "path": "outputs/yt_planck_selector_gauge_input_sensitivity_2026-05-01.json",
+      "status": "conditional-support / assumption-sensitivity boundary"
+    },
+    "observed_inversion_no_go": {
+      "fail_count": 0,
+      "pass_count": 8,
+      "path": "outputs/yt_observed_mass_inversion_no_go_2026-05-01.json",
+      "status": "no-go / exact-negative-boundary for observed-comparator inversion as proof"
+    },
+    "planck_selector": {
+      "fail_count": 0,
+      "pass_count": 19,
+      "path": "outputs/yt_planck_double_criticality_selector_2026-04-30.json",
+      "status": "conditional-support / open selector route"
+    },
+    "qfp_no_go": {
+      "fail_count": 0,
+      "pass_count": 7,
+      "path": "outputs/yt_qfp_selector_no_go_2026-05-01.json",
+      "status": "no-go / exact-negative-boundary for QFP-as-selector"
+    },
+    "rge_only_no_go": {
+      "fail_count": 0,
+      "pass_count": 7,
+      "path": "outputs/yt_rge_only_selector_no_go_2026-05-01.json",
+      "status": "no-go / exact-negative-boundary for RGE-only selector"
+    },
+    "scale_anchor_sensitivity": {
+      "fail_count": 0,
+      "pass_count": 7,
+      "path": "outputs/yt_planck_selector_scale_anchor_sensitivity_2026-05-01.json",
+      "status": "conditional-support / assumption-sensitivity boundary"
+    },
+    "scale_stationarity_no_go": {
+      "fail_count": 0,
+      "pass_count": 24,
+      "path": "outputs/yt_scale_stationarity_substrate_no_go_2026-05-01.json",
+      "status": "no-go / exact-negative-boundary"
+    },
+    "trace_anomaly_no_go": {
+      "fail_count": 0,
+      "pass_count": 14,
+      "path": "outputs/yt_trace_anomaly_stationarity_no_go_2026-05-01.json",
+      "status": "no-go / exact-negative-boundary"
+    },
+    "vacuum_stability_no_go": {
+      "fail_count": 0,
+      "pass_count": 13,
+      "path": "outputs/yt_vacuum_stability_stationarity_no_go_2026-05-01.json",
+      "status": "no-go / exact-negative-boundary"
+    },
+    "ward_ratio_no_go": {
+      "fail_count": 0,
+      "pass_count": 7,
+      "path": "outputs/yt_ward_ratio_stationarity_no_go_2026-05-01.json",
+      "status": "no-go / exact-negative-boundary"
+    }
+  },
+  "verdict": "The current PR #230 physics-loop queue has closed the explored non-MC shortcuts negatively or demoted them to conditional support. No retained y_t closure is available on the current surface.  The remaining positive routes are production correlator evidence plus an independent top-mass parameter pin, a new substrate theorem for Planck stationarity, or an explicit new selector premise."
+}

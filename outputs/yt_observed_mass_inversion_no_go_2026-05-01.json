@@ -1,0 +1,22 @@
+{
+  "actual_current_surface_status": "no-go / exact-negative-boundary for observed-comparator inversion as proof",
+  "authority_boundary": {
+    "assumption_ledger_marks_observed_values_comparators": true,
+    "direct_note_calibrated_readout_boundary": true,
+    "direct_note_requires_independent_mass_pin": true,
+    "no_hunit_inversion_route": true,
+    "selector_note_observed_values_comparators_only": true
+  },
+  "fail_count": 0,
+  "numeric": {
+    "mt_pole_pdg_2025_gev": 172.56,
+    "naive_y_from_pole_mass": 0.9908798917333252,
+    "relative_delta_to_yt_v_comparator": 0.0798603876779918,
+    "v_gev": 246.28281829012906,
+    "yt_v_comparator": 0.9176
+  },
+  "pass_count": 8,
+  "remaining_open_premise": "substrate-derived top mass parameter, production correlator evidence, or an independently derived UV selector",
+  "target": "derive y_t by inverting observed top or Higgs-sector comparators",
+  "verdict": "Observed m_t, y_t, and m_H values may be used as comparators after a substrate calculation.  They cannot be load-bearing proof inputs for a retained y_t derivation.  Naively inverting the pole mass also does not produce the running y_t(v) comparator without a matching and running bridge."
+}

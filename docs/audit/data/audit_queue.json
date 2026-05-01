@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 297,
-    "medium": 299
+    "leaf": 299,
+    "medium": 300
   },
-  "generated_at": "2026-05-01T02:15:14.120636+00:00",
+  "generated_at": "2026-05-01T02:23:15.119809+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -9623,6 +9623,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_queue_exhaustion_certificate_note_2026-05-01",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "open",
+      "deps": [],
+      "direct_in_degree": 2,
+      "load_bearing_score": 3.322,
+      "note_path": "docs/YT_PR230_QUEUE_EXHAUSTION_CERTIFICATE_NOTE_2026-05-01.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_queue_exhaustion_certificate.py",
+      "transitive_descendants": 4
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -12893,7 +12910,8 @@
         "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
         "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01",
         "yt_ward_ratio_stationarity_no_go_note_2026-05-01",
-        "yt_qfp_selector_no_go_note_2026-05-01"
+        "yt_qfp_selector_no_go_note_2026-05-01",
+        "yt_pr230_queue_exhaustion_certificate_note_2026-05-01"
       ],
       "direct_in_degree": 2,
       "load_bearing_score": 3.0,
@@ -13737,6 +13755,40 @@
       "note_path": "docs/work_history/GW_ECHO_TIMING_ROUTE_NOTE.md",
       "ready": true,
       "runner_path": "scripts/frontier_gw_echo_derived.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_observed_mass_inversion_no_go_note_2026-05-01",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 1,
+      "load_bearing_score": 1.5,
+      "note_path": "docs/YT_OBSERVED_MASS_INVERSION_NO_GO_NOTE_2026-05-01.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_observed_mass_inversion_no_go.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_rge_only_selector_no_go_note_2026-05-01",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 1,
+      "load_bearing_score": 1.5,
+      "note_path": "docs/YT_RGE_ONLY_SELECTOR_NO_GO_NOTE_2026-05-01.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_rge_only_selector_no_go.py",
       "transitive_descendants": 1
     },
     {
@@ -18539,7 +18591,10 @@
         "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
         "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01",
         "yt_ward_ratio_stationarity_no_go_note_2026-05-01",
-        "yt_qfp_selector_no_go_note_2026-05-01"
+        "yt_qfp_selector_no_go_note_2026-05-01",
+        "yt_observed_mass_inversion_no_go_note_2026-05-01",
+        "yt_rge_only_selector_no_go_note_2026-05-01",
+        "yt_pr230_queue_exhaustion_certificate_note_2026-05-01"
       ],
       "direct_in_degree": 0,
       "load_bearing_score": 0.0,
@@ -18572,6 +18627,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 445,
-  "total_pending": 833
+  "ready_count": 448,
+  "total_pending": 836
 }

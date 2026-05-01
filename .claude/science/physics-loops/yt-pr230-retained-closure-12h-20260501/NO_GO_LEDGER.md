@@ -76,3 +76,21 @@ Closed by `docs/YT_QFP_SELECTOR_NO_GO_NOTE_2026-05-01.md` and
 QFP focusing compresses UV trajectory dependence, but different UV boundary
 values still map to different IR `y_t(v)` values.  It is bounded support for
 transport robustness, not retained closure.
+
+## Observed mass/comparator inversion is not proof
+
+Closed by `docs/YT_OBSERVED_MASS_INVERSION_NO_GO_NOTE_2026-05-01.md` and
+`scripts/frontier_yt_observed_mass_inversion_no_go.py`.
+
+Using observed `m_t`, `m_H`, or accepted `y_t` values as inputs imports the
+target.  It can calibrate or compare a route, but it cannot be the retained
+substrate derivation.
+
+## The RGE bridge is not a selector
+
+Closed by `docs/YT_RGE_ONLY_SELECTOR_NO_GO_NOTE_2026-05-01.md` and
+`scripts/frontier_yt_rge_only_selector_no_go.py`.
+
+The SM RGE bridge transports a boundary value across scales.  It does not
+choose that boundary value without measurement, Ward repair, production
+certificate, or a separately derived Planck stationarity condition.

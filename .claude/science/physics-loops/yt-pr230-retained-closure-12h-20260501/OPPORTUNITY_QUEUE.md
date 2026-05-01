@@ -14,6 +14,15 @@
    Improve the production runner bottleneck notes only if a physics closure
    route is exhausted.  Expected status: engineering support, not proof.
 
-4. **PR #230 honest closure boundary.**
-   Update PR body and theorem notes to state that full retained closure was not
-   achieved and list the exact blockers.
+4. **Observed-comparator inversion.**
+   Closed negatively in
+   `docs/YT_OBSERVED_MASS_INVERSION_NO_GO_NOTE_2026-05-01.md`.
+
+5. **RGE-only selector.**
+   Closed negatively in
+   `docs/YT_RGE_ONLY_SELECTOR_NO_GO_NOTE_2026-05-01.md`.
+
+6. **PR #230 honest closure boundary.**
+   Recorded in
+   `docs/YT_PR230_QUEUE_EXHAUSTION_CERTIFICATE_NOTE_2026-05-01.md`.
+   Full retained closure was not achieved.

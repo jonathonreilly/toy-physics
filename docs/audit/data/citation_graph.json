@@ -7917,6 +7917,18 @@
       "to": "yt_qfp_selector_no_go_note_2026-05-01"
     },
     {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "yt_observed_mass_inversion_no_go_note_2026-05-01"
+    },
+    {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "yt_rge_only_selector_no_go_note_2026-05-01"
+    },
+    {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "yt_pr230_queue_exhaustion_certificate_note_2026-05-01"
+    },
+    {
       "from": "yt_eft_bridge_theorem",
       "to": "yt_zero_import_authority_note"
     },
@@ -8471,6 +8483,10 @@
     {
       "from": "yt_planck_double_criticality_selector_note_2026-04-30",
       "to": "yt_qfp_selector_no_go_note_2026-05-01"
+    },
+    {
+      "from": "yt_planck_double_criticality_selector_note_2026-04-30",
+      "to": "yt_pr230_queue_exhaustion_certificate_note_2026-05-01"
     },
     {
       "from": "yt_qfp_selector_no_go_note_2026-05-01",
@@ -18493,7 +18509,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T02:15:05.386508+00:00",
+  "generated_at": "2026-05-01T02:23:07.547050+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39422,9 +39438,12 @@
         "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
         "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01",
         "yt_ward_ratio_stationarity_no_go_note_2026-05-01",
-        "yt_qfp_selector_no_go_note_2026-05-01"
+        "yt_qfp_selector_no_go_note_2026-05-01",
+        "yt_observed_mass_inversion_no_go_note_2026-05-01",
+        "yt_rge_only_selector_no_go_note_2026-05-01",
+        "yt_pr230_queue_exhaustion_certificate_note_2026-05-01"
       ],
-      "note_hash": "45f5bd17862c92bf01672e4f37167732507c11c2bee43ba42af23eeb1cd499d4",
+      "note_hash": "237c930056de917712127f1f56c76023809c359e912539a2d88c8b0573c7ab86",
       "path": "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_direct_lattice_correlator.py",
       "title": "Direct Lattice-Correlator Top-Yukawa Measurement Gate"
@@ -39619,6 +39638,16 @@
       "path": "docs/YT_MICROSCOPIC_SCHUR_CLASS_ADMISSIBILITY_NOTE.md",
       "runner_path": "scripts/frontier_yt_microscopic_schur_class_admissibility.py",
       "title": "Microscopic Schur-Class Admissibility Note"
+    },
+    "yt_observed_mass_inversion_no_go_note_2026-05-01": {
+      "claim_id": "yt_observed_mass_inversion_no_go_note_2026-05-01",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact-negative-boundary for observed-comparator inversion",
+      "deps": [],
+      "note_hash": "037668fbe98de143b138f4aa786899229ab569af212d92706291ead73521e693",
+      "path": "docs/YT_OBSERVED_MASS_INVERSION_NO_GO_NOTE_2026-05-01.md",
+      "runner_path": "scripts/frontier_yt_observed_mass_inversion_no_go.py",
+      "title": "YT Observed-Mass Inversion No-Go Note"
     },
     "yt_p1_bz_quadrature_2_loop_full_staggered_pt_note_2026-04-18": {
       "claim_id": "yt_p1_bz_quadrature_2_loop_full_staggered_pt_note_2026-04-18",
@@ -40000,9 +40029,10 @@
         "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
         "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01",
         "yt_ward_ratio_stationarity_no_go_note_2026-05-01",
-        "yt_qfp_selector_no_go_note_2026-05-01"
+        "yt_qfp_selector_no_go_note_2026-05-01",
+        "yt_pr230_queue_exhaustion_certificate_note_2026-05-01"
       ],
-      "note_hash": "c2a754d0f71ac21ea39bca1fdc1dec6cf140b85aba053bb26d733f66db1db40e",
+      "note_hash": "5dc355a8449726a26d07565c93f96a3ba45d2f97079b8d200477fae227567094",
       "path": "docs/YT_PLANCK_DOUBLE_CRITICALITY_SELECTOR_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_planck_double_criticality_selector.py",
       "title": "YT Planck Double-Criticality Selector Note"
@@ -40036,6 +40066,16 @@
       "path": "docs/YT_PR230_PHYSICS_LOOP_ASSUMPTION_AUDIT_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_physics_loop_assumption_audit.py",
       "title": "YT PR230 Physics-Loop Assumption Audit Note"
+    },
+    "yt_pr230_queue_exhaustion_certificate_note_2026-05-01": {
+      "claim_id": "yt_pr230_queue_exhaustion_certificate_note_2026-05-01",
+      "current_status": "open",
+      "current_status_raw": "open / queue exhausted for current non-MC PR230 routes",
+      "deps": [],
+      "note_hash": "b8d602af0f013082cb91db4eb725c4a1f6a82ec26f8cbe4e9e3e2b2e039ba2c9",
+      "path": "docs/YT_PR230_QUEUE_EXHAUSTION_CERTIFICATE_NOTE_2026-05-01.md",
+      "runner_path": "scripts/frontier_yt_pr230_queue_exhaustion_certificate.py",
+      "title": "YT PR230 Queue Exhaustion Certificate Note"
     },
     "yt_pr230_review_backpressure_pass_note_2026-05-01": {
       "claim_id": "yt_pr230_review_backpressure_pass_note_2026-05-01",
@@ -40088,6 +40128,16 @@
       "path": "docs/YT_RETENTION_MASTER_MANIFEST_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_retention_manifest.py",
       "title": "YT Retention Master Manifest (Reviewer Entry Point \u2014 Submission Under Review)"
+    },
+    "yt_rge_only_selector_no_go_note_2026-05-01": {
+      "claim_id": "yt_rge_only_selector_no_go_note_2026-05-01",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact-negative-boundary for RGE-only selector",
+      "deps": [],
+      "note_hash": "3a745eb4302b30df384c2f5f9a5edc513d6c330fa966740331c0bfcd11e4e9fb",
+      "path": "docs/YT_RGE_ONLY_SELECTOR_NO_GO_NOTE_2026-05-01.md",
+      "runner_path": "scripts/frontier_yt_rge_only_selector_no_go.py",
+      "title": "YT RGE-Only Selector No-Go Note"
     },
     "yt_right_handed_species_dependence_note_2026-04-18": {
       "claim_id": "yt_right_handed_species_dependence_note_2026-04-18",
@@ -41528,6 +41578,7 @@
     "yt_explicit_systematic_budget_note",
     "yt_interacting_bridge_locality_note",
     "yt_microscopic_schur_class_admissibility_note",
+    "yt_observed_mass_inversion_no_go_note_2026-05-01",
     "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
     "yt_p1_i_s_revision_verification_note_2026-04-17",
     "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
@@ -41536,10 +41587,12 @@
     "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
     "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
+    "yt_pr230_queue_exhaustion_certificate_note_2026-05-01",
     "yt_pr230_review_backpressure_pass_note_2026-05-01",
     "yt_qfp_insensitivity_support_note",
     "yt_retention_landing_readiness_2026-04-18",
     "yt_retention_master_manifest_2026-04-18",
+    "yt_rge_only_selector_no_go_note_2026-05-01",
     "yt_schur_stability_gap_note",
     "yt_ssb_matching_gap_analysis_note_2026-04-18",
     "yt_top_mass_substrate_pin_assumptions_and_imports_2026-04-30",
@@ -41559,17 +41612,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4623,
+    "edge_count": 4627,
     "leaf_count": 730,
-    "node_count": 1676,
-    "root_count": 1192,
-    "runners_with_path": 1239,
+    "node_count": 1679,
+    "root_count": 1195,
+    "runners_with_path": 1242,
     "status_counts": {
       "bounded": 447,
-      "open": 50,
+      "open": 51,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 386,
+      "support": 388,
       "unknown": 419
     }
   }

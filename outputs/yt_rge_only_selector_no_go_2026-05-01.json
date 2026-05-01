@@ -1,0 +1,41 @@
+{
+  "actual_current_surface_status": "no-go / exact-negative-boundary for RGE-only selector",
+  "authority_boundary": {
+    "assumption_ledger_lists_sm_rge_bridge": true,
+    "direct_note_running_bridge_import": true,
+    "selector_note_requires_sm_rge_bridge": true,
+    "selector_note_requires_stationarity": true
+  },
+  "fail_count": 0,
+  "numeric": {
+    "monotonic": true,
+    "samples": [
+      {
+        "yt_pl": 0.04576065596559336,
+        "yt_v": 0.7
+      },
+      {
+        "yt_pl": 0.05426765668686159,
+        "yt_v": 0.8
+      },
+      {
+        "yt_pl": 0.06573436182695462,
+        "yt_v": 0.9176
+      },
+      {
+        "yt_pl": 0.07510302996931695,
+        "yt_v": 1.0
+      },
+      {
+        "yt_pl": 0.08865772548000897,
+        "yt_v": 1.1
+      }
+    ],
+    "yt_pl_spread": 0.04289706951441561,
+    "yt_v_spread": 0.40000000000000013
+  },
+  "pass_count": 7,
+  "remaining_open_premise": "a y_t boundary condition from measurement or retained substrate theorem",
+  "target": "derive y_t from the SM RGE bridge without a boundary condition",
+  "verdict": "The RGE bridge transports boundary data.  It does not select a unique y_t by itself.  A measured mass, production certificate, Ward repair, or independently derived Planck stationarity condition remains load-bearing."
+}

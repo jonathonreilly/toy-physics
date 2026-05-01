@@ -224,6 +224,17 @@ Promising attack frames:
     would not by itself imply Planck quartic beta stationarity.
 11. IR quasi-fixed-point route, now closed negatively as a selector: it
     compresses trajectory dependence but still needs a UV boundary condition.
+12. observed-mass / comparator inversion, now closed negatively as proof:
+    importing `m_t`, `m_H`, or accepted `y_t` as an input is calibration, not a
+    substrate derivation.
+13. RGE-only selector, now closed negatively: the SM RGE bridge transports
+    boundary data and does not choose the boundary condition.
+
+Current queue certificate:
+[YT_PR230_QUEUE_EXHAUSTION_CERTIFICATE_NOTE_2026-05-01.md](YT_PR230_QUEUE_EXHAUSTION_CERTIFICATE_NOTE_2026-05-01.md)
+records the route queue as exhausted for the current PR #230 non-MC surface.
+That is not a retained closure; it is an honest boundary saying the remaining
+positive options require new evidence or a new premise.
 
 Until that premise is derived, this is a conditional selector and a route
 portfolio upgrade, not a retained-grade theorem.

@@ -1,7 +1,7 @@
 slug: yt-pr230-retained-closure-12h-20260501
 goal: "Run PR #230 physics-loop campaign for retained closure or strongest honest blocker."
 mode: campaign
-runtime_requested: "12h"
+runtime_requested: "12h originally; latest user request 9h"
 target_status: "best-honest-status; full retained closure only if all imports close"
 current_branch: "claude/yt-direct-lattice-correlator-2026-04-30"
 pr: 230
@@ -13,8 +13,8 @@ proposal_allowed: false
 proposal_allowed_reason: "Open import remains: beta_lambda(M_Pl)=0 is not derived; direct correlator strict production data are absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-active_route: "fixed-lattice scale-stationarity no-go"
-active_hard_residual: "derive beta_lambda(M_Pl)=0 from Cl(3)/Z^3 without adding a stationarity axiom"
+active_route: "queue exhaustion after observed-inversion and RGE-only checks"
+active_hard_residual: "no current retained y_t closure without production data, mass pin, or new Planck stationarity premise"
 files_touched:
   - "scripts/frontier_yt_scale_stationarity_substrate_no_go.py"
   - "docs/YT_SCALE_STATIONARITY_SUBSTRATE_NO_GO_NOTE_2026-05-01.md"
@@ -27,6 +27,15 @@ files_touched:
   - "outputs/yt_vacuum_stability_stationarity_no_go_2026-05-01.json"
   - "docs/YT_PLANCK_DOUBLE_CRITICALITY_SELECTOR_NOTE_2026-04-30.md"
   - "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md"
+  - "scripts/frontier_yt_observed_mass_inversion_no_go.py"
+  - "docs/YT_OBSERVED_MASS_INVERSION_NO_GO_NOTE_2026-05-01.md"
+  - "outputs/yt_observed_mass_inversion_no_go_2026-05-01.json"
+  - "scripts/frontier_yt_rge_only_selector_no_go.py"
+  - "docs/YT_RGE_ONLY_SELECTOR_NO_GO_NOTE_2026-05-01.md"
+  - "outputs/yt_rge_only_selector_no_go_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_queue_exhaustion_certificate.py"
+  - "docs/YT_PR230_QUEUE_EXHAUSTION_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_pr230_queue_exhaustion_certificate_2026-05-01.json"
 open_imports:
   - "production three-volume direct-correlator data, if the MC route is used"
   - "independent top mass parameter pin, if the direct-correlator route is to be derivational"
@@ -38,5 +47,7 @@ no_go_routes:
   - "current lattice Noether theorem supplies scale current"
   - "current trace/anomaly surfaces supply beta_lambda(M_Pl)=0"
   - "one-sided vacuum stability supplies beta_lambda(M_Pl)=0"
-next_exact_action: "No current derivation route remains on PR #230; maintain honest open/conditional status unless a new premise is added."
+  - "observed top/Higgs comparator inversion supplies retained proof"
+  - "SM RGE transport alone selects y_t"
+next_exact_action: "Maintain PR #230 as open/conditional; only reopen a positive route with production data, independent mass pin, new stationarity theorem, explicit selector premise, or re-audited Ward definition route."
 stop_condition: "12h budget exhausted, user interruption, or genuine closure with no open imports."

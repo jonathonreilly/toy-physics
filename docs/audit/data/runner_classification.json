@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T02:15:12.437050+00:00",
+  "generated_at": "2026-05-01T02:23:13.816159+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14437,6 +14437,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_microscopic_schur_class_admissibility.py"
     },
+    "yt_observed_mass_inversion_no_go_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 14
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_observed_mass_inversion_no_go.py"
+    },
     "yt_p1_bz_quadrature_2_loop_full_staggered_pt_note_2026-04-18": {
       "assert_count": 1,
       "counts": {
@@ -14785,6 +14797,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_physics_loop_assumption_audit.py"
     },
+    "yt_pr230_queue_exhaustion_certificate_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_queue_exhaustion_certificate.py"
+    },
     "yt_qfp_insensitivity_support_note": {
       "assert_count": 0,
       "counts": {
@@ -14808,6 +14832,18 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_qfp_selector_no_go.py"
+    },
+    "yt_rge_only_selector_no_go_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_rge_only_selector_no_go.py"
     },
     "yt_right_handed_species_dependence_note_2026-04-18": {
       "assert_count": 0,
@@ -28501,6 +28537,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_observed_mass_inversion_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_observed_mass_inversion_no_go_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 14
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_p1_bz_quadrature_2_loop_full_staggered_pt.py": {
       "assert_count": 1,
       "claims": [
@@ -28936,6 +28987,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_queue_exhaustion_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_queue_exhaustion_certificate_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_qfp_insensitivity.py": {
       "assert_count": 0,
       "claims": [
@@ -28963,6 +29029,21 @@
         "D": 0
       },
       "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_rge_only_selector_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_rge_only_selector_no_go_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
       "dominant_class": "B",
       "exists": true
     },
@@ -32687,16 +32768,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 87,
+    "decoration_candidates": 88,
     "dominant_class_distribution": {
       "A": 7,
-      "B": 126,
+      "B": 128,
       "C": 445,
-      "D": 187,
+      "D": 188,
       "none": 404
     },
-    "runners_classified": 1169,
+    "runners_classified": 1172,
     "runners_with_C": 537,
-    "runners_with_D": 290
+    "runners_with_D": 292
   }
 }

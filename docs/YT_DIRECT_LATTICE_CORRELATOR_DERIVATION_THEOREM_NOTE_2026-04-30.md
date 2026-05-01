@@ -412,6 +412,28 @@ checks whether IR quasi-fixed-point focusing alone can select `y_t`.  It
 cannot: focusing compresses UV trajectories but leaves a nonunique family, so a
 UV boundary condition or measurement remains load-bearing.
 
+Observed-comparator inversion follow-up:
+[YT_OBSERVED_MASS_INVERSION_NO_GO_NOTE_2026-05-01.md](YT_OBSERVED_MASS_INVERSION_NO_GO_NOTE_2026-05-01.md)
+checks the shortcut of importing the observed top mass or accepted `y_t` value
+and inverting `y_t = sqrt(2) m_t/v`.  That is a calibrated readout, not a
+substrate derivation, and the pole-mass inversion also requires the matching
+and running bridge before it can be compared to the running `y_t(v)`.
+
+RGE-only follow-up:
+[YT_RGE_ONLY_SELECTOR_NO_GO_NOTE_2026-05-01.md](YT_RGE_ONLY_SELECTOR_NO_GO_NOTE_2026-05-01.md)
+checks whether the SM RGE bridge can itself select `y_t`.  It cannot: it
+transports boundary data and leaves a continuum without a measured mass,
+repaired Ward boundary, production certificate, or Planck stationarity
+selector.
+
+Queue-exhaustion follow-up:
+[YT_PR230_QUEUE_EXHAUSTION_CERTIFICATE_NOTE_2026-05-01.md](YT_PR230_QUEUE_EXHAUSTION_CERTIFICATE_NOTE_2026-05-01.md)
+records the current physics-loop boundary.  The explored non-MC shortcuts are
+closed negatively or demoted to conditional support.  The remaining positive
+routes are production correlator evidence plus an independent mass pin, a new
+substrate theorem deriving `beta_lambda(M_Pl)=0`, an explicit new selector
+premise, or a re-permitted Ward definition route.
+
 A future passing production certificate must supply this budget:
 
 | Component | Required content |
@@ -544,6 +566,9 @@ Safe current claim:
 > independently re-audited.  The separate non-MC Planck criticality reset is
 > numerically promising but remains conditional because the current fixed
 > substrate and trace/anomaly surfaces do not derive `beta_lambda(M_Pl)=0`.
+> Additional shortcut tests show that observed-value inversion, RGE-only
+> transport, Ward-ratio stationarity, perturbative fixed points, and IR
+> quasi-fixed-point focusing also do not close the route.
 
 Unsafe current claim:
 

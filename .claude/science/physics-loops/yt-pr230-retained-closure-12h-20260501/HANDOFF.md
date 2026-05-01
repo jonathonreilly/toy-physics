@@ -49,6 +49,16 @@ The IR quasi-fixed-point route was tested next.  QFP focusing compresses UV
 trajectory dependence but leaves a nonunique family, so it remains bounded
 support rather than a standalone selector.
 
+The observed-mass inversion route was tested next.  Importing the PDG top mass
+or accepted `y_t` value is a calibration/comparator move, not a derivation.
+
+The RGE-only route was tested next.  SM RGE flow transports a boundary value;
+it does not select one without measurement, Ward repair, production evidence,
+or Planck stationarity.
+
+The final queue-exhaustion certificate checks all current route artifacts,
+runner outputs, and claim-firewall state.  It leaves PR #230 open/conditional.
+
 Verification:
 
 ```bash
@@ -78,6 +88,15 @@ python3 scripts/frontier_yt_ward_ratio_stationarity_no_go.py
 
 python3 scripts/frontier_yt_qfp_selector_no_go.py
 # SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_observed_mass_inversion_no_go.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_rge_only_selector_no_go.py
+# SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_pr230_queue_exhaustion_certificate.py
+# SUMMARY: PASS=33 FAIL=0
 ```
 
 Next exact action: keep PR #230 honest as open/conditional.  Full retained
