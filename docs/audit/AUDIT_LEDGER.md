@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T10:41:47.684020+00:00
+**Generated:** 2026-05-01T10:44:05.534321+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 293 |
+| `audited_clean` | 294 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 552 |
+| `unaudited` | 551 |
 
 | criticality | count |
 |---|---:|
@@ -339,6 +339,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_readout_localization_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_readout_taper_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `persistent_object_top3_multistage_probe_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -11603,6 +11604,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `inward_source_directional_law_open`
   - `direction_independent_transfer_law_open`
   - `self_maintaining_inertial_mass_or_matter_closure_open`
+- **auditor confidence:** high
+
+### `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The top4 multistage floor transfers across 11 of 13 widened local-pocket rows, with the only failed rows being source0.75 and source1.00 and the residual inward-source boundary lying between source_z=1.00 and 1.25.  _(class `C`)_
+- **chain closes:** True — Current runner executions covered all 13 listed rows: the completed source-side output showed baseline plus source1.25/source1.50/source2.50/source2.75 admissible and source0.75/source1.00 inadmissible, while the width/length slice completed at 6/6 admissible. Combined, this reproduces the note's 11/13 widened-pocket pattern.
+- **rationale:** Clean within the note's bounded transfer-sweep scope. The load-bearing claim is the exact-lattice top4 multistage floor's tested local-pocket transfer pattern, not matter closure or full local-pocket universality. The current runner output reproduces the reported residual inward boundary: source0.75 and source1.00 fail, source1.25 and source1.50 pass, both outward-source rows pass, and all width/length rows pass. The source1.00 miss is the reported exponent miss at stage_alpha=[1.11,1.11,1.11]. Residual risk is exactly the stated boundary: this remains a finite widened-pocket sweep below persistent inertial-mass closure.
 - **auditor confidence:** high
 
 ### `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30`
