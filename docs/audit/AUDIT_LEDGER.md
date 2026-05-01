@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T00:58:11.765222+00:00
+**Generated:** 2026-05-01T01:23:34.291221+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
 | bounded | 272 |
-| support | 231 |
+| support | 230 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 761 |
+| ~~audited_conditional~~ | 762 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 483 |
+| `audited_conditional` | 484 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 764 |
+| `unaudited` | 763 |
 
 | criticality | count |
 |---|---:|
@@ -671,6 +671,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_selected_slice_spectral_completion_and_minimal_local_spectral_law_no_go_note_2026-04-20` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `koide_theta_hierarchy_open_scalar_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `koide_z3_scalar_potential_support_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
 | `lanes.ordered-lattice.readme` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -8749,6 +8750,21 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md`
   - `SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md`
 - **auditor confidence:** high
+
+### `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19`
+
+- **Note:** [`KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md`](../../docs/KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims that the selected Koide Z3 scalar coordinate has an exactly derived cubic potential with Clifford-fixed quadratic/cubic coefficients, while the physical lepton-mass point is a separate H-witness-selected point rather than the V_eff minimum.  _(class `B`)_
+- **chain closes:** False — The explicit T_m matrix proves the involution and trace coefficients locally, but the frozen-bank coefficients, selected physical point, H-witness ratio, PDG comparison, and chamber-wide trace lemma are imported without declared dependencies or a runner.
+- **rationale:** Issue: the local Clifford involution T_m^2=I and the resulting Tr(T_m^2)=3, Tr(T_m^3)=1 checks close directly from the displayed matrix, but the broader scalar-potential/lepton-mass-tower claim relies on hidden inputs: K_frozen, c1/c2 values, the chamber-wide Tr(K_frozen)=0 lemma, the H_* witness ratio selecting m_*, and the PDG mass comparator after an overall scale fit. Why this blocks: with deps=[] and no runner, the audit cannot verify that the frozen-bank coefficients, physical selected point, determinant cubic, or mass-table comparison are derived rather than imported or fitted. Repair target: register a runner that reconstructs K_frozen, c1, c2, det(K_sel), m_V, m_*, kappa values, and the mass comparison from explicit upstream inputs, or declare the frozen-bank/Koide-selector/PDG-comparator authorities as dependencies. Claim boundary until fixed: the displayed T_m involution and its immediate trace consequences are exact support facts; the physical selection and mass-tower interpretation remain conditional support only.
+- **open / conditional deps cited:**
+  - `charged_lepton_koide_review_packet_2026-04-18.md`
+  - `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`
+- **auditor confidence:** medium-high
 
 ### `koide_z3_scalar_potential_support_note_2026-04-19`
 
