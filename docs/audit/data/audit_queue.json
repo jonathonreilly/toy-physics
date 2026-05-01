@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 222,
+    "leaf": 221,
     "medium": 133
   },
-  "generated_at": "2026-05-01T08:38:20.077399+00:00",
+  "generated_at": "2026-05-01T09:11:09.135787+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10043,23 +10043,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "persistent_object_green_scout_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/PERSISTENT_OBJECT_GREEN_SCOUT_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/persistent_object_green_scout.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14164,6 +14147,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 158,
-  "total_pending": 558
+  "ready_count": 157,
+  "total_pending": 557
 }

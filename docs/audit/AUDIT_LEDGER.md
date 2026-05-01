@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T08:38:20.352920+00:00
+**Generated:** 2026-05-01T09:11:09.361541+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 287 |
+| `audited_clean` | 288 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 558 |
+| `unaudited` | 557 |
 
 | criticality | count |
 |---|---:|
@@ -333,6 +333,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_compact_inertial_probe_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_compact_update_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `persistent_object_green_scout_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -11505,6 +11506,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The repo has a bounded beyond-pocket exact-lattice compact-object-plus-response regime with a real self-maintaining multistage floor at top4, but that regime still carries a persistent inward-source directional boundary and is not a closure-grade inertial-mass law.  _(class `B`)_
 - **chain closes:** False — The note is a cross-artifact park/status synthesis, but this row has no registered dependencies or runner, so the upstream sweep evidence cannot be verified from the restricted audit packet.
 - **rationale:** Issue: the bounded exact-lattice stop-state is asserted by summarizing seven upstream sweep artifacts, but none are registered as dependencies and no runner is attached to this row. Why this blocks: the audit cannot verify the multistage floor, widened-pocket transfer, or inward-boundary failure pattern from the source note alone. Repair target: register the artifact trail as dependencies and attach a runner or consolidated log check that reproduces the stated transfer/failure counts. Claim boundary until fixed: the note is a bounded parking/status summary, not an audited compact-object or inertial-mass closure result.
+- **auditor confidence:** high
+
+### `persistent_object_green_scout_note`
+
+- **Note:** [`PERSISTENT_OBJECT_GREEN_SCOUT_NOTE.md`](../../docs/PERSISTENT_OBJECT_GREEN_SCOUT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The repeated self-consistent Green-like source object survives three updates with positive weak-field response and F~M=1.00 while remaining broad rather than sharply localized.  _(class `C`)_
+- **chain closes:** True — The registered runner reproduces the zero-source reduction and frozen scout table: source N_eff stays about 4.788, detector N_eff stays about 497, all deltas are positive, and each update step has F~M=1.00 with 4/4 TOWARD. The note correctly keeps the claim at bounded quasi-persistent source-object scope.
+- **rationale:** The bounded Green-scout claim is current with the primary runner and the output supports repeated source-object survival plus weak-field linear response. The object remains broad, with source N_eff near 4.788 out of 5 and detector response still broad, so the note does not claim a persistent inertial object or mass theorem. Residual risk is limited to the stated minimal exact-lattice loop rather than a hidden closure claim.
 - **auditor confidence:** high
 
 ### `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16`
