@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:16:18.989832+00:00
+**Generated:** 2026-05-01T05:17:15.773161+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 218 |
+| bounded | 217 |
 | support | 181 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 819 |
-| ~~audited_failed~~ | 163 |
+| ~~audited_failed~~ | 164 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 246 |
 | `audited_conditional` | 550 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 75 |
+| `audited_failed` | 76 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 648 |
+| `unaudited` | 647 |
 
 | criticality | count |
 |---|---:|
@@ -930,6 +930,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lepton_shared_higgs_universality_underdetermination_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `light_cone_framing_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `localized_source_response_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `lorentz_violation_derived_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_annular_tapered_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_compact_floor_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_h025_constrained_localization_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -10039,6 +10040,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The live sweep shows no smaller source-response family beats the broad topN=196 control under the stated support/capture floors on the single h=0.25 ordered-lattice setup.  _(class `C`)_
 - **chain closes:** False — The bounded numerical result closes, but the audit row is a parser false positive: the source Status line declares a bounded sweep on a proposed_retained family, not a proposed_retained claim.
 - **rationale:** Issue: The audit queue treats this note as proposed_retained because the Status line says it is a bounded sweep on the proposed_retained 3D h=0.25 family, but the note's actual claim is explicitly bounded and negative. Why this blocks: the audit lane cannot ratify a retained claim that the source note does not make; doing so would promote a single-family source-response control sweep into retained physics. Repair target: rewrite the Status line so the parser records this as bounded/proposed_bounded, or author a separate proposed_retained theorem with a load-bearing derivation beyond this single h=0.25 sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces the bounded result that topN=169 remains admissible but does not beat broad topN=196, and that localized persistent-inertial response remains open; it is not safe to present this note as a retained source-response theorem.
+- **auditor confidence:** high
+
+### `lorentz_violation_derived_note`
+
+- **Note:** [`LORENTZ_VIOLATION_DERIVED_NOTE.md`](../../docs/LORENTZ_VIOLATION_DERIVED_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note's first-principles Lorentz-violation derivation is supposed to be checked by scripts/frontier_lorentz_derived.py with 29 independent checks of the cubic-lattice symmetry, dispersion expansion, suppression, angular harmonic, CPT, and bounds comparisons.  _(class `C`)_
+- **chain closes:** False — The registered primary runner path does not exist in the current checkout, so no classified checks can be run for the derivation. Without the script output, the note's step-by-step claims and experimental comparison are not auditable from the current repo state.
+- **rationale:** Issue: the registered runner scripts/frontier_lorentz_derived.py is missing, and Python exits with file-not-found before any checks run. Why this blocks: the note relies on that runner for the cubic-group construction, dispersion expansion, angular harmonic, CPT, and experimental-bound checks; prose alone is not a current executable audit artifact. Repair target: restore or re-register the primary runner and ensure it exits 0 with classified PASS lines from the current checkout. Claim boundary until fixed: the note remains a bounded companion narrative, but the current audit cannot ratify its derived LV checks.
 - **auditor confidence:** high
 
 ### `mass_spectrum_derived_note`
