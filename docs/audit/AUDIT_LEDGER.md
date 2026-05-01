@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:58:13.088723+00:00
+**Generated:** 2026-05-01T06:00:32.866558+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 205 |
+| bounded | 204 |
 | support | 170 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 838 |
+| ~~audited_conditional~~ | 839 |
 | ~~audited_failed~~ | 169 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 252 |
-| `audited_conditional` | 569 |
+| `audited_conditional` | 570 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 617 |
+| `unaudited` | 616 |
 
 | criticality | count |
 |---|---:|
@@ -732,6 +732,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_3d_l2_numpy_h0125_bridge_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
+| `lattice_3d_l2_tail_stats_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_complementarity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_gravity_resolution_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_nn_continuum_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -9757,6 +9758,20 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
+
+### `lattice_3d_l2_tail_stats_note`
+
+- **Note:** [`LATTICE_3D_L2_TAIL_STATS_NOTE.md`](../../docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The wider h = 0.25, width = 8 3D 1/L^2 probe stays barrier-clean and improves the post-peak tail fit to exponent b^(-0.70) with R^2 = 0.955.  _(class `C`)_
+- **chain closes:** False — The frozen log matches the note, but the row has no registered runner and the cited tail-stats script timed out under the 60-second audit cap, so the current audit cannot reproduce the numerical result through the standard runner path.
+- **rationale:** Issue: the tail-stat result is a frozen-artifact summary without a registered, audit-compatible runner. Why this blocks: although the log records the stated Born, dTV, attractive rows, exponent, and R^2 values, the cited script did not complete within the normal audit timeout and the row itself has no runner_path. Repair target: register a primary runner or cached/reduced reproduction that emits the width-8 tail table and fit within the audit cap, or explicitly mark it as a slow runner with justification. Claim boundary until fixed: bounded evidence for the exploratory 3D 1/L^2 tail-stat read, not an audited reproducible continuum or asymptotic theorem.
+- **open / conditional deps cited:**
+  - `LATTICE_3D_L2_TAIL_STATS_NOTE.md`
+- **auditor confidence:** high
 
 ### `lattice_3d_nyquist_diffraction_note`
 
