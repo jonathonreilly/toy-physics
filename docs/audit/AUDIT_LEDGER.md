@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T16:27:06.799653+00:00
+**Generated:** 2026-05-01T16:28:25.276523+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 293 |
+| `audited_clean` | 294 |
 | `audited_conditional` | 591 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 570 |
+| `unaudited` | 569 |
 
 | criticality | count |
 |---|---:|
@@ -337,6 +337,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_record_refinement_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `pmns_c3_character_mode_reduction_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
+| `pmns_corner_transport_active_block_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
 | `pmns_right_conjugacy_invariant_no_go_note` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `pmns_selector_three_identity_support_proposal_readme_2026-04-21` | support | ~~audited_clean~~ | support | cross_family | codex-current | D | - |
 | `pmns_sole_axiom_hw1_source_transfer_boundary_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -11483,6 +11484,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** A projected non-Cl(3) commutant generator on the hw=1 corner orbit has a nonzero C3-odd Fourier mode, which the note interprets as a branch/orientation selector, while the C3-even mode is interpreted as the passive offset class and the route is too small to fix the active 5-real source.  _(class `A`)_
 - **chain closes:** False — The runner verifies the corner-commutant and Fourier algebra, but the mapping from those modes to PMNS selector semantics and the active-source boundary is asserted without declared dependencies or a retained physical bridge.
 - **rationale:** Issue: the runner provides a coherent algebraic check (PASS=17/FAIL=0) that a projected non-Cl(3) commutant generator distinguishes the corners and has nonzero C3-odd Fourier content. However, the step from even/odd Fourier modes to passive offset class and branch/orientation selector is a physical/semantic PMNS identification, and the active 5-real source boundary is asserted with deps=[]. Why this blocks: the algebraic orbit split is not by itself a retained PMNS selector law unless the hw=1 triplet, projected commutant route, passive-offset meaning, and active-source boundary are declared/audited inputs. Repair target: declare the PMNS generation-boundary, corner-orbit, and active-source boundary authorities, or narrow the note to a pure algebraic commutant/Fourier decomposition. Claim boundary until fixed: bounded algebraic evidence for a C3-even/C3-odd corner-profile split; not an independently closed native PMNS selector theorem.
+- **auditor confidence:** high
+
+### `pmns_corner_transport_active_block_note`
+
+- **Note:** [`PMNS_CORNER_TRANSPORT_ACTIVE_BLOCK_NOTE.md`](../../docs/PMNS_CORNER_TRANSPORT_ACTIVE_BLOCK_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The native outputs are xbar = Re(t_even), ybar = Re(t_fwd) on the aligned weak-axis patch, and the branch bit read from the C3-odd CP-odd imaginary asymmetry of forward versus backward cycle amplitude.  _(class `A`)_
+- **chain closes:** True — Given the explicitly defined active-block transport matrix and orbit moments, the recovered seed pair, branch-bit flip under phase reversal, and kernel on the five real corner-breaking source follow by direct matrix arithmetic. The runner verifies both the positive transport-law statements and the stated non-closure boundary.
+- **rationale:** The bounded claim closes as stated: for the defined hw=1 active transport matrix, the orbit moments recover the weak-axis seed pair on the aligned patch, the imaginary C3-odd asymmetry supplies a branch bit, and distinct breaking sources can share the same averaged moments. The runner verifies the positive law and the explicit kernel, so the note does not overclaim full PMNS microscopic closure. Residual risk is limited to downstream use: this row should not be cited as a value law for the five-real corner-breaking source.
 - **auditor confidence:** high
 
 ### `pmns_current_bank_value_selection_nogo_note`
