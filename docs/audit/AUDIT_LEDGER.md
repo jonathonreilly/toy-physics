@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:46:35.396687+00:00
+**Generated:** 2026-05-01T06:50:57.389760+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 261 |
+| `audited_clean` | 262 |
 | `audited_conditional` | 578 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 596 |
+| `unaudited` | 595 |
 
 | criticality | count |
 |---|---:|
@@ -333,6 +333,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `staggered_newton_reproduction_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
@@ -13056,6 +13057,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `staggered_fermion_card_2026-04-11 -> frontier_staggered_cycle_battery.py (current layered_cycle score/value stale relative to note)`
   - `staggered_fermion_card_2026-04-11 -> frontier_two_field_retarded_family_closure.py (current growing stability/score stale relative to note)`
   - `staggered_fermion_card_2026-04-11 -> complete multi-harness score summary requires refresh`
+- **auditor confidence:** high
+
+### `staggered_geometry_superposition_note_2026-04-11`
+
+- **Note:** [`STAGGERED_GEOMETRY_SUPERPOSITION_NOTE_2026-04-11.md`](../../docs/STAGGERED_GEOMETRY_SUPERPOSITION_NOTE_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** For a fixed periodic 2D staggered lattice, comparing the flat branch against the screened-field branch gives detector-resolved coherent-vs-mixture differences at the documented operating points while leaving topology/adjacency fixed.  _(class `C`)_
+- **chain closes:** True — The registered harness recomputes the phase, branch overlap, detector probabilities, total variation distances, and coherent-vs-mixture detector TVq for the stated 1D and 2D cases, and the current output matches the note's frozen table within the claim's bounded scope.
+- **rationale:** The note is explicitly bounded to a fixed periodic lattice with no topology superposition and only claims detector-resolved interference between flat and screened-field branches. The registered runner recomputes the load-bearing observables rather than relying on a prose assertion, and its current output matches every frozen row in the note. Residual risk is limited to the model's stated toy-lattice assumptions and not to stale numerics or an unregistered runner.
 - **auditor confidence:** high
 
 ### `staggered_graph_failure_map_note`
