@@ -3,9 +3,9 @@
     "critical": 4,
     "high": 196,
     "leaf": 286,
-    "medium": 279
+    "medium": 278
   },
-  "generated_at": "2026-05-01T00:04:01.517429+00:00",
+  "generated_at": "2026-05-01T00:06:02.448179+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6392,23 +6392,6 @@
       "note_path": "docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 66
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_transport_gap_constant_no_go_note_2026-04-20",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 2,
-      "load_bearing_score": 7.066,
-      "note_path": "docs/KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_transport_gap_constant_no_go.py",
       "transitive_descendants": 66
     },
     {
@@ -17631,6 +17614,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 377,
-  "total_pending": 765
+  "ready_count": 376,
+  "total_pending": 764
 }

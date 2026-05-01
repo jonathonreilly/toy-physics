@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T00:04:01.720557+00:00
+**Generated:** 2026-05-01T00:06:02.630913+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 224 |
+| `audited_clean` | 225 |
 | `audited_conditional` | 486 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 765 |
+| `unaudited` | 764 |
 
 | criticality | count |
 |---|---:|
@@ -267,6 +267,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_reviewer_stress_test_note_2026-04-21` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `koide_transport_gap_constant_no_go_note_2026-04-20` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `lattice_3d_dense_refinement_reconciliation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_3d_dense_window_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -8707,6 +8708,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
 - **auditor confidence:** medium
+
+### `koide_transport_gap_constant_no_go_note_2026-04-20`
+
+- **Note:** [`KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md`](../../docs/KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop-ready-20260430-57`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Even if the transport-gap comparison were exact, it would still be a constant-vs-constant relation with no dependence on the selected-line coordinate m, so it cannot be an m-selection law.  _(class `A`)_
+- **chain closes:** True — The support-scoped no-go does not require deriving the transport constant; it only checks that the proposed comparison has no m-dependence and therefore cannot select a point on the selected line. The runner now emits classified B/A checks and verifies the near-match is not exact on the current numbers.
+- **rationale:** Clean within the declared support/no-go boundary. The note does not promote the DM transport constant or the Koide geometry constant to a retained cross-lane theorem; it only shows that their comparison is m-independent and therefore cannot supply the missing selected-line selector. Residual risk is downstream misuse: this audit does not validate the eta transport value as retained, only the route-demotion logic.
+- **auditor confidence:** high
 
 ### `koide_z3_joint_projector_identity_note_2026-04-19`
 
