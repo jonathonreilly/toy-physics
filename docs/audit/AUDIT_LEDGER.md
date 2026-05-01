@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T19:33:04.517826+00:00
+**Generated:** 2026-05-01T19:34:30.852816+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 204 |
+| bounded | 203 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 897 |
+| ~~audited_conditional~~ | 898 |
 | ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 606 |
+| `audited_conditional` | 607 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 563 |
+| `unaudited` | 562 |
 
 | criticality | count |
 |---|---:|
@@ -989,6 +989,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_color_projection_correction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_exact_coarse_grained_bridge_operator_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `yt_exact_hessian_selector_uniqueness_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_explicit_systematic_budget_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -15123,6 +15124,18 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md`
   - `YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md`
   - `YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md`
+- **auditor confidence:** high
+
+### `yt_exact_hessian_selector_uniqueness_note`
+
+- **Note:** [`YT_EXACT_HESSIAN_SELECTOR_UNIQUENESS_NOTE.md`](../../docs/YT_EXACT_HESSIAN_SELECTOR_UNIQUENESS_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Across the full admissible exact Schur coarse-operator class at the current intrinsic local/nonlocal budget scales, selector direction is essentially unique while selector shape drift remains bounded but above branch-budget tolerance.  _(class `C`)_
+- **chain closes:** False — The runner supports the reported numbers on its finite enumerated grid of 300 SPD operators, but it does not prove that this grid exhausts the continuous admissible local/nonlocal budget tube or bounds all operators in that tube. The note's full-class direction-uniqueness and <10% shape-drift statements therefore depend on an unprovided coverage theorem or a narrower sampled-class wording.
+- **rationale:** Issue: the runner demonstrates SPD, direction alignment, bounded shape drift, and branch-budget non-uniqueness for the sampled 300-operator Schur grid, but the source note states the result across the full admissible exact Schur coarse-operator class. Why this blocks: finite grid enumeration does not by itself certify a worst-case bound over the continuous local/nonlocal perturbation tube, so a hostile reader could reject the full-class uniqueness/bounded-drift language without disputing the measured sample. Repair target: either prove the sampled parameterization is exhaustive for the admissible class, add an analytic/numerical covering bound over the budget tube, or narrow the note to the explicitly sampled class. Claim boundary until fixed: the current runner supports a sampled-class bounded result and an explicit open branch-budget gap, not a full admissible-class selector theorem.
 - **auditor confidence:** high
 
 ### `yt_exact_interacting_bridge_transport_note`
