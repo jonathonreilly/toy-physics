@@ -142,6 +142,16 @@ python3 scripts/frontier_yt_hqet_direct_route_requirements.py
 # SUMMARY: PASS=7 FAIL=0
 ```
 
+The static residual-mass matching obstruction makes the same boundary formal:
+the subtracted correlator is invariant while the decomposition `am0 + delta_m`
+is nonunique.  Absolute `m_t` is therefore not determined by the static
+correlator alone:
+
+```text
+python3 scripts/frontier_yt_static_mass_matching_obstruction.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

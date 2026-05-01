@@ -51,6 +51,9 @@ What changed:
   numerical `am_top >> 1` problem by rephasing away the absolute heavy rest
   mass, so absolute `m_t` and `y_t` still need a static additive-mass and
   lattice-HQET-to-SM matching theorem.
+- The formal static matching obstruction is now explicit: `am0 + delta_m` is
+  nonunique after rephasing, and the same subtracted correlator supports
+  different absolute top masses.
 
 The scientific result is narrower than closure:
 
@@ -72,7 +75,8 @@ Exact next action:
 Package this PR #230 update.  The remaining positive options are now:
 
 1. strict direct physical measurement at a suitable top/heavy-quark scale with
-   additive-mass/matching control;
+   additive-mass/matching control supplied by an independent observable or
+   theorem;
 2. scalar projector/pole-residue/common-dressing theorem from retained
    dynamics;
 3. a newly derived Planck stationarity selector.

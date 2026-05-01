@@ -112,3 +112,8 @@ Update: the HQET/static shortcut was checked.  It can remove the numerical
 heavy rest mass.  Absolute `m_t` and `y_t` then require static additive-mass and
 lattice-HQET-to-SM matching.  This is a production strategy, not a current
 closure route.
+
+Static matching update: the residual-mass decomposition `am0 + delta_m` is
+nonunique after static rephasing.  The same subtracted correlator supports
+different absolute top masses and therefore different `y_t` values until a
+separate matching condition fixes the physical sum.

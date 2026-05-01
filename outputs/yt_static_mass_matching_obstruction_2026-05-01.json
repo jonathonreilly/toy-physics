@@ -1,0 +1,112 @@
+{
+  "actual_current_surface_status": "exact negative boundary / static mass matching obstruction",
+  "fail_count": 0,
+  "models": [
+    {
+      "am0": 56.62268958301001,
+      "m_abs_GeV": 120.0,
+      "raw_correlator": [
+        1.0,
+        1.997582584714872e-25,
+        3.990336182756149e-50,
+        7.971026065831362e-75,
+        1.5922782851412917e-99,
+        3.1807073724179738e-124
+      ],
+      "subtracted_correlator": [
+        1.0,
+        0.7788007830714049,
+        0.6065306597126334,
+        0.4723665527410147,
+        0.3678794411714423,
+        0.2865047968601901
+      ],
+      "y_from_mass_and_v": 0.6892448571215637
+    },
+    {
+      "am0": 81.4234276203684,
+      "m_abs_GeV": 172.56,
+      "raw_correlator": [
+        1.0,
+        3.3859540987006604e-36,
+        1.1464685158507802e-71,
+        3.881889770276157e-107,
+        1.3143900578370904e-142,
+        4.450464403624958e-178
+      ],
+      "subtracted_correlator": [
+        1.0,
+        0.7788007830714048,
+        0.6065306597126335,
+        0.47236655274101474,
+        0.3678794411714423,
+        0.2865047968601901
+      ],
+      "y_from_mass_and_v": 0.9911341045408086
+    },
+    {
+      "am0": 108.52682170076919,
+      "m_abs_GeV": 230.0,
+      "raw_correlator": [
+        1.0,
+        5.738872502752218e-48,
+        3.293465760284551e-95,
+        1.8900780090452666e-142,
+        1.0846916714166694e-189,
+        6.224907207057556e-237
+      ],
+      "subtracted_correlator": [
+        1.0,
+        0.7788007830714049,
+        0.6065306597126335,
+        0.4723665527410147,
+        0.3678794411714424,
+        0.2865047968601901
+      ],
+      "y_from_mass_and_v": 1.3210526428163303
+    }
+  ],
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Absolute m_t remains an open matching input on the static route.",
+  "raw_effective_slopes": [
+    56.87268958301001,
+    81.6734276203684,
+    108.77682170076919
+  ],
+  "required_matching_condition": [
+    "fix the additive residual mass delta_m(a) from the retained gauge action",
+    "fix the conversion from static energy to SM top mass",
+    "show the matching does not import observed m_t or H_unit/Ward y_t authority"
+  ],
+  "residual_energy_lat": 0.25,
+  "residual_mass_decompositions_for_172_56_GeV": [
+    {
+      "am0": 80.4234276203684,
+      "delta_m": 1.0
+    },
+    {
+      "am0": 81.4234276203684,
+      "delta_m": 0.0
+    },
+    {
+      "am0": 82.4234276203684,
+      "delta_m": -1.0
+    }
+  ],
+  "strict_non_claims": [
+    "does not reject static/HQET simulation methods",
+    "does not produce a top mass measurement",
+    "does not define y_t through H_unit",
+    "does not use observed top mass as a selector"
+  ],
+  "t_values": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "verdict": "Static rephasing makes the measured heavy correlator insensitive to the absolute rest mass.  Different absolute top masses give the same subtracted static correlator but different y_t values.  The decomposition into bare static mass and additive residual mass is nonunique until a lattice-HQET-to-SM matching condition is supplied."
+}

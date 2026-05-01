@@ -61,6 +61,9 @@ Review checks performed:
 - HQET direct-route review: the static normalized correlator is intentionally
   held fixed while absolute heavy masses vary; this proves an import boundary
   for absolute `m_t`, not a rejection of HQET as an engineering method.
+- Static mass matching review: the runner separates raw and subtracted
+  correlators and then varies the `am0 + delta_m` decomposition, so the result
+  targets only the missing absolute-mass matching condition.
 
 ## Review-Loop Backpressure — Campaign Block 2
 
@@ -110,3 +113,5 @@ Open review risk:
   normalization before using an eigenvalue crossing as physical evidence.
 - The next HQET/direct theorem must derive additive mass and matching rather
   than calibrating the static mass to the observed top.
+- A static matching theorem cannot be accepted if it simply chooses the
+  residual mass that reproduces `172.56 GeV`.

@@ -59,13 +59,16 @@ Completed in block 1:
 - `scripts/frontier_yt_hqet_direct_route_requirements.py`
 - `outputs/yt_hqet_direct_route_requirements_2026-05-01.json`
 - `docs/YT_HQET_DIRECT_ROUTE_REQUIREMENTS_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_static_mass_matching_obstruction.py`
+- `outputs/yt_static_mass_matching_obstruction_2026-05-01.json`
+- `docs/YT_STATIC_MASS_MATCHING_OBSTRUCTION_NOTE_2026-05-01.md`
 
 Next artifact:
 
-- static additive-mass/HQET-to-SM matching theorem, scalar
-  projector/source-normalization theorem from the interacting scalar two-point
-  function, fine-scale direct measurement certificate, or another
-  retained-positive route from the queue
+- scalar projector/source-normalization theorem from the interacting scalar
+  two-point function, a new independent observable fixing the heavy matching
+  mass, fine-scale direct measurement certificate, or another retained-positive
+  route from the queue
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

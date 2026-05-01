@@ -50,3 +50,15 @@ The static rephasing removes the absolute heavy rest mass from the normalized
 correlator.  A heavy/top-integrated direct route still needs an additive-mass
 renormalization and lattice-HQET-to-SM matching theorem before it can determine
 `m_t` and `y_t`.
+
+The formal static obstruction is:
+
+```text
+C(t; am0, E) = A exp[-(am0 + E)t]
+C_sub(t; E) = exp(am0 t) C(t; am0, E) = A exp[-Et]
+am0 + delta_m = constant
+```
+
+The subtracted correlator is invariant under changes in the absolute rest mass;
+the residual-mass decomposition is nonunique until a matching condition fixes
+the physical sum.
