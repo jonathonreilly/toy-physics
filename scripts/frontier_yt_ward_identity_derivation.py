@@ -79,10 +79,10 @@ def log(msg: str = "") -> None:
     print(msg)
 
 
-def check(name: str, condition: bool, detail: str = "") -> None:
+def check(name: str, condition: bool, detail: str = "", cls: str = "C") -> None:
     status = "PASS" if condition else "FAIL"
     COUNTS[status] += 1
-    line = f"  [{status}] {name}"
+    line = f"  [{status} ({cls})] {name}"
     if detail:
         line += f"  --  {detail}"
     log(line)
