@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T00:49:42.758004+00:00
+**Generated:** 2026-05-01T00:51:40.168090+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,25 +20,25 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 88 |
-| _proposed_retained_ | 5 |
+| _proposed_retained_ | 4 |
 | bounded | 272 |
 | support | 231 |
 | open | 18 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 759 |
+| ~~audited_conditional~~ | 760 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 227 |
-| `audited_conditional` | 481 |
+| `audited_conditional` | 482 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 768 |
+| `unaudited` | 767 |
 
 | criticality | count |
 |---|---:|
@@ -581,6 +581,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `generated_geometry_synthesis_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `generation_axiom_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `global_coherence_held_out2_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -6576,6 +6577,22 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
+
+### `generation_axiom_boundary_note`
+
+- **Note:** [`GENERATION_AXIOM_BOUNDARY_NOTE.md`](../../docs/GENERATION_AXIOM_BOUNDARY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-generation_axiom_boundary_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note claims that the physical-lattice premise is no longer the live boundary for the retained hw=1 triplet's physical-species semantics, and that only a reduced-stack substrate witness remains once the accepted Hilbert/locality/information surface is used.  _(class `B`)_
+- **chain closes:** False — The runner verifies the finite-dimensional hw=1 translation/projector/algebra facts, but the decisive physical-semantics and substrate-boundary bridge is imported as accepted Hilbert-surface or physical-lattice-necessity context rather than derived by this no-dependency note.
+- **rationale:** Issue: the exact hw=1 observable algebra and no-proper-quotient checks close, but the load-bearing move from exact observable separation to physical-species semantics, and the claim that substrate physicality is no longer a live boundary on the accepted one-axiom surface, rely on external accepted-Hilbert/physical-lattice-necessity inputs that are not dependencies of this row. Why this blocks: the runner marks those bridge steps as LOGICAL or assumption-enumeration checks, often with hard-coded True conditions, so it verifies consistency of the boundary framing after the semantic premises are accepted rather than deriving those premises from this note alone. Repair target: wire the accepted Hilbert/locality/information and physical-lattice-necessity authorities as explicit retained dependencies, or narrow this row to the exact reduced-stack algebra/witness statement without the physical-species/substrate closure language. Claim boundary until fixed: the local finite-dimensional statements remain supported: the hw=1 translation characters are distinct, the retained observable algebra generated on H_hw=1 is full M_3(C) with scalar commutant, and the older reduced-stack witness still leaves the substrate premise explicit.
+- **open / conditional deps cited:**
+  - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
+  - `SINGLE_AXIOM_HILBERT_NOTE.md`
+  - `SINGLE_AXIOM_INFORMATION_NOTE.md`
+- **auditor confidence:** high
 
 ### `geometry_lane_head_to_head_note`
 
