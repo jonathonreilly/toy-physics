@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:12:40.369749+00:00
+**Generated:** 2026-05-01T07:13:41.262609+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 189 |
-| support | 165 |
+| support | 164 |
 | open | 9 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 854 |
+| ~~audited_conditional~~ | 855 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 274 |
-| `audited_conditional` | 584 |
+| `audited_conditional` | 585 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 577 |
+| `unaudited` | 576 |
 
 | criticality | count |
 |---|---:|
@@ -784,6 +784,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `mirror_gravity_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_program_synthesis` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `mirror_vs_central_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `n_eff_from_three_generations_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `neutrino_axiom3_reading_stuck_fanout_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_global_lift_partial_theorem_note_2026-04-28` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -10707,6 +10708,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **rationale:** Issue: scripts/mirror_born_audit.py currently supports the Born-clean mirror-generator subclaim, but the load-bearing mirror-program synthesis also asserts rank-2 sector preservation, MI/decoherence scaling, mass scaling, gravity, exact-2D validation strength, and grown-lane harness sensitivity without explicit audited dependencies in this row. Why this blocks: a clean audit of the complete synthesis would need each cited result to be tied to current audited runners or dependency rows, not just the Born audit. Repair target: add explicit ledger dependencies or split the synthesis into separately audited Born, MI, ceiling/rank, gravity, exact-2D, and structured-growth rows. Claim boundary until fixed: the row can be cited as conditional program synthesis with a clean Born-audit subresult, not as a clean audited mirror-program theorem.
 - **open / conditional deps cited:**
   - `mirror_program_synthesis -> rank/ceiling, MI/decoherence, gravity, exact-2D, and structured-growth claims not covered by primary runner or explicit audited deps`
+- **auditor confidence:** high
+
+### `mirror_vs_central_head_to_head_note`
+
+- **Note:** [`MIRROR_VS_CENTRAL_HEAD_TO_HEAD_NOTE.md`](../../docs/MIRROR_VS_CENTRAL_HEAD_TO_HEAD_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Dense central-band + layer norm remains the best joint coexistence lane, while mirror chokepoint is a bounded challenger with stronger small-N gravity but weaker decoherence/range.  _(class `B`)_
+- **chain closes:** False — The script and note reproduce a fixed summary table, but they do not register the underlying dense central-band and mirror artifact rows as dependencies. The audit cannot verify the lane ranking from one-hop inputs alone.
+- **rationale:** Issue: the head-to-head ranking depends on hard-coded values imported from other lane notes without registered dependencies. Why this blocks: the runner prints the comparison but does not recompute or verify the central-band and mirror rows, retained ranges, or purity metric caveat from auditable inputs. Repair target: cite the source rows for the dense central-band and mirror chokepoint artifacts, or replace the script with one that reads those frozen outputs directly. Claim boundary until fixed: the note is useful comparison support, not an independently audited ranking theorem.
 - **auditor confidence:** high
 
 ### `monopole_derived_note`
