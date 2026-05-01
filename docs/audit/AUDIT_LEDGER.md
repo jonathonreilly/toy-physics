@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:52:58.351700+00:00
+**Generated:** 2026-05-01T06:53:51.768528+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 192 |
+| bounded | 191 |
 | support | 167 |
 | open | 9 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 849 |
+| ~~audited_conditional~~ | 850 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 262 |
-| `audited_conditional` | 580 |
+| `audited_conditional` | 581 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 593 |
+| `unaudited` | 592 |
 
 | criticality | count |
 |---|---:|
@@ -892,6 +892,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_polarization_frame_bundle_attempt` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `universal_gr_polarization_frame_bundle_blocker_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `universal_gr_supermetric_normal_form_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `universal_gr_tensor_action_blocker_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_tensor_variational_candidate_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | E | - |
 | `universal_qg_canonical_refinement_net_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_canonical_smooth_geometric_action_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -13722,6 +13723,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: the local supermetric normal form is asserted from an unregistered universal-route stack. Why this blocks: the note's formula is coherent, but an audit cannot verify from this row that the lifted invariant background, canonical projectors, and D^2W Hessian actually yield the stated no-leakage block weights. Repair target: register the upstream generator/lift/projector/localization authorities and add a runner or proof deriving B(h,k) and the four block coefficients on diag(a,b,b,b). Claim boundary until fixed: support for the local isotropic supermetric-normal-form route, with the final Einstein/Regge gluing correctly left open.
 - **open / conditional deps cited:**
   - `UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_gr_tensor_action_blocker_note`
+
+- **Note:** [`UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md`](../../docs/UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Without a covariant 3+1 polarization-frame/projector bundle or induced Pi_curv map, the observable principle remains scalar-only at the closure level and the direct universal route cannot close full GR.  _(class `B`)_
+- **chain closes:** False — The blocker imports exact scalar-generator, 3+1 lift, tensor-candidate, quotient-kernel, and A1-selector claims, but those authorities are not registered as one-hop dependencies and no runner is attached. The audit cannot verify the claimed minimal missing primitive from this note alone.
+- **rationale:** Issue: the route-blocker conclusion depends on uncited upstream exact-stack results and an unregistered computation/argument for quotient-kernel uniqueness and the A1 selector. Why this blocks: the note does not itself prove that these are the complete available ingredients or that no tensor-valued GR action follows without the stated projector-bundle primitive. Repair target: cite the scalar-generator, 3+1 lift, tensor-candidate, quotient-kernel, and selector notes and register any runner that checks the finite-prototype nondegeneracy/selector claims. Claim boundary until fixed: this remains a bounded route diagnosis identifying a plausible missing primitive, not an audited closure of the tensor-action no-go.
 - **auditor confidence:** high
 
 ### `universal_gr_tensor_quotient_uniqueness_note`
