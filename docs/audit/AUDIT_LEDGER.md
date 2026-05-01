@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T09:37:51.943148+00:00
+**Generated:** 2026-05-01T09:39:52.675679+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 290 |
+| `audited_clean` | 291 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 555 |
+| `unaudited` | 554 |
 
 | criticality | count |
 |---|---:|
@@ -336,6 +336,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_green_scout_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_multistage_floor_sweep_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `persistent_object_readout_localization_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -11544,6 +11545,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The multistage floor sweep separates top3 from broader compact-object floors on the stable widened rows: top3 is admissible on 0/5 cases, while top4, top5, and top6 are each admissible on 5/5 cases.  _(class `C`)_
 - **chain closes:** True — Fresh runner executions for top_keep=3,4,5,6 reproduced the note's frozen summary exactly: top3 failed all five stable widened-regime rows, while top4, top5, and top6 passed all five rows.
 - **rationale:** Clean within the declared bounded scope. The load-bearing claim is a first-principles exact-lattice runner result about the first self-maintaining compact-object floor on the stable widened branch, not a claim of matter closure or full-pocket universality. Current executions of the registered runner reproduced top3 at 0/5 and top4/top5/top6 at 5/5, with top3 failing by sub-threshold stage overlap and the broader floors clearing overlap, carry, alpha, direction, and drift gates. Residual risk is confined to the note's stated boundaries: this does not prove beyond-pocket transfer, inertial-mass closure, or matter closure.
+- **auditor confidence:** high
+
+### `persistent_object_readout_localization_note`
+
+- **Note:** [`PERSISTENT_OBJECT_READOUT_LOCALIZATION_NOTE.md`](../../docs/PERSISTENT_OBJECT_READOUT_LOCALIZATION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The peak-centered localized detector readout sharply reduces detector effective support but fails to preserve the weak-field mass-scaling class: broad readout has F~M exponents near 1, while localized readout has exponents near 0 and only about 3.8% capture.  _(class `C`)_
+- **chain closes:** True — The registered runner reproduces the zero-source reduction, broad readout N_eff=497.319 with step-wise F~M exponents 1.00,1.00,1.00, and localized readout N_eff=8.992 with exponents -0.00,-0.00,-0.00 and capture 0.038.
+- **rationale:** Clean within the declared bounded-negative scope. The note does not claim detector/readout localization succeeds; it claims the tested peak-centered 3x3 window shrinks support but loses the weak-field mass law and captures too little detector mass. The current runner computes the broad and localized readouts from the exact lattice setup and reproduces the frozen reduction check, support sizes, TOWARD counts, capture fraction, and F~M exponents. Residual risk is only the note's stated narrow setup: one lattice family, one top3 repeated-update source object, and one peak-centered localization rule.
 - **auditor confidence:** high
 
 ### `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16`
