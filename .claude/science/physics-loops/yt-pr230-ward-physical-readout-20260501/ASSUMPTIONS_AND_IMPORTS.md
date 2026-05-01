@@ -140,6 +140,19 @@ does not fix `kappa_s`.  Therefore it remains blocked by the same scalar
 source-to-Higgs normalization / LSZ residue import unless that bridge is
 derived or measured on production ensembles.
 
+Same-source FH/LSZ invariant readout support:
+
+```text
+y_proxy = (dE_top/ds) * sqrt(dGamma_ss/dp^2 at pole)
+        = (dE_top/ds) / sqrt(Res[C_ss] at pole)
+```
+
+This formula is invariant under source/operator rescaling when the response and
+two-point function use the same source coordinate.  It does not set
+`kappa_s = 1`; it identifies `kappa_s` with the same-source pole overlap.  The
+load-bearing open import is now the actual scalar pole, pole derivative, and
+canonical-Higgs match.
+
 Source-reparametrization gauge boundary:
 
 ```text

@@ -160,6 +160,9 @@ Completed in block 1:
 - `scripts/frontier_yt_fh_lsz_joint_resource_projection.py`
 - `outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json`
 - `docs/YT_FH_LSZ_JOINT_RESOURCE_PROJECTION_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_fh_lsz_invariant_readout_theorem.py`
+- `outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json`
+- `docs/YT_FH_LSZ_INVARIANT_READOUT_THEOREM_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -195,7 +198,9 @@ Next artifact:
   bundle while leaving production evidence and `kappa_s` open; the joint
   resource projection puts a modest scalar-LSZ production plan at about
   `3630` single-worker hours, so the foreground route is a theorem or
-  scheduled production
+  scheduled production; the FH/LSZ invariant readout theorem now gives the
+  exact source-rescaling-safe formula, so the remaining analytic target is the
+  same-source scalar pole and derivative
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

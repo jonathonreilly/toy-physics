@@ -1,0 +1,77 @@
+{
+  "actual_current_surface_status": "exact-support / Feynman-Hellmann scalar-LSZ invariant readout formula",
+  "fail_count": 0,
+  "formula": {
+    "readout_from_inverse_derivative": "y_proxy = (dE_top/ds) * sqrt(dGamma_ss/dp^2 | pole)",
+    "readout_from_residue": "y_proxy = (dE_top/ds) / sqrt(Res[C_ss] | pole)",
+    "source_rescaling": "O_s -> c O_s sends dE/ds -> c dE/ds and Res[C_ss] -> c^2 Res[C_ss]"
+  },
+  "joint_harness_certificate": "outputs/yt_fh_lsz_joint_harness_certificate_2026-05-01.json",
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The invariant formula is theorem support, but the required same-source production pole-residue data are not present.",
+  "required_data_before_closure": [
+    "same-source production dE_top/ds",
+    "same-source production C_ss(q)",
+    "isolated scalar pole in the controlled finite-volume/IR limit",
+    "dGamma_ss/dp^2 at that pole",
+    "match of that pole to the canonical Higgs kinetic normalization used by v"
+  ],
+  "rows": [
+    {
+      "C_ss_pole_residue_scaled": 0.02625,
+      "dE_ds_scaled": 0.3425,
+      "dGamma_dp2_at_pole_scaled": 38.095238095238095,
+      "forbidden_kappa_s_equals_one_readout": 0.3425,
+      "invariant_readout_from_inverse_derivative": 2.1139558944806596,
+      "invariant_readout_from_residue": 2.1139558944806596,
+      "source_operator_scale": 0.25
+    },
+    {
+      "C_ss_pole_residue_scaled": 0.105,
+      "dE_ds_scaled": 0.685,
+      "dGamma_dp2_at_pole_scaled": 9.523809523809524,
+      "forbidden_kappa_s_equals_one_readout": 0.685,
+      "invariant_readout_from_inverse_derivative": 2.1139558944806596,
+      "invariant_readout_from_residue": 2.1139558944806596,
+      "source_operator_scale": 0.5
+    },
+    {
+      "C_ss_pole_residue_scaled": 0.42,
+      "dE_ds_scaled": 1.37,
+      "dGamma_dp2_at_pole_scaled": 2.380952380952381,
+      "forbidden_kappa_s_equals_one_readout": 1.37,
+      "invariant_readout_from_inverse_derivative": 2.1139558944806596,
+      "invariant_readout_from_residue": 2.1139558944806596,
+      "source_operator_scale": 1.0
+    },
+    {
+      "C_ss_pole_residue_scaled": 1.68,
+      "dE_ds_scaled": 2.74,
+      "dGamma_dp2_at_pole_scaled": 0.5952380952380952,
+      "forbidden_kappa_s_equals_one_readout": 2.74,
+      "invariant_readout_from_inverse_derivative": 2.1139558944806596,
+      "invariant_readout_from_residue": 2.1139558944806596,
+      "source_operator_scale": 2.0
+    },
+    {
+      "C_ss_pole_residue_scaled": 6.72,
+      "dE_ds_scaled": 5.48,
+      "dGamma_dp2_at_pole_scaled": 0.1488095238095238,
+      "forbidden_kappa_s_equals_one_readout": 5.48,
+      "invariant_readout_from_inverse_derivative": 2.1139558944806596,
+      "invariant_readout_from_residue": 2.1139558944806596,
+      "source_operator_scale": 4.0
+    }
+  ],
+  "strict_non_claims": [
+    "not production evidence",
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t",
+    "does not set c2 or Z_match to one"
+  ],
+  "verdict": "The physical-response route does not need a forbidden kappa_s = 1 shortcut.  If dE_top/ds and C_ss are measured for the same scalar source and an isolated canonical scalar pole is established, the source-normalization-invariant readout is dE_top/ds multiplied by sqrt(dGamma_ss/dp^2 at the pole), equivalently dE_top/ds divided by sqrt(Res[C_ss]).  This is exact support for the route and identifies how kappa_s is measured.  It is not retained closure because the production response, scalar pole, pole derivative, and canonical-Higgs match are still absent."
+}

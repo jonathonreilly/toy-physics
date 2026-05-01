@@ -81,14 +81,18 @@ probability.
    production data and the scalar pole/canonical normalization theorem.  A
    modest four-momentum, sixteen-noise scalar-LSZ plan projects to about
    `3630` single-worker hours, so foreground closure requires a theorem or a
-   scheduled production job.
+   scheduled production job.  The same-source invariant-readout theorem now
+   gives the exact response formula; the remaining blocker is production
+   pole/derivative control, not setting `kappa_s`.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the
    source-to-Higgs bridge from the Cl(3)/Z^3 source functional or measure the
    scalar residue directly. The explicit closure attempt found no allowed
    current-surface premise that fixes `kappa_s`, so this remains a genuinely
-   new-theorem target rather than a packaging task.
+   new-theorem target rather than a packaging task.  The invariant-readout
+   theorem reduces this to proving or measuring the same-source scalar pole
+   residue; it does not license `kappa_s = 1`.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 7. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`

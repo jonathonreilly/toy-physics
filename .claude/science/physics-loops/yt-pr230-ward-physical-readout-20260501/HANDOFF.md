@@ -202,6 +202,12 @@ What changed:
   configuration, the solve budget is about `15.8889x` the existing three-mass
   direct projection, or about `3630.28` single-worker hours before extra
   autocorrelation and pole-fit tuning.
+- The Feynman-Hellmann/scalar-LSZ invariant readout theorem proves the
+  same-source response formula:
+  `y_proxy = (dE_top/ds) * sqrt(dGamma_ss/dp^2 at the pole) =
+  dE_top/ds / sqrt(Res[C_ss])`.  This retires the `kappa_s = 1` shortcut as
+  unnecessary and forbidden: `kappa_s` is measured by the pole overlap.  It is
+  exact support only, because the same-source production pole data are absent.
 
 The scientific result is narrower than closure:
 
@@ -256,3 +262,6 @@ that measurement executable on future production ensembles.  The joint harness
 block verifies the combined command path.  Items 2 and 3 remain active.
 The resource projection says the exact next action is a scheduled production
 job or a scalar pole theorem, not more reduced foreground smoke.
+The invariant-readout theorem says the exact scalar theorem target is now the
+existence/control of the same-source scalar pole and derivative, not a separate
+source naming convention.

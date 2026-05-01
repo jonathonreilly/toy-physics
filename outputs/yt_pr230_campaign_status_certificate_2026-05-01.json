@@ -8,6 +8,7 @@
     "direct_scale": "scale requirement / direct measurement route open",
     "feshbach_response": "exact support / Feshbach response boundary",
     "feynman_hellmann": "bounded-support / Feynman-Hellmann source-response route",
+    "fh_lsz_invariant_readout": "exact-support / Feynman-Hellmann scalar-LSZ invariant readout formula",
     "fh_lsz_joint_harness": "bounded-support / joint Feynman-Hellmann scalar-LSZ harness",
     "fh_lsz_joint_resource": "bounded-support / joint FH-LSZ production resource projection",
     "fh_production_protocol": "bounded-support / Feynman-Hellmann production protocol",
@@ -42,7 +43,7 @@
     "static_mass": "exact negative boundary / static mass matching obstruction"
   },
   "fail_count": 0,
-  "pass_count": 35,
+  "pass_count": 36,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

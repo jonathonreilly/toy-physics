@@ -112,3 +112,17 @@ Adds a joint Feynman-Hellmann / scalar-LSZ resource projection:
 - projected mass-scaled foreground cost is about `3630` single-worker hours,
   so this is exact next-action planning, not retained closure.
 ```
+
+Latest FH/LSZ invariant-readout checkpoint text for PR #230:
+
+```text
+Adds a Feynman-Hellmann / scalar-LSZ invariant readout theorem:
+- proves the same-source formula
+  `y_proxy=(dE_top/ds)*sqrt(dGamma_ss/dp^2 at pole)=dE_top/ds/sqrt(Res[C_ss])`;
+- validator passes `PASS=7 FAIL=0`; campaign status now consumes 40 route
+  certificates and reports `PASS=36 FAIL=0`;
+- this removes the need for any `kappa_s = 1` shortcut: `kappa_s` is measured
+  by the same-source pole overlap;
+- still no retained closure because production response, isolated pole,
+  pole derivative, and canonical-Higgs matching remain open.
+```

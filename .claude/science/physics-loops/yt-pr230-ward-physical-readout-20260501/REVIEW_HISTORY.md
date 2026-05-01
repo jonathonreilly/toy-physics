@@ -871,3 +871,29 @@ The resource projection makes the remaining physical-response route concrete:
 with four scalar-LSZ momenta and sixteen noise vectors, the joint run is
 roughly `3630` single-worker hours before tuning.  It is planning support, not
 measurement evidence.
+
+## Review-Loop Backpressure — FH/LSZ Invariant Readout Theorem
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_invariant_readout_theorem.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_invariant_readout_theorem.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The theorem is useful exact support: it gives a source-rescaling-invariant
+physical-response readout and shows why `kappa_s = 1` is both unnecessary and
+forbidden.  It is not closure because it still requires same-source production
+pole data and the pole derivative.

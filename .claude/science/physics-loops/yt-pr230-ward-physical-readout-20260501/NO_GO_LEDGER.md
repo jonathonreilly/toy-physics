@@ -556,6 +556,20 @@ direct resource projection, or about `3630.28` single-worker hours before
 additional autocorrelation or pole-fit tuning.  This is exact next-action
 planning, not evidence.
 
+Same-source FH/LSZ readout formula is exact support, not closure:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_invariant_readout_theorem.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+If `dE_top/ds` and `C_ss` use the same source and a controlled scalar pole is
+present, the invariant readout is
+`(dE_top/ds) * sqrt(dGamma_ss/dp^2 at the pole)`, equivalently
+`dE_top/ds / sqrt(Res[C_ss])`.  This blocks the forbidden `kappa_s = 1`
+shortcut but does not supply the missing pole, derivative, or production
+response data.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate
