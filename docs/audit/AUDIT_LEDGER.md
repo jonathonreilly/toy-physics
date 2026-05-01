@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T19:44:37.541012+00:00
+**Generated:** 2026-05-01T19:45:45.122131+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 193 |
+| bounded | 192 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 908 |
+| ~~audited_conditional~~ | 909 |
 | ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 612 |
+| `audited_conditional` | 613 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 557 |
+| `unaudited` | 556 |
 
 | criticality | count |
 |---|---:|
@@ -433,6 +433,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bound_state_selection_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `branch_entanglement_robustness_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `broad_gravity_derivation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `broad_surrogate_point_source_compare_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `broken_graph_action_power_robustness_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_cone_speed_map_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_distance_tail_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1986,6 +1987,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `H_plus_phi_potential_coupling_theorem`
   - `eikonal_WKB_action_bridge`
   - `phase_clock_readout_identification`
+- **auditor confidence:** high
+
+### `broad_surrogate_point_source_compare_note`
+
+- **Note:** [`BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md`](../../docs/BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the tested retained 3D ordered-lattice family, the broad surrogate and equivalent point-source fields produce effectively identical downstream test-packet responses, but this is only an interpretive source-representation diagnostic.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the max TV distance and response-match numbers, but it emits no classified PASS lines and the source interpretation depends on upstream carrier/relaunch surrogate controls that are not all audit-clean. The diagnostic is supported; the stronger persistent-mass, inertial-response, or geometry-generic readings are explicitly not closed.
+- **rationale:** Issue: the scripted five-probe broad-source versus point-source comparison is current and matches the source note, but the output is unclassified and the row remains an interpretive diagnostic over an upstream surrogate lane rather than a self-contained theorem. Why this blocks: a clean audit would need explicit classified checks and clean registration of the carrier/relaunch controls behind the broad surrogate; otherwise a reader can accept the TV=0.000051 diagnostic without accepting any tier-ratifiable persistent-mass or geometry-generic conclusion. Repair target: add classified PASS lines for broad/point response equivalence and the diagnostic-only boundary, and audit the upstream relaunch probe used to define the broad surrogate. Claim boundary until fixed: a bounded soft-point-source diagnostic on the tested 3D family, not a clean inertial-response theorem.
+- **open / conditional deps cited:**
+  - `QUASI_PERSISTENT_RELAUNCH_PROBE_NOTE.md`
 - **auditor confidence:** high
 
 ### `broken_graph_action_power_robustness_note`
