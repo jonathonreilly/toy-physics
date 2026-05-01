@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:56:10.983320+00:00
+**Generated:** 2026-05-01T04:57:23.984607+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 242 |
+| `audited_clean` | 243 |
 | `audited_conditional` | 545 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 662 |
+| `unaudited` | 661 |
 
 | criticality | count |
 |---|---:|
@@ -274,6 +274,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_no_hidden_source_audit_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_readout_factorization_theorem_2026-04-22` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
+| `koide_q_reduced_observable_restriction_theorem_2026-04-22` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `koide_q_second_order_support_batch_note_2026-04-22` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_so2_phase_erasure_support_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
@@ -9157,6 +9158,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** On the retained Gamma_1/T_1 grammar, the exact second-order returned operator is the quotient of the entire first-live species-resolving bosonic readout sector, so every admissible first-live selector factors uniquely through it.  _(class `A`)_
 - **chain closes:** True — The runner verifies the readout map images, rank, kernel, quotient/fiber statement, C3 covariance, and selector factorization within the stated admitted first-live grammar.
 - **rationale:** The support theorem closes at its stated scope: within the admitted Gamma_1/T_1 first-live readout grammar, the returned operator is exactly the quotient object and every admissible selector factors through it. This clean audit does not prove that the physical charged-lepton selector must be in this admitted class, and it does not close the separate Koide-Q value law. Residual risk: physical-identification claims using this carrier require separate audit.
+- **auditor confidence:** high
+
+### `koide_q_reduced_observable_restriction_theorem_2026-04-22`
+
+- **Note:** [`KOIDE_Q_REDUCED_OBSERVABLE_RESTRICTION_THEOREM_2026-04-22.md`](../../docs/KOIDE_Q_REDUCED_OBSERVABLE_RESTRICTION_THEOREM_2026-04-22.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The reduced two-slot source law W_red = log det(I+K) is the exact restriction of the original observable principle to the normalized second-order block algebra, and its dual effective action is exact on that carrier.  _(class `A`)_
+- **chain closes:** True — The runner verifies the split-preserving source family, exact determinant restriction, pure-block coefficient uniqueness, dual action, and contrast with the unreduced vector-slot determinant.
+- **rationale:** The support theorem closes at its stated scope: once the normalized two-generator second-order block algebra is admitted, W_red = log det(I+K) and the dual effective action follow exactly. This clean audit does not prove that this reduced carrier is the physical charged-lepton observable carrier, nor does it close the Q = 2/3 source law. Residual risk: physical identification of the reduced carrier remains open.
 - **auditor confidence:** high
 
 ### `koide_q_second_order_support_batch_note_2026-04-22`
