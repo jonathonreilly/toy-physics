@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:39:47.461916+00:00
+**Generated:** 2026-05-01T06:41:56.238027+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 258 |
+| `audited_clean` | 259 |
 | `audited_conditional` | 578 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 599 |
+| `unaudited` | 598 |
 
 | criticality | count |
 |---|---:|
@@ -300,6 +300,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lensing_adjoint_kernel_reduced_model_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `mirror_mutual_information_canonical_families_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `multipole_tidal_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
@@ -10518,6 +10519,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The boundary mirror family is a Born-clean, gravity-positive, decohering pocket through N=100, with canonical exponent fit alpha=-0.245 but no bounded asymptotic claim.  _(class `G`)_
 - **chain closes:** False — The claim is a finite fitted window on a selected mirror configuration, and the source itself reports a weak non-monotone fit with R^2=0.126. No primary runner or one-hop dependencies are registered in the ledger row.
 - **rationale:** Issue: the retained surface depends on a selected dense-boundary mirror parameter pocket and a weak descriptive fit, with no registered runner/log reproduction in the audit row. Why this blocks: finite fitted rows with poor monotonicity and R^2=0.126 do not establish a retained family theorem or asymptotic law. Repair target: register the mirror runner and canonical log as audit artifacts, recompute the retained rows, and either state this as bounded finite-window evidence or derive a stable pocket-selection/asymptotic criterion. Claim boundary until fixed: safe as a bounded report of the N=40..100 mirror pocket and gravity wall at N=120; not safe as proposed-retained mirror boundary science.
+- **auditor confidence:** high
+
+### `mirror_mutual_information_canonical_families_note`
+
+- **Note:** [`MIRROR_MUTUAL_INFORMATION_CANONICAL_FAMILIES_NOTE.md`](../../docs/MIRROR_MUTUAL_INFORMATION_CANONICAL_FAMILIES_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** S4 mirror is the strongest scalable MI lane in this extension, while the exact chokepoint MI chain remains the synthesis-grade retained result.  _(class `C`)_
+- **chain closes:** True — The registered runner exits 0 and reproduces the note's S4 mirror, S4 random, strict-mirror, and original-mirror MI tables, including the corrected N=80 S4 mirror value and the caveat that this extension is broader rather than more canonical.
+- **rationale:** The bounded MI extension closes against scripts/mirror_mutual_information_canonical_families.py. Current output matches the note's S4 mirror values N=25 0.7213±0.073, N=40 0.5956±0.067, N=60 0.5248±0.067, N=80 0.2559±0.047; matched S4 random is lower at each retained row; strict mirror reproduces N=15 0.9196±0.033 and N=25 0.6578±0.091 before failing at larger N. The note keeps the exact chokepoint chain as the synthesis-grade result and treats this as a bounded extension.
 - **auditor confidence:** high
 
 ### `mirror_program_synthesis`
