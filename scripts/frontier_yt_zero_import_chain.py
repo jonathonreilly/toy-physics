@@ -185,8 +185,11 @@ log(f"    taste_weight = (7/8) * T_F * R_conn = (7/8)*(1/2)*(8/9) = {TASTE_WEIGH
 log(f"    = 7/18 = {7.0/18.0:.6f}")
 log()
 log("  WARD IDENTITY AT M_Pl:")
-log(f"    g_s(M_Pl) = sqrt(4 pi alpha_LM) = {G3_PL:.6f}")
-log(f"    y_t(M_Pl) = g_s(M_Pl) / sqrt(6) = {YT_PL:.6f}")
+log(f"    g_lattice = sqrt(4 pi alpha_LM) = {G3_PL:.6f}  (lattice-bare coupling at the cutoff)")
+log(f"    y_t(M_Pl) = g_lattice / sqrt(6) = {YT_PL:.6f}")
+log("    (g_lattice is the lattice-bare gauge coupling; it is NOT the same")
+log("     as the SM-evolved g_s(M_Pl) obtained by running 2-loop SM RGEs")
+log("     from the IR up. The Ward partner is g_lattice.)")
 log()
 
 check("Plaquette <P> = 0.5934 (MC computed)",
@@ -771,21 +774,44 @@ check("m_t within 5% of observed",
       abs(mt_dev) < 5.0,
       f"m_t = {mt_pred:.2f} GeV ({mt_dev:+.2f}%)")
 
-# Verify Ward BC is actually matched
+# Verify Ward BC is actually matched.
+#
+# The Ward identity in this framework matches y_t(M_Pl) against the
+# *lattice-bare* gauge coupling g_lattice = sqrt(4 pi alpha_LM), NOT
+# against the SM-evolved g_s(M_Pl) obtained by running 2-loop SM RGEs
+# from v upward. These are two different couplings at the cutoff:
+#
+#   - g_lattice   : bare lattice coupling at the UV cutoff (set by
+#                   the lattice geometry and same-surface plaquette)
+#   - g_s_evolved : SM g_s at M_Pl after running from the IR
+#
+# The Ward partner is g_lattice. Earlier output here printed
+# g_s_evolved(M_Pl)/sqrt(6), which suggested (incorrectly) that the
+# Ward identity should match against the evolved SM coupling. It
+# should not. The lines below now spell this out.
 y0_check = [g1_gut_v, g2_v, G_S_V, yt_v_result, lam_cw_final]
 y_Pl_check = run_with_thresholds(y0_check, t_v, t_Pl)
 yt_Pl_check = y_Pl_check[3]
 g3_Pl_check = y_Pl_check[2]
-ward_ratio = yt_Pl_check / (g3_Pl_check / np.sqrt(6.0))
+g_lattice_target = float(np.sqrt(4.0 * np.pi * ALPHA_LM))
+ward_partner = g_lattice_target / np.sqrt(6.0)
 log(f"  Ward BC verification at M_Pl:")
-log(f"    y_t(M_Pl) = {yt_Pl_check:.6f}  (target: {YT_PL:.6f})")
-log(f"    g_s(M_Pl)/sqrt(6) = {g3_Pl_check/np.sqrt(6.0):.6f}")
-log(f"    Ratio y_t / (g_s/sqrt(6)) = {ward_ratio:.8f}")
+log(f"    y_t(M_Pl) (evolved up from v) = {yt_Pl_check:.6f}")
+log(f"    Ward partner = g_lattice/sqrt(6) = {ward_partner:.6f}  (lattice-bare)")
+log(f"    target YT_PL                    = {YT_PL:.6f}")
+log(f"    |y_t(M_Pl) - g_lattice/sqrt(6)| = {abs(yt_Pl_check - ward_partner):.3e}")
+log()
+log(f"  Cross-check (NOT the Ward partner): SM-evolved g_s(M_Pl)/sqrt(6) = {g3_Pl_check/np.sqrt(6.0):.6f}")
+log(f"    This is the IR-anchored SM running of g_s up to M_Pl, which is")
+log(f"    a different coupling from the lattice-bare g_lattice. It is NOT")
+log(f"    expected to equal y_t(M_Pl), and any non-unit ratio between them")
+log(f"    measures the offset between the bare lattice coupling and the")
+log(f"    SM running of g_s, not a violation of the Ward identity.")
 log()
 
-check("Ward identity matched at M_Pl",
-      abs(yt_Pl_check - YT_PL) < 1e-4,
-      f"y_t(M_Pl) = {yt_Pl_check:.6f} vs target {YT_PL:.6f}")
+check("Ward identity matched at M_Pl  (y_t(M_Pl) = g_lattice/sqrt(6))",
+      abs(yt_Pl_check - ward_partner) < 1e-4,
+      f"y_t(M_Pl) = {yt_Pl_check:.6f} vs g_lattice/sqrt(6) = {ward_partner:.6f}")
 
 
 # =====================================================================

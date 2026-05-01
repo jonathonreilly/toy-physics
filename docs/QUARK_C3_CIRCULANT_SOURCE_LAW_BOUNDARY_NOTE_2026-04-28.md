@@ -2,11 +2,10 @@
 
 **Date:** 2026-04-28
 
-**Status:** exact support/boundary theorem for Lane 3 target 3C. This
-block-07 artifact audits whether the existing `C3[111]` circulant
-generation-hierarchy mechanism can be imported as retained non-top quark
-Yukawa Ward identities. It does not claim retained `m_u`, `m_d`, `m_s`,
-`m_c`, or `m_b`.
+**Status:** proposed_no_go exact boundary theorem for Lane 3 target 3C. The
+existing `C3[111]` circulant mechanism is exact support for a future 3C theorem
+but cannot be imported as retained non-top quark Yukawa Ward identities on its
+own. This note does not claim retained `m_u`, `m_d`, `m_s`, `m_c`, or `m_b`.
 
 **Primary runner:**
 `scripts/frontier_quark_c3_circulant_source_law_boundary.py`

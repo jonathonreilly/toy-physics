@@ -44,6 +44,24 @@ HB_PYTHON_US_PER_LINK = 182.5
 METROPOLIS_PYTHON_US_PER_LINK = 85.49
 
 
+def json_sanitize(obj: Any) -> Any:
+    if isinstance(obj, dict):
+        return {key: json_sanitize(value) for key, value in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [json_sanitize(value) for value in obj]
+    if isinstance(obj, np.ndarray):
+        return json_sanitize(obj.tolist())
+    if isinstance(obj, np.generic):
+        obj = obj.item()
+    if isinstance(obj, float):
+        return obj if math.isfinite(obj) else None
+    return obj
+
+
+def json_text(obj: Any) -> str:
+    return json.dumps(json_sanitize(obj), indent=2, sort_keys=True, allow_nan=False) + "\n"
+
+
 def parse_int_list(text: str) -> list[int]:
     vals = [int(part.strip()) for part in text.split(",") if part.strip()]
     if not vals or any(v <= 0 for v in vals):
@@ -734,9 +752,9 @@ def run_benchmark(args: argparse.Namespace) -> dict[str, Any]:
         ],
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    args.output.write_text(json_text(result), encoding="utf-8")
 
-    print(json.dumps(result, indent=2, sort_keys=True))
+    print(json_text(result), end="")
     return result
 
 
@@ -950,7 +968,7 @@ def run_ensemble(args: argparse.Namespace) -> dict[str, Any]:
         "analysis": analyze_ensemble(dims, loop_array, args.r0_anchor_fm),
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    args.output.write_text(json_text(data), encoding="utf-8")
     write_checkpoint(args.checkpoint_npz, dims, u, loop_array, therm_done)
     print(f"Wrote ensemble data: {args.output}")
     return data
@@ -1100,8 +1118,8 @@ def run_autocorr_pilot(args: argparse.Namespace) -> dict[str, Any]:
         ),
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(json.dumps({k: result[k] for k in ["kind", "dims", "numba_threads", "elapsed_seconds", "autocorrelation"]}, indent=2))
+    args.output.write_text(json_text(result), encoding="utf-8")
+    print(json_text({k: result[k] for k in ["kind", "dims", "numba_threads", "elapsed_seconds", "autocorrelation"]}), end="")
     return result
 
 
@@ -1160,8 +1178,8 @@ def run_autotune(args: argparse.Namespace) -> dict[str, Any]:
         "recommended_speedup_vs_pure_python_heatbath": float(best["speedup_vs_pure_python_heatbath"]),
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(json.dumps(result, indent=2, sort_keys=True))
+    args.output.write_text(json_text(result), encoding="utf-8")
+    print(json_text(result), end="")
     return result
 
 

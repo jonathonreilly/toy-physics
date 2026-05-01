@@ -27,6 +27,24 @@ MZ_GEV = 91.1876
 HBARC_GEV_FM = 0.1973269804
 
 
+def json_sanitize(obj: Any) -> Any:
+    if isinstance(obj, dict):
+        return {key: json_sanitize(value) for key, value in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [json_sanitize(value) for value in obj]
+    if isinstance(obj, np.ndarray):
+        return json_sanitize(obj.tolist())
+    if isinstance(obj, np.generic):
+        obj = obj.item()
+    if isinstance(obj, float):
+        return obj if math.isfinite(obj) else None
+    return obj
+
+
+def json_text(obj: Any) -> str:
+    return json.dumps(json_sanitize(obj), indent=2, sort_keys=True, allow_nan=False) + "\n"
+
+
 def positive(x: float) -> bool:
     return math.isfinite(x) and x > 0.0
 
@@ -528,8 +546,8 @@ def main() -> int:
     args = parse_args()
     cert = build_certificate(args)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(cert, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(json.dumps(cert["result"], indent=2, sort_keys=True))
+    args.output.write_text(json_text(cert), encoding="utf-8")
+    print(json_text(cert["result"]), end="")
     return 0
 
 

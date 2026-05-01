@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-28
 
-**Status:** proposed_retained exact negative boundary for Lane 3 target 3B.
+**Status:** proposed_no_go exact negative boundary for Lane 3 target 3B.
 This note records a minimal-premise stretch attempt on the Route-2 up-type
 amplitude scalar-law residual. It does not derive the E-channel law
 `beta_E / alpha_E = 21/4`, and it does not claim retained `m_u` or `m_c`.

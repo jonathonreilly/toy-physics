@@ -32,10 +32,13 @@ DATA_DIR = REPO_ROOT / "docs" / "audit" / "data"
 LEDGER_PATH = DATA_DIR / "audit_ledger.json"
 
 # Strength rank used to compare 'before' and 'after' for a dep.
+# Must stay in sync with compute_effective_status.py RANK.
 RANK = {
     "retained": 100,
+    "retained_no_go": 100,
     "promoted": 90,
     "proposed_retained": 80,
+    "proposed_no_go": 80,
     "proposed_promoted": 70,
     "bounded": 60,
     "support": 50,

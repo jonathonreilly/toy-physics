@@ -5,9 +5,9 @@ This runner packages the strongest exact theorem now supported by the branch:
 
   - the universal observable Hessian gives an exact local operator family
     on the full positive-symmetric background class;
-  - the glued family K_GR(D) is symmetric positive definite;
-  - for every sampled positive background and boundary source, the action has a
-    unique global stationary point with exact quadratic completion.
+  - the glued family K_GR(D) is symmetric negative-definite;
+  - for every sampled positive background and boundary source, the concave
+    action has a unique stationary maximum with exact quadratic completion.
 
 This is stronger than a single-background operator theorem. It is still not
 the same thing as unrestricted full GR.
@@ -21,7 +21,7 @@ from pathlib import Path
 import numpy as np
 
 
-ROOT = Path("/Users/jonreilly/Projects/Physics")
+ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 
 
@@ -101,9 +101,9 @@ def main() -> int:
 
     rng = np.random.default_rng(17)
     samples = 10
-    min_op_eig = float("inf")
+    max_op_eig = -float("inf")
     max_grad_err = 0.0
-    min_gap = float("inf")
+    max_gap = -float("inf")
     max_completion_err = 0.0
     max_diag_err = 0.0
     max_offdiag_err = 0.0
@@ -111,26 +111,26 @@ def main() -> int:
     for _ in range(samples):
         d = random_spd(rng)
         vals, basis = principal_basis(d)
-        h_d = -gram(basis, d)
+        h_d = gram(basis, d)
         expected = np.diag(
             [
-                1.0 / (vals[0] * vals[0]),
-                1.0 / (vals[1] * vals[1]),
-                1.0 / (vals[2] * vals[2]),
-                1.0 / (vals[3] * vals[3]),
-                1.0 / (vals[0] * vals[1]),
-                1.0 / (vals[0] * vals[2]),
-                1.0 / (vals[0] * vals[3]),
-                1.0 / (vals[1] * vals[2]),
-                1.0 / (vals[1] * vals[3]),
-                1.0 / (vals[2] * vals[3]),
+                -1.0 / (vals[0] * vals[0]),
+                -1.0 / (vals[1] * vals[1]),
+                -1.0 / (vals[2] * vals[2]),
+                -1.0 / (vals[3] * vals[3]),
+                -1.0 / (vals[0] * vals[1]),
+                -1.0 / (vals[0] * vals[2]),
+                -1.0 / (vals[0] * vals[3]),
+                -1.0 / (vals[1] * vals[2]),
+                -1.0 / (vals[1] * vals[3]),
+                -1.0 / (vals[2] * vals[3]),
             ]
         )
         max_diag_err = max(max_diag_err, float(np.max(np.abs(np.diag(h_d) - np.diag(expected)))))
         max_offdiag_err = max(max_offdiag_err, float(np.max(np.abs(h_d - np.diag(np.diag(h_d))))))
 
         k_op = np.kron(h_d, lambda_w)
-        min_op_eig = min(min_op_eig, float(np.min(np.linalg.eigvalsh(0.5 * (k_op + k_op.T)))))
+        max_op_eig = max(max_op_eig, float(np.max(np.linalg.eigvalsh(0.5 * (k_op + k_op.T)))))
 
         j = rng.normal(size=k_op.shape[0])
         f_star = np.linalg.solve(k_op, j)
@@ -143,7 +143,7 @@ def main() -> int:
         base = action_value(k_op, f_star, j)
         pert = action_value(k_op, f_star + delta, j)
         exact_gap = 0.5 * float(delta @ (k_op @ delta))
-        min_gap = min(min_gap, pert - base)
+        max_gap = max(max_gap, pert - base)
         max_completion_err = max(max_completion_err, abs((pert - base) - exact_gap))
 
     record(
@@ -160,9 +160,9 @@ def main() -> int:
         f"max diagonal error={max_diag_err:.3e}, max offdiag error={max_offdiag_err:.3e}",
     )
     record(
-        "the glued positive-background operator family is symmetric positive definite",
-        lambda_sym < 1e-12 and lambda_min > 0.0 and min_op_eig > 0.0,
-        f"Lambda_R symmetry={lambda_sym:.3e}, Lambda_R min eig={lambda_min:.6e}, glued min eig={min_op_eig:.6e}",
+        "the glued positive-background operator family is symmetric negative-definite",
+        lambda_sym < 1e-12 and lambda_min > 0.0 and max_op_eig < 0.0,
+        f"Lambda_R symmetry={lambda_sym:.3e}, Lambda_R min eig={lambda_min:.6e}, glued max eig={max_op_eig:.6e}",
     )
     record(
         "every sampled positive background carries a unique exact stationary boundary solution",
@@ -170,9 +170,9 @@ def main() -> int:
         f"max stationary gradient error={max_grad_err:.3e}",
     )
     record(
-        "the exact quadratic completion identity holds on the sampled positive-background solution class",
-        min_gap > 0.0 and max_completion_err < 1e-12,
-        f"min sampled gap={min_gap:.3e}, max completion error={max_completion_err:.3e}",
+        "the exact quadratic completion identity holds with a concave-action maximum",
+        max_gap < 0.0 and max_completion_err < 1e-12,
+        f"max sampled gap={max_gap:.3e}, max completion error={max_completion_err:.3e}",
     )
     record(
         "the branch already has the strongest available canonical constraint reading on top of this local family",
@@ -187,16 +187,17 @@ def main() -> int:
     print(f"max principal-basis offdiag error  = {max_offdiag_err:.3e}")
     print(f"Lambda_R symmetry error            = {lambda_sym:.3e}")
     print(f"Lambda_R min eigenvalue            = {lambda_min:.6e}")
-    print(f"min glued operator eigenvalue      = {min_op_eig:.6e}")
+    print(f"max glued operator eigenvalue      = {max_op_eig:.6e}")
     print(f"max stationary gradient error      = {max_grad_err:.3e}")
-    print(f"min sampled action gap             = {min_gap:.3e}")
+    print(f"max sampled action gap             = {max_gap:.3e}")
     print(f"max completion identity error      = {max_completion_err:.3e}")
 
     print("\nVerdict:")
     print(
         "The direct-universal route now closes as an exact positive-background "
-        "local Einstein/Regge boundary-action family on PL S^3 x R, with a "
-        "unique stationary solution for each sampled positive background and "
+        "local Einstein/Regge boundary-action family on PL S^3 x R. The "
+        "glued operator is negative-definite, so the concave action has a "
+        "unique stationary maximum for each sampled positive background and "
         "boundary source."
     )
     print(

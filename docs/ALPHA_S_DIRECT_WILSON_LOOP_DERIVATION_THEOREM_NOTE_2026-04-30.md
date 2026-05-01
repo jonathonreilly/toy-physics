@@ -30,7 +30,7 @@ one-sigma band.
 
 ## Methodology
 
-The retained-grade route is deliberately the standard Wilson-loop/static-
+The audit-candidate route is deliberately the standard Wilson-loop/static-
 potential route, not the existing coupling-definition chain.
 
 1. **Wilson action setup.**  Use the graph-first `SU(3)` gauge sector from
@@ -115,7 +115,7 @@ and `alpha_bare_over_u0_squared`.
 The 2026-05-01 replacement production run uses unsmeared rectangular Wilson
 loops on three already-thermalized `beta = 6`, `g_bare = 1` Wilson ensembles.
 An APE-smeared pilot was rejected because its `R >= 2` long-`T` tails were
-less stable in this backend; the retained certificate therefore uses raw
+less stable in this backend; the strict-passing certificate therefore uses raw
 Wilson loops, which are the direct static-potential observable.
 
 Certificate:
@@ -193,6 +193,10 @@ Uncertainty budget:
 | Scale setting | 0.0023599255 |
 | Running bridge | 0.0004731818 |
 | Total | 0.0067923686 |
+
+The scale-setting component is the builder's conservative `2% * alpha_s(M_Z)`
+allowance for the physical `r_0` anchor, not an independent phenomenological
+error analysis of `r_0`.
 
 The existing `alpha_LM/u_0` route gives `0.1181` and is recorded only as a
 consistency diagnostic.  The direct result differs from that value by
@@ -325,7 +329,7 @@ were too noisy and produced `SUMMARY: PASS=8 FAIL=6`.  That failed certificate
 was not promoted.  The current certificate replaces it with the unsmeared
 Wilson-loop production data summarized above and passes strict mode.
 
-Required uncertainty budget for a future passing certificate:
+Required uncertainty budget carried by a passing certificate:
 
 | Component | Required content |
 |---|---|

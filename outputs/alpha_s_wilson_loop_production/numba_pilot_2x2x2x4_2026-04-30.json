@@ -1,13 +1,13 @@
 {
   "analysis": {
-    "a_fm": NaN,
+    "a_fm": null,
     "dims": [
       2,
       2,
       2,
       4
     ],
-    "r0_over_a": NaN,
+    "r0_over_a": null,
     "running_coupling": [],
     "static_potential": [
       {
