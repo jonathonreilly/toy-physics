@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:57:36.754496+00:00
+**Generated:** 2026-05-01T06:58:40.189287+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 264 |
+| `audited_clean` | 265 |
 | `audited_conditional` | 581 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 590 |
+| `unaudited` | 589 |
 
 | criticality | count |
 |---|---:|
@@ -299,6 +299,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_weak_field_purity_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `legacy_exploratory_drivers_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `lensing_adjoint_kernel_reduced_model_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `literature_backmatch_live_scan_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -10278,6 +10279,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `scripts/independent_generators_heldout.py`
   - `scripts/global_coherence_off_scaffold.py`
 - **auditor confidence:** medium
+
+### `literature_backmatch_live_scan_note`
+
+- **Note:** [`LITERATURE_BACKMATCH_LIVE_SCAN_NOTE.md`](../../docs/LITERATURE_BACKMATCH_LIVE_SCAN_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** A published widefield diamond NV lock-in microscopy result with per-pixel I/Q readout and dynamic imaging is a credible retrospective analog/backmatch candidate, but not validation of the retained prediction.  _(class `D`)_
+- **chain closes:** True — The cited paper's abstract-level record supports the note's narrow factual predicates: widefield NV magnetometry, lock-in PL detection over multiple pixels, in-phase/quadrature image formation, and sub-second dynamic magnetic imaging. The note explicitly limits the conclusion to analog-platform resemblance and denies validation of the framework's target observables.
+- **rationale:** The external source check closes the bounded backmatch claim: the paper is in the same diamond NV lock-in/quadrature/dynamic-imaging measurement family described by the note. The note does not overclaim this as evidence for the retained gravitational or causal-field observables, and it correctly preserves the distinction between resemblance and validation. Residual risk is only that this is a single retrospective analog candidate, not a prediction test.
+- **auditor confidence:** high
 
 ### `local_zsym_predictor_note`
 
