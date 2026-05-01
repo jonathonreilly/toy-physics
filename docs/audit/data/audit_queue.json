@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 4,
-    "high": 197,
+    "high": 196,
     "leaf": 286,
     "medium": 279
   },
-  "generated_at": "2026-05-01T00:53:24.013301+00:00",
+  "generated_at": "2026-05-01T00:55:05.999509+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -315,25 +315,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 32
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "cpt_exact_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
-      ],
-      "direct_in_degree": 10,
-      "load_bearing_score": 10.285,
-      "note_path": "docs/CPT_EXACT_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 38
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -17650,6 +17631,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 378,
-  "total_pending": 766
+  "ready_count": 377,
+  "total_pending": 765
 }
