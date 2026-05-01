@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:37:58.988932+00:00
+**Generated:** 2026-05-01T04:39:07.223028+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 224 |
-| support | 190 |
+| support | 189 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 810 |
+| ~~audited_conditional~~ | 811 |
 | ~~audited_failed~~ | 159 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 541 |
+| `audited_conditional` | 542 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 18 |
-| `unaudited` | 677 |
+| `unaudited` | 676 |
 
 | criticality | count |
 |---|---:|
@@ -624,6 +624,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `hadron_lane1_sqrt_sigma_b5_ladder_budget_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hadron_mass_lane1_theorem_plan_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hard_geometry_gravity_window_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7456,6 +7457,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** B5 is structurally supported but not retained: current framework-side evidence is small-volume consistency, and imported static-energy and string-tension constants must remain bounded bridge inputs until a large-volume Wilson/Creutz/force-scale ladder or equivalent theorem lands.  _(class `B`)_
 - **chain closes:** False — The runner verifies the current-surface no-go, but the B5 bridge itself remains open because large-volume/asymptotic framework-side Wilson, Creutz, or force-scale evidence with uncertainty is missing.
 - **rationale:** Issue: the current B5 surface stops at structural SU(3), beta=6 support, and small-volume consistency checks, while the large-volume/asymptotic framework-to-standard-QCD bridge remains absent. Why this blocks: standard lattice-QCD static-energy and string-tension constants cannot be imported as retained framework quantities without that ladder or an equivalent theorem. Repair target: run or prove a framework-side Wilson/Creutz/force-scale ladder with finite-volume/asymptotic uncertainty, or otherwise derive the standard-QCD observable equivalence. Claim boundary until fixed: the note cleanly identifies a current-surface no-go, but the B5 bridge remains conditional/open for downstream sigma imports.
+- **auditor confidence:** high
+
+### `hadron_lane1_sqrt_sigma_b5_ladder_budget_note_2026-04-30`
+
+- **Note:** [`HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md`](../../docs/HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** A local L=4,6,8 ladder can improve residual accounting but should not be presented as retention; retention requires a larger ladder or a theorem.  _(class `A`)_
+- **chain closes:** False — The arithmetic cost and loop-size checks close inside the chosen gate model, but the B5 retention threshold itself remains a compute/physics premise until a large-volume ladder or equivalent theorem exists.
+- **rationale:** Issue: the note establishes a compute-budget gate model, not a retained framework-to-standard-QCD bridge. Why this blocks: L=4,6,8 can diagnose volume drift, but the runner itself says it lacks a large-loop/asymptotic window and cannot supply B5 closure. Repair target: execute a production L=8,12,16 Wilson/Creutz/force-scale ladder with uncertainty, or provide an equivalent theorem bypassing that measurement. Claim boundary until fixed: the note is a support-level budget/no-go for local closure only.
 - **auditor confidence:** high
 
 ### `hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27`
