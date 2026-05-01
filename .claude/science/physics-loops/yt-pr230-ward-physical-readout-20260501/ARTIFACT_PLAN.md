@@ -118,6 +118,9 @@ Completed in block 1:
 - `scripts/frontier_yt_large_nc_pole_dominance_boundary.py`
 - `outputs/yt_large_nc_pole_dominance_boundary_2026-05-01.json`
 - `docs/YT_LARGE_NC_POLE_DOMINANCE_BOUNDARY_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_production_resource_projection.py`
+- `outputs/yt_production_resource_projection_2026-05-01.json`
+- `docs/YT_PRODUCTION_RESOURCE_PROJECTION_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -129,7 +132,8 @@ Next artifact:
   with endpoint imports, not closure evidence; spectral positivity and
   low-order curvature data are not closure evidence without pole saturation or
   continuum control; large-`N_c` pole dominance is not a finite-`N_c=3`
-  continuum bound
+  continuum bound; the direct production route now has a concrete multi-day
+  single-worker resource estimate but no production evidence certificate
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

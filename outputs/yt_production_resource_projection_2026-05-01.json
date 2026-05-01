@@ -1,0 +1,67 @@
+{
+  "actual_current_surface_status": "bounded support / production resource projection",
+  "benchmark": {
+    "effective_sweeps": 175,
+    "mass_count": 5,
+    "measurement_separation_sweeps": 5,
+    "measurement_sweeps": 25,
+    "path": "outputs/yt_direct_lattice_correlator_mass_bracket_certificate_2026-05-01.json",
+    "runtime_seconds": 566.6508033275604,
+    "seconds_per_effective_sweep": 3.2380045904432024,
+    "thermalization_sweeps": 50,
+    "volume": "12^3x24"
+  },
+  "fail_count": 0,
+  "pass_count": 7,
+  "production_protocol": {
+    "effective_sweeps": 21000,
+    "fermion_mass_values": 3,
+    "measurement_configurations": 1000,
+    "measurement_separation_sweeps": 20,
+    "thermalization_sweeps": 1000
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Resource projection is not measurement evidence and does not supply matching.",
+  "rows": [
+    {
+      "conservative_hours": 18.88836011091868,
+      "conservative_seconds": 67998.09639930725,
+      "mass_scaled_hours": 11.333016066551208,
+      "mass_scaled_seconds": 40798.85783958435,
+      "production_sweeps": 21000,
+      "site_scale_vs_benchmark": 1.0,
+      "sites": 41472,
+      "volume": "12^3x24"
+    },
+    {
+      "conservative_hours": 59.69654553574299,
+      "conservative_seconds": 214907.56392867476,
+      "mass_scaled_hours": 35.817927321445794,
+      "mass_scaled_seconds": 128944.53835720484,
+      "production_sweeps": 21000,
+      "site_scale_vs_benchmark": 3.1604938271604937,
+      "sites": 131072,
+      "volume": "16^3x32"
+    },
+    {
+      "conservative_hours": 302.21376177469887,
+      "conservative_seconds": 1087969.542388916,
+      "mass_scaled_hours": 181.32825706481933,
+      "mass_scaled_seconds": 652781.7254333496,
+      "production_sweeps": 21000,
+      "site_scale_vs_benchmark": 16.0,
+      "sites": 663552,
+      "volume": "24^3x48"
+    }
+  ],
+  "strict_non_claims": [
+    "not production data",
+    "not a y_t derivation",
+    "does not make strict runner pass",
+    "does not supply lattice-to-SM matching",
+    "does not use H_unit matrix-element authority"
+  ],
+  "total_conservative_hours": 380.79866742136056,
+  "total_mass_scaled_hours": 228.47920045281631,
+  "verdict": "The existing 12^3 x 24 numba mass-bracket run provides a concrete resource baseline but not production evidence.  Linear site-count projection of the required 1000 thermalization plus 1000x20 measurement protocol gives multi-day single-worker wall-clock for the three-volume campaign.  The direct route remains viable as a planned production job, not a 12-hour foreground closure."
+}

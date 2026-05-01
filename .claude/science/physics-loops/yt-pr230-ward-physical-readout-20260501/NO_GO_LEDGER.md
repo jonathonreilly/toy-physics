@@ -379,6 +379,18 @@ At `N_c=3`, a `1/N_c^2` continuum allowance shifts the canonical Yukawa proxy
 by `0.057191`.  Sub-percent closure needs an actual finite-`N_c` continuum
 bound or direct residue measurement.
 
+Direct production is not a 12-hour foreground certificate:
+
+```text
+python3 scripts/frontier_yt_production_resource_projection.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+The existing `12^3 x 24` numba mass-bracket benchmark projects the requested
+three-volume, three-mass strict protocol to about `228.48` single-worker hours.
+This is planning support for the direct route, not production data, matching
+evidence, or strict-runner certification.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

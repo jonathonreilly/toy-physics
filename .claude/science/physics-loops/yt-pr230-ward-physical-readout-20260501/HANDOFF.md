@@ -132,6 +132,12 @@ What changed:
 - The large-`N_c` pole-dominance block shows asymptotic pole dominance is not
   enough at physical `N_c=3`.  A natural `1/N_c^2` continuum allowance shifts
   the canonical Yukawa proxy by more than five percent.
+- The production resource projection converts the existing `12^3 x 24`
+  numba mass-bracket benchmark into a concrete strict-campaign estimate:
+  the requested three-volume, three-mass protocol projects to about
+  `228.48` single-worker hours.  This keeps the direct route actionable as a
+  planned production job, but it is not production evidence and cannot make the
+  strict runner pass.
 
 The scientific result is narrower than closure:
 
@@ -155,7 +161,8 @@ Package this PR #230 update.  The remaining positive options are now:
 
 1. strict direct physical measurement at a suitable top/heavy-quark scale with
    additive-mass/interacting-kinetic/matching control supplied by an
-   independent observable or theorem;
+   independent observable or theorem; current single-worker projection is
+   multi-day, not 12-hour foreground closure;
 2. interacting scalar denominator/pole-residue/common-dressing theorem from
    retained dynamics;
 3. a newly derived Planck stationarity selector.

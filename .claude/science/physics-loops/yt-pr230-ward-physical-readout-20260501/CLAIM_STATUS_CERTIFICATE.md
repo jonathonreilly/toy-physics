@@ -19,7 +19,9 @@ and heavy kinetic matching obstruction
 and momentum pilot scaling certificate plus assumption/import stress and free
 staggered kinetic-coefficient support plus interacting kinetic background
 sensitivity plus scalar LSZ normalization cancellation plus Feshbach
-operator-response boundary
+operator-response boundary plus bridge-stack import audit, scalar spectral
+saturation no-go, large-Nc pole-dominance boundary, and production resource
+projection
 **PR:** #230 draft branch
 
 ```yaml
@@ -79,6 +81,9 @@ Allowed wording:
   low-order curvature alone;
 - exact negative boundary for large-`N_c` pole dominance as finite-`N_c=3`
   closure;
+- bounded-support production resource projection; the direct route is a
+  concrete planned multi-day compute campaign, not a 12-hour foreground
+  production certificate;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
@@ -225,4 +230,10 @@ python3 scripts/frontier_yt_large_nc_pole_dominance_boundary.py
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=22 FAIL=0
+
+python3 scripts/frontier_yt_production_resource_projection.py
+# SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=23 FAIL=0
 ```

@@ -12,7 +12,10 @@
    proxy is gauge-background sensitive.  Interacting kinetic renormalization
    and SM matching remain open.
    The refreshed retained-closure route certificate keeps this as a shortest
-   honest route only with strict ensemble evidence and matching.
+   honest route only with strict ensemble evidence and matching.  The direct
+   production resource projection makes the requested three-volume, three-mass
+   campaign concrete at about `228.48` single-worker hours; that is a planned
+   compute route, not a 12-hour foreground certificate.
 2. **Scalar-channel Bethe-Salpeter projector and limiting theorem.** The
    source-bubble stretch, HS/RPA contact attempt, input audit, and
    projector-normalization obstruction show the exact next analytic object:

@@ -536,3 +536,29 @@ python3 scripts/frontier_yt_momentum_pilot_scaling_certificate.py
 Reduced-scope momentum pilots should not be extended as proof substitutes; the
 next closure-grade work is production/statistics or a matching/scalar-LSZ
 theorem.
+
+## Review-Loop Backpressure — Production Resource Projection
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_production_resource_projection.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_production_resource_projection.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The projection is a scheduling artifact, not a strict certificate.  It uses the
+actual `12^3 x 24` numba mass-bracket runtime to show the full requested
+three-volume, three-mass campaign is multi-day single-worker compute; it does
+not replace production data, matching, or strict validation.
