@@ -24,6 +24,15 @@ After a process challenge, a formal assumption/route audit was added.  It
 checks the loop pack, assumption ledger, route fan-out, assumption sensitivity,
 artifact coverage, and the documented process gaps.
 
+The reviewer-backpressure pass was then run as a repo-facing disposition note.
+It keeps only the honest subset live: direct-correlator gate, no-go memory, and
+conditional selector maps.  It rejects retained closure and strict
+certification until open imports close.
+
+The gauge-input sensitivity route was also tested.  Even if Planck
+stationarity is granted, the selector needs fixed electroweak gauge boundary
+data; without them, it is a family rather than a unique `y_t` derivation.
+
 Verification:
 
 ```bash
@@ -38,6 +47,9 @@ python3 scripts/frontier_yt_vacuum_stability_stationarity_no_go.py
 
 python3 scripts/frontier_yt_pr230_physics_loop_assumption_audit.py
 # SUMMARY: PASS=34 FAIL=0
+
+python3 scripts/frontier_yt_planck_selector_gauge_input_sensitivity.py
+# SUMMARY: PASS=8 FAIL=0
 ```
 
 Next exact action: keep PR #230 honest as open/conditional.  Full retained

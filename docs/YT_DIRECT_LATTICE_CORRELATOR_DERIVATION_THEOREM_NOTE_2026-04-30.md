@@ -381,6 +381,13 @@ boundary can force `beta_lambda(M_Pl)=0`.  It cannot: the local condition is
 `beta_lambda(M_Pl) <= 0`, which leaves a continuum of allowed `y_t` values.
 The equality requires an added double-zero or multiple-point tangency theorem.
 
+Gauge-input sensitivity follow-up:
+[YT_PLANCK_SELECTOR_GAUGE_INPUT_SENSITIVITY_NOTE_2026-05-01.md](YT_PLANCK_SELECTOR_GAUGE_INPUT_SENSITIVITY_NOTE_2026-05-01.md)
+checks the assumption that the Planck selector is self-contained once
+stationarity is granted.  It is not: the selected `y_t(M_Pl)` depends on the
+electroweak gauge boundary values, so retained authority for those inputs and
+the running bridge remains part of the import ledger.
+
 A future passing production certificate must supply this budget:
 
 | Component | Required content |

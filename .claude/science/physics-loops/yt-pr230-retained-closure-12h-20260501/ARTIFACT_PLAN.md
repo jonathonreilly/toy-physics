@@ -14,6 +14,10 @@ Completed in the current block:
 - `scripts/frontier_yt_pr230_physics_loop_assumption_audit.py`
 - `outputs/yt_pr230_physics_loop_assumption_audit_2026-05-01.json`
 - `docs/YT_PR230_PHYSICS_LOOP_ASSUMPTION_AUDIT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_planck_selector_gauge_input_sensitivity.py`
+- `outputs/yt_planck_selector_gauge_input_sensitivity_2026-05-01.json`
+- `docs/YT_PLANCK_SELECTOR_GAUGE_INPUT_SENSITIVITY_NOTE_2026-05-01.md`
+- `docs/YT_PR230_REVIEW_BACKPRESSURE_PASS_NOTE_2026-05-01.md`
 - updates to the direct-correlator theorem note and double-criticality selector
   note
 

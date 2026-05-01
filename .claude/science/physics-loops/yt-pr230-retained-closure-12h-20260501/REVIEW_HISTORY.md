@@ -13,3 +13,6 @@ Self-review findings:
   fan-out and assumption-sensitivity coverage.  It documents that the
   independent review-loop/backpressure pass and literal 12-hour wall-clock run
   were not completed.
+- A reviewer-backpressure disposition note was added after the user explicitly
+  requested the missing process.  It groups findings into science-needed,
+  support-only demotion, reject, no-go, and fix-on-branch categories.

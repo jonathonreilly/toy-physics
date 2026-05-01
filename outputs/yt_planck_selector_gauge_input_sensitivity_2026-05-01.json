@@ -1,0 +1,132 @@
+{
+  "actual_current_surface_status": "conditional-support / assumption-sensitivity boundary",
+  "boundary_sensitivity": {
+    "canonical_g1_pl": 0.6144603892329987,
+    "canonical_g2_pl": 0.504865600296759,
+    "canonical_yt_pl_one_loop": 0.3877569751072785,
+    "common_scale_samples": [
+      {
+        "common_scale": 0.8,
+        "relative_to_canonical": 0.8,
+        "yt_pl_one_loop": 0.31020558008582283
+      },
+      {
+        "common_scale": 0.9,
+        "relative_to_canonical": 0.9,
+        "yt_pl_one_loop": 0.3489812775965507
+      },
+      {
+        "common_scale": 1.0,
+        "relative_to_canonical": 1.0,
+        "yt_pl_one_loop": 0.3877569751072785
+      },
+      {
+        "common_scale": 1.1,
+        "relative_to_canonical": 1.1,
+        "yt_pl_one_loop": 0.4265326726180064
+      },
+      {
+        "common_scale": 1.2,
+        "relative_to_canonical": 1.2,
+        "yt_pl_one_loop": 0.4653083701287342
+      }
+    ],
+    "spread": 0.1551027900429114
+  },
+  "claim_boundary": {
+    "additional_open_import": "retained authority for the electroweak gauge boundary inputs used by the selector",
+    "comparators_not_inputs": true,
+    "proposal_forbidden": true,
+    "selector_open": true
+  },
+  "fail_count": 0,
+  "low_scale_input_sensitivity": {
+    "canonical_yt_pl_one_loop": 0.38775697510727863,
+    "samples": [
+      {
+        "alpha_s_v": 0.1033,
+        "case": "canonical",
+        "g1_pl_one_loop": 0.6144603892330002,
+        "g1_v": 0.464,
+        "g2_pl_one_loop": 0.5048656002967586,
+        "g2_v": 0.648,
+        "g3_pl_one_loop": 0.48920445703435433,
+        "relative_yt_shift": 0.0,
+        "yt_pl_one_loop": 0.38775697510727863
+      },
+      {
+        "alpha_s_v": 0.1033,
+        "case": "g1_plus_5pct",
+        "g1_pl_one_loop": 0.6716481532556361,
+        "g1_v": 0.4872,
+        "g2_pl_one_loop": 0.5048656002967586,
+        "g2_v": 0.648,
+        "g3_pl_one_loop": 0.48920445703435433,
+        "relative_yt_shift": 0.02939247179039698,
+        "yt_pl_one_loop": 0.399154111059649
+      },
+      {
+        "alpha_s_v": 0.1033,
+        "case": "g1_minus_5pct",
+        "g1_pl_one_loop": 0.5634036187916774,
+        "g1_v": 0.4408,
+        "g2_pl_one_loop": 0.5048656002967586,
+        "g2_v": 0.648,
+        "g3_pl_one_loop": 0.48920445703435433,
+        "relative_yt_shift": -0.0239602998696298,
+        "yt_pl_one_loop": 0.37846620170716766
+      },
+      {
+        "alpha_s_v": 0.1033,
+        "case": "g2_plus_5pct",
+        "g1_pl_one_loop": 0.6144603892330002,
+        "g1_v": 0.464,
+        "g2_pl_one_loop": 0.519744398788389,
+        "g2_v": 0.6804,
+        "g3_pl_one_loop": 0.48920445703435433,
+        "relative_yt_shift": 0.020717364173557413,
+        "yt_pl_one_loop": 0.39579027757141316
+      },
+      {
+        "alpha_s_v": 0.1033,
+        "case": "g2_minus_5pct",
+        "g1_pl_one_loop": 0.6144603892330002,
+        "g1_v": 0.464,
+        "g2_pl_one_loop": 0.489083637460876,
+        "g2_v": 0.6156,
+        "g3_pl_one_loop": 0.48920445703435433,
+        "relative_yt_shift": -0.021677690685760136,
+        "yt_pl_one_loop": 0.37935129933965706
+      },
+      {
+        "alpha_s_v": 0.11363000000000001,
+        "case": "alpha_s_plus_10pct",
+        "g1_pl_one_loop": 0.6144603892330002,
+        "g1_v": 0.464,
+        "g2_pl_one_loop": 0.5048656002967586,
+        "g2_v": 0.648,
+        "g3_pl_one_loop": 0.49335628995753866,
+        "relative_yt_shift": 0.0,
+        "yt_pl_one_loop": 0.38775697510727863
+      },
+      {
+        "alpha_s_v": 0.09297000000000001,
+        "case": "alpha_s_minus_10pct",
+        "g1_pl_one_loop": 0.6144603892330002,
+        "g1_v": 0.464,
+        "g2_pl_one_loop": 0.5048656002967586,
+        "g2_v": 0.648,
+        "g3_pl_one_loop": 0.48426956002421795,
+        "relative_yt_shift": 0.0,
+        "yt_pl_one_loop": 0.38775697510727863
+      }
+    ]
+  },
+  "pass_count": 8,
+  "remaining_open_imports": [
+    "beta_lambda(M_Pl)=0 stationarity selector",
+    "retained authority for g1(v), g2(v), and running bridge used by this route"
+  ],
+  "target": "test whether Planck double-criticality selects y_t without admitted gauge inputs",
+  "verdict": "The selector is not self-contained: beta_lambda(M_Pl)=0 selects a y_t value only after electroweak gauge boundary data are fixed. Without those inputs, the route is a family, not a retained single-number derivation."
+}

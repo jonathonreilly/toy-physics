@@ -12,9 +12,13 @@ Next PR body update should add:
 - `frontier_yt_vacuum_stability_stationarity_no_go.py`;
 - `YT_PR230_PHYSICS_LOOP_ASSUMPTION_AUDIT_NOTE_2026-05-01.md`;
 - `frontier_yt_pr230_physics_loop_assumption_audit.py`;
+- `YT_PLANCK_SELECTOR_GAUGE_INPUT_SENSITIVITY_NOTE_2026-05-01.md`;
+- `frontier_yt_planck_selector_gauge_input_sensitivity.py`;
+- `YT_PR230_REVIEW_BACKPRESSURE_PASS_NOTE_2026-05-01.md`;
 - certificate path and `PASS=24 FAIL=0`;
 - trace-anomaly certificate path and `PASS=14 FAIL=0`;
 - vacuum-stability certificate path and `PASS=13 FAIL=0`;
 - assumption-audit certificate path and `PASS=34 FAIL=0`;
+- gauge-input sensitivity certificate path and `PASS=8 FAIL=0`;
 - honest status: no full retained closure; non-MC Planck criticality remains
   conditional on an added stationarity selector.

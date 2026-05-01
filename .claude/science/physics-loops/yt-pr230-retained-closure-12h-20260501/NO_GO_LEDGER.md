@@ -30,3 +30,12 @@ Closed by `docs/YT_VACUUM_STABILITY_STATIONARITY_NO_GO_NOTE_2026-05-01.md` and
 At an upper boundary with `lambda(M_Pl)=0`, local nonnegativity below the
 boundary gives `beta_lambda(M_Pl)<=0`, not equality.  Equality is a separate
 double-zero/multiple-point premise.
+
+## Planck selector is gauge-input sensitive
+
+Recorded by `docs/YT_PLANCK_SELECTOR_GAUGE_INPUT_SENSITIVITY_NOTE_2026-05-01.md`
+and `scripts/frontier_yt_planck_selector_gauge_input_sensitivity.py`.
+
+This is an assumption boundary rather than a no-go against the selector:
+`beta_lambda(M_Pl)=0` selects `y_t` only after electroweak gauge boundary data
+are fixed.  Without those inputs, the route is a family.

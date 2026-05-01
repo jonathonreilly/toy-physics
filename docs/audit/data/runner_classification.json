@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T01:49:29.482894+00:00",
+  "generated_at": "2026-05-01T02:04:57.369487+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14737,6 +14737,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_planck_double_criticality_selector.py"
     },
+    "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_planck_selector_gauge_input_sensitivity.py"
+    },
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01": {
       "assert_count": 1,
       "counts": {
@@ -28816,6 +28828,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_planck_selector_gauge_input_sensitivity.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_physics_loop_assumption_audit.py": {
       "assert_count": 1,
       "claims": [
@@ -32557,11 +32584,11 @@
       "A": 7,
       "B": 122,
       "C": 445,
-      "D": 186,
+      "D": 187,
       "none": 404
     },
-    "runners_classified": 1164,
+    "runners_classified": 1165,
     "runners_with_C": 537,
-    "runners_with_D": 288
+    "runners_with_D": 289
   }
 }

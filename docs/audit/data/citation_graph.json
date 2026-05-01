@@ -7893,6 +7893,10 @@
       "to": "yt_vacuum_stability_stationarity_no_go_note_2026-05-01"
     },
     {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01"
+    },
+    {
       "from": "yt_eft_bridge_theorem",
       "to": "yt_zero_import_authority_note"
     },
@@ -8427,6 +8431,10 @@
     {
       "from": "yt_planck_double_criticality_selector_note_2026-04-30",
       "to": "yt_vacuum_stability_stationarity_no_go_note_2026-05-01"
+    },
+    {
+      "from": "yt_planck_double_criticality_selector_note_2026-04-30",
+      "to": "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01"
     },
     {
       "from": "yt_right_handed_species_dependence_note_2026-04-18",
@@ -18445,7 +18453,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T01:49:23.214218+00:00",
+  "generated_at": "2026-05-01T02:04:51.245437+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39357,9 +39365,10 @@
         "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01",
         "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
         "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
-        "yt_vacuum_stability_stationarity_no_go_note_2026-05-01"
+        "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
+        "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01"
       ],
-      "note_hash": "0299f548e03d6e12017b7a5257828ebfa54ab006a08e267c6df38f2994b3e952",
+      "note_hash": "94acfeaa9a58a513b857f01d342b283771f77aa7c5a89c8b60983d852a07051f",
       "path": "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_direct_lattice_correlator.py",
       "title": "Direct Lattice-Correlator Top-Yukawa Measurement Gate"
@@ -39930,12 +39939,23 @@
         "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01",
         "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
         "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
-        "yt_vacuum_stability_stationarity_no_go_note_2026-05-01"
+        "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
+        "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01"
       ],
-      "note_hash": "f0e1f07a7202667211f78a8a82f5b67048fac6fd270dc6a8776385058b3743d2",
+      "note_hash": "8e70455760b6220ee9a81431ec14445767ba0ba36d6197669687ec0f0812e039",
       "path": "docs/YT_PLANCK_DOUBLE_CRITICALITY_SELECTOR_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_planck_double_criticality_selector.py",
       "title": "YT Planck Double-Criticality Selector Note"
+    },
+    "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01": {
+      "claim_id": "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
+      "current_status": "support",
+      "current_status_raw": "conditional-support / assumption-sensitivity boundary",
+      "deps": [],
+      "note_hash": "fe35faa01fd519f0bf98867ca5915bfa4bae207a87b83dc68af8a572fbf12365",
+      "path": "docs/YT_PLANCK_SELECTOR_GAUGE_INPUT_SENSITIVITY_NOTE_2026-05-01.md",
+      "runner_path": "scripts/frontier_yt_planck_selector_gauge_input_sensitivity.py",
+      "title": "YT Planck Selector Gauge-Input Sensitivity Note"
     },
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01": {
       "claim_id": "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
@@ -39946,6 +39966,16 @@
       "path": "docs/YT_PR230_PHYSICS_LOOP_ASSUMPTION_AUDIT_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_physics_loop_assumption_audit.py",
       "title": "YT PR230 Physics-Loop Assumption Audit Note"
+    },
+    "yt_pr230_review_backpressure_pass_note_2026-05-01": {
+      "claim_id": "yt_pr230_review_backpressure_pass_note_2026-05-01",
+      "current_status": "open",
+      "current_status_raw": "review-backpressure disposition / open current-surface claim",
+      "deps": [],
+      "note_hash": "8cbc9c2e99299dc6ee7e89e57f691cf821eeab0ce10456f8cb71b38ee0c38a62",
+      "path": "docs/YT_PR230_REVIEW_BACKPRESSURE_PASS_NOTE_2026-05-01.md",
+      "runner_path": null,
+      "title": "YT PR230 Review-Backpressure Pass Note"
     },
     "yt_qfp_insensitivity_support_note": {
       "claim_id": "yt_qfp_insensitivity_support_note",
@@ -41411,7 +41441,9 @@
     "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
     "yt_p2_taste_staircase_transport_note_2026-04-17",
     "yt_p2_v_matching_theorem_note_2026-04-17",
+    "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
+    "yt_pr230_review_backpressure_pass_note_2026-05-01",
     "yt_qfp_insensitivity_support_note",
     "yt_retention_landing_readiness_2026-04-18",
     "yt_retention_master_manifest_2026-04-18",
@@ -41433,17 +41465,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4611,
-    "leaf_count": 729,
-    "node_count": 1670,
-    "root_count": 1188,
-    "runners_with_path": 1234,
+    "edge_count": 4613,
+    "leaf_count": 730,
+    "node_count": 1672,
+    "root_count": 1190,
+    "runners_with_path": 1235,
     "status_counts": {
       "bounded": 447,
-      "open": 49,
+      "open": 50,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 381,
+      "support": 382,
       "unknown": 419
     }
   }

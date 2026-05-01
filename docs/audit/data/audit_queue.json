@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 296,
-    "medium": 294
+    "leaf": 297,
+    "medium": 295
   },
-  "generated_at": "2026-05-01T01:49:31.072049+00:00",
+  "generated_at": "2026-05-01T02:04:59.083742+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -9589,6 +9589,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 2,
+      "load_bearing_score": 3.322,
+      "note_path": "docs/YT_PLANCK_SELECTOR_GAUGE_INPUT_SENSITIVITY_NOTE_2026-05-01.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_planck_selector_gauge_input_sensitivity.py",
+      "transitive_descendants": 4
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -12799,7 +12816,8 @@
         "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01",
         "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
         "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
-        "yt_vacuum_stability_stationarity_no_go_note_2026-05-01"
+        "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
+        "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01"
       ],
       "direct_in_degree": 2,
       "load_bearing_score": 3.0,
@@ -16762,6 +16780,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_review_backpressure_pass_note_2026-05-01",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "open",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_REVIEW_BACKPRESSURE_PASS_NOTE_2026-05-01.md",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_top_mass_substrate_pin_assumptions_and_imports_2026-04-30",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -18423,7 +18458,8 @@
         "yt_beta_lambda_planck_stationarity_no_go_note_2026-05-01",
         "yt_scale_stationarity_substrate_no_go_note_2026-05-01",
         "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
-        "yt_vacuum_stability_stationarity_no_go_note_2026-05-01"
+        "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
+        "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01"
       ],
       "direct_in_degree": 0,
       "load_bearing_score": 0.0,
@@ -18456,6 +18492,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 441,
-  "total_pending": 827
+  "ready_count": 443,
+  "total_pending": 829
 }

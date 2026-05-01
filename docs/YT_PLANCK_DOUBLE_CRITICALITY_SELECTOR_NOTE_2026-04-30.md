@@ -163,6 +163,14 @@ only `beta_lambda(M_Pl) <= 0`, not the equality `beta_lambda(M_Pl)=0`.  Thus
 vacuum stability supplies a family/bound unless an additional double-zero or
 multiple-point tangency theorem is added.
 
+Assumption-sensitivity follow-up:
+[YT_PLANCK_SELECTOR_GAUGE_INPUT_SENSITIVITY_NOTE_2026-05-01.md](YT_PLANCK_SELECTOR_GAUGE_INPUT_SENSITIVITY_NOTE_2026-05-01.md)
+tests whether double-criticality would select a unique `y_t` without fixed
+electroweak gauge boundary data.  It does not: at one loop the selected
+`y_t(M_Pl)` is a function of `g_1(M_Pl)` and `g_2(M_Pl)`, and perturbing the
+weak-scale gauge inputs moves the selected value.  Therefore the route also
+requires retained authority for the gauge boundary data and running bridge.
+
 Promising attack frames:
 
 1. boundary-action stationarity of the taste scalar at the Planck surface;
@@ -177,6 +185,8 @@ Promising attack frames:
 6. one-sided vacuum stability at the high-scale boundary, now closed
    negatively as a unique selector because it gives an inequality rather than
    stationarity.
+7. gauge-input sensitivity, now recorded as an assumption boundary: criticality
+   is a family unless the electroweak gauge boundary data are fixed upstream.
 
 Until that premise is derived, this is a conditional selector and a route
 portfolio upgrade, not a retained-grade theorem.
