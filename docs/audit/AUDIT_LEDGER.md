@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:03:26.056559+00:00
+**Generated:** 2026-05-01T06:05:29.265893+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 254 |
+| `audited_clean` | 255 |
 | `audited_conditional` | 570 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 81 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 614 |
+| `unaudited` | 613 |
 
 | criticality | count |
 |---|---:|
@@ -293,6 +293,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_family_validation_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `lattice_field_strength_unification_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `lattice_nn_mass_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `lattice_symmetry_unification_decision_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `lattice_weak_field_mass_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_weak_field_purity_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lensing_adjoint_kernel_reduced_model_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -9976,6 +9977,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **chain closes:** False — No. The runner exits zero, but the audit classifier records no A/B/C/D PASS checks for a load-bearing audit surface.
 - **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a bounded note with executable but unratified support.
 - **auditor confidence:** medium
+
+### `lattice_symmetry_unification_decision_note`
+
+- **Note:** [`LATTICE_SYMMETRY_UNIFICATION_DECISION_NOTE.md`](../../docs/LATTICE_SYMMETRY_UNIFICATION_DECISION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the standard-strength ordered-lattice symmetry sweep, Born/MI/decoherence remain nontrivial but positive same-slit gravity appears in 0/36 tradeoff rows, so the one-family unification decision is negative on that slice.  _(class `C`)_
+- **chain closes:** True — The registered runner recomputes the canonical max_dy sweep, barrier/no-barrier curves, tradeoff map, and beam-depletion diagnostic, matching the note's negative standard-strength decision. The note explicitly preserves the later weak-field reopening as a separate bounded result.
+- **rationale:** The bounded negative decision closes: the runner shows Born-clean companion rows and nontrivial MI/decoherence everywhere tested, but no positive-gravity or retained one-family rows on the standard-strength ordered-lattice symmetry window. Residual scope is explicit: this is not a claim about the later weak-field pocket or a blanket rejection of all ordered-lattice architectures.
+- **auditor confidence:** high
 
 ### `lattice_synthesis_guard_note`
 
