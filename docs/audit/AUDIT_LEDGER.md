@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:01:03.401949+00:00
+**Generated:** 2026-05-01T11:03:05.498047+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 187 |
-| support | 162 |
+| support | 161 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 860 |
-| ~~audited_failed~~ | 176 |
+| ~~audited_failed~~ | 177 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 85 |
+| `audited_failed` | 86 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 547 |
+| `unaudited` | 546 |
 
 | criticality | count |
 |---|---:|
@@ -1035,6 +1035,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `pmns_corner_transport_active_block_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `pmns_graph_commutant_cycle_value_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
+| `pmns_intrinsic_completion_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `pmns_minimal_branch_nonselection_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `pmns_selector_bank_nonrealization_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `pmns_selector_sign_to_branch_reduction_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
@@ -12002,6 +12003,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `retained_PMNS_pair_readout_authority_not_registered_one_hop_dependency`
   - `physical_active_passive_source_transfer_observables_authority_not_registered`
   - `lower_level_source_transfer_observables_to_PMNS_readout_theorem_not_registered`
+- **auditor confidence:** high
+
+### `pmns_intrinsic_completion_boundary_note`
+
+- **Note:** [`PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE.md`](../../docs/PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The runner is supposed to verify that the current PMNS bank leaves the remaining intrinsic-completion gap at the selected-branch Hermitian-data law plus one residual sheet-fixing datum.  _(class `C`)_
+- **chain closes:** False — The registered runner exits nonzero before completing the current-bank boundary checks because it tries to read a missing file, docs/PMNS_BRANCH_SHEET_NONFORCING_NOTE.md.
+- **rationale:** Issue: the registered runner is stale or broken: scripts/frontier_pmns_intrinsic_completion_boundary.py raises FileNotFoundError for docs/PMNS_BRANCH_SHEET_NONFORCING_NOTE.md during Part 2. Why this blocks: the load-bearing boundary claim depends on current-bank cross-checks beyond the local Hermitian reconstruction demo, and the runner never reaches those checks or the final PASS/FAIL summary. Repair target: update the runner and note artifact chain to reference the extant sheet/nonforcing theorem file, or restore the missing note, then rerun the full boundary checker to completion. Claim boundary until fixed: the runner's Part 1 Hermitian reconstruction examples pass, but the broader intrinsic-completion boundary is not currently auditable from the registered runner.
+- **open / conditional deps cited:**
+  - `scripts/frontier_pmns_intrinsic_completion_boundary.py references missing PMNS_BRANCH_SHEET_NONFORCING_NOTE.md`
 - **auditor confidence:** high
 
 ### `pmns_lower_level_end_to_end_closure_note`
