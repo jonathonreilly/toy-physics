@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T19:42:33.433158+00:00
+**Generated:** 2026-05-01T19:43:48.888013+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 195 |
+| bounded | 194 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 906 |
+| ~~audited_conditional~~ | 907 |
 | ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 610 |
+| `audited_conditional` | 611 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 559 |
+| `unaudited` | 558 |
 
 | criticality | count |
 |---|---:|
@@ -812,6 +812,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `memory_decay_diagnosis_2026-04-11` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `mesoscopic_surrogate_backreaction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `mesoscopic_surrogate_localization_sweep_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `mirror_gravity_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -10319,6 +10320,20 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** If localization is worth trying again, the retained 3D h=0.25 ordered-lattice family is the cheapest plausible target, while h=0.5 and the 2D threshold lane should not keep being swept.  _(class `B`)_
 - **chain closes:** False — The recommendation imports frozen conclusions from multiple mesoscopic-surrogate lanes, but the row has no registered dependencies and no runner or frozen log for those comparisons. The audit cannot verify the ranking of h=0.25 versus h=0.5 and 2D from this note alone.
 - **rationale:** Issue: the scout recommendation rests on uncited prior bounded results about h=0.5 localization, the 2D threshold scan, and the 3D h=0.25 family. Why this blocks: without one-hop authorities or a reproduction artifact, the audit cannot verify that h=0.25 is the cheapest plausible next target or that the other lanes are exhausted. Repair target: register the cited mesoscopic notes/results as dependencies or attach a runner/log that reproduces the family comparison and compact-floor check. Claim boundary until fixed: the note may guide planning, but it is not an audited closure of the alternate-family selection.
+- **auditor confidence:** high
+
+### `mesoscopic_surrogate_backreaction_note`
+
+- **Note:** [`MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The broad relaunch surrogate can source a weak additive field and supports bounded one-step two-body symmetry at the sub-percent level, but does not produce a self-maintaining localized inertial object.  _(class `C`)_
+- **chain closes:** False — The current harness reproduces the same additivity and sub-percent symmetry numbers reported in the note, but it emits no classified PASS/FAIL lines and depends on the broad relaunch-surrogate setup, including an unaudited upstream probe. The bounded interpretation is numerically supported, but not yet a clean audit closure.
+- **rationale:** Issue: the runner's computed summary agrees with the source note, but the output is unclassified and the broad-surrogate construction still imports an unaudited relaunch probe. Why this blocks: the audit lane cannot record which load-bearing additivity and two-body symmetry checks passed, and the mesoscopic-source interpretation depends on a not-yet-clean upstream surrogate object. Repair target: update the harness to emit classified PASS lines for same-shape additivity, disjoint-source additivity, one-step two-body symmetry, and non-closure of persistent mass; then audit the relaunch probe it builds on. Claim boundary until fixed: the current row is a bounded current-run numerical support result, not a clean persistent-source theorem.
+- **open / conditional deps cited:**
+  - `QUASI_PERSISTENT_RELAUNCH_PROBE_NOTE.md`
 - **auditor confidence:** high
 
 ### `mesoscopic_surrogate_localization_frontier_note`
