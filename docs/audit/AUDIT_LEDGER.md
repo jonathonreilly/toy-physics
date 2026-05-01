@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:33:26.154914+00:00
+**Generated:** 2026-05-01T03:35:18.926104+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 243 |
-| support | 203 |
+| support | 202 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 51 |
-| ~~audited_conditional~~ | 792 |
+| ~~audited_conditional~~ | 793 |
 | ~~audited_failed~~ | 150 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 231 |
-| `audited_conditional` | 522 |
+| `audited_conditional` | 523 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 67 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 710 |
+| `unaudited` | 709 |
 
 | criticality | count |
 |---|---:|
@@ -781,6 +781,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `sigma_hier_uniqueness_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `single_axiom_hilbert_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `single_axiom_information_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `sixth_family_distance_law_third_vs_sixth_quick_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -11540,6 +11541,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Static cone shape can mimic the c-dependent causal phase curve exactly, while static scheduling remains near-flat and does not reproduce the curve.  _(class `C`)_
 - **chain closes:** True — The current runner computes the causal, static-cone, and static-schedule curves across three families and shows zero RMSE for the static-cone mimic and nonzero scheduling mismatch.
 - **rationale:** The audited claim is the negative boundary: detector-line phase lag is not a unique causal-propagation discriminator because a static cone-shape field reproduces the same c-dependent curve in this model. The runner reproduces the note's table and the safe read, including exact zero controls and the static-scheduling mismatch. Residual risk is limited to the missing frozen log; the current executable artifact is sufficient for the scoped boundary result.
+- **auditor confidence:** high
+
+### `sigma_hier_uniqueness_theorem_note_2026-04-19`
+
+- **Note:** [`SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md`](../../docs/SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-sigma_hier_uniqueness_theorem_note_2026-04-19`  (codex-current; independence=fresh_context)
+- **load-bearing step:** At the pinned chamber point, the unique S_3 element satisfying all 9 NuFit 5.3 NO 3-sigma PMNS magnitude ranges and sin(delta_CP)<0 is sigma=(2,1,0).  _(class `D`)_
+- **chain closes:** False — The runner verifies the finite S_3 enumeration and the external PMNS/CP discriminator at the hard-coded pinned chamber point. The result is conditional on the P3 chamber pin, A-BCC branch choice, and experimental sign preference; it is not derived from Cl(3)/Z^3 alone and the upstream pin/branch authorities are not registered as dependencies.
+- **rationale:** Issue: the uniqueness result depends on a pinned chamber point, the imposed A-BCC physical-sheet/branch choice, and external NuFit/T2K/NOvA observational cuts. Why this blocks: those inputs are not derived or registered as retained dependencies here, so the theorem does not close as an intrinsic sigma_hier derivation. Repair target: ratify and cite the P3 PMNS-as-f(H) chamber pin plus A-BCC branch-choice chain, and keep the external CP-sign comparator current in the runner. Claim boundary until fixed: at the stated pinned point and granted observational discriminator, the runner verifies that sigma=(2,1,0) is the unique S_3 permutation satisfying the listed constraints.
+- **open / conditional deps cited:**
+  - `ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md`
+  - `DM_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md`
+  - `NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md`
 - **auditor confidence:** high
 
 ### `signed_gravity_response_lane_status_note_2026-04-26`
