@@ -3,9 +3,9 @@
     "critical": 4,
     "high": 196,
     "leaf": 286,
-    "medium": 269
+    "medium": 268
   },
-  "generated_at": "2026-05-01T01:48:55.060764+00:00",
+  "generated_at": "2026-05-01T01:50:01.097078+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6359,23 +6359,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_yt_bottom_yukawa_retention.py",
       "transitive_descendants": 7
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "cosmological_constant_vacuum_energy_audit_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 3,
-      "load_bearing_score": 7.2,
-      "note_path": "docs/COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 51
     },
     {
       "audit_independence_required": "any_non_self",
@@ -17461,6 +17444,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 367,
-  "total_pending": 755
+  "ready_count": 366,
+  "total_pending": 754
 }

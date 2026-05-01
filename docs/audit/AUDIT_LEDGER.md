@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:48:55.268662+00:00
+**Generated:** 2026-05-01T01:50:01.305480+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
-| bounded | 268 |
+| bounded | 267 |
 | support | 227 |
 | open | 17 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 770 |
+| ~~audited_conditional~~ | 771 |
 | ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
-| `audited_conditional` | 492 |
+| `audited_conditional` | 493 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 755 |
+| `unaudited` | 754 |
 
 | criticality | count |
 |---|---:|
@@ -413,6 +413,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cosmological_constant_spectral_gap_identity_theorem_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `cosmological_constant_vacuum_energy_audit_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `cosmology_scale_identification_and_reduction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `coupled_field_generated_family_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -2788,6 +2789,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md`
   - `DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md`
   - `CONFINEMENT_STRING_TENSION_NOTE.md`
+- **auditor confidence:** high
+
+### `cosmological_constant_vacuum_energy_audit_note`
+
+- **Note:** [`COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md`](../../docs/COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-cosmological_constant_vacuum_energy_audit_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Finite lattice vacuum-energy sums do not by themselves solve the cosmological-constant problem on the current framework surface; the surviving positive surface is the separate S^3 spectral-gap companion, not vacuum-energy finiteness.  _(class `C`)_
+- **chain closes:** False — The note states a negative route-hygiene conclusion, but the row has no registered runner and no declared dependencies for the referenced vacuum-energy audit script or the separate spectral-gap companion surface.
+- **rationale:** Issue: the safe negative statement is plausible route hygiene, but the row has runner_path=None while the note points to scripts/frontier_cosmological_constant.py, and it also relies on the separate COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md / spectral-gap surface to define the canonical split. Why this blocks: without a registered runner output or declared dependencies, the five explored routes and the separation from the positive S^3 spectral-gap theorem cannot be audited from this row alone. Repair target: register the vacuum-energy audit runner, declare the spectral-gap companion note/runner as dependencies where the split is load-bearing, and ensure the runner output records the five negative checks with classified PASS lines. Claim boundary until fixed: bounded route-hygiene statement that finite lattice vacuum-energy sums are not currently the cosmological-constant solution; not an independently audited no-go over all vacuum-energy mechanisms.
+- **open / conditional deps cited:**
+  - `scripts/frontier_cosmological_constant.py`
+  - `COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md`
+  - `scripts/frontier_cosmological_constant_spectral_gap.py`
 - **auditor confidence:** high
 
 ### `cosmology_scale_identification_and_reduction_note`
