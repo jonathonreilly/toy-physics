@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:59:43.130610+00:00
+**Generated:** 2026-05-01T05:00:55.888011+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 222 |
-| support | 185 |
+| support | 184 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 814 |
-| ~~audited_failed~~ | 161 |
+| ~~audited_failed~~ | 162 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 243 |
 | `audited_conditional` | 545 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 73 |
+| `audited_failed` | 74 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 659 |
+| `unaudited` | 658 |
 
 | criticality | count |
 |---|---:|
@@ -932,6 +932,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_corner_transport_active_block_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `pmns_graph_commutant_cycle_value_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
 | `pmns_minimal_branch_nonselection_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `pmns_selector_bank_nonrealization_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `pmns_selector_sign_to_branch_reduction_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -11101,6 +11102,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PMNS_SELECTOR_BANK_NONREALIZATION_NOTE.md`
   - `UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md`
   - `UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md`
+- **auditor confidence:** high
+
+### `pmns_selector_bank_nonrealization_note`
+
+- **Note:** [`PMNS_SELECTOR_BANK_NONREALIZATION_NOTE.md`](../../docs/PMNS_SELECTOR_BANK_NONREALIZATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** None of the existing exact selector tools realizes the missing PMNS branch selector on the lepton Higgs-Z3 / PMNS branch datum.  _(class `B`)_
+- **chain closes:** False — The primary runner crashes before reaching its checks because it references a missing source note path, so the current-bank nonrealization claim is not auditable from the registered runner.
+- **rationale:** Issue: the primary runner exits nonzero with FileNotFoundError for docs/NEUTRINO_HIGGS_Z3_UNDERDETERMINATION_NOTE.md before producing any PASS checks. Why this blocks: the note's current-bank nonrealization claim relies on comparing existing selector-tool domains against the PMNS selector datum, but the registered verification artifact is stale/broken. Repair target: update the runner to the current note path or dependency source for the Higgs-Z3 underdetermination input, then rerun and ensure it reaches the selector-domain checks. Claim boundary until fixed: the row is not an audited current-bank nonrealization theorem.
 - **auditor confidence:** high
 
 ### `pmns_selector_class_space_uniqueness_note`
