@@ -1,47 +1,11 @@
 {
   "by_criticality": {
-    "critical": 2,
+    "critical": 1,
     "high": 0,
     "leaf": 0,
     "medium": 0
   },
   "candidates": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audited_conditional",
-      "candidate_reason": "all_deps_ratified_after_audit_time_dependency_strengthening",
-      "claim_id": "native_gauge_closure_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "current_dep_effective_status": {
-        "graph_first_selector_derivation_note": "retained",
-        "graph_first_su3_integration_note": "retained"
-      },
-      "current_status": "proposed_retained",
-      "deps": [
-        "graph_first_selector_derivation_note",
-        "graph_first_su3_integration_note"
-      ],
-      "direct_in_degree": 19,
-      "effective_status": "audited_conditional",
-      "generated_order": 1,
-      "improved_dependencies": [
-        {
-          "after_effective_status": "retained",
-          "before_effective_status": "audited_conditional",
-          "claim_id": "graph_first_selector_derivation_note",
-          "rank_delta": 90
-        }
-      ],
-      "load_bearing_score": 17.7,
-      "note_hash": "f8ec18a4bf64410e9fe9d5e0c6c794f82a7c9f4ed3a83e109aef8cc11add1bab",
-      "note_path": "docs/NATIVE_GAUGE_CLOSURE_NOTE.md",
-      "reraudit_after_claim_ids": [
-        "graph_first_selector_derivation_note"
-      ],
-      "runner_path": "scripts/frontier_non_abelian_gauge.py",
-      "transitive_descendants": 293
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audited_conditional",
@@ -60,7 +24,7 @@
       ],
       "direct_in_degree": 19,
       "effective_status": "audited_conditional",
-      "generated_order": 2,
+      "generated_order": 1,
       "improved_dependencies": [
         {
           "after_effective_status": "retained",
@@ -90,12 +54,12 @@
     "proposed_promoted",
     "proposed_retained"
   ],
-  "generated_at": "2026-05-01T02:05:04.955967+00:00",
+  "generated_at": "2026-05-01T02:06:26.549404+00:00",
   "policy": "reaudit_unblocked_by_ratified_dependencies_v1",
   "policy_summary": "Non-clean audited proposed claims whose current one-hop dependencies are all retained/promoted and whose audit-time dependency snapshot contains at least one dependency that has since become retained/promoted.",
   "ratified_dependency_statuses": [
     "promoted",
     "retained"
   ],
-  "total_candidates": 2
+  "total_candidates": 1
 }
