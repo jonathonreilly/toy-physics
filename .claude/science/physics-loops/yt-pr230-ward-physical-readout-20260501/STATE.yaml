@@ -1,8 +1,11 @@
 slug: yt-pr230-ward-physical-readout-20260501
 goal: "Repair or rule out the Ward physical-readout route for PR #230 top Yukawa closure."
 target_status: best-honest-status
-mode: run
-runtime_budget_requested: "4h"
+mode: campaign
+runtime_budget_requested: "12h"
+campaign_started_at_utc: "2026-05-01T16:00:07Z"
+checkpoint_interval: "30m"
+deep_block: "90m"
 date: "2026-05-01"
 worktree: "/Users/jonBridger/Documents/New project 2"
 branch: "claude/yt-direct-lattice-correlator-2026-04-30"
@@ -10,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: block-1-packaged
-blocks_completed: 9
-active_route: "Ward physical-readout repair"
-active_hard_residual: "derive source/HS normalization, chirality selector, scalar carrier, LSZ leg, and common dressing without H_unit matrix-element definition"
+current_phase: campaign-block-2-stretch
+blocks_completed: 14
+active_route: "scalar-channel Bethe-Salpeter kernel theorem"
+active_hard_residual: "derive exact Wilson-staggered scalar ladder kernel, eigenvalue crossing, and pole residue without contact-G or H_unit readout import"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -51,6 +54,18 @@ files_touched:
   - "scripts/frontier_yt_key_blocker_closure_attempt.py"
   - "docs/YT_KEY_BLOCKER_CLOSURE_ATTEMPT_NOTE_2026-05-01.md"
   - "outputs/yt_key_blocker_closure_attempt_2026-05-01.json"
+  - "scripts/frontier_yt_scalar_source_two_point_stretch.py"
+  - "docs/YT_SCALAR_SOURCE_TWO_POINT_STRETCH_ATTEMPT_NOTE_2026-05-01.md"
+  - "outputs/yt_scalar_source_two_point_stretch_2026-05-01.json"
+  - "scripts/frontier_yt_scalar_residue_stuck_fanout.py"
+  - "docs/YT_SCALAR_RESIDUE_STUCK_FANOUT_NOTE_2026-05-01.md"
+  - "outputs/yt_scalar_residue_stuck_fanout_2026-05-01.json"
+  - "scripts/frontier_yt_hs_rpa_pole_condition_attempt.py"
+  - "docs/YT_HS_RPA_POLE_CONDITION_ATTEMPT_NOTE_2026-05-01.md"
+  - "outputs/yt_hs_rpa_pole_condition_attempt_2026-05-01.json"
+  - "scripts/frontier_yt_scalar_ladder_kernel_scout.py"
+  - "docs/YT_SCALAR_LADDER_KERNEL_SCOUT_NOTE_2026-05-01.md"
+  - "outputs/yt_scalar_ladder_kernel_scout_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -77,6 +92,10 @@ claim_state_movement:
   - "certified the shortest honest retained-closure routes"
   - "computed direct-measurement scale requirements: current scale gives am_top=81.423, requiring 81x+ refinement for am_top<=1"
   - "attempted direct key-blocker closure across all plausible repo authorities; no candidate derives both scalar pole residue and common dressing"
+  - "derived the scalar source two-point curvature as a logdet fermion bubble; free residue proxy is not universal"
+  - "ran stuck fan-out across free-bubble, finite-volume near-match, HS/RPA contact, common dressing, and direct/HQET frames"
+  - "blocked contact HS/RPA closure unless a scalar-channel Wilson-gauge kernel theorem supplies the pole condition"
+  - "built a finite scalar-channel ladder-kernel scout; machinery works but pole criterion is mass/IR/projector sensitive"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -85,5 +104,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Start a true scalar source two-point/pole-residue derivation or a physically suitable fine-scale/HQET direct measurement; current repo authorities do not already close the key blocker."
-stop_condition: "User runtime budget exhausted, or source/SSB theorem reaches honest closure/no-go and is packaged."
+next_exact_action: "Derive the exact scalar-channel Wilson-staggered ladder kernel/projector and control the IR/finite-volume limit, or pivot to fine-scale/HQET direct measurement if the kernel route stalls."
+stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

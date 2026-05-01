@@ -1,0 +1,138 @@
+{
+  "actual_current_surface_status": "open",
+  "bubble_fit_for_rpa_test": {
+    "pi0": 0.08227955923905372,
+    "pi1": -0.018241411549944322,
+    "pi2": 0.0029022319548109316,
+    "source": "L=8,T=16,m=0.25 source-prefactored free bubble"
+  },
+  "dressing_models": [
+    {
+      "readout_ratio_multiplier": 1.0,
+      "z_gauge": 1.0,
+      "z_scalar": 1.0
+    },
+    {
+      "readout_ratio_multiplier": 0.9486832980505138,
+      "z_gauge": 1.0,
+      "z_scalar": 0.9
+    },
+    {
+      "readout_ratio_multiplier": 1.076055173697941,
+      "z_gauge": 0.95,
+      "z_scalar": 1.1
+    },
+    {
+      "readout_ratio_multiplier": 0.816496580927726,
+      "z_gauge": 1.2,
+      "z_scalar": 0.8
+    }
+  ],
+  "fail_count": 0,
+  "finite_volume_near_match": {
+    "L24_T48_m0p10": 0.2994325540656384,
+    "L8_T16_m0p10": 0.40681021475150486,
+    "drift": 0.10737766068586646,
+    "target_1_over_sqrt6": 0.4082482904638631
+  },
+  "frames": [
+    {
+      "blocker": "bubble residue is dynamical, not a retained physical Higgs pole theorem",
+      "claim_movement": "source two-point curvature derived as fermion bubble",
+      "frame": "F1_free_logdet_source_curvature",
+      "status": "exact-support / open bridge"
+    },
+    {
+      "blocker": "volume drift is larger than 0.10 in residue proxy",
+      "claim_movement": "near-match at L=8,m=0.10 tested and rejected as unstable",
+      "frame": "F2_finite_volume_near_match",
+      "status": "no-go for shortcut"
+    },
+    {
+      "blocker": "A_min supplies bubble coefficients, not the HS/RPA coupling inv_g",
+      "claim_movement": "identifies the exact additional input: scalar-channel coupling/pole condition",
+      "frame": "F3_hs_rpa_pole_equation",
+      "status": "conditional-support only"
+    },
+    {
+      "blocker": "no retained identity equates scalar-density and gauge-link dressing",
+      "claim_movement": "separates source residue from relative scalar/gauge renormalization",
+      "frame": "F4_common_dressing",
+      "status": "open"
+    },
+    {
+      "blocker": "current relativistic scale requires fine lattice or heavy-top treatment",
+      "claim_movement": "bypasses analytic scalar residue if strict evidence exists",
+      "frame": "F5_direct_measurement_hqet",
+      "status": "open empirical route"
+    }
+  ],
+  "next_route_reason": "It is the only fan-out route that could turn the exact bubble curvature into an interacting pole-residue theorem without using observed y_t or the old H_unit matrix-element definition.",
+  "next_route_selected": "F3_hs_rpa_pole_equation",
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Fan-out exposes the next missing input rather than retiring it.",
+  "rpa_models": [
+    {
+      "inv_g": 0.01,
+      "positive_real_pole_x": null,
+      "residue_at_positive_real_pole": null,
+      "roots": [
+        [
+          3.1426522472999014,
+          3.87666803620922
+        ],
+        [
+          3.1426522472999014,
+          -3.87666803620922
+        ]
+      ]
+    },
+    {
+      "inv_g": 0.03,
+      "positive_real_pole_x": null,
+      "residue_at_positive_real_pole": null,
+      "roots": [
+        [
+          3.1426522472999014,
+          2.852596556835999
+        ],
+        [
+          3.1426522472999014,
+          -2.852596556835999
+        ]
+      ]
+    },
+    {
+      "inv_g": 0.06,
+      "positive_real_pole_x": 1.659559261587984,
+      "residue_at_positive_real_pole": 116.16345052676697,
+      "roots": [
+        [
+          4.625745233011819,
+          0.0
+        ],
+        [
+          1.659559261587984,
+          0.0
+        ]
+      ]
+    },
+    {
+      "inv_g": 0.12,
+      "positive_real_pole_x": 7.9252570443690535,
+      "residue_at_positive_real_pole": 36.02246181367898,
+      "roots": [
+        [
+          7.9252570443690535,
+          0.0
+        ],
+        [
+          -1.6399525497692504,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "verdict": "The required stuck fan-out found no immediate retained closure.  The best positive movement is F1: exact source-curvature support.  The nearest next constructive analytic route is F3, but it requires a scalar-channel pole/coupling theorem not present in A_min.  The empirical alternative remains F5: fine-scale or HQET direct measurement."
+}

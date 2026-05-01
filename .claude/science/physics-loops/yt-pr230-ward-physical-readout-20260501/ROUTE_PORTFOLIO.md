@@ -61,6 +61,24 @@ two-point analogue authorities.  None supplies the top-sector scalar pole
 residue and relative scalar/gauge dressing.  A new theorem or measurement is
 required.
 
+Campaign stretch update: the scalar source two-point curvature is now derived
+as an exact logdet fermion bubble.  The free Wilson-staggered residue proxy is
+not stable enough to select `kappa_H = 1`.  The fan-out selected the HS/RPA
+pole route, but the contact version needs an extra scalar-channel coupling.
+The constructive successor is the full scalar-channel Bethe-Salpeter ladder
+kernel theorem.
+
+## R8. Scalar-Channel Bethe-Salpeter Kernel Theorem
+
+Score: 10/18. Hard-residual pressure: 4.
+
+Derive the exact scalar-channel Wilson-staggered ladder kernel, scalar
+projector, IR/finite-volume limit, eigenvalue crossing, and pole-residue
+derivative.  A finite scout exists and shows the machinery, but also shows
+strong dependence on mass and IR/projector choices.
+
+Current status: bounded support / scout only.
+
 ## R4. Chirality and Right-Handed Selector Theorem
 
 Score: 9/18. Hard-residual pressure: 2.

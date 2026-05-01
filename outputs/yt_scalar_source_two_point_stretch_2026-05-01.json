@@ -1,0 +1,348 @@
+{
+  "actual_current_surface_status": "exact-support / open bridge",
+  "fail_count": 0,
+  "near_unit_count": 0,
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The source curvature formula is exact support, but the physical pole residue/common dressing remains open.",
+  "required_next_theorem": [
+    "prove the interacting C_OO(p) has an isolated Higgs-carrier pole",
+    "compute the pole residue Z_phi and source-to-canonical kappa_H on the retained action",
+    "derive or measure relative scalar/gauge dressing"
+  ],
+  "residue_spread": 43.07813533163923,
+  "scan": [
+    {
+      "inverse_intercept": 11.54312754636849,
+      "inverse_slope": 2.4092095240648277,
+      "mass": 0.1,
+      "max_relative_fit_error": 0.0004762783477898754,
+      "residue_proxy": 0.41507390287615836,
+      "rows": [
+        {
+          "curvature": 0.08206922880647491,
+          "n": 1,
+          "p_hat_sq": 0.26794919243112264
+        },
+        {
+          "curvature": 0.07163844426969308,
+          "n": 2,
+          "p_hat_sq": 0.9999999999999998
+        },
+        {
+          "curvature": 0.06112941484573155,
+          "n": 3,
+          "p_hat_sq": 1.9999999999999996
+        }
+      ],
+      "source_prefactor": 0.4082482904638631,
+      "spatial_size": 6,
+      "time_size": 12
+    },
+    {
+      "inverse_intercept": 12.822043804575433,
+      "inverse_slope": 2.9636533055455563,
+      "mass": 0.25,
+      "max_relative_fit_error": 0.0039030059616863015,
+      "residue_proxy": 0.3374213839819964,
+      "rows": [
+        {
+          "curvature": 0.07325156463415962,
+          "n": 1,
+          "p_hat_sq": 0.26794919243112264
+        },
+        {
+          "curvature": 0.06359573473115955,
+          "n": 2,
+          "p_hat_sq": 0.9999999999999998
+        },
+        {
+          "curvature": 0.053261496125928884,
+          "n": 3,
+          "p_hat_sq": 1.9999999999999996
+        }
+      ],
+      "source_prefactor": 0.4082482904638631,
+      "spatial_size": 6,
+      "time_size": 12
+    },
+    {
+      "inverse_intercept": 18.0919773434578,
+      "inverse_slope": 5.188749846971902,
+      "mass": 0.5,
+      "max_relative_fit_error": 0.013894808616008433,
+      "residue_proxy": 0.19272465034782688,
+      "rows": [
+        {
+          "curvature": 0.05084788543399899,
+          "n": 1,
+          "p_hat_sq": 0.26794919243112264
+        },
+        {
+          "curvature": 0.04355082211662198,
+          "n": 2,
+          "p_hat_sq": 0.9999999999999998
+        },
+        {
+          "curvature": 0.034959751096691825,
+          "n": 3,
+          "p_hat_sq": 1.9999999999999996
+        }
+      ],
+      "source_prefactor": 0.4082482904638631,
+      "spatial_size": 6,
+      "time_size": 12
+    },
+    {
+      "inverse_intercept": 43.390465929653864,
+      "inverse_slope": 103.78425391993879,
+      "mass": 1.0,
+      "max_relative_fit_error": 0.2153435627314648,
+      "residue_proxy": 0.009635373018834048,
+      "rows": [
+        {
+          "curvature": 0.01159350018990746,
+          "n": 1,
+          "p_hat_sq": 0.26794919243112264
+        },
+        {
+          "curvature": 0.008257828273588718,
+          "n": 2,
+          "p_hat_sq": 0.9999999999999998
+        },
+        {
+          "curvature": 0.0038170761750133068,
+          "n": 3,
+          "p_hat_sq": 1.9999999999999996
+        }
+      ],
+      "source_prefactor": 0.4082482904638631,
+      "spatial_size": 6,
+      "time_size": 12
+    },
+    {
+      "inverse_intercept": 10.855868274779906,
+      "inverse_slope": 2.4581486986771903,
+      "mass": 0.1,
+      "max_relative_fit_error": 0.0012493902942459975,
+      "residue_proxy": 0.40681021475150486,
+      "rows": [
+        {
+          "curvature": 0.08911958106811434,
+          "n": 1,
+          "p_hat_sq": 0.15224093497742647
+        },
+        {
+          "curvature": 0.08122685075771681,
+          "n": 2,
+          "p_hat_sq": 0.585786437626905
+        },
+        {
+          "curvature": 0.07202214114656709,
+          "n": 3,
+          "p_hat_sq": 1.2346331352698203
+        }
+      ],
+      "source_prefactor": 0.4082482904638631,
+      "spatial_size": 8,
+      "time_size": 16
+    },
+    {
+      "inverse_intercept": 12.144437430059329,
+      "inverse_slope": 2.7835451330613914,
+      "mass": 0.25,
+      "max_relative_fit_error": 7.442349097359888e-05,
+      "residue_proxy": 0.35925409942973785,
+      "rows": [
+        {
+          "curvature": 0.07956973559669364,
+          "n": 1,
+          "p_hat_sq": 0.15224093497742647
+        },
+        {
+          "curvature": 0.07258987631220638,
+          "n": 2,
+          "p_hat_sq": 0.585786437626905
+        },
+        {
+          "curvature": 0.06418203535472476,
+          "n": 3,
+          "p_hat_sq": 1.2346331352698203
+        }
+      ],
+      "source_prefactor": 0.4082482904638631,
+      "spatial_size": 8,
+      "time_size": 16
+    },
+    {
+      "inverse_intercept": 17.491115684722935,
+      "inverse_slope": 4.270098189822763,
+      "mass": 0.5,
+      "max_relative_fit_error": 0.0029635416027055874,
+      "residue_proxy": 0.23418665228433697,
+      "rows": [
+        {
+          "curvature": 0.05501575505569707,
+          "n": 1,
+          "p_hat_sq": 0.15224093497742647
+        },
+        {
+          "curvature": 0.0501670366459857,
+          "n": 2,
+          "p_hat_sq": 0.585786437626905
+        },
+        {
+          "curvature": 0.043885091082474306,
+          "n": 3,
+          "p_hat_sq": 1.2346331352698203
+        }
+      ],
+      "source_prefactor": 0.4082482904638631,
+      "spatial_size": 8,
+      "time_size": 16
+    },
+    {
+      "inverse_intercept": 68.49069656440285,
+      "inverse_slope": 44.54663884849163,
+      "mass": 1.0,
+      "max_relative_fit_error": 0.03446373646838028,
+      "residue_proxy": 0.0224483827702718,
+      "rows": [
+        {
+          "curvature": 0.01295982993841054,
+          "n": 1,
+          "p_hat_sq": 0.15224093497742647
+        },
+        {
+          "curvature": 0.010936809441585153,
+          "n": 2,
+          "p_hat_sq": 0.585786437626905
+        },
+        {
+          "curvature": 0.008015927052769703,
+          "n": 3,
+          "p_hat_sq": 1.2346331352698203
+        }
+      ],
+      "source_prefactor": 0.4082482904638631,
+      "spatial_size": 8,
+      "time_size": 16
+    },
+    {
+      "inverse_intercept": 10.532066273252108,
+      "inverse_slope": 2.585243964713546,
+      "mass": 0.1,
+      "max_relative_fit_error": 0.0012370353414553454,
+      "residue_proxy": 0.3868106893001889,
+      "rows": [
+        {
+          "curvature": 0.09279503238342837,
+          "n": 1,
+          "p_hat_sq": 0.09788696740969285
+        },
+        {
+          "curvature": 0.086701624028443,
+          "n": 2,
+          "p_hat_sq": 0.3819660112501051
+        },
+        {
+          "curvature": 0.07900242718579184,
+          "n": 3,
+          "p_hat_sq": 0.8244294954150538
+        }
+      ],
+      "source_prefactor": 0.4082482904638631,
+      "spatial_size": 10,
+      "time_size": 20
+    },
+    {
+      "inverse_intercept": 11.848104865740988,
+      "inverse_slope": 2.8332815491092522,
+      "mass": 0.25,
+      "max_relative_fit_error": 0.0005502406138825892,
+      "residue_proxy": 0.3529476272184765,
+      "rows": [
+        {
+          "curvature": 0.08250068879429445,
+          "n": 1,
+          "p_hat_sq": 0.09788696740969285
+        },
+        {
+          "curvature": 0.07729503954198108,
+          "n": 2,
+          "p_hat_sq": 0.3819660112501051
+        },
+        {
+          "curvature": 0.07051608164222169,
+          "n": 3,
+          "p_hat_sq": 0.8244294954150538
+        }
+      ],
+      "source_prefactor": 0.4082482904638631,
+      "spatial_size": 10,
+      "time_size": 20
+    },
+    {
+      "inverse_intercept": 17.278467649701334,
+      "inverse_slope": 4.095619035786755,
+      "mass": 0.5,
+      "max_relative_fit_error": 0.0010016009710737382,
+      "residue_proxy": 0.24416333434877283,
+      "rows": [
+        {
+          "curvature": 0.05652637237707112,
+          "n": 1,
+          "p_hat_sq": 0.09788696740969285
+        },
+        {
+          "curvature": 0.05312366970993355,
+          "n": 2,
+          "p_hat_sq": 0.3819660112501051
+        },
+        {
+          "curvature": 0.0483971147202278,
+          "n": 3,
+          "p_hat_sq": 0.8244294954150538
+        }
+      ],
+      "source_prefactor": 0.4082482904638631,
+      "spatial_size": 10,
+      "time_size": 20
+    },
+    {
+      "inverse_intercept": 70.88530048583142,
+      "inverse_slope": 35.27008176375302,
+      "mass": 1.0,
+      "max_relative_fit_error": 0.012078769477124164,
+      "residue_proxy": 0.028352641955814734,
+      "rows": [
+        {
+          "curvature": 0.013342067157128181,
+          "n": 1,
+          "p_hat_sq": 0.09788696740969285
+        },
+        {
+          "curvature": 0.01199752830172442,
+          "n": 2,
+          "p_hat_sq": 0.3819660112501051
+        },
+        {
+          "curvature": 0.00996446223174843,
+          "n": 3,
+          "p_hat_sq": 0.8244294954150538
+        }
+      ],
+      "source_prefactor": 0.4082482904638631,
+      "spatial_size": 10,
+      "time_size": 20
+    }
+  ],
+  "source_prefactor": 0.4082482904638631,
+  "strict_non_claims": [
+    "does not define y_t_bare by H_unit matrix element",
+    "does not use observed top mass or Yukawa",
+    "does not prove retained y_t closure",
+    "does not rule out a future interacting scalar pole theorem"
+  ],
+  "verdict": "The scalar-bilinear source two-point function is derivable as a fermion-bubble curvature of W[J]=log det(D+J O).  On the free Wilson-staggered source surface the resulting residue proxy is positive but depends strongly on fermion mass, volume, and source normalization.  A_min therefore does not select kappa_H=1 or a common scalar/gauge dressing.  A future closure must add the interacting scalar pole/bound-state theorem or direct measurement."
+}

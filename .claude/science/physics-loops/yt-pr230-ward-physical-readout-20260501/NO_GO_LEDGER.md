@@ -77,6 +77,41 @@ scripts/frontier_yt_key_blocker_closure_attempt.py
 # SUMMARY: PASS=14 FAIL=0
 ```
 
+The scalar source two-point stretch attempt derives the exact logdet curvature
+as a fermion bubble but shows the free Wilson-staggered residue proxy is not
+universal or selected to one:
+
+```text
+scripts/frontier_yt_scalar_source_two_point_stretch.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+The required stuck fan-out rejects the finite-volume near-match shortcut,
+identifies the HS/RPA pole equation as the only constructive analytic successor,
+and keeps direct measurement as the empirical route:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_yt_scalar_residue_stuck_fanout.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+The HS/RPA contact route is not closed by `A_min`; a contact coupling `G` is an
+extra scalar-channel input unless derived from the Wilson gauge ladder:
+
+```text
+PYTHONPATH=scripts python3 scripts/frontier_yt_hs_rpa_pole_condition_attempt.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The finite scalar-channel ladder scout builds the next route's kernel shape,
+but its pole criterion is sensitive to mass, scalar projector, IR regulator,
+and finite-volume treatment:
+
+```text
+python3 scripts/frontier_yt_scalar_ladder_kernel_scout.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

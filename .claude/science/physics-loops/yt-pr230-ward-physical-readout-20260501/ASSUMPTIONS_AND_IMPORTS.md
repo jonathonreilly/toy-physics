@@ -13,6 +13,9 @@
 | Observed `m_t`, observed `y_t` | comparator only | external observation | forbidden as proof input |
 | `alpha_LM` / plaquette normalization | prior quantitative bridge | audited non-clean in this lane | forbidden as load-bearing proof input |
 | Production MC data | direct-measurement route evidence | not complete | unavailable for closure |
+| Scalar-channel contact coupling `G` | HS/RPA pole condition | not in `A_min` | forbidden unless derived from Wilson gauge ladder |
+| Scalar-channel Bethe-Salpeter kernel | interacting pole route | not yet retained | open import after ladder scout |
+| IR / finite-volume kernel limit | needed for ladder eigenvalue crossing | not yet fixed | open import |
 
 Minimal allowed premise set for the current stretch attempt:
 

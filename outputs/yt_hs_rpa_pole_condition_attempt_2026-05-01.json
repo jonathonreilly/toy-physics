@@ -1,0 +1,82 @@
+{
+  "actual_current_surface_status": "exact negative boundary / HS-RPA contact route open only with new kernel theorem",
+  "bubble_polynomial": {
+    "pi0": 0.08227955923905372,
+    "pi1": -0.018241411549944322,
+    "pi2": 0.0029022319548109316
+  },
+  "contact_from_gauge_scale_witness": [
+    {
+      "gauge_contact_proxy": 20.0,
+      "q_hat_sq": 0.05
+    },
+    {
+      "gauge_contact_proxy": 10.0,
+      "q_hat_sq": 0.1
+    },
+    {
+      "gauge_contact_proxy": 5.0,
+      "q_hat_sq": 0.2
+    },
+    {
+      "gauge_contact_proxy": 2.0,
+      "q_hat_sq": 0.5
+    },
+    {
+      "gauge_contact_proxy": 1.0,
+      "q_hat_sq": 1.0
+    }
+  ],
+  "fail_count": 0,
+  "ladder_eigenvalue_witnesses": [
+    {
+      "lambda_max": 0.8,
+      "pole_condition_met": false
+    },
+    {
+      "lambda_max": 1.0,
+      "pole_condition_met": true
+    },
+    {
+      "lambda_max": 1.25,
+      "pole_condition_met": true
+    }
+  ],
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The contact HS/RPA route needs a new scalar-channel coupling or kernel-reduction theorem.",
+  "required_inv_g_for_target_poles": [
+    {
+      "required_inv_g_for_pole": 0.08137474424144353,
+      "target_p_hat_sq": 0.05
+    },
+    {
+      "required_inv_g_for_pole": 0.0804844404036074,
+      "target_p_hat_sq": 0.1
+    },
+    {
+      "required_inv_g_for_pole": 0.0787473662072573,
+      "target_p_hat_sq": 0.2
+    },
+    {
+      "required_inv_g_for_pole": 0.0738844114527843,
+      "target_p_hat_sq": 0.5
+    },
+    {
+      "required_inv_g_for_pole": 0.06694037964392033,
+      "target_p_hat_sq": 1.0
+    }
+  ],
+  "required_next_theorem": [
+    "derive the scalar-channel Bethe-Salpeter/RPA kernel from Wilson gauge exchange",
+    "prove the kernel eigenvalue crossing that creates the Higgs-carrier pole",
+    "compute the pole residue from the derivative of that eigenvalue at the pole"
+  ],
+  "strict_non_claims": [
+    "does not add a scalar contact coupling to A_min",
+    "does not identify the HS field with H_unit by definition",
+    "does not use observed top/Higgs data",
+    "does not close retained y_t"
+  ],
+  "verdict": "The exact source bubble can feed an HS/RPA pole equation, but the pole condition is not fixed by A_min.  A local contact coupling G is not part of the retained minimal action, and collapsing the Wilson gauge ladder to such a G is scale- and kernel-dependent.  Retained closure would require a full scalar-channel ladder eigenvalue theorem or an independently measured pole residue."
+}

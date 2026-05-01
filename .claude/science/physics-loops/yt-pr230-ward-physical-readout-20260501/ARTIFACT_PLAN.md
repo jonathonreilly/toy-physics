@@ -38,10 +38,23 @@ Completed in block 1:
 - `scripts/frontier_yt_key_blocker_closure_attempt.py`
 - `outputs/yt_key_blocker_closure_attempt_2026-05-01.json`
 - `docs/YT_KEY_BLOCKER_CLOSURE_ATTEMPT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_source_two_point_stretch.py`
+- `outputs/yt_scalar_source_two_point_stretch_2026-05-01.json`
+- `docs/YT_SCALAR_SOURCE_TWO_POINT_STRETCH_ATTEMPT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_residue_stuck_fanout.py`
+- `outputs/yt_scalar_residue_stuck_fanout_2026-05-01.json`
+- `docs/YT_SCALAR_RESIDUE_STUCK_FANOUT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_hs_rpa_pole_condition_attempt.py`
+- `outputs/yt_hs_rpa_pole_condition_attempt_2026-05-01.json`
+- `docs/YT_HS_RPA_POLE_CONDITION_ATTEMPT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_ladder_kernel_scout.py`
+- `outputs/yt_scalar_ladder_kernel_scout_2026-05-01.json`
+- `docs/YT_SCALAR_LADDER_KERNEL_SCOUT_NOTE_2026-05-01.md`
 
 Next artifact:
 
-- production MC strict certificate, or a true scalar pole-residue theorem
+- exact scalar-channel Bethe-Salpeter kernel theorem, fine-scale/HQET direct
+  measurement certificate, or another retained-positive route from the queue
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar pole-residue/common-

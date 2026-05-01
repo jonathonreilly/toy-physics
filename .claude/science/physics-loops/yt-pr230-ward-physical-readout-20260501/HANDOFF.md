@@ -31,6 +31,14 @@ What changed:
 - A direct key-blocker closure attempt checked all plausible repo authorities
   for scalar pole-residue/common-dressing closure.  None closes it; the exact
   required theorem is now named.
+- The scalar source two-point stretch derives the exact logdet curvature as a
+  fermion bubble and proves the free residue proxy is not universal.
+- The stuck fan-out rejects the finite-volume near-match to `1/sqrt(6)` and
+  selects the HS/RPA pole equation as the constructive successor.
+- The contact HS/RPA route is blocked unless a scalar-channel coupling/kernel
+  theorem is derived from Wilson gauge exchange.
+- A finite scalar-channel ladder scout now exists.  It shows the eigenvalue
+  machinery but also shows mass/IR/projector sensitivity.
 
 The scientific result is narrower than closure:
 
@@ -38,9 +46,10 @@ The scientific result is narrower than closure:
 Current PR #230 status: open / conditional-support.
 The normalization 1/sqrt(6) is not the hard blocker.
 The hard blockers are now sharply separated.  For retained closure, PR #230
-needs either strict physical measurement evidence or a real scalar two-point
-pole-residue/common-dressing theorem.  The normalization arithmetic, SSB
-bookkeeping, and wording around the old Ward note are not enough.
+needs either strict physical measurement evidence or a real interacting
+scalar-channel Bethe-Salpeter/pole-residue theorem.  The normalization
+arithmetic, SSB bookkeeping, free source bubble, contact HS rewrite, and
+wording around the old Ward note are not enough.
 ```
 
 Exact next action:
@@ -55,9 +64,9 @@ Package this PR #230 update.  The remaining positive options are now:
 
 Acceptance target for the next block:
 
-1. Define the scalar-bilinear source functional.
-2. Compute the scalar two-point residue / external-leg normalization or prove
-   that the current data do not fix it.
-3. Decide whether a clean scalar LSZ theorem can select `kappa_H`.
-4. Keep the status open unless all source, carrier, chirality, LSZ, and common
-   dressing imports are retired.
+1. Derive the exact scalar-channel Wilson-staggered ladder kernel and scalar
+   projector.
+2. Control the IR and finite-volume limits.
+3. Prove or disprove eigenvalue crossing on the retained surface.
+4. If crossing is proven, compute the pole residue from the eigenvalue
+   derivative and re-run the Ward physical-readout repair audit.

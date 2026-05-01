@@ -41,6 +41,56 @@ Review checks performed:
 - Key-blocker closure-attempt review: the runner checks every plausible current
   authority family against both required missing pieces, scalar pole residue
   and relative scalar/gauge dressing, and finds no retained closure.
+- Scalar source two-point stretch review: the logdet curvature formula uses
+  only A_min and functional derivatives, while the free-bubble residue scan
+  explicitly avoids observed values and H_unit readout authority.
+- Stuck fan-out review: the finite-volume near-match is rejected by a direct
+  volume-drift check; HS/RPA is selected only as a conditional successor.
+- HS/RPA pole-condition review: the runner does not add a contact coupling to
+  A_min; it records that deriving such a coupling from the Wilson gauge ladder
+  is the next theorem.
+- Ladder-kernel scout review: bounded-support only; explicit mass, IR, and
+  simplified projector dependence prevent retained-proposal wording.
+
+## Review-Loop Backpressure — Campaign Block 2
+
+Local review-loop disposition after the stretch/fan-out/kernel artifacts:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN / BOUNDED SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Findings applied:
+
+- no bare retained/promoted source-note status lines were introduced;
+- observed `m_t`, observed `y_t`, and observed Higgs/top data are not proof
+  inputs in any new runner;
+- `H_unit` matrix-element readout appears only as a forbidden failure mode;
+- scalar contact coupling `G`, scalar-channel ladder kernel, IR regulator, and
+  scalar projector are now explicit open imports;
+- the near-match to `1/sqrt(6)` is demoted by the volume-drift check rather
+  than used as evidence.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_scalar_source_two_point_stretch.py scripts/frontier_yt_scalar_residue_stuck_fanout.py scripts/frontier_yt_hs_rpa_pole_condition_attempt.py scripts/frontier_yt_scalar_ladder_kernel_scout.py
+python3 scripts/frontier_yt_scalar_source_two_point_stretch.py
+PYTHONPATH=scripts python3 scripts/frontier_yt_scalar_residue_stuck_fanout.py
+PYTHONPATH=scripts python3 scripts/frontier_yt_hs_rpa_pole_condition_attempt.py
+python3 scripts/frontier_yt_scalar_ladder_kernel_scout.py
+bash docs/audit/scripts/run_pipeline.sh
+python3 docs/audit/scripts/audit_lint.py --strict
+git diff --check
+```
+
+The audit pipeline and strict lint completed with no errors and the same five
+pre-existing warnings.
 
 Open review risk:
 
