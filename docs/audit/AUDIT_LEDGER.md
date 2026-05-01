@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:29:29.507172+00:00
+**Generated:** 2026-05-01T20:31:00.080883+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 176 |
+| bounded | 175 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 923 |
+| ~~audited_conditional~~ | 924 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 626 |
+| `audited_conditional` | 627 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 542 |
+| `unaudited` | 541 |
 
 | criticality | count |
 |---|---:|
@@ -710,6 +710,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_wider_replay_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `h0125_wider_w4_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `h0125_wider_w4_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `h2t_h0125_narrow_bridge_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
@@ -7855,6 +7856,21 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
+
+### `h2t_h0125_narrow_bridge_note`
+
+- **Note:** [`H2T_H0125_NARROW_BRIDGE_NOTE.md`](../../docs/H2T_H0125_NARROW_BRIDGE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The reduced fixed family reaches h = 0.125 with machine-clean Born but AWAY gravity and too few TOWARD points, so the narrow weak-field F~M bridge claim does not survive.  _(class `C`)_
+- **chain closes:** False — The Mac mini runner reproduces the decisive reduced-family negative, including h=0.125 Born 4.23e-15 and zero TOWARD points for F~M. The runner output is not tagged with classified A/B/C/D PASS lines, and the companion bridge-family diagnostics are outside this primary runner.
+- **rationale:** Issue: the reduced-family negative reproduces, but the primary runner emits unclassified PASS/FAIL lines and does not classify the negative bridge conclusion as an audit PASS. Why this blocks: the audit lane can read the AWAY/no-TOWARD output, but cannot record it as a closed C-class check for the narrow h=0.125 bridge failure. Repair target: update the runner to emit classified C PASS lines for h=0.125 Born cleanliness, AWAY/no-TOWARD failure of F~M, and the bounded-negative conclusion; optionally register the bridge-family companion checks separately. Claim boundary until fixed: current main supports a bounded negative for this narrow bridge claim, not a positive h=0.125 continuum or F~M≈1 bridge theorem.
+- **open / conditional deps cited:**
+  - `scripts/lattice_3d_l2_numpy_h0125_audit.py`
+  - `scripts/lattice_3d_l2_numpy_h0125_bridge.py`
+- **auditor confidence:** high
 
 ### `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29`
 
