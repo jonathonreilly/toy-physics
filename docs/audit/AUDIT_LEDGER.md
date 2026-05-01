@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T12:01:54.559610+00:00
+**Generated:** 2026-05-01T12:03:59.219148+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 308 |
+| `audited_clean` | 309 |
 | `audited_conditional` | 591 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 532 |
+| `unaudited` | 531 |
 
 | criticality | count |
 |---|---:|
@@ -362,6 +362,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_bimodule_norm_naturality_theorem_note_2026-04-19` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_c3_circulant_source_law_boundary_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
+| `quark_c3_oriented_ward_splitter_support_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -12700,6 +12701,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** C3 circulant support plus A1/P1 does not become retained quark Ward closure until a quark-specific source/readout theorem supplies species phases, relative scales, and the amplitude-vs-Yukawa dictionary.  _(class `B`)_
 - **chain closes:** True — The runner verifies exact Hermitian C3 circulant carrier algebra, the inverse map showing representation rather than prediction, the A1 relation and its residual phase/scale freedom, the P1 parent/readout boundary, and the quark-sector species boundary with PASS=43 FAIL=0. These checks support the note's support-level boundary conclusion.
 - **rationale:** The note closes as a support/boundary theorem: C3 circulants are exact hierarchy carriers, but without A1/P1 closure plus quark-specific species source/readout laws they are not predictive non-top quark Ward identities. The runner confirms no observed quark masses, fitted Yukawas, CKM mass input, or species-universal charged-lepton import is used. Residual risk is intentionally exposed by the note: Lane 3 remains open until the missing source/readout theorem is supplied.
+- **auditor confidence:** high
+
+### `quark_c3_oriented_ward_splitter_support_note_2026-04-28`
+
+- **Note:** [`QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md`](../../docs/QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The oriented C3 primitive gives exact Fourier-mode strata, but a future 3C closure still needs a source/readout theorem explaining why those strata, or a derived transform of them, are the physical quark Yukawa Ward channels.  _(class `A`)_
+- **chain closes:** True — The runner verifies the retained C3 cycle, reflection action, Hermitian C3-invariant normal form, Fourier eigenvalue splitting, and diagonal-generation readout boundary with PASS=51 FAIL=0. These exact checks establish the support/boundary claim while leaving the physical quark source/readout law open.
+- **rationale:** The support theorem closes: oriented C3 supplies an exact local splitter primitive for the S3 doublet, and the runner verifies the normal form and boundary conditions without importing observed masses, fitted Yukawas, CKM data, or nearest-rational selectors. The note correctly stops short of retained quark-mass closure because the Ward coefficients and physical readout remain free. Residual risk is the stated open Lane 3 task: deriving the source/readout theorem that maps these strata to quark Yukawa channels.
 - **auditor confidence:** high
 
 ### `quark_cp_carrier_completion_note_2026-04-18`
