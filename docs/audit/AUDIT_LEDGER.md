@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:07:30.098429+00:00
+**Generated:** 2026-05-01T03:08:43.408334+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 251 |
-| support | 210 |
+| support | 209 |
 | open | 14 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 12 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 788 |
+| ~~audited_conditional~~ | 789 |
 | ~~audited_failed~~ | 146 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 230 |
-| `audited_conditional` | 515 |
+| `audited_conditional` | 516 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 9 |
 | `audited_renaming` | 14 |
-| `unaudited` | 726 |
+| `unaudited` | 725 |
 
 | criticality | count |
 |---|---:|
@@ -740,6 +740,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_commutant_eigenoperator_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_current_bank_value_selection_nogo_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `pmns_graph_first_axis_alignment_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
+| `pmns_graph_first_cycle_frame_support_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_lower_level_end_to_end_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_right_polar_section_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -10374,6 +10375,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `scripts/frontier_pmns_graph_first_axis_alignment.py`
 - **auditor confidence:** high
+
+### `pmns_graph_first_cycle_frame_support_note`
+
+- **Note:** [`PMNS_GRAPH_FIRST_CYCLE_FRAME_SUPPORT_NOTE.md`](../../docs/PMNS_GRAPH_FIRST_CYCLE_FRAME_SUPPORT_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-pmns_graph_first_cycle_frame_support_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Once one axis is selected, graph-first SU(3) integration on that axis canonically fixes the fiber/base split and the ordered oriented-cycle frame E12, E23, E31.  _(class `B`)_
+- **chain closes:** False — The runner verifies the frame algebra, but the row declares no dependencies while importing the graph-first selector and SU(3)-integration machinery that supply the selected-axis split.
+- **rationale:** Issue: scripts/frontier_pmns_graph_first_cycle_frame_support.py passes 18 checks, but the claim is not self-contained: it imports the graph-first selector and graph-first SU(3) integration as upstream machinery while the ledger row has deps=[]. Why this blocks: the ordered frame E12,E23,E31 follows once those inputs and the selected-axis split are granted, but this note does not itself derive or register those authorities, and the runner emits unclassified PASS lines. Repair target: register the graph-first selector and SU(3)-integration notes as dependencies or inline their retained constructions, and classify runner PASS lines for selector, SU(3) integration, residual swap, and frame checks. Claim boundary until fixed: support evidence that the oriented-cycle frame is fixed conditional on the graph-first selector/integration inputs; not an independently closed value-selection theorem.
+- **open / conditional deps cited:**
+  - `scripts/frontier_graph_first_selector_derivation.py`
+  - `scripts/frontier_graph_first_su3_integration.py`
+  - `scripts/frontier_pmns_graph_first_cycle_frame_support.py`
+- **auditor confidence:** medium
 
 ### `pmns_hw1_source_transfer_boundary_note`
 
