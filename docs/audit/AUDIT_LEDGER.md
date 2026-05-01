@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T08:35:53.242443+00:00
+**Generated:** 2026-05-01T08:38:20.352920+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 286 |
+| `audited_clean` | 287 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 559 |
+| `unaudited` | 558 |
 
 | criticality | count |
 |---|---:|
@@ -332,6 +332,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_adaptive_readout_v2_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_compact_inertial_probe_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `persistent_object_compact_update_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -11480,6 +11481,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The transferable top3 compact repeated-update object carries a stable weak-field response across nearby exact-family slices, but the transfer remains readout-dependent because top3 broad and top3 adaptive each pass only 3/4 cases with complementary misses.  _(class `C`)_
 - **chain closes:** True — The registered runner reproduces the frozen pass matrix: top3 broad 3/4, top3 adaptive 3/4, top2 broad 1/4, and top2 adaptive 0/4. It also reproduces the source1.5 broad drift miss and the length7 adaptive exponent miss, supporting the note's bounded readout-dependent interpretation.
 - **rationale:** The compact-object-plus-response claim is current with the primary runner and remains bounded to the exact-lattice nearby-family sweep. The output supports a real top3 compact response lane while showing that no single retained readout is family-dominant. Residual risk is operational and interpretive: the runner is slow, taking about 389 seconds locally, and the result still falls short of readout-invariant persistent inertial mass or matter closure.
+- **auditor confidence:** high
+
+### `persistent_object_compact_update_note`
+
+- **Note:** [`PERSISTENT_OBJECT_COMPACT_UPDATE_NOTE.md`](../../docs/PERSISTENT_OBJECT_COMPACT_UPDATE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The compact top-3 repeated-update rule produces a smaller source object than the broad control while preserving the weak-field sign and F~M≈1 across all three update steps on the exact h=0.25 lattice family.  _(class `C`)_
+- **chain closes:** True — The registered runner reproduces the zero-source reduction and frozen readout table: broad object N_eff=4.859/support=5.000, compact object N_eff=3.593/support=3.667, and both modes keep 4/4 TOWARD with F~M=1.00 at every update step. The note correctly limits the result to a compact source-object control, not inertial-mass closure.
+- **rationale:** The bounded compact-update claim is current with the primary runner: the top-3 update shrinks the source object and preserves the tested weak-field gates on the exact lattice. The detector response remains broad and the note explicitly avoids claiming a sharply localized inertial response or persistent-mass theorem. Residual risk is the stated scope limitation: this is one exact-lattice family and one minimal repeated-update loop.
 - **auditor confidence:** high
 
 ### `persistent_object_exact_lattice_park_note_2026-04-16`
