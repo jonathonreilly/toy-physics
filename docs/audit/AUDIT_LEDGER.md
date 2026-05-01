@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T18:15:32.950635+00:00
+**Generated:** 2026-05-01T18:18:25.567166+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -35,12 +35,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 296 |
-| `audited_conditional` | 594 |
+| `audited_conditional` | 595 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 564 |
+| `unaudited` | 563 |
 
 | criticality | count |
 |---|---:|
@@ -49,7 +49,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 391 |
 | `leaf` | 763 |
 
-- **Proposed claims demoted by upstream:** 142
+- **Proposed claims demoted by upstream:** 141
 - **Citation cycles detected:** 61
 
 ### Runner classification (static heuristic)
@@ -923,6 +923,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_chokepoint_bridge_extension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `structured_mirror_reconciliation_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `taste_scalar_isotropy_theorem_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13686,6 +13687,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
   - `THREE_GENERATION_STRUCTURE_NOTE.md`
+- **auditor confidence:** high
+
+### `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24`
+
+- **Note:** [`SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`](../../docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop-cbc9`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The only SU(3)-charged retained fields are Q_L, u_R^c, and d_R^c, giving SU(3)^3 anomaly index 2 - 1 - 1 = 0.  _(class `B`)_
+- **chain closes:** False — The anomaly-index arithmetic closes once the retained one-generation color matter content is supplied, but the note imports that content through a conditional left-handed charge-matching dependency and through right-handed completion authorities that are cited in prose but not present in the row's one-hop ledger dependencies.
+- **rationale:** Issue: the cancellation step assumes the retained Q_L plus u_R^c/d_R^c color matter surface, while left_handed_charge_matching_note is currently audited_conditional and the right-handed completion authorities named by the source note are not in this audit row's one-hop dependency packet. Why this blocks: the note and runner verify that the supplied matter table has zero SU(3)^3 index, but they do not independently close the framework claim that this is the retained one-generation color content. Repair target: clean or replace the left-handed charge-matching and right-handed completion inputs, and register the right-handed completion dependency/runner so the audit packet covers the imported anti-fundamental fields. Claim boundary until fixed: standard SU(3)^3 anomaly arithmetic on the stated matter table is correct; framework-level retained color-anomaly cancellation remains conditional on the upstream matter-completion closure.
+- **open / conditional deps cited:**
+  - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
+  - `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`
+  - `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
 - **auditor confidence:** high
 
 ### `symmetry_head_to_head_note`
