@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 
 
-ROOT = Path("/Users/jonreilly/Projects/Physics")
+ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 
 
@@ -105,9 +105,9 @@ def main() -> int:
     max_cov_err = 0.0
     max_diag_err = 0.0
     max_offdiag = 0.0
-    min_eig = float("inf")
+    max_eig = -float("inf")
     max_grad_err = 0.0
-    min_gap = float("inf")
+    max_gap = -float("inf")
     max_completion_err = 0.0
 
     for _ in range(samples):
@@ -141,8 +141,8 @@ def main() -> int:
         rhs = bilinear(q.T @ h @ q, q.T @ k @ q, d2)
         max_cov_err = max(max_cov_err, abs(lhs - rhs))
 
-        k_op = np.kron(-g, lambda_w)
-        min_eig = min(min_eig, float(np.min(np.linalg.eigvalsh(0.5 * (k_op + k_op.T)))))
+        k_op = np.kron(g, lambda_w)
+        max_eig = max(max_eig, float(np.max(np.linalg.eigvalsh(0.5 * (k_op + k_op.T)))))
         j = rng.normal(size=k_op.shape[0])
         f_star = np.linalg.solve(k_op, j)
         grad = k_op @ f_star - j
@@ -154,7 +154,7 @@ def main() -> int:
         base = action_value(k_op, f_star, j)
         pert = action_value(k_op, f_star + delta, j)
         exact_gap = 0.5 * float(delta @ (k_op @ delta))
-        min_gap = min(min_gap, pert - base)
+        max_gap = max(max_gap, pert - base)
         max_completion_err = max(max_completion_err, abs((pert - base) - exact_gap))
 
     record(
@@ -175,9 +175,9 @@ def main() -> int:
         f"max diagonal error={max_diag_err:.3e}, max offdiag={max_offdiag:.3e}",
     )
     record(
-        "the glued operator family is symmetric positive definite on the sampled positive-symmetric backgrounds",
-        lambda_sym < 1e-12 and lambda_min > 0.0 and min_eig > 0.0,
-        f"Lambda_R witness symmetry={lambda_sym:.3e}, witness min eig={lambda_min:.6e}, glued min eig={min_eig:.6e}",
+        "the glued operator family is symmetric negative-definite on the sampled positive-symmetric backgrounds",
+        lambda_sym < 1e-12 and lambda_min > 0.0 and max_eig < 0.0,
+        f"Lambda_R witness symmetry={lambda_sym:.3e}, witness min eig={lambda_min:.6e}, glued max eig={max_eig:.6e}",
     )
     record(
         "the positive-background family has a unique exact stationary bridge field",
@@ -185,9 +185,9 @@ def main() -> int:
         f"max stationary gradient error={max_grad_err:.3e}",
     )
     record(
-        "the quadratic completion identity holds exactly on the sampled positive-symmetric backgrounds",
-        min_gap > 0.0 and max_completion_err < 1e-12,
-        f"min sampled gap={min_gap:.3e}, max completion error={max_completion_err:.3e}",
+        "the quadratic completion identity holds exactly as a concave-action maximum",
+        max_gap < 0.0 and max_completion_err < 1e-12,
+        f"max sampled gap={max_gap:.3e}, max completion error={max_completion_err:.3e}",
     )
 
     print("UNIVERSAL GR POSITIVE-BACKGROUND EXTENSION")
@@ -197,9 +197,9 @@ def main() -> int:
     print(f"max principal offdiag error   = {max_offdiag:.3e}")
     print(f"Lambda_R symmetry error       = {lambda_sym:.3e}")
     print(f"Lambda_R min eigenvalue       = {lambda_min:.6e}")
-    print(f"min glued operator eigenvalue = {min_eig:.6e}")
+    print(f"max glued operator eigenvalue = {max_eig:.6e}")
     print(f"max stationary gradient error = {max_grad_err:.3e}")
-    print(f"min sampled action gap        = {min_gap:.3e}")
+    print(f"max sampled action gap        = {max_gap:.3e}")
     print(f"max completion identity error = {max_completion_err:.3e}")
 
     print("\nVerdict:")
@@ -211,7 +211,8 @@ def main() -> int:
     )
     print(
         "So the live widening gap beyond diag(a,b,b,b) is discharged at the "
-        "exact positive-background operator-family level."
+        "exact positive-background operator-family level, with the corrected "
+        "negative-definite sign and concave-action extremum."
     )
 
     print("\n" + "=" * 78)

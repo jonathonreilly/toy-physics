@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T14:58:33.774346+00:00
+**Generated:** 2026-05-01T15:30:33.347440+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 196 |
-| support | 147 |
+| bounded | 199 |
+| support | 152 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
-| ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 865 |
-| ~~audited_failed~~ | 118 |
+| ~~audited_renaming~~ | 51 |
+| ~~audited_conditional~~ | 871 |
+| ~~audited_failed~~ | 103 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 292 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 75 |
+| `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 561 |
+| `unaudited` | 570 |
 
 | criticality | count |
 |---|---:|
@@ -54,9 +54,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1162
-- runners with (C) first-principles compute hits: 541
-- runners with (D) external comparator hits: 286
+- runners classified: 1164
+- runners with (C) first-principles compute hits: 543
+- runners with (D) external comparator hits: 287
 - decoration candidates (no C, no D): 81
 
 ## Top 25 by load-bearing score (topology only)
@@ -991,7 +991,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `critical_exponents_topology_note_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `distance_law_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `dm_leptogenesis_exact_kernel_closure_note_2026-04-15` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | D | - |
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | unknown | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `emergent_geometry_growth_note_2026-04-10` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `fifth_family_complex_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -1012,14 +1011,11 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_axiom_native_support_batch_note_2026-04-22` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `lepton_shared_higgs_universality_underdetermination_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `light_cone_framing_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `minimal_bidirectional_trapping_probe_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `monopole_derived_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | C | - |
 | `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `persistent_record_sidebit_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
-| `pmns_corner_transport_active_block_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
-| `pmns_graph_commutant_cycle_value_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
 | `pmns_intrinsic_completion_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `pmns_minimal_branch_nonselection_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `pmns_selector_bank_nonrealization_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -1050,14 +1046,9 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `universal_gr_a1_invariant_section_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
-| `universal_gr_positive_background_extension_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
-| `universal_gr_positive_background_local_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `universal_gr_tensor_quotient_uniqueness_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
-| `wave_equation_gravity_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | D | - |
 | `wilson_mu2_distance_sweep_note_2026-04-11` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
-| `yt_exact_hessian_selector_uniqueness_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `yt_zero_import_chain_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `architecture_note_directional_measure` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `bell_inequality_derived_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
@@ -4005,18 +3996,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The exact taste-spectrum count gives g_* = 28 + (7/8)*90 = 106.75, after which the equilibrium abundance and late entropy-to-photon factors are algebraic/statistical-mechanics conversions.  _(class `B`)_
 - **chain closes:** False — The conversion formulas close once g_* = 106.75 and the late entropy count are admitted, but the source note has no cited authority or derivation for the load-bearing 28 bosonic and 90 fermionic degrees of freedom. The runner reuses those same constants rather than deriving the spectrum count from retained inputs.
 - **rationale:** Issue: the theorem depends on the exact relativistic spectrum count g_* = 28 + (7/8)*90, but the note provides no cited theorem or derivation for the 28 and 90 counts. Why this blocks: the runner verifies downstream arithmetic and standard equilibrium integrals only after those constants are already set, so it does not independently close the authority path. Repair target: cite or add a theorem-grade spectrum-count note/runner that derives the bosonic and fermionic counts from the framework inputs, then keep this note as the conversion corollary. Claim boundary until fixed: conditional on the spectrum count, the d_N, s/n_gamma, and product arithmetic are internally consistent and runner-checked.
-- **auditor confidence:** high
-
-### `dm_leptogenesis_exact_kernel_closure_note_2026-04-15`
-
-- **Note:** [`DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md`](../../docs/DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md)
-- **current_status:** support
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-round2-20260430-05`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The exact coherent leptogenesis kernel lands at eta / eta_obs = 0.9907305394 on the retained benchmark, resolving the old denominator suppression to percent-level observed closure.  _(class `D`)_
-- **chain closes:** False — The registered runner now emits classified checks, but it computes eta / eta_obs = 0.557874966110 on the consistent retained-fit benchmark, not the note's claimed 0.9907305394. The note's bottom-line observed-eta closure therefore does not close on its own registered proof artifact.
-- **rationale:** The prior infrastructure blocker is resolved because the runner exits 0 and emits classified PASS checks. Those checks expose a substantive contradiction: the note claims percent-level observed eta closure at eta / eta_obs = 0.9907305394, while the registered runner's final D-class comparator verifies eta / eta_obs = 0.557874966110 after consistent K00 bookkeeping. Because the source note's load-bearing observed-closure conclusion is not reproduced by its proof artifact, the chain fails on its own terms.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16`
@@ -10066,18 +10045,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `Neutrino Dirac monomial no-mixing theorem`
 - **auditor confidence:** high
 
-### `light_cone_framing_note`
-
-- **Note:** [`LIGHT_CONE_FRAMING_NOTE.md`](../../docs/LIGHT_CONE_FRAMING_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:2026-05-01-light_cone_framing_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The note argues that the staggered dispersion E^2=m^2+sin^2(k) gives the correct v=1 light cone in the massless limit and v<1 for massive particles, so Lieb-Robinson finite-cone behavior is not a blocker.  _(class `A`)_
-- **chain closes:** False — The dispersion derivative is internally wrong: for E^2=m^2+sin^2(k), v_g=sin(k)cos(k)/E has vmax=sqrt(1+m^2)-m<1 for m>0 and tends to 1 as m->0, not vmax=1/(2m), and the massless maximum is not at k=pi/2.
-- **rationale:** Issue: the note's load-bearing staggered-dispersion argument contains an algebraic error. From E^2=m^2+sin^2(k), v_g=sin(k)cos(k)/E; maximizing gives vmax=sqrt(1+m^2)-m, which is below 1 for m>0 and approaches 1 as m->0. The note instead states vmax=1/(2m) for m<<1 and then says the massless maximum occurs at k=pi/2, where cos(k)=0. Why this blocks: the support note is meant to defuse a light-cone concern, but its central dispersion calculation contradicts itself and would imply superluminal velocities for small nonzero m. Repair target: correct the staggered-dispersion extremum derivation, add a runner for v_g(k,m) and the Lieb-Robinson bound, and declare/cite the lattice-QFT reference inputs used for the broader framing. Claim boundary until fixed: the general statement that lattice theories have Lieb-Robinson rather than strict continuum cones may still be standard background, but this note's presented derivation does not currently support it.
-- **auditor confidence:** high
-
 ### `linear_response_derivation_note`
 
 - **Note:** [`LINEAR_RESPONSE_DERIVATION_NOTE.md`](../../docs/LINEAR_RESPONSE_DERIVATION_NOTE.md)
@@ -11523,20 +11490,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: the runner provides a coherent algebraic check (PASS=17/FAIL=0) that a projected non-Cl(3) commutant generator distinguishes the corners and has nonzero C3-odd Fourier content. However, the step from even/odd Fourier modes to passive offset class and branch/orientation selector is a physical/semantic PMNS identification, and the active 5-real source boundary is asserted with deps=[]. Why this blocks: the algebraic orbit split is not by itself a retained PMNS selector law unless the hw=1 triplet, projected commutant route, passive-offset meaning, and active-source boundary are declared/audited inputs. Repair target: declare the PMNS generation-boundary, corner-orbit, and active-source boundary authorities, or narrow the note to a pure algebraic commutant/Fourier decomposition. Claim boundary until fixed: bounded algebraic evidence for a C3-even/C3-odd corner-profile split; not an independently closed native PMNS selector theorem.
 - **auditor confidence:** high
 
-### `pmns_corner_transport_active_block_note`
-
-- **Note:** [`PMNS_CORNER_TRANSPORT_ACTIVE_BLOCK_NOTE.md`](../../docs/PMNS_CORNER_TRANSPORT_ACTIVE_BLOCK_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:2026-05-01-pmns_corner_transport_active_block_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The note states that the direct corner transport fixes the branch bit, with branch bit = 0 if Re(t_fwd) >= Re(t_bwd), else 1.  _(class `A`)_
-- **chain closes:** False — The branch-bit formula in the note does not match the registered runner: the runner uses the imaginary C3-odd asymmetry, not the real-part comparison written in the source note.
-- **rationale:** Issue: the source note's explicit branch-bit rule uses Re(t_fwd) >= Re(t_bwd), but scripts/frontier_pmns_corner_transport_active_block.py implements transport_branch_bit by comparing Im(odd_fwd) against Im(odd_bwd) and verifies phase reversal using that imaginary asymmetry. Why this blocks: the branch selector is one of the note's positive native outputs, so the written theorem is stale or wrong relative to the runner that is supposed to verify it. Repair target: decide whether the intended branch law is real-part or imaginary-part transport asymmetry, update the note and runner so they state and test the same observable, and emit classified PASS lines for the seed-pair, branch-bit, and kernel checks. Claim boundary until fixed: the runner gives examples for seed-pair recovery and a non-injective five-real breaking kernel, but the published branch-bit law cannot be audited as stated.
-- **open / conditional deps cited:**
-  - `scripts/frontier_pmns_corner_transport_active_block.py`
-- **auditor confidence:** high
-
 ### `pmns_current_bank_value_selection_nogo_note`
 
 - **Note:** [`PMNS_CURRENT_BANK_VALUE_SELECTION_NOGO_NOTE.md`](../../docs/PMNS_CURRENT_BANK_VALUE_SELECTION_NOGO_NOTE.md)
@@ -11552,24 +11505,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md`
   - `PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md`
   - `PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md`
-- **auditor confidence:** high
-
-### `pmns_graph_commutant_cycle_value_boundary_note`
-
-- **Note:** [`PMNS_GRAPH_COMMUTANT_CYCLE_VALUE_BOUNDARY_NOTE.md`](../../docs/PMNS_GRAPH_COMMUTANT_CYCLE_VALUE_BOUNDARY_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:2026-05-01-pmns_graph_commutant_cycle_value_boundary_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The note claims the graph-first/projected-commutant route fixes the selector bundle (tau,q) but remains value-blind on the reduced forward-cycle family, consistent with the existing bank.  _(class `B`)_
-- **chain closes:** False — The registered runner exits nonzero on current main: its current-bank check for the commutant note's partial-closure language fails, so the note is stale or the runner is checking the wrong authority text.
-- **rationale:** Issue: scripts/frontier_pmns_graph_commutant_cycle_value_boundary.py exits with PASS=24 FAIL=1; the failing check is 'The commutant note says the route is only partial' in the current-bank status section. Why this blocks: the note's boundary claim is explicitly tied to compatibility with the existing PMNS bank, but the registered runner no longer verifies that cross-note authority on current main, and the ledger row declares deps=[] while the runner reads four PMNS authority notes. Repair target: update the commutant authority text or the runner's authority check so they agree, register the one-hop PMNS dependencies, and emit classified PASS/FAIL lines for the graph selector, commutant selector, reduced-channel nonselection, and bank-status checks. Claim boundary until fixed: the computational examples support value-blindness of the tested route, but the row cannot be treated as audited while its primary runner exits nonzero against the current bank.
-- **open / conditional deps cited:**
-  - `PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md`
-  - `PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md`
-  - `PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md`
-  - `PMNS_GRAPH_FIRST_AXIS_ALIGNMENT_NOTE.md`
-  - `scripts/frontier_pmns_graph_commutant_cycle_value_boundary.py`
 - **auditor confidence:** high
 
 ### `pmns_graph_first_axis_alignment_note`
@@ -14059,32 +13994,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: the claimed exact polarization-frame blocker depends on an unregistered runner and uncited upstream exact-stack results. Why this blocks: without the runner and source authorities, the audit cannot confirm that the kernel remains fixed while the complementary channel localization changes under valid frame rotation. Repair target: register the frame-comparison runner and cite the scalar generator, 3+1 lift, tensor variational candidate, and quotient-kernel notes used as inputs. Claim boundary until fixed: the note remains a bounded route diagnosis, not an audited closed derivation of the missing projector-bundle primitive.
 - **auditor confidence:** high
 
-### `universal_gr_positive_background_extension_note`
-
-- **Note:** [`UNIVERSAL_GR_POSITIVE_BACKGROUND_EXTENSION_NOTE.md`](../../docs/UNIVERSAL_GR_POSITIVE_BACKGROUND_EXTENSION_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note defines H_D by B_D(h,k) = -Tr(D^-1 h D^-1 k), then claims K_GR(D) = H_D ⊗ Lambda_R is symmetric positive definite for every positive-symmetric background.  _(class `A`)_
-- **chain closes:** False — For any nonzero symmetric h and positive D, B_D(h,h) = -Tr(D^-1 h D^-1 h) is negative, so the Hessian operator induced by this bilinear form is negative definite; tensoring it with a symmetric positive definite Lambda_R cannot produce a symmetric positive definite K_GR(D) without an extra minus sign or sign convention not stated in the note.
-- **rationale:** Issue: the load-bearing positive-definiteness and unique-minimum claim contradicts the note's own Hessian sign. Why this blocks: with B_D(h,h) = -Tr(D^-1 h D^-1 h), H_D is negative definite on nonzero symmetric perturbations, so K_GR(D) = H_D ⊗ Lambda_R is negative definite if Lambda_R is positive definite; the stated convex boundary action and exact stationary minimum do not follow. Repair target: either define the glued operator using -H_D with a derived sign convention, or restate the family as a negative Hessian/concave quadratic and redo the completion identity accordingly, with a runner checking sample positive backgrounds. Claim boundary until fixed: the orthogonal covariance and principal-basis weight formulas may remain algebraic support, but the positive-background SPD glued-family and convex-completion conclusion are not valid as written.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_GR_POSITIVE_BACKGROUND_EXTENSION_NOTE.md`
-- **auditor confidence:** high
-
-### `universal_gr_positive_background_local_closure_note`
-
-- **Note:** [`UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:2026-05-01-universal_gr_positive_background_local_closure_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** From B_D(h,k)=-Tr(D^-1 h D^-1 k), the note asserts that K_GR(D)=H_D tensor Lambda_R is symmetric positive definite for each positive-symmetric D.  _(class `A`)_
-- **chain closes:** False — For positive-symmetric D and real symmetric nonzero h, Tr(D^-1 h D^-1 h) is nonnegative, so the displayed B_D(h,h) with the leading minus sign is non-positive rather than positive. The claimed positive-definiteness of H_D and K_GR(D) therefore does not follow from the displayed bilinear form.
-- **rationale:** Issue: the note's displayed bilinear form has a leading minus sign, so B_D(h,h) is non-positive on the symmetric tangent directions it uses to claim a positive-background closure. Why this blocks: the unique stationary solution and completion identity require K_GR(D) to be positive definite, but the sign shown gives the opposite definiteness unless an additional sign convention or field-space metric is supplied. Repair target: either correct the sign/operator convention and prove H_D is positive definite, or restate the action with the negative-definite operator and show the stationary point is a maximum rather than a positive local minimum. Claim boundary until fixed: the note can at most identify a candidate quadratic local action form, not an exact positive-background SPD closure theorem.
-- **auditor confidence:** high
-
 ### `universal_gr_supermetric_normal_form_note`
 
 - **Note:** [`UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md`](../../docs/UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md)
@@ -14514,20 +14423,6 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **chain closes:** False — The old third sample sided with the first numerical-match verdict, but judicial review favors the second: the note depends on a missing artifact-chain provenance and the current runner did not complete under the audit timeout, so the numerical synthesis is conditional rather than independently closed. The selected H=0.25 values can remain a reported narrow synthesis, not an audit-clean numerical theorem.
 - **rationale:** The old third sample sided with the first numerical-match verdict, but judicial review favors the second: the note depends on a missing artifact-chain provenance and the current runner did not complete under the audit timeout, so the numerical synthesis is conditional rather than independently closed. The selected H=0.25 values can remain a reported narrow synthesis, not an audit-clean numerical theorem.
 - **auditor confidence:** judicial
-
-### `wave_equation_gravity_note`
-
-- **Note:** [`WAVE_EQUATION_GRAVITY_NOTE.md`](../../docs/WAVE_EQUATION_GRAVITY_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The runner battery is claimed to show that promoting Poisson to a d'Alembertian produces gravitational waves, recovers Newton at low frequency, and preserves the propagator mass and distance laws.  _(class `D`)_
-- **chain closes:** False — The runner exits 0, but its own diagnostics do not support the full prose claim: the radiation exponent is -0.583 rather than near -1 and is not between 1/r and 1/r^2, the frequency scaling is omega^-0.04 despite a printed expectation of omega^1-2, and the propagator distance exponent is -2.069 despite the runner's expected alpha ~ -1.0 line.
-- **rationale:** Issue: the runner/prose contract is stale or over-permissive for the radiation and propagator claims. Why this blocks: accepting gamma=-0.583 as evidence for 1/r gravitational radiation and alpha=-2.069 as preserved Newtonian distance behavior lets the battery pass while missing its own stated physical comparators. Repair target: tighten the runner thresholds to the claimed observables, separate near-field finite-box artifacts from far-field radiation, and update the note to the current measured exponents if they remain. Claim boundary until fixed: the runner gives support for a finite-speed leapfrog disturbance and approximate static-field behavior, but it does not auditably establish gravitational radiation or preserved Newtonian propagator distance laws.
-- **open / conditional deps cited:**
-  - `WAVE_EQUATION_GRAVITY_NOTE.md`
-- **auditor confidence:** high
 
 ### `wave_equation_self_field_note`
 
@@ -15111,20 +15006,6 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md`
 - **auditor confidence:** high
 
-### `yt_exact_hessian_selector_uniqueness_note`
-
-- **Note:** [`YT_EXACT_HESSIAN_SELECTOR_UNIQUENESS_NOTE.md`](../../docs/YT_EXACT_HESSIAN_SELECTOR_UNIQUENESS_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Across the full admissible exact Schur coarse-operator class, the local Hessian selector shape stays unique on the current tested scale.  _(class `C`)_
-- **chain closes:** False — The registered runner exits 1 and reports that selector relative L2 drift is 7.198640e-02, above the 2.5e-02 uniqueness threshold and above the branch budget, with selector correlation 0.997408979 below the 0.999 threshold.
-- **rationale:** Issue: the current runner falsifies the selector-uniqueness checks that the note presents as passed. Why this blocks: if admissible Schur coarse operators can move the selector shape by 7.20e-02, above both the note's threshold and the branch budget, then the claim that selector ambiguity is no longer live does not follow. Repair target: either tighten the admissible class until the uniqueness inequalities actually pass, or demote/rewrite the note to state the measured selector variability and explain the remaining ambiguity. Claim boundary until fixed: the tested class remains SPD across sampled operators, but selector-shape uniqueness is not established.
-- **open / conditional deps cited:**
-  - `YT_EXACT_HESSIAN_SELECTOR_UNIQUENESS_NOTE.md`
-- **auditor confidence:** high
-
 ### `yt_exact_interacting_bridge_transport_note`
 
 - **Note:** [`YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`](../../docs/YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md)
@@ -15352,21 +15233,6 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
 - **chain closes:** False — The algebraic 1/sqrt(6) overlap and same-channel coefficient checks close, but the target Yukawa readout is introduced by definition as the H_unit-to-top matrix element. The runner confirms coefficient consistency after that identification; it does not derive the physical Yukawa readout map itself.
 - **rationale:** Issue: The load-bearing move defines y_t_bare as the H_unit matrix element and then identifies that matrix element with the top Yukawa readout. Why this blocks: The source note and runner verify the scalar-singlet algebra, Clebsch-Gordan normalization, Fierz coefficients, and tadpole cancellation, but they do not derive the physical observable bridge from independent retained inputs. Repair target: Supply a retained theorem and runner check constructing the map from the composite H_unit matrix element to the SM top Yukawa vertex/readout, including the common tadpole dressing. Claim boundary until fixed: The note supports a tree-level structural identification/algebraic normalization on the canonical surface, not a first-principles derivation of the physical top Yukawa coupling.
 - **auditor confidence:** 0.88
-
-### `yt_zero_import_chain_note`
-
-- **Note:** [`YT_ZERO_IMPORT_CHAIN_NOTE.md`](../../docs/YT_ZERO_IMPORT_CHAIN_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:2026-05-01-yt_zero_import_chain_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The backward Ward scan fixes y_t(v) by requiring y_t(M_Pl)=g_lattice/sqrt(6), then claims the Ward identity is matched at M_Pl and predicts m_t=169.51 GeV.  _(class `C`)_
-- **chain closes:** False — The runner matches y_t(M_Pl) to the constant target YT_PL, but its own Ward verification prints g_s(M_Pl)/sqrt(6)=0.198854 while y_t(M_Pl)=0.435769, with ratio 2.19139982. Thus the stated Ward identity is not actually verified against the evolved high-scale gauge coupling.
-- **rationale:** Issue: the central Ward-boundary match is internally inconsistent in the runner output: y_t(M_Pl) equals the fixed target 0.435769, but the same run reports g_s(M_Pl)/sqrt(6)=0.198854, so y_t/(g_s/sqrt(6))=2.19139982. Why this blocks: the top-mass prediction is obtained by choosing y_t(v) to hit the fixed target, not by satisfying the printed evolved Ward identity at M_Pl. Repair target: define which high-scale gauge coupling enters the Ward identity, make the runner check y_t(M_Pl) against that actual value, and rederive the backward scan after that correction. Claim boundary until fixed: the script is a numerical pipeline with several near-observable matches, but not a closed zero-import y_t derivation.
-- **open / conditional deps cited:**
-  - `scripts/frontier_yt_zero_import_chain.py`
-  - `scripts/canonical_plaquette_surface.py`
-- **auditor confidence:** high
 
 ### `yukawa_color_projection_theorem`
 

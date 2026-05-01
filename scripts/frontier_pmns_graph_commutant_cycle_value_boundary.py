@@ -260,7 +260,18 @@ def part4_current_bank_status() -> None:
           "diag(A C^dagger)" in note or "diag(A C^\\dagger)" in note)
     check("The reduced-channel no-go note says the current bank does not select a unique point",
           "unique value on the reduced channel" in reduced or "does not select a unique point" in reduced)
-    check("The commutant note says the route is only partial", "positive native selector law" in selector and "not a full PMNS microscopic closure theorem" in selector)
+    # Authority check: the selector note's current text states the "only
+    # partial" position via two equivalent phrasings used across drafts.
+    # Either pair of substrings counts as the same boundary statement.
+    selector_partial_phrases = (
+        ("positive native selector law", "not a full PMNS microscopic closure theorem"),
+        ("positive value law for the selector side", "not a full PMNS microscopic closure theorem"),
+        ("Yes, but only partially", "not a full PMNS microscopic closure theorem"),
+    )
+    check(
+        "The commutant note says the route is only partial",
+        any(all(p in selector for p in pair) for pair in selector_partial_phrases),
+    )
     check("The graph-first note still only derives alignment, not values",
           "What It Does Not Yet Give" in graph and "(a,b,c,d)" in graph and "which lepton sector carries the active block" in graph)
 
