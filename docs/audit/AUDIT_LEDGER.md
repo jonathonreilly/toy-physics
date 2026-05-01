@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:04:50.205432+00:00
+**Generated:** 2026-05-01T07:05:45.374196+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 269 |
+| `audited_clean` | 270 |
 | `audited_conditional` | 583 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 583 |
+| `unaudited` | 582 |
 
 | criticality | count |
 |---|---:|
@@ -305,6 +305,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mesoscopic_surrogate_backreaction_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_localization_frontier_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_localization_sweep_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `mesoscopic_surrogate_multistage_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -10524,6 +10525,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** More localized families do not obviously beat the broad top-N control on the retained 3D family; near-point-source cases score well only by collapsing to very small support/capture.  _(class `C`)_
 - **chain closes:** True — The current localization-family sweep output matches the note and frozen log for the best scored rows and the topN/square/Gaussian tradeoff table. The conclusion is bounded to this retained 3D family and does not claim persistent-mass closure.
 - **rationale:** The sweep computation reproduces the load-bearing facts: square radius 0 and Gaussian sigma 0.5 achieve score 1.0000 with low capture, while non-degenerate localized rows do not dominate the broad topN tradeoff. The note's safe read stays within that bounded negative result and explicitly avoids broader surrogate-lane failure or promotion. Residual risk is that a future localized family could beat this frontier, which the note leaves open.
+- **auditor confidence:** high
+
+### `mesoscopic_surrogate_multistage_note`
+
+- **Note:** [`MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The broad topN=196 surrogate survives a second sourced-response stage on the retained 3D ordered-lattice family with high shape similarity and same-order centroid response, while remaining only a mesoscopic control.  _(class `C`)_
+- **chain closes:** True — The registered multistage runner recomputes the two-stage capture, centroid-shift, best-shift, score, and width-ratio values, and the current output matches the note. The note's limitations exclude sharp localization and persistent-mass closure.
+- **rationale:** The runner checks the load-bearing two-stage sourced-response claim directly and reproduces the frozen stage-1/stage-2 capture, delta ratio, best-shift score, and width ratio. The claim remains bounded to the broad mesoscopic surrogate and does not assert a localized inertial object or persistent-mass theorem. Residual risk is the open localization/persistence step, which the note correctly leaves for future work.
 - **auditor confidence:** high
 
 ### `minimal_absorbing_horizon_probe_note`
