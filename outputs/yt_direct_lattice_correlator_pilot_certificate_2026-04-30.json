@@ -1,0 +1,351 @@
+{
+  "ensembles": [
+    {
+      "a_fm": 0.0931098696461825,
+      "ape_smearing": {
+        "alpha": 0.5,
+        "steps": 1
+      },
+      "boundary_conditions": {
+        "fermion_time": "antiperiodic",
+        "gauge_spatial": "periodic",
+        "gauge_time": "periodic"
+      },
+      "correlators": [
+        {
+          "mean": 0.495846599064998,
+          "stderr": 0.002547515244833933,
+          "tau": 0
+        },
+        {
+          "mean": 0.06971758483289014,
+          "stderr": 0.001092723309491282,
+          "tau": 1
+        },
+        {
+          "mean": 0.00952544667326922,
+          "stderr": 6.049949069260144e-05,
+          "tau": 2
+        },
+        {
+          "mean": 0.0013585058107204054,
+          "stderr": 2.6114599741324455e-05,
+          "tau": 3
+        },
+        {
+          "mean": 0.00019679977963361605,
+          "stderr": 4.955426535812138e-06,
+          "tau": 4
+        },
+        {
+          "mean": 2.8092703314315493e-05,
+          "stderr": 6.479465785858967e-07,
+          "tau": 5
+        },
+        {
+          "mean": 4.0354290657355315e-06,
+          "stderr": 1.337446203346032e-07,
+          "tau": 6
+        },
+        {
+          "mean": 5.745191111868522e-07,
+          "stderr": 1.9289306753471005e-08,
+          "tau": 7
+        },
+        {
+          "mean": 8.2843075241272e-08,
+          "stderr": 2.8163138586158365e-09,
+          "tau": 8
+        },
+        {
+          "mean": 1.1844203641261008e-08,
+          "stderr": 3.782277196413768e-10,
+          "tau": 9
+        },
+        {
+          "mean": 1.6782638287705956e-09,
+          "stderr": 4.614131364189856e-11,
+          "tau": 10
+        },
+        {
+          "mean": 2.465193711347424e-10,
+          "stderr": 6.001348254402662e-12,
+          "tau": 11
+        },
+        {
+          "mean": 6.835732145892581e-11,
+          "stderr": 6.416371192375618e-13,
+          "tau": 12
+        },
+        {
+          "mean": 2.469049917872878e-10,
+          "stderr": 5.184348387093304e-12,
+          "tau": 13
+        },
+        {
+          "mean": 1.7096806016307252e-09,
+          "stderr": 3.048576415210626e-11,
+          "tau": 14
+        },
+        {
+          "mean": 1.1998577033416449e-08,
+          "stderr": 2.897025340715569e-10,
+          "tau": 15
+        },
+        {
+          "mean": 8.511977414204662e-08,
+          "stderr": 1.9900117452271195e-09,
+          "tau": 16
+        },
+        {
+          "mean": 5.977500636165604e-07,
+          "stderr": 1.2250489525097964e-08,
+          "tau": 17
+        },
+        {
+          "mean": 4.1561706006789445e-06,
+          "stderr": 6.239807053934596e-08,
+          "tau": 18
+        },
+        {
+          "mean": 2.9750325779455423e-05,
+          "stderr": 1.7954961218060803e-07,
+          "tau": 19
+        },
+        {
+          "mean": 0.00020977525822586155,
+          "stderr": 1.740912529618083e-06,
+          "tau": 20
+        },
+        {
+          "mean": 0.001489868718312068,
+          "stderr": 3.184910921818034e-05,
+          "tau": 21
+        },
+        {
+          "mean": 0.010139157421304995,
+          "stderr": 0.00010257670487371655,
+          "tau": 22
+        },
+        {
+          "mean": 0.07158928189086294,
+          "stderr": 0.000520136421045172,
+          "tau": 23
+        }
+      ],
+      "dims": [
+        12,
+        12,
+        12,
+        24
+      ],
+      "effective_mass": [
+        {
+          "m_eff": 1.9618140237098642,
+          "tau": 0
+        },
+        {
+          "m_eff": 1.9904857643560698,
+          "tau": 1
+        },
+        {
+          "m_eff": 1.9475813875633823,
+          "tau": 2
+        },
+        {
+          "m_eff": 1.931953841293765,
+          "tau": 3
+        },
+        {
+          "m_eff": 1.946676990779348,
+          "tau": 4
+        },
+        {
+          "m_eff": 1.9403972420277151,
+          "tau": 5
+        },
+        {
+          "m_eff": 1.9493345485357383,
+          "tau": 6
+        },
+        {
+          "m_eff": 1.9365852040092018,
+          "tau": 7
+        },
+        {
+          "m_eff": 1.9451095547860657,
+          "tau": 8
+        },
+        {
+          "m_eff": 1.954078779916537,
+          "tau": 9
+        },
+        {
+          "m_eff": 1.9180745276590603,
+          "tau": 10
+        },
+        {
+          "m_eff": 1.282691900511712,
+          "tau": 11
+        },
+        {
+          "m_eff": -1.2842549393887166,
+          "tau": 12
+        },
+        {
+          "m_eff": -1.9350582353813062,
+          "tau": 13
+        },
+        {
+          "m_eff": -1.9484814918117197,
+          "tau": 14
+        },
+        {
+          "m_eff": -1.9592713099752648,
+          "tau": 15
+        },
+        {
+          "m_eff": -1.9491133405817225,
+          "tau": 16
+        },
+        {
+          "m_eff": -1.9391766878605157,
+          "tau": 17
+        },
+        {
+          "m_eff": -1.968245960858104,
+          "tau": 18
+        },
+        {
+          "m_eff": -1.9531966762196153,
+          "tau": 19
+        },
+        {
+          "m_eff": -1.9604065278211038,
+          "tau": 20
+        },
+        {
+          "m_eff": -1.9177168926044417,
+          "tau": 21
+        },
+        {
+          "m_eff": -1.9545404683349692,
+          "tau": 22
+        }
+      ],
+      "mass_fit": {
+        "chi2_dof": 0.7984954977418115,
+        "m_lat": 1.9449382267122237,
+        "m_lat_err": 0.002657455302360625,
+        "tau_max": 12,
+        "tau_min": 1
+      },
+      "mass_parameter_scan": [
+        {
+          "chi2_dof": 116.22975016624198,
+          "m_bare_lat": 0.45,
+          "m_fit_lat": 1.474698729902458,
+          "m_fit_lat_err": 0.0014122634857811954,
+          "max_cg_residual": 9.756172453982005e-09
+        },
+        {
+          "chi2_dof": 0.7984954977418115,
+          "m_bare_lat": 0.75,
+          "m_fit_lat": 1.9449382267122237,
+          "m_fit_lat_err": 0.002657455302360625,
+          "max_cg_residual": 9.39777652770617e-09
+        },
+        {
+          "chi2_dof": 0.8287131035192512,
+          "m_bare_lat": 1.05,
+          "m_fit_lat": 2.289256556185575,
+          "m_fit_lat_err": 0.00273894338050572,
+          "max_cg_residual": 6.629041655723092e-09
+        }
+      ],
+      "measurement_separation_sweeps": 2,
+      "measurement_sweeps": 3,
+      "plaquette_history": [
+        0.6136362718319316,
+        0.34967366210589873,
+        0.06338471273972932,
+        0.023304783448318534,
+        0.021833421415864706,
+        0.021053402420855124,
+        0.02159965934668926,
+        0.021925123864793224,
+        0.021220968729322907,
+        0.021406110203915234
+      ],
+      "plaquette_mean": 0.02179705152971166,
+      "plaquette_measurements": [
+        0.021640604819584,
+        0.021917400734769808,
+        0.02183314903478117
+      ],
+      "r0_over_a": 5.37,
+      "runtime_seconds": 116.53122091293335,
+      "selected_mass_parameter": 0.75,
+      "spatial_L": 12,
+      "thermalization_sweeps": 10,
+      "time_L": 24,
+      "update_algorithm": "Cabibbo-Marinari heatbath + polar overrelaxation",
+      "update_engine": "numba"
+    }
+  ],
+  "metadata": {
+    "action": "Cl3Z3_SU3_Wilson_staggered",
+    "authority": "staggered_top_correlator_mass_extraction",
+    "created_utc": "2026-04-30T22:08:28Z",
+    "evidence_scope": "bounded pilot run; infrastructure and scaling evidence only",
+    "g_bare": 1.0,
+    "phase": "pilot",
+    "running_bridge": "pilot run uses no authoritative SM RGE; production certificate must supply 4/5-loop bridge",
+    "scale_anchor": "Sommer r0 = 0.5 fm external anchor; r0/a reference used for pilot run",
+    "uses_composite_matrix_element_route": false,
+    "uses_coupling_definition_route": false,
+    "uses_prior_ward_chain": false
+  },
+  "ratio_check": {
+    "g_s_lattice": null,
+    "g_s_source": "not_measured_pilot",
+    "ratio": null,
+    "uncertainty": null,
+    "used_as_definition": false,
+    "y_t_lattice": 0.02367493808670599
+  },
+  "result": {
+    "m_t_pole_GeV": 4.121891576049361,
+    "m_t_running_at_v_GeV": 4.121891576049361,
+    "mass_uncertainties_GeV": {
+      "finite_spacing": 0.8243783152098723,
+      "finite_volume": 0.0,
+      "heavy_mass_tuning": 0.6182837364074041,
+      "matching": 0.41218915760493613,
+      "running_bridge": 0.41218915760493613,
+      "scale_setting": 0.20609457880246806,
+      "statistical": 0.005631923150096376,
+      "v_input": 0.0001
+    },
+    "reduced_scope_delta_to_pdg_GeV": -168.43810842395064,
+    "reduced_scope_delta_to_y_t_target": -0.8933250619132941,
+    "total_m_t_pole_uncertainty_GeV": 1.2017407759406504,
+    "total_y_t_uncertainty": 0.006902447078419757,
+    "uncertainties": {
+      "finite_spacing": 0.0047349876173411985,
+      "finite_volume": 0.0,
+      "heavy_mass_tuning": 0.003551240713005898,
+      "matching": 0.0023674938086705993,
+      "running_bridge": 0.0023674938086705993,
+      "scale_setting": 0.0011837469043352996,
+      "statistical": 3.2348117224231694e-05,
+      "v_input": 5.743707142679697e-07
+    },
+    "y_t_v": 0.02367493808670599
+  },
+  "v_input": {
+    "source": "existing electroweak VEV chain",
+    "treatment": "substrate_input_only",
+    "v_GeV": 246.21965
+  }
+}
