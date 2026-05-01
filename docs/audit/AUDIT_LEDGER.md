@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:27:16.686142+00:00
+**Generated:** 2026-05-01T20:28:29.089364+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 178 |
+| bounded | 177 |
 | support | 149 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 921 |
+| ~~audited_conditional~~ | 922 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
-| `audited_conditional` | 624 |
+| `audited_conditional` | 625 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 544 |
+| `unaudited` | 543 |
 
 | criticality | count |
 |---|---:|
@@ -539,6 +539,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dm_leptogenesis_exact_kernel_closure_note_2026-04-15` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_leptogenesis_hrad_theorem_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -4068,6 +4069,21 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The exact taste-spectrum count gives g_* = 28 + (7/8)*90 = 106.75, after which the equilibrium abundance and late entropy-to-photon factors are algebraic/statistical-mechanics conversions.  _(class `B`)_
 - **chain closes:** False — The conversion formulas close once g_* = 106.75 and the late entropy count are admitted, but the source note has no cited authority or derivation for the load-bearing 28 bosonic and 90 fermionic degrees of freedom. The runner reuses those same constants rather than deriving the spectrum count from retained inputs.
 - **rationale:** Issue: the theorem depends on the exact relativistic spectrum count g_* = 28 + (7/8)*90, but the note provides no cited theorem or derivation for the 28 and 90 counts. Why this blocks: the runner verifies downstream arithmetic and standard equilibrium integrals only after those constants are already set, so it does not independently close the authority path. Repair target: cite or add a theorem-grade spectrum-count note/runner that derives the bosonic and fermionic counts from the framework inputs, then keep this note as the conversion corollary. Claim boundary until fixed: conditional on the spectrum count, the d_N, s/n_gamma, and product arithmetic are internally consistent and runner-checked.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_exact_kernel_closure_note_2026-04-15`
+
+- **Note:** [`DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md`](../../docs/DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** With K00 = 2 propagated consistently, the exact coherent kernel gives epsilon_1/epsilon_DI = 0.9276209209 and eta/eta_obs = 0.5578749661 on the retained benchmark, so the earlier percent-level eta closure does not hold.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the corrected epsilon and eta arithmetic with classified C/D PASS lines. The chain still imports the exact source package and retained washout benchmark as already closed atlas inputs, but the ledger row lists no one-hop dependencies for those upstream closures.
+- **rationale:** Issue: the corrected arithmetic is runner-confirmed, but the note relies on uncited upstream closures for gamma, E1/E2, K00, the staircase benchmark, and the retained washout law. Why this blocks: a hostile reviewer can accept the internal calculation while rejecting the source-and-benchmark package as an uncited hidden premise rather than a closed consequence of the single axiom. Repair target: cite or register the exact source-package, diagonal-normalization, and retained-benchmark rows as dependencies, or narrow this note to a conditional calculation given those inputs. Claim boundary until fixed: given the imported exact package and benchmark, the exact kernel is near the DI ceiling but undershoots eta_obs by about 44%; percent-level eta closure is not retained.
+- **open / conditional deps cited:**
+  - `scripts/dm_leptogenesis_exact_common.py`
+  - `DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md`
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16`
