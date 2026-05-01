@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T05:28:30.593484+00:00
+**Generated:** 2026-05-01T05:29:36.774487+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 213 |
-| support | 179 |
+| support | 178 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 825 |
+| ~~audited_conditional~~ | 826 |
 | ~~audited_failed~~ | 165 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 248 |
-| `audited_conditional` | 556 |
+| `audited_conditional` | 557 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 77 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 638 |
+| `unaudited` | 637 |
 
 | criticality | count |
 |---|---:|
@@ -826,6 +826,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `shapiro_unique_discriminator_v2_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sigma_hier_uniqueness_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `single_axiom_hilbert_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `single_axiom_information_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -12319,6 +12320,24 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Static cone shape can mimic the c-dependent causal phase curve exactly, while static scheduling remains near-flat and does not reproduce the curve.  _(class `C`)_
 - **chain closes:** True — The current runner computes the causal, static-cone, and static-schedule curves across three families and shows zero RMSE for the static-cone mimic and nonzero scheduling mismatch.
 - **rationale:** The audited claim is the negative boundary: detector-line phase lag is not a unique causal-propagation discriminator because a static cone-shape field reproduces the same c-dependent curve in this model. The runner reproduces the note's table and the safe read, including exact zero controls and the static-scheduling mismatch. Residual risk is limited to the missing frozen log; the current executable artifact is sufficient for the scoped boundary result.
+- **auditor confidence:** high
+
+### `shapiro_unique_discriminator_v2_note`
+
+- **Note:** [`SHAPIRO_UNIQUE_DISCRIMINATOR_V2_NOTE.md`](../../docs/SHAPIRO_UNIQUE_DISCRIMINATOR_V2_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The causal dynamic cone and static cone-shape proxy have the same c-dependent detector-line phase-lag curve, so the phase lag is portable but not a unique causal-propagation discriminator.  _(class `B`)_
+- **chain closes:** False — The runner exits 0 but only reports hard-coded curves lifted from upstream Shapiro results and emits no PASS checks. The boundary conclusion depends on the retained Shapiro delay/portability/static-discriminator chain, which is not registered as dependencies in this row.
+- **rationale:** Issue: the discriminator boundary is a cross-note summary over upstream Shapiro artifacts, and the primary runner is a report generator with hard-coded phase curves rather than an executable verifier. Why this blocks: the audit cannot independently verify the zero control, portability, or static-cone mimicry from this row's runner output. Repair target: register the Shapiro delay, portability, complex/diamond bridge, and static-discriminator authorities as dependencies, or replace the report script with a runner that recomputes the curves and emits classified PASS lines. Claim boundary until fixed: the note is a useful boundary summary, but the non-uniqueness conclusion remains conditional on the upstream Shapiro chain.
+- **open / conditional deps cited:**
+  - `SHAPIRO_DELAY_NOTE.md`
+  - `SHAPIRO_FAMILY_PORTABILITY_NOTE.md`
+  - `archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_COMPLEX_INTERACTION_NOTE.md`
+  - `archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_DIAMOND_BRIDGE_NOTE.md`
+  - `SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md`
 - **auditor confidence:** high
 
 ### `sigma_hier_uniqueness_theorem_note_2026-04-19`
