@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:20:04.549781+00:00
+**Generated:** 2026-05-01T07:21:48.955886+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 275 |
+| `audited_clean` | 276 |
 | `audited_conditional` | 587 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 573 |
+| `unaudited` | 572 |
 
 | criticality | count |
 |---|---:|
@@ -316,6 +316,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `moving_source_retarded_portability_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `multipole_tidal_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
+| `neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `nonlabel_grown_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `nonlabel_grown_drift_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -10921,6 +10922,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md`
   - `COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md`
 - **auditor confidence:** medium
+
+### `neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28`
+
+- **Note:** [`NEUTRINO_LANE4_4F_SIGMA_M_NU_FUNCTIONAL_FORM_THEOREM_NOTE_2026-04-28.md`](../../docs/NEUTRINO_LANE4_4F_SIGMA_M_NU_FUNCTIONAL_FORM_THEOREM_NOTE_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Combining the flat-FRW matter-budget split, the open-number reduction Ω_m,0 = 1 - L - R, and Ω_ν,0 h² = Σm_ν / C_ν gives Σm_ν = (1 - L - R - Ω_b - Ω_DM) × C_ν × h².  _(class `A`)_
+- **chain closes:** True — The current runner symbolically derives the stated functional form from P1-P3, checks equivalent forms, and verifies the stated limiting and round-trip cases. The note explicitly keeps h, Ω_b, Ω_DM, T_CMB/C_ν, and the cosmology layer in admitted/open support scope, so no numerical retention is being inferred.
+- **rationale:** The load-bearing step is an algebraic consequence of the stated matter-budget split, open-number reduction, and neutrino-relic convention, and the runner reproduces that algebra plus equivalent-form and limiting-case checks. The note is explicit that the result is support-level and that numerical Σm_ν retention remains blocked on admitted/open inputs h, Ω_b, and Ω_DM. Residual risk is not hidden physics in this row but the fact that the runner named in the note is not registered as the ledger primary runner.
+- **auditor confidence:** high
 
 ### `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27`
 
