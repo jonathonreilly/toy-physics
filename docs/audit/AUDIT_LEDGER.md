@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:07:23.136475+00:00
+**Generated:** 2026-05-01T23:09:09.172311+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 313 |
+| `audited_clean` | 314 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 500 |
+| `unaudited` | 499 |
 
 | criticality | count |
 |---|---:|
@@ -201,6 +201,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `emergent_product_law_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `equivalence_principle_harness_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `evolving_network_prototype_v3_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
+| `ew_current_fierz_channel_decomposition_note_2026-05-01` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `fixed_field_complex_grown_basin_v2_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -6135,6 +6136,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `su2_nonperturbative_matching_open`
   - `higgs_lambda_from_g5_condensate_open`
   - `source_note_stale_relative_to_registered_runner`
+- **auditor confidence:** high
+
+### `ew_current_fierz_channel_decomposition_note_2026-05-01`
+
+- **Note:** [`EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md`](../../docs/EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The adjoint-channel dimension fraction of the q-qbar Hilbert space is exactly dim(adj)/dim(N_c tensor N_c-bar) = (N_c^2 - 1)/N_c^2, giving 8/9 at N_c = 3, while the physical EW matching rule remains explicitly outside this note's derivation.  _(class `A`)_
+- **chain closes:** True — On the note's narrowed support boundary, the chain closes as exact SU(N_c) Fierz completeness plus Hilbert-space dimension counting over retained N_c=3/SU(3) inputs. The note explicitly does not claim that this derives the physical EW matching rule or closes the full 9/8 coefficient.
+- **rationale:** The support claim is limited to an exact group-theory ratio and cycle-breaking dependency boundary, not a retained EW-current matching theorem. The runner verifies the retained upstream citations, absence of markdown citations to the three cycle nodes, SU(N_c) generator normalization, the Fierz identity for N_c=2..5, exact dimension counting, the 8/9 value at N_c=3, and the explicit non-derivation of matching rule (M). Residual risk is confined to downstream claims that try to use this note as full physical EW matching closure, which the source note forbids.
 - **auditor confidence:** high
 
 ### `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26`
