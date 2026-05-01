@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:23:40.471243+00:00
+**Generated:** 2026-05-01T04:25:05.738080+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,11 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 231 |
+| bounded | 230 |
 | support | 192 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 19 |
+| ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 806 |
 | ~~audited_failed~~ | 159 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 537 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
-| `audited_numerical_match` | 16 |
+| `audited_numerical_match` | 17 |
 | `audited_renaming` | 18 |
-| `unaudited` | 686 |
+| `unaudited` | 685 |
 
 | criticality | count |
 |---|---:|
@@ -955,6 +955,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_hessian_selector_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_bridge_higher_order_corrections_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_bridge_moment_closure_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
+| `yt_bridge_nonlocal_corrections_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -13355,6 +13356,25 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **open / conditional deps cited:**
   - `YT_BRIDGE_ACTION_INVARIANT_NOTE.md`
   - `YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md`
+  - `YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`
+  - `YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`
+  - `TARGET_CONDITIONED_INPUT: TARGET_YT_PHYS = 0.9176`
+  - `PROFILE_FAMILY_SELECTION: logistic / erf / smoothstep UV-localized bridges`
+- **auditor confidence:** high
+
+### `yt_bridge_nonlocal_corrections_note`
+
+- **Note:** [`YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md`](../../docs/YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-yt_bridge_nonlocal_corrections_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** After subtracting the affine local-Hessian model on x >= 0.95, the residual kernel has L2 norm ratio 5.023669e-3 and integrates at <=1.03e-3 on the best viable bridge families.  _(class `G`)_
+- **chain closes:** False — The runner verifies the nonlocal residual size on the current accepted UV bridge families, but those families and the local-Hessian model are themselves selected by the target-conditioned bridge stack. The exact microscopic bridge is not derived as the local model plus this residual from registered dependencies.
+- **rationale:** Issue: the nonlocal correction budget is measured on selected near-target UV bridge families after fitting a local affine model, not derived from the exact microscopic bridge. Why this blocks: the runner passes and the residual is small, but the result depends on the accepted local-Hessian selector, forced window, profile-family selection, and target-conditioned best rows. Repair target: derive the nonlocal residual operator bound from the exact interacting bridge action or prove the selected window/profile family is forced independently of the y_t endpoint match. Claim boundary until fixed: this is useful bounded numerical control of the nonlocal tail, not an audit-clean unbounded bridge theorem.
+- **open / conditional deps cited:**
+  - `YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md`
+  - `YT_BRIDGE_MOMENT_CLOSURE_NOTE.md`
   - `YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`
   - `YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`
   - `TARGET_CONDITIONED_INPUT: TARGET_YT_PHYS = 0.9176`
