@@ -101,7 +101,7 @@ Review checks performed:
   factors while holding the measured splitting fixed.  It blocks only the
   shortcut from kinetic splitting to SM top mass; it does not reject the kinetic
   route once matching is independently derived.
-- Momentum pilot scaling review: the two-volume cold pilot emits finite
+- Momentum pilot scaling review: the small-volume cold pilot emits finite
   kinetic proxies but shows large finite-volume drift.  This is implementation
   and scaling evidence only, not a strict certificate.
 
@@ -327,6 +327,7 @@ Checks:
 
 ```bash
 python3 scripts/yt_direct_lattice_correlator_production.py --volumes 4x8,6x12 --masses 1.0,2.0,5.0 --therm 0 --measurements 1 --separation 0 --overrelax 0 --ape-steps 0 --momentum-modes '0,0,0;1,0,0;1,1,0' --output outputs/yt_direct_lattice_correlator_momentum_pilot_certificate_2026-05-01.json --production-output-dir outputs/yt_direct_lattice_correlator_momentum_pilot --engine python
+python3 scripts/yt_direct_lattice_correlator_production.py --volumes 8x16 --masses 2.0 --therm 0 --measurements 1 --separation 0 --overrelax 0 --ape-steps 0 --momentum-modes '0,0,0;1,0,0;1,1,0' --output outputs/yt_direct_lattice_correlator_momentum_L8_probe_certificate_2026-05-01.json --production-output-dir outputs/yt_direct_lattice_correlator_momentum_L8_probe --engine python
 python3 -m py_compile scripts/frontier_yt_momentum_pilot_scaling_certificate.py
 python3 scripts/frontier_yt_momentum_pilot_scaling_certificate.py
 ```

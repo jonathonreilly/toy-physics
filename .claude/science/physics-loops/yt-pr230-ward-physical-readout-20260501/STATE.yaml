@@ -109,6 +109,7 @@ files_touched:
   - "scripts/frontier_yt_momentum_pilot_scaling_certificate.py"
   - "docs/YT_MOMENTUM_PILOT_SCALING_NOTE_2026-05-01.md"
   - "outputs/yt_direct_lattice_correlator_momentum_pilot_certificate_2026-05-01.json"
+  - "outputs/yt_direct_lattice_correlator_momentum_L8_probe_certificate_2026-05-01.json"
   - "outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
@@ -155,7 +156,7 @@ claim_state_movement:
   - "implemented a cold-gauge nonzero-momentum staggered-correlator scout reusing the PR230 production harness; kinetic splittings are finite and ordered but not production evidence"
   - "extended the direct-correlator production harness with optional momentum modes and kinetic-mass certificate fields; smoke output remains reduced-scope"
   - "proved kinetic energy splittings still require c2/action normalization and lattice-to-SM matching; same splitting supports different M0 and y_t without that theorem"
-  - "ran a two-volume cold momentum pilot; kinetic proxies are finite but have large finite-volume drift, confirming reduced-scope pilot is not strict evidence"
+  - "ran a small-volume cold momentum pilot through L=8; kinetic proxies are finite but have large finite-volume drift, confirming reduced-scope pilot is not strict evidence"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null

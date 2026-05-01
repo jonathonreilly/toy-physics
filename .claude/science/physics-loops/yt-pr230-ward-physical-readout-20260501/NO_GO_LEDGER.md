@@ -269,9 +269,9 @@ python3 scripts/frontier_yt_momentum_pilot_scaling_certificate.py
 # SUMMARY: PASS=6 FAIL=0
 ```
 
-The two-volume cold pilot gives finite `M_kin` proxies but relative spread
-`0.805501`; it confirms the implementation route and rejects reduced-scope
-pilot data as strict evidence.
+The small-volume cold pilot gives finite `M_kin` proxies but full relative
+spread `0.950562`; it confirms the implementation route and rejects
+reduced-scope pilot data as strict evidence.
 
 ## Inherited No-Gos And Boundaries
 

@@ -7,7 +7,7 @@
    production harness now carries momentum-analysis fields.  The route still
    needs a `1/M` action term, gauge-ensemble data, and lattice-HQET/NRQCD-to-SM
    matching; the matching shortcut is explicitly blocked, and the reduced
-   two-volume pilot has large finite-volume drift.
+   small-volume pilot has large finite-volume drift.
 2. **Scalar-channel Bethe-Salpeter projector and limiting theorem.** The
    source-bubble stretch, HS/RPA contact attempt, input audit, and
    projector-normalization obstruction show the exact next analytic object:

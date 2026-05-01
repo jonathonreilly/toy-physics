@@ -92,9 +92,9 @@ What changed:
   retained closure yet: a measured `E(p)-E(0)` fixes a kinetic combination, and
   changing `c2` or the lattice-to-SM matching factor changes the inferred SM
   top mass without changing the measured splitting.
-- A bounded two-volume momentum pilot now exists.  It emits finite kinetic
-  proxies, but the `p_min` proxy has relative spread `0.805501`, so reduced
-  cold-gauge pilots are exhausted as closure evidence.
+- A bounded small-volume momentum pilot now exists through `8^3 x 16`.  It
+  emits finite kinetic proxies, but the full `p_min` proxy has relative spread
+  `0.950562`, so reduced cold-gauge pilots are exhausted as closure evidence.
 
 The scientific result is narrower than closure:
 

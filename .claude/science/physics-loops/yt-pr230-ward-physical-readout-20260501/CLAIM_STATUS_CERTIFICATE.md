@@ -157,5 +157,5 @@ python3 scripts/frontier_yt_heavy_kinetic_matching_obstruction.py
 # SUMMARY: PASS=5 FAIL=0
 
 python3 scripts/frontier_yt_momentum_pilot_scaling_certificate.py
-# SUMMARY: PASS=6 FAIL=0
+# SUMMARY: PASS=8 FAIL=0
 ```

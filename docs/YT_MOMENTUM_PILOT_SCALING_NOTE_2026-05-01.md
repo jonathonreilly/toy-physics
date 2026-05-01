@@ -20,11 +20,12 @@ bare_retained_allowed: false
 ## Purpose
 
 After adding `--momentum-modes` support to the production harness, this pilot
-tests the kinetic route on two small cold volumes:
+tests the kinetic route on small cold volumes:
 
 ```text
 4^3 x 8
 6^3 x 12
+8^3 x 16
 ```
 
 with one configuration per volume and three bare masses.  This is intentionally
@@ -34,7 +35,7 @@ not production evidence.
 
 ```text
 python3 scripts/frontier_yt_momentum_pilot_scaling_certificate.py
-# SUMMARY: PASS=6 FAIL=0
+# SUMMARY: PASS=8 FAIL=0
 ```
 
 The selected-mass `p_min` kinetic proxies are:
@@ -43,8 +44,12 @@ The selected-mass `p_min` kinetic proxies are:
 |---|---:|---:|
 | `4^3 x 8` | `0.0251546085064` | `39.7541468294` |
 | `6^3 x 12` | `0.0295401199162` | `16.9261330495` |
+| `8^3 x 16` | `0.0176967906734` | `16.5506404081` |
 
-The relative spread is `0.805501`, which is far too large for a strict result.
+The full relative spread is `0.950562`, which is far too large for a strict
+result.  The larger cold volumes are roughly consistent with each other, with
+`L=6`/`L=8` relative spread `0.022433`, but that is still a cold-gauge,
+one-configuration scaling hint rather than production evidence.
 
 ## Consequence
 

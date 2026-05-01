@@ -1,7 +1,9 @@
 {
   "actual_current_surface_status": "bounded-support / momentum pilot scaling",
   "fail_count": 0,
-  "pass_count": 6,
+  "l8_probe_certificate": "outputs/yt_direct_lattice_correlator_momentum_L8_probe_certificate_2026-05-01.json",
+  "large_volume_relative_spread": 0.022433024606696553,
+  "pass_count": 8,
   "per_volume": [
     {
       "dims": [
@@ -26,12 +28,24 @@
       "pmin_m_kin_lat": 16.926133049511325,
       "pmin_m_kin_lat_err": 20.54308698175418,
       "selected_mass_parameter": 2.0
+    },
+    {
+      "dims": [
+        8,
+        8,
+        8,
+        16
+      ],
+      "pmin_delta_e_lat": 0.017696790673385365,
+      "pmin_m_kin_lat": 16.550640408147096,
+      "pmin_m_kin_lat_err": 20.809256874033455,
+      "selected_mass_parameter": 2.0
     }
   ],
   "pilot_certificate": "outputs/yt_direct_lattice_correlator_momentum_pilot_certificate_2026-05-01.json",
   "proposal_allowed": false,
   "proposal_allowed_reason": "Reduced-scope cold-gauge pilot with large finite-volume drift and no matching theorem.",
-  "relative_spread": 0.8055010959236927,
+  "relative_spread": 0.9505618527092324,
   "strict_non_claims": [
     "not a production measurement",
     "not a y_t derivation",

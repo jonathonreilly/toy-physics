@@ -74,7 +74,7 @@ visible shortcut routes:
 | nonzero-momentum scout | method runs on cold gauge, still needs production ensembles and matching |
 | momentum harness extension | certificate fields exist, smoke run is reduced-scope only |
 | heavy kinetic matching | `c2` and lattice-to-SM matching remain load-bearing |
-| momentum pilot scaling | two-volume cold pilot has large finite-volume drift |
+| momentum pilot scaling | small cold-volume pilot has large finite-volume drift |
 
 ## Remaining Honest Routes
 
