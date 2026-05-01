@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:52:23.430057+00:00
+**Generated:** 2026-05-01T04:53:37.574437+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 240 |
+| `audited_clean` | 241 |
 | `audited_conditional` | 544 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 665 |
+| `unaudited` | 664 |
 
 | criticality | count |
 |---|---:|
@@ -163,6 +163,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_lepton_synthesis_note_2026-04-19` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
+| `dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `dm_neutrino_operator_selection_obstruction_note_2026-04-14` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
@@ -4433,6 +4434,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Once the exact source-oriented triplet package is fixed, the H-side source surface is an explicit two-sheet codimension-three preimage bundle over free data (d1,d2,d3,r31).  _(class `A`)_
 - **chain closes:** True — The runner verifies the explicit bundle formulas on both sheets, checks the exact CP pair, and exhibits positive local regions around witnesses on both sheets.
 - **rationale:** The support claim closes: given the fixed exact source package, the runner verifies the two-sheet preimage-bundle parameterization and nonempty positive regions. This clean audit does not derive the post-canonical mixed-bridge law that selects a point on the bundle. Residual risk: any future claim that a framework law selects a particular bundle point must be audited separately.
+- **auditor confidence:** high
+
+### `dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16`
+
+- **Note:** [`DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The exact source-oriented triplet values pull back to a nonempty exact H-side source surface, so the remaining mainline object is the H-side law whose image lands on that surface.  _(class `A`)_
+- **chain closes:** True — The runner verifies the source-surface equations, an explicit positive Hermitian witness, invariant CP pair, and common diagonal tangent at the stated support boundary.
+- **rationale:** The support claim closes: the exact source package pulls back to a nonempty H-side source surface, and the runner verifies the equations and witness. This clean audit does not derive the post-canonical H-side law that selects a surface point. Residual risk: selected-point or mixed-bridge claims remain separate open science.
 - **auditor confidence:** high
 
 ### `dm_neutrino_hermitian_bridge_carrier_note_2026-04-15`
