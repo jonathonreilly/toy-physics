@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T03:38:22.252030+00:00
+**Generated:** 2026-05-01T03:40:17.001480+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,22 +23,22 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | bounded | 242 |
 | support | 201 |
-| open | 14 |
+| open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 792 |
+| ~~audited_conditional~~ | 795 |
 | ~~audited_failed~~ | 154 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 231 |
-| `audited_conditional` | 524 |
+| `audited_conditional` | 525 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 707 |
+| `unaudited` | 706 |
 
 | criticality | count |
 |---|---:|
@@ -700,6 +700,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_synthesis_guard_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `left_handed_charge_matching_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | F | - |
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `lensing_finite_path_explanation_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `lepton_single_higgs_pmns_triviality_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `linear_response_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_second_order_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -9392,6 +9393,21 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `logs/2026-04-07-lensing-fine-asymptotic.txt_not_registered_primary_output`
   - `logs/2026-04-07-lensing-deflection-lane-lplus.txt_not_registered_primary_output`
 - **auditor confidence:** high
+
+### `lensing_finite_path_explanation_note`
+
+- **Note:** [`LENSING_FINITE_PATH_EXPLANATION_NOTE.md`](../../docs/LENSING_FINITE_PATH_EXPLANATION_NOTE.md)
+- **current_status:** open
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-lensing_finite_path_explanation_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The finite-path surrogate matches the H=0.25 slope only in a centered L=10 geometry, while the literal static-mass full-path reductions give shallower slopes and the second T_phys test is reported as L-independent.  _(class `D`)_
+- **chain closes:** False — The runner reproduces the centered-surrogate versus literal-geometry slope comparison, but the second-T_phys falsification depends on the Lane L++ long/short-path data note rather than a registered dependency. The runner also prints comparison tables rather than explicit PASS/FAIL checks, so it is useful diagnostic output but not a fully classified audit runner.
+- **rationale:** Issue: the note's open conclusion depends on hard-coded measured lensing slopes and the Lane L++ short-path falsification, but only the literal-geometry comparison is reproduced locally and no dependency is registered for the second-T_phys data. Why this blocks: the finite-path explanation remains an evidence-backed diagnostic, not a closed derivation or fully self-contained falsification chain. Repair target: register the Lane L++ data note/log as a dependency and update the runner to emit classified PASS/FAIL checks for both the literal-geometry mismatch and the second-T_phys L-independence test. Claim boundary until fixed: the centered finite-path surrogate is a close heuristic match, while the literal static-mass reductions are shallower and the exact detector-centroid reduction remains open.
+- **open / conditional deps cited:**
+  - `LENSING_LONG_PATH_TEST_NOTE.md`
+  - `logs/2026-04-07-lensing-analytical-finite-path.txt`
+- **auditor confidence:** medium
 
 ### `lepton_single_higgs_pmns_triviality_note`
 
