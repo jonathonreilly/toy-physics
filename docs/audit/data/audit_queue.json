@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 192,
-    "leaf": 164,
+    "leaf": 163,
     "medium": 130
   },
-  "generated_at": "2026-05-01T23:19:17.297956+00:00",
+  "generated_at": "2026-05-01T23:21:14.346634+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9835,23 +9835,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_no_go",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/QUARK_RPSR_C3_JOINT_READOUT_RANK_BOUNDARY_NOTE_2026-04-28.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -13147,6 +13130,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 84,
-  "total_pending": 495
+  "ready_count": 83,
+  "total_pending": 494
 }
