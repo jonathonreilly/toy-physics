@@ -35,6 +35,9 @@ Completed in block 1:
 - `scripts/frontier_yt_direct_measurement_scale_requirements.py`
 - `outputs/yt_direct_measurement_scale_requirements_2026-05-01.json`
 - `docs/YT_DIRECT_MEASUREMENT_SCALE_REQUIREMENTS_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_key_blocker_closure_attempt.py`
+- `outputs/yt_key_blocker_closure_attempt_2026-05-01.json`
+- `docs/YT_KEY_BLOCKER_CLOSURE_ATTEMPT_NOTE_2026-05-01.md`
 
 Next artifact:
 

@@ -50,6 +50,7 @@ def main() -> int:
         "queue_exhaustion": "outputs/yt_pr230_queue_exhaustion_certificate_2026-05-01.json",
         "ward_repair_audit": "outputs/yt_ward_physical_readout_repair_audit_2026-05-01.json",
         "scalar_pole_residue_no_go": "outputs/yt_scalar_pole_residue_current_surface_no_go_2026-05-01.json",
+        "key_blocker_closure_attempt": "outputs/yt_key_blocker_closure_attempt_2026-05-01.json",
     }
     certificates = {name: load_json(path) for name, path in required_certificates.items()}
 
@@ -80,6 +81,13 @@ def main() -> int:
         certificates["scalar_pole_residue_no_go"].get("actual_current_surface_status")
         == "exact negative boundary / retained closure unavailable on current analytic surface"
     )
+    key_blocker_open = (
+        certificates["key_blocker_closure_attempt"].get("actual_current_surface_status")
+        == "open / key blocker not closed"
+    )
+    key_blocker_has_no_retained_authority = (
+        certificates["key_blocker_closure_attempt"].get("retained_authorities") == []
+    )
     beta_blocked = "no-go" in certificates["beta_lambda_no_go"].get("actual_current_surface_status", "")
     queue_text = (
         certificates["queue_exhaustion"].get("actual_current_surface_status", "")
@@ -93,6 +101,16 @@ def main() -> int:
     report("direct-strict-production-not-yet-passed", not direct_strict_pass, f"direct_meta={direct_meta}")
     report("ward-repair-still-open", ward_open, f"closure_allowed={certificates['ward_repair_audit'].get('closure_allowed')}")
     report("scalar-pole-residue-blocked-on-current-surface", scalar_residue_blocked, certificates["scalar_pole_residue_no_go"].get("actual_current_surface_status", ""))
+    report(
+        "key-blocker-closure-attempt-open",
+        key_blocker_open,
+        certificates["key_blocker_closure_attempt"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "key-blocker-no-retained-authority",
+        key_blocker_has_no_retained_authority,
+        "no retained authority supplies pole residue plus common dressing",
+    )
     report("planck-beta-route-blocked-on-current-surface", beta_blocked, certificates["beta_lambda_no_go"].get("actual_current_surface_status", ""))
     report("prior-route-queue-exhausted", queue_open, "queue exhaustion certificate says no full retained closure")
 

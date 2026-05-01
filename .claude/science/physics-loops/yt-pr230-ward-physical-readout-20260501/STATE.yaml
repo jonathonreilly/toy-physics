@@ -48,6 +48,9 @@ files_touched:
   - "scripts/frontier_yt_direct_measurement_scale_requirements.py"
   - "docs/YT_DIRECT_MEASUREMENT_SCALE_REQUIREMENTS_NOTE_2026-05-01.md"
   - "outputs/yt_direct_measurement_scale_requirements_2026-05-01.json"
+  - "scripts/frontier_yt_key_blocker_closure_attempt.py"
+  - "docs/YT_KEY_BLOCKER_CLOSURE_ATTEMPT_NOTE_2026-05-01.md"
+  - "outputs/yt_key_blocker_closure_attempt_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -73,6 +76,7 @@ claim_state_movement:
   - "proved the current analytic surface underdetermines scalar pole residue and physical y/g readout"
   - "certified the shortest honest retained-closure routes"
   - "computed direct-measurement scale requirements: current scale gives am_top=81.423, requiring 81x+ refinement for am_top<=1"
+  - "attempted direct key-blocker closure across all plausible repo authorities; no candidate derives both scalar pole residue and common dressing"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -81,5 +85,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Choose between fine-scale/HQET direct measurement and scalar two-point residue/common-dressing theorem; current-scale production is not a retained-closure path."
+next_exact_action: "Start a true scalar source two-point/pole-residue derivation or a physically suitable fine-scale/HQET direct measurement; current repo authorities do not already close the key blocker."
 stop_condition: "User runtime budget exhausted, or source/SSB theorem reaches honest closure/no-go and is packaged."

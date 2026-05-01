@@ -28,6 +28,9 @@ What changed:
   `am_top = 81.423`, so a relativistic direct measurement needs roughly `81x`
   finer inverse lattice spacing for `am_top <= 1`, or an HQET/top-integrated
   route.
+- A direct key-blocker closure attempt checked all plausible repo authorities
+  for scalar pole-residue/common-dressing closure.  None closes it; the exact
+  required theorem is now named.
 
 The scientific result is narrower than closure:
 

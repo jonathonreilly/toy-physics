@@ -1,0 +1,264 @@
+{
+  "actual_current_surface_status": "open / key blocker not closed",
+  "candidate_results": [
+    {
+      "closes_common_dressing": false,
+      "closes_key_blocker": false,
+      "closes_pole_residue": false,
+      "effective_status": "audited_renaming",
+      "evidence_present": true,
+      "evidence_term_hits": [
+        "H_unit",
+        "matrix element",
+        "y_t_bare"
+      ],
+      "evidence_terms": [
+        "H_unit",
+        "matrix element",
+        "y_t_bare"
+      ],
+      "files": [
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
+        "scripts/frontier_yt_ward_identity_derivation.py"
+      ],
+      "ledger_key": "yt_ward_identity_derivation_theorem",
+      "reason": "Computes the 1/sqrt(6) H_unit overlap but the audit marks the physical readout as audited_renaming.",
+      "route": "old_ward_h_unit"
+    },
+    {
+      "closes_common_dressing": false,
+      "closes_key_blocker": false,
+      "closes_pole_residue": false,
+      "effective_status": "audited_conditional",
+      "evidence_present": true,
+      "evidence_term_hits": [
+        "Z_phi",
+        "R_conn",
+        "scalar"
+      ],
+      "evidence_terms": [
+        "Z_phi",
+        "R_conn",
+        "scalar"
+      ],
+      "files": [
+        "docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md",
+        "docs/YUKAWA_COLOR_PROJECTION_THEOREM.md",
+        "docs/RCONN_DERIVED_NOTE.md"
+      ],
+      "ledger_key": "yt_color_projection_correction_note",
+      "reason": "Provides channel arithmetic, but the ledger says the scalar LSZ/pole-residue bridge is audited_conditional.",
+      "route": "rconn_color_projection"
+    },
+    {
+      "closes_common_dressing": false,
+      "closes_key_blocker": false,
+      "closes_pole_residue": false,
+      "effective_status": null,
+      "evidence_present": true,
+      "evidence_term_hits": [
+        "kappa_H",
+        "Legendre",
+        "two-point residue"
+      ],
+      "evidence_terms": [
+        "kappa_H",
+        "Legendre",
+        "two-point residue"
+      ],
+      "files": [
+        "docs/YT_SOURCE_HIGGS_LEGENDRE_SSB_BRIDGE_NOTE_2026-05-01.md",
+        "scripts/frontier_yt_source_higgs_legendre_ssb_bridge.py"
+      ],
+      "ledger_key": null,
+      "reason": "Closes SSB bookkeeping conditionally once a canonical scalar coefficient is supplied; it explicitly leaves kappa_H open.",
+      "route": "source_higgs_legendre_ssb"
+    },
+    {
+      "closes_common_dressing": false,
+      "closes_key_blocker": false,
+      "closes_pole_residue": false,
+      "effective_status": null,
+      "evidence_present": true,
+      "evidence_term_hits": [
+        "kappa_H",
+        "LSZ",
+        "scalar two-point"
+      ],
+      "evidence_terms": [
+        "kappa_H",
+        "LSZ",
+        "scalar two-point"
+      ],
+      "files": [
+        "docs/YT_SOURCE_HIGGS_KAPPA_RESIDUE_OBSTRUCTION_NOTE_2026-05-01.md",
+        "scripts/frontier_yt_source_higgs_kappa_residue_obstruction.py"
+      ],
+      "ledger_key": null,
+      "reason": "Proves counts plus SSB do not select kappa_H; it is a no-go boundary, not a closure theorem.",
+      "route": "source_higgs_kappa_obstruction"
+    },
+    {
+      "closes_common_dressing": false,
+      "closes_key_blocker": false,
+      "closes_pole_residue": false,
+      "effective_status": null,
+      "evidence_present": true,
+      "evidence_term_hits": [
+        "LSZ",
+        "Z_phi",
+        "R_conn"
+      ],
+      "evidence_terms": [
+        "LSZ",
+        "Z_phi",
+        "R_conn"
+      ],
+      "files": [
+        "docs/YT_SCALAR_LSZ_RESIDUE_BRIDGE_NOTE_2026-05-01.md",
+        "scripts/frontier_yt_scalar_lsz_residue_bridge.py"
+      ],
+      "ledger_key": null,
+      "reason": "Shows R_conn is not enough to derive the physical scalar LSZ residue.",
+      "route": "scalar_lsz_residue_bridge"
+    },
+    {
+      "closes_common_dressing": false,
+      "closes_key_blocker": false,
+      "closes_pole_residue": false,
+      "effective_status": null,
+      "evidence_present": true,
+      "evidence_term_hits": [
+        "common",
+        "dressing",
+        "scalar"
+      ],
+      "evidence_terms": [
+        "common",
+        "dressing",
+        "scalar"
+      ],
+      "files": [
+        "docs/YT_COMMON_DRESSING_OBSTRUCTION_NOTE_2026-05-01.md",
+        "scripts/frontier_yt_common_dressing_obstruction.py"
+      ],
+      "ledger_key": null,
+      "reason": "Proves current Ward/gauge identities do not enforce common scalar/gauge dressing.",
+      "route": "common_dressing"
+    },
+    {
+      "closes_common_dressing": false,
+      "closes_key_blocker": false,
+      "closes_pole_residue": false,
+      "effective_status": "proposed_retained",
+      "evidence_present": true,
+      "evidence_term_hits": [
+        "H",
+        "u_R"
+      ],
+      "evidence_terms": [
+        "Qbar_L",
+        "H",
+        "u_R"
+      ],
+      "files": [
+        "docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md"
+      ],
+      "ledger_key": "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
+      "reason": "Selects the allowed SM Yukawa operator pattern but not its source-to-canonical scalar residue.",
+      "route": "one_higgs_selector"
+    },
+    {
+      "closes_common_dressing": false,
+      "closes_key_blocker": false,
+      "closes_pole_residue": false,
+      "effective_status": "proposed_retained",
+      "evidence_present": true,
+      "evidence_term_hits": [
+        "Higgs",
+        "kinetic",
+        "mass"
+      ],
+      "evidence_terms": [
+        "Higgs",
+        "kinetic",
+        "mass"
+      ],
+      "files": [
+        "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md",
+        "scripts/frontier_ew_higgs_gauge_mass_diagonalization.py"
+      ],
+      "ledger_key": "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
+      "reason": "Uses the canonical elementary-Higgs convention for EW mass diagonalization; it does not derive the composite/source operator pole residue that couples to the Ward coefficient.",
+      "route": "ew_higgs_kinetic_normalization"
+    },
+    {
+      "closes_common_dressing": false,
+      "closes_key_blocker": false,
+      "closes_pole_residue": false,
+      "effective_status": "audited_conditional",
+      "evidence_present": true,
+      "evidence_term_hits": [
+        "taste",
+        "scalar",
+        "isotropy"
+      ],
+      "evidence_terms": [
+        "taste",
+        "scalar",
+        "isotropy"
+      ],
+      "files": [
+        "docs/TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md"
+      ],
+      "ledger_key": "taste_scalar_isotropy_theorem_note",
+      "reason": "Controls scalar direction/isotropy data, not the dynamical two-point pole residue.",
+      "route": "taste_scalar_isotropy"
+    },
+    {
+      "closes_common_dressing": false,
+      "closes_key_blocker": false,
+      "closes_pole_residue": false,
+      "effective_status": "support",
+      "evidence_present": true,
+      "evidence_term_hits": [
+        "scalar",
+        "two-point",
+        "boundary"
+      ],
+      "evidence_terms": [
+        "scalar",
+        "two-point",
+        "boundary"
+      ],
+      "files": [
+        "docs/NEUTRINO_LANE4_SR2_PFAFFIAN_SCALAR_TWO_POINT_BOUNDARY_NOTE_2026-04-29.md"
+      ],
+      "ledger_key": "neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29",
+      "reason": "Useful analogue in the neutrino lane, but it does not supply the top-sector scalar source residue or dressing theorem.",
+      "route": "neutrino_scalar_two_point_analogue"
+    }
+  ],
+  "clean_closures": [],
+  "fail_count": 0,
+  "pass_count": 14,
+  "required_theorem": {
+    "equivalent_measurement": "a strict production correlator certificate measuring m_t and y_t directly at a physically suitable scale/heavy-top treatment",
+    "must_derive": [
+      "construct the source-selected scalar two-point function C_OO(p) from the retained Cl(3)/Z^3 Wilson-staggered action",
+      "show that C_OO(p) has the physical Higgs-carrier pole used by the Yukawa readout",
+      "compute or bound the pole residue Z_phi and the source-to-canonical factor kappa_H",
+      "derive the scalar/gauge dressing ratio, or measure it independently, without alpha_LM or H_unit matrix-element authority",
+      "only then map the Ward/source coefficient to a physical y_t/g_s readout"
+    ],
+    "name": "top-sector scalar source pole-residue and common-dressing theorem"
+  },
+  "retained_authorities": [],
+  "strict_non_claims": [
+    "does not promote yt_ward_identity_derivation_theorem",
+    "does not define y_t_bare by a H_unit matrix element",
+    "does not use observed m_t or y_t as derivation input",
+    "does not certify direct production measurement"
+  ],
+  "verdict": "The closure attempt found no existing retained authority that derives the scalar source pole residue and common scalar/gauge dressing needed to repair the Ward physical-readout route.  Existing artifacts either compute tree-level/channel/operator arithmetic, close SSB bookkeeping conditionally, or record no-go boundaries.  Retained top-Yukawa closure therefore still requires the named scalar two-point residue theorem or a strict direct physical measurement certificate."
+}

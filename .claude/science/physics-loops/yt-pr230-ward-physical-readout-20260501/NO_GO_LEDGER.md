@@ -63,7 +63,18 @@ Retained closure is not currently reached:
 
 ```text
 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=7 FAIL=0
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The direct key-blocker closure attempt checked Ward/H_unit, R_conn/color
+projection, source-Higgs/SSB, kappa, LSZ, common dressing, one-Higgs selection,
+EW Higgs kinetic normalization, taste-scalar isotropy, and the neutrino scalar
+two-point analogue.  No current candidate derives both scalar pole residue and
+relative scalar/gauge dressing:
+
+```text
+scripts/frontier_yt_key_blocker_closure_attempt.py
+# SUMMARY: PASS=14 FAIL=0
 ```
 
 ## Inherited No-Gos And Boundaries

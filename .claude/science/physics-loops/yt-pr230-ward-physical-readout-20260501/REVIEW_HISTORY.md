@@ -38,6 +38,9 @@ Review checks performed:
 - Direct measurement scale review: the calculation uses the existing
   mass-bracket certificate scale and does not claim production evidence; it
   blocks current-scale production as a closure strategy.
+- Key-blocker closure-attempt review: the runner checks every plausible current
+  authority family against both required missing pieces, scalar pole residue
+  and relative scalar/gauge dressing, and finds no retained closure.
 
 Open review risk:
 

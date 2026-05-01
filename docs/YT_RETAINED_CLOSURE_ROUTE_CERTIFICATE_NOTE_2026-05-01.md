@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=7 FAIL=0
+# SUMMARY: PASS=9 FAIL=0
 ```
 
 The runner verifies:
@@ -30,6 +30,7 @@ The runner verifies:
 | strict production direct-correlator certificate exists | no |
 | Ward physical-readout repair is closed | no |
 | scalar pole residue is derived on current analytic surface | no |
+| key-blocker closure attempt found retained authority | no |
 | Planck beta-stationarity route is derived | no |
 | prior non-MC queue is exhausted | yes |
 

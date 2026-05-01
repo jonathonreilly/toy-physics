@@ -55,6 +55,12 @@ field normalization.  This is now the direct successor to R6.
 
 Current status: open.
 
+Update: direct key-blocker closure attempt checked the existing Ward, color,
+SSB, LSZ, common-dressing, one-Higgs, EW-Higgs, taste-scalar, and neutrino
+two-point analogue authorities.  None supplies the top-sector scalar pole
+residue and relative scalar/gauge dressing.  A new theorem or measurement is
+required.
+
 ## R4. Chirality and Right-Handed Selector Theorem
 
 Score: 9/18. Hard-residual pressure: 2.

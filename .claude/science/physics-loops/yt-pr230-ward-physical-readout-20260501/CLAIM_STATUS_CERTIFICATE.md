@@ -5,7 +5,8 @@
 candidate, source/Higgs SSB bridge reduction, kappa residue obstruction, scalar
 LSZ residue bridge obstruction, chirality selector support, and common dressing
 obstruction, current-surface scalar pole-residue no-go, retained-closure route
-certificate, and direct-measurement scale requirements
+certificate, direct-measurement scale requirements, and key-blocker closure
+attempt
 **PR:** #230 draft branch
 
 ```yaml
@@ -64,8 +65,11 @@ PYTHONPATH=scripts python3 scripts/frontier_yt_scalar_pole_residue_current_surfa
 # SUMMARY: PASS=7 FAIL=0
 
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=7 FAIL=0
+# SUMMARY: PASS=9 FAIL=0
 
 PYTHONPATH=scripts python3 scripts/frontier_yt_direct_measurement_scale_requirements.py
 # SUMMARY: PASS=7 FAIL=0
+
+PYTHONPATH=scripts python3 scripts/frontier_yt_key_blocker_closure_attempt.py
+# SUMMARY: PASS=14 FAIL=0
 ```
