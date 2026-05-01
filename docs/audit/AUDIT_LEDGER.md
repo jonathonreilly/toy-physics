@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:33:42.388940+00:00
+**Generated:** 2026-05-01T23:38:37.909257+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 323 |
+| `audited_clean` | 324 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 490 |
+| `unaudited` | 489 |
 
 | criticality | count |
 |---|---:|
@@ -387,6 +387,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `self_gravity_failure_diagnosis` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `self_gravity_scaling_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
+| `session_synthesis_2026-04-10_graph_axioms` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
 | `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
@@ -14040,6 +14041,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `HIGHER_DIMENSION_STATUS_2026-04-01.md`
   - `IF_PROGRAM_CLOSING_NOTE.md`
   - `DECOHERENCE_FAILURE_ANALYSIS.md`
+- **auditor confidence:** high
+
+### `session_synthesis_2026-04-10_graph_axioms`
+
+- **Note:** [`SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md`](../../docs/SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-fresh-agent-019de5e7`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The bounded historical claim is supported by the legacy frontier_axioms_16card.py proxy harness returning 16/16 on cubic, random geometric, and growing graphs while the note explicitly limits C11 to KG-like spectrum/CN scalar dynamics, C12 to an AB proxy, and the runner to historical control evidence rather than current-main evidence.  _(class `B`)_
+- **chain closes:** True — The provided source note, runner summary, and current runner output agree on the material facts: the legacy proxy harness reports 16/16 for all three graph families, norm drift near machine precision, KG/AB caveats, and an explicit guardrail not to cite the harness as current-main evidence. Because the claim is only support/historical synthesis and not promotion of a live physics result, the chain closes at that declared tier.
+- **rationale:** The support boundary is internally accurate. Issue: the primary runner is explicitly legacy and cannot support a current-main graph-axiom or staggered successor claim. Why this does not block this row: the note states that limitation directly and frames itself as historical synthesis/support. Repair target: any re-promotion must be audited against current runner-backed claims such as corrected graph-KG and force-based staggered cards. Claim boundary until fixed: historical support note only, with C11 as KG-like spectrum/CN scalar control and C12 as AB proxy.
 - **auditor confidence:** high
 
 ### `shapiro_complex_interaction_note`
