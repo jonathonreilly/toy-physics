@@ -1,0 +1,334 @@
+{
+  "actual_current_surface_status": "exact negative boundary / free source pole absence",
+  "fail_count": 0,
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The free source curvature has no physical scalar pole or canonical kinetic normalization.",
+  "required_next_theorem": [
+    "derive an interacting scalar two-point denominator",
+    "prove a finite-volume/IR limit with an isolated pole or canonical kinetic term",
+    "compute the pole residue and kappa_H"
+  ],
+  "scan": [
+    {
+      "Pi": 2.1408847706513057,
+      "inverse_source_curvature": 0.4670966012317316,
+      "mass": 0.1,
+      "p": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 8,
+      "time_T": 16
+    },
+    {
+      "Pi": 0.6874321672013162,
+      "inverse_source_curvature": 1.454688982727146,
+      "mass": 0.1,
+      "p": [
+        0.7853981633974483,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 8,
+      "time_T": 16
+    },
+    {
+      "Pi": 0.6874321672013162,
+      "inverse_source_curvature": 1.454688982727146,
+      "mass": 0.1,
+      "p": [
+        0.0,
+        0.7853981633974483,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 8,
+      "time_T": 16
+    },
+    {
+      "Pi": 0.6874321672013162,
+      "inverse_source_curvature": 1.454688982727146,
+      "mass": 0.1,
+      "p": [
+        0.0,
+        0.0,
+        0.7853981633974483,
+        0.0
+      ],
+      "spatial_L": 8,
+      "time_T": 16
+    },
+    {
+      "Pi": 0.7889414040362652,
+      "inverse_source_curvature": 1.267521256818248,
+      "mass": 0.25,
+      "p": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 8,
+      "time_T": 16
+    },
+    {
+      "Pi": 0.48641201686644875,
+      "inverse_source_curvature": 2.0558702608586334,
+      "mass": 0.25,
+      "p": [
+        0.7853981633974483,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 8,
+      "time_T": 16
+    },
+    {
+      "Pi": 0.48641201686644875,
+      "inverse_source_curvature": 2.0558702608586334,
+      "mass": 0.25,
+      "p": [
+        0.0,
+        0.7853981633974483,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 8,
+      "time_T": 16
+    },
+    {
+      "Pi": 0.48641201686644875,
+      "inverse_source_curvature": 2.0558702608586334,
+      "mass": 0.25,
+      "p": [
+        0.0,
+        0.0,
+        0.7853981633974483,
+        0.0
+      ],
+      "spatial_L": 8,
+      "time_T": 16
+    },
+    {
+      "Pi": 0.3410840176829647,
+      "inverse_source_curvature": 2.9318289575487917,
+      "mass": 0.5,
+      "p": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 8,
+      "time_T": 16
+    },
+    {
+      "Pi": 0.3060281142785716,
+      "inverse_source_curvature": 3.2676736330496716,
+      "mass": 0.5,
+      "p": [
+        0.7853981633974483,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 8,
+      "time_T": 16
+    },
+    {
+      "Pi": 0.3060281142785716,
+      "inverse_source_curvature": 3.2676736330496716,
+      "mass": 0.5,
+      "p": [
+        0.0,
+        0.7853981633974483,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 8,
+      "time_T": 16
+    },
+    {
+      "Pi": 0.3060281142785715,
+      "inverse_source_curvature": 3.267673633049672,
+      "mass": 0.5,
+      "p": [
+        0.0,
+        0.0,
+        0.7853981633974483,
+        0.0
+      ],
+      "spatial_L": 8,
+      "time_T": 16
+    },
+    {
+      "Pi": 1.575756513513086,
+      "inverse_source_curvature": 0.6346158124204989,
+      "mass": 0.1,
+      "p": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 12,
+      "time_T": 24
+    },
+    {
+      "Pi": 0.5275540287459289,
+      "inverse_source_curvature": 1.8955404480127702,
+      "mass": 0.1,
+      "p": [
+        0.7853981633974483,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 12,
+      "time_T": 24
+    },
+    {
+      "Pi": 0.527554028745929,
+      "inverse_source_curvature": 1.8955404480127698,
+      "mass": 0.1,
+      "p": [
+        0.0,
+        0.7853981633974483,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 12,
+      "time_T": 24
+    },
+    {
+      "Pi": 0.527554028745929,
+      "inverse_source_curvature": 1.8955404480127698,
+      "mass": 0.1,
+      "p": [
+        0.0,
+        0.0,
+        0.7853981633974483,
+        0.0
+      ],
+      "spatial_L": 12,
+      "time_T": 24
+    },
+    {
+      "Pi": 0.5695172969480464,
+      "inverse_source_curvature": 1.7558729214351216,
+      "mass": 0.25,
+      "p": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 12,
+      "time_T": 24
+    },
+    {
+      "Pi": 0.42802051557132115,
+      "inverse_source_curvature": 2.336336609158095,
+      "mass": 0.25,
+      "p": [
+        0.7853981633974483,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 12,
+      "time_T": 24
+    },
+    {
+      "Pi": 0.42802051557132115,
+      "inverse_source_curvature": 2.336336609158095,
+      "mass": 0.25,
+      "p": [
+        0.0,
+        0.7853981633974483,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 12,
+      "time_T": 24
+    },
+    {
+      "Pi": 0.42802051557132115,
+      "inverse_source_curvature": 2.336336609158095,
+      "mass": 0.25,
+      "p": [
+        0.0,
+        0.0,
+        0.7853981633974483,
+        0.0
+      ],
+      "spatial_L": 12,
+      "time_T": 24
+    },
+    {
+      "Pi": 0.3205316079608006,
+      "inverse_source_curvature": 3.1198171261858674,
+      "mass": 0.5,
+      "p": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 12,
+      "time_T": 24
+    },
+    {
+      "Pi": 0.2972322182630264,
+      "inverse_source_curvature": 3.3643728322717728,
+      "mass": 0.5,
+      "p": [
+        0.7853981633974483,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 12,
+      "time_T": 24
+    },
+    {
+      "Pi": 0.29723221826302637,
+      "inverse_source_curvature": 3.3643728322717736,
+      "mass": 0.5,
+      "p": [
+        0.0,
+        0.7853981633974483,
+        0.0,
+        0.0
+      ],
+      "spatial_L": 12,
+      "time_T": 24
+    },
+    {
+      "Pi": 0.29723221826302637,
+      "inverse_source_curvature": 3.3643728322717736,
+      "mass": 0.5,
+      "p": [
+        0.0,
+        0.0,
+        0.7853981633974483,
+        0.0
+      ],
+      "spatial_L": 12,
+      "time_T": 24
+    }
+  ],
+  "source_scale_ratio": 4.0,
+  "strict_non_claims": [
+    "does not reject interacting scalar poles",
+    "does not derive y_t",
+    "does not use H_unit matrix-element authority",
+    "does not use observed top/Higgs/Yukawa values"
+  ],
+  "verdict": "The free Wilson-staggered logdet source bubble is finite and has no inverse-curvature zero on the scanned momentum/mass surfaces. Source normalization rescales the bubble but does not create a physical pole.  The source formalism therefore needs an interacting kernel or production measurement to supply scalar pole residue."
+}

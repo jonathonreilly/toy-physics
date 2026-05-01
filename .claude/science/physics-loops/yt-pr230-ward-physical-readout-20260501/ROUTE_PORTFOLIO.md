@@ -79,6 +79,11 @@ normalization freedom.  `W_k(J)=W(kJ)` preserves the Legendre relation while
 scaling the curvature and `y_readout`; the positive target is specifically a
 momentum-dependent pole residue or canonical kinetic normalization theorem.
 
+Free two-point update: the finite Wilson-staggered logdet bubble is positive
+and finite with no inverse-curvature zero on the scanned surfaces.  The route
+therefore needs an interacting scalar denominator, not only the free source
+curvature.
+
 ## R8. Scalar-Channel Bethe-Salpeter Kernel Theorem
 
 Score: 10/18. Hard-residual pressure: 4.

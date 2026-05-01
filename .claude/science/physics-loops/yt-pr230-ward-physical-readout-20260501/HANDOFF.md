@@ -58,6 +58,9 @@ What changed:
   source/field rescaling preserves the Legendre transform while changing
   curvature and `y_readout`, so `kappa_H` needs a pole-residue or canonical
   kinetic theorem.
+- The free momentum-dependent scalar source bubble is also bounded: it is
+  finite and positive with no inverse-curvature zero, so an isolated scalar pole
+  requires an interacting denominator or production evidence.
 
 The scientific result is narrower than closure:
 

@@ -74,3 +74,15 @@ Gamma_k(phi_k) = Gamma(phi_k/k)
 The source Legendre transform is exact, but it is covariant under source/field
 rescaling.  It does not select `kappa_H = 1` without an additional physical
 pole-residue or canonical kinetic normalization condition.
+
+Free scalar two-point boundary:
+
+```text
+Pi(p) = sum_k 1 / [(m^2 + D(k))(m^2 + D(k+p))]
+Gamma_free^(2)(p) = 1 / Pi(p)
+```
+
+On the scanned finite Wilson-staggered source surfaces `Pi(p)` is finite and
+`Gamma_free^(2)(p)` has no zero.  The free logdet source curvature therefore
+does not supply an isolated Higgs-carrier pole; an interacting denominator or
+production measurement is required.

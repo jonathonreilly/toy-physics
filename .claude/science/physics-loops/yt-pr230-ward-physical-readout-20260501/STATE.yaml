@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-6-legendre-normalization
-blocks_completed: 19
-active_route: "scalar source Legendre / canonical normalization theorem"
-active_hard_residual: "derive kappa_H from a physical pole residue or canonical kinetic term rather than from source/field naming"
+current_phase: campaign-block-7-free-two-point-pole-test
+blocks_completed: 20
+active_route: "momentum-dependent scalar two-point pole / kinetic normalization"
+active_hard_residual: "derive an interacting scalar two-point denominator with isolated pole or canonical kinetic term"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -81,6 +81,9 @@ files_touched:
   - "scripts/frontier_yt_legendre_kappa_gauge_freedom.py"
   - "docs/YT_LEGENDRE_KAPPA_GAUGE_FREEDOM_NOTE_2026-05-01.md"
   - "outputs/yt_legendre_kappa_gauge_freedom_2026-05-01.json"
+  - "scripts/frontier_yt_free_scalar_two_point_pole_absence.py"
+  - "docs/YT_FREE_SCALAR_TWO_POINT_POLE_ABSENCE_NOTE_2026-05-01.md"
+  - "outputs/yt_free_scalar_two_point_pole_absence_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -118,6 +121,7 @@ claim_state_movement:
   - "proved HQET/static correlators remove the numerical am_top cutoff only by rephasing away the absolute heavy mass; a matching/additive-mass theorem is required for y_t"
   - "proved the static residual-mass decomposition is nonunique: the same subtracted correlator supports different absolute m_t and y_t values until matching fixes am0 + delta_m"
   - "proved the Legendre transform preserves a source/field rescaling freedom; it cannot select kappa_H without a pole-residue or kinetic normalization theorem"
+  - "proved the free Wilson-staggered logdet scalar bubble is finite and has no inverse-curvature zero; a pole requires an interacting denominator or production measurement"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -126,5 +130,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Search for a momentum-dependent scalar two-point pole/kinetic normalization theorem, or classify the remaining closure routes as requiring new production evidence."
+next_exact_action: "Attempt an interacting scalar denominator from Wilson gauge exchange with a fixed projector, or classify remaining PR230 closure as production-evidence/new-theorem only."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

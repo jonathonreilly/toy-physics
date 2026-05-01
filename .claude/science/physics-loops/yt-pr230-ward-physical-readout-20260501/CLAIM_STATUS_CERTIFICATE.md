@@ -10,7 +10,7 @@ attempt, scalar source two-point stretch, stuck fan-out, HS/RPA pole-condition
 attempt, scalar ladder-kernel scout, scalar ladder kernel input audit,
 scalar ladder projector-normalization obstruction, HQET direct-route
 requirements, static mass matching obstruction, and Legendre kappa
-gauge-freedom obstruction
+gauge-freedom obstruction, and free scalar two-point pole absence
 **PR:** #230 draft branch
 
 ```yaml
@@ -37,6 +37,8 @@ Allowed wording:
   independent physical matching condition;
 - exact negative boundary for selecting `kappa_H` from the Legendre transform
   alone;
+- exact negative boundary for extracting a scalar pole from the free logdet
+  source bubble alone;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
@@ -110,5 +112,8 @@ python3 scripts/frontier_yt_static_mass_matching_obstruction.py
 # SUMMARY: PASS=6 FAIL=0
 
 python3 scripts/frontier_yt_legendre_kappa_gauge_freedom.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_free_scalar_two_point_pole_absence.py
 # SUMMARY: PASS=6 FAIL=0
 ```

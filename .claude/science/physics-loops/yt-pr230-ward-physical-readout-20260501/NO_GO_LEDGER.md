@@ -162,6 +162,15 @@ python3 scripts/frontier_yt_legendre_kappa_gauge_freedom.py
 # SUMMARY: PASS=6 FAIL=0
 ```
 
+The free Wilson-staggered logdet scalar bubble is finite and has no
+inverse-curvature zero on the scanned momentum/mass surfaces.  The free source
+formalism supplies curvature support, not an isolated physical scalar pole:
+
+```text
+python3 scripts/frontier_yt_free_scalar_two_point_pole_absence.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

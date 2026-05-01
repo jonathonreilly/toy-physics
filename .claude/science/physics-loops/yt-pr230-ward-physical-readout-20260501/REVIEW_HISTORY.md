@@ -68,6 +68,9 @@ Review checks performed:
   Legendre identity while changing curvature and the Yukawa readout, so the
   artifact blocks only the source-normalization shortcut and leaves a
   pole/kinetic theorem as the positive target.
+- Free scalar two-point review: the runner tests the exact free logdet bubble
+  and only concludes absence of a free inverse-curvature zero; it does not
+  claim interacting scalar poles are impossible.
 
 ## Review-Loop Backpressure — Campaign Block 2
 
@@ -121,3 +124,5 @@ Open review risk:
   residual mass that reproduces `172.56 GeV`.
 - A Legendre/source theorem cannot be accepted if it fixes `kappa_H` by a field
   naming convention rather than by residue or kinetic normalization.
+- A free-bubble theorem cannot be accepted as Higgs-carrier closure unless it
+  introduces and derives an interacting denominator or a canonical kinetic term.
