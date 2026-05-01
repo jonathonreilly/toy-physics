@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T20:41:20.651491+00:00
+**Generated:** 2026-05-01T20:42:27.370760+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 298 |
+| `audited_clean` | 299 |
 | `audited_conditional` | 634 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 533 |
+| `unaudited` | 532 |
 
 | criticality | count |
 |---|---:|
@@ -356,6 +356,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_five_sixths_scale_selection_boundary_note_2026-04-28` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `quark_lane3_stuck_fanout_synthesis_2026-04-28` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `s3_boundary_link_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `s3_taste_cube_decomposition_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -12847,6 +12848,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Absent those premises, the existing packet remains bounded companion support.  _(class `A`)_
 - **chain closes:** True — The claim is a negative boundary: the note does not derive non-top quark masses, but shows that the current package supplies bounded ratio/support surfaces, not absolute five-mass retention. The live runner verifies repo status guardrails, arbitrary bottom-anchor freedom for down-type ratios, up-type partition dependence, species-uniform Ward failure for m_b, and the safe open endpoint with PASS=17 FAIL=0.
 - **rationale:** The retained content is the Lane 3 firewall, not five-mass retention. The note's load-bearing step closes because the down-type formulas are ratios that preserve an arbitrary bottom anchor, the up-type branch remains partition/scalar-law selected, and the top Ward identity cannot be reused species-uniformly because the b reading overshoots by about 34.7x. The live runner confirms the relevant repo guardrails and comparator-only use of observed masses. Residual risk is downstream misuse: this audit does not ratify m_u, m_d, m_s, m_c, m_b, the 5/6 bridge, up-sector amplitude selection, or non-top Yukawa Ward identities.
+- **auditor confidence:** high
+
+### `quark_lane3_stuck_fanout_synthesis_2026-04-28`
+
+- **Note:** [`QUARK_LANE3_STUCK_FANOUT_SYNTHESIS_2026-04-28.md`](../../docs/QUARK_LANE3_STUCK_FANOUT_SYNTHESIS_2026-04-28.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Under the current Lane 3 support bank, no typed route reaches retained non-top quark masses; every orthogonal fan-out frame terminates at a named missing theorem edge.  _(class `B`)_
+- **chain closes:** True — The source claims only a current-bank support boundary, not future impossibility or retained masses. The runner verifies the authority surfaces, six fan-out frames, typed-edge graph, missing theorem edges, and claim firewall with PASS=68, FAIL=0.
+- **rationale:** The support-tier boundary closes as stated: on the encoded current-bank graph, none of the listed support nodes has a typed path to retained non-top quark masses, and adding the named missing theorem edges would reopen the corresponding frames. The runner checks that the note withholds retained closure, does not rule out future theorem content, and contains no observed mass constants. Residual risk is scoped to bank drift: if any upstream route note or typed edge changes, this synthesis should be regenerated and re-audited.
 - **auditor confidence:** high
 
 ### `quark_projector_parameter_audit_note_2026-04-19`
