@@ -1,9 +1,9 @@
 # Atomic `alpha(0)` Threshold-Moment No-Go
 
-**Date:** 2026-05-01  
-**Loop:** `lane2-atomic-scale-20260428`  
-**Science block:** 01  
-**Runner:** `scripts/frontier_atomic_alpha0_threshold_moment_no_go.py`  
+**Date:** 2026-05-01
+**Loop:** `lane2-atomic-scale-20260428`
+**Science block:** 01
+**Runner:** `scripts/frontier_atomic_alpha0_threshold_moment_no_go.py`
 **Status:** exact reduction / no-go boundary for Lane 2. This is not retained
 `alpha(0)` and not retained Rydberg closure.
 

@@ -1,9 +1,9 @@
 # Atomic Massive Nonrelativistic Limit Bridge
 
-**Date:** 2026-05-01  
-**Loop:** `lane2-atomic-scale-20260428`  
-**Science block:** 01  
-**Runner:** `scripts/frontier_atomic_massive_nr_limit_bridge.py`  
+**Date:** 2026-05-01
+**Loop:** `lane2-atomic-scale-20260428`
+**Science block:** 01
+**Runner:** `scripts/frontier_atomic_massive_nr_limit_bridge.py`
 **Status:** exact conditional kinetic support plus mass-gate boundary. This is
 not retained Rydberg closure.
 

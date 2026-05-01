@@ -1,7 +1,7 @@
 # Lane 2 Route Portfolio
 
 **Updated:** 2026-05-01T11:47:19Z
-**Loop:** `lane2-atomic-scale-20260428`  
+**Loop:** `lane2-atomic-scale-20260428`
 **Selection policy:** choose the route most likely to move claim state without touching Lane 4 or Lane 6.
 
 Scoring: 0-3 for claim-state movement, import retirement, review-blocker value,

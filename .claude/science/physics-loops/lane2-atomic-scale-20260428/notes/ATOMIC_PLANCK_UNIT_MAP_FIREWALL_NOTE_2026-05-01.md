@@ -1,9 +1,9 @@
 # Atomic Planck-Unit Map Firewall
 
-**Date:** 2026-05-01  
-**Loop:** `lane2-atomic-scale-20260428`  
-**Science block:** 01  
-**Runner:** `scripts/frontier_atomic_planck_unit_firewall.py`  
+**Date:** 2026-05-01
+**Loop:** `lane2-atomic-scale-20260428`
+**Science block:** 01
+**Runner:** `scripts/frontier_atomic_planck_unit_firewall.py`
 **Status:** exact negative boundary / conditional support for Lane 2. This is
 not retained Rydberg closure.
 

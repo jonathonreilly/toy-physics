@@ -1,9 +1,9 @@
 # Atomic QED Threshold Bridge Firewall
 
-**Date:** 2026-05-01  
-**Loop:** `lane2-atomic-scale-20260428`  
-**Science block:** 01  
-**Status:** branch-local exact negative boundary / support theorem for Lane 2 dependency accounting. This is not an atomic-scale framework prediction and not a retained Rydberg theorem.  
+**Date:** 2026-05-01
+**Loop:** `lane2-atomic-scale-20260428`
+**Science block:** 01
+**Status:** branch-local exact negative boundary / support theorem for Lane 2 dependency accounting. This is not an atomic-scale framework prediction and not a retained Rydberg theorem.
 **Runner:** `scripts/frontier_atomic_qed_threshold_bridge_firewall.py`
 
 ## Question

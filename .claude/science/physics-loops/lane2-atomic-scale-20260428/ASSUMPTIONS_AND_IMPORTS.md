@@ -1,8 +1,8 @@
 # Lane 2 Assumptions And Imports
 
 **Updated:** 2026-05-01T11:47:19Z
-**Loop:** `lane2-atomic-scale-20260428`  
-**Science block:** 01  
+**Loop:** `lane2-atomic-scale-20260428`
+**Science block:** 01
 **Claim boundary:** open/scaffold-only unless a later artifact retires the listed blockers.
 
 | Item | Role in claim | Current class | Source surface | Load-bearing? | Needed for target status? | Retirement path | Disposition |
