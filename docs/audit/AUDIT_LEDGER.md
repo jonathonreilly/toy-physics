@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T18:28:48.031550+00:00
+**Generated:** 2026-05-01T18:30:53.998331+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,24 +23,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 210 |
+| bounded | 209 |
 | support | 153 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 888 |
+| ~~audited_conditional~~ | 889 |
 | ~~audited_failed~~ | 79 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 293 |
-| `audited_conditional` | 597 |
+| `audited_conditional` | 598 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 577 |
+| `unaudited` | 576 |
 
 | criticality | count |
 |---|---:|
@@ -792,6 +792,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `left_handed_charge_matching_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | F | - |
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_finite_path_explanation_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
+| `lensing_k_sweep_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `lepton_shared_higgs_universality_collapse_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `lepton_single_higgs_pmns_triviality_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -9977,6 +9978,20 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `LENSING_LONG_PATH_TEST_NOTE.md`
   - `logs/2026-04-07-lensing-analytical-finite-path.txt`
 - **auditor confidence:** medium
+
+### `lensing_k_sweep_note`
+
+- **Note:** [`LENSING_K_SWEEP_NOTE.md`](../../docs/LENSING_K_SWEEP_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The propagator produces k-dependent gravitational deflection that oscillates between attractive and repulsive behavior, so the -1.40 slope at k*H=2.5 is one point on the curve rather than a fundamental constant, and the correction is read as wave-interference rather than geometric.  _(class `C`)_
+- **chain closes:** False — The registered runner recomputes the k-sweep table and shows strong k-dependence, sign changes, the k*H=2.5 reference slope, noisy k*H=4.0 behavior, and all-negative k*H=5.0 kubos. It does not by itself derive the wave-interference mechanism or register a kernel/mode authority that turns the numerical k-dependence into a closed physical-mechanism claim.
+- **rationale:** Issue: the numerical k-sweep is reproducible, but the load-bearing interpretation that the eikonal gap is specifically a wave-interference mechanism is stronger than the table alone. Why this blocks: the runner varies k*H and reports slopes/signs, but it does not compute mode content, kernel shapes, or another registered bridge that rules out alternative numerical/geometry explanations for the oscillatory response. Repair target: register the adjoint-kernel or mode-analysis authority as a dependency and add runner checks that connect the observed k-period/sign flips to a specific interference observable. Claim boundary until fixed: the Fam1 H=0.25, three-seed sweep shows strong k-dependence, sign flips, and that the k*H=2.5 slope is configuration-specific rather than fundamental.
+- **open / conditional deps cited:**
+  - `LENSING_ADJOINT_KERNEL_NOTE.md`
+- **auditor confidence:** high
 
 ### `lepton_shared_higgs_universality_collapse_note`
 
