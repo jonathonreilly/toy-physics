@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:09:44.669879+00:00
+**Generated:** 2026-05-01T11:13:23.015177+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 300 |
+| `audited_clean` | 301 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 542 |
+| `unaudited` | 541 |
 
 | criticality | count |
 |---|---:|
@@ -353,6 +353,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_selector_three_identity_support_proposal_readme_2026-04-21` | support | ~~audited_clean~~ | support | cross_family | codex-current | D | - |
 | `pmns_sole_axiom_hw1_source_transfer_boundary_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `pmns_twisted_flux_transfer_holonomy_boundary_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `poisson_self_gravity_born_audit_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -12450,6 +12451,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: The note presents the transverse profile as derived from a local equation, but the local 2D Poisson equation, source normalization, boundary conditions, iteration budget, and the longitudinal 1/(dx+0.1) factor are still chosen inputs. Why this blocks: the live runner verifies a finite Poisson-branch computation after those premises are supplied, but it does not derive the field law or source carrier from retained framework structure, so the retained derivation claim is conditional. Repair target: derive or cite a retained theorem for the Poisson equation and source/boundary normalization, remove the explicit longitudinal factor or prove its retained origin, and add convergence/residual checks for the solver. Claim boundary until fixed: it is safe to claim that the tested runner replaces the transverse imposed profile with a chosen 2D Poisson stencil while preserving TOWARD response, near-linear F versus M, Born behavior, and the s=0 null; it is not safe to claim the gravitational field is retained as an axiom-derived consequence.
 - **open / conditional deps cited:**
   - `GATE_B_POISSON_SELF_GRAVITY_NOTE.md`
+- **auditor confidence:** high
+
+### `poisson_self_gravity_born_audit_note`
+
+- **Note:** [`POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The Poisson-like self-gravity loop preserves Born at the frozen propagation-step level but not end-to-end through the full nonlinear iterated loop at the tested nonzero coupling.  _(class `C`)_
+- **chain closes:** True — The registered runner reproduces the exact zero-coupling reduction and the representative nonzero row: step-local Born 8.834e-16 versus end-to-end Born 6.830e-05, with both nonzero loop convergence flags false as reported.
+- **rationale:** Clean within the note's bounded audit scope. The note does not claim a universal theorem; it separates frozen-step Born behavior from full nonlinear-loop end-to-end behavior on one exact lattice family and one representative nonzero coupling. Current runner output matches the frozen row exactly, including exact epsilon=0 recovery, machine-clean step-local Born, and nonzero end-to-end Born drift. Residual risk is the stated narrowness: one lattice family, one coupling/source row, and no universal self-gravity Born-safety theorem.
 - **auditor confidence:** high
 
 ### `portable_card_extension_note`
