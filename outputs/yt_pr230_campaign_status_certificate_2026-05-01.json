@@ -15,6 +15,7 @@
     "ladder_ir_zero_mode": "exact negative boundary / scalar ladder IR zero-mode obstruction",
     "ladder_scout": "bounded-support / ladder-kernel scout",
     "legendre": "exact negative boundary / Legendre normalization freedom",
+    "lsz_norm": "conditional-support / scalar LSZ normalization cancellation",
     "momentum_harness": "bounded-support / momentum harness extension",
     "momentum_pilot": "bounded-support / momentum pilot scaling",
     "nonzero_momentum": "bounded-support / nonzero-momentum correlator scout",
@@ -24,7 +25,7 @@
     "static_mass": "exact negative boundary / static mass matching obstruction"
   },
   "fail_count": 0,
-  "pass_count": 17,
+  "pass_count": 18,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [
@@ -47,5 +48,5 @@
     "does not use observed top mass or y_t as proof input",
     "does not allow H_unit matrix-element definition as y_t readout"
   ],
-  "verdict": "The current PR #230 physics-loop campaign did not reach retained top-Yukawa closure.  It did retire the visible shortcut routes: Ward/H_unit, R_conn-only LSZ, Legendre normalization, free logdet bubble, contact HS/RPA, simplified ladder projector, same-1PI, finite ladder IR/zero-mode shortcut, and static/HQET without matching.  It also isolates a constructive heavy kinetic-mass route, a tiny nonzero-momentum correlator scout, and production harness momentum fields.  A bounded two-volume pilot has large finite-volume drift, so that route still needs production data and a derived matching theorem.  The free staggered action fixes its kinetic coefficient, but interacting renormalization remains open and is gauge-background sensitive.  Remaining closure requires production evidence or a genuinely new scalar LSZ/heavy-matching theorem."
+  "verdict": "The current PR #230 physics-loop campaign did not reach retained top-Yukawa closure.  It did retire the visible shortcut routes: Ward/H_unit, R_conn-only LSZ, Legendre normalization, free logdet bubble, contact HS/RPA, simplified ladder projector, same-1PI, finite ladder IR/zero-mode shortcut, and static/HQET without matching.  It also isolates a constructive heavy kinetic-mass route, a tiny nonzero-momentum correlator scout, and production harness momentum fields.  A bounded two-volume pilot has large finite-volume drift, so that route still needs production data and a derived matching theorem.  The free staggered action fixes its kinetic coefficient, but interacting renormalization remains open and is gauge-background sensitive.  A covariant scalar LSZ normalization model shows source scaling can cancel only if the interacting denominator and residue are derived together.  Remaining closure requires production evidence or a genuinely new scalar LSZ/heavy-matching theorem."
 }

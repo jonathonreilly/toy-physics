@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-16-interacting-kinetic-background-sensitivity
-blocks_completed: 30
-active_route: "interacting kinetic background sensitivity"
-active_hard_residual: "test whether the free kinetic coefficient can stand in for interacting c2"
+current_phase: campaign-rerun-block-17-scalar-lsz-normalization-cancellation
+blocks_completed: 31
+active_route: "scalar LSZ normalization covariance"
+active_hard_residual: "separate removable source-scaling ambiguity from the still-open interacting pole-residue theorem"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -120,6 +120,9 @@ files_touched:
   - "scripts/frontier_yt_interacting_kinetic_background_sensitivity.py"
   - "docs/YT_INTERACTING_KINETIC_BACKGROUND_SENSITIVITY_NOTE_2026-05-01.md"
   - "outputs/yt_interacting_kinetic_background_sensitivity_2026-05-01.json"
+  - "scripts/frontier_yt_scalar_lsz_normalization_cancellation.py"
+  - "docs/YT_SCALAR_LSZ_NORMALIZATION_CANCELLATION_NOTE_2026-05-01.md"
+  - "outputs/yt_scalar_lsz_normalization_cancellation_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -170,6 +173,7 @@ claim_state_movement:
   - "refreshed the assumptions/import exercise into an executable stress certificate; H_unit, observed values, alpha/plaquette, reduced pilots, c2 shortcuts, and Z_match shortcuts are forbidden"
   - "derived exact free Wilson-staggered kinetic coefficient M_kin=m sqrt(1+m^2); this is positive support but interacting c2 and SM matching remain open"
   - "measured small fixed-gauge-background kinetic-proxy sensitivity; free c2 cannot be used as an interacting stand-in without production ensemble evidence or an interacting theorem"
+  - "showed scalar source normalization cancels in a covariant LSZ proxy only when the scalar kernel and residue transform together; the interacting denominator and derivative remain open"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -178,5 +182,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Pivot to scalar LSZ/pole-residue theorem or derive an interacting kinetic/matching theorem; fixed-background sensitivity blocks the free-c2 shortcut."
+next_exact_action: "Attack the interacting scalar denominator/residue theorem directly, or derive the interacting kinetic/matching theorem; source-scaling bookkeeping alone is no longer the blocker."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

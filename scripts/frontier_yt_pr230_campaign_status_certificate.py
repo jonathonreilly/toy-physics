@@ -52,6 +52,7 @@ def main() -> int:
         "legendre": load("outputs/yt_legendre_kappa_gauge_freedom_2026-05-01.json"),
         "free_bubble": load("outputs/yt_free_scalar_two_point_pole_absence_2026-05-01.json"),
         "same_1pi": load("outputs/yt_same_1pi_scalar_pole_boundary_2026-05-01.json"),
+        "lsz_norm": load("outputs/yt_scalar_lsz_normalization_cancellation_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -98,6 +99,12 @@ def main() -> int:
         "same-1pi-route-needs-lsz",
         "same-1PI" in str(statuses["same_1pi"]),
         statuses["same_1pi"],
+    )
+    report(
+        "lsz-normalization-cancellation-still-needs-kernel",
+        "LSZ normalization cancellation" in str(statuses["lsz_norm"])
+        or "conditional-support" in str(statuses["lsz_norm"]),
+        statuses["lsz_norm"],
     )
     report(
         "finite-ladder-route-needs-ir-limit",
@@ -178,7 +185,9 @@ def main() -> int:
             "finite-volume drift, so that route still needs production data "
             "and a derived matching theorem.  The free staggered action fixes "
             "its kinetic coefficient, but interacting renormalization remains "
-            "open and is gauge-background sensitive.  Remaining "
+            "open and is gauge-background sensitive.  A covariant scalar LSZ "
+            "normalization model shows source scaling can cancel only if the "
+            "interacting denominator and residue are derived together.  Remaining "
             "closure requires production "
             "evidence or a genuinely new scalar LSZ/heavy-matching theorem."
         ),

@@ -307,6 +307,19 @@ spread `1.05497`.  Therefore the free kinetic coefficient is not sufficient to
 certify the interacting top kinetic readout.  The route still needs production
 ensemble measurement or a retained interacting kinetic/matching theorem.
 
+Scalar LSZ source-scaling covariance is conditional support only:
+
+```text
+python3 scripts/frontier_yt_scalar_lsz_normalization_cancellation.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+If `O -> c O`, a covariantly transformed scalar denominator scales the bubble
+and inverse residue by `c^2`, while the source vertex scales by `c`; the
+canonical `vertex/sqrt(Z_inverse)` proxy is invariant.  This repairs only the
+source-normalization bookkeeping.  It does not derive the interacting
+denominator, pole location, or residue derivative needed for PR #230 closure.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

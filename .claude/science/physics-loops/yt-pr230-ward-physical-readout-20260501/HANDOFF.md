@@ -106,6 +106,12 @@ What changed:
   backgrounds.  Therefore the free kinetic coefficient cannot be used as a
   zero-import interacting `c2` replacement; this route needs ensemble evidence
   or a retained interacting kinetic/matching theorem.
+- The scalar LSZ normalization-cancellation block shows a constructive repair
+  to the source-scaling obstruction: in a covariant scalar channel,
+  `O -> c O` scales the bubble, vertex, and inverse-residue so that the
+  canonical `vertex/sqrt(Z_inverse)` proxy is invariant.  This removes source
+  naming as the final blocker but leaves the interacting denominator, pole
+  location, finite-volume/IR limit, and residue derivative open.
 
 The scientific result is narrower than closure:
 
@@ -130,8 +136,8 @@ Package this PR #230 update.  The remaining positive options are now:
 1. strict direct physical measurement at a suitable top/heavy-quark scale with
    additive-mass/interacting-kinetic/matching control supplied by an
    independent observable or theorem;
-2. scalar projector/pole-residue/common-dressing theorem from retained
-   dynamics;
+2. interacting scalar denominator/pole-residue/common-dressing theorem from
+   retained dynamics;
 3. a newly derived Planck stationarity selector.
 ```
 

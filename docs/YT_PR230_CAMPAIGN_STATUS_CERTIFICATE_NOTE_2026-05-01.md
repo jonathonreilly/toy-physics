@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=17 FAIL=0
+# SUMMARY: PASS=18 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -42,6 +42,7 @@ The certificate consumes the PR-local route certificates for:
 - Legendre normalization boundary;
 - free scalar two-point pole absence;
 - same-1PI scalar-pole boundary;
+- scalar LSZ normalization cancellation;
 - scalar ladder IR / zero-mode obstruction;
 - heavy kinetic-mass route scout;
 - nonzero-momentum correlator scout;
@@ -71,6 +72,7 @@ visible shortcut routes:
 | simplified ladder | projector/source normalization sensitive |
 | finite ladder eigenvalue | IR/zero-mode and finite-volume prescription sensitive |
 | same-1PI | fixes `y^2 D_phi`, not `y` and residue separately |
+| scalar LSZ normalization cancellation | source scaling can cancel only when kernel and residue are derived together |
 | current-scale direct MC | `am_top = 81.423`, not a useful relativistic top run |
 | HQET/static shortcut | removes rest mass, therefore needs matching |
 | heavy kinetic mass | cancels additive rest mass, but needs nonzero-momentum data and matching |

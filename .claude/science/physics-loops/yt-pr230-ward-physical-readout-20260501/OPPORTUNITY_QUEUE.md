@@ -25,7 +25,9 @@
    pole denominator, so a positive route needs the actual momentum-dependent
    interacting scalar source two-point function or a new retained symmetry.
    Same-1PI coefficient equality cannot replace this because it fixes only
-   `y^2 D_phi`.
+   `y^2 D_phi`.  Source scaling itself can cancel in a covariant LSZ
+   construction, so the hard blocker is now the interacting denominator and
+   residue theorem, not field naming.
 4. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 5. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`

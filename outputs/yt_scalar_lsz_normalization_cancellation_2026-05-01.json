@@ -1,0 +1,84 @@
+{
+  "actual_current_surface_status": "conditional-support / scalar LSZ normalization cancellation",
+  "canonical_y_proxy_relative_spread": 0.0,
+  "fail_count": 0,
+  "parameters": {
+    "Pi0": 0.4981639310471718,
+    "Pi1": 0.4890477697396325,
+    "Z_inverse_base": 0.2372181717674397,
+    "base_kernel_chosen_for_pole": 2.007371344404516,
+    "dPi_dp_hat_sq": -0.2372181717674397,
+    "mass": 0.25,
+    "p_hat_sq": 0.038429439193539104,
+    "spatial_L": 32,
+    "time_T": 64
+  },
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The interacting scalar-channel kernel and pole-residue derivative remain open imports.",
+  "required_next_theorem": [
+    "derive the interacting scalar-channel Bethe-Salpeter/RPA denominator from Wilson-staggered dynamics",
+    "derive the scalar source/projector and its covariant kernel normalization together",
+    "prove an isolated pole in the controlled finite-volume/IR limit",
+    "compute the inverse-propagator derivative at the pole",
+    "only then identify the canonical LSZ-normalized Yukawa readout"
+  ],
+  "rows": [
+    {
+      "Pi0_scaled": 0.12454098276179296,
+      "Pi1_scaled": 0.12226194243490812,
+      "Z_inverse_scaled": 0.059304542941859925,
+      "canonical_y_proxy": 2.0531752610498755,
+      "covariant_kernel": 8.029485377618064,
+      "covariant_pole_residual": 1.3877787807814457e-17,
+      "fixed_kernel_pole_residual": 0.3736229482853789,
+      "scalar_propagator_residue_proxy": 16.8621146103489,
+      "source_scale": 0.5,
+      "source_vertex_scaled": 0.5
+    },
+    {
+      "Pi0_scaled": 0.4981639310471718,
+      "Pi1_scaled": 0.4890477697396325,
+      "Z_inverse_scaled": 0.2372181717674397,
+      "canonical_y_proxy": 2.0531752610498755,
+      "covariant_kernel": 2.007371344404516,
+      "covariant_pole_residual": 5.551115123125783e-17,
+      "fixed_kernel_pole_residual": 5.551115123125783e-17,
+      "scalar_propagator_residue_proxy": 4.215528652587225,
+      "source_scale": 1.0,
+      "source_vertex_scaled": 1.0
+    },
+    {
+      "Pi0_scaled": 1.9926557241886873,
+      "Pi1_scaled": 1.95619107895853,
+      "Z_inverse_scaled": 0.9488726870697588,
+      "canonical_y_proxy": 2.0531752610498755,
+      "covariant_kernel": 0.501842836101129,
+      "covariant_pole_residual": 2.220446049250313e-16,
+      "fixed_kernel_pole_residual": -1.4944917931415154,
+      "scalar_propagator_residue_proxy": 1.0538821631468063,
+      "source_scale": 2.0,
+      "source_vertex_scaled": 2.0
+    },
+    {
+      "Pi0_scaled": 4.483475379424546,
+      "Pi1_scaled": 4.401429927656692,
+      "Z_inverse_scaled": 2.1349635459069574,
+      "canonical_y_proxy": 2.0531752610498755,
+      "covariant_kernel": 0.22304126048939066,
+      "covariant_pole_residual": 8.881784197001252e-16,
+      "fixed_kernel_pole_residual": -3.9853114483773746,
+      "scalar_propagator_residue_proxy": 0.46839207250969167,
+      "source_scale": 3.0,
+      "source_vertex_scaled": 3.0
+    }
+  ],
+  "strict_non_claims": [
+    "not a retained y_t derivation",
+    "not a production measurement",
+    "does not use observed top/Higgs/Yukawa values",
+    "does not define y_t through H_unit matrix elements",
+    "does not set the contact kernel by fiat as proof"
+  ],
+  "verdict": "A correctly covariant scalar LSZ construction can cancel pure source normalization from the canonical Yukawa proxy: O -> c O scales the bubble and inverse-propagator derivative by c^2, while the source vertex scales by c, leaving vertex/sqrt(Z_inverse) invariant.  This repairs only the normalization bookkeeping.  It does not close PR #230 because the interacting pole denominator, kernel normalization, pole location, and derivative were imposed inside the model rather than derived from the retained substrate."
+}
