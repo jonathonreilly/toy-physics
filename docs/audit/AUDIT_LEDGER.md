@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:36:37.544494+00:00
+**Generated:** 2026-05-01T06:37:56.218650+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 194 |
-| support | 168 |
+| support | 167 |
 | open | 10 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 845 |
+| ~~audited_conditional~~ | 846 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
@@ -637,7 +637,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `global_coherence_held_out2_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `grav_decoherence_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
-| `gravitational_memory_note_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gravitational_wave_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `graviton_mass_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -764,6 +763,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mass_spectrum_derived_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `memory_decay_diagnosis_2026-04-11` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `minimal_axioms_2026-04-11` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `mirror_program_synthesis` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `n_eff_from_three_generations_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -7450,21 +7450,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
-### `gravitational_memory_note_2026-04-11`
-
-- **Note:** [`GRAVITATIONAL_MEMORY_NOTE_2026-04-11.md`](../../docs/GRAVITATIONAL_MEMORY_NOTE_2026-04-11.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** - post-pulse offset appears late and accumulates after the field pulse has passed  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (memory_decay_diagnosis_2026-04-11=support, memory_mu2_geometry_sweep_note_2026-04-11=bounded), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (memory_decay_diagnosis_2026-04-11=support, memory_mu2_geometry_sweep_note_2026-04-11=bounded). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `MEMORY_DECAY_DIAGNOSIS_2026-04-11.md`
-  - `MEMORY_MU2_GEOMETRY_SWEEP_NOTE_2026-04-11.md`
-- **auditor confidence:** high
-
 ### `gravitational_wave_probe_note`
 
 - **Note:** [`GRAVITATIONAL_WAVE_PROBE_NOTE.md`](../../docs/GRAVITATIONAL_WAVE_PROBE_NOTE.md)
@@ -10392,6 +10377,20 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md`
   - `THREE_GENERATION_STRUCTURE_NOTE.md`
 - **auditor confidence:** high
+
+### `memory_decay_diagnosis_2026-04-11`
+
+- **Note:** [`MEMORY_DECAY_DIAGNOSIS_2026-04-11.md`](../../docs/MEMORY_DECAY_DIAGNOSIS_2026-04-11.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Memory is quadratic in Phi, so it decays as exp(-2 mu d). The observed 7-order-of-magnitude drop from N=41 to N=101 matches this scaling.  _(class `B`)_
+- **chain closes:** False — The Yukawa scaling explanation is plausible, but the memory data, quadratic dependence, and finite-size-artifact diagnosis are not backed by a registered runner or audited source row.
+- **rationale:** Issue: the note diagnoses memory decay as Yukawa-screening finite-size artifact, but the listed N=41..101 memory values and the claim that memory is quadratic in Phi have no registered runner or explicit audited dependency in this row. Why this blocks: the audit can verify the algebraic form exp(-2 mu d) once the premises are granted, but cannot verify the measured memory decay or that this is the unique root cause from the restricted inputs. Repair target: register the memory-screening runner/log and include the mu=0 comparison or a proof that the observable is quadratic in Phi over this setup. Claim boundary until fixed: the row may be cited as conditional diagnostic support for a Yukawa-screening finite-size explanation, not as a clean audited root-cause theorem.
+- **open / conditional deps cited:**
+  - `memory_decay_diagnosis_2026-04-11 -> missing memory-screening runner/log and quadratic-Phi proof`
+- **auditor confidence:** medium
 
 ### `mesoscopic_surrogate_annular_tapered_sweep_note`
 

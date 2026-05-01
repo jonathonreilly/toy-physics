@@ -5,7 +5,7 @@
     "leaf": 264,
     "medium": 133
   },
-  "generated_at": "2026-05-01T06:36:37.201541+00:00",
+  "generated_at": "2026-05-01T06:37:55.959351+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9975,23 +9975,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "memory_decay_diagnosis_2026-04-11",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/MEMORY_DECAY_DIAGNOSIS_2026-04-11.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "memory_mu2_geometry_sweep_note_2026-04-11",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14079,6 +14062,26 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "gravitational_memory_note_2026-04-11",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "memory_decay_diagnosis_2026-04-11",
+        "memory_mu2_geometry_sweep_note_2026-04-11"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/GRAVITATIONAL_MEMORY_NOTE_2026-04-11.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_gravitational_memory.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14872,6 +14875,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 203,
+  "ready_count": 202,
   "total_pending": 600
 }
