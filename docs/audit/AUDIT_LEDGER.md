@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:23:12.316438+00:00
+**Generated:** 2026-05-01T23:28:40.371918+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 320 |
+| `audited_clean` | 321 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 493 |
+| `unaudited` | 492 |
 
 | criticality | count |
 |---|---:|
@@ -374,6 +374,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
+| `replay_environment_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `s3_boundary_link_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `s3_taste_cube_decomposition_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -13326,6 +13327,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: The load-bearing step still imports unratified direct authority: YUKAWA_COLOR_PROJECTION_THEOREM.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
 - **open / conditional deps cited:**
   - `YUKAWA_COLOR_PROJECTION_THEOREM.md`
+- **auditor confidence:** high
+
+### `replay_environment_note`
+
+- **Note:** [`REPLAY_ENVIRONMENT_NOTE.md`](../../docs/REPLAY_ENVIRONMENT_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-fresh-agent-019de5de`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The provided runner implements the stated convention by doing nothing when numpy is importable, re-execing the target script under /usr/bin/python3 when numpy is missing and the current interpreter is different, and otherwise exiting with a clear local error; current inspection confirms the helper loads and numpy is importable under the declared system path, with several retained replay scripts calling the helper.  _(class `B`)_
+- **chain closes:** True — Within the restricted inputs, the note's operational claims close: the runner script matches the documented bootstrap behavior, the current inspection output supports that the helper is present and importable, and the usage search supports the claim that relevant retained numpy replay lanes call it. The note also explicitly limits its scope to local operational reproducibility and disclaims CI enforcement, scientific promotion, and generalization beyond this host.
+- **rationale:** The support note is internally accurate against the provided runner and inspection output. Its load-bearing operational convention is implemented by the bootstrap helper and reflected in listed script usages. Because the claim boundary is explicitly local, non-scientific, and non-CI-enforced, no hidden premise is needed for the stated support-level claim.
 - **auditor confidence:** high
 
 ### `reproduction_audit_note`
