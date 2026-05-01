@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:01:26.900527+00:00
+**Generated:** 2026-05-01T07:02:29.365890+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 266 |
+| `audited_clean` | 267 |
 | `audited_conditional` | 583 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 586 |
+| `unaudited` | 585 |
 
 | criticality | count |
 |---|---:|
@@ -302,6 +302,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `literature_backmatch_live_scan_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | D | - |
 | `main_open_cubic_validation_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `mesoscopic_surrogate_backreaction_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -10461,6 +10462,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** The bounded sweep shows annular, hollow-square, and tapered localized source families do not beat the admissible topN source-control frontier under the stated support/capture floors.  _(class `C`)_
 - **chain closes:** False — The bounded negative conclusion is reproduced, but the audit row is a parser false positive: the source Status declares a bounded localization sweep on a proposed_retained surrogate family, not a proposed_retained claim. The live runner also reports a different topN tie representative than the frozen note while preserving the same frontier conclusion.
 - **rationale:** Issue: The source note is explicitly a bounded localization sweep, but the queue records it as proposed_retained because the Status line mentions the proposed_retained 3D mesoscopic surrogate family being tested. The current runner also returns topN 121 as the best overall tie representative, while the note names topN 225; this does not change the frontier result but makes the frozen row stale at the exact-row level. Why this blocks: a retained audit cannot ratify a bounded single-family control sweep, and the exact frozen best-row statement is not current with the runner. Repair target: rewrite the Status line so the parser records bounded/proposed_bounded status and update the note/log or tie-break rule for the topN best-row representative; a retained theorem would need a derivation beyond this finite sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces that no non-degenerate annular, hollow-square, or tapered family beats the admissible topN frontier under the floors; it is not safe to present this as a retained localization theorem or to rely on the stale topN 225 best-row wording without qualification.
+- **auditor confidence:** high
+
+### `mesoscopic_surrogate_backreaction_note`
+
+- **Note:** [`MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The broad relaunch surrogate can source a weak additive field and supports bounded one-step two-body symmetry, while still not producing a self-maintaining localized inertial object.  _(class `C`)_
+- **chain closes:** True — The registered harness recomputes the same-site additivity, disjoint-source additivity, and one-step two-body symmetry rows, and the current mean/max summaries match the note. The note's limitations are explicit: broad surrogate, one-step weak-field only, no persistent-mass closure.
+- **rationale:** The runner checks the load-bearing bounded source/backreaction claim directly and reproduces the frozen same-shape additivity, disjoint additivity, and one-step two-body symmetry values. The note does not upgrade the result into persistent mass or localized inertial-object closure, so the audited claim closes within the stated mesoscopic-surrogate boundary. Residual risk is limited to whether later stages remain stable, which the note leaves open.
 - **auditor confidence:** high
 
 ### `mesoscopic_surrogate_compact_floor_sweep_note`
