@@ -86,7 +86,19 @@
     },
     {
       "from": "alpha_s_derived_note",
+      "to": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30"
+    },
+    {
+      "from": "alpha_s_derived_note",
       "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
+      "to": "minimal_axioms_2026-04-11"
     },
     {
       "from": "angular_kernel_underdetermination_no_go_note",
@@ -12878,6 +12890,10 @@
     },
     {
       "from": "publication.ci3_z3.derivation_validation_map",
+      "to": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_validation_map",
       "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
     },
     {
@@ -15950,6 +15966,10 @@
     },
     {
       "from": "publication.ci3_z3.quantitative_summary_table",
+      "to": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30"
+    },
+    {
+      "from": "publication.ci3_z3.quantitative_summary_table",
       "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
     },
     {
@@ -18609,7 +18629,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T15:30:30.297341+00:00",
+  "generated_at": "2026-05-01T15:38:35.737633+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19742,12 +19762,26 @@
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained quantitative lane on `main`",
       "deps": [
+        "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
         "plaquette_self_consistency_note"
       ],
-      "note_hash": "0ce636e93b6efb24b5eba5744420165bbcd68450d84f0ed36497fabfabc40e5c",
+      "note_hash": "c1484cef48035c14bcada5e5f0954a4102d2280b4fd7f32618580d5ef9715b54",
       "path": "docs/ALPHA_S_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_yt_zero_import_chain.py",
       "title": "`alpha_s(M_Z)` Retained Same-Surface-Derived Authority"
+    },
+    "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30": {
+      "claim_id": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained measurement route; production certificate",
+      "deps": [
+        "graph_first_su3_integration_note",
+        "minimal_axioms_2026-04-11"
+      ],
+      "note_hash": "1849c0f3a377926ac38ac38a8c4fdf911b5ae94206386bf2a934521683600295",
+      "path": "docs/ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md",
+      "runner_path": "scripts/frontier_alpha_s_direct_wilson_loop.py",
+      "title": "Direct Wilson-Loop `alpha_s(M_Z)` Derivation Gate"
     },
     "alt_connectivity_family_basin_note": {
       "claim_id": "alt_connectivity_family_basin_note",
@@ -33480,6 +33514,7 @@
         "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
         "single_axiom_hilbert_note",
         "single_axiom_information_note",
+        "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
         "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
         "yt_ew_color_projection_theorem",
         "yt_ew_delta_r_retention_analysis_note_2026-04-18",
@@ -33624,7 +33659,7 @@
         "charged_lepton_two_higgs_canonical_reduction_note",
         "publication.ci3_z3.claims_table"
       ],
-      "note_hash": "06e8ce3de38b3331ee3eef45e55f469c1cb06e7733b4c2b1b3674dc3039293c9",
+      "note_hash": "cfe322be4b95bcb32c9bc144fea7be12f5517ffbfb232400e18e24f3bff197bd",
       "path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
       "runner_path": null,
       "title": "Derivation / Validation Map"
@@ -34358,6 +34393,7 @@
         "publication.ci3_z3.prediction_surface_2026-04-15",
         "publication.ci3_z3.publication_matrix",
         "alpha_s_derived_note",
+        "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
         "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
         "confinement_string_tension_note",
         "yt_ew_color_projection_theorem",
@@ -34424,7 +34460,7 @@
         "ckm_consecutive_primes_s3_koide_bridge_support_note_2026-04-25",
         "down_type_mass_ratio_ckm_dual_note"
       ],
-      "note_hash": "cba42c1c5e299e8a75f6a70df2b0e8594afbbe5afae6f915d27b8147531f8b26",
+      "note_hash": "2ef9605f768186091a88ce4f938bebea6d20da1f9032ee3c4f7f599cd4c01d65",
       "path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
       "runner_path": null,
       "title": "Quantitative Summary Table"
@@ -41550,17 +41586,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4652,
+    "edge_count": 4657,
     "leaf_count": 705,
-    "node_count": 1662,
+    "node_count": 1663,
     "root_count": 1171,
-    "runners_with_path": 1230,
+    "runners_with_path": 1231,
     "status_counts": {
       "bounded": 456,
       "open": 48,
       "proposed_no_go": 47,
       "proposed_promoted": 1,
-      "proposed_retained": 355,
+      "proposed_retained": 356,
       "support": 343,
       "unknown": 412
     }

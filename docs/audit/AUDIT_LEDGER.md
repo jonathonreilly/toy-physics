@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T15:30:33.347440+00:00
+**Generated:** 2026-05-01T15:38:38.869101+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,40 +23,40 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 54 |
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
-| bounded | 199 |
-| support | 152 |
+| bounded | 201 |
+| support | 156 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
-| ~~audited_renaming~~ | 51 |
-| ~~audited_conditional~~ | 871 |
+| ~~audited_renaming~~ | 48 |
+| ~~audited_conditional~~ | 869 |
 | ~~audited_failed~~ | 103 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 292 |
-| `audited_conditional` | 590 |
+| `audited_conditional` | 584 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
-| `audited_renaming` | 18 |
-| `unaudited` | 570 |
+| `audited_renaming` | 17 |
+| `unaudited` | 578 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 71 |
-| `high` | 339 |
+| `critical` | 90 |
+| `high` | 321 |
 | `medium` | 391 |
 | `leaf` | 763 |
 
-- **Proposed claims demoted by upstream:** 141
-- **Citation cycles detected:** 59
+- **Proposed claims demoted by upstream:** 143
+- **Citation cycles detected:** 61
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1164
-- runners with (C) first-principles compute hits: 543
-- runners with (D) external comparator hits: 287
+- runners classified: 1165
+- runners with (C) first-principles compute hits: 544
+- runners with (D) external comparator hits: 288
 - decoration candidates (no C, no D): 81
 
 ## Top 25 by load-bearing score (topology only)
@@ -65,31 +65,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | criticality | desc | score | audit_status | effective |
 |---:|---|---|---:|---:|---|---|
-| 1 | `alpha_s_derived_note` | critical | 256 | 29.51 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 28.86 | `audited_conditional` | ~~audited_conditional~~ |
-| 3 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 28.84 | `audited_conditional` | ~~audited_conditional~~ |
-| 4 | `graph_first_su3_integration_note` | critical | 297 | 28.72 | `audited_clean` | **retained** |
-| 5 | `yt_ward_identity_derivation_theorem` | critical | 223 | 27.31 | `audited_renaming` | ~~audited_renaming~~ |
-| 6 | `observable_principle_from_axiom_note` | critical | 247 | 26.45 | `audited_conditional` | ~~audited_conditional~~ |
+| 1 | `alpha_s_derived_note` | critical | 257 | 29.51 | `unaudited` | ~~audited_conditional~~ |
+| 2 | `graph_first_su3_integration_note` | critical | 309 | 29.28 | `audited_clean` | **retained** |
+| 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 115 | 28.86 | `audited_conditional` | ~~audited_conditional~~ |
+| 4 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 114 | 28.84 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `yt_ward_identity_derivation_theorem` | critical | 262 | 27.54 | `audited_renaming` | ~~audited_renaming~~ |
+| 6 | `observable_principle_from_axiom_note` | critical | 292 | 26.70 | `audited_conditional` | ~~audited_conditional~~ |
 | 7 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 101 | 23.67 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `yt_ew_color_projection_theorem` | critical | 126 | 22.49 | `audited_conditional` | ~~audited_conditional~~ |
-| 9 | `three_generation_observable_theorem_note` | critical | 287 | 21.67 | `audited_conditional` | ~~audited_conditional~~ |
+| 8 | `yt_ew_color_projection_theorem` | critical | 259 | 23.52 | `audited_conditional` | ~~audited_conditional~~ |
+| 9 | `three_generation_observable_theorem_note` | critical | 300 | 21.73 | `audited_conditional` | ~~audited_conditional~~ |
 | 10 | `three_generation_structure_note` | critical | 264 | 21.05 | `audited_conditional` | ~~audited_conditional~~ |
 | 11 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 113 | 20.83 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `one_generation_matter_closure_note` | critical | 244 | 20.44 | `audited_conditional` | ~~audited_conditional~~ |
-| 13 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 93 | 19.55 | `audited_conditional` | ~~audited_conditional~~ |
-| 14 | `minimal_axioms_2026-04-11` | critical | 119 | 18.91 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `minimal_axioms_2026-04-11` | critical | 257 | 20.51 | `audited_conditional` | ~~audited_conditional~~ |
+| 13 | `one_generation_matter_closure_note` | critical | 244 | 20.44 | `audited_conditional` | ~~audited_conditional~~ |
+| 14 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 93 | 19.55 | `audited_conditional` | ~~audited_conditional~~ |
 | 15 | `anomaly_forces_time_theorem` | critical | 261 | 18.53 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `graph_first_selector_derivation_note` | critical | 296 | 18.21 | `audited_clean` | **retained** |
-| 17 | `native_gauge_closure_note` | critical | 293 | 17.70 | `audited_clean` | **retained** |
+| 16 | `graph_first_selector_derivation_note` | critical | 308 | 18.27 | `audited_clean` | **retained** |
+| 17 | `native_gauge_closure_note` | critical | 305 | 17.76 | `audited_clean` | **retained** |
 | 18 | `left_handed_charge_matching_note` | critical | 265 | 17.55 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `ckm_atlas_axiom_closure_note` | critical | 74 | 17.23 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | critical | 120 | 16.42 | `audited_conditional` | ~~audited_conditional~~ |
-| 21 | `plaquette_self_consistency_note` | critical | 260 | 16.03 | `unaudited` | ~~audited_conditional~~ |
-| 22 | `physical_lattice_necessity_note` | critical | 286 | 15.66 | `audited_conditional` | ~~audited_conditional~~ |
-| 23 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | critical | 127 | 15.50 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `site_phase_cube_shift_intertwiner_note` | critical | 290 | 15.19 | `audited_clean` | support |
-| 25 | `cosmological_constant_spectral_gap_identity_theorem_note` | critical | 48 | 15.12 | `audited_conditional` | ~~audited_conditional~~ |
+| 21 | `plaquette_self_consistency_note` | critical | 261 | 16.03 | `unaudited` | ~~audited_conditional~~ |
+| 22 | `physical_lattice_necessity_note` | critical | 299 | 15.73 | `audited_conditional` | ~~audited_conditional~~ |
+| 23 | `rconn_derived_note` | critical | 262 | 15.54 | `audited_conditional` | ~~audited_conditional~~ |
+| 24 | `higgs_mass_derived_note` | critical | 258 | 15.52 | `audited_conditional` | ~~audited_conditional~~ |
+| 25 | `higgs_vacuum_explicit_systematic_note` | critical | 257 | 15.51 | `audited_conditional` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -401,7 +401,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ai_methodology.raw.prompts_session_04c820e1` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `ai_methodology.raw.prompts_session_9fc3990b_jonreilly` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `ai_methodology.raw.prompts_session_current` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `alpha_s_derived_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `alt_connectivity_family_complex_failure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alt_connectivity_family_failure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alternative_coupled_field_probe_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -703,10 +702,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hard_geometry_head_to_head_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `hierarchy_bosonic_bilinear_selector_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `hierarchy_matsubara_decomposition_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `higgs_from_lattice_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `higgs_mass_derived_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
 | `higgs_mass_hierarchy_correction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `higgs_mechanism_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `higgs_vacuum_explicit_systematic_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `higher_dimension_status_2026-04-01` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -969,15 +966,12 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_color_projection_correction_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_exact_coarse_grained_bridge_operator_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
-| `yt_explicit_systematic_budget_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p1_i_s_revision_verification_note_2026-04-17` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_p2_taste_staircase_beta_functions_note_2026-04-17` | _proposed_no_go_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_p2_taste_staircase_transport_note_2026-04-17` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_p2_v_matching_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `yt_qfp_insensitivity_support_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
-| `yukawa_color_projection_theorem` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `pmns_selector_unique_amplitude_slot_note` | unknown | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-gpt-5 | A | `pmns_selector_class_space_uniqueness_note` |
@@ -1075,7 +1069,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
-| `higgs_mass_from_axiom_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `hypercharge_identification_note` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
@@ -1330,21 +1323,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `accepted_plaquette_coupling_chain_parent_not_registered`
 - **auditor confidence:** high
-
-### `alpha_s_derived_note`
-
-- **Note:** [`ALPHA_S_DERIVED_NOTE.md`](../../docs/ALPHA_S_DERIVED_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-gpt-5.5-backlog-sweep-2026-04-29`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** alpha_s(v) = alpha_bare / u_0^2 = 0.1033, followed by the one-decade low-energy transfer alpha_s(M_Z) = 0.1181.  _(class `B`)_
-- **chain closes:** False — No. The chain reads the canonical plaquette value from the one-hop dependency and then invokes a retained v-to-M_Z running bridge/threshold infrastructure that is not supplied as a one-hop authority.
-- **rationale:** Issue: the restricted inputs do not include the retained low-energy running bridge needed to turn alpha_s(v) into alpha_s(M_Z), and the plaquette dependency itself says the exact analytic beta=6 insertion is not closed. Why this blocks: the note's 0.1181 result is reproducible by the runner, but in the fresh-look context it rests on an unsupplied bridge plus a proposed plaquette evaluation rather than a closed retained derivation. Repair target: cite and audit the running-bridge theorem/threshold map and close or explicitly scope the plaquette beta=6 insertion status. Claim boundary until fixed: alpha_s(M_Z)=0.1181 may be treated as a conditional same-surface numerical lane given the canonical plaquette and runner bridge, not as independently audited clean closure.
-- **open / conditional deps cited:**
-  - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md: proposed plaquette evaluation with explicit remaining analytic insertion gap`
-  - `missing one-hop dependency: retained low-energy running bridge from v to M_Z`
-- **auditor confidence:** 0.86
 
 ### `alt_connectivity_family_basin_note`
 
@@ -7904,21 +7882,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **rationale:** The bounded claim closes on its stated domain: temporal APBC is assumed, and the runner independently verifies the determinant identities, the u0^(8Lt) exponent independence, the exact m/u0 homogeneity, the finite APBC intensive limit, and the divergent PBC coefficient. Residual risk is limited to the note's explicit boundary: this does not yet derive why the physical electroweak order parameter must use this intensive normalization. As a bounded support theorem for the minimal hierarchy block, the result is audit-clean.
 - **auditor confidence:** high
 
-### `higgs_from_lattice_note`
-
-- **Note:** [`HIGGS_FROM_LATTICE_NOTE.md`](../../docs/HIGGS_FROM_LATTICE_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** Use HIGGS_MASS_DERIVED_NOTE for the current Higgs authority boundary; this note exists only to summarize the current bounded quantitative posture.  _(class `B`)_
-- **chain closes:** False — The note is a bounded posture summary that depends on an external Higgs authority note and runner; it does not independently close a quantitative Higgs theorem.
-- **rationale:** Issue: the bounded Higgs support claim delegates its authority to HIGGS_MASS_DERIVED_NOTE and a runner whose quantitative behavior depends on accepted y_t(v) and comparison inputs. Why this blocks: the note supports bounded consistency studies but does not derive a Higgs mass or a standalone lattice-to-Higgs quantitative theorem from retained inputs. Repair target: make the Higgs authority boundary and accepted y_t(v) route explicit retained dependencies, or restrict this row to bounded/support scaffolding without theorem-surface language. Claim boundary until fixed: bounded quantitative Higgs-support posture only, not an audited Higgs-from-lattice closure.
-- **open / conditional deps cited:**
-  - `HIGGS_MASS_DERIVED_NOTE.md`
-  - `scripts/frontier_higgs_mass_derived.py`
-- **auditor confidence:** high
-
 ### `higgs_mass_derived_note`
 
 - **Note:** [`HIGGS_MASS_DERIVED_NOTE.md`](../../docs/HIGGS_MASS_DERIVED_NOTE.md)
@@ -7935,25 +7898,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `HIGGS_FROM_LATTICE_NOTE.md`
 - **auditor confidence:** high
 
-### `higgs_mass_from_axiom_note`
-
-- **Note:** [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](../../docs/HIGGS_MASS_FROM_AXIOM_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `self`)
-- **auditor:** `codex-gpt-5.5-backlog-sweep-2026-04-29`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** This curvature is the dimensionless ratio (m_H / v)^2 in lattice units, so m_H / v = 1 / (2 u_0).  _(class `F`)_
-- **chain closes:** False — The note identifies a taste-channel curvature with the physical Higgs mass-to-VEV ratio, but the required curvature-to-pole-mass/VEV bridge and the listed upstream dependencies are not available as ledger one-hop deps.
-- **rationale:** Issue: the decisive step equates a dimensionless per-taste curvature from the mean-field determinant with the physical ratio (m_H/v)^2, then reads off m_H = v/(2 u_0). Why this blocks: that is a physical observable identification, not an algebraic consequence of the restricted inputs; the note's own susceptibility discussion shows an alternate mapping gives a different scale unless an additional hierarchy/normalization bridge is assumed. Repair target: add audited one-hop dependencies for the determinant, degeneracy, hierarchy, color-projection, and CW mass-readout authorities, plus a theorem deriving the scalar curvature-to-Higgs-mass normalization. Claim boundary until fixed: the note remains a support-route accounting argument for N_c cancellation and a 140.3 GeV auxiliary estimate, not a closed derivation of the Higgs mass from the axiom.
-- **open / conditional deps cited:**
-  - `TASTE_POLYNOMIAL_NOTE.md: listed dependency missing from ledger deps`
-  - `DM_AMGM_SATURATION_NOTE.md: listed dependency missing from ledger deps`
-  - `HIERARCHY_THEOREM.md: listed dependency missing from ledger deps`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md: listed dependency missing from ledger deps`
-  - `HIGGS_MASS_DERIVED_NOTE.md: listed dependency missing from ledger deps`
-  - `missing theorem: scalar curvature-to-physical Higgs mass/VEV normalization`
-- **auditor confidence:** 0.91
-
 ### `higgs_mass_hierarchy_correction_note`
 
 - **Note:** [`HIGGS_MASS_HIERARCHY_CORRECTION_NOTE.md`](../../docs/HIGGS_MASS_HIERARCHY_CORRECTION_NOTE.md)
@@ -7965,21 +7909,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a bounded note without audit-ratified executable closure.
 - **auditor confidence:** medium
-
-### `higgs_mechanism_note`
-
-- **Note:** [`HIGGS_MECHANISM_NOTE.md`](../../docs/HIGGS_MECHANISM_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** Use HIGGS_MASS_DERIVED_NOTE for the current Higgs authority boundary; this note exists only to support the mechanism-level claim.  _(class `B`)_
-- **chain closes:** False — The note intentionally delegates the authority boundary to another Higgs note and makes support-only mechanism claims, so it does not close as a standalone derivation from the audit bundle.
-- **rationale:** Issue: the mechanism note depends on HIGGS_MASS_DERIVED_NOTE and the bounded Higgs runner's comparison-input machinery, while explicitly disclaiming exact Higgs-mass closure. Why this blocks: the mechanism-level statements are support claims conditional on an external Higgs authority boundary and do not independently derive EWSB or hierarchy closure from retained one-hop inputs. Repair target: make the Higgs authority note a retained dependency and provide a runner that isolates the mechanism-level theorem from SM-input consistency checks. Claim boundary until fixed: this remains support for a possible Higgs mechanism route, not an audited retained Higgs mechanism theorem.
-- **open / conditional deps cited:**
-  - `HIGGS_MASS_DERIVED_NOTE.md`
-  - `scripts/frontier_higgs_mass_derived.py`
-- **auditor confidence:** high
 
 ### `higgs_vacuum_explicit_systematic_note`
 
@@ -15018,22 +14947,6 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
 - **rationale:** Issue: the transport budget is validated on the accepted UV-localized bridge/profile and forced window, with the saddle and endpoint kernel selected as inputs rather than independently derived here. Why this blocks: the note can support a bounded, calibrated transport match, but not an audit-clean theorem that the exact interacting bridge must take this form from retained premises alone. Repair target: derive the forced UV window, stable saddle/profile, and endpoint response kernel from independent retained inputs, then rerun the transport-budget checks without target-conditioned selection. Claim boundary until fixed: the current result is a controlled numerical transport match on the selected viable branch family.
 - **auditor confidence:** high
 
-### `yt_explicit_systematic_budget_note`
-
-- **Note:** [`YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md`](../../docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
-- **current_status:** support
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-gpt-5.5-backlog-sweep-2026-04-29`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The exact-bridge tail accounting remains valid and should now be read as the residual budget of the independent Schur-bridge cross-check path.  _(class `B`)_
-- **chain closes:** False — The arithmetic budget closes for the hard-coded bridge-tail inputs, but the note supplies no one-hop authority deriving those residual-tail numbers or the closed structural-class residual.
-- **rationale:** Issue: the runner verifies budget arithmetic and nonnegativity for named bridge-path residual inputs, but those inputs are taken as hard-coded route quantities rather than derived from listed one-hop dependencies. Why this blocks: the audit can confirm internal residual-budget accounting, not the validity of the exact-bridge tails or the claim that structural bridge ambiguity is closed. Repair target: add audited dependencies or a runner section deriving the higher-order local tail, nonlocal tail, and structural-class residual from the bridge theorem inputs. Claim boundary until fixed: this is a controlled support-note budget ledger for the Schur-bridge cross-check path, not an independently closed YT authority claim.
-- **open / conditional deps cited:**
-  - `missing authority: derivation of higher-order local exact-bridge tail`
-  - `missing authority: derivation of nonlocal exact-bridge tail`
-  - `missing authority: structural bridge ambiguity closed on tested Schur-bridge scale`
-- **auditor confidence:** 0.9
-
 ### `yt_interacting_bridge_locality_note`
 
 - **Note:** [`YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md`](../../docs/YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md)
@@ -15176,22 +15089,6 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_ZERO_IMPORT_CHAIN_NOTE.md`
 - **auditor confidence:** high
 
-### `yt_qfp_insensitivity_support_note`
-
-- **Note:** [`YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`](../../docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
-- **current_status:** bounded
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-gpt-5.5-backlog-sweep-2026-04-29`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The SM RGE and the exact lattice taste-staircase RG flow both satisfy the stated smoothness, gauge-anchor, Ward-BC, and focusing conditions, therefore y_t(v; SM RGE) = y_t(v; lattice) + O(3%).  _(class `F`)_
-- **chain closes:** False — The note computes sensitivity of an SM-RGE surrogate under coefficient perturbations, but it does not derive that the actual lattice taste-staircase flow satisfies the same QFP conditions or that its coefficient mismatch is O(few %); the current runner was also too slow to complete and was terminated during the lambda scan after partial PASS output.
-- **rationale:** Issue: the decisive step identifies the SM RGE surrogate and lattice taste-staircase flow as members of the same bounded QFP family without a one-hop theorem proving the lattice flow conditions or the O(few %) coefficient mismatch. Why this blocks: the numerical perturbation scans bound surrogate deformations, but they do not by themselves establish that the true above-v lattice RG evolution lies inside the scanned family. Repair target: add a retained lattice taste-staircase RG theorem deriving conditions (i)-(iv) and make the runner complete within the audit environment. Claim boundary until fixed: the note is bounded support for surrogate insensitivity, not a closed framework-native replacement for the missing above-v RG derivation.
-- **open / conditional deps cited:**
-  - `missing theorem: lattice taste-staircase RG flow satisfies QFP family conditions (i)-(iv)`
-  - `missing bound: taste-staircase beta-coefficient mismatch is O(few %) over [v, M_Pl]`
-  - `scripts/frontier_yt_qfp_insensitivity.py: current audit run terminated before final summary after multi-minute stall`
-- **auditor confidence:** 0.88
-
 ### `yt_schur_stability_gap_note`
 
 - **Note:** [`YT_SCHUR_STABILITY_GAP_NOTE.md`](../../docs/YT_SCHUR_STABILITY_GAP_NOTE.md)
@@ -15232,22 +15129,6 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
 - **load-bearing step:** On the canonical surface (g_bare = 1), the framework's bare Yukawa coupling y_t_bare is DEFINED as the unit-norm-state matrix element of the H_unit operator between the vacuum and a single top-pair state.  _(class `E`)_
 - **chain closes:** False — The algebraic 1/sqrt(6) overlap and same-channel coefficient checks close, but the target Yukawa readout is introduced by definition as the H_unit-to-top matrix element. The runner confirms coefficient consistency after that identification; it does not derive the physical Yukawa readout map itself.
 - **rationale:** Issue: The load-bearing move defines y_t_bare as the H_unit matrix element and then identifies that matrix element with the top Yukawa readout. Why this blocks: The source note and runner verify the scalar-singlet algebra, Clebsch-Gordan normalization, Fierz coefficients, and tadpole cancellation, but they do not derive the physical observable bridge from independent retained inputs. Repair target: Supply a retained theorem and runner check constructing the map from the composite H_unit matrix element to the SM top Yukawa vertex/readout, including the common tadpole dressing. Claim boundary until fixed: The note supports a tree-level structural identification/algebraic normalization on the canonical surface, not a first-principles derivation of the physical top Yukawa coupling.
-- **auditor confidence:** 0.88
-
-### `yukawa_color_projection_theorem`
-
-- **Note:** [`YUKAWA_COLOR_PROJECTION_THEOREM.md`](../../docs/YUKAWA_COLOR_PROJECTION_THEOREM.md)
-- **current_status:** support
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-gpt-5.5-backlog-sweep-2026-04-29`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** For the physical scalar, Z_phi^{phys}/Z_phi^{lattice}=R_conn=(N_c^2-1)/N_c^2=8/9, so y_t^{phys}=y_t^{Ward} sqrt(8/9).  _(class `F`)_
-- **chain closes:** False — No. The note explicitly depends on RCONN_DERIVED_NOTE.md and YT_EW_COLOR_PROJECTION_THEOREM.md, but the ledger row supplies no one-hop dependencies, and the runner hard-codes R_conn rather than deriving the physical Z_phi bridge.
-- **rationale:** Issue: the decisive physical identification of scalar wave-function renormalization with the connected color-trace ratio is not closed inside the restricted inputs, and the note's declared dependencies are missing from the ledger deps for this claim. Why this blocks: the runner confirms that applying sqrt(8/9) improves m_t and related comparisons, but it does not independently derive R_conn or prove that this connected trace is the scalar LSZ factor. Repair target: add and audit the R_conn and EW/color-projection authorities as explicit one-hop deps, and supply a theorem-grade scalar-Z_phi matching bridge rather than a hard-coded channel factor. Claim boundary until fixed: the sqrt(8/9) Yukawa correction remains a conditional quantitative support lane, not an audited-clean derivation.
-- **open / conditional deps cited:**
-  - `RCONN_DERIVED_NOTE.md: declared dependency missing from ledger deps`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md: declared dependency missing from ledger deps`
-  - `missing theorem: scalar Z_phi physical matching bridge from connected color trace to LSZ Yukawa factor`
 - **auditor confidence:** 0.88
 
 ### `z2_hw1_mass_matrix_parametrization_note`

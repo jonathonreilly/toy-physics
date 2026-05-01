@@ -1,0 +1,96 @@
+{
+  "analysis": {
+    "a_fm": null,
+    "dims": [
+      2,
+      2,
+      2,
+      4
+    ],
+    "r0_over_a": null,
+    "running_coupling": [],
+    "static_potential": [
+      {
+        "R_over_a": 1,
+        "V_lattice": 0.381185317410706,
+        "plateau_chi2_dof": 0.0,
+        "plateau_pass": false,
+        "source": "effective_mass_tail"
+      },
+      {
+        "R_over_a": 2,
+        "V_lattice": 0.05669550556373127,
+        "plateau_chi2_dof": 0.0,
+        "plateau_pass": false,
+        "source": "effective_mass_tail"
+      }
+    ],
+    "wilson_loops": [
+      {
+        "R_over_a": 1,
+        "T_over_a": 1,
+        "mean": 0.5263841809292482,
+        "n_cfg": 1,
+        "stderr": null
+      },
+      {
+        "R_over_a": 1,
+        "T_over_a": 2,
+        "mean": 0.3595473972895841,
+        "n_cfg": 1,
+        "stderr": null
+      },
+      {
+        "R_over_a": 2,
+        "T_over_a": 1,
+        "mean": 0.6164818092791403,
+        "n_cfg": 1,
+        "stderr": null
+      },
+      {
+        "R_over_a": 2,
+        "T_over_a": 2,
+        "mean": 0.5825024026569856,
+        "n_cfg": 1,
+        "stderr": null
+      }
+    ]
+  },
+  "beta": 6.0,
+  "dims": [
+    2,
+    2,
+    2,
+    4
+  ],
+  "elapsed_seconds": 0.0027197077870368958,
+  "measurements": 1,
+  "metadata": {
+    "action": "Cl3Z3_SU3_Wilson",
+    "ape_smearing": {
+      "alpha": 0.5,
+      "steps": 1
+    },
+    "authority": "wilson_loop_static_potential",
+    "g_bare": 1.0,
+    "update_algorithm": "numba_compiled_cabibbo_marinari_heatbath_plus_su2_subgroup_overrelaxation",
+    "uses_alpha_bare_over_u0_squared": false,
+    "uses_alpha_lm_chain": false,
+    "uses_plaquette_as_running_coupling_input": false
+  },
+  "overrelax_sweeps_per_heatbath": 0,
+  "raw_wilson_loops": [
+    [
+      [
+        0.5263841809292482,
+        0.3595473972895841
+      ],
+      [
+        0.6164818092791403,
+        0.5825024026569856
+      ]
+    ]
+  ],
+  "separation_sweeps": 1,
+  "therm_sweeps": 1
+}

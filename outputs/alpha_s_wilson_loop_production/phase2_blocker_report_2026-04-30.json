@@ -1,0 +1,146 @@
+{
+  "alpha_s_MZ_claimed": false,
+  "benchmark": {
+    "acceptance_rate": 0.152,
+    "beta": 6.0,
+    "measured_volume": "12^3x24",
+    "seconds_per_sweep": 14.181,
+    "seconds_per_updated_link": 8.549e-05,
+    "updated_links_per_sweep": 165888
+  },
+  "certificate_generated": false,
+  "compiled_or_jit_options": {
+    "Cython": "unavailable",
+    "clang": "available",
+    "cffi": "available",
+    "cupy": "unavailable",
+    "meson": "unavailable",
+    "numba": "installed during follow-up; backend fixed and local heat-bath speed gate passed",
+    "pybind11": "unavailable"
+  },
+  "compiled_numba_attempt": {
+    "backend": "scripts/alpha_s_numba_wilson_loop_mc.py",
+    "benchmark_report": "outputs/alpha_s_wilson_loop_production/COMPILED_MC_NUMBA_BENCHMARK_REPORT_2026-04-30.md",
+    "benchmarks": {
+      "12^3x24_heatbath_only_fixed": {
+        "compiled_us_per_link": 0.9406889185575656,
+        "speedup_target_pass": true,
+        "speedup_vs_pure_python_heatbath": 194.0067501590664
+      },
+      "12^3x24_heatbath_plus_3_overrelax_fixed": {
+        "compiled_us_per_link": 3.0736627574955446,
+        "plaquette_diagnostic": 0.5947872445608735,
+        "production_valid": true,
+        "speedup_target_pass": true,
+        "speedup_vs_pure_python_heatbath": 59.37541441556948
+      },
+      "16^3x32_heatbath_only_fixed": {
+        "compiled_us_per_link": 1.421470077822562,
+        "speedup_target_pass": true,
+        "speedup_vs_pure_python_heatbath": 128.38821080184633
+      },
+      "24^3x48_heatbath_only_fixed": {
+        "compiled_us_per_link": 1.1979081204886532,
+        "speedup_target_pass": true,
+        "speedup_vs_pure_python_heatbath": 152.34891297468974
+      },
+      "8^4_heatbath_plus_4_overrelax_fixed": {
+        "compiled_us_per_link": 3.5057147982797687,
+        "plaquette_diagnostic": 0.5960218528089872,
+        "production_valid": true,
+        "speedup_target_pass": true,
+        "speedup_vs_pure_python_heatbath": 52.05785709937145
+      }
+    },
+    "compiled_inner_loops": [
+      "SU(3) matmul/dagger/projection helpers",
+      "Cabibbo-Marinari SU(2)-subgroup heat-bath update",
+      "SU(2)-subgroup overrelaxation update",
+      "staple sum",
+      "plaquette",
+      "APE spatial smearing",
+      "rectangular Wilson-loop measurement",
+      "checkpoint/resume ensemble generation"
+    ],
+    "conclusion": "compiled backend fixed; heat-bath speed gate passes and overrelaxation is stable, but full three-volume production data are not generated yet"
+  },
+  "date": "2026-04-30",
+  "estimated_sweep_only_wall_time_days": {
+    "12^3x24": 0.124,
+    "16^3x32": 0.632,
+    "24^3x48": 2.592,
+    "total": 3.349
+  },
+  "estimated_production_wall_time_hours_with_measurement": {
+    "12^3x24": 3.33,
+    "16^3x32": 16.29,
+    "24^3x48": 67.83,
+    "total": 87.44
+  },
+  "autocorrelation_optimized_plan": {
+    "autocorr_pilot": "outputs/alpha_s_wilson_loop_production/autocorr_pilot_12x12x12x24_or3_2026-04-30.json",
+    "block_size_saved_configurations": 11,
+    "measurements_per_volume": 500,
+    "recommended_separation_sweeps": 6,
+    "strict_runner_n_cfg_requirement_satisfied": true,
+    "tau_int_slowest_observable": 1.0696639448773393,
+    "timeline_report": "outputs/alpha_s_wilson_loop_production/VALID_PRODUCTION_TIMELINE_2026-04-30.md",
+    "wall_time_hours": {
+      "12^3x24": 0.96,
+      "16^3x32": 4.32,
+      "24^3x48": 19.11,
+      "ideal_parallel": 19.11,
+      "sequential_total": 24.39
+    }
+  },
+  "excluded_from_estimate": [
+    "Wilson-loop measurement overhead for R,T=1..8",
+    "APE/HYP smearing",
+    "jackknife/bootstrap analysis",
+    "static-potential plateau fitting",
+    "reruns for autocorrelation or failed plateaus"
+  ],
+  "existing_infrastructure": [
+    "scripts/frontier_alpha_s_direct_wilson_loop.py",
+    "scripts/frontier_plaquette_self_consistency.py",
+    "scripts/frontier_g_bare_critical_feature_scan.py",
+    "scripts/frontier_confinement_string_tension.py",
+    "scripts/frontier_color_projection_mc.py"
+  ],
+  "existing_pure_python_heatbath_benchmark": {
+    "4^4": {
+      "plaquette_after_one_sweep": 0.6969,
+      "seconds_per_sweep": 0.177,
+      "seconds_per_updated_link": 0.0001724
+    },
+    "6^4": {
+      "plaquette_after_one_sweep": 0.6989,
+      "seconds_per_sweep": 0.975,
+      "seconds_per_updated_link": 0.0001881
+    },
+    "8^4": {
+      "plaquette_after_one_sweep": 0.6988,
+      "seconds_per_sweep": 2.991,
+      "seconds_per_updated_link": 0.0001825
+    },
+    "source": "scripts/frontier_color_projection_mc.py"
+  },
+  "missing_production_features": [
+    "autocorrelation analysis",
+    "production Wilson-loop/static-potential certificate",
+    "full production uncertainty budget"
+  ],
+  "phase2_status": "blocked",
+  "reason": "Compiled numba backend is now fixed and locally benchmarked; full requested three-volume production statistics still require an estimated 87 wall-clock hours before analysis and certificate generation.",
+  "requested_protocol": {
+    "measurement_separation_sweeps": 20,
+    "measurements_per_volume": 1000,
+    "thermalization_sweeps": 1000,
+    "volumes": [
+      "12^3x24",
+      "16^3x32",
+      "24^3x48"
+    ]
+  },
+  "strict_runner_expected_result": "blocked_missing_production_certificate"
+}

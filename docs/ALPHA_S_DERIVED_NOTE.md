@@ -6,6 +6,9 @@
 **Current package carrier:** `scripts/frontier_complete_prediction_chain.py`
 **Historical support runner:** `scripts/frontier_alpha_s_determination.py`
 
+**Audit replacement gate:** [ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md](ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md)
+with runner `scripts/frontier_alpha_s_direct_wilson_loop.py`.
+
 ## Authority Role
 
 This note records the standalone strong-coupling lane used on the current
@@ -13,6 +16,25 @@ This note records the standalone strong-coupling lane used on the current
 
 The current package treats `alpha_s(M_Z)` as its own retained quantitative
 lane, not merely as a hidden subcomponent of a larger synthesis memo.
+
+## Audit-Clean Replacement Route
+
+The audit ledger currently treats this note as `audited_conditional`, not as
+independently clean.  The blocked pieces are the plaquette-derived
+`alpha_s(v) = alpha_bare/u_0^2` authority and the low-energy running bridge
+from `v` to `M_Z`.
+
+The direct replacement route is now scoped in
+[ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md](ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md).
+That route must measure `alpha_s` from Wilson-loop expectation values, the
+static potential, Sommer-scale setting, and the standard QCD running bridge.
+It explicitly forbids using the `alpha_LM/u_0` or
+`alpha_bare/u_0^2` chain as authority.
+
+Until that direct Wilson-loop gate passes with production data and the audit
+ledger ratifies it, the chain below remains a same-surface conditional lane
+and the `alpha_LM/u_0` calculation should be used only as a consistency
+cross-check for the direct route.
 
 ## Safe Statement
 
