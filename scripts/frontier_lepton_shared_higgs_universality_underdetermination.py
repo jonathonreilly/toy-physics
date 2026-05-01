@@ -163,24 +163,38 @@ def part3_current_atlas_has_no_universality_bridge() -> None:
     print("PART 3: THE CURRENT ATLAS CARRIES NO SHARED-HIGGS UNIVERSALITY BRIDGE")
     print("=" * 88)
 
+    # Publication-state evolution 2026-04-17:
+    # The HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM upgraded q_H = 0
+    # from CONDITIONAL to GAUGE (retained), so the standalone "Neutrino
+    # Higgs Z_3 underdetermination" row was removed from the atlas — the
+    # underdetermination it tracked was on q_H specifically, which is now
+    # gauge-redundant for PMNS observables. The validation-map and PMNS-
+    # packet "open Higgs-Z_3 universality" wording was likewise rotated
+    # out.  The shared-Higgs universality question on the lepton lanes is
+    # a different (and still open) question, now tracked through the
+    # gates note.
     atlas = read("docs/publication/ci3_z3/DERIVATION_ATLAS.md")
-    validation = read("docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md")
-    packet = read("docs/publication/ci3_z3/NEUTRINO_DIRAC_PMNS_BOUNDARY_PACKET_2026-04-15.md")
+    gates = read("docs/GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md")
     atlas_lower = atlas.lower()
 
-    has_qh_under = "| Neutrino Higgs `Z_3` underdetermination |" in atlas
+    has_underdetermination_row = (
+        "| Lepton shared-Higgs universality underdetermination |" in atlas
+    )
     has_nonselection = "| PMNS minimal-branch nonselection |" in atlas
     has_univ_collapse = "| Lepton shared-Higgs universality collapse |" in atlas
     has_univ_bridge = "shared-higgs `z_3` universality theorem" in atlas_lower
-    validation_open = "Higgs `Z_3` universality" in validation
-    packet_mentions_future_universality = "future shared-Higgs universality theorem" in packet
+    has_qh_gauge_theorem = (
+        "higgs.*z_3.*charge.*pmns.*gauge.*redundancy" in atlas_lower
+        or "ckm higgs-`z_3` universality" in gates.lower()
+    )
 
-    check("Atlas carries the Higgs-Z_3 underdetermination row", has_qh_under)
+    check("Atlas carries this note's underdetermination row",
+          has_underdetermination_row)
     check("Atlas carries the PMNS nonselection row", has_nonselection)
     check("Atlas carries the universality-collapse conditional row", has_univ_collapse)
     check("Atlas still does not carry a retained universality bridge theorem", not has_univ_bridge)
-    check("Publication controls still record Higgs-Z_3 universality as open", validation_open)
-    check("The PMNS packet treats universality as future work, not as closed", packet_mentions_future_universality)
+    check("Live gates note still records shared-Higgs universality as a high-value open lane",
+          "CKM Higgs-`Z_3` universality" in gates)
 
     print()
     print("  So the current atlas state matches the constructive examples:")

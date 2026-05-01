@@ -62,39 +62,57 @@ def main() -> int:
     print("  Does the current exact bank already select the surviving minimal")
     print("  PMNS-producing branch, or constrain its seven canonical quantities?")
 
+    # Publication-state evolution 2026-04-17 / 2026-04-25:
+    # The HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM upgraded q_H = 0
+    # to GAUGE (retained), the CKM lane was promoted to retained closure,
+    # and the PMNS boundary packet was rewritten as a thin redirect to
+    # the live retained-lane packet. The publication-control wording
+    # checked by the previous runner ("CKM / quantitative flavor open",
+    # "frozen-out exact review packet", "Higgs `Z_3` universality"
+    # blocker line) was therefore rotated out. The note's actual claim —
+    # branch isolation without selection — is preserved by the live
+    # atlas rows tested below, plus the gates-note open lane.
     atlas = read("docs/publication/ci3_z3/DERIVATION_ATLAS.md")
-    validation = read("docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md")
-    claims = read("docs/publication/ci3_z3/CLAIMS_TABLE.md")
-    matrix = read("docs/publication/ci3_z3/PUBLICATION_MATRIX.md")
     gates = read("docs/GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md")
 
     atlas_lower = atlas.lower()
     has_neutrino_branch = "| Neutrino Dirac two-Higgs canonical reduction |" in atlas
     has_charged_lepton_branch = "| Charged-lepton two-Higgs canonical reduction |" in atlas
-    has_selector_row = "higgs multiplicity selector" in atlas_lower or "shared-higgs z_3 universality theorem" in atlas_lower
-    has_flavor_blocker = "Higgs `Z_3` universality" in validation and "CKM Higgs-`Z_3` universality" in gates
-    flavor_still_open = "| CKM / quantitative flavor closure |" in validation and "bounded/open" in validation
-    pmns_boundary_frozen = "neutrino Dirac / PMNS retained boundary" in claims and "frozen-out exact review packet" in claims
-    matrix_flavor_open = "| CKM / quantitative flavor |" in matrix and "| open |" in matrix
+    has_selector_row = (
+        "higgs multiplicity selector" in atlas_lower
+        or "shared-higgs z_3 universality theorem" in atlas_lower
+    )
+    has_nonselection_row = "| PMNS minimal-branch nonselection |" in atlas
+    has_universality_open_lane = "CKM Higgs-`Z_3` universality" in gates
+    has_universality_collapse = "| Lepton shared-Higgs universality collapse |" in atlas
+    has_universality_underdetermination = (
+        "| Lepton shared-Higgs universality underdetermination |" in atlas
+    )
 
     print("\n" + "=" * 88)
     print("PART 1: THE CURRENT ATLAS DOES ISOLATE THE MINIMAL BRANCHES")
     print("=" * 88)
     check("Atlas carries the minimal neutrino-side canonical branch", has_neutrino_branch)
-    check("Atlas now carries the minimal charged-lepton-side canonical branch", has_charged_lepton_branch)
+    check("Atlas carries the minimal charged-lepton-side canonical branch", has_charged_lepton_branch)
+    check("Atlas carries this note's nonselection row", has_nonselection_row)
 
     print("\n" + "=" * 88)
     print("PART 2: THE CURRENT PACKAGE STILL HAS NO EXACT BRANCH SELECTOR")
     print("=" * 88)
-    check("Atlas does not contain a retained Higgs-multiplicity or shared-Higgs selector theorem", not has_selector_row)
-    check("The flavor controls still record Higgs-Z_3 universality as a live blocker", has_flavor_blocker)
-    check("The flavor validation map still marks quantitative flavor closure bounded/open", flavor_still_open)
-    check("The publication matrix still leaves quantitative flavor open", matrix_flavor_open)
+    check("Atlas does not contain a retained Higgs-multiplicity or shared-Higgs selector theorem",
+          not has_selector_row)
+    check("Live gates note still records shared-Higgs universality as a high-value open lane",
+          has_universality_open_lane)
+    check("Atlas carries the universality-collapse conditional row (forced-universality consequence)",
+          has_universality_collapse)
+    check("Atlas carries the universality-underdetermination row (no current-stack force)",
+          has_universality_underdetermination)
 
     print("\n" + "=" * 88)
-    print("PART 3: THE PACKAGE TREATS THE PMNS OBJECT AS A FROZEN BOUNDARY, NOT A SELECTION")
+    print("PART 3: THE PACKAGE TREATS BRANCH SELECTION AS UNDERDETERMINED")
     print("=" * 88)
-    check("Claims table keeps the PMNS object frozen rather than promoted", pmns_boundary_frozen)
+    check("Atlas keeps both minimal branches and their nonselection theorem co-listed",
+          has_neutrino_branch and has_charged_lepton_branch and has_nonselection_row)
 
     print()
     print("  So the current exact bank has reached the honest endpoint:")

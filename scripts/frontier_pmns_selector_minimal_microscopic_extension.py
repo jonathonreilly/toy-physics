@@ -79,16 +79,23 @@ def part3_minimal_positive_extension_class_is_now_explicit() -> None:
     print("PART 3: THE MINIMAL POSITIVE EXTENSION CLASS IS NOW EXPLICIT")
     print("=" * 88)
 
-    note = read("docs/PMNS_SELECTOR_MINIMAL_MICROSCOPIC_EXTENSION_NOTE.md")
+    # Note archived 2026-05-01 because its claim was superseded by
+    # PMNS_SELECTOR_SECTOR_ODD_REDUCTION on the publication surface.
+    # The runner is preserved to verify the underlying algebraic
+    # extension-class statement still holds against the archived note.
+    note = read(
+        "archive_unlanded/pmns-publication-state-supersession-2026-05-01/"
+        "PMNS_SELECTOR_MINIMAL_MICROSCOPIC_EXTENSION_NOTE.md"
+    )
     atlas = read("docs/publication/ci3_z3/DERIVATION_ATLAS.md")
     bridge = read("docs/ACTION_GEOMETRY_BRIDGE_NOTE.md")
 
-    check("The new note identifies the minimal class as a non-additive sector-sensitive mixed bridge",
+    check("The archived note identifies the minimal class as a non-additive sector-sensitive mixed bridge",
           "non-additive" in note and "sector-sensitive" in note and "mixed bridge" in note)
-    check("The new note identifies one real amplitude slot on the reduced class",
+    check("The archived note identifies one real amplitude slot on the reduced class",
           "one real amplitude slot" in note and "a_sel" in note)
-    check("The atlas carries the minimal-microscopic-extension row",
-          "| PMNS selector minimal microscopic extension |" in atlas)
+    check("The atlas carries the superseding sector-odd reduction row",
+          "| PMNS selector sector-odd reduction |" in atlas)
     check("The action-geometry note uses the safe label mixed bridge as structural naming precedent",
           "mixed bridge" in bridge.lower())
 
