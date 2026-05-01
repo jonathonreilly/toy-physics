@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:32:43.586385+00:00
+**Generated:** 2026-05-01T23:33:42.388940+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 322 |
+| `audited_clean` | 323 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 491 |
+| `unaudited` | 490 |
 
 | criticality | count |
 |---|---:|
@@ -386,6 +386,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `self_gravity_born_hardening_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-gpt-5 | C | - |
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `self_gravity_failure_diagnosis` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
+| `self_gravity_scaling_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
 | `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
@@ -14011,6 +14012,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The failure is a three-part limit: the backreaction signal is small, the strict nonzero-coupling loop does not converge cleanly, and the end-to-end Born audit is no longer machine-clean, so the lane remains a bounded no-go rather than a retained self-gravity mechanism.  _(class `B`)_
 - **chain closes:** True — The cited artifact-chain notes and the current runner output agree on the exact epsilon=0 identity, the small nonzero matched-null centroid/phase shifts, zero nonzero-coupling convergence under the strict tolerance, and end-to-end Born drift of 4.911e-06. Those facts support the note's support-tier diagnosis that only a weak control surface survives, not a promoted mechanism.
 - **rationale:** The note is an operational/diagnostic support row, not an asserted retained positive self-gravity result. Its load-bearing conclusion is a conservative failure diagnosis and is directly supported by the runner: exact null reduction holds, nonzero rows show only tiny shifts, the nonlinear loop fails to converge for nonzero coupling, and the full-loop Born value is not machine-clean. The stated bounded-no-go boundary therefore closes at support tier without importing a hidden physical mechanism.
+- **auditor confidence:** high
+
+### `self_gravity_scaling_note_2026-04-10`
+
+- **Note:** [`SELF_GRAVITY_SCALING_NOTE_2026-04-10.md`](../../docs/SELF_GRAVITY_SCALING_NOTE_2026-04-10.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Across the three prescribed staggered graph families, every reported size case has final width ratio below 1, force 20/20 toward with zero flips, and machine-level norm drift, so the corrected parity-coupled self-gravity probe is a bounded scaling probe rather than a universal contraction claim.  _(class `B`)_
+- **chain closes:** True — The runner recomputes the twelve table rows and family summaries in the note: all width ratios are below unity, force stability is 20/20 TW with zero flips, and maximum norm drift stays below 9e-16. The note limits the result to the prescribed admissible graph families and corrected parity coupling, so the bounded claim closes without asserting a derived universal self-gravity law.
+- **rationale:** The numerical table and trend claims are current with the runner output. The load-bearing claim is bounded to this exact model sweep: no external comparator or universal contraction theorem is asserted, and the readout explicitly says this is a genuine scaling probe rather than a universal contraction claim. Residual risk is only interpretive use of the phrase self-gravity; within the stated prescribed-coupling model, the audit closes cleanly at bounded tier.
 - **auditor confidence:** high
 
 ### `session_summary_2026-04-01_topology`

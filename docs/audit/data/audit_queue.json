@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 192,
-    "leaf": 160,
+    "leaf": 159,
     "medium": 130
   },
-  "generated_at": "2026-05-01T23:32:43.371133+00:00",
+  "generated_at": "2026-05-01T23:33:42.152746+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9835,23 +9835,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "self_gravity_scaling_note_2026-04-10",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SELF_GRAVITY_SCALING_NOTE_2026-04-10.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_staggered_self_gravity_scaling.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "session_synthesis_2026-04-10_graph_axioms",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -13079,6 +13062,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 80,
-  "total_pending": 491
+  "ready_count": 79,
+  "total_pending": 490
 }
