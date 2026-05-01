@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:50:57.480109+00:00
+**Generated:** 2026-05-01T23:52:44.551492+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 325 |
+| `audited_clean` | 326 |
 | `audited_conditional` | 660 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 483 |
+| `unaudited` | 482 |
 
 | criticality | count |
 |---|---:|
@@ -390,6 +390,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `session_synthesis_2026-04-10_graph_axioms` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `shapiro_qa_retest_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `sigma_mnu_f3_stuck_fanout_synthesis_note_2026-04-28` | open | ~~audited_clean~~ | open | fresh_context | codex-current | B | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
 | `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -14311,6 +14312,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md`
   - `COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md`
   - `HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md`
+- **auditor confidence:** high
+
+### `sigma_mnu_f3_stuck_fanout_synthesis_note_2026-04-28`
+
+- **Note:** [`SIGMA_MNU_F3_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md`](../../docs/SIGMA_MNU_F3_STUCK_FANOUT_SYNTHESIS_NOTE_2026-04-28.md)
+- **current_status:** open
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open  (reason: `self`)
+- **auditor:** `codex-fresh-agent-019de5f4`  (codex-current; independence=fresh_context)
+- **load-bearing step:** No orthogonal F3-* route supplies an independent Sigma m_nu cross-bound on the framework's current-bank surface; the only independent cross-bound candidate is F3-gamma's alternative CMB admission, which gives about 0.056 eV but bypasses the framework current-bank Omega_DM interval and remains below the normal-ordering oscillation floor.  _(class `B`)_
+- **chain closes:** True — The chain closes only at the declared open-boundary synthesis tier: the runner reports PASS=20 FAIL=0 and consistently classifies F3-alpha as comparator-only, F3-beta as structural-only, F3-delta as kinematic-only, F3-epsilon as speculative, and F3-gamma as an alternative-admission candidate rather than a closed current-surface retention route. It therefore supports the note's honest stop without promoting numerical Sigma m_nu.
+- **rationale:** The claim is clean as an open-status synthesis because the load-bearing result is negative and boundary-preserving: no route is represented as retaining Sigma m_nu, and the lone positive numerical route is explicitly kept conditional on a bypassing CMB admission surface and below the NO comparator floor. No open dependencies are listed, and the current runner output directly matches the source-note boundary.
 - **auditor confidence:** high
 
 ### `sign_portability_invariant_note`
