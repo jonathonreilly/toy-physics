@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:28:40.371918+00:00
+**Generated:** 2026-05-01T23:32:43.586385+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 321 |
+| `audited_clean` | 322 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 492 |
+| `unaudited` | 491 |
 
 | criticality | count |
 |---|---:|
@@ -385,6 +385,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `self_consistency_structured_null_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `self_gravity_born_hardening_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-gpt-5 | C | - |
 | `self_gravity_entropy_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `self_gravity_failure_diagnosis` | support | ~~audited_clean~~ | support | cross_family | codex-current | B | - |
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | C | - |
 | `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
@@ -13998,6 +13999,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** This simple entropy observable does not currently support an area-law claim; it is capped at ln(2) and controlled primarily by the mass split p_A rather than boundary complexity.  _(class `C`)_
 - **chain closes:** True — The runner reproduces the exact table values and the cautious negative readout: boundary correlations are inconsistent across families and the observable is a binary single-particle occupancy entropy capped by ln(2).
 - **rationale:** The claim is a negative/inconclusive boundary, not a positive area-law theorem. The current runner reproduces the note's entropy shifts and mixed boundary correlations, and the note explicitly limits the conclusion to topology-sensitive occupancy entropy with no robust boundary-controlled scaling. Residual risk is only that the broader self-gravity lane remains a model context; the audited claim here is the narrower no-area-law diagnostic for this simple observable.
+- **auditor confidence:** high
+
+### `self_gravity_failure_diagnosis`
+
+- **Note:** [`SELF_GRAVITY_FAILURE_DIAGNOSIS.md`](../../docs/SELF_GRAVITY_FAILURE_DIAGNOSIS.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The failure is a three-part limit: the backreaction signal is small, the strict nonzero-coupling loop does not converge cleanly, and the end-to-end Born audit is no longer machine-clean, so the lane remains a bounded no-go rather than a retained self-gravity mechanism.  _(class `B`)_
+- **chain closes:** True — The cited artifact-chain notes and the current runner output agree on the exact epsilon=0 identity, the small nonzero matched-null centroid/phase shifts, zero nonzero-coupling convergence under the strict tolerance, and end-to-end Born drift of 4.911e-06. Those facts support the note's support-tier diagnosis that only a weak control surface survives, not a promoted mechanism.
+- **rationale:** The note is an operational/diagnostic support row, not an asserted retained positive self-gravity result. Its load-bearing conclusion is a conservative failure diagnosis and is directly supported by the runner: exact null reduction holds, nonzero rows show only tiny shifts, the nonlinear loop fails to converge for nonzero coupling, and the full-loop Born value is not machine-clean. The stated bounded-no-go boundary therefore closes at support tier without importing a hidden physical mechanism.
 - **auditor confidence:** high
 
 ### `session_summary_2026-04-01_topology`
