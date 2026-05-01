@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:46:06.216855+00:00
+**Generated:** 2026-05-01T07:56:14.850213+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 284 |
+| `audited_clean` | 285 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 561 |
+| `unaudited` | 560 |
 
 | criticality | count |
 |---|---:|
@@ -330,6 +330,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_inertial_object_probe_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `persistent_object_adaptive_readout_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `persistent_object_adaptive_readout_v2_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -11442,6 +11443,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The frontier-shell v2 readout localizes harder but fails the weak-field sign and near-linear mass-scaling checks, so it is not a viable readout-localization route on the retained family.  _(class `C`)_
 - **chain closes:** True — The registered runner reproduces the zero-source reduction and the frozen no-go table: frontier-shell TOWARD=2/12, F~M=0.74,1.78,1.78, capture=0.003, support fraction=0.241, and mean delta=-8.877e-04. Those current outputs support the bounded negative claim.
 - **rationale:** The note is a bounded no-go, and the current runner verifies exactly why v2 fails: localization improves, but the sign, mass-scaling class, and capture collapse. The note does not claim inertial-mass closure or a successful field equation; it preserves v1 as the better detector-side bridge and freezes v2 as too selective. Residual risk is limited to future readout architectures, which the source explicitly leaves open.
+- **auditor confidence:** high
+
+### `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_BLENDED_READOUT_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_BLENDED_READOUT_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The exact-lattice top3 plus blend=0.25 branch survives 4/5 second-ring transfer cases, while the inward source side remains closed through source_z=1.25 and reopens at source_z=1.50.  _(class `C`)_
+- **chain closes:** True — The outer-transfer runner reproduces top3 admissible on 4/5 cases and top2 on 1/5, with only source1.0 closed in the second ring. The boundary runner reproduces source0.75, source1.00, and source1.25 closed and source1.50 admissible, matching the mapped inward-source boundary claimed by the note.
+- **rationale:** The bounded widened-regime claim is current with both named runners: the second-ring pass/fail pattern and the inward-source boundary are reproduced locally. The note does not claim a direction-independent transfer law, persistent inertial mass, or matter closure; it correctly reads the result as a source-placement-bounded compact-object response regime. Residual risk is operational rather than scientific for this row: the outer sweep is slow, taking about 387 seconds locally, and should be treated as a slow runner in automation.
 - **auditor confidence:** high
 
 ### `persistent_object_blended_readout_transfer_sweep_note_2026-04-16`

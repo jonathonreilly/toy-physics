@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 225,
+    "leaf": 224,
     "medium": 133
   },
-  "generated_at": "2026-05-01T07:46:05.966071+00:00",
+  "generated_at": "2026-05-01T07:56:14.593575+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10043,23 +10043,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/PERSISTENT_OBJECT_BLENDED_READOUT_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md",
-      "ready": true,
-      "runner_path": "scripts/persistent_object_blended_readout_outer_transfer_sweep.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "persistent_object_compact_inertial_probe_note_2026-04-16",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14215,6 +14198,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 161,
-  "total_pending": 561
+  "ready_count": 160,
+  "total_pending": 560
 }
