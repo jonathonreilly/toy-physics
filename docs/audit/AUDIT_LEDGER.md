@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T16:25:22.634924+00:00
+**Generated:** 2026-05-01T16:27:06.799653+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 1 |
 | _proposed_no_go_ | 19 |
 | bounded | 199 |
-| support | 152 |
+| support | 150 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 48 |
-| ~~audited_conditional~~ | 875 |
+| ~~audited_conditional~~ | 877 |
 | ~~audited_failed~~ | 103 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 293 |
-| `audited_conditional` | 590 |
+| `audited_conditional` | 591 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 571 |
+| `unaudited` | 570 |
 
 | criticality | count |
 |---|---:|
@@ -932,6 +932,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_lorentzian_global_atlas_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_polarization_frame_bundle_attempt` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `universal_gr_polarization_frame_bundle_blocker_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `universal_gr_positive_background_local_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `universal_gr_supermetric_normal_form_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_tensor_action_blocker_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_tensor_variational_candidate_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | E | - |
@@ -13986,6 +13987,20 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The current runner compares two valid 3+1 polarization frames and finds that localized channel coefficients move under frame rotation, so the current stack does not canonically fix the lapse/shift/shear splitting.  _(class `C`)_
 - **chain closes:** False — The bounded blocker rests on a frame-rotation computation plus upstream scalar, lift, variational, and quotient-kernel inputs, but no runner is registered and no one-hop authority notes are attached. The audit therefore cannot verify the claimed exact obstruction from the available context.
 - **rationale:** Issue: the claimed exact polarization-frame blocker depends on an unregistered runner and uncited upstream exact-stack results. Why this blocks: without the runner and source authorities, the audit cannot confirm that the kernel remains fixed while the complementary channel localization changes under valid frame rotation. Repair target: register the frame-comparison runner and cite the scalar generator, 3+1 lift, tensor variational candidate, and quotient-kernel notes used as inputs. Claim boundary until fixed: the note remains a bounded route diagnosis, not an audited closed derivation of the missing projector-bundle primitive.
+- **auditor confidence:** high
+
+### `universal_gr_positive_background_local_closure_note`
+
+- **Note:** [`UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** K_GR(D) = H_D tensor Lambda_R, where H_D is induced by B_D; because H_D is negative-definite and Lambda_R is positive-definite, K_GR(D) is negative-definite and has a unique stationary boundary field F_* = K_GR(D)^-1 J.  _(class `B`)_
+- **chain closes:** False — The source and runner close the corrected negative-definiteness of the local H_D bilinear and the quadratic completion for that dense operator. The full K_GR tensor-product closure still relies on the separate Lambda_R positive-definiteness/slice-generator input, which is asserted as an independent calculation rather than supplied as an audit-clean registered dependency.
+- **rationale:** Issue: the local H_D sign correction is verified, but the load-bearing K_GR(D)=H_D tensor Lambda_R conclusion imports Lambda_R positive-definiteness from outside this note. Why this blocks: the runner checks H_D and the completion identity for the local dense operator, but it does not construct or verify the Lambda_R factor or an audit-clean tensor-product operator on the full claimed boundary-action family; the related isotropic-glue/slice surface is not clean here. Repair target: register and audit-clean the Lambda_R/slice-generator theorem, or extend the runner to build the full H_D tensor Lambda_R operator and verify the stationary-field completion there. Claim boundary until fixed: the corrected H_D negative-definite local calculation is strong support, but the universal GR boundary-action family remains conditional on the Lambda_R closure input.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_gr_supermetric_normal_form_note`
