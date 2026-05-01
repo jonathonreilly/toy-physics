@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T07:39:00.407881+00:00
+**Generated:** 2026-05-01T07:40:36.029428+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 188 |
-| support | 163 |
+| support | 162 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 859 |
+| ~~audited_conditional~~ | 860 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 282 |
-| `audited_conditional` | 589 |
+| `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 564 |
+| `unaudited` | 563 |
 
 | criticality | count |
 |---|---:|
@@ -820,6 +820,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `one_generation_matter_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `one_parameter_reduced_shell_law_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `paper_scope_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_object_exact_lattice_park_note_2026-04-16` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -11389,6 +11390,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** True — The live harness reproduces the frozen overlap-vs-offset, overlap-vs-NL, gravity-by-packet, and width/centroid rows. The note explicitly keeps Tier C inertial response open and does not claim persistent localized objects.
 - **rationale:** The retained surface is a finite computational memory claim: at the tested NL values and packet offsets, detector overlaps remain distinguishable, packet identity changes the imposed-field deflection, and width/centroid rows reproduce the stated partial shape result. The live runner matches the frozen source numbers, and the source explicitly excludes Tier C inertial response and persistent localized-object closure. Residual risk is finite-configuration and asymptotic-scope risk only; this clean audit does not retain the unsupported NL-to-infinity extrapolation as a theorem or any claim of persistent inertial mass.
 - **auditor confidence:** high
+
+### `paper_scope_note`
+
+- **Note:** [`PAPER_SCOPE_NOTE.md`](../../docs/PAPER_SCOPE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The recommended paper scope is a bounded same-family action-law comparison on the retained 3D ordered-lattice family, claiming valley-linear preserves Born/k=0 and improves the tested mass-law/distance-tail behavior relative to spent-delay without asserting universal gravity.  _(class `B`)_
+- **chain closes:** False — The note is conservative about what not to claim, but the positive scope recommendation imports ordered-lattice valley-linear/spent-delay artifact results without registered dependencies or a runner. In restricted context, the audit cannot verify the named Born, k=0, exponent, and distance-tail premises.
+- **rationale:** Issue: the paper-scope recommendation depends on unregistered ordered-lattice action-fork results and replay logs. Why this blocks: the row itself is editorial guidance, and without one-hop dependencies the audit cannot establish that the stated safe claim shape is backed by current retained artifacts. Repair target: register the valley-linear/spent-delay comparison, refinement replay, and negative-control notes/logs as dependencies or convert this row to a non-audited editorial index. Claim boundary until fixed: safe as conservative paper-framing advice, not as an independently audited summary of the ordered-lattice result.
+- **open / conditional deps cited:**
+  - `VALLEY_LINEAR_WIDE_TAIL_NOTE.md`
+  - `NEWTONIAN_DISTANCE_LAW_CONFIRMED.md`
+- **auditor confidence:** medium
 
 ### `persistent_inertial_object_probe_note`
 

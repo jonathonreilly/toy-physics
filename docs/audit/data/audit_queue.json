@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 7,
     "high": 196,
-    "leaf": 228,
+    "leaf": 227,
     "medium": 133
   },
-  "generated_at": "2026-05-01T07:39:00.122518+00:00",
+  "generated_at": "2026-05-01T07:40:35.789716+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10026,23 +10026,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "paper_scope_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/PAPER_SCOPE_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "persistent_inertial_response_readiness_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -14266,6 +14249,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 164,
-  "total_pending": 564
+  "ready_count": 163,
+  "total_pending": 563
 }
