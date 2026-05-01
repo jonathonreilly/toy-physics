@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T01:58:10.857969+00:00
+**Generated:** 2026-05-01T01:59:31.816070+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 90 |
 | _proposed_retained_ | 1 |
 | bounded | 263 |
-| support | 225 |
+| support | 224 |
 | open | 16 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 41 |
-| ~~audited_conditional~~ | 778 |
-| ~~audited_failed~~ | 129 |
+| ~~audited_conditional~~ | 772 |
+| ~~audited_failed~~ | 136 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 229 |
 | `audited_conditional` | 499 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 60 |
+| `audited_failed` | 61 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 11 |
-| `unaudited` | 748 |
+| `unaudited` | 747 |
 
 | criticality | count |
 |---|---:|
@@ -856,6 +856,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `kernel_vs_gravity_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `koide_axiom_native_support_batch_note_2026-04-22` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `light_cone_framing_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `localized_source_response_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_annular_tapered_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_compact_floor_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -9346,6 +9347,18 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `One-generation matter closure`
   - `Three-generation matter structure`
   - `Neutrino Dirac monomial no-mixing theorem`
+- **auditor confidence:** high
+
+### `light_cone_framing_note`
+
+- **Note:** [`LIGHT_CONE_FRAMING_NOTE.md`](../../docs/LIGHT_CONE_FRAMING_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-light_cone_framing_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note argues that the staggered dispersion E^2=m^2+sin^2(k) gives the correct v=1 light cone in the massless limit and v<1 for massive particles, so Lieb-Robinson finite-cone behavior is not a blocker.  _(class `A`)_
+- **chain closes:** False — The dispersion derivative is internally wrong: for E^2=m^2+sin^2(k), v_g=sin(k)cos(k)/E has vmax=sqrt(1+m^2)-m<1 for m>0 and tends to 1 as m->0, not vmax=1/(2m), and the massless maximum is not at k=pi/2.
+- **rationale:** Issue: the note's load-bearing staggered-dispersion argument contains an algebraic error. From E^2=m^2+sin^2(k), v_g=sin(k)cos(k)/E; maximizing gives vmax=sqrt(1+m^2)-m, which is below 1 for m>0 and approaches 1 as m->0. The note instead states vmax=1/(2m) for m<<1 and then says the massless maximum occurs at k=pi/2, where cos(k)=0. Why this blocks: the support note is meant to defuse a light-cone concern, but its central dispersion calculation contradicts itself and would imply superluminal velocities for small nonzero m. Repair target: correct the staggered-dispersion extremum derivation, add a runner for v_g(k,m) and the Lieb-Robinson bound, and declare/cite the lattice-QFT reference inputs used for the broader framing. Claim boundary until fixed: the general statement that lattice theories have Lieb-Robinson rather than strict continuum cones may still be standard background, but this note's presented derivation does not currently support it.
 - **auditor confidence:** high
 
 ### `linear_response_derivation_note`
