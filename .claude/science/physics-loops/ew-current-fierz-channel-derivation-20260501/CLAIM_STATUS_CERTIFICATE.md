@@ -11,7 +11,7 @@
 actual_current_surface_status: support / exact group-theory derivation (cycle-breaking)
 conditional_surface_status: null
 hypothetical_axiom_status: null
-admitted_observation_status: "Matching rule (M) — that the physical EW vacuum polarization projects onto the adjoint channel after CMT factorization — is named as a structural input from the framework's retained lattice gauge surface. Not derived in this note."
+admitted_observation_status: "Matching rule (M) — that the physical EW vacuum polarization projects onto the adjoint channel after CMT factorization — is named as a structural input from the framework's already-audited lattice gauge surface. Not derived in this note."
 proposal_allowed: false
 proposal_allowed_reason: "The exact group-theory ratio (N_c^2 - 1)/N_c^2 IS derived inline from the SU(N_c) Fierz identity + Hilbert-space dimension counting. But the package-level 9/8 EW coupling correction also depends on the matching rule (M), which this note does not derive. So the partial result here is 'support / exact group-theory ratio + admitted matching', not retained 9/8 closure."
 audit_required_before_effective_retained: true

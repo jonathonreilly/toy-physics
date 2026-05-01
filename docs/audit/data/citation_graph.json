@@ -4189,6 +4189,14 @@
       "to": "star_supported_bridge_class_note"
     },
     {
+      "from": "ew_current_fierz_channel_decomposition_note_2026-05-01",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "ew_current_fierz_channel_decomposition_note_2026-05-01",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
       "from": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
       "to": "rconn_derived_note"
     },
@@ -18737,7 +18745,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T22:49:37.777540+00:00",
+  "generated_at": "2026-05-01T22:53:12.501692+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25779,6 +25787,19 @@
       "path": "docs/EW_COUPLING_DERIVATION_NOTE.md",
       "runner_path": "scripts/frontier_yt_ew_coupling_derivation.py",
       "title": "Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)"
+    },
+    "ew_current_fierz_channel_decomposition_note_2026-05-01": {
+      "claim_id": "ew_current_fierz_channel_decomposition_note_2026-05-01",
+      "current_status": "support",
+      "current_status_raw": "support / exact group-theory derivation (cycle-breaking artifact). The exact (N_c^2 - 1)/N_c^2 ratio is derived inline from the SU(N_c) Fierz identity and Hilbert-space dimension counting \u2014 both are textbook group theory, no 1/N_c expansion. The remaining matching rule (which channel the physical EW current couples to) is named explicitly as a structural input from the framework's already-audited lattice gauge surface.",
+      "deps": [
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note"
+      ],
+      "note_hash": "1f584f1c88e9c37342402f11a76a54c5e02af269513ed75fe8b1702b9d33e842",
+      "path": "docs/EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md",
+      "runner_path": "scripts/frontier_ew_current_fierz_channel_decomposition.py",
+      "title": "EW Current Fierz-Channel Decomposition: Exact Group-Theory Derivation of `(N_c^2 - 1)/N_c^2`"
     },
     "ew_current_matching_ozi_suppression_theorem_note_2026-04-27": {
       "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
@@ -41787,18 +41808,18 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4684,
-    "leaf_count": 707,
-    "node_count": 1669,
+    "edge_count": 4686,
+    "leaf_count": 708,
+    "node_count": 1670,
     "root_count": 1172,
-    "runners_with_path": 1237,
+    "runners_with_path": 1238,
     "status_counts": {
       "bounded": 460,
       "open": 48,
       "proposed_no_go": 47,
       "proposed_promoted": 1,
       "proposed_retained": 353,
-      "support": 348,
+      "support": 349,
       "unknown": 412
     }
   }

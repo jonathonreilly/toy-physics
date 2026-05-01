@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-01T22:49:41.070056+00:00",
+  "computed_at": "2026-05-01T22:53:16.268664+00:00",
   "cycle_examples": [
     [
       "alpha_s_derived_note",
@@ -38,7 +38,7 @@
     "proposed_retained": 1,
     "retained": 76,
     "retained_no_go": 61,
-    "support": 136
+    "support": 137
   },
   "proposed_demoted_by_upstream_count": 138,
   "proposed_demoted_by_upstream_examples": [

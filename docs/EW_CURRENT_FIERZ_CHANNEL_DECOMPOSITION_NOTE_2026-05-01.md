@@ -1,7 +1,7 @@
 # EW Current Fierz-Channel Decomposition: Exact Group-Theory Derivation of `(N_c^2 - 1)/N_c^2`
 
 **Date:** 2026-05-01
-**Status:** support / exact group-theory derivation (cycle-breaking artifact). The exact (N_c^2 - 1)/N_c^2 ratio is derived inline from the SU(N_c) Fierz identity and Hilbert-space dimension counting — both are textbook group theory, no 1/N_c expansion. The remaining matching rule (which channel the physical EW current couples to) is named explicitly as a structural input from the framework's retained lattice gauge surface.
+**Status:** support / exact group-theory derivation (cycle-breaking artifact). The exact (N_c^2 - 1)/N_c^2 ratio is derived inline from the SU(N_c) Fierz identity and Hilbert-space dimension counting — both are textbook group theory, no 1/N_c expansion. The remaining matching rule (which channel the physical EW current couples to) is named explicitly as a structural input from the framework's already-audited lattice gauge surface.
 **Primary runner:** `scripts/frontier_ew_current_fierz_channel_decomposition.py`
 **Cited authorities (one-hop, all retained on `main`):**
 - [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md) — `proposed_retained` `audit_status: audited_clean` `effective_status: retained`. Provides native cubic Cl(3) / SU(2) and the graph-first SU(3) commutant.
@@ -35,8 +35,9 @@ approximation) and depends only on retained upstream notes.
 The note does not promote the full 9/8 EW coupling correction to retained.
 It separates the load-bearing claim into:
 
-- **(F)** an exact group-theory ratio: the connected channel of the q-qbar
-  Hilbert space carries weight `(N_c^2 - 1)/N_c^2` of the total. Derived here.
+- **(F)** an exact group-theory ratio: the adjoint channel of the q-qbar
+  Hilbert space has channel-count fraction `(N_c^2 - 1)/N_c^2` of the total.
+  Derived here.
 - **(M)** a matching rule: the physical EW vacuum polarization, after the
   framework's retained mean-field/CMT factorization, projects onto the
   adjoint (connected) channel rather than the total channel sum. **This
@@ -47,8 +48,8 @@ The cycle-breaking value is in the citation graph: by deriving (F) from
 the Fierz identity directly, this note removes the last edge of the cycle
 (the implicit dependence of the package-level coefficient on the 1/N_c
 chain). The remaining chain `yt_ew_color_projection → this note →
-NATIVE_GAUGE_CLOSURE → ...` is acyclic and lands all dependencies in
-retained territory at one hop, with the residual matching rule (M)
+NATIVE_GAUGE_CLOSURE → ...` is acyclic and lands all dependencies on
+already-audited upstreams at one hop, with the residual matching rule (M)
 explicitly named as the open structural input.
 
 ## 1. Setup: the q-qbar Hilbert space and SU(N_c) channel decomposition
@@ -185,13 +186,13 @@ of the EW current at the lattice level mechanically projects onto the
 adjoint channel after the singlet contribution is absorbed by the
 mean-field factor `u_0` — then the package-level 9/8 correction would
 upgrade from "support / exact group-theory ratio + admitted matching" to
-fully retained.
+a later proposed-retained claim requiring independent audit.
 
 This note explicitly does not propose to make that upgrade.
 
 ## 6. What this derivation closes and what it leaves open
 
-**Closed by this note (exact, retained-grade group theory):**
+**Closed by this note (exact group theory on the support surface):**
 
 - The ratio `dim(adj) / dim(q-qbar) = (N_c^2 − 1)/N_c^2` is exact at any
   finite N_c.
@@ -319,5 +320,5 @@ the audit-graph cycle returns and this note's cycle-breaking value is lost.
   `EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md`. After
   this note lands, those three nodes can each cite this note for the
   exact `(N_c^2 − 1)/N_c^2` ratio, removing the audit-graph cycle.
-- 2026-05-01 audit ledger leverage map:
-  [`AUDIT_LHF_LEVERAGE_MAP_FOR_RETAINED_PROMOTION_NOTE_2026-05-01.md`](AUDIT_LHF_LEVERAGE_MAP_FOR_RETAINED_PROMOTION_NOTE_2026-05-01.md) (PR #248).
+- 2026-05-01 audit ledger leverage map: PR #248, mentioned only as
+  planning context and not cited as a dependency of this support note.

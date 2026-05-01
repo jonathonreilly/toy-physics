@@ -44,7 +44,7 @@ with citations only to retained upstream notes.
    case is sourced from `GRAPH_FIRST_SU3_INTEGRATION_NOTE` (retained).
 6. **Project convention compliance**: PASS. Status language follows
    `CONTROLLED_VOCABULARY.md`: uses `support / exact group-theory
-   derivation (cycle-breaking)`. No bare retained anywhere. The note
+   derivation (cycle-breaking)`. No bare retained/promoted status line. The note
    explicitly disclaims promotion of the 9/8 package-level coefficient.
 
 ### Cycle-breaking verification
@@ -73,7 +73,7 @@ in §2), not as a citation to any non-retained note.
 
 PASS. The note carefully separates:
 
-- **Derived (exact, retained-grade group theory):** the ratio
+- **Derived (exact group theory on the support surface):** the ratio
   `dim(adj)/dim(q-qbar) = (N_c^2 − 1)/N_c^2 = 8/9` at N_c = 3.
 - **Not derived (named admitted input):** the matching rule (M) — that
   the physical EW vacuum polarization projects onto the adjoint channel.

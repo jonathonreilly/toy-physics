@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T22:49:40.729666+00:00",
+  "generated_at": "2026-05-01T22:53:15.827609+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -5112,6 +5112,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_ew_coupling_derivation.py"
+    },
+    "ew_current_fierz_channel_decomposition_note_2026-05-01": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_ew_current_fierz_channel_decomposition.py"
     },
     "ew_current_matching_ozi_suppression_theorem_note_2026-04-27": {
       "assert_count": 0,
@@ -21580,6 +21592,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_ew_current_fierz_channel_decomposition.py": {
+      "assert_count": 2,
+      "claims": [
+        "ew_current_fierz_channel_decomposition_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_ew_higgs_gauge_mass_diagonalization.py": {
       "assert_count": 1,
       "claims": [
@@ -32675,15 +32702,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 82,
+    "decoration_candidates": 83,
     "dominant_class_distribution": {
       "A": 7,
-      "B": 122,
+      "B": 123,
       "C": 453,
       "D": 185,
       "none": 403
     },
-    "runners_classified": 1170,
+    "runners_classified": 1171,
     "runners_with_C": 547,
     "runners_with_D": 290
   }
