@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:03:05.498047+00:00
+**Generated:** 2026-05-01T11:04:44.415594+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 187 |
-| support | 161 |
+| support | 160 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 860 |
-| ~~audited_failed~~ | 177 |
+| ~~audited_failed~~ | 178 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 297 |
 | `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 86 |
+| `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 546 |
+| `unaudited` | 545 |
 
 | criticality | count |
 |---|---:|
@@ -1038,6 +1038,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_intrinsic_completion_boundary_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `pmns_minimal_branch_nonselection_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `pmns_selector_bank_nonrealization_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `pmns_selector_minimal_microscopic_extension_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `pmns_selector_sign_to_branch_reduction_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -12222,6 +12223,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md:unaudited_support`
   - `PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md:unaudited_support`
   - `PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md:unaudited_support`
+- **auditor confidence:** high
+
+### `pmns_selector_minimal_microscopic_extension_note`
+
+- **Note:** [`PMNS_SELECTOR_MINIMAL_MICROSCOPIC_EXTENSION_NOTE.md`](../../docs/PMNS_SELECTOR_MINIMAL_MICROSCOPIC_EXTENSION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims the minimal surviving PMNS selector extension class is a non-additive sector-sensitive mixed bridge with one real amplitude slot, and that this row is carried in the derivation atlas.  _(class `B`)_
+- **chain closes:** False — The registered runner exits with PASS=9 FAIL=1 because the derivation atlas does not contain the required `PMNS selector minimal microscopic extension` row.
+- **rationale:** Issue: the note's atlas-placement claim is stale relative to the current derivation atlas. The runner verifies the internal cross-note selector reductions, but fails the atlas check: `| PMNS selector minimal microscopic extension |` is absent from docs/publication/ci3_z3/DERIVATION_ATLAS.md. Why this blocks: atlas placement is part of the note's stated artifact/status surface, and the registered runner exits nonzero, so the complete support note cannot be audited clean. Repair target: either add/restore the atlas row for this note and runner, or revise the note and runner if this boundary has been superseded by the existing sector-odd/current-stack rows. Claim boundary until fixed: the current runner supports the internal extension-class reduction checks, but not the claimed atlas registration.
+- **open / conditional deps cited:**
+  - `publication/ci3_z3/DERIVATION_ATLAS.md lacks PMNS selector minimal microscopic extension row`
 - **auditor confidence:** high
 
 ### `pmns_selector_nonuniversal_support_reduction_note`
