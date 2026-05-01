@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:04:15.419664+00:00
+**Generated:** 2026-05-01T04:07:11.837714+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 239 |
-| support | 196 |
+| support | 195 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 801 |
+| ~~audited_conditional~~ | 802 |
 | ~~audited_failed~~ | 156 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
-| `audited_conditional` | 532 |
+| `audited_conditional` | 533 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 697 |
+| `unaudited` | 696 |
 
 | criticality | count |
 |---|---:|
@@ -707,6 +707,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `left_handed_charge_matching_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | F | - |
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_finite_path_explanation_note` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
+| `lepton_shared_higgs_universality_collapse_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `lepton_single_higgs_pmns_triviality_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `linear_response_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_second_order_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -9513,6 +9514,23 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `LENSING_LONG_PATH_TEST_NOTE.md`
   - `logs/2026-04-07-lensing-analytical-finite-path.txt`
 - **auditor confidence:** medium
+
+### `lepton_shared_higgs_universality_collapse_note`
+
+- **Note:** [`LEPTON_SHARED_HIGGS_UNIVERSALITY_COLLAPSE_NOTE.md`](../../docs/LEPTON_SHARED_HIGGS_UNIVERSALITY_COLLAPSE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-lepton_shared_higgs_universality_collapse_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** There is no support-level route by which one sector stays monomial while the other leaves the monomial class if the active offset set is shared.  _(class `A`)_
+- **chain closes:** False — The finite support implication checks out under the shared-offset hypothesis, but the note imports three lepton-sector theorem inputs whose ledger rows are currently conditional/unknown and it assumes, rather than proves, shared-Higgs universality.
+- **rationale:** Issue: the collapse result depends on conditional upstream lepton-sector support theorems and on the explicit shared-Higgs universality hypothesis. Why this blocks: the runner verifies the finite support algebra after those premises are accepted, but it does not derive the upstream PMNS branch theorems or the cross-sector universality condition. Repair target: register and clean-audit the single-Higgs PMNS triviality, neutrino two-Higgs, and charged-lepton two-Higgs theorem dependencies, and add or cite a theorem deriving shared-Higgs universality if the collapse is to be used unconditionally. Claim boundary until fixed: this is a correct conditional support-algebra collapse under shared universality, not an independently closed PMNS branch selector.
+- **open / conditional deps cited:**
+  - `LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md`
+  - `NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`
+  - `CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`
+  - `UNREGISTERED: shared-Higgs universality theorem`
+- **auditor confidence:** high
 
 ### `lepton_single_higgs_pmns_triviality_note`
 
