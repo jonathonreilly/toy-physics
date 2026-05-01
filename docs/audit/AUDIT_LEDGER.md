@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T06:52:11.552943+00:00
+**Generated:** 2026-05-01T06:52:58.351700+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 193 |
+| bounded | 192 |
 | support | 167 |
 | open | 9 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 848 |
+| ~~audited_conditional~~ | 849 |
 | ~~audited_failed~~ | 175 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 262 |
-| `audited_conditional` | 579 |
+| `audited_conditional` | 580 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 84 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 594 |
+| `unaudited` | 593 |
 
 | criticality | count |
 |---|---:|
@@ -890,6 +890,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_isotropic_schur_localization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_polarization_frame_bundle_attempt` | open | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `universal_gr_polarization_frame_bundle_blocker_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `universal_gr_supermetric_normal_form_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_tensor_variational_candidate_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | E | - |
 | `universal_qg_canonical_refinement_net_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -13669,6 +13670,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** Two valid 3+1 polarization frames related by a spatial rotation yield different localized channel coefficients for the same kernel, with frame_delta = 6.767e-02, so the complement is not canonical.  _(class `C`)_
 - **chain closes:** False — The note's obstruction depends on a frame-dependence computation and on upstream exact-stack inputs, but the ledger has no registered runner and no cited one-hop authorities for those ingredients. The conclusion is therefore not auditable as a closed derivation from the provided inputs.
 - **rationale:** Issue: the load-bearing complement-frame ambiguity is asserted from an unregistered runner and unprovided upstream exact-stack inputs. Why this blocks: without the runner output or cited authorities, the audit cannot verify that the quotient kernel is held fixed while only the polarization frame changes. Repair target: register the frame-dependence runner and cite the exact scalar generator, 3+1 lift, and symmetric quotient-kernel authorities used as inputs. Claim boundary until fixed: the note may stand as an open route/obstruction inventory, not as an audited derivation of the polarization-bundle obstruction.
+- **auditor confidence:** high
+
+### `universal_gr_polarization_frame_bundle_blocker_note`
+
+- **Note:** [`UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md`](../../docs/UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The current runner compares two valid 3+1 polarization frames and finds that localized channel coefficients move under frame rotation, so the current stack does not canonically fix the lapse/shift/shear splitting.  _(class `C`)_
+- **chain closes:** False — The bounded blocker rests on a frame-rotation computation plus upstream scalar, lift, variational, and quotient-kernel inputs, but no runner is registered and no one-hop authority notes are attached. The audit therefore cannot verify the claimed exact obstruction from the available context.
+- **rationale:** Issue: the claimed exact polarization-frame blocker depends on an unregistered runner and uncited upstream exact-stack results. Why this blocks: without the runner and source authorities, the audit cannot confirm that the kernel remains fixed while the complementary channel localization changes under valid frame rotation. Repair target: register the frame-comparison runner and cite the scalar generator, 3+1 lift, tensor variational candidate, and quotient-kernel notes used as inputs. Claim boundary until fixed: the note remains a bounded route diagnosis, not an audited closed derivation of the missing projector-bundle primitive.
 - **auditor confidence:** high
 
 ### `universal_gr_positive_background_extension_note`
