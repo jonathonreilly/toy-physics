@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T23:43:27.352309+00:00
+**Generated:** 2026-05-01T23:48:12.259501+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,23 +23,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
 | bounded | 162 |
-| support | 133 |
+| support | 132 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 958 |
+| ~~audited_conditional~~ | 959 |
 | ~~audited_failed~~ | 87 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 324 |
-| `audited_conditional` | 658 |
+| `audited_conditional` | 659 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 487 |
+| `unaudited` | 486 |
 
 | criticality | count |
 |---|---:|
@@ -979,6 +979,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `second_grown_family_sign_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `shapiro_experimental_card` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_unique_discriminator_v2_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sigma_hier_uniqueness_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
@@ -14153,6 +14154,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md`
   - `DIAMOND_SENSOR_PROTOCOL_NOTE.md`
   - `DIAMOND_SENSOR_PREDICTION_NOTE.md`
+- **auditor confidence:** high
+
+### `shapiro_experimental_card`
+
+- **Note:** [`SHAPIRO_EXPERIMENTAL_CARD.md`](../../docs/SHAPIRO_EXPERIMENTAL_CARD.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The card's lab-facing discriminator claim rests on the Shapiro phase-lag/scaling package: phase scales with source strength and k, decreases with impact parameter, depends on field-speed/spatial shape, and must be tested with ideal-detector X/Y/R/phi channels before adding instrument effects.  _(class `B`)_
+- **chain closes:** False — The phase-lag, scaling, and static-discriminator replay scripts reproduce the card's quoted tables and caveats, but the card depends on upstream Shapiro delay, portability, and retardation-discriminator rows that are not all audit-clean retained dependencies. The card also has no attached primary runner, so it closes only as conditional lab-facing support rather than ratified physics evidence.
+- **rationale:** Issue: The experimental card imports the Shapiro phase-lag/scaling/retardation package, while key upstream rows such as SHAPIRO_DELAY_NOTE.md and RETARDATION_DISCRIMINATOR_NOTE.md remain audit-conditional and this row has no primary runner attached. Why this blocks: the card cannot by itself ratify the lab-facing Shapiro prediction or a unique causal discriminator, even though the local replay numbers and static-cone caveat are consistent. Repair target: audit-clean the upstream phase-lag, portability, scaling, and retardation rows as separate runner-backed claims, or attach a direct ideal-detector card runner to this row. Claim boundary until fixed: safe as an experimental design/support card and requirement checklist; not safe as standalone retained evidence for the Shapiro physics package.
+- **open / conditional deps cited:**
+  - `SHAPIRO_DELAY_NOTE.md`
+  - `SHAPIRO_FAMILY_PORTABILITY_NOTE.md`
+  - `RETARDATION_DISCRIMINATOR_NOTE.md`
 - **auditor confidence:** high
 
 ### `shapiro_family_portability_note`
