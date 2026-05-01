@@ -99,3 +99,16 @@ Adds a joint Feynman-Hellmann / scalar-LSZ harness certificate:
 - still no retained closure: production statistics, controlled scalar-pole
   isolation, `dGamma/dp^2`, and canonical-Higgs `kappa_s` remain open.
 ```
+
+Latest joint FH/LSZ resource checkpoint text for PR #230:
+
+```text
+Adds a joint Feynman-Hellmann / scalar-LSZ resource projection:
+- modest scalar-LSZ plan: 4 momentum modes and 16 noise vectors/configuration;
+- projected solve budget is `15.8889x` the existing three-mass direct
+  projection;
+- validator passes `PASS=7 FAIL=0`; campaign status now consumes 39 route
+  certificates and reports `PASS=35 FAIL=0`;
+- projected mass-scaled foreground cost is about `3630` single-worker hours,
+  so this is exact next-action planning, not retained closure.
+```

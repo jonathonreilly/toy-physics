@@ -1,0 +1,88 @@
+{
+  "actual_current_surface_status": "bounded-support / joint FH-LSZ production resource projection",
+  "assumed_joint_protocol": {
+    "base_mass_points": 3,
+    "extra_source_shift_masses": 2,
+    "point_sources_per_mass_correlator": 3,
+    "scalar_lsz_momentum_modes": 4,
+    "scalar_lsz_noise_vectors_per_configuration": 16,
+    "scalar_lsz_solve_equivalent_masses": 42.666666666666664,
+    "solve_budget_factor_vs_three_mass_direct": 15.888888888888888,
+    "source_shifts": 3,
+    "total_equivalent_mass_points": 47.666666666666664
+  },
+  "base_resource_projection": "outputs/yt_production_resource_projection_2026-05-01.json",
+  "exact_next_action": [
+    "choose scalar-LSZ momentum/noise budget from a pilot variance study",
+    "launch the joint production harness on saved gauge ensembles",
+    "fit correlated dE_top/ds and Gamma_ss(q) on the same ensemble stream",
+    "derive the scalar pole and dGamma_ss/dp^2 in the controlled finite-volume/IR limit",
+    "only then convert dE_top/ds to physical dE_top/dh"
+  ],
+  "fail_count": 0,
+  "joint_harness_certificate": "outputs/yt_fh_lsz_joint_harness_certificate_2026-05-01.json",
+  "pass_count": 7,
+  "projection": {
+    "direct_conservative_hours": 380.79866742136056,
+    "direct_mass_scaled_hours": 228.47920045281631,
+    "joint_conservative_days": 252.10282148728962,
+    "joint_conservative_hours": 6050.467715694951,
+    "joint_mass_scaled_days": 151.26169289237376,
+    "joint_mass_scaled_hours": 3630.28062941697,
+    "volume_rows": [
+      {
+        "conservative_hours": 18.88836011091868,
+        "conservative_seconds": 67998.09639930725,
+        "joint_conservative_hours": 300.1150550957079,
+        "joint_equivalent_mass_points": 47.666666666666664,
+        "joint_mass_scaled_hours": 180.06903305742472,
+        "joint_solve_budget_factor": 15.888888888888888,
+        "mass_scaled_hours": 11.333016066551208,
+        "mass_scaled_seconds": 40798.85783958435,
+        "production_sweeps": 21000,
+        "site_scale_vs_benchmark": 1.0,
+        "sites": 41472,
+        "volume": "12^3x24"
+      },
+      {
+        "conservative_hours": 59.69654553574299,
+        "conservative_seconds": 214907.56392867476,
+        "joint_conservative_hours": 948.5117790679163,
+        "joint_equivalent_mass_points": 47.666666666666664,
+        "joint_mass_scaled_hours": 569.1070674407498,
+        "joint_solve_budget_factor": 15.888888888888888,
+        "mass_scaled_hours": 35.817927321445794,
+        "mass_scaled_seconds": 128944.53835720484,
+        "production_sweeps": 21000,
+        "site_scale_vs_benchmark": 3.1604938271604937,
+        "sites": 131072,
+        "volume": "16^3x32"
+      },
+      {
+        "conservative_hours": 302.21376177469887,
+        "conservative_seconds": 1087969.542388916,
+        "joint_conservative_hours": 4801.840881531326,
+        "joint_equivalent_mass_points": 47.666666666666664,
+        "joint_mass_scaled_hours": 2881.1045289187955,
+        "joint_solve_budget_factor": 15.888888888888888,
+        "mass_scaled_hours": 181.32825706481933,
+        "mass_scaled_seconds": 652781.7254333496,
+        "production_sweeps": 21000,
+        "site_scale_vs_benchmark": 16.0,
+        "sites": 663552,
+        "volume": "24^3x48"
+      }
+    ]
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Projected compute cost and harness readiness do not derive kappa_s or provide production measurements.",
+  "strict_non_claims": [
+    "not production evidence",
+    "not a physical y_t derivation",
+    "does not set kappa_s = 1",
+    "does not set c2 or Z_match to one",
+    "does not use H_unit or yt_ward_identity",
+    "does not use observed top mass or observed y_t"
+  ],
+  "verdict": "The joint physical-response route is now executable but not a foreground closure route.  Using a modest scalar-LSZ plan of four momenta and sixteen noise vectors per configuration, the fermion solve budget is about 15.8889 times the existing three-mass direct projection.  The mass-scaled three-volume projection is therefore about 3630.28 single-worker hours (151.26 days), before any extra autocorrelation or pole-fit tuning.  This is exact next-action planning, not measurement evidence."
+}

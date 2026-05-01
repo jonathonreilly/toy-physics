@@ -197,6 +197,11 @@ What changed:
   `Gamma_ss(q)` for `kappa_s`.  This defines the exact production measurement
   bundle; it remains bounded support until production data and a controlled
   scalar-pole/canonical-LSZ normalization exist.
+- The joint FH/LSZ resource projection converts that bundle into a compute
+  estimate.  With four scalar-LSZ momentum modes and sixteen noise vectors per
+  configuration, the solve budget is about `15.8889x` the existing three-mass
+  direct projection, or about `3630.28` single-worker hours before extra
+  autocorrelation and pole-fit tuning.
 
 The scientific result is narrower than closure:
 
@@ -249,3 +254,5 @@ The protocol block completed item 1.  The same-source two-point block reduces
 item 2 to the controlled-pole/residue theorem, and the harness extension makes
 that measurement executable on future production ensembles.  The joint harness
 block verifies the combined command path.  Items 2 and 3 remain active.
+The resource projection says the exact next action is a scheduled production
+job or a scalar pole theorem, not more reduced foreground smoke.

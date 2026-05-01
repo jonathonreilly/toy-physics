@@ -543,6 +543,19 @@ the smoke output is not production evidence and cannot convert `dE/ds` to
 `dE/dh` without `kappa_s` from a controlled scalar pole and canonical LSZ
 normalization.
 
+Joint FH/LSZ production is not a 12-hour foreground closure route:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_joint_resource_projection.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+Using four scalar-LSZ momentum modes and sixteen noise vectors per
+configuration, the solve budget is about `15.8889x` the existing three-mass
+direct resource projection, or about `3630.28` single-worker hours before
+additional autocorrelation or pole-fit tuning.  This is exact next-action
+planning, not evidence.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

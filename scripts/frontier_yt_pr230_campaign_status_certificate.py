@@ -69,6 +69,7 @@ def main() -> int:
         "bs_kernel_residue_degeneracy": load("outputs/yt_scalar_bs_kernel_residue_degeneracy_2026-05-01.json"),
         "scalar_two_point_harness": load("outputs/yt_scalar_two_point_harness_certificate_2026-05-01.json"),
         "fh_lsz_joint_harness": load("outputs/yt_fh_lsz_joint_harness_certificate_2026-05-01.json"),
+        "fh_lsz_joint_resource": load("outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -210,6 +211,12 @@ def main() -> int:
         "Feynman-Hellmann scalar-LSZ" in str(statuses["fh_lsz_joint_harness"])
         or "bounded-support" in str(statuses["fh_lsz_joint_harness"]),
         statuses["fh_lsz_joint_harness"],
+    )
+    report(
+        "fh-lsz-joint-resource-projection-not-evidence",
+        "resource projection" in str(statuses["fh_lsz_joint_resource"])
+        or "bounded-support" in str(statuses["fh_lsz_joint_resource"]),
+        statuses["fh_lsz_joint_resource"],
     )
     report(
         "finite-ladder-route-needs-ir-limit",

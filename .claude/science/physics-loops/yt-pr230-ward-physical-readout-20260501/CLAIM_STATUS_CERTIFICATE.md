@@ -332,4 +332,10 @@ python3 scripts/frontier_yt_fh_lsz_joint_harness_certificate.py
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=34 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_joint_resource_projection.py
+# SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=35 FAIL=0
 ```

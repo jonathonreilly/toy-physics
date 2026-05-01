@@ -78,7 +78,10 @@ probability.
    positive move is a production joint `dE/ds` plus `C_ss(q)` run and a
    controlled pole/residue fit, not another reduced smoke sample.  The joint
    harness smoke verifies this combined command path; remaining work is
-   production data and the scalar pole/canonical normalization theorem.
+   production data and the scalar pole/canonical normalization theorem.  A
+   modest four-momentum, sixteen-noise scalar-LSZ plan projects to about
+   `3630` single-worker hours, so foreground closure requires a theorem or a
+   scheduled production job.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the

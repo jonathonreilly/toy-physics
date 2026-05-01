@@ -845,3 +845,29 @@ The joint harness certificate proves the observable bundle can be emitted in a
 single run.  It is not closure: the reduced smoke output supplies neither
 production statistics nor the scalar pole/canonical-LSZ theorem needed to
 derive `kappa_s`.
+
+## Review-Loop Backpressure — Joint FH/LSZ Resource Projection
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_joint_resource_projection.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_joint_resource_projection.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The resource projection makes the remaining physical-response route concrete:
+with four scalar-LSZ momenta and sixteen noise vectors, the joint run is
+roughly `3630` single-worker hours before tuning.  It is planning support, not
+measurement evidence.
