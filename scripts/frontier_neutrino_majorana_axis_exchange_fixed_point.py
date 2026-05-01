@@ -50,14 +50,14 @@ SIGMA_Y = np.array([[0.0, -1.0j], [1.0j, 0.0]], dtype=complex)
 SIGMA_Z = np.array([[1.0, 0.0], [0.0, -1.0]], dtype=complex)
 
 
-def check(name: str, condition: bool, detail: str = "") -> bool:
+def check(name: str, condition: bool, detail: str = "", cls: str = "C") -> bool:
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
         PASS_COUNT += 1
     else:
         FAIL_COUNT += 1
-    msg = f"  [{status}] {name}"
+    msg = f"  [{status} ({cls})] {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)

@@ -104,10 +104,10 @@ def log(msg=""):
     print(msg)
 
 
-def check(name, condition, detail=""):
+def check(name, condition, detail="", cls="D"):
     status = "PASS" if condition else "FAIL"
     COUNTS[status] += 1
-    log(f"  [{status}] {name}")
+    log(f"  [{status} ({cls})] {name}")
     if detail:
         log(f"         {detail}")
 
