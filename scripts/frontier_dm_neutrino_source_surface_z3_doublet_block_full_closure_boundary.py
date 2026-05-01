@@ -88,7 +88,14 @@ def part1_the_current_source_facing_bank_is_already_fixed() -> None:
 
     pkg = exact_package()
     source_note = read("docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md")
-    coeff_note = read("docs/DM_NEUTRINO_WEAK_TRIPLET_COEFFICIENT_AXIOM_BOUNDARY_NOTE_2026-04-15.md")
+    # Stale-path: the coefficient note was moved to
+    # `archive_unlanded/dm-neutrino-stale-runners-2026-04-30/`. The substring
+    # checks below verify historical coefficient-theorem content that the
+    # archive preserves verbatim. Redirect to the archive location.
+    coeff_note = read(
+        "archive_unlanded/dm-neutrino-stale-runners-2026-04-30/"
+        "DM_NEUTRINO_WEAK_TRIPLET_COEFFICIENT_AXIOM_BOUNDARY_NOTE_2026-04-15.md"
+    )
 
     check(
         "The source-amplitude theorem fixes a_sel = 1/2 and tau_+ = 1",

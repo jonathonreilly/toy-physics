@@ -264,23 +264,21 @@ def part4_bank_records_the_new_endpoint() -> None:
     print("=" * 88)
 
     note = read("docs/DM_NEUTRINO_POSTCANONICAL_POLAR_SECTION_NOTE_2026-04-15.md")
-    atlas = read("docs/publication/ci3_z3/DERIVATION_ATLAS.md")
-    blocker = read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")
+    # Stale-path checks removed in this hygiene pass:
+    #
+    # 1. `read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")` — note
+    #    deleted by commit d2e754fdc (2026-04-16, "Trim DM package to
+    #    science-only surface").
+    # 2. The atlas-row check `"| DM neutrino post-canonical positive polar
+    #    section |"` was also stale: the corresponding row was trimmed from
+    #    `docs/publication/ci3_z3/DERIVATION_ATLAS.md` in the same pass.
+    #
+    # The surviving note check verifies the load-bearing Y_+(H)=H^(1/2) /
+    # K_+(H)=H content directly.
 
     check(
         "The new note states Y_+(H) = H^(1/2) and K_+(H) = H",
         "Y_+(H)" in note and "K_+(H) = H" in note,
-    )
-    check(
-        "The atlas carries the DM post-canonical polar section row",
-        "| DM neutrino post-canonical positive polar section |" in atlas,
-    )
-    check(
-        "The blocker note now says the raw right-frame obstruction is no longer the final endpoint",
-        "Y_+(H) = H^(1/2)" in blocker
-        or "generic full-rank patch" in blocker
-        or "generic right orbit already has one" in blocker
-        or "Hermitian-data side" in blocker,
     )
 
     print()

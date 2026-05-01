@@ -88,7 +88,19 @@ def main() -> int:
 
     measure_note = read("docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md")
     truncated_note = read("docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TRUNCATED_ENVIRONMENT_PACKET_NOTE_2026-04-19.md")
-    boundary_note = read("docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md")
+    # Stale-path: the boundary note was moved to
+    # `archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/`
+    # because its dedicated runner (declared but missing on disk) blocked an
+    # audit of THAT note. The substring this runner verifies
+    # ("best audited retained diagonal fit still misses") was historical
+    # content of the boundary note, which the archive preserves verbatim.
+    # Redirect the read to the archived location so this runner remains a
+    # self-contained verification of its own load-bearing zero-extension
+    # claim.
+    boundary_note = read(
+        "archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/"
+        "GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md"
+    )
 
     v_min, z_min = completed_sector_data()
     z00_min = float(v_min[0])
