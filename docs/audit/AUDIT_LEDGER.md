@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T11:42:02.160480+00:00
+**Generated:** 2026-05-01T11:44:01.345126+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 187 |
+| bounded | 186 |
 | support | 160 |
 | open | 7 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 859 |
+| ~~audited_conditional~~ | 860 |
 | ~~audited_failed~~ | 178 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 303 |
-| `audited_conditional` | 589 |
+| `audited_conditional` | 590 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 87 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 539 |
+| `unaudited` | 538 |
 
 | criticality | count |
 |---|---:|
@@ -874,6 +874,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `poisson_3d_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `poisson_exhaustive_uniqueness_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `poisson_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `poisson_self_gravity_mechanism_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `primordial_spectrum_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `propagator_family_unification_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quantum_horizon_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -12473,6 +12474,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The strict read is that no retained positive survives the exact reduction and Born controls, so this lane remains a bounded no-go/control surface rather than a self-gravity mechanism.  _(class `C`)_
 - **chain closes:** True — The primary runner recomputes the exact lattice loop, reproducing the zero-epsilon identity, the small nonzero matched-null centroid/phase shifts, the nonconverged nonlinear rows, and the split between step-local and end-to-end Born behavior. Those current outputs support the note's bounded no-go/control conclusion.
 - **rationale:** The load-bearing claim is bounded and negative: the runner does not promote a self-gravity mechanism, it verifies a control surface with exact zero-coupling reduction and small unstable nonzero effects. The current runner output matches the source values for the sweep and Born audit, including nonconvergence and end-to-end Born drift. Residual risk is limited to the intentionally narrow exact-lattice family, which the note states explicitly.
+- **auditor confidence:** high
+
+### `poisson_self_gravity_mechanism_note`
+
+- **Note:** [`POISSON_SELF_GRAVITY_MECHANISM_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_MECHANISM_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The exact-lattice Poisson-like backreaction loop is a useful sanity check and an honest audit target, but it does not yet beat the bounded-control status.  _(class `B`)_
+- **chain closes:** False — The conclusion is a cross-note summary of three Poisson self-gravity control notes, but this ledger row has no registered one-hop dependencies. The companion script exits successfully but only prints a hard-coded MechanismVerdict rather than recomputing the hard-bar criteria.
+- **rationale:** Issue: the mechanism summary depends on upstream Poisson loop/Born evidence, but those evidence notes are not registered as one-hop dependencies here, and the companion runner prints a hard-coded verdict. Why this blocks: the bounded control-only conclusion is plausible, but this row does not independently re-derive or expose the evidence chain needed for an audit-clean mechanism checkpoint. Repair target: register the three evidence notes as dependencies and replace or supplement the summary runner with a harness that recomputes the four hard-bar criteria. Claim boundary until fixed: the note may be used as a control-only narrative pointer, not as an independently audited mechanism result.
+- **open / conditional deps cited:**
+  - `POISSON_SELF_GRAVITY_LOOP_NOTE.md`
+  - `POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE.md`
+  - `POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md`
 - **auditor confidence:** high
 
 ### `portable_card_extension_note`
