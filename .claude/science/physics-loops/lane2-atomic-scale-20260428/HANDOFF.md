@@ -1,6 +1,6 @@
 # Lane 2 Physics Loop Handoff
 
-**Updated:** 2026-05-01T11:10:40Z
+**Updated:** 2026-05-01T11:14:54Z
 **Loop slug:** `lane2-atomic-scale-20260428`  
 **Science block:** 01  
 **Branch:** `physics-loop/lane2-atomic-scale-block01-20260428`  
@@ -119,6 +119,13 @@ PYTHONPATH=scripts python3 scripts/frontier_atomic_qed_threshold_bridge_firewall
 Review-loop emulation found no blocker. Guardrail: this artifact is exact
 conditional support for the scale identity only. It does not derive `m_e`,
 `alpha(0)`, the physical unit map, or the Rydberg constant.
+
+Commit/push checkpoint:
+
+```text
+74f079a7 lane2 atomic: add NR Coulomb scale bridge
+origin/physics-loop/lane2-atomic-scale-block01-20260428
+```
 
 ## Next Exact Action
 
