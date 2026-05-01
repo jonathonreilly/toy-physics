@@ -273,6 +273,27 @@ The small-volume cold pilot gives finite `M_kin` proxies but full relative
 spread `0.950562`; it confirms the implementation route and rejects
 reduced-scope pilot data as strict evidence.
 
+Assumption shortcut stress:
+
+```text
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+No current route certificate authorizes retained-proposal wording.  The stress
+certificate explicitly forbids hidden use of `H_unit`, observed target values,
+alpha/plaquette/u0, reduced pilots, `c2 = 1`, or `Z_match = 1`.
+
+Free kinetic coefficient is positive support but not closure:
+
+```text
+python3 scripts/frontier_yt_free_staggered_kinetic_coefficient.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+The free action fixes `M_kin^free = m sqrt(1+m^2)`, but the interacting kinetic
+renormalization and lattice-to-SM matching import remain open.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

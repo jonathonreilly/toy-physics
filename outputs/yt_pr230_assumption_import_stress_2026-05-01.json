@@ -1,0 +1,22 @@
+{
+  "actual_current_surface_status": "open / assumption-import stress complete",
+  "checked_certificates": {
+    "campaign": "open / campaign exhausted for current analytic shortcuts",
+    "kinetic_matching": "exact negative boundary / heavy kinetic matching obstruction",
+    "momentum_pilot": "bounded-support / momentum pilot scaling",
+    "projector_norm": "exact negative boundary / projector-normalization obstruction",
+    "scalar_ir": "exact negative boundary / scalar ladder IR zero-mode obstruction"
+  },
+  "fail_count": 0,
+  "missing_forbidden_terms": [],
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
+  "strict_non_claims": [
+    "not a y_t derivation",
+    "not a production measurement",
+    "does not use observed top mass as calibration",
+    "does not define y_t through H_unit matrix elements"
+  ],
+  "verdict": "The refreshed PR #230 assumption exercise is explicit: H_unit, observed top/y_t, alpha_LM/plaquette/u0, reduced cold pilots, undetermined c2, and undetermined Z_match are forbidden as proof shortcuts.  No current route certificate authorizes retained proposal wording.  Positive closure still requires production evidence plus heavy matching, or an independent scalar pole/LSZ theorem."
+}

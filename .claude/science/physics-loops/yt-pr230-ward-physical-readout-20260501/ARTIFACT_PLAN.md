@@ -94,12 +94,18 @@ Completed in block 1:
 - `outputs/yt_direct_lattice_correlator_momentum_pilot_certificate_2026-05-01.json`
 - `outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json`
 - `docs/YT_MOMENTUM_PILOT_SCALING_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_pr230_assumption_import_stress.py`
+- `outputs/yt_pr230_assumption_import_stress_2026-05-01.json`
+- `docs/YT_PR230_ASSUMPTION_IMPORT_STRESS_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_free_staggered_kinetic_coefficient.py`
+- `outputs/yt_free_staggered_kinetic_coefficient_2026-05-01.json`
+- `docs/YT_FREE_STAGGERED_KINETIC_COEFFICIENT_NOTE_2026-05-01.md`
 
 Next artifact:
 
-- production/statistics for the momentum route, scalar LSZ theorem attempt, or
-  matching theorem attempt; reduced momentum pilots are now exhausted as
-  closure evidence
+- interacting kinetic-renormalization theorem, scalar LSZ theorem attempt, or
+  real production/statistics; reduced momentum pilots and free-action support
+  are not closure evidence
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

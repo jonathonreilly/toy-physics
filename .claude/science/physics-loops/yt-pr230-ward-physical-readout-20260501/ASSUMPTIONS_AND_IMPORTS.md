@@ -15,7 +15,10 @@
 | `alpha_LM` / plaquette normalization | prior quantitative bridge | audited non-clean in this lane | forbidden as load-bearing proof input |
 | Production MC data | direct-measurement route evidence | not complete | unavailable for closure |
 | Static heavy-quark additive mass | HQET direct route | not derived on current surface | open import |
+| Heavy kinetic-action coefficient `c2` | converts `E(p)-E(0)` into a lattice kinetic mass | not derived on current surface | open import |
 | Lattice-HQET-to-SM top mass matching | HQET direct route | not derived on current surface | open import |
+| Nonzero-momentum production ensembles | kinetic route evidence | scout and reduced cold pilots only | unavailable for closure |
+| Reduced cold-gauge momentum pilots | implementation support | bounded support | forbidden as strict evidence |
 | Scalar-channel contact coupling `G` | HS/RPA pole condition | not in `A_min` | forbidden unless derived from Wilson gauge ladder |
 | Scalar-channel Bethe-Salpeter kernel | interacting pole route | not yet retained | open import after ladder scout |
 | IR / finite-volume kernel limit | needed for ladder eigenvalue crossing | not yet fixed | open import |
@@ -98,3 +101,52 @@ D_phi -> D_phi / kappa^2
 A same-four-fermion coefficient can remain fixed while the scalar vertex and
 scalar propagator normalization vary.  Same-1PI equality is not enough until
 the scalar pole residue/canonical normalization is independently fixed.
+
+Current kinetic-route assumption stress test:
+
+```text
+measured Delta E(p) = c2 p_hat^2 / (2 M0)
+M_kin(readout) = p_hat^2 / (2 Delta E)       only if c2 = 1
+m_t(SM) = Z_match a^{-1} M_kin
+```
+
+The nonzero-momentum route removes the static additive rest-mass ambiguity, but
+it introduces two explicit imports:
+
+1. `c2`, the heavy kinetic-action coefficient;
+2. `Z_match`, the lattice-to-SM mass matching factor.
+
+The current retained surface does not derive either.  Therefore a cold-gauge or
+reduced-statistics kinetic-mass proxy cannot be promoted to a physical top mass
+or `y_t` theorem.  It is allowed only as implementation support until the
+matching theorem or production evidence with independently derived matching is
+available.
+
+Refreshed `A_min` for the positive-closure rerun:
+
+```text
+A_min =
+  retained Cl(3)/Z^3 substrate
+  + g_bare = 1 as substrate input
+  + Wilson-staggered Dirac/gauge action already in PR230 harness
+  + standard functional derivative / correlator extraction definitions
+  + structural counts N_c=3, N_iso=2
+
+Forbidden in A_min =
+  H_unit-to-top matrix-element definition
+  yt_ward_identity as y_t authority
+  observed top mass / observed y_t as proof selectors
+  alpha_LM / plaquette / u0 as load-bearing normalization
+  reduced cold-gauge pilot values as production evidence
+  c2 = 1 unless derived from the action in the same route
+  Z_match = 1 unless derived as a matching theorem
+```
+
+Positive-closure candidates left after the assumption exercise:
+
+1. production/statistics with momentum modes plus a derived heavy matching
+   bridge;
+2. scalar-channel pole/LSZ theorem deriving projector, zero-mode/IR limit,
+   eigenvalue crossing, and residue;
+3. an independent retained parent repair for the chirality/scalar carrier
+   bridge.

@@ -95,6 +95,12 @@ What changed:
 - A bounded small-volume momentum pilot now exists through `8^3 x 16`.  It
   emits finite kinetic proxies, but the full `p_min` proxy has relative spread
   `0.950562`, so reduced cold-gauge pilots are exhausted as closure evidence.
+- The assumptions/import exercise has been refreshed and made executable.  It
+  explicitly forbids `H_unit`, observed target values, alpha/plaquette/u0,
+  reduced pilots, and undeclared `c2`/`Z_match` shortcuts.
+- The free Wilson-staggered kinetic coefficient is now exact support:
+  `M_kin^free = m sqrt(1+m^2)`.  This is a positive route movement, but it
+  leaves interacting kinetic renormalization and SM matching open.
 
 The scientific result is narrower than closure:
 
@@ -127,6 +133,6 @@ Package this PR #230 update.  The remaining positive options are now:
 Acceptance target for the next heavy-kinetic block:
 
 1. Implement a nonzero-momentum correlator scout that extracts `E(p)-E(0)`.
-2. If pursuing closure rather than engineering, derive `c2` and the
-   lattice-HQET/NRQCD-to-SM matching import.
+2. If pursuing closure rather than engineering, derive the interacting kinetic
+   coefficient and lattice-HQET/NRQCD-to-SM matching import.
 3. Otherwise pivot back to the scalar LSZ/pole-residue theorem.

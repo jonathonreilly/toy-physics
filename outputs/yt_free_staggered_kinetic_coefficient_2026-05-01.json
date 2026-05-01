@@ -1,0 +1,197 @@
+{
+  "actual_current_surface_status": "exact support / free staggered kinetic coefficient",
+  "fail_count": 0,
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Exact free-action support only; interacting c2/Z_match and production evidence remain open.",
+  "required_next_artifacts": [
+    "derive interacting kinetic coefficient / renormalization under SU(3) Wilson gauge dynamics",
+    "measure nonzero-momentum correlators on production ensembles",
+    "derive lattice-to-SM top mass matching"
+  ],
+  "rows": [
+    {
+      "exact_free_mkin": 0.5590169943749475,
+      "finite_p_sequence": [
+        {
+          "finite_p_mkin": 0.6831876771907268,
+          "relative_error_to_exact": 0.22212327007091812,
+          "spatial_L": 16
+        },
+        {
+          "finite_p_mkin": 0.6158891514117167,
+          "relative_error_to_exact": 0.1017360073290073,
+          "spatial_L": 24
+        },
+        {
+          "finite_p_mkin": 0.5914280945241218,
+          "relative_error_to_exact": 0.05797873852728596,
+          "spatial_L": 32
+        },
+        {
+          "finite_p_mkin": 0.5735721477540137,
+          "relative_error_to_exact": 0.026037049902822247,
+          "spatial_L": 48
+        },
+        {
+          "finite_p_mkin": 0.5672359770183089,
+          "relative_error_to_exact": 0.01470256311715761,
+          "spatial_L": 64
+        },
+        {
+          "finite_p_mkin": 0.5610796716037478,
+          "relative_error_to_exact": 0.0036898291993908297,
+          "spatial_L": 128
+        },
+        {
+          "finite_p_mkin": 0.5595331709276915,
+          "relative_error_to_exact": 0.0009233646882617647,
+          "spatial_L": 256
+        }
+      ],
+      "mass": 0.5,
+      "mkin_over_bare_mass": 1.118033988749895,
+      "mkin_over_rest_energy": 1.1616859047586932,
+      "rest_energy_asinh_m": 0.48121182505960347
+    },
+    {
+      "exact_free_mkin": 1.4142135623730951,
+      "finite_p_sequence": [
+        {
+          "finite_p_mkin": 1.5692794263510044,
+          "relative_error_to_exact": 0.10964812394933039,
+          "spatial_L": 16
+        },
+        {
+          "finite_p_mkin": 1.4829585549009516,
+          "relative_error_to_exact": 0.04861005038906586,
+          "spatial_L": 24
+        },
+        {
+          "finite_p_mkin": 1.4528577973658108,
+          "relative_error_to_exact": 0.027325600617115694,
+          "spatial_L": 32
+        },
+        {
+          "finite_p_mkin": 1.4313823082093662,
+          "relative_error_to_exact": 0.012140136605295553,
+          "spatial_L": 48
+        },
+        {
+          "finite_p_mkin": 1.4238698699677872,
+          "relative_error_to_exact": 0.0068280405814299065,
+          "spatial_L": 64
+        },
+        {
+          "finite_p_mkin": 1.4166273915230159,
+          "relative_error_to_exact": 0.0017068349605347012,
+          "spatial_L": 128
+        },
+        {
+          "finite_p_mkin": 1.4148170049629611,
+          "relative_error_to_exact": 0.00042669834735102044,
+          "spatial_L": 256
+        }
+      ],
+      "mass": 1.0,
+      "mkin_over_bare_mass": 1.4142135623730951,
+      "mkin_over_rest_energy": 1.6045563234489544,
+      "rest_energy_asinh_m": 0.881373587019543
+    },
+    {
+      "exact_free_mkin": 4.47213595499958,
+      "finite_p_sequence": [
+        {
+          "finite_p_mkin": 4.786447527482695,
+          "relative_error_to_exact": 0.07028220421870977,
+          "spatial_L": 16
+        },
+        {
+          "finite_p_mkin": 4.6101185808559055,
+          "relative_error_to_exact": 0.030853853112866488,
+          "spatial_L": 24
+        },
+        {
+          "finite_p_mkin": 4.549421888074364,
+          "relative_error_to_exact": 0.01728166000597172,
+          "spatial_L": 32
+        },
+        {
+          "finite_p_mkin": 4.506381787255817,
+          "relative_error_to_exact": 0.0076576008871002185,
+          "spatial_L": 48
+        },
+        {
+          "finite_p_mkin": 4.4913789823113826,
+          "relative_error_to_exact": 0.004302871716207642,
+          "spatial_L": 64
+        },
+        {
+          "finite_p_mkin": 4.476941843723698,
+          "relative_error_to_exact": 0.0010746293879428626,
+          "spatial_L": 128
+        },
+        {
+          "finite_p_mkin": 4.473337123470428,
+          "relative_error_to_exact": 0.00026858943532454823,
+          "spatial_L": 256
+        }
+      ],
+      "mass": 2.0,
+      "mkin_over_bare_mass": 2.23606797749979,
+      "mkin_over_rest_energy": 3.0978290793565155,
+      "rest_energy_asinh_m": 1.4436354751788103
+    },
+    {
+      "exact_free_mkin": 25.495097567963924,
+      "finite_p_sequence": [
+        {
+          "finite_p_mkin": 26.92413184776609,
+          "relative_error_to_exact": 0.05605133598695585,
+          "spatial_L": 16
+        },
+        {
+          "finite_p_mkin": 26.11989948664724,
+          "relative_error_to_exact": 0.024506747503818697,
+          "spatial_L": 24
+        },
+        {
+          "finite_p_mkin": 25.84455359888359,
+          "relative_error_to_exact": 0.013706793236938889,
+          "spatial_L": 32
+        },
+        {
+          "finite_p_mkin": 25.64978321131963,
+          "relative_error_to_exact": 0.00606727010725689,
+          "spatial_L": 48
+        },
+        {
+          "finite_p_mkin": 25.58198514690674,
+          "relative_error_to_exact": 0.003408011234755729,
+          "spatial_L": 64
+        },
+        {
+          "finite_p_mkin": 25.51678985762546,
+          "relative_error_to_exact": 0.0008508416021437341,
+          "spatial_L": 128
+        },
+        {
+          "finite_p_mkin": 25.500518792185872,
+          "relative_error_to_exact": 0.0002126379084251821,
+          "spatial_L": 256
+        }
+      ],
+      "mass": 5.0,
+      "mkin_over_bare_mass": 5.0990195135927845,
+      "mkin_over_rest_energy": 11.025201023925062,
+      "rest_energy_asinh_m": 2.3124383412727525
+    }
+  ],
+  "strict_non_claims": [
+    "not a production measurement",
+    "not a y_t derivation",
+    "does not use observed top mass as calibration",
+    "does not define y_t through H_unit matrix elements"
+  ],
+  "verdict": "The free Wilson-staggered action fixes the small-momentum kinetic coefficient: sinh(E)^2 = m^2 + sum_i sin(p_i)^2 implies M_kin^free = m sqrt(1+m^2).  Finite momentum estimates converge to this expression.  This retires the idea that c2 is arbitrary in the free action, but it does not close PR #230 because the interacting kinetic renormalization, production data, and lattice-to-SM matching theorem remain open."
+}

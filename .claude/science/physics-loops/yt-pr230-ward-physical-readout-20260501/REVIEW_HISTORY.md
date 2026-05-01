@@ -310,6 +310,32 @@ python3 scripts/frontier_yt_heavy_kinetic_matching_obstruction.py
 The route remains actionable only as production evidence plus a matching
 theorem.
 
+## Review-Loop Backpressure — Assumption Stress And Free Kinetic Support
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN plus EXACT SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_assumption_import_stress.py scripts/frontier_yt_free_staggered_kinetic_coefficient.py
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+python3 scripts/frontier_yt_free_staggered_kinetic_coefficient.py
+```
+
+The assumption exercise is now explicit and executable.  The free kinetic
+coefficient is useful exact support, but the review boundary remains open
+because interacting kinetic renormalization and lattice-to-SM matching are not
+derived.
+
 ## Review-Loop Backpressure — Momentum Pilot Scaling
 
 Local review-loop disposition:
