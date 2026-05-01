@@ -45,6 +45,10 @@ The Ward-ratio shortcut was tested next.  Even if the old Ward ratio were
 repaired in a future audit, `y_t/g_s=1/sqrt(6)` does not imply
 `beta_lambda(M_Pl)=0` at the selector's Planck gauge point.
 
+The IR quasi-fixed-point route was tested next.  QFP focusing compresses UV
+trajectory dependence but leaves a nonunique family, so it remains bounded
+support rather than a standalone selector.
+
 Verification:
 
 ```bash
@@ -70,6 +74,9 @@ python3 scripts/frontier_yt_asymptotic_safety_fixed_point_no_go.py
 # SUMMARY: PASS=8 FAIL=0
 
 python3 scripts/frontier_yt_ward_ratio_stationarity_no_go.py
+# SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_qfp_selector_no_go.py
 # SUMMARY: PASS=7 FAIL=0
 ```
 

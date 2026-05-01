@@ -192,6 +192,12 @@ It fails: at the selector's Planck gauge point, `y_t=g_3/sqrt(6)` gives a
 nonzero `beta_lambda(lambda=0)`, and making the Ward ratio coincide with
 stationarity would require a very different `g_3(M_Pl)`.
 
+QFP follow-up:
+[YT_QFP_SELECTOR_NO_GO_NOTE_2026-05-01.md](YT_QFP_SELECTOR_NO_GO_NOTE_2026-05-01.md)
+tests whether IR quasi-fixed-point focusing can replace the missing UV
+selector.  It cannot: QFP focusing is bounded support for transport robustness,
+not a standalone selector.
+
 Promising attack frames:
 
 1. boundary-action stationarity of the taste scalar at the Planck surface;
@@ -216,6 +222,8 @@ Promising attack frames:
    Gaussian point.
 10. Ward-ratio shortcut, now closed negatively: even a repaired Ward ratio
     would not by itself imply Planck quartic beta stationarity.
+11. IR quasi-fixed-point route, now closed negatively as a selector: it
+    compresses trajectory dependence but still needs a UV boundary condition.
 
 Until that premise is derived, this is a conditional selector and a route
 portfolio upgrade, not a retained-grade theorem.

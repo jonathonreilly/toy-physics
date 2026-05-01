@@ -26,6 +26,9 @@ Completed in the current block:
 - `scripts/frontier_yt_ward_ratio_stationarity_no_go.py`
 - `outputs/yt_ward_ratio_stationarity_no_go_2026-05-01.json`
 - `docs/YT_WARD_RATIO_STATIONARITY_NO_GO_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_qfp_selector_no_go.py`
+- `outputs/yt_qfp_selector_no_go_2026-05-01.json`
+- `docs/YT_QFP_SELECTOR_NO_GO_NOTE_2026-05-01.md`
 - `docs/YT_PR230_REVIEW_BACKPRESSURE_PASS_NOTE_2026-05-01.md`
 - updates to the direct-correlator theorem note and double-criticality selector
   note

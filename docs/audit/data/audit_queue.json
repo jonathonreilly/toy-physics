@@ -3,9 +3,9 @@
     "critical": 0,
     "high": 237,
     "leaf": 297,
-    "medium": 298
+    "medium": 299
   },
-  "generated_at": "2026-05-01T02:12:34.737063+00:00",
+  "generated_at": "2026-05-01T02:15:14.120636+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -12687,6 +12687,25 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_qfp_selector_no_go_note_2026-05-01",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [
+        "yt_qfp_insensitivity_support_note"
+      ],
+      "direct_in_degree": 2,
+      "load_bearing_score": 3.322,
+      "note_path": "docs/YT_QFP_SELECTOR_NO_GO_NOTE_2026-05-01.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_yt_qfp_selector_no_go.py",
+      "transitive_descendants": 4
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_vacuum_stability_stationarity_no_go_note_2026-05-01",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -12873,7 +12892,8 @@
         "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
         "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
         "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01",
-        "yt_ward_ratio_stationarity_no_go_note_2026-05-01"
+        "yt_ward_ratio_stationarity_no_go_note_2026-05-01",
+        "yt_qfp_selector_no_go_note_2026-05-01"
       ],
       "direct_in_degree": 2,
       "load_bearing_score": 3.0,
@@ -18518,7 +18538,8 @@
         "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
         "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
         "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01",
-        "yt_ward_ratio_stationarity_no_go_note_2026-05-01"
+        "yt_ward_ratio_stationarity_no_go_note_2026-05-01",
+        "yt_qfp_selector_no_go_note_2026-05-01"
       ],
       "direct_in_degree": 0,
       "load_bearing_score": 0.0,
@@ -18552,5 +18573,5 @@
     }
   ],
   "ready_count": 445,
-  "total_pending": 832
+  "total_pending": 833
 }

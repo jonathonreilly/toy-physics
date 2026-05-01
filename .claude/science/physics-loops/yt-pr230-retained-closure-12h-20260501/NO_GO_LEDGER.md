@@ -67,3 +67,12 @@ Closed by `docs/YT_WARD_RATIO_STATIONARITY_NO_GO_NOTE_2026-05-01.md` and
 At the selector's Planck gauge point, `y_t=g_3/sqrt(6)` gives nonzero
 `beta_lambda(lambda=0)`.  Therefore the Planck stationarity blocker is
 independent of any future Ward-ratio repair.
+
+## IR quasi-fixed-point focusing is not a standalone selector
+
+Closed by `docs/YT_QFP_SELECTOR_NO_GO_NOTE_2026-05-01.md` and
+`scripts/frontier_yt_qfp_selector_no_go.py`.
+
+QFP focusing compresses UV trajectory dependence, but different UV boundary
+values still map to different IR `y_t(v)` values.  It is bounded support for
+transport robustness, not retained closure.

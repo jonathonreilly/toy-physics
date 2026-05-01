@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T02:12:33.205842+00:00",
+  "generated_at": "2026-05-01T02:15:12.437050+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14797,6 +14797,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_qfp_insensitivity.py"
     },
+    "yt_qfp_selector_no_go_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_qfp_selector_no_go.py"
+    },
     "yt_right_handed_species_dependence_note_2026-04-18": {
       "assert_count": 0,
       "counts": {
@@ -28939,6 +28951,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_qfp_selector_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_qfp_selector_no_go_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_right_handed_species_dependence.py": {
       "assert_count": 0,
       "claims": [
@@ -32660,15 +32687,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 86,
+    "decoration_candidates": 87,
     "dominant_class_distribution": {
       "A": 7,
-      "B": 125,
+      "B": 126,
       "C": 445,
       "D": 187,
       "none": 404
     },
-    "runners_classified": 1168,
+    "runners_classified": 1169,
     "runners_with_C": 537,
     "runners_with_D": 290
   }

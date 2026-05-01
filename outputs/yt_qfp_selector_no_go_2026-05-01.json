@@ -1,0 +1,46 @@
+{
+  "actual_current_surface_status": "no-go / exact-negative-boundary for QFP-as-selector",
+  "authority_boundary": {
+    "bounded_support": true,
+    "requires_gauge_anchor": true,
+    "requires_ward_bc": true
+  },
+  "fail_count": 0,
+  "numeric": {
+    "compression_ratio": 2.9328318010059573,
+    "samples": [
+      {
+        "yt_pl": 0.2,
+        "yt_v": 1.3020921020498697
+      },
+      {
+        "yt_pl": 0.3,
+        "yt_v": 1.4123190896726054
+      },
+      {
+        "yt_pl": 0.436,
+        "yt_v": 1.467934687395894
+      },
+      {
+        "yt_pl": 0.6,
+        "yt_v": 1.4936056914980196
+      },
+      {
+        "yt_pl": 0.8,
+        "yt_v": 1.5066725351296668
+      }
+    ],
+    "ward_proxy": {
+      "local_response": 0.24726495367593418,
+      "yt_pl": 0.436,
+      "yt_v": 1.467934687395894,
+      "yt_v_high": 1.4772201539944994,
+      "yt_v_low": 1.455658650033958
+    },
+    "yt_v_spread": 0.20458043307979712
+  },
+  "pass_count": 7,
+  "remaining_open_premise": "a UV boundary condition such as a retained Ward repair, Planck stationarity, or production measurement",
+  "target": "derive y_t from IR quasi-fixed-point focusing without a UV boundary condition",
+  "verdict": "QFP focusing is useful bounded support for transport robustness, but it is not a standalone selector.  Different UV y_t values still map to different IR values, so a UV boundary condition or other selector remains load-bearing."
+}

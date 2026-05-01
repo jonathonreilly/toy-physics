@@ -406,6 +406,12 @@ checks whether the old `y_t/g_s=1/sqrt(6)` ratio could imply
 `beta_lambda(M_Pl)=0`.  It does not.  This keeps the Planck-stationarity
 blocker independent of the Ward/H-unit audited-renaming blocker.
 
+QFP selector follow-up:
+[YT_QFP_SELECTOR_NO_GO_NOTE_2026-05-01.md](YT_QFP_SELECTOR_NO_GO_NOTE_2026-05-01.md)
+checks whether IR quasi-fixed-point focusing alone can select `y_t`.  It
+cannot: focusing compresses UV trajectories but leaves a nonunique family, so a
+UV boundary condition or measurement remains load-bearing.
+
 A future passing production certificate must supply this budget:
 
 | Component | Required content |

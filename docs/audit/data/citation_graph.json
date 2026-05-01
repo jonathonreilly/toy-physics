@@ -7913,6 +7913,10 @@
       "to": "yt_ward_ratio_stationarity_no_go_note_2026-05-01"
     },
     {
+      "from": "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30",
+      "to": "yt_qfp_selector_no_go_note_2026-05-01"
+    },
+    {
       "from": "yt_eft_bridge_theorem",
       "to": "yt_zero_import_authority_note"
     },
@@ -8463,6 +8467,14 @@
     {
       "from": "yt_planck_double_criticality_selector_note_2026-04-30",
       "to": "yt_ward_ratio_stationarity_no_go_note_2026-05-01"
+    },
+    {
+      "from": "yt_planck_double_criticality_selector_note_2026-04-30",
+      "to": "yt_qfp_selector_no_go_note_2026-05-01"
+    },
+    {
+      "from": "yt_qfp_selector_no_go_note_2026-05-01",
+      "to": "yt_qfp_insensitivity_support_note"
     },
     {
       "from": "yt_right_handed_species_dependence_note_2026-04-18",
@@ -18481,7 +18493,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-01T02:12:26.302618+00:00",
+  "generated_at": "2026-05-01T02:15:05.386508+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39409,9 +39421,10 @@
         "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
         "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
         "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01",
-        "yt_ward_ratio_stationarity_no_go_note_2026-05-01"
+        "yt_ward_ratio_stationarity_no_go_note_2026-05-01",
+        "yt_qfp_selector_no_go_note_2026-05-01"
       ],
-      "note_hash": "280fb93aa11461646a881342d427e1eb466f8dd4fd7a52c4335972a3bdfde9dd",
+      "note_hash": "45f5bd17862c92bf01672e4f37167732507c11c2bee43ba42af23eeb1cd499d4",
       "path": "docs/YT_DIRECT_LATTICE_CORRELATOR_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_direct_lattice_correlator.py",
       "title": "Direct Lattice-Correlator Top-Yukawa Measurement Gate"
@@ -39986,9 +39999,10 @@
         "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
         "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
         "yt_asymptotic_safety_fixed_point_no_go_note_2026-05-01",
-        "yt_ward_ratio_stationarity_no_go_note_2026-05-01"
+        "yt_ward_ratio_stationarity_no_go_note_2026-05-01",
+        "yt_qfp_selector_no_go_note_2026-05-01"
       ],
-      "note_hash": "92a8e5e471753db21fd9956787763b3ab19d9daf9d5663d157b6252d788873f3",
+      "note_hash": "c2a754d0f71ac21ea39bca1fdc1dec6cf140b85aba053bb26d733f66db1db40e",
       "path": "docs/YT_PLANCK_DOUBLE_CRITICALITY_SELECTOR_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_yt_planck_double_criticality_selector.py",
       "title": "YT Planck Double-Criticality Selector Note"
@@ -40042,6 +40056,18 @@
       "path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
       "runner_path": "scripts/frontier_yt_qfp_insensitivity.py",
       "title": "y_t Quasi-Fixed-Point Insensitivity Support Note"
+    },
+    "yt_qfp_selector_no_go_note_2026-05-01": {
+      "claim_id": "yt_qfp_selector_no_go_note_2026-05-01",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact-negative-boundary for QFP-as-selector",
+      "deps": [
+        "yt_qfp_insensitivity_support_note"
+      ],
+      "note_hash": "b7e40b5ed483d5aa8122ce4d390a9f599c0189be7cb7e3f95dd8b940d38c43ba",
+      "path": "docs/YT_QFP_SELECTOR_NO_GO_NOTE_2026-05-01.md",
+      "runner_path": "scripts/frontier_yt_qfp_selector_no_go.py",
+      "title": "YT QFP Selector No-Go Note"
     },
     "yt_retention_landing_readiness_2026-04-18": {
       "claim_id": "yt_retention_landing_readiness_2026-04-18",
@@ -41533,17 +41559,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4620,
+    "edge_count": 4623,
     "leaf_count": 730,
-    "node_count": 1675,
+    "node_count": 1676,
     "root_count": 1192,
-    "runners_with_path": 1238,
+    "runners_with_path": 1239,
     "status_counts": {
       "bounded": 447,
       "open": 50,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 385,
+      "support": 386,
       "unknown": 419
     }
   }
