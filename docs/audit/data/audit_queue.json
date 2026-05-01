@@ -5,7 +5,7 @@
     "leaf": 286,
     "medium": 279
   },
-  "generated_at": "2026-05-01T00:32:57.587431+00:00",
+  "generated_at": "2026-05-01T00:37:47.855743+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6817,7 +6817,7 @@
       "current_status": "proposed_retained",
       "deps": [],
       "direct_in_degree": 1,
-      "load_bearing_score": 5.822,
+      "load_bearing_score": 9.822,
       "note_path": "docs/PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md",
       "ready": true,
       "runner_path": "scripts/frontier_physical_hermitian_hamiltonian_and_sme_bridge.py",

@@ -34,14 +34,14 @@ FAIL_BLOCKS = 0
 TOL = 1.0e-12
 
 
-def block(name: str, passed: bool, detail: str) -> bool:
+def block(name: str, passed: bool, detail: str, cls: str = "C") -> bool:
     global PASS_BLOCKS, FAIL_BLOCKS
     status = "PASS" if passed else "FAIL"
     if passed:
         PASS_BLOCKS += 1
     else:
         FAIL_BLOCKS += 1
-    print(f"[{status}] {name}: {detail}")
+    print(f"[{status} ({cls})] {name}: {detail}")
     return passed
 
 
