@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:53:37.574437+00:00
+**Generated:** 2026-05-01T04:54:58.267116+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,23 +22,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
 | bounded | 222 |
-| support | 188 |
+| support | 187 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 50 |
-| ~~audited_conditional~~ | 813 |
+| ~~audited_conditional~~ | 814 |
 | ~~audited_failed~~ | 159 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 241 |
-| `audited_conditional` | 544 |
+| `audited_conditional` | 545 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 18 |
-| `unaudited` | 664 |
+| `unaudited` | 663 |
 
 | criticality | count |
 |---|---:|
@@ -695,6 +695,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_delta_closure_package_readme_2026-04-21` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `koide_q_delta_linking_relation_theorem_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `koide_q_delta_readout_retention_split_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `koide_q_normalized_second_order_effective_action_theorem_2026-04-22` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_q_op_locality_c3_fixed_source_support_note_2026-04-27` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `koide_scale_selector_reparameterization_theorem_note_2026-04-20` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -9104,6 +9105,18 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** On the normalized second-order carrier, every point has a unique reduced source K=Y^{-1}-I, K=0 iff Y=I_2, and any nonzero source is exactly the free selector parameter in disguise.  _(class `C`)_
 - **chain closes:** True — The runner verifies earlier carriers do not close Q, solves the normalized hidden-source relation, proves the zero-source point is unique, shows the nonzero source family reparameterizes the selector variable, and derives the datum-free K=0 consequence with 10/10 passes. The source note explicitly leaves physical source-freeness open.
 - **rationale:** The support audit closes on its stated boundary: no hidden nonzero source explains Q without importing the selector value, and K=0 is uniquely datum-free on the admitted normalized carrier. This does not prove retained charged-lepton physics forces the source-free carrier; that physical bridge remains outside this row.
+- **auditor confidence:** high
+
+### `koide_q_normalized_second_order_effective_action_theorem_2026-04-22`
+
+- **Note:** [`KOIDE_Q_NORMALIZED_SECOND_ORDER_EFFECTIVE_ACTION_THEOREM_2026-04-22.md`](../../docs/KOIDE_Q_NORMALIZED_SECOND_ORDER_EFFECTIVE_ACTION_THEOREM_2026-04-22.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the normalized first-live second-order bosonic carrier, the exact Legendre-dual effective action has source-free point Y = I_2, i.e. E_+ = E_perp, hence Q = 2/3.  _(class `A`)_
+- **chain closes:** False — The algebraic effective-action chain closes given K = 0 on the normalized carrier, but the note does not derive from retained charged-lepton physics that the physical selector is source-free there.
+- **rationale:** Issue: the exact algebra from the normalized carrier through the Legendre-dual effective action to Q = 2/3 depends on admitting the physical source-free condition K = 0. Why this blocks: the runner validates the internal route, but the physical charged-lepton selector law that forces K = 0 is not derived in the note. Repair target: prove from retained charged-lepton physics that the normalized first-live second-order carrier is source-free, or state the result only as a conditional candidate value law. Claim boundary until fixed: the note supplies an exact algebraic support route to Q = 2/3 under K = 0, not a closure theorem for Koide Q.
 - **auditor confidence:** high
 
 ### `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25`
