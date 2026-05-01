@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T04:14:55.472989+00:00
+**Generated:** 2026-05-01T04:16:36.813533+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,24 +21,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 91 |
 | _proposed_retained_ | 1 |
-| bounded | 237 |
+| bounded | 236 |
 | support | 192 |
 | open | 11 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 50 |
 | ~~audited_conditional~~ | 805 |
-| ~~audited_failed~~ | 158 |
+| ~~audited_failed~~ | 159 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 232 |
 | `audited_conditional` | 536 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 70 |
+| `audited_failed` | 71 |
 | `audited_numerical_match` | 12 |
 | `audited_renaming` | 18 |
-| `unaudited` | 692 |
+| `unaudited` | 691 |
 
 | criticality | count |
 |---|---:|
@@ -934,6 +934,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `universal_gr_a1_invariant_section_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `universal_gr_positive_background_local_closure_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
+| `universal_gr_tensor_quotient_uniqueness_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `wilson_mu2_distance_sweep_note_2026-04-11` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_zero_import_chain_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
@@ -12586,6 +12587,25 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** From B_D(h,k)=-Tr(D^-1 h D^-1 k), the note asserts that K_GR(D)=H_D tensor Lambda_R is symmetric positive definite for each positive-symmetric D.  _(class `A`)_
 - **chain closes:** False — For positive-symmetric D and real symmetric nonzero h, Tr(D^-1 h D^-1 h) is nonnegative, so the displayed B_D(h,h) with the leading minus sign is non-positive rather than positive. The claimed positive-definiteness of H_D and K_GR(D) therefore does not follow from the displayed bilinear form.
 - **rationale:** Issue: the note's displayed bilinear form has a leading minus sign, so B_D(h,h) is non-positive on the symmetric tangent directions it uses to claim a positive-background closure. Why this blocks: the unique stationary solution and completion identity require K_GR(D) to be positive definite, but the sign shown gives the opposite definiteness unless an additional sign convention or field-space metric is supplied. Repair target: either correct the sign/operator convention and prove H_D is positive definite, or restate the action with the negative-definite operator and show the stationary point is a maximum rather than a positive local minimum. Claim boundary until fixed: the note can at most identify a candidate quadratic local action form, not an exact positive-background SPD closure theorem.
+- **auditor confidence:** high
+
+### `universal_gr_tensor_quotient_uniqueness_note`
+
+- **Note:** [`UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md`](../../docs/UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop:2026-05-01-universal_gr_tensor_quotient_uniqueness_note`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the symmetric 3+1 perturbation quotient, the tensor-valued Hessian candidate is the unique bilinear lift of the scalar generator at quadratic order and has no hidden prototype null directions.  _(class `C`)_
+- **chain closes:** False — The source-cited runner is not registered in the ledger and currently crashes before producing PASS lines because it reads an absolute external project path and cannot find S3_TIME_SPACETIME_OBSERVABLE_ROUTE_NOTE.md there. The claimed prototype uniqueness is therefore not verified on current repo content.
+- **rationale:** Issue: the tensor quotient uniqueness note relies on a source-cited audit runner, but the ledger has no runner_path and the discovered runner scripts/frontier_universal_gr_tensor_quotient_uniqueness.py hard-codes /Users/jonreilly/Projects/Physics and exits nonzero with FileNotFoundError before any checks run. Why this blocks: a bounded uniqueness claim whose own verification cannot execute on the current worktree cannot be audit-closed, even if the intended finite Hessian calculation may be repairable. Repair target: make the runner repo-relative, register it on this row, update the route-2 authority path to the current note name, and rerun until it produces classified PASS lines. Claim boundary until fixed: this remains an unverified bounded tensor-quotient uniqueness candidate, not an audited closure of the symmetric 3+1 quotient kernel.
+- **open / conditional deps cited:**
+  - `scripts/frontier_universal_gr_tensor_quotient_uniqueness.py`
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `S3_TIME_SPACETIME_OBSERVABLE_ROUTE_NOTE.md`
+  - `UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md`
+  - `UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md`
+  - `NON_HERMETIC_RUNNER_ROOT: /Users/jonreilly/Projects/Physics`
 - **auditor confidence:** high
 
 ### `universal_gr_tensor_variational_candidate_note`

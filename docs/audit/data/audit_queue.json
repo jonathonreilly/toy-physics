@@ -3,9 +3,9 @@
     "critical": 7,
     "high": 196,
     "leaf": 287,
-    "medium": 202
+    "medium": 201
   },
-  "generated_at": "2026-05-01T04:14:55.245174+00:00",
+  "generated_at": "2026-05-01T04:16:36.576236+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6531,23 +6531,6 @@
       "ready": true,
       "runner_path": "scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py",
       "transitive_descendants": 35
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "universal_gr_tensor_quotient_uniqueness_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 2,
-      "load_bearing_score": 6.129,
-      "note_path": "docs/UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 34
     },
     {
       "audit_independence_required": "any_non_self",
@@ -16433,6 +16416,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 296,
-  "total_pending": 692
+  "ready_count": 295,
+  "total_pending": 691
 }
