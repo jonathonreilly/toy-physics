@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-01T18:44:26.999010+00:00
+**Generated:** 2026-05-01T18:46:08.206577+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 294 |
+| `audited_clean` | 295 |
 | `audited_conditional` | 604 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 569 |
+| `unaudited` | 568 |
 
 | criticality | count |
 |---|---:|
@@ -339,6 +339,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_c3_character_mode_reduction_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | A | - |
 | `pmns_corner_transport_active_block_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
 | `pmns_right_conjugacy_invariant_no_go_note` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
+| `pmns_selector_bank_nonrealization_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | B | - |
 | `pmns_selector_three_identity_support_proposal_readme_2026-04-21` | support | ~~audited_clean~~ | support | cross_family | codex-current | D | - |
 | `pmns_sole_axiom_hw1_source_transfer_boundary_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `pmns_twisted_flux_transfer_holonomy_boundary_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
@@ -11754,6 +11755,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md`
   - `UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md`
 - **auditor confidence:** high
+
+### `pmns_selector_bank_nonrealization_note`
+
+- **Note:** [`PMNS_SELECTOR_BANK_NONREALIZATION_NOTE.md`](../../docs/PMNS_SELECTOR_BANK_NONREALIZATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The current selector bank's graph-axis, temporal-orbit, and scalar-axis selector tools do not map into the Higgs Z_3 datum or the neutrino-side versus charged-lepton-side PMNS branch bit.  _(class `B`)_
+- **chain closes:** True — For the bounded current-bank inventory claim, the runner reads the named selector/boundary notes and atlas, verifies those selector tools act on other domains, and checks they do not supply a lepton Higgs-Z_3 or PMNS branch-selection bridge. The clean result is limited to current-bank nonrealization, not an impossibility theorem for future PMNS selectors.
+- **rationale:** The bounded negative inventory closes: the runner verifies the graph-first selector, bosonic-bilinear selector, and CKM/hierarchy quartic selector are present, then checks that their domains do not contain the q_H/Y_nu/Y_e PMNS branch bridge and that the atlas has no retained Higgs-multiplicity or shared-Higgs selector row. The note explicitly avoids claiming that a future PMNS selector is impossible or that the branch nature picks is known. Residual risk is coverage scope: this clean audit covers the named current-bank selector inventory only.
+- **auditor confidence:** medium
 
 ### `pmns_selector_class_space_uniqueness_note`
 
