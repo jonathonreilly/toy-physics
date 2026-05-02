@@ -7,18 +7,17 @@ This file records the smallest input stack the current package actually uses.
 It is not a claim that every downstream lane is already closed, and it is not
 route history.
 
-## Audit-graph note (2026-05-02)
+## Citation-graph note (2026-05-02)
 
 This note's body lists *both* the four-axiom input stack (A1–A4) and a number
 of supporting / consilience / downstream-consequence references for reader
-navigation. The Apr 30 audit of `minimal_axioms_2026-04-11` flagged that the
-markdown-linked references were being parsed by the citation-graph builder
-as one-hop upstream dependencies, which inflated A_min's apparent dep set
-to 18 nodes (most of them genuine *downstream* consequences) and propagated
-`audited_conditional` status. This repair (2026-05-02) restructures the
-note so that supporting and consequence references are recorded in plain
-text (filenames in backticks) rather than markdown links. The four axioms
-A1–A4 below are self-contained and do not depend on any other source note.
+navigation. A citation-graph cleanup found that markdown-linked references
+were being parsed as one-hop upstream dependencies, which inflated A_min's
+apparent dependency set to 18 nodes even though most were downstream
+consequences. This repair restructures the note so that supporting and
+consequence references are recorded in plain text (filenames in backticks)
+rather than markdown links. The four axioms A1–A4 below are self-contained
+and do not depend on any other source note.
 
 The plain-text references here are not load-bearing for A_min itself; they
 are pointers for readers who want to follow the framework chain.

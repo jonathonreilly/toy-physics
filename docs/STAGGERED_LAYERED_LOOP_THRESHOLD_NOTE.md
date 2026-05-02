@@ -35,14 +35,14 @@ the retained force rows?
 | Case | `n/reach` | cycle len | retained | force | `J_span` | `J_resid` | gauge |
 |---|---:|---:|---:|---:|---:|---:|---|
 | `control_dag` | `36 / 8` | `N/A` | `8/8` | `+3.787e-03` | `N/A` | `N/A` | `N/A` |
-| `control_sparse_cycle` | `55 / 28` | `4` | `7/8` | `+3.851e-03` | `4.769e-06` | `6.748e-20` | `FAIL` |
+| `control_sparse_cycle` | `55 / 28` | `4` | `7/8` | `+3.851e-03` | `3.370e-35` | `6.882e-36` | `FAIL` |
 | `two_rail_no_loop` | `36 / 15` | `N/A` | `8/8` | `+3.965e-03` | `N/A` | `N/A` | `N/A` |
-| `single_loop_l1` | `36 / 15` | `4` | `8/8` | `+3.965e-03` | `4.944e-02` | `8.028e-18` | `PASS` |
-| `single_loop_l2` | `36 / 15` | `6` | `8/8` | `+3.965e-03` | `1.406e-02` | `5.031e-18` | `PASS` |
-| `single_loop_l3` | `36 / 15` | `8` | `8/8` | `+3.965e-03` | `4.367e-03` | `2.035e-19` | `PASS` |
-| `single_loop_l4` | `36 / 15` | `10` | `8/8` | `+3.965e-03` | `1.617e-03` | `1.808e-19` | `PASS` |
-| `single_loop_l5` | `36 / 15` | `12` | `8/8` | `+3.965e-03` | `7.669e-04` | `5.457e-19` | `PASS` |
-| `single_loop_l6` | `36 / 15` | `14` | `8/8` | `+3.965e-03` | `1.311e-03` | `8.052e-19` | `PASS` |
+| `single_loop_l1` | `36 / 15` | `4` | `8/8` | `+3.965e-03` | `4.939e-02` | `2.073e-18` | `PASS` |
+| `single_loop_l2` | `36 / 15` | `6` | `8/8` | `+3.965e-03` | `1.403e-02` | `1.626e-19` | `PASS` |
+| `single_loop_l3` | `36 / 15` | `8` | `8/8` | `+3.965e-03` | `4.354e-03` | `5.762e-20` | `PASS` |
+| `single_loop_l4` | `36 / 15` | `10` | `8/8` | `+3.965e-03` | `1.610e-03` | `1.804e-19` | `PASS` |
+| `single_loop_l5` | `36 / 15` | `12` | `8/8` | `+3.965e-03` | `7.630e-04` | `4.036e-19` | `PASS` |
+| `single_loop_l6` | `36 / 15` | `14` | `8/8` | `+3.965e-03` | `1.302e-03` | `6.391e-19` | `PASS` |
 
 ## Readout
 
@@ -50,14 +50,15 @@ the retained force rows?
   it has no cycle and therefore remains the correct negative control for
   gauge/current.
 - The irregular `fanout=2` sparse-cycle holdout proves that cycle existence
-  alone is not enough: it keeps a cycle, but its native current span is only
-  `4.769e-06`, about `21x` below the retained `1e-4` closure threshold.
+  alone is not enough: it keeps a cycle, but its native current span is
+  effectively zero (`3.370e-35`, dozens of orders of magnitude below the
+  retained `1e-4` closure threshold).
 - Opening a two-rail corridor without a plaquette still gives `gauge = N/A`, so
   the win is not caused by source fanout alone.
 - Inserting exactly one local `K2,2` plaquette is already sufficient. Every
   tested one-plaquette case keeps `8/8` retained rows and `gauge = PASS`.
 - The weakest passing one-plaquette case is `single_loop_l5`, and it still
-  clears the gauge threshold comfortably with `J_span = 7.669e-04`.
+  clears the gauge threshold comfortably with `J_span = 7.630e-04`.
 
 ## Structural Guardrails
 

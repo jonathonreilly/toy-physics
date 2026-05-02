@@ -201,17 +201,45 @@ def legacy_confirmed_clean_claim_type_reaudit(row: dict, verdict: str, xc_status
     would create a false disagreement. In that migration-only case, keep the
     existing clean cross-confirmation and let the new restricted-input audit
     own claim_type and claim_scope.
+
+    Some rows were later left at audited_conditional while still carrying an
+    already-confirmed legacy clean cross-confirmation. If the new restricted
+    audit is clean and the prior confirmed summaries are clean but claim-type
+    blind, treat that the same way; the current source prose/status is not the
+    authority under the PR291 regime.
     """
     if row.get("claim_type_provenance") != "backfilled_pending_reaudit":
         return False
-    if row.get("audit_status") != "audited_clean" or verdict != "audited_clean":
+    if row.get("audit_status") not in {"audited_clean", "audited_conditional"}:
         return False
-    if xc_status != "confirmed":
+    if verdict != "audited_clean":
+        return False
+    if xc_status not in {"confirmed", "third_confirmed_first", "third_confirmed_second"}:
         return False
     xc = row.get("cross_confirmation") or {}
     first = xc.get("first_audit") or {}
     second = xc.get("second_audit") or {}
-    return first.get("claim_type") is None and second.get("claim_type") is None
+    third = xc.get("third_audit") or {}
+    if xc_status == "third_confirmed_first":
+        return (
+            first.get("verdict") == "audited_clean"
+            and third.get("verdict") == "audited_clean"
+            and first.get("claim_type") is None
+            and third.get("claim_type") is None
+        )
+    if xc_status == "third_confirmed_second":
+        return (
+            second.get("verdict") == "audited_clean"
+            and third.get("verdict") == "audited_clean"
+            and second.get("claim_type") is None
+            and third.get("claim_type") is None
+        )
+    return (
+        first.get("verdict") == "audited_clean"
+        and second.get("verdict") == "audited_clean"
+        and first.get("claim_type") is None
+        and second.get("claim_type") is None
+    )
 
 
 def note_hash_drift_error(row: dict) -> str | None:

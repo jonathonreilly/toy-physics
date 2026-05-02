@@ -16,11 +16,10 @@ builder:
   — provides (R3) the positive Hermitian transfer matrix `T` on `H_phys`
   used by Step 1 of the proof of (SC1)–(SC2) below.
 
-The Apr 30 audit returned `audited_conditional` with the explicit repair
-target: "register `AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`
-as a one-hop ledger dependency". This 2026-05-02 edit registers the
-citation explicitly so the citation-graph builder picks up the edge on
-the next pipeline run.
+The 2026-05-02 citation-graph repair registers
+`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md` explicitly
+as the one-hop load-bearing dependency, so the citation-graph builder picks
+up the edge on the next pipeline run.
 
 ## Scope
 
