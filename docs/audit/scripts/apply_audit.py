@@ -18,6 +18,8 @@ rules:
   - the row's note_hash must match disk (otherwise the audit is stale)
   - fresh-context second passes over existing high/critical terminal verdicts
     record a cross-confirmation comparison before any retraction can cascade
+  - non-clean re-audits of confirmed legacy clean rows record a real
+    disagreement instead of treating migration-only confirmation as authority
   - third-auditor passes over cross-confirmation disagreements record the
     tiebreaker and hard-stop on genuine three-way disagreement
   - judicial third-auditor reviews over disagreements may ratify the first or
@@ -242,6 +244,54 @@ def legacy_confirmed_clean_claim_type_reaudit(row: dict, verdict: str, xc_status
     )
 
 
+def legacy_confirmed_clean_verdict_reaudit(row: dict, verdict: str, xc_status: str | None) -> bool:
+    """Return true when a scoped legacy clean re-audit changes the verdict."""
+    if row.get("claim_type_provenance") != "backfilled_pending_reaudit":
+        return False
+    if row.get("audit_status") not in {"audited_clean", "audited_conditional"}:
+        return False
+    if verdict == "audited_clean":
+        return False
+    if xc_status not in {"confirmed", "third_confirmed_first", "third_confirmed_second"}:
+        return False
+    xc = row.get("cross_confirmation") or {}
+    first = xc.get("first_audit") or {}
+    second = xc.get("second_audit") or {}
+    third = xc.get("third_audit") or {}
+    if xc_status == "third_confirmed_first":
+        return first.get("verdict") == "audited_clean" and third.get("verdict") == "audited_clean"
+    if xc_status == "third_confirmed_second":
+        return second.get("verdict") == "audited_clean" and third.get("verdict") == "audited_clean"
+    return first.get("verdict") == "audited_clean" and second.get("verdict") == "audited_clean"
+
+
+def legacy_clean_consensus_summary(row: dict, audit: dict, xc_status: str | None) -> dict:
+    """Collapse old clean confirmations into the side opposed to a new verdict."""
+    xc = row.get("cross_confirmation") or {}
+    if xc_status == "third_confirmed_first":
+        winning = [xc.get("first_audit") or {}, xc.get("third_audit") or {}]
+    elif xc_status == "third_confirmed_second":
+        winning = [xc.get("second_audit") or {}, xc.get("third_audit") or {}]
+    else:
+        winning = [xc.get("first_audit") or {}, xc.get("second_audit") or {}]
+
+    dates = [w.get("audit_date") for w in winning if w.get("audit_date")]
+    auditors = [w.get("auditor") for w in winning if w.get("auditor")]
+    families = sorted({w.get("auditor_family") for w in winning if w.get("auditor_family")})
+    return {
+        "auditor": "legacy-confirmed-clean-cross-confirmation",
+        "auditor_family": "legacy-confirmed-clean",
+        "independence": "fresh_context",
+        "audit_date": max(dates) if dates else row.get("audit_date"),
+        "claim_type": audit.get("claim_type"),
+        "claim_scope": audit.get("claim_scope") or row.get("claim_scope"),
+        "load_bearing_step_class": row.get("load_bearing_step_class"),
+        "verdict": "audited_clean",
+        "legacy_auditors": auditors,
+        "legacy_auditor_families": families,
+    }
+
+
 def note_hash_drift_error(row: dict) -> str | None:
     on_disk_path = REPO_ROOT / row.get("note_path", "")
     if not on_disk_path.exists():
@@ -418,6 +468,38 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     legacy_claim_type_reaudit = legacy_confirmed_clean_claim_type_reaudit(
         row, verdict, prior_cross_confirmation_status
     )
+    legacy_verdict_reaudit = legacy_confirmed_clean_verdict_reaudit(
+        row, verdict, prior_cross_confirmation_status
+    )
+    if legacy_verdict_reaudit:
+        if criticality in {"critical", "high"} and independence == "weak":
+            return False, "legacy clean verdict re-audit requires independence != 'weak'"
+
+        first = legacy_clean_consensus_summary(row, audit, prior_cross_confirmation_status)
+        second = audit_summary_from_blob(audit)
+        row["cross_confirmation"] = {
+            "first_audit": first,
+            "second_audit": second,
+            "status": "disagreement",
+            "mode": "legacy_confirmed_clean_verdict_reaudit",
+        }
+        row["audit_status"] = "audit_in_progress"
+        row["blocker"] = "cross_confirmation_disagreement"
+        row["claim_type"] = claim_type
+        row["claim_scope"] = claim_scope.strip()
+        row["claim_type_provenance"] = "audited_pending_cross_confirmation"
+        row["claim_type_last_reviewed"] = audit.get("audit_date") or datetime.now(timezone.utc).isoformat()
+        rows[cid] = row
+        ledger["rows"] = rows
+        return True, (
+            "legacy clean re-audit disagreement recorded "
+            f"('audited_clean'/{first.get('claim_type')!r}/"
+            f"{first.get('load_bearing_step_class')!r} vs "
+            f"{second.get('verdict')!r}/{second.get('claim_type')!r}/"
+            f"{second.get('load_bearing_step_class')!r}); "
+            "promote to third-auditor review"
+        )
+
     first_terminal_verdict = row.get("audit_status")
     terminal_second_pass = (
         first_terminal_verdict in TERMINAL_CROSS_CONFIRM_VERDICTS
