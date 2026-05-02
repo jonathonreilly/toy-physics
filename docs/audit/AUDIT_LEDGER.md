@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:21:06.594713+00:00
+**Generated:** 2026-05-02T17:23:30.488871+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,32 +24,33 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 174 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 516 |
+| unaudited | 518 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 643 |
-| ~~audited_failed~~ | 26 |
+| ~~audited_conditional~~ | 640 |
+| ~~audited_failed~~ | 27 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 373 |
-| `audited_conditional` | 643 |
+| `audited_conditional` | 640 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 70 |
+| `audited_failed` | 71 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 551 |
+| `unaudited` | 553 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 516 |
+| `bounded_theorem` | 515 |
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 152 |
 | `open_gate` | 107 |
-| `positive_theorem` | 869 |
+| `positive_theorem` | 868 |
+| `unset` | 2 |
 
 | criticality | count |
 |---|---:|
@@ -616,7 +617,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_candidate_mass_window_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `dm_chamber_signature_structure_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -800,10 +800,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hierarchy_matsubara_decomposition_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_from_lattice_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `higgs_mass_derived_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
-| `higgs_mass_from_axiom_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
 | `higgs_mass_hierarchy_correction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `higgs_mechanism_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
-| `higgs_vacuum_explicit_systematic_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `higher_dimension_status_2026-04-01` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `higher_order_structural_theorems_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -1144,6 +1142,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `grown_transfer_basin_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `h0125_failure_derivation` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
+| `higgs_mass_from_axiom_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | F | - |
 | `hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
 | `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
 | `if_program_closing_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -4219,24 +4218,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** theorem on the open DM gate**, not full A-BCC closure. The `F4`  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 3 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
-- **auditor confidence:** high
-
-### `dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29`
-
-- **Note:** [`DM_ETA_NSITES_V_STRUCTURAL_SUPPORT_LIFT_THEOREM_NOTE_2026-04-29.md`](../../docs/DM_ETA_NSITES_V_STRUCTURAL_SUPPORT_LIFT_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** **Status (actual current surface):** `bounded` support theorem —  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25=audited_renaming, higgs_mass_from_axiom_note=audited_renaming, observable_principle_from_axiom_note=audited_conditional), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25=audited_renaming, higgs_mass_from_axiom_note=audited_renaming, observable_principle_from_axiom_note=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md`
-  - `HIGGS_MASS_FROM_AXIOM_NOTE.md`
-  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
-  - `R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md`
 - **auditor confidence:** high
 
 ### `dm_full_closure_same_surface_converged_thermal_selector_support_note_2026-04-16`
@@ -8678,19 +8659,13 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 - **Note:** [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](../../docs/HIGGS_MASS_FROM_AXIOM_NOTE.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
-- **load-bearing step:** This curvature is the dimensionless ratio (m_H / v)^2 in lattice units, since the VEV v is the natural scale of the scalar field: (m_H / v)^2 = 4 / (u_0^2 * N_taste).  _(class `F`)_
-- **chain closes:** False — The determinant algebra gives a taste-sector curvature, but the note does not derive the physical normalization map that turns that curvature into the observed Higgs mass ratio. Several cited support paths are absent by exact path, and the live Higgs/EW-color support notes remain conditional rather than audit-clean inputs.
-- **rationale:** Issue: the load-bearing step identifies the per-taste lattice curvature with the physical ratio (m_H/v)^2 and then uses that bridge to claim m_H = v/(2u_0). Why this blocks: the source note supplies dimensional and consistency arguments, but not an audit-clean theorem deriving the lattice-curvature-to-physical-Higgs-mass normalization; exact cited paths for taste polynomial, degeneracy, and hierarchy inputs are missing, while the live EW-color and Higgs authority notes are still conditional. Repair target: provide an audit-clean scalar normalization theorem, with registered one-hop dependencies, that derives the Higgs-channel curvature-to-mass map without relying on the downstream RGE/comparator runner. Claim boundary until fixed: the note remains support for the N_c-cancellation and auxiliary Higgs-mass route, not an audit-ratified Higgs-mass derivation from the axiom.
-- **open / conditional deps cited:**
-  - `TASTE_POLYNOMIAL_NOTE.md`
-  - `DM_AMGM_SATURATION_NOTE.md`
-  - `HIERARCHY_THEOREM.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `HIGGS_MASS_DERIVED_NOTE.md`
+- **claim_scope:** The note claims the taste-sector curvature identifies the physical Higgs mass ratio as m_H/v = 1/(2 u_0), giving m_H = 140.3 GeV with no color 8/9 factor.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-higgs-axiom-chandrasekhar-20260502`  (codex-current; independence=fresh_context)
+- **load-bearing step:** This curvature is the dimensionless ratio (m_H / v)^2 in lattice units, since the VEV v is the natural scale of the scalar field.  _(class `F`)_
+- **chain closes:** False — The note asserts rather than derives the map from taste-channel curvature to the physical Higgs mass ratio, and the specified current runner reports a corrected-y_t RGE route ending at 119.93 GeV rather than the note's 140.3 GeV headline.
+- **rationale:** Issue: the curvature-to-physical-Higgs-mass bridge is an asserted observable identification, and the 140.3 GeV headline is stale relative to the current named runner. Why this blocks: the claimed physical Higgs mass does not follow from the audited inputs, and the executable artifact checks a different corrected-y_t RGE route rather than validating equation [6]. Repair target: derive the physical readout/normalization theorem and update or replace the runner so it computes the load-bearing bridge and current headline consistently. Claim boundary until fixed: the note may state the internal taste-sector algebra and N_c cancellation within the displayed mean-field formula only.
 - **auditor confidence:** high
 
 ### `higgs_mass_hierarchy_correction_note`
@@ -8719,25 +8694,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** Issue: the load-bearing authority rule points from HIGGS_MECHANISM_NOTE.md to HIGGS_MASS_DERIVED_NOTE.md, while the cited authority is itself audited-conditional and depends back on higgs_mechanism_note. Why this blocks: the mechanism-level statement may be honest support, but the audit chain does not close from an independent one-hop authority, and the primary runner exits nonzero after recording explicit failures for alpha_s running, the y_t crossing, and full Higgs derivation. Repair target: split the mechanism-only CW/naturalness runner from the exact-mass checks, and provide an audit-clean non-circular mechanism theorem or authority note for the scalar order-parameter/Higgs identification. Claim boundary until fixed: the note can be cited as mechanism-level support for CW EWSB and naturalness bookkeeping, not as an audit-ratified Higgs mechanism derivation.
 - **open / conditional deps cited:**
   - `HIGGS_MASS_DERIVED_NOTE.md`
-- **auditor confidence:** high
-
-### `higgs_vacuum_explicit_systematic_note`
-
-- **Note:** [`HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md`](../../docs/HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The framework-side full 3-loop Higgs runner gives m_H=125.1 GeV using the current accepted package inputs, with the lane inheriting YT residuals.  _(class `G`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: HIGGS_MASS_FROM_AXIOM_NOTE.md, TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md, HIGGS_MASS_DERIVED_NOTE.md, YT_COLOR_PROJECTION_CORRECTION_NOTE.md, YT_FLAGSHIP_BOUNDARY_NOTE.md.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: HIGGS_MASS_FROM_AXIOM_NOTE.md, TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md, HIGGS_MASS_DERIVED_NOTE.md, YT_COLOR_PROJECTION_CORRECTION_NOTE.md, YT_FLAGSHIP_BOUNDARY_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
-- **open / conditional deps cited:**
-  - `HIGGS_MASS_FROM_AXIOM_NOTE.md`
-  - `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`
-  - `HIGGS_MASS_DERIVED_NOTE.md`
-  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
-  - `YT_FLAGSHIP_BOUNDARY_NOTE.md`
 - **auditor confidence:** high
 
 ### `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17`
