@@ -217,6 +217,11 @@ What changed:
   `lambda_max(pole)=1` witness is only a pole-location condition.  The residue
   and FH/LSZ readout need `d lambda_max/dp^2`, which varies with the
   momentum-dependent ladder kernel even when the pole eigenvalue is fixed.
+- The scalar ladder total-momentum derivative scout computes that derivative
+  in a finite Wilson-exchange model.  The derivative is finite and negative
+  across the scan, but its magnitude is strongly sensitive to projector,
+  zero-mode, IR regulator, mass, and volume choices.  This is constructive
+  machinery, not a limiting theorem.
 
 The scientific result is narrower than closure:
 
@@ -278,3 +283,6 @@ The determinant-gate block says the exact analytic object is now the
 interacting scalar-channel kernel `K(x)` and its derivative at the pole.
 The eigen-derivative block says the same in matrix language: derive or measure
 the total-momentum derivative of the scalar Bethe-Salpeter kernel.
+The total-momentum derivative scout says this derivative is computable in a
+finite model, but the current route still needs the retained prescription and
+limit theorem or production pole data.

@@ -176,6 +176,19 @@ LSZ residue needs d lambda_max / d p^2 at the crossing
 A finite eigenvalue crossing is not enough unless the total-momentum
 dependence of the scalar Bethe-Salpeter kernel is derived or measured.
 
+Scalar ladder total-momentum derivative scout:
+
+```text
+d lambda_max / d p^2 = finite-difference derivative of the
+total-momentum-shifted Wilson-exchange ladder eigenvalue
+```
+
+The derivative is computable in a finite scout, but the scout leaves the
+projector, gauge-zero-mode, IR-regulator, finite-volume, and canonical Higgs
+normalization choices open.  The finite negative sign observed in the scan is
+not a proof selector; the load-bearing missing input remains the retained
+limiting prescription or production pole-derivative measurement.
+
 Source-reparametrization gauge boundary:
 
 ```text

@@ -96,7 +96,10 @@ probability.
    gate further reduces the analytic object to the interacting denominator
    `D(x)=1-K(x)Pi(x)` and especially `K'(x_pole)`.  The matrix ladder version
    needs `d lambda_max/dp^2` at the crossing, so a finite eigenvalue witness is
-   not yet a residue theorem.
+   not yet a residue theorem.  A finite total-momentum derivative scout now
+   computes `d lambda_max/dp^2` in a Wilson-exchange model, but the magnitude is
+   prescription sensitive; the retained task is the limiting theorem or
+   production pole derivative, not another finite witness.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 7. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`

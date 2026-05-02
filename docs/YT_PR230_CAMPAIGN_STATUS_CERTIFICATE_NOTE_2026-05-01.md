@@ -1,12 +1,12 @@
 # PR230 Top-Yukawa Physics-Loop Campaign Status Certificate
 
 **Date:** 2026-05-01  
-**Status:** open / campaign exhausted for current analytic shortcuts  
+**Status:** open / active campaign continuing after current shortcut blocks
 **Runner:** `scripts/frontier_yt_pr230_campaign_status_certificate.py`  
 **Certificate:** `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
 
 ```yaml
-actual_current_surface_status: open
+actual_current_surface_status: open / active campaign continuing after current shortcut blocks
 conditional_surface_status: conditional-support for future production evidence or new scalar-LSZ/heavy-matching theorem
 hypothetical_axiom_status: null
 admitted_observation_status: null
@@ -18,7 +18,7 @@ bare_retained_allowed: false
 
 ## Purpose
 
-This note summarizes the current PR #230 physics-loop campaign.  It does not
+This note summarizes the current PR #230 physics-loop checkpoint.  It does not
 claim retained closure.  It records which shortcut routes were tested and what
 still remains.
 
@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=38 FAIL=0
+# SUMMARY: PASS=39 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -63,6 +63,7 @@ The certificate consumes the PR-local route certificates for:
 - Feynman-Hellmann / scalar-LSZ invariant readout theorem;
 - scalar pole determinant gate;
 - scalar ladder eigen-derivative gate;
+- scalar ladder total-momentum derivative scout;
 - scalar ladder IR / zero-mode obstruction;
 - heavy kinetic-mass route scout;
 - nonzero-momentum correlator scout;
@@ -79,8 +80,8 @@ proposal.
 
 ## Campaign Verdict
 
-The campaign did not reach retained top-Yukawa closure.  It did retire the
-visible shortcut routes:
+This checkpoint has not reached retained top-Yukawa closure.  It did retire
+the visible shortcut routes:
 
 | Route | Current result |
 |---|---|
@@ -113,6 +114,7 @@ visible shortcut routes:
 | Feynman-Hellmann / scalar-LSZ invariant readout | exact formula avoids `kappa_s = 1` shortcut, but still needs same-source production pole data |
 | scalar pole determinant gate | exact denominator condition identifies `K(x)` and `K'(pole)` as load-bearing open inputs |
 | scalar ladder eigen-derivative gate | finite `lambda_max=1` crossing is not enough; `d lambda/dp^2` and momentum-dependent kernel remain open |
+| scalar ladder total-momentum derivative scout | finite `d lambda/dp^2` can be computed, but its magnitude is prescription sensitive and no limiting theorem is derived |
 | current-scale direct MC | `am_top = 81.423`, not a useful relativistic top run |
 | HQET/static shortcut | removes rest mass, therefore needs matching |
 | heavy kinetic mass | cancels additive rest mass, but needs nonzero-momentum data and matching |

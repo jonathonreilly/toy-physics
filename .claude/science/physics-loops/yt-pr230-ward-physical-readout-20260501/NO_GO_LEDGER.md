@@ -596,6 +596,19 @@ kernel changes `d lambda_max/dp^2`, the residue proxy, and the FH/LSZ readout
 factor.  The route still needs a momentum-dependent kernel theorem or
 production pole-derivative data.
 
+Scalar ladder total-momentum derivative scout is bounded support only:
+
+```text
+python3 scripts/frontier_yt_scalar_ladder_total_momentum_derivative_scout.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The finite Wilson-exchange scout computes `d lambda_max/dp^2` by shifting the
+fermion bubble denominators with total scalar momentum.  The derivative is
+finite and negative on the scanned surfaces, but its magnitude varies by about
+`3903.98x` across mass, volume, IR regulator, zero-mode, and projector choices.
+This is not a retained scalar-LSZ theorem and does not fix `kappa_s`.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

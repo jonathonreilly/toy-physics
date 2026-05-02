@@ -154,3 +154,19 @@ Adds a scalar ladder eigen-derivative gate:
 - still no retained closure: total-momentum kernel derivative or production
   pole-derivative data remain open.
 ```
+
+Latest scalar ladder total-momentum derivative checkpoint text for PR #230:
+
+```text
+Adds a scalar ladder total-momentum derivative scout:
+- computes finite-difference `d lambda_max/dp^2` in a Wilson-exchange scalar
+  ladder by shifting the fermion bubble with total momentum;
+- validator passes `PASS=9 FAIL=0`; campaign status now consumes 43 route
+  certificates and reports `PASS=39 FAIL=0`;
+- derivative is finite and negative on the 108-point scan, but its magnitude
+  varies by about `3903.98x` across projector, zero-mode, IR, mass, and volume
+  choices;
+- still no retained closure: the limiting prescription, scalar pole
+  derivative, canonical-Higgs normalization, or production pole data remain
+  open.
+```

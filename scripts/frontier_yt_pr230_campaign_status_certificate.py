@@ -73,6 +73,7 @@ def main() -> int:
         "fh_lsz_invariant_readout": load("outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json"),
         "scalar_pole_determinant_gate": load("outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"),
         "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
+        "scalar_ladder_total_momentum_derivative": load("outputs/yt_scalar_ladder_total_momentum_derivative_scout_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -240,6 +241,12 @@ def main() -> int:
         statuses["scalar_ladder_eigen_derivative"],
     )
     report(
+        "scalar-ladder-total-momentum-derivative-scout-not-limit",
+        "total-momentum derivative scout" in str(statuses["scalar_ladder_total_momentum_derivative"])
+        or "bounded-support" in str(statuses["scalar_ladder_total_momentum_derivative"]),
+        statuses["scalar_ladder_total_momentum_derivative"],
+    )
+    report(
         "finite-ladder-route-needs-ir-limit",
         "zero-mode" in str(statuses["ladder_ir_zero_mode"]),
         statuses["ladder_ir_zero_mode"],
@@ -309,10 +316,11 @@ def main() -> int:
     ]
 
     result = {
-        "actual_current_surface_status": "open / campaign exhausted for current analytic shortcuts",
+        "actual_current_surface_status": "open / active campaign continuing after current shortcut blocks",
         "verdict": (
-            "The current PR #230 physics-loop campaign did not reach retained "
-            "top-Yukawa closure.  It did retire the visible shortcut routes: "
+            "The current PR #230 physics-loop checkpoint has not reached "
+            "retained top-Yukawa closure.  It did retire the visible shortcut "
+            "routes: "
             "Ward/H_unit, R_conn-only LSZ, Legendre normalization, free logdet "
             "bubble, contact HS/RPA, simplified ladder projector, same-1PI, "
             "finite ladder IR/zero-mode shortcut, and static/HQET without "
@@ -353,7 +361,10 @@ def main() -> int:
             "LSZ measurement to determine kappa_s.  The same-source scalar "
             "two-point object C_ss(q) is now executable on a tiny exact lattice, "
             "but the reduced primitive has no controlled pole/continuum limit "
-            "and its finite residue proxy is mass-dependent."
+            "and its finite residue proxy is mass-dependent.  A finite "
+            "Wilson-exchange scalar ladder total-momentum derivative can be "
+            "computed, but the derivative magnitude is strongly "
+            "prescription-sensitive and is not a retained limiting theorem."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
