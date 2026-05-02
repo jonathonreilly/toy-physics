@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:53:32.738828+00:00
+**Generated:** 2026-05-02T22:56:36.631835+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 98 |
 | **retained_bounded** | 190 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 6 |
-| unaudited | 528 |
+| open_gate | 7 |
+| unaudited | 527 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 390 |
+| `audited_clean` | 391 |
 | `audited_conditional` | 647 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 564 |
+| `unaudited` | 563 |
 
 | claim_type | count |
 |---|---:|
@@ -454,6 +454,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_bell_measurement_circuit_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
+| `teleportation_logical_readout_audit` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `tensor_block_closure_test_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `tensor_matching_completion_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -16233,6 +16234,21 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** The correct scoped object is a clean open_gate: it identifies a standalone operator-targeting gap in the current fixed pair-hop X, not a retained broad teleportation theorem. The runner confirms the bounded failure for all non-last logical axes in dimensions 2 and 3 and confirms that retargeting X removes the obstruction across the surveyed cases. The note also preserves the finite, idealized boundary and does not overclaim physical teleportation, matter transfer, or larger lattices.
 - **open / conditional deps cited:**
   - `TELEPORTATION_ENCODING_PORTABILITY_NOTE.md`
+- **auditor confidence:** high
+
+### `teleportation_logical_readout_audit`
+
+- **Note:** [`TELEPORTATION_LOGICAL_READOUT_AUDIT.md`](../../docs/TELEPORTATION_LOGICAL_READOUT_AUDIT.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** The audit validates reduced logical trace extraction for taste-only observables in the audited Poisson/CHSH cases, while identifying operational retained-taste readout/control as still unestablished.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-teleportation-logical-readout-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** Cells and spectators can be ignored only if preparation, Bell measurement, correction, and readout are proven to factor as logical taste operators tensor identity on the environment, or an explicit blind/heralded environment workflow is supplied.  _(class `B`)_
+- **chain closes:** True — The scoped open gate closes: the runner establishes trace validity and input-independent Bob no-record behavior, but also shows fixed-environment branch variation and no supplied apparatus/control model. The missing operational step is native retained-taste preparation, measurement, feed-forward, and correction that is blind to cells and spectator tastes, or an explicit heralded branch protocol.
+- **rationale:** This row is best treated as a clean open_gate rather than a theorem claim. The note does establish the mathematical reduced-density diagnostic for taste-only observables, but its citeable load-bearing content is the blocker: trace extraction alone is not an operational logical readout primitive. The runner output directly supports that distinction and does not rely on one-hop cited authorities.
+- **open / conditional deps cited:**
+  - `TELEPORTATION_LOGICAL_READOUT_AUDIT.md`
 - **auditor confidence:** high
 
 ### `teleportation_native_axioms_theory_note`
