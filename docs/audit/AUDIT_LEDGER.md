@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T15:58:18.410950+00:00
+**Generated:** 2026-05-02T16:01:01.077819+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -940,7 +940,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `newton_law_derived_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `newton_persistent_pattern_control_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `nonlinear_born_gravity_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `observable_principle_from_axiom_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `observable_principle_from_axiom_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `oh_schur_boundary_action_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `one_generation_matter_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -12133,19 +12133,19 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 
 - **Note:** [`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](../../docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_scope:** Exact finite Grassmann source-response theorem on the minimal hierarchy block, conditional on scalar-additivity/CPT-even observable premises and canonical hierarchy normalization inputs.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-04-28-observable_principle_from_axiom_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Under continuity, additivity on independent subsystems and CPT-even phase blindness force W = c log|Z| + const, normalized to W[J] = log|det(D+J)| - log|det D|.  _(class `A`)_
-- **chain closes:** False — The finite Grassmann/log-det response chain closes under the note's stated scalar-observable assumptions, and the live runner reports 13 pass and 0 fail. It does not derive scalar additivity, CPT-even phase blindness, continuity, normalization, or the downstream hierarchy baseline from the bare lattice axiom alone.
-- **rationale:** Issue: the note proves the log|det(D+J)| source-response result only after adding scalar additivity, CPT-even phase blindness, continuity, and normalization assumptions, and its electroweak-scale consequence imports the current hierarchy baseline rather than deriving that normalization here.
-Why this blocks: downstream candidate retained-grade/promoted claims need a bare-axiom observable bridge; this row supplies a conditional scalar-source rule, not a standalone derivation of the physical scalar observable principle.
-Repair target: either derive the scalar-observable selection assumptions and hierarchy normalization chain from the accepted axiom package with a runner that excludes competing generators, or narrow the claim to an explicit conditional source-response theorem.
-Claim boundary until fixed: safe to claim finite-block log|det| curvature and the Lt=4 selector under the stated scalar-observable assumptions, not axiom-only observable closure or electroweak-scale derivation.
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-observable-principle-halley`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The unique additive CPT-even scalar source generator is W[J]=log|det(D+J)|-log|det D|, and its local curvature is identified with the hierarchy normalization surface.  _(class `C`)_
+- **chain closes:** False — The algebraic log-det/source-response checks close inside the supplied finite-block model. The full hierarchy/v consequence does not close because it imports canonical plaquette-surface constants from an unaudited authority note and assumes scalar-observable selection premises rather than deriving them from retained-grade inputs.
+- **rationale:** Issue: the runner verifies strong finite-block algebra, but the hierarchy normalization and v prediction depend on canonical constants whose authority note is currently unaudited, and the scalar additivity/CPT-even phase-blindness premises are selection assumptions. Why this blocks: those inputs are load-bearing for claiming the observable principle closes the hierarchy gap rather than merely defining a consistent generator inside the block. Repair target: audit docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md to retained grade and separately prove or explicitly axiomatize the scalar-observable premises from the lattice axiom. Claim boundary until fixed: conditional finite-block log-det source-response theorem, not a clean retained-grade hierarchy/v derivation.
 - **open / conditional deps cited:**
-  - `scalar_observable_selection_assumptions_not_derived_from_bare_axiom`
-  - `canonical_hierarchy_baseline_and_plaquette_normalization_chain_imported`
+  - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md`
+  - `scripts/canonical_plaquette_surface.py canonical constants`
+  - `Premise that physical scalar observable generators for independent subsystems must be additive`
+  - `Premise that scalar bosonic observables must be CPT-even and phase-blind`
+  - `Downstream hierarchy/Higgs normalization chain currently audited_conditional`
 - **auditor confidence:** high
 
 ### `oh_schur_boundary_action_note`
