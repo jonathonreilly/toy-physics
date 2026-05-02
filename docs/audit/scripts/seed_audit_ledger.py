@@ -90,6 +90,7 @@ NEVER_GATE_SOURCE_PATHS = {
 META_SOURCE_PATTERNS = (
     "docs/AUDIT_BACKLOG_CAMPAIGN_PROGRESS_SYNTHESIS_*.md",
     "docs/PHYSICAL_LATTICE_NECESSITY_DEP_DECLARATION_AUDIT_NOTE_*.md",
+    "docs/SCALAR_SELECTOR_FULL_STACK_RECOVERY_NOTE_*.md",
 )
 
 CLAIM_TYPES = {
@@ -171,14 +172,14 @@ def default_claim_type_for(node: dict) -> tuple[str, str]:
     The auditor owns the final value. This backfill exists so the new
     propagation rule is total over old ledger rows before their next audit.
     """
+    path = node.get("path") or ""
+    if any(fnmatchcase(path, pattern) for pattern in META_SOURCE_PATTERNS):
+        return "meta", "backfilled_from_path"
+
     hint = node.get("claim_type_author_hint") or node.get("claim_type_seed_hint")
     if hint in CLAIM_TYPES:
         provenance = "author_hint" if node.get("claim_type_author_hint") else "migration_hint"
         return hint, provenance
-
-    path = node.get("path") or ""
-    if any(fnmatchcase(path, pattern) for pattern in META_SOURCE_PATTERNS):
-        return "meta", "backfilled_from_path"
 
     if path.startswith(("docs/repo/", "docs/work_history/", "docs/lanes/", "docs/publication/")):
         return "meta", "backfilled_from_path"
