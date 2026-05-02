@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:17:15.187418+00:00
+**Generated:** 2026-05-02T22:21:33.871073+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 140 |
 | **retained_no_go** | 98 |
-| **retained_bounded** | 188 |
+| **retained_bounded** | 189 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 542 |
+| unaudited | 541 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 385 |
+| `audited_clean` | 386 |
 | `audited_conditional` | 641 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 578 |
+| `unaudited` | 577 |
 
 | claim_type | count |
 |---|---:|
@@ -441,6 +441,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_geometry_superposition_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `staggered_newton_reproduction_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
+| `staggered_self_consistent_two_body_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | C | - |
 | `staggered_test_mass_companion_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_two_field_wave_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | D | - |
@@ -15717,6 +15718,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The staggered architecture can reproduce a Newton-compatible 3D distance law on an open cubic lattice, but only when the trajectory observable is coarse-grained to suppress sublattice beating.  _(class `C`)_
 - **chain closes:** True — The registered runner constructs the stated open staggered Hamiltonian, evolves free and gravitating packets, and fits exact-force, raw-centroid, and blocked-centroid distance laws; current output matches the source note. The result closes only on the calibrated bounded surface with external source, d=3..6, sigma=1.30, and 2x2x2 blocked readout.
 - **rationale:** The runner computes the load-bearing trajectory response and reproduces the note's global blocked exponent of about -1.982 with all blocked rows toward the source. The note's caveats correctly prevent overpromotion: it imports the external 1/r source surface and does not claim both-masses closure, self-consistent two-body gravity, irregular transfer, or replacement of the force-based canonical card. Residual risk is the calibrated readout and finite-window choice, not a mismatch between note and runner.
+- **auditor confidence:** high
+
+### `staggered_self_consistent_two_body_note_2026-04-11`
+
+- **Note:** [`STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md`](../../docs/STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Calibrated finite open-cubic force-channel theorem/card: sides 12/14/16, separations 3..7, mass=0.30, G=50.0, mu2=0.001, dt=0.08, steps=6, sigma=0.80, exact partner-force observable; excludes trajectory-channel closure, full Newtonian gravity, universal two-body dynamics, and extension beyond this calibrated surface.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-staggered-two-body-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** The runner verifies that the self-consistent shared screened-Poisson field produces positive partner-only force for every tested side/separation row, with calibrated force scaling near d^-2 on the bounded open-cubic surface.  _(class `C`)_
+- **chain closes:** True — The chain closes only as a bounded card after treating the screened Poisson law, G/mu2, sigma=0.80 calibration, finite open-cubic geometry, and partner-force readout as explicit hypotheses. Under that boundary, all 15/15 partner-force rows are attractive and the runner exits successfully, while the noisy blocked trajectory channel is excluded from retention.
+- **rationale:** Clean as a bounded calibrated force-channel claim, not as a structural or physical gravity theorem. The retained statement explicitly includes the calibrated open-cubic surface and force-first observable, so it does not overreach into universal Newton or trajectory closure. Residual risk: the near d^-2 behavior is calibrated to sigma=0.80 and fixed G/mu2, so broader uncalibrated or physical claims require a separate audit.
 - **auditor confidence:** high
 
 ### `staggered_test_mass_companion_note_2026-04-11`
