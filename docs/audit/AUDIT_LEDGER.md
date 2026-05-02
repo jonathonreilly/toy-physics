@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:14:53.969014+00:00
+**Generated:** 2026-05-02T22:17:15.187418+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 188 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 543 |
+| unaudited | 542 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 640 |
+| ~~audited_conditional~~ | 641 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 385 |
-| `audited_conditional` | 640 |
+| `audited_conditional` | 641 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 579 |
+| `unaudited` | 578 |
 
 | claim_type | count |
 |---|---:|
@@ -580,6 +580,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `complete_prediction_chain_2026_04_15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `complex_action_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | E | - |
 | `complex_selectivity_compare_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | G | - |
+| `complex_selectivity_predictor_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | D | - |
 | `composite_source_additivity_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `confinement_string_tension_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `connectivity_family_v2_elliptical_duplicate_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3113,6 +3114,28 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `SECOND_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md`
   - `ALT_CONNECTIVITY_FAMILY_COMPLEX_FAILURE_NOTE.md`
   - `THIRD_GROWN_FAMILY_SIGN_NOTE.md`
+- **auditor confidence:** high
+
+### `complex_selectivity_predictor_note`
+
+- **Note:** [`COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md`](../../docs/COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Narrow predictor/meta-comparison over structured-family rows: exact gamma0 plus anchor-local TOWARD-to-AWAY crossover is asserted as required for complex-action survival, while coarser basin geometry is asserted not to predict survival.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-complex-selectivity-predictor-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** The note infers a retained positive predictor from a static comparison table of cited family outcomes and discriminator labels, but the runner only renders hard-coded rows and does not recompute, validate, or independently test the crossover/survival relation.  _(class `D`)_
+- **chain closes:** False — The claimed predictor depends on cited family rows whose statuses include retained_no_go, audited_conditional, and retained_bounded support, yet no dependencies are declared. The runner provides no independent computation or out-of-sample validation; it restates fixed row labels and has zero classified pass counts.
+- **rationale:** Issue: the note promotes a positive predictor from a hard-coded comparison over cited family rows. Why this blocks: several cited rows are conditional, bounded, or no-go, and the claim declares no dependencies; the runner does not recompute exact gamma0, anchor-local crossover, complex survival, ledger status, or fit/test the discriminator. Repair target: declare the cited family dependencies, restrict the theorem to retained-grade inputs or discharge the conditional/no-go rows, and replace the static renderer with a runner that validates the row predicates and tests the predictor boundary. Claim boundary until fixed: conditional predictor-card/meta-summary only, not a retained positive theorem that complex-action survival requires anchor-local crossover.
+- **open / conditional deps cited:**
+  - `archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md`
+  - `SECOND_GROWN_FAMILY_COMPLEX_NOTE.md`
+  - `SECOND_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md`
+  - `ALT_CONNECTIVITY_FAMILY_COMPLEX_FAILURE_NOTE.md`
+  - `THIRD_GROWN_FAMILY_SIGN_NOTE.md`
+  - `FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`
+  - `archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_COMPLEX_NOTE.md`
+  - `FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`
 - **auditor confidence:** high
 
 ### `composite_source_additivity_2d_note`
