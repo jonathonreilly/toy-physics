@@ -1,7 +1,9 @@
 # Axiom-First First Law of Black Hole Mechanics
 
 **Date:** 2026-05-01
-**Status:** support — branch-local theorem note on retained framework GR + retained BH 1/4 carrier + Block 02 Hawking T_H support; runner passing; audit-pending. Honest status: derived support theorem. `proposal_allowed: false` because upstream Hawking T_H block is itself audit-pending support.
+**Type:** bounded_theorem
+**Claim scope:** for stationary axially-symmetric solutions of the framework's GR action with non-degenerate Killing horizon, the first law dM = T_H dS_BH + Ω_H dJ + Φ_H dQ holds (F1)-(F2); equivalently the Smarr formula M = 2 T_H S_BH + 2 Ω_H J + Φ_H Q (F3); Schwarzschild specialization dM = (κ/8πG) dA recovered exactly (F4). Conditional on retained BH 1/4 carrier (Wald-Noether admitted) plus Block 02 Hawking T_H plus Bardeen-Carter-Hawking 1973 integrability admitted-context.
+**Status:** awaiting independent audit. Under the scope-aware classification framework (audit-lane proposal #291), `effective_status` is computed by the audit pipeline.
 **Loop:** `24h-axiom-first-derivations-20260501`
 **Cycle:** 5 (Block 05; stacked on Block 02 (Hawking))
 **Branch:** `physics-loop/24h-axiom-first-block05-firstlaw-20260501`
