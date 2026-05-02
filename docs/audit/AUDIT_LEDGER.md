@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:58:07.614760+00:00
+**Generated:** 2026-05-02T00:59:37.221636+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 354 |
+| `audited_clean` | 355 |
 | `audited_conditional` | 664 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 441 |
+| `unaudited` | 440 |
 
 | criticality | count |
 |---|---:|
@@ -428,6 +428,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structureless_dag_gravity_harness_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `substrate_to_p_a_forcing_theorem_note_2026-04-30` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `symmetry_generated_paired_chokepoint_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `symmetry_spectrum_mirror_compare_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `tensor_block_closure_test_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `tensor_matching_completion_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `tensor_source_map_eta_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -15563,6 +15564,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md_bounded_unaudited`
   - `logs/2026-04-03-higher-symmetry-joint-validation-z2z2-dense-n80-n120.txt_missing`
   - `scripts/symmetry_head_to_head.py_hardcoded_table_no_source_trace_assertions`
+- **auditor confidence:** high
+
+### `symmetry_spectrum_mirror_compare_note`
+
+- **Note:** [`SYMMETRY_SPECTRUM_MIRROR_COMPARE_NOTE.md`](../../docs/SYMMETRY_SPECTRUM_MIRROR_COMPARE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Mirror symmetry can produce a genuine near-rank-2 signature, but only in the strict chokepoint pocket and only at small N; outside that pocket, the rank story is heuristic rather than a retained large-N mechanism.  _(class `C`)_
+- **chain closes:** True — Running the registered script with the note's stated N=15,25 and 16-seed setup reproduces the table: original mirror has lower s2/s1 than random-2layer at both sizes, while mirror-chokepoint has high s2/s1, effective rank near 2, and Born zero at machine precision in the small-N pocket.
+- **rationale:** The current runner reproduces the note's diagnostic table under the stated setup, and the note's conclusion stays bounded: support exists for a strict small-N mirror-chokepoint rank signature, not for a scalable large-N rank-protected architecture. The default runner window tests larger N and is not the note's quoted table, but it reinforces the same non-scalability boundary rather than contradicting the bounded claim.
 - **auditor confidence:** high
 
 ### `taste_scalar_isotropy_theorem_note`
