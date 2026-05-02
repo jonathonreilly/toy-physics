@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 27,
+    "critical": 28,
     "high": 221,
     "leaf": 172,
-    "medium": 175
+    "medium": 177
   },
-  "generated_at": "2026-05-02T21:18:46.233970+00:00",
+  "generated_at": "2026-05-02T21:30:52.369824+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -664,6 +664,32 @@
       "ready": false,
       "runner_path": "scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py",
       "transitive_descendants": 51
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "emergent_lorentz_invariance_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "cpt_exact_note",
+        "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02",
+        "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02",
+        "planck_scale_conditional_completion_note_2026-04-24"
+      ],
+      "direct_in_degree": 19,
+      "effective_status": "unaudited",
+      "load_bearing_score": 15.115,
+      "note_path": "docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_emergent_lorentz_invariance.py",
+      "transitive_descendants": 48
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -3915,6 +3941,31 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "planck_scale_conditional_completion_note_2026-04-24",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "planck_boundary_density_extension_theorem_note_2026-04-24",
+        "planck_finite_response_no_go_note_2026-04-24",
+        "planck_parent_source_hidden_character_no_go_note_2026-04-24"
+      ],
+      "direct_in_degree": 11,
+      "effective_status": "unaudited",
+      "load_bearing_score": 11.172,
+      "note_path": "docs/PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_planck_conditional_completion_audit.py",
+      "transitive_descendants": 50
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "area_law_native_car_semantics_tightening_note_2026-04-25",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -4150,31 +4201,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_dm_eta_freezeout_bypass_quantitative_theorem.py",
-      "transitive_descendants": 46
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "planck_scale_conditional_completion_note_2026-04-24",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "planck_boundary_density_extension_theorem_note_2026-04-24",
-        "planck_finite_response_no_go_note_2026-04-24",
-        "planck_parent_source_hidden_character_no_go_note_2026-04-24"
-      ],
-      "direct_in_degree": 9,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.055,
-      "note_path": "docs/PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_planck_conditional_completion_audit.py",
       "transitive_descendants": 46
     },
     {
@@ -6577,6 +6603,27 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "lorentz_violation_derived_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 6.644,
+      "note_path": "docs/LORENTZ_VIOLATION_DERIVED_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_lorentz_violation.py",
+      "transitive_descendants": 49
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "action_normalization_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -6725,27 +6772,6 @@
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": true,
       "runner_path": "scripts/frontier_retained_cross_lane_consistency.py",
-      "transitive_descendants": 35
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "lorentz_violation_derived_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.67,
-      "note_path": "docs/LORENTZ_VIOLATION_DERIVED_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_lorentz_violation.py",
       "transitive_descendants": 35
     },
     {
@@ -7788,6 +7814,59 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_boundary_law_robustness.py",
+      "transitive_descendants": 48
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "emergent_lorentz_invariance_note",
+        "planck_scale_conditional_completion_note_2026-04-24",
+        "planck_boundary_density_extension_theorem_note_2026-04-24",
+        "planck_finite_response_no_go_note_2026-04-24",
+        "cpt_exact_note",
+        "planck_source_unit_normalization_support_theorem_note_2026-04-25"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 6.115,
+      "note_path": "docs/HIERARCHY_SCALE_A_EQUALS_PLANCK_LENGTH_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_hierarchy_scale_a_equals_planck_length.py",
+      "transitive_descendants": 48
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "no_go",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "emergent_lorentz_invariance_note",
+        "cpt_exact_note",
+        "lorentz_violation_derived_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 6.115,
+      "note_path": "docs/PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py",
       "transitive_descendants": 48
     },
     {
@@ -15610,5 +15689,5 @@
     }
   ],
   "ready_count": 119,
-  "total_pending": 595
+  "total_pending": 598
 }

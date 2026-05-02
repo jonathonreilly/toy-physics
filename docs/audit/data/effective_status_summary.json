@@ -1,14 +1,22 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 527,
+    "bounded_theorem": 528,
     "decoration": 7,
     "meta": 36,
-    "no_go": 157,
+    "no_go": 158,
     "open_gate": 100,
     "positive_theorem": 873
   },
-  "computed_at": "2026-05-02T21:18:45.889972+00:00",
+  "computed_at": "2026-05-02T21:30:52.287788+00:00",
   "cycle_examples": [
+    [
+      "emergent_lorentz_invariance_note",
+      "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02"
+    ],
+    [
+      "emergent_lorentz_invariance_note",
+      "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02"
+    ],
     [
       "lorentz_boost_covariance_2d_theorem_note",
       "lorentz_boost_covariance_3plus1d_theorem_note"
@@ -20,20 +28,11 @@
     [
       "publication.ci3_z3.quantitative_summary_table",
       "publication.ci3_z3.publication_matrix"
-    ],
-    [
-      "publication.ci3_z3.claims_table",
-      "publication.ci3_z3.derivation_validation_map",
-      "publication.ci3_z3.derivation_atlas"
-    ],
-    [
-      "publication.ci3_z3.derivation_validation_map",
-      "publication.ci3_z3.derivation_atlas"
     ]
   ],
-  "cycles_detected": 83,
+  "cycles_detected": 85,
   "effective_status_counts": {
-    "audited_conditional": 633,
+    "audited_conditional": 632,
     "audited_decoration": 3,
     "audited_failed": 1,
     "audited_numerical_match": 24,
@@ -46,7 +45,7 @@
     "retained_bounded": 186,
     "retained_no_go": 97,
     "retained_pending_chain": 2,
-    "unaudited": 556
+    "unaudited": 559
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

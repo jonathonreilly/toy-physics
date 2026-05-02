@@ -1,0 +1,33 @@
+slug: 3plus1d-native-closure-2026-05-02
+iteration: 7
+branch: claude/emergent-lorentz-bridges-register-2026-05-02
+base: origin/main
+date: 2026-05-02
+goal: |
+  Register the 3 unmet bridge deps for emergent_lorentz_invariance_note so that
+  it can move from audited_conditional toward retained_bounded.
+target_row: emergent_lorentz_invariance_note
+target_status: retained_bounded
+deps_to_close:
+  - id: cpt_exact_dependency_link
+    method: register existing retained CPT_EXACT_NOTE via markdown link
+    note_path: docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md
+    status: planned
+  - id: parity_operator_basis_dimension5_LV_no_go_theorem
+    method: write new no-go note formalizing dim-5 LV exclusion under P
+    note_path: docs/PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md
+    runner_path: scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py
+    status: planned
+  - id: hierarchy_scale_a_equals_planck_length_theorem
+    method: write new identification note wiring 1/4 carrier coefficient -> a=ell_Pl
+    note_path: docs/HIERARCHY_SCALE_A_EQUALS_PLANCK_LENGTH_THEOREM_NOTE_2026-05-02.md
+    runner_path: scripts/frontier_hierarchy_scale_a_equals_planck_length.py
+    status: planned
+campaign_aware:
+  iter6_branch_pattern: claude/three-anomaly-deps-elevate-2026-05-02
+  do_not_touch: [anomaly_forces_time_theorem deps]
+constraints:
+  - Nature-grade rigor; no overclaiming
+  - Honest progress; narrow scope before invent
+  - Per-dep incremental commits
+  - PR creation authorized

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T21:18:45.487312+00:00",
+  "generated_at": "2026-05-02T21:30:51.872058+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -7237,6 +7237,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_hierarchy_matsubara_determinant_narrow.py"
     },
+    "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_hierarchy_scale_a_equals_planck_length.py"
+    },
     "hierarchy_spatial_bc_and_u0_scaling_note": {
       "assert_count": 0,
       "counts": {
@@ -10728,6 +10740,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/packet_memory.py"
+    },
+    "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py"
     },
     "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02": {
       "assert_count": 0,
@@ -24739,6 +24763,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_hierarchy_scale_a_equals_planck_length.py": {
+      "assert_count": 2,
+      "claims": [
+        "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_hierarchy_spatial_bc_and_u0_scaling.py": {
       "assert_count": 0,
       "claims": [
@@ -27614,6 +27653,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py": {
+      "assert_count": 2,
+      "claims": [
+        "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_physical_hermitian_hamiltonian_and_sme_bridge.py": {
@@ -36102,16 +36156,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 107,
+    "decoration_candidates": 108,
     "dominant_class_distribution": {
       "A": 10,
-      "B": 155,
-      "C": 520,
+      "B": 156,
+      "C": 521,
       "D": 198,
       "none": 412
     },
-    "runners_classified": 1295,
-    "runners_with_C": 622,
+    "runners_classified": 1297,
+    "runners_with_C": 623,
     "runners_with_D": 312
   }
 }

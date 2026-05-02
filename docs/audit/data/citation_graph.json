@@ -4505,6 +4505,22 @@
       "to": "ckm_from_mass_hierarchy_note"
     },
     {
+      "from": "emergent_lorentz_invariance_note",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "emergent_lorentz_invariance_note",
+      "to": "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02"
+    },
+    {
+      "from": "emergent_lorentz_invariance_note",
+      "to": "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02"
+    },
+    {
+      "from": "emergent_lorentz_invariance_note",
+      "to": "planck_scale_conditional_completion_note_2026-04-24"
+    },
+    {
       "from": "em_coupling_from_ewsb_note_2026-05-02",
       "to": "ewsb_pattern_from_higgs_y_note_2026-05-02"
     },
@@ -4987,6 +5003,30 @@
     {
       "from": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
       "to": "yt_ward_identity_derivation_theorem"
+    },
+    {
+      "from": "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02",
+      "to": "emergent_lorentz_invariance_note"
+    },
+    {
+      "from": "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02",
+      "to": "planck_scale_conditional_completion_note_2026-04-24"
+    },
+    {
+      "from": "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02",
+      "to": "planck_boundary_density_extension_theorem_note_2026-04-24"
+    },
+    {
+      "from": "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02",
+      "to": "planck_finite_response_no_go_note_2026-04-24"
+    },
+    {
+      "from": "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02",
+      "to": "planck_source_unit_normalization_support_theorem_note_2026-04-25"
     },
     {
       "from": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
@@ -7007,6 +7047,18 @@
     {
       "from": "one_generation_matter_closure_note",
       "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02",
+      "to": "emergent_lorentz_invariance_note"
+    },
+    {
+      "from": "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02",
+      "to": "lorentz_violation_derived_note"
     },
     {
       "from": "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02",
@@ -20013,7 +20065,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T21:18:42.016374+00:00",
+  "generated_at": "2026-05-02T21:30:48.920255+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -27841,8 +27893,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "296429f41517fec385da2461b9423dec161f859714822611a94680e67a8d4973",
+      "deps": [
+        "cpt_exact_note",
+        "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02",
+        "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02",
+        "planck_scale_conditional_completion_note_2026-04-24"
+      ],
+      "note_hash": "b1f792e1b0895433b92014f59b79902a6728faa6e7e67dc849e98cc9780e572c",
       "path": "docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md",
       "runner_path": "scripts/frontier_emergent_lorentz_invariance.py",
       "title": "Emergent Lorentz Invariance from the Cubic Z\u00b3 Lattice (Conditional)"
@@ -29999,6 +30056,24 @@
       "path": "docs/HIERARCHY_MATSUBARA_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_hierarchy_matsubara_determinant_narrow.py",
       "title": "Hierarchy Matsubara Determinant \u2014 Narrow Algebraic Theorem"
+    },
+    "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02": {
+      "claim_id": "hierarchy_scale_a_equals_planck_length_theorem_note_2026-05-02",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "emergent_lorentz_invariance_note",
+        "planck_scale_conditional_completion_note_2026-04-24",
+        "planck_boundary_density_extension_theorem_note_2026-04-24",
+        "planck_finite_response_no_go_note_2026-04-24",
+        "cpt_exact_note",
+        "planck_source_unit_normalization_support_theorem_note_2026-04-25"
+      ],
+      "note_hash": "d8207469f4c25b7e7dec8d15420feb24fa9c3285eb67082f18d0384eb7b86184",
+      "path": "docs/HIERARCHY_SCALE_A_EQUALS_PLANCK_LENGTH_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_hierarchy_scale_a_equals_planck_length.py",
+      "title": "Hierarchy-Scale Identification Theorem: a = \u2113_Planck (Conditional)"
     },
     "hierarchy_spatial_bc_and_u0_scaling_note": {
       "claim_id": "hierarchy_spatial_bc_and_u0_scaling_note",
@@ -34936,6 +35011,21 @@
       "path": "docs/PAPER_OUTLINE_2026-04-12.md",
       "runner_path": null,
       "title": "Paper Outline: \"Physics from Cl(3) on Z\u00b3\""
+    },
+    "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02": {
+      "claim_id": "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "emergent_lorentz_invariance_note",
+        "cpt_exact_note",
+        "lorentz_violation_derived_note"
+      ],
+      "note_hash": "6c634846eda58589124969f8a30ae0a245aa22432511a4ccb0c9ea181a85f9f3",
+      "path": "docs/PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py",
+      "title": "Parity-Operator Basis: Dimension-5 Lorentz-Violating Operator No-Go Theorem"
     },
     "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02": {
       "claim_id": "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02",
@@ -45772,7 +45862,6 @@
     "electrostatics_superposition_proxy_note",
     "em_gravity_coexistence_2x2_note",
     "emergent_geometry_growth_note_2026-04-10",
-    "emergent_lorentz_invariance_note",
     "emergent_product_law_audit_2026-04-11",
     "emergent_product_law_note",
     "equivalence_principle_harness_note",
@@ -46612,24 +46701,24 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 12,
+      "bounded_theorem": 13,
       "meta": 1,
-      "no_go": 1,
+      "no_go": 2,
       "none": 1742,
       "positive_theorem": 43
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 512,
+      "bounded_theorem": 513,
       "meta": 1,
-      "no_go": 107,
+      "no_go": 108,
       "none": 440,
       "open_gate": 109,
       "positive_theorem": 630
     },
-    "edge_count": 5003,
+    "edge_count": 5016,
     "leaf_count": 765,
-    "node_count": 1799,
-    "root_count": 1217,
-    "runners_with_path": 1367
+    "node_count": 1801,
+    "root_count": 1216,
+    "runners_with_path": 1369
   }
 }
