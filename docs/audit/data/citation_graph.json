@@ -8489,10 +8489,6 @@
       "to": "z2_hw1_mass_matrix_parametrization_note"
     },
     {
-      "from": "three_generation_observable_theorem_note",
-      "to": "generation_axiom_boundary_note"
-    },
-    {
       "from": "unified_program_note",
       "to": "mirror_chokepoint_note"
     },
@@ -19961,7 +19957,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T19:07:11.812282+00:00",
+  "generated_at": "2026-05-02T19:13:02.468858+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -35060,9 +35056,9 @@
       "claim_id": "physical_lattice_necessity_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "604fbbc8a6a18e2cb89d54692178565b40ef3fe3321f40263fbea829b63aba04",
+      "note_hash": "99107dea55040bdc13659d9f1618167ac5fee0590c8b7b836bc2ba58f0bb0246",
       "path": "docs/PHYSICAL_LATTICE_NECESSITY_NOTE.md",
       "runner_path": "scripts/frontier_physical_lattice_necessity.py",
       "title": "Physical-Lattice Necessity / No-Same-Stack Regulator Boundary Note"
@@ -42041,10 +42037,9 @@
         "site_phase_cube_shift_intertwiner_note",
         "s3_taste_cube_decomposition_note",
         "s3_mass_matrix_no_go_note",
-        "z2_hw1_mass_matrix_parametrization_note",
-        "generation_axiom_boundary_note"
+        "z2_hw1_mass_matrix_parametrization_note"
       ],
-      "note_hash": "5db23c7536c4a68b870736a1c82311c98d4bce81c2a7ceb79bb31c9047ac3915",
+      "note_hash": "32a55ca11c605a95e80f2632a26adb031d1111ce8a02652b8bfb80e63d8fda80",
       "path": "docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
       "title": "Three-Generation Observable Theorem Note"
@@ -46387,12 +46382,12 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 510,
       "meta": 1,
-      "no_go": 105,
+      "no_go": 106,
       "none": 443,
       "open_gate": 109,
-      "positive_theorem": 617
+      "positive_theorem": 616
     },
-    "edge_count": 4990,
+    "edge_count": 4989,
     "leaf_count": 755,
     "node_count": 1785,
     "root_count": 1216,
