@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:38:19.083863+00:00
+**Generated:** 2026-05-02T17:40:07.874575+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,7 +19,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 139 |
+| **retained** | 140 |
 | **retained_no_go** | 94 |
 | **retained_bounded** | 176 |
 | _retained_pending_chain_ | 2 |
@@ -29,13 +29,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 640 |
+| ~~audited_conditional~~ | 639 |
 | ~~audited_failed~~ | 1 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 373 |
-| `audited_conditional` | 640 |
+| `audited_clean` | 374 |
+| `audited_conditional` | 639 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
@@ -232,6 +232,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_distinct_shell_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -745,7 +746,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_poisson_self_gravity_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_strong_field_observable_split_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_bridge_support_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
-| `gauge_vacuum_plaquette_distinct_shell_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -7294,15 +7294,13 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** On the accepted Wilson 3 spatial + 1 derived-time surface, the minimal distinct connected shell containing a marked plaquette is the six-face elementary cube boundary.  _(class `A`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
-- **open / conditional deps cited:**
-  - `GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md`
+- **claim_scope:** Exact finite distinct connected plaquette-shell geometry on the accepted Wilson 3 spatial + 1 derived-time surface: the marked-shell minimum is the cube boundary, giving numerator order beta^5 and vacuum-shell order beta^6 only within this distinct-shell regime.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-sartre-distinct-shell-20260502`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The script exhaustively checks all 5^4 = 625 one-per-edge distinct choices on the accepted local 3+1 patch and finds no four-action shell closes the boundary of p0; an explicit five-action cube shell closes it.  _(class `C`)_
+- **chain closes:** True — The finite 3+1 enumeration proves necessity of five distinct action plaquettes around the marked plaquette and the explicit cube proves sufficiency. This closes only the shell-order geometry, not beta_eff closure or canonical P(6).
+- **rationale:** Clean as a scoped positive theorem: the runner computes the finite local geometry rather than hard-coding beta_eff or a comparator value. The audited result is an exact minimum/equality within an explicitly scoped finite regime, not merely an interval or bound. It does not establish beta_eff closure or canonical P(6).
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19`
