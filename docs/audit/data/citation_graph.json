@@ -285,6 +285,54 @@
       "to": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26"
     },
     {
+      "from": "audit_acceleration_ready_items_bundle_2_2026-05-02",
+      "to": "cl3_sm_embedding_theorem"
+    },
+    {
+      "from": "audit_acceleration_ready_items_bundle_2_2026-05-02",
+      "to": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+    },
+    {
+      "from": "audit_acceleration_ready_items_bundle_2_2026-05-02",
+      "to": "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02"
+    },
+    {
+      "from": "audit_acceleration_ready_items_bundle_2_2026-05-02",
+      "to": "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02"
+    },
+    {
+      "from": "audit_acceleration_ready_items_bundle_2_2026-05-02",
+      "to": "cpt_squared_is_identity_theorem_note_2026-05-02"
+    },
+    {
+      "from": "audit_acceleration_ready_items_bundle_2_2026-05-02",
+      "to": "gluon_tree_level_masslessness_theorem_note_2026-05-02"
+    },
+    {
+      "from": "audit_acceleration_ready_items_bundle_2_2026-05-02",
+      "to": "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02"
+    },
+    {
+      "from": "audit_acceleration_ready_items_bundle_2_2026-05-02",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "audit_acceleration_ready_items_bundle_2_2026-05-02",
+      "to": "three_generation_observable_dep_chain_audit_note_2026-05-02"
+    },
+    {
+      "from": "audit_acceleration_ready_items_bundle_2_2026-05-02",
+      "to": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30"
+    },
+    {
+      "from": "audit_acceleration_ready_items_bundle_2_2026-05-02",
+      "to": "schur_covariance_inheritance_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "audit_acceleration_ready_items_bundle_2_2026-05-02",
+      "to": "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02"
+    },
+    {
       "from": "audit_backlog_campaign_progress_synthesis_2026-05-02",
       "to": "left_handed_charge_matching_note"
     },
@@ -19989,7 +20037,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:33:48.340531+00:00",
+  "generated_at": "2026-05-02T20:43:23.369960+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21673,6 +21721,30 @@
       "path": "docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_atomic_rydberg_dependency_firewall.py",
       "title": "Atomic Rydberg Dependency Firewall"
+    },
+    "audit_acceleration_ready_items_bundle_2_2026-05-02": {
+      "claim_id": "audit_acceleration_ready_items_bundle_2_2026-05-02",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta (audit-acceleration request, not a science claim)",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "cl3_sm_embedding_theorem",
+        "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+        "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02",
+        "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02",
+        "cpt_squared_is_identity_theorem_note_2026-05-02",
+        "gluon_tree_level_masslessness_theorem_note_2026-05-02",
+        "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+        "three_generation_observable_dep_chain_audit_note_2026-05-02",
+        "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+        "schur_covariance_inheritance_narrow_theorem_note_2026-05-02",
+        "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02"
+      ],
+      "note_hash": "f4072617b50a52ee00906c613c23b85c19edfa2553dca51b97a41a536ac73d9b",
+      "path": "docs/AUDIT_ACCELERATION_READY_ITEMS_BUNDLE_2_2026-05-02.md",
+      "runner_path": null,
+      "title": "Audit-Acceleration Manifest: Ready-Items Bundle 2"
     },
     "audit_backlog_campaign_progress_synthesis_2026-05-02": {
       "claim_id": "audit_backlog_campaign_progress_synthesis_2026-05-02",
@@ -46523,21 +46595,21 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 11,
-      "meta": 1,
+      "meta": 2,
       "none": 1747,
       "positive_theorem": 35
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
-      "meta": 1,
+      "meta": 2,
       "no_go": 106,
       "none": 440,
       "open_gate": 109,
       "positive_theorem": 627
     },
-    "edge_count": 4997,
-    "leaf_count": 760,
-    "node_count": 1794,
+    "edge_count": 5009,
+    "leaf_count": 753,
+    "node_count": 1795,
     "root_count": 1217,
     "runners_with_path": 1362
   }

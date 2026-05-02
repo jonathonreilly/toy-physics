@@ -1,14 +1,14 @@
 # Audit Queue
 
-**Generated:** 2026-05-02T20:33:52.526828+00:00
+**Generated:** 2026-05-02T20:43:23.758465+00:00
 **Total pending:** 593
 **Ready (all deps already at retained-grade or metadata tiers):** 121
 
 By criticality:
 - `critical`: 27
 - `high`: 227
-- `medium`: 172
-- `leaf`: 167
+- `medium`: 173
+- `leaf`: 166
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -53,12 +53,12 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 35 | `pmns_selector_unique_amplitude_slot_note` | decoration | claim_type_backfill_reaudit | high | 112 | 9.32 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_selector_unique_amplitude_slot.py` |
 | 36 | `g_bare_derivation_note` | positive_theorem | claim_type_backfill_reaudit | high | 112 | 8.82 | Y | fresh_context_or_stronger | `scripts/frontier_g_bare_derivation.py` |
 | 37 | `koide_dweh_cyclic_compression_note_2026-04-18` | positive_theorem | unaudited | high | 77 | 8.79 | Y | fresh_context_or_stronger | `scripts/frontier_koide_dweh_cyclic_compression.py` |
-| 38 | `planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30` | positive_theorem | unaudited | high | 71 | 9.67 | Y | fresh_context_or_stronger | `scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py` |
+| 38 | `planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30` | positive_theorem | unaudited | high | 72 | 10.19 | Y | fresh_context_or_stronger | `scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py` |
 | 39 | `koide_axiom_native_support_batch_note_2026-04-22` | bounded_theorem | unaudited | high | 69 | 8.63 | Y | fresh_context_or_stronger | - |
 | 40 | `physical_lattice_necessity_note` | no_go | unaudited | high | 57 | 12.86 | Y | fresh_context_or_stronger | `scripts/frontier_physical_lattice_necessity.py` |
 | 41 | `complex_action_note` | bounded_theorem | unaudited | high | 57 | 8.36 | Y | fresh_context_or_stronger | `scripts/complex_action_harness.py` |
 | 42 | `lensing_k_sweep_note` | bounded_theorem | unaudited | high | 57 | 8.36 | Y | fresh_context_or_stronger | `scripts/lensing_k_sweep.py` |
-| 43 | `cl3_sm_embedding_theorem` | positive_theorem | unaudited | high | 54 | 11.28 | Y | fresh_context_or_stronger | `scripts/verify_cl3_sm_embedding.py` |
+| 43 | `cl3_sm_embedding_theorem` | positive_theorem | unaudited | high | 55 | 11.81 | Y | fresh_context_or_stronger | `scripts/verify_cl3_sm_embedding.py` |
 | 44 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | claim_type_backfill_reaudit | high | 54 | 11.28 | Y | fresh_context_or_stronger | `scripts/frontier_universal_theta_induced_edm_vanishing.py` |
 | 45 | `yt_qfp_insensitivity_support_note` | bounded_theorem | claim_type_backfill_reaudit | high | 53 | 8.76 | Y | fresh_context_or_stronger | `scripts/frontier_yt_qfp_insensitivity.py` |
 | 46 | `taste_scalar_isotropy_theorem_note` | bounded_theorem | claim_type_backfill_reaudit | high | 44 | 11.49 | Y | fresh_context_or_stronger | `scripts/frontier_taste_scalar_isotropy.py` |
