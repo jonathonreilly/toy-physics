@@ -1,0 +1,1 @@
+# Cycle 12 cert: stretch attempt + named obstruction. PASS=21/0. proposal_allowed: false. 3 obstruction routes (microscopic dynamics / phase transition / discretization artifact) on Fam2 non-convergence.
