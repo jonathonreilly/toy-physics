@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:02:23.779495+00:00
+**Generated:** 2026-05-02T17:04:34.230598+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,28 +19,28 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 144 |
+| **retained** | 143 |
 | **retained_no_go** | 93 |
 | **retained_bounded** | 171 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 513 |
+| unaudited | 514 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
-| ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 645 |
+| ~~audited_renaming~~ | 18 |
+| ~~audited_conditional~~ | 644 |
 | ~~audited_failed~~ | 26 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 372 |
-| `audited_conditional` | 645 |
+| `audited_clean` | 371 |
+| `audited_conditional` | 644 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 24 |
-| `audited_renaming` | 17 |
-| `unaudited` | 548 |
+| `audited_renaming` | 18 |
+| `unaudited` | 549 |
 
 | claim_type | count |
 |---|---:|
@@ -48,8 +48,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 152 |
-| `open_gate` | 106 |
-| `positive_theorem` | 872 |
+| `open_gate` | 107 |
+| `positive_theorem` | 870 |
+| `unset` | 1 |
 
 | criticality | count |
 |---|---:|
@@ -242,7 +243,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
-| `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
@@ -756,7 +756,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
-| `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `generation_axiom_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1223,6 +1222,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_interacting_bridge_locality_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `cl3_taste_generation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
+| `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `hypercharge_identification_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `lattice_nn_light_cone_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
@@ -7680,15 +7680,15 @@ Claim boundary until fixed: safe to claim the exact first nonlocal coefficient a
 ### `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-judge-20260430-phase-a-spatial-env-character`  (codex-current; independence=judicial_review)
-- **load-bearing step:** The unmarked spatial boundary class function has a normalized SU(3) character expansion, and convolution by it realizes R_beta^env with eigenvalues rho_(p,q)(beta).  _(class `A`)_
-- **chain closes:** True — The second auditor's F reading misses that the source constructs a boundary class function and applies Peter-Weyl/central convolution, rather than merely relabeling symbols. The explicit beta=6 coefficients remain open, but the character-measure realization itself closes algebraically, matching the first clean/A reading.
-- **rationale:** The second auditor's F reading misses that the source constructs a boundary class function and applies Peter-Weyl/central convolution, rather than merely relabeling symbols. The explicit beta=6 coefficients remain open, but the character-measure realization itself closes algebraically, matching the first clean/A reading.
-- **auditor confidence:** judicial
+- **claim_type:** `open_gate`
+- **claim_scope:** The residual source-sector environment operator is identified with convolution by a normalized unmarked spatial Wilson boundary class function; explicit rho_(p,q)(6) data remain open.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-spatial-environment-character-measure-bernoulli`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The residual environment operator is asserted to have the same normalized coefficients rho_(p,q)(beta) as the boundary class function, so R_beta^env=C_(Z_beta^env).  _(class `F`)_
+- **chain closes:** False — Centrality and formal character expansion of the constructed boundary function are plausible, but equality between the pre-existing residual operator and that convolution is asserted by coefficient identification. The runner injects a generic positive conjugation-symmetric rho_env witness and verifies packaging, not actual Wilson environment data.
+- **rationale:** Issue: the load-bearing closure is an asserted identity between the residual operator and the newly constructed convolution operator. Why this blocks: the runner confirms algebraic consistency once a rho_env sequence is supplied, but it does not compute rho_(p,q)(6) from the unmarked spatial Wilson integral or independently verify that the residual operator spectrum equals those coefficients. Repair target: compute or independently verify the beta=6 boundary character coefficients from the unmarked spatial Wilson environment. Claim boundary until fixed: safe to cite this as an open-gate reformulation of the residual environment datum, not as a retained positive theorem.
+- **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`
 
@@ -7745,25 +7745,6 @@ Claim boundary until fixed: safe to claim the exact first nonlocal coefficient a
 - **chain closes:** True — The contention is clean exact flow versus conditional status because the row is unknown. The theorem only differentiates the implicit reduction law and identifies the remaining susceptibility profile; it does not claim that profile or P(6) is closed, so the first clean/A reading is correct and the second status-based conditional is not.
 - **rationale:** The contention is clean exact flow versus conditional status because the row is unknown. The theorem only differentiates the implicit reduction law and identifies the remaining susceptibility profile; it does not claim that profile or P(6) is closed, so the first clean/A reading is correct and the second status-based conditional is not.
 - **auditor confidence:** judicial
-
-### `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-cbc9`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** In Theorems 1 and 2 the rho values are structural input choices, and the runner computes the resulting Perron eigenvector and P(6) from local Wilson data; Theorem 3 shows local Wilson data and SU(3) intertwiners do not by themselves fix rho_(p,q)(6).  _(class `C`)_
-- **chain closes:** False — The reference Perron computations and no-go close for explicitly chosen rho inputs, but the chain does not close as a physical plaquette/environment solve because the actual 3D spatial-environment rho remains open and multiple one-hop environment dependencies are open, conditional, or renaming.
-- **rationale:** Issue: the runner computes Perron data only after rho is chosen as an input, while the physical boundary character data rho_(p,q)(6) is explicitly the missing 3D spatial Wilson environment object, and the one-hop environment dependencies include open, conditional, and renaming statuses. Why this blocks: the note supports explicit reference solves and a local-input no-go, but it cannot be cited as a closed physical beta=6 plaquette/environment Perron solve. Repair target: clean the residual-environment identification/transfer dependencies and evaluate the actual 3D tensor-transfer Perron state or boundary character coefficients instead of supplying structural reference rho choices. Claim boundary until fixed: retain only support-level reference Perron numbers for rho=1 and rho=delta plus the no-go that local Wilson data alone does not determine the physical rho.
-- **open / conditional deps cited:**
-  - `GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md`
-- **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note`
 

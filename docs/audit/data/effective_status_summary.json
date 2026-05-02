@@ -4,10 +4,11 @@
     "decoration": 5,
     "meta": 35,
     "no_go": 152,
-    "open_gate": 106,
-    "positive_theorem": 872
+    "open_gate": 107,
+    "positive_theorem": 870,
+    "unset": 1
   },
-  "computed_at": "2026-05-02T17:02:23.390249+00:00",
+  "computed_at": "2026-05-02T17:04:33.876478+00:00",
   "cycle_examples": [
     [
       "alpha_s_derived_note",
@@ -35,18 +36,18 @@
   ],
   "cycles_detected": 85,
   "effective_status_counts": {
-    "audited_conditional": 645,
+    "audited_conditional": 644,
     "audited_decoration": 3,
     "audited_failed": 26,
     "audited_numerical_match": 24,
-    "audited_renaming": 17,
+    "audited_renaming": 18,
     "meta": 35,
     "open_gate": 8,
-    "retained": 144,
+    "retained": 143,
     "retained_bounded": 171,
     "retained_no_go": 93,
     "retained_pending_chain": 2,
-    "unaudited": 513
+    "unaudited": 514
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
