@@ -1,0 +1,105 @@
+# Total Momentum and Total U(1) Charge Commute on Framework Lattice
+
+**Date:** 2026-05-02
+**Type:** positive_theorem
+**Claim scope:** the total lattice momentum operator P̂_total^μ and total U(1) fermion-number operator Q̂_total commute exactly on the framework's retained lattice Hilbert space H_phys: [P̂_total^μ, Q̂_total] = 0 for every spatial direction μ. Hence simultaneous diagonalization is possible: every energy eigenstate carries definite (energy, total momentum, total fermion number) labels.
+**Status:** awaiting independent audit.
+**Loop:** `positive-only-r5-20260502`
+**Cycle:** 2 (Block 2)
+**Branch:** `physics-loop/positive-only-r5-block02-p-q-commute-20260502`
+**Runner:** `scripts/momentum_charge_commute_check.py`
+**Log:** `outputs/momentum_charge_commute_check_2026-05-02.txt`
+
+## Cited authorities (one hop)
+
+- [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md) — `effective_status: retained`. Provides:
+  - **N1 (translation symmetry → momentum current P^μ_x)**
+  - **N2 (U(1) phase symmetry → fermion-number current J^μ_x)**
+  - **N3 (general Noether identity).**
+
+This is the only load-bearing one-hop dependency. Combines both N1 and N2 retained sub-results in a single corollary.
+
+## Admitted-context inputs
+
+- **Translation invariance of U(1) phase symmetry.** The global U(1) phase symmetry χ → e^{iα} χ is uniform in space; the phase α is independent of the lattice site x. Hence the symmetry generator commutes with translations.
+- **Heisenberg-picture commutator of generators.** Standard QM: if two symmetries commute as algebra elements, their generators commute as operators.
+
+No physics conventions admitted beyond the retained lattice Noether theorem.
+
+## Statement
+
+Let `P̂_total^μ` be the total lattice momentum operator (dual to spatial translations T_a, retained via N1) and `Q̂_total` be the total fermion-number operator (dual to global U(1) phase, retained via N2). Then on the live retained-grade chain:
+
+**(C1) Commutator vanishes.** For every spatial direction μ:
+
+```text
+    [P̂_total^μ, Q̂_total]  =  0  on H_phys                                      (1)
+```
+
+**(C2) Simultaneous diagonalization.** P̂_total^μ and Q̂_total admit a common eigenbasis. Every energy eigenstate of H carries definite (E, P^μ, Q) labels.
+
+**(C3) Quantum number labels.** A complete set of conserved quantum labels for any single-particle eigenstate is `(E, P^1, P^2, P^3, Q)` plus internal symmetry labels (color, weak isospin, hypercharge in retained extensions).
+
+**(C4) Selection rules.** Any matrix element `⟨α|O|β⟩` of an operator O that doesn't commute with both P̂_total^μ and Q̂_total can mix states with different (P, Q) labels — no transition between fixed-P, fixed-Q sectors at tree level.
+
+## Proof
+
+### Step 1 — Lie algebra commutativity of translations and U(1) phase
+
+The spatial translation group `Z^3` and the global U(1) phase symmetry are independent symmetry groups acting on different "factors" of the matter content. Spatial translation acts on lattice indices x → x + a; U(1) phase acts on field internal labels χ → e^{iα} χ. These commute as group actions: applying first the translation then the phase (or vice versa) gives the same result, since the phase α is x-independent.
+
+```text
+    T_a · e^{iα Q} · χ_x  =  e^{iα Q} · T_a · χ_x  =  e^{iα} χ_{x+a}            (2)
+```
+
+establishing the algebra-level commutativity.
+
+### Step 2 — Heisenberg-picture: commuting generators
+
+Algebra-level commutativity of the symmetry groups implies their generators commute as operators on H_phys (standard Stone-style theorem). The translation generator is P̂_total^μ (from N1); the phase generator is Q̂_total (from N2). Hence:
+
+```text
+    [P̂_total^μ, Q̂_total]  =  0                                                 (3)
+```
+
+establishing (C1). ∎
+
+### Step 3 — Simultaneous diagonalization (C2)
+
+Two commuting Hermitian operators are simultaneously diagonalizable. Since P̂_total^μ and Q̂_total commute and are both Hermitian (Noether currents are Hermitian on H_phys), they admit a common eigenbasis. Combined with [P̂_total, H] = 0 (R2 Block 01) and [Q̂_total, H] = 0 (R3 Block 01), all four operators (H, P̂^1, P̂^2, P̂^3, Q̂) commute pairwise. Their simultaneous spectrum labels every energy eigenstate. ∎
+
+### Step 4 — Selection rules (C4)
+
+If O doesn't commute with P̂^μ, then matrix elements `⟨P=p_1|O|P=p_2⟩ ≠ 0` can be nonzero only when p_1 = p_2 + Δp(O) where Δp(O) is the momentum carried by O. Same for Q. Operators that conserve (P, Q) keep matrix elements diagonal in those labels. Standard selection-rule structure. ∎
+
+## Hypothesis set used
+
+- `axiom_first_lattice_noether_theorem_note_2026-04-29` (retained): provides both N1 (momentum current) and N2 (fermion-number current).
+- Translation invariance of U(1) phase (admitted-context, structural).
+- Stone-style theorem for commuting symmetry generators (admitted-context, basic functional analysis).
+
+No fitted parameters. No observed values. No physics conventions admitted beyond the retained lattice Noether theorem.
+
+## Corollaries
+
+C1. **Energy eigenstate completeness label.** A complete commuting-set on the framework's retained lattice is `{H, P̂^1, P̂^2, P̂^3, Q̂}` plus internal symmetry labels. Every Hilbert-space basis state can be uniquely identified by these quantum numbers (modulo degeneracies broken by additional retained operators).
+
+C2. **No process changes both P and Q at tree level.** Combined conservation: if a process conserves Q (no fermion-number violation, e.g., scattering preserving particle count), and conserves momentum, the final state is constrained in both labels.
+
+C3. **Cross sections respect both labels.** Differential cross sections `dσ/dΩ` for fermion-number-conserving processes integrate over momentum-conserving final states only. This is a structural selection rule on the retained surface.
+
+C4. **Particle classification.** "Particles" on the framework are irreducible representations of the algebra `{H, P̂^μ, Q̂, internal generators}` simultaneously diagonalized. The Wigner classification of particle species (mass, spin, internal quantum numbers) inherits from this.
+
+## Honest status
+
+Positive theorem on the retained surface. Single one-hop chain. Combines the two retained Noether sub-results (N1 + N2) in a single corollary. Companion to R2 Block 01 (P̂ alone) and R3 Block 01 (Q̂ alone).
+
+```yaml
+claim_type_author_hint: positive_theorem
+claim_scope: "[P̂_total^μ, Q̂_total] = 0 on H_phys; simultaneous diagonalization of (E, P^μ, Q) labels"
+upstream_dependencies:
+  - axiom_first_lattice_noether_theorem_note_2026-04-29 (retained)
+admitted_context_inputs:
+  - translation invariance of U(1) phase symmetry
+  - Stone-style commuting-generators theorem
+```

@@ -1,0 +1,48 @@
+========================================================================
+[P̂_total^μ, Q̂_total] = 0 CHECK
+========================================================================
+
+  Toy model: 6-site 1D chain, dim = 64
+
+------------------------------------------------------------------------
+TEST 1: P̂ (translation generator) is Hermitian
+------------------------------------------------------------------------
+  ||P̂ - P̂†|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: Q̂ (fermion number) is Hermitian
+------------------------------------------------------------------------
+  ||Q̂ - Q̂†|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: [P̂, Q̂] = 0 on H_phys
+------------------------------------------------------------------------
+  ||[P̂, Q̂]||_F = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: P̂ and Q̂ admit common eigenbasis
+------------------------------------------------------------------------
+  Off-diagonal of P̂ in common basis: 1.511e-12
+  Off-diagonal of Q̂ in common basis: 2.190e-14
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: T^N = I (translation has order N)
+        ⇒ T eigenvalues are N-th roots of unity
+        ⇒ P̂ eigenvalues lie in Brillouin-zone set {2π k / N : k=0..N-1}
+------------------------------------------------------------------------
+  ||T^N - I||_F = 0.000e+00
+  max distance from nearest N-th root of unity: 1.061e-15
+  Brillouin-zone allowed values (principal range): [-3.1416, -2.0944, -1.0472, 0.0, 1.0472, 2.0944]
+  STATUS: PASS
+
+========================================================================
+  Test 1 (P̂ Hermitian):                 PASS
+  Test 2 (Q̂ Hermitian):                 PASS
+  Test 3 ([P̂, Q̂] = 0):                 PASS
+  Test 4 (common eigenbasis):           PASS
+  Test 5 (P̂ Brillouin-zone spectrum):   PASS
+  OVERALL: PASS
