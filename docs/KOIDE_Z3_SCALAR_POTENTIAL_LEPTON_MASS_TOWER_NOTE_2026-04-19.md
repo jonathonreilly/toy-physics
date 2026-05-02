@@ -1,7 +1,26 @@
 # Koide Z³ Scalar Potential — Lepton Mass Tower Note
 
 **Date:** 2026-04-19
-**Status:** Z³ scalar potential derived exactly; cubic coupling pinned by Clifford trace identity; honest gap flagged
+**Type:** positive_theorem
+**Claim scope:** the local Clifford-trace algebra (`T_m^2 = I_3`,
+`Tr(T_m^2) = 3`, `Tr(T_m^3) = 1`) and the resulting V(m) coefficient
+assignment `g_2 = 3/2, g_3 = 1/6` are in-scope and verifiable directly
+from the displayed `T_m`. The **broader claim** that V(m) constitutes
+a charged-lepton "mass tower" depends on hidden upstream inputs:
+K_frozen, c_1 / c_2 values, the chamber-wide `Tr(K_frozen) = 0`
+lemma, and the `H_*` witness rates. These are explicitly **out of
+scope** here and live in separate authority notes (admitted-context
+to this note).
+**Status:** audit pending. Under the scope-aware classification framework,
+`effective_status` is computed by the audit pipeline from `audit_status` +
+`claim_type` + dependency chain; no author-side tier is asserted in source.
+The current audit verdict is `audited_conditional` with class B
+load-bearing step (cross-note-input verification on the bank-arithmetic
+lemmas) — audit-lane ratification is required before retained-grade
+status applies. The audit-acceleration companion at
+[`scripts/audit_companion_koide_z3_scalar_potential_exact.py`](./../scripts/audit_companion_koide_z3_scalar_potential_exact.py)
+(cycle 50, PASS=14/0) verifies the in-scope local Clifford-trace
+algebra at sympy exact precision.
 
 ---
 
@@ -163,3 +182,45 @@ This ratio has a geometric interpretation: `4π` is the full solid angle and `�
 | Physical m_* ≈ -1.161 NOT at V_eff minimum | Confirmed — honest gap |
 | Slot values at m_* reproduce PDG masses to < 0.05% | Confirmed numerically |
 | Transport gap factor ≈ 4π/√6 | Observation only |
+
+## Out of scope (admitted-context to this note)
+
+The following items are explicitly **NOT** load-bearing claims of this
+note. They depend on separate authority rows / open derivations and
+enter only as admitted-context. Per the audit verdict on this row,
+items (1)-(5) below are the **specific** unclosed dependencies the
+audit lane identifies as preventing retained-grade status:
+
+1. **K_frozen matrix.** The frozen-bank matrix `K_frozen` itself is
+   imported from the upstream selected-slice / frozen-bank machinery,
+   not derived in this note. The audit lane requires that machinery's
+   ratification before this row can claim retained-grade status.
+
+2. **c_1, c_2 values.** The numerical values `c_1 ≈ -0.2526`,
+   `c_2 ≈ 2.9167` (and the exact `c_2 = 35/12` claim) come from
+   inner-product evaluations involving K_frozen. They are reproducible
+   by the runner but inherit the K_frozen upstream condition.
+
+3. **Chamber-wide `Tr(K_frozen) = 0` lemma.** The structural identity
+   that `Tr(K_frozen)` vanishes for all `(δ, q)` on the affine slice
+   (not just at the Koide point) is asserted as a "general lemma" but
+   relies on the upstream `kz_from_h ∘ active_affine_h` composition
+   structure; that composition's authority is part of the same
+   selected-slice machinery.
+
+4. **H_* witness rates / `m_*` physical point.** The physical
+   `m_* ≈ -1.161` is taken from the H_* witness branch / external
+   PDG-comparator readout. The note honestly flags that V_eff's
+   minimum (`m_V ≈ -0.433`) does **NOT** equal `m_*` — so this
+   note explicitly does NOT claim a derived physical mass selector.
+
+5. **PDG comparator / transport-gap observations.** PDG mass agreement
+   to < 0.05% and the `4π/sqrt(6)` transport-gap factor are
+   audit-comparator observations only, never load-bearing on the
+   in-scope V(m) coefficient assignment.
+
+The **in-scope content** of this note is the local Clifford-trace
+algebra producing the V(m) coefficient assignment
+`(g_2, g_3) = (3/2, 1/6)`. See cycle 50's audit-acceleration companion
+[`scripts/audit_companion_koide_z3_scalar_potential_exact.py`](./../scripts/audit_companion_koide_z3_scalar_potential_exact.py)
+(PASS=14/0) for sympy-exact verification of that local algebra.
