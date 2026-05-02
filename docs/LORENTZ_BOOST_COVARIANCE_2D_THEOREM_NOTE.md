@@ -1,10 +1,43 @@
 # 1+1D SO(1,1) Boost Covariance of the Path-Sum 2-Point Function
 
-**Date:** 2026-04-25
-**Status:** proposed_retained exact theorem on the continuum-limit free-scalar surface
-**Script:** `scripts/frontier_lorentz_boost_2d.py` (PASS=39, FAIL=0)
-**Companion:** [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md),
-[LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md)
+**Date:** 2026-04-25 (audit-ready hygiene: 2026-05-02)
+**Type:** positive_theorem
+**Claim type:** positive_theorem
+**Claim scope:** Continuum-limit theorem on the 1+1d Hamiltonian-lattice
+free-scalar surface. Given the lattice 2-point Wightman function
+`W_lat(Δt, Δx; a, m)` with the lattice-corrected dispersion
+`E_lat^2(p) = m^2 + (4/a^2) sin^2(p a / 2)`, the strict continuum limit
+`a → 0` (with `(Δt, Δx, m)` held fixed in physical units) coincides with
+the standard 1+1d massive scalar Wightman function
+`W_cont(s^2; m) = (1/(2π)) K_0(m sqrt(-s^2))` for spacelike separations,
+which depends on `(Δt, Δx)` only through the SO(1,1)-invariant interval
+`s^2 = Δt^2 - Δx^2`. The covariance follows from (i) parity-evenness of
+the lattice dispersion (microscopic Z_2 spatial reflection), (ii) `O(a^2)`
+convergence of the lattice dispersion to the relativistic dispersion, and
+(iii) standard SO(1,1) invariance of the on-shell Liouville measure
+`dp/E`. Finite-`a` boost covariance is *not* claimed: at any `a > 0` the
+lattice 2-point function has explicit `O(a^2 p^4)` corrections that break
+SO(1,1). Interactions, the timelike Wightman form, and 3+1d are out of
+scope.
+**Status:** branch-local continuum-limit theorem on the 1+1d
+Hamiltonian-lattice free-scalar surface; runner passing PASS=39/39;
+classified PASS surface dominant_class=C (the 39 structural checks
+exercise lattice dispersion structure, SO(1,1) on-shell measure
+invariance, the analytic Macdonald-form continuum 2-pt function, and
+the lattice→continuum convergence numerically). Audit ready. On clean
+audit: target effective_status = retained_bounded (continuum-limit
+theorem with explicit finite-`a` violation bounded as `(a^2 p^4)/E^2`,
+naturally bounded; auditor may upgrade to retained if the strict
+continuum-limit theorem is judged a positive theorem rather than a
+bounded one).
+**Script:** `scripts/frontier_lorentz_boost_2d.py` (PASS=39, FAIL=0;
+classified runner counts dominant_class=C; the 39 checks are organised
+in 7 parts covering lattice dispersion, SO(1,1) measure, analytic 2-pt
+form, convergence, boost covariance, special limits, and combined
+theorem statement)
+**Companion (logical siblings, NOT load-bearing inputs):**
+- `EMERGENT_LORENTZ_INVARIANCE_NOTE.md` (3+1d dispersion-isotropy theorem; this 1+1d note does not depend on it — both theorems stand independently on the lattice→continuum machinery)
+- `LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md` (3+1d analogue; this 1+1d theorem is the dimensional-reduction warm-up and does not depend on the 3+1d statement)
 
 ## Theorem
 
@@ -267,6 +300,23 @@ The 3+1D correlator-level statement now closes separately, while the
 support-side angular-kernel note clarifies that the directional-measure
 kernel question is underdetermined on its own surface and decoupled from
 the fixed staggered/Laplacian carrier used by the boost-covariance lane.
+
+## Honest claim-status
+
+```yaml
+actual_current_surface_status: support
+conditional_surface_status: continuum-limit theorem on the 1+1d Hamiltonian-lattice free-scalar surface
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "Branch-local continuum-limit theorem; no one-hop deps load-bearing on retained-pending rows beyond standard lattice-QFT continuum-limit machinery (Wiese / Rothe / Montvay-Münster). EMERGENT_LORENTZ_INVARIANCE_NOTE is a logical sibling, not a load-bearing input here. Awaiting independent audit per AUDIT_AGENT_PROMPT_TEMPLATE."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+target_effective_status_on_clean_audit: retained_bounded
+target_effective_status_on_clean_audit_reason: "Continuum-limit theorem with explicit finite-a violation bounded as O(a^2 p^4)/E^2; the bound is the load-bearing finite-content (lattice covariance is naturally bounded by lattice scale). Auditor may upgrade to retained if judging the strict continuum-limit theorem a positive theorem; either landing is acceptable."
+audit_independence_required: cross_family_or_fresh_context
+runner_class_dominant: C
+```
 
 ## Verification
 

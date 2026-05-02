@@ -5901,10 +5901,6 @@
       "to": "emergent_lorentz_invariance_note"
     },
     {
-      "from": "lorentz_boost_covariance_2d_theorem_note",
-      "to": "lorentz_boost_covariance_3plus1d_theorem_note"
-    },
-    {
       "from": "lorentz_boost_covariance_3plus1d_theorem_note",
       "to": "lorentz_boost_covariance_2d_theorem_note"
     },
@@ -20001,7 +19997,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T21:03:23.029320+00:00",
+  "generated_at": "2026-05-02T21:12:20.668308+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32979,14 +32975,13 @@
     },
     "lorentz_boost_covariance_2d_theorem_note": {
       "claim_id": "lorentz_boost_covariance_2d_theorem_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "emergent_lorentz_invariance_note",
-        "lorentz_boost_covariance_3plus1d_theorem_note"
+        "emergent_lorentz_invariance_note"
       ],
-      "note_hash": "b40e205ad247bc8a7696d81f92ae5597de0e52124fc460fa05291209dfdbf1eb",
+      "note_hash": "d76c90c0e8d497daf638386aa2a3447db281fdfbd4fc60fe636d860f1b3e84c2",
       "path": "docs/LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_lorentz_boost_2d.py",
       "title": "1+1D SO(1,1) Boost Covariance of the Path-Sum 2-Point Function"
@@ -46563,8 +46558,8 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 12,
       "meta": 1,
-      "none": 1743,
-      "positive_theorem": 40
+      "none": 1742,
+      "positive_theorem": 41
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 512,
@@ -46574,7 +46569,7 @@
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5000,
+    "edge_count": 4999,
     "leaf_count": 762,
     "node_count": 1796,
     "root_count": 1217,
