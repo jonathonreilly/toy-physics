@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:24:37.204132+00:00
+**Generated:** 2026-05-02T00:26:00.210929+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 341 |
+| `audited_clean` | 342 |
 | `audited_conditional` | 661 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 463 |
+| `unaudited` | 462 |
 
 | criticality | count |
 |---|---:|
@@ -409,6 +409,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_generated_support_recovery_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_wavefield_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_wavefield_transfer_v2_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `source_resolved_geometry_rule_repair_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -14714,6 +14715,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The z-spread stencil slightly improves centroid sign counts but does not broaden detector support and worsens the wavefield mass-law read relative to the retained bridge.  _(class `C`)_
 - **chain closes:** True — The runner reproduces the note's bridge and z-stencil summaries, geometry deltas, and zero-source reductions. The note frames the result as a bounded no-go for this geometry rule, not as a universal generated-family theorem.
 - **rationale:** The current runner output matches all frozen readouts: bridge/static 9/16, N_eff 5.31, F~M=-0.316; bridge/wavefield 6/16, N_eff 5.14, F~M=0.098; z-stencil/static 10/16, N_eff 5.13, F~M=0.103; z-stencil/wavefield 7/16, N_eff 4.68, F~M=-0.436. The geometry deltas also match and show no support widening. Residual risk is limited to the tested z-spread rule and compact generated-family bridge scope.
+- **auditor confidence:** high
+
+### `source_resolved_geometry_rule_repair_note`
+
+- **Note:** [`SOURCE_RESOLVED_GEOMETRY_RULE_REPAIR_NOTE.md`](../../docs/SOURCE_RESOLVED_GEOMETRY_RULE_REPAIR_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The adaptive sector-fan repair slightly improves sign count and F~M, but it reduces detector support and does not recover a clean weak-field mass law.  _(class `C`)_
+- **chain closes:** True — The runner reproduces the note's baseline and repair summaries, zero-source checks, and repair deltas exactly. The note states a bounded negative with one partial improvement rather than a closure theorem.
+- **rationale:** The current runner output matches all frozen values: baseline has 7/16 TOWARD, F~M=0.058, N_eff=5.06; repair has 8/16 TOWARD, F~M=0.335, N_eff=2.80; zero-source shifts are 0; delta_TOWARD is +1 and delta_N_eff is -2.26. This closes the bounded read that the sector-fan repair is mixed and does not solve the geometry bottleneck. Residual risk is limited to this one geometry-rule repair on the compact generated family.
 - **auditor confidence:** high
 
 ### `source_resolved_propagating_green_pocket_note`

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 192,
-    "leaf": 132,
+    "leaf": 131,
     "medium": 130
   },
-  "generated_at": "2026-05-02T00:24:36.964686+00:00",
+  "generated_at": "2026-05-02T00:25:59.996462+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9835,23 +9835,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "source_resolved_geometry_rule_repair_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SOURCE_RESOLVED_GEOMETRY_RULE_REPAIR_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/source_resolved_geometry_rule_repair_probe.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "source_resolved_green_robustness_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -12603,6 +12586,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 52,
-  "total_pending": 463
+  "ready_count": 51,
+  "total_pending": 462
 }
