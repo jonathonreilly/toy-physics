@@ -71,6 +71,7 @@ def main() -> int:
         "scalar_taste_projector_normalization_attempt": "outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json",
         "unit_projector_pole_threshold": "outputs/yt_unit_projector_pole_threshold_obstruction_2026-05-01.json",
         "scalar_kernel_enhancement_import": "outputs/yt_scalar_kernel_enhancement_import_audit_2026-05-01.json",
+        "fitted_kernel_residue_selector": "outputs/yt_fitted_kernel_residue_selector_no_go_2026-05-01.json",
         "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
         "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
         "fh_lsz_production_postprocess_gate": "outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json",
@@ -220,6 +221,17 @@ def main() -> int:
             for candidate in certificates["scalar_kernel_enhancement_import"].get("candidates", [])
         )
     )
+    fitted_kernel_selector_not_closure = (
+        "fitted scalar-kernel residue selector no-go"
+        in certificates["fitted_kernel_residue_selector"].get("actual_current_surface_status", "")
+        and certificates["fitted_kernel_residue_selector"].get("proposal_allowed") is False
+        and float(
+            certificates["fitted_kernel_residue_selector"].get("summary", {}).get(
+                "fitted_multiplier_min", 0.0
+            )
+        )
+        > 1.0
+    )
     cl3_source_unit_blocks_kappa = (
         "source-unit normalization no-go" in certificates["cl3_source_unit"].get("actual_current_surface_status", "")
         and certificates["cl3_source_unit"].get("proposal_allowed") is False
@@ -363,6 +375,11 @@ def main() -> int:
         certificates["scalar_kernel_enhancement_import"].get("actual_current_surface_status", ""),
     )
     report(
+        "fitted-kernel-residue-selector-not-closure",
+        fitted_kernel_selector_not_closure,
+        certificates["fitted_kernel_residue_selector"].get("actual_current_surface_status", ""),
+    )
+    report(
         "cl3-source-unit-does-not-fix-kappa",
         cl3_source_unit_blocks_kappa,
         certificates["cl3_source_unit"].get("actual_current_surface_status", ""),
@@ -411,7 +428,7 @@ def main() -> int:
                 "re-run the Ward physical-readout repair audit"
             ),
             "why_shortest": "It directly repairs the audit's physical-readout objection.",
-            "current_blocker": "source scaling and Feshbach projection are controlled, but the interacting scalar denominator/residue, zero-mode/IR/finite-volume limiting prescription, taste/projector normalization, and common dressing are still not derived",
+            "current_blocker": "source scaling and Feshbach projection are controlled, but the interacting scalar denominator/residue, zero-mode/IR/finite-volume limiting prescription, taste/projector normalization, fitted-kernel selector, and common dressing are still not derived",
         },
         {
             "route": "new_selector_or_axiom",
@@ -457,7 +474,10 @@ def main() -> int:
             "unit-projector normalization the finite ladder has no crossing; "
             "forcing one would require an underived scalar-kernel multiplier "
             "larger than two, and the kernel-enhancement import audit finds no "
-            "hidden retained authority for that factor.  The "
+            "hidden retained authority for that factor.  Fitting such a "
+            "multiplier to force the pole only moves the missing scalar "
+            "normalization into g_eff; the resulting residue proxy remains "
+            "finite-row dependent.  The "
             "FH/LSZ production manifest is now guarded by an explicit "
             "postprocess acceptance gate: the production outputs, same-source "
             "dE/ds and Gamma_ss(q) data, isolated-pole inverse derivative, and "

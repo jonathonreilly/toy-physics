@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-60-fh-lsz-production-postprocess-gate
-blocks_completed: 74
-active_route: "Feynman-Hellmann / same-source scalar-LSZ production acceptance gate"
-active_hard_residual: "production FH/LSZ manifest is production-targeted and resumable, but the three production outputs, isolated scalar-pole derivative fit, and FV/IR/zero-mode postprocess control remain absent"
+current_phase: campaign-rerun-block-61-fitted-kernel-residue-selector-no-go
+blocks_completed: 75
+active_route: "fitted scalar-kernel pole/residue selector no-go"
+active_hard_residual: "a constant multiplier fitted to force a unit-projected finite pole imports the missing scalar-kernel normalization and leaves the LSZ residue proxy finite-row dependent"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -267,6 +267,15 @@ files_touched:
   - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
   - "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md"
   - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_fitted_kernel_residue_selector_no_go.py"
+  - "docs/YT_FITTED_KERNEL_RESIDUE_SELECTOR_NO_GO_NOTE_2026-05-01.md"
+  - "outputs/yt_fitted_kernel_residue_selector_no_go_2026-05-01.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -359,6 +368,7 @@ claim_state_movement:
   - "audited scalar-kernel enhancement candidates: HS/RPA contact, ladder formulae, same-1PI, and Ward/Feshbach surfaces do not derive the underived multiplier or K'(x_pole)"
   - "fixed the joint FH/LSZ production manifest commands to include --production-targets and --resume, so successful future runs emit production-targeted rather than reduced-scope certificates"
   - "added an FH/LSZ production postprocess gate: manifest and partial outputs are blocked as evidence until production phase, same-source dE/ds, Gamma_ss(q), isolated scalar-pole derivative, FV/IR/zero-mode control, and retained-proposal certification are all present"
+  - "proved the fitted scalar-kernel residue selector no-go: choosing g_eff=1/lambda_unit to force a finite unit-projector pole imports the missing scalar normalization, and the resulting residue proxy lambda_raw/|d lambda_raw/dp^2| remains finite-row dependent"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -367,5 +377,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Either launch/schedule the production FH/LSZ manifest shards and later pass the postprocess pole/LSZ gate, or pivot to a new analytic scalar denominator/residue theorem; do not treat the manifest or partial outputs as evidence."
+next_exact_action: "Continue with a genuinely new interacting scalar denominator/residue theorem attempt or schedule real FH/LSZ production; do not fit scalar-kernel multipliers, use finite-row residue proxies, or treat manifest/partial outputs as evidence."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

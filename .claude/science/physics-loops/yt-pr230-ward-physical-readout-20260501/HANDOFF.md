@@ -384,3 +384,7 @@ scalar-kernel multiplier `2.26091440260` to reach `lambda_max=1`.  The
 scalar-kernel enhancement audit checks HS/RPA contact coupling, ladder input
 formulae, same-1PI, and Ward/Feshbach response identities; none supplies that
 multiplier or `K'(x_pole)` on the retained current surface.
+The fitted-kernel residue selector no-go closes the next possible shortcut:
+choosing `g_eff = 1/lambda_unit` to force a finite pole imports the missing
+scalar normalization, and the resulting residue proxy remains finite-row
+dependent.

@@ -107,6 +107,9 @@ def main() -> int:
         "scalar_kernel_enhancement_import": load(
             "outputs/yt_scalar_kernel_enhancement_import_audit_2026-05-01.json"
         ),
+        "fitted_kernel_residue_selector": load(
+            "outputs/yt_fitted_kernel_residue_selector_no_go_2026-05-01.json"
+        ),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -395,6 +398,11 @@ def main() -> int:
         statuses["scalar_kernel_enhancement_import"],
     )
     report(
+        "fitted-kernel-residue-selector-not-closure",
+        "fitted scalar-kernel residue selector no-go" in str(statuses["fitted_kernel_residue_selector"]),
+        statuses["fitted_kernel_residue_selector"],
+    )
+    report(
         "finite-ladder-route-needs-ir-limit",
         "zero-mode" in str(statuses["ladder_ir_zero_mode"]),
         statuses["ladder_ir_zero_mode"],
@@ -545,7 +553,10 @@ def main() -> int:
             "projector is only algebra until a physical scalar carrier and "
             "pole derivative theorem are derived.  With that unit projector, "
             "the finite ladder would need an underived scalar-kernel "
-            "enhancement to cross, and no current retained import supplies it.  "
+            "enhancement to cross, and no current retained import supplies it; "
+            "fitting the multiplier to force a pole only imports the missing "
+            "kernel normalization and leaves the residue proxy finite-row "
+            "dependent.  "
             "They do not supply the "
             "interacting scalar pole/LSZ "
             "theorem."

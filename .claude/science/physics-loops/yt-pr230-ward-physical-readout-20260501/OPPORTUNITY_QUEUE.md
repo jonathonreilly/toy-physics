@@ -155,7 +155,9 @@ probability.
    `K'(x_pole)`.  With that unit projector, the finite ladder has no crossing
    at retained scout strength and would need an underived scalar-kernel
    multiplier.  The scalar-kernel enhancement audit finds no hidden current
-   authority for that factor.  The retained task is therefore a new
+   authority for that factor.  Fitting that multiplier to force a finite pole
+   is also blocked: it imports the missing scalar normalization and leaves the
+   residue proxy finite-row dependent.  The retained task is therefore a new
    taste/scalar-carrier plus continuum/projector and interacting-kernel theorem for the
    interacting color-singlet pole and LSZ derivative, not another finite
    crossing witness.

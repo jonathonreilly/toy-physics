@@ -50,6 +50,7 @@ The runner verifies:
 | unit taste-singlet algebra fixes the physical scalar carrier and pole derivative | no |
 | unit-projector finite ladder crosses at retained kernel strength | no |
 | hidden scalar-kernel enhancement authority exists | no |
+| fitted scalar-kernel multiplier derives a retained LSZ residue | no |
 | Cl(3)/Z3 source unit fixes `kappa_s` | no |
 | joint FH/LSZ production manifest is evidence | no |
 | joint FH/LSZ production postprocess gate is ready | no |
@@ -137,6 +138,10 @@ kernel multiplier of `2.26091440260`.
 The scalar-kernel enhancement import audit checks HS/RPA, ladder formulae,
 same-1PI, and Ward/Feshbach surfaces and finds no retained authority for that
 factor.
+The fitted-kernel residue selector no-go closes the next shortcut: forcing a
+finite pole with `g_eff = 1/lambda_unit` imports the missing scalar-channel
+normalization and leaves the residue proxy
+`lambda_raw / |d lambda_raw / dp^2|` finite-row dependent.
 
 ### Route 3: New Selector Theorem
 

@@ -247,6 +247,9 @@ Completed in block 1:
 - `scripts/frontier_yt_fh_lsz_production_postprocess_gate.py`
 - `outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json`
 - `docs/YT_FH_LSZ_PRODUCTION_POSTPROCESS_GATE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_fitted_kernel_residue_selector_no_go.py`
+- `outputs/yt_fitted_kernel_residue_selector_no_go_2026-05-01.json`
+- `docs/YT_FITTED_KERNEL_RESIDUE_SELECTOR_NO_GO_NOTE_2026-05-01.md`
 - `scripts/frontier_yt_retained_closure_route_certificate.py`
 - `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
 - `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
@@ -331,7 +334,10 @@ Next artifact:
   multiplier; the FH/LSZ production postprocess gate now blocks the manifest
   and any partial output from counting as evidence until production phase,
   same-source `dE/ds`, same-source `Gamma_ss(q)`, isolated-pole derivative,
-  FV/IR/zero-mode control, and retained-proposal certification are present
+  FV/IR/zero-mode control, and retained-proposal certification are present;
+  the fitted scalar-kernel selector shortcut is also blocked because forcing a
+  finite pole with `g_eff` imports the missing scalar normalization and leaves
+  the residue proxy finite-row dependent
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

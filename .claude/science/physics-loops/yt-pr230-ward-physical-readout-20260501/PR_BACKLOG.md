@@ -497,3 +497,18 @@ Adds an FH/LSZ production postprocess gate:
 - still no retained/proposed-retained closure: the expected production outputs
   and pole-fit certificate are absent.
 ```
+
+Latest fitted-kernel residue selector no-go checkpoint text for PR #230:
+
+```text
+Adds a fitted scalar-kernel residue selector no-go:
+- tests the shortcut of choosing `g_eff = 1/lambda_unit` to force a
+  unit-projected finite ladder pole;
+- validator passes `PASS=8 FAIL=0`; retained-route gate reports
+  `PASS=34 FAIL=0`; campaign status now consumes 64 route certificates and
+  reports `PASS=60 FAIL=0`;
+- the fitted multiplier range is `2.26091440260` to `10.9336833038`, and the
+  fitted residue proxy spread is `2.00925585041`;
+- still no retained/proposed-retained closure: fitting `g_eff` imports the
+  missing scalar-kernel normalization and does not derive `K'(x_pole)`.
+```

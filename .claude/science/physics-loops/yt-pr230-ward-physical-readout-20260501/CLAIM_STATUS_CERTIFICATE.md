@@ -33,6 +33,7 @@ plus scalar taste-projector normalization theorem attempt
 plus unit-projector pole-threshold obstruction
 plus scalar-kernel enhancement import audit
 plus FH/LSZ production postprocess gate
+plus fitted scalar-kernel residue selector no-go
 **PR:** #230 draft branch
 
 ```yaml
@@ -116,6 +117,9 @@ Allowed wording:
   derived scalar-kernel enhancement;
 - exact negative boundary that current HS/RPA, ladder-input, same-1PI, and
   Ward/Feshbach surfaces do not hide that scalar-kernel enhancement;
+- exact negative boundary for fitting a scalar-kernel multiplier to force a
+  finite pole; the fitted selector imports the missing normalization and does
+  not derive `K'(x_pole)`;
 - open FH/LSZ production postprocess gate: production phase, same-source
   `dE/ds`, same-source `Gamma_ss(q)`, isolated-pole derivative,
   FV/IR/zero-mode control, and retained-proposal certification are required

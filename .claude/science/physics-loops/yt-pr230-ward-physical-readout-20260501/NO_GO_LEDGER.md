@@ -893,6 +893,20 @@ lists the exact scalar-channel kernel, projector, limit, crossing, and residue
 as missing; same-1PI fixes only `y^2 D_phi`; and Ward/Feshbach identities do
 not fix `K'(x_pole)` or common dressing.
 
+Fitted scalar-kernel residue selector is blocked:
+
+```text
+python3 scripts/frontier_yt_fitted_kernel_residue_selector_no_go.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+Forcing a unit-projected finite pole with `g_eff = 1/lambda_unit` imports the
+missing scalar-channel normalization.  Even after granting that fitted pole,
+the LSZ residue proxy reduces to `lambda_raw / |d lambda_raw / dp^2|` and
+varies across the current finite rows by a factor `2.00925585041`.  Therefore
+the finite fitted-pole selector is not a retained interacting denominator or
+`K'(x_pole)` theorem.
+
 FH/LSZ production manifest-as-evidence route is blocked:
 
 ```text

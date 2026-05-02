@@ -453,6 +453,13 @@ residue proxy is not physical `y_t` evidence unless the same-source scalar pole
 derivative and FV/IR/zero-mode limit are derived or measured without importing
 the forbidden normalizations above.
 
+The fitted-kernel selector check extends the firewall to finite ladder pole
+forcing.  A constant `g_eff` chosen only to satisfy
+`g_eff * lambda_unit = 1` is a fitted scalar-channel normalization, not a
+derived premise.  It is therefore forbidden as a retained proof input unless
+the same route derives the momentum-dependent scalar kernel and its pole
+derivative.
+
 Positive-closure candidates left after the assumption exercise:
 
 1. production/statistics with momentum modes plus a derived heavy matching

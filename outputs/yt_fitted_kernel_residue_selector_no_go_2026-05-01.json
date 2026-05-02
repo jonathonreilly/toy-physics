@@ -1,0 +1,99 @@
+{
+  "actual_current_surface_status": "exact negative boundary / fitted scalar-kernel residue selector no-go",
+  "fail_count": 0,
+  "parent_certificates": {
+    "unit_projector_pole_threshold": "outputs/yt_unit_projector_pole_threshold_obstruction_2026-05-01.json",
+    "zero_mode_removed_ladder_pole_search": "outputs/yt_color_singlet_zero_mode_removed_ladder_pole_search_2026-05-01.json"
+  },
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The pole-forcing multiplier is fitted rather than derived, and the resulting residue proxy remains finite-row dependent.",
+  "remaining_blockers": [
+    "derive g_eff or the full momentum-dependent scalar kernel from retained dynamics",
+    "derive K'(x_pole) rather than fitting a constant multiplier at p=0",
+    "derive the finite-volume/taste/projector limit of the residue proxy",
+    "or measure the same-source scalar pole derivative in production FH/LSZ data"
+  ],
+  "rows": [
+    {
+      "d_lambda_raw_dp_hat_sq": -3.4720818051227598,
+      "d_lambda_unit_dp_hat_sq": -0.21700511282017249,
+      "fit_imports_scalar_kernel_normalization": true,
+      "fitted_denominator_derivative": 0.4906299850122488,
+      "fitted_kernel_multiplier": 2.2609144025966956,
+      "fitted_residue_proxy": 2.038195851350248,
+      "grid_size_4d": 4,
+      "mass": 0.2,
+      "projector": "local",
+      "raw_lambda_max": 7.07678273074989,
+      "raw_lambda_over_abs_derivative": 2.038195851350248,
+      "unit_projector_lambda_max": 0.4422989206718681
+    },
+    {
+      "d_lambda_raw_dp_hat_sq": -1.3759839126304725,
+      "d_lambda_unit_dp_hat_sq": -0.08599899453940453,
+      "fit_imports_scalar_kernel_normalization": true,
+      "fitted_denominator_derivative": 0.92506659908223,
+      "fitted_kernel_multiplier": 10.75671412249322,
+      "fitted_residue_proxy": 1.0810032499196407,
+      "grid_size_4d": 6,
+      "mass": 0.2,
+      "projector": "local",
+      "raw_lambda_max": 1.4874430813906838,
+      "raw_lambda_over_abs_derivative": 1.0810032499196407,
+      "unit_projector_lambda_max": 0.09296519258691774
+    },
+    {
+      "d_lambda_raw_dp_hat_sq": -0.6737383229352497,
+      "d_lambda_unit_dp_hat_sq": -0.04210864518345311,
+      "fit_imports_scalar_kernel_normalization": true,
+      "fitted_denominator_derivative": 0.4604025907858598,
+      "fitted_kernel_multiplier": 10.933683303750136,
+      "fitted_residue_proxy": 2.1720121042175347,
+      "grid_size_4d": 4,
+      "mass": 0.3,
+      "projector": "local",
+      "raw_lambda_max": 1.4633677924905846,
+      "raw_lambda_over_abs_derivative": 2.1720121042175347,
+      "unit_projector_lambda_max": 0.09146048703066154
+    },
+    {
+      "d_lambda_raw_dp_hat_sq": -1.1730196205088197,
+      "d_lambda_unit_dp_hat_sq": -0.07331372628180123,
+      "fit_imports_scalar_kernel_normalization": true,
+      "fitted_denominator_derivative": 0.4905371259851603,
+      "fitted_kernel_multiplier": 6.690931573981761,
+      "fitted_residue_proxy": 2.0385816832755936,
+      "grid_size_4d": 4,
+      "mass": 0.2,
+      "projector": "point_split_zero_momentum_normalized",
+      "raw_lambda_max": 2.391296312492168,
+      "raw_lambda_over_abs_derivative": 2.0385816832755936,
+      "unit_projector_lambda_max": 0.1494560195307605
+    }
+  ],
+  "strict_non_claims": [
+    "not retained or proposed_retained top-Yukawa closure",
+    "does not set kappa_s = 1",
+    "does not set fitted g_eff as a retained scalar normalization",
+    "does not use H_unit or yt_ward_identity",
+    "does not use observed top mass or observed y_t",
+    "does not use alpha_LM, plaquette, u0, reduced pilots, c2 = 1, or Z_match = 1"
+  ],
+  "summary": {
+    "fitted_multiplier_max": 10.933683303750136,
+    "fitted_multiplier_min": 2.2609144025966956,
+    "fitted_residue_proxy_max": 2.1720121042175347,
+    "fitted_residue_proxy_min": 1.0810032499196407,
+    "fitted_residue_proxy_spread": 2.009255850413953,
+    "local_residue_proxy_values": [
+      2.038195851350248,
+      1.0810032499196407,
+      2.1720121042175347
+    ],
+    "local_volume_spread": 1.8854669044720844,
+    "matched_rows": 4,
+    "same_mass_projector_spread": 1.0001893007117495
+  },
+  "verdict": "Forcing the unit-projected finite ladder to a pole by choosing g_eff = 1/lambda_unit imports an underived scalar-channel normalization.  Even after granting that fitted selector, the LSZ residue proxy is lambda_raw / |d lambda_raw / d p^2| and varies across the current finite rows by a factor of 2.00926.  The fitted-pole shortcut therefore does not derive the interacting scalar denominator or K'(x_pole); it only moves the missing normalization into g_eff and the finite row choice."
+}

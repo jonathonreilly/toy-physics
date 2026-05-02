@@ -83,6 +83,7 @@ The certificate consumes the PR-local route certificates for:
 - scalar taste-projector normalization theorem attempt;
 - unit-projector pole-threshold obstruction;
 - scalar-kernel enhancement import audit;
+- fitted scalar-kernel residue selector no-go;
 - scalar ladder IR / zero-mode obstruction;
 - heavy kinetic-mass route scout;
 - nonzero-momentum correlator scout;
@@ -154,6 +155,7 @@ the visible shortcut routes:
 | scalar taste-projector normalization theorem attempt | unit taste-singlet algebra exists, but the physical scalar carrier and interacting pole derivative remain open |
 | unit-projector pole-threshold obstruction | after unit projection, the best finite row needs an underived kernel multiplier `2.26091440260` to cross |
 | scalar-kernel enhancement import audit | no current HS/RPA, ladder-input, same-1PI, or Ward/Feshbach surface derives that multiplier |
+| fitted scalar-kernel residue selector | fitting the multiplier to force a pole imports the missing scalar-kernel normalization and leaves the residue proxy finite-row dependent |
 | current-scale direct MC | `am_top = 81.423`, not a useful relativistic top run |
 | HQET/static shortcut | removes rest mass, therefore needs matching |
 | heavy kinetic mass | cancels additive rest mass, but needs nonzero-momentum data and matching |
@@ -164,7 +166,7 @@ the visible shortcut routes:
 | assumption/import stress | no shortcut authorizes retained proposal wording |
 | free kinetic coefficient | free `c2` fixed, interacting matching still open |
 | interacting kinetic sensitivity | fixed gauge backgrounds change kinetic proxy |
-| retained-closure route certificate | refreshed gate includes new source-unit, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, zero-mode import-audit, flat-toron obstruction/washout, color-singlet zero-mode/finite-q IR support, zero-mode-removed ladder pole search, taste-corner obstruction/import audit, taste-singlet normalization boundary, scalar taste-projector normalization attempt, unit-projector pole-threshold obstruction, scalar-kernel enhancement import audit, manifest block, and postprocess-gate block; still no proposed-retained authorization |
+| retained-closure route certificate | refreshed gate includes new source-unit, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, zero-mode import-audit, flat-toron obstruction/washout, color-singlet zero-mode/finite-q IR support, zero-mode-removed ladder pole search, taste-corner obstruction/import audit, taste-singlet normalization boundary, scalar taste-projector normalization attempt, unit-projector pole-threshold obstruction, scalar-kernel enhancement import audit, fitted-kernel selector no-go, manifest block, and postprocess-gate block; still no proposed-retained authorization |
 
 ## Remaining Honest Routes
 

@@ -1504,3 +1504,30 @@ raw output from being treated as physical `y_t` evidence.  It requires
 production-phase output, same-source `dE_top/ds`, same-source `Gamma_ss(q)`,
 an isolated scalar-pole derivative, FV/IR/zero-mode control, and a passing
 retained-proposal certificate.
+
+## Review-Loop Backpressure - Fitted Kernel Residue Selector No-Go
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fitted_kernel_residue_selector_no_go.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fitted_kernel_residue_selector_no_go.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The no-go blocks the constant fitted-kernel shortcut.  Setting
+`g_eff = 1/lambda_unit` forces a finite pole only by importing the missing
+scalar normalization, and the resulting residue proxy remains finite-row
+dependent.
