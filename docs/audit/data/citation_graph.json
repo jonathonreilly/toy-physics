@@ -6965,6 +6965,10 @@
       "to": "neutrino_retained_observable_bounds_theorem_note_2026-04-24"
     },
     {
+      "from": "no_per_site_bosonic_ccr_theorem_note_2026-05-02",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
       "from": "n_eff_from_three_generations_theorem_note_2026-04-24",
       "to": "three_generation_structure_note"
     },
@@ -19997,7 +20001,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:42:06.659347+00:00",
+  "generated_at": "2026-05-02T20:44:04.983293+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -34701,6 +34705,19 @@
       "runner_path": null,
       "title": "Next Chunk Recommendation"
     },
+    "no_per_site_bosonic_ccr_theorem_note_2026-05-02": {
+      "claim_id": "no_per_site_bosonic_ccr_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "note_hash": "54b0a371479eee86563104268b8135cda3dbd4255294a4a6611a84ee94478257",
+      "path": "docs/NO_PER_SITE_BOSONIC_CCR_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/no_per_site_bosonic_ccr_check.py",
+      "title": "No Per-Site Bosonic CCR on Cl(3) Lattice Sites"
+    },
     "nonlabel_grown_basin_note": {
       "claim_id": "nonlabel_grown_basin_note",
       "claim_type_author_hint": null,
@@ -46547,7 +46564,7 @@
       "bounded_theorem": 11,
       "meta": 1,
       "none": 1746,
-      "positive_theorem": 37
+      "positive_theorem": 38
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
@@ -46555,12 +46572,12 @@
       "no_go": 106,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 628
+      "positive_theorem": 629
     },
-    "edge_count": 4999,
-    "leaf_count": 761,
-    "node_count": 1795,
+    "edge_count": 5000,
+    "leaf_count": 762,
+    "node_count": 1796,
     "root_count": 1217,
-    "runners_with_path": 1363
+    "runners_with_path": 1364
   }
 }
