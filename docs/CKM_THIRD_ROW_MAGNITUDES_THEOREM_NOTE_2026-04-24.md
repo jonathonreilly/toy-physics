@@ -1,13 +1,26 @@
 # CKM Third-Row Magnitudes Structural Identities
 
 **Date:** 2026-04-24
-
-**Status:** proposed_retained structural-identity subtheorem of the proposed_promoted CKM
-atlas/axiom package. This note packages the third-row atlas-leading magnitude
-identities carried by the same Wolfenstein and CP-plane surface named in
-[`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md)
-and
-[`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md).
+**Type:** positive_theorem
+**Claim scope:** the algebraic substitution that the retained CKM atlas
+parametric inputs `lambda^2 = alpha_s(v)/2`, `A^2 = 2/3`, `rho = 1/6`,
+`eta^2 = 5/36` force the closed-form atlas-leading third-row magnitudes
+(R1) `|V_td|_0^2 = (5/72) alpha_s(v)^3`, (R2) `|V_ts|_0^2 = (1/6)
+alpha_s(v)^2`, and (R3) `|V_tb|_0^2 = 1 - |V_td|_0^2 - |V_ts|_0^2`. This
+is in-scope of the algebraic-substitution content. The **upstream supply**
+of `lambda^2`, `A^2`, `rho`, `eta^2`, the Thales relation, and `alpha_s(v)`
+are explicitly **out of scope** here and live in separate authority notes
+(admitted-context to this note). The exact standard-matrix readout values
+(`|V_td| ≈ 0.0087503`, etc.) and PDG-style numerical comparators are
+audit-comparator readouts only; they are **never** consumed as derivation
+inputs.
+**Status:** audit pending. Under the scope-aware classification framework,
+`effective_status` is computed by the audit pipeline from `audit_status` +
+`claim_type` + dependency chain; no author-side tier is asserted in source.
+The current audit verdict is `audited_conditional` and audit-lane
+ratification is required before any retained-grade status applies. The
+verdict identifies the four upstream authority notes (Wolfenstein,
+CP-phase, atlas-triangle, alpha_s) as the unratified one-hop dependencies.
 
 **Primary runner:** `scripts/frontier_ckm_third_row_magnitudes.py`
 
@@ -152,6 +165,49 @@ CKM_THIRD_ROW_ATLAS_IDENTITIES_RETAINED=TRUE
 CKM_THIRD_ROW_EXACT_ALL_ORDERS_MONOMIAL_CLAIM=FALSE
 ```
 
+(Note: the runner-emitted flag `CKM_THIRD_ROW_ATLAS_IDENTITIES_RETAINED`
+is a runner-level diagnostic on the algebraic-substitution content; the
+authoritative retention/conditional status of the row is set by the
+audit lane on the row's `audit_status` and `effective_status` fields,
+not by the runner flag.)
+
+## Out of scope (admitted-context to this note)
+
+The following items are explicitly **NOT** load-bearing claims of this
+note. They depend on separate authority rows / open derivations and
+enter only as admitted-context. Per the audit verdict, items (1)-(4)
+below are the **specific** unclosed dependencies the audit lane
+identifies as the load-bearing gaps preventing retained-grade status:
+
+1. **Wolfenstein `lambda^2 = alpha_s(v)/2` and `A^2 = 2/3`.** Supplied
+   by [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md);
+   currently audited_conditional.
+
+2. **CP-phase `rho = 1/6, eta^2 = 5/36`.** Supplied by
+   [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md);
+   currently audited_conditional.
+
+3. **Thales relation `(1 - rho)^2 + eta^2 = 5/6`** (used in the V_td
+   distance factor). Supplied by
+   [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md);
+   currently audited_conditional.
+
+4. **Canonical `alpha_s(v)` value.** Supplied by
+   [`ALPHA_S_DERIVED_NOTE`](ALPHA_S_DERIVED_NOTE.md); currently unaudited.
+
+5. **Exact standard-matrix readout values.** The finite-`lambda`
+   guardrail values (`|V_td| ≈ 0.0087503`, `|V_ts| ≈ 0.0414407`,
+   `|V_tb| ≈ 0.999103`) are downstream readouts of the parent atlas
+   parameters under the standard-CKM matrix; they are
+   audit-comparator-only and not derivation inputs.
+
+The **in-scope content** of this note is the pure algebraic substitution
+producing `(R1)`, `(R2)`, `(R3)` from the parametric inputs above. See
+also the related Pattern A narrow rescope of the structural-counts
+algebra at [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_NARROW_THEOREM_NOTE_2026-05-02`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_NARROW_THEOREM_NOTE_2026-05-02.md)
+(cycle 19), which carves out the input-supply-free pure-algebra content
+of the broader structural-counts theorem.
+
 ## Cross-References
 
 - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
@@ -159,3 +215,4 @@ CKM_THIRD_ROW_EXACT_ALL_ORDERS_MONOMIAL_CLAIM=FALSE
 - [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 - [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md)
 - [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)
+- [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_NARROW_THEOREM_NOTE_2026-05-02.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_NARROW_THEOREM_NOTE_2026-05-02.md)
