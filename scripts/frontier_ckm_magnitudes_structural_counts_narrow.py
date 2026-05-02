@@ -33,8 +33,7 @@ input.
 Companion role: not a new audit-companion; this is a Pattern A new narrow
 claim row carving out the algebra-only core of the existing
 `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` (claim_type=
-positive_theorem, audit_status=audited_conditional, td=104,
-load_bearing_step_class=A).
+positive_theorem, load_bearing_step_class=A).
 """
 
 from pathlib import Path
@@ -223,7 +222,6 @@ ledger = json.loads(LEDGER.read_text())
 parent = ledger['rows'].get('ckm_magnitudes_structural_counts_theorem_note_2026-04-25', {})
 print(f"\n  Parent row state on origin/main:")
 print(f"    claim_type: {parent.get('claim_type')}")
-print(f"    audit_status: {parent.get('audit_status')}")
 print(f"    transitive_descendants: {parent.get('transitive_descendants')}")
 print(f"    load_bearing_step_class: {parent.get('load_bearing_step_class')}")
 
