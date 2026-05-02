@@ -1379,3 +1379,26 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 
 Finite positive spectral/moment sum rules do not determine source-pole residue.
 No retained/proposed-retained wording is authorized.
+
+Latest Higgs-pole identity blocker checkpoint:
+
+```text
+actual_current_surface_status: open / latest Higgs-pole identity blocker certificate
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_higgs_pole_identity_latest_blocker_certificate.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=72 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=98 FAIL=0
+```
+
+The consolidated source-pole identity gate remains blocking.  Same-source pole
+readout, D17 carrier uniqueness, no-retained-2HDM support, and finite moments
+do not prove canonical-Higgs pole identity, no-orthogonal top coupling,
+sector-overlap equality, source residue, or `D'(pole)`.  No retained or
+`proposed_retained` wording is authorized.

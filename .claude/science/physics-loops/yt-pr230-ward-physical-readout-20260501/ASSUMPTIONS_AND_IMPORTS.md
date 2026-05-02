@@ -574,3 +574,12 @@ Finite positive spectral or moment sum rules for `C_ss` may be used as support
 or diagnostics only.  They must not be used to infer pole saturation, the
 source-pole residue, or the source overlap without a separate microscopic
 denominator/threshold theorem or production pole-residue measurement.
+
+2026-05-02 latest Higgs-pole identity blocker:
+
+The consolidated blocker certificate makes these additional shortcut bans
+explicit.  Do not set `cos(theta)=1`, do not set the orthogonal scalar top
+coupling to zero, and do not equate top-sector and gauge-sector source
+overlaps unless the current route derives or measures that identity.  A fixed
+same-source pole readout is not physical `y_t` until source-pole purity,
+source residue, and `D'(pole)` are independently certified.

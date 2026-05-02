@@ -1,0 +1,67 @@
+{
+  "actual_current_surface_status": "open / latest Higgs-pole identity blocker certificate",
+  "blocking_requirements": [
+    "source-pole purity: cos(theta)=1 or an equivalent retained identity",
+    "no orthogonal top-coupled scalar response, or direct measurement of that component",
+    "same-source sector-overlap identity if using gauge-normalized response",
+    "source-pole residue and D'(pole) from scalar LSZ/canonical normalization",
+    "production pole data accepted by model-class/FV/IR/Higgs-identity gates"
+  ],
+  "exact_next_action": "Either derive the source-pole-to-canonical-Higgs identity including source residue and D'(pole), or let seed-controlled production chunks accumulate and process them through the combiner, pole-fit, model-class, FV/IR, and Higgs-identity gates.",
+  "fail_count": 0,
+  "identity_closed": false,
+  "parent_certificates": {
+    "d17_source_pole_identity": "outputs/yt_d17_source_pole_identity_closure_attempt_2026-05-02.json",
+    "fh_gauge_response_mixing": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
+    "higgs_pole_identity_gate": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
+    "kprime": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
+    "no_orthogonal_top_coupling": "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json",
+    "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "scalar_denominator": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
+    "source_overlap_sum_rule": "outputs/yt_source_overlap_sum_rule_no_go_2026-05-02.json",
+    "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
+    "source_to_higgs_lsz": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The source-pole/canonical-Higgs identity, no-orthogonal response premise, and scalar denominator derivative remain open.",
+  "same_readout_witness": {
+    "checks": {
+      "max_readout_spread": 0.0,
+      "model_count": 3,
+      "physical_y_span": 0.5
+    },
+    "fixed_measured_source_pole_top_coupling": 1.0,
+    "models": [
+      {
+        "cos_source_pole_to_canonical_higgs": 1.0,
+        "measured_source_pole_top_coupling": 1.0,
+        "orthogonal_scalar_top_coupling": 0.0,
+        "physical_y_h": 1.0,
+        "sin_orthogonal_component": 0.0
+      },
+      {
+        "cos_source_pole_to_canonical_higgs": 0.8,
+        "measured_source_pole_top_coupling": 1.0,
+        "orthogonal_scalar_top_coupling": 0.7333333333333336,
+        "physical_y_h": 0.7,
+        "sin_orthogonal_component": 0.5999999999999999
+      },
+      {
+        "cos_source_pole_to_canonical_higgs": 0.6,
+        "measured_source_pole_top_coupling": 1.0,
+        "orthogonal_scalar_top_coupling": 0.35000000000000003,
+        "physical_y_h": 1.2,
+        "sin_orthogonal_component": 0.8
+      }
+    ]
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not set cos(theta) = 1",
+    "does not set an orthogonal scalar top coupling to zero",
+    "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "The latest PR #230 surface still does not certify that the measured same-source scalar pole is the canonical Higgs radial mode used by v.  D17 carrier uniqueness, no-retained-2HDM support, and finite source-overlap sum rules do not fix source pole residue, pole purity, no-orthogonal-top-coupling, the sector-overlap identity, or D'(pole).  The witness family keeps the measured source-pole top coupling fixed while varying the physical canonical-Higgs Yukawa, so retained closure still needs a genuine Higgs-pole identity theorem or production pole data plus an independent identity certificate."
+}

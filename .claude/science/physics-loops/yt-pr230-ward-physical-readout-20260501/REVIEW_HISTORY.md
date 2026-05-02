@@ -2620,3 +2620,17 @@ Disposition: exact negative boundary.  Finite positive spectral/moment sum
 rules can keep moments fixed while changing the pole residue, so they cannot
 replace a scalar denominator theorem or production pole-residue measurement.
 No retained or proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 117 Higgs-Pole Identity Latest Blocker
+
+Review stance: blocker consolidation / claim firewall.
+
+- Added `scripts/frontier_yt_higgs_pole_identity_latest_blocker_certificate.py`.
+- Added `docs/YT_HIGGS_POLE_IDENTITY_LATEST_BLOCKER_CERTIFICATE_NOTE_2026-05-02.md`.
+- Added `outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: open / blocker certificate.  The current D17/no-2HDM/source
+overlap stack still does not identify the measured source pole as canonical
+Higgs.  Same source-pole top readout can be fixed while physical canonical
+Higgs `y_t` varies.  No retained or proposed-retained wording is allowed.

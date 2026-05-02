@@ -323,3 +323,11 @@ Spectral sum-rule update: finite positive moment/sum-rule routes are now
 blocked as source-overlap closure.  The remaining analytic target is a stronger
 microscopic scalar-denominator/threshold theorem, not another finite-moment
 positivity construction.
+
+Latest Higgs-pole identity blocker update: the consolidated certificate keeps
+the source-pole identity route open/blocking after D17, no-2HDM,
+no-orthogonal-top-coupling, source-pole mixing, sector-overlap, source-overlap,
+denominator, and `K'(pole)` checks.  The highest-ranked positive actions are
+therefore unchanged: process seed-controlled chunks005-006 if they finish, or
+derive a genuinely new scalar-denominator/Higgs-pole identity theorem.  Do not
+spend foreground cycles on another carrier-only or finite-moment shortcut.

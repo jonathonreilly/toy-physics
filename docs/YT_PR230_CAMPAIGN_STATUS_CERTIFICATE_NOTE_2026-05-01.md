@@ -181,6 +181,7 @@ the visible shortcut routes:
 | no-orthogonal-top-coupling import audit | no-retained-2HDM/no-second-scalar authority is support only; it does not derive LSZ source-pole purity or zero top coupling for an orthogonal response component |
 | D17 source-pole identity closure attempt | D17 carrier uniqueness is support only; it does not derive source overlap, pole residue, `D'(pole)`, or canonical-Higgs identity |
 | source-overlap spectral sum-rule no-go | finite positive spectral/moment sum rules do not determine source-pole residue; moments can stay fixed while pole residue changes by a factor of ten |
+| latest Higgs-pole identity blocker certificate | consolidates D17, no-orthogonal-coupling, source-pole mixing, source-overlap, sector-overlap, denominator, and `K'(pole)` blockers; same source-pole readout can stay fixed while physical canonical-Higgs `y_t` varies |
 | joint Feynman-Hellmann / scalar-LSZ pole-fit mode/noise budget | eight modes with eight noises fit the current L12 chunk estimate and give pole-fit kinematics, but this is planning only until a variance gate and production data exist |
 | joint Feynman-Hellmann / scalar-LSZ eight-mode noise variance gate | x8 lowers solve cost but raises stochastic stderr by `sqrt(2)` versus x16; current reduced smoke and four-mode/x16 chunk surfaces do not provide same-source production variance calibration |
 | joint Feynman-Hellmann / scalar-LSZ noise-subsample diagnostics harness | scalar two-point outputs now emit split-noise stability diagnostics needed by future x8/x16 calibration, but the current smokes are reduced-scope instrumentation support only |
@@ -255,4 +256,8 @@ No retained/proposed-retained wording is authorized.
 
 Latest source-overlap sum-rule checkpoint: campaign status now includes the
 finite spectral sum-rule no-go and reports `PASS=97 FAIL=0` over 101
+certificates.  No retained/proposed-retained wording is authorized.
+
+Latest Higgs-pole identity blocker checkpoint: campaign status now includes
+the consolidated blocker certificate and reports `PASS=98 FAIL=0` over 102
 certificates.  No retained/proposed-retained wording is authorized.

@@ -795,3 +795,28 @@ pole residue.  The constructed positive pole-plus-continuum family keeps the
 first four moments fixed while varying the pole residue by a factor of ten.
 The next positive route must be a microscopic scalar-denominator/threshold
 theorem or production pole-residue measurement under the existing gates.
+
+Block 117 added the latest Higgs-pole identity blocker certificate:
+
+```text
+python3 scripts/frontier_yt_higgs_pole_identity_latest_blocker_certificate.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=72 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=98 FAIL=0
+```
+
+Result: the current D17/no-2HDM/source-overlap stack still does not identify
+the same-source pole as canonical Higgs.  A same source-pole top readout can
+be held fixed while the physical canonical-Higgs Yukawa varies if source-pole
+purity, no-orthogonal top coupling, sector-overlap identity, source residue,
+or `D'(pole)` is not derived.  No retained/proposed-retained wording is
+authorized.
+
+Next exact action: poll chunks005-006.  If either completed, process through
+the combiner/ready-set/stability gates.  Otherwise continue the
+scalar-denominator/threshold theorem route or wait for production pole-residue
+data; do not treat the consolidated Higgs-pole blocker as closure.

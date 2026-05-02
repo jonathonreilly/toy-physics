@@ -287,3 +287,12 @@ Positive pole-plus-continuum spectral measures can keep the first four
 same-source moments fixed while changing pole residue by a factor of ten.
 The retained-route certificate is refreshed at `PASS=71 FAIL=0` and still
 authorizes no retained/proposed-retained wording.
+
+The latest Higgs-pole identity blocker certificate consolidates the remaining
+source-pole identity failure after D17, source-pole mixing, no-orthogonal
+top-coupling, source-overlap, sector-overlap, denominator, and `K'(pole)`
+checks.  The same source-pole top readout can stay fixed while the physical
+canonical-Higgs Yukawa varies, so the route still needs a real Higgs-pole
+identity theorem or production pole data with an independent identity
+certificate.  The retained-route certificate is refreshed at `PASS=72 FAIL=0`
+and still authorizes no retained/proposed-retained wording.

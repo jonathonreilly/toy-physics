@@ -1452,3 +1452,18 @@ of the same-source scalar two-point function exactly fixed while changing the
 pole residue by a factor of ten.  Therefore finite moment or curvature
 sum-rules cannot replace a scalar denominator theorem, pole-saturation
 threshold certificate, or production pole-residue measurement.
+
+Latest Higgs-pole identity blocker is not closure:
+
+```text
+python3 scripts/frontier_yt_higgs_pole_identity_latest_blocker_certificate.py
+# SUMMARY: PASS=14 FAIL=0
+```
+
+The D17/no-2HDM/source-overlap stack does not certify source-pole purity,
+zero orthogonal top coupling, top/gauge sector-overlap equality, source
+residue, or `D'(pole)`.  The runner's same-readout witness keeps the measured
+source-pole top coupling fixed while changing physical canonical-Higgs `y_t`
+by `0.5`.  Do not claim retained/proposed-retained closure until a genuine
+Higgs-pole identity theorem or accepted production pole data supplies those
+premises.

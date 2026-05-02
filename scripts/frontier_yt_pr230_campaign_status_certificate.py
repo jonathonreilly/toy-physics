@@ -160,6 +160,9 @@ def main() -> int:
         "source_overlap_sum_rule_no_go": load(
             "outputs/yt_source_overlap_sum_rule_no_go_2026-05-02.json"
         ),
+        "higgs_pole_identity_latest_blocker": load(
+            "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -553,6 +556,12 @@ def main() -> int:
         "source-overlap spectral sum-rule no-go"
         in str(statuses["source_overlap_sum_rule_no_go"]),
         statuses["source_overlap_sum_rule_no_go"],
+    )
+    report(
+        "higgs-pole-identity-latest-blocker-blocks",
+        "latest Higgs-pole identity blocker certificate"
+        in str(statuses["higgs_pole_identity_latest_blocker"]),
+        statuses["higgs_pole_identity_latest_blocker"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
