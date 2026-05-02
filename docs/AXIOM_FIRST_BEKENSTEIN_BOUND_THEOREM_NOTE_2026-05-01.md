@@ -1,7 +1,9 @@
 # Axiom-First Bekenstein Bound from Retained BH 1/4 Carrier + Spectrum Condition
 
 **Date:** 2026-05-01
-**Status:** support — branch-local theorem note on retained BH 1/4 carrier (admitted Wald-Noether) + retained framework GR action + retained spectrum condition; runner passing; audit-pending. Honest status: derived support theorem. `proposal_allowed: false` because upstream BH 1/4 carrier is itself a bounded support composition (per its own status line).
+**Type:** bounded_theorem
+**Claim scope:** for any sub-Schwarzschild matter system (2GE < R) localized in a sphere of asymptotic radius R with mass-energy E, the entropy obeys S(R, E) ≤ 2πRE/(ℏc); saturated by Schwarzschild at 2GE = R. Conditional on retained BH 1/4 carrier (which admits Wald-Noether) and on universal-physics second-law direction.
+**Status:** awaiting independent audit. Under the scope-aware classification framework (audit-lane proposal #291), `effective_status` is computed by the audit pipeline.
 **Loop:** `24h-axiom-first-derivations-20260501`
 **Cycle:** 3 (Block 03; independent of Blocks 01-02)
 **Branch:** `physics-loop/24h-axiom-first-block03-bekenstein-20260501`

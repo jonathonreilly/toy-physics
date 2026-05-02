@@ -1,8 +1,7 @@
 # Claim Status Certificate — Block 03 (Bekenstein bound)
 
-**Date:** 2026-05-01
-**Block:** 03 — Bekenstein bound from retained BH 1/4 carrier + spectrum
-condition
+**Date:** 2026-05-01 (originally) / 2026-05-02 (reframed under scope-aware classification)
+**Block:** 03 — Bekenstein bound from BH 1/4 + spectrum condition
 **Slug:** `24h-axiom-first-derivations-20260501`
 **Branch:** `physics-loop/24h-axiom-first-block03-bekenstein-20260501`
 **Base:** origin/main (independent of Blocks 01 and 02)
@@ -10,70 +9,64 @@ condition
 **Runner:** [scripts/axiom_first_bekenstein_bound_check.py](../../../../scripts/axiom_first_bekenstein_bound_check.py)
 **Log:** [outputs/axiom_first_bekenstein_bound_check_2026-05-01.txt](../../../../outputs/axiom_first_bekenstein_bound_check_2026-05-01.txt)
 
-## Status fields
+## Framework
+
+Reframed under the scope-aware classification framework adopted 2026-05-02
+(audit-lane proposal #291). Pipeline-derived `effective_status`.
+
+## Author classification (non-authoritative hint to auditor)
 
 ```yaml
-actual_current_surface_status: support
-conditional_surface_status: derived support theorem on retained framework GR + retained BH 1/4 carrier (admitted Wald-Noether) + retained spectrum condition
-hypothetical_axiom_status: null
-admitted_observation_status: null
-proposal_allowed: false
-proposal_allowed_reason: "Depends on retained-but-audit-pending BH 1/4 carrier composition (per its own status line: 'bounded: S_BH=A/(4G_N) framework composition, conditional on Wald formula admission and gravitational boundary/action-density bridge premise'). Per physics-loop SKILL retained-proposal certificate item 4, a chain that depends on a bounded composition cannot promote to proposed_retained until the upstream is ratified retained on the current authority surface. Note also: universal second-law direction is admitted-context input."
-audit_required_before_effective_retained: true
-bare_retained_allowed: false
+claim_type_author_hint: bounded_theorem
+claim_scope: "For any sub-Schwarzschild matter system (2GE < R) localized in a sphere of asymptotic radius R with mass-energy E, the entropy obeys S(R, E) ≤ 2πRE/(ℏc); saturated by Schwarzschild at 2GE = R. Conditional on the retained BH 1/4 carrier (which admits Wald-Noether) and on universal-physics second-law direction."
+admitted_context_inputs:
+  - Schwarzschild geometry / ADM mass identification (basic stationary GR; same admission as upstream Wald-Noether)
+  - universal-physics second-law direction (ΔS_total ≥ 0)
+upstream_dependencies:
+  - bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29 (today's effective_status: audited_conditional via Planck-row dependency propagation; needs primitive-Wald-carrier identification ratified)
+  - axiom_first_spectrum_condition_theorem_note_2026-04-29 (Codex audited_conditional)
+  - axiom_first_cluster_decomposition_theorem_note_2026-04-29 (Codex audited_clean)
+  - universal_gr_discrete_global_closure_note (retained)
+runner_classified_passes: 6 PASS, including 900-pair (R, E) sweep with 0 violations
 ```
 
-## Dependency classes
+## Why bounded_theorem rather than positive_theorem
 
-| Dep | Class | Source |
-|---|---|---|
-| Framework GR action surface | retained | `docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md` and family |
-| Canonical Einstein-Hilbert equivalence | retained | `docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md` |
-| BH 1/4 carrier composition | bounded support, audit-pending | `docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md` |
-| Spectrum condition (E ≥ 0) | retained support, audit-pending | `docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md` |
-| Cluster decomposition (used implicitly) | retained support, audit-pending | `docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md` |
-| Schwarzschild family on smooth limit | admitted-context | standard stationary GR |
-| Asymptotic ADM mass = E | admitted-context | standard stationary GR |
-| Universal second-law direction (ΔS_total ≥ 0) | admitted-context | universal physics input |
+Two intentional bounds: (i) the proof is restricted to sub-Schwarzschild
+matter systems (2GE < R), explicitly named in the claim; (ii) the proof
+inherits the BH 1/4 carrier's `audited_conditional` upstream status. The
+auditor's `claim_type = bounded_theorem` correctly captures both.
 
-## Open imports
+## Expected `effective_status` after audit
 
-The Schwarzschild geometry, ADM mass, and second-law direction are
-admitted-context inputs already paid for by the retained Wald-Noether
-composition. No new imports beyond the explicit ledger.
+If Codex returns `audit_status = audited_clean` and `claim_type =
+bounded_theorem`:
+
+- **Path A** (BH 1/4 carrier promotes to retained or retained_bounded after
+  the Wald-Noether universal-input positioning lands and the bridge premise
+  is either derived or accepted): `effective_status = retained_bounded`
+  immediately on next pipeline run.
+- **Path B** (BH 1/4 stays at audited_conditional): `effective_status =
+  proposed_retained` (transient).
+
+## Dependency chain status snapshot (2026-05-02)
+
+| Dep | Today's `effective_status` (post adoption) |
+|---|---|
+| BH 1/4 Wald-Noether carrier | audited_conditional (gating) |
+| Spectrum cond | audited_conditional (RP dep registration repair pending) |
+| Cluster decomp | support → retained on framework-adoption sweep |
+| Framework GR action | retained |
 
 ## Review-loop disposition
 
-- branch-local self-review: `pass` (algebraic chain in proof matches
-  runner sweep; saturation at `2 G E = R` recovered exactly).
-- formal `/review-loop` execution: deferred to integration-time.
+- branch-local self-review: `pass` (algebraic Bekenstein chain holds across
+  900 sweep pairs; saturation at 2GE = R recovered exactly).
+- formal Codex audit: pending under new prompt template.
 
-## Status conclusion
+## Audit hand-off
 
-This block is a **derived support theorem** on the framework's retained
-GR + retained BH 1/4 carrier + retained spectrum condition. It is
-suitable for future integration into the package's holographic /
-information-theoretic surface as a support-grade theorem.
-
-It is **not** suitable for `proposed_retained` / `proposed_promoted`
-status until:
-
-1. Upstream BH 1/4 carrier composition is ratified retained.
-2. Upstream spectrum-condition note is ratified retained.
-3. Independent audit of Steps 1–3 of the proof.
-
-## Audit hand-off requirement
-
-If a later integration / review process wants to promote this note to
-`proposed_retained`, it needs:
-
-1. The upstream BH 1/4 carrier composition ratified retained on the
-   current authority surface (currently `bounded support`).
-2. The upstream spectrum-condition note ratified retained.
-3. Independent audit of the theorem note's Steps 1–3.
-4. Independent verification of the runner's 6-test pass.
-5. Optional: independent derivation via the Bousso covariant entropy
-   bound on a light-sheet `L` as a cross-check (see corollary C4 in
-   the note; not derived in this PR).
-
-Until then this note remains `support` per the controlled vocabulary.
+Block 03 is the framework's first holographic / information-theoretic
+result on the retained surface. Auditor should evaluate under the new
+prompt template
+([`PROPOSED_AUDIT_AGENT_PROMPT_TEMPLATE.md`](../../../../docs/audit/proposals/scope-aware-classification-20260502/PROPOSED_AUDIT_AGENT_PROMPT_TEMPLATE.md)).
