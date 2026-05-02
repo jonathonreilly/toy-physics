@@ -118,6 +118,7 @@ def main() -> int:
         "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
         "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
         "hunit_canonical_higgs_operator_candidate_gate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
+        "source_higgs_harness_absence_guard": "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json",
         "neutral_scalar_rank_one_purity_gate": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
         "neutral_scalar_commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
         "neutral_scalar_dynamical_rank_one_closure": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
@@ -652,6 +653,19 @@ def main() -> int:
         )
         is False
     )
+    source_higgs_harness_absence_guard_not_evidence = (
+        "source-Higgs harness absence guard"
+        in certificates["source_higgs_harness_absence_guard"].get("actual_current_surface_status", "")
+        and certificates["source_higgs_harness_absence_guard"].get("proposal_allowed") is False
+        and certificates["source_higgs_harness_absence_guard"].get("guard_fields", {}).get(
+            "source_higgs_cross_correlator"
+        )
+        is True
+        and certificates["source_higgs_harness_absence_guard"].get("guard_fields", {}).get(
+            "canonical_higgs_operator_absent"
+        )
+        is True
+    )
     neutral_scalar_rank_one_purity_gate_blocks = (
         "neutral scalar rank-one purity gate not passed"
         in certificates["neutral_scalar_rank_one_purity_gate"].get("actual_current_surface_status", "")
@@ -1173,6 +1187,11 @@ def main() -> int:
         certificates["hunit_canonical_higgs_operator_candidate_gate"].get("actual_current_surface_status", ""),
     )
     report(
+        "source-higgs-harness-absence-guard-not-evidence",
+        source_higgs_harness_absence_guard_not_evidence,
+        certificates["source_higgs_harness_absence_guard"].get("actual_current_surface_status", ""),
+    )
+    report(
         "neutral-scalar-rank-one-purity-gate-blocks",
         neutral_scalar_rank_one_purity_gate_blocks,
         certificates["neutral_scalar_rank_one_purity_gate"].get("actual_current_surface_status", ""),
@@ -1525,6 +1544,9 @@ def main() -> int:
             "legacy substitute: H_unit is a named D17/substrate bilinear, but "
             "without pole-purity and canonical-normalization certificates it "
             "is not O_H and re-enters the forbidden matrix-element readout.  "
+            "The source-Higgs harness absence guard now records missing "
+            "O_H/C_sH/C_HH rows directly in future production certificates; "
+            "that guard is an instrumentation firewall, not evidence.  "
             "The neutral-scalar rank-one purity gate "
             "also fails: D17 carrier support is not a dynamical rank-one "
             "theorem, and a rank-two neutral scalar witness still preserves "

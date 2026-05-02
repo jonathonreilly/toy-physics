@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=98 FAIL=0
+# SUMMARY: PASS=99 FAIL=0
 ```
 
 The runner verifies:
@@ -82,6 +82,7 @@ The runner verifies:
 | source-Higgs Gram purity gate is passed | no |
 | canonical-Higgs operator realization gate is passed | no |
 | `H_unit` is certified as canonical `O_H` | no |
+| source-Higgs harness absence guard is evidence | no |
 | neutral scalar response space rank-one purity gate is passed | no |
 | neutral scalar commutant rank-one purity is forced | no |
 | dynamical rank-one neutral scalar theorem is derived | no |
@@ -207,6 +208,11 @@ The `H_unit` candidate gate blocks the direct legacy substitute: `H_unit` is a
 named D17/substrate bilinear, but without pole-purity and
 canonical-normalization certificates it is not `O_H` and re-enters the
 forbidden matrix-element readout.
+The source-Higgs harness absence guard now records the missing `O_H` /
+`C_sH` / `C_HH` route explicitly in future production certificates.  This is
+an instrumentation firewall only: it prevents C_ss/source-response outputs
+from being mistaken for Gram-purity evidence, but it does not supply the
+missing measurements.
 The neutral-scalar commutant rank no-go blocks the symmetry-only rank-one
 repair.  Current neutral labels and D17 support still admit a rank-two response
 family, so rank-one purity requires a dynamical theorem or same-surface
@@ -440,6 +446,11 @@ The orthogonal-neutral decoupling no-go blocks treating that finite pole as
 harmless from a mass gap alone.  Raising the orthogonal mass while keeping the
 source pole mass/residue fixed does not by itself force overlap one or zero
 orthogonal top coupling.  No retained/proposed-retained wording is authorized.
+
+The source-Higgs harness absence guard is bounded support only.  It adds an
+explicit `source_higgs_cross_correlator` guard block to production
+certificates, with `enabled: false` and required `O_H` / `C_sH` / `C_HH`
+objects named.  It is not `C_sH` evidence or canonical-Higgs closure.
 
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive

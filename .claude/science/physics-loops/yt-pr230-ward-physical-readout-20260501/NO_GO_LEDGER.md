@@ -1910,3 +1910,16 @@ derived scaling theorem.  The source pole mass and residue can stay fixed while
 the orthogonal mass grows and the canonical-Higgs overlap remains below one.
 Do not use generic mass-gap language, finite orthogonal masses, or decoupling
 intuition as source-pole purity or zero orthogonal top coupling.
+
+Source-Higgs harness absence guard is not evidence:
+
+```text
+python3 scripts/frontier_yt_source_higgs_harness_absence_guard.py
+# SUMMARY: PASS=13 FAIL=0
+```
+
+The production certificate now explicitly marks the `O_H` / `C_sH` / `C_HH`
+route as absent unless implemented.  This prevents future source-only `C_ss`
+or source-response outputs from being mistaken for Gram-purity data, but it
+does not provide `O_H`, `C_sH`, `C_HH`, pole residues, covariance, or
+canonical-Higgs closure.

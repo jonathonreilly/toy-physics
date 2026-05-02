@@ -3309,3 +3309,17 @@ Disposition: exact negative boundary.  Finite/heavy orthogonal neutral mass
 gaps do not certify source-pole purity or zero orthogonal top coupling without
 a decoupling-scaling theorem.  No retained or proposed-retained wording is
 allowed.
+
+## 2026-05-02 - Block 147 Source-Higgs Harness Absence Guard
+
+Review stance: instrumentation guard / claim firewall.
+
+- Updated `scripts/yt_direct_lattice_correlator_production.py`.
+- Added `scripts/frontier_yt_source_higgs_harness_absence_guard.py`.
+- Added `docs/YT_SOURCE_HIGGS_HARNESS_ABSENCE_GUARD_NOTE_2026-05-02.md`.
+- Added `outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: bounded support.  Future production certificates explicitly mark
+`O_H` / `C_sH` / `C_HH` rows absent unless implemented.  This is not evidence
+and no retained/proposed-retained wording is allowed.

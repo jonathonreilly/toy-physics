@@ -190,6 +190,9 @@ def main() -> int:
         "hunit_canonical_higgs_operator_candidate_gate": load(
             "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json"
         ),
+        "source_higgs_harness_absence_guard": load(
+            "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json"
+        ),
         "neutral_scalar_rank_one_purity_gate": load(
             "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json"
         ),
@@ -694,6 +697,12 @@ def main() -> int:
         "H_unit not canonical-Higgs operator realization"
         in str(statuses["hunit_canonical_higgs_operator_candidate_gate"]),
         statuses["hunit_canonical_higgs_operator_candidate_gate"],
+    )
+    report(
+        "source-higgs-harness-absence-guard-not-evidence",
+        "source-Higgs harness absence guard"
+        in str(statuses["source_higgs_harness_absence_guard"]),
+        statuses["source_higgs_harness_absence_guard"],
     )
     report(
         "neutral-scalar-rank-one-purity-gate-not-passed",
@@ -1225,6 +1234,9 @@ def main() -> int:
             "The H_unit candidate gate now blocks the direct legacy substitute: "
             "H_unit is a named D17 bilinear, but without pole-purity and "
             "canonical-normalization certificates it is not the canonical O_H.  "
+            "The source-Higgs harness absence guard now records missing "
+            "O_H/C_sH/C_HH rows directly in future production certificates; "
+            "that guard is not evidence.  "
             "The neutral-scalar commutant rank no-go now blocks the symmetry-only "
             "rank-one route: current neutral labels still admit a rank-two "
             "response family unless dynamics or C_sH/C_HH data remove it.  "

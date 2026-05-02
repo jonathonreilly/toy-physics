@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=124 FAIL=0
+# SUMMARY: PASS=125 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -129,6 +129,7 @@ The certificate consumes the PR-local route certificates for:
 - source-Higgs Gram purity gate.
 - canonical-Higgs operator realization gate.
 - `H_unit` canonical-Higgs operator candidate gate.
+- source-Higgs harness absence guard.
 - neutral scalar rank-one purity gate.
 - neutral scalar commutant rank no-go.
 - neutral scalar dynamical rank-one closure attempt.
@@ -211,6 +212,7 @@ the visible shortcut routes:
 | source-Higgs Gram purity gate | `Res(C_sH)^2 = Res(C_ss) Res(C_HH)` is the future purity acceptance condition, but `C_sH` and `C_HH` residues are absent |
 | canonical-Higgs operator realization gate | EW gauge-mass algebra assumes canonical `H` after it is supplied; the PR #230 source harness has no same-surface `O_H`, `C_sH`, or `C_HH` operator path |
 | `H_unit` canonical-Higgs operator candidate gate | `H_unit` is a named D17/substrate bilinear, but without pole-purity and canonical-normalization certificates it is not `O_H` |
+| source-Higgs harness absence guard | future production certificates now explicitly mark `O_H` / `C_sH` / `C_HH` rows absent; guard is not evidence |
 | neutral scalar rank-one purity gate | a rank-one neutral scalar response theorem would certify purity, but current D17 carrier support is not a dynamical rank theorem and a rank-two witness remains allowed |
 | neutral scalar commutant rank no-go | current neutral labels still admit a rank-two response family; symmetry/D17 data do not force rank one |
 | neutral scalar dynamical rank-one closure attempt | current dynamics do not remove a finite orthogonal neutral pole; source pole mass/residue can stay fixed while canonical-Higgs overlap varies |

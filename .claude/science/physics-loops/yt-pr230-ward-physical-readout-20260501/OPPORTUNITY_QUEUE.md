@@ -489,3 +489,9 @@ blocked as source-pole purity.  A future decoupling route must derive a
 scaling theorem tying overlap or orthogonal top coupling to the heavy mass
 limit; otherwise prioritize chunk011, same-surface `O_H`/`C_sH`/`C_HH`,
 W/Z response with identity certificates, or a source-Higgs identity theorem.
+
+Source-Higgs harness absence-guard update: future production certificates now
+explicitly mark the `O_H` / `C_sH` / `C_HH` route absent.  This is useful for
+claim hygiene only.  It does not reduce the proof gap; the next positive work
+is actual same-surface `O_H`/`C_sH`/`C_HH` rows, W/Z response with identity
+certificates, chunk011 processing, or a source-Higgs identity theorem.

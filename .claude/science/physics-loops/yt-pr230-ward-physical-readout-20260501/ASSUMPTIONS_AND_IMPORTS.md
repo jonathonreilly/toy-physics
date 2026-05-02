@@ -703,3 +703,10 @@ closure unless a current-surface theorem derives the required scaling of
 source-Higgs overlap or orthogonal top coupling.  Generic gap language is
 support only and does not certify `cos(theta)=1`, `kappa_s`, or source-pole
 purity.
+
+2026-05-02 source-Higgs harness absence guard:
+
+The production certificate's `source_higgs_cross_correlator` guard is claim
+hygiene only.  It marks `O_H`, `C_sH`, and `C_HH` rows absent unless actually
+implemented.  It must not be used as source-Higgs evidence, Gram purity,
+canonical-Higgs normalization, or retained/proposed-retained support.

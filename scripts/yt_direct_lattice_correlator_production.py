@@ -1772,6 +1772,23 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                 "physical_higgs_normalization": "not_derived",
                 "used_as_physical_yukawa_readout": False,
             },
+            "source_higgs_cross_correlator": {
+                "enabled": False,
+                "implementation_status": "absent_guarded",
+                "required_measurement_objects": [
+                    "O_H or radial canonical-Higgs observable on the same Cl3/Z3 source surface",
+                    "C_sH(q)=<O_s(q) O_H(-q)> pole rows",
+                    "C_HH(q)=<O_H(q) O_H(-q)> pole rows",
+                    "same-ensemble C_ss/C_sH/C_HH covariance",
+                ],
+                "canonical_higgs_operator_realization": "absent",
+                "used_as_physical_yukawa_readout": False,
+                "strict_limit": (
+                    "Current harness output is C_ss/source-response only.  It "
+                    "must not be treated as source-Higgs Gram purity or "
+                    "canonical-Higgs normalization evidence."
+                ),
+            },
             "evidence_scope": evidence_scope,
             "created_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             "run_control": {
