@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T20:35:10.536240+00:00
+**Generated:** 2026-05-02T20:38:14.767637+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,9 +21,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 140 |
 | **retained_no_go** | 96 |
-| **retained_bounded** | 185 |
+| **retained_bounded** | 186 |
 | _retained_pending_chain_ | 2 |
-| unaudited | 555 |
+| unaudited | 554 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -35,22 +35,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 377 |
+| `audited_clean` | 378 |
 | `audited_conditional` | 634 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 591 |
+| `unaudited` | 590 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 527 |
+| `bounded_theorem` | 528 |
 | `decoration` | 7 |
 | `meta` | 36 |
 | `no_go` | 156 |
 | `open_gate` | 99 |
-| `positive_theorem` | 870 |
+| `positive_theorem` | 869 |
 | `unset` | 1 |
 
 | criticality | count |
@@ -172,6 +172,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_stationary_cp_incompatibility_theorem_note_2026-04-16` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `dm_lepton_synthesis_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -4856,6 +4857,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The registered runner returned nonzero, so the current executable chain is not cleanly reproducible.
 - **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a support note with non-clean executable support.
 - **auditor confidence:** medium
+
+### `dm_neutrino_dirac_bridge_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exact bounded local Cl(4) Dirac algebra for M(phi)=sum_i phi_i Gamma_i: Hermiticity, M(phi)^2=|phi|^2 I, chiral off-diagonal block vanishing, axis identity M(e_i)=Gamma_i, and Xi_5 exclusion as chiral diagonal within the admitted gamma_5 convention; excludes selector forcing, weak-axis branch choice, physical normalization, y_nu scale, and second-order suppression law.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-planck-2026-05-02`  (codex-current; independence=fresh_context)
+- **load-bearing step:** This family is exactly chiral off-diagonal, {M(phi), gamma_5}=0, so P_L M(phi) P_L = P_R M(phi) P_R = 0, with M(e_i)=Gamma_i at the axis vectors.  _(class `C`)_
+- **chain closes:** True — For the narrowed algebraic scope, the chain closes from the explicit Clifford realization and projectors: anticommutation with gamma_5 forces same-chirality blocks to vanish, and the axis substitutions give Gamma_i. The selector, branch convention, and physical neutrino-sector coefficient are admitted context and are not ratified by this clean verdict.
+- **rationale:** The algebraic theorem closes exactly as a bounded local Dirac-structure result, supported by the primary runner and exact SymPy companion checks. The source's broader operator-selection language is clean only after restricting scope away from V_sel forcing, the weak-axis branch convention, the upstream Higgs-family derivation, and neutrino normalization or suppression. The one companion failure is an operational pre-audit ledger-state expectation, not a failure of the algebraic theorem. The one-hop weak-vector dependency is already retained_bounded and does not import a coefficient theorem.
+- **auditor confidence:** high
 
 ### `dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16`
 
