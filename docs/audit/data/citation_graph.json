@@ -3285,14 +3285,6 @@
       "to": "one_generation_matter_closure_note"
     },
     {
-      "from": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
-      "to": "dm_neutrino_source_surface_observable_grammar_exhaustion_obstruction_note_2026-04-17"
-    },
-    {
-      "from": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
-      "to": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17"
-    },
-    {
       "from": "dm_neutrino_source_surface_m_spectator_theorem_note_2026-04-16",
       "to": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
     },
@@ -18745,7 +18737,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T02:43:06.557598+00:00",
+  "generated_at": "2026-05-02T11:40:53.539335+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24246,11 +24238,8 @@
       "claim_id": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
       "current_status": "bounded",
       "current_status_raw": "bounded - bounded or caveated result note",
-      "deps": [
-        "dm_neutrino_source_surface_observable_grammar_exhaustion_obstruction_note_2026-04-17",
-        "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17"
-      ],
-      "note_hash": "e03e7ab8c07cf29d7ced0d91746a97da68e84951a4a2f29bbef786b670e8429b",
+      "deps": [],
+      "note_hash": "3078c3da5ea8a0527dca0d6e55aed2fee1f1e9592b4974f34bdafc33dc5ecb94",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py",
       "title": "DM Neutrino Source-Surface Microscopic Positive-Probe Representation Theorem"
@@ -40949,6 +40938,7 @@
     "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
     "dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17",
     "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
+    "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
     "dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18",
     "dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17",
     "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
@@ -41808,10 +41798,10 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4686,
+    "edge_count": 4684,
     "leaf_count": 708,
     "node_count": 1670,
-    "root_count": 1172,
+    "root_count": 1173,
     "runners_with_path": 1238,
     "status_counts": {
       "bounded": 460,

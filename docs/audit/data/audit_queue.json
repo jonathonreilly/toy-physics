@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 192,
-    "leaf": 81,
-    "medium": 130
+    "leaf": 83,
+    "medium": 128
   },
-  "generated_at": "2026-05-02T02:43:09.955873+00:00",
+  "generated_at": "2026-05-02T11:40:56.549584+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6400,20 +6400,17 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_neutrino_source_surface_observable_grammar_exhaustion_obstruction_note_2026-04-17",
+      "claim_id": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
       "criticality": "medium",
       "criticality_rank": 1,
       "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
-        "dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18"
-      ],
-      "direct_in_degree": 2,
-      "load_bearing_score": 3.0,
-      "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_OBSERVABLE_GRAMMAR_EXHAUSTION_OBSTRUCTION_NOTE_2026-04-17.md",
+      "current_status": "bounded",
+      "deps": [],
+      "direct_in_degree": 3,
+      "load_bearing_score": 3.5,
+      "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md",
       "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_source_surface_observable_grammar_exhaustion_obstruction.py",
+      "runner_path": "scripts/frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py",
       "transitive_descendants": 3
     },
     {
@@ -9549,26 +9546,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "dm_neutrino_source_surface_observable_grammar_exhaustion_obstruction_note_2026-04-17",
-        "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17"
-      ],
-      "direct_in_degree": 3,
-      "load_bearing_score": 3.5,
-      "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py",
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -9629,34 +9606,6 @@
       "note_path": "docs/YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md",
       "ready": false,
       "runner_path": "scripts/frontier_yt_h_unit_flavor_column.py",
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [
-        "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
-        "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18",
-        "dm_neutrino_source_surface_split2_edge_profile_transition_candidate_note_2026-04-18",
-        "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
-        "dm_neutrino_source_surface_split2_edge_transport_lane_obstruction_candidate_note_2026-04-18",
-        "dm_neutrino_source_surface_split2_low_slack_transport_incompatibility_candidate_note_2026-04-18",
-        "dm_neutrino_source_surface_split2_low_slack_upper_m_ridge_candidate_note_2026-04-18",
-        "dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18",
-        "dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate_note_2026-04-18",
-        "dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18"
-      ],
-      "direct_in_degree": 2,
-      "load_bearing_score": 3.0,
-      "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
-      "ready": false,
-      "runner_path": "scripts/frontier_dm_neutrino_source_surface_global_dominance_completeness_obstruction.py",
       "transitive_descendants": 3
     },
     {
@@ -9830,6 +9779,26 @@
       "ready": false,
       "runner_path": "scripts/frontier_yt_right_handed_species_dependence.py",
       "transitive_descendants": 2
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "dm_neutrino_source_surface_observable_grammar_exhaustion_obstruction_note_2026-04-17",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [
+        "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
+        "dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 1.5,
+      "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_OBSERVABLE_GRAMMAR_EXHAUSTION_OBSTRUCTION_NOTE_2026-04-17.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_dm_neutrino_source_surface_observable_grammar_exhaustion_obstruction.py",
+      "transitive_descendants": 1
     },
     {
       "audit_independence_required": "any_non_self",
@@ -10107,6 +10076,34 @@
       "note_path": "docs/KUBO_CONTINUUM_LIMIT_FAMILIES_NOTE.md",
       "ready": false,
       "runner_path": "scripts/kubo_continuum_limit_families.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [
+        "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
+        "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18",
+        "dm_neutrino_source_surface_split2_edge_profile_transition_candidate_note_2026-04-18",
+        "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
+        "dm_neutrino_source_surface_split2_edge_transport_lane_obstruction_candidate_note_2026-04-18",
+        "dm_neutrino_source_surface_split2_low_slack_transport_incompatibility_candidate_note_2026-04-18",
+        "dm_neutrino_source_surface_split2_low_slack_upper_m_ridge_candidate_note_2026-04-18",
+        "dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18",
+        "dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate_note_2026-04-18",
+        "dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 1.5,
+      "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_dm_neutrino_source_surface_global_dominance_completeness_obstruction.py",
       "transitive_descendants": 1
     },
     {
@@ -11736,6 +11733,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1,
+  "ready_count": 2,
   "total_pending": 412
 }

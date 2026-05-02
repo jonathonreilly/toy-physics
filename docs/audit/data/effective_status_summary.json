@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-02T02:43:09.893438+00:00",
+  "computed_at": "2026-05-02T11:40:56.505456+00:00",
   "cycle_examples": [
     [
       "alpha_s_derived_note",
@@ -25,19 +25,19 @@
       "publication.ci3_z3.publication_matrix"
     ]
   ],
-  "cycles_detected": 61,
+  "cycles_detected": 59,
   "effective_status_counts": {
     "audited_conditional": 969,
     "audited_decoration": 5,
     "audited_failed": 100,
     "audited_numerical_match": 27,
     "audited_renaming": 47,
-    "bounded": 150,
+    "bounded": 151,
     "open": 6,
     "proposed_retained": 1,
     "retained": 76,
     "retained_no_go": 71,
-    "support": 120
+    "support": 119
   },
   "proposed_demoted_by_upstream_count": 138,
   "proposed_demoted_by_upstream_examples": [
