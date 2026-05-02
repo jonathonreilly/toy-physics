@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T15:38:10.576514+00:00
+**Generated:** 2026-05-02T15:40:44.438520+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -18472,11 +18472,11 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
 
 - **Note:** [`Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`](../../docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_scope:** On V1 with the specified Z2 action swapping X1 and X2 and fixing X3, the Z2-invariant Hermitian operators are exactly the stated five-real-parameter family, with the stated sign eigenvector, trivial-block spectrum, generic nondegeneracy, and S3-locus collapse.
 - **audit_status:** ~~audited_clean~~
 - **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop-clean-context-2026-05-01-crosscheck`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Every Z_2-invariant Hermitian operator on V_1 has the five-real-parameter form M(a,b,c,d) with the stated sign eigenvector and 2 x 2 trivial block.  _(class `A`)_
-- **chain closes:** True — The statement closes as finite-dimensional linear algebra over the explicitly defined carrier and Z_2 swap action. It does not derive the physical residual subgroup or a mass hierarchy, and the note keeps that boundary explicit.
-- **rationale:** The load-bearing step is the classification of the commutant of the axis-swap Z_2 action inside Hermitian operators on the stated triplet. The runner checks invariance, real dimension, sign eigenvector, block reduction, closed-form spectrum, generic splitting, and the S_3-locus collapse without hard-coding a numerical target. Residual risk is limited to the explicitly bounded physical use of this normal form; the audit does not ratify a derived hierarchy or a derivation of the residual subgroup itself.
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-z2-hw1-archimedes`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Every Z2-invariant Hermitian operator on the axis-selected hw=1 carrier has the five-real-parameter normal form M(a,b,c,d)=[[a,d,d],[d*,b,c],[d*,c,b]].  _(class `A`)_
+- **chain closes:** True — Scoped to the stated carrier and Z2 action, the result is finite-dimensional invariant Hermitian linear algebra. No physical mass hierarchy or parameter selection is needed for the theorem to close.
+- **rationale:** Issue checked: whether the residual Z2 normal form is an exact theorem rather than a mass-hierarchy claim. The load-bearing statement is a finite-dimensional Hermitian invariant-space parametrization for an explicitly given Z2 action, and the runner checks the dimension count, sign eigenvector, block reduction, closed-form spectrum, generic distinctness, and S3-locus degeneracy. The carrier/residual-subgroup identification is part of the scoped theorem, not an independently derived physical hierarchy.
 - **auditor confidence:** high
