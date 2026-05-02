@@ -102,6 +102,7 @@ def main() -> int:
         "effective_potential_hessian_source_overlap": "outputs/yt_effective_potential_hessian_source_overlap_no_go_2026-05-02.json",
         "brst_nielsen_higgs_identity": "outputs/yt_brst_nielsen_higgs_identity_no_go_2026-05-02.json",
         "cl3_automorphism_source_identity": "outputs/yt_cl3_automorphism_source_identity_no_go_2026-05-02.json",
+        "same_source_pole_data_sufficiency": "outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
@@ -521,6 +522,12 @@ def main() -> int:
         )
         >= 8.0
     )
+    same_source_pole_data_sufficiency_not_passed = (
+        "same-source pole-data sufficiency gate not passed"
+        in certificates["same_source_pole_data_sufficiency"].get("actual_current_surface_status", "")
+        and certificates["same_source_pole_data_sufficiency"].get("proposal_allowed") is False
+        and certificates["same_source_pole_data_sufficiency"].get("gate_passed") is False
+    )
     scalar_carrier_projector_closure_blocked = (
         "scalar carrier-projector closure attempt blocked"
         in certificates["scalar_carrier_projector_closure"].get("actual_current_surface_status", "")
@@ -909,6 +916,11 @@ def main() -> int:
         certificates["cl3_automorphism_source_identity"].get("actual_current_surface_status", ""),
     )
     report(
+        "same-source-pole-data-sufficiency-gate-not-passed",
+        same_source_pole_data_sufficiency_not_passed,
+        certificates["same_source_pole_data_sufficiency"].get("actual_current_surface_status", ""),
+    )
+    report(
         "scalar-carrier-projector-closure-attempt-blocked",
         scalar_carrier_projector_closure_blocked,
         certificates["scalar_carrier_projector_closure"].get("actual_current_surface_status", ""),
@@ -1146,6 +1158,10 @@ def main() -> int:
             "substrate orbit data as the missing continuous LSZ input: finite "
             "orbit sizes, D17 carrier count, and source unit can stay fixed "
             "while source overlap, D'(pole), and residue vary.  "
+            "The same-source pole-data sufficiency gate records the positive "
+            "side too: (dE/ds)*sqrt(D'_ss) is source-rescaling invariant, but "
+            "current production, model-class/FV/IR, and Higgs-identity gates "
+            "are not passed.  "
             "The scalar carrier/projector closure attempt confirms the "
             "remaining taste/carrier side is also open: unit taste algebra and "
             "color-singlet support do not admit non-origin corners, preserve "

@@ -22,6 +22,10 @@ slopes from `6/63` chunks must remain scout/support only.
 The same-source W/Z response bypass also needs a purity theorem: a mixed
 source pole with an orthogonal top-coupled scalar leaves the physical
 canonical-Higgs Yukawa underdetermined even when top and W slopes are measured.
+The same-source pole-data sufficiency gate now states the positive route:
+`(dE_top/ds)*sqrt(D'_ss(pole))` is source-rescaling invariant, but it becomes
+retained-grade only after completed production chunks, response stability,
+postprocess/model-class/FV/IR gates, and canonical-Higgs pole identity pass.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.
@@ -283,6 +287,10 @@ canonical-Higgs Yukawa underdetermined even when top and W slopes are measured.
    The Cl(3)/Z3 automorphism/source-identity no-go blocks the finite substrate
    orbit shortcut: finite orbit data, D17 count, and source unit do not fix the
    continuous LSZ overlap, `D'(pole)`, or same-source pole residue.
+   The same-source pole-data sufficiency gate gives the constructive mirror:
+   exact same-source pole derivative data would remove the source-coordinate
+   normalization freedom, but the current production and Higgs-identity gates
+   are still open.
    The scalar carrier/projector closure attempt also blocks the taste/projector
    shortcut.  Color-singlet support and unit taste-singlet algebra do not
    derive physical carrier authority, preserve unit-projector crossings, or

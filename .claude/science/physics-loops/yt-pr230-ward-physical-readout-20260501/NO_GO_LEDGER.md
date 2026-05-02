@@ -1,5 +1,22 @@
 # No-Go Ledger
 
+## Same-source pole-data sufficiency gate is support, not closure
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py
+# SUMMARY: PASS=11 FAIL=0
+```
+
+This is the constructive boundary rather than a no-go against the route.
+Same-source response and scalar pole data make
+`(dE_top/ds)*sqrt(D'_ss(pole))` invariant under source rescaling, so the route
+does not need `kappa_s=1`.  The gate remains open because current production is
+only `6/63` ready L12 chunks, response stability fails, no accepted production
+pole derivative exists, model-class/FV/IR gates are open, and the source pole is
+not certified as the canonical Higgs radial mode.
+
 ## Finite Cl(3)/Z3 orbit data are not a source-Higgs identity
 
 Runner:

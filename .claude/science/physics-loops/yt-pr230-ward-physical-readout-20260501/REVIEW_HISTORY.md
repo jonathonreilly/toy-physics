@@ -2732,3 +2732,18 @@ Disposition: exact negative boundary.  Finite Cl(3)/Z3 source-orbit facts,
 D17 carrier count, and source-unit conventions do not determine continuous LSZ
 source overlap, `D'(pole)`, pole residue, or canonical-Higgs identity.  No
 retained or proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 125 Same-Source Pole-Data Sufficiency Gate
+
+Review stance: constructive gate / claim firewall.
+
+- Added `scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py`.
+- Added `docs/YT_SAME_SOURCE_POLE_DATA_SUFFICIENCY_GATE_NOTE_2026-05-02.md`.
+- Added `outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: exact support plus open gate.  Same-source
+`(dE_top/ds)*sqrt(D'_ss(pole))` is source-rescaling invariant, but the current
+PR surface lacks complete production chunks, response stability, accepted
+postprocess/model-class/FV/IR pole data, and canonical-Higgs pole identity.  No
+retained or proposed-retained wording is allowed.

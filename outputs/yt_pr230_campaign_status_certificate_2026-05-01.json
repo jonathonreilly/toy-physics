@@ -80,6 +80,7 @@
     "reflection_positivity_lsz_shortcut": "exact negative boundary / reflection positivity not scalar LSZ closure",
     "retained_closure_route": "open / retained closure not yet reached",
     "same_1pi": "exact negative boundary / same-1PI not PR230 closure",
+    "same_source_pole_data_sufficiency": "open / same-source pole-data sufficiency gate not passed",
     "same_source_scalar_two_point": "bounded-support / same-source scalar two-point LSZ measurement primitive",
     "same_source_sector_overlap_identity": "exact negative boundary / same-source sector-overlap identity obstruction",
     "scalar_carrier_projector_closure": "open / scalar carrier-projector closure attempt blocked",
@@ -111,7 +112,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 104,
+  "pass_count": 105,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

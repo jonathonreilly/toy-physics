@@ -144,6 +144,9 @@ def main() -> int:
         "cl3_automorphism_source_identity": load(
             "outputs/yt_cl3_automorphism_source_identity_no_go_2026-05-02.json"
         ),
+        "same_source_pole_data_sufficiency": load(
+            "outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -543,6 +546,12 @@ def main() -> int:
         "Cl3 automorphism data not source-Higgs identity"
         in str(statuses["cl3_automorphism_source_identity"]),
         statuses["cl3_automorphism_source_identity"],
+    )
+    report(
+        "same-source-pole-data-sufficiency-gate-not-passed",
+        "same-source pole-data sufficiency gate not passed"
+        in str(statuses["same_source_pole_data_sufficiency"]),
+        statuses["same_source_pole_data_sufficiency"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",

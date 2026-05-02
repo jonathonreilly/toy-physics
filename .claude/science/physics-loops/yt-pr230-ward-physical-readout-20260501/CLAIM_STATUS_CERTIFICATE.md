@@ -46,6 +46,7 @@ plus reflection-positivity LSZ shortcut no-go
 plus effective-potential Hessian source-overlap no-go
 plus BRST/Nielsen Higgs-identity no-go
 plus Cl(3)/Z3 automorphism source-identity no-go
+plus same-source pole-data sufficiency gate
 **PR:** #230 draft branch
 
 ```yaml
@@ -143,6 +144,23 @@ conventions can stay fixed while source overlap, `D'(pole)`, same-source pole
 residue, and canonical response factor vary.  These substrate facts are
 structural support only; they do not derive `kappa_s=1`, source-pole purity,
 or retained/proposed-retained `y_t` closure.
+
+Same-source pole-data sufficiency checkpoint:
+
+```text
+actual_current_surface_status: open / same-source pole-data sufficiency gate not passed
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py
+# SUMMARY: PASS=11 FAIL=0
+```
+
+The positive-side route is explicit: `(dE_top/ds)*sqrt(D'_ss(pole))` is
+source-rescaling invariant when response and pole derivative are measured for
+the same source.  It is support only on the current surface.  Ready L12 chunks
+are `6/63`, response stability fails, postprocess/model-class/FV/IR gates are
+open, and the source pole is not certified as the canonical Higgs radial mode.
 
 Allowed wording:
 

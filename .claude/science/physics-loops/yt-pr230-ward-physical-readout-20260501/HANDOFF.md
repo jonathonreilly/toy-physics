@@ -1,5 +1,24 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 same-source pole-data sufficiency gate:
+
+- Added `scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py`,
+  `docs/YT_SAME_SOURCE_POLE_DATA_SUFFICIENCY_GATE_NOTE_2026-05-02.md`,
+  and `outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json`.
+- Result: the positive-side readout `(dE_top/ds)*sqrt(D'_ss(pole))` is
+  source-rescaling invariant for same-source top response and scalar pole data,
+  so the honest route is to measure `D'_ss`, not set `kappa_s=1`.
+- Gate remains open: ready L12 chunks are `6/63`, response stability fails,
+  postprocess/model-class/FV/IR gates are not passed, and the source pole is
+  not certified as the canonical Higgs radial mode.
+- Retained-route gate is `PASS=79 FAIL=0`; campaign status is
+  `PASS=105 FAIL=0` over 109 certificates.
+- Chunks007-008 are running in sessions `38412` and `78004`.
+
+Next exact action: process chunks007-008 if they finish; otherwise continue
+with scalar-denominator/canonical-Higgs identity work.  Do not claim retained
+or proposed-retained status from the sufficiency theorem alone.
+
 Latest checkpoint, 2026-05-02 Cl(3)/Z3 automorphism/source-identity no-go:
 
 - Added `scripts/frontier_yt_cl3_automorphism_source_identity_no_go.py`,
