@@ -1,0 +1,49 @@
+{
+  "acceptance_formula": {
+    "gram_determinant": "Delta = Res(C_ss) Res(C_HH) - Res(C_sH)^2",
+    "normalized_overlap": "rho_sH = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH))",
+    "purity_condition": "Delta = 0 and |rho_sH| = 1 at the isolated pole"
+  },
+  "actual_current_surface_status": "open / source-Higgs Gram purity gate not passed",
+  "current_data_has_required_residues": false,
+  "exact_next_action": "Implement or derive the canonical-Higgs operator and C_sH/C_HH pole-residue measurements, or pivot to same-source W/Z response, sector-overlap equality, or production FH/LSZ chunk processing.",
+  "examples": [
+    {
+      "C_HH_pole_residue": 9.0,
+      "C_sH_pole_cross_residue": 6.0,
+      "C_ss_pole_residue": 4.0,
+      "gram_determinant": 0.0,
+      "name": "pure_same_pole",
+      "normalized_overlap_rho_sH": 1.0,
+      "purity_certified": true
+    },
+    {
+      "C_HH_pole_residue": 9.0,
+      "C_sH_pole_cross_residue": 3.0,
+      "C_ss_pole_residue": 4.0,
+      "gram_determinant": 27.0,
+      "name": "mixed_source_pole",
+      "normalized_overlap_rho_sH": 0.5,
+      "purity_certified": false
+    }
+  ],
+  "fail_count": 0,
+  "parent_certificates": {
+    "higgs_pole_identity_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
+    "source_higgs_cross_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
+    "source_pole_purity_gate": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json",
+    "source_to_higgs_lsz": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The Gram purity theorem is an acceptance gate only; required C_sH/C_HH pole residues are absent.",
+  "source_higgs_gram_purity_gate_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not define canonical H by fiat",
+    "does not set kappa_s = 1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not treat missing C_sH/C_HH data as evidence"
+  ],
+  "verdict": "A future canonical-Higgs cross-correlator route has a sharp acceptance condition: at the isolated pole, C_sH^2 must equal C_ss C_HH, equivalently |rho_sH| = 1, after a canonical H operator has been derived on the same surface.  That condition certifies source-pole purity; a positive Gram determinant detects an orthogonal component.  The current PR surface lacks C_sH, C_HH, and the canonical-Higgs source operator, so this gate is not passed and does not authorize retained/proposed-retained closure."
+}

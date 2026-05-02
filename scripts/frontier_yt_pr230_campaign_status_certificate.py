@@ -175,6 +175,9 @@ def main() -> int:
         "source_higgs_cross_correlator_import": load(
             "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json"
         ),
+        "source_higgs_gram_purity_gate": load(
+            "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json"
+        ),
         "fh_gauge_response_mixed_scalar": load(
             "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json"
         ),
@@ -639,6 +642,12 @@ def main() -> int:
         statuses["source_higgs_cross_correlator_import"],
     )
     report(
+        "source-higgs-gram-purity-gate-blocks",
+        "source-Higgs Gram purity gate not passed"
+        in str(statuses["source_higgs_gram_purity_gate"]),
+        statuses["source_higgs_gram_purity_gate"],
+    )
+    report(
         "fh-gauge-response-mixed-scalar-blocks",
         "FH gauge-response mixed-scalar obstruction"
         in str(statuses["fh_gauge_response_mixed_scalar"]),
@@ -1092,7 +1101,9 @@ def main() -> int:
             "overlap changes unless C_sH, W/Z response, or a retained purity "
             "theorem is supplied.  The source-Higgs cross-correlator import "
             "audit confirms that C_sH is not already supplied by the current "
-            "production harness or EW/Higgs notes.  "
+            "production harness or EW/Higgs notes.  The source-Higgs Gram "
+            "purity gate records the future acceptance condition, but it is not "
+            "passed because C_sH and C_HH pole residues are absent.  "
             "The effective-potential Hessian/source-overlap no-go blocks using "
             "SSB radial curvature as the source-pole identity: canonical VEV, "
             "W/Z masses, and Hessian eigenvalues still leave the source "

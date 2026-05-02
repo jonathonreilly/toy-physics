@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=89 FAIL=0
+# SUMMARY: PASS=90 FAIL=0
 ```
 
 The runner verifies:
@@ -77,6 +77,7 @@ The runner verifies:
 | source pole is certified as canonical Higgs radial mode | no |
 | source-only pole data prove source-pole purity | no |
 | hidden source-Higgs cross-correlator authority exists | no |
+| source-Higgs Gram purity gate is passed | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
@@ -182,6 +183,10 @@ The source-Higgs cross-correlator import audit confirms that the named `C_sH`
 object is not already present: the production harness lacks a canonical-Higgs
 operator or cross schema, and the EW/SM Higgs notes assume canonical `H` or
 select monomials rather than deriving the PR source-operator overlap.
+The source-Higgs Gram purity gate makes that future route sharp:
+`Res(C_sH)^2 = Res(C_ss) Res(C_HH)` at the isolated pole would certify purity
+after canonical `H` is supplied, but current `C_sH` and `C_HH` pole residues
+are absent.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 

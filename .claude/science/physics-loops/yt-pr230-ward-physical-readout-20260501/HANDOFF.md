@@ -1,5 +1,24 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 source-Higgs Gram purity gate:
+
+- Added `scripts/frontier_yt_source_higgs_gram_purity_gate.py`,
+  `docs/YT_SOURCE_HIGGS_GRAM_PURITY_GATE_NOTE_2026-05-02.md`, and
+  `outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json`.
+- Result: a future `C_sH` route now has an executable acceptance condition:
+  `Res(C_sH)^2 = Res(C_ss) Res(C_HH)` and `|rho_sH| = 1` at the isolated pole.
+  Current `C_sH` and `C_HH` pole residues are absent, so the gate is not
+  passed.
+- Retained-route gate is `PASS=90 FAIL=0`; campaign status is
+  `PASS=116 FAIL=0` over 120 certificates.
+- Chunks009-010 remain running in the background unless completed outputs
+  appear.
+
+Next exact action: process chunks009-010 if they finish; otherwise attack
+sector-overlap equality, same-source W/Z response implementation, or a
+source-pole purity theorem directly.  Do not treat the Gram gate as current
+evidence without `C_sH` and `C_HH` pole residues.
+
 Latest checkpoint, 2026-05-02 source-Higgs cross-correlator import audit:
 
 - Added `scripts/frontier_yt_source_higgs_cross_correlator_import_audit.py`,

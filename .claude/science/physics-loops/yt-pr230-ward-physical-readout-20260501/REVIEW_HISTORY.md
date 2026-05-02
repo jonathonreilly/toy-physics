@@ -1,5 +1,36 @@
 # Review History
 
+## Review-Loop Backpressure - Source-Higgs Gram Purity Gate
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN GATE / SUPPORT ONLY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- the future `C_sH` route now has a precise acceptance condition:
+  `Res(C_sH)^2 = Res(C_ss) Res(C_HH)` and `|rho_sH| = 1`;
+- a positive Gram determinant detects an orthogonal component in the source
+  pole;
+- current `C_sH`, `C_HH`, and canonical-Higgs source-operator data are absent;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_source_higgs_gram_purity_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/frontier_yt_pr230_assumption_import_stress.py
+python3 scripts/frontier_yt_source_higgs_gram_purity_gate.py
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Source-Higgs Cross-Correlator Import Audit
 
 Local review-loop disposition:

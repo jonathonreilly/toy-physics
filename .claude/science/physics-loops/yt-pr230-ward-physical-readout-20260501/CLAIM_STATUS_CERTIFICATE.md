@@ -58,6 +58,7 @@ plus FH/LSZ target time-series Higgs-identity no-go
 plus no-orthogonal-top-coupling selection-rule no-go
 plus source-pole purity cross-correlator gate
 plus source-Higgs cross-correlator import audit
+plus source-Higgs Gram purity gate
 **PR:** #230 draft branch
 
 ```yaml
@@ -70,6 +71,21 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+Source-Higgs Gram purity gate:
+
+```text
+actual_current_surface_status: open / source-Higgs Gram purity gate not passed
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_source_higgs_gram_purity_gate.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The future `C_sH` route now has a pole-level acceptance condition, but current
+`C_sH` and `C_HH` residues plus the canonical-Higgs source operator are absent.
+This is a gate for future evidence, not retained/proposed-retained closure.
 
 Source-Higgs cross-correlator import audit:
 

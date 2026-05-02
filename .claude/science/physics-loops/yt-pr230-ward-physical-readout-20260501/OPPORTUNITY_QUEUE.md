@@ -82,6 +82,10 @@ available in the current harness or EW/SM Higgs notes.  If pursued, it must be
 implemented as a new canonical-Higgs operator/response surface paired with an
 identity certificate; otherwise the queue should favor sector-overlap equality,
 same-source W/Z response implementation, or production FH/LSZ processing.
+The source-Higgs Gram purity gate gives the `C_sH` route a concrete future
+acceptance test: `Res(C_sH)^2 = Res(C_ss) Res(C_HH)` at the isolated pole.
+Because current `C_sH` and `C_HH` residues are absent, this does not change
+current status, but it lowers ambiguity for any later cross-correlator work.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.

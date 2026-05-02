@@ -113,6 +113,7 @@ def main() -> int:
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
         "source_pole_purity_cross_correlator": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json",
         "source_higgs_cross_correlator_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
+        "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
         "fh_gauge_response_mixed_scalar": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
         "no_orthogonal_top_coupling_import": "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json",
         "no_orthogonal_top_coupling_selection_rule": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
@@ -603,6 +604,13 @@ def main() -> int:
         )
         is False
     )
+    source_higgs_gram_purity_gate_blocks = (
+        "source-Higgs Gram purity gate not passed"
+        in certificates["source_higgs_gram_purity_gate"].get("actual_current_surface_status", "")
+        and certificates["source_higgs_gram_purity_gate"].get("proposal_allowed") is False
+        and certificates["source_higgs_gram_purity_gate"].get("source_higgs_gram_purity_gate_passed")
+        is False
+    )
     fh_gauge_response_mixed_scalar_blocks = (
         "FH gauge-response mixed-scalar obstruction"
         in certificates["fh_gauge_response_mixed_scalar"].get("actual_current_surface_status", "")
@@ -1066,6 +1074,11 @@ def main() -> int:
         certificates["source_higgs_cross_correlator_import"].get("actual_current_surface_status", ""),
     )
     report(
+        "source-higgs-gram-purity-gate-blocks",
+        source_higgs_gram_purity_gate_blocks,
+        certificates["source_higgs_gram_purity_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-gauge-response-mixed-scalar-blocks",
         fh_gauge_response_mixed_scalar_blocks,
         certificates["fh_gauge_response_mixed_scalar"].get("actual_current_surface_status", ""),
@@ -1381,7 +1394,10 @@ def main() -> int:
             "or retained purity theorem is supplied.  The source-Higgs "
             "cross-correlator import audit then confirms that C_sH is not "
             "already hidden in the current harness or EW/Higgs notes; it is a "
-            "future observable/theorem, not current closure.  "
+            "future observable/theorem, not current closure.  The Gram purity "
+            "gate gives that future route an acceptance condition, "
+            "C_sH^2 = C_ss C_HH at the isolated pole, but current C_sH/C_HH "
+            "residues are absent.  "
             "A paired x8/x16 calibration "
             "manifest now exists, but it is still launch planning rather than "
             "completed same-source production variance evidence.  The "

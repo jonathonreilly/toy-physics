@@ -1,5 +1,20 @@
 # No-Go Ledger
 
+## Source-Higgs Gram purity gate is not passed
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_source_higgs_gram_purity_gate.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The future `C_sH` purity route has a sharp pole-level acceptance condition:
+`Res(C_sH)^2 = Res(C_ss) Res(C_HH)` and `|rho_sH| = 1`.  This would certify
+source-pole purity after a canonical Higgs operator is supplied on the same
+surface.  The current branch lacks `C_sH`, `C_HH`, and that canonical-Higgs
+source operator, so the gate is not current evidence.
+
 ## No hidden source-Higgs cross-correlator authority exists
 
 Runner:
