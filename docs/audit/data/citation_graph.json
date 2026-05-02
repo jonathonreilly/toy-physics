@@ -8269,6 +8269,10 @@
       "to": "full_y_squared_trace_su5_gut_note_2026-05-02"
     },
     {
+      "from": "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02",
+      "to": "cpt_exact_note"
+    },
+    {
       "from": "staggered_layered_loop_threshold_note",
       "to": "graph_dirac_requirements_2026-04-10"
     },
@@ -20009,7 +20013,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T21:12:06.282772+00:00",
+  "generated_at": "2026-05-02T21:16:03.201568+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41047,6 +41051,19 @@
       "runner_path": "scripts/frontier_staggered_backreaction_shell_spectral.py",
       "title": "Staggered Backreaction Shell / Spectral Note"
     },
+    "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02": {
+      "claim_id": "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cpt_exact_note"
+      ],
+      "note_hash": "e4ed69aa8307d5177b4c641c4cca1f8be94d5ed118d61ebbb832a320800e7392",
+      "path": "docs/STAGGERED_CHIRAL_SYMMETRY_SPECTRUM_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/staggered_chiral_symmetry_check.py",
+      "title": "Staggered Cl(3) Hamiltonian Has Chiral-Symmetric Spectrum: \u03c3(H_phys) = \u2212\u03c3(H_phys)"
+    },
     "staggered_dag_note_2026-04-10": {
       "claim_id": "staggered_dag_note_2026-04-10",
       "claim_type_author_hint": null,
@@ -46599,7 +46616,7 @@
       "meta": 1,
       "no_go": 1,
       "none": 1742,
-      "positive_theorem": 42
+      "positive_theorem": 43
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 512,
@@ -46607,12 +46624,12 @@
       "no_go": 107,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 629
+      "positive_theorem": 630
     },
-    "edge_count": 5002,
-    "leaf_count": 764,
-    "node_count": 1798,
+    "edge_count": 5003,
+    "leaf_count": 765,
+    "node_count": 1799,
     "root_count": 1217,
-    "runners_with_path": 1366
+    "runners_with_path": 1367
   }
 }
