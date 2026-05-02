@@ -27,21 +27,21 @@ non-trivial direct sums). The narrow theorem **does not** claim:
   charged-lepton generations (separate downstream identification);
 - closure of the broader three-generation matter-content lane.
 
-The parent `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` (currently
-`audit_status: audited_conditional`) cites both the algebra-generation
-result AND the substrate-physicality bridge. This narrow theorem keeps
+The parent `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` currently has a
+conditional audit verdict because it cites both the algebra-generation
+result and the substrate-physicality bridge. This narrow theorem keeps
 **only the algebra-generation half** as a standalone retainable claim.
 
-## Retained dependencies (one-hop)
+## Declared audit dependencies (one-hop)
 
-| Authority | Effective status | Role |
+| Authority | Audit-lane status | Role |
 |---|---|---|
-| `site_phase_cube_shift_intertwiner_note` | retained (positive_theorem) | exact BZ-corner / taste-cube bridge |
-| `s3_taste_cube_decomposition_note` | retained (positive_theorem) | exact full-cube `S₃` carrier `ℂ⁸ ≅ 4 A₁ + 2 E` |
-| `s3_mass_matrix_no_go_note` | retained_no_go | exact unbroken-`S₃` mass-class obstruction on `hw=1` |
-| `z2_hw1_mass_matrix_parametrization_note` | retained (positive_theorem) | exact retained-surface `hw=1` triplet structure |
+| [`SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`](SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md) | pipeline-derived; may be audit-pending after dependency-graph strengthening | exact BZ-corner / taste-cube bridge |
+| [`S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`](S3_TASTE_CUBE_DECOMPOSITION_NOTE.md) | pipeline-derived; may be audit-pending after dependency-graph strengthening | exact full-cube `S₃` carrier `ℂ⁸ ≅ 4 A₁ + 2 E` |
+| [`S3_MASS_MATRIX_NO_GO_NOTE.md`](S3_MASS_MATRIX_NO_GO_NOTE.md) | pipeline-derived; may be audit-pending after dependency-graph strengthening | exact unbroken-`S₃` mass-class obstruction on `hw=1` |
+| [`Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`](Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md) | pipeline-derived; may be audit-pending after dependency-graph strengthening | exact retained-surface `hw=1` triplet structure |
 
-All four cited authorities are retained-grade. The conditional dep
+All four cited authorities are graph-visible. The conditional dep
 `generation_axiom_boundary_note` is **not** cited here — that is the
 explicit narrowing.
 
@@ -83,7 +83,7 @@ Verifies, at exact rational precision via sympy:
 4. No proper subspace `V ⊊ ℂ³` is invariant under both `D_3` and `C₃`
    (by direct enumeration: 7 non-trivial subspace classes, each fails
    either D_3-invariance or C₃-invariance).
-5. Cited authorities verified retained-grade via live ledger lookup.
+5. Declared authorities verified graph-visible via live ledger lookup.
 
 ## Audit-lane disposition (proposed)
 
@@ -98,13 +98,15 @@ proposed_load_bearing_step_class: A
 audit_required_before_effective_retained: true
 ```
 
-If ratified, `effective_status = retained` (positive_theorem +
-audited_clean + 4 retained-grade deps).
+Audit status is set only by the independent audit lane. This note is safe to
+land as an unaudited, graph-visible positive-theorem candidate; retained-family
+effective status requires independent audit of this row and retained-grade
+closure of its declared dependency chain.
 
 ## What this theorem closes
 
 - Algebra-generation half of the parent `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE`.
-- A clean retained-grade primitive that downstream notes can cite for the
+- A graph-visible audit-pending primitive that downstream notes can cite for the
   no-proper-quotient claim without needing the substrate-physicality
   conditional dep.
 
@@ -117,11 +119,11 @@ audited_clean + 4 retained-grade deps).
 
 ## Cross-references
 
-- `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` — parent
-  (`audit_status: audited_conditional`); this narrow theorem keeps only
-  the algebra-generation half clean.
-- Retained primitives: `site_phase_cube_shift_intertwiner_note`,
-  `s3_taste_cube_decomposition_note`, `s3_mass_matrix_no_go_note`
-  (retained_no_go), `z2_hw1_mass_matrix_parametrization_note`.
+- `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` — parent with a conditional
+  audit verdict; this narrow theorem keeps only the algebra-generation half.
+- Declared primitives: [`SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`](SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md),
+  [`S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`](S3_TASTE_CUBE_DECOMPOSITION_NOTE.md),
+  [`S3_MASS_MATRIX_NO_GO_NOTE.md`](S3_MASS_MATRIX_NO_GO_NOTE.md), and
+  [`Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`](Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md).
 - Cycle 1 (PR #292), Cycle 2 (PR #293), Cycle 3 (PR #294) — sister
   narrow theorems on different lanes.

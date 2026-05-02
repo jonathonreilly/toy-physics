@@ -4,7 +4,7 @@ at exact rational precision via sympy.
 
 Claim scope: on the retained hw=1 triplet, the diagonal projectors plus
 C_3 cycle generate M_3(C) and no proper subspace is invariant under both.
-Class (A) algebraic identity on retained-grade inputs.
+Class (A) algebraic identity on declared graph-visible inputs.
 """
 
 from pathlib import Path
@@ -20,6 +20,7 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent
 NOTE_PATH = ROOT / "docs" / "THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md"
+CLAIM_ID = "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
 
 PASS = 0
 FAIL = 0
@@ -49,10 +50,10 @@ required = [
     "M_3(ℂ)",
     "C₃[111]",
     "no proper quotient",
-    "site_phase_cube_shift_intertwiner_note",
-    "s3_taste_cube_decomposition_note",
-    "s3_mass_matrix_no_go_note",
-    "z2_hw1_mass_matrix_parametrization_note",
+    "SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md",
+    "S3_TASTE_CUBE_DECOMPOSITION_NOTE.md",
+    "S3_MASS_MATRIX_NO_GO_NOTE.md",
+    "Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md",
     "physical-species interpretation",
     "out of scope",
     "class (A)",
@@ -190,27 +191,39 @@ check("therefore no PROPER subspace is invariant under both D_3 and C_3",
 
 
 # ============================================================================
-section("Part 5: cited authorities are retained-grade")
+section("Part 5: declared authorities are graph-visible")
 # ============================================================================
 LEDGER = ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
 ledger = json.loads(LEDGER.read_text())
 rows = ledger['rows']
 
-retained_grade = {'retained', 'retained_bounded', 'retained_no_go'}
 cited = {
-    "site_phase_cube_shift_intertwiner_note": "retained",
-    "s3_taste_cube_decomposition_note": "retained",
-    "s3_mass_matrix_no_go_note": "retained_no_go",
-    "z2_hw1_mass_matrix_parametrization_note": "retained",
+    "site_phase_cube_shift_intertwiner_note": "SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md",
+    "s3_taste_cube_decomposition_note": "S3_TASTE_CUBE_DECOMPOSITION_NOTE.md",
+    "s3_mass_matrix_no_go_note": "S3_MASS_MATRIX_NO_GO_NOTE.md",
+    "z2_hw1_mass_matrix_parametrization_note": "Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md",
 }
-for cid, expected_es in cited.items():
-    actual_es = rows.get(cid, {}).get("effective_status")
-    check(f"{cid} effective_status = {expected_es}",
-          actual_es == expected_es,
-          detail=f"observed = {actual_es!r}")
+for cid, filename in cited.items():
+    row = rows.get(cid)
+    check(f"{cid} exists in audit ledger",
+          row is not None,
+          detail=f"{filename}; effective_status={row.get('effective_status') if row else None!r}")
+
+claim_row = rows.get(CLAIM_ID)
+check(f"{CLAIM_ID} seeded by audit pipeline",
+      claim_row is not None,
+      detail="run docs/audit/scripts/run_pipeline.sh after editing the note")
+if claim_row is not None:
+    claim_deps = set(claim_row.get("deps", []))
+    check(f"{CLAIM_ID} records all four declared dependencies",
+          set(cited).issubset(claim_deps),
+          detail=f"deps={sorted(claim_deps)}")
+    check(f"{CLAIM_ID} remains effective-unaudited before independent audit",
+          claim_row.get("effective_status") == "unaudited",
+          detail=f"effective_status={claim_row.get('effective_status')!r}")
 
 # Verify generation_axiom_boundary_note is NOT cited
-check("generation_axiom_boundary_note NOT cited as retained dep (correctly excluded)",
+check("generation_axiom_boundary_note NOT cited as declared dependency (correctly excluded)",
       "generation_axiom_boundary_note" in note_text and
       "audited_conditional" in note_text and
       ("not** cited" in note_text or "not cited" in note_text or "is **not** cited" in note_text or

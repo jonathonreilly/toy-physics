@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 78,
     "high": 203,
-    "leaf": 132,
+    "leaf": 133,
     "medium": 162
   },
-  "generated_at": "2026-05-02T16:56:27.921365+00:00",
+  "generated_at": "2026-05-02T17:00:26.432295+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -12784,6 +12784,32 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "site_phase_cube_shift_intertwiner_note",
+        "s3_taste_cube_decomposition_note",
+        "s3_mass_matrix_no_go_note",
+        "z2_hw1_mass_matrix_parametrization_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_three_gen_observable_no_proper_quotient_narrow.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "mirror_mutual_information_chokepoint_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -15212,6 +15238,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 93,
-  "total_pending": 575
+  "ready_count": 94,
+  "total_pending": 576
 }
