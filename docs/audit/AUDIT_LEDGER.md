@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:02:00.335508+00:00
+**Generated:** 2026-05-02T17:03:52.756650+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -48,8 +48,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 152 |
-| `open_gate` | 105 |
-| `positive_theorem` | 874 |
+| `open_gate` | 106 |
+| `positive_theorem` | 873 |
 
 | criticality | count |
 |---|---:|
@@ -1222,7 +1222,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_exact_interacting_bridge_transport_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `yt_interacting_bridge_locality_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `cl3_taste_generation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
-| `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
+| `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `hypercharge_identification_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `lattice_nn_light_cone_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
@@ -7654,17 +7654,15 @@ Claim boundary until fixed: safe to claim the exact first nonlocal coefficient a
 ### `gauge_vacuum_plaquette_residual_environment_identification_theorem_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_type:** `open_gate`
+- **claim_scope:** The unresolved residual plaquette factor is identified as a compressed unmarked spatial environment operator R_beta^env; explicit rho_(p,q)(6) coefficients remain open.
 - **audit_status:** ~~audited_renaming~~
 - **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-judge-20260430-phase-a-residual-env-id`  (codex-current; independence=judicial_review)
-- **load-bearing step:** After stripping the marked half-slice multipliers and local mixed-kernel factor, the note names the remaining compression R_beta^env and identifies it as the residual environment operator.  _(class `F`)_
-- **chain closes:** False — The disagreement is whether the row derives a new object or identifies the remainder after already-fixed factors are stripped. The load-bearing step is an identification/renaming of the residual compression as R_beta^env, with explicit coefficients still open, so the second auditor's renaming reading holds over the first clean reading.
-- **rationale:** The disagreement is whether the row derives a new object or identifies the remainder after already-fixed factors are stripped. The load-bearing step is an identification/renaming of the residual compression as R_beta^env, with explicit coefficients still open, so the second auditor's renaming reading holds over the first clean reading.
-- **open / conditional deps cited:**
-  - `GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`
-- **auditor confidence:** judicial
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-residual-environment-identification-lorentz`  (codex-current; independence=fresh_context)
+- **load-bearing step:** After stripping the marked half-slice and local mixed-kernel factor, the remaining object is called and identified exactly with the compressed unmarked spatial Wilson environment operator R_beta^env.  _(class `F`)_
+- **chain closes:** False — The note closes a bookkeeping separation, but it does not derive the actual Wilson residual environment coefficients or Perron data. The runner injects a generic positive conjugation-symmetric diagonal witness rather than computing R_6^env from the Wilson environment.
+- **rationale:** Issue: the load-bearing move is an asserted identification of the residual open datum as R_beta^env, not a derivation of its coefficients from the unmarked Wilson environment. Why this blocks: the runner verifies algebraic properties and factorized behavior for a generic positive symmetric witness, but it does not compute the actual residual environment. Repair target: compute rho_(p,q)(6) or Perron data directly from the unmarked spatial Wilson environment, or prove the stripped residual equals that compression without witness injection. Claim boundary until fixed: safe to cite this as an open-gate target naming the residual environment slot, not as a retained theorem.
+- **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note`
 
