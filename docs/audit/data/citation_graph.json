@@ -19961,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T18:58:56.652351+00:00",
+  "generated_at": "2026-05-02T19:02:13.815406+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24368,6 +24368,17 @@
       "path": "docs/CYCLE_BREAK_SLICE_NOTE_2026-04-10.md",
       "runner_path": "scripts/frontier_staggered_cycle_break_slice.py",
       "title": "Cycle-Break Frontier Slice Note"
+    },
+    "cyclic_projector_compression_narrow_theorem_note_2026-05-02": {
+      "claim_id": "cyclic_projector_compression_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "8e2b809f407c0c8ccbb6c0ee4a2b0b1c110445a3a1905128fc179242c280fd23",
+      "path": "docs/CYCLIC_PROJECTOR_COMPRESSION_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_cyclic_projector_compression_narrow.py",
+      "title": "Cyclic-Projector Compression Narrow Theorem on Herm(3)"
     },
     "dark_energy_eos_note": {
       "claim_id": "dark_energy_eos_note",
@@ -45351,6 +45362,7 @@
     "cross_family_universality_note",
     "cycle_battery_note_2026-04-10",
     "cycle_break_slice_note_2026-04-10",
+    "cyclic_projector_compression_narrow_theorem_note_2026-05-02",
     "dark_energy_eos_note",
     "decoherence_action_independence_note",
     "decoherence_decision_note",
@@ -46370,7 +46382,7 @@
       "bounded_theorem": 10,
       "meta": 1,
       "none": 1750,
-      "positive_theorem": 23
+      "positive_theorem": 24
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 510,
@@ -46378,12 +46390,12 @@
       "no_go": 105,
       "none": 443,
       "open_gate": 109,
-      "positive_theorem": 616
+      "positive_theorem": 617
     },
     "edge_count": 4990,
-    "leaf_count": 754,
-    "node_count": 1784,
-    "root_count": 1215,
-    "runners_with_path": 1351
+    "leaf_count": 755,
+    "node_count": 1785,
+    "root_count": 1216,
+    "runners_with_path": 1352
   }
 }
