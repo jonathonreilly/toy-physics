@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:29:16.318719+00:00
+**Generated:** 2026-05-02T01:31:44.910421+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 360 |
+| `audited_clean` | 361 |
 | `audited_conditional` | 666 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 430 |
+| `unaudited` | 429 |
 
 | criticality | count |
 |---|---:|
@@ -438,6 +438,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `two_field_retarded_family_closure_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `two_field_retarded_probe_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `two_sign_comparison_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
+| `unification_basin_failure_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -15904,6 +15905,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** Under the old identity-coupling convention, both attractive and repulsive signs remain stable on the tested graph families, so consistency does not select the sign at these parameters.  _(class `D`)_
 - **chain closes:** True — The current runner compares both signs across the three registered families and reports comparable norm drift, bounded energy, stable Phi, comparable spectra, and non-sign-selective force proxies. The conclusion is bounded to the retired identity-coupling convention and tested parameter surface.
 - **rationale:** The negative-control claim closes from the source note and current runner output. It does not claim final sign selection for the corrected parity-coupled scalar channel, and the note states that boundary. Residual risk is only if downstream readers apply this old-convention result to the corrected-coupling lane.
+- **auditor confidence:** high
+
+### `unification_basin_failure_note`
+
+- **Note:** [`UNIFICATION_BASIN_FAILURE_NOTE.md`](../../docs/UNIFICATION_BASIN_FAILURE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The old geometry-sector / non-label idea and the complex-action companion do not share a compact basin on the same off-center rows.  _(class `C`)_
+- **chain closes:** True — The note makes a narrow support-level boundary claim: the two specified off-center overlap rows keep the sign-law branch but lose the complex-action crossover. The registered runner recomputes those two rows and returns sign-law survivors 2/2, complex-action survivors 0/2, and unified survivors 0/2.
+- **rationale:** The current artifact reproduces the note's row table, including exact zero and neutral sign controls, opposite signed-source orientation, unit charge exponent, and the negative complex-action deltas at gamma 0.2 and 0.5 on both shared rows. The claim is not a positive unification theorem; it is the negative boundary result that the shared off-center basin fails. Residual risk is limited to the local scope of the two-row shared-neighborhood probe.
 - **auditor confidence:** high
 
 ### `unified_basin_freeze_note`
