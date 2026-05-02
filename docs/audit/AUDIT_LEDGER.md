@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:54:58.585973+00:00
+**Generated:** 2026-05-02T00:56:08.757587+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 76 |
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
-| bounded | 153 |
+| bounded | 152 |
 | support | 127 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 964 |
-| ~~audited_failed~~ | 96 |
+| ~~audited_failed~~ | 97 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 353 |
 | `audited_conditional` | 664 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 67 |
+| `audited_failed` | 68 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 443 |
+| `unaudited` | 442 |
 
 | criticality | count |
 |---|---:|
@@ -1179,6 +1179,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_layered_backreaction_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_layered_loop_threshold_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_joint_validation_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | B | - |
+| `structureless_dag_gravity_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | B | - |
 | `testable_predictions_map_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `three_family_card_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -15475,6 +15476,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** On this bounded random-causal-DAG pocket, valley-linear propagation produces TOWARD shifts in the majority of seeds, and the TOWARD rows retain approximately linear mass scaling (F~M ~= 1.0).  _(class `C`)_
 - **chain closes:** True — The matching harness script constructs the random causal DAG pocket, source/mass/detector roles, valley-linear propagator, and seed sweep directly, and a fresh run reproduces the note's 28/32, 21/32, combined 49/64, F~M ~= 1.00, R^2 ~= 1.000, and no-field zero readouts. The note's stated boundary is narrow and does not claim graph universality.
 - **rationale:** The load-bearing bounded result is reproduced by the current harness for both tested sizes and the note states the correct caveats: sign is seed-sensitive, the 1000-node unstable pocket is excluded, and no graph-universality theorem is claimed. The only residual process risk is that the ledger has no registered runner path even though scripts/structureless_dag_gravity_harness.py exists and matches the note.
+- **auditor confidence:** high
+
+### `structureless_dag_gravity_note`
+
+- **Note:** [`STRUCTURELESS_DAG_GRAVITY_NOTE.md`](../../docs/STRUCTURELESS_DAG_GRAVITY_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
+- **load-bearing step:** On random causal DAGs with no imposed structure beyond x-ordering, the valley-linear propagator gives gravitational deflection that is TOWARD in the majority of seeds and follows F~M ~= 1.0 when TOWARD.  _(class `B`)_
+- **chain closes:** False — The row has no registered primary runner and no dedicated script or archived log for the listed 200/500/1000-node frozen probe table. The later bounded harness is narrower and does not reproduce or certify this older 1000-node/raw-probe claim surface.
+- **rationale:** Issue: the load-bearing structureless-DAG table and broad safe wording are not backed by a current dedicated runner or archived output in the row, and the available later harness explicitly narrows away from the older unstable 1000-node pocket. Why this blocks: a hostile reader cannot distinguish a live bounded result from stale exploratory numerics, and the note's wording claims a propagator property across structureless graphs rather than only the later reproduced pocket. Repair target: restore the original frozen-probe runner/log for the 200/500/1000-node configurations or rewrite this note to defer to the audited bounded harness with the narrower seed pocket. Claim boundary until fixed: treat this note as historical exploratory motivation, not an audited bounded universality result.
 - **auditor confidence:** high
 
 ### `su2_witten_z2_anomaly_theorem_note_2026-04-24`
