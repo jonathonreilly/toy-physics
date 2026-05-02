@@ -206,11 +206,16 @@ def legacy_confirmed_clean_claim_type_reaudit(row: dict, verdict: str, xc_status
         return False
     if row.get("audit_status") != "audited_clean" or verdict != "audited_clean":
         return False
-    if xc_status != "confirmed":
+    if xc_status not in {"confirmed", "third_confirmed_first", "third_confirmed_second"}:
         return False
     xc = row.get("cross_confirmation") or {}
     first = xc.get("first_audit") or {}
     second = xc.get("second_audit") or {}
+    third = xc.get("third_audit") or {}
+    if xc_status == "third_confirmed_first":
+        return first.get("claim_type") is None and third.get("claim_type") is None
+    if xc_status == "third_confirmed_second":
+        return second.get("claim_type") is None and third.get("claim_type") is None
     return first.get("claim_type") is None and second.get("claim_type") is None
 
 
@@ -446,10 +451,12 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         third_matches_first = (
             third_verdict == first_verdict
             and third.get("claim_type") == first.get("claim_type")
+            and third.get("load_bearing_step_class") == first.get("load_bearing_step_class")
         )
         third_matches_second = (
             third_verdict == second_verdict
             and third.get("claim_type") == second.get("claim_type")
+            and third.get("load_bearing_step_class") == second.get("load_bearing_step_class")
         )
         if third_matches_first:
             row["cross_confirmation"]["third_audit"] = third
