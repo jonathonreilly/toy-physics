@@ -2757,6 +2757,10 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
+      "from": "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02",
+      "to": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
+    },
+    {
       "from": "continuum_identification_note",
       "to": "emergent_lorentz_invariance_note"
     },
@@ -19969,7 +19973,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T19:30:53.479821+00:00",
+  "generated_at": "2026-05-02T19:33:57.709025+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -23947,6 +23951,19 @@
       "path": "docs/CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Clifford Bimodule Ray-Saturation Theorem \u2014 Future Target"
+    },
+    "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02": {
+      "claim_id": "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
+      ],
+      "note_hash": "2c9941c59706fed85ca658652a20ce88bec1df65599a972603b15793ff474848",
+      "path": "docs/CMW_2D_SUBLATTICE_NO_SSB_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/cmw_2d_sublattice_no_ssb_check.py",
+      "title": "No SSB of Continuous Global Symmetry on Z\u00b2/Z\u00b9 Sublattices of Z\u00b3 at Finite T"
     },
     "complete_prediction_chain_2026_04_15": {
       "claim_id": "complete_prediction_chain_2026_04_15",
@@ -46428,7 +46445,7 @@
       "bounded_theorem": 10,
       "meta": 1,
       "none": 1749,
-      "positive_theorem": 28
+      "positive_theorem": 29
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 510,
@@ -46436,12 +46453,12 @@
       "no_go": 106,
       "none": 442,
       "open_gate": 109,
-      "positive_theorem": 620
+      "positive_theorem": 621
     },
-    "edge_count": 4992,
+    "edge_count": 4993,
     "leaf_count": 756,
-    "node_count": 1788,
+    "node_count": 1789,
     "root_count": 1216,
-    "runners_with_path": 1355
+    "runners_with_path": 1356
   }
 }

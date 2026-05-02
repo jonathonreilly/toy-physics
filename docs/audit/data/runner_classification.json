@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T19:30:57.074083+00:00",
+  "generated_at": "2026-05-02T19:34:01.484545+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -1956,6 +1956,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/complex_action_grown_companion.py"
+    },
+    "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/cmw_2d_sublattice_no_ssb_check.py"
     },
     "complete_prediction_chain_2026_04_15": {
       "assert_count": 0,
@@ -17787,6 +17799,21 @@
       "assert_count": 0,
       "claims": [
         "dense_prune_guard_seed_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
+    "scripts/cmw_2d_sublattice_no_ssb_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02"
       ],
       "counts": {
         "A": 0,
@@ -35784,9 +35811,9 @@
       "B": 155,
       "C": 511,
       "D": 198,
-      "none": 410
+      "none": 411
     },
-    "runners_classified": 1283,
+    "runners_classified": 1284,
     "runners_with_C": 613,
     "runners_with_D": 312
   }

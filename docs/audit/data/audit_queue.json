@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 30,
     "high": 230,
-    "leaf": 161,
+    "leaf": 162,
     "medium": 171
   },
-  "generated_at": "2026-05-02T19:30:57.635086+00:00",
+  "generated_at": "2026-05-02T19:34:02.265136+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -11822,6 +11822,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/CMW_2D_SUBLATTICE_NO_SSB_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/cmw_2d_sublattice_no_ssb_check.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -15553,6 +15576,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 116,
-  "total_pending": 592
+  "ready_count": 117,
+  "total_pending": 593
 }
