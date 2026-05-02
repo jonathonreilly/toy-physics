@@ -19961,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T18:38:44.851157+00:00",
+  "generated_at": "2026-05-02T18:41:47.502747+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -44308,11 +44308,11 @@
     },
     "yt_color_projection_correction_note": {
       "claim_id": "yt_color_projection_correction_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "9dc31ddb23288df333ae80890b605d7c74fff6f16392abe67ecde5d1d3348fc5",
+      "note_hash": "88174f3229cd3f7575f1c5572e29f12b6d1670ed3836c441870320c7a6983782",
       "path": "docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md",
       "runner_path": "scripts/frontier_yt_color_projection_correction.py",
       "title": "Color-Singlet Projection Correction to y_t"
@@ -46357,8 +46357,8 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 9,
       "meta": 1,
-      "none": 1753,
-      "positive_theorem": 20
+      "none": 1752,
+      "positive_theorem": 21
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 509,
