@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T18:44:25.924169+00:00
+**Generated:** 2026-05-02T18:46:38.769138+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,24 +24,24 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 176 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 545 |
+| unaudited | 544 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 635 |
+| ~~audited_conditional~~ | 636 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 376 |
-| `audited_conditional` | 635 |
+| `audited_conditional` | 636 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 17 |
-| `unaudited` | 581 |
+| `unaudited` | 580 |
 
 | claim_type | count |
 |---|---:|
@@ -942,6 +942,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `physical_lattice_necessity_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_c3_character_holonomy_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `pmns_c3_nontrivial_current_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -12388,6 +12389,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md`
   - `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`
   - `source-unit normalization theorem for physical Planck interpretation`
+- **auditor confidence:** high
+
+### `planck_source_unit_normalization_support_theorem_note_2026-04-25`
+
+- **Note:** [`PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md`](../../docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Conditional Planck source-unit normalization theorem: given the retained bare Green-kernel coefficient G_kernel=1/(4*pi) and the primitive boundary/Wald carrier c_cell=1/4, the exterior monopole family M_lambda=lambda C is fixed to lambda=1, so q_bare=4*pi M_phys, G_Newton,lat=1, and a/l_P=1 in conventional natural Planck units.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-planck-source-unit-normalization-2026-05-02`  (codex-current; independence=cross_family)
+- **load-bearing step:** The primitive boundary/Wald carrier identifies c_cell=1/4 with 1/(4 G_lambda)=lambda/4, hence lambda=1.  _(class `B`)_
+- **chain closes:** False — The source-unit arithmetic closes after the primitive boundary/Wald carrier premise is admitted, but this row does not itself derive or register that carrier as a retained dependency.
+- **rationale:** Issue: the decisive scale-fixing step imports the primitive boundary/Wald carrier c_cell=1/4 and its identification with 1/(4G_lambda). Why this blocks retained status: the runner verifies the source-unit conversion and old 2*sqrt(pi) failure mode after that carrier premise is accepted; it does not independently derive the carrier premise or register it as a retained-grade dependency for this row. Repair target: audit and register the primitive boundary/Wald carrier or Target 3 Clifford/coframe-response bridge as retained-grade upstream authority, then re-audit this source-unit theorem. Claim boundary until fixed: cite this as a conditional Planck source-unit normalization theorem on the stated carrier premise, not as a standalone minimal-stack closure of a^(-1)=M_Pl.
 - **auditor confidence:** high
 
 ### `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25`
