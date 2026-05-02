@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T19:11:34.681591+00:00
+**Generated:** 2026-05-02T19:13:07.875954+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 177 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 7 |
-| unaudited | 547 |
+| unaudited | 546 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
-| ~~audited_renaming~~ | 17 |
+| ~~audited_renaming~~ | 18 |
 | ~~audited_conditional~~ | 635 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -40,8 +40,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 6 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
-| `audited_renaming` | 17 |
-| `unaudited` | 583 |
+| `audited_renaming` | 18 |
+| `unaudited` | 582 |
 
 | claim_type | count |
 |---|---:|
@@ -1207,6 +1207,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `star_supported_bridge_class_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
 | `universal_qg_optional_textbook_comparison_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
+| `yt_color_projection_correction_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `yt_ward_identity_derivation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
 
@@ -17463,6 +17464,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`
   - `HYPOTHESIS: positive local quadratic microscopic bridge selector`
   - `TARGET_CONDITIONED_INPUT: best-family J_aff band`
+- **auditor confidence:** high
+
+### `yt_color_projection_correction_note`
+
+- **Note:** [`YT_COLOR_PROJECTION_CORRECTION_NOTE.md`](../../docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the in-scope SU(3) R_conn = (N_c^2 - 1)/N_c^2 = 8/9 identity and the asserted mapping of that factor to a sqrt(R_conn) physical Yukawa/scalar-leg correction; excluded RGE, pole-mass, Higgs-mass, alpha_s, and PDG comparator readouts.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-pr291-yt-color-projection-hilbert-2026-05-02`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The connected part is (N_c^2 - 1)/N_c^2 of the total. Therefore: y_t(physical) = y_t(Ward) * sqrt((N_c^2 - 1)/N_c^2) = y_t(Ward) * sqrt(8/9).  _(class `F`)_
+- **chain closes:** False — The SU(3) Fierz/channel-counting identity R_conn = 8/9 closes algebraically, but the step identifying the physical scalar wave-function normalization or singlet Yukawa projection with the connected/adjoint R_conn factor is not derived from the permitted inputs. The note itself admits the bridge to the physical scalar self-energy ratio is out of scope.
+- **rationale:** Issue: the note identifies the connected/adjoint channel-counting ratio R_conn with the physical scalar Z_phi/Yukawa sqrt(R_conn) correction without deriving that physical map. Why this blocks retained status: Fierz gives the 8/9 group-theory fraction, and one scalar leg would give a square root if Z_phi = R_conn were established, but the permitted inputs do not establish that the physical Higgs/taste-condensate scalar uses that ratio rather than an admitted bridge. Repair target: add a retained scalar self-energy projection theorem and runner that computes Z_phi = R_conn for the physical scalar channel from the lattice/Cl(3) inputs rather than setting SQRT_R_CONN and checking downstream consistency. Claim boundary until fixed: the exact R_conn = 8/9 identity and the formal implication if Z_phi = R_conn may be cited, but not an audited physical Yukawa correction.
 - **auditor confidence:** high
 
 ### `yt_constructive_uv_bridge_note`
